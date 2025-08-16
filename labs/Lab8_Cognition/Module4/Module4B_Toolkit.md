@@ -45,3 +45,7 @@ plt.show()
 ## Track response and adapt protocols
 
 ## Think of it as resonance-time physiotherapy for the mind.
+
+## 🧠 Memory Reframer
+## Reframes emotional memories by shifting their phase angle in virtual time—allowing the mind to revisit without reliving.
+→ [memory_reframer.md](memory_reframer.md)
