@@ -7,15 +7,15 @@ This folder contains raw and processed data from the Casimir effect experiment. 
 ## 📊 File Structure
 
 data/
-├── raw/
-│ ├── casimir_run1.csv
-│ ├── casimir_run2.csv
-├── processed/
-│ ├── force_vs_distance_plot.png
-│ ├── fit_parameters.json
-├── metadata/
-│ ├── equipment_specs.md
-│ ├── calibration_log.md
+ddata/raw/
+casimir_run1.csv
+casimir_run2.csv
+processed/
+processed/force_vs_distance_plot.png
+processed/fit_parameters.json
+metadata/
+metadata/equipment_specs.md
+metadata/calibration_log.md
 
 ---
 
