@@ -1,38 +1,32 @@
-# Lab 2: Quantum Tunneling – Through the Barrier, Beyond the Veil
+# Lab 2: Tunneling as Phase Interference
 
-## 🧭 Objective
-To explore quantum tunneling phenomena using a reproducible analog circuit and triadic mapping of barrier, particle, and field.
-
----
-
-## 🧪 Materials
-
-- Tunnel diode (e.g., 1N3716 or equivalent)
-- DC power supply (0–5V)
-- Oscilloscope
-- Breadboard and resistors
-- Optional: RF signal generator
+## 🧭 Objective  
+Explore quantum tunneling through the lens of phase interference, using triadic mappings of particle state, barrier configuration, and transmission probability.
 
 ---
 
-## 🛠️ Procedure
-
-1. Build a simple circuit with the tunnel diode in series with a resistor.
-2. Sweep input voltage and observe negative resistance region.
-3. Record current-voltage (I–V) characteristics.
-4. Optional: Apply RF signal and observe modulation effects.
+## 🧪 Materials  
+- Quantum simulator (e.g., Qiskit)  
+- Tunneling probability calculator  
+- Visualization toolkit (e.g., matplotlib)
 
 ---
 
-## 📐 Triadic Mapping
-
-- **Object**: Tunnel diode
-- **Attribute**: Bias voltage, doping profile
-- **Condition**: Temperature, signal input
+## 🛠️ Procedure  
+1. Define particle energy and barrier parameters  
+2. Compute tunneling probability  
+3. Visualize transmission vs energy  
+4. Interpret tunneling as phase interference
 
 ---
 
-## 🎭 Mythic Motif
+## 📐 Triadic Mapping  
+- **Object**: Particle quantum state  
+- **Attribute**: Barrier configuration  
+- **Condition**: Transmission probability
 
-> *“The wall is not the end—it’s the invitation.”*  
+---
+
+## 🎭 Mythic Motif  
+> *“The wall is not solid—it is a phase.”*  
 > — Nawder Loswin
