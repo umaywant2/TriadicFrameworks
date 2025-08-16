@@ -1,0 +1,14 @@
+# Ignore temporary or test data files
+*.tmp
+*.bak
+*.log
+test_*.csv
+debug_*.csv
+
+# Ignore large raw datasets unless explicitly tracked
+*.dat
+*.bin
+
+# Allow manually approved data files
+!casimir_run1.csv
+!casimir_run2.csv
