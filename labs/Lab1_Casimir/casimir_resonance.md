@@ -38,3 +38,6 @@ plt.ylabel('Force (N)')
 plt.grid(True)
 plt.tight_layout()
 plt.show()
+
+## 🪞 Mythic Caption
+## “From the void, pressure. From silence, song.” — Nawder Loswin
