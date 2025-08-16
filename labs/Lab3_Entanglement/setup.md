@@ -1,37 +1,32 @@
-# Lab 3: Quantum Entanglement – The Mirror Beyond Distance
+# Lab 3: Entanglement as Shared Identity
 
-## 🧭 Objective
-To demonstrate entanglement correlations using photon pairs or simulated qubit states, and map triadic resonance across measurement axes.
-
----
-
-## 🧪 Materials
-
-- Entangled photon source (e.g., SPDC crystal) or quantum simulator
-- Polarizers or measurement basis selectors
-- Coincidence counter or entanglement simulator
-- Optional: IBM Q or Qiskit environment
+## 🧭 Objective  
+Explore quantum entanglement through triadic mappings of particle pair, measurement basis, and correlation outcome.
 
 ---
 
-## 🛠️ Procedure
-
-1. Generate entangled photon pairs or initialize entangled qubit states.
-2. Measure correlations across varying bases (e.g., horizontal/vertical, diagonal).
-3. Record coincidence counts or Bell inequality violations.
-4. Compare results to classical expectations.
+## 🧪 Materials  
+- Quantum simulator (e.g., Qiskit or simulator_variant.md)  
+- Bell test protocol  
+- Correlation visualizer
 
 ---
 
-## 📐 Triadic Mapping
-
-- **Object**: Entangled pair
-- **Attribute**: Measurement basis
-- **Condition**: Relative orientation or timing
+## 🛠️ Procedure  
+1. Initialize entangled qubit pair  
+2. Apply measurement bases  
+3. Record correlation outcomes  
+4. Compare with Bell inequality
 
 ---
 
-## 🎭 Mythic Motif
+## 📐 Triadic Mapping  
+- **Object**: Entangled particle pair  
+- **Attribute**: Measurement basis  
+- **Condition**: Correlation outcome
 
-> *“Two particles, one song—sung from opposite ends of the void.”*  
+---
+
+## 🎭 Mythic Motif  
+> *“Two particles, one identity—split across the veil.”*  
 > — Nawder Loswin
