@@ -1,36 +1,23 @@
-# Quantum Entanglement – Equations & Interpretations
+# Entanglement – Equations
 
-## 🔁 Bell’s Inequality (CHSH Form)
+## 🔮 Bell State
 
-$$
-S = |E(a, b) - E(a, b') + E(a', b) + E(a', b')| \leq 2
-$$
 
-- **E(a, b)**: Correlation between measurements at settings \( a \) and \( b \)
-- **S > 2**: Quantum violation of classical locality
 
----
+\[
+|\Phi^+\rangle = \frac{1}{\sqrt{2}}(|00\rangle + |11\rangle)
+\]
 
-## 🧠 Triadic Interpretation
 
-- **Object**: Entangled state
-- **Attribute**: Measurement settings \( a, a', b, b' \)
-- **Condition**: Correlation outcomes
 
 ---
 
-## 🧪 Quantum State Example
-
-$$
-|\Psi\rangle = \frac{1}{\sqrt{2}}(|01\rangle - |10\rangle)
-$$
-
-- Maximally entangled Bell state
-- Anti-correlated outcomes across matching bases
+## 🧠 Triadic Interpretation  
+- **Object**: Entangled pair  
+- **Attribute**: Measurement basis  
+- **Condition**: Correlation outcome
 
 ---
 
-## 🎭 Mythic Echo
-
-> *“The equation doesn’t measure distance—it measures trust.”*  
-> — Nawder Loswin
+## 🪞 Mythic Caption  
+> *“The echo of one is the whisper of the other.”*
