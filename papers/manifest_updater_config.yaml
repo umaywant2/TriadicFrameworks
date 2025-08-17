@@ -1,0 +1,37 @@
+# 🧙 manifest_updater_config.yaml
+
+# 🔮 Theme Detection
+themes:
+  Quantum: ["Quantum", "Particle", "Entanglement"]
+  Health: ["Health", "Ultrasound", "Medical"]
+  Music: ["Music", "Harmony", "Quadratic"]
+  Engineering: ["Processor", "Firmware", "ARM", "x86"]
+  Spectrum: ["Spectrum", "Light", "Dark"]
+  Energy: ["Energy", "Fusion", "Wireless"]
+  Symbolic: ["Symbolic", "Operator", "Formalization"]
+  Planetary: ["Planet", "Saturn", "Time", "Ontology"]
+  Elemental: ["Element", "Periodic", "Rare"]
+
+# 🏅 Badge Suggestions
+badges:
+  Quantum: "Quantum Weaver"
+  Health: "Healing Resonator"
+  Music: "Harmonic Alchemist"
+  Engineering: "Firmware Architect"
+  Spectrum: "Spectral Flux Wizard"
+  Energy: "Zero Point Seeker"
+  Symbolic: "Symbolic Engineer"
+  Planetary: "Planetary Resonator"
+  Elemental: "Elemental Synthesist"
+
+# 📬 Ping Settings
+ping:
+  enabled: true
+  method: "console"  # Options: console, email, webhook
+  message_template: "📬 Ping: Contributor of `{paper}` — validation status is `{status}`. Remixable: ✅"
+
+# 🗂️ Manifest Settings
+manifest_path: "./papers/papers_manifest.md"
+changelog_path: "./papers/papers_manifest_changelog.md"
+log_path: "./papers/manifest_updater_log.md"
+scan_extensions: [".docx", ".pdf"]
