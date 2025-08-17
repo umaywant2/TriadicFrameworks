@@ -39,6 +39,37 @@ themes:
     - rare
     - flux
 
+badge_triggers:
+  reproducibility:
+    - reproducibility.md
+    - validated
+    - cross-platform
+  equations:
+    - equations.md
+    - formula
+    - equation
+  resonance_wizard:
+    - resonance
+    - triadic
+    - harmonic
+  onboarding_guide:
+    - onboarding
+    - contributor
+    - ritual
+  mythic_mapper:
+    - mythic
+    - symbolic
+    - narrative
+
+validation_rules:
+  required_files:
+    - equations.md
+    - reproducibility.md
+  minimum_keywords:
+    - resonance
+    - triadic
+
+
 # 🔮 Theme Detection
 themes:
   Quantum: ["Quantum", "Particle", "Entanglement"]
