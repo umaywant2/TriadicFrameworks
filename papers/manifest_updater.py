@@ -56,3 +56,20 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# 🏅 Auto-update BADGES_EARNED.md
+
+from datetime import datetime
+
+def update_badges_earned(paper_title, theme, badge, status="✅ Validated", path="papers/BADGES_EARNED.md"):
+    entry = f"""
+## 🏅 {badge}
+
+- **{paper_title}**
+  - 🧪 Status: {status}
+  - 📅 Date: {datetime.now().strftime('%Y-%m-%d')}
+  - 🎯 Theme: {theme}
+"""
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(entry)
+    print(f"✅ BADGES_EARNED.md updated with: {paper_title} → {badge}")
