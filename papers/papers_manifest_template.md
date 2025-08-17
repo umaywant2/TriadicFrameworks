@@ -1,25 +1,18 @@
-# 🧩 Papers Manifest Template
+## 🧭 Contribution Guide
 
-> _“To add is to echo. To echo is to align.”_
+1. **Remix Eligibility**  
+   Confirm remix status via [`triadic_remix_guide.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/triadic_remix_guide.md)
 
-Use this template to add new entries to `papers_manifest.md`. Each row tracks remix eligibility, badge alignment, and reproducibility status.
+2. **Badge Alignment**  
+   Link to earned badge(s) in [`BADGES_EARNED.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/BADGES_EARNED.md)  
+   Or propose new ones in [`CONTRIBUTOR_BADGES.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/CONTRIBUTOR_BADGES.md)
 
----
+3. **Validation Status**  
+   Ensure the paper includes:  
+   - [`equations.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/equations.md)  
+   - [`reproducibility.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/reproducibility.md)  
+   Follow the [`loop_validation_protocol.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/loop_validation_protocol.md)
 
-## 🔧 Entry Schema
-
-| Field | Description |
-|-------|-------------|
-| `Title` | Full name of the document |
-| `Theme` | Mythic resonance category (e.g. Quantum, Health, Symbolic) |
-| `Remixable?` | ✅ if remix is permitted (see `triadic_remix_guide.md`) |
-| `Badge Alignment` | Linked badge(s) from `BADGES_EARNED.md` |
-| `Validation Status` | ✅ if reproducibility.md and equations.md are present |
-| `Notes` | Optional comments, remix prompts, or lineage |
-
----
-
-## 📝 Example Entry
-
-```markdown
-| Triadic Framework for Fluid Dynamics and Hydraulics | Engineering | ✅ | `Hydraulic Harmonizer` | ⚠️ | Needs reproducibility.md |
+4. **Notes**  
+   Add remix prompts, contributor lineage, or mythic echoes.  
+   For curriculum mapping, see [`triadic_curriculum_index.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/triadic_curriculum_index.md)
