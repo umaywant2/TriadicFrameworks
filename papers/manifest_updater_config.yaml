@@ -27,8 +27,20 @@ badges:
 # 📬 Ping Settings
 ping:
   enabled: true
-  method: "console"  # Options: console, email, webhook
+  method: "webhook"  # Options: console, email, webhook
   message_template: "📬 Ping: Contributor of `{paper}` — validation status is `{status}`. Remixable: ✅"
+
+  webhook:
+    url: "https://your-webhook-endpoint.com/ping"
+    method: "POST"
+    headers:
+      Content-Type: "application/json"
+    payload_template: |
+      {
+        "username": "Manifest Updater",
+        "avatar_url": "https://your-avatar-url.com/icon.png",
+        "content": "📬 Ping: Contributor of `{paper}` — validation status is `{status}`. Theme: `{theme}`. Badge: `{badge}`. Remixable: ✅"
+      }
 
 # 🗂️ Manifest Settings
 manifest_path: "./papers/papers_manifest.md"
