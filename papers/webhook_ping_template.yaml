@@ -1,0 +1,14 @@
+# 🌐 webhook_ping_template.yaml
+
+webhook:
+  enabled: true
+  url: "https://your-webhook-endpoint.com/ping"
+  method: "POST"
+  headers:
+    Content-Type: "application/json"
+  payload_template: |
+    {
+      "username": "Manifest Updater",
+      "avatar_url": "https://your-avatar-url.com/icon.png",
+      "content": "📬 Ping: Contributor of `{paper}` — validation status is `{status}`. Theme: `{theme}`. Badge: `{badge}`. Remixable: ✅"
+    }
