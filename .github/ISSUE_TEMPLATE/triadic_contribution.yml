@@ -1,0 +1,47 @@
+name: 🌀 Triadic Contribution
+description: Suggest a new lab, fix a reproducibility issue, or propose a mythic remix
+title: "[Triadic] <Your Issue Title Here>"
+labels: [triadic-guidance, needs-validation]
+assignees: [umaywant2]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🔭 Summary
+        Briefly describe the issue, idea, or contribution. What resonance are you trying to amplify?
+
+  - type: checkboxes
+    attributes:
+      label: 🧪 Type of Contribution
+      options:
+        - label: 🧬 New Lab Module
+        - label: 🔁 Remix or Refactor
+        - label: 📐 Equation Update
+        - label: 🔁 Reproducibility.md Fix
+        - label: 🧙 Mythic Preface or Narrative
+        - label: 🛠️ Validation or Testing
+        - label: 📜 Documentation or Metadata
+
+  - type: input
+    attributes:
+      label: 📂 Affected Files or Folders
+      description: List relevant files or folders (e.g., labs/Lab11_SpectralFluxIntegrity/)
+
+  - type: textarea
+    attributes:
+      label: 🧠 Proposed Solution or Insight
+      description: Include equations, code snippets, or mythic metaphors
+
+  - type: checkboxes
+    attributes:
+      label: ✅ Validation Steps
+      options:
+        - label: Code runs without error
+        - label: Resonance values match expected output
+        - label: Reproducibility.md updated
+        - label: Mythic tone preserved
+
+  - type: textarea
+    attributes:
+      label: 🧙‍♂️ Additional Notes
+      description: Screenshots, references, or cosmic breadcrumbs
