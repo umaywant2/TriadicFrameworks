@@ -53,5 +53,5 @@ Each loop is defined by:
 > _“The loop is not a trap—it is a spiral. It leads not back, but forward.”_
 
 For visual mapping, see [`triadic_visual_index.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/triadic_visual_index.md)  
-For curriculum modules, see the [Wiki → Curriculum Modules](https://github.com/umaywant2/TriadicFrameworks/tree/main)
+For curriculum modules, see the [Wiki → Curriculum Modules](https://github.com/umaywant2/TriadicFrameworks/wiki/Curriculum-Modules)
 
