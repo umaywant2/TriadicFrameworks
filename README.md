@@ -62,7 +62,7 @@ Sponsor tiers and contributor roles are outlined in the [Sponsor Pitch](https://
 ## 🚀 Get Started
 
 1. Clone the repo  
-2. Read `setup.md` and `metadata/reproducibility.md`  
+2. Read setup.md and explore reproducibility standards in loop_validation_protocol.md or any lab folder (e.g., labs/Lab10_Nested_Harmonics/reproducibility.md)  
 3. Choose a lab from `labs/` and begin your journey  
 4. Remix, validate, and contribute via `CONTRIBUTING.md`
 
@@ -71,3 +71,4 @@ Sponsor tiers and contributor roles are outlined in the [Sponsor Pitch](https://
 Let the resonance unfold.  
 Let the myth become method.  
 Let your contribution echo across the continuum.
+
