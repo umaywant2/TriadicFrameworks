@@ -56,3 +56,23 @@ def detect_theme(filename, config_path="manifest_updater_config.yaml"):
         if any(kw.lower() in filename.lower() for kw in keywords):
             return theme
     return "Unclassified"
+
+def main():
+    papers_dir = "papers"
+    manifest_path = "papers_manifest.md"
+    changelog_path = "papers_manifest_changelog.md"
+    badges_path = "BADGES_EARNED.md"
+
+    for filename in os.listdir(papers_dir):
+        if filename.endswith(".docx") or filename.endswith(".pdf"):
+            filepath = os.path.join(papers_dir, filename)
+            equations_exists = os.path.exists(os.path.join(papers_dir, "equations.md"))
+            reproducibility_exists = os.path.exists(os.path.join(papers_dir, "reproducibility.md"))
+            theme = detect_theme(filename)
+            suggested_badges = suggest_badges(filepath)
+
+            update_manifest(manifest_path, filename, theme, equations_exists, reproducibility_exists)
+            update_changelog(changelog_path, filename, theme)
+            update_badges_earned(badges_path, filename, suggested_badges)
+
+            print(f"🔔 Ping: {filename} processed with theme '{theme}' and badges {suggested_badges}")
