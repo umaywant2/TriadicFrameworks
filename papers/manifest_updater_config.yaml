@@ -47,3 +47,12 @@ manifest_path: "./papers/papers_manifest.md"
 changelog_path: "./papers/papers_manifest_changelog.md"
 log_path: "./papers/manifest_updater_log.md"
 scan_extensions: [".docx", ".pdf"]
+
+def detect_theme(filename, config_path="manifest_updater_config.yaml"):
+    import yaml
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f)
+    for theme, keywords in config.get("themes", {}).items():
+        if any(kw.lower() in filename.lower() for kw in keywords):
+            return theme
+    return "Unclassified"
