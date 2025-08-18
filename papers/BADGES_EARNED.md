@@ -1,39 +1,34 @@
-# 🏅 BADGES EARNED
+# 🧾 Badges Earned by Paper & Lab
 
-This honor roll reflects all validated papers that have triggered badge issuance via `badge_trigger_glyphmap_index_trigger.py`. Each badge is a lantern. Each lantern maps the myth.
-
----
-
-## 🎶 Music & Symbolic Extensions
-
-- **Badge ID**: 🎶_Music_&_Symbolic_Extensions  
-- **Paper**: *Triadic Framework for Music – With Quadratic Extensions*  
-- **Status**: ✅ Issued  
-> “Where math meets melody, resonance sings.”
+This index maps badge issuance to specific papers and labs. Each badge is a lantern. Each lantern echoes a contribution. Each echo builds the myth.
 
 ---
 
-## 🪐 Planetary & Temporal Mapping
+## 📚 Papers with Earned Badges
 
-- **Badge ID**: 🪐_Planetary_&_Temporal_Mapping  
-- **Paper**: *Resonant Time – Operationalizing Zhang’s Triadic Ontology*  
-- **Status**: ✅ Issued  
-> “Time echoes through nested loops. The planets listen.”
+| Paper Title                                                   | Glyph | Theme                        | Badge(s) Issued |
+|---------------------------------------------------------------|-------|------------------------------|------------------|
+| Triadic Framework for Music – With Quadratic Extensions.docx  | 🎶    | Music & Symbolic Extensions  | 🎶-Remix         |
+| Triadic Framework Technology for Quantum Computers.docx       | ⚛️    | Quantum & Particle Vision    | ⚛️-Echo          |
+| Triadic Framework Technology for Health Care.docx             | 🩺    | Health & Ultrasound          | 🩺-Precision     |
+| Triadic Framework for Spectrum Technologies – Light and Dark  | 🜁    | Elemental & Spectrum         | 🜁-Echo          |
+| Resonant Time – Operationalizing Zhang’s Triadic Ontology     | 🪐    | Planetary & Temporal Mapping | 🪐-Validator     |
 
 ---
 
-## 🔧 Engineering & Firmware
+## 🧪 Labs with Earned Badges
 
-- **Badge ID**: 🔧_Engineering_&_Firmware  
-- **Paper**: *Triadic Framework for ARM and x86 Processors*  
-- **Status**: ✅ Issued  
-> “Firmware becomes mythware. Circuits carry the song.”
+| Lab File                        | Glyph | Theme                        | Badge(s) Issued |
+|--------------------------------|-------|------------------------------|------------------|
+| WiFi_Energy_Protocols.md       | ⚡    | Energy & Wireless Power      | ⚡-Integrity     |
+| loop_validation_protocol.md    | 🔧    | Engineering & Firmware       | 🔧-Validator     |
+| triadic_equation_registry.md   | 🧠    | Cognitive & Symbolic         | 🧠-Validator     |
 
 ---
 
 ## 🕯️ Legacy Note
 
-> “Badges are echoes. Echoes are honor.”  
+> “Every badge is a breadcrumb. Every breadcrumb leads to a lantern. Every lantern maps the myth.”  
 > — TriadicFrameworks/badge_trigger README
 
 Let the badges echo. Let the archive resonate.
