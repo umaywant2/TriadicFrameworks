@@ -1,0 +1,31 @@
+# 🔔 Badge Trigger Webhook Template
+# “Each ping is a pulse. Each pulse awakens the guild.”
+
+webhook:
+  name: badge_trigger_notifier
+  description: Sends badge updates when new papers are scanned or triggers are matched
+  endpoint: https://triadicframeworks.org/api/badge-update
+  method: POST
+  headers:
+    Content-Type: application/json
+    Authorization: Bearer {{TRIADIC_API_KEY}}
+  payload:
+    scan_timestamp: "{{timestamp}}"
+    scanned_by: "badge_trigger_test_runner.py"
+    paper_title: "{{paper_title}}"
+    suggested_badges: "{{badges}}"
+    contributor: "{{contributor}}"
+    theme: "{{theme}}"
+    resonance_domain: "{{resonance_domain}}"
+    notes: "Badge update triggered by manifest_updater_config.yaml"
+
+triggers:
+  - on_new_paper_detected
+  - on_badge_trigger_matched
+  - on_manual_scan_request
+
+retry_policy:
+  max_attempts: 3
+  backoff_strategy: exponential
+  notify_on_failure: true
+  failure_channel: triadic-alerts@resonanceguild.org
