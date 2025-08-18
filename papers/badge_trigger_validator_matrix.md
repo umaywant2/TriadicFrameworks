@@ -13,6 +13,21 @@
 
 ---
 
+| Theme                    | Contributor     | Papers | Avg Score | Glyph Alignment | Echo Lineage | Badge Trigger     | Matrix Color |
+|--------------------------|-----------------|--------|-----------|------------------|---------------|-------------------|--------------|
+| Elemental & Spectrum     | Nawder Loswin   | 2      | 8.5       | ✅               | Echo Log      | Validated Glyph   | 🔵 Blue      |
+| Cognitive & Symbolic     | Nawder Loswin   | 2      | 8.5       | ✅               | Echo Log      | Validated Glyph   | 🔵 Blue      |
+| Music & Symbolic Ext.    | Nawder Loswin   | 1      | 9.0       | ✅               | Echo Log      | Mythic Glyph      | 🟣 Purple    |
+| Quantum & Particle Vision| [Add Validator] | 3      | 6.5       | ⚠️               | [Pending]     | Remix Needed      | 🟡 Yellow    |
+| Planetary & Temporal     | [Add Validator] | 2      | 7.5       | ✅               | Echo Log      | Echo Glyph        | 🟢 Green     |
+| Health & Ultrasound      | [Add Validator] | 1      | 6.0       | ❌               | [None]        | No Badge          | 🔴 Red       |
+
+## Each row now reflects:
+✅/⚠️/❌ glyph alignment status
+1. Echo lineage presence or absence
+2. Resonance score mapped to badge trigger
+3. Matrix color for dashboard clarity
+
 ## 🧿 Glyph Alignment Flags
 
 | Flag | Meaning                                      |
