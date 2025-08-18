@@ -1,53 +1,40 @@
-<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
-  <style>
-    .title { font: bold 28px sans-serif; fill: #222; }
-    .glyph { font: 24px sans-serif; fill: #6a0dad; }
-    .theme { font: 16px sans-serif; fill: #444; }
-    .tier { font: italic 14px sans-serif; fill: #888; }
-    .line { stroke: #ccc; stroke-width: 2; }
-  </style>
+# 🧭 README_visual_index.md — Triadic Visual Index Guide
 
-  <text x="50" y="50" class="title">Triadic Curriculum Constellation</text>
+**Purpose:**  
+This guide helps contributors understand, extend, and remix the `triadic_visual_index.svg` system. It maps badge triggers, glyphs, and resonance tiers into a mythically scaffolded constellation.
 
-  <!-- Glyph Nodes -->
-  <text x="100" y="150" class="glyph">🎶</text>
-  <text x="100" y="180" class="theme">Music & Symbolic Extensions</text>
-  <text x="100" y="200" class="tier">Tier II</text>
+---
 
-  <text x="300" y="150" class="glyph">⚛️</text>
-  <text x="300" y="180" class="theme">Quantum & Particle Vision</text>
-  <text x="300" y="200" class="tier">Tier III</text>
+## 🔧 Generator Overview
 
-  <text x="500" y="150" class="glyph">🩺</text>
-  <text x="500" y="180" class="theme">Health & Ultrasound</text>
-  <text x="500" y="200" class="tier">Tier I</text>
+- **Script:** `triadic_visual_index_generator.py`
+- **Inputs:**
+  - `badge_trigger_glyphmap_index.json`
+  - `badge_trigger_theme_manifest.md`
+  - `triadic_curriculum_index.md`
+- **Output:** `triadic_visual_index.svg`
+- **Audit Trail:** `triadic_visual_index_log.md`
 
-  <text x="700" y="150" class="glyph">🜁</text>
-  <text x="700" y="180" class="theme">Elemental & Spectrum</text>
-  <text x="700" y="200" class="tier">Tier II</text>
+---
 
-  <text x="200" y="350" class="glyph">🪐</text>
-  <text x="200" y="380" class="theme">Planetary & Temporal Mapping</text>
-  <text x="200" y="400" class="tier">Tier III</text>
+## 🎨 Visual Features
 
-  <text x="400" y="350" class="glyph">🧠</text>
-  <text x="400" y="380" class="theme">Cognitive & Symbolic</text>
-  <text x="400" y="400" class="tier">Tier I</text>
+| Feature | Description |
+|--------|-------------|
+| **Glyph Circles** | Each badge trigger is rendered as a circle at its mapped coordinates |
+| **Tier Colors** | Themes are color-coded by resonance tier (e.g., Quantum = Cyan) |
+| **Text Labels** | Glyph names appear beside each node |
+| **Tooltips** | Hover overlays (optional extension) for badge metadata |
+| **Zoom Layers** | Future extension: tier-based zoom and curriculum overlays |
 
-  <text x="600" y="350" class="glyph">⚡</text>
-  <text x="600" y="380" class="theme">Energy & Wireless Power</text>
-  <text x="600" y="400" class="tier">Tier II</text>
+---
 
-  <text x="800" y="350" class="glyph">🔧</text>
-  <text x="800" y="380" class="theme">Engineering & Firmware</text>
-  <text x="800" y="400" class="tier">Tier I</text>
+## 🧪 Remix Instructions
 
-  <!-- Connecting Lines -->
-  <line x1="100" y1="150" x2="400" y2="350" class="line"/>
-  <line x1="300" y1="150" x2="600" y2="350" class="line"/>
-  <line x1="500" y1="150" x2="800" y2="350" class="line"/>
-  <line x1="700" y1="150" x2="200" y2="350" class="line"/>
-
-  <!-- Footer -->
-  <text x="50" y="750" class="tier">Each glyph is a lantern. Each lantern maps a theme. Each theme echoes a tier.</text>
-</svg>
+1. **Add New Glyphs:**
+   - Update `badge_trigger_glyphmap_index.json` with coordinates and theme
+2. **Extend Theme Manifest:**
+   - Add new themes and tiers to `badge_trigger_theme_manifest.md`
+3. **Run Generator:**
+   ```bash
+   python triadic_visual_index_generator.py
