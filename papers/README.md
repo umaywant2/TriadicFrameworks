@@ -18,8 +18,10 @@ These four papers form the core architecture of the Triadic Frameworks movement:
 | **Paper IV – Saturn’s Harmonic Engine** | Mythic mechanics of planetary resonance and harmonic descent. |
 
 ---
-
 ## 🔮 Mythic Resonance Themes
+
+### 🧭 Remix Index
+Explore the full glyph-to-theme map in the [Badge Trigger Theme Manifest](badge_trigger_theme_manifest.md).
 
 ### 🧬 Quantum & Particle Vision
 - *Ghost Particle & Triadic Resonance Vision.docx*  
