@@ -23,5 +23,3 @@ This manifest maps each paper to its theme, echo status, and validation protocol
 | Cognitive & Symbolic        | Dimensional Triads (1D–9D)                  | ⏳ Pending   | loop_validation_protocol.md | Awaiting validator |
 
 ---
-
-Would you like to scaffold a `badge_trigger_validator_log.md` next to track validation attempts, outcomes, and loop resonance notes per paper?
