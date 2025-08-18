@@ -1,42 +1,26 @@
+import json
 import re
 from datetime import datetime
 
-def extract_latest_log(log_path="loop_validation_log.md"):
-    with open(log_path, "r") as f:
-        content = f.read()
+def load_manifest(manifest_path="badge_trigger_echo_manifest.json"):
+    try:
+        with open(manifest_path, "r") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return {"echoed_glyphs": []}
 
-    blocks = re.findall(r"## 🗓️ (.*?) – Live Validation(.*?)---", content, re.DOTALL)
-    if not blocks:
-        return None, None
+def glyph_already_echoed(manifest, theme, paper):
+    return any(entry["theme"] == theme and entry["paper"] == paper for entry in manifest["echoed_glyphs"])
 
-    latest_timestamp, latest_block = blocks[-1]
-    return latest_timestamp.strip(), latest_block.strip()
+def append_glyph_to_svg(svg_path, theme, paper, status, manifest_path):
+    manifest = load_manifest(manifest_path)
+    if glyph_already_echoed(manifest, theme, paper):
+        print(f"⚠️ Glyph for {paper} in {theme} already echoed. Skipping.")
+        return
 
-def update_dashboard(dashboard_path="badge_trigger_dashboard.md", timestamp=None, block=None):
-    with open(dashboard_path, "r") as f:
-        dashboard = f.read()
-
-    new_section = f"## 🔁 Latest Loop Validation\n\n_Last updated: {timestamp}_\n\n{block}\n\n“Badge triggers echo. Dashboards remember.”\n"
-
-    updated = re.sub(r"## 🔁 Latest Loop Validation.*?“Badge triggers echo\. Dashboards remember.”", new_section, dashboard, flags=re.DOTALL)
-
-    with open(dashboard_path, "w") as f:
-        f.write(updated)
-
-    print("📣 Dashboard updated with latest loop validation.")
-
-if __name__ == "__main__":
-    ts, block = extract_latest_log()
-    if ts and block:
-        update_dashboard(timestamp=ts, block=block)
-    else:
-        print("⚠️ No validation block found.")
-
-def append_glyph_to_svg(svg_path="badge_trigger_echo_map.svg", theme="Quantum & Particle Vision", paper="Entropy’s Harmonic", status="✅"):
     with open(svg_path, "r") as f:
         svg = f.read()
 
-    # Example: Append status next to paper line
     marker = f"<text x=\"300\" y=\"130\">{status}</text> <!-- {theme} – {paper} -->\n"
     insert_point = svg.find("</svg>")
     updated_svg = svg[:insert_point] + marker + svg[insert_point:]
@@ -44,4 +28,26 @@ def append_glyph_to_svg(svg_path="badge_trigger_echo_map.svg", theme="Quantum & 
     with open(svg_path, "w") as f:
         f.write(updated_svg)
 
-    print(f"🎨 Echo glyph appended for {paper} in {theme} with status {status}.")
+    # Update manifest
+    manifest["echoed_glyphs"].append({
+        "theme": theme,
+        "paper": paper,
+        "status": status,
+        "timestamp": datetime.now().isoformat(),
+        "svg_id": f"glyph_{len(manifest['echoed_glyphs']) + 1:03}"
+    })
+
+    with open(manifest_path, "w") as f:
+        json.dump(manifest, f, indent=2)
+
+    print(f"🎨 Glyph echoed and manifest updated for {paper} in {theme}.")
+
+# Example usage
+if __name__ == "__main__":
+    append_glyph_to_svg(
+        svg_path="badge_trigger_echo_map.svg",
+        theme="Quantum & Particle Vision",
+        paper="Entropy’s Harmonic",
+        status="✅",
+        manifest_path="badge_trigger_echo_manifest.json"
+    )
