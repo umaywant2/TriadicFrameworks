@@ -38,6 +38,15 @@ Where \( H_n \) = Harmonic glyph index
 
 ---
 
+### Glyph-Linked Equations
+Crosswalk with badge_trigger_theme_manifest.md
+## Quantum glyph: 
+$$ Q = \int \psi^* \psi \cdot R_q $$ 
+## Planetary glyph: 
+$$ P = \sum_{i=1}^{n} \omega_i \cdot \phi_i $$
+
+---
+
 ### Resonance Operator Formalization  
 **From Resonance Operator @() — Formalization.docx**  
 Operator syntax:  
