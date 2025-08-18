@@ -1,0 +1,53 @@
+<svg width="1000" height="800" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .title { font: bold 28px sans-serif; fill: #222; }
+    .glyph { font: 24px sans-serif; fill: #6a0dad; }
+    .theme { font: 16px sans-serif; fill: #444; }
+    .tier { font: italic 14px sans-serif; fill: #888; }
+    .line { stroke: #ccc; stroke-width: 2; }
+  </style>
+
+  <text x="50" y="50" class="title">Triadic Curriculum Constellation</text>
+
+  <!-- Glyph Nodes -->
+  <text x="100" y="150" class="glyph">🎶</text>
+  <text x="100" y="180" class="theme">Music & Symbolic Extensions</text>
+  <text x="100" y="200" class="tier">Tier II</text>
+
+  <text x="300" y="150" class="glyph">⚛️</text>
+  <text x="300" y="180" class="theme">Quantum & Particle Vision</text>
+  <text x="300" y="200" class="tier">Tier III</text>
+
+  <text x="500" y="150" class="glyph">🩺</text>
+  <text x="500" y="180" class="theme">Health & Ultrasound</text>
+  <text x="500" y="200" class="tier">Tier I</text>
+
+  <text x="700" y="150" class="glyph">🜁</text>
+  <text x="700" y="180" class="theme">Elemental & Spectrum</text>
+  <text x="700" y="200" class="tier">Tier II</text>
+
+  <text x="200" y="350" class="glyph">🪐</text>
+  <text x="200" y="380" class="theme">Planetary & Temporal Mapping</text>
+  <text x="200" y="400" class="tier">Tier III</text>
+
+  <text x="400" y="350" class="glyph">🧠</text>
+  <text x="400" y="380" class="theme">Cognitive & Symbolic</text>
+  <text x="400" y="400" class="tier">Tier I</text>
+
+  <text x="600" y="350" class="glyph">⚡</text>
+  <text x="600" y="380" class="theme">Energy & Wireless Power</text>
+  <text x="600" y="400" class="tier">Tier II</text>
+
+  <text x="800" y="350" class="glyph">🔧</text>
+  <text x="800" y="380" class="theme">Engineering & Firmware</text>
+  <text x="800" y="400" class="tier">Tier I</text>
+
+  <!-- Connecting Lines -->
+  <line x1="100" y1="150" x2="400" y2="350" class="line"/>
+  <line x1="300" y1="150" x2="600" y2="350" class="line"/>
+  <line x1="500" y1="150" x2="800" y2="350" class="line"/>
+  <line x1="700" y1="150" x2="200" y2="350" class="line"/>
+
+  <!-- Footer -->
+  <text x="50" y="750" class="tier">Each glyph is a lantern. Each lantern maps a theme. Each theme echoes a tier.</text>
+</svg>
