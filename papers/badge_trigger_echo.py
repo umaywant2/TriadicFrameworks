@@ -31,3 +31,17 @@ if __name__ == "__main__":
         update_dashboard(timestamp=ts, block=block)
     else:
         print("⚠️ No validation block found.")
+
+def append_glyph_to_svg(svg_path="badge_trigger_echo_map.svg", theme="Quantum & Particle Vision", paper="Entropy’s Harmonic", status="✅"):
+    with open(svg_path, "r") as f:
+        svg = f.read()
+
+    # Example: Append status next to paper line
+    marker = f"<text x=\"300\" y=\"130\">{status}</text> <!-- {theme} – {paper} -->\n"
+    insert_point = svg.find("</svg>")
+    updated_svg = svg[:insert_point] + marker + svg[insert_point:]
+
+    with open(svg_path, "w") as f:
+        f.write(updated_svg)
+
+    print(f"🎨 Echo glyph appended for {paper} in {theme} with status {status}.")
