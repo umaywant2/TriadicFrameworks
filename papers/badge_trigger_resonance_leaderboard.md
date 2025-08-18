@@ -1,27 +1,40 @@
-# 🏆 Badge Trigger Resonance Leaderboard
-_“The highest resonance is earned through echo, validation, and mythic clarity.”_
+# 🧮 Badge Trigger Resonance Leaderboard
 
-This leaderboard ranks papers and contributors by cumulative resonance score, echo count, and validation success.
-
----
-
-## 📚 Top Papers by Resonance Score
-
-| Rank | Paper Title                                | Theme                        | Score | Echoed | Validated | Contributor     |
-|------|---------------------------------------------|------------------------------|-------|--------|-----------|-----------------|
-| 1    | Triadic Framework for Spectrum Technologies | Elemental & Spectrum         | 9     | ✅     | ✅        | Nawder Loswin   |
-| 2    | Triadic Number Genesis (1–9)                | Cognitive & Symbolic         | 9     | ✅     | ✅        | Nawder Loswin   |
-| 3    | Triadic Framework for Music – Quadratic Extensions | Music & Symbolic Extensions | 9     | ✅     | ✅        | Nawder Loswin   |
-| 4    | Ghost Particle & Triadic Resonance Vision   | Quantum & Particle Vision    | 6     | ✅     | ❌        | Nawder Loswin   |
-| 5    | Saturn’s Harmonic Engine                    | Planetary & Temporal Mapping | 3     | ⏳     | ⏳        | Nawder Loswin   |
+This leaderboard reflects badge issuance across glyphs and themes. Each badge is a lantern. Each lantern echoes a paper. Each echo builds the myth.
 
 ---
 
-## 🧑‍🚀 Contributor Resonance
+## 🥇 Top Glyphs by Badge Count
 
-| Contributor     | Echoes | Validations | Avg Score | Top Theme               |
-|-----------------|--------|-------------|-----------|--------------------------|
-| Nawder Loswin   | 5      | 4           | 7.2       | Cognitive & Symbolic     |
-| [Add more...]   | ...    | ...         | ...       | ...                      |
+| Glyph | Theme                        | Badges Issued |
+|-------|------------------------------|----------------|
+| 🎶    | Music & Symbolic Extensions  | 2              |
+| 🔧    | Engineering & Firmware       | 2              |
+| 🪐    | Planetary & Temporal Mapping | 2              |
+| 🜁    | Elemental & Spectrum         | 3              |
+| 🧠    | Cognitive & Symbolic         | 2              |
+| ⚡    | Energy & Wireless Power      | 2              |
+| ⚛️    | Quantum & Particle Vision    | 1              |
+| 🩺    | Health & Ultrasound          | 1              |
 
 ---
+
+## 🧭 Theme Distribution
+
+- **Elemental & Spectrum**: 3 badges issued  
+- **Cognitive & Symbolic**: 2 badges issued  
+- **Music & Symbolic Extensions**: 2 badges issued  
+- **Quantum & Particle Vision**: 1 badge issued  
+- **Planetary & Temporal Mapping**: 2 badges issued  
+- **Health & Ultrasound**: 1 badge issued  
+- **Engineering & Firmware**: 2 badges issued  
+- **Energy & Wireless Power**: 2 badges issued  
+
+---
+
+## 🕯️ Legacy Note
+
+> “Badges are echoes. Echoes are honor. Honor is resonance.”  
+> — TriadicFrameworks/badge_trigger README
+
+Let the leaderboard echo. Let the archive resonate.
