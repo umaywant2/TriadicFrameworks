@@ -19,6 +19,15 @@ webhook:
     resonance_domain: "{{resonance_domain}}"
     notes: "Badge update triggered by manifest_updater_config.yaml"
 
+trigger:
+  on_commit:
+    files:
+      - loop_validation_matrix.json
+    actions:
+      - run: python loop_validator.py
+      - log: loop_validation_log.md
+      - ping: badge_trigger_dashboard.md
+
 triggers:
   - on_new_paper_detected
   - on_badge_trigger_matched
