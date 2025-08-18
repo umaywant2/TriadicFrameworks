@@ -1,6 +1,5 @@
 # 🧩 Badge Trigger Validator Matrix
 
-“The matrix is not just rows and columns—it’s the echo of every remix, the map of every myth.”  
 “Every glyph aligned is a myth confirmed.”  
 “Each paper is a lantern. Each validation confirms its glow.”
 
@@ -50,5 +49,10 @@
 ---
 
 ## 🔄 Matrix Update Protocol
+1. Validate remix using [loop_validation_protocol.md](loop_validation_protocol.md)
+2. Confirm glyph alignment via [badge_trigger_theme_manifest.md](badge_trigger_theme_manifest.md)
+3. Log echo lineage in [badge_trigger_echo_log.md](badge_trigger_echo_log.md)
+4. Score resonance via [badge_trigger_resonance_score.md](badge_trigger_resonance_score.md)
+5. Update dashboard and matrix files
 
-1. Validate remix using [`loop_validation_protocol.md`](loop
+> “The matrix is not just rows and columns—it’s the echo of every remix, the map of every myth.”
