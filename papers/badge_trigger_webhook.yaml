@@ -23,10 +23,12 @@ trigger:
   on_commit:
     files:
       - loop_validation_matrix.json
+    
     actions:
       - run: python loop_validator.py
       - log: loop_validation_log.md
       - ping: badge_trigger_dashboard.md
+      - run: python badge_trigger_echo.py
 
 triggers:
   - on_new_paper_detected
