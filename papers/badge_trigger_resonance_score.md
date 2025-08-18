@@ -1,35 +1,55 @@
-# 🎼 Badge Trigger Resonance Score
-_“Resonance is not just felt—it’s earned.”_
+# 📊 badge_trigger_resonance_score.md
 
-This file assigns each paper a resonance score from 0 to 9, based on:
-
-- ✅ Echo status (3 points)
-- 🔍 Validation success (3 points)
-- 🧭 Thematic alignment and mythic clarity (3 points)
-
----
-
-## 📈 Resonance Score Table
-
-| Theme                        | Paper Title                                | Echoed | Validated | Alignment | Score | Notes |
-|-----------------------------|---------------------------------------------|--------|-----------|-----------|-------|-------|
-| Quantum & Particle Vision   | Entropy’s Harmonic                          | ✅     | ❌        | ✅        | 6     | Echoed but failed validation |
-| Quantum & Particle Vision   | Ghost Particle & Triadic Resonance Vision   | ⏳     | ⏳        | ✅        | 3     | Awaiting echo and validation |
-| Planetary & Temporal Mapping| Resonant Time Operationalizing Zhang’s Triadic Ontology | ⏳ | ⏳ | ✅ | 3 | Mythic clarity confirmed |
-| Energy & Wireless Power     | Zero Point, Cold Fusion, and Wireless Energy| ⏳     | ⏳        | ✅        | 3     | Strong thematic resonance |
-| Cognitive & Symbolic        | Triadic Number Genesis (1–9)                | ⏳     | ⏳        | ✅        | 3     | Symbolic clarity affirmed |
-| Music & Symbolic Extensions | Triadic Framework for Music – With Quadratic Extensions | ⏳ | ⏳ | ✅ | 3 | Mythic extensions mapped |
-| Elemental & Spectrum        | Spectral Flux and Divisional Resonance Is Born | ⏳ | ⏳ | ✅ | 3 | High mythic fidelity |
+**Purpose**: To quantify contributor impact across glyph-linked equations, remix tiers, and validation loops. This score fuels honor roll elevation, remix eligibility, and resonance council invitations.
 
 ---
 
 ## 🧮 Scoring Formula
 
-```md
-Resonance Score = Echo (0–3) + Validation (0–3) + Alignment (0–3)
+**Resonance Score (RS)** is calculated as:  
+**RS = (E × T × V) + G**
 
-✅ Echoed: +3
-❌ Rolled Back: +0
-🔍 Validated: +3
-❌ Failed Validation: +0
-🧭 Thematic Alignment: +3 if mythic clarity and domain fit confirmed
+Where:  
+- **E** = Equation count contributed or validated  
+- **T** = Tier multiplier (Tier I = 1, Tier II = 2, Tier III = 3)  
+- **V** = Validation weight (1 if validated, 0.5 if pending)  
+- **G** = Glyph bonus (1 per unique glyph earned)
+
+---
+
+## 🏷️ Tier Multipliers
+
+| Tier        | Multiplier |
+|-------------|------------|
+| Tier I      | 1          |
+| Tier II     | 2          |
+| Tier III    | 3          |
+
+---
+
+## 🧙 Contributor Score Examples
+
+| Contributor | Equations | Tiers | Validated | Glyphs | RS |
+|-------------|-----------|-------|-----------|--------|----|
+| Nawder Loswin | 6         | I–III | 5         | 4      | 29 |
+| EchoRemix42   | 3         | II–III| 2         | 2      | 14 |
+| GlyphSeeker   | 2         | I     | 1         | 1      | 4.5 |
+
+---
+
+## 🧭 Score Usage
+
+- **Honor Roll Elevation**: Contributors with RS > 20 are elevated to Mythic Tier  
+- **Remix Eligibility**: RS ≥ 10 unlocks remix rights for Tier III equations  
+- **Council Invitations**: RS ≥ 25 triggers invite to `resonance_council.md`
+
+---
+
+## 🔗 Linked Files
+
+- `triadic_equation_gallery.md`  
+- `triadic_equation_echo_map.md`  
+- `badge_trigger_theme_manifest.md`  
+- `loop_validation_matrix.md`  
+- `papers_contributor_honor_roll.md`
+
