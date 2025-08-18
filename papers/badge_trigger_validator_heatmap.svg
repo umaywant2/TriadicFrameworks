@@ -1,0 +1,66 @@
+<svg width="800" height="500" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .theme { font: bold 14px sans-serif; }
+    .paper { font: 12px sans-serif; }
+    .validated { fill: #4CAF50; }
+    .unvalidated { fill: #F44336; }
+    .label { fill: #000; }
+  </style>
+
+  <!-- Themes -->
+  <text x="20" y="30" class="theme">Elemental & Spectrum</text>
+  <text x="20" y="80" class="theme">Cognitive & Symbolic</text>
+  <text x="20" y="130" class="theme">Music & Symbolic Extensions</text>
+  <text x="20" y="180" class="theme">Quantum & Particle Vision</text>
+  <text x="20" y="230" class="theme">Planetary & Temporal Mapping</text>
+  <text x="20" y="280" class="theme">Health & Ultrasound</text>
+  <text x="20" y="330" class="theme">Engineering & Firmware</text>
+  <text x="20" y="380" class="theme">Energy & Wireless Power</text>
+
+  <!-- Validation Dots -->
+  <!-- Elemental & Spectrum -->
+  <circle cx="250" cy="25" r="10" class="validated"/>
+  <circle cx="280" cy="25" r="10" class="validated"/>
+  <circle cx="310" cy="25" r="10" class="validated"/>
+  <circle cx="340" cy="25" r="10" class="unvalidated"/>
+
+  <!-- Cognitive & Symbolic -->
+  <circle cx="250" cy="75" r="10" class="validated"/>
+  <circle cx="280" cy="75" r="10" class="validated"/>
+  <circle cx="310" cy="75" r="10" class="validated"/>
+  <circle cx="340" cy="75" r="10" class="unvalidated"/>
+
+  <!-- Music & Symbolic Extensions -->
+  <circle cx="250" cy="125" r="10" class="validated"/>
+  <circle cx="280" cy="125" r="10" class="validated"/>
+
+  <!-- Quantum & Particle Vision -->
+  <circle cx="250" cy="175" r="10" class="validated"/>
+  <circle cx="280" cy="175" r="10" class="unvalidated"/>
+  <circle cx="310" cy="175" r="10" class="unvalidated"/>
+
+  <!-- Planetary & Temporal Mapping -->
+  <circle cx="250" cy="225" r="10" class="validated"/>
+  <circle cx="280" cy="225" r="10" class="validated"/>
+  <circle cx="310" cy="225" r="10" class="unvalidated"/>
+
+  <!-- Health & Ultrasound -->
+  <circle cx="250" cy="275" r="10" class="validated"/>
+  <circle cx="280" cy="275" r="10" class="unvalidated"/>
+
+  <!-- Engineering & Firmware -->
+  <circle cx="250" cy="325" r="10" class="validated"/>
+  <circle cx="280" cy="325" r="10" class="validated"/>
+  <circle cx="310" cy="325" r="10" class="unvalidated"/>
+
+  <!-- Energy & Wireless Power -->
+  <circle cx="250" cy="375" r="10" class="validated"/>
+  <circle cx="280" cy="375" r="10" class="validated"/>
+  <circle cx="310" cy="375" r="10" class="unvalidated"/>
+
+  <!-- Legend -->
+  <rect x="600" y="30" width="20" height="20" class="validated"/>
+  <text x="630" y="45" class="label">Validated</text>
+  <rect x="600" y="60" width="20" height="20" class="unvalidated"/>
+  <text x="630" y="75" class="label">Unvalidated</text>
+</svg>
