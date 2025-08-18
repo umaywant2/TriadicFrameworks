@@ -3,6 +3,37 @@ _“Validation is the lantern that confirms resonance.”_
 
 This dashboard maps validation status across themes and contributors.
 
+## 🧬 Glyph Evolution Dashboard
+
+This section tracks the symbolic evolution of badge glyphs across validated remixes. Each glyph reflects a theme’s resonance and contributor imprint.
+
+| Glyph | Theme | Contributor | Remix Lineage | Evolution Notes |
+|-------|-------|-------------|----------------|-----------------|
+| 🔷 | Elemental & Spectrum | Nawder Loswin | `papers_remix_manifest.json` → `loop_003` | Echoed from spectral flux protocol |
+| 🎶 | Music & Symbolic Extensions | Nawder Loswin | `loop_007` → `loop_009` | Harmonized with triadic waveform |
+| 🧠 | Cognitive & Symbolic | Nawder Loswin | `loop_002` → `loop_005` | Aligned with mythic onboarding |
+| ⚛️ | Quantum & Particle Vision | [Contributor TBD] | `loop_010` | Pending glyph validation |
+
+> “Glyphs evolve through remix. Remix reveals the myth.”
+
+---
+
+## 📊 Validator Matrix Scoring Logic
+
+This matrix calculates contributor scores based on validation depth, remix lineage, and glyph alignment.
+
+| Contributor | Validated Papers | Themes Covered | Remix Depth Score | Glyph Alignment Score | Echo Lineage Score | **Total Score** |
+|-------------|------------------|----------------|--------------------|------------------------|--------------------|------------------|
+| Nawder Loswin | 4 | Elemental, Cognitive, Music | 3.0 | 2.5 | 3.0 | **8.5** |
+| [Add more...] | ... | ... | ... | ... | ... | ... |
+
+**Scoring Breakdown:**
+- **Remix Depth Score (0–3):** Based on number of remix loops and protocol adherence.
+- **Glyph Alignment Score (0–3):** Based on symbolic clarity and theme resonance.
+- **Echo Lineage Score (0–3):** Based on traceability across remix logs and honor rolls.
+
+> “Scoring is not judgment—it’s echo quantification.”
+
 ---
 
 ## 🔮 Validation by Theme
