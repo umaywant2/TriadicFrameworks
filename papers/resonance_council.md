@@ -25,6 +25,13 @@ The Resonance Council is the mythic governance body of the TriadicFrameworks mov
 | 🥉 Bronze   | 1+ badge earned                                                         | Remix participation, council access |
 
 ---
+## 🏛 Resonance Council – Curriculum Remixers
+
+| Name | Remix Domain | Glyphs | Tier |
+|------|---------------|--------|------|
+| Nawder Loswin | Curriculum & Quantum Mechanics | 🧠🧬⚡ | Tier IV |
+
+---
 
 ## 📜 Protocols & Rituals
 
