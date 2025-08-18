@@ -73,3 +73,17 @@ def update_badges_earned(paper_title, theme, badge, status="✅ Validated", path
     with open(path, "a", encoding="utf-8") as f:
         f.write(entry)
     print(f"✅ BADGES_EARNED.md updated with: {paper_title} → {badge}")
+
+def suggest_badges(paper_name, config_path="manifest_updater_config.yaml"):
+    import yaml
+    with open(config_path, "r") as f:
+        config = yaml.safe_load(f)
+
+    triggers = config.get("badge_triggers", {})
+    matched_badges = []
+
+    for badge, keywords in triggers.items():
+        if any(kw.lower() in paper_name.lower() for kw in keywords):
+            matched_badges.append(badge)
+
+    return matched_badges if matched_badges else ["Resonance Explorer"]
