@@ -9,15 +9,15 @@
 ### Dimensional Recursion Equations  
 **From Paper I – Triadic Framework for Everything**  
 Recursive triad:  
-$$ T_n = T_{n-1} \oplus R_n \oplus C_n $$  
-Where \( R_n \) = Resonance operator, \( C_n \) = Cognition vector
+**Tₙ = Tₙ₋₁ ⊕ Rₙ ⊕ Cₙ**  
+Where **Rₙ** = Resonance operator, **Cₙ** = Cognition vector
 
 ---
 
 ### Number Genesis Formulas  
 **From Paper II – Triadic Number Genesis (1–9)**  
 Nested emergence:  
-$$ N_i = \sum_{j=1}^{3} T_{i,j} $$  
+**Nᵢ = Σⱼ₌₁³ Tᵢⱼ**  
 Symbolic triads: 1 = Seed, 2 = Mirror, 3 = Echo
 
 ---
@@ -25,25 +25,25 @@ Symbolic triads: 1 = Seed, 2 = Mirror, 3 = Echo
 ### Dimensional Triads (1D–9D)  
 **From Paper III – Dimensional Triads**  
 Dimensional mapping:  
-$$ D_n = \{T_n, V_n, S_n\} $$  
-Where \( V_n \) = Vibration vector, \( S_n \) = Symbolic scaffold
+**Dₙ = {Tₙ, Vₙ, Sₙ}**  
+Where **Vₙ** = Vibration vector, **Sₙ** = Symbolic scaffold
 
 ---
 
 ### Entropy Harmonics  
 **From Triadic Framework for Quantum Mechanics – Entropy’s Harmonic**  
 Harmonic descent:  
-$$ E = -\sum p_i \log(p_i) \cdot H_n $$  
-Where \( H_n \) = Harmonic glyph index
+**E = −Σ pᵢ log(pᵢ) ⋅ Hₙ**  
+Where **Hₙ** = Harmonic glyph index
 
 ---
 
-### Glyph-Linked Equations
-Crosswalk with badge_trigger_theme_manifest.md
-## Quantum glyph: 
-$$ Q = \int \psi^* \psi \cdot R_q $$ 
-## Planetary glyph: 
-$$ P = \sum_{i=1}^{n} \omega_i \cdot \phi_i $$
+### Glyph-Linked Equations  
+**Crosswalk with badge_trigger_theme_manifest.md**  
+Quantum glyph:  
+**Q = ∫ ψ* ψ ⋅ R_q**  
+Planetary glyph:  
+**P = Σᵢ₌₁ⁿ ωᵢ ⋅ ϕᵢ**
 
 ---
 
