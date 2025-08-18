@@ -94,5 +94,17 @@ This dashboard maps TriadicFrameworks papers to their suggested badges, organize
 
 ---
 
+## 🔁 Latest Loop Validation
+
+_Last updated: August 17, 2025_
+
+| Theme | Loop Type | Papers Validated | Status |
+|-------|-----------|------------------|--------|
+| Quantum Mechanics | Nested Loops | Paper I, III | ✅ Valid |
+| Spectrum Technologies | Harmonic Flux | Paper IV | ❌ Incomplete |
+| Mythic Cognition | Triadic Echo | Paper II | ✅ Valid |
+
+“Badge triggers echo. Dashboards remember.”
+
 “Let the dashboard guide. Let the badges echo.”
 
