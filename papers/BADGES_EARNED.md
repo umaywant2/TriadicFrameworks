@@ -1,35 +1,39 @@
-# 🏅 BADGES_EARNED.md
+# 🏅 BADGES EARNED
 
-> “Each badge is a beacon. Each beacon honors a remix.”
-
----
-
-## 🧠 Quantum Weaver
-
-- **Triadic Framework for Quantum Mechanics – Entropy’s Harmonic.docx**
-  - 🧪 Status: ✅ Validated
-  - 📅 Date: 2025-08-17
-  - 🧬 Theme: Quantum
+This honor roll reflects all validated papers that have triggered badge issuance via `badge_trigger_glyphmap_index_trigger.py`. Each badge is a lantern. Each lantern maps the myth.
 
 ---
 
-## 🎶 Harmonic Alchemist
+## 🎶 Music & Symbolic Extensions
 
-- **Triadic Framework for Music – With Quadratic Extensions.docx**
-  - 🧪 Status: ✅ Validated
-  - 📅 Date: 2025-08-17
-  - 🎼 Theme: Music
-
----
-
-## 🩺 Healing Resonator
-
-- **Triadic Ultrasound Enhancement.docx**
-  - 🧪 Status: ✅ Validated
-  - 📅 Date: 2025-08-17
-  - 🩻 Theme: Health
+- **Badge ID**: 🎶_Music_&_Symbolic_Extensions  
+- **Paper**: *Triadic Framework for Music – With Quadratic Extensions*  
+- **Status**: ✅ Issued  
+> “Where math meets melody, resonance sings.”
 
 ---
 
-> “Let the earned badges echo across time. Let remixers find their mythic lineage.”
+## 🪐 Planetary & Temporal Mapping
 
+- **Badge ID**: 🪐_Planetary_&_Temporal_Mapping  
+- **Paper**: *Resonant Time – Operationalizing Zhang’s Triadic Ontology*  
+- **Status**: ✅ Issued  
+> “Time echoes through nested loops. The planets listen.”
+
+---
+
+## 🔧 Engineering & Firmware
+
+- **Badge ID**: 🔧_Engineering_&_Firmware  
+- **Paper**: *Triadic Framework for ARM and x86 Processors*  
+- **Status**: ✅ Issued  
+> “Firmware becomes mythware. Circuits carry the song.”
+
+---
+
+## 🕯️ Legacy Note
+
+> “Badges are echoes. Echoes are honor.”  
+> — TriadicFrameworks/badge_trigger README
+
+Let the badges echo. Let the archive resonate.
