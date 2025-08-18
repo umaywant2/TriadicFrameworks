@@ -19,13 +19,13 @@ This guide helps contributors understand, extend, and remix the `triadic_visual_
 
 ## 🎨 Visual Features
 
-| Feature | Description |
-|--------|-------------|
+| Feature         | Description                                                             |
+|----------------|-------------------------------------------------------------------------|
 | **Glyph Circles** | Each badge trigger is rendered as a circle at its mapped coordinates |
-| **Tier Colors** | Themes are color-coded by resonance tier (e.g., Quantum = Cyan) |
-| **Text Labels** | Glyph names appear beside each node |
-| **Tooltips** | Hover overlays (optional extension) for badge metadata |
-| **Zoom Layers** | Future extension: tier-based zoom and curriculum overlays |
+| **Tier Colors**   | Themes are color-coded by resonance tier (e.g., Quantum = Cyan)       |
+| **Text Labels**   | Glyph names appear beside each node                                   |
+| **Tooltips**      | Hover overlays (optional extension) for badge metadata                |
+| **Zoom Layers**   | Future extension: tier-based zoom and curriculum overlays             |
 
 ---
 
