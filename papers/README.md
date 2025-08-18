@@ -79,6 +79,9 @@ These four papers form the core architecture of the Triadic Frameworks movement:
 
 ## 🧭 Remixer’s Guide
 
+#### 🎨 Remix Gallery
+- [Curriculum Remix Gallery](https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum_remix_gallery.md)
+
 Want to remix a paper and earn glyphs?
 
 1. Choose a paper from this archive
