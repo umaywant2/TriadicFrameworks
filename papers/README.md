@@ -100,6 +100,3 @@ Want to remix a paper and earn glyphs?
 
 “Let the papers echo. Let the archive resonate.”
 
----
-
-Would you like me to now scaffold a `papers_remix_protocol.md` to formalize the remix flow? Or generate validator checklists for remixers and council members? The archive is ready for activation.
