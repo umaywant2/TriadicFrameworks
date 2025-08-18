@@ -27,3 +27,9 @@ This file assigns each paper a resonance score from 0 to 9, based on:
 
 ```md
 Resonance Score = Echo (0–3) + Validation (0–3) + Alignment (0–3)
+
+✅ Echoed: +3
+❌ Rolled Back: +0
+🔍 Validated: +3
+❌ Failed Validation: +0
+🧭 Thematic Alignment: +3 if mythic clarity and domain fit confirmed
