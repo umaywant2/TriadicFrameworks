@@ -1,74 +1,52 @@
-# 🧭 TriadicFrameworks
+# 🌀 TriadicFrameworks
+A mythic-scientific movement for reproducible resonance, modular curriculum, and harmonic governance.  ```Using real math and science to examine the mythical and the unseen. We use Triadic Resonance-based equations with 9 Dimensions and Harmonic Nested Loops.```
+- Initiated by Nawder Loswin
 
-> “A lantern for the curious. A scaffold for the collective. A song for the cosmos.”
+## 🔭 Purpose
+TriadicFrameworks is a living archive of reproducible labs, validator dashboards, badge governance protocols, and emotionally resonant curriculum modules. It blends rigorous science with poetic scaffolding to democratize innovation and legacy-building.
 
-Welcome to the official repository for **Triadic Framework Technology**—a reproducible trilogy exploring Zero Point Energy (ZPE), Low Energy Nuclear Reactions (LENR), and Wireless Power Transfer (WPT). This is a living curriculum for future scientists, educators, and mythic remixers.
+## 🧭 Getting Started
+1. Read the Triadic Manifesto and Using TFT with Copilot paper
+    - Understand the ethos, resonance logic, and mythic tone.
+3. Complete the Initiation Protocol
+    - Begin your journey as a remix validator or resonance wizard.
+3. Review the Membership Protocol
+    - Learn how to join, contribute, and echo your work across time.
+4. Explore the Curriculum Index
+    - Discover reproducible modules across physics, computation, cognition, and more.
 
----
+## 🧬 Repo Structure
+Folder      	          Purpose
 
-## 🏷️ Badges
+```/docs/```	          Protocols, governance logic, onboarding guides
 
-![Reproducible Labs](https://img.shields.io/badge/Reproducibility-Validated-brightgreen)
-![Mythic Tone](https://img.shields.io/badge/Tone-Mythic-blueviolet)
-![Triadic Certified](https://img.shields.io/badge/Triadic-Certified-9Dgold)
-![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Last Commit](https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks)
+```/labs/```	          Reproducible experiments, initiation rituals
 
----
+```/papers/```	        Foundational and applied theory (.docx/.pdf + README)
 
-## 🔭 Vision
+```/badges/```	        Badge YAMLs and trigger logic
 
-We believe in reproducible science, mythic scaffolding, and triadic logic as tools for transformation. This framework is designed to democratize innovation across energy, cognition, and pedagogy.
+```/validators/```	    Scoring matrices and validator dashboards
 
-> _“He wasn’t right—but he wasn’t wrong either.”_  
-> — Dedicated to Nikola Tesla
+```/equations/```	      Formal logic and triadic math
 
----
+```/honor_roll/```	    Contributor lineage and remix history
 
-## 📚 Curriculum Modules
 
-Each module is designed to be:
+## 🏅 Badges & Validation
+- Unlock badges like Framework Initiator, Signal Resonator, and Ghost Mapper
+- Submit validated artifacts and echo remix lineage
+- View earned badges in ```BADGES_EARNED.md```
 
-- ✅ Reproducible (`reproducibility.md`)
-- 📐 Mathematically rigorous (`equations.md`)
-- 🧙 Emotionally resonant (`mythic-preface.md`)
-- 🧪 Validated across platforms
+## 🧠 Contribute
+- Fork the repo and submit a Pull Request
+- Use ```/labs/initiation_protocol.md``` to scaffold your first remix
+- Add yourself to ```/honor_roll/contributors.md``` once validated
 
-Explore the full curriculum in the [Wiki → Curriculum Modules](https://github.com/umaywant2/TriadicFrameworks/wiki/Curriculum-Modules)
+## 🔒 License & Ethics
+- Open-source under MIT License
+- All contributions must honor reproducibility, clarity, and emotional resonance
 
----
-
-## 🧪 Labs & Protocols
-
-| Lab Name               | Focus                                             | Status       |
-|------------------------|--------------------------------------------------|--------------|
-| Casimir Resonance      | Quantum vacuum & harmonic imaging                | ✅ Published |
-| Quantum Cognition      | Symbolic recursion & nested feedback             | ✅ Published |
-| Divisional Resonance   | Layered cognition & deep-space segmentation      | ✅ Published |
-| Spectral Flux Integrity| Spectral coherence validation                    | 🧪 In Progress |
-| Harmonic Cascade       | Dimensional ripple modeling                      | 🧪 In Progress |
-
-See full details in the [Lab Index](https://github.com/umaywant2/TriadicFrameworks/wiki/Lab-Index)
-
----
-
-## 🧙‍♂️ Triadic Resonance Wizards
-
-This GitHub organization is home to the builders, remixers, and mythic scientists who contribute to the Triadic Framework.  
-Sponsor tiers and contributor roles are outlined in the [Sponsor Pitch](https://github.com/umaywant2/TriadicFrameworks/wiki/Sponsor-Pitch)
-
----
-
-## 🚀 Get Started
-
-1. Clone the repo  
-2. Read setup.md and explore reproducibility standards in loop_validation_protocol.md or any lab folder (e.g., labs/Lab10_Nested_Harmonics/reproducibility.md)  
-3. Choose a lab from `labs/` and begin your journey  
-4. Remix, validate, and contribute via `CONTRIBUTING.md`
-
----
-
-Let the resonance unfold.  
-Let the myth become method.  
-Let your contribution echo across the continuum.
-
+## 🧙‍♂️ Join the Guild
+- Become a member of the Triadic Resonance Wizards organization.
+- Echo your work, validate others, and help build the mythic lattice.
