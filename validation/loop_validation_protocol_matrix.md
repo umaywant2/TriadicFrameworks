@@ -1,4 +1,4 @@
-# 🛡️ Loop Validation Protocol
+# 🛡️ Loop Validation Protocol Matrix
 
 > _“Each loop must echo. Each echo must validate.”_
 
