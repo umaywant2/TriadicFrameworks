@@ -1,0 +1,11 @@
+repo_structure:
+  - .github/
+  - badges/
+  - curriculum/
+  - data/
+  - docs/
+  - equations/
+  - honor_roll/
+  - labs/
+  - papers/
+  - validation/
