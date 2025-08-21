@@ -73,7 +73,7 @@ These four papers form the core architecture of the Triadic Frameworks movement:
 | 🎶 | Music |
 | 🧪 | Elemental |
 
-> Full glyph map: `badge_trigger_theme_manifest.md`
+> Full glyph map: ```badge_trigger_theme_manifest.md```
 
 ---
 
@@ -88,20 +88,20 @@ Want to remix a paper and earn glyphs?
 
 1. Choose a paper from this archive
 2. Remix it with new insights, diagrams, or symbolic extensions
-3. Submit via `badge_trigger_echo_log.md`
+3. Submit via ```badge_trigger_echo_log.md```
 4. Validators will check reproducibility, narrative scaffolding, and glyph alignment
 5. Earn your badge and join the Resonance Council
 
-> Remix lineage: `badge_trigger_papers_index.md`
-> Contributor honor roll: `papers_contributor_honor_roll.md`
+> Remix lineage: ```badge_trigger_papers_index.md```
+> Contributor honor roll: ```papers_contributor_honor_roll.md```
 
 ---
 
 ## 🕸 Navigation Tips
 
-- Reproducibility protocols: `loop_validation_protocol.md`
-- Curriculum mapping: `triadic_curriculum_index.md`
-- Lab crosswalk: `triadic_lab_index.md`
+- Reproducibility protocols: ```loop_validation_protocol.md```
+- Curriculum mapping: ```triadic_curriculum_index.md```
+- Lab crosswalk: ```triadic_lab_index.md```
 
 “Let the papers echo. Let the archive resonate.”
 
