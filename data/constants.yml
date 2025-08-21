@@ -1,0 +1,4 @@
+half_life_days: 21
+top_k: 7
+drift_alert_threshold: 0.15
+resonance_parity_target: 0.75
