@@ -1,4 +1,6 @@
 import json
+from validation.loop_validator import validate_loop
+
 from datetime import datetime
 
 def validate_loops(matrix_path="loop_validation_matrix.json", log_path="loop_validation_log.md", contributor="Nawder Loswin"):
