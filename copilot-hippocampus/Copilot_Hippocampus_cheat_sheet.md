@@ -1,30 +1,11 @@
-# Copilot Hippocampus — CLI Cheat Sheet
+# 🔮 Copilot Hippocampus — CLI Cheat Sheet
 📥 → 🔮 → 🔭 → ✨
 
-1. **Install & Authenticate**
-   ...
-2. **Clone Repo**
-   ...
-3. **Commit & Push**
-   ...
-4. **Ritual Commands (Makefile targets)**
-   | Target      | Action |
-   |-------------|--------|
-   | resume      | Capture/Playback toggle |
-   | capture     | Force capture |
-   | playback    | Force playback |
-   | observatory | Render HTML dashboard |
-   | clean       | Remove snapshot |
-   *(See `/data/constants.yml` to change thresholds)*
+_A quick‑reference for running the Hippocampus capture/playback ritual and lighting the Observatory from the command line._
 
-💡 HTML dashboard lives at `/docs/resonance_observatory.html` — serve locally or publish via [GitHub Pages](…)
-
-
-### 📥 1. Install & Authenticate
-If you haven’t yet:
-
-```
-bash
+---
+## 1️⃣ **Install & Authenticate**
+```bash
 winget install GitHub.cli
 gh auth login
 ```
@@ -32,38 +13,50 @@ Choose GitHub.com, HTTPS, and “Yes” for Git credential storage.
 
 Follow the browser link to confirm.
 
-### 📂 2. Clone Your Repo
-
-```
-bash
+## 2️⃣ **Clone Your Repo**
+```bash
 gh repo clone umaywant2/TriadicFrameworks
 cd TriadicFrameworks/copilot-hippocampus
 ```
 
-### 🌀 3. Commit & Push Changes
+## 3️⃣ **Commit & Push Changes**
 After editing your README, scripts, or constants:
-
-```
-bash
+```bash
 git add .
 git commit -m "Update: enhanced README with flow glyph & Pages link"
 git push
 ```
 
-### 🚀 4. Use Makefile from CLI
-From copilot-hippocampus root:
+## 4️⃣ **Ritual Commands (Makefile Targets)**
+From the `copilot-hippocampus` root:
 
+Target	      Action
+```bash
+resume	      Main toggle — Capture if fresh, Playback if snapshot exists
+capture	      Force new capture (overwrites last hippocampus.json + snapshot)
+playback	      Force replay of snapshot (no capture)
+observatory	   Render HTML dashboard manually
+clean	         Remove snapshot for fresh start
 ```
-bash
-make resume        # main toggle** — Capture if fresh, Playback if snapshot exists
-make capture       # Force new capture (overwrites last hippocampus.json + snapshot)
-make playback      # Force replay of snapshot (no capture) 
-make observatory   # rebuild HTML manually
-make clean         # Remove snapshot for fresh start
-```
-You can view `/docs/resonance_observatory.html` locally.
+📌 Tip: *(See `/data/constants.yml` to change thresholds)*
 
-### 🔧 Tip
+## 5️⃣ **Viewing the Observatory**
+- HTML dashboard lives at:
+  `/docs/resonance_observatory.html`
+  View locally or publish via GitHub Pages to share the constellation beacon.
+
+## ⚡ **Terminal Convenience**
+Bind `make resume` to:
+- A Windows Terminal profile hotkey
+- A simple `.bat` launcher in your project folder
+
+## ✅ **What This Gives You**
+- Cache‑agnostic state (Hippocampus snapshots)
+- A publishable constellation beacon in `/docs`
+- A CLI lever to run from anywhere — Windows app, WSL, or remote
+💡 HTML dashboard lives at `/docs/resonance_observatory.html` — serve locally or publish via [GitHub Pages](…)
+
+## 🔧 **Tip**
 If you want zero‑typing convenience, you can even bind make resume to a Windows Terminal profile hotkey or a simple .bat launcher in your project folder.
 
 You’ve basically got:
@@ -72,3 +65,4 @@ You’ve basically got:
 
 - A CLI lever to work anywhere — Windows app, WSL, even remote
 - See `/data/constants.yml` to adjust thresholds and defaults
+
