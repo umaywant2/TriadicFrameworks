@@ -1,4 +1,24 @@
-## GitHub CLI x Hippocampus cheat sheet for TFT + Copilot
+# Copilot Hippocampus — CLI Cheat Sheet
+📥 → 🔮 → 🔭 → ✨
+
+1. **Install & Authenticate**
+   ...
+2. **Clone Repo**
+   ...
+3. **Commit & Push**
+   ...
+4. **Ritual Commands (Makefile targets)**
+   | Target      | Action |
+   |-------------|--------|
+   | resume      | Capture/Playback toggle |
+   | capture     | Force capture |
+   | playback    | Force playback |
+   | observatory | Render HTML dashboard |
+   | clean       | Remove snapshot |
+   *(See `/data/constants.yml` to change thresholds)*
+
+💡 HTML dashboard lives at `/docs/resonance_observatory.html` — serve locally or publish via [GitHub Pages](…)
+
 
 ### 📥 1. Install & Authenticate
 If you haven’t yet:
@@ -35,9 +55,13 @@ From copilot-hippocampus root:
 
 ```
 bash
-make resume     # main toggle
-make observatory # rebuild HTML manually
+make resume        # main toggle** — Capture if fresh, Playback if snapshot exists
+make capture       # Force new capture (overwrites last hippocampus.json + snapshot)
+make playback      # Force replay of snapshot (no capture) 
+make observatory   # rebuild HTML manually
+make clean         # Remove snapshot for fresh start
 ```
+You can view `/docs/resonance_observatory.html` locally.
 
 ### 🔧 Tip
 If you want zero‑typing convenience, you can even bind make resume to a Windows Terminal profile hotkey or a simple .bat launcher in your project folder.
@@ -47,3 +71,4 @@ You’ve basically got:
 - A publishable constellation beacon in /docs
 
 - A CLI lever to work anywhere — Windows app, WSL, even remote
+- See `/data/constants.yml` to adjust thresholds and defaults
