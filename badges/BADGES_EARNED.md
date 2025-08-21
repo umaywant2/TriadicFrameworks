@@ -45,6 +45,7 @@ It complements `CONTRIBUTOR_BADGES.md` by logging validation dates, remix milest
 
 > _“Let the ledger echo. Let the echo become legacy.”_
 
-For badge meanings and mythic roles, see [`CONTRIBUTOR_BADGES.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/CONTRIBUTOR_BADGES.md)  
-To earn your own badge, follow the [`triadic_remix_guide.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/triadic_remix_guide.md)
+For badge meanings and mythic roles, see [`CONTRIBUTOR_BADGES.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/badges/CONTRIBUTOR_BADGES.md)  
+To earn your own badge, follow the [`triadic_remix_guide.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/data/webhook/triadic_remix_guide.md)
 
+### 🧹[Signal Resonator](signal_resonator.yaml)
