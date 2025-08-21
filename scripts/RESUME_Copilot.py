@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """
 RESUME_Copilot.py — Toggle script for Capture ↔ Playback,
-with harmonic scoring + Active Constellation generator.
+with harmonic scoring + Active Constellation generator + auto‑lit Observatory.
 """
 
 from pathlib import Path
 import webbrowser, json, datetime as dt, sys, yaml
+
 from scripts.hippocampus_utils import make_triad, resonance_parity
+# ⬇ New: import the dashboard’s render_html pipeline
+from scripts import render_dashboard
 
 ROOT = Path(__file__).resolve().parents[1]
 SNAPSHOT_DIR = ROOT / "snapshots"
 DATA_DIR = ROOT / "data"
-SCRIPTS_DIR = ROOT / "scripts"
 
 HOT = SNAPSHOT_DIR / "LAST_CHAT_CONTEXT.md"
 HIP = DATA_DIR / "hippocampus.json"
@@ -37,46 +39,31 @@ def capture_mode():
     goals = [g.strip() for g in input("Goals (comma-separated): ").split(",") if g.strip()]
     today = dt.datetime.utcnow()
 
-    # ⚠️ In real build: ingest data, embeddings, validator inputs
-    triads = []
-    triads.append(make_triad(
-        a="OnboardingV3",
-        b="ResonanceParity",
-        c="ValidatorMatrix",
-        roles=("goal","metric","scaffold"),
-        harmonics={"similarity":0.83,"authority":0.90,"relevance":0.88,"validator":0.92},
-        decay_meta={"days_since":2, "half_life_days":constants.get("half_life_days", 21)},
-        provenance={"source":"md","path":"/docs/onboarding_v3.md","line":"12-58"},
-        tags=["onboarding","v3"]
-    ))
-    triads.append(make_triad(
-        a="BadgeSystem",
-        b="ContributorHonorRoll",
-        c="ValidatorMatrix",
-        roles=("artifact","artifact","scaffold"),
-        harmonics={"similarity":0.79,"authority":0.85,"relevance":0.81,"validator":0.90},
-        decay_meta={"days_since":5, "half_life_days":constants.get("half_life_days", 21)},
-        provenance={"source":"md","path":"/docs/badges.md","line":"3-40"},
-        tags=["governance","recognition"]
-    ))
+    # ⚠️ Stub triads — replace with ingestion logic
+    triads = [
+        make_triad(
+            a="OnboardingV3", b="ResonanceParity", c="ValidatorMatrix",
+            roles=("goal","metric","scaffold"),
+            harmonics={"similarity":0.83,"authority":0.90,"relevance":0.88,"validator":0.92},
+            decay_meta={"days_since":2, "half_life_days":constants.get("half_life_days", 21)},
+            provenance={"source":"md","path":"/docs/onboarding_v3.md","line":"12-58"},
+            tags=["onboarding","v3"]
+        )
+    ]
 
-    # Rank top-K
+    # Rank + parity
     top_k = constants.get("top_k", 7)
     triads_sorted = sorted(triads, key=lambda t: t["H"], reverse=True)[:top_k]
-
-    # Compute parity
     parity = resonance_parity(triads_sorted, "onboarding")
 
-    # Write hippocampus.json
     hippocampus = {
-        "version":"0.1",
-        "project":"TFT Project 1",
+        "version":"0.1", "project":"TFT Project 1",
         "snapshot":{"anchor":anchor,"asks":goals,"constants":constants},
         "triads": triads_sorted
     }
     HIP.write_text(json.dumps(hippocampus, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    # Write human-readable snapshot
+    # Human-readable snapshot
     md = f"""# RESUME_Copilot snapshot
 
 **Anchor:** {anchor}  
@@ -102,7 +89,14 @@ def capture_mode():
     HOT.write_text(md, encoding="utf-8")
 
     write_lineage("capture", {"anchor": anchor, "goals": goals})
-    print(f"Wrote {HOT.name} and {HIP.name}")
+    print(f"[+] Wrote {HOT.name} and {HIP.name}")
+
+    # 🌟 Auto‑light the Observatory after capture
+    try:
+        render_dashboard.main()
+        print("[+] Observatory HTML updated.")
+    except Exception as e:
+        print(f"[!] Observatory render failed: {e}")
 
 def playback_mode():
     open_and_delete(HOT)
