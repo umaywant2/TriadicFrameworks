@@ -56,6 +56,12 @@ All commands run from the repo root.
 ---
 
 ## 🌀 Boot & Preload Sequence
+```
+📥 Capture                                   ↓  (anchor + goals, triads, parity, badges)
+🔮 LAST_CHAT_CONTEXT.md + hippocampus.json   ↓  (auto)
+🔭 resonance_observatory.html                ↓  (session resume)
+✨ Copilot preload & continue work
+```
 
 1. **Capture Mode**  
    - `make capture` or `make resume` (if no snapshot exists)  
