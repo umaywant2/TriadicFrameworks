@@ -62,6 +62,9 @@ All commands run from the repo root.
 🔭 resonance_observatory.html                ↓  (session resume)
 ✨ Copilot preload & continue work
 ```
+📥 Capture → 🔮 `LAST_CHAT_CONTEXT.md` + `hippocampus.json` → 🔭 `resonance_observatory.html` → ✨ Copilot preload & continue work  
+- *(HTML can be published via [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages) for public constellation viewing)*
+
 
 1. **Capture Mode**  
    - `make capture` or `make resume` (if no snapshot exists)  
