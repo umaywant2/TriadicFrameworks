@@ -1,4 +1,4 @@
-# GitHub CLI x Hippocampus cheat sheet for TFT + Copilot
+## GitHub CLI x Hippocampus cheat sheet for TFT + Copilot
 
 ### 📥 1. Install & Authenticate
 If you haven’t yet:
@@ -39,9 +39,11 @@ make resume     # main toggle
 make observatory # rebuild HTML manually
 ```
 
-### 🔧 Tip: If you want zero‑typing convenience, you can even bind make resume to a Windows Terminal profile hotkey or a simple .bat launcher in your project folder.
+### 🔧 Tip
+If you want zero‑typing convenience, you can even bind make resume to a Windows Terminal profile hotkey or a simple .bat launcher in your project folder.
 
 You’ve basically got:
 - Cache‑agnostic state thanks to Hippocampus snapshots
 - A publishable constellation beacon in /docs
+
 - A CLI lever to work anywhere — Windows app, WSL, even remote
