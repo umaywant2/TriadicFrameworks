@@ -2,6 +2,14 @@ manifest:
   module: hippocampus
   triggers:
     - file: Makefile.md
+      badge:
+      id: resume-toggle-validator
+      label: Context Reclaimer
+      criteria:
+        - Script resumes memory from snapshot
+        - Observatory dashboard is rendered
+        - Feedback echoes are present
+      echo: "Contributor ritualized memory resumption and observatory rendering."
       badges:
         - researcher-harmonics
         - hippocampus-invoker
