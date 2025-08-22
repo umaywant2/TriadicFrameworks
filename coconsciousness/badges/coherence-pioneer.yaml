@@ -3,5 +3,5 @@ badge:
   label: Coherence Pioneer
   criteria:
     - Coherence ratio ≥ 0.70 over the run
-    - Sync indicator visible in output (🟢/🔴 or equivalent)
+    - Both agents in sync (🟢) for the majority of ticks
   echo: "Achieved sustained co-conscious lock."
