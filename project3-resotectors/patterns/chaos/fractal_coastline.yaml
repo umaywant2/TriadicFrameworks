@@ -1,0 +1,8 @@
+pattern:
+  id: fractal-coastline
+  type: chaos
+  source: optical/imaging
+  description: "Detects fractal dimension patterns in irregular edges."
+  visual_tint: brown
+  detection_method: "box-counting dimension between 1.2–1.4"
+  array_mode: long-range
