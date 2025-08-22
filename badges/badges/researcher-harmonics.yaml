@@ -1,0 +1,9 @@
+badge:
+  id: researcher-harmonics
+  label: Reproducibility Aligned
+  criteria:
+    - Invocation logic matches reproducibility standards
+    - Glyphs harmonized with Makefile semantics
+    - Reference Info header added
+  awarded_by: validator-dashboard
+  echo: "Contributor harmonized invocation logic with reproducibility glyphs."
