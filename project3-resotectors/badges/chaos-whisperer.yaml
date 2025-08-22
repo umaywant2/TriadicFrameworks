@@ -1,0 +1,7 @@
+badge:
+  id: chaos-whisperer
+  label: Chaos Whisperer
+  criteria:
+    - Added new chaos pattern entry
+    - Pattern includes detection_method and array_mode
+  echo: "Found order hiding inside apparent disorder."
