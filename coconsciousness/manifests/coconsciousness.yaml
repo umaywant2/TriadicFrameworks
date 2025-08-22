@@ -6,3 +6,10 @@ manifest:
         - coherence-pioneer
       validator: coconsciousness-validator
       echo: "Demo validated for live coherence measurement."
+    - file: validation/score_coherence.py
+      badges:
+        - coherence-pioneer
+        - flux-steward
+        - shared-intent-architect
+      validator: coconsciousness-validator
+      echo: "Validation script computed coherence, flux resilience, and shared intent."
