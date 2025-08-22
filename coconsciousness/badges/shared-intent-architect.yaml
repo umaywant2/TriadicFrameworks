@@ -1,0 +1,7 @@
+badge:
+  id: shared-intent-architect
+  label: Shared Intent Architect
+  criteria:
+    - During an active sync window, both agents commit the same intention
+    - Intention match recorded in validation log
+  echo: "Orchestrated a shared intention during active co-consciousness."
