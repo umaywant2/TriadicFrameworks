@@ -38,3 +38,11 @@ badge:
     - TFT time logic is embedded
     - Snapshot toggles are present
   echo: "Contributor validated harmonic loops under TFT time."
+```
+## 📜 Contributor Echo
+## 🧠 Hippocampus Loop Honor Roll
+
+- **Nawder Loswin**  
+  Architected reproducible, triadic harmonic loop structures with embedded TFT time logic.  
+  _Badge: `loop-harmonics-validator`_
+
