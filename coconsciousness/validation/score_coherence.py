@@ -178,3 +178,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+# === Braid record logging ===
+memory_dir = os.path.join(os.path.dirname(__file__), "..", "memory")
+os.makedirs(memory_dir, exist_ok=True)
+braid_file = os.path.join(memory_dir, "braid_records.md")
+with open(braid_file, "a", encoding="utf-8") as bf:
+    bf.write(f"- {datetime.utcnow().isoformat()}Z | "
+             f"C={c:.2f} | R={r:.2f} | Intent={s} | Badges={','.join(badges) or 'none'}\n")
