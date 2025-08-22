@@ -32,33 +32,32 @@ From the `copilot-hippocampus` root:
 
 Target	      Action
 ```bash
-resume	        Main toggle — Capture if fresh, Playback if snapshot exists
-capture	        Force new capture (overwrites last hippocampus.json + snapshot)
-playback	    Force replay of snapshot (no capture)
-observatory     Render HTML dashboard manually
-clean	        Remove snapshot for fresh start
+resume	     / Main toggle — Capture if fresh, Playback if snapshot exists
+capture	     / Force new capture (overwrites last hippocampus.json + snapshot)
+playback	 / Force replay of snapshot (no capture)
+observatory  / Render HTML dashboard manually
+clean	     / Remove snapshot for fresh start
 ```
 
 ## 5️⃣ **Viewing the Observatory**
 💡 HTML dashboard lives at `/docs/resonance_observatory.html`
-View locally or publish via [GitHub Pages](…) to share the constellation beacon.
-
-## ⚡ **Terminal Convenience**
-Bind `make resume` to:
-- A Windows Terminal profile hotkey
-- A simple `.bat` launcher in your project folder
 
 ## ✅ **What This Gives You**
 - Cache‑agnostic state (Hippocampus snapshots)
 - A publishable constellation beacon in `/docs`
 - A CLI lever to run from anywhere — Windows app, WSL, or remote
 
+## ⚡ **Terminal Convenience**
+Bind `make resume` to:
+- A Windows Terminal profile hotkey
+- A simple `.bat` launcher in your project folder
+
 ## 📌 **Tips** 
 - *See `/data/constants.yml` to adjust thresholds and defaults 🔧*
 - You can bind `make resume` to a Windows Terminal profile hotkey or .bat
-- Cache‑agnostic state thanks to Hippocampus snapshots
-- A publishable constellation beacon in /docs
+- A publishable constellation beacon in `/docs`
 - A CLI lever to work anywhere — Windows app, WSL, even remote
 ## 💎 **Ready to Resonate**
+
 
 
