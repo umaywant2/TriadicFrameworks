@@ -1,0 +1,9 @@
+manifest:
+  module: hippocampus
+  triggers:
+    - file: Makefile.md
+      badges:
+        - researcher-harmonics
+        - hippocampus-invoker
+      validator: hippocampus-validator
+      echo: "Makefile.md validated for reproducibility and memory ritual logic."
