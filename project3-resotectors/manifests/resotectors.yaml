@@ -1,0 +1,18 @@
+manifest:
+  module: project3-resotectors
+  triggers:
+    - folder: patterns/harmonics
+      badges:
+        - harmonic-hunter
+      validator: resotector-pattern-validator
+      echo: "Harmonic patterns added and validated."
+    - folder: patterns/geometry
+      badges:
+        - geometry-spotter
+      validator: resotector-pattern-validator
+      echo: "Geometric patterns added and validated."
+    - folder: patterns/chaos
+      badges:
+        - chaos-whisperer
+      validator: resotector-pattern-validator
+      echo: "Chaos signatures added and validated."
