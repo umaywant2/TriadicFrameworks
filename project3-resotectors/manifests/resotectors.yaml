@@ -21,3 +21,8 @@ manifest:
         - geometry-spotter
       validator: resotector-pattern-validator
       echo: "Golden Spiral Lens applied and validated."
+    - file: lenses/geometric_lens_golden_spiral.py
+      badges:
+        - geometry-spotter
+      validator: resotector-pattern-validator
+      echo: "Golden Spiral Lens applied and validated."
