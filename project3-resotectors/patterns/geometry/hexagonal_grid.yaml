@@ -1,0 +1,8 @@
+pattern:
+  id: hex-grid
+  type: geometry
+  source: optical/imaging, chemical
+  description: "Highlights repeating hexagonal patterns in structure or molecular layout."
+  visual_tint: cyan
+  detection_method: "FFT-based lattice finder"
+  array_mode: navigational
