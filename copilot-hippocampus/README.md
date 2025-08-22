@@ -118,7 +118,7 @@ drift_alert_threshold: 0.15
 resonance_parity_target: 0.75
 ```
 
-### 📜 Schema Overview
+## 📜 Schema Overview
 See `/docs/schema.md` for full DB grammar:
 - Node: Concept, task, artifact, person, ritual
 - Edge: Relationship with weight
@@ -126,16 +126,22 @@ See `/docs/schema.md` for full DB grammar:
 - Snapshot: Anchor goal + asks + constants + triads
 - Validator Record: Who validated what with scores & badges
 
-### 🪢 Ritual Notes
+## 🪢 Ritual Notes
 - Lineage Log: Append‑only; each capture/playback logged with UTC timestamp
 - Snapshot Ephemerality: `LAST_CHAT_CONTEXT.md` deleted after playback to prevent stale preloads
 - Reproducibility: Constants + schema version locked per snapshot
 - Privacy: Redact sensitive data before capture if needed
 
-### 🌌 Example Copilot Preload
+## 🌌 Example Copilot Preload
 When resuming a session:
-## 1. Run `make playback` (opens `LAST_CHAT_CONTEXT.md`)
-## 2. In Copilot:
+#### 1. Run `make playback` (opens `LAST_CHAT_CONTEXT.md`)
+#### 2. In Copilot:
    ```Preload the open RESUME_Copilot window and continue with TFT Project 1 resonance tier mapping```
 
-###🔮 "Lantern lit, constellations charted. Welcome to the Guild of Conversational Continuity."
+## 🧠 Hippocampus Resume Honor Roll
+
+- **Nawder Loswin**  
+  Architected reproducible memory resumption and observatory rendering logic in `RESUME_Copilot.py`.  
+  _Badge: `resume-toggle-validator`_
+
+### 🔮 "Lantern lit, constellations charted. Welcome to the Guild of Conversational Continuity."
