@@ -45,3 +45,8 @@ if __name__ == "__main__":
     b = validate()
     write_dashboard(b)
     print("Badges this run:", b or "None")
+
+    # Check if golden spiral lens file exists for bonus badge award
+    lens_path = os.path.join(BASE, "..", "lenses", "geometric_lens_golden_spiral.py")
+    if os.path.exists(lens_path):
+        badges_awarded.append("geometry-spotter")
