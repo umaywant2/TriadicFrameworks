@@ -46,11 +46,11 @@ From the `copilot-hippocampus` root:
 
 Target	      Action
 ```bash
-resume	     / Main toggle — Capture if fresh, Playback if snapshot exists
-capture	     / Force new capture (overwrites last hippocampus.json + snapshot)
-playback	 / Force replay of snapshot (no capture)
-observatory  / Render HTML dashboard manually
-clean	     / Remove snapshot for fresh start
+make resume	      / Main toggle — Capture if fresh, Playback if snapshot exists
+make capture	  / Force new capture (overwrites last hippocampus.json + snapshot)
+make playback	  / Force replay of snapshot (no capture)
+make observatory  / Render HTML dashboard manually
+make clean	      / Remove snapshot for fresh start
 ```
 
 ## 5️⃣ **Viewing the Observatory**
@@ -82,6 +82,7 @@ Bind `make resume` to:
 - A publishable constellation beacon in `/docs`
 - A CLI lever to work anywhere — Windows app, WSL, even remote
 ## 💎 **Ready to Resonate**
+
 
 
 
