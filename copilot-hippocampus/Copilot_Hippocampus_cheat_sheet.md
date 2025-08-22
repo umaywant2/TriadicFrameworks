@@ -4,7 +4,8 @@
 _A quick‑reference for running the Hippocampus capture/playback ritual and lighting the Observatory from the command line._
 
 ---
-## 1️⃣ **Install & Authenticate** (GitHub CLI, Git, Python and GnuWin32.Make)
+## 1️⃣ **Install & Authenticate**
+(GitHub CLI, Git, Python and GnuWin32.Make)
 ```bash
 winget install GitHub.cli
 winget install --id Git.Git -e --source winget
@@ -72,6 +73,7 @@ Bind `make resume` to:
 - A publishable constellation beacon in `/docs`
 - A CLI lever to work anywhere — Windows app, WSL, even remote
 ## 💎 **Ready to Resonate**
+
 
 
 
