@@ -1,0 +1,8 @@
+manifest:
+  module: coconsciousness
+  triggers:
+    - file: demos/hello_coconsciousness.py
+      badges:
+        - coherence-pioneer
+      validator: coconsciousness-validator
+      echo: "Demo validated for live coherence measurement."
