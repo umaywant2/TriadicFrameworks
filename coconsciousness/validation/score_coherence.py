@@ -18,6 +18,7 @@ import time
 import math
 import random
 from datetime import datetime
+from coconsciousness.tft_utils import tau_from_tft
 
 DURATION_SEC = 20.0
 STEP_SEC = 0.25
@@ -31,7 +32,7 @@ DASHBOARD = os.path.join(os.path.dirname(__file__), "validator_dashboard.md")
 INTENT_SET = ["observe", "compare", "commit", "pause", "continue"]
 
 def tau(t, phase=0.0, noise=0.0):
-    return math.sin(t + phase) + noise
+    return tau_from_tft(t, phase) + noise
 
 def loop_in_sync(current_tau):
     return abs(current_tau) < SYNC_THRESHOLD
