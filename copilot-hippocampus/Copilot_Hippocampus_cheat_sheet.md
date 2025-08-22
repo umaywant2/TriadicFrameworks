@@ -23,6 +23,11 @@ Follow the browser link to confirm.
 gh repo clone umaywant2/TriadicFrameworks
 cd TriadicFrameworks/copilot-hippocampus
 ```
+Set your Git username and email (once)
+```
+git config --global user.name "%UserName%"
+git config --global user.email "YOUR_GITHUB_EMAIL@example.com"
+```
 
 ## 3️⃣ **Commit & Push Changes**
 After editing your README, scripts, or constants:
@@ -73,6 +78,7 @@ Bind `make resume` to:
 - A publishable constellation beacon in `/docs`
 - A CLI lever to work anywhere — Windows app, WSL, even remote
 ## 💎 **Ready to Resonate**
+
 
 
 
