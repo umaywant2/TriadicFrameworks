@@ -7,3 +7,8 @@ manifest:
         - hippocampus-invoker
       validator: hippocampus-validator
       echo: "Makefile.md validated for reproducibility and memory ritual logic."
+    - file: loop_validation_protocol.md
+      badges:
+        - loop-harmonics-validator
+      validator: loop-harmonics-validator
+      echo: "Loop protocol validated for harmonic nesting and reproducibility."
