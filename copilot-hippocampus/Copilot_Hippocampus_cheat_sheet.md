@@ -1,7 +1,7 @@
 # 🔮 Copilot Hippocampus — CLI Cheat Sheet
 📥 → 🔮 → 🔭 → ✨
 
-_A quick‑reference for running the Hippocampus capture/playback ritual and lighting the Observatory from the command line._
+#### _A quick‑reference for running the Hippocampus capture/playback ritual and lighting the Observatory from the command line._
 
 ---
 ## 1️⃣ **Install & Authenticate**
