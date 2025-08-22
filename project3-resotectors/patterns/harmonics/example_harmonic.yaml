@@ -1,0 +1,7 @@
+pattern:
+  id: overtone-3-5
+  type: harmonic
+  source: acoustic
+  description: "Highlights 3rd and 5th overtone in incoming resonance data."
+  visual_tint: blue
+  tft_signature: "ratio(3:5) in τ-space"
