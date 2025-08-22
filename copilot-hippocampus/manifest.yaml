@@ -1,6 +1,11 @@
 manifest:
   module: hippocampus
   triggers:
+      - file: RESUME_Copilot.py
+      badges:
+        - resume-toggle-validator
+      validator: resume-toggle-validator
+      echo: "Resume script validated for snapshot logic and dashboard rendering."
     - file: Makefile.md
       badge:
       id: resume-toggle-validator
