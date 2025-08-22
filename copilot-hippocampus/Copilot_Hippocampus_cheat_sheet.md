@@ -32,8 +32,12 @@ git config --global user.email "YOUR_GITHUB_EMAIL@example.com"
 ## 3️⃣ **Commit & Push Changes**
 After editing your README, scripts, or constants:
 ```bash
+@echo off
+for /f "usebackq delims=" %%i in (`git config user.name`) do set GIT_NAME=%%i
+echo Committer: %GIT_NAME%
+echo Commit message: %1
 git add .
-git commit -m "Update: enhanced README with flow glyph & Pages link"
+git commit -m "%1"
 git push
 ```
 
@@ -78,6 +82,7 @@ Bind `make resume` to:
 - A publishable constellation beacon in `/docs`
 - A CLI lever to work anywhere — Windows app, WSL, even remote
 ## 💎 **Ready to Resonate**
+
 
 
 
