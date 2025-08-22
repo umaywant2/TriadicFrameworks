@@ -7,7 +7,7 @@ _A quick‑reference for running the Hippocampus capture/playback ritual and lig
 ## 1️⃣ **Install & Authenticate**
 ```bash
 winget install GitHub.cli
-setx PATH=%PATH%;C:\Program Files\Git\cmd
+setx PATH "%PATH%;C:\Program Files\Git\cmd"
 winget install --id Git.Git -e --source winget
 gh auth login
 ```
@@ -70,6 +70,7 @@ Bind `make resume` to:
 - A publishable constellation beacon in `/docs`
 - A CLI lever to work anywhere — Windows app, WSL, even remote
 ## 💎 **Ready to Resonate**
+
 
 
 
