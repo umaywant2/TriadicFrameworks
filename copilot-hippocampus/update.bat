@@ -4,5 +4,7 @@ echo Committer: %GIT_NAME%
 echo Commit message: %1
 pause
 git add .
+pause
 git commit -m "%1"
+pause
 git push
