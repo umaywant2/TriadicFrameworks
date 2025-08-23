@@ -12,8 +12,8 @@ These four papers form the core architecture of the Triadic Frameworks movement:
 | Title | Description |
 |-------|-------------|
 | Paper I – Triadic Framework for Everything | Dimensional recursion, resonance scaffolding, and mythic cognition |
-| Paper II – Triadic Number Genesis (1–9) | Symbolic emergence of numbers through nested triads |
-| Paper III – Dimensional Triads (1D–9D) | Mapping cognition and resonance across nine recursive dimensions |
+| Paper II – Triadic Number Genesis 1–9   | Symbolic emergence of numbers through nested triads |
+| Paper III – Dimensional Triads 1D–9D   | Mapping cognition and resonance across nine recursive dimensions |
 | Paper IV – Saturn’s Harmonic Engine | Planetary resonance and harmonic descent |
 
 ---
