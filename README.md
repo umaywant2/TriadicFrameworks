@@ -1,3 +1,5 @@
+<meta name="google-site-verification" content="AiUFhKin7RAsd9MEOLzyQcvtnf0hJpDIUvUcBtXDcNs" />
+
 # 🌀 TriadicFrameworks
 A mythic-scientific movement for reproducible resonance, modular curriculum, and harmonic governance.  ```Using real math and science to examine the mythical and the unseen. We use Triadic Resonance-based equations with 9 Dimensions and Harmonic Nested Loops.```
 - Initiated by Nawder Loswin
@@ -54,5 +56,3 @@ Folder      	          Purpose
 - [Contributor Honor Roll](honor_roll/contributors.md)  
 - [Triadic Curriculum Index](curriculum/triadic_curriculum_index.md)  
 - [Badge Triggers](badges/glyph_evolution_dashboard_overlay.md)  
-
-
