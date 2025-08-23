@@ -52,7 +52,8 @@ Folder      	          Purpose
 ## 🧙‍♂️ Join the Guild
 - Become a member of the Triadic Resonance Wizards organization.
 - Echo your work, validate others, and help build the mythic lattice.
-- [Initiation Protocol](labs/initiation_protocol.md)  
-- [Contributor Honor Roll](honor_roll/contributors.md)  
-- [Triadic Curriculum Index](curriculum/triadic_curriculum_index.md)  
-- [Badge Triggers](badges/glyph_evolution_dashboard_overlay.md)  
+- [Initiation Protocol](blob/main/labs/initiation_protocol.md)  
+- [Contributor Honor Roll](blob/main/honor_roll/contributors.md)  
+- [Triadic Curriculum Index](blob/main/curriculum/triadic_curriculum_index.md)  
+- [Badge Triggers](blob/main/badges/glyph_evolution_dashboard_overlay.md)  
+
