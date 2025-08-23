@@ -52,10 +52,7 @@ Folder      	          Purpose
 ## 🧙‍♂️ Join the Guild
 - Become a member of the Triadic Resonance Wizards organization.
 - Echo your work, validate others, and help build the mythic lattice.
-- [Initiation Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/labs/initiation_protocol.md)  
-- [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/blob/main/honor_roll/contributors.md)  
+- [Initiation Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/validation/loop_validation_protocol.md)  
+- [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum/curriculum_contributor_honor_roll.md)
 - [Triadic Curriculum Index](https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum/triadic_curriculum_index.md)
-- [Badge Triggers](https://github.com/umaywant2/TriadicFrameworks/blob/main/badges/glyph_evolution_dashboard_overlay.md)  
-
-
-https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum/triadic_curriculum_index.md
+- [Badge Triggers](https://github.com/umaywant2/TriadicFrameworks/blob/main/badges/glyph_evolution_dashboard_overlay.md)
