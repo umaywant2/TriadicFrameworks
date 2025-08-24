@@ -1,4 +1,4 @@
-# 📚 Triadic Papers Index
+# 📚 TriadicFrameworks Papers Index
 
 “Each paper is a lantern. Each lantern maps the myth.”
 
