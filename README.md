@@ -61,11 +61,13 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 ## 🔗 Quick Links  
+- [Papers Index](https://github.com/umaywant2/triadicframeworks/tree/main/papers/)
 - [Initiation Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/labs/initiation_protocol.md)  
-- [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/blob/main/honor_roll/contributors.md)  
-- [Curriculum Index](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/curriculum_index.md)  
+- [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum/curriculum_contributor_honor_roll.md)  
+- [Curriculum Index](https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum/triadic_curriculum_index.md)  
 - [Badge Triggers](https://github.com/umaywant2/TriadicFrameworks/blob/main/badges/trigger_logic.yaml)
 
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
