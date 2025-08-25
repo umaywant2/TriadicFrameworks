@@ -1,0 +1,10 @@
+/* Glyphic Glow */
+img[src*="header.png"] {
+  filter: drop-shadow(0 0 10px #00ffff);
+  transition: filter 0.3s ease-in-out;
+}
+
+/* Optional: hover shimmer */
+img[src*="header.png"]:hover {
+  filter: drop-shadow(0 0 15px #00ffff);
+}
