@@ -1,7 +1,5 @@
----
-layout: default
-title: Triadic Wizards
----
+<link rel="stylesheet" href="assets/style.css">
+
 ![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
 
 # 🌀 Triadic Frameworks for Everything  
