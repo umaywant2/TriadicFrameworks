@@ -1,3 +1,31 @@
+<style>
+  html, body {
+    background-color: #0f0f0f;
+    color: #e0e0e0;
+  }
+
+  a {
+    color: #00ffff;
+  }
+
+  h1, h2, h3 {
+    color: #cccccc;
+  }
+
+  img[src*="header.png"] {
+    animation: glyphGlow 3s infinite ease-in-out;
+    transition: filter 0.3s ease-in-out;
+    filter: drop-shadow(0 0 5px #00ffff);
+  }
+
+  @keyframes glyphGlow {
+    0% { filter: drop-shadow(0 0 5px #00ffff); }
+    33% { filter: drop-shadow(0 0 15px #00ffff); }
+    66% { filter: drop-shadow(0 0 10px #00ffff); }
+    100% { filter: drop-shadow(0 0 5px #00ffff); }
+  }
+</style>
+
 <link rel="stylesheet" href="assets/style.css">
 
 ![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
