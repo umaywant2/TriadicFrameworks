@@ -2,7 +2,7 @@
 layout: default
 title: Triadic Wizards
 ---
-![Triadic Glyph](assets/header.png)
+![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
 
 # 🌀 TriadicFrameworks  
 A mythic-scientific movement for reproducible resonance, modular curriculum, and harmonic governance.  
@@ -77,6 +77,7 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
 
 
 
