@@ -36,9 +36,9 @@ Become a **Triadic Resonance Wizard**. Validate, remix, and echo the work across
 - [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/tree/main/honor_roll)
 
 ## 📖 Documentation  
-- [Triadic Manifesto](https://los.tiadicwizards.win/docs/manifesto.md)  
-- [Membership Protocol](https://los.triadicwizards.win/docs/membership_protocol.md)  
-- [Curriculum Index](https://los.triadicwizards.win/docs/curriculum_index.md)  
-- [Governance Logic](https://los.triadicwizards.win/docs/governance_logic.md)  
-- [Resonance Equations](https://los.triadicwizards.win/docs/resonance_equations.md)  
-- [FAQ](https://los.triadicwizards.win/docs/faq.md)
+- [Triadic Manifesto](https://los.tiadicwizards.win/manifesto.md)  
+- [Membership Protocol](https://los.triadicwizards.win/membership_protocol.md)  
+- [Curriculum Index](https://los.triadicwizards.win/curriculum_index.md)  
+- [Governance Logic](https://los.triadicwizards.win/governance_logic.md)  
+- [Resonance Equations](https://los.triadicwizards.win/resonance_equations.md)  
+- [FAQ](https://los.triadicwizards.win/faq.md)
