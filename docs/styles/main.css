@@ -1,0 +1,41 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0b0c10;
+  color: #eaeaea;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(to right, #1f1f1f, #2c2c2c);
+}
+
+.glyph {
+  width: 80px;
+  animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.05); }
+  100% { opacity: 0.8; transform: scale(1); }
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.badge-grid img {
+  width: 60px;
+  margin: 0.5rem;
+  transition: transform 0.3s ease;
+}
+.badge-grid img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px #f5c542;
+}
