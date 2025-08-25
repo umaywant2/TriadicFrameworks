@@ -1,0 +1,17 @@
+# Triadic Badge Trigger Logic
+
+validators:
+  - name: SpectralFluxValidator
+    trigger: "flux > 0.7"
+    badge: "Spectral Initiate"
+
+  - name: ResonanceGuardian
+    trigger: "resonance_score >= 90"
+    badge: "Guardian of Harmonics"
+
+events:
+  - name: onboarding_complete
+    badge: "Initiated"
+
+  - name: first_validation
+    badge: "Validator Novice"
