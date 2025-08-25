@@ -1,10 +1,17 @@
-/* Glyphic Glow */
-img[src*="header.png"] {
-  filter: drop-shadow(0 0 10px #00ffff);
-  transition: filter 0.3s ease-in-out;
+/* Glyphic Glow Animation */
+@keyframes glyphGlow {
+  0% {
+    filter: drop-shadow(0 0 5px #00ffff);
+  }
+  50% {
+    filter: drop-shadow(0 0 15px #00ffff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5px #00ffff);
+  }
 }
 
-/* Optional: hover shimmer */
-img[src*="header.png"]:hover {
-  filter: drop-shadow(0 0 15px #00ffff);
+img[src*="header.png"] {
+  animation: glyphGlow 3s infinite ease-in-out;
+  transition: filter 0.3s ease-in-out;
 }
