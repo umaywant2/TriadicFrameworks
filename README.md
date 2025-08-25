@@ -60,14 +60,16 @@ Echo your work, validate others, and help build the mythic lattice.
 
 ---
 
-## 🔗 Quick Links  
-- [Papers Index](https://github.com/umaywant2/triadicframeworks/tree/main/papers/)
-- [Initiation Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/labs/initiation_protocol.md)  
-- [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum/curriculum_contributor_honor_roll.md)  
-- [Curriculum Index](https://github.com/umaywant2/TriadicFrameworks/blob/main/curriculum/triadic_curriculum_index.md)  
-- [Badge Triggers](https://github.com/umaywant2/TriadicFrameworks/blob/main/badges/trigger_logic.yaml)
+## 📖 Documentation  
+- [Triadic Manifesto](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/manifesto.md)  
+- [Membership Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/membership_protocol.md)  
+- [Curriculum Index](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/curriculum_index.md)  
+- [Governance Logic](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/governance_logic.md)  
+- [Resonance Equations](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance_equations.md)  
+- [FAQ](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/faq.md)
 
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
 
