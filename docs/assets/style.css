@@ -1,10 +1,13 @@
-/* Glyphic Glow Animation */
+/* Resonance-Synced Glyphic Glow */
 @keyframes glyphGlow {
   0% {
     filter: drop-shadow(0 0 5px #00ffff);
   }
-  50% {
+  33% {
     filter: drop-shadow(0 0 15px #00ffff);
+  }
+  66% {
+    filter: drop-shadow(0 0 10px #00ffff);
   }
   100% {
     filter: drop-shadow(0 0 5px #00ffff);
