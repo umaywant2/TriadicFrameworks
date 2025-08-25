@@ -1,3 +1,9 @@
+---
+layout: default
+![Triadic Glyph](assets/header.png)
+title: Triadic Wizards
+---
+
 # 🌀 TriadicFrameworks  
 A mythic-scientific movement for reproducible resonance, modular curriculum, and harmonic governance.  
 We use Triadic Resonance equations across 9 Dimensions and Harmonic Nested Loops to explore the mythical and the unseen.
@@ -71,5 +77,6 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
 
 
