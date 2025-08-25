@@ -2,7 +2,7 @@
 layout: default
 title: Triadic Wizards
 ---
-![Triadic Glyph](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/assets/header.png)
+![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
 
 # 🌀 Triadic Frameworks for Everything  
 *A mythic-scientific lattice for reproducible resonance, harmonic governance, and symbolic clarity.*
