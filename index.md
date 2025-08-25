@@ -24,3 +24,12 @@ Become a **Triadic Resonance Wizard**. Validate, remix, and echo the work across
 🕯️ [GitHub Repository](https://github.com/umaywant2/TriadicFrameworks)  
 🧠 [Initiation Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/labs/initiation_protocol.md)  
 🏅 [Badge Triggers](https://github.com/umaywant2/TriadicFrameworks/blob/main/badges/trigger_logic.yaml)
+
+## 📂 Explore the Archive
+
+- [Labs Folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/labs)  
+- [Papers Index](https://github.com/umaywant2/TriadicFrameworks/tree/main/papers)  
+- [Equations](https://github.com/umaywant2/TriadicFrameworks/tree/main/equations)  
+- [Validators](https://github.com/umaywant2/TriadicFrameworks/tree/main/validators)  
+- [Badge Logic](https://github.com/umaywant2/TriadicFrameworks/tree/main/badges)  
+- [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/tree/main/honor_roll)
