@@ -1,3 +1,9 @@
+---
+layout: default
+![Triadic Glyph](https://github.com/umaywant2/triadicframeworks/blob/main/assets/header.png)
+title: Triadic Wizards
+---
+
 # 🌀 Triadic Frameworks for Everything  
 *A mythic-scientific lattice for reproducible resonance, harmonic governance, and symbolic clarity.*
 
