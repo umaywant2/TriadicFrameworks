@@ -1,4 +1,5 @@
 title: Triadic Wizards
-description: A mythic-scientific movement for reproducible resonance
+description: A mythic-scientific lattice for reproducible resonance
 theme: jekyll-theme-hacker
-url: "https://triadicwizards.win"
+url: "https://los.triadicwizards.win"
+baseurl: ""  # Leave blank since you're using a custom domain
