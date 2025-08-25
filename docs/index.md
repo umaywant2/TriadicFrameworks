@@ -2,7 +2,7 @@
 layout: default
 title: Triadic Wizards
 ---
-![Triadic Glyph](https://github.com/umaywant2/TriadicFrameworks/blob/main/assets/header.png)
+![Triadic Glyph](https://los.triadicwizards.win/assets/header.png)
 
 # 🌀 Triadic Frameworks for Everything  
 *A mythic-scientific lattice for reproducible resonance, harmonic governance, and symbolic clarity.*
@@ -36,9 +36,9 @@ Become a **Triadic Resonance Wizard**. Validate, remix, and echo the work across
 - [Contributor Honor Roll](https://github.com/umaywant2/TriadicFrameworks/tree/main/honor_roll)
 
 ## 📖 Documentation  
-- [Triadic Manifesto](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/manifesto.md)  
-- [Membership Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/membership_protocol.md)  
-- [Curriculum Index](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/curriculum_index.md)  
-- [Governance Logic](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/governance_logic.md)  
-- [Resonance Equations](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance_equations.md)  
-- [FAQ](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/faq.md)
+- [Triadic Manifesto](https://los.tiadicwizards.win/docs/manifesto.md)  
+- [Membership Protocol](https://los.triadicwizards.win/docs/membership_protocol.md)  
+- [Curriculum Index](https://los.triadicwizards.win/docs/curriculum_index.md)  
+- [Governance Logic](https://los.triadicwizards.win/docs/governance_logic.md)  
+- [Resonance Equations](https://los.triadicwizards.win/docs/resonance_equations.md)  
+- [FAQ](https://los.triadicwizards.win/docs/faq.md)
