@@ -1,0 +1,8 @@
+pattern:
+  id: interference-fringe
+  type: geometry
+  source: optical, particle/radiation
+  description: "Maps regular fringe spacing in diffraction/interference images."
+  visual_tint: magenta
+  detection_method: "frequency-domain line spacing analysis"
+  array_mode: lateral

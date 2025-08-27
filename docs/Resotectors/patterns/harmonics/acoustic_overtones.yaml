@@ -1,0 +1,8 @@
+pattern:
+  id: acoustic-overtones
+  type: harmonic
+  source: acoustic/vibration
+  description: "Detects strong 3rd, 5th, and 7th overtones in vibration/sound data."
+  visual_tint: blue
+  tft_signature: "ratios(3:5:7) in τ-space"
+  array_mode: long-range

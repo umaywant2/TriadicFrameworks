@@ -1,0 +1,8 @@
+pattern:
+  id: branching-venation
+  type: chaos
+  source: biological/optical
+  description: "Highlights branching vein-like networks in biological or geological data."
+  visual_tint: green
+  detection_method: "branch pattern analysis with stochastic symmetry"
+  array_mode: lateral
