@@ -1,8 +1,0 @@
-pattern:
-  id: thermal-pulse-ratio
-  type: harmonic
-  source: thermal
-  description: "Detects repeating thermal pulses in 2:3 ratio."
-  visual_tint: red
-  tft_signature: "pulse-ratio(2:3) in τ-space"
-  array_mode: lateral
