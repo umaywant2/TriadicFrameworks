@@ -15,3 +15,11 @@ header {
 a {
   color: #2a6f6f;
 }
+#theme-toggle img {
+  animation: hippo-pulse 3s infinite ease-in-out;
+}
+
+@keyframes hippo-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 #f0f9f7); }
+  50% { transform: scale(1.06); filter: drop-shadow(0 0 6px #2a6f6f); }
+}
