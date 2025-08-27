@@ -1,2 +1,19 @@
-/* Project-specific styles */
-body { font-family: sans-serif; margin: 2rem; }
+/* VictorG Theme Starter */
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #f9fbfd;
+  color: #222;
+}
+
+header {
+  border-bottom: 4px solid #003366;
+}
+
+h1 {
+  color: #003366;
+}
+
+a {
+  color: #0066cc;
+}
