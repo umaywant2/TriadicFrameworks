@@ -1,26 +1,104 @@
 /docs/_template/
   ├── index.html
+  │     <!DOCTYPE html>
+  │     <html lang="en">
+  │     <head>
+  │       <meta charset="UTF-8" />
+  │       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  │       <title>{{PROJECT_NAME}} – Project Home</title>
+  │       <link rel="stylesheet" href="styles/project.css"/>
+  │     </head>
+  │     <body>
+  │       <header>
+  │         <h1>{{PROJECT_NAME}}</h1>
+  │         <p>{{SHORT_TAGLINE}}</p>
+  │       </header>
+  │       <main>
+  │         <p>Welcome! This project is part of the Triadic Frameworks ecosystem.</p>
+  │       </main>
+  │       <footer>
+  │         <p>© {{YEAR}} Triadic Frameworks. Licensed under {{LICENSE}}.</p>
+  │       </footer>
+  │     </body>
+  │     </html>
+
   ├── README.md
+  │     # {{PROJECT_NAME}}
+  │     This is a modular Triadic Frameworks project. Fork, remix, or extend it.
+
   ├── overview.md
+  │     # Project Overview
+  │     Brief description, mission, and intended outcomes.
+
   ├── metadata/
   │     └── project.yml
+  │           name: "{{PROJECT_NAME}}"
+  │           author: "Your Name"
+  │           version: "0.1.0"
+  │           license: "MIT"
+  │           tags: []
+  │           description: "Short summary of the project."
+
   ├── labs/
   │     └── lab-01/
   │           ├── README.md
+  │           │     # Lab 01
+  │           │     Purpose, requirements, and procedure.
   │           └── assets/
+  │                 └── .keep  # ensures folder is tracked
+
   ├── equations/
   │     └── equations.md
+  │           # Equations
+  │           Placeholder for formulas and derivations.
+
   ├── badges/
   │     ├── paper-anchor.badge
+  │     │     # Badge: Paper Anchor
+  │     │     Awarded for completing the core paper.
   │     ├── lab-builder.badge
+  │     │     # Badge: Lab Builder
+  │     │     Awarded for setting up a complete lab.
   │     └── synthetic-composer.badge
+  │           # Badge: Synthetic Composer
+  │           Awarded for innovative synthesis work.
+
   ├── validator/
   │     └── resonance-passport-template.md
+  │           # Resonance Passport Template
+  │           Instructions for validation and scoring.
+
   ├── honor_roll/
   │     └── project.md
+  │           # Honor Roll
+  │           Recognition for contributors and testers.
+
   ├── assets/
+  │     └── .keep
+
   ├── styles/
   │     └── project.css
+  │           /* Project-specific styles */
+  │           body { font-family: sans-serif; margin: 2rem; }
+
   ├── scripts/
   │     └── init.js
+  │           // Initialization script for project-specific logic
+  │           console.log("{{PROJECT_NAME}} initialized");
+
   └── scaffold.txt
+        # Scaffold Structure for {{PROJECT_NAME}}
+        # Fork or copy this into /docs/YourProjectName/ and replace placeholders.
+        # Structure:
+        # index.html
+        # README.md
+        # overview.md
+        # metadata/project.yml
+        # labs/lab-01/README.md + assets/
+        # equations/equations.md
+        # badges/...
+        # validator/resonance-passport-template.md
+        # honor_roll/project.md
+        # assets/
+        # styles/project.css
+        # scripts/init.js
