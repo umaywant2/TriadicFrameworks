@@ -14,3 +14,11 @@ header {
 a {
   color: #00cc99;
 }
+#theme-toggle img {
+  animation: resotectors-pulse 2.8s infinite ease-in-out;
+}
+
+@keyframes resotectors-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 #00ffcc); }
+  50% { transform: scale(1.07); filter: drop-shadow(0 0 8px #00cc99); }
+}
