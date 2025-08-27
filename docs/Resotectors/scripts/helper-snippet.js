@@ -67,6 +67,37 @@
     }
   }
 
+  function styleOverlay(el) {
+  Object.assign(el.style, {
+    position: "fixed",
+    inset: 0,
+    backgroundColor: "rgba(28,28,60,0.95)",
+    color: "#00ffcc",
+    zIndex: 9999,
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    padding: "2rem",
+    fontFamily: "'Roboto Mono', monospace",
+  });
+  const inner = el.querySelector(".helper-content");
+  Object.assign(inner.style, {
+    maxWidth: "500px",
+    backgroundColor: "rgba(0,0,0,0.3)",
+    padding: "1.5rem",
+    border: "2px solid #00cc99",
+    borderRadius: "8px",
+  });
+  inner.querySelectorAll("kbd").forEach(k => {
+    Object.assign(k.style, {
+      backgroundColor: "#002f29",
+      color: "#00ffcc",
+      padding: "0.2rem 0.4rem",
+      borderRadius: "4px",
+    });
+  });
+}
+
   ready(() => {
     document.addEventListener("keydown", (e) => {
       if (e.key === "?") {
