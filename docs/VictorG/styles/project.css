@@ -17,3 +17,12 @@ h1 {
 a {
   color: #0066cc;
 }
+/* Pulse animation for theme toggle */
+#theme-toggle img {
+  animation: victorg-pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes victorg-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 #ffcc33); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 6px #ffcc33); }
+}
