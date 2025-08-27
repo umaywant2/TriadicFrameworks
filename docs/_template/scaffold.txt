@@ -1,0 +1,25 @@
+/docs/_template/
+  ├── index.html                     # Project landing page
+  ├── README.md                      # Intro + quickstart
+  ├── overview.md                    # Extended description
+  ├── metadata/
+  │     └── project.yml
+  ├── labs/
+  │     └── lab-01/
+  │           ├── README.md
+  │           └── assets/            # Lab-specific media/files
+  ├── equations/
+  │     └── equations.md
+  ├── badges/
+  │     ├── paper-anchor.badge
+  │     ├── lab-builder.badge
+  │     └── synthetic-composer.badge
+  ├── validator/
+  │     └── resonance-passport-template.md
+  ├── honor_roll/
+  │     └── project.md
+  ├── assets/                        # Project-wide images, diagrams, media
+  ├── styles/                        # Local CSS for this project
+  │     └── project.css
+  └── scripts/                       # Optional JS or helper scripts
+        └── init.js
