@@ -11,6 +11,12 @@ Use this folder for VictorG-specific JavaScript. Keep behavior small, accessible
 - Local storage keys: `VictorG:*` (e.g., `VictorG:theme`, `VictorG:lastNav`).
 - Theme toggle: If you add a button with `id="theme-toggle"`, the script will wire it automatically.
 
+## helper-snippet.js
+- Press "?" to open or close the overlay.
+- Lists project name, quick actions, and references to core docs.
+- Auto-styles itself; no HTML changes needed.
+- Fork‑safe: works in any project folder as long as `helper-snippet.js` is loaded.
+
 ## Suggested CSS hooks
 Add styles for:
 ```css
