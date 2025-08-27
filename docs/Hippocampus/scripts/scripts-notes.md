@@ -6,6 +6,12 @@ Lightweight behaviors for memory engine demos and narrative UX.
 - Features: Theme toggle, nav highlight, smooth scrolling, keyboard focus ring
 - Keep scripts framework-free and small for forkability.
 
+## helper-snippet.js
+- Press "?" to open or close the overlay.
+- Lists project name, quick actions, and references to core docs.
+- Auto-styles itself; no HTML changes needed.
+- Fork‑safe: works in any project folder as long as `helper-snippet.js` is loaded.
+
 Suggested CSS hooks:
 ```css
 nav a.active { border-bottom: 2px solid #2a6f6f; }
