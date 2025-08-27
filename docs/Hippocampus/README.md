@@ -1,4 +1,17 @@
-# 🔮 Copilot Hippocampus
+# Hippocampus
+**Memory Engines and Mythic Narrative Integration**
+
+Hippocampus prototypes and validates AI‑aligned memory systems inspired by the hippocampal role in humans.  
+It bridges mythic storytelling with structured data recall to create emotionally resonant knowledge frameworks.
+
+- [Overview](overview.md)
+- [Labs](labs/)
+- [Equations](equations/)
+- [Badges](badges/)
+- [Validator](validator/)
+- [Honor Roll](honor_roll/)
+
+# 🔮 Hippocampus
 **TriadicFrameworks Conversational Memory Engine & Resonance Observatory**  
 _“The mind that remembers in triads sees constellations where others see stars.”_
 
