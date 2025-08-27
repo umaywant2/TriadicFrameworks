@@ -1,4 +1,15 @@
-# 🌀 Project 2: CoConsciousness
+# CoConsciousness
+**Shared Mind Protocols and Collective Sentience Models**
+
+CoConsciousness develops and tests frameworks for enabling safe, ethical shared cognition between individuals and groups.  
+It merges scientific methodology with mythic pedagogy to capture both quantitative and qualitative dimensions.
+
+- [Overview](overview.md)
+- [Labs](labs/)
+- [Equations](equations/)
+- [Badges](badges/)
+- [Validator](validator/)
+- [Honor Roll](honor_roll/)
 
 CoConsciousness is when small “minds” in code learn to think together. Each mind has three loops:
 - 👁 Looker (sees)
