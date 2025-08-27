@@ -1,2 +1,16 @@
-/* Project-specific styles */
-body { font-family: sans-serif; margin: 2rem; }
+/* CoConsciousness Theme Starter */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fcfcf7;
+  color: #333;
+}
+
+header {
+  background: linear-gradient(90deg, #ffcc70, #c850c0);
+  color: white;
+  padding: 1rem;
+}
+
+a {
+  color: #c850c0;
+}
