@@ -1,6 +1,19 @@
-name: "{{PROJECT_NAME}}"
-author: "Your Name"
+name: "Copilot-Hippocampus"
+tagline: "Memory Engines and Mythic Narrative Integration"
 version: "0.1.0"
 license: "MIT"
-tags: []
-description: "Short summary of the project."
+author: "Nawder Loswin"
+created: "2025-08-27"
+tags:
+  - memory-engines
+  - narrative-architecture
+  - pedagogy
+  - validation
+dependencies: []
+links:
+  overview: "./overview.md"
+  labs: "./labs/"
+  equations: "./equations/"
+  badges: "./badges/"
+  validator: "./validator/"
+  honor_roll: "./honor_roll/"
