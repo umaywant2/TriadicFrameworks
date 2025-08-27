@@ -1,2 +1,17 @@
-/* Project-specific styles */
-body { font-family: sans-serif; margin: 2rem; }
+/* Hippocampus Theme Starter */
+body {
+  font-family: 'Georgia', serif;
+  background-color: #f4faf8;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2a6f6f;
+  color: white;
+  padding: 1rem;
+}
+
+a {
+  color: #2a6f6f;
+}
