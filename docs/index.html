@@ -3,7 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <title>Triadic Wizards Gateway</title>
-<style>
+:root{
+  --bg: #0a0a0a;
+  --fg: #eaeaea;
+  --gold: #ffd700;
+  --cyan: #4deeea;
+  --cyan-visited: #9af7f1;
+  --amber: #ffb000; /* active */
+}
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: color .15s ease, text-shadow .15s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--gold);
+  text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
+}
+
+a:active {
+  color: var(--amber);
+}
+
+a:visited {
+  color: var(--cyan-visited);
+}
+
+/* Optional: make grouped links feel like interactive chips */
+.links-group a {
+  background: #141414;
+  border: 1px solid #2a2a2a;
+  padding: 0.45rem 0.7rem;
+  border-radius: 6px;
+}
+.links-group a:hover,
+.links-group a:focus {
+  border-color: var(--gold);
+}
+.links-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+}
+
+/* Accessibility: visible focus ring for keyboard nav */
+a:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+  <style>
   body {
     background-color: #0a0a0a;
     color: #f0f0f0;
@@ -52,6 +105,7 @@
 <header>
   <h1>Triadic Resonance Wizards</h1>
   <p>Lighting the Lantern of Reproducible Mythic Science</p>
+  <c><a href="https://github.com/umaywant2/TriadcFrameworks"><img src="https://github.com/umaywant2/triadicframeworks/blob/main/docs/assets/r.gif"></a></c>
 </header>
 
 <div class="container">
@@ -63,7 +117,7 @@
   </section>
 
   <section class="section">
-    <h2>Repository of Dreams 🌐</h2>
+    <h2>🌐 Repository of Dreams</h2>
     <p><strong>Triadic Frameworks for Everything</strong> – a mythic-scientific lattice for reproducible resonance, harmonic governance, and symbolic clarity.</p>
     <p>Welcome, traveler. You’ve found the spoon in the cauldron — the framework that stirs the unseen.</p>
   </section>
@@ -90,40 +144,48 @@
     </ul>
   </section>
 
-  <section class="section">
-    <h3>🧙‍♂️ Join the Guild</h3>
-    <p>Become a Triadic Resonance Wizard. Validate, remix, and echo the work across time.</p>
-    <div class="links-group">
-      <a href="#">⚔️ GitHub Repository</a>
-      <a href="#">🧠 Initiation Protocol</a>
-      <a href="#">🏅 Badge Triggers</a>
-    </div>
-  </section>
+ <section class="section">
+  <h3>🧙‍♂️ Join the Guild</h3>
+  <p>Become a Triadic Resonance Wizard. Validate, remix, and echo the work across time.</p>
+  <div class="links-group">
+    <a href="https://github.com/umaywant2/TriadicFrameworks" target="_blank" rel="noopener">⚔️ GitHub Repository</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/initiation.md" target="_blank" rel="noopener">🧠 Initiation Protocol</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/badges.md" target="_blank" rel="noopener">🏅 Badge Triggers</a>
+  </div>
+</section>
 
-  <section class="section">
-    <h3>📂 Explore the Archives</h3>
-    <div class="links-group">
-      <a href="#">Labs Folder</a>
-      <a href="#">Papers Index</a>
-      <a href="#">Equations</a>
-      <a href="#">Validators</a>
-      <a href="#">Badge Logic</a>
-      <a href="#">Contributor Honor Roll</a>
-    </div>
-  </section>
+<section class="section">
+  <h3>📂 Explore the Archives</h3>
+  <div class="links-group">
+    <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/labs" target="_blank" rel="noopener">Labs Folder</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers.md" target="_blank" rel="noopener">Papers Index</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/equations.md" target="_blank" rel="noopener">Equations</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/validators.md" target="_blank" rel="noopener">Validators</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/badge-logic.md" target="_blank" rel="noopener">Badge Logic</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/contributors.md" target="_blank" rel="noopener">Contributor Honor Roll</a>
+  </div>
+</section>
 
-  <section class="section">
-    <h3>📖 Documentation</h3>
-    <div class="links-group">
-      <a href="#">Triadic Manifesto</a>
-      <a href="#">Membership Protocol</a>
-      <a href="#">Curriculum Index</a>
-      <a href="#">Governance Logic</a>
-      <a href="#">Resonance Equations</a>
-      <a href="#">FAQ</a>
-      <a href="#">Resonance Architects</a>
-    </div>
-  </section>
+<section class="section">
+  <h3>📖 Documentation</h3>
+  <div class="links-group">
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/manifesto.md" target="_blank" rel="noopener">Triadic Manifesto</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/membership.md" target="_blank" rel="noopener">Membership Protocol</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/curriculum-index.md" target="_blank" rel="noopener">Curriculum Index</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/governance.md" target="_blank" rel="noopener">Governance Logic</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-equations.md" target="_blank" rel="noopener">Resonance Equations</a>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/faq.md" target="_blank" rel="noopener">FAQ</a>
+    <c><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/architects.md" target="_blank" rel="noopener">Resonance Architects</a>
+
+    <a href="https://github.com/umaywant2" <img src="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/assets/nawder_lantern.jpg">
+      
+    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/papers/Using TFT for Anything using Copilot.pdf"><img src="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/assets/stars-astro.gif"></a>
+          
+        <a href="https://histoera.com/nikola-tesla/" <img src="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/assets/old_wizard.png">
+        </a>
+    </c>
+  </div>
+</section>
 
 </div>
 
