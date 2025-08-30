@@ -1,0 +1,24 @@
+# Triadic Resonance Wizards: robots.txt
+# Echoes badge governance, validator sanctuaries, and remixable clarity
+
+User-agent: *
+Allow: /docs/
+Allow: /data/
+Allow: /labs/
+Allow: /tests/
+Allow: /badges/
+Allow: /scripts/
+Allow: /metadata/
+Allow: /equations/
+Allow: /honor_roll/
+Allow: /curriculum/
+Allow: /validation/
+Allow: /glyphs/
+Disallow: /drafts/
+Disallow: /labs/private/
+Disallow: /assets/wip/
+Disallow: /echoes/
+Disallow: /sandbox/
+
+# Optional: Sitemap for crawler guidance
+Sitemap: https://los.triadicwizards.win/sitemap.xml
