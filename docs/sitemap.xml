@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Docs -->
+  <url>
+    <loc>https://los.triadicwizards.win/docs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Validator Dashboards -->
+  <url>
+    <loc>https://los.triadicwizards.win/docs/validators/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Badge Systems -->
+  <url>
+    <loc>https://los.triadicwizards.win/docs/badges/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Glyphic Protocols -->
+  <url>
+    <loc>https://los.triadicwizards.win/docs/glyphs/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Labs -->
+  <url>
+    <loc>https://los.triadicwizards.win/docs/labs/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Honor Roll -->
+  <url>
+    <loc>https://los.triadicwizards.win/docs/honor_roll/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+</urlset>
