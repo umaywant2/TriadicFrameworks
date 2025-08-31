@@ -27,12 +27,12 @@ It blends rigorous science with poetic scaffolding to democratize innovation and
 | Folder | Purpose |
 |--------|---------|
 | `/docs/` | Protocols, governance logic, onboarding guides |
-| `/labs/` | Reproducible experiments, initiation rituals |
-| `/papers/` | Foundational and applied theory (.docx/.pdf + README) |
-| `/badges/` | Badge YAMLs and trigger logic |
-| `/validators/` | Scoring matrices and validator dashboards |
-| `/equations/` | Formal logic and triadic math |
-| `/honor_roll/` | Contributor lineage and remix history |
+| `/docs/labs/` | Reproducible experiments, initiation rituals |
+| `/docs/papers/` | Foundational and applied theory (.docx/.pdf + README) |
+| `/docs/badges/` | Badge YAMLs and trigger logic |
+| `/docs/validators/` | Scoring matrices and validator dashboards |
+| `/docs/equations/` | Formal logic and triadic math |
+| `/docs/honor_roll/` | Contributor lineage and remix history |
 
 ---
 
@@ -45,8 +45,8 @@ It blends rigorous science with poetic scaffolding to democratize innovation and
 
 ## 🧠 Contribute  
 - Fork the repo and submit a Pull Request  
-- Use `/labs/initiation_protocol.md` to scaffold your first remix  
-- Add yourself to `/honor_roll/contributors.md` once validated
+- Use `/docs/labs/initiation_protocol.md` to scaffold your first remix  
+- Add yourself to `/docs/honor_roll/contributors.md` once validated
 
 ---
 
@@ -73,9 +73,3 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
-
-
-
-
-
-
