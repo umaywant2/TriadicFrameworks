@@ -1,7 +1,3 @@
----
-layout: default
-title: Triadic Wizards
----
 ![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
 
 # 🌀 TriadicFrameworks  
@@ -77,6 +73,7 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
 
 
 
