@@ -16,6 +16,8 @@ Welcome to the official gateway for TriadicFrameworks—a modular, reproducible 
 - [🎓 Curriculum Index](docs/curriculum-index.md)
 - [🛡️ Governance Logic](docs/governance_logic.md)
 
+_“🎧 Podcasts generated from this work are available in the Discover feed. If you’re on iPhone or Mac and having trouble, try Chrome or Spotify for playback.”_
+
 ## 💬 Contact
 For media, collaboration, or validation inquiries:  
 **Nawder Loswin** – Belleville, MI  
@@ -88,4 +90,5 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
 
