@@ -1,0 +1,26 @@
+name: Update Contributor Honor Roll
+
+on:
+  workflow_run:
+    workflows: ["Validate Manifest"]
+    types:
+      - completed
+
+jobs:
+  update_honor_roll:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Set Up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install pyyaml
+
+      - name: Run Honor Roll Updater
+        run: python validators/update_honor_roll.py
