@@ -1,19 +1,4 @@
----
-title: Nawder Loswin — Glyphic Profile
----
-<html>
-  <body>
-    <div id="glyphic-aura"></div>
-    <link rel="stylesheet" href="{{ '/styles/aura.css' | relative_url }}">
-    <script src="{{ '/glyphs/aura_animation.js' | relative_url }}"></script>
-    <script>
-    document.addEventListener('DOMContentLoaded', function () {
-    triggerAuraAnimation("Spectral Flux"); // Change per contributor
-    });
-    </script>
-  </body>
-</html>
-# 🧙 Nawder Loswin
+# 🧙‍♂️ Nawder Loswin — Glyphic Profile
 
 Visionary systems architect, mythic curriculum designer, and collective catalyst for the TriadicFrameworks movement.
 
