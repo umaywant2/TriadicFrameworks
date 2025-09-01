@@ -1,10 +1,25 @@
 ![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
 
-# 🌀 TriadicFrameworks  
-A mythic-scientific movement for reproducible resonance, modular curriculum, and harmonic governance.  
-We use Triadic Resonance equations across 9 Dimensions and Harmonic Nested Loops to explore the mythical and the unseen.
+# 🌀 Triadic Resonance Frameworks
 
-Initiated by **Nawder Loswin**
+Welcome to the official gateway for TriadicFrameworks—a modular, reproducible system for solving global problems using resonance-based dimensional logic.
+
+## 🔰 Start Here
+- **📖 Manifesto**: [Education Manifesto](docs/education-manifesto.md)
+- **🧠 Breakthroughs**: [Unified Field Theory – Pub Edition](docs/papers/research-Unified%20Field%20Theory%20%E2%80%93%20Pub%20Edition%20(Quantum%20Univ).docx)
+- **🔋 Energy Revolution**: [TFT Battery Cross-Chemistry Takeaway](docs/papers/research-TFT%20Battery%20Cross-Chemistry%20Takeaway%20%E2%80%93%20From%20Volta%E2%80%99s%20Pile%20to%20Triadic%20Firmware%20Resonance.pdf)
+- **🎙️ Podcast Scripts**: [Forces, Fluids, and Frequency](docs/papers/research-Podcast%20Script%20for%20Triadic%20Framework%20of%20Forces%20Fluids%20and%20Frequency.pdf)
+
+## 🧭 Navigation
+- [📚 Papers Index](docs/papers.md)
+- [📐 Equations](docs/equations.md)
+- [🎓 Curriculum Index](docs/curriculum-index.md)
+- [🛡️ Governance Logic](docs/governance_logic.md)
+
+## 💬 Contact
+For media, collaboration, or validation inquiries:  
+**Nawder Loswin** – Belleville, MI  
+GitHub: [umaywant2](https://github.com/umaywant2)
 
 ---
 
@@ -73,3 +88,4 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
