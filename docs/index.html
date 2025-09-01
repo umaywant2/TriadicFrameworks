@@ -59,6 +59,12 @@
   <section id="info-energy">
   <h2>⚡ Information is Energy</h2>
   <div class="paper-carousel">
+    <div style="margin-top: 1rem;">
+  <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers.md" target="_blank">
+    <button class="btn">📜 View All Papers</button>
+  </a>
+</div>
+
     <ul id="paperList">
       <!-- Items will be injected here -->
     </ul>
@@ -78,6 +84,9 @@
 </section>
 
 <style>
+  .paper-carousel:hover #paperList {
+  animation-play-state: paused;
+  }
   .paper-carousel {
   height: 8rem; /* shows ~3 items */
   overflow: hidden;
