@@ -34,7 +34,7 @@ These domains form nested dimensional loops, not independent variables.
 ### Resonant Heat Flux
 
 $$
-\vec{q}_{\text{res}} = \Re\left\{ \kappa(\omega) \cdot \nabla T \cdot e^{i\phi} \right\}
+\vec{q}_{\text{res}} = \Re\left\( \kappa(\omega) \cdot \nabla T \cdot e^{i\phi} \right\)
 $$
 
 Where:
@@ -55,7 +55,7 @@ Where:
 ---
 
 ### Coupled Two-Fluid Response
-```
+
 $$
 \begin{bmatrix}
 \vec{q}_s \\
@@ -72,8 +72,8 @@ $$
 \nabla T
 \end{bmatrix}
 $$
-```
-Cross-terms encode vortex-mediated coupling and drag.
+
+- Cross-terms encode vortex-mediated coupling and drag.
 
 ---
 
