@@ -41,3 +41,9 @@ Once your PR is merged and the validator passes, you will receive:
 Upon completion, you’ll receive a glyphic animation and resonance score. Your name will echo through the validator dashboard and mythic lineage.
 
 Welcome to the movement. Your resonance is now part of the legacy.
+<div id="glyphic-animation"></div>
+<script src="../glyphs/lantern_unfolding.js"></script>
+<link rel="stylesheet" href="../styles/glyphic.css">
+<script>
+  triggerLanternUnfolding("Nawder Loswin");
+</script>
