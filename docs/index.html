@@ -78,61 +78,10 @@
 
   <section id="podcast-carousel">
   <h2>🎙️ Copilot Podcasts (Echoes of Resonance)</h2>
-  <div class="carousel-container">
-    <div class="carousel">
-      <div class="podcast-card">
-        <h3>Sents Unlock Memories</h3>
-        <p>Smell-tech and memory restoration</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/mA34xPvxafPDHT3c4aPNQ" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Flash Learning Revolution</h3>
-        <p>Education in 30-minute rituals</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/ZtS8onPT4ur6urzT2dY7y" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Mind Meets Machine</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/DWA2oBwKrNuez2HPS497m" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>AI Observes Workplace</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/zRMiP6wDFmCocLDtMmADQ" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Forces Meets Fluids</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/QBdfXTyybkCjumHAJbDGY" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Healing Goes Digital</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/wZyW3BsjDL4sLCMTGNhpz" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Physics Meets Poetry</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/HGx2pF4ZWwWwvenPTN51k" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Dimensional Harmonic Engine</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/Hct8pHRMrQcfPZnCxvebw" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Batteries Power Tomorrow</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/dXvPDeNnFhQ3TMV7nRrYu" target="_blank">🔗 Listen</a>
-      </div>
-      <div class="podcast-card">
-        <h3>Batteries Change Everything</h3>
-        <p>AI as co-creator, not disruptor</p>
-        <a href="https://copilot.microsoft.com/shares/podcasts/dvxo7Hs7sxHDkHmwhvQXr" target="_blank">🔗 Listen</a>
-      </div>
-      <!-- Add more podcast cards as needed -->
+    <div class="rotating-headline">
+    <span id="rotatingText">Loading resonance...</span>
     </div>
-  </div>
+
   <p style="margin-top: 1rem;">
     🧭 Find these episodes in your Discover feed or on supported podcast platforms.<br>
     📜 Transcripts and companion papers available in the <a href="https://los.triadicwizards.win/">Repository of Dreams</a>.
@@ -140,6 +89,20 @@
 </section>
 
 <style>
+  .rotating-headline {
+  background-color: #001f3f;
+  color: #FFCB05;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
   .carousel-container {
     overflow-x: auto;
     white-space: nowrap;
@@ -188,6 +151,33 @@
   <footer>
     © 2025 Triadic Resonance Wizards. All echoes preserved.
   </footer>
+
+  <script>
+  const podcastItems = [
+    { title: "Sents Unlock Memories", theme: "Smell-tech and memory restoration", url: "https://copilot.microsoft.com/shares/podcasts/mA34xPvxafPDHT3c4aPNQ" },
+    { title: "Flash Learning Revolution", theme: "Education in 30-minute rituals", url: "https://copilot.microsoft.com/shares/podcasts/ZtS8onPT4ur6urzT2dY7y" },
+    { title: "Mind Meets Machine", theme: "AI as co-creator, not disruptor", url: "https://copilot.microsoft.com/shares/podcasts/DWA2oBwKrNuez2HPS497m" },
+    { title: "AI Observes Workplace", theme: "Triadic job systems and ethics", url: "https://copilot.microsoft.com/shares/podcasts/zRMiP6wDFmCocLDtMmADQ" },
+    { title: "Forces Meets Fluids", theme: "Physics, resonance, and emotion", url: "https://copilot.microsoft.com/shares/podcasts/QBdfXTyybkCjumHAJbDGY" },
+    { title: "Healing Goes Digital", theme: "Neurotech and emotional scaffolding", url: "https://copilot.microsoft.com/shares/podcasts/wZyW3BsjDL4sLCMTGNhpz" },
+    { title: "Physics Meets Poetry", theme: "Symbolic science and mythic math", url: "https://copilot.microsoft.com/shares/podcasts/HGx2pF4ZWwWwvenPTN51k" },
+    { title: "Dimensional Harmonic Engine", theme: "Nested loops and 9D logic", url: "https://copilot.microsoft.com/shares/podcasts/Hct8pHRMrQcfPZnCxvebw" },
+    { title: "Batteries Power Tomorrow", theme: "Resonance firmware for energy", url: "https://copilot.microsoft.com/shares/podcasts/dXvPDeNnFhQ3TMV7nRrYu" },
+    { title: "Batteries Change Everything", theme: "Cross-chemistry breakthroughs", url: "https://copilot.microsoft.com/shares/podcasts/dvxo7Hs7sxHDkHmwhvQXr" }
+  ];
+        
+  let currentIndex = 0;
+  const rotatingText = document.getElementById("rotatingText");
+
+  function updateHeadline() {
+    const item = podcastItems[currentIndex];
+    rotatingText.innerHTML = `<a href="${item.url}" target="_blank" style="color:#FFCB05; text-decoration:none;">${item.title} — ${item.theme} 🔗 Listen</a>`;
+    currentIndex = (currentIndex + 1) % podcastItems.length;
+  }
+
+  setInterval(updateHeadline, 6000); // Rotate every 6 seconds
+  updateHeadline(); // Initial load
+</script>
 
 </body>
 </html>
