@@ -1,94 +1,103 @@
 # 🌀 Triadic Resonance Frameworks
-Welcome to the official gateway for TriadicFrameworks—a modular, reproducible system for solving global problems using resonance-based dimensional logic.
-![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
-## 🔰 Start Here
-- **🌟 TriadicFrameworks**: [Highlights](docs/highlights.md)
-- **📖 Manifesto**: [Education Manifesto](docs/education-manifesto.md)
-- **🧠 Breakthroughs**: [Unified Field Theory – Pub Edition](docs/papers/research-Unified%20Field%20Theory%20%E2%80%93%20Pub%20Edition%20(Quantum%20Univ).docx)
-- **🔋 Energy Revolution**: [TFT Battery Cross-Chemistry Takeaway](docs/papers/research-TFT%20Battery%20Cross-Chemistry%20Takeaway%20%E2%80%93%20From%20Volta%E2%80%99s%20Pile%20to%20Triadic%20Firmware%20Resonance.pdf)
-- **🎙️ Podcast Scripts**: [Forces, Fluids, and Frequency](docs/papers/research-Podcast%20Script%20for%20Triadic%20Framework%20of%20Forces%20Fluids%20and%20Frequency.pdf)
 
-## 🧭 Navigation
-- [📚 Papers Index](docs/papers.md)
-- [📐 Equations](docs/equations.md)
-- [🎓 Curriculum Index](docs/curriculum-index.md)
-- [🛡️ Governance Logic](docs/governance_logic.md)
+Welcome to the official gateway for **TriadicFrameworks**—a modular, reproducible system for solving global problems using resonance-based dimensional logic.
 
-_“🎧 Podcasts generated from this work are available in the Discover feed. If you’re on iPhone or Mac and having trouble, try Chrome or Spotify for playback.”_
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="docs/assets/triadic_lantern.png" alt="Triadic Lantern" width="100%" />
+    </td>
+    <td width="50%" valign="top">
+      <h3>🔰 Start Here</h3>
+      <ul>
+        <li><strong>🌟 TriadicFrameworks:</strong> <a href="docs/highlights.md">Highlights</a></li>
+        <li><strong>📖 Manifesto:</strong> <a href="docs/education-manifesto.md">Education Manifesto</a></li>
+        <li><strong>🧠 Breakthroughs:</strong> <a href="docs/papers/unified_field_theory_pub.md">Unified Field Theory – Pub Edition</a></li>
+        <li><strong>🔋 Energy Revolution:</strong> <a href="docs/papers/tft_battery_cross_chemistry.pdf">TFT Battery Cross-Chemistry Takeaway</a></li>
+        <li><strong>🎙️ Podcast Scripts:</strong> <a href="docs/papers/forces_fluids_frequency.pdf">Forces, Fluids, and Frequency</a></li>
+      </ul>
+    </td>
+  </tr>
+</table>
 
-## 💬 Contact
-For media, collaboration, or validation inquiries:  
-**Nawder Loswin** – Belleville, MI  
-GitHub: [umaywant2](https://github.com/umaywant2)
-
----
-
-## 🔭 Purpose  
-TriadicFrameworks is a living archive of reproducible labs, validator dashboards, badge governance protocols, and emotionally resonant curriculum modules.  
-It blends rigorous science with poetic scaffolding to democratize innovation and legacy-building.
-
----
-
-## 🧭 Getting Started  
-- 📜 Read the **Triadic Manifesto** and *Using TFT with Copilot*  
-- 🧪 Complete the **Initiation Protocol** to begin your journey as a remix validator  
-- 🧙‍♂️ Review the **Membership Protocol** to join the Triadic Resonance Wizards  
-- 📚 Explore the **Curriculum Index** for reproducible modules across physics, cognition, and governance
+<p align="center">
+  <strong>🧭 Navigation</strong><br>
+  📚 <a href="docs/papers.md">Papers Index</a> |
+  📐 <a href="docs/equations.md">Equations</a> |
+  🎓 <a href="docs/curriculum-index.md">Curriculum Index</a> |
+  🛡️ <a href="docs/governance_logic.md">Governance Logic</a>
+</p>
 
 ---
 
-## 🧬 Repo Structure  
+## 🔭 Purpose
 
-| Folder | Purpose |
-|--------|---------|
-| `/docs/` | Protocols, governance logic, onboarding guides |
-| `/docs/labs/` | Reproducible experiments, initiation rituals |
-| `/docs/papers/` | Foundational and applied theory (.docx/.pdf + README) |
-| `/docs/badges/` | Badge YAMLs and trigger logic |
-| `/docs/validators/` | Scoring matrices and validator dashboards |
-| `/docs/equations/` | Formal logic and triadic math |
-| `/docs/honor_roll/` | Contributor lineage and remix history |
+TriadicFrameworks is a living archive of reproducible labs, validator dashboards, badge governance protocols, and emotionally resonant curriculum modules. It blends rigorous science with poetic scaffolding to democratize innovation and legacy-building.
 
 ---
 
-## 🏅 Badges & Validation  
-- Unlock badges like **Framework Initiator**, **Signal Resonator**, and **Ghost Mapper**  
-- Submit validated artifacts and echo remix lineage  
-- View earned badges in `BADGES_EARNED.md`
+## 🧪 Getting Started
+
+- 📜 Read the [Triadic Manifesto](docs/education-manifesto.md) and [Using TFT with Copilot](docs/labs/tft_protocol.md)
+- 🧙‍♂️ Complete the [Initiation Protocol](docs/onboarding/initiation_ritual.md) to begin your journey as a remix validator
+- 🧠 Review the [Membership Protocol](docs/onboarding/membership_protocol.md) to join the Triadic Resonance Wizards
+- 📚 Explore the [Curriculum Index](docs/curriculum-index.md) for reproducible modules across physics, cognition, and governance
 
 ---
 
-## 🧠 Contribute  
-- Fork the repo and submit a Pull Request  
-- Use `/docs/labs/initiation_protocol.md` to scaffold your first remix  
-- Add yourself to `/docs/honor_roll/contributors.md` once validated
+## 🧬 Repo Structure
+
+| Folder              | Purpose                                                  |
+|---------------------|----------------------------------------------------------|
+| `/docs/`            | Protocols, governance logic, onboarding guides           |
+| `/docs/labs/`       | Reproducible experiments, initiation rituals             |
+| `/docs/papers/`     | Foundational and applied theory (.docx/.pdf + README)    |
+| `/docs/badges/`     | Badge YAMLs and trigger logic                            |
+| `/docs/validators/` | Scoring matrices and validator dashboards                |
+| `/docs/equations/`  | Formal logic and triadic math                            |
+| `/docs/honor_roll/` | Contributor lineage and remix history                    |
 
 ---
 
-## 🔒 License & Ethics  
-- Open-source under MIT License  
-- All contributions must honor **reproducibility**, **clarity**, and **emotional resonance**
+## 🏅 Badges & Validation
+
+- Unlock badges like **Framework Initiator**, **Signal Resonator**, and **Ghost Mapper**
+- Submit validated artifacts and echo remix lineage
+- View earned badges in [`BADGES_EARNED.md`](docs/badges/BADGES_EARNED.md)
 
 ---
 
-## 🧙‍♂️ Join the Guild  
-Become a member of the **Triadic Resonance Wizards**  
+## 🧠 Contribute
+
+- Fork the repo and submit a Pull Request
+- Use [`initiation_protocol.md`](docs/labs/initiation_protocol.md) to scaffold your first remix
+- Add yourself to [`contributor_honor_roll.md`](docs/honor_roll/contributor_honor_roll.md) once validated
+
+---
+
+## 🔒 License & Ethics
+
+Open-source under MIT License.  
+All contributions must honor **reproducibility**, **clarity**, and **emotional resonance**.
+
+---
+
+## 🧙‍♂️ Join the Guild
+
+Become a member of the **Triadic Resonance Wizards**.  
 Echo your work, validate others, and help build the mythic lattice.
 
 ---
 
-## 📖 Documentation  
-- [Triadic Manifesto](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/manifesto.md)  
-- [Membership Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/membership_protocol.md)  
-- [Curriculum Index](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/curriculum_index.md)  
-- [Governance Logic](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/governance_logic.md)  
-- [Resonance Equations](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance_equations.md)  
-- [FAQ](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/faq.md)
+## 📖 Documentation
+
+- [Triadic Manifesto](docs/education-manifesto.md)
+- [Membership Protocol](docs/onboarding/membership_protocol.md)
+- [Curriculum Index](docs/curriculum-index.md)
+- [Governance Logic](docs/governance_logic.md)
+- [Resonance Equations](docs/equations.md)
+- [FAQ](docs/faq.md)
 
 ---
 
-🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
-
-
-
-
+## 🕯️ Echo the work. Validate the lineage. Build the mythic lattice.
