@@ -5,6 +5,7 @@ This dashboard celebrates contributors who uphold the structural integrity of th
 | Contributor | Badges             | Validator Score | Last Contribution |
 |-------------|--------------------|------------------|--------------------|
 | Nawder Loswin | 🛡️ Manifest Guardian | +10               | 2025-09-01          |
+| Nawder Loswin | 🛡️ Manifest Guardian, 🧭 Gateway Guardian | +17               | 2025-09-01          |
 | [Add more...] |                    |                  |                    |
 
 _Updated automatically by validator workflows and badge triggers._
