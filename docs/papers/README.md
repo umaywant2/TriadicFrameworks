@@ -7,10 +7,10 @@ This folder contains the full archive of TriadicFrameworks papers—ranging from
 These four papers form the core architecture of the TriadicFrameworks movement:
 
 Title	Description
-### Paper I     – [Triadic Framework for Everything](/papers/Paper%20I%20-%20Triadic%20Framework%20for%20Everything.pdf)	Dimensional recursion, resonance scaffolding, and mythic cognition
-### Paper II    – [Triadic Number Genesis 1–9](/papers/Paper%20II%20-%20Triadic%20Number%20Genesis%201-9.pdf)	Symbolic emergence of numbers through nested triads
-### Paper III   – [Dimensional Triads 1D–9D](/papers/Paper%20III%20-%20Dimensional%20Triads%201D-9D.pdf)	Mapping cognition and resonance across nine recursive dimensions
-### Paper IV    – [Saturn’s Harmonic Engine](/papers/Paper%20IV%20%E2%80%93%20Saturn%20Harmonic%20Engine.pdf)	Planetary resonance and harmonic descent
+### Paper I     – [Triadic Framework for Everything](/docs/papers/Paper%20I%20-%20Triadic%20Framework%20for%20Everything.pdf)	Dimensional recursion, resonance scaffolding, and mythic cognition
+### Paper II    – [Triadic Number Genesis 1–9](/docs/papers/Paper%20II%20-%20Triadic%20Number%20Genesis%201-9.pdf)	Symbolic emergence of numbers through nested triads
+### Paper III   – [Dimensional Triads 1D–9D](/docs/papers/Paper%20III%20-%20Dimensional%20Triads%201D-9D.pdf)	Mapping cognition and resonance across nine recursive dimensions
+### Paper IV    – [Saturn’s Harmonic Engine](/docs/papers/Paper%20IV%20%E2%80%93%20Saturn%20Harmonic%20Engine.pdf)	Planetary resonance and harmonic descent
 
 ### 🔮 Mythic Resonance Themes
 ### 🧬 Quantum & Particle Vision
