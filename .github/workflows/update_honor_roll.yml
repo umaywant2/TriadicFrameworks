@@ -2,7 +2,7 @@ name: Update Contributor Honor Roll
 
 on:
   workflow_run:
-    workflows: ["Validate Manifest"]
+    workflows: ["Validate README"]
     types:
       - completed
 
@@ -20,7 +20,7 @@ jobs:
           python-version: '3.x'
 
       - name: Install Dependencies
-        run: pip install pyyaml
+        run: pip install requests beautifulsoup4
 
       - name: Run Honor Roll Updater
         run: python validators/update_honor_roll.py
