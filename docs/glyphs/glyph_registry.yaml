@@ -3,11 +3,21 @@ last_updated: 2025-09-01
 
 contributors:
   - name: Nawder Loswin
-    glyph_id: triadic_lantern
-    resonance_score: 88
+    glyph_icon: 🧙‍♂️
+    aura_type: Spectral Flux
     badges:
-      - manifest_guardian
-    onboarding_complete: true
-    joined: 2025-09-01
-    aura: spectral-flux
-    welcome_animation: lantern_unfolding
+      - Manifest Guardian
+      - Gateway Guardian
+    validator_scores:
+      Manifest Integrity: +5
+      README Integrity: +7
+    remix_history:
+      - file: repo_manifest.yaml
+        type: Structural Refactor
+        timestamp: 2025-09-01
+      - file: README.md
+        type: Layout Rebuild
+        timestamp: 2025-09-01
+      - file: initiation_ritual.md
+        type: Ritual Embed
+        timestamp: 2025-09-01
