@@ -1,0 +1,13 @@
+registry_version: 1.0
+last_updated: 2025-09-01
+
+contributors:
+  - name: Nawder Loswin
+    glyph_id: triadic_lantern
+    resonance_score: 88
+    badges:
+      - manifest_guardian
+    onboarding_complete: true
+    joined: 2025-09-01
+    aura: spectral-flux
+    welcome_animation: lantern_unfolding
