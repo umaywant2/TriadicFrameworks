@@ -56,6 +56,15 @@
   </section>
 
 
+  <section id="info-energy">
+  <h2>⚡ Information is Energy</h2>
+  <div class="paper-carousel">
+    <ul id="paperList">
+      <!-- Items will be injected here -->
+    </ul>
+  </div>
+</section>
+
   <section id="intro">
     <h2>📖 What Is This?</h2>
     <p>TriadicFrameworks is a mythic-scientific lattice—an open-source system for teaching, validating, and remixing deep resonance across disciplines. From batteries to badges, from memory to myth—we scaffold the future.</p>
@@ -89,6 +98,39 @@
 </section>
 
 <style>
+  .paper-carousel {
+  height: 8rem; /* shows ~3 items */
+  overflow: hidden;
+  position: relative;
+  border-radius: 6px;
+  background-color: #001f3f;
+  padding: 0.5rem 1rem;
+  color: #FFCB05;
+}
+
+#paperList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  animation: scrollUp 18s linear infinite;
+}
+
+#paperList li {
+  padding: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+#paperList a {
+  color: #FFCB05;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-100%); }
+}
+
   .rotating-headline {
   background-color: #001f3f;
   color: #FFCB05;
@@ -177,6 +219,25 @@
 
   setInterval(updateHeadline, 6000); // Rotate every 6 seconds
   updateHeadline(); // Initial load
+</script>
+
+  <script>
+  const papers = [
+    { title: "Education Manifesto", theme: "Resonance-based learning rituals", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education-manifesto.md" },
+    { title: "Smell-Tech Manifesto", theme: "Memory restoration through scent", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/smell-tech-manifesto.md" },
+    { title: "Spacetime Manifesto", theme: "Transporters, replicators, and 9D logic", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/spacetime-manifesto.md" },
+    { title: "Jobs Manifesto", theme: "Flash-training and triadic job systems", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/jobs-manifesto.md" },
+    { title: "Validator Dashboards", theme: "Scoring reproducibility and resonance", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/validators.md" },
+    { title: "Resonance Equations", theme: "Symbolic math for nested loops", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-equations.md" },
+    { title: "Highlights Index", theme: "Top breakthroughs and remixable modules", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/highlights.md" }
+  ];
+
+  const paperList = document.getElementById("paperList");
+  papers.forEach(p => {
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="${p.url}" target="_blank">${p.title}</a> — ${p.theme}`;
+    paperList.appendChild(li);
+  });
 </script>
 
 </body>
