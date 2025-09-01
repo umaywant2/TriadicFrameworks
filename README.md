@@ -1,10 +1,8 @@
 # 🌀 Triadic Resonance Frameworks
-
 Welcome to the official gateway for TriadicFrameworks—a modular, reproducible system for solving global problems using resonance-based dimensional logic.
-
-## 🌟 TriadicFrameworks [Highlights](docs/highlights.md)
 ![Triadic Glyph](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/header.png)
 ## 🔰 Start Here
+- **🌟 TriadicFrameworks**: [Highlights](docs/highlights.md)
 - **📖 Manifesto**: [Education Manifesto](docs/education-manifesto.md)
 - **🧠 Breakthroughs**: [Unified Field Theory – Pub Edition](docs/papers/research-Unified%20Field%20Theory%20%E2%80%93%20Pub%20Edition%20(Quantum%20Univ).docx)
 - **🔋 Energy Revolution**: [TFT Battery Cross-Chemistry Takeaway](docs/papers/research-TFT%20Battery%20Cross-Chemistry%20Takeaway%20%E2%80%93%20From%20Volta%E2%80%99s%20Pile%20to%20Triadic%20Firmware%20Resonance.pdf)
@@ -90,6 +88,7 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 🕯️ *Echo the work. Validate the lineage. Build the mythic lattice.*
+
 
 
 
