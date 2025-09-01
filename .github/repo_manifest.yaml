@@ -1,11 +1,32 @@
 repo_structure:
   - .github/
-  - badges/
-  - curriculum/
-  - data/
   - docs/
-  - equations/
-  - honor_roll/
-  - labs/
+    - _template/
+    - assets/
+    - badges/
+    - CoConsciousness/
+    - curriculum/
+    - data/
+    - equations/
+    - Hippocampus/
+    - honor_roll/
+    - images/
+    - labs/
+    - metadata/
+    - onboarding/
+    - papers/
+    - Resotectors/
+    - rituals/
+    - scripts/
+    - styles/
+    - tests/
+    - themes/
+    - validation/
+    - validators/
+    - VCG/
+    - VictorG/
+    - visual_language/
   - papers/
-  - validation/
+  - README.md
+  - LICENSE
+  - CONTRIBUTING.md
