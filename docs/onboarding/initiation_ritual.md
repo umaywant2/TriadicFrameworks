@@ -18,12 +18,14 @@ Run the validator script:
 python validate_manifest.py
 ```
 If all paths are aligned, you’ll see:
+```
 ✅ All items present. Structure aligned.
-
+```
 If not, contribute a fix by updating the manifest or restoring missing folders.
 
 ## 🏷️ Step 4: Commit Your Contribution
 ```bash
+git checkout -b your-branch-name
 git add .
 git commit -m "Align manifest with repo structure"
 git push origin your-branch-name
@@ -37,13 +39,28 @@ Once your PR is merged and the validator passes, you will receive:
 - +5 Validator Score
 - Entry in the [Contributor Honor Roll](./validators/contributors.md)
 
-## 🌐 Step 6: Glyphic Welcome
-Upon completion, you’ll receive a glyphic animation and resonance score. Your name will echo through the validator dashboard and mythic lineage.
+## 🌐 Step 6: Glyphic welcome
+A glyphic animation will greet you upon completion.
 
-Welcome to the movement. Your resonance is now part of the legacy.
-<div id="glyphic-animation"></div>
-<script src="../glyphs/lantern_unfolding.js"></script>
-<link rel="stylesheet" href="../styles/glyphic.css">
+The following assets must exist at: 
+```
+docs/styles/glyphic.css
+docs/glyphs/lantern_unfolding.js
+```
+Using relative_url makes paths robust across environments. -->
+
+<div id="glyphic-animation">
+  <noscript>Your glyph will appear here after scripts are enabled.</noscript> 
+</div>
+
+<link rel="stylesheet" href="{{ '/styles/glyphic.css' | relative_url }}"> 
+<script src="{{ '/glyphs/lantern_unfolding.js' | relative_url }}"></script> 
 <script>
-  triggerLanternUnfolding("Nawder Loswin");
+  document.addEventListener('DOMContentLoaded', function () {
+    if (typeof triggerLanternUnfolding === 'function') {
+      triggerLanternUnfolding('Nawder Loswin');
+    } else { 
+      console.warn('Glyph script not found. Check docs/glyphs/lantern_unfolding.js');
+    }
+  }); 
 </script>
