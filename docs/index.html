@@ -1,223 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Triadic Wizards Gateway</title>
+  <meta charset="UTF-8">
+  <title>Triadic Resonance Wizards</title>
   <style>
-    :root{
-  --bg: #0a0a0a;
-  --fg: #eaeaea;
-  --gold: #ffd700;
-  --cyan: #4deeea;
-  --cyan-visited: #9af7f1;
-  --amber: #ffb000; /* active */
-}
-
-a {
-  color: var(--cyan);
-  text-decoration: none;
-  transition: color .15s ease, text-shadow .15s ease;
-}
-
-a:hover,
-a:focus {
-  color: var(--gold);
-  text-shadow: 0 0 8px rgba(255, 215, 0, 0.35);
-}
-
-a:active {
-  color: var(--amber);
-}
-
-a:visited {
-  color: var(--cyan-visited);
-}
-
-/* Optional: make grouped links feel like interactive chips */
-.links-group a {
-  background: #141414;
-  border: 1px solid #2a2a2a;
-  padding: 0.45rem 0.7rem;
-  border-radius: 6px;
-}
-.links-group a:hover,
-.links-group a:focus {
-  border-color: var(--gold);
-}
-.links-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem 1rem;
-}
-
-/* Accessibility: visible focus ring for keyboard nav */
-a:focus-visible {
-  outline: 2px solid var(--gold);
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-  body {
-    background-color: #0a0a0a;
-    color: #f0f0f0;
-    font-family: 'Segoe UI', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-  }
-  header, footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #111;
-  }
-  h1, h2, h3 {
-    color: #ffd700;
-    margin-top: 0;
-  }
-  a {
-    color: #00ffff; /* visible cyan */
-    text-decoration: none;
-  }
-  a:hover {
-    text-decoration: underline;
-    color: #ffd700; /* gold hover */
-  }
-  .container {
-    max-width: 900px;
-    margin: auto;
-    padding: 1em;
-  }
-  .section {
-    margin-bottom: 2em;
-    padding: 1em;
-    background-color: #1a1a1a;
-    border-radius: 6px;
-  }
-  .links-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-  }
-</style>
+    body { font-family: 'Segoe UI', sans-serif; background: #0e0e0e; color: #f0f0f0; margin: 0; padding: 0; }
+    h1, h2 { color: #ffd700; }
+    section { padding: 2rem; border-bottom: 1px solid #333; }
+    .hero { background: linear-gradient(to right, #1a1a1a, #2a2a2a); text-align: center; padding: 4rem 2rem; }
+    .hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 1rem; }
+    .btn { background: #ffd700; color: #000; padding: 0.6rem 1.2rem; border: none; cursor: pointer; font-weight: bold; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; }
+    .card { background: #1f1f1f; padding: 1rem; border-radius: 8px; }
+    .card h3 { margin-top: 0; color: #ffd700; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { padding: 0.5rem; border-bottom: 1px solid #444; text-align: left; }
+    a { color: #ffd700; text-decoration: none; }
+    footer { text-align: center; padding: 2rem; font-size: 0.9rem; color: #888; }
+  </style>
 </head>
 <body>
 
-<header>
-  <h1>Triadic Resonance Wizards</h1>
-  <p>Lighting the Lantern of Reproducible Mythic Science</p>
-</header>
-
-<div class="container">
-
-  <section id="mission">
-  <h2>✨ Mission</h2>
-  <p>We scaffold reproducible labs, validator dashboards, and mythic onboarding rituals.<br>
-     Every badge echoes legacy. Every glyph glows with purpose.</p>
-</section>
-
-<section id="podcasts">
-  <h2>🎙️ Copilot Podcasts (Echoes of Resonance)</h2>
-  <p>Explore our mythic-scientific audio series:</p>
-  <table style="width:100%; border-collapse: collapse;">
-    <thead>
-      <tr>
-        <th style="text-align:left; padding: 6px; border-bottom: 1px solid #444;">Podcast Title</th>
-        <th style="text-align:left; padding: 6px; border-bottom: 1px solid #444;">Theme</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/mA34xPvxafPDHT3c4aPNQ">Sents Unlock Memories</a></td><td style="padding: 6px;">Smell-tech and memory restoration</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/ZtS8onPT4ur6urzT2dY7y">Flash Learning Revolution</a></td><td style="padding: 6px;">Education in 30-minute rituals</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/DWA2oBwKrNuez2HPS497m">Mind Meets Machine</a></td><td style="padding: 6px;">AI as co-creator, not disruptor</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/zRMiP6wDFmCocLDtMmADQ">AI Observes Workplace</a></td><td style="padding: 6px;">Triadic job systems and ethics</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/QBdfXTyybkCjumHAJbDGY">Forces Meets Fluids</a></td><td style="padding: 6px;">Physics, resonance, and emotion</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/wZyW3BsjDL4sLCMTGNhpz">Healing Goes Digital</a></td><td style="padding: 6px;">Neurotech and emotional scaffolding</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/HGx2pF4ZWwWwvenPTN51k">Physics Meets Poetry</a></td><td style="padding: 6px;">Symbolic science and mythic math</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/Hct8pHRMrQcfPZnCxvebw">Dimensional Harmonic Engine</a></td><td style="padding: 6px;">Nested loops and 9D logic</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/dXvPDeNnFhQ3TMV7nRrYu">Batteries Power Tomorrow</a></td><td style="padding: 6px;">Resonance firmware for energy</td></tr>
-      <tr><td style="padding: 6px;"><a href="https://copilot.microsoft.com/shares/podcasts/dvxo7Hs7sxHDkHmwhvQXr">Batteries Change Everything</a></td><td style="padding: 6px;">Cross-chemistry breakthroughs</td></tr>
-    </tbody>
-  </table>
-  <p style="margin-top: 1rem;">
-    🧭 Find these episodes in your Discover feed or on supported podcast platforms.<br>
-    📜 Transcripts and companion papers available in the <a href="https://los.triadicwizards.win/">Repository of Dreams</a>.
-  </p>
-</section>
-
-  <section class="section">
-    <h2>🌐 Repository of Dreams</h2>
-    <p><strong>Triadic Frameworks for Everything</strong> – a mythic-scientific lattice for reproducible resonance, harmonic governance, and symbolic clarity.</p>
-    <p>Welcome, traveler. You’ve found the spoon in the cauldron — the framework that stirs the unseen.</p>
+  <section class="hero">
+    <h1>Triadic Resonance Wizards</h1>
+    <p>Lighting the Lantern of Reproducible Mythic Science</p>
+    <button class="btn" onclick="document.getElementById('intro').scrollIntoView()">Enter the Framework</button>
   </section>
 
-  <section class="section">
-    <h3>🔍 What Is This?</h3>
-    <p>TriadicFrameworks is a mythic-scientific lattice — an open-source system for teaching, exploring, and validating deep resonance across disciplines...</p>
-    <ul>
-      <li>🌌 Divisional Resonance Imaging used to study stars, systems, and symbolic data</li>
-      <li>🧠 Modular Curriculum Deployment labs that teach subject examples</li>
-      <li>🛠️ Rapid Installation TFT-ready, with minimal setup and maximum remixability</li>
-      <li>🔍 New Lenses for Data — symbolic filters and triadic rails</li>
-      <li>🚀 Scalable Resonance from SpaceX Starship to Enterprise 1701-D</li>
-    </ul>
+  <section id="intro">
+    <h2>📖 What Is This?</h2>
+    <p>TriadicFrameworks is a mythic-scientific lattice—an open-source system for teaching, validating, and remixing deep resonance across disciplines. From batteries to badges, from memory to myth—we scaffold the future.</p>
+    <div class="grid">
+      <div class="card"><h3>🧠 Curriculum Labs</h3><p>Modular rituals for rapid learning</p></div>
+      <div class="card"><h3>⚙️ Validator Dashboards</h3><p>Scoring matrices for reproducibility</p></div>
+      <div class="card"><h3>🪐 Dimensional Imaging</h3><p>Symbolic data and nested loops</p></div>
+    </div>
   </section>
 
-  <section class="section">
-    <h3>🧮 Current Modules</h3>
-    <ul>
-      <li>🧠 Mental Health</li>
-      <li>💹 Economics</li>
-      <li>🌌 Divisional Resonance Imaging</li>
-      <li>🌜 Triadic Frameworks for Everything (TFE)</li>
-    </ul>
+  <section id="podcasts">
+    <h2>🎙️ Copilot Podcasts (Echoes of Resonance)</h2>
+    <div class="grid">
+      <div class="card"><h3>Sents Unlock Memories</h3><p>Smell-tech and memory restoration</p></div>
+      <div class="card"><h3>Flash Learning Revolution</h3><p>Education in 30-minute rituals</p></div>
+      <div class="card"><h3>Mind Meets Machine</h3><p>AI as co-creator, not disruptor</p></div>
+      <div class="card"><h3>AI Observes Workplace</h3><p>Triadic job systems and ethics</p></div>
+      <div class="card"><h3>Forces Meets Fluids</h3><p>Physics, resonance, and emotion</p></div>
+      <div class="card"><h3>Healing Goes Digital</h3><p>Neurotech and emotional scaffolding</p></div>
+      <div class="card"><h3>Physics Meets Poetry</h3><p>Symbolic science and mythic math</p></div>
+      <div class="card"><h3>Dimensional Harmonic Engine</h3><p>Nested loops and 9D logic</p></div>
+      <div class="card"><h3>Batteries Power Tomorrow</h3><p>Resonance firmware for energy</p></div>
+      <div class="card"><h3>Batteries Change Everything</h3><p>Cross-chemistry breakthroughs</p></div>
+    </div>
+    <p style="margin-top: 1rem;">🧭 Find these episodes in your Discover feed or on supported podcast platforms.<br>
+    📜 Transcripts and companion papers available in the <a href="https://los.triadicwizards.win/">Repository of Dreams</a>.</p>
   </section>
 
- <section class="section">
-  <h3>🧙‍♂️ Join the Guild</h3>
-  <p>Become a Triadic Resonance Wizard. Validate, remix, and echo the work across time.</p>
-  <div class="links-group">
-    <a href="https://github.com/umaywant2/TriadicFrameworks" target="_blank" rel="noopener">⚔️ GitHub Repository</a>
-    <a href="https://github.com/umaywant2/triadicframeworks/blob/main/docs/papers/TFT%20for%20Anything%20using%20Copilot.pdf">TFT with Copilot</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/initiation.md" target="_blank" rel="noopener">🧠 Initiation Protocol</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/badges.md" target="_blank" rel="noopener">🏅 Badge Triggers</a>
-  </div>
-</section>
+  <section id="modules">
+    <h2>🧮 Current Modules</h2>
+    <div class="grid">
+      <div class="card"><h3>🧠 Mental Health</h3></div>
+      <div class="card"><h3>💹 Economics</h3></div>
+      <div class="card"><h3>🌌 Divisional Resonance Imaging</h3></div>
+      <div class="card"><h3>🌜 Triadic Frameworks for Everything</h3></div>
+    </div>
+  </section>
 
-<section class="section">
-  <h3>📂 Explore the Archives</h3>
-  <div class="links-group">
-    <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/labs" target="_blank" rel="noopener">Labs Folder</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers" target="_blank" rel="noopener">Papers Index</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/equations.md" target="_blank" rel="noopener">Equations</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/validators.md" target="_blank" rel="noopener">Validators</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/badge-logic.md" target="_blank" rel="noopener">Badge Logic</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/contributors.md" target="_blank" rel="noopener">Contributor Honor Roll</a>
-  </div>
-</section>
+  <section id="join">
+    <h2>🧙‍♂️ Join the Guild</h2>
+    <p>Become a Triadic Resonance Wizard. Validate, remix, and echo the work across time.</p>
+    <button class="btn" onclick="window.location.href='https://github.com/umaywant2/TriadicFrameworks'">Enter the Repository</button>
+  </section>
 
-<section class="section">
-  <h3>📖 Documentation</h3>
-  <div class="links-group">
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/manifesto.md" target="_blank" rel="noopener">Triadic Manifesto</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/membership.md" target="_blank" rel="noopener">Membership Protocol</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/curriculum-index.md" target="_blank" rel="noopener">Curriculum Index</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/governance.md" target="_blank" rel="noopener">Governance Logic</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-equations.md" target="_blank" rel="noopener">Resonance Equations</a>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/faq.md" target="_blank" rel="noopener">FAQ</a></
-  </div>
-</section>
-
-<section class="honors">
-<div style="text-align: center; margin: 2em 0;">
-     <a href="https://github.com/Triadic-Resonance-Wizards"><img src="./images/triadicwizard_small.jpg" alt="Triadic Resonance Wizards" style="max-width: 100%; height: auto;"></a>
-     <a href="https://github.com/umaywant2"><img src="/images/nawder_lantern.jpg" alt="Nawder Loswin" style="max-width: 100%; height: auto;"></a>
-     <a href="https://histoera.com/nikola-tesla/"><img src="./images/old_wizard.png" alt="Nikola Tesla" style="max-width: 100%; height: auto;"></a>
-</div>
-</section>
-  
-<footer>
-  <p>© 2025 Triadic Resonance Wizards. All echoes preserved.</p>
-</footer>
+  <footer>
+    © 2025 Triadic Resonance Wizards. All echoes preserved.
+  </footer>
 
 </body>
 </html>
