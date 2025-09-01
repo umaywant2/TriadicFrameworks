@@ -64,3 +64,10 @@ Using relative_url makes paths robust across environments. -->
     }
   }); 
 </script>
+---
+
+#### Placement checklist
+- Place the CSS at docs/styles/glyphic.css.
+- Place the JS at docs/glyphs/lantern_unfolding.js.
+- Keep the honor roll at docs/honor_roll/contributor_honor_roll.md (the link above points there).
+- Ensure this file contains the front matter block at the top so Liquid paths resolve.
