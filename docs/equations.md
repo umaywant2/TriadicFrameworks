@@ -183,5 +183,119 @@ $$ E = m \cdot R^2 \cdot \phi^2 $$
 
 ---
 
+# Forces and fluids
+
+## Bernoulli relation
+$$ p + \tfrac{1}{2}\rho v^2 + \rho g h = \text{const} $$
+- **Object:** Steady incompressible flow  
+- **Attribute:** Pressure–velocity–height trio  
+- **Condition:** Along a streamline  
+_🌬️ *Mythic Caption*: “Trade wind, height, and hush.”_
+
+---
+
+## Continuity (incompressible)
+$$ A_1 v_1 = A_2 v_2 $$
+- **Object:** Volume flux  
+- **Attribute:** Cross-sectional area  
+- **Condition:** Steady, incompressible pipe flow  
+_🔁 *Mythic Caption*: “What narrows, quickens.”_
+
+---
+
+## Navier–Stokes (vector form)
+$$ \rho \frac{d\vec{v}}{dt} = -\nabla p + \mu \nabla^2 \vec{v} + \rho \vec{g} $$
+- **Object:** Fluid parcel  
+- **Attribute:** Viscosity (\(\mu\))  
+- **Condition:** Body force and pressure gradients  
+_🌊 *Mythic Caption*: “Flow yields to friction and fall.”_
+
+---
+
+## Reynolds number
+$$ \mathrm{Re} = \frac{\rho v L}{\mu} $$
+- **Object:** Flow regime  
+- **Attribute:** Characteristic length (L)  
+- **Condition:** Inertia vs. viscosity balance  
+_⚖️ *Mythic Caption*: “Between smooth and storm.”_
+
+---
+
+# Frequency and resonance
+
+## Damped harmonic oscillator
+$$ \ddot{x} + 2\zeta \omega_0 \dot{x} + \omega_0^2 x = 0 $$
+- **Object:** Oscillator state  
+- **Attribute:** Damping ratio (\(\zeta\))  
+- **Condition:** Natural frequency \(\omega_0\)  
+_🫀 *Mythic Caption*: “Every heart remembers its rest.”_
+
+---
+
+## Quality factor
+$$ Q = \frac{\omega_0}{\Delta \omega} $$
+- **Object:** Resonant mode  
+- **Attribute:** Bandwidth (\(\Delta \omega\))  
+- **Condition:** Peak sharpness  
+_🔧 *Mythic Caption*: “A narrow mouth, a strong song.”_
+
+---
+
+## Fourier transform
+$$ X(\omega) = \int_{-\infty}^{\infty} x(t)\, e^{-i\omega t}\, dt $$
+- **Object:** Signal \(x(t)\)  
+- **Attribute:** Angular frequency (\(\omega\))  
+- **Condition:** Frequency-domain representation  
+_📡 *Mythic Caption*: “Time’s thread, combed into color.”_
+
+---
+
+## Group delay
+$$ \tau_g(\omega) = -\frac{d\phi(\omega)}{d\omega} $$
+- **Object:** Phase response  
+- **Attribute:** Spectral slope  
+- **Condition:** Envelope transit time  
+_🧵 *Mythic Caption*: “How long a phase takes to speak.”_
+
+---
+
+# Resonant-time and spacetime via TFT
+
+## Resonant proper-time analog (TFT)
+$$ d\tau_{\mathrm{TFT}} = \frac{dt}{R\,\phi} $$
+- **Object:** Local phase clock  
+- **Attribute:** Resonance amplitude (R)  
+- **Condition:** Phase velocity (\(\phi\)) scaling  
+_⏳ *Mythic Caption*: “Clocks slow in deep song.”_
+
+---
+
+## Triadic time scaling
+$$ t_{\mathrm{TFT}} = t \cdot R^{\alpha} \phi^{\beta} $$
+- **Object:** Observed interval  
+- **Attribute:** Exponents \(\alpha,\beta\) (contextual)  
+- **Condition:** Resonant environment  
+_🧭 *Mythic Caption*: “Time bends to the choir it enters.”_
+
+---
+
+## Phase–space wave
+$$ \Psi(x,t) = A\, e^{i(kx - \omega t)} $$
+- **Object:** Wave packet  
+- **Attribute:** Wave number (k)  
+- **Condition:** Phase evolution in TFT framing  
+_🌠 *Mythic Caption*: “A line of space, a beat of time.”_
+
+---
+
+## Triadic spacetime action overlay
+$$ \Delta S = \int_{t_0}^{t_1} \left( \frac{d\phi}{dt}\, R(t) \right) dt $$
+- **Object:** Phase field  
+- **Attribute:** Resonance amplitude  
+- **Condition:** Integrated phase shift  
+_🧭 *Mythic Caption*: “The path is drawn by resonance, not distance.”_
+
+---
+
 # 🪞 Mythic Caption  
 > *“The plates do not push—the void pulls.”*
