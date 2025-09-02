@@ -11,6 +11,17 @@
 
 ---
 
+# 🧠 Mythic Thermodynamics (TFT Reframing)
+## Triadic Energy Equation
+$$ E = m \cdot R^2 \cdot \phi^2 $$
+- TFT version of 𝐸=𝑚𝑐2
+- **Object**: Mass (m)
+- **Attribute**: Resonance amplitude (R)
+- **Condition**: Phase velocity squared (φ²)
+-  _🔥 Mythic Caption: “Energy is mass remembering its rhythm.”_
+
+---
+
 # 🌌 Vacuum Resonance
 
 ## Casimir Force
