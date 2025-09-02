@@ -1,0 +1,26 @@
+.blade {
+  opacity: 0.3;
+  transition: opacity 0.5s, filter 0.5s;
+}
+
+.validated {
+  opacity: 1;
+  filter: drop-shadow(0 0 6px currentColor);
+}
+
+/* Optional: blade-specific glow colors */
+.forces.validated { fill: red; color: red; }
+.fluids.validated { fill: green; color: green; }
+.frequency.validated { fill: blue; color: blue; }
+
+/* Spin animation when all blades are validated */
+#triadic-glyph.spin {
+  animation: spin 1.5s ease-in-out;
+  transform-origin: center;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
