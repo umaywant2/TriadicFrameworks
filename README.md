@@ -12,7 +12,7 @@ Welcome to the official gateway for **TriadicFrameworks**—a modular, reproduci
       <ul>
         <li><strong>🌟 TriadicFrameworks:</strong> <a href="docs/highlights.md">Highlights</a></li>
         <li><strong>📖 Manifesto:</strong> <a href="docs/education-manifesto.md">Education Manifesto</a></li>
-        <li><strong>🧠 Breakthroughs:</strong> <a href="docs/papers/unified_field_theory_pub.md">Unified Field Theory – Pub Edition</a></li>
+        <li><strong>🧠 Breakthroughs:</strong> <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/research-Unified%20Field%20Theory%20%E2%80%93%20Pub%20Edition%20(Quantum%20Univ).pdf">Unified Field Theory – Pub Edition</a></li>
         <li><strong>🔋 Energy Revolution:</strong> <a href="docs/papers/tft_battery_cross_chemistry.pdf">TFT Battery Cross-Chemistry Takeaway</a></li>
         <li><strong>🎙️ Podcast Scripts:</strong> <a href="docs/papers/forces_fluids_frequency.pdf">Forces, Fluids, and Frequency</a></li>
       </ul>
@@ -101,3 +101,4 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 ## 🕯️ Echo the work. Validate the lineage. Build the mythic lattice.
+
