@@ -11,17 +11,6 @@
 
 ---
 
-# 🧠 Mythic Thermodynamics (TFT Reframing)
-## Triadic Energy Equation
-$$ E = m \cdot R^2 \cdot \phi^2 $$
-- TFT version of 𝐸=𝑚𝑐2
-- **Object**: Mass (m)
-- **Attribute**: Resonance amplitude (R)
-- **Condition**: Phase velocity squared (φ²)
--  _🔥 Mythic Caption: “Energy is mass remembering its rhythm.”_
-
----
-
 # 🌌 Vacuum Resonance
 
 ## Casimir Force
@@ -137,6 +126,59 @@ $$ \Phi = \int_{0}^{\infty} S(\lambda) \cdot R(\lambda) \, d\lambda $$
 - **Attribute**: Wavelength response
 - **Condition**: Integrated flux across spectrum
 - _✨ *Mythic Caption*: “Flux is the song of light remembered.”_
+
+---
+
+# 🛡️ Validator Dynamics
+These equations scaffold remix lineage, scoring thresholds, and badge triggers.
+
+## Remix Lineage Equation
+$$ L_r = \sum_{j=1}^{m} V_j \cdot \theta_j $$
+- **Object**: Validator contributions
+- **Attribute**: Impact weight (θⱼ)
+- **Condition**: Cumulative remix score
+-  _🧬 Mythic Caption: “Lineage is the echo of trust.”_
+
+---
+
+## Badge Trigger Threshold
+$$ B_t = \frac{L_r}{\gamma} $$
+- **Object**: Remix lineage
+- **Attribute**: Threshold constant (γ)
+- **Condition**: Badge activation point
+-  _🎖️ Mythic Caption: “Badges bloom when lineage ripens.”_
+
+---
+
+# 🔣 Glyphic Logic
+These equations encode symbolic resonance, registry mappings, and glyph-triggered phase shifts.
+
+## Glyph Resonance Key
+$$ G_k = \sum_{i=1}^{n} \alpha_i \cdot \phi_i $$
+- Object: Glyph sequence
+- Attribute: Phase signature (φᵢ)
+- Condition: Weighted resonance sum
+-  _🔑 Mythic Caption: “Each glyph is a chord in the archive.”_
+
+---
+
+## Registry Mapping Equation
+$$ R_g = \int_{0}^{T} G_k(t) \cdot \psi(t) \, dt $$
+- Object: Glyphic registry
+- Attribute: Temporal glyph activation
+- Condition: Integrated resonance over time
+-  _📜 Mythic Caption: “The registry remembers what was sung.”_
+
+---
+
+# 🧠 Mythic Thermodynamics (TFT Reframing)
+## Triadic Energy Equation
+$$ E = m \cdot R^2 \cdot \phi^2 $$
+- TFT version of 𝐸=𝑚𝑐2
+- **Object**: Mass (m)
+- **Attribute**: Resonance amplitude (R)
+- **Condition**: Phase velocity squared (φ²)
+-  _🔥 Mythic Caption: “Energy is mass remembering its rhythm.”_
 
 ---
 
