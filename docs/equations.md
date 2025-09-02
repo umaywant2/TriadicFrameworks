@@ -172,9 +172,10 @@ $$ R_g = \int_{0}^{T} G_k(t) \cdot \psi(t) \, dt $$
 ---
 
 # 🧠 Mythic Thermodynamics (TFT Reframing)
+
 ## Triadic Energy Equation
 $$ E = m \cdot R^2 \cdot \phi^2 $$
-- TFT version of 𝐸=𝑚𝑐2
+- (TFT version of \(𝐸=𝑚𝑐^2\))
 - **Object**: Mass (m)
 - **Attribute**: Resonance amplitude (R)
 - **Condition**: Phase velocity squared (φ²)
