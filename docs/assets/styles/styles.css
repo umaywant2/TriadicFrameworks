@@ -18,15 +18,15 @@ section {
 
 /* 🧢 Hero Section */
 .hero {
+  height: 120px;
+  padding: 1rem;
   background: linear-gradient(to right, #001f3f, #003366);
-  text-align: center;
-  padding: 1rem 1rem;
-  height: 120px; /* Reduced from 200px+ */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  text-align: center;
 }
+
 
 .hero h1 {
   font-size: 1.8rem;
