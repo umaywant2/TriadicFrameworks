@@ -1,0 +1,14 @@
+run_label: "S2_forces+freq"
+dataset: "tft_3500_cycles_synthetic_v1"
+lenses: { forces: "F3", fluids: "Fl1", frequency: "Fr3" }
+triphasic:
+  forces: { a: 0.20, b: 0.05, f: 0.020, g_pos: 1.20, g_neg: 0.80, d_up: 0.55, d_down: 0.30, d_reset: 0.15, phi_phase: 0.00, rho: 0.97 }
+  fluids: { a: 0.04, b: 0.01, f: 0.012, g_pos: 0.95, g_neg: 1.05, d_up: 0.40, d_down: 0.45, d_reset: 0.15, phi_phase: 0.15, rho: 0.88 }
+  frequency:{ a: 0.20, b: 0.06, f: 0.200, g_pos: 1.10, g_neg: 0.90, d_up: 0.55, d_down: 0.30, d_reset: 0.15, phi_phase: 0.08, rho: 0.90 }
+inversion:
+  threshold: { ai_forces: 0.25, ai_freq: 0.25, min_sep_cycles: 150, lambda: 1.1, delta: 0.0 }
+  sequences:
+    - { label: "AB_fixed", toggle_cycles: [1200], lambda: 1.1, delta: 0.0 }
+provenance:
+  dataset_hash: "dc7f1c638c3eede646ea93f6cd09ac1a319e8edf279b5a314208ef4fb6729ab5"
+  parent_config_hash: null
