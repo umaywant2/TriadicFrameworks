@@ -20,21 +20,10 @@ section {
 /* Compact hero with layered gradient under the animated starfield */
 .hero {
   position: relative;
-  height: 120px;            /* already compact */
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  color: #FFCB05;
-
-  /* Base gradient beneath moving equations for contrast */
-  background-image:
-    linear-gradient(to right, rgba(0, 31, 63, 0.85), rgba(0, 51, 102, 0.75));
-  background-color: #0b1e3f;
+  height: 120px;
+  overflow: hidden;
 }
 
-/* Canvas sits behind text and ignores pointer events */
 .hero .hero-warp {
   position: absolute;
   inset: 0;
@@ -44,7 +33,6 @@ section {
   pointer-events: none;
 }
 
-/* Keep hero text above the canvas */
 .hero > * {
   position: relative;
   z-index: 1;
