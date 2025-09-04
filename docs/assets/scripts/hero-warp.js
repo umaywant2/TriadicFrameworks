@@ -1,11 +1,8 @@
-// Animated TFT Equation Starfield for the hero header
-// Cruising (impulse) by default; hover to jump to warp.
-
+// TFT Equation Starfield with Depth Parallax
 (function () {
   const HERO_SELECTOR = ".hero";
   const DPR = Math.max(1, window.devicePixelRatio || 1);
 
-  // Curate from your /docs/resonance-equations.md — add/remove freely.
   const EQUATIONS = [
     "F = -\\frac{\\pi^2 \\hbar c}{240 d^4}",
     "\\rho_0 = \\frac{\\hbar \\omega^2}{V}",
@@ -18,22 +15,14 @@
     "L_r = \\sum_{j=1}^{m} V_j \\cdot \\theta_j",
     "G_k = \\sum_{i=1}^{n} \\alpha_i \\cdot \\phi_i",
     "E = m \\cdot R^2 \\cdot \\phi^2",
-    "X(\\omega) = \\int_{-\\infty}^{\\infty} x(t) e^{-i\\omega t} dt",
-    "p + \\frac{1}{2}\\rho v^2 + \\rho g h = const",
-    "A_1 v_1 = A_2 v_2",
-    "\\rho \\frac{d\\vec{v}}{dt} = -\\nabla p + \\mu \\nabla^2 \\vec{v} + \\rho \\vec{g}",
-    "Re = \\frac{\\rho v L}{\\mu}",
-    "\\ddot{x} + 2\\zeta\\omega_0 \\dot{x} + \\omega_0^2 x = 0",
-    "Q = \\frac{\\omega_0}{\\Delta \\omega}",
-    "\\tau_g(\\omega) = -\\frac{d\\phi(\\omega)}{d\\omega}"
+    "X(\\omega) = \\int_{-\\infty}^{\\infty} x(t) e^{-i\\omega t} dt"
   ];
 
-  // Tunables
-  let WARP_FACTOR = 6;     // speed multiplier on hover
-  let BASE_MIN = 20;       // px/s minimum speed
-  let BASE_MAX = 60;       // px/s maximum speed
-  let DENSITY = 0.00045;   // sprites per pixel^2 (auto scales with hero size)
-  let SPEED_MULT = 1;      // current multiplier (1 = impulse)
+  let WARP_FACTOR = 6;
+  let BASE_MIN = 20;
+  let BASE_MAX = 60;
+  let DENSITY = 0.00045;
+  let SPEED_MULT = 1;
 
   const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReduced) {
@@ -88,7 +77,6 @@
     const size = Math.round(rand(11, 18));
     const font = `${size}px Segoe UI, SegoeUI, 'Helvetica Neue', Arial, sans-serif`;
 
-    // Pre-render to offscreen canvas for performance
     const off = document.createElement("canvas");
     const octx = off.getContext("2d");
     const col = colors();
@@ -112,7 +100,8 @@
       h: off.height,
       x: rand(0, width),
       y: rand(0, height),
-      speed: rand(BASE_MIN, BASE_MAX),
+      z: rand(0.3, 1.0), // depth: 0.3 = far, 1.0 = near
+      speed: rand(BASE_MIN, BASE_MAX)
     };
   }
 
@@ -120,9 +109,6 @@
     const width = canvas.clientWidth;
     const height = canvas.clientHeight;
     const targetCount = Math.max(16, Math.floor(width * height * DENSITY));
-    const current = sprites.length;
-
-    // Rebuild all to refresh theme colors
     sprites = [];
     for (let i = 0; i < targetCount; i++) {
       sprites.push(makeSprite(width, height));
@@ -131,7 +117,7 @@
 
   function step(ts) {
     if (!lastTime) lastTime = ts;
-    const dt = Math.min(0.05, (ts - lastTime) / 1000); // clamp for stability
+    const dt = Math.min(0.05, (ts - lastTime) / 1000);
     lastTime = ts;
 
     const width = canvas.clientWidth;
@@ -140,25 +126,26 @@
     ctx.clearRect(0, 0, width, height);
 
     for (let s of sprites) {
-      s.x -= s.speed * SPEED_MULT * dt;
+      // Depth affects speed and scale
+      const depthSpeed = s.speed * s.z;
+      s.x -= depthSpeed * SPEED_MULT * dt;
+
       if (s.x < -s.w - 20) {
         s.x = width + rand(10, 80);
         s.y = rand(0, height - s.h);
+        s.z = rand(0.3, 1.0);
         s.speed = rand(BASE_MIN, BASE_MAX);
       }
-      ctx.drawImage(s.img, Math.round(s.x), Math.round(s.y));
+
+      const scale = 0.5 + s.z * 0.5;
+      ctx.drawImage(s.img, Math.round(s.x), Math.round(s.y), s.w * scale, s.h * scale);
     }
 
     requestAnimationFrame(step);
   }
 
-  function setImpulse() {
-    SPEED_MULT = 1;
-  }
-
-  function setWarp() {
-    SPEED_MULT = WARP_FACTOR;
-  }
+  function setImpulse() { SPEED_MULT = 1; }
+  function setWarp() { SPEED_MULT = WARP_FACTOR; }
 
   function init() {
     hero = document.querySelector(HERO_SELECTOR);
@@ -166,32 +153,19 @@
 
     createCanvas();
 
-    // Hover = warp; leave = impulse
     hero.addEventListener("pointerenter", setWarp);
     hero.addEventListener("pointerleave", setImpulse);
-    // Touch: brief warp on tap
     hero.addEventListener("touchstart", () => {
       setWarp();
       setTimeout(setImpulse, 600);
     }, { passive: true });
 
-    // Resize handling
-    window.addEventListener("resize", () => {
-      // debounce via rAF
-      requestAnimationFrame(resizeCanvas);
-    });
+    window.addEventListener("resize", () => requestAnimationFrame(resizeCanvas));
 
-    // Theme change support (listen for custom event from theme.js)
-    document.addEventListener("theme:changed", () => {
-      regenSprites();
-    });
+    document.addEventListener("theme:changed", regenSprites);
 
     requestAnimationFrame(step);
   }
 
   document.addEventListener("DOMContentLoaded", init);
-
-  // Expose manual refresh if needed
-  window.refreshHeroWarp = () => regenSprites();
-
 })();
