@@ -1,203 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Triadic Resonance Wizards</title>
+  <link rel="stylesheet" href="assets/styles/style.css" />
+</head>
+<body>
 
-  <style>
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background: #00274C; /* UMich navy */
-    color: #F0F0F0;
-    margin: 0;
-    padding: 0;
-  }
-  h1, h2, h3 {
-    color: #FFCB05; /* UMich maize */
-  }
-  section {
-    padding: 1.5rem;
-    border-bottom: 1px solid #1a3a5c;
-  }
-  .hero {
-    background: linear-gradient(to right, #001f3f, #003366);
-    text-align: center;
-    padding: 2.5rem 1rem;
-  }
-  .hero h1 {
-    font-size: 2.4rem;
-    margin-bottom: 0.3rem;
-  }
-  .hero p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: #cce6ff;
-  }
-  .btn {
-    background: #FFCB05;
-    color: #00274C;
-    padding: 0.5rem 1rem;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 6px;
-  }
-  .btn:hover {
-    background: #ffd84f;
-  }
-</style>
+  <!-- 🔥 Hero Section -->
+  <header class="hero">
+    <h1>Triadic Resonance Wizards</h1>
+    <p class="tagline">Lighting the Lantern of Reproducible Mythic Science</p>
+    <p class="subtagline">Step into the lattice. Begin your resonance journey.</p>
+  </header>
 
-<section class="hero">
-  <h1>Triadic Resonance Wizards</h1>
-  <p>Lighting the Lantern of Reproducible Mythic Science</p>
-  <p style="font-style: italic; color: #cce6ff;">
-  Step into the lattice. Begin your resonance journey.
-  </p>
-  </section>
-
-
-<section id="info-energy">
-  <h2>⚡ Information is Energy</h2>
-
- <table style="width:100%; margin-top: 2em;">
-  <tr>
-    <td style="width:70%; vertical-align: top;">
-      <!-- Scrolling list of featured papers -->
-      <div class="paper-carousel">
-       <div style="max-height: 300px; overflow-y: auto; padding-right: 1em;">
-         <ul id="paperList">
-      <!-- Items will be injected here -->
-         </ul>
-       </div>
-      </div>
-    </td>
-    <td style="width:30%; text-align: center; vertical-align: top;">
-      <!-- Button to view all papers -->
-      <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/README.md" target="_blank">
-        <button style="padding: 1em 2em; font-size: 1em; background-color: indigo; color: white; border: none; border-radius: 6px; cursor: pointer;">
-          📜 View All Papers
-        </button>
-      </a>
-    </td>
-  </tr>
- </table>
-</section>
-
-  <section id="podcast-carousel">
-  <h2>🎙️ Copilot Podcasts (Echoes of Resonance)</h2>
-    <div class="rotating-headline">
-    <span id="rotatingText">Loading resonance...</span>
-    </div>
-
-  <p style="margin-top: 1rem;">
-    🧭 Find these episodes in your Discover feed or on supported podcast platforms.<br>
-    📜 Transcripts and companion papers available in the <a href="https://los.triadicwizards.win/">Repository of Dreams</a>.
-  </p>
-</section>
-
-<style>
-  .paper-carousel:hover #paperList {
-  animation-play-state: paused;
-  }
-  .paper-carousel {
-  height: 8rem; /* shows ~3 items */
-  overflow: hidden;
-  position: relative;
-  border-radius: 6px;
-  background-color: #001f3f;
-  padding: 0.5rem 1rem;
-  color: #FFCB05;
-}
-
-#paperList {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  animation: scrollUp 18s linear infinite;
-}
-
-#paperList li {
-  padding: 0.5rem 0;
-  font-size: 0.95rem;
-}
-
-#paperList a {
-  color: #FFCB05;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-@keyframes scrollUp {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-100%); }
-}
-
-  .rotating-headline {
-  background-color: #001f3f;
-  color: #FFCB05;
-  font-weight: bold;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  margin-bottom: 1rem;
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-
-  .carousel-container {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding-bottom: 1rem;
-  }
-  .carousel {
-    display: flex;
-    gap: 1rem;
-  }
-  .podcast-card {
-    background: #1f1f1f;
-    border-radius: 8px;
-    padding: 1rem;
-    min-width: 250px;
-    flex: 0 0 auto;
-    color: #f0f0f0;
-    border: 1px solid #444;
-  }
-  .podcast-card h3 {
-    margin-top: 0;
-    color: #ffd700;
-  }
-  .podcast-card a {
-    color: #ffd700;
-    text-decoration: none;
-    font-weight: bold;
-  }
-</style>
-
-  <section id="modules">
-    <h2>🧮 Current Modules</h2>
-    <div class="grid">
-      <div class="card"><h3>🧠 Mental Health</h3></div>
-      <div class="card"><h3>💹 Economics</h3></div>
-      <div class="card"><h3>🌌 Divisional Resonance Imaging</h3></div>
-      <div class="card"><h3>🌜 Triadic Frameworks for Everything</h3></div>
+  <!-- ⚡ Papers Carousel -->
+  <section id="papers" class="carousel-section">
+    <h2>⚡ Featured Papers</h2>
+    <div class="carousel-container">
+      <ul id="paperList">
+      < title: "Spectral Flux and Divisional Resonance is Born", theme: "Divisional Imaging for Space", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/research-Spectral%20Flux%20and%20Divisional%20Resonance%20Is%20Born.pdf" },
+    { title: "Education Manifesto", theme: "Resonance-based learning rituals", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education-manifesto.md" },
+    { title: "Smell-Tech Manifesto", theme: "Memory restoration through scent", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/smell-tech-manifesto.md" },
+    { title: "Spacetime Manifesto", theme: "Transporters, replicators, and 9D logic", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/spacetime-manifesto.md" },
+    { title: "Jobs Manifesto", theme: "Flash-training and triadic job systems", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/jobs-manifesto.md" },
+    { title: "Validator Dashboards", theme: "Scoring reproducibility and resonance", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/validators.md" },
+    { title: "Resonance Equations", theme: "Symbolic math for nested loops", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-equations.md" },
+    { title: "Highlights Index", theme: "Top breakthroughs and remixable modules", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/highlights.md" }, 
+        <!-- Paper links injected here -->
+      </ul>
     </div>
   </section>
 
-  <section id="join">
-    <h2>🧙‍♂️ Join the Guild</h2>
-    <p>Become a Triadic Resonance Wizard. Validate, remix, and echo the work across time.</p>
-    <button class="btn" onclick="window.location.href='https://github.com/umaywant2/TriadicFrameworks'">Enter the Repository</button>
-  </section>
-
-  <footer>
-    © 2025 Triadic Resonance Wizards. All echoes preserved.
-  </footer>
-
-  <script>
-  const podcastItems = [
-    { title: "Myth Meets Science", theme: "Smell-tech and memory restoration", url: "https://copilot.microsoft.com/shares/podcasts/ghZL3Eri7rJyJuTRiZV5x" },
+  <!-- 🎧 Copilot Podcasts -->
+  <section id="podcasts" class="carousel-section">
+    <h2>🎧 Copilot Podcasts</h2>
+    <div class="carousel-container">
+      <ul id="podcastList">
+            { title: "Myth Meets Science", theme: "Smell-tech and memory restoration", url: "https://copilot.microsoft.com/shares/podcasts/ghZL3Eri7rJyJuTRiZV5x" },
     { title: "Sents Unlock Memories", theme: "Smell-tech and memory restoration", url: "https://copilot.microsoft.com/shares/podcasts/mA34xPvxafPDHT3c4aPNQ" },
     { title: "Flash Learning Revolution", theme: "Education in 30-minute rituals", url: "https://copilot.microsoft.com/shares/podcasts/ZtS8onPT4ur6urzT2dY7y" },
     { title: "Mind Meets Machine", theme: "AI as co-creator, not disruptor", url: "https://copilot.microsoft.com/shares/podcasts/DWA2oBwKrNuez2HPS497m" },
@@ -210,39 +51,18 @@
     { title: "Batteries Change Everything", theme: "Cross-chemistry breakthroughs", url: "https://copilot.microsoft.com/shares/podcasts/dvxo7Hs7sxHDkHmwhvQXr" },
     { title: "Digital Pattern Hunters", theme: "Forces Fluids Frequency and Replicators", url: "https://copilot.microsoft.com/shares/podcasts/59KjFpXAExUjZ8iotq1W6" },
     ];
-        
-  let currentIndex = 0;
-  const rotatingText = document.getElementById("rotatingText");
 
-  function updateHeadline() {
-    const item = podcastItems[currentIndex];
-    rotatingText.innerHTML = `<a href="${item.url}" target="_blank" style="color:#FFCB05; text-decoration:none;">${item.title} — ${item.theme} 🔗 Listen</a>`;
-    currentIndex = (currentIndex + 1) % podcastItems.length;
-  }
+        <!-- Podcast links injected here -->
+      </ul>
+    </div>
+  </section>
 
-  setInterval(updateHeadline, 6000); // Rotate every 6 seconds
-  updateHeadline(); // Initial load
-</script>
-
-  <script>
-  const papers = [
-    { title: "Spectral Flux and Divisional Resonance is Born", theme: "Divisional Imaging for Space", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/research-Spectral%20Flux%20and%20Divisional%20Resonance%20Is%20Born.pdf" },
-    { title: "Education Manifesto", theme: "Resonance-based learning rituals", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/education-manifesto.md" },
-    { title: "Smell-Tech Manifesto", theme: "Memory restoration through scent", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/smell-tech-manifesto.md" },
-    { title: "Spacetime Manifesto", theme: "Transporters, replicators, and 9D logic", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/spacetime-manifesto.md" },
-    { title: "Jobs Manifesto", theme: "Flash-training and triadic job systems", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/jobs-manifesto.md" },
-    { title: "Validator Dashboards", theme: "Scoring reproducibility and resonance", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/validators.md" },
-    { title: "Resonance Equations", theme: "Symbolic math for nested loops", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-equations.md" },
-    { title: "Highlights Index", theme: "Top breakthroughs and remixable modules", url: "https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/highlights.md" }, 
-      ];
-
-  const paperList = document.getElementById("paperList");
-  papers.forEach(p => {
-    const li = document.createElement("li");
-    li.innerHTML = `<a href="${p.url}" target="_blank">${p.title}</a> — ${p.theme}`;
-    paperList.appendChild(li);
-  });
-</script>
+  <!-- 🧭 Navigation Tips -->
+  <section id="navigation">
+    <h2>🧭 Navigation Tips</h2>
+    <p>Use <strong>Ctrl + Shift + M</strong> to toggle tab focus. Or press <strong>Esc</strong> then <strong>Tab</strong> to move between interactive elements.</p>
+  </section>
 
 </body>
 </html>
+
