@@ -1,38 +1,38 @@
-/* 🌐 Fluent Base */
+/* 🌌 Triadic Theme Override */
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f3f3;
-  color: #1b1b1b;
+  background: linear-gradient(to bottom right, #0b1e3f, #1a2a4f);
+  color: #e0e0e0;
   margin: 0;
   padding: 0;
 }
 
 h1, h2 {
-  color: #0078D4;
-  margin-bottom: 0.5rem;
+  color: #FFCB05;
 }
 
 section {
   padding: 2rem;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #2e4a7f;
 }
 
 /* 🧢 Hero Section */
 .hero {
-  background: linear-gradient(to right, #e6f1fb, #ffffff);
+  background: linear-gradient(to right, #001f3f, #003366);
   text-align: center;
   padding: 2rem 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .hero h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
+  color: #FFCB05;
 }
 
 .hero .tagline {
   font-size: 1.2rem;
-  color: #333;
+  color: #cce6ff;
 }
 
 /* 🎠 Carousel Layout */
@@ -56,8 +56,8 @@ section {
 }
 
 .carousel-btn {
-  background-color: #0078D4;
-  color: white;
+  background-color: #FFCB05;
+  color: #00274C;
   border: none;
   font-size: 2rem;
   padding: 0.5rem;
@@ -67,25 +67,45 @@ section {
 }
 
 .carousel-btn:hover {
-  background-color: #005a9e;
+  background-color: #ffd84f;
 }
 
-/* 🧾 Card Styling */
+/* 🧾 Card Styling with Animation */
 .carousel-item {
   min-width: 250px;
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #2e4a7f;
+  border-radius: 12px;
   padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
   flex-shrink: 0;
+  animation: fadeUp 0.6s ease forwards;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(255, 203, 5, 0.4);
 }
 
 .carousel-item a {
-  color: #0078D4;
+  color: #FFCB05;
   text-decoration: none;
   font-weight: bold;
 }
 
 .carousel-item a:hover {
   text-decoration: underline;
+}
+
+/* ✨ Entry Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
