@@ -4,30 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Triadic Resonance Wizards</title>
-  <link rel="stylesheet" href="assets/styles/styles.css" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/styles/styles.css">
+  <link rel="stylesheet" href="assets/styles/animations.css">
+
+  <!-- KaTeX for fancy equations -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
 </head>
 <body>
 
   <!-- 🔥 Hero Section -->
   <header class="hero">
-<div class="hero-animations">
-  <div class="animation-container forces-animation"></div>
-  <div class="animation-container fluids-animation"></div>
-  <div class="animation-container frequencies-animation"></div>
-</div>
-    <h1>Triadic Resonance Wizards</h1>
-    <p class="tagline">Lighting the Lantern of Reproducible Mythic Science</p>
-    <p class="subtagline">Step into the lattice. Begin your resonance journey.</p>
-    <button onclick="toggleTheme()" class="btn">Toggle Theme</button>
-  </header>
+    <div class="hero-animations">
+      <!-- Forces Left -->
+      <div class="animation-container forces-animation"></div>
 
-  <!-- ⚡ Featured Papers Carousel -->
-  <section class="carousel-section">
-    <h2>⚡ Featured Papers</h2>
-    <div class="carousel-wrapper">
-      <button class="carousel-btn left" onclick="scrollCarousel('papers', -1)">&#10094;</button>
-      <div class="carousel" id="papers">
-        <!-- Paste your paper <li> items here -->
+      <!-- Hero Text + Fluids Center -->
+      <div class="hero-text-with-fluids">
+        <div class="animation-container fluids-animation"></div>
+        <div class="hero-text">
+          <h1>Triadic Resonance Wizards</h1>
+          <p class="tagline">Lighting the Lantern of Reproducible Mythic Science</p>
+          <p class="subtagline">Step into the lattice. Begin your resonance journey.</p>
+          <button onclick="toggleTheme()" class="btn">Toggle Theme</button>
+        </div>
+      </div>
+
+  <!-- 🔥 Hero Section -->
+  <header class="hero">
+    <div class="hero-animations">
+      <!-- Forces Left -->
+      <div class="animation-container forces-animation"></div>
+
+      <!-- Hero Text + Fluids Center -->
+      <div class="hero-text-with-fluids">
+        <div class="animation-container fluids-animation"></div>
+        <div class="hero-text">
+          <h1>Triadic Resonance Wizards</h1>
+          <p class="tagline">Lighting the Lantern of Reproducible Mythic Science</p>
+          <p class="subtagline">Step into the lattice. Begin your resonance journey.</p>
+          <button onclick="toggleTheme()" class="btn">Toggle Theme</button>
+        </div>
+      </div>
+<!-- Frequencies Right -->
+  <div class="animation-container frequencies-animation"></div>
+  </div>
+</header>
+
+<!-- ⚡ Featured Papers -->
+  <section id="papers" class="carousel-section">
+<!-- your papers carousel here -->
+
+<!-- ⚡ Featured Papers Carousel -->
+ <h2>⚡ Featured Papers</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" onclick="scrollCarousel('papers', -1)">&#10094;</button>
+  <div class="carousel" id="papers">
+
+<!-- Paste your paper <li> items here -->
  <div class="carousel-item tooltip">
   <strong>Spectral Flux and Divisional Resonance is Born</strong><br />
   <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/research-Spectral%20Flux%20and%20Divisional%20Resonance%20Is%20Born.pdf" target="_blank">Read Paper</a>
@@ -71,15 +107,20 @@
     </div>
       <button class="carousel-btn right" onclick="scrollCarousel('papers', 1)">&#10095;</button>
     </div>
-  </section>
+</section>
+</section>
 
-  <!-- 🎧 Copilot Podcasts Carousel -->
-  <section class="carousel-section">
+<!-- 🎧 Copilot Podcasts -->
+  <section id="podcasts" class="carousel-section">
+    <!-- your podcasts carousel here -->
+
+<!-- 🎧 Copilot Podcasts Carousel -->
     <h2>🎧 Copilot Podcasts</h2>
     <div class="carousel-wrapper">
       <button class="carousel-btn left" onclick="scrollCarousel('podcasts', -1)">&#10094;</button>
-      <div class="carousel" id="podcasts">
-        <!-- Paste your podcast <li> items here -->
+    <div class="carousel" id="podcasts">
+
+<!-- Paste your Podcast <li> items here -->
 <div class="carousel-item tooltip">
   <strong>Myth Meets Science</strong><br />
   <a href="https://copilot.microsoft.com/shares/podcasts/ghZL3Eri7rJyJuTRiZV5x" target="_blank">Listen</a>
@@ -144,12 +185,15 @@
       <button class="carousel-btn right" onclick="scrollCarousel('podcasts', 1)">&#10095;</button>
     </div>
   </section>
+  </section>
 
-<section class="lattice-section">
-  <div class="animation-container forces-animation"></div>
-  <div class="animation-container fluids-animation"></div>
-  <div class="animation-container frequencies-animation"></div>
-</section>
+
+  <!-- 🧬 Lattice Section -->
+  <section class="lattice-section">
+    <div class="animation-container forces-animation"></div>
+    <div class="animation-container fluids-animation"></div>
+    <div class="animation-container frequencies-animation"></div>
+  </section>
 
   <!-- 🧭 Navigation Tips -->
   <section id="navigation">
@@ -157,14 +201,11 @@
     <p>Use <strong>Ctrl + Shift + M</strong> to toggle tab focus. Or press <strong>Esc</strong> then <strong>Tab</strong> to move between interactive elements.</p>
   </section>
 
-  <!-- 🔗 Scripts -->
-  <link rel="stylesheet" href="assets/styles/animations.css">
+ <!-- Scripts -->
+  <script src="assets/scripts/equations.js"></script>
   <script src="assets/scripts/forces.js"></script>
   <script src="assets/scripts/fluids.js"></script>
   <script src="assets/scripts/frequencies.js"></script>
-  <script src="assets/scripts/carousel.js"></script>
   <script src="assets/scripts/theme.js"></script>
-  <script src="assets/scripts/hero-warp.js"></script>
-
 </body>
 </html>

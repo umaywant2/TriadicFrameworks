@@ -1,4 +1,5 @@
-const TFT_EQUATIONS = [
+// Shared TFT Equations
+window.TFT_EQUATIONS = [
   "F = -\\frac{\\pi^2 \\hbar c}{240 d^4}",
   "\\rho_0 = \\frac{\\hbar \\omega^2}{V}",
   "\\tau = \\frac{dR}{d\\phi}",
