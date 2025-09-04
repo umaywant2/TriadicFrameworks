@@ -1,0 +1,19 @@
+.animation-container {
+  position: relative;
+  width: 150px;
+  height: 120px;
+  overflow: hidden;
+}
+
+.hero-animations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.lattice-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  background: rgba(0,0,0,0.1);
+}
