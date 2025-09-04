@@ -4,28 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Triadic Resonance Wizards</title>
-  <link rel="stylesheet" href="/assets/styles/style.css" />
+  <link rel="stylesheet" href="assets/styles/styles.css" />
 </head>
 <body>
-
-<button onclick="toggleTheme(dark-mode)" class="btn">Toggle Theme</button>
-
-<script src="/assets/scripts/carousel.js"></script>
 
   <!-- 🔥 Hero Section -->
   <header class="hero">
     <h1>Triadic Resonance Wizards</h1>
     <p class="tagline">Lighting the Lantern of Reproducible Mythic Science</p>
     <p class="subtagline">Step into the lattice. Begin your resonance journey.</p>
+    <button onclick="toggleTheme()" class="btn">Toggle Theme</button>
   </header>
 
-  <!-- ⚡ Papers Carousel -->
-<section class="carousel-section">
-  <h2>⚡ Featured Papers</h2>
-  <div class="carousel-wrapper">
-    <button class="carousel-btn left" onclick="scrollCarousel('papers', -1)">&#10094;</button>
-    <div class="carousel" id="papers">
-      <!-- Paper cards go here -->
+  <!-- ⚡ Featured Papers Carousel -->
+  <section class="carousel-section">
+    <h2>⚡ Featured Papers</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="scrollCarousel('papers', -1)">&#10094;</button>
+      <div class="carousel" id="papers">
+        <!-- Paste your paper <li> items here -->
 <li>
   <strong>Spectral Flux and Divisional Resonance is Born</strong><br />
   <em>Divisional Imaging for Space</em><br />
@@ -67,17 +64,17 @@
   <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/highlights.md" target="_blank">Explore Highlights</a>
 </li>
     </div>
-    <button class="carousel-btn right" onclick="scrollCarousel('papers', 1)">&#10095;</button>
-  </div>
-</section>
+      <button class="carousel-btn right" onclick="scrollCarousel('papers', 1)">&#10095;</button>
+    </div>
+  </section>
 
-  <!-- 🎧 Copilot Podcasts -->
+  <!-- 🎧 Copilot Podcasts Carousel -->
   <section class="carousel-section">
-  <h2>🎧 Copilot Podcasts</h2>
-  <div class="carousel-wrapper">
-    <button class="carousel-btn left" onclick="scrollCarousel('podcastlist', -1)">&#10094;</button>
-    <div class="carousel" id="podcastList">
-      <!-- Paper cards go here -->
+    <h2>🎧 Copilot Podcasts</h2>
+    <div class="carousel-wrapper">
+      <button class="carousel-btn left" onclick="scrollCarousel('podcasts', -1)">&#10094;</button>
+      <div class="carousel" id="podcasts">
+        <!-- Paste your podcast <li> items here -->
 <li>
   <strong>Myth Meets Science</strong><br />
   <em>Smell-tech and memory restoration</em><br />
@@ -138,11 +135,10 @@
   <em>Forces Fluids Frequency and Replicators</em><br />
   <a href="https://copilot.microsoft.com/shares/podcasts/59KjFpXAExUjZ8iotq1W6" target="_blank">Listen</a>
 </li>
-        <!-- Podcast links injected here -->
+      </div>
+      <button class="carousel-btn right" onclick="scrollCarousel('podcasts', 1)">&#10095;</button>
     </div>
-    <button class="carousel-btn right" onclick="scrollCarousel('papers', 1)">&#10095;</button>
-  </div>
-</section>
+  </section>
 
   <!-- 🧭 Navigation Tips -->
   <section id="navigation">
@@ -150,6 +146,9 @@
     <p>Use <strong>Ctrl + Shift + M</strong> to toggle tab focus. Or press <strong>Esc</strong> then <strong>Tab</strong> to move between interactive elements.</p>
   </section>
 
+  <!-- 🔗 Scripts -->
+  <script src="assets/scripts/carousel.js"></script>
+  <script src="assets/scripts/theme.js"></script>
+
 </body>
 </html>
-
