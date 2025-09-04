@@ -17,41 +17,42 @@ section {
 }
 
 /* 🧢 Hero Section */
+/* Compact hero with layered gradient under the animated starfield */
 .hero {
-  background: url('../images/tft-hero-equations.png') center center / cover no-repeat;
-  height: 120px;
+  position: relative;
+  height: 120px;            /* already compact */
   padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   color: #FFCB05;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
-}
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 0;
+
+  /* Base gradient beneath moving equations for contrast */
+  background-image:
+    linear-gradient(to right, rgba(0, 31, 63, 0.85), rgba(0, 51, 102, 0.75));
+  background-color: #0b1e3f;
 }
 
+/* Canvas sits behind text and ignores pointer events */
+.hero .hero-warp {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Keep hero text above the canvas */
 .hero > * {
   position: relative;
   z-index: 1;
 }
 
-
-.hero h1 {
-  font-size: 1.8rem;
-  margin-bottom: 0.3rem;
-}
-
-.hero .tagline,
-.hero .subtagline {
-  font-size: 0.9rem;
-  color: #cce6ff;
+/* Optional: subtle text shadow for readability */
+.hero h1, .hero .tagline, .hero .subtagline {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.4);
 }
 
 /* 🎠 Carousel Layout */
