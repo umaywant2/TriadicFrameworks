@@ -109,3 +109,12 @@ section {
     transform: translateY(0);
   }
 }
+.dark-mode {
+  background: linear-gradient(to bottom right, #000814, #001f3f);
+  color: #f0f0f0;
+}
+
+.dark-mode .carousel-item {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #0078D4;
+}
