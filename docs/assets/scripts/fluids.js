@@ -1,7 +1,7 @@
 (function(){
   const TFT_EQUATIONS = [ /* same array as above */ ];
 
-  function initFrequencies(container) {
+  function initFluids(container) {
     const canvas = document.createElement("canvas");
     container.appendChild(canvas);
     const ctx = canvas.getContext("2d");
@@ -13,19 +13,19 @@
     window.addEventListener("resize", resize);
     resize();
 
+    const waveHeight = 20;
+    const speed = 0.02;
+
     function animate(time){
       ctx.clearRect(0,0,canvas.width,canvas.height);
-      const cx = canvas.width/2;
-      const cy = canvas.height/2;
       const eqCount = TFT_EQUATIONS.length;
-      for(let i=0;i<eqCount*4;i++){
+      const spacing = 100;
+      for(let i=0;i<eqCount*5;i++){
         const eq = TFT_EQUATIONS[i % eqCount];
-        const angle = (i/eqCount) * Math.PI*2 + time*0.001;
-        const radius = 40 + Math.sin(time*0.002 + i) * 20;
-        const x = cx + Math.cos(angle) * radius;
-        const y = cy + Math.sin(angle) * radius;
-        ctx.font = "10px Segoe UI, sans-serif";
-        ctx.fillStyle = "#ADFF2F";
+        const x = (i*spacing - (time*0.05) % (spacing*eqCount)) % (canvas.width + spacing) - spacing;
+        const y = canvas.height/2 + Math.sin((i + time*speed)/10) * waveHeight;
+        ctx.font = "12px Segoe UI, sans-serif";
+        ctx.fillStyle = "#00BFFF";
         ctx.fillText(eq, x, y);
       }
       requestAnimationFrame(animate);
@@ -34,6 +34,6 @@
   }
 
   document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".frequencies-animation").forEach(initFrequencies);
+    document.querySelectorAll(".fluids-animation").forEach(initFluids);
   });
 })();
