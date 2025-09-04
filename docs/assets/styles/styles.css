@@ -1,0 +1,93 @@
+/* 🌌 Global Styles */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #00274C; /* UMich navy */
+  color: #F0F0F0;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  color: #FFCB05; /* UMich maize */
+  margin-bottom: 0.5rem;
+}
+
+section {
+  padding: 2rem;
+  border-bottom: 1px solid #1a3a5c;
+}
+
+/* 🔥 Hero Section */
+.hero {
+  background: linear-gradient(to right, #001f3f, #003366);
+  text-align: center;
+  padding: 1.5rem 1rem;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.hero .tagline,
+.hero .subtagline {
+  font-size: 1rem;
+  color: #cce6ff;
+}
+
+/* 🎠 Carousel Section */
+.carousel-section {
+  margin-top: 2rem;
+}
+
+.carousel-container {
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.carousel-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.carousel-container li {
+  background: #0a2a4f;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  line-height: 1.5;
+  font-size: 1rem;
+}
+
+/* 🎧 Podcast Styling */
+#podcasts .carousel-container li {
+  background: #143d66;
+}
+
+/* 🧭 Navigation Tips */
+#navigation {
+  font-size: 0.95rem;
+  color: #cce6ff;
+}
+
+/* ✨ Button Styling */
+.btn {
+  background: #FFCB05;
+  color: #00274C;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #ffd84f;
+}
