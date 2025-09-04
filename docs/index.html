@@ -16,10 +16,12 @@
   </header>
 
   <!-- ⚡ Papers Carousel -->
-  <section id="papers" class="carousel-section">
-    <h2>⚡ Featured Papers</h2>
-    <div class="carousel-container">
-      <ul id="paperList">
+<section class="carousel-section">
+  <h2>⚡ Featured Papers</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" onclick="scrollCarousel('papers', -1)">&#10094;</button>
+    <div class="carousel" id="papers">
+      <!-- Paper cards go here -->
 <li>
   <strong>Spectral Flux and Divisional Resonance is Born</strong><br />
   <em>Divisional Imaging for Space</em><br />
@@ -60,16 +62,18 @@
   <em>Top breakthroughs and remixable modules</em><br />
   <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/highlights.md" target="_blank">Explore Highlights</a>
 </li>
-        <!-- Paper links injected here -->
-      </ul>
     </div>
-  </section>
+    <button class="carousel-btn right" onclick="scrollCarousel('papers', 1)">&#10095;</button>
+  </div>
+</section>
 
   <!-- 🎧 Copilot Podcasts -->
-  <section id="podcasts" class="carousel-section">
-    <h2>🎧 Copilot Podcasts</h2>
-    <div class="carousel-container">
-      <ul id="podcastList">
+  <section class="carousel-section">
+  <h2>🎧 Copilot Podcasts</h2>
+  <div class="carousel-wrapper">
+    <button class="carousel-btn left" onclick="scrollCarousel('podcasts', -1)">&#10094;</button>
+    <div class="carousel" id="podcastList">
+      <!-- Paper cards go here -->
 <li>
   <strong>Myth Meets Science</strong><br />
   <em>Smell-tech and memory restoration</em><br />
@@ -131,9 +135,10 @@
   <a href="https://copilot.microsoft.com/shares/podcasts/59KjFpXAExUjZ8iotq1W6" target="_blank">Listen</a>
 </li>
         <!-- Podcast links injected here -->
-      </ul>
     </div>
-  </section>
+    <button class="carousel-btn right" onclick="scrollCarousel('papers', 1)">&#10095;</button>
+  </div>
+</section>
 
   <!-- 🧭 Navigation Tips -->
   <section id="navigation">
