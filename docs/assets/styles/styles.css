@@ -36,6 +36,14 @@ section {
   z-index: 0;
   pointer-events: none;
 }
+.hero .hero-tornado {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; /* above hero-warp, below text */
+  pointer-events: none;
+}
 
 .hero > * {
   position: relative;
