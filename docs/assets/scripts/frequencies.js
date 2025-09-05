@@ -47,7 +47,12 @@
 
     const size = 10;
     const spacing = 80;
-    const speed = 60;
+     let baseSpeed = 60;
+     function getDynamicSpeed() {
+     const t = performance.now() / 1000; // seconds
+     return baseSpeed + Math.sin(t * 2) * 40; // oscillates ±40 around base
+     }
+
     const waveLength = 200;
 
     let waves = [];
@@ -95,7 +100,7 @@
 
       waves.forEach((wave) => {
         wave.sprites.forEach((s) => {
-          s.x += wave.dir * speed * dt;
+          s.x += wave.dir * getDynamicSpeed() * dt;
           if (wave.dir === 1 && s.x > w + spacing) s.x = -spacing;
           if (wave.dir === -1 && s.x < -spacing) s.x = w + spacing;
 
