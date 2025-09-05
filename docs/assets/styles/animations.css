@@ -29,8 +29,8 @@
 
 .animation-container {
   position: relative;
-  width: 150px;
-  height: 120px;
+  width: 161px;
+  height: 131px;
   overflow: hidden;
   flex-shrink: 0;
 }
