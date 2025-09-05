@@ -36,7 +36,14 @@
         const lines = 3; // number of stacked wave lines
          for (let l = 0; l < lines; l++) {
            const yBase = (canvas.height / (lines + 1)) * (l + 1);
-           const y = yBase + Math.sin((i + time*speed)/10) * (waveHeight * 1.5);
+           
+           const lines = 3; // number of stacked wave lines
+           for (let l = 0; l < lines; l++) {
+            const yBase = (canvas.height / (lines + 1)) * (l + 1);
+            const y = yBase + Math.sin((i + time*speed)/10) * (waveHeight * 1.5);
+            drawEquation(eq, x, y, 12);
+           }
+           
            drawEquation(eq, x, y, 12);
          }
 
