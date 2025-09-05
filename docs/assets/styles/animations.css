@@ -36,8 +36,26 @@
 }
 
 .lattice-section {
-  display: flex;
-  justify-content: space-around;
-  padding: 2rem 0;
-  background: rgba(0,0,0,0.1);
+  position: relative;
+  height: 300px; /* or whatever height you want for the section */
+  overflow: hidden;
+}
+
+.lattice-section .animation-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lattice-section .forces-animation {
+  z-index: 1;
+}
+
+.lattice-section .fluids-animation {
+  z-index: 2;
+}
+
+.lattice-section .frequencies-animation {
+  z-index: 3;
 }
