@@ -21,4 +21,4 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Run README Validator
-        run: python validators/readme_validator.py
+        run: python docs/validators/readme_validator.py
