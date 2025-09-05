@@ -3,7 +3,7 @@ import os
 from datetime import datetime
 
 MANIFEST_PATH = ".github/repo_manifest.yaml"
-LOG_PATH = "validation/manifest_log.md"
+LOG_PATH = "docs/validation/manifest_log.md"
 
 def load_manifest(path):
     with open(path, "r") as f:
