@@ -1,46 +1,30 @@
-(function(){
-  function initFrequencies(container) {
-    const canvas = document.createElement("canvas");
-    container.appendChild(canvas);
-    const ctx = canvas.getContext("2d");
+function getColorForIndex(i) {
+  if (i % 9 === 0) return "#B10DC9"; // Purple burst
+  if (i % 6 === 0) return "#0074D9"; // Blue triple
+  if (i % 3 === 0) return "#FF4136"; // Red single
+  return "#ADFF2F"; // Base
+}
 
-    function resize(){
-      canvas.width = container.clientWidth;
-      canvas.height = container.clientHeight;
-    }
-    window.addEventListener("resize", resize);
-    resize();
+function animate(time) {
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  const eqCount = window.TFT_EQUATIONS.length;
+  const spacing = 80;
 
-    function drawEquation(eq, x, y, size){
-      const span = document.createElement("span");
-      katex.render(eq, span, { throwOnError: false });
-      ctx.font = `${size}px Segoe UI, sans-serif`;
-      ctx.fillStyle = "#ADFF2F";
-      ctx.textAlign = "center";
-      ctx.textBaseline = "middle";
-      ctx.fillText(span.textContent, x, y);
-    }
-
-    function animate(time){
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      const cx = canvas.width/2;
-      const cy = canvas.height/2;
-      const eqCount = window.TFT_EQUATIONS.length;
-
-      for(let i=0;i<eqCount*4;i++){
-        const eq = window.TFT_EQUATIONS[i % eqCount];
-        const angle = (i/eqCount) * Math.PI*2 + time*0.001;
-        const radius = 40 + Math.sin(time*0.002 + i) * 20;
-        const x = cx + Math.cos(angle) * radius;
-        const y = cy + Math.sin(angle) * radius;
-        drawEquation(eq, x, y, 10);
-      }
-      requestAnimationFrame(animate);
-    }
-    requestAnimationFrame(animate);
+  // Left to right
+  for (let i=0; i<eqCount*3; i++) {
+    const eq = window.TFT_EQUATIONS[i % eqCount];
+    const x = (i*spacing + (time*0.05) % (spacing*eqCount)) % (canvas.width + spacing) - spacing;
+    const y = canvas.height/3;
+    drawEquation(eq, x, y, getColorForIndex(i), 10);
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".frequencies-animation").forEach(initFrequencies);
-  });
-})();
+  // Right to left
+  for (let i=0; i<eqCount*3; i++) {
+    const eq = window.TFT_EQUATIONS[i % eqCount];
+    const x = canvas.width - ((i*spacing + (time*0.05) % (spacing*eqCount)) % (canvas.width + spacing));
+    const y = (canvas.height/3)*2;
+    drawEquation(eq, x, y, getColorForIndex(i), 10);
+  }
+
+  requestAnimationFrame(animate);
+}
