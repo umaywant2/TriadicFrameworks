@@ -1,13 +1,23 @@
 repo_structure:
   - .github/
+    - ISSUE_TEMPLATE/
+    - workflows/
   - docs/
+    - __pycache__/
     - _template/
     - assets/
+      - scripts/
+      - styles
     - badges/
+    - configs/
+      - lenses/
+      - manifests/
     - CoConsciousness/
     - curriculum/
     - data/
+    - engine/
     - equations/
+    - glyphs/
     - Hippocampus/
     - honor_roll/
     - images/
@@ -26,7 +36,6 @@ repo_structure:
     - VCG/
     - VictorG/
     - visual_language/
-  - papers/
   - README.md
   - LICENSE
   - CONTRIBUTING.md
