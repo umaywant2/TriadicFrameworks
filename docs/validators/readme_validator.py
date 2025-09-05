@@ -7,12 +7,15 @@ README_PATH = "README.md"
 LOG_PATH = "validation/readme_log.md"
 
 def extract_links(content):
-    md_links = re.findall(r'
+    # Match Markdown links: [label](url)
+    md_links = re.findall(r`
 
 \[.*?\]
 
-\((.*?)\)', content)
+\((.*?)\)`, content)
+    # Match HTML hrefs
     html_links = re.findall(r'href="(.*?)"', content)
+    # Match image sources
     img_links = re.findall(r'src="(.*?)"', content)
     return md_links + html_links + img_links
 
@@ -41,6 +44,7 @@ def validate_readme():
 def log_results(broken, html_blocks):
     with open(LOG_PATH, "a", encoding="utf-8") as log:
         log.write(f"## README Validation — {os.path.basename(README_PATH)}\n")
+
         if broken:
             log.write("❌ Broken Links:\n")
             for b in broken:
@@ -51,6 +55,7 @@ def log_results(broken, html_blocks):
         log.write(f"\n🔍 HTML Blocks Detected: {len(html_blocks)}\n")
         for block in html_blocks:
             log.write(f"- <{block.name}> block found\n")
+
         log.write("\n")
 
 if __name__ == "__main__":
