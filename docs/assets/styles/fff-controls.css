@@ -1,0 +1,33 @@
+.lens-controls {
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px;
+  background: #111;
+  color: #eee;
+  font-family: 'Courier New', monospace;
+}
+
+.control-box {
+  border: 1px solid #444;
+  padding: 10px;
+  background: #222;
+  border-radius: 8px;
+  width: 320px;
+}
+
+.control-box h3 {
+  margin-top: 0;
+  color: #ffcc00;
+}
+
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+canvas {
+  margin-top: 10px;
+  border: 1px solid #333;
+  background: #000;
+}
