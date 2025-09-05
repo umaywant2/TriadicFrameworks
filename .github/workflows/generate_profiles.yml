@@ -20,4 +20,4 @@ jobs:
           python-version: '3.x'
 
       - name: Run Profile Generator
-        run: python validators/generate_profiles.py
+        run: python docs/validators/generate_profiles.py
