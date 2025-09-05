@@ -42,4 +42,75 @@
 
   function initFrequencies(container) {
     const canvas = document.createElement("canvas");
-    container.appendChild(canvas
+    container.appendChild(canvas);
+    const ctx = canvas.getContext("2d");
+
+    let lanes = [];
+    const size = 10;
+    const spacing = 80;
+    const speed = 60; // px/s
+    const laneSpacing = 40; // vertical distance between lanes
+
+    function resize(){
+      const w = container.clientWidth;
+      const h = container.clientHeight;
+      canvas.style.width = w + "px";
+      canvas.style.height = h + "px";
+      canvas.width = Math.max(1, Math.floor(w * DPR));
+      canvas.height = Math.max(1, Math.floor(h * DPR));
+      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
+      rebuild();
+    }
+    window.addEventListener("resize", resize);
+
+    function rebuild(){
+      const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
+      const eqs = (window.TFT_EQUATIONS && window.TFT_EQUATIONS.length) ? window.TFT_EQUATIONS : ["\\Psi","\\Phi","\\tau","E"];
+      const laneCount = Math.max(2, Math.floor(h / laneSpacing));
+      lanes = [];
+
+      for (let l=0; l<laneCount; l++){
+        const dir = (l % 2 === 0) ? 1 : -1; // alternate directions
+        const count = Math.max(12, Math.floor(w / (spacing * 0.8)));
+        const colors = buildColorStream(count);
+        const lane = [];
+        for (let i=0;i<count;i++){
+          lane.push({
+            eq: eqs[(i + l) % eqs.length],
+            color: colors[i],
+            x: dir === 1 ? -Math.random()*w : Math.random()*w,
+            dir
+          });
+        }
+        lanes.push({ y: (l+0.5) * laneSpacing, sprites: lane });
+      }
+    }
+
+    function animate(){
+      const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
+      const dt = 1/60;
+      ctx.clearRect(0,0,w,h);
+
+      lanes.forEach(lane=>{
+        lane.sprites.forEach(s=>{
+          s.x += s.dir * speed * dt;
+          if (s.dir === 1 && s.x > w + spacing) s.x = -spacing;
+          if (s.dir === -1 && s.x < -spacing) s.x = w + spacing;
+          const g = getGlyph(s.eq, s.color, size);
+          ctx.drawImage(g, Math.round(s.x - (s.dir === -1 ? g.width/DPR : 0)), lane.y - g.height/(2*DPR));
+        });
+      });
+
+      requestAnimationFrame(animate);
+    }
+
+    resize();
+    requestAnimationFrame(animate);
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll(".frequencies-animation").forEach(initFrequencies);
+  });
+})();
