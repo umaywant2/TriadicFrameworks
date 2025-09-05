@@ -23,4 +23,4 @@ jobs:
         run: pip install requests beautifulsoup4
 
       - name: Run Honor Roll Updater
-        run: python validators/update_honor_roll.py
+        run: python docs/validators/update_honor_roll.py
