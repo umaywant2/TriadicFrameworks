@@ -1,50 +1,49 @@
-(function(){
-  function initFluids(container) {
-    const canvas = document.createElement("canvas");
-    container.appendChild(canvas);
-    const ctx = canvas.getContext("2d");
+// forces.js
 
-    const lines = 3; // number of stacked wave lines
-    const waveHeight = 25; // amplitude
-    const speed = 0.02;
+const canvas = document.getElementById("forcesCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
 
-    function resize(){
-      canvas.width = container.clientWidth;
-      canvas.height = container.clientHeight;
-    }
-    window.addEventListener("resize", resize);
-    resize();
+let baseSpeed = 1.0;
+let charMode = false;
+let charSymbol = "@";
 
-    function drawEquation(eq, x, y, size){
-      const span = document.createElement("span");
-      katex.render(eq, span, { throwOnError: false });
-      ctx.font = `${size}px Segoe UI, sans-serif`;
-      ctx.fillStyle = "#00BFFF";
-      ctx.textAlign = "left";
-      ctx.textBaseline = "middle";
-      ctx.fillText(span.textContent, x, y);
-    }
+const speedInput = document.getElementById("forcesSpeed");
+const charInput = document.getElementById("forcesChar");
 
-    function animate(time){
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      const eqCount = window.TFT_EQUATIONS.length;
-      const spacing = 100;
+speedInput.addEventListener("input", () => {
+  baseSpeed = parseFloat(speedInput.value);
+});
 
-      for (let l = 0; l < lines; l++) {
-        const yBase = (canvas.height / (lines + 1)) * (l + 1);
-        for(let i=0;i<eqCount*5;i++){
-          const eq = window.TFT_EQUATIONS[i % eqCount];
-          const x = (i*spacing - (time*0.05) % (spacing*eqCount)) % (canvas.width + spacing) - spacing;
-          const y = yBase + Math.sin((i + time*speed)/10) * waveHeight;
-          drawEquation(eq, x, y, 12);
-        }
-      }
-      requestAnimationFrame(animate);
-    }
-    requestAnimationFrame(animate);
+charInput.addEventListener("change", () => {
+  charMode = charInput.checked;
+  charSymbol = charInput.dataset.symbol || "@";
+});
+
+function drawForces() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  const centerX = canvas.width / 2;
+  const centerY = canvas.height / 2;
+  const radius = 40 + Math.sin(performance.now() / 500) * baseSpeed * 5;
+
+  if (charMode) {
+    ctx.font = `${20 + baseSpeed * 5}px monospace`;
+    ctx.fillStyle = "#ff6600";
+    ctx.textAlign = "center";
+    ctx.fillText(charSymbol, centerX, centerY);
+  } else {
+    ctx.beginPath();
+    ctx.arc(centerX, centerY, radius, 0, Math.PI * 2);
+    ctx.fillStyle = "rgba(255, 100, 0, 0.6)";
+    ctx.shadowColor = "rgba(255, 80, 0, 0.9)";
+    ctx.shadowBlur = 20;
+    ctx.fill();
+    ctx.closePath();
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".fluids-animation").forEach(initFluids);
-  });
-})();
+  requestAnimationFrame(drawForces);
+}
+
+drawForces();
