@@ -27,6 +27,7 @@ def validate_structure(manifest):
 
 def log_results(missing):
     timestamp = datetime.utcnow().isoformat()
+    os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
     with open(LOG_PATH, "a") as log:
         log.write(f"## Manifest Validation — {timestamp}\n")
         if missing:
