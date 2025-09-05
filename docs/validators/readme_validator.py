@@ -8,11 +8,7 @@ LOG_PATH = "validation/readme_log.md"
 
 def extract_links(content):
     # Match Markdown links: [label](url)
-    md_links = re.findall(r`
-
-\[.*?\]
-
-\((.*?)\)`, content)
+    md_links = re.findall(r',\[.*?\],\((.*?)\)', content)
     # Match HTML hrefs
     html_links = re.findall(r'href="(.*?)"', content)
     # Match image sources
