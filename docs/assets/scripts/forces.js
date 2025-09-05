@@ -83,12 +83,14 @@
 
       // Orbits (equation “particles”)
       ctx.shadowColor = "transparent";
-      orbits.forEach(o=>{
-        o.angle += o.speed;
-        const ox = cx + Math.cos(o.angle) * o.radius;
-        const oy = cy + Math.sin(o.angle) * o.radius;
-        const g = getGlyph(o.eq, o.color, 10);
-        ctx.drawImage(g, ox - g.width/(2*DPR), oy - g.height/(2*DPR));
+      const maxRadius = Math.min(container.clientWidth, container.clientHeight) / 2 - 15;
+      const orbits = [
+      { eq: window.TFT_EQUATIONS[1], radius: maxRadius * 0.4, angle: 0.0, speed: 0.020, color: COLORS[0] }, // red
+      { eq: window.TFT_EQUATIONS[2], radius: maxRadius * 0.65, angle: 1.3, speed: 0.017, color: COLORS[1] }, // blue
+      { eq: window.TFT_EQUATIONS[3], radius: maxRadius * 0.9,  angle: 2.2, speed: 0.015, color: COLORS[2] }  // purple
+      ];
+
+      
       });
 
       requestAnimationFrame(animate);
