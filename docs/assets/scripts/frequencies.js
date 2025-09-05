@@ -117,7 +117,7 @@
       ctx.clearRect(0,0,w,h);
 
       // Top lane: left -> right
-      const yTop = Math.round(h * 0.33);
+      const yTop = Math.round(h * 0.5);
       laneTop.forEach(s=>{
         s.x += speed * dt;
         if (s.x > w + spacing) s.x = -spacing;
@@ -126,7 +126,7 @@
       });
 
       // Bottom lane: right -> left
-      const yBot = Math.round(h * 0.66);
+      const yBot = yTop; // overlap both lanes vertically
       laneBot.forEach(s=>{
         s.x -= speed * dt;
         if (s.x < -spacing) s.x = w + spacing;
