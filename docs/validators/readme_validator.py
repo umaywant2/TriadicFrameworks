@@ -4,7 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 
 README_PATH = "README.md"
-LOG_PATH = "validation/readme_log.md"
+LOG_PATH = "docs/validation/readme_log.md"
 
 def extract_links(content):
     # Match Markdown links: [label](url)
