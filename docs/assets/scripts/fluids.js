@@ -11,7 +11,8 @@
     window.addEventListener("resize", resize);
     resize();
 
-    const waveHeight = 20;   // vertical wave amplitude
+    const waveHeight = 25;   // vertical wave amplitude
+    const phaseOffset = Math.PI / 4;
     const speed = 0.02;      // wave speed
 
     function drawEquation(eq, x, y, size){
@@ -32,7 +33,7 @@
       for(let i=0;i<eqCount*5;i++){
         const eq = window.TFT_EQUATIONS[i % eqCount];
         const x = (i*spacing - (time*0.05) % (spacing*eqCount)) % (canvas.width + spacing) - spacing;
-        const y = canvas.height/2 + Math.sin((i + time*speed)/10) * waveHeight;
+        const y = canvas.height/2 + Math.sin((i + time*speed)/10 + phaseOffset) * waveHeight;
         drawEquation(eq, x, y, 12);
       }
       requestAnimationFrame(animate);
