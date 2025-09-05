@@ -1,123 +1,55 @@
-(function(){
-  const DPR = Math.max(1, window.devicePixelRatio || 1);
-  const BASE = "#ADFF2F", RED = "#FF4136", BLUE = "#0074D9", PURP = "#B10DC9";
+// frequencies.js
 
-  const glyphCache = new Map();
-  function glyphKey(eq, color, size){ return `${eq}|${color}|${size}`; }
-  function getGlyph(eq, color, size){
-    const key = glyphKey(eq, color, size);
-    if (glyphCache.has(key)) return glyphCache.get(key);
-    const span = document.createElement("span");
-    try { katex.render(eq, span, { throwOnError: false }); } catch(e){}
-    const text = span.textContent || eq;
-    const off = document.createElement("canvas");
-    const ctx = off.getContext("2d");
-    ctx.font = `${size}px Segoe UI, sans-serif`;
-    const w = Math.ceil(ctx.measureText(text).width + 8);
-    const h = Math.ceil(size + 8);
-    off.width = Math.ceil(w * DPR);
-    off.height = Math.ceil(h * DPR);
-    ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-    ctx.font = `${size}px Segoe UI, sans-serif`;
-    ctx.textBaseline = "middle";
-    ctx.fillStyle = color;
-    ctx.shadowColor = "rgba(0,0,0,0.25)";
-    ctx.shadowBlur = 4;
-    ctx.fillText(text, 4, h/2);
-    glyphCache.set(key, off);
-    return off;
-  }
+const canvas = document.getElementById("frequenciesCanvas");
+const ctx = canvas.getContext("2d");
+canvas.width = canvas.offsetWidth;
+canvas.height = canvas.offsetHeight;
 
-  function buildColorStream(total) {
-    const stream = [];
-    let i = 1;
-    while (stream.length < total) {
-      if (i % 9 === 0) { for (let k=0;k<6 && stream.length<total;k++) stream.push(PURP); i++; continue; }
-      if (i % 6 === 0) { for (let k=0;k<3 && stream.length<total;k++) stream.push(BLUE); i++; continue; }
-      if (i % 3 === 0) { stream.push(RED); i++; continue; }
-      stream.push(BASE); i++;
-    }
-    return stream;
-  }
+let freqSpeed = 60;
+let charMode = false;
+let charSymbol = "_";
 
-  function initFrequencies(container) {
-    const canvas = document.createElement("canvas");
-    container.appendChild(canvas);
-    const ctx = canvas.getContext("2d");
+const speedInput = document.getElementById("frequenciesSpeed");
+const charInput = document.getElementById("frequenciesChar");
 
-    const size = 10;
-    const spacing = 80;
-     let baseSpeed = 60;
-     function getDynamicSpeed() {
-     const t = performance.now() / 1000; // seconds
-     return baseSpeed + Math.sin(t * 2) * 40; // oscillates ±40 around base
-     }
+speedInput.addEventListener("input", () => {
+  freqSpeed = parseFloat(speedInput.value);
+});
 
-    const waveLength = 200;
+charInput.addEventListener("change", () => {
+  charMode = charInput.checked;
+  charSymbol = charInput.dataset.symbol || "_";
+});
 
-    let waves = [];
+let waves = Array.from({ length: 20 }, () => ({
+  x: Math.random() * canvas.width,
+  y: Math.random() * canvas.height,
+  dir: Math.random() > 0.5 ? 1 : -1
+}));
 
-    function resize(){
-      const w = container.clientWidth;
-      const h = container.clientHeight;
-      canvas.style.width = w + "px";
-      canvas.style.height = h + "px";
-      canvas.width = Math.max(1, Math.floor(w * DPR));
-      canvas.height = Math.max(1, Math.floor(h * DPR));
-      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-      rebuild();
-    }
-    window.addEventListener("resize", resize);
+function drawFrequencies() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  const dt = 0.016;
 
-    function rebuild(){
-      const w = canvas.clientWidth;
-      const h = canvas.clientHeight;
-      const eqs = (window.TFT_EQUATIONS && window.TFT_EQUATIONS.length) ? window.TFT_EQUATIONS : ["\\Psi","\\Phi","\\tau","E"];
-      const count = Math.max(12, Math.floor(w / (spacing * 0.8)));
-      const colors = buildColorStream(count);
+  waves.forEach(w => {
+    w.x += w.dir * freqSpeed * dt;
 
-      waves = [
-        { dir: 1, phase: 0,           baseY: h * 0.25, amp: h * 0.20, sprites: [] },
-        { dir: -1, phase: Math.PI/2,  baseY: h * 0.50, amp: h * 0.20, sprites: [] },
-        { dir: 1, phase: Math.PI,     baseY: h * 0.75, amp: h * 0.20, sprites: [] }
-      ];
-
-      waves.forEach((wave) => {
-        for (let i=0;i<count;i++){
-          wave.sprites.push({
-            eq: eqs[i % eqs.length],
-            color: colors[i],
-            x: wave.dir === 1 ? -Math.random()*w : Math.random()*w
-          });
-        }
-      });
+    if (charMode) {
+      ctx.font = "14px monospace";
+      ctx.fillStyle = "#cc00ff";
+      ctx.fillText(charSymbol, w.x, w.y);
+    } else {
+      ctx.beginPath();
+      ctx.arc(w.x, w.y, 3, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(200, 0, 255, 0.6)";
+      ctx.fill();
+      ctx.closePath();
     }
 
-    function animate(){
-      const w = canvas.clientWidth;
-      const dt = 1/60;
-      ctx.clearRect(0,0,w,canvas.clientHeight);
-
-      waves.forEach((wave) => {
-        wave.sprites.forEach((s) => {
-          s.x += wave.dir * getDynamicSpeed() * dt;
-          if (wave.dir === 1 && s.x > w + spacing) s.x = -spacing;
-          if (wave.dir === -1 && s.x < -spacing) s.x = w + spacing;
-
-          const y = wave.baseY + Math.sin((s.x / waveLength) + wave.phase) * wave.amp;
-          const g = getGlyph(s.eq, s.color, size);
-          ctx.drawImage(g, Math.round(s.x - (wave.dir === -1 ? g.width/DPR : 0)), y - g.height/(2*DPR));
-        });
-      });
-
-      requestAnimationFrame(animate);
-    }
-
-    resize();
-    requestAnimationFrame(animate);
-  }
-
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".frequencies-animation").forEach(initFrequencies);
+    if (w.x < 0 || w.x > canvas.width) w.dir *= -1;
   });
-})();
+
+  requestAnimationFrame(drawFrequencies);
+}
+
+drawFrequencies();
