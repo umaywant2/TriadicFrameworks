@@ -37,7 +37,7 @@
 
 .lattice-section {
   position: relative;
-  height: 300px; /* or whatever height you want for the section */
+  height: 300px; /* or whatever height you want */
   overflow: hidden;
 }
 
@@ -46,6 +46,15 @@
   inset: 0;
   width: 100%;
   height: 100%;
+}
+
+.lattice-section .forces-animation { z-index: 1; }
+.lattice-section .fluids-animation { z-index: 2; }
+.lattice-section .frequencies-animation { z-index: 3; }
+
+.lattice-section .animation-container canvas {
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .lattice-section .animation-container canvas {
