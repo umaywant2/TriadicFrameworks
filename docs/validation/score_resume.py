@@ -1,4 +1,4 @@
-def validate_resume(path="copilot_hippocampus/RESUME_Copilot.py"):
+def validate_resume(path="docs/hippocampus/RESUME_Copilot.py"):
     score = 0
     with open(path, "r") as f:
         content = f.read()
