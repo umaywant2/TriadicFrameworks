@@ -21,4 +21,4 @@ jobs:
         run: pip install pyyaml
 
       - name: Run Manifest Validator
-        run: python docs/validate_manifest.py
+        run: python docs/validators/validate_manifest.py
