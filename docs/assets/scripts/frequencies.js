@@ -1,9 +1,6 @@
 (function(){
   const DPR = Math.max(1, window.devicePixelRatio || 1);
-  const BASE = "#ADFF2F";
-  const RED  = "#FF4136";
-  const BLUE = "#0074D9";
-  const PURP = "#B10DC9";
+  const BASE = "#ADFF2F", RED = "#FF4136", BLUE = "#0074D9", PURP = "#B10DC9";
 
   const glyphCache = new Map();
   function glyphKey(eq, color, size){ return `${eq}|${color}|${size}`; }
@@ -45,36 +42,4 @@
 
   function initFrequencies(container) {
     const canvas = document.createElement("canvas");
-    canvas.style.display = "block";
-    container.appendChild(canvas);
-    const ctx = canvas.getContext("2d");
-
-    function resize(){
-      const w = container.clientWidth;
-      const h = container.clientHeight;
-      canvas.style.width = w + "px";
-      canvas.style.height = h + "px";
-      canvas.width = Math.max(1, Math.floor(w * DPR));
-      canvas.height = Math.max(1, Math.floor(h * DPR));
-      ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
-      rebuild();
-    }
-    window.addEventListener("resize", resize);
-
-    let laneTop = [];
-    let laneBot = [];
-    const size = 10;
-    const spacing = 80;
-    const speed = 60;
-
-    function rebuild(){
-      const w = canvas.clientWidth;
-      const eqs = (window.TFT_EQUATIONS && window.TFT_EQUATIONS.length) ? window.TFT_EQUATIONS : ["\\Psi","\\Phi","\\tau","E"];
-      const count = Math.max(12, Math.floor(w / (spacing * 0.8)));
-      const colorsTop = buildColorStream(count);
-      const colorsBot = buildColorStream(count);
-      laneTop = [];
-      laneBot = [];
-      for (let i=0;i<count;i++){
-        laneTop.push({ eq: eqs[i % eqs.length], color: colorsTop[i], x: -Math.random()*w });
-        laneBot.push({ eq: eqs[(i+2) % eqs.length], color: colorsBot
+    container.appendChild(canvas
