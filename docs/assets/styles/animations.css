@@ -48,6 +48,11 @@
   height: 100%;
 }
 
+.lattice-section .animation-container canvas {
+  mix-blend-mode: screen; /* or lighten/overlay depending on effect */
+  opacity: 0.85; /* tweak for visibility */
+}
+
 .lattice-section .forces-animation {
   z-index: 1;
 }
