@@ -20,4 +20,4 @@ jobs:
           python-version: '3.x'
 
       - name: Run Dashboard Updater
-        run: python validators/update_dashboard.py
+        run: python docs/validators/update_dashboard.py
