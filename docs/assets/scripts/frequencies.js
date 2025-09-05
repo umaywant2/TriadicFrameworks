@@ -72,9 +72,9 @@
       const colors = buildColorStream(count);
 
       waves = [
-        { dir: 1, phase: 0,     sprites: [] }, // L->R
-        { dir: -1, phase: Math.PI/2, sprites: [] }, // R->L
-        { dir: 1, phase: Math.PI, sprites: [] } // L->R again
+        { dir: 1, phase: 0,     baseY: h * 0.25, amp: h * 0.20, sprites: [] },
+        { dir: -1, phase: Math.PI/2, baseY: h * 0.50, amp: h * 0.20, sprites: [] },
+        { dir: 1, phase: Math.PI, baseY: h * 0.75, amp: h * 0.20, sprites: [] }
       ];
 
       waves.forEach((wave, wi) => {
@@ -102,7 +102,7 @@
           if (wave.dir === -1 && s.x < -spacing) s.x = w + spacing;
 
           // sine wave vertical offset
-          const y = baseY + Math.sin((s.x / waveLength) + wave.phase) * waveAmp;
+          const y = wave.baseY + Math.sin((s.x / waveLength) + wave.phase) * wave.amp;
           const g = getGlyph(s.eq, s.color, size);
           ctx.drawImage(g, Math.round(s.x - (wave.dir === -1 ? g.width/DPR : 0)), y - g.height/(2*DPR));
         });
