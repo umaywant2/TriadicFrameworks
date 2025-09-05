@@ -1,5 +1,5 @@
 (function(){
-  const COLORS = ["#FF4136", "#0074D9", "#B10DC9"]; // Red, Blue, Purple
+  const COLORS = ["#FF4136", "#0074D9", "#B10DC9"];
   const DPR = Math.max(1, window.devicePixelRatio || 1);
 
   const glyphCache = new Map();
@@ -30,17 +30,14 @@
 
   function initForces(container) {
     const canvas = document.createElement("canvas");
-    canvas.style.display = "block";
     container.appendChild(canvas);
     const ctx = canvas.getContext("2d");
 
     function resize(){
       const w = container.clientWidth;
       const h = container.clientHeight;
-      canvas.style.width = w + "px";
-      canvas.style.height = h + "px";
-      canvas.width = Math.max(1, Math.floor(w * DPR));
-      canvas.height = Math.max(1, Math.floor(h * DPR));
+      canvas.width = w * DPR;
+      canvas.height = h * DPR;
       ctx.setTransform(DPR, 0, 0, DPR, 0, 0);
       const maxRadius = Math.min(w, h) / 2 - 15;
       orbits[0].radius = maxRadius * 0.4;
@@ -49,11 +46,10 @@
     }
     window.addEventListener("resize", resize);
 
-    const centerEq = (window.TFT_EQUATIONS && window.TFT_EQUATIONS[0]) || "F";
     const orbits = [
-      { eq: window.TFT_EQUATIONS[1] || "\\rho_0", radius: 0, angle: 0.0, speed: 0.020, color: COLORS[0] },
-      { eq: window.TFT_EQUATIONS[2] || "\\tau",   radius: 0, angle: 1.3, speed: 0.017, color: COLORS[1] },
-      { eq: window.TFT_EQUATIONS[3] || "\\Psi",   radius: 0, angle: 2.2, speed: 0.015, color: COLORS[2] }
+      { eq: window.TFT_EQUATIONS[1], radius: 0, angle: 0.0, speed: 0.020, color: COLORS[0] },
+      { eq: window.TFT_EQUATIONS[2], radius: 0, angle: 1.3, speed: 0.017, color: COLORS[1] },
+      { eq: window.TFT_EQUATIONS[3], radius: 0, angle: 2.2, speed: 0.015, color: COLORS[2] }
     ];
 
     function animate(){
@@ -63,7 +59,7 @@
       const cy = h/2;
       ctx.clearRect(0,0,w,h);
 
-      // Sun
+      // Sun (no static equation)
       const sunR = Math.min(w,h) * 0.08;
       ctx.beginPath();
       ctx.arc(cx, cy, sunR, 0, Math.PI*2);
@@ -71,8 +67,6 @@
       ctx.shadowColor = "rgba(255,65,54,0.5)";
       ctx.shadowBlur = 8;
       ctx.fill();
-      const sunGlyph = getGlyph(centerEq, "#FFFFFF", Math.max(10, sunR*0.8));
-      ctx.drawImage(sunGlyph, cx - sunGlyph.width/(2*DPR), cy - sunGlyph.height/(2*DPR));
 
       // Orbits
       ctx.shadowColor = "transparent";
