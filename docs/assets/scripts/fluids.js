@@ -33,7 +33,13 @@
       for(let i=0;i<eqCount*5;i++){
         const eq = window.TFT_EQUATIONS[i % eqCount];
         const x = (i*spacing - (time*0.05) % (spacing*eqCount)) % (canvas.width + spacing) - spacing;
-        const y = canvas.height/2 + Math.sin((i + time*speed)/10 + phaseOffset) * waveHeight;
+        const lines = 3; // number of stacked wave lines
+         for (let l = 0; l < lines; l++) {
+           const yBase = (canvas.height / (lines + 1)) * (l + 1);
+           const y = yBase + Math.sin((i + time*speed)/10) * (waveHeight * 1.5);
+           drawEquation(eq, x, y, 12);
+         }
+
         drawEquation(eq, x, y, 12);
       }
       requestAnimationFrame(animate);
