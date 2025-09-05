@@ -47,9 +47,8 @@
 
     const size = 10;
     const spacing = 80;
-    const speed = 60; // px/s
-    const waveAmp = 20; // vertical amplitude of sine wave
-    const waveLength = 200; // horizontal wavelength
+    const speed = 60;
+    const waveLength = 200;
 
     let waves = [];
 
@@ -67,17 +66,18 @@
 
     function rebuild(){
       const w = canvas.clientWidth;
+      const h = canvas.clientHeight;
       const eqs = (window.TFT_EQUATIONS && window.TFT_EQUATIONS.length) ? window.TFT_EQUATIONS : ["\\Psi","\\Phi","\\tau","E"];
       const count = Math.max(12, Math.floor(w / (spacing * 0.8)));
       const colors = buildColorStream(count);
 
       waves = [
-        { dir: 1, phase: 0,     baseY: h * 0.25, amp: h * 0.20, sprites: [] },
-        { dir: -1, phase: Math.PI/2, baseY: h * 0.50, amp: h * 0.20, sprites: [] },
-        { dir: 1, phase: Math.PI, baseY: h * 0.75, amp: h * 0.20, sprites: [] }
+        { dir: 1, phase: 0,           baseY: h * 0.25, amp: h * 0.20, sprites: [] },
+        { dir: -1, phase: Math.PI/2,  baseY: h * 0.50, amp: h * 0.20, sprites: [] },
+        { dir: 1, phase: Math.PI,     baseY: h * 0.75, amp: h * 0.20, sprites: [] }
       ];
 
-      waves.forEach((wave, wi) => {
+      waves.forEach((wave) => {
         for (let i=0;i<count;i++){
           wave.sprites.push({
             eq: eqs[i % eqs.length],
@@ -88,20 +88,17 @@
       });
     }
 
-    function animate(time){
+    function animate(){
       const w = canvas.clientWidth;
-      const h = canvas.clientHeight;
       const dt = 1/60;
-      ctx.clearRect(0,0,w,h);
+      ctx.clearRect(0,0,w,canvas.clientHeight);
 
-      waves.forEach((wave, wi) => {
-        const baseY = h/2; // centerline
-        wave.sprites.forEach((s, si) => {
+      waves.forEach((wave) => {
+        wave.sprites.forEach((s) => {
           s.x += wave.dir * speed * dt;
           if (wave.dir === 1 && s.x > w + spacing) s.x = -spacing;
           if (wave.dir === -1 && s.x < -spacing) s.x = w + spacing;
 
-          // sine wave vertical offset
           const y = wave.baseY + Math.sin((s.x / waveLength) + wave.phase) * wave.amp;
           const g = getGlyph(s.eq, s.color, size);
           ctx.drawImage(g, Math.round(s.x - (wave.dir === -1 ? g.width/DPR : 0)), y - g.height/(2*DPR));
