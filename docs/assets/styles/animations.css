@@ -35,34 +35,7 @@
   border: 2px dashed #fff;
 }
 
-.forces-animation {
-  background-color: red;
-}
-
-.fluids-animation {
-  background-color: blue;
-  @keyframes ripple {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.fluids-animation {
-  background: linear-gradient(135deg, #00f, #0ff);
-  background-size: 200% 200%;
-  animation: ripple 3s ease infinite;
-}
-
-}
-
 .frequencies-animation {
-  background-color: green;
   @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 5px #0f0;
@@ -86,6 +59,31 @@
 
 }
 
+.fluids-animation {
+  @keyframes ripple {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fluids-animation {
+  background: linear-gradient(135deg, #00f, #0ff);
+  background-size: 200% 200%;
+  animation: ripple 3s ease infinite;
+}
+
+}
+
+.forces-animation {
+  background-color: red;
+}
+
 .lattice-section {
   position: relative;
   height: 300px; /* or whatever height you want */
@@ -99,9 +97,9 @@
   height: 100%;
 }
 
-.lattice-section .forces-animation { z-index: 1; }
-.lattice-section .fluids-animation { z-index: 2; }
 .lattice-section .frequencies-animation { z-index: 3; }
+.lattice-section .fluids-animation { z-index: 2; }
+.lattice-section .forces-animation { z-index: 1; }
 
 .lattice-section .animation-container canvas {
   width: 100% !important;
