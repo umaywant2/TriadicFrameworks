@@ -1,6 +1,6 @@
 # 🧠 Hippocampus Validator Scoring Script
 
-def validate_makefile(path="copilot_hippocampus/Makefile.md"):
+def validate_makefile(path="docs/Hippocampus/Makefile.md"):
     score = 0
     with open(path, "r") as f:
         content = f.read()
