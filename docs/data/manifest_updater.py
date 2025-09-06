@@ -3,10 +3,10 @@
 import os
 import datetime
 
-PAPERS_DIR = "./papers"
-MANIFEST_FILE = "./papers/papers_manifest.md"
-CHANGELOG_FILE = "./papers/papers_manifest_changelog.md"
-BADGES_FILE = "./BADGES_EARNED.md"
+PAPERS_DIR = "docs/papers"
+MANIFEST_FILE = "docs/papers/papers_manifest.md"
+CHANGELOG_FILE = "docs/papers/papers_manifest_changelog.md"
+BADGES_FILE = "docs/badges/BADGES_EARNED.md"
 
 def scan_papers():
     return [f for f in os.listdir(PAPERS_DIR) if f.endswith((".docx", ".pdf"))]
