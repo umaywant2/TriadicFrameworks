@@ -1,4 +1,4 @@
-def validate_loops(path="docs/hippocampus/loop_validation_protocol.md"):
+def validate_loops(path="docs/Hippocampus/loop_validation_protocol.md"):
     score = 0
     with open(path, "r") as f:
         content = f.read()
