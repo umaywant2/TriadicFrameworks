@@ -2,7 +2,7 @@ import json
 from data.resonance_council_tier_checker import check_tier
 
 # Load badge trigger log
-with open("badge_trigger_glyphmap_index_trigger_log.json", "r") as f:
+with open("docs/badges/badge_trigger_glyphmap_index_trigger_log.json", "r") as f:
     data = json.load(f)
 
 # Aggregate contributor stats
