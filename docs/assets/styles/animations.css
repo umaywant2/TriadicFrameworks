@@ -36,6 +36,7 @@
 }
 
 .frequencies-animation {
+  background-color: purple;
   @keyframes pulseGlow {
   0% {
     box-shadow: 0 0 5px #0f0;
@@ -60,6 +61,7 @@
 }
 
 .fluids-animation {
+  background-color: aqua;
   @keyframes ripple {
   0% {
     background-position: 0% 50%;
