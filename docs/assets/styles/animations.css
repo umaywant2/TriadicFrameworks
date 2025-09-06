@@ -28,11 +28,23 @@
 }
 
 .animation-container {
-  position: relative;
-  width: 161px;
-  height: 131px;
-  overflow: hidden;
-  flex-shrink: 0;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #222;
+  border: 2px dashed #fff;
+}
+
+.forces-animation {
+  background-color: red;
+}
+
+.fluids-animation {
+  background-color: blue;
+}
+
+.frequencies-animation {
+  background-color: green;
 }
 
 .lattice-section {
