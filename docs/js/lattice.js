@@ -1,6 +1,8 @@
 function initLattice() {
-  initFrequencies();
-  initFluids();
-  initForces();
+  initFrequencies(); // First
+  initFluids();      // Second
+  setTimeout(() => {
+    initForces();    // Last, after slight delay
+  }, 500); // Delay ensures overlay order
 }
 window.onload = initLattice;
