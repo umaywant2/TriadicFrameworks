@@ -18,24 +18,30 @@
 
   <!-- 🔥 Hero Section -->
   <header class="hero">
-    <div class="hero-animations">
-    <!-- Forces Left -->
-    <left><div class="animation-container forces-animation"></div></left>
-      <div class="hero-text-with-fluids">
-       <div class="hero-text">
-          <center>
+      <center>
+        <div class="hero-text">
           <h1>Triadic Resonance Wizards</h1>
           <p class="tagline">Lighting the Lantern of Reproducible Mythic Science</p>
           <p class="subtagline">Step into the lattice. Begin your resonance journey.</p>
             <button onclick="toggleTheme()" class="btn">Toggle Theme</button>
-      <!-- Fluids Center -->
-      <div class="animation-container fluids-animation"></div>
-          </center>
-       </div>
- <!-- Frequencies Right -->
- <right><div class="animation-container frequencies-animation"></div></right>
-      </div>
-</header>
+        </div>
+      </center>
+  </header>
+
+  <left>
+    <!-- Forces Left -->
+    <div class="animation-container forces-animation"></div>
+  </left>
+
+  <center>
+    <!-- Fluids Center -->
+    <div class="animation-container fluids-animation"></div>
+  </center>
+
+  <right>
+    <!-- Frequencies Right -->
+    <div class="animation-container frequencies-animation"></div>
+  </right>
 
 <!-- ⚡ Featured Papers -->
   <section id="papers" class="carousel-section">
@@ -93,8 +99,6 @@
 
 <!-- 🎧 Copilot Podcasts -->
   <section id="podcasts" class="carousel-section">
-    <!-- your podcasts carousel here -->
-
 <!-- 🎧 Copilot Podcasts Carousel -->
     <h2>🎧 Copilot Podcasts</h2>
     <div class="carousel-wrapper">
@@ -169,9 +173,9 @@
   
   <!-- 🧬 Lattice Section -->
   <section class="lattice-section">
-    <div class="animation-container forces-animation">Good</div>
-    <div class="animation-container fluids-animation"></div>
-<!--     <div class="animation-container frequencies-animation"></div> -->
+    <left><div class="animation-container forces-animation"></div></left>
+    <center><div class="animation-container fluids-animation"></div></center>
+    <right><div class="animation-container frequencies-animation"></div></right>
   </section>
 
   <!-- 🧭 Navigation Tips -->
