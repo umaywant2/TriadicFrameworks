@@ -1,4 +1,6 @@
 name: Update Contributor Honor Roll
+permissions:
+  contents: read
 
 on:
   workflow_run:
