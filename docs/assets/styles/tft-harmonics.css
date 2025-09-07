@@ -1,0 +1,31 @@
+.tft-harmonics-overlay {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background: radial-gradient(circle at center, #111 0%, #000 100%);
+}
+
+.tft-lane {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 36px;
+  pointer-events: none;
+}
+
+.tft-chip {
+  position: absolute;
+  font-size: 13px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  white-space: nowrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.c1 { color: #6bd1ff; }
+.c3 { color: #9b6bff; }
+.c6 { color: #ff6bd1; }
+.c9 { color: #ffd66b; }
