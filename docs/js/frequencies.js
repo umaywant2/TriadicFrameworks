@@ -13,12 +13,11 @@
   };
 
   function colorClass(index) {
-    if (index % 9 === 0) return 'c9';
-    if (index % 6 === 0) return 'c6';
-    if (index % 3 === 0) return 'c3';
-    if (index % 1 === 0) return 'c1';
-    return 'c0';
-  }
+    if (index >= 9) return 'c9';
+    if (index >= 6) return 'c6';
+    if (index >= 3) return 'c3';
+    return 'c1'; // base color
+}
 
   function makeEq(label, i) {
     const span = document.createElement('span');
@@ -61,8 +60,8 @@
     laneB.style.animationDirection = 'reverse';
 
     // Balance width so scroll feels natural
-    laneA.style.minWidth = widthPx ? Math.ceil(widthPx * 1.6) + 'px' : '';
-    laneB.style.minWidth = widthPx ? Math.ceil(widthPx * 1.6) + 'px' : '';
+    laneA.style.minWidth = widthPx ? Math.ceil(widthPx * 2.2) + 'px' : '';
+    laneB.style.minWidth = widthPx ? Math.ceil(widthPx * 2.2) + 'px' : '';
 
     band.appendChild(laneA);
     band.appendChild(laneB);
