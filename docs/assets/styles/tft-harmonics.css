@@ -6,6 +6,10 @@
   background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 
+.tft-harmonics-test {
+  border: 1px solid red;
+}
+
 .tft-lane {
   position: absolute;
   left: 0;
