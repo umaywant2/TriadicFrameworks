@@ -12,13 +12,16 @@
     }
   };
 
-  function getColorClass(position) {
-    // Harmonic cadence: base → 3 → 6 → 9
-    if (position >= 9) return CONFIG.COLORS.after9;
-    if (position >= 6) return CONFIG.COLORS.after6;
-    if (position >= 3) return CONFIG.COLORS.after3;
-    return CONFIG.COLORS.base;
-  }
+ function getColorClass(position) {
+  const cycle = position % 28;
+  if (cycle < 3) return 'c1';       // First 3 → base
+  if (cycle === 3) return 'c3';     // Next 1 → highlight
+  if (cycle >= 4 && cycle <= 9) return 'c1'; // Next 6 → base
+  if (cycle >= 10 && cycle <= 12) return 'c6'; // Next 3 → stronger
+  if (cycle >= 13 && cycle <= 21) return 'c1'; // Next 9 → base
+  return 'c9';                      // Final 6 → full burst
+}
+
 
   function makeEquation(label, position) {
     const span = document.createElement('span');
