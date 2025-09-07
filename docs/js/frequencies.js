@@ -12,12 +12,14 @@
     SPEEDS: ['slow', 'medium', 'fast'],
   };
 
-  function colorClass(index) {
-    if (index >= 9) return 'c9';
-    if (index >= 6) return 'c6';
-    if (index >= 3) return 'c3';
-    return 'c1'; // base color
+ function colorClass(position) {
+  // Harmonic cadence: 1 after 3, 3 after 6, 6 after 9
+  if (position % 9 === 0) return 'c9';
+  if (position % 6 === 0) return 'c6';
+  if (position % 3 === 0) return 'c3';
+  return 'c1'; // base color
 }
+
 
   function makeEq(label, i) {
     const span = document.createElement('span');
@@ -40,7 +42,10 @@
     const lane = document.createElement('div');
     lane.className = `freq-lane ${speedClass}`;
     const doubled = eqLabels.concat(eqLabels);
-    doubled.forEach((lbl, i) => lane.appendChild(makeEq(lbl, i + 1)));
+    doubled.forEach((lbl, i) => {
+      const chip = makeEq(lbl, i + 1); // position-aware
+      lane.appendChild(chip);
+    });
     return lane;
   }
 
@@ -61,6 +66,7 @@
 
     // Balance width so scroll feels natural
     laneA.style.minWidth = widthPx ? Math.ceil(widthPx * 2.2) + 'px' : '';
+    laneB.style.direction = 'ltr'; // Ensure layout flows left-to-right
     laneB.style.minWidth = widthPx ? Math.ceil(widthPx * 2.2) + 'px' : '';
 
     band.appendChild(laneA);
