@@ -1,4 +1,6 @@
 name: Update Glyphic Dashboard
+permissions:
+  contents: read
 
 on:
   workflow_run:
