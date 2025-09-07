@@ -1,0 +1,135 @@
+/* ========== Shared layout ========== */
+.animation-container {
+  position: relative;
+  min-height: 160px;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+.lattice-section #lattice-container {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+}
+
+/* Layering: Frequencies (z10), Fluids (z20), Forces (z30) */
+.overlay-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.overlay-frequencies { z-index: 10; }
+.overlay-fluids      { z-index: 20; }
+.overlay-forces      { z-index: 30; }
+
+/* ========== Frequencies ========== */
+.freq-band {
+  position: relative;
+  height: 48px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  overflow: visible;
+}
+.freq-lane {
+  display: flex;
+  gap: 16px;
+  white-space: nowrap;
+  will-change: transform;
+  animation: freq-scroll linear infinite;
+}
+.freq-lane.slow   { animation-duration: 22s; }
+.freq-lane.medium { animation-duration: 16s; }
+.freq-lane.fast   { animation-duration: 11s; }
+@keyframes freq-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.eq-chip {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+/* color logic for 3/6/9 cadence */
+.c1 { color: #6bd1ff; }
+.c3 { color: #9b6bff; }
+.c6 { color: #ff6bd1; }
+.c9 { color: #ffd66b; }
+.c0 { color: #cfd8dc; }
+
+/* ========== Fluids ========== */
+.fluid-canvas {
+  position: relative;
+  width: 100%;
+  height: 180px;
+}
+.fluid-wave {
+  position: absolute;
+  left: 0; right: 0;
+  height: 56px;
+  opacity: 0.8;
+  filter: blur(0.2px);
+}
+.wave-0 { color: #7ec8e3; }
+.wave-1 { color: #5eb7b7; }
+.wave-2 { color: #4ea8de; }
+
+.wave-chip {
+  position: absolute;
+  font-size: 13px;
+  transform: translate(-50%, -50%);
+}
+
+/* ========== Forces ========== */
+.forces-stage {
+  position: relative;
+  width: 100%;
+  height: 280px;
+}
+.gravity-sphere {
+  position: absolute;
+  left: 50%; top: 50%;
+  width: 44px; height: 44px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff, #9bd, #346 70%);
+  box-shadow: 0 0 24px rgba(90,150,255,0.35), inset 0 0 8px rgba(255,255,255,0.5);
+}
+.orbit-ring {
+  position: absolute;
+  left: 50%; top: 50%;
+  border-radius: 50%;
+  border: 1px dashed rgba(255,255,255,0.18);
+  transform: translate(-50%, -50%);
+}
+.orbit-track {
+  position: absolute;
+  left: 50%; top: 50%;
+  transform-origin: 0 0;
+  animation: orbit-rotate linear infinite;
+}
+@keyframes orbit-rotate {
+  from { transform: rotate(0deg) translateX(var(--radius)); }
+  to   { transform: rotate(360deg) translateX(var(--radius)); }
+}
+.eq-orbit-chip {
+  font-size: 14px;
+  padding: 3px 6px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.25);
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.o0 { color: #ff7aa2; } /* inner orbit */
+.o1 { color: #7affb8; } /* middle orbit */
+.o2 { color: #78c1ff; } /* outer orbit */
+
+/* ========== Lattice responsiveness ========== */
+@media (max-width: 800px) {
+  .forces-stage { height: 220px; }
+  .fluid-canvas { height: 150px; }
+  .freq-band    { height: 42px; }
+}
