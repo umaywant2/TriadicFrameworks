@@ -1,30 +1,28 @@
-// Frequencies: three bands; each band has two counter-flowing lanes.
-// Color cadence: 1 color every 3 eqs, 3 colors every 6, 6 colors every 9.
-// Mounts to test area and/or lattice overlay.
-
 (function () {
   const CONFIG = {
-    TEST_MODE: window.FFF_CONFIG?.TEST_MODE ?? true, // true: mount in test areas; false: lattice overlay
-    EQUATION_COUNT: 36,
+    TEST_MODE: window.FFF_CONFIG?.TEST_MODE ?? true,
     BANDS: 3,
-    LANES_PER_BAND: 2,
-    // Speeds per lane index
-    SPEEDS: ['slow', 'medium', 'fast'],
+    EQUATIONS_PER_LANE: 36,
+    SCROLL_DURATION: [22, 16, 11], // seconds per lane
+    COLORS: {
+      base: 'c1',
+      after3: 'c3',
+      after6: 'c6',
+      after9: 'c9',
+    }
   };
 
- function colorClass(position) {
-  // Harmonic cadence: 1 after 3, 3 after 6, 6 after 9
-  if (position % 9 === 0) return 'c9';
-  if (position % 6 === 0) return 'c6';
-  if (position % 3 === 0) return 'c3';
-  return 'c1'; // base color
-}
+  function getColorClass(position) {
+    // Harmonic cadence: base → 3 → 6 → 9
+    if (position >= 9) return CONFIG.COLORS.after9;
+    if (position >= 6) return CONFIG.COLORS.after6;
+    if (position >= 3) return CONFIG.COLORS.after3;
+    return CONFIG.COLORS.base;
+  }
 
-
-  function makeEq(label, i) {
+  function makeEquation(label, position) {
     const span = document.createElement('span');
-    span.className = `eq-chip ${colorClass(i)}`;
-    // Prefer KaTeX if present
+    span.className = `eq-chip ${getColorClass(position)}`;
     try {
       if (window.katex) {
         span.innerHTML = window.katex.renderToString(label, { throwOnError: false });
@@ -37,51 +35,50 @@
     return span;
   }
 
-  function buildLane(eqLabels, speedClass) {
-    // Duplicate content 2x for seamless marquee
+  function buildLane(equations, speed, reverse = false) {
     const lane = document.createElement('div');
-    lane.className = `freq-lane ${speedClass}`;
-    const doubled = eqLabels.concat(eqLabels);
-    doubled.forEach((lbl, i) => {
-      const chip = makeEq(lbl, i + 1); // position-aware
+    lane.className = `freq-lane ${speed}`;
+    lane.style.animationDirection = reverse ? 'reverse' : 'normal';
+    lane.style.direction = reverse ? 'ltr' : 'rtl';
+    lane.style.minWidth = '220%'; // ensures full scroll span
+
+    // Duplicate for seamless scroll
+    const doubled = equations.concat(equations);
+    doubled.forEach((eq, i) => {
+      const chip = makeEquation(eq, i % CONFIG.EQUATIONS_PER_LANE);
       lane.appendChild(chip);
     });
+
     return lane;
   }
 
-  function buildBand(index, widthPx) {
+  function buildBand(index) {
     const band = document.createElement('div');
     band.className = 'freq-band';
-    // Generate equation labels for this band
-    // Dual-flow: alternate signs to feel like biorhythm waves
-    const eqs = Array.from({ length: CONFIG.EQUATION_COUNT }, (_, i) => {
+
+    const phase = index + 1;
+    const equations = Array.from({ length: CONFIG.EQUATIONS_PER_LANE }, (_, i) => {
       const n = i + 1;
-      const phase = index + 1;
       return String.raw`\sin(${phase}t) + \frac{${n}}{${phase}}`;
     });
-    // Two lanes with different speeds and opposite direction (using dir via CSS override)
-    const laneA = buildLane(eqs, CONFIG.SPEEDS[(index + 0) % CONFIG.SPEEDS.length]);
-    const laneB = buildLane(eqs.slice().reverse(), CONFIG.SPEEDS[(index + 1) % CONFIG.SPEEDS.length]);
-    laneB.style.animationDirection = 'reverse';
 
-    // Balance width so scroll feels natural
-    laneA.style.minWidth = widthPx ? Math.ceil(widthPx * 2.2) + 'px' : '';
-    laneB.style.direction = 'ltr'; // Ensure layout flows left-to-right
-    laneB.style.minWidth = widthPx ? Math.ceil(widthPx * 2.2) + 'px' : '';
+    const speedClass = ['slow', 'medium', 'fast'][index % 3];
+    const laneLTR = buildLane(equations, speedClass, true);  // left-to-right
+    const laneRTL = buildLane(equations, speedClass, false); // right-to-left
 
-    band.appendChild(laneA);
-    band.appendChild(laneB);
+    band.appendChild(laneLTR);
+    band.appendChild(laneRTL);
     return band;
   }
 
   function mount(container) {
     const root = document.createElement('div');
     root.className = 'overlay-layer overlay-frequencies';
-    // Build three bands
-    const width = container.clientWidth || 1200;
-    for (let b = 0; b < CONFIG.BANDS; b++) {
-      root.appendChild(buildBand(b, width));
+
+    for (let i = 0; i < CONFIG.BANDS; i++) {
+      root.appendChild(buildBand(i));
     }
+
     container.appendChild(root);
     return root;
   }
@@ -89,9 +86,7 @@
   function initFrequencies() {
     const targets = [];
     if (CONFIG.TEST_MODE) {
-      document.querySelectorAll('.frequencies-animation').forEach(el => {
-        targets.push(el);
-      });
+      document.querySelectorAll('.frequencies-animation').forEach(el => targets.push(el));
     } else {
       const lattice = document.getElementById('lattice-container');
       if (lattice) targets.push(lattice);
@@ -100,6 +95,5 @@
     console.log('[FFF] Frequencies initialized', { test: CONFIG.TEST_MODE });
   }
 
-  // Expose
   window.initFrequencies = initFrequencies;
 })();
