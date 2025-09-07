@@ -1,4 +1,6 @@
 name: Validate README
+permissions:
+  contents: read
 
 on:
   push:
