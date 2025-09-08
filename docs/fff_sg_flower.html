@@ -3,206 +3,189 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Flower of Life — Forces • Fluids • Frequencies</title>
+<title>Flower of Life — Stained Glass (Take 2)</title>
 <style>
-  :root {
-    --line: #ffffff;
+  :root{
     --bg: #0b0f15;
+    --line: #f8fbff;
     --stroke-width: 2.5;
-    --draw-duration: 4s;
-    --hue: 200;
+    --draw-duration: 4.2s;
+
+    --noise-speed: 0.006;   /* Fluids speed */
+    --flow-speed: 0.010;    /* Forces speed */
+    --freq-hue: 200;        /* Frequencies base hue */
     --sat: 90%;
     --light: 55%;
-    --noise-speed: 0.006;  /* Fluids speed */
-    --flow-speed: 0.012;   /* Forces speed */
   }
-  html, body {
-    height: 100%;
-    background: var(--bg);
-    margin: 0;
-    font-family: system-ui, Inter, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
-    color: #e8edf3;
-  }
-  .wrap {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    height: 100%;
-  }
-  header, footer {
-    padding: 12px 16px;
-    display: flex; gap: 8px; align-items: center; justify-content: space-between;
-  }
-  .btns { display: flex; gap: 8px; flex-wrap: wrap; }
-  button {
-    background: #111722;
-    color: #e8edf3;
-    border: 1px solid #2b3a4f;
-    padding: 8px 12px;
-    border-radius: 8px;
-    cursor: pointer;
-  }
-  button.active { border-color: #52a6ff; box-shadow: 0 0 0 2px #174a80 inset; }
-  .stage {
-    position: relative;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-  }
-  /* The animated “glass” lives under the SVG and gets masked by the circles */
-  svg, canvas, .glass {
-    width: min(90vmin, 900px);
-    height: min(90vmin, 900px);
-    aspect-ratio: 1 / 1;
-  }
-  .glass {
-    position: absolute;
-    filter: contrast(120%) saturate(115%);
-    will-change: filter, transform;
-  }
-  /* Draw-in animation for strokes */
-  .circle-path {
-    stroke: var(--line);
-    stroke-width: var(--stroke-width);
-    fill: none;
-    stroke-linecap: round;
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw var(--draw-duration) ease-in-out forwards;
-  }
-  @keyframes draw { to { stroke-dashoffset: 0; } }
+  html, body { margin:0; height:100%; background:var(--bg); color:#e8edf3; font:14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; }
+  .wrap{ display:grid; grid-template-rows:auto 1fr auto; height:100%; }
+  header, footer{ padding:12px 16px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
+  .btns{ display:flex; gap:8px; flex-wrap:wrap; }
+  button{ background:#111722; color:#e8edf3; border:1px solid #2b3a4f; padding:8px 12px; border-radius:8px; cursor:pointer; }
+  button.active{ border-color:#52a6ff; box-shadow:0 0 0 2px #174a80 inset; }
+  .stage{ position:relative; display:grid; place-items:center; overflow:hidden; }
+  .pane{ width:min(92vmin, 900px); height:min(92vmin, 900px); aspect-ratio:1/1; position:relative; }
+  /* Order: animated fill canvas underneath; SVG outline on top */
+  canvas#fill{ position:absolute; inset:0; }
+  svg#fol{ position:absolute; inset:0; }
 
-  /* Mask: we’ll use the union of circles to reveal the glass fill */
-  .masked {
-    -webkit-mask: url(#mask-union);
-    mask: url(#mask-union);
+  /* SVG outline draw-in */
+  .circle-path{
+    stroke:var(--line);
+    stroke-width:var(--stroke-width);
+    fill:none;
+    stroke-linecap:round;
+    stroke-dasharray:1000;
+    stroke-dashoffset:1000;
+    animation:draw var(--draw-duration) ease-in-out forwards;
   }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
 
-  /* Color cycling shared across modes */
-  .glass {
-    animation: hueCycle 18s linear infinite;
-  }
-  @keyframes hueCycle {
-    0%   { filter: hue-rotate(0deg); }
-    100% { filter: hue-rotate(360deg); }
-  }
-
-  /* Mode-specific classes */
-  .fluids { display: block; }
-  .forces, .frequencies { display: none; }
-
-  .mode-forces .forces { display: block; }
-  .mode-forces .fluids, .mode-forces .frequencies { display: none; }
-
-  .mode-frequencies .frequencies { display: block; }
-  .mode-frequencies .fluids, .mode-frequencies .forces { display: none; }
+  /* Mode classes (for toggling what texture is drawn) */
+  body.mode-fluids {}
+  body.mode-forces {}
+  body.mode-frequencies {}
 </style>
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <div>Flower of Life — stained glass</div>
-    <div class="btns">
-      <button data-mode="fluids" class="active">Fluids</button>
-      <button data-mode="forces">Forces</button>
-      <button data-mode="frequencies">Frequencies</button>
-      <button id="randomize">Randomize</button>
+<body class="mode-fluids">
+  <div class="wrap">
+    <header>
+      <div>Flower of Life — stained glass</div>
+      <div class="btns">
+        <button data-mode="fluids" class="active">Fluids</button>
+        <button data-mode="forces">Forces</button>
+        <button data-mode="frequencies">Frequencies</button>
+        <button id="randomize">Randomize</button>
+      </div>
+    </header>
+
+    <div class="stage">
+      <div class="pane">
+        <canvas id="fill"></canvas>
+        <svg id="fol" viewBox="-150 -150 300 300" aria-label="Flower of Life">
+          <g id="circles"></g>
+        </svg>
+      </div>
     </div>
-  </header>
 
-  <div class="stage">
-    <!-- Animated “glass” layer: 3 stacked canvases for the 3 modes -->
-    <canvas class="glass fluids masked"></canvas>
-    <canvas class="glass forces masked"></canvas>
-    <canvas class="glass frequencies masked"></canvas>
-
-    <!-- Flower of Life SVG on top (lines) -->
-    <svg id="fol" viewBox="-150 -150 300 300" aria-label="Flower of Life">
-      <defs>
-        <!-- Mask = union of circles (reveals the glass only within the flower) -->
-        <mask id="mask-union">
-          <rect x="-1000" y="-1000" width="2000" height="2000" fill="black"/>
-          <g id="mask-circles" fill="white"></g>
-        </mask>
-      </defs>
-
-      <g id="circles"></g>
-    </svg>
+    <footer>
+      <small>Every petal is filled. Toggle modes; hit Randomize for fresh palettes and motion.</small>
+    </footer>
   </div>
 
-  <footer>
-    <small>Toggle modes and hit Randomize to cascade new color patterns.</small>
-  </footer>
-</div>
-
 <script>
-/* =============== Geometry: Flower of Life (19 circles) =============== */
-(function buildFlower() {
-  const g = document.getElementById('circles');
-  const m = document.getElementById('mask-circles');
-  const R = 50; // circle radius in SVG units
-  // Hexagonal grid offsets for 19-circle traditional pattern
-  // Center + 6 around + 12 outer
-  const coords = [];
-  const axial = [
-    [0,0],
-    [1,0],[0,1],[-1,1],[-1,0],[0,-1],[1,-1],
-    [2,0],[2,-1],[1,1],[0,2],[-1,2],[-2,2],[-2,1],[-2,0],[-1,-1],[0,-2],[1,-2],[2,-2]
-  ];
-  // Convert axial to cartesian for hex spacing where circle centers are 1R apart
-  const ax2xy = (q, r) => {
-    const x = R * (Math.sqrt(3) * q + Math.sqrt(3)/2 * r);
-    const y = R * (3/2 * r);
-    return [x, y];
-  };
-  axial.forEach(([q, r]) => coords.push(ax2xy(q, r)));
+/* ===================== Geometry: circles and petals ===================== */
+const R = 50;            // circle radius in SVG units
+const axial = [
+  [0,0],
+  [1,0],[0,1],[-1,1],[-1,0],[0,-1],[1,-1],
+  [2,0],[2,-1],[1,1],[0,2],[-1,2],[-2,2],[-2,1],[-2,0],[-1,-1],[0,-2],[1,-2],[2,-2]
+];
+const ax2xy = (q, r) => {
+  const x = R * (Math.sqrt(3) * q + Math.sqrt(3)/2 * r);
+  const y = R * (3/2 * r);
+  return [x, y];
+};
+const centers = axial.map(([q,r]) => {
+  const [x,y] = ax2xy(q,r);
+  return {x, y};
+});
 
-  // Create animated circle paths and corresponding mask circles (filled)
-  coords.forEach(([cx, cy], i) => {
+/* SVG: draw the 19 circles with draw-in animation */
+(function drawCircles(){
+  const g = document.getElementById('circles');
+  centers.forEach(({x,y}, i) => {
     const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
     c.setAttribute('class', 'circle-path');
-    c.setAttribute('cx', cx); c.setAttribute('cy', cy); c.setAttribute('r', R);
-    c.style.animationDelay = `${(i * 90) / 1000}s`; // slight cascade
+    c.setAttribute('cx', x); c.setAttribute('cy', y); c.setAttribute('r', R);
+    c.style.animationDelay = `${(i*80)/1000}s`;
     g.appendChild(c);
-
-    const fillC = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-    fillC.setAttribute('cx', cx); fillC.setAttribute('cy', cy); fillC.setAttribute('r', R);
-    m.appendChild(fillC);
   });
 })();
 
-/* =============== Mode switching UI =============== */
-const root = document.documentElement;
-const buttons = document.querySelectorAll('button[data-mode]');
-const randomBtn = document.getElementById('randomize');
-const body = document.body;
-function setMode(mode) {
-  buttons.forEach(b => b.classList.toggle('active', b.dataset.mode === mode));
-  body.classList.toggle('mode-forces', mode === 'forces');
-  body.classList.toggle('mode-frequencies', mode === 'frequencies');
-  if (mode === 'fluids') {
-    body.classList.remove('mode-forces', 'mode-frequencies');
-  }
+/* Compute petals (vesica) between adjacent circles (distance ~ R) */
+function distance(a,b){ const dx=a.x-b.x, dy=a.y-b.y; return Math.hypot(dx,dy); }
+function circleIntersections(c1, c2, r){
+  const dx = c2.x - c1.x, dy = c2.y - c1.y;
+  const d = Math.hypot(dx, dy);
+  if (d === 0 || d > 2*r) return null;
+  const a = d/2;                  // equal radii
+  const h = Math.sqrt(r*r - a*a);
+  const ux = dx/d, uy = dy/d;     // unit from c1 to c2
+  const mx = c1.x + ux*a, my = c1.y + uy*a; // midpoint on line c1->c2
+  // perpendicular unit
+  const px = -uy, py = ux;
+  const p1 = {x: mx + px*h, y: my + py*h};
+  const p2 = {x: mx - px*h, y: my - py*h};
+  return {p1, p2, d};
 }
-buttons.forEach(b => b.addEventListener('click', () => setMode(b.dataset.mode)));
 
-/* =============== Utilities =============== */
-function rand(min, max) { return Math.random() * (max - min) + min; }
-function randInt(min, max) { return Math.floor(rand(min, max)); }
+// Precompute petals as Path2D for performance + per-petal offsets
+const petals = [];
+(function buildPetals(){
+  for (let i=0;i<centers.length;i++){
+    for (let j=i+1;j<centers.length;j++){
+      const c1 = centers[i], c2 = centers[j];
+      const d = distance(c1,c2);
+      if (Math.abs(d - R) < 1e-3) {
+        const inter = circleIntersections(c1, c2, R);
+        if (!inter) continue;
+        const {p1, p2} = inter;
+        const path = new Path2D();
+        // Helper to compute angles of p relative to a center
+        const ang = (p, c) => Math.atan2(p.y - c.y, p.x - c.x);
+        const a1s = ang(p1, c1), a1e = ang(p2, c1);
+        const a2s = ang(p2, c2), a2e = ang(p1, c2);
+        // Choose the smaller arc direction for each circle
+        const norm = (a)=>{ while(a<=-Math.PI) a+=2*Math.PI; while(a>Math.PI) a-=2*Math.PI; return a; };
+        const delta1 = norm(a1e - a1s);
+        const cw1 = Math.abs(delta1) > Math.PI ? delta1 < 0 : delta1 > 0 ? false : false;
+        // We want ~120° arc; using anticlockwise flag accordingly
+        // Canvas arc uses anticlockwise boolean
+        const acw1 = Math.abs(delta1) > Math.PI ? true : (delta1 < 0);
 
-/* =============== Fluids: animated noise field (2D fbm) =============== */
-(function fluids() {
-  const cvs = document.querySelector('.glass.fluids');
-  const ctx = cvs.getContext('2d');
-  resizeCanvas(cvs);
+        const delta2 = norm(a2e - a2s);
+        const acw2 = Math.abs(delta2) > Math.PI ? true : (delta2 < 0);
 
-  let t = 0;
-  const pal = () => `hsl(${(performance.now()*0.02 + root.style.getPropertyValue('--hue'))%360}, var(--sat), var(--light))`;
+        path.moveTo(p1.x, p1.y);
+        path.arc(c1.x, c1.y, R, a1s, a1e, acw1);
+        path.arc(c2.x, c2.y, R, a2s, a2e, acw2);
+        path.closePath();
 
+        petals.push({
+          path,
+          c1, c2, p1, p2,
+          // per-petal offset seeds for parallax
+          offx: Math.random()*2000,
+          offy: Math.random()*2000,
+          tint: Math.random()*360
+        });
+      }
+    }
+  }
+})();
+
+/* ===================== Rendering: textures + petal filling ===================== */
+const pane = document.querySelector('.pane');
+const canvasFill = document.getElementById('fill');
+const ctxFill = canvasFill.getContext('2d', { alpha: true });
+resizeCanvas(canvasFill);
+
+/* Offscreen canvases for each texture mode */
+const tex = {
+  fluids: document.createElement('canvas'),
+  forces: document.createElement('canvas'),
+  frequencies: document.createElement('canvas'),
+};
+Object.values(tex).forEach(c => { c.width = canvasFill.width; c.height = canvasFill.height; });
+
+/* ---------- Fluids: fbm-like noise field ---------- */
+const fluids = (() => {
+  const c = tex.fluids, ctx = c.getContext('2d');
   function noise(x, y, s) {
-    // Simple tiled value noise for speed
     const xf = Math.floor(x*s), yf = Math.floor(y*s);
     const xg = xf + 1, yg = yf + 1;
-    function r(ix, iy) {
+    function r(ix, iy){
       const n = Math.sin(ix*127.1 + iy*311.7) * 43758.5453;
       return n - Math.floor(n);
     }
@@ -214,153 +197,204 @@ function randInt(min, max) { return Math.floor(rand(min, max)); }
     const vx1 = lerp(v01, v11, fade(tx));
     return lerp(vx0, vx1, fade(ty));
   }
-
   function fbm(x, y, t) {
-    let f = 0, amp = 0.5, freq = 1.0;
-    for (let i=0;i<4;i++) {
+    let f=0, amp=0.5, freq=1.0;
+    for (let i=0;i<4;i++){
       f += amp * noise(x + t*0.05, y - t*0.04, 0.003*freq);
       amp *= 0.6; freq *= 2.1;
     }
     return f;
   }
-
-  function frame() {
-    const w = cvs.width, h = cvs.height;
-    const img = ctx.createImageData(w, h);
-    const data = img.data;
-    const speed = parseFloat(getComputedStyle(root).getPropertyValue('--noise-speed')) || 0.006;
-    t += speed * 16;
-    for (let y=0;y<h;y+=1) {
-      for (let x=0;x<w;x+=1) {
-        const v = fbm(x, y, t);
-        const hue = (v*360 + 200 + t*2) % 360;
-        const s = 0.7 + 0.3*Math.sin(v*6.283);
-        const l = 0.45 + 0.35*(v-0.5);
-        const i = (y*w + x)*4;
-        // quick hsl->rgb approx
-        const rgb = hsl2rgb(hue/360, s, l);
-        data[i] = rgb[0]; data[i+1] = rgb[1]; data[i+2] = rgb[2]; data[i+3] = 255;
+  return {
+    draw(time){
+      const w=c.width, h=c.height;
+      const img = ctx.createImageData(w, h);
+      const data = img.data;
+      const spd = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--noise-speed')) || 0.006;
+      const t = time * spd;
+      for (let y=0;y<h;y++){
+        for (let x=0;x<w;x++){
+          const v = fbm(x, y, t);
+          const hue = (v*360 + 200 + t*180) % 360;
+          const s = 0.7 + 0.3*Math.sin(v*6.283);
+          const l = 0.47 + 0.30*(v-0.5);
+          const rgb = hsl2rgb(hue/360, s, l);
+          const i = (y*w + x)*4;
+          data[i] = rgb[0]; data[i+1]=rgb[1]; data[i+2]=rgb[2]; data[i+3]=255;
+        }
       }
+      ctx.putImageData(img, 0, 0);
     }
-    ctx.putImageData(img, 0, 0);
-    requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
+  };
 })();
 
-/* =============== Forces: curl-flow particles =============== */
-(function forces() {
-  const cvs = document.querySelector('.glass.forces');
-  const ctx = cvs.getContext('2d');
-  resizeCanvas(cvs);
-  const w = cvs.width, h = cvs.height;
-  const N = 2000;
-  const parts = Array.from({length:N}, () => ({
-    x: Math.random()*w, y: Math.random()*h, life: rand(50, 250)
-  }));
+/* ---------- Forces: particle flow on curl-like field ---------- */
+const forces = (() => {
+  const c = tex.forces, ctx = c.getContext('2d');
+  const N = 1800;
+  let w=c.width, h=c.height;
+  let parts = Array.from({length:N}, () => ({x:Math.random()*w, y:Math.random()*h, life: 50+Math.random()*200}));
   function flow(x,y,t){
-    const s = 0.002;
+    const s=0.0025;
     const u = Math.sin((y+t)*s)*Math.cos((x-t)*s);
     const v = -Math.cos((y+t)*s)*Math.sin((x-t)*s);
     return [u, v];
   }
-  let last = 0;
-  function frame(ts){
-    const speed = parseFloat(getComputedStyle(root).getPropertyValue('--flow-speed')) || 0.012;
-    const dt = Math.min(32, ts - last || 16);
-    last = ts;
-    ctx.globalCompositeOperation = 'source-over';
-    ctx.fillStyle = 'rgba(10,12,18,0.06)';
-    ctx.fillRect(0,0,w,h);
-    ctx.globalCompositeOperation = 'lighter';
-    parts.forEach(p=>{
-      const [u,v]=flow(p.x, p.y, ts*speed);
-      const nx = p.x + u*1.2, ny = p.y + v*1.2;
-      ctx.strokeStyle = `hsla(${(u*360+ny*0.05)%360}, 90%, 60%, 0.06)`;
-      ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(nx,ny); ctx.stroke();
-      p.x = (nx + w) % w; p.y = (ny + h) % h;
-      p.life -= 1; if (p.life < 0) { p.x = Math.random()*w; p.y = Math.random()*h; p.life = rand(50,250); }
-    });
-    requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
-})();
-
-/* =============== Frequencies: audio-reactive gradient =============== */
-(async function frequencies(){
-  const cvs = document.querySelector('.glass.frequencies');
-  const ctx = cvs.getContext('2d');
-  resizeCanvas(cvs);
-
-  // Create analyser; if mic permission denied, fall back to silent animation
-  let analyser, data;
-  try {
-    const ac = new (window.AudioContext || window.webkitAudioContext)();
-    const stream = await navigator.mediaDevices.getUserMedia({audio:true});
-    const src = ac.createMediaStreamSource(stream);
-    analyser = ac.createAnalyser();
-    analyser.fftSize = 1024;
-    src.connect(analyser);
-    data = new Uint8Array(analyser.frequencyBinCount);
-  } catch(e) {
-    // no mic; run without input
-  }
-
-  function frame() {
-    const w=cvs.width, h=cvs.height;
-    const grd = ctx.createLinearGradient(0,0,w,h);
-    let bass=0, mids=0, treble=0;
-    if (analyser) {
-      analyser.getByteFrequencyData(data);
-      const L = data.length;
-      const B = Math.floor(L*0.1), M = Math.floor(L*0.4), T = L - M;
-      bass = avg(data, 0, B);
-      mids = avg(data, B, M);
-      treble = avg(data, M, L);
-    } else {
-      const t = performance.now()*0.002;
-      bass = (Math.sin(t)*0.5+0.5)*200;
-      mids = (Math.sin(t*0.9+2)*0.5+0.5)*180;
-      treble = (Math.sin(t*1.3+4)*0.5+0.5)*160;
+  return {
+    draw(time){
+      const spd = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--flow-speed')) || 0.010;
+      ctx.fillStyle = 'rgba(10,12,18,0.08)';
+      ctx.fillRect(0,0,c.width,c.height);
+      ctx.globalCompositeOperation = 'lighter';
+      parts.forEach(p=>{
+        const [u,v] = flow(p.x, p.y, time*spd);
+        const nx = p.x + u*1.3, ny = p.y + v*1.3;
+        ctx.strokeStyle = `hsla(${(u*360+ny*0.05)%360}, 90%, 60%, 0.06)`;
+        ctx.beginPath(); ctx.moveTo(p.x,p.y); ctx.lineTo(nx,ny); ctx.stroke();
+        p.x = (nx + c.width) % c.width; p.y = (ny + c.height) % c.height;
+        p.life -= 1; if (p.life < 0){ p.x=Math.random()*c.width; p.y=Math.random()*c.height; p.life=50+Math.random()*200; }
+      });
+      ctx.globalCompositeOperation = 'source-over';
     }
-    const h1 = (200 + bass*0.8)%360;
-    const h2 = (300 + mids*0.9)%360;
-    const h3 = ( 40 + treble*1.1)%360;
-    grd.addColorStop(0,   `hsl(${h1}, 90%, 55%)`);
-    grd.addColorStop(0.5, `hsl(${h2}, 90%, 55%)`);
-    grd.addColorStop(1,   `hsl(${h3}, 90%, 55%)`);
-    ctx.fillStyle = grd; ctx.fillRect(0,0,w,h);
-    requestAnimationFrame(frame);
-  }
-  requestAnimationFrame(frame);
+  };
 })();
 
-/* =============== Randomize palettes/speeds =============== */
+/* ---------- Frequencies: mic-reactive gradient (falls back to auto) ---------- */
+const frequencies = (() => {
+  const c = tex.frequencies, ctx = c.getContext('2d');
+  let analyser=null, data=null;
+  (async ()=>{
+    try{
+      const ac = new (window.AudioContext||window.webkitAudioContext)();
+      const stream = await navigator.mediaDevices.getUserMedia({audio:true});
+      const src = ac.createMediaStreamSource(stream);
+      analyser = ac.createAnalyser();
+      analyser.fftSize = 1024;
+      src.connect(analyser);
+      data = new Uint8Array(analyser.frequencyBinCount);
+    }catch(e){ /* silent fallback */ }
+  })();
+  function avg(arr,a,b){ let s=0; for(let i=a;i<b;i++) s+=arr[i]; return s/Math.max(1,b-a); }
+  return {
+    draw(time){
+      const w=c.width, h=c.height;
+      let bass=0, mids=0, treble=0;
+      if (analyser && data){
+        analyser.getByteFrequencyData(data);
+        const L=data.length, B=Math.floor(L*0.12), M=Math.floor(L*0.45);
+        bass = avg(data,0,B); mids = avg(data,B,M); treble = avg(data,M,L);
+      } else {
+        const t = time*0.002;
+        bass=(Math.sin(t)*0.5+0.5)*200;
+        mids=(Math.sin(t*0.9+2)*0.5+0.5)*180;
+        treble=(Math.sin(t*1.3+4)*0.5+0.5)*160;
+      }
+      const h1 = (200 + bass*0.8)%360;
+      const h2 = (300 + mids*0.9)%360;
+      const h3 = ( 40 + treble*1.1)%360;
+      const grd = ctx.createLinearGradient(0,0,w,h);
+      grd.addColorStop(0, `hsl(${h1}, var(--sat), var(--light))`);
+      grd.addColorStop(0.5, `hsl(${h2}, var(--sat), var(--light))`);
+      grd.addColorStop(1, `hsl(${h3}, var(--sat), var(--light))`);
+      ctx.fillStyle = grd; ctx.fillRect(0,0,w,h);
+    }
+  };
+})();
+
+/* ---------- Main compose: clip per petal and paint the texture ---------- */
+let mode = 'fluids';
+const perPetal = petals.map(p => ({
+  path: p.path,
+  offx: p.offx,
+  offy: p.offy,
+  tint: p.tint
+}));
+
+function compose(time){
+  const w = canvasFill.width, h = canvasFill.height;
+  ctxFill.clearRect(0,0,w,h);
+  // Draw/update the current texture into its offscreen canvas
+  if (mode === 'fluids') fluids.draw(time);
+  else if (mode === 'forces') forces.draw(time);
+  else if (mode === 'frequencies') frequencies.draw(time);
+
+  const src = tex[mode];
+
+  // Paint texture per-petal with slight offset for cascading variation
+  perPetal.forEach(p => {
+    const ox = (p.offx + Math.sin(time*0.0007 + p.offx)*60) % src.width;
+    const oy = (p.offy + Math.cos(time*0.0009 + p.offy)*60) % src.height;
+
+    ctxFill.save();
+    ctxFill.clip(p.path);
+    // Parallax sampling: draw the texture shifted so petals sample different parts
+    ctxFill.drawImage(src, -ox, -oy);
+    // Soft tint to diversify hues across petals
+    ctxFill.globalCompositeOperation = 'overlay';
+    const hue = (p.tint + (time*0.01)) % 360;
+    ctxFill.fillStyle = `hsla(${hue}, 60%, 55%, 0.25)`;
+    ctxFill.fill(p.path);
+    ctxFill.globalCompositeOperation = 'source-over';
+    ctxFill.restore();
+  });
+}
+
+/* ===================== UI: mode switching + randomize ===================== */
+const body = document.body;
+const buttons = document.querySelectorAll('button[data-mode]');
+const randomBtn = document.getElementById('randomize');
+
+buttons.forEach(b => b.addEventListener('click', () => {
+  mode = b.dataset.mode;
+  buttons.forEach(x => x.classList.toggle('active', x === b));
+  body.classList.toggle('mode-fluids', mode==='fluids');
+  body.classList.toggle('mode-forces', mode==='forces');
+  body.classList.toggle('mode-frequencies', mode==='frequencies');
+}));
+
 randomBtn.addEventListener('click', () => {
-  root.style.setProperty('--hue', String(randInt(0,360)));
-  root.style.setProperty('--sat', `${randInt(70,100)}%`);
-  root.style.setProperty('--light', `${randInt(45,65)}%`);
-  root.style.setProperty('--noise-speed', (Math.random()*0.01+0.004).toFixed(3));
-  root.style.setProperty('--flow-speed', (Math.random()*0.02+0.008).toFixed(3));
+  document.documentElement.style.setProperty('--sat', `${randInt(70,100)}%`);
+  document.documentElement.style.setProperty('--light', `${randInt(45,65)}%`);
+  document.documentElement.style.setProperty('--noise-speed', (Math.random()*0.01+0.004).toFixed(3));
+  document.documentElement.style.setProperty('--flow-speed', (Math.random()*0.02+0.008).toFixed(3));
+  // shake up per-petal offsets and tints
+  perPetal.forEach(p => {
+    p.offx = Math.random()*2000;
+    p.offy = Math.random()*2000;
+    p.tint = Math.random()*360;
+  });
 });
 
-/* =============== Helpers =============== */
-function resizeCanvas(c) {
-  const r = c.getBoundingClientRect();
-  c.width = r.width; c.height = r.height;
+/* ===================== Animation loop & sizing ===================== */
+let lastW=0, lastH=0;
+function tick(ts){
+  compose(ts);
+  requestAnimationFrame(tick);
 }
-function avg(arr, a, b) {
-  let s=0; for (let i=a;i<b;i++) s+=arr[i]; return s/(b-a||1);
+requestAnimationFrame(tick);
+
+window.addEventListener('resize', () => {
+  resizeCanvas(canvasFill);
+  Object.values(tex).forEach(c => { c.width = canvasFill.width; c.height = canvasFill.height; });
+});
+
+function resizeCanvas(c){
+  const r = pane.getBoundingClientRect();
+  const ratio = window.devicePixelRatio || 1;
+  const w = Math.floor(r.width * ratio);
+  const h = Math.floor(r.height * ratio);
+  c.width = w; c.height = h;
+  c.style.width = r.width + 'px';
+  c.style.height = r.height + 'px';
 }
-// lightweight HSL->RGB (0..1 in, 0..255 out)
+function randInt(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
+// small, fast HSL->RGB
 function hsl2rgb(h, s, l) {
-  function hue2rgb(p, q, t){
-    if(t<0) t+=1; if(t>1) t-=1;
+  function hue2rgb(p, q, t){ if(t<0) t+=1; if(t>1) t-=1;
     if(t<1/6) return p + (q-p)*6*t;
     if(t<1/2) return q;
     if(t<2/3) return p + (q-p)*(2/3 - t)*6;
-    return p;
-  }
+    return p; }
   const q = l < 0.5 ? l*(1+s) : l + s - l*s;
   const p = 2*l - q;
   const r = hue2rgb(p, q, h + 1/3);
@@ -368,9 +402,6 @@ function hsl2rgb(h, s, l) {
   const b = hue2rgb(p, q, h - 1/3);
   return [r*255, g*255, b*255];
 }
-window.addEventListener('resize', () => {
-  document.querySelectorAll('canvas.glass').forEach(resizeCanvas);
-});
 </script>
 </body>
 </html>
