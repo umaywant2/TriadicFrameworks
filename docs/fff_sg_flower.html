@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Flower of Life — Stained Glass (Take 2)</title>
+<title>Flower of Life — Stained Glass (Take 3)</title>
 <style>
   :root{
     --bg: #0b0f15;
@@ -13,7 +13,6 @@
 
     --noise-speed: 0.006;   /* Fluids speed */
     --flow-speed: 0.010;    /* Forces speed */
-    --freq-hue: 200;        /* Frequencies base hue */
     --sat: 90%;
     --light: 55%;
   }
@@ -25,11 +24,9 @@
   button.active{ border-color:#52a6ff; box-shadow:0 0 0 2px #174a80 inset; }
   .stage{ position:relative; display:grid; place-items:center; overflow:hidden; }
   .pane{ width:min(92vmin, 900px); height:min(92vmin, 900px); aspect-ratio:1/1; position:relative; }
-  /* Order: animated fill canvas underneath; SVG outline on top */
   canvas#fill{ position:absolute; inset:0; }
   svg#fol{ position:absolute; inset:0; }
 
-  /* SVG outline draw-in */
   .circle-path{
     stroke:var(--line);
     stroke-width:var(--stroke-width);
@@ -40,11 +37,6 @@
     animation:draw var(--draw-duration) ease-in-out forwards;
   }
   @keyframes draw{ to{ stroke-dashoffset:0; } }
-
-  /* Mode classes (for toggling what texture is drawn) */
-  body.mode-fluids {}
-  body.mode-forces {}
-  body.mode-frequencies {}
 </style>
 </head>
 <body class="mode-fluids">
@@ -69,26 +61,47 @@
     </div>
 
     <footer>
-      <small>Every petal is filled. Toggle modes; hit Randomize for fresh palettes and motion.</small>
+      <small>Colors fill every petal. Toggle modes; hit Randomize for fresh palettes and motion.</small>
     </footer>
   </div>
 
 <script>
 /* ===================== Geometry: circles and petals ===================== */
-const R = 50;            // circle radius in SVG units
-const axial = [
-  [0,0],
-  [1,0],[0,1],[-1,1],[-1,0],[0,-1],[1,-1],
-  [2,0],[2,-1],[1,1],[0,2],[-1,2],[-2,2],[-2,1],[-2,0],[-1,-1],[0,-2],[1,-2],[2,-2]
-];
-const ax2xy = (q, r) => {
-  const x = R * (Math.sqrt(3) * q + Math.sqrt(3)/2 * r);
-  const y = R * (3/2 * r);
+const R = 50; // circle radius in SVG units
+
+// Triangular lattice with neighbor spacing exactly R
+// Basis vectors: e1 = (R, 0), e2 = (R/2, R*sqrt(3)/2)
+function latticeToXY(u, v) {
+  const x = u * R + v * (R/2);
+  const y = v * (R * Math.sqrt(3)/2);
   return [x, y];
-};
-const centers = axial.map(([q,r]) => {
-  const [x,y] = ax2xy(q,r);
-  return {x, y};
+}
+
+// 19 centers: 1 + 6 + 12 in hex layers using triangular lattice coords
+const tri = [
+  [0,0],
+  // ring 1 (hex)
+  [1,0],[0,1],[-1,1],[-1,0],[0,-1],[1,-1],
+  // ring 2 (12 points)
+  [2,0],[1,1],[0,2],[-1,2],[-2,2],[-2,1],[-2,0],[-1,-1],[0,-2],[1,-2],[2,-2],[2,-1],[1,0] // includes some already? we’ll dedupe soon
+];
+
+// Dedupe and limit to the classic 19 positions
+const seen = new Set();
+const axial = [];
+for (const [u,v] of tri) {
+  const k = `${u},${v}`;
+  if (!seen.has(k)) { seen.add(k); axial.push([u,v]); }
+}
+// If fewer than 19, add missing ring-2 positions explicitly
+const ring2 = [[2,0],[1,1],[0,2],[-1,2],[-2,2],[-2,1],[-2,0],[-1,-1],[0,-2],[1,-2],[2,-2],[2,-1]];
+for (const p of ring2) {
+  const k = `${p[0]},${p[1]}`;
+  if (!seen.has(k)) { seen.add(k); axial.push(p); }
+}
+const centers = axial.slice(0,19).map(([u,v]) => {
+  const [x,y] = latticeToXY(u,v);
+  return {x,y};
 });
 
 /* SVG: draw the 19 circles with draw-in animation */
@@ -103,49 +116,47 @@ const centers = axial.map(([q,r]) => {
   });
 })();
 
-/* Compute petals (vesica) between adjacent circles (distance ~ R) */
-function distance(a,b){ const dx=a.x-b.x, dy=a.y-b.y; return Math.hypot(dx,dy); }
+function distance(a,b){ return Math.hypot(a.x-b.x, a.y-b.y); }
 function circleIntersections(c1, c2, r){
   const dx = c2.x - c1.x, dy = c2.y - c1.y;
   const d = Math.hypot(dx, dy);
   if (d === 0 || d > 2*r) return null;
-  const a = d/2;                  // equal radii
-  const h = Math.sqrt(r*r - a*a);
-  const ux = dx/d, uy = dy/d;     // unit from c1 to c2
-  const mx = c1.x + ux*a, my = c1.y + uy*a; // midpoint on line c1->c2
-  // perpendicular unit
+  const a = d/2; // equal radii
+  const h = Math.sqrt(Math.max(0, r*r - a*a));
+  const ux = dx/d, uy = dy/d;
+  const mx = c1.x + ux*a, my = c1.y + uy*a;
   const px = -uy, py = ux;
   const p1 = {x: mx + px*h, y: my + py*h};
   const p2 = {x: mx - px*h, y: my - py*h};
-  return {p1, p2, d};
+  return {p1, p2};
 }
 
-// Precompute petals as Path2D for performance + per-petal offsets
+// Build petals (vesica) between center pairs at ~R apart
 const petals = [];
 (function buildPetals(){
+  const tol = 0.02 * R; // ±2% tolerance
   for (let i=0;i<centers.length;i++){
     for (let j=i+1;j<centers.length;j++){
       const c1 = centers[i], c2 = centers[j];
       const d = distance(c1,c2);
-      if (Math.abs(d - R) < 1e-3) {
+      if (Math.abs(d - R) <= tol) {
         const inter = circleIntersections(c1, c2, R);
         if (!inter) continue;
         const {p1, p2} = inter;
         const path = new Path2D();
-        // Helper to compute angles of p relative to a center
         const ang = (p, c) => Math.atan2(p.y - c.y, p.x - c.x);
         const a1s = ang(p1, c1), a1e = ang(p2, c1);
         const a2s = ang(p2, c2), a2e = ang(p1, c2);
-        // Choose the smaller arc direction for each circle
-        const norm = (a)=>{ while(a<=-Math.PI) a+=2*Math.PI; while(a>Math.PI) a-=2*Math.PI; return a; };
-        const delta1 = norm(a1e - a1s);
-        const cw1 = Math.abs(delta1) > Math.PI ? delta1 < 0 : delta1 > 0 ? false : false;
-        // We want ~120° arc; using anticlockwise flag accordingly
-        // Canvas arc uses anticlockwise boolean
-        const acw1 = Math.abs(delta1) > Math.PI ? true : (delta1 < 0);
 
-        const delta2 = norm(a2e - a2s);
-        const acw2 = Math.abs(delta2) > Math.PI ? true : (delta2 < 0);
+        // Normalize direction to take the minor arcs
+        function arcACW(start, end){
+          let d = end - start;
+          while (d <= -Math.PI) d += 2*Math.PI;
+          while (d > Math.PI) d -= 2*Math.PI;
+          return d < 0; // anticlockwise if negative
+        }
+        const acw1 = arcACW(a1s, a1e);
+        const acw2 = arcACW(a2s, a2e);
 
         path.moveTo(p1.x, p1.y);
         path.arc(c1.x, c1.y, R, a1s, a1e, acw1);
@@ -154,8 +165,6 @@ const petals = [];
 
         petals.push({
           path,
-          c1, c2, p1, p2,
-          // per-petal offset seeds for parallax
           offx: Math.random()*2000,
           offy: Math.random()*2000,
           tint: Math.random()*360
@@ -163,6 +172,8 @@ const petals = [];
       }
     }
   }
+  // Simple debug: if no petals, ensure we still see color
+  console.log(`Petals found: ${petals.length}`);
 })();
 
 /* ===================== Rendering: textures + petal filling ===================== */
@@ -185,10 +196,7 @@ const fluids = (() => {
   function noise(x, y, s) {
     const xf = Math.floor(x*s), yf = Math.floor(y*s);
     const xg = xf + 1, yg = yf + 1;
-    function r(ix, iy){
-      const n = Math.sin(ix*127.1 + iy*311.7) * 43758.5453;
-      return n - Math.floor(n);
-    }
+    function r(ix, iy){ const n = Math.sin(ix*127.1 + iy*311.7) * 43758.5453; return n - Math.floor(n); }
     function lerp(a,b,t){return a+(b-a)*t;}
     function fade(u){return u*u*(3-2*u);}
     const tx = x*s - xf, ty = y*s - yf;
@@ -313,12 +321,19 @@ const perPetal = petals.map(p => ({
 function compose(time){
   const w = canvasFill.width, h = canvasFill.height;
   ctxFill.clearRect(0,0,w,h);
-  // Draw/update the current texture into its offscreen canvas
+
+  // Update the current texture
   if (mode === 'fluids') fluids.draw(time);
   else if (mode === 'forces') forces.draw(time);
   else if (mode === 'frequencies') frequencies.draw(time);
 
   const src = tex[mode];
+
+  if (perPetal.length === 0) {
+    // Fallback: show full texture if no petals (so you always see color)
+    ctxFill.drawImage(src, 0, 0);
+    return;
+    }
 
   // Paint texture per-petal with slight offset for cascading variation
   perPetal.forEach(p => {
@@ -327,9 +342,7 @@ function compose(time){
 
     ctxFill.save();
     ctxFill.clip(p.path);
-    // Parallax sampling: draw the texture shifted so petals sample different parts
     ctxFill.drawImage(src, -ox, -oy);
-    // Soft tint to diversify hues across petals
     ctxFill.globalCompositeOperation = 'overlay';
     const hue = (p.tint + (time*0.01)) % 360;
     ctxFill.fillStyle = `hsla(${hue}, 60%, 55%, 0.25)`;
@@ -357,7 +370,6 @@ randomBtn.addEventListener('click', () => {
   document.documentElement.style.setProperty('--light', `${randInt(45,65)}%`);
   document.documentElement.style.setProperty('--noise-speed', (Math.random()*0.01+0.004).toFixed(3));
   document.documentElement.style.setProperty('--flow-speed', (Math.random()*0.02+0.008).toFixed(3));
-  // shake up per-petal offsets and tints
   perPetal.forEach(p => {
     p.offx = Math.random()*2000;
     p.offy = Math.random()*2000;
@@ -366,11 +378,7 @@ randomBtn.addEventListener('click', () => {
 });
 
 /* ===================== Animation loop & sizing ===================== */
-let lastW=0, lastH=0;
-function tick(ts){
-  compose(ts);
-  requestAnimationFrame(tick);
-}
+function tick(ts){ compose(ts); requestAnimationFrame(tick); }
 requestAnimationFrame(tick);
 
 window.addEventListener('resize', () => {
@@ -379,7 +387,7 @@ window.addEventListener('resize', () => {
 });
 
 function resizeCanvas(c){
-  const r = pane.getBoundingClientRect();
+  const r = document.querySelector('.pane').getBoundingClientRect();
   const ratio = window.devicePixelRatio || 1;
   const w = Math.floor(r.width * ratio);
   const h = Math.floor(r.height * ratio);
@@ -388,7 +396,6 @@ function resizeCanvas(c){
   c.style.height = r.height + 'px';
 }
 function randInt(a,b){ return Math.floor(Math.random()*(b-a+1))+a; }
-// small, fast HSL->RGB
 function hsl2rgb(h, s, l) {
   function hue2rgb(p, q, t){ if(t<0) t+=1; if(t>1) t-=1;
     if(t<1/6) return p + (q-p)*6*t;
