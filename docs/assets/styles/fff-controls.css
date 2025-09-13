@@ -31,3 +31,8 @@ canvas {
   border: 1px solid #333;
   background: #000;
 }
+
+.fff-container {
+  display: block;
+  position: relative;
+}
