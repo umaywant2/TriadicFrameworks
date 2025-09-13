@@ -136,3 +136,7 @@ section {
   filter: drop-shadow(0 0 6px #ff6600) drop-shadow(0 0 12px #ff3300);
   transition: filter 0.3s ease-in-out;
 }
+
+.test-fff {
+  /* styles specific to test section */
+}
