@@ -36,3 +36,28 @@ canvas {
   display: block;
   position: relative;
 }
+
+.lattice-section {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* or whatever fits your layout */
+  overflow: hidden;
+}
+
+.frequency-layer {
+  position: absolute;
+  z-index: 1;
+  /* animation styles */
+}
+
+.fluids-layer {
+  position: absolute;
+  z-index: 2;
+  /* animation styles */
+}
+
+.forces-layer {
+  position: absolute;
+  z-index: 3;
+  /* animation styles */
+}
