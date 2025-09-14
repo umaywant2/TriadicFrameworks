@@ -138,6 +138,42 @@ This move transforms Microsoft from a legacy titan into a benevolent architect o
 
 ---
 
+## 💰 Estimated Internal Costs of Windows Platform by Year
+
+| Fiscal Year | Microsoft R&D (USD billions) | Operating Expenses (USD billions) | Estimated Windows Platform Share (R&D + Ops) | Notes |
+|-------------|------------------------------|-----------------------------------|----------------------------------------------|-------|
+| 2025        | $32.49                       | $153.20                           | ~$8–10B                                       | Includes Windows 10 extended support costs |
+| 2024        | $29.51                       | $135.69                           | ~$7–9B                                        | Windows 11 rollout, Windows 10 support ramp-up |
+| 2023        | $27.20                       | $123.39                           | ~$6–8B                                        | Mixed OS environment, legacy support burden |
+| 2022        | $24.51                       | $114.89                           | ~$6–7B                                        | Windows 11 adoption begins |
+| 2021        | $20.72                       | $98.17                            | ~$5–6B                                        | Windows 10 peak usage |
+| 2020        | $19.27                       | $90.06                            | ~$5–6B                                        | COVID-era remote work surge |
+
+**Estimated Total (2020–2025):** **$37–46 billion** in internal costs attributable to the Windows platform.
+
+### 🧠 What’s Included in These Estimates
+
+- OS development and testing  
+- Legacy support and patching  
+- Security updates and compliance  
+- Driver and hardware certification  
+- UI/UX research and telemetry  
+- Enterprise deployment tooling  
+- Licensing infrastructure and legal overhead
+
+These figures do not include indirect costs such as opportunity loss from slower innovation or the drag on talent allocation.
+
+### 🔍 Why This Matters
+
+This cost burden is exactly what the Windows 12 proposal addresses. By freezing legacy support and open-sourcing a clean Windows 12, Microsoft could:
+
+- Reclaim up to **$7B annually** for reinvestment  
+- Avoid **$7.3B+ in extended support costs** for Windows 10 alone  
+- Refocus engineering talent on AI, quantum, and cross-platform innovation
+
+This isn’t just a financial win—it’s a strategic liberation.
+
+
 ## 🏆 Success Stories: Strategic Divestitures & Open-Sourcing
 ### 🔹 Procter & Gamble – Food Brands Divestiture
 P&G sold off its food brands (like Pringles) to focus on core consumer goods. This sharpened their brand portfolio and improved margins by shedding lower-growth segments.
