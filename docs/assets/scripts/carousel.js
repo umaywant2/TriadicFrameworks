@@ -24,7 +24,7 @@ function toggleTheme() {
   document.body.classList.toggle('dark-mode');
 }
 
-// Auto-rotate with pause-on-hover, pause-on-touch, and configurable resume delay
+// Auto-rotate with pause-on-hover, pause-on-touch, resume delay, and Page Visibility API
 ['papers', 'podcasts'].forEach(sectionId => {
   const carousel = document.querySelector(`#${sectionId}.carousel`);
   if (!carousel) return;
@@ -59,4 +59,13 @@ function toggleTheme() {
   // Mobile touch events
   carousel.addEventListener('touchstart', stopAutoScroll, { passive: true });
   carousel.addEventListener('touchend', scheduleResume, { passive: true });
+
+  // Page Visibility API
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) {
+      stopAutoScroll();
+    } else {
+      scheduleResume();
+    }
+  });
 });
