@@ -18,12 +18,13 @@ function toggleTheme() {
   document.body.classList.toggle('dark-mode');
 }
 
-// Auto-rotate with pause-on-hover and pause-on-touch
+// Auto-rotate with pause-on-hover, pause-on-touch, and resume delay
 ['papers', 'podcasts'].forEach(sectionId => {
   const carousel = document.querySelector(`#${sectionId}.carousel`);
   if (!carousel) return;
 
   let intervalId = startAutoScroll();
+  let resumeTimeout;
 
   function startAutoScroll() {
     return setInterval(() => {
@@ -33,17 +34,31 @@ function toggleTheme() {
 
   function stopAutoScroll() {
     clearInterval(intervalId);
+    intervalId = null;
+  }
+
+  function scheduleResume() {
+    clearTimeout(resumeTimeout);
+    resumeTimeout = setTimeout(() => {
+      if (!intervalId) {
+        intervalId = startAutoScroll();
+      }
+    }, 4000); // 4-second delay before resuming
   }
 
   // Desktop hover events
-  carousel.addEventListener('mouseenter', stopAutoScroll);
+  carousel.addEventListener('mouseenter', () => {
+    stopAutoScroll();
+  });
   carousel.addEventListener('mouseleave', () => {
-    intervalId = startAutoScroll();
+    scheduleResume();
   });
 
   // Mobile touch events
-  carousel.addEventListener('touchstart', stopAutoScroll, { passive: true });
+  carousel.addEventListener('touchstart', () => {
+    stopAutoScroll();
+  }, { passive: true });
   carousel.addEventListener('touchend', () => {
-    intervalId = startAutoScroll();
+    scheduleResume();
   }, { passive: true });
 });
