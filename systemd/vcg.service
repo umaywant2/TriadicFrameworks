@@ -1,0 +1,21 @@
+
+---
+
+### `/systemd/vcg.service`
+
+```markdown
+# vcg.service
+
+```ini
+[Unit]
+Description=Virtual Compute Gateway
+After=network.target mount_dimensions.target
+Requires=mount_dimensions.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/vcg_orchestrator
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
