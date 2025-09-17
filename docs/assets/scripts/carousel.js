@@ -1,9 +1,15 @@
+// ===== CONFIG =====
+const AUTO_SCROLL_INTERVAL = 6000; // ms between auto-scrolls
+const RESUME_DELAY = 4000;         // ms to wait before resuming after interaction
+const ITEMS_PER_SCROLL = 3;        // how many items to move per scroll
+// ==================
+
 function scrollCarousel(sectionId, direction) {
   const carousel = document.querySelector(`#${sectionId}.carousel`);
   if (!carousel) return;
 
   const itemWidth = carousel.querySelector('.carousel-item').offsetWidth;
-  const scrollAmount = itemWidth * 3;
+  const scrollAmount = itemWidth * ITEMS_PER_SCROLL;
 
   if (direction > 0 && carousel.scrollLeft + carousel.offsetWidth >= carousel.scrollWidth) {
     carousel.scrollTo({ left: 0, behavior: 'smooth' });
@@ -18,7 +24,7 @@ function toggleTheme() {
   document.body.classList.toggle('dark-mode');
 }
 
-// Auto-rotate with pause-on-hover, pause-on-touch, and resume delay
+// Auto-rotate with pause-on-hover, pause-on-touch, and configurable resume delay
 ['papers', 'podcasts'].forEach(sectionId => {
   const carousel = document.querySelector(`#${sectionId}.carousel`);
   if (!carousel) return;
@@ -28,8 +34,8 @@ function toggleTheme() {
 
   function startAutoScroll() {
     return setInterval(() => {
-      scrollCarousel(sectionId, 1); // move right by 3 items
-    }, 6000);
+      scrollCarousel(sectionId, 1); // move right
+    }, AUTO_SCROLL_INTERVAL);
   }
 
   function stopAutoScroll() {
@@ -43,22 +49,14 @@ function toggleTheme() {
       if (!intervalId) {
         intervalId = startAutoScroll();
       }
-    }, 4000); // 4-second delay before resuming
+    }, RESUME_DELAY);
   }
 
   // Desktop hover events
-  carousel.addEventListener('mouseenter', () => {
-    stopAutoScroll();
-  });
-  carousel.addEventListener('mouseleave', () => {
-    scheduleResume();
-  });
+  carousel.addEventListener('mouseenter', stopAutoScroll);
+  carousel.addEventListener('mouseleave', scheduleResume);
 
   // Mobile touch events
-  carousel.addEventListener('touchstart', () => {
-    stopAutoScroll();
-  }, { passive: true });
-  carousel.addEventListener('touchend', () => {
-    scheduleResume();
-  }, { passive: true });
+  carousel.addEventListener('touchstart', stopAutoScroll, { passive: true });
+  carousel.addEventListener('touchend', scheduleResume, { passive: true });
 });
