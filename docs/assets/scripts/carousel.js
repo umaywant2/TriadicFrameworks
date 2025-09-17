@@ -18,23 +18,32 @@ function toggleTheme() {
   document.body.classList.toggle('dark-mode');
 }
 
-// Auto-rotate with pause-on-hover
+// Auto-rotate with pause-on-hover and pause-on-touch
 ['papers', 'podcasts'].forEach(sectionId => {
   const carousel = document.querySelector(`#${sectionId}.carousel`);
   if (!carousel) return;
 
-  let intervalId = setInterval(() => {
-    scrollCarousel(sectionId, 1); // move right by 3 items
-  }, 6000);
+  let intervalId = startAutoScroll();
 
-  carousel.addEventListener('mouseenter', () => {
-    clearInterval(intervalId);
-  });
-
-  carousel.addEventListener('mouseleave', () => {
-    intervalId = setInterval(() => {
-      scrollCarousel(sectionId, 1);
+  function startAutoScroll() {
+    return setInterval(() => {
+      scrollCarousel(sectionId, 1); // move right by 3 items
     }, 6000);
-  });
-});
+  }
 
+  function stopAutoScroll() {
+    clearInterval(intervalId);
+  }
+
+  // Desktop hover events
+  carousel.addEventListener('mouseenter', stopAutoScroll);
+  carousel.addEventListener('mouseleave', () => {
+    intervalId = startAutoScroll();
+  });
+
+  // Mobile touch events
+  carousel.addEventListener('touchstart', stopAutoScroll, { passive: true });
+  carousel.addEventListener('touchend', () => {
+    intervalId = startAutoScroll();
+  }, { passive: true });
+});
