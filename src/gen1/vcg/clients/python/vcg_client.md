@@ -62,3 +62,15 @@ def recv_route(dimension_id: str):
         if msg.get("type") == "VCG_ROUTE":
             return json.loads(msg["payload"])
         return None
+```
+## Usage Example
+```python
+from vcg_client import await_window, send_route, recv_route
+
+DIM_ID = "D2"
+SOCK_PATH = f"/run/vcg/{DIM_ID.lower()}.sock"
+
+await_window(SOCK_PATH)
+send_route(from_d=DIM_ID, to_d="D4", payload='{"msg": "hello"}')
+msg = recv_route(DIM_ID)
+```
