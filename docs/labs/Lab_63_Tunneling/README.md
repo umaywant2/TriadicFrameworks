@@ -1,4 +1,4 @@
-# Lab 2: Quantum Tunneling as Phase Interference
+# Lab 63: Quantum Tunneling as Phase Interference
 
 ## 🔮 Mythic Preface
 _"The wall is not a barrier—it’s a veil. And phase is the key."_

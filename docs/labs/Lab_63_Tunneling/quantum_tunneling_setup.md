@@ -1,4 +1,4 @@
-# Lab 2: Quantum Tunneling – Through the Barrier, Beyond the Veil
+# Lab 63: Quantum Tunneling – Through the Barrier, Beyond the Veil
 
 ## 🧭 Objective
 To explore quantum tunneling phenomena using a reproducible analog circuit and triadic mapping of barrier, particle, and field.

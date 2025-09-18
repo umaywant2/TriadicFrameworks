@@ -1,4 +1,4 @@
-# Lab13: Kashmir Cascade
+# Lab10: Kashmir Cascade
 
 ## Focus
 Avalanche recursion and mythic descent

@@ -1,4 +1,4 @@
-# Reproducibility Protocol – Lab 2: Quantum Tunneling
+# Reproducibility Protocol – Lab 63: Quantum Tunneling
 
 ## 🔁 Version Control
 

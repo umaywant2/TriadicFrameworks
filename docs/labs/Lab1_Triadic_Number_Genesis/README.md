@@ -1,4 +1,4 @@
-# Lab 8: Triadic Number Genesis
+# Lab 1: Triadic Number Genesis
 
 ## Mythic Preface
 _"From zero, one. From one, two. From two, the triad awakens."_  

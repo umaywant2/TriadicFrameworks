@@ -1,4 +1,4 @@
-# Lab 2: Tunneling as Phase Interference
+# Lab 63: Tunneling as Phase Interference
 
 ## 🧭 Objective  
 Explore quantum tunneling through the lens of phase interference, using triadic mappings of particle state, barrier configuration, and transmission probability.
