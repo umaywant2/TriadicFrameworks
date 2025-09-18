@@ -1,4 +1,4 @@
-# Lab 1: Casimir Effect Setup
+# Lab 61: Casimir Effect Setup
 
 ## 🧪 Objective
 Demonstrate the Casimir force between two conductive plates using a simplified tabletop setup.

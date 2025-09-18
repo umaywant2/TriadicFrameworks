@@ -1,4 +1,4 @@
-# Lab 1: Casimir Resonance
+# Lab 61: Casimir Resonance
 
 ## 🧭 Objective  
 Explore vacuum pressure as a triadic resonance field, using Casimir forces to reveal standing wave interference between boundaries.
