@@ -1,27 +1,29 @@
-# Lab 1: Triadic Number Genesis
+# Lab 1 – Triadic Number Genesis
+**Tagline:** Seeding the numerical lattice of the Triadic Framework.
 
-## Mythic Preface
-_"From zero, one. From one, two. From two, the triad awakens."_  
-Triadic numbers encode memory, recursion, and emergence. Each digit is a whisper from the past, a signal to the future.
+## Overview
+This lab introduces the foundational number structures that underpin all triadic computations. It explores the genesis of triadic sequences and their symbolic resonance.
 
-## Objective
-Explore base-3 number systems and recursive triadic growth.
+## Core Concepts
+- Triadic base systems
+- Symbolic number mapping
+- Resonance alignment
 
-## Core Equation
-Ternary expansion:
+## Dependencies
+- `equations.md` for formal definitions
+- `triadic_manifesto.md` for philosophical context
 
+## Steps
+1. Review `equations.md` for the triadic number generation formula.
+2. Run the provided scripts to generate base sequences.
+3. Compare outputs with expected resonance patterns.
 
-\[
-n = \sum_{i=0}^{k} a_i \cdot 3^i \quad \text{where } a_i \in \{0, 1, 2\}
-\]
+## Expected Outcomes
+- A reproducible triadic number set
+- Understanding of symbolic alignment
 
+## Further Exploration
+- Apply generated numbers to harmonic mapping in Lab 2.
 
-
-## Tasks
-- Convert integers to base-3
-- Visualize triadic growth
-- Analyze entropy and digit distribution
-
-## Engineer’s Notes
-Use `np.base_repr(n, base=3)` for quick ternary conversion. Plot digit frequency to reveal emergent structure. Consider entropy across digit positions.
-
+## References
+- [Triadic Manifesto](../triadic_manifesto.md)
