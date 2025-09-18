@@ -2,6 +2,7 @@
 const AUTO_SCROLL_INTERVAL = 6000; // ms between auto-scrolls
 const RESUME_DELAY = 4000;         // ms to wait before resuming after interaction
 const ITEMS_PER_SCROLL = 3;        // how many items to move per scroll
+const CAROUSEL_IDS = ['papers', 'podcasts', 'projects', 'labs']; // all carousel section IDs
 // ==================
 
 function scrollCarousel(sectionId, direction) {
@@ -24,48 +25,57 @@ function toggleTheme() {
   document.body.classList.toggle('dark-mode');
 }
 
-// Auto-rotate with pause-on-hover, pause-on-touch, resume delay, and Page Visibility API
-['papers', 'podcasts'].forEach(sectionId => {
+// ===== Unified Auto-Rotation Logic =====
+let autoScrollIntervalId = null;
+let resumeTimeoutId = null;
+
+function startAutoScrollAll() {
+  stopAutoScrollAll(); // prevent duplicates
+  autoScrollIntervalId = setInterval(() => {
+    CAROUSEL_IDS.forEach(id => scrollCarousel(id, 1));
+  }, AUTO_SCROLL_INTERVAL);
+}
+
+function stopAutoScrollAll() {
+  clearInterval(autoScrollIntervalId);
+  autoScrollIntervalId = null;
+}
+
+function scheduleResumeAll() {
+  clearTimeout(resumeTimeoutId);
+  resumeTimeoutId = setTimeout(() => {
+    if (!autoScrollIntervalId) {
+      startAutoScrollAll();
+    }
+  }, RESUME_DELAY);
+}
+
+// ===== Event Binding =====
+CAROUSEL_IDS.forEach(sectionId => {
   const carousel = document.querySelector(`#${sectionId}.carousel`);
   if (!carousel) return;
 
-  let intervalId = startAutoScroll();
-  let resumeTimeout;
+  // Pause/resume on hover/touch
+  carousel.addEventListener('mouseenter', stopAutoScrollAll);
+  carousel.addEventListener('mouseleave', scheduleResumeAll);
+  carousel.addEventListener('touchstart', stopAutoScrollAll, { passive: true });
+  carousel.addEventListener('touchend', scheduleResumeAll, { passive: true });
 
-  function startAutoScroll() {
-    return setInterval(() => {
-      scrollCarousel(sectionId, 1); // move right
-    }, AUTO_SCROLL_INTERVAL);
-  }
-
-  function stopAutoScroll() {
-    clearInterval(intervalId);
-    intervalId = null;
-  }
-
-  function scheduleResume() {
-    clearTimeout(resumeTimeout);
-    resumeTimeout = setTimeout(() => {
-      if (!intervalId) {
-        intervalId = startAutoScroll();
-      }
-    }, RESUME_DELAY);
-  }
-
-  // Desktop hover events
-  carousel.addEventListener('mouseenter', stopAutoScroll);
-  carousel.addEventListener('mouseleave', scheduleResume);
-
-  // Mobile touch events
-  carousel.addEventListener('touchstart', stopAutoScroll, { passive: true });
-  carousel.addEventListener('touchend', scheduleResume, { passive: true });
-
-  // Page Visibility API
-  document.addEventListener('visibilitychange', () => {
-    if (document.hidden) {
-      stopAutoScroll();
-    } else {
-      scheduleResume();
-    }
-  });
+  // Auto-bind left/right buttons
+  const leftBtn = document.querySelector(`#${sectionId}-left`);
+  const rightBtn = document.querySelector(`#${sectionId}-right`);
+  if (leftBtn) leftBtn.addEventListener('click', () => scrollCarousel(sectionId, -1));
+  if (rightBtn) rightBtn.addEventListener('click', () => scrollCarousel(sectionId, 1));
 });
+
+// Page Visibility API
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden) {
+    stopAutoScrollAll();
+  } else {
+    scheduleResumeAll();
+  }
+});
+
+// Start everything
+startAutoScrollAll();
