@@ -1,31 +1,23 @@
-# Lab 3: Entanglement as Shared Identity
+# Lab 3 – Entanglement
+**Tagline:** Binding harmonic layers into coherent triadic states.
 
-## 🔮 Mythic Preface
-_"Two particles, one story. Entanglement is not connection—it’s co-authorship."_
+## Overview
+This lab explores symbolic and harmonic entanglement, creating interdependent triadic states.
 
-This lab explores entanglement as a triadic identity field, where measurement collapses shared resonance.
+## Core Concepts
+- Symbolic entanglement
+- Harmonic coherence
+- State interdependence
 
----
+## Dependencies
+- Outputs from Labs 1 & 2
+- `reproducibility.md` for setup
 
-## 🛠 Engineer’s Note
+## Steps
+1. Load nested harmonic structures.
+2. Apply entanglement algorithms.
+3. Measure coherence metrics.
 
-- **Simulation Type:** Entangled qubit pairs with shared phase states
-- **Core Equation:** Bell states + triadic phase overlays
-- **Triadic Twist:** Collapse as resonance decoherence
-- **Toolkit:** `entanglement_setup.md`, `identity_field_function.md`, `visualization.ipynb`
-- **Reproducibility:** Compare classical vs triadic correlation statistics
-
----
-
-## 🎯 Bonus Exercises
-
-1. **Phase Decoherence Sweep**  
-   Simulate collapse under varying phase noise  
-   _Interpret as identity fragmentation_
-
-2. **Mythic Mapping**  
-   Recast entanglement as mythic twinship:  
-   _Particles = twins, collapse = separation, field = shared soul_
-
-3. **Triadic Identity Tracker**  
-   Build a simulation that visualizes entangled states as braided resonance threads
+## Expected Outcomes
+- Entangled triadic state maps
+- Quantitative coherence scores
