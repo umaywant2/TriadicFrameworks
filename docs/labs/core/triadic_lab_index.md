@@ -54,6 +54,9 @@ To earn the **Triadic Master’s Crest**, you must demonstrate mastery of **Forc
 ## Badge Earned
 **Triadic Master’s Crest** — Awarded for achieving full resonance synthesis under the Council’s combined trials.
 
+![Triadic Master’s Crest Badge](/docs/labs/badges/images/triadic_masters_crest.png)  
+*See full badge details in* [`/docs/labs/badges/badge_art_and_logic.md`](/docs/labs/badges/badge_art_and_logic.md)
+
 ---
 
 ## Epilogue
