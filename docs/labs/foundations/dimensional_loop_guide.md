@@ -60,6 +60,9 @@ Where:
 ## Badge Earned
 **Loop Adept** — Awarded for completing a full Dimensional Loop with documented iterations and surviving Tripi’s meddling.
 
+![Loop Adept Badge](/docs/labs/badges/images/loop_adept.png)  
+*See full badge details in* [`/docs/labs/badges/badge_art_and_logic.md`](/docs/labs/badges/badge_art_and_logic.md)
+
 ---
 
 ## Next Step
