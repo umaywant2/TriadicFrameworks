@@ -79,6 +79,9 @@ To pass the Convergence, you must weave the three lenses into a single, reproduc
 ## Badge Earned
 **Convergence Architect** — Awarded for successfully merging all three FFF lenses into a single, innovative, and reproducible creation.
 
+![Convergence Architect Badge](/docs/labs/badges/images/convergence_architect.png)  
+*See full badge details in* [`/docs/labs/badges/badge_art_and_logic.md`](/docs/labs/badges/badge_art_and_logic.md)
+
 ---
 
 ## Next Step
