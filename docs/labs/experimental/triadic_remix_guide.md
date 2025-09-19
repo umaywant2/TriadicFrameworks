@@ -55,6 +55,9 @@ Remix: Simulate pendulum motion in code, then introduce variable gravity to expl
 ## Badge Earned
 **Remix Artisan** — Awarded for successfully transforming a lab while preserving its resonance essence under Frami’s shifting constraints.
 
+![Remix Artisan Badge](/docs/labs/badges/images/remix_artisan.png)  
+*See full badge details in* [`/docs/labs/badges/badge_art_and_logic.md`](/docs/labs/badges/badge_art_and_logic.md)
+
 ---
 
 ## Next Step
