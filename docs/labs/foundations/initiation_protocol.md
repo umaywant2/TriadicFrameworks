@@ -57,6 +57,9 @@ Where:
 ## Badge Earned
 **Initiate’s Sigil** — Awarded for completing your first Resonance Calibration and recording it in the Triadic format.
 
+![Initiate’s Sigil Badge](/docs/labs/badges/images/initiate_sigil.png)  
+*See full badge details in* [`/docs/labs/badges/badge_art_and_logic.md`](/docs/labs/badges/badge_art_and_logic.md)
+
 ---
 
 ## Next Step
