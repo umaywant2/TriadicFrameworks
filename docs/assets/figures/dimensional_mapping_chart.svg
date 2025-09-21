@@ -1,16 +1,16 @@
 <svg width="2400" height="2400" viewBox="0 0 2400 2400" xmlns="http://www.w3.org/2000/svg">
-  <title>Dimensional Mapping Chart</title>
+  <title>Dimensional Mapping Chart — Compass Style</title>
   <defs>
     <style>
       .ring { fill: none; stroke-width: 28; }
-      .txt  { font-family: Arial, sans-serif; font-size: 42px; fill: #1f2937; text-anchor: middle; }
+      .txt  { font-family: Arial, sans-serif; font-size: 34px; fill: #1f2937; text-anchor: middle; dominant-baseline: middle; }
       .forces { stroke: #E63946; }
       .fluids { stroke: #457B9D; }
       .freqs  { stroke: #9D4EDD; }
     </style>
   </defs>
 
-  <!-- Concentric rings 1D–9D -->
+  <!-- Concentric rings -->
   <g transform="translate(1200,1200)">
     <circle class="ring forces" r="220"/>
     <circle class="ring fluids" r="330"/>
@@ -23,14 +23,93 @@
     <circle class="ring freqs"  r="1100"/>
   </g>
 
-  <!-- Labels above each ring -->
-  <text class="txt" x="1200" y="940">1D — Force basis</text>
-  <text class="txt" x="1200" y="830">2D — Liquidity plane</text>
-  <text class="txt" x="1200" y="720">3D — Market psychology</text>
-  <text class="txt" x="1200" y="610">4D — Tether &amp; contract space</text>
-  <text class="txt" x="1200" y="500">5D — Stochastic drift</text>
-  <text class="txt" x="1200" y="390">6D — Volatility cycles</text>
-  <text class="txt" x="1200" y="280">7D — Synthetic leverage</text>
-  <text class="txt" x="1200" y="170">8D — Liquidity stress</text>
-  <text class="txt" x="1200" y="60">9D — Collapse threshold</text>
+  <!-- Function to place labels around a circle -->
+  <g transform="translate(1200,1200)">
+    <!-- 1D -->
+    <g>
+      <circle r="220" fill="none"/>
+      <!-- Repeat label every 45 degrees -->
+      <text class="txt" transform="rotate(0) translate(0,-220)">1D — Force basis</text>
+      <text class="txt" transform="rotate(45) translate(0,-220)">1D — Force basis</text>
+      <text class="txt" transform="rotate(90) translate(0,-220)">1D — Force basis</text>
+      <text class="txt" transform="rotate(135) translate(0,-220)">1D — Force basis</text>
+      <text class="txt" transform="rotate(180) translate(0,-220)">1D — Force basis</text>
+      <text class="txt" transform="rotate(225) translate(0,-220)">1D — Force basis</text>
+      <text class="txt" transform="rotate(270) translate(0,-220)">1D — Force basis</text>
+      <text class="txt" transform="rotate(315) translate(0,-220)">1D — Force basis</text>
+    </g>
+
+    <!-- 2D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-330)">2D — Liquidity plane</text>
+      <text class="txt" transform="rotate(60) translate(0,-330)">2D — Liquidity plane</text>
+      <text class="txt" transform="rotate(120) translate(0,-330)">2D — Liquidity plane</text>
+      <text class="txt" transform="rotate(180) translate(0,-330)">2D — Liquidity plane</text>
+      <text class="txt" transform="rotate(240) translate(0,-330)">2D — Liquidity plane</text>
+      <text class="txt" transform="rotate(300) translate(0,-330)">2D — Liquidity plane</text>
+    </g>
+
+    <!-- 3D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-440)">3D — Market psychology</text>
+      <text class="txt" transform="rotate(72) translate(0,-440)">3D — Market psychology</text>
+      <text class="txt" transform="rotate(144) translate(0,-440)">3D — Market psychology</text>
+      <text class="txt" transform="rotate(216) translate(0,-440)">3D — Market psychology</text>
+      <text class="txt" transform="rotate(288) translate(0,-440)">3D — Market psychology</text>
+    </g>
+
+    <!-- 4D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-550)">4D — Tether &amp; contract space</text>
+      <text class="txt" transform="rotate(90) translate(0,-550)">4D — Tether &amp; contract space</text>
+      <text class="txt" transform="rotate(180) translate(0,-550)">4D — Tether &amp; contract space</text>
+      <text class="txt" transform="rotate(270) translate(0,-550)">4D — Tether &amp; contract space</text>
+    </g>
+
+    <!-- 5D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-660)">5D — Stochastic drift</text>
+      <text class="txt" transform="rotate(72) translate(0,-660)">5D — Stochastic drift</text>
+      <text class="txt" transform="rotate(144) translate(0,-660)">5D — Stochastic drift</text>
+      <text class="txt" transform="rotate(216) translate(0,-660)">5D — Stochastic drift</text>
+      <text class="txt" transform="rotate(288) translate(0,-660)">5D — Stochastic drift</text>
+    </g>
+
+    <!-- 6D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-770)">6D — Volatility cycles</text>
+      <text class="txt" transform="rotate(60) translate(0,-770)">6D — Volatility cycles</text>
+      <text class="txt" transform="rotate(120) translate(0,-770)">6D — Volatility cycles</text>
+      <text class="txt" transform="rotate(180) translate(0,-770)">6D — Volatility cycles</text>
+      <text class="txt" transform="rotate(240) translate(0,-770)">6D — Volatility cycles</text>
+      <text class="txt" transform="rotate(300) translate(0,-770)">6D — Volatility cycles</text>
+    </g>
+
+    <!-- 7D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-880)">7D — Synthetic leverage</text>
+      <text class="txt" transform="rotate(90) translate(0,-880)">7D — Synthetic leverage</text>
+      <text class="txt" transform="rotate(180) translate(0,-880)">7D — Synthetic leverage</text>
+      <text class="txt" transform="rotate(270) translate(0,-880)">7D — Synthetic leverage</text>
+    </g>
+
+    <!-- 8D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-990)">8D — Liquidity stress</text>
+      <text class="txt" transform="rotate(72) translate(0,-990)">8D — Liquidity stress</text>
+      <text class="txt" transform="rotate(144) translate(0,-990)">8D — Liquidity stress</text>
+      <text class="txt" transform="rotate(216) translate(0,-990)">8D — Liquidity stress</text>
+      <text class="txt" transform="rotate(288) translate(0,-990)">8D — Liquidity stress</text>
+    </g>
+
+    <!-- 9D -->
+    <g>
+      <text class="txt" transform="rotate(0) translate(0,-1100)">9D — Collapse threshold</text>
+      <text class="txt" transform="rotate(60) translate(0,-1100)">9D — Collapse threshold</text>
+      <text class="txt" transform="rotate(120) translate(0,-1100)">9D — Collapse threshold</text>
+      <text class="txt" transform="rotate(180) translate(0,-1100)">9D — Collapse threshold</text>
+      <text class="txt" transform="rotate(240) translate(0,-1100)">9D — Collapse threshold</text>
+      <text class="txt" transform="rotate(300) translate(0,-1100)">9D — Collapse threshold</text>
+    </g>
+  </g>
 </svg>
