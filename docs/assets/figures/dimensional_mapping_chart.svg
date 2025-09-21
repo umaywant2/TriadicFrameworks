@@ -3,11 +3,10 @@
   <defs>
     <style>
       .ring { fill: none; stroke-width: 28; }
-      .txt  { font-family: Inter, Segoe UI, Roboto, sans-serif; font-size: 42px; fill: #1f2937; text-anchor: middle; }
+      .txt  { font-family: Arial, sans-serif; font-size: 42px; fill: #1f2937; text-anchor: middle; }
       .forces { stroke: #E63946; }
       .fluids { stroke: #457B9D; }
       .freqs  { stroke: #9D4EDD; }
-      .guide  { fill: #1f2937; opacity: 0.9; }
     </style>
   </defs>
 
@@ -24,24 +23,14 @@
     <circle class="ring freqs"  r="1100"/>
   </g>
 
-  <!-- Labels -->
-  <g>
-    <text class="txt" x="1200" y="1200-220-20">1D — Force basis</text>
-    <text class="txt" x="1200" y="1200-330-20">2D — Liquidity plane</text>
-    <text class="txt" x="1200" y="1200-440-20">3D — Market psychology</text>
-    <text class="txt" x="1200" y="1200-550-20">4D — Tether & contract space</text>
-    <text class="txt" x="1200" y="1200-660-20">5D — Stochastic drift</text>
-    <text class="txt" x="1200" y="1200-770-20">6D — Volatility cycles</text>
-    <text class="txt" x="1200" y="1200-880-20">7D — Synthetic leverage</text>
-    <text class="txt" x="1200" y="1200-990-20">8D — Liquidity stress</text>
-    <text class="txt" x="1200" y="1200-1100-20">9D — Collapse threshold</text>
-  </g>
-
-  <!-- Icon drop zones (use <image href="..."> or glyphs) -->
-  <g transform="translate(1200,1200)">
-    <circle class="guide" cx="0" cy="-440" r="8"/>
-    <circle class="guide" cx="0" cy="-660" r="8"/>
-    <circle class="guide" cx="0" cy="-880" r="8"/>
-    <circle class="guide" cx="0" cy="-1100" r="8"/>
-  </g>
+  <!-- Labels above each ring -->
+  <text class="txt" x="1200" y="940">1D — Force basis</text>
+  <text class="txt" x="1200" y="830">2D — Liquidity plane</text>
+  <text class="txt" x="1200" y="720">3D — Market psychology</text>
+  <text class="txt" x="1200" y="610">4D — Tether & contract space</text>
+  <text class="txt" x="1200" y="500">5D — Stochastic drift</text>
+  <text class="txt" x="1200" y="390">6D — Volatility cycles</text>
+  <text class="txt" x="1200" y="280">7D — Synthetic leverage</text>
+  <text class="txt" x="1200" y="170">8D — Liquidity stress</text>
+  <text class="txt" x="1200" y="60">9D — Collapse threshold</text>
 </svg>
