@@ -21,7 +21,7 @@ Illustrates the 1D–9D triadic recursion of the Resonance-based Dimensional Har
   - **7D–9D** → Synthetic leverage, collapse thresholds
 
 **Figure:**  
-![Dimensional Mapping Chart](/docs/assets/figures/dimensional_mapping_chart.png)  
+![Dimensional Mapping Chart](/docs/assets/figures/dimensional_mapping_chart.svg)  
 *Figure 1: Dimensional recursion mapped to financial constructs.*
 
 ---
@@ -34,10 +34,10 @@ Encodes financial constructs as symbolic glyphs for AI audit trails and resonanc
 **Glyph Set:**
 | Glyph | Name | Dimensional Mapping | Example Use |
 |-------|------|---------------------|-------------|
-| ![Tether Glyph](/docs/assets/figures/glyph_tether.png) | Tether Glyph | 3D–4D | Strike price anchoring |
-| ![Wave Glyph](/docs/assets/figures/glyph_wave.png) | Wave Glyph | 5D–6D | Volatility frequency |
-| ![Nested Loop Glyph](/docs/assets/figures/glyph_nested_loop.png) | Nested Loop Glyph | 6D–7D | Synthetic replication |
-| ![Entropy Glyph](/docs/assets/figures/glyph_entropy.png) | Entropy Glyph | 8D–9D | Collapse signature |
+| ![Tether Glyph](/docs/assets/figures/glyph_tether.svg) | Tether Glyph | 3D–4D | Strike price anchoring |
+| ![Wave Glyph](/docs/assets/figures/glyph_wave.svg) | Wave Glyph | 5D–6D | Volatility frequency |
+| ![Nested Loop Glyph](/docs/assets/figures/glyph_nested_loop.svg) | Nested Loop Glyph | 6D–7D | Synthetic replication |
+| ![Entropy Glyph](/docs/assets/figures/glyph_entropy.svg) | Entropy Glyph | 8D–9D | Collapse signature |
 
 *Figure 2: Symbolic glyphs representing core financial constructs.*
 
@@ -54,7 +54,7 @@ Plots historical market events against dimensional overload thresholds.
 - 2008 Financial Crisis
 
 **Figure:**  
-![Rear View Overlay](/docs/assets/figures/rear_view_overlay.png)  
+![Rear View Overlay](/docs/assets/figures/rear_view_overlay.svg)  
 *Figure 3: Harmonic tension curves with collapse points.*
 
 ---
@@ -72,7 +72,7 @@ Shows how glyph logic integrates into AI monitoring and enforcement.
 5. Regulatory action trigger
 
 **Figure:**  
-![AI Regulation Flow](/docs/assets/figures/ai_regulation_flow.png)  
+![AI Regulation Flow](/docs/assets/figures/ai_regulation_flow.svg)  
 *Figure 4: AI-driven symbolic regulation pipeline.*
 
 ---
