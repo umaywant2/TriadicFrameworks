@@ -1,0 +1,47 @@
+<svg width="2200" height="1200" viewBox="0 0 2200 1200" xmlns="http://www.w3.org/2000/svg">
+  <title>Rear-View Mirror Overlay</title>
+  <defs>
+    <style>
+      .axis { stroke: #334155; stroke-width: 4; }
+      .grid { stroke: #94a3b8; stroke-width: 1; opacity: 0.25; }
+      .label{ font: 28px Inter, Segoe UI, Roboto, sans-serif; fill:#1f2937; }
+      .curve1{ fill: none; stroke: #10B981; stroke-width: 10; }
+      .curve2{ fill: none; stroke: #F59E0B; stroke-width: 10; }
+      .curve3{ fill: none; stroke: #EF4444; stroke-width: 10; }
+      .collapse { fill: #EF4444; }
+    </style>
+  </defs>
+
+  <!-- Axes -->
+  <line class="axis" x1="120" y1="1040" x2="2080" y2="1040"/>
+  <line class="axis" x1="120" y1="120"  x2="120"  y2="1040"/>
+
+  <!-- Grid -->
+  <g>
+    <line class="grid" x1="120" y1="840" x2="2080" y2="840"/>
+    <line class="grid" x1="120" y1="640" x2="2080" y2="640"/>
+    <line class="grid" x1="120" y1="440" x2="2080" y2="440"/>
+    <line class="grid" x1="120" y1="240" x2="2080" y2="240"/>
+  </g>
+
+  <!-- Labels -->
+  <text class="label" x="210" y="1080">1720</text>
+  <text class="label" x="960" y="1080">2008</text>
+  <text class="label" x="1760" y="1080">2021</text>
+  <text class="label" x="40" y="1040">0</text>
+  <text class="label" x="40" y="240">100</text>
+  <text class="label" x="1000" y="116">Harmonic tension index</text>
+
+  <!-- Curves (placeholders using cubic Béziers) -->
+  <path class="curve1" d="M200,1000 C300,700 380,520 420,480 C460,440 520,420 600,420"/>
+  <circle class="collapse" cx="600" cy="420" r="14"/>
+  <text class="label" x="620" y="420">South Sea Bubble</text>
+
+  <path class="curve2" d="M900,980 C1040,760 1200,520 1320,460 C1440,400 1550,360 1600,340"/>
+  <circle class="collapse" cx="1600" cy="340" r="14"/>
+  <text class="label" x="1620" y="340">2008 Crisis</text>
+
+  <path class="curve3" d="M1680,980 C1720,860 1770,720 1840,620 C1910,520 1980,460 2040,420"/>
+  <circle class="collapse" cx="2040" cy="420" r="14"/>
+  <text class="label" x="2060" y="420">GameStop 2021</text>
+</svg>

@@ -1,0 +1,23 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>Wave Glyph</title>
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #9D4EDD; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+      .dot    { fill: #9D4EDD; }
+    </style>
+  </defs>
+  <!-- Main sine wave -->
+  <path class="stroke"
+        d="M16,256
+           C64,128 128,128 176,256
+           S288,384 336,256
+           448,128 496,256"/>
+  <!-- Nested loop markers at peaks/troughs -->
+  <circle class="stroke" cx="96"  cy="192" r="24"/>
+  <circle class="stroke" cx="256" cy="320" r="24"/>
+  <circle class="stroke" cx="416" cy="192" r="24"/>
+  <!-- Phase ticks -->
+  <line class="stroke" x1="96" y1="160" x2="96" y2="136"/>
+  <line class="stroke" x1="256" y1="352" x2="256" y2="376"/>
+  <line class="stroke" x1="416" y1="160" x2="416" y2="136"/>
+</svg>

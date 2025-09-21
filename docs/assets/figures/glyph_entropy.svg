@@ -1,0 +1,25 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>Entropy Glyph</title>
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #FFB703; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+  <!-- Stable inner spiral -->
+  <path class="stroke"
+        d="M256,256
+           m0,-8
+           a8,8 0 1,1 -16,0
+           a24,24 0 1,0 48,0
+           a48,48 0 1,1 -96,0
+           a80,80 0 1,0 160,0
+           a120,120 0 1,1 -240,0"/>
+  <!-- Fragmented outer ring -->
+  <path class="stroke" d="M96 256 A160 160 0 0 1 192 112"/>
+  <path class="stroke" d="M208 104 A160 160 0 0 1 320 120"/>
+  <path class="stroke" d="M336 128 A160 160 0 0 1 416 208"/>
+  <path class="stroke" d="M424 224 A160 160 0 0 1 408 320"/>
+  <path class="stroke" d="M392 336 A160 160 0 0 1 320 392"/>
+  <path class="stroke" d="M304 400 A160 160 0 0 1 208 400"/>
+  <path class="stroke" d="M192 392 A160 160 0 0 1 112 320"/>
+</svg>
