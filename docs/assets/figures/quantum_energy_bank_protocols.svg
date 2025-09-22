@@ -1,0 +1,33 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Hybrid Battery Node -->
+  <polygon points="150,100 180,120 180,160 150,180 120,160 120,120" fill="#FFD700" stroke="#333" stroke-width="2"/>
+  <text x="150" y="95" text-anchor="middle" font-size="14">Hybrid Battery</text>
+
+  <!-- Mesh Zone -->
+  <circle cx="400" cy="150" r="60" fill="#ADD8E6" stroke="#333" stroke-width="2"/>
+  <text x="400" y="145" text-anchor="middle" font-size="14">Mesh Zone</text>
+
+  <!-- QEB Vault -->
+  <rect x="600" y="100" width="100" height="80" rx="10" ry="10" fill="#8A2BE2" stroke="#333" stroke-width="2"/>
+  <text x="650" y="95" text-anchor="middle" font-size="14" fill="#000">QEB Vault</text>
+
+  <!-- Subscription Layers -->
+  <polygon points="400,300 370,350 430,350" fill="#90EE90" stroke="#333" stroke-width="2"/>
+  <text x="400" y="295" text-anchor="middle" font-size="14">Triadic Tiers</text>
+
+  <!-- Remixer Node -->
+  <line x1="100" y1="500" x2="130" y2="470" stroke="#FF4500" stroke-width="4"/>
+  <line x1="130" y1="470" x2="160" y2="500" stroke="#FF4500" stroke-width="4"/>
+  <text x="130" y="465" text-anchor="middle" font-size="14">Remixer</text>
+
+  <!-- Audit Trail -->
+  <rect x="600" y="400" width="120" height="60" fill="#D3D3D3" stroke="#333" stroke-width="2"/>
+  <text x="660" y="395" text-anchor="middle" font-size="14">Audit Ledger</text>
+
+  <!-- Connectors -->
+  <line x1="180" y1="140" x2="340" y2="150" stroke="#000" stroke-dasharray="5,5"/>
+  <line x1="460" y1="150" x2="600" y2="140" stroke="#000" stroke-dasharray="5,5"/>
+  <line x1="150" y1="180" x2="400" y2="300" stroke="#000" stroke-dasharray="5,5"/>
+  <line x1="400" y1="300" x2="600" y2="400" stroke="#000" stroke-dasharray="5,5"/>
+  <line x1="160" y1="500" x2="400" y2="300" stroke="#FF4500" stroke-dasharray="5,5"/>
+</svg>
