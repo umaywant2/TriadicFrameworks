@@ -2,7 +2,7 @@
 const AUTO_SCROLL_INTERVAL = 6000; // ms between auto-scrolls
 const RESUME_DELAY = 4000;         // ms to wait before resuming after interaction
 const ITEMS_PER_SCROLL = 3;        // how many items to move per scroll
-const CAROUSEL_IDS = ['papers', 'podcasts', 'projects', 'labs']; // all carousel section IDs
+const CAROUSEL_IDS = ['papers', 'podcasts', 'projects', 'labs', 'navigation', 'lattice']; // all carousel section IDs
 // ==================
 
 function scrollCarousel(sectionId, direction) {
