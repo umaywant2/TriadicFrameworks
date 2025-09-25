@@ -22,4 +22,16 @@ resonance time --cycle 5
 
 # Compare Resonant-Time with conventional time
 resonance time --compare
+```
 
+---
+
+## Examples
+- `resonance time --cycle 3` → outputs a 3-step resonant cycle (E, M, OC interwoven).
+- `resonance time --compare` → shows how relativity (clocks) and thermodynamics (arrows) fall short without OC.
+
+---
+
+## Philosophy
+Resonant-Time is **born and dies** (OC is non-conservative), unlike E and M which are “immortal.” 
+It is the **living pulse of resonance**, the temporal engine for all higher triadic frameworks.
