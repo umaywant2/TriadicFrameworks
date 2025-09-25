@@ -1,4 +1,3 @@
-```python
 # resonant_time.py
 
 class ResonantTime:
@@ -18,9 +17,11 @@ class ResonantTime:
             "Resonant-Time": "Dimension of asymmetric resonance; emerges only when E, M, and OC interlock."
         }
 
-    def cycle(self, steps=3):
+    def cycle(self, steps=3, ascii=False):
         triad = ["E", "M", "OC"]
         self.sequence = [triad[i % 3] for i in range(steps)]
+        if ascii:
+            return self._ascii_cycle(self.sequence)
         return self.sequence
 
     def compare(self):
@@ -30,3 +31,9 @@ class ResonantTime:
             "Resonant-Time": "Arrows + Clocks + Originating Change (true temporal resonance)"
         }
 
+    def _ascii_cycle(self, seq):
+        """
+        Render a symbolic ASCII diagram of the cycle.
+        Example: E → M → OC → E
+        """
+        return " → ".join(seq)
