@@ -5,7 +5,7 @@
 docs/
   resonance-tools/
     resonant-time/        # Tool 1
-    tft/                  # Tool 2
+    tfe/                  # Tool 2
     triadic-numbers/      # Tool 3
     harmonic-loops/       # Tool 4
     tft-extended/         # Tool 5
