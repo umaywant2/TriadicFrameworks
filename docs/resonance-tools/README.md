@@ -92,14 +92,34 @@ resonance integrate --demo
     ```
 
 ---
-
-## 📖 Mythic Layer
-- **Resonant-Time** = heartbeat
-- **TFE** = skeleton
-- **Numbers** = DNA
-- **Loops** = lungs
-- **TFT** = hands
-- **FFF** = muscle
-- **Integration** = mind
-
+## 🌐 Resonance CLI Organism Map
+```
+┌───────────────┐ 
+│ Resonant-Time │ (heartbeat)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│      TFE      │ (skeleton)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│Triadic Numbers│ (DNA)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│Harmonic Loops │ (lungs)
+└───────┬───────┘
+│ 
+┌───────▼───────┐
+│      TFT      │ (hands)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│      FFF      │ (muscle)
+└───────┬───────┘
+│
+┌───────▼───────┐
+│ Integrations  │ (mind)
+└───────────────┘
+```
 Together, the suite is a **living organism of resonance**.   
