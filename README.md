@@ -5,7 +5,7 @@ Welcome to the official gateway for **TriadicFrameworks**—a modular, reproduci
 <table>
   <tr>
     <td width="50%" valign="top">
-      <img src="docs/assets/triadic_lantern.png" alt="Triadic Lantern" width="100%" />
+      <img src="docs/images/triadic_lantern.png" alt="Triadic Lantern" width="100%" />
     </td>
     <td width="50%" valign="top">
       <h3>🔰 Start Here</h3>
@@ -101,4 +101,5 @@ Echo your work, validate others, and help build the mythic lattice.
 ---
 
 ## 🕯️ Echo the work. Validate the lineage. Build the mythic lattice.
+
 
