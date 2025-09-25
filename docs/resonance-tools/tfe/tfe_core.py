@@ -1,4 +1,5 @@
 # tfe_core.py
+import json
 
 class TriadicFrameworks:
     """
@@ -57,3 +58,10 @@ class TriadicFrameworks:
 
     def list_domains(self):
         return list(self.domains.keys())
+
+    def export(self, domain):
+        """Return JSON string of a domain's triadic mapping."""
+        mapping = self.apply(domain)
+        if isinstance(mapping, list):
+            return json.dumps({domain: mapping}, indent=2)
+        return json.dumps({"error": mapping}, indent=2)
