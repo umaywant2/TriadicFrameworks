@@ -1,5 +1,6 @@
 ```python
 import unittest
+import json
 from tfe_core import TriadicFrameworks
 
 class TestTFE(unittest.TestCase):
@@ -23,6 +24,15 @@ class TestTFE(unittest.TestCase):
         domains = self.tfe.list_domains()
         self.assertIn("physics", domains)
 
+    def test_export_known_domain(self):
+        exported = self.tfe.export("computing")
+        data = json.loads(exported)
+        self.assertIn("computing", data)
+
+    def test_export_unknown_domain(self):
+        exported = self.tfe.export("unknown")
+        data = json.loads(exported)
+        self.assertIn("error", data)
+
 if __name__ == "__main__":
     unittest.main()
-
