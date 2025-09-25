@@ -35,3 +35,7 @@ resonance time --compare
 ## Philosophy
 Resonant-Time is **born and dies** (OC is non-conservative), unlike E and M which are “immortal.” 
 It is the **living pulse of resonance**, the temporal engine for all higher triadic frameworks.
+
+---
+
+## ⚙️ `resonant_time.py` (core logic scaffold)
