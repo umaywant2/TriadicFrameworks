@@ -33,3 +33,8 @@
 .c3 { color: #9b6bff; }
 .c6 { color: #ff6bd1; }
 .c9 { color: #ffd66b; }
+
+display: block;
+opacity: 1;
+visibility: visible;
+z-index: 10;
