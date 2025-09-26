@@ -1,1 +1,46 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0f0f1f;
+  color: #e0e0ff;
+  padding: 2rem;
+}
+
+h1, h2 {
+  color: #a0e0ff;
+  border-bottom: 1px solid #444;
+  padding-bottom: 0.3rem;
+}
+
+section {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background-color: #1a1a2a;
+  border-radius: 8px;
+}
+
+#visitor-count, #glyph-log, #resonant-log {
+  margin-top: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.glyph-pulse {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ff00cc;
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  font-weight: bold;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.5s ease-in-out;
+  z-index: 9999;
+}
+
+.glyph-pulse.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
 
