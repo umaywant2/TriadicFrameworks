@@ -1,44 +1,26 @@
-import yaml
-import os
-from datetime import datetime
+# 🧪 Manifest Validator
+# Confirms symbolic structure and onboarding logic in curriculum modules
 
-MANIFEST_PATH = ".github/repo_manifest.yaml"
-LOG_PATH = "docs/validation/manifest_log.md"
+import json
 
-def load_manifest(path):
-    with open(path, "r") as f:
-        return yaml.safe_load(f)
+def validate_manifest(manifest_path):
+    with open(manifest_path, 'r') as f:
+        content = f.read()
 
-def validate_structure(manifest):
-    missing = []
-    for item in manifest.get("repo_structure", []):
-        if isinstance(item, dict):
-            for folder, subfolders in item.items():
-                if not os.path.isdir(folder):
-                    missing.append(folder)
-                else:
-                    for sub in subfolders:
-                        if not os.path.isdir(os.path.join(folder, sub)):
-                            missing.append(f"{folder}/{sub}")
-        else:
-            if not os.path.exists(item):
-                missing.append(item)
-    return missing
+    checks = {
+        "has_intro": "## Introduction" in content,
+        "has_resonance": "## Resonance Logic" in content,
+        "has_remix_guide": "## Remix Guide" in content,
+        "has_badge_trigger": "badge_trigger:" in content
+    }
 
-def log_results(missing):
-    timestamp = datetime.utcnow().isoformat()
-    os.makedirs(os.path.dirname(LOG_PATH), exist_ok=True)
-    with open(LOG_PATH, "a") as log:
-        log.write(f"## Manifest Validation — {timestamp}\n")
-        if missing:
-            log.write("❌ Missing Items:\n")
-            for m in missing:
-                log.write(f"- {m}\n")
-        else:
-            log.write("✅ All items present. Structure aligned.\n")
-        log.write("\n")
+    score = sum(checks.values())
+    result = {
+        "file": manifest_path,
+        "score": score,
+        "checks": checks,
+        "badge_eligible": score >= 3
+    }
 
-if __name__ == "__main__":
-    manifest = load_manifest(MANIFEST_PATH)
-    missing_items = validate_structure(manifest)
-    log_results(missing_items)
+    print(json.dumps(result, indent=2))
+    return result
