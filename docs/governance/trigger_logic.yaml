@@ -1,1 +1,26 @@
+# 🔁 Badge Trigger Logic
+
+echo_weaver:
+  conditions:
+    - ritual_completed: true
+    - archetype: ["Observer", "Initiator", "Weaver"]
+  glyph: lantern_unfolding
+
+curriculum_weaver:
+  conditions:
+    - remix_depth: ">=2"
+    - module_touched: true
+  glyph: aura_pulse
+
+validator_guardian:
+  conditions:
+    - validator_score: ">=3"
+    - reproducibility_confirmed: true
+  glyph: glyphic_echo
+
+glyphic_echoer:
+  conditions:
+    - glyph_triggered: true
+    - symbolic_time_window: true
+  glyph: ripple_wave
 
