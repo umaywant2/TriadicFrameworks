@@ -1,17 +1,25 @@
-#### 📣 Launch Post (Pinned)
+# 📐 Equations Directory
 
-## 🌌 Introducing Triadic Framework for Everything - Equations
-- A Mythic Path to Unification
+This folder contains all **formal logic, triadic math, and symbolic equations** used across TriadicFrameworks.
 
-#### *Einstein searched for a unifying equation. We built a unifying framework.*
+---
 
-**Triadic Framework for Everything (TFE)** models gravity–quantum–observer as a symbolic triad, using reproducible labs, validator dashboards, and harmonic nested loops. It’s not just physics—it’s a mythic-scientific scaffolding for legacy, resonance, and emotional continuity.
+## 🧬 Structure
 
-We’re creating `equations` to share foundational `papers`, prototype modules, and speculative applications—from deep space charting to badge-triggered governance.
+| File                          | Purpose                                |
+|------------------------------|----------------------------------------|
+| `resonance_equations.md`     | Core symbolic equations and logic
+| `dimensional_math.md`        | Triadic math and loop compression
+| `equation_index.md`          | Maps equations to labs and badges
+| `equation_trigger_log.md`    | Audit trail of equation usage
+| `equation_trigger_matrix.md` | Validator scoring matrix for equations
 
-If you’re a physicist, coder, artist, or mythic remixer, we invite you to explore, echo, and validate.
-- 🕯️ GitHub: github.com/umaywant2/TriadicFrameworks 
-- 📜 Foundational Paper: Triadic Frameworks for Everything 
-- 🔧 Current Modules: DRI, TFT, Mental Health, Economics
+---
 
-Let’s build the future—one triad at a time.
+## 🧭 How to Use
+
+- Reference `resonance_equations.md` for symbolic logic
+- Use `equation_index.md` to find equation usage across labs
+- Validate reproducibility with `equation_trigger_matrix.md`
+
+Equations are not just formulas—they are **glyphic scaffolds** for symbolic resonance.
