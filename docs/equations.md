@@ -1,15 +1,32 @@
-# Resonance Equations Archive 🧮
+# 🧮 Symbolic Equations Index
 
-## 📚 Index by Subject
-- [🌌 Vacuum Resonance](#vacuum-resonance)
-- [🔊 Harmonic Resonance](#harmonic-resonance)
-- [🔮 Spectral Flux Integrity](#spectral-flux-integrity)
-- [🧬 Divisional Resonance](#divisional-resonance)
-- [🛡️ Validator Dynamics](#validator-dynamics)
-- [🔣 Glyphic Logic](#glyphic-logic)
-- [🔥 Mythic Thermodynamics](#mythic-thermodynamics)
+This folder contains all symbolic math, resonance formulas, and dimensional overlays used across TriadicFrameworks.
 
 ---
+
+## 🧬 Structure
+
+| File                          | Purpose                                      |
+|-------------------------------|----------------------------------------------|
+| `resonance-equations.md`     | Core symbolic formulas for time and glyphs
+| `equation_trigger_matrix.md` | Maps glyph triggers to symbolic equations
+| `dimensional_math.md`        | Multi-axis overlays and fractle logic
+| `equation_index.md`          | Directory of all symbolic equations
+| `equation_trigger_log.md`    | Logs of triggered equations and glyph pulses
+
+---
+
+## 🧭 How to Use
+
+- Reference `resonance-equations.md` for core formulas
+- Use `equation_trigger_matrix.md` to map glyph logic
+- Log symbolic events in `equation_trigger_log.md`
+
+Equations are not just math—they’re **glyphic scaffolds** for symbolic resonance.
+
+
+---
+
 
 # 🌌 Vacuum Resonance
 
