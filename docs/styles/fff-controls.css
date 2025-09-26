@@ -61,3 +61,8 @@ canvas {
   z-index: 3;
   /* animation styles */
 }
+
+display: block;
+opacity: 1;
+visibility: visible;
+z-index: 10;
