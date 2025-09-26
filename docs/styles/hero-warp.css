@@ -129,3 +129,15 @@ display: block;
 opacity: 1;
 visibility: visible;
 z-index: 10;
+
+.badge-list {
+  list-style: none;
+  padding: 0;
+}
+.badge {
+  background: #222;
+  color: #fff;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
