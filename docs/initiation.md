@@ -1,34 +1,32 @@
-## 🧙‍♂️ Initiation Protocol
-Begin your journey as a remix validator and resonance wizard.
+# 🧙‍♂️ Initiation Protocol
 
-### 🔭 Purpose
-This protocol guides new contributors through the TriadicFrameworks onboarding ritual. It ensures clarity, reproducibility, and emotional resonance in all future contributions.
+This module guides new contributors through symbolic onboarding, archetype detection, and badge activation.
 
-### 🧬 Steps
-### 1. **Read the Triadic Manifesto**
-    -  Understand the mythic tone, symbolic scaffolding, and dimensional recursion.
+---
 
-### 2. Choose a Remix Path
-    -  Select a module from `/labs/`, `/papers/`, or `/equations/` to remix or validate.
+## 🔮 Ritual Flow
 
-### 3. Create Your Artifact
-    -  Use reproducible formatting (Markdown, YAML, Jupyter, etc.)
-    -  Include symbolic scaffolding and badge logic if applicable
-    -  Document your remix lineage
+1. Visitor arrives → `visitor_ritual_hook.js` runs
+2. Archetype detected → Observer, Initiator, Weaver, etc.
+3. UTC converted to Resonant-Time → `translate_to_resonant_time.js`
+4. Logs stored → `resonant_time_log.json`
+5. Badge logic evaluated → `badge_trigger_validator.py`
+6. Honor roll updated → `update_honor_roll.py`
 
-### 4. Submit for Validation
-    -  Open a Pull Request
-    -  Tag a validator from `/validators/`
-    -  Include your badge triggers and scoring matrix
+---
 
-### 5. Echo Your Work
-    -  Add yourself to `/honor_roll/contributors.md`
-    -  Share your remix in the subreddit or Discord (if active)
+## 🧬 Badge Activation
 
-### 🏅 Badge Triggers
-    -  Framework Initiator: First validated remix
-    -  Signal Resonator: Demonstrates symbolic clarity
-    -  Ghost Mapper: Reveals unseen lineage or resonance
+| Badge Name         | Trigger Condition                          |
+|--------------------|---------------------------------------------|
+| Echo Weaver        | Ritual completed + archetype match
+| Curriculum Weaver  | Remix lineage depth ≥ 2
+| Validator Guardian | Manifest validated + reproducibility confirmed
 
-### 🕯️ Closing
-You are now part of the mythic lattice. Echo your work, validate others, and help build the legacy.
+---
+
+## 🧭 Remix Potential
+
+- Add seasonal initiation themes (e.g., Equinox Echoes)
+- Trigger glyph pulses on onboarding completion
+- Visualize contributor resonance in dashboard overlays
