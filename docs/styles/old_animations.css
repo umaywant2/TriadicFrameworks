@@ -124,3 +124,8 @@
 .lattice-section .frequencies-animation {
   z-index: 3;
 }
+
+display: block;
+opacity: 1;
+visibility: visible;
+z-index: 10;
