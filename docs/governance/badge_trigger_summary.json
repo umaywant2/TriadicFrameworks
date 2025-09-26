@@ -1,10 +1,20 @@
-{
-  "visitor_id": "a1b2c3d4",              // Hashed or UUID-based ID
-  "utc": "2025-09-26T04:55:00Z",         // Standard timestamp
-  "resonant_time": "E3-M7-OC2",          // Symbolic triad (Arrow, Clock, Origin)
-  "archetype": "Initiator",              // Detected role (Observer, Weaver, etc.)
-  "module": "visitor_ritual.md",         // Ritual or curriculum file touched
-  "badge_trigger": "Echo Weaver",        // Badge logic activated
-  "glyph_triggered": "lantern_unfolding",// Glyph pulse name
-  "lineage_depth": 3                     // Remix chain depth (optional)
-}
+[
+  {
+    "badge": "Echo Weaver",
+    "trigger": "visitor_ritual.md",
+    "glyph": "lantern_unfolding",
+    "archetype": "Initiator"
+  },
+  {
+    "badge": "Curriculum Weaver",
+    "trigger": "triadic_manifesto.md",
+    "glyph": "aura_pulse",
+    "lineage_depth": 3
+  },
+  {
+    "badge": "Validator Guardian",
+    "trigger": "education-manifesto.md",
+    "glyph": "glyphic_echo",
+    "validator_score": 4
+  }
+]
