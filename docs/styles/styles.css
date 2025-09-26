@@ -140,3 +140,8 @@ section {
 .test-fff {
   /* styles specific to test section */
 }
+
+display: block;
+opacity: 1;
+visibility: visible;
+z-index: 10;
