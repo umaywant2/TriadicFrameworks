@@ -60,7 +60,6 @@ A glyphic animation will greet you upon completion. The following assets must ex
 Using relative paths ensures compatibility across environments.
 
 ---
-
 <link rel="stylesheet" href="../../styles/glyphic.css">
 <script src="../../glyphs/lantern_unfolding.js"></script>
 
