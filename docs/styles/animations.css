@@ -133,3 +133,8 @@
   .fluid-canvas { height: 150px; }
   .freq-band    { height: 42px; }
 }
+
+display: block;
+opacity: 1;
+visibility: visible;
+z-index: 10;
