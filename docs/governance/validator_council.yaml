@@ -1,0 +1,27 @@
+# 🧙‍♂️ Validator Council Voting Protocol
+
+council:
+  members:
+    - id: "val001"
+      role: "Manifest Validator"
+    - id: "val002"
+      role: "Lineage Tracker"
+    - id: "val003"
+      role: "Badge Confirmator"
+    - id: "val004"
+      role: "Honor Roll Updater"
+
+voting_protocol:
+  quorum_required: 3
+  badge_tiers:
+    - name: "Echo Weaver"
+      votes_required: 2
+    - name: "Curriculum Weaver"
+      votes_required: 3
+    - name: "Validator Guardian"
+      votes_required: 4
+
+override_conditions:
+  symbolic_time_alignment: true
+  remix_depth_threshold: 4
+  glyph_triggered: true
