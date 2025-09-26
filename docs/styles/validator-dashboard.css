@@ -57,3 +57,8 @@
   font-style: italic;
   color: #aaa;
 }
+
+display: block;
+opacity: 1;
+visibility: visible;
+z-index: 10;
