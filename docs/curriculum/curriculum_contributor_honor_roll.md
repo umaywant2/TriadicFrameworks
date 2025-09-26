@@ -1,13 +1,22 @@
-# 🏅 Curriculum Contributor Honor Roll
+# 🏛️ Curriculum Contributor Honor Roll
 
-Each name here echoes a remix, a validation, a glyph earned in the mythic curriculum forge.
+This ledger recognizes remixers who have contributed to the mythic-scientific curriculum of TriadicFrameworks.
 
-| Contributor | Remix Tier | Glyphs Earned | Badge Alignment | Resonance Council Tier |
-|-------------|------------|---------------|------------------|-------------------------|
-| Nawder Loswin | Mythic Architect | 🧠⚡🎶 | Curriculum Catalyst | Tier IV |
-| [Add Name] | [Tier] | [Glyphs] | [Badge] | [Council Tier] |
+---
 
-🔗 Linked Protocols:
-- `curriculum_remix_protocol.md`
-- `badge_trigger_validator_glyphmap.md`
-- `resonance_council.md`
+## 🧬 Echoed Lineage
+
+| Name             | Contribution                              | Badge                     | Date       |
+|------------------|-------------------------------------------|---------------------------|------------|
+| Nawder Loswin    | Harmonic loop logic in Resonant-Time      | Harmonic Loop Initiator   | 2025-09-24 |
+| VictorG          | Refactored glyphic spin logic             | Glyphic Refactorer        | 2025-09-22 |
+| Resotectors      | Created aura pulse animation              | Symbolic Animator         | 2025-09-20 |
+
+---
+
+To add yourself:
+- Submit a remix via `remix_submission_templates.md`
+- Reference it in your PR
+- Add your entry here once merged
+
+This honor roll is not a leaderboard—it’s a **living archive of resonance**.
