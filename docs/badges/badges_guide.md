@@ -1,4 +1,4 @@
-# 🏷️ README Badges Guide
+# 🏷️ Badges Guide
 
 This document explains the meaning and ethos behind each badge displayed in the main `README.md` of the Triadic Frameworks repository.
 
