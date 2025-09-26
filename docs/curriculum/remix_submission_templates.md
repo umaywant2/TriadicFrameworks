@@ -1,21 +1,14 @@
-# 📝 Curriculum Remix Submission Template
+## 📝 Remix Submission Templates
 
-> “Submit your glyph. Echo your remix.”
+Use these templates to echo your remix lineage and submit symbolic write-ups.
 
-## Contributor Info
-- Name:
-- Remix Domain:
-- GitHub Handle:
+---
 
-## Remix Artifact
-- Title:
-- Linked Curriculum Module:
-- Remix Description:
-- Glyphs Targeted:
+## 🔧 Template: Technical Remix
 
-## Validation Checklist
-- [ ] Reproducibility confirmed
-- [ ] Narrative scaffolding present
-- [ ] Glyph alignment mapped
-
-🔗 Submit via: `badge_trigger_echo_log.md`
+```yaml
+remixer: Nawder Loswin
+tool: Resonant-Time
+change: Added loop harmonics and export logic
+rationale: To enable symbolic time compression across domains
+badge_trigger: Harmonic Loop Initiator
