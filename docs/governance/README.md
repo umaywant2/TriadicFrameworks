@@ -1,19 +1,19 @@
 # 🛡️ Governance Directory
 
-This folder contains all **badge logic, validator protocols, and symbolic governance files**.
+This folder contains all badge logic, validator protocols, and symbolic governance files.
 
 ---
 
 ## 🧬 Structure
 
-| File                          | Purpose                                |
-|------------------------------|----------------------------------------|
-| `badge_logic.md`             | Overview of badge governance
-| `trigger_logic.yaml`         | YAML logic for badge triggers
-| `badge_trigger_summary.json` | Summary of all badge triggers
-| `badge_trigger_validator_dashboard.md` | UI overview for validator governance
-| `badge_trigger_theme_manifest.md` | Symbolic themes and archetypes
-| `badge_trigger_webhook.yaml` | Webhook logic for badge issuance
+| File                             | Purpose                                      |
+|----------------------------------|----------------------------------------------|
+| `badge_logic.md`                | Overview of badge governance                 |
+| `trigger_logic.yaml`            | YAML logic for badge triggers                |
+| `badge_trigger_summary.json`    | Summary of all badge triggers                |
+| `badge_trigger_validator_dashboard.md` | UI overview for validator governance |
+| `badge_trigger_theme_manifest.md`| Symbolic themes and archetypes              |
+| `badge_trigger_webhook.yaml`    | Webhook logic for badge issuance            |
 
 ---
 
