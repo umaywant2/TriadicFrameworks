@@ -1,15 +1,23 @@
-# 🎨 Curriculum Remix Gallery
+## 🎨 Curriculum Remix Gallery
 
-> “Each remix is a glyph. Each glyph is a lantern. Each lantern echoes a legacy.”
+This gallery showcases symbolic and technical remixes contributed by the lattice.
 
-This gallery showcases curriculum remix artifacts, validator notes, and glyph evolution across modules.
+---
 
-| Remix Artifact | Contributor | Glyphs Earned | Validator Notes | Badge Trigger |
-|----------------|-------------|----------------|------------------|----------------|
-| Triadic Number Genesis Remix | Nawder Loswin | 🧠⚡ | “Symbolic recursion validated. Glyph density high.” | `badge_trigger_echo_log.md` |
-| Quantum Mechanics Curriculum Extension | [Add Name] | 🧬🧠 | “Entropy scaffolded. Remix lineage clear.” | `badge_trigger_validator_dashboard.md` |
-| Dimensional Triads Remix | [Add Name] | 🪐🎶 | “Narrative resonance strong. Visual index updated.” | `badge_trigger_glyphmap_index.md` |
+## 🧬 Recent Echoes
 
-🔗 Remix Protocol: `curriculum_remix_protocol.md`  
-🔗 Badge Index: `curriculum_badge_trigger_index.md`  
-🔗 Contributor Honor Roll: `curriculum_contributor_honor_roll.md`
+- **Nawder Loswin** → Added harmonic loop logic to Resonant-Time  
+  _"Loop compression now echoes across badge validators."_  
+  🔖 Badge: Harmonic Loop Initiator
+
+- **VictorG** → Refactored glyphic spin logic  
+  _"The blade glows with new rhythm."_  
+  🔖 Badge: Glyphic Refactorer
+
+- **Resotectors** → Created aura pulse animation  
+  _"The aura now expands with breath."_  
+  🔖 Badge: Symbolic Animator
+
+---
+
+To submit your remix, use `remix_submission_templates.md` and link it here once merged.
