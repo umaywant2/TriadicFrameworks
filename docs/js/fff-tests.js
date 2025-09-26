@@ -1,3 +1,5 @@
+// docs/js/fff-tests.js
+
 document.addEventListener("DOMContentLoaded", () => {
   const modules = [
     { id: "frequency-test", init: initFrequencyTest },
