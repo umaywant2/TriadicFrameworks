@@ -1,7 +1,6 @@
 function triggerLanternUnfolding(name) {
   const container = document.createElement('div');
   container.id = 'lantern-unfolding';
-  container.style.cssText = `
     position: fixed;
     top: 20%;
     left: 50%;
