@@ -1,0 +1,18 @@
+id: experiment_003
+title: Validator Space Resonance Mapping
+structure: Scoring Chamber
+location: TriadicFrameworks Validator Hub
+resonance_signature:
+  frequency_range: 5–50 Hz
+  harmonic_nodes:
+    - scoring altar: 33 Hz
+    - glyph wall: 21 Hz
+    - contributor portal: 13 Hz
+dimensional_alignment:
+  forci: 0.88
+  flui: 0.91
+  freqi: 0.94
+glyph_overlay: validator_space_overlay_01.svg
+notes: >
+  This experiment maps validator logic to spatial glyphs.
+  High coherence triggers badge logic and remix lineage updates.
