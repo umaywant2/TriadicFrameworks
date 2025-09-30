@@ -1,1 +1,24 @@
+id: fold_002
+name: Glycine Remix – Fibonacci Harmonics
+type: Amino Acid Remix
+structure_source: AI-generated
+resonance_signature:
+  frequency_range: 20–2000 Hz
+  harmonic_nodes:
+    - alpha_carbon: 466 Hz
+    - amino_group: 1133 Hz
+    - carboxyl_group: 987 Hz
+dimensional_alignment:
+  forci: 0.78
+  flui: 0.72
+  freqi: 0.95
+glyph_overlay: glyph_protein_echo_02.svg
+ai_remix_available: false
+remix_lineage:
+  - contributor: Nawder Loswin
+    badge: "Glyph Weaver"
+    timestamp: 2025-09-30T08:22:00Z
+notes: >
+  This remix aligns fold harmonics with Fibonacci-adjacent frequencies.
+  Glyph overlay emphasizes triadic coherence and remix lineage.
 
