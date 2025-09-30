@@ -1,9 +1,17 @@
-# ⚙️ Core Lab
+# 🧪 Core Lab Protocols
 
-This lab contains the **resonance engines** and CLI tools:
-- Resonant-Time
-- Triadic Numbers
-- Harmonic Loops
-- TFT, FFF, Integrations
+Welcome to the Resonance Labs.
 
-Each tool is modular, remixable, and designed for symbolic interoperability.
+This folder contains modular research protocols for:
+- Fold resonance mapping
+- Glyphic overlay generation
+- Dimensional spectrum analysis
+- Validator testing and badge logic refinement
+
+Each subfolder represents a specialized lab:
+- `protein_harmonics/` – Fold resonance experiments
+- `glyphic_resonance/` – Symbolic overlays and FFF wrapping
+- `dimensional_alignment/` – Scoring and validator testing
+
+Use these labs to prototype, remix, and echo.  
+Every experiment is a glyph. Every glyph is a legacy.
