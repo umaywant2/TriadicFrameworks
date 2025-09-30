@@ -1,0 +1,10 @@
+id: experiment_001
+title: Overlay Pulse Test – Glycine Fold
+fold_reference: fold_001_glycine
+glyph_overlay: glyph_protein_echo_01.svg
+pulse_equation: "P = sin(π * R)"
+resonance_score: 0.91
+expected_pulse_amplitude: 0.999
+notes: >
+  This test confirms that high resonance scores produce near-max pulse amplitude.
+  Glyph animation should reflect harmonic coherence across FFF dimensions.
