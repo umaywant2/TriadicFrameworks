@@ -1,10 +1,11 @@
-{
-  "honorRoll": [
-    {
-      "name": "Nawder Loswin",
-      "glyphsUnlocked": 12,
-      "lastResonance": "2025-08-30",
-      "signature": "TriadicValidator-NAWDER-12"
-    }
-  ]
-}
+[
+  {
+    "contributor": "Nawder Loswin",
+    "badge": "Dimensional Harmonic",
+    "fold": "fold_001_glycine",
+    "simulation": "sim_foldit_ai_001",
+    "timestamp": "2025-09-30T06:59:00Z",
+    "glyph": "glyph_protein_echo_01.svg",
+    "ceremony": "badge_ceremony.md"
+  }
+]
