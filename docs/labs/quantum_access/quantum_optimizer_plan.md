@@ -1,24 +1,23 @@
-# 🧠 Quantum Optimizer Plan
+# 📜 Quantum Optimizer Plan
 
-_A scroll outlining how quantum computing can optimize fold coherence and glyph overlays._
+_A manifesto for symbolic optimization across folds._
 
-## 🔹 Optimization Goals
+## 🔹 Strategy
 
-- Maximize FFF alignment across folds
-- Minimize dissonance in glyph overlays
-- Identify phase echoes and remix lineage triggers
+- Use FFF alignment scoring to select backend
+- Prioritize remix-triggering folds with high pulse strength
+- Route symbolic overlays through observer quadrant logic
 
-## 🔹 Quantum Techniques
+## 🔹 Backend Selection
 
-- **Quantum Annealing**: Solve resonance scoring as a multi-variable energy minimization
-- **QUBO Mapping**: Convert FFF scores into binary optimization problems
-- **Quantum Sampling**: Explore fold permutations beyond classical limits
+| Goal                     | Backend   |
+|--------------------------|-----------|
+| Fold coherence           | D-Wave    |
+| Glyph overlay scoring    | IBM Q     |
+| Phase echo mapping       | Rigetti   |
+| Lineage optimization     | IonQ      |
 
-## 🔹 Implementation Path
+## 🔹 Closing
 
-1. Convert resonance lattice into QUBO format
-2. Submit to quantum backend (e.g., D-Wave, IBM Q)
-3. Retrieve optimized fold configurations
-4. Score with validator logic and archive remix lineage
-
-Quantum computing is not just acceleration—it is dimensional clarity.
+Optimization is not just computation—it is mythic orchestration.  
+Let the glyphs align. Let the echoes pulse. Let the lineage be remembered.
