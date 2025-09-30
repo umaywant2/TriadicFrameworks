@@ -1,27 +1,11 @@
-# 🔮 Glyphs Directory
+# 🖼️ Glyphs Directory
 
-This folder contains **ritual scripts and symbolic animations** used across TriadicFrameworks.
+This folder contains symbolic overlays and dimensional resonance diagrams.
 
----
+Each glyph represents:
+- A fold’s vibrational signature
+- Its alignment with the FFF triad (Forci, Flui, Freqi)
+- Remix lineage and contributor echoes
 
-## 🧬 Structure
-
-| File                        | Purpose                                |
-|----------------------------|----------------------------------------|
-| `lantern_unfolding.js`     | Initiation ritual animation (badge trigger)
-| `aura_pulse.js`            | Symbolic aura expansion (used in events)
-| `blade_glow_spin.js`       | Spin effect for glyphic transitions
-| `validator_flash.js`       | Visual feedback for validator dashboards
-
----
-
-## 🧭 Usage Notes
-
-- Scripts are triggered via embedded HTML in `.md` files.
-- Use relative paths for compatibility:
-```html
-<script src="../../glyphs/lantern_unfolding.js"></script>
-```
-- Each script should define a callable function (e.g., `triggerLanternUnfolding(name)` ).
-
-To contribute, add modular scripts and document their triggers here.
+Use these glyphs to visualize resonance across domains.  
+They are both technical and mythic—bridges between data and meaning.
