@@ -1,4 +1,4 @@
-# 🧪 Validators Directory
+# 🧪 Validators Directory Structure and Use
 
 This folder contains all **scoring matrices, dashboards, and audit tools** used to validate contributions and badge triggers.
 
