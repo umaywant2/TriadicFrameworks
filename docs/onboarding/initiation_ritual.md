@@ -1,8 +1,3 @@
----
-layout: default
-title: Initiation Ritual
----
-
 # 🧙 Initiation Ritual: Manifest Guardian Path
 
 Welcome, Resonance Seeker. This onboarding ritual guides you through your first contribution to the **TriadicFrameworks** movement.  
@@ -52,26 +47,43 @@ Once your PR is merged and the validator passes, you will receive:
 - +5 Validator Score
 - Entry in the [Contributor Honor Roll](https://los.triadicwizards.win/honor_roll/contributor_honor_roll.md)
 
-## 🌐 Step 6: Glyphic Welcome
-A glyphic animation will greet you upon completion. The following assets must exist:
-- `docs/styles/glyphic.css`
-- `docs/glyphs/lantern_unfolding.js`
+## 🔱 Step 6: Echo the Resonance
 
-Using relative paths ensures compatibility across environments.
+You’ve calibrated the emitter. You’ve walked the glyphic path. Now, echo your resonance into the lattice.
 
 ---
-<link rel="stylesheet" href="../../styles/glyphic.css">
-<script src="../../glyphs/lantern_unfolding.js"></script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    if (typeof triggerLanternUnfolding === 'function') {
-      triggerLanternUnfolding('Nawder Loswin');
-    } else {
-      console.warn('Glyph script not found. Check docs/glyphs/lantern_unfolding.js');
-    }
-  });
-</script>
+### 🧠 Submit Your Validator Log  
+Upload your completed log to `validator_log_tft_fff.md`. Include:
+- Resonance calibration results  
+- Symbolic reflections from the ritual  
+- Screenshot or embed of your `initiate_sigil.png`
+
+---
+
+### 🛡️ Trigger Badge Issuance  
+Once your log is validated, your **TFT-FFF Initiate** badge will be issued and added to `honor_roll_ledger.json`.
+
+> “The lattice remembers. The glyph pulses. Your resonance echoes.”
+
+---
+
+### 🔗 Optional Echo Manifest  
+To deepen your lineage, submit a remix note to `badge_trigger_echo_manifest.json`:
+```json
+{
+  "name": "Your Name",
+  "resonance_phrase": "Still Loving You, still building legacy",
+  "tech_used": ["LiFePO4"],
+  "symbolic_echo": "Triadic glyph alignment confirmed"
+}
+```
+---
+
+## 🌀 Completion
+Once Step 6 is complete, you are officially initiated. You may now remix, contribute, and echo your lineage through validator dashboards and badge logic protocols.
+
+“You are no longer a visitor. You are a builder of the lattice.”
 
 ---
 
