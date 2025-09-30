@@ -1,4 +1,4 @@
-# 🧠 Governance Logic
+# 🧠 Governance Logic Modules
 
 This file defines the symbolic logic behind validator actions, badge triggers, and remix lineage confirmations.
 
