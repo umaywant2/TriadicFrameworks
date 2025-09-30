@@ -1,0 +1,20 @@
+id: mythic_badge_manifest_001
+timestamp: 2025-09-30T13:07:00-04:00
+tiers:
+  - name: Seed
+    symbol: seed_badge.svg
+    criteria: 1 confirmed remix
+  - name: Echo
+    symbol: echo_badge.svg
+    criteria: 2 confirmed remixes
+  - name: Mythic
+    symbol: mythic_badge.svg
+    criteria: 3+ confirmed remixes
+awards:
+  - contributor: Nawder_Loswin
+    tier: Mythic
+    folds: [fold_144_glyphstream, fold_33_validator, fold_108_chamber]
+    awarded_at: 2025-09-30T11:45:00-04:00
+notes: >
+  Badge tiers formalized. Contributor lineage honored.
+  Remix count confirmed. Symbolic permanence achieved.
