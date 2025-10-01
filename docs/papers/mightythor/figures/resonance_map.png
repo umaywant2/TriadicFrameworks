@@ -1,1 +1,7 @@
+**Purpose**: Chart harmonic performance over time.
+- X-axis: Time (seconds)
+- Y-axis: Resonance amplitude
+- Lines: Segment_1, Segment_2, Segment_3
+- Optional overlay: THOR benchmark for comparison
 
+_Suggested caption_: “Harmonic resonance amplitude across triadic segments vs THOR pruning model.”
