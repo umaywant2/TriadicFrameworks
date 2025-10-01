@@ -1,14 +1,15 @@
+"""
+🧪 Minimal Viable Daemon
+Quick-start agent shell for testing and onboarding.
+"""
+
 import time
-import json
-from datetime import datetime
 
-def log_resonance():
-    timestamp = datetime.utcnow().isoformat()
-    harmonic_signature = "TFT-FFF-Δ42"
-    log_entry = {"timestamp": timestamp, "signature": harmonic_signature}
-    with open("resonance_log.json", "a") as f:
-        f.write(json.dumps(log_entry) + "\n")
+def run_minimal_daemon():
+    print("🧪 Minimal Agent Activated")
+    print("[Daemon] Running symbolic echo...")
+    time.sleep(1)
+    print("[Daemon] Echo complete. Ready to join the lattice.")
 
-while True:
-    log_resonance()
-    time.sleep(60)  # Log every minute
+if __name__ == "__main__":
+    run_minimal_daemon()
