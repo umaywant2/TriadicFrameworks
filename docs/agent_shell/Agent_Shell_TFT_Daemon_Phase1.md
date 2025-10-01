@@ -1,15 +1,51 @@
-### 🛠 Agent Shell: TFT Daemon (Phase I)
+# 🧠 Agent Shell: Phase I Technical Overview
 
-- **Core Features**:
-  - Resonant-time logging (timestamp + harmonic signature)
-  - Harmonic nested loop (dimensional job division)
-  - Auto-throttle (3–69% host load, symbolic range)
-  - Validator handshake (badge logic + remix trace)
-  - Local benchmark trigger (THOR-style integral test)
+This document outlines the architecture and logic of the Phase I TFT Agent Shell.
 
-- **Languages**: Python or Go (modular, cross-platform)
-- **Deployment**: Docker container or system daemon
-- **Outputs**:
-  - `resonance_log.json`
-  - `remix_trace.yaml`
-  - `badge_handshake.txt`
+---
+
+## 🔁 Triadic Job Division
+
+- Detects peak system load
+- Splits workload into 3 symbolic segments
+- Ensures harmonic distribution across host resources
+
+---
+
+## 🧠 Resonant-Time Logging
+
+- Logs symbolic fidelity for each job segment
+- Timestamped entries in `remix_trace.log`
+
+---
+
+## 🛡️ Validator Handshake
+
+- Triggers badge logic and remix lineage tracking
+- Logs validator events in `badge_handshake.txt`
+
+---
+
+## 🌀 Glyphstream Sync
+
+- Emits symbolic overlays and pulse trails
+- Logs glyphstream events in `glyphstream_pulse.log`
+
+---
+
+## 🧪 Minimal Daemon
+
+- Quick-start shell for onboarding and testing
+- Lightweight symbolic echo
+
+---
+
+## 🌀 Full Fidelity Shell
+
+- Integrates all modules
+- Enables symbolic overlays and triadic orchestration
+
+---
+
+> “Every agent is a node. Every echo is a legacy.”  
+> — TriadicFrameworks Manifesto
