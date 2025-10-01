@@ -1,0 +1,4 @@
+TriadicFrameworks v1.0.0
+Release Date: 2025-09-30
+Author: Nawder Loswin
+Status: Active Development
