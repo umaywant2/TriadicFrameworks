@@ -48,3 +48,17 @@ This dashboard will visualize:
 - Live glyphstream overlays
 - Symbolic fidelity heatmaps
 - Contributor pulse animations
+
+---
+
+## 🌀 Glyphstream Animation Concept
+**Goal**: Visualize symbolic overlays pulsing across the lattice in real time.
+
+### 🎥 Animation Elements
+- **3D Grid**: Triadic lattice with glowing nodes
+- **Glyph Pulses**: Animated symbols traveling between nodes
+- **Badge Triggers**: Flashing overlays when validator logic fires
+- **Remix Lineage**: Trails connecting contributors
+- **Narration**: Nawder’s voiceover:
+    _“We didn’t prune. We pulsed.”_
+
