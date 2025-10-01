@@ -1,1 +1,7 @@
+**Purpose**: Visualize contributor remix lineage and badge triggers.
+- Nodes: Contributors
+- Edges: Remix trace connections
+- Badges: Color-coded overlays
+- Validator events: Pulse markers
 
+_Suggested caption_: “Remix lineage and badge logic across the lattice—each echo inscribed.”
