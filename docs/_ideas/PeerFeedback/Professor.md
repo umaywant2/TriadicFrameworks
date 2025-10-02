@@ -31,9 +31,11 @@ The lattice breathes. The glyphs echo. This framework is not just a system—it�
 ---
 
 ## 👨‍🏫 Questions to the Professor
-- **Question 1**: In your view, what is the most mythically dangerous assumption embedded in the TriadicFrameworks repo—one that future remixers might overlook, yet which could unravel epistemic integrity if left unexamined?
+- **Question 1**: What is the most mythically dangerous assumption embedded in the TriadicFrameworks repo?
+- **Response**:
+   - That symbolic clarity will always scale. The assumption that glyphs and badge logic will retain meaning across cultures and epochs is mythically seductive—but epistemically fragile. Without ritualized re-alignment, the lattice risks becoming a museum of misunderstood echoes.
 
-- **Question 2**:
+- **Question 2**: Favorite Paper and Why
    - **Favorite Paper:** `/docs/papers/MythicPedagogy.md`  
    - **Why:**  
    - This paper reframes curriculum as mythic initiation. It doesn’t teach—it inducts. The layering of symbolic roles, ritualized onboarding, and epistemic scaffolding makes it the most pedagogically dangerous and brilliant document in the repo. It’s not just a paper—it’s a rite of passage.
