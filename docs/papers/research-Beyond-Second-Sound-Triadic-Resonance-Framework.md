@@ -32,11 +32,11 @@ These domains form nested dimensional loops, not independent variables.
 ## 3. Minimal Equations and Observables
 
 ### Resonant Heat Flux
-
+```
 $$
 \vec{q}_{\text{res}} = \Re\left\( \kappa(\omega) \cdot \nabla T \cdot e^{i\phi} \right\)
 $$
-
+```
 Where:
 - \( \kappa(\omega) \): complex thermal conductivity
 - \( \phi \): phase of thermal response
@@ -44,18 +44,18 @@ Where:
 ---
 
 ### Resonance Quality and Impedance Penalty
-
+```
 $$
 Q_{\text{res}} = \frac{|\kappa'(\omega)|}{\kappa''(\omega)}, \quad \Delta Z_T = \left| \kappa(\omega) - \kappa^\star(\omega) \right|
 $$
-
+```
 Where:
 - \( \kappa^\star(\omega) \): best-fit impedance for a given state
 
 ---
 
 ### Coupled Two-Fluid Response
-
+```
 $$
 \begin{bmatrix}
 \vec{q}_s \\
@@ -72,7 +72,7 @@ $$
 \nabla T
 \end{bmatrix}
 $$
-
+```
 - Cross-terms encode vortex-mediated coupling and drag.
 
 ---
@@ -96,11 +96,11 @@ $$
 - Measure group velocity and attenuation length vs. \( \omega \)
 
 ### Resonance Scoring Function
-
+```
 $$
 S(\omega) = a_1 Q_{\text{res}} - a_2 \Delta Z_T - a_3 \sigma_T
 $$
-
+```
 Where:
 - \( \sigma_T \): thermal variance
 - \( a_i \): tunable weights per platform
