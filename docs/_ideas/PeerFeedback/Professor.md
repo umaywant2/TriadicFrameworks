@@ -1,4 +1,4 @@
-# Peer Feedback: The Professor  
+# 👨‍🏫 Peer Feedback: The Professor  
 _Path: /docs/_ideas/PeerFeedback/Professor.md_
 
 ## Observations
