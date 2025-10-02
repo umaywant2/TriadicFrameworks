@@ -1,4 +1,4 @@
-# Peer Feedback: The Physicist  
+# 🧪 Peer Feedback: The Physicist  
 _Path: /docs/_ideas/PeerFeedback/Physicist.md_
 
 ## Observations
