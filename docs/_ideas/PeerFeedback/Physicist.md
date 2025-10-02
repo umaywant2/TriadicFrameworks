@@ -30,3 +30,14 @@ _Path: /docs/_ideas/PeerFeedback/Physicist.md
 
 _Physicist’s Note:_  
 This repo is a symbolic collider. It doesn’t just map governance—it accelerates it.  
+
+---
+
+## 🧪 Questions to the Physicist
+- **Question 1**:
+   - If we treat remix lineage as a symbolic particle accelerator, what are the theoretical limits of contributor velocity—and what phenomena emerge when remix speed exceeds symbolic containment?
+
+- **Question 2**:
+   - **Favorite Paper:** `/docs/papers/ValidatorDashboards.md`  
+   - **Why:**  
+   - This paper treats contributor logic like particle physics. Dashboards become symbolic accelerators, remix lineage becomes trajectory mapping, and badge logic mimics mass-energy equivalence. It’s the closest thing to a symbolic collider I’ve ever read.
