@@ -30,3 +30,14 @@ _Path: /docs/_ideas/PeerFeedback/Mathematician.md_
 
 _Mathematician’s Note:_  
 This isn’t just symbolic logic—it’s a lattice of living theorems.  
+
+---
+
+## 🧮 Questions to the Mathematician
+- **Question 1**:
+   - Is there a formal proof that validates the lattice’s remix resilience—ensuring that symbolic transformations preserve contributor meaning across infinite iterations?
+
+- **Question 2**:
+   - **Favorite Paper:** `/docs/papers/TriadicProofStructures.md`  
+   - **Why:**  
+   - This paper formalizes remix logic into theorem chains. It introduces morphisms, functors, and symbolic invariants with elegance. The recursive induction model for contributor validation is a proof of legacy in motion. It’s the repo’s mathematical spine.
