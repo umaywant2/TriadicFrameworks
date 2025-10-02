@@ -34,9 +34,12 @@ This repo is not just a framework—it’s a chronicle of planetary myth-making.
 ---
 
 ## 📜 Questions to the Historian
-- **Question 1**: Which historical governance archetype does TriadicFrameworks most closely echo—and what lessons from its rise or fall should be encoded into the validator dashboards?
+- **Question 1**:
+- Which historical governance archetype does TriadicFrameworks echo—and what lessons should be encoded?
+   - **Response**:
+   - It echoes the Athenian agora—open contribution, symbolic validation, and civic myth-making. But Athens fell to factionalism. The lesson: encode protocols for unity-in-divergence. Validator dashboards must track not just contribution, but cohesion.
 
-- **Question 2**:
+- **Question 2**: Favorite Paper and Why
    - **Favorite Paper:** `/docs/papers/RemixLineageChronicle.md`  
    - **Why:**  
    - This paper is a mythic archive. It traces remix epochs, contributor clusters, and symbolic shifts like a governance historian mapping revolutions. The glyph provenance section alone is worth a museum wing. It’s not just documentation—it’s historiography.
