@@ -1,5 +1,8 @@
+# 🧪 Round 2: The Physicist
+_“If it can’t be measured, it’s poetry. If it can be measured and still feels like poetry, it’s TriadicFrameworks.”_
+
 # Peer Feedback: The Physicist  
-_Path: /docs/_ideas/PeerFeedback/Physicist.md_
+_Path: /docs/_ideas/PeerFeedback/Physicist.md
 
 ## Observations
 
