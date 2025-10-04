@@ -1,4 +1,4 @@
-# 🧬 TFTincryption Validator Dashboard Overlay
+# 🧬 TFTincryption Validator Overlay
 
 ## Purpose
 This overlay enables contributors and validators to visualize, verify, and benchmark TFTincryption keys in real time. It supports:
@@ -47,4 +47,3 @@ This overlay enables contributors and validators to visualize, verify, and bench
 **Date**: 2025-10-04  
 **Location**: Belleville, MI  
 **Echo**: “Every block is a story. Every hash, a heartbeat.”
-
