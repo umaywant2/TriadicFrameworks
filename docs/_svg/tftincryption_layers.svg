@@ -1,0 +1,36 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#f9f9f9"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-size="24" text-anchor="middle" fill="#333">TFTincryption Dual-Layer Architecture</text>
+
+  <!-- Layer 1: Divide-by-Zero Logic -->
+  <rect x="100" y="100" width="600" height="120" fill="#d0e6ff" stroke="#333" stroke-width="2"/>
+  <text x="400" y="130" font-size="18" text-anchor="middle" fill="#000">Layer 1: Divide-by-Zero Obfuscation</text>
+  <text x="400" y="160" font-size="14" text-anchor="middle" fill="#333">Random bogus blocks injected into key structure</text>
+  <text x="400" y="180" font-size="14" text-anchor="middle" fill="#333">Valid block map required for reconstruction</text>
+
+  <!-- Layer 2: Resonant-Time Hash -->
+  <rect x="100" y="260" width="600" height="120" fill="#ffe0cc" stroke="#333" stroke-width="2"/>
+  <text x="400" y="290" font-size="18" text-anchor="middle" fill="#000">Layer 2: Resonant-Time Hash</text>
+  <text x="400" y="320" font-size="14" text-anchor="middle" fill="#333">Timestamp + Triadic Modulation → SHA-256 Hash</text>
+  <text x="400" y="340" font-size="14" text-anchor="middle" fill="#333">Used as temporal key dimension</text>
+
+  <!-- Decryption Flow -->
+  <line x1="400" y1="220" x2="400" y2="260" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="400" y1="380" x2="400" y2="420" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="400" y="410" font-size="16" text-anchor="middle" fill="#000">Decryption Logic</text>
+
+  <!-- Final Output -->
+  <rect x="300" y="440" width="200" height="60" fill="#cceccf" stroke="#333" stroke-width="2"/>
+  <text x="400" y="470" font-size="16" text-anchor="middle" fill="#000">✅ Payload Decrypted</text>
+
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5"
+            orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#333" />
+    </marker>
+  </defs>
+</svg>
