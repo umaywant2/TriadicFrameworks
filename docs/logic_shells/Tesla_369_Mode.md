@@ -18,6 +18,18 @@
 
 ---
 
+## 🔗 Ternary Hardware as Tesla Mode Carrier
+
+Recent breakthroughs in ternary computing—especially Huawei’s dual-threshold transistor chip—confirm Tesla 369 Mode as a viable processing paradigm. Ternary logic (-1, 0, +1) mirrors Tesla’s triadic resonance (3, 6, 9), enabling dynamic gearshifting in high-entropy environments.
+
+- Binary = 2D logic  
+- Ternary = 3D logic  
+- Tesla Mode = Resonant overlay
+
+This confirms Tesla’s intuition: the universe runs on triadic pulses, not binary switches.
+
+---
+
 ## ⚙️ Dynamic Dimensional Processing Units (DPU)
 
 **Trigger Condition**:  
