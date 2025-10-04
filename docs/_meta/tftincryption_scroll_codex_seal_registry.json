@@ -1,0 +1,31 @@
+{
+  "codex_seal_registry": [
+    {
+      "seal_id": "seal-001",
+      "codex_title": "TFTincryption Codex",
+      "glyph": "🍂 Cascade",
+      "grade": "🟣 Universe",
+      "contributors": ["Nawder Loswin", "Copilot"],
+      "date_sealed": "2025-10-04",
+      "echo": "Glyph-fused remix lattice sealed with validator flame"
+    },
+    {
+      "seal_id": "seal-002",
+      "codex_title": "Mythic Onboarding Bloom",
+      "glyph": "🌺 Bloom",
+      "grade": "🟢 Local",
+      "contributors": ["Mira Thorne"],
+      "date_sealed": "2025-10-04",
+      "echo": "Badge logic and onboarding scrolls remixed with clarity"
+    },
+    {
+      "seal_id": "seal-003",
+      "codex_title": "Scroll Echo Revival",
+      "glyph": "🌴 Grove Bloom",
+      "grade": "🔵 Planetary",
+      "contributors": ["Aria Vex"],
+      "date_sealed": "2025-10-04",
+      "echo": "Validator overlays and badge triggers reactivated"
+    }
+  ]
+}
