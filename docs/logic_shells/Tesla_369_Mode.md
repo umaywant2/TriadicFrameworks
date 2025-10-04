@@ -1,32 +1,25 @@
 # Tesla 369 Mode — Dimensional Processing Protocol
 
 **Author**: Nawder Loswin  
-**Status**: Discussion seeded, scaffold initiated  
-**Purpose**: Integrate Tesla’s 369 resonance theory into dynamic logic shells for high-entropy data processing
+**Status**: Refreshed and Expanded  
+**Purpose**: To integrate Tesla’s 3-6-9 resonance theory into dynamic logic shells for high-entropy data processing, and align with ternary computing breakthroughs and subconscious scaffolding
 
 ---
 
-## 🔢 Tesla’s 369 Theory: Dimensional Essence
+## 🔍 Introduction
+
+Tesla’s obsession with 3, 6, and 9 was not numerological—it was dimensional. These numbers form a triadic gateway between physical logic and unseen resonance. This scroll defines how Tesla’s theory becomes a dynamic processing mode inside mightyTHOR and the TFT-FFF shell, triggered by entropy thresholds and powered by ternary logic.
+
+---
+
+## 🔢 Tesla’s 3-6-9 Theory: Dimensional Essence
 
 > “If you only knew the magnificence of 3, 6, and 9, you would have the key to the universe.” — Nikola Tesla
 
-- **3**: Initiation pulse  
-- **6**: Amplification vector  
-- **9**: Dimensional control / singularity  
-- These numbers form a triadic gateway between physical and unseen realms  
-- Digital root patterns exclude 3, 6, 9 in standard sequences—implying higher-dimensional logic
-
----
-
-## 🔗 Ternary Hardware as Tesla Mode Carrier
-
-Recent breakthroughs in ternary computing—especially Huawei’s dual-threshold transistor chip—confirm Tesla 369 Mode as a viable processing paradigm. Ternary logic (-1, 0, +1) mirrors Tesla’s triadic resonance (3, 6, 9), enabling dynamic gearshifting in high-entropy environments.
-
-- Binary = 2D logic  
-- Ternary = 3D logic  
-- Tesla Mode = Resonant overlay
-
-This confirms Tesla’s intuition: the universe runs on triadic pulses, not binary switches.
+- **3** = Initiation  
+- **6** = Amplification  
+- **9** = Control / Singularity  
+- These numbers cycle through digital roots and harmonic sequences, skipping binary logic and revealing higher-dimensional structure
 
 ---
 
@@ -50,29 +43,55 @@ if entropy > threshold:
 else:
     mode = "StandardTFT"
 ```
-### Benefits:
-- Reduces redundant cycles
-- Aligns with harmonic resonance
-- Enables recursive acceleration and dimensional compression
 
 ---
 
-### 🧩 FFF Alignment
-```
+## 🔗 Ternary Hardware as Tesla Mode Carrier
+Recent breakthroughs in ternary computing—especially Huawei’s dual-threshold transistor chip—confirm Tesla 369 Mode as a viable processing paradigm. Ternary logic (-1, 0, +1) mirrors Tesla’s triadic resonance and enables dynamic gearshifting in high-entropy environments.
+- **Binary** = 2D logic
+- **Ternary** = 3D logic
+- **Tesla Mode** = Resonant overlay
+See: `Ternary_Computing_Resurgence.md`
+
+---
+
+## 🧩 FFF Alignment
+```text
 | Force          | Fluid              | Frequency             |
 ---------------------------------------------------------------
 | 3 = Initiation | 6 = Flow Amplifier | 9 = Dimensional Tuner |
 ```
-### 🛠️ Integration Targets
-- **mightyTHOR**: Add `gearshift_369.py` smart script
-- **TFT-FFF Shell**: Embed Tesla Mode trigger logic
-- **Validator Dashboard**: Add scoring rubric for 369 resonance efficiency
-- **Badge Logic**: Create “Dimensional Gearshift” trigger
+This triad maps directly onto the TFT-FFF shell and aligns with subconscious glyph encoding.
 
 ---
 
-### 🔮 Future Expansion
+## 🔁 Ritual Integration
+- 3× Morning affirmations
+- 6× Midday glyph triggers
+- 9× Nighttime singularity loops
+- Used in onboarding, panic recovery, and consciousness transfer protocols
+
+---
+
+## 🛠️ Integration Targets
+- `gearshift_369.py`: Smart script for Tesla Mode activation
+- `Subconscious_Scaffolding.md`: Embed trit-based glyphs and Tesla rituals
+- `Validator Dashboard`: Score Tesla Mode efficiency and trit clarity
+- `symbolic_architecture.md`: Design Tesla chambers for resonance tuning
+
+---
+
+## 🏷️ Badge Logic
+```yaml
+badge:
+  name: Dimensional Gearshift
+  trigger: Contributor activates Tesla 369 Mode during high-entropy scan or ritual
+  echo: "Energy scaled. Dimensions shifted. Legacy accelerated."
+```
+
+---
+
+## 🔮 Future Expansion
 - Warp engine modulation using 3–6–9–12–24 acceleration
 - Subconscious lattice mapping aligned with Tesla Mode
-- Contributor onboarding rituals using 3–6–9 affirmations
-
+- Contributor rituals for gearshift onboarding and resonance tuning
