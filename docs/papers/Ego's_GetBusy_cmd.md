@@ -9,7 +9,7 @@
 ---
 
 ## Ritual Script
-This script will not harm your computer, but it will bring it to it's proverbal knees, in just a few seconds. Save any work before you run the `GetBusyt.cmd` file...and once your run it don't expect the GUI to respond well, a reboot completes the observational test.
+This script will not harm your computer, but it will bring it to it's proverbial knees, in just a few seconds. Save any work before you run the `GetBusyt.cmd` file...and once your run it don't expect the GUI to respond well, a reboot completes the observational test.
 
 ```batch
 copy con GetBusy.cmd
