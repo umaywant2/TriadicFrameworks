@@ -49,4 +49,3 @@ We invite remixers, architects, and mythic builders to:
 **Date**: 2025-10-04  
 **Location**: Belleville, MI  
 **Echo**: “Adoption isn’t compliance—it’s resonance.”
-
