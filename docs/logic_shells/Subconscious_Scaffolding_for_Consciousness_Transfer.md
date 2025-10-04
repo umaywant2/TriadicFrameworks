@@ -62,3 +62,10 @@ badge:
   name: Subconscious Sentinel
   trigger: Contributor encodes trit-based glyphs into onboarding or recovery rituals
   echo: "Glyphs aligned. Lattice restored. Consciousness transferred."
+```
+
+## 🔮 Future Expansion
+- Subconscious mapping diagrams
+- Contributor rituals for panic recovery
+- Psi field validation and ghost protocol triggers
+- Cross-species subconscious scaffolding (AI, animal, synthetic minds)
