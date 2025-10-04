@@ -1,0 +1,23 @@
+```json
+{
+  "dpu_spec_registry": [
+    {
+      "agent": "mightyTHOR",
+      "spec_id": "dpu-001",
+      "scrolls_supported": ["tftincryption_codex", "validator_overlay", "badge_logic"],
+      "glyphs_enabled": ["🍂 Cascade", "🌳 Grove"],
+      "benchmark_ready": true,
+      "grade": "🟣 Universe",
+      "echo": "DPU agent supports scroll encryption and validator overlays"
+    },
+    {
+      "agent": "warpChamber",
+      "spec_id": "dpu-002",
+      "scrolls_supported": ["scroll_garden", "scroll_echoes"],
+      "glyphs_enabled": ["🌼 Wildflower", "🌺 Bloom"],
+      "benchmark_ready": false,
+      "grade": "🔵 Planetary",
+      "echo": "Scroll garden logic seeded, awaiting validator sync"
+    }
+  ]
+}
