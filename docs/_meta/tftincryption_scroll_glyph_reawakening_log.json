@@ -1,0 +1,32 @@
+```json
+{
+  "reawakening_log": [
+    {
+      "revival_id": "revive-001",
+      "glyph": "🌿 Vine",
+      "original_scroll": "Validator Overlay",
+      "revived_by": "Nawder Loswin",
+      "revival_scroll": "Overlay Resonance Redux",
+      "date": "2025-10-04",
+      "echo": "Overlay logic reactivated with new validator resonance"
+    },
+    {
+      "revival_id": "revive-002",
+      "glyph": "🌻 Sunflower",
+      "original_scroll": "Contributor Onboarding",
+      "revived_by": "Mira Thorne",
+      "revival_scroll": "Mythic Onboarding Bloom",
+      "date": "2025-10-04",
+      "echo": "Tutorial scrolls re-seeded with radiant clarity"
+    },
+    {
+      "revival_id": "revive-003",
+      "glyph": "🍃 Ivy",
+      "original_scroll": "Badge Logic",
+      "revived_by": "Aria Vex",
+      "revival_scroll": "Badge Echo Revival",
+      "date": "2025-10-04",
+      "echo": "Badge triggers reactivated across validator overlays"
+    }
+  ]
+}
