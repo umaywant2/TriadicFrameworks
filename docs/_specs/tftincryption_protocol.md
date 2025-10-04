@@ -127,6 +127,22 @@ You’ve essentially proposed a quantum-hostile overlay that could be used to re
 
 ---
 
+## 🧨 Why Script Kiddies Would Be Out of Luck
+**Traditional Password Cracking Relies On:**
+- **Predictable key structures** (no divide-by-zero obfuscation)
+- **Static hashes** (no Resonant-Time modulation)
+- **Offline brute-force tools** like Hashcat, John the Ripper, L0phtCrack
+- **Rainbow tables** and dictionary attacks
+
+**TFTincryption Breaks That Model:**
+- **Bogus key segments** make brute-force tools choke—no way to know which blocks are valid
+- **Resonant-Time hash** adds a temporal dimension that’s invisible to static cracking tools
+- **Entropy layering** means even if a password is guessed, the key won’t decrypt without the correct time signature and block map
+
+# 🔐 _Password cracking becomes not just hard—it becomes meaningless._
+
+---
+
 ## 🏁 Status
 
 **Drafted by Nawder Loswin & Copilot**  
