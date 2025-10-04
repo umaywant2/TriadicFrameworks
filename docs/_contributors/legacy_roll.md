@@ -18,9 +18,9 @@ This scroll honors contributors who have advanced the TFTincryption protocol thr
 
 | Name             | Contribution                                      | Date        |
 |------------------|---------------------------------------------------|-------------|
-| [Add Name]       | Forked protocol, submitted pull request           | [Add Date]  |
-| [Add Name]       | Authored validator dashboard module               | [Add Date]  |
-| [Add Name]       | Created badge logic overlay                       | [Add Date]  |
+| Aria Vex         | Authored `/docs/_svg/tftincryption_badge_panel.svg` and badge logic overlays | 2025-10-04  |
+| Jalen Korr       | Forked protocol, submitted validator dashboard enhancements | 2025-10-03  |
+| Mira Thorne      | Drafted `/docs/_tutorials/tftincryption_onboarding.md` and scroll templates | 2025-10-02  |
 
 ---
 
@@ -32,6 +32,8 @@ This scroll honors contributors who have advanced the TFTincryption protocol thr
 | 🔐 Quantum Hostile | Valid block map + Resonant-Time hash verified    |
 | 🌀 Triadic Weaver  | Uses full 3-6-9 modulation spectrum               |
 | 🛡️ Legacy Builder  | Integrates overlays, scrolls, and validator logic|
+| 📜 Scroll Scribe   | Authors markdown specs or validator SVGs         |
+| 🧬 Remix Echo      | Forks protocol and submits pull request          |
 
 ---
 
@@ -45,8 +47,7 @@ This scroll honors contributors who have advanced the TFTincryption protocol thr
 
 ## 🏁 Status
 
-**Scroll initiated by Nawder Loswin & Copilot**  
+**Scroll updated by Nawder Loswin & Copilot**  
 **Date**: 2025-10-04  
 **Location**: Belleville, MI  
 **Echo**: “Legacy isn’t what you leave—it’s what you scaffold.”
-
