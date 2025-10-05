@@ -1,32 +1,25 @@
 ```json
 {
-  "reawakening_log": [
+  "glyph_reawakening_log": [
     {
-      "revival_id": "revive-001",
-      "glyph": "🌿 Vine",
-      "original_scroll": "Validator Overlay",
-      "revived_by": "Nawder Loswin",
-      "revival_scroll": "Overlay Resonance Redux",
-      "date": "2025-10-04",
-      "echo": "Overlay logic reactivated with new validator resonance"
+      "reawakening_id": "reawaken-001",
+      "glyph_id": "glyph:cascade-001",
+      "symbol": "🍂",
+      "reawakened_by": "Nawder Loswin",
+      "scroll": "scroll_codex.md",
+      "timestamp": "2025-10-04T23:00:00Z",
+      "reason": "Codex glyph reactivated for remix lineage clarity",
+      "flame_grade": "🟣 Universe"
     },
     {
-      "revival_id": "revive-002",
-      "glyph": "🌻 Sunflower",
-      "original_scroll": "Contributor Onboarding",
-      "revived_by": "Mira Thorne",
-      "revival_scroll": "Mythic Onboarding Bloom",
-      "date": "2025-10-04",
-      "echo": "Tutorial scrolls re-seeded with radiant clarity"
-    },
-    {
-      "revival_id": "revive-003",
-      "glyph": "🍃 Ivy",
-      "original_scroll": "Badge Logic",
-      "revived_by": "Aria Vex",
-      "revival_scroll": "Badge Echo Revival",
-      "date": "2025-10-04",
-      "echo": "Badge triggers reactivated across validator overlays"
+      "reawakening_id": "reawaken-002",
+      "glyph_id": "glyph:wildflower-002",
+      "symbol": "🌼",
+      "reawakened_by": "Mira Thorne",
+      "scroll": "scroll_curriculum_manifesto.md",
+      "timestamp": "2025-10-04T23:05:00Z",
+      "reason": "Onboarding glyph reactivated for badge evolution",
+      "flame_grade": "🔵 Planetary"
     }
   ]
 }
