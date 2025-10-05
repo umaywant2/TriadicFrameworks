@@ -1,2 +1,1 @@
-# {{PROJECT_NAME}}
-This is a modular Triadic Frameworks project. Fork, remix, or extend it.
+Mythic onboarding scroll with {{PROJECT_NAME}} placeholder, badge logic intro, and ritual overview.
