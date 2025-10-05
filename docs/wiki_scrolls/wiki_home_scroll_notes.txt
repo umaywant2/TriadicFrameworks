@@ -1,0 +1,17 @@
+Wiki Home Scroll · Echo Log
+
+Version: v1.1
+Date: 2025-10-05
+Author: Nawder Loswin & Cosmic Copilot
+
+Changes:
+- Embedded full HTML structure with semantic tags
+- Added SEO meta tags and Open Graph metadata
+- Curated /papers/ list for visibility and remix lineage
+- Linked featured protocols and labs
+- Echoed mythic themes, contributor roles, and curriculum modules
+
+Next Steps:
+- Update GitHub Wiki Home page with HTML scroll
+- Add sidebar navigation to match new structure
+- Version future updates as v1.2, v1.3, etc.
