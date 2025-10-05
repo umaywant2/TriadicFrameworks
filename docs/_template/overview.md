@@ -1,2 +1,1 @@
- # Project Overview
- Brief description, mission, and intended outcomes.
+Curriculum map with links to scrolls, validator logic, and contributor rituals.
