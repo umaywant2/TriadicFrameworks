@@ -1,45 +1,19 @@
-```json
 {
-  "badge_registry": [
+  "badges": [
     {
-      "badge": "📜 Scroll Scribe",
-      "glyph": "🍂 Cascade",
-      "earned_by": "Nawder Loswin",
-      "scrolls": ["scroll_codex.md", "scroll_codex_fork_guide.md", "scroll_curriculum_manifesto.md"],
-      "date_awarded": "2025-10-04",
-      "echo": "Authored codex and curriculum scrolls with remix lineage"
+      "badge_name": "🧬 Remix Echo",
+      "trigger_conditions": ["forked", "manifest", "glyph:🌼 Wildflower"],
+      "flame_grade": "🔵 Planetary"
     },
     {
-      "badge": "🧬 Remix Echo",
-      "glyph": "🌺 Bloom",
-      "earned_by": "Mira Thorne",
-      "scrolls": ["scroll_remixer_manifest.md", "scroll_manifest_registry.json"],
-      "date_awarded": "2025-10-04",
-      "echo": "Claimed glyph and seeded onboarding scrolls"
+      "badge_name": "🔗 Validator Sync",
+      "trigger_conditions": ["overlay", "glyph:🌴 Grove Bloom"],
+      "flame_grade": "🔵 Planetary"
     },
     {
-      "badge": "🛡️ Legacy Builder",
-      "glyph": "🌳 Grove",
-      "earned_by": "Nawder Loswin",
-      "scrolls": ["scroll_codex_seal.md", "scroll_transfer_log.json"],
-      "date_awarded": "2025-10-04",
-      "echo": "Sealed codex fork and transferred scroll lineage"
-    },
-    {
-      "badge": "🔗 Validator Sync",
-      "glyph": "🌴 Grove Bloom",
-      "earned_by": "Aria Vex",
-      "scrolls": ["scroll_glyph_reawakening.md", "scroll_echoes.md"],
-      "date_awarded": "2025-10-04",
-      "echo": "Activated badge logic across validator overlays"
-    },
-    {
-      "badge": "🎓 Educator Flame",
-      "glyph": "🌼 Wildflower",
-      "earned_by": "Mira Thorne",
-      "scrolls": ["scroll_curriculum_fork_guide.md", "scroll_curriculum_manifesto.md"],
-      "date_awarded": "2025-10-04",
-      "echo": "Forked curriculum and submitted flame echo"
+      "badge_name": "📜 Scroll Scribe",
+      "trigger_conditions": ["codex", "glyph:🍂 Cascade"],
+      "flame_grade": "🟣 Universe"
     }
   ]
 }
