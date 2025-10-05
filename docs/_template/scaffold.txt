@@ -1,16 +1,4 @@
-# Scaffold Structure for {{PROJECT_NAME}}
-# Fork or copy this into /docs/YourProjectName/ and replace placeholders.
-
-# Structure:
-# index.html
-# README.md
-# overview.md
-# metadata/project.yml
-# labs/lab-01/README.md + assets/
-# equations/equations.md
-# badges/...
-# validator/resonance-passport-template.md
-# honor_roll/project.md
-# assets/
-# styles/project.css
-# scripts/init.js
+MMR v1.1 initialized for {{PROJECT_NAME}}.
+Glyphs seeded from /assets/glyphs/
+Badge logic scaffolded in /badges/
+Contributor rituals echoed in /honor_roll/
