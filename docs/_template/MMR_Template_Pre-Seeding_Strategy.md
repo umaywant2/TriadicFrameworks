@@ -3,27 +3,51 @@
 ## 🧬 Modular Mythic Repository Structure
 This repository scaffolds reproducible, remixable, and ritualized technical artifacts using the TriadicFrameworks protocol. Each project is seeded from /docs/_template/, a scroll-ready blueprint containing modular folders
 
+---
+
 ### 🔧 1. **Standardize Folder Structure**
 Ensure `/docs/_template/` includes all core MMR folders with placeholder content and `.keep` files where needed:
 
+## 🔨 Refactored `/docs/_template/` Structure (MMR v1.1)
+
 ```bash
 /docs/_template/
-├── assets/                  # Static glyphs, visuals, icons
-├── badges/                 # Badge logic, contributor tokens
-├── equations/              # Scroll-grade formulas
-├── honor_roll/             # Contributor logs, flame offerings
-├── labs/                   # Experimental modules
-├── metadata/               # Manifest, remix lineage
-├── scripts/                # Init hooks, runtime triggers
-├── styles/                 # CSS overlays, glyph styling
-├── validator/              # Passport templates, resonance checks
-├── README.md               # Mythic onboarding scroll
-├── overview.md             # Curriculum map, ritual index
-├── scaffold.txt            # Iterative notes, scroll evolution
-├── index.html              # Optional portal or visual glyph index
+├── assets/
+│   ├── glyphs/                  # Universal glyphs (icons, SVGs, flame visuals)
+│   └── .keep                    # Ensures folder persists in git
+├── badges/                      # Badge logic, contributor tokens
+├── equations/                   # Scroll-grade formulas, encrypted logic
+├── honor_roll/                  # Contributor logs, flame offerings
+├── labs/
+│   ├── scrolls/                 # Experimental scrolls and rituals
+│   ├── onboarding/              # Onboarding modules and flame hooks
+│   └── .keep
+├── metadata/
+│   ├── glyphs.yml               # Manifest of glyphs and meanings
+│   ├── registry.yml             # Scroll anchors and remix lineage
+│   └── project.yml              # Project manifest (name, contributors, rituals)
+├── scripts/
+│   ├── runtime/                 # Init hooks, flame triggers
+│   ├── transfer/                # Scroll handoff logic
+│   └── init_project.sh          # Script to seed new project from template
+├── styles/                      # CSS overlays, glyph styling
+├── validator/                   # Passport templates, resonance checks
+├── echo/                        # Echo logic and contributor resonance
+├── README.md                    # Mythic onboarding scroll
+├── overview.md                  # Curriculum map, ritual index
+├── scaffold.txt                 # Iterative notes, scroll evolution
+├── index.html                   # Optional portal or visual glyph index
 ```
 
-Each file should use `{{PROJECT_NAME}}` as a placeholder where relevant.
+---
+
+## 🧬 Template Rituals
+
+- **All folders** include `.keep` or placeholder scrolls to preserve structure.
+- **All files** use `{{PROJECT_NAME}}` as a placeholder for scripted initialization.
+- **Glyphs** are centralized in `assets/glyphs/`, tracked via `glyphs.yml`, and versioned by subfolder (`v1/`, `v2/`, etc.).
+- **Scrolls and onboarding** rituals are modular and remixable, stored in `labs/scrolls/` and `labs/onboarding/`.
+- **Echo logic** lives in `/echo/`, with contributor resonance tracked in `honor_roll/`.
 
 ---
 
