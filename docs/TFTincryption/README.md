@@ -31,6 +31,25 @@ Navigate the scrolls by theme:
 
 ---
 
+# TFTincryption
+
+The **TFTincryption** package is the protocol layer of the TFT 3‑Pack.  
+It provides:
+
+- **protocol‑core/** → cryptographic scrolls, runtime modules, divide‑by‑zero logic
+- **scrolls/** → curriculum, rituals, lifecycle guides
+- **registry/** → JSON registries for glyphs, badges, scrolls
+- **contributors/** → honor rolls, configs, impact logs
+- **discoverability/** → SEO and onboarding scrolls
+- **TFThooks/** → site‑extension hooks specific to TFTincryption
+
+TFTincryption is a quantum‑hostile encryption protocol built on triadic resonance.  
+It is invoked from within [agent‑shell](../agent-shell/) and extended by [MightyTHOR](../mightythor/).
+
+Shared resource: [folds](../folds/) provide resonance mappings that can be referenced in glyph registries.
+
+---
+
 ## 🛠️ How to Remix
 
 1. **Activate runtime modules** from `protocol-core/`
