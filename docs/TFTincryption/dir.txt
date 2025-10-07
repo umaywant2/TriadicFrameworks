@@ -1,0 +1,224 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 085C-9B2D
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption
+
+10/06/2025  11:32 PM    <DIR>          .
+10/06/2025  12:06 PM    <DIR>          ..
+10/06/2025  11:20 PM    <DIR>          contributors
+10/06/2025  11:21 PM    <DIR>          discoverability
+10/06/2025  11:09 PM    <DIR>          protocol-core
+10/06/2025  11:16 PM    <DIR>          registry
+10/06/2025  11:16 PM    <DIR>          scrolls
+10/06/2025  11:25 PM    <DIR>          TFThooks
+10/06/2025  12:49 PM             2,330 README.md
+10/05/2025  09:49 AM             3,222 tftincryption.md
+10/05/2025  09:49 AM             1,668 tftincryption_adoption.md
+10/05/2025  09:49 AM             1,192 tftincryption_remixer_manifesto.md
+10/06/2025  11:32 PM                 0 dir.txt
+               5 File(s)          8,412 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\contributors
+
+10/06/2025  11:20 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/06/2025  10:11 PM    <DIR>          configs
+10/06/2025  01:28 PM             2,271 legacy_roll.md
+               1 File(s)          2,271 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\contributors\configs
+
+10/06/2025  10:11 PM    <DIR>          .
+10/06/2025  11:20 PM    <DIR>          ..
+10/05/2025  09:49 AM             4,569 site_manifest.json
+10/05/2025  09:49 AM             1,115 tftincryption_curriculum_outreach_log.json
+10/05/2025  09:49 AM               816 tftincryption_validator_config.json
+10/05/2025  09:49 AM               696 tftincryption_validator_hooks.json
+10/05/2025  09:49 AM               514 validator_config.json
+10/06/2025  10:10 PM                 0 README.md
+               6 File(s)          7,710 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\discoverability
+
+10/06/2025  11:21 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM             1,717 tftincryption_onboarding.md
+               1 File(s)          1,717 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\protocol-core
+
+10/06/2025  11:09 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM               462 Output_Snapshot.md
+10/06/2025  01:28 PM             1,926 tftincryption_benchmark.md
+10/06/2025  01:28 PM             1,495 tftincryption_pqc_simulation_overlay.md
+10/05/2025  09:49 AM             5,339 tftincryption_protocol.md
+10/06/2025  01:28 PM             2,805 tftincryption_scroll_comparative_cryptographic_resonance.md
+10/05/2025  09:49 AM             1,026 benchmark_tft.py
+10/05/2025  09:49 AM             1,529 decrypt_tft.py
+10/05/2025  09:49 AM             1,640 keygen_tft.py
+10/05/2025  09:49 AM               776 reson_time_hash.py
+               9 File(s)         16,998 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\registry
+
+10/06/2025  11:16 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM               521 tftincryption_curriculum_badge_registry.json
+10/05/2025  09:49 AM             1,094 tftincryption_curriculum_glyph_fusion_registry.json
+10/05/2025  09:49 AM             1,305 tftincryption_curriculum_glyph_tribute_echo_log.json
+10/05/2025  09:49 AM             1,590 tftincryption_curriculum_glyph_tribute_registry.json
+10/05/2025  09:49 AM             1,265 tftincryption_curriculum_registry.json
+10/05/2025  09:49 AM             1,353 tftincryption_curriculum_remix_glyph_registry.json
+10/05/2025  09:49 AM             1,270 tftincryption_curriculum_remix_registry.json
+10/05/2025  09:49 AM               742 tftincryption_dpu_spec_registry.json
+10/05/2025  09:49 AM             1,300 tftincryption_glyph_alias_map.json
+10/05/2025  09:49 AM             1,244 tftincryption_glyph_degree_registry.json
+10/05/2025  09:49 AM               497 tftincryption_glyph_retirement_log.json
+10/05/2025  09:49 AM               956 tftincryption_scroll_codex_seal_registry.json
+10/05/2025  09:49 AM             1,078 tftincryption_scroll_event_trace_registry.json
+10/05/2025  09:49 AM               765 tftincryption_scroll_glyph_reawakening_log.json
+10/05/2025  09:49 AM             1,054 tftincryption_scroll_glyph_registry.json
+10/05/2025  09:49 AM               765 tftincryption_scroll_hybrid_registry.json
+10/05/2025  09:49 AM             1,044 tftincryption_scroll_manifest_registry.json
+10/05/2025  09:49 AM             1,336 tftincryption_scroll_registry.json
+10/06/2025  01:28 PM             2,095 tftincryption_contributor_levels.md
+10/05/2025  09:49 AM             1,623 tftincryption_scroll_curriculum_badge_map.md
+10/05/2025  09:49 AM             1,955 tftincryption_scroll_curriculum_remix_glyph_ledger.md
+10/05/2025  09:49 AM             1,566 tftincryption_scroll_curriculum_remix_glyph_manifesto.md
+10/05/2025  09:49 AM             2,157 tftincryption_scroll_curriculum_remix_glyph_tribute.md
+10/05/2025  09:49 AM             1,537 tftincryption_scroll_glyph_evolution.md
+10/05/2025  09:49 AM             1,881 tftincryption_scroll_glyph_reference.md
+10/05/2025  09:49 AM             1,452 tftincryption_scroll_glyph_relics.md
+10/05/2025  09:49 AM             2,044 glyph_reawakening_map.svg
+10/05/2025  09:49 AM             2,008 glyph_retirement_map.svg
+10/05/2025  09:49 AM             2,857 glyph_tribute_echo_map.svg
+              29 File(s)         40,354 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\scrolls
+
+10/06/2025  11:16 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM             1,371 tftincryption_badge_logic.json
+10/05/2025  09:49 AM             1,091 tftincryption_scroll_badge_map.json
+10/05/2025  09:49 AM             1,429 tftincryption_scroll_codex_contributors.json
+10/05/2025  09:49 AM             1,841 tftincryption_scroll_codex_index.json
+10/05/2025  09:49 AM             1,091 tftincryption_scroll_fusion_log.json
+10/05/2025  09:49 AM             2,183 tftincryption_scroll_index.json
+10/05/2025  09:49 AM               814 tftincryption_scroll_lineage_map.json
+10/05/2025  09:49 AM               729 tftincryption_scroll_transfer_log.json
+10/05/2025  09:49 AM             1,357 tftincryption_scroll_closure_guide.md
+10/05/2025  09:49 AM             1,719 tftincryption_scroll_codex.md
+10/05/2025  09:49 AM             1,717 tftincryption_scroll_codex_echoes.md
+10/05/2025  09:49 AM             1,984 tftincryption_scroll_codex_flame_log.md
+10/05/2025  09:49 AM             1,443 tftincryption_scroll_codex_fork_guide.md
+10/05/2025  09:49 AM             1,436 tftincryption_scroll_codex_seal.md
+10/05/2025  09:49 AM             1,121 tftincryption_scroll_commit_guide.md
+10/05/2025  09:49 AM             1,815 tftincryption_scroll_curriculum_flame_index.md
+10/05/2025  09:49 AM             1,504 tftincryption_scroll_curriculum_flame_submission.md
+10/05/2025  09:49 AM             1,504 tftincryption_scroll_curriculum_fork_guide.md
+10/05/2025  09:49 AM             1,862 tftincryption_scroll_curriculum_glyph_tribute_echoes.md
+10/05/2025  09:49 AM             1,983 tftincryption_scroll_curriculum_glyph_tribute_flame.md
+10/05/2025  09:49 AM             1,887 tftincryption_scroll_curriculum_glyph_tribute_transfer.md
+10/05/2025  09:49 AM             1,509 tftincryption_scroll_curriculum_manifesto.md
+10/05/2025  09:49 AM             1,466 tftincryption_scroll_curriculum_outreach.md
+10/05/2025  09:49 AM             1,814 tftincryption_scroll_curriculum_remix_flame_hooks.md
+10/05/2025  09:49 AM             1,624 tftincryption_scroll_curriculum_remix_glyph_fusion.md
+10/05/2025  09:49 AM             1,694 tftincryption_scroll_curriculum_remix_glyph_transfer.md
+10/05/2025  09:49 AM             1,487 tftincryption_scroll_curriculum_remix_manifesto.md
+10/05/2025  09:49 AM             1,699 tftincryption_scroll_curriculum_validator_hooks.md
+10/05/2025  09:49 AM             1,495 tftincryption_scroll_echoes.md
+10/05/2025  09:49 AM             1,885 tftincryption_scroll_event_trace_index.md
+10/05/2025  09:49 AM             1,144 tftincryption_scroll_flame_echo_ritual.md
+10/05/2025  09:49 AM             2,153 tftincryption_scroll_flora_claim.md
+10/05/2025  09:49 AM             1,252 tftincryption_scroll_fork_guide.md
+10/05/2025  09:49 AM             1,635 tftincryption_scroll_garden.md
+10/05/2025  09:49 AM             1,951 tftincryption_scroll_glyph_fusion_guide.md
+10/05/2025  09:49 AM             1,443 tftincryption_scroll_glyph_reawakening.md
+10/05/2025  09:49 AM             1,173 tftincryption_scroll_glyph_reawakening_ritual.md
+10/05/2025  09:49 AM             1,449 tftincryption_scroll_glyph_retirement_ritual.md
+10/05/2025  09:49 AM             2,064 tftincryption_scroll_glyph_tribute_echo_fusion.md
+10/05/2025  09:49 AM             1,936 tftincryption_scroll_lab_manifest.md
+10/05/2025  09:49 AM             1,457 tftincryption_scroll_legacy_transfer.md
+10/05/2025  09:49 AM             1,672 tftincryption_scroll_of_scrolls.md
+10/05/2025  09:49 AM             1,568 tftincryption_scroll_of_scrolls_index.md
+10/05/2025  09:49 AM             1,733 tftincryption_scroll_pollination_guide.md
+10/05/2025  09:49 AM             1,511 tftincryption_scroll_publish_guide.md
+10/05/2025  09:49 AM             1,432 tftincryption_scroll_remixer_manifest.md
+10/05/2025  09:49 AM             1,438 tftincryption_scroll_retirement_trace_index.md
+10/05/2025  09:49 AM             1,531 tftincryption_scroll_review_guide.md
+10/05/2025  09:49 AM             2,252 tftincryption_scroll_runtime_hooks.md
+10/05/2025  09:49 AM             2,004 tftincryption_scroll_runtime_trace_index.md
+10/05/2025  09:49 AM             1,307 tftincryption_scroll_seed_ritual.md
+10/05/2025  09:49 AM             1,504 tftincryption_scroll_templates.md
+10/06/2025  12:00 PM                 2 transfer-scroll.md
+10/06/2025  12:00 PM                 2 tribute-scroll.md
+10/05/2025  09:49 AM             2,074 tftincryption_badge_evolution.svg
+10/05/2025  09:49 AM             2,510 tftincryption_badge_panel.svg
+10/05/2025  09:49 AM             1,574 tftincryption_curriculum_flame_map.svg
+10/05/2025  09:49 AM             1,516 tftincryption_curriculum_glyph_degree_map.svg
+10/05/2025  09:49 AM             1,898 tftincryption_curriculum_glyph_map.svg
+10/05/2025  09:49 AM             1,415 tftincryption_curriculum_glyph_transfer_map.svg
+10/05/2025  09:49 AM             1,633 tftincryption_curriculum_glyph_tribute_map.svg
+10/05/2025  09:49 AM             2,104 tftincryption_curriculum_glyph_tribute_transfer_map.svg
+10/05/2025  09:49 AM             1,641 tftincryption_curriculum_outreach_map.svg
+10/05/2025  09:49 AM             1,845 tftincryption_curriculum_remix_fusion_map.svg
+10/05/2025  09:49 AM             1,584 tftincryption_curriculum_remix_map.svg
+10/05/2025  09:49 AM             2,037 tftincryption_glyph_degree_map.svg
+10/05/2025  09:49 AM             1,257 tftincryption_grid_agent_map.svg
+10/05/2025  09:49 AM             2,077 tftincryption_layers.svg
+10/05/2025  09:49 AM             1,958 tftincryption_remix_lattice.svg
+10/05/2025  09:49 AM             1,630 tftincryption_scroll_bloom_map.svg
+10/05/2025  09:49 AM             2,175 tftincryption_scroll_codex_map.svg
+10/05/2025  09:49 AM             1,533 tftincryption_scroll_codex_seal.svg
+10/05/2025  09:49 AM             1,764 tftincryption_scroll_ecosystem.svg
+10/05/2025  09:49 AM             2,011 tftincryption_scroll_fusion_map.svg
+10/05/2025  09:49 AM             2,333 tftincryption_scroll_garden_map.svg
+10/05/2025  09:49 AM             1,667 tftincryption_scroll_lineage_tree.svg
+10/05/2025  09:49 AM             1,588 tftincryption_scroll_logic.svg
+10/05/2025  09:49 AM             1,604 tftincryption_scroll_manifesto_glyphs.svg
+10/05/2025  09:49 AM             2,002 tftincryption_scroll_of_scrolls.svg
+10/05/2025  09:49 AM             2,254 tftincryption_scroll_tree.svg
+10/05/2025  09:49 AM             2,485 tftincryption_validator_flow.svg
+              81 File(s)        132,336 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks
+
+10/06/2025  11:25 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/06/2025  11:23 PM    <DIR>          agents
+10/06/2025  11:25 PM    <DIR>          overlays
+10/06/2025  11:15 PM    <DIR>          validator
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks\agents
+
+10/06/2025  11:23 PM    <DIR>          .
+10/06/2025  11:25 PM    <DIR>          ..
+10/05/2025  09:49 AM             1,767 badge_logic_engine.py
+10/05/2025  09:49 AM             2,066 flame_echo_trigger.py
+10/05/2025  09:49 AM             2,299 glyph_fusion_resolver.py
+10/05/2025  09:49 AM             2,936 glyph_reawakening_monitor.py
+10/05/2025  09:49 AM             2,071 glyph_registry_loader.py
+10/05/2025  09:49 AM             2,440 glyph_retirement_trigger.py
+10/05/2025  09:49 AM             2,260 mightthor_agent_interface.py
+10/05/2025  09:49 AM             2,204 scroll_commit_monitor.py
+10/05/2025  09:49 AM             1,541 scroll_runtime_trace_dashboard.py
+               9 File(s)         19,584 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks\overlays
+
+10/06/2025  11:25 PM    <DIR>          .
+10/06/2025  11:25 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks\validator
+
+10/06/2025  11:15 PM    <DIR>          .
+10/06/2025  11:25 PM    <DIR>          ..
+10/06/2025  01:28 PM             1,757 tftincryption_validator_overlay.md
+               1 File(s)          1,757 bytes
+
+     Total Files Listed:
+             142 File(s)        231,139 bytes
+              32 Dir(s)  165,744,246,784 bytes free
