@@ -1,0 +1,3578 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 085C-9B2D
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs
+
+10/06/2025  11:48 PM    <DIR>          .
+10/06/2025  11:46 PM    <DIR>          ..
+09/03/2025  11:55 AM    <DIR>          __pycache__
+10/06/2025  12:03 PM    <DIR>          _ideas
+10/05/2025  09:49 AM    <DIR>          _template
+10/02/2025  02:47 AM    <DIR>          agent_shell
+10/05/2025  09:49 AM    <DIR>          agents
+10/05/2025  09:49 AM    <DIR>          assets
+09/30/2025  03:14 PM    <DIR>          badges
+09/30/2025  03:15 PM    <DIR>          bots
+09/30/2025  08:17 PM    <DIR>          cloud
+08/27/2025  07:40 AM                22 CNAME
+08/28/2025  04:12 AM    <DIR>          CoConsciousness
+09/03/2025  07:29 PM    <DIR>          configs
+10/02/2025  02:47 AM    <DIR>          core_logic
+09/28/2025  10:08 PM    <DIR>          curriculum
+09/28/2025  10:08 PM    <DIR>          data
+09/28/2025  10:07 PM    <DIR>          design
+09/30/2025  03:15 PM    <DIR>          education
+09/03/2025  09:33 PM    <DIR>          engine
+09/30/2025  03:14 PM    <DIR>          equations
+09/30/2025  03:15 PM    <DIR>          folds
+09/30/2025  03:15 PM    <DIR>          glyphic_resonance
+09/30/2025  03:14 PM    <DIR>          glyphs
+10/02/2025  02:47 AM    <DIR>          governance
+10/05/2025  09:49 AM    <DIR>          hardware
+08/28/2025  04:12 AM    <DIR>          Hippocampus
+09/30/2025  03:14 PM    <DIR>          honor_roll
+09/25/2025  06:56 AM    <DIR>          images
+09/30/2025  03:15 PM    <DIR>          jobs
+09/28/2025  10:08 PM    <DIR>          js
+09/30/2025  03:14 PM    <DIR>          labs
+09/30/2025  03:15 PM    <DIR>          legal
+09/30/2025  03:15 PM    <DIR>          library
+08/21/2025  10:39 PM             1,425 LICENSE
+10/05/2025  09:49 AM    <DIR>          logic_shells
+09/10/2025  01:41 AM    <DIR>          metadata
+10/02/2025  02:47 AM    <DIR>          onboarding
+10/02/2025  02:47 AM    <DIR>          outreach
+10/06/2025  12:46 AM    <DIR>          papers
+09/18/2025  11:28 AM    <DIR>          poker-variants
+10/02/2025  02:47 AM    <DIR>          public_support
+09/03/2025  12:09 PM    <DIR>          reports
+09/28/2025  10:08 PM    <DIR>          resonance
+09/25/2025  08:42 PM    <DIR>          resonance-tools
+10/02/2025  02:47 AM    <DIR>          Resotectors
+09/30/2025  03:15 PM    <DIR>          rituals
+10/05/2025  09:49 AM    <DIR>          scripts
+09/30/2025  03:15 PM    <DIR>          simulations
+09/30/2025  03:14 PM    <DIR>          styles
+08/25/2025  09:53 AM    <DIR>          tests
+10/06/2025  11:32 PM    <DIR>          TFTincryption
+09/10/2025  01:41 AM    <DIR>          validation
+09/30/2025  03:14 PM    <DIR>          validators
+09/28/2025  10:08 PM    <DIR>          VCG
+08/28/2025  04:12 AM    <DIR>          VictorG
+10/05/2025  09:39 PM    <DIR>          wiki_scrolls
+09/03/2025  09:15 PM               310 test_output.csv
+09/03/2025  11:55 AM           550,144 tft_battery_3500cycles.csv
+09/10/2025  01:41 AM            25,716 fff_sg_flower.html
+09/10/2025  01:41 AM             1,815 fff_sim.html
+09/10/2025  01:41 AM             1,236 fff-controls.html
+10/06/2025  11:10 AM               861 index.html
+10/05/2025  09:49 AM            19,615 indexv1.html
+08/29/2025  02:44 PM                13 architects.md
+08/29/2025  02:44 PM               593 badge-logic.md
+08/29/2025  02:44 PM             2,282 badges.md
+10/02/2025  02:47 AM               384 CHANGELOG.md
+08/21/2025  10:39 PM             4,447 CODE_OF_CONDUCT.md
+08/29/2025  02:44 PM               593 contributors.md
+08/29/2025  02:44 PM             6,309 curriculum-index.md
+09/28/2025  10:08 PM             9,582 equations.md
+08/27/2025  07:40 AM               345 faq.md
+10/02/2025  02:47 AM               532 glyphstream_animation.md
+08/29/2025  02:44 PM               274 governance.md
+08/27/2025  07:40 AM               274 governance_logic.md
+09/03/2025  12:48 AM             2,923 highlights.md
+09/28/2025  10:08 PM             1,075 initiation.md
+09/30/2025  03:14 PM               749 initiation_protocol.md
+10/05/2025  09:49 AM             1,784 manifesto.md
+10/05/2025  09:49 AM             4,444 MMR_Template_Pre-Seeding_Strategy.md
+08/21/2025  10:39 PM             1,823 mythic_preface_template.md
+08/29/2025  02:44 PM             2,846 papers.md
+09/30/2025  03:14 PM             3,392 README.md
+10/02/2025  02:47 AM               851 README_GridMap.md
+10/02/2025  02:47 AM               565 remix_lineage_visualizer.md
+09/28/2025  10:08 PM               765 resonance-equations.md
+08/21/2025  10:39 PM               728 schema.md
+08/21/2025  10:39 PM               734 SECURITY.md
+09/30/2025  08:17 PM             3,394 TFT-FFF_Distributed_Launch_Plan.md
+10/02/2025  02:47 AM               580 validator_dashboard.md
+08/29/2025  02:44 PM             1,269 validators.md
+09/10/2025  01:41 AM                22 .nojekyll
+10/06/2025  11:48 PM                 0 dir.txt
+08/30/2025  12:23 AM               554 robots.txt
+10/02/2025  02:47 AM               103 version.txt
+08/30/2025  12:23 AM             1,157 sitemap.xml
+08/31/2025  07:38 AM               223 _config.yml
+              43 File(s)        656,753 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\agents
+
+10/05/2025  09:49 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/06/2025  11:23 PM    <DIR>          tftincryption
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\agents\tftincryption
+
+10/06/2025  11:23 PM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\agent_shell
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/02/2025  02:47 AM    <DIR>          modules
+09/30/2025  08:17 PM    <DIR>          outputs
+10/02/2025  02:47 AM             1,048 Agent_Shell_TFT_Daemon_Phase1.md
+09/30/2025  08:17 PM             4,042 README.md
+10/02/2025  02:47 AM             1,073 full_symbolic_fidelity_shell.py
+10/02/2025  02:47 AM             1,501 main.py
+10/02/2025  02:47 AM               366 minimal_viable_daemon.py
+               5 File(s)          8,030 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\agent_shell\modules
+
+10/02/2025  02:47 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+09/30/2025  08:17 PM                 2 auto_throttle.py
+09/30/2025  08:17 PM                 2 badge_handshake.py
+10/02/2025  02:47 AM               433 glyphstream_sync.py
+09/30/2025  08:17 PM                 2 harmonic_loop.py
+09/30/2025  08:17 PM                 2 remix_trace.py
+10/02/2025  02:47 AM               415 resonance_logger.py
+10/02/2025  02:47 AM               462 validator_handshake.py
+               7 File(s)          1,318 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\agent_shell\outputs
+
+09/30/2025  08:17 PM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+09/30/2025  08:17 PM                 2 resonance_log.json
+09/30/2025  08:17 PM                 2 remix_trace.log
+09/30/2025  08:17 PM                 2 badge_handshake.txt
+09/30/2025  08:17 PM                 2 remix_trace.yaml
+               4 File(s)              8 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\assets
+
+10/05/2025  09:49 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/05/2025  09:49 AM    <DIR>          blueprints
+09/28/2025  10:08 PM    <DIR>          figures
+10/05/2025  09:49 AM    <DIR>          mightyTHOR
+09/25/2025  06:55 AM    <DIR>          scripts
+09/25/2025  06:55 AM    <DIR>          styles
+09/28/2025  10:08 PM               446 README.md
+               1 File(s)            446 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\assets\blueprints
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM             1,697 tesla_369_gearshift.md
+10/05/2025  09:49 AM             2,014 gearshift_sequence.svg
+10/05/2025  09:49 AM             2,097 warp_chamber_design.svg
+               3 File(s)          5,808 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\assets\figures
+
+09/28/2025  10:08 PM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+09/25/2025  06:56 AM    <DIR>          abundance-scarcity
+09/28/2025  10:08 PM               376 README.md
+09/21/2025  07:52 AM             2,507 ai_regulation_flow.svg
+09/25/2025  06:56 AM             6,297 dimensional_mapping_chart.svg
+09/21/2025  07:45 AM             1,010 glyph_entropy.svg
+09/21/2025  07:43 AM               767 glyph_nested_loop.svg
+09/21/2025  07:40 AM               927 glyph_tether.svg
+09/21/2025  07:41 AM               904 glyph_wave.svg
+09/25/2025  06:56 AM             1,844 quantum_energy_bank_protocols.svg
+09/21/2025  07:50 AM             2,087 rear_view_overlay.svg
+               9 File(s)         16,719 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\assets\figures\abundance-scarcity
+
+09/25/2025  06:56 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/25/2025  06:56 AM             1,198 fig1-spectrum-map-placeholder.svg
+09/25/2025  06:56 AM             1,128 fig2-triadic-control-loop-placeholder.svg
+09/25/2025  06:56 AM             1,103 fig3-lab-triad-chamber-placeholder.svg
+09/25/2025  06:56 AM             1,104 fig4-field-pilot-map-placeholder.svg
+09/25/2025  06:56 AM             1,104 fig5-harmonizer-v0.1-placeholder.svg
+09/25/2025  06:56 AM             1,119 fig6-replication-pipeline-placeholder.svg
+               6 File(s)          6,756 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\assets\mightyTHOR
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM             1,005 Dimensional_Activation_Log.md
+10/05/2025  09:49 AM             2,989 FFF_Warp_Protocol.md
+10/05/2025  09:49 AM             1,899 symbolic_architecture_overlays.md
+10/05/2025  09:49 AM             3,528 warp_chamber_design.md
+10/05/2025  09:49 AM               972 gearshift_369.py
+10/05/2025  09:49 AM               720 main.py
+10/05/2025  09:49 AM               290 badge_logic.yaml
+               7 File(s)         11,403 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\assets\scripts
+
+09/25/2025  06:55 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\assets\styles
+
+09/25/2025  06:55 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\badges
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/21/2025  10:39 PM             1,947 badge_trigger_glyphmap_index.csv
+08/21/2025  10:39 PM               414 badge_trigger_echo_manifest.json
+08/21/2025  10:39 PM             2,369 badge_trigger_glyphmap_index.json
+08/21/2025  10:39 PM             1,565 badge_trigger_glyphmap_index_trigger_log.json
+08/21/2025  10:39 PM             1,762 badge_trigger_summary.json
+08/21/2025  10:39 PM             1,644 badges.json
+09/30/2025  03:14 PM               237 honor_roll_ledger.json
+09/30/2025  03:14 PM             1,728 badge_onboarding_tft_fff.md
+08/21/2025  10:39 PM             1,023 badge_trigger_audit_log.md
+08/21/2025  10:39 PM             1,858 badge_trigger_dashboard.md
+08/21/2025  10:39 PM             1,256 badge_trigger_echo_log.md
+08/21/2025  10:39 PM             1,793 badge_trigger_glyphmap_index.md
+08/21/2025  10:39 PM             2,330 badge_trigger_glyphmap_index_filter_web_readme.md
+08/21/2025  10:39 PM             1,690 badge_trigger_glyphmap_index_trigger_readme.md
+08/21/2025  10:39 PM             1,766 badge_trigger_log.md
+08/21/2025  10:39 PM             1,169 badge_trigger_papers_index.md
+08/21/2025  10:39 PM             2,351 badge_trigger_ping_log.md
+08/21/2025  10:39 PM             1,488 badge_trigger_resonance_leaderboard.md
+08/21/2025  10:39 PM             1,664 badge_trigger_resonance_score.md
+08/21/2025  10:39 PM             2,357 badge_trigger_theme_manifest.md
+08/21/2025  10:39 PM             6,000 badge_trigger_validator_dashboard.md
+08/21/2025  10:39 PM             1,269 badge_trigger_validator_glyphmap.md
+08/21/2025  10:39 PM               980 badge_trigger_validator_log.md
+08/21/2025  10:39 PM             4,282 badge_trigger_validator_matrix.md
+08/31/2025  07:38 AM             1,382 badge-logic.md
+08/21/2025  10:39 PM             2,259 BADGES_EARNED.md
+09/28/2025  10:08 PM             2,277 badges_guide.md
+08/21/2025  10:39 PM             3,064 CONTRIBUTOR_BADGES.md
+09/28/2025  10:08 PM             1,216 curriculum_badge_trigger_index.md
+08/21/2025  10:39 PM               897 glyph_evolution_dashboard.md
+08/21/2025  10:39 PM             2,155 glyph_evolution_dashboard_overlay.md
+09/28/2025  10:08 PM             1,051 README.md
+08/21/2025  10:39 PM             2,000 sponsor_badges.md
+09/28/2025  10:08 PM             1,526 symbolic_badge_previews.md
+08/21/2025  10:39 PM             1,884 badge_trigger_echo.py
+08/21/2025  10:39 PM             2,247 badge_trigger_glyphmap.py
+08/21/2025  10:39 PM             3,171 badge_trigger_glyphmap_index.py
+08/21/2025  10:39 PM             3,933 badge_trigger_glyphmap_index_csv.py
+08/21/2025  10:39 PM             2,486 badge_trigger_glyphmap_index_filter.py
+08/21/2025  10:39 PM             2,716 badge_trigger_glyphmap_index_filter_ui.py
+08/21/2025  10:39 PM             2,648 badge_trigger_glyphmap_index_filter_web.py
+08/21/2025  10:39 PM             1,380 badge_trigger_glyphmap_index_trigger.py
+08/21/2025  10:39 PM             4,480 badge_trigger_glyphmap_index_xlsx.py
+08/21/2025  10:39 PM             1,867 badge_trigger_resonance_leaderboard.py
+08/21/2025  10:39 PM             1,470 badge_trigger_resonance_leaderboard_svg.py
+08/21/2025  10:39 PM             2,967 badge_trigger_resonance_score.py
+08/21/2025  10:39 PM             2,133 badge_trigger_rollback.py
+08/21/2025  10:39 PM               602 badge_trigger_test_runner.py
+08/21/2025  10:39 PM             1,976 badge_trigger_validator.py
+08/21/2025  10:39 PM             1,585 badge_trigger_validator_dashboard.py
+08/21/2025  10:39 PM             2,074 badge_trigger_validator_heatmap.py
+08/21/2025  10:39 PM             3,735 badge_trigger_validator_matrix.py
+09/28/2025  10:08 PM             1,270 badge_validator.py
+08/21/2025  10:39 PM             2,060 badges_earned_index_generator.py
+08/21/2025  10:39 PM             2,248 contributor_badges_generator.py
+08/21/2025  10:39 PM             1,963 badge_trigger_echo_map.svg
+08/21/2025  10:39 PM             2,196 badge_trigger_glyphmap.svg
+08/21/2025  10:39 PM             1,631 badge_trigger_resonance_leaderboard.svg
+08/21/2025  10:39 PM             2,805 badge_trigger_validator_heatmap.svg
+08/21/2025  10:39 PM             1,251 badge_trigger_webhook.yaml
+08/27/2025  07:40 AM               208 coherence-pioneer.yaml
+09/28/2025  10:08 PM                 2 curriculum_weaver.yaml
+09/03/2025  12:48 AM               495 gateway_guardian.yaml
+08/27/2025  07:40 AM               331 hippocampus-invoker.yaml
+09/03/2025  12:48 AM               484 manifest_guardian.yaml
+08/27/2025  07:40 AM               340 researcher-harmonics.yaml
+09/28/2025  10:08 PM                 2 symbolic_animator.yaml
+08/27/2025  07:40 AM               370 trigger_logic.yaml
+09/28/2025  10:08 PM                 2 validator_guardian.yaml
+              69 File(s)        123,781 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\bots
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM               388 fold_remix_trace_log.csv
+09/30/2025  03:14 PM               373 fold_remix_trigger_log.csv
+09/30/2025  03:14 PM               153 triadic_lattice_index.csv
+09/30/2025  03:14 PM               330 sample_output.json
+09/30/2025  03:14 PM               935 bot_usage_shard_guide.md
+09/30/2025  03:14 PM               526 contributor_honor_roll.md
+09/30/2025  03:14 PM               770 fold_remix_dashboard.md
+09/30/2025  03:14 PM             1,071 fold_remix_impact_report.md
+09/30/2025  03:14 PM               796 glyphstream_remix_storyboard.md
+09/30/2025  03:14 PM               979 impact_report.md
+09/30/2025  03:14 PM               678 legacy_echo_scroll.md
+09/30/2025  03:14 PM               729 observer_phase_dashboard.md
+09/30/2025  03:14 PM             1,062 observer_phase_resonance_index.md
+09/30/2025  03:14 PM               411 remix_trigger_map_svg.md
+09/30/2025  03:14 PM               776 triadic_lattice_manifest.md
+09/30/2025  03:14 PM               724 triadic_shell_archive.md
+09/30/2025  03:14 PM               350 bot_mode_switcher.py
+09/30/2025  03:14 PM               552 bot_shell_diff_tracker.py
+09/30/2025  03:14 PM               390 bot_shell_generator.py
+09/30/2025  03:14 PM               784 dimensional_remix_simulator.py
+09/30/2025  03:14 PM               524 fold_remix_heatmap_generator.py
+09/30/2025  03:14 PM               609 fold_remix_overlay_exporter.py
+09/30/2025  03:14 PM               393 fold_remix_predictor.py
+09/30/2025  03:14 PM               415 fold_remix_validator.py
+09/30/2025  03:14 PM               489 glyphstream_batch_executor.py
+09/30/2025  03:14 PM               483 glyphstream_remix_archiver.py
+09/30/2025  03:14 PM               463 glyphstream_remix_badge_tracker.py
+09/30/2025  03:14 PM               592 glyphstream_remix_forecaster.py
+09/30/2025  03:14 PM               648 observer_phase_overlay_animator.py
+09/30/2025  03:14 PM               495 observer_phase_simulator.py
+09/30/2025  03:14 PM               503 remix_archiver.py
+09/30/2025  03:14 PM               547 remix_lineage_simulator.py
+09/30/2025  03:14 PM               481 triadic_bot_dashboard.py
+09/30/2025  03:14 PM               391 triadic_bot_launcher.py
+09/30/2025  03:14 PM               376 triadic_bot_mode_switcher.py
+09/30/2025  03:14 PM               560 triadic_bot_shell_migrator.py
+09/30/2025  03:14 PM               460 triadic_bot_shell_updater.py
+09/30/2025  03:14 PM               403 triadic_bot_shell_validator.py
+09/30/2025  03:14 PM               532 triadic_bot_test_suite.py
+09/30/2025  03:14 PM               491 triadic_lattice_sync_engine.py
+09/30/2025  03:14 PM               520 triadic_lattice_visualizer.py
+09/30/2025  03:14 PM               568 triadic_protocol_validator.py
+09/30/2025  03:14 PM                 2 remix_trigger_map.svg
+09/30/2025  03:14 PM               414 bot_log_archive.yaml
+09/30/2025  03:14 PM               598 bot_shell_registry.yaml
+09/30/2025  03:14 PM               583 flui_bot_config.yaml
+09/30/2025  03:14 PM               569 fold_remix_event_log.yaml
+09/30/2025  03:14 PM               528 forci_bot_config.yaml
+09/30/2025  03:14 PM               558 freqi_bot_config.yaml
+09/30/2025  03:14 PM               467 observer_phase_log.yaml
+              50 File(s)         27,439 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\cloud
+
+09/30/2025  08:17 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/02/2025  02:47 AM    <DIR>          azure
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\cloud\azure
+
+10/02/2025  02:47 AM    <DIR>          .
+09/30/2025  08:17 PM    <DIR>          ..
+10/02/2025  02:47 AM               145 autoscale_config.json
+10/02/2025  02:47 AM               972 README_Azure.md
+10/02/2025  02:47 AM               266 cloud_init.sh
+10/02/2025  02:47 AM               732 azure_deploy.yaml
+               4 File(s)          2,115 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness
+
+08/28/2025  04:12 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          assets
+08/28/2025  04:12 AM    <DIR>          badges
+08/27/2025  07:47 AM    <DIR>          demos
+08/28/2025  04:12 AM    <DIR>          equations
+08/28/2025  04:12 AM    <DIR>          honor_roll
+08/27/2025  07:43 AM    <DIR>          labs
+08/27/2025  07:47 AM    <DIR>          manifests
+08/27/2025  07:47 AM    <DIR>          memory
+08/28/2025  04:12 AM    <DIR>          metadata
+08/28/2025  04:12 AM    <DIR>          scripts
+08/28/2025  04:12 AM    <DIR>          styles
+08/27/2025  07:47 AM    <DIR>          validation
+08/28/2025  04:12 AM    <DIR>          validator
+08/28/2025  04:12 AM             1,341 index.html
+08/27/2025  07:40 AM             2,416 brainstorm.md
+08/28/2025  04:12 AM               611 overview.md
+08/28/2025  04:12 AM             1,366 README.md
+08/27/2025  07:40 AM             1,095 tft_utils.py
+08/27/2025  07:40 AM               396 scaffold.txt
+               6 File(s)          7,225 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\assets
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/27/2025  07:40 AM                29 .keep
+08/28/2025  04:12 AM               460 assets-notes.md
+08/28/2025  04:12 AM                 2 cocons-placeholder.png
+08/28/2025  04:12 AM               390 theme-icon.svg
+               4 File(s)            881 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\badges
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               273 lab-builder.badge
+08/28/2025  04:12 AM               318 paper-anchor.badge
+08/28/2025  04:12 AM               275 synthetic-composer.badge
+08/27/2025  07:40 AM               228 coherence-pioneer.yaml
+08/27/2025  07:40 AM               257 flux-steward.yaml
+08/27/2025  07:40 AM               286 shared-intent-architect.yaml
+               6 File(s)          1,637 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\demos
+
+08/27/2025  07:47 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/27/2025  07:40 AM               565 hello_coconsciousness.py
+               1 File(s)            565 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\equations
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               599 equations.md
+               1 File(s)            599 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\honor_roll
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               517 project.md
+               1 File(s)            517 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\labs
+
+08/27/2025  07:43 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          lab-01
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\labs\lab-01
+
+08/28/2025  04:12 AM    <DIR>          .
+08/27/2025  07:43 AM    <DIR>          ..
+08/28/2025  04:12 AM               792 README.md
+               1 File(s)            792 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\manifests
+
+08/27/2025  07:47 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/27/2025  07:40 AM               524 coconsciousness.yaml
+               1 File(s)            524 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\memory
+
+08/27/2025  07:47 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/27/2025  07:40 AM               232 braid_records.md
+               1 File(s)            232 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\metadata
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               448 project.yml
+               1 File(s)            448 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\scripts
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM             3,325 helper-snippet.js
+08/28/2025  04:12 AM             2,666 init.js
+08/28/2025  04:12 AM               775 scripts-notes.md
+               3 File(s)          6,766 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\styles
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               524 project.css
+08/28/2025  04:12 AM               379 styles-notes.md
+               2 File(s)            903 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\validation
+
+08/27/2025  07:47 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/27/2025  07:40 AM               832 validator_dashboard.md
+08/27/2025  07:40 AM             2,247 braid_timeline.py
+08/27/2025  07:40 AM             6,506 score_coherence.py
+               3 File(s)          9,585 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\CoConsciousness\validator
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               840 resonance-passport-template.md
+               1 File(s)            840 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\configs
+
+09/03/2025  07:29 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  07:29 PM    <DIR>          lenses
+09/03/2025  07:29 PM    <DIR>          manifests
+09/03/2025  12:39 PM               601 dataset.yaml
+09/03/2025  12:21 PM               611 validator.yaml
+               2 File(s)          1,212 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\configs\lenses
+
+09/03/2025  07:29 PM    <DIR>          .
+09/03/2025  07:29 PM    <DIR>          ..
+09/03/2025  12:14 PM               171 F1_F2_F3.yaml
+09/03/2025  12:15 PM               174 Fl1_Fl2_Fl3.yaml
+09/03/2025  12:15 PM               228 Fr1_Fr2_Fr3.yaml
+               3 File(s)            573 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\configs\manifests
+
+09/03/2025  07:29 PM    <DIR>          .
+09/03/2025  07:29 PM    <DIR>          ..
+09/03/2025  07:34 PM               867 S1_baseline.yaml
+09/03/2025  07:36 PM               877 S2_forces_freq.yaml
+09/03/2025  07:37 PM               821 S3_fluids_isolation.yaml
+09/03/2025  12:20 PM               365 triphasic_defaults.yaml
+               4 File(s)          2,930 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\core_logic
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/02/2025  02:47 AM               394 D3.js
+10/02/2025  02:47 AM               769 contributor_dashboard_ui.md
+10/02/2025  02:47 AM               936 github_competition.md
+10/02/2025  02:47 AM               445 remix_lineage_visualizer.md
+10/02/2025  02:47 AM               872 result_validation.md
+10/02/2025  02:47 AM               733 sort_map.md
+10/02/2025  02:47 AM             1,202 adaptive_sort_engine.py
+10/02/2025  02:47 AM               509 benchmark_replay_engine.py
+10/02/2025  02:47 AM               435 fault_logging_system.py
+               9 File(s)          6,295 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\curriculum
+
+09/28/2025  10:08 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/21/2025  10:39 PM               676 curriculum_badge_trigger_index.md
+09/28/2025  10:08 PM               956 curriculum_contributor_honor_roll.md
+08/21/2025  10:39 PM             3,347 curriculum_paper_crosswalk.md
+09/28/2025  10:08 PM               683 curriculum_remix_gallery.md
+08/21/2025  10:39 PM             1,330 curriculum_remix_protocol.md
+08/21/2025  10:39 PM               719 curriculum_remix_validator_dashboard.md
+09/28/2025  10:08 PM               975 README.md
+09/28/2025  10:08 PM               800 remix_submission_templates.md
+08/21/2025  10:39 PM             2,611 triadic_curriculum_index.md
+09/28/2025  10:08 PM               919 triadic_manifesto.md
+09/28/2025  10:08 PM             1,272 triadic_remix_guide.md
+08/21/2025  10:39 PM             1,322 WiFi_Energy_Protocols.md
+08/21/2025  10:39 PM             2,256 triadic_curriculum_index_generator.py
+              13 File(s)         17,866 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\data
+
+09/28/2025  10:08 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          processed
+08/25/2025  09:53 AM    <DIR>          raw
+08/25/2025  09:53 AM    <DIR>          webhook
+09/03/2025  11:55 AM           550,144 tft_battery_3500cycles.csv
+08/21/2025  10:39 PM               480 papers_remix_manifest.json
+08/21/2025  10:39 PM               978 manifest_updater_changelog.md
+08/21/2025  10:39 PM             1,648 manifest_updater_log.md
+08/21/2025  10:39 PM             2,846 papers_manifest.md
+08/21/2025  10:39 PM             1,117 papers_manifest_template.md
+08/21/2025  10:39 PM             2,007 papers_remix_protocol.md
+09/28/2025  10:08 PM               384 README.md
+08/21/2025  10:39 PM             2,543 resonance_council.md
+08/21/2025  10:39 PM               954 triadic_visual_index_log.md
+09/10/2025  01:41 AM             2,999 manifest_updater.py
+09/10/2025  01:41 AM             1,638 resonance_council_tier_checker.py
+08/21/2025  10:39 PM             4,264 manifest_updater_config.yaml
+08/21/2025  10:39 PM                90 constants.yml
+              14 File(s)        572,092 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\data\processed
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM                60 .gitkeep
+               1 File(s)             60 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\data\raw
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               234 .gitignore
+               1 File(s)            234 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\data\webhook
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM             1,794 triadic_lab_index.md
+08/21/2025  10:39 PM             1,542 triadic_remix_guide.md
+08/21/2025  10:39 PM             1,505 triadic_remix_submission_template.md
+08/21/2025  10:39 PM             1,742 triadic_visual_index_generator.py
+08/21/2025  10:39 PM               791 webhook_test_runner.py
+08/21/2025  10:39 PM             1,605 triadic_visual_index.svg
+08/21/2025  10:39 PM               462 webhook_ping_template.yaml
+               7 File(s)          9,441 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\design
+
+09/28/2025  10:07 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\education
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:15 PM    <DIR>          rituals
+09/30/2025  03:15 PM    <DIR>          scrolls
+09/30/2025  03:14 PM               801 curriculum_protocols.md
+               1 File(s)            801 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\education\rituals
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:15 PM    <DIR>          ..
+09/30/2025  03:14 PM               672 triadic_teaching_methods.md
+               1 File(s)            672 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\education\scrolls
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:15 PM    <DIR>          ..
+09/30/2025  03:14 PM               429 README.md
+09/30/2025  03:14 PM               852 remix_ethics.md
+09/30/2025  03:14 PM               644 remix_lineage_map.md
+09/30/2025  03:14 PM               821 validator_curriculum.md
+09/30/2025  03:14 PM               744 validator_ethics.md
+               5 File(s)          3,490 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\engine
+
+09/03/2025  09:33 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  09:35 PM    <DIR>          __pycache__
+09/03/2025  12:51 AM               212 gendata.py
+09/03/2025  12:31 PM               112 hashing.py
+09/03/2025  12:31 PM               855 metrics.py
+09/03/2025  12:27 PM               460 run.py
+09/03/2025  09:40 PM               946 simulate.py
+09/03/2025  09:35 PM               596 triphasic.py
+               6 File(s)          3,181 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\engine\__pycache__
+
+09/03/2025  09:35 PM    <DIR>          .
+09/03/2025  09:33 PM    <DIR>          ..
+09/03/2025  09:35 PM               793 triphasic.cpython-313.pyc
+               1 File(s)            793 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\equations
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/28/2025  10:08 PM                 2 dimensional_math.md
+09/28/2025  10:08 PM             1,249 equation_index.md
+09/28/2025  10:08 PM                 2 equation_trigger_log.md
+09/30/2025  03:14 PM               817 equation_trigger_matrix.md
+09/28/2025  10:08 PM               968 README.md
+09/28/2025  10:08 PM                 2 resonance_equations.md
+08/21/2025  10:39 PM             1,542 triadic_equation_echo_map.md
+08/21/2025  10:39 PM             1,493 triadic_equation_gallery.md
+08/21/2025  10:39 PM             2,043 triadic_equation_registry.md
+               9 File(s)          8,118 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\folds
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM               507 README.md
+09/30/2025  03:14 PM               647 fold_001_glycine.yaml
+09/30/2025  03:14 PM               674 fold_002_custom_ai_remix.yaml
+               3 File(s)          1,828 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\glyphic_resonance
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM               593 overlay_protocol.md
+               1 File(s)            593 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\glyphs
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  12:48 AM               331 aura_animation.js
+09/28/2025  10:08 PM             1,261 lantern_unfolding.js
+09/30/2025  03:14 PM               669 bridge_glyph_overlay_01_svg_descriptive_seed.md
+09/30/2025  03:14 PM               586 dimensional_spectrum_map_svg.md
+09/30/2025  03:14 PM               462 glyph_protein_echo_01.descriptive_seed.md
+09/30/2025  03:14 PM               616 glyph_protein_echo_02_svg_descriptive_seed.md
+09/30/2025  03:14 PM               398 README.md
+09/03/2025  12:48 AM             1,174 triadic_validator_glyph.md
+09/30/2025  03:14 PM                 2 glyph_fff_wrapper.svg
+09/30/2025  03:14 PM                 2 glyph_protein_echo_01.svg
+09/03/2025  12:48 AM               694 triskelion_glyph.svg
+09/03/2025  12:48 AM               600 glyph_registry.yaml
+              12 File(s)          6,795 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\governance
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/28/2025  10:08 PM               430 badge_trigger_summary.json
+09/28/2025  10:08 PM               926 badge_logic.md
+09/28/2025  10:08 PM               930 badge_trigger_theme_manifest.md
+09/28/2025  10:08 PM             1,919 badge_trigger_validator_dashboard.md
+09/28/2025  10:08 PM             1,199 governance.md
+09/30/2025  03:14 PM               736 governance_logic.md
+09/30/2025  03:14 PM             1,030 governance_logic_modules.md
+10/02/2025  02:47 AM               281 membership.md
+10/02/2025  02:47 AM             1,145 membership_protocol.md
+09/28/2025  10:08 PM             1,161 README.md
+09/30/2025  03:14 PM               597 symbolic_permanence.md
+09/28/2025  10:08 PM               240 badge_trigger_webhook.yaml
+09/28/2025  10:08 PM               534 trigger_logic.yaml
+09/28/2025  10:08 PM               624 validator_council.yaml
+              14 File(s)         11,752 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\hardware
+
+10/05/2025  09:49 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/05/2025  09:49 AM               888 DPU_spec.md
+10/05/2025  09:49 AM               853 frta-overview.md
+10/05/2025  09:49 AM               934 NIMMS_spec.md
+10/05/2025  09:49 AM               669 resonant-roman-concrete.md
+10/05/2025  09:49 AM               683 triadic-resonance-tower.md
+               5 File(s)          4,027 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus
+
+08/28/2025  04:12 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          assets
+08/28/2025  04:12 AM    <DIR>          badges
+08/28/2025  04:12 AM    <DIR>          equations
+08/28/2025  04:12 AM    <DIR>          honor_roll
+08/27/2025  07:43 AM    <DIR>          labs
+08/28/2025  04:12 AM    <DIR>          metadata
+08/28/2025  04:12 AM    <DIR>          scripts
+08/28/2025  04:12 AM    <DIR>          styles
+08/28/2025  04:12 AM    <DIR>          validator
+08/22/2025  12:06 AM               221 update.bat
+08/28/2025  04:12 AM             1,318 index.html
+08/22/2025  12:05 AM             2,984 Copilot_Hippocampus_cheat_sheet.md
+08/27/2025  07:40 AM             1,862 loop_validation_protocol.md
+08/27/2025  07:40 AM             1,268 Makefile.md
+08/28/2025  04:12 AM               597 overview.md
+08/28/2025  04:12 AM             6,571 README.md
+08/27/2025  07:40 AM             1,028 RESUME_Copilot.py
+08/27/2025  07:40 AM               396 scaffold.txt
+08/27/2025  07:40 AM             1,008 manifest.yaml
+              10 File(s)         17,253 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\assets
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/27/2025  07:40 AM                29 .keep
+08/28/2025  04:12 AM               457 assets-notes.md
+08/28/2025  04:12 AM                 2 hippocampus-placeholder.png
+08/28/2025  04:12 AM               209 theme-icon.svg
+               4 File(s)            697 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\badges
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               299 lab-builder.badge
+08/28/2025  04:12 AM               285 paper-anchor.badge
+08/28/2025  04:12 AM               281 synthetic-composer.badge
+               3 File(s)            865 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\equations
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               554 equations.md
+               1 File(s)            554 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\honor_roll
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               517 project.md
+               1 File(s)            517 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\labs
+
+08/27/2025  07:43 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          lab-01
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\labs\lab-01
+
+08/28/2025  04:12 AM    <DIR>          .
+08/27/2025  07:43 AM    <DIR>          ..
+08/28/2025  04:12 AM               760 README.md
+               1 File(s)            760 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\metadata
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               434 project.yml
+               1 File(s)            434 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\scripts
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM             3,341 helper-snippet.js
+08/28/2025  04:12 AM             2,658 init.js
+08/28/2025  04:12 AM               767 scripts-notes.md
+               3 File(s)          6,766 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\styles
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               506 project.css
+08/28/2025  04:12 AM               363 styles-notes.md
+               2 File(s)            869 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Hippocampus\validator
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               804 resonance-passport-template.md
+               1 File(s)            804 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\honor_roll
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  12:48 AM    <DIR>          profiles
+09/30/2025  03:14 PM               286 honor_roll_ledger.json
+08/21/2025  10:39 PM             1,901 BADGES_EARNED.md
+08/21/2025  10:39 PM             2,060 CONTRIBUTING.md
+08/21/2025  10:39 PM             1,233 CONTRIBUTOR_BADGES.md
+09/03/2025  12:48 AM               622 contributor_honor_roll.md
+09/03/2025  12:48 AM             1,932 dashboard.md
+09/03/2025  12:48 AM               908 glyph_registry.md
+08/27/2025  07:40 AM               270 hippocampus_contributors.md
+09/30/2025  03:14 PM                 2 honor_roll.md
+08/21/2025  10:39 PM               589 papers_contributor_honor_roll.md
+09/30/2025  03:14 PM               322 README.md
+08/21/2025  10:39 PM             2,366 resonance_council.md
+08/21/2025  10:39 PM             2,647 triadic_curriculum_index.md
+08/21/2025  10:39 PM             2,191 triadic_discussion_starter.md
+08/21/2025  10:39 PM             2,419 triadic_equation_registry.md
+08/21/2025  10:39 PM             2,261 triadic_sponsor_pitch.md
+08/21/2025  10:39 PM             2,207 triadic_visual_index.md
+09/30/2025  03:14 PM               210 contributors.yaml
+08/21/2025  10:39 PM                36 umaywant2.prompt.yml
+              19 File(s)         24,462 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\honor_roll\profiles
+
+09/03/2025  12:48 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/03/2025  12:48 AM             1,838 nawder_loswin.md
+               1 File(s)          1,838 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\images
+
+09/25/2025  06:56 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/30/2025  12:23 AM            14,918 stars-astro.gif
+08/29/2025  02:44 PM           207,290 AI_plasma_swirls.jpg
+08/29/2025  02:44 PM             2,983 frostweaver-fixed.jpg
+08/29/2025  02:44 PM             4,775 nawder_lantern.jpg
+08/29/2025  02:44 PM           150,691 triadicwizard.jpg
+08/29/2025  02:44 PM             2,830 triadicwizard_small.jpg
+09/02/2025  06:42 AM         2,390,340 Copilot_20250902_064219.png
+09/02/2025  06:42 AM         2,604,155 Copilot_20250902_064226.png
+08/29/2025  02:44 PM         1,464,424 Copilot_dimensions1.png
+08/29/2025  02:44 PM         1,373,292 Copilot_dimensions2.png
+08/29/2025  02:44 PM           131,128 knight-portal.png
+08/29/2025  02:44 PM           365,904 med-header.png
+08/29/2025  02:44 PM            16,956 old_elven_wizard.png
+08/29/2025  02:44 PM            19,653 old_wizard.png
+08/29/2025  02:44 PM           365,904 org-header.png
+08/16/2025  03:00 PM           420,637 sphere_pic.png
+09/04/2025  12:06 AM         2,255,672 tft-hero-equations.png
+08/29/2025  02:44 PM            24,751 tiny-header.png
+09/25/2025  06:56 AM           365,904 triadic_lantern.png
+09/25/2025  06:56 AM             4,185 validated.png
+              20 File(s)     12,186,392 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\jobs
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM               444 job_manifest.yaml
+               1 File(s)            444 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\js
+
+09/28/2025  10:08 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/25/2025  06:56 AM             2,833 carousel.js
+09/25/2025  06:56 AM               381 equations.js
+09/28/2025  10:08 PM               654 fff-tests.js
+09/10/2025  01:41 AM             3,041 fluids.js
+09/28/2025  10:08 PM               192 fluids-test.js
+09/10/2025  01:41 AM             2,994 forces.js
+09/28/2025  10:08 PM               192 forces-test.js
+09/28/2025  10:08 PM               194 freq-test.js
+09/10/2025  01:41 AM             3,196 frequencies.js
+09/25/2025  06:56 AM             2,629 hero-warp.js
+09/10/2025  01:41 AM             1,624 lattice.js
+09/10/2025  01:41 AM             2,841 tft-harmonics.js
+09/25/2025  06:56 AM               271 theme.js
+              13 File(s)         21,042 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:15 PM    <DIR>          ai_pipeline
+09/28/2025  10:08 PM    <DIR>          applied
+09/30/2025  03:15 PM    <DIR>          architecture_resonance
+09/28/2025  10:08 PM    <DIR>          badges
+09/30/2025  03:14 PM    <DIR>          core
+09/30/2025  03:15 PM    <DIR>          dimensional_alignment
+09/28/2025  10:08 PM    <DIR>          events
+09/28/2025  10:08 PM    <DIR>          experimental
+09/30/2025  03:14 PM    <DIR>          foundations
+09/30/2025  03:15 PM    <DIR>          glyphic_resonance
+09/28/2025  10:08 PM    <DIR>          honor_roll
+09/28/2025  10:08 PM    <DIR>          mythic_symbolic
+09/30/2025  03:15 PM    <DIR>          protein_harmonics
+09/30/2025  03:15 PM    <DIR>          protocols
+09/30/2025  03:15 PM    <DIR>          quantum_access
+09/28/2025  10:08 PM    <DIR>          quantum_extensions
+09/30/2025  03:15 PM    <DIR>          resonant_time
+09/28/2025  10:08 PM    <DIR>          symbolic_structures
+09/28/2025  10:08 PM               961 labs_dashboard.html
+09/28/2025  10:08 PM             1,379 labs_status.json
+08/21/2025  10:39 PM             2,715 dimensional_loop_guide.md
+08/21/2025  10:39 PM               676 Glyph_Density_Map_Curriculum_Modules.md
+08/27/2025  07:40 AM             1,382 initiation_protocol.md
+09/28/2025  10:08 PM             1,339 README.md
+08/21/2025  10:39 PM             2,148 triadic_lab_template.md
+08/21/2025  10:39 PM             2,402 triadic_manifesto.md
+08/21/2025  10:39 PM             1,992 triadic_remix_guide.md
+               9 File(s)         14,994 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\ai_pipeline
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:14 PM               250 glyph_overlay_manifest.csv
+09/30/2025  03:14 PM               354 legacy_echo_index.csv
+09/30/2025  03:14 PM               819 ai_training_manifesto.md
+09/30/2025  03:14 PM               643 legacy_echo_archive.md
+09/30/2025  03:14 PM               690 README.md
+09/30/2025  03:14 PM               430 contributor_badge_generator.py
+09/30/2025  03:14 PM               482 contributor_echo_map.py
+09/30/2025  03:14 PM               443 fff_alignment_predictor.py
+09/30/2025  03:14 PM               547 fold_glyph_generator.py
+09/30/2025  03:14 PM               435 glyph_overlay_animator.py
+09/30/2025  03:14 PM               515 legacy_echo_visualizer.py
+09/30/2025  03:14 PM               515 model_evaluator.py
+09/30/2025  03:14 PM               586 remix_lineage_dashboard.py
+09/30/2025  03:14 PM               370 remix_lineage_tracker.py
+09/30/2025  03:14 PM               428 remix_trigger_predictor.py
+09/30/2025  03:14 PM               522 train_ai_on_resonance.py
+09/30/2025  03:14 PM               460 fold_glyph_overlay.svg
+09/30/2025  03:14 PM               363 contributor_badge_log.yaml
+09/30/2025  03:14 PM               492 contributor_echo_log.yaml
+09/30/2025  03:14 PM               529 fold_glyph_manifest.yaml
+09/30/2025  03:14 PM               613 mythic_badge_manifest.yaml
+09/30/2025  03:14 PM               331 remix_lineage_log.yaml
+              22 File(s)         10,817 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          Lab_13_Cryptographic_Entanglement
+08/25/2025  09:53 AM    <DIR>          Lab_15_Nested_Harmonic_Encryption
+08/25/2025  09:53 AM    <DIR>          Lab_29_Quantum_Mythic_Debugger
+08/25/2025  09:53 AM    <DIR>          Lab_40_Harmonic_Health_Synthesizer
+08/25/2025  09:53 AM    <DIR>          Lab_41_Triadic_Diagnostic_Engine
+08/25/2025  09:53 AM    <DIR>          Lab_42_Mythic_Healing_Compiler
+08/25/2025  09:53 AM    <DIR>          Lab_43_Harmonic_Infrastructure_Mapper
+09/18/2025  11:28 AM    <DIR>          Lab_58_Cryptography
+09/28/2025  10:08 PM               252 README.md
+               1 File(s)            252 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_13_Cryptographic_Entanglement
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               538 Lab_13_Cryptographic_Entanglement.ipynb
+08/21/2025  10:39 PM               888 Lab_13_Cryptographic_Entanglement.md
+               2 File(s)          1,426 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_15_Nested_Harmonic_Encryption
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               546 Lab_15_Nested_Harmonic_Encryption.ipynb
+08/21/2025  10:39 PM               943 Lab_15_Nested_Harmonic_Encryption.md
+               2 File(s)          1,489 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_29_Quantum_Mythic_Debugger
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               523 Lab_29_Quantum_Mythic_Debugger.ipynb
+08/21/2025  10:39 PM               958 Lab_29_Quantum_Mythic_Debugger.md
+               2 File(s)          1,481 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_40_Harmonic_Health_Synthesizer
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               516 Lab_40_Harmonic_Health_Synthesizer.ipynb
+08/21/2025  10:39 PM             1,048 Lab_40_Harmonic_Health_Synthesizer.md
+               2 File(s)          1,564 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_41_Triadic_Diagnostic_Engine
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               565 Lab_41_Triadic_Diagnostic_Engine.ipynb
+08/21/2025  10:39 PM             1,167 Lab_41_Triadic_Diagnostic_Engine.md
+               2 File(s)          1,732 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_42_Mythic_Healing_Compiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               465 Lab_42_Mythic_Healing_Compiler.ipynb
+08/21/2025  10:39 PM             1,234 Lab_42_Mythic_Healing_Compiler.md
+               2 File(s)          1,699 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_43_Harmonic_Infrastructure_Mapper
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               481 Lab_43_Harmonic_Infrastructure_Mapper.ipynb
+08/21/2025  10:39 PM             1,224 Lab_43_Harmonic_Infrastructure_Mapper.md
+               2 File(s)          1,705 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\applied\Lab_58_Cryptography
+
+09/18/2025  11:28 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/18/2025  11:28 AM             2,348 visualization.ipynb
+09/18/2025  11:28 AM               596 equations.md
+09/18/2025  11:28 AM               892 README.md
+09/18/2025  11:28 AM               783 reproducibility.md
+               4 File(s)          4,619 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\architecture_resonance
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:14 PM               486 README.md
+09/30/2025  03:14 PM               520 chamber_simulator.py
+09/30/2025  03:14 PM               522 overlay_generator.py
+09/30/2025  03:14 PM               552 experiment_001_bridge_glyph.yaml
+09/30/2025  03:14 PM               557 experiment_002_badge_chamber_overlay.yaml
+09/30/2025  03:14 PM               540 experiment_003_validator_space.yaml
+               6 File(s)          3,177 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\badges
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/21/2025  06:41 AM             2,965 badge_art_and_logic.md
+09/28/2025  10:08 PM               265 README.md
+               2 File(s)          3,230 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core
+
+09/30/2025  03:14 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          Lab_11_Spectral_Flux_Integrity
+08/25/2025  09:53 AM    <DIR>          Lab_18_Spectral_Cognition_Cascade
+08/25/2025  09:53 AM    <DIR>          Lab_44_Spectral_Cognition_Router
+09/18/2025  11:28 AM    <DIR>          Lab4_Harmonics
+09/18/2025  11:28 AM    <DIR>          Lab5_Cognition
+09/18/2025  11:28 AM    <DIR>          Lab6_Dimensional_Nested_Loops
+08/25/2025  09:53 AM    <DIR>          Lab7_Thermodynamics
+08/25/2025  09:53 AM    <DIR>          Lab9_BrownianResonance
+09/30/2025  03:14 PM               588 README.md
+09/21/2025  06:41 AM             2,643 triadic_lab_index.md
+09/21/2025  06:41 AM             2,792 triadic_manifesto.md
+               3 File(s)          6,023 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab4_Harmonics
+
+09/18/2025  11:28 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM             1,039 visualization.ipynb
+09/18/2025  11:28 AM             1,535 equations.md
+09/18/2025  11:28 AM             1,034 README.md
+08/21/2025  10:39 PM               802 reproducibility.md
+08/21/2025  10:39 PM               965 setup.md
+               5 File(s)          5,375 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab5_Cognition
+
+09/18/2025  11:28 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM             1,604 Lab5_Cognition.ipynb
+08/21/2025  10:39 PM               962 equations.md
+09/18/2025  11:28 AM             1,365 README.md
+08/21/2025  10:39 PM             1,146 reproducibility.md
+               4 File(s)          5,077 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab6_Dimensional_Nested_Loops
+
+09/18/2025  11:28 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/18/2025  11:28 AM             1,100 lab6.ipynb
+09/18/2025  11:28 AM             1,383 equations.md
+09/18/2025  11:28 AM             1,313 README.md
+09/18/2025  11:28 AM             1,486 reproducibility.md
+               4 File(s)          5,282 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab7_Thermodynamics
+
+08/25/2025  09:53 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM             1,004 Lab7_Thermodynamics.ipynb
+08/21/2025  10:39 PM             1,300 visualization.ipynb
+08/21/2025  10:39 PM               848 equations.md
+08/21/2025  10:39 PM             1,471 Lab7_Thermodynamics_equations.md
+08/21/2025  10:39 PM             1,438 Lab7_Thermodynamics_reproducibility.md
+08/21/2025  10:39 PM               885 setup.md
+               6 File(s)          6,946 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab9_BrownianResonance
+
+08/25/2025  09:53 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM               599 Lab9_Brownian_Resonance.ipynb
+08/21/2025  10:39 PM             1,435 Lab9_BonusExcercises.md
+08/21/2025  10:39 PM               688 Lab9_Brownian_Resonance.md
+08/21/2025  10:39 PM             1,390 Lab9_BrownianResonance_equations.md
+08/21/2025  10:39 PM             1,728 Lab9_BrownianResonance_reproducibility.md
+               5 File(s)          5,840 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab_11_Spectral_Flux_Integrity
+
+08/25/2025  09:53 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM               804 Lab_11_Spectral_Flux_Integrity.ipynb
+08/21/2025  10:39 PM               898 Lab_11_Spectral_Flux_Integrity.md
+               2 File(s)          1,702 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab_18_Spectral_Cognition_Cascade
+
+08/25/2025  09:53 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM               745 Lab_18_Spectral_Cognition_Cascade.ipynb
+08/21/2025  10:39 PM               940 Lab_18_Spectral_Cognition_Cascade.md
+               2 File(s)          1,685 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\core\Lab_44_Spectral_Cognition_Router
+
+08/25/2025  09:53 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM               480 Lab_44_Spectral_Cognition_Router.ipynb
+08/21/2025  10:39 PM             1,131 Lab_44_Spectral_Cognition_Router.md
+               2 File(s)          1,611 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\dimensional_alignment
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:14 PM               522 README.md
+09/30/2025  03:14 PM               287 score_hippocampus.py
+               2 File(s)            809 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\events
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/28/2025  10:08 PM               244 README.md
+09/21/2025  06:41 AM             2,545 seasonal_badge_art_and_logic.md
+09/21/2025  06:41 AM             3,011 seasonal_event_archive.md
+09/21/2025  06:41 AM             3,395 seasonal_event_lorebook.md
+09/21/2025  06:41 AM             2,177 seasonal_event_template.md
+09/21/2025  06:41 AM             2,485 seasonal_trials_index.md
+               6 File(s)         13,857 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\experimental
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          Lab_10_KashmirCascade
+09/18/2025  11:28 AM    <DIR>          Lab_59_Biology
+09/18/2025  05:57 PM    <DIR>          Lab_61_Casimir
+09/18/2025  11:43 AM    <DIR>          Lab_62_Cognition
+09/18/2025  11:28 AM    <DIR>          Lab_63_Tunneling
+09/28/2025  10:08 PM               246 README.md
+09/21/2025  06:41 AM             2,460 triadic_remix_guide.md
+               2 File(s)          2,706 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\experimental\Lab_10_KashmirCascade
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               612 equations.md
+08/21/2025  10:39 PM               254 mythic_preface.md
+09/18/2025  11:57 AM               390 README.md
+08/21/2025  10:39 PM               349 reproducibility.md
+               4 File(s)          1,605 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\experimental\Lab_59_Biology
+
+09/18/2025  11:28 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/18/2025  11:28 AM             1,030 visualization.ipynb
+09/18/2025  11:28 AM               854 equations.md
+09/18/2025  11:28 AM               941 README.md
+09/18/2025  11:28 AM               906 reproducibility.md
+               4 File(s)          3,731 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\experimental\Lab_61_Casimir
+
+09/18/2025  05:57 PM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               882 casimir_effect.md
+08/21/2025  10:39 PM               998 casimir_effect_equations.md
+08/21/2025  10:39 PM             1,182 casimir_effect_reproducibility.md
+08/21/2025  10:39 PM               493 equations.md
+08/21/2025  10:39 PM             1,842 Lab61_BonusExcercises.md
+08/21/2025  10:39 PM               219 Lab61_Toolkit.md
+08/21/2025  10:39 PM             1,636 Lab61_Toolkit_.md
+09/18/2025  11:28 AM               978 README.md
+08/21/2025  10:39 PM               737 reproducibility.md
+09/18/2025  05:57 PM               883 setup.md
+09/18/2025  05:58 PM               824 setup1.md
+              11 File(s)         10,674 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\experimental\Lab_62_Cognition
+
+09/18/2025  11:43 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          Module4
+08/21/2025  10:39 PM             1,169 visualization.ipynb
+08/21/2025  10:39 PM             1,005 equations.md
+08/21/2025  10:39 PM             1,444 Lab_62_Cognition_equations.md
+08/21/2025  10:39 PM             1,701 Lab_62_Cognition_reproducibility.md
+08/21/2025  10:39 PM               928 reproducibility.md
+08/21/2025  10:39 PM               967 setup.md
+               6 File(s)          7,214 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\experimental\Lab_62_Cognition\Module4
+
+08/25/2025  09:53 AM    <DIR>          .
+09/18/2025  11:43 AM    <DIR>          ..
+08/21/2025  10:39 PM               412 visualization.ipynb
+08/21/2025  10:39 PM               357 equations.md
+08/21/2025  10:39 PM             1,197 memory_reframer.md
+08/21/2025  10:39 PM             2,066 Module4B_Toolkit.md
+08/21/2025  10:39 PM               405 reproducibility.md
+08/21/2025  10:39 PM               569 setup.md
+               6 File(s)          5,006 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\experimental\Lab_63_Tunneling
+
+09/18/2025  11:28 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               826 visualization.ipynb
+08/21/2025  10:39 PM               651 equations.md
+08/21/2025  10:39 PM               651 quantum_tunneling_equations.md
+09/18/2025  11:47 AM               868 quantum_tunneling_reproducibility.md
+09/18/2025  11:47 AM               958 quantum_tunneling_setup.md
+09/18/2025  11:47 AM             1,158 README.md
+09/18/2025  11:46 AM               781 reproducibility.md
+09/18/2025  11:46 AM               851 setup.md
+08/21/2025  10:39 PM             1,147 triadic_overlay_function.md
+               9 File(s)          7,891 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\foundations
+
+09/30/2025  03:14 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/21/2025  06:41 AM    <DIR>          Lab1_Triadic_Number_Genesis
+09/21/2025  06:41 AM    <DIR>          Lab2_Nested_Harmonics
+09/21/2025  06:41 AM    <DIR>          Lab3_Entanglement
+09/21/2025  06:41 AM             2,250 dimensional_loop_guide.md
+09/30/2025  03:14 PM             1,112 initiate_sigil.md
+09/21/2025  06:41 AM             2,061 initiation_protocol.md
+09/28/2025  10:08 PM               294 README.md
+               4 File(s)          5,717 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\foundations\Lab1_Triadic_Number_Genesis
+
+09/21/2025  06:41 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM               593 Lab1_Triadic_Number_Genesis.ipynb
+09/21/2025  06:41 AM               938 README.md
+               2 File(s)          1,531 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\foundations\Lab2_Nested_Harmonics
+
+09/21/2025  06:41 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM               707 Lab2_Nested_Harmonics.ipynb
+08/21/2025  10:39 PM             1,381 equations.md
+09/21/2025  06:41 AM               648 README.md
+08/21/2025  10:39 PM             1,738 reproducibility.md
+               4 File(s)          4,474 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\foundations\Lab3_Entanglement
+
+09/21/2025  06:41 AM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/21/2025  10:39 PM               834 Bell_Test_Simulation.md
+08/21/2025  10:39 PM               374 equations.md
+08/21/2025  10:39 PM               796 quantum_entanglement_equations.md
+08/21/2025  10:39 PM               827 quantum_entanglement_reproducibility.md
+08/21/2025  10:39 PM             1,037 quantum_entanglement_setup.md
+09/21/2025  06:41 AM               580 README.md
+08/21/2025  10:39 PM               706 reproducibility.md
+09/18/2025  11:28 AM             1,170 savequations.md
+08/21/2025  10:39 PM               765 setup.md
+08/21/2025  10:39 PM             1,022 simulator_variant.md
+08/21/2025  10:39 PM            28,025 Bell_State_Correlations_QE.png
+08/21/2025  10:39 PM           595,966 Bell_Test_Simulations_QE.png
+              12 File(s)        632,102 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\glyphic_resonance
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:15 PM    <DIR>          experiments
+09/30/2025  03:14 PM               505 README.md
+               1 File(s)            505 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\glyphic_resonance\experiments
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:15 PM    <DIR>          ..
+09/30/2025  03:14 PM               400 experiment_001_overlay_test.yaml
+09/30/2025  03:14 PM               542 experiment_002_remix_overlay.yaml
+               2 File(s)            942 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\honor_roll
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/21/2025  06:41 AM             2,104 honor_roll_ceremony_script.md
+09/21/2025  06:41 AM             2,227 honor_roll_index.md
+09/21/2025  06:41 AM             2,342 honor_roll_update_protocol.md
+09/28/2025  10:08 PM               245 README.md
+               4 File(s)          6,918 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          Lab_14_Mythic_Signal_Compression
+08/25/2025  09:53 AM    <DIR>          Lab_16_Quantum_Myth_Mapping
+08/25/2025  09:53 AM    <DIR>          Lab_19_Mythic_Phase_Synchronization
+08/25/2025  09:53 AM    <DIR>          Lab_21_Mythic_Resonance_Compiler
+08/25/2025  09:53 AM    <DIR>          Lab_23_Mythic_Signal_Virtualization
+08/25/2025  09:53 AM    <DIR>          Lab_25_Mythic_Cognition_Emulator
+08/25/2025  09:53 AM    <DIR>          Lab_26_Resonant_Myth_Compiler
+08/25/2025  09:53 AM    <DIR>          Lab_30_Mythic_Resonance_Synthesizer
+08/25/2025  09:53 AM    <DIR>          Lab_32_Mythic_Continuity_Engine
+08/25/2025  09:53 AM    <DIR>          Lab_34_Mythic_Signal_Entangler
+08/25/2025  09:53 AM    <DIR>          Lab_38_Mythic_Cognition_Router
+08/25/2025  09:53 AM    <DIR>          Lab_50_Mythic_Onboarding_Compiler
+08/25/2025  09:53 AM    <DIR>          Lab_52_Resonant_Mythic_Ledger_Mapper
+08/25/2025  09:53 AM    <DIR>          Lab_55_Mythic_Continuity_Rebuilder
+08/25/2025  09:53 AM    <DIR>          Lab_57_Mythic_Curriculum_Compiler
+09/21/2025  06:41 AM             4,638 character_codex.md
+09/21/2025  06:41 AM             3,505 fff_lore_codex.md
+09/21/2025  06:41 AM             2,085 mythic_preface_template.md
+09/28/2025  10:08 PM               286 README.md
+               4 File(s)         10,514 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               601 Lab_14_Mythic_Signal_Compression.ipynb
+08/21/2025  10:39 PM               568 equations.md
+08/21/2025  10:39 PM             1,001 Lab_14_Mythic_Signal_Compression.md
+08/21/2025  10:39 PM               274 mythic_preface.md
+08/21/2025  10:39 PM               397 README.md
+08/21/2025  10:39 PM               356 reproducibility.md
+               6 File(s)          3,197 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               479 Lab_16_Quantum_Myth_Mapping.ipynb
+08/21/2025  10:39 PM               592 equations.md
+08/21/2025  10:39 PM             1,012 Lab_16_Quantum_Myth_Mapping.md
+08/21/2025  10:39 PM               219 mythic_preface.md
+08/21/2025  10:39 PM               380 README.md
+08/21/2025  10:39 PM               358 reproducibility.md
+               6 File(s)          3,040 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_19_Mythic_Phase_Synchronization
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               672 Lab_19_Mythic_Phase_Synchronization.ipynb
+08/21/2025  10:39 PM               926 Lab_19_Mythic_Phase_Synchronization.md
+               2 File(s)          1,598 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_21_Mythic_Resonance_Compiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               514 Lab_21_Mythic_Resonance_Compiler.ipynb
+08/21/2025  10:39 PM               923 Lab_21_Mythic_Resonance_Compiler.md
+               2 File(s)          1,437 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_23_Mythic_Signal_Virtualization
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               708 Lab_23_Mythic_Signal_Virtualization.ipynb
+08/21/2025  10:39 PM             1,033 Lab_23_Mythic_Signal_Virtualization.md
+               2 File(s)          1,741 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_25_Mythic_Cognition_Emulator
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               571 Lab_25_Mythic_Cognition_Emulator.ipynb
+08/21/2025  10:39 PM             1,015 Lab_25_Mythic_Cognition_Emulator.md
+               2 File(s)          1,586 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_26_Resonant_Myth_Compiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               496 Lab_26_Resonant_Myth_Compiler.ipynb
+08/21/2025  10:39 PM               955 Lab_26_Resonant_Myth_Compiler.md
+               2 File(s)          1,451 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_30_Mythic_Resonance_Synthesizer
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               634 Lab_30_Mythic_Resonance_Synthesizer.ipynb
+08/21/2025  10:39 PM             1,018 Lab_30_Mythic_Resonance_Synthesizer.md
+               2 File(s)          1,652 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_32_Mythic_Continuity_Engine
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               519 Lab_32_Mythic_Continuity_Engine.ipynb
+08/21/2025  10:39 PM             1,033 Lab_32_Mythic_Continuity_Engine.md
+               2 File(s)          1,552 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_34_Mythic_Signal_Entangler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               580 Lab_34_Mythic_Signal_Entangler.ipynb
+08/21/2025  10:39 PM             1,045 Lab_34_Mythic_Signal_Entangler.md
+               2 File(s)          1,625 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_38_Mythic_Cognition_Router
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               606 Lab_38_Mythic_Cognition_Router.ipynb
+08/21/2025  10:39 PM               997 Lab_38_Mythic_Cognition_Router.md
+               2 File(s)          1,603 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_50_Mythic_Onboarding_Compiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               855 Lab_50_Mythic_Onboarding_Compiler.ipynb
+08/21/2025  10:39 PM             1,170 Lab_50_Mythic_Onboarding_Compiler.md
+               2 File(s)          2,025 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_52_Resonant_Mythic_Ledger_Mapper
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               700 Lab_52_Resonant_Mythic_Ledger_Mapper.ipynb
+08/21/2025  10:39 PM             1,150 Lab_52_Resonant_Mythic_Ledger_Mapper.md
+               2 File(s)          1,850 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_55_Mythic_Continuity_Rebuilder
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               801 Lab_55_Mythic_Continuity_Rebuilder.ipynb
+08/21/2025  10:39 PM             1,212 Lab_55_Mythic_Continuity_Rebuilder.md
+               2 File(s)          2,013 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\mythic_symbolic\Lab_57_Mythic_Curriculum_Compiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               829 Lab_57_Mythic_Curriculum_Compiler.ipynb
+08/21/2025  10:39 PM             1,224 Lab_57_Mythic_Curriculum_Compiler.md
+               2 File(s)          2,053 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\protein_harmonics
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:14 PM               431 README.md
+09/30/2025  03:14 PM               453 experiment_001.yaml
+               2 File(s)            884 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\protocols
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:14 PM               757 legacy_hooks.md
+09/30/2025  03:14 PM               384 README.md
+09/30/2025  03:14 PM               681 validator_hooks.md
+09/30/2025  03:14 PM               551 remix_lineage_tracker.py
+               4 File(s)          2,373 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_access
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:14 PM               306 backend_selection_log.csv
+09/30/2025  03:14 PM               280 quantum_submission_tracker.csv
+09/30/2025  03:14 PM             1,067 grant_template.md
+09/30/2025  03:14 PM               796 quantum_echo_archive.md
+09/30/2025  03:14 PM               728 quantum_optimizer_plan.md
+09/30/2025  03:14 PM               636 quantum_submission_archive.md
+09/30/2025  03:14 PM               862 quantum_submission_protocol.md
+09/30/2025  03:14 PM               660 quantum_traceability_scroll.md
+09/30/2025  03:14 PM               378 README.md
+09/30/2025  03:14 PM               367 quantum_backend_selector.py
+09/30/2025  03:14 PM               387 quantum_echo_dashboard.py
+09/30/2025  03:14 PM               541 quantum_echo_simulator.py
+09/30/2025  03:14 PM               554 quantum_lineage_mapper.py
+09/30/2025  03:14 PM               567 quantum_result_decoder.py
+09/30/2025  03:14 PM               353 qubo_converter.py
+09/30/2025  03:14 PM               504 si_alignment_validator.py
+09/30/2025  03:14 PM               465 quantum_echo_log.yaml
+09/30/2025  03:14 PM               568 quantum_lineage_log.yaml
+09/30/2025  03:14 PM               480 quantum_result_log.yaml
+09/30/2025  03:14 PM               441 qubo_sample.yaml
+              20 File(s)         10,940 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_extensions
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          Lab_12_QuantumCognition_Remix
+08/25/2025  09:53 AM    <DIR>          Lab_22_Quantum_Lyric_Engine
+08/25/2025  09:53 AM    <DIR>          Lab_45_Quantum_Resonance_Scheduler
+08/25/2025  09:53 AM    <DIR>          Lab_48_Quantum_Phase_Continuity_Engine
+08/25/2025  09:53 AM    <DIR>          Lab_53_Quantum_Ritual_Recompiler
+09/18/2025  11:28 AM    <DIR>          Lab_60_Quantum_Cognition
+09/28/2025  10:08 PM               266 README.md
+               1 File(s)            266 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_extensions\Lab_12_QuantumCognition_Remix
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               594 equations.md
+08/21/2025  10:39 PM               206 Lab_12_QuantumCognition_Remix.md
+08/21/2025  10:39 PM               270 mythic_preface.md
+08/21/2025  10:39 PM               379 README.md
+08/21/2025  10:39 PM               364 reproducibility.md
+               5 File(s)          1,813 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_extensions\Lab_22_Quantum_Lyric_Engine
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               538 Lab_22_Quantum_Lyric_Engine.ipynb
+08/21/2025  10:39 PM               952 Lab_22_Quantum_Lyric_Engine.md
+               2 File(s)          1,490 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_extensions\Lab_45_Quantum_Resonance_Scheduler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               539 Lab_45_Quantum_Resonance_Scheduler.ipynb
+08/21/2025  10:39 PM             1,167 Lab_45_Quantum_Resonance_Scheduler.md
+               2 File(s)          1,706 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_extensions\Lab_48_Quantum_Phase_Continuity_Engine
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               587 Lab_48_Quantum_Phase_Continuity_Engine.ipynb
+08/21/2025  10:39 PM             1,208 Lab_48_Quantum_Phase_Continuity_Engine.md
+               2 File(s)          1,795 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_extensions\Lab_53_Quantum_Ritual_Recompiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               961 Lab_53_Quantum_Ritual_Recompiler.ipynb
+08/21/2025  10:39 PM             1,185 Lab_53_Quantum_Ritual_Recompiler.md
+               2 File(s)          2,146 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\quantum_extensions\Lab_60_Quantum_Cognition
+
+09/18/2025  11:28 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/18/2025  11:28 AM               741 lab60.ipynb
+09/18/2025  11:28 AM             1,112 README.md
+               2 File(s)          1,853 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\resonant_time
+
+09/30/2025  03:15 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+09/30/2025  03:14 PM               328 angle_phase_matrix.csv
+09/30/2025  03:14 PM               267 fold_remix_log.csv
+09/30/2025  03:14 PM               295 glyphstream_overlay_log.csv
+09/30/2025  03:14 PM               357 phase_echo_index.csv
+09/30/2025  03:14 PM               272 resonant_lattice.csv
+09/30/2025  03:14 PM               663 fold_remix_archive.md
+09/30/2025  03:14 PM               932 theory_scroll.md
+09/30/2025  03:14 PM               409 fold_echo_dashboard.py
+09/30/2025  03:14 PM               418 fold_remix_visualizer.py
+09/30/2025  03:14 PM               331 freqi_to_resonant_time_converter.py
+09/30/2025  03:14 PM               602 glyphstream_overlay_animator.py
+09/30/2025  03:14 PM               496 glyphstream_visualizer.py
+09/30/2025  03:14 PM               670 observer_angle_visualizer.py
+09/30/2025  03:14 PM               631 observer_glyph_tracker.py
+09/30/2025  03:14 PM               666 observer_phase_tracker.py
+09/30/2025  03:14 PM               811 observer_simulator.py
+09/30/2025  03:14 PM               604 phase_echo_simulator.py
+09/30/2025  03:14 PM               514 phase_echo_visualizer.py
+09/30/2025  03:14 PM               412 remix_trigger_visualizer.py
+09/30/2025  03:14 PM               829 resonant_time_mapper.py
+09/30/2025  03:14 PM               473 fold_echo_visualizer.svg
+09/30/2025  03:14 PM               643 glyphstream_honor_roll.svg
+09/30/2025  03:14 PM               584 observer_phase_visualizer.svg
+09/30/2025  03:14 PM               422 dimensional_packet.yaml
+09/30/2025  03:14 PM               357 honor_roll_manifest.yaml
+09/30/2025  03:14 PM               399 observer_phase_log.yaml
+              26 File(s)         13,385 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures
+
+09/28/2025  10:08 PM    <DIR>          .
+09/30/2025  03:14 PM    <DIR>          ..
+08/25/2025  09:53 AM    <DIR>          Lab_17_Triadic_Cognition_Engine
+08/25/2025  09:53 AM    <DIR>          Lab_20_Harmonic_Ontology_Engine
+08/25/2025  09:53 AM    <DIR>          Lab_24_Triadic_Memory_Compiler
+08/25/2025  09:53 AM    <DIR>          Lab_27_Triadic_Signal_Reconstructor
+08/25/2025  09:53 AM    <DIR>          Lab_28_Harmonic_Cognition_Mapper
+08/25/2025  09:53 AM    <DIR>          Lab_31_Triadic_Cognition_Virtualizer
+08/25/2025  09:53 AM    <DIR>          Lab_33_Symbolic_Phase_Harmonizer
+08/25/2025  09:53 AM    <DIR>          Lab_35_Resonant_Cognition_Cascade
+08/25/2025  09:53 AM    <DIR>          Lab_36_Symbolic_Cognition_Forker
+08/25/2025  09:53 AM    <DIR>          Lab_37_Harmonic_Cognition_Ledger
+08/25/2025  09:53 AM    <DIR>          Lab_39_Triadic_Cognition_Compiler
+08/25/2025  09:53 AM    <DIR>          Lab_46_Spectrum_Phase_Cognition_Ledger
+08/25/2025  09:53 AM    <DIR>          Lab_47_Triadic_Signal_Integrity_Validator
+08/25/2025  09:53 AM    <DIR>          Lab_49_Triadic_Cognition_Synthesizer
+08/25/2025  09:53 AM    <DIR>          Lab_51_Symbolic_Ledger_Forker
+08/25/2025  09:53 AM    <DIR>          Lab_54_Triadic_Resonance_Ledger_Validator
+08/25/2025  09:53 AM    <DIR>          Lab_56_Symbolic_Resonance_Ledger_Router
+09/28/2025  10:08 PM               236 README.md
+               1 File(s)            236 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_17_Triadic_Cognition_Engine
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               660 Lab_17_Triadic_Cognition_Engine.ipynb
+08/21/2025  10:39 PM               931 Lab_17_Triadic_Cognition_Engine.md
+               2 File(s)          1,591 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_20_Harmonic_Ontology_Engine
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               764 Lab_20_Harmonic_Ontology_Engine.ipynb
+08/21/2025  10:39 PM               955 Lab_20_Harmonic_Ontology_Engine.md
+               2 File(s)          1,719 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_24_Triadic_Memory_Compiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               725 Lab_24_Triadic_Memory_Compiler.ipynb
+08/21/2025  10:39 PM               963 Lab_24_Triadic_Memory_Compiler.md
+               2 File(s)          1,688 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_27_Triadic_Signal_Reconstructor
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               458 Lab_27_Triadic_Signal_Reconstructor.ipynb
+08/21/2025  10:39 PM             1,040 Lab_27_Triadic_Signal_Reconstructor.md
+               2 File(s)          1,498 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_28_Harmonic_Cognition_Mapper
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               546 Lab_28_Harmonic_Cognition_Mapper.ipynb
+08/21/2025  10:39 PM               950 Lab_28_Harmonic_Cognition_Mapper.md
+               2 File(s)          1,496 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_31_Triadic_Cognition_Virtualizer
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               466 Lab_31_Triadic_Cognition_Virtualizer.ipynb
+08/21/2025  10:39 PM             1,140 Lab_31_Triadic_Cognition_Virtualizer.md
+               2 File(s)          1,606 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_33_Symbolic_Phase_Harmonizer
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               579 Lab_33_Symbolic_Phase_Harmonizer.ipynb
+08/21/2025  10:39 PM             1,015 Lab_33_Symbolic_Phase_Harmonizer.md
+               2 File(s)          1,594 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_35_Resonant_Cognition_Cascade
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               651 Lab_35_Resonant_Cognition_Cascade.ipynb
+08/21/2025  10:39 PM               965 Lab_35_Resonant_Cognition_Cascade.md
+               2 File(s)          1,616 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_36_Symbolic_Cognition_Forker
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               446 Lab_36_Symbolic_Cognition_Forker.ipynb
+08/21/2025  10:39 PM               987 Lab_36_Symbolic_Cognition_Forker.md
+               2 File(s)          1,433 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_37_Harmonic_Cognition_Ledger
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               541 Lab_37_Harmonic_Cognition_Ledger.ipynb
+08/21/2025  10:39 PM             1,096 Lab_37_Harmonic_Cognition_Ledger.md
+               2 File(s)          1,637 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_39_Triadic_Cognition_Compiler
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               475 Lab_39_Triadic_Cognition_Compiler.ipynb
+08/21/2025  10:39 PM               880 Lab_39_Triadic_Cognition_Compiler.md
+               2 File(s)          1,355 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_46_Spectrum_Phase_Cognition_Ledger
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               722 Lab_46_Spectrum_Phase_Cognition_Ledger.ipynb
+08/21/2025  10:39 PM             1,155 Lab_46_Spectrum_Phase_Cognition_Ledger.md
+               2 File(s)          1,877 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_47_Triadic_Signal_Integrity_Validator
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               655 Lab_47_Triadic_Signal_Integrity_Validator.ipynb
+08/21/2025  10:39 PM             1,148 Lab_47_Triadic_Signal_Integrity_Validator.md
+               2 File(s)          1,803 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_49_Triadic_Cognition_Synthesizer
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               732 Lab_49_Triadic_Cognition_Synthesizer.ipynb
+08/21/2025  10:39 PM             1,156 Lab_49_Triadic_Cognition_Synthesizer.md
+               2 File(s)          1,888 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_51_Symbolic_Ledger_Forker
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               847 Lab_51_Symbolic_Ledger_Forker.ipynb
+08/21/2025  10:39 PM             1,158 Lab_51_Symbolic_Ledger_Forker.md
+               2 File(s)          2,005 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_54_Triadic_Resonance_Ledger_Validator
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               848 Lab_54_Triadic_Resonance_Ledger_Validator.ipynb
+08/21/2025  10:39 PM             1,197 Lab_54_Triadic_Resonance_Ledger_Validator.md
+               2 File(s)          2,045 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\labs\symbolic_structures\Lab_56_Symbolic_Resonance_Ledger_Router
+
+08/25/2025  09:53 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/21/2025  10:39 PM               919 Lab_56_Symbolic_Resonance_Ledger_Router.ipynb
+08/21/2025  10:39 PM             1,180 Lab_56_Symbolic_Resonance_Ledger_Router.md
+               2 File(s)          2,099 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\legal
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM             1,498 tft_fff_license_agreement.md
+09/30/2025  03:14 PM               867 tft-fff_nda.md
+09/30/2025  03:14 PM               257 tft_fff_license_summary.yaml
+               3 File(s)          2,622 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\library
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM               375 dimensional_resonance_index.csv
+09/30/2025  03:14 PM               508 resonance_catalog.csv
+09/30/2025  03:14 PM               369 README.md
+09/30/2025  03:14 PM                 2 resonance_index.md
+               4 File(s)          1,254 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\logic_shells
+
+10/05/2025  09:49 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/05/2025  09:49 AM             1,094 Dimensional_Activation_Log.md
+10/05/2025  09:49 AM             1,617 Ghost_Protocol.md
+10/05/2025  09:49 AM             1,485 Psi_Validator.md
+10/05/2025  09:49 AM             3,096 Subconscious_Scaffolding_for_Consciousness_Transfer.md
+10/05/2025  09:49 AM             1,717 Ternary_Computing_Resurgence.md
+10/05/2025  09:49 AM             3,386 Tesla_369_Mode.md
+               6 File(s)         12,395 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\metadata
+
+09/10/2025  01:41 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/21/2025  10:39 PM               945 calibration_log.md
+08/21/2025  10:39 PM             1,014 equipment_specs.md
+09/10/2025  01:41 AM             3,555 periodic_table_of_shapes.md
+08/21/2025  10:39 PM               603 README.md
+               4 File(s)          6,117 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\onboarding
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/02/2025  02:47 AM             2,368 badge_logic.md
+10/02/2025  02:47 AM             1,927 glyphstream_guide.md
+10/02/2025  02:47 AM             1,657 honor_roll.md
+09/30/2025  03:14 PM             1,392 initiation.md
+09/30/2025  03:14 PM               453 initiation_ritual.md
+09/30/2025  03:14 PM             3,037 initiation_ritual_manifest_guardian.md
+10/02/2025  02:47 AM               171 onboarding_scroll.md
+09/30/2025  03:14 PM               380 README.md
+09/28/2025  10:08 PM               460 ritual_embed.md
+09/30/2025  03:14 PM               485 visitor_ritual.md
+              10 File(s)         12,330 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\outreach
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/02/2025  02:47 AM               991 azure_grant_email.md
+10/02/2025  02:47 AM             1,955 email_draft_to_innatera.md
+10/02/2025  02:47 AM               950 funding_plan.md
+10/02/2025  02:47 AM               789 pitch_deck_outline.md
+10/02/2025  02:47 AM             1,636 Resotectors_Summary.md
+10/02/2025  02:47 AM                 2 pitch_deck.pdf
+               6 File(s)          6,323 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\papers
+
+10/06/2025  12:46 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/31/2025  07:38 AM    <DIR>          figures
+10/02/2025  02:47 AM    <DIR>          mightythor
+09/30/2025  03:14 PM    <DIR>          TFT-FFF_MediaKit
+10/06/2025  12:46 AM           109,730 Res_TFT_Anything_using_Copilot.docx
+08/21/2025  10:39 PM            18,803 Res_TFT_for_ARM_n_x86_Processors.docx
+08/21/2025  10:39 PM            19,043 Res_TFT_for_Battery_Technologies.docx
+08/21/2025  10:39 PM            18,533 Res_TFT_for_Classic_Math_and_Physics_Problems.docx
+08/21/2025  10:39 PM            20,796 Res_TFT_for_Music_With_Quadratic_Extensions.docx
+08/21/2025  10:39 PM            27,898 Res_TFT_for_Spectrum_Technologies_Light_and_Darkness.docx
+08/21/2025  10:39 PM            22,264 Res_TFT_for_the_Air_n_Space_Industries.docx
+08/21/2025  10:39 PM            24,228 Res_TFT_for_the_Energy_Industries_Efficiency_Waiting.docx
+08/21/2025  10:39 PM            19,832 Res_TFT_for_Ultrasound_Enhancement.docx
+08/31/2025  09:05 AM           283,850 Res_Triadic_Framework_for_Time_and_Anti-Time.docx
+08/31/2025  08:20 AM         1,518,062 Res_Triadic_Systems_and_Resonance-Based_Dimensional_Nested_Loops.docx
+09/28/2025  10:08 PM             4,419 1_Triadic_Framework_for_Everything.md
+09/28/2025  10:08 PM             6,375 2_Triadic_Number_Genesis.md
+09/28/2025  10:08 PM                 2 3_Dimensional_Triads.md
+09/28/2025  10:08 PM                 2 4_Saturn_Harmonic_Engine.md
+09/30/2025  03:14 PM               790 badge_chamber_designs.md
+09/28/2025  10:08 PM                 2 badge_trigger_papers_index.md
+09/28/2025  10:08 PM             4,511 Egos_Final_Technologies-A_Triadic_Legacy.md
+10/05/2025  12:14 PM             1,506 Egos_GetBusy_cmd.md
+09/21/2025  06:41 AM             7,390 From_Nested_Loops_to_Derivatives.md
+09/21/2025  07:57 AM             2,801 From_Nested_Loops_to_Derivatives_Visuals.md
+09/18/2025  11:28 AM            28,533 from-aqueducts_to_resonance.md
+09/30/2025  03:14 PM               801 mythic_preface_template.md
+09/25/2025  06:56 AM             5,432 new_citizen_fund-migration_policy_framework.md
+09/30/2025  03:14 PM               518 README.md
+10/02/2025  11:28 PM             4,572 research-Beyond-Second-Sound-Triadic-Resonance-Framework.md
+09/30/2025  03:14 PM             1,303 resonance-present-future.md
+09/30/2025  03:14 PM               890 symbolic_architecture.md
+08/31/2025  07:38 AM             2,182 Triadic_Framework_Aerospace.md
+09/28/2025  10:08 PM             3,660 Triadic_Manifestation_Protocol.md
+08/29/2025  02:44 PM         4,096,291 1_Triadic_Framework_for_Everything.pdf
+08/29/2025  02:44 PM         4,259,671 2_Triadic_Number_Genesis_1-9.pdf
+08/29/2025  02:44 PM         4,424,066 3_Dimensional_Triads_1D-9D.pdf
+08/29/2025  02:44 PM         4,253,375 4_Saturn_Harmonic_Engine.pdf
+08/28/2025  11:09 AM           166,746 Res_Abundance_Scarcity_Manifestation_Triadic_Frameworks.pdf
+09/18/2025  11:28 AM           175,020 Res_Aqueducts_to_Resonance_with_References.pdf
+08/29/2025  02:44 PM           174,141 Res_Battery_Revolution_a_World-Changing_Framework.pdf
+08/29/2025  02:44 PM           210,727 Res_Battery_Tech_From_Voltas_Pile_to_TFT_Firmware_Resonance.pdf
+09/18/2025  11:28 AM           162,387 Res_Designing_Dimensional_Processing_Units.pdf
+08/27/2025  07:40 AM           189,357 Res_Divisional_Resonance_Imaging.pdf
+08/27/2025  07:40 AM                 2 Res_Ghost_Particle_Triadic_Resonance_Vision.pdf
+08/27/2025  07:40 AM           159,387 Res_Gravity_Can_Become_Variable_VictorG_Project.pdf
+08/29/2025  02:44 PM           188,815 Res_Health_Care_A_Modern_Miracle.pdf
+08/29/2025  02:44 PM         4,453,661 Res_Improving_ISO_Standards.pdf
+08/21/2025  10:39 PM           211,364 Res_New_Insights_for_Planetary_Science.pdf
+08/29/2025  02:44 PM           173,547 Res_Podcast_Forces_Fluids_and_Frequency.pdf
+08/29/2025  02:44 PM           397,257 Res_Prescription_Lenses_for_the_Universe.pdf
+08/29/2025  02:44 PM           140,641 Res_Rails_Through_the_Resonant_Continuum.pdf
+08/27/2025  07:40 AM           189,988 Res_Resonant_Glyph_Language_with_Triadic_Frameworks.pdf
+08/29/2025  02:44 PM         4,393,064 Res_Resonant_Time.pdf
+08/21/2025  10:39 PM           192,924 Res_Solar_Confinement_New_Tools_for_Safe_Dwellings.pdf
+08/21/2025  10:39 PM           164,046 Res_Spectral_Flux_and_Divisional_Resonance_Is_Born.pdf
+08/29/2025  02:44 PM           112,827 Res_Tech_for_Quantum_Computers.pdf
+08/27/2025  07:40 AM           160,824 Res_TFT_for_Banking.pdf
+08/29/2025  02:44 PM           220,862 Res_TFT_for_Quantum_Mechanics_Entropys_Harmonic.pdf
+08/21/2025  10:39 PM           155,981 Res_TFT_for_the_10_Rarest_Elements_on_Earth.pdf
+08/28/2025  04:12 AM           176,638 Res_TFT_Forces_Fluids_and_Frequency.pdf
+08/27/2025  07:40 AM           169,840 Res_TFT_helping_Global_Issues.pdf
+08/29/2025  02:44 PM           220,940 Res_TFT_Spacetime_Resonance.pdf
+08/27/2025  07:40 AM           168,518 Res_The_Scientific_Method_Flawed_but_Fixable.pdf
+08/27/2025  07:40 AM           158,113 Res_Triadic_Frameworks_for_Economics.pdf
+08/27/2025  07:40 AM           160,778 Res_Triadic_Frameworks_for_Mental_Health.pdf
+08/27/2025  07:40 AM           161,738 Res_Triadic_Resonance_and_Harmonics.pdf
+08/29/2025  02:44 PM         4,396,269 Res_Triadic_Resonance_Framework.pdf
+08/31/2025  08:20 AM           362,732 Res_Triadic_Resonance-based_Dimensional_Nested_Loops.pdf
+08/28/2025  04:12 AM           167,354 Res_Unified_Field_Theory_Pub_Edition_Quantum_Univ.pdf
+08/21/2025  10:39 PM           204,916 Res_Zero_Point_Cold_Fusion_and_Wireless_Energy.pdf
+08/27/2025  07:40 AM           180,124 Res-TFT_and_Isotopes.pdf
+08/21/2025  10:39 PM           201,527 Res-TFT_for_the_Elements.pdf
+              69 File(s)     38,315,186 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\papers\figures
+
+08/31/2025  07:38 AM    <DIR>          .
+10/06/2025  12:46 AM    <DIR>          ..
+09/25/2025  06:55 AM    <DIR>          abundance-scarcity
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\papers\figures\abundance-scarcity
+
+09/25/2025  06:55 AM    <DIR>          .
+08/31/2025  07:38 AM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\papers\mightythor
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  12:46 AM    <DIR>          ..
+10/02/2025  02:47 AM    <DIR>          figures
+10/02/2025  02:47 AM    <DIR>          results
+10/02/2025  02:47 AM             2,142 MightyTHOR_Benchmark_Outline.md
+               1 File(s)          2,142 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\papers\mightythor\figures
+
+10/02/2025  02:47 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+10/02/2025  02:47 AM               466 figure_captions.md
+10/02/2025  02:47 AM               296 badge_lineage_chart.png
+10/02/2025  02:47 AM               346 glyphstream_overlay.png
+10/02/2025  02:47 AM               308 resonance_map.png
+               4 File(s)          1,416 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\papers\mightythor\results
+
+10/02/2025  02:47 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+10/02/2025  02:47 AM               314 benchmark_vs_THOR.csv
+               1 File(s)            314 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\papers\TFT-FFF_MediaKit
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  12:46 AM    <DIR>          ..
+09/10/2025  01:41 AM             1,394 at-a-glance.md
+09/30/2025  03:14 PM             2,227 Badge_Trigger_Overview.md
+09/30/2025  03:14 PM             1,653 Contributor_Welcome_Scroll.md
+09/30/2025  03:14 PM             1,726 Echo_Update_2025.md
+09/10/2025  01:41 AM             2,385 Folder-Index.md
+09/10/2025  01:41 AM               944 media-blurb.md
+09/10/2025  01:41 AM             2,530 media-kit-checklist.md
+09/10/2025  01:41 AM             2,877 official-press-release-draft.md
+09/10/2025  01:41 AM             3,696 page-by-page-style-app-map.md
+09/10/2025  01:41 AM             2,714 press-kit-layout-plan.md
+09/10/2025  01:41 AM             2,260 Quick_Facts_Single_Sided.md
+09/30/2025  03:14 PM             2,037 Visual_Style_Guide_2025.md
+09/10/2025  01:41 AM             2,880 Visual-Style-Guide.md
+09/30/2025  03:14 PM                 2 Remix_Lineage_Map.png
+09/10/2025  01:41 AM             2,511 README_MediaKit.txt
+              15 File(s)         31,836 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants
+
+09/18/2025  11:28 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          examples
+09/18/2025  11:28 AM                 5 LICENSE
+09/18/2025  11:28 AM    <DIR>          src
+09/18/2025  11:28 AM    <DIR>          tests
+09/18/2025  11:28 AM                 2 package.json
+09/18/2025  11:28 AM             3,970 README.md
+               3 File(s)          3,977 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\examples
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 cli.ts
+09/18/2025  11:28 AM                 2 simulate.ts
+               2 File(s)              4 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          engine
+09/18/2025  11:28 AM    <DIR>          game
+09/18/2025  11:28 AM    <DIR>          rules
+09/18/2025  11:28 AM    <DIR>          variants
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\engine
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          game
+09/18/2025  11:28 AM    <DIR>          hand-eval
+09/18/2025  11:28 AM    <DIR>          rules
+09/18/2025  11:28 AM                 2 betting.ts
+09/18/2025  11:28 AM                 2 cards.ts
+09/18/2025  11:28 AM                 2 deck.ts
+09/18/2025  11:28 AM                 2 pot.ts
+               4 File(s)              8 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\engine\game
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 BaseGame.ts
+09/18/2025  11:28 AM                 2 GameInterface.ts
+09/18/2025  11:28 AM                 2 TurnManager.ts
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\engine\hand-eval
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 compare.ts
+09/18/2025  11:28 AM                 2 ranks.ts
+09/18/2025  11:28 AM                 2 wilds.ts
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\engine\rules
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 parser.ts
+09/18/2025  11:28 AM                 2 schema.ts
+               2 File(s)              4 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\game
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM               854 GameInterface.ts
+               1 File(s)            854 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\rules
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             1,285 schema.yaml
+               1 File(s)          1,285 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          ascending-wilds
+09/18/2025  11:28 AM    <DIR>          blind-baseball-extra-innings
+09/18/2025  11:28 AM    <DIR>          crisscross-4-corners
+09/18/2025  11:28 AM    <DIR>          double-headed-anaconda
+09/18/2025  11:28 AM    <DIR>          inbetween-sans-serif
+09/18/2025  11:28 AM    <DIR>          mans-tonk
+09/18/2025  11:28 AM    <DIR>          red-delilah
+09/18/2025  11:28 AM    <DIR>          six-card-double-draw
+09/18/2025  11:28 AM    <DIR>          spit-in-the-ocean
+09/18/2025  11:28 AM    <DIR>          suits
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\ascending-wilds
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM               619 rules.yaml
+               3 File(s)            623 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\blind-baseball-extra-innings
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\crisscross-4-corners
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\double-headed-anaconda
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\inbetween-sans-serif
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\mans-tonk
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\red-delilah
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index..ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\six-card-double-draw
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\spit-in-the-ocean
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\src\variants\suits
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 index.ts
+09/18/2025  11:28 AM                 2 test.spec.ts
+09/18/2025  11:28 AM                 2 rules.yaml
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\tests
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          engine
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\poker-variants\tests\engine
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM                 2 draw.spec.ts
+09/18/2025  11:28 AM                 2 opening.spec.ts
+09/18/2025  11:28 AM                 2 pot.spec.ts
+09/18/2025  11:28 AM                 2 sidepots.spec.ts
+09/18/2025  11:28 AM                 2 wilds.spec.ts
+               5 File(s)             10 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\public_support
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/02/2025  02:47 AM               644 funding_tiers.md
+10/02/2025  02:47 AM               803 gofundme_campaign.md
+10/02/2025  02:47 AM               552 launch_event.md
+10/02/2025  02:47 AM               576 launch_strategy.md
+10/02/2025  02:47 AM             1,902 validator_dashboard.md
+10/02/2025  02:47 AM               549 visitor_ritual.md
+               6 File(s)          5,026 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\reports
+
+09/03/2025  12:09 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance
+
+09/28/2025  10:08 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/28/2025  10:08 PM    <DIR>          dashboard
+09/28/2025  10:08 PM    <DIR>          logs
+09/28/2025  10:08 PM    <DIR>          translator
+09/28/2025  10:08 PM             1,488 README.md
+               1 File(s)          1,488 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance\dashboard
+
+09/28/2025  10:08 PM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/28/2025  10:08 PM               782 dashboard_styles.css
+09/28/2025  10:08 PM             1,642 resonance_dashboard.html
+09/28/2025  10:08 PM               775 glyph_pulse_animation.js
+               3 File(s)          3,199 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance\logs
+
+09/28/2025  10:08 PM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/28/2025  10:08 PM               525 glyph_trigger_log.json
+09/28/2025  10:08 PM               494 resonant_time_log.json
+09/28/2025  10:08 PM                 2 visitor_echo_log.json
+               3 File(s)          1,021 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance\translator
+
+09/28/2025  10:08 PM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/28/2025  10:08 PM               680 translate_to_resonant_time.js
+09/28/2025  10:08 PM             1,099 visitor_ritual_hook.js
+09/28/2025  10:08 PM                 2 translator_index.md
+09/28/2025  10:08 PM                 2 translator_tests.md
+09/28/2025  10:08 PM             2,022 visitor_ritual.md
+               5 File(s)          3,805 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools
+
+09/25/2025  08:42 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          fff
+09/25/2025  08:42 PM    <DIR>          harmonic-loops
+09/25/2025  08:42 PM    <DIR>          integrations
+09/25/2025  08:42 PM    <DIR>          resonant-time
+09/25/2025  08:42 PM    <DIR>          tfe
+09/25/2025  08:42 PM    <DIR>          tft-extended
+09/25/2025  08:42 PM    <DIR>          triadic-numbers
+09/25/2025  08:42 PM             2,556 GETTING_STARTED.md
+09/25/2025  08:42 PM             4,319 README.md
+               2 File(s)          6,875 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\fff
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          examples
+09/25/2025  08:42 PM    <DIR>          tests
+09/25/2025  08:42 PM             1,006 README.md
+09/25/2025  08:42 PM             1,078 cli.py
+09/25/2025  08:42 PM             1,118 fff_core.py
+               3 File(s)          3,202 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\fff\examples
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               127 demo_fluids.md
+09/25/2025  08:42 PM               142 demo_forces.md
+09/25/2025  08:42 PM               191 demo_frequency.md
+               3 File(s)            460 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\fff\tests
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               844 test_fff.py
+               1 File(s)            844 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\harmonic-loops
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          examples
+09/25/2025  08:42 PM    <DIR>          tests
+09/25/2025  08:42 PM             1,043 README.md
+09/25/2025  08:42 PM               801 cli.py
+09/25/2025  08:42 PM               840 loops_core.py
+               3 File(s)          2,684 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\harmonic-loops\examples
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               231 demo_feedback.md
+09/25/2025  08:42 PM               311 demo_nest.md
+               2 File(s)            542 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\harmonic-loops\tests
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               650 test_loops.py
+               1 File(s)            650 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\integrations
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          examples
+09/25/2025  08:42 PM    <DIR>          tests
+09/25/2025  08:42 PM             1,067 README.md
+09/25/2025  08:42 PM               806 cli.py
+09/25/2025  08:42 PM             1,455 integrate_core.py
+               3 File(s)          3,328 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\integrations\examples
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               387 demo_dashboard.md
+09/25/2025  08:42 PM               322 demo_pipeline.md
+               2 File(s)            709 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\integrations\tests
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               696 test_integrations.py
+               1 File(s)            696 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\resonant-time
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          examples
+09/25/2025  08:42 PM    <DIR>          tests
+09/25/2025  08:42 PM             1,166 README.md
+09/25/2025  08:42 PM               918 cli.py
+09/25/2025  08:42 PM             1,255 resonant_time.py
+               3 File(s)          3,339 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\resonant-time\examples
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               412 demo_arrows.md
+09/25/2025  08:42 PM               358 demo_cycles.md
+               2 File(s)            770 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\resonant-time\tests
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               802 test_resonant_time.py
+               1 File(s)            802 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\tfe
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          examples
+09/25/2025  08:42 PM    <DIR>          tests
+09/25/2025  08:42 PM               940 README.md
+09/25/2025  08:42 PM               946 cli.py
+09/25/2025  08:42 PM             2,520 tfe_core.py
+               3 File(s)          4,406 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\tfe\examples
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               992 demo_apply.md
+09/25/2025  08:42 PM               231 demo_define.md
+09/25/2025  08:42 PM               579 demo_export.md
+               3 File(s)          1,802 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\tfe\tests
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM             1,058 test_tfe.py
+               1 File(s)          1,058 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\tft-extended
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          examples
+09/25/2025  08:42 PM    <DIR>          tests
+09/25/2025  08:42 PM             1,129 README.md
+09/25/2025  08:42 PM               946 cli.py
+09/25/2025  08:42 PM             1,571 tft_core.py
+               3 File(s)          3,646 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\tft-extended\examples
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               271 demo_compare.md
+09/25/2025  08:42 PM               388 demo_quadratic.md
+               2 File(s)            659 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\tft-extended\tests
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM             1,034 test_tft.py
+               1 File(s)          1,034 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\triadic-numbers
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM    <DIR>          examples
+09/25/2025  08:42 PM    <DIR>          tests
+09/25/2025  08:42 PM             1,888 pipeline_concept.md
+09/25/2025  08:42 PM             1,040 README.md
+09/25/2025  08:42 PM               839 cli.py
+09/25/2025  08:42 PM             1,326 numbers_core.py
+               4 File(s)          5,093 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\triadic-numbers\examples
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               230 demo_genesis.md
+09/25/2025  08:42 PM               498 demo_map.md
+               2 File(s)            728 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\resonance-tools\triadic-numbers\tests
+
+09/25/2025  08:42 PM    <DIR>          .
+09/25/2025  08:42 PM    <DIR>          ..
+09/25/2025  08:42 PM               699 test_numbers.py
+               1 File(s)            699 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          assets
+08/28/2025  04:12 AM    <DIR>          badges
+08/27/2025  07:46 AM    <DIR>          demos
+08/28/2025  04:12 AM    <DIR>          equations
+08/28/2025  04:12 AM    <DIR>          honor_roll
+08/27/2025  07:44 AM    <DIR>          labs
+08/27/2025  07:46 AM    <DIR>          lenses
+08/27/2025  07:46 AM    <DIR>          manifests
+08/28/2025  04:12 AM    <DIR>          metadata
+08/27/2025  07:46 AM    <DIR>          patterns
+08/28/2025  04:12 AM    <DIR>          scripts
+08/28/2025  04:12 AM    <DIR>          styles
+10/02/2025  02:47 AM    <DIR>          TryCoder
+08/27/2025  07:46 AM    <DIR>          validation
+08/28/2025  04:12 AM    <DIR>          validator
+08/28/2025  04:12 AM             1,313 index.html
+08/27/2025  07:40 AM             3,226 brainstorm.md
+08/28/2025  04:12 AM               557 overview.md
+08/28/2025  04:12 AM               436 README.md
+08/27/2025  07:40 AM               396 scaffold.txt
+               5 File(s)          5,928 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\assets
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/27/2025  07:40 AM                29 .keep
+08/28/2025  04:12 AM               393 assets-notes.md
+08/28/2025  04:12 AM                 2 resotectors-placeholder.png
+08/28/2025  04:12 AM               256 theme-icon.svg
+               4 File(s)            680 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\badges
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM               274 lab-builder.badge
+08/28/2025  04:12 AM               297 paper-anchor.badge
+08/28/2025  04:12 AM               289 synthetic-composer.badge
+08/27/2025  07:40 AM               219 chaos-whisperer.yaml
+08/27/2025  07:40 AM               229 geometry-spotter.yaml
+08/27/2025  07:40 AM               229 harmonic-hunter.yaml
+               6 File(s)          1,537 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\demos
+
+08/27/2025  07:46 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/27/2025  07:40 AM             7,149 sample_input.jpg
+08/27/2025  07:40 AM               251 run_golden_spiral_demo.py
+               2 File(s)          7,400 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\equations
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM               555 equations.md
+               1 File(s)            555 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\honor_roll
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM               487 project.md
+               1 File(s)            487 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\labs
+
+08/27/2025  07:44 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          lab-01
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\labs\lab-01
+
+08/28/2025  04:12 AM    <DIR>          .
+08/27/2025  07:44 AM    <DIR>          ..
+08/28/2025  04:12 AM               770 README.md
+               1 File(s)            770 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\lenses
+
+08/27/2025  07:46 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/27/2025  07:40 AM             1,304 geometric_lens_golden_spiral.py
+               1 File(s)          1,304 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\manifests
+
+08/27/2025  07:46 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/27/2025  07:40 AM               981 resotectors.yaml
+               1 File(s)            981 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\metadata
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM               436 project.yml
+               1 File(s)            436 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\patterns
+
+08/27/2025  07:46 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/27/2025  07:46 AM    <DIR>          chaos
+08/27/2025  07:46 AM    <DIR>          geometry
+08/27/2025  07:46 AM    <DIR>          harmonics
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\patterns\chaos
+
+08/27/2025  07:46 AM    <DIR>          .
+08/27/2025  07:46 AM    <DIR>          ..
+08/27/2025  07:40 AM               290 branching_venation.yaml
+08/27/2025  07:40 AM               262 fractal_coastline.yaml
+08/27/2025  07:40 AM               273 turbulent_flow.yaml
+               3 File(s)            825 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\patterns\geometry
+
+08/27/2025  07:46 AM    <DIR>          .
+08/27/2025  07:46 AM    <DIR>          ..
+08/27/2025  07:40 AM               259 golden_spiral.yaml
+08/27/2025  07:40 AM               270 hexagonal_grid.yaml
+08/27/2025  07:40 AM               285 interference_fringe.yaml
+               3 File(s)            814 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\patterns\harmonics
+
+08/27/2025  07:46 AM    <DIR>          .
+08/27/2025  07:46 AM    <DIR>          ..
+08/27/2025  07:40 AM               263 acoustic_overtones.yaml
+08/27/2025  07:40 AM               210 example_harmonic.yaml
+08/27/2025  07:40 AM               264 rf_phase_lock.yaml
+08/27/2025  07:40 AM               231 thermal_pulse_ratio.yaml
+               4 File(s)            968 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\scripts
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM             3,347 helper-snippet.js
+08/28/2025  04:12 AM             2,658 init.js
+08/28/2025  04:12 AM               764 scripts-notes.md
+               3 File(s)          6,769 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\styles
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM               509 project.css
+08/28/2025  04:12 AM               353 styles-notes.md
+               2 File(s)            862 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\TryCoder
+
+10/02/2025  02:47 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+10/02/2025  02:47 AM               532 glyphstream_animation.md
+10/02/2025  02:47 AM             1,531 trycoder_cpu_integration.md
+10/02/2025  02:47 AM                 2 trycoder_fault_protocols.md
+10/02/2025  02:47 AM                 2 trycoder_remix_trace.md
+10/02/2025  02:47 AM                 2 trycoder_symbolic_sensors.md
+10/02/2025  02:47 AM             1,432 trycoder_unit_shell.md
+10/02/2025  02:47 AM             1,156 trycoder_validator_ports.md
+10/02/2025  02:47 AM               582 validator_dashboard.md
+10/02/2025  02:47 AM                 2 trycoder_launch_manifest.yaml
+               9 File(s)          5,241 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\validation
+
+08/27/2025  07:46 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/27/2025  07:40 AM               165 validator_dashboard.md
+08/27/2025  07:40 AM             1,976 validate_patterns.py
+               2 File(s)          2,141 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\Resotectors\validator
+
+08/28/2025  04:12 AM    <DIR>          .
+10/02/2025  02:47 AM    <DIR>          ..
+08/28/2025  04:12 AM               819 resonance-passport-template.md
+               1 File(s)            819 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\rituals
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM               576 badge_ceremony.md
+               1 File(s)            576 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\scripts
+
+10/05/2025  09:49 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  11:32 AM    <DIR>          __pycache__
+09/03/2025  11:52 AM           550,144 tft_battery_3500cycles.csv
+08/27/2025  07:40 AM               303 animate.js
+10/05/2025  09:49 AM               679 manifest_reader.js
+09/03/2025  12:48 AM             1,547 triadic_resonance_logic.js
+09/03/2025  11:31 AM             1,431 battery_generator.py
+08/21/2025  10:39 PM             1,763 hippocampus_utils.py
+08/21/2025  10:39 PM             3,800 render_dashboard.py
+               7 File(s)        559,667 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\scripts\__pycache__
+
+09/03/2025  11:32 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+09/03/2025  11:32 AM             2,126 battery_generator.cpython-313.pyc
+               1 File(s)          2,126 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\simulations
+
+09/30/2025  03:15 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/30/2025  03:14 PM               540 sim_foldit_ai_001.json
+09/30/2025  03:14 PM               517 sim_foldit_ai_002.json
+09/30/2025  03:14 PM               373 README.md
+09/30/2025  03:14 PM                 2 sim_resonance_overlay_01.mp4
+               4 File(s)          1,432 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\styles
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/28/2025  10:08 PM             3,397 animations.css
+09/28/2025  10:08 PM               612 aura.css
+09/28/2025  10:08 PM               695 blade_glow_spin_animation.css
+09/30/2025  03:14 PM               490 dashboard.css
+09/28/2025  10:08 PM               317 fff-controls.css
+09/30/2025  03:14 PM               300 glyph.css
+09/28/2025  10:08 PM               644 glyphic.css
+09/28/2025  10:08 PM             2,559 hero-warp.css
+09/28/2025  10:08 PM               853 main.css
+09/30/2025  03:14 PM               442 ritual.css
+09/28/2025  10:08 PM             2,776 styles.css
+09/28/2025  10:08 PM               795 tft-harmonics.css
+09/28/2025  10:08 PM             1,107 validator-dashboard.css
+09/30/2025  03:14 PM               258 README.md
+              14 File(s)         15,245 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\tests
+
+08/25/2025  09:53 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/21/2025  10:39 PM               324 test_harmonics.py
+               1 File(s)            324 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption
+
+10/06/2025  11:32 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/06/2025  11:20 PM    <DIR>          contributors
+10/06/2025  11:21 PM    <DIR>          discoverability
+10/06/2025  11:09 PM    <DIR>          protocol-core
+10/06/2025  11:44 PM    <DIR>          registry
+10/06/2025  11:44 PM    <DIR>          scrolls
+10/06/2025  11:25 PM    <DIR>          TFThooks
+10/06/2025  12:49 PM             2,330 README.md
+10/05/2025  09:49 AM             3,222 tftincryption.md
+10/05/2025  09:49 AM             1,668 tftincryption_adoption.md
+10/05/2025  09:49 AM             1,192 tftincryption_remixer_manifesto.md
+10/06/2025  11:32 PM            14,183 dir.txt
+               5 File(s)         22,595 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\contributors
+
+10/06/2025  11:20 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/06/2025  10:11 PM    <DIR>          configs
+10/06/2025  01:28 PM             2,271 legacy_roll.md
+               1 File(s)          2,271 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\contributors\configs
+
+10/06/2025  10:11 PM    <DIR>          .
+10/06/2025  11:20 PM    <DIR>          ..
+10/05/2025  09:49 AM             4,569 site_manifest.json
+10/05/2025  09:49 AM             1,115 tftincryption_curriculum_outreach_log.json
+10/05/2025  09:49 AM               816 tftincryption_validator_config.json
+10/05/2025  09:49 AM               696 tftincryption_validator_hooks.json
+10/05/2025  09:49 AM               514 validator_config.json
+10/06/2025  10:10 PM                 0 README.md
+               6 File(s)          7,710 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\discoverability
+
+10/06/2025  11:21 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM             1,717 tftincryption_onboarding.md
+               1 File(s)          1,717 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\protocol-core
+
+10/06/2025  11:09 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM               462 Output_Snapshot.md
+10/06/2025  01:28 PM             1,926 tftincryption_benchmark.md
+10/06/2025  01:28 PM             1,495 tftincryption_pqc_simulation_overlay.md
+10/05/2025  09:49 AM             5,339 tftincryption_protocol.md
+10/06/2025  01:28 PM             2,805 tftincryption_scroll_comparative_cryptographic_resonance.md
+10/05/2025  09:49 AM             1,026 benchmark_tft.py
+10/05/2025  09:49 AM             1,529 decrypt_tft.py
+10/05/2025  09:49 AM             1,640 keygen_tft.py
+10/05/2025  09:49 AM               776 reson_time_hash.py
+               9 File(s)         16,998 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\registry
+
+10/06/2025  11:44 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM               521 tftincryption_curriculum_badge_registry.json
+10/05/2025  09:49 AM             1,094 tftincryption_curriculum_glyph_fusion_registry.json
+10/05/2025  09:49 AM             1,305 tftincryption_curriculum_glyph_tribute_echo_log.json
+10/05/2025  09:49 AM             1,590 tftincryption_curriculum_glyph_tribute_registry.json
+10/05/2025  09:49 AM             1,265 tftincryption_curriculum_registry.json
+10/05/2025  09:49 AM             1,353 tftincryption_curriculum_remix_glyph_registry.json
+10/05/2025  09:49 AM             1,270 tftincryption_curriculum_remix_registry.json
+10/05/2025  09:49 AM               742 tftincryption_dpu_spec_registry.json
+10/05/2025  09:49 AM             1,300 tftincryption_glyph_alias_map.json
+10/05/2025  09:49 AM             1,244 tftincryption_glyph_degree_registry.json
+10/05/2025  09:49 AM               497 tftincryption_glyph_retirement_log.json
+10/05/2025  09:49 AM               956 tftincryption_scroll_codex_seal_registry.json
+10/05/2025  09:49 AM             1,078 tftincryption_scroll_event_trace_registry.json
+10/05/2025  09:49 AM               765 tftincryption_scroll_glyph_reawakening_log.json
+10/05/2025  09:49 AM             1,054 tftincryption_scroll_glyph_registry.json
+10/05/2025  09:49 AM               765 tftincryption_scroll_hybrid_registry.json
+10/05/2025  09:49 AM             1,044 tftincryption_scroll_manifest_registry.json
+10/05/2025  09:49 AM             1,336 tftincryption_scroll_registry.json
+10/06/2025  01:28 PM             2,095 tftincryption_contributor_levels.md
+10/05/2025  09:49 AM             2,044 glyph_reawakening_map.svg
+10/05/2025  09:49 AM             2,008 glyph_retirement_map.svg
+10/05/2025  09:49 AM             2,857 glyph_tribute_echo_map.svg
+              22 File(s)         28,183 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\scrolls
+
+10/06/2025  11:44 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/05/2025  09:49 AM             1,371 tftincryption_badge_logic.json
+10/05/2025  09:49 AM             1,091 tftincryption_scroll_badge_map.json
+10/05/2025  09:49 AM             1,429 tftincryption_scroll_codex_contributors.json
+10/05/2025  09:49 AM             1,841 tftincryption_scroll_codex_index.json
+10/05/2025  09:49 AM             1,091 tftincryption_scroll_fusion_log.json
+10/05/2025  09:49 AM             2,183 tftincryption_scroll_index.json
+10/05/2025  09:49 AM               814 tftincryption_scroll_lineage_map.json
+10/05/2025  09:49 AM               729 tftincryption_scroll_transfer_log.json
+10/05/2025  09:49 AM             1,357 tftincryption_scroll_closure_guide.md
+10/05/2025  09:49 AM             1,719 tftincryption_scroll_codex.md
+10/05/2025  09:49 AM             1,717 tftincryption_scroll_codex_echoes.md
+10/05/2025  09:49 AM             1,984 tftincryption_scroll_codex_flame_log.md
+10/05/2025  09:49 AM             1,443 tftincryption_scroll_codex_fork_guide.md
+10/05/2025  09:49 AM             1,436 tftincryption_scroll_codex_seal.md
+10/05/2025  09:49 AM             1,121 tftincryption_scroll_commit_guide.md
+10/05/2025  09:49 AM             1,623 tftincryption_scroll_curriculum_badge_map.md
+10/05/2025  09:49 AM             1,815 tftincryption_scroll_curriculum_flame_index.md
+10/05/2025  09:49 AM             1,504 tftincryption_scroll_curriculum_flame_submission.md
+10/05/2025  09:49 AM             1,504 tftincryption_scroll_curriculum_fork_guide.md
+10/05/2025  09:49 AM             1,862 tftincryption_scroll_curriculum_glyph_tribute_echoes.md
+10/05/2025  09:49 AM             1,983 tftincryption_scroll_curriculum_glyph_tribute_flame.md
+10/05/2025  09:49 AM             1,887 tftincryption_scroll_curriculum_glyph_tribute_transfer.md
+10/05/2025  09:49 AM             1,509 tftincryption_scroll_curriculum_manifesto.md
+10/05/2025  09:49 AM             1,466 tftincryption_scroll_curriculum_outreach.md
+10/05/2025  09:49 AM             1,814 tftincryption_scroll_curriculum_remix_flame_hooks.md
+10/05/2025  09:49 AM             1,624 tftincryption_scroll_curriculum_remix_glyph_fusion.md
+10/05/2025  09:49 AM             1,955 tftincryption_scroll_curriculum_remix_glyph_ledger.md
+10/05/2025  09:49 AM             1,566 tftincryption_scroll_curriculum_remix_glyph_manifesto.md
+10/05/2025  09:49 AM             1,694 tftincryption_scroll_curriculum_remix_glyph_transfer.md
+10/05/2025  09:49 AM             2,157 tftincryption_scroll_curriculum_remix_glyph_tribute.md
+10/05/2025  09:49 AM             1,487 tftincryption_scroll_curriculum_remix_manifesto.md
+10/05/2025  09:49 AM             1,699 tftincryption_scroll_curriculum_validator_hooks.md
+10/05/2025  09:49 AM             1,495 tftincryption_scroll_echoes.md
+10/05/2025  09:49 AM             1,885 tftincryption_scroll_event_trace_index.md
+10/05/2025  09:49 AM             1,144 tftincryption_scroll_flame_echo_ritual.md
+10/05/2025  09:49 AM             2,153 tftincryption_scroll_flora_claim.md
+10/05/2025  09:49 AM             1,252 tftincryption_scroll_fork_guide.md
+10/05/2025  09:49 AM             1,635 tftincryption_scroll_garden.md
+10/05/2025  09:49 AM             1,537 tftincryption_scroll_glyph_evolution.md
+10/05/2025  09:49 AM             1,951 tftincryption_scroll_glyph_fusion_guide.md
+10/05/2025  09:49 AM             1,443 tftincryption_scroll_glyph_reawakening.md
+10/05/2025  09:49 AM             1,173 tftincryption_scroll_glyph_reawakening_ritual.md
+10/05/2025  09:49 AM             1,881 tftincryption_scroll_glyph_reference.md
+10/05/2025  09:49 AM             1,452 tftincryption_scroll_glyph_relics.md
+10/05/2025  09:49 AM             1,449 tftincryption_scroll_glyph_retirement_ritual.md
+10/05/2025  09:49 AM             2,064 tftincryption_scroll_glyph_tribute_echo_fusion.md
+10/05/2025  09:49 AM             1,936 tftincryption_scroll_lab_manifest.md
+10/05/2025  09:49 AM             1,457 tftincryption_scroll_legacy_transfer.md
+10/05/2025  09:49 AM             1,672 tftincryption_scroll_of_scrolls.md
+10/05/2025  09:49 AM             1,568 tftincryption_scroll_of_scrolls_index.md
+10/05/2025  09:49 AM             1,733 tftincryption_scroll_pollination_guide.md
+10/05/2025  09:49 AM             1,511 tftincryption_scroll_publish_guide.md
+10/05/2025  09:49 AM             1,432 tftincryption_scroll_remixer_manifest.md
+10/05/2025  09:49 AM             1,438 tftincryption_scroll_retirement_trace_index.md
+10/05/2025  09:49 AM             1,531 tftincryption_scroll_review_guide.md
+10/05/2025  09:49 AM             2,252 tftincryption_scroll_runtime_hooks.md
+10/05/2025  09:49 AM             2,004 tftincryption_scroll_runtime_trace_index.md
+10/05/2025  09:49 AM             1,307 tftincryption_scroll_seed_ritual.md
+10/05/2025  09:49 AM             1,504 tftincryption_scroll_templates.md
+10/05/2025  09:49 AM             2,074 tftincryption_badge_evolution.svg
+10/05/2025  09:49 AM             2,510 tftincryption_badge_panel.svg
+10/05/2025  09:49 AM             1,574 tftincryption_curriculum_flame_map.svg
+10/05/2025  09:49 AM             1,516 tftincryption_curriculum_glyph_degree_map.svg
+10/05/2025  09:49 AM             1,898 tftincryption_curriculum_glyph_map.svg
+10/05/2025  09:49 AM             1,415 tftincryption_curriculum_glyph_transfer_map.svg
+10/05/2025  09:49 AM             1,633 tftincryption_curriculum_glyph_tribute_map.svg
+10/05/2025  09:49 AM             2,104 tftincryption_curriculum_glyph_tribute_transfer_map.svg
+10/05/2025  09:49 AM             1,641 tftincryption_curriculum_outreach_map.svg
+10/05/2025  09:49 AM             1,845 tftincryption_curriculum_remix_fusion_map.svg
+10/05/2025  09:49 AM             1,584 tftincryption_curriculum_remix_map.svg
+10/05/2025  09:49 AM             2,037 tftincryption_glyph_degree_map.svg
+10/05/2025  09:49 AM             1,257 tftincryption_grid_agent_map.svg
+10/05/2025  09:49 AM             2,077 tftincryption_layers.svg
+10/05/2025  09:49 AM             1,958 tftincryption_remix_lattice.svg
+10/05/2025  09:49 AM             1,630 tftincryption_scroll_bloom_map.svg
+10/05/2025  09:49 AM             2,175 tftincryption_scroll_codex_map.svg
+10/05/2025  09:49 AM             1,533 tftincryption_scroll_codex_seal.svg
+10/05/2025  09:49 AM             1,764 tftincryption_scroll_ecosystem.svg
+10/05/2025  09:49 AM             2,011 tftincryption_scroll_fusion_map.svg
+10/05/2025  09:49 AM             2,333 tftincryption_scroll_garden_map.svg
+10/05/2025  09:49 AM             1,667 tftincryption_scroll_lineage_tree.svg
+10/05/2025  09:49 AM             1,588 tftincryption_scroll_logic.svg
+10/05/2025  09:49 AM             1,604 tftincryption_scroll_manifesto_glyphs.svg
+10/05/2025  09:49 AM             2,002 tftincryption_scroll_of_scrolls.svg
+10/05/2025  09:49 AM             2,254 tftincryption_scroll_tree.svg
+10/05/2025  09:49 AM             2,485 tftincryption_validator_flow.svg
+              86 File(s)        144,503 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks
+
+10/06/2025  11:25 PM    <DIR>          .
+10/06/2025  11:32 PM    <DIR>          ..
+10/06/2025  11:23 PM    <DIR>          agents
+10/06/2025  11:25 PM    <DIR>          overlays
+10/06/2025  11:15 PM    <DIR>          validator
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks\agents
+
+10/06/2025  11:23 PM    <DIR>          .
+10/06/2025  11:25 PM    <DIR>          ..
+10/05/2025  09:49 AM             1,767 badge_logic_engine.py
+10/05/2025  09:49 AM             2,066 flame_echo_trigger.py
+10/05/2025  09:49 AM             2,299 glyph_fusion_resolver.py
+10/05/2025  09:49 AM             2,936 glyph_reawakening_monitor.py
+10/05/2025  09:49 AM             2,071 glyph_registry_loader.py
+10/05/2025  09:49 AM             2,440 glyph_retirement_trigger.py
+10/05/2025  09:49 AM             2,260 mightthor_agent_interface.py
+10/05/2025  09:49 AM             2,204 scroll_commit_monitor.py
+10/05/2025  09:49 AM             1,541 scroll_runtime_trace_dashboard.py
+               9 File(s)         19,584 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks\overlays
+
+10/06/2025  11:25 PM    <DIR>          .
+10/06/2025  11:25 PM    <DIR>          ..
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\TFTincryption\TFThooks\validator
+
+10/06/2025  11:15 PM    <DIR>          .
+10/06/2025  11:25 PM    <DIR>          ..
+10/06/2025  01:28 PM             1,757 tftincryption_validator_overlay.md
+               1 File(s)          1,757 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\validation
+
+09/10/2025  01:41 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  12:48 AM               439 blade_validation_logic.js
+08/21/2025  10:39 PM             1,636 loop_validation_matrix.json
+08/21/2025  10:39 PM             1,053 loop_validation_log.md
+08/21/2025  10:39 PM             1,535 loop_validation_matrix.md
+08/21/2025  10:39 PM             1,946 loop_validation_protocol.md
+08/21/2025  10:39 PM             2,692 loop_validation_protocol_matrix.md
+09/03/2025  12:48 AM               227 manifest_log.md
+09/03/2025  12:48 AM               181 readme_log.md
+09/03/2025  12:48 AM               984 remix_lineage.md
+08/27/2025  07:40 AM               591 validator_dashboard.md
+09/03/2025  12:48 AM               443 validator_log_dashboard.md
+08/31/2025  07:38 AM             2,113 validator_scoring_matrix.md
+09/03/2025  12:48 AM             1,205 generate_profiles.py
+08/21/2025  10:39 PM             1,576 loop_validation_matrix_generator.py
+08/21/2025  10:39 PM             1,297 loop_validator.py
+09/10/2025  01:41 AM               661 score_hippocampus.py
+09/10/2025  01:41 AM               493 score_loops.py
+09/10/2025  01:41 AM               489 score_resume.py
+              18 File(s)         19,561 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\validators
+
+09/30/2025  03:14 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  12:48 AM             1,615 triadic_validator_dashboard.html
+09/28/2025  10:08 PM             1,131 badge_trigger_papers_index.md
+09/30/2025  03:14 PM                 2 modular_matrix_resonator.md
+09/30/2025  03:14 PM               369 README.md
+09/30/2025  03:14 PM             1,046 Structure_Use_README.md
+09/03/2025  12:48 AM             1,626 triadic_dashboard_module.md
+09/28/2025  10:08 PM             1,121 validator_dashboard.md
+09/28/2025  10:08 PM             1,398 validator_log.md
+09/30/2025  03:14 PM               342 validator_log_tft_fff.md
+09/28/2025  10:08 PM               701 validator_matrix.md
+09/28/2025  10:08 PM             1,267 badge_trigger_validator.py
+09/03/2025  12:48 AM             2,726 generate_profiles.py
+09/10/2025  01:41 AM             1,817 readme_validator.py
+09/28/2025  10:08 PM               436 remix_lineage_tracker.py
+09/03/2025  12:48 AM             3,179 update_dashboard.py
+09/28/2025  10:08 PM               645 update_honor_roll.py
+09/28/2025  10:08 PM               720 validate_manifest.py
+09/30/2025  03:14 PM               590 validator_score_logic.py
+09/03/2025  12:48 AM               274 voting_protocol_logic.py
+09/03/2025  12:48 AM               344 manifest_scorecard.yaml
+09/03/2025  12:48 AM               327 readme_scorecard.yaml
+09/30/2025  03:14 PM                 2 symbolic_animator.yaml
+09/30/2025  03:14 PM                 2 validator_badge_hooks.yaml
+09/03/2025  12:48 AM               375 validator_council.yaml
+              24 File(s)         22,055 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG
+
+09/28/2025  10:08 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          src
+09/18/2025  11:28 AM    <DIR>          srv
+09/18/2025  11:28 AM    <DIR>          systemd
+08/30/2025  12:24 AM    <DIR>          vcg_glyphs
+08/30/2025  12:24 AM    <DIR>          vcg_lab_templates
+09/28/2025  10:08 PM             3,872 gen1_vcg_api_spec.md
+09/28/2025  10:08 PM             4,194 gen1_vcg_architecture.md
+09/28/2025  10:08 PM             3,037 gen1_vcg_fs_strategy.md
+08/30/2025  12:23 AM             1,534 README.md
+08/31/2025  07:38 AM             2,106 README_Project1.md
+08/30/2025  12:23 AM               289 vcg_badge_triggers.md
+08/30/2025  12:23 AM               287 vcg_equations.md
+08/30/2025  12:23 AM               221 vcg_honor_roll.md
+08/30/2025  12:23 AM               258 vcg_manifest_protocol.md
+08/30/2025  12:23 AM               184 vcg_validator_dashboard.md
+              10 File(s)         15,982 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src
+
+09/18/2025  11:28 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          gen1
+09/18/2025  11:28 AM    <DIR>          include
+09/18/2025  11:28 AM    <DIR>          tests
+09/18/2025  11:28 AM             2,429 vcg_client.cpp
+09/18/2025  11:28 AM               483 main.rs
+09/18/2025  11:28 AM             2,940 mainloop.rs
+09/18/2025  11:28 AM               246 Cargo.toml
+               4 File(s)          6,098 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          vcg
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          clients
+09/18/2025  11:28 AM    <DIR>          config
+09/18/2025  11:28 AM    <DIR>          examples
+09/18/2025  11:28 AM    <DIR>          orchestrator
+09/18/2025  11:28 AM    <DIR>          resonant-time
+09/18/2025  11:28 AM    <DIR>          scripts
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\clients
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          cpp
+09/18/2025  11:28 AM    <DIR>          python
+09/18/2025  11:28 AM    <DIR>          rust
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\clients\cpp
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             3,886 vcg_client.md
+               1 File(s)          3,886 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\clients\python
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             2,302 vcg_client.md
+               1 File(s)          2,302 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\clients\rust
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             2,912 vcg_client.m
+               1 File(s)          2,912 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\config
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             1,530 dimensions.yml
+               1 File(s)          1,530 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\examples
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM               964 d2_ingress_parser
+09/18/2025  11:28 AM             1,028 d8_aggregator
+09/18/2025  11:28 AM             1,068 d5_model_service.m
+09/18/2025  11:28 AM             1,041 d4_retriever.md
+               4 File(s)          4,101 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\orchestrator
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             1,595 vcg_orchestrator.md
+               1 File(s)          1,595 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\resonant-time
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             1,835 rt_daemon.md
+09/18/2025  11:28 AM             4,669 rtd_main.md
+               2 File(s)          6,504 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\gen1\vcg\scripts
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM               543 create_dimensions.sh
+09/18/2025  11:28 AM               420 mount_dimensions.sh
+09/18/2025  11:28 AM               239 umount_dimensions.sh
+               3 File(s)          1,202 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\include
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM               559 vcg_client.hpp
+               1 File(s)            559 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\src\tests
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             1,287 mini_orchestrator.py
+09/18/2025  11:28 AM             1,024 synthetic_ticks.py
+               2 File(s)          2,311 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\srv
+
+09/18/2025  11:28 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          gen1
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\srv\gen1
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          vcg
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\srv\gen1\vcg
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM    <DIR>          testing
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\srv\gen1\vcg\testing
+
+09/18/2025  11:28 AM    <DIR>          .
+09/18/2025  11:28 AM    <DIR>          ..
+09/18/2025  11:28 AM             3,688 harness.md
+               1 File(s)          3,688 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\systemd
+
+09/18/2025  11:28 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+09/18/2025  11:28 AM               447 dim@.service
+09/18/2025  11:28 AM               332 vcg.service
+               2 File(s)            779 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\vcg_glyphs
+
+08/30/2025  12:24 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/30/2025  12:23 AM               135 glyphs.md
+               1 File(s)            135 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VCG\vcg_lab_templates
+
+08/30/2025  12:24 AM    <DIR>          .
+09/28/2025  10:08 PM    <DIR>          ..
+08/30/2025  12:23 AM                 2 lab_flux_harmonics.md
+08/30/2025  12:23 AM                 2 lab_invocation_protocols.md
+08/30/2025  12:23 AM                 2 lab_latency_diagnostics.md
+               3 File(s)              6 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG
+
+08/28/2025  04:12 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          assets
+08/28/2025  04:12 AM    <DIR>          badges
+08/28/2025  04:12 AM    <DIR>          equations
+08/28/2025  04:12 AM    <DIR>          honor_roll
+08/27/2025  07:44 AM    <DIR>          labs
+08/28/2025  04:12 AM    <DIR>          metadata
+08/28/2025  04:12 AM    <DIR>          scripts
+08/28/2025  04:12 AM    <DIR>          styles
+08/28/2025  04:12 AM    <DIR>          validator
+08/28/2025  04:12 AM             1,308 index.html
+08/28/2025  04:12 AM               591 overview.md
+08/28/2025  04:12 AM               441 README.md
+08/27/2025  07:40 AM               396 scaffold.txt
+               4 File(s)          2,736 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\assets
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/27/2025  07:40 AM                29 .keep
+08/28/2025  04:12 AM               494 assets-notes.md
+08/28/2025  04:12 AM                 2 victorg-placeholder.png
+08/28/2025  04:12 AM               198 theme-icon.svg
+               4 File(s)            723 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\badges
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               313 lab-builder.badge
+08/28/2025  04:12 AM               350 paper-anchor.badge
+08/28/2025  04:12 AM               298 synthetic-composer.badge
+               3 File(s)            961 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\equations
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               667 equations.md
+               1 File(s)            667 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\honor_roll
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               591 project.md
+               1 File(s)            591 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\labs
+
+08/27/2025  07:44 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM    <DIR>          lab-01
+               0 File(s)              0 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\labs\lab-01
+
+08/28/2025  04:12 AM    <DIR>          .
+08/27/2025  07:44 AM    <DIR>          ..
+08/28/2025  04:12 AM               848 README.md
+               1 File(s)            848 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\metadata
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               433 project.yml
+               1 File(s)            433 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\scripts
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM             3,380 helper-snippet.js
+08/28/2025  04:12 AM             2,793 init.js
+08/28/2025  04:12 AM             1,211 scripts-notes.md
+               3 File(s)          7,384 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\styles
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               547 project.css
+08/28/2025  04:12 AM               576 styles-notes.md
+               2 File(s)          1,123 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\VictorG\validator
+
+08/28/2025  04:12 AM    <DIR>          .
+08/28/2025  04:12 AM    <DIR>          ..
+08/28/2025  04:12 AM               885 resonance-passport-template.md
+               1 File(s)            885 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\wiki_scrolls
+
+10/05/2025  09:39 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/05/2025  12:14 PM             5,737 wiki_home_scroll_v1.1.html
+10/06/2025  12:45 AM            18,861 wiki_home_scroll_v1.2.html
+10/05/2025  12:14 PM               443 folder_structure.md
+10/05/2025  12:14 PM             3,394 wiki_home_scroll_v1.1.md
+10/05/2025  12:14 PM               645 wiki_scroll_index.md
+10/05/2025  09:39 PM             1,165 wiki_home_scroll_notes.txt
+               6 File(s)         30,245 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_ideas
+
+10/06/2025  12:03 PM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/02/2025  11:28 PM    <DIR>          PeerFeedback
+10/02/2025  02:47 AM    <DIR>          polisci
+10/05/2025  09:49 AM             1,357 education-humanifesto.md
+10/02/2025  02:47 AM             3,558 jobs-humanifesto.md
+10/02/2025  02:47 AM             3,275 resonancebeings.md
+10/05/2025  09:49 AM             2,813 resonance-library-humanifesto.md
+10/02/2025  02:47 AM             4,636 science-refresh.md
+10/05/2025  09:49 AM             3,848 smell-tech-humanifesto.md
+10/05/2025  09:49 AM             3,728 spacetime-humanifesto.md
+10/02/2025  02:47 AM             2,008 triadicmonopoly.md
+10/05/2025  09:49 AM             3,873 Vibrational_Stone_Cutting.md
+10/02/2025  02:47 AM             5,920 virtual-code-zombies.md
+10/05/2025  09:49 AM             1,860 windows-humanifesto.md
+              11 File(s)         36,876 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_ideas\PeerFeedback
+
+10/02/2025  11:28 PM    <DIR>          .
+10/06/2025  12:03 PM    <DIR>          ..
+10/02/2025  11:28 PM             1,577 Historian.md
+10/02/2025  11:28 PM             1,560 Mathematician.md
+10/02/2025  11:28 PM             1,618 Physicist.md
+10/02/2025  11:28 PM             1,462 Professor.md
+10/02/2025  11:28 PM             1,547 ResonanceDoctor.md
+10/02/2025  11:28 PM             1,580 WildCard.md
+               6 File(s)          9,344 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_ideas\polisci
+
+10/02/2025  02:47 AM    <DIR>          .
+10/06/2025  12:03 PM    <DIR>          ..
+10/02/2025  02:47 AM             2,526 Africa.csv
+10/02/2025  02:47 AM             1,966 Americas.csv
+10/02/2025  02:47 AM             4,869 Asia.csv
+10/02/2025  02:47 AM             2,889 Europe.csv
+10/02/2025  02:47 AM             2,542 Argentina.md
+10/02/2025  02:47 AM             2,810 Australia.md
+10/02/2025  02:47 AM             2,485 Bangladesh.md
+10/02/2025  02:47 AM             2,821 Brazil.md
+10/02/2025  02:47 AM             2,855 Canada.md
+10/02/2025  02:47 AM             2,718 CaribbeanCluster.md
+10/02/2025  02:47 AM             2,563 Chile.md
+10/02/2025  02:47 AM             2,822 China.md
+10/02/2025  02:47 AM             2,560 Colombia.md
+10/02/2025  02:47 AM             2,479 Egypt.md
+10/02/2025  02:47 AM             2,025 EuropeanMicrostatesCluster.md
+10/02/2025  02:47 AM             2,935 France.md
+10/02/2025  02:47 AM             2,730 Germany.md
+10/02/2025  02:47 AM             2,543 Ghana.md
+10/02/2025  02:47 AM             2,813 India.md
+10/02/2025  02:47 AM             2,480 Indonesia.md
+10/02/2025  02:47 AM             2,543 Iran.md
+10/02/2025  02:47 AM             2,564 Italy.md
+10/02/2025  02:47 AM             2,716 Japan.md
+10/02/2025  02:47 AM             2,506 Kenya.md
+10/02/2025  02:47 AM             2,528 Mexico.md
+10/02/2025  02:47 AM             3,723 MicrostatesCluster.md
+10/02/2025  02:47 AM             2,559 Morocco.md
+10/02/2025  02:47 AM             2,580 Netherlands.md
+10/02/2025  02:47 AM             2,450 Nigeria.md
+10/02/2025  02:47 AM             2,946 Nordics.md
+10/02/2025  02:47 AM             2,101 OceaniaCluster.md
+10/02/2025  02:47 AM             2,476 Pakistan.md
+10/02/2025  02:47 AM             2,515 Peru.md
+10/02/2025  02:47 AM             2,514 Philippines.md
+10/02/2025  02:47 AM             2,539 Poland.md
+10/02/2025  02:47 AM             2,820 Russia.md
+10/02/2025  02:47 AM             2,754 SouthAfrica.md
+10/02/2025  02:47 AM             2,490 SouthKorea.md
+10/02/2025  02:47 AM             2,563 Spain.md
+10/02/2025  02:47 AM             2,514 Tanzania.md
+10/02/2025  02:47 AM             2,516 Thailand.md
+10/02/2025  02:47 AM             2,518 Turkey.md
+10/02/2025  02:47 AM             2,523 Ukraine.md
+10/02/2025  02:47 AM             2,499 UnitedKingdom.md
+10/02/2025  02:47 AM             3,167 Universal_Governance_Resonance_Template.md
+10/02/2025  02:47 AM             2,872 US.md
+10/02/2025  02:47 AM             2,535 Vietnam.md
+              47 File(s)        125,462 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template
+
+10/05/2025  09:49 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+10/05/2025  09:49 AM    <DIR>          assets
+10/05/2025  09:49 AM    <DIR>          badges
+10/05/2025  09:49 AM    <DIR>          echo
+10/05/2025  09:49 AM    <DIR>          equations
+10/05/2025  09:49 AM    <DIR>          honor_roll
+10/05/2025  09:49 AM    <DIR>          labs
+10/05/2025  09:49 AM    <DIR>          metadata
+10/05/2025  09:49 AM    <DIR>          scripts
+10/05/2025  09:49 AM    <DIR>          styles
+10/05/2025  09:49 AM    <DIR>          validator
+08/27/2025  07:40 AM               979 index.html
+10/05/2025  09:49 AM                81 overview.md
+10/05/2025  09:49 AM               101 README.md
+10/05/2025  09:49 AM               160 scaffold.txt
+               4 File(s)          1,321 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\assets
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM    <DIR>          glyphs
+08/27/2025  07:40 AM                29 .keep
+               1 File(s)             29 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\assets\glyphs
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 .keep
+               1 File(s)              2 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\badges
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+08/27/2025  07:40 AM                62 lab-builder.badge
+08/27/2025  07:40 AM                63 paper-anchor.badge
+08/27/2025  07:40 AM                69 synthetic-composer.badge
+10/05/2025  09:49 AM                 2 .keep
+               4 File(s)            196 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\echo
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.md
+               1 File(s)              2 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\equations
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+08/27/2025  07:40 AM                56 equations.md
+10/05/2025  09:49 AM                 2 placeholder.md
+               2 File(s)             58 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\honor_roll
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.md
+08/27/2025  07:40 AM                57 project.md
+               2 File(s)             59 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\labs
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+08/27/2025  07:40 AM    <DIR>          lab-01
+10/05/2025  09:49 AM    <DIR>          onboarding
+10/05/2025  09:49 AM    <DIR>          scrolls
+10/05/2025  09:49 AM                 2 .keep
+               1 File(s)              2 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\labs\lab-01
+
+08/27/2025  07:40 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+08/27/2025  07:40 AM                49 README.md
+               1 File(s)             49 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\labs\onboarding
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.md
+               1 File(s)              2 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\labs\scrolls
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.md
+               1 File(s)              2 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\metadata
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM               209 glyphs.yml
+10/05/2025  09:49 AM               116 project.yml
+10/05/2025  09:49 AM               143 registry.yml
+               3 File(s)            468 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\scripts
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM    <DIR>          runtime
+10/05/2025  09:49 AM    <DIR>          transfer
+08/27/2025  07:40 AM                99 init.js
+10/05/2025  09:49 AM               215 init_project.sh
+               2 File(s)            314 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\scripts\runtime
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.sh
+               1 File(s)              2 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\scripts\transfer
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.sh
+               1 File(s)              2 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\styles
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.css
+08/27/2025  07:40 AM                80 project.css
+               2 File(s)             82 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\_template\validator
+
+10/05/2025  09:49 AM    <DIR>          .
+10/05/2025  09:49 AM    <DIR>          ..
+10/05/2025  09:49 AM                 2 placeholder.md
+08/27/2025  07:40 AM                73 resonance-passport-template.md
+               2 File(s)             75 bytes
+
+ Directory of C:\Users\iphartonu\OneDrive\TriadicFrameworks\docs\__pycache__
+
+09/03/2025  11:55 AM    <DIR>          .
+10/06/2025  11:48 PM    <DIR>          ..
+09/03/2025  11:55 AM             2,118 battery_generator.cpython-313.pyc
+               1 File(s)          2,118 bytes
+
+     Total Files Listed:
+            1410 File(s)     54,347,525 bytes
+             926 Dir(s)  165,760,770,048 bytes free
