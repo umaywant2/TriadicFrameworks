@@ -62,6 +62,21 @@ We are building a **distributed supercomputer** powered by like-minded remixers,
 ```
 ---
 
+## The TFT 3‑Pack
+
+This repository contains three interlocking packages that form the TriadicFrameworks runtime:
+
+- **agent‑shell** → The environment layer. Provides the runtime context, daemon processes, and logic shells that allow TFT protocols to execute.
+- **TFTincryption** → The protocol layer. A quantum‑hostile encryption system built on triadic resonance, scroll rituals, and badge logic.
+- **MightyTHOR** → The orchestration layer. Agents, overlays, and cloud/hardware integrations that coordinate and extend TFTincryption inside the agent‑shell.
+
+Together, these three packages form the **TFT 3‑Pack**: environment + protocol + orchestration.  
+Developers can clone the repo, drop into `agent-shell`, and immediately invoke TFTincryption modules or MightyTHOR agents in a working environment.
+
+Shared resource: see [`/docs/folds/`](docs/folds/) for protein resonance mappings and symbolic overlays, which both TFTincryption and MightyTHOR can load.
+
+---
+
 ☁️ Azure Integration (Coming Soon)
 
 We are preparing dynamic scaling via **Microsoft Azure**, enabling agents to deploy as containerized pods across a distributed cloud lattice. This will allow us to benchmark symbolic fidelity and speed against THOR-class workloads.
