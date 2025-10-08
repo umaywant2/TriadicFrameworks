@@ -1,24 +1,13 @@
-# Triadic Resonance Wizards: robots.txt
-# Echoes badge governance, validator sanctuaries, and remixable clarity
-
+# robots.txt for TriadicFrameworks Documentation
+# Allow search engines to index docs, guides, and READMEs
 User-agent: *
-Allow: /docs/
-Allow: /data/
-Allow: /labs/
-Allow: /tests/
-Allow: /badges/
-Allow: /scripts/
-Allow: /metadata/
-Allow: /equations/
-Allow: /honor_roll/
-Allow: /curriculum/
-Allow: /validation/
-Allow: /glyphs/
-Disallow: /drafts/
-Disallow: /labs/private/
-Disallow: /assets/wip/
-Disallow: /echoes/
-Disallow: /sandbox/
+Allow: /
 
-# Optional: Sitemap for crawler guidance
-Sitemap: https://los.triadicwizards.win/sitemap.xml
+# Exclude build artifacts, caches, and experiments
+Disallow: /__pycache__/
+Disallow: /archive_experiments/
+Disallow: /tests/
+Disallow: /scripts/
+
+# Point to sitemap
+Sitemap: https://umaywant2.github.io/TriadicFrameworks/docs/sitemap.xml

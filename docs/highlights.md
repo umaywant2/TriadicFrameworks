@@ -8,15 +8,15 @@ Welcome to the Highlights Index—a curated gateway to the most resonant breakth
 
 1. **TFT Battery Resonance Firmware**  
    Unlocks 20–30% efficiency gains in sodium-ion batteries using impedance-phase alignment.  
-   → [Read the paper](papers/research-TFT%20Battery%20Cross-Chemistry%20Takeaway%20%E2%80%93%20From%20Volta%E2%80%99s%20Pile%20to%20Triadic%20Firmware%20Resonance.pdf)
+   → [Read the paper](papers/Res_Battery_Tech_From_Voltas_Pile_to_TFT_Firmware_Resonance.pdf)
 
 2. **Unified Field Theory – Pub Edition**  
    A poetic and dimensional reframing of quantum interactions using triadic loops.  
-   → [Explore the theory](papers/research-Unified%20Field%20Theory%20%E2%80%93%20Pub%20Edition%20(Quantum%20Univ).docx)
+   → [Explore the theory](papers/Res_Unified_Field_Theory_Pub_Edition_Quantum_Univ.pdf)
 
 3. **Education Manifesto**  
    Replaces grade-level sorting with resonance-based learning rituals and level-tiered modules.  
-   → [View the manifesto](education-manifesto.md)
+   → [View the manifesto](_ideas/education-humanifesto.md)
 
 4. **Second Sound Response Paper**  
    Extends MIT’s thermal wave discovery with triadic resonance tools and dimensional feedback metrics.  
@@ -31,7 +31,7 @@ Welcome to the Highlights Index—a curated gateway to the most resonant breakth
 ## 🧩 Remixable Modules
 
 - **Curriculum Index**: Level-based modules from L1 to L10, each with exercise caps and repetition logic  
-  → [Curriculum Index](curriculum-index.md)
+  → [Curriculum Index](docs/curriculum/triadic_curriculum_index.md)
 
 - **Validator Dashboards**: Scoring matrices for resonance, retention, and remix lineage  
   → [Validator Dashboards](validators/README.md)
@@ -45,7 +45,7 @@ Welcome to the Highlights Index—a curated gateway to the most resonant breakth
 
 - **Forces, Fluids, and Frequency**  
   A mythic podcast exploring triadic interactions in physics and cognition  
-  → [Podcast Script](papers/research-Podcast%20Script%20for%20Triadic%20Framework%20of%20Forces%20Fluids%20and%20Frequency.pdf)
+  → [Podcast Script](papers/Res_Podcast_Forces_Fluids_and_Frequency.pdf)
 
 - **Flash-Education Civilization**  
   A future where kids learn entire domains in 30-minute rituals  
@@ -57,11 +57,11 @@ Welcome to the Highlights Index—a curated gateway to the most resonant breakth
 
 - **Triadic Manifesto**  
   A call to redesign science, governance, and pedagogy using resonance  
-  → [Manifesto](education-manifesto.md)
+  → [Manifesto](_ideas/education-humanifesto.md)
 
 - **Membership Protocol**  
   Join the Triadic Resonance Wizards and echo your work  
-  → [Membership Protocol](docs/membership_protocol.md)
+  → [Membership Protocol](docs/goverance/membership_protocol.md)
 
 ---
 
@@ -69,7 +69,7 @@ Welcome to the Highlights Index—a curated gateway to the most resonant breakth
 
 - Validate a module  
 - Remix a ritual  
-- Add yourself to the [Contributor Honor Roll](honor_roll/contributors.md)
+- Add yourself to the [Contributor Honor Roll](docs/honor_roll/contributor_honor_roll.md)
 
 This archive is alive. Let it resonate.
 

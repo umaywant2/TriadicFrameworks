@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Redirecting to TriadicFrameworks Wiki</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<head>
+  <meta charset="UTF-8">
+  <title>TriadicFrameworks</title>
+  <meta http-equiv="refresh" content="9; url=https://github.com/umaywant2/TriadicFrameworks/wiki">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    img {
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 2rem;
+      border: 3px solid #fff;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .countdown {
+      margin-top: 1rem;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+  </style>
     <!-- 🔍 Cloudflare Analytics Snippet -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "deffb495bbec483ea75f9d8e57236667"}'></script>
     <!-- End Cloudflare Web Analytics -->
- 
-    <!-- 🔁 Redirect after short delay -->
-    <script>
-      setTimeout(function() {
-        window.location.href = "https://github.com/umaywant2/TriadicFrameworks/wiki";
-      }, 1000);
-    </script>
-  </head>
-  <body>
-    <p>If you are not redirected automatically, <a href="https://github.com/umaywant2/TriadicFrameworks/wiki">click here to visit the Wiki</a>.</p>
-  </body>
+  <script>
+    // Optional: live countdown
+    let seconds = 5;
+    function tick() {
+      document.getElementById("countdown").textContent = 
+        "Redirecting in " + seconds + " seconds...";
+      if (seconds > 0) {
+        seconds--;
+        setTimeout(tick, 1000);
+      }
+    }
+    window.onload = tick;
+  </script>
+</head>
+<body>
+  <h1>Entering TriadicFrameworks = TFT + FFF + MightyTHOR!</h1>
+  <img src="https://github.com/umaywant2/TriadicFrameworks/raw/main/docs/images/Copilot_20250902_064219.png" alt="TFT + FFF + MightyTHOR!">
+    <div id="countdown" class="countdown"></div>
+</body>
 </html>
-
 
