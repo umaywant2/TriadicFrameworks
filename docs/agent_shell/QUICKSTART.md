@@ -61,16 +61,16 @@ tail -f agent_shell_outputs/remix_trace.log
 ---
 
 ## 5. Cross‑Links
-- [TFTincryption](../TFTincryption/) → invoked from within agent‑shell
-- [MightyTHOR](../MightyTHOR/) → orchestrates bots, shells, and modules
-- [folds](../MightyTHOR/folds/) → resonance data that can be loaded into the shell
+- [TFTincryption](../TFTincryption/README.md) → invoked from within agent‑shell
+- [MightyTHOR](../MightyTHOR/README.md) → orchestrates bots, shells, and modules
+- [folds](../MightyTHOR/folds/README.md) → resonance data that can be loaded into the shell
 - [resonance-tools](./resonance-tools/README.md) → utilities for analysis and debugging
 
 ## 6. Next Steps
 - Experiment with different logic shells to balance performance vs fidelity.
 - Combine bots + modules for richer orchestration.
-- Feed outputs into [MightyTHOR](../MightyTHOR/) overlays for visualization.
-- Use [folds](../MightyTHOR/folds/) as input data for resonance‑aware workflows.
+- Feed outputs into [MightyTHOR](../MightyTHOR/README.md) overlays for visualization.
+- Use [folds](../MightyTHOR/folds/README.md) as input data for resonance‑aware workflows.
 
 ---
 
