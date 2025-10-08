@@ -1,11 +1,16 @@
-# 🖼️ Glyphs Directory
+# 🔤 Glyphs
 
-This folder contains symbolic overlays and dimensional resonance diagrams.
+This folder contains the **glyph language** of TriadicFrameworks.  
+Glyphs are symbolic units — visual, textual, or harmonic — that encode resonance logic.
 
-Each glyph represents:
-- A fold’s vibrational signature
-- Its alignment with the FFF triad (Forci, Flui, Freqi)
-- Remix lineage and contributor echoes
+## Contents
+- Core glyph sets
+- Evolution maps
+- Symbolic overlays
 
-Use these glyphs to visualize resonance across domains.  
-They are both technical and mythic—bridges between data and meaning.
+## Purpose
+Glyphs are the **alphabet of resonance**. They allow remixers to inscribe meaning, trigger rituals, and extend protocols through symbolic logic.
+
+## Cross‑Links
+- [../glyphic_resonance](../glyphic_resonance) → glyphs in harmonic overlays
+- [../rituals](../rituals) → ceremonies that use glyphs
