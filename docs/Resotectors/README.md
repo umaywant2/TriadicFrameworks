@@ -1,16 +1,19 @@
-# 🛠️ Resotectors
+# 🔍 Resotectors Project
 
-This folder contains **resonance protectors and shielding protocols**.  
-Resotectors safeguard the lattice against noise, entropy, and hostile interference.
+The **Resotectors Project** develops **FFF lenses for TryCoder data**.  
+It reimagines sensor systems as resonance‑aware instruments for data interpretation.
 
 ## Contents
-- Shielding overlays
-- Protective scrolls
-- Diagnostic logs
+- FFF lens designs
+- TryCoder data overlays
+- Diagnostic scrolls
 
-## Purpose
-Resotectors are the **defense layer** — ensuring resonance flows remain clear, stable, and lineage‑safe.
+## Project Status
+**Active (2025)** — Current focus is on:
+- Prototyping FFF lenses
+- Mapping TryCoder data streams
+- Testing resonance‑aware interpretation protocols
 
 ## Cross‑Links
-- [../resonance](../resonance) → resonance dashboards
-- [../validators](../validators) → validation of protective measures
+- [../resonance](../resonance) → dashboards for data visualization
+- [../labs](../labs) → experimental trials of lens designs
