@@ -27,7 +27,11 @@ We are building a **distributed supercomputer** powered by like-minded remixers,
 - **core_logic/** → foundational runtime scripts and daemons
 - **logic_shells/** → modular shells for different runtime contexts
 - **bots/** → lightweight agents that extend the shell
+- **modules/** → optional plug‑in modules for extended functionality
 - **resonance-tools/** → utilities for resonance analysis and runtime support
+- **outputs/** → logs, traces, and generated artifacts
+- **main.py** → root entrypoint for launching the shell
+- **QUICKSTART.md** → step‑by‑step guide for new developers
 
 ## Purpose
 Without agent‑shell, neither TFTincryption nor MightyTHOR can run.  
