@@ -26,4 +26,8 @@ It extends into cloud and hardware environments, and provides dashboards and ove
 - [folds](folds/) → bio‑resonance data consumed by Thor agents and AI pipeline
 - [agent_shell](../agent_shell/) → runtime environment for Thor agents
 
+---
+
+© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
 
