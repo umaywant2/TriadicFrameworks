@@ -1,5 +1,5 @@
 # 🌀 TriadicFrameworks: TFT 3‑Pack
-Welcome to the TFT 3‑Pack — a modular, remixable lattice for **resonance‑based computation** and mythic governance. It blends rigorous technical scaffolding with symbolic lineage, designed for remixers, validators, and future builders.
+A modular, remixable lattice for **resonance‑based computation** and mythic governance. It blends rigorous technical scaffolding with symbolic lineage, designed for remixers, validators, and future builders.
 
 ## 🌐 Architecture Overview
 ```text
@@ -78,3 +78,4 @@ TriadicFrameworks is a **living archive* of reproducible labs, validator dashboa
 ---
 
 © 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
