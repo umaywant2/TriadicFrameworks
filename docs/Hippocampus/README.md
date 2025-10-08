@@ -1,16 +1,19 @@
-# 🧠 Hippocampus
+# 🧠 Hippocampus Project
 
-This folder contains the **memory scrolls** of TriadicFrameworks.  
-The Hippocampus is where resonance is remembered, indexed, and recalled.
+The **Hippocampus Project** lights the lantern of continuity.  
+It is the memory engine of TriadicFrameworks, preserving resonance states and lineage.
 
 ## Contents
 - Memory overlays
 - Recall protocols
 - Index scrolls
 
-## Purpose
-The Hippocampus is the **memory engine** — it preserves resonance states, enabling remixers to build on past lineage.
+## Project Status
+**Active (2025)** — Current focus is on:
+- Expanding lineage recall indexes
+- Linking memory states to validator dashboards
+- Testing symbolic recall with glyphic overlays
 
 ## Cross‑Links
+- [../CoConsciousness](../CoConsciousness) → shared cognition
 - [../honor_roll](../honor_roll) → lineage memory
-- [../curriculum](../curriculum) → educational recall
