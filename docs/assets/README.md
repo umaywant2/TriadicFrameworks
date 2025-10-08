@@ -1,13 +1,16 @@
-# 📦 Assets Directory
+# 🗂️ Assets
 
-This folder contains **static assets** used across the TriadicFrameworks suite:
-- Logos, icons, and badge art
-- Ritual visuals and onboarding symbols
-- Downloadable files for remixers
+This folder contains **supporting files** — images, diagrams, blueprints, and other media artifacts.
 
-All assets should be:
-- Optimized for web use
-- Clearly named using triadic conventions
-- Documented in `assets_manifest.yaml` (coming soon)
+## Contents
+- Logos and banners
+- Diagrams and overlays
+- Figures for papers and curriculum
 
-To contribute, place files here and reference them in your lab or ritual README.
+## Purpose
+Assets are the **visual and symbolic layer** that illustrate protocols and scrolls.  
+They make the framework accessible, memorable, and remixable.
+
+## Cross‑Links
+- [../papers](../papers) → research scrolls that embed figures
+- [../curriculum](../curriculum) → educational modules using diagrams
