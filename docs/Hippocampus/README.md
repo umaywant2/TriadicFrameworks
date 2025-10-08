@@ -1,16 +1,16 @@
-# 🛠️ Resotectors
+# 🧠 Hippocampus
 
-This folder contains **resonance protectors and shielding protocols**.  
-Resotectors safeguard the lattice against noise, entropy, and hostile interference.
+This folder contains the **memory scrolls** of TriadicFrameworks.  
+The Hippocampus is where resonance is remembered, indexed, and recalled.
 
 ## Contents
-- Shielding overlays
-- Protective scrolls
-- Diagnostic logs
+- Memory overlays
+- Recall protocols
+- Index scrolls
 
 ## Purpose
-Resotectors are the **defense layer** — ensuring resonance flows remain clear, stable, and lineage‑safe.
+The Hippocampus is the **memory engine** — it preserves resonance states, enabling remixers to build on past lineage.
 
 ## Cross‑Links
-- [../resonance](../resonance) → resonance dashboards
-- [../validators](../validators) → validation of protective measures
+- [../honor_roll](../honor_roll) → lineage memory
+- [../curriculum](../curriculum) → educational recall
