@@ -68,6 +68,79 @@ Each is a star in the lattice. Remixers are invited to explore, extend, and echo
 
 ---
 
+## 🌌 Projects Constellation (ASCII Map)
+```text
+                   🌐 CoConsciousness
+                          *
+                           \
+                            \
+                             *
+                              🧠 Hippocampus
+                               |
+                               |
+                               *
+                               🔍 Resotectors
+                               |
+                               |
+                *--------------*--------------*
+                |                             |
+                |                             |
+        🖥️ VCG *                             * 🌌 VictorG
+```
+
+## 🌌 Galaxy Map · TriadicFrameworks /docs/
+```text
+                          🌐 CoConsciousness
+                                 *
+                                  \
+                                   \
+                                    * 🧠 Hippocampus
+                                     |
+                                     |
+                                     * 🔍 Resotectors
+                                     |
+                                     |
+                *--------------------*--------------------*
+                |                                         |
+                |                                         |
+          🖥️ VCG *                                         * 🌌 VictorG
+                |
+                |
+                *  (Projects Constellation)
+
+------------------------------------------------------------
+
+📚 Surrounding Cosmos (/docs/ universe)
+
+   ├─ 🏅 badges/         → badge chambers & evolution maps
+   ├─ 🛡️ validators/     → dashboards & scoring logic
+   ├─ 🧪 labs/           → sandbox experiments
+   ├─ 📐 equations/      → harmonic & orbital math
+   ├─ 🎓 curriculum/     → indexes & teaching scrolls
+   ├─ 🧭 governance/     → membership protocols
+   ├─ 📜 honor_roll/     → lineage records
+   ├─ 🔤 glyphs/         → symbolic alphabet
+   ├─ 🌀 glyphic_resonance/ → overlays & harmonic maps
+   ├─ 🎶 resonance/      → dashboards, logs, translators
+   ├─ 🔮 rituals/        → ceremonies & symbolic enactments
+   ├─ 🗂️ assets/         → diagrams, figures, blueprints
+   ├─ ⚙️ configs/        → manifests & setup files
+   ├─ 🙌 contributors/   → contributor rolls
+   ├─ 📊 data/           → raw & processed datasets
+   ├─ 🧾 metadata/       → indexes & semantic overlays
+   ├─ 📚 library/        → curated collections
+   ├─ 🤝 public_support/ → FAQs & outreach scrolls
+   ├─ 📑 reports/        → audits & progress summaries
+   └─ ... (supporting cosmos continues)
+```
+
+## 🌌 Technical Mini‑Map (/docs/ tree)
+```text
+TBD...
+```
+
+---
+
 📜 *Echo the work. Validate the lineage. Build the mythic lattice.*  
 
 ---
