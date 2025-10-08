@@ -1,27 +1,19 @@
-# 🧬 Remix Lineage Visualizer
+## 🔗 Graph Logic
 
----
+- **Nodes**: Contributors (circle elements)
+- **Edges**: Remix trace paths (lines with arrowheads)
+- **Badges**: Color-coded overlays (node fill or border)
+- **Pulse Events**: Animated ripple effect on validator trigger
 
-## 🔗 Graph Elements
+### 🧠 D3.js Attributes
 
-- **Nodes**: Contributors
-- **Edges**: Remix trace paths
-- **Badges**: Color-coded overlays
-- **Validator Events**: Pulse markers
+- `node.id`: Contributor name
+- `node.badge`: Badge type
+- `edge.source → edge.target`: Remix lineage
+- `event.timestamp`: Pulse trigger
 
----
+### 🖼️ Visual Options
 
-## 🖼️ Visualization Options
-
-- Static SVG graph
-- Live D3.js interactive map
-- Badge hover tooltips
-- Pulse animation trails
-
----
-
-## 🧠 Data Sources
-
-- `honor_roll.md`
-- `badge_handshake.txt`
-- `remix_trace.log`
+- Hover: Show badge + remix depth
+- Click: Expand remix trace
+- Filter: By badge, timestamp, validator event

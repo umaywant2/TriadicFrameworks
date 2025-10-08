@@ -2,7 +2,7 @@
 
 ## 📂 Root Layout
 ```
-docs/
+docs/agent_shell/
   resonance-tools/
     resonant-time/        # Tool 1
     tfe/                  # Tool 2

@@ -11,7 +11,7 @@ This guide will help you install, run, and chain the tools together.
 Clone the repo:
 ```bash
 git clone https://github.com/umaywant2/TriadicFrameworks.git
-cd TriadicFrameworks/docs/resonance-tools
+cd TriadicFrameworks/docs/agent_shell/resonance-tools
 ```
 (Optionally, set up a virtual environment.)
 ```bash
