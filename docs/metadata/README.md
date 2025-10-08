@@ -1,31 +1,16 @@
-# Metadata – Lab 2: Quantum Tunneling
+# 🧾 Metadata
 
-## 🔧 Diode Specs
+This folder contains **descriptive indexes and tables**.  
+Metadata ensures discoverability, clarity, and remix lineage.
 
-- Model: 1N3716
-- Peak current: ~100 mA
-- Negative resistance region: 0.3V–0.6V
-- Manufacturer: General Semiconductor
+## Contents
+- Periodic tables of shapes
+- Dimensional indexes
+- Semantic overlays
 
----
+## Purpose
+Metadata is the **catalog layer** — it makes every artifact findable and remixable.
 
-## 🧭 Lab Variants
-
-- **Variant A**: Pure DC sweep
-- **Variant B**: RF-modulated input
-- **Variant C**: Temperature-controlled tunneling
-
----
-
-## 🧠 Triadic Metadata
-
-- **Object**: Component specs
-- **Attribute**: Variant type
-- **Condition**: Lab environment
-
----
-
-## 🎭 Mythic Tagline
-
-> *“Every diode is a gatekeeper—choose your variant wisely.”*  
-> — Nawder Loswin
+## Cross‑Links
+- [../library](../library) → curated collections
+- [../curriculum](../curriculum) → indexes for teaching
