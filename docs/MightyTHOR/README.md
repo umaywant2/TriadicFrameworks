@@ -18,11 +18,12 @@ The **MightyTHOR** package is the orchestration layer of the TFT 3‑Pack.
 - **QUICKSTART.md** → orchestration guide for new developers
 
 ## Purpose
-MightyTHOR orchestrates TFTincryption inside the [agent‑shell](../agent_shell/).  
+MightyTHOR orchestrates TFTincryption inside the [agent_shell](../agent_shell/).  
 It extends into cloud and hardware environments, and provides dashboards and overlays for developers.
 
 ## Cross‑links
 - [TFTincryption](../TFTincryption/) → protocol layer orchestrated by Thor
 - [folds](folds/) → bio‑resonance data consumed by Thor agents and AI pipeline
-- [agent‑shell](../agent_shell/) → runtime environment for Thor agents
+- [agent_shell](../agent_shell/) → runtime environment for Thor agents
+
 
