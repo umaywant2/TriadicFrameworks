@@ -22,12 +22,17 @@ The **TFTincryption** package is the protocol layer of the TFT 3‑Pack.
 It is a quantum‑hostile encryption system built on triadic resonance, scroll rituals, and badge logic.
 
 ## Structure
-- **protocol-core/** → cryptographic scrolls, runtime modules
-- **scrolls/** → curriculum, lifecycle rituals
+- **protocol-core/** → cryptographic scrolls and runtime modules
+- **scrolls/** → curriculum and lifecycle rituals
 - **registry/** → JSON registries (glyphs, badges, scrolls)
-- **contributors/** → honor rolls, configs
-- **discoverability/** → SEO and onboarding scrolls
-- **TFThooks/** → extensions specific to TFTincryption
+- **contributors/** → honor rolls, configs, lineage scrolls
+- **discoverability/** → SEO scaffolding and onboarding guides
+- **TFThooks/** → extensions and site‑specific hooks
+  - **runtime/** → hook scripts that extend protocol‑core
+  - **integration/** → configs and scrolls for external embedding
+  - **validators/** → test harnesses and safety checks
+  - **examples/** → sample hook implementations
+  - **agents/** → hook‑level agents for glyphs, badges, and scrolls
 
 ## Purpose
 TFTincryption is the secure substrate of the lattice.  
