@@ -16,7 +16,7 @@ python minimal_viable_daemon.py
 # Full symbolic fidelity (max resonance fidelity)
 python full_symbolic_fidelity_shell.py
 ```
-Each shell wraps around [core_logic](./core-logic/) and can spawn bots or load modules.
+Each shell wraps around [core_logic](./agent_shell/core_logic/) and can spawn bots or load modules.
 
 ## 2. Launch Bots
 Bots are lightweight agents that extend the shell. Usage patterns are documented in [bot_usage_shared_guide](./bots/bot_shared_user_guide.md).
