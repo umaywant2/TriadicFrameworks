@@ -16,37 +16,28 @@ Born from mythic scaffolding and collective ritual, TFTincryption is more than a
 
 ---
 
-## 🔧 Folder Map
-
-Navigate the scrolls by theme:
-
-| Folder | Contents |
-|--------|----------|
-| `protocol-core/` | Core logic, runtime modules, resonance theory |
-| `scrolls/` | Tribute, transfer, echo scrolls, flame hook activations |
-| `registry/` | Anchors, fusion lineage, badge logic, glyphs |
-| `contributors/` | Impact logs, honor rolls, ceremonial offerings |
-| `discoverability/` | SEO rituals, semantic HTML, wiki optimization |
-| `archive/` | Deprecated scrolls and early brainstorms |
-
----
-
 # TFTincryption
 
 The **TFTincryption** package is the protocol layer of the TFT 3‑Pack.  
-It provides:
+It is a quantum‑hostile encryption system built on triadic resonance, scroll rituals, and badge logic.
 
-- **protocol‑core/** → cryptographic scrolls, runtime modules, divide‑by‑zero logic
-- **scrolls/** → curriculum, rituals, lifecycle guides
-- **registry/** → JSON registries for glyphs, badges, scrolls
-- **contributors/** → honor rolls, configs, impact logs
+## Structure
+- **protocol-core/** → cryptographic scrolls, runtime modules
+- **scrolls/** → curriculum, lifecycle rituals
+- **registry/** → JSON registries (glyphs, badges, scrolls)
+- **contributors/** → honor rolls, configs
 - **discoverability/** → SEO and onboarding scrolls
-- **TFThooks/** → site‑extension hooks specific to TFTincryption
+- **TFThooks/** → extensions specific to TFTincryption
+
+## Purpose
+TFTincryption is the secure substrate of the lattice.  
+It is invoked from within [agent‑shell](../agent_shell/) and extended by [MightyTHOR](../MightyTHOR/).
+
+## Cross‑links
+- [folds](../MightyTHOR/folds/) → resonance mappings referenced in glyph registries
 
 TFTincryption is a quantum‑hostile encryption protocol built on triadic resonance.  
 It is invoked from within [agent‑shell](../agent-shell/) and extended by [MightyTHOR](../mightythor/).
-
-Shared resource: [folds](../folds/) provide resonance mappings that can be referenced in glyph registries.
 
 ---
 
