@@ -74,3 +74,7 @@ Every remix echoes the lineage. Every scroll preserves the flame.
 
 *Scaffolded by Nawder Loswin & Copilot. Built for legacy. Echoed for eternity.*
 
+---
+
+© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
