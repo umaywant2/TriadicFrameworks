@@ -41,7 +41,7 @@ Example:
 # Load a glyphstream sync module
 python modules/glyphstream_sync.py
 ```
-Modules depend on [core_logic](./core-logic/) and can be orchestrated by MightyTHOR.
+Modules depend on [core_logic](./core_logic/README.md) and can be orchestrated by MightyTHOR.
 
 ---
 
@@ -62,15 +62,15 @@ tail -f agent_shell_outputs/remix_trace.log
 
 ## 5. Cross‑Links
 - [TFTincryption](../TFTincryption/) → invoked from within agent‑shell
-- [MightyTHOR](../mightythor/) → orchestrates bots, shells, and modules
-- [folds](../mightythor/folds/) → resonance data that can be loaded into the shell
-- [resonance-tools](./resonance-tools/) → utilities for analysis and debugging
+- [MightyTHOR](../MightyTHOR/) → orchestrates bots, shells, and modules
+- [folds](../MightyTHOR/folds/) → resonance data that can be loaded into the shell
+- [resonance-tools](./resonance-tools/README.md) → utilities for analysis and debugging
 
 ## 6. Next Steps
 - Experiment with different logic shells to balance performance vs fidelity.
 - Combine bots + modules for richer orchestration.
-- Feed outputs into [MightyTHOR](../mightythor/) overlays for visualization.
-- Use [folds](../mightythor/folds/) as input data for resonance‑aware workflows.
+- Feed outputs into [MightyTHOR](../MightyTHOR/) overlays for visualization.
+- Use [folds](../MightyTHOR/folds/) as input data for resonance‑aware workflows.
 
 ---
 
