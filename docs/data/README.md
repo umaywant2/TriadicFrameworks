@@ -1,13 +1,16 @@
-# 📈 Data Directory
+# 📊 Data
 
-This folder contains **datasets and symbolic mappings**:
-- Validator logs
-- Badge issuance records
-- Resonance cycle exports
+This folder contains **datasets and processed outputs**.  
+It is the raw material for labs, validators, and curriculum.
 
-All data should be:
-- JSON, CSV, or YAML format
-- Clearly labeled and timestamped
-- Linked to the tool or lab that generated it
+## Contents
+- Raw data
+- Processed data
+- Webhook feeds
 
-This is the **evidence layer** of the suite—where symbolic logic meets reproducible audit.
+## Purpose
+Data is the **fuel of resonance** — reproducible, transparent, and remixable.
+
+## Cross‑Links
+- [../labs](../labs) → experiments using data
+- [../equations](../equations) → formal models applied to data
