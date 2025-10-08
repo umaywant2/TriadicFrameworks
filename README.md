@@ -4,7 +4,7 @@ A modular, remixable lattice for **resonance‑based computation** and mythic go
 ## 🌐 Architecture Overview
 ```text
                  ┌───────────────────────────┐
-                 │       agent‑shell         │
+                 │       agent_shell         │
                  │  (environment layer)      │
                  │                           │
                  │  • core_logic             │
@@ -56,7 +56,7 @@ A modular, remixable lattice for **resonance‑based computation** and mythic go
 ---
 
 ## 🚀 Quickstart
-- [Agent‑Shell Quickstart](docs/agent_shell/QUICKSTART.md)
+- [Agent_Shell Quickstart](docs/agent_shell/QUICKSTART.md)
 - [TFTincryption Quickstart](docs/TFTincryption/QUICKSTART.md)
 - [MightyTHOR Quickstart](docs/MightyTHOR/QUICKSTART.md)
 - [Root Quickstart (Grand Tour)](docs/QUICKSTART.md)
@@ -78,4 +78,5 @@ TriadicFrameworks is a **living archive* of reproducible labs, validator dashboa
 ---
 
 © 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
 
