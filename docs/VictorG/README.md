@@ -1,12 +1,20 @@
-# VictorG
-**Variable Gravity Harmonics in Triadic Flux**
+# 🖥️ Virtual Compute Gateway (VCG)
 
-VictorG investigates how resonance phenomena can produce variable‑gravity effects under Triadic Flux conditions.  
-This project includes reproducible labs, detailed equations, validator protocols, and badges for contributors.
+The **Virtual Compute Gateway (VCG)** is a modular interface that extends TriadicFrameworks functionality.  
+It enables TFT calculations across distributed systems.
 
-- [Overview](overview.md)
-- [Labs](labs/)
-- [Equations](equations/)
-- [Badges](badges/)
-- [Validator](validator/)
-- [Honor Roll](honor_roll/)
+## Contents
+- Source code
+- Service configs
+- Systemd scripts
+- Templates
+
+## Project Status
+**Active (2025)** — Current focus is on:
+- Expanding distributed compute orchestration
+- Integrating with MightyTHOR runtime
+- Testing cross‑platform TFT calculations
+
+## Cross‑Links
+- [../VictorG](../VictorG) → resonance pattern simulations
+- [../engine](../engine) → runtime logic
