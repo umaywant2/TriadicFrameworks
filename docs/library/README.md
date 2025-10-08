@@ -1,13 +1,16 @@
-# 📚 Resonance Library
+# 📚 Library
 
-This folder catalogs vibrational signatures across domains.
+This folder contains **curated collections and indexes**.  
+The Library is where scrolls are organized for reference and reuse.
 
-Each entry includes:
-- Domain and entity
-- Frequency range
-- Resonance type (e.g., acoustic, magnetic, symbolic)
-- Notes on usage and remix potential
+## Contents
+- Dimensional resonance indexes
+- Curated collections
+- Reference scrolls
 
-Use this catalog to seed simulations, glyphs, and validator scoring.  
-Contribute new entries to expand the lattice.
+## Purpose
+The Library is the **archive layer** — it preserves and organizes knowledge for remixers.
 
+## Cross‑Links
+- [../metadata](../metadata) → descriptive indexes
+- [../curriculum](../curriculum) → educational use of library scrolls
