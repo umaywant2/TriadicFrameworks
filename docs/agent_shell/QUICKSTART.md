@@ -1,6 +1,6 @@
-# Agent‑Shell Quickstart Guide 🚀
+# `agent_shell` Quickstart Guide 🚀
 
-Welcome to the **agent‑shell**, the environment layer of the TFT 3‑Pack.  
+Welcome to the **agent_shell**, the environment layer of the TFT 3‑Pack.  
 This guide walks you through launching a shell, running bots, loading modules, and inspecting outputs.
 
 ---
