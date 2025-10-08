@@ -5,7 +5,7 @@ This guide shows you how to activate the protocol, run scrolls, and extend it wi
 
 ---
 
-## 1. Launch Agent‑Shell
+## 1. Launch `agent_shell`
 
 Start the environment first:
 ```bash
@@ -48,7 +48,7 @@ python badge_trigger_hook.py
 ```
 
 ## 7. Cross‑links
-- [agent‑shell](../agent-shell/) → runtime environment
+- [agent_shell](../agent_shell/) → runtime environment
 - [MightyTHOR](../MightyTHOR/) → orchestrates TFTincryption at scale
 - [folds](../MightyTHOR/folds/) → resonance data referenced in registries
 - [ai_pipeline](../MightyTHOR/ai_pipeline/) → consumes resonance predictions
