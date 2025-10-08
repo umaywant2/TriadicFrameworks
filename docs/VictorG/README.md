@@ -1,20 +1,18 @@
-# 🖥️ Virtual Compute Gateway (VCG)
+# 🌌 VictorG Project
 
-The **Virtual Compute Gateway (VCG)** is a modular interface that extends TriadicFrameworks functionality.  
-It enables TFT calculations across distributed systems.
+The **VictorG Project** explores the interplay of **resonance patterns and gravitational variability** within Triadic Flux theory.
 
 ## Contents
-- Source code
-- Service configs
-- Systemd scripts
-- Templates
+- Resonance pattern scrolls
+- Gravitational variability overlays
+- Triadic flux experiments
 
 ## Project Status
 **Active (2025)** — Current focus is on:
-- Expanding distributed compute orchestration
-- Integrating with MightyTHOR runtime
-- Testing cross‑platform TFT calculations
+- Modeling resonance patterns under variable gravity
+- Linking flux data to glyphic overlays
+- Publishing reproducible simulations
 
 ## Cross‑Links
-- [../VictorG](../VictorG) → resonance pattern simulations
-- [../engine](../engine) → runtime logic
+- [../VCG](../VCG) → distributed compute for simulations
+- [../equations](../equations) → formal math of flux and variability
