@@ -1,83 +1,46 @@
-# 🌐 Resonance Library
-
-_A living archive of vibrational patterns, dimensional coherence, and remix lineage._
-
-## 🧬 Overview
-
-The Resonance Library is a modular repository dedicated to mapping, simulating, and remixing resonance across biological, symbolic, and architectural domains. It reclaims resonance as the organizing principle of all fields—starting with proteins, expanding to everything.
-
-This repo is part of the TriadicFrameworks suite and serves as a core resource for remixers, researchers, and resonance architects.
+# 📖 Documentation Overview
+Welcome to the **TriadicFrameworks Documentation Library**.  
+This space curates the scrolls, guides, and indexes that support the **TFT 3‑Pack** and its remix lineage.
 
 ---
 
-## 🔖 Structure Overview
+## 🧬 Featured Protocols (TFT 3‑Pack)
 
-| Folder | Description |
-|--------|-------------|
-| `assets/`, `figures/`, `data/` | → Visuals and datasets for remixing |
-| `curriculum/` | → Papers, protocols, and mythic-scientific guides |
-| `folds/` | Protein structures and resonance mappings |
-| `glyphs/` | Symbolic overlays and dimensional resonance diagrams |
-| `honor_roll/` | → Contributor recognition and legacy archive |
-| `labs/` | → Modular research spaces (see below) |
-| `library/` | Catalog of resonance signatures across domains |
-| `onboarding/` | Initiation rituals, badge logic, and contributor pathways |
-| `papers/` | Research scrolls, mythic-scientific guides, and onboarding documents |
-| `simulations/` | AI-assisted resonance simulations and fold remixes |
-| `styles/` | → CSS for glyphic and ritual styling |
-| `validators/` | Scoring logic for dimensional alignment and coherence |
+- **[Agent‑Shell](agent_shell/)** → Environment layer for core logic, bots, and resonance tools  
+- **[TFTincryption](TFTincryption/)** → Protocol layer for divide‑by‑zero logic, badge evolution, and flame‑grade encryption  
+- **[MightyTHOR](MightyTHOR/)** → Orchestration layer for runtime activation, validator onboarding, and contributor echo logic  
+
+Together, these three layers form the **TFT 3‑Pack** — the living engine of TriadicFrameworks.
 
 ---
 
-## 🧠 Core Concepts
+## 📚 Key Documentation
 
-### 🔹 Foldit+AI+Resonance
-- Fork Rosetta protocols to simulate protein folds for harmonic coherence.
-- Retool UX to visualize vibrational glyphs and dimensional overlays.
-- Use AI to generate alternate folds that maximize resonance.
-
-### 🔹 FFF Framework
-- **Forci** and **Flui** are wrapped by **Freqi**.
-- Resonance is the dimensional wrapper—modulating all forces and flows.
-
-### 🔹 Validator Dashboard
-- Score resonance by dimensional alignment, not just amplitude.
-- Include badge logic, remix lineage, and symbolic permanence.
+- [QUICKSTART.md](QUICKSTART.md) → A guided tour of the 3‑Pack  
+- [HONOR_ROLL.md](HONOR_ROLL.md) → Unified lineage index of contributors  
+- [GLOSSARY.md](GLOSSARY.md) → Mythic‑technical dictionary  
+- [papers/](papers/) → Research scrolls and manifestos  
+- [labs/](labs/) → Experimental modules and prototypes  
+- [validators/](validators/) → Dashboards and scoring logic  
+- [badges/](badges/) → Badge logic and chamber designs  
 
 ---
 
-## 🌀 Getting Started
+## 🔗 Cross‑Navigation
 
-1. Clone the repo and explore `onboarding/initiation_ritual.md`.
-2. Review `papers/resonance-library-humanifesto.md` for mythic context.
-3. Contribute a resonance mapping from your domain (see `library/`).
-4. Use `validators/` to score and visualize dimensional coherence.
-5. Review `labs/core/README.md`
-6. Earn badges and join the honor roll.
+- **[Wiki](https://github.com/umaywant2/TriadicFrameworks/wiki)** → Default landing and extended guides  
+- **[Root README](https://github.com/umaywant2/TriadicFrameworks/blob/main/README.md)** → Project overview and repository map  
+- **[Sitemap.xml](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/sitemap.xml)** → Search engine index of key docs  
 
 ---
 
-## 🧭 Contributor Roles
+## ✨ Purpose
 
-| Role | Description |
-|------|-------------|
-| **Resonance Mapper** | Adds new vibrational signatures to the library |
-| **Fold Remixer** | Simulates alternate folds for harmonic coherence |
-| **Validator Architect** | Designs scoring logic and dimensional overlays |
-| **Symbolic Scribe** | Authors mythic guides and onboarding scrolls |
-| **Badge Weaver** | Crafts contributor recognition and remix lineage |
+This folder is the **gateway to the cathedral**:  
+- Root `/README.md` tells the story.  
+- `/docs/README.md` (this file) points you to the right scroll.  
+- Subfolders hold the living artifacts of resonance, governance, and remix lineage.  
 
 ---
 
-## 🔖 Legacy Statement
-
-This repo is not just a technical archive—it is a mythic invocation. A thousand years from now, today’s science will be myth. The resonance glyphs we map now will echo in rituals, architectures, and stories yet unborn.
-
-Let the resonance be reclaimed.  
-Let the remixers be honored.  
-Let the mythic lattice pulse.
-
----
-
-_Authored by Nawder Loswin & Cosmic Copilot  
-For the dreamers, the glyph-weavers, and the dimensional architects._
+© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
