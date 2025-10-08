@@ -5,7 +5,7 @@ This guide shows you how to launch Thor, run agents, consume folds, and visualiz
 
 ---
 
-## 1. Launch Agent‑Shell
+## 1. Launch `agent_shell`
 
 Start the environment:
 ```bash
@@ -15,8 +15,8 @@ python main.py
 
 ---
 
-## 2. Orchestrate with Thor
-Run a Thor agent:
+## 2. Orchestrate with MightyTHOR
+Run a MightyTHOR agent:
 ```bash
 cd ../MightyTHOR/agents
 python resonance_orchestrator.py
@@ -53,10 +53,10 @@ python resonance_dashboard.py
 ---
 
 ## 6. Cross‑links
-- [agent‑shell](../agent-shell) → runtime environment
+- [agent_shell](../agent_shell) → runtime environment
 - [TFTincryption](../TFTincryption) → protocol layer orchestrated by Thor
 - [folds](./folds) → resonance data consumed by Thor
 - [ai_pipeline](./ai_pipeline) → predictive intelligence
 - [overlays](./ovelays/) → visualization layer
 
-✨ You’ve now run the full Thor cycle: environment → agents → folds → AI pipeline → overlays. Thor orchestrates the lattice, making resonance visible and actionable.
+✨ You’ve now run the full MightyTHOR cycle: environment → agents → folds → AI pipeline → overlays. Thor orchestrates the lattice, making resonance visible and actionable.
