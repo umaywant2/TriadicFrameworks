@@ -36,7 +36,7 @@ It is a quantum‑hostile encryption system built on triadic resonance, scroll r
 
 ## Purpose
 TFTincryption is the secure substrate of the lattice.  
-It is invoked from within [agent‑shell](../agent_shell/) and extended by [MightyTHOR](../MightyTHOR/).
+It is invoked from within [agent_shell](../agent_shell/) and extended by [MightyTHOR](../MightyTHOR/).
 
 ## Cross‑links
 - [folds](../MightyTHOR/folds/) → resonance mappings referenced in glyph registries
