@@ -1,6 +1,6 @@
 # 🌀 TFT Agent Shell: Distributed Resonance Node
 
-The **agent‑shell** is the environment layer of the TFT 3‑Pack. It provides the runtime context, daemons, and modular shells that allow TFT protocols to execute. This allows for a symbolic and technical orchestration suite designed to democratize high-dimensional computing. 
+The **agent_shell** is the environment layer of the TFT 3‑Pack. It provides the runtime context, daemons, and modular shells that allow TFT protocols to execute. This allows for a symbolic and technical orchestration suite designed to democratize high-dimensional computing. 
 
 This module enables contributors to run lightweight agents that resonate with local host performance and connect seamlessly to the TFT-FFF grid.
 
