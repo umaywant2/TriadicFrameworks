@@ -1,12 +1,16 @@
-# Resotectors
-**Resonance Detection Across Spectral Lenses**
+# 🛠️ Resotectors
 
-Resotectors designs, models, and validates tools for detecting resonance phenomena across multiple spectral bands.  
-From simulation to physical prototype, this project prioritizes reproducibility and open methodology.
+This folder contains **resonance protectors and shielding protocols**.  
+Resotectors safeguard the lattice against noise, entropy, and hostile interference.
 
-- [Overview](overview.md)
-- [Labs](labs/)
-- [Equations](equations/)
-- [Badges](badges/)
-- [Validator](validator/)
-- [Honor Roll](honor_roll/)
+## Contents
+- Shielding overlays
+- Protective scrolls
+- Diagnostic logs
+
+## Purpose
+Resotectors are the **defense layer** — ensuring resonance flows remain clear, stable, and lineage‑safe.
+
+## Cross‑Links
+- [../resonance](../resonance) → resonance dashboards
+- [../validators](../validators) → validation of protective measures
