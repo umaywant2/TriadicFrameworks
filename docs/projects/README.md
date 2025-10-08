@@ -74,8 +74,4 @@ Each is a star in the lattice. Remixers are invited to explore, extend, and echo
 
 ⚡ This README pairs with `/docs/projects/QUICKSTART.md`:  
 - **README.md** = the *why* (mythic arc, purpose, lineage)  
-- **QUICKSTART.md** = the *how* (commands, demos, contribution steps)  
-
----
-
-Would you like me to also sketch a **constellation diagram (ASCII or SVG)** for this Projects Index, so remixers can *see* the five projects as a star‑map constellation?
+- **[QUICKSTART.md](QUICKSTART.md)** = the *how* (commands, demos, contribution steps)  
