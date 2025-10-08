@@ -84,3 +84,9 @@ cat QUICKSTART.md
 ---
 
 📜 *This Projects QUICKSTART is your constellation map. Each star is a project, each path a ritual. Choose your entry point and begin the journey.*  
+
+---
+
+⚡ This README pairs with `/docs/projects/README.md`:  
+- **[README.md](README.md)** = the *why* (mythic arc, purpose, lineage)  
+- **QUICKSTART.md** = the *how* (commands, demos, contribution steps)  
