@@ -1,48 +1,76 @@
-# 🌀 TriadicFrameworks
+# 🌀 TriadicFrameworks: TFT 3‑Pack
+Welcome to the TFT 3‑Pack — a modular, remixable lattice for **resonance‑based computation** and mythic governance. It blends rigorous technical scaffolding with symbolic lineage, designed for remixers, validators, and future builders.
 
-Welcome to the mythic lattice of TriadicFrameworks—a modular, reproducible system for solving global problems using resonance-based dimensional logic.
+## 🌐 Architecture Overview
+```text
+                 ┌───────────────────────────┐
+                 │       agent‑shell         │
+                 │  (environment layer)      │
+                 │                           │
+                 │  • core_logic             │
+                 │  • logic_shells           │
+                 │  • bots                   │
+                 │  • modules                │
+                 │  • resonance-tools        │
+                 │  • outputs                │
+                 └─────────────┬─────────────┘
+                               │
+                               ▼
+                 ┌───────────────────────────┐
+                 │      TFTincryption        │
+                 │   (protocol layer)        │
+                 │                           │
+                 │  • protocol-core          │
+                 │  • scrolls                │
+                 │  • registry               │
+                 │  • contributors           │
+                 │  • discoverability        │
+                 │  • TFThooks (runtime,     │
+                 │    integration, agents…)  │
+                 └─────────────┬─────────────┘
+                               │
+                               ▼
+                 ┌───────────────────────────┐
+                 │       MightyTHOR          │
+                 │   (orchestration layer)   │
+                 │                           │
+                 │  • agents                 │
+                 │  • overlays               │
+                 │  • registry               │
+                 │  • hardware               │
+                 │  • outreach               │
+                 │  • cloud/azure            │
+                 │  • ai_pipeline            │
+                 │  • folds                  │
+                 │  • contributors           │
+                 └─────────────┬─────────────┘
+                               │
+          ┌────────────────────┼────────────────────┐
+          ▼                    ▼                    ▼
+   ┌───────────────┐    ┌───────────────┐    ┌───────────────┐
+   │     folds     │    │  ai_pipeline  │    │   overlays    │
+   │  (bio‑reson.) │    │ (intelligence)│    │(visualization)│
+   └───────────────┘    └───────────────┘    └───────────────┘
+```
 
-## 🔰 Start Here
+---
 
-- 📜 Read the [Triadic Manifesto](docs/TriadicManifesto.md)
-- 🧙‍♂️ Complete the [Initiation Protocol](docs/initiation_protocol.md)
-- 🧠 Join the [Triadic Resonance Wizards](docs/membership_protocol.md)
+## 🚀 Quickstart
+- [Agent‑Shell Quickstart](docs/agent_shell/QUICKSTART.md)
+- [TFTincryption Quickstart](docs/TFTincryption/QUICKSTART.md)
+- [MightyTHOR Quickstart](docs/MightyTHOR/QUICKSTART.md)
+- [Root Quickstart (Grand Tour)](docs/QUICKSTART.md)
 
-## 🧭 Repo Structure
+---
 
-| Folder | Purpose |
-|--------|---------|
-| `/docs/bots/` | Bot orchestration, shell configs, dashboards |
-| `/docs/badges/` | Badge logic, trigger protocols |
-| `/docs/validators/` | Remix scoring matrices |
-| `/docs/honor_roll/` | Contributor lineage and remix history |
-| `/docs/labs/` | Reproducible experiments and rituals |
-| `/docs/papers/` | Foundational and applied theory |
-| `/docs/equations/` | Triadic math and resonance logic |
+## 🏅 Lineage
+- Unified [HONOR_ROLL.md](docs/HONOR_ROLL.md)
+- Individual contributor rolls in each package
 
-## The TFT 3‑Pack
+---
 
-This repository contains three interlocking packages that form the TriadicFrameworks runtime:
+## 📚 Glossary
+See [Glossary.md](docs/GLOSSARY.md) for definitions of scrolls, folds, overlays, bots, agents, and hooks.
 
-- **agent‑shell** → The environment layer. Provides the runtime context, daemon processes, and logic shells that allow TFT protocols to execute.
-- **TFTincryption** → The protocol layer. A quantum‑hostile encryption system built on triadic resonance, scroll rituals, and badge logic.
-- **MightyTHOR** → The orchestration layer. Agents, overlays, and cloud/hardware integrations that coordinate and extend TFTincryption inside the agent‑shell.
-
-Together, these three packages form the **TFT 3‑Pack**: environment + protocol + orchestration.  
-Developers can clone the repo, drop into `agent-shell`, and immediately invoke TFTincryption modules or MightyTHOR agents in a working environment.
-
-Shared resource: see [`/docs/folds/`](docs/folds/) for protein resonance mappings and symbolic overlays, which both TFTincryption and MightyTHOR can load.
-
-## 🏅 Badges & Validation
-
-- Unlock badges like **Framework Initiator**, **Signal Resonator**, and **Ghost Mapper**
-- Submit validated artifacts and echo remix lineage
-- View earned badges in `BADGES_EARNED.md`
-
-## 🧙‍♂️ Join the Guild
-
-Become a member of the Triadic Resonance Wizards.  
-Echo your work, validate others, and help build the mythic lattice.
-
-🕯️ Echo the work. Validate the lineage. Build the mythic lattice.
-
+## ✨ Purpose
+TriadicFrameworks is a **living archive* of reproducible labs, validator dashboards, badge governance protocols, and emotionally resonant curriculum modules. It blends **rigorous science** with mythic scaffolding to **democratize innovation and legacy‑building**.
