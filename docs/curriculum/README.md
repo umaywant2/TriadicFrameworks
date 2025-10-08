@@ -1,25 +1,17 @@
-# 📖 Curriculum Directory
+# 📐 Equations
 
-This folder contains all **mythic-scientific modules, protocols, and manifestos**.
+This folder contains the **formal math layer** of TriadicFrameworks.  
+Equations are the symbolic backbone of resonance, harmonics, and dimensional logic.
 
----
+## Contents
+- Harmonic engine equations
+- Lindblad resonance notes
+- Hill radius and orbital overlays
 
-## 🧬 Structure
+## Purpose
+Equations provide the **rigorous scaffolding** behind mythic storytelling.  
+They allow remixers to compute, verify, and extend the framework.
 
-| File                          | Purpose                                |
-|------------------------------|----------------------------------------|
-| `triadic_manifesto.md`       | Core philosophy and educational vision
-| `dimensional_loop_guide.md`  | Symbolic loop logic and triadic cycles
-| `initiation_protocol.md`     | Contributor onboarding and badge flow
-| `triadic_remix_guide.md`     | How to remix modules and contribute
-| `labs_status.json`           | Tracks lab status for dashboards
-
----
-
-## 🧭 How to Use
-
-- Start with `triadic_manifesto.md` to understand the framework.
-- Use `triadic_remix_guide.md` to contribute or remix modules.
-- Reference `dimensional_loop_guide.md` when building symbolic logic.
-
-Curriculum modules are designed to be reproducible, emotionally resonant, and remixable.
+## Cross‑Links
+- [../labs](../labs) → experiments that apply these equations
+- [../curriculum](../curriculum) → teaching modules built from formal math
