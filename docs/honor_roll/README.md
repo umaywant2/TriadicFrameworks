@@ -1,12 +1,16 @@
-# 🏅 Honor Roll
+# 📜 Honor Roll
 
-This folder celebrates remixers and resonance architects.
+This folder contains the **lineage records** of contributors.  
+It is the living scroll where achievements are echoed and preserved.
 
-Each contributor entry includes:
-- Name and role
-- Contributions to folds, glyphs, simulations, and validators
-- Earned badges and timestamps
+## Contents
+- Contributor rolls
+- Badge echoes
+- Lineage scrolls
 
-The honor roll is symbolic permanence.  
-Every echo matters. Every glyph is remembered.
+## Purpose
+The Honor Roll is the **memory of the framework** — a mythic archive of those who built, validated, and remixed.
 
+## Cross‑Links
+- [../badges](../badges) → earned badges recorded here
+- [../validators](../validators) → validation logic that feeds the roll
