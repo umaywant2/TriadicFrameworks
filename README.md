@@ -74,3 +74,7 @@ See [Glossary.md](docs/GLOSSARY.md) for definitions of scrolls, folds, overlays,
 
 ## ✨ Purpose
 TriadicFrameworks is a **living archive* of reproducible labs, validator dashboards, badge governance protocols, and emotionally resonant curriculum modules. It blends **rigorous science** with mythic scaffolding to **democratize innovation and legacy‑building**.
+
+---
+
+© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
