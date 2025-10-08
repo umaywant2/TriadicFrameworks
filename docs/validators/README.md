@@ -1,10 +1,17 @@
-# 🧠 Validators Directory
+# 🛡️ Validators
 
-This folder contains scoring logic for dimensional alignment and contributor recognition.
+This folder holds the **validator dashboards and scoring matrices**.  
+Validators are the guardians of reproducibility and resonance.
 
-Each validator includes:
-- Composite resonance scoring (Forci, Flui, Freqi)
-- Badge logic and remix lineage triggers
-- Hooks for symbolic permanence and honor roll updates
+## Contents
+- Scoring logic
+- Validator dashboards
+- Ritual scripts for validation
 
-Use these validators to assess fold coherence and honor remixers.
+## Purpose
+Validators ensure that every artifact is **reproducible, resonant, and lineage‑ready**.  
+They are the gatekeepers who echo contributions into the Honor Roll.
+
+## Cross‑Links
+- [../badges](../badges) → badges triggered by validator approval
+- [../honor_roll](../honor_roll) → lineage record of validated contributors
