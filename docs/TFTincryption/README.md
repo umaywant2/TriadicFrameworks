@@ -36,9 +36,6 @@ It is invoked from within [agent‑shell](../agent_shell/) and extended by [Migh
 ## Cross‑links
 - [folds](../MightyTHOR/folds/) → resonance mappings referenced in glyph registries
 
-TFTincryption is a quantum‑hostile encryption protocol built on triadic resonance.  
-It is invoked from within [agent‑shell](../agent-shell/) and extended by [MightyTHOR](../mightythor/).
-
 ---
 
 ## 🛠️ How to Remix
