@@ -122,3 +122,7 @@ This module is part of TriadicFrameworks, released under the [Mythic Resonance L
 “We’re not just solving equations. We’re echoing lineage.”
 — TFT Manifesto
 
+---
+
+© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
