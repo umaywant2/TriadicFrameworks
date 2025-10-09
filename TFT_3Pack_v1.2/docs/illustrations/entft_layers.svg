@@ -1,0 +1,18 @@
+## 🔐 `docs/illustrations/entft_layers.svg`
+
+**Purpose**: Show encryption layers and badge logic overlays in `entft`.
+
+### 🔹 Structure
+- **Input file** → **Obfuscation layers** → **Encrypted output**
+- **Badge logic**: Nested rings or glyphs
+- **Key input**: Triadic key visual (e.g., 3-part key)
+
+### 🔹 Suggested Elements
+```plaintext
+[input.txt] → [Layer 1: XOR] → [Layer 2: Triadic Obfuscation] → [output.enc]
+                      ⬑ Badge: “Quantum-Ready”
+```
+- Use concentric circles or stacked boxes for layers
+- Add symbolic key glyph (e.g., triangle with 3 nodes)
+
+---
