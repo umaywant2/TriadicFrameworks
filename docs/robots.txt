@@ -10,4 +10,4 @@ Disallow: /tests/
 Disallow: /scripts/
 
 # Point to sitemap
-Sitemap: https://umaywant2.github.io/TriadicFrameworks/docs/sitemap.xml
+Sitemap: https://los.triadicwizards.win/sitemap.xml
