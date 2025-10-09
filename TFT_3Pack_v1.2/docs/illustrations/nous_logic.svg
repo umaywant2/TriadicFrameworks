@@ -1,0 +1,22 @@
+## 🖼️ `docs/illustrations/nous_logic.svg`
+
+**Purpose**: Visualize the symbolic flow of triadic validation in `nous`.
+
+### 🔹 Structure
+- **Three nodes**: `α`, `β`, `γ`
+- **Arrows**: `α → β`, `β → γ`
+- **Overlay**: Validation logic (e.g., “precedes”, “echoes”)
+- **Frame**: Triadic triangle with symbolic anchors
+
+### 🔹 Suggested Elements
+```plaintext
+          α
+         / \
+        /   \
+       β → γ
+```
+- Use curved arrows for symbolic flow
+- Add labels like “Rule: α precedes β” and “Echo: β echoes γ”
+- Optional: background grid with symbolic coordinates
+
+---
