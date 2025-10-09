@@ -1,0 +1,20 @@
+## 🧭 `docs/illustrations/tops_grid.svg`
+
+**Purpose**: Visualize grid simulation and operational overlays in `tops`.
+
+### 🔹 Structure
+- **Nodes**: A, B, C
+- **Links**: A → B → C
+- **Overlay**: Grid map with simulation paths
+- **Optional**: Echo paths or validation markers
+
+### 🔹 Suggested Elements
+```plaintext
+[A] → [B] → [C]
+ |             |
+ ↘─── Echo ───↙
+```
+- Use directional arrows and dashed lines for overlays
+- Add simulation markers (✓, ✗) and echo paths
+
+---
