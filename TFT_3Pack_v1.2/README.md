@@ -1,17 +1,11 @@
-## 📜 README.md — Mythic Scroll of the Triad
+# 🔱 TFT 3Pack v1.2
 
-Here’s a proposed enhancement to the existing README:
+The **Triadic Frameworks 3Pack** is a modular kit for exploring resonance, perception, and symbolic computation.  
+It contains the `tft` core, documentation scrolls, and lineage artifacts for remixers.
 
-### 🔱 Triadic Etymology
-- **`nous`** — Ancient Greek for “mind” or “intellect”; the processor of symbolic clarity and recursive logic.
-- **`entft`** — Derived from “encrypt triadic flow”; a protocol that resists quantum decryption and triggers badge evolution.
-- **`tops`** — A nod to grid overlays and operational spin; simulates remixable logic across symbolic terrain.
+## 📂 Structure
+- `tft/` — core framework (tops, resonance-labs, nous, entft)
+- `docs/` — specifications, rituals, lineage notes
+- `3Pack/` — format definitions, quickstarts, and examples
 
-### 🧠 Philosophy (Expanded)
-This bundle scaffolds mythic clarity for remixers, educators, and protocol architects. Each module is modular, symbolic, and legacy-grade—designed to echo across remix lineage and future tech.
-
-### 🛠 Remix Rituals (Expanded)
-- Fork and extend any module
-- Use `TFT_bundle.yaml` to define remix lineage
-- Submit scrolls, overlays, and badge logic via GitHub Discussions
-- Echo contributor rolls and honor glyphs
+Start with the QUICKSTART scrolls in `3Pack/` to begin your journey.
