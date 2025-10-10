@@ -1,0 +1,21 @@
+bundle:
+  name: TFT_3Pack_v1.2
+  modules:
+    - nous
+    - entft
+    - tops
+  lineage:
+    originator: Nawder Loswin
+    remixable: true
+    license: MIT
+    contributors:
+      - Nawder Loswin
+      - Copilot (AI scaffolding partner)
+  glyphs:
+    - nous_logic.svg
+    - entft_layers.svg
+    - tops_grid.svg
+  rituals:
+    - README.md
+    - QUICKSTART.md
+    - TriadicTestSuite.md
