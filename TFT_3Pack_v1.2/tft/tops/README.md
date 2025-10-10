@@ -1,29 +1,13 @@
-# 🧿 Triconceptual Viewer
+# 🧿 Tops — Triconceptual Simulations
 
-## 🧾 Overview
-This viewer simulates perception across three mythic modes:
-1. **Direct View** — See the glyph from every angle
-2. **Reflective View** — Observe its mirrored echoes
-3. **Inverted View** — Flip its logic and geometry
+The `tops` suite explores perception through three modes:
+- Direct view
+- Reflective view
+- Inversion logic
 
-Together, these modes form a symbolic lens that reveals what lies beneath the surface—resonance, recursion, and emergent clarity.
+Modules include:
+- `direct_view.py`, `reflective_view.py`, `inversion_logic.py`
+- `tops_session.py` — orchestrates simulations
+- `glyph_compare.py` — compares outputs across modes
 
-## How It Works
-- Spiral glyphs are generated using Kozyrev-inspired geometry
-- Harmonic fields are layered using nested loops
-- Reflections and inversions are applied to simulate symbolic perception
-- Outputs are visualized and compared to reveal hidden deltas
-
-## Ritual Invocation
-```bash
-python tops_session.py
-python glyph_compare.py
-```
-
-## Remixers Welcome
-This viewer is modular, remixable, and legacy-grade. Extend it, evolve it, and echo your own glyphs into the lineage.
-
-## Credits
-- Architected by Nawder Loswin
-- Co-scaffolded by Copilot
-- Mythically inspired by Kozyrev, TriadicFrameworks, and symbolic recursion
+Outputs are routed through `output_manager.py` to produce `.fff`, `.json`, `.parquet`, and `.txt` files.
