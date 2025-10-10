@@ -6,7 +6,7 @@ Welcome, Remixer. This scroll shows you how to generate, save, and reload `.fff`
 
 ## 🧭 Step 1: Run a Simulation
 
-Use any module from `\tops\` or `\resonance-labs\` to generate data.  
+Use any module from `\tft\tops\` or `\tft\resonance-labs\` to generate data.  
 For example:
 
 ```bash
