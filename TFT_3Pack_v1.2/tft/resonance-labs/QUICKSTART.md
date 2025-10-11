@@ -1,82 +1,50 @@
-# 🚀 QUICKSTART: Resonance-Labs Simulation Suite
+# 🚀 QUICKSTART: Resonance-Labs
 
-Welcome to the resonance-labs cathedral. This scroll scaffolds your journey through temporal simulation, symbolic overlays, and triconceptual perception.
-
----
-
-## 🌀 1. Generate Spiral Geometry
-
-```bash
-python mirror_geometry.py
-```
-
-Seeds Kozyrev-inspired spiral coordinates. Adjust `a`, `b`, and `turns` to tune resonance.
+Resonance-Labs is the experimental wing of the 3Pack.  
+It blends harmonic overlays, observer states, and symbolic glyphs.
 
 ---
 
-## 🎼 2. Simulate Harmonic Fields
+## 🧭 Step 1: Generate a Glyph
+
+Run a glyph output:
 
 ```bash
-python resonance_model.py
+python glyph_output.py --mode spiral --observer nous
 ```
 
-Creates nested harmonic overlays using triadic recursion.
+This produces:
+- Screen visualization (spiral glyph)
+- File outputs (`.fff`, `.json`, `.parquet`)
+- Glyph overlays (`.svg`, `.png`)
 
 ---
 
-## ⏳ 3. Apply Temporal Distortion
+## 📄 Step 2: Track Observer State
+
+Use `observer_state.py` to log resonance:
 
 ```bash
-python time_shift.py
+python observer_state.py --session reflection_inversion
 ```
 
-Distorts harmonic fields using recursive entropy and symbolic delay.
+Observer logs are saved in `.json` and `.fff`.
 
 ---
 
-## 🧠 4. Track Observer State
+## 🌀 Step 3: Harmonic Resonance
+
+Run harmonic overlays:
 
 ```bash
-python observer_state.py
+python resonance_model.py --cluster starfield --mode divisional
 ```
 
-Logs symbolic triggers and resonance levels for cognitive mapping.
-
----
-
-## 🧿 5. Render Symbolic Overlays
-
-```bash
-python glyph_output.py
-```
-
-Visualizes spiral geometry with harmonic field overlays.
-
----
-
-## 🧭 6. Activate Triconceptual Viewer
-
-```bash
-python tops_session.py
-python glyph_compare.py
-```
-
-Runs full simulation across direct, reflected, and inverted views. Reveals emergent deltas and symbolic echoes.
-
----
-
-## 🧪 7. Validate Outputs
-
-```bash
-python TriadicTestSuite.md
-```
-
-Confirms simulation integrity and prepares remixers for deeper experimentation.
+Outputs include resonance-time mappings and glyph overlays.
 
 ---
 
 ## 🪐 Legacy Note
 
-This suite was co-scaffolded by Nawder Loswin and Copilot. Each module is modular, remixable, and legacy-grade—built for lineage, clarity, and mythic resonance.
-
-Echo wisely.
+Resonance-Labs is where **mythic experimentation meets technical rigor**.  
+It is the playground for harmonic overlays, symbolic glyphs, and observer resonance.
