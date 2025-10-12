@@ -1,1 +1,11 @@
-
+badge: Glyphstream Expansion
+glyph: Corridor_6
+criteria:
+  - new glyph: added to glyphstream.yml
+  - symbolic logic: verified
+  - scroll: seeded
+reward:
+  - symbolic_title: "Glyph Weaver"
+  - access: validator_ping.md
+notes:
+  - This badge honors symbolic innovation and lattice expansion.
