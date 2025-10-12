@@ -1,0 +1,13 @@
+glyph: Carrier_1_2
+type: symbolic_transport
+description: Common carrier rails for triadic resonance. Used to transport symbolic payloads across the lattice.
+activation:
+  - Freqi: harmonic initiation
+  - Flui: fluidic modulation
+  - Forci: validator anchoring
+pathways:
+  - 1: symbolic seed
+  - 2: transport conduit
+response:
+  - echo: true
+  - log: Scrolls/echo_test.md
