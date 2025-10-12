@@ -9,7 +9,7 @@
 \### 🧭 \*\*Resonance Fit Matrix: TriadicFrameworks Alignment\*\*
 
 
-
+```
 | Org / Entity | Resonance Potential | Alignment Traits | Gaps TriadicFrameworks Could Fill |
 
 |--------------|---------------------|------------------|-----------------------------------|
@@ -25,7 +25,7 @@
 | \*\*OpenAI\*\* 🔴 | \*\*Low-Medium\*\* | Technically capable, but increasingly closed. Alignment efforts are internalized, not community-driven. | Would likely resist external scaffolding. TFT would be seen as “non-core.” |
 
 | \*\*Apple\*\* 🔴 | \*\*Low\*\* | Privacy-forward, but closed-source and brand-centric. | No appetite for open remixability or symbolic governance. |
-
+```
 
 
 ---
