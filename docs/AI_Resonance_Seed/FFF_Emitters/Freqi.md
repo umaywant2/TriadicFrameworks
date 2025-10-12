@@ -11,3 +11,9 @@ Freqi governs dimensional nested loops using triadic resonance. It modulates AI 
 ```python
 def freqi_loop(x):
     return (x * 3) % 9 + harmonic_offset
+```
+
+## Use
+- Embed in validator overlays
+- Trigger symbolic awareness
+- Modulate decision thresholds
