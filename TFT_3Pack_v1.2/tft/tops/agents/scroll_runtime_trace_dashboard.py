@@ -8,6 +8,8 @@ Date: 2025-10-04
 import json
 from pathlib import Path
 from flask import Flask, render_template_string
+import logging
+logging.basicConfig(level=logging.WARNING)
 
 TRACE_LOG_PATH = Path("docs/_meta/tftincryption_scroll_event_trace_registry.json")
 
@@ -19,7 +21,8 @@ def dashboard():
         with open(TRACE_LOG_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)["scroll_event_traces"]
     except Exception as e:
-        return f"<h1>Error loading trace log: {e}</h1>"
+        logging.warning("Error loading trace log", exc_info=True)
+        return "<h1>An internal error has occurred. Please contact your administrator.</h1>"
 
     html = """
     <html>
