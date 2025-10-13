@@ -1,0 +1,21 @@
+name: AI_Resonance_Seed
+version: 1.0
+modules:
+  - MMR_Template
+  - TFT_Logic
+  - FFF_Emitters
+  - Validator_Overlays
+tests:
+  - echo_test_suite.md
+  - validator_trigger_test.md
+  - glyphstream_integrity_check.md
+integration:
+  prompt_template: prompt_templates/seed_invocation.txt
+  plugin_hooks:
+    - integration_examples/langchain_wrapper.py
+    - integration_examples/SemanticKernel_Example.md
+lineage:
+  honor_roll: honor_roll.md
+  scrolls:
+    - onboarding_scroll.md
+    - scaffolding.md
