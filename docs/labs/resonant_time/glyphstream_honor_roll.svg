@@ -1,8 +1,0 @@
-<!-- Glyphstream Honor Roll: Contributor Echo Visualization -->
-<svg width="400" height="200" xmlns="http://www.w3.org/2000/svg">
-  <rect x="10" y="10" width="380" height="180" fill="#1a1a1a" rx="10"/>
-  <text x="200" y="40" font-size="18" text-anchor="middle" fill="#ffffff">Glyphstream Honor Roll</text>
-  <text x="30" y="80" font-size="14" fill="#6c00ff">Nawder_Loswin</text>
-  <text x="30" y="100" font-size="12" fill="#cccccc">Fold: 144 • Glyph: glyph_protein_echo_02.svg • Pulse: 0.753</text>
-  <text x="30" y="130" font-size="12" fill="#999999">Fold: 72 • Glyph: bridge_glyph_overlay_01.svg • Pulse: 0.427</text>
-</svg>

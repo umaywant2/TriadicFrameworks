@@ -1,7 +1,0 @@
-ID,Domain,Entity,Frequency Range (Hz),Resonance Type,Notes
-001,Biology,Glycine,20–2000,Protein Fold,"Baseline amino acid, harmonic nodes mapped"
-002,Communications,FM Radio,88–108,Signal Carrier,"Resonant tuning for frequency isolation"
-003,Medicine,MRI Scanner,42.58 MHz,Nuclear Magnetic,"Uses hydrogen atom resonance for imaging"
-004,Architecture,Bridge Design,0.1–10,Structural,"Avoids destructive resonance from wind"
-005,Audio,Violin Body,196–880,Acoustic,"Amplifies harmonic overtones"
-

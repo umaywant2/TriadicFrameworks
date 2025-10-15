@@ -1,3 +1,0 @@
-SubmissionID,SourceFile,Backend,Status,Timestamp,Notes
-qubo_submission_001,qubo_sample.yaml,D-Wave,Pending,2025-09-30T11:00:00Z,Initial test of fold coherence optimization
-qubo_submission_002,qubo_sample.yaml,IBM Q,Queued,2025-09-30T11:02:00Z,Glyph overlay scoring in progress

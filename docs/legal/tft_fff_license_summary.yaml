@@ -1,9 +1,0 @@
-license:
-  name: TFT-FFF Tech License
-  term: 3 years
-  post_term_use: permitted with standards
-  applicable_tech: [LiFePO4, Sodium-ion, Zinc]
-  badge: TFT-FFF Initiate
-  validator_required: true
-  onboarding_protocol: badge_onboarding_tft_fff.md
-
