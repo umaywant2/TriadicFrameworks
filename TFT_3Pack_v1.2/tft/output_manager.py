@@ -1,8 +1,8 @@
 """
 output_manager.py
-Resonance-Labs / Tops Unified Output Ritual
+Resonance-Labs / Tops Unified Output
 
-Handles screen, file, and glyph outputs.
+Handles screen, file, and outputs.
 Supports TXT, JSON, Parquet, and .fff (Triadic Framework File).
 """
 

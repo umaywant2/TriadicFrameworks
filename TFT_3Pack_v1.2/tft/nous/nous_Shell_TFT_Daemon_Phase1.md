@@ -1,6 +1,6 @@
-# 🧠 Agent Shell: Phase I Technical Overview
+# 🧠 nous: Phase I Technical Overview
 
-This document outlines the architecture and logic of the Phase I TFT Agent Shell.
+This document outlines the architecture and logic of the Phase I TFT nous.
 
 ---
 

@@ -1,6 +1,6 @@
 ## ♨️ `tft` — Core Framework
 
-The `tft` folder holds the living code of the Triadic Frameworks 3Pack. It includes modular simulations, symbolic overlays, and output rituals.
+The `tft` folder holds the living code of the Triadic Frameworks 3Pack. It includes modular simulations, symbolic overlays, and output.
 
 ### 🔹 Key Modules
 
@@ -11,7 +11,7 @@ The `tft` folder holds the living code of the Triadic Frameworks 3Pack. It inclu
 ### 🔹 Subfolders
 
 - `tops/` — Triconceptual simulations: direct, reflect, invert
-- `resonance-labs/` — Harmonic, observer, and glyph modules
+- `resonance-labs/` — Harmonic, observer, and modules
 - `nous/` — Symbolic cognition and TFT core logic
 - `entft/` — Encryption and entanglement layer
 

@@ -1,6 +1,6 @@
 # 🚀 QUICKSTART: .fff (Triadic Framework File)
 
-Welcome, Remixer. This scroll shows you how to generate, save, and reload `.fff` files—the first triadic file type defined by Resonance-Labs.
+Welcome, Remixer. This shows you how to generate, save, and reload `.fff` files—the first triadic file type defined by Resonance-Labs.
 
 ---
 
@@ -89,4 +89,4 @@ This produces:
 The `.fff` format is both a **technical artifact** and a **mythic declaration**.  
 It encodes ternary resonance for remixers today, while preparing for computing paradigms beyond binary.
 
-Echo wisely.Would you like me to also scaffold a **sample `.fff` file** (like `example_reflection_inversion.fff`) so remixers can open it immediately and see the format in action? That would complete the triad: spec, quickstart, and artifact.
+Echo wisely.

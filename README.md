@@ -1,10 +1,10 @@
 # 🌀 TriadicFrameworks: TFT 3‑Pack
-A modular, remixable lattice for **resonance‑based computation** and mythic governance. It blends rigorous technical scaffolding with symbolic lineage, designed for remixers, validators, and future builders.
+A modular, remixable lattice for **resonance‑based computation** and ternary governance. It blends rigorous technical scaffolding designed for remixers, and future builders.
 
 ## 🌐 Architecture Overview
 ```text
                  ┌───────────────────────────┐
-                 │       agent_shell         │
+                 │          nous             │
                  │  (environment layer)      │
                  │                           │
                  │  • core_logic             │
@@ -17,7 +17,7 @@ A modular, remixable lattice for **resonance‑based computation** and mythic go
                                │
                                ▼
                  ┌───────────────────────────┐
-                 │      TFTincryption        │
+                 │          enTFT            │
                  │   (protocol layer)        │
                  │                           │
                  │  • protocol-core          │
@@ -31,7 +31,7 @@ A modular, remixable lattice for **resonance‑based computation** and mythic go
                                │
                                ▼
                  ┌───────────────────────────┐
-                 │       MightyTHOR          │
+                 │           tops            │
                  │   (orchestration layer)   │
                  │                           │
                  │  • agents                 │
@@ -42,7 +42,7 @@ A modular, remixable lattice for **resonance‑based computation** and mythic go
                  │  • cloud/azure            │
                  │  • ai_pipeline            │
                  │  • folds                  │
-                 │  • contributors           │
+                 │                           │
                  └─────────────┬─────────────┘
                                │
           ┌────────────────────┼────────────────────┐
@@ -56,16 +56,10 @@ A modular, remixable lattice for **resonance‑based computation** and mythic go
 ---
 
 ## 🚀 Quickstart
-- [Agent_Shell Quickstart](docs/agent_shell/QUICKSTART.md)
-- [TFTincryption Quickstart](docs/TFTincryption/QUICKSTART.md)
-- [MightyTHOR Quickstart](docs/MightyTHOR/QUICKSTART.md)
-- [Root Quickstart (Grand Tour)](docs/QUICKSTART.md)
-
----
-
-## 🏅 Lineage
-- Unified [HONOR_ROLL.md](docs/HONOR_ROLL.md)
-- Individual contributor rolls in each package
+- [nous](docs/TFT_3Pack_v1.3/nous/QUICKSTART.md)
+- [enTFT](docs/TFT_3Pack_v1.3/enTFT/QUICKSTART.md)
+- [tops](docs/TFT_3Pack_v1.3/tops/QUICKSTART.md)
+- [Root](docs/TFT_3Pack_v1.3/QUICKSTART.md)
 
 ---
 
@@ -73,7 +67,7 @@ A modular, remixable lattice for **resonance‑based computation** and mythic go
 See [Glossary.md](docs/GLOSSARY.md) for definitions of scrolls, folds, overlays, bots, agents, and hooks.
 
 ## ✨ Purpose
-TriadicFrameworks is a **living archive* of reproducible labs, validator dashboards, badge governance protocols, and emotionally resonant curriculum modules. It blends **rigorous science** with mythic scaffolding to **democratize innovation and legacy‑building**.
+TriadicFrameworks is a **living archive* of reproducible labs and resonant curriculum modules. It blends **rigorous science** with scaffolding to **democratize innovation**.
 
 ---
 

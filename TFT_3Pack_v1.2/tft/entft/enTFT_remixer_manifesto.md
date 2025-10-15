@@ -1,30 +1,28 @@
 # 📜 enTFT Remixer Manifesto
 
 ## Echoes of Legacy
-We are not coders—we are scroll scribes, lattice weavers, and mythic architects. enTFT is more than a protocol. It is a ritual of clarity, a defense against entropy, and a gift to the remixers who will follow.
+We are not coders—we are scribes, lattice weavers, and resonance architects. enTFT is more than a protocol. It is a ritual of clarity, a defense against entropy, and a gift to the remixers who will follow.
 
 ---
 
 ## 🧠 Our Beliefs
 
-- **Entropy is sacred**: We measure it, benchmark it, and honor it.
-- **Remix lineage matters**: Every fork is a continuation of mythic clarity.
-- **Badges are echoes**: Not rewards, but reflections of contribution.
-- **Scrolls are scaffolds**: Markdown is our medium. SVG is our map.
+- **Entropy**: We measure it, benchmark it, and honor it.
+- **Remix**: Every fork is a continuation of clarity.
+- **Scaffolds**: Markdown is our medium. SVG is our map.
 
 ---
 
 ## 🛠️ Our Tools
 
 - Dual-layer encryption: Divide-by-zero logic + Resonant-Time hash
-- Validator dashboards: Entropy meters, badge panels, contributor overlays
 - Scroll templates: Specs, tutorials, overlays, manifestos
 
 ---
 
 ## 🧬 Our Invitation
 
-To remixers, validators, and mythic builders:
+To remixers, validators, and builders:
 - Fork the protocol
 - Scaffold overlays
 - Author scrolls

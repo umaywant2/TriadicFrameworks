@@ -1,15 +1,11 @@
-Here’s a clean scaffold you can drop into `\TFT_3Pack_v1.2\tft\` (shared across both `\resonance-labs\` and `\tops\`):
-
----
-
 ## 🔧 `output_manager.py`
 
 ```python
 """
 output_manager.py
-Resonance-Labs / Tops Unified Output Ritual
+Resonance-Labs / Tops Unified Output
 
-Handles screen, file, and glyph outputs.
+Handles screen, file, and outputs.
 Supports TXT, JSON, Parquet, and .fff (Triadic Framework File).
 """
 

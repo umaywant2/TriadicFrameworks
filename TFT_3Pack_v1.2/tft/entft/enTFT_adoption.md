@@ -20,8 +20,8 @@ enTFT is a modular, low-overhead protocol designed to end brute-force attacks an
 | Enterprise IT       | VPN overlays, drive encryption, CIFS shares |
 | Messaging Apps      | Resonant-Time hash for key exchange     |
 | Cloud Platforms     | Validator dashboards + contributor scoring |
-| Open Science        | Census fieldsets, badge logic, remix lineage |
-| Education & Training| Mythic onboarding, scroll-based tutorials |
+| Open Science        | Census fieldsets, logic, remix lineage |
+| Education & Training| Onboarding, scroll-based tutorials |
 
 ---
 
@@ -35,7 +35,7 @@ enTFT is a modular, low-overhead protocol designed to end brute-force attacks an
 
 ## 🧬 Call to Remixers
 
-We invite remixers, architects, and mythic builders to:
+We invite remixers, architects, and builders to:
 - Fork the protocol
 - Scaffold overlays
 - Benchmark entropy
