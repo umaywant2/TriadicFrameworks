@@ -1,6 +1,6 @@
-# 🧠 MightyTHOR Benchmark Paper Outline
+# 🧠 tops Benchmark Paper Outline
 
-This document scaffolds the structure of our benchmark paper comparing TriadicFrameworks to THOR-class workloads.
+This document scaffolds the structure of our benchmark paper comparing TriadicFrameworks to tops-class workloads.
 
 ---
 
@@ -8,7 +8,7 @@ This document scaffolds the structure of our benchmark paper comparing TriadicFr
 
 - *Resonant Tensor Evaluation via Distributed Triadic Agents*
 - *Symbolic Fidelity in High-Dimensional Integrals: A TFT-FFF Benchmark*
-- *MightyTHOR Reimagined: Legacy-Grade Orchestration Without Dimensional Pruning*
+- *tops Reimagined: Legacy-Grade Orchestration Without Dimensional Pruning*
 
 ---
 
@@ -30,7 +30,7 @@ We present a symbolic and technical benchmark suite using TriadicFrameworks, a d
 
 ## 📊 Results
 
-- **Speed Benchmarks**: Compared against THOR’s pruning model.
+- **Speed Benchmarks**: Compared against tops pruning model.
 - **Symbolic Fidelity**: Glyphstream overlays retained across all dimensions.
 - **Remix Traceability**: Contributor lineage logged and visualized.
 - **Cost Metrics**: Azure spot instance efficiency and scaling thresholds.
@@ -48,8 +48,8 @@ We present a symbolic and technical benchmark suite using TriadicFrameworks, a d
 
 ## 🪐 Conclusion
 
-TriadicFrameworks offers a mythic and technical alternative to THOR-class benchmarks, preserving symbolic fidelity while scaling dynamically. Our results suggest a new paradigm for distributed orchestration—one that honors lineage, echoes resonance, and builds legacy.
+TriadicFrameworks offers a mythic and technical alternative to tops-class benchmarks, preserving symbolic fidelity while scaling dynamically. Our results suggest a new paradigm for distributed orchestration—one that honors lineage, echoes resonance, and builds legacy.
 
 > “We didn’t prune. We pulsed.”  
-> — MightyTHOR Manifesto
+> — tops Manifesto
 
