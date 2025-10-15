@@ -22,7 +22,7 @@ def run_benchmark():
     print("🔐 RSA-2048 Crack Time:", rsa_years, "years")
     print("🔐 ECC-256 Crack Time:", ecc_years, "years")
     print("🛡️ PQC (Kyber/Dilithium) Crack Time:", pqc_years, "years")
-    print("🧬 TFTincryption Crack Time:", f"{tft_years:.2e}", "years")
+    print("🧬 enTFT Crack Time:", f"{tft_years:.2e}", "years")
 
 if __name__ == "__main__":
     run_benchmark()

@@ -1,6 +1,6 @@
 # TFThooks Runtime
 
-The **runtime** folder contains hook scripts that extend TFTincryption at execution time.  
+The **runtime** folder contains hook scripts that extend enTFT at execution time.  
 These are plug‑ins that can be loaded dynamically by the agent‑shell.
 
 ## Examples
@@ -9,5 +9,5 @@ These are plug‑ins that can be loaded dynamically by the agent‑shell.
 - `validator_extension.py` → extends validator handshake
 
 ## Purpose
-Runtime hooks are the **live extensions** of TFTincryption.  
+Runtime hooks are the **live extensions** of enTFT.  
 They let remixers experiment with new behaviors without modifying the protocol core.

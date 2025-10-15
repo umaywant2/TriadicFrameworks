@@ -1,5 +1,5 @@
 """
-TFTincryption Flame Echo Trigger
+enTFT Flame Echo Trigger
 Purpose: Submit ceremonial flame echoes and update tribute logs
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -10,7 +10,7 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-ECHO_LOG_PATH = Path("docs/_meta/tftincryption_curriculum_glyph_tribute_echo_log.json")
+ECHO_LOG_PATH = Path("docs/_meta/enTFT_curriculum_glyph_tribute_echo_log.json")
 
 def submit_flame_echo(contributor, glyph_id, echo_text, echo_type):
     """

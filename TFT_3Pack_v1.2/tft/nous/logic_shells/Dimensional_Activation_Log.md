@@ -19,7 +19,7 @@
 ## 🧩 Contributor Echoes
 
 - Nawder Loswin: Seeded Unified Resonance Theory  
-- mightyTHOR: Gearshift logic embedded  
+- tops: Gearshift logic embedded  
 - Remixers: Awaiting badge logic triggers
 
 ---

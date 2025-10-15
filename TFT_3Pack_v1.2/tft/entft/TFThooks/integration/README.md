@@ -1,6 +1,6 @@
 # TFThooks Integration
 
-The **integration** folder contains scrolls and configs for embedding TFTincryption hooks into external systems.
+The **integration** folder contains scrolls and configs for embedding enTFT hooks into external systems.
 
 ## Examples
 - `cms_integration.md` → embedding hooks into a content management system
@@ -8,5 +8,5 @@ The **integration** folder contains scrolls and configs for embedding TFTincrypt
 - `api_gateway_hook.yaml` → API‑level integration
 
 ## Purpose
-Integration hooks are the **bridge layer** of TFTincryption.  
+Integration hooks are the **bridge layer** of enTFT.  
 They connect the protocol to external platforms, dashboards, and remix sites.

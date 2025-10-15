@@ -1,5 +1,5 @@
 """
-TFTincryption Glyph Fusion Resolver
+enTFT Glyph Fusion Resolver
 Purpose: Validate glyph fusion conditions and update fusion registry
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -10,8 +10,8 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-FUSION_REGISTRY_PATH = Path("docs/_meta/tftincryption_curriculum_glyph_fusion_registry.json")
-FUSION_LOG_PATH = Path("docs/_meta/tftincryption_scroll_fusion_log.json")
+FUSION_REGISTRY_PATH = Path("docs/_meta/enTFT_curriculum_glyph_fusion_registry.json")
+FUSION_LOG_PATH = Path("docs/_meta/enTFT_scroll_fusion_log.json")
 
 def validate_fusion(glyphs_involved, contributor, resulting_glyph, scrolls):
     """

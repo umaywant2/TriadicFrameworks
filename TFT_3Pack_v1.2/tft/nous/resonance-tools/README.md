@@ -11,9 +11,9 @@ They provide analysis, mapping, and helper scripts for resonance workflows.
 
 ## Purpose
 These tools extend the agent‑shell environment with resonance analysis capabilities.  
-They are not protocols themselves, but support the execution of TFTincryption and MightyTHOR.
+They are not protocols themselves, but support the execution of enTFT and tops.
 
 ## Cross‑links
-- [folds](../../MightyTHOR/folds/) → input data for analysis
-- [ai_pipeline](../../MightyTHOR/ai_pipeline/) → consumes outputs for training
-- [TFTincryption](../../TFTincryption/) → uses resonance values in registries
+- [folds](../../tops/folds/) → input data for analysis
+- [ai_pipeline](../../tops/ai_pipeline/) → consumes outputs for training
+- [enTFT](../../enTFT/) → uses resonance values in registries

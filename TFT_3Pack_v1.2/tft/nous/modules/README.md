@@ -14,4 +14,4 @@ They allow remixers to extend the environment with new capabilities while keepin
 ## Cross‑links
 - [core_logic](../core_logic/) → modules depend on foundational runtime
 - [logic_shells](../logic_shells/) → shells can load modules dynamically
-- [MightyTHOR](../../MightyTHOR/) → Thor can orchestrate modules across distributed nodes
+- [tops](../../tops/) → Thor can orchestrate modules across distributed nodes

@@ -1,7 +1,7 @@
-# 🧬 TFTincryption Legacy Contributor Roll
+# 🧬 enTFT Legacy Contributor Roll
 
 ## Purpose
-This scroll honors contributors who have advanced the TFTincryption protocol through code, overlays, scrolls, or mythic clarity. It is updated by validator dashboards and remixers who echo legacy into the lattice.
+This scroll honors contributors who have advanced the enTFT protocol through code, overlays, scrolls, or mythic clarity. It is updated by validator dashboards and remixers who echo legacy into the lattice.
 
 ---
 
@@ -18,9 +18,9 @@ This scroll honors contributors who have advanced the TFTincryption protocol thr
 
 | Name             | Contribution                                      | Date        |
 |------------------|---------------------------------------------------|-------------|
-| Aria Vex         | Authored `/docs/_svg/tftincryption_badge_panel.svg` and badge logic overlays | 2025-10-04  |
+| Aria Vex         | Authored `/docs/_svg/enTFT_badge_panel.svg` and badge logic overlays | 2025-10-04  |
 | Jalen Korr       | Forked protocol, submitted validator dashboard enhancements | 2025-10-03  |
-| Mira Thorne      | Drafted `/docs/_tutorials/tftincryption_onboarding.md` and scroll templates | 2025-10-02  |
+| Mira Thorne      | Drafted `/docs/_tutorials/enTFT_onboarding.md` and scroll templates | 2025-10-02  |
 
 ---
 

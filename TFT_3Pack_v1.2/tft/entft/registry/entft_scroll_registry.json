@@ -1,0 +1,51 @@
+```json
+{
+  "registry": {
+    "scrolls": [
+      {
+        "id": "scroll-001",
+        "title": "Benchmark Summary",
+        "author": "Nawder Loswin",
+        "path": "/docs/_benchmarks/enTFT_benchmark.md",
+        "date": "2025-10-04",
+        "type": "benchmark"
+      },
+      {
+        "id": "scroll-002",
+        "title": "Validator Overlay",
+        "author": "Nawder Loswin",
+        "path": "/docs/_overlays/enTFT_validator_overlay.md",
+        "date": "2025-10-04",
+        "type": "overlay"
+      },
+      {
+        "id": "scroll-003",
+        "title": "Badge Panel SVG",
+        "author": "Aria Vex",
+        "path": "/docs/_svg/enTFT_badge_panel.svg",
+        "date": "2025-10-04",
+        "type": "visual"
+      },
+      {
+        "id": "scroll-004",
+        "title": "Scroll of Scrolls",
+        "author": "Nawder & Copilot",
+        "path": "/docs/_ideas/enTFT_scroll_of_scrolls.md",
+        "date": "2025-10-04",
+        "type": "narrative"
+      }
+    ],
+    "badges": [
+      "🧬 Remix Echo",
+      "📜 Scroll Scribe",
+      "🔐 Quantum Hostile",
+      "🧠 Mythic Architect"
+    ],
+    "validators": [
+      "overlay_blockmap.py",
+      "overlay_resonhash.py",
+      "overlay_entropy.py",
+      "overlay_badge.py"
+    ]
+  }
+}

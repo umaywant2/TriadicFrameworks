@@ -1,5 +1,5 @@
 """
-TFTincryption Glyph Retirement Trigger
+enTFT Glyph Retirement Trigger
 Purpose: Seal deprecated glyphs and archive retirement lineage
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -10,7 +10,7 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-RETIREMENT_LOG_PATH = Path("docs/_meta/tftincryption_glyph_retirement_log.json")
+RETIREMENT_LOG_PATH = Path("docs/_meta/enTFT_glyph_retirement_log.json")
 
 def retire_glyph(glyph_id, contributor, reason, scroll):
     """

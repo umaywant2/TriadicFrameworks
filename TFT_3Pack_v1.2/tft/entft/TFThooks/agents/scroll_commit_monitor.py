@@ -1,5 +1,5 @@
 """
-TFTincryption Scroll Commit Monitor
+enTFT Scroll Commit Monitor
 Purpose: Watch scroll directories for updates and auto-trigger flame hooks
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04

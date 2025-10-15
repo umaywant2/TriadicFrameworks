@@ -1,6 +1,6 @@
 # Bots
 
-The **bots** directory contains lightweight agents that extend the **agent‑shell** environment.  
+The **bots** directory contains lightweight agents that extend the **nous** environment.  
 Each bot is a modular process designed to handle specific resonance tasks, from monitoring system load to echoing lineage events.
 
 ## Structure
@@ -15,4 +15,4 @@ They run alongside daemons and logic shells, providing adaptive functionality wi
 - [core_logic](../core_logic/) → bots rely on foundational runtime scripts
 - [logic_shells](../logic_shells/) → bots can be invoked inside shells
 - [resonance-tools](../resonance-tools/) → bots may call utilities for analysis
-- [MightyTHOR](../../MightyTHOR/) → Thor agents can orchestrate bots at scale
+- [tops](../../tops/) → Thor agents can orchestrate bots at scale

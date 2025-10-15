@@ -15,5 +15,5 @@ They let contributors choose the right balance of performance, fidelity, and sym
 ## Cross‑links
 - [core_logic](../core_logic/) → shells wrap around foundational runtime scripts
 - [bots](../bots/) → shells can spawn bots as subprocesses
-- [TFTincryption](../../TFTincryption/) → invoked inside shells for encryption rituals
-- [MightyTHOR](../../MightyTHOR/) → orchestrates shells in distributed contexts
+- [enTFT](../../enTFT/) → invoked inside shells for encryption rituals
+- [tops](../../tops/) → orchestrates shells in distributed contexts

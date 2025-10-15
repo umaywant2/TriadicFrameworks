@@ -9,10 +9,10 @@ It is the canonical index that maps symbolic identifiers to runtime modules.
 - `scroll_registry.json` → indexes scrolls by ID and purpose
 
 ## Purpose
-The registry is the **index layer** of TFTincryption.  
+The registry is the **index layer** of enTFT.  
 It ensures every scroll, glyph, and badge can be discovered, validated, and remixed.
 
 ## Cross‑links
 - [protocol-core](../protocol-core/) → registry entries point to modules
 - [scrolls](../scrolls/) → scrolls are indexed here
-- [folds](../../MightyTHOR/folds/) → resonance mappings referenced in glyph registries
+- [folds](../../tops/folds/) → resonance mappings referenced in glyph registries

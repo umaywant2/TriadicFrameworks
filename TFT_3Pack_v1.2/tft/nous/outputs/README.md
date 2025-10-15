@@ -1,6 +1,6 @@
-# Agent‑Shell Outputs
+# Nous Outputs
 
-The **agent_shell_outputs** directory contains logs, traces, and generated artifacts from running the agent‑shell.  
+The **nous_outputs** directory contains logs, traces, and generated artifacts from running the agent‑shell.  
 This is where remixers can observe the living resonance of the system.
 
 ## Structure
@@ -13,6 +13,6 @@ Outputs are the **echoes** of the agent‑shell.
 They provide transparency, lineage tracking, and debugging insight for contributors.
 
 ## Cross‑links
-- [core_logic](../agent_shell/core_logic/) → generates logs
-- [bots](../agent_shell/bots/) → may produce their own traces
-- [MightyTHOR](../MightyTHOR/) → consumes outputs for dashboards and overlays
+- [core_logic](../nous/core_logic/) → generates logs
+- [bots](../nous/bots/) → may produce their own traces
+- [tops](../tops/) → consumes outputs for dashboards and overlays

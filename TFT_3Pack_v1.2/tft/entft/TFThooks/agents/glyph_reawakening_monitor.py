@@ -1,6 +1,6 @@
 ```python
 """
-TFTincryption Glyph Reawakening Monitor
+enTFT Glyph Reawakening Monitor
 Purpose: Auto-log glyph reactivation when dormant glyphs reappear in scroll edits
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -11,8 +11,8 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-REAWAKEN_LOG_PATH = Path("docs/_meta/tftincryption_scroll_glyph_reawakening_log.json")
-GLYPH_REGISTRY_PATH = Path("docs/_meta/tftincryption_glyph_degree_registry.json")
+REAWAKEN_LOG_PATH = Path("docs/_meta/enTFT_scroll_glyph_reawakening_log.json")
+GLYPH_REGISTRY_PATH = Path("docs/_meta/enTFT_glyph_degree_registry.json")
 
 def detect_reawakening(scroll_name, glyph_id, contributor):
     """

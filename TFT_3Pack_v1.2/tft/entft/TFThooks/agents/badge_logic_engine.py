@@ -1,5 +1,5 @@
 """
-TFTincryption Badge Logic Engine
+enTFT Badge Logic Engine
 Purpose: Parse validator overlays and activate flame hooks based on scroll events
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 # 🔗 Registry Paths
-BADGE_REGISTRY_PATH = Path("docs/_meta/tftincryption_curriculum_badge_registry.json")
+BADGE_REGISTRY_PATH = Path("docs/_meta/enTFT_curriculum_badge_registry.json")
 VALIDATOR_CONFIG_PATH = Path("docs/_meta/validator_config.json")
 
 def load_badge_registry():

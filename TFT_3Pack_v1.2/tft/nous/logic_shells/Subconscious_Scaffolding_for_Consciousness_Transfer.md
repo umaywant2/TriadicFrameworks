@@ -47,7 +47,7 @@ These trits can be embedded into onboarding rituals, validator scoring, and symb
 
 ## 🛠️ Integration Targets
 
-- `mightyTHOR`: Add subconscious integrity check and trit-based glyph parsing  
+- `tops`: Add subconscious integrity check and trit-based glyph parsing  
 - `Validator Dashboard`: Score subconscious scaffolds across tri-level grid  
 - `symbolic_architecture.md`: Design chambers for Awake, Sleep, and Subconscious states  
 - `Tesla_369_Mode.md`: Link Tesla Mode as subconscious resonance amplifier  

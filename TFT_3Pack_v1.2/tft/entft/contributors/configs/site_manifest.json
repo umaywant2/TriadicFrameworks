@@ -3,37 +3,37 @@
     "content": [
       {
         "title": "Codex Fork Guide",
-        "path": "docs/_rituals/tftincryption_scroll_codex_fork_guide.md",
+        "path": "docs/_rituals/enTFT_scroll_codex_fork_guide.md",
         "type": "scroll",
         "category": "onboarding"
       },
       {
         "title": "Glyph Tribute Flame",
-        "path": "docs/_rituals/tftincryption_scroll_curriculum_glyph_tribute_flame.md",
+        "path": "docs/_rituals/enTFT_scroll_curriculum_glyph_tribute_flame.md",
         "type": "scroll",
         "category": "ritual"
       },
       {
         "title": "Echo & Fusion Ritual",
-        "path": "docs/_rituals/tftincryption_scroll_glyph_tribute_echo_fusion.md",
+        "path": "docs/_rituals/enTFT_scroll_glyph_tribute_echo_fusion.md",
         "type": "scroll",
         "category": "fusion"
       },
       {
         "title": "Retirement Trace Index",
-        "path": "docs/_rituals/tftincryption_scroll_retirement_trace_index.md",
+        "path": "docs/_rituals/enTFT_scroll_retirement_trace_index.md",
         "type": "scroll",
         "category": "retirement"
       },
       {
         "title": "Runtime Hooks",
-        "path": "docs/_rituals/tftincryption_scroll_runtime_hooks.md",
+        "path": "docs/_rituals/enTFT_scroll_runtime_hooks.md",
         "type": "scroll",
         "category": "runtime"
       },
       {
         "title": "Glyph Reawakening Ritual",
-        "path": "docs/_rituals/tftincryption_scroll_glyph_reawakening_ritual.md",
+        "path": "docs/_rituals/enTFT_scroll_glyph_reawakening_ritual.md",
         "type": "scroll",
         "category": "reawakening"
       }
@@ -65,13 +65,13 @@
       },
       {
         "title": "Retirement Log",
-        "path": "docs/_meta/tftincryption_glyph_retirement_log.json",
+        "path": "docs/_meta/enTFT_glyph_retirement_log.json",
         "type": "log",
         "category": "retirement"
       },
       {
         "title": "Reawakening Log",
-        "path": "docs/_meta/tftincryption_scroll_glyph_reawakening_log.json",
+        "path": "docs/_meta/enTFT_scroll_glyph_reawakening_log.json",
         "type": "log",
         "category": "reawakening"
       },
@@ -83,7 +83,7 @@
       },
       {
         "title": "Glyph Registry",
-        "path": "docs/_meta/tftincryption_glyph_degree_registry.json",
+        "path": "docs/_meta/enTFT_glyph_degree_registry.json",
         "type": "registry",
         "category": "glyphs"
       }
@@ -91,43 +91,43 @@
     "agents": [
       {
         "title": "Echo Trigger",
-        "path": "agents/tftincryption/flame_echo_trigger.py",
+        "path": "agents/enTFT/flame_echo_trigger.py",
         "type": "agent",
         "category": "echo"
       },
       {
         "title": "Fusion Resolver",
-        "path": "agents/tftincryption/glyph_fusion_resolver.py",
+        "path": "agents/enTFT/glyph_fusion_resolver.py",
         "type": "agent",
         "category": "fusion"
       },
       {
         "title": "Reawakening Monitor",
-        "path": "agents/tftincryption/glyph_reawakening_monitor.py",
+        "path": "agents/enTFT/glyph_reawakening_monitor.py",
         "type": "agent",
         "category": "reawakening"
       },
       {
         "title": "Retirement Trigger",
-        "path": "agents/tftincryption/glyph_retirement_trigger.py",
+        "path": "agents/enTFT/glyph_retirement_trigger.py",
         "type": "agent",
         "category": "retirement"
       },
       {
         "title": "Scroll Monitor",
-        "path": "agents/tftincryption/scroll_commit_monitor.py",
+        "path": "agents/enTFT/scroll_commit_monitor.py",
         "type": "agent",
         "category": "runtime"
       },
       {
         "title": "Trace Dashboard",
-        "path": "agents/tftincryption/scroll_runtime_trace_dashboard.py",
+        "path": "agents/enTFT/scroll_runtime_trace_dashboard.py",
         "type": "agent",
         "category": "runtime"
       },
       {
         "title": "Mightthor Interface",
-        "path": "agents/tftincryption/mightthor_agent_interface.py",
+        "path": "agents/enTFT/mightthor_agent_interface.py",
         "type": "agent",
         "category": "runtime"
       }

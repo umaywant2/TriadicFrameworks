@@ -1,6 +1,6 @@
 # TFThooks Agents
 
-The **agents** directory contains hook‑level agents that extend TFTincryption with specialized logic.  
+The **agents** directory contains hook‑level agents that extend enTFT with specialized logic.  
 These agents act as **embedded processes** that monitor, trigger, and resolve resonance events inside the protocol.
 
 ## Structure
@@ -10,17 +10,17 @@ These agents act as **embedded processes** that monitor, trigger, and resolve re
 - **glyph_reawakening_monitor.py** → monitors dormant glyphs and reactivates them
 - **glyph_registry_loader.py** → loads glyph data into the runtime registry
 - **glyph_retirement_trigger.py** → gracefully retires glyphs from active use
-- **mightthor_agent_interface.py** → interface layer for MightyTHOR orchestration
+- **tops_agent_interface.py** → interface layer for **tops** orchestration
 - **scroll_commit_monitor.py** → tracks scroll commits and lineage updates
 - **scroll_runtime_trace_dashboard.py** → provides runtime dashboards for scroll activity
 
 ## Purpose
-TFThooks agents are the **active extensions** of TFTincryption.  
+TFThooks agents are the **active extensions** of enTFT.  
 They:
 - Monitor runtime events (glyphs, scrolls, badges)  
 - Trigger symbolic echoes and lineage updates  
 - Provide dashboards and interfaces for orchestration  
-- Bridge TFTincryption with [MightyTHOR](../../../MightyTHOR/) agents  
+- Bridge enTFT with [tops](../../../tops/) agents  
 
 ## Usage
 Agents can be run individually or loaded as part of a hook sequence:

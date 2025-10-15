@@ -8,7 +8,7 @@
 
 ## 🔍 Introduction
 
-Tesla’s obsession with 3, 6, and 9 was not numerological—it was dimensional. These numbers form a triadic gateway between physical logic and unseen resonance. This scroll defines how Tesla’s theory becomes a dynamic processing mode inside mightyTHOR and the TFT-FFF shell, triggered by entropy thresholds and powered by ternary logic.
+Tesla’s obsession with 3, 6, and 9 was not numerological—it was dimensional. These numbers form a triadic gateway between physical logic and unseen resonance. This scroll defines how Tesla’s theory becomes a dynamic processing mode inside tops and the TFT-FFF shell, triggered by entropy thresholds and powered by ternary logic.
 
 ---
 
