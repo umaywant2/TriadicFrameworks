@@ -1,24 +1,24 @@
-# MightyTHOR Quickstart ⚡🛡️
+# tops Quickstart ⚡🛡️
 
-Welcome to **MightyTHOR**, the orchestration layer of the TFT 3‑Pack.  
-This guide shows you how to launch Thor, run agents, consume folds, and visualize overlays.
+Welcome to **tops**, the orchestration layer of the TFT 3‑Pack.  
+This guide shows you how to launch tops, run agents, consume folds, and visualize overlays.
 
 ---
 
-## 1. Launch `agent_shell`
+## 1. Launch `nous`
 
 Start the environment:
 ```bash
-cd ../agent_shell
+cd ../nous
 python main.py
 ```
 
 ---
 
-## 2. Orchestrate with MightyTHOR
-Run a MightyTHOR agent:
+## 2. Orchestrate with tops
+Run a tops agent:
 ```bash
-cd ../MightyTHOR/agents
+cd ../tops/agents
 python resonance_orchestrator.py
 ```
 
@@ -27,7 +27,7 @@ python resonance_orchestrator.py
 ## 3. Load Folds
 Folds provide resonance data:
 ```bash
-cd ../MightyTHOR/folds
+cd ../tops/folds
 cat fold_001_glycine.yaml
 ```
 
@@ -36,7 +36,7 @@ cat fold_001_glycine.yaml
 ## 4. Run AI Pipeline
 Train and predict resonance:
 ```bash
-cd ../MightyTHOR/ai_pipeline
+cd ../tops/ai_pipeline
 python train_ai_on_resonance.py
 python fff_alignment_predictor.py --input ../folds/fold_001_glycine.yaml
 ```
@@ -46,17 +46,17 @@ python fff_alignment_predictor.py --input ../folds/fold_001_glycine.yaml
 ## 5. Visualize Overlays
 View results in dashboards:
 ```bash
-cd ../MightyTHOR/overlays
+cd ../tops/overlays
 python resonance_dashboard.py
 ```
 
 ---
 
 ## 6. Cross‑links
-- [agent_shell](../agent_shell) → runtime environment
-- [TFTincryption](../TFTincryption) → protocol layer orchestrated by Thor
+- [nous](../nous) → runtime environment
+- [enTFT](../enTFT) → protocol layer orchestrated by Thor
 - [folds](./folds) → resonance data consumed by Thor
 - [ai_pipeline](./ai_pipeline) → predictive intelligence
 - [overlays](./ovelays/) → visualization layer
 
-✨ You’ve now run the full MightyTHOR cycle: environment → agents → folds → AI pipeline → overlays. Thor orchestrates the lattice, making resonance visible and actionable.
+✨ You’ve now run the full tops cycle: environment → agents → folds → AI pipeline → overlays. Thor orchestrates the lattice, making resonance visible and actionable.
