@@ -1,7 +1,7 @@
 
 #!/usr/bin/env python3
 """
-🌀 TriadicFrameworks Agent Shell
+🌀 TriadicFrameworks nous
 Main entry point for local agent execution.
 Handles triadic job division, symbolic fidelity logging, and validator handshake.
 """
@@ -33,7 +33,7 @@ def triadic_job_division():
         return ["full_job"]
 
 def run_agent():
-    print("🌀 TFT Agent Shell Activated")
+    print("🌀 TFT nous Activated")
     job_segments = triadic_job_division()
 
     for segment in job_segments:
