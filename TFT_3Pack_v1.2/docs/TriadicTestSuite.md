@@ -6,8 +6,8 @@ This suite includes symbolic and numeric tests to validate the `nous` logic core
 
 ```json
 {
-  "triad": ["alpha", "beta", "gamma"],
-  "rules": ["alpha precedes beta", "beta echoes gamma"]
+  "triad": ["forci", "flui", "freqi"],
+  "rules": ["forci precedes flui", "flui echoes freqi"]
 }
 ```
 
@@ -43,3 +43,4 @@ Expected Output:
 ```
 
 ---
+
