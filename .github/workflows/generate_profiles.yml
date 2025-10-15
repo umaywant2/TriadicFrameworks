@@ -1,5 +1,7 @@
 name: Generate Contributor Profiles
 
+permissions:
+  contents: read
 on:
   workflow_run:
     workflows: ["Update Contributor Honor Roll"]
