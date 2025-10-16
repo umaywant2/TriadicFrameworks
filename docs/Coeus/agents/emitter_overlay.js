@@ -22,3 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Start auto-scan on load
   autoScan();
 });
+
+// To activate, link it in resonance_mapper.html:
+// ```html
+// <script src="emitter_overlay.js"></script>
