@@ -11,6 +11,14 @@ Each `.js` file includes inline activation comments:
 - `emitter_overlay.js`: Real-time rail scans and auto-sequence  
   → Link in HTML: `<script src="emitter_overlay.js"></script>`
 
+Python modules are activated via `launch_sandbox.py` or direct import:
+- `nous.py`: Symbol interpreter  
+- `enTFT.py`: Encryption sleeve logic  
+- `tops.py`: Task orchestrator  
+- `rail_mapper.py`: Assigns rails based on coin metadata  
+- `triadic_decomposer.py`: Breaks coins into symbolic stubs  
+- `mascot_narrator.py`: Triggers commentary overlays
+
 ---
 
 ## Sanity Checks
