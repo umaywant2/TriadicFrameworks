@@ -1,4 +1,8 @@
 # Sandbox Quarantine — Isolates unstable or flagged coins during tournaments
+#  This module lets you:
+#   - Flag and isolate coins mid-tournament
+#   - Log timestamped quarantine reasons
+#   - Export logs for validator review or remix annotation
 
 import json
 import time
