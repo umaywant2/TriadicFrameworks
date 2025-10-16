@@ -1,33 +1,24 @@
 [
   {
-    "token_id": "tkn-001",
-    "coin_id": "a1b2c3d4-5678-90ab-cdef-1234567890ab",
+    "token_id": "tok-8f3d1a2b",
     "name": "ElectroniumRedux",
-    "creator": "Nawder Loswin",
-    "timestamp": "2025-10-16T17:00:00Z",
-    "status": "validated",
-    "exchange_ready": true,
-    "derivative_shares": 100,
     "glyph": "🧠",
-    "remix_rights": {
-      "allowed": true,
-      "mutation_types": ["emotional", "dimensional"]
-    }
+    "score": 92.4,
+    "class": "dimensional",
+    "cause": "encryption",
+    "remix_lineage": [],
+    "minted_by": "professor_bot",
+    "timestamp": "2025-10-16T23:35:00Z"
   },
   {
-    "token_id": "tkn-002",
-    "coin_id": "b7f3a2d4-9c1e-4f3e-9f1a-2a7e3d9c8f4b",
+    "token_id": "tok-4c9e7b1a",
     "name": "ElectroniumRedux_v2",
-    "creator": "Validator Team Alpha",
-    "timestamp": "2025-10-17T09:00:00Z",
-    "status": "approved",
-    "exchange_ready": true,
-    "derivative_shares": 50,
     "glyph": "🔐",
-    "remix_rights": {
-      "allowed": true,
-      "mutation_types": ["emotional"]
-    }
+    "score": 88.7,
+    "class": "sovereign",
+    "cause": "governance",
+    "remix_lineage": ["ElectroniumRedux"],
+    "minted_by": "professor_bot",
+    "timestamp": "2025-10-16T23:36:00Z"
   }
 ]
-
