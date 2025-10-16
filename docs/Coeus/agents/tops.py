@@ -1,19 +1,18 @@
-# Agent: tops — task orchestrator and sandbox router
+# Tops — Orchestrates coin tasks and agent execution
 
-class TopsAgent:
-    def __init__(self, name="Tops"):
-        self.name = name
-        self.trace_log = []
+class Tops:
+    def __init__(self):
+        self.task_queue = []
 
-    def assign_roles(self, agents, coin):
-        print(f"[{self.name}] Assigning roles for coin: {coin['name']}")
-        return {
-            "interpreters": [agents[0].name],
-            "encryptors": [agents[1].name],
-            "orchestrators": [self.name]
-        }
+    def add_task(self, coin_id, agent_name):
+        task = {"coin": coin_id, "agent": agent_name}
+        self.task_queue.append(task)
+        print(f"[Tops] Task added: {task}")
 
-    def log_action(self, action):
-        self.trace_log.append(action)
-        print(f"[{self.name}] Logged action: {action}")
-
+    def execute_next(self):
+        if self.task_queue:
+            task = self.task_queue.pop(0)
+            print(f"[Tops] Executing task: {task}")
+            # Placeholder: trigger agent logic here
+        else:
+            print("[Tops] No tasks to execute.")
