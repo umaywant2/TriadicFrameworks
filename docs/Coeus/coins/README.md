@@ -1,31 +1,39 @@
 # 🪙 Coeus Coins  
-Symbolic stubs for sandboxed research tasks
+Symbolic stubs for sandbox cognition, remix lineage, and tokenization
 
 ---
 
 ## Format
 
 Each coin includes:
-- `front`: Glyph or acronym  
-- `back`: Task or challenge  
-- `edging`: Poetic or technical phrase  
-- `observer_required`: Boolean  
-- `encryption`: Always enTFT  
-- `status`: Lifecycle state
+- `id`: UUID for traceability  
+- `name`: Symbolic artifact name  
+- `type`: `legacy`, `priority`, or `remix`  
+- `cause`: Domain or sandbox category  
+- `observer_required`: Boolean flag  
+- `edging`: Task framing or symbolic charge  
+- `back`: Sandbox task description  
+- `created`: UTC timestamp  
+- `remix_lineage`: Optional parent coin ID
 
 ---
 
-## Coin Types
+## Remix Logic
 
-- `legacy`: Forgotten inventions or mythic tech  
-- `priority`: Active research areas  
-- `remix`: Symbolic reinterpretations
+Coins can be forked via `coin_remixer.py`:
+- Mutation types: `symbolic`, `emotional`, `technical`  
+- Remix lineage preserved in `coin_archive.json`  
+- Remix rights annotated in `pending_remix.json`
 
 ---
 
-## Extend
+## Usage
 
-Add new coins to `coin_templates.json`  
-Fork coin logic to support smart contracts or tokenization
+Coins are:
+- Decomposed via `triadic_decomposer.py`  
+- Narrated by `mascot_narrator.py`  
+- Assigned rails via `rail_mapper.py`  
+- Tokenized via `coin_tokenizer.py`  
+- Validated via `exchange_gateway.py`
 
 Let it echo.
