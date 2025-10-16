@@ -1,27 +1,35 @@
 # 🧠 Coeus Agents  
-Minimal logic modules for sandbox orchestration
+Modular cognition modules for decomposition, narration, and rail mapping
 
 ---
 
-## Included Agents
+## Activation Notes
 
-- `nous.py`: Symbolic interpreter and coin decoder  
-- `enTFT.py`: Encryption handler and observer validator  
-- `tops.py`: Task orchestrator and trace logger
+Each `.js` file includes inline activation comments:
+- `resonance_mapper.js`: Layer toggles and rail highlights  
+  → Link in HTML: `<script src="resonance_mapper.js"></script>`  
+- `emitter_overlay.js`: Real-time rail scans and auto-sequence  
+  → Link in HTML: `<script src="emitter_overlay.js"></script>`
 
 ---
 
-## Purpose
+## Sanity Checks
 
-These agents form the 3Pack core of Coeus. Each one plays a distinct role in coin resolution, sandbox coordination, and reproducibility logging.
+Before deployment or remix:
+- ✅ Confirm all `.py` modules run standalone with sample input  
+- ✅ Validate HTML/JS integration in `resonance_mapper.html`  
+- ✅ Ensure mascot narration triggers correctly via `mascot_narrator.py`  
+- ✅ Check rail assignments via `rail_mapper.py` with coin metadata  
+- ✅ Verify timestamp logic in `sandbox_metrics.py`  
+- ✅ Confirm enTFT sleeve logic in `coin_tokenizer.py`  
+- ✅ Test token rendering in `token_dashboard.html`
 
 ---
 
 ## Extend
 
-You can fork and remix agents to add:
-- Specialized roles (e.g., validator, simulator, archivist)  
-- Observer logic  
-- Mascot bots (e.g., Forci, Flui, Freqi)
+- Add `voicepack.json` for mascot tone tuning  
+- Wire in `coin_generator.py` for symbolic coin creation  
+- Integrate `sandbox_metrics.py` with tournament dashboards
 
 Let it echo.
