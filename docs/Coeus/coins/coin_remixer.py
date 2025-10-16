@@ -1,5 +1,9 @@
 # Coin Remixer — Forks existing coins and mutates metadata for remix lineage
-
+#  This module lets you:
+#   - Fork any coin with remix lineage
+#   - Mutate metadata for symbolic, emotional, or technical variation
+#   - Preserve remix trace for validator dashboards
+                    
 import json
 import uuid
 from datetime import datetime
