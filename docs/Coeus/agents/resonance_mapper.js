@@ -22,3 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// To activate it, just link it in your HTML:
+// <script src="resonance_mapper.js"></script>
