@@ -15,7 +15,8 @@ This folder tracks coin resolution metrics grouped by cause:
 Useful for:
 - Funding allocation  
 - NGO impact tracking  
-- Remix lineage by domain
+- Remix lineage by domain  
+- Cause-based tournament scoring
 
 ---
 
@@ -30,19 +31,19 @@ Useful for:
 ## Metrics
 
 Each coin includes:
-- `coin_id`  
-- `cause`  
-- `completion_time`  
-- `resonant_timestamp`  
-- `outcome`: `solved`, `tossback`, `quarantined`
+- `coin_id`: UUID  
+- `cause`: Domain tag  
+- `score`: Resolution metric  
+- `timestamp`: UTC  
+- `agent_roles`: Assigned agents  
+- `remix_lineage`: Optional parent coin ID
 
 ---
 
 ## Extend
 
-- Add new causes  
-- Compare sandbox rigs by domain  
-- Use mascot commentary to explain cause-level resonance
+- Add cause-based funding dashboards  
+- Wire in validator approval by cause  
+- Enable remix rights by domain
 
 Let it echo.
-
