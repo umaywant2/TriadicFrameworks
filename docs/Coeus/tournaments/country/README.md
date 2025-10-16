@@ -1,48 +1,45 @@
 # 🌍 Coeus Tournaments — Country Level  
-Benchmarking sandbox performance across national deployments
+Benchmarking sandbox performance by geopolitical origin
 
 ---
 
 ## Purpose
 
-This folder tracks coin resolution metrics by country or region:
-- `USA`  
-- `Japan`  
-- `EU`  
-- `India`  
-- `UAE`
+This folder tracks coin resolution metrics grouped by country or territory:
+- `US`, `JP`, `IN`, `BR`, `NG`, `EU`, `ZA`, `MX`, etc.
 
 Useful for:
-- Public exchange validation  
-- Policy benchmarking  
-- Global remix metrics
+- Regional coin markets  
+- Citizen-led research funding  
+- Remix lineage by territory  
+- Cross-border validator orchestration
 
 ---
 
 ## Files
 
 - `results.json`: Coin resolution logs by country  
-- `leaderboard.html`: Visual comparison across nations  
-- `country_profiles.json`: Sandbox specs and funding types
+- `leaderboard.html`: Visual comparison across regions  
+- `country_profiles.json`: Metadata for each country or territory
 
 ---
 
 ## Metrics
 
 Each coin includes:
-- `coin_id`  
-- `country`  
-- `completion_time`  
-- `resonant_timestamp`  
-- `outcome`: `solved`, `tossback`, `quarantined`
+- `coin_id`: UUID  
+- `country`: ISO code or region tag  
+- `score`: Resolution metric  
+- `timestamp`: UTC  
+- `agent_roles`: Assigned agents  
+- `remix_lineage`: Optional parent coin ID
 
 ---
 
 ## Extend
 
-- Add new countries or regions  
-- Compare sandbox rigs (e.g., TFT-enabled vs. stripped forks)  
-- Use mascot commentary for cultural resonance
+- Add country-based remix rights and validator teams  
+- Enable sandbox federation across borders  
+- Wire in remix economics by territory
 
 Let it echo.
-
