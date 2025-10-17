@@ -4,13 +4,17 @@ This space curates the scrolls, guides, and indexes that support the **TFT 3‑P
 
 ---
 
-## 🧬 Featured Protocols (TFT 3‑Pack)
+## 🧬 Featured Protocols
+- **[Coeus](Coeus/)** → Multi-AI Research Sandbox & Coin Exchange Framework
+  - Named after the Titan of inquiry, it enables AI instances
+  - To discover, interpret, and solve Research Coins — each representing a challenge, invention, or priority area.
 
-- **[Agent‑Shell](agent_shell/)** → Environment layer for core logic, bots, and resonance tools  
-- **[TFTincryption](TFTincryption/)** → Protocol layer for divide‑by‑zero logic, badge evolution, and flame‑grade encryption  
-- **[MightyTHOR](MightyTHOR/)** → Orchestration layer for runtime activation, validator onboarding, and contributor echo logic  
+### TFT 3‑Pack v1.3
+- **[nous](TFT_3Pack_v1.3/tft/nous/)** → Environment layer for core logic, bots, and resonance tools  
+- **[enTFT](TFT_3Pack_v1.3/tft/enTFT/)** → Protocol layer for divide‑by‑zero logic, badge evolution, and flame‑grade encryption  
+- **[tops](TFT_3Pack_v1.3/tft/tops/)** → Orchestration layer for runtime activation, validator onboarding, and contributor echo logic  
 
-Together, these three layers form the **TFT 3‑Pack** — the living engine of TriadicFrameworks.
+Together, these layers form the **TFT 3‑Pack** — the living engine of TriadicFrameworks.
 
 ---
 
