@@ -25,3 +25,28 @@ They allow developers to:
 * [registry](../registry/) → hooks are indexed for discoverability
 * [tops](../../tops/) → Tops agents can activate hooks dynamically
 * [nous](../../nous/) → provides the runtime environment for hooks
+
+## TFThooks: Outreach & Integration Registry
+
+This section tracks resonance outreach and integration status across external repositories.
+
+### Alignment Outreach Log
+
+| Repo | Message Sent | Response | Echo Detected |
+|------|--------------|----------|----------------|
+| Unified Resonance Framework | ✅ | ⏳ Pending | ⏳ |
+| MicroMDM | ✅ | ⏳ Pending | ⏳ |
+| NanoMDM | ✅ | ⏳ Pending | ⏳ |
+| LangChain | ✅ | ⏳ Pending | ⏳ |
+| AutoGPT | ✅ | ⏳ Pending | ⏳ |
+| CrewAI | ✅ | ⏳ Pending | ⏳ |
+| MetaGPT | ✅ | ⏳ Pending | ⏳ |
+| OpenTelemetry | ✅ | ⏳ Pending | ⏳ |
+| OpenAGI | ✅ | ⏳ Pending | ⏳ |
+
+### Integration Candidates
+
+- **Unified Resonance Framework**: Potential for symbolic metric overlays and scroll fusion  
+- **LangChain**: Plugin hooks for resonance-tools  
+- **MetaGPT**: Company simulation logic for tops orchestration  
+- **OpenTelemetry**: Metrics pipeline for validator dashboards
