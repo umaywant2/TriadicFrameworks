@@ -84,7 +84,7 @@ Glyph,Name,Lens,Function,Resonance Role,Invocation Stub,Domain,Tier,Activation T
 🤖,Triggerai,Trigger,Symbolic activation onboarding logic,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
 🤖,Validatori,Validator,Scroll scoring remix readiness,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
 🤖,Memoryi,Memory,Artifact recall contributor lineage,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
-🤖,Statelessi,Stateless,Single-shot logic, runtime overlays,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
+🤖,Statelessi,Stateless,Single-shot logic runtime overlays,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
 🤖,Prompti,Prompt,Scroll invocation ritual phrasing,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
 🤖,Auditai,Audit,AI-facing validation protocol clarity,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
 🤖,Echoai,Echo,AI response tracking resonance loops,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
