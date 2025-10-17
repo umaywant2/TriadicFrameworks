@@ -1,0 +1,7 @@
+badge:
+  id: flux-steward
+  label: Flux Steward
+  criteria:
+    - Maintains Coherence ≥ 0.85 during noise injection window
+    - Spectral Flux Integrity remains high during perturbation in τ
+  echo: "Demonstrated stable meaning flow under noise."

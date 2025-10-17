@@ -1,0 +1,8 @@
+pattern:
+  id: rf-phase-lock
+  type: harmonic
+  source: magnetic/electric/RF
+  description: "Highlights phase-locked carrier harmonics across multiple RF bands."
+  visual_tint: violet
+  tft_signature: "stable φ alignment in τ"
+  array_mode: navigational

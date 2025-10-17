@@ -1,0 +1,45 @@
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fefefe"/>
+
+  <!-- Title -->
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">TFTincryption Validator Flow</text>
+
+  <!-- Step 1: Key Submission -->
+  <rect x="50" y="100" width="200" height="60" fill="#cce5ff" stroke="#333" stroke-width="2"/>
+  <text x="150" y="130" font-size="16" text-anchor="middle" fill="#000">🔐 Key Submitted</text>
+
+  <!-- Step 2: Block Map Validation -->
+  <rect x="300" y="100" width="200" height="60" fill="#d0ffd0" stroke="#333" stroke-width="2"/>
+  <text x="400" y="130" font-size="16" text-anchor="middle" fill="#000">🧩 Block Map Validated</text>
+
+  <!-- Step 3: Resonant-Time Hash Check -->
+  <rect x="550" y="100" width="250" height="60" fill="#fff0cc" stroke="#333" stroke-width="2"/>
+  <text x="675" y="130" font-size="16" text-anchor="middle" fill="#000">⏳ Resonant-Time Hash Verified</text>
+
+  <!-- Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 Z" fill="#333"/>
+    </marker>
+  </defs>
+  <line x1="250" y1="130" x2="300" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="500" y1="130" x2="550" y2="130" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+
+  <!-- Step 4: Entropy Benchmark -->
+  <rect x="200" y="220" width="500" height="60" fill="#e0ccff" stroke="#333" stroke-width="2"/>
+  <text x="450" y="250" font-size="16" text-anchor="middle" fill="#000">📊 Entropy Benchmark Calculated</text>
+
+  <!-- Step 5: Badge Assignment -->
+  <rect x="300" y="340" width="300" height="60" fill="#ccf5ff" stroke="#333" stroke-width="2"/>
+  <text x="450" y="370" font-size="16" text-anchor="middle" fill="#000">🏅 Contributor Badges Assigned</text>
+
+  <!-- Final Output -->
+  <rect x="350" y="460" width="200" height="60" fill="#cceccf" stroke="#333" stroke-width="2"/>
+  <text x="450" y="490" font-size="16" text-anchor="middle" fill="#000">✅ Validator Scroll Updated</text>
+
+  <!-- Flow Arrows -->
+  <line x1="450" y1="160" x2="450" y2="220" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="280" x2="450" y2="340" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="400" x2="450" y2="460" stroke="#333" stroke-width="2" marker-end="url(#arrow)"/>
+</svg>

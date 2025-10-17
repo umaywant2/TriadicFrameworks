@@ -1,0 +1,48 @@
+{
+  "scan_timestamp": "2025-08-17T20:13:00-04:00",
+  "scanned_by": "badge_trigger_test_runner.py",
+  "papers": [
+    {
+      "title": "Paper I – Triadic Framework for Everything.docx",
+      "badges": ["Dimensional Architect", "Mythic Originator"],
+      "theme": "Foundations",
+      "contributor": "Nawder Loswin"
+    },
+    {
+      "title": "Triadic Framework for Quantum Mechanics – Entropy’s Harmonic.docx",
+      "badges": ["Quantum Visionary", "Entropy Mapper"],
+      "theme": "Quantum & Particle Vision",
+      "contributor": "Echo Guild"
+    },
+    {
+      "title": "Triadic Framework Technology for Health Care.docx",
+      "badges": ["Healing Resonator", "Systemic Innovator"],
+      "theme": "Health & Ultrasound",
+      "contributor": "Echo Guild"
+    },
+    {
+      "title": "Triadic Framework for Music – With Quadratic Extensions.docx",
+      "badges": ["Harmonic Weaver", "Symbolic Composer"],
+      "theme": "Music & Symbolic Extensions",
+      "contributor": "Harmonic Circle"
+    },
+    {
+      "title": "research-Zero Point, Cold Fusion, and Wireless Energy.pdf",
+      "badges": ["Energy Alchemist", "Wireless Pioneer"],
+      "theme": "Energy & Wireless Power",
+      "contributor": "Echo Guild"
+    },
+    {
+      "title": "Triadic Framework for Spectrum Technologies – Light and Dark.docx",
+      "badges": ["Spectrum Navigator", "Duality Explorer"],
+      "theme": "Elemental & Spectrum Research",
+      "contributor": "Echo Guild"
+    },
+    {
+      "title": "Resonance Operator @() — Formalization.docx",
+      "badges": ["Symbolic Formalist", "Cognitive Cartographer"],
+      "theme": "Cognitive & Symbolic Formalization",
+      "contributor": "Nawder Loswin"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+```xml
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fefefe"/>
+
+  <!-- Title -->
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">TFTincryption Curriculum Remix Glyph Fusion Map</text>
+
+  <!-- Fusion Nodes -->
+  <g>
+    <!-- Wildflower + Grove Bloom → Bloom Grove -->
+    <circle cx="200" cy="150" r="30" fill="#d0ffd0" stroke="#333" stroke-width="2"/>
+    <text x="200" y="155" font-size="14" text-anchor="middle" fill="#000">🌼</text>
+
+    <circle cx="300" cy="150" r="30" fill="#e0f0cc" stroke="#333" stroke-width="2"/>
+    <text x="300" y="155" font-size="14" text-anchor="middle" fill="#000">🌴</text>
+
+    <circle cx="250" cy="250" r="40" fill="#cceccf" stroke="#333" stroke-width="2"/>
+    <text x="250" y="255" font-size="16" text-anchor="middle" fill="#000">🌾</text>
+    <text x="250" y="280" font-size="12" text-anchor="middle" fill="#555">Bloom Grove</text>
+
+    <!-- Cascade + Bloom → Bloomfall -->
+    <circle cx="600" cy="150" r="30" fill="#cceccf" stroke="#333" stroke-width="2"/>
+    <text x="600" y="155" font-size="14" text-anchor="middle" fill="#000">🍂</text>
+
+    <circle cx="700" cy="150" r="30" fill="#ffd0e0" stroke="#333" stroke-width="2"/>
+    <text x="700" y="155" font-size="14" text-anchor="middle" fill="#000">🌺</text>
+
+    <circle cx="650" cy="250" r="40" fill="#f9f9a0" stroke="#333" stroke-width="2"/>
+    <text x="650" y="255" font-size="16" text-anchor="middle" fill="#000">🍁</text>
+    <text x="650" y="280" font-size="12" text-anchor="middle" fill="#555">Bloomfall</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="550" font-size="14" text-anchor="middle" fill="#555">Glyphs fuse. Scrolls converge. Pedagogy echoes mythic clarity.</text>
+</svg>

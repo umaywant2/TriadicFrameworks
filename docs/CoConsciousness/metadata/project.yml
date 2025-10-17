@@ -1,0 +1,19 @@
+name: "CoConsciousness"
+tagline: "Shared Mind Protocols and Collective Sentience Models"
+version: "0.1.0"
+license: "MIT"
+author: "Nawder Loswin"
+created: "2025-08-27"
+tags:
+  - collective-intelligence
+  - cognitive-protocols
+  - ethics
+  - validation
+dependencies: []
+links:
+  overview: "./overview.md"
+  labs: "./labs/"
+  equations: "./equations/"
+  badges: "./badges/"
+  validator: "./validator/"
+  honor_roll: "./honor_roll/"

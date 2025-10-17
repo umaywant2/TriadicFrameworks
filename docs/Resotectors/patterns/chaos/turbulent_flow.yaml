@@ -1,0 +1,8 @@
+pattern:
+  id: turbulent-flow
+  type: chaos
+  source: fluid/acoustic
+  description: "Identifies recurring vortices in otherwise chaotic flow fields."
+  visual_tint: teal
+  detection_method: "vector field analysis with chaos thresholding"
+  array_mode: navigational

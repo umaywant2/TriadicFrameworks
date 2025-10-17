@@ -1,0 +1,15 @@
+#frequency-test, #fluids-test, #forces-test {
+  display: block;
+  opacity: 1;
+  visibility: visible;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  background: #f9f9f9;
+  z-index: 10;
+}
+
+.freq-module, .fluids-module, .forces-module {
+  font-family: monospace;
+  font-size: 1rem;
+}

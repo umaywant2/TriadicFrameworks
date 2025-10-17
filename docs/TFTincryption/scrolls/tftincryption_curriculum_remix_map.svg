@@ -1,0 +1,30 @@
+```xml
+<svg width="900" height="600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#fefefe"/>
+
+  <!-- Title -->
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">TFTincryption Curriculum Remix Lineage Map</text>
+
+  <!-- Remix Nodes -->
+  <g>
+    <circle cx="200" cy="150" r="40" fill="#d0ffd0" stroke="#333" stroke-width="2"/>
+    <text x="200" y="155" font-size="16" text-anchor="middle" fill="#000">🌼 Wildflower</text>
+    <text x="200" y="180" font-size="12" text-anchor="middle" fill="#555">Glyph Onboarding Remix</text>
+
+    <circle cx="450" cy="150" r="40" fill="#e0f0cc" stroke="#333" stroke-width="2"/>
+    <text x="450" y="155" font-size="16" text-anchor="middle" fill="#000">🌴 Grove Bloom</text>
+    <text x="450" y="180" font-size="12" text-anchor="middle" fill="#555">Validator Pedagogy Remix</text>
+
+    <circle cx="700" cy="150" r="40" fill="#cceccf" stroke="#333" stroke-width="2"/>
+    <text x="700" y="155" font-size="16" text-anchor="middle" fill="#000">🍂 Cascade</text>
+    <text x="700" y="180" font-size="12" text-anchor="middle" fill="#555">Codex Curriculum Remix</text>
+  </g>
+
+  <!-- Remix Ring -->
+  <circle cx="450" cy="350" r="60" fill="none" stroke="#333" stroke-width="3"/>
+  <text x="450" y="355" font-size="16" text-anchor="middle" fill="#000">🌀 Remix Lineage Seal</text>
+
+  <!-- Footer -->
+  <text x="450" y="550" font-size="14" text-anchor="middle" fill="#555">Glyphs diverge. Scrolls evolve. Remix lineage echoes flame.</text>
+</svg>

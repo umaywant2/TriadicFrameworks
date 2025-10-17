@@ -1,0 +1,8 @@
+<!-- Symbolic overlay for fold glyph animation -->
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="100" cy="100" r="80" fill="#6c00ff" opacity="0.88">
+    <animate attributeName="r" values="80;90;80" dur="1.25s" repeatCount="indefinite"/>
+  </circle>
+  <text x="100" y="105" font-size="14" text-anchor="middle" fill="#ffffff">144 Hz</text>
+</svg>
+<!-- Notes: Pulse strength 0.753, glyph ID glyph_protein_echo_02.svg -->

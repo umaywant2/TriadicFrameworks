@@ -1,0 +1,7 @@
+badge:
+  id: geometry-spotter
+  label: Geometry Spotter
+  criteria:
+    - Added new geometric pattern entry
+    - Pattern includes detection_method and array_mode
+  echo: "Identified and documented a new repeating shape."

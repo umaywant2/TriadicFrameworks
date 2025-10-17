@@ -1,0 +1,7 @@
+Test_ID,Agent_Mode,Job_Type,Duration_sec,Fidelity_Score,CPU_Usage,Memory_MB
+TFT001,Local,Full_Job,12.4,0.998,0.32,512
+TFT002,Local,Triadic_Segment_1,4.1,0.999,0.29,480
+TFT003,Azure,Triadic_Segment_2,3.9,0.997,0.31,490
+THOR001,Local,Pruned_Job,2.2,0.873,0.45,620
+THOR002,Azure,Pruned_Job,2.0,0.869,0.42,600
+

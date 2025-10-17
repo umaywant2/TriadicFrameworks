@@ -1,0 +1,4 @@
+Frequency,ObserverAngle,PulseAmplitude,Quadrant,Glyph,PhaseEcho
+144,270,0.999,"W,S",glyph_protein_echo_02.svg,Remix lineage pulse detected
+72,90,0.951,"E",bridge_glyph_overlay_01.svg,Residual harmonic
+33,180,0.809,"S",validator_space_overlay_01.svg,Badge trigger echo

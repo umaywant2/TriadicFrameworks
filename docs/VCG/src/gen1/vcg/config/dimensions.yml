@@ -1,0 +1,77 @@
+# dimensions.yml
+# Phase offsets, harmonics, QoS weights, and CPU/NUMA pinning for each virtual dimension.
+# This file is read by the VCG orchestrator at startup.
+
+dimensions:
+  - id: D1
+    phase_offset_deg: 0
+    harmonic: 1
+    qos_weight: 1.0
+    numa_node: 0
+    cpu_set: "0-1"
+    fs_type: ext4
+    size_gb: 4
+  - id: D2
+    phase_offset_deg: 40
+    harmonic: 1
+    qos_weight: 1.0
+    numa_node: 0
+    cpu_set: "2-3"
+    fs_type: ext4
+    size_gb: 4
+  - id: D3
+    phase_offset_deg: 80
+    harmonic: 1
+    qos_weight: 1.0
+    numa_node: 0
+    cpu_set: "4-5"
+    fs_type: tmpfs
+    size_gb: 2
+  - id: D4
+    phase_offset_deg: 0
+    harmonic: 2
+    qos_weight: 1.2
+    numa_node: 1
+    cpu_set: "6-7"
+    fs_type: ext4
+    size_gb: 4
+  - id: D5
+    phase_offset_deg: 40
+    harmonic: 2
+    qos_weight: 1.2
+    numa_node: 1
+    cpu_set: "8-9"
+    fs_type: ext4
+    size_gb: 4
+  - id: D6
+    phase_offset_deg: 80
+    harmonic: 2
+    qos_weight: 1.2
+    numa_node: 1
+    cpu_set: "10-11"
+    fs_type: tmpfs
+    size_gb: 2
+  - id: D7
+    phase_offset_deg: 0
+    harmonic: 3
+    qos_weight: 0.8
+    numa_node: 0
+    cpu_set: "12-13"
+    fs_type: ext4
+    size_gb: 4
+  - id: D8
+    phase_offset_deg: 40
+    harmonic: 3
+    qos_weight: 0.8
+    numa_node: 0
+    cpu_set: "14-15"
+    fs_type: ext4
+    size_gb: 4
+  - id: D9
+    phase_offset_deg: 80
+    harmonic: 3
+    qos_weight: 0.8
+    numa_node: 0
+    cpu_set: "16-17"
+    fs_type: tmpfs
+    size_gb: 2

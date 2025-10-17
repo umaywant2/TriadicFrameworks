@@ -1,0 +1,143 @@
+.hero-animations {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-text-with-fluids {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-text-with-fluids .fluids-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.animation-container {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #222;
+  border: 2px dashed #fff;
+}
+
+.frequencies-animation {
+  background-color: purple;
+  @keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 5px #0f0;
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 20px #0f0;
+    transform: scale(1.05);
+  }
+  100% {
+    box-shadow: 0 0 5px #0f0;
+    transform: scale(1);
+  }
+}
+
+.frequencies-animation {
+  animation: pulseGlow 2s infinite;
+  border: 2px dashed #0f0;
+  background-color: #003300;
+}
+
+}
+
+.fluids-animation {
+  background-color: aqua;
+  @keyframes ripple {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fluids-animation {
+  background: linear-gradient(135deg, #00f, #0ff);
+  background-size: 200% 200%;
+  animation: ripple 3s ease infinite;
+}
+
+}
+
+.forces-animation {
+  background-color: red;
+}
+
+.lattice-section {
+  position: relative;
+  height: 300px; /* or whatever height you want */
+  overflow: hidden;
+}
+
+.lattice-section .animation-container {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.lattice-section .frequencies-animation { z-index: 3; }
+.lattice-section .fluids-animation { z-index: 2; }
+.lattice-section .forces-animation { z-index: 1; }
+
+.lattice-section .animation-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.lattice-section .animation-container canvas {
+  mix-blend-mode: screen; /* or lighten/overlay depending on effect */
+  opacity: 0.85; /* tweak for visibility */
+}
+
+.lattice-section .forces-animation {
+  z-index: 1;
+}
+
+.lattice-section .fluids-animation {
+  z-index: 2;
+}
+
+.lattice-section .frequencies-animation {
+  z-index: 3;
+}
+
+display: block;
+opacity: 1;
+visibility: visible;
+z-index: 10;
+
+.badge-list {
+  list-style: none;
+  padding: 0;
+}
+.badge {
+  background: #222;
+  color: #fff;
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  margin-right: 0.5em;
+}
