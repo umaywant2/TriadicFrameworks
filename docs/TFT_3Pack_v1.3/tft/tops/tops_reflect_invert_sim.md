@@ -14,17 +14,3 @@ python grid_ops.py echo
 - Symbolic glyph overlays for validator dashboards
 - Echo logs for remix trust and mutation lineage
 
----
-
-### 📂 Suggested Save Location
-
-```
-TriadicFrameworks/
-└── docs/
-    └── TFT_3Pack_v1.3/
-        └── tft/
-            └── tops/
-                ├── grid_ops.py
-                ├── tops_reflect_invert_sim.md
-                └── echo_overlay_manifesto.md  ← (optional scroll to declare overlay logic)
-```
