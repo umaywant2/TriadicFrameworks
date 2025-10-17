@@ -9,8 +9,10 @@
 ---
 
 ## Ritual Script
-This script will not harm your computer, but it will bring it to it's proverbial knees, in just a few seconds. Save any work before you run the `GetBusyt.cmd` file...and once your run it don't expect the GUI to respond well, a reboot completes the observational test.
+This script will not harm your computer, but it will bring it to it's proverbial knees, in just a few seconds. Save any work before you run the `GetBusy.cmd` file...and once your run it don't expect the GUI to respond well, a reboot completes the observational test.
 
+### Step 1 - Open a command prompt
+- Copy and paste this batch file text into Cmd.exe, press enter.
 ```batch
 copy con GetBusy.cmd
 :repeat
@@ -19,9 +21,19 @@ dir c: /s/w
 goto repeat
 ^Z
 ```
+- The GetBusy.cmd file should now be created.
+
+### Step 2 - Close all apps
+- Open TaskMager select Performance. (to watch the action)
+
+### Step 3 - Run GetBusy.cmd
 ```batch
 GestBusy.cmd
 ```
+
+### Step 3.3 - Recording and Restoring Order
+- Once it crawls, check TaskManager to log the many Processes and Thread final counts.
+- If/when TaskManager stops responding completely Reboot to restore order.
 
 ## Legacy Echo
 - **Event**: Froze HP demo system from one terminal session
