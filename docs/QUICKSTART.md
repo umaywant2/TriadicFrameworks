@@ -1,9 +1,9 @@
 # TFT 3‑Pack Quickstart 🌐✨
 
 Welcome to the **TFT 3‑Pack**:  
-- **agent_shell** → the environment layer (runtime, bots, modules, outputs)  
-- **TFTincryption** → the protocol layer (quantum‑hostile encryption, scrolls, registries, hooks)  
-- **MightyTHOR** → the orchestration layer (agents, folds, AI pipeline, overlays, outreach)
+- **nous** → the environment layer (runtime, bots, modules, outputs)  
+- **enTFT** → the protocol layer (quantum‑hostile encryption, scrolls, registries, hooks)  
+- **tops** → the orchestration layer (agents, folds, AI pipeline, overlays, outreach)
 
 This guide walks you through the **entire flow** in one ritual.
 
@@ -11,7 +11,7 @@ This guide walks you through the **entire flow** in one ritual.
 
 ## 1. Launch the Environment
 ```bash
-cd docs/agent_shell
+cd docs/TFT_3Pack_v1.3/tft/nous
 python main.py
 ```
 Choose a shell:
@@ -25,7 +25,7 @@ python logic_shells/full_symbolic_fidelity_shell.py
 
 ## 2. Invoke the Protocol
 ```bash
-cd ../TFTincryption/protocol-core
+cd ../enTFT/protocol-core
 python resonance_cipher.py --input sample.txt --output encrypted.tft
 ```
 Activate a scroll:
@@ -36,9 +36,9 @@ python initiation_scroll.py
 
 ---
 
-## 3. Orchestrate with Thor
+## 3. Orchestrate with tops
 ```bash
-cd ../../MightyTHOR/agents
+cd ../../TFT_3Pack_v1.3/tft/tops/agents
 python resonance_orchestrator.py
 ```
 Load folds:
