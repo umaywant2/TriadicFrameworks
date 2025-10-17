@@ -1,8 +1,0 @@
-badges:
-  - name: Dimensional Gearshift
-    trigger:
-      condition: Tesla Mode activated via gearshift_369.py
-      input_type: High-entropy scan or ritual input
-    echo: "Energy scaled. Dimensions shifted. Legacy accelerated."
-    contributor_log: true
-    validator_score: 369
