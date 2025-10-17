@@ -5,14 +5,14 @@ Every remixer who echoes the lattice is preserved here.
 
 ---
 
-## Agent‑Shell
-See [contributors](agent_shell/contributors/) → runtime lineage and bot authors.
+## nous
+See [contributors](TFT_3Pack_v1.3/tft/nous/contributors/) → runtime lineage and bot authors.
 
-## TFTincryption
-See [contributors](TFTincryption/contributors/) → scroll authors, registry keepers, hook builders.
+## enTFT
+See [contributors](TFT_3Pack_v1.3/tft/enTFT/contributors/) → scroll authors, registry keepers, hook builders.
 
-## MightyTHOR
-See [contributors](MightyTHOR/contributors/) → orchestration agents, overlay designers, fold curators.
+## tops
+See [contributors](TFT_3Pack_v1.3/tft/tops/contributors/) → orchestration agents, overlay designers, fold curators.
 
 ---
 
