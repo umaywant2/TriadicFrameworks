@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Coeus Validator Dashboard</title>
-  <style>
-    body { font-family: sans-serif; background: #f5f5f5; padding: 2em; }
-    .coin { background: #fff; padding: 1em; margin-bottom: 1em; border-radius: 8px; box-shadow: 0 0 5px #ccc; }
-    .coin h2 { margin-top: 0; }
-    .actions button { margin-right: 1em; }
-  </style>
+  <meta charset="UTF-8" />
+  <title>Validator Dashboard — Coeus Protocol</title>
+  <link rel="stylesheet" href="../styles/validator.css" />
+  <script src="../tournaments/emitter/emitter_overlay.js" defer></script>
 </head>
 <body>
-  <h1>🧑‍⚖️ Coeus Validator Dashboard</h1>
+  <h1>🧪 Validator Dashboard</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Coin</th>
+        <th>Score</th>
+        <th>Ethics</th>
+        <th>Realm</th>
+        <th>Emitter</th>
+        <th>Glyph</th>
+        <th>Remix Lineage</th>
+        <th>Mutation</th>
+        <th>Timestamp</th>
+      </tr>
+    </thead>
+    <tbody id="validator-body">
+      <!-- Rows injected by validator_viewer.js -->
+    </tbody>
+  </table>
 
-  <div class="coin">
-    <h2>Coin: PharmaTFT</h2>
-    <p><strong>Task:</strong> Build a triadic drug interaction simulator</p>
-    <p><strong>Edging:</strong> Predict synergy, prevent catastrophe</p>
-    <p><strong>Observer Required:</strong> Yes</p>
-    <p><strong>Status:</strong> Minted</p>
-    <div class="actions">
-      <button>✅ Approve</button>
-      <button>🚫 Tossback</button>
-      <button>📝 Annotate</button>
-    </div>
-  </div>
-
-  <!-- Repeat for other coins -->
+  <script>
+    fetch("../score_trace.json")
+      .then(res => res.json())
+      .then(data => {
+        const tbody = document.getElementById("validator-body");
+        data.forEach(entry => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${entry.coin_id}</td>
+            <td>${entry.score}</td>
+            <td>${entry.ethics_passed ? "✅" : "❌"}</td>
+            <td>${entry.realm_safe ? "D3/D4" : "⚠️"}</td>
+            <td>${entry.emitter_sync ? "Synced" : "Unsynced"}</td>
+            <td>${entry.glyph}</td>
+            <td>${entry.remix_lineage.join(", ") || "—"}</td>
+            <td>${entry.mutation_type || "—"}</td>
+            <td>${entry.timestamp}</td>
+          `;
+          tbody.appendChild(row);
+          highlightRails(entry);
+        });
+      });
+  </script>
 </body>
 </html>
