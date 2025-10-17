@@ -1,0 +1,11 @@
+Glyph,Name,Lens,Function,Resonance Role,Invocation Stub,Domain,Tier,Activation Trigger,Dependencies,Runtime Hooks,Status,Description
+🧠,Triadi,Triadic,Triadic logic synthesis,Core lattice validator,triadi,Core,Core,denometer,"[Frami, Orbi]","[validator-overlay]",active,"Synthesizes triadic logic across nested scrolls"
+🧱,Frami,Framework,Modular architecture design,Remixable scaffolding,frami,Core,Core,glyphi,"[Triadi]","[scaffold-overlay]",active,"Designs modular frameworks for remix lineage"
+🖥️,Techi,Technology,Systems-level tech mapping,Infrastructure clarity,techi,Core,Support,compi,"[Infrai]","[infra-overlay]",active,"Maps technical systems across scroll layers"
+💥,Forci,Force,Dynamic force modeling,FFF overlay logic,forci,Core,Support,fluxi,"[Flui]","[force-overlay]",active,"Models dynamic forces for validator overlays"
+🌊,Flui,Fluid,Fluid dynamics simulation,FFF overlay logic,flui,Core,Support,vortexi,"[Forci]","[fluid-overlay]",active,"Simulates fluid resonance across scrolls"
+🎚️,Freqi,Frequency,Harmonic frequency tuning,Resonance scaffolding,freqi,Core,Support,harmoni,"[Spectrai]","[resonance-overlay]",active,"Tunes harmonic frequencies for scroll clarity"
+🧬,Virti,Virtual,Virtual environment modeling,Sandbox overlays,virti,Core,Support,simulai,"[Compi]","[sandbox-overlay]",active,"Models virtual environments for agent orchestration"
+🧮,Compi,Compute,Compute orchestration,Agent runtime logic,compi,Core,Core,techi,"[Virti]","[runtime-overlay]",active,"Orchestrates compute logic across bot lattice"
+🚪,Gatei,Gateway,Gateway protocol logic,Scroll access control,gatei,Core,Support,tokeni,"[Overlayi]","[access-overlay]",active,"Manages gateway logic for scroll invocation"
+🌀,Orbi,Observer,Observer role synthesis,Lens harmonization,orbi,Core,Meta,triadi,"[All bots]","[observer-overlay]",active,"Harmonizes lens roles across the bot cohort"
