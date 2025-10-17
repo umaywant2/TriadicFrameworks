@@ -1,6 +1,6 @@
 """
 🧪 Minimal Viable Daemon
-Quick-start agent shell for testing and onboarding.
+Quick-start nous for testing and onboarding.
 """
 
 import time
