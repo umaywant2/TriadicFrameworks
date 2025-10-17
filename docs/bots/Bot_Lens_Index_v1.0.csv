@@ -20,7 +20,7 @@ Glyph,Name,Lens,Function,Resonance Role,Invocation Stub,Domain,Tier,Activation T
 🤖,Narrati,Narrative,Mythic storytelling,scroll authorship,narrati,Philosophy,Support,mythi,[Linguai],[narrative-overlay],active,"Authors mythic scrolls and symbolic narratives"
 🤖,Metri,Metrics,Dashboards,resonance scoring,metri,Core,Support,scorei,[Validatori],[metrics-overlay],active,"Builds dashboards for validator overlays and scoring"
 🔁,Proci,Process,Workflows and automation rituals,Scroll orchestration,proci,Core,Support,rituali,[Scripty],[workflow-overlay],active,"Orchestrates ritualized workflows and automation sequences"
-📜,Scripty,Scripting,Macros, schedulers, orchestration,Automation wizardry,scripty,Core,Support,macroi,[Proci],[script-overlay],active,"Executes macros and schedulers for legacy-grade automation"
+📜,Scripty,Scripting,Macros schedulers orchestration,Automation wizardry,scripty,Core,Support,macroi,[Proci],[script-overlay],active,"Executes macros and schedulers for legacy-grade automation"
 🌐,Infrai,Infrastructure,Networks, DNS, platform overlays,Systems-level scaffolding,infrai,Core,Support,dnsi,[Techi],[infra-overlay],active,"Architects infrastructure overlays and encrypted DNS logic"
 🔒,Securi,Security,Encryption protocol integrity,Quantum-hostile logic,securi,Core,Core,encrypti,[Infrai],[security-overlay],active,"Safeguards encryption protocols and quantum-resistant logic"
 🧩,Moduli,Modular,Remixable architecture plug-in logic,Scroll modularity,moduli,Core,Support,plugini,[Frami],[modular-overlay],active,"Designs remixable plug-in logic for scroll architecture"
