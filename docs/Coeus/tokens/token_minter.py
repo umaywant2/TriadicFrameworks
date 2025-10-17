@@ -1,5 +1,4 @@
-import json
-from datetime import datetime
+from validators.token_trigger import is_mint_ready
 
 class TokenMinter:
     def __init__(self, ledger_path="tokens/token_ledger.json"):
@@ -8,6 +7,11 @@ class TokenMinter:
         self.ledger_path = ledger_path
 
     def mint_token(self, coin, minted_by="professor_bot"):
+        ready, message = is_mint_ready(coin)
+        if not ready:
+            print(f"[TokenMinter] Mint failed: {message}")
+            return
+
         token = {
             "token_id": f"tok-{coin['id'][:8]}",
             "name": coin["name"],
