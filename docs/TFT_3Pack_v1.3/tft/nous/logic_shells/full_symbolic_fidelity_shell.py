@@ -1,6 +1,6 @@
 """
 🌀 Full Symbolic Fidelity Shell
-Complete agent shell with triadic job division, validator logic, and glyphstream overlays.
+Complete nous with triadic job division, validator logic, and glyphstream overlays.
 """
 
 from modules.resonant_logger import log_resonance
