@@ -1,6 +1,6 @@
 # Logic Shells
 
-The **logic_shells** directory contains modular shells that define runtime contexts for the agent‑shell.  
+The **logic_shells** directory contains modular shells that define runtime contexts for the tops and nous shell layers.  
 Each shell provides a different “lens” for executing TFT protocols, from minimal daemons to full symbolic fidelity.
 
 ## Structure
@@ -9,7 +9,7 @@ Each shell provides a different “lens” for executing TFT protocols, from min
 - Other shells → specialized contexts for testing, benchmarking, or symbolic overlays
 
 ## Purpose
-Logic shells are the “skins” of the agent‑shell.  
+Logic shells are the “skins” of the tops and nous shells.  
 They let contributors choose the right balance of performance, fidelity, and symbolic depth.
 
 ## Cross‑links
