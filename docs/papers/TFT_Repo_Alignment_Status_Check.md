@@ -25,7 +25,7 @@ This scroll documents comparative resonance between TriadicFrameworks and extern
 
 ## Outreach Plan
 
-Honor each repo with a message of appreciation—no plugs, no asks. Log responses in [TFThooks outreach registry](../docs/TFT_3Pack_v1.3/tft/entft/TFThooks/README.md).
+Honor each repo with a message of appreciation—no plugs, no asks. Log responses in [TFThooks outreach registry](../TFT_3Pack_v1.3/tft/entft/TFThooks/README.md).
 
 ---
 
