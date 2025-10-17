@@ -8,7 +8,7 @@
 
 ## 🔍 Introduction
 
-Tesla’s obsession with 3, 6, and 9 was not numerological—it was dimensional. These numbers form a triadic gateway between physical logic and unseen resonance. This scroll defines how Tesla’s theory becomes a dynamic processing mode inside tops and the TFT-FFF shell, triggered by entropy thresholds and powered by ternary logic.
+Tesla’s obsession with 3, 6, and 9 was not numerological—it was dimensional. These numbers form a triadic gateway between physical logic and unseen resonance. This scroll defines how Tesla’s theory becomes a dynamic processing mode inside tops and the nous shell, triggered by entropy thresholds and powered by ternary logic.
 
 ---
 
@@ -61,7 +61,7 @@ See: `Ternary_Computing_Resurgence.md`
 ---------------------------------------------------------------
 | 3 = Initiation | 6 = Flow Amplifier | 9 = Dimensional Tuner |
 ```
-This triad maps directly onto the TFT-FFF shell and aligns with subconscious glyph encoding.
+This triad maps directly onto the nous or tops shell and aligns with subconscious glyph encoding.
 
 ---
 
