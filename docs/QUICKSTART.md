@@ -75,12 +75,12 @@ echo "Your Name — Contribution" >> ../contributors/honor_roll.md
 ---
 
 ## 7. Cross‑links
-- [agent_shell](docs/agent_shell/) → runtime environment
-- [TFTincryption](docs/TFTincryption/) → protocol layer
-- [MightyTHOR](docs/MightyTHOR/) → orchestration layer
-- [folds](docs/MightyTHOR/folds/) → resonance data
-- [ai_pipeline](docs/MightyTHOR/ai_pipeline) → predictive intelligence
-- [overlays](docs/MightyTHOR/overlays/) → visualization
+- [nous](docs/TFT_3Pack_v1.3/tft/nous/) → runtime environment
+- [enTFT](docs/TFT_3Pack_v1.3/tft/entft/) → protocol layer
+- [tops](docs/TFT_3Pack_v1.3/tft/tops/) → orchestration layer
+- [folds](docs/TFT_3Pack_v1.3/tft/tops/folds/) → resonance data
+- [ai_pipeline](docs/TFT_3Pack_v1.3/tft/tops/ai_pipeline) → predictive intelligence
+- [overlays](docs/TFT_3Pack_v1.3/tft/tops/overlays/) → visualization
 
 ---
 
