@@ -3,7 +3,7 @@
 
   <!-- Root landing -->
   <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/</loc>
+    <loc>https://github.com/umaywant2/TriadicFrameworks/wiki</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,31 +11,31 @@
 
   <!-- Core Docs -->
   <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/README.md</loc>
+    <loc>https://los.triadicwizards.win/TFT_3Pack_v1.3/tft/nous/resonance-tools/resonance_cli_suite.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/QUICKSTART.md</loc>
+    <loc>https://los.triadicwizards.win/QUICKSTART.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/GLOSSARY.md</loc>
+    <loc>https://los.triadicwizards.win/GLOSSARY.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/HONOR_ROLL.md</loc>
+    <loc>https://los.triadicwizards.win/HONOR_ROLL.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/TFT_3-Pack_Diagram_README.md</loc>
+    <loc>https://los.triadicwizards.win/TFT_3-Pack_Diagram_README.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -43,7 +43,7 @@
 
   <!-- Subdirectories -->
   <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/papers/</loc>
+    <loc>https://los.triadicwizards.win/papers/README.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -152,115 +152,7 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/1_Triadic_Framework_for_Everything.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/2_Triadic_Number_Genesis.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/3_Dimensional_Triads.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/4_Saturn_Harmonic_Engine.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/badge_trigger_papers_index.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/Egos_Final_Technologies-A_Triadic_Legacy.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/From_Nested_Loops_to_Derivatives.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/From_Nested_Loops_to_Derivatives_Visuals.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/from-aqueducts_to_resonance.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/new_citizen_fund-migration_policy_framework.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/papers_mythic_preface_template.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/papers-curriculum-index.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/README.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/research-Beyond-Second-Sound-Triadic-Resonance-Framework.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/resonance-present-future.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/symbolic_architecture.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/Triadic_Framework_Aerospace.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-   <loc>https://los.triadicwizards.win/papers/Triadic_Manifestation_Protocol.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
+<url>
    <loc>https://los.triadicwizards.win/papers/1_Triadic_Framework_for_Everything.pdf</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>yearly</changefreq>
@@ -494,4 +386,115 @@
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
   </url>
-</urlset>
+
+
+  
+  <url>
+   <loc>https://los.triadicwizards.win/papers/1_Triadic_Framework_for_Everything.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/2_Triadic_Number_Genesis.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/3_Dimensional_Triads.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/4_Saturn_Harmonic_Engine.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/badge_trigger_papers_index.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/Egos_Final_Technologies-A_Triadic_Legacy.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/From_Nested_Loops_to_Derivatives.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/From_Nested_Loops_to_Derivatives_Visuals.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/from-aqueducts_to_resonance.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/new_citizen_fund-migration_policy_framework.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/papers_mythic_preface_template.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/papers-curriculum-index.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/README.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/research-Beyond-Second-Sound-Triadic-Resonance-Framework.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/resonance-present-future.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/symbolic_architecture.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/Triadic_Framework_Aerospace.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+   <loc>https://los.triadicwizards.win/papers/Triadic_Manifestation_Protocol.md</loc>
+    <lastmod>2025-10-08</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  </urlset>
