@@ -20,7 +20,8 @@ This folder contains **mythic‑scientific scrolls, architecture guides, and leg
 
 ## ✨ Purpose
 The **papers** directory is the **theory layer** of TriadicFrameworks. It preserves foundational thought, mythic reframing, and architectural visions that guide the practical work in:
-- `/labs/` → reproducible experiments
-- `/validators/` → dashboards and scoring logic
-- `/TFTincryption/` → protocol scrolls and registries
-- `/MightyTHOR/` → orchestration overlays and outreach
+- [labs](../labs/) → reproducible experiments
+- [validators](../validators/) → dashboards and scoring logic
+- [nous](../TFT_3Pack_v1.3/tft/nous/) → environmental layer shell
+- [entft](../TFT_3Pack_v1.3/tft/entft/) → encryption protocol scrolls and registries
+- [tops](../TFT_3Pack_v1.3/tft/tops/) → orchestration overlays bots and outreach
