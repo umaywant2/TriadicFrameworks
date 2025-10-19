@@ -1,6 +1,6 @@
-# MightyTHOR AI Resonance Pipeline
+# tops AI Resonance Pipeline
 
-The **AI Resonance Pipeline** is the intelligence layer of MightyTHOR.  
+The **AI Resonance Pipeline** is the intelligence layer of tops.  
 It trains, predicts, and visualizes resonance alignments across glyphs, folds, and remix lineage.  
 This subsystem integrates with the **MMR site extensions** and provides predictive orchestration for developers.
 
@@ -50,13 +50,13 @@ python glyph_overlay_animator.py --manifest fold_glyph_manifest.yaml
 ---
 
 ## 🔗 Cross‑links
-- [`agent‑shell`](../../agent_shell/README.md) → provides the runtime environment for launching the pipeline
-- [`TFTincryption`](../../TFTincryption/README.md) → consumes resonance predictions for cryptographic registries
+- [`nous`](../../nous/README.md) → provides the runtime environment for launching the pipeline
+- [`entft`](../../entft/README.md) → consumes resonance predictions for cryptographic registries
 - [`folds`](../../folds/README.md) → supplies protein resonance data as input
-- [`MightyTHOR`](../README.md) overlays → visualizes AI predictions in dashboards
+- [`tops`](../README.md) overlays → visualizes AI predictions in dashboards
 
 ---
 
 ## ✨ Purpose
-The AI Resonance Pipeline is how MightyTHOR “thinks.”
+The AI Resonance Pipeline is how tops “thinks.”
 It learns from folds, glyphs, and remix lineage to orchestrate resonance in real time. This is not an experiment — it is a core subsystem of the orchestration layer, enabling predictive, adaptive, and lineage‑aware functionality.
