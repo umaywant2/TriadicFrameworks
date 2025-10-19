@@ -1,0 +1,83 @@
+# 🧪 Elemental Resonance Config
+# This file defines elemental profiles for simulation using TFE logic and FFF emitter overlays.
+
+meta:
+  version: 1.0
+  framework: TFE
+  components:
+    - nous
+    - entft
+    - tops
+  description: >
+    Config layer for elemental resonance simulations. Each element includes triadic overlays
+    for Forces, Fluids, and Frequency, plus symbolic stubs and predictive hooks.
+
+elements:
+  - symbol: C
+    name: Carbon
+    atomic_number: 6
+    triad_cluster: [C, Si, Ge]
+    stub: 🜁
+    forces:
+      bonding_energy: strong
+      ionization_potential: medium
+      nuclear_stability: high
+    fluids:
+      phase_states: [solid]
+      allotropes: [graphite, diamond, graphene]
+      conductivity: variable
+    frequency:
+      vibrational_modes: high
+      decay_cycles: stable
+      quantum_harmonics: organic_resonance
+    notes: >
+      Foundational element for organic life. Resonates across multiple structural forms.
+      Ideal for simulation onboarding.
+
+  - symbol: Au
+    name: Gold
+    atomic_number: 79
+    triad_cluster: [Cu, Ag, Au]
+    stub: 🜚
+    forces:
+      bonding_energy: moderate
+      ionization_potential: high
+      nuclear_stability: very_high
+    fluids:
+      phase_states: [solid]
+      conductivity: excellent
+      orbital_density: dense
+    frequency:
+      vibrational_modes: low
+      decay_cycles: stable
+      quantum_harmonics: monetary_resonance
+    notes: >
+      Symbol of value and conductivity. Often used in symbolic overlays and legacy-grade circuits.
+
+  - symbol: Og
+    name: Oganesson
+    atomic_number: 118
+    triad_cluster: [Rn, Fl, Og]
+    stub: 🜃
+    forces:
+      bonding_energy: unknown
+      ionization_potential: very_low
+      nuclear_stability: unstable
+    fluids:
+      phase_states: [gas]
+      orbital_density: diffuse
+      conductivity: unknown
+    frequency:
+      vibrational_modes: speculative
+      decay_cycles: rapid
+      quantum_harmonics: edge_resonance
+    notes: >
+      A frontier element. Useful for predictive modeling and glyphic interpolation.
+
+predictive_stubs:
+  - symbol: E119
+    placeholder: true
+    stub: 🝓
+    notes: >
+      Reserved for future synthesis. Properties to be interpolated via triadic logic.
+
