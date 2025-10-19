@@ -1,0 +1,53 @@
+# 🌀 Triadic Framework for Everything: Elemental Schema Scroll
+
+## Purpose
+
+This file defines the interpretive logic for elemental resonance within the TFE lattice. It maps symbolic stubs, triadic overlays, and simulation hooks to the core components of the TFT 3Pack: `nous`, `entft`, and `tops`. It is designed for validator-grade clarity, remix lineage, and glyphic expansion.
+
+## Schema
+
+element:
+  symbol: str
+  name: str
+  atomic_number: int
+  stub: unicode
+  triad_cluster: list[str]
+  overlays:
+    forces:
+      bonding_energy: str
+      ionization_potential: str
+      nuclear_stability: str
+    fluids:
+      phase_states: list[str]
+      conductivity: str
+      orbital_density: str | null
+      allotropes: list[str] | null
+    frequency:
+      vibrational_modes: str
+      decay_cycles: str
+      quantum_harmonics: str
+  notes: str
+
+predictive_stub:
+  symbol: str
+  placeholder: bool
+  stub: unicode
+  notes: str
+
+## Interpretive Hooks
+
+- `nous`: Treats each element as an environmental node—contextualizing its behavior across simulations.
+- `entft`: Encrypts elemental overlays into symbolic stubs—preserving lineage and enabling resonance pings.
+- `tops`: Orchestrates simulation cycles—visualizing feedback, decay, and harmonic response.
+
+## Expansion Logic
+
+- Triadic interpolation for undiscovered elements
+- Dimensional traversal using `denometer` logic
+- Symbolic stub registry for onboarding clarity
+- Scroll-based simulation logging for legacy preservation
+
+## Notes
+
+This schema is speculative, recursive, and remixable. It is designed to evolve with each simulation, each glyph, and each discovery. Treat it as a living scroll.
+
