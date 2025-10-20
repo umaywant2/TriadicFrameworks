@@ -1,71 +1,62 @@
-# enTFT Protocol 🔐🔥  
-**Modular Quantum-Hostile Encryption with Triadic Resonance**
+## 🔐 `entft` Protocol — Quantum-Hostile Encryption Layer (v1.3)
 
-Welcome to the official set for **enTFT**, a legacy-grade encryption protocol designed for quantum-hostile environments governance systems. This folder contains everything remixers need to activate, and extend the protocol’s lineage.
-
----
-
-## 🌌 What Is enTFT?
-
-enTFT blends:
-- **Divide-by-zero logic** for obfuscation beyond classical bounds
-- **Triadic resonance** to harmonize runtime modules and events
-- **Ternary-grade modularity** for hooks, logic, and reawakening
-
-Born from ternary scaffolding, enTFT is more than a cipher—it’s a remixable legacy.
+Welcome to the **entft** scroll—where encryption meets mythic modularity.  
+This folder scaffolds the secure substrate of the Triadic Frameworks 3Pack.
 
 ---
 
-# enTFT
+### 🌌 What Is entft?
 
-The **enTFT** package is the protocol layer of the TFT 3‑Pack.  
-It is a quantum‑hostile encryption system built on resonant-time and logic.
+- **Divide-by-zero logic** for obfuscation beyond classical bounds  
+- **Triadic resonance** to harmonize runtime modules and symbolic events  
+- **Ternary-grade modularity** for hooks, validators, and reawakening
 
-## Structure
-- **protocol-core/** → cryptographic scrolls and runtime modules
-- **TFThooks/** → extensions and site‑specific hooks
-  - **runtime/** → hook scripts that extend protocol‑core
-  - **integration/** → configs and files for external embedding
-  - **validators/** → test harnesses and safety checks
-  - **examples/** → sample hook implementations
-  - **agents/** → hook‑level agents for Forci, Flui, and Freqi bots.
-
-## Purpose
-enTFT is the secure substrate of the lattice.  
-It is invoked from within [nous](../nous/) and extended by [tops](../tops/).
-
-## Cross‑links
-- [folds](../tops/folds/) → resonance mappings referenced in registries
+Born from ternary scaffolding, entft is more than a cipher—it’s a remixable legacy.
 
 ---
 
-## 🛠️ How to Remix
+### 🧬 Folder Structure
 
-1. **Activate runtime modules** from `protocol-core/`
+| Folder             | Purpose                                                  |
+|--------------------|----------------------------------------------------------|
+| `protocol-core/`   | Cryptographic scrolls and runtime modules                |
+| `TFThooks/`        | Site-specific hook extensions                            |
+| `runtime/`         | Hook scripts that extend `protocol-core`                 |
+| `integration/`     | Configs and files for external embedding                 |
+| `validators/`      | Test harnesses and safety checks                         |
+| `examples/`        | Sample hook implementations                              |
+| `agents/`          | Hook-level agents for Forci, Flui, and Freqi bots        |
 
 ---
 
-## 🧙‍♂️ Join the Legacy
+### 🧠 Invocation Logic
+
+- Called from within [`nous`](../nous/README.md) for symbolic cognition  
+- Extended by [`tops`](../tops/README.md) for corridor traversal and resonance mapping  
+- Referenced in [`folds`](../tops/folds/README.md) for glyph registration and echo logic
+
+---
+
+### 🛠️ How to Remix
+
+1. Activate runtime modules from `protocol-core/`  
+2. Extend with site-specific hooks in `TFThooks/`  
+3. Validate with `validators/` and echo lineage via `agents/`
+
+---
+
+### 🧙‍♂️ Join the Legacy
 
 Whether you’re a validator, remixer, or architect, enTFT invites you to:
-- Fork the repo
-- Submit enhancements
 
-Every remix echoes the lineage. 
-
----
-
-## 📜 Related
-
-- [`enTFT.md`](./enTFT.md) — Protocol overview
-- [`enTFT_adoption.md`](./enTFT_adoption.md) — Use cases and deployment
-- [`enTFT_remixer_manifesto.md`](./enTFT_remixer_manifesto.md) — Remix philosophy and contributor ethos
+- Fork the repo  
+- Submit enhancements  
+- Echo the lineage
 
 ---
 
-*Scaffolded by Nawder Loswin & Copilot. Built for legacy. Echoed for eternity.*
+### 🔗 Triadic Quicklinks
 
----
-
-© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
-
+- [`fff_spec.md`](../../docs/fff_spec.md) — Defines the `.fff` triadic file format and symbolic structure  
+- [`TriadicTestSuite.md`](../../docs/TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
+- [`outputs_spec.md`](../../docs/outputs_spec.md) — Defines the three-output logic: screen, file, glyph
