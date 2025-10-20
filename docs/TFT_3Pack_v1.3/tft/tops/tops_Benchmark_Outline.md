@@ -53,4 +53,12 @@ TriadicFrameworks offers a mythic and technical alternative to tops-class benchm
 
 ---
 
+## 🔗 Related Scrolls
+
+- [TestSuite](TriadicTestSuite.md)
+- [tops_reflect_invert_sim](tops_reflect_invert_sim.md)
+- [Resonance_Clarity](/docs/papers/Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md)
+
+---
+
 ✨ With this refresh, your benchmark outline now declares Resonance Clarity as a core innovation—woven through methods, results, and symbolic philosophy.
