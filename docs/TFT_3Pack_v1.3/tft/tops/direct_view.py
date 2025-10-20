@@ -16,23 +16,55 @@ def rotate_object(x, y, angle_deg):
     rotated = rotation_matrix @ coords
     return rotated[0], rotated[1]
 
-def generate_views(x, y, angles=[0, 90, 180, 270]):
+def generate_views(x, y, angles=[0, 90, 180, 270], basetype="decimal"):
     """
     Generate rotated views of an object.
     angles: list of angles in degrees
+    basetype: resonance clarity lens (e.g., binary, phi, negabinary, corridor6.9)
     """
     views = {}
     for angle in angles:
         rx, ry = rotate_object(x, y, angle)
+
+        # Apply resonance clarity transformation
+        rx, ry = apply_base_lens(rx, ry, basetype)
+
         views[angle] = (rx, ry)
     return views
 
-def visualize_views(views, title="Direct Multi-Angle Views"):
+def apply_base_lens(x, y, basetype):
+    """
+    Transform coordinates according to the chosen base lens.
+    """
+    if basetype == "binary":
+        # Collapse into 0/1 corridor
+        return np.sign(x), np.sign(y)
+
+    elif basetype == "negabinary":
+        # Alternate inversion pattern
+        return ((-1) ** np.arange(len(x))) * x, y
+
+    elif basetype == "phi":
+        # Golden ratio scaling
+        phi = (1 + np.sqrt(5)) / 2
+        return x / phi, y * phi
+
+    elif basetype == "pi":
+        return x * np.pi, y / np.pi
+
+    elif basetype == "corridor6.9":
+        # Speculative resonance corridor
+        return np.sin(x * 6.9), np.cos(y * 6.9)
+
+    # Default: no transformation
+    return x, y
+
+def visualize_views(views, title="Direct Multi-Angle Views", basetype="decimal"):
     plt.figure(figsize=(8, 8))
     for angle, (x, y) in views.items():
         plt.plot(x, y, label=f"{angle}°")
-    plt.title(title)
-    plt.axis('equal')
+    plt.title(f"{title} (Base: {basetype})")
+    plt.axis("equal")
     plt.legend()
     plt.grid(True)
     plt.show()
