@@ -1,5 +1,5 @@
 """
-enTFT tops Agent Interface
+entft tops Agent Interface
 Purpose: Sync scroll events with observability logs and echo lineage traces
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -10,12 +10,10 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-TRACE_LOG_PATH = Path("docs/_meta/enTFT_scroll_event_trace_registry.json")
+TRACE_LOG_PATH = Path("docs/_meta/entft_scroll_event_trace_registry.json")
 
 def generate_trace(scroll_name, glyph_id, contributor, action, echo=None):
-    """
-    Create a trace event for scroll observability.
-    """
+    """Create a trace event for scroll observability."""
     trace_event = {
         "trace_id": str(uuid.uuid4()),
         "timestamp": datetime.utcnow().isoformat() + "Z",
@@ -31,9 +29,7 @@ def generate_trace(scroll_name, glyph_id, contributor, action, echo=None):
     return trace_event
 
 def resolve_flame_grade(glyph_id):
-    """
-    Map glyph to flame grade.
-    """
+    """Map glyph to flame grade."""
     flame_map = {
         "glyph:cascade-001": "🟣 Universe",
         "glyph:wildflower-002": "🔵 Planetary",
@@ -43,9 +39,7 @@ def resolve_flame_grade(glyph_id):
     return flame_map.get(glyph_id, "⚪️ Unknown")
 
 def append_trace(event):
-    """
-    Append trace event to registry.
-    """
+    """Append trace event to registry."""
     try:
         if TRACE_LOG_PATH.exists():
             with open(TRACE_LOG_PATH, "r+", encoding="utf-8") as f:
@@ -58,13 +52,3 @@ def append_trace(event):
                 json.dump({"scroll_event_traces": [event]}, f, indent=2)
     except Exception as e:
         print(f"[tops] Failed to append trace: {e}")
-
-# 🧪 Sample Test
-if __name__ == "__main__":
-    generate_trace(
-        scroll_name="scroll_curriculum_manifesto.md",
-        glyph_id="glyph:wildflower-002",
-        contributor="Mira Thorne",
-        action="manifested",
-        echo="Onboarding scroll sealed with badge logic"
-    )
