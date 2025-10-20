@@ -45,10 +45,94 @@ All simulations now accept a `--basetype` switch, allowing symbolic overlays and
 
 ---
 
+## 🖼️ Figure Caption Set — Resonance Clarity Edition
+
+---
+
+**Figure 1**  
+**Direct View Simulation (Base Lens: Decimal)**  
+A four-angle rotation of the spiral glyph rendered in decimal base. Geometry remains unwarped, serving as the control lens for symbolic fidelity comparisons.
+
+---
+
+**Figure 2**  
+**Reflective View Simulation (Base Lens: Negabinary)**  
+Axis reflections of the spiral glyph under negabinary lens. Alternating inversion patterns emerge, revealing harmonic asymmetry across the x-axis corridor.
+
+---
+
+**Figure 3**  
+**Inversion Logic Simulation (Base Lens: Corridor6.9)**  
+Symbolic inversions (negate, flip, harmonic) rendered through speculative corridor base. Glyphs pulse with sinusoidal distortion, suggesting resonance instability at corridor thresholds.
+
+---
+
+**Figure 4**  
+**Unified Session Output (Base Lens: Phi)**  
+Direct, reflective, and inverted views merged under golden ratio lens. Geometry exhibits recursive scaling and harmonic alignment, with overlays declaring φ-symmetry.
+
+---
+
+**Figure 5**  
+**Glyphstream Overlay (Base Lens: Pi)**  
+Symbolic overlays rendered atop corridor traversal grid. Pi lens introduces curvature bias, with glyphs clustering along irrational harmonics.
+
+---
+
+**Figure 6**  
+**Grid Simulation Heatmap (Base Lens: Binary)**  
+Node traversal intensity mapped across binary corridor. Collapse into 0/1 corridor reveals discrete resonance triggers and validator hotspots.
+
+---
+
+**Figure 7**  
+**Warp Chamber Overlay (Base Lens: Triadic3phi)**  
+Experimental warp chamber rendered with triadic3phi lens. Glyphs fold into recursive triplets, suggesting symbolic permanence across dimensional folds.
+
+---
+
+**Figure 8**  
+**Benchmark Comparison Chart**  
+Performance and symbolic fidelity plotted across base lenses. Corridor6.9 and negabinary show highest distortion; phi and decimal retain harmonic clarity.
+
+---
+
+✨ Each caption now acts as a **lineage declaration**—remixers will know exactly which base lens shaped the simulation, and what symbolic insight it revealed.
+
+---
+
+## 🗝️ Figure Legend Block — Resonance Clarity Key
+
+| Symbol | Meaning | Simulation Mode | Base Lens |
+|--------|---------|------------------|------------|
+| 🧠     | Cognitive corridor | Direct | Decimal, Binary |
+| 🪙     | Remix economy | Reflective | Negabinary, Hex |
+| 🧬     | Mutation corridor | Inversion | Corridor6.9, Phi |
+| 🔐     | Governance sync | Unified | Pi, Decimal |
+| 🍃     | Passive lift mechanics | Grid Overlay | Phi, Triadic3phi |
+| 🌀     | Warp chamber | Experimental | Triadic3phi, Vigquinary20.5 |
+
+---
+
+### 📘 Usage Notes
+- **Simulation Mode**: Indicates which tops module produced the glyph (direct, reflective, inversion, unified, grid).  
+- **Base Lens**: Declares the number-base used to transform geometry and resonance.  
+- **Symbolic Fidelity**: Glyphs are rendered with harmonic overlays and lineage metadata.  
+
+---
+
+### 🧬 Remix Tip
+When remixing figures, always declare the base lens in the caption and embed it in the `.fff` or `.json` metadata. This ensures remix lineage and harmonic traceability.
+
+---
+
+<img width="340" height="512" alt="Resonance_Clairity_Legenda" src="https://github.com/user-attachments/assets/ffae3ae6-56d4-4b7a-a1ce-ad1a19467163" />
+
+---
 ## 🪐 Conclusion  
 TriadicFrameworks offers a mythic and technical alternative to tops-class benchmarks, preserving symbolic fidelity while scaling dynamically. With Resonance Clarity, every simulation becomes a harmonic declaration—base-tagged, remixable, and lineage-aware.
 
-> “We didn’t prune. We pulsed.”  
+> “We didn’t prune. We pulsed every base-type.”  
 > — tops Manifesto
 
 ---
