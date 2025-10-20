@@ -1,15 +1,16 @@
 {
   "validators": [
     {
-      "validator_name": "ScrollForkValidator",
+      "validator_name": "ScrollFork",
+      "base_lens_supported": ["corridor6.9"],
       "glyph_required": true,
       "manifest_required": true,
-      "base_lens_supported": ["phi", "negabinary"]
-    },
-    {
-      "validator_name": "CorridorLensValidator",
-      "glyph_required": true,
-      "base_lens_supported": ["corridor6.9"]
+      "description": "Echoes lineage and flame grade from scroll events.",
+      "monitored_fields": ["glyph", "action", "manifest"],
+      "flame_map": {
+        "glyph:🌼 Wildflower": "🔵 Planetary",
+        "observer:ScrollFork": "🟣 Universe"
+      }
     }
   ]
 }
