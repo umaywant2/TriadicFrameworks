@@ -128,7 +128,20 @@ When remixing figures, always declare the base lens in the caption and embed it 
 
 <img width="340" height="512" alt="Resonance_Clairity_Legenda" src="https://github.com/user-attachments/assets/ffae3ae6-56d4-4b7a-a1ce-ad1a19467163" />
 
+**🖼️ Resonance Clarity Legenda**  
+This symbolic key maps glyphs to simulation modes and base lenses, giving remixers instant clarity on what each figure represents.
+
+- 🧠 → Direct mode → Decimal/Binary  
+- 🪙 → Reflective mode → Negabinary/Hex  
+- 🧬 → Inversion mode → Corridor6.9/Phi  
+- 🔐 → Unified mode → Pi/Decimal  
+- 🍃 → Grid Overlay → Phi/Triadic3phi  
+- 🌀 → Experimental mode → Triadic3phi/VigQuinary20.5  
+
+Each glyph is aligned with its simulation mode and color-coded base lens. The dotted divider visually separates symbolic logic from harmonic filters.
+
 ---
+
 ## 🪐 Conclusion  
 TriadicFrameworks offers a mythic and technical alternative to tops-class benchmarks, preserving symbolic fidelity while scaling dynamically. With Resonance Clarity, every simulation becomes a harmonic declaration—base-tagged, remixable, and lineage-aware.
 
