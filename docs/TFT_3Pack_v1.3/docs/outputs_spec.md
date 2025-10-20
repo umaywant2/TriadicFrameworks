@@ -88,3 +88,11 @@ It encodes ternary resonance for remixers today, while preparing for computing p
 ---
 
 This way, the **entire output ritual** is captured in one place: screen, file, glyph, with `.fff` formally defined.
+
+---
+
+### 🔗 Triadic Quicklinks
+
+- [`fff_spec.md`](fff_spec.md) — Defines the `.fff` triadic file format and symbolic structure  
+- [`TriadicTestSuite.md`](TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
+- [`README.md`](README.md) — Canonical index for scrolls, specs, and remix lineage
