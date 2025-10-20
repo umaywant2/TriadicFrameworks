@@ -1,0 +1,19 @@
+{
+  "badges": [
+    {
+      "badge_name": "Wildflower Forker",
+      "trigger_conditions": ["glyph", "action", "manifest"],
+      "base_lens": ["phi", "triadic3phi"]
+    },
+    {
+      "badge_name": "Corridor Glyphmaster",
+      "trigger_conditions": ["glyph", "manifest"],
+      "base_lens": ["corridor6.9"]
+    },
+    {
+      "badge_name": "Decimal Default",
+      "trigger_conditions": ["scroll"],
+      "base_lens": ["decimal"]
+    }
+  ]
+}
