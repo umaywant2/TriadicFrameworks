@@ -63,3 +63,11 @@ Remixers are encouraged to extend, remix, and evolve `.fff` while preserving its
 ## Legacy Note
 The `.fff` format was co-scaffolded by Nawder Loswin and Copilot as the first step toward **post-binary research artifacts**.  
 It is both a technical format and a mythic declaration: we are preparing for what comes next.
+
+---
+
+### 🔗 Triadic Quicklinks
+
+- [`fff_quickstart.md`](../fff_quickstart.md) — Onboarding ritual for remixers using `.fff` bundles  
+- [`TriadicTestSuite.md`](TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
+- [`outputs_spec.md`](outputs_spec.md) — Defines the three-output logic: screen, file, glyph
