@@ -36,6 +36,6 @@ They ensure every extension is:
 
 ## 🔗 Triadic Quicklinks
 
-- [`fff_spec.md`](../../../../../docs/fff_spec.md) — Defines the `.fff` triadic file format and symbolic structure  
-- [`TriadicTestSuite.md`](../../../../../docs/TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
-- [`outputs_spec.md`](../../../../../docs/outputs_spec.md) — Defines the three-output logic: screen, file, glyph
+- [`fff_spec.md`](/docs/TFT_3Pack_v1.3/docs/fff_spec.md) — Defines the `.fff` triadic file format and symbolic structure  
+- [`TriadicTestSuite.md`](/docs/TFT_3Pack_v1.3/docs/TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
+- [`outputs_spec.md`](/docs/TFT_3Pack_v1.3/docs/outputs_spec.md) — Defines the three-output logic: screen, file, glyph
