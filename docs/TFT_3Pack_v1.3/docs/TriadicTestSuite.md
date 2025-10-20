@@ -44,3 +44,8 @@ Expected Output:
 
 ---
 
+### 🔗 Triadic Quicklinks
+
+- [`fff_quickstart.md`](../fff_quickstart.md) — Onboarding ritual for remixers using `.fff` bundles  
+- [`outputs_spec.md`](outputs_spec.md) — Defines the three-output logic: screen, file, glyph  
+- [`README.md`](../README.md) — Canonical index for scrolls, specs, and symbolic lineage
