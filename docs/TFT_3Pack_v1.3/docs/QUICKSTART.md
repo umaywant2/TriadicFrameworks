@@ -1,6 +1,6 @@
 ## ⚡ `docs/QUICKSTART.md` — Ritual Activation
 
-```markdown
+
 # Quickstart Guide
 
 ## 🔹 Step 1: Install
@@ -34,3 +34,9 @@ tft tops -map examples/grid.yaml -ops simulate
 - Add your scrolls to `/docs/scrolls/`
 
 ---
+
+### 🔗 Triadic Quicklinks
+
+- [`fff_quickstart.md`](fff_quickstart.md) — Onboarding ritual for remixers using `.fff` bundles  
+- [`TriadicTestSuite.md`](TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
+- [`outputs_spec.md`](outputs_spec.md) — Defines the three-output logic: screen, file, glyph
