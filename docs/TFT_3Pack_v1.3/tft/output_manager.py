@@ -1,8 +1,6 @@
 """
-output_manager.py
-Resonance-Labs / Tops Unified Output
-
-Handles screen, file, and outputs.
+output_manager.py — Resonance Clarity Edition
+Handles screen, file, and glyph outputs.
 Supports TXT, JSON, Parquet, and .fff (Triadic Framework File).
 """
 
@@ -13,16 +11,16 @@ from pathlib import Path
 # -----------------------------
 # File Output Functions
 # -----------------------------
-
 def save_output(data, filename, formats=["txt", "json", "parquet", "fff"], metadata=None):
     """
     Save simulation results in multiple formats.
-    data: list of lists (numeric or ternary values)
-    filename: base name (no extension)
-    formats: list of formats to export
-    metadata: optional dict of metadata (mode, observer, timestamp, etc.)
-    """
 
+    Parameters:
+    - data: list of lists (numeric or ternary values)
+    - filename: base name (no extension)
+    - formats: list of formats to export
+    - metadata: optional dict of metadata (mode, observer, timestamp, etc.)
+    """
     Path(filename).parent.mkdir(parents=True, exist_ok=True)
 
     if "txt" in formats:
@@ -31,26 +29,26 @@ def save_output(data, filename, formats=["txt", "json", "parquet", "fff"], metad
                 f.write(",".join(map(str, row)) + "\n")
 
     if "json" in formats:
-        payload = {"metadata": metadata or {}, "data": data}
+        payload = {
+            "metadata": metadata or {},
+            "data": data
+        }
         with open(f"{filename}.json", "w") as f:
             json.dump(payload, f, indent=2)
 
     if "parquet" in formats:
         df = pd.DataFrame(data)
-        df.to_parquet(f"{filename}.parquet", index=False)
+        df.to_parquet(f"{filename}.parquet")
 
     if "fff" in formats:
         with open(f"{filename}.fff", "w") as f:
-            f.write("# Resonance-Labs .fff (Triadic Framework File)\n")
-            if metadata:
-                for k, v in metadata.items():
-                    f.write(f"# {k}: {v}\n")
-            f.write("\n")
+            f.write("FFFv1.3\n")
             for row in data:
-                ternary_row = "".join(
-                    ["+" if v > 0 else "0" if v == 0 else "-" for v in row]
-                )
-                f.write(ternary_row + "\n")
+                f.write("::".join(map(str, row)) + "\n")
+            if metadata:
+                f.write("META::" + json.dumps(metadata) + "\n")
+
+    print(f"[OutputManager] ✅ Saved outputs for {filename} in formats: {formats}")
 
 # -----------------------------
 # Loader for .fff
