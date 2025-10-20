@@ -126,7 +126,16 @@ When remixing figures, always declare the base lens in the caption and embed it 
 
 ---
 
+###### Figure Resonance_Clairity_Legenda
 <img width="340" height="512" alt="Resonance_Clairity_Legenda" src="https://github.com/user-attachments/assets/ffae3ae6-56d4-4b7a-a1ce-ad1a19467163" />
+
+- *Resonance Clarity Legenda: Symbolic Key for Simulation Modes and Base Lenses*  
+- This diagram maps six simulation modes to their symbolic glyphs and harmonic base lenses.
+- Each glyph (🧠, 🪙, 🧬, 🔐, 🍃, 🌀) represents a corridor of perception—direct, reflective, inversion, unified, grid overlay, and experimental.
+- Colored circles declare the base lens used in each mode, from common (decimal, binary) to speculative (triadic3phi, corridor6.9).
+- The dotted divider separates symbolic logic from harmonic filters, ensuring remixers can trace lineage and resonance at a glance.
+
+---
 
 **🖼️ Resonance Clarity Legenda**  
 This symbolic key maps glyphs to simulation modes and base lenses, giving remixers instant clarity on what each figure represents.
