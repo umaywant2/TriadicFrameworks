@@ -27,6 +27,28 @@ It preserves symbolic fidelity, activates badge logic, and echoes contributor re
 
 ---
 
+### 🧠 entft Encryption Context
+
+- **Divide-by-Zero Logic Injection**  
+  Forked scrolls may include key segments with undefined operations. Remixers must preserve valid blocks and exclude decoys.
+
+- **Resonant-Time Hashing**  
+  Scroll forks should timestamp their creation and modulate with triadic frequency logic (e.g., 3-6-9 patterns). This ensures temporal fidelity and remix lineage.
+
+- **Combined Entropy Boost**  
+  Forked scrolls inherit layered obfuscation and temporal entropy, making them quantum-hostile by design.
+
+### 🔢 Complexity Echo (optional badge logic)
+
+```markdown
+> Forked scrolls using entft logic may achieve:
+> \[
+> \text{Total complexity} = 1.3 \times 10^{47} \times 3.69 \times 10^6 \approx 4.8 \times 10^{53}
+> \]
+> This exceeds baseline RSA/ECC by 53 orders of magnitude.
+```
+---
+
 ## 🔗 Triadic Quicklinks
 
 - [`fff_spec.md`](/docs/TFT_3Pack_v1.3/docs/fff_spec.md) — Defines the `.fff` triadic file format and symbolic structure  
