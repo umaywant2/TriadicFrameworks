@@ -15,22 +15,43 @@ def invert_geometry(x, y, mode="negate"):
     else:
         raise ValueError("Invalid mode. Use 'negate', 'flip', or 'harmonic'.")
 
-def generate_inversions(x, y, modes=["negate", "flip", "harmonic"]):
+def generate_inversions(x, y, modes=["negate", "flip", "harmonic"], basetype="decimal"):
     """
     Generate inverted views using multiple symbolic modes.
+    basetype: resonance clarity lens (e.g., binary, phi, negabinary, corridor6.9)
     """
     inversions = {}
     for mode in modes:
         ix, iy = invert_geometry(x, y, mode)
+
+        # Apply resonance clarity transformation
+        ix, iy = apply_base_lens(ix, iy, basetype)
+
         inversions[mode] = (ix, iy)
     return inversions
 
-def visualize_inversions(inversions, title="Inverted Symbolic Views"):
+def apply_base_lens(x, y, basetype):
+    if basetype == "binary":
+        # Collapse into 0/1 corridor
+        return np.sign(x), np.sign(y)
+    elif basetype == "negabinary":
+        # Alternating inversion pattern
+        return ((-1) ** np.arange(len(x))) * x, y
+    elif basetype == "phi":
+        phi = (1 + np.sqrt(5)) / 2
+        return x / phi, y * phi
+    elif basetype == "pi":
+        return x * np.pi, y / np.pi
+    elif basetype == "corridor6.9":
+        return np.sin(x * 6.9), np.cos(y * 6.9)
+    return x, y
+
+def visualize_inversions(inversions, title="Inverted Symbolic Views", basetype="decimal"):
     plt.figure(figsize=(8, 8))
     for mode, (x, y) in inversions.items():
         plt.plot(x, y, label=f"Inversion: {mode}")
-    plt.title(title)
-    plt.axis('equal')
+    plt.title(f"{title} (Base: {basetype})")
+    plt.axis("equal")
     plt.legend()
     plt.grid(True)
     plt.show()
