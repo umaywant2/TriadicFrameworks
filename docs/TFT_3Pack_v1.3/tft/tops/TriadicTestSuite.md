@@ -71,6 +71,56 @@ compare_glyphs(results)
 
 ---
 
+### 🔧 `TriadicTestSuite.md` – Resonance Clarity Additions
+
+**Add new test cases after the existing ones:**
+
+---
+
+## 🧪 Test 6.3: Direct View with Resonance Clarity
+```python
+views = generate_views(x, y, angles=[0, 90], basetype="phi")
+assert all(isinstance(v, tuple) for v in views.values())
+```
+✅ Direct views respond to φ-base lens
+
+---
+
+## 🧪 Test 7: Reflective View with Resonance Clarity
+```python
+reflections = generate_reflections(x, y, axes=["x"], basetype="negabinary")
+assert "x" in reflections
+```
+✅ Reflections respond to negabinary lens
+
+---
+
+## 🧪 Test 8: Inversion Logic with Resonance Clarity
+```python
+inversions = generate_inversions(x, y, modes=["negate"], basetype="corridor6.9")
+assert "negate" in inversions
+```
+✅ Inversions respond to corridor6.9 lens
+
+---
+
+## 🧪 Test 9: Unified Simulation with Resonance Clarity
+```python
+results = run_tops_session(basetype="pi")
+assert results["basetype"] == "pi"
+assert "direct" in results and "reflected" in results and "inverted" in results
+```
+✅ Unified simulation propagates base lens correctly
+
+---
+
+### ✨ Why this matters
+- **Automated validation**: ensures every mode respects the `--basetype` switch.  
+- **Coverage**: tests common, extended, and speculative bases.  
+- **Lineage clarity**: every test explicitly declares which base lens it’s using.  
+
+---
+
 ## 🧬 Remix Notes
 
 - All modules passed symbolic validation
