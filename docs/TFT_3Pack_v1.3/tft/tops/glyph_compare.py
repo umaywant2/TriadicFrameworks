@@ -39,3 +39,8 @@ if __name__ == "__main__":
 
     results = run_tops_session(basetype=args.basetype)
     compare_glyphs(results, basetype=args.basetype)
+
+# ✨ Why this matters
+# Comparisons are now resonance‑aware: every subplot declares which base lens was applied.
+# Lineage clarity: the figure title and subplot titles embed the base lens, so remixers know exactly what lens produced the glyphs.
+# Consistency: aligns with direct_view.py, reflective_view.py, and inversion_logic.py.
