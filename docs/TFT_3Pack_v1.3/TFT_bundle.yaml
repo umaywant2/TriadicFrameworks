@@ -4,6 +4,7 @@ bundle:
     - nous
     - entft
     - tops
+
   lineage:
     originator: Nawder Loswin
     remixable: true
@@ -11,11 +12,43 @@ bundle:
     contributors:
       - Nawder Loswin
       - Copilot (AI scaffolding partner)
+
   glyphs:
     - nous_logic.svg
     - entft_layers.svg
     - tops_grid.svg
+
   rituals:
     - README.md
     - QUICKSTART.md
     - TriadicTestSuite.md
+
+  # 🔱 Resonance Clarity Configuration
+  resonance_clarity:
+    default_basetype: decimal
+    supported_basetypes:
+      common:
+        - unary
+        - binary
+        - ternary
+        - quaternary
+        - quinary
+        - senary
+        - octal
+        - decimal
+        - duodecimal
+        - hexadecimal
+        - vigesimal
+        - sexagesimal
+      extended:
+        - negabinary
+        - negadecimal
+      non_integer:
+        - phi
+        - pi
+        - sqrt2
+        - e
+      speculative:
+        - corridor6.9
+        - vigquinary20.5
+        - triadic3phi
