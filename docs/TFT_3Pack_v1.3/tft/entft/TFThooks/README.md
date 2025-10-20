@@ -1,6 +1,6 @@
-# 🧩 TFThooks — Extension Layer for enTFT
+# 🧩 TFThooks — Extension Layer for entft
 
-The `TFThooks` directory contains modular, site-specific hook extensions for the **enTFT protocol**.  
+The `TFThooks` directory contains modular, site-specific hook extensions for the **entft protocol**.  
 Hooks allow the protocol to adapt to new environments without altering its core logic.
 
 ---
@@ -18,7 +18,7 @@ Hooks allow the protocol to adapt to new environments without altering its core 
 
 ## 🎯 Purpose
 
-TFThooks are the **extension layer** of enTFT. They empower developers to:
+TFThooks are the **extension layer** of `entft`. They empower developers to:
 
 - Add new glyph or badge logic  
 - Integrate with external sites or services  
