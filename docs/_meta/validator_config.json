@@ -1,0 +1,15 @@
+{
+  "validators": [
+    {
+      "validator_name": "ScrollForkValidator",
+      "glyph_required": true,
+      "manifest_required": true,
+      "base_lens_supported": ["phi", "negabinary"]
+    },
+    {
+      "validator_name": "CorridorLensValidator",
+      "glyph_required": true,
+      "base_lens_supported": ["corridor6.9"]
+    }
+  ]
+}
