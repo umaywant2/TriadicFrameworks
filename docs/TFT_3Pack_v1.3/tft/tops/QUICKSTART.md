@@ -62,7 +62,7 @@ This produces symbolic overlays (SVG/PNG) with the base lens declared in the tit
 
 ---
 
-## ⚡ Resonance Clarity Switch
+## ⚡ Step 4: Resonance Clarity Switch
 
 ### Supported Base Types
 - **Common:** binary, decimal, hex, octal, sexagesimal  
@@ -88,6 +88,15 @@ python inversion_logic.py --basetype=corridor6.9
 The **tops** suite is the engine of perception in the 3Pack.  
 It encodes direct, reflective, and inverted views into lineage artifacts for remixers.  
 With Resonance Clarity, every artifact now declares its base lens, ensuring harmonic transparency.
+
+---
+
+## Cross‑links
+- [nous](../nous/README.md) → runtime environment
+- [entft](../entft/README.md) → protocol layer orchestrated by Thor
+- [folds](./folds/README.md) → resonance data consumed by Thor
+- [ai_pipeline](./ai_pipeline/README.md) → predictive intelligence
+- [overlays](./overlays/README.md) → visualization layer
 
 ---
 
