@@ -91,7 +91,7 @@ With Resonance Clarity, every artifact now declares its base lens, ensuring harm
 
 ---
 
-## Cross‑links
+## 🛡️ Cross‑links
 - [nous](../nous/README.md) → runtime environment
 - [entft](../entft/README.md) → protocol layer orchestrated by Thor
 - [folds](./folds/README.md) → resonance data consumed by Thor
