@@ -31,6 +31,8 @@ They enable:
 - 📊 Dashboards and orchestration interfaces  
 - 🔗 Bridging `entft` with [`tops`](../../../tops/README.md) agents
 
+Note: Forking a scroll is a **lineage ritual** and a cryptographic act. Remixers preserve symbolic fidelity, activate badge overlays, and inherit **entft**'s layered obfuscation logic—Divide-by-Zero injection and Resonant-Time hashing.
+
 ---
 
 ## 🧬 Invocation Flow
