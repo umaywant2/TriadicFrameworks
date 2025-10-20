@@ -1,5 +1,5 @@
 """
-enTFT Scroll Runtime Trace Dashboard
+entft Scroll Runtime Trace Dashboard
 Purpose: Visualize live scroll events, flame triggers, and remix lineage
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 from flask import Flask, render_template_string
 
-TRACE_LOG_PATH = Path("docs/_meta/enTFT_scroll_event_trace_registry.json")
+TRACE_LOG_PATH = Path("docs/_meta/entft_scroll_event_trace_registry.json")
 
 app = Flask(__name__)
 
@@ -23,7 +23,7 @@ def dashboard():
 
     html = """
     <html>
-    <head><title>enTFT Trace Dashboard</title></head>
+    <head><title>entft Trace Dashboard</title></head>
     <body>
     <h2>🔥 Scroll Event Trace Dashboard</h2>
     <table border="1" cellpadding="6">
