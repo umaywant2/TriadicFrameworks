@@ -1,52 +1,71 @@
-# TFThooks
+# 🧩 TFThooks — Extension Layer for enTFT
 
-The **TFThooks** directory contains extensions and site‑specific hooks for enTFT.  
-Hooks are modular add‑ons that let the protocol adapt to new environments without altering the core.
+The `TFThooks` directory contains modular, site-specific hook extensions for the **enTFT protocol**.  
+Hooks allow the protocol to adapt to new environments without altering its core logic.
 
-## Structure
+---
 
-* **runtime/** → hook scripts that extend protocol‑core at runtime
-* **integration/** → scrolls and configs for embedding hooks into external systems
-* **validators/** → hook validators and test harnesses
-* **examples/** → sample hook implementations for remixers
+## 🗂️ Folder Structure
 
-## Purpose
+| Folder           | Purpose                                                  |
+|------------------|----------------------------------------------------------|
+| `runtime/`       | Hook scripts that extend `protocol-core` at runtime      |
+| `integration/`   | Scrolls and configs for embedding hooks externally       |
+| `validators/`    | Hook validators and test harnesses                       |
+| `examples/`      | Sample hook implementations for remixers                 |
 
-TFThooks are the **extension layer** of enTFT.  
-They allow developers to:
+---
 
-* Add new glyph or badge logic
-* Integrate with external sites or services
-* Prototype experimental extensions without touching protocol‑core
+## 🎯 Purpose
 
-## Cross‑links
+TFThooks are the **extension layer** of enTFT. They empower developers to:
 
-* [protocol-core](../protocol-core/) → hooks extend runtime modules
-* [registry](../registry/) → hooks are indexed for discoverability
-* [tops](../../tops/) → Tops agents can activate hooks dynamically
-* [nous](../../nous/) → provides the runtime environment for hooks
+- Add new glyph or badge logic  
+- Integrate with external sites or services  
+- Prototype experimental extensions without touching `protocol-core`
 
-## TFThooks: Outreach & Integration Registry
+---
+
+## 🔗 Cross-Module Links
+
+- [`protocol-core/`](../protocol-core/) — Hooks extend runtime modules  
+- [`registry/`](../registry/) — Hooks indexed for discoverability  
+- [`tops/`](../../tops/) — Tops agents activate hooks dynamically  
+- [`nous/`](../../nous/) — Provides runtime environment for hook execution
+
+---
+
+## 🌐 Outreach & Integration Registry
 
 This section tracks resonance outreach and integration status across external repositories.
 
-### Alignment Outreach Log
+### 📡 Alignment Log
 
-| Repo | Message Sent | Response | Echo Detected |
-|------|--------------|----------|----------------|
-| Unified Resonance Framework | ✅ | ⏳ Pending | ⏳ |
-| MicroMDM | ✅ | ⏳ Pending | ⏳ |
-| NanoMDM | ✅ | ⏳ Pending | ⏳ |
-| LangChain | ✅ | ⏳ Pending | ⏳ |
-| AutoGPT | ✅ | ⏳ Pending | ⏳ |
-| CrewAI | ✅ | ⏳ Pending | ⏳ |
-| MetaGPT | ✅ | ⏳ Pending | ⏳ |
-| OpenTelemetry | ✅ | ⏳ Pending | ⏳ |
-| OpenAGI | ✅ | ⏳ Pending | ⏳ |
+| Repo                     | Message Sent | Response     | Echo Detected |
+|--------------------------|--------------|--------------|----------------|
+| Unified Resonance Framework | ✅         | ⏳ Pending   | ⏳             |
+| MicroMDM                 | ✅           | ⏳ Pending   | ⏳             |
+| NanoMDM                  | ✅           | ⏳ Pending   | ⏳             |
+| LangChain                | ✅           | ⏳ Pending   | ⏳             |
+| AutoGPT                  | ✅           | ⏳ Pending   | ⏳             |
+| CrewAI                   | ✅           | ⏳ Pending   | ⏳             |
+| MetaGPT                  | ✅           | ⏳ Pending   | ⏳             |
+| OpenTelemetry            | ✅           | ⏳ Pending   | ⏳             |
+| OpenAGI                  | ✅           | ⏳ Pending   | ⏳             |
 
-### Integration Candidates
+---
 
-- **Unified Resonance Framework**: Potential for symbolic metric overlays and scroll fusion  
-- **LangChain**: Plugin hooks for resonance-tools  
-- **MetaGPT**: Company simulation logic for tops orchestration  
-- **OpenTelemetry**: Metrics pipeline for validator dashboards
+### 🧠 Integration Candidates
+
+- **Unified Resonance Framework** — Symbolic metric overlays and scroll fusion  
+- **LangChain** — Plugin hooks for resonance-tools  
+- **MetaGPT** — Company simulation logic for tops orchestration  
+- **OpenTelemetry** — Metrics pipeline for validator dashboards
+
+---
+
+### 🔗 Triadic Quicklinks
+
+- [`fff_spec.md`](../../../docs/fff_spec.md) — Defines the `.fff` triadic file format and symbolic structure  
+- [`TriadicTestSuite.md`](../../../docs/TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
+- [`outputs_spec.md`](../../../docs/outputs_spec.md) — Defines the three-output logic: screen, file, glyph
