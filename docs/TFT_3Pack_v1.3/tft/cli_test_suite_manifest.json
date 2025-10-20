@@ -1,0 +1,19 @@
+{
+  "artifact": "cli_test_suite.py",
+  "type": "test_suite",
+  "version": "v1.3",
+  "baseLens": {
+    "nous": "phi",
+    "entft": "decimal",
+    "tops": "negabinary"
+  },
+  "validator": "ScrollFork",
+  "scrollLinks": [
+    "cli.py",
+    "TriadicTestSuite.md",
+    "outputs_spec.md"
+  ],
+  "symbolicTags": ["Mode Routing", "BaseLens Validation", "Scroll Trigger"],
+  "testModes": ["pytest", "standalone"],
+  "timestamp": "2025-10-20T07:08:00Z"
+}
