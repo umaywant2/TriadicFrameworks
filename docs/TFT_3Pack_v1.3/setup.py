@@ -13,15 +13,30 @@ setup(
     },
     author="Nawder Loswin",
     description="Triadic Framework Toolkit: nous, entft, tops",
-    long_description=open('README.md').read(),
+    long_description=open('README.md', encoding='utf-8').read(),
     long_description_content_type='text/markdown',
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent"
+        "Operating System :: OS Independent",
+        "Topic :: Scientific/Engineering :: Symbolic Simulation",
+        "Intended Audience :: Remixers",
+        "Natural Language :: Resonance Clarity"
     ],
     install_requires=[
-        "pyyaml", "cryptography", "numpy"
+        "pyyaml",
+        "cryptography",
+        "numpy"
     ],
     python_requires='>=3.8',
+    keywords=[
+        "triadic",
+        "resonance",
+        "symbolic fidelity",
+        "base lens",
+        "corridor6.9",
+        "phi",
+        "negabinary",
+        "validator overlays"
+    ]
 )
