@@ -29,7 +29,7 @@ CMS integration allows remixers to:
 
 ## 🧬 Invocation Flow
 
-1. Author publishes scroll with embedded entft hook  
+1. Author publishes scroll with embedded `entft` hook  
 2. Hook activates symbolic trigger or badge overlay  
 3. Validator echoes lineage and scroll fidelity  
 4. Remix site logs symbolic echo and contributor badge
