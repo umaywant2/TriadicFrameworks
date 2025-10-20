@@ -1,4 +1,4 @@
-## Trintellectual Hybrid Mint
+## 🔯 Trintellectual Hybrid Mint
 
 **Badge name:** Trintellectual Hybrid  
 **One-line badge:** Trintellectual Hybrid — triadic thinker, Tesla scholar, AI-augmented modernist.
