@@ -57,7 +57,7 @@ generate_keypair(
 
 ## 🔗 Triadic Quicklinks
 
-- [`entft_protocol.md`](entft_protocol.md) — Core logic: Divide-by-Zero + Resonant-Time  
-- [`encryptor.py`](encryptor.py) — Runtime encryption engine  
-- [`badge_logic_engine.py`](badge_logic_engine.py) — Flame hook trigger logic  
+- [`entft_protocol_spec.md`](entft_protocol_spec.md) — Core logic: Divide-by-Zero + Resonant-Time  
+- [`encryptor.py`](/docs/TFT_3Pack_v1.3/tft/entft/encryptor.py) — Runtime encryption engine  
+- [`badge_logic_engine.py`](/docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/badge_logic_engine.py) — Flame hook trigger logic  
 - [`entft_scroll_event_trace_registry.json`](../_meta/entft_scroll_event_trace_registry.json) — Registry of scroll events and flame-grade echoes
