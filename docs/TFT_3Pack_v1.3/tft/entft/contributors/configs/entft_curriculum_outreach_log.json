@@ -1,4 +1,3 @@
-```json
 {
   "outreach_log": [
     {
@@ -6,7 +5,10 @@
       "target": "PQC Standards Board",
       "glyph": "🍂 Cascade",
       "submitted_by": "Nawder Loswin",
-      "scrolls": ["scroll_codex.md", "scroll_curriculum_manifesto.md"],
+      "scrolls": [
+        "scroll_codex.md",
+        "scroll_curriculum_manifesto.md"
+      ],
       "date": "2025-10-04",
       "echo": "Curriculum seeded for onboarding and validator logic adoption"
     },
@@ -15,7 +17,10 @@
       "target": "Educator Network: Mythic Pedagogy Collective",
       "glyph": "🌺 Bloom",
       "submitted_by": "Mira Thorne",
-      "scrolls": ["scroll_remixer_manifest.md", "scroll_curriculum_fork_guide.md"],
+      "scrolls": [
+        "scroll_remixer_manifest.md",
+        "scroll_curriculum_fork_guide.md"
+      ],
       "date": "2025-10-04",
       "echo": "Badge logic and onboarding scrolls remixed for student clarity"
     },
@@ -24,7 +29,10 @@
       "target": "Open Science Curriculum Hub",
       "glyph": "🌴 Grove Bloom",
       "submitted_by": "Aria Vex",
-      "scrolls": ["scroll_echoes.md", "scroll_glyph_reawakening.md"],
+      "scrolls": [
+        "scroll_echoes.md",
+        "scroll_glyph_reawakening.md"
+      ],
       "date": "2025-10-04",
       "echo": "Validator overlays and badge triggers remixed for protocol education"
     }
