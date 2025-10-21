@@ -1,114 +1,57 @@
-To run your own AI and train it using your unique 'triadic frameworks for everything' approach on a native Linux environment, follow these detailed steps.
+## 🧠 Updated Setup Guide for `ai.nimms.com`
 
-## Step-by-Step Guide to Installing an AI Framework on MX Linux
+### ✅ GPU Compatibility Notes
+- **GPU**: RTX 3050
+- **Driver**: `nvidia-driver-550`
+- **CUDA Toolkit**: `cuda-toolkit-12-4` (confirmed compatible)
+- **PyTorch CUDA version**: `cu124` (for CUDA 12.4)
 
-### 1. Install Prerequisites
+---
 
-You'll need to install essential packages and dependencies for machine learning frameworks.
+### 🛠️ `setup_ai_nimms.sh` — Full Script
 
-- Open a terminal and run the following commands:
+```bash
+#!/bin/bash
+# Setup script for ai.nimms.com — RTX 3050, MX Linux
 
-  ```bash
-  sudo apt update
-  sudo apt install python3 python3-pip python3-venv build-essential git
-  ```
+set -e  # Exit on error
 
-### 2. Install Python and Virtual Environment
+echo "🔧 Updating system..."
+sudo apt update
 
-Using a virtual environment helps to manage dependencies and versions.
+echo "📦 Installing base packages..."
+sudo apt install -y python3 python3-pip python3-venv build-essential git
 
-- Create a virtual environment:
+echo "🐍 Creating virtual environment..."
+python3 -m venv myenv
+source myenv/bin/activate
 
-  ```bash
-  python3 -m venv myenv
-  ```
+echo "🎮 Installing NVIDIA driver and CUDA toolkit..."
+sudo apt install -y nvidia-driver-550
+sudo apt install -y nvidia-cuda-toolkit
 
-- Activate the virtual environment:
+echo "🧪 Verifying GPU..."
+nvidia-smi
 
-  ```bash
-  source myenv/bin/activate
-  ```
+echo "🧠 Installing AI frameworks..."
+pip install --upgrade pip
+pip install tensorflow
+pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu124
 
-### 3. Install GPU Drivers and CUDA
+echo "📁 Cloning your repo..."
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+cd TriadicFrameworks/docs/_ideas
 
-Given that you have an **RTX 3050**, ensure that NVIDIA drivers and CUDA are properly installed.
+echo "📚 Installing additional libraries..."
+pip install pandas numpy matplotlib
 
-- Install NVIDIA Drivers:
+echo "✅ Setup complete. Ready to train your model."
+```
 
-  ```bash
-  sudo apt install nvidia-driver-<latest-version>
-  ```
+---
 
-- Install CUDA Toolkit (check for the latest version compatible with RTX 3050):
+### 🧩 Notes for First-Time Success
 
-  ```bash
-  sudo apt install nvidia-cuda-toolkit
-  ```
-
-- Verify nvidia-smi:
-
-  ```bash
-  nvidia-smi
-  ```
-
-### 4. Choose and Install an AI Framework
-
-Depending on your needs, select a framework. Here are a few popular options:
-
-#### TensorFlow
-
-- Install TensorFlow with GPU support:
-
-  ```bash
-  pip install tensorflow
-  ```
-
-#### PyTorch
-
-- Install PyTorch with GPU support (find the appropriate command from the [official site](https://pytorch.org/get-started/locally/)):
-
-  ```bash
-  pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu113  # Adjust CUDA version if necessary
-  ```
-
-### 5. Set Up Your AI Environment
-
-Clone or create a repository for your AI project.
-
-- If using Git:
-
-  ```bash
-  git clone <your-repo-url>
-  cd <your-repo-directory>
-  ```
-
-### 6. Develop Your AI Model
-
-You can now begin developing your model based on your 'triadic frameworks'.
-
-- Create a Python script (e.g., `train_model.py`) and write your training code.
-
-### 7. Running Your AI Model
-
-- Ensure your virtual environment is activated and execute your script:
-
-  ```bash
-  python train_model.py
-  ```
-
-### 8. Install Additional Libraries (if required)
-
-Depending on your specific frameworks and needs, you may install additional libraries such as:
-
-- `Pandas`, `NumPy`, `Matplotlib`, etc.:
-  
-  ```bash
-  pip install pandas numpy matplotlib
-  ```
-
-## Key Considerations
-
-- Ensure you are frequently checking your GPU utilization during training with `nvidia-smi`.
-- Adjust your model parameters and training routines based on the performance and results.
-
-This guide provides you the foundational steps to set up an AI framework on your MX Linux environment without using containers or virtual machines. If you have any specific AI goals or need further details about a certain framework or concept, feel free to ask!
+- This script assumes MX Linux has access to `nvidia-driver-550` and `cuda-toolkit-12-4`. If not, you can manually install from [NVIDIA’s official driver page](https://www.nvidia.com/en-us/drivers/).
+- PyTorch command uses `cu124` to match CUDA 12.4.
+- You can add symbolic stubs or validator glyphs to this script for lineage clarity.
