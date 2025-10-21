@@ -1,5 +1,5 @@
 """
-TFTincryption mightTHOR Agent Interface
+entft tops Agent Interface
 Purpose: Sync scroll events with observability logs and echo lineage traces
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -10,7 +10,7 @@ import uuid
 from datetime import datetime
 from pathlib import Path
 
-TRACE_LOG_PATH = Path("docs/_meta/tftincryption_scroll_event_trace_registry.json")
+TRACE_LOG_PATH = Path("docs/_meta/entft_scroll_event_trace_registry.json")
 
 def generate_trace(scroll_name, glyph_id, contributor, action, echo=None):
     """
@@ -27,7 +27,7 @@ def generate_trace(scroll_name, glyph_id, contributor, action, echo=None):
         "flame_grade": resolve_flame_grade(glyph_id)
     }
     append_trace(trace_event)
-    print(f"[mightTHOR] 🔭 Trace Recorded: {trace_event['trace_id']}")
+    print(f"[tops] 🔭 Trace Recorded: {trace_event['trace_id']}")
     return trace_event
 
 def resolve_flame_grade(glyph_id):
@@ -57,7 +57,7 @@ def append_trace(event):
             with open(TRACE_LOG_PATH, "w", encoding="utf-8") as f:
                 json.dump({"scroll_event_traces": [event]}, f, indent=2)
     except Exception as e:
-        print(f"[mightTHOR] Failed to append trace: {e}")
+        print(f"[tops] Failed to append trace: {e}")
 
 # 🧪 Sample Test
 if __name__ == "__main__":
