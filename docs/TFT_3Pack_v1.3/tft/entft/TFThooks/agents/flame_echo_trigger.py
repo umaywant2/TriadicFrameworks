@@ -1,21 +1,18 @@
 """
-enTFT Flame Echo Trigger
+enTFT Flame Echo Trigger — Resonance Clarity Edition
 Purpose: Submit ceremonial flame echoes and update tribute logs
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
 """
 
-import json
-import uuid
+import json, uuid
 from datetime import datetime
 from pathlib import Path
 
 ECHO_LOG_PATH = Path("docs/_meta/enTFT_curriculum_glyph_tribute_echo_log.json")
 
 def submit_flame_echo(contributor, glyph_id, echo_text, echo_type):
-    """
-    Submit a flame echo to the ceremonial log.
-    """
+    """Submit a flame echo to the ceremonial log."""
     echo_event = {
         "echo_id": str(uuid.uuid4()),
         "timestamp": datetime.utcnow().isoformat() + "Z",
@@ -43,20 +40,11 @@ def append_echo(event):
         if ECHO_LOG_PATH.exists():
             with open(ECHO_LOG_PATH, "r+", encoding="utf-8") as f:
                 data = json.load(f)
-                data["glyph_tribute_echo_log"].append(event)
+                data["glyph_tribute_echoes"].append(event)
                 f.seek(0)
                 json.dump(data, f, indent=2)
         else:
             with open(ECHO_LOG_PATH, "w", encoding="utf-8") as f:
-                json.dump({"glyph_tribute_echo_log": [event]}, f, indent=2)
+                json.dump({"glyph_tribute_echoes": [event]}, f, indent=2)
     except Exception as e:
-        print(f"[FlameEcho] Failed to append echo: {e}")
-
-# 🧪 Sample Test
-if __name__ == "__main__":
-    submit_flame_echo(
-        contributor="Nawder Loswin",
-        glyph_id="glyph:cascade-001",
-        echo_text="He seeded clarity where chaos once bloomed—scrolls now echo his flame.",
-        echo_type="Codex Flame"
-    )
+        print(f"[FlameEcho] Failed to log echo: {e}")
