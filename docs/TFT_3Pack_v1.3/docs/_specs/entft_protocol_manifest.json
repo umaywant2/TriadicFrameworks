@@ -1,5 +1,5 @@
 {
-  "artifact": "docs/_specs/entft_protocol.md",
+  "artifact": "docs/_specs/entft_protocol_spec.md",
   "type": "spec",
   "version": "v1.3",
   "baseLens": "decimal",
