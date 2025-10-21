@@ -40,7 +40,7 @@ It defines what remixers may fork, mutate, or seal—and under what conditions.
 ## 🔗 Triadic Quicklinks
 
 - [`config_manifesto.md`](config_manifesto.md) — Declares corridor trust and config logic  
-- [`entft_glyph_retirement_log.json`](entft_glyph_retirement_log.json) — Logs sealed glyphs  
+- [`entft_glyph_retirement_log.json`](/docs/TFT_3Pack_v1.3/tft/entft/registry/entft_glyph_retirement_log.json) — Logs sealed glyphs  
 - [`legacy_roll.md`](../legacy_roll.md) — Contributor registry and badge echoes  
 - [`sandbox_trace.log`](sandbox_trace.log) — Logs contributor actions and coin lifecycle  
 - [`contributors/configs/README.md`](README.md) — Index scroll for contributor configs
