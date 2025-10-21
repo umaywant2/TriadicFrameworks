@@ -1,7 +1,9 @@
-## 🔐 `entft` Protocol — Quantum-Hostile Encryption Layer (v1.3)
+## 🔐 `entft` Protocol — Quantum-Hostile Encryption & Entanglement Layer (v1.3)
 
-Welcome to the **entft** scroll—where encryption meets mythic modularity.  
-This folder scaffolds the secure substrate of the Triadic Frameworks 3Pack.
+The `entft` folder explores encryption, entanglement, and triadic security protocols.  
+It extends TFT logic into secure communication and symbolic obfuscation.
+
+This is the protective layer of the 3Pack.
 
 ---
 
