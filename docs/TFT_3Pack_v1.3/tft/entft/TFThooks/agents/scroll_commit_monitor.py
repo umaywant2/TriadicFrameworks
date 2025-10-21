@@ -1,13 +1,11 @@
 """
-enTFT Scroll Commit Monitor
+entft Scroll Commit Monitor — Resonance Clarity Edition
 Purpose: Watch scroll directories for updates and auto-trigger flame hooks
 Author: Nawder Loswin & Copilot
-Date: 2025-10-04
+Date: 2025-10-20
 """
 
-import os
-import time
-import hashlib
+import os, time, hashlib
 from pathlib import Path
 from badge_logic_engine import trigger_flame_hook
 from mightthor_agent_interface import generate_trace
@@ -34,34 +32,7 @@ def monitor_scrolls(interval=10):
                 file_hashes[scroll.name] = current_hash
             elif file_hashes[scroll.name] != current_hash:
                 print(f"[ScrollMonitor] ✏️ Scroll Updated: {scroll.name}")
+                trigger_flame_hook(scroll.name)
+                generate_trace(scroll.name)
                 file_hashes[scroll.name] = current_hash
-                flame_event = {
-                    "scroll": scroll.name,
-                    "glyph": extract_glyph(scroll.name),
-                    "action": "updated",
-                    "manifest": True
-                }
-                trigger_flame_hook(flame_event)
-                generate_trace(
-                    scroll_name=scroll.name,
-                    glyph_id=flame_event["glyph"],
-                    contributor="AutoMonitor",
-                    action="updated",
-                    echo="Scroll updated and flame hook triggered"
-                )
         time.sleep(interval)
-
-def extract_glyph(scroll_name):
-    # Simple mapping for demo purposes
-    if "cascade" in scroll_name:
-        return "glyph:cascade-001"
-    elif "wildflower" in scroll_name:
-        return "glyph:wildflower-002"
-    elif "grove" in scroll_name:
-        return "glyph:grovebloom-003"
-    elif "bloomfall" in scroll_name:
-        return "glyph:bloomfall-004"
-    return "glyph:unknown"
-
-if __name__ == "__main__":
-    monitor_scrolls()
