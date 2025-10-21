@@ -91,43 +91,43 @@
     "agents": [
       {
         "title": "Echo Trigger",
-        "path": "agents/enTFT/flame_echo_trigger.py",
+        "path": "tft/entft/TFThooks/agents/flame_echo_trigger.py",
         "type": "agent",
         "category": "echo"
       },
       {
         "title": "Fusion Resolver",
-        "path": "agents/enTFT/glyph_fusion_resolver.py",
+        "path": "tft/entft/TFThooks/agents/glyph_fusion_resolver.py",
         "type": "agent",
         "category": "fusion"
       },
       {
         "title": "Reawakening Monitor",
-        "path": "agents/enTFT/glyph_reawakening_monitor.py",
+        "path": "tft/entft/TFThooks/agents/glyph_reawakening_monitor.py",
         "type": "agent",
         "category": "reawakening"
       },
       {
         "title": "Retirement Trigger",
-        "path": "agents/enTFT/glyph_retirement_trigger.py",
+        "path": "tft/entft/TFThooks/agents/glyph_retirement_trigger.py",
         "type": "agent",
         "category": "retirement"
       },
       {
         "title": "Scroll Monitor",
-        "path": "agents/enTFT/scroll_commit_monitor.py",
+        "path": "tft/entft/TFThooks/agents/scroll_commit_monitor.py",
         "type": "agent",
         "category": "runtime"
       },
       {
         "title": "Trace Dashboard",
-        "path": "agents/enTFT/scroll_runtime_trace_dashboard.py",
+        "path": "tft/entft/TFThooks/agents/scroll_runtime_trace_dashboard.py",
         "type": "agent",
         "category": "runtime"
       },
       {
         "title": "Mightthor Interface",
-        "path": "agents/enTFT/mightthor_agent_interface.py",
+        "path": "tft/entft/TFThooks/agents/tops_agent_interface.py",
         "type": "agent",
         "category": "runtime"
       }
