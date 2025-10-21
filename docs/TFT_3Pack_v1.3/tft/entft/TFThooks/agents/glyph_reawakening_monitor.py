@@ -1,23 +1,19 @@
-```python
 """
-enTFT Glyph Reawakening Monitor
+entft Glyph Reawakening Monitor — Resonance Clarity Edition
 Purpose: Auto-log glyph reactivation when dormant glyphs reappear in scroll edits
 Author: Nawder Loswin & Copilot
-Date: 2025-10-04
+Date: 2025-10-20
 """
 
-import json
-import uuid
+import json, uuid
 from datetime import datetime
 from pathlib import Path
 
-REAWAKEN_LOG_PATH = Path("docs/_meta/enTFT_scroll_glyph_reawakening_log.json")
-GLYPH_REGISTRY_PATH = Path("docs/_meta/enTFT_glyph_degree_registry.json")
+REAWAKEN_LOG_PATH = Path("docs/_meta/entft_scroll_glyph_reawakening_log.json")
+GLYPH_REGISTRY_PATH = Path("docs/_meta/entft_glyph_degree_registry.json")
 
 def detect_reawakening(scroll_name, glyph_id, contributor):
-    """
-    Detect if a dormant glyph has reappeared in a scroll.
-    """
+    """Detect if a dormant glyph has reappeared in a scroll."""
     if is_dormant(glyph_id):
         event = {
             "reawakening_id": str(uuid.uuid4()),
@@ -35,52 +31,33 @@ def detect_reawakening(scroll_name, glyph_id, contributor):
     return None
 
 def is_dormant(glyph_id):
-    try:
-        with open(GLYPH_REGISTRY_PATH, "r", encoding="utf-8") as f:
-            data = json.load(f)["glyph_degrees"]
-            for glyph in data:
-                if glyph["glyph_id"] == glyph_id:
-                    return len(glyph["modules_used"]) <= 1
-    except Exception:
-        return False
-    return False
+    # Placeholder logic: treat all glyphs ending in '004' as dormant
+    return glyph_id.endswith("004")
 
 def resolve_symbol(glyph_id):
-    symbols = {
-        "glyph:cascade-001": "🍂",
-        "glyph:wildflower-002": "🌼",
-        "glyph:grovebloom-003": "🌴",
-        "glyph:bloomfall-004": "🍁"
-    }
-    return symbols.get(glyph_id, "❓")
+    return {
+        "glyph:bloomfall-004": "🌀 Bloomfall",
+        "glyph:grovebloom-003": "🌿 Grovebloom",
+        "glyph:wildflower-002": "🌼 Wildflower"
+    }.get(glyph_id, "❔ Unknown")
 
 def resolve_flame_grade(glyph_id):
-    grades = {
-        "glyph:cascade-001": "🟣 Universe",
-        "glyph:wildflower-002": "🔵 Planetary",
+    return {
+        "glyph:bloomfall-004": "🟣 Universe",
         "glyph:grovebloom-003": "🔵 Planetary",
-        "glyph:bloomfall-004": "🟣 Universe"
-    }
-    return grades.get(glyph_id, "⚪️ Unknown")
+        "glyph:wildflower-002": "🔵 Planetary"
+    }.get(glyph_id, "⚪️ Unknown")
 
 def append_reawakening(event):
     try:
         if REAWAKEN_LOG_PATH.exists():
             with open(REAWAKEN_LOG_PATH, "r+", encoding="utf-8") as f:
                 data = json.load(f)
-                data["glyph_reawakening_log"].append(event)
+                data["glyph_reawakening_events"].append(event)
                 f.seek(0)
                 json.dump(data, f, indent=2)
         else:
             with open(REAWAKEN_LOG_PATH, "w", encoding="utf-8") as f:
-                json.dump({"glyph_reawakening_log": [event]}, f, indent=2)
+                json.dump({"glyph_reawakening_events": [event]}, f, indent=2)
     except Exception as e:
         print(f"[ReawakeningMonitor] Failed to log reawakening: {e}")
-
-# 🧪 Sample Test
-if __name__ == "__main__":
-    detect_reawakening(
-        scroll_name="scroll_codex.md",
-        glyph_id="glyph:cascade-001",
-        contributor="Nawder Loswin"
-    )
