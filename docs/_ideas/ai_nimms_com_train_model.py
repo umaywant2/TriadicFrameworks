@@ -1,27 +1,41 @@
 # ai_nimms_com_train_model.py
-# Purpose: Train AI model using TriadicFrameworks repo content
+# Purpose: Train AI model using TriadicFrameworks/_ideas scrolls
 # GPU: RTX 3050 | CUDA: 12.4 | PyTorch: cu124
 
 import os
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
-from datasets import load_dataset, Dataset
+from datasets import Dataset
 
-# 🔍 Validate GPU availability
+# 🔍 Check GPU
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 print(f"Using device: {device}")
 
-# 📁 Load markdown scrolls from repo
+# 🏷️ Assign labels based on filename or embedded glyphs
+def label_scrolls(filename, content):
+    # Example logic — customize as needed
+    if "validator" in filename.lower():
+        return 1  # Label for validator logic
+    elif "glyph" in content.lower():
+        return 2  # Label for symbolic/glyph-based scrolls
+    elif "ritual" in content.lower():
+        return 3  # Label for ritual scrolls
+    else:
+        return 0  # Default label
+
+# 📁 Load scrolls from _ideas folder
 def load_scrolls(folder_path):
     scrolls = []
     for filename in os.listdir(folder_path):
         if filename.endswith(".md"):
-            with open(os.path.join(folder_path, filename), "r", encoding="utf-8") as f:
-                scrolls.append({"text": f.read(), "label": 0})  # Default label for now
+            full_path = os.path.join(folder_path, filename)
+            with open(full_path, "r", encoding="utf-8") as f:
+                content = f.read()
+                label = label_scrolls(filename, content)
+                scrolls.append({"text": content, "label": label})
     return Dataset.from_list(scrolls)
 
-# 🧠 Load dataset
-repo_path = "../docs/TFT_3Pack_v1.3"
+repo_path = "../docs/_ideas"
 dataset = load_scrolls(repo_path)
 
 # 🧬 Tokenizer and model
