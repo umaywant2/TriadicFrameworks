@@ -1,0 +1,16 @@
+{
+  "artifact": "docs/_specs/entft_protocol.md",
+  "type": "spec",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "scroll_curriculum_fork_guide.md",
+    "badge_logic_engine.py",
+    "tops_agent_interface.py",
+    "entft_scroll_event_trace_registry.json"
+  ],
+  "symbolicTags": ["Divide-by-Zero", "Resonant-Time Hash", "Quantum Hostile"],
+  "cliTrigger": "generate_keypair → hash → validate",
+  "timestamp": "2025-10-20T11:12:00Z"
+}
