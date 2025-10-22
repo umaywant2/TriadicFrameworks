@@ -1,4 +1,4 @@
-# Scroll - Tartarus mythmatical masterpiece
+# 📦 Scroll - Tartarus mythmatical masterpiece
 
 **love loops, virtual drift, and mythic descent**
 
