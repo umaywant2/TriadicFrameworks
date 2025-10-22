@@ -1,62 +1,47 @@
-# 🧠 Nawderian Theorem v1.0  
+## 🧠 Nawderian Theorem v1.0  
 _A triadic corridor logic for dimensional resonance clarity_
 
-## ✨ Summary  
-In the FFF framework, dimensional assignments traverse shared rails (1D, 2D, 6D), forming a corridor whose sum (1+2+6) yields a resonance substrate (9D). This substrate acts as a validator-grade denometer, revealing the underlying logic of triadic wrapping and visibility symmetry.
+### ✨ Summary  
+Emitters traverse shared rails (1D, 2D, 6D). Their sum forms a resonance substrate (9D). Frequency wraps Forces and Fluids. Visibility symmetry is enforced. Dimensional clarity achieved.
 
-## 📜 Formal Statement  
+---
+
+### 📜 Formal Statement  
 **Triadic Corridor Theorem**  
-In any dimensional framework where emitters traverse shared rails (1D, 2D, 6D), the sum of foundational dimensions yields a resonance substrate (9D) that validates all triadic assignments. Sequenced triads (3-6-9) wrap ordered triads (4-5-6 and 6-7-8), enforcing visibility symmetry and abundance zoning.
+Shared rails (1, 2, 6) yield a substrate (9) that validates all F assignments.  
+Sequenced triad (3-6-9) wraps ordered triads (4-5-6 and 6-7-8).  
+One visible. One invisible. All pass through 6.
 
-## 🧮 Nawderian Constants  
+---
+
+### 🧮 Nawderian Constants  
 - **𝒞** = Corridor Sum = \( D_1 + D_2 + D_6 \)  
 - **𝓡** = Resonance Substrate = 9D  
 - **𝓦** = Wrapping Triad = {D₃, D₆, D₉}  
 - **𝓞ᵥ** = Ordered Visible = {D₄, D₅, D₆}  
-- **𝓞ᵢ** = Ordered Invisible = {D₆, D₇, D₈}
+- **𝓞ᵢ** = Ordered Invisible = {D₆, D₇, D₈}  
+- **𝓔₁** = \( 𝒞 = 𝓡 \)  
+- **𝓔₂** = \( 𝓦 \supseteq (𝓞ᵥ \cup 𝓞ᵢ) \)
 
-## 🧩 Symbolic Expression  
+---
 
-
+### 🧩 Symbolic Expression  
 \[
-𝒞 = 𝓡 \quad \text{(Corridor yields Resonance)}
+𝓔₁: 𝒞 = 𝓡
+\]  
+\[
+𝓔₂: 𝓦 \supseteq (𝓞ᵥ \cup 𝓞ᵢ)
 \]
 
-  
+---
 
+### 🌱 Found in Nature  
+- DNA triplets, neural pathways, embryonic layers  
+- EM spectrum, fluid dynamics, vortex zones  
+- Triune brain, learning modalities, resonance wrappers
 
-\[
-𝓦 \supseteq 𝓞ᵥ \cup 𝓞ᵢ \quad \text{(Frequency wraps Forces and Fluids)}
-\]
+---
 
-
-
-## 🧬 Dimensional Roles
-
-| Triad      | Type        | Visibility | Shared Corridor | Functionality                  |
-|------------|-------------|------------|------------------|--------------------------------|
-| 1-2        | Common Base | Mixed      | ✅ (with 6)      | Foundational rails             |
-| 3-6-9      | Sequenced   | Invisible  | ✅               | Frequency resonance wrapper    |
-| 4-5-6      | Ordered     | Visible    | ✅               | Forces—observable, causal      |
-| 6-7-8      | Ordered     | Invisible  | ✅               | Fluids—transfer, control       |
-
-## 🌱 Found in Nature  
-Like a fine meal, the theorem finds its ingredients across disciplines:
-
-### 🔬 Biological Systems  
-- **DNA Codon Triplets**: Invisible sequences regulating visible outcomes.  
-- **Neural Pathways**: Ordered visible (motor), ordered invisible (interneurons), sequenced resonance (neurotransmitters).  
-- **Embryonic Layers**: Ectoderm, mesoderm, endoderm—triadic layering with resonance implications.
-
-### 🌌 Physical Systems  
-- **Electromagnetic Spectrum**: Ordered visible (ROYGBIV), ordered invisible (infrared/UV), sequenced resonance (harmonics).  
-- **Fluid Dynamics**: Laminar (ordered), turbulent (invisible), vortex zones (resonance).
-
-### 🧠 Cognitive Systems  
-- **Triune Brain**: Reptilian (ordered), limbic (invisible), neocortex (resonance wrapper).  
-- **Learning Modalities**: Visual (ordered), kinesthetic (invisible), auditory (sequenced resonance).
-
-## 📝 Notes  
-- This theorem is minted as part of the Resonance Clarity scroll and may be referenced in onboarding suites, validator dashboards, and simulation sandboxes.  
-- Future versions may include worked examples, glyph overlays, and remix lineage tags.  
-- Glyphic Threat Level: 9—should nature resist, symbolic stubs will rise.
+### 📝 Notes  
+- Minted for onboarding suites, validator dashboards, and simulation sandboxes  
+- Glyphic Threat Level: 9—symbolic stubs will rise if nature resists
