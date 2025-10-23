@@ -1,6 +1,6 @@
 # RFC-001: Triadic Validator Framework
 
-**Status:** Draft  
+**Status:** Drafted
 **Author(s):** Nawder Loswin, Copilot (assistant)  
 **Created:** 2025-10-23  
 **Lineage:** Precedes RFC-002 (Corridor Universes), RFC-003 (Attestation & Badges), RFC-004 (Entft Invariants)
