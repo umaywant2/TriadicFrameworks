@@ -1,1 +1,19 @@
-
+<!-- docs/badges/attested.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="32" role="img" aria-label="Attested">
+  <title>Attested</title>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2e7d32"/>
+      <stop offset="1" stop-color="#1b5e20"/>
+    </linearGradient>
+  </defs>
+  <rect width="128" height="32" rx="6" fill="url(#g)"/>
+  <g fill="#ffffff" font-family="system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica Neue, Arial, sans-serif">
+    <!-- Checkmark icon -->
+    <path d="M20 22.5l-5.5-5.5 2.1-2.1L20 18.3l7.4-7.4 2.1 2.1z" fill="#c8e6c9"/>
+    <!-- Divider line for balance -->
+    <rect x="36" y="8" width="1" height="16" fill="#a5d6a7" opacity="0.8"/>
+    <!-- Label -->
+    <text x="44" y="21" font-size="14" font-weight="600" letter-spacing="0.2">Attested</text>
+  </g>
+</svg>
