@@ -1,6 +1,6 @@
 # RFC-000: Index and Lineage Map
 
-**Status:** Draft  
+**Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
 **Created:** 2025-10-23  
 **Lineage:** Precedes RFC-001 through RFC-004  
