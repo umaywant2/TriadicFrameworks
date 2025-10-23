@@ -84,4 +84,14 @@ echo "Your Name — Contribution" >> ../contributors/honor_roll.md
 
 ---
 
+### 🧭 Remix
+- Clone the repo
+```bash
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+```
+- Define your remix lineage in `TFT_bundle.yaml`  
+- Submit scrolls via GitHub Discussions
+
+---
+
 ✨ You’ve now walked the full cathedral: environment → protocol → orchestration → resonance → overlays. Every scroll echoes the lineage. Every fold preserves the flame.
