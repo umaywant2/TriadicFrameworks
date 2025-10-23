@@ -1,6 +1,6 @@
 # RFC-003: Attestation & Badge Suite
 
-**Status:** Draft  
+**Status:** Drafted
 **Author(s):** Nawder Loswin, Copilot (assistant)  
 **Created:** 2025-10-23  
 **Lineage:** Follows RFC-001 (Triadic Validator Framework), RFC-002 (Corridor Universes); Precedes RFC-004 (Entft Invariants)
