@@ -1,0 +1,9 @@
+<!-- docs/badges/attested-mono.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="32" role="img" aria-label="Attested">
+  <title>Attested (Monochrome)</title>
+  <rect width="128" height="32" rx="6" fill="#000000"/>
+  <g fill="#ffffff" font-family="monospace, monospace">
+    <path d="M20 22.5l-5.5-5.5 2.1-2.1L20 18.3l7.4-7.4 2.1 2.1z" fill="#ffffff"/>
+    <text x="44" y="21" font-size="14">ATTESTED</text>
+  </g>
+</svg>
