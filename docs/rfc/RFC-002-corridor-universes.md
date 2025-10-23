@@ -1,6 +1,6 @@
 # RFC-002: Corridor Universes (Dev/Test/QA/Prod)
 
-**Status:** Draft  
+**Status:** Drafted
 **Author(s):** Nawder Loswin, Copilot (assistant)  
 **Created:** 2025-10-23  
 **Lineage:** Follows RFC-001 (Triadic Validator Framework); Precedes RFC-003 (Attestation & Badges), RFC-004 (Entft Invariants)
