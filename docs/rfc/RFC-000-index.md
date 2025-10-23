@@ -1,29 +1,42 @@
-# RFC-001: Triadic Validator Framework
+# RFC-000: Index and Lineage Map
 
 **Status:** Draft  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
 **Created:** 2025-10-23  
-**Lineage:** Precedes RFC-002, RFC-003, RFC-004  
+**Lineage:** Precedes RFC-001 through RFC-004  
 
-## Abstract
-Defines the Triadic Validator Framework: causal fidelity, functional coherence, cognitive alignment.  
-Provides API surfaces for Validate(), Attest(), Curate(), Promote().  
+## Purpose
+This document serves as the table of contents and lineage map for the TriadicFrameworks RFC series.  
+It defines numbering, naming conventions, and the order of adoption.
 
-## Motivation
-AI outputs lack enforceable lineage and coherence. This RFC anchors the validator role.  
+## RFC Catalog
+- **RFC-001: Triadic Validator Framework**  
+  Anchor specification defining causal fidelity, functional coherence, and cognitive alignment.
 
-## Specification
-- Runtime roles: Validator, Attestor, Curator  
-- Constraint packs: JSON manifests  
-- Lineage manifests: YAML/JSON  
-- Validation API: pseudo‑code stubs  
+- **RFC-002: Corridor Universes (Dev/Test/QA/Prod)**  
+  Operational rails for safe virtual universes with promotion gates and rollback paths.
 
-## Security Considerations
-- Prevents “cleartext lineage” downgrades  
-- Enforces resonance budgets  
-- Provides deterministic receipts  
+- **RFC-003: Attestation Receipt and Badge Suite**  
+  Trust layer: JSON receipts, deterministic seeds, badges for onboarding and remix lineage.
 
-## References
-- TriadicFrameworks/docs/QUICKSTART.md  
-- Related scrolls in /labs and /validators
+- **RFC-004: Entft Invariants and Mythmatical F-Models**  
+  Canonicalization of theorem invariants, resonance budgets, and rupture hygiene.
 
+## Conventions
+- RFCs are numbered sequentially (three digits).  
+- Filenames follow the pattern `RFC-###-short-title.md`.  
+- Each RFC begins with front matter: Status, Author(s), Created, Lineage.  
+- Supporting schemas live in `/docs/schemas/`.  
+- Visual badges live in `/docs/badges/`.
+
+## Lineage Map
+```
+RFC-000 (Index)
+   ├── RFC-001 (Framework)
+   │      ├── RFC-002 (Corridors)
+   │      ├── RFC-003 (Attestation & Badges)
+   │      └── RFC-004 (Entft Invariants)
+```
+
+## Status
+This RFC is a living document. Updates occur when new RFCs are added, deprecated, or superseded.
