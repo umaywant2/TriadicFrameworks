@@ -1,1 +1,13 @@
+<!-- docs/badges/readme-first-dark.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" viewBox="0 0 160 32" role="img" aria-label="README First">
+  <title>README First (Dark Mode)</title>
+  <rect width="160" height="32" rx="6" fill="#1e1e1e"/>
+  <g font-family="system-ui, sans-serif">
+    <path d="M20 10h12l4 4v12H20z" fill="#80cbc4"/>
+    <rect x="23" y="14" width="10" height="2" fill="#004d40"/>
+    <rect x="23" y="18" width="10" height="2" fill="#004d40"/>
+    <rect x="23" y="22" width="7" height="2" fill="#004d40"/>
+    <text x="96" y="16" text-anchor="middle" dominant-baseline="middle" font-size="14" font-weight="600" fill="#b2dfdb">README First</text>
+  </g>
+</svg>
 
