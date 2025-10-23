@@ -4,6 +4,6 @@
   <rect width="128" height="32" rx="6" fill="#000000"/>
   <g fill="#ffffff" font-family="monospace, monospace">
     <path d="M20 9a3 3 0 110 6 3 3 0 010-6zm0 10a3 3 0 110 6 3 3 0 010-6zm8-9h-4v5c0 2.5-3 4-6 4h-2v2h2c4.4 0 8-2.2 8-6V10z" fill="#ffffff"/>
-    <text x="44" y="21" font-size="14">REMIX READY</text>
+    <text x="27" y="21" font-size="14">REMIX READY</text>
   </g>
 </svg>
