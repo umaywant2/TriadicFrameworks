@@ -1,0 +1,9 @@
+<!-- docs/badges/attested-dark.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="32" role="img" aria-label="Attested">
+  <title>Attested (Dark Mode)</title>
+  <rect width="128" height="32" rx="6" fill="#1e1e1e"/>
+  <g fill="#4caf50" font-family="system-ui, sans-serif">
+    <path d="M20 22.5l-5.5-5.5 2.1-2.1L20 18.3l7.4-7.4 2.1 2.1z" fill="#81c784"/>
+    <text x="44" y="21" font-size="14" font-weight="600">Attested</text>
+  </g>
+</svg>
