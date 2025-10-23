@@ -47,4 +47,14 @@ This folder is the **gateway to the cathedral**:
 
 ---
 
+### 🧭 Remix
+- Clone the repo
+```bash
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+```
+- Define your remix lineage in `TFT_bundle.yaml`  
+- Submit scrolls via GitHub Discussions
+
+---
+
 © 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
