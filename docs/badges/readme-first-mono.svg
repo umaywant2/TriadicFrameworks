@@ -1,1 +1,14 @@
+<!-- docs/badges/readme-first-mono.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" viewBox="0 0 160 32" role="img" aria-label="README First">
+  <title>README First (Monochrome)</title>
+  <rect width="160" height="32" rx="6" fill="#000"/>
+  <g fill="#fff" font-family="monospace">
+    <!-- Document icon -->
+    <path d="M20 10h12l4 4v12H20z" fill="#fff"/>
+    <rect x="23" y="14" width="10" height="2" fill="#000"/>
+    <rect x="23" y="18" width="10" height="2" fill="#000"/>
+    <rect x="23" y="22" width="7" height="2" fill="#000"/>
+    <text x="96" y="16" text-anchor="middle" dominant-baseline="middle" font-size="14">README FIRST</text>
+  </g>
+</svg>
 
