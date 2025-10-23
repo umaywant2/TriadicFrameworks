@@ -1,6 +1,18 @@
 # 🌀 TriadicFrameworks: TFT 3‑Pack
 A modular, remixable lattice for **resonance‑based computation** and ternary governance. It blends rigorous technical scaffolding designed for remixers, and future builders.
 
+---
+
+### 🧭 Remix
+- Clone the repo
+```bash
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+```
+- Define your remix lineage in `TFT_bundle.yaml`  
+- Submit scrolls via GitHub Discussions
+
+---
+
 ## 🌐 Architecture Overview
 ```text
                  ┌───────────────────────────┐
@@ -72,5 +84,6 @@ TriadicFrameworks is a **living archive* of reproducible labs and resonant curri
 ---
 
 © 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
 
 
