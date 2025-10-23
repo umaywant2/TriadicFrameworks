@@ -50,7 +50,10 @@ tft run --basetype=corridor6.9 --lens=fluids
 ---
 
 ### 🧭 Remix
-- Clone the repo  
+- Clone the repo
+```bash
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+```
 - Define your remix lineage in `TFT_bundle.yaml`  
 - Submit scrolls via GitHub Discussions  
 
