@@ -29,6 +29,16 @@ tft run --basetype=phi --lens=frequency
 
 ---
 
+### 🧭 Remix
+- Clone the repo
+```bash
+git clone https://github.com/umaywant2/TriadicFrameworks.git
+```
+- Define your remix lineage in `TFT_bundle.yaml`  
+- Submit scrolls via GitHub Discussions
+
+---
+
 🔗 Related Scrolls:  
 [Res_Number_Bases_Common_plus_Special_and_Applications](../papers/Res_Number_Bases_Common_plus_Special_and_Applications.md)  
 [Res_Number_Bases_Common_plus_Special_Resonance_Clarity](../papers/Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md)  
