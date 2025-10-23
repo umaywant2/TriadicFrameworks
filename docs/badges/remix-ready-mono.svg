@@ -1,9 +1,10 @@
 <!-- docs/badges/remix-ready-mono.svg -->
-<svg xmlns="http://www.w3.org/2000/svg" width="128" height="32" role="img" aria-label="Remix Ready">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" viewBox="0 0 160 32" role="img" aria-label="Remix Ready">
   <title>Remix Ready (Monochrome)</title>
-  <rect width="128" height="32" rx="6" fill="#000000"/>
-  <g fill="#ffffff" font-family="monospace, monospace">
-    <path d="M20 9a3 3 0 110 6 3 3 0 010-6zm0 10a3 3 0 110 6 3 3 0 010-6zm8-9h-4v5c0 2.5-3 4-6 4h-2v2h2c4.4 0 8-2.2 8-6V10z" fill="#ffffff"/>
-    <text x="27" y="21" font-size="14">REMIX READY</text>
+  <rect width="160" height="32" rx="6" fill="#000"/>
+  <g fill="#fff" font-family="monospace">
+    <!-- Fork icon -->
+    <path d="M24 10a3 3 0 110 6 3 3 0 010-6zm0 8a3 3 0 110 6 3 3 0 010-6zm8-8h-4v5c0 3-3 5-6 5h-2v2h2c5 0 10-2.5 10-7V10z"/>
+    <text x="88" y="16" text-anchor="middle" dominant-baseline="middle" font-size="14">REMIX READY</text>
   </g>
 </svg>
