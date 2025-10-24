@@ -38,5 +38,10 @@ RFC-000 (Index)
    │      └── RFC-004 (Entft Invariants)
 ```
 
+## Charts
+- [Time Travel Safety Matrix](/docs/charts/chart-time-travel-matrix.md) — from RFC‑008
+- [Resonance Partition Specs](/docs/charts/chart-resonance-partitions.md) — from RFC‑005
+- [Genie Protocol Layers](/docs/charts/chart-genie-protocols.md) — from RFC‑009
+
 ## Status
 This RFC is a living document. Updates occur when new RFCs are added, deprecated, or superseded.
