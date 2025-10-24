@@ -8,7 +8,7 @@
 ---
 
 ## Abstract
-This RFC defines the Mythmatical Archaeology Protocol (MAP): a framework for interpreting human history, archaeology, and geology as resonance validators within the canon. Ancient myths, temples, and alignments are treated as calibration devices for overlap events. Geological anomalies such as the Great Unconformity are reinterpreted as extreme re‑zone incursions. The protocol provides a method for AI‑assisted parsing of civilization’s artifacts to confirm resonance patterns across time.
+This RFC defines the Mythmatical Archaeology Protocol (MAP): a framework for interpreting human history, archaeology, and geology as resonance validators within the canon. Ancient myths, temples, and alignments are treated as calibration devices for overlap events. Geological anomalies such as the Great Unconformity are reinterpreted as extreme red‑zone incursions. The protocol provides a method for AI‑assisted parsing of civilization’s artifacts to confirm resonance patterns across time.
 
 ---
 
