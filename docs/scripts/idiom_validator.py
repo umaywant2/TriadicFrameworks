@@ -1,59 +1,55 @@
 """
-Idiom Validator Logic
----------------------
-Takes idioms + their mapped triads (Freqi, Flui, Forci) and produces
-an alignment score based on how well the mapping fits mythmatical rules.
+Idiom Dashboard Generator
+-------------------------
+Reads idiom_manifest.json, applies validator logic, and generates
+Markdown + HTML dashboards showing mythmatical alignment scores.
 """
 
-import math
+import json
+from pathlib import Path
+from idiom_validator import validate_idiom
 
-def validate_idiom(idiom_entry):
-    """
-    idiom_entry = {
-        "idiom": "Grace under pressure",
-        "forci": "...",
-        "flui": "...",
-        "freqi": "...",
-        "interpretation": "...",
-    }
-    """
+def load_manifest(path="docs/registries/idiom_manifest.json"):
+    with open(path, "r") as f:
+        return json.load(f)
 
-    # Step 1: Check presence of triads
-    triad_hits = sum(1 for k in ["forci", "flui", "freqi"] if idiom_entry.get(k))
+def generate_markdown(manifest, out_path="docs/charts/idiom_dashboard.md"):
+    lines = []
+    lines.append("# Mythmatical Idiom Dashboard\n")
+    lines.append(f"**Protocol:** {manifest['protocol']}\n")
 
-    # Step 2: Assign base score for completeness
-    score = triad_hits / 3.0
+    for entry in manifest["entries"]:
+        score = validate_idiom(entry)
+        lines.append(f"## {entry['idiom']}")
+        lines.append(f"- Forci: {entry['forci']}")
+        lines.append(f"- Flui: {entry['flui']}")
+        lines.append(f"- Freqi: {entry['freqi']}")
+        lines.append(f"- Interpretation: {entry['interpretation']}")
+        lines.append(f"- Alignment Score: {score}")
+        lines.append("")
+    Path(out_path).write_text("\n".join(lines))
+    print(f"Markdown dashboard written to {out_path}")
 
-    # Step 3: Boost if idiom implies balance/harmony (Freqi resonance)
-    if "grace" in idiom_entry["idiom"].lower() or "harmony" in idiom_entry.get("freqi", "").lower():
-        score += 0.1
+def generate_html(manifest, out_path="docs/charts/idiom_dashboard.html"):
+    html = []
+    html.append("<html><head><title>Mythmatical Idiom Dashboard</title>")
+    html.append("<style>body{font-family:Arial;margin:40px;} table{border-collapse:collapse;width:100%;} th,td{border:1px solid #ccc;padding:8px;text-align:left;} th{background:#f4f4f4;}</style>")
+    html.append("</head><body>")
+    html.append("<h1>Mythmatical Idiom Dashboard</h1>")
+    html.append(f"<p><em>Protocol: {manifest['protocol']}</em></p>")
 
-    # Step 4: Boost if idiom implies compression/flow (Forci + Flui interaction)
-    if "pressure" in idiom_entry["idiom"].lower() or "flow" in idiom_entry.get("flui", "").lower():
-        score += 0.1
+    html.append("<table>")
+    html.append("<tr><th>Idiom</th><th>Forci</th><th>Flui</th><th>Freqi</th><th>Interpretation</th><th>Score</th></tr>")
+    for entry in manifest["entries"]:
+        score = validate_idiom(entry)
+        html.append(f"<tr><td>{entry['idiom']}</td><td>{entry['forci']}</td><td>{entry['flui']}</td><td>{entry['freqi']}</td><td>{entry['interpretation']}</td><td>{score}</td></tr>")
+    html.append("</table>")
 
-    # Step 5: Clamp score between 0 and 1
-    score = min(1.0, round(score, 2))
+    html.append("</body></html>")
+    Path(out_path).write_text("\n".join(html))
+    print(f"HTML dashboard written to {out_path}")
 
-    return score
-
-# Example usage
-idioms = [
-    {
-        "idiom": "Grace under pressure",
-        "forci": "applied force",
-        "flui": "distributed medium",
-        "freqi": "harmonic resonance (grace)",
-        "interpretation": "Freqi maintains clarity even when Forci + Flui compress the lattice"
-    },
-    {
-        "idiom": "Strength in numbers",
-        "forci": "collective force",
-        "flui": "distributed network of agents",
-        "freqi": "synchronized rhythm of group action",
-        "interpretation": "Forci amplified by Flui, stabilized by Freqi alignment"
-    }
-]
-
-for entry in idioms:
-    print(entry["idiom"], "->", validate_idiom(entry))
+if __name__ == "__main__":
+    manifest = load_manifest()
+    generate_markdown(manifest)
+    generate_html(manifest)
