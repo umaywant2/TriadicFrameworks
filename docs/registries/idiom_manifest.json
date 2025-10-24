@@ -1,0 +1,42 @@
+{
+  "manifest_version": "1.0",
+  "protocol": "RFC-019: Mythmatical Idiom Validator",
+  "entries": [
+    {
+      "idiom": "Grace under pressure",
+      "forci": "applied force",
+      "flui": "distributed medium",
+      "freqi": "harmonic resonance (grace)",
+      "interpretation": "Freqi maintains clarity even when Forci + Flui compress the lattice",
+      "alignment_score": 0.92,
+      "status": "validated"
+    },
+    {
+      "idiom": "Strength in numbers",
+      "forci": "collective force",
+      "flui": "distributed network of agents",
+      "freqi": "synchronized rhythm of group action",
+      "interpretation": "Forci amplified by Flui, stabilized by Freqi alignment",
+      "alignment_score": 0.88,
+      "status": "validated"
+    },
+    {
+      "idiom": "Breaking the ice",
+      "forci": "applied disruption",
+      "flui": "social medium (frozen state)",
+      "freqi": "new resonance channel opened",
+      "interpretation": "Forci disrupts Flui stasis, allowing Freqi to circulate",
+      "alignment_score": 0.81,
+      "status": "candidate"
+    },
+    {
+      "idiom": "Time heals all wounds",
+      "forci": "erosion of intensity",
+      "flui": "flow of time as medium",
+      "freqi": "restored harmony",
+      "interpretation": "Flui (time) gradually reduces Forci (pain), restoring Freqi balance",
+      "alignment_score": 0.76,
+      "status": "candidate"
+    }
+  ]
+}
