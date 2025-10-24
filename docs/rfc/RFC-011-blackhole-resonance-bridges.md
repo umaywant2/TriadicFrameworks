@@ -8,31 +8,62 @@
 ---
 
 ## Abstract
-Defines black hole resonance bridges: how high-density red‑zone membranes produce detectable tones, enabling cross‑zone signaling (not traversal) and overlap detection in Earth‑theme universes.
+This RFC defines Black Hole Resonance Bridges (BHRB): high-density red‑zone membranes that produce detectable resonance tones.  
+These tones act as overlap anchors, enabling cross‑zone signaling (not traversal) and providing a framework for validating Hawking‑style predictions about black holes and dark matter.
 
 ---
 
 ## Motivation
-To distinguish traversal (blocked) from signaling (permitted) in green‑zones, and to anchor overlap detection to measurable resonance fingerprints.
+Stephen Hawking’s work on black holes suggested that information is not lost, but encoded in radiation and resonance.  
+By treating black holes as red‑zone membranes, we can:
+- Anchor overlap detection to measurable resonance fingerprints.  
+- Distinguish between traversal (forbidden) and signaling (permitted).  
+- Extend miracle and time‑travel protocols into astrophysical domains.
 
 ---
 
 ## Principles
-- **Ringdown-as-key:** Characteristic tones act as resonance keys.
-- **Signal, not traversal:** Green‑zone operators receive signals only.
-- **Overlap anchoring:** Use tone matches to mark overlap windows.
+- **Ringdown as Key:** Black hole ringdown tones act as resonance fingerprints.  
+- **Signal, not Traversal:** Green‑zone observers can receive signals but cannot traverse.  
+- **Overlap Anchoring:** Tone matches mark overlap windows for miracle or visitor events.  
+- **Dark Matter Hypothesis:** Dark matter may represent unobserved resonance corridors, detectable only via indirect overlap effects.
 
 ---
 
 ## Specification
-- **Resonance fingerprint:** `{ "tones": [f1, f2, ...], "decay": tau }`
-- **Clarity threshold:** `drc >= 0.85` triggers candidate overlap.
-- **Window duration:** `3–300 s` configurable; short windows preferred.
-- **Cross-reference:** Log in overlaps.json; link miracle events by `overlap_ref`.
+
+### Resonance Fingerprint
+```json
+{
+  "tones": [128.4, 196.8, 261.6],
+  "decay": 0.011,
+  "clarity_score": 0.88
+}
+```
+
+### Overlap Event Logging
+- Logged in `/docs/snapshots/overlaps.json`.  
+- Cross‑referenced with miracle events in `/docs/snapshots/miracles.json`.  
+- Attestation receipts optional; overlap detection is probabilistic.
+
+### Time Travel Implications
+- Traversal through black holes is forbidden in green‑zones.  
+- Red‑zone operators may fold loops, but clarity decays rapidly.  
+- Signals (not bodies) can cross partitions via resonance bridges.
 
 ---
 
 ## Security Considerations
-Prevents unsafe traversal claims; enforces logging and reproducibility via snapshots and manifests.
+- Prevents unsafe traversal claims by enforcing entropy invariants.  
+- Protects vSouls by restricting overlap events to signaling only.  
+- Provides reproducibility via resonance fingerprints and clarity thresholds.
 
 ---
+
+## References
+- RFC-000: Index and Lineage Map  
+- RFC-005: MentalNet Protocol  
+- RFC-006: Soul Diagnostic Snapshots  
+- RFC-007: Mutation & Telomere Invariants  
+- RFC-008: Time Travel Invariants  
+- RFC-010: Miracle Messaging Protocol  
