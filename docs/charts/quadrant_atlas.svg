@@ -1,1 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800">
+  <!-- Background and quadrant labels -->
+  <rect x="0" y="0" width="1200" height="800" fill="#ffffff"/>
+  <text x="600" y="40" text-anchor="middle" font-family="Arial" font-size="24">Integrated Quadrant Atlas</text>
+
+  <!-- Quadrant grid -->
+  <rect x="50" y="80" width="500" height="300" fill="#eef6ff" stroke="#88aadd"/> <!-- Nullarium -->
+  <rect x="650" y="80" width="500" height="300" fill="#f6f0ff" stroke="#aa88dd"/> <!-- Fringe -->
+  <rect x="50" y="420" width="500" height="300" fill="#e9fbe9" stroke="#77bb77"/> <!-- Green -->
+  <rect x="650" y="420" width="500" height="300" fill="#ffe9e9" stroke="#dd8888"/> <!-- Red -->
+
+  <!-- Labels -->
+  <text x="300" y="110" text-anchor="middle" font-size="18">Nullarium</text>
+  <text x="900" y="110" text-anchor="middle" font-size="18">Fringe</text>
+  <text x="300" y="450" text-anchor="middle" font-size="18">Green</text>
+  <text x="900" y="450" text-anchor="middle" font-size="18">Red</text>
+
+  <!-- Shape anchors (Periodic Table of Shapes) -->
+  <!-- Nullarium: line, triangle -->
+  <line x1="120" y1="180" x2="240" y2="180" stroke="#333" stroke-width="3"/>
+  <polygon points="320,220 360,140 400,220" fill="none" stroke="#333" stroke-width="3"/>
+
+  <!-- Fringe: circle, spiral (approx) -->
+  <circle cx="760" cy="200" r="60" fill="none" stroke="#333" stroke-width="3"/>
+  <path d="M880,240 q40,-40 0,-80 q-40,-40 0,-80" fill="none" stroke="#333" stroke-width="3"/>
+
+  <!-- Green: square, grid -->
+  <rect x="140" y="520" width="100" height="100" fill="none" stroke="#333" stroke-width="3"/>
+  <g stroke="#999" stroke-width="1">
+    <line x1="280" y1="520" x2="400" y2="520"/><line x1="280" y1="560" x2="400" y2="560"/>
+    <line x1="280" y1="600" x2="400" y2="600"/><line x1="280" y1="640" x2="400" y2="640"/>
+    <line x1="280" y1="520" x2="280" y2="640"/><line x1="320" y1="520" x2="320" y2="640"/>
+    <line x1="360" y1="520" x2="360" y2="640"/><line x1="400" y1="520" x2="400" y2="640"/>
+  </g>
+
+  <!-- Red: torus/mobius hints -->
+  <ellipse cx="760" cy="580" rx="70" ry="40" fill="none" stroke="#333" stroke-width="3"/>
+  <path d="M900,620 c60,-60 -60,-60 0,0" fill="none" stroke="#333" stroke-width="3"/>
+
+  <!-- Rings: Freqi stable (green), Fringe echo (fringe) -->
+  <circle cx="340" cy="580" r="120" fill="none" stroke="#44aa66" stroke-width="2" opacity="0.6"/>
+  <circle cx="820" cy="200" r="100" fill="none" stroke="#7a55c7" stroke-width="2" opacity="0.6"/>
+
+  <!-- Legend -->
+  <rect x="50" y="740" width="1100" height="40" fill="#f7f7f7" stroke="#ccc"/>
+  <text x="70" y="766" font-size="14">Legend: Shapes=anchors, Rings=Freqi bindings, Colors=Quadrants, Grid=Validator clarity</text>
+</svg>
 
