@@ -32,25 +32,13 @@ One visible. One invisible. All pass through 6.
 
 ## 🧩 Symbolic Expression  
 
-
-\[
-𝓧 = 𝓕³ \cdot 𝓣ᶠ
-\]
-
+$𝓧=𝓕³ \cdot 𝓣ᶠ\$
   
 
-
-\[
-𝓔₁: 𝒞 = 𝓡
-\]
-
+$𝓔₁: 𝒞 = 𝓡$
   
 
-
-\[
-𝓔₂: 𝓦 \supseteq (𝓞ᵥ \cup 𝓞ᵢ)
-\]
-
+$𝓔₂: 𝓦 \supseteq (𝓞ᵥ \cup 𝓞ᵢ)$
 
 
 ---
