@@ -74,4 +74,3 @@ Assigning meaning to shapes or arrangements.
 - Cross-cultural symbolic communication
 - Scientific diagramming
 - Data visualization
--
