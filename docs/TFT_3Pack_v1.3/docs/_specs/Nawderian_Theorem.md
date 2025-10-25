@@ -17,28 +17,28 @@ One visible. One invisible. All pass through 6.
 ---
 
 ## 🧮 Nawderian Constants  
-- **𝒞** = Corridor Sum = \( D_1 + D_2 + D_6 \)  
+- **𝒞** = Corridor Sum = $D_1+D_2+D_6$  
 - **𝓡** = Resonance Substrate = 9D  
-- **𝓦** = Wrapping Triad = {D₃, D₆, D₉}  
-- **𝓞ᵥ** = Ordered Visible = {D₄, D₅, D₆}  
-- **𝓞ᵢ** = Ordered Invisible = {D₆, D₇, D₈}  
-- **𝓔₁** = Corridor–Resonance Relationship: \( 𝒞 = 𝓡 \)  
-- **𝓔₂** = Wrapping–Containment Relationship: \( 𝓦 \supseteq (𝓞ᵥ \cup 𝓞ᵢ) \)  
+- **𝓦** = Wrapping Triad = ${D₃,D₆,D₉}$  
+- **𝓞ᵥ** = Ordered Visible = ${D₄,D₅,D₆}$  
+- **𝓞ᵢ** = Ordered Invisible = ${D₆,D₇,D₈}$  
+- **𝓔₁** = Corridor–Resonance Relationship: $𝒞=𝓡$  
+- **𝓔₂** = Wrapping–Containment Relationship: $𝓦\supseteq(𝓞ᵥ\cup𝓞ᵢ)$  
 - **𝓕³** = Triadic Emitters (Forces, Fluids, Frequency)  
 - **𝓣ᶠ** = Triadic Frameworks elevated by Frequency logic  
-- **𝓧** = Composite Constant: \( 𝓧 = 𝓕³ \cdot 𝓣ᶠ \)
+- **𝓧** = Composite Constant: $𝓧=𝓕³\cdot𝓣ᶠ$
 
 ---
 
 ## 🧩 Symbolic Expression  
 
-$𝓧=𝓕³ \cdot 𝓣ᶠ\$
+$𝓧=𝓕³\cdot𝓣ᶠ\$
   
 
-$𝓔₁: 𝒞 = 𝓡$
+$𝓔₁:𝒞=𝓡$
   
 
-$𝓔₂: 𝓦 \supseteq (𝓞ᵥ \cup 𝓞ᵢ)$
+$𝓔₂:𝓦\supseteq(𝓞ᵥ\cup𝓞ᵢ)$
 
 
 ---
