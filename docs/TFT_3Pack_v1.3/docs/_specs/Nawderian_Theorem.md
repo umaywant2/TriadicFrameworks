@@ -1,4 +1,4 @@
-# 🧠 Nawderian Theorem v3.0  
+# 🧠 Nawderian Theorem v3.0 - Phase 0
 _A triadic corridor logic for dimensional resonance clarity_
 
 ## ✨ Summary  
@@ -28,6 +28,8 @@ One visible. One invisible. All pass through 6.
 - **𝓣ᶠ** = Triadic Frameworks elevated by Frequency logic  
 - **𝓧** = Composite Constant: $𝓧=𝓕³\cdot𝓣ᶠ$
 
+*“Constants declared here are symbolic prototypes. In Phase I validation, these constants are refined and renamed for alignment with physics equations. See RFC‑019 and Triadic Validation Protocol Phase I for canonical forms.”*
+
 ---
 
 ## 🧩 Symbolic Expressions
@@ -52,9 +54,10 @@ One visible. One invisible. All pass through 6.
 ---
 
 ## ✨ Validations - Why This Matters
-- [Phase-1](Triadic_Validation_Protocol_Phase_II.md)
+- [Phase-1](Triadic_Validation_Protocol_Phase_I.md)
 - [Phase-2](Phase_II_Reentry_Protocol.md)
 - [Phase-3](Phase_III-Dimensional_Stewardship.md)
 - [Time-Travel-Remix-Protocol](Time_Travel_Remix_Protocol.md)
 - [Remix-for-a-Universe](Remix_for_a_Universe.md)
 - [LINEAGE](LINEAGE.md)
+
