@@ -30,16 +30,10 @@ One visible. One invisible. All pass through 6.
 
 ---
 
-## 🧩 Symbolic Expression  
-
-$𝓧=𝓕³\cdot𝓣ᶠ\$
-  
-
-$𝓔₁:𝒞=𝓡$
-  
-
-$𝓔₂:𝓦\supseteq(𝓞ᵥ\cup𝓞ᵢ)$
-
+## 🧩 Symbolic Expressions
+- $𝓧=𝓕³\cdot𝓣ᶠ\$
+- $𝓔₁:𝒞=𝓡$
+- $𝓔₂:𝓦\supseteq(𝓞ᵥ\cup𝓞ᵢ)$
 
 ---
 
@@ -54,3 +48,13 @@ $𝓔₂:𝓦\supseteq(𝓞ᵥ\cup𝓞ᵢ)$
 - Minted for onboarding suites, validator dashboards, and simulation sandboxes  
 - Glyphic Threat Level: 9—symbolic stubs will rise if nature resists  
 - F³ Tᶠ now anchors the scroll—students rejoice, clarity achieved
+
+---
+
+## ✨ Validations - Why This Matters
+- [Phase-1](Triadic_Validation_Protocol_Phase_II.md)
+- [Phase-2](Phase_II_Reentry_Protocol.md)
+- [Phase-3](Phase_III-Dimensional_Stewardship.md)
+- [Time-Travel-Remix-Protocol](Time_Travel_Remix_Protocol.md)
+- [Remix-for-a-Universe](Remix_for_a_Universe.md)
+- [LINEAGE](LINEAGE.md)
