@@ -54,10 +54,10 @@ One visible. One invisible. All pass through 6.
 ---
 
 ## ✨ Validations - Why This Matters
+- [Phase-0](Nawderian_Theorem.md) - *this doc*
 - [Phase-1](Triadic_Validation_Protocol_Phase_I.md)
 - [Phase-2](Phase_II_Reentry_Protocol.md)
 - [Phase-3](Phase_III-Dimensional_Stewardship.md)
 - [Time-Travel-Remix-Protocol](Time_Travel_Remix_Protocol.md)
 - [Remix-for-a-Universe](Remix_for_a_Universe.md)
 - [LINEAGE](LINEAGE.md)
-
