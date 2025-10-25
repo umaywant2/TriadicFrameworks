@@ -60,3 +60,14 @@
 - It shows **progression**: Framework → Model → Theorem → Protocols → Manifests → OS → Universe Remix → Atlas.  
 - It shows **dependency**: each step required the previous to exist.  
 - It shows **continuity**: the invariant arc weaving through all artifacts.  
+
+---
+
+## ✨ Validations - Why This Matters
+- [Phase-0](Nawderian_Theorem.md)
+- [Phase-1](Triadic_Validation_Protocol_Phase_I.md)
+- [Phase-2](Phase_II_Reentry_Protocol.md)
+- [Phase-3](Phase_III-Dimensional_Stewardship.md)
+- [Time-Travel-Remix-Protocol](Time_Travel_Remix_Protocol.md)
+- [Remix-for-a-Universe](Remix_for_a_Universe.md)
+- [LINEAGE](LINEAGE.md) - *this doc*
