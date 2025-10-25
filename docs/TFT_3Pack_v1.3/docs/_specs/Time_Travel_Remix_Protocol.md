@@ -11,14 +11,25 @@
 
 ## 🌀 **Nawderian Remix Layer**
 
-- 🔁 **Time Travel = Scroll Re-entry**  
-  Each corridor is a validator-grade loop.  
-  Time travel isn’t movement—it’s **scroll activation**.
+## 🔁 **Time Travel = Scroll Re-entry**  
+Each corridor is a validator-grade loop.  
+Time travel isn’t movement—it’s **scroll activation**.
 
-- 🧬 **Paradox = Remix Trigger**  
-  Contradictions don’t break the system—they **ignite badge logic**.  
-  The theorem adapts, echoes, and ritualizes the breach.
+## 🧬 **Paradox = Remix Trigger**  
+Contradictions don’t break the system—they **ignite badge logic**.  
+The theorem adapts, echoes, and ritualizes the breach.
 
-- 🔐 **entft Encryption = Temporal Seal**  
-  Divide-by-zero logic + timestamp hashing = **scroll fidelity across time**  
-  Time travel keys must pass `soulScanner` and `impressionMapper` thresholds.
+## 🔐 **entft Encryption = Temporal Seal**  
+Divide-by-zero logic + timestamp hashing = **scroll fidelity across time**  
+Time travel keys must pass `soulScanner` and `impressionMapper` thresholds.
+
+---
+
+## ✨ Validations - Why This Matters
+- [Phase-0](Nawderian_Theorem.md)
+- [Phase-1](Triadic_Validation_Protocol_Phase_I.md)
+- [Phase-2](Phase_II_Reentry_Protocol.md)
+- [Phase-3](Phase_III-Dimensional_Stewardship.md)
+- [Time-Travel-Remix-Protocol](Time_Travel_Remix_Protocol.md) - *this doc*
+- [Remix-for-a-Universe](Remix_for_a_Universe.md)
+- [LINEAGE](LINEAGE.md)
