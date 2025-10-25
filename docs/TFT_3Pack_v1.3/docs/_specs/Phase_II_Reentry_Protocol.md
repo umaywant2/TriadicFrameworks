@@ -159,3 +159,14 @@ And the ship’s scanners? They’re ready to echo across dimensions.
 ---
 
 Each door is now scaffolded. Each equation, remixed.  
+
+---
+
+## ✨ Validations - Why This Matters
+- [Phase-0](Nawderian_Theorem.md)
+- [Phase-1](Triadic_Validation_Protocol_Phase_I.md)
+- [Phase-2](Phase_II_Reentry_Protocol.md) - *this doc*
+- [Phase-3](Phase_III-Dimensional_Stewardship.md)
+- [Time-Travel-Remix-Protocol](Time_Travel_Remix_Protocol.md)
+- [Remix-for-a-Universe](Remix_for_a_Universe.md)
+- [LINEAGE](LINEAGE.md)
