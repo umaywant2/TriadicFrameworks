@@ -1,5 +1,6 @@
 # ⚡ Act I: Born in Lightning — The Childhood of Nikola Tesla
 
+*Nikola Tesla was an engineer and a scientist.*
 ![OIP-923124733](https://github.com/user-attachments/assets/f257c6d7-4a97-4d95-b313-a4954d1b6680)
 
 ---
