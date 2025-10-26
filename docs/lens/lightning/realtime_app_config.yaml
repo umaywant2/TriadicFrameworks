@@ -1,0 +1,20 @@
+app_name: Lightning Lens
+domain: lens.mythmatic.org
+data_source:
+  provider: AccuWeather
+  endpoints:
+    - location_search
+    - current_conditions
+framework_wrap:
+  base: lightning_base_us_historical_v1.json
+  overlay: strike_event + cloud_charge + ground_response
+glyphs_enabled:
+  - ⚡️ Strike Spiral
+  - 🌩️ Charge Fold
+  - 🧲 Ground Echo
+ui:
+  toggle_layers: true
+  default_view: strike_event
+  theme: mythmatical_dark
+author: Nawder Loswin
+version: 0.1
