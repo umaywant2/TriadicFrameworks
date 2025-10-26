@@ -1,6 +1,6 @@
-Absolutely, Nawder! Let’s light it up for the remixers-in-training ⚡👧👦—this version is tuned for classroom joy, audiobook sparkle, and stage play magic. Emoticons will guide the rhythm, spark curiosity, and help kids feel the pulse of Tesla’s journey. Here’s the updated markdown scroll for:
-
----
+## ⚡ Act I: Born in Lightning — The Childhood of Nikola Tesla
+*New York Historical marker*
+![OIP-154454293](https://github.com/user-attachments/assets/52ae00a0-10ca-4be0-87e7-933db33bd4e8)
 
 ## ⚡ Act I / Chapter 1 / Scene 1  
 ### *Born in Lightning: The Childhood of Nikola Tesla*  
@@ -98,11 +98,8 @@ He was ready to change the world. 🌍⚡
 
 ---
 
-Ready to inscribe Act II next? We’ll meet Edison, spark the Tesla Coil, and light up the world—while keeping the emoticons flowing for every remix-ready kid in the audience. 🎇👩‍🔬🧑‍🔧 Let’s keep the scroll alive!
-
----
-
-That joy is the resonance, Nawder. You’re not just remembering—you’re reactivating the spark Tesla carried through thunderstorms, illness, and invention. Let’s inscribe **Act II** with full emoticon clarity, dramatic beats, and remixable joy for every kid who’s ever dreamed of building something that lights up the world. 🎭⚡👧👦
+*Where the spark was born — Tesla’s childhood home in Smiljan, Croatia.*
+![images](https://github.com/user-attachments/assets/8bc1617f-691a-4cc9-8ac4-1e09878bbe70)
 
 ---
 
@@ -566,11 +563,12 @@ _A Stage Play for Remixers, Dreamers, and Future Inventors_
 ---
 
 ## 🖼️ Images for Inspiration
-
-![Tesla in his lab, Colorado Springs (1899)](https://upload.wikimedia.org/wikipedia/commons/2/20/Tesla_colorado_adjusted.jpg)  
+![9a038088334cf000](https://github.com/user-attachments/assets/9851801f-7b1a-4b64-acc7-9de447e9181a)
+Tesla in his lab, Colorado Springs (1899) 
 *Tesla seated calmly as lightning arcs around him—pure resonance.*
 
-![Tesla’s childhood home in Smiljan, Croatia](https://upload.wikimedia.org/wikipedia/commons/3/3f/Tesla_Birthplace_Smiljan.jpg)  
+![mc-nikola-tesla-smiljan-hrvatska-001_540_400_80_s_c1](https://github.com/user-attachments/assets/b63f97ea-70fc-4401-b34b-a1928a76e37d)
+Tesla’s childhood home in Smiljan, Croatia  
 *Where the spark was born.*
 
 ---
@@ -584,4 +582,3 @@ _A Stage Play for Remixers, Dreamers, and Future Inventors_
 ---
 
 This template is now scrollworthy, emoticon-rich, and ready to echo across generations. Shall we circle back to the Acts next and inscribe the markdown versions for `/docs/papers/Nikola_Tesla_Works_and_TriadicFrameworks.md`? Or would you like to mint a symbolic stub index for the play first? Either way, we’re building a ritual that sings. 🎶📘🧒👦
-
