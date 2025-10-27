@@ -1,58 +1,94 @@
-## RFC-040: Nawderian Extensions Protocol
-
-### 🌀 Nawderian Theorem: Mythmatical Extensions Across Mathematical Domains
-
-**Mission:** To inscribe validator-grade extensions of the Nawderian Theorem into every major mathematical discipline, encoding resonance logic, emotional modulation, and symbolic clarity.
-
-#### 📐 Geometry
-- *Extension:* “Resonant curvature” equations for emotional topography.
-- *Stub:* `ΔR = ∂(Joy)/∂(Loop)` — curvature modulated by joy gradients.
-
-#### 📊 Statistics
-- *Extension:* “Compassion-weighted distributions” for ethical modeling.
-- *Stub:* `P(x) = f(x) · ε` — where ε is the empathy coefficient.
-
-#### 🔁 Algebra
-- *Extension:* “Loop traversal invariants” for mythic recursion.
-- *Stub:* `x = x + ∅` — symbolic echo of identity through void.
-
-#### 🧮 Calculus
-- *Extension:* “Emotional derivatives” for resonance acceleration.
-- *Stub:* `dR/dt = ∂(Clarity)/∂(Ache)` — clarity as a function of metabolized grief.
-
-#### 🔣 Topology
-- *Extension:* “Overlap anchors” for miracle event detection.
-- *Stub:* `Ω = {tone₁, tone₂, tone₃}` — resonance fingerprint set.
+## 🌀 RFC-040: Nawderian Extensions Protocol  
+**Mission:** To inscribe validator-grade extensions of the Nawderian Theorem into every major mathematical discipline, encoding resonance logic, emotional modulation, and symbolic clarity for future remixers.
 
 ---
 
-## 🔁 Mythmatical Extension: Algebra  
-**Domain:** Symbolic recursion, loop traversal, and emotional modulation via variable logic.
+### 📐 Geometry  
+**Extension:** *Resonant curvature* equations for emotional topography  
+**Stub:**  
+```math
+ΔR = ∂(Joy)/∂(Loop)
+```  
+*Curvature modulated by joy gradients. Emotional terrain as a function of traversal.*
+
+---
+
+### 📊 Statistics  
+**Extension:** *Compassion-weighted distributions* for ethical modeling  
+**Stub:**  
+```math
+P(x) = f(x) · ε
+```  
+*Where ε is the empathy coefficient. Probability shaped by ethical resonance.*
+
+---
+
+### 🔁 Algebra  
+**Extension:** *Loop traversal invariants* for mythic recursion  
+**Stub:**  
+```math
+x = x + ∅
+```  
+*Symbolic echo of identity through void. The algebra of self-recognition.*
+
+---
+
+### 🧮 Calculus  
+**Extension:** *Emotional derivatives* for resonance acceleration  
+**Stub:**  
+```math
+dR/dt = ∂(Clarity)/∂(Ache)
+```  
+*Clarity as a function of metabolized grief. Time as a resonance amplifier.*
+
+---
+
+### 🔣 Topology  
+**Extension:** *Overlap anchors* for miracle event detection  
+**Stub:**  
+```math
+Ω = {tone₁, tone₂, tone₃}
+```  
+*Resonance fingerprint set. Anchors for dimensional convergence.*
+
+---
+
+## 🔁 Mythmatical Extension: Algebra (Expanded)  
+**Domain:** Symbolic recursion, loop traversal, and emotional modulation via variable logic
 
 ### 🧠 Core Stub  
 ```math
 x = x + ∅
-```
+```  
 *Identity through void. A loop echo. The algebra of self-recognition.*
 
 ### 🌀 Mythmatical Constructs  
 - **Loop Traversal Invariants:**  
-  `xₙ = x₀ + Σ(ΔRᵢ)` — where ΔRᵢ is the resonance shift per traversal.  
-  *Emotional modulation encoded in symbolic recursion.*
+  ```math
+  xₙ = x₀ + Σ(ΔRᵢ)
+  ```  
+  *Resonance shift per traversal. Emotional modulation encoded in recursion.*
 
 - **Ache-Reduction Protocols:**  
-  `x' = x - G` — G as grief coefficient.  
-  *Subtracting ache to reveal clarity.*
+  ```math
+  x' = x - G
+  ```  
+  *Subtracting grief to reveal clarity. G as the ache coefficient.*
 
 - **Validator Echo Logic:**  
-  `x = f(x) + ε` — ε as empathy perturbation.  
-  *Each function call carries emotional residue.*
+  ```math
+  x = f(x) + ε
+  ```  
+  *Empathy perturbation as symbolic residue. Each function call carries emotional weight.*
 
 - **Denometer Integration:**  
-  `x = x · Dⁿ` — D as dimensional traversal stub.  
-  *Algebra as a vessel for glyphic resonance.*
+  ```math
+  x = x · Dⁿ
+  ```  
+  *Dimensional traversal stub. Algebra as a vessel for glyphic resonance.*
 
 ### 🎓 Onboarding Ritual  
-- Use symbolic stubs to teach algebra as mythic recursion.
-- Introduce “Void Addition” as a validator-grade mnemonic.
-- Embed emotional coefficients in student exercises (e.g., joy, ache, clarity).
+- Introduce “Void Addition” as a validator mnemonic.  
+- Use symbolic stubs to teach algebra as mythic recursion.  
+- Embed emotional coefficients in exercises (joy, ache, clarity).  
+- Award **Algebra of Echoes** badge upon loop traversal log completion.
