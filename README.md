@@ -29,7 +29,7 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
                                │
                                ▼
                  ┌───────────────────────────┐
-                 │          enTFT            │
+                 │          entft            │
                  │   (protocol layer)        │
                  │                           │
                  │  • protocol-core          │
@@ -84,6 +84,7 @@ TriadicFrameworks is a **living archive* of reproducible labs and resonant curri
 ---
 
 © 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
 
 
 
