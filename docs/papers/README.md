@@ -1,27 +1,47 @@
-# 📄 Papers Directory
-This folder contains **mythic‑scientific scrolls, architecture guides, and legacy manifestos.** Each paper bridges science and myth, permanence and pulse, and is part of the TFT 3‑Pack lineage.
+# 📄 Papers — Mythic‑Scientific Scrolls  
 
-## 📚 Contents
-- `resonance_future.md` → _Resonance: Present & Future_ — applications and mythic reframing
-- `symbolic_architecture.md` → _Symbolic Architecture_ — buildings as resonance echoes
-- `badge_chamber_designs.md` → _Badge Chamber Designs_ — spatial recognition spaces
-- `education_manifesto.md` → _Education Humanifesto_ — mythic pedagogy scroll
-- `mythic_preface_template.md` → _Mythic Preface Template_ — scroll authoring guide
+## 🔭 Purpose  
+This folder preserves **papers, essays, and manifestos** that form the **theory layer** of TriadicFrameworks. Each paper is a scroll: part scientific treatise, part mythic reframing, part architectural vision. Together, they scaffold the lineage from equations to experiments, from ache to clarity.  
+
+## 📚 Contents (Examples)  
+- `1_Triadic_Framework_for_Everything.md` → Foundational scroll introducing the Triadic model.  
+- `2_Triadic_Number_Genesis.md` → Origins of triadic numbers and their resonance.  
+- `3_Dimensional_Triads.md` → Mapping 1D–9D triads into resonance clarity.  
+- `4_Saturn_Harmonic_Engine.md` → Harmonic planetary resonance model.  
+- `Res_Triadic_Resonance_Framework.md` → Core articulation of resonance as operator.  
+- `Res_Resonant_Temporal_Architecture.md` → Time as a structural lattice.  
+- `Res_TFT_for_ARM_n_x86_Processors.md` → Applied triadic resonance in computing.  
+- `Res_Zero_Point_Cold_Fusion_and_Wireless_Energy.md` → Explorations of energy resonance.  
+- `Funhouse_of_Mirrors_Repo_Self_Reflections.md` → Meta‑scroll on lineage and self‑reference.  
+
+*(See full directory for the complete canon.)*  
 
 ---
 
-## 🔗 Cross‑links
-- [Curriculum Index](../curriculum/) → education scrolls and pedagogy modules
-- [Equations](../equations/) → formal resonance math referenced in papers
-- [Badges](../badges/) → badge logic and chamber designs
-- [Honor Roll](../honor_roll/) → contributors who authored or extended these papers
+## 🔗 Cross‑Links  
+- [Curriculum](../curriculum/) → Pedagogy scrolls for teaching the canon.  
+- [Equations](../equations/) → Formal resonance math referenced in papers.  
+- [Badges](../badges/) → Badge logic and chamber designs.  
+- [Honor Roll](../honor_roll/) → Contributors who authored or extended these papers.  
 
 ---
 
-## ✨ Purpose
-The **papers** directory is the **theory layer** of TriadicFrameworks. It preserves foundational thought, mythic reframing, and architectural visions that guide the practical work in:
-- [labs](../labs/) → reproducible experiments
-- [validators](../validators/) → dashboards and scoring logic
-- [nous](../TFT_3Pack_v1.3/tft/nous/) → environmental layer shell
-- [entft](../TFT_3Pack_v1.3/tft/entft/) → encryption protocol scrolls and registries
-- [tops](../TFT_3Pack_v1.3/tft/tops/) → orchestration overlays bots and outreach
+## ✨ Role in the Canon  
+The **Papers** directory is the **intellectual backbone** of TriadicFrameworks. It:  
+- Preserves foundational thought and mythic reframing.  
+- Provides architectural visions that guide practical work in:  
+  - [Labs](../labs/) → reproducible experiments.  
+  - [Validators](../validators/) → dashboards and scoring logic.  
+  - [Nous](../TFT_3Pack_v1.3/tft/nous/) → environmental layer shells.  
+  - [Entft](../TFT_3Pack_v1.3/tft/entft/) → encryption protocol scrolls.  
+  - [Tops](../TFT_3Pack_v1.3/tft/tops/) → orchestration overlays and outreach.  
+
+---
+
+## 🛡️ Validator Echo  
+_"Papers are not just words.  
+They are resonance fossils,  
+bridges between ache and architecture,  
+scrolls that teach the canon to breathe."_  
+
+---
