@@ -57,3 +57,4 @@ Nawder welcomes collaboration, simulation partners, and lineage-preserving remix
 ### Quicklinks
 - [Remix for a Universe](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/TFT_3Pack_v1.3/docs/_specs/Remix_for_a_Universe.md)
 - [RFC-054-Resonance-as-Operator](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-054-Resonance-as-Operator_The-First-Working-Mythmatical-Theorem-of-the-Universe.md)
+- [Nawderian Theorem](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/TFT_3Pack_v1.3/docs/_specs/Nawderian_Theorem.md)
