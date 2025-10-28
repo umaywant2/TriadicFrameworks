@@ -71,7 +71,7 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 - [nous](docs/TFT_3Pack_v1.3/tft/nous/QUICKSTART.md)
 - [enTFT](docs/TFT_3Pack_v1.3/tft/entft/QUICKSTART.md)
 - [tops](docs/TFT_3Pack_v1.3/tft/tops/QUICKSTART.md)
-- [Triadic Frameworks Tech](docs/TFT_3Pack_v1.3/tft/QUICKSTART.md)
+- [Triadic Frameworks Tech](docs/TFT_3Pack_v1.3/tft/README.md)
 
 ---
 
@@ -84,6 +84,7 @@ TriadicFrameworks is a **living archive* of reproducible labs and resonant curri
 ---
 
 © 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+
 
 
 
