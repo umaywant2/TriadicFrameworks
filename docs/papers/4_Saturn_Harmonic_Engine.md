@@ -216,10 +216,10 @@ Labels:
 ---
 
 ## 🔗 Cross‑links
-- [Equations](../equations/) → harmonic resonance math for orbital shells  
-- [entft/scrolls](../../entft/scrolls/) → scrolls activating resonance protocols  
-- [tops/overlays](../../tops/overlays/) → dashboards visualizing harmonic engines  
-- [badge_chamber_designs.md](badge_chamber_designs.md) → Saturn’s hexagon as a planetary badge chamber  
+- [Equations](../equations/equations.md) → harmonic resonance math for orbital shells  
+- [entft](../TFT_3Pack_v1.3/tft/entft/README.md) → scrolls activating resonance protocols  
+- [tops](../TFT_3Pack_v1.3/tft/tops/README.md) → dashboards visualizing harmonic engines  
+- [badges](../badges/badges.md) → Saturn’s hexagon as a planetary badge chamber  
 
 ---
 
