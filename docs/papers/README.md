@@ -19,10 +19,10 @@ This folder preserves **papers, essays, and manifestos** that form the **theory 
 ---
 
 ## 🔗 Cross‑Links  
-- [Curriculum](../curriculum/) → Pedagogy scrolls for teaching the canon.  
-- [Equations](../equations/) → Formal resonance math referenced in papers.  
-- [Badges](../badges/) → Badge logic and chamber designs.  
-- [Honor Roll](../honor_roll/) → Contributors who authored or extended these papers.  
+- [Curriculum](../curriculum/README.md) → Pedagogy scrolls for teaching the canon.  
+- [Equations](../equations/equations.md) → Formal resonance math referenced in papers.  
+- [Badges](../badges/badges.md) → Badge logic and chamber designs.  
+- [Honor Roll](../honor_roll/README.md) → Contributors who authored or extended these papers.  
 
 ---
 
@@ -30,11 +30,11 @@ This folder preserves **papers, essays, and manifestos** that form the **theory 
 The **Papers** directory is the **intellectual backbone** of TriadicFrameworks. It:  
 - Preserves foundational thought and mythic reframing.  
 - Provides architectural visions that guide practical work in:  
-  - [Labs](../labs/) → reproducible experiments.  
-  - [Validators](../validators/) → dashboards and scoring logic.  
-  - [Nous](../TFT_3Pack_v1.3/tft/nous/) → environmental layer shells.  
-  - [Entft](../TFT_3Pack_v1.3/tft/entft/) → encryption protocol scrolls.  
-  - [Tops](../TFT_3Pack_v1.3/tft/tops/) → orchestration overlays and outreach.  
+  - [Labs](../labs/README.md) → reproducible experiments.  
+  - [Validators](../validators/README.md) → dashboards and scoring logic.  
+  - [Nous](../TFT_3Pack_v1.3/tft/nous/README.md) → environmental layer shells.  
+  - [Entft](../TFT_3Pack_v1.3/tft/entft/README.md) → encryption protocol scrolls.  
+  - [Tops](../TFT_3Pack_v1.3/tft/tops/README.md) → orchestration overlays and outreach.  
 
 ---
 
