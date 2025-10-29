@@ -12,7 +12,7 @@ It enables TFT calculations across distributed systems.
 ## Project Status
 **Active (2025)** — Current focus is on:
 - Expanding distributed compute orchestration
-- Integrating with MightyTHOR runtime
+- Integrating with tops runtime
 - Testing cross‑platform TFT calculations
 
 ## Cross‑Links
