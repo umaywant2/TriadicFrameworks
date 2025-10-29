@@ -19,7 +19,7 @@ This folder preserves **papers, essays, and manifestos** that form the **theory 
 ---
 
 ## 🔗 Cross‑Links  
-- [Curriculum](../curriculum/README.md) → Pedagogy scrolls for teaching the canon.  
+- [Curriculum](../curriculum/triadic_curriculum_index.md) → Pedagogy scrolls for teaching the canon.  
 - [Equations](../equations/equations.md) → Formal resonance math referenced in papers.  
 - [Badges](../badges/badges.md) → Badge logic and chamber designs.  
 - [Honor Roll](../honor_roll/README.md) → Contributors who authored or extended these papers.  
