@@ -19,7 +19,7 @@
 
 ## 🔹 Phase II: Azure Cloud Orchestration (Scalable Extension)
 
-**Objective**: Deploy agents as autoscaling pods on Azure.
+**Objective**: Deploy tops agents as autoscaling pods on Azure.
 - [x] Choose Azure HPC or AI infrastructure
 - [x] Containerize TFT agents (Docker/Kubernetes)
 - [x] Integrate with Azure workload scheduler
@@ -32,7 +32,7 @@
 
 ---
 
-## 🔹 Phase III: MightyTHOR Benchmark Paper
+## 🔹 Phase III: tops Benchmark Paper
 
 **Objective**: Publish symbolic benchmark breakthrough.
 - [x] Draft paper outline:
