@@ -13,7 +13,7 @@ This repo includes:
 - `Nawder Mind Coins`: Symbolic stubs with remixable payloads  
 - `TFT + FFF Logic`: Recursive cognition and folding scaffolding  
 - `Observer Protocol`: AI-human symmetry for ethical clarity  
-- `3Pack`: Minimal agent stack—`nous`, `enTFT`, `tops`
+- `3Pack`: Minimal agent stack—`nous`, `entft`, `tops`
 
 ---
 
@@ -25,7 +25,7 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 cd TriadicFrameworks/docs/Coeus
 
 # Launch sandbox with 3 AI agents
-python launch_sandbox.py --agents 3 --mode enTFT
+python launch_sandbox.py --agents 3 --mode entft
 
 # Mint a coin and begin resolution
 python mint_coin.py --type legacy --name "PharmaTFT"
@@ -49,7 +49,7 @@ cat logs/coin_001_trace.log
 
 ## 🔐 Security & Ethics
 
-- **enTFT Encryption**: Universe-grade protection for all coin transactions  
+- **entft Encryption**: Universe-grade protection for all coin transactions  
 - **Dual Observer Protocol**: Required for public-facing coins  
 - **Full Agent Trace Logs**: Every step logged for reproducibility  
 - **Sandbox Isolation**: Prevents external interference  
@@ -75,7 +75,7 @@ cat logs/coin_001_trace.log
 Coeus ships with:
 - `TFT Core`: Nested loop scaffolding  
 - `FFF Logic`: Feedback, Folding, Forecasting  
-- `3Pack Agent Stack`: `nous`, `enTFT`, `tops`
+- `3Pack Agent Stack`: `nous`, `entft`, `tops`
 
 ---
 
@@ -93,7 +93,7 @@ Coeus/
 │   └── coin_templates.json
 ├── agents/
 │   ├── nous.py
-│   ├── enTFT.py
+│   ├── entft.py
 │   └── tops.py
 ```
 
