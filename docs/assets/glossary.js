@@ -1,5 +1,5 @@
 (async () => {
-  const GLOSSARY_URL = "https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/assets/glossary.json";
+  const GLOSSARY_URL = "https://www.triadicframeworks.org/assets/glossary.json";
 
   const container = document.createElement("div");
   container.id = "glyph-field";
