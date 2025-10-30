@@ -7,7 +7,7 @@
 | 🖼️ | **Overlays** | Dashboards and visualizations of resonance flows. |
 | 🤖 | **Bots** | Lightweight agents inside *nous*. |
 | 🧑‍🚀 | **Agents** | Higher-order *nous* shell orchestrators in *tops*. |
-| 🦶 | **Hooks** | Extensions that adapt *enTFT* encryption to new contexts. |
+| 🦶 | **Hooks** | Extensions that adapt *entft* encryption to new contexts. |
 | 🗂️ | **Registry** | JSON/YAML indexes mapping glyphs, badges, scrolls, or agents. |
 | 🎶 | **Resonance** | Harmonic alignment across glyphs, folds, and lineage. |
 | 🟩 | **Green-zone** | Stable clarity, validated resonance. |
