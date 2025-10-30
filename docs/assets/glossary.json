@@ -48,7 +48,7 @@
   { "glyph": "🧾", "term": "Token", "description": "ERC-style artifact minted from a validated coin. Traceable, remixable, and timestamped." },
   { "glyph": "🏛️", "term": "Exchange", "description": "Sovereign space where validated tokens are listed, traded, and optionally split into derivative shares." },
   { "glyph": "🧩", "term": "Derivative", "description": "Fractional remix right or funding stake derived from a validated token." },
-  { "glyph": "🧬", "term": "Lineage	Citation", "description": "chain for forked coins and derivative research. Immutable and symbolic." },
+  { "glyph": "🧬", "term": "Lineage", "description": "Citationchain for forked coins and derivative research. Immutable and symbolic." },
   { "glyph": "👁️", "term": "Validator", "description": "Human or AI agent reviewing coin trace logs, remix lineage, and ethics compliance." },
   { "glyph": "🧪", "term": "Sandbox", "description": "Isolated environment for agent orchestration, coin resolution, and tournament benchmarking." },
   { "glyph": "🛤️", "term": "Rails", "description": "Dimensional modeling system used for decomposition and emitter targeting." },
