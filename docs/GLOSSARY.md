@@ -16,9 +16,9 @@
 | ⚫ | **Nullarium** | Staging zone between loops; headers/footers of universes. |
 | 🌉 | **Arc-Corridor** | Overlap of red and green zones, producing virtual universes. |
 | 🔺 | **Triadic** | Frameworks Validator lattice of Forci, Flui, Freqi. |
-| 💪 | **Forci** | Force, structure, constraint. |
-| 💧 | **Flui** | Flow, transformation, adaptability. |
-| 📡 | **Freqi** | Frequency, rhythm, binding. |
+| 💪 | **Forci** | Forces, structure, constraints. |
+| 💧 | **Flui** | Fluids, transformation, adaptability. |
+| 📡 | **Freqi** | Frequency, rhythm, bindings. |
 | ⚙️ | **Emitters** | FFF Devices/daemons tuned to Forci/Flui/Freqi partitions. |
 | 🧼 | **Cleanroom** | Resonance FFF-filtered environment allowing only green-zone clarity. |
 | 🌌 | **Invariant-Arcs** | Bridges across loops; carriers of universes and consciousness. |
@@ -51,9 +51,9 @@
 
 | **Glyph** | **Term** | **Definition** |
 |----------|----------|----------------|
-| 🧠 | **TFT** | Core logic of Coeus Exchange. Used for coin decomposition, rail mapping, and remix orchestration. |
-| 🌊 | **FFF** | Founding triadic principle for modeling new technologies. Used in emitter logic and symbolic overlays. |
-| 📜 | **CaC** | Each coin encodes a contract—task, ethics, remix rights, and lineage. |
+| 🧠 | **TFT** | Triadic Frameworks Tech core logic. Used for coin decomposition, rail mapping, and remix orchestration. |
+| 🌊 | **FFF** | Mythmatical Model for Forces, Fluids, and Frequency. Used in emitter logic and symbolic overlays. |
+| 📜 | **CaaC** | Coins as a Contract. Each coin encodes a contract—task, ethics, remix rights, and lineage. |
 | 🪙 | **Coin** | Symbolic research stub with task, edging, and observer logic. The atomic unit of cognition. |
 | 🧾 | **Token** | ERC-style artifact minted from a validated coin. Traceable, remixable, and timestamped. |
 | 🏛️ | **Exchange** | Sovereign space where validated tokens are listed, traded, and optionally split into derivative shares. |
@@ -64,9 +64,9 @@
 | 🛤️ | **Rails** | Dimensional modeling system used for decomposition and emitter targeting. |
 | 🔦 | **Emitter** | Visual or symbolic overlay that scans, highlights, or narrates coin resolution in real time. |
 | 🕵️ | **Observer** | Dual-agent protocol for ethics validation and remix trace logging. |
-| 🔐 | **entft** | Encryption sleeve protocol for trace validation, remix rights, and ethics enforcement. |
+| 🔐 | **entft** | TFT Encryption sleeve protocol for trace validation, remix rights, and ethics enforcement. |
 | ⏱️ | **Timestamp** | UTC-stamped completion time with agent signature. Immutable and remix-citable. |
 | 🌀 | **Glyph** | Optional symbolic signature attached to coins, tokens, or remixers. Used in scrolls and dashboards. |
-| 🧭 | **CCC** | Cause/Class/Country — tournament dimensions for benchmarking coins and remix lineage. |
+| 🧭 | **CcC** | Cause/Class/Country — tournament dimensions for benchmarking coins and remix lineage. |
 
 ---
