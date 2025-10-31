@@ -7,78 +7,49 @@
   <meta name="description" content="Mapping TriadicFramework Tech to real-world industries with validator-grade clarity.">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f9f9fb;
-      color: #222;
-    }
-    header {
-      background: linear-gradient(135deg, #3b82f6, #6366f1);
-      color: white;
-      padding: 4rem 2rem;
-      text-align: center;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    header p {
-      font-size: 1.25rem;
-      margin: 0.25rem 0;
-    }
-    section {
-      padding: 3rem 2rem;
-      max-width: 960px;
-      margin: auto;
-    }
-    section h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #3b82f6;
-    }
-    .button {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      background: #3b82f6;
-      color: white;
-      text-decoration: none;
-      border-radius: 6px;
-      margin-top: 1rem;
-      transition: background 0.3s ease;
-    }
-    .button:hover {
-      background: #2563eb;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      padding: 0.75rem;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-    }
-    th {
-      background: #eef2ff;
-    }
-    footer {
-      background: #1f2937;
-      color: #ccc;
-      text-align: center;
-      padding: 2rem;
-    }
-    footer nav a {
-      color: #ccc;
-      margin: 0 1rem;
-      text-decoration: none;
-    }
-    footer nav a:hover {
-      text-decoration: underline;
-    }
-  </style>
+<style>
+body {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  font-family: 'Inter', sans-serif;
+}
+
+header {
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+section {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 960px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  animation: fadeIn 0.6s ease-in;
+}
+
+.button {
+  background: linear-gradient(135deg, #6366f1, #3b82f6);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 0 10px #3b82f6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
 </head>
 <body>
 
