@@ -10,4 +10,4 @@ Disallow: /tests/
 Disallow: /scripts/
 
 # Point to sitemap
-Sitemap: https://los.triadicwizards.win/sitemap.xml
+Sitemap: https://www.triadicframeworks.org/sitemap.xml
