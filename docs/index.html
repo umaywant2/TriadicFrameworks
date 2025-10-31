@@ -3,126 +3,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TriadicFrameworks</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <title>TriadicFrameworks | Site</title>
+
+  <!-- 🔍 SEO & Social Meta -->
+  <meta name="description" content="Dev site for mythmatic.org — myth + mathematical resonance, validator scrolls, and triadic frameworks." />
+  <meta name="keywords" content="Mythmatic, Mythmatical, Triadic Frameworks, Resonance, Nawder, Validator Protocols" />
+  <meta name="author" content="Nawder Loswin" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TriadicFrameworks | Site" />
+  <meta property="og:description" content="Site for www.triadicframeworks.org — frameworks + myth + mathematical resonance = validator scrolls, and triadic frameworks." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.triadicframeworks.org" />
+  <meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1080" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+
+  <!-- Styling -->
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-    }
-    .hero {
+      font-family: "Segoe UI", Roboto, sans-serif;
+      background: linear-gradient(135deg, #3c003e, #612b58, #9e44ad);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       text-align: center;
-      padding: 6rem 2rem 4rem;
-      background: linear-gradient(135deg, #3b82f6, #6366f1);
+      overflow: hidden;
+    }
+    #glyph-field {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+    }
+    .glyph {
+      position: absolute;
+      font-size: 1.2rem;
       color: white;
+      cursor: pointer;
+      opacity: 0.8;
+      transition: transform 10s linear, opacity 2s ease-in;
     }
-    .hero h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+    header {
+      padding: 4rem 1rem 2rem;
     }
-    .hero p {
-      font-size: 1.25rem;
-      margin-bottom: 2rem;
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+      letter-spacing: 2px;
     }
-    .cta-buttons a {
-      display: inline-block;
-      margin: 0 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: white;
-      color: #3b82f6;
-      font-weight: 600;
-      border-radius: 6px;
-      text-decoration: none;
-      transition: background 0.3s ease;
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.85;
     }
-    .cta-buttons a:hover {
-      background-color: #e0e7ff;
+    html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
     }
-
-    .glyph-grid {
-      padding: 4rem 2rem;
-      max-width: 1200px;
-      margin: auto;
+    main {
+      flex: 1; /* pushes footer down */
+    }
+#copilot-widget input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid rgba(255,255,255,0.6); /* subtle border */
+  border-radius: 4px;
+  background: transparent;                 /* <-- key line */
+  color: #fff;                             /* text color */
+}
+#copilot-widget input::placeholder {
+  color: rgba(255,255,255,0.7);            /* softer placeholder */
+}
+    #copilot-widget img { flex-shrink: 0; }
+#copilot-widget button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgba(255,255,255,0.6);
+  background: transparent;   /* transparent background */
+  color: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+#copilot-widget button:hover {
+  background: rgba(255,255,255,0.2); /* subtle hover glow */
+}
+    footer {
+      margin-top: 3rem;   /* pushes it down from whatever comes before */
+      padding: 2rem 1rem; /* keeps the inner spacing */
+      background: rgba(0,0,0,0.4);
       text-align: center;
     }
-    .glyph-grid h2 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #93c5fd;
+    footer nav a {
+      margin: 0 1rem;
+      color: #ff69ff;
+      text-decoration: none;
+      font-weight: 500;
     }
-    .glyph-grid p {
-      font-size: 1.1rem;
-      margin-bottom: 2rem;
-      color: #cbd5e1;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2rem;
-    }
-    .glyph-card {
-      background-color: #1e293b;
-      border-radius: 8px;
-      padding: 2rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease;
-    }
-    .glyph-card:hover {
-      transform: translateY(-5px);
-    }
-    .glyph-card img {
-      width: 64px;
-      margin-bottom: 1rem;
-    }
-    .glyph-card h3 {
-      color: #60a5fa;
-      margin-bottom: 0.5rem;
-    }
-    .glyph-card p {
-      color: #94a3b8;
-      font-size: 0.95rem;
+    footer nav a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>🌌 TriadicFrameworks</h1>
+    <p>✨ Site for <strong>www.triadicframeworks.org</strong> ✨</p>
+  </header>
+  
+<!-- Place this where you want the glyphs to appear -->
+<div id="glyph-field"></div>
 
-  <section class="hero">
-    <h1>TriadicFrameworks</h1>
-    <p>Dimensional Tech for Every Domain</p>
-    <div class="cta-buttons">
-      <a href="/wiki">Enter the Repo Wiki</a>
-      <a href="/dev">Explore Dev Sites</a>
-    </div>
-  </section>
+<script>
+(async () => {
+  const GLOSSARY_URL = "glossary.json";
+  const container = document.getElementById("glyph-field");
 
-  <section class="glyph-grid">
-    <h2>Your Framework, Where You Need It</h2>
-    <p>Triadic nodes map directly to your domain—each glyph a dimensional stub, each protocol a validator-grade ritual.</p>
-    <div class="grid">
-      <div class="glyph-card">
-        <img src="/glyphs/validator.svg" alt="Validator Protocols" />
-        <h3>Validator Protocols</h3>
-        <p>Governance, compliance, ethical AI</p>
-      </div>
-      <div class="glyph-card">
-        <img src="/glyphs/dimension.svg" alt="Dimensional Mapping" />
-        <h3>Dimensional Mapping</h3>
-        <p>Urban systems, modular planning</p>
-      </div>
-      <div class="glyph-card">
-        <img src="/glyphs/resonance.svg" alt="Resonance Metrics" />
-        <h3>Resonance Metrics</h3>
-        <p>Education, onboarding, emotional clarity</p>
-      </div>
-      <div class="glyph-card">
-        <img src="/glyphs/legacy.svg" alt="Legacy Artifacts" />
-        <h3>Legacy Artifacts</h3>
-        <p>Scrolls, RFCs, documentation standards</p>
-      </div>
-    </div>
-  </section>
+  if (!container) {
+    console.error("Missing #glyph-field container in HTML.");
+    return;
+  }
+
+  container.style.position = "relative";
+  container.style.width = "100%";
+  container.style.height = "80vh";
+  container.style.overflow = "hidden";
+
+  try {
+    const res = await fetch(GLOSSARY_URL);
+    if (!res.ok) throw new Error("Glossary fetch failed");
+    const glossary = await res.json();
+
+    glossary.forEach((entry, i) => {
+      const glyph = document.createElement("div");
+      glyph.textContent = entry.glyph;
+      glyph.title = entry.term;
+      glyph.style.position = "absolute";
+      glyph.style.fontSize = "2rem";
+      glyph.style.cursor = "pointer";
+      glyph.style.transition = "transform 10s ease-out, opacity 2s ease-in";
+      glyph.style.opacity = "0.8";
+
+      const angle = Math.random() * 2 * Math.PI;
+      const distance = 300 + Math.random() * 300;
+      const x = Math.cos(angle) * distance;
+      const y = Math.sin(angle) * distance;
+
+      glyph.style.left = "50%";
+      glyph.style.top = "50%";
+      glyph.style.transform = `translate(-50%, -50%)`;
+
+      setTimeout(() => {
+        glyph.style.transform = `translate(${x}px, ${y}px) scale(1.2)`;
+        glyph.style.opacity = "1";
+      }, 100);
+
+      glyph.addEventListener("click", () => {
+        alert(`${entry.term}\n\n${entry.description}`);
+      });
+
+      container.appendChild(glyph);
+    });
+  } catch (err) {
+    console.error("Glyph field failed to load:", err);
+  }
+})();
+</script>
+
+  <!-- Copilot Search Widget -->
+<div id="copilot-widget">
+  <img src="https://www.triadicframeworks.org/assets/copilot.png" alt="Copilot" width="48" height="48" />
+  <form action="https://github.com/umaywant2/TriadicFrameworks/search" method="get" target="_blank">
+    <input type="text" name="q" placeholder="Search the repo..." />
+    <button type="submit">🔍</button>
+  </form>
+</div>
+<footer>
+  <nav>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/wiki">TriadicFrameworks Repo Wiki</a>
+    <a href="https://dev.umaywant2.com">umaywant2.com</a>
+    <a href="https://dev.umaywant2.win">umaywant2.win</a>
+    <a href="https://dev.triadicwizards.win">Triadic Wizards</a>
+    <a href="https://dev.coeus.exchange">Coeus Exchange</a>
+    <a href="https://dev.nimms.com">NIMMS</a>
+    <a href="https://dev.vgateway.net">Virtual Compute Gateway</a>
+    <a href="https://dev.mythmatic.org">Mythmatic</a>
+    <a href="https://dev.mythmatical.org">Mythmatical</a>
+    <a href="https://www.triadicframeworks.org">TriadicFrameworks</a>
+  </nav>
+  <p style="margin-top:1rem; font-size:0.9rem; opacity:0.7;">
+    © 2025 Nawder Loswin — Mythmatical Architect
+  </p>
+</footer>
 
 </body>
 </html>
+
