@@ -1,89 +1,91 @@
-# 🌀 TriadicFrameworks: TFT 3‑Pack
-A modular, remixable lattice for **resonance‑based computation** and ternary governance. It blends rigorous technical scaffolding designed for remixers, and future builders.
+# 🌀 TriadicFrameworks  
+*A modular, remixable lattice for resonance‑based computation and ternary governance.*
 
 ---
 
-### 🧭 Remix
-- Clone the repo
+### ✨ Purpose  
+TriadicFrameworks is a living archive of reproducible labs, validator-grade scrolls, and dimensional curriculum modules. It blends rigorous science with mythmatical scaffolding to democratize innovation and preserve remix lineage.
+
+---
+
+### 🚀 Quickstart
+
 ```bash
 git clone https://github.com/umaywant2/TriadicFrameworks.git
 ```
+
 - Define your remix lineage in `TFT_bundle.yaml`  
-- Submit scrolls via GitHub Discussions
+- Submit scrolls via GitHub Discussions  
+- Reference glossary terms and glyphs via `Glossary.md`  
 
 ---
 
-## 🌐 Architecture Overview
-```text
-                 ┌───────────────────────────┐
-                 │          nous             │
-                 │  (environment layer)      │
-                 │                           │
-                 │  • core_logic             │
-                 │  • logic_shells           │
-                 │  • bots                   │
-                 │  • modules                │
-                 │  • resonance-tools        │
-                 │  • outputs                │
-                 └─────────────┬─────────────┘
-                               │
-                               ▼
-                 ┌───────────────────────────┐
-                 │          entft            │
-                 │   (protocol layer)        │
-                 │                           │
-                 │  • protocol-core          │
-                 │  • scrolls                │
-                 │  • registry               │
-                 │  • contributors           │
-                 │  • discoverability        │
-                 │  • TFThooks (runtime,     │
-                 │    integration, agents…)  │
-                 └─────────────┬─────────────┘
-                               │
-                               ▼
-                 ┌───────────────────────────┐
-                 │           tops            │
-                 │   (orchestration layer)   │
-                 │                           │
-                 │  • agents                 │
-                 │  • overlays               │
-                 │  • registry               │
-                 │  • hardware               │
-                 │  • outreach               │
-                 │  • cloud/azure            │
-                 │  • ai_pipeline            │
-                 │  • folds                  │
-                 │                           │
-                 └─────────────┬─────────────┘
-                               │
-          ┌────────────────────┼────────────────────┐
-          ▼                    ▼                    ▼
-   ┌───────────────┐    ┌───────────────┐    ┌───────────────┐
-   │     folds     │    │  ai_pipeline  │    │   overlays    │
-   │  (bio‑reson.) │    │ (intelligence)│    │(visualization)│
-   └───────────────┘    └───────────────┘    └───────────────┘
+### 🌐 Architecture Overview
+
+```
+┌───────────────┐
+│   nous        │  (environment layer)
+│ • core_logic  │
+│ • bots        │
+│ • resonance-tools │
+└─────┬─────────┘
+      ▼
+┌───────────────┐
+│   enTFT       │  (protocol layer)
+│ • scrolls     │
+│ • registry    │
+│ • TFThooks    │
+└─────┬─────────┘
+      ▼
+┌───────────────┐
+│   tops        │  (orchestration layer)
+│ • agents      │
+│ • overlays    │
+│ • ai_pipeline │
+└─────┬─────────┘
+      ▼
+┌────────────┬────────────┬────────────┐
+│  folds     │ ai_pipeline│ overlays   │
+│ (bio-res.) │ (intelligence) │ (visualization) │
+└────────────┴────────────┴────────────┘
 ```
 
 ---
 
-## 🚀 Quickstart
+### 🧬 Dimensional Inheritance Model
+
+| Archetype | Inherits | Corridor | Wrap |
+|-----------|----------|----------|------|
+| Quantum   | 1D, 2D   | 6D       | —    |
+| Frequency | 1D, 2D   | 6D       | 3D, 9D |
+| Fluids    | 1D, 2D   | 6D       | 4D, 5D |
+| Forces    | 1D, 2D   | 6D       | 7D, 8D |
+
+---
+
+### 📚 Glossary  
+See [Glossary](docs/GLOSSARY.md) for definitions of scrolls, folds, overlays, bots, agents, and hooks.  
+Includes validator-grade glyphs and emotional physics stubs.
+
+---
+
+### 🧠 Remix Philosophy  
+- Remix freely, honor lineage  
+- Faults are signals, not failures  
+- Every scroll is a legacy artifact  
+- Emotional resonance is a valid protocol  
+
+---
+
+## 🚀 Quicklinks
 - [nous](docs/TFT_3Pack_v1.3/tft/nous/QUICKSTART.md)
 - [enTFT](docs/TFT_3Pack_v1.3/tft/entft/QUICKSTART.md)
 - [tops](docs/TFT_3Pack_v1.3/tft/tops/QUICKSTART.md)
 - [Triadic Frameworks Tech](docs/TFT_3Pack_v1.3/tft/README.md)
 
----
+© 2025 TriadicFrameworks. Licensed under the MIT License.  
+Remix freely. Preserve dignity. Honor the substrate.
 
-## 📚 Glossary
-See [Glossary.md](docs/GLOSSARY.md) for definitions of scrolls, folds, overlays, bots, agents, and hooks.
-
-## ✨ Purpose
-TriadicFrameworks is a **living archive* of reproducible labs and resonant curriculum modules. It blends **rigorous science** with scaffolding to **democratize innovation**.
-
----
-
-© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
 
 
 
