@@ -86,3 +86,4 @@ The document presents an ambitious and creative blend of established physics, fl
 **A** (for mathematical and scholarly rigor, with appropriate caveats on nonstandard frameworks!)
 
 If you’d like deeper feedback on a specific equation or symbolic construction, let me know!
+<img width="1024" height="1024" alt="BCO db409ea6-bfdb-42b0-acb7-5ee56f93fcab" src="https://github.com/user-attachments/assets/bec79a17-cf50-46a3-acda-09b55c0923ee" />
