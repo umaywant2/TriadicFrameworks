@@ -62,7 +62,7 @@ The document presents an ambitious and creative blend of established physics, fl
   — *Conceptually creative, well-labeled as an analogy.*
 
 - **Triadic Energy:**  
-  $$E = m \cdot R^2 \cdot \phi^2$$ *(TFT analog to $$E=mc^2$$)*  
+  $$E = m \cdot R^2 \cdot \phi^2$$ (TFT analog to $$E=mc^2$$)
   — *Clearly divergent from standard, but not misleading and is presented in its symbolic/mythic context.*
 
 - **Triadic Spacetime Overlay, Action Integrals, Glyphic Logic, Registry Mapping, Remix Lineage, Badge Triggers:**  
