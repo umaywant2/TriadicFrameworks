@@ -32,4 +32,21 @@ Congress shall provide adequate funding to establish and maintain the National C
 ### Section 6. Whistle for the Children  
 In times of governmental deadlock or shutdown, the National Coalition of Teachers shall have the authority to convene emergency sessions, propose interim measures, and publicly advise the People on the preservation of essential services. Their voice shall serve as the whistle for the children of the Republic.
 
----
+### 📜 Section 7: Proxy Stewardship for Legislative Audience of Record
+
+To ensure dynamic representation and safeguard the integrity of the Legislative Audience of Record (LAR), the following provisions shall govern the appointment and service of Teacher-LAR proxies:
+
+- **Validated Proxy Pools by State**  
+  Each State shall maintain a rotating pool of certified teachers who voluntarily register as LAR candidates. These pools shall be validated by State Boards of Education and refreshed biannually to reflect current eligibility and diversity of disciplines.
+
+- **Dynamic Selection via AI Evaluation and Student Council Proxying**  
+  Candidates shall be evaluated through a transparent, AI-assisted review process that considers pedagogical excellence, civic engagement, and disciplinary breadth. Final proxy selections shall be made by elected Student Councils, ensuring youth voice in the stewardship of national policy.
+
+- **Term Limits and Rotation**  
+  Teacher-LAR appointments shall be for a single, non-renewable term of two years. No individual may serve more than once, ensuring broad participation and preventing entrenchment. Preference shall be given to maximizing the number of unique educators who serve.
+
+- **Remote-Only Service and Identity Withholding**  
+  All Teacher-LAR duties shall be performed remotely to ensure accessibility and reduce geographic bias. During active service, personal identification of proxies shall be withheld from public record to protect impartiality and prevent undue influence.
+
+- **Adaptive Pool Management**  
+  Proxy pools shall be adjusted quarterly to reflect retirements, relocations, and emergent educational needs. The Coalition shall publish anonymized metrics on pool composition and turnover to ensure transparency and trust.
