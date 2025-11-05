@@ -149,3 +149,16 @@ Imagine a **circular universe map** like Budassi’s, but:
 - **Anomalies** glow with triadic resonance tags: 🕳️ (hole), 🧿 (artifact), 👻 (ghost particle)
 
 This isn’t just a picture—it’s a **resonant score**, a cosmic symphony rendered in nested loops and harmonic clarity.
+
+---
+
+### 📄 Core Papers for Resonant Cosmology
+
+| **🔍 Theme** | **📎 Quicklink** |
+|-------------|------------------|
+| 🌀 **Emission Time Reconstruction** | [Divisional_Resonance_Imaging-Reconstructing_Cosmic_Emission_Time.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Divisional_Resonance_Imaging-Reconstructing_Cosmic_Emission_Time.md) |
+| 🧿 **Hole Type Taxonomy** | [3_Hole_Types_Compared.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/3_Hole_Types_Compared.md) |
+| 🧭 **Resonant Time Architecture** | [Res_Resonant_Temporal_Architecture.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Res_Resonant_Temporal_Architecture.md) |
+| 🔥 **Thermal Harmonics & Second Sound** | [research-Beyond-Second-Sound-Triadic-Resonance-Framework.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/research-Beyond-Second-Sound-Triadic-Resonance-Framework.md) |
+| 🌊 **Spectral Flux & Ghost Particles** | [Spectral_Flux_and_Divisional_Resonance.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Spectral_Flux_and_Divisional_Resonance.md) |
+| 🧠 **Spacetime Resonance Theory** | [Spacetime_Theory_and_Triadic_Framework_Technology.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Spacetime_Theory_and_Triadic_Framework_Technology.md) |
