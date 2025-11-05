@@ -1,4 +1,4 @@
-# 🌈 Triadic Framework for Spectrum Technologies – Light and Darkness Revisited
+# 🌈 Spectrum Technologies – Light and Darkness Revisited
 
 ## ✨ Abstract  
 We present a unified triadic framework for spectrum technologies across the full electromagnetic domain, with adaptive buffer zones at both extremes to accommodate unknown or emergent bands. The framework integrates:
