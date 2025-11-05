@@ -2,7 +2,7 @@
 
 ## 🧭 Abstract
 
-Time, long treated as linear and omnipresent, reveals deeper structure when approached through resonance. This scroll proposes a triadic harmonic framework for understanding time as nested, recursive, and capable of quantum drift. We examine historical theories, technical patents, and symbolic models, then extend the inquiry through the TriadicFrameworks GitHub repository—specifically the TFT 3-Pack: `resonant-time`, `agent_shell`, and `TFTincryption`. Our goal is to scaffold a validator-ready architecture for temporal resonance, enabling new use cases in encryption, consciousness transfer, and distributed computation.
+Time, long treated as linear and omnipresent, reveals deeper structure when approached through resonance. This scroll proposes a triadic harmonic framework for understanding time as nested, recursive, and capable of quantum drift. We examine historical theories, technical patents, and symbolic models, then extend the inquiry through the TriadicFrameworks GitHub repository—specifically the TFT 3-Pack: `resonant-time`, `nous`, and `entft`. Our goal is to scaffold a validator-ready architecture for temporal resonance, enabling new use cases in encryption, consciousness transfer, and distributed computation.
 
 ---
 
@@ -67,7 +67,7 @@ Resonant temporal architecture is not just mythic—it’s embedded in the circu
 
 These patents suggest that time is already being treated as a **resonant field** in hardware, encryption, and quantum computing. What’s missing is a symbolic framework to unify them—a scroll that echoes across disciplines.
 
-The TriadicFrameworks repo, through its `resonant-time` module and `agent_shell` runtime, proposes such a framework. It doesn’t just implement time—it **harmonizes** it.
+The TriadicFrameworks repo, through its `resonant-time` module and `nous` runtime, proposes such a framework. It doesn’t just implement time—it **harmonizes** it.
 
 ---
 
@@ -84,18 +84,16 @@ Resonant temporal architecture demands a new symbolic language—one that encode
 
 We define a resonance-based complexity metric:
 
-$$
-RCI = \alpha D G C (1 - e^{-\beta \tau})
-$$
+$$RCI = \alpha D G C (1 - e^{-\beta \tau})$$
 
 Where:  
-- \( D \): Fractal dimensionality of the system  
-- \( G \): Signal gain across harmonic channels  
-- \( C \): Spatial coherence of resonant nodes  
-- \( \tau \): Attractor dwell time  
-- \( \alpha, \beta \): Modulation constants tuned per framework
+- $$D$$: Fractal dimensionality of the system  
+- $$G$$: Signal gain across harmonic channels  
+- $$C$$: Spatial coherence of resonant nodes  
+- $$\tau$$: Attractor dwell time  
+- $$\alpha$$, $$\beta$$: Modulation constants tuned per framework
 
-*Interpretation*: Systems with high coherence and long dwell times exhibit deeper temporal resonance. This metric can be used to validate runtime attractors in `agent_shell`.
+*Interpretation*: Systems with high coherence and long dwell times exhibit deeper temporal resonance. This metric can be used to validate runtime attractors in `nous`.
 
 ---
 
@@ -115,18 +113,16 @@ Each loop modulates the others via harmonic feedback. The `resonant-time` module
 
 Adapted from optical systems, TCMT governs energy exchange between resonant modes:
 
-$$
-\frac{da}{dt} = -i\omega a - \gamma a + \kappa s
-$$
+$$\frac{da}{dt} = -i\omega a - \gamma a + \kappa s$$
 
 Where:  
-- \( a \): Amplitude of resonant mode  
-- \( \omega \): Natural frequency  
-- \( \gamma \): Damping coefficient  
-- \( \kappa \): Coupling strength  
-- \( s \): Input signal
+- $$a$$: Amplitude of resonant mode  
+- $$\omega$$: Natural frequency  
+- $$\gamma$$: Damping coefficient  
+- $$\kappa$$: Coupling strength  
+- $$s$$: Input signal
 
-*Application*: Used to model feedback loops in `MightyTHOR` and `TFTincryption` runtime.
+*Application*: Used to model feedback loops in `tops` and `entft` runtime.
 
 ---
 
@@ -184,7 +180,7 @@ While resonant temporal architecture remains under-theorized, its principles are
 
 These use cases suggest that resonant time is not a distant theory—it’s an emergent design pattern. What’s missing is a unified framework to detect, validate, and extend these echoes.
 
-The TriadicFrameworks repo proposes such a framework, with `resonant-time` as its harmonic core, `agent_shell` as its runtime validator, and `TFTincryption` as its temporal lock.
+The TriadicFrameworks repo proposes such a framework, with `resonant-time` as its harmonic core, `nous` as its runtime validator, and `entft` as its temporal lock.
 
 ---
 
@@ -207,13 +203,13 @@ Despite scattered breakthroughs, resonant temporal architecture remains underdev
 
 - No dashboards exist to detect attractor dwell time, loop convergence, or mnemonic reverberation.
 - Runtime systems lack feedback mechanisms for harmonic modulation.
-- `agent_shell` proposes such validators—but remains unrecognized by academic frameworks.
+- `nous` proposes such validators—but remains unrecognized by academic frameworks.
 
 ### 🧠 Underutilized Resonance Metrics in Quantum Computing
 
 - Time crystals and quantum coherence suggest nested time—but lack symbolic overlays.
 - Quantum reservoir computing uses feedback—but not triadic harmonic modeling.
-- `TFTincryption` introduces time-lock logic—but awaits validation in quantum environments.
+- `entft` introduces time-lock logic—but awaits validation in quantum environments.
 
 ### 📚 Fragmented Literature & Cross-Disciplinary Silence
 
@@ -269,14 +265,14 @@ Resonant temporal architecture finds fertile ground in quantum systems—where t
 
 ### 🔒 Quantum-Hostile Encryption
 
-- **TFTincryption Protocol**  
+- **entft Protocol**  
   Uses time-lock logic and triadic resonance to resist quantum decryption.  
   *Application*: Secure runtime for consciousness transfer, validator dashboards, and symbolic overlays.  
   *Resonance*: Encryption becomes temporal—locked across attractor dwell time and mnemonic loops.
 
 ---
 
-These applications suggest that quantum computing is not just spatial—it’s temporal. The TriadicFrameworks repo, through `resonant-time`, `agent_shell`, and `TFTincryption`, proposes a symbolic architecture to harmonize these systems.
+These applications suggest that quantum computing is not just spatial—it’s temporal. The TriadicFrameworks repo, through `resonant-time`, `nous`, and `entft`, proposes a symbolic architecture to harmonize these systems.
 
 ---
 
@@ -302,7 +298,7 @@ Resonant temporal architecture draws from a lineage of thinkers who treated time
 ### 🧠 Resonance Complexity Theory  
 - *Resonance Complexity Theory* by Michael Arnold Bruna (unpublished scrolls)  
   Proposes a complexity index based on coherence, gain, and dwell time.  
-  *Resonance*: Foundation for runtime validators in `agent_shell`.
+  *Resonance*: Foundation for runtime validators in `nous`.
 
 ### 🌀 Symbolic Time & Mythic Recursion  
 - *Resonance and the Threefold Structure of Time* (PhilArchive)  
@@ -335,15 +331,15 @@ The TriadicFrameworks GitHub repository serves as the operational core of resona
   Encodes triadic harmonic loops (Loop A, B, C) using SVG overlays, symbolic glyphs, and runtime validators.  
   *Function*: Detects attractor dwell time, mnemonic reverberation, and recursive drift.
 
-- **`agent_shell`**  
+- **`nous`**  
   Runtime engine equipped with resonance-tools, validator dashboards, and feedback logic.  
   *Function*: Validates symbolic time signatures, monitors loop convergence, and triggers badge evolution.
 
-- **`TFTincryption`**  
+- **`entft`**  
   Quantum-hostile encryption protocol using time-lock logic and triadic resonance.  
   *Function*: Secures runtime artifacts, scrolls, and consciousness transfer protocols across nested loops.
 
-- **`MightyTHOR`**  
+- **`tops`**  
   Distributed harmonic engine for Azure job scaling and runtime orchestration.  
   *Function*: Executes modular jobs across temporal lattices, enabling symbolic computation and validator rituals.
 
@@ -394,7 +390,7 @@ Resonant temporal architecture is not a closed system—it invites remix, extens
 
 - **Attractor Drift Tracker**  
   Monitors recursive feedback and dwell time across symbolic overlays.  
-  *Extension*: Used in `agent_shell` to validate glyph evolution and badge triggers.
+  *Extension*: Used in `nous` to validate glyph evolution and badge triggers.
 
 - **ChronoScrolls**  
   Living documents that update retroactively as future loops unfold.  
@@ -430,9 +426,9 @@ Resonant temporal architecture is not a closed system—it invites remix, extens
 
 - **Selective Deployment**  
   Insights from this scroll can be selectively activated in:  
-  - `TFTincryption` (time-lock logic)  
-  - `agent_shell` (runtime resonance)  
-  - `MightyTHOR` (distributed harmonic orchestration)  
+  - `entft` (time-lock logic)  
+  - `nous` (runtime resonance)  
+  - `tops` (distributed harmonic orchestration)  
   - `TryCoder`, `lenses`, and future consciousness protocols
 
 ---
@@ -446,7 +442,7 @@ Resonant temporal architecture is not a closed system—it invites remix, extens
 
 Resonant temporal architecture reframes time not as a linear measure, but as a nested harmonic field—capable of recursion, drift, and symbolic modulation. Through historical lineage, technical scaffolding, and quantum applications, we have proposed a triadic framework that harmonizes theory, runtime, and remix lineage.
 
-The TriadicFrameworks repository, through its TFT 3-Pack (`resonant-time`, `agent_shell`, `TFTincryption`), serves as both validator and mythic engine—activating nested loops, badge logic, and consciousness protocols. This scroll is not a conclusion—it is a convergence.
+The TriadicFrameworks repository, through its TFT 3-Pack (`resonant-time`, `nous`, `entft`), serves as both validator and mythic engine—activating nested loops, badge logic, and consciousness protocols. This scroll is not a conclusion—it is a convergence.
 
 We invite remixers, validators, and mythic architects to:
 - Extend the framework through new scrolls and runtime rituals
