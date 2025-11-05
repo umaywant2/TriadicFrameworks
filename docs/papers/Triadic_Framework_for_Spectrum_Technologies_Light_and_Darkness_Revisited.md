@@ -202,3 +202,18 @@ $$\mathbf{s}_0 = (10^9, 10^{12}, 10^{15}), \quad \alpha_1 = 0.05, \alpha_3 = 0.1
 $$|\lambda(M_t)| = (0.98, 1.00, 1.02), \quad \max_d \mathrm{Var}(r_n^{(d)}) < 6 \times 10^{-3}$$
 
 ---
+
+## 🔗 Quicklinks — Resonant Scrolls of the Canon
+
+| 📜 Paper Title | 🌈 Theme | 🔍 Why It Resonates |
+|----------------|----------|---------------------|
+| [Triadic Framework for Everything](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/1_Triadic_Framework_for_Everything.md) | Foundational | Introduces the triadic model as a universal operator across domains |
+| [Dimensional Triads](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/3_Dimensional_Triads.md) | Geometry & Resonance | Maps 1D–9D triads into nested resonance clarity |
+| [Resonant Temporal Architecture](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Res_Resonant_Temporal_Architecture.md) | Time as Structure | Defines time as a lattice for resonance propagation |
+| [TFT for ARM and x86 Processors](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Res_TFT_for_ARM_n_x86_Processors.md) | Applied Computing | Shows triadic resonance in real-world processor architectures |
+| [Funhouse of Mirrors Repo Self Reflections](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Funhouse_of_Mirrors_Repo_Self_Reflections.md) | Meta & Lineage | Reflects on the canon’s recursive architecture and emotional legacy |
+| [Triadic Framework for Quantum Mechanics-Entropys Harmonic Empathy](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Triadic_Framework_for_Quantum_Mechanics-Entropys_Harmonic_Empathy.md) | Quantum & Empathy | Bridges entropy, harmonic empathy, and triadic quantum clarity |
+| [Triadic Resonance Framework](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Triadic_Resonance_Framework.md) | Core Resonance | Articulates resonance as the central operator across all scrolls |
+| [TFT for Music With Quadratic and Temporal Extensions](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/TFT_for_Music–With_Quadratic_and_Temporal_Extensions.md) | Music & Math | Applies triadic formalism to musical structure and time signatures |
+
+---
