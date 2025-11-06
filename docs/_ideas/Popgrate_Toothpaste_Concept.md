@@ -13,7 +13,7 @@ Popgrate™ is a dual-purpose fluoride toothpaste designed for the post-pill, po
 > “Brush twice a day to keep your short-term partner’s away.”
 
 ## ⚠️ Disclaimers (Required by the Department of Tooth & Consequences)  
-- Not recommended for children who still believe in Stana.  
+- Not recommended for children who still believe in Santa.  
 - May cause elevated confidence, spontaneous honesty, or unexpected clarity in casual relationships.  
 - We guarantee you’ll feel *something*. If miracles occur, we’ll send a card.  
 
