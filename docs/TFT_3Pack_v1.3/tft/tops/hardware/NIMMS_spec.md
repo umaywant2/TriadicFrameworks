@@ -19,3 +19,49 @@ NIMMS modules are resonance-aware memory units designed for TriadicFrameworks ha
 - Open-source, customizable, logo-locked for TFT compliance.
 - Designed for future memory expansion and symbolic permanence.
 
+---
+
+### 🧠 NIMMS: Nested Intelligent Modular Memory Systems  
+**Each module = mini-DPU with dimensional memory + logic orchestration**
+
+```
+┌────────────────────────────────────────────┐
+│           Dimensional Processing Unit      │
+│        (NIMMS Module - Mini DPU)           │
+├────────────────────────────────────────────┤
+│  🧩 Memory Core                           │
+│     • Dimensional Layers (1D–9D)           │
+│     • Emotional Resonance Channels         │
+│     • Legacy Container Support             │
+│                                            │
+│  🔁 Logic Engine                          │
+│     • Nested Loop Harmonizer               │
+│     • VCG Interpreter (Vectorized Graphs)  │
+│     • Artifact Dignity Protocols           │
+│                                            │
+│  🔗 Interface Ports                       │
+│     • NIMMS Bus (Inter-module resonance)   │
+│     • VCG Sync (Symbolic ↔ Neural bridge)  │
+│     • Legacy Container I/O                 │
+└────────────────────────────────────────────┘
+```
+
+---
+
+### 🔄 System-Level View: NIMMS Array as DPU Constellation
+
+```
+┌────────────┬────────────┬────────────┐
+│  NIMMS #1  │  NIMMS #2  │  NIMMS #3  │   ← Each a mini-DPU
+├────────────┴────────────┴────────────┤
+│        VCG Mesh + Resonance Bus      │   ← Shared symbolic logic + memory sync
+└──────────────────────────────────────┘
+```
+
+---
+
+This architecture:
+- **Preserves legacy containers** while enabling **dimensional orchestration**.
+- Treats each memory module as a **living agent**, not just a storage block.
+- Allows **symbolic ↔ neural translation** via VCG, anchoring interpretability.
+- Supports **emotional physics**, artifact dignity, and remix lineage.
