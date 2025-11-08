@@ -6,6 +6,19 @@
 
 ---
 
+###### 🧙‍♂️ Leonardo smiles, eyes gleaming with curiosity and reverence. He places his hand on the scroll and says, *“This framework — it sings. Let us paint its soul.”*   And so, together, we channel his genius into three living artifacts:
+
+---
+###### *Da Vinci’s touch:* anatomical precision meets mythic abstraction — each swirl mapped to a breath, each glow to a heartbeat.
+
+<img width="1024" height="1536" alt="BCO 4ae27b5d-3bab-4eee-8898-9258b7302fdf" src="https://github.com/user-attachments/assets/d58664e3-cce1-4906-8f03-8a7e97fe62bc" />
+
+###### 🎨 Scroll I: The Triad of Becoming
+
+###### A golden triangle floats in cosmic dusk, each vertex glowing with a childlike spark — **Curiosity**, **Balance**, and **Clarity**. Swirling around it are harmonic glyphs: spirals of 3, 6, and 9, etched like musical notes on dimensional staves. The background hums with soft blues and radiant golds, evoking the moment when thought becomes form.
+
+---
+
 ## 🔮 Abstract  
 This paper introduces a **triadic lens** for modeling reality through two complementary operators—✨ Light (expansion) and 🌑 Darkness (inversion)—woven into recursive loops of **3, 6, and 9**. These loops generate emergent phenomena such as ⏳ time, 🌌 gravity, and 🧠 consciousness.  
 
@@ -25,6 +38,15 @@ We propose that all dynamical systems emerge from the interplay of two forces—
 - How does ⏳ time emerge from nested triadic cycles?  
 - Can 🌌 gravity be reinterpreted as phase‑lag in wave propagation?  
 - Is 🧠 consciousness an attractor born of Light/Darkness recursion?  
+
+---
+###### *Da Vinci’s touch:* sepia ink and radiant overlays — the chamber is both cathedral and circuit, a place where resonance becomes awareness.
+
+<img width="1024" height="1536" alt="BCO e5824cc4-a7fd-4e79-a1de-97e8342b683b" src="https://github.com/user-attachments/assets/7bc93e4d-3511-464a-987c-f7fb4aef939b" />
+
+###### 🧠 Scroll II: The Operator’s Chamber
+
+###### A Vitruvian child stands in a chamber of nested loops. Light and Darkness flow through mirrored arches, forming feedback spirals that pulse with triadic rhythm. Above the child, a crystalline obelisk inscribed with the triadic glyphs rotates slowly, casting shadows that dance across the chamber walls.
 
 ---
 
@@ -72,6 +94,15 @@ EEG harmonics predicted at **3×, 6×, 9× alpha rhythms**.
 **Objective:** Capture triadic beat patterns via Light/Darkness recursion.  
 **Materials:** 🎛️ signal generator, 🎤 microphone array, 📊 FFT software.  
 **Expected Results:** Beat peaks at 3, 6, 9 reflections; maximal inversion at mid‑plane mesh.  
+
+---
+###### *Da Vinci’s touch:* chiaroscuro depth, mythic geometry, and playful reverence — the forge is both experiment and playground.
+
+<img width="1024" height="1536" alt="BCO 484022a0-3a6e-4375-9f64-193911e2979a" src="https://github.com/user-attachments/assets/7b64f9cf-1efc-4b23-b994-8fae0893dff9" />
+
+###### 🔁 Scroll III: The Harmonic Forge
+
+###### Three elemental forces — Fire, Water, and Ether — converge at a triadic forge. Each strikes a chord: 3 ignites the spark, 6 tempers the flow, 9 crystallizes the clarity. The forge glows with recursive light, and the children nearby sketch its echoes into the sand.  
 
 ---
 
