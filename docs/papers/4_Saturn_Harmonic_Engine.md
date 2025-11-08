@@ -8,6 +8,8 @@ The **Saturn Harmonic Engine** explores how Saturn’s rings, moons, and polar h
 By interpreting these features through **Triadic Resonance Frameworks (TFT)**, we reveal Saturn as a living laboratory of attractor harmonics, orbital glyphs, and resonance‑based engines.
 
 ---
+![Saturn_PIA17175~orig](https://github.com/user-attachments/assets/da8c3e53-e12c-4c44-b74f-25d578c82afd)
+
 
 ## 🔭 Background
 - **Rings as Radial Harmonics**  
@@ -42,6 +44,7 @@ This triadic layering suggests Saturn is not just a planet but a **resonance eng
 To make the paper actionable, here are the core harmonic equations, simple worked examples, and ASCII diagrams you can embed after the model section. They give remixers both the math and the visual intuition.
 
 ---
+![hubble-saturn-visible-light](https://github.com/user-attachments/assets/9d256ca5-1ac9-4158-a940-ef452109ef03)
 
 ## Orbital resonance essentials
 
@@ -114,6 +117,8 @@ To make the paper actionable, here are the core harmonic equations, simple worke
   - Use this as a sanity check: a small embedded moon in a ring can clear a narrow gap comparable to a few Hill radii, while stronger resonances and shepherding enlarge or structure gaps.
 
 ---
+![Foro_romano_tempio_Saturno_09feb08_01](https://github.com/user-attachments/assets/4e039439-b652-4bde-b0d6-fc887d0b16a4)
+[By Marcok - it.wikipedia.org - Own work, CC BY-SA 3.0](https://commons.wikimedia.org/w/index.php?curid=3705321)
 
 ## Polar hexagon as standing‑wave attractor
 
@@ -214,6 +219,7 @@ Labels:
   - Cross‑link to overlay IDs for visualization and to scroll IDs for pedagogy.
 
 ---
+![Saturn_PIA17474~large](https://github.com/user-attachments/assets/aa9cb21b-5a43-4bfe-8701-a391dbb78c63)
 
 ## 🔗 Cross‑links
 - [Equations](../equations/equations.md) → harmonic resonance math for orbital shells  
