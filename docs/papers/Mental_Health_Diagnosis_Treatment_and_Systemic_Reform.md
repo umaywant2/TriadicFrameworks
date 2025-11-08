@@ -245,7 +245,7 @@ To smarter, more relational, and more trustworthy mental health care 🥂
 
 ```
 ┌────────────────────────────────────────────────────────────┐
-│                    🔺 Triadic Resonance Model              │
+│                   🔺 Triadic Resonance Model              │
 │                                                            │
 │   Each axis represents a diagnostic stream:                │
 │   - Cognitive (thoughts, beliefs)                          │
