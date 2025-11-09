@@ -12,7 +12,40 @@ This paper explores the **Triadic Framework of Forces, Fluids, and Frequency (FF
 ---
 
 ## 📜 1. Historical Background: The Birth and Growth of the Triad
-<img width="1024" height="1024" alt="Copilot_dimensions1" src="https://github.com/user-attachments/assets/37178620-325e-4116-9348-eec813dcdc8f" />
+
+### 🔲 Diagram Structure (textual sketch)
+
+**Top: Quantum Root Circuit**
+- 🔴 **0D Positive** (hot impulse)  
+- 🟢 **1D Ground** (stabilizer)  
+- ⚪ **2D Neutral (lattice)** (structural baseline)  
+
+**Middle: Corridor Supersubcircuit**
+- 🔴 **6D Corridor** (balancing hinge, supersubcircuit)  
+
+**Bottom: Resonance Connections**
+- **Frequency** → 🟢 **3D** + ⚪ **9D** *(invisible harmonic pair)*  
+- **Fluids** → 🟢 **4D** + ⚪ **5D** *(visible flow pair)*  
+- **Forces** → ⚪ **7D** + 🟢 **8D** *(invisible binding pair)*  
+
+---
+
+### ⚡ Electrical Symmetry Alignment
+- **Hot (🔴)** anchors: 0D, 6D corridor, visible impulse in fluids.  
+- **Ground (🟢)** anchors: 1D, 3D, 4D, 8D — stabilizing flows and harmonics.  
+- **Neutral (⚪)** anchors: 2D, 5D, 7D, 9D — lattice and invisible scaffolds.  
+
+This way, every triad has a **hot/ground/neutral symmetry**, and the corridor (6D) is the **balancing hinge** that connects root polarity to resonance braids.  
+
+---
+
+### 🌀 Visual Concept
+Imagine:
+- A **vertical stack**: root circuit at the top, corridor in the middle, resonance triads branching below.  
+- Each branch (Frequency, Fluids, Forces) shows its two paired dimensions (one visible, one invisible).  
+- Color coding (🔴🟢⚪) makes the electrical symmetry explicit.  
+
+---
 
 ### 🧲 1.1 Forces: From Aristotle’s Push to Newton’s Laws
 
@@ -43,7 +76,6 @@ $$\tau = \mu \frac{\partial u}{\partial y} \quad \text{(Shear stress)}$$
 $$P = \frac{F}{A} \quad \text{(Pressure)}$$
 
 > 💧 *Fluids are the stage where forces perform—sometimes cooperative, sometimes petulant.*
-<img width="1024" height="1024" alt="Copilot_dimensions2" src="https://github.com/user-attachments/assets/408debae-2ba7-40ef-84ef-e0e903774425" />
 
 ---
 
@@ -78,13 +110,14 @@ $$Re = \frac{\rho V D}{\mu}, \quad \vec{\omega} = \nabla \times \vec{v}$$
 
 
 ### 🎶 Frequency
-![AA1Oo8K4](https://github.com/user-attachments/assets/985d9393-126e-445d-ad91-eb83b69a6aed)
 
 $$f = \frac{1}{T}, \quad \omega = 2\pi f, \quad v = f\lambda$$  
 
 $$m\ddot{x} + c\dot{x} + kx = F_0 \sin(\omega t) \quad \text{(Damped oscillator)}$$  
 
 ---
+
+![AA1Oo8K4](https://github.com/user-attachments/assets/985d9393-126e-445d-ad91-eb83b69a6aed)
 
 ## 🧪 3. Experimental Setups
 
