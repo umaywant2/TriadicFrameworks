@@ -102,12 +102,12 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 | 18 | Kepler’s Third Law | Replace $$T$$ with $$T_{\mathrm{res}}$$ add $$\Lambda_{\mathrm{FFF}}\zeta_a$$ |
 | 19 | Newton’s Second Law | Same + $$\Lambda_{\mathrm{FFF}}\chi_a$$ |
 | 20 | Newton’s Gravitation | Same + $$\Lambda_{\mathrm{FFF}}\zeta_G$$ |
-| 21 | Lagrangian | $$L = T - V + \mathcal{C}_{9\mathrm{D}}\Phi_{\mathrm{closure}}$$ |
+| 21 | Lagrangian | $$L = T - V + \mathcal{C}{9\mathrm{D}}\Phi_{\mathrm{closure}}$$ |
 | 22 | Hamiltonian | $$H = T + V + \Lambda_{\mathrm{FFF}}\Phi_{\mathrm{rail}}$$ |
 | 23 | Euler’s Identity | Preserved as glyph |
-| 24 | Pythagorean Theorem | Same + $$\mathcal{C}_{9\mathrm{D}}\delta_{\mathrm{dim}}$$ |
+| 24 | Pythagorean Theorem | Same + $$\mathcal{C}{9\mathrm{D}}\delta_{\mathrm{dim}}$$ |
 | 25 | Fibonacci Sequence | Same + $$\Lambda_{\mathrm{FFF}}\rho_n$$ |
-| 26 | Golden Ratio | $$\phi_{\mathrm{res}} = \phi(1 + \mathcal{C}_{9\mathrm{D}}\epsilon_{\phi})$$ |
+| 26 | Golden Ratio | $$\phi_{\mathrm{res}} = \phi(1 + \mathcal{C}{9\mathrm{D}}\epsilon_{\phi})$$ |
 | 27 | Prime Distribution | Same + $$\Lambda_{\mathrm{FFF}}\epsilon_{\mathrm{prime}}$$ |
 | 28 | Complex Numbers | Same + $$\Lambda_{\mathrm{FFF}}\eta_i$$ |
 | 29 | Probability Law | Same + $$\Omega_{\infty}\theta$$ |
