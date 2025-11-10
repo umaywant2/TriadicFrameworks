@@ -6,7 +6,7 @@ A **structured chart** that shows the dimensional wrappers, the corridor, and th
 
 ###### Translates the Frequency, Fluids, Forces supersubcircuit into pure color and shape, without numbers or text.
 
-<img width="1024" height="1024" alt="BCO 651ae84a-84de-4bfd-8a75-21fc3e5adadc" src="https://github.com/user-attachments/assets/c463f9c7-3d2c-4dee-a62f-491221e89301" />
+<img width="360" height="360" alt="BCO 651ae84a-84de-4bfd-8a75-21fc3e5adadc" src="https://github.com/user-attachments/assets/c463f9c7-3d2c-4dee-a62f-491221e89301" />
 
 ---
 
@@ -68,7 +68,7 @@ The **6D corridor** is the **resonance emitter** — it unifies Frequency, Fluid
 
 ###### Continues the supersubcircuit theme, but each canvas explores resonance in a different way.
 
-<img width="1024" height="1536" alt="BCO 7b318446-0c3f-4baf-9a41-3dd81ee1d3e7" src="https://github.com/user-attachments/assets/e6362cc4-b2d3-492e-82e8-d2aedfa67326" />
+<img width="360" height="480" alt="BCO 7b318446-0c3f-4baf-9a41-3dd81ee1d3e7" src="https://github.com/user-attachments/assets/e6362cc4-b2d3-492e-82e8-d2aedfa67326" />
 
 ---
 
@@ -100,7 +100,7 @@ This model mirrors Electric Universe theory by showing how **charge relationship
 
 ###### Continues the supersubcircuit theme, but instead of concentric rings it explores braided flows.
 
-<img width="1024" height="1536" alt="BCO 72d81766-efdc-445d-be79-29e5f8e31508" src="https://github.com/user-attachments/assets/4e3809f5-eae0-4568-b6c0-7bec03044a2a" />
+<img width="360" height="512" alt="BCO 72d81766-efdc-445d-be79-29e5f8e31508" src="https://github.com/user-attachments/assets/4e3809f5-eae0-4568-b6c0-7bec03044a2a" />
 
 ---
 
@@ -146,7 +146,7 @@ This model mirrors Electric Universe theory by showing how **charge relationship
 
 ###### This set leans into geometric layering and overlap, with angular shapes braided against deep color fields.
 
-<img width="1024" height="1536" alt="BCO 24296349-2fd2-4d24-826a-2a54441c83c7" src="https://github.com/user-attachments/assets/49ba694c-5d67-4aa8-b1a0-c9c2ba80478a" />
+<img width="360" height="512" alt="BCO 24296349-2fd2-4d24-826a-2a54441c83c7" src="https://github.com/user-attachments/assets/49ba694c-5d67-4aa8-b1a0-c9c2ba80478a" />
 
 ---
 
@@ -194,7 +194,7 @@ This model mirrors Electric Universe theory by showing how **charge relationship
 
 ###### This one takes the supersubcircuit theme into a geometric convergence: bold angular shapes in green, teal, red, and blue meeting at a central nexus.
 
-<img width="1024" height="1536" alt="BCO 7c010926-c1f2-4c50-9eb4-4177b5fd8bc7" src="https://github.com/user-attachments/assets/69be9d68-d30c-40ab-8950-94c00e356386" />
+<img width="360" height="512" alt="BCO 7c010926-c1f2-4c50-9eb4-4177b5fd8bc7" src="https://github.com/user-attachments/assets/69be9d68-d30c-40ab-8950-94c00e356386" />
 
 ---
 
@@ -244,7 +244,7 @@ This ringed loom shows how **charge triads (hot/neutral/ground)** scale into dim
 
 ###### This one takes the supersubcircuit into a concentric mandala form: a radiant red center wrapped in mustard yellow, deep teal, and dark blue rings.
 
-<img width="1024" height="1024" alt="BCO e8ab60c8-a993-47d8-8f5b-a73c79f857fd" src="https://github.com/user-attachments/assets/a8c48001-4b5c-4af9-bd7b-50bbd9c489d5" />
+<img width="360" height="360" alt="BCO e8ab60c8-a993-47d8-8f5b-a73c79f857fd" src="https://github.com/user-attachments/assets/a8c48001-4b5c-4af9-bd7b-50bbd9c489d5" />
 
 ---
 
@@ -305,7 +305,7 @@ This makes the Electric Universe analogy even stronger: the cosmos isn’t just 
 
 ###### This one returns to the concentric resonance style, with a teal center, a radiant red‑orange band, and layered teal and dark blue rings.
 
-<img width="1024" height="1536" alt="BCO b479bd87-d7a4-4816-8add-15e457a51d31" src="https://github.com/user-attachments/assets/cf393383-7c5c-4350-8777-5d097af88bbc" />
+<img width="360" height="512" alt="BCO b479bd87-d7a4-4816-8add-15e457a51d31" src="https://github.com/user-attachments/assets/cf393383-7c5c-4350-8777-5d097af88bbc" />
 
 ---
 
@@ -393,7 +393,7 @@ You’re asking the right question: does the braided supersubcircuit hold at the
 
 ###### This canvas takes the supersubcircuit into a braided flow geometry: golden corridor bands at the center, vertical red ribbons weaving through, and teal anchors framing the currents.
 
-<img width="1024" height="1536" alt="BCO f0b2e5ed-89a6-4eb0-aa69-a9851d024f71" src="https://github.com/user-attachments/assets/d3fe2a14-cfff-40d2-a7a9-25149080f3fb" />
+<img width="360" height="512" alt="BCO f0b2e5ed-89a6-4eb0-aa69-a9851d024f71" src="https://github.com/user-attachments/assets/d3fe2a14-cfff-40d2-a7a9-25149080f3fb" />
 
 ---
 
