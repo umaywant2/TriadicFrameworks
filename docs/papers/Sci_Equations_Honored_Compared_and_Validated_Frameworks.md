@@ -117,7 +117,7 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 ## ✨ Why this matters
 - The **before column** honors the classical canon.  
 - The **after column** applies the Nawderian constants and operators consistently.  
-- No ad hoc terms—only the canonical set: $$T_{\mathrm{res}}, \kappa_{\mathrm{g}}, \Omega_{\infty}, \Lambda_{\mathrm{FFF}}, \mathcal{C}_{9\mathrm{D}}, \chi, \sigma, \mathbf{r}_{\mathrm{fluid}}, \Phi$$.  
+- No ad hoc terms—only the canonical set: $$T_{\mathrm{res}}$$, $$\kappa_{\mathrm{g}}$$, $$\Omega_{\infty}$$, $$\Lambda_{\mathrm{FFF}}$$, $$\mathcal{C}{9\mathrm{D}}$$, $$\chi$$, $$\sigma$$, $$\mathbf{r}{\mathrm{fluid}}$$, $$\Phi$$.  
 - This makes the math **simpler, validator‑grade, and remixable**.
 
 ---
@@ -127,13 +127,13 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 ## 1. Energy Equivalence
 - **Before:** $$E = mc^2$$  
 - **After:** $$E_{\mathrm{tot}} = mc^2 + \kappa_{\mathrm{g}}$$  
-- **Commentary:** Einstein’s mass–energy equivalence is extended by the gimmel stabilizer $$\kappa_{\mathrm{g}}\), ensuring conservation of identity across resonance domains. This prevents “loss” of coherence when mass and energy exchange through rails.
+- **Commentary:** Einstein’s mass–energy equivalence is extended by the gimmel stabilizer $$\kappa_{\mathrm{g}}$$, ensuring conservation of identity across resonance domains. This prevents “loss” of coherence when mass and energy exchange through rails.
 
 ---
 
 ## 2. Einstein Field Equations
 - **Before:** $$G_{\mu\nu} = 8\pi T_{\mu\nu}$$  
-- **After:** $$G_{\mu\nu} = 8\pi T_{\mu\nu} + \Lambda_{\mathrm{FFF}}\,\mathcal{R}_{\mu\nu}(T_{\mathrm{res}})$$  
+- **After:** $$G_{\mu\nu} = 8\pi T_{\mu\nu} + \Lambda_{\mathrm{FFF}}\mathcal{R}{\mu\nu}(T_{\mathrm{res}})$$  
 - **Commentary:** Rail coupling $$\Lambda_{\mathrm{FFF}}$$ introduces resonance curvature sourced by resonant‑time, extending relativity into harmonic closure.
 
 ---
@@ -141,7 +141,7 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 ## 3. Gauss’s Law
 - **Before:** $$\nabla \cdot \mathbf{E} = \rho/\epsilon_0$$  
 - **After:** $$\nabla \cdot \mathbf{E} = \rho/\epsilon_0 + \Lambda_{\mathrm{FFF}}\,\chi_{\mathrm{E}}(T_{\mathrm{res}})$$  
-- **Commentary:** Electric fields gain susceptibility $$\chi_{\mathrm{E}}\), harmonizing charge distributions with resonance rails.
+- **Commentary:** Electric fields gain susceptibility $$\chi_{\mathrm{E}}$$, harmonizing charge distributions with resonance rails.
 
 ---
 
@@ -155,13 +155,13 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 ## 5. Schrödinger Equation
 - **Before:** $$i\hbar\,\partial \psi/\partial t = H\psi$$  
 - **After:** $$i\hbar\,\partial \psi/\partial T_{\mathrm{res}} = H\psi + \Lambda_{\mathrm{FFF}}\,\hat{F}\psi$$  
-- **Commentary:** Quantum harmonics are extended by the frequency rail operator $$\hat{F}\), stabilizing oscillatory coherence.
+- **Commentary:** Quantum harmonics are extended by the frequency rail operator $$\hat{F}$$, stabilizing oscillatory coherence.
 
 ---
 
 ## 6. Navier–Stokes
 - **Before:** Governs fluid turbulence.  
-- **After:** Same + $$\Lambda_{\mathrm{FFF}}\,\mathbf{r}_{\mathrm{fluid}}(T_{\mathrm{res}})$$  
+- **After:** Same + $$\Lambda_{\mathrm{FFF}}\mathbf{r}{\mathrm{fluid}}(T_{\mathrm{res}}$$  
 - **Commentary:** Fluid rail stress harmonizes turbulence, aligning chaotic flows with corridor rails.
 
 ---
@@ -169,14 +169,14 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 ## 7. Continuity Equation
 - **Before:** $$\partial_t \rho + \nabla\cdot(\rho \mathbf{v}) = 0$$  
 - **After:** $$\partial_{T_{\mathrm{res}}}\rho + \nabla\cdot(\rho \mathbf{v}) = \Lambda_{\mathrm{FFF}}\,s_{\rho}(T_{\mathrm{res}})$$  
-- **Commentary:** Density flows gain source/sink $$s_{\rho}\), encoding rail exchanges.
+- **Commentary:** Density flows gain source/sink $$s_{\rho}$$, encoding rail exchanges.
 
 ---
 
 ## 8. Wave Equation
 - **Before:** $$\nabla^2 \psi - (1/c^2)\partial_t^2\psi = 0$$  
 - **After:** $$\nabla^2 \psi - (1/c^2)\partial_{T_{\mathrm{res}}}^2\psi = \Lambda_{\mathrm{FFF}}\,\sigma_{\psi}(T_{\mathrm{res}})$$  
-- **Commentary:** Standing waves gain resonance source $$\sigma_{\psi}\), stabilizing oscillations.
+- **Commentary:** Standing waves gain resonance source $$\sigma_{\psi}$$, stabilizing oscillations.
 
 ---
 
@@ -190,7 +190,7 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 ## 10. Planck’s Law
 - **Before:** $$E = h\nu$$  
 - **After:** $$E = h\nu(1 + \Lambda_{\mathrm{FFF}}\,\eta_{\nu})$$  
-- **Commentary:** Quantization gains rail adjustment $$\eta_{\nu}\), stabilizing photon resonance.
+- **Commentary:** Quantization gains rail adjustment $$\eta_{\nu}$$, stabilizing photon resonance.
 
 ---
 
@@ -266,7 +266,7 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 
 ## 21. Lagrangian Mechanics
 - **Before:** $$L = T - V$$  
-- **After:** $$L = T - V + \mathcal{C}_{9\mathrm{D}}\,\Phi_{\mathrm{closure}}$$  
+- **After:** $$L = T - V + \mathcal{C}{9\mathrm{D}}\Phi_{\mathrm{closure}}$$  
 - **Commentary:** Closure potential enforces apex coherence.
 
 ---
@@ -287,7 +287,7 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 
 ## 24. Pythagorean Theorem
 - **Before:** $$a^2 + b^2 = c^2$$  
-- **After:** Same + $$\mathcal{C}_{9\mathrm{D}}\,\delta_{\mathrm{dim}}$$  
+- **After:** Same + $$\mathcal{C}{9\mathrm{D}}\delta_{\mathrm{dim}}$$  
 - **Commentary:** Geometry harmonized by dimensional rails.
 
 ---
@@ -301,7 +301,7 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 
 ## 26. Golden Ratio
 - **Before:** $$\phi = (1+\sqrt{5})/2$$  
-- **After:** $$\phi_{\mathrm{res}} = \phi(1 + \mathcal{C}_{9\mathrm{D}}\,\epsilon_{\phi})$$  
+- **After:** $$\phi_{\mathrm{res}} = \phi(1 + \mathcal{C}{9\mathrm{D}} \epsilon_{\phi}$$  
 - **Commentary:** The golden ratio is preserved as a universal constant but gains a resonance correction $$\epsilon_{\phi}$$ tied to apex coherence. This ensures phi‑based structures (spirals, growth patterns) remain stable across dimensional rails.
 
 ---
@@ -323,7 +323,7 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 ## 29. Probability Law
 - **Before:** $$P = n/N$$  
 - **After:** $$P_{\mathrm{res}} = \frac{n}{N}(1 + \Omega_{\infty}\,\theta)$$  
-- **Commentary:** Probability gains an ordropy correction $$\Omega_{\infty}\,\theta\), stabilizing open systems by restoring coherence. This ensures statistical clarity even when entropy dominates.
+- **Commentary:** Probability gains an ordropy correction $$\Omega_{\infty}\,\theta$$, stabilizing open systems by restoring coherence. This ensures statistical clarity even when entropy dominates.
 
 ---
 
