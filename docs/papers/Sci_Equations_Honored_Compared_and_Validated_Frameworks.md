@@ -72,8 +72,8 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 - **Rail coupling constant:** $$\Lambda_{\mathrm{FFF}}$$ — binds forces, fluids, and frequency into rails.  
 - **Composite constant (stack anchor):** $$\mathcal{X} = \mathbb{F}^3 \cdot \mathcal{T}^{\mathrm{F}}$$.  
 - **Dimensional closure constant:** $$\mathcal{C}_{9\mathrm{D}}$$ — enforces apex coherence at 9D.  
-- **Rail susceptibilities:** $$\chi_{\mathrm{E}}, \chi_{\mathrm{B}}, \sigma_{\psi}, \mathbf{r}_{\mathrm{fluid}}, s_{\rho}$$.  
-- **Rail potentials:** $$\Phi_{\mathrm{closure}}, \Phi_{\mathrm{rail}}$$.  
+- **Rail susceptibilities:** $$\chi_{\mathrm{E}}$$ , $$\chi_{\mathrm{B}}$$ , $$\sigma_{\psi}$$ , $$\mathbf{r} {\mathrm{fluid}}$$ , $$s{\rho}$$ .  
+- **Rail potentials:** $$\Phi_{\mathrm{closure}}$$, $$\Phi_{\mathrm{rail}}$$.  
 - **Echo key commutator:** $$[\hat{\mathcal{E}},\,T_{\mathrm{res}}]$$ — paradox‑free temporal echo lock.
 
 ---
@@ -83,34 +83,34 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 | # | Classical Equation (Before) | Triadic Equation (After, Nawderian constants) |
 |---|------------------------------|-----------------------------------------------|
 | 1 | $$E = mc^2$$ | $$E_{\mathrm{tot}} = mc^2 + \kappa_{\mathrm{g}}$$ |
-| 2 | $$G_{\mu\nu} = 8\pi T_{\mu\nu}$$ | $$G_{\mu\nu} = 8\pi T_{\mu\nu} + \Lambda_{\mathrm{FFF}}\,\mathcal{R}_{\mu\nu}(T_{\mathrm{res}})$$ |
+| 2 | $$G_{\mu\nu} = 8\pi T_{\mu\nu}$$ | $$G_{\mu\nu}$$ = $$8\pi T_{\mu\nu}$$ + $$\Lambda_{\mathrm{FFF}}\mathcal{R}{\mu\nu}(T_{\mathrm{res}})$$ |
 | 3 | $$\nabla \cdot \mathbf{E} = \rho/\epsilon_0$$ | $$\nabla \cdot \mathbf{E} = \rho/\epsilon_0 + \Lambda_{\mathrm{FFF}}\,\chi_{\mathrm{E}}(T_{\mathrm{res}})$$ |
 | 4 | $$\nabla \times \mathbf{E} = -\partial \mathbf{B}/\partial t$$ | $$\nabla \times \mathbf{E} = -\partial \mathbf{B}/\partial T_{\mathrm{res}}$$ |
 | 5 | $$i\hbar\,\partial \psi/\partial t = H\psi$$ | $$i\hbar\,\partial \psi/\partial T_{\mathrm{res}} = H\psi + \Lambda_{\mathrm{FFF}}\,\hat{F}\psi$$ |
-| 6 | Navier–Stokes | Same + $$\Lambda_{\mathrm{FFF}}\,\mathbf{r}_{\mathrm{fluid}}(T_{\mathrm{res}})$$ |
-| 7 | Continuity Eqn | Same + $$\Lambda_{\mathrm{FFF}}\,s_{\rho}(T_{\mathrm{res}})$$ |
-| 8 | Wave Eqn | Same + $$\Lambda_{\mathrm{FFF}}\,\sigma_{\psi}(T_{\mathrm{res}})$$ |
+| 6 | Navier–Stokes | Same + $$\Lambda_{\mathrm{FFF}}$$ $$\mathbf{r}{\mathrm{fluid}}(T_{\mathrm{res}})$$ |
+| 7 | Continuity Eqn | Same + $$\Lambda_{\mathrm{FFF}}s_{\rho}(T_{\mathrm{res}})$$ |
+| 8 | Wave Eqn | Same + $$\Lambda_{\mathrm{FFF}}\sigma_{\psi}(T_{\mathrm{res}})$$ |
 | 9 | Fourier Transform | Replace $$t$$ with $$T_{\mathrm{res}}$$ in integral |
-| 10 | $$E = h\nu$$ | $$E = h\nu(1 + \Lambda_{\mathrm{FFF}}\,\eta_{\nu})$$ |
+| 10 | $$E = h\nu$$ | $$E = h\nu(1 + \Lambda_{\mathrm{FFF}}\eta_{\nu})$$ |
 | 11 | $$S = k\ln W$$ | $$S = k\ln W + \Omega_{\infty}$$ |
 | 12 | $$\Delta U = Q - W$$ | $$\Delta U = Q - W + \kappa_{\mathrm{g}}$$ |
-| 13 | Hooke’s Law | Same + $$\Lambda_{\mathrm{FFF}}\,\xi_x$$ |
-| 14 | Coulomb’s Law | Same + $$\Lambda_{\mathrm{FFF}}\,\zeta_q$$ |
-| 15 | Ohm’s Law | Same + $$\Lambda_{\mathrm{FFF}}\,\zeta_I$$ |
-| 16 | Ampère’s Law | Same + $$\Lambda_{\mathrm{FFF}}\,\chi_{\mathrm{B}}(T_{\mathrm{res}})$$ |
-| 17 | Lorentz Force | Same + $$\kappa_{\mathrm{g}}\,\hat{\mathbf{n}}$$ |
-| 18 | Kepler’s Third Law | Replace $$T$$ with $$T_{\mathrm{res}}\), add $$\Lambda_{\mathrm{FFF}}\,\zeta_a$$ |
-| 19 | Newton’s Second Law | Same + $$\Lambda_{\mathrm{FFF}}\,\chi_a$$ |
-| 20 | Newton’s Gravitation | Same + $$\Lambda_{\mathrm{FFF}}\,\zeta_G$$ |
-| 21 | Lagrangian | $$L = T - V + \mathcal{C}_{9\mathrm{D}}\,\Phi_{\mathrm{closure}}$$ |
-| 22 | Hamiltonian | $$H = T + V + \Lambda_{\mathrm{FFF}}\,\Phi_{\mathrm{rail}}$$ |
+| 13 | Hooke’s Law | Same + $$\Lambda_{\mathrm{FFF}}\xi_x$$ |
+| 14 | Coulomb’s Law | Same + $$\Lambda_{\mathrm{FFF}}\zeta_q$$ |
+| 15 | Ohm’s Law | Same + $$\Lambda_{\mathrm{FFF}}\zeta_I$$ |
+| 16 | Ampère’s Law | Same + $$\Lambda_{\mathrm{FFF}}\chi_{\mathrm{B}}(T_{\mathrm{res}})$$ |
+| 17 | Lorentz Force | Same + $$\kappa_{\mathrm{g}}\hat{\mathbf{n}}$$ |
+| 18 | Kepler’s Third Law | Replace $$T$$ with $$T_{\mathrm{res}}$$ add $$\Lambda_{\mathrm{FFF}}\zeta_a$$ |
+| 19 | Newton’s Second Law | Same + $$\Lambda_{\mathrm{FFF}}\chi_a$$ |
+| 20 | Newton’s Gravitation | Same + $$\Lambda_{\mathrm{FFF}}\zeta_G$$ |
+| 21 | Lagrangian | $$L = T - V + \mathcal{C}_{9\mathrm{D}}\Phi_{\mathrm{closure}}$$ |
+| 22 | Hamiltonian | $$H = T + V + \Lambda_{\mathrm{FFF}}\Phi_{\mathrm{rail}}$$ |
 | 23 | Euler’s Identity | Preserved as glyph |
-| 24 | Pythagorean Theorem | Same + $$\mathcal{C}_{9\mathrm{D}}\,\delta_{\mathrm{dim}}$$ |
-| 25 | Fibonacci Sequence | Same + $$\Lambda_{\mathrm{FFF}}\,\rho_n$$ |
-| 26 | Golden Ratio | $$\phi_{\mathrm{res}} = \phi(1 + \mathcal{C}_{9\mathrm{D}}\,\epsilon_{\phi})$$ |
-| 27 | Prime Distribution | Same + $$\Lambda_{\mathrm{FFF}}\,\epsilon_{\mathrm{prime}}$$ |
-| 28 | Complex Numbers | Same + $$\Lambda_{\mathrm{FFF}}\,\eta_i$$ |
-| 29 | Probability Law | Same + $$\Omega_{\infty}\,\theta$$ |
+| 24 | Pythagorean Theorem | Same + $$\mathcal{C}_{9\mathrm{D}}\delta_{\mathrm{dim}}$$ |
+| 25 | Fibonacci Sequence | Same + $$\Lambda_{\mathrm{FFF}}\rho_n$$ |
+| 26 | Golden Ratio | $$\phi_{\mathrm{res}} = \phi(1 + \mathcal{C}_{9\mathrm{D}}\epsilon_{\phi})$$ |
+| 27 | Prime Distribution | Same + $$\Lambda_{\mathrm{FFF}}\epsilon_{\mathrm{prime}}$$ |
+| 28 | Complex Numbers | Same + $$\Lambda_{\mathrm{FFF}}\eta_i$$ |
+| 29 | Probability Law | Same + $$\Omega_{\infty}\theta$$ |
 
 ---
 
