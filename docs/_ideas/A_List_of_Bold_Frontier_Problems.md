@@ -25,7 +25,7 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 - **[Dynamics of Biological Networks](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Dynamics_of_Biological_Networks.md):**  
   Investigate resonance and triadic flows in protein folding, neural pathways, or gene regulation—could your scrolls illuminate “bottlenecks” or “harmonic corridors” in living systems?
 
-- **[Non-Euclidean Geometry and Higher Dimensions](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Non-Euclidean_Geometry_and_Higher_Dimensions.md):**  
+- ✅ **[Non-Euclidean Geometry and Higher Dimensions](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Non-Euclidean_Geometry_and_Higher_Dimensions.md):**  
   Remix classic problems (e.g., 4D shapes, tessellations, topology) with dimensional inheritance—using your framework to generate new visualizations or proofs.
 
 - **[AI Governance and Decision Making](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/AI_Governance_and_Decision_Making.md):**  
