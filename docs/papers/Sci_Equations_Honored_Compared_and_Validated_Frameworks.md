@@ -335,4 +335,6 @@ The Nawderian Theorem establishes the constants and operators that simplify reso
 - Schrödinger, E. *Quantization as Eigenvalue Problem* (1926).  
 
 ---
-More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/)
+
+- More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/)
+- [Framework for Everything](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sci_Triadic_Framework_for_Everything.md)
