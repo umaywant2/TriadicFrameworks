@@ -21,8 +21,8 @@ Technologies often outlive their creators, becoming artifacts of cultural legacy
   - Defined as artifacts persisting across generations.  
   - Modeled as triadic circuits stabilized by resonance clarity.  
 - **Legacy Equation:**  
-  \[L_{tech} = F_{freq} + F_{fluids} + F_{forces}\]  
-  where legacy \(L_{tech}\) emerges from triadic alignment.
+  $$L_{tech} = F_{freq} + F_{fluids} + F_{forces}$$  
+  where legacy $$L_{tech}$$ emerges from triadic alignment.
 
 ## Results  
 - **Cultural Systems:** Ego resonance stabilizes symbolic artifacts (art, music, myth).  
@@ -42,3 +42,5 @@ Egos and final technologies are unified through triadic resonance. Legacy emerge
 - Loswin, N. (2025). *Egos, Final Technologies: A Triadic Legacy*. Unpublished manuscript.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
