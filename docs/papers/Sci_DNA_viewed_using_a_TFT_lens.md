@@ -18,7 +18,7 @@ DNA is conventionally described as a double helix of nucleotide base pairs (Wats
   - Base pairs treated as harmonic glyphs.  
   - Triplet codons interpreted as triadic cycles.  
 - **TFT Lens Equation:**  
-  \[R_{DNA} = F_{freq} + F_{fluids} + F_{forces}\]  
+  $$\[R_{DNA} = F_{freq} + F_{fluids} + F_{forces}\]$$  
   where resonance clarity emerges from triadic alignment.  
 - **Corridor Logic:** Genetic expression modeled as corridor opening under abundance, collapse under scarcity.
 
@@ -41,3 +41,5 @@ DNA viewed through a TFT lens is interpreted as a resonance scaffold. Base pairs
 - Loswin, N. (2025). *DNA Viewed Using a TFT Lens: Triadic Resonance in Genomics*. Unpublished manuscript.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
