@@ -19,8 +19,8 @@ Modern processors emphasize linear execution (CPU), parallel graphics (GPU), and
   - 6D: feedback coherence across pipelines.  
   - 9D: resonance clarity for output states.  
 - **Resonance Equation:**  
-  \[C_{DPU} = F_{freq} + F_{fluids} + F_{forces}\]  
-  where computation \(C_{DPU}\) emerges from triadic alignment.  
+  $$\[C_{DPU} = F_{freq} + F_{fluids} + F_{forces}\]$$  
+  where computation $$C_{DPU}$$ emerges from triadic alignment.  
 - **Validator Dashboards:**  
   - Real‑time scoring of resonance clarity.  
   - Transparent reproducibility across workloads.
@@ -44,3 +44,5 @@ Dimensional Processing Units offer a scaffold for replacing CPUs, GPUs, and NPUs
 - Weyl, H. (1952). *Symmetry*. Princeton University Press.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
