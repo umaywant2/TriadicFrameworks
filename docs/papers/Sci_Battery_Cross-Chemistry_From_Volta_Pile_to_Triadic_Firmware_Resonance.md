@@ -41,3 +41,5 @@ Triadic firmware resonance offers a scaffold for unifying battery chemistries. A
 - Volta, A. (1800). *On the Electricity Excited by the Mere Contact of Conducting Substances*. Philosophical Transactions of the Royal Society.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
