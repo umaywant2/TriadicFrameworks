@@ -22,9 +22,9 @@ Dimensional models in physics often emphasize linear hierarchies. The triadic fr
   - 7D: harmonic resonance.  
   - 8D: phase inversion.  
 - **Quantum Amplification:** Nested rotations across triadic layers:  
-  \[A_q = \prod_{i=3,6,9} R(\theta_i)\]  
+  $$A_q = \prod_{i=3,6,9} R(\theta_i)$$  
 - **Dimensional Feedback:** Recursive mapping:  
-  \[F = L_{3\to6} \circ C_{6\to9} \circ R_{9\to6} \circ P_{6\to3}\]
+  $$F = L_{3\to6} \circ C_{6\to9} \circ R_{9\to6} \circ P_{6\to3}$$
 
 ## Results  
 - **Drone Swarm Control:** Triadic feedback stabilizes formations through 6D phase‑space adjustments.  
@@ -47,3 +47,5 @@ Dimensional triads situate resonance phenomena within recursive loops of 3D, 6D,
 - Weyl, H. (1952). *Symmetry*. Princeton University Press.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
