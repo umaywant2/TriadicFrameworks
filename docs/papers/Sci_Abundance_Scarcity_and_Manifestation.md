@@ -17,8 +17,8 @@ Abundance and scarcity are traditionally studied in economics and resource theor
 - **Abundance:** Corridor opening; resonance coherence across triads.  
 - **Scarcity:** Corridor collapse; fragmentation of resonance.  
 - **Manifestation Equation:**  
-  \[M = F_{freq} \cdot F_{fluids} \cdot F_{forces}\]  
-  where manifestation \(M\) occurs when triadic operators align.  
+  $$\[M = F_{freq} \cdot F_{fluids} \cdot F_{forces}\]$$  
+  where manifestation $$M$$ occurs when triadic operators align.  
 - **Resonance Clarity:** Full‑spectrum wrapper ensuring manifestation reproducibility.
 
 ## Results  
@@ -40,3 +40,5 @@ Abundance, scarcity, and manifestation are unified through triadic resonance. Co
 - Loswin, N. (2025). *Abundance, Scarcity, and Manifestation: Triadic Resonance States*. Unpublished manuscript.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
