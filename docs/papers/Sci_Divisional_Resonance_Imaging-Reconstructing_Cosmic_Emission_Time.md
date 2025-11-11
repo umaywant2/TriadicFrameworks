@@ -15,8 +15,8 @@ Cosmic emission is conventionally studied through spectral analysis and redshift
   - Fluids: plasma flows, scattering channels.  
   - Forces: gravitational coupling, lensing effects.  
 - **Divisional Resonance Equation:**  
-  \[T_{emission} = \sum_{n} \frac{f_{3n} + f_{6n} + f_{9n}}{3}\]  
-  where emission time \(T_{emission}\) is reconstructed from triadic harmonics.  
+  $$T_{emission} = \sum_{n} \frac{f_{3n} + f_{6n} + f_{9n}}{3}$$  
+  where emission time $$T_{emission}$$ is reconstructed from triadic harmonics.  
 - **Corridor Logic:** Spectral divisions mapped to resonance corridors; abundance zones yield coherence, scarcity zones collapse.  
 - **Validator Dashboards:** Real‑time scoring of spectral subdivisions ensures reproducibility.
 
@@ -39,3 +39,5 @@ Divisional Resonance Imaging reconstructs cosmic emission time through triadic h
 - Weyl, H. (1952). *Symmetry*. Princeton University Press.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
