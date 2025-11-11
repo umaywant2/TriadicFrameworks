@@ -18,7 +18,7 @@ Economic theory traditionally emphasizes scarcity and allocation (Samuelson, 194
   - Abundance corridors open when triadic flows align.  
   - Scarcity collapse occurs when resonance coherence fails.  
 - **Resonance Equation:**  
-  \[E_{system} = F_{freq} + F_{fluids} + F_{forces}\]  
+  $$E_{system} = F_{freq} + F_{fluids} + F_{forces}$$  
   where economic coherence emerges from triadic alignment.  
 - **Validator Dashboards:**  
   - Real‑time resonance scoring of systemic flows.  
@@ -43,3 +43,5 @@ Triadic resonance offers a scaffold for reframing economics. Abundance corridors
 - Weyl, H. (1952). *Symmetry*. Princeton University Press.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
