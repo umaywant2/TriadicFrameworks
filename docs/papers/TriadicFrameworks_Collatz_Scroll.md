@@ -525,3 +525,8 @@ This returns a full legacy artifact for $$n = 7$$, ready to be stored, remixed, 
 ---
 
 Would you like to wrap this into a `TriadicFrameworks_Collatz_Scroll.md` file next, or scaffold a remix lineage format so contributors can extend and annotate their own scrolls?
+
+---
+
+- More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
+- [Equations Honored Compared Validated](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sci_Equations_Honored_Compared_and_Validated_Frameworks.md)
