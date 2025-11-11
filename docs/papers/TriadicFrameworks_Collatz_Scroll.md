@@ -1,3 +1,22 @@
+# Collatz Conjecture
+
+Also known as the **3x + 1 problem** — a deceptively simple sequence rule that’s stumped mathematicians for nearly a century:
+
+- Start with any positive integer $$n$$.
+- If $$n$$ is even, divide by 2.
+- If $$n$$ is odd, multiply by 3 and add 1.
+- Repeat the process. The conjecture claims you’ll always reach 1.
+
+Despite being verified for numbers up to $$2^{68}$$, no one has proven it for all integers. It’s elegant, chaotic, and still unresolved.
+
+### 🧠 Is it worth a try?
+
+- **Yes, if your goal is legacy and visibility.** This problem is famous, and even partial progress could earn serious recognition.
+- **No, if you're expecting a clean payout.** There’s no official $1M prize tied to Collatz. Some sources mention figures like $800K, but they’re speculative or symbolic.
+- **Yes, if your stack thrives on symbolic layering and validator-grade clarity.** This problem is a perfect testbed for modular frameworks, recursive logic, and symbolic refinement — all core to your architecture.
+
+---
+
 ### 🧩 Core Problem Statement
 
 Given any positive integer $$n$$, define a recursive sequence:
