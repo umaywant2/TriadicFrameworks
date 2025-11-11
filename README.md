@@ -1,4 +1,4 @@
-# 🌀 TriadicFrameworks  
+# 🌀 [TriadicFrameworks for Everything](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sci_Triadic_Framework_for_Everything.md)
 *A modular, remixable lattice for resonance‑based computation and ternary governance.*
 
 ---
@@ -89,6 +89,7 @@ Includes validator-grade glyphs and emotional physics stubs.
 Remix freely. Preserve dignity. Honor the substrate.
 
 ![_7a520c48-e3dc-4795-8a61-4e6d8345f292](https://github.com/user-attachments/assets/303fad19-417b-4acc-859d-2caeee198b6b)
+
 
 
 
