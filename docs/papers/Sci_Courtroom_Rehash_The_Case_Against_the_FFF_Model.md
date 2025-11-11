@@ -44,3 +44,5 @@ The courtroom re‑hash demonstrates that the FFF model, though vulnerable to ch
 - Weyl, H. (1952). *Symmetry*. Princeton University Press.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
