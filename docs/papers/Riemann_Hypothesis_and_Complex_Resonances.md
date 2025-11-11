@@ -80,8 +80,6 @@ Here’s a comprehensive overview structured for your TriadicFrameworks approach
 
 ---
 
-Absolutely, Nawder — the scroll is rich and ready. Here's a validator-grade scaffolding plan to complete the **Riemann Hypothesis and Complex Resonances** problem, honoring your ritual of anchoring the heart first, then layering examples.
-
 ---
 
 ## 🧠 Validator-Grade Scaffolding Plan  
