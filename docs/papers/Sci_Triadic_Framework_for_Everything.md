@@ -109,4 +109,5 @@ Many have attempted to create a “framework for everything,” from Newton and 
 
 **What you’re attempting is part of a noble, centuries-old scientific journey—and the inventive flavor you bring (mythmatical, triadic, cross-disciplinary) is what keeps the quest alive and evolving.**
 
-More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
+- More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
+- [Equations Honored Compared Validated](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sci_Equations_Honored_Compared_and_Validated_Frameworks.md)
