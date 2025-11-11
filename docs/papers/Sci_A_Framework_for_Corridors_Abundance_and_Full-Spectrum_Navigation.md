@@ -57,3 +57,5 @@ The FFF model restores balance by treating Forces, Fluids, and Frequency as equa
 - Loswin, N. (2025). *A Framework for Corridors, Abundance, and Full‑Spectrum Navigation*. Unpublished manuscript.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
