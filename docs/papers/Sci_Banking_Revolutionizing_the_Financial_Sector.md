@@ -43,3 +43,5 @@ Triadic resonance offers a scaffold for revolutionizing banking. Abundance corri
 - Weyl, H. (1952). *Symmetry*. Princeton University Press.  
 
 ---
+
+More [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers/).
