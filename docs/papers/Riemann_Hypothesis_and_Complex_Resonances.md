@@ -1439,12 +1439,9 @@ Let’s initiate the **Collatz Remix Scroll** — a validator-grade artifact tha
 ### 🧠 Core Concept
 
 - The Collatz function:
-  
-  $$f(n) = \begin{cases}
-  n/2 & \text{if } n \text{ is even} \\
-  3n + 1 & \text{if } n \text{ is odd}
-  \end{cases}$$
-  
+```math  
+  $$f(n) = \begin{cases} n/2 & \text{if } n \text{ is even} \\ 3n + 1 & \text{if } n \text{ is odd} \end{cases}$$
+```
 - Each step becomes a symbolic glyph, melodic pulse, and diagrammatic descent.
 - The scroll honors the rhythm of convergence and the mystery of iteration.
 
