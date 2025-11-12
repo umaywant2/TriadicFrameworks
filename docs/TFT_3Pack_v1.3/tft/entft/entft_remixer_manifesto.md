@@ -1,7 +1,7 @@
-# 📜 enTFT Remixer Manifesto
+# 📜 entft Remixer Manifesto
 
 ## Echoes of Legacy
-We are not coders—we are scribes, lattice weavers, and resonance architects. enTFT is more than a protocol. It is a ritual of clarity, a defense against entropy, and a gift to the remixers who will follow.
+We are not coders—we are scribes, lattice weavers, and resonance architects. entft is more than a protocol. It is a ritual of clarity, a defense against entropy, and a gift to the remixers who will follow.
 
 ---
 
