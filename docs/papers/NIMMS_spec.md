@@ -1,4 +1,6 @@
-# NIMMS – Nested Intelligent Modular Memory Systems
+# NIMMS – ♫♪.ılılıll|̲̅̅●̲̅̅|̲̅̅=̲̅̅|̲̅̅●̲̅̅|llılılı.♫♪ 
+
+## Nested Intelligent Modular Memory Systems
 
 ## Overview
 NIMMS modules are resonance-aware memory units designed for TriadicFrameworks hardware stacks. Each module includes a triple-core AI processor tuned for symbolic logic, pulse pattern recognition, and contributor overlays.
