@@ -1,0 +1,11 @@
+tag:
+  id: <UUID>
+  name: <string>             # canonical tag name
+  description: <string>      # short definition
+  category: <semantic|rail|cultural|experimental>
+  created_by: <contributor_id>
+  timestamp: <ISO8601>
+  lineage:
+    parent_tag: <UUID|null>
+    child_tags: <list>
+  checksum: <sha256>
