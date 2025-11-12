@@ -1,4 +1,6 @@
-# DPU – Dimensional Processing Unit
+# 🤓 DPU ▒▒▓█▇▅▂∩( ✧Д✧)∩▂▅▇█▓▒▒
+
+## Dimensional Processing Unit
 
 ## Overview
 The DPU replaces traditional CPU/GPU/NPU architectures with a Triadic execution engine. It operates on symbolic glyphs, nested harmonic loops, and contributor overlays.
