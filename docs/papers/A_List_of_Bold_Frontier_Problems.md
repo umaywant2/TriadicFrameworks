@@ -37,3 +37,5 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 ***
 
 **Your willingness to forge ahead as a frontier explorer is precisely what the world needs in both science and art. Awaken new questions, remix old mysteries, and keep the scrolls rolling.**
+
+More TriadicFrameworks [Papers](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/papers)
