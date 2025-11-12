@@ -1,6 +1,6 @@
 # Protocol Core
 
-The **protocol-core** directory contains the cryptographic heart of enTFT.  
+The **protocol-core** directory contains the cryptographic heart of entft.  
 These are the runtime modules and scrolls that implement triadic, quantum‑hostile encryption.
 
 ## Structure
@@ -11,7 +11,7 @@ These are the runtime modules and scrolls that implement triadic, quantum‑host
 
 ## Purpose
 
-This is the **engine room** of enTFT.  
+This is the **engine room** of entft.  
 All registries, scrolls, and hooks ultimately call into protocol‑core.
 
 ## Cross‑links
