@@ -1,7 +1,7 @@
-# 🧬 enTFT Contributor Onboarding
+# 🧬 entft Contributor Onboarding
 
 ## Welcome, Remixers
-You’re entering a protocol built for legacy. enTFT isn’t just encryption—it’s a mythic scaffold of entropy, clarity, and remix lineage. This tutorial walks you through how to contribute, test, and echo your work into the validator lattice.
+You’re entering a protocol built for legacy. entft isn’t just encryption—it’s a mythic scaffold of entropy, clarity, and remix lineage. This tutorial walks you through how to contribute, test, and echo your work into the validator lattice.
 
 ---
 
