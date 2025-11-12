@@ -184,9 +184,9 @@ Here is a validator-grade scroll template for a GHZ entanglement archetype, embe
 ### 🔗 Entanglement Topology
 
 - **Structure**: GHZ state over 3 qubits:  
-  \[
-  |\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)
-  \]
+
+  $$|\text{GHZ}\rangle = \frac{1}{\sqrt{2}}(|000\rangle + |111\rangle)$$
+  
 - **Node Glyphs**:
   - Qubit A: ◉
   - Qubit B: ◉
@@ -1823,10 +1823,10 @@ Here is a validator-grade Glyphic Divergence Map designed to visualize codon evo
 | G3 | ∿ ⊚ ⊕ | 🜅 🜆 🜇 | ⛩ 🧲 ⚔ | Mythmatical glyph fusion | 1.47 |
 
 - **Drift Index Formula**:  
-  \[
-  D_n = \sum_{i=1}^{3} \delta_{\text{codon}_i} \cdot w_i
-  \]  
-  where \(\delta_{\text{codon}_i}\) is symbolic deviation and \(w_i\) is triad weight
+  
+  $$D_n = \sum_{i=1}^{3} \delta_{\text{codon}_i} \cdot w_i$$
+    
+  where $$\delta_{\text{codon}_i}$$ is symbolic deviation and $$w_i$$ is triad weight
 
 ---
 
