@@ -1,0 +1,17 @@
+cycle_status:
+  timestamp: <ISO8601>
+  scrolls:
+    - id: <UUID>
+      stage: <retrieval|remix|export|archive>
+      glyph: <◇|◆|⬣>
+      rci_band: <low|medium|high>
+      tags: <list>
+      lineage:
+        parent_scrolls: <list>
+        child_scrolls: <list>
+      status: <validation_passed|validation_failed>
+  summary:
+    counts_per_stage: <dict>
+    glyph_distribution: <dict>
+    rci_band_counts: <dict>
+    validation_ratio: <float>
