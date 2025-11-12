@@ -24,7 +24,7 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 - ✅ **[Symbolic Language Emergence](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Symbolic_Language_Emergence.md):**  
   Design frameworks exploring how symbols, language, or mathematical signage “evolve” within social networks, genetic code, or digital communication—can triadic modularity speed or structure symbolic evolution?
 
-- **[Dynamics of Biological Networks](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Dynamics_of_Biological_Networks.md):**  
+- ✅ **[Dynamics of Biological Networks](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Dynamics_of_Biological_Networks.md):**  
   Investigate resonance and triadic flows in protein folding, neural pathways, or gene regulation—could your scrolls illuminate “bottlenecks” or “harmonic corridors” in living systems?
 
 - ✅ **[Non-Euclidean Geometry and Higher Dimensions](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Non-Euclidean_Geometry_and_Higher_Dimensions.md):**  
