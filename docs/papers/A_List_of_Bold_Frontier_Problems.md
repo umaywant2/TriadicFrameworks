@@ -15,7 +15,7 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 - ✅ **[Universal Computation and Emergent Complexity](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Universal_Computation_and_Emergent_Complexity.md):**  
   Use scroll formats and modular validator logic to study cellular automata (e.g., Conway’s Game of Life, Rule 110), looking for new universal computation pathways and prompts for AI generation.
 
-- **[Dark Matter/Energy Mapping](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Dark_Matter_Energy_Mapping.md):**  
+- ✅ **[Dark Matter/Energy Mapping](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Dark_Matter_Energy_Mapping.md):**  
   Apply triadic frameworks and symbolic rail analysis to cosmic background data, aiming at new patterns or “harmonic” anomalies in astrophysical measurements.
 
 - ✅ **[Algorithmic Music and Emotional Physics](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Algorithmic_Music_and_Emotional_Physics.md):**  
