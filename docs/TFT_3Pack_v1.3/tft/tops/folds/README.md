@@ -13,6 +13,6 @@ Folds are the bio‑resonance registry of `tops`.
 They provide input data for the AI pipeline and resonance mappings for `entft` encryption.
 
 ## Cross‑links
-- [AI pipeline](../ai_pipeline/) → consumes folds for training and prediction
+- [tops AI pipeline](../ai_pipeline/) → consumes folds for training and prediction
 - [entft](../../entft/) → references folds in glyph registries
-- [agent‑shell](../../nous/) → can load folds into runtime
+- [nous shell](../../nous/) → can load folds into runtime
