@@ -1,7 +1,7 @@
 # Discoverability
 
 The **discoverability** directory contains SEO scaffolding, onboarding scrolls, and semantic overlays.  
-It ensures enTFT is visible, searchable, and accessible to new remixers.
+It ensures entft is visible, searchable, and accessible to new remixers.
 
 ## Structure
 
@@ -11,7 +11,7 @@ It ensures enTFT is visible, searchable, and accessible to new remixers.
 
 ## Purpose
 
-Discoverability is the **beacon layer** of enTFT.  
+Discoverability is the **beacon layer** of entft.  
 It makes the protocol findable and welcoming, ensuring the lineage continues.
 
 ## Cross‑links
