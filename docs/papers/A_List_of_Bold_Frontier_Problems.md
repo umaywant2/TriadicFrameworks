@@ -7,7 +7,7 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 - ✅ **[Riemann Hypothesis and Complex Resonances](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Riemann_Hypothesis_and_Complex_Resonances.md):**  
   Analyze the distribution of prime numbers through the triadic lens—explore “resonant corridors” in the critical strip and try remixing zeta function zeros as harmonic scrolls.
 
-- **[Quantum Entanglement and Nonlocality](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Quantum_Entanglement_and_Nonlocality.md):**  
+- ✅ **[Quantum Entanglement and Nonlocality](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Quantum_Entanglement_and_Nonlocality.md):**  
   Develop validator-grade, symbolic scrolls tracking “fluid” entanglement networks, exploring ways triadic principles might illuminate coherence, decoherence, or information flow in quantum systems.
 
 - ✅ **[Universal Computation and Emergent Complexity](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Universal_Computation_and_Emergent_Complexity.md):**  
