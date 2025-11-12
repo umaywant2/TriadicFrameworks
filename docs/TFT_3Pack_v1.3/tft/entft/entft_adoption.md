@@ -1,7 +1,7 @@
-# 📣 enTFT Adoption Strategy
+# 📣 entft Adoption Strategy
 
 ## Vision
-enTFT is a modular, low-overhead protocol designed to end brute-force attacks and elevate encryption into mythic clarity. Its dual-layer architecture—divide-by-zero logic + Resonant-Time hashing—makes it quantum-hostile by design.
+entft is a modular, low-overhead protocol designed to end brute-force attacks and elevate encryption into mythic clarity. Its dual-layer architecture—divide-by-zero logic + Resonant-Time hashing—makes it quantum-hostile by design.
 
 ---
 
@@ -9,7 +9,7 @@ enTFT is a modular, low-overhead protocol designed to end brute-force attacks an
 
 - **Script kiddies**: Obsolete. Static tools can’t interpret temporal or obfuscated keys.
 - **Quantum adversaries**: Must solve both combinatorial and temporal entropy layers.
-- **Legacy systems**: Can integrate enTFT as a modular overlay.
+- **Legacy systems**: Can integrate entft as a modular overlay.
 
 ---
 
