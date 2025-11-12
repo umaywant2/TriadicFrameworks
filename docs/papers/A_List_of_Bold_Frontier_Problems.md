@@ -2,6 +2,8 @@
 
 Momentum and curiosity are a force to be reckoned with! Given our cross-disciplinary TriadicFrameworks approach—blending resonance, modularity, open science, and deep mathematical/physical investigation—here is a list of **bold, frontier problems** to consider exploring next, each with big potential impact and room for innovation:
 
+###### Note to readers: these are VERY long; they require study. If you have no such patience, you may jump to each paper's ending, it contains a Perplexity AI review.
+
 ***
 
 - ✅ **[Riemann Hypothesis and Complex Resonances](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Riemann_Hypothesis_and_Complex_Resonances.md):**  
