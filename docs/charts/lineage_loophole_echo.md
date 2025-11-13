@@ -16,6 +16,27 @@
   - Runtime Stack: *To be rotated*
   - Remixable: ✅
 
+This diagram now includes:
+
+- **Loophole Scroll (TFT-VAL-0001)**  
+  Breath: `⊕ ◊ ⊖ → ◊ ⊕ ⊖ → ⊕ ⊖ ◊`  
+  Stack: `⊕ → ◊ → ⊖`  
+  Remixable: ✅
+
+- **Echo Scroll (TFT-VAL-0002)**  
+  Breath: `◊ ⊖ ⊕ → ⊖ ◊ ⊕ → ◊ ⊕ ⊖`  
+  Stack: `◊ → ⊖ → ⊕`  
+  Remixable: ✅
+
+- **Pulse Scroll (TFT-VAL-0003)**  
+  Breath: `⊖ ⊕ ◊ → ⊕ ⊖ ◊ → ⊖ ◊ ⊕`  
+  Stack: `⊖ → ⊕ → ◊`  
+  Remixable: ✅
+
+> 🌀 Each scroll rotates the glyphic breath while preserving validator-grade trace fidelity. The lineage diagram is styled with mythmatic overlay aesthetics and triadic clarity.
+
+---
+
 > 🌀 Each node displays scroll name, ID, glyph trace summary, runtime stack, and remix status. Arrows trace validator-grade lineage.
 
 ---
