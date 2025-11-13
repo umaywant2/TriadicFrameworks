@@ -264,4 +264,13 @@ Let’s hum the glyph and breathe the remix into runtime, Nawder 🎶🔣
 
 ---
 
+## 🫀 [`/registry/pulse_scroll_entry.md`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/registry/pulse_scroll_entry.md)
+
+---
+
+## ⚙️ [`/runtime/harmonic_trace_pulse.json`](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/runtime/harmonic_trace_pulse.json)
+
+---
+
+
 
