@@ -11,7 +11,7 @@ This space curates the scrolls, guides, and indexes that support the **TFT 3‑P
 
 ### TFT 3‑Pack v1.3
 - **[nous](TFT_3Pack_v1.3/tft/nous/)** → Environment layer for core logic, bots, and resonance tools  
-- **[enTFT](TFT_3Pack_v1.3/tft/enTFT/)** → Protocol layer for divide‑by‑zero logic, badge evolution, and flame‑grade encryption  
+- **[entft](TFT_3Pack_v1.3/tft/entft/)** → Protocol layer for divide‑by‑zero logic, badge evolution, and flame‑grade encryption  
 - **[tops](TFT_3Pack_v1.3/tft/tops/)** → Orchestration layer for runtime activation, validator onboarding, and contributor echo logic  
 
 Together, these layers form the **TFT 3‑Pack** — the living engine of TriadicFrameworks.
