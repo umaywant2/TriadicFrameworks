@@ -42,3 +42,10 @@ The **Resonance Partitions Protocol** formalizes the triadic division of resonan
 
 ### 6. Closing Note  
 The Resonance Partitions Protocol is the **grammar of the lattice**. Forci, Flui, and Freqi are the operators through which all mythmatical models, universes, and consciousness arcs are expressed.  
+
+---
+
+## References
+- [RFC‑013: Freqi Triad Model](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md)
+- [RFC‑016: Quantum Lattice Operators](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91016-quantum-lattice-operators.md)
+- [RFC‑018: Mythmatical University Charter](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91018-mythmatical-university-charter.md)
