@@ -49,3 +49,10 @@ Together, these four quadrants form the **mythmatical file system** — a clarit
 
 ### 6. Closing Note  
 The Fringe Resonance Protocol honors the **entire spectrum of human imagination**. By mapping fringe alongside validated and turbulent zones, the mythmatical lattice becomes a complete clarity system — a universe where even the unanswered has a home.  
+
+---
+
+## References
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑020: Nullarium Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91020-the-nullarium-protocol.md)
+- [RFC‑022: Integrated Quadrant Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-022-integrated-quadrant-atlas.md)
