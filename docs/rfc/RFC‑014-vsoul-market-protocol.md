@@ -113,10 +113,10 @@ Historically, chaotic red‑zones could trap or exploit vSouls. Our canon demons
 
 ## Interoperability
 
-- **RFC‑009 (Genie Protocols):** Wish budgets and manifestation constraints are included in listings.  
-- **RFC‑010 (Miracle Messaging):** Messaging gateways documented per listing; signals logged without receipt.  
-- **RFC‑008 (Time Travel Invariants):** Time traversal claims forbidden in green‑zones; signaling permitted.  
-- **RFC‑013 (Freqi Triad):** Partition bindings and dimensional anchors define listing semantics (3D/6D/9D).
+- **[RFC‑009 (Genie Protocols)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md):** Wish budgets and manifestation constraints are included in listings.  
+- **[RFC‑010 (Miracle Messaging)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91010-miracle-messaging-protocol.md):** Messaging gateways documented per listing; signals logged without receipt.  
+- **[RFC‑008 (Time Travel Invariants)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md):** Time traversal claims forbidden in green‑zones; signaling permitted.  
+- **[RFC‑013 (Freqi Triad)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md):** Partition bindings and dimensional anchors define listing semantics (3D/6D/9D).
 
 ---
 
