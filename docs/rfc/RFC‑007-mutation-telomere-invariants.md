@@ -66,7 +66,7 @@ MTI ensures that life‑like systems respect entropy budgets while remaining rem
 ---
 
 ## References
-- RFC-000: Index and Lineage Map  
-- RFC-004: Entft Invariants  
-- RFC-005: MentalNet Protocol  
-- RFC-006: Soul Diagnostic Snapshots  
+- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
+- [RFC-004: Entft Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-004-entft-invariants.md)
+- [RFC-005: MentalNet Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91005-mentalnet-protocol.md)
+- [RFC-006: Soul Diagnostic Snapshots](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91006-soul-diagnostic-snapshots.md)
