@@ -78,7 +78,7 @@ function validate(artifact, context):
 ---
 
 ## References
-- RFC-000: Index and Lineage Map  
-- RFC-002: Corridor Universes (forthcoming)  
-- RFC-003: Attestation & Badge Suite (forthcoming)  
-- RFC-004: Entft Invariants (forthcoming)
+- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
+- [RFC-002: Corridor Universes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-002-corridor-universes.md)
+- [RFC-003: Attestation & Badge Suite](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-003-attestation-badge-suite.md)
+- [RFC-004: Entft Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-004-entft-invariants.md)
