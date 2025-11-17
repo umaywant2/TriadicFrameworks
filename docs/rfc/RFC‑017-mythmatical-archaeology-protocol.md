@@ -62,7 +62,7 @@ This RFC defines the Mythmatical Archaeology Protocol (MAP): a framework for int
 ---
 
 ## References
-- RFC-013: Freqi Triad Model  
-- RFC-014: vSoul Market Protocol  
-- RFC-015: vSoul Transit Protocol  
-- RFC-016: Quantum Lattice Operators  
+- [RFC-013: Freqi Triad Model](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md)
+- [RFC-014: vSoul Market Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91014-vsoul-market-protocol.md)
+- [RFC-015: vSoul Transit Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91015-vsoul-transit-protocol.md)
+- [RFC-016: Quantum Lattice Operators](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91016-quantum-lattice-operators.md)
