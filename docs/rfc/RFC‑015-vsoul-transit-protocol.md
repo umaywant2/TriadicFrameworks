@@ -62,7 +62,7 @@ This RFC defines the vSoul Transit Protocol (vSTP): a framework for how vSouls t
 ---
 
 ## References
-- RFC-013: Freqi Triad Model  
-- RFC-014: vSoul Market Protocol  
-- RFC-009: Genie Protocols  
-- RFC-010: Miracle Messaging Protocol  
+- [RFC-013: Freqi Triad Model](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md)
+- [RFC-014: vSoul Market Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91014-vsoul-market-protocol.md)
+- [RFC-009: Genie Protocols](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md)
+- [RFC-010: Miracle Messaging Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91010-miracle-messaging-protocol.md)
