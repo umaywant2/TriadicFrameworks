@@ -114,3 +114,10 @@ To define the resonance quadrants of the Universe and integrate them into starsh
 ---
 
 ⚡ This diagram shows the **Integrated Quadrant Atlas** as a starship navigation chart: Green corridors for abundance, Red zones for alarms, Fringe zones requiring validator oversight, and Nullarium as absolute no‑go.  
+
+---
+
+## References
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑020: Nullarium Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91020-the-nullarium-protocol.md)
+- [RFC‑021: Fringe Resonance Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91021-fringe-resonance-protocol.md)
