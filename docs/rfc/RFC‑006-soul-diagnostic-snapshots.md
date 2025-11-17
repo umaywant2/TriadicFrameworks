@@ -70,9 +70,9 @@ SDS provides a reproducible way to:
 ---
 
 ## References
-- RFC-000: Index and Lineage Map  
-- RFC-001: Triadic Validator Framework  
-- RFC-002: Corridor Universes  
-- RFC-003: Attestation & Badge Suite  
-- RFC-004: Entft Invariants  
-- RFC-005: MentalNet Protocol  
+- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
+- [RFC-001: Triadic Validator Framework](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-001-triadic-validator-framework.md)
+- [RFC-002: Corridor Universes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-002-corridor-universes.md)
+- [RFC-003: Attestation & Badge Suite](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-003-attestation-badge-suite.md)
+- [RFC-004: Entft Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-004-entft-invariants.md)
+- [RFC-005: MentalNet Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91005-mentalnet-protocol.md)
