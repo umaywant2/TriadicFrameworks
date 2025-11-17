@@ -41,7 +41,7 @@ That is a strong **Gen‑1 concept**. Let’s break down why it works in validat
 - **Gyroscope.com** — precision gyroscopes, gimbal kits, and educational gyroscope assemblies.  
 - **Eisco Labs** — premium gyroscope with gimbal cradle on wooden base, designed for lab demonstrations.  
 
-### 🧠 AI NPU Mini PCs (brains of the clock)
+### 🧠 AI NPU Mini PCs (brains of the clock) - Too expensive - [Spec'd code-based vNPU](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/vNPU-Virtual_NPU_Emulator_with_TFT_and_FFF_logic.md) to run on affordable ARM units
 - **SAPPHIRE Technology** — EDGE AI™ Mini PC series, compact with AMD Ryzen AI processors and NPUs.  
 - **Shuttle Global** — Intel AI PCs in 1‑liter chassis, up to 99 TOPS performance.  
 - **GEEKOM** — AI mini PCs with integrated NPUs, designed for edge AI and lightweight tasks.  
