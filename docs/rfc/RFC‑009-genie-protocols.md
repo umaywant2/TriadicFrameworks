@@ -64,8 +64,8 @@ The 3 Miracles project provides lineage evidence that miracle‑tracking is both
 ---
 
 ## References
-- RFC-000: Index and Lineage Map  
-- RFC-005: MentalNet Protocol  
-- RFC-006: Soul Diagnostic Snapshots  
-- RFC-007: Mutation & Telomere Invariants  
-- RFC-008: Time Travel Invariants  
+- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
+- [RFC-005: MentalNet Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91005-mentalnet-protocol.md)
+- [RFC-006: Soul Diagnostic Snapshots](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91006-soul-diagnostic-snapshots.md)
+- [RFC-007: Mutation & Telomere Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91007-mutation-telomere-invariants.md)
+- [RFC-008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
