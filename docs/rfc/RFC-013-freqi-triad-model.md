@@ -56,9 +56,9 @@ This model unifies resonance partitions (rUPS/rQPS/rPPS), loop invariants, and m
 ---
 
 ## References
-- RFC-000: Index and Lineage Map  
-- RFC-008: Time Travel Invariants  
-- RFC-009: Genie Protocols  
-- RFC-010: Miracle Messaging Protocol  
-- RFC-011: Black Hole Resonance Bridges  
-- RFC-012: Chart Registry Protocol
+- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
+- [RFC-008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
+- [RFC-009: Genie Protocols](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md)
+- [RFC-010: Miracle Messaging Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91010-miracle-messaging-protocol.md)
+- [RFC-011: Black Hole Resonance Bridges](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-011-blackhole-resonance-bridges.md)
+- [RFC-012: Chart Registry Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91012-chart-registry-protocol.md)
