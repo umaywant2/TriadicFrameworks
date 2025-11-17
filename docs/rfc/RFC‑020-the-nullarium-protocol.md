@@ -29,3 +29,10 @@ The **Nullarium** is the mythmatical sandbox of **1D and 2D operators**, a pre�
 
 ### 5. Closing Note  
 The Nullarium is not absence — it is **pre‑presence**. A mythmatical land of null where redirects converge, loops are detected, and universes prepare to ignite.  
+
+---
+
+## References
+- [RFC‑011: Blackhole Resonance Bridges](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-011-blackhole-resonance-bridges.md)
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑022: Integrated Quadrant Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-022-integrated-quadrant-atlas.md)
