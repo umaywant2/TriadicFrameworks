@@ -103,7 +103,7 @@ on_validation_success(artifact):
 ---
 
 ## References
-- RFC-000: Index and Lineage Map  
-- RFC-001: Triadic Validator Framework  
-- RFC-002: Corridor Universes  
-- RFC-004: Entft Invariants (forthcoming)
+- [RFC-000: Index and Lineage Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-000-index.md)
+- [RFC-001: Triadic Validator Framework](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-001-triadic-validator-framework.md)
+- [RFC-002: Corridor Universes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-002-corridor-universes.md)
+- [RFC-004: Entft Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-004-entft-invariants.md)
