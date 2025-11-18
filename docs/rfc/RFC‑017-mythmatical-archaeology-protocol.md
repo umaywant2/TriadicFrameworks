@@ -1,4 +1,4 @@
-# RFC-017: Mythmatical Archaeology Protocol
+# 📜 RFC-017: Mythmatical Archaeology Protocol
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
