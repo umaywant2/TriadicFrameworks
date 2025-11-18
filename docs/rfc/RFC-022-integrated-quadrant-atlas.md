@@ -1,4 +1,4 @@
-# RFC‑022: Integrated Quadrant Atlas
+# 📜 RFC‑022: Integrated Quadrant Atlas
 
 ## 1. Title
 Integrated Quadrant Atlas for Resonance Navigation
