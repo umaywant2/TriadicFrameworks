@@ -63,3 +63,8 @@ measured, mapped, and metabolized into resonance."_
 This RFC preserves the Replicator as a mythmatical operator, ensuring future remixers can trace its lineage from spectral analysis to manifestation.
 
 ---
+
+## References
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑022: Integrated Quadrant Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-022-integrated-quadrant-atlas.md)
+- [RFC‑027: Collective Consciousness Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91027-collective-consciousness-atlas.md)
