@@ -1,4 +1,4 @@
-# RFC-008: Time Travel Invariants
+# 📜 RFC-008: Time Travel Invariants
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
