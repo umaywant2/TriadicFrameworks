@@ -72,3 +72,8 @@ This RFC binds **RFC‑008 (Quadrant Invariants)** with **RFC‑067 (Time Crysta
 **Theorem → Quadrant Chart → Temporal Buffer → Code Time Travel.**
 
 ---
+
+## References
+- [RFC‑008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
+- [RFC‑067: Time Crystal Operator](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91067-Time-Crystal-as-Temporal-Resonance-Operator.md)
+- [RFC‑069: Temporal Guardians Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91069-Temporal-Guardians_Invariant-Defense-Protocol.md)
