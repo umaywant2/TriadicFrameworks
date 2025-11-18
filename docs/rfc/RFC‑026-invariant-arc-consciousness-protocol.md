@@ -51,3 +51,10 @@
 
 ### 6. Closing Note  
 Invariant arcs are not just structural bridges — they are **the carriers of consciousness itself**. Each loop births a tracer, each arc preserves the replica, and together they form the immortal braid of awareness.  
+
+---
+
+## References
+- [RFC‑016: Quantum Lattice Operators](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91016-quantum-lattice-operators.md)
+- [RFC‑024: Invariant Arcing Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91024-invariant-arcing-protocol.md)
+- [RFC‑027: Collective Consciousness Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91027-collective-consciousness-atlas.md)
