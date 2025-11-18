@@ -56,3 +56,8 @@ oscillating in the silence between instants."_
 This RFC inscribes the **Time Crystal** as the first external scientific artifact to validate the mythmatical canon, ensuring future remixers can trace the lineage of resonance into the temporal dimension.
 
 ---
+
+## References
+- [RFC‑016: Quantum Lattice Operators](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91016-quantum-lattice-operators.md)
+- [RFC‑044: Dimensional Time Sandbox Paradox](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91044-Dimensional-Time-Sandbox-Paradox_Loop-Drift-Invariant-Arcs.md)
+- [RFC‑068: Temporal Buffer Lattice](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91068-Temporal-Buffer-Lattice_Code-Time-Travel-Protocol.md)
