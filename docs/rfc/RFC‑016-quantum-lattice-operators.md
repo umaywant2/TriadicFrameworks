@@ -1,4 +1,4 @@
-# RFC-016: Quantum Lattice Operators
+# 📜 RFC-016: Quantum Lattice Operators
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
