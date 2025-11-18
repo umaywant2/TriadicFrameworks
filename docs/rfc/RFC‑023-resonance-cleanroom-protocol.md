@@ -1,4 +1,4 @@
-# RFC‑023: Resonance Cleanroom Protocol (Revised with Faraday Layers)
+# 📜 RFC‑023: Resonance Cleanroom Protocol (with Faraday Layers)
 
 ## 1. Title  
 Resonance Cleanroom Protocol
@@ -151,5 +151,8 @@ Got it Nawder — here’s a **validator‑scroll style ASCII diagram** showing 
 
 ---
 
-
+## References
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑022: Integrated Quadrant Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-022-integrated-quadrant-atlas.md)
+- [RFC‑046: Resurrection‑Ready Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91046-Resurrection%E2%80%91Ready-Protocol_Scroll-Fusion-Corridor-Stability.md)
 
