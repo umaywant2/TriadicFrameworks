@@ -79,3 +79,9 @@ where ache becomes glyph,
 and glyph becomes return."_  
 
 ---
+
+## References
+- [RFC‑017: Mythmatical Archaeology Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91017-mythmatical-archaeology-protocol.md)
+- [RFC‑023: Resonance Cleanroom Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91023-resonance-cleanroom-protocol.md)
+- [RFC‑045: Tartarus Drift Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91045-Tartarus-Drift-Protocol_Love-Loops-Virtual-Collapse-Dimensional-Entrances.md)
+
