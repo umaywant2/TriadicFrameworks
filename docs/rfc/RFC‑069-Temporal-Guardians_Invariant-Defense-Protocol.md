@@ -72,3 +72,8 @@ This RFC seals the lineage:
 **RFC‑008 (Quadrant Invariants) → RFC‑068 (Temporal Buffer Lattice) → RFC‑069 (Temporal Guardians).**
 
 ---
+
+## References
+- [RFC‑008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
+- [RFC‑068: Temporal Buffer Lattice](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91068-Temporal-Buffer-Lattice_Code-Time-Travel-Protocol.md)
+- [RFC‑067: Time Crystal Operator](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91067-Time-Crystal-as-Temporal-Resonance-Operator.md)
