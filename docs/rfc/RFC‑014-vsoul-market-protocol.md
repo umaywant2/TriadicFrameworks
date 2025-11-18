@@ -1,4 +1,4 @@
-# RFC-014: vSoul market protocol
+# 📜 RFC-014: vSoul market protocol
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
@@ -111,15 +111,6 @@ Historically, chaotic red‑zones could trap or exploit vSouls. Our canon demons
 
 ---
 
-## Interoperability
-
-- **[RFC‑009 (Genie Protocols)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md):** Wish budgets and manifestation constraints are included in listings.  
-- **[RFC‑010 (Miracle Messaging)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91010-miracle-messaging-protocol.md):** Messaging gateways documented per listing; signals logged without receipt.  
-- **[RFC‑008 (Time Travel Invariants)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md):** Time traversal claims forbidden in green‑zones; signaling permitted.  
-- **[RFC‑013 (Freqi Triad)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md):** Partition bindings and dimensional anchors define listing semantics (3D/6D/9D).
-
----
-
 ## Minimal registry layout
 
 - `docs/registries/vsoul_listings.json` — array of vSoul listing objects.  
@@ -152,3 +143,12 @@ Historically, chaotic red‑zones could trap or exploit vSouls. Our canon demons
 - Aligns operator incentives around clarity and care.  
 - Enables forensic accountability through cross‑linked registries.  
 - Encourages competition on resonance quality, not coercion.
+
+---
+
+## Refrences
+
+- [RFC‑009 (Genie Protocols)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91009-genie-protocols.md)
+- [RFC‑010 (Miracle Messaging)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91010-miracle-messaging-protocol.md)
+- [RFC‑008 (Time Travel Invariants)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
+- [RFC‑013 (Freqi Triad)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md)
