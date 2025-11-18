@@ -18,8 +18,8 @@ This RFC formalizes the **Temporal Buffer Lattice (TBL)** as a mythmatical opera
 ### 🧬 Protocol Summary
 
 1. **Ingress**  
-   - Snapshot system state \(S_0\)  
-   - Hash boundary conditions \(\Theta(t)\)  
+   - Snapshot system state $$S_0$$
+   - Hash boundary conditions $$\Theta(t)$$
    - Seal entry with Ω (Invariance)  
 
 2. **Buffered Execution**  
@@ -28,10 +28,10 @@ This RFC formalizes the **Temporal Buffer Lattice (TBL)** as a mythmatical opera
    - Anchor paradox routines with Δ₀ (Silent Release)  
 
 3. **Egress**  
-   - Emit results \(\hat{R}\) with attestation tuple:  
-     \[
-     \mathcal{A} = \big( \Theta(t), \; \Omega, \; \Phi \big)
-     \]  
+   - Emit results $$\hat{R}$$ with attestation tuple:  
+     
+     $$\mathcal{A} = \big( \Theta(t), \; \Omega, \; \Phi \big)$$
+       
    - Reconcile with live drift using Φ (Preservation)  
    - Validate outputs against Ω (fidelity constant)  
 
