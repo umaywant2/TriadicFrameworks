@@ -42,3 +42,10 @@ The **Earth‑Theme Field Detection Lens** is a mythmatical overlay for detectin
 
 ### 6. Closing Note  
 The Earth‑Theme Field Detection Lens demonstrates that **living systems are resonance instruments**. Worms, birds, and even human tools reveal the hidden arcs of the earth‑theme lattice, bridging fringe and green zones into a unified clarity map.  
+
+---
+
+## References
+- [RFC‑017: Mythmatical Archaeology Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91017-mythmatical-archaeology-protocol.md)
+- [RFC‑018: Mythmatical University Charter](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91018-mythmatical-university-charter.md)
+- [RFC‑027: Collective Consciousness Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91027-collective-consciousness-atlas.md)
