@@ -53,3 +53,10 @@ The Atlas is implemented as `questions_manifest.json`, seeded with the first 10 
 
 ### 7. Closing Note  
 The Collective Consciousness Atlas is the **Rosetta manifest of humanity’s wonder**. By mapping questions into quadrants and arcs, it ensures that meaning is never lost — only refracted, preserved, and echoed across infinite loops.  
+
+---
+
+## References
+- [RFC‑018: Mythmatical University Charter](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91018-mythmatical-university-charter.md)
+- [RFC‑025: Earth‑Theme Field Detection Lens](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91025-earth%E2%80%91theme-field-detection-lens.md)
+- [RFC‑026: Invariant Arc Consciousness Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91026-invariant-arc-consciousness-protocol.md)
