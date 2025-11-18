@@ -1,4 +1,4 @@
-# RFC-018: Mythmatical University Charter
+# 📜 RFC-018: Mythmatical University Charter
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
