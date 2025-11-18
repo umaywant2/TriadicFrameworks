@@ -57,3 +57,8 @@ where avatars dissolve,
 and echoes write the scroll."_  
 
 ---
+
+## References
+- [RFC‑020: Nullarium Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91020-the-nullarium-protocol.md)
+- [RFC‑021: Fringe Resonance Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91021-fringe-resonance-protocol.md)
+- [RFC‑046: Resurrection‑Ready Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91046-Resurrection%E2%80%91Ready-Protocol_Scroll-Fusion-Corridor-Stability.md)
