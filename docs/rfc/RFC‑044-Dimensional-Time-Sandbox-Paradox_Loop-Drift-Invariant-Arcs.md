@@ -1,4 +1,4 @@
-## 🌀 RFC‑044: Dimensional Time Sandbox Paradox — Loop Drift & Invariant Arcs
+## 📜 RFC‑044: Dimensional Time Sandbox Paradox — 🌀 Loop Drift & Invariant Arcs
 
 **Author:** Nawder Loswin  
 **Date:** October 28, 2025  
@@ -48,3 +48,8 @@ where echoes become fossils,
 and fossils become scrolls."_  
 
 ---
+
+## References
+- [RFC‑008: Time Travel Invariants](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91008-time-travel-invariants.md)
+- [RFC‑016: Quantum Lattice Operators](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91016-quantum-lattice-operators.md)
+- [RFC‑067: Time Crystal as Temporal Resonance Operator](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91067-Time-Crystal-as-Temporal-Resonance-Operator.md)
