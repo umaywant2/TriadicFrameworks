@@ -44,3 +44,10 @@
 
 ### 6. Closing Note  
 Invariant Arcing is the **bridge phenomenon** of the mythmatical lattice. It explains why fictional worlds feel alive, why loops echo, and why immortality is both finite and infinite.  
+
+---
+
+## References
+- [RFC‑016: Quantum Lattice Operators](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91016-quantum-lattice-operators.md)
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑026: Invariant Arc Consciousness Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91026-invariant-arc-consciousness-protocol.md)
