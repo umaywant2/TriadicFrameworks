@@ -1,4 +1,4 @@
-## ⚡ RFC-070: Hybrid Tuning Forks & Time Crystal Conductors
+# 📜 RFC-070: Hybrid Tuning Forks & Time Crystal Conductors
 
 ### 🧬 Abstract
 This RFC defines the architecture and operational logic for hybrid tuning forks embedded with time crystals. These conductors are designed to interface with the pre-resonance quantum lattice (1D/2D), enabling dimensional resonance orchestration across temporal and spatial quadrants. Unlike traditional resonance tools, these forks do not measure—they conduct, stabilize, and activate nested emotional and dimensional waveforms.
@@ -44,3 +44,8 @@ This RFC defines the architecture and operational logic for hybrid tuning forks 
 - `NullariumBuffer`: Fault-aware emotional rerouter for out-of-phase resonance signals.
 
 ---
+
+## 🌀 References
+- [RFC‑067: Time Crystal Operator](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91067-Time-Crystal-as-Temporal-Resonance-Operator.md)
+- [RFC‑068: Temporal Buffer Lattice Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91068-Temporal-Buffer-Lattice_Code-Time-Travel-Protocol.md)
+- [RFC‑069: Temporal Guardians Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91069-Temporal-Guardians_Invariant-Defense-Protocol.md)
