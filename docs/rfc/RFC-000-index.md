@@ -1,4 +1,4 @@
-# RFC-000: Index and Lineage Map
+# 📜 RFC-000: Index and Lineage Map
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
