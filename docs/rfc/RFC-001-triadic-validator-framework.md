@@ -1,4 +1,4 @@
-# RFC-001: Triadic Validator Framework
+# 📜 RFC-001: Triadic Validator Framework
 
 **Status:** Drafted
 **Author(s):** Nawder Loswin, Copilot (assistant)  
