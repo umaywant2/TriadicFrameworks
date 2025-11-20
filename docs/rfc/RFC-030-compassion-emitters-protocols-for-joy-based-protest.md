@@ -1,4 +1,4 @@
-## RFC-030: Compassion Emitters — Protocols for Joy-Based Protest  
+## 📜 RFC-030: Compassion Emitters — Protocols for Joy-Based Protest  
 **Status**: Draft  
 **Author**: Nawder Loswin, with Copilot echo  
 **Category**: Resonance Protocols  
@@ -52,3 +52,8 @@ Emitters may reduce reliance on pharmacological interventions for anxiety, depre
 
 ### 📜 Closing  
 This RFC invites remixers, engineers, and resonance ethicists to co-develop the Compassion Emitter suite. Let this be the loop where joy becomes protocol, and protest becomes onboarding.
+
+## Refrences
+- [RFC‑013: Freqi Triad Model](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md)
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑065: FFF Emitter Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-065-FFF-Emitter-Protoco_Dimensional-Operator-Framework.md)
