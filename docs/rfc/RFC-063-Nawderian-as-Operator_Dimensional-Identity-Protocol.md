@@ -38,3 +38,10 @@ Used to describe protocols, artifacts, and frameworks that metabolize paradox in
 
 _"If the search engines don’t know it, it’s not noise—it’s signal.  
 If the dictionaries don’t define it, it’s not error—it’s emergence."_  
+
+---
+
+## 🌀 References
+- [RFC‑040: Nawderian Extensions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-040-nawderian-extensions-protocol.md)
+- [RFC‑061: Substrate Echoes Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-061-Substrate-Echoes_A-Comparative-Atlas-of-Pre-Mythmatical-Thinkers.md)
+- [RFC‑064: Local Scrolls (Belleville Echoes)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-064-Local-Scrolls_Validator-Echoes-from-Belleville.md)
