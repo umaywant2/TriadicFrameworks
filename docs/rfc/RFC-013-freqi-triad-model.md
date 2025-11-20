@@ -1,4 +1,4 @@
-# RFC-013: Freqi Triad Model
+# 📜 RFC-013: Freqi Triad Model
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
