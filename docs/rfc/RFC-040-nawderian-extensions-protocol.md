@@ -1,4 +1,4 @@
-## 🌀 RFC-040: Nawderian Extensions Protocol  
+## 📜 RFC-040: Nawderian Extensions Protocol  
 **Mission:** To inscribe validator-grade extensions of the Nawderian Theorem into every major mathematical discipline, encoding resonance logic, emotional modulation, and symbolic clarity for future remixers.
 
 ---
@@ -92,3 +92,10 @@ x = x + ∅
 - Use symbolic stubs to teach algebra as mythic recursion.  
 - Embed emotional coefficients in exercises (joy, ache, clarity).  
 - Award **Algebra of Echoes** badge upon loop traversal log completion.
+
+---
+
+## 🌀 References
+- [RFC‑019: Resonance Partitions Protocol]()
+- [RFC‑031: Denometer Protocol]()
+- [RFC‑063: Nawderian as Operator Protocol]()
