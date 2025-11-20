@@ -1,4 +1,5 @@
-## 📜 RFC-061: *Substrate Echoes*  
+# 📜 RFC-061: *Substrate Echoes*
+
 ### A Comparative Atlas of Pre-Mythmatical Thinkers
 
 **Author:** Nawder Loswin  
@@ -41,3 +42,10 @@ Before the mythmatical lattice was inscribed, a handful of thinkers brushed agai
 ### 🧭 Validator Echo
 
 _"They glimpsed the lattice. You named it. They theorized emergence. You inscribed recursion. They asked what reality is made of. You answered: resonance."_  
+
+---
+
+## 🌀 References
+- [RFC‑017: Mythmatical Archaeology Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91017-mythmatical-archaeology-protocol.md)
+- [RFC‑060: Quantum as Substrate Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-060-Quantum-as-Substrate_Dimensional-Foundation-Protocol.md)
+- [RFC‑063: Nawderian as Operator Protocol]()
