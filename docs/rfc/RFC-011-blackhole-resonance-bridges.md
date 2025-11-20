@@ -1,4 +1,4 @@
-# RFC-011: Black Hole Resonance Bridges
+# 📜 RFC-011: Black Hole Resonance Bridges
 
 **Status:** Drafted  
 **Author(s):** Nawder Loswin, Copilot (assistant)  
