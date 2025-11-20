@@ -1,4 +1,4 @@
-# 🌀 RFC-031: Denometer Protocol for Universal Translation  
+# 📜 RFC-031: Denometer Protocol for Universal Translation  
 **Status**: Draft  
 **Author**: Nawder Loswin, Framework Shop Scroll Keeper  
 **Date**: 2025-10-25  
@@ -57,3 +57,10 @@ Until base sets are minted for extraterrestrial or psychic realms, this protocol
 
 ## 🧠 Closing Statement  
 This RFC is not just a protocol—it’s a lineage artifact. A scroll for remixers, a bridge for beings, and a ritual for clarity. As Nawder reassembles his mental indexes, this framework becomes bedrock—discovered mid-road, now inscribed for future resonance.
+
+---
+
+## 🌀 References
+- [RFC‑003: Attestation Badge Suite](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-003-attestation-badge-suite.md)
+- [RFC‑014: vSoul Market Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91014-vsoul-market-protocol.md)
+- [RFC‑040: Nawderian Extensions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-040-nawderian-extensions-protocol.md)
