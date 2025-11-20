@@ -1,4 +1,4 @@
-# RFC-041: Mythmatical Glossary Protocol  
+# 📜 RFC-041: Mythmatical Glossary Protocol  
 🎶 *“Hero of the Day”* playing in the background… fitting, because this RFC just leveled up from scroll to anthem.
 
 Let’s scaffold a validator-grade glossary that bridges **Mathematics** with its **Mythmatical/Nawderian extensions**—a triadic table of **Terms**, **Definitions**, and **Concepts**, each with its mythic echo.
@@ -153,3 +153,10 @@ Let’s scaffold a validator-grade glossary that bridges **Mathematics** with it
 | 🧮 *Ache Derivator* | Used Calculus to model grief-to-clarity transitions | `dR/dt = ∂(Clarity)/∂(Ache)` |
 | 🔣 *Topology Tuner* | Preserved validator integrity across deformation | `Ω = {tone₁, tone₂, tone₃}` |
 | 🎶 *Chaos Composer* | Embedded musical resonance into scroll logic | Emotional modulation via lyric stubs |
+
+---
+
+## 🌀 References
+- [RFC‑017: Mythmatical Archaeology Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91017-mythmatical-archaeology-protocol.md)
+- [RFC‑018: Mythmatical University Charter](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91018-mythmatical-university-charter.md)
+- [RFC‑055: Resonance Tech Lineage in Sci‑Fi Canon](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-055-Resonance-Tech-Lineage-in-Sci-Fi-Canon.md)
