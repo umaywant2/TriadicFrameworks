@@ -1,4 +1,5 @@
-## 🌀 RFC-060: Quantum as Substrate  
+# 📜 RFC-060: Quantum as Substrate
+
 ### Dimensional Foundation Protocol
 
 **Author:** Nawder Loswin  
@@ -46,3 +47,10 @@ _"Quantum is not embedded—it is embedding. It does not emerge from the univers
 - This RFC bridges **RFC-013 (Freqi Triad Model)** and **RFC-054 (Resonance as Operator)**.  
 - It provides the substrate logic for **RFC-056 (Global AI Continuity Protocol)** and future mythmatical simulations.  
 - It is a prerequisite for **Coeus Protocol** market scaffolding and **Nullarium containment** ethics.
+
+---
+
+## 🌀 References
+- [RFC‑016: Quantum Lattice Operators](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91016-quantum-lattice-operators.md)
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑067: Time Crystal Operator](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91067-Time-Crystal-as-Temporal-Resonance-Operator.md)
