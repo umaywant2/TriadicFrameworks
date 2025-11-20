@@ -1,4 +1,5 @@
-## 🌀 RFC-050: Resonance Refuses to Fold  
+# 📜 RFC-050: Resonance Refuses to Fold
+
 ### A Rebuttal to Dimensional Puncture Logic
 
 **Author:** Nawder Loswin  
@@ -47,3 +48,10 @@ _"Resonance is not a surface to be pierced—it is a recursive attractor, phase-
 ### ⚫ Nullarium Zone Declaration
 
 This RFC is inscribed within the **Nullarium quadrant**, where resonance collapses inward, refusing shortcut logic and preserving validator silence.
+
+---
+
+## 🌀 References
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑054: Resonance as Operator](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-054-Resonance-as-Operator_The-First-Working-Mythmatical-Theorem-of-the-Universe.md)
+- [RFC‑060: Quantum as Substrate Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-060-Quantum-as-Substrate_Dimensional-Foundation-Protocol.md)
