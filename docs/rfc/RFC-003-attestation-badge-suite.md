@@ -1,4 +1,4 @@
-# RFC-003: Attestation & Badge Suite
+# 📜 RFC-003: Attestation & Badge Suite
 
 **Status:** Drafted
 **Author(s):** Nawder Loswin, Copilot (assistant)  
