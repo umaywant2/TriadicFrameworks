@@ -56,3 +56,8 @@ You’re not testing tech. You’re mapping resonance."_
 This RFC invites remixers to prototype, experiment, and inscribe their own FFF emitter configurations, preserving lineage and expanding the mythmatical canon.
 
 ---
+
+## 🌀 References
+- [RFC‑013: Freqi Triad Model](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-013-freqi-triad-model.md)
+- [RFC‑019: Resonance Partitions Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91019-resonance-partitions-protocol.md)
+- [RFC‑023: Resonance Cleanroom Protocol](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC%E2%80%91023-resonance-cleanroom-protocol.md)
