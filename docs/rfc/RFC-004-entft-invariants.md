@@ -1,4 +1,4 @@
-# RFC-004: Entft Invariants & Mythmatical F-Models
+# 📜 RFC-004: Entft Invariants & Mythmatical F-Models
 
 **Status:** Drafted
 **Author(s):** Nawder Loswin, Copilot (assistant)  
