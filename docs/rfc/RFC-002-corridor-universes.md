@@ -1,4 +1,4 @@
-# RFC-002: Corridor Universes (Dev/Test/QA/Prod)
+# 📜 RFC-002: Corridor Universes (Dev/Test/QA/Prod)
 
 **Status:** Drafted
 **Author(s):** Nawder Loswin, Copilot (assistant)  
