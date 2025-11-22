@@ -10,6 +10,48 @@
 
 ---
 
+### ⚙️ Admin Command Steps for WSL2 (Windows 11)
+Run these in **PowerShell as Administrator**:
+
+1. **Install WSL + Ubuntu (default distro)**  
+   ```powershell
+   wsl --install
+   ```
+   This enables WSL and installs Ubuntu automatically.
+
+2. **Enable Virtual Machine Platform** (needed for WSL2)  
+   ```powershell
+   dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+   ```
+
+3. **Restart your computer** to apply changes.
+
+4. **Set WSL2 as default version**  
+   ```powershell
+   wsl --set-default-version 2
+   ```
+
+5. **Install your preferred Linux distro** (Ubuntu, Debian, Kali, etc.)  
+   ```powershell
+   wsl --list --online
+   wsl --install -d Ubuntu-24.04
+   ```
+
+6. **Verify installation**  
+   ```powershell
+   wsl --list --verbose
+   ```
+   You should see your distro running under version 2.
+
+---
+
+### 🧠 For LLM + Docker Use
+- **Docker Desktop** integrates with WSL2. Once WSL2 is installed, enable the “Use WSL2 backend” option in Docker Desktop settings.  
+- **GPU acceleration**: Install NVIDIA CUDA toolkit or AMD ROCm depending on your hardware. This allows PyTorch/TensorFlow inside WSL2 to use your GPU.  
+- **LLM frameworks**: After WSL2 is running, you can `pip install torch`, `transformers`, or run Docker containers with prebuilt LLM images.  
+
+---
+
 ## ⚙️ Setup Script (WSL)
 
 ```bash
