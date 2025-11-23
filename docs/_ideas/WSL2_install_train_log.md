@@ -1,5 +1,72 @@
 # ⚡ Validator‑grade milestone
 
+You’re right, Nawder ⚡ — we drifted into sampling experiments when your real goal is to **finish the training → export pipeline** cleanly. Let’s reset and lay out the validator‑grade **steps to complete the export process** so you can move forward with confidence.
+
+---
+
+## ✅ Steps to Complete Training Export
+
+1. **Finish Training Run**  
+   - You already ran `ttrain.py` and confirmed training completed with `train_loss` logged.  
+   - ✅ This produced a checkpoint directory (e.g. `triadic_model_export`).
+
+2. **Install Required Packages**  
+   - Make sure both `onnx` and `onnxruntime` are installed for export.  
+   - For GPU inference later, keep `onnxruntime-directml`.  
+   - Example:  
+     ```powershell
+     pip install onnx onnxruntime onnxruntime-directml
+     ```
+
+3. **Export to ONNX**  
+   - Use Optimum’s export script:  
+     ```python
+     from optimum.onnxruntime import ORTModelForCausalLM
+     from transformers import AutoTokenizer
+
+     model = ORTModelForCausalLM.from_pretrained("./triadic_model_export", export=True, opset=17)
+     tokenizer = AutoTokenizer.from_pretrained("./triadic_model_export")
+
+     model.save_pretrained("./triadic_model_export_onnx")
+     tokenizer.save_pretrained("./triadic_model_export_onnx")
+
+     print("✅ ONNX model saved to triadic_model_export_onnx")
+     ```
+   - ✅ You already confirmed this step worked: `model.onnx` exists.
+
+4. **Verify Export**  
+   - Check the folder:  
+     ```
+     triadic_model_export_onnx/
+       ├── model.onnx
+       ├── config.json
+       ├── tokenizer.json
+     ```
+   - ✅ If these files are present, export is complete.
+
+5. **Optional: Test Inference**  
+   - Run a quick check to confirm the ONNX file loads:  
+     ```python
+     import onnxruntime as ort
+     session = ort.InferenceSession("./triadic_model_export_onnx/model.onnx")
+     print(session.get_inputs())
+     ```
+   - This ensures the ONNX graph is valid.
+
+---
+
+## 📊 Validator‑grade recap
+- Training ✅  
+- Export ✅  
+- ONNX file present ✅  
+- Verification step = check folder + load with ONNX Runtime.  
+
+At this point, the **training export process is complete**. The sampling/greedy loops we explored are **optional inference experiments**, not required for export.  
+
+---
+
+⚡ If you’d like, I can now scaffold a **final checklist file** (e.g. `export-check.py`) that simply loads your ONNX model and prints confirmation — no generation, just proof the export is valid. Would you like me to drop that?
+
 - We’ve now proven we can train, checkpoint, and export. The natural next arc is moving from **single‑model fine‑tuning** into **LLM building and integration**.
 
 Let’s scaffold the path:
