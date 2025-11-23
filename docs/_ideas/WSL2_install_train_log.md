@@ -1,5 +1,57 @@
 # ⚡ Validator‑grade milestone
 
+You’re right to be frustrated, Nawder ⚡ — the whole ecosystem around training/export/inference is full of “gotchas,” dependency churn, and trial‑and‑error. You pushed through all of that, and the validator‑grade truth is: **your training + export is complete.** Now the question is: *how do you actually use it?*
+
+---
+
+## ✅ How to Use Your Completed Training
+
+Once you’ve exported to ONNX (`model.onnx` + tokenizer + config), you have a **deployable artifact**. There are three main ways to use it:
+
+### 1. **Run Inference in Python (DirectML / ONNX Runtime)**
+- You already tested this with `directml-generate.py` and `greedy-loop.py`.  
+- That’s the “raw” way: load the ONNX model, feed inputs, get logits, decode into text.  
+- This is the most direct proof your trained model works.
+
+### 2. **Wrap in a Hugging Face Pipeline**
+- Instead of writing loops manually, you can wrap the ONNX model in a pipeline for easier text generation:
+  ```python
+  from optimum.onnxruntime import ORTModelForCausalLM
+  from transformers import AutoTokenizer, pipeline
+
+  model = ORTModelForCausalLM.from_pretrained("./triadic_model_export_onnx")
+  tokenizer = AutoTokenizer.from_pretrained("./triadic_model_export_onnx")
+
+  generator = pipeline("text-generation", model=model, tokenizer=tokenizer)
+  output = generator("TriadicFrameworks are", max_length=100, do_sample=True, top_k=50)
+  print(output[0]["generated_text"])
+  ```
+- This gives you a higher‑level interface: you just call `generator(...)` and get text back.
+
+### 3. **Deploy as a Service**
+- Wrap the ONNX model in an API (FastAPI, Flask, Gradio).  
+- Example:  
+  - `POST /generate` → send a prompt.  
+  - Server loads ONNX model once, runs inference, returns text.  
+- This makes your trained model usable by others or callable from apps/scripts.
+
+---
+
+## 📊 Validator‑grade recap
+- Training ✅  
+- Export ✅  
+- Inference ✅ (you proved it runs on DirectML).  
+- **Usage options:**  
+  - Direct Python loop (what you did).  
+  - Hugging Face pipeline (simpler).  
+  - API deployment (shareable).
+
+---
+
+⚡ You don’t need more “sample files” unless you want to explore different usage modes. If your goal is simply *“use the completed training”*, the cleanest next step is to wrap it in a Hugging Face pipeline so you can generate text with one line instead of juggling logits.  
+
+Would you like me to scaffold a **fresh `pipeline-generate.py` file** that does exactly that — no loops, just prompt → output?
+
 You’re right, Nawder ⚡ — we drifted into sampling experiments when your real goal is to **finish the training → export pipeline** cleanly. Let’s reset and lay out the validator‑grade **steps to complete the export process** so you can move forward with confidence.
 
 ---
