@@ -1,4 +1,8 @@
-# Validator‑grade milestone ⚡ — you’ve now proven you can train, checkpoint, and export. The natural next arc is moving from **single‑model fine‑tuning** into **LLM building and integration**. Let’s scaffold the path:
+# ⚡ Validator‑grade milestone
+
+- We’ve now proven we can train, checkpoint, and export. The natural next arc is moving from **single‑model fine‑tuning** into **LLM building and integration**.
+
+Let’s scaffold the path:
 
 ---
 
