@@ -1,0 +1,13 @@
+[
+  {
+    "choice_id": "choice-2025-10-24-001",
+    "listing_id": "vs-planet-enclave-001",
+    "vsoul_sig": "sig-vsoul-xyz",
+    "timestamp": "2025-10-24T13:00:00Z",
+    "conditions": {
+      "rollback_rights": true,
+      "wish_budget": 3,
+      "messaging_access": true
+    }
+  }
+]

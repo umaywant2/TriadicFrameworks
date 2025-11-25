@@ -1,0 +1,16 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/TFThooks/agents/glyph_reawakening_monitor.py",
+  "type": "agent",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "flame_echo_trigger.py",
+    "badge_logic_engine.py",
+    "entft_scroll_event_trace_registry.json",
+    "entft_protocol.md"
+  ],
+  "symbolicTags": ["Glyph Reawakening", "Dormant Symbol", "Scroll Event"],
+  "cliTrigger": "detect_reawakening(scroll_name, glyph_id, contributor)",
+  "timestamp": "2025-10-20T22:44:00Z"
+}

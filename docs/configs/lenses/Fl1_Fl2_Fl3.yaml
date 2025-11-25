@@ -1,0 +1,4 @@
+fluids:
+  Fl1: { m_alpha: 0.80, m_tau: 1.20, k_cp_mOhm: 0.5 }
+  Fl2: { m_alpha: 1.00, m_tau: 1.00, k_cp_mOhm: 1.0 }
+  Fl3: { m_alpha: 1.30, m_tau: 0.80, k_cp_mOhm: 2.0 }

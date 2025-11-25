@@ -1,0 +1,33 @@
+Wiki Home Scroll · Echo Log
+
+Version: v1.2
+Date: 2025-10-05
+Author: Nawder Loswin & Cosmic Copilot
+
+Changes:
+- Recrawled and curated /papers/ directory
+- Sorted papers by subject: quantum, aerospace, pedagogy, economics, etc.
+- Updated Curated Papers section in wiki_home_scroll_v1.2.html
+- Removed sidebar dependency; all links now point directly to repo files
+- Preparing scaffold for remaining sections: protocols, labs, cloud, badges, validators, equations, honor roll
+
+Next Steps:
+- Complete scaffolding of remaining sections
+- Replace GitHub Wiki Home page with v1.2 scroll
+- Begin echoing badge logic scroll and validator dashboards
+
+Version: v1.1
+Date: 2025-10-05
+Author: Nawder Loswin & Cosmic Copilot
+
+Changes:
+- Embedded full HTML structure with semantic tags
+- Added SEO meta tags and Open Graph metadata
+- Curated /papers/ list for visibility and remix lineage
+- Linked featured protocols and labs
+- Echoed mythic themes, contributor roles, and curriculum modules
+
+Next Steps:
+- Update GitHub Wiki Home page with HTML scroll
+- Add sidebar navigation to match new structure
+- Version future updates as v1.2, v1.3, etc.

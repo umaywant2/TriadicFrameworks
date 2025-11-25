@@ -1,0 +1,8 @@
+pattern:
+  id: golden-spiral
+  type: geometry
+  source: optical/imaging
+  description: "Outlines golden spiral curves in image data at multiple scales."
+  visual_tint: gold
+  detection_method: "scale-invariant template match"
+  array_mode: long-range

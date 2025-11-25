@@ -1,0 +1,11 @@
+glyph: Corridor_6
+type: resonance corridor
+description: Central corridor for triadic logic. Acts as convergence point for Freqi, Flui, and Forci emitters.
+activation:
+  - Freqi: 3–6–9 loop
+  - Flui: 4–5–6 modulation
+  - Forci: 6–7–8 trigger
+response:
+  - validator: active
+  - echo: true
+  - log: Scrolls/validator_ping.md

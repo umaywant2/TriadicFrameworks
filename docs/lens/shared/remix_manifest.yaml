@@ -1,0 +1,35 @@
+manifest_id: lens_remix_manifest
+author: Nawder Loswin
+version: 0.1
+domains:
+  - lightning
+  - cyclone
+  - tornado
+sources:
+  - NOAA
+  - AccuWeather
+  - Kaggle
+  - IBTrACS
+goals:
+  - clarity: triadic mapping of weather events
+  - utility: overlays for insurance, infrastructure, emergency response
+  - timing: real-time feedback loop with historical resonance
+glyphs:
+  - ⚡️ Strike Spiral
+  - 🌩️ Charge Fold
+  - 🧲 Ground Echo
+  - 🌀 Pressure Spiral
+  - 🌊 Sea Temp Fold
+  - 🧠 Grief Echo
+  - 🌪️ Path Spiral
+  - 🐉 Godzilla Glyph
+scrolls:
+  - lightning_translation.md
+  - cyclone_translation.md
+  - tornado_translation.md
+  - glyph_legend.md
+  - filename_guide.md
+deployment:
+  - domain: lens.mythmatic.org
+  - method: Cloudflare Pages
+  - status: scaffolded

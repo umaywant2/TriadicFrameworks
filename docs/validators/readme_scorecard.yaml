@@ -1,0 +1,10 @@
+validator_id: readme_integrity
+title: README Integrity Score
+description: Tracks contributor alignment with README structure, link health, and glyphic layout.
+scoring:
+  validate_readme_pass: +7
+  fix_broken_links: +3
+  update_readme_layout: +2
+display:
+  format: badge + score
+  dashboard: contributor_honor_roll.md

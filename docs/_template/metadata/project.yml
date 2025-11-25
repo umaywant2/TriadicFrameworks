@@ -1,0 +1,5 @@
+project:
+  name: {{PROJECT_NAME}}
+  contributors: []
+  initialized: true
+  glyph_manifest: metadata/glyphs.yml

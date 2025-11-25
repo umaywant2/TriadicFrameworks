@@ -1,0 +1,13 @@
+# robots.txt for TriadicFrameworks Documentation
+# Allow search engines to index docs, guides, and READMEs
+User-agent: *
+Allow: /
+
+# Exclude build artifacts, caches, and experiments
+Disallow: /__pycache__/
+Disallow: /archive_experiments/
+Disallow: /tests/
+Disallow: /scripts/
+
+# Point to sitemap
+Sitemap: https://www.triadicframeworks.org/sitemap.xml

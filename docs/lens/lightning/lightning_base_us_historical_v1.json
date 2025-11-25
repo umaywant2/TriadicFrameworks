@@ -1,0 +1,26 @@
+{
+  "strike_event": {
+    "location": "geo",
+    "timestamp": "UTC",
+    "intensity": "float",
+    "duration": "ms",
+    "arc_type": ["cloud-to-ground", "cloud-to-cloud", "intra-cloud"]
+  },
+  "cloud_charge": {
+    "polarity": "positive|negative",
+    "density": "float",
+    "altitude": "km"
+  },
+  "ground_response": {
+    "damage": "boolean",
+    "resonance": "float",
+    "fear_index": "float"
+  },
+  "metadata": {
+    "source": "NOAA + Kaggle historical",
+    "region": "US",
+    "version": "v1",
+    "author": "Nawder Loswin",
+    "designation": "Red-Zone Invariant Scaffold"
+  }
+}

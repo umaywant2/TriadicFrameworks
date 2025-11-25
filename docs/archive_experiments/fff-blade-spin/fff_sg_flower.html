@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stained Glass + Fluid Flow — Final</title>
+  <meta name="color-scheme" content="dark light" />
+  <style>
+    :root {
+      --bg: #0b1016;
+      --fg: #e7efff;
+      --muted: #92a3bd;
+      --accent: #5de2ff;
+      --lead: #0d0f14;
+      --panel: #141b24;
+      --panel-2: #0f151d;
+      --ring: #3aa8ff;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      background: radial-gradient(1200px 800px at 10% 0%, #0f1621 0%, var(--bg) 50%, #0a0f14 100%);
+      color: var(--fg);
+      font: 14px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      padding: 10px 14px;
+      border-bottom: 1px solid #1f2833;
+      background:
+        linear-gradient(0deg, rgba(10,15,20,0.7), rgba(10,15,20,0.7)),
+        linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+      backdrop-filter: blur(8px);
+    }
+    .bar {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 10px;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .brand {
+      display: flex; align-items: center; gap: 10px; white-space: nowrap;
+    }
+    .brand .dot {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #7fffff, #3aa8ff 50%, #0066ff 100%);
+      box-shadow: 0 0 14px #3aa8ff88, inset 0 0 8px #7fffff88;
+    }
+    .brand span {
+      letter-spacing: 0.2px; color: var(--muted);
+    }
+
+    .controls {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+      padding: 6px 10px; border-radius: 10px; background: var(--panel);
+      border: 1px solid #1e2a37;
+    }
+    .group { display: flex; align-items: center; gap: 8px; }
+    .group label {
+      color: var(--muted); font-size: 12px; letter-spacing: 0.2px;
+    }
+    select, input[type="range"], button, .chip {
+      appearance: none; border: 1px solid #263341; color: var(--fg);
+      background: var(--panel-2); border-radius: 10px; height: 34px;
+      padding: 0 10px; outline: none;
+    }
+    select { min-width: 160px; }
+    input[type="range"] {
+      height: 34px; padding: 0; width: 180px; background: transparent; border: none;
+    }
+    input[type="range"]::-webkit-slider-runnable-track {
+      height: 6px; background: #203141; border-radius: 999px;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      appearance: none; width: 18px; height: 18px; margin-top: -6px;
+      border-radius: 50%; background: #a7d6ff; border: 2px solid #102030;
+      box-shadow: 0 0 0 3px #4db7ff33;
+    }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px; cursor: pointer;
+      padding: 0 10px; border-radius: 999px; background: #0c131b;
+    }
+    .chip .swatch {
+      width: 16px; height: 16px; border-radius: 50%; border: 1px solid #0005;
+      box-shadow: inset 0 0 0 1px #ffffff11;
+    }
+    .chip.active { outline: 2px solid var(--ring); border-color: #2b89ff66; }
+    .tog {
+      display: inline-flex; align-items: center; gap: 8px; padding: 0 10px;
+      border-radius: 999px; height: 34px; border: 1px solid #263341; background: #0e1520;
+      cursor: pointer; user-select: none;
+    }
+    .tog input { display: none; }
+    .dotled {
+      width: 12px; height: 12px; border-radius: 50%;
+      background: #1a2a3a; border: 1px solid #000; box-shadow: inset 0 0 6px #000;
+    }
+    .tog.on .dotled {
+      background: radial-gradient(#9dffb4, #2ee58f 60%, #017a46);
+      box-shadow: 0 0 10px #2ee58f88, inset 0 0 8px #baffc7;
+    }
+    .actions { display: flex; align-items: center; gap: 8px; }
+    button {
+      cursor: pointer; height: 34px; padding: 0 12px; border-radius: 10px;
+      background: linear-gradient(180deg, #13314b, #0f2538); color: #d6eeff;
+      border: 1px solid #27435a;
+    }
+    button.secondary {
+      background: #0e1620; color: #b9cde3; border: 1px solid #263341;
+    }
+    button:active { transform: translateY(1px); }
+
+    main {
+      height: calc(100% - 64px);
+      display: grid;
+      place-items: center;
+    }
+    #stage {
+      width: min(1200px, 100vw);
+      height: calc(100vh - 80px);
+      display: grid; place-items: center;
+      padding: 10px;
+    }
+    canvas {
+      width: 100%; height: 100%;
+      border-radius: 14px;
+      background: #06090d;
+      box-shadow:
+        0 10px 60px #000,
+        inset 0 0 80px #000,
+        inset 0 0 2px #ffffff0f;
+    }
+
+    .hidden { display: none !important; }
+    .hint {
+      position: fixed; right: 10px; bottom: 8px;
+      color: #8aa3bd; font-size: 12px; opacity: 0.7;
+      background: #0c131b; border: 1px solid #1b2835; padding: 6px 10px; border-radius: 8px;
+    }
+
+    @media (max-width: 800px) {
+      .bar { grid-template-columns: 1fr; gap: 8px; }
+      main { height: auto; }
+      #stage { height: calc(100vh - 170px); }
+      .controls { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="bar">
+      <div class="brand">
+        <div class="dot"></div>
+        <strong>Glass & Flow</strong>
+        <span>final cut</span>
+      </div>
+
+      <div class="controls" role="group" aria-label="Controls">
+        <div class="group">
+          <label for="mode">Mode</label>
+          <select id="mode">
+            <option value="stained">Stained glass</option>
+            <option value="fluid">Fluid flow</option>
+          </select>
+        </div>
+
+        <div class="group" id="paletteGroup">
+          <label>Palette</label>
+          <div id="palettes" class="group"></div>
+        </div>
+
+        <div class="group" id="scaleGroup">
+          <label for="scale">Scale</label>
+          <input id="scale" type="range" min="0.5" max="2.0" step="0.01" value="1.0" />
+        </div>
+
+        <div class="group" id="cellGroup">
+          <label for="cell">Cell size</label>
+          <input id="cell" type="range" min="24" max="220" step="1" value="96" />
+        </div>
+
+        <div class="group" id="speedGroup">
+          <label for="speed">Speed</label>
+          <input id="speed" type="range" min="0" max="2" step="0.01" value="0.8" />
+        </div>
+
+        <label class="tog on" id="animTog"><span class="dotled"></span><span>Animate</span><input type="checkbox" checked /></label>
+        <label class="tog on" id="shineTog"><span class="dotled"></span><span>Glass shine</span><input type="checkbox" checked /></label>
+        <label class="tog on" id="wireTog"><span class="dotled"></span><span>Wire</span><input type="checkbox" checked /></label>
+      </div>
+
+      <div class="actions">
+        <button id="randomBtn" title="Randomize">🎲 Randomize</button>
+        <button id="saveBtn" class="secondary" title="Save PNG">⬇️ Save</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div id="stage">
+      <canvas id="canvas"></canvas>
+    </div>
+  </main>
+
+  <div class="hint">Tip: Switch modes, tweak scale/speed, then Save to PNG.</div>
+
+  <script>
+    ;(() => {
+      const canvas = document.getElementById('canvas');
+      const ctx = canvas.getContext('2d', { alpha: false, desynchronized: false });
+      const DPR = Math.max(1, Math.min(3, window.devicePixelRatio || 1));
+
+      const ui = {
+        mode: document.getElementById('mode'),
+        palettesWrap: document.getElementById('palettes'),
+        paletteGroup: document.getElementById('paletteGroup'),
+        scale: document.getElementById('scale'),
+        scaleGroup: document.getElementById('scaleGroup'),
+        cell: document.getElementById('cell'),
+        cellGroup: document.getElementById('cellGroup'),
+        speed: document.getElementById('speed'),
+        speedGroup: document.getElementById('speedGroup'),
+        animTog: document.getElementById('animTog'),
+        shineTog: document.getElementById('shineTog'),
+        wireTog: document.getElementById('wireTog'),
+        randomBtn: document.getElementById('randomBtn'),
+        saveBtn: document.getElementById('saveBtn'),
+      };
+
+      // Palettes as gradient stops [t, hex]
+      const PALETTES = {
+        Aurora: [
+          [0.00,'#0a2a6c'], [0.22,'#1b8bd6'], [0.45,'#62ffd8'], [0.66,'#b889ff'], [1.00,'#3b0f6a']
+        ],
+        Sunset: [
+          [0.00,'#2b0052'], [0.18,'#7a1398'], [0.45,'#ff3e65'], [0.7,'#ff9d2e'], [1.00,'#ffd166']
+        ],
+        Forest: [
+          [0.00,'#081f0f'], [0.2,'#0f5a2e'], [0.45,'#3db86f'], [0.7,'#b4de65'], [1.00,'#f1f6c1']
+        ],
+        Neon: [
+          [0.00,'#0b0014'], [0.25,'#00fff0'], [0.5,'#ff00f5'], [0.75,'#f8ff00'], [1.00,'#00fff0']
+        ],
+        Ocean: [
+          [0.00,'#001219'], [0.2,'#005f73'], [0.45,'#0a9396'], [0.7,'#94d2bd'], [1.00,'#e9d8a6']
+        ]
+      };
+
+      // State
+      const S = {
+        mode: 'stained',
+        paletteName: 'Aurora',
+        seed: (Math.random() * 1e9) | 0,
+        t: 0,
+        animate: true,
+        shine: true,
+        wire: true,
+        // stained
+        cellSize: 96,
+        gridScale: 1.0,
+        // fluid
+        speed: 0.8,
+        // runtime
+        triangles: [],
+        particles: null,
+        fadeAlpha: 0.08,
+      };
+
+      // Seeded RNG
+      function mulberry32(a){return function(){let t = a += 0x6D2B79F5; t = Math.imul(t ^ t >>> 15, t | 1); t ^= t + Math.imul(t ^ t >>> 7, t | 61); return ((t ^ t >>> 14) >>> 0) / 4294967296;};}
+      function seeded(seed){ return mulberry32(seed|0);}
+      function clamp(x,a,b){ return x<a?a:(x>b?b:x); }
+      function lerp(a,b,t){ return a + (b-a)*t; }
+      function smoothstep(t){ return t*t*(3-2*t); }
+      function hexToRgb(hex){
+        const n = hex.replace('#',''); const v = n.length===3
+          ? n.split('').map(c=>parseInt(c+c,16))
+          : [parseInt(n.slice(0,2),16), parseInt(n.slice(2,4),16), parseInt(n.slice(4,6),16)];
+        return {r:v[0], g:v[1], b:v[2]};
+      }
+      function samplePalette(name, t){
+        const stops = PALETTES[name]; t = ((t % 1) + 1) % 1;
+        for(let i=0;i<stops.length-1;i++){
+          const [aT, aHex] = stops[i], [bT, bHex] = stops[i+1];
+          if (t >= aT && t <= bT){
+            const u = (t - aT) / (bT - aT);
+            const A = hexToRgb(aHex), B = hexToRgb(bHex);
+            return {
+              r: Math.round(lerp(A.r, B.r, u)),
+              g: Math.round(lerp(A.g, B.g, u)),
+              b: Math.round(lerp(A.b, B.b, u))
+            };
+          }
+        }
+        const A = hexToRgb(stops[0][1]); return {r:A.r,g:A.g,b:A.b};
+      }
+
+      // Lightweight value noise + FBM
+      function hash2(ix, iy){
+        const s = Math.sin(ix * 127.1 + iy * 311.7) * 43758.5453123;
+        return s - Math.floor(s);
+      }
+      function noise2D(x, y){
+        const ix = Math.floor(x), iy = Math.floor(y);
+        const fx = x - ix, fy = y - iy;
+        const a = hash2(ix, iy);
+        const b = hash2(ix+1, iy);
+        const c = hash2(ix, iy+1);
+        const d = hash2(ix+1, iy+1);
+        const sx = smoothstep(fx), sy = smoothstep(fy);
+        const u = lerp(a, b, sx);
+        const v = lerp(c, d, sx);
+        return lerp(u, v, sy);
+      }
+      function fbm(x,y, oct=4){
+        let f=1, a=0.5, sum=0, norm=0;
+        for (let i=0;i<oct;i++){
+          sum += noise2D(x*f, y*f) * a;
+          norm += a;
+          f *= 2.02; a *= 0.5;
+        }
+        return sum / norm;
+      }
+
+      // Canvas sizing and color precision
+      function resize(){
+        const rect = canvas.getBoundingClientRect();
+        const w = Math.max(1, Math.floor(rect.width * DPR));
+        const h = Math.max(1, Math.floor(rect.height * DPR));
+        if (canvas.width !== w || canvas.height !== h){
+          canvas.width = w; canvas.height = h;
+          ctx.setTransform(1,0,0,1,0,0);
+          ctx.imageSmoothingEnabled = true;
+          ctx.imageSmoothingQuality = 'high';
+          ctx.setTransform(DPR,0,0,DPR,0,0);
+          clearAll();
+          if (S.mode === 'stained'){ buildStained(); drawStained(true); }
+          else { buildFluid(); }
+        }
+      }
+      window.addEventListener('resize', resize, { passive: true });
+
+      // UI: palettes
+      function initPaletteChips(){
+        ui.palettesWrap.innerHTML = '';
+        Object.keys(PALETTES).forEach(name => {
+          const chip = document.createElement('button');
+          chip.className = 'chip' + (name===S.paletteName?' active':'');
+          chip.type = 'button';
+          chip.dataset.name = name;
+          const sw = document.createElement('span'); sw.className = 'swatch';
+          // Build gradient preview
+          const grad = PALETTES[name].map(([t, hex]) => `${hex} ${Math.round(t*100)}%`).join(', ');
+          chip.style.background = `linear-gradient(90deg, ${grad})`;
+          chip.style.border = '1px solid #1b2a36';
+          chip.style.color = '#e6f2ff';
+          chip.innerHTML = '';
+          chip.appendChild(sw);
+          const label = document.createElement('span'); label.textContent = name;
+          chip.appendChild(label);
+          chip.addEventListener('click', () => {
+            S.paletteName = name;
+            Array.from(ui.palettesWrap.children).forEach(c => c.classList.remove('active'));
+            chip.classList.add('active');
+            if (S.mode==='stained'){ drawStained(true); }
+          });
+          ui.palettesWrap.appendChild(chip);
+        });
+      }
+
+      // UI: toggles
+      function initTog(togEl, key){
+        const set = (v) => {
+          S[key] = v;
+          togEl.classList.toggle('on', v);
+          if (S.mode==='stained' && (key==='wire' || key==='shine' || key==='animate')) drawStained(true);
+        };
+        togEl.addEventListener('click', () => set(!S[key]));
+        set(S[key]);
+      }
+
+      // Mode switching
+      ui.mode.addEventListener('change', () => {
+        S.mode = ui.mode.value;
+        updateVisibility();
+        clearAll();
+        if (S.mode === 'stained'){ buildStained(); drawStained(true); }
+        else { buildFluid(); }
+      });
+
+      ui.scale.addEventListener('input', () => {
+        S.gridScale = parseFloat(ui.scale.value);
+        if (S.mode==='stained'){ buildStained(); drawStained(true); }
+      });
+      ui.cell.addEventListener('input', () => {
+        S.cellSize = parseInt(ui.cell.value,10);
+        if (S.mode==='stained'){ buildStained(); drawStained(true); }
+      });
+      ui.speed.addEventListener('input', () => {
+        S.speed = parseFloat(ui.speed.value);
+      });
+
+      ui.randomBtn.addEventListener('click', () => {
+        S.seed = (Math.random()*1e9)|0;
+        if (S.mode==='stained'){ buildStained(); drawStained(true); }
+        else { buildFluid(true); }
+      });
+
+      ui.saveBtn.addEventListener('click', () => {
+        // Temporarily render a single crisp frame for fluid before saving
+        if (S.mode==='fluid'){
+          drawFluidFrame(true);
+        } else {
+          drawStained(true);
+        }
+        const link = document.createElement('a');
+        const name = `${S.mode}-${S.paletteName}-${Date.now()}.png`;
+        link.download = name;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      });
+
+      function updateVisibility(){
+        const stained = S.mode === 'stained';
+        ui.cellGroup.classList.toggle('hidden', !stained);
+        ui.scaleGroup.classList.toggle('hidden', !stained);
+        ui.wireTog.classList.toggle('hidden', !stained);
+        ui.shineTog.classList.toggle('hidden', !stained);
+        ui.paletteGroup.classList.toggle('hidden', false);
+        // Speed is more relevant for fluid, but keep for stained (shine drift)
+        ui.speedGroup.classList.toggle('hidden', false);
+      }
+
+      // Clear
+      function clearAll(){
+        ctx.save();
+        ctx.setTransform(DPR,0,0,DPR,0,0);
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.fillStyle = '#05080c';
+        ctx.fillRect(0,0,canvas.width/DPR, canvas.height/DPR);
+        ctx.restore();
+      }
+
+      // ===== Stained glass =====
+      function buildStained(){
+        const rnd = seeded(S.seed);
+        const W = canvas.width / DPR, H = canvas.height / DPR;
+        const scale = S.gridScale;
+        const cell = S.cellSize / scale;
+        const pad = 10;
+        const cols = Math.max(4, Math.floor((W - 2*pad) / cell));
+        const rows = Math.max(4, Math.floor((H - 2*pad) / cell));
+        const jitter = 0.45; // fraction of cell
+        const points = [];
+        for (let y=0; y<=rows; y++){
+          for (let x=0; x<=cols; x++){
+            const px = pad + x*cell + (rnd()*2-1)*cell*jitter*0.5 + (y%2?cell*0.1:0);
+            const py = pad + y*cell + (rnd()*2-1)*cell*jitter*0.5;
+            points.push({x:px, y:py, gx:x, gy:y});
+          }
+        }
+        // index helper
+        function idx(x,y){ return y*(cols+1) + x; }
+
+        const tris = [];
+        const flipRnd = seeded(S.seed ^ 0x9e3779b9);
+        for (let y=0; y<rows; y++){
+          for (let x=0; x<cols; x++){
+            const p00 = points[idx(x,y)];
+            const p10 = points[idx(x+1,y)];
+            const p01 = points[idx(x,y+1)];
+            const p11 = points[idx(x+1,y+1)];
+            const flip = flipRnd() > 0.5;
+            if (flip){
+              tris.push([p00, p10, p11]);
+              tris.push([p00, p11, p01]);
+            } else {
+              tris.push([p00, p10, p01]);
+              tris.push([p10, p11, p01]);
+            }
+          }
+        }
+        // Assign colors using FBM field for continuity
+        const colorScale = 0.0035 * scale;
+        const timeBias = (S.seed % 1000) * 0.00123;
+        const out = [];
+        for (let i=0;i<tris.length;i++){
+          const t = tris[i];
+          const cx = (t[0].x + t[1].x + t[2].x) / 3;
+          const cy = (t[0].y + t[1].y + t[2].y) / 3;
+          const nv = fbm(cx*colorScale + timeBias, cy*colorScale - timeBias, 5);
+          const palT = clamp(nv, 0, 1);
+          out.push({ tri: t, cx, cy, palT });
+        }
+        S.triangles = out;
+      }
+
+      function drawStained(fullRedraw=false){
+        const W = canvas.width / DPR, H = canvas.height / DPR;
+        if (fullRedraw){
+          clearAll();
+          // Fill triangles
+          ctx.save();
+          ctx.globalCompositeOperation = 'source-over';
+          for (let i=0;i<S.triangles.length;i++){
+            const { tri, palT } = S.triangles[i];
+            // small animated drift if animate on
+            const drift = S.animate ? Math.sin((S.t*0.15 + i*0.0007))*0.015 : 0;
+            const c = samplePalette(S.paletteName, clamp(palT + drift, 0, 1));
+            ctx.beginPath();
+            ctx.moveTo(tri[0].x, tri[0].y);
+            ctx.lineTo(tri[1].x, tri[1].y);
+            ctx.lineTo(tri[2].x, tri[2].y);
+            ctx.closePath();
+            ctx.fillStyle = `rgb(${c.r},${c.g},${c.b})`;
+            ctx.fill();
+          }
+          // Lead lines
+          if (S.wire){
+            ctx.lineWidth = Math.max(1.2, Math.min(4, S.cellSize*0.02));
+            ctx.strokeStyle = '#0e1218';
+            ctx.globalAlpha = 0.95;
+            for (let i=0;i<S.triangles.length;i++){
+              const { tri } = S.triangles[i];
+              ctx.beginPath();
+              ctx.moveTo(tri[0].x, tri[0].y);
+              ctx.lineTo(tri[1].x, tri[1].y);
+              ctx.lineTo(tri[2].x, tri[2].y);
+              ctx.closePath();
+              ctx.stroke();
+            }
+            // Bevel highlight
+            ctx.globalAlpha = 0.28;
+            ctx.strokeStyle = '#7bb5ff';
+            ctx.lineWidth *= 0.35;
+            for (let i=0;i<S.triangles.length;i++){
+              const { tri } = S.triangles[i];
+              ctx.beginPath();
+              ctx.moveTo(tri[0].x, tri[0].y);
+              ctx.lineTo(tri[1].x, tri[1].y);
+              ctx.lineTo(tri[2].x, tri[2].y);
+              ctx.closePath();
+              ctx.stroke();
+            }
+          }
+          ctx.restore();
+        }
+
+        // Shine overlay
+        if (S.shine){
+          ctx.save();
+          ctx.globalCompositeOperation = 'screen';
+          const g = ctx.createLinearGradient(0, 0, W, H);
+          g.addColorStop(0.0, 'rgba(255,255,255,0.025)');
+          g.addColorStop(0.45 + Math.sin(S.t*0.05)*0.05, 'rgba(255,255,255,0.08)');
+          g.addColorStop(1.0, 'rgba(255,255,255,0.03)');
+          ctx.fillStyle = g;
+          ctx.fillRect(0,0,W,H);
+          // Subtle noise sparkle
+          const stripes = 6;
+          ctx.globalAlpha = 0.05;
+          for (let i=0;i<stripes;i++){
+            const y = (H/stripes) * i + ((S.t*0.8) % (H/stripes))*0.3;
+            const grad = ctx.createLinearGradient(0, y, W, y+40);
+            grad.addColorStop(0,'rgba(255,255,255,0)');
+            grad.addColorStop(0.5,'rgba(255,255,255,0.15)');
+            grad.addColorStop(1,'rgba(255,255,255,0)');
+            ctx.fillStyle = grad; ctx.fillRect(0, y, W, 40);
+          }
+          ctx.restore();
+        }
+      }
+
+      // ===== Fluid flow (particle advection in gradient-perp field) =====
+      function flowVec(nx, ny, t){
+        // Time-warped FBM scalar field; velocity is perpendicular to gradient
+        const s = 0.6; // spatial scale
+        const tt = t*0.03;
+        const eps = 0.0025;
+        const v0 = fbm(nx*s + 0.0, ny*s + tt, 5);
+        const dvx = (fbm((nx+eps)*s, ny*s + tt, 5) - fbm((nx-eps)*s, ny*s + tt, 5)) / (2*eps);
+        const dvy = (fbm(nx*s, (ny+eps)*s + tt, 5) - fbm(nx*s, (ny-eps)*s + tt, 5)) / (2*eps);
+        // Perpendicular to gradient -> rotational
+        let vx = dvy, vy = -dvx;
+        // Normalize
+        const m = Math.hypot(vx, vy) + 1e-6;
+        vx /= m; vy /= m;
+        // Slight palette-driven twist
+        const twist = (v0 - 0.5) * 0.6;
+        const cosT = Math.cos(twist), sinT = Math.sin(twist);
+        const rx = vx * cosT - vy * sinT;
+        const ry = vx * sinT + vy * cosT;
+        return {x: rx, y: ry, s: v0};
+      }
+
+      function buildFluid(reset=false){
+        const W = canvas.width / DPR, H = canvas.height / DPR;
+        const count = Math.floor((W*H) / 2000); // adaptive density
+        const n = clamp(count, 1200, 4800);
+        const rnd = seeded(S.seed ^ 0x517cc1b7);
+        const particles = new Array(n);
+        for (let i=0;i<n;i++){
+          particles[i] = {
+            x: rnd()*W, y: rnd()*H,
+            px: 0, py: 0,
+            hue: rnd(), life: 0
+          };
+        }
+        S.particles = particles;
+        clearAll();
+      }
+
+      function stepFluid(dt){
+        if (!S.particles) return;
+        const W = canvas.width / DPR, H = canvas.height / DPR;
+        const spd = 40 * S.speed;
+        // Fade trails
+        ctx.save();
+        ctx.globalCompositeOperation = 'source-over';
+        ctx.fillStyle = `rgba(5,8,12,${S.fadeAlpha})`;
+        ctx.fillRect(0,0,W,H);
+        ctx.restore();
+
+        // Draw particles with additive glow
+        ctx.save();
+        ctx.globalCompositeOperation = 'lighter';
+        ctx.lineCap = 'round'; ctx.lineWidth = 1.2;
+        for (let i=0;i<S.particles.length;i++){
+          const p = S.particles[i];
+          p.px = p.x; p.py = p.y;
+          const nx = p.x / W, ny = p.y / H;
+          const v = flowVec(nx, ny, S.t);
+          p.x += v.x * spd * dt;
+          p.y += v.y * spd * dt;
+          // wrap
+          if (p.x < -2) p.x += W+4; if (p.x > W+2) p.x -= W+4;
+          if (p.y < -2) p.y += H+4; if (p.y > H+2) p.y -= H+4;
+
+          // Color from palette using field value
+          const c = samplePalette(S.paletteName, (v.s*0.9 + 0.05 + p.hue*0.1 + S.t*0.0002));
+          ctx.strokeStyle = `rgba(${c.r},${c.g},${c.b},0.12)`;
+          ctx.beginPath();
+          ctx.moveTo(p.px, p.py);
+          ctx.lineTo(p.x, p.y);
+          ctx.stroke();
+        }
+        ctx.restore();
+      }
+
+      function drawFluidFrame(forceClear=false){
+        if (forceClear) {
+          ctx.save();
+          ctx.globalCompositeOperation = 'source-over';
+          ctx.fillStyle = '#05080c';
+          ctx.fillRect(0,0,canvas.width/DPR, canvas.height/DPR);
+          ctx.restore();
+        }
+        stepFluid(1/60);
+      }
+
+      // ===== Loop =====
+      let last = performance.now();
+      function frame(now){
+        const dt = Math.min(0.05, (now - last)/1000);
+        last = now;
+        S.t += (S.animate ? 60*dt : 0);
+        if (S.mode === 'stained'){
+          // Only re-overlay shine/wobble; geometry is static
+          drawStained(false);
+        } else {
+          stepFluid(dt);
+        }
+        requestAnimationFrame(frame);
+      }
+
+      // Initialize
+      function start(){
+        initPaletteChips();
+        initTog(ui.animTog, 'animate');
+        initTog(ui.shineTog, 'shine');
+        initTog(ui.wireTog, 'wire');
+        updateVisibility();
+        resize();
+        if (S.mode==='stained'){ buildStained(); drawStained(true); }
+        else { buildFluid(); }
+        requestAnimationFrame(frame);
+      }
+      start();
+    })();
+  </script>
+</body>
+</html>
+```

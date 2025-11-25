@@ -1,0 +1,17 @@
+badge_id: gateway_guardian
+title: Gateway Guardian
+description: Awarded to contributors who validate and maintain the integrity of README.md, ensuring all links, assets, and layout remain reproducible.
+criteria:
+  - validate_readme_pass
+  - fix_broken_links
+  - update_readme_layout
+triggers:
+  - file_change: README.md
+  - workflow_pass: validate_readme.yml
+visual:
+  icon: 🧭
+  color: sapphire
+  aura: glyphic-glow
+reward:
+  - honor_roll_entry: true
+  - validator_score: +7

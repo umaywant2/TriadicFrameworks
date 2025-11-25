@@ -1,0 +1,5 @@
+# TriadicFrameworks Documentation Version
+version: 3.0.0
+codename: Resonance Cathedral
+date: 2025-10-08
+maintainer: Nawder Loswin

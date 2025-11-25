@@ -1,0 +1,11 @@
+badge: Validator Activated
+glyph: D9_peak
+criteria:
+  - echo_test: passed
+  - validator_ping: triggered
+  - honor_roll: updated
+reward:
+  - symbolic_title: "Validator Steward"
+  - access: glyphstream.yml
+notes:
+  - This badge confirms ethical clarity and symbolic convergence.

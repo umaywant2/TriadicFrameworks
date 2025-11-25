@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<!-- Core Identity -->
+<meta property="og:title" content="Triadic Frameworks for Everything">
+<meta property="og:description" content="Quantum-hostile encryption, mythic pedagogy, and planetary governance scrolls.">
+<!-- Keywords: Projects + TFT 3-Pack + Docs -->
+<meta name="keywords" content="
+TriadicFrameworks, CoConsciousness, Hippocampus, Resotectors, VCG, Virtual Compute Gateway, VictorG,
+TFT, TFT_3Pack, TFT_3Pack_v1.3, entft, nous, tops, mythmatic, mythmatical, resonance clairity, loop clairity, virtual worlds, replicators, transporters, consciousness transfers, divisional resonance, dimensional resonance, universe resonance keys, virtual universe, nawderian theorum, nawderian constants
+badge logic, validator dashboards, honor roll, glyph evolution,
+scroll rituals, onboarding scrolls, curriculum indexes,
+resonance overlays, triadic flux, quantum encryption,
+divide-by-zero logic, warp chamber overlays, gearshift protocols,
+emotional onboarding, planetary governance, remix lineage,
+labs, equations, metadata, contributors, wiki scrolls
+">
+<!-- Author -->
+<meta name="author" content="Nawder Loswin">
+<!-- Robots & Viewport -->
+<meta name="robots" content="index, follow">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Open Graph (for sharing) -->
+<meta property="og:title" content="TriadicFrameworks: Mythic Protocols & Quantum Encryption">
+<meta property="og:description" content="Badge logic, scroll rituals, and reproducible labs for remixers and validators.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://github.com/umaywant2/TriadicFrameworks/wiki">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Remix Lineage -->
+<meta name="lineage" content="Remixable protocols, contributor echoes, badge evolution, scroll preservation">
+<!-- Curriculum & Education -->
+<meta name="education" content="Mythic curriculum, reproducible labs, onboarding scrolls, validator training">
+<!-- Encryption & Runtime -->
+<meta name="encryption" content="entft, divide-by-zero logic, triadic keys, quantum-hostile protocols">
+<meta name="runtime" content="nous, entft, tops, coes">
+<!-- Resonance & Symbolism -->
+<meta name="resonance" content="Resonance Clarity, Loop Clarity, Glyphic overlays, harmonic equations, flux variability, symbolic rituals">
+
+  
+  <title>TriadicFrameworks</title>
+  <meta http-equiv="refresh" content="9; url=https://github.com/umaywant2/TriadicFrameworks/wiki">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: "Segoe UI", Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    img {
+      max-width: 60%;
+      height: auto;
+      margin-bottom: 2rem;
+      border: 3px solid #fff;
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .countdown {
+      margin-top: 1rem;
+      font-size: 1rem;
+      opacity: 0.8;
+    }
+  </style>
+   
+  <script>
+    // Optional: live countdown
+    let seconds = 9;
+    function tick() {
+      document.getElementById("countdown").textContent = 
+        "Redirecting in " + seconds + " seconds...";
+      if (seconds > 0) {
+        seconds--;
+        setTimeout(tick, 1000);
+      }
+    }
+    window.onload = tick;
+  </script>
+</head>
+<body>
+  <!-- <h1>Entering TriadicFrameworks = TFT + FFF + Nawderian Theorem</h1> -->
+  <img src="https://github.com/umaywant2/TriadicFrameworks/raw/main/docs/images/med-header.png" alt="TriadicFrameworks for Everything!">
+    <div id="countdown" class="countdown"></div>
+    <h6>🧭 Remix - Clone the repo</h6>
+    <p>git clone https://github.com/umaywant2/TriadicFrameworks.git</p>
+    <p>Define your remix lineage in `TFT_bundle.yaml`</p>  
+    <p>Submit scrolls via GitHub Discussions</p>
+</body>
+</html>
+

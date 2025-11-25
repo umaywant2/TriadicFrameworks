@@ -1,0 +1,22 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <title>Tether Glyph</title>
+  <defs>
+    <style>
+      .stroke { fill: none; stroke: #E63946; stroke-width: 16; stroke-linecap: round; stroke-linejoin: round; }
+      .fill   { fill: #E63946; }
+    </style>
+  </defs>
+  <!-- Concentric harmonic rings (anchoring field) -->
+  <circle class="stroke" cx="256" cy="256" r="192"/>
+  <circle class="stroke" cx="256" cy="256" r="144"/>
+  <circle class="stroke" cx="256" cy="256" r="96"/>
+  <!-- Anchor shank -->
+  <path class="stroke" d="M256 96 L256 288"/>
+  <!-- Anchor top ring -->
+  <circle class="stroke" cx="256" cy="80" r="24"/>
+  <!-- Flukes -->
+  <path class="stroke" d="M256 288 c0 0-16 40-64 40 -40 0-64-24-64-64"/>
+  <path class="stroke" d="M256 288 c0 0 16 40 64 40 40 0 64-24 64-64"/>
+  <!-- Crossbar -->
+  <path class="stroke" d="M192 224 L320 224"/>
+</svg>

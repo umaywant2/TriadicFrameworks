@@ -1,0 +1,25 @@
+name: Generate Contributor Profiles
+
+permissions:
+  contents: read
+on:
+  workflow_run:
+    workflows: ["Update Contributor Honor Roll"]
+    types:
+      - completed
+
+jobs:
+  generate_profiles:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+
+      - name: Set Up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Run Profile Generator
+        run: python docs/validators/generate_profiles.py

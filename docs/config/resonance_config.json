@@ -1,0 +1,20 @@
+{
+  "clarity_thresholds": {
+    "rPPS": 0.82,
+    "rQPS": 0.85,
+    "rUPS": 0.88
+  },
+  "overlap_windows_seconds": {
+    "min": 3,
+    "max": 300
+  },
+  "tone_matching": {
+    "frequency_tolerance": 0.01,
+    "decay_tolerance": 0.02
+  },
+  "green_band": {
+    "lower_dim": 5,
+    "peak_dim": 6,
+    "upper_dim": 7
+  }
+}

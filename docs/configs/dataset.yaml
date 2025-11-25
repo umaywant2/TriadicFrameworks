@@ -1,0 +1,18 @@
+dataset:
+  label: "tft_3500_cycles_synthetic_v1"
+  csv_path: "data/tft_battery_3500cycles.csv"
+  seed: 42
+  generator_params:
+    C0_mAh: 1000.0
+    R0_mOhm: 50.0
+    I_A: 0.5
+    alpha: 0.05
+    tau: 80.0
+    beta: 0.45/3500.0
+    gamma: 0.25
+    Tamb_C: 25.0
+    theta: 20.0
+  schema:
+    fields: ["cycle","current_A","capacity_mAh","degradation_pct","ocv_V","median_discharge_V","internal_resistance_mOhm","temperature_C","coulombic_efficiency","energy_Wh"]
+  hash_method: "sha256_canonical_json"
+  dataset_hash: "dc7f1c638c3eede646ea93f6cd09ac1a319e8edf279b5a314208ef4fb6729ab5"

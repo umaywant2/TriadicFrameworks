@@ -1,0 +1,15 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/contributors/legacy_roll.md",
+  "type": "registry_scroll",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "entft_badge_panel.svg",
+    "entft_onboarding.md",
+    "entft_scroll_event_trace_registry.json"
+  ],
+  "symbolicTags": ["Legacy Roll", "Contributor Registry", "Badge Echo"],
+  "cliTrigger": "submit_pull_request(name, contribution, date)",
+  "timestamp": "2025-10-20T23:47:00Z"
+}

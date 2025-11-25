@@ -1,0 +1,28 @@
+name: Update Contributor Honor Roll
+permissions:
+  contents: read
+
+on:
+  workflow_run:
+    workflows: ["Validate README"]
+    types:
+      - completed
+
+jobs:
+  update_honor_roll:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v5
+
+      - name: Set Up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.x'
+
+      - name: Install Dependencies
+        run: pip install requests beautifulsoup4
+
+      - name: Run Honor Roll Updater
+        run: python docs/validators/update_honor_roll.py

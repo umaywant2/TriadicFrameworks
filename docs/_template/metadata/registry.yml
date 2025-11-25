@@ -1,0 +1,8 @@
+registry:
+  project: {{PROJECT_NAME}}
+  seeded: true
+  lineage: TriadicFrameworks
+  rituals:
+    - onboarding
+    - echo
+    - tribute

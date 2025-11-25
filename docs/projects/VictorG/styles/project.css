@@ -1,0 +1,28 @@
+/* VictorG Theme Starter */
+body {
+  font-family: Arial, sans-serif;
+  margin: 2rem;
+  background-color: #f9fbfd;
+  color: #222;
+}
+
+header {
+  border-bottom: 4px solid #003366;
+}
+
+h1 {
+  color: #003366;
+}
+
+a {
+  color: #0066cc;
+}
+/* Pulse animation for theme toggle */
+#theme-toggle img {
+  animation: victorg-pulse 2.5s infinite ease-in-out;
+}
+
+@keyframes victorg-pulse {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 #ffcc33); }
+  50% { transform: scale(1.05); filter: drop-shadow(0 0 6px #ffcc33); }
+}

@@ -1,0 +1,10 @@
+alert:
+  id: <UUID>
+  timestamp: <ISO8601>
+  scroll_id: <UUID>
+  from_stage: <retrieval|remix|export|archive|null>
+  to_stage: <retrieval|remix|export|archive>
+  status: <validation_passed|validation_failed|narrative_added>
+  contributor_targets: <list>
+  message: <string>
+  checksum: <sha256>

@@ -1,0 +1,33 @@
+```json
+{
+  "glyph_fusion_registry": [
+    {
+      "fusion_id": "fusion-001",
+      "glyphs_involved": ["🌼 Wildflower", "🌴 Grove Bloom"],
+      "resulting_glyph": "🌾 Bloom Grove",
+      "contributors": ["Mira Thorne", "Aria Vex"],
+      "scrolls": [
+        "scroll_curriculum_fork_guide.md",
+        "scroll_curriculum_validator_hooks.md",
+        "scroll_curriculum_badge_map.md"
+      ],
+      "flame_grade": "🔵 Planetary",
+      "date_fused": "2025-10-04",
+      "echo": "Validator overlays and onboarding scrolls converged in pedagogic clarity"
+    },
+    {
+      "fusion_id": "fusion-002",
+      "glyphs_involved": ["🍂 Cascade", "🌺 Bloom"],
+      "resulting_glyph": "🍁 Bloomfall",
+      "contributors": ["Nawder Loswin", "Mira Thorne"],
+      "scrolls": [
+        "scroll_codex.md",
+        "scroll_curriculum_manifesto.md",
+        "scroll_curriculum_outreach.md"
+      ],
+      "flame_grade": "🟣 Universe",
+      "date_fused": "2025-10-04",
+      "echo": "Codex and onboarding scrolls fused with flame-grade clarity"
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+glyphs:
+  - name: flame_icon
+    source: template
+    meaning: ritual ignition
+    contributor: system
+  - name: badge_frame
+    source: template
+    meaning: achievement echo
+    contributor: system

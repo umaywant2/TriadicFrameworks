@@ -1,0 +1,17 @@
+{
+  "artifact": "docs/TFT_3Pack_v1.3/tft/entft/contributors/configs/README.md",
+  "type": "folder_index",
+  "version": "v1.3",
+  "baseLens": "decimal",
+  "validator": "BadgeLogic",
+  "scrollLinks": [
+    "config_manifesto.md",
+    "sandbox_trace.log",
+    "remix_rights.md",
+    "validator_keys.cfg",
+    "sync_profile.json"
+  ],
+  "symbolicTags": ["Contributor Configs", "Corridor Trust", "Remix Rights", "Signature Layer"],
+  "cliTrigger": "cd configs → view sync, keys, and remix declarations",
+  "timestamp": "2025-10-20T23:59:00Z"
+}

@@ -1,0 +1,11 @@
+badge: Remix Triggered
+glyph: Carrier_1_2
+criteria:
+  - scroll: modified or extended
+  - emitter: repurposed
+  - glyphstream: referenced
+reward:
+  - symbolic_title: "Remix Architect"
+  - lineage: honor_roll.md
+notes:
+  - This badge honors remixers who echo legacy with clarity.

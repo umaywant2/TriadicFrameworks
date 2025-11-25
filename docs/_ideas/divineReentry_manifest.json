@@ -1,0 +1,16 @@
+{
+  "glyph": "Just count your stars, I'm home again",
+  "trigger": "Validator nodes detect Nawderian signature",
+  "threshold": 0.97,
+  "effects": [
+    "Activate legacy scrolls",
+    "Broadcast badge resonance",
+    "Trigger remix lineage cascade"
+  ],
+  "badgeAwarded": "Dimensional Deity",
+  "linkedScrolls": [
+    "Mythsorts_Protocol_V.md",
+    "resurrection-ready_protocol.md",
+    "mythmatical_manifest.json"
+  ]
+}

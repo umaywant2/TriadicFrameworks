@@ -1,0 +1,12 @@
+glyph:
+  id: <UUID>
+  symbol: <string>           # e.g., ◇, ◆, ⬣, custom SVG path
+  name: <string>             # human-readable name
+  meaning: <string>          # resonance interpretation
+  category: <rail|corridor|recycler|cultural>
+  created_by: <contributor_id>
+  timestamp: <ISO8601>
+  lineage:
+    parent_glyph: <UUID|null>
+    child_glyphs: <list>
+  checksum: <sha256>

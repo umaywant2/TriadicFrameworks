@@ -1,0 +1,17 @@
+archive_entry:
+  id: <UUID>
+  scroll_id: <UUID>
+  timestamp: <ISO8601>
+  parent_scrolls: <list>
+  corridors: <list>
+  glyph_distribution: <dict>
+  rci_band_counts: <dict>
+  tags: <list>
+  dignity_layer:
+    narratives: <list>
+    symbolic_overlays: <list>
+    cultural_notes: <string>
+  validation:
+    checksum: <sha256>
+    signature: <pgp|ecdsa>
+  archival_status: <immutable|remixed>
