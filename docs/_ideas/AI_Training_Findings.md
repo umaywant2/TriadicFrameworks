@@ -47,6 +47,48 @@ Get-ChildItem -Recurse .\TriadicFrameworks -Include *.md,*.json,*.csv,*.py,*.txt
 
 ---
 
+That error is a clean validator scroll: your environment doesn’t have the **Hugging Face `datasets`** package installed yet. Here’s the fix:
+
+---
+
+## ⚙️ Step 1: Activate Your Conda Environment
+Make sure you’re inside your `aiwork` environment:
+```bash
+conda activate aiwork
+```
+
+---
+
+## ⚙️ Step 2: Install `datasets`
+You can install it with either **pip** or **conda**:
+
+### Using pip (simpler, usually fresher):
+```bash
+pip install datasets
+```
+
+### Or using conda-forge:
+```bash
+conda install -c conda-forge datasets
+```
+
+---
+
+## ⚙️ Step 3: Verify Installation
+Run a quick check:
+```bash
+python -c "import datasets; print(datasets.__version__)"
+```
+If it prints a version number (e.g. `2.x.x`), you’re good.
+
+---
+
+## 🎯 Validator‑Grade Recap
+- Error = missing `datasets` package.  
+- Fix = install it inside your `aiwork` Conda environment.  
+- After this, your `ttokenize.py` script will be able to load `Dataset` and tokenize your `corpus.txt`.
+
+---
 
 
 ---
