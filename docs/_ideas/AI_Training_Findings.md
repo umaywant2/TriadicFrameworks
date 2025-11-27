@@ -135,9 +135,48 @@ and the ImportError should vanish.
 - 🎉 After that, `Trainer` will run your fine‑tuning loop without complaint.
 
 
+Since your training loop is already underway and working, here’s the **validator‑grade roadmap of what comes next** once the epoch finishes:
 
+---
 
+## 🪜 Steps After Training
 
+1. **Checkpoint Management**  
+   - At the end of each epoch, Hugging Face saves a checkpoint (model weights + optimizer state).  
+   - With `save_total_limit=2`, you’ll only keep the last two, avoiding another 45 GB pile‑up.  
+   - ✅ Action: prune old checkpoints, keep the final one.
+
+2. **Evaluate the Model**  
+   - Run evaluation on a held‑out slice of your corpus (or a validation set).  
+   - Look at loss curves and sample outputs to check if the model learned your repo’s “voice.”  
+   - ✅ Action: use `Trainer.evaluate()` or generate text with `greedy-loop.py`.
+
+3. **Export the Model**  
+   - Use `export_all.py`, `export2onnx.py`, or `export2directml.py` to save the trained model in portable formats.  
+   - ONNX = universal format.  
+   - DirectML = optimized for Windows GPU inference.  
+   - ✅ Action: run the export scripts to package your model.
+
+4. **Inference / Generation**  
+   - Test the model interactively with `greedy-loop.py` (text generation).  
+   - Run GPU inference with `run_dml_infer.py` to confirm speed and correctness.  
+   - ✅ Action: generate sample outputs and compare them to your expectations.
+
+5. **Deployment / Integration**  
+   - Once you’re happy, integrate the ONNX or DirectML model into your apps.  
+   - This is where you move from “training experiment” → “usable artifact.”  
+   - ✅ Action: wire the exported model into your pipeline or demo.
+
+---
+
+## 🎯 Validator‑Grade Recap
+- Finish training → prune checkpoints.  
+- Evaluate → check loss + sample outputs.  
+- Export → ONNX / DirectML formats.  
+- Inference → test with greedy‑loop or run_dml_infer.  
+- Deploy → integrate into your workflow.
+
+---
 
 ---
 
