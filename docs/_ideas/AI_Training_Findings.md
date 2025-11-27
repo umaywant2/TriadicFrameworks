@@ -1,94 +1,142 @@
-# 🌌 AI Training Findings - Take 1 🌌
+# 🌌 AI Training Findings 🌌
 
-This doc captures the **first-hand lineage** of fine‑tuning GPT‑2
-- TriadicFrameworks corpus (~5.7 MB)
-- Pre-training repo folder (~143 MB)
-- Tokenized_dataset folder (~725 MB)
-- Triadic_model folders (~128 GB)
-- Triadic_model_export (~479 MB)
-- Triadic_model_export_onnx (~479 MB)
+## 📖 Step‑by‑Step, Like a 5th Grader
 
-It records every ⚡ wrong turn, ✅ correction, and 🌟 breakthrough made during the AI Pro‑370 session.  
-Goal = analyze which hurdles came from 🐍 Python quirks, 🤖 Copilot scaffolding, or 💻 local system/user context.
+- **corpus.txt**  
+  👉 This is the “big book” you made. It’s just all your text files squished together into one giant scroll.  
+  **Why?** So the computer has one place to read from instead of hunting through hundreds of little files.
 
+- **tokenize.py**  
+  👉 This is the “dictionary maker.” It chops the big book into tiny word‑pieces (tokens) that the computer can understand.  
+  **Why?** Computers don’t read words like we do — they need everything broken into little puzzle pieces.
+
+- **train.py**  
+  👉 This is “school time.” You feed the tokens into the model so it can learn patterns, like how words follow each other.  
+  **Why?** Training teaches the computer to guess the next word, like finishing your sentence.
+
+- **export_all.py**  
+  👉 This is the “packing script.” It saves the trained model into different formats so you can use it later.  
+  **Why?** You don’t want to retrain every time — you want a ready‑to‑go backpack of knowledge.
+
+- **greedy-loop.py**  
+  👉 This is the “story writer.” It takes your trained model and asks it to keep guessing the next word over and over.  
+  **Why?** That’s how you make the model spit out text, like writing a paragraph or answering a question.
+
+- **model-onnx.py**  
+  👉 This is the “translator.” It converts your model into ONNX format, which is like a universal language for AI models.  
+  **Why?** ONNX makes it easier to run the model on different computers and tools.
+
+- **run_dml_infer.py**  
+  👉 This is the “test drive.” It runs the ONNX model using DirectML (a Windows tool that talks to your GPU).  
+  **Why?** To check if the model works fast on your graphics card.
+
+- **export2directml.py**  
+  👉 This is the “special exporter.” It saves the model in a way that DirectML likes best.  
+  **Why?** So Windows can use your GPU to run the model smoothly.
+
+- **export2onnx.py**  
+  👉 This is another “translator.” It saves the model into ONNX format again, maybe with different settings.  
+  **Why?** Because ONNX is the most portable format — you can share it or run it anywhere.
+
+---
+
+## 🎯 Big Picture
+1. **Make a book** (corpus.txt).  
+2. **Turn it into puzzle pieces** (tokenize.py).  
+3. **Teach the computer** (train.py).  
+4. **Save the knowledge** (export scripts).  
+5. **Make it talk** (greedy-loop.py).  
+6. **Translate it** (ONNX/DirectML exporters).  
+7. **Run it fast** (run_dml_infer.py).  
+
+---
 
 ## 🎯 Purpose - Create AI training LLM's for GitHub.com/UmayWant2/TriadicFrameworks
 
-😄 I love that you framed it as “three takes” — validator‑grade clarity often comes in drafts. And yes, you already nailed the repo cleanup, so now the flattening step is lighter weight. Here’s the recap of how we created that **flat `corpus.txt` file** from the TriadicFrameworks repo:
-
 ## 🛠 Step‑by‑Step Recap
 
-### Option A: Inside WSL2 (Linux tools)
+## 🛠 Confirm Working Folder
+Run these inside your existing `aiwork` env:
+```bash
+which python
+```
+This should point to:
+```
+/home/iphartonu/miniconda3/envs/aiwork/bin/python
+```
+
+Then check:
+```bash
+python -c "import torch; print(torch.__version__)"
+```
+If that fails, PyTorch isn’t in this env (even if you installed it elsewhere).
+
+---
+
+### Create corpus.txt Inside WSL2 (Linux tools)
 We used the classic `find` + `cat` combo:
 ```bash
-cd /mnt/c/Users/<your-username>/TriadicFrameworks
+cd /home/iphartonu/TriadicFrameworks
 find . -type f \( -name "*.md" -o -name "*.json" -o -name "*.csv" -o -name "*.py" -o -name "*.txt" \) -exec cat {} \; > corpus.txt
 ```
 - Walks through all subfolders.
 - Collects only text‑based files (`.md`, `.json`, `.csv`, `.py`, `.txt`).
 - Concatenates their contents into one giant `corpus.txt`.
 
-### Option B: Windows PowerShell
-Equivalent command in PowerShell:
-```powershell
-Get-ChildItem -Recurse .\TriadicFrameworks -Include *.md,*.json,*.csv,*.py,*.txt | 
-    Get-Content | 
-    Out-File corpus.txt -Encoding utf8
+---
+## ⚙️ Verify Transformers
+Run:
+```bash
+python -c "import transformers, tokenizers; print(transformers.__version__, tokenizers.__version__)"
 ```
-- Same logic, but using PowerShell’s syntax.
-- Ensures UTF‑8 encoding so tokenization doesn’t choke on odd characters.
+You should see both versions aligned (e.g. `transformers 4.44.0` and `tokenizers 0.13.3`).
+
+---
+
+# Run PYTHON TTOKENIZE.PY
+
+---
+
+## 🛠 Fix
+Inside your `aiwork` environment, run one of these:
+
+### Option A: Install just `accelerate`
+```bash
+pip install "accelerate>=0.26.0"
+```
+
+### Option B: Install the full torch extras for transformers
+```bash
+pip install "transformers[torch]"
+```
+This pulls in `accelerate` plus other optional helpers.
+
+---
+
+## 🧪 Verify
+After install, check:
+```bash
+python -c "import accelerate; print(accelerate.__version__)"
+```
+You should see `0.26.x` or newer.
+
+## 🎯 Re‑run ttrain.py
+```bash
+python ttrain.py
+```
+and the ImportError should vanish.
 
 ---
 
 ## 🎯 Validator‑Grade Recap
-- **Flattening** = collapsing the repo’s scrolls into one seam of ore (`corpus.txt`).
-- **No manual review needed** — noise and myth are part of the resonance.
-- **Result** = a single ~5–6 MB text file, ready for tokenization.
+- ✅ CUDA + GPU detected, so your hardware is ready.  
+- ⚠️ Missing dependency: `accelerate`.  
+- 🔧 Fix = install `accelerate>=0.26.0` (or `transformers[torch]`).  
+- 🎉 After that, `Trainer` will run your fine‑tuning loop without complaint.
 
----
 
-That error is a clean validator scroll: your environment doesn’t have the **Hugging Face `datasets`** package installed yet. Here’s the fix:
 
----
 
-## ⚙️ Step 1: Activate Your Conda Environment
-Make sure you’re inside your `aiwork` environment:
-```bash
-conda activate aiwork
-```
-
----
-
-## ⚙️ Step 2: Install `datasets`
-You can install it with either **pip** or **conda**:
-
-### Using pip (simpler, usually fresher):
-```bash
-pip install datasets
-```
-
-### Or using conda-forge:
-```bash
-conda install -c conda-forge datasets
-```
-
----
-
-## ⚙️ Step 3: Verify Installation
-Run a quick check:
-```bash
-python -c "import datasets; print(datasets.__version__)"
-```
-If it prints a version number (e.g. `2.x.x`), you’re good.
-
----
-
-## 🎯 Validator‑Grade Recap
-- Error = missing `datasets` package.  
-- Fix = install it inside your `aiwork` Conda environment.  
-- After this, your `ttokenize.py` script will be able to load `Dataset` and tokenize your `corpus.txt`.
-
----
 
 
 ---
