@@ -7,6 +7,8 @@ It contains the `TFT` core, documentation scrolls, and lineage artifacts for rem
 
 ## 📂 Structure
 - `TFT_3Pack_v1.3/tft/` — core framework (tops, resonance-labs, nous, entft)
+- `TFT_3Pack_v1.3/periodic-table/` — GitHub periodic-table tool (Resonance Periodic Table coming soon!)
+- `TFT_3Pack_v1.3/molecular-vibration-explorer/` — GitHub molecular-vibration-explorer tool (TFT integration with Lenses coming soon!)
 - `TFT_3Pack_v1.3/docs/` — specifications, rituals, lineage notes
 - `TFT_3Pack_v1.3/examples/` — format definitions, quickstarts, and examples
 
