@@ -1,0 +1,171 @@
+@import 'page';
+
+.pt-tool-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    height: 48px;
+    padding: 20px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    color: var( --color-main );
+    background: var( --color-bg );
+    border: 0;
+    border-radius: 24px;
+    cursor: pointer;
+
+    &.primary {
+        color: var( --color-light );
+        background: var( --accent-1 );
+    }
+
+    &.secondary {
+        color: var( --color-light );
+        background: var( --accent-3 );
+    }
+
+    &.example {
+        height: 40px;
+        padding: 18px;
+        font-size: 16px;
+        border-radius: 20px;
+    }
+
+    .icon {
+        font-size: 24px;
+    }
+
+}
+
+.pt-tool-form {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 24px;
+    margin-bottom: 24px;
+    padding: 24px;
+    background: var( --color-bg );
+    border-radius: 12px;
+
+    &-group {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        gap: 12px 24px;
+
+        &.right {
+            justify-content: flex-end;
+        }
+
+        label {
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        input.main {
+            flex: 1;
+            height: 48px;
+            padding: 0 24px;
+            font-size: 18px;
+            border-radius: 24px;
+        }
+
+        input.right {
+            text-align: right;
+        }
+
+    }
+
+    &-sep {
+        flex: 1;
+    }
+
+    &-help {
+        margin: -16px 0 0;
+        text-align: right;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+
+}
+
+.pt-tool-error {
+    margin: 24px 0;
+    padding: 24px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: var( --color-light );
+    background: var( --accent-3 );
+    border-radius: 12px;
+
+    &.hidden {
+        display: none;
+    }
+
+}
+
+.pt-tool-results {
+    margin: 24px 0;
+    padding: 24px;
+    border: 2px solid var( --accent-1 );
+    border-radius: 12px;
+
+    &.hidden {
+        display: none;
+    }
+
+    h3 {
+        margin-top: 0;
+        font-size: 20px;
+    }
+
+    &-total {
+        font-size: 20px;
+
+        b {
+            white-space: nowrap;
+        }
+
+    }
+
+}
+
+.pt-tool-examples {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    gap: 12px;
+    padding: 24px;
+    border: 2px dashed var( --gray-2 );
+    border-radius: 12px;
+
+    h3 {
+        flex: 1;
+        margin: 0;
+        font-weight: 500;
+    }
+
+}
+
+@media ( max-width: 500px ) {
+
+    .pt-tool-form-group {
+        flex-flow: column nowrap;
+        justify-content: center;
+
+        * {
+            text-align: center !important;
+        }
+
+        input.main {
+            flex: unset;
+            width: 100%;
+        }
+
+    }
+
+    .pt-tool-form-help {
+        text-align: center;
+    }
+
+}

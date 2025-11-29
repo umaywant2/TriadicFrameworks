@@ -1,0 +1,92 @@
+//- nuclide page
+extends page.pug
+
+block title
+  - var title = __( 'isotopes-of', page.element.name )
+  - var desc = __( 'isotopes-of-description', page.element.name )
+  title= title + ' — ' + __( 'periodic-table' )
+  meta( name= 'description', content= desc )/
+
+block social
+  meta( property= 'og:title', content= title )/
+  meta( property= 'og:description', content= desc )/
+
+block styles
+  link( rel= 'stylesheet', href= '/css/isotopes.css' )/
+
+block content
+  div.pt-page.pt-box.pt-isotopes
+    include templates/breadcrumbs.pug
+    h1= title
+    p.pt-page-intro= desc
+    div.pt-prop-table-container
+      include templates/isotopes-list.pug
+
+  each n in isotopes.nuclides
+    - var hasDecay = n.stable == false && n.decay.length > 0;
+    div.pt-page.pt-box.pt-isotopes
+      h2.pt-isotopes-title( id= ( isotopes.symbol + '_' + n.m ) )
+        span.isotope--symbol
+          span.isotope--mass= n.m
+          span.isotope--label= isotopes.symbol
+        span.isotope--name= page.element.name + '-' + n.m
+        div.pt-actions.isotope--actions
+          a.pt-icon-button(
+            href= core.url( '/nuclides?z=' + n.z + '&n=' + n.n ),
+            title= __( 'point-at-nuclide' )
+          ): i.icon ads_click
+          if hasDecay
+            a.pt-icon-button(
+              href= core.url( '/decay/' + isotopes.symbol + '_' + n.m  ),
+              title= __( 'decay-chain-of', page.element.name + '-' + n.m )
+            ): i.icon call_split
+          a.pt-icon-button(
+            href= 'data:text/json;charset=utf-8,' + encodeURIComponent(
+              JSON.stringify( n )
+            ),
+            download= 'data.json',
+            title= __( 'action-download' )
+          ): i.icon download
+      div.pt-isotopes-split-table
+        table.pt-prop-table.pt-isotopes-table.breakable
+          tbody
+            tr.pt-prop-table-row
+              th.pt-prop-table-label= __( 'isotope-classification' )
+              td.pt-prop-table-value= 'z: ' + n.z + '; n: ' + n.n + '; m: ' + n.m
+            tr.pt-prop-table-row
+              th.pt-prop-table-label= __( 'isotope-half_life' )
+              td.pt-prop-table-value!= n.half_life ? f.number( n.half_life ) : __( 'stable' )
+            tr.pt-prop-table-row
+              th.pt-prop-table-label= __( 'isotope-abundance' )
+              td.pt-prop-table-value!= n.abundance ? f.number( n.abundance ) : __( 'synthetic' )
+            if n.jp
+              tr.pt-prop-table-row
+                th.pt-prop-table-label= __( 'isotope-jp' )
+                td.pt-prop-table-value!= f.text( n.jp )
+            if hasDecay
+              tr.pt-prop-table-row
+                th.pt-prop-table-label= __( 'decay-modes' )
+                td.pt-prop-table-value!= n.decay.map( d => __( 'decay-' + d.mode ) ).join( '; ' )
+            if n.discovery
+              tr.pt-prop-table-row
+                th.pt-prop-table-label= __( 'discovery' )
+                td.pt-prop-table-value= n.discovery.value || '—'
+            -
+              var props = [
+                'radius, atomic_mass', 'massexcess', 'binding',
+                'sp', 'sn', 'qec', 'qbm', 'qbm_n',
+                'magnetic_dipole', 'electric_quadrupole'
+              ]
+            each prop in props
+              if n[ prop ] && n[ prop ].value
+                tr.pt-prop-table-row
+                  th.pt-prop-table-label= __( 'isotope-' + prop )
+                  td.pt-prop-table-value!= f.number( n[ prop ] )
+
+      a.pt-icon-link( href= core.url( '/nuclides?z=' + n.z + '&n=' + n.n ) )
+        i.icon ads_click
+        span= __( 'point-at-nuclide' )
+      if hasDecay
+        a.pt-icon-link( href= core.url( '/decay/' + isotopes.symbol + '_' + n.m  ) )
+          i.icon call_split
+          span= __( 'decay-chain-of', page.element.name + '-' + n.m )

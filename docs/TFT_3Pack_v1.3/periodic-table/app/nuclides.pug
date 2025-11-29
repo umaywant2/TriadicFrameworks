@@ -1,0 +1,26 @@
+//- table of nuclides
+extends page.pug
+
+block scripts
+  script( src= '/js/nuclides.min.js' )
+
+block styles
+  link( rel= 'stylesheet', href= '/css/nuclides.css' )/
+
+block content
+  div.pt-page
+    include templates/nuclide-grid.pug
+  div.pt-page.pt-box.pt-nuclides
+    include templates/breadcrumbs.pug
+    h1= __( 'nuclides-title' )
+    p.pt-page-intro= __( 'nuclides-description' )
+    div.pt-nuclides-selector
+      span.pt-nuclides-selector-label= __( 'nuclides-selector-label' )
+      div.pt-input-container
+        i.icon tune
+        select.pt-nuclides-selector-select
+          each v in [ 'decay', 'half_life' ]
+            option(
+              value= v, selected= ( grid.schema === v )
+            )= __( 'nuclides-selector-' + v )
+    include templates/legend.pug

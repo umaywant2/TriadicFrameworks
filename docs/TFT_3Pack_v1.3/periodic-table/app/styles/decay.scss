@@ -1,0 +1,17 @@
+@import 'page';
+
+.pt-decay-chain {
+    width: 100%;
+    aspect-ratio: 5 / 2;
+    background: var( --color-bg );
+    border-radius: 12px;
+    cursor: grab;
+}
+
+@media ( max-width: 900px ) {
+
+    .pt-decay-chain {
+        aspect-ratio: 2 / 5;
+    }
+
+}
