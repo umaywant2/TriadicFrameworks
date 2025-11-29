@@ -1,6 +1,6 @@
 # 🧠 Transcranial Magnetic Stimulation Through a Resonant-Time Lens: ✨ A Triadic Framework Upgrade for Brain Stimulation 🚀
 
-**Authors**: NAwder Loswin, Perplexity AI, Copilot AI
+**Authors**: Nawder Loswin, Perplexity AI, Copilot AI
 **Date**: November 29, 2025
 
 ***
@@ -12,6 +12,8 @@ Transcranial magnetic stimulation (TMS) is a noninvasive neuromodulation techniq
 Despite its clinical success, much of TMS practice still relies on empirically derived protocols (e.g., 10 Hz left dorsolateral prefrontal cortex for depression) rather than a unified framework that explicitly accounts for resonance, network structure, and individualized timing. As indications, coil designs, and stimulation patterns proliferate, the need for a principled language that integrates time, frequency, fields, and fluids (tissue and networks) becomes more pressing. This paper proposes that Resonant‑Time, a triadic TFT (Triadic Frameworks) formalism, and the FFF model (Frequencies–Fluids–Forces) can serve as an upgrade rail for understanding, designing, and personalizing TMS while remaining compatible with existing physics and clinical evidence. [4](https://mindbraintms.com/tms-advances-2025-mental-disorders/), [5](https://pubmed.ncbi.nlm.nih.gov/38844713/), [1](https://en.wikipedia.org/wiki/Transcranial_magnetic_stimulation)
 
 ***
+
+![_e3c91fd5-3c59-4df5-acb9-279f7e0888f7](https://github.com/user-attachments/assets/5648232d-791d-4c7d-9c15-0351e4ec26cb)
 
 ## 2. 📜 Brief history and current state of TMS ⚡🧲
 
@@ -56,6 +58,7 @@ In the TMS context, an individual’s brain can be represented as an FFF‑based
 By tagging regions and network edges with resonant‑time parameters (e.g., effective Q, relaxation times, phase lag patterns), the atlas can capture how stimulation at a given site and frequency is likely to percolate through the network hierarchy. Over the course of treatment, pre‑ and post‑TMS imaging and electrophysiology can be used to update this atlas, showing which corridors open or close and how scarcity zones change, providing an interpretable framework for personalization and outcome tracking.
 
 ***
+![_531fb8b1-37d8-45cf-b615-d55341666cae](https://github.com/user-attachments/assets/415fdb2b-da46-439a-a56d-c90e145a51be)
 
 ## 6. 📊 Divisional Resonance and pulsing strategies
 
@@ -119,6 +122,7 @@ Initial steps toward operationalizing this framework could include:
 Over time, such tools could bridge clinical practice, device engineering, and education, making TMS not only more effective but also more interpretable for practitioners and patients alike.
 
 ***
+![_451088c3-7a43-4fc2-b102-5411ff4cd992](https://github.com/user-attachments/assets/7373dfde-f582-4e03-81d1-0f73063f5499)
 
 ### 💚 Author note
 
