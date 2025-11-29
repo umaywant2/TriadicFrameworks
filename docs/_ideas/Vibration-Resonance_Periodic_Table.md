@@ -228,101 +228,64 @@ The Royal Society of Chemistry’s [interactive periodic table](https://periodic
 
 ---
 
-## 🛠️ Integration Plan
-1. **Fork the Periodic Table repo** — use `elements.json` as your scaffold (already has temperature/phase fields).  
-2. **Extend schema with resonance fields** — add `fundamental_frequency`, `vibration_modes`, `raman_shift`, `infrared_activity`.  
-3. **Pull vibrational values from Molecular Vibration Explorer** — start with simple molecules (H₂, O₂, CO₂, SiO₂) and expand.  
-4. **Merge datasets** — link element entries to vibrational data where available; leave `null` for unknowns.  
-5. **Test with your HTML/JS demo** — toggle between phase and resonance views, slider adjusts translucency.  
-6. **Release prototype** — others can copy and remix, adding new vibrational data over time.  
+What you’re seeing is Git warning you that you’ve tried to **add another Git repository inside your repo**. By default, Git treats that as an “embedded repo,” which doesn’t behave the way you want — clones of your outer repo won’t automatically include the inner repos unless you set them up as **submodules**.
 
 ---
 
-## 📜 Git Command for a Local Copy (no ties)
+## 🔑 Your Options
 
-If you want a **clone without upstream ties**, you can do:
-
+### 1. **Use Submodules (linked, refreshable)**
+If you want those repos to stay connected to their upstream sources and be refreshable:
 ```bash
-# Clone the repo normally
-git clone https://github.com/komed3/periodic-table.git
-cd periodic-table
+# From your TFT_3Pack_v1.3 root
+git submodule add https://github.com/zskb/molecular-vibration-explorer docs/TFT_3Pack_v1.3/molecular-vibration-explorer
+git submodule add https://github.com/komed3/periodic-table docs/TFT_3Pack_v1.3/periodic-table
 
-# Remove the .git folder to detach history
-rm -rf .git
-
-# Clone the repo normally
-git clone https://github.com/zskb/molecular-vibration-explorer.git
-cd molecular-vibration-explorer
-
-# Remove the .git folder to detach history
-rm -rf .git
+# Initialize and pull submodules
+git submodule update --init --recursive
 ```
+- **Pros:** You can run `git submodule update --remote` later to refresh from upstream.  
+- **Cons:** Slightly more complex workflow for contributors (they need to clone with `--recursive`).
 
 ---
 
-## 📂 Suggested Repo Layout
+### 2. **Detach (snapshot copy, no ties)**
+If you want them as **plain folders** with no Git history:
+```bash
+# Clone them separately
+git clone https://github.com/zskb/molecular-vibration-explorer
+git clone https://github.com/komed3/periodic-table
 
+# Remove their .git folders
+rm -rf molecular-vibration-explorer/.git
+rm -rf periodic-table/.git
+
+# Move them into your repo
+mv molecular-vibration-explorer docs/TFT_3Pack_v1.3/
+mv periodic-table docs/TFT_3Pack_v1.3/
+
+# Add them as normal files
+git add docs/TFT_3Pack_v1.3/molecular-vibration-explorer docs/TFT_3Pack_v1.3/periodic-table
+git commit -m "Added snapshot copies of vibration explorer and periodic table"
 ```
-TFT_3Pack_v1.3/
-│
-├── README.md
-│   └── Overview of Resonance Periodic Table project
-│
-├── README_sources.md
-│   └── Provenance notes (links + licenses for komed3 + zskb repos, NIST, Materials Cloud)
-│
-├── data_sources/
-│   ├── periodic/
-│   │   ├── elements.json        # from komed3/periodic-table
-│   │   ├── spectrum.json        # optional spectral lines
-│   │   └── nuclides.json        # optional nuclide data
-│   │
-│   ├── vibration/
-│   │   ├── vibration_modes.json # extracted from zskb/molecular-vibration-explorer
-│   │   ├── raman_ir_data.json   # Raman/IR intensities
-│   │   └── nist_reference.md    # notes on NIST vibrational tables
-│   │
-│   └── merged/
-│       └── resonance_elements.json  # your extended schema (phase + resonance fields)
-│
-├── schema/
-│   └── resonance_schema.json    # definition of resonance object fields
-│
-├── demo/
-│   ├── index.html               # toggle + slider + legend prototype
-│   ├── style.css                # optional styling
-│   └── script.js                # JS logic for rendering table
-│
-├── docs/
-│   ├── design_notes.md          # validator scrolls, rationale, Feynman “show me a number”
-│   └── roadmap.md               # month-by-month milestones (replicators, transporters, consciousness transfers)
-│
-└── utils/
-    └── merge_scripts.py         # helper script to merge periodic + vibration datasets into resonance schema
-```
+- **Pros:** Simple, no submodule complexity. Everything lives inside your repo.  
+- **Cons:** No automatic refresh — you’d have to manually re‑copy if upstream changes.
 
 ---
 
-## 🔧 Why this layout works
-- **Separation of concerns:**  
-  - `data_sources/periodic` = base atomic/phase data.  
-  - `data_sources/vibration` = vibrational spectra.  
-  - `data_sources/merged` = your resonance‑extended dataset.  
-- **Schema clarity:** `schema/resonance_schema.json` defines the new fields so contributors know how to add data.  
-- **Demo ready:** `demo/index.html` is your toggleable visualization scaffold.  
-- **Documentation:** `docs/` holds validator scrolls and roadmap notes, so others understand the philosophy and trajectory.  
-- **Provenance:** `README_sources.md` ensures you credit and track licenses.  
+## 🚀 Recommendation
+- If you want **students/enthusiasts to always have the tools bundled**, go with **detached snapshot copies** (Option 2).  
+- If you want to **stay in sync with upstream repos**, use **submodules** (Option 1).  
 
 ---
 
-## 🚀 Next step
-You can now:
-1. **Clone repos locally (detached).**
-2. Copy `elements.json` and vibration datasets into `data_sources/`.
-3. Extend schema in `schema/resonance_schema.json`.
-4. Generate `resonance_elements.json` in `data_sources/merged/`.
-5. Point your `demo/index.html` at `resonance_elements.json` for live visualization.
+## ⚡ Refresh Reminder
+- **Submodules:** You can refresh periodically with:
+  ```bash
+  git submodule update --remote
+  ```
+- **Snapshots:** No refresh link — you’d need to manually re‑clone and replace the folders.
 
 ---
 
-I can also sketch the **merge script logic** (Python or JS) that reads `elements.json` and `vibration_modes.json`, then outputs `resonance_elements.json` with the combined fields. Would you like me to draft that script outline?
+👉 Since you said earlier you want them “quick, linked, anything we want still doable in our own space,” submodules are probably the cleanest way. But if you want a **one‑stop repo that clones with everything included**, snapshots are simpler.  
