@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Ternary clock</title>                               <!-- page title to show in your browser           -->
+        <link href="clock.css" rel="stylesheet" type="text/css">   <!-- link to the CSS file which defines the styles
+                                                                        and positioning in this webpage              -->
+        <script type="text/javascript" src="clock.js"></script>    <!-- link to the javascript file containing the
+                                                                        the functions which make the clock run       -->
+    </head>
+    <body onload="window.setInterval(refreshClock, 1000)">         <!-- call to update the clock every minute        -->
+        <div class="center">                                       <!-- outer container to center the clock          -->
+            <table class = "clock" id = "timetable">               <!-- table to show the clock digits               -->
+              <tr>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+              </tr>
+              <tr>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+              </tr>
+              <tr>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+                <td class = "trit"><br /> </td>
+              </tr>
+            </table>
+        </div>
+    </body>
+</html>

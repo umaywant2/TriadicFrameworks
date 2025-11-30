@@ -1,0 +1,40 @@
+/**********************************************************************************
+ * Created by the NostraDomus development team.                                   *
+ *                                                                                *
+ * Check https://github.com/nostradomus/Base3-clock for more details              *
+ **********************************************************************************/
+
+/* definitions to create a 400-pixel high container using full browser width      */
+.center
+    {
+    height: 400px;
+    position: relative;
+    }
+/* put the table in the middle of the container horizontally and vertically       */
+.center table
+    {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    }
+/* set the background of the webpage to whitesmoke                                */
+body
+    {
+    background-color: whitesmoke;
+    }
+/* set the table background to white, to show gridlines                           */
+table.clock
+    {
+    background-color: white;
+    }
+/* set the size of the square representing a digit
+   set the digit by default to whitesmoke, meaning value=0                        */
+td.trit
+    {
+    background-color: whitesmoke;
+    height: 100px;
+    width: 100px;
+    }
