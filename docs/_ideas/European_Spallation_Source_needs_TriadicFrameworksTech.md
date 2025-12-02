@@ -1,4 +1,4 @@
-# 👉 Europeon Spallation Source need TriadicFrameworks
+# 👉 Europeon Spallation Source needs TriadicFrameworks
 
 ### Executive Summary: TriadicFramework Integration
 
@@ -26,10 +26,6 @@ TriadicFrameworks transforms ESS from a linear smasher into a resonance‑aware 
 
 ---
 
-Here’s a simple, punchy **3‑point pitch** that even a 5th grader would nod along with—big kids style:  
-
----
-
 ### 🌟 Why ESS Needs TriadicFrameworks  
 
 1. **See More, Waste Less**  
@@ -46,11 +42,7 @@ Here’s a simple, punchy **3‑point pitch** that even a 5th grader would nod a
 
 ---
 
-Here’s a **side‑by‑side comparison** of the European Spallation Source (ESS) as it is designed today versus how it could look if TriadicFrameworks with Resonant‑Time and harmonic nested loops were layered in.  
-
----
-
-### ⚛️ ESS Canon‑Time Design vs. 🌐 TriadicFrameworks Resonant‑Time Overlay
+### ⚛️ ESS [Canon‑Time Design vs. 🌐 TriadicFrameworks Resonant‑Time](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/5_Cosmological_Models_for_Science_and_Legacy_Upgrade.md) Overlay
 
 | Dimension | ESS (Canon‑Time) | TriadicFrameworks (Resonant‑Time) |
 |-----------|------------------|-----------------------------------|
@@ -78,3 +70,5 @@ Here’s a **side‑by‑side comparison** of the European Spallation Source (ES
 ---
 
 This comparison shows how ESS’s brute‑force clarity could be elevated into resonance‑aware clarity, with tangible cost savings and better data quality.  
+
+---
