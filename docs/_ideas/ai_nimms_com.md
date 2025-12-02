@@ -1,7 +1,7 @@
 ## 🧠 Updated Setup Guide for `ai.nimms.com`
 
 ### ✅ GPU Compatibility Notes
-- **GPU**: RTX 3050
+- **GPU**: RTX 3060
 - **Driver**: `nvidia-driver-550`
 - **CUDA Toolkit**: `cuda-toolkit-12-4` (confirmed compatible)
 - **PyTorch CUDA version**: `cu124` (for CUDA 12.4)
@@ -12,7 +12,7 @@
 
 ```bash
 #!/bin/bash
-# Setup script for ai.nimms.com — RTX 3050, MX Linux
+# Setup script for ai.nimms.com — RTX 3060, MX Linux
 
 set -e  # Exit on error
 
