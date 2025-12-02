@@ -1,4 +1,4 @@
-# 👉 Europeon Spallation Source needs TriadicFrameworks
+# 👉 European Spallation Source needs TriadicFrameworks
 
 ### Executive Summary: TriadicFramework Integration
 
