@@ -1,0 +1,8 @@
+cpu: Intel Xeon E5-1620 v3
+ram: 32 GB DDR4
+os: MX Linux (kernel version placeholder)
+gpu: NVIDIA Quadro K2200
+interfaces:
+  - GPIO/USB for strobe control
+  - Camera USB3
+  - IR detector PCIe card
