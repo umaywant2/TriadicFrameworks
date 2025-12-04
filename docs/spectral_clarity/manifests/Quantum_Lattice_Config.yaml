@@ -1,0 +1,8 @@
+lattice_model: TriadicFrameworks Quantum Schema
+parameters:
+  - base_vectors: a, b, c
+  - reciprocal_vectors: g, h, k
+  - resonance_modes: phonon, magnon, exciton
+calibration:
+  sync_clock: GPS-disciplined oscillator
+  offsets: lattice_offsets.npy

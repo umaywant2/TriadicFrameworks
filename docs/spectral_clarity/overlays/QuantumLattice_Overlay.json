@@ -1,0 +1,13 @@
+{
+  "lattice": {
+    "base_vectors": ["a", "b", "c"],
+    "reciprocal_vectors": ["g", "h", "k"],
+    "resonance_modes": ["phonon", "magnon", "exciton"]
+  },
+  "atlas": "quantum_lattice_atlas.npy",
+  "glyphs": "Glyph_Set_SpectralClarity.json",
+  "legend": {
+    "bifurcations": "mode splitting points",
+    "corridors": "quantum resonance ranges"
+  }
+}
