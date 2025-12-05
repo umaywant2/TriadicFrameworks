@@ -11,7 +11,7 @@
 ---
 ###### *Da Vinci’s touch:* anatomical precision meets mythic abstraction — each swirl mapped to a breath, each glow to a heartbeat.
 
-<img width="1024" height="1536" alt="BCO 4ae27b5d-3bab-4eee-8898-9258b7302fdf" src="https://github.com/user-attachments/assets/d58664e3-cce1-4906-8f03-8a7e97fe62bc" />
+<img width="256" height="384" alt="BCO 4ae27b5d-3bab-4eee-8898-9258b7302fdf" src="https://github.com/user-attachments/assets/d58664e3-cce1-4906-8f03-8a7e97fe62bc" />
 
 ###### 🎨 Scroll I: The Triad of Becoming
 
@@ -42,7 +42,7 @@ We propose that all dynamical systems emerge from the interplay of two forces—
 ---
 ###### *Da Vinci’s touch:* sepia ink and radiant overlays — the chamber is both cathedral and circuit, a place where resonance becomes awareness.
 
-<img width="1024" height="1536" alt="BCO e5824cc4-a7fd-4e79-a1de-97e8342b683b" src="https://github.com/user-attachments/assets/7bc93e4d-3511-464a-987c-f7fb4aef939b" />
+<img width="256" height="384" alt="BCO e5824cc4-a7fd-4e79-a1de-97e8342b683b" src="https://github.com/user-attachments/assets/7bc93e4d-3511-464a-987c-f7fb4aef939b" />
 
 ###### 🧠 Scroll II: The Operator’s Chamber
 
@@ -98,7 +98,7 @@ EEG harmonics predicted at **3×, 6×, 9× alpha rhythms**.
 ---
 ###### *Da Vinci’s touch:* chiaroscuro depth, mythic geometry, and playful reverence — the forge is both experiment and playground.
 
-<img width="1024" height="1536" alt="BCO 484022a0-3a6e-4375-9f64-193911e2979a" src="https://github.com/user-attachments/assets/7b64f9cf-1efc-4b23-b994-8fae0893dff9" />
+<img width="256" height="384" alt="BCO 484022a0-3a6e-4375-9f64-193911e2979a" src="https://github.com/user-attachments/assets/7b64f9cf-1efc-4b23-b994-8fae0893dff9" />
 
 ###### 🔁 Scroll III: The Harmonic Forge
 
@@ -116,6 +116,17 @@ This paper supports:
 - `badge_trigger: triadic_everything_foundation`  
 - `validator_anchor: recursion_protocols`  
 - `echo_index: paper_I_universal_scaffold`  
+
+---
+
+## 🌌 Triadic Force Operators (Update)
+
+Building on frequency and fluids, we now define **forces** as universal operators of state change.  
+- 🌍 **Pull:** convergence of entities.  $$F_{pull} = G \cdot \frac{m_1 m_2}{r^2}$$
+- ⚡ **Push:** divergence of entities.  $$F_{push} = k \cdot \frac{q_1 q_2}{r^2}$$
+- 🔄 **Balance:** transformation through growth and decay cycles.  $$dS \geq 0$$, $$\tau_{decay} = \frac{1}{\lambda}$$
+
+This triadic framing compresses canonical physics into validator‑grade clarity, ensuring alignment across cosmic, biological, and cultural domains.
 
 ---
 
