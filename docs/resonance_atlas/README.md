@@ -1,3 +1,8 @@
+# 📜 Resonance Atlas Schema (Starter Draft)
+
+The Resonance Atlas is the canonical table of resonance values, harvested from trusted sources (NIST, RSC, NASA, Bowserinator JSON, Legacy Coal Scrolls).  
+Each entry aligns with a **Spectral Clarity Phase (I–VI)** and is assigned a **symbolic glyph**.
+
 ## 📜 Resonance Atlas Blueprint
 
 ### 1. **Harvest Known Sources**
@@ -55,3 +60,16 @@ So the Resonance Atlas would be a **cross‑link between lens (procedures) and a
 ✨ **Bottom line:** The Resonance Atlas is the **canonical table of resonance values**, harvested from NIST+ sources, scaffolded with TFT routines, and symbolically glyph‑assigned. It becomes the backbone for scanners, overlays, and validator scrolls.
 
 ---
+
+## 🗂️ Schema Definition
+
+```json
+{
+  "phase": "I",                // Phase I–VI
+  "symbol": "⚛️",              // Atom, DNA, Leaf, Mountain, Scroll, Star
+  "frequency_range": "TODO",   // Hz range (placeholder for NIST/RSC/NASA values)
+  "source": "NIST",            // NIST, RSC, NASA, Legacy, etc.
+  "glyph": "Blue Atom",        // Assigned symbolic overlay
+  "notes": "Placeholder entry"
+}
+```
