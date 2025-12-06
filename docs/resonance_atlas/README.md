@@ -49,15 +49,30 @@ Each entry aligns with a **Spectral Clarity Phase (I–VI)** and is assigned a *
 
 ---
 
-### 5. **Where It Lives in Repo**
-From your repo’s structure, this Atlas likely belongs in or near the **lens/** or **atlases/** directories:
-- **lens/** → input/output routines (scanners, validators).  
-- **spectral_clarity/atlases/** → schema definitions (PhaseI–VI Atlas Schema files already exist).  
-So the Resonance Atlas would be a **cross‑link between lens (procedures) and atlases (schemas)**.
+## 🗂️ Schema Definition
+
+```json
+{
+  "phase": "I",                // Phase I–VI
+  "symbol": "⚛️",              // Atom, DNA, Leaf, Mountain, Scroll, Star
+  "frequency_range": "TODO",   // Hz range (placeholder for NIST/RSC/NASA values)
+  "source": "NIST",            // NIST, RSC, NASA, Legacy, etc.
+  "glyph": "Blue Atom",        // Assigned symbolic overlay
+  "notes": "Placeholder entry"
+}
+```
 
 ---
 
-✨ **Bottom line:** The Resonance Atlas is the **canonical table of resonance values**, harvested from NIST+ sources, scaffolded with TFT routines, and symbolically glyph‑assigned. It becomes the backbone for scanners, overlays, and validator scrolls.
+Perfect — let’s scaffold a **starter Resonance Atlas schema file** for `docs/resonance_atlas/`. This will give you a canonical structure to populate with NIST vibrational frequencies, RSC spectral lines, NASA cosmic data, and symbolic glyphs. I’ll draft it in **Markdown with embedded JSON‑style blocks** so it’s both human‑readable and machine‑usable.
+
+---
+
+```markdown
+# 📜 Resonance Atlas Schema (Starter Draft)
+
+The Resonance Atlas is the canonical table of resonance values, harvested from trusted sources (NIST, RSC, NASA, Bowserinator JSON, Legacy Coal Scrolls).  
+Each entry aligns with a **Spectral Clarity Phase (I–VI)** and is assigned a **symbolic glyph**.
 
 ---
 
@@ -73,3 +88,126 @@ So the Resonance Atlas would be a **cross‑link between lens (procedures) and a
   "notes": "Placeholder entry"
 }
 ```
+
+---
+
+## 🔬 Phase I – Nano (Atomic/Molecular Vibrations)
+- **Symbol**: ⚛️ Atom  
+- **Glyph Color**: Blue  
+- **Frequency Range**: `TODO` (NIST IR/Raman datasets)  
+- **Example Entry**:
+```json
+{
+  "phase": "I",
+  "symbol": "⚛️",
+  "frequency_range": "TODO",
+  "source": "NIST Vibrational Frequencies",
+  "glyph": "Blue Atom",
+  "notes": "Infrared/Raman vibrational placeholder"
+}
+```
+
+---
+
+## 🧬 Phase II – Cellular/Human (Biological Rhythms)
+- **Symbol**: 🧬 DNA  
+- **Glyph Color**: Green  
+- **Frequency Range**: `~1 Hz (heartbeat), ~10⁻⁵ Hz (circadian)`  
+- **Example Entry**:
+```json
+{
+  "phase": "II",
+  "symbol": "🧬",
+  "frequency_range": "TODO",
+  "source": "Biological cycles",
+  "glyph": "Green DNA",
+  "notes": "Heartbeat, circadian rhythms"
+}
+```
+
+---
+
+## 🍃 Phase III – Bridge (Seasonal Cycles)
+- **Symbol**: 🍃 Leaf  
+- **Glyph Color**: Teal  
+- **Frequency Range**: `~10⁻⁷ Hz`  
+- **Example Entry**:
+```json
+{
+  "phase": "III",
+  "symbol": "🍃",
+  "frequency_range": "TODO",
+  "source": "Seasonal cycles",
+  "glyph": "Teal Leaf",
+  "notes": "Placeholder seasonal resonance"
+}
+```
+
+---
+
+## ⛰️ Phase IV – Planetary (Geological/Seismic)
+- **Symbol**: ⛰️ Mountain  
+- **Glyph Color**: Brown  
+- **Frequency Range**: `10⁻⁸ to 10⁻¹² Hz`  
+- **Example Entry**:
+```json
+{
+  "phase": "IV",
+  "symbol": "⛰️",
+  "frequency_range": "TODO",
+  "source": "Seismic/geological datasets",
+  "glyph": "Brown Mountain",
+  "notes": "Placeholder planetary resonance"
+}
+```
+
+---
+
+## 📜 Phase V – Atlas (Mythic Epochs)
+- **Symbol**: 📜 Scroll  
+- **Glyph Color**: Purple  
+- **Frequency Range**: `~10⁻¹³ Hz`  
+- **Example Entry**:
+```json
+{
+  "phase": "V",
+  "symbol": "📜",
+  "frequency_range": "TODO",
+  "source": "Validator mythic epochs",
+  "glyph": "Purple Scroll",
+  "notes": "Placeholder mythic resonance"
+}
+```
+
+---
+
+## ⭐ Phase VI – Celestial (Cosmic Background)
+- **Symbol**: ⭐ Star  
+- **Glyph Color**: Gold  
+- **Frequency Range**: `~10⁻¹⁸ Hz`  
+- **Example Entry**:
+```json
+{
+  "phase": "VI",
+  "symbol": "⭐",
+  "frequency_range": "TODO",
+  "source": "NASA Cosmic Background Radiation",
+  "glyph": "Gold Star",
+  "notes": "Placeholder cosmic resonance"
+}
+```
+
+---
+
+## ⚙️ Procedures (TFT Stack)
+- `add_entry()` → Append new resonance values.  
+- `validate_entry()` → Check against known sources (NIST, RSC, NASA).  
+- `map_phase()` → Align entry to Spectral Clarity ladder.  
+- `export_atlas()` → Make entries usable by scanners and overlays.  
+
+---
+
+✨ **Next Step:** Populate `frequency_range` fields with harvested values from NIST, RSC, NASA, and Bowserinator JSON. This scaffold ensures every entry is phase‑aligned and glyph‑assigned.
+
+---
+
