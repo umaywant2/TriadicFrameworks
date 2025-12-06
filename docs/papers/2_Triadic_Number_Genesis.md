@@ -4,7 +4,7 @@
 **Date**: August 2025
 
 ---
-<img width="1024" height="1536" alt="BCO 4ec350b0-c94f-46b0-aee2-77f3861b29a9" src="https://github.com/user-attachments/assets/7f4ab4bc-a915-4098-bd06-750b3c3580e1" />
+<img width="256" height="384" alt="BCO 4ec350b0-c94f-46b0-aee2-77f3861b29a9" src="https://github.com/user-attachments/assets/7f4ab4bc-a915-4098-bd06-750b3c3580e1" />
 
 ## 🔮 Abstract  
 This paper explores the foundational roles and archetypes of digits 1–9 through a triadic lens. We assign symbolic “weights,” identify primary triadigms ({3, 6, 9}), and reveal secondary relationships by dividing a base constant. A Fibonacci overlay uncovers hidden golden ratios within nested divisions. Finally, a lab protocol outlines constructing a 3×3 Modular Matrix Resonator, bridging theory and hands-on exploration.
@@ -51,7 +51,7 @@ A symbolic magnification of recursive numeric behavior seeded by the triad {3, 6
 <img align="center" width="238" height="240" alt="image" src="https://github.com/user-attachments/assets/69dfe3af-a302-48f1-93d0-8b209a33ffe2" />
 
 ---
-<img width="1024" height="1536" alt="BCO f2e83aeb-59bd-4571-9b91-d178c667d23a" src="https://github.com/user-attachments/assets/e8eb7f09-3ef1-4bb9-9d4a-0d4172cd977a" />
+<img width="256" height="384" alt="BCO f2e83aeb-59bd-4571-9b91-d178c667d23a" src="https://github.com/user-attachments/assets/e8eb7f09-3ef1-4bb9-9d4a-0d4172cd977a" />
 
 ## 🌀 3. Triadigms and Recursive Division
 
@@ -137,7 +137,7 @@ Construct a 3×3 matrix using Helmholtz resonators to encode digits 1–9 and re
 - Modal peaks expected at triadic intervals
 
 ---
-<img width="1024" height="1536" alt="BCO c3658b05-0089-4af5-8305-002a377cdffe" src="https://github.com/user-attachments/assets/c716e886-90ef-4531-bbf2-ef73620da38a" />
+<img width="256" height="384" alt="BCO c3658b05-0089-4af5-8305-002a377cdffe" src="https://github.com/user-attachments/assets/c716e886-90ef-4531-bbf2-ef73620da38a" />
 
 ## 🧩 6. Remix Prompts
 - Build a validator dashboard for numeric archetype fidelity
