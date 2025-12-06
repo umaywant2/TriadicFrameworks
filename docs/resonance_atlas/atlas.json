@@ -1,0 +1,90 @@
+[
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "1595 cm^-1 (H2O bend), 3657 cm^-1 (H2O stretch)",
+    "source": "NIST Vibrational Frequencies",
+    "glyph": "Blue Atom",
+    "notes": "Representative water vibrational bands"
+  },
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "2349 cm^-1 (CO2 stretch), 667 cm^-1 (CO2 bend)",
+    "source": "NIST Vibrational Frequencies",
+    "glyph": "Blue Atom",
+    "notes": "Carbon dioxide vibrational bands"
+  },
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "2917 cm^-1 (CH4 stretch), 1306 cm^-1 (CH4 bend)",
+    "source": "NIST Vibrational Frequencies",
+    "glyph": "Blue Atom",
+    "notes": "Methane vibrational bands"
+  },
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "3337 cm^-1 (NH3 stretch), 1627 cm^-1 (NH3 bend)",
+    "source": "NIST Vibrational Frequencies",
+    "glyph": "Blue Atom",
+    "notes": "Ammonia vibrational bands"
+  },
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "Ionization energy: 1312 kJ/mol (Hydrogen)",
+    "source": "Bowserinator JSON",
+    "glyph": "Blue Atom",
+    "notes": "Atomic shell resonance anchor"
+  },
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "Ionization energy: 1086 kJ/mol (Carbon)",
+    "source": "Bowserinator JSON",
+    "glyph": "Blue Atom",
+    "notes": "Atomic shell resonance anchor"
+  },
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "Ionization energy: 762 kJ/mol (Iron)",
+    "source": "Bowserinator JSON",
+    "glyph": "Blue Atom",
+    "notes": "Atomic shell resonance anchor"
+  }
+{
+  "phase": "II",
+  "symbol": "🧬",
+  "frequency_range": "1 Hz (heartbeat), 10^-5 Hz (circadian)",
+  "source": "Physiology datasets",
+  "glyph": "Green DNA",
+  "notes": "Biological cycles"
+}
+{
+  "phase": "III",
+  "symbol": "🍃",
+  "frequency_range": "10^-7 Hz (annual cycle)",
+  "source": "Seasonal rhythms",
+  "glyph": "Teal Leaf",
+  "notes": "Equinox/solstice resonance"
+}
+{
+  "phase": "IV",
+  "symbol": "⛰️",
+  "frequency_range": "0.003 Hz (Earth spheroidal mode), 10^-8 Hz (tectonic pulses)",
+  "source": "USGS/NASA seismic datasets",
+  "glyph": "Brown Mountain",
+  "notes": "Planetary resonance"
+}
+{
+  "phase": "VI",
+  "symbol": "⭐",
+  "frequency_range": "0.3–630 GHz (peak ~160 GHz)",
+  "source": "NASA Cosmic Microwave Background",
+  "glyph": "Gold Star",
+  "notes": "CMB blackbody spectrum at 2.725 K"
+}
+]
