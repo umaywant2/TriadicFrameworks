@@ -1,0 +1,50 @@
+[
+  {
+    "phase": "I",
+    "symbol": "⚛️",
+    "frequency_range": "TODO",
+    "source": "NIST Vibrational Frequencies",
+    "glyph": "Blue Atom",
+    "notes": "Infrared/Raman vibrational placeholder"
+  },
+  {
+    "phase": "II",
+    "symbol": "🧬",
+    "frequency_range": "TODO",
+    "source": "Biological cycles",
+    "glyph": "Green DNA",
+    "notes": "Heartbeat, circadian rhythms"
+  },
+  {
+    "phase": "III",
+    "symbol": "🍃",
+    "frequency_range": "TODO",
+    "source": "Seasonal cycles",
+    "glyph": "Teal Leaf",
+    "notes": "Placeholder seasonal resonance"
+  },
+  {
+    "phase": "IV",
+    "symbol": "⛰️",
+    "frequency_range": "TODO",
+    "source": "Seismic/geological datasets",
+    "glyph": "Brown Mountain",
+    "notes": "Placeholder planetary resonance"
+  },
+  {
+    "phase": "V",
+    "symbol": "📜",
+    "frequency_range": "TODO",
+    "source": "Validator mythic epochs",
+    "glyph": "Purple Scroll",
+    "notes": "Placeholder mythic resonance"
+  },
+  {
+    "phase": "VI",
+    "symbol": "⭐",
+    "frequency_range": "TODO",
+    "source": "NASA Cosmic Background Radiation",
+    "glyph": "Gold Star",
+    "notes": "Placeholder cosmic resonance"
+  }
+]
