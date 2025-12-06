@@ -15,7 +15,7 @@ This paper develops a unified **1D–9D triadic scaffold** for modeling physical
 Intermediate dimensions (1, 2, 4, 5, 7, 8) act as **resonant rails**, tuning information flow and stability.  
 
 ---
-<img width="1024" height="1536" alt="Copilot_20251108_085128" src="https://github.com/user-attachments/assets/8026df76-eed6-4063-9319-2d530fdfa54a" />
+<img width="256" height="384" alt="Copilot_20251108_085128" src="https://github.com/user-attachments/assets/8026df76-eed6-4063-9319-2d530fdfa54a" />
 
 ## 🧭 1. The 3→6→9 Loop  
 
@@ -63,7 +63,7 @@ Each rail acts as a **filter** or **weight**:
 - $$D_8$$: Phase inversion 🔀  
 
 ---
-<img width="1024" height="1536" alt="Copilot_20251108_085633" src="https://github.com/user-attachments/assets/ee3448ff-f435-435d-8071-95919df271d6" />
+<img width="256" height="384" alt="Copilot_20251108_085633" src="https://github.com/user-attachments/assets/ee3448ff-f435-435d-8071-95919df271d6" />
 
 ## ⚛️ 3. Quantum Amplification  
 
@@ -143,7 +143,7 @@ Excellent—let’s append a **Worked Example Appendix** to **Paper III: Dimensi
 **Validator Badge:** *Flux Harmonizer* 🏅  
 
 ---
-<img width="1024" height="1536" alt="Copilot_20251108_090428" src="https://github.com/user-attachments/assets/c3a8d726-982d-4cdd-9b08-2c593cf5b96e" />
+<img width="256" height="384" alt="Copilot_20251108_090428" src="https://github.com/user-attachments/assets/c3a8d726-982d-4cdd-9b08-2c593cf5b96e" />
 
 ## 📎 Appendix C: Resonant Rails in Action  
 
