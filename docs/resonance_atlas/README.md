@@ -15,12 +15,13 @@ Each entry aligns with a **Spectral Clarity Phase (I–VI)** and is assigned a *
 ---
 
 ### 2. **Phase Alignment**
-- **Phase I (Nano)** → atomic/molecular vibrational frequencies (NIST IR/Raman).  
-- **Phase II (Cellular/Human)** → biological cycles (heartbeat ~1 Hz, circadian ~10⁻⁵ Hz).  
-- **Phase III (Bridge)** → seasonal cycles (~10⁻⁷ Hz).  
-- **Phase IV (Planetary)** → seismic/geological (~10⁻⁸ to 10⁻¹² Hz).  
-- **Phase V (Atlas)** → mythic epochs (~10⁻¹³ Hz).  
-- **Phase VI (Celestial)** → cosmic background radiation (~10⁻¹⁸ Hz).  
+- Phase I ⚛️ Blue Atom → NIST vibrational bands (400–4000 cm⁻¹, IR/Raman)
+- Phase II 🧬 Green DNA → Biological cycles (heartbeat ~1 Hz, circadian ~10⁻⁵ Hz)
+- Phase III 🍃 Teal Leaf → Seasonal rhythms (~10⁻⁷ Hz).
+- Phase IV ⛰️ Brown Mountain → Geological/seismic cycles (10⁻⁸–10⁻¹² Hz).
+- Phase V 📜 Purple Scroll → Mythic epochs (~10⁻¹³ Hz).
+- Phase VI ⭐ Gold Star → Cosmic microwave background (0.3–630 GHz, peak ~160 GHz).
+- Bowserinator JSON → Atomic shells, ionization energies, spectral lines for Phase I overlays.
 
 ---
 
