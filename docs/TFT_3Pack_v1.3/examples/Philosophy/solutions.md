@@ -1,66 +1,67 @@
-\## ✅ \*\*PHILOSOPHY — Solutions\*\*
+# Philosophy core problem solutions
+
+## Solution to Problem 1 – Conceptual coherence
 
 
 
-\### \*\*1. Conceptual Coherence\*\*
+$$
+C = \frac{T_f}{τ_r}.
+$$
 
 
 
-$$C = \\frac{T\_f}{τᵣ}$$
+If $$τ_r$$ increases, the denominator increases, so $$C$$ decreases.
 
-
-
-τᵣ increases → C decreases.
-
-
-
-✅ \*\*Coherence decreases\*\*
-
-
+**Answer:** Coherence decreases.
 
 ---
 
-
-
-\### \*\*2. Ethical Weight\*\*
-
-
-
-$$E = ΛΘ D\_6$$
+## Solution to Problem 2 – Ethical weight
 
 
 
-Θ doubles → ×2
+$$
+E = ΛΘ D_6.
+$$
 
 
 
-✅ \*\*E doubles\*\*
+If $$Θ$$ doubles:
 
 
 
----
+$$
+Θ' = 2Θ,
+\quad
+E' = Λ(2Θ)D_6 = 2E.
+$$
 
 
 
-\### \*\*3. Argument Strength\*\*
-
-
-
-$$S = X \\sqrt{τᵣ}$$
-
-
-
-τᵣ ×4 → √4 = 2
-
-
-
-✅ \*\*S doubles\*\*
-
-
+**Answer:** Ethical weight doubles.
 
 ---
 
+## Solution to Problem 3 – Argument strength
 
 
 
+$$
+S = X \sqrt{τ_r}.
+$$
 
+
+
+If $$τ_r$$ quadruples:
+
+
+
+$$
+τ_r' = 4τ_r,
+\quad
+S' = X \sqrt{4τ_r} = 2X\sqrt{τ_r} = 2S.
+$$
+
+
+
+**Answer:** Argument strength doubles.
