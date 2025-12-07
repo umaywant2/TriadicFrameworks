@@ -1,80 +1,110 @@
-\## ✅ \*\*ECONOMICS — Solutions\*\*
+# Economics core problem solutions
+
+## Solution to Problem 1 – Market resonance cycles
+
+We have
 
 
 
-\### \*\*1. Market Resonance Cycles\*\*
+$$
+ω = \frac{T_f}{D_3}.
+$$
 
 
 
-$$ω = \\frac{T\_f}{D\_3}$$
+To keep $$ω$$ constant when $$D_3$$ increases to $$D_3'$$, we need
 
 
 
-To keep ω constant:
+$$
+\frac{T_f'}{D_3'} = \frac{T_f}{D_3}.
+$$
 
 
 
-$$T\_f' = T\_f \\frac{D\_3'}{D\_3}$$
+Thus,
 
 
 
-✅ \*\*Increase T\_f proportionally to D₃\*\*
+$$
+T_f' = T_f \frac{D_3'}{D_3}.
+$$
 
 
 
----
-
-
-
-\### \*\*2. Utility Resonance\*\*
-
-
-
-$$U = X \\ln(1 + τᵣ)$$
-
-
-
-If τᵣ → 1.25τᵣ:
-
-
-
-$$U' = X \\ln(1 + 1.25τᵣ)$$
-
-
-
-✅ \*\*Utility increases logarithmically\*\*
-
-
+**Answer:** Increase $$T_f$$ in direct proportion to the increase in $$D_3$$.
 
 ---
 
+## Solution to Problem 2 – Utility resonance
 
-
-\### \*\*3. Inflation Drift\*\*
-
-
-
-$$I = ΛΘ D\_9$$
+Utility is
 
 
 
-Λ decreases 10% → ×0.9
-
-D₉ increases 5% → ×1.05
-
-Net:
+$$
+U = X \ln(1 + τ_r).
+$$
 
 
 
-$$I' = 0.945I$$
+If $$τ_r$$ increases by 25%:
 
 
 
-✅ \*\*Inflation decreases by 5.5%\*\*
+$$
+τ_r' = 1.25 τ_r.
+$$
 
 
+
+Then
+
+
+
+$$
+U' = X \ln(1 + 1.25 τ_r).
+$$
+
+
+
+The ratio is
+
+
+
+$$
+\frac{U'}{U} = \frac{\ln(1 + 1.25 τ_r)}{\ln(1 + τ_r)}.
+$$
+
+
+
+**Answer:** Utility increases, but only logarithmically — less than 25% in most cases.
 
 ---
 
+## Solution to Problem 3 – Inflation drift
+
+Inflation drift is
 
 
+
+$$
+I = ΛΘ D_9.
+$$
+
+
+
+- $$Λ$$ decreases by 10% → becomes $$0.9Λ$$
+- $$D_9$$ increases by 5% → becomes $$1.05D_9$$
+
+Thus,
+
+
+
+$$
+I' = (0.9Λ)Θ(1.05D_9) = 0.945 I.
+$$
+
+
+
+**Answer:** Inflation decreases by **5.5%**.
