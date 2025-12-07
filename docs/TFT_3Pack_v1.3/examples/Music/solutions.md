@@ -1,70 +1,77 @@
-\## ✅ \*\*MUSIC — Solutions\*\*
+# Music core problem solutions
+
+## Solution to Problem 1 – Harmonic resonance energy
 
 
 
-\### \*\*1. Harmonic Resonance\*\*
+$$
+H = D_6 T_f^2.
+$$
 
 
 
-$$H = D\_6 T\_f^2$$
+If $$T_f$$ doubles:
 
 
 
-T\_f doubles → ×4
+$$
+T_f' = 2T_f,
+\quad
+H' = D_6 (2T_f)^2 = 4H.
+$$
 
 
 
-✅ \*\*H quadruples\*\*
-
-
-
----
-
-
-
-\### \*\*2. Tempo Drift\*\*
-
-
-
-$$ΔT = \\frac{F\_3}{ΛΘ}$$
-
-
-
-Λ +25% → ×1.25
-
-
-
-$$ΔT' = \\frac{ΔT}{1.25}$$
-
-
-
-✅ \*\*Tempo drift decreases by 20%\*\*
-
-
+**Answer:** Harmonic energy quadruples.
 
 ---
 
-
-
-\### \*\*3. Beat Synchronization\*\*
-
-
-
-$$t\_s = τᵣ D\_3$$
+## Solution to Problem 2 – Tempo drift
 
 
 
-τᵣ −15% → ×0.85
+$$
+ΔT = \frac{F_3}{ΛΘ}.
+$$
 
 
 
-✅ \*\*tₛ decreases by 15%\*\*
+If $$Λ$$ increases by 25%:
 
 
+
+$$
+Λ' = 1.25Λ,
+\quad
+ΔT' = \frac{F_3}{1.25ΛΘ} = \frac{ΔT}{1.25}.
+$$
+
+
+
+**Answer:** Tempo drift decreases by **20%**.
 
 ---
 
+## Solution to Problem 3 – Beat synchronization time
 
 
 
+$$
+t_s = τ_r D_3.
+$$
 
+
+
+If $$τ_r$$ decreases by 15%:
+
+
+
+$$
+τ_r' = 0.85τ_r,
+\quad
+t_s' = 0.85 t_s.
+$$
+
+
+
+**Answer:** Synchronization time decreases by **15%**.
