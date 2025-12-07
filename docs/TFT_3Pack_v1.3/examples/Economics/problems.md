@@ -1,24 +1,49 @@
-# ✅ **ECONOMICS (3 Problems)**
+# Economics core problems
 
-### **1. Market Resonance Cycles**
-A market oscillates with triadic frequency  
+## Problem 1 – Market resonance cycles
 
-$$ω = \frac{T_f}{D_3}$$
+A market oscillates with triadic frequency
 
-If D₃ increases due to regulatory friction, how must T_f change to keep ω constant?
 
-### **2. Utility Resonance**
-Utility is modeled as  
 
-$$U = X \ln(1 + τᵣ)$$
+$$
+ω = \frac{T_f}{D_3}.
+$$
 
-If τᵣ increases by 25%, how does U change?
 
-### **3. Inflation Drift**
-Inflation drift follows  
 
-$$I = ΛΘ D_9$$
-
-If Λ decreases by 10% but D₉ increases by 5%, what is the net effect on I?
+If $$D_3$$ increases due to regulatory friction, how must $$T_f$$ change to keep $$ω$$ constant?
 
 ---
+
+## Problem 2 – Utility resonance
+
+Utility under a resonance-based model is
+
+
+
+$$
+U = X \ln(1 + τ_r),
+$$
+
+
+
+where $$X = F_3 T_f$$.
+
+If $$τ_r$$ increases by 25%, how does $$U$$ change?
+
+---
+
+## Problem 3 – Inflation drift
+
+Inflation drift is modeled as
+
+
+
+$$
+I = ΛΘ D_9.
+$$
+
+
+
+If $$Λ$$ decreases by 10% but $$D_9$$ increases by 5%, what is the net effect on $$I$$?
