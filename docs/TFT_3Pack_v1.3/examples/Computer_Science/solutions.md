@@ -1,84 +1,130 @@
-\## ✅ \*\*COMPUTER SCIENCE — Solutions\*\*
+# Computer Science core problem solutions
+
+## Solution to Problem 1 – Resonant algorithm runtime
+
+The runtime is
 
 
 
-\### \*\*1. Resonant Algorithm Runtime\*\*
+$$
+T = D_6 τ_r \log(X).
+$$
 
 
 
-$$T = D\_6 τᵣ \\log(X)$$
+If $$τ_r$$ is halved:
 
 
 
-If τᵣ halves:
+$$
+τ_r' = \frac{τ_r}{2}.
+$$
 
 
 
-$$T' = \\frac{T}{2}$$
+Thus,
 
 
 
-✅ \*\*Runtime halves\*\*
+$$
+T' = D_6 \left(\frac{τ_r}{2}\right) \log(X) = \frac{T}{2}.
+$$
 
 
 
----
-
-
-
-\### \*\*2. Data Throughput\*\*
-
-
-
-$$R = F\_3 T\_f D\_3$$
-
-
-
-D₃ increases by 2 → +200%
-
-T\_f decreases by 10% → ×0.9
-
-Net:
-
-
-
-$$R' = 3R \\cdot 0.9 = 2.7R$$
-
-
-
-✅ \*\*Throughput increases by 170%\*\*
-
-
+**Answer:** The runtime is cut in half.
 
 ---
 
+## Solution to Problem 2 – Data throughput
 
-
-\### \*\*3. Error Correction\*\*
-
-
-
-$$p = e^{-ΛΘ τᵣ}$$
+Throughput is
 
 
 
-To reduce p by 50%:
+$$
+R = F_3 T_f D_3.
+$$
 
 
 
-$$e^{-ΛΘ τᵣ'} = 0.5 e^{-ΛΘ τᵣ}$$
+- $$D_3$$ increases by 2 → becomes $$3D_3$$.
+- $$T_f$$ decreases by 10% → becomes $$0.9T_f$$.
+
+Thus,
 
 
 
-$$τᵣ' = τᵣ + \\frac{\\ln 2}{ΛΘ}$$
+$$
+R' = F_3 (0.9T_f)(3D_3) = 2.7R.
+$$
 
 
 
-✅ \*\*Increase τᵣ by ln(2)/(ΛΘ)\*\*
-
-
+**Answer:** Throughput increases by a factor of **2.7** (a 170% increase).
 
 ---
 
+## Solution to Problem 3 – Error correction
+
+We have
 
 
+
+$$
+p = e^{-ΛΘ τ_r}.
+$$
+
+
+
+We want
+
+
+
+$$
+p' = 0.5p.
+$$
+
+
+
+Thus,
+
+
+
+$$
+e^{-ΛΘ τ_r'} = 0.5 e^{-ΛΘ τ_r}.
+$$
+
+
+
+Divide both sides by $$e^{-ΛΘ τ_r}$$:
+
+
+
+$$
+e^{-ΛΘ (τ_r' - τ_r)} = 0.5.
+$$
+
+
+
+Take logs:
+
+
+
+$$
+-ΛΘ (τ_r' - τ_r) = \ln(0.5) = -\ln 2.
+$$
+
+
+
+Thus,
+
+
+
+$$
+τ_r' - τ_r = \frac{\ln 2}{ΛΘ}.
+$$
+
+
+
+**Answer:** Increase $$τ_r$$ by $$\dfrac{\ln 2}{ΛΘ}$$.
