@@ -1,24 +1,47 @@
-# ✅ **ENGINEERING (3 Problems)**
+# Engineering core problems
 
-### **1. Structural Resonance**
-A beam’s resonant load is  
+## Problem 1 – Structural resonance load
 
-$$L = \frac{D_6}{τᵣ}$$
+A beam’s resonant load is modeled as
 
-If τᵣ doubles, what happens to L?
 
-### **2. Thermal Expansion**
-Expansion is  
 
-$$E = ΛΘ T_f$$
+$$
+L = \frac{D_6}{τ_r}.
+$$
 
-If Θ increases by 15% and T_f decreases by 5%, what is the net change in E?
 
-### **3. Fluid Flow**
-Flow rate is  
 
-$$Q = F_3 τᵣ^2$$
-
-If τᵣ increases by 10%, what is the percent increase in Q?
+If $$τ_r$$ doubles, what happens to the load $$L$$?
 
 ---
+
+## Problem 2 – Thermal expansion under resonance
+
+Thermal expansion of a material is modeled as
+
+
+
+$$
+E = ΛΘ T_f.
+$$
+
+
+
+If $$Θ$$ increases by 15% and $$T_f$$ decreases by 5%, what is the net percent change in $$E$$?
+
+---
+
+## Problem 3 – Fluid flow resonance
+
+A fluid flow rate under resonance is
+
+
+
+$$
+Q = F_3 τ_r^2.
+$$
+
+
+
+If $$τ_r$$ increases by 10%, what is the percent increase in $$Q$$?
