@@ -1,24 +1,47 @@
-# ✅ **MUSIC (3 Problems)**
+# Music core problems
 
-### **1. Harmonic Resonance**
-A chord’s harmonic energy is  
+## Problem 1 – Harmonic resonance energy
 
-$$H = D_6 T_f^2$$
+A chord’s harmonic energy is modeled as
 
-If T_f doubles, what happens to H?
 
-### **2. Tempo Drift**
-Tempo drift follows  
 
-$$ΔT = \frac{F_3}{ΛΘ}$$
+$$
+H = D_6 T_f^2.
+$$
 
-If Λ increases by 25%, how does ΔT change?
 
-### **3. Beat Synchronization**
-Synchronization time is  
 
-$$t_s = τᵣ D_3$$
-
-If τᵣ decreases by 15%, how does t_s change?
+If $$T_f$$ doubles, what happens to $$H$$?
 
 ---
+
+## Problem 2 – Tempo drift under resonance
+
+Tempo drift in a performance is modeled as
+
+
+
+$$
+ΔT = \frac{F_3}{ΛΘ}.
+$$
+
+
+
+If $$Λ$$ increases by 25%, how does $$ΔT$$ change?
+
+---
+
+## Problem 3 – Beat synchronization time
+
+Beat synchronization time between two performers is
+
+
+
+$$
+t_s = τ_r D_3.
+$$
+
+
+
+If $$τ_r$$ decreases by 15%, how does $$t_s$$ change?
