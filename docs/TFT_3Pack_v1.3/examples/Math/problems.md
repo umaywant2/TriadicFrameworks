@@ -1,24 +1,47 @@
-# ✅ **MATH (3 Problems)**
+# Math core problems
 
-### **1. Triadic Sequence**
-A sequence is defined by  
+## Problem 1 – Triadic sequence scaling
 
-$$a_n = D_3^n τᵣ$$
+A sequence is defined by
 
-If τᵣ triples, how does $$a_n$$ change?
 
-### **2. Resonant Integral**
-Evaluate  
 
-$$I = \int_0^{τᵣ} T_f D_6 \, dt$$
+$$
+a_n = D_3^n τ_r.
+$$
 
-What is I in terms of τᵣ?
 
-### **3. Exponential Resonance**
-Solve  
 
-$$X e^{ΛΘ t} = D_9$$
-
-for t.
+If $$τ_r$$ triples, how does $$a_n$$ change?
 
 ---
+
+## Problem 2 – Resonant integral
+
+Evaluate the integral
+
+
+
+$$
+I = \int_0^{τ_r} T_f D_6 \, dt.
+$$
+
+
+
+Express your answer in terms of $$τ_r$$.
+
+---
+
+## Problem 3 – Exponential resonance equation
+
+Solve the equation
+
+
+
+$$
+X e^{ΛΘ t} = D_9
+$$
+
+
+
+for $$t$$.
