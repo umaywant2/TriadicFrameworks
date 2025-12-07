@@ -1,25 +1,47 @@
-# ✅ **PHILOSOPHY (3 Problems)**
+# Philosophy core problems
 
-### **1. Conceptual Coherence**
-Coherence is  
+## Problem 1 – Conceptual coherence
 
-$$C = \frac{T_f}{τᵣ}$$
+A philosophical system’s conceptual coherence is modeled as
 
-If τᵣ increases, what happens to C?
 
-### **2. Ethical Weight**
-Ethical weight is  
 
-$$E = ΛΘ D_6$$
+$$
+C = \frac{T_f}{τ_r}.
+$$
 
-If Θ doubles, how does E change?
 
-### **3. Argument Strength**
-Argument strength is  
 
-$$S = X \sqrt{τᵣ}$$
-
-If τᵣ quadruples, what happens to S?
+If $$τ_r$$ increases, what happens to $$C$$?
 
 ---
 
+## Problem 2 – Ethical weight
+
+Ethical weight in a moral framework is modeled as
+
+
+
+$$
+E = ΛΘ D_6.
+$$
+
+
+
+If $$Θ$$ doubles, how does $$E$$ change?
+
+---
+
+## Problem 3 – Argument strength
+
+Argument strength is modeled as
+
+
+
+$$
+S = X \sqrt{τ_r}.
+$$
+
+
+
+If $$τ_r$$ quadruples, what happens to $$S$$?
