@@ -1,80 +1,84 @@
-\## ✅ \*\*ENGINEERING — Solutions\*\*
+# Engineering core problem solutions
+
+## Solution to Problem 1 – Structural resonance load
+
+The load is
 
 
 
-\### \*\*1. Structural Resonance\*\*
+$$
+L = \frac{D_6}{τ_r}.
+$$
 
 
 
-$$L = \\frac{D\_6}{τᵣ}$$
+If $$τ_r$$ doubles:
 
 
 
-If τᵣ doubles:
+$$
+τ_r' = 2τ_r,
+\quad
+L' = \frac{D_6}{2τ_r} = \frac{L}{2}.
+$$
 
 
 
-$$L' = \\frac{L}{2}$$
-
-
-
-✅ \*\*Load halves\*\*
-
-
-
----
-
-
-
-\### \*\*2. Thermal Expansion\*\*
-
-
-
-$$E = ΛΘ T\_f$$
-
-
-
-Θ +15% → ×1.15
-
-T\_f −5% → ×0.95
-
-Net:
-
-
-
-$$E' = 1.0925E$$
-
-
-
-✅ \*\*Expansion increases by 9.25%\*\*
-
-
+**Answer:** The load is cut in half.
 
 ---
 
+## Solution to Problem 2 – Thermal expansion
 
-
-\### \*\*3. Fluid Flow\*\*
-
-
-
-$$Q = F\_3 τᵣ^2$$
+We have
 
 
 
-τᵣ +10% → ×1.1
+$$
+E = ΛΘ T_f.
+$$
 
 
 
-$$Q' = 1.21Q$$
+- $$Θ$$ increases by 15% → becomes $$1.15Θ$$
+- $$T_f$$ decreases by 5% → becomes $$0.95T_f$$
+
+Thus,
 
 
 
-✅ \*\*Flow increases by 21%\*\*
+$$
+E' = Λ(1.15Θ)(0.95T_f) = 1.0925 E.
+$$
 
 
+
+**Answer:** Expansion increases by **9.25%**.
 
 ---
 
+## Solution to Problem 3 – Fluid flow resonance
+
+Flow rate is
 
 
+
+$$
+Q = F_3 τ_r^2.
+$$
+
+
+
+If $$τ_r$$ increases by 10%:
+
+
+
+$$
+τ_r' = 1.1τ_r,
+\quad
+Q' = F_3 (1.1τ_r)^2 = 1.21Q.
+$$
+
+
+
+**Answer:** Flow increases by **21%**.
