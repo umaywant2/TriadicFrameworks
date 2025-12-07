@@ -1,24 +1,47 @@
-# ✅ **MEDICINE (3 Problems)**
+# Medicine core problems
 
-### **1. Drug Resonance Half‑Life**
-Half‑life is  
+## Problem 1 – Drug resonance half-life
 
-$$t_{1/2} = \frac{\ln 2}{ΛΘ}$$
+A drug’s half-life is modeled as
 
-If Θ decreases by 10%, how does $$t_{1/2}$$ change?
 
-### **2. Heart Rhythm**
-Heart rhythm is modeled as  
 
-$$R = T_f D_3$$
+$$
+t_{1/2} = \frac{\ln 2}{ΛΘ}.
+$$
 
-If T_f increases by 8%, what is the percent change in R?
 
-### **3. Dose Response**
-Response is  
 
-$$S = \frac{X}{1 + e^{-τᵣ}}$$
-
-If τᵣ increases, how does S change qualitatively?
+If $$Θ$$ decreases by 10%, how does $$t_{1/2}$$ change?
 
 ---
+
+## Problem 2 – Heart rhythm resonance
+
+Heart rhythm is modeled as
+
+
+
+$$
+R = T_f D_3.
+$$
+
+
+
+If $$T_f$$ increases by 8%, what is the percent change in $$R$$?
+
+---
+
+## Problem 3 – Dose-response resonance
+
+A dose-response curve is modeled as
+
+
+
+$$
+S = \frac{X}{1 + e^{-τ_r}}.
+$$
+
+
+
+If $$τ_r$$ increases, how does the response $$S$$ change qualitatively?
