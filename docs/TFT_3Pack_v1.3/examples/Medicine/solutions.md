@@ -1,70 +1,71 @@
-\## ✅ \*\*MEDICINE — Solutions\*\*
+# Medicine core problem solutions
+
+## Solution to Problem 1 – Drug resonance half-life
 
 
 
-\### \*\*1. Drug Resonance Half‑Life\*\*
+$$
+t_{1/2} = \frac{\ln 2}{ΛΘ}.
+$$
 
 
 
-$$t\_{1/2} = \\frac{\\ln 2}{ΛΘ}$$
+If $$Θ$$ decreases by 10%:
 
 
 
-Θ −10% → ×0.9
+$$
+Θ' = 0.9Θ,
+\quad
+t_{1/2}' = \frac{\ln 2}{Λ(0.9Θ)} = \frac{t_{1/2}}{0.9}.
+$$
 
 
 
-$$t\_{1/2}' = \\frac{t\_{1/2}}{0.9}$$
-
-
-
-✅ \*\*Half‑life increases by ~11.1%\*\*
-
-
-
----
-
-
-
-\### \*\*2. Heart Rhythm\*\*
-
-
-
-$$R = T\_f D\_3$$
-
-
-
-T\_f +8% → ×1.08
-
-
-
-✅ \*\*R increases by 8%\*\*
-
-
+**Answer:** Half-life increases by **11.1%**.
 
 ---
 
-
-
-\### \*\*3. Dose Response\*\*
-
-
-
-$$S = \\frac{X}{1 + e^{-τᵣ}}$$
+## Solution to Problem 2 – Heart rhythm resonance
 
 
 
-As τᵣ increases, denominator decreases → S increases.
+$$
+R = T_f D_3.
+$$
 
 
 
-✅ \*\*S increases monotonically\*\*
+If $$T_f$$ increases by 8%:
 
 
+
+$$
+T_f' = 1.08 T_f,
+\quad
+R' = 1.08 R.
+$$
+
+
+
+**Answer:** Heart rhythm increases by **8%**.
 
 ---
 
+## Solution to Problem 3 – Dose-response resonance
 
 
 
+$$
+S = \frac{X}{1 + e^{-τ_r}}.
+$$
 
+
+
+As $$τ_r$$ increases:
+
+- $$e^{-τ_r}$$ decreases,
+- denominator decreases,
+- $$S$$ increases.
+
+**Answer:** Response increases monotonically with $$τ_r$$.
