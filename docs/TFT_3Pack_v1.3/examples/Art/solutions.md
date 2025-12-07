@@ -1,96 +1,91 @@
-\## ✅ \*\*ART — Solutions\*\*
+# Art core problem solutions
+
+## Solution to Problem 1 – Resonant color mixing
+
+We are given
 
 
 
-\### \*\*1. Resonant Color Mixing\*\*
+$$C = X(f_1 + f_2 + f_3), \quad X = F_3 \cdot T_f.$$
 
 
 
-$$C = X(f\_1 + f\_2 + f\_3)$$
+Saturation is proportional to $$C$$. To double saturation, we need to double $$C$$. Assuming the effective composite is being modulated through resonant-time $$τ_r$$ (via how $$X$$ is realized in time), we require
 
 
 
-Saturation ∝ C.  
-
-To double saturation, double C.  
-
-Since C depends linearly on τᵣ through X = F₃T\_f, doubling C requires doubling τᵣ.
+$$C' = 2C.$$
 
 
+Because $$C$$ scales linearly with the effective factor controlled by $$τ_r$$, doubling $$C$$ corresponds to scaling $$τ_r$$ by a factor of 2.
 
-✅ \*\*Scale τᵣ by 2\*\*
-
-
-
----
-
-
-
-\### \*\*2. Sculpture Stress Harmonics\*\*
-
-
-
-$$S = D\_6(τᵣ) \\cdot ΛΘ$$
-
-
-
-If Θ → 1.2Θ, then  
-
-
-
-$$S' = 1.2 S$$
-
-
-
-✅ \*\*Stress increases by 20%\*\*
-
-
+**Answer:** $$τ_r$$ must be doubled.
 
 ---
 
+## Solution to Problem 2 – Sculpture stress harmonics
 
-
-\### \*\*3. Light Installation Timing\*\*
-
-Brightness peaks when  
-
-
-
-$$T\_f t = 2πn$$
+The sculpture’s stress pattern is
 
 
 
-We want peaks every 4 seconds:  
+$$S = D_6(τ_r) \cdot ΛΘ.$$
+
+
+If $$Θ$$ is increased by 20%, the new value is
 
 
 
-$$T\_f = \\frac{2π}{4} = \\frac{π}{2}$$
+$$Θ' = 1.2Θ.$$
 
 
 
-Resonant‑time modifies effective frequency:  
+The new stress is
 
 
 
-$$T\_f' = \\frac{T\_f}{τᵣ}$$
+$$S' = D_6(τ_r) \cdot ΛΘ' = D_6(τ_r) \cdot Λ \cdot 1.2Θ = 1.2S.$$
 
 
-
-Solve for τᵣ:  
-
-
-
-$$τᵣ = \\frac{T\_f}{π/2}$$
-
-
-
-✅ \*\*τᵣ = 2T\_f / π\*\*
-
-
+**Answer:** The harmonic stress $$S$$ increases by 20%.
 
 ---
 
+## Solution to Problem 3 – Light installation timing
+
+Brightness is
 
 
 
+$$B(t) = F_3 \sin(T_f t),$$
 
+
+but the artist controls the effective elevated frequency via resonant-time:
+
+
+
+$$T_f' = \frac{T_f}{τ_r}.$$
+
+
+For a sinusoid, the period is
+
+
+
+$$T_{\text{period}} = \frac{2\pi}{T_f'}.$$
+
+
+The artist wants $$T_{\text{period}} = 4$$. Thus,
+
+
+
+$$4 = \frac{2\pi}{T_f'} = \frac{2\pi}{T_f / τ_r} = \frac{2\pi τ_r}{T_f}.$$
+
+
+Solving for $$τ_r$$:
+
+
+
+$$τ_r = \frac{4T_f}{2\pi} = \frac{2T_f}{\pi}.$$
+
+
+**Answer:** $$τ_r = \dfrac{2T_f}{\pi}$$.
