@@ -8,10 +8,10 @@ This folder contains example `.fff` bundles, symbolic stubs, and shell scripts t
 
 | File                          | Purpose                                                                 | Base Lens Support         |
 |------------------------------|-------------------------------------------------------------------------|---------------------------|
-| `example_reflection_inversion.fff` | Canonical triadic bundle for testing direct, reflective, and inversion modules | `phi`, `negabinary`, `corridor6.9` |
-| `encryption.sh`              | Symbolic stub for encryption logic and legacy trigger scaffolding       | `decimal`, `hex`          |
-| `grid_ops.sh`                | Grid logic operations, used in validator scaffolding and remix lineage  | `binary`, `negabinary`    |
-| `logic_core.sh`              | Core logic stub, echoes badge logic and flame hook triggers             | `triadic3phi`, `phi`      |
+| `formats/example_reflection_inversion.fff` | Canonical triadic bundle for testing direct, reflective, and inversion modules | `phi`, `negabinary`, `corridor6.9` |
+| `scripts/encryption.sh`              | Symbolic stub for encryption logic and legacy trigger scaffolding       | `decimal`, `hex`          |
+| `scripts/grid_ops.sh`                | Grid logic operations, used in validator scaffolding and remix lineage  | `binary`, `negabinary`    |
+| `scripts/logic_core.sh`              | Core logic stub, echoes badge logic and flame hook triggers             | `triadic3phi`, `phi`      |
 
 ---
 

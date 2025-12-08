@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Biology • TFT_3Pack Examples</title>
+
+<style>
+    body {
+        background: #0d0d0d;
+        color: #e0e0e0;
+        font-family: "Segoe UI", Roboto, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+        color: #ffffff;
+        margin-top: 40px;
+        text-align: center;
+        letter-spacing: 1px;
+    }
+
+    h1 { font-size: 2.4rem; }
+    h2 { font-size: 1.8rem; margin-bottom: 10px; }
+    h3 { font-size: 1.4rem; margin-top: 30px; }
+
+    .section {
+        width: 90%;
+        max-width: 1100px;
+        margin: 40px auto;
+        padding: 30px;
+        background: #1a1a1a;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    }
+
+    .emoji-title {
+        font-size: 2.4rem;
+        display: block;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .subsection {
+        margin-top: 30px;
+        padding: 20px;
+        background: #222;
+        border-radius: 10px;
+        border: 1px solid #333;
+    }
+
+    code, pre {
+        background: #111;
+        padding: 10px;
+        border-radius: 8px;
+        display: block;
+        overflow-x: auto;
+        color: #9cd3ff;
+    }
+
+    a {
+        color: #76c7ff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: #c0e8ff;
+    }
+
+    hr {
+        border: 0;
+        border-top: 1px solid #333;
+        margin: 40px 0;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>🧬 Biology — TFT_3Pack Example Suite</h1>
+<h2>TriadicFrameworks • Nawderian Theorem • Resonant-Time</h2>
+
+<!-- ============================= -->
+<!-- README CONTENT -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">📘</span>
+    <h2>About This Example Set</h2>
+
+    <p>
+        These examples show how the Nawderian theorem and the TriadicFrameworks stack apply to biological systems:
+        cell growth, protein folding, neural oscillations, and population dynamics.
+    </p>
+
+    <p>This page contains the full content of:</p>
+
+    <ul>
+        <li><strong>README.md</strong></li>
+        <li><strong>problems.md</strong></li>
+        <li><strong>solutions.md</strong></li>
+        <li><strong>extended_problems.md</strong></li>
+        <li><strong>resonance_flow.md</strong></li>
+    </ul>
+
+    <p>Core TriadicFrameworks mathematical objects used:</p>
+
+    <ul>
+        <li><strong>Resonant-time:</strong> \( τ_r \)</li>
+        <li><strong>Triadic operators:</strong> \( D_3, D_6, D_9 \)</li>
+        <li><strong>Frequency elevation:</strong> \( T_f \)</li>
+        <li><strong>Emitter constant:</strong> \( F_3 \)</li>
+        <li><strong>Temperature coupling:</strong> \( ΛΘ \)</li>
+        <li><strong>Composite constant:</strong> \( X = F_3 \cdot T_f \)</li>
+    </ul>
+</div>
+
+<!-- ============================= -->
+<!-- PROBLEMS -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">🧩</span>
+    <h2>Core Problems</h2>
+
+    <div class="subsection">
+        <h3>Problem 1 — Resonant Cell Growth</h3>
+        <pre>G(t) = G₀ e^{D₃ τ_r t}</pre>
+        <p>
+            If \( τ_r \) increases by 10%, how does the growth factor change at fixed time \( t \)?
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 2 — Protein Folding Stability</h3>
+        <pre>P = ΛΘ / D₉</pre>
+        <p>
+            If \( D₉ \) increases, how must \( Θ \) change to keep \( P \) constant?
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 3 — Neural Oscillation Coupling</h3>
+        <pre>fₙ = T_f D₆</pre>
+        <p>
+            If \( fₙ \) must increase by 15%, how must \( T_f \) change?
+        </p>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- SOLUTIONS -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">✅</span>
+    <h2>Solutions</h2>
+
+    <div class="subsection">
+        <h3>Solution 1 — Cell Growth</h3>
+        <p>
+            Growth factor multiplies by \( e^{0.1 D₃ τ_r t} \).
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Solution 2 — Protein Stability</h3>
+        <p>
+            \( Θ' = Θ \cdot (D₉' / D₉) \).
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Solution 3 — Neural Frequency</h3>
+        <p>
+            \( T_f' = 1.15 T_f \).
+        </p>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- EXTENDED PROBLEMS -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">🧠</span>
+    <h2>Extended Problems</h2>
+
+    <div class="subsection">
+        <h3>Problem 4 — Species Competition</h3>
+        <pre>
+A(t) = A₀ e^{D₃ τ_r t}
+B(t) = B₀ e^{D₆ τ_r t}
+        </pre>
+        <p>Find the crossover time \( t^* \) and describe how it shifts with τ_r.</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 5 — Enzyme Activity</h3>
+        <pre>E_act = X e^{-1/(ΛΘ)}</pre>
+        <p>How does doubling Λ affect the exponent and activity?</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 6 — Circadian Rhythm</h3>
+        <pre>ω_eff = T_f / τ_r</pre>
+        <p>Find T_f needed for a 24-hour cycle.</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 7 — Logistic Growth Midpoint</h3>
+        <pre>N(t) = K / (1 + e^{-D₃(t - τ_r)})</pre>
+        <p>Evaluate N(τ_r) and describe how τ_r shifts the midpoint.</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 8 — Signal Cascade</h3>
+        <pre>
+S₁ = F₃
+S₂ = D₃(τ_r) S₁
+S₃ = T_f S₂
+        </pre>
+        <p>Analyze how changes in τ_r and T_f affect S_out.</p>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- RESONANCE FLOW -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">🔄</span>
+    <h2>Resonance Flow Diagrams</h2>
+
+    <div class="subsection">
+        <h3>Diagram 1 — Cell Growth Pipeline</h3>
+        <pre>
+G₀ → × e^{D₃ τ_r t} → G(t)
+        </pre>
+    </div>
+
+    <div class="subsection">
+        <h3>Diagram 2 — Protein Stability Loop</h3>
+        <pre>
+Λ + Θ → ΛΘ → ÷D₉ → P
+        </pre>
+    </div>
+
+    <div class="subsection">
+        <h3>Diagram 3 — Neural Oscillation</h3>
+        <pre>
+T_f × D₆ → fₙ
+        </pre>
+    </div>
+</div>
+
+</body>
+</html>
