@@ -111,4 +111,146 @@
         <li><strong>Triadic operators:</strong> \( D_3, D_6, D_9 \)</li>
         <li><strong>Frequency elevation:</strong> \( T_f \)</li>
         <li><strong>Emitter constant:</strong> \( F_3 \)</li>
-        <li><strong>Temperature coupling:</strong> \( ΛΘ
+        <li><strong>Temperature coupling:</strong> \( ΛΘ \)</li>
+        <li><strong>Composite constant:</strong> \( X = F_3 \cdot T_f \)</li>
+    </ul>
+</div>
+
+<!-- ============================= -->
+<!-- PROBLEMS -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">🧩</span>
+    <h2>Core Problems</h2>
+
+    <div class="subsection">
+        <h3>Problem 1 — Triadic Sequence Scaling</h3>
+        <pre>aₙ = D₃ⁿ τ_r</pre>
+        <p>
+            If \( τ_r \) triples, how does \( aₙ \) change?
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 2 — Resonant Integral</h3>
+        <pre>I = ∫₀^{τ_r} T_f D₆ dt</pre>
+        <p>
+            Evaluate the integral in terms of \( τ_r \).
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 3 — Exponential Resonance Equation</h3>
+        <pre>X e^{ΛΘ t} = D₉</pre>
+        <p>
+            Solve for \( t \).
+        </p>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- SOLUTIONS -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">✅</span>
+    <h2>Solutions</h2>
+
+    <div class="subsection">
+        <h3>Solution 1 — Sequence Scaling</h3>
+        <p>
+            Tripling \( τ_r \) triples every term:  
+            \( aₙ' = 3aₙ \).
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Solution 2 — Integral</h3>
+        <p>
+            \( I = T_f D₆ τ_r \).
+        </p>
+    </div>
+
+    <div class="subsection">
+        <h3>Solution 3 — Exponential Equation</h3>
+        <p>
+            \( t = \frac{1}{ΛΘ} \ln\left(\frac{D₉}{X}\right) \).
+        </p>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- EXTENDED PROBLEMS -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">🧠</span>
+    <h2>Extended Problems</h2>
+
+    <div class="subsection">
+        <h3>Problem 4 — Multi-Triad Polynomial</h3>
+        <pre>P(x) = D₃ x² + D₆ τ_r x + X</pre>
+        <p>Compute P(τ_r) and describe how the linear term changes if τ_r doubles.</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 5 — Resonant Differential Equation</h3>
+        <pre>dy/dt = D₆ T_f y</pre>
+        <p>Solve with y(0) = y₀.</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 6 — Triadic Transform</h3>
+        <pre>𝒯{s}(ω) = ∫₀^∞ e^{-D₃ t} e^{-i ω τ_r t} dt</pre>
+        <p>Combine exponentials and evaluate the integral.</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 7 — Resonant Fixed Point</h3>
+        <pre>f(x) = X √x - D₉</pre>
+        <p>Solve f(x) = x.</p>
+    </div>
+
+    <div class="subsection">
+        <h3>Problem 8 — Triadic Matrix Resonance</h3>
+        <pre>
+M = [ D₃   τ_r ]
+    [  0    D₆ ]
+        </pre>
+        <p>Compute det(M) and eigenvalues.</p>
+    </div>
+</div>
+
+<!-- ============================= -->
+<!-- RESONANCE FLOW -->
+<!-- ============================= -->
+
+<div class="section">
+    <span class="emoji-title">🔄</span>
+    <h2>Resonance Flow Diagrams</h2>
+
+    <div class="subsection">
+        <h3>Diagram 1 — Triadic Sequence</h3>
+        <pre>
+D₃ → power n → × τ_r → aₙ
+        </pre>
+    </div>
+
+    <div class="subsection">
+        <h3>Diagram 2 — Resonant Integral</h3>
+        <pre>
+T_f D₆ → integrate 0→τ_r → I
+        </pre>
+    </div>
+
+    <div class="subsection">
+        <h3>Diagram 3 — Exponential Resonance</h3>
+        <pre>
+X × e^{ΛΘ t} = D₉ → solve for t
+        </pre>
+    </div>
+</div>
+
+</body>
+</html>
