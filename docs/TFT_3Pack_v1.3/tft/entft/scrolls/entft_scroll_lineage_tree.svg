@@ -4,7 +4,7 @@
   <rect width="100%" height="100%" fill="#fefefe"/>
 
   <!-- Title -->
-  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">TFTincryption Scroll Lineage Tree</text>
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">entft Scroll Lineage Tree</text>
 
   <!-- Root Node -->
   <circle cx="450" cy="100" r="40" fill="#ccf5ff" stroke="#333" stroke-width="2"/>
