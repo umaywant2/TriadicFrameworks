@@ -18,7 +18,7 @@
 
 - **Symbolic Fidelity**: Unique glyphstream overlays
 - **Validator Logic**: Remix lineage + badge governance
-- **Benchmark Paper**: MightyTHOR vs THOR
+- **Benchmark Paper**: tops vs THOR
 - **Public Campaign**: Emotional onboarding + legacy echo
 - **Adaptive Intelligence**: Dynamic sort selection + agent orchestration
 
