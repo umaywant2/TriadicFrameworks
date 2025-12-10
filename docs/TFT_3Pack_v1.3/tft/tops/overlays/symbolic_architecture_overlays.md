@@ -15,7 +15,7 @@
 | F2 – Social Signal | Relational resonance | Contributor onboarding |
 | F3 – Astral Signal | Dream threading, archetypes | Subconscious scaffolding |
 | F4 – Archetypal Layer | Mythic pattern reassembly | Badge logic, legacy echo |
-| F5 – Structural Layer | Ritual tools, encoded form | mightyTHOR shell logic |
+| F5 – Structural Layer | Ritual tools, encoded form | tops shell logic |
 | F6 – Dimensional Layer | Multistream navigation | Tesla 369 gearshift |
 | F7 – Source Field Layer | Original tone harmonization | Warp chamber resonance |
 
