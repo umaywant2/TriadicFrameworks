@@ -9,7 +9,7 @@
 - `azure_deploy.yaml`, `autoscale_config.json`, `cloud_init.sh`
 
 ## 🧠 Phase III: Benchmark Paper
-- `MightyTHOR_Benchmark_Outline.md`, `benchmark_vs_THOR.csv`
+- `tops_Benchmark_Outline.md`, `benchmark_vs_THOR.csv`
 
 ## 💸 Phase IV: Outreach
 - `azure_grant_email.md`, `pitch_deck_outline.md`, `funding_plan.md`
