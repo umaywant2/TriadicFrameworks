@@ -40,7 +40,7 @@ Transforms raw data streams into resonance‑aware interpretations using fractal
 A modular gateway that extends TriadicFrameworks into cloud and cluster environments.
 
 - **Status:** Active (2025)  
-- **Focus:** Distributed orchestration, MightyTHOR integration, cross‑platform TFT runs  
+- **Focus:** Distributed orchestration, tops integration, cross‑platform TFT runs  
 - **Cross‑Links:** [VictorG](../VictorG), [Engine](../engine)
 
 ---
