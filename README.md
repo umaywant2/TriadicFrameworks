@@ -57,7 +57,7 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 
 | Archetype | Inherits | Corridor | Wrap |
 |-----------|----------|----------|------|
-| Quantum   | 1D, 2D   | 6D       | —    |
+| Quantum   | 1D, 2D   | 1D       | 0D, 2D |
 | Frequency | 1D, 2D   | 6D       | 3D, 9D |
 | Fluids    | 1D, 2D   | 6D       | 4D, 5D |
 | Forces    | 1D, 2D   | 6D       | 7D, 8D |
