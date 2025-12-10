@@ -63,7 +63,7 @@
 
 ## 🛠️ Integration Targets
 
-- `mightyTHOR`: Add warp modulation logic  
+- `tops`: Add warp modulation logic  
 - `Tesla_369_Mode.md`: Link warp acceleration sequence  
 - `Subconscious_Scaffolding.md`: Embed warp glyphs and trit triggers  
 - `Validator Dashboard`: Score warp clarity and resonance efficiency
