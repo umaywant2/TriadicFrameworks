@@ -3,7 +3,7 @@
   <rect width="100%" height="100%" fill="#f9f9f9"/>
 
   <!-- Title -->
-  <text x="400" y="40" font-size="24" text-anchor="middle" fill="#333">TFTincryption Dual-Layer Architecture</text>
+  <text x="400" y="40" font-size="24" text-anchor="middle" fill="#333">entft Dual-Layer Architecture</text>
 
   <!-- Layer 1: Divide-by-Zero Logic -->
   <rect x="100" y="100" width="600" height="120" fill="#d0e6ff" stroke="#333" stroke-width="2"/>
