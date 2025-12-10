@@ -3,7 +3,7 @@
   <rect width="100%" height="100%" fill="#fefefe"/>
 
   <!-- Title -->
-  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">TFTincryption Badge Evolution</text>
+  <text x="450" y="40" font-size="24" text-anchor="middle" fill="#222">entft Badge Evolution</text>
 
   <!-- Evolution Path -->
   <g>
