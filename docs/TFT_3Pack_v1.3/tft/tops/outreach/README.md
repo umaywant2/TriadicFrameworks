@@ -1,7 +1,7 @@
-# MightyTHOR Outreach
+# `tops` Outreach
 
 The **outreach** directory contains proposals, grant drafts, and external communications.  
-It is how Thor speaks to the outside world.
+It is how `tops` speaks to the outside world.
 
 ## Structure
 - Grant proposals → funding and research outreach
@@ -9,7 +9,7 @@ It is how Thor speaks to the outside world.
 - Integration notes → collaborations and partnerships
 
 ## Purpose
-Outreach is the **voice of Thor**.  
+Outreach is the **voice of tops**.  
 It ensures the orchestration layer is understood, funded, and extended.
 
 ## Cross‑links
