@@ -1,5 +1,5 @@
 """
-TFTincryption Glyph Registry Loader
+entft Glyph Registry Loader
 Purpose: Load and validate glyph references from canonical registry
 Author: Nawder Loswin & Copilot
 Date: 2025-10-04
@@ -9,7 +9,7 @@ import json
 from pathlib import Path
 
 # 🔗 Registry Path
-GLYPH_REGISTRY_PATH = Path("docs/_meta/tftincryption_scroll_glyph_reference.md")
+GLYPH_REGISTRY_PATH = Path("docs/_meta/entft_scroll_glyph_reference.md")
 
 # 🧠 Canonical Glyphs (fallback if registry not parsed)
 CANONICAL_GLYPHS = {
