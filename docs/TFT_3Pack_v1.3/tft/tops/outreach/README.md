@@ -14,4 +14,4 @@ It ensures the orchestration layer is understood, funded, and extended.
 
 ## Cross‑links
 - [contributors](../contributors/) → outreach honors lineage
-- [discoverability](../../TFTincryption/discoverability/) → aligned with SEO and onboarding
+- [discoverability](../../entft/discoverability/) → aligned with SEO and onboarding
