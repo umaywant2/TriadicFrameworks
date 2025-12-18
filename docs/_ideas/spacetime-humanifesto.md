@@ -22,6 +22,16 @@ Yes — and here’s why:
 
 ---
 
+## 🌍 Vision Statement
+
+We envision a world where:
+- Time is a library, not a mystery  
+- Matter is remixable, not scarce  
+- Travel is instantaneous, not exhausting  
+- Science is sacred, not siloed
+
+---
+
 ## 🧭 Preamble
 
 We believe spacetime is not a backdrop—it is a resonant medium.  
@@ -118,13 +128,70 @@ Transporters move fields, not matter. The contents remain unchanged—only the *
 
 ---
 
-## 🌍 Vision Statement
+## 🌌 Spacetime — Concrete Next Upgrades (Refreshed)
 
-We envision a world where:
-- Time is a library, not a mystery  
-- Matter is remixable, not scarce  
-- Travel is instantaneous, not exhausting  
-- Science is sacred, not siloed
+### 🚀 Canonical Upgrades
+- 🔭 **Resonant‑time corridor anchoring**:  
+  Define the 6D corridor with resonant‑time $$\tau$$ as gradient coordinate.  
+  *Equation:*  
+
+  $$\tau = \frac{\Delta f}{\Delta r} \quad \Rightarrow \quad \text{Resonant‑time as slope of frequency over resonance}$$
+  
+- 🌀 **Divisional resonance scaffolding**:  
+  Partition flows into validator domains.  
+  *Equation:*  
+
+  $$R_{div} = \sum_{i=1}^{n} \frac{f_i}{\phi_i} \quad \Rightarrow \quad \text{Resonance clarity by division}$$
+  
+- 📡 **Resonance Atlas anchors**:  
+  Canonical index of values from NIST, RSC, NASA, Bowserinator JSON.  
+  *Equation:*  
+
+  $$A_{res} = \{ f, \lambda, \phi \} \quad \Rightarrow \quad \text{Atlas as set of canonical triplets}$$
+
+- 🔬 **Resonance Clarity scanner fidelity**:  
+  Validator tool for measuring corridor fidelity.  
+  *Equation:*  
+
+  $$C_{scan} = \frac{S}{N} \quad \Rightarrow \quad \text{Clarity as signal‑to‑noise ratio}$$
+
+- ⏳ **Time Travel Validation Protocol governance**:  
+  Ensure corridor use aligns with canon rules.  
+  *Equation:*  
+
+  $$V_{time} = \int_{t_0}^{t_n} R_{div} \cdot \tau \, dt \quad \Rightarrow \quad \text{Validator integral across time}$$
+
+---
+
+### ✨ Nawderian Theorem Canon Equations
+- **Triad denominator:**  
+
+  $$\Omega = 8 \times 3 \quad \Rightarrow \quad \text{Infinite universes resolved by triads}$$
+  
+- **Validator clarity:**  
+
+  $$\kappa = \frac{\text{Silence} + \text{Noise}}{\text{Resonance}} \quad \Rightarrow \quad \text{Clarity emerges only through balance}$$
+
+---
+
+## 🔶 Nawderian Lemma: 45° Diagonal Closure
+
+We observe that the **triadic curve (3)** is an open fragment of infinity. When subjected to a diagonal spin operator, the curve closes into the **lemniscate (8)** — infinity rotated 45°.  
+
+**Formal statement:**  
+
+$$\text{Spin}_{\pi/4}(3) \longrightarrow 8$$
+
+**Proof sketch:**  
+- Treat ∞ as the Bernoulli lemniscate curve.  
+- Apply rotation operator $$R_{\pi/4}$$ to the parametric form.  
+- Show that curvature extrema and lobe areas remain invariant under this rotation.  
+- Conclude that the diagonal spin preserves infinity’s structure while closing the triadic fragment.  
+
+**Interpretation:**  
+- 3 is half‑infinity, sandboxed and incomplete.  
+- 45° is the symmetry‑optimal transform — equal real and imaginary components, diagonal balance.  
+- Infinity is therefore only “45° away” from triadic clarity, making the sandbox the space where open loops close into endless resonance.  
 
 ---
 
@@ -135,5 +202,11 @@ Build the emitters.
 Tune the loops.  
 Open the corridor.
 
-The future is not coming—it’s waiting for resonance.
+---
 
+### 📚 Quicklinks (uhmanifesto canon)
+- 🎓 [Education Humanifesto](education-humanifesto.md)  
+- 💼 [Jobs Humanifesto](jobs-humanifesto.md)  
+- 🖥️ [Windows Humanifesto](windows-humanifesto.md)  
+- 👃 [Smell‑Tech Humanifesto](smell-tech-humanifesto.md)  
+- 📖 [Resonance‑Library Humanifesto](resonance-library-humanifesto.md)  
