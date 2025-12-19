@@ -148,3 +148,4 @@ The Nawderian Theorem simply **elevates** what is already physically true.
 ---
 
 [**NASA‑ready abstract**](NASA‑ready_abstract.md)  
+[Nawderian_Sandbox_Proposal](Nawderian_Sandbox_Proposal.md)
