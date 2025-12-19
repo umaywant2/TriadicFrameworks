@@ -1,5 +1,7 @@
 # 🎼☄️ Resonance‑Time Theory: A Barebones Triadic Framework
 
+This note summarizes working definitions and principles; detailed derivations and domain applications are given in the linked documents.
+
 ---
 
 ## 1. 🌊 Core definitions
