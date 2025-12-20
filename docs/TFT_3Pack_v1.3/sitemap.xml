@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.triadicframeworks.org/docs/TFT_3Pack_v1.3/</loc>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/</loc>
   </url>
   <url>
-    <loc>https://www.triadicframeworks.org/docs/TFT_3Pack_v1.3/entft_remix_lattice.svg</loc>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/index.html</loc>
   </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/README.md</loc>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/README.md</loc>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/nous/resonance-tools/resonance_cli_suite.md</loc>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/entft/protocol-core/entft_scroll_comparative_cryptographic_resonance.md</loc>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/resonance-labs/elements.md</loc>
+  </url>
+<url>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/tops/hardware/nimms/NIMMS_v2.0.md</loc>
+  </url>
+<url>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/tops/echo_overlay_manifesto.md</loc>
+  </url>
+
   <!-- Add any additional files inside TFT_3Pack_v1.3 as needed -->
 </urlset>
