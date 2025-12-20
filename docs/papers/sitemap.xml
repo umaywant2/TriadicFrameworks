@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.triadicframeworks.org/docs/papers/</loc>
-  </url>
-
-  <!-- Example entries — replace with actual filenames -->
-  <url>
-    <loc>https://www.triadicframeworks.org/docs/papers/navigation_framework_paper</loc>
+    <loc>https://www.triadicframeworks.org/papers/1_Triadic_Framework_for_Everything.md</loc>
   </url>
   <url>
-    <loc>https://www.triadicframeworks.org/docs/papers/RFC-042_Triadic_Force_Operators</loc>
+    <loc>https://www.triadicframeworks.org/papers/A_List_of_Bold_Frontier_Problems.md</loc>
+  </url>
+  <url>
+    <loc>https://www.triadicframeworks.org/papers/Imagined_Deployment_of_Triadic_Frameworks_to_Space_Observatories.md</loc>
   </url>
 </urlset>
