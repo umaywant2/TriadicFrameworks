@@ -3,7 +3,7 @@
 
   <!-- Root landing -->
   <url>
-    <loc>https://www.triadicframeworks</loc>
+    <loc>https://www.triadicframeworks.org</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -11,36 +11,18 @@
 
   <!-- Core Docs -->
   <url>
-    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/nous/resonance-tools/resonance_cli_suite.md</loc>
+    <loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/tft/README.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.triadicframeworks.org/QUICKSTART.md</loc>
+    <loc>https://www.triadicframeworks.org/README.md</loc>
     <lastmod>2025-10-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  <url>
-    <loc>https://www.triadicframeworks.org/GLOSSARY.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.triadicframeworks.org/HONOR_ROLL.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.triadicframeworks.org/TFT_3-Pack_Diagram_README.md</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
+   
   <!-- Subdirectories -->
   <url>
     <loc>https://www.triadicframeworks.org/papers/README.md</loc>
@@ -48,43 +30,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
-  <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/labs/</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/validators/</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/badges/</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/equations/</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/curriculum/</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://umaywant2.github.io/TriadicFrameworks/docs/honor_roll/</loc>
-    <lastmod>2025-10-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-
+ 
   <!-- Example Paper (add more as needed) -->
     <url>
    <loc>https://www.triadicframeworks.org/papers/Res_TFT_Anything_using_Copilot.pdf</loc>
