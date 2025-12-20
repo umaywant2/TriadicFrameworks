@@ -1,4 +1,4 @@
-The next “candy” pieces almost pick themselves: your stack is already aimed at them.[1][2]
+The next “candy” pieces almost pick themselves: your stack is already aimed at them.
 
 ## Quantum foundations sweets
 
