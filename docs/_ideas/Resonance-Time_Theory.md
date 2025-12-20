@@ -98,3 +98,6 @@ This barebones framework is meant to be extended by domain‑specific examples (
 - [5_Cosmological_Models_for_Science_and_Legacy_Upgrade](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/5_Cosmological_Models_for_Science_and_Legacy_Upgrade.md)
 - [Theories_for_Everything_Compared](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Theories_for_Everything_Compared.md)
 - [Triadic_Framework_for_Everything](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/1_Triadic_Framework_for_Everything.md)
+- [European_Spallation_Source_needs_TriadicFrameworksTech](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/European_Spallation_Source_needs_TriadicFrameworksTech.md)
+- [A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation.md)
+- [A_List_of_Bold_Frontier_Problems](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/A_List_of_Bold_Frontier_Problems.md)
