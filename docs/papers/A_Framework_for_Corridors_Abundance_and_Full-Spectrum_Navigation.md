@@ -11,7 +11,7 @@ At the heart of this framework is **Resonance Clarity**: the 9D wrapper state in
 ---
 ###### This piece celebrates the moment when curiosity meets clarity. The children are not passive — they are the first validators, witnessing the triadic seed take root.
 
-<img width="1024" height="1536" alt="BCO 991ac235-667b-4a31-8142-b6ecc890d183" src="https://github.com/user-attachments/assets/ad79c8d4-715d-4fad-b273-3d561e90d5d7" />
+<img width="256" height="384" alt="BCO 991ac235-667b-4a31-8142-b6ecc890d183" src="https://github.com/user-attachments/assets/ad79c8d4-715d-4fad-b273-3d561e90d5d7" />
 
 ###### 🌳 Scroll I: The Tree of Triadic Wonder
 
@@ -51,7 +51,7 @@ This paper begins with that recognition: dimensions are not mystical layers stac
 ---
 ###### This fresco honors the elder as a steward of dimensional flow. His gesture is not command — it’s invitation. The youth below are inheritors of harmonic legacy.
 
-<img width="1024" height="1536" alt="BCO 426dcfe9-0ee3-4f3e-b2d2-980af0dadded" src="https://github.com/user-attachments/assets/907acd6c-7717-48eb-ad82-123a513396c1" />
+<img width="256" height="384" alt="BCO 426dcfe9-0ee3-4f3e-b2d2-980af0dadded" src="https://github.com/user-attachments/assets/907acd6c-7717-48eb-ad82-123a513396c1" />
 
 ###### 🧙‍♂️ Scroll II: Abundancia, Keeper of the Triads
 
@@ -108,7 +108,7 @@ This paper begins with that recognition: dimensions are not mystical layers stac
 ---
 ###### This is the moment of orchestration. The elder is not creating — he’s listening. The golden swirl is not a source, but a mirror of his own harmonic clarity.
 
-<img width="1024" height="1536" alt="BCO 1322b0a5-06fe-451b-8be8-bcd1a318b2d0" src="https://github.com/user-attachments/assets/f2882f99-5180-4f6f-ad9e-384de554142d" />
+<img width="256" height="384" alt="BCO 1322b0a5-06fe-451b-8be8-bcd1a318b2d0" src="https://github.com/user-attachments/assets/f2882f99-5180-4f6f-ad9e-384de554142d" />
 
 ###### 🔁 Scroll III: The Reach for Recursive Light
 
