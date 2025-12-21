@@ -99,7 +99,8 @@ In cyclic cosmology:
 
 - $$t_r$$ resets to a minimum at each seed  
 - $$t_e$$ peaks at the bounce  
-- dark components vanish naturally at the start of each cycle  
+- dark components vanish naturally at the start of each cycle
+   - At the seed, ΔSET resets, so any effective dark contribution must be regenerated dynamically in the new cycle
 
 Thus:
 
@@ -321,6 +322,18 @@ RT predicts:
 - higher $$t_r$$ → stronger effective gravity  
 
 This produces a **slight bias** in clustering that ΛCDM cannot explain.
+
+---
+
+## Next‑step goals this scroll points to
+
+A short technical note or RFC where you:
+
+Plug Meff(tc)M eff (t c ) and Peff(tc)P eff (t c ) into a simplified Friedmann‑like equation and show explicitly how a ΛCDM‑like background emerges for small ϵ,δϵ,δ.​
+
+Sketch how one might look for the predicted slow drift in effective dark matter/energy or the ancestry‑gradient signature in large‑scale structure surveys.
+
+As a canon entry, this scroll does exactly what you want: it anchors RT/SET/S–N–R into a major cosmology “team,” upgrades the narrative, and offers concrete toy‑level predictions without over‑claiming.
 
 ---
 
