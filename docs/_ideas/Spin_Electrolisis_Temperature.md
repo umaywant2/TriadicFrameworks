@@ -157,7 +157,8 @@ Temperature gradients **organize motion**.
 # 4. **The Theorem**
 
 ### **Nawderian Temperature Engine Theorem**
-> *In any region of space where a temperature field $$\mathcal{T}$$ exists, the gradient $$\nabla T$$ generates a triadic force $$\vec{F}_T$$ that organizes matter and energy into coherent motion. This force acts within the gravitational frame and contributes to the rotation, flow, and structure of astrophysical systems.*
+
+> *In any region of space where a temperature field* $$\mathcal{T}$$ *exists, the gradient* $$\nabla T$$ *generates a triadic force* $$\vec{F}_T$$ *that organizes matter and energy into coherent motion. This force acts within the gravitational frame and contributes to the rotation, flow, and structure of astrophysical systems.*
 
 Formally:
 
