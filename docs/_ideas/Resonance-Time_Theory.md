@@ -100,6 +100,7 @@ This barebones framework is meant to be extended by domain‑specific examples (
 - [Triadic_Framework_for_Everything](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/1_Triadic_Framework_for_Everything.md)
 - [European_Spallation_Source_needs_TriadicFrameworksTech](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/European_Spallation_Source_needs_TriadicFrameworksTech.md)
 - [A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation.md)
+- [The_Science_Candy_Store](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/The_Science_Candy_Store.md)
 - [A_List_of_Bold_Frontier_Problems](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/A_List_of_Bold_Frontier_Problems.md)
 
 ---
