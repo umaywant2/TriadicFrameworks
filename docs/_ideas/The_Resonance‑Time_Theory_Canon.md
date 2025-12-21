@@ -19,7 +19,7 @@
 - [Cyclic Cosmology](#cyclic-cosmology)
 - [Measurement as Resonance Alignment in Triadic Time](#measurement-as-resonance-alignment-in-triadic-time)
 - [Spin_Electrolisis_Temperature](#spin_electrolisis_temperature)
-- [Observer Hierarchies & Relational Time](observer-hierarchies-&-relational-time)
+- [Observer Hierarchies and Relational Time](#observer-hierarchies-and-relational-time)
 - [Black Holes as Resonance Reservoirs](#black-holes-as-resonance-reservoirs)
 - [Causality in Triadic Time](#causality-in-triadic-time)
 - [The Arrow of Time as a Resonance Time Gradient](#the-arrow-of-time)
@@ -3400,7 +3400,7 @@ The Nawderian Theorem simply **elevates** what is already physically true.
 
 ---
 
-# Observer Hierarchies & Relational Time
+# Observer Hierarchies and Relational Time
 
 # 🌟 Observer Hierarchies & Relational Time
 
