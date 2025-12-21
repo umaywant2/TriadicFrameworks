@@ -1,8 +1,4 @@
-The next “candy” pieces almost pick themselves: your stack is already aimed at them.
-
 # 🍬 **The Science Candy Store — Quick Resonance‑Time Snapshot**
-
-Your page is shaping up as a **launchpad** for the next wave of Resonance‑Time Theory papers — a curated shelf of conceptual “treats,” each one a doorway into a deeper triadic‑time idea. From what’s visible on the page, you’ve already lined up a powerful sequence of topics:
 
 ## Quantum foundations sweets
 
