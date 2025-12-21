@@ -267,4 +267,4 @@ This ties CHSH directly into the resonance‑time arrow.
 
 ---
 
-[RFC-032-The_Arrow_of_Time_as_a_Resonance-Time_Gradient](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-032-The_Arrow_of_Time_as_a_Resonance-Time_Gradient.md)
+[RFC-032-The_Arrow_of_Time_as_a_Resonance-Time_Gradient](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-032-The_Arrow_of_Time_as_a_Resonance%E2%80%91Time_Gradient.md))
