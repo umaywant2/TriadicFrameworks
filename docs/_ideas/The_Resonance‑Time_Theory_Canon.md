@@ -1,32 +1,33 @@
-# The Resonance‑Time Theory Canon
-## Master Edition
+# 🌅 The Resonance‑Time Theory Canon
 
-Created by: Nawder Loswin
-Date: December 21st 2025
+## ☄️ Master Edition
+
+- Created by: Nawder Loswin
+- Date: December 21st 2025
 
 ---
 
-# Table of Contents
-- [Resonance-Time_Theory](#resonance-time-theory)
+# 🧩 Table of Contents
+- [Resonance Time Theory](#resonance-time-theory)
 - [Nawderian_SET_Theorem](#nawderian-set-theorem)
-- [Dual_Law_of_Resonance_Law_of_Silence](#dual-law-of-resonance-law-of-silence)
-- [Resonant‑Time Cosmology](#resonant-time-cosmology)
+- [Dual Law of Resonance Law of Silence](#dual-law-of-resonance-law-of-silence)
+- [Resonant Time Cosmology](#resonant-time-cosmology)
 - [Hidden Resonance as Dark Components](#hidden-resonance-as-dark-components)
-- [ΛCDM Patches](#lcdm-patches)
+- Λ[CDM Patches](#cdm-patches)
 - [Decoherence Patch](#decoherence-patch)
-- [Fine‑Tuned Initial Conditions](#fine-tuned-initial-conditions)
+- [Fine Tuned Initial Conditions](#fine-tuned-initial-conditions)
 - [Cyclic Cosmology](#cyclic-cosmology)
 - [Measurement as Resonance Alignment in Triadic Time](#measurement-as-resonance-alignment-in-triadic-time)
 - [Spin_Electrolisis_Temperature](#spin_electrolisis_temperature)
 - [Observer Hierarchies & Relational Time](observer-hierarchies-&-relational-time)
 - [Black Holes as Resonance Reservoirs](#black-holes-as-resonance-reservoirs)
 - [Causality in Triadic Time](#causality-in-triadic-time)
-- [The Arrow of Time as a Resonance‑Time Gradient](#the-arrow-of-time-as-a-resonance‑time-gradient)
+- [The Arrow of Time as a Resonance Time Gradient](#the-arrow-of-time)
 - [RFCs](#rfcs)
 
 ---
 
-# Resonance-Time_Theory
+# Resonance Time Theory
 
 # 🎼☄️ Resonance‑Time Theory: A Barebones Triadic Framework
 
@@ -1082,7 +1083,7 @@ Then the cycle begins again.
 
 ---
 
-# Dual_Law_of_Resonance_Law_of_Silence
+# Dual Law of Resonance Law of Silence
 
 ## 🎓 Dual Law of Resonance (Law of Silence)
 
@@ -1160,7 +1161,7 @@ $$V=I\cdot R$$
 
 ---
 
-# Resonant‑Time Cosmology
+# Resonant Time Cosmology
 
 ## 🌌 Resonant‑Time Cosmology - From Initial Seed to Large‑Scale Structure  
 
@@ -1834,7 +1835,7 @@ In SET‑corrected dynamics:
 
 ---
 
-# ΛCDM Patches
+# CDM Patches
 
 ## 🌌 ΛCDM + Dark Matter/Energy Patches
 
@@ -2238,7 +2239,7 @@ Thus:
 
 ---
 
-# Fine‑Tuned Initial Conditions
+# Fine Tuned Initial Conditions
 
 ## 🌅 Fine‑Tuned Initial Conditions (Low‑Entropy Big Bang)
 
@@ -4310,7 +4311,7 @@ This means:
 
 ---
 
-# The Arrow of Time as a Resonance‑Time Gradient
+# The Arrow of Time
 
 ## 🌟 The Arrow of Time as a Resonance‑Time Gradient
 
