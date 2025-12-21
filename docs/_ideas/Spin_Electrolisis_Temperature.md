@@ -1,3 +1,6 @@
+# 🌅 Spin Electrolisis Temperature - SET - Resonance-Time Theory Canon
+
+Three triadic demi-forces - Spin, Electrolisis, Temperature - to better explain motion within our Universe.  See our canon piece on Silence Noise Resonance (SNR) for measurements.
 
 # 🌀 **SPIN — The Third Demi‑Force**
 
