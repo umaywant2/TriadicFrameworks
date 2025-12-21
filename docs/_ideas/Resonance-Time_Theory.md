@@ -101,6 +101,7 @@ This barebones framework is meant to be extended by domain‑specific examples (
 - [European_Spallation_Source_needs_TriadicFrameworksTech](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/European_Spallation_Source_needs_TriadicFrameworksTech.md)
 - [A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation.md)
 - [The_Science_Candy_Store](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/The_Science_Candy_Store.md)
+- [Resonance-Time_SET_S-N-R_Treatments](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Resonance%E2%80%91Time_SET_S%E2%80%93N%E2%80%93R_Treatments.md)
 - [A_List_of_Bold_Frontier_Problems](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/A_List_of_Bold_Frontier_Problems.md)
 
 ---
