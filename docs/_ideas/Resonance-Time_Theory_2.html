@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Resonance‑Time Theory | Triadic Frameworks</title>
+<meta name="description" content="Resonance‑Time Theory (RT/SET/SNR): a triadic cosmology unifying resonance tools across physics, measurement, and information.">
+<meta name="author" content="Nawder Loswin / Triadic Frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+:root {
+  --bg: #0d0f12;
+  --bg-panel: #15181d;
+  --bg-panel-light: #1d2128;
+  --text: #e6e6e6;
+  --accent: #8ab4ff;
+  --accent2: #c792ea;
+  --accent3: #f6c177;
+  --border: #2a2f38;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+}
+
+/* Base layout */
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+}
+
+/* Code/pre */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+}
+
+/* Links */
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* ============================================================
+   STICKY TABLE OF CONTENTS (Mobile + Desktop)
+   ============================================================ */
+
+#toc-container {
+  position: sticky;
+  top: 0;
+  background: rgba(13,15,18,0.88);
+  backdrop-filter: blur(8px);
+  padding: 0.9em 1em;
+  border-bottom: 1px solid var(--border);
+  z-index: 999;
+}
+
+#toc-container strong { font-size: 1.05em; color: var(--accent3); }
+#toc-container ul { margin: 0.6em 0 0 0; padding-left: 1em; }
+#toc-container li { margin: 0.35em 0; list-style: none; }
+#toc-container a { color: var(--accent); font-weight: 600; }
+
+/* ============================================================
+   COLLAPSIBLE SECTIONS
+   ============================================================ */
+
+details {
+  margin: 1.2em 0;
+  padding: 0.9em 1em;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+details summary {
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--accent2);
+  padding: 0.2em 0;
+  list-style: none;
+}
+
+details[open] {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-color: rgba(200,150,255,0.08);
+}
+
+/* Small helpers */
+.section-note { color: #bcd3ff; padding: 0 1em; margin-bottom: 0.8em; }
+
+/* ============================================================
+   CONTENT WRAPPER
+   ============================================================ */
+
+#content-wrapper { padding: 0.6em 0 3em 0; }
+#main-content { max-width: 980px; margin: auto; padding: 0 0.6em; }
+
+/* ============================================================
+   DESKTOP ENHANCEMENTS
+   ============================================================ */
+
+@media (min-width: 900px) {
+
+  #toc-container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 260px;
+    height: 100vh;
+    overflow-y: auto;
+    border-right: 1px solid var(--border);
+    padding: 1.2em;
+  }
+
+  #main-content {
+    margin-left: 300px;
+    padding: 2em;
+  }
+
+  p, ul, ol { padding: 0; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- STICKY TOC -->
+<div id="toc-container" aria-label="Table of contents">
+  <strong>Table of Contents</strong>
+  <ul>
+    <li><a href="#resonance-time-theory">Resonance‑Time Theory</a></li>
+    <li><a href="#core-definitions">Core Definitions</a></li>
+    <li><a href="#wigner-friend-triadic-misalignment">Wigner’s Friend (Triadic Misalignment)</a></li>
+    <li><a href="#relational-time-hierarchies">Relational‑Time Hierarchies</a></li>
+    <li><a href="#black-holes-resonance-reservoirs">Black Holes as Resonance Reservoirs</a></li>
+    <li><a href="#causality-in-triadic-time">Causality in Triadic Time</a></li>
+    <li><a href="#arrow-of-time">Arrow of Time</a></li>
+    <li><a href="#observations-view">Observations & Signatures</a></li>
+    <li><a href="#rfcs">RFCs</a></li>
+  </ul>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="content-wrapper">
+  <main id="main-content">
+
+    <h1 id="resonance-time-theory">🌅 Resonance‑Time Theory (Master Edition)</h1>
+
+    <p class="section-note">A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.</p>
+
+    <!-- Major sections are collapsed by default (A). -->
+    <!-- 1. Core Definitions -->
+    <details>
+      <summary>🔷 1. Core Definitions & Notation</summary>
+
+      <p>Triadic time coordinates:</p>
+      <pre><code>$$\boldsymbol{\tau} = (t_c, t_e, t_r)$$</code></pre>
+
+      <p>Measurement direction (unit vector):</p>
+      <pre><code>$$\mathbf{n} = (n_c, n_e, n_r), \qquad |\mathbf{n}| = 1$$</code></pre>
+
+      <p>Outcome rule (resonance sign):</p>
+      <pre><code>$$R(\mathbf{n}) = \text{sgn}\!\left(\mathbf{n} \cdot \hat{\boldsymbol{T}}\right)$$</code></pre>
+
+      <p>Measurement event condition:</p>
+      <pre><code>$$\mathbf{n} \cdot \boldsymbol{\tau}_O \approx \mathbf{n} \cdot \boldsymbol{\tau}_S$$</code></pre>
+
+      <p>Alignment = “I have a definite outcome.”  
+      Misalignment = “I see a superposition.”</p>
+
+    </details>
+
+    <!-- 2. Wigner's Friend as Triadic Misalignment -->
+    <details>
+      <summary>🧩 2. Wigner’s Friend as a Triadic‑Time Misalignment</summary>
+
+      <p>Define observer triads:</p>
+      <ul>
+        <li><strong>Friend:</strong> $$\boldsymbol{\tau}_F = (t_c^F, t_e^F, t_r^F)$$</li>
+        <li><strong>Wigner:</strong> $$\boldsymbol{\tau}_W = (t_c^W, t_e^W, t_r^W)$$</li>
+        <li><strong>System:</strong> $$\boldsymbol{\tau}_S = (t_c^S, t_e^S, t_r^S)$$</li>
+      </ul>
+
+      <p>The Friend measures along \(\mathbf{n}_F\); Wigner measures Friend+system along \(\mathbf{n}_W\).</p>
+
+      <p>Key fact:</p>
+      <pre><code>$$\mathbf{n}_F \cdot \boldsymbol{\tau}_F \;\neq\; \mathbf{n}_W \cdot \boldsymbol{\tau}_W$$</code></pre>
+
+      <p>Because Wigner has different relational‑time ancestry, different \(t_r\) components, and a different alignment condition, the Friend can see a definite outcome while Wigner sees coherence. No contradiction — different resonance‑time slices.</p>
+
+      <h3>Example</h3>
+      <p>System in energetic superposition:</p>
+      <pre><code>$$\boldsymbol{\tau}_S = (0, t_e^S, 0)$$</code></pre>
+
+      <p>Friend measures:</p>
+      <pre><code>$$\mathbf{n}_F = (0,1,0) \quad\Rightarrow\quad R_F = \text{sgn}(t_e^S)$$</code></pre>
+
+      <p>Wigner measures relationally tilted:</p>
+      <pre><code>$$\mathbf{n}_W = \tfrac{1}{\sqrt{2}}(0,1,1)$$
+$$\mathbf{n}_W \cdot \boldsymbol{\tau}_S = \tfrac{1}{\sqrt{2}}(t_e^S + t_r^S)$$</code></pre>
+
+      <p>If \(t_r^S\) unresolved, Wigner sees coherence. Both frames are internally consistent.</p>
+
+    </details>
+
+    <!-- 3. Relational-Time Hierarchies -->
+    <details>
+      <summary>🔗 3. Relational‑Time Hierarchies</summary>
+
+      <p>Observers form a hierarchy by relational‑time depth:</p>
+      <pre><code>$$t_r^S \;<\; t_r^F \;<\; t_r^W$$</code></pre>
+
+      <p>A fact for observer \(O\):</p>
+      <pre><code>$$\text{Fact}_O = \text{sgn}\!\left(\mathbf{n}_O \cdot \boldsymbol{\tau}_S\right)$$</code></pre>
+
+      <p>Different observers have different \(\mathbf{n}_O\) and \(\boldsymbol{\tau}_O\); facts are observer‑relative in triadic time.</p>
+
+    </details>
+
+    <!-- 4. Diagram Spec: Observer Hierarchies -->
+    <details>
+      <summary>🎨 4. Diagram Spec — Observer Hierarchies & Relational Time</summary>
+
+      <p>Canvas & axes: Horizontal → \(t_c\); Vertical → \(t_e\); Diagonal → \(t_r\). Use color or dashed lines for \(t_r\) in 2D.</p>
+
+      <p>Place points S, F, W at their triadic coordinates and draw measurement vectors \(\mathbf{n}_F\) and \(\mathbf{n}_W\). Show projections and icons for alignment (✔) and misalignment (✨).</p>
+
+    </details>
+
+    <!-- 5. CHSH Tie-In -->
+    <details>
+      <summary>🔗 5. CHSH‑Style Tie‑In</summary>
+
+      <p>Measurement directions:</p>
+      <pre><code>$$\mathbf{n}_F = (n_{F,c}, n_{F,e}, n_{F,r}), \quad
+\mathbf{n}_W = (n_{W,c}, n_{W,e}, n_{W,r})$$</code></pre>
+
+      <p>Outcomes:</p>
+      <pre><code>$$R_F = \text{sgn}(\mathbf{n}_F \cdot \hat{\boldsymbol{T}}_S), \quad
+R_W = \text{sgn}(\mathbf{n}_W \cdot \hat{\boldsymbol{T}}_{F+S})$$</code></pre>
+
+      <p>Correlation rule for maximally entangled resonance pair:</p>
+      <pre><code>$$E(\mathbf{n}_x,\mathbf{n}_y) = -\,\mathbf{n}_x \cdot \mathbf{n}_y$$</code></pre>
+
+      <p>CHSH scalar:</p>
+      <pre><code>$$S_{\mathrm{RT}} = E(a,b) + E(a,b') + E(a',b) - E(a',b')$$</code></pre>
+
+      <p>Violations exceed 2 only when relational‑time components are active (\(n_{x,r}\neq 0\), \(n_{y,r}\neq 0\)). Wigner’s Friend is CHSH inside a single lab.</p>
+
+    </details>
+
+    <!-- 6. Black Holes as Resonance Reservoirs -->
+    <details>
+      <summary>🌑 6. Black Holes as Resonance Reservoirs</summary>
+
+      <p>Triadic coordinates for a black hole:</p>
+      <pre><code>$$\boldsymbol{\tau}_{\text{BH}} = (t_c^{\text{BH}}, t_e^{\text{BH}}, t_r^{\text{BH}})$$</code></pre>
+
+      <p>Event horizon as resonance boundary defined by:</p>
+      <pre><code>$$\mathcal{R}(\boldsymbol{\tau}) = \alpha t_c + \beta t_e + \gamma t_r$$
+Horizon where: $$\nabla_{\tau}\mathcal{R} = 0$$</code></pre>
+
+      <p>Infalling information increases relational depth:</p>
+      <pre><code>$$t_r^{\text{BH}} \gg t_r^{\text{in}}$$</code></pre>
+
+      <p>Hawking radiation as resonance echo:</p>
+      <pre><code>$$\boldsymbol{\tau}_{\text{out}} = \boldsymbol{\tau}_{\text{BH}} - \lambda \,\hat{\nabla}_{\tau}\mathcal{R}$$</code></pre>
+
+      <p>Page‑curve analogue: \(t_r^{\text{BH}}(t_c)\) grows early and decreases late, releasing relational ancestry over time.</p>
+
+    </details>
+
+    <!-- 7. Diagram Spec: Black Holes -->
+    <details>
+      <summary>🎨 7. Diagram Spec — Black Holes as Resonance Reservoirs</summary>
+
+      <p>Draw a sphere for the black hole with a purple glow indicating deep \(t_r\). Show infalling qubit trajectories and outgoing resonance echoes carrying partial relational ancestry.</p>
+
+    </details>
+
+    <!-- 8. Causality in Triadic Time -->
+    <details>
+      <summary>🌟 8. Causality in Triadic Time</summary>
+
+      <p>Resonance‑coherence scalar:</p>
+      <pre><code>$$\mathcal{R}(\boldsymbol{\tau}) = \alpha t_c + \beta t_e + \gamma t_r$$</code></pre>
+
+      <p>Resonance cone defined by \(d\mathcal{R} = 0\). Interior: \(d\mathcal{R} > 0\) (allowed causal region). Exterior: \(d\mathcal{R} < 0\) (forbidden).</p>
+
+      <p>Causality condition from event A to B:</p>
+      <pre><code>$$\mathcal{R}_B \ge \mathcal{R}_A$$
+$$\alpha (t_c^B - t_c^A) + \beta (t_e^B - t_e^A) + \gamma (t_r^B - t_r^A) \ge 0$$</code></pre>
+
+      <h3>Resonance Echoes</h3>
+      <p>Triadic retarded resonance‑time:</p>
+      <pre><code>$$\boldsymbol{\tau}_{\text{ret}} = \boldsymbol{\tau} - \lambda \,\hat{\nabla}_{\tau}\mathcal{R}$$</code></pre>
+
+      <p>Entanglement correlations are observable only when \(\Delta\mathcal{R}\ge 0\); entanglement is a resonance echo, not a causal violation.</p>
+
+    </details>
+
+    <!-- 9. Arrow of Time -->
+    <details>
+      <summary>🌟 9. Arrow of Time as a Resonance‑Time Gradient</summary>
+
+      <p>Arrow of time is the direction of steepest ascent of \(\mathcal{R}\):</p>
+      <pre><code>$$\vec{A}_{\text{time}} = \nabla_{\tau}\mathcal{R}$$</code></pre>
+
+      <p>Entropy increase is a projection of \(\Delta\mathcal{R} > 0\) onto thermodynamic variables. Memory asymmetry arises because relational depth increases toward the future, making the past easier to align with and recall.</p>
+
+      <h3>Examples</h3>
+      <p>Trajectory from \(\boldsymbol{\tau}_1=(1,0.2,0.1)\) to \(\boldsymbol{\tau}_2=(2,0.3,0.4)\) yields \(\Delta\mathcal{R}>0\) → forward time.</p>
+
+    </details>
+
+    <!-- 10. Diagram Spec: Arrow of Time -->
+    <details>
+      <summary>🎨 10. Diagram Spec — Arrow of Time as a Resonance‑Time Gradient</summary>
+
+      <p>Overlay scalar field \(\mathcal{R}\) and draw gradient vector \(\vec{A}_{\text{time}}\). Plot example system trajectories aligned with the gradient and optionally mark suppressed reverse arrows with a red X.</p>
+
+    </details>
+
+    <!-- 11. Observations & Signatures -->
+    <details>
+      <summary>🔭 11. Observations & Resonance Signatures</summary>
+
+      <h3>Observed Patterns RT/SET Clarify</h3>
+      <ul>
+        <li>Galaxy rotation curves and effective inertia anomalies</li>
+        <li>Plasma filaments and reconnection patterns</li>
+        <li>Black hole jet alignment and resonance echoes</li>
+        <li>Temperature‑driven anisotropies in lab and cosmic plasmas</li>
+      </ul>
+
+      <h3>Paradoxes That Become Non‑Paradoxical</h3>
+      <ul>
+        <li>Wigner’s Friend</li>
+        <li>Decoherence and measurement</li>
+        <li>Black hole information paradox</li>
+        <li>Arrow of time and fine‑tuned initial conditions</li>
+      </ul>
+
+      <h3>Resonance Signatures to Look For</h3>
+      <ul>
+        <li>Relational‑time gradients in structure formation</li>
+        <li>Ancestry‑depth clustering in the cosmic web</li>
+        <li>Slow drift in effective inertia/pressure (dark‑like signatures)</li>
+        <li>Triadic‑time coherence in entanglement experiments</li>
+      </ul>
+
+      <h3>Open Questions for Contributors</h3>
+      <ul>
+        <li>Formalizing triadic‑time metrics and units</li>
+        <li>Simulating resonance cones and echoes</li>
+        <li>Modeling SET‑driven flows and frequency fluids</li>
+        <li>Quantifying relational ancestry from data</li>
+      </ul>
+
+    </details>
+
+    <!-- 12. RFCs -->
+    <details>
+      <summary>📘 12. RFCs</summary>
+
+      <ul>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-028-Measurement_as_Resonance_Alignment_in_Triadic_Time.md">RFC-028 Measurement as Resonance Alignment in Triadic Time</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-029-Observer_Hierarchies_and_Relational_Time.md">RFC-029 Observer Hierarchies and Relational Time</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-032-The_Arrow_of_Time_as_a_Resonance%E2%80%91Time_Gradient.md">RFC-032 The Arrow of Time as a Resonance‑Time Gradient</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-033-Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md">RFC-033 Causality in Triadic Time — Light Cones and Resonance Echoes</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-034-Black_Holes_as_Resonance_Reservoirs-A_Triadic%E2%80%91Time_Approach_to_the_Information_Paradox.md">RFC-034 Black Holes as Resonance Reservoirs — A Triadic‑Time Approach</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-035-Resonant%E2%80%91Time_Cosmology-From_Initial_Seed_to_Large%E2%80%91Scale_Structure.md">RFC-035 Resonant‑Time Cosmology — From Initial Seed to Large‑Scale Structure</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-036-Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md">RFC-036 Hidden Resonance as Dark Components — SET Corrections</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-037-%CE%9BCDM_plus_Dark_Matter_Energy_Patches.md">RFC-037 ΛCDM plus Dark Matter Energy Patches</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-039-Decoherence_As_A_Measurement_Problem_Patch.md">RFC-039 Decoherence As A Measurement Problem Patch</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-043-Fine%E2%80%91Tuned_Initial_Conditions_Low%E2%80%91Entropy_Big_Bang.md">RFC-043 Fine‑Tuned Initial Conditions — Low‑Entropy Big Bang</a></li>
+        <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-048-Resonant%E2%80%91Time_Cyclic_Cosmology-Loops_Seeds_and_%E2%88%87%CF%84R.md">RFC-048 Resonant‑Time Cyclic Cosmology — Loops, Seeds and ∇τR</a></li>
+      </ul>
+
+    </details>
+
+    <!-- 13. Footer / Credit -->
+    <details>
+      <summary>🔖 13. Credit & Canon Note</summary>
+
+      <p><em>Resonance‑Time Theory was introduced by Nawder Loswin in late 2025 as a triadic resonance toolkit for the science canon. This page collects the canonical definitions, diagram specs, RFCs, and observations for community review and contribution.</em></p>
+
+    </details>
+
+    <!-- End main content -->
+  </main>
+</div>
+
+</body>
+</html>
