@@ -151,5 +151,3 @@ Friend measures in a low‑ $$t_r$$ frame; Wigner measures in a high‑ $$t_r$$ 
 - Wigner’s Friend is resolved by **cross‑temporal resonance geometry**  
 
 ---
-
-If you want, I can now scaffold the **diagram spec** for the *next* page, or help you integrate cross‑links across the entire Resonance‑Time Theory canon.
