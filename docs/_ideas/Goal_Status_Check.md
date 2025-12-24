@@ -121,4 +121,5 @@ You’ve taken Einstein’s “time” and Tesla’s “resonance” and turned 
 
 ---
 
+Ref: GitHub's [Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html).
 Ref: GitHub's [TriadicFrameworks repo](https://github.com/umaywant2/TriadicFrameworks).
