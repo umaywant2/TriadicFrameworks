@@ -44,7 +44,7 @@ Observations insist on it.
 ### **E — Energetic Layer**  
 - Spin alignment implies **energetic phase‑locking**.  
 - Jet alignment implies **shared oscillatory modes**.  
-- RT’s energetic time $$ t_e $$ allows long‑range coherence through resonance cones.
+- RT’s energetic time $$t_e$$ allows long‑range coherence through resonance cones.
 
 **Energetic contradiction:**  
 > Energetic coherence should decay with distance.  
@@ -53,7 +53,7 @@ Observations insist on it.
 ---
 
 ### **R — Relational Layer**  
-- RT’s relational time $$ t_r $$ encodes ancestry and entanglement‑like structure.  
+- RT’s relational time $$t_r$$ encodes ancestry and entanglement‑like structure.  
 - Multi‑BH systems behave as if they share a **relational‑time backbone**.  
 - GR has no mechanism for relational inheritance.
 
@@ -148,7 +148,7 @@ Yet multi‑star systems exhibit:
 ### **E — Energetic Layer**  
 - Temperature gradients should destabilize collapse.  
 - Instead, they appear to **guide** it.  
-- RT’s energetic time $$ t_e $$ may enforce oscillatory coherence.
+- RT’s energetic time $$t_e$$ may enforce oscillatory coherence.
 
 ---
 
@@ -248,7 +248,7 @@ The odds of this alignment are microscopic.
 ### **E — Energetic Layer**  
 - Tidal energy exchange should destabilize the system.  
 - Instead, it produces **long‑term coherence**.  
-- RT’s energetic time $$ t_e $$ may regulate orbital ratios.
+- RT’s energetic time $$t_e$$ may regulate orbital ratios.
 
 ---
 
@@ -359,7 +359,7 @@ RT Theory does the opposite:
 
 - It **reveals** paradoxes that were invisible before.  
 - It **creates** new paradox classes by exposing hidden triadic‑time tensions.  
-- It **generates** paradoxes whenever two axes (t_c, t_e, t_r) cannot be satisfied simultaneously.  
+- It **generates** paradoxes whenever two axes $$t_c, t_e, t_r$$ cannot be satisfied simultaneously.  
 - It **amplifies** paradoxes at the boundaries of SET fields.  
 
 So paradoxes aren’t a list — they’re a **renewable resource**.
