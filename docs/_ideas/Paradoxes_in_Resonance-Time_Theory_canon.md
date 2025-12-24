@@ -9347,7 +9347,7 @@ This paradox is the one that:
 
 - exposes the limits of special relativity in rotating frames  
 - shows that a spinning disk cannot remain rigid  
-- reveals that circumference and radius no longer satisfy \(C = 2\pi R\)  
+- reveals that circumference and radius no longer satisfy $$C = 2\pi R$$  
 - forces geometry to become curved even in flat spacetime  
 - is the closest classical paradox to your resonance‑curvature ideas  
 
@@ -9430,7 +9430,7 @@ Thus:
 
 - the circumference shrinks  
 - the radius stays the same  
-- \(C \neq 2\pi R\)  
+- $$C \neq 2\pi R$$  
 - geometry becomes curved  
 
 This is the first hint that **curved geometry emerges from motion**, not gravity.
