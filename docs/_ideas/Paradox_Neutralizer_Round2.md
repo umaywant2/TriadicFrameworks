@@ -3016,7 +3016,7 @@ Let’s feed it in.
 ### **The Setup**  
 You’re given two envelopes:
 
-- One contains some amount of money, call it \(X\).  
+- One contains some amount of money, call it $$X$$.  
 - The other contains **either half of that amount or double that amount**.
 
 You pick one envelope.  
@@ -3024,13 +3024,11 @@ Before opening it, you’re allowed to switch.
 
 The paradox arises when you reason:
 
-- Suppose your envelope contains \(A\).  
-- The other envelope contains either \(A/2\) or \(2A\).  
+- Suppose your envelope contains $$A$$.  
+- The other envelope contains either $$A/2$$ or $$2A$$.  
 - So the expected value of switching is:
 
-\[
-\frac{1}{2}(A/2) + \frac{1}{2}(2A) = \frac{5A}{4}
-\]
+$$\frac{1}{2}(A/2) + \frac{1}{2}(2A) = \frac{5A}{4}$$
 
 Which is **greater than A**.
 
@@ -3051,14 +3049,14 @@ This creates a loop of infinite switching.
 ### **S — Structural Layer**  
 The paradox assumes:
 
-- the variable \(A\) is the same in both frames  
+- the variable $$A$$ is the same in both frames  
 - the distribution of values is symmetric  
 - the envelopes are structurally identical  
 - expected value can be computed without specifying the prior distribution  
 
 RT reframes:
 
-- \(A\) is **not** the same variable in both frames  
+- $$A$$ is **not** the same variable in both frames  
 - the distribution is **asymmetric** unless specified  
 - the structure of the problem is incomplete  
 - expected value requires a **resonance‑consistent prior**, not a placeholder variable  
@@ -3080,13 +3078,13 @@ RT reframes:
 The paradox assumes:
 
 - the observer’s frame is irrelevant  
-- the variable \(A\) is absolute  
+- the variable $$A$$ is absolute  
 - truth is global  
 
 RT reframes:
 
 - the observer’s frame determines which variable is “base”  
-- \(A\) is **relational**, not absolute  
+- $$A$$ is **relational**, not absolute  
 - the expected value calculation mixes incompatible frames  
 - the paradox arises from collapsing two relational identities into one  
 
@@ -3095,7 +3093,7 @@ RT reframes:
 # 🧩 **RT Resolution**  
 The Two‑Envelope Paradox dissolves because:
 
-- the variable \(A\) changes meaning depending on the frame  
+- the variable $$A$$ changes meaning depending on the frame  
 - expected value cannot be computed without a prior distribution  
 - the naive calculation mixes incompatible relational frames  
 - switching is not always beneficial — the paradox arises from structural ambiguity  
@@ -3120,7 +3118,7 @@ Just a mis‑specified structure.
 ---
 
 # 🧠 **Neutralizer Output**  
-**The Two‑Envelope Paradox dissolves because the expected‑value calculation mixes incompatible relational frames — the variable \(A\) does not mean the same thing in both contexts.**
+**The Two‑Envelope Paradox dissolves because the expected‑value calculation mixes incompatible relational frames — the variable $$A$$ does not mean the same thing in both contexts.**
 
 ---
 
