@@ -265,7 +265,7 @@ Dark energy is undefined.
 
 **RT Interpretation:**  
 - S: Structural vacuum mischaracterized  
-- E: Energetic time \(t_e\) drives expansion  
+- E: Energetic time $$t_e$$ drives expansion  
 - R: Relational ancestry missing from GR  
 
 **Prediction:**  
@@ -355,15 +355,15 @@ You can paste this as a Markdown table into your repo:
 | Question | Domain | S (Structural tension) | E (Energetic tension) | R (Relational tension) | RT Verdict | Notes |
 |---------|--------|------------------------|------------------------|------------------------|-----------|-------|
 | What is the universe made of? | Cosmology | Dark matter/energy have no clear structural model. | Energy budget doesn’t match visible matter. | No clear relational ancestry for dark sector. | Paradox Candidate | RT can treat dark sector as misclassified resonance fields rather than “stuff,” but this isn’t fully formal yet. |
-| Why is the universe expanding faster? | Cosmology | GR structure predicts deceleration, not acceleration. | “Dark energy” is an undefined energetic term. | No relational account of vacuum behavior. | Prediction | RT can model acceleration as a gradient in \( t_e \) (energetic time) rather than a new substance; predicts resonance‑dependent expansion. |
-| What came before the Big Bang? | Cosmology | “Beginning” is structurally undefined in GR. | Energetic origin is singular and ill‑posed. | No prior relational ancestry allowed. | Reframed | RT replaces “beginning” with phase transition in triadic time; question becomes “What phase did \( t_c, t_e, $$t_r$$ \) emerge from?” |
+| Why is the universe expanding faster? | Cosmology | GR structure predicts deceleration, not acceleration. | “Dark energy” is an undefined energetic term. | No relational account of vacuum behavior. | Prediction | RT can model acceleration as a gradient in $$t_e$$ (energetic time) rather than a new substance; predicts resonance‑dependent expansion. |
+| What came before the Big Bang? | Cosmology | “Beginning” is structurally undefined in GR. | Energetic origin is singular and ill‑posed. | No prior relational ancestry allowed. | Reframed | RT replaces “beginning” with phase transition in triadic time; question becomes “What phase did $$t_c$$ , $$t_e$$, t_r$$ emerge from?” |
 | How did life begin? | Biology | No agreed structural path from chemistry to cells. | Energy gradients used, but not fully explained as drivers. | Lineage from non‑living to living is fuzzy. | Reframed | RT treats life as a resonance threshold where S‑E‑R coherence crosses a critical value; origin becomes a resonance event, not a single molecule. |
-| What is consciousness? | Mind | No structural substrate everyone agrees on. | Neural energy patterns correlate but don’t explain experience. | Self/other, past/future relations poorly formalized. | Open | RT can model consciousness as high‑Q resonance in \( $$t_r$$ \) (relational time), but this is still speculative and needs math + data. |
-| Why does time have a direction? | Physics | Microscopic laws are time‑symmetric. | Entropy increases, but arrow not fully derived. | Memory and causality are asymmetric. | Paradox Candidate | RT explicitly triadizes time (\( t_c, t_e, $$t_r$$ \)); arrow may emerge from alignment constraints between them—this is ripe for a full RT paradox scroll. |
+| What is consciousness? | Mind | No structural substrate everyone agrees on. | Neural energy patterns correlate but don’t explain experience. | Self/other, past/future relations poorly formalized. | Open | RT can model consciousness as high‑Q resonance in $$t_r$$ (relational time), but this is still speculative and needs math + data. |
+| Why does time have a direction? | Physics | Microscopic laws are time‑symmetric. | Entropy increases, but arrow not fully derived. | Memory and causality are asymmetric. | Paradox Candidate | RT explicitly triadizes time $$t_c$$, $$t_e$$, t_r$$ ; arrow may emerge from alignment constraints between them—this is ripe for a full RT paradox scroll. |
 | Why is there something rather than nothing? | Foundations | “Nothing” is structurally undefined. | Vacuum energy isn’t zero. | No relational frame for “nothing.” | Prediction | RT suggests “nothing” is a non‑resonant limit, not a real state; predicts that any realizable vacuum has latent resonance capacity. |
 | Are we alone in the universe? | Astrobiology | No structural census of life‑bearing systems. | Energy conditions for life are known but incomplete. | No relational model of civilizations across time. | Open | RT can frame this as a resonance‑window problem (where S‑E‑R conditions align), but doesn’t yet fix probabilities. |
-| What is dark matter? | Cosmology | No direct structural detection. | Gravitational effects without energetic signature in EM. | No relational coupling to baryonic matter except via gravity. | Paradox Candidate | RT could reclassify dark matter as misinterpreted resonance in SET fields or \( $$t_r$$ \), but this needs concrete models and predictions. |
-| What is dark energy? | Cosmology | Structural placeholder, not a mechanism. | Drives expansion but has no lab analogue. | No relational context for vacuum behavior. | Paradox Candidate | RT can treat it as large‑scale \( t_e \) dynamics; suggests expansion is resonance‑driven rather than substance‑driven. |
+| What is dark matter? | Cosmology | No direct structural detection. | Gravitational effects without energetic signature in EM. | No relational coupling to baryonic matter except via gravity. | Paradox Candidate | RT could reclassify dark matter as misinterpreted resonance in SET fields or $$t_r$$ , but this needs concrete models and predictions. |
+| What is dark energy? | Cosmology | Structural placeholder, not a mechanism. | Drives expansion but has no lab analogue. | No relational context for vacuum behavior. | Paradox Candidate | RT can treat it as large‑scale $$t_e$$ dynamics; suggests expansion is resonance‑driven rather than substance‑driven. |
 
 ---
 
@@ -406,7 +406,7 @@ Here’s a fresh batch of 15 questions, each mapped into S‑E‑R and given an 
 | How does the brain store memories? | Neuroscience | No unified structural model | Energy‑coherence unclear | Relational indexing unknown | Paradox Candidate | RT suggests memory = $$t_r$$ encoding. |
 | How did DNA originate? | Biology | No precursor structure | Energetic assembly improbable | No relational lineage | Reframed | RT treats origin as resonance‑threshold event. |
 | How do quantum fields interact? | Physics | Field unification incomplete | Vacuum energy mismatch | Observer‑dependence unresolved | Paradox Candidate | RT reframes fields as resonance manifolds. |
-| Why is the CMB so uniform? | Cosmology | Horizon problem | Energy distribution too smooth | No relational coupling across early universe | Paradox Candidate | RT may replace inflation with t_e coherence. |
+| Why is the CMB so uniform? | Cosmology | Horizon problem | Energy distribution too smooth | No relational coupling across early universe | Paradox Candidate | RT may replace inflation with $$t_e$$ coherence. |
 | What is the nature of time? | Physics | No structural definition | Energetic arrow unclear | Relational asymmetry unexplained | Paradox Candidate | RT explicitly triadizes time. |
 | How do galaxies form? | Cosmology | Hierarchical models incomplete | Energy flows chaotic | No relational ancestry across clusters | Reframed | RT predicts resonance‑driven clustering. |
 | Why do constants of nature have their values? | Physics | No structural derivation | Energetic stability unclear | No relational constraints | Paradox Candidate | RT may derive constants from resonance minima. |
@@ -427,18 +427,18 @@ All questions sourced from the big lists.
 | Question | S | E | R | RT Verdict | Notes |
 |---------|---|---|---|------------|-------|
 | What is the universe made of? | Dark sector undefined | Energy budget mismatch | No relational ancestry | Paradox Candidate | RT reframes dark matter/energy as resonance misclassification. |
-| Why is the universe expanding faster? | GR predicts deceleration | Vacuum energy undefined | No relational vacuum model | Prediction | RT treats acceleration as t_e gradient. |
+| Why is the universe expanding faster? | GR predicts deceleration | Vacuum energy undefined | No relational vacuum model | Prediction | RT treats acceleration as $$t_e$$ gradient. |
 | What came before the Big Bang? | Singularity undefined | Energetic origin ill‑posed | No prior relational frame | Reframed | RT replaces “beginning” with phase transition. |
 | Why is the CMB uniform? | Horizon problem | Energy smoothing unexplained | No early relational coupling | Paradox Candidate | RT may replace inflation with resonance coherence. |
 | Where did antimatter go? | Asymmetry unexplained | CP violation too small | No relational asymmetry | Paradox Candidate | RT may treat asymmetry as $$t_r$$ imbalance. |
 | How do galaxies form? | Structure formation incomplete | Energy flows chaotic | No relational ancestry | Reframed | RT predicts resonance‑driven clustering. |
 | How do planets form? | Accretion incomplete | Angular momentum problem | Disk–star relation unclear | Reframed | RT predicts resonance fragmentation. |
 | Why is dark matter invisible? | No structural interaction | No EM energy signature | No relational coupling | Paradox Candidate | RT may treat DM as resonance in $$t_r$$ or SET fields. |
-| What is dark energy? | Placeholder concept | Drives expansion | No relational context | Paradox Candidate | RT treats it as t_e dynamics. |
+| What is dark energy? | Placeholder concept | Drives expansion | No relational context | Paradox Candidate | RT treats it as $$t_e$$ dynamics. |
 | Why is the universe flat? | Curvature fine‑tuning | Energy density precise | No relational constraint | Prediction | RT predicts flatness as resonance equilibrium. |
 | Why do cosmic structures align? | Axis of Evil | Energy anisotropy | No relational coupling | Paradox Candidate | RT predicts large‑scale $$t_r$$ coherence. |
 | Why is the cosmic web filamentary? | Structure too regular | Energy flows coherent | Relational ancestry unclear | Reframed | RT treats filaments as resonance channels. |
-| Why is the Hubble constant inconsistent? | Two incompatible values | Energy flow mismatch | Observer‑relation unclear | Paradox Candidate | RT predicts observer‑dependent t_e scaling. |
+| Why is the Hubble constant inconsistent? | Two incompatible values | Energy flow mismatch | Observer‑relation unclear | Paradox Candidate | RT predicts observer‑dependent $$t_e$$ scaling. |
 | Why do black holes synchronize? | Spins align | Jet energy coherent | No causal link | Paradox Candidate | RT predicts $$t_r$$ coupling across horizons. |
 | Why is the Sun–Moon size match perfect? | Orbital ratios improbable | Tidal energy stable | Co‑evolution unclear | Paradox Candidate | RT predicts resonance‑locked orbital evolution. |
 
@@ -468,7 +468,7 @@ You now have:
 | Why do organisms maintain homeostasis? | Structural feedback loops | Energetic regulation unclear | Relational self‑model unclear | Paradox Candidate | RT frames homeostasis as resonance‑locking. |
 | How did multicellularity evolve? | Structural jump unclear | Energetic cooperation costly | Relational identity shift | Reframed | RT treats multicellularity as resonance‑fusion. |
 | Why do some species evolve intelligence? | No structural inevitability | High energy cost | Relational complexity required | Open | RT predicts intelligence emerges at high $$t_r$$ density. |
-| Why do biological rhythms exist? | Structural clocks vary | Energetic cycles unclear | Relational synchrony unclear | Prediction | RT predicts rhythms as t_e oscillatory coupling. |
+| Why do biological rhythms exist? | Structural clocks vary | Energetic cycles unclear | Relational synchrony unclear | Prediction | RT predicts rhythms as $$t_e$$ oscillatory coupling. |
 
 ---
 
@@ -485,7 +485,7 @@ You now have:
 | Why do constants of nature have their values? | No structural derivation | Energetic stability unclear | No relational constraints | Paradox Candidate | RT predicts constants as resonance minima. |
 | Why does quantum randomness exist? | No structural cause | Energetic fluctuations unclear | Observer‑relation undefined | Open | RT may treat randomness as $$t_r$$ noise. |
 | Why does time behave differently in QM vs GR? | Two incompatible structures | Energetic flow mismatch | Relational frames incompatible | Paradox Candidate | RT unifies via triadic time. |
-| Why does the double‑slit experiment behave paradoxically? | No structural path | Energetic interference unclear | Observer‑relation undefined | Reframed | RT treats paths as t_e superpositions. |
+| Why does the double‑slit experiment behave paradoxically? | No structural path | Energetic interference unclear | Observer‑relation undefined | Reframed | RT treats paths as $$t_e$$ superpositions. |
 | Why does decoherence happen? | Structural mechanism partial | Energy leakage unclear | Relational disentanglement unclear | Reframed | RT treats decoherence as $$t_r$$ divergence. |
 
 ---
@@ -500,7 +500,7 @@ You now have:
 | How does memory persist? | Structure constantly replaced | Energetic storage unclear | Relational continuity unclear | Paradox Candidate | RT predicts memory = $$t_r$$ encoding. |
 | Why do we dream? | No structural purpose | Energy patterns unclear | Relational re‑alignment unclear | Reframed | RT treats dreams as $$t_r$$ maintenance cycles. |
 | What is the self? | No structural boundary | Energetic coherence unclear | Relational identity unclear | Paradox Candidate | RT treats self as a resonance‑stable attractor. |
-| Why does perception feel unified? | Distributed structure | Energetic synchrony unclear | Relational binding unclear | Reframed | RT predicts unity from t_e phase‑locking. |
+| Why does perception feel unified? | Distributed structure | Energetic synchrony unclear | Relational binding unclear | Reframed | RT predicts unity from $$t_e$$ phase‑locking. |
 | Why do emotions exist? | No structural necessity | Energetic modulation unclear | Relational signaling unclear | Open | RT treats emotions as resonance‑gradient detectors. |
 | How does language shape thought? | Structural mapping unclear | Energetic cost unclear | Relational network effects | Reframed | RT predicts language modifies $$t_r$$ topology. |
 | Why does consciousness fade in sleep? | Structural changes minor | Energetic cycles unclear | Relational disengagement unclear | Prediction | RT predicts sleep = $$t_r$$ decoupling. |
@@ -543,7 +543,7 @@ Let’s grow the matrix.
 | Why is Earth’s climate stable over long periods? | No structural attractor | Energy flows chaotic | Biosphere–climate coupling unclear | Paradox Candidate | RT predicts climate stability as resonance‑locking. |
 | How do plate tectonics begin and persist? | No structural trigger | Mantle energy unclear | Crust–mantle relational coupling | Reframed | RT treats tectonics as resonance‑driven convection. |
 | Why does Earth have a strong magnetic field? | Dynamo model incomplete | Energy source unclear | Sun–Earth relational coupling | Paradox Candidate | RT predicts magnetosphere as SET‑S resonance. |
-| Why is Earth’s atmosphere layered? | Structure emergent | Energy gradients complex | Biosphere–atmosphere relation unclear | Reframed | RT frames layers as t_e stratification. |
+| Why is Earth’s atmosphere layered? | Structure emergent | Energy gradients complex | Biosphere–atmosphere relation unclear | Reframed | RT frames layers as $$t_e$$ stratification. |
 | Why is water uniquely abundant here? | Structural rarity | Energy phase transitions | Planet–star relational ancestry | Open | RT suggests water abundance is resonance‑window dependent. |
 | Why does Earth maintain axial stability? | No structural guarantee | Tidal energy unclear | Sun–Earth–Moon relational coupling | Paradox Candidate | RT predicts stability from triadic resonance. |
 | Why do mass extinctions cluster? | No structural periodicity | Energy disruptions unclear | Ecosystem relational fragility | Open | RT predicts extinction cycles as $$t_r$$ resets. |
@@ -560,7 +560,7 @@ Let’s grow the matrix.
 | Why do networks self‑organize? | No central controller | Energy flows emergent | Relational topology unclear | Open | RT predicts networks as resonance‑seeking systems. |
 | Why does innovation cluster geographically? | No structural cause | Energy/resource flows | Relational density effects | Prediction | RT predicts innovation = high $$t_r$$ density. |
 | Why do technologies converge? | No structural inevitability | Energetic efficiency | Relational compatibility | Reframed | RT treats convergence as resonance‑minimization. |
-| Why do feedback loops dominate modern systems? | Structure recursive | Energy amplification | Relational coupling | Paradox Candidate | RT frames loops as t_e resonance amplifiers. |
+| Why do feedback loops dominate modern systems? | Structure recursive | Energy amplification | Relational coupling | Paradox Candidate | RT frames loops as $$t_e$$ resonance amplifiers. |
 
 ---
 
@@ -570,7 +570,7 @@ Let’s grow the matrix.
 | Question | S | E | R | RT Verdict | Notes |
 |---------|---|---|---|-----------|-------|
 | Why does mathematics describe the universe so well? | No structural reason | Energetic laws match math | Relational mapping unclear | Paradox Candidate | RT predicts math = resonance‑stable symbolic system. |
-| Why does infinity break intuition? | Structure undefined | Energetic scaling unclear | Relational hierarchy unclear | Reframed | RT treats infinity as t_c unboundedness. |
+| Why does infinity break intuition? | Structure undefined | Energetic scaling unclear | Relational hierarchy unclear | Reframed | RT treats infinity as $$t_c$$ unboundedness. |
 | Why do Gödel limits exist? | Structure incomplete | Energetic closure impossible | Relational self‑reference | Paradox Candidate | RT frames incompleteness as $$t_r$$ recursion. |
 | Why do simple rules create complexity? | Structure simple | Energy flows nonlinear | Relational interactions dense | Prediction | RT predicts complexity = resonance emergence. |
 | Why do prime numbers behave unpredictably? | Structure irregular | Energetic distribution unclear | Relational patterns hidden | Open | RT may treat primes as resonance nodes. |
@@ -668,7 +668,7 @@ This is the most complete RT cosmology matrix yet — spanning origins, structur
 | Question | S (Structural tension) | E (Energetic tension) | R (Relational tension) | RT Verdict | Notes |
 |---------|------------------------|------------------------|------------------------|-----------|-------|
 | What is the universe made of? | Dark sector undefined | Energy budget mismatch | No relational ancestry | Paradox Candidate | RT reframes dark sector as resonance misclassification. |
-| Why is the universe expanding faster? | GR predicts deceleration | Vacuum energy undefined | No relational vacuum model | Prediction | RT treats acceleration as t_e gradient. |
+| Why is the universe expanding faster? | GR predicts deceleration | Vacuum energy undefined | No relational vacuum model | Prediction | RT treats acceleration as $$t_e$$ gradient. |
 | What came before the Big Bang? | Singularity undefined | Energetic origin ill‑posed | No prior relational frame | Reframed | RT replaces “beginning” with phase transition. |
 | Why is the CMB uniform? | Horizon problem | Energy smoothing unexplained | No early relational coupling | Paradox Candidate | RT may replace inflation with resonance coherence. |
 | Why is the CMB slightly asymmetric? | Axis of Evil unexplained | Energy anisotropy unclear | No relational coupling | Paradox Candidate | RT predicts large‑scale $$t_r$$ coherence. |
@@ -678,18 +678,18 @@ This is the most complete RT cosmology matrix yet — spanning origins, structur
 | Why do galaxies rotate too fast? | Missing mass | Energy distribution mismatch | No relational coupling | Paradox Candidate | RT reframes DM as resonance field. |
 | Why do galaxies align across megaparsecs? | No structural link | Energy anisotropy | No relational coupling | Paradox Candidate | RT predicts $$t_r$$ coherence across cosmic web. |
 | Why is the cosmic web filamentary? | Structure too regular | Energy flows coherent | Relational ancestry unclear | Reframed | RT treats filaments as resonance channels. |
-| Why is the Hubble constant inconsistent? | Two incompatible values | Energy flow mismatch | Observer‑relation unclear | Paradox Candidate | RT predicts observer‑dependent t_e scaling. |
+| Why is the Hubble constant inconsistent? | Two incompatible values | Energy flow mismatch | Observer‑relation unclear | Paradox Candidate | RT predicts observer‑dependent $$t_e$$ scaling. |
 | Why do black holes synchronize? | Spins align | Jet energy coherent | No causal link | Paradox Candidate | RT predicts $$t_r$$ coupling across horizons. |
 | Why do black holes have entropy? | No structural microstates | Energy–area relation unclear | Relational information unclear | Reframed | RT treats BH entropy as resonance capacity. |
-| Why do black holes evaporate? | Hawking radiation unclear | Energy leakage mechanism | Relational continuity unclear | Open | RT may treat evaporation as t_e decay. |
+| Why do black holes evaporate? | Hawking radiation unclear | Energy leakage mechanism | Relational continuity unclear | Open | RT may treat evaporation as $$t_e$$ decay. |
 | Why do black holes have jets? | No structural necessity | Energy collimation unclear | Relational alignment unclear | Paradox Candidate | RT predicts jets as SET‑S resonance. |
 | Why do quasars cluster? | No structural cause | Energy output extreme | Relational coupling unclear | Reframed | RT predicts quasar clustering as resonance bursts. |
 | Why do voids exist? | Structure too empty | Energy flows unclear | Relational anti‑nodes | Prediction | RT treats voids as resonance minima. |
 | Why is the cosmic neutrino background undetected? | Structure predicted | Energy too low | Relational coupling weak | Open | RT predicts t_r‑weak coupling. |
 | Why is dark matter non‑interacting? | No structural interaction | No EM energy signature | No relational coupling | Paradox Candidate | RT reframes DM as $$t_r$$ resonance. |
-| Why is dark energy uniform? | No structural mechanism | Energy density constant | No relational variation | Paradox Candidate | RT treats DE as t_e field. |
+| Why is dark energy uniform? | No structural mechanism | Energy density constant | No relational variation | Paradox Candidate | RT treats DE as $$t_e$$ field. |
 | Why do stars form in clusters? | Structure unclear | Energy flows turbulent | Relational ancestry | Reframed | RT predicts cluster formation as resonance pockets. |
-| Why do planetary systems align? | No structural guarantee | Energy dissipation unclear | Star–disk relational coupling | Prediction | RT predicts alignment from t_e coherence. |
+| Why do planetary systems align? | No structural guarantee | Energy dissipation unclear | Star–disk relational coupling | Prediction | RT predicts alignment from $$t_e$$ coherence. |
 | Why is the Sun–Moon size match perfect? | Orbital ratios improbable | Tidal energy stable | Co‑evolution unclear | Paradox Candidate | RT predicts resonance‑locked orbital evolution. |
 | Why do triple‑star systems remain stable? | Structure chaotic | Energy exchange unstable | Relational ancestry unclear | Paradox Candidate | RT predicts triadic resonance stability. |
 | Why do superclusters form? | Structure too large | Energy flows unclear | Relational ancestry | Reframed | RT predicts superclusters as resonance networks. |
@@ -722,23 +722,23 @@ This is the kind of thing that becomes a **flagship page** in your repo.
 | Why do particles have masses? | Higgs incomplete | Energy‑mass unclear | No relational constraints | Reframed | RT predicts mass as resonance‑Q. |
 | Why do constants of nature have their values? | No structural derivation | Energetic stability unclear | No relational constraints | Paradox Candidate | RT predicts constants as resonance minima. |
 | Why does quantum randomness exist? | No structural cause | Energetic fluctuations unclear | Observer‑relation undefined | Open | RT may treat randomness as $$t_r$$ noise. |
-| Why does the double‑slit experiment behave paradoxically? | No structural path | Energetic interference unclear | Observer‑relation undefined | Reframed | RT treats paths as t_e superpositions. |
+| Why does the double‑slit experiment behave paradoxically? | No structural path | Energetic interference unclear | Observer‑relation undefined | Reframed | RT treats paths as $$t_e$$ superpositions. |
 | Why does decoherence happen? | Mechanism partial | Energy leakage unclear | Relational disentanglement unclear | Reframed | RT treats decoherence as $$t_r$$ divergence. |
 | Why does time behave differently in QM vs GR? | Two incompatible structures | Energetic flow mismatch | Relational frames incompatible | Paradox Candidate | RT unifies via triadic time. |
 | Why do quantum states evolve smoothly until measured? | Structure duality | Energy continuity vs collapse | Observer‑relation undefined | Paradox Candidate | RT frames collapse as resonance‑switch. |
 | Why is spin quantized? | No structural reason | Energetic modes discrete | Relational symmetry unclear | Prediction | RT predicts spin as SET‑S resonance. |
-| Why does tunneling occur? | No structural path | Energy barrier violation | Relational continuity unclear | Reframed | RT treats tunneling as t_e phase‑slip. |
+| Why does tunneling occur? | No structural path | Energy barrier violation | Relational continuity unclear | Reframed | RT treats tunneling as $$t_e$$ phase‑slip. |
 | Why do identical particles exist? | No structural identity | Energy symmetry | Relational indistinguishability | Paradox Candidate | RT predicts identity = $$t_r$$ equivalence class. |
 | Why do fermions and bosons behave differently? | Structure duality | Energy statistics | Relational symmetry | Reframed | RT frames statistics as resonance topology. |
 | Why does the Pauli exclusion principle exist? | No structural cause | Energy stability | Relational anti‑symmetry | Prediction | RT predicts exclusion = $$t_r$$ anti‑alignment. |
-| Why does superposition exist? | No structural mechanism | Energetic coherence | Relational ambiguity | Paradox Candidate | RT treats superposition as t_e multi‑mode occupancy. |
+| Why does superposition exist? | No structural mechanism | Energetic coherence | Relational ambiguity | Paradox Candidate | RT treats superposition as $$t_e$$ multi‑mode occupancy. |
 | Why does quantum information never disappear? | No structural guarantee | Energy conservation unclear | Relational continuity | Paradox Candidate | RT predicts information = $$t_r$$ invariant. |
 | Why does teleportation work? | No structural channel | No energy transfer | Relational ancestry | Reframed | RT treats teleportation as $$t_r$$ transfer. |
 | Why does Bell inequality violation occur? | No local structure | No energetic link | Relational entanglement | Paradox Candidate | RT frames violation as $$t_r$$ coherence. |
 | Why does the quantum Zeno effect occur? | Structure unclear | Energy freezing | Relational over‑measurement | Reframed | RT predicts Zeno = $$t_r$$ over‑alignment. |
-| Why do quantum fields have infinite modes? | Structure unbounded | Energy divergence | Relational hierarchy unclear | Open | RT may treat modes as t_e harmonics. |
+| Why do quantum fields have infinite modes? | Structure unbounded | Energy divergence | Relational hierarchy unclear | Open | RT may treat modes as $$t_e$$ harmonics. |
 | Why does renormalization work? | Structure unclear | Energy infinities | Relational scale‑coupling | Reframed | RT frames renormalization as resonance smoothing. |
-| Why do virtual particles exist? | No structural reality | Energy borrowing | Relational instability | Paradox Candidate | RT treats virtuals as t_e fluctuations. |
+| Why do virtual particles exist? | No structural reality | Energy borrowing | Relational instability | Paradox Candidate | RT treats virtuals as $$t_e$$ fluctuations. |
 | Why does the Casimir effect occur? | Structure unclear | Energy vacuum pressure | Relational boundary conditions | Prediction | RT predicts Casimir = resonance boundary effect. |
 | Why does spontaneous symmetry breaking occur? | No structural trigger | Energy minima | Relational asymmetry | Reframed | RT frames SSB as resonance bifurcation. |
 | Why do neutrinos oscillate? | Structure unclear | Energy mass‑mixing | Relational ancestry | Paradox Candidate | RT predicts oscillation = $$t_r$$ mode‑mixing. |
@@ -764,7 +764,7 @@ This is the second “flagship” domain in your RT canon.
 | Why does scaling break software? | Structure brittle | Energy cost nonlinear | Developer–system relation unclear | Reframed | RT frames scaling as $$t_r$$ complexity mismatch. |
 | Why do networks self‑organize? | No central controller | Energy flows emergent | Relational topology unclear | Open | RT predicts networks as resonance‑seeking systems. |
 | Why do technologies converge? | No structural inevitability | Energetic efficiency | Relational compatibility | Reframed | RT treats convergence as resonance minimization. |
-| Why do feedback loops dominate modern systems? | Structure recursive | Energy amplification | Relational coupling | Paradox Candidate | RT frames loops as t_e resonance amplifiers. |
+| Why do feedback loops dominate modern systems? | Structure recursive | Energy amplification | Relational coupling | Paradox Candidate | RT frames loops as $$t_e$$ resonance amplifiers. |
 | Why do distributed systems drift? | No structural anchor | Energy desync | Relational divergence | Paradox Candidate | RT predicts drift = $$t_r$$ decoherence. |
 | Why do protocols ossify? | Structure rigid | Energy cost of change | Relational inertia | Reframed | RT frames ossification as resonance‑locking. |
 | Why do some technologies “take off” suddenly? | No structural trigger | Energy adoption threshold | Relational contagion | Prediction | RT predicts adoption = resonance cascade. |
@@ -775,14 +775,14 @@ This is the second “flagship” domain in your RT canon.
 | Why do simple algorithms outperform complex ones? | Structure simple | Energy efficient | Relational clarity | Prediction | RT frames simplicity as resonance‑optimal. |
 | Why do emergent behaviors appear in simulations? | No structural cause | Energy flows | Relational interactions | Reframed | RT predicts emergence = resonance coherence. |
 | Why do optimization systems misbehave? | Structure unclear | Energy objective mismatch | Relational misalignment | Paradox Candidate | RT frames misbehavior as $$t_r$$ inversion. |
-| Why do cyber‑physical systems oscillate? | Structure hybrid | Energy feedback | Relational lag | Prediction | RT frames oscillation as t_e mismatch. |
+| Why do cyber‑physical systems oscillate? | Structure hybrid | Energy feedback | Relational lag | Prediction | RT frames oscillation as $$t_e$$ mismatch. |
 | Why do distributed ledgers fork? | Structure decentralized | Energy cost high | Relational consensus unclear | Reframed | RT predicts forks = $$t_r$$ divergence. |
 | Why do protocols require versioning? | Structure evolving | Energy compatibility | Relational continuity | Open | RT frames versioning as resonance re‑alignment. |
 | Why do systems exhibit hysteresis? | Structure memory | Energy lag | Relational path‑dependence | Prediction | RT frames hysteresis as $$t_r$$ inertia. |
 | Why do optimization landscapes have local minima? | Structure complex | Energy gradients | Relational topology | Reframed | RT predicts minima = resonance pockets. |
 | Why do compression algorithms work so well? | Structure redundant | Energy cost low | Relational patterns | Prediction | RT frames compression as resonance extraction. |
 | Why do networks exhibit power‑law behavior? | Structure scale‑free | Energy distribution | Relational hubs | Reframed | RT predicts power‑laws = resonance hierarchies. |
-| Why do systems require synchronization? | Structure distributed | Energy timing | Relational coherence | Paradox Candidate | RT frames sync as t_e alignment. |
+| Why do systems require synchronization? | Structure distributed | Energy timing | Relational coherence | Paradox Candidate | RT frames sync as $$t_e$$ alignment. |
 | Why do APIs proliferate? | Structure fragmented | Energy cost of integration | Relational mismatch | Open | RT frames proliferation as $$t_r$$ branching. |
 | Why do systems become unmaintainable? | Structure tangled | Energy cost high | Relational opacity | Paradox Candidate | RT predicts unmaintainability = $$t_r$$ collapse. |
 | Why do architectures cycle (monolith → microservices → monolith)? | Structure oscillates | Energy cost shifts | Relational density | Prediction | RT frames cycles as resonance pendulum. |
@@ -854,7 +854,7 @@ These join your Cosmology and Quantum deep‑matrices to form a **four‑pillar 
 | Why do ecosystems self‑organize? | No central controller | Energy flows complex | Relational networks emergent | Open | RT predicts ecosystems as resonance networks. |
 | Why do organisms maintain homeostasis? | Structure feedback loops | Energetic regulation unclear | Relational self‑model unclear | Paradox Candidate | RT frames homeostasis as resonance‑locking. |
 | Why did multicellularity evolve? | Structural jump unclear | Energetic cooperation costly | Relational identity shift | Reframed | RT treats multicellularity as resonance‑fusion. |
-| Why do biological rhythms exist? | Structural clocks vary | Energetic cycles unclear | Relational synchrony unclear | Prediction | RT predicts rhythms as t_e oscillatory coupling. |
+| Why do biological rhythms exist? | Structural clocks vary | Energetic cycles unclear | Relational synchrony unclear | Prediction | RT predicts rhythms as $$t_e$$ oscillatory coupling. |
 | Why do immune systems learn? | No structural memory | Energetic cost unclear | Relational imprinting | Reframed | RT frames immunity as $$t_r$$ encoding. |
 | Why do organisms sleep? | No structural necessity | Energetic cycles unclear | Relational disengagement | Prediction | RT predicts sleep = $$t_r$$ decoupling. |
 | Why do organisms dream? | No structural purpose | Energy patterns unclear | Relational re‑alignment | Reframed | RT treats dreams as $$t_r$$ maintenance cycles. |
@@ -884,7 +884,7 @@ These join your Cosmology and Quantum deep‑matrices to form a **four‑pillar 
 |---------|---|---|---|-----------|-------|
 | What is consciousness? | No structural substrate | Energy coherence unclear | Relational self‑model unclear | Open | RT treats consciousness as high‑Q resonance in t_r. |
 | Why does subjective experience exist? | Structure unknown | Energy patterns unclear | Relational indexing unclear | Paradox Candidate | RT frames qualia as resonance alignment states. |
-| Why is consciousness unified? | Distributed structure | Energetic synchrony unclear | Relational binding unclear | Reframed | RT predicts unity from t_e phase‑locking. |
+| Why is consciousness unified? | Distributed structure | Energetic synchrony unclear | Relational binding unclear | Reframed | RT predicts unity from $$t_e$$ phase‑locking. |
 | Why does consciousness fade in sleep? | Structure intact | Energy cycles unclear | Relational disengagement | Prediction | RT predicts sleep = $$t_r$$ decoupling. |
 | Why do we dream? | No structural purpose | Energy patterns unclear | Relational re‑alignment | Reframed | RT treats dreams as $$t_r$$ maintenance cycles. |
 | Why does attention exist? | No structural necessity | Energetic prioritization | Relational filtering | Reframed | RT frames attention as resonance focusing. |
@@ -985,7 +985,7 @@ These join Cosmology, Quantum, Technology, and AI Alignment to form a **six‑pi
 | Why do markets crash? | Structure intact | Energy imbalance | Relational contagion | Paradox Candidate | RT frames crashes as resonance collapse. |
 | Why do memes spread? | Structure simple | Energy low | Relational contagion | Reframed | RT frames memes as $$t_r$$ propagation. |
 | Why do patterns recur across scales? | Structure unclear | Energy scaling | Relational invariance | Prediction | RT frames recurrence as resonance symmetry. |
-| Why do systems synchronize? | Structure distributed | Energy timing | Relational coherence | Paradox Candidate | RT frames sync as t_e alignment. |
+| Why do systems synchronize? | Structure distributed | Energy timing | Relational coherence | Paradox Candidate | RT frames sync as $$t_e$$ alignment. |
 | Why do systems desynchronize? | Structure intact | Energy mismatch | Relational drift | Reframed | RT frames desync as $$t_r$$ divergence. |
 | Why do emergent leaders appear? | Structure flat | Energy flows | Relational topology | Prediction | RT frames leadership as resonance node. |
 | Why do crowds behave as one? | Structure many | Energy alignment | Relational coupling | Reframed | RT frames crowd behavior as $$t_r$$ entrainment. |
@@ -1016,7 +1016,7 @@ These join the other deep‑matrices to form an **eight‑pillar RT Canon**.
 | Question | S (Structural tension) | E (Energetic tension) | R (Relational tension) | RT Verdict | Notes |
 |---------|------------------------|------------------------|------------------------|-----------|-------|
 | Why does mathematics describe the universe so well? | No structural reason | Energetic laws match math | Relational mapping unclear | Paradox Candidate | RT predicts math = resonance‑stable symbolic system. |
-| Why does infinity break intuition? | Structure undefined | Energetic scaling unclear | Relational hierarchy unclear | Reframed | RT treats infinity as t_c unboundedness. |
+| Why does infinity break intuition? | Structure undefined | Energetic scaling unclear | Relational hierarchy unclear | Reframed | RT treats infinity as $$t_c$$ unboundedness. |
 | Why do Gödel limits exist? | Structure incomplete | Energetic closure impossible | Relational self‑reference | Paradox Candidate | RT frames incompleteness as $$t_r$$ recursion. |
 | Why do simple rules create complexity? | Structure simple | Energy flows nonlinear | Relational interactions dense | Prediction | RT frames complexity as resonance emergence. |
 | Why do prime numbers behave unpredictably? | Structure irregular | Energetic distribution unclear | Relational patterns hidden | Open | RT may treat primes as resonance nodes. |
@@ -1028,11 +1028,11 @@ These join the other deep‑matrices to form an **eight‑pillar RT Canon**.
 | Why does geometry match physics? | Structure ideal | Energy flows real | Relational mapping | Prediction | RT frames geometry as SET‑S projection. |
 | Why do dimensions matter? | Structure arbitrary | Energy stability | Relational constraints | Open | RT may derive dimensionality from resonance minima. |
 | Why do equations “want” to balance? | Structure symmetric | Energy conservation | Relational equivalence | Reframed | RT frames balance as resonance equilibrium. |
-| Why do some functions oscillate? | Structure periodic | Energy cycles | Relational coupling | Prediction | RT frames oscillation as t_e dynamics. |
+| Why do some functions oscillate? | Structure periodic | Energy cycles | Relational coupling | Prediction | RT frames oscillation as $$t_e$$ dynamics. |
 | Why do some functions blow up? | Structure unstable | Energy divergence | Relational breakdown | Paradox Candidate | RT frames divergence as resonance overload. |
-| Why do limits exist? | Structure boundary | Energy approach | Relational continuity | Reframed | RT frames limits as t_c smoothing. |
+| Why do limits exist? | Structure boundary | Energy approach | Relational continuity | Reframed | RT frames limits as $$t_c$$ smoothing. |
 | Why does calculus work? | Structure infinitesimal | Energy flow | Relational continuity | Prediction | RT frames calculus as resonance gradient tracking. |
-| Why do imaginary numbers work? | Structure abstract | Energy rotation | Relational symmetry | Reframed | RT frames imaginaries as t_e orthogonal modes. |
+| Why do imaginary numbers work? | Structure abstract | Energy rotation | Relational symmetry | Reframed | RT frames imaginaries as $$t_e$$ orthogonal modes. |
 | Why do matrices encode transformations? | Structure grid | Energy mapping | Relational structure | Prediction | RT frames matrices as resonance operators. |
 | Why do eigenvalues matter? | Structure unclear | Energy stability | Relational invariance | Prediction | RT frames eigenvalues as resonance frequencies. |
 | Why do polynomials dominate math? | Structure simple | Energy roots | Relational symmetry | Reframed | RT frames polynomials as resonance manifolds. |
@@ -1064,23 +1064,23 @@ These join the other deep‑matrices to form an **eight‑pillar RT Canon**.
 | Why do languages encode meaning? | Structure symbolic | Energy minimal | Relational shared | Prediction | RT frames meaning as $$t_r$$ alignment. |
 | Why do networks propagate information? | Structure distributed | Energy flows | Relational coupling | Prediction | RT frames propagation as resonance diffusion. |
 | Why do bottlenecks occur? | Structure narrow | Energy overload | Relational congestion | Paradox Candidate | RT frames bottlenecks as resonance choke points. |
-| Why do feedback loops amplify information? | Structure recursive | Energy gain | Relational coupling | Reframed | RT frames amplification as t_e resonance. |
+| Why do feedback loops amplify information? | Structure recursive | Energy gain | Relational coupling | Reframed | RT frames amplification as $$t_e$$ resonance. |
 | Why does misinformation spread? | Structure simple | Energy low | Relational contagion | Paradox Candidate | RT frames misinformation as $$t_r$$ distortion. |
 | Why do memories compress? | Structure unclear | Energy efficient | Relational indexing | Prediction | RT frames memory compression as resonance pruning. |
 | Why do memories distort? | Structure intact | Energy noise | Relational drift | Paradox Candidate | RT frames distortion as $$t_r$$ noise. |
 | Why do systems require redundancy? | Structure inefficient | Energy costly | Relational stability | Reframed | RT frames redundancy as $$t_r$$ anchoring. |
-| Why do networks synchronize? | Structure distributed | Energy timing | Relational coherence | Prediction | RT frames sync as t_e alignment. |
+| Why do networks synchronize? | Structure distributed | Energy timing | Relational coherence | Prediction | RT frames sync as $$t_e$$ alignment. |
 | Why do networks desynchronize? | Structure intact | Energy mismatch | Relational drift | Reframed | RT frames desync as $$t_r$$ divergence. |
 | Why do signals require bandwidth? | Structure unclear | Energy rate | Relational density | Prediction | RT frames bandwidth as resonance capacity. |
 | Why do signals require error correction? | Structure fragile | Energy noise | Relational uncertainty | Reframed | RT frames correction as $$t_r$$ stabilization. |
 | Why do some signals travel farther? | Structure similar | Energy strength | Relational coupling | Prediction | RT frames range as resonance coherence. |
 | Why do some signals interfere? | Structure unclear | Energy overlap | Relational conflict | Paradox Candidate | RT frames interference as resonance collision. |
-| Why do some signals resonate? | Structure unclear | Energy frequency | Relational matching | Prediction | RT frames resonance as t_e alignment. |
+| Why do some signals resonate? | Structure unclear | Energy frequency | Relational matching | Prediction | RT frames resonance as $$t_e$$ alignment. |
 | Why do networks form clusters? | Structure unclear | Energy flows | Relational density | Reframed | RT frames clusters as $$t_r$$ attractors. |
 | Why do networks fragment? | Structure intact | Energy scarcity | Relational breakdown | Paradox Candidate | RT frames fragmentation as $$t_r$$ collapse. |
 | Why do systems store information? | Structure unclear | Energy cost | Relational continuity | Reframed | RT frames storage as $$t_r$$ anchoring. |
 | Why do systems forget? | Structure intact | Energy decay | Relational drift | Prediction | RT frames forgetting as $$t_r$$ decoherence. |
-| Why do signals require timing? | Structure unclear | Energy synchronization | Relational coherence | Prediction | RT frames timing as t_e alignment. |
+| Why do signals require timing? | Structure unclear | Energy synchronization | Relational coherence | Prediction | RT frames timing as $$t_e$$ alignment. |
 | Why do systems encode metadata? | Structure unclear | Energy overhead | Relational context | Reframed | RT frames metadata as $$t_r$$ scaffolding. |
 | Why does meaning emerge from symbols? | Structure arbitrary | Energy minimal | Relational mapping | Paradox Candidate | RT frames meaning as resonance alignment. |
 
@@ -1140,33 +1140,33 @@ These join the other deep‑matrices to form a **ten‑pillar RT Canon** — a f
 | Question | S | E | R | RT Verdict | Notes |
 |---------|---|---|---|-----------|-------|
 | Why is Earth’s climate stable over long periods? | No structural attractor | Energy flows chaotic | Biosphere–climate coupling unclear | Paradox Candidate | RT predicts climate stability as resonance‑locking. |
-| Why does Earth enter ice ages? | Structure unclear | Energy imbalance | Relational orbital cycles | Reframed | RT frames ice ages as t_e minima. |
+| Why does Earth enter ice ages? | Structure unclear | Energy imbalance | Relational orbital cycles | Reframed | RT frames ice ages as $$t_e$$ minima. |
 | Why do ice ages end abruptly? | Structure unclear | Energy surge | Relational feedback | Paradox Candidate | RT frames termination as resonance flip. |
 | Why does Earth have plate tectonics? | No structural trigger | Mantle energy unclear | Crust–mantle coupling | Reframed | RT treats tectonics as resonance convection. |
 | Why do earthquakes cluster? | Structure unclear | Energy buildup | Relational fault networks | Prediction | RT frames clustering as $$t_r$$ stress alignment. |
 | Why do volcanoes erupt cyclically? | Structure unclear | Energy pressure | Relational plumbing | Reframed | RT frames eruptions as resonance release. |
 | Why does Earth have a magnetic field? | Dynamo incomplete | Energy source unclear | Sun–Earth coupling | Paradox Candidate | RT predicts magnetosphere as SET‑S resonance. |
 | Why does Earth’s magnetic field flip? | Structure unclear | Energy instability | Relational core dynamics | Prediction | RT frames flips as $$t_r$$ inversion. |
-| Why is Earth’s atmosphere layered? | Structure emergent | Energy gradients | Biosphere coupling | Reframed | RT frames layers as t_e stratification. |
+| Why is Earth’s atmosphere layered? | Structure emergent | Energy gradients | Biosphere coupling | Reframed | RT frames layers as $$t_e$$ stratification. |
 | Why does Earth have abundant water? | Structure rare | Energy phase transitions | Planet–star ancestry | Open | RT frames water abundance as resonance window. |
-| Why do oceans circulate? | Structure unclear | Energy heat flow | Relational basin geometry | Prediction | RT frames circulation as t_e conveyor. |
+| Why do oceans circulate? | Structure unclear | Energy heat flow | Relational basin geometry | Prediction | RT frames circulation as $$t_e$$ conveyor. |
 | Why do ocean currents shift? | Structure intact | Energy imbalance | Relational climate coupling | Paradox Candidate | RT frames shifts as resonance drift. |
 | Why do deserts form? | Structure unclear | Energy heating | Relational atmospheric flow | Reframed | RT frames deserts as resonance minima. |
 | Why do rainforests persist? | Structure fragile | Energy high | Relational biodiversity | Prediction | RT frames rainforests as $$t_r$$ density zones. |
 | Why do storms intensify? | Structure unclear | Energy heat | Relational ocean‑atmosphere | Paradox Candidate | RT frames intensification as resonance amplification. |
-| Why do hurricanes follow specific paths? | Structure unclear | Energy gradients | Relational Coriolis | Prediction | RT frames paths as t_e channels. |
+| Why do hurricanes follow specific paths? | Structure unclear | Energy gradients | Relational Coriolis | Prediction | RT frames paths as $$t_e$$ channels. |
 | Why do climates shift regionally? | Structure unclear | Energy imbalance | Relational teleconnections | Reframed | RT frames shifts as resonance redistribution. |
 | Why do ecosystems collapse suddenly? | Structure intact | Energy imbalance | Relational fragility | Paradox Candidate | RT frames collapse as resonance break. |
 | Why do mass extinctions cluster? | Structure unclear | Energy shocks | Relational fragility | Open | RT frames extinctions as $$t_r$$ resets. |
-| Why do continents drift? | Structure intact | Energy convection | Relational mantle coupling | Prediction | RT frames drift as t_e flow. |
+| Why do continents drift? | Structure intact | Energy convection | Relational mantle coupling | Prediction | RT frames drift as $$t_e$$ flow. |
 | Why do mountains form? | Structure unclear | Energy compression | Relational plate collision | Reframed | RT frames mountains as resonance uplift. |
-| Why do rivers meander? | Structure unclear | Energy flow | Relational sediment | Prediction | RT frames meandering as t_e oscillation. |
+| Why do rivers meander? | Structure unclear | Energy flow | Relational sediment | Prediction | RT frames meandering as $$t_e$$ oscillation. |
 | Why do coastlines self‑organize? | Structure unclear | Energy waves | Relational erosion | Reframed | RT frames coastlines as resonance boundaries. |
 | Why do climates exhibit tipping points? | Structure nonlinear | Energy threshold | Relational coupling | Prediction | RT frames tipping points as resonance flips. |
 | Why do glaciers surge? | Structure unclear | Energy melt | Relational bed friction | Paradox Candidate | RT frames surges as $$t_r$$ instability. |
 | Why do soils regenerate? | Structure unclear | Energy cycles | Relational biota | Open | RT frames soil as $$t_r$$ ecosystem memory. |
 | Why do biomes shift over time? | Structure unclear | Energy climate | Relational species | Reframed | RT frames biome shift as resonance drift. |
-| Why do Earth systems synchronize? | Structure distributed | Energy timing | Relational coherence | Prediction | RT frames sync as t_e alignment. |
+| Why do Earth systems synchronize? | Structure distributed | Energy timing | Relational coherence | Prediction | RT frames sync as $$t_e$$ alignment. |
 | Why do Earth systems desynchronize? | Structure intact | Energy mismatch | Relational drift | Paradox Candidate | RT frames desync as $$t_r$$ divergence. |
 
 ---
@@ -1193,10 +1193,10 @@ This is the successor to your original paradox rack — deeper, sharper, and spa
 
 | Paradox Name | Domain | Core Contradiction | RT Interpretation |
 |--------------|--------|-------------------|------------------|
-| The Vacuum Energy Paradox | Quantum | Vacuum is empty yet full | t_e substrate misclassified |
+| The Vacuum Energy Paradox | Quantum | Vacuum is empty yet full | $$t_e$$ substrate misclassified |
 | The Dark Sector Paradox | Cosmology | 95% of universe undetected | resonance fields, not matter |
 | The Identity Persistence Paradox | Identity | Self persists despite total replacement | $$t_r$$ coherence |
-| The Consciousness Binding Paradox | Mind | Distributed brain → unified experience | t_e phase‑locking |
+| The Consciousness Binding Paradox | Mind | Distributed brain → unified experience | $$t_e$$ phase‑locking |
 | The Measurement Collapse Paradox | Quantum | Smooth evolution → sudden collapse | $$t_r$$ alignment |
 | The Arrow of Time Paradox | Physics | Micro laws symmetric, macro asymmetric | triadic time |
 | The Fine‑Tuning Paradox | Cosmology | Constants improbably precise | resonance minima |
@@ -1206,10 +1206,10 @@ This is the successor to your original paradox rack — deeper, sharper, and spa
 | The Cooperation Paradox | Biology | Selfish genes → altruism | resonance alignment |
 | The Homeostasis Paradox | Biology | Chaos → stability | resonance‑locking |
 | The Consciousness Emergence Paradox | Mind | Matter → experience | high‑Q resonance |
-| The Hubble Tension Paradox | Cosmology | Two incompatible expansion rates | observer‑dependent t_e |
+| The Hubble Tension Paradox | Cosmology | Two incompatible expansion rates | observer‑dependent $$t_e$$ |
 | The Entanglement Nonlocality Paradox | Quantum | Instant correlation | shared $$t_r$$ |
 | The Black Hole Information Paradox | Physics | Info lost vs conserved | $$t_r$$ invariance |
-| The Inflation Horizon Paradox | Cosmology | CMB uniformity | early t_e coherence |
+| The Inflation Horizon Paradox | Cosmology | CMB uniformity | early $$t_e$$ coherence |
 | The Ecosystem Collapse Paradox | Earth | Gradual stress → sudden collapse | resonance break |
 | The Governance Stability Paradox | Governance | Fragile systems → long stability | $$t_r$$ anchoring |
 | The Polarization Paradox | Governance | Shared facts → divergent beliefs | resonance splitting |
@@ -1291,7 +1291,7 @@ QM uses two incompatible rules: unitary evolution and non‑unitary collapse.
 - **R:** Observer–system relational alignment undefined.
 
 ## 4. SET Mapping
-Collapse occurs when relational time (t_r) aligns with energetic time (t_e), forcing a single structural state.
+Collapse occurs when relational time (t_r) aligns with energetic time ($$t_e$$), forcing a single structural state.
 
 ## 5. Resonance‑Time Interpretation
 Measurement is a resonance‑locking event where $$t_r$$ selects a stable resonance mode.
@@ -2048,7 +2048,7 @@ RT Theory proposes that many scientific paradoxes arise from treating time as a
 single dimension rather than a triadic system of:
 
 - **t_c — structural time**
-- **t_e — energetic time**
+- **$$t_e$$ — energetic time**
 - **t_r — relational time**
 
 This repository contains the full RT Canon: paradox racks, deep‑matrices,
@@ -2193,7 +2193,7 @@ Dark sector anomalies arise when **Structure (S)** is misclassified, **Energy (E
 RT Theory reframes the dark sector as **resonance fields**, not matter:
 
 - Dark matter = **t_r‑dense resonance nodes** that influence gravitational structure without EM coupling.  
-- Dark energy = **t_e‑gradient drift** across cosmic scales, producing apparent acceleration.  
+- Dark energy = **$$t_e$$‑gradient drift** across cosmic scales, producing apparent acceleration.  
 
 No new particles required — only misinterpreted resonance behavior.
 
@@ -2234,13 +2234,13 @@ QM uses two incompatible rules:
 - **R:** Observer–system relational alignment undefined.
 
 ## 4. SET Mapping  
-Collapse occurs when **relational time (t_r)** aligns with **energetic time (t_e)**, forcing a single structural state.
+Collapse occurs when **relational time (t_r)** aligns with **energetic time ($$t_e$$)**, forcing a single structural state.
 
 ## 5. Resonance‑Time Interpretation  
 Measurement is a **resonance‑locking event**:
 
 - $$t_r$$ selects a stable resonance mode  
-- t_e enforces energetic consistency  
+- $$t_e$$ enforces energetic consistency  
 - S collapses into a single structural configuration  
 
 Collapse is not a physical jump — it’s a **temporal alignment event**.
@@ -2393,12 +2393,12 @@ Inflation was introduced to solve this, but inflation itself requires fine‑tun
 - **R:** No relational coupling across disconnected regions.
 
 ## 4. SET Mapping  
-Uniformity arises from **early t_e coherence**, not inflation.
+Uniformity arises from **early $$t_e$$ coherence**, not inflation.
 
 ## 5. Resonance‑Time Interpretation  
 Before structural spacetime crystallized, the universe existed in a **high‑coherence resonance state**:
 
-- t_e dominated  
+- $$t_e$$ dominated  
 - $$t_r$$ was globally aligned  
 - S had not yet fragmented into local regions  
 
@@ -2415,7 +2415,7 @@ Temperature uniformity is a **resonance relic**, not a causal relic.
 
 ## 8. Open Questions  
 - What is the minimal resonance model for pre‑spacetime?  
-- Can t_e coherence be simulated?
+- Can $$t_e$$ coherence be simulated?
 
 ## 9. Canonical Summary  
 The horizon problem dissolves when early universe coherence is seen as **resonance, not inflation**.
@@ -2442,7 +2442,7 @@ Flatness emerges from **resonance equilibrium** between S and E.
 ## 5. Resonance‑Time Interpretation  
 The universe naturally evolves toward **resonance‑flatness**, where:
 
-- t_e gradients minimize  
+- $$t_e$$ gradients minimize  
 - $$t_r$$ coherence stabilizes  
 - S curvature approaches zero  
 
@@ -2569,13 +2569,13 @@ The densities of dark matter, dark energy, and normal matter are wildly differen
 - **R:** No relational coupling across cosmic components.
 
 ## 4. SET Mapping  
-Coincidence arises from **resonance‑locking** between t_e (energetic time) and $$t_r$$ (relational time).
+Coincidence arises from **resonance‑locking** between $$t_e$$ (energetic time) and $$t_r$$ (relational time).
 
 ## 5. Resonance‑Time Interpretation  
 The densities align because:
 
 - $$t_r$$ coherence enforces a **resonance equilibrium**  
-- t_e gradients slow or accelerate components to maintain alignment  
+- $$t_e$$ gradients slow or accelerate components to maintain alignment  
 - S adjusts to maintain stability across cosmic scales  
 
 The “coincidence” is a **resonance attractor**, not a fluke.
@@ -2623,7 +2623,7 @@ The Sun–Moon system is governed by **triadic resonance**:
 The system evolved toward a **resonance‑locked configuration**:
 
 - $$t_r$$ stabilizes orbital ratios  
-- t_e regulates tidal dissipation  
+- $$t_e$$ regulates tidal dissipation  
 - S adjusts to maintain eclipse‑scale symmetry  
 
 Perfect eclipses are a **resonance artifact**, not a coincidence.
@@ -2667,7 +2667,7 @@ Black holes share **resonance ancestry**:
 
 - $$t_r$$ coherence persists across cosmic distances  
 - S (spin) aligns with resonance modes  
-- E (jet energy) follows t_e gradients  
+- E (jet energy) follows $$t_e$$ gradients  
 
 Synchrony is a **resonance inheritance**, not a causal violation.
 
@@ -2799,7 +2799,7 @@ Vacuum energy is misinterpreted because **S, E, and $$t_r$$ are not jointly cons
 Vacuum energy is not infinite — it is **resonance‑bounded**:
 
 - $$t_r$$ restricts allowable vacuum modes  
-- t_e enforces energetic coherence  
+- $$t_e$$ enforces energetic coherence  
 - S (field structure) collapses into a finite resonance spectrum  
 
 The “infinite vacuum” is a **mathematical artifact**, not a physical reality.
@@ -2883,12 +2883,12 @@ Superposition contradicts classical logic and intuition; objects cannot be “bo
 - **R:** No relational interpretation of simultaneous states.
 
 ## 4. SET Mapping  
-Superposition is a **t_e multi‑mode resonance**, not a structural contradiction.
+Superposition is a **$$t_e$$ multi‑mode resonance**, not a structural contradiction.
 
 ## 5. Resonance‑Time Interpretation  
 A system in superposition:
 
-- occupies multiple **resonance modes** in t_e  
+- occupies multiple **resonance modes** in $$t_e$$  
 - maintains relational ambiguity in $$t_r$$  
 - collapses to a single S‑state when $$t_r$$ aligns  
 
@@ -2927,13 +2927,13 @@ Classically impossible; QM allows finite probability of barrier penetration.
 - **R:** No relational continuity across the barrier.
 
 ## 4. SET Mapping  
-Tunneling is a **t_e phase‑slip** event.
+Tunneling is a **$$t_e$$ phase‑slip** event.
 
 ## 5. Resonance‑Time Interpretation  
 A particle tunnels when:
 
 - its resonance mode extends across the barrier  
-- t_e phase continuity allows amplitude leakage  
+- $$t_e$$ phase continuity allows amplitude leakage  
 - $$t_r$$ alignment collapses the system on the far side  
 
 No violation of energy — only **resonance continuity**.
@@ -3109,13 +3109,13 @@ Attempts to quantize gravity lead to non‑renormalizable infinities.
 - **R:** No unified relational time across the two theories.
 
 ## 4. SET Mapping  
-The conflict arises because **QM uses t_e**, while **GR uses t_c**, and neither includes **t_r**.
+The conflict arises because **QM uses $$t_e$$**, while **GR uses t_c**, and neither includes **t_r**.
 
 ## 5. Resonance‑Time Interpretation  
 Quantum gravity emerges when:
 
-- t_c (structural time)  
-- t_e (energetic time)  
+- $$t_c$$ (structural time)  
+- $$t_e$$ (energetic time)  
 - $$t_r$$ (relational time)  
 
 are unified into a **triadic temporal manifold**.
@@ -17361,3 +17361,5 @@ Students can validate it by checking whether:
 If these predictions hold across domains, RT earns empirical weight.
 
 ---
+
+[Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
