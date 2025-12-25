@@ -1,5 +1,5 @@
 # 🌀 [TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sci_Triadic_Framework_for_Everything.md)
-*A modular, remixable lattice for resonance‑based computation and ternary governance.*
+*A modular, remixable lattice for resonance‑based computation and ternary governance.*  🌟 New - [Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
 
 <img width="123" height="184" alt="header" src="https://github.com/user-attachments/assets/41d37d75-5e29-4ac8-be92-ed93445f2374" />
 
@@ -26,7 +26,7 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 
 ---
 
-## 🧬 TriadicFramworks Tech Stack with Dimensional Validator and Electrical Triad
+## 🧬 TriadicFramworks Tech FFF Stack with Dimensional Validator and Electrical Triad
 
 | Dimension | Symbol | Validator Glyph | Electric Association |
 |-----------|--------|------------------|-----------------------|
