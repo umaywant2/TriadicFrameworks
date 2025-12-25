@@ -1,4 +1,3 @@
-```python
 import unittest
 import json
 from fff_core import FFF
