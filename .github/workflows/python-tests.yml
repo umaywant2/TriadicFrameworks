@@ -1,7 +1,7 @@
 name: Python CLI Wrap Tests
 
-permissions: write-all
-  contents: read
+permissions: 
+  contents: write-all
   
 on:
   push:
