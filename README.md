@@ -1,4 +1,4 @@
-# 🌀 [TriadicFrameworks for Everything](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sci_Triadic_Framework_for_Everything.md)
+# 🌀 [TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sci_Triadic_Framework_for_Everything.md)
 *A modular, remixable lattice for resonance‑based computation and ternary governance.*
 
 <img width="123" height="184" alt="header" src="https://github.com/user-attachments/assets/41d37d75-5e29-4ac8-be92-ed93445f2374" />
