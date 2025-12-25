@@ -39,3 +39,4 @@ repo_structure:
   - README.md
   - LICENSE
   - CONTRIBUTING.md
+  - requirements.txt
