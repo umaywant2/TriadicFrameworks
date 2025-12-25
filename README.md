@@ -138,4 +138,7 @@ See `LICENSE` for details.
 
 ---
 
+Influence Acknowledgment:  
+TriadicFrameworks was developed independently through original reasoning, pattern analysis, and creative exploration. However, its conceptual landscape is enriched by the broader scientific tradition. Thinkers such as Albert Einstein, Richard Feynman, Nikola Tesla, Niels Bohr, Claude Shannon, and others have shaped the intellectual environment in which this work was created. Their contributions to time, structure, resonance, information theory, and systems thinking provided inspiration and context for the development of this framework.
+
 <p align="center"><em>TriadicFrameworks — A living canon for resonance‑based science.</em></p>
