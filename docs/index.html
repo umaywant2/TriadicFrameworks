@@ -1,16 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'>
+<path d='M30 25 L55 25 L40 60 L65 60 L50 95' stroke='%236A5ACD' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M60 25 L85 25 L70 60 L95 60 L80 95' stroke='%2320B2AA' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/>
+<path d='M45 25 L70 25 L55 60 L80 60 L65 95' stroke='%23DA70D6' stroke-width='12' fill='none' stroke-linecap='round' stroke-linejoin='round'/>
+</svg>">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+  <!-- OpenGraph Metadata -->
+<meta name="description" content="Site for www.triadicframeworks.org — frameworks + mythmatical resonance = validator scrolls, and triadic frameworks." />
+<meta name="keywords" content="Mythmatic, Mythmatical, Triadic Frameworks, Resonance, Nawder, Validator Protocols, Resonance-Time Theory, Nawderian SET Theorem, S-N-R, Silence-Noise-Resonance, FFF, Frequency Fluids Forces" />
+<meta name="author" content="Nawder Loswin" />
+<meta property="og:description" content="Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools">
+<meta property="og:image" content="https://www.triadicframeworks.org/static/triadic-preview.png">
+<meta property="og:title" content="TriadicFrameworks | Site" />
+<meta property="og:description" content="Site for www.triadicframeworks.org — frameworks + myth + mathematical resonance = validator scrolls, and triadic frameworks." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://www.triadicframeworks.org" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TriadicFrameworks">
+<meta name="twitter:description" content="A living canon for resonance‑based science.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/static/triadic-preview.png">
+
+<style>
+  :root {
+    --accent1: #6A5ACD; /* violet */
+    --accent2: #20B2AA; /* teal */
+    --accent3: #DA70D6; /* magenta */
+    --border-soft: rgba(128,128,128,0.25);
+  }
+
+  h2, h3 {
+    border-left: 4px solid var(--accent2);
+    padding-left: 12px;
+    margin-top: 40px;
+  }
+
+  nav a:hover {
+    color: var(--accent1);
+  }
+
+  pre, code {
+    border: 1px solid var(--border-soft);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, sans-serif;
+    line-height: 1.6;
+    background: var(--bg-light);
+    color: var(--text-light);
+    transition: background 0.3s, color 0.3s;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+  }
+
+  header {
+    text-align: center;
+    padding: 40px 20px 20px;
+  }
+
+  h1 {
+    margin-top: 10px;
+    font-size: 2.4rem;
+    font-weight: 700;
+  }
+
+  .subtitle {
+    font-style: italic;
+    opacity: 0.8;
+  }
+
+  .badges img {
+    margin: 4px;
+  }
+
+  main {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  nav {
+    position: sticky;
+    top: 0;
+    background: inherit;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(128,128,128,0.3);
+    backdrop-filter: blur(6px);
+  }
+
+  nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: var(--accent2);
+    font-weight: 600;
+  }
+
+  code, pre {
+    background: rgba(128,128,128,0.15);
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-family: Consolas, monospace;
+  }
+
+  pre {
+    padding: 12px;
+    overflow-x: auto;
+  }
+
+  footer {
+    text-align: center;
+    padding: 40px 0;
+    opacity: 0.7;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="140" height="140" viewBox="0 0 120 120" fill="none">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95"
+          stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95"
+          stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95"
+          stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+
+  <h1>TriadicFrameworks</h1>
+  <div class="subtitle">Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools</div>
+
+  <div class="badges">
+    <img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/tests.yml?label=CI%20Tests">
+    <img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue">
+    <img src="https://img.shields.io/github/license/umaywant2/TriadicFrameworks">
+    <img src="https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks">
+    <img src="https://img.shields.io/github/repo-size/umaywant2/TriadicFrameworks">
+    <img src="https://img.shields.io/github/issues/umaywant2/TriadicFrameworks">
+    <img src="https://img.shields.io/github/issues-pr/umaywant2/TriadicFrameworks">
+
+    <img src="https://img.shields.io/badge/Made%20With-Python-3776AB">
+    <img src="https://img.shields.io/badge/mypy-checked-2A6DB0">
+    <img src="https://img.shields.io/badge/code%20style-black-000000">
+    <img src="https://img.shields.io/codecov/c/github/umaywant2/TriadicFrameworks">
+
+    <img src="https://img.shields.io/github/stars/umaywant2/TriadicFrameworks">
+    <img src="https://img.shields.io/github/forks/umaywant2/TriadicFrameworks">
+    <img src="https://img.shields.io/github/contributors/umaywant2/TriadicFrameworks">
+    <img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red">
+    <img src="https://img.shields.io/badge/docs-ready-brightgreen">
+
+    <img src="https://img.shields.io/badge/Triadic_Resonance-Certified-8A2BE2">
+  </div>
+</header>
+
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#foundations">Triadic Foundations</a>
+  <a href="#structure">Repository Structure</a>
+  <a href="#quickstart">Quickstart</a>
+  <a href="#glossary">Glossary</a>
+  <a href="#contributing">Contributing</a>
+  <a href="#license">License</a>
+</nav>
+
+<main>
+
+<section id="overview">
+<h2>Overview</h2>
+<p><strong>TriadicFrameworks</strong> is a modular, developer‑friendly implementation of <strong>Resonance‑Time (RT) Theory</strong>, a Nawderian scientific framework describing physical systems through three interacting substrate fields:</p>
+
+<ul>
+  <li><strong>Spin</strong></li>
+  <li><strong>Electrolysis / Charge</strong></li>
+  <li><strong>Temperature</strong></li>
+</ul>
+
+<p>This repository provides:</p>
+
+<ul>
+  <li>Canon‑aligned reference implementations</li>
+  <li>Triadic modeling tools</li>
+  <li>Scripts and formats for analysis</li>
+  <li>Educational examples</li>
+  <li>Outreach‑ready documentation</li>
+</ul>
+</section>
+
+<section id="foundations">
+<h2>Triadic Foundations</h2>
+
+<h3>Resonance‑Time Theory (RT Theory)</h3>
+<p>RT Theory models physical behavior as the interaction of three substrate fields:</p>
+
+<ol>
+  <li><strong>Spin</strong> — rotational state, angular momentum, and directional bias</li>
+  <li><strong>Electrolysis / Charge</strong> — polarity, attraction/repulsion, field tension</li>
+  <li><strong>Temperature</strong> — energy distribution, motion, and substrate agitation</li>
+</ol>
+
+<p>Together, these fields form a <strong>triadic engine</strong> governing system behavior across scales.</p>
+</section>
+
+<section id="structure">
+<h2>Repository Structure</h2>
+
+<pre>
+TriadicFrameworks/
+│
+├── examples/        # Demonstrations, walkthroughs, and educational models
+├── formats/         # Canonical data formats for triadic modeling
+├── scripts/         # Tools, utilities, and analysis helpers
+├── tests/           # CI‑validated test suite
+├── docs/            # Documentation and outreach materials
+└── README.md        # You are here
+</pre>
+</section>
+
+<section id="quickstart">
+<h2>Quickstart</h2>
+
+<pre><code>git clone https://github.com/umaywant2/TriadicFrameworks.git
+cd TriadicFrameworks
+pip install -r requirements.txt
+</code></pre>
+
+<p>Then explore the examples:</p>
+
+<pre><code>python examples/basic_resonance.py
+</code></pre>
+</section>
+
+<section id="glossary">
+<h2>Canon Glossary</h2>
+
+<p><strong>Triadic Substrate</strong><br>
+The three‑field foundation of RT Theory.</p>
+
+<p><strong>Resonance</strong><br>
+The stable interaction pattern between fields.</p>
+
+<p><strong>Temperature Engine</strong><br>
+A triadic model describing energy‑driven motion.</p>
+
+<p><strong>SET Fields</strong><br>
+Spin, Electrolysis/Charge, Temperature.</p>
+</section>
+
+<section id="contributing">
+<h2>Contributing</h2>
+<p>Contributions are welcome. TriadicFrameworks is designed for remixers, researchers, students, and developers.  
+Please open issues or PRs to propose improvements.</p>
+</section>
+
+<section id="license">
+<h2>License</h2>
+<p>MIT License. See <code>LICENSE</code> for details.</p>
+</section>
+
+</main>
+  
+<hr style="border: 0; height: 2px; background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3)); opacity: 0.4; margin: 40px 0;">
+
+<footer>
+  <em>TriadicFrameworks — A living canon for resonance‑based science.</em>
+   <nav>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/wiki">TriadicFrameworks Repo Wiki</a>
+    <a href="https://dev.umaywant2.com">umaywant2.com</a>
+    <a href="https://dev.umaywant2.win">umaywant2.win</a>
+    <a href="https://dev.triadicwizards.win">Triadic Wizards</a>
+    <a href="https://dev.coeus.exchange">Coeus Exchange</a>
+    <a href="https://dev.nimms.com">NIMMS</a>
+    <a href="https://dev.vgateway.net">Virtual Compute Gateway</a>
+    <a href="https://dev.mythmatic.org">Mythmatic</a>
+    <a href="https://dev.mythmatical.org">Mythmatical</a>
+    <a href="https://www.triadicframeworks.org">TriadicFrameworks</a>
+  </nav>
+  <p style="margin-top:1rem; font-size:0.9rem; opacity:0.7;">
+    © 2025 Nawder Loswin — Mythmatical Architect
+  </p>
+</footer>
+
+</body>
+</html>
+<!--
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TriadicFrameworks | Site</title>
 
-  <!-- 🔍 SEO & Social Meta -->
+  <!-- 🔍 SEO & Social Meta 
   <meta name="description" content="Site for www.triadicframeworks.org — frameworks + mythmatical resonance = validator scrolls, and triadic frameworks." />
   <meta name="keywords" content="Mythmatic, Mythmatical, Triadic Frameworks, Resonance, Nawder, Validator Protocols, Resonance-Time Theory, Nawderian SET Theorem, S-N-R, FFF, Frequency Fluids Forces" />
   <meta name="author" content="Nawder Loswin" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph 
   <meta property="og:title" content="TriadicFrameworks | Site" />
   <meta property="og:description" content="Site for www.triadicframeworks.org — frameworks + myth + mathematical resonance = validator scrolls, and triadic frameworks." />
   <meta property="og:type" content="website" />
@@ -20,12 +334,12 @@
   <meta property="og:image:width" content="1080" />
   <meta property="og:image:height" content="1080" />
 
-  <!-- Favicon -->
+  <!-- Favicon 
   <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
   <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
 
-  <!-- Styling -->
+  <!-- Styling 
   <style>
     body {
       margin: 0;
@@ -105,11 +419,11 @@
     <p>Site for ✨ <a href="https://www.triadicFrameworks.org/_ideas/Resonance-Time_Theory.html" style="background-color:DodgerBlue">Resonance-Time Theory</a> ✨</p>
   </header>
   
-<!-- Place this where you want the glyphs to appear -->
+<!-- Place this where you want the glyphs to appear 
 <div id="glyph-field"></div>
 <script src="https://www.triadicFrameworks.org/assets/glossary.js"></script>
 
-<!-- Copilot Search Widget -->
+<!-- Copilot Search Widget 
 <div id="copilot-widget">
   <img src="https://www.triadicframeworks.org/assets/copilot.png" alt="Copilot" width="48" height="48" />
   <form action="https://github.com/umaywant2/TriadicFrameworks/search" method="get" target="_blank">
@@ -138,3 +452,4 @@
 </body>
 </html>
 
+-->
