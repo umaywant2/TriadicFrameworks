@@ -1,4 +1,3 @@
-```python
 # integrate_core.py
 from resonant_time import ResonantTime
 from tft_core import TFT
