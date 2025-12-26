@@ -1,0 +1,90 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Resonance Atlas Schema",
+  "description": "Schema for resonance atlas entries including triadic alignment, glyphs, and scientific source placeholders.",
+  "type": "object",
+
+  "properties": {
+    "entries": {
+      "type": "array",
+      "items": {
+        "type": "object",
+
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+
+          "name": {
+            "type": "string"
+          },
+
+          "category": {
+            "type": "string",
+            "enum": [
+              "atomic",
+              "molecular",
+              "astronomical",
+              "mathematical",
+              "musical",
+              "symbolic",
+              "custom"
+            ]
+          },
+
+          "phase": {
+            "type": "string",
+            "description": "Triadic phase identifier",
+            "enum": [
+              "I",
+              "II",
+              "III",
+              "IV",
+              "V",
+              "VI",
+              "VII",
+              "VIII",
+              "IX"
+            ]
+          },
+
+          "frequency_range": {
+            "type": "object",
+            "properties": {
+              "min": { "type": "number" },
+              "max": { "type": "number" },
+              "units": { "type": "string" }
+            },
+            "required": ["min", "max", "units"]
+          },
+
+          "glyph": {
+            "type": "string",
+            "description": "Symbolic glyph assigned to this entry"
+          },
+
+          "source": {
+            "type": "string",
+            "description": "Dataset or authority (NIST, RSC, NASA, Bowserinator, etc.)"
+          },
+
+          "notes": {
+            "type": "string"
+          }
+        },
+
+        "required": [
+          "id",
+          "name",
+          "category",
+          "phase",
+          "frequency_range",
+          "glyph",
+          "source"
+        ]
+      }
+    }
+  },
+
+  "required": ["entries"]
+}
