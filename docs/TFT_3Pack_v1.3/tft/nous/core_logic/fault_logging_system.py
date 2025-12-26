@@ -1,8 +1,5 @@
-"""
-⚠️ Fault Logging System
-Logs faults across validator, glyphstream, and sort benchmarking.
-"""
-
+# ⚠️ Fault Logging System
+# Logs faults across validator, glyphstream, and sort benchmarking.
 import datetime
 
 def log_fault(agent_id, fault_type, details, log_file):
