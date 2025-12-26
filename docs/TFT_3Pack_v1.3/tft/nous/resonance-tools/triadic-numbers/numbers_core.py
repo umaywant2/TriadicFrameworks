@@ -1,4 +1,3 @@
-```python
 # numbers_core.py
 import json
 
