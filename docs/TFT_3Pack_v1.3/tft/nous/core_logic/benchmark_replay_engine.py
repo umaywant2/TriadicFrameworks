@@ -1,7 +1,5 @@
-"""
-🔁 Benchmark Replay Engine
-Replays sort trials and compares fidelity across agents.
-"""
+# 🔁 Benchmark Replay Engine
+# Replays sort trials and compares fidelity across agents.
 
 import json
 import time
