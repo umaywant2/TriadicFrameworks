@@ -39,8 +39,6 @@
 
 </p>
 
----
-
 # Overview
 
 **TriadicFrameworks** is a modular, developer‑friendly implementation of **Resonance‑Time (RT) Theory**, a Nawderian scientific framework describing physical systems through three interacting substrate fields:
@@ -48,6 +46,9 @@
 - **Spin**
 - **Electrolysis / Charge**
 - **Temperature**
+
+For Developers:
+- Start here - [RT Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
 
 This repository provides:
 
@@ -138,7 +139,8 @@ See `LICENSE` for details.
 
 ---
 
-Influence Acknowledgment:  
-TriadicFrameworks was developed independently through original reasoning, pattern analysis, and creative exploration. However, its conceptual landscape is enriched by the broader scientific tradition. Thinkers such as Albert Einstein, Richard Feynman, Nikola Tesla, Niels Bohr, Claude Shannon, and others have shaped the intellectual environment in which this work was created. Their contributions to time, structure, resonance, information theory, and systems thinking provided inspiration and context for the development of this framework.
+**Influence Acknowledgment:**
+
+TriadicFrameworks was developed independently through original reasoning, pattern analysis, and creative exploration. However, its conceptual landscape is enriched by the broader scientific tradition. Thinkers such as Nikola Tesla, Albert Einstein, Richard Feynman, Niels Bohr, Claude Shannon, and others have shaped the intellectual environment in which this work was created. Their contributions to time, structure, resonance, information theory, and systems thinking provided inspiration and context for the development of this framework.
 
 <p align="center"><em>TriadicFrameworks — A living canon for resonance‑based science.</em></p>
