@@ -1,7 +1,5 @@
-"""
-🧪 Minimal Viable Daemon
-Quick-start nous for testing and onboarding.
-"""
+# 🧪 Minimal Viable Daemon
+# Quick-start nous for testing and onboarding.
 
 import time
 
