@@ -16,7 +16,7 @@
 <p align="center">
 
 <!-- Officers’ Club Badge Rack -->
-<img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/tests.yml?label=CI%20Tests">
+<img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/python-tests.yml?label=CI%20Tests">
 <img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue">
 <img src="https://img.shields.io/github/license/umaywant2/TriadicFrameworks">
 <img src="https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks">
