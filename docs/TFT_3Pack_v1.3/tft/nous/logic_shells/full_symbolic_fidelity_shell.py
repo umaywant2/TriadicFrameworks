@@ -1,7 +1,5 @@
-"""
-🌀 Full Symbolic Fidelity Shell
-Complete nous with triadic job division, validator logic, and glyphstream overlays.
-"""
+# 🌀 Full Symbolic Fidelity Shell
+# Complete nous with triadic job division, validator logic, and glyphstream overlays.
 
 from modules.resonant_logger import log_resonance
 from modules.validator_handshake import trigger_validator
