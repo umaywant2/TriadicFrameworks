@@ -1,8 +1,7 @@
-"""
-⚙️ Adaptive Sort Engine
-Benchmarks multiple sort algorithms and selects best performer.
-Allows manual override and sort mapping.
-"""
+# ⚙️ Adaptive Sort Engine
+# Benchmarks multiple sort algorithms and selects best performer.
+# Allows manual override and sort mapping.
+
 
 import time
 import random
