@@ -1,4 +1,3 @@
-```python
 # fff_core.py
 import json
 
