@@ -1,4 +1,3 @@
-```python
 # loops_core.py
 import json
 
