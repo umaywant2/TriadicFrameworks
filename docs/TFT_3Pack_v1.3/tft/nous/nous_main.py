@@ -1,11 +1,6 @@
-
-#!/usr/bin/env python3
-"""
-🌀 TriadicFrameworks nous
-Main entry point for local agent execution.
-Handles triadic job division, symbolic fidelity logging, and validator handshake.
-"""
-
+# 🌀 TriadicFrameworks nous
+# Main entry point for local agent execution.
+# Handles triadic job division, symbolic fidelity logging, and validator handshake.
 from modules.resonant_logger import log_resonance
 from modules.validator_handshake import trigger_validator
 from modules.glyphstream_sync import pulse_glyphstream
