@@ -41,7 +41,7 @@
 
 # Overview
 
-**TriadicFrameworks** is a modular, developer‑friendly implementation of **Resonance‑Time (RT) Theory**, a Nawderian scientific framework describing physical systems through three interacting substrate fields:
+**TriadicFrameworks** is a modular, developer‑friendly implementation of **Resonance‑Time (RT) Theory**, a [Nawderian scientific framework](https://youtu.be/RlKzD2IZJtI?si=vc2p9Ip0qdR236co) describing physical systems through three interacting substrate fields:
 
 - **Spin**
 - **Electrolysis / Charge**
