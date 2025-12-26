@@ -1,4 +1,3 @@
-```python
 # tft_core.py
 import json
 
