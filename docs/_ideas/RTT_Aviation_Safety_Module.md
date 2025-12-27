@@ -107,3 +107,5 @@ Forecasts seconds‑to‑minutes ahead to detect:
 ---
 
 RTT provides aviation with a new structural tool for understanding and preventing resonance‑driven failures — enhancing safety without disrupting existing systems.
+
+[RTT_Developer_Quick-Start](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_Developer_Quick-Start.md)
