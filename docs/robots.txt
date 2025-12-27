@@ -3,11 +3,62 @@
 User-agent: *
 Allow: /
 
-# Exclude build artifacts, caches, and experiments
-Disallow: /__pycache__/
+# Block internal scaffolding and non-public folders
 Disallow: /archive_experiments/
-Disallow: /tests/
+Disallow: /configs/
+Disallow: /config/
+Disallow: /contributors/
+Disallow: /data/
+Disallow: /diagrams/
+Disallow: /discovery/
+Disallow: /engine/
+Disallow: /equations/
+Disallow: /glyphic_resonance/
+Disallow: /glyphs/
+Disallow: /honor_roll/
+Disallow: /jobs/
+Disallow: /labs/
+Disallow: /lens/
+Disallow: /metadata/
+Disallow: /NoS/
+Disallow: /poker-variants/
+Disallow: /projects/
+Disallow: /public_support/
+Disallow: /registries/
+Disallow: /registry/
+Disallow: /reports/
+Disallow: /runtime/
+Disallow: /schemas/
 Disallow: /scripts/
+Disallow: /simulations/
+Disallow: /snapshots/
+Disallow: /sources/
+Disallow: /spectral_clarity/
+Disallow: /tests/
+Disallow: /unified_resonance/
+Disallow: /validation/
+Disallow: /validators/
+Disallow: /workflows/
+Disallow: /_template/
 
-# Point to sitemap
+# Block legacy or duplicate files
+Disallow: /index.html.old
+
+# Allow assets needed for rendering
+Allow: /assets/
+Allow: /images/
+Allow: /styles/
+Allow: /js/
+Allow: /gallery/
+
+# AI crawler instructions (Cloudflare Pro will enforce)
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
 Sitemap: https://www.triadicframeworks.org/sitemap.xml
