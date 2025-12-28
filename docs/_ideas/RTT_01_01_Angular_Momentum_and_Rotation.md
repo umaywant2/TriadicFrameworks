@@ -131,10 +131,10 @@ This subdomain provides:
 
 Future sub‑pages will include:
 
-- RTT_01_01_Moment_of_Inertia.md  
-- RTT_01_01_Torque_and_Angular_Acceleration.md  
-- RTT_01_01_Precession_and_Nutation.md  
-- RTT_01_01_Rotational_Energy.md  
+- [RTT_01_01_Moment_of_Inertia.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Moment_of_Inertia.md)  
+- [RTT_01_01_Torque_and_Angular_Acceleration.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Torque_and_Angular_Acceleration.md)  
+- [RTT_01_01_Precession_and_Nutation.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Precession_and_Nutation.md)  
+- [RTT_01_01_Rotational_Energy.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Energy.md)  
 
 ---
 
