@@ -1,7 +1,7 @@
 copy con RTT_Domain_01_Physics_and_Cosmology.md
 copy con RTT_Domain_02_Chemistry_and_Materials.md
 copy con RTT_Domain_03_Biology_and_Life_Sciences.md
-copy con RTT_Domain_04_Medicine_and_Health_Systems.md
+copy con RTT_Domain_04_Health_Medicine_and_Wellbeing.md
 copy con RTT_Domain_05_Earth_and_Environmental_Sciences.md
 copy con RTT_Domain_06_Engineering.md
 copy con RTT_Domain_07_Computing_AI_and_Information_Systems.md
