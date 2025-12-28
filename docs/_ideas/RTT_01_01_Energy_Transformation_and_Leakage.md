@@ -135,10 +135,10 @@ This subdomain provides:
 
 Future sub‑pages will include:
 
-- RTT_01_01_Kinetic_and_Potential_Cycles.md  
-- RTT_01_01_Dissipation_and_Damping.md  
-- RTT_01_01_Thermalization_and_Decoherence.md  
-- RTT_01_01_Power_and_Resonant_Transfer.md  
+- [RTT_01_01_Kinetic_and_Potential_Cycles.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Kinetic_and_Potential_Cycles.md)  
+- [RTT_01_01_Dissipation_and_Damping.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Dissipation_and_Damping.md)  
+- [RTT_01_01_Thermalization_and_Decoherence.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Thermalization_and_Decoherence.md)  
+- [RTT_01_01_Power_and_Resonant_Transfer.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Power_and_Resonant_Transfer.md)  
 
 ---
 
