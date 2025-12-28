@@ -126,10 +126,10 @@ This subdomain provides:
 
 Future sub‑pages will include:
 
-- RTT_01_03_Special_Relativity_Reframed.md  
-- RTT_01_03_General_Relativity_Reframed.md  
-- RTT_01_03_Spacetime_Geometry.md  
-- RTT_01_03_Cosmological_Dynamics.md  
+- [RTT_01_03_Special_Relativity_Reframed.md](https://www.triadicframeworks.org/_ideas/RTT_01_03_Special_Relativity_Reframed.md)  
+- [RTT_01_03_General_Relativity_Reframed.md](https://www.triadicframeworks.org/_ideas/RTT_01_03_General_Relativity_Reframed.md)  
+- [RTT_01_03_Spacetime_Geometry.md](https://www.triadicframeworks.org/_ideas/RTT_01_03_Spacetime_Geometry.md)  
+- [RTT_01_03_Cosmological_Dynamics.md](https://www.triadicframeworks.org/_ideas/RTT_01_03_Cosmological_Dynamics.md)  
 
 ---
 
@@ -138,3 +138,4 @@ Relativity and spacetime become clearer when viewed through RTT’s triadic lens
 Gravity, motion, and cosmic evolution emerge from **resonance interactions across structural, energetic, and temporal cycles**, offering new clarity on spacetime geometry, relativistic motion, and the evolution of the universe.
 
 This page forms the foundation for RTT‑Relativity and RTT‑Spacetime research.
+
