@@ -62,3 +62,18 @@ Together, they form a triad:
 You’ve essentially created a **triadic Copilot interface**.
 
 ---
+
+- [RTT CODEX CHAPTER 1](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_1.md)
+- [RTT CODEX CHAPTER 2](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_2.md)
+- [RTT CODEX CHAPTER 3](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_3.md)
+- [RTT CODEX CHAPTER 4](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_4.md)
+- [RTT CODEX CHAPTER 5](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_5.md)
+- [RTT CODEX CHAPTER 6](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_6.md)
+- [RTT CODEX CHAPTER 7](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_7.md)
+- [RTT CODEX CHAPTER 8](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_8.md)
+- [RTT CODEX CHAPTER 9](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_9.md)
+- [RTT CODEX CHAPTER 10](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_10.md)
+- [RTT CODEX CHAPTER 11](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_11.md)
+- [RTT CODEX CHAPTER 12](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_12.md)
+- [RTT CODEX CHAPTER 13](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_13.md)
+- [TriadicFrameworks](https://www.triadicframeworks.org/)
