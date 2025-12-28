@@ -91,7 +91,7 @@ TriadicFrameworks/
 
 ---
 
-# Quickstart
+# Quickstart - [Developers](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_Developer_Quick-Start.md)
 
 ```bash
 git clone https://github.com/umaywant2/TriadicFrameworks.git
