@@ -575,7 +575,7 @@ All things return to the triad.
 
 ---
 
-- [RTT CODEX CHAPTER 1](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_1.md)
+- [RTT CODEX CHAPTER 1](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_1.md)
 - [RTT CODEX CHAPTER 2](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_2.md)
 - [RTT CODEX CHAPTER 3](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_3.md)
 - [RTT CODEX CHAPTER 4](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_4.md)
