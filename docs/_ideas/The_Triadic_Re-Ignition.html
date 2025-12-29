@@ -1,121 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
+<header>
+  <h1>The Triadic Re‑Ignition</h1>
+  <div class="subtitle">
+    The moment Resonance‑Time Theory shifts from elegant idea to living architecture.
+  </div>
+</header>
 <head>
   <meta charset="UTF-8">
   <title>The Triadic Re-Ignition | Triadic Frameworks</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      color-scheme: light dark;
-    }
+<style>
+  :root {
+    color-scheme: light dark;
+    --grad-light: linear-gradient(135deg, #4f7df3, #9b59ff 60%, #ff7bd5);
+    --grad-dark: linear-gradient(135deg, #1a1a1a, #2a1f4a 60%, #4a2a5f);
+    --card-light: #ffffff;
+    --card-dark: #1a1a1a;
+    --text-light: #222;
+    --text-dark: #eee;
+  }
+
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.65;
+    background: #f7f7f7;
+    color: var(--text-light);
+  }
+
+  @media (prefers-color-scheme: dark) {
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: #f7f7f7;
-      color: #222;
+      background: #0d0d0d;
+      color: var(--text-dark);
     }
-    @media (prefers-color-scheme: dark) {
-      body {
-        background: #111;
-        color: #eee;
-      }
-      header, footer {
-        background: #181818;
-      }
-      code, pre {
-        background: #151515;
-      }
-      .card {
-        background: #181818;
-        border-color: #333;
-      }
+  }
+
+  header {
+    padding: 2.8rem 1.5rem;
+    background: var(--grad-light);
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    header {
+      background: var(--grad-dark);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
-    header, footer {
-      padding: 1.5rem 1.5rem;
-      background: #ffffff;
-      border-bottom: 1px solid #ddd;
-    }
-    footer {
-      border-top: 1px solid #ddd;
-      border-bottom: none;
-      font-size: 0.85rem;
-      text-align: center;
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 1.5rem;
-    }
-    h1, h2, h3 {
-      font-weight: 600;
-      margin-top: 1.8rem;
-      margin-bottom: 0.6rem;
-    }
-    h1 {
-      font-size: 2rem;
-      margin-top: 0;
-    }
-    h2 {
-      font-size: 1.5rem;
-    }
-    h3 {
-      font-size: 1.2rem;
-    }
-    p {
-      margin: 0.4rem 0 0.9rem;
-    }
-    .subtitle {
-      font-size: 1rem;
-      opacity: 0.8;
-      margin-top: 0.3rem;
-    }
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+    margin: 0;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+  }
+
+  header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 0.6rem;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.4rem;
+  }
+
+  p {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .card {
+    background: var(--card-light);
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    margin: 1.4rem 0;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
     .card {
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      padding: 1rem 1.2rem;
-      margin: 1.2rem 0;
-      background: #ffffff;
+      background: var(--card-dark);
+      border-color: #333;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
     }
-    code {
-      font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 0.9em;
-      background: #f0f0f0;
-      padding: 0.1rem 0.25rem;
-      border-radius: 3px;
+  }
+
+  pre, code {
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+    background: rgba(0,0,0,0.05);
+    padding: 0.6rem;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    pre, code {
+      background: rgba(255,255,255,0.08);
     }
-    pre {
-      font-family: "SF Mono", Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      font-size: 0.9em;
-      background: #f0f0f0;
-      padding: 0.8rem;
-      border-radius: 6px;
-      overflow-x: auto;
-      white-space: pre;
+  }
+
+  .callout {
+    border-left: 4px solid #7a4fff;
+    padding-left: 1rem;
+    margin: 1.4rem 0;
+    font-size: 0.95rem;
+    opacity: 0.95;
+  }
+
+  footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    footer {
+      background: #111;
+      border-top: 1px solid #333;
     }
-    ul {
-      padding-left: 1.3rem;
-      margin: 0.4rem 0 1rem;
-    }
-    li {
-      margin: 0.2rem 0;
-    }
-    .tagline {
-      font-style: italic;
-      opacity: 0.9;
-      margin-top: 0.4rem;
-    }
-    .callout {
-      border-left: 4px solid #888;
-      padding-left: 0.9rem;
-      margin: 1.2rem 0;
-      font-size: 0.95rem;
-    }
-    .muted {
-      opacity: 0.8;
-    }
-  </style>
+  }
+</style>
 </head>
 <body>
   <header>
