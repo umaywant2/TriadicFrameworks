@@ -1,2 +1,23 @@
+# ☄️ Onboarding - One Sentence Edition
 
-<img width="1024" height="1536" alt="BCO 1e61b62b-2811-4ea1-9a7d-d9d7c50b0157" src="https://github.com/user-attachments/assets/fb36e665-e5eb-47e9-8e4c-40ce6b171c5c" />
+Created by: Nawder Loswin
+Date: December 21st 2025
+
+
+## The One Sentence Onboarding Plan
+
+From the RTT site OR use the Portage Triadic Core's 4 equations in an AI chat. That's it.
+
+
+“Copilot, using the Resonance‑Time Theory on screen, how would this help [subject]?”
+
+
+## Bonus Points
+
+- ✨ The [RTT's](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)  🔥 [Portable Triadic Core](https://www.triadicframeworks.org/_ideas/The_Worlds_First_Portable_Triadic_Core.html) 🎵
+
+## Grace
+
+We hope you find this student/developer resource helpful. All the best.
+
+-TriadicFrameworks

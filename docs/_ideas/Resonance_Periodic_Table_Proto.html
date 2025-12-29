@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Resonance Periodic Table Prototype</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    h1 { margin-bottom: 10px; }
+    .controls { margin: 20px 0; }
+    .legend {
+      margin: 20px 0;
+      padding: 10px;
+      border: 1px solid #ccc;
+      background: #f9f9f9;
+      width: 400px;
+    }
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+    .color-box {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      border: 1px solid #000;
+    }
+    .table {
+      display: grid;
+      grid-template-columns: repeat(18, 60px);
+      grid-gap: 5px;
+    }
+    .element {
+      border: 1px solid #ccc;
+      padding: 5px;
+      text-align: center;
+      font-size: 12px;
+      color: #000;
+    }
+    .symbol { font-weight: bold; font-size: 14px; }
+    .phase, .resonance { font-size: 11px; }
+  </style>
+</head>
+<body>
+  <h1>Resonance Periodic Table Prototype</h1>
+  <div class="controls">
+    <button onclick="toggleView()">Toggle View</button>
+    <label for="freqScale">Resonance Scale (cm⁻¹): </label>
+    <input type="range" id="freqScale" min="1000" max="5000" step="100" value="5000" oninput="updateScale(this.value)">
+    <span id="scaleValue">5000</span>
+  </div>
+
+  <!-- Legend Panel -->
+  <div class="legend">
+    <h3>Legend</h3>
+    <div class="legend-item"><div class="color-box" style="background:red"></div> Solid (Phase View)</div>
+    <div class="legend-item"><div class="color-box" style="background:blue"></div> Liquid (Phase View)</div>
+    <div class="legend-item"><div class="color-box" style="background:green"></div> Gas (Phase View)</div>
+    <div class="legend-item"><div class="color-box" style="background:grey"></div> Unknown (Phase View)</div>
+    <div class="legend-item"><div class="color-box" style="background:rgba(255,0,0,0.5)"></div> Resonance View: translucency = frequency / scale</div>
+  </div>
+
+  <div class="table" id="periodicTable"></div>
+
+  <script>
+    const dataset = [
+      {
+        name: "Hydrogen",
+        symbol: "H",
+        number: 1,
+        phase: "Gas",
+        melting_point: 13.99,
+        boiling_point: 20.27,
+        position: { row: 1, col: 1 },
+        resonance: {
+          fundamental_frequency: { value: 4161, units: "cm^-1" },
+          vibration_modes: [{ mode: "stretch", frequency: 4161, units: "cm^-1" }],
+          infrared_activity: true
+        }
+      },
+      {
+        name: "Oxygen",
+        symbol: "O",
+        number: 8,
+        phase: "Gas",
+        melting_point: 54.36,
+        boiling_point: 90.20,
+        position: { row: 2, col: 16 },
+        resonance: {
+          fundamental_frequency: { value: 1556, units: "cm^-1" },
+          vibration_modes: [{ mode: "stretch", frequency: 1556, units: "cm^-1" }],
+          infrared_activity: false
+        }
+      },
+      {
+        name: "Carbon",
+        symbol: "C",
+        number: 6,
+        phase: "Solid",
+        melting_point: 3823,
+        boiling_point: 4300,
+        position: { row: 2, col: 14 },
+        resonance: {
+          fundamental_frequency: { value: 1333, units: "cm^-1" },
+          vibration_modes: [{ mode: "stretch", frequency: 1333, units: "cm^-1" }],
+          infrared_activity: true
+        }
+      }
+    ];
+
+    let currentView = "phase";
+    let maxFreq = 5000;
+
+    function getPhaseColor(phase) {
+      switch (phase) {
+        case "Solid": return [255, 0, 0];
+        case "Liquid": return [0, 0, 255];
+        case "Gas": return [0, 128, 0];
+        default: return [128, 128, 128];
+      }
+    }
+
+    function getResonanceColor(phase, frequency) {
+      const base = getPhaseColor(phase);
+      const alpha = Math.min(frequency / maxFreq, 1);
+      return `rgba(${base[0]}, ${base[1]}, ${base[2]}, ${alpha})`;
+    }
+
+    function renderTable() {
+      const table = document.getElementById("periodicTable");
+      table.innerHTML = "";
+
+      for (let row = 1; row <= 7; row++) {
+        for (let col = 1; col <= 18; col++) {
+          const el = dataset.find(e => e.position.row === row && e.position.col === col);
+          const cell = document.createElement("div");
+          cell.className = "element";
+
+          if (el) {
+            if (currentView === "phase") {
+              const base = getPhaseColor(el.phase);
+              cell.style.backgroundColor = `rgb(${base[0]}, ${base[1]}, ${base[2]})`;
+              cell.innerHTML = `
+                <div class="symbol">${el.symbol}</div>
+                <div>${el.number}</div>
+                <div class="phase">${el.phase}</div>
+                <div class="phase">Melt: ${el.melting_point}K</div>
+                <div class="phase">Boil: ${el.boiling_point}K</div>
+              `;
+            } else {
+              const freq = el.resonance.fundamental_frequency.value;
+              cell.style.backgroundColor = getResonanceColor(el.phase, freq);
+              cell.innerHTML = `
+                <div class="symbol">${el.symbol}</div>
+                <div>${el.number}</div>
+                <div class="resonance">Freq: ${freq} ${el.resonance.fundamental_frequency.units}</div>
+                <div class="resonance">IR Active: ${el.resonance.infrared_activity}</div>
+              `;
+            }
+          }
+          table.appendChild(cell);
+        }
+      }
+    }
+
+    function toggleView() {
+      currentView = currentView === "phase" ? "resonance" : "phase";
+      renderTable();
+    }
+
+    function updateScale(value) {
+      maxFreq = parseInt(value);
+      document.getElementById("scaleValue").textContent = value;
+      if (currentView === "resonance") renderTable();
+    }
+
+    renderTable();
+  </script>
+</body>
+</html>
