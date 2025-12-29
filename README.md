@@ -320,6 +320,8 @@ RTT gives people:
 
 And once a new way of thinking exists, new roles naturally emerge around it.
 
+<li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_Education_Grades_K-12.md">K-12 preview</a></li>
+
 **Influence Acknowledgment:**
 
 TriadicFrameworks was developed independently through original reasoning, pattern analysis, and creative exploration. However, its conceptual landscape is enriched by the broader scientific tradition. Thinkers such as Nikola Tesla, Albert Einstein, Richard Feynman, Niels Bohr, Claude Shannon, and others have shaped the intellectual environment in which this work was created. Their contributions to time, structure, resonance, information theory, and systems thinking provided inspiration and context for the development of this framework.
