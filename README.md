@@ -124,7 +124,7 @@ python examples/basic_resonance.py
 ### **Triadic Substrate**
 The three‑field foundation of RT Theory.
 
-### **Freamework**
+### **Framework**
 We chose a design that would be triadic harmonic nested with loops to align with Resonance research.
 
 ### **Resonance**
