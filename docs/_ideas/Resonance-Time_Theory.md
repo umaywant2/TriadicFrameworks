@@ -4,7 +4,7 @@ This note summarizes working definitions and principles; detailed derivations an
 
 ---
 
-## 1. 🌊 Core definitions
+## 🌊 Core definitions
 
 1. ⏱️ **Resonant‑Time triad**  
    For any mode or system, define its Resonant‑Time as the triad  
@@ -22,6 +22,18 @@ This note summarizes working definitions and principles; detailed derivations an
    $$\vec{a}_{\text{total}} = \vec{a}_g + \vec{a}_S + \vec{a}_E + \vec{a}_T$$
 
    where $$\vec{a}_g$$ is gravitational, $$\vec{a}_S$$ arises from spin and rotational structures, $$\vec{a}_E$$ from electric and electromagnetic fields and charge separation, and $$\vec{a}_T$$ from temperature gradients and related thermodynamic forces.[4][5]
+
+4.  🚀 **Quantum Kernel: 0D Root** (Positive Indivisible Silence | resonance seed, S=0+ fertile unity)
+   ```text
+                          ↓ (Noise injection via SET spin/temp gradients)
+         1D Ground      (Linear relational ancestry buildup | t_r accumulation, directional causality)
+                          ↓ (Resonance phase-lock in Dual Operator projection)
+         2D Neutral     (Planar coherence/stabilization | interference duality, holographic threshold)
+
+       - Unfolds to 3+1D projection via triadic-time extrusion (t_c dominant at macro scales).
+       - Non-numerical base for 0D: meta-operator in DCOs (e.g., terminal unity in resonance category).
+       - Test: Simulate in low-D QFT (0+1D fields → 1D chains → 2D lattices) for emergence predictions.
+```
 
 5. 🎧 **Silence–Noise–Resonance (S–N–R)**
    Any system’s state space decomposes conceptually into:  
@@ -92,7 +104,7 @@ without constraint.
 
 ---
 
-## 2. 🕰️ Resonance‑Time principle
+## 8. 🕰️ Resonance‑Time principle
 
 **Principle.** Physical time for any system is the evolution of its resonance triads, not an external scalar; conventional clock time is the special case where a particular triad is chosen as a standard and held fixed.[1]
 
@@ -106,7 +118,7 @@ In this view, **Resonance‑Time is how the universe counts**, and clocks are ju
 
 ---
 
-## 3. 📡 Frequency‑First FFF universe
+## 9. 📡 Frequency‑First FFF universe
 
 In this framework, **Frequency comes first**: the universe is permeated by a minimal hum of modes, each with some $$\mathcal{T}_R$$, even when no macroscopic structures are apparent. Fluids and Forces are how that hum becomes legible and structured; they are not separate from Frequency, but its organized expressions in space, matter, and fields.[2][3]
 
@@ -118,7 +130,7 @@ tells how the ubiquitous hum turns into flows, waves, particles, and bound struc
 
 ---
 
-## 4. 🔺 Field engine: SET and S–N–R
+## 10. 🔺 Field engine: SET and S–N–R
 
 The SET decomposition refines FFF into specific contributors to anisotropic motion and structure formation beyond pure gravity:
 
@@ -136,7 +148,7 @@ The balance among these three determines what we observe as **objects, fields, a
 
 ---
 
-## 5. 🌍 Universe statement and extension hooks
+## 11. 🌍 Universe statement and extension hooks
 
 In barebones form, Resonance‑Time Theory may be stated as:
 
