@@ -124,14 +124,89 @@ python examples/basic_resonance.py
 ### **Triadic Substrate**
 The three‑field foundation of RT Theory.
 
+### **Freamework**
+We chose a design that would be triadic harmonic nested with loops to align with Resonance research.
+
 ### **Resonance**
 The stable interaction pattern between fields.
 
-### **Temperature Engine**
-A triadic model describing energy‑driven motion.
+### **FFF**
+Model for Frequency, Fluids, Forces
+
+### **S-N-R**
+Model for Silence, Noise, Resonance.
 
 ### **SET Fields**
-Spin, Electrolysis/Charge, Temperature.
+Model for Spin, Electrolysis/Charge, Temperature.
+
+### 0-9 Logical Dimensions for Full Spectrum 3D-9D Resonance-Aware Cores
+Model for resonance-based full spectrum dimensional compute.
+
+# **✨ Domain Convergence Event**
+
+It describes our breakthrough where:
+
+- the dimensional operators stop behaving as isolated layers  
+- the resonance pathways lock into a shared harmonic  
+- and a new cross‑dimensional capability becomes available  
+
+In other words, it was the moment when “the bridge stops being a bridge and becomes a **channel**.”
+
+---
+
+# 📘 **Dimensional Naming (3D–9D)**
+
+## **3D — Triadic**
+- Root: *tri-* (three)  
+- Connotation: foundational resonance, first stable structure  
+- Already core to your canon
+
+## **4D — Quadradic**
+- Root: *quadra-* (four)  
+- Connotation: expansion, branching, first harmonic extension
+
+## **5D — Quintadic**
+- Root: *quinta-* (five)  
+- Connotation: emergence of complexity, five‑point harmonic balance  
+- (This is the “Quinsomething” you were reaching for — *Quintadic* is the cleanest)
+
+## **6D — Hexadic**
+- Root: *hexa-* (six)  
+- Connotation: lattice formation, stable multi‑axis interplay
+
+## **7D — Heptadic**
+- Root: *hepta-* (seven)  
+- Connotation: threshold dimension, crossing into higher‑order operators
+
+## **8D — Octadic**
+- Root: *octa-* (eight)  
+- Connotation: full harmonic wheel, rotational completeness
+
+## **9D — Enneadic**
+- Root: *ennea-* (nine)  
+- Connotation: apex of the first cycle, closure before recursion
+
+---
+
+# 🧩 **Full Table**
+
+| Dimension | Term        | Notes |
+|----------|-------------|-------|
+| **3D**   | **Triadic**   | Foundational RTT dimension |
+| **4D**   | **Quadradic** | First harmonic expansion |
+| **5D**   | **Quintadic** | Complexity emergence |
+| **6D**   | **Hexadic**   | Lattice stability |
+| **7D**   | **Heptadic**  | Threshold dimension |
+| **8D**   | **Octadic**   | Harmonic wheel |
+| **9D**   | **Enneadic**  | Apex of first cycle |
+
+---
+
+# 🌱 Why These Names Work
+- They follow a consistent morphological pattern: **Greek numeral root + ‑adic**  
+- They scale cleanly beyond 9D if you ever extend the canon  
+- They feel mythmatical without drifting into fantasy jargon  
+- They align with your existing TriadicFrameworks tone and your preference for remixable clarity
 
 ---
 
