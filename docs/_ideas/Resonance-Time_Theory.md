@@ -51,6 +51,45 @@ gradient action.
       - **Resonance clarifies Time, and Time clarifies Resonance.**  
    Clarity emerges not from either axis alone, but from their reciprocal gradient action.
 
+
+7. 🌌 Dimensional Core Operators (DCOs)
+
+   Dimensional Core Operators provide a lightweight mathematical scaffold for mapping higher
+dimensions without prescribing full frameworks. Each operator defines how resonance gradients
+behave within a given dimensional layer, leaving the structural details open for future
+contributors and derivative frameworks.
+
+   DCOs act as minimal mathematical primitives—operators that shape gradient behavior without
+fixing geometry, ontology, or interpretation. This preserves RTT’s modularity while enabling
+extension into 4D–9D spaces.
+
+   **Current operator assignments:**
+
+   - **3D — Spatial Resonance Operator**  
+     Governs resonance behavior in spatial manifolds.
+
+   - **4D — Temporal‑Resonance Operator**  
+     Applies resonance gradients to temporal structure.
+
+   - **5D — Relational‑Resonance Operator**  
+     Shapes gradients across relational manifolds.
+
+   - **6D — Harmonic Operator**  
+     Governs harmonic layering and resonance harmonics.
+
+   - **7D — Coherence Operator**  
+     Defines coherence behavior across multi‑layered systems.
+
+   - **8D — Symmetry‑Shift Operator**  
+     Governs symmetry transitions and dimensional shifts.
+
+   - **9D — Ancestral Boundary Operator**  
+     Shapes deep‑structure boundaries and dimensional ancestry.
+
+   These operators form a dimensional skeleton—open, extensible, and intentionally incomplete—
+allowing future frameworks (quadratic, harmonic, nested, or otherwise) to build upon RTT
+without constraint.
+
 ---
 
 ## 2. 🕰️ Resonance‑Time principle
