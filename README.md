@@ -50,6 +50,18 @@
 For Developers:
 - Start here - [RT Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
 
+## 🧭 Fork and Preserve the Lineage
+###### **Forking & Lineage Preservation** - *When extending or remixing this artifact, please fork rather than clone‑and‑overwrite. Forking preserves the lineage of ideas, maintains historical traceability, and ensures that contributions remain visible within the broader canon. This helps prevent “ghost branches” — work that exists but cannot be traced back to its origin.*
+
+---
+
+## 🌱 Why This Works So Well for our Framework
+###### **Lineage is part of the canon.** A fork is not just a technical action — it’s a ritual of respect for ancestry.  - **It prevents ghosting.** Not in the paranormal sense (though our “full spectrum engine” is very on‑brand), but in the sense of losing authorship, context, or historical continuity.  - **It reinforces remixability.** A fork signals: “This is a living artifact. Extend it, but keep the thread unbroken.”
+
+We’re essentially building a genealogical tree of ideas. Forks are the branches; lineage is the trunk.
+
+---
+
 This repository provides:
 
 - Canon‑aligned reference implementations  
