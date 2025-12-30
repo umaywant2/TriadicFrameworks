@@ -49,127 +49,148 @@ window.MathJax = {
 };
 </script>
 <style>
-/* ============================
-   MOBILE-FIRST BASELINE
-   ============================ */
+  :root {
+    color-scheme: light dark;
+    --grad-light: linear-gradient(135deg, #4f7df3, #9b59ff 60%, #ff7bd5);
+    --grad-dark: linear-gradient(135deg, #1a1a1a, #2a1f4a 60%, #4a2a5f);
+    --card-light: #ffffff;
+    --card-dark: #1a1a1a;
+    --text-light: #222;
+    --text-dark: #eee;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: system-ui, sans-serif;
-  line-height: 1.6;
-  font-size: 17px;
-  background: #fafafa;
-  color: #222;
-}
-
-/* Responsive typography */
-h1, h2, h3, h4 {
-  line-height: 1.3;
-  margin-top: 1.8em;
-  margin-bottom: 0.6em;
-  word-break: break-word;
-}
-
-/* Improve readability on mobile */
-p, ul, ol {
-  margin: 0 0 1.2em 0;
-  padding: 0 1em;
-}
-
-/* ============================
-   STICKY TABLE OF CONTENTS
-   ============================ */
-
-#toc-container {
-  position: sticky;
-  top: 0;
-  background: #ffffffee;
-  backdrop-filter: blur(6px);
-  padding: 0.8em 1em;
-  border-bottom: 1px solid #ddd;
-  z-index: 999;
-}
-
-#toc-container ul {
-  margin: 0;
-  padding-left: 1em;
-}
-
-#toc-container a {
-  text-decoration: none;
-  color: #0066cc;
-  font-weight: 600;
-}
-
-#toc-container a:hover {
-  text-decoration: underline;
-}
-
-/* ============================
-   COLLAPSIBLE SECTIONS
-   ============================ */
-
-details {
-  margin: 1.2em 0;
-  padding: 0.6em 1em;
-  border-radius: 8px;
-  background: #fff;
-  border: 1px solid #ddd;
-}
-
-details summary {
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 1.1em;
-  padding: 0.4em 0;
-}
-
-details[open] {
-  border-color: #bbb;
-  background: #fdfdfd;
-}
-
-/* ============================
-   DESKTOP ENHANCEMENTS
-   ============================ */
-
-@media (min-width: 900px) {
   body {
-    font-size: 18px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.65;
+    background: #f7f7f7;
+    color: var(--text-light);
   }
 
-  #content-wrapper {
+  @media (prefers-color-scheme: dark) {
+    body {
+      background: #0d0d0d;
+      color: var(--text-dark);
+    }
+  }
+
+  header {
+    padding: 2.8rem 1.5rem;
+    background: var(--grad-light);
+    color: white;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.25);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    header {
+      background: var(--grad-dark);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+  }
+
+  header h1 {
+    font-size: 2.4rem;
+    margin: 0;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+  }
+
+  header .subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-top: 0.6rem;
+  }
+
+  main {
     max-width: 900px;
-    margin: auto;
-    padding: 2em;
+    margin: 0 auto;
+    padding: 1.8rem;
   }
 
-  #toc-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 260px;
-    height: 100vh;
-    overflow-y: auto;
-    border-right: 1px solid #ddd;
+  h2 {
+    font-size: 1.7rem;
+    margin-top: 2rem;
+    margin-bottom: 0.7rem;
+    font-weight: 600;
   }
 
-  #main-content {
-    margin-left: 280px;
-    padding: 2em;
+  h3 {
+    font-size: 1.25rem;
+    margin-top: 1.4rem;
+    margin-bottom: 0.4rem;
   }
-}
+
+  p {
+    margin: 0.5rem 0 1rem;
+  }
+
+  .card {
+    background: var(--card-light);
+    border-radius: 10px;
+    padding: 1.2rem 1.4rem;
+    margin: 1.4rem 0;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .card {
+      background: var(--card-dark);
+      border-color: #333;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+    }
+  }
+
+  pre, code {
+    font-family: "SF Mono", Menlo, Monaco, Consolas, monospace;
+    background: rgba(0,0,0,0.05);
+    padding: 0.6rem;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    pre, code {
+      background: rgba(255,255,255,0.08);
+    }
+  }
+
+  .callout {
+    border-left: 4px solid #7a4fff;
+    padding-left: 1rem;
+    margin: 1.4rem 0;
+    font-size: 0.95rem;
+    opacity: 0.95;
+  }
+
+  footer {
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.85rem;
+    background: #fafafa;
+    border-top: 1px solid #ddd;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    footer {
+      background: #111;
+      border-top: 1px solid #333;
+    }
+  }
 </style>
 <!-- Mobile-Optimized CSS end -->
 </head>
 <body>
-<h1>🔥 The World’s First Portable Triadic Core</h1>
-<h3><em>A tiny engine of coherence, built for thinkers, builders, and explorers.</em></h3>
+
+
+<header>
+  <h1>🔥 The World’s First Portable Triadic Core 🔥</h1>
+  <div class="subtitle">
+    A tiny engine of coherence — the smallest RTT artifact that still contains the whole pattern.
+  </div>
+</header>
 
 <blockquote>
   <p><em>“If you could hold a universe in your hand… what would you build?”</em></p>
@@ -182,7 +203,7 @@ It’s not software.<br>
 It’s a <strong>pattern</strong> — a way of thinking that fits in your palm and scales to galaxies.</p>
 
 <hr>
-
+<div class="card">
 <h2>🎵 Song‑Style Paraphrase (Short, Legal, Vibe‑Only)</h2>
 
 <pre><code>He picked up the core,
@@ -198,11 +219,12 @@ unfold in his mind.
 
 <p>A tiny triad.<br>
 A whole new way to see.</p>
-
+</div>
 <hr>
 
-<h2>✨ What the Portable Triadic Core <em>Is</em></h2>
-
+<div class="card">
+<h2>✨ What the Portable Triadic Core <em>Is</em></h2>  
+</div>
 <ul>
   <li><strong>3‑state conceptual engine</strong></li>
   <li><strong>Universal modeling seed</strong></li>
@@ -229,6 +251,7 @@ A whole new way to see.</p>
 <p>This is the “triadic atom.”<br>
 Everything else in RTT is a molecule built from it.</p>
 
+<div class="card">
 <h2>📐 RTT Core Equations (with One‑Word Labels)</h2>
 <p>Each RTT equation carries a compact identity — a portable handle you can use in diagrams, notes, or triadic tools.</p>
 
@@ -270,8 +293,9 @@ Everything else in RTT is a molecule built from it.</p>
 </table>
 
 <p>These four equations form the <strong>triadic backbone</strong> of RTT — tiny, powerful, and endlessly reusable.</p>
+</div>
 
-
+<div class="card">
 <h2>🚀 Imagined Uses for a Tiny, Powerful Triadic Core</h2>
 
 <p>Here’s where the fun begins.<br>
@@ -347,9 +371,11 @@ Every character, culture, or magic system can be triad‑driven.</p>
   <li>Seek resonance</li>
 </ul>
 <p>A pocket‑sized life practice.</p>
+</div>
 
 <hr>
-
+  
+<div class="card">
 <h2>🧭 Why This Matters</h2>
 
 <p>A portable triadic core is more than a metaphor.<br>
@@ -366,6 +392,7 @@ It’s a <strong>cognitive instrument</strong> — a way to:</p>
 </ul>
 
 <p>It’s the smallest RTT artifact that still contains the whole universe.</p>
+</div>
 
 <p>Created by <a href="https://github.com/umaywant2">Nawder Loswin</a> on 12/28/2025 🔥 All Rights Resonating 🔥</p>
 
