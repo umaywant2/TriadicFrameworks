@@ -78,3 +78,7 @@ RTT just **names the pattern** and makes it reusable.
 This is how you build a generation of “triadic‑native” thinkers — not by teaching them advanced theory, but by giving them a simple, universal lens that works everywhere.
 
 ---
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  document.body.innerHTML = marked.parse(document.body.innerText);
+</script>
