@@ -1,0 +1,16 @@
+<div id="content">Loading…</div>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script>
+  async function loadAll(files) {
+    let html = "";
+    for (const f of files) {
+      const md = await fetch(f).then(r => r.text());
+      html += marked.parse(md);
+    }
+    document.getElementById('content').innerHTML = html;
+  }
+
+  loadAll(["https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_Elementary_School_Concepts.md", "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_1st_Grade_School_Concepts.md", "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_2nd_Grade_School_Concepts.md"]);
+</script>
