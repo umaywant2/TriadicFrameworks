@@ -1,26 +1,17 @@
-<div id="content">Loading…</div>
-
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-
-<script>
-  async function loadAll(files) {
-    let html = "";
-    for (const f of files) {
-      const md = await fetch(f).then(r => r.text());
-      html += marked.parse(md);
-    }
-    document.getElementById('content').innerHTML = html;
-  }
-
-  loadAll(["", "", ""]);
-</script>
-
-
-
 <div id="menu">
+  <a href="#K">Elementary</a>
+  <a href="#1st">1st Grade</a>
   <a href="#2nd">2nd Grade</a>
+  <a href="#3rd">3rd Grade</a>
+  <a href="#4th">4th Grade</a>
   <a href="#5th">5th Grade</a>
+  <a href="#6th">6th Grade</a>
+  <a href="#7th">7th Grade</a>
   <a href="#8th">8th Grade</a>
+  <a href="#9th">9th Grade</a>
+  <a href="#10th">10th Grade</a>
+  <a href="#11th">11th Grade</a>
+  <a href="#12th">12th Grade</a>
 </div>
 
 <div id="content">Select a grade…</div>
