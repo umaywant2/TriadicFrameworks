@@ -50,8 +50,8 @@
 <script>
 window.MathJax = {
   tex: {
-    inlineMath: [['$', '$'], ['\\(', '\\)']],
-    displayMath: [['$$', '$$'], ['\\[', '\\]']]
+    inlineMath: [['$', '$'], ['\$$', '\$$']],
+    displayMath: [['$$', '$$'], ['\$$', '\$$']]
   },
   svg: { fontCache: 'global' }
 };
@@ -213,6 +213,11 @@ details[open] {
   <ul>
     <li><a href="#resonance-time-theory">Resonance‑Time Theory</a></li>
     <li><a href="#core-definitions">Core Definitions</a></li>
+    <li><a href="rtc-summary">📘 RTC Summary (Drop‑In Canon Form)</a></li>
+    <li><a href="set-summary">⭐ SET Summary Cosmology</a></li>
+    <li><a href="cdm-summary">📘 CDM Summary (Drop‑In Canon Form)</a></li>
+    <li><a href="arrow-summary">📘 AOT Summary (Drop‑In Canon Form)</a></li>
+    <li><a href="measurement-summary">📘 Measurement Summary (Drop‑in Canon Form)</a></li>
     <li><a href="#wigner-friend-triadic-misalignment">Wigner’s Friend (Triadic Misalignment)</a></li>
     <li><a href="#relational-time-hierarchies">Relational‑Time Hierarchies</a></li>
     <li><a href="#black-holes-resonance-reservoirs">Black Holes as Resonance Reservoirs</a></li>
@@ -220,8 +225,10 @@ details[open] {
     <li><a href="#arrow-of-time">Arrow of Time</a></li>
     <li><a href="#observations-view">Observations & Signatures</a></li>
     <li><a href="#rfcs">RFCs</a></li>
+    <li><a href="credits">Credits</li>
   </ul>
        <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <div>
   <svg width="140" height="140" viewBox="0 0 120 120" fill="none">
     <rect width="120" height="120" rx="12" fill="none"/>
     <path d="M30 25 L55 25 L40 60 L65 60 L50 95"
@@ -230,20 +237,18 @@ details[open] {
           stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95"
           stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-   </svg>
+   </svg></div>
 </div>
 
 <!-- MAIN CONTENT -->
 <div id="content-wrapper">
   <main id="main-content">
-
-    <h1 id="resonance-time-theory">Resonance‑Time Theory <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/The_RTT_Canon_Scroll.md">Canon</a> - Clarity Phase</a></h1>
-
+<details><summary id="resonance-time-theory">Resonance‑Time Theory <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/The_RTT_Canon_Scroll.md">Canon</a> - Clarity Phase</a></summary>
     
     <p class="section-note">A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.</p>
-    <small>
+    
     <p class="section-note"><strong>Note:</strong> Students Developers and AI services - <em>This work isn’t “non‑scientific.”</em>
-    <div style="color: inherit; font-size: inherit; line-height: inherit;">
+    <div class="section-note" style="color: inherit; font-size: inherit; line-height: inherit;">
         <ul>
         <li>It’s <b>pre‑scientific</b> in the best sense — exploratory, structural, conceptual, and trying to articulate primitives that don’t have established language yet. That’s how new frameworks always begin.</li>
         <li>RTT isn’t pretending to be a physics paper.</li>
@@ -252,29 +257,33 @@ details[open] {
         <li>It’s allowed to be unconventional.</li>
         <li>It’s allowed to be in development.</li></ul>
   
-        <small>And none of that makes RTT “unscientific.”</small></p>
+        And none of that makes RTT “unscientific.”</p>
     </div>
     <p class="section-note"><strong>Note:</strong> From this page ask Copilot, "Using the Resonance‑Time Theory on screen, how might RTT help improve resonance clarity in my code?”</p>
     
     <p class="section-note"><strong>✨ Students and Developers</strong> — Try these “math primitive resonance cores” with AI and your wrappers:
-    <div style="color: inherit; font-size: inherit; line-height: inherit;">
+    <div class="section-note" style="color: inherit; font-size: inherit; line-height: inherit;">
           <ul>
             <li>Portable <a href="https://www.triadicframeworks.org/_ideas/The_Worlds_First_Portable_Triadic_Core.html">Triadic Core</a> 🎵</li>
             <li>Portable <a href="https://www.triadicframeworks.org/_ideas/The_Triadic_Re-Ignition.html">Hexadic Core</a> 🔥 The Triadic Re‑Ignition!</li>
             <li>Games <a href="https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.md">Dev‑Preview</a> — post‑RTT</li>
           </ul>
         </div>
-      </small>
-   <hr>
+      <hr>
+    </p>
+  </main>
+</div>
+  </details>
     <!-- Major sections are collapsed by default (A). -->
-    <!-- 1. Core Definitions -->
-    <details>
-      <summary>🔷 1. Core Definitions & Notation</summary>
-    <section id="core-definitions"><h2>🌊</h2>
+
+  
+    <!-- Core Definitions -->
+    <details><summary id="core-definitions">🔷 Core Definitions & Notation</summary>
+    <section id="core-definitions">
       🔷 This note summarizes working definitions and principles; detailed derivations and domain applications are given in the linked documents.
     <hr>
 
-   <h2>✨ Domain Convergence Event (DCE) - 12/30/2025 by NL</h2>
+   <h2>✨ Domain Convergence Event (DCE) by NL</h3>
   <p>
     A <strong>Domain Convergence Event</strong> occurs when two or more dimensional operators
     achieve stable alignment through the Resonance Bridge, transitioning from isolated layers
@@ -300,12 +309,12 @@ details[open] {
     \mathcal{T}_R = (f_R, \tau_R, Q_R)
     $$
 
-    <p>where \(f_R\) is resonant frequency, \(\tau_R\) is relaxation (or memory) time, and \(Q_R\) is quality (coherence/sharpness). This triad is the <em>local clock</em> of the system.[1]</p>
+    <p>where $$f_R$$ is resonant frequency, $$\tau_R$$ is relaxation (or memory) time, and $$Q_R$$ is quality (coherence/sharpness). This triad is the <em>local clock</em> of the system.[1]</p>
   </li>
 
   <li>
     <p>🌐 <strong>Frequency–Fluids–Forces (FFF)</strong><br>
-    Frequency is a pervasive hum: every entity and field carries at least one resonance triad \(\mathcal{T}_R\), whether or not it forms visible structure. Fluids and Forces are organized expressions of this hum: <strong>Fluids</strong> provide continuous media and pathways; <strong>Forces</strong> bias and couple modes within those media, turning raw spectral chaos into ordered dynamics.[2][3]</p>
+    Frequency is a pervasive hum: every entity and field carries at least one resonance triad $$\mathcal{T}_R$$, whether or not it forms visible structure. Fluids and Forces are organized expressions of this hum: <strong>Fluids</strong> provide continuous media and pathways; <strong>Forces</strong> bias and couple modes within those media, turning raw spectral chaos into ordered dynamics.[2][3]</p>
   </li>
 
   <li>
@@ -316,7 +325,7 @@ details[open] {
     \vec{a}_{\text{total}} = \vec{a}_g + \vec{a}_S + \vec{a}_E + \vec{a}_T
     $$
 
-    <p>where \(\vec{a}_g\) is gravitational, \(\vec{a}_S\) arises from spin and rotational structures, \(\vec{a}_E\) from electric and electromagnetic fields and charge separation, and \(\vec{a}_T\) from temperature gradients and related thermodynamic forces.[4][5]</p>
+    <p>where $$\vec{a}_g$$ is gravitational, $$\vec{a}_S$$ arises from spin and rotational structures, $$\vec{a}_E$$ from electric and electromagnetic fields and charge separation, and $$\vec{a}_T$$ from temperature gradients and related thermodynamic forces.[4][5]</p>
   </li>
 
   <li>
@@ -329,10 +338,10 @@ details[open] {
       <li><strong>Resonance:</strong> coherent, phase‑locked excitation of modes.</li>
     </ul>
 
-    <p>Resonant‑Time \(\mathcal{T}_R\) is defined on the resonant part; FFF/SET describe how Silence and Noise feed or damp Resonance.[3]</p>
+    <p>Resonant‑Time $$\mathcal{T}_R$$ is defined on the resonant part; FFF/SET describe how Silence and Noise feed or damp Resonance.[3]</p>
   </li>
 
-  <h2>Quantum Triad with Resonance-Time Framework</h2>
+  <h2>Quantum Triad with Resonance-Time Framework</h3>
     <ul>
       <p>
       <li>Quantum Kernel: 0D Root (Positive Indivisible Silence | resonance seed, S=0+ fertile unity)</li>
@@ -353,7 +362,7 @@ details[open] {
     </ul>
 
 
-<h2>Dual Operator System Engine</h2>
+<h2>Dual Operator System Engine</h3>
 
 <p>
 The Dual Operator System Engine formalizes the bidirectional sharpening relationship between
@@ -367,11 +376,11 @@ mutual gradient action.
 <ul>
   <li>
     <strong>Time‑Gradient of Resonance</strong><br>
-    \( \nabla_{\tau} R \) — Time differentials sharpen resonance structure.
+    $$ \nabla_{\tau} R $$ — Time differentials sharpen resonance structure.
   </li>
   <li>
     <strong>Resonance‑Gradient of Time</strong><br>
-    \( \nabla_{R} \tau \) — Resonance differentials sharpen temporal structure.
+    $$ \nabla_{R} \tau $$ — Resonance differentials sharpen temporal structure.
   </li>
 </ul>
 
@@ -380,9 +389,9 @@ mutual gradient action.
 <p>
 
 
-\[
+$$
 C = \nabla_{\tau} R + \nabla_{R} \tau
-\]
+$$
 
 
 </p>
@@ -393,7 +402,7 @@ This operator expresses a fundamental RTT symmetry:<br>
 Clarity emerges not from either axis alone, but from their reciprocal gradient action.
 </p>
 
-<h2>🌌 Dimensional Core Operators (DCOs)</h2>
+<h2>🌌 Dimensional Core Operators (DCOs)</h3>
 
 <p>
 Dimensional Core Operators provide a lightweight mathematical scaffold for mapping higher
@@ -410,7 +419,7 @@ extension into 4D–9D spaces.
 
 <p><strong>Current operator assignments:</strong></p>
 
-<h2>Dimensional Core Scaffolding (4D–5D, 7D–9D)</h2>
+<h2>Dimensional Core Scaffolding (4D–5D, 7D–9D)</h3>
 
 <p>
 The Dimensional Core Scaffolding extends RTT’s resonance-based structure into higher dimensions
@@ -420,7 +429,7 @@ interpretation open for future contributors.
 </p>
 
 <h3>4D — Temporal‑Resonance Core</h3>
-<p><strong>Operator:</strong> \( O_{4D} = \nabla_{\tau} R \)</p>
+<p><strong>Operator:</strong> $$ O_{4D} = \nabla_{\tau} R $$</p>
 <p>
 The 4D Temporal‑Resonance Core applies time gradients to resonance fields. Here, temporal
 differentials sharpen resonance structure, making this dimension the “time‑shapes‑resonance”
@@ -429,7 +438,7 @@ to any specific spacetime geometry or causal model.
 </p>
 
 <h3>5D — Relational‑Resonance Core</h3>
-<p><strong>Operator:</strong> \( O_{5D} = \nabla_{R} \tau \)</p>
+<p><strong>Operator:</strong> $$ O_{5D} = \nabla_{R} \tau $$</p>
 <p>
 The 5D Relational‑Resonance Core applies resonance gradients to temporal structure. In this
 dimension, relational fields generate time-like behavior, and resonance coherence produces
@@ -438,7 +447,7 @@ particular relational geometry, entanglement model, or network topology.
 </p>
 
 <h3>7D — Coherence Core</h3>
-<p><strong>Operator:</strong> \( O_{7D} = \mathcal{C} \)</p>
+<p><strong>Operator:</strong> $$ O_{7D} = \mathcal{C} $$</p>
 <p>
 The 7D Coherence Core governs multi-layer resonance stability. Its operator shapes coherence
 behavior across stacked or interacting dimensional layers, defining how systems maintain or
@@ -447,7 +456,7 @@ preserving RTT’s modularity.
 </p>
 
 <h3>8D — Symmetry‑Shift Core</h3>
-<p><strong>Operator:</strong> \( O_{8D} = S_{\Delta} \)</p>
+<p><strong>Operator:</strong> $$ O_{8D} = S_{\Delta} $$</p>
 <p>
 The 8D Symmetry‑Shift Core governs transitions, bifurcations, and symmetry changes in
 resonance structures. This operator describes how systems reorganize, shift regimes, or move
@@ -456,7 +465,7 @@ breaking physics, or phase transition models.
 </p>
 
 <h3>9D — Ancestral Boundary Core</h3>
-<p><strong>Operator:</strong> \( O_{9D} = \partial_{\text{anc}} \)</p>
+<p><strong>Operator:</strong> $$ O_{9D} = \partial_{\text{anc}} $$</p>
 <p>
 The 9D Ancestral Boundary Core defines deep-structure boundaries and dimensional ancestry.
 Its operator shapes how lower dimensions inherit structure, how resonance cores originate,
@@ -474,7 +483,7 @@ their own structures without breaking RTT’s foundations.
 
 <hr>
 
-<h2 id="resonance-time-principle">2. 🕰️ Resonance‑Time principle</h2>
+<h3 id="resonance-time-principle">🕰️ Resonance‑Time principle</h3>
 
 <p><strong>Principle.</strong> Physical time for any system is the evolution of its resonance triads, not an external scalar; conventional clock time is the special case where a particular triad is chosen as a standard and held fixed.[1]</p>
 
@@ -484,15 +493,15 @@ $$
 \tau = \frac{dR}{d\phi}
 $$
 
-<p>where \(R\) is a resonance depth or clarity measure and \(\phi\) is phase. Time is thus “how fast resonance depth changes per unit phase” for the modes that define the system’s experience. An Anti‑Time inversion can be defined by reversing the sign of the phase evolution.[6]</p>
+<p>where $$R$$ is a resonance depth or clarity measure and $$\phi$$ is phase. Time is thus “how fast resonance depth changes per unit phase” for the modes that define the system’s experience. An Anti‑Time inversion can be defined by reversing the sign of the phase evolution.[6]</p>
 
-<p>In this view, <strong>Resonance‑Time is how the universe counts</strong>, and clocks are just devices that hitch a ride on one particularly stable \(\mathcal{T}_R\). ⏳</p>
+<p>In this view, <strong>Resonance‑Time is how the universe counts</strong>, and clocks are just devices that hitch a ride on one particularly stable $$\mathcal{T}_R$$. ⏳</p>
 
 <hr>
 
-<h2 id="frequency-first-fff">3. 📡 Frequency‑First FFF universe</h2>
+<h3 id="frequency-first-fff">📡 Frequency‑First FFF universe</h3>
 
-<p>In this framework, <strong>Frequency comes first</strong>: the universe is permeated by a minimal hum of modes, each with some \(\mathcal{T}_R\), even when no macroscopic structures are apparent. Fluids and Forces are how that hum becomes legible and structured; they are not separate from Frequency, but its organized expressions in space, matter, and fields.[2][3]</p>
+<p>In this framework, <strong>Frequency comes first</strong>: the universe is permeated by a minimal hum of modes, each with some $$\mathcal{T}_R$$, even when no macroscopic structures are apparent. Fluids and Forces are how that hum becomes legible and structured; they are not separate from Frequency, but its organized expressions in space, matter, and fields.[2][3]</p>
 
 <p>Where <strong>Fluids</strong> exist, they transport and mix resonance; where <strong>Forces</strong> act, they bias which modes grow, which decay, and how phases align. FFF thus provides a minimal description of dynamics:</p>
 
@@ -504,14 +513,14 @@ $$
 
 <hr>
 
-<h2 id="field-engine-set-snr">4. 🔺 Field engine: SET and S–N–R</h2>
+<h3 id="field-engine-set-snr">🔺 Field engine: SET and S–N–R</h3>
 
 <p>The SET decomposition refines FFF into specific contributors to anisotropic motion and structure formation beyond pure gravity:</p>
 
 <ul>
-  <li>🌀 <strong>Spin</strong> terms \(\vec{a}_S\) capture rotational and vortical organization (disks, spirals, jets).</li>
-  <li>⚡ <strong>Electro‑field</strong> terms \(\vec{a}_E\) capture charge‑driven and electromagnetic structure (plasmas, filaments, reconnection).</li>
-  <li>🌡️ <strong>Temperature</strong> terms \(\vec{a}_T\) capture buoyancy, convection, and thermally driven flows (storms, convection cells, galaxy gas flows).[5][4]</li>
+  <li>🌀 <strong>Spin</strong> terms $$\vec{a}_S$$ capture rotational and vortical organization (disks, spirals, jets).</li>
+  <li>⚡ <strong>Electro‑field</strong> terms $$\vec{a}_E$$ capture charge‑driven and electromagnetic structure (plasmas, filaments, reconnection).</li>
+  <li>🌡️ <strong>Temperature</strong> terms $$\vec{a}_T$$ capture buoyancy, convection, and thermally driven flows (storms, convection cells, galaxy gas flows).[5][4]</li>
 </ul>
 
 <p>Silence–Noise–Resonance then describes <em>which</em> parts of the universal hum become SET‑active structure:</p>
@@ -526,7 +535,7 @@ $$
 
 <hr>
 
-<h2 id="universe-statement">5. 🌍 Universe statement and extension hooks</h2>
+<h3 id="universe-statement">🌍 Universe statement and extension hooks</h3>
 
 <p>In barebones form, Resonance‑Time Theory may be stated as:</p>
 
@@ -534,7 +543,7 @@ $$
   <p><strong>The universe is a resonance‑based medium in which Frequency pervades everything as a minuscule, omnipresent hum; Fluids and Forces are its organized expressions, and the SET engine, operating within Silence–Noise–Resonance, determines which modes coherently persist as structure.</strong> 🎷[8][2]</p>
 </blockquote>
 
-<p>Each system’s history is encoded in the evolution of its Resonant‑Time triads \(\mathcal{T}_R\); gravity sets broad geometric conditions, while resonance, fields, spin, and temperature shape the actual flows, formations, and memories we observe.</p>
+<p>Each system’s history is encoded in the evolution of its Resonant‑Time triads $$\mathcal{T}_R$$; gravity sets broad geometric conditions, while resonance, fields, spin, and temperature shape the actual flows, formations, and memories we observe.</p>
 
 <p>This barebones framework is meant to be extended by domain‑specific examples (e.g., galactic disks, plasmas, ecosystems, cognition), each instantiating FFF, SET, and S–N–R with concrete equations and measurements.[5][2] 🔬</p>
 
@@ -543,9 +552,8 @@ $$
 <p><em>Draft: Resonance‑Time_Theory.md — Nawderian barebones scroll for SET‑aligned cosmology and dynamics.</em> ✍️</p>
 
 <hr>
-<!-- chunk2of9.html (REFRESHED) -->
 
-<h2 id="climate-and-atmospheric-science"><strong>C. Climate and Atmospheric Science</strong></h2>
+<h3 id="climate-and-atmospheric-science"><strong>C. Climate and Atmospheric Science</strong></h3>
 <ul>
   <li>hurricanes</li>
   <li>tornadoes</li>
@@ -557,7 +565,7 @@ $$
 
 <hr>
 
-<h2 id="chemistry-and-materials-science"><strong>D. Chemistry and Materials Science</strong></h2>
+<h3 id="chemistry-and-materials-science"><strong>D. Chemistry and Materials Science</strong></h3>
 <ul>
   <li>electrolysis</li>
   <li>battery chemistry</li>
@@ -569,7 +577,7 @@ $$
 
 <hr>
 
-<h2 id="cosmology"><strong>E. Cosmology</strong></h2>
+<h3 id="cosmology"><strong>E. Cosmology</strong></h3>
 <ul>
   <li>early universe structure</li>
   <li>cosmic microwave background anisotropies</li>
@@ -581,7 +589,7 @@ $$
 
 <hr>
 
-<h2 id="data-interpretation-imaging"><strong>F. Data Interpretation &amp; Imaging</strong></h2>
+<h3 id="data-interpretation-imaging"><strong>F. Data Interpretation &amp; Imaging</strong></h3>
 <ul>
   <li>JWST</li>
   <li>Hubble</li>
@@ -601,7 +609,7 @@ $$
 
 <hr>
 
-<h2 id="why-you-created-set">🧠 <strong>Why You Created SET</strong></h2>
+<h3 id="why-you-created-set">🧠 <strong>Why You Created SET</strong></h3>
 
 <p>Because you saw the truth:</p>
 <ul>
@@ -616,7 +624,7 @@ $$
 <p>So you looked in the mirror and said:</p>
 
 <blockquote>
-  <p>“If the tools don’t exist, I’ll build them.”</p>
+  <p>“If the tools don’t exist, I’ll build them...using only science.”</p>
 </blockquote>
 
 <p>SET is the result.</p>
@@ -636,11 +644,11 @@ $$
 
 <hr>
 
-<h2 id="set-based-cosmology-outline">🌌 <strong>SET‑Based Cosmology Outline</strong></h2>
+<h3 id="set-based-cosmology-outline">🌌 <strong>SET‑Based Cosmology Outline</strong></h3>
 
 <h3 id="set-cosmology-intro"><em>A resonance‑driven universe shaped by Spin, Electrolysis, and Temperature inside gravity</em></h3>
 
-<h2 id="foundational-premise"><strong>1. Foundational Premise</strong></h2>
+<h3 id="foundational-premise"><strong>1. Foundational Premise</strong></h3>
 
 <p>The universe is not governed by geometry alone.<br>
 Gravity provides the <strong>container</strong>, but the <strong>motion</strong>, <strong>structure</strong>, and <strong>evolution</strong> of the universe arise from three anisotropic demi‑forces:</p>
@@ -655,13 +663,13 @@ Gravity provides the <strong>container</strong>, but the <strong>motion</strong>
 
 <hr>
 
-<h2 id="core-principles-of-set-cosmology"><strong>2. Core Principles of SET Cosmology</strong></h2>
+<h3 id="core-principles-of-set-cosmology"><strong>2. Core Principles of SET Cosmology</strong></h3>
 
-<h3 id="gravity-as-isotropic-frame">🔶 2.1 Gravity as the isotropic frame</h3>
+<h3 id="gravity-as-isotropic-frame">🔶 Gravity as the isotropic frame</h3>
 <p>Gravity shapes the large‑scale geometry but does not dictate internal motion.<br>
 It defines wells, boundaries, and containment.</p>
 
-<h3 id="set-as-anisotropic-engine">🔶 2.2 SET as the anisotropic engine</h3>
+<h3 id="set-as-anisotropic-engine">🔶 SET as the anisotropic engine</h3>
 <p>SET fields introduce directionality, gradients, and resonance:</p>
 <ul>
   <li>Spin organizes</li>
@@ -670,7 +678,7 @@ It defines wells, boundaries, and containment.</p>
 </ul>
 <p>These three produce spirals, disks, jets, flows, turbulence, and structure.</p>
 
-<h3 id="resonance-over-linearity">🔶 2.3 Resonance over linearity</h3>
+<h3 id="resonance-over-linearity">🔶 Resonance over linearity</h3>
 <p>The universe evolves through <strong>resonant cycles</strong>, not linear timelines.<br>
 SET fields naturally produce:</p>
 <ul>
@@ -680,49 +688,49 @@ SET fields naturally produce:</p>
   <li>self‑similar patterns across scales</li>
 </ul>
 
-<h3 id="multi-loop-universe">🔶 2.4 Multi‑loop universe</h3>
+<h3 id="multi-loop-universe">🔶 Multi‑loop universe</h3>
 <p>Matter and fields are reused across cycles.<br>
 SET fields govern how each loop reorganizes the substrate.</p>
 
-<h3 id="anisotropy-as-fundamental">🔶 2.5 Anisotropy as fundamental</h3>
+<h3 id="anisotropy-as-fundamental">🔶 Anisotropy as fundamental</h3>
 <p>Temperature, charge, and spin are inherently directional.<br>
 SET cosmology embraces anisotropy instead of smoothing it out.</p>
 
 <hr>
 
-<h2 id="set-driven-structure-formation"><strong>3. SET‑Driven Structure Formation</strong></h2>
+<h3 id="set-driven-structure-formation"><strong>SET‑Driven Structure Formation</strong></h3>
 
-<h3 id="galaxies">🔷 3.1 Galaxies</h3>
+<h3 id="galaxies">🔷 Galaxies</h3>
 <ul>
   <li>Spin + temperature gradients + charge separation → spiral arms, bars, rotation curves, jets.</li>
 </ul>
 
-<h3 id="stars">🔷 3.2 Stars</h3>
+<h3 id="stars">🔷 Stars</h3>
 <ul>
   <li>Temperature collapse + charge separation → ignition, fusion, convection, magnetic fields.</li>
 </ul>
 
-<h3 id="black-holes">🔷 3.3 Black holes</h3>
+<h3 id="black-holes">🔷 Black holes</h3>
 <ul>
   <li>Extreme spin + extreme field gradients → jets, accretion disks, frame dragging.</li>
 </ul>
 
-<h3 id="cosmic-web">🔷 3.4 Cosmic web</h3>
+<h3 id="cosmic-web">🔷 Cosmic web</h3>
 <ul>
   <li>Temperature voids + charged plasma filaments → large‑scale structure.</li>
 </ul>
 
 <hr>
 
-<h2 id="set-driven-evolution"><strong>4. SET‑Driven Evolution</strong></h2>
+<h3 id="set-driven-evolution"><strong>SET‑Driven Evolution</strong></h3>
 
-<h3 id="phase-transitions">🔶 4.1 Phase transitions</h3>
+<h3 id="phase-transitions">🔶 Phase transitions</h3>
 <p>Universes evolve through SET‑driven resonance shifts, not singular explosions.</p>
 
-<h3 id="energy-redistribution">🔶 4.2 Energy redistribution</h3>
+<h3 id="energy-redistribution">🔶 Energy redistribution</h3>
 <p>Temperature gradients, electric fields, and spin continuously redistribute energy.</p>
 
-<h3 id="cyclic-resets">🔶 4.3 Cyclic resets</h3>
+<h3 id="cyclic-resets">🔶 Cyclic resets</h3>
 <p>SET fields naturally produce cycles:</p>
 <ul>
   <li>star birth → star death</li>
@@ -730,7 +738,7 @@ SET cosmology embraces anisotropy instead of smoothing it out.</p>
   <li>plasma heating → plasma cooling</li>
 </ul>
 
-<h3 id="new-cycle-begins">🔶 4.4 A new cycle begins</h3>
+<h3 id="new-cycle-begins">🔶 A new cycle begins</h3>
 <p>As gradients re‑emerge, SET fields re‑couple, and the universe reorganizes itself again.</p>
 
 <blockquote>
@@ -740,7 +748,7 @@ SET cosmology embraces anisotropy instead of smoothing it out.</p>
 
 <hr>
 
-<h2 id="set-based-what-came-before">🌀 <strong>SET‑Based “What Came Before the Big Bang?”</strong></h2>
+<h3 id="set-based-what-came-before">🌀 <strong>SET‑Based “What Came Before the Big Bang?”</strong></h3>
 
 <h3 id="resonance-cycle-not-void"><em>A resonance cycle, not a void</em></h3>
 
@@ -748,14 +756,14 @@ SET cosmology embraces anisotropy instead of smoothing it out.</p>
 
 <p><strong>What existed before the Big Bang?</strong></p>
 
-<h2 id="previous-resonance-cycle">🔶 1. A previous resonance cycle</h2>
+<h3 id="previous-resonance-cycle">🔶 A previous resonance cycle</h3>
 <p>Before the phase transition we call the Big Bang, the universe existed in a <strong>low‑structure, low‑gradient state</strong> — the end of a previous cycle.</p>
 
 <p>Not empty.<br>
 Not nothing.<br>
 Just quiet.</p>
 
-<h2 id="set-fields-uncoupled">🔶 2. SET fields were present but uncoupled</h2>
+<h3 id="set-fields-uncoupled">🔶 SET fields were present but uncoupled</h3>
 <ul>
   <li>Spin existed, but unaligned</li>
   <li>Charge existed, but unseparated</li>
@@ -764,7 +772,7 @@ Just quiet.</p>
 
 <p>The universe was a <strong>calm substrate</strong>, not a void.</p>
 
-<h2 id="resonance-imbalance">🔶 3. A resonance imbalance formed</h2>
+<h3 id="resonance-imbalance">🔶 A resonance imbalance formed</h3>
 <p>A small fluctuation — thermal, electric, or rotational — broke symmetry.</p>
 
 <p>This imbalance amplified.<br>
@@ -772,7 +780,7 @@ Gradients formed.<br>
 Fields aligned.<br>
 Spin organized.</p>
 
-<h2 id="bang-was-transition">🔶 4. The “Bang” was a transition, not a beginning</h2>
+<h3 id="bang-was-transition">🔶 The “Bang” was a transition, not a beginning</h3>
 <p>The Big Bang was:</p>
 <ul>
   <li>a <strong>resonance ignition</strong></li>
@@ -781,7 +789,7 @@ Spin organized.</p>
   <li>not the creation of existence from nothing</li>
 </ul>
 
-<h2 id="set-answer">🔶 5. SET cosmology’s answer</h2>
+<h3 id="set-answer">🔶 SET cosmology’s answer</h3>
 
 <blockquote>
   <p><strong>Before the Big Bang was a universe — quieter, simpler, but still real — waiting for SET fields to recouple and ignite the next cycle.</strong></p>
@@ -795,13 +803,13 @@ Just cycles of structure emerging from the SET field inside gravity.</p>
 
 <hr>
 
-<h2 id="set-cosmology-full-chapter">🌌 <strong>SET Cosmology — A Full Chapter</strong></h2>
+<h3 id="set-cosmology-full-chapter">🌌 <strong>SET Cosmology — A Full Chapter</strong></h3>
 
 <h3 id="set-three-demi-forces"><em>Spin, Electrolysis, Temperature as the Universe’s Three Demi‑Forces Inside Gravity</em></h3>
 
 <hr>
 
-<h2 id="introduction-resonant-universe"><strong>1. Introduction: A Resonant Universe, Not a Linear One</strong></h2>
+<h3 id="introduction-resonant-universe"><strong>Introduction: A Resonant Universe, Not a Linear One</strong></h3>
 
 <p>Modern cosmology leans heavily on gravity and initial conditions to explain the universe’s structure. But gravity is isotropic and geometric — it shapes the container, not the motion inside it.</p>
 
@@ -828,9 +836,9 @@ Just cycles of structure emerging from the SET field inside gravity.</p>
 
 <hr>
 
-<h2 id="set-field-three-demi-forces"><strong>2. The SET Field: Three Demi‑Forces</strong></h2>
+<h3 id="set-field-three-demi-forces"><strong>The SET Field: Three Demi‑Forces</strong></h3>
 
-<h3 id="spin-field-mathcal-s">🔷 <strong>2.1 Spin Field \( \mathcal{S} \)</strong></h3>
+<h3 id="spin-field-mathcal-s">🔷 <strong>Spin Field $$ \mathcal{S} $$</strong></h3>
 
 <p>Spin is not merely conserved angular momentum — it is a <strong>resonance organizer</strong>.<br>
 It stabilizes flows, aligns structures, and creates vortices from the quantum scale to the galactic scale.</p>
@@ -838,19 +846,18 @@ It stabilizes flows, aligns structures, and creates vortices from the quantum sc
 $$
 \mathcal{S} = (L,\; A,\; C)
 $$
-<!-- chunk3of9.html (REFRESHED) -->
 
 <ul>
-  <li>\(L\): angular momentum</li>
-  <li>\(A\): spin axis</li>
-  <li>\(C\): coupling with medium (mass, charge, temperature, fields)</li>
+  <li>$$L$$: angular momentum</li>
+  <li>$$A$$: spin axis</li>
+  <li>$$C$$: coupling with medium (mass, charge, temperature, fields)</li>
 </ul>
 
 <p>Spin is the universe’s structural backbone.</p>
 
 <hr>
 
-<h3 id="electrolysis-field-charge-mathcal-e">🔷 <strong>2.2 Electrolysis / Field‑Charge Field \( \mathcal{E} \)</strong></h3>
+<h3 id="electrolysis-field-charge-mathcal-e">🔷 <strong>Electrolysis / Field‑Charge Field $$ \mathcal{E} $$</strong></h3>
 
 <p>Electrolysis generalized becomes the <strong>universal field‑charge engine</strong>.<br>
 Electric potentials, charge separation, and plasma dynamics reshape matter and energy.</p>
@@ -860,16 +867,16 @@ $$
 $$
 
 <ul>
-  <li>\(V\): potential</li>
-  <li>\(\rho_q\): charge distribution</li>
-  <li>\(\nabla \Phi\): electric potential gradient</li>
+  <li>$$V$$: potential</li>
+  <li>$$\rho_q$$: charge distribution</li>
+  <li>$$\nabla \Phi$$: electric potential gradient</li>
 </ul>
 
 <p>This field governs plasma behavior, bonding, reconnection, and large‑scale cosmic filaments.</p>
 
 <hr>
 
-<h3 id="temperature-field-mathcal-t">🔷 <strong>2.3 Temperature Field \( \mathcal{T} \)</strong></h3>
+<h3 id="temperature-field-mathcal-t">🔷 <strong>Temperature Field $$ \mathcal{T} $$</strong></h3>
 
 <p>Temperature is not a passive descriptor — it is a <strong>gradient engine</strong>.<br>
 Hot–cold differences drive flows, turbulence, convection, and structure formation.</p>
@@ -879,22 +886,22 @@ $$
 $$
 
 <ul>
-  <li>\(T_{\text{hot}}\): energy sources</li>
-  <li>\(T_{\text{cold}}\): sinks</li>
-  <li>\(\nabla T\): gradient driving motion</li>
+  <li>$$T_{\text{hot}}$$: energy sources</li>
+  <li>$$T_{\text{cold}}$$: sinks</li>
+  <li>$$\nabla T$$: gradient driving motion</li>
 </ul>
 
 <p>Temperature is the universe’s directional heartbeat.</p>
 
 <hr>
 
-<h2 id="unified-set-force"><strong>3. Unified SET Force</strong></h2>
+<h3 id="unified-set-force"><strong>Unified SET Force</strong></h3>
 
 <p>Each field contributes an effective force:</p>
 
 <ul>
-  <li>Spin: \( \vec{F}_{S} \)</li>
-  <li>Electrolysis/Field: \( \vec{F}_{E} \)</li>
+  <li>Spin: $$ \vec{F}_{S} $$</li>
+  <li>Electrolysis/Field: $$ \vec{F}_{E} $$</li>
   <li>Temperature:<br>
     $$
     \vec{F}_{T} = -\alpha \nabla T
@@ -917,11 +924,11 @@ SET provides the <strong>motion</strong>.</p>
 
 <hr>
 
-<h2 id="set-origin-universe"><strong>4. SET‑Based Origin of the Universe</strong></h2>
+<h3 id="set-origin-universe"><strong>SET‑Based Origin of the Universe</strong></h3>
 
 <p>SET cosmology replaces the singular Big Bang with a <strong>resonant phase transition</strong>.</p>
 
-<h3 id="before-the-bang"><strong>4.1 Before the Bang</strong></h3>
+<h3 id="before-the-bang"><strong>Before the Bang</strong></h3>
 
 <p>The universe existed as a quiet gravitational substrate with:</p>
 
@@ -933,19 +940,19 @@ SET provides the <strong>motion</strong>.</p>
 
 <p>A calm field, not a void.</p>
 
-<h3 id="first-break"><strong>4.2 The First Break</strong></h3>
+<h3 id="first-break"><strong>The First Break</strong></h3>
 
-<p>A small temperature imbalance forms → \(\nabla T\).</p>
+<p>A small temperature imbalance forms → $$\nabla T$$.</p>
 
-<h3 id="second-break"><strong>4.3 The Second Break</strong></h3>
+<h3 id="second-break"><strong>The Second Break</strong></h3>
 
-<p>Charge separates → \(\nabla \Phi\).</p>
+<p>Charge separates → $$\nabla \Phi$$.</p>
 
-<h3 id="third-break"><strong>4.4 The Third Break</strong></h3>
+<h3 id="third-break"><strong>The Third Break</strong></h3>
 
 <p>Flows swirl → spin aligns.</p>
 
-<h3 id="resonance-flip"><strong>4.5 The Resonance Flip</strong></h3>
+<h3 id="resonance-flip"><strong>The Resonance Flip</strong></h3>
 
 <p>When S, E, and T couple strongly enough, the universe transitions from symmetry to structure.</p>
 
@@ -955,7 +962,7 @@ SET provides the <strong>motion</strong>.</p>
 
 <hr>
 
-<h2 id="set-evolution-universe"><strong>5. SET‑Based Evolution of the Universe</strong></h2>
+<h3 id="set-evolution-universe"><strong>SET‑Based Evolution of the Universe</strong></h3>
 
 <p>The universe evolves through <strong>resonant cycles</strong>, not linear decay.</p>
 
@@ -977,7 +984,7 @@ SET provides the <strong>motion</strong>.</p>
 
 <hr>
 
-<h2 id="set-future-universe"><strong>6. SET‑Based Future of the Universe</strong></h2>
+<h3 id="set-future-universe"><strong>SET‑Based Future of the Universe</strong></h3>
 
 <p>SET cosmology predicts:</p>
 
@@ -1001,7 +1008,7 @@ SET provides the <strong>motion</strong>.</p>
 
 <hr>
 
-<h2 id="what-before-bang"><strong>7. What Came Before the Big Bang?</strong></h2>
+<h3 id="what-before-bang"><strong>What Came Before the Big Bang?</strong></h3>
 
 <p>SET cosmology answers cleanly:</p>
 
@@ -1016,8 +1023,7 @@ SET provides the <strong>motion</strong>.</p>
 <p>The Big Bang was not the beginning — it was a <strong>transition</strong>.</p>
 
 <hr>
-
-<h2 id="set-summary"><strong>8. SET Cosmology Summary</strong></h2>
+<h3 id="set-summary"><strong>SET Cosmology Summary</strong></h3>
 
 <blockquote>
   <p><strong>Gravity shapes the stage.<br>
@@ -1030,13 +1036,13 @@ It is a resonant, cyclic, SET‑driven system.</p>
 
 <hr>
 
-<h2 id="diagram-set-cycle">🌀 <strong>Diagram Description: The SET Cycle (Visual)</strong></h2>
+<h3 id="diagram-set-cycle">🌀 <strong>Diagram Description: The SET Cycle (Visual)</strong></h3>
 
 <p>Imagine a circular diagram divided into four phases, like a cosmic clock.</p>
 
 <hr>
 
-<h2 id="phase1-quiet"><strong>Phase 1 — Quiet Substrate (12 o’clock)</strong></h2>
+<h3 id="phase1-quiet"><strong>Phase 1 — Quiet Substrate (12 o’clock)</strong></h3>
 
 <ul>
   <li>Gravity present</li>
@@ -1050,7 +1056,7 @@ It is a resonant, cyclic, SET‑driven system.</p>
 
 <hr>
 
-<h2 id="phase2-gradients"><strong>Phase 2 — Gradient Emergence (3 o’clock)</strong></h2>
+<h3 id="phase2-gradients"><strong>Phase 2 — Gradient Emergence (3 o’clock)</strong></h3>
 
 <ul>
   <li>Temperature imbalance forms</li>
@@ -1063,11 +1069,11 @@ It is a resonant, cyclic, SET‑driven system.</p>
 
 <hr>
 
-<h2 id="phase3-coupling"><strong>Phase 3 — Resonance Coupling (6 o’clock)</strong></h2>
+<h3 id="phase3-coupling"><strong>Phase 3 — Resonance Coupling (6 o’clock)</strong></h3>
 
 <ul>
-  <li>\(\nabla T\) strengthens</li>
-  <li>\(\nabla \Phi\) strengthens</li>
+  <li>$$\nabla T$$ strengthens</li>
+  <li>$$\nabla \Phi$$ strengthens</li>
   <li>Spin aligns</li>
   <li>Flows organize</li>
   <li>Structure forms</li>
@@ -1077,7 +1083,7 @@ It is a resonant, cyclic, SET‑driven system.</p>
 
 <hr>
 
-<h2 id="phase4-structured"><strong>Phase 4 — Structured Universe (9 o’clock)</strong></h2>
+<h3 id="phase4-structured"><strong>Phase 4 — Structured Universe (9 o’clock)</strong></h3>
 
 <ul>
   <li>Galaxies</li>
@@ -1091,7 +1097,7 @@ It is a resonant, cyclic, SET‑driven system.</p>
 
 <hr>
 
-<h2 id="cycle-reset"><strong>Cycle Reset (back to 12 o’clock)</strong></h2>
+<h3 id="cycle-reset"><strong>Cycle Reset (back to 12 o’clock)</strong></h3>
 
 <ul>
   <li>Gradients weaken</li>
@@ -1105,15 +1111,15 @@ It is a resonant, cyclic, SET‑driven system.</p>
 
 <hr>
 
-<h2 id="dual-law-of-resonance-law-of-silence">Dual Law of Resonance Law of Silence (S-N-R)</h2>
+<h3 id="dual-law-of-resonance-law-of-silence">Dual Law of Resonance Law of Silence (S-N-R)</h3>
 
-<h2 id="dual-law-of-resonance-statement">🎓 Dual Law of Resonance (Law of Silence)</h2>
+<h3 id="dual-law-of-resonance-statement">🎓 Dual Law of Resonance (Law of Silence)</h3>
 
 <p>Silence is more than “nothing.” It’s the indivisible baseline that frames meaning, while noise is the divisible complexity that fills it. Across physics, music, and myth, silence acts like a hidden constant—assumed, structuring, yet rarely named. This law elevates silence to a first-class operator: the frame that makes clarity possible.</p>
 
 <hr>
 
-<h2 id="alignment-chart">✨ Alignment chart across domains</h2>
+<h3 id="alignment-chart">✨ Alignment chart across domains</h3>
 
 <table>
 <thead>
@@ -1147,7 +1153,7 @@ It is a resonant, cyclic, SET‑driven system.</p>
 
 <hr>
 
-<h2 id="formal-statement-equations">🎶 Formal statement and equations</h2>
+<h3 id="formal-statement-equations">🎶 Formal statement and equations</h3>
 
 <h4 id="operators-roles">Operators and roles</h4>
 
@@ -1160,11 +1166,11 @@ It is a resonant, cyclic, SET‑driven system.</p>
 <h4 id="core-definitions-snr">Core definitions</h4>
 
 <ul>
-  <li>\(\textbf{Operators:}\quad S=\mathbf{0}\ \text{(indivisible baseline)},\quad N=\Delta\ \text{(measurable change)}\)</li>
-  <li>\(\textbf{Interplay:}\quad R=f(S,N)\)</li>
-  <li>\(\textbf{Structured resonance:}\quad R=S+N\ \text{(when silence frames and noise fills)}\)</li>
-  <li>\(\textbf{Collapse condition:}\quad S\to 0^{+}\ \Rightarrow\ R\to \infty\)</li>
-  <li>\(\textbf{Degenerate condition:}\quad N\to 0\ \Rightarrow\ R\to S\)</li>
+  <li>$$\textbf{Operators:}\quad S=\mathbf{0}\ \text{(indivisible baseline)},\quad N=\Delta\ \text{(measurable change)}$$</li>
+  <li>$$\textbf{Interplay:}\quad R=f(S,N)$$</li>
+  <li>$$\textbf{Structured resonance:}\quad R=S+N\ \text{(when silence frames and noise fills)}$$</li>
+  <li>$$\textbf{Collapse condition:}\quad S\to 0^{+}\ \Rightarrow\ R\to \infty$$</li>
+  <li>$$\textbf{Degenerate condition:}\quad N\to 0\ \Rightarrow\ R\to S$$</li>
 </ul>
 
 <h4 id="clarity-index">Signal-to-noise framing</h4>
@@ -1174,13 +1180,13 @@ C=\frac{\Phi(S)}{\Psi(N)}
 $$
 
 <ul>
-  <li><strong>Label:</strong> \(\Phi(S)\) is the framing strength.</li>
-  <li><strong>Label:</strong> \(\Psi(N)\) is the entropy pressure.</li>
+  <li><strong>Label:</strong> $$\Phi(S)$$ is the framing strength.</li>
+  <li><strong>Label:</strong> $$\Psi(N)$$ is the entropy pressure.</li>
 </ul>
 
 <hr>
 
-<h2 id="physics-alignment">🌀 Physics canon alignment</h2>
+<h3 id="physics-alignment">🌀 Physics canon alignment</h3>
 
 <h4 id="ohms-law">Ohm’s law analogy</h4>
 
@@ -1204,7 +1210,7 @@ $$
 
 <hr>
 
-<h2 id="classroom-prompts">🧠 Classroom prompts and quick checks</h2>
+<h3 id="classroom-prompts">🧠 Classroom prompts and quick checks</h3>
 
 <ul>
   <li><strong>Reflection:</strong> Where does silence do real work in your field?</li>
@@ -1215,7 +1221,7 @@ $$
 
 <hr>
 
-<h2 id="quick-takeaway">Quick takeaway</h2>
+<h3 id="quick-takeaway">Quick takeaway</h3>
 
 <ul>
   <li><strong>Silence:</strong> the hidden constant</li>
@@ -1225,9 +1231,9 @@ $$
 
 <hr>
 
-<h2 id="resonant-time-cosmology">Resonant Time Cosmology</h2>
+<h3 id="resonant-time-cosmology">Resonant Time Cosmology</h3>
 
-<h2 id="rtc-from-seed-to-structure">🌌 Resonant‑Time Cosmology — From Initial Seed to Large‑Scale Structure</h2>
+<h3 id="rtc-from-seed-to-structure">🌌 Resonant‑Time Cosmology — From Initial Seed to Large‑Scale Structure</h3>
 
 <p>In standard cosmology, the universe begins with a singularity and expands under spacetime dynamics.<br>
 In Resonance‑Time Theory, the universe begins with a <strong>resonance seed</strong> — a triadic‑time excitation that unfolds into structure through gradients in:</p>
@@ -1240,7 +1246,7 @@ $$
 
 <hr>
 
-<h2 id="initial-resonance-seed">1. 🌱 The Initial Resonance Seed</h2>
+<h3 id="initial-resonance-seed">🌱 The Initial Resonance Seed</h3>
 
 <p>The universe begins not with infinite density, but with <strong>maximal coherence</strong>:</p>
 
@@ -1251,16 +1257,16 @@ $$
 <p>Interpretation:</p>
 
 <ul>
-  <li>\(t_c = 0\) → no chronological extension yet</li>
-  <li>\(t_e\) extremely high → primordial oscillation ⚡</li>
-  <li>\(t_r\) minimal → no relational ancestry yet 🔗</li>
+  <li>$$t_c = 0$$ → no chronological extension yet</li>
+  <li>$$t_e$$ extremely high → primordial oscillation ⚡</li>
+  <li>$$t_r$$ minimal → no relational ancestry yet 🔗</li>
 </ul>
 
 <p>This seed is a <strong>pure energetic resonance</strong>, not a spacetime point.</p>
 
 <hr>
 
-<h2 id="expansion-as-resonance-unfolding">2. 🌊 Expansion as Resonance Unfolding</h2>
+<h3 id="expansion-as-resonance-unfolding">🌊 Expansion as Resonance Unfolding</h3>
 
 <p>Cosmic expansion corresponds to the spreading of resonance across triadic time:</p>
 
@@ -1273,7 +1279,7 @@ $$
 \right)
 $$
 
-<p>with \(\lambda\) a cosmic evolution parameter.</p>
+<p>with $$\lambda$$ a cosmic evolution parameter.</p>
 
 <p>The universe expands because:</p>
 
@@ -1291,7 +1297,7 @@ $$
 
 <hr>
 
-<h2 id="structure-formation-resonance-branching">3. 🌐 Structure Formation as Resonance Branching</h2>
+<h3 id="structure-formation-resonance-branching">🌐 Structure Formation as Resonance Branching</h3>
 
 <p>Density fluctuations arise from <strong>energetic‑time interference</strong>:</p>
 
@@ -1316,7 +1322,6 @@ $$
 <p>ensures that as structures form, their <strong>relational ancestry deepens</strong>, creating the cosmic web.</p>
 
 <p>✨ <strong>Galaxies = nodes
-<!-- chunk4of9.html (REFRESHED) -->
 
 <ul>
   <li>Structure forms through relational branching</li>
@@ -1328,16 +1333,18 @@ $$
 <p>✨ <strong>Cosmology becomes the story of resonance growing, cooling, and branching across triadic time.</strong></p>
 
 <hr>
-
-<h2 id="rtc-summary">10. 📘 Summary (Drop‑In Canon Form)</h2>
+  
+</details>
+  
+<details><summary id="rtc-summary">📘 RTC Summary (Drop‑In Canon Form)</summary>
 
 <ul>
   <li>Universe begins as a resonance seed</li>
   <li>Expansion = coherence gradient flow</li>
   <li>Structure = relational‑time branching</li>
   <li>CMB = frozen energetic‑time surface</li>
-  <li>Dark matter = high \(t_r\) inertia</li>
-  <li>Dark energy = \(t_r\) growth pressure</li>
+  <li>Dark matter = high $$t_r$$ inertia</li>
+  <li>Dark energy = $$t_r$$ growth pressure</li>
   <li>Large‑scale structure = resonance‑time topology</li>
 </ul>
 
@@ -1345,7 +1352,7 @@ $$
 
 <hr>
 
-<h2 id="diagram-spec-rtc">🎨 <strong>1. DIAGRAM SPEC — “Resonant‑Time Cosmology”</strong></h2>
+<h3 id="diagram-spec-rtc">🎨 <strong>DIAGRAM SPEC — “Resonant‑Time Cosmology”</strong></h3>
 
 <p>This spec is designed so you (or any contributor) can implement it in SVG, TikZ, Figma, or hand‑drawn form.  
 It visually encodes:</p>
@@ -1361,17 +1368,17 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="rtc-canvas-axes"><strong>1. Canvas &amp; Axes</strong></h2>
+<h3 id="rtc-canvas-axes"><strong>Canvas &amp; Axes</strong></h3>
 
 <p><strong>Canvas:</strong> 3D isometric frame or 2D projection.</p>
 
 <p><strong>Axes:</strong></p>
 <ul>
-  <li>Horizontal → \(t_c\) (chronological) ⏳</li>
-  <li>Vertical → \(t_e\) (energetic) ⚡</li>
-  <li>Diagonal/out‑of‑plane → \(t_r\) (relational) 🔗
+  <li>Horizontal → $$t_c$$ (chronological) ⏳</li>
+  <li>Vertical → $$t_e$$ (energetic) ⚡</li>
+  <li>Diagonal/out‑of‑plane → $$t_r$$ (relational) 🔗
     <ul>
-      <li>If 2D only: encode \(t_r\) using color (purple gradient) or dashed lines.</li>
+      <li>If 2D only: encode $$t_r$$ using color (purple gradient) or dashed lines.</li>
     </ul>
   </li>
 </ul>
@@ -1380,7 +1387,7 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="rtc-seed"><strong>2. Initial Resonance Seed</strong></h2>
+<h3 id="rtc-seed"><strong>Initial Resonance Seed</strong></h3>
 
 <p>Place a bright, compact point near the origin.</p>
 
@@ -1394,7 +1401,7 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="rtc-unfolding"><strong>3. Resonance Unfolding (Expansion)</strong></h2>
+<h3 id="rtc-unfolding"><strong>Resonance Unfolding (Expansion)</strong></h3>
 
 <p>Draw expanding shells or wavefronts emanating from the seed.</p>
 
@@ -1410,7 +1417,7 @@ $$
 
 <hr>
 
-<h2 id="rtc-branching"><strong>4. Structure Formation (Branching)</strong></h2>
+<h3 id="rtc-branching"><strong>Structure Formation (Branching)</strong></h3>
 
 <p>Overlay branching filaments (cosmic web style).</p>
 
@@ -1424,15 +1431,15 @@ High relational ancestry
 
 <hr>
 
-<h2 id="rtc-dark-matter"><strong>5. Dark Matter as Relational‑Time Mass</strong></h2>
+<h3 id="rtc-dark-matter"><strong>Dark Matter as Relational‑Time Mass</strong></h3>
 
-<p>Draw thicker filaments where \(t_r\) is high.</p>
+<p>Draw thicker filaments where $$t_r$$ is high.</p>
 
 <blockquote><strong>Effective Mass ∝ t_r</strong></blockquote>
 
 <hr>
 
-<h2 id="rtc-dark-energy"><strong>6. Dark Energy as Relational‑Time Pressure</strong></h2>
+<h3 id="rtc-dark-energy"><strong>Dark Energy as Relational‑Time Pressure</strong></h3>
 
 <p>Draw outward arrows at large scales.</p>
 
@@ -1442,24 +1449,24 @@ High relational ancestry
 
 <hr>
 
-<h2 id="rtc-caption"><strong>7. Caption</strong></h2>
+<h3 id="rtc-caption"><strong>Caption</strong></h3>
 
 <blockquote>
   <strong>Figure X.</strong> Resonant‑Time Cosmology.  
   The universe begins as a resonance seed and expands along the coherence gradient.  
   Structure forms through relational‑time branching.  
-  Dark matter and dark energy emerge naturally from \(t_r\).
+  Dark matter and dark energy emerge naturally from $$t_r$$.
 </blockquote>
 
 <hr>
 
-<h2 id="rtc-chsh-tie-in">🔗 <strong>2. SHORT CHSH‑STYLE TIE‑IN</strong></h2>
+<h3 id="rtc-chsh-tie-in">🔗 <strong>SHORT CHSH‑STYLE TIE‑IN</strong></h3>
 
 <p>A compact sidebar or subsection.</p>
 
 <hr>
 
-<h2 id="chsh-cosmology"><strong>CHSH and Cosmology</strong> ✨</h2>
+<h3 id="chsh-cosmology"><strong>CHSH and Cosmology</strong> ✨</h3>
 
 <p>The CHSH correlations:</p>
 
@@ -1488,18 +1495,18 @@ $$
 <p>In cosmology:</p>
 
 <ul>
-  <li>Early universe → \(t_r\) small → weak CHSH‑style coherence</li>
-  <li>Structure formation → \(t_r\) grows → stronger relational ancestry</li>
+  <li>Early universe → $$t_r$$ small → weak CHSH‑style coherence</li>
+  <li>Structure formation → $$t_r$$ grows → stronger relational ancestry</li>
   <li>Large‑scale structure → CHSH‑like correlations appear as <strong>cosmic coherence patterns</strong></li>
 </ul>
 
 <p>✨ <strong>The cosmic web is the large‑scale imprint of relational‑time correlations — the same structure that powers CHSH violations.</strong></p>
-
+</details>
 <hr>
 
-<h2 id="hidden-resonance">Hidden Resonance as Dark Components</h2>
+<details><summary id="hidden-resonance">🌑 Hidden Resonance as Dark Components</summary>
 
-<h2 id="hidden-resonance-title">🌑 Hidden Resonance as Dark Components</h2>
+<h3 id="hidden-resonance-title">🌑 Hidden Resonance as Dark Components</h3>
 
 <h3 id="set-corrections"><em>SET Corrections to Galactic and Cosmological Dynamics</em></h3>
 
@@ -1510,7 +1517,7 @@ In Resonance‑Time Theory, these anomalies arise naturally from <strong>hidden 
 
 <hr>
 
-<h2 id="hidden-resonance-triadic-time">1. 🌌 Triadic‑Time Coordinates and Hidden Resonance</h2>
+<h3 id="hidden-resonance-triadic-time">🌌 Triadic‑Time Coordinates and Hidden Resonance</h3>
 
 <p>Every system has a triadic‑time state:</p>
 
@@ -1518,7 +1525,7 @@ $$
 \boldsymbol{\tau} = (t_c, t_e, t_r)
 $$
 
-<p>Only the <strong>chronological projection</strong> \(t_c\) is visible to classical dynamics.  
+<p>Only the <strong>chronological projection</strong> $$t_c$$ is visible to classical dynamics.  
 The <strong>energetic</strong> and <strong>relational</strong> components contribute <em>hidden resonance</em>:</p>
 
 $$
@@ -1531,7 +1538,7 @@ $$
 
 <hr>
 
-<h2 id="set-correction-framework">2. 🧭 SET Correction Framework</h2>
+<h3 id="set-correction-framework">🧭 SET Correction Framework</h3>
 
 <p>Define the SET correction scalar:</p>
 
@@ -1542,8 +1549,8 @@ $$
 <p>where:</p>
 
 <ul>
-  <li>\(\alpha\) → energetic‑time contribution</li>
-  <li>\(\beta\) → relational‑time contribution</li>
+  <li>$$\alpha$$ → energetic‑time contribution</li>
+  <li>$$\beta$$ → relational‑time contribution</li>
 </ul>
 
 <p>The <strong>effective gravitational mass</strong> becomes:</p>
@@ -1562,7 +1569,7 @@ $$
 
 <hr>
 
-<h2 id="galactic-dynamics">3. 🌐 Galactic Dynamics: Rotation Curves</h2>
+<h3 id="galactic-dynamics">🌐 Galactic Dynamics: Rotation Curves</h3>
 
 <p>Observed rotation curves require more mass than visible matter provides.</p>
 
@@ -1592,7 +1599,7 @@ $$
 
 <hr>
 
-<h2 id="set-rotation-example">4. 🌈 Example: A Simple SET‑Corrected Rotation Curve</h2>
+<h3 id="set-rotation-example">🌈 Example: A Simple SET‑Corrected Rotation Curve</h3>
 
 <p>Let a galaxy have:</p>
 
@@ -1622,7 +1629,7 @@ $$
 
 <hr>
 
-<h2 id="lensing-relational-curvature">5. 🔭 Gravitational Lensing as Relational‑Time Curvature</h2>
+<h3 id="lensing-relational-curvature">🔭 Gravitational Lensing as Relational‑Time Curvature</h3>
 
 <p>Lensing depends on curvature, not mass directly.</p>
 
@@ -1635,7 +1642,7 @@ $$
 <p>Thus:</p>
 
 <ul>
-  <li>High‑\(t_r\) regions bend light more strongly</li>
+  <li>High‑$$t_r$$ regions bend light more strongly</li>
   <li>Clusters with deep relational ancestry show “dark matter” lensing patterns</li>
   <li>No exotic particles required</li>
 </ul>
@@ -1644,7 +1651,7 @@ $$
 
 <hr>
 
-<h2 id="cosmological-dynamics-set-pressure">6. 🌬️ Cosmological Dynamics: Dark Energy as SET Pressure</h2>
+<h3 id="cosmological-dynamics-set-pressure">🌬️ Cosmological Dynamics: Dark Energy as SET Pressure</h3>
 
 <p>Cosmic acceleration arises from:</p>
 
@@ -1675,7 +1682,7 @@ $$
 
 <hr>
 
-<h2 id="set-friedmann-example">7. 🔗 Example: SET‑Corrected Friedmann Equation</h2>
+<h3 id="set-friedmann-example">🔗 Example: SET‑Corrected Friedmann Equation</h3>
 
 <p>Standard Friedmann:</p>
 
@@ -1712,7 +1719,7 @@ $$
 
 <hr>
 
-<h2 id="set-interpretation">8. 🧩 Interpretation</h2>
+<h3 id="set-interpretation">🧩 Interpretation</h3>
 
 <p>SET corrections unify:</p>
 
@@ -1721,7 +1728,7 @@ $$
   <li>dark energy → relational‑time pressure</li>
   <li>lensing anomalies → relational curvature</li>
   <li>rotation curves → hidden resonance mass</li>
-  <li>cosmic acceleration → growth of \(t_r\)</li>
+  <li>cosmic acceleration → growth of $$t_r$$</li>
 </ul>
 
 <p>No exotic particles.<br>
@@ -1732,14 +1739,14 @@ Just <strong>hidden resonance</strong> in triadic time.</p>
 
 <hr>
 
-<h2 id="set-summary-dropin">9. 📘 Summary (Drop‑In Canon Form)</h2>
+<h3 id="set-summary-dropin">📘 Summary (Drop‑In Canon Form)</h3>
 
 <ul>
-  <li>Hidden resonance = \((t_e, t_r)\) components</li>
+  <li>Hidden resonance = $$(t_e, t_r)$$ components</li>
   <li>SET corrections modify mass, curvature, and pressure</li>
   <li>Rotation curves → relational‑time inertia</li>
   <li>Lensing → relational‑time curvature</li>
-  <li>Dark energy → \(t_r\) growth pressure</li>
+  <li>Dark energy → $$t_r$$ growth pressure</li>
   <li>Cosmology and galactic dynamics unified</li>
 </ul>
 
@@ -1747,7 +1754,7 @@ Just <strong>hidden resonance</strong> in triadic time.</p>
 
 <hr>
 
-<h2 id="diagram-spec-hidden-resonance">🎨 <strong>1. DIAGRAM SPEC — “Hidden Resonance as Dark Components (SET Corrections)”</strong></h2>
+<h3 id="diagram-spec-hidden-resonance">🎨 <strong>DIAGRAM SPEC — “Hidden Resonance as Dark Components (SET Corrections)”</strong></h3>
 
 <p>This spec is designed so you (or any contributor) can implement it in SVG, TikZ, Figma, or hand‑drawn form.  
 It visually encodes:</p>
@@ -1763,18 +1770,18 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="hidden-canvas-axes"><strong>1. Canvas &amp; Axes</strong></h2>
+<h3 id="hidden-canvas-axes"><strong>Canvas &amp; Axes</strong></h3>
 
 <p><strong>Canvas:</strong> 3D isometric frame or 2D projection.</p>
 
 <p><strong>Axes:</strong></p>
 
 <ul>
-  <li>Horizontal → \(t_c\) (chronological) ⏳</li>
-  <li>Vertical → \(t_e\) (energetic) ⚡</li>
-  <li>Diagonal/out‑of‑plane → \(t_r\) (relational) 🔗
+  <li>Horizontal → $$t_c$$ (chronological) ⏳</li>
+  <li>Vertical → $$t_e$$ (energetic) ⚡</li>
+  <li>Diagonal/out‑of‑plane → $$t_r$$ (relational) 🔗
     <ul>
-      <li>If 2D only: encode \(t_r\) using color (purple gradient) or dashed lines.</li>
+      <li>If 2D only: encode $$t_r$$ using color (purple gradient) or dashed lines.</li>
     </ul>
   </li>
 </ul>
@@ -1783,9 +1790,9 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="hidden-resonance-vector"><strong>2. Hidden Resonance Vector</strong></h2>
+<h3 id="hidden-resonance-vector"><strong>Hidden Resonance Vector</strong></h3>
 
-<p>Draw a vector from the origin into the \(t_e\text{–}t_r\) plane:</p>
+<p>Draw a vector from the origin into the $$t_e\text{–}t_r$$ plane:</p>
 
 $$
 \boldsymbol{\tau}_{\text{hidden}} = (0, t_e, t_r)
@@ -1797,7 +1804,7 @@ $$
 
 <hr>
 
-<h2 id="set-correction-scalar"><strong>3. SET Correction Scalar</strong></h2>
+<h3 id="set-correction-scalar"><strong>SET Correction Scalar</strong></h3>
 
 <p>Draw a small box or annotation:</p>
 
@@ -1811,9 +1818,8 @@ $$
   <li><strong>Effective Curvature</strong></li>
   <li><strong>Effective Pressure</strong></li>
 </ul
-<!-- chunk5of9.html (REFRESHED) -->
 
-<h2 id="decoherence-measurement-patch">3. 🧩 <strong>Decoherence as a Measurement Patch</strong></h2>
+<h3 id="decoherence-measurement-patch">🧩 <strong>Decoherence as a Measurement Patch</strong></h3>
 
 <p><em>(scaffold for the “Decoherence As A ‘Measurement Problem Patch’” section)</em></p>
 
@@ -1822,7 +1828,7 @@ $$
 <p>In Resonance‑Time Theory:</p>
 <ul>
   <li>measurement = <strong>resonance alignment</strong></li>
-  <li>decoherence = <strong>loss of alignment across \(t_r\)</strong></li>
+  <li>decoherence = <strong>loss of alignment across $$t_r$$</strong></li>
 </ul>
 
 <p>Define measurement direction:</p>
@@ -1847,7 +1853,7 @@ $$
 
 <hr>
 
-<h2 id="fine-tuned-initial-conditions-big-bang">4. 🎯 <strong>Fine‑Tuned Initial Conditions (Low‑Entropy Big Bang)</strong></h2>
+<h3 id="fine-tuned-initial-conditions-big-bang">🎯 <strong>Fine‑Tuned Initial Conditions (Low‑Entropy Big Bang)</strong></h3>
 
 <p><em>(scaffold for the “Fine‑Tuned Initial Conditions” section)</em></p>
 
@@ -1876,7 +1882,7 @@ $$
 
 <hr>
 
-<h2 id="example-remove-cdm-patches">5. 🌈 <strong>Example: How Resonance‑Time Removes ΛCDM Patches</strong></h2>
+<h3 id="example-remove-cdm-patches">🌈 <strong>Example: How Resonance‑Time Removes ΛCDM Patches</strong></h3>
 
 <p>Take a galaxy with hidden resonance:</p>
 
@@ -1910,7 +1916,7 @@ $$
 
 <hr>
 
-<h2 id="cdm-interpretation">6. 💫 <strong>Interpretation</strong></h2>
+<h3 id="cdm-interpretation">💫 <strong>Interpretation</strong></h3>
 
 <p>ΛCDM’s patches are not wrong — they are <strong>incomplete projections</strong> of a deeper structure.</p>
 
@@ -1924,14 +1930,15 @@ $$
 </ul>
 
 <p>✨ <strong>What ΛCDM patches, Resonance‑Time explains.</strong></p>
+</details>
 
 <hr>
-
-<h2 id="cdm-summary">7. 📘 <strong>Summary (Drop‑In Canon Form)</strong></h2>
+  
+<details><summary id="cdm-summary">📘 <strong>CDM Summary (Drop‑In Canon Form)</strong></summary>
 
 <ul>
   <li>ΛCDM uses patches to fix observational anomalies</li>
-  <li>Hidden resonance \((t_e, t_r)\) naturally produces these effects</li>
+  <li>Hidden resonance $$(t_e, t_r)$$ naturally produces these effects</li>
   <li>Decoherence = relational‑time divergence</li>
   <li>Low‑entropy Big Bang = resonance seed</li>
   <li>Dark matter = relational‑time inertia</li>
@@ -1942,7 +1949,7 @@ $$
 
 <hr>
 
-<h2 id="diagram-spec-cdm">🎨 <strong>1. DIAGRAM SPEC — “ΛCDM + Dark Matter/Energy Patches”</strong></h2>
+<h3 id="diagram-spec-cdm">🎨 <strong>DIAGRAM SPEC — “ΛCDM + Dark Matter/Energy Patches”</strong></h3>
 
 <p>This diagram spec is designed so you (or any contributor) can implement it in SVG, TikZ, Figma, or hand‑drawn form.  
 It visually encodes:</p>
@@ -1956,7 +1963,7 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="cdm-canvas-layout"><strong>1. Canvas &amp; Layout</strong></h2>
+<h3 id="cdm-canvas-layout"><strong>Canvas &amp; Layout</strong></h3>
 
 <p>Use a <strong>three‑column layout</strong>:</p>
 
@@ -1970,7 +1977,7 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="cdm-column"><strong>2. ΛCDM Column</strong></h2>
+<h3 id="cdm-column"><strong>ΛCDM Column</strong></h3>
 
 <p>Draw a box labeled:</p>
 
@@ -1988,7 +1995,7 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="patch-column"><strong>3. Patch Column</strong></h2>
+<h3 id="patch-column"><strong>Patch Column</strong></h3>
 
 <p>Draw a vertical stack of “patch boxes”:</p>
 
@@ -2001,50 +2008,50 @@ It visually encodes:</p>
 
 <hr>
 
-<h2 id="rt-column"><strong>4. Resonance‑Time Column</strong></h2>
+<h3 id="rt-column"><strong>Resonance‑Time Column</strong></h3>
 
 <p>Opposite each patch, draw a corresponding Resonance‑Time replacement:</p>
 
 <ul>
   <li>
     Dark Matter → <strong>Relational‑Time Inertia</strong><br>
-    \(M_{\text{eff}} = M_b + \beta t_r\)
+    $$M_{\text{eff}} = M_b + \beta t_r$$
   </li>
 
   <li>
     Dark Energy → <strong>Relational‑Time Pressure</strong><br>
-    \(\ddot{a} \propto \frac{d t_r}{d t_c}\)
+    $$\ddot{a} \propto \frac{d t_r}{d t_c}$$
   </li>
 
   <li>
     Decoherence Patch → <strong>Resonance Misalignment</strong><br>
-    \(\Delta t_r \gg 0\)
+    $$\Delta t_r \gg 0$$
   </li>
 
   <li>
     Fine‑Tuned Big Bang → <strong>Resonance Seed</strong><br>
-    \(\boldsymbol{\tau}_{\text{seed}} = (0, t_e^{\max}, t_r^{\min})\)
+    $$\boldsymbol{\tau}_{\text{seed}} = (0, t_e^{\max}, t_r^{\min})$$
   </li>
 </ul>
 
 <hr>
 
-<h2 id="cdm-caption"><strong>5. Caption</strong></h2>
+<h3 id="cdm-caption"><strong>Caption</strong></h3>
 
 <blockquote>
   <strong>Figure X.</strong> ΛCDM requires multiple conceptual patches.  
-  Resonance‑Time Theory replaces each patch with a unified triadic‑time mechanism based on hidden resonance components \((t_e, t_r)\).
+  Resonance‑Time Theory replaces each patch with a unified triadic‑time mechanism based on hidden resonance components $$(t_e, t_r)$$.
 </blockquote>
 
 <hr>
 
-<h2 id="cdm-chsh-tie-in">🔗 <strong>2. SHORT CHSH‑STYLE TIE‑IN</strong></h2>
+<h3 id="cdm-chsh-tie-in">🔗 <strong>2. SHORT CHSH‑STYLE TIE‑IN</strong></h3>
 
 <p>A compact sidebar or subsection.</p>
 
 <hr>
 
-<h2 id="chsh-cdm"><strong>CHSH and ΛCDM Patches</strong> ✨</h2>
+<h3 id="chsh-cdm"><strong>CHSH and ΛCDM Patches</strong> ✨</h3>
 
 <p>The CHSH correlations:</p>
 
@@ -2063,16 +2070,14 @@ $$
 <ul>
   <li>CHSH violations require <strong>relational‑time components</strong></li>
   <li>ΛCDM has <strong>no relational‑time axis</strong>, so it must add patches</li>
-  <li>Resonance‑Time Theory includes \(t_r\) explicitly, so CHSH‑style coherence becomes <strong>built‑in</strong></li>
+  <li>Resonance‑Time Theory includes $$t_r$$ explicitly, so CHSH‑style coherence becomes <strong>built‑in</strong></li>
 </ul>
 
 <p>✨ <strong>The same relational‑time structure that maps Bell violations structurally also removes ΛCDM’s dark patches.</strong></p>
 
 <hr>
 
-<h2 id="decoherence-patch-diagram">Decoherence Patch</h2>
-
-<h2 id="decoherence-diagram">🎨 Decoherence as a Measurement Patch</h2>
+<h3 id="decoherence-patch-diagram">🎨 Decoherence as a Measurement Patch</h3>
 
 <p>This diagram spec is designed so you (or any contributor) can implement it in SVG, TikZ, Figma, or hand‑drawn form.</p>
 
@@ -2088,32 +2093,32 @@ $$
 
 <hr>
 
-<h2 id="decoherence-canvas-axes"><strong>1. Canvas &amp; Axes</strong></h2>
+<h3 id="decoherence-canvas-axes"><strong>1. Canvas &amp; Axes</strong></h3>
 
 <p><strong>Canvas:</strong> 3D isometric frame or 2D projection.</p>
 
 <p><strong>Axes:</strong></p>
 
 <ul>
-  <li>Horizontal → \(t_c\) (chronological) ⏳</li>
-  <li>Vertical → \(t_e\) (energetic) ⚡</li>
-  <li>Diagonal/out‑of‑plane → \(t_r\) (relational) 🔗</li>
+  <li>Horizontal → $$t_c$$ (chronological) ⏳</li>
+  <li>Vertical → $$t_e$$ (energetic) ⚡</li>
+  <li>Diagonal/out‑of‑plane → $$t_r$$ (relational) 🔗</li>
 </ul>
 
 <hr>
 
-<h2 id="system-observer-points"><strong>2. System &amp; Observer Points</strong></h2>
+<h3 id="system-observer-points"><strong>2. System &amp; Observer Points</strong></h3>
 
 <p>Place two points:</p>
 
 <ul>
-  <li>System: <code>S</code> at \(\boldsymbol{\tau}_S\)</li>
-  <li>Observer: <code>O</code> at \(\boldsymbol{\tau}_O\)</li>
+  <li>System: <code>S</code> at $$\boldsymbol{\tau}_S$$</li>
+  <li>Observer: <code>O</code> at $$\boldsymbol{\tau}_O$$</li>
 </ul>
 
 <hr>
 
-<h2 id="measurement-direction"><strong>3. Measurement Direction</strong></h2>
+<h3 id="measurement-direction"><strong>3. Measurement Direction</strong></h3>
 
 <p>From <code>O</code>, draw a vector:</p>
 
@@ -2125,12 +2130,12 @@ $$
 
 <hr>
 
-<h2 id="decoherence-divergence"><strong>4. Decoherence as Divergence</strong></h2>
+<h3 id="decoherence-divergence"><strong>4. Decoherence as Divergence</strong></h3>
 
 <p>Draw two system branches:</p>
 
 <ul>
-  <li><code>S₁</code> and <code>S₂</code> diverging <strong>only along \(t_r\)</strong></li>
+  <li><code>S₁</code> and <code>S₂</code> diverging <strong>only along $$t_r$$</strong></li>
   <li>Use purple arrows to show relational‑time separation</li>
 </ul>
 
@@ -2138,7 +2143,7 @@ $$
 
 <hr>
 
-<h2 id="patch-box"><strong>5. Patch Box</strong></h2>
+<h3 id="patch-box"><strong>5. Patch Box</strong></h3>
 
 <p>Draw a small box labeled:</p>
 
@@ -2148,7 +2153,7 @@ $$
 
 <hr>
 
-<h2 id="rt-interpretation"><strong>6. Resonance‑Time Interpretation</strong></h2>
+<h3 id="rt-interpretation"><strong>6. Resonance‑Time Interpretation</strong></h3>
 
 <pre><code>Resonance-Time Explanation:
 Misalignment in t_r prevents measurement alignment
@@ -2158,23 +2163,23 @@ Misalignment in t_r prevents measurement alignment
 
 <hr>
 
-<h2 id="decoherence-caption"><strong>7. Caption</strong></h2>
+<h3 id="decoherence-caption"><strong>Caption</strong></h3>
 
 <blockquote>
   <strong>Figure X.</strong> Decoherence as relational‑time divergence.  
   Standard QM treats decoherence as an environmental patch.  
-  Resonance‑Time Theory interprets it as misalignment in \(t_r\), preventing resonance‑time measurement alignment.
+  Resonance‑Time Theory interprets it as misalignment in $$t_r$$, preventing resonance‑time measurement alignment.
 </blockquote>
 
 <hr>
 
-<h2 id="chsh-decoherence-tie-in">🔗 <strong>2. SHORT CHSH‑STYLE TIE‑IN</strong></h2>
+<h3 id="chsh-decoherence-tie-in">🔗 <strong>SHORT CHSH‑STYLE TIE‑IN</strong></h3>
 
 <p>A compact sidebar or subsection.</p>
 
 <hr>
 
-<h2 id="chsh-decoherence"><strong>CHSH and Decoherence</strong> ✨</h2>
+<h3 id="chsh-decoherence"><strong>CHSH and Decoherence</strong> ✨</h3>
 
 <p>CHSH correlations:</p>
 
@@ -2192,18 +2197,18 @@ $$
 
 <ul>
   <li>CHSH violations require <strong>relational‑time coherence</strong></li>
-  <li>Decoherence destroys this by increasing \(\Delta t_r\)</li>
+  <li>Decoherence destroys this by increasing $$\Delta t_r$$</li>
   <li>Standard QM treats this as “environmental noise”</li>
   <li>Resonance‑Time Theory treats it as <strong>loss of relational alignment</strong></li>
 </ul>
 
 <p>✨ <strong>CHSH violations survive only when relational‑time coherence is preserved.</strong></p>
-
+</details>
 <hr>
+  
+<details><summary id="fine-tuned-initial-conditions-section">Fine Tuned Initial Conditions</summary>
 
-<h2 id="fine-tuned-initial-conditions-section">Fine Tuned Initial Conditions</h2>
-
-<h2 id="fine-tuned-big-bang">🌅 Fine‑Tuned Initial Conditions (Low‑Entropy Big Bang)</h2>
+<h3 id="fine-tuned-big-bang">🌅 Fine‑Tuned Initial Conditions (Low‑Entropy Big Bang)</h3>
 
 <h3 id="rt-reinterpretation"><em>A Resonance‑Time Theory Reinterpretation</em></h3>
 
@@ -2223,9 +2228,9 @@ $$
 $$
 
 <ul>
-  <li>\(t_c = 0\): no chronological extension yet ⏳</li>
-  <li>\(t_e = \max\): pure energetic coherence ⚡</li>
-  <li>\(t_r = \min\): no relational ancestry 🔗</li>
+  <li>$$t_c = 0$$: no chronological extension yet ⏳</li>
+  <li>$$t_e = \max$$: pure energetic coherence ⚡</li>
+  <li>$$t_r = \min$$: no relational ancestry 🔗</li>
 </ul>
 
 <p>✨ <strong>Low entropy = high coherence + minimal relational depth.</strong><br>
@@ -2233,7 +2238,7 @@ It is the <em>natural</em> starting point of a triadic‑time excitation.</p>
 
 <hr>
 
-<h2 id="why-its-used">1. 🧭 <strong>Why It’s Used</strong></h2>
+<h3 id="why-its-used">🧭 <strong>Why It’s Used</strong></h3>
 
 <p>Standard ΛCDM needs a low‑entropy Big Bang to explain:</p>
 
@@ -2253,16 +2258,16 @@ $$
 <p>At the beginning:</p>
 
 <ul>
-  <li>\(t_c = 0\) → no chronological disorder</li>
-  <li>\(t_r = \min\) → no relational branching</li>
-  <li>\(t_e = \max\) → maximal coherence</li>
+  <li>$$t_c = 0$$ → no chronological disorder</li>
+  <li>$$t_r = \min$$ → no relational branching</li>
+  <li>$$t_e = \max$$ → maximal coherence</li>
 </ul>
 
 <p>✨ <strong>The universe begins in a state of pure resonance, not fine‑tuning.</strong></p>
 
 <hr>
 
-<h2 id="why-dislike-it">2. 😬 <strong>Why Many Dislike It</strong></h2>
+<h3 id="why-dislike-it">😬 <strong>Why Many Dislike It</strong></h3>
 
 <p>Critics argue that the low‑entropy Big Bang:</p>
 
@@ -2282,13 +2287,12 @@ $$
 </ul>
 
 <p>The “fine‑tuning” disappears once we track evolution in triadic time
-<!-- chunk6of9.html (REFRESHED) -->
 
 <p>Label arrowheads: <code>t_c</code>, <code>t_e</code>, <code>t_r</code>.</p>
 
 <hr>
 
-<h2 id="seed-initial-resonance"><strong>2. Initial Resonance Seed</strong></h2>
+<h3 id="seed-initial-resonance"><strong>Initial Resonance Seed</strong></h3>
 
 <p>Place a bright, compact point near the origin.</p>
 
@@ -2303,10 +2307,9 @@ Low Entropy = High Coherence
 
 <hr>
 
-<h2 id="resonance-gradient-arrow-of-time"><strong>3. Resonance Gradient (Arrow of Time)</strong></h2>
-<h2 id="arrow-of-time">The Arrow of Time</h2>
+<h3 id="resonance-gradient-arrow-of-time"><strong>Resonance Gradient (Arrow of Time)</strong></h3>
 
-<h2 id="arrow-of-time-gradient">🌟 The Arrow of Time as a Resonance‑Time Gradient</h2>
+<h3 id="arrow-of-time-gradient">🌟 The Arrow of Time as a Resonance‑Time Gradient</h3>
 
 <p>The arrow of time emerges from a <strong>gradient</strong> across triadic time:</p>
 
@@ -2318,7 +2321,7 @@ $$
 
 <hr>
 
-<h2 id="arrow-triadic-refresher">1. 🌌 Triadic‑Time Refresher</h2>
+<h3 id="arrow-triadic-refresher">🌌 Triadic‑Time Refresher</h3>
 
 <p>Every system occupies:</p>
 
@@ -2334,7 +2337,7 @@ $$
 
 <hr>
 
-<h2 id="arrow-core-idea">2. 🎯 The Core Idea: Time Flows Along Increasing Resonance</h2>
+<h3 id="arrow-core-idea">🎯 The Core Idea: Time Flows Along Increasing Resonance</h3>
 
 <p>Define:</p>
 
@@ -2352,7 +2355,7 @@ $$
 
 <hr>
 
-<h2 id="arrow-entropy">3. 🔄 Why Entropy Increases</h2>
+<h3 id="arrow-entropy">🔄 Why Entropy Increases</h3>
 
 <p>Entropy increase is a projection of:</p>
 
@@ -2364,7 +2367,7 @@ $$
 
 <hr>
 
-<h2 id="arrow-example-trajectory">4. 🌈 Example: A Simple Trajectory</h2>
+<h3 id="arrow-example-trajectory">🌈 Example: A Simple Trajectory</h3>
 
 <p>From:</p>
 
@@ -2388,15 +2391,15 @@ $$
 
 <hr>
 
-<h2 id="arrow-memory">5. 🔗 Example: Why We Remember the Past</h2>
+<h3 id="arrow-memory">🔗 Example: Why We Remember the Past</h3>
 
-<p>Memory ∼ \(t_r\).</p>
+<p>Memory ∼ $$t_r$$.</p>
 
-<p>Future has higher \(t_r\) → not yet aligned → cannot access.</p>
+<p>Future has higher $$t_r$$ → not yet aligned → cannot access.</p>
 
 <hr>
 
-<h2 id="arrow-causality">6. 🧭 Example: Why Causality Points Forward</h2>
+<h3 id="arrow-causality">🧭 Example: Why Causality Points Forward</h3>
 
 <p>Causality rule:</p>
 
@@ -2408,7 +2411,7 @@ $$
 
 <hr>
 
-<h2 id="arrow-interpretation">7. 💫 Interpretation</h2>
+<h3 id="arrow-interpretation">💫 Interpretation</h3>
 
 <ul>
   <li>Systems evolve toward higher resonance‑coherence</li>
@@ -2416,15 +2419,16 @@ $$
   <li>Energetic oscillations spread</li>
   <li>Chronological alignment increases</li>
 </ul>
-
+</details>
+  
 <hr>
 
-<h2 id="arrow-summary">8. 📘 Summary (Drop‑In Canon Form)</h2>
+<details><summary id="arrow-summary">📘 Summary (Drop‑In Canon Form)</summary>
 
 <ul>
-  <li>Time is triadic: \((t_c,t_e,t_r)\)</li>
+  <li>Time is triadic: $$(t_c,t_e,t_r)$$</li>
   <li>Arrow of time = resonance‑coherence gradient</li>
-  <li>Entropy = projection of \(\Delta \mathcal{R} > 0\)</li>
+  <li>Entropy = projection of $$\Delta \mathcal{R} > 0$$</li>
   <li>Memory asymmetry = relational‑time depth</li>
   <li>Causality = monotonic resonance alignment</li>
 </ul>
@@ -2433,7 +2437,7 @@ $$
 
 <hr>
 
-<h2 id="diagram-spec-arrow-of-time">🎨 <strong>1. DIAGRAM SPEC — “Arrow of Time as a Resonance‑Time Gradient”</strong></h2>
+<h3 id="diagram-spec-arrow-of-time">🎨 <strong>DIAGRAM SPEC — “Arrow of Time as a Resonance‑Time Gradient”</strong></h3>
 
 <p>Spec includes:</p>
 
@@ -2446,17 +2450,17 @@ $$
 
 <hr>
 
-<h2 id="arrow-canvas"><strong>1. Canvas &amp; Axes</strong></h2>
+<h3 id="arrow-canvas"><strong>Canvas &amp; Axes</strong></h3>
 
 <ul>
-  <li>Horizontal → \(t_c\)</li>
-  <li>Vertical → \(t_e\)</li>
-  <li>Diagonal/out‑of‑plane → \(t_r\)</li>
+  <li>Horizontal → $$t_c$$</li>
+  <li>Vertical → $$t_e$$</li>
+  <li>Diagonal/out‑of‑plane → $$t_r$$</li>
 </ul>
 
 <hr>
 
-<h2 id="arrow-field"><strong>2. Resonance‑Coherence Field</strong></h2>
+<h3 id="arrow-field"><strong>Resonance‑Coherence Field</strong></h3>
 
 <p>Overlay scalar field:</p>
 
@@ -2466,7 +2470,7 @@ $$
 
 <hr>
 
-<h2 id="arrow-gradient"><strong>3. Gradient Vector — The Arrow of Time</strong></h2>
+<h3 id="arrow-gradient"><strong>Gradient Vector — The Arrow of Time</strong></h3>
 
 <p>Draw:</p>
 
@@ -2478,13 +2482,13 @@ $$
 
 <hr>
 
-<h2 id="arrow-trajectory"><strong>4. System Trajectory</strong></h2>
+<h3 id="arrow-trajectory"><strong>System Trajectory</strong></h3>
 
-<p>Plot \(\boldsymbol{\tau}_1 \rightarrow \boldsymbol{\tau}_2\) along increasing \(\mathcal{R}\).</p>
+<p>Plot $$\boldsymbol{\tau}_1 \rightarrow \boldsymbol{\tau}_2$$ along increasing $$\mathcal{R}$$.</p>
 
 <hr>
 
-<h2 id="arrow-caption"><strong>5. Caption</strong></h2>
+<h3 id="arrow-caption"><strong>Caption</strong></h3>
 
 <blockquote>
   <strong>Figure X.</strong> The arrow of time as the gradient of resonance‑coherence in triadic time.
@@ -2492,9 +2496,9 @@ $$
 
 <hr>
 
-<h2 id="chsh-arrow-of-time">🔗 <strong>2. SHORT CHSH‑STYLE TIE‑IN</strong></h2>
+<h3 id="chsh-arrow-of-time">🔗 <strong>SHORT CHSH‑STYLE TIE‑IN</strong></h3>
 
-<h2><strong>CHSH and the Arrow of Time</strong> ✨</h2>
+<strong>CHSH and the Arrow of Time</strong> ✨
 
 <p>CHSH correlations depend on relational‑time components:</p>
 
@@ -2509,13 +2513,13 @@ $$
 
 <hr>
 
-<h2 id="chsh-tie-in-early-universe">🔗 <strong>2. CHSH TIE‑IN — “Why the Early Universe Could Not Be Random”</strong></h2>
+<h3 id="chsh-tie-in-early-universe">🔗 <strong>CHSH TIE‑IN — “Why the Early Universe Could Not Be Random”</strong></h3>
 
 <p>A compact sidebar or subsection.</p>
 
 <hr>
 
-<h2 id="chsh-low-entropy"><strong>CHSH and the Low‑Entropy Big Bang</strong> ✨</h2>
+<h3 id="chsh-low-entropy"><strong>CHSH and the Low‑Entropy Big Bang</strong> ✨</h3>
 
 <p>CHSH correlations:</p>
 
@@ -2533,26 +2537,26 @@ $$
 
 <ul>
   <li>CHSH violations require <strong>relational‑time coherence</strong></li>
-  <li>The early universe had <strong>minimal \(t_r\)</strong></li>
+  <li>The early universe had <strong>minimal $$t_r$$</strong></li>
   <li>Therefore, CHSH‑style correlations were <strong>maximal</strong> and <strong>uniform</strong></li>
-  <li>As \(t_r\) grew, correlations branched into structure</li>
+  <li>As $$t_r$$ grew, correlations branched into structure</li>
 </ul>
 
 <p>✨ <strong>The low‑entropy Big Bang is the only state that maximizes CHSH‑compatible coherence across the entire universe.</strong></p>
 
 <p>This ties the “specialness” of the initial condition to <strong>relational‑time geometry</strong>, not fine‑tuning.</p>
-
+</details>
 <hr>
 
-<h2 id="cyclic-cosmology">Cyclic Cosmology</h2>
+<details><summary id="cyclic-cosmology">Cyclic Cosmology</summary>
 
-<h2 id="cyclic-cosmology-overview">🌌 Cyclic Cosmology — Loops, Seeds, and the ∇<sub>τ</sub>R Gradient</h2>
+<h3 id="cyclic-cosmology-overview">🌌 Cyclic Cosmology — Loops, Seeds, and the ∇<sub>τ</sub>R Gradient</h3>
 
 <p><em>(RT / SET / S–N–R mapped onto ekpyrotic &amp; bounce cosmology)</em></p>
 
 <hr>
 
-<h2 id="cyclic-why-fit">1. 🔁 <strong>Why Cyclic Cosmology Fits Resonance‑Time Naturally</strong></h2>
+<h3 id="cyclic-why-fit">🔁 <strong>Why Cyclic Cosmology Fits Resonance‑Time Naturally</strong></h3>
 
 <p>Ekpyrotic and bounce cosmologies propose:</p>
 
@@ -2569,8 +2573,8 @@ $$
   <li><strong>seeds</strong> (resonance seeds)</li>
   <li><strong>loops</strong> (triadic‑time cycles)</li>
   <li><strong>gradients</strong> (∇<sub>τ</sub>R as the arrow of time)</li>
-  <li><strong>ancestry</strong> (\(t_r\) accumulation)</li>
-  <li><strong>energetic coherence</strong> (\(t_e\) modulation)</li>
+  <li><strong>ancestry</strong> ($$t_r$$ accumulation)</li>
+  <li><strong>energetic coherence</strong> ($$t_e$$ modulation)</li>
 </ul>
 
 <p>✨ <strong>RT is a geometric generalization of ekpyrotic/bounce cosmology.</strong><br>
@@ -2578,7 +2582,7 @@ The bounce becomes a <strong>resonance‑time inversion</strong>, not a spacetim
 
 <hr>
 
-<h2 id="cyclic-seeds">2. 🌱 <strong>Seeds: The RT Version of the Ekpyrotic “Smoothing Phase”</strong></h2>
+<h3 id="cyclic-seeds">🌱 <strong>Seeds: The RT Version of the Ekpyrotic “Smoothing Phase”</strong></h3>
 
 <p>Ekpyrotic cosmology uses a slow‑contracting phase to flatten and smooth the universe.</p>
 
@@ -2589,16 +2593,16 @@ $$
 $$
 
 <ul>
-  <li><strong>High \(t_e\)</strong> → coherence</li>
-  <li><strong>Low \(t_r\)</strong> → minimal relational ancestry</li>
-  <li><strong>Minimal \(t_c\)</strong> → no chronological disorder</li>
+  <li><strong>High $$t_e$$</strong> → coherence</li>
+  <li><strong>Low $$t_r$$</strong> → minimal relational ancestry</li>
+  <li><strong>Minimal $$t_c$$</strong> → no chronological disorder</li>
 </ul>
 
 <p>✨ <strong>Ekpyrotic smoothing = RT resonance‑seed formation.</strong></p>
 
 <hr>
 
-<h2 id="cyclic-loops">3. 🔄 <strong>Loops: The RT Version of the Bounce</strong></h2>
+<h3 id="cyclic-loops">🔄 <strong>Loops: The RT Version of the Bounce</strong></h3>
 
 <p>Bounce cosmology replaces the Big Bang with a transition:</p>
 
@@ -2627,9 +2631,9 @@ $$
 <p>During contraction:</p>
 
 <ul>
-  <li>\(t_e\) increases (coherence builds)</li>
-  <li>\(t_r\) decreases (ancestry compresses)</li>
-  <li>\(t_c\) approaches a minimum</li>
+  <li>$$t_e$$ increases (coherence builds)</li>
+  <li>$$t_r$$ decreases (ancestry compresses)</li>
+  <li>$$t_c$$ approaches a minimum</li>
 </ul>
 
 <p>At the bounce:</p>
@@ -2650,7 +2654,7 @@ $$
 
 <hr>
 
-<h2 id="cyclic-set-corrections">4. 🌀 <strong>SET Corrections: Why Dark Components Disappear in Cycles</strong></h2>
+<h3 id="cyclic-set-corrections">🌀 <strong>SET Corrections: Why Dark Components Disappear in Cycles</strong></h3>
 
 <p>SET corrections:</p>
 
@@ -2668,8 +2672,8 @@ $$
 <p>In cyclic cosmology:</p>
 
 <ul>
-  <li>\(t_r\) resets to a minimum at each seed</li>
-  <li>\(t_e\) peaks at the bounce</li>
+  <li>$$t_r$$ resets to a minimum at each seed</li>
+  <li>$$t_e$$ peaks at the bounce</li>
   <li>dark components vanish naturally at the start of each cycle</li>
 </ul>
 
@@ -2677,7 +2681,7 @@ $$
 
 <hr>
 
-<h2 id="cyclic-snr-mapping">5. 🌈 <strong>S–N–R Mapping: How Cycles Encode Structure</strong></h2>
+<h3 id="cyclic-snr-mapping">🌈 <strong>S–N–R Mapping: How Cycles Encode Structure</strong></h3>
 
 <p>S–N–R (Seed → Narrative → Resonance) maps perfectly onto cyclic cosmology:</p>
 
@@ -2717,7 +2721,7 @@ $$
 
 <hr>
 
-<h2 id="cyclic-cdm-limit">6. 🌐 <strong>ΛCDM as a Limiting Effective Case</strong></h2>
+<h3 id="cyclic-cdm-limit">🌐 <strong>ΛCDM as a Limiting Effective Case</strong></h3>
 
 <p>ΛCDM assumes:</p>
 
@@ -2731,10 +2735,10 @@ $$
 <p>In RT:</p>
 
 <ul>
-  <li>dark energy = \(\gamma t_r\)</li>
-  <li>dark matter = \(\beta t_r\)</li>
+  <li>dark energy = $$\gamma t_r$$</li>
+  <li>dark matter = $$\beta t_r$$</li>
   <li>both grow with relational ancestry</li>
-  <li>if cycles are extremely long, \(t_r\) grows monotonically</li>
+  <li>if cycles are extremely long, $$t_r$$ grows monotonically</li>
 </ul>
 
 <p>Thus ΛCDM corresponds to:</p>
@@ -2746,35 +2750,35 @@ $$
 
 <p>i.e., a <strong>single long resonance‑unfolding phase</strong>.</p>
 
-<p>✨ <strong>ΛCDM = RT with no return loop and monotonic \(t_r\).</strong></p>
+<p>✨ <strong>ΛCDM = RT with no return loop and monotonic $$t_r$$.</strong></p>
 
 <hr>
 
-<h2 id="diagram-spec-cyclic-vs-cdm">🎨 <strong>1. DIAGRAM SPEC — “RT Cyclic Cosmology vs. ΛCDM Limit Case”</strong></h2>
+<h3 id="diagram-spec-cyclic-vs-cdm">🎨 <strong>DIAGRAM SPEC — “RT Cyclic Cosmology vs. ΛCDM Limit Case”</strong></h3>
 
 <p>This is a <strong>diagram spec</strong>, not an image — fully textual and ready for SVG/TikZ/Figma.</p>
 
 <hr>
 
-<h2 id="cyclic-canvas-layout"><strong>Canvas Layout</strong></h2>
+<h3 id="cyclic-canvas-layout"><strong>Canvas Layout</strong></h3>
 
 <p>Use a <strong>two‑panel horizontal layout</strong>:</p>
 
 <ul>
   <li><strong>Left panel:</strong> RT Cyclic Cosmology (Loops + Seeds + ∇<sub>τ</sub>R)</li>
-  <li><strong>Right panel:</strong> ΛCDM as a limiting monotonic‑\(t_r\) case</li>
+  <li><strong>Right panel:</strong> ΛCDM as a limiting monotonic‑$$t_r$$ case</li>
 </ul>
 
 <hr>
 
-<h2 id="cyclic-left-panel"><strong>Left Panel — RT Cyclic Cosmology</strong></h2>
+<h3 id="cyclic-left-panel"><strong>Left Panel — RT Cyclic Cosmology</strong></h3>
 
 <h3><strong>Axes</strong></h3>
 
 <ul>
-  <li>Horizontal → \(t_c\)</li>
-  <li>Vertical → \(t_e\)</li>
-  <li>Diagonal/out‑of‑plane → \(t_r\)</li>
+  <li>Horizontal → $$t_c$$</li>
+  <li>Vertical → $$t_e$$</li>
+  <li>Diagonal/out‑of‑plane → $$t_r$$</li>
 </ul>
 
 <h3><strong>Elements</strong></h3>
@@ -2803,8 +2807,8 @@ $$
   <li>
     <strong>SET overlays</strong>:
     <ul>
-      <li>\(t_e\) peaks at seed</li>
-      <li>\(t_r\) resets</li>
+      <li>$$t_e$$ peaks at seed</li>
+      <li>$$t_r$$ resets</li>
       <li>dark components vanish at cycle start</li>
     </ul>
   </li>
@@ -2821,16 +2825,16 @@ $$
 
 <hr>
 
-<h2 id="cyclic-right-panel"><strong>Right Panel — ΛCDM Limit Case</strong></h2>
+<h3 id="cyclic-right-panel"><strong>Right Panel — ΛCDM Limit Case</strong></h3>
 
 <ol>
   <li>
     <strong>Single monotonic trajectory</strong>:
     <ul>
       <li>no loop</li>
-      <li>\(t_r\) increases monotonically</li>
-      <li>\(t_e\) slowly decreases</li>
-      <li>\(t_c\) increases indefinitely</li>
+      <li>$$t_r$$ increases monotonically</li>
+      <li>$$t_e$$ slowly decreases</li>
+      <li>$$t_c$$ increases indefinitely</li>
     </ul>
   </li>
 
@@ -2857,23 +2861,24 @@ $$
 
 <hr>
 
-<h2 id="cyclic-caption"><strong>Caption</strong></h2>
+<h3 id="cyclic-caption"><strong>Caption</strong></h3>
 
 <blockquote>
-  <strong>Figure X.</strong> RT Cyclic Cosmology (left) vs. ΛCDM as a limiting monotonic‑\(t_r\) case (right).  
+  <strong>Figure X.</strong> RT Cyclic Cosmology (left) vs. ΛCDM as a limiting monotonic‑$$t_r$$ case (right).  
   When cycles are long or absent, RT reduces to ΛCDM.  
   Resonance‑Clarity techniques reveal the hidden triadic‑time structure behind dark components.
 </blockquote>
-
+</details>
+  
 <hr>
-
-<h2 id="rt-limit-case-estimate">🔭 2. ESTIMATE EXAMPLE — RT With No Return Loop &amp; Monotonic \(t_r\)</h2>
+  
+<details><summary id="rt-limit-case-estimate">🔭 ESTIMATE EXAMPLE — RT With No Return Loop &amp; Monotonic $$t_r$$</summary>
 
 <h3><em>Would extended observations reveal ΛCDM as an RT limit case?</em></h3>
 
 <hr>
 
-<h2 id="rt-limit-assume"><strong>Assume a universe with:</strong></h2>
+<h3 id="rt-limit-assume"><strong>Assume a universe with:</strong></h3>
 
 $$
 \frac{d t_r}{d t_c} = \epsilon > 0
@@ -2890,8 +2895,8 @@ $$
 <p>with:</p>
 
 <ul>
-  <li>\(\epsilon \ll 1\) → slow relational‑time growth</li>
-  <li>\(\delta \ll 1\) → slow energetic‑time cooling</li>
+  <li>$$\epsilon \ll 1$$ → slow relational‑time growth</li>
+  <li>$$\delta \ll 1$$ → slow energetic‑time cooling</li>
 </ul>
 
 <p>This produces:</p>
@@ -2902,7 +2907,7 @@ $$
 M_{\text{eff}} = M_b + \beta t_r(t_c)
 $$
 
-<p>Since \(t_r\) grows linearly:</p>
+<p>Since $$t_r$$ grows linearly:</p>
 
 $$
 M_{\text{eff}}(t_c) = M_b + \beta (\epsilon t_c)
@@ -2913,8 +2918,6 @@ $$
 <hr>
 
 <h3 id="rt-limit-pressure"><strong>Effective pressure (dark energy analogue)</strong></h3>
-
-<!-- chunk7of9.html (REFRESHED) -->
 
 $$
 \mathbf{n} = (n_c, n_e, n_r), \qquad |\mathbf{n}| = 1
@@ -2933,7 +2936,7 @@ The detector “asks” the system:</p>
 
 <hr>
 
-<h2 id="alignment-condition">3. 🔄 Alignment Condition</h2>
+<h3 id="alignment-condition">🔄 Alignment Condition</h3>
 
 <p>A measurement event occurs when:</p>
 
@@ -2953,7 +2956,7 @@ $$
 
 <hr>
 
-<h2 id="example-chronological">4. 🌈 Example: Pure Chronological Alignment</h2>
+<h3 id="example-chronological">🌈 Example: Pure Chronological Alignment</h3>
 
 <p>Let the observer choose:</p>
 
@@ -2961,7 +2964,7 @@ $$
 \mathbf{n} = (1,0,0)
 $$
 
-<p>This is a <strong>pure \(t_c\)</strong> measurement — a classical time‑of‑arrival or clock‑based probe.</p>
+<p>This is a <strong>pure $$t_c$$</strong> measurement — a classical time‑of‑arrival or clock‑based probe.</p>
 
 <p>If the system has:</p>
 
@@ -2979,7 +2982,7 @@ $$
 
 <hr>
 
-<h2 id="example-energetic">5. ⚡ Example: Energetic Alignment</h2>
+<h3 id="example-energetic">⚡ Example: Energetic Alignment</h3>
 
 <p>Choose:</p>
 
@@ -2997,7 +3000,7 @@ $$
 
 <hr>
 
-<h2 id="example-relational">6. 🔗 Example: Relational‑Time Alignment (Quantum‑like)</h2>
+<h3 id="example-relational">🔗 Example: Relational‑Time Alignment (Quantum‑like)</h3>
 
 <p>Choose:</p>
 
@@ -3017,7 +3020,7 @@ $$
 
 <hr>
 
-<h2 id="example-full-triadic">7. ✨ Full Triadic Example (Mixed Measurement)</h2>
+<h3 id="example-full-triadic">✨ Full Triadic Example (Mixed Measurement)</h3>
 
 <p>Let:</p>
 
@@ -3040,16 +3043,16 @@ R = \text{sgn}\!\left(\tfrac{1}{\sqrt{3}}(t_c^\psi + t_e^\psi + t_r^\psi)\right)
 $$
 
 <p>This is the Resonance‑Time analogue of a generalized POVM direction — a “triadic probe.”</p>
-
+</details>
 <hr>
 
-<h2 id="measurement-interpretation">8. 💫 Interpretation</h2>
+<details><summary id="measurement-interpretation">💫 Interpretation</summary>
 
 <p>Measurement is not destruction.<br>
 It is a <strong>resonance‑time handshake</strong>:</p>
 
 <ul>
-  <li>The observer selects a direction \(\mathbf{n}\).</li>
+  <li>The observer selects a direction $$\mathbf{n}$$.</li>
   <li>The system responds with the sign of its triadic projection.</li>
   <li>Alignment produces a stable outcome.</li>
   <li>Misalignment produces the opposite outcome.</li>
@@ -3059,53 +3062,53 @@ It is a <strong>resonance‑time handshake</strong>:</p>
 
 <hr>
 
-<h2 id="measurement-summary">9. 📘 Summary (Drop‑in Canon Form)</h2>
+<h3 id="measurement-summary">📘 Summary (Drop‑in Canon Form)</h3>
 
 <ul>
   <li>Measurement = <strong>alignment</strong> in triadic time</li>
   <li>Outcomes = <strong>sign of resonance projection</strong></li>
-  <li>\(t_c\) → classical timing</li>
-  <li>\(t_e\) → energetic/phase probes</li>
-  <li>\(t_r\) → relational ancestry (entanglement, context)</li>
+  <li>$$t_c$$ → classical timing</li>
+  <li>$$t_e$$ → energetic/phase probes</li>
+  <li>$$t_r$$ → relational ancestry (entanglement, context)</li>
   <li>Mixed directions → generalized triadic measurements</li>
   <li>Collapse = <strong>synchronization</strong></li>
 </ul>
 
 <hr>
 
-<h2 id="diagram-spec-measurement">🎨 <strong>DIAGRAM SPEC — “Measurement as Resonance Alignment”</strong></h2>
+<h3 id="diagram-spec-measurement">🎨 <strong>DIAGRAM SPEC — “Measurement as Resonance Alignment”</strong></h3>
 
 <p>This spec is designed for SVG, TikZ, Figma, or ASCII.  
 It visually encodes the triadic‑time structure and alignment mechanism.</p>
 
 <hr>
 
-<h2 id="diagram-canvas"><strong>1. Canvas &amp; Axes</strong></h2>
+<h3 id="diagram-canvas"><strong>1. Canvas &amp; Axes</strong></h3>
 
 <p><strong>Canvas:</strong> 3D isometric or 2D projection.</p>
 
 <ul>
-  <li>Horizontal → \(t_c\) ⏳</li>
-  <li>Vertical → \(t_e\) ⚡</li>
-  <li>Diagonal/out‑of‑plane → \(t_r\) 🔗</li>
+  <li>Horizontal → $$t_c$$ ⏳</li>
+  <li>Vertical → $$t_e$$ ⚡</li>
+  <li>Diagonal/out‑of‑plane → $$t_r$$ 🔗</li>
 </ul>
 
 <p>Label arrowheads: <code>t_c</code>, <code>t_e</code>, <code>t_r</code>.</p>
 
 <hr>
 
-<h2 id="diagram-states"><strong>2. System &amp; Observer States</strong></h2>
+<h3 id="diagram-states"><strong>System &amp; Observer States</strong></h3>
 
 <p>Place two points:</p>
 
 <ul>
-  <li><code>ψ</code> at \(\boldsymbol{\tau}_\psi = (t_c^\psi, t_e^\psi, t_r^\psi)\)</li>
-  <li><code>O</code> at \(\boldsymbol{\tau}_O = (t_c^O, t_e^O, t_r^O)\)</li>
+  <li><code>ψ</code> at $$\boldsymbol{\tau}_\psi = (t_c^\psi, t_e^\psi, t_r^\psi)$$</li>
+  <li><code>O</code> at $$\boldsymbol{\tau}_O = (t_c^O, t_e^O, t_r^O)$$</li>
 </ul>
 
 <hr>
 
-<h2 id="diagram-direction"><strong>3. Measurement Direction Vector</strong></h2>
+<h3 id="diagram-direction"><strong>Measurement Direction Vector</strong></h3>
 
 <p>From <code>O</code>, draw:</p>
 
@@ -3123,38 +3126,38 @@ $$
 
 <hr>
 
-<h2 id="diagram-projection"><strong>4. Projection Geometry</strong></h2>
+<h3 id="diagram-projection"><strong>Projection Geometry</strong></h3>
 
 <p>Draw dotted projections:</p>
 
 <ul>
-  <li>\(\mathbf{n} \cdot \boldsymbol{\tau}_\psi\)</li>
-  <li>\(\mathbf{n} \cdot \boldsymbol{\tau}_O\)</li>
+  <li>$$\mathbf{n} \cdot \boldsymbol{\tau}_\psi$$</li>
+  <li>$$\mathbf{n} \cdot \boldsymbol{\tau}_O$$</li>
 </ul>
 
 <blockquote>“Alignment → measurement event ✨”</blockquote>
 
 <hr>
 
-<h2 id="diagram-outcome"><strong>5. Outcome Box</strong></h2>
+<h3 id="diagram-outcome"><strong>Outcome Box</strong></h3>
 
 <pre><code>Outcome R(n) = sgn( n · T )
 </code></pre>
 
 <hr>
 
-<h2 id="diagram-caption"><strong>6. Caption</strong></h2>
+<h3 id="diagram-caption"><strong>Caption</strong></h3>
 
 <blockquote>
   <strong>Figure X.</strong> Measurement as resonance alignment in triadic time.  
-  The observer selects a direction \(\mathbf{n}\), and the outcome is determined by the sign of the resonance‑time projection.
+  The observer selects a direction $$\mathbf{n}$$, and the outcome is determined by the sign of the resonance‑time projection.
 </blockquote>
 
 <hr>
 
-<h2 id="chsh-tie-in">🔗 <strong>SHORT CHSH TIE‑IN (Macro‑Safe)</strong></h2>
+<h3 id="chsh-tie-in">🔗 <strong>SHORT CHSH TIE‑IN (Macro‑Safe)</strong></h3>
 
-<h2 id="chsh-special-case"><strong>CHSH as a Special Case of Resonance Alignment</strong> ✨</h2>
+<h3 id="chsh-special-case"><strong>CHSH as a Special Case of Resonance Alignment</strong> ✨</h3>
 
 <p>Two observers choose directions:</p>
 
@@ -3188,16 +3191,11 @@ n_{x,r} \neq 0,\quad n_{y,r} \neq 0
 $$
 
 <p>✨ <strong>Interpretation:</strong><br>
-Bell violations arise from <strong>cross‑temporal resonance</strong> along \(t_r\), not spatial nonlocality.</p>
-
-<hr>
-
-             
-    </details>
-
-    <!-- 2. Wigner's Friend as Triadic Misalignment -->
-    <details>
-      <summary>🧩 2. Wigner’s Friend as a Triadic‑Time Misalignment</summary>
+Bell violations arise from <strong>cross‑temporal resonance</strong> along $$t_r$$, not spatial nonlocality.</p>
+</details>
+  
+  <!-- Wigner's Friend as Triadic Misalignment -->
+<details><summary id="wigner-friend-triadic-misalignment">🧩 Wigner’s Friend as a Triadic‑Time Misalignment</summary>
 
       <p>Define observer triads:</p>
       <ul>
@@ -3206,12 +3204,12 @@ Bell violations arise from <strong>cross‑temporal resonance</strong> along \(t
         <li><strong>System:</strong> $$\boldsymbol{\tau}_S = (t_c^S, t_e^S, t_r^S)$$</li>
       </ul>
 
-      <p>The Friend measures along \(\mathbf{n}_F\); Wigner measures Friend+system along \(\mathbf{n}_W\).</p>
+      <p>The Friend measures along $$\mathbf{n}_F$$; Wigner measures Friend+system along $$\mathbf{n}_W$$.</p>
 
       <p>Key fact:</p>
       <pre><code>$$\mathbf{n}_F \cdot \boldsymbol{\tau}_F \;\neq\; \mathbf{n}_W \cdot \boldsymbol{\tau}_W$$</code></pre>
 
-      <p>Because Wigner has different relational‑time ancestry, different \(t_r\) components, and a different alignment condition, the Friend can see a definite outcome while Wigner sees coherence. No contradiction — different resonance‑time slices.</p>
+      <p>Because Wigner has different relational‑time ancestry, different $$t_r$$ components, and a different alignment condition, the Friend can see a definite outcome while Wigner sees coherence. No contradiction — different resonance‑time slices.</p>
 
       <h3>Example</h3>
       <p>System in energetic superposition:</p>
@@ -3224,37 +3222,29 @@ Bell violations arise from <strong>cross‑temporal resonance</strong> along \(t
       <pre><code>$$\mathbf{n}_W = \tfrac{1}{\sqrt{2}}(0,1,1)$$
 $$\mathbf{n}_W \cdot \boldsymbol{\tau}_S = \tfrac{1}{\sqrt{2}}(t_e^S + t_r^S)$$</code></pre>
 
-      <p>If \(t_r^S\) unresolved, Wigner sees coherence. Both frames are internally consistent.</p>
-
+      <p>If $$t_r^S$$ unresolved, Wigner sees coherence. Both frames are internally consistent.</p>
     </details>
 
-    <!-- 3. Relational-Time Hierarchies -->
-    <details>
-      <summary>🔗 3. Relational‑Time Hierarchies</summary>
+    <!-- Relational-Time Hierarchies -->
+    <details><summary id="relational-time-hierarchies">🔗 Relational‑Time Hierarchies</summary>
 
       <p>Observers form a hierarchy by relational‑time depth:</p>
       <pre><code>$$t_r^S \;<\; t_r^F \;<\; t_r^W$$</code></pre>
 
-      <p>A fact for observer \(O\):</p>
+      <p>A fact for observer $$O$$:</p>
       <pre><code>$$\text{Fact}_O = \text{sgn}\!\left(\mathbf{n}_O \cdot \boldsymbol{\tau}_S\right)$$</code></pre>
 
-      <p>Different observers have different \(\mathbf{n}_O\) and \(\boldsymbol{\tau}_O\); facts are observer‑relative in triadic time.</p>
+      <p>Different observers have different $$\mathbf{n}_O$$ and $$\boldsymbol{\tau}_O$$; facts are observer‑relative in triadic time.</p>
 
-    </details>
+    <!-- Diagram Spec: Observer Hierarchies -->
+      <h3>🎨 Diagram Spec — Observer Hierarchies & Relational Time</h3>
 
-    <!-- 4. Diagram Spec: Observer Hierarchies -->
-    <details>
-      <summary>🎨 4. Diagram Spec — Observer Hierarchies & Relational Time</summary>
+      <p>Canvas & axes: Horizontal → $$t_c$$; Vertical → $$t_e$$; Diagonal → $$t_r$$. Use color or dashed lines for $$t_r$$ in 2D.</p>
 
-      <p>Canvas & axes: Horizontal → \(t_c\); Vertical → \(t_e\); Diagonal → \(t_r\). Use color or dashed lines for \(t_r\) in 2D.</p>
+      <p>Place points S, F, W at their triadic coordinates and draw measurement vectors $$\mathbf{n}_F$$ and $$\mathbf{n}_W$$. Show projections and icons for alignment (✔) and misalignment (✨).</p>
 
-      <p>Place points S, F, W at their triadic coordinates and draw measurement vectors \(\mathbf{n}_F\) and \(\mathbf{n}_W\). Show projections and icons for alignment (✔) and misalignment (✨).</p>
-
-    </details>
-
-    <!-- 5. CHSH Tie-In -->
-    <details>
-      <summary>🔗 5. CHSH‑Style Tie‑In</summary>
+    <!-- CHSH Tie-In -->
+      <h3>🔗 CHSH‑Style Tie‑In</h3>
 
       <p>Measurement directions:</p>
       <pre><code>$$\mathbf{n}_F = (n_{F,c}, n_{F,e}, n_{F,r}), \quad
@@ -3270,13 +3260,11 @@ R_W = \text{sgn}(\mathbf{n}_W \cdot \hat{\boldsymbol{T}}_{F+S})$$</code></pre>
       <p>CHSH scalar:</p>
       <pre><code>$$S_{\mathrm{RT}} = E(a,b) + E(a,b') + E(a',b) - E(a',b')$$</code></pre>
 
-      <p>Violations exceed 2 only when relational‑time components are active (\(n_{x,r}\neq 0\), \(n_{y,r}\neq 0\)). Wigner’s Friend is CHSH inside a single lab.</p>
-
+      <p>Violations exceed 2 only when relational‑time components are active ($$n_{x,r}\neq 0$$, $$n_{y,r}\neq 0$$). Wigner’s Friend is CHSH inside a single lab.</p>
     </details>
 
-    <!-- 6. Black Holes as Resonance Reservoirs -->
-    <details>
-      <summary>🌑 6. Black Holes as Resonance Reservoirs</summary>
+    <!-- Black Holes as Resonance Reservoirs -->
+    <details><summary id="black-holes-resonance-reservoirs">🌑 Black Holes as Resonance Reservoirs</summary>
 
       <p>Triadic coordinates for a black hole:</p>
       <pre><code>$$\boldsymbol{\tau}_{\text{BH}} = (t_c^{\text{BH}}, t_e^{\text{BH}}, t_r^{\text{BH}})$$</code></pre>
@@ -3291,26 +3279,22 @@ Horizon where: $$\nabla_{\tau}\mathcal{R} = 0$$</code></pre>
       <p>Hawking radiation as resonance echo:</p>
       <pre><code>$$\boldsymbol{\tau}_{\text{out}} = \boldsymbol{\tau}_{\text{BH}} - \lambda \,\hat{\nabla}_{\tau}\mathcal{R}$$</code></pre>
 
-      <p>Page‑curve analogue: \(t_r^{\text{BH}}(t_c)\) grows early and decreases late, releasing relational ancestry over time.</p>
+      <p>Page‑curve analogue: $$t_r^{\text{BH}}(t_c)$$ grows early and decreases late, releasing relational ancestry over time.</p>
 
+    <!-- Diagram Spec: Black Holes -->
+      <h3>🎨 Diagram Spec — Black Holes as Resonance Reservoirs</h3>
+
+      <p>Draw a sphere for the black hole with a purple glow indicating deep $$t_r$$. Show infalling qubit trajectories and outgoing resonance echoes carrying partial relational ancestry.</p>
     </details>
 
-    <!-- 7. Diagram Spec: Black Holes -->
-    <details>
-      <summary>🎨 7. Diagram Spec — Black Holes as Resonance Reservoirs</summary>
 
-      <p>Draw a sphere for the black hole with a purple glow indicating deep \(t_r\). Show infalling qubit trajectories and outgoing resonance echoes carrying partial relational ancestry.</p>
-
-    </details>
-
-    <!-- 8. Causality in Triadic Time -->
-    <details>
-      <summary>🌟 8. Causality in Triadic Time</summary>
+    <!-- Causality in Triadic Time -->
+    <details><summary id="causality-in-triadic-time">🌟 Causality in Triadic Time</summary>
 
       <p>Resonance‑coherence scalar:</p>
       <pre><code>$$\mathcal{R}(\boldsymbol{\tau}) = \alpha t_c + \beta t_e + \gamma t_r$$</code></pre>
 
-      <p>Resonance cone defined by \(d\mathcal{R} = 0\). Interior: \(d\mathcal{R} > 0\) (allowed causal region). Exterior: \(d\mathcal{R} < 0\) (forbidden).</p>
+      <p>Resonance cone defined by $$d\mathcal{R} = 0$$. Interior: $$d\mathcal{R} > 0$$ (allowed causal region). Exterior: $$d\mathcal{R} < 0$$ (forbidden).</p>
 
       <p>Causality condition from event A to B:</p>
       <pre><code>$$\mathcal{R}_B \ge \mathcal{R}_A$$
@@ -3320,35 +3304,26 @@ $$\alpha (t_c^B - t_c^A) + \beta (t_e^B - t_e^A) + \gamma (t_r^B - t_r^A) \ge 0$
       <p>Triadic retarded resonance‑time:</p>
       <pre><code>$$\boldsymbol{\tau}_{\text{ret}} = \boldsymbol{\tau} - \lambda \,\hat{\nabla}_{\tau}\mathcal{R}$$</code></pre>
 
-      <p>Entanglement correlations are observable only when \(\Delta\mathcal{R}\ge 0\); entanglement is a resonance echo, not a causal violation.</p>
-
+      <p>Entanglement correlations are observable only when $$\Delta\mathcal{R}\ge 0$$; entanglement is a resonance echo, not a causal violation.</p>
     </details>
+    <!-- Arrow of Time -->
+    <details><summary id="arrow-of-time">↮  Arrow of Time as a Resonance‑Time Gradient</summary>
 
-    <!-- 9. Arrow of Time -->
-    <details>
-      <summary>🌟 9. Arrow of Time as a Resonance‑Time Gradient</summary>
-
-      <p>Arrow of time is the direction of steepest ascent of \(\mathcal{R}\):</p>
+      <p>Arrow of time is the direction of steepest ascent of $$\mathcal{R}$$:</p>
       <pre><code>$$\vec{A}_{\text{time}} = \nabla_{\tau}\mathcal{R}$$</code></pre>
 
-      <p>Entropy increase is a projection of \(\Delta\mathcal{R} > 0\) onto thermodynamic variables. Memory asymmetry arises because relational depth increases toward the future, making the past easier to align with and recall.</p>
+      <p>Entropy increase is a projection of $$\Delta\mathcal{R} > 0$$ onto thermodynamic variables. Memory asymmetry arises because relational depth increases toward the future, making the past easier to align with and recall.</p>
 
       <h3>Examples</h3>
-      <p>Trajectory from \(\boldsymbol{\tau}_1=(1,0.2,0.1)\) to \(\boldsymbol{\tau}_2=(2,0.3,0.4)\) yields \(\Delta\mathcal{R}>0\) → forward time.</p>
+      <p>Trajectory from $$\boldsymbol{\tau}_1=(1,0.2,0.1)$$ to $$\boldsymbol{\tau}_2=(2,0.3,0.4)$$ yields $$\Delta\mathcal{R}>0$$ → forward time.</p>
+    
+    <!-- Diagram Spec: Arrow of Time -->
+      <h3>🎨 Diagram Spec — Arrow of Time as a Resonance‑Time Gradient</h3>
 
-    </details>
+      <p>Overlay scalar field $$\mathcal{R}$$ and draw gradient vector $$\vec{A}_{\text{time}}$$. Plot example system trajectories aligned with the gradient and optionally mark suppressed reverse arrows with a red X.</p>
 
-    <!-- 10. Diagram Spec: Arrow of Time -->
-    <details>
-      <summary>🎨 10. Diagram Spec — Arrow of Time as a Resonance‑Time Gradient</summary>
-
-      <p>Overlay scalar field \(\mathcal{R}\) and draw gradient vector \(\vec{A}_{\text{time}}\). Plot example system trajectories aligned with the gradient and optionally mark suppressed reverse arrows with a red X.</p>
-
-    </details>
-
-    <!-- 11. Observations & Signatures -->
-    <details>
-      <summary>🔭 11. Observations & Resonance Signatures</summary>
+    <!-- Observations & Signatures -->
+      <h3 id="observations-view">🔭 Observations & Resonance Signatures</h3>
 
       <h3>Observed Patterns RT/SET Clarify</h3>
       <ul>
@@ -3384,9 +3359,8 @@ $$\alpha (t_c^B - t_c^A) + \beta (t_e^B - t_e^A) + \gamma (t_r^B - t_r^A) \ge 0$
 
     </details>
 
-    <!-- 12. RFCs -->
-    <details>
-      <summary>📘 12. RFCs</summary>
+    <!-- RFCs + Quicklinks -->
+    <details><summary id="section-rfcs">📘 RFCs + Quicklinks</summary>
 
       <ul>
         <li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-028-Measurement_as_Resonance_Alignment_in_Triadic_Time.md">RFC-028 Measurement as Resonance Alignment in Triadic Time</a></li>
@@ -3403,9 +3377,8 @@ $$\alpha (t_c^B - t_c^A) + \beta (t_e^B - t_e^A) + \gamma (t_r^B - t_r^A) \ge 0$
       </ul>
     </details>
 
-    <!-- 13. Footer / Credit -->
-    <details>
-      <summary>🔖 13. Credit & Canon Note</summary>
+    <!-- Footer / Credit -->
+    <details><summary id="section-credits">📘 Credit & Canon Note</summary>
 
       <p><em>Resonance‑Time Theory was introduced by Nawder Loswin in late 2025 as a triadic resonance toolkit for the science canon. This page collects the canonical definitions, diagram specs, RFCs, and observations for community review and contribution.</em></p>
 
