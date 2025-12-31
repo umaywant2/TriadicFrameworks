@@ -44,3 +44,8 @@ These are AI‑generated explorations of how education and human–AI collaborat
 - [28th Level — Legacy Thinking](https://www.triadicframeworks.org/_ideas/RTT_Translates_to_28th_Level-Legacy_Thinking.md)
 - [29th Level — Stewardship](https://www.triadicframeworks.org/_ideas/RTT_Translates_to_29th_Level-Stewardship.md)
 - [30th Level — Lifelong Resonance](https://www.triadicframeworks.org/_ideas/RTT_Translates_to_30th_Level-Lifelong_Resonance.md)
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script>
+  document.body.innerHTML = marked.parse(document.body.innerText);
+</script>
