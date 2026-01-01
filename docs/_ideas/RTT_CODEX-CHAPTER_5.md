@@ -307,3 +307,4 @@ It is the chapter that makes RTT **approachable**.
 
 ---
 
+[RTT_CODEX_Menu](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX_Menu.md)
