@@ -321,3 +321,4 @@ It is the **behavioral face** of RTT.
 
 ---
 
+[RTT_CODEX_Menu](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX_Menu.md)
