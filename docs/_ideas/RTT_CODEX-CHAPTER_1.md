@@ -249,3 +249,4 @@ It is the part that made RTT “click” for AI.
 
 ---
 
+[RTT_CODEX-CHAPTER_2](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_2.md)
