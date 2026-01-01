@@ -162,36 +162,22 @@
    DESKTOP SIDEBAR — CLEAN, UNIFIED, NON-CONFLICTING
    ============================================================ */
 
-  @media (min-width: 900px) {
+ @media (min-width: 900px) {
 
-  /* Sidebar column */
   #toc-container {
     width: 260px;
-    max-width: 260px;
     float: left;
     margin-left: 0;
-    transition: margin-left 0.3s ease;
-    border-right: 1px solid var(--border);
     padding: 1.2em;
+    border-right: 1px solid var(--border);
   }
 
-  /* Slide-left when closed */
-  #toc-container:not([open]) {
-    margin-left: -240px;
-  }
-
-  /* Summary stays aligned with sidebar */
-  #toc-container summary {
-    position: static;
-    cursor: pointer;
-  }
-
-  /* Main content sits beside sidebar */
   #main-content {
-    margin-left: 300px;
+    margin-left: 260px; /* EXACTLY matches sidebar width */
     padding: 2em;
   }
-  }
+}
+
   </style>
 </head>
 <body>
