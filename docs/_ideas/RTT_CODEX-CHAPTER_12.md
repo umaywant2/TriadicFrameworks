@@ -318,3 +318,4 @@ The Third Triad is the universe’s first act of becoming.
 
 ---
 
+[RTT_CODEX_Menu](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX_Menu.md)
