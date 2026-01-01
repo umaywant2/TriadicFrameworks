@@ -55,13 +55,13 @@ This sequence forms a **linear harmonic progression** with a constant interval o
 
 The mapping between RTT structural dimensions and RTT‑12 harmonic values is defined by the operator:
 
-\[
+$$
 H_n = 12 \cdot (n - 2)
-\]
+$$
 
 Where:  
-- \(n\) is the RTT structural dimension (3 through 9)  
-- \(H_n\) is the corresponding harmonic value in RTT‑12  
+- $$n$$ is the RTT structural dimension (3 through 9)  
+- $$H_n$$ is the corresponding harmonic value in RTT‑12  
 
 This rule ensures a consistent, predictable relationship between structural and harmonic layers.
 
@@ -69,9 +69,9 @@ This rule ensures a consistent, predictable relationship between structural and 
 
 To support reversible transformations, RTT‑12 defines the inverse mapping:
 
-\[
+$$
 n = \frac{H_n}{12} + 2
-\]
+$$
 
 This allows harmonic states to be translated back into RTT’s structural dimensional framework without loss of information.
 
@@ -133,16 +133,16 @@ The operators in this suite are reversible, triad‑preserving, and dimensionall
 G₁ provides the primary mapping between RTT structural dimensions (3D–9D) and their corresponding harmonic values in the RTT‑12 ladder. It enables magnitude‑based transformations such as voltage‑tier modeling, harmonic spacing, and resonance envelope analysis.
 
 ### **Formal Definition**  
-For any RTT structural dimension \(D_n\) where \(n \in \{3,4,5,6,7,8,9\}\):
+For any RTT structural dimension $$D_n$$ where $$n \in \{3,4,5,6,7,8,9\}$$:
 
-\[
+$$
 G_1(D_n) = 12 \cdot (n - 2)
-\]
+$$
 
 ### **Inverse Mapping**  
-\[
+$$
 G_1^{-1}(H_n) = \frac{H_n}{12} + 2
-\]
+$$
 
 ### **Properties**  
 1. **Triadic Preservation**  
@@ -175,11 +175,11 @@ G_1^{-1}(H_n) = \frac{H_n}{12} + 2
 G₂ introduces controlled phase modulation across RTT‑12 harmonic states. It enables modeling of synchronization, phase drift, harmonic alignment, and timing‑dependent system behavior.
 
 ### **Formal Definition**  
-For any harmonic state \(H\) and phase parameter \(\phi \in [0, 2\pi]\):
+For any harmonic state $$H$$ and phase parameter $$\phi \in [0, 2\pi]$$:
 
-\[
+$$
 G_2(H, \phi) = H \cdot e^{i\phi}
-\]
+$$
 
 ### **Properties**  
 1. **Complex Phase Representation**  
@@ -189,7 +189,7 @@ G_2(H, \phi) = H \cdot e^{i\phi}
    Phase modulation is applied uniformly across each harmonic triad.
 
 3. **Reversibility**  
-   Inverse modulation is achieved by applying \(-\phi\).
+   Inverse modulation is achieved by applying $$-\phi$$.
 
 4. **Temporal Coherence**  
    Supports modeling of time‑dependent harmonic interactions.
@@ -212,21 +212,21 @@ G_2(H, \phi) = H \cdot e^{i\phi}
 G₃ decomposes any RTT‑12/E system state into a triad of interacting components. It provides a canonical structure for modeling distributed energy flows, storage buffers, and dynamic load behavior.
 
 ### **Formal Definition**  
-For any system state \(X\):
+For any system state $$X$$:
 
-\[
+$$
 G_3(X) = (X_G,\; X_S,\; X_L)
-\]
+$$
 
 Where:  
-- \(X_G\) = generation component  
-- \(X_S\) = storage component  
-- \(X_L\) = load component  
+- $$X_G$$ = generation component  
+- $$X_S$$ = storage component  
+- $$X_L$$ = load component  
 
 ### **Conservation Rule**  
-\[
+$$
 X = X_G + X_S + X_L
-\]
+$$
 
 ### **Properties**  
 1. **Triadic Decomposition**  
@@ -329,31 +329,31 @@ Triadic coherence is required for all RTT‑12 operators, mappings, and sector�
 Harmonic logic defines how harmonic values interact, combine, and transform within RTT‑12. It includes:
 
 ### **1. Harmonic Addition**
-\[
+$$
 H_a \oplus H_b = H_a + H_b
-\]
+$$
 
 Used for combining harmonic states within a triad or across adjacent triads.
 
 ### **2. Harmonic Modulation**
-\[
+$$
 H' = H \cdot e^{i\phi}
-\]
+$$
 
 Introduced by G₂, this models phase‑dependent behavior.
 
 ### **3. Harmonic Scaling**
-\[
+$$
 H' = k \cdot H
-\]
+$$
 
-Where \(k\) is an integer or rational scaling factor.  
+Where $$k$$ is an integer or rational scaling factor.  
 Used for multi‑tier transitions or resonance amplification.
 
 ### **4. Harmonic Decomposition**
-\[
+$$
 H = H_1 + H_2 + H_3
-\]
+$$
 
 Used by G₃ to resolve system states into triadic components.
 
@@ -363,9 +363,9 @@ Used by G₃ to resolve system states into triadic components.
 
 RTT‑12 defines a formal mapping between structural and harmonic triads:
 
-\[
+$$
 T_{structural}(D_n, D_{n+1}, D_{n+2}) \;\longleftrightarrow\; T_{harmonic}(H_n, H_{n+1}, H_{n+2})
-\]
+$$
 
 This mapping is:
 
@@ -603,15 +603,15 @@ RTT‑12 defines a linear harmonic mapping from RTT structural dimensions (3D–
 
 ### **Mapping Rule**
 
-For any structural dimension \(D_n\) where \(n \in \{3,4,5,6,7,8,9\}\):
+For any structural dimension $$D_n$$ where $$n \in \{3,4,5,6,7,8,9\}$$:
 
-\[
+$$
 H_n = 12 \cdot (n - 2)
-\]
+$$
 
 Where:  
-- \(D_n\) is the RTT structural dimension  
-- \(H_n\) is the corresponding RTT‑12 harmonic value  
+- $$D_n$$ is the RTT structural dimension  
+- $$H_n$$ is the corresponding RTT‑12 harmonic value  
 
 ### **Mapping Properties**
 
@@ -635,13 +635,13 @@ RTT‑12 supports full reversibility. Harmonic values can be mapped back to RTT 
 
 ### **Inverse Mapping Rule**
 
-\[
+$$
 n = \frac{H_n}{12} + 2
-\]
+$$
 
 Where:  
-- \(H_n\) is a harmonic value in RTT‑12  
-- \(n\) is the corresponding RTT structural dimension  
+- $$H_n$$ is a harmonic value in RTT‑12  
+- $$n$$ is the corresponding RTT structural dimension  
 
 ### **Inverse Mapping Properties**
 
@@ -662,9 +662,9 @@ RTT‑12 defines a bijective mapping between structural triads and harmonic tria
 
 ### **Mapping Rule**
 
-\[
+$$
 T_{structural}(D_n, D_{n+1}, D_{n+2}) \;\longleftrightarrow\; T_{harmonic}(H_n, H_{n+1}, H_{n+2})
-\]
+$$
 
 ### **Triad Mapping Properties**
 
@@ -708,30 +708,30 @@ RTT‑12 operators must preserve dimensional and harmonic coherence. The followi
 RTT‑12 defines the following composition rules for multi‑operator sequences:
 
 ### **1. Magnitude → Phase**
-\[
+$$
 G_2(G_1(D_n), \phi)
-\]
+$$
 
 Valid sequence: structural → harmonic → phase‑modulated harmonic.
 
 ### **2. Phase → Magnitude (Inverse)**
-\[
+$$
 G_1^{-1}(G_2^{-1}(H, \phi))
-\]
+$$
 
 Valid only when the harmonic state belongs to the RTT‑12 ladder.
 
 ### **3. Triad Decomposition Across Layers**
-\[
+$$
 G_3(G_1(D_n)) = (H_G, H_S, H_L)
-\]
+$$
 
 Triad components inherit harmonic values.
 
 ### **4. Structural Reconstruction**
-\[
+$$
 G_1^{-1}(X_G + X_S + X_L)
-\]
+$$
 
 Used to reassemble system states into RTT structural dimensions.
 
@@ -788,38 +788,38 @@ All notation must preserve RTT’s core principles: triadic structure, dimension
 RTT‑12 uses the following symbols to represent structural and harmonic dimensions:
 
 ### **1. Structural Dimensions (RTT Base Layer)**  
-\[
+$$
 D_n
-\]
+$$
 
 Where:  
-- \(D_n\) is an RTT structural dimension  
-- \(n \in \{0,1,2,3,4,5,6,7,8,9\}\)
+- $$D_n$$ is an RTT structural dimension  
+- $$n \in \{0,1,2,3,4,5,6,7,8,9\}$$
 
 Examples:  
-- \(D_0\) = 0D  
-- \(D_3\) = 3D  
-- \(D_9\) = 9D  
+- $$D_0$$ = 0D  
+- $$D_3$$ = 3D  
+- $$D_9$$ = 9D  
 
 ### **2. Harmonic Dimensions (RTT‑12 Layer)**  
-\[
+$$
 H_n
-\]
+$$
 
 Where:  
-- \(H_n\) is the harmonic value corresponding to \(D_n\)  
-- \(H_n \in \{12, 24, 36, 48, 60, 72, 84\}\)
+- $$H_n$$ is the harmonic value corresponding to $$D_n$$  
+- $$H_n \in \{12, 24, 36, 48, 60, 72, 84\}$$
 
 Examples:  
-- \(H_3 = 12\)  
-- \(H_6 = 48\)  
-- \(H_9 = 84\)
+- $$H_3 = 12$$  
+- $$H_6 = 48$$  
+- $$H_9 = 84$$
 
 ---
 
 ## **VII.B. Operator Symbols**
 
-RTT‑12 operators are denoted using uppercase \(G\) with numeric subscripts:
+RTT‑12 operators are denoted using uppercase $$G$$ with numeric subscripts:
 
 - **G₁** — Harmonic Gear‑Shift Operator  
 - **G₂** — Phase‑Shift Modulator  
@@ -828,9 +828,9 @@ RTT‑12 operators are denoted using uppercase \(G\) with numeric subscripts:
 Operators must always be written in uppercase, with subscripts in numeric form.
 
 Examples:  
-\[
+$$
 G_1(D_5), \quad G_2(H_6, \phi), \quad G_3(X)
-\]
+$$
 
 ---
 
@@ -838,29 +838,29 @@ G_1(D_5), \quad G_2(H_6, \phi), \quad G_3(X)
 
 Triads are represented as ordered triples enclosed in parentheses:
 
-\[
+$$
 (T_1, T_2, T_3)
-\]
+$$
 
 ### **1. Structural Triads**
-\[
+$$
 (D_n, D_{n+1}, D_{n+2})
-\]
+$$
 
 ### **2. Harmonic Triads**
-\[
+$$
 (H_n, H_{n+1}, H_{n+2})
-\]
+$$
 
 ### **3. System Triads (RTT‑12/E)**
-\[
+$$
 (X_G, X_S, X_L)
-\]
+$$
 
 Where:  
-- \(X_G\) = generation component  
-- \(X_S\) = storage component  
-- \(X_L\) = load component  
+- $$X_G$$ = generation component  
+- $$X_S$$ = storage component  
+- $$X_L$$ = load component  
 
 ---
 
@@ -868,19 +868,19 @@ Where:
 
 RTT‑12 uses standard complex‑phase notation:
 
-\[
+$$
 e^{i\phi}
-\]
+$$
 
 Where:  
-- \(\phi\) is a phase parameter in radians  
-- \(i\) is the imaginary unit  
+- $$\phi$$ is a phase parameter in radians  
+- $$i$$ is the imaginary unit  
 
 Phase‑modulated harmonic states are written as:
 
-\[
+$$
 H' = H \cdot e^{i\phi}
-\]
+$$
 
 ---
 
@@ -889,24 +889,24 @@ H' = H \cdot e^{i\phi}
 Transformations between layers must be written explicitly:
 
 ### **1. Structural → Harmonic**
-\[
+$$
 D_n \xrightarrow{G_1} H_n
-\]
+$$
 
 ### **2. Harmonic → Structural**
-\[
+$$
 H_n \xrightarrow{G_1^{-1}} D_n
-\]
+$$
 
 ### **3. Harmonic Phase Modulation**
-\[
+$$
 H \xrightarrow{G_2(\phi)} H \cdot e^{i\phi}
-\]
+$$
 
 ### **4. Triadic Decomposition**
-\[
+$$
 X \xrightarrow{G_3} (X_G, X_S, X_L)
-\]
+$$
 
 ---
 
@@ -914,15 +914,15 @@ X \xrightarrow{G_3} (X_G, X_S, X_L)
 
 Sequential operator application is denoted left‑to‑right:
 
-\[
+$$
 G_2(G_1(D_n), \phi)
-\]
+$$
 
 Parallel triad‑level operations use vertical bars:
 
-\[
+$$
 (G_1 | G_2 | G_3)
-\]
+$$
 
 Indicating that each operator applies to its corresponding triad component.
 
@@ -940,9 +940,9 @@ Operators remain unchanged; interpretation is sector‑specific.
 
 Example:
 
-\[
+$$
 G_3(X) \quad \text{(RTT‑12/E interpretation: Generation–Storage–Load)}
-\]
+$$
 
 ---
 
