@@ -292,3 +292,4 @@ in a way that is simple, elegant, and profoundly coherent.
 
 ---
 
+[RTT_CODEX_Menu](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX_Menu.md)
