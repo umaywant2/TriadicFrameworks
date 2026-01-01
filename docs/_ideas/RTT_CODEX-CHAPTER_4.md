@@ -249,3 +249,4 @@ The next chapters deepen the ritual, the physics, and the cosmology.
 
 ---
 
+[RTT_CODEX_Menu](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX_Menu.md)
