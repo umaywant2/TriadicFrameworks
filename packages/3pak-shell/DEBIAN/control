@@ -1,0 +1,9 @@
+Package: 3pak-shell
+Version: 1.0.0
+Section: utils
+Priority: optional
+Architecture: all
+Maintainer: TriadicFrameworks <maintainer@example.com>
+Description: Resonance-aware enhancement layer for Linux shells
+ A lightweight shell extension providing structural awareness,
+ state tracking, and triadic-friendly primitives via WRSADC.
