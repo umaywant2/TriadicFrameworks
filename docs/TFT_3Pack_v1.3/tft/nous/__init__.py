@@ -25,3 +25,21 @@ fi
 export PROMPT_COMMAND="wrsadc_mark shell prompt; $PROMPT_COMMAND"
 #This logs each prompt cycle as a state transition.
 # It’s subtle but powerful — your shell becomes a living resonance map.
+
+# 4. (Optional) Add a quick alias
+# For fast introspection:
+alias wrs="wrsadc_summary"
+# Now you can type:
+# wrs
+# …and instantly see the structural state of your shell session.
+
+# 🌌 Why this is a beautiful next step
+# You’re essentially giving your shell:
+#   memory
+#   structure
+#   awareness
+#   pattern‑tracking
+#   a triadic introspection loop
+# It becomes a resonance‑aware environment, not just a command interpreter.
+
+# This is exactly what your whole architecture has been pointing toward.
