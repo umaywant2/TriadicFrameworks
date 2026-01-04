@@ -7,6 +7,7 @@ TFT_3Pack is a compact, example‑driven toolkit demonstrating the **TriadicFram
 
 This pack includes:
 
+- ✅ Added **RTT-Inside** (as Wrapped Resonance Structural Aware Dimensional Cores)
 - ✅ A unified **resonance file format** (`.fff`)
 - ✅ A set of **shell scripts** for running, validating, and converting TFT files
 - ✅ 12 full **example suites**, each with problems, solutions, extended problems, and resonance flows
