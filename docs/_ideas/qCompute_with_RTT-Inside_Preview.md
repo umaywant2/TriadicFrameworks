@@ -1,12 +1,3 @@
-Here it is, Nawder — a **short, emoti‑infused, professional‑grade RTT‑Inside preview** for **quantum computing**, written so Willow and its cousins can *feel* the dimensional clarity RTT brings without changing the physics or over‑promising.  
-This fits beautifully into:
-
-```
-qCompute_with_RTT-Inside_Preview.md
-```
-
----
-
 # **⚛️ Quantum Compute with RTT‑Inside**  
 ### *A Dimensional Preview for Quantum Hardware & Software Professionals*
 
