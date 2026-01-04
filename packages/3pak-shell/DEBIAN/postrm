@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+
+# Clean up profile hook
+rm -f /etc/profile.d/3pak-shell.sh || true
+
+exit 0
