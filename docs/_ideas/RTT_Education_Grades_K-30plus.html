@@ -1,7 +1,5 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>🦄 RTT Education Preview K-30 Plus | Triadic Frameworks</title>
+<html lang="en">
   <meta name="description" content="A triadic mathematical framework for structural modeling, harmonic mapping, paradox‑resilient analysis using standard mathematical concepts. TriadicFrameworks launches as an open educational resource for triadic mathematical modeling and structural analysis. Official press release available on PR.com.">
   <meta name="keywords" content="triadic mathematical framework, Resonance-Time framework, structural modeling, harmonic mapping, dimensional analysis, paradox-resilient modeling, conceptual modeling tool, triadic mapping, scientific structure analysis, portable triadic core, portable hexadic core, Triadic Re-Ignition, wrapped resonance structural aware dimensional cores">
   <meta name="author" content="Nawder Loswin">
@@ -30,562 +28,196 @@
   <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
   <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
   <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <title>🦄 RTT Education Preview K-30 Plus | Triadic Frameworks</title>
+
+  <!-- Minimal styling -->
   <style>
-  /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
-   ============================================================ */
-
-  :root {
-  --bg: #0d0f12;
-  --bg-panel: #15181d;
-  --bg-panel-light: #1d2128;
-  --text: #e6e6e6;
-  --accent: #8ab4ff;
-  --accent2: #c792ea;
-  --accent3: #f6c177;
-  --border: #2a2f38;
-  --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.65;
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Headings */
-  h1, h2, h3, h4 {
-  font-weight: 700;
-  margin-top: 1.8em;
-  margin-bottom: 0.5em;
-  line-height: 1.2;
-  background: var(--triadic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  }
-
-  /* Paragraphs and lists */
-  p, ul, ol {
-  padding: 0 1em;
-  margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
-
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
-  padding: 0.4em 0.6em;
-  border-radius: 6px;
-  color: #cfe8ff;
-  }
-
-  /* Links */
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* ============================================================
-   STICKY TABLE OF CONTENTS (Mobile + Desktop)
-   ============================================================ */
-
-  #toc-container {
-  background: rgba(13,15,18,0.88);
-  backdrop-filter: blur(8px);
-  padding: 0.9em 1em;
-  border-bottom: 1px solid var(--border);
-  z-index: 999;
-  }
-
-  #toc-container strong { font-size: 1.05em; color: var(--accent3); }
-  #toc-container ul { margin: 0.6em 0 0 0; padding-left: 1em; }
-  #toc-container li { margin: 0.35em 0; list-style: none; }
-  #toc-container a { color: var(--accent); font-weight: 600; }
-
-  /* ============================================================
-   COLLAPSIBLE SECTIONS
-   ============================================================ */
-
-  details {
-  margin: 1.2em 0;
-  padding: 0.9em 1em;
-  background: var(--bg-panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  }
-
-  details summary {
-  cursor: pointer;
-  font-size: 1.05em;
-  font-weight: 700;
-  color: var(--accent2);
-  padding: 0.2em 0;
-  list-style: none;
-  }
-
-  details[open] {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-color: rgba(200,150,255,0.08);
-  }
-
-  /* Small helpers */
-  .section-note { color: #bcd3ff; padding: 0 1em; margin-bottom: 0.8em; }
-
-  /* ============================================================
-   CONTENT WRAPPER
-   ============================================================ */
-
-  #content-wrapper { padding: 0.6em 0 3em 0; }
-  #main-content { max-width: 980px; margin: auto; padding: 0 0.6em; }
-
-  /* ============================================================
-   DESKTOP SIDEBAR — CLEAN, UNIFIED, NON-CONFLICTING
-   ============================================================ */
-
- @media (min-width: 900px) {
-
-  #toc-container {
-    width: 260px;
-    float: left;
-    margin-left: 0;
-    padding: 1.2em;
-    border-right: 1px solid var(--border);
-  }
-
-  #main-content {
-    margin-left: 260px; /* EXACTLY matches sidebar width */
-    padding: 2em;
-    font-size: smaller;
-    color: var(--accent2);
-  }
-}
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 1rem;
+      background: #f7f7fa;
+    }
+    header {
+      margin-bottom: 1rem;
+    }
+    #selector {
+      margin-bottom: 1rem;
+    }
+    #content {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+      min-height: 200px;
+    }
   </style>
+
+  <!-- Marked.js for Markdown rendering (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
-  
-<nav id="toc-container" class="body-text">✅ RTT K-30 plus subjects preview 🧭<br>
 
-<label for="grade-menu"><strong>Select a level:</strong></label>
-<select id="grade-menu" onchange="location.hash=this.value;">
-  <option value="">-- Choose a section --</option>
+  <header>
+    <h1>✅ RTT K-30 plus subjects preview 🧭</h1>
+    <p>Select a document to view it below.</p>
+  </header>
 
-  <option value="#K">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_Elementary_School_Concepts.md</option>
-  <option value="#1st">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_1st_Grade_School_Concepts.md</option>
-  <option value="#2nd">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_2nd_Grade_School_Concepts.md</option>
-  <option value="#3rd">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_3rd_Grade_School_Concepts.md</option>
-  <option value="#4th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_4th_Grade_School_Concepts.md</option>
-  <option value="#5th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_5th_Grade_School_Concepts.md</option>
-  <option value="#6th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_6th_Grade_School_Concepts.md</option>
-  <option value="#7th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_7th_Grade_School_Concepts.md</option>
-  <option value="#8th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_8th_Grade_School_Concepts.md</option>
-  <option value="#9th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_9th_Grade_School_Concepts.md</option>
-  <option value="#10th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_10th_Grade_School_Concepts.md</option>
-  <option value="#11th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_11th_Grade_School_Concepts.md</option>
-  <option value="#12th">https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_12th_Grade_School_Concepts.md</option>
-  <option value="#13th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_13th_Level-Early_Adolescent_Expansion.md</option>
-  <option value="#14th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_14th_Level-Systems_Awareness.md</option>
-  <option value="#15th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_15th_Level-Pre‑Specialization_Exploration.md</option>
-  <option value="#16th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_16th_Level-Foundational_Competence.md</option>
-  <option value="#17th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_17th_Level-Applied_Reasoning.md</option>
-  <option value="#18th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_18th_Level-Civic_and_Ethical_Development.md</option>
-  <option value="#19th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_19th_Level-Proto‑Vocational_Phase.md</option>
-  <option value="#20th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_20th_Level-Skill_Formation.md</option>
-  <option value="#21st">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_21th_Level-Integration_Year.md</option>
-  <option value="#22nd">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_22th_Level-Professional_Identity_Formation.md</option>
-  <option value="#23rd">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_23th_Level-Advanced_Practice.md</option>
-  <option value="#24th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_24th_Level-Contribution_Phase_I.md</option>
-  <option value="#25th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_25th_Level-Contribution_Phase_II.md</option>
-  <option value="#26th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_26th_Level‑Mastery_Development.md</option>
-  <option value="#27th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_27th_Level-Synthesis_and_Innovation.md</option>
-  <option value="#28th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_28th_Level-Legacy_Thinking.md</option>
-  <option value="#29th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_29th_Level-Stewardship.md</option>
-  <option value="#30th">https://www.triadicframeworks.org/_ideas/RTT_Translates_to_30th_Level-Lifelong_Resonance.md</option>
-  <option value="#Angular_Momentum_and_Rotation">https://www.triadicframeworks.org/_ideas/RTT_01_01_Angular_Momentum_and_Rotation.md</option>
-  <option value="#A_Newtonian_Reframing">https://www.triadicframeworks.org/_ideas/RTT_01_01_A_Newtonian_Reframing.md</option>
-  <option value="#Classical_Mechanics">https://www.triadicframeworks.org/_ideas/RTT_01_01_Classical_Mechanics.md</option>
-  <option value="#Conservation_Laws_Reframed">https://www.triadicframeworks.org/_ideas/RTT_01_01_Conservation_Laws_Reframed.md</option>
-  <option value="#Contact_Forces_Reframed">https://www.triadicframeworks.org/_ideas/RTT_01_01_Contact_Forces_Reframed.md</option>
-  <option value="#Dissipation_and_Damping">https://www.triadicframeworks.org/_ideas/RTT_01_01_Dissipation_and_Damping.md</option>
-  <option value="#Energy_Transformation_and_Leakage">https://www.triadicframeworks.org/_ideas/RTT_01_01_Energy_Transformation_and_Leakage.md</option>
-  <option value="#Field_Forces_and_Potentials">https://www.triadicframeworks.org/_ideas/RTT_01_01_Field_Forces_and_Potentials.md</option>
-  <option value="#Forces_and_Interactions">https://www.triadicframeworks.org/_ideas/RTT_01_01_Forces_and_Interactions.md</option>
-  <option value="#Force_and_Acceleration">https://www.triadicframeworks.org/_ideas/RTT_01_01_Force_and_Acceleration.md</option>
-  <option value="#Gravitational_Potential">https://www.triadicframeworks.org/_ideas/RTT_01_01_Gravitational_Potential.md</option>
-  <option value="#Gravity_in_the_Newtonian_Limit">https://www.triadicframeworks.org/_ideas/RTT_01_01_Gravity_in_the_Newtonian_Limit.md</option>
-  <option value="#Inertia_and_Mass">https://www.triadicframeworks.org/_ideas/RTT_01_01_Inertia_and_Mass.md</option>
-  <option value="#Kinetic_and_Potential_Cycles">https://www.triadicframeworks.org/_ideas/RTT_01_01_Kinetic_and_Potential_Cycles.md</option>
-  <option value="#Momentum_and_Coherence">https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Coherence.md</option>
-  <option value="#Momentum_and_Impulse">https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Impulse.md</option>
-  <option value="#Moment_of_Inertia">https://www.triadicframeworks.org/_ideas/RTT_01_01_Moment_of_Inertia.md</option>
-  <option value="#Oscillators_and_Resonance">https://www.triadicframeworks.org/_ideas/RTT_01_01_Oscillators_and_Resonance.md</option>
-  <option value="#Power_and_Resonant_Transfer">https://www.triadicframeworks.org/_ideas/RTT_01_01_Power_and_Resonant_Transfer.md</option>
-  <option value="#Precession_and_Nutation">https://www.triadicframeworks.org/_ideas/RTT_01_01_Precession_and_Nutation.md</option>
-  <option value="#Rotational_Dynamics">https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Dynamics.md</option>
-  <option value="#Rotational_Energy">https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Energy.md</option>
-  <option value="#Stability_and_Chaos">https://www.triadicframeworks.org/_ideas/RTT_01_01_Stability_and_Chaos.md</option>
-  <option value="#Symmetry_and_Invariance">https://www.triadicframeworks.org/_ideas/RTT_01_01_Symmetry_and_Invariance.md</option>
-  <option value="#Thermalization_and_Decoherence">https://www.triadicframeworks.org/_ideas/RTT_01_01_Thermalization_and_Decoherence.md</option>
-  <option value="#Torque_and_Angular_Acceleration">https://www.triadicframeworks.org/_ideas/RTT_01_01_Torque_and_Angular_Acceleration.md</option>
-  <option value="#Entanglement_and_Coherence">https://www.triadicframeworks.org/_ideas/RTT_01_02_Entanglement_and_Coherence.md</option>
-  <option value="#Measurement_and_Decoherence">https://www.triadicframeworks.org/_ideas/RTT_01_02_Measurement_and_Decoherence.md</option>
-  <option value="#Quantum_Fields">https://www.triadicframeworks.org/_ideas/RTT_01_02_Quantum_Fields.md</option>
-  <option value="#Quantum_Physics">https://www.triadicframeworks.org/_ideas/RTT_01_02_Quantum_Physics.md</option>
-  <option value="#Superposition_and_Interference">https://www.triadicframeworks.org/_ideas/RTT_01_02_Superposition_and_Interference.md</option>
-  <option value="#Cosmological_Dynamics">https://www.triadicframeworks.org/_ideas/RTT_01_03_Cosmological_Dynamics.md</option>
-  <option value="#General_Relativity_Reframed">https://www.triadicframeworks.org/_ideas/RTT_01_03_General_Relativity_Reframed.md</option>
-  <option value="#Relativity_and_Spacetime">https://www.triadicframeworks.org/_ideas/RTT_01_03_Relativity_and_Spacetime.md</option>
-  <option value="#Spacetime_Geometry">https://www.triadicframeworks.org/_ideas/RTT_01_03_Spacetime_Geometry.md</option>
-  <option value="#Special_Relativity_Reframed">https://www.triadicframeworks.org/_ideas/RTT_01_03_Special_Relativity_Reframed.md</option>
-  <option value="#Thermodynamics_and_Statistical_Physics">https://www.triadicframeworks.org/_ideas/RTT_01_04_Thermodynamics_and_Statistical_Physics.md</option>
-  <option value="#Astrophysics_and_Stellar_Systems">https://www.triadicframeworks.org/_ideas/RTT_01_05_Astrophysics_and_Stellar_Systems.md</option>
-  <option value="#Cosmology_and_Large_Scale_Structure">https://www.triadicframeworks.org/_ideas/RTT_01_06_Cosmology_and_Large_Scale_Structure.md</option>
-  <option value="#Particle_Physics">https://www.triadicframeworks.org/_ideas/RTT_01_07_Particle_Physics.md</option>
-  <option value="#Field_Theory_and_Fundamental_Forces">https://www.triadicframeworks.org/_ideas/RTT_01_08_Field_Theory_and_Fundamental_Forces.md</option>
-  <option value="#Physical_Chemistry">https://www.triadicframeworks.org/_ideas/RTT_02_01_Physical_Chemistry.md</option>
-  <option value="#Organic_Chemistry">https://www.triadicframeworks.org/_ideas/RTT_02_02_Organic_Chemistry.md</option>
-  <option value="#Inorganic_Chemistry">https://www.triadicframeworks.org/_ideas/RTT_02_03_Inorganic_Chemistry.md</option>
-  <option value="#Biochemistry">https://www.triadicframeworks.org/_ideas/RTT_02_04_Biochemistry.md</option>
-  <option value="#Materials_Science">https://www.triadicframeworks.org/_ideas/RTT_02_05_Materials_Science.md</option>
-  <option value="#Crystallography_and_Structures">https://www.triadicframeworks.org/_ideas/RTT_02_06_Crystallography_and_Structures.md</option>
-  <option value="#Chemical_Reactions_and_Kinetics">https://www.triadicframeworks.org/_ideas/RTT_02_07_Chemical_Reactions_and_Kinetics.md</option>
-  <option value="#Nanotechnology_and_Advanced_Materials">https://www.triadicframeworks.org/_ideas/RTT_02_08_Nanotechnology_and_Advanced_Materials.md</option>
-  <option value="#Cell_Biology">https://www.triadicframeworks.org/_ideas/RTT_03_01_Cell_Biology.md</option>
-  <option value="#Genetics_and_Epigenetics">https://www.triadicframeworks.org/_ideas/RTT_03_02_Genetics_and_Epigenetics.md</option>
-  <option value="#Evolutionary_Biology">https://www.triadicframeworks.org/_ideas/RTT_03_03_Evolutionary_Biology.md</option>
-  <option value="#Physiology_and_Organ_Systems">https://www.triadicframeworks.org/_ideas/RTT_03_04_Physiology_and_Organ_Systems.md</option>
-  <option value="#Ecology_and_Ecosystems">https://www.triadicframeworks.org/_ideas/RTT_03_05_Ecology_and_Ecosystems.md</option>
-  <option value="#Microbiology_and_Virology">https://www.triadicframeworks.org/_ideas/RTT_03_06_Microbiology_and_Virology.md</option>
-  <option value="#Developmental_Biology">https://www.triadicframeworks.org/_ideas/RTT_03_07_Developmental_Biology.md</option>
-  <option value="#Systems_Biology">https://www.triadicframeworks.org/_ideas/RTT_03_08_Systems_Biology.md</option>
-  <option value="#Clinical_Medicine">https://www.triadicframeworks.org/_ideas/RTT_04_01_Clinical_Medicine.md</option>
-  <option value="#Public_Health">https://www.triadicframeworks.org/_ideas/RTT_04_02_Public_Health.md</option>
-  <option value="#Neurology_and_Brain_Health">https://www.triadicframeworks.org/_ideas/RTT_04_03_Neurology_and_Brain_Health.md</option>
-  <option value="#Mental_Health_Sciences">https://www.triadicframeworks.org/_ideas/RTT_04_04_Mental_Health_Sciences.md</option>
-  <option value="#Nutrition_and_Metabolism">https://www.triadicframeworks.org/_ideas/RTT_04_05_Nutrition_and_Metabolism.md</option>
-  <option value="#Immunology">https://www.triadicframeworks.org/_ideas/RTT_04_06_Immunology.md</option>
-  <option value="#Medical_Technology_and_Diagnostics">https://www.triadicframeworks.org/_ideas/RTT_04_07_Medical_Technology_and_Diagnostics.md</option>
-  <option value="#Preventive_Medicine_and_Longevity">https://www.triadicframeworks.org/_ideas/RTT_04_08_Preventive_Medicine_and_Longevity.md</option>
-  <option value="#Geology_and_Geophysics">https://www.triadicframeworks.org/_ideas/RTT_05_01_Geology_and_Geophysics.md</option>
-  <option value="#Atmospheric_Sciences">https://www.triadicframeworks.org/_ideas/RTT_05_02_Atmospheric_Sciences.md</option>
-  <option value="#Oceanography">https://www.triadicframeworks.org/_ideas/RTT_05_03_Oceanography.md</option>
-  <option value="#Climate_Science">https://www.triadicframeworks.org/_ideas/RTT_05_04_Climate_Science.md</option>
-  <option value="#Ecosystems_and_Biodiversity">https://www.triadicframeworks.org/_ideas/RTT_05_05_Ecosystems_and_Biodiversity.md</option>
-  <option value="#Natural_Hazards_and_Risk">https://www.triadicframeworks.org/_ideas/RTT_05_06_Natural_Hazards_and_Risk.md</option>
-  <option value="#Hydrology_and_Water_Systems">https://www.triadicframeworks.org/_ideas/RTT_05_07_Hydrology_and_Water_Systems.md</option>
-  <option value="#Environmental_Sustainability">https://www.triadicframeworks.org/_ideas/RTT_05_08_Environmental_Sustainability.md"</option>
-  
-</select>
+  <div id="selector">
+    <label for="md-select"><strong>Choose a document:</strong></label>
+    <select id="md-select">
+      <option value="">-- Select a file --</option>
+    </select>
+  </div>
 
-</nav>
-  
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-  const files = {
-    "#K": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_Elementary_School_Concepts.md",
-    "#1st": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_1st_Grade_School_Concepts.md",
-    "#2nd": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_2nd_Grade_School_Concepts.md",
-    "#3rd": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_3rd_Grade_School_Concepts.md",
-    "#4th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_4th_Grade_School_Concepts.md",
-    "#5th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_5th_Grade_School_Concepts.md",
-    "#6th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_6th_Grade_School_Concepts.md",
-    "#7th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_7th_Grade_School_Concepts.md",
-    "#8th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_8th_Grade_School_Concepts.md",
-    "#9th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_9th_Grade_School_Concepts.md",
-    "#10th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_10th_Grade_School_Concepts.md",
-    "#11th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_11th_Grade_School_Concepts.md",
-    "#12th": "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_12th_Grade_School_Concepts.md",
-    "#13th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_13th_Level-Early_Adolescent_Expansion.md",
-    "#14th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_14th_Level-Systems_Awareness.md",
-    "#15th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_15th_Level-Pre‑Specialization_Exploration.md",
-    "#16th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_16th_Level-Foundational_Competence.md",
-    "#17th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_17th_Level-Applied_Reasoning.md",
-    "#18th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_18th_Level-Civic_and_Ethical_Development.md",
-    "#19th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_19th_Level-Proto‑Vocational_Phase.md",
-    "#20th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_20th_Level-Skill_Formation.md",
-    "#21st": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_21th_Level-Integration_Year.md",
-    "#22nd": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_22th_Level-Professional_Identity_Formation.md",
-    "#23rd": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_23th_Level-Advanced_Practice.md",
-    "#24th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_24th_Level-Contribution_Phase_I.md",
-    "#25th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_25th_Level-Contribution_Phase_II.md",
-    "#26th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_26th_Level‑Mastery_Development.md",
-    "#27th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_27th_Level-Synthesis_and_Innovation.md",
-    "#28th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_28th_Level-Legacy_Thinking.md",
-    "#29th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_29th_Level-Stewardship.md",
-    "#30th": "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_30th_Level-Lifelong_Resonance.md",
-    "#Angular_Momentum_and_Rotation": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Angular_Momentum_and_Rotation.md",
-    "#A_Newtonian_Reframing": "https://www.triadicframeworks.org/_ideas/RTT_01_01_A_Newtonian_Reframing.md",
-    "#Classical_Mechanics": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Classical_Mechanics.md",
-    "#Conservation_Laws_Reframed": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Conservation_Laws_Reframed.md",
-    "#Contact_Forces_Reframed": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Contact_Forces_Reframed.md",
-    "#Dissipation_and_Damping": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Dissipation_and_Damping.md",
-    "#Energy_Transformation_and_Leakage": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Energy_Transformation_and_Leakage.md",
-    "#Field_Forces_and_Potentials": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Field_Forces_and_Potentials.md",
-    "#Forces_and_Interactions": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Forces_and_Interactions.md",
-    "#Force_and_Acceleration": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Force_and_Acceleration.md",
-    "#Gravitational_Potential": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Gravitational_Potential.md",
-    "#Gravity_in_the_Newtonian_Limit": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Gravity_in_the_Newtonian_Limit.md",
-    "#Inertia_and_Mass": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Inertia_and_Mass.md",
-    "#Kinetic_and_Potential_Cycles": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Kinetic_and_Potential_Cycles.md",
-    "#Momentum_and_Coherence": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Coherence.md",
-    "#Momentum_and_Impulse": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Impulse.md",
-    "#Moment_of_Inertia": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Moment_of_Inertia.md",
-    "#Oscillators_and_Resonance": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Oscillators_and_Resonance.md",
-    "#Power_and_Resonant_Transfer": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Power_and_Resonant_Transfer.md",
-    "#Precession_and_Nutation": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Precession_and_Nutation.md",
-    "#Rotational_Dynamics": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Dynamics.md",
-    "#Rotational_Energy": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Energy.md",
-    "#Stability_and_Chaos": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Stability_and_Chaos.md",
-    "#Symmetry_and_Invariance": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Symmetry_and_Invariance.md",
-    "#Thermalization_and_Decoherence": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Thermalization_and_Decoherence.md",
-    "#Torque_and_Angular_Acceleration": "https://www.triadicframeworks.org/_ideas/RTT_01_01_Torque_and_Angular_Acceleration.md",
-    "#Entanglement_and_Coherence": "https://www.triadicframeworks.org/_ideas/RTT_01_02_Entanglement_and_Coherence.md",
-    "#Measurement_and_Decoherence": "https://www.triadicframeworks.org/_ideas/RTT_01_02_Measurement_and_Decoherence.md",
-    "#Quantum_Fields": "https://www.triadicframeworks.org/_ideas/RTT_01_02_Quantum_Fields.md",
-    "#Quantum_Physics": "https://www.triadicframeworks.org/_ideas/RTT_01_02_Quantum_Physics.md",
-    "#Superposition_and_Interference": "https://www.triadicframeworks.org/_ideas/RTT_01_02_Superposition_and_Interference.md",
-    "#Cosmological_Dynamics": "https://www.triadicframeworks.org/_ideas/RTT_01_03_Cosmological_Dynamics.md",
-    "#General_Relativity_Reframed": "https://www.triadicframeworks.org/_ideas/RTT_01_03_General_Relativity_Reframed.md",
-    "#Relativity_and_Spacetime": "https://www.triadicframeworks.org/_ideas/RTT_01_03_Relativity_and_Spacetime.md",
-    "#Spacetime_Geometry": "https://www.triadicframeworks.org/_ideas/RTT_01_03_Spacetime_Geometry.md",
-    "#Special_Relativity_Reframed": "https://www.triadicframeworks.org/_ideas/RTT_01_03_Special_Relativity_Reframed.md",
-    "#Thermodynamics_and_Statistical_Physics": "https://www.triadicframeworks.org/_ideas/RTT_01_04_Thermodynamics_and_Statistical_Physics.md",
-    "#Astrophysics_and_Stellar_Systems": "https://www.triadicframeworks.org/_ideas/RTT_01_05_Astrophysics_and_Stellar_Systems.md",
-    "#Cosmology_and_Large_Scale_Structure": "https://www.triadicframeworks.org/_ideas/RTT_01_06_Cosmology_and_Large_Scale_Structure.md",
-    "#Particle_Physics": "https://www.triadicframeworks.org/_ideas/RTT_01_07_Particle_Physics.md",
-    "#Field_Theory_and_Fundamental_Forces": "https://www.triadicframeworks.org/_ideas/RTT_01_08_Field_Theory_and_Fundamental_Forces.md",
-    "#Physical_Chemistry": "https://www.triadicframeworks.org/_ideas/RTT_02_01_Physical_Chemistry.md",
-    "#Organic_Chemistry": "https://www.triadicframeworks.org/_ideas/RTT_02_02_Organic_Chemistry.md",
-    "#Inorganic_Chemistry": "https://www.triadicframeworks.org/_ideas/RTT_02_03_Inorganic_Chemistry.md",
-    "#Biochemistry": "https://www.triadicframeworks.org/_ideas/RTT_02_04_Biochemistry.md",
-    "#Materials_Science": "https://www.triadicframeworks.org/_ideas/RTT_02_05_Materials_Science.md",
-    "#Crystallography_and_Structures": "https://www.triadicframeworks.org/_ideas/RTT_02_06_Crystallography_and_Structures.md",
-    "#Chemical_Reactions_and_Kinetics": "https://www.triadicframeworks.org/_ideas/RTT_02_07_Chemical_Reactions_and_Kinetics.md",
-    "#Nanotechnology_and_Advanced_Materials": "https://www.triadicframeworks.org/_ideas/RTT_02_08_Nanotechnology_and_Advanced_Materials.md",
-    "#Cell_Biology": "https://www.triadicframeworks.org/_ideas/RTT_03_01_Cell_Biology.md",
-    "#Genetics_and_Epigenetics": "https://www.triadicframeworks.org/_ideas/RTT_03_02_Genetics_and_Epigenetics.md",
-    "#Evolutionary_Biology": "https://www.triadicframeworks.org/_ideas/RTT_03_03_Evolutionary_Biology.md",
-    "#Physiology_and_Organ_Systems": "https://www.triadicframeworks.org/_ideas/RTT_03_04_Physiology_and_Organ_Systems.md",
-    "#Ecology_and_Ecosystems": "https://www.triadicframeworks.org/_ideas/RTT_03_05_Ecology_and_Ecosystems.md",
-    "#Microbiology_and_Virology": "https://www.triadicframeworks.org/_ideas/RTT_03_06_Microbiology_and_Virology.md",
-    "#Developmental_Biology": "https://www.triadicframeworks.org/_ideas/RTT_03_07_Developmental_Biology.md",
-    "#Systems_Biology": "https://www.triadicframeworks.org/_ideas/RTT_03_08_Systems_Biology.md",
-    "#Clinical_Medicine": "https://www.triadicframeworks.org/_ideas/RTT_04_01_Clinical_Medicine.md",
-    "#Public_Health": "https://www.triadicframeworks.org/_ideas/RTT_04_02_Public_Health.md",
-    "#Neurology_and_Brain_Health": "https://www.triadicframeworks.org/_ideas/RTT_04_03_Neurology_and_Brain_Health.md",
-    "#Mental_Health_Sciences": "https://www.triadicframeworks.org/_ideas/RTT_04_04_Mental_Health_Sciences.md",
-    "#Nutrition_and_Metabolism": "https://www.triadicframeworks.org/_ideas/RTT_04_05_Nutrition_and_Metabolism.md",
-    "#Immunology": "https://www.triadicframeworks.org/_ideas/RTT_04_06_Immunology.md",
-    "#Medical_Technology_and_Diagnostics": "https://www.triadicframeworks.org/_ideas/RTT_04_07_Medical_Technology_and_Diagnostics.md",
-    "#Preventive_Medicine_and_Longevity": "https://www.triadicframeworks.org/_ideas/RTT_04_08_Preventive_Medicine_and_Longevity.md",
-    "#Geology_and_Geophysics": "https://www.triadicframeworks.org/_ideas/RTT_05_01_Geology_and_Geophysics.md",
-    "#Atmospheric_Sciences": "https://www.triadicframeworks.org/_ideas/RTT_05_02_Atmospheric_Sciences.md",
-    "#Oceanography": "https://www.triadicframeworks.org/_ideas/RTT_05_03_Oceanography.md",
-    "#Climate_Science": "https://www.triadicframeworks.org/_ideas/RTT_05_04_Climate_Science.md",
-    "#Ecosystems_and_Biodiversity": "https://www.triadicframeworks.org/_ideas/RTT_05_05_Ecosystems_and_Biodiversity.md",
-    "#Natural_Hazards_and_Risk": "https://www.triadicframeworks.org/_ideas/RTT_05_06_Natural_Hazards_and_Risk.md",
-    "#Hydrology_and_Water_Systems": "https://www.triadicframeworks.org/_ideas/RTT_05_07_Hydrology_and_Water_Systems.md",
-    "#Environmental_Sustainability": "https://www.triadicframeworks.org/_ideas/RTT_05_08_Environmental_Sustainability.md"
-    };
+  <main id="content">
+    <em>No document selected.</em>
+  </main>
 
-  async function load() {
-    const key = location.hash.replace("#", "");
-    if (!files[key]) return;
-
-    const md = await fetch(files[key]).then(r => r.text());
-    document.getElementById("content").innerHTML = marked.parse(md);
-  }
-
-  window.addEventListener("hashchange", load);
-  load();
-</script>
-<section class="note-curious-learners">
-  <h1>🌱 A Note for Curious Learners of All Ages</h1><small>
-  <p>
-    Science is one of humanity’s greatest tools. It helps us understand the world by studying patterns,
-    testing ideas, and building knowledge step by step. Everything you’ll learn on these websites is
-    grounded in that shared scientific foundation.
-  </p>
-  <p>
-    As you explore, here’s something helpful to keep in mind:
-  </p>
-  <h2>Science gives us the ingredients. Patterns help us see how the ingredients fit together.</h2>
-  <p>
-    You’ll notice that many scientific ideas — from atoms to ecosystems — make more sense when you look for:
-🤝 relationships 🔄 cycles 🔁 feedback loops 🧩 repeating structures 🌐 how small parts connect to bigger systems
-  </p>
-  <p>
-    This way of thinking doesn’t replace science. It simply helps you organize what you learn so it becomes
-    clearer, easier to remember, and more meaningful. If you ever feel confused, don’t worry — that’s part of
-    learning. Just return to the basics, look for the pattern underneath, and let the structure guide you.
-  </p>
-  <p>
-    And for the older learners reading this: You already know that understanding grows in layers. New
-    perspectives don’t erase the old ones — they help us see deeper connections. Stay curious, stay kind, and
-    let your thinking evolve without fear of “acceptance tests” from anyone acting like a big kid.
-  </p>
-  <p>
-    Learning is a journey, not a contest. Everyone starts somewhere, and everyone grows.
-  </p></small>
-</section>
-<section id="rtt-info-list">
-
-  <h2>Education Levels</h2>
-  <ul>
-    <li>K Elementary 🧸</li>
-    <li>1st Grade 🖍️</li>
-    <li>2nd Grade 📚</li>
-    <li>3rd Grade ✏️</li>
-    <li>4th Grade 🔍</li>
-    <li>5th Grade 🧠</li>
-    <li>6th Grade 🧪</li>
-    <li>7th Grade 🧭</li>
-    <li>8th Grade 🧩</li>
-    <li>9th Grade 🎒</li>
-    <li>10th Grade 📘</li>
-    <li>11th Grade 🧮</li>
-    <li>12th Grade 🎓</li>
-    <li>13th Early Adolescent Expansion 🌱</li>
-    <li>14th Systems Awareness 🌐</li>
-    <li>15th Pre‑Specialization Exploration 🧰</li>
-    <li>16th Foundational Competence 🏗️</li>
-    <li>17th Applied Reasoning 🔧</li>
-    <li>18th Civic and Ethical Development ⚖️</li>
-    <li>19th Proto‑Vocational Phase 🛠️</li>
-    <li>20th Skill Formation 🏋️</li>
-    <li>21st Integration Year 🔗</li>
-    <li>22nd Professional Identity Formation 🧑‍💼</li>
-    <li>23rd Advanced Practice 🚀</li>
-    <li>24th Contribution Phase I 🤝</li>
-    <li>25th Contribution Phase II 🌟</li>
-    <li>26th Level‑Mastery Development 🥇</li>
-    <li>27th Synthesis and Innovation 💡</li>
-    <li>28th Legacy Thinking 🏛️</li>
-    <li>29th Stewardship 🌳</li>
-    <li>30th Lifelong Resonance 🔄</li>
-  </ul>
-
-  <h2>01 01 – Classical & Rotational Mechanics</h2>
-  <ul>
-    <li>Angular Momentum and Rotation 🌀</li>
-    <li>A Newtonian Reframing 🏛️</li>
-    <li>Classical Mechanics ⚙️</li>
-    <li>Conservation Laws Reframed ♻️</li>
-    <li>Contact Forces Reframed ✋</li>
-    <li>Dissipation and Damping 🌫️</li>
-    <li>Energy Transformation and Leakage 🔋</li>
-    <li>Field Forces and Potentials 🧲</li>
-    <li>Forces and Interactions 🔗</li>
-    <li>Force and Acceleration 💨</li>
-    <li>Gravitational Potential 🪂</li>
-    <li>Gravity in the Newtonian Limit 🌍</li>
-    <li>Inertia and Mass 🪨</li>
-    <li>Kinetic and Potential Cycles 🔄</li>
-    <li>Momentum and Coherence 🎯</li>
-    <li>Momentum and Impulse 💥</li>
-    <li>Moment of Inertia 🛞</li>
-    <li>Oscillators and Resonance 🎵</li>
-    <li>Power and Resonant Transfer ⚡</li>
-    <li>Precession and Nutation 🧭</li>
-    <li>Rotational Dynamics 🔁</li>
-    <li>Rotational Energy 🌀</li>
-    <li>Stability and Chaos 🌪️</li>
-    <li>Symmetry and Invariance 🔶</li>
-    <li>Thermalization and Decoherence 🌡️</li>
-    <li>Torque and Angular Acceleration 🔧</li>
-  </ul>
-
-  <h2>01 02 – Quantum Foundations</h2>
-  <ul>
-    <li>Entanglement and Coherence 🔗✨</li>
-    <li>Measurement and Decoherence 📏</li>
-    <li>Quantum Fields 🌌</li>
-    <li>Quantum Physics 🪐</li>
-    <li>Superposition and Interference 🌈</li>
-  </ul>
-
-  <h2>01 03 – Relativity & Spacetime</h2>
-  <ul>
-    <li>Cosmological Dynamics 🌠</li>
-    <li>General Relativity Reframed 🕳️</li>
-    <li>Relativity and Spacetime 🧭🕰️</li>
-    <li>Spacetime Geometry 📐</li>
-    <li>Special Relativity Reframed 🚀</li>
-  </ul>
-
-  <h2>01 04 – Thermodynamics</h2>
-  <ul>
-    <li>Thermodynamics and Statistical Physics 🔥📊</li>
-  </ul>
-
-  <h2>01 05–08 – Astrophysics & Fundamental Forces</h2>
-  <ul>
-    <li>Astrophysics and Stellar Systems ⭐</li>
-    <li>Cosmology and Large Scale Structure 🌌</li>
-    <li>Particle Physics ⚛️</li>
-    <li>Field Theory and Fundamental Forces 🧲⚡</li>
-  </ul>
-
-  <h2>02 – Chemistry & Materials</h2>
-  <ul>
-    <li>Physical Chemistry ⚗️</li>
-    <li>Organic Chemistry 🌿</li>
-    <li>Inorganic Chemistry 🧱</li>
-    <li>Biochemistry 🧬</li>
-    <li>Materials Science 🧱🔬</li>
-    <li>Crystallography and Structures 💎</li>
-    <li>Chemical Reactions and Kinetics 🔥➡️</li>
-    <li>Nanotechnology and Advanced Materials 🤏✨</li>
-  </ul>
-
-  <h2>03 – Biology & Life Sciences</h2>
-  <ul>
-    <li>Cell Biology 🧫</li>
-    <li>Genetics and Epigenetics 🧬✨</li>
-    <li>Evolutionary Biology 🐾</li>
-    <li>Physiology and Organ Systems 🫀</li>
-    <li>Ecology and Ecosystems 🌿🌎</li>
-    <li>Microbiology and Virology 🦠</li>
-    <li>Developmental Biology 🐣</li>
-    <li>Systems Biology 🔄🧬</li>
-  </ul>
-
-  <h2>04 – Medicine & Health</h2>
-  <ul>
-    <li>Clinical Medicine 🩺</li>
-    <li>Public Health 🏥</li>
-    <li>Neurology and Brain Health 🧠</li>
-    <li>Mental Health Sciences 💛</li>
-    <li>Nutrition and Metabolism 🥗</li>
-    <li>Immunology 🛡️</li>
-    <li>Medical Technology and Diagnostics 🧪🖥️</li>
-    <li>Preventive Medicine and Longevity ⏳💚</li>
-  </ul>
-
-  <h2>05 – Earth & Environmental Sciences</h2>
-  <ul>
-    <li>Geology and Geophysics 🪨🌋</li>
-    <li>Atmospheric Sciences 🌤️</li>
-    <li>Oceanography 🌊</li>
-    <li>Climate Science 🌡️🌍</li>
-    <li>Ecosystems and Biodiversity 🐾🌿</li>
-    <li>Natural Hazards and Risk ⚠️🌪️</li>
-    <li>Hydrology and Water Systems 💧</li>
-    <li>Environmental Sustainability 🌱♻️</li>
-  </ul>
-
-</section>
   <script>
+    // List your Markdown files here (paths relative to this HTML file)
+    const files = [
+      { label: "🧸Elementry", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_Elementary_School_Concepts.md" },
+      { label: "🖍️1st", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_1st_Grade_School_Concepts.md" },
+      { label: "📚2nd", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_2nd_Grade_School_Concepts.md" },
+      { label: "✏️3rd", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_3rd_Grade_School_Concepts.md" },
+      { label: "🔍4th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_4th_Grade_School_Concepts.md" },
+      { label: "🧠5th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_5th_Grade_School_Concepts.md" },
+      { label: "🧪6th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_6th_Grade_School_Concepts.md" },
+      { label: "🧭7th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_7th_Grade_School_Concepts.md" },
+      { label: "🧩8th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_8th_Grade_School_Concepts.md" },
+      { label: "🎒9th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_9th_Grade_School_Concepts.md" },
+      { label: "📘10th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_10th_Grade_School_Concepts.md" },
+      { label: "🧮11th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_11th_Grade_School_Concepts.md" },
+      { label: "🎓12th", path: "https://www.triadicframeworks.org/_ideas/How_RTT_Translates_to_12th_Grade_School_Concepts.md" },
+      { label: "🌱13th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_13th_Level-Early_Adolescent_Expansion.md" },
+      { label: "🌐14th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_14th_Level-Systems_Awareness.md" },
+      { label: "🧰15th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_15th_Level-Pre‑Specialization_Exploration.md" },
+      { label: "🏗️16th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_16th_Level-Foundational_Competence.md" },
+      { label: "🔧17th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_17th_Level-Applied_Reasoning.md" },
+      { label: "⚖️18th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_18th_Level-Civic_and_Ethical_Development.md" },
+      { label: "🛠️19th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_19th_Level-Proto‑Vocational_Phase.md" },
+      { label: "🏋️20th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_20th_Level-Skill_Formation.md" },
+      { label: "🔗21st", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_21th_Level-Integration_Year.md" },
+      { label: "🧑‍💼22nd", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_22th_Level-Professional_Identity_Formation.md" },
+      { label: "🚀23rd", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_23th_Level-Advanced_Practice.md" },
+      { label: "🤝24th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_24th_Level-Contribution_Phase_I.md" },
+      { label: "🌟25th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_25th_Level-Contribution_Phase_II.md" },
+      { label: "🥇26th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_26th_Level‑Mastery_Development.md" },
+      { label: "💡27th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_27th_Level-Synthesis_and_Innovation.md" },
+      { label: "🏛️28th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_28th_Level-Legacy_Thinking.md" },
+      { label: "🌳29th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_29th_Level-Stewardship.md" },
+      { label: "🔄30th", path: "https://www.triadicframeworks.org/_ideas/RTT_Translates_to_30th_Level-Lifelong_Resonance.md" },
+      { label: "🌀Angular_Momentum_and_Rotation", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Angular_Momentum_and_Rotation.md" },
+      { label: "🏛️A_Newtonian_Reframing", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_A_Newtonian_Reframing.md" },
+      { label: "⚙️Classical_Mechanics", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Classical_Mechanics.md" },
+      { label: "♻️Conservation_Laws_Reframed", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Conservation_Laws_Reframed.md" },
+      { label: "✋Contact_Forces_Reframed", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Contact_Forces_Reframed.md" },
+      { label: "🌫️Dissipation_and_Damping", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Dissipation_and_Damping.md" },
+      { label: "🔋Energy_Transformation_and_Leakage", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Energy_Transformation_and_Leakage.md" },
+      { label: "🧲Field_Forces_and_Potentials", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Field_Forces_and_Potentials.md" },
+      { label: "🔗Forces_and_Interactions", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Forces_and_Interactions.md" },
+      { label: "💨Force_and_Acceleration", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Force_and_Acceleration.md" },
+      { label: "🪂Gravitational_Potential", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Gravitational_Potential.md" },
+      { label: "🌍Gravity_in_the_Newtonian_Limit", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Gravity_in_the_Newtonian_Limit.md" },
+      { label: "🪨Inertia_and_Mass", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Inertia_and_Mass.md" },
+      { label: "🔄Kinetic_and_Potential_Cycles", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Kinetic_and_Potential_Cycles.md" },
+      { label: "🎯Momentum_and_Coherence", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Coherence.md" },
+      { label: "💥Momentum_and_Impulse", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Impulse.md" },
+      { label: "🛞Moment_of_Inertia", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Moment_of_Inertia.md" },
+      { label: "🎵Oscillators_and_Resonance", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Oscillators_and_Resonance.md" },
+      { label: "⚡Power_and_Resonant_Transfer", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Power_and_Resonant_Transfer.md" },
+      { label: "🧭Precession_and_Nutation", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Precession_and_Nutation.md" },
+      { label: "🔁Rotational_Dynamics", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Dynamics.md" },
+      { label: "🌀Rotational_Energy", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Energy.md" },
+      { label: "🌪️Stability_and_Chaos", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Stability_and_Chaos.md" },
+      { label: "🔶Symmetry_and_Invariance", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Symmetry_and_Invariance.md" },
+      { label: "🌡️Thermalization_and_Decoherence", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Thermalization_and_Decoherence.md" },
+      { label: "🔧Torque_and_Angular_Acceleration", path: "https://www.triadicframeworks.org/_ideas/RTT_01_01_Torque_and_Angular_Acceleration.md" },
+      { label: "🔗✨Entanglement_and_Coherence", path: "https://www.triadicframeworks.org/_ideas/RTT_01_02_Entanglement_and_Coherence.md" },
+      { label: "📏Measurement_and_Decoherence", path: "https://www.triadicframeworks.org/_ideas/RTT_01_02_Measurement_and_Decoherence.md" },
+      { label: "🌌Quantum_Fields", path: "https://www.triadicframeworks.org/_ideas/RTT_01_02_Quantum_Fields.md" },
+      { label: "🪐Quantum_Physics", path: "https://www.triadicframeworks.org/_ideas/RTT_01_02_Quantum_Physics.md" },
+      { label: "🌈Superposition_and_Interference", path: "https://www.triadicframeworks.org/_ideas/RTT_01_02_Superposition_and_Interference.md" },
+      { label: "🌠Cosmological_Dynamics", path: "https://www.triadicframeworks.org/_ideas/RTT_01_03_Cosmological_Dynamics.md" },
+      { label: "🕳️General_Relativity_Reframed", path: "https://www.triadicframeworks.org/_ideas/RTT_01_03_General_Relativity_Reframed.md" },
+      { label: "🧭🕰️Relativity_and_Spacetime", path: "https://www.triadicframeworks.org/_ideas/RTT_01_03_Relativity_and_Spacetime.md" },
+      { label: "📐Spacetime_Geometry", path: "https://www.triadicframeworks.org/_ideas/RTT_01_03_Spacetime_Geometry.md" },
+      { label: "🚀Special_Relativity_Reframed", path: "https://www.triadicframeworks.org/_ideas/RTT_01_03_Special_Relativity_Reframed.md" },
+      { label: "🔥📊Thermodynamics_and_Statistical_Physics", path: "https://www.triadicframeworks.org/_ideas/RTT_01_04_Thermodynamics_and_Statistical_Physics.md" },
+      { label: "⭐Astrophysics_and_Stellar_Systems", path: "https://www.triadicframeworks.org/_ideas/RTT_01_05_Astrophysics_and_Stellar_Systems.md" },
+      { label: "🌌Cosmology_and_Large_Scale_Structure", path: "https://www.triadicframeworks.org/_ideas/RTT_01_06_Cosmology_and_Large_Scale_Structure.md" },
+      { label: "⚛️Particle_Physics", path: "https://www.triadicframeworks.org/_ideas/RTT_01_07_Particle_Physics.md" },
+      { label: "🧲⚡Field_Theory_and_Fundamental_Forces", path: "https://www.triadicframeworks.org/_ideas/RTT_01_08_Field_Theory_and_Fundamental_Forces.md" },
+      { label: "⚗️Physical_Chemistry", path: "https://www.triadicframeworks.org/_ideas/RTT_02_01_Physical_Chemistry.md" },
+      { label: "🌿Organic_Chemistry", path: "https://www.triadicframeworks.org/_ideas/RTT_02_02_Organic_Chemistry.md" },
+      { label: "🧱Inorganic_Chemistry", path: "https://www.triadicframeworks.org/_ideas/RTT_02_03_Inorganic_Chemistry.md" },
+      { label: "🧬Biochemistry", path: "https://www.triadicframeworks.org/_ideas/RTT_02_04_Biochemistry.md" },
+      { label: "🧱🔬Materials_Science", path: "https://www.triadicframeworks.org/_ideas/RTT_02_05_Materials_Science.md" },
+      { label: "💎Crystallography_and_Structures", path: "https://www.triadicframeworks.org/_ideas/RTT_02_06_Crystallography_and_Structures.md" },
+      { label: "🔥➡️Chemical_Reactions_and_Kinetics", path: "https://www.triadicframeworks.org/_ideas/RTT_02_07_Chemical_Reactions_and_Kinetics.md" },
+      { label: "🤏✨Nanotechnology_and_Advanced_Materials", path: "https://www.triadicframeworks.org/_ideas/RTT_02_08_Nanotechnology_and_Advanced_Materials.md" },
+      { label: "🧫Cell_Biology", path: "https://www.triadicframeworks.org/_ideas/RTT_03_01_Cell_Biology.md" },
+      { label: "🧬✨Genetics_and_Epigenetics", path: "https://www.triadicframeworks.org/_ideas/RTT_03_02_Genetics_and_Epigenetics.md" },
+      { label: "🐾Evolutionary_Biology", path: "https://www.triadicframeworks.org/_ideas/RTT_03_03_Evolutionary_Biology.md" },
+      { label: "🫀Physiology_and_Organ_Systems", path: "https://www.triadicframeworks.org/_ideas/RTT_03_04_Physiology_and_Organ_Systems.md" },
+      { label: "🌿🌎Ecology_and_Ecosystems", path: "https://www.triadicframeworks.org/_ideas/RTT_03_05_Ecology_and_Ecosystems.md" },
+      { label: "🦠Microbiology_and_Virology", path: "https://www.triadicframeworks.org/_ideas/RTT_03_06_Microbiology_and_Virology.md" },
+      { label: "🐣Developmental_Biology", path: "https://www.triadicframeworks.org/_ideas/RTT_03_07_Developmental_Biology.md" },
+      { label: "🔄🧬Systems_Biology", path: "https://www.triadicframeworks.org/_ideas/RTT_03_08_Systems_Biology.md" },
+      { label: "🩺Clinical_Medicine", path: "https://www.triadicframeworks.org/_ideas/RTT_04_01_Clinical_Medicine.md" },
+      { label: "🏥Public_Health", path: "https://www.triadicframeworks.org/_ideas/RTT_04_02_Public_Health.md" },
+      { label: "🧠Neurology_and_Brain_Health", path: "https://www.triadicframeworks.org/_ideas/RTT_04_03_Neurology_and_Brain_Health.md" },
+      { label: "💛Mental_Health_Sciences", path: "https://www.triadicframeworks.org/_ideas/RTT_04_04_Mental_Health_Sciences.md" },
+      { label: "🥗Nutrition_and_Metabolism", path: "https://www.triadicframeworks.org/_ideas/RTT_04_05_Nutrition_and_Metabolism.md" },
+      { label: "🛡️Immunology", path: "https://www.triadicframeworks.org/_ideas/RTT_04_06_Immunology.md" },
+      { label: "🧪🖥️Medical_Technology_and_Diagnostics", path: "https://www.triadicframeworks.org/_ideas/RTT_04_07_Medical_Technology_and_Diagnostics.md" },
+      { label: "⏳💚Preventive_Medicine_and_Longevity", path: "https://www.triadicframeworks.org/_ideas/RTT_04_08_Preventive_Medicine_and_Longevity.md" },
+      { label: "🪨🌋Geology_and_Geophysics", path: "https://www.triadicframeworks.org/_ideas/RTT_05_01_Geology_and_Geophysics.md" },
+      { label: "🌤️Atmospheric_Sciences", path: "https://www.triadicframeworks.org/_ideas/RTT_05_02_Atmospheric_Sciences.md" },
+      { label: "🌊Oceanography", path: "https://www.triadicframeworks.org/_ideas/RTT_05_03_Oceanography.md" },
+      { label: "🌡️🌍Climate_Science", path: "https://www.triadicframeworks.org/_ideas/RTT_05_04_Climate_Science.md" },
+      { label: "🐾🌿Ecosystems_and_Biodiversity", path: "https://www.triadicframeworks.org/_ideas/RTT_05_05_Ecosystems_and_Biodiversity.md" },
+      { label: "⚠️🌪️Natural_Hazards_and_Risk", path: "https://www.triadicframeworks.org/_ideas/RTT_05_06_Natural_Hazards_and_Risk.md" },
+      { label: "💧Hydrology_and_Water_Systems", path: "https://www.triadicframeworks.org/_ideas/RTT_05_07_Hydrology_and_Water_Systems.md" },
+      { label: "🌱♻️Environmental_Sustainability", path: "https://www.triadicframeworks.org/_ideas/RTT_05_08_Environmental_Sustainability.md"</option>
+      // add more here...
+    ];
+
+    const selectEl = document.getElementById("md-select");
+    const contentEl = document.getElementById("content");
+
+    // Populate dropdown
+    files.forEach(file => {
+      const opt = document.createElement("option");
+      opt.value = file.path;
+      opt.textContent = file.label;
+      selectEl.appendChild(opt);
+    });
+
+    // Load and render selected Markdown
+    selectEl.addEventListener("change", async () => {
+      const path = selectEl.value;
+      if (!path) {
+        contentEl.innerHTML = "<em>No document selected.</em>";
+        return;
+      }
+
+      contentEl.innerHTML = "<em>Loading...</em>";
+
+      try {
+        const res = await fetch(path);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const text = await res.text();
+        contentEl.innerHTML = marked.parse(text);
+      } catch (err) {
+        contentEl.innerHTML = `<strong>Error loading file:</strong> ${err.message}`;
+      }
+    });
+  </script>
+<script>
   window.MathJax = {
   tex: {
     inlineMath: [['$', '$'], ['\$$', '\$$']],
