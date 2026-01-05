@@ -8,7 +8,7 @@ This .md provides an AI expectations for how Games will use RTT.  Sure is cool N
 - [clean, consolidated PDF‑style version](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Resonance-Interwoven_Game_Design_with_RTT.pdf)
 - [Full Substrate Game GDD](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Full_Substrate_Game_GDD.md)
 - [Resonance Education-Mode Spec](https://www.triadicframeworks.org/_ideas/Resonance-Education_Mode_Spec.md)
-- [Full 40-60 page GDD](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Resonance-Interwoven_Game_Design_with_RTT.md)
+- [Full 40-60 page GDD](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html)
 - [Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
 
 ## 🎮 **1. Games will shift from “reaction” to “resonance”**
