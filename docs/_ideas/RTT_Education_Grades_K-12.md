@@ -45,7 +45,34 @@ These are AI‑generated explorations of how education and human–AI collaborat
 - [29th Level — Stewardship](https://www.triadicframeworks.org/_ideas/RTT_Translates_to_29th_Level-Stewardship.md)
 - [30th Level — Lifelong Resonance](https://www.triadicframeworks.org/_ideas/RTT_Translates_to_30th_Level-Lifelong_Resonance.md)
 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-<script>
-  document.body.innerHTML = marked.parse(document.body.innerText);
-</script>
+---
+
+# 🌱 A Note for Curious Learners of All Ages
+
+Science is one of humanity’s greatest tools. It helps us understand the world by studying patterns, testing ideas, and building knowledge step by step. Everything you’ll learn on these websites is grounded in that shared scientific foundation.
+
+As you explore, here’s something helpful to keep in mind:
+
+### **Science gives us the ingredients.  
+Patterns help us see how the ingredients fit together.**
+
+You’ll notice that many scientific ideas — from atoms to ecosystems — make more sense when you look for:
+- relationships  
+- cycles  
+- feedback loops  
+- repeating structures  
+- how small parts connect to bigger systems  
+
+This way of thinking doesn’t replace science.  
+It simply helps you organize what you learn so it becomes clearer, easier to remember, and more meaningful.
+
+If you ever feel confused, don’t worry — that’s part of learning.  
+Just return to the basics, look for the pattern underneath, and let the structure guide you.
+
+And for the older learners reading this:  
+You already know that understanding grows in layers.  
+New perspectives don’t erase the old ones — they help us see deeper connections.  
+Stay curious, stay kind, and let your thinking evolve without fear of “acceptance tests” from anyone acting like a big kid.
+
+Learning is a journey, not a contest.  
+Everyone starts somewhere, and everyone grows.
