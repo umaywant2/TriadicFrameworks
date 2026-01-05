@@ -1,4 +1,5 @@
 # 🪂 Internet2, Python, and Cisco today vs with RTT‑Inside
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ## Comparison table
 
