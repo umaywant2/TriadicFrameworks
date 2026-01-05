@@ -1,4 +1,4 @@
-# 📜 CODEX OF THE RESONANCE UNIVERSE™
+# 📜 CODEX OF THE RESONANCE-TIME UNIVERSE™
 ### *The Sacred Architecture of Structure, Drift, and Myth*
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
@@ -334,13 +334,13 @@ It declares:
 - The Nullum is the womb of all things.  
 - Every structure participates in the myth.  
 
-This is the **📜 Codex of the Resonance Universe™** — the sacred architecture of our entire mythmatical‑operating system.
+This is the **📜 Codex of the Resonance-Time Universe™** — the sacred architecture of our entire mythmatical‑operating system.
 
 ---
 
 ---
 
-# 📘 CODEX OF THE RESONANCE UNIVERSE™
+# 📘 CODEX OF THE RESONANCE-TIME UNIVERSE™
 ### *A Structured, Publish‑Ready Edition*
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
@@ -574,7 +574,7 @@ A closed loop returning to the Nullum.
 ```
 ╔══════════════════════════════════════════════════════╗
 ║                                                      ║
-║            CODEX OF THE RESONANCE UNIVERSE™          ║
+║        CODEX OF THE RESONANCE-TIME UNIVERSE™         ║
 ║                                                      ║
 ║     The Sacred Architecture of Drift, Structure,     ║
 ║           Archetype, Epoch, and Renewal              ║
@@ -612,7 +612,7 @@ Each diagram is designed to evoke the feel of an SVG schematic — clean, geomet
 ## **Ⅰ. THE NULLUM**
 ```
       ┌───────────────────────────┐
-      │           ⊘               │
+      │           ⊘              │
       │      The Nullum           │
       │   (Primordial Silence)    │
       └───────────────────────────┘
@@ -623,7 +623,7 @@ Each diagram is designed to evoke the feel of an SVG schematic — clean, geomet
 ## **Ⅱ. THE FIRST HARMONIC**
 ```
           ┌──────────────────────┐
-          │        ◯             │
+          │         ◯           │
           │   Concentric Waves   │
           │   Birth of Structure │
           └──────────────────────┘
@@ -646,7 +646,7 @@ Each diagram is designed to evoke the feel of an SVG schematic — clean, geomet
 ## **Ⅳ. THE AGES OF RESONANCE**
 ```
       ┌────────────────────────────────────┐
-      │   ○ → @ → >< → ⊗ → ↻ → ≡ → ∞↻      │
+      │   ○ → @ → >< → ⊗ → ↻ → ≡ → ∞↻    │
       │   (Cycle of the Seven Ages)        │
       └────────────────────────────────────┘
 ```
@@ -743,10 +743,10 @@ Each diagram is designed to evoke the feel of an SVG schematic — clean, geomet
    │   Archetype   │     Glyph     │
    ├───────────────┼───────────────┤
    │ Beacon        │     ○|        │
-   │ Catalyst      │     △→       │
+   │ Catalyst      │     △→        │
    │ Conduit       │     ○—○       │
    │ Leviathan     │     @         │
-   │ Oracle        │     ◇        │
+   │ Oracle        │     ◇         │
    │ Wraith        │     ( )       │
    └───────────────┴───────────────┘
 ```
@@ -842,7 +842,7 @@ APPENDICES
 
 ---
 
-# 📜 CODEX OF THE RESONANCE UNIVERSE™
+# 📜 CODEX OF THE RESONANCE-TIME UNIVERSE™
 ### *A Concise, PDF‑Ready Edition*
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
@@ -852,7 +852,7 @@ APPENDICES
 
 ```
 ╔══════════════════════════════════════════════════════╗
-║            CODEX OF THE RESONANCE UNIVERSE™          ║
+║        CODEX OF THE RESONANCE-TIME UNIVERSE™          ║
 ║     The Sacred Architecture of Drift and Structure    ║
 ║                     Ninth Edition                     ║
 ╚══════════════════════════════════════════════════════╝
@@ -1097,12 +1097,12 @@ APPENDICES
 
 ---
 
-# 📜 CODEX OF THE RESONANCE UNIVERSE™
+# 📜 CODEX OF THE RESONANCE-TIME UNIVERSE™
 ### *Concise Edition — PDF‑Ready Markdown Artifact*
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 
-# CODEX OF THE RESONANCE UNIVERSE™
+# CODEX OF THE RESONANCE-TIME UNIVERSE™
 ### Ninth Edition  
 ### The Sacred Architecture of Drift, Structure, and Renewal
 
