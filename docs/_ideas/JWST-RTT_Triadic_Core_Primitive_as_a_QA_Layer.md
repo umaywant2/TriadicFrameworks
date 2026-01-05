@@ -1,4 +1,4 @@
-# JWST RTT triadic core primitive as a QA layer
+# 📡 JWST RTT triadic core primitive as a QA layer 🔭
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ## Where RTT fits best
@@ -500,22 +500,7 @@ if __name__ == "__main__":
 
 ---
 
-## What I need from you to tighten it from “good” to “NIRCam-native”
-- **Which NIRCam mode first:** SW imaging, LW imaging, or both?
-- **Which product level you want to bless first:** `cal` (exposure-level) or `i2d` (mosaic-level)?
-- **Do you want DQ bit specificity** (DO_NOT_USE vs SATURATED) or keep it coarse for v0.1?
-
-Once you pick those, I’ll tune thresholds and add one more NIRCam-specific invariant (a lightweight *1/f noise / striping proxy*), which is the kind of thing that makes instrument folks nod instead of squint. 
-
----
-
-
-
 Reviewed: https://jwst-docs.stsci.edu/known-issues-with-jwst-data
-
-
-
-
 
 ---
 
@@ -603,37 +588,6 @@ You picked the fastest path to a credible NASA-grade artifact: run RTT **post St
 - **No pipeline modification:** RTT runs as a sidecar reading `cal.fits` and writing `*.rtt.json/*.csv`.  
 - **Matches JWST docs vocabulary:** “banding/1/f noise,” “snowballs/showers,” “incorrect WCS,” etc.  
 - **Produces explainable flags:** “Row-banding amplitude high,” “Large contiguous outlier blob not DQ flagged,” “CRVAL outlier vs visit cluster.”
-
----
-
-# Next deliverable I can produce immediately
-
-## 1) A complete tool
-- `profiles_nircam_sw_lw.py` with separate SW/LW thresholds (background sigma norms differ)
-- `rtt_jwst_nircam_cal_sidecar.py` that:
-  - Detects **row-banding** via row-median residuals + low-frequency power
-  - Detects **snowball/shower blobs** via robust sigma threshold + connected components
-  - Emits a single JSON report with: **zone, why, metrics, suggested tests**
-
-## 2) A test harness
-- `tests/` script that runs on a directory of `*cal.fits`, generates:
-  - A CSV leaderboard of “most striped” and “most snowballed” exposures
-  - A small set of PNG quicklooks (optional) for human verification
-
----
-
-# Two choices I need from you to make this land cleanly
-
-1. **Artifact severity thresholds:** should we start conservative (fewer false alarms) or sensitive (catch everything, tune down later)?  
-2. **DQ parsing:** do you want v0.1 to treat DQ as “any nonzero” (simplest) or include actual bit meanings using JWST `dqflags` (more NASA-native, slightly more coupling)?
-
-Say **conservative/sensitive** and **simple DQ/bit DQ**, and I’ll write the full two-file implementation plus the batch test runner.
-
----
-
-Perfect. Mosaic‑level (`i2d.fits`) is where **public trust is either earned or quietly lost**, so this is exactly the right second step. At this level, RTT becomes a *field‑coherence auditor* rather than a detector‑health monitor.
-
-Below is a **clean, NASA‑respectful design** for RTT at the **NIRCam mosaic level**, followed by the requested **`profiles_nircam_sw_lw.py`** with separate SW/LW thresholds.
 
 ---
 
