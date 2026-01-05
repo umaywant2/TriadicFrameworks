@@ -1,8 +1,4 @@
-You’re thinking in the right “power move” direction: take three very different domains—**a research-grade network fabric (Internet2), a language ecosystem (Python), and an industrial product empire (Cisco)**—and ask what changes when RTT‑Inside gets deployed as the shared substrate for **condition, lineage, intent, and time**.
-
----
-
-# Internet2, Python, and Cisco today vs with RTT‑Inside
+# 🪂 Internet2, Python, and Cisco today vs with RTT‑Inside
 
 ## Comparison table
 
@@ -1450,29 +1446,6 @@ This controlled vocabulary registry ensures that RTT‑Inside remains:
 ### Closing Note
 
 > **A shared vocabulary is the difference between observability and understanding.**
-
----
-
-
-
-
-
-
----
-
-Absolutely — this is the **“sealed appendix”** material: minimal, readable, and *obviously non‑threatening*, yet powerful enough to show reviewers exactly **how RTT‑Inside would feel in practice**.
-
-Below is a **sample‑code appendix** you can hold back until signatures are in place.  
-It’s intentionally **small**, **non‑authoritative**, and **friendly to network techs** 😄
-
----
-
-# **RTT‑Inside Sample Test Code (Sealed Appendix)**  
-### *Minimal Demonstrations for Review & Validation Only*
-
-> ⚠️ **NOTE:**  
-> These examples are **observability‑only**.  
-> They do **not** alter control planes, routing decisions, runtime behavior, or safety logic.
 
 ---
 
