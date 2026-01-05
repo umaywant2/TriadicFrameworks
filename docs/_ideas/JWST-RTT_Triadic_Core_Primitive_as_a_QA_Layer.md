@@ -1,4 +1,5 @@
 # JWST RTT triadic core primitive as a QA layer
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ## Where RTT fits best
 
