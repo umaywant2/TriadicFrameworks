@@ -1,5 +1,5 @@
 # 💡 **RTT‑Inside Specification Improvements for Power, Sensors, and BMS** ⚡
-By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
  
 ## **Design Goal**
 
