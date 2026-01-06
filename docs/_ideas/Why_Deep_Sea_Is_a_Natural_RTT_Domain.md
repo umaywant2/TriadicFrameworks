@@ -1,4 +1,5 @@
-## Why Deep Sea Is a Natural RTT Domain
+# 🌐 Why Deep Sea Is a Natural RTT Domain
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 Deep sea exploration is already triadic — they just don’t name it that way.
 
