@@ -1,4 +1,6 @@
-# **📘 Full Multi‑Chapter Finance Edition with RTT‑Inside**  
+# **📘 Full Multi‑Chapter Finance Edition with RTT‑Inside**
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### *Dimensional Clarity for Modern Investment Professions*  
 **Equity Analysts • Portfolio Managers • Quant Strategists • Risk Teams • Traders • CIOs**
 
