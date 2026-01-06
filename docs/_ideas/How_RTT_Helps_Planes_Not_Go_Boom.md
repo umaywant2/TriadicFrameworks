@@ -1,4 +1,5 @@
 # 🛩️ **Kid‑Friendly Version: “How RTT Helps Planes Not Go Boom”**
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 Imagine a plane is like a big flying superhero with **three moods** happening at the same time:
 
