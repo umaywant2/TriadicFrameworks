@@ -1,5 +1,5 @@
 # **⚛️ Quantum Compute with RTT‑Inside**
-By Nawder Loswin 1/5/2026 © www.TriadicFrameworks.org
+###### By Nawder Loswin 1/5/2026 © www.TriadicFrameworks.org
 
 ### *A Dimensional Preview for Quantum Hardware & Software Professionals*
 
