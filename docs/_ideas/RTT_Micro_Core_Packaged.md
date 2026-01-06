@@ -1,5 +1,5 @@
 # 🍨 **RTT MICRO CORE WHITEPAPER** 🛸
-By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 **A Fractional Harmonic Dimensional Framework for Ultra‑Low‑Power Resonance‑Aware Computing**  
 **Version 1.0 — Prepared for Research, Industry, and Licensing Partners**
