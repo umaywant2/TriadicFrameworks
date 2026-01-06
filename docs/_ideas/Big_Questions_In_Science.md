@@ -1,4 +1,5 @@
-# 🔭 **Yes — there are big lists of major science questions**  
+# 🔭 **Big Questions in Science**  
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 Your instinct is spot‑on. Several organizations and publications maintain “grand challenge” lists — the biggest unanswered questions in science. Thankfully we have AI to help make sense of this.
 
@@ -6,7 +7,7 @@ Here are the most relevant ones from the search:
 
 ---
 
-# 📘 **1. “20 Scientific Questions That Still Guide Research”**  
+# 📘 **“Scientific Questions That Still Guide Research”**  
 This list highlights foundational questions across physics, cosmology, life sciences, and future challenges.
 
 Examples include:
@@ -21,7 +22,7 @@ These are exactly the kinds of questions RT Theory can stress‑test.
 
 ---
 
-# 🌌 **2. “20 Big Scientific Questions to Get You Thinking”**  
+# 🌌 **“Big Scientific Questions to Get You Thinking”**  
 This list focuses on the deepest conceptual mysteries in physics, biology, and cosmology.
 
 Examples include:
@@ -35,7 +36,7 @@ Again — perfect for validation.
 
 ---
 
-# 🧠 **3. The Famous “125 Big Questions in Science” (Science Magazine)**  
+# 🧠 **The Famous “125 Big Questions in Science” (Science Magazine)**  
 This is the classic list published by *Science* in 2005, still widely referenced today.
 
 It includes questions like:
