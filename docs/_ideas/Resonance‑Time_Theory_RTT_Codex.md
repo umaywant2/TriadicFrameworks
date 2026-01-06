@@ -1,4 +1,6 @@
-# **📘 Resonance‑Time Theory (RTT) Codex**  
+# **📘 Resonance‑Time Theory (RTT) Codex**
+By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### *A Hybrid Manuscript in Thirteen Chapters*  
 ### *Scientific Core • Ritual Edges*  
 ### *Clean Manuscript Format (F1)*
