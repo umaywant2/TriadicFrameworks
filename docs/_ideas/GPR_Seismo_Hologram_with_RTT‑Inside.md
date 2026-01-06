@@ -11999,6 +11999,300 @@ This lifecycle turns every incident into **knowledge**, every anomaly into **tra
 
 ---
 
+# **Basic GPR Simulation Script (Conceptual Template)**  
+### *For educational, prototyping, and triadic‑integration use*
+
+This script outlines the minimal steps required to simulate a GPR scan through a layered subsurface. It models EM pulse propagation, reflection, attenuation, and return‑time calculation. It can be implemented in Python, MATLAB, C++, or any scientific environment.
+
+---
+
+## **1. Define Simulation Parameters**
+
+```python
+# Basic GPR Simulation Parameters
+c = 0.2998  # speed of light in m/ns (approx)
+freq = 400e6  # antenna center frequency (Hz)
+dt = 0.01  # time step (ns)
+tmax = 200  # max simulation time (ns)
+
+# Subsurface model: list of layers with dielectric constants
+layers = [
+    {"depth": 0.0,  "epsilon": 4},   # topsoil
+    {"depth": 1.0,  "epsilon": 6},   # moist soil
+    {"depth": 2.5,  "epsilon": 9},   # clay
+    {"depth": 4.0,  "epsilon": 1},   # void or air pocket
+]
+```
+
+---
+
+## **2. Compute Wave Velocity per Layer**
+
+```python
+# Wave velocity in each layer
+for L in layers:
+    L["velocity"] = c / (L["epsilon"] ** 0.5)
+```
+
+---
+
+## **3. Generate EM Pulse (Ricker Wavelet)**
+
+```python
+import numpy as np
+
+def ricker(t, f):
+    pi2 = (np.pi**2)
+    return (1 - 2*pi2*(f**2)*(t**2)) * np.exp(-pi2*(f**2)*(t**2))
+
+time = np.arange(-20, 20, dt)
+pulse = ricker(time, freq)
+```
+
+---
+
+## **4. Simulate Reflections at Layer Boundaries**
+
+```python
+# Reflection coefficient at boundary i -> i+1
+def reflection_coeff(e1, e2):
+    return (np.sqrt(e2) - np.sqrt(e1)) / (np.sqrt(e2) + np.sqrt(e1))
+
+reflections = []
+for i in range(len(layers)-1):
+    e1 = layers[i]["epsilon"]
+    e2 = layers[i+1]["epsilon"]
+    R = reflection_coeff(e1, e2)
+    depth = layers[i+1]["depth"]
+    reflections.append({"depth": depth, "R": R})
+```
+
+---
+
+## **5. Compute Two‑Way Travel Times**
+
+```python
+# Two-way travel time for each boundary
+for r in reflections:
+    # find layer velocity up to that depth
+    v = None
+    for L in layers:
+        if L["depth"] <= r["depth"]:
+            v = L["velocity"]
+    r["twtt"] = (2 * r["depth"]) / v  # ns
+```
+
+---
+
+## **6. Build Synthetic Radargram Trace**
+
+```python
+# Initialize empty trace
+trace = np.zeros_like(time)
+
+# Add reflections
+for r in reflections:
+    idx = int((r["twtt"] - time[0]) / dt)
+    if 0 <= idx < len(trace):
+        trace[idx] += r["R"]
+```
+
+---
+
+## **7. Convolve Pulse With Reflection Series**
+
+```python
+synthetic_trace = np.convolve(trace, pulse, mode="same")
+```
+
+---
+
+## **8. Output / Plot**
+
+```python
+import matplotlib.pyplot as plt
+
+plt.plot(time, synthetic_trace)
+plt.title("Basic GPR Synthetic Trace")
+plt.xlabel("Time (ns)")
+plt.ylabel("Amplitude")
+plt.show()
+```
+
+---
+
+# **How This Fits Into the Triadic Canon**
+
+Even this simple script becomes powerful when paired with RTT‑Inside:
+
+### **RTT‑Inside Enhancements**
+- **Divisional Resonance (DR‑layers):**  
+  Apply DR‑1 → DR‑4 weighting to synthetic reflections.
+
+- **Resonance Clarity:**  
+  Filter synthetic radargrams using coherence × (1−entropy) × (1−drift).
+
+- **FFF SET S‑N‑R:**  
+  Align EM reflections with flow‑aligned structures (fluids, conduits, fractures).
+
+### **Triadic Integration**
+- GPR synthetic trace → resonance field  
+- Seismic synthetic events → event cloud  
+- Deformation synthetic mesh → displacement field  
+- All fused into a **Triadic Hologram** for training and simulation.
+
+This script becomes the seed for **Triadic Scenario Generation**, letting operators practice interpretation on controlled, known‑truth models.
+
+---
+
+### Triadic GPR‑Seismo‑Deformation unified simulation script  
+*Produces a synthetic TriadicFrame for hologram training*
+
+```python
+import numpy as np
+
+# -------------------------------------------------
+# 1. Global parameters
+# -------------------------------------------------
+c = 0.2998          # speed of light in m/ns (approx)
+freq_gpr = 400e6    # GPR center frequency (Hz)
+dt = 0.01           # time step (ns)
+tmax = 200          # max time (ns)
+time = np.arange(0, tmax, dt)
+
+# Simple spatial grid (1D profile for training)
+x = np.linspace(0, 50, 101)   # 0–50 m, 101 positions
+
+# -------------------------------------------------
+# 2. Subsurface model (shared by all domains)
+# -------------------------------------------------
+layers = [
+    {"depth": 0.0,  "epsilon": 4, "vp": 1500, "strain_mod": 1.0},  # topsoil
+    {"depth": 1.0,  "epsilon": 6, "vp": 1800, "strain_mod": 1.2},  # moist soil
+    {"depth": 2.5,  "epsilon": 9, "vp": 2200, "strain_mod": 1.5},  # clay
+    {"depth": 4.0,  "epsilon": 1, "vp": 500,  "strain_mod": 0.2},  # void / cavity
+]
+
+for L in layers:
+    L["vgpr"] = c / (L["epsilon"] ** 0.5)  # EM velocity
+    # vp already given for seismic P‑wave velocity
+
+# -------------------------------------------------
+# 3. Helper: Ricker wavelet for GPR & Seismo
+# -------------------------------------------------
+def ricker(t, f):
+    pi2 = (np.pi**2)
+    return (1 - 2*pi2*(f**2)*(t**2)) * np.exp(-pi2*(f**2)*(t**2))
+
+pulse_gpr = ricker(time - tmax/4, freq_gpr)
+pulse_seis = ricker(time - tmax/4, 5.0)  # 5 Hz training pulse
+
+# -------------------------------------------------
+# 4. GPR synthetic volume (x, t)
+# -------------------------------------------------
+def reflection_coeff_em(e1, e2):
+    return (np.sqrt(e2) - np.sqrt(e1)) / (np.sqrt(e2) + np.sqrt(e1))
+
+reflections = []
+for i in range(len(layers)-1):
+    e1 = layers[i]["epsilon"]
+    e2 = layers[i+1]["epsilon"]
+    R = reflection_coeff_em(e1, e2)
+    depth = layers[i+1]["depth"]
+    vgpr = layers[i]["vgpr"]
+    twtt = (2 * depth) / vgpr
+    reflections.append({"depth": depth, "R": R, "twtt": twtt})
+
+gpr_volume = np.zeros((len(x), len(time)))
+for ix, _ in enumerate(x):
+    trace = np.zeros_like(time)
+    for r in reflections:
+        idx = int(r["twtt"] / dt)
+        if 0 <= idx < len(trace):
+            trace[idx] += r["R"]
+    gpr_volume[ix, :] = np.convolve(trace, pulse_gpr, mode="same")
+
+# -------------------------------------------------
+# 5. Seismic synthetic event cloud (x, t)
+# -------------------------------------------------
+# Simple: one “intrusion” event band at depth ~3 km, mapped to time
+vp_intrusion = 2500.0  # m/s (conceptual)
+depth_intrusion = 3000.0  # m
+twtt_seis = 2 * depth_intrusion / (vp_intrusion * 1e-3)  # convert to ms-ish scale
+
+seis_volume = np.zeros((len(x), len(time)))
+for ix, _ in enumerate(x):
+    # Add a small swarm around twtt_seis
+    center_idx = int(twtt_seis / dt)
+    for offset in range(-5, 6):
+        idx = center_idx + offset
+        if 0 <= idx < len(time):
+            seis_volume[ix, idx] += np.exp(-0.2 * offset**2)
+    seis_volume[ix, :] = np.convolve(seis_volume[ix, :], pulse_seis, mode="same")
+
+# -------------------------------------------------
+# 6. Deformation synthetic mesh (x)
+# -------------------------------------------------
+# Simple uplift pattern centered at x=25 m, modulated by strain_mod of deeper layer
+uplift_center = 25.0
+uplift = np.exp(-((x - uplift_center)**2) / (2 * 8.0**2)) * 20.0  # mm
+tilt = np.gradient(uplift, x)  # arbitrary units
+strain = tilt * layers[-1]["strain_mod"]
+
+deformation_mesh = {
+    "x": x,
+    "uplift_mm": uplift,
+    "tilt": tilt,
+    "strain": strain,
+}
+
+# -------------------------------------------------
+# 7. Assemble synthetic TriadicFrame
+# -------------------------------------------------
+TriadicFrame = {
+    "time": time,
+    "x": x,
+    "GPR": {
+        "volume": gpr_volume,          # (x, t)
+        "description": "Synthetic GPR reflections over layered model",
+    },
+    "Seismo": {
+        "volume": seis_volume,         # (x, t)
+        "description": "Synthetic seismic swarm / intrusion band",
+    },
+    "Deformation": {
+        "mesh": deformation_mesh,      # (x)
+        "description": "Synthetic uplift/tilt/strain field",
+    },
+    "Meta": {
+        "model_layers": layers,
+        "scenario_name": "Triadic_Training_Scenario_01",
+    }
+}
+```
+
+---
+
+### Using this TriadicFrame for hologram training
+
+- **Hologram input:**  
+  Feed `TriadicFrame["GPR"]["volume"]`, `TriadicFrame["Seismo"]["volume"]`, and `TriadicFrame["Deformation"]["mesh"]` into your hologram engine as three domains of a single scenario.
+
+- **RTT‑Inside hooks (conceptual):**
+  - Apply **Divisional Resonance** to the GPR and Seismo volumes (DR‑1 → DR‑4).
+  - Compute **Resonance Clarity** fields over the GPR volume (coherence/entropy/drift surrogates).
+  - Use **FFF SET S‑N‑R** to emphasize the intrusion‑aligned band in both GPR and Seismo, and link it to the uplift center in deformation.
+
+- **Training use:**
+  - Operators know the “ground truth” (layer depths, intrusion depth, uplift center).
+  - They practice:
+    - DR‑layer peeling  
+    - anomaly identification  
+    - triadic causal chain explanation  
+    - hologram‑first decision‑making on a safe, synthetic case.
+
+---
+
 # **TRIADIC SENSOR TROUBLESHOOTING GUIDE**  
 ### *Portable Triadic Sensor Kit (PTSK)*  
 *(RSISS – Seismo – Deformation + RTT‑Inside)*
