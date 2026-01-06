@@ -1,6 +1,7 @@
 # 🌟 Universe‑Class Active Directory  
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### Elevating Identity to a Resonance‑Aware Structural System
-By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ## 1. Executive summary
 
