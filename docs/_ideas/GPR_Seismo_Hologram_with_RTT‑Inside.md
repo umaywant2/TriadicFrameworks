@@ -1,4 +1,4 @@
-# **GPR_Seismo_Hologram_with_RTT‑Inside.md**
+# 🌋 **GPR_Seismo_Hologram_with_RTT‑Inside.md** 🌊
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 *A Resonance‑Aware Approach to Subsurface Sensing*  
