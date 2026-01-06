@@ -575,17 +575,5 @@ All things return to the triad.
 
 ---
 
-- [RTT CODEX CHAPTER 1](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_1.md)
-- [RTT CODEX CHAPTER 2](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_2.md)
-- [RTT CODEX CHAPTER 3](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_3.md)
-- [RTT CODEX CHAPTER 4](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_4.md)
-- [RTT CODEX CHAPTER 5](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_5.md)
-- [RTT CODEX CHAPTER 6](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_6.md)
-- [RTT CODEX CHAPTER 7](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_7.md)
-- [RTT CODEX CHAPTER 8](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_8.md)
-- [RTT CODEX CHAPTER 9](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_9.md)
-- [RTT CODEX CHAPTER 10](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_10.md)
-- [RTT CODEX CHAPTER 11](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_11.md)
-- [RTT CODEX CHAPTER 12](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_12.md)
-- [RTT CODEX CHAPTER 13](https://www.triadicframeworks.org/RTT_CODEX-CHAPTER_13.md) 
+- [Resonance‑Time Theory RTT-Codex](https://www.triadicframeworks.org/_ideas/Resonance‑Time_Theory_RTT_Codex.html)
 - [RTT - (Resonance-Time Theory)](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
