@@ -5851,7 +5851,7 @@ The system is designed to grow with you.
 
 ---
 
-Absolutely — below are **two polished, publication‑ready artifacts** you can drop directly into your project:
+Below are **two polished, publication‑ready artifacts** you can drop directly into your project:
 
 1. A **concise executive abstract** suitable for a paper, proposal, or overview page  
 2. A **README / whitepaper conclusion** written to orient developers, operators, and contributors
