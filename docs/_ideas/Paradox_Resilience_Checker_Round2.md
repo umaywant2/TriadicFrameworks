@@ -1,6 +1,5 @@
 # 🔥 Paradox testing of Resonance-Time Theory - Round 2 
-
-12/23/2025 by Nawder Loswin
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 Now — onto the paradox 'RTT Resilience Checker'.
 
