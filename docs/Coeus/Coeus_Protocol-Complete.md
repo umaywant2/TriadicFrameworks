@@ -1,6 +1,6 @@
 # 🧩 **Coeus Protocol — Release Candidate Draft (v0.1)**  
 ### *A Resonance‑Aware Research Market for Civilization‑Scale Inquiry*
-By Nawder Loswin 1/5/2026 © www.TriadicFrameworks.org
+###### By Nawder Loswin 1/5/2026 © www.TriadicFrameworks.org
 
 ## **1. Purpose**
 Coeus is a protocol for turning **research, computation, and inquiry** into a public good with a sustainable economic engine.  
