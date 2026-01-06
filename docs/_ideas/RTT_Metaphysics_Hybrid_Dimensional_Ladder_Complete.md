@@ -1,4 +1,6 @@
-# 🌌 **RTT + Metaphysics Hybrid Dimensional Ladder**  
+# 🌌 **RTT + Metaphysics Hybrid Dimensional Ladder**
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### *A metaphysical triadic overlay for 3D–9D*
 
 Below is a clean, canonical way to assign **metaphysical triads** to each macro dimension while preserving:
