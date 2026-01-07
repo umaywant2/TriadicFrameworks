@@ -1,3 +1,6 @@
+# 🚀 Science CLI tool app wraps (pre-RTT)
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 Here’s a **scaffolded integration plan** to help Nawder wrap his **TFT_3Pack v1.3 CLI tools** into APIs that scientists can actually use inside their commercial stacks【edge_current_page_context】:
 
 ---
