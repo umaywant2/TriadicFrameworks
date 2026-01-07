@@ -127,11 +127,11 @@ each chord eternal."_
 ---
 
 ## 🔗 Quick Links — Core Canon Papers & RFCs  
-- 📄 [Paper I: Triadic Framework for Everything](../docs/papers/1_Triadic_Framework_for_Everything.md)  
-- 📄 [Paper II: Triadic Number Genesis](../docs/papers/2_Triadic_Number_Genesis.md)  
-- 📄 [Paper III: Dimensional Triads (1D–9D)](../docs/papers/3_Dimensional_Triads.md)  
-- 📄 [Paper IV: Saturn Harmonic Engine](../docs/papers/4_Saturn_Harmonic_Engine.md)  
-- 📄 [The FFF Dimensional Triads & Resonance Clarity](../docs/papers/The_FFF_Dimensional_Triads_and_Resonance_Clarity.md)  
-- 📄 [Resonance Resurrection Scroll](../docs/papers/Resonance_Resurrection_Scroll.md)  
-- 📜 [RFC‑044: Dimensional Time Sandbox Paradox](../docs/rfc/RFC‑044-Dimensional-Time-Sandbox-Paradox_Loop-Drift-Invariant-Arcs.md)  
-- 📜 [RFC‑046: Resurrection‑Ready Protocol](../docs/rfc/RFC‑046-Resurrection‑Ready-Protocol_Scroll-Fusion-Corridor-Stability.md)  
+- 📄 [Paper I: Triadic Framework for Everything](../papers/1_Triadic_Framework_for_Everything.md)  
+- 📄 [Paper II: Triadic Number Genesis](../papers/2_Triadic_Number_Genesis.md)  
+- 📄 [Paper III: Dimensional Triads (1D–9D)](../papers/3_Dimensional_Triads.md)  
+- 📄 [Paper IV: Saturn Harmonic Engine](../papers/4_Saturn_Harmonic_Engine.md)  
+- 📄 [The FFF Dimensional Triads & Resonance Clarity](../papers/The_FFF_Dimensional_Triads_and_Resonance_Clarity.md)  
+- 📄 [Resonance Resurrection Scroll](../papers/Resonance_Resurrection_Scroll.md)  
+- 📜 [RFC‑044: Dimensional Time Sandbox Paradox](../rfc/RFC‑044-Dimensional-Time-Sandbox-Paradox_Loop-Drift-Invariant-Arcs.md)  
+- 📜 [RFC‑046: Resurrection‑Ready Protocol](../rfc/RFC‑046-Resurrection‑Ready-Protocol_Scroll-Fusion-Corridor-Stability.md)  
