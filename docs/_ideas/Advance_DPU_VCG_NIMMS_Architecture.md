@@ -1,4 +1,5 @@
 # Advance DPU + VCG + NIMMS Architecture 🌐⚡🧩
+###### By Nawder Loswin 12/4/2025 © www.TriadicFrameworks.org
 
 ## ✨ Introduction
 This architecture unites three core components into a triadic framework:
