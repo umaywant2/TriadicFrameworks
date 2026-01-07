@@ -35,6 +35,34 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/_ideas/The_RTT_Canon_Scroll.html</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+    
+  <url>
+    <loc>https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+    
+  <url>
+    <loc>https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html</loc>
+    <lastmod>2026-01-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
   
   <url>
     <loc>https://www.triadicframeworks.org/_ideas/RTT_Metaphysics_Hybrid_Dimensional_Ladder_Complete.html</loc>
