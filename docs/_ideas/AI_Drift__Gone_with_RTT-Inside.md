@@ -1,5 +1,5 @@
 # 🤷 **AI Drift Gone with RTT-Inside**
-
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ### **A Research‑Style Manifesto on Hallucination, Drift, and Structural Correction**
 
