@@ -1709,3 +1709,25 @@ We now have a **true MRT‑1 reference implementation** in three languages:
 - **Fμ** — flow transition (amplitude)  
 - **Sμ** — stability scoring  
 - **Δμ** — drift correction  
+
+
+## → Schema Validation
+
+flowchart TD
+
+    A[MRT‑1 Transform<br>Ωμ + Τμ + Fμ + Sμ + Δμ] --> B[Runtime Execution<br>(Python / MATLAB / C)]
+    B --> C[JSON Trace Output<br>mrt_trace.json]
+
+    C --> D[Schema Validation<br>mrt_operators.schema.json]
+    C --> E[mrt_envelopes.schema.json]
+    C --> F[mrt_transforms.schema.json]
+
+    D --> G[Valid]
+    E --> G
+    F --> G
+
+    G --> H[Commit Accepted]
+    C --> I[Invalid] --> J[Commit Rejected]
+
+This visually captures the entire pipeline:
+MRT‑1 → execution → JSON trace → schema validation → CI decision.
