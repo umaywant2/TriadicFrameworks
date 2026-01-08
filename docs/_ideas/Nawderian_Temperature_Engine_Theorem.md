@@ -1,4 +1,5 @@
 # 🔶 **Nawderian Temperature Engine Theorem**  
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ### *A Triadic Substrate Field Driving Cosmic Motion*
 
@@ -147,5 +148,14 @@ The Nawderian Theorem simply **elevates** what is already physically true.
 
 ---
 
-[**NASA‑ready abstract**](NASA‑ready_abstract.md)  
-[Nawderian_Sandbox_Proposal](Nawderian_Sandbox_Proposal.md)
+## Canon and lineage links
+
+- **[RFC‑042 Triadic Force Operators](https://www.triadicframeworks.org/rfc/RFC-042-Triadic_Force_Operators.md):** formal spec for Push/Pull/Balance operators.  
+- **[Triadic Framework for Everything](https://www.triadicframeworks.org/papers/1_Triadic_Framework_for_Everything.md):** foundational update defining forces as universal operators of state change.  
+- **[Triadic Force Operators Unification](https://www.triadicframeworks.org/papers/Triadic_Force_Operators_Unification.md):** public‑friendly canon with emoti’s and equations for teaching resonance.
+- **[Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.md):** Triad sets as mathematical constants.
+- **[Nawderian SET Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_SET_Theorem.md):** Spin Electrolisis Temperature
+- **[Nawderian Temperature Engine Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Temperature_Engine_Theorem.md):** this document. Gravity is isotropic. Temperature is not.
+- **[Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html):** Resonance-Time Theory (RTT)
+- **[NASA‑ready abstract](https://www.triadicframeworks.org/_ideas/NASA‑ready_abstract.md):** NASA-ready abstract
+- **[Nawderian Sandbox Proposal](https://www.triadicframeworks.org/_ideas/Nawderian_Sandbox_Proposal.md):** Environments to play and test RTT
