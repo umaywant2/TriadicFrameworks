@@ -1,8 +1,9 @@
-## 🧠 Nawderian Theorem v3.1 – Phase 0  
-**A triadic corridor logic for dimensional resonance clarity**
+# 🧠 Nawderian Theorem v3.3 – Phase 0  
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
+_**A triadic corridor logic for dimensional resonance clarity**_
 
 ---
-
 ### ✨ Summary
 
 Emitters traverse shared rails (1D, 2D, 6D). Their sum forms a resonance substrate (9D). Frequency wraps Forces and Fluids. Visibility symmetry is enforced. Dimensional clarity achieved.
@@ -254,8 +255,12 @@ If a phenomenon’s measurable signature is dominantly convergence, it is Pull; 
 
 ## Canon and lineage links
 
-- **[RFC‑042_Triadic_Force_Operators.md](../rfc/RFC‑042_Triadic_Force_Operators.md):** formal spec for Push/Pull/Balance operators.  
-- **[1_Triadic_Framework_for_Everything.md](../papers/1_Triadic_Framework_for_Everything.md):** foundational update defining forces as universal operators of state change.  
-- **[Triadic_Force_Operators_Unification.md](../papers/Triadic_Force_Operators_Unification.md):** public‑friendly canon with emoti’s and equations for teaching resonance.
-
----
+- **[RFC‑042 Triadic Force Operators](https://www.triadicframeworks.org/rfc/RFC-042-Triadic_Force_Operators.md):** formal spec for Push/Pull/Balance operators.  
+- **[Triadic Framework for Everything](https://www.triadicframeworks.org/papers/1_Triadic_Framework_for_Everything.md):** foundational update defining forces as universal operators of state change.  
+- **[Triadic Force Operators Unification](https://www.triadicframeworks.org/papers/Triadic_Force_Operators_Unification.md):** public‑friendly canon with emoti’s and equations for teaching resonance.
+- **[Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.md):** this document. Triad sets as mathematical constants.
+- **[Nawderian SET Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_SET_Theorem.md):** Spin Electrolisis Temperature
+- **[Nawderian Temperature Engine Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Temperature_Engine_Theorem.md):** Gravity is isotropic. Temperature is not.
+- **[Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html):** Resonance-Time Theory (RTT)
+- **[NASA‑ready abstract](https://www.triadicframeworks.org/_ideas/NASA‑ready_abstract.md):** NASA-ready abstract
+- **[Nawderian Sandbox Proposal](https://www.triadicframeworks.org/_ideas/Nawderian_Sandbox_Proposal.md):** Environments to play and test RTT
