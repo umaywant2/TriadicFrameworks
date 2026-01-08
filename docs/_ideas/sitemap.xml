@@ -28,6 +28,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>   
   </url>
+
+  <url>
+    <loc>https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html</loc>
+    <lastmod>2026-01-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>   
+  </url>
   
   <url>
     <loc>https://www.triadicframeworks.org/_ideas/RTT_Education_Grades_K-30plus.html</loc>
