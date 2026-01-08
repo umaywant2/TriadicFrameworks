@@ -171,3 +171,26 @@ This document defines the **developer‑facing API**.
 The next file defines the **formal RFC** for RSADI (Resonance Structural Awareness Dimensional Interface) for game developers.
 
 - [RFC-051 API for Game Developers using RSADI](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-051-API_for_Game_Developers_using_RSADI.md)
+
+
+
+## → Schema Validation
+
+flowchart TD
+
+    A[MRT‑1 Transform<br>Ωμ + Τμ + Fμ + Sμ + Δμ] --> B[Runtime Execution<br>(Python / MATLAB / C)]
+    B --> C[JSON Trace Output<br>mrt_trace.json]
+
+    C --> D[Schema Validation<br>mrt_operators.schema.json]
+    C --> E[mrt_envelopes.schema.json]
+    C --> F[mrt_transforms.schema.json]
+
+    D --> G[Valid]
+    E --> G
+    F --> G
+
+    G --> H[Commit Accepted]
+    C --> I[Invalid] --> J[Commit Rejected]
+    
+This visually captures the entire pipeline:
+MRT‑1 → execution → JSON trace → schema validation → CI decision.
