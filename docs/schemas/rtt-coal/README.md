@@ -1,4 +1,5 @@
 # 📦 **Folder Structure for Coal‑Specific Schemas**
+[RFC-052 RSADI Coal Industry Extension to RSADI Core](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-052-RSADI-Coal_Industry_Extension_to_RSADI_Core.md)
 
 ```
 docs/
