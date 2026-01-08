@@ -8,11 +8,6 @@
   </svg>
 </p>
 
-<h1 align="center">TriadicFrameworks</h1>
-<p align="center"><em>Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools</em></p>
-
----
-
 <p align="center">
 
 <!-- Officers’ Club Badge Rack -->
@@ -38,6 +33,9 @@
 <img src="https://img.shields.io/badge/Triadic_Resonance-Certified-8A2BE2">
 
 </p>
+
+<h1 align="center">TriadicFrameworks</h1>
+<p align="center"><em>Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools</em></p>
 
 # Overview
 
