@@ -1,0 +1,32 @@
+name: Validate MRT Traces
+
+on:
+  push:
+    paths:
+      - "docs/schemas/rtt-micro-core/v1/examples/*.json"
+  pull_request:
+    paths:
+      - "docs/schemas/rtt-micro-core/v1/examples/*.json"
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install validator deps
+        run: pip install jsonschema
+
+      - name: Validate MRT traces
+        run: |
+          for f in docs/schemas/rtt-micro-core/v1/examples/*.json; do
+            echo "Validating $f"
+            python tools/validate_mrt_trace.py "$f"
+          done
