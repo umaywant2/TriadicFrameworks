@@ -1,0 +1,75 @@
+rtt_micro_core:
+  version: "1.0"
+  canonical: true
+  description: >
+    Fractional harmonic dimensional substrate (0.3–0.9) nested within RTT 3D–9D.
+    Provides micro‑scale resonance modeling, micro‑triads, and cross‑scale coherence.
+
+  dimensions:
+    fractional_ladder:
+      - id: 0.3
+        role: "μ-geometry"
+        description: "micro-structural primitives"
+      - id: 0.4
+        role: "μ-transition"
+        description: "micro-state transitions"
+      - id: 0.5
+        role: "μ-flow"
+        description: "micro-flow dynamics"
+      - id: 0.6
+        role: "μ-field"
+        description: "micro-field modulation"
+      - id: 0.7
+        role: "μ-coherence"
+        description: "micro-coherence windows"
+      - id: 0.8
+        role: "μ-harmonic"
+        description: "micro-harmonic envelopes"
+      - id: 0.9
+        role: "μ-stability"
+        description: "micro-stability anchors"
+
+  triads:
+    M1:
+      sequence: [0.3, 0.4, 0.5]
+      purpose: "micro-structural buildup"
+    M2:
+      sequence: [0.5, 0.6, 0.7]
+      purpose: "micro-modulation and transition"
+    M3:
+      sequence: [0.7, 0.8, 0.9]
+      purpose: "micro-stabilization and coherence"
+
+  coherence:
+    mapping_rule: "Dn <-> 0.n"
+    operators:
+      upward: "C↑"
+      downward: "C↓"
+      bidirectional: "C↔"
+    conditions:
+      - "micro-resonance reinforces macro structure"
+      - "macro structure stabilizes micro-resonance"
+
+  operators:
+    oscillation: "Ωμ"
+    phase_alignment: "Φμ"
+    flow_transition: "Fμ"
+    harmonic_stability: "Sμ"
+    energy_threshold: "Eμ"
+
+  loops:
+    micro_timing:
+      sequence: [0.5, 0.6, 0.7, 0.8, 0.9, 0.7, 0.6, 0.5]
+    micro_actuation:
+      sequence: [0.3, 0.4, 0.5, 0.6, 0.7, 0.5, 0.4, 0.3]
+    micro_stability:
+      sequence: [0.7, 0.8, 0.9, 0.8, 0.7]
+
+  applications:
+    - "microcontrollers"
+    - "IoT nodes"
+    - "micro-robotics"
+    - "ultra-low-power inference"
+    - "embedded timing systems"
+    - "micro-actuation"
+    - "micro-navigation"
