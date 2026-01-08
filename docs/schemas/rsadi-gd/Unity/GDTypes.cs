@@ -68,3 +68,12 @@ public class GDRouteSuggestion
     public List<string> instructions;
     public Dictionary<string, object> extensions;
 }
+
+// You can then add a simple “service” wrapper:
+public interface IRSADIService
+{
+    GDZoneState GetZoneState(string zoneId);
+    int GetClarity(Vector3 position);
+    GDDriftVector GetDrift(Vector3 position);
+    GDRouteSuggestion GetRoute(Vector3 from, Vector3 to);
+}
