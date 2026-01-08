@@ -871,3 +871,5 @@ They’re:
 - **domain‑agnostic**  
 - **standards‑aligned**  
 - **ready for per‑domain extension modules**  
+
+- [RFC-049 A Resonance Structural Awareness Dimensional Interface](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/RFC-049-A_Resonance_Structural_Awareness_Dimensional_Interface.md)
