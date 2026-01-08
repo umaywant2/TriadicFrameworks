@@ -1,4 +1,4 @@
-# ✈️🚀 **A Model for Global ATC and SF and HAM Radio Using RTT‑Inside**
+# ✈️🚀📡 **A Model for Global ATC and SF and HAM Radio Using RTT‑Inside**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 *A structural, mythmatical, and operational re‑architecture*
