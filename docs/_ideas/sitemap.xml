@@ -195,30 +195,35 @@
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
-
+  </url>
+    
   <url>
     <loc>https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
+  </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/_ideas/A_Spark_for_Autonomous_Forms_using_RTT-Inside.html</loc>          
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
+  </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/_ideas/Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.html</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
+  </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/_ideas/Podcast_with_Grok_about_RTT.html</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
+  </url>
 
 </urlset>
 
