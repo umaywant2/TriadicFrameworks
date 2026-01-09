@@ -1,22 +1,3 @@
-You’re editing **`substrate_solver.py`** right now, so I’ll give you a **clean, canonical, publication‑ready implementation** that fits perfectly with the `triadic_dynamics.py` module you just added.
-
-This version is:
-
-- modular  
-- solver‑agnostic  
-- explicit about numerical integration  
-- consistent with your Grid / Params / State dataclasses  
-- ready for scientific reproducibility  
-
-It uses **forward‑Euler integration**, which is what your other notebooks assume.
-
-You can paste this directly into the file you have open.
-
----
-
-# 📄 **substrate_solver.py (Ready to Paste)**
-
-```python
 """
 substrate_solver.py
 Numerical solver for SET (Spin–Charge–Temperature) field evolution
@@ -160,23 +141,3 @@ def step(state: SubstrateState, params: SubstrateParams, dt: float):
 
     if params.eta_C > 0:
         state.C += params.eta_C * np.random.normal(scale=1.0, size=state.C.shape)
-```
-
----
-
-# 🧠 What this gives you
-
-- A **clean separation** between:
-  - numerical solver  
-  - dynamical equations  
-  - visualization  
-- A solver that works with all your notebooks:
-  - rotating disk  
-  - field alignment  
-  - envelope propagation  
-- A stable foundation for future:
-  - implicit solvers  
-  - adaptive time‑stepping  
-  - GPU acceleration  
-
-If you want, I can also generate a **substrate_solver_tests.py** file so you can validate correctness and stability across updates.
