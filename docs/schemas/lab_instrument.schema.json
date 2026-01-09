@@ -1,0 +1,16 @@
+{
+  "instrument_id": "string",
+  "type": "string",
+  "model": "string",
+  "manufacturer": "string",
+  "calibration_date": "string",
+  "triadic_profile": {
+    "spin_field": "number",
+    "charge_field": "number",
+    "temperature_field": "number"
+  },
+  "capabilities": {
+    "resolution": "string",
+    "range": "string"
+  }
+}
