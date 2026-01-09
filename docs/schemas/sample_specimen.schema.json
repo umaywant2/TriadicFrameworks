@@ -1,0 +1,12 @@
+{
+  "sample_id": "string",
+  "type": "string",
+  "origin": "string",
+  "collection_date": "string",
+  "storage_conditions": "string",
+  "triadic_signature": {
+    "spin": "number",
+    "charge": "number",
+    "temperature": "number"
+  }
+}
