@@ -1,245 +1,157 @@
-# Operator Definitions  
-## Substrate Operators for the SET Resonance Model
+# **Operator Definitions**  
+*A unified, canonical reference for all substrate operators*
 
-This document defines the primary substrate operators used in the evolution equations of the Spin (S), Charge (C), and Temperature (T) fields. These operators provide a modular way to express alignment, propagation, and dissipation effects.
+Operators define how fields evolve, interact, and transform within the Resonance Substrate Model. They are the core mathematical and conceptual tools that drive substrate dynamics across classical, quantum, semantic, and distributed layers.
 
----
-
-## 1. Alignment Operator \(\mathcal{A}\)
-
-### 1.1 Definition
-
-The Alignment Operator acts on the Spin field and aligns it with local Charge gradients:
-
-
-
-\[
-\mathcal{A}_S(S, C) = \lambda_{SC} \nabla C
-\]
-
-
-
-Where:
-
-- \(\lambda_{SC}\) is a coupling coefficient.
-
-Interpretation:
-
-- Drives \(S\) toward alignment with \(\nabla C\).  
-- Encodes the tendency of spin structure to follow interaction bias.
+This document merges the early conceptual framing with the newer structured taxonomy to provide a complete, extensible foundation.
 
 ---
 
-## 2. Destabilization Operator \(\mathcal{X}\)
+## **1. Diffusion Operator**
 
-### 2.1 Definition
+### Purpose  
+Smooths or spreads field values across the substrate, modeling transport, dissipation, and coherence propagation.
 
-The Destabilization Operator reduces spin coherence in regions of strong Temperature gradients:
+### Applies To  
+- scalar fields  
+- vector fields  
+- resonance envelopes (optional, controlled diffusion)
 
+### Variants  
+- **isotropic diffusion** — uniform spreading  
+- **anisotropic diffusion** — directionally biased  
+- **manifold-aware diffusion** — respects curvature and metric structure  
 
-
-\[
-\mathcal{X}_S(S, T) = -\lambda_{ST} \nabla T
-\]
-
-
-
-Where:
-
-- \(\lambda_{ST}\) is a coupling coefficient.
-
-Interpretation:
-
-- High \(|\nabla T|\) reduces spin alignment.  
-- Models decoherence and instability in high‑T regions.
+### Notes  
+Early versions emphasized diffusion as a “substrate equalizer.”  
+The unified model treats it as a first-class operator with tunable geometry and stability constraints.
 
 ---
 
-## 3. Propagation Operator \(\mathcal{P}\)
+## **2. Alignment Operator**
 
-### 3.1 Charge Propagation
+### Purpose  
+Encourages local or global coherence among directional or spin-like fields.
 
+### Applies To  
+- spin-fields  
+- vector fields  
+- semantic alignment structures (higher layers)
 
+### Behavior  
+- normalizes local vectors  
+- pulls neighbors toward shared orientation  
+- may include damping or resonance-weighted influence  
 
-\[
-\mathcal{P}_C(C) = D_C \nabla^2 C
-\]
-
-
-
-Where:
-
-- \(D_C\) is the charge diffusion coefficient.
-
-Interpretation:
-
-- Spreads charge bias spatially.  
-- Smooths sharp gradients.
-
-### 3.2 Spin Propagation
-
-
-
-\[
-\mathcal{P}_S(S) = D_S \nabla^2 S
-\]
-
-
-
-Where:
-
-- \(D_S\) is the spin diffusion coefficient.
-
-Interpretation:
-
-- Spreads spin alignment.  
-- Reduces local inhomogeneities.
-
-### 3.3 Thermal Propagation
-
-
-
-\[
-\mathcal{P}_T(T) = D_T \nabla^2 T
-\]
-
-
-
-Where:
-
-- \(D_T\) is the thermal diffusion coefficient.
-
-Interpretation:
-
-- Spreads thermal energy.  
+### Notes  
+Earlier drafts described alignment as “coherence pressure.”  
+This merged version formalizes it as a directional operator with explicit normalization rules.
 
 ---
 
-## 4. Relaxation Operator \(\mathcal{R}\)
+## **3. Coupling Operator**
 
-### 4.1 Spin Relaxation
+### Purpose  
+Links multiple fields so that changes in one influence another.
 
+### Common Couplings  
+- scalar ↔ vector  
+- resonance envelope ↔ spin-field  
+- classical layer ↔ quantum layer  
+- semantic layer ↔ resonance layer  
 
+### Forms  
+- linear coupling  
+- nonlinear coupling  
+- thresholded or gated coupling  
 
-\[
-\mathcal{R}_S(S) = -\gamma_S S
-\]
-
-
-
-### 4.2 Charge Relaxation
-
-
-
-\[
-\mathcal{R}_C(C) = -\gamma_C C
-\]
-
-
-
-### 4.3 Temperature Relaxation
-
-
-
-\[
-\mathcal{R}_T(T) = -\gamma_T (T - T_0)
-\]
-
-
-
-Where:
-
-- \(\gamma_S, \gamma_C, \gamma_T\) are relaxation coefficients.  
-- \(T_0\) is the background temperature.
-
-Interpretation:
-
-- Drives fields toward baseline states.  
-- Encodes loss of structure over time.
+### Notes  
+The early operator doc emphasized “cross-field influence.”  
+This unified version formalizes coupling as a structured, configurable operator family.
 
 ---
 
-## 5. Source Operators \(\mathcal{S}\)
+## **4. Resonance Activation Operator**
 
-### 5.1 Spin‑Induced Charge Source
+### Purpose  
+Determines when and where resonance envelopes activate, intensify, or decay.
 
+### Activation Modes  
+- threshold-based  
+- gradient-based  
+- operator-driven (e.g., alignment-triggered)  
+- coherence-driven (quantum layer influence)
 
+### Behavior  
+- amplifies local field activity  
+- creates localized “resonance pockets”  
+- interacts with diffusion and alignment operators  
 
-\[
-\mathcal{S}_C(S) = \beta_{CS} \nabla \cdot S
-\]
-
-
-
-Where:
-
-- \(\beta_{CS}\) is a coupling coefficient.
-
-Interpretation:
-
-- Divergence of Spin structure contributes to Charge bias.
-
-### 5.2 Spin‑Induced Heating
-
-
-
-\[
-\mathcal{S}_T^{(S)}(S) = \eta_S |S|^2
-\]
-
-
-
-### 5.3 Gradient‑Induced Heating
-
-
-
-\[
-\mathcal{S}_T^{(C)}(C) = \eta_C |\nabla C|^2
-\]
-
-
-
-Where:
-
-- \(\eta_S, \eta_C\) are heating coefficients.
-
-Interpretation:
-
-- Spin activity and strong Charge gradients contribute to Temperature.
+### Notes  
+Early drafts described resonance activation as “field ignition.”  
+This merged version integrates it into the operator taxonomy with explicit activation logic.
 
 ---
 
-## 6. Combined Evolution in Operator Form
+## **5. Decay / Stabilization Operator**
 
-For compactness, the field equations can be written as:
+### Purpose  
+Prevents runaway growth, oscillation, or instability in evolving fields.
 
+### Applies To  
+- scalar fields  
+- spin-fields  
+- resonance envelopes  
+- coherence structures  
 
+### Forms  
+- exponential decay  
+- damping  
+- normalization  
+- clipping or bounding  
 
-\[
-\partial_t S = \mathcal{P}_S(S) + \mathcal{R}_S(S) + \mathcal{A}_S(S, C) + \mathcal{X}_S(S, T)
-\]
+### Notes  
+This operator was implicit in early drafts; now it is explicitly defined as a stabilizing component of the substrate.
 
+---
 
+## **6. Projection and Mapping Operators**
 
+### Purpose  
+Translate fields across layers, dimensions, or coordinate systems.
 
+### Examples  
+- classical → quantum projection  
+- semantic → resonance modulation  
+- manifold coordinate transforms  
+- layer-to-layer embeddings  
 
-\[
-\partial_t C = \mathcal{P}_C(C) + \mathcal{R}_C(C) + \mathcal{S}_C(S)
-\]
+### Notes  
+Early drafts hinted at “dimensional bridges.”  
+This unified version formalizes them as projection operators with clear roles.
 
+---
 
+## **7. Custom and Experimental Operators**
 
+### Purpose  
+Support domain-specific or experimental behaviors.
 
+### Examples  
+- rotating-frame transforms (Faraday paradox experiments)  
+- external field injection  
+- semantic packet modulation  
+- coherence perturbation operators  
 
-\[
-\partial_t T = \mathcal{P}_T(T) + \mathcal{R}_T(T) + \mathcal{S}_T^{(S)}(S) + \mathcal{S}_T^{(C)}(C)
-\]
+### Notes  
+This section preserves the exploratory spirit of the early operator doc while giving it a structured home.
 
+---
 
+# **Summary**
 
-This operator decomposition is intended to:
+This merged operator document now reflects:
 
-- simplify implementation in numerical solvers  
-- allow modular modification of individual effects  
-- support future extensions (e.g., additional coupling terms or higher‑order operators).
-
+- the **conceptual richness** of the early drafts  
+- the **structured clarity** of the newer scaffolds  
+- the **extensibility** needed for future layers and experiments  
