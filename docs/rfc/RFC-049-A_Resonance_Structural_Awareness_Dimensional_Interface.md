@@ -233,3 +233,6 @@ D. Domain Extension Samples (Coal, ATC, Deep Sea, etc.)
 ---
 
 If you want, I can now **populate each section with draft text**, or generate a **complete RFC‑style document** ready for submission formatting.
+
+- [RFC's](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rfc)
+- [RTT Schemas](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/schemas)
