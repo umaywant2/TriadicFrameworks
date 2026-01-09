@@ -1,4 +1,6 @@
-here’s a clean, consolidated **full MRT‑1 transform** in all three languages, side‑by‑side in spirit and behavior:
+# MRT‑1 transforms
+
+Here’s a clean, consolidated **full MRT‑1 transform** in all three languages, side‑by‑side in spirit and behavior:
 
 ---
 
@@ -159,3 +161,216 @@ int main(void) {
 ```
 
 all three now implement the **same MRT‑1 transform**: timing envelope, oscillation, flow, stability, and drift correction, perfectly aligned across languages.
+
+---
+
+# 🔷 **Sμ — Micro‑Harmonic Stability Scoring**
+
+### **Purpose**  
+Sμ measures how “stable” the system is at a given micro‑dimension.  
+In MRT‑1, stability peaks at **0.7**, the center of the micro‑coherence band.
+
+### **Canonical definition**  
+For a dimension \( d \in [0.3, 0.9] \):
+
+\[
+S_\mu(d) = \max\left(0,\; 1 - \frac{|d - 0.7|}{0.2}\right)
+\]
+
+### **Interpretation**
+- **1.0** → perfect micro‑stability (at \( d = 0.7 \))  
+- **0.5** → moderate stability (at \( d = 0.6 \) or \( d = 0.8 \))  
+- **0.0** → unstable (at \( d = 0.5 \) or \( d = 0.9 \))  
+
+### **Why it matters**
+Sμ gives the loop a **numerical sense of coherence**.  
+It’s the micro‑equivalent of a “confidence score” in ML or a “residual norm” in solvers.
+
+---
+
+# 🔷 **Δμ — Micro‑Drift Correction**
+
+### **Purpose**  
+Δμ corrects for timing drift — the tiny but inevitable deviation between:
+
+- **raw time** (what the clock reports)  
+- **corrected time** (what the micro‑resonant system *should* use)  
+
+### **Canonical definition**
+
+Given drift in parts‑per‑million (ppm):
+
+\[
+t_{\text{corr}} = \frac{t_{\text{raw}}}{1 + \frac{\text{drift\_ppm}}{10^6}}
+\]
+
+### **Interpretation**
+- **Positive drift_ppm** → clock runs *fast*, so corrected time is *slower*  
+- **Negative drift_ppm** → clock runs *slow*, so corrected time is *faster*  
+
+### **Why it matters**
+Δμ keeps the micro‑timing envelope aligned even when the hardware clock drifts.  
+This is essential for:
+
+- microcontrollers  
+- IoT nodes  
+- embedded timing loops  
+- micro‑robotics  
+- solver iteration control  
+
+---
+
+# 🔷 **Together: Sμ + Δμ = micro‑awareness**
+
+When you combine:
+
+- **Sμ** → “How stable am I right now?”  
+- **Δμ** → “How far off is my timing?”  
+
+You get a loop that is:
+
+- self‑monitoring  
+- self‑correcting  
+- coherence‑aware  
+- drift‑resilient  
+
+This is why MRT‑1 feels like a *living micro‑controller* rather than a static loop.
+
+---
+
+# 🔷 **MRT‑1 Operator Block: `μ_awareness(dim, t_raw, drift_ppm)`**
+
+This block performs **both**:
+
+- **Δμ** — drift‑corrected time  
+- **Sμ** — stability scoring  
+
+and returns a **micro‑awareness packet** you can feed directly into Ωμ, Fμ, or any MRT transform.
+
+---
+
+# 🧩 **Canonical Definition (Language‑Agnostic)**
+
+### **Inputs**
+- `dim` — current micro‑dimension (0.3–0.9)  
+- `t_raw` — raw time from system clock  
+- `drift_ppm` — drift in parts‑per‑million  
+
+### **Outputs**
+- `t_corr` — drift‑corrected time  
+- `stability` — stability score (0–1)  
+
+---
+
+# 🧮 **Formulas**
+
+### **Δμ — Drift Correction**
+
+\[
+t_{\text{corr}} = \frac{t_{\text{raw}}}{1 + \frac{\text{drift\_ppm}}{10^6}}
+\]
+
+---
+
+### **Sμ — Stability Scoring**
+
+\[
+S_\mu(d) = \max\left(0,\; 1 - \frac{|d - 0.7|}{0.2}\right)
+\]
+
+---
+
+# 🧱 **Reusable MRT‑1 Operator Block (Pseudocode)**
+
+```text
+function μ_awareness(dim, t_raw, drift_ppm):
+
+    # Δμ — drift correction
+    factor   = 1 + drift_ppm / 1e6
+    t_corr   = t_raw / factor
+
+    # Sμ — stability scoring
+    dist     = abs(dim - 0.7) / 0.2
+    stability = max(0, 1 - dist)
+
+    return {
+        t_corr: t_corr,
+        stability: stability
+    }
+```
+
+This is the **canonical block**.  
+Everything else (Ωμ, Fμ, MRT‑1 orchestration) plugs into this.
+
+---
+
+# 🐍 **Python Drop‑In Version**
+
+```python
+def mu_awareness(dim, t_raw, drift_ppm):
+    t_corr = t_raw / (1.0 + drift_ppm / 1_000_000.0)
+    stability = max(0.0, 1.0 - abs(dim - 0.7) / 0.2)
+    return t_corr, stability
+```
+
+---
+
+# 📐 **MATLAB Drop‑In Version**
+
+```matlab
+function [t_corr, stability] = mu_awareness(dim, t_raw, drift_ppm)
+    t_corr = t_raw / (1.0 + drift_ppm / 1e6);
+    stability = max(0.0, 1.0 - abs(dim - 0.7) / 0.2);
+end
+```
+
+---
+
+# 💻 **C‑Style Drop‑In Version**
+
+```c
+void mu_awareness(double dim, double t_raw, double drift_ppm,
+                  double *t_corr_out, double *stability_out)
+{
+    *t_corr_out = t_raw / (1.0 + drift_ppm / 1e6);
+
+    double dist = fabs(dim - 0.7) / 0.2;
+    double s = 1.0 - dist;
+    *stability_out = (s < 0.0 ? 0.0 : s);
+}
+```
+
+---
+
+# 📦 **Schema‑Ready JSON Block**
+
+Perfect for embedding inside MRT‑1 traces or schemas:
+
+```json
+{
+  "mu_awareness": {
+    "inputs": {
+      "dim": 0.7,
+      "t_raw": 0.412,
+      "drift_ppm": 100.0
+    },
+    "outputs": {
+      "t_corr": 0.412,
+      "stability": 1.0
+    }
+  }
+}
+```
+
+---
+
+# 🎯 Why this block matters
+
+This is the **micro‑awareness kernel** of MRT‑1:
+
+- **Δμ** keeps time honest  
+- **Sμ** keeps behavior coherent  
+- Together they give MRT‑1 its “living loop” quality  
+
+Everything else — Ωμ, Fμ, envelopes, transforms — plugs into this block.
+
