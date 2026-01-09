@@ -1,4 +1,4 @@
-'# 📚 TriadicFrameworks Schema Library  
+# 📚 TriadicFrameworks Schema Library  
 *A resonance‑native, multi‑domain schema universe*
 
 The `docs/schemas/` directory contains the complete structured backbone of the TriadicFrameworks canon.  
