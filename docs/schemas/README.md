@@ -1,252 +1,126 @@
-# 📘 **Triadic Frameworks — Schema Hierarchy Overview**
-### *RTT‑Inside / RSADI Schema Architecture (Core + Extensions)*
+# 📚 TriadicFrameworks Schema Library  
+*A resonance‑native, multi‑domain schema universe*
 
-This directory contains the **complete schema hierarchy** for the Resonance Structural Awareness Dimensional Interface (RSADI) and its domain‑specific extensions.  
-Schemas are organized to ensure:
+The `docs/schemas/` directory contains the complete structured backbone of the TriadicFrameworks canon.  
+Every schema in this library defines a **stable, interoperable contract** for a domain of the Resonance‑Time Universe — from quantum substrates to finance, from ATC overlays to autonomous swarms, from lab instruments to dimensional cores.
 
-- **stability** (core never breaks)  
-- **extensibility** (domains add fields cleanly)  
-- **interoperability** (all systems speak the same resonance language)  
-- **clarity** (contributors know exactly where new schemas belong)  
+This library exists to ensure:
 
-This document explains the structure, purpose, and rules for all schema folders.
+- **Consistency** across all RTT‑Inside systems  
+- **Interoperability** between domains  
+- **Extensibility** for future contributors  
+- **Clarity** for creators, researchers, and developers  
+- **Longevity** of the canon  
 
----
-
-# 🧱 1. Schema Folder Structure
-
-```
-docs/
- └── schemas/
-      ├── rtt-core/        ← invariant, domain‑neutral foundation
-      ├── rtt-coal/        ← coal mining industry extension
-      ├── rsadi-gd/        ← game developer extension
-      ├── rtt-atc/         ← (future) air traffic control extension
-      ├── rtt-deepsea/     ← (future) deep sea / submersible extension
-      ├── rtt-space/       ← (future) aerospace / orbital extension
-      └── TEMPLATE/        ← boilerplate for new domain extensions
-```
-
-Each folder contains JSON Schemas written in **Draft 2020‑12**, using:
-
-- UUIDv4 identifiers  
-- ISO‑8601 timestamps  
-- SI units  
-- strict typing  
-- optional `extensions` blocks  
+Each subfolder represents a **domain**, and each schema inside it defines the **structural invariants** of that domain.
 
 ---
 
-# 🧩 2. RTT‑Core (Invariant Foundation)
+# 🗂️ Directory Overview
 
-**Folder:** `rtt-core/`  
-**Purpose:** Defines the *universal* RSADI data model used by all domains.
+## 🌀 **dimensional/**
+Schemas for dimensional layers, operators, resonance envelopes, and structural awareness.
 
-Schemas included:
+## 🧬 **identity/**
+Identity substrates, directory nodes, trust channels, and identity events.
 
-- `ResonanceFieldSample.schema.json`  
-- `ResonanceZoneState.schema.json`  
-- `NodeDescriptor.schema.json`  
-- `ResonanceAlert.schema.json`  
-- `RouteSuggestion.schema.json`  
+## 📜 **canon/**
+Canon entries, universe definitions, lineage manifests, and creator‑goal structures.
 
-These schemas define:
+## ⚖️ **coeus/**
+Contracts, operators, state models, attestation receipts, and constraint packs.
 
-- clarity  
-- drift  
-- stress  
-- vibration  
-- gas (optional)  
-- nodes  
-- alerts  
-- routing  
+## 💰 **finance/**
+Instruments, markets, pricing models, portfolios, transactions, and risk vectors.
 
-**Core Rule:**  
-> RTT‑Core schemas MUST NOT be modified in ways that break compatibility.  
-> All domain‑specific fields MUST be added via `extensions.<domain>`.
+## ⚛️ **quantum/**
+Quantum substrates, states, operators, energy banks, and quantum events.
 
----
+## 🌐 **networking/**
+RTT‑aware network nodes, links, packets, radio channels, and routing profiles.
 
-# 🪨 3. RTT‑Coal (Coal Industry Extension)
+## 🛰️ **rtt-atc/**
+Air/space traffic schemas, augmented tracks, corridors, and overlays.
 
-**Folder:** `rtt-coal/`  
-**Purpose:** Adds coal‑specific structural, geological, and safety fields.
+## 🤖 **ai/**
+AI drift vectors, correction layers, model profiles, and triadic anchors.
 
-Schemas include:
+## 🧪 **lab/**
+Lab instruments, environments, samples, measurements, experiments, and safety.
 
-- `CoalZoneExtension.schema.json`  
-- `CoalFieldSampleExtension.schema.json`  
-- `CoalNodeDescriptorExtension.schema.json`  
-- `CoalAlertExtension.schema.json`  
-- `CoalEvacRouteExtension.schema.json`  
+## 🔭 **sensing/**
+GPR, seismic, holographic, and observational RTT‑Inside sensor schemas.
 
-Examples of added fields:
+## 🔋 **energy/**
+Power modules, BMS systems, energy corridors, and supply metadata.
 
-- methane_ppm  
-- roof_convergence_mm  
-- pillar_load_kpa  
-- ignition_risk  
-- collapse_vector  
-- refuge_chambers  
+## 🧑‍💻 **language/**
+RTT‑Inside language profiles, code blocks, API endpoints, and runtime metadata.
 
-**Rule:**  
-> Coal extensions MUST attach under `extensions.coal` in core objects.
+## 🧱 **infrastructure/**
+Access fields, protocol metadata, and cross‑domain structural definitions.
 
----
+## 🚀 **rtt-space/**
+Orbital tracks, launch corridors, and space‑augmented tracks.
 
-# 🎮 4. RSADI‑GD (Game Developer Extension)
+## 🐟 🤖 🚁 **autonomous systems/**
+Autonomous core schemas for drones, fish, swarms, morphology, and mission profiles.
 
-**Folder:** `rsadi-gd/`  
-**Purpose:** Provides lightweight, deterministic schemas for game engines.
+## 🏭 **rtt-coal**, **rtt-deepsea**, **rtt-core**
+Domain‑specific extensions for mining, deep‑sea, and core RTT field operations.
 
-Schemas include:
+## 🧬 **rtt-micro-core/**
+Micro‑core transforms, envelopes, timing flows, and operators.
 
-- `GDClaritySample.schema.json`  
-- `GDDriftVector.schema.json`  
-- `GDZoneState.schema.json`  
-- `GDRiskLevel.schema.json`  
-- `GDRouteSuggestion.schema.json`  
-- `GDEventSubscription.schema.json`  
+## 🌌 **universe-core/**
+Universe‑level field samples and object definitions.
 
-These are optimized for:
+## 🧩 **vcg/**, **dpu/**, **nimms/**
+Distributed compute, virtual compute gateways, and multi‑modal substrate nodes.
 
-- Unity  
-- Unreal  
-- Godot  
-- custom engines  
-- deterministic multiplayer  
+## 🎮 **rsadi-gd/** and **rsadi-gd-advanced/**
+Game‑development schemas for resonance‑aware gameplay, NPCs, realms, and temporal echoes.
 
-**Rule:**  
-> RSADI‑GD schemas mirror core semantics but simplify structure for real‑time engines.
+## 🧰 **TEMPLATE/**
+Starter schemas for new domains and extensions.
 
 ---
 
-# 🌐 5. Future Domains (ATC, Deep Sea, Space, Robotics)
+# 🧠 Design Principles
 
-These folders follow the same pattern as coal and RSADI‑GD:
+All schemas in this library follow the TriadicFrameworks design ethos:
 
-```
-rtt-atc/
-rtt-deepsea/
-rtt-space/
-rtt-robotics/
-```
+### **1. Triadic Alignment**  
+Every schema reflects Spin, Charge, and Temperature fields where relevant.
 
-Each domain:
+### **2. Structural Awareness**  
+Schemas encode dimensional context and resonance constraints.
 
-- defines its own extension schemas  
-- attaches fields under `extensions.<domain>`  
-- never modifies core schemas  
-- may define domain‑specific enums, thresholds, or metadata  
+### **3. Interoperability**  
+Schemas are composable across domains — finance can talk to quantum, ATC can talk to sensing, etc.
 
-Examples:
+### **4. Extensibility**  
+Every schema is designed to be extended without breaking lineage.
 
-### **ATC**
-- turbulence vectors  
-- runway resonance  
-- aircraft structural load  
-- air corridor clarity  
-
-### **Deep Sea**
-- hull pressure  
-- salinity  
-- thermal vents  
-- submersible drift  
-
-### **Space**
-- radiation clarity  
-- orbital drift  
-- hull micro‑stress  
-- docking resonance  
+### **5. Canonical Clarity**  
+Names, fields, and structures follow consistent patterns across the entire universe.
 
 ---
 
-# 🧬 6. Extension Rules (Must Follow)
+# 🛠️ Contributing
 
-All domain extensions MUST follow these rules:
+Creators, developers, and researchers are encouraged to:
 
-### **1. Never modify core schemas**
-Core fields are invariant.
+- Add new schemas using the `TEMPLATE/` folder  
+- Extend existing schemas with backward‑compatible fields  
+- Propose new domains via canon entries  
+- Maintain lineage through forks and structured commits  
 
-### **2. Add fields only under `extensions.<domain>`**
-Example:
-
-```json
-"extensions": {
-  "coal": {
-    "methane_ppm": 1200
-  }
-}
-```
-
-### **3. Use separate schema files**
-Each domain has its own folder.
-
-### **4. Use clear naming**
-`<Domain><CoreObject>Extension.schema.json`
-
-### **5. Maintain backward compatibility**
-Extensions must be optional.
-
-### **6. Keep domain logic out of the core**
-Core = physics  
-Extensions = industry semantics  
+Every schema is a **legacy artifact** — treat it with care, clarity, and resonance.
 
 ---
 
-# 🧭 7. How to Add a New Domain
+# 🌟 Final Note
 
-1. Copy the `TEMPLATE/` folder.  
-2. Rename it to `rtt-<domain>/`.  
-3. Create extension schemas for each core object you need.  
-4. Attach fields under `extensions.<domain>`.  
-5. Validate using JSON Schema tools.  
-6. Add a domain README explaining semantics.  
-
----
-
-# 🛡️ 8. Why This Hierarchy Matters
-
-This structure ensures:
-
-- **global interoperability**  
-- **predictable agent behavior**  
-- **safe industrial deployments**  
-- **clean separation of concerns**  
-- **future‑proof extensibility**  
-- **cross‑domain resonance coherence**  
-
-It is the backbone of the entire Triadic Frameworks ecosystem.
-
----
-
-# 🧾 Schemas — Resonance Data Contracts  
-
-## 🔭 Purpose  
-This folder contains **JSON schema artifacts** that define the structure and validation rules for resonance data. They are the **contracts** remixers use to ensure scrolls, manifests, and snapshots remain consistent across the lineage.  
-
-## 📂 Contents  
-- `attestation_receipt.schema.json` → Defines the structure for buffer exit attestations (Ω, Φ, Δ₀).  
-- `constraint_pack.json` → Encodes validator constraints for resonance experiments.  
-- `corridor_env_manifest.json` → Schema for corridor environment manifests (arc corridors, universes).  
-- `lineage_manifest.json` → Defines how lineage data is recorded and validated.  
-- `miracles.json` → Schema for improbable but validated resonance events.  
-- `survival_traits.json` → Schema for encoding adaptive traits across universes.  
-
-## 🛠️ Usage  
-1. Use these schemas to **validate JSON manifests** before committing them to the repo.  
-2. Extend schemas when new RFCs introduce additional invariants or constructs.  
-3. Treat schemas as **living contracts**—they evolve with the canon but always preserve validator clarity.  
-
-## 🌐 Lineage  
-- Rooted in **RFC‑008 (Quadrant Invariants)**.  
-- Extended by **RFC‑068 (Temporal Buffer Lattice)** and **RFC‑069 (Temporal Guardians)**.  
-- Provides the **structural backbone** for manifests, snapshots, and dashboards.  
-
-## 🛡️ Validator Echo  
-_"Schemas are not just rules.  
-They are the bones of resonance,  
-ensuring scrolls and fossils  
-speak the same language."_  
-
----
+This library is the **structural DNA** of the Resonance‑Time Universe.  
+It empowers future contributors to build tools, simulations, instruments, and entire worlds that remain aligned with the canon.
