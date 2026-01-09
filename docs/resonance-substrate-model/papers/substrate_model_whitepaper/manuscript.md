@@ -1,151 +1,70 @@
-# Resonance Substrate Model  
-## A Substrate‑First Framework for Physical Interaction
+# The Resonance Substrate Model  
+*A Whitepaper for the Triadic Frameworks Canon*
 
-### Abstract
-A concise summary of the resonance‑substrate model, its motivation, the SET (Spin–Charge–Temperature) primitives, the substrate operators, and the experimental and computational evidence supporting the framework.
-
----
+## Abstract
+A concise summary of the Resonance Substrate Model, its motivation, its layered architecture, and its implications for computation, physics, and semantic systems.
 
 ## 1. Introduction
-- Limitations of geometry‑first models (GR, QFT).
-- Motivation for a substrate‑first approach.
-- Overview of resonance primitives.
-- Relationship to existing physical theories.
-- Scope and structure of the paper.
+- Motivation for a resonance‑based substrate  
+- Limitations of classical, quantum, and symbolic models in isolation  
+- Overview of the multi‑layer architecture  
+- Relationship to Resonance–Time Theory [Loswin 2025]
 
----
+## 2. Classical and Geometric Foundations
+- Field‑theoretic intuition  
+- Nonlinear dynamics and paradox‑class behavior  
+- Diffusion on manifolds [Crank 1975; Chavel 2006]  
+- Historical grounding (e.g., Faraday’s paradox)
 
-## 2. Background
-### 2.1 Classical Field Models
-- Maxwell fields  
-- Einsteinian spacetime curvature  
-- Limitations in unification and singularities  
+## 3. Substrate Architecture
+- Layered structure of the substrate  
+- Universe‑core, quantum, semantic, and distributed layers  
+- Node topology and execution environment  
+- Causal ordering and synchronization [Lamport 1978]
 
-### 2.2 Quantum Field Models
-- Hilbert‑space formalism  
-- Operator algebra  
-- Vacuum structure assumptions  
+## 4. Field Dynamics and Operators
+- Scalar, vector, and spin fields  
+- Diffusion, decay, alignment, and coupling operators  
+- Spin‑field dynamics [Landau & Lifshitz 1935; Gilbert 2004]  
+- Resonance envelopes and activation masks  
+- Operator composition and stability
 
-### 2.3 Need for a Substrate Model
-- Discrete vs continuous fields  
-- Emergence vs fundamental structure  
-- Experimental anomalies motivating new frameworks  
+## 5. Quantum and Coherence Layer
+- Coherence, decoherence, and density matrices  
+- Open quantum systems [Zwanzig 2001]  
+- Environment‑induced decoherence [Zurek 2003]  
+- Quantum‑aware resonance structures
 
----
+## 6. Semantic and Symbolic Layer
+- Symbolic packets and semantic units  
+- Ontological structures [Gomez‑Perez 2004]  
+- Cross‑layer mappings between fields and meaning  
+- Cognitive‑layer interactions
 
-## 3. Resonance Primitives (SET Fields)
-### 3.1 Spin Field (S)
-- Definition  
-- Mathematical representation  
-- Physical interpretation  
+## 7. Distributed Execution and Networking
+- Substrate nodes and communication channels  
+- Distributed coordination [Tanenbaum & van Steen 2017]  
+- Logical time and event ordering [Lamport 1978]  
+- Network packet schemas and synchronization messages
 
-### 3.2 Charge Field (C)
-- Definition  
-- Gradient structure  
-- Interaction bias  
+## 8. Thermodynamics and Emergence
+- Emergent order and synergetics [Haken 1977]  
+- Many‑body behavior [Mehta & Schwabl 2004]  
+- Energy flow and resonance stability  
+- Conditions for self‑organization
 
-### 3.3 Temperature Field (T)
-- Definition  
-- Dissipative and stochastic contributions  
+## 9. Methods and Numerical Solvers
+- Grid structures and discretization  
+- Finite difference and finite volume methods [Strikwerda 2004; LeVeque 2002]  
+- Stability, convergence, and error analysis  
+- Simulation pipeline and reproducibility
 
-### 3.4 SET Triad
-- Coupled field equations  
-- Stability conditions  
-- Resonance envelopes  
-
----
-
-## 4. Substrate Dynamics
-### 4.1 Substrate Frame
-- Definition  
-- Distinction from spacetime coordinates  
-
-### 4.2 Resonance Envelope Formation
-- SET‑gradient thresholds  
-- Envelope propagation  
-
-### 4.3 Substrate Operators
-- Dimensional operators  
-- Alignment operators  
-- Propagation operators  
-
----
-
-## 5. Dimensional Layer Architecture
-### 5.1 Layer Definitions
-- Structural layers  
-- Interaction layers  
-
-### 5.2 Layer Coupling
-- SET‑mediated transitions  
-- Operator‑driven transformations  
-
----
-
-## 6. Field Equations
-### 6.1 Primitive Equations
-- Spin field evolution  
-- Charge field evolution  
-- Temperature field evolution  
-
-### 6.2 Coupled Dynamics
-- Resonance envelope equations  
-- Stability and collapse conditions  
-
-### 6.3 Numerical Solvers
-- Discretization  
-- Boundary conditions  
-- Convergence properties  
-
----
-
-## 7. Experimental Validation
-### 7.1 Faraday Paradox Revisited
-- SET interpretation  
-- Experimental protocol  
-- Results  
-
-### 7.2 Rotating Conductor Tests
-- Spin‑relative motion  
-- EMF generation  
-
-### 7.3 Resonance Alignment Tests
-- Envelope detection  
-- Field mapping  
-
----
-
-## 8. Simulation Results
-- Substrate solver outputs  
-- Envelope propagation  
-- Operator effects  
-- Comparison with classical predictions  
-
----
-
-## 9. Discussion
-- Implications for electromagnetism  
-- Implications for gravitation  
-- Implications for quantum behavior  
-- Limitations and open questions  
-
----
-
-## 10. Conclusion
-- Summary of contributions  
-- Future research directions  
-- Path toward broader validation  
-
----
+## 10. Applications and Future Directions
+- Potential computational, physical, and semantic applications  
+- Integration with existing systems  
+- Open research questions  
+- Roadmap for future development
 
 ## References
-- Standard citation list  
-
----
-
-## Supplementary Materials
-- Schema definitions  
-- Raw datasets  
-- Simulation configurations  
-- Extended derivations  
+A complete bibliography is maintained in `references.bib`.
 
