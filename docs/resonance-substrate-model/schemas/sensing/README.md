@@ -1,12 +1,10 @@
-# sensing Schemas
+# Sensing Schemas
 
-This directory will contain schema definitions for sensing‑related structures in the Resonance Substrate Model.
+Schemas describing sensing, measurement, and uncertainty models, including:
 
-Examples include:
-- sensor configuration schemas
-- measurement packet formats
-- noise and calibration models
-- resonance‑aware sensing structures
+- sensor definitions  
+- measurement formats  
+- uncertainty and noise models  
+- calibration references  
 
-This folder is currently a placeholder created during scaffolding.
-
+These schemas support experiments, validation, and real-world integration.
