@@ -1,13 +1,10 @@
-# lab Schemas
+# Lab Schemas
 
-This directory contains schema definitions related to laboratory‑level structures, experiments, and instrumentation within the Resonance Substrate Model.
+Schemas defining experimental structures, including:
 
-Schemas in this folder will describe:
-- experimental configurations and protocols
-- lab instrumentation metadata
-- measurement and observation formats
-- calibration and validation structures
-- controlled environment descriptors
+- apparatus definitions  
+- run configurations  
+- measurement schemas  
+- experiment metadata  
 
-This folder is currently part of the scaffolding and will expand as lab‑level schema components are formalized.
-
+These schemas support reproducible scientific workflows.
