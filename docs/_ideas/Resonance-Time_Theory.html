@@ -100,6 +100,45 @@
   color: #cfe8ff;
   }
 
+/* Copilot settings */
+       .copilot-panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #f4f3ff;
+  border: 1px solid #d8d4ff;
+}
+
+.copilot-title {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  color: #4b3fbf;
+}
+
+.copilot-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #b9b6e8;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  background: #ffffff;
+}
+
+.copilot-button {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #4b6cff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.copilot-button:hover {
+  background: #3a54d6;
+}
+    
   /* Links */
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
@@ -150,6 +189,9 @@
 
   /* Small helpers */
   .section-note { color: #bcd3ff; padding: 0 1em; margin-bottom: 0.8em; }
+  details:not([open]) .section-note {
+  display: none;
+  }
 
   /* ============================================================
    CONTENT WRAPPER
@@ -231,6 +273,24 @@
           </a>
         </summary>
 
+<div class="copilot-panel">
+  <p class="copilot-title">✨ Ask Copilot About RTT</p>
+  <input
+    type="text"
+    class="copilot-input"
+    value='Using the Resonance‑Time Theory on screen, can I add "Resonance Structural Awareness" to my code?"'
+    onclick="this.select();"
+    readonly
+  />
+  <a
+    class="copilot-button"
+    target="_blank"
+    href="https://copilot.microsoft.com/?q=Using%20the%20Resonance‑Time%20Theory%20on%20screen%2C%20can%20I%20add%20Resonance%20Structural%20Awareness%20to%20my%20code%3F"
+  >
+    🚀 Ask Copilot
+  </a>
+</div>
+      
         <p class="section-note">
           A triadic framework for resonance, relational time, and coherence across
           physics, measurement, and information. This page collects definitions,
