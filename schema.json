@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Triadic Overlay Schema",
+  "type": "object",
+  "properties": {
+    "phi": {
+      "description": "Mapping from domain data to scalar field",
+      "type": "string"
+    },
+    "V": {
+      "description": "Mapping from domain data to vector field",
+      "type": "string"
+    },
+    "R": {
+      "description": "Definition or computation rule for resonance envelope",
+      "type": "string"
+    },
+    "metadata": {
+      "description": "Domain-specific metadata",
+      "type": "object"
+    }
+  },
+  "required": ["phi", "V", "R"]
+}
