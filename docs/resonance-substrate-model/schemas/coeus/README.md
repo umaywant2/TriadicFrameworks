@@ -1,12 +1,9 @@
-# coeus Schemas
+# Coeus Schemas
 
-This directory contains schema definitions associated with Coeus, the knowledge‑layer structures within the Resonance Substrate Model.
+Schemas defining cognitive, reasoning, and meta‑substrate structures, including:
 
-Schemas in this folder will describe:
-- knowledge packets and semantic units
-- inference and reasoning metadata
-- cross‑domain knowledge mappings
-- resonance‑aware cognitive structures
+- reasoning traces  
+- cognitive state representations  
+- meta‑layer operators  
 
-This folder is currently part of the scaffolding and will expand as Coeus‑level schema components are formalized.
-
+These schemas support advanced reasoning and meta‑substrate modeling.
