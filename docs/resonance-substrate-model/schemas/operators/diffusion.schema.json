@@ -1,0 +1,11 @@
+{
+  "id": "diffusion_operator",
+  "type": "object",
+  "description": "Schema for diffusion operator configuration.",
+  "properties": {
+    "rate": { "type": "number" },
+    "anisotropy": { "type": "number" },
+    "enabled": { "type": "boolean" }
+  },
+  "required": ["rate"]
+}
