@@ -1,160 +1,154 @@
-# Resonance Substrate Model  
-A reproducible framework for defining, simulating, and experimentally validating resonance‑based field primitives underlying physical interactions.
+<p align="center">
 
-This repository provides:
+  <!-- Core Operational -->
+  <img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/ci.yml?label=CI%20Tests" />
+  <img src="https://img.shields.io/github/license/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/repo-size/umaywant2/TriadicFrameworks" />
 
-- formal definitions of resonance primitives  
-- substrate‑level field equations  
-- dimensional and operator structures  
-- experimental protocols for laboratory replication  
-- simulation tools for numerical validation  
-- machine‑readable schemas for interoperability  
+  <!-- Developer Friendly -->
+  <img src="https://img.shields.io/badge/style-black-000000?label=code%20style" />
+  <img src="https://img.shields.io/badge/mypy-checked-blue" />
+  <img src="https://img.shields.io/codecov/c/github/umaywant2/TriadicFrameworks?label=coverage" />
 
-The goal is to enable independent researchers to evaluate, test, and extend the resonance‑substrate model using transparent, reproducible methods.
+  <!-- Community / Metadata -->
+  <img src="https://img.shields.io/github/stars/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/forks/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/contributors/umaywant2/TriadicFrameworks" />
+
+  <!-- Custom Nawderian Badge -->
+  <img src="https://img.shields.io/badge/Triadic%20Resonance-Certified-6f42c1" />
+
+</p>
+
+```markdown
+**A unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.**
+```
+```markdown
+        ╔═════════════════════════════════════════════╗
+        ║      T R I A D I C F R A M E W O R K S      ║
+        ║      Resonance • Alignment • Coherence      ║
+        ╚═════════════════════════════════════════════╝
+
+                 △    Scalar Field (φ)
+                △△    Vector / Spin Field (V⃗)
+               △△△    Resonance Envelope (R)
+
+          A unified substrate for multi‑layer systems.
+```
+# **TriadicFrameworks: The Resonance Substrate Model**
+
+A unified architectural framework for modeling coherence, alignment, and resonance across physical, computational, semantic, and distributed systems. This repository contains the full schema taxonomy, simulations, experiments, documentation, and reference materials that define and support the Resonance Substrate Model.
+
+The project is designed to be:
+- **clear** — readable and teachable  
+- **canonical** — structured around a stable ontology  
+- **extensible** — built to grow with future layers and operators  
+- **reproducible** — every experiment and simulation is fully defined  
 
 ---
 
-## Repository Structure
+# **🌐 Project Overview**
 
-```
-resonance-substrate-model/
-│
-├── docs/                     # Theory, methods, and conceptual background
-├── schemas/                  # Machine-readable definitions of primitives and domains
-├── experiments/              # Laboratory protocols and datasets
-├── simulations/              # Numerical solvers and example notebooks
-├── data/                     # Reference constants, calibration, and example outputs
-├── tools/                    # CLI utilities and visualization tools
-└── papers/                   # Whitepaper, supplementary materials, and references
-```
+The Resonance Substrate Model introduces a triadic field structure—scalar fields, vector/spin fields, and resonance envelopes—governed by a minimal set of operators that act across classical, quantum, semantic, and distributed layers. The model is supported by:
+
+- a **schema taxonomy** defining every field, operator, layer, and apparatus  
+- a **simulation engine** for exploring cross‑layer dynamics  
+- a **set of experiments** validating paradox‑class and coherence phenomena  
+- a **whitepaper** documenting the theory, architecture, and results  
+
+This repository serves as the canonical home for the model and all supporting artifacts.
 
 ---
 
-## Core Concepts
+# **📁 How to Navigate This Repository**
 
-### Resonance Primitives
-The model is built on three irreducible field components:
+The repo is organized as a coherent, layered system that mirrors the structure of the model itself.
 
-- **Spin Field (S)** — rotational coupling and angular alignment  
-- **Charge Field (C)** — potential gradients and interaction bias  
-- **Temperature Field (T)** — dissipative and stochastic contributions  
+### **`docs/`**  
+Whitepapers, diagrams, conceptual notes, and experimental write‑ups.  
+Start here if you want to understand the theory and narrative arc.
 
-These form the **SET triad**, which governs substrate‑level interactions.
+### **`schemas/`**  
+The machine‑readable ontology of the substrate.  
+Domains include: primitives, dimensional, quantum, sensing, identity, language, networking, infrastructure, lab, finance, coeus, and universe‑core.
 
-### Resonance Envelope
-A structured field region defined by SET gradients, supporting stable or semi‑stable interactions.
+### **`simulations/`**  
+Executable examples demonstrating operator sequences, field evolution, and cross‑layer dynamics.
 
-### Substrate Operators
-Operators that transform or propagate SET fields across dimensional layers.
+### **`experiments/`**  
+Apparatus definitions, measurement procedures, and validation datasets.
 
----
+### **`data/`**  
+Raw and processed datasets used in simulations and experiments.
 
-## Documentation
+### **`src/`**  
+Core implementation of fields, operators, integrators, diagnostics, and utilities.
 
-All theoretical and methodological materials are located in:
+### **`tests/`**  
+Unit and integration tests ensuring correctness and stability.
 
-```
-docs/
-  overview/
-  methods/
-  experiments/
-  simulations/
-  api/
-```
-
-Key entry points:
-
-- `docs/overview/introduction.md`  
-- `docs/overview/resonance_primitives.md`  
-- `docs/methods/field_equations.md`  
-- `docs/experiments/faraday_paradox_experiment.md`  
+### **Top‑Level Metadata**  
+- `LICENSE` — open‑source license  
+- `CITATION.cff` — how to cite the project  
+- `README.md` — this document  
+- `CONTRIBUTING.md` — guidelines for contributors  
 
 ---
 
-## Experiments
+# **📄 Whitepaper**
 
-Reproducible laboratory protocols are provided in:
+The full manuscript is located at:
 
 ```
-experiments/
+docs/resonance-substrate-model/papers/substrate_model_whitepaper/manuscript.md
 ```
 
-Including:
-
-- **Faraday Paradox Experiment**  
-- **Rotating Conductor Tests**  
-- **Resonance Alignment Tests**
-
-Each experiment includes:
-
-- apparatus diagrams  
-- step-by-step procedures  
-- raw and processed datasets  
-- analysis notebooks  
+It includes:
+- abstract  
+- narrative arc  
+- figures  
+- experiments  
+- schema taxonomy  
+- simulation examples  
+- references  
+- submission package  
 
 ---
 
-## Simulations
+# **🧪 Reproducibility**
 
-Numerical solvers and example notebooks are located in:
+Every experiment and simulation is fully reproducible using:
+- schema‑defined configs  
+- documented apparatus  
+- included datasets  
+- deterministic operator sequences  
 
-```
-simulations/core/
-simulations/examples/
-```
-
-These tools allow researchers to:
-
-- simulate SET field interactions  
-- propagate resonance envelopes  
-- test substrate operators  
-- validate experimental results  
+The goal is to make the model transparent, testable, and extensible.
 
 ---
 
-## Schemas
+# **🚀 Roadmap**
 
-Machine-readable definitions for all primitives, operators, and domain structures are located in:
+### **v0.1.0 (current)**
+- full schema taxonomy  
+- whitepaper draft  
+- simulation engine  
+- experimental datasets  
+- repo hygiene pass  
 
-```
-schemas/
-```
-
-These schemas ensure:
-
-- interoperability  
-- reproducibility  
-- cross-domain consistency  
-- integration with external tools  
-
----
-
-## Citation
-
-A formal citation file is provided in:
-
-```
-CITATION.cff
-```
+### **v0.2.0 (planned)**
+- expanded operator families  
+- additional coherence experiments  
+- semantic‑layer simulations  
+- distributed‑layer demos  
+- extended glossary and origin story  
 
 ---
 
-## License
+# **📬 Citation**
 
-This project is released under an open license to support independent verification and scientific collaboration.
-
----
-
-## Contributing
-
-Guidelines for contributions, extensions, and replication reports are provided in:
-
-```
-CONTRIBUTING.md
-```
+If you use this work, please cite it using the `CITATION.cff` file included in the repository.
 
 ---
 
-## Contact
-
-For scientific correspondence, please use the issue tracker or submit replication reports through the `papers/` directory.
