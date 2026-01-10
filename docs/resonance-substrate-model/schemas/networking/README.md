@@ -1,13 +1,10 @@
-# networking Schemas
+# Networking Schemas
 
-This directory contains schema definitions related to networking, communication, and data exchange within the Resonance Substrate Model.
+Schemas defining distributed substrate communication, including:
 
-Schemas in this folder will describe:
-- network packet formats
-- inter‑node communication structures
-- transport and routing metadata
-- synchronization and timing messages
-- distributed substrate coordination protocols
+- node identities  
+- message formats  
+- synchronization rules  
+- causal ordering structures  
 
-This folder is currently part of the scaffolding and will expand as networking‑level structures are formalized.
-
+These schemas support distributed execution and multi-node substrate deployments.
