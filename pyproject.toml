@@ -1,0 +1,17 @@
+[project]
+name = "triadicframeworks"
+version = "0.1.0"
+description = "Resonance-Time Theory and Triadic Substrate Modeling"
+authors = [
+    { name = "Nawder Loswin", email = "Nawder@TriadicFrameworks.org" }
+]
+requires-python = ">=3.11"
+
+[project.dependencies]
+numpy = "*"
+xarray = "*"
+netcdf4 = "*"
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
