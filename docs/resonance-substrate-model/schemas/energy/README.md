@@ -1,12 +1,10 @@
-# energy Schemas
+# Energy Schemas
 
-This directory contains schema definitions related to energy, power flow, and resource dynamics within the Resonance Substrate Model.
+Schemas defining energy-related structures, including:
 
-Schemas in this folder will describe:
-- energy field representations
-- power distribution metadata
-- transfer and conversion structures
-- resonance‑aware energy accounting
+- energy fields  
+- potential functions  
+- conservation rules  
+- energy flow and transfer models  
 
-This folder is currently part of the scaffolding and will expand as energy‑level schema components are formalized.
-
+These schemas support energy-aware simulations and analysis.
