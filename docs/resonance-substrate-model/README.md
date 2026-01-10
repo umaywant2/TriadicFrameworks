@@ -96,6 +96,20 @@ Unit and integration tests ensuring correctness and stability.
 
 ---
 
+### 🧭 Contributing Quick‑Start
+A fast, friendly guide for newcomers.
+
+- How to fork and branch
+- Good first tasks
+- Naming conventions
+- Running tests
+- Updating docs
+- Opening a clean PR
+
+👉 See: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+
+---
+
 # **📄 Whitepaper**
 
 The full manuscript is located at:
