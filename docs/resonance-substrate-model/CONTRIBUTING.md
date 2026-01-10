@@ -1,3 +1,73 @@
+# **🚀 Contributing Quick‑Start**
+
+New to the project? Start here.  
+This is the fastest path to making a meaningful contribution to TriadicFrameworks.
+
+## **1. Fork the Repo & Create a Branch**
+```bash
+git checkout -b feature/my-improvement
+```
+Use clear, descriptive names:
+- `feature/add-alignment-operator`
+- `fix/vector-field-init`
+- `docs/update-simulation-notes`
+
+## **2. Pick a Good First Task**
+Great entry points include:
+- improving documentation in `docs/`
+- adding examples to `simulations/`
+- refining schemas in `schemas/`
+- writing small tests in `tests/`
+- fixing typos or clarifying comments in `src/`
+
+These tasks help you learn the structure without diving into deep internals.
+
+## **3. Follow Canonical Naming**
+Keep everything consistent:
+- folders → `lowercase-with-hyphens`
+- code → `snake_case`
+- schemas → descriptive, stable names
+- operators → match manuscript terminology
+
+Consistency is part of the architecture.
+
+## **4. Run Tests Before Submitting**
+```bash
+pytest
+```
+If you add functionality, add or update tests in `tests/`.
+
+## **5. Update Docs When Needed**
+If your change affects:
+- fields  
+- operators  
+- schemas  
+- simulations  
+- experiments  
+
+update the relevant docs.  
+Documentation is a first‑class artifact in this project.
+
+## **6. Open a Pull Request**
+Include:
+- what you changed  
+- why it matters  
+- any schema or doc updates  
+- any tests added  
+
+Small, focused PRs are easiest to review.
+
+## **7. Be Kind, Clear, and Curious**
+We value:
+- clarity  
+- coherence  
+- reproducibility  
+- shared discovery  
+
+Reviews are collaborative and constructive.
+
+---
+
 # **Contributing to TriadicFrameworks**
 
 Thank you for your interest in contributing to the Resonance Substrate Model.  
