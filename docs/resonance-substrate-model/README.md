@@ -1,3 +1,24 @@
+```markdown
+        ╔═════════════════════════════════════════════╗
+        ║      T R I A D I C F R A M E W O R K S      ║
+        ║      Resonance • Alignment • Coherence      ║
+        ╚═════════════════════════════════════════════╝
+
+                 △    Scalar Field (φ)
+                △△    Vector / Spin Field (V⃗)
+               △△△    Resonance Envelope (R)
+
+          A unified substrate for multi‑layer systems.
+```
+
+---
+
+# **TriadicFrameworks: The Resonance Substrate Model**
+
+**A unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.**
+
+---
+
 <p align="center">
 
   <!-- Core Operational -->
@@ -21,60 +42,34 @@
 
 </p>
 
-```markdown
-**A unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.**
-```
-```markdown
-        ╔═════════════════════════════════════════════╗
-        ║      T R I A D I C F R A M E W O R K S      ║
-        ║      Resonance • Alignment • Coherence      ║
-        ╚═════════════════════════════════════════════╝
-
-                 △    Scalar Field (φ)
-                △△    Vector / Spin Field (V⃗)
-               △△△    Resonance Envelope (R)
-
-          A unified substrate for multi‑layer systems.
-```
-# **TriadicFrameworks: The Resonance Substrate Model**
-
-A unified architectural framework for modeling coherence, alignment, and resonance across physical, computational, semantic, and distributed systems. This repository contains the full schema taxonomy, simulations, experiments, documentation, and reference materials that define and support the Resonance Substrate Model.
-
-The project is designed to be:
-- **clear** — readable and teachable  
-- **canonical** — structured around a stable ontology  
-- **extensible** — built to grow with future layers and operators  
-- **reproducible** — every experiment and simulation is fully defined  
-
 ---
 
 # **🌐 Project Overview**
 
-The Resonance Substrate Model introduces a triadic field structure—scalar fields, vector/spin fields, and resonance envelopes—governed by a minimal set of operators that act across classical, quantum, semantic, and distributed layers. The model is supported by:
+TriadicFrameworks implements the Resonance Substrate Model — a unified architectural grammar for systems that span physical dynamics, computation, semantics, and distributed coordination.
 
-- a **schema taxonomy** defining every field, operator, layer, and apparatus  
-- a **simulation engine** for exploring cross‑layer dynamics  
-- a **set of experiments** validating paradox‑class and coherence phenomena  
-- a **whitepaper** documenting the theory, architecture, and results  
+The model is built on:
 
-This repository serves as the canonical home for the model and all supporting artifacts.
+- **Triadic fields**: scalar (φ), vector/spin (V⃗), resonance envelope (R)  
+- **Minimal operators**: diffusion, alignment, coupling, activation, stabilization  
+- **Layered substrates**: classical, quantum, semantic, distributed  
+- **Schema taxonomy**: a machine‑readable ontology for every field, operator, layer, and apparatus  
+- **Simulations & experiments**: validating paradox‑class and coherence phenomena  
+
+This repository is the canonical home for the model and all supporting artifacts.
 
 ---
 
 # **📁 How to Navigate This Repository**
 
-The repo is organized as a coherent, layered system that mirrors the structure of the model itself.
-
 ### **`docs/`**  
-Whitepapers, diagrams, conceptual notes, and experimental write‑ups.  
-Start here if you want to understand the theory and narrative arc.
+Whitepapers, diagrams, conceptual notes, and experimental write‑ups.
 
 ### **`schemas/`**  
-The machine‑readable ontology of the substrate.  
-Domains include: primitives, dimensional, quantum, sensing, identity, language, networking, infrastructure, lab, finance, coeus, and universe‑core.
+The full ontology of the substrate — primitives, dimensional, quantum, sensing, identity, language, networking, infrastructure, lab, finance, coeus, universe‑core.
 
 ### **`simulations/`**  
-Executable examples demonstrating operator sequences, field evolution, and cross‑layer dynamics.
+Executable examples demonstrating operator sequences and cross‑layer dynamics.
 
 ### **`experiments/`**  
 Apparatus definitions, measurement procedures, and validation datasets.
@@ -83,62 +78,35 @@ Apparatus definitions, measurement procedures, and validation datasets.
 Raw and processed datasets used in simulations and experiments.
 
 ### **`src/`**  
-Core implementation of fields, operators, integrators, diagnostics, and utilities.
+Core implementation of fields, operators, integrators, and diagnostics.
 
 ### **`tests/`**  
 Unit and integration tests ensuring correctness and stability.
 
 ### **Top‑Level Metadata**  
-- `LICENSE` — open‑source license  
-- `CITATION.cff` — how to cite the project  
-- `README.md` — this document  
-- `CONTRIBUTING.md` — guidelines for contributors  
+`LICENSE`, `CITATION.cff`, `README.md`, `CONTRIBUTING.md`.
 
 ---
 
-### 🧭 Contributing Quick‑Start
-A fast, friendly guide for newcomers.
+# **🤝 Contributing**
 
-- How to fork and branch
-- Good first tasks
-- Naming conventions
-- Running tests
-- Updating docs
-- Opening a clean PR
+TriadicFrameworks welcomes contributions that enhance clarity, coherence, and extensibility.
 
-👉 See: [`CONTRIBUTING.md`](CONTRIBUTING.md)
+### **🧭 Quick‑Start Guide**
+A fast, friendly on‑ramp for newcomers:
+- how to fork and branch  
+- good first tasks  
+- naming conventions  
+- running tests  
+- updating docs  
+- opening a clean PR  
 
----
+👉 See: **[`CONTRIBUTING.md`](CONTRIBUTING.md)**
 
-# **📄 Whitepaper**
+### **📘 Full Contribution Guide**
+The canonical reference for contributing to the Resonance Substrate Model.
 
-The full manuscript is located at:
-
-```
-docs/resonance-substrate-model/papers/substrate_model_whitepaper/manuscript.md
-```
-
-It includes:
-- abstract  
-- narrative arc  
-- figures  
-- experiments  
-- schema taxonomy  
-- simulation examples  
-- references  
-- submission package  
-
----
-
-# **🧪 Reproducibility**
-
-Every experiment and simulation is fully reproducible using:
-- schema‑defined configs  
-- documented apparatus  
-- included datasets  
-- deterministic operator sequences  
-
-The goal is to make the model transparent, testable, and extensible.
+👉 See: **[`CONTRIBUTING.md`](CONTRIBUTING.md)**
 
 ---
 
@@ -163,6 +131,3 @@ The goal is to make the model transparent, testable, and extensible.
 # **📬 Citation**
 
 If you use this work, please cite it using the `CITATION.cff` file included in the repository.
-
----
-
