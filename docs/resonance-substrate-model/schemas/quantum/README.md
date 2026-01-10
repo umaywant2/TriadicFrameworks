@@ -1,12 +1,10 @@
-# quantum Schemas
+# Quantum Schemas
 
-This directory will contain schema definitions for quantum‑level structures in the Resonance Substrate Model.
+This directory contains schemas for quantum-layer structures, including:
 
-Examples include:
-- quantum resonance descriptors
-- coherence/decoherence metadata
-- quantum substrate interface packets
-- quantum‑aware sensing and actuation formats
+- coherence fields  
+- decoherence models  
+- density structures  
+- quantum–classical coupling definitions  
 
-This folder is currently a placeholder created during scaffolding.
-
+These schemas support quantum-layer simulation and cross-layer interactions.
