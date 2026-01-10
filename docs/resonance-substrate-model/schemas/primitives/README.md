@@ -1,11 +1,10 @@
-# primitives Schemas
+# Primitives
 
-This directory contains the foundational, low‑level schema definitions used throughout the Resonance Substrate Model.
+This directory defines the foundational schemas used throughout the substrate, including:
 
-These schemas define the basic building blocks from which higher‑level structures are composed, including:
-- core numeric types
-- vector and tensor primitives
-- coordinate and indexing formats
-- reusable structural fragments shared across multiple schema domains
+- scalar, vector, spin, and charge fields  
+- resonance envelopes  
+- grid coordinate definitions  
+- substrate operator definitions  
 
-This folder is part of the schema scaffolding and will expand as additional primitive components are formalized.
+These schemas form the lowest-level building blocks for simulations, experiments, and higher-layer constructs.
