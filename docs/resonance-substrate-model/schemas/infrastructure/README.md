@@ -1,13 +1,9 @@
-# infrastructure Schemas
+# Infrastructure Schemas
 
-This directory contains schema definitions related to infrastructure‑level components of the Resonance Substrate Model.
+Schemas describing deployment, orchestration, and system-level structures, including:
 
-Schemas in this folder will describe:
-- compute and storage topology
-- substrate execution environments
-- node and cluster configuration
-- deployment and orchestration metadata
-- runtime services and system‑level interfaces
+- runtime configurations  
+- resource allocation  
+- environment definitions  
 
-This folder is currently part of the scaffolding and will expand as infrastructure‑level schema components are formalized.
-
+These schemas support large-scale or multi-environment substrate deployments.
