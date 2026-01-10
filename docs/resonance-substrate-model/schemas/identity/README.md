@@ -1,12 +1,9 @@
-# identity Schemas
+# Identity Schemas
 
-This directory contains schema definitions related to identity, attribution, and entity representation within the Resonance Substrate Model.
+Schemas defining identity, agent, and semantic‑packet structures, including:
 
-Schemas in this folder will describe:
-- identity records and signatures
-- entity metadata and classification
-- provenance and authorship structures
-- cross‑system identity mappings
+- agent identifiers  
+- semantic packet formats  
+- symbolic or linguistic identity structures  
 
-This folder is currently part of the scaffolding and will expand as identity‑level schema components are formalized.
-
+These schemas support semantic-layer modeling and distributed agent systems.
