@@ -1,17 +1,23 @@
-# Resonance Substrate Model — Schema Library
+# Schemas
 
-This directory contains the full schema library for the Resonance Substrate Model.  
-Each subfolder defines a coherent domain of structures used across simulation, analysis, networking, and higher‑level semantic layers.
+This directory contains the structured schemas that define the data, configuration, and conceptual entities used throughout the Resonance Substrate Model and the broader Triadic Frameworks ecosystem.
 
-The schema tree includes domains such as:
-- **primitives** — foundational numeric and structural types  
-- **universe-core** — universe‑level canonical structures  
-- **quantum** — quantum‑scale representations and coherence metadata  
-- **sensing** — measurement, observation, and signal schemas  
-- **networking** — communication and packet formats  
-- **language** — symbolic and semantic structures  
-- **lab** — experimental and instrumentation schemas  
-- **infrastructure** — execution, deployment, and system‑level metadata  
-- **identity**, **finance**, **energy**, **dimensional**, **coeus**, and others
+Schemas in this directory fall into several domains:
 
-This folder is part of the scaffolding and will expand as each schema domain is formalized and integrated into the broader Triadic Frameworks canon.
+- **primitives/** — foundational field and operator schemas  
+- **dimensional/** — schemas describing dimensional layers and mappings  
+- **quantum/** — coherence, decoherence, and quantum-layer structures  
+- **energy/** — energy flow, potentials, and conservation schemas  
+- **sensing/** — sensor models, measurement schemas, and uncertainty structures  
+- **identity/** — identity, agent, and semantic‑packet schemas  
+- **language/** — linguistic, symbolic, and semantic-layer schemas  
+- **networking/** — distributed substrate node schemas  
+- **infrastructure/** — deployment, orchestration, and system-level schemas  
+- **lab/** — experiment, apparatus, and measurement schemas  
+- **finance/** — economic or resource‑exchange schemas (for substrate‑economy modeling)  
+- **coeus/** — cognitive, reasoning, and meta‑substrate schemas  
+- **universe-core/** — canonical universe‑level definitions and cross-domain glue  
+
+A `manifest.json` file provides a registry of all schemas for tooling and validation.
+
+These schemas form the backbone of interoperability across simulations, experiments, distributed systems, and higher‑layer semantic structures.
