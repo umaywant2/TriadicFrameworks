@@ -1,12 +1,10 @@
-# dimensional Schemas
+# Dimensional Schemas
 
-This directory contains schema definitions related to dimensional structures, coordinate systems, and cross‑dimensional mappings within the Resonance Substrate Model.
+Schemas in this directory define the structure of dimensional layers, mappings, and embeddings used in the Resonance Substrate Model.
 
-Schemas in this folder will describe:
-- dimensional metadata and transforms
-- coordinate and manifold representations
-- cross‑layer spatial mappings
-- resonance‑aware dimensional constructs
+They describe:
+- classical, quantum, semantic, and distributed layers  
+- cross-layer projection rules  
+- manifold and coordinate transformations  
 
-This folder is currently part of the scaffolding and will expand as dimensional‑level schema components are formalized.
-
+These schemas support multi-scale and multi-layer modeling.
