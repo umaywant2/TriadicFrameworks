@@ -1,12 +1,9 @@
-# language Schemas
+# Language Schemas
 
-This directory contains schema definitions related to language, symbolic structures, and semantic representations within the Resonance Substrate Model.
+Schemas describing linguistic, symbolic, and semantic-layer structures, including:
 
-Schemas in this folder will describe:
-- symbolic and semantic encoding formats
-- language‑level packets and message structures
-- grammar and token metadata
-- resonance‑aware linguistic constructs
-- cross‑layer mappings between substrate fields and symbolic meaning
+- token and symbol definitions  
+- semantic packet structures  
+- language-layer operators  
 
-This folder is currently part of the scaffolding and will expand as language‑level structures are formalized.
+These schemas support semantic computation and higher-layer reasoning.
