@@ -1,6 +1,10 @@
-# universe-core Schemas
+# Universe-Core Schemas
 
-This directory contains the core universe‑level schema definitions for the Resonance Substrate Model.
+This directory contains canonical universe-level schemas that define:
 
-At present, this folder is a placeholder created during scaffolding.  
-Schemas will be added here as the universe‑level data structures are formalized.
+- global constants  
+- cross-domain glue structures  
+- universal identifiers  
+- top-level substrate definitions  
+
+These schemas unify all domains into a coherent universe model.
