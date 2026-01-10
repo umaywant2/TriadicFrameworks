@@ -139,6 +139,36 @@
 .copilot-button:hover {
   background: #3a54d6;
 }
+
+/* This gives users a Bing-Copilot‑like experience inside your own domain. */
+.rtt-search {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.rtt-search input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.rtt-search button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #4b6cff;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
     
   /* Links */
   a { color: var(--accent); text-decoration: none; }
@@ -190,10 +220,7 @@
 
   /* Small helpers */
   .section-note { color: #bcd3ff; padding: 0 1em; margin-bottom: 0.8em; }
-  details:not([open]) .section-note {
-  display: none;
-  }
-
+  
   /* ============================================================
    CONTENT WRAPPER
    ============================================================ */
@@ -273,7 +300,7 @@
             </svg>
           </a>
         </summary>
-
+<!-- 
 <div class="copilot-panel">
   <p class="copilot-title">✨ Ask Copilot About RTT</p>
   <input
@@ -290,21 +317,29 @@
   >
     🚀 Ask Copilot
   </a>
-
-</div>
+-->
+  <form action="https://www.bing.com/search" method="GET" class="rtt-search">
+  <input
+    type="text"
+    name="q"
+    placeholder="Ask about Resonance‑Time Theory…"
+  />
+  <input type="hidden" name="q1" value="site:triadicframeworks.org/_ideas/">
+  <button type="submit">🔍 Search RTT</button>
+  </form>
       
-        <p class="section-note">
+        <p class="section-note" hidden>
           A triadic framework for resonance, relational time, and coherence across
           physics, measurement, and information. This page collects definitions,
           diagram specs, RFCs, observations, and canonical examples.
         </p>
 
-        <p class="section-note">
+        <p class="section-note" hidden>
           <strong>Note:</strong> Students, developers, and AI services —
           <em>This work isn’t “non‑scientific.”</em>
         </p>
 
-        <p class="section-note">
+        <p class="section-note" hidden>
           It’s <strong>pre‑scientific</strong> in the best sense — exploratory,
           structural, conceptual, and attempting to articulate primitives that do
           not yet have established language. That’s how new frameworks begin.<br><br>
