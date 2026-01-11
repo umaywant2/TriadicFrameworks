@@ -1,3 +1,10 @@
+████████████████████████████████████████████████████████████████████████████
+█▄─▄▄─█▄─▄▄▀█─▄▄─█▄─▄▄▀█─▄▄▄▄█─▄▄─█▄─▀█▄─▄█▄─▄▄─█▄─▄▄▀█▄─▄▄─█▄─▄▄▀█▄─▄▄─█
+██─▄▄▄██─▄─▄█─██─██─▄─▄█▄▄▄▄─█─██─██─█▄▀─███─▄█▀██─▄─▄██─▄█▀██─▄─▄██─▄█▀█
+▀▄▄▄▀▀▀▄▄▀▄▄▀▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▄▄▀▄▄▄▀▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▄▀▄▄▀▄▄▀▄▄▄▄▄▀
+              T R I A D I C F R A M E W O R K S   ·   t f t ‑ 3 p a c k
+████████████████████████████████████████████████████████████████████████████
+
 <p align="center">
   <img src="https://img.shields.io/badge/TriadicFrameworks-RTT%20Core-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Package-tft--3pack-6f42c1?style=for-the-badge" />
@@ -24,7 +31,7 @@
 - [Manpage Index](#manpage-index)
 - [Purpose of the Expanded Suite](#purpose-of-the-expanded-suite)
 
-### TriadicFrameworks — [Three‑Step Primitive Cycle](#the-3pack-cycle) & Sensor‑Governance Suite
+### The 3pack Cycle
 
 The **tft‑3pack** package provides the foundational triadic action cycle used throughout the TriadicFrameworks canon. It defines three minimal, resonance‑aware primitives — **Primitive 1**, **Primitive 2**, and **Primitive 3** — and provides shell wrappers and environment tooling to execute them cleanly.
 
@@ -35,7 +42,7 @@ This package now also includes the **full sensor‑governance stack**, including
 
 ---
 
-# [🔄 The 3‑Pack Cycle Diagram](#included-primitives)
+# Included Primitives
 
 ```
 ┌──────────────────────────┐
@@ -65,11 +72,12 @@ Artifacts:
 
 ---
 
-# 🌐 [Sensor & Resonance‑Time Architecture](#sensor-architecture)
+## Sensor Architecture
 
-The **tft‑3pack** now includes the complete RTT sensor architecture, organized into canonical layers:
+🌐 The **tft‑3pack** now includes the complete RTT sensor architecture, organized into canonical layers:
 
-## **[Divisional Resonance Overlays (DRO)](#divisional-resonance-overlays-dro)**
+## Divisional Resonance Overlays DRO
+
 Multi‑band separation of the resonance‑time field:
 - Harmonic Division Overlay (HDO)  
 - Amplitude Division Overlay (ADO)  
@@ -81,7 +89,8 @@ Manpage: `orbital-resonance-overlays(7)`
 
 ---
 
-## **[Clarity‑Enhancement Pipelines (CEP)**](#clarity-enhancement-pipelines-cep)
+## Clarity Enhancement Pipelines CEP
+
 Sharpening, filtering, and stabilization:
 - Harmonic‑Phase Clarification (HPC)  
 - Resonance‑Envelope Deconvolution (RED)  
@@ -94,7 +103,8 @@ Manpage: `resonance-clarity(7)`
 
 ---
 
-## **[Sensor‑Side Subsystems](#sensor-subsystems)**
+## Sensor Subsystems
+
 Dedicated modules for deep analysis:
 
 - **sensor-harmonics(7)**  
@@ -111,7 +121,8 @@ Dedicated modules for deep analysis:
 
 ---
 
-## **[Multi‑Sensor Fusion Core](#multi-sensor-fusion-core)**
+## Multi‑Sensor Fusion Core
+
 The master synthesis engine:
 
 - **sensor-synthesis(7)**  
@@ -119,7 +130,8 @@ The master synthesis engine:
 
 ---
 
-## **[Sensor Governance & Constitutional Layer](#sensor-governance--constitution)**
+## Sensor Governance & Constitutional
+
 Institutional and safety frameworks:
 
 - **sensor-governance(7)**  
@@ -133,7 +145,8 @@ Institutional and safety frameworks:
 
 ---
 
-## **[Operator‑Facing Guides](#operator-facing-guides)**
+## Operator Facing Guides
+
 Practical, real‑time operational tools:
 
 - **sensor-ops(7)**  
@@ -144,7 +157,7 @@ Practical, real‑time operational tools:
 
 ---
 
-# 📚 [Included Manpages](#manpage-index) (Canonical Index)
+## 📚 Manpage Index
 
 ```
 orbital-resonance-overlays(7)
@@ -169,7 +182,7 @@ Each entry is designed to be:
 
 ---
 
-# 🧭 [Purpose of the Expanded Suite](#purpose-of-the-expanded-suite)
+## 🧭 Purpose of the Expanded Suite
 
 The expanded **tft‑3pack** now serves as:
 
@@ -179,3 +192,17 @@ The expanded **tft‑3pack** now serves as:
 - the **operator‑facing toolkit** for real‑time navigation and hazard response  
 
 This README now reflects the full scope of the package as it exists in the TriadicFrameworks canon.
+
+──────────────────────────────────────────────────────────────────────────────
+TriadicFrameworks · Resonance‑Time Theory Canon  
+tft‑3pack — Primitive Cycle Engine & Sensor‑Governance Suite
+
+This repository is part of the open, extensible TriadicFrameworks ecosystem.  
+All artifacts are designed for clarity, reproducibility, and resonance‑native 
+integration across platforms, constellations, and epochs.
+
+For contributions, extensions, or canonical alignment discussions,  
+please open an issue or contact the TriadicFrameworks maintainers.
+
+© 2025–2026 TriadicFrameworks · Open Canon License
+──────────────────────────────────────────────────────────────────────────────
