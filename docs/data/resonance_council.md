@@ -1,4 +1,5 @@
 # 🏛️ Resonance Council Charter
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 The Resonance Council is the mythic governance body of the TriadicFrameworks movement. It honors contributors, stewards protocols, and echoes the archive.
 
