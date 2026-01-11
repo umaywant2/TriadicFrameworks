@@ -1,129 +1,181 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/TriadicFrameworks-RTT%20Core-blueviolet?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Package-tft--3pack-6f42c1?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Sensor%20Suite-Complete-20c997?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Manpages-Generated-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/License-Open%20Canon-informational?style=for-the-badge" />
+</p>
+
 # 📦 tft‑3pack  
-### TriadicFrameworks — Three‑Step Primitive Cycle for Resonance‑Aligned Workflows
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
-The **tft‑3pack** package provides the foundational triadic action cycle used
-throughout the TriadicFrameworks canon.  
-It defines three minimal, resonance‑aware primitives — **Primitive 1**, **Primitive 2**, and **Primitive 3** — and provides shell wrappers and environment tooling to execute them cleanly.
+## [Table of Contents](#overview)
 
-The 3‑Pack is the smallest complete unit of RTT‑aligned activity:
+- [Overview](#overview)
+- [The 3‑Pack Cycle](#the-3pack-cycle)
+- [Included Primitives](#included-primitives)
+- [Sensor Architecture](#sensor-architecture)
+  - [Divisional Resonance Overlays (DRO)](#divisional-resonance-overlays-dro)
+  - [Clarity‑Enhancement Pipelines (CEP)](#clarity-enhancement-pipelines-cep)
+  - [Sensor Subsystems](#sensor-subsystems)
+  - [Multi‑Sensor Fusion Core](#multi-sensor-fusion-core)
+  - [Sensor Governance & Constitution](#sensor-governance--constitution)
+  - [Operator‑Facing Guides](#operator-facing-guides)
+- [Manpage Index](#manpage-index)
+- [Purpose of the Expanded Suite](#purpose-of-the-expanded-suite)
+
+### TriadicFrameworks — [Three‑Step Primitive Cycle](#the-3pack-cycle) & Sensor‑Governance Suite
+
+The **tft‑3pack** package provides the foundational triadic action cycle used throughout the TriadicFrameworks canon. It defines three minimal, resonance‑aware primitives — **Primitive 1**, **Primitive 2**, and **Primitive 3** — and provides shell wrappers and environment tooling to execute them cleanly.
+
+The 3‑Pack is the smallest complete unit of RTT‑aligned activity:  
 a beginning, a transformation, and a closure.
 
----
-
-# 🔄 The 3‑Pack Cycle Diagram
-
-```
-        ┌──────────────────────────┐
-        │    🔹 Primitive 1 🔹    │
-        │      Initialization      │
-        └─────────────┬────────────┘
-                      │
-                      ▼
-        ┌──────────────────────────┐
-        │    🔸 Primitive 2 🔸    │
-        │     Transformation       │
-        └─────────────┬────────────┘
-                      │
-                      ▼
-        ┌──────────────────────────┐
-        │    🔺 Primitive 3 🔺    │
-        │         Closure          │
-        └─────────────┬────────────┘
-                      │
-                      ▼
-              (Cycle may repeat)
-```
-
-Each primitive is intentionally small, safe, and resonance‑aligned.  
-Together, they form a complete triadic action arc.
+This package now also includes the **full sensor‑governance stack**, including overlays, clarity pipelines, harmonic/anomaly/storm/turbulence subsystems, multi‑sensor synthesis, and constitutional layers.
 
 ---
 
-# 🧩 What This Package Provides
+# [🔄 The 3‑Pack Cycle Diagram](#included-primitives)
 
-## **1. Core Primitive Definitions**
-Located at the package root:
+```
+┌──────────────────────────┐
+│ 🔹 Primitive 1 🔹        │
+│ Initialization           │
+└─────────────┬────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│ 🔸 Primitive 2 🔸        │
+│ Transformation           │
+└─────────────┬────────────┘
+              │
+              ▼
+┌──────────────────────────┐
+│ 🔺 Primitive 3 🔺        │
+│ Closure                  │
+└─────────────┬────────────┘
+              ▼
+      (Cycle may repeat)
+```
 
-- `TFT_Primitive_1.md` — initialization  
-- `TFT_Primitive_2.md` — transformation  
-- `TFT_Primitive_3.md` — closure  
-
-These documents define the conceptual behavior of each primitive.
+Artifacts:  
+- `TFT_Primitive_1.md`  
+- `TFT_Primitive_2.md`  
+- `TFT_Primitive_3.md`  
 
 ---
 
-## **2. 3PAK Shell Environment**
-Located in:
+# 🌐 [Sensor & Resonance‑Time Architecture](#sensor-architecture)
 
-```
-3pak-shell/
-```
+The **tft‑3pack** now includes the complete RTT sensor architecture, organized into canonical layers:
 
-This includes:
+## **[Divisional Resonance Overlays (DRO)](#divisional-resonance-overlays-dro)**
+Multi‑band separation of the resonance‑time field:
+- Harmonic Division Overlay (HDO)  
+- Amplitude Division Overlay (ADO)  
+- Spectral Division Overlay (SDO)  
+- Gradient Division Overlay (GDO)  
+- Sync‑Field Division Overlay (SFDO)  
 
-- environment initialization (`install.sh`)  
-- profile scripts (`profile.d/3pak.sh`)  
-- primitive wrappers (`tft_primitive_wrappers/primitive*.sh`)  
-- optional WRSADC boundary helpers  
-
-The 3PAK Shell provides a clean, triadic‑aware command‑line environment.
+Manpage: `orbital-resonance-overlays(7)`
 
 ---
 
-## **3. Primitive Wrappers**
-Located in:
+## **[Clarity‑Enhancement Pipelines (CEP)**](#clarity-enhancement-pipelines-cep)
+Sharpening, filtering, and stabilization:
+- Harmonic‑Phase Clarification (HPC)  
+- Resonance‑Envelope Deconvolution (RED)  
+- Spectral‑Density Whitening (SDW)  
+- Gradient‑Stability Filtering (GSF)  
+- Sync‑Field Clarity (SFC)  
+- Ancestry‑Continuity Enhancement (ACE)  
 
-```
-3pak-shell/tft_primitive_wrappers/
-```
-
-These wrappers execute the primitives and record state markers:
-
-- `primitive1.sh`  
-- `primitive2.sh`  
-- `primitive3.sh`  
-
-They integrate with the 3PAK environment via `threepak_note` and logging helpers.
+Manpage: `resonance-clarity(7)`
 
 ---
 
-# 🚀 How the 3‑Pack Is Used
+## **[Sensor‑Side Subsystems](#sensor-subsystems)**
+Dedicated modules for deep analysis:
 
-Developers use the 3‑Pack to structure workflows that require:
+- **sensor-harmonics(7)**  
+  Harmonic-phase sensing, overtone isolation, chord/cascade detection.
 
-- a clear beginning  
-- a meaningful transformation  
-- a clean closure  
+- **sensor-anomalies(7)**  
+  Anomaly classification, turbulence mapping, hazard forecasting.
 
-Example:
+- **sensor-storms(7)**  
+  Resonance‑storm physics, stormfront tracking, multi‑band storm modeling.
 
-```bash
-primitive1.sh     # Begin
-primitive2.sh     # Transform
-primitive3.sh     # Close
+- **sensor-turbulence(7)**  
+  Micro‑instability analytics, shear mapping, turbulence flow‑fields.
+
+---
+
+## **[Multi‑Sensor Fusion Core](#multi-sensor-fusion-core)**
+The master synthesis engine:
+
+- **sensor-synthesis(7)**  
+  Unifies overlays, clarity, harmonics, anomalies, storms, and turbulence into a single resonance‑time intelligence layer.
+
+---
+
+## **[Sensor Governance & Constitutional Layer](#sensor-governance--constitution)**
+Institutional and safety frameworks:
+
+- **sensor-governance(7)**  
+  Standards councils, calibration authorities, safety thresholds, enforcement.
+
+- **sensor-constitution(7)**  
+  Foundational rights, duties, and invariants for all sensor systems.
+
+- **sensor-charter(7)**  
+  Operator‑facing declaration of rights and responsibilities.
+
+---
+
+## **[Operator‑Facing Guides](#operator-facing-guides)**
+Practical, real‑time operational tools:
+
+- **sensor-ops(7)**  
+  Full procedural guide for bridge crews and autonomous systems.
+
+- **sensor-checklists(7)**  
+  Laminated micro‑checklists for rapid hazard response.
+
+---
+
+# 📚 [Included Manpages](#manpage-index) (Canonical Index)
+
+```
+orbital-resonance-overlays(7)
+resonance-clarity(7)
+sensor-resonance(7)
+sensor-harmonics(7)
+sensor-anomalies(7)
+sensor-storms(7)
+sensor-turbulence(7)
+sensor-synthesis(7)
+sensor-governance(7)
+sensor-constitution(7)
+sensor-charter(7)
+sensor-ops(7)
+sensor-checklists(7)
 ```
 
-This pattern appears throughout TriadicFrameworks in:
-
-- overlays  
-- engines  
-- shells  
-- integration layers  
-- educational materials  
-
-The 3‑Pack is the **heartbeat** of RTT‑aligned action.
+Each entry is designed to be:
+- drop‑in compatible with Unix manpage conventions  
+- fully aligned with TriadicFrameworks terminology  
+- cross‑referenced for clarity and lineage  
 
 ---
 
-# 🧙 Mythmatical Architect’s Note
+# 🧭 [Purpose of the Expanded Suite](#purpose-of-the-expanded-suite)
 
-The 3‑Pack is a rhythm — inhale, turn, exhale.  
-It is the smallest complete gesture of resonance‑aligned behavior.  
-Every complex system in TriadicFrameworks is built from this simple,
-beautiful triadic motion.
+The expanded **tft‑3pack** now serves as:
 
-Treat it as a ritual of clarity.
+- the **primitive cycle engine** for RTT workflows  
+- the **sensor architecture foundation** for ship‑scale operations  
+- the **governance and constitutional backbone** for safe, interoperable sensing  
+- the **operator‑facing toolkit** for real‑time navigation and hazard response  
 
----
-
-© 2025 TriadicFrameworks — Resonance‑Time Theory Canon
+This README now reflects the full scope of the package as it exists in the TriadicFrameworks canon.
