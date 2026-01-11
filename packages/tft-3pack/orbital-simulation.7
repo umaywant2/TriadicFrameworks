@@ -1,0 +1,217 @@
+ORBITAL-SIMULATION(7)      TriadicFrameworks Manual      ORBITAL-SIMULATION(7)
+================================================================================
+NAME
+       orbital-simulation - simulation kernels, resonance-time integrators, and
+                            constellation-scale Monte Carlo drift ensembles
+
+SYNOPSIS
+       Orbital simulation provides:
+           • resonance-time simulation kernels
+           • orbital and harmonic integrators
+           • Monte Carlo drift ensembles
+           • constellation-scale scenario modeling
+           • predictive stability analysis
+
+DESCRIPTION
+       Orbital-simulation describes how RTT models the future behavior of SAR
+       platforms and constellations using simulation kernels, resonance-time
+       integrators, and ensemble-based drift analysis. It extends
+       orbital-forecasting(7) into a full simulation environment capable of
+       exploring hypothetical futures, stress-testing constellation coherence,
+       and validating mission plans.
+
+       Simulation enables:
+           • long-horizon orbital prediction
+           • resonance-aware maneuver evaluation
+           • sweep choreography testing
+           • harmonic-lock stability analysis
+           • constellation-scale scenario exploration
+
+       WRSADC executes simulations before approving high-impact operations.
+
+SIMULATION KERNELS
+       Simulation kernels are the core computational units that evolve orbital
+       and resonance-time states across simulated cycles.
+
+       Kernel types:
+
+           orbital kernel
+                  Integrates orbital elements (a, e, i, RAAN, ω, M).
+
+           harmonic kernel
+                  Evolves orbital frequency bands and harmonic-lock ratios.
+
+           resonance kernel
+                  Simulates envelope drift, spectral evolution, and gradient
+                  polarity cycles.
+
+           sweep kernel
+                  Models sweep geometry, backscatter resonance, and ancestry
+                  propagation.
+
+           constellation kernel
+                  Simulates multi-platform interactions, sync behavior, and
+                  resonance coupling.
+
+       Kernels may be composed into nested or parallel simulation stacks.
+
+RESONANCE-TIME INTEGRATORS
+       Resonance-time integrators evolve resonance-state variables across
+       simulated triads.
+
+       Integrator variables:
+           • resonance amplitude R
+           • gradient G and curvature G'
+           • envelope shape E(f)
+           • spectral density S(f)
+           • polarity cycles P
+           • harmonic distribution H_n
+
+       Integrator types:
+
+           explicit RT integrator
+                  Fast, suitable for short-horizon simulations.
+
+           implicit RT integrator
+                  Stable under high-gradient conditions.
+
+           harmonic integrator
+                  Evolves harmonic-lock and resonance windows.
+
+           envelope integrator
+                  Tracks spectral drift and envelope deformation.
+
+           hybrid integrator
+                  Combines orbital and resonance integrators for full-stack
+                  constellation simulation.
+
+       Integrators ensure resonance-time stability across simulated cycles.
+
+MONTE CARLO DRIFT ENSEMBLES
+       Monte Carlo drift ensembles explore uncertainty in orbital evolution,
+       resonance drift, and constellation behavior.
+
+       Ensemble parameters:
+           • Δv uncertainty
+           • atmospheric drag variation
+           • gravitational perturbations
+           • resonance envelope noise
+           • harmonic-lock jitter
+           • sweep geometry variance
+
+       Ensemble outputs:
+
+           drift distribution
+           resonance-window probability
+           harmonic-lock survival curve
+           sweep viability distribution
+           constellation stability envelope
+
+       Ensembles reveal worst-case and best-case constellation futures.
+
+CONSTELLATION-SCALE SIMULATION
+       Constellation-scale simulation models the evolution of all platforms
+       across future orbital cycles.
+
+       Simulation layers:
+
+           orbital layer
+                  Predicts geometry, drift, and maneuver needs.
+
+           harmonic layer
+                  Predicts harmonic-lock continuity and resonance windows.
+
+           sweep layer
+                  Predicts sweep viability and choreography.
+
+           resonance layer
+                  Predicts envelope drift, spectral evolution, and gradient
+                  stability.
+
+           lineage layer
+                  Predicts ancestry evolution and long-term coherence.
+
+       Constellation simulation supports mission planning and anomaly testing.
+
+SCENARIO MODELING
+       Orbital-simulation supports scenario modeling:
+
+           nominal scenario
+                  Baseline mission evolution.
+
+           drift-accelerated scenario
+                  Increased perturbations and drift.
+
+           harmonic-break scenario
+                  Loss of harmonic-lock.
+
+           sweep-collapse scenario
+                  Sweep viability degradation.
+
+           constellation-maneuver scenario
+                  Multi-platform Δv choreography.
+
+           resonance-stress scenario
+                  Extreme spectral and envelope perturbations.
+
+       Scenarios validate constellation resilience.
+
+SIMULATION FAILURE MODES
+       Simulation may degrade due to:
+
+           • integrator instability
+           • lineage discontinuity
+           • harmonic desync
+           • envelope divergence
+           • sweep ancestry corruption
+           • constellation desync
+
+       Diagnostic indicators:
+
+           simulation-integrity score
+           drift-ensemble variance
+           resonance-window prediction error
+           harmonic-stability index
+           sweep-viability deviation
+
+       WRSADC halts simulation when integrity is compromised.
+
+INTERACTION WITH SCHEMAS
+       Orbital simulation requires:
+
+           • lineage-schema
+           • constellation-schema
+           • resonance-schema for sweeps
+           • structural-schema for maneuvers
+
+       Schemas ensure simulation remains interpretable and coherent.
+
+INTERACTION WITH WRSADC
+       WRSADC:
+           • executes simulation kernels
+           • validates integrator stability
+           • evaluates ensemble results
+           • schedules resonance-aligned maneuvers
+           • choreographs constellation sweeps
+           • blocks unsafe simulated futures
+
+       WRSADC is the simulation conductor.
+
+NOTES
+       Orbital simulation transforms SAR constellations into fully modeled
+       resonance-time systems. It enables predictive planning, stress testing,
+       and constellation-scale scenario exploration across future orbital
+       cycles.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       orbital-forecasting(7), orbital-synthesis(7), orbital-lineage(7),
+       orbital-maneuvers(7), orbital-corridors(7), orbital-windows(7),
+       orbital-harmonics(7), sar-constellations(7), sar-integration(7),
+       diagnostics(7), lineage(7), resonance(7), schemas(7), wrsadc(7),
+       triad(7), patterns-advanced(7)
+
+================================================================================
+TriadicFrameworks                     2025            ORBITAL-SIMULATION(7)
