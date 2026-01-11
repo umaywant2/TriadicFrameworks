@@ -42,3 +42,8 @@ It is the “breath in” of the 3‑Pack.
 
 ```bash
 primitive1.sh
+```
+
+This records a state marker and logs the action.
+
+© 2025 TriadicFrameworks — Resonance‑Time Theory Canon
