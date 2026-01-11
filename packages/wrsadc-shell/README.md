@@ -14,6 +14,21 @@ WRSADC is not a “command shell” in the traditional sense — it is a **conce
 
 ---
 
+⭐ Notes on This Version
+main: `index.js`  
+This is a placeholder — you can change it later if you add a real entry point.
+
+`scripts.install`  
+Calls your install.sh so the shell initializes cleanly.
+
+`keywords`  
+These help with discoverability if you ever publish to npm, but they also serve as metadata for your repo.
+
+`No dependencies`  
+The WRSADC Shell is conceptual and lightweight, so this keeps it clean.
+
+---
+
 ## 🧩 Purpose of the WRSADC Shell  
 The shell exists to:
 
@@ -120,3 +135,4 @@ It is the quiet sentinel of RTT‑Inside.
 ---
 
 © 2025 TriadicFrameworks — Resonance‑Time Theory Canon
+
