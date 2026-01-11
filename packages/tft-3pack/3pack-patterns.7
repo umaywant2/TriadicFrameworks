@@ -1,0 +1,97 @@
+3PACK-PATTERNS(7)            TriadicFrameworks Manual           3PACK-PATTERNS(7)
+================================================================================
+NAME
+       3pack-patterns - triadic action patterns for RTT-aligned workflows
+
+SYNOPSIS
+       Patterns built from the core 3-Pack cycle:
+           P1 (begin) → P2 (transform) → P3 (close)
+
+DESCRIPTION
+       The 3-Pack is the smallest complete RTT-aligned action. Higher-order
+       patterns combine multiple triads to express structure, recursion,
+       concurrency, symmetry, refinement, or distributed intent.
+
+       This manual describes the major triadic patterns and when to use them.
+
+CORE PATTERN
+       core-3pack
+              A single begin → transform → close cycle.
+              Use for atomic, self-contained actions.
+
+PATTERNS
+       sequential
+              Repeating triadic cycles.
+              Use for pipelines, loops, rhythmic workflows.
+
+       nested
+              A triad inside a triad.
+              Use when a step contains sub-steps or recursion.
+
+       expansion (3x3)
+              Each primitive becomes its own triad.
+              Use for deep elaboration or multi-phase simulation.
+
+       ladder
+              Triads arranged in ascending refinement levels.
+              Use for progressive abstraction or staged reasoning.
+
+       mirror
+              Forward triad followed by reverse triad.
+              Use for reversible operations or symmetry.
+
+       spiral
+              Each cycle expands or deepens.
+              Use for adaptive systems, iterative refinement, growth.
+
+       constellation
+              Multiple independent triads orbit a shared intent.
+              Use for multi-agent or distributed coordination.
+
+       weave
+              Interleaved triads across threads or layers.
+              Use for concurrency or braided workflows.
+
+       cascade
+              Each triad triggers the next.
+              Use for staged pipelines or dependent processes.
+
+       mutation
+              Variation or branching inside P2.
+              Use for evolutionary algorithms or exploratory transforms.
+
+       lens
+              A triad applied as a reframing overlay.
+              Use for interpretive passes or perspective shifts.
+
+DECISION GUIDE
+       Use core-3pack if the action is simple.
+
+       If it repeats, use sequential.
+       If a step contains sub-steps, use nested.
+       If each primitive needs elaboration, use expansion.
+       If the workflow ascends levels, use ladder.
+       If symmetry is required, use mirror.
+       If cycles deepen or widen, use spiral.
+       If multiple agents share intent, use constellation.
+       If concurrency or interleaving is needed, use weave.
+       If stages depend on each other, use cascade.
+       If P2 varies or branches, use mutation.
+       If the triad reframes another process, use lens.
+
+FILES
+       tft-3pack/
+              Core primitives, wrappers, and shell integration.
+
+       3pak-shell/
+              Environment, state, and primitive execution tools.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       3pack(1), wrsadc(1), triadic-atlas(7), triadic-glossary(7),
+       triadic-pattern-api(7), triadic-pattern-cookbook(7)
+
+================================================================================
+TriadicFrameworks                     2025                     3PACK-PATTERNS(7)
