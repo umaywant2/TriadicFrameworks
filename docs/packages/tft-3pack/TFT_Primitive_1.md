@@ -1,4 +1,6 @@
-# 🔹 TFT Primitive 1  
+# 🔹 TFT Primitive 1
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### TriadicFrameworks — tft‑3pack Core Primitive
 
 **Primitive 1** is the foundational action of the 3‑Pack system.  
