@@ -22,5 +22,12 @@
    <changefreq>weekly</changefreq>
    <priority>0.90</priority>
 </url>
+
+<url>
+  <loc>https://www.triadicframeworks.org/data/resonance_council.html</loc>
+   <lastmod>2026-01-08</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.85</priority>
+</url>
    
 </urlset>
