@@ -49,3 +49,9 @@ primitive1.sh
 primitive2.sh
 primitive3.sh
 threepak_status
+```
+
+## Quicklinks
+- [3pak-shell Profile.d README](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/profile.d/README.html)
+- [3pak-shell tft primitive wrappers README](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/README.html)
+- [tft-3pack README](https://www.triadicframeworks.org/packages/tft-3pack/README.html)
