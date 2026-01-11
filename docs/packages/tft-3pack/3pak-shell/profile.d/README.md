@@ -57,4 +57,8 @@ Once the shell is activated, developers can:
 threepak_status
 threepak_note "Started a new session"
 threepak_clear
+```
 
+## Quicklinks
+- [3pak-shell README](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/README.html)
+- [tft primitive wrappers README](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/README.html)
