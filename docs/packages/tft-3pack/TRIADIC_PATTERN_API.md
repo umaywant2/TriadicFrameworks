@@ -1,4 +1,6 @@
-# ⚡ **Triadic Pattern API**  
+# ⚡ **Triadic Pattern API**
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### *Mapping Triadic Patterns to Shell, Python, and WRSADC Usage*
 
 The **3‑Pack** primitives:
