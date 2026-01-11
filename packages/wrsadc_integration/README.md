@@ -1,4 +1,8 @@
-# 🔗 WRSADC Integration  
+# 🔗 WRSADC Integration
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
+*"WRSADC = Wrapped Resonance Structural Aware Dimensional Cores"* - a TriadicFrameworks original creation for all to use.
+
 ### TriadicFrameworks — Boundary Layer for RTT‑Inside Systems
 
 The **WRSADC Integration** package provides the connective tissue between the WRSADC Shell and real‑world modules, agents, or runtimes.  
