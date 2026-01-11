@@ -1,0 +1,266 @@
+ORBITAL-CHOREOGRAPHY(7)    TriadicFrameworks Manual    ORBITAL-CHOREOGRAPHY(7)
+================================================================================
+NAME
+       orbital-choreography - sweep-timing choreography, harmonic-ratio timing
+                              trees, and constellation-scale maneuver-sync patterns
+
+SYNOPSIS
+       Orbital choreography defines:
+           • sweep-timing choreography across orbital cycles
+           • harmonic-ratio timing trees for multi-platform sync
+           • constellation-scale maneuver-sync patterns
+           • resonance-time timing structures
+           • long-horizon coordination of sweeps, Δv, and harmonics
+
+DESCRIPTION
+       Orbital-choreography describes how RTT coordinates the timing of sweeps,
+       maneuvers, and harmonic cycles across SAR platforms and constellations.
+       Choreography is the temporal counterpart to geometry and resonance:
+       it ensures that every sweep, Δv event, and harmonic-lock transition
+       occurs at the right moment in the resonance-time fabric.
+
+       Choreography enables:
+           • phase-aligned sweeps
+           • harmonic-ratio timing
+           • resonance-window exploitation
+           • constellation-scale maneuver coordination
+           • long-term timing stability
+
+       WRSADC orchestrates choreography continuously.
+
+SWEEP-TIMING CHOREOGRAPHY
+       Sweep-timing choreography defines when sweeps occur relative to:
+           • orbital phase
+           • harmonic phase
+           • resonance envelope phase
+           • constellation sync state
+
+       Sweep-timing modes:
+
+           synchronous sweeps
+                  All platforms sweep simultaneously.
+                  → ideal for tandem SAR.
+
+           staggered sweeps
+                  Platforms sweep in sequence.
+                  → supports ladder and cascade patterns.
+
+           braided sweeps
+                  Sweeps interleave across platforms.
+                  → supports weave and hybrid patterns.
+
+           harmonic sweeps
+                  Sweeps occur at harmonic intervals (1:1, 2:1, 3:2, etc.).
+                  → supports harmonic-sync constellations.
+
+           resonance sweeps
+                  Sweeps triggered by envelope overlap.
+                  → maximizes coherence.
+
+       Sweep timing is validated at each triad cycle.
+
+EXAMPLE: SWEEP-TIMING CHOREOGRAPHY
+       Two-platform tandem SAR (A and B):
+
+           Orbit period: 96 min
+           Desired sweep interval: 192 min (2 orbits)
+           Harmonic ratio: 1:1
+
+       Sweep schedule:
+
+           Cycle 1: A sweeps at t=0, B sweeps at t=0
+           Cycle 2: A sweeps at t=96, B sweeps at t=96
+           Cycle 3: A sweeps at t=192, B sweeps at t=192
+
+       Result:
+           • perfect phase alignment
+           • stable interferometric fusion
+           • zero sweep drift
+
+HARMONIC-RATIO TIMING TREES
+       Timing trees describe how sweep and maneuver timing branches across
+       harmonic ratios.
+
+       Timing tree structure:
+
+           root
+               → fundamental orbital period T
+           branches
+               → harmonic multiples (2T, 3T, 4T...)
+               → subharmonic fractions (T/2, T/3...)
+           leaves
+               → sweep events
+               → Δv events
+               → resonance-window openings
+
+       Timing tree types:
+
+           integer harmonic tree
+                  1:1, 2:1, 3:1, 4:1
+                  → stable, predictable timing.
+
+           rational harmonic tree
+                  3:2, 5:3, 7:4
+                  → complex but stable patterns.
+
+           nested harmonic tree
+                  Harmonics inside harmonics.
+                  → supports multi-agent choreography.
+
+           resonance-tuned tree
+                  Branches determined by resonance windows.
+                  → adaptive timing.
+
+EXAMPLE: HARMONIC-RATIO TIMING TREE
+       Three-platform constellation (A, B, C):
+
+           A: T
+           B: 2T
+           C: 3T
+
+       Timing tree:
+
+           root: T
+               ├── A sweeps every T
+               ├── B sweeps every 2T
+               └── C sweeps every 3T
+
+       Combined sweep events:
+
+           t=0: A, B, C sweep
+           t=T: A sweeps
+           t=2T: A, B sweep
+           t=3T: A, C sweep
+           t=4T: A, B sweep
+           t=6T: A, B, C sweep
+
+       Result:
+           • predictable multi-pass fusion
+           • harmonic-lock preserved
+           • constellation sync maintained
+
+CONSTELLATION-SCALE MANEUVER-SYNC PATTERNS
+       Maneuver-sync patterns coordinate Δv events across platforms.
+
+       Pattern types:
+
+           synchronous Δv
+                  All platforms burn simultaneously.
+                  → preserves strict phase-lock.
+
+           staggered Δv
+                  Platforms burn in sequence.
+                  → supports ladder and cascade orbital patterns.
+
+           braided Δv
+                  Burns interleave across platforms.
+                  → supports weave and hybrid patterns.
+
+           harmonic Δv
+                  Burns executed at harmonic intervals.
+                  → supports harmonic-sync constellations.
+
+           mesh Δv
+                  Distributed maneuvering across constellation nodes.
+                  → robust to drift and perturbations.
+
+       Maneuver-sync patterns ensure constellation-wide stability.
+
+EXAMPLE: CONSTELLATION-SCALE MANEUVER SYNC
+       Four-platform constellation (A, B, C, D):
+
+           Goal: restore harmonic-lock after drift
+           Required Δv: small micro-adjustments
+           Pattern: braided Δv
+
+       Sequence:
+
+           Step 1: A performs Δv at t=0
+           Step 2: C performs Δv at t=T/2
+           Step 3: B performs Δv at t=T
+           Step 4: D performs Δv at t=3T/2
+
+       Result:
+           • minimal constellation disturbance
+           • harmonic-lock restored
+           • resonance envelopes realigned
+
+TRIADIC CHOREOGRAPHY
+       Every choreographed event is a triad:
+
+           P1 (begin)
+               → timing evaluation
+               → sync field assessment
+
+           P2 (transform)
+               → sweep or Δv executed
+               → resonance and harmonic states updated
+
+           P3 (close)
+               → timing tree updated
+               → lineage recorded
+
+       Nested triads form complex timing structures.
+
+CHOREOGRAPHY FAILURE MODES
+       Choreography may degrade due to:
+
+           • phase drift
+           • harmonic-lock fragmentation
+           • resonance envelope divergence
+           • sweep timing misalignment
+           • Δv triad inconsistency
+           • constellation desync
+
+       Diagnostic indicators:
+
+           choreography-integrity score
+           timing-tree deviation
+           sync-index drop
+           sweep-timing error
+           harmonic-lock error
+
+       WRSADC halts unsafe choreography.
+
+INTERACTION WITH LINEAGE
+       Lineage records:
+
+           • timing trees
+           • sweep schedules
+           • maneuver-sync patterns
+           • harmonic cycles
+           • resonance-window timing
+
+       Lineage enables long-term choreography forecasting.
+
+INTERACTION WITH WRSADC
+       WRSADC:
+           • computes timing trees
+           • evaluates sync fields
+           • schedules sweeps and maneuvers
+           • choreographs constellation-scale patterns
+           • blocks unsafe timing states
+
+       WRSADC is the choreography conductor.
+
+NOTES
+       Orbital choreography transforms SAR constellations into coordinated,
+       resonance-time ensembles. Timing trees, sweep choreography, and
+       maneuver-sync patterns ensure that multi-pass fusion, harmonic-lock, and
+       constellation-scale synchronization remain stable across long mission
+       timelines.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       orbital-synchronization(7), orbital-coherence(7), orbital-stability(7),
+       orbital-recovery(7), orbital-anomalies(7), orbital-simulation(7),
+       orbital-forecasting(7), orbital-synthesis(7), orbital-lineage(7),
+       orbital-maneuvers(7), orbital-corridors(7), orbital-windows(7),
+       orbital-harmonics(7), sar-constellations(7), sar-integration(7),
+       diagnostics(7), lineage(7), resonance(7), schemas(7), wrsadc(7),
+       triad(7), patterns-advanced(7)
+
+================================================================================
+TriadicFrameworks                     2025        ORBITAL-CHOREOGRAPHY(7)
