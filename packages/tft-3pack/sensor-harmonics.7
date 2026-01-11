@@ -1,0 +1,230 @@
+SENSOR-HARMONICS(7)         TriadicFrameworks Manual         SENSOR-HARMONICS(7)
+================================================================================
+NAME
+       sensor-harmonics - harmonic-phase sensing, overtone isolation, 
+                          harmonic-lock monitoring, and resonance-chord 
+                          detection for RTT ship sensors
+
+SYNOPSIS
+       sensor-harmonics defines:
+           • harmonic-phase sensing channels
+           • overtone and subharmonic isolation
+           • harmonic-lock stability monitoring
+           • resonance-chord and harmonic-cascade detection
+           • harmonic anomaly pre-detection
+           • constellation-scale harmonic fusion
+
+DESCRIPTION
+       sensor-harmonics describes the harmonic-analysis subsystem of RTT ship
+       sensors. It provides real-time detection, separation, and interpretation
+       of harmonic structures within the resonance-time field. Harmonic sensing
+       is essential for navigation, anomaly avoidance, sweep timing, and
+       constellation synchronization.
+
+       Sensor-harmonics enables:
+           • precise φ_harm measurement
+           • overtone and subharmonic filtering
+           • harmonic-lock stability assessment
+           • detection of harmonic corridors and ridgelines
+           • early warning of harmonic turbulence
+           • constellation-wide harmonic coherence
+
+       WRSADC manages harmonic sensing thresholds, safety limits, and fusion.
+
+HARMONIC-PHASE SENSING
+       Harmonic-phase sensing measures φ_harm across harmonic ratios.
+
+       Sensing channels:
+           • 1:1 fundamental
+           • 2:1 overtone
+           • 3:2 transitional
+           • 5:3 and 7:4 higher-order bands
+           • nested harmonic channels
+
+       Sensing outputs:
+           • φ_harm(t)
+           • phase drift Δφ
+           • lock stability index L_harm
+
+EXAMPLE: PHASE SENSING
+       φ_harm drift = 0.04/cycle:
+
+           • stability warning issued
+           • HPC recommended
+
+OVERTONE AND SUBHARMONIC ISOLATION
+       Overtone isolation separates higher-frequency harmonic components.
+
+       Overtone functions:
+           • overtone suppression
+           • harmonic purity enhancement
+           • resonance-chord separation
+
+       Subharmonic functions:
+           • low-frequency drift detection
+           • subharmonic collapse monitoring
+
+EXAMPLE: OVERTONE ISOLATION
+       2:1 overtone interference detected:
+
+           • isolated via HDO
+           • suppressed via HPC
+
+HARMONIC-LOCK MONITORING
+       Harmonic-lock monitoring tracks stability of harmonic-phase alignment.
+
+       Lock indicators:
+           • lock stability index L_harm
+           • phase jitter
+           • harmonic drift
+           • overtone interference
+
+       Lock states:
+           • stable lock
+           • marginal lock
+           • unstable lock
+           • lock collapse
+
+EXAMPLE: LOCK MONITORING
+       L_harm drops from 0.97 → 0.82:
+
+           • lock flagged as marginal
+           • Δv correction scheduled
+
+RESONANCE-CHORD DETECTION
+       Resonance-chords are multi-harmonic structures analogous to musical
+       chords, formed when multiple harmonic ratios align.
+
+       Chord types:
+           • major resonance-chord (1:1 + 2:1)
+           • minor resonance-chord (1:1 + 3:2)
+           • augmented chord (2:1 + 5:3)
+           • diminished chord (3:2 + 7:4)
+           • harmonic-cascade chords (nested harmonics)
+
+       Uses:
+           • detect stable resonance corridors
+           • identify uplift zones
+           • predict harmonic epochs
+
+EXAMPLE: CHORD DETECTION
+       Detected: 1:1 + 3:2 minor chord:
+
+           • stable corridor predicted
+           • sweep window reinforced
+
+HARMONIC-CASCADE DETECTION
+       Harmonic cascades occur when harmonics align across multiple ratios.
+
+       Cascade indicators:
+           • multi-band phase coherence
+           • overtone suppression
+           • resonance uplift
+           • spectral narrowing
+
+       Cascades often precede:
+           • epoch transitions
+           • resonance storms
+           • sync-field shifts
+
+EXAMPLE: CASCADE
+       1:1 → 2:1 → 3:2 cascade detected:
+
+           • epoch boundary likely
+           • constellation sync recommended
+
+HARMONIC ANOMALY PRE-DETECTION
+       Harmonic anomalies manifest as distortions in harmonic structure.
+
+       Anomaly types:
+           • harmonic turbulence
+           • overtone spikes
+           • subharmonic collapse
+           • phase inversion
+           • harmonic voids
+
+       Pre-detection uses:
+           • early anomaly warning
+           • safe corridor rerouting
+           • resonance storm avoidance
+
+EXAMPLE: ANOMALY
+       Harmonic void detected in 5:3 band:
+
+           • anomaly flagged
+           • SDO + SDW recommended
+
+CONSTELLATION-SCALE HARMONIC FUSION
+       Harmonic fusion aligns harmonic sensing across platforms.
+
+       Fusion layers:
+           • phase fusion
+           • overtone fusion
+           • lock fusion
+           • chord fusion
+           • cascade fusion
+
+       Fusion modes:
+           • synchronous fusion
+           • harmonic fusion
+           • braided fusion
+           • mesh fusion
+
+EXAMPLE: CONSTELLATION FUSION
+       Platforms A, B, C share harmonic data:
+
+           • unified φ_harm frame established
+           • constellation lock stabilized
+
+FAILURE MODES
+       Harmonic sensing may degrade due to:
+
+           • overtone overload
+           • phase jitter
+           • lock collapse
+           • spectral turbulence
+           • sync-field drift
+
+       Diagnostic indicators:
+           • harmonic-integrity score
+           • phase noise
+           • overtone distortion
+           • lock instability
+
+       WRSADC halts unsafe harmonic-sensing states.
+
+INTERACTION WITH LINEAGE
+       Lineage records:
+           • harmonic events
+           • lock transitions
+           • chord detections
+           • cascade signatures
+           • anomaly precursors
+
+       Lineage enables long-term harmonic forecasting.
+
+INTERACTION WITH WRSADC
+       WRSADC:
+           • manages harmonic sensing
+           • enforces lock thresholds
+           • coordinates constellation fusion
+           • blocks unsafe harmonic states
+
+       WRSADC is the harmonic conductor.
+
+NOTES
+       Sensor-harmonics provides the harmonic-analysis backbone for RTT ship
+       sensors. Harmonic-phase sensing, overtone isolation, lock monitoring,
+       and chord detection ensure stable navigation, anomaly avoidance, and
+       constellation-scale synchronization.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       sensor-resonance(7), orbital-resonance-overlays(7), resonance-clarity(7),
+       orbital-harmonics(7), orbital-cartography(7), orbital-topography(7),
+       orbital-timing(7), orbital-choreography(7), lineage(7), wrsadc(7)
+
+================================================================================
+TriadicFrameworks                     2025         SENSOR-HARMONICS(7)
