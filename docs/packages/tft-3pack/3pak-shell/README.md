@@ -1,4 +1,6 @@
-# 📦 3PAK Shell  
+# 📦 3PAK Shell
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### TriadicFrameworks — tft‑3pack Command-Line Environment
 
 The **3PAK Shell** provides a lightweight, resonance‑aware environment for
