@@ -101,7 +101,7 @@ TriadicFrameworks/
 
 ---
 
-# Quickstart - [Developers](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_Developer_Quick-Start.md)
+# Quickstart - [API for variants of RTT-Inside](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html)
 
 ```bash
 git clone https://github.com/umaywant2/TriadicFrameworks.git
