@@ -1,7 +1,7 @@
-## **Daily Accomplishment Log**  
+## **Daily Accomplishment Log**
+###### By Nawder Loswin 1/3/2026 © www.TriadicFrameworks.org
 ### *Resonance Structural Awareness in Practice*
 
-- **Date:** 1/3/2026 by Nawder Loswin, TriadicFrameworks
 - **Focus:** Safety, Autonomy, Tools, and Resonance
 
 ---
