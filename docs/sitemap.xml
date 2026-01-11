@@ -13,7 +13,14 @@
    <loc>https://www.triadicframeworks.org/schemas/README.html<loc>
    <lastmod>2026-01-08</lastmod>
    <changefreq>weekly</changefreq>
-   <priority>0.90</priority>
+   <priority>0.95</priority>
  </url
-     
+
+<url>
+  <loc>https://www.triadicframeworks.org/charts/README.html</loc>
+   <lastmod>2026-01-08</lastmod>
+   <changefreq>weekly</changefreq>
+   <priority>0.90</priority>
+</url>
+   
 </urlset>
