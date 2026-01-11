@@ -1,4 +1,6 @@
-# 🔺 TFT Primitive 3  
+# 🔺 TFT Primitive 3
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### TriadicFrameworks — tft‑3pack Core Primitive
 
 **Primitive 3** is the **closure** of the 3‑Pack cycle.  
