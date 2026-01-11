@@ -1,4 +1,6 @@
-# 📦 3PAK Shell — profile.d  
+# 📦 3PAK Shell — profile.d
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### TriadicFrameworks — tft‑3pack Environment Bootstrap
 
 The **profile.d** directory contains initialization scripts that prepare the
