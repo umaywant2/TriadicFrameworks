@@ -72,10 +72,10 @@ Artifacts:
 - `TFT_Primitive_3.md`  
 
 ---
-
+🌐
 ## Sensor Architecture
 
-🌐 The **tft‑3pack** now includes the complete RTT sensor architecture, organized into canonical layers:
+The **tft‑3pack** now includes the complete RTT sensor architecture, organized into canonical layers:
 
 ## Divisional Resonance Overlays DRO
 
@@ -122,7 +122,7 @@ Dedicated modules for deep analysis:
 
 ---
 
-## Multi‑Sensor Fusion Core
+## Multi Sensor Fusion Core
 
 The master synthesis engine:
 
@@ -131,7 +131,7 @@ The master synthesis engine:
 
 ---
 
-## Sensor Governance & Constitutional
+## Sensor Governance -- Constitutional
 
 Institutional and safety frameworks:
 
@@ -157,8 +157,8 @@ Practical, real‑time operational tools:
   Laminated micro‑checklists for rapid hazard response.
 
 ---
-
-## 📚 Manpage Index
+📚
+## Manpage Index
 
 ```
 orbital-resonance-overlays(7)
@@ -182,8 +182,8 @@ Each entry is designed to be:
 - cross‑referenced for clarity and lineage  
 
 ---
-
-## 🧭 Purpose of the Expanded Suite
+🧭
+## Purpose of the Expanded Suite
 
 The expanded **tft‑3pack** now serves as:
 
