@@ -1,4 +1,6 @@
-# 🔸 TFT Primitive 2  
+# 🔸 TFT Primitive 2
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### TriadicFrameworks — tft‑3pack Core Primitive
 
 **Primitive 2** is the **transformation step** of the 3‑Pack.  
