@@ -98,3 +98,7 @@ A primitive is a gesture.
 A wrapper is the hand that performs it.  
 Together, they let the 3‑Pack breathe inside the shell —  
 a simple, elegant cycle of beginning, turning, and completing.
+
+## Quicklinks
+- [3pak-shell profile.d README](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/profile.d/README.html)
+- [3pak-shell README](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/README.html)
