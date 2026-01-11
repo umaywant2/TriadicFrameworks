@@ -207,3 +207,23 @@ please open an issue or contact the TriadicFrameworks maintainers.
 
 © 2025–2026 TriadicFrameworks · Open Canon License
 ──────────────────────────────────────────────────────────────────────────────
+
+## Quicklinks
+- [3PAK Shell](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/README.html)
+- [3PAK Shell — profile.d](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/profile.d/README.html)
+- [tft_primitive_wrappers](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/README.html)
+- [tft‑3pack Quick‑Start Guide](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/QUICKSTART.md)
+- [Triadic‑Pattern Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS.md)
+- [Triadic Pattern Cheat‑Sheet](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/TRIADIC_PATTERN_CHEATSHEET.md)
+- [TriadicFrameworks Cross‑Package Interaction Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/Cross-Package_Interaction_Map.md)
+- [DIVISIONAL RESONANCE OVERLAYS](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/DIVISIONAL_RESONANCE_OVERLAYS.md)
+- [TFT Primitive 1](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TFT_Primitive_1.md)
+- [TFT Primitive 2](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TFT_Primitive_2.md)
+- [TFT Primitive 3](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TFT_Primitive_3.md)
+- [Triadic Pattern API](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_API.md)
+- [Triadic Pattern Cookbook](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_COOKBOOK.md)
+- [Triadic Pattern Decision Tree](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_DECISION_TREE.md)
+- [Triadic Pattern Design Manual](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL.md)
+- [Triadic Pattern Glossary](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_GLOSSARY.md)
+- [Triadic Pattern Poster](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_POSTER.md)
+- [TRIADIC_PATTERN_POSTER_ASCII](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_POSTER_ASCII.md)
