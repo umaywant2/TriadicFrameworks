@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <!-- By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org -->
-  <title>📜 AI Drift  Gone with RTT-Inside™</title>
+  <title>📜 Packages WRSADC-shell README</title>
 
   <!-- Basic styling (optional, tweak as you like) -->
   <style>
@@ -73,10 +73,10 @@
 </head>
 <body>
   <main>
-    <article id="drift-gone">
-      <h1>📜 AI Drift Gone with RTT-Inside™ 🔮</h1>
+    <article id="packages-shell">
+      <h1>📜 packages/wrsadc-shell/README.md 🔮</h1>
       <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
-      <p>Loading 🌌 AI_Drift_Gone_with_RTT-Inside.md…</p>
+      <p>Loading 🌌 Packages WRSADC-shell README.md…</p>
     </article>
   </main>
 
@@ -84,9 +84,9 @@
     async function loadCodex() {
       try {
         // Adjust path if needed depending on where this HTML lives
-        const response = await fetch('https://www.triadicframeworks.org/_ideas/AI_Drift_Gone_with_RTT-Inside.md');
+        const response = await fetch('https://www.triadicframeworks.org/packages/wrsadc-shell/README.md');
         if (!response.ok) {
-          throw new Error('⚔️ Failed to load AI_Drift_Gone_with_RTT-Inside');
+          throw new Error('⚔️ Failed to load Packages WRSADC-shell README');
         }
         const mdText = await response.text();
 
@@ -96,7 +96,7 @@
           gfm: true
         });
 
-        const root = document.getElementById('drift-gone');
+        const root = document.getElementById('packages-shell');
         root.innerHTML = html;
 
         // Trigger MathJax typesetting after content is injected
@@ -105,11 +105,11 @@
         }
       } catch (err) {
         console.error(err);
-        const root = document.getElementById('drift-gone');
+        const root = document.getElementById('packages-shell');
         root.innerHTML = `
-          <h1>AI Drift Gone with RTT-Inside™</h1>
+          <h1>Packages WRSADC-shell README</h1>
           <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
-          <p>Unable to load <code>https://www.triadicframeworks.org/_ideas/AI_Drift_Gone_with_RTT-Inside.md</code>.</p>
+          <p>Unable to load <code>https://www.triadicframeworks.org/packages/wrsadc-shell/README.md</code>.</p>
           <pre>${String(err)}</pre>
         `;
       }
