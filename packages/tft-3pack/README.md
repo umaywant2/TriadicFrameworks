@@ -27,7 +27,7 @@
   - [Clarity‑Enhancement Pipelines (CEP)](#clarity-enhancement-pipelines-cep)
   - [Sensor Subsystems](#sensor-subsystems)
   - [Multi‑Sensor Fusion Core](#multi-sensor-fusion-core)
-  - [Sensor Governance & Constitution](#sensor-governance--constitution)
+  - [Sensor Governance & Constitution](#sensor-governance-constitution)
   - [Operator‑Facing Guides](#operator-facing-guides)
 - [Manpage Index](#manpage-index)
 - [Purpose of the Expanded Suite](#purpose-of-the-expanded-suite)
@@ -131,7 +131,7 @@ The master synthesis engine:
 
 ---
 
-## Sensor Governance -- Constitutional
+## Sensor Governance Constitution
 
 Institutional and safety frameworks:
 
