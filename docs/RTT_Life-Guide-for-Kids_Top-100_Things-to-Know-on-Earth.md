@@ -117,16 +117,22 @@
 
 ---
 
-## 📘 **Kids’ Booklet Edition (Print‑Friendly)**  
-A small, colorful booklet version of this guide is available for classrooms, libraries, and curious kids.  
-Each page includes:
+## 🤖 **Ask Copilot About Any Item**  
+Kids, parents, and teachers can ask Copilot to explain any idea in this guide in kid‑friendly language.
 
-- a big friendly icon  
-- one RTT life insight  
-- a tiny “Try This!” activity  
-- a reflection question  
+Try saying:
 
-Perfect for ages 6–12, or anyone who loves simple wisdom.
+**“Copilot, explain item #7 from the RTT Life Guide for Kids in a fun way.”**  
+or  
+**“Copilot, give me an activity for item #12 from the RTT Kids Guide.”**
+
+Copilot can turn any item into:
+
+- a story  
+- a game  
+- a drawing prompt  
+- a science experiment  
+- a mindfulness moment  
 
 ---
 
@@ -144,19 +150,187 @@ The poster uses large icons, short sentences, and RTT’s gentle message:
 
 ---
 
-## 🤖 **Ask Copilot About Any Item**  
-Kids, parents, and teachers can ask Copilot to explain any idea in this guide in kid‑friendly language.
+# 🌍 RTT Life Guide for Kids  
+## Top 20 Things to Know on Earth  
+### (Poster Layout — 4×5 Grid)
 
-Try saying:
+| 🌱 | 💧 | 🔆 | 🌈 | 🌍 |
+|----|----|----|----|----|
+| **1. Be kind first.** | **2. Drink water.** | **3. Go outside.** | **4. Notice colors.** | **5. Earth is your home.** |
 
-**“Copilot, explain item #7 from the RTT Life Guide for Kids in a fun way.”**  
-or  
-**“Copilot, give me an activity for item #12 from the RTT Kids Guide.”**
+| 🐾 | 🌬️ | 🔭 | 🎒 | 💬 |
+|----|----|----|----|----|
+| **6. Animals have feelings.** | **7. Breathe slow.** | **8. Look up at the sky.** | **9. Learn something daily.** | **10. Speak gently.** |
 
-Copilot can turn any item into:
+| 🤝 | 🧠 | ❤️ | 🧩 | 🎨 |
+|----|----|----|----|----|
+| **11. Help someone.** | **12. Use your imagination.** | **13. Love grows.** | **14. Solve small puzzles.** | **15. Create something.** |
 
-- a story  
-- a game  
-- a drawing prompt  
-- a science experiment  
-- a mindfulness moment  
+| 🌟 | 🕊️ | 🧭 | 🔄 | 🌌 |
+|----|----|----|----|----|
+| **16. You matter.** | **17. Peace starts with you.** | **18. Follow your curiosity.** | **19. Try again.** | **20. The universe is cheering for you.** |
+
+---
+
+---
+
+## 📘 **Kids’ Booklet Edition (Print‑Friendly)**  
+A small, colorful booklet version of this guide is available for classrooms, libraries, and curious kids.  
+Each page includes:
+
+- a big friendly icon  
+- one RTT life insight  
+- a tiny “Try This!” activity  
+- a reflection question  
+
+Perfect for ages 6–12, or anyone who loves simple wisdom.
+
+---
+
+# 🎨 RTT Coloring Book  
+## “Top 20 Things to Know on Earth”
+
+### Page 1 — 🌱 Be Kind First  
+Draw two characters helping each other. Add smiles, hands reaching out, or a shared moment.
+
+### Page 2 — 💧 Drink Water  
+Draw a big water droplet with a happy face. Add waves, bubbles, or a cup.
+
+### Page 3 — 🔆 Go Outside  
+Draw the sun, a tree, and a kid exploring.
+
+### Page 4 — 🌈 Notice Colors  
+Draw a rainbow with space to color each stripe.
+
+### Page 5 — 🌍 Earth Is Your Home  
+Draw Earth with little hearts around it.
+
+### Page 6 — 🐾 Animals Have Feelings  
+Draw your favorite animal with a thought bubble.
+
+### Page 7 — 🌬️ Breathe Slow  
+Draw a cloud taking a deep breath.
+
+### Page 8 — 🔭 Look Up at the Sky  
+Draw stars, planets, or a telescope.
+
+### Page 9 — 🎒 Learn Something Daily  
+Draw a backpack full of ideas.
+
+### Page 10 — 💬 Speak Gently  
+Draw a speech bubble with kind words.
+
+### Page 11 — 🤝 Help Someone  
+Draw two characters lifting something together.
+
+### Page 12 — 🧠 Use Your Imagination  
+Draw a brain with sparkles or ideas popping out.
+
+### Page 13 — ❤️ Love Grows  
+Draw a heart that grows leaves like a plant.
+
+### Page 14 — 🧩 Solve Small Puzzles  
+Draw puzzle pieces that fit together.
+
+### Page 15 — 🎨 Create Something  
+Draw a paintbrush, pencil, or musical notes.
+
+### Page 16 — 🌟 You Matter  
+Draw a big star with your name inside.
+
+### Page 17 — 🕊️ Peace Starts With You  
+Draw a dove or peaceful scene.
+
+### Page 18 — 🧭 Follow Your Curiosity  
+Draw a compass pointing to something exciting.
+
+### Page 19 — 🔄 Try Again  
+Draw a loop arrow with a smiling face.
+
+### Page 20 — 🌌 The Universe Is Cheering for You  
+Draw the night sky with stars cheering.
+
+---
+
+---
+
+# 🦄 RTT for Kids Mascot  
+## Name: **Trii** (pronounced “Tree”)
+
+### Appearance  
+- A friendly creature made of **three soft shapes** (triadic time):  
+  - a circle (t_c — calm time)  
+  - a triangle (t_e — energy time)  
+  - a spiral (t_r — relational time)  
+- Big expressive eyes  
+- A small star on its chest  
+- Colors: soft purple, teal, and gold  
+- Always carries a tiny lantern called the **Clarity Light**
+
+### Personality  
+- Curious  
+- Gentle  
+- Loves helping kids understand big ideas  
+- Speaks in simple, warm sentences  
+- Always says:  
+  **“Every moment has three sides — let’s explore them together.”**
+
+### What Trii Teaches  
+- kindness  
+- curiosity  
+- noticing feelings  
+- noticing patterns  
+- trying again  
+- understanding others  
+- exploring the world  
+
+---
+
+---
+
+# 🍎 Teacher’s Guide  
+## RTT Life Guide for Kids — Classroom Edition
+
+### Purpose  
+This guide helps children explore kindness, awareness, curiosity, and emotional intelligence through simple RTT‑aligned ideas.
+
+### Learning Goals  
+Students will:
+- understand basic emotional awareness  
+- practice kindness and cooperation  
+- explore nature and observation  
+- build resilience and curiosity  
+- connect personal experiences to the world around them  
+
+### How to Use the Guide  
+1. **Daily Warm‑Up**  
+   Choose one item from the Top 100 list and discuss it for 2 minutes.
+
+2. **Reflection Questions**  
+   - “What does this mean to you?”  
+   - “Where have you seen this in real life?”  
+   - “How could you practice this today?”
+
+3. **Activity Ideas**  
+   - Drawing prompts  
+   - Nature walks  
+   - Kindness challenges  
+   - Journaling  
+   - Group discussions  
+
+4. **Using the Mascot (Trii)**  
+   - Let Trii “introduce” each idea  
+   - Use Trii as a reminder to breathe, think, and reflect  
+   - Add Trii stickers to completed activities  
+
+5. **Assessment (Gentle & Non‑graded)**  
+   - Students share one thing they noticed  
+   - Students draw or write a small reflection  
+   - Students practice one idea at home  
+
+### Teacher Tips  
+- Keep discussions short and warm  
+- Encourage every answer  
+- Use examples from daily life  
+- Celebrate small insights  
+- Let kids lead the conversation  
