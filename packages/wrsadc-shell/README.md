@@ -1,4 +1,6 @@
-# 🐚 WRSADC Shell  
+# 🐚 WRSADC Shell
+###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+
 ### TriadicFrameworks — Wrapper Runtime Shell for Autonomous, Distributed, and Coherent Systems
 
 The **WRSADC Shell** is a lightweight, resonance‑aware wrapper designed to host RTT‑Inside behaviors in real‑world environments.  
@@ -135,4 +137,5 @@ It is the quiet sentinel of RTT‑Inside.
 ---
 
 © 2025 TriadicFrameworks — Resonance‑Time Theory Canon
+
 
