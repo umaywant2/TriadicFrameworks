@@ -1,0 +1,203 @@
+ORBITAL-WINDOWS(7)         TriadicFrameworks Manual         ORBITAL-WINDOWS(7)
+================================================================================
+NAME
+       orbital-windows - revisit windows, drift corridors, and resonance-aware
+                         orbital planning for SAR constellations in RTT
+
+SYNOPSIS
+       Orbital windows define:
+           • revisit opportunities
+           • drift corridors
+           • resonance-aligned sweep timing
+           • constellation-scale orbital planning
+           • long-term coherence across orbital cycles
+
+DESCRIPTION
+       Orbital windows describe the temporal and geometric intervals during
+       which SAR platforms maintain coherent alignment for imaging, fusion,
+       and resonance-time operations. They are the orbital counterpart to
+       resonance windows in RTT, extending the concept into orbital mechanics.
+
+       Orbital windows enable:
+           • predictable revisit timing
+           • stable multi-pass SAR fusion
+           • harmonic-lock maintenance
+           • constellation-level sweep choreography
+           • resonance-aware orbital planning
+
+       WRSADC computes orbital windows during multi-platform dispatch.
+
+REVISIT WINDOWS
+       A revisit window is the interval during which a platform re-observes
+       the same ground track with sufficient geometric and resonance alignment
+       for coherent SAR fusion.
+
+       Window parameters:
+           • Δt_revisit   (time between passes)
+           • Δθ_incidence (incidence angle difference)
+           • Δφ_orbit     (orbital phase difference)
+           • ΔR_resonance (resonance envelope overlap)
+
+       Window types:
+
+           strict revisit window
+                  Requires near-identical geometry.
+                  → ideal for InSAR and deformation mapping.
+
+           relaxed revisit window
+                  Allows moderate geometric variation.
+                  → supports ladder and spiral sweep patterns.
+
+           harmonic revisit window
+                  Occurs at harmonic multiples of orbital period.
+                  → supports harmonic-sync constellations.
+
+           sliding revisit window
+                  Window drifts slowly across cycles.
+                  → supports adaptive sweep choreography.
+
+       Revisit windows determine when triads align across orbital passes.
+
+DRIFT CORRIDORS
+       Drift corridors describe the allowable deviation in orbital geometry
+       before coherence, resonance alignment, or fusion quality degrades.
+
+       Drift variables:
+           • cross-track drift
+           • along-track drift
+           • altitude drift
+           • phase drift
+           • resonance drift
+
+       Corridor types:
+
+           narrow corridor
+                  Tight geometric constraints.
+                  → tandem SAR, high-coherence missions.
+
+           medium corridor
+                  Moderate drift allowed.
+                  → multi-pass fusion, ladder patterns.
+
+           wide corridor
+                  Large drift tolerated.
+                  → global coverage, swarm constellations.
+
+           resonance corridor
+                  Drift allowed only if resonance envelopes remain aligned.
+
+       Drift corridors define the safe operational region for SAR constellations.
+
+RESONANCE-AWARE ORBITAL PLANNING
+       Orbital planning becomes resonance-aware when RTT is applied to orbital
+       mechanics. Planning incorporates:
+
+           • orbital harmonics
+           • resonance envelopes
+           • spectral density profiles
+           • gradient stability
+           • constellation schemas
+
+       Planning modes:
+
+           harmonic planning
+                  Orbits selected to maintain harmonic-lock.
+
+           envelope planning
+                  Orbits chosen to maximize resonance envelope overlap.
+
+           gradient planning
+                  Orbits tuned to minimize resonance drift across passes.
+
+           constellation planning
+                  Orbits optimized for multi-agent sweep choreography.
+
+       Resonance-aware planning ensures long-term coherence.
+
+TRIADIC ORBITAL WINDOWS
+       Each orbital window corresponds to a triadic structure:
+
+           P1 (begin)
+               → platform enters window
+               → resonance baseline captured
+
+           P2 (transform)
+               → sweep executed
+               → Doppler and phase history accumulated
+
+           P3 (close)
+               → window exit
+               → lineage updated
+
+       Nested windows form ladder or hybrid orbital patterns.
+
+WINDOW FAILURE MODES
+       Orbital windows may degrade due to:
+
+           • orbital drift
+           • resonance envelope divergence
+           • harmonic desync
+           • sweep misalignment
+           • spectral fragmentation
+           • gradient overload
+
+       Diagnostic indicators:
+
+           revisit-window collapse
+           drift-corridor breach
+           resonance-window narrowing
+           sweep-alignment error
+           harmonic-lock failure
+
+       WRSADC halts unsafe orbital operations.
+
+INTERACTION WITH SCHEMAS
+       Orbital windows require:
+
+           • constellation-schema
+           • resonance-schema for orbital sweeps
+           • structural-schema for formation geometry
+           • lineage-schema for multi-pass history
+
+       Schemas ensure orbital behavior remains coherent.
+
+INTERACTION WITH LINEAGE
+       Lineage records:
+
+           • revisit window history
+           • drift corridor evolution
+           • resonance envelope overlap
+           • sweep timing
+           • fusion outcomes
+
+       Lineage enables long-term orbital planning.
+
+INTERACTION WITH WRSADC
+       WRSADC:
+           • computes revisit windows
+           • evaluates drift corridors
+           • validates resonance alignment
+           • choreographs sweep timing
+           • enforces coherence thresholds
+           • blocks unsafe orbital states
+
+       WRSADC is the orbital window manager.
+
+NOTES
+       Orbital windows extend RTT into orbital mission design. They transform
+       SAR constellations into resonance-time instruments capable of coherent
+       revisit, stable fusion, and long-term orbital harmony across global
+       sensing missions.
+
+AUTHOR
+       TriadicFrameworks — Resonance-Time Theory Canon
+
+SEE ALSO
+       orbital-harmonics(7), sar-constellations(7), sar-integration(7),
+       diagnostics(7), spectra(7), envelopes(7), frequency(7),
+       harmonics(7), gradients(7), thresholds(7), coherence(7),
+       resonance(7), lineage(7), schemas(7), wrsadc(7), triad(7),
+       patterns-advanced(7)
+
+================================================================================
+TriadicFrameworks                     2025               ORBITAL-WINDOWS(7)
