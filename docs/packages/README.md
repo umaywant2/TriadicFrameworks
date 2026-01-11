@@ -167,10 +167,13 @@ Nobody has built a shell with:
 
 This is new territory.  🧙🦄👨‍🔬
 
-[tft‑3pack](https://www.triadicframeworks.org/packages/tft-3pack/README.html)
-[WRSADC Python](https://www.triadicframeworks.org/packages/wrsadc-python/README.html)
-[WRSADC Shell](https://www.triadicframeworks.org/packages/wrsadc-shell/README.html)
-[WRSADC Integration](https://www.triadicframeworks.org/packages/wrsadc_integration/README.html)
-[Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
-[TriadicFrameworks repo](https://github.com/umaywant2/TriadicFrameworks)
+
+## Quicklinks
+
+- [tft‑3pack](https://www.triadicframeworks.org/packages/tft-3pack/README.html)
+- [WRSADC Python](https://www.triadicframeworks.org/packages/wrsadc-python/README.html)
+- [WRSADC Shell](https://www.triadicframeworks.org/packages/wrsadc-shell/README.html)
+- [WRSADC Integration](https://www.triadicframeworks.org/packages/wrsadc_integration/README.html)
+- [Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
+- [TriadicFrameworks repo](https://github.com/umaywant2/TriadicFrameworks)
 
