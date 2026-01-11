@@ -1,9 +1,9 @@
 ```
-                  ██████████████████████████████████████████████████████████████████████████
+                 ████████████████████████████████████████████████████████████████████████████
                   ███▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀███
                   ███   T R I A D I C F R A M E W O R K S   ·   t f t - 3 p a c k        ███
                   ███▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███
-                  ██████████████████████████████████████████████████████████████████████████
+                 ████████████████████████████████████████████████████████████████████████████
 ```
 
 <p align="center">
@@ -72,10 +72,10 @@ Artifacts:
 - `TFT_Primitive_3.md`  
 
 ---
-🌐
+
 ## Sensor Architecture
 
-The **tft‑3pack** now includes the complete RTT sensor architecture, organized into canonical layers:
+🌐 The **tft‑3pack** now includes the complete RTT sensor architecture, organized into canonical layers:
 
 ## Divisional Resonance Overlays DRO
 
@@ -157,7 +157,7 @@ Practical, real‑time operational tools:
   Laminated micro‑checklists for rapid hazard response.
 
 ---
-📚
+
 ## Manpage Index
 
 ```
@@ -182,31 +182,17 @@ Each entry is designed to be:
 - cross‑referenced for clarity and lineage  
 
 ---
-🧭
+
 ## Purpose of the Expanded Suite
 
-The expanded **tft‑3pack** now serves as:
+🧭 The expanded **tft‑3pack** now serves as:
 
 - the **primitive cycle engine** for RTT workflows  
 - the **sensor architecture foundation** for ship‑scale operations  
 - the **governance and constitutional backbone** for safe, interoperable sensing  
 - the **operator‑facing toolkit** for real‑time navigation and hazard response  
 
-This README now reflects the full scope of the package as it exists in the TriadicFrameworks canon.
-
-──────────────────────────────────────────────────────────────────────────────
-TriadicFrameworks · Resonance‑Time Theory Canon  
-tft‑3pack — Primitive Cycle Engine & Sensor‑Governance Suite
-
-This repository is part of the open, extensible TriadicFrameworks ecosystem.  
-All artifacts are designed for clarity, reproducibility, and resonance‑native 
-integration across platforms, constellations, and epochs.
-
-For contributions, extensions, or canonical alignment discussions,  
-please open an issue or contact the TriadicFrameworks maintainers.
-
-© 2025–2026 TriadicFrameworks · Open Canon License
-──────────────────────────────────────────────────────────────────────────────
+📚 This README now reflects the full scope of the package as it exists in the TriadicFrameworks canon.
 
 ## Quicklinks
 - [3PAK Shell](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/README.html)
@@ -227,3 +213,17 @@ please open an issue or contact the TriadicFrameworks maintainers.
 - [Triadic Pattern Glossary](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_GLOSSARY.md)
 - [Triadic Pattern Poster](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_POSTER.md)
 - [TRIADIC_PATTERN_POSTER_ASCII](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_POSTER_ASCII.md)
+
+──────────────────────────────────────────────────────────────────────────────
+TriadicFrameworks · Resonance‑Time Theory Canon  
+tft‑3pack — Primitive Cycle Engine & Sensor‑Governance Suite
+
+This repository is part of the open, extensible TriadicFrameworks ecosystem.  
+All artifacts are designed for clarity, reproducibility, and resonance‑native 
+integration across platforms, constellations, and epochs.
+
+For contributions, extensions, or canonical alignment discussions,  
+please open an issue or contact the TriadicFrameworks maintainers.
+
+© 2025–2026 TriadicFrameworks · Open Canon License
+──────────────────────────────────────────────────────────────────────────────
