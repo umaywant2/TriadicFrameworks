@@ -145,3 +145,6 @@ A valid RTTcode MUST:
 4. Remain scannable by standard QR readers  
 
 This document is the authoritative reference for RTTcode behavior.
+
+- [Adding a New RTTcode Domain](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/Adding_a_New_RTTcode_Domain.md)
+- [rttcodes README](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/README.md)
