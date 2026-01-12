@@ -1,4 +1,6 @@
-# 🌐 Triadic FFF Overview  
+# 🌐 Triadic FFF Overview
+###### By Nawder Loswin 1/12/2026 © www.TriadicFrameworks.org
+
 ### Freqi · Flui · Forci · RTT‑Inside
 
 FFF Emitters are the **triadic front‑end** of the AI Resonance Seed stack:
