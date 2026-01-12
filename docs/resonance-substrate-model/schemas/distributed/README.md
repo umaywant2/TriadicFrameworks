@@ -9,6 +9,26 @@ Distributed schemas define the structure of multi-node substrate deployments, in
 
 These schemas support distributed execution and multi-device coordination.
 
+---
+
+# 🧩 What this schema captures
+
+### **agent**
+A distributed entity with identity, role, state, and optional spatial position.
+
+### **network**
+Topology + edges connecting agents.
+
+### **communication**
+Message‑passing rules (broadcast, gossip, etc.).
+
+### **distributed_coupling**
+How agents couple to the resonance substrate (strength + mode).
+
+### **metadata**
+Versioning and notes.
+
+This schema is intentionally parallel to your other RSM schemas and fits perfectly into the ontology.
 
 ---
 
