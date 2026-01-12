@@ -50,3 +50,6 @@ Embed the PNG in:
 - onboarding docs  
 
 Every RTTcode encodes a URL+token that points to the artifact’s canonical home.
+
+- [Adding a New RTTcode Domain](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/Adding_a_New_RTTcode_Domain.md)
+- [rttcodes README](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/README.md)
