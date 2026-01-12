@@ -1,28 +1,39 @@
 cff-version: 1.2.0
-message: "If you use this work, please cite it using the metadata below."
-title: "Resonance Substrate Model"
-abstract: >
-  A substrate-first framework defining Spin, Charge, and Temperature (SET)
-  resonance primitives, substrate operators, and reproducible experimental
-  and numerical methods for evaluating resonance-based field dynamics.
-type: software
-version: "0.1.0"
-date-released: "2026-01-09"
-license: "Apache-2.0"
+title: "Resonance Substrate Model (RSM)"
+version: "1.0.0"
+date-released: "2025-01-12"
+doi: "10.5281/zenodo.xxxxxxx"   # Replace with actual DOI after Zenodo upload
+message: >
+  If you use the Resonance Substrate Model (RSM) in your research, software, or
+  experiments, please cite this release.
 
 authors:
-  - name: "Resonance Substrate Model Contributors"
+  - family-names: "Loswin"
+    given-names: "Nawder"
+    affiliation: "TriadicFrameworks Research Initiative"
+    email: "Nawder@TriadicFrameworks.org"
+    orcid: "https://orcid.org/0000-0000-0000-0000"   # Replace with your actual ORCID
 
-repository-code: "https://github.com/umaywant2/TriadicFrameworks"
 keywords:
   - resonance
-  - substrate model
-  - SET fields
-  - spin field
-  - charge field
-  - temperature field
-  - field equations
-  - numerical simulation
-  - reproducible science
-  - physics framework
+  - coherence
+  - triadic fields
+  - multi-layer systems
+  - RTT-Inside
+  - schema-driven modeling
+  - nonlinear dynamics
+  - complex systems
 
+license: "Apache-2.0"
+
+repository-code: "https://github.com/umaywant2/TriadicFrameworks"
+url: "https://www.triadicframeworks.org"
+
+abstract: >
+  The Resonance Substrate Model (RSM) is a unified triadic field framework for
+  describing coherence, alignment, and multi-layer dynamics across classical,
+  quantum, semantic, and distributed systems. The model introduces scalar,
+  vector/spin, and resonance-envelope fields governed by a minimal operator
+  system, supported by a schema-driven ontology, simulation framework, and
+  experimental validation suite. This release represents the canonical v1.0.0
+  baseline for theoretical, computational, and experimental extensions.
