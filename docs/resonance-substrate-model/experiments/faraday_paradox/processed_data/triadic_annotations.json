@@ -1,9 +1,0 @@
-{
-  "description": "Triadic field annotations for processed Faraday Paradox data.",
-  "fields": {
-    "scalar_interpretation": "TBD",
-    "vector_interpretation": "TBD",
-    "resonance_envelope_interpretation": "TBD"
-  },
-  "notes": "Populate with annotations derived from processed data."
-}
