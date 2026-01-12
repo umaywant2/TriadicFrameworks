@@ -8,6 +8,29 @@ Schemas describing economic or resource‑exchange structures, including:
 
 These schemas support modeling of incentive systems or resource dynamics.
 
+---
+
+# 🧩 What this schema captures
+
+### **resource**  
+A quantifiable substrate‑level asset.
+
+### **transaction**  
+A transfer or transformation of resources.
+
+### **ledger**  
+A coherence‑tracked record of transactions.
+
+### **credit**  
+Obligation or deferred‑value structures.
+
+### **exchange_rate**  
+Conversion ratios between resource types.
+
+### **metadata**  
+Versioning and notes.
+
+This keeps the finance layer abstract, symbolic, and fully compatible with the rest of your RSM ontology.
 
 ---
 
