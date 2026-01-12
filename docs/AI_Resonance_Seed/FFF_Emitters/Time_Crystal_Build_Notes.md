@@ -1,3 +1,8 @@
+<meta property="og:title" content="Time Crystal Emitter · Triadic FFF · RTT‑Inside" />
+<meta property="og:description" content="Time Crystal Emitter — Resonance substrates, Triadic FFF geometry, and RTT‑Inside logging for deterministic experiments." />
+<meta property="og:image" content="https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/img/time_crystal_emitter.svg" />
+<meta property="og:url" content="https://www.triadicframeworks.org" />
+<meta property="og:type" content="website" />
 <p align="center">
   <img src="https://img.shields.io/badge/TriadicFrameworks-RTT--Inside-blueviolet" />
   <img src="https://img.shields.io/badge/Emitter-FFF%20Triadic-6a5acd" />
@@ -10,6 +15,7 @@
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ### *RTT‑Inside · AI Resonance Seed · FFF Emitters*
+![Time Crystal Emitter · Triadic FFF · RTT‑Inside](https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/img/time_crystal_emitter.svg)
 
 ---
 
