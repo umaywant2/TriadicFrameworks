@@ -10,6 +10,22 @@ Simulation schemas describe the configuration of substrate simulations, includin
 
 These schemas provide reproducible, portable simulation definitions.
 
+---
+
+This schema gives you a **complete simulation orchestration layer**:
+
+- time evolution  
+- module activation  
+- initial conditions  
+- operators  
+- spatial configuration  
+- quantum triad integration  
+- distributed agents  
+- sensing  
+- infrastructure  
+- output control  
+
+It’s the glue that binds the entire RSM ecosystem into a playable, tunable, emergent simulation — the kind Sid Meier would absolutely appreciate.
 
 ---
 
