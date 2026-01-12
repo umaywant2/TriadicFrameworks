@@ -1,0 +1,41 @@
+name: RTTcode Validation
+
+on:
+  push:
+    paths:
+      - "docs/**.json"
+      - "schemas/**.json"
+      - ".github/workflows/rttcode-validate.yml"
+  pull_request:
+    paths:
+      - "docs/**.json"
+      - "schemas/**.json"
+
+jobs:
+  validate-rttcode:
+    name: Validate RTTcode Packets
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install JSON Schema validator
+        run: npm install -g ajv-cli
+
+      - name: Validate RTTcode packets
+        run: |
+          echo "Validating RTTcode packets..."
+          for file in $(find docs -name "*.json"); do
+            echo "Checking: $file"
+            ajv validate \
+              -s schemas/rttcode.v1.json \
+              -d "$file" \
+              --strict=true \
+              || exit 1
+          done
