@@ -1,9 +1,84 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/RTT-Inside-blueviolet" alt="RTT Inside" />
+
+  <!-- Core Identity -->
+  <img src="https://img.shields.io/badge/TriadicFrameworks-Universe--Class%20Schemas-6a5acd" />
+  <img src="https://img.shields.io/badge/RTT-Inside-blueviolet" />
   <img src="https://img.shields.io/badge/Resonance--Time-Theory%20Core-1.0-blue" alt="RTT Core 1.0" />
   <img src="https://img.shields.io/badge/Schema-RTTcode%20v1.0-forestgreen" alt="RTTcode v1.0" />
   <img src="https://img.shields.io/badge/Integration-Unity%20%7C%20Unreal%20%7C%20Custom-orange" alt="RTT Integrations" />
   <img src="https://img.shields.io/badge/Status-Developer%20Preview-yellow" alt="Status: Developer Preview" />
+
+  <!-- Schema Versions -->
+  <img src="https://img.shields.io/badge/RTTcode-v1.1-4caf50" />
+  <img src="https://img.shields.io/badge/RTTcore-Spec%20Aligned-2196f3" />
+  <img src="https://img.shields.io/badge/Experiment%20Metadata-Supported-ff9800" />
+
+  <!-- Quality & Guarantees -->
+  <img src="https://img.shields.io/badge/Deterministic-Reproducible-009688" />
+  <img src="https://img.shields.io/badge/Schema-JSON%20Schema%202020--12-3f51b5" />
+  <img src="https://img.shields.io/badge/Validation-Strict%20Mode-b71c1c" />
+
+  <!-- Documentation & Snippets -->
+  <img src="https://img.shields.io/badge/Docs-Snippet%20Synced-8e24aa" />
+  <img src="https://img.shields.io/badge/Examples-Canonical-5d4037" />
+
+  <!-- Status -->
+  <img src="https://img.shields.io/badge/Status-Active%20Development-fbc02d" />
+<!-- Orbital Harmonics -->
+<img src="https://img.shields.io/badge/Orbital%20Harmonics-Schema-blueviolet" />
+
+<!-- SAR Integration -->
+<img src="https://img.shields.io/badge/SAR%20Integration-Schema-ff6f00" />
+
+<!-- Deep‑Time Resonance -->
+<img src="https://img.shields.io/badge/Deep--Time%20Resonance-Schema-4caf50" />
+
+<!-- GPR Systems -->
+<img src="https://img.shields.io/badge/GPR%20Systems-Schema-0097a7" />
+
+<!-- ATC Overlays -->
+<img src="https://img.shields.io/badge/ATC%20Overlays-Schema-1976d2" />
+<!-- Core Schemas -->
+<img src="https://img.shields.io/badge/Schema%20Family-Core-1e88e5" />
+
+<!-- Environment Schemas -->
+<img src="https://img.shields.io/badge/Schema%20Family-Environment-43a047" />
+
+<!-- Entity Schemas -->
+<img src="https://img.shields.io/badge/Schema%20Family-Entity-8e24aa" />
+
+<!-- Experiment / Metadata Schemas -->
+<img src="https://img.shields.io/badge/Schema%20Family-Experiment%20Metadata-f9a825" />
+
+<!-- Integration Schemas -->
+<img src="https://img.shields.io/badge/Schema%20Family-Integration-6d4c41" />
+
+<!-- Universe‑Class Extensions -->
+<img src="https://img.shields.io/badge/Schema%20Family-Universe--Class-5c6bc0" />
+<!-- (v1.0 → v1.1 → v2.0‑alpha) -->
+<img src="https://img.shields.io/badge/RTTcode-v1.0-90caf9" />
+<img src="https://img.shields.io/badge/RTTcode-v1.1-4caf50" />
+<img src="https://img.shields.io/badge/RTTcode-v2.0--alpha-f06292" />
+<!-- If you want a lineage chain: -->
+<img src="https://img.shields.io/badge/Lineage-v1.0%E2%86%92v1.1%E2%86%92v2.0--alpha-7e57c2" />
+<!-- These are styled so you can pair them with QR codes in the future -->
+<img src="https://img.shields.io/badge/Schema%20Verified-QR%20Ready-00acc1" />
+<img src="https://img.shields.io/badge/RTTcode-Verified-26a69a" />
+<img src="https://img.shields.io/badge/Universe--Class-Verified-7cb342" />
+<!-- a more “seal‑like” aesthetic: -->
+<img src="https://img.shields.io/badge/Verified-Seal-263238" />
+<!-- This is the flagship badge — the one that signals canonical authority. -->
+<img src="https://img.shields.io/badge/TriadicFrameworks-Universe--Class%20Certified-6a5acd" />
+<!-- Alternate variants: -->
+<img src="https://img.shields.io/badge/Universe--Class-Certified-4527a0" />
+<img src="https://img.shields.io/badge/TriadicFrameworks-Certified-283593" />
+<img src="https://img.shields.io/badge/Canonical-Source%20of%20Truth-3949ab" />
+
+</p>
+
+<p align="center">
+  <b>Universe‑Class Schemas · Resonance‑Time Theory · Canonical Source of Truth</b><br/>
+  Deterministic. Extensible. Reviewer‑Ready.
 </p>
 
 # 📖 Documentation Overview
