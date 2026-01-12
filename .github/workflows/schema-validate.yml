@@ -71,3 +71,33 @@ jobs:
         id: collect-summary
         run: |
           echo "summary=RTTcode: ${{ steps.rttcode.outcome }}, Environment: ${{ steps.env.outcome }}, Entity: ${{ steps.entity.outcome }}, Universe: ${{ steps.universe.outcome }}" >> $GITHUB_OUTPUT
+          
+  comment-on-pr:
+    name: Comment validation summary on PR
+    needs: validate-schemas
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Post PR comment with schema validation summary
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const summary = `${{ toJSON(needs.validate-schemas.outputs.summary) }}`.replace(/^"|"$/g, '');
+            const body = [
+              "### ✅ Schema Validation Summary",
+              "",
+              `- ${summary}`,
+              "",
+              needs.validate-schemas.result === "success"
+                ? "All checked schemas and example packets are **valid**. 🚀"
+                : "One or more schema validations **failed**. Please check the workflow logs. ⚠️"
+            ].join("\n");
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body
+            });
