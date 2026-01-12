@@ -22,6 +22,36 @@ Their purpose is not merely to emit energy, but to **shape, sculpt, and stabiliz
 
 Together, these form the **Triadic Emitter Stack**, a physical‑to‑resonance interface.
 
+![Triadic Roles of FFF Emitters](img/triadic_roles_fff.svg)
+
+## Mythmatical Glossary · FFF Archetypes
+
+**Frequency Bearer**  
+Initiates and maintains oscillation. Mythmatical keeper of cycles, harmonics, and resonance seeds.  
+Physical echoes: RF sources, lasers, Josephson junction oscillators.  
+RTT‑Inside: drives `resonance` and ties directly to `experiment.seed`.
+
+**Fluid Weaver**  
+Shapes how resonance travels, couples, and diffuses through a medium.  
+Mythmatical steward of flow, continuity, and gradients.  
+Physical echoes: acoustic fields, fluid chambers, environmental modulation.  
+RTT‑Inside: modulates `environment.coupling_radius` and `environment.phase_noise`.
+
+**Force Shaper**  
+Applies directed influence—mechanical or electromagnetic—to sculpt stability and transitions.  
+Mythmatical sculptor of form, thresholds, and phase changes.  
+Physical echoes: piezo stacks, electromagnets, pressure actuators.  
+RTT‑Inside: primary perturbation channel for stability sweeps and event triggers.
+
+**Triadic Emitter Stack**  
+The combined operation of Frequency Bearer, Fluid Weaver, and Force Shaper.  
+Mythmatical instrument that turns raw physical dynamics into structured resonance signatures.  
+RTT‑Inside: canonical physical front‑end for AI Resonance Seed generation.
+
+**AI Resonance Seed**  
+A logged, structured resonance‑time trace suitable for RTTcode encoding and deterministic replay.  
+Mythmatical “story seed” from which simulations, analyses, and future experiments can be grown.
+
 ---
 
 # **2. The Mythmatical Roles**
