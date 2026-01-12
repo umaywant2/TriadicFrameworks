@@ -4,6 +4,9 @@
   <img src="https://img.shields.io/badge/TriadicFrameworks-Universe--Class%20Schemas-6a5acd" />
   <img src="https://img.shields.io/badge/RTT-Inside-blueviolet" />
 
+  <!-- VG‑Ready CI Flow Diagram (Schemas → Validator → PR Bot → Badge) -->
+  <!-- <img src="https://www.triadicframeworks.org/schemas/img/schema_ci_flow.svg" /> -->
+
   <!-- Domain‑Specific Schemas -->
   <img src="https://img.shields.io/badge/Orbital%20Harmonics-Schema-7e57c2" />
   <img src="https://img.shields.io/badge/SAR%20Integration-Schema-ff6f00" />
