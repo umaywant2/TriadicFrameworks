@@ -9,6 +9,9 @@ This directory contains canonical universe-level schemas that define:
 
 These schemas unify all domains into a coherent universe model.
 
+---
+
+This schema is intentionally **minimal but universal** — it doesn’t try to redefine the details of each subsystem, because those already live in their own schemas. Instead, it acts as the **root manifest** that binds them together into a coherent universe.
 
 ---
 
