@@ -1,3 +1,18 @@
+The Resonance Substrate Model (RSM) A Triadic Framework for Coherent Multi‑Layer Systems
+
+Author: Nawder Loswin
+Affiliation: TriadicFrameworks Research Initiative
+Email: Nawder@TriadicFrameworks.org
+ORCID: https://orcid.org/0009-0002-2282-5460
+
+Version: 1.0.0
+Release Date: January 12, 2025
+License: Apache License 2.0
+
+Abstract: The Resonance Substrate Model (RSM) introduces a unified triadic field framework for describing coherence, alignment, and multi‑layer dynamics across classical, quantum, semantic, and distributed systems. The model defines scalar, vector/spin, and resonance‑envelope fields governed by a minimal operator system, supported by a schema‑driven ontology, simulation framework, and experimental validation suite. RSM provides the structural substrate from which Resonance‑Time Theory (RTT) derives its temporal behavior, forming a unified physical‑symbolic modeling stack.
+
+---
+
 # The Resonance Substrate Model  
 *A Whitepaper for the Triadic Frameworks Canon*
 
@@ -541,207 +556,3 @@ The following works provide foundational context for the physical, computational
   year={2018}
 }
 ```
-
----
-
-# **6. Repo Hygiene**
-
-## **6.1 Hygiene Checklist**
-
-A final pre‑submission pass should confirm the following structural and stylistic elements across the repository:
-
-### **Consistent README Tone**  
-Ensure that all README files (root and subdirectories) share a unified voice:  
-- clear  
-- canonical  
-- welcoming  
-- technically precise  
-- aligned with the triadic/architectural aesthetic  
-
-### **No Empty Folders Without `.keep`**  
-Any directory intended for future content should include a `.keep` file to signal intentional structure rather than accidental emptiness.
-
-### **Consistent Naming**  
-Verify that:  
-- folder names follow a predictable pattern  
-- schema files use consistent casing and separators  
-- simulation and experiment directories follow the same naming conventions  
-- operator and field names match the manuscript terminology  
-
-### **LICENSE Present**  
-A top‑level `LICENSE` file should be present and reflect your chosen open‑source license.
-
-### **CITATION.cff Present**  
-A `CITATION.cff` file should be included at the root to provide:  
-- canonical project name  
-- authorship  
-- version  
-- DOI (if applicable)  
-- preferred citation format  
-
-### **Version Tag (v0.1.0)**  
-Tag the repository with an initial semantic version:  
-```
-v0.1.0
-```  
-This signals stability and readiness for external review.
-
----
-
-## **6.2 Top‑Level “How to Navigate This Repo”**
-
-Below is a short, friendly, canonical navigation guide you can paste into your **root README.md** under a section titled *How to Navigate This Repository*.
-
----
-
-# **How to Navigate This Repository**
-
-This repository is organized as a coherent, layered system that mirrors the structure of the Resonance Substrate Model itself. Each directory corresponds to a specific domain of the framework—fields, operators, schemas, simulations, experiments, and documentation.
-
-A quick orientation:
-
-### **`docs/`**  
-Home of the whitepaper, diagrams, experimental notes, and conceptual materials.  
-Start here if you want to understand the theory, architecture, and narrative arc.
-
-### **`schemas/`**  
-The machine‑readable ontology of the substrate.  
-Each subfolder defines a domain: primitives, dimensional, quantum, sensing, identity, language, networking, infrastructure, lab, finance, coeus, and universe‑core.
-
-### **`simulations/`**  
-Executable examples demonstrating operator sequences, field evolution, and cross‑layer dynamics.  
-Start here if you want to run or extend the model computationally.
-
-### **`experiments/`**  
-Physical and conceptual experiment definitions, apparatus descriptions, and validation data.  
-Start here if you want to reproduce or analyze experimental results.
-
-### **`data/`**  
-Raw and processed datasets used in simulations and experiments.  
-Structured for reproducibility and clarity.
-
-### **`src/`**  
-Core implementation of fields, operators, integrators, diagnostics, and utilities.  
-Start here if you want to work directly with the substrate engine.
-
-### **`tests/`**  
-Unit and integration tests ensuring correctness and stability across the codebase.
-
-### **`LICENSE`, `CITATION.cff`, `README.md`**  
-Top‑level metadata defining how the project is shared, cited, and understood.
-
----
-
-# **7. Submission Package**
-
-## **7.1 Required Components**
-
-A complete submission package should include the following elements, prepared in a consistent, professional format.
-
-### **PDF Export of the Manuscript**  
-Generate a clean PDF version of the whitepaper using your preferred Markdown‑to‑PDF workflow.  
-Ensure that:  
-- figures render correctly  
-- section numbering is consistent  
-- references appear cleanly  
-- page breaks fall in reasonable places  
-
-This PDF is the primary artifact reviewers will read.
-
-### **Link to the GitHub Repository**  
-Include a direct link to the repository’s root, along with a short note describing:  
-- the purpose of the repo  
-- where to find the manuscript  
-- where to find schemas, simulations, and experiments  
-
-This signals transparency and reproducibility.
-
-### **Supplementary Materials**  
-Bundle any additional materials that support the submission, such as:  
-- simulation configs  
-- experimental datasets  
-- schema taxonomy snapshots  
-- diagrams or SVGs  
-- example outputs  
-- reproducibility notes  
-
-These can be provided as a ZIP archive or as a link to a dedicated folder in the repo.
-
-### **Cover Letter**  
-A short, professional cover letter should accompany the submission. It typically includes:  
-- the title of the manuscript  
-- a 2–3 sentence summary of the contribution  
-- why the work is relevant to the venue  
-- a statement confirming originality  
-- a link to the repository  
-- contact information  
-
-I can draft this for you when you’re ready.
-
----
-
-## **7.2 Optional Enhancements**
-
-These elements are not required, but they significantly strengthen the submission and give reviewers a deeper sense of the project’s maturity and trajectory.
-
-### **Origin Story Appendix**  
-A short appendix describing:  
-- the motivation behind the model  
-- the conceptual lineage  
-- the synthesis of your multi‑layer experience  
-- the moment the triadic structure “clicked”  
-
-This humanizes the work and gives reviewers context for the architecture’s coherence.
-
-### **Glossary**  
-A glossary of key terms—operators, fields, layers, schema domains—helps readers navigate the conceptual universe without friction.  
-This is especially valuable for interdisciplinary venues.
-
-### **Roadmap for v0.2**  
-A concise roadmap outlining:  
-- planned operator extensions  
-- schema expansions  
-- simulation improvements  
-- experimental validation goals  
-- potential applications  
-
-This signals that the project is active, evolving, and strategically guided.
-
----
-
-# 🌈 **8. Execution Plan (How We’ll Step Through It Together)**
-
-This project advances through a clear, sequential workflow designed to refine the manuscript, strengthen the supporting materials, and prepare a complete submission package. Each step is modular and self‑contained, allowing focused progress without overwhelming scope.
-
-### **1. Abstract**  
-Craft a concise, high‑impact summary that captures the model’s purpose, structure, validation, and implications.
-
-### **2. Narrative Arc**  
-Establish the conceptual through‑line of the manuscript, guiding the reader from motivation to architecture to validation and future directions.
-
-### **3. Figures (Placeholders)**  
-Insert clean, text‑based placeholders for the triadic field diagram, operator pipeline, and dimensional layer stack to anchor the manuscript visually.
-
-### **4. Conclusion**  
-Write a strong, forward‑looking conclusion that synthesizes what the model achieves, what it unlocks, and where it leads next.
-
-### **5. Experimental Validation Summary**  
-Summarize the key experiments—Faraday paradox, rotating conductor tests, resonance alignment—and articulate how they validate the model.
-
-### **6. Metrics Table**  
-Provide a simple, quantitative table (with placeholders) for alignment convergence, resonance stability, EMF vs RPM correlation, and coherence score.
-
-### **7. Schema Overview Diagram (Text Placeholder)**  
-Add a one‑page schema taxonomy diagram covering primitives, dimensional, quantum, energy, sensing, identity, language, networking, infrastructure, lab, finance, coeus, and universe‑core domains.
-
-### **8. Simulation Example**  
-Include a submission‑ready simulation example with config, explanation, expected output, and a tiny plot placeholder.
-
-### **9. References**  
-Add a clean, minimal reference list and optional BibTeX block spanning classical EM, coherence theory, synergetics, distributed systems, and ontology literature.
-
-### **10. Repo Hygiene Pass**  
-Verify consistent naming, README tone, `.keep` usage, LICENSE, CITATION.cff, and version tagging. Add a top‑level “How to Navigate This Repo” section.
-
-### **11. Submission Package Prep**  
-Prepare the PDF export, GitHub link, supplementary materials, and cover letter. Optionally include an origin story appendix, glossary, and roadmap for v0.2.
