@@ -8,6 +8,35 @@ Schemas defining cognitive, reasoning, and meta‑substrate structures, includin
 
 These schemas support advanced reasoning and meta‑substrate modeling.
 
+---
+
+# 🧠 **What this schema represents**
+
+The **Coeus layer** is your:
+
+- semantic  
+- symbolic  
+- cognitive  
+- identity  
+- meaning‑alignment  
+
+layer of the RSM.
+
+This schema defines:
+
+### **identity**  
+Who/what the semantic entity *is*.
+
+### **semantic_node**  
+What concept it represents and how it connects.
+
+### **symbolic_resonance**  
+How strongly it resonates, aligns, and coheres.
+
+### **metadata**  
+Optional versioning and notes.
+
+This is intentionally minimal, extensible, and aligned with the rest of your ontology.
 
 ---
 
