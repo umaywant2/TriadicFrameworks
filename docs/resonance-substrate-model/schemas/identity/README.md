@@ -8,6 +8,18 @@ Schemas defining identity, agent, and semantic‑packet structures, including:
 
 These schemas support semantic-layer modeling and distributed agent systems.
 
+---
+
+This gives you a **canonical identity layer** that works across:
+
+- semantic entities  
+- distributed agents  
+- substrate nodes  
+- symbolic constructs  
+- experimental apparatus components  
+- simulation participants  
+
+It also keeps the structure parallel to your other schemas, which makes the whole RSM ontology feel cohesive and intentional.
 
 ---
 
