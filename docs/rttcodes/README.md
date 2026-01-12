@@ -1,54 +1,29 @@
-# 🏳️‍🌈 **RTTcodes — A QR‑Compatible Metadata Layer for Resonance‑Time Theory**
+# 🏳️‍🌈 RTTcodes — A QR‑Compatible Metadata Layer for Resonance‑Time Theory
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
-RTTcodes provide a universal, QR‑compatible way to identify, classify, and navigate artifacts across the TriadicFrameworks ecosystem. They act as **scannable resonance identifiers**, binding any artifact—digital or physical—to its canonical documentation, lineage, and onboarding guides.
+RTTcodes provide a universal, scannable way to identify, classify, and navigate
+artifacts across the TriadicFrameworks ecosystem. They bind any artifact—
+digital or physical—to its canonical documentation, lineage, and onboarding
+guides.
 
-RTTcodes are designed to work anywhere QR codes already operate in industry, science, and engineering, while adding a structured RTT‑native metadata layer.
+An RTTcode is:
 
----
+- **QR‑compatible** (works with any standard scanner)
+- **schema‑validated** (structured metadata)
+- **domain‑aware** (RTT, SET, Substrate, Observer, Governance, Docs, Other)
+- **triad‑capable** (optional resonance‑time triad metadata)
+- **tool‑generated** (JS and Python generators included)
+- **style‑guided** (consistent visual identity across domains)
 
-## **Purpose**
-
-RTTcodes enable:
-
-- **Artifact binding**  
-  Every folder, diagram, simulation, or manuscript section can carry its own RTTcode linking to its canonical representation.
-
-- **Cross‑domain navigation**  
-  Codes unify RTT, SET fields, substrate models, observer hierarchies, and future domains.
-
-- **Onboarding clarity**  
-  Scanning an RTTcode takes contributors directly to the correct documentation or operator guide.
-
-- **Versioned lineage**  
-  RTTcodes can encode version, domain, and resonance metadata, preserving the evolution of each artifact.
+RTTcodes are designed to operate anywhere QR codes already function in science,
+engineering, and documentation workflows, while adding an RTT‑native metadata
+layer.
 
 ---
 
-## **Design Principles**
+## 📦 RTTcode Structure
 
-RTTcodes are:
-
-- **QR‑compatible**  
-  Fully readable by standard QR scanners and industrial systems.
-
-- **Metadata‑rich**  
-  They encode structured RTT information in a compact JSON payload.
-
-- **Domain‑aware**  
-  Each code identifies its domain (e.g., `substrate`, `rtt`, `set`, `observer`).
-
-- **Extensible**  
-  The schema supports optional resonance triads, checksums, and future fields.
-
-- **Visual and symbolic**  
-  RTTcodes may include optional triadic overlays or domain color cues while remaining machine‑readable.
-
----
-
-## **Schema Overview**
-
-RTTcodes encode a structured payload. A typical example:
+A minimal RTTcode payload looks like:
 
 ```json
 {
@@ -64,62 +39,91 @@ RTTcodes encode a structured payload. A typical example:
 }
 ```
 
-The full schema is defined in:
+This payload is validated against the canonical schema and then encoded into a
+URL+token format:
 
 ```
-docs/rttcodes/schema/rttcode.schema.json
+https://triadicframeworks.org/rttcode?substrate=v1.0-f0.85-t120ms-Q0.92
 ```
+
+The generators convert this into a QR‑compatible PNG.
 
 ---
 
-## **Repository Structure**
+## 📁 rttcodes - Folder Overview
 
-```
-docs/
-  rttcodes/
-    README.md
-    schema/
-      rttcode.schema.json
-      rttcode-payload-example.json
-    generators/
-      python/
-        generate_rttcode.py
-      js/
-        generate_rttcode.js
-    validators/
-      validate_rttcode.py
-    style/
-      visual-guidelines.md
-      color-domains.png
-      rttcode-layout.svg
-    examples/
-      substrate/
-      rtt/
-      set/
-```
+### [schema/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rttcodes/schema/)
+The canonical RTTcode JSON Schema and minimal examples.
 
-Each folder contains reference implementations, style guides, and example RTTcodes for real TriadicFrameworks artifacts.
+### [validators/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rttcodes/validators)
+Tools that verify RTTcode payload correctness.
+
+### [generators/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rttcodes/generators)
+Language‑specific RTTcode generators (JS and Python).
+
+### [style/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rttcodes/style)
+Visual guidelines, color domains, and the RTTcode layout reference.
+
+### [examples/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rttcodes/examples)
+Fully generated RTTcodes for each domain, including styled PNGs.
 
 ---
 
-## **Usage**
+## 🛠 Generating RTTcodes
 
-RTTcodes can be embedded in:
+RTTcodes can be generated using:
 
-- Markdown (`README.md`)
-- LaTeX manuscripts
-- SVG diagrams
-- Simulation configs
-- Physical prototypes
-- Lab notebooks
-- Educational materials
+- **JavaScript** (`generators/js/generate_rttcode.js`)
+- **Python** (`generators/python/generate_rttcode.py`)
 
-They serve as a universal pointer to the canonical source of truth.
+Both:
+
+- validate the payload  
+- build the URL+token  
+- output a QR‑compatible PNG  
+
+See the generator READMEs for usage.
 
 ---
 
-## **Status**
+## 🎨 Visual Identity
 
-This is the **initial scaffold** for the RTTcode system.  
-Files will be added as the schema, generators, and validators are developed.
+RTTcodes follow a consistent visual language:
 
+- domain‑specific color palettes  
+- triadic overlay geometry  
+- QR‑safe layout rules  
+- optional resonance‑time motifs  
+
+See `style/visual-guidelines.md` and `style/rttcode-layout.svg`.
+
+---
+
+## 📚 Examples
+
+Each domain includes:
+
+- a valid RTTcode JSON payload  
+- a generated QR PNG  
+- domain‑specific styling  
+
+See `examples/` for RTT, SET, Substrate, and more.
+
+---
+
+## 🌐 Purpose
+
+RTTcodes unify the TriadicFrameworks ecosystem by providing:
+
+- a stable metadata layer  
+- a scannable entry point into canonical docs  
+- a consistent way to reference artifacts across domains  
+- a bridge between physical and digital materials  
+
+They are the “ISBN numbers” of the Resonance‑Time universe — but dynamic,
+domain‑aware, and triad‑capable.
+
+---
+
+For contributors, tool authors, and documentation maintainers, this folder is
+the authoritative reference for everything RTTcode‑related.
