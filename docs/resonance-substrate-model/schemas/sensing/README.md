@@ -9,6 +9,14 @@ Schemas describing sensing, measurement, and uncertainty models, including:
 
 These schemas support experiments, validation, and real-world integration.
 
+---
+
+This sensing layer is exactly what your **FFF emitters** will hook into:
+
+- They’ll declare their **modality** (likely resonance_envelope + energy).  
+- They’ll define **sampling** behavior (continuous or event‑driven).  
+- They’ll specify **resolution** and **noise models**.  
+- And they’ll couple directly into the resonance substrate via **resonance_coupling**.
 
 ---
 
