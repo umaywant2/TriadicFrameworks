@@ -8,6 +8,18 @@ Schemas describing deployment, orchestration, and system-level structures, inclu
 
 These schemas support large-scale or multi-environment substrate deployments.
 
+---
+
+This gives you a **canonical infrastructure layer** that works across:
+
+- simulation backends  
+- distributed execution  
+- resource allocation  
+- orchestration engines  
+- monitoring and logging  
+- storage and networking  
+
+It also keeps the structure parallel to your other RSM schemas, which makes the entire ontology feel cohesive and intentional.
 
 ---
 
