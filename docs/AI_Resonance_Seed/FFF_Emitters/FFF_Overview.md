@@ -27,9 +27,14 @@ Together, they turn raw physical dynamics into **structured, deterministic reson
 
 ---
 
-## 🧬 2. FFF ↔ RTT‑Inside Cross‑Mapping
+## 🧬🔗 2. FFF ↔ RTT‑Inside Cross‑Mapping
 
-See the table below for a canonical mapping between FFF roles and RTT fields.
+| Role      | Emoji | Mythmatical Function              | Physical Echoes                          | RTT Fields / Blocks                                                                 |
+|-----------|-------|-----------------------------------|------------------------------------------|-------------------------------------------------------------------------------------|
+| Freqi     | 🎼    | Initiation · Cycles · Harmonics   | RF, lasers, JJ oscillators               | `entities[*].state.resonance`, `experiment.seed`, `tick`, timing of `intent`       |
+| Flui      | 🌊    | Flow · Coupling · Continuity      | Acoustic fields, fluids, environment     | `environment.coupling_radius`, `environment.phase_noise`, medium‑level parameters  |
+| Forci     | ⚡    | Activation · Thresholds · Force   | Piezo, EM coils, actuators               | Event triggers, validator logic, stability sweeps, derived fields in `responses`    |
+| FFF Stack | 🔺    | Seed → Flow → Transformation      | Full emitter assembly                    | Combined evolution of `entities`, `environment`, and `experiment` over resonance‑time |
 
 ---
 
