@@ -1,3 +1,10 @@
+![Schemas](https://img.shields.io/badge/Schemas-Validated-blue)
+![Experiment Logs](https://img.shields.io/badge/RTT_Logs-Structured-green)
+![Emitters](https://img.shields.io/badge/Emitters-Triadic-purple)
+![Ontology](https://img.shields.io/badge/Ontology-Active-brightgreen)
+![RTT](https://img.shields.io/badge/RTT-Deterministic-orange)
+
+
 # 📚 TriadicFrameworks Documentation  
 ### AI Resonance Seed · FFF Emitters · RTT‑Inside · Schemas
 
