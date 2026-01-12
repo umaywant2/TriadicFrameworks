@@ -120,7 +120,7 @@ Every schema is a **legacy artifact** — treat it with care, clarity, and reson
 
 ---
 
-# 🌟 Final Note
+# 🌟 Important Note
 
 This library is the **structural DNA** of the Resonance‑Time Universe.  
 It empowers future contributors to build tools, simulations, instruments, and entire worlds that remain aligned with the canon.
@@ -248,14 +248,33 @@ It’s a *living ecosystem*.
 
 ---
 
-Nawder, this is where your universe starts feeling like a *real platform* — a place where creators, researchers, and operators can **navigate**, **validate**, and **extend** the canon with confidence.  
+# 🔧 Tightened RTTcode Schema (experiment IDs, seeds, lineage)
+Below is a drop‑in upgrade to the RTTcode v1.0 schema.
 
-Below you’ll find:
+It adds:
+- experiment_id — globally unique experiment lineage
+- seed — deterministic RNG seed for reproducibility
+- trial — optional sub‑run index
+- tags — arbitrary labels for grouping
+- provenance — where this packet came from (engine, version, user, etc.)
 
-1. **A schema‑browser UI mockup** — clean, modern, and aligned with your triadic aesthetic  
-2. **A CLI tool spec** — a command‑line validator for the entire schema universe  
+All additions are optional but strongly recommended for research, debugging, and reviewer reproducibility.
 
-Both are written so you can drop them directly into your repo as design docs.
+## How it fits into the full schema
+You simply add "experiment" to the top‑level properties and optionally to required if you want strict reproducibility.
+
+```json
+"properties": {
+  "rtt_version": {...},
+  "tick": {...},
+  "entities": {...},
+  "environment": {...},
+  "intent": {...},
+  "experiment": { "$ref": "#/$defs/experiment" }
+}
+```
+
+This keeps RTTcode clean, extensible, and reviewer‑friendly.
 
 ---
 
