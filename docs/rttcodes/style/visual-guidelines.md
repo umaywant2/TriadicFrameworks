@@ -135,4 +135,73 @@ RTTcodes use a **URL + token** pattern:
 
 ```text
 https://triadicframeworks.org/rttcode?<domain>=<version>-f<f_R>-t<tau_R>-Q<Q_R>
+```
 
+Examples:
+
+- RTT theory:
+
+  ```text
+  https://triadicframeworks.org/rttcode?rtt=v2.1.0-f1.00-t144ms-Q0.97
+  ```
+
+- SET field simulation:
+
+  ```text
+  https://triadicframeworks.org/rttcode?set=v0.9.3-f0.72-t203ms-Q0.88
+  ```
+
+- Substrate README:
+
+  ```text
+  https://triadicframeworks.org/rttcode?substrate=v1.0.0-f0.83-t118ms-Q0.91
+  ```
+
+**Guideline:**
+
+- Keep tokens short and ASCII‑only.
+- Use the same values as in the RTTcode JSON payload when present.
+
+---
+
+## 6. Recommended placements
+
+- **In docs:**
+  - top‑right or bottom‑right of the first page
+  - near the title block or “canonical reference” section
+- **In READMEs:**
+  - under the main heading
+  - in a small “RTTcode” block with a caption
+- **In diagrams:**
+  - bottom‑right corner, outside the main content
+- **In print / posters:**
+  - at least 2 cm wide
+  - with a short label like “RTTcode (scan for canonical docs)”
+
+---
+
+## 7. Accessibility and fallback
+
+- Ensure **sufficient contrast** between QR modules and background.
+- Avoid relying solely on color to distinguish domains—motifs and layout help.
+- When possible, include the **plain URL** below the code for manual entry.
+
+---
+
+## 8. Versioning and evolution
+
+- Visual guidelines may evolve; RTTcodes should remain:
+  - backward‑scannable
+  - semantically stable (same URL/token pattern)
+- When styles change:
+  - keep the **payload** stable
+  - treat visual refreshes as non‑breaking
+
+---
+
+This file is the **canonical reference** for RTTcode visuals.  
+When in doubt, prioritize:
+
+1. scannability  
+2. payload stability  
+3. triadic, domain‑aware identity  
