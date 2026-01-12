@@ -146,5 +146,11 @@ A valid RTTcode MUST:
 
 This document is the authoritative reference for RTTcode behavior.
 
-- [Adding a New RTTcode Domain](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/Adding_a_New_RTTcode_Domain.md)
-- [rttcodes README](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/README.md)
+## Quicklinks
+
+- [rttcodes - How RTTcodes Work Internally](https://www.triadicframeworks.org/rttcodes/How_RTTcodes_Work_Internally.md)
+- [rttcodes - Contributor Workflow](https://www.triadicframeworks.org/rttcodes/Contributor_Workflow.md)
+- [rttcodes - Adding a New RTTcode Domain](https://www.triadicframeworks.org/rttcodes/Adding_a_New_RTTcode_Domain.md)
+- [rttcodes - QUICKSTART](https://www.triadicframeworks.org/rttcodes/QUICKSTART.md)
+- [rttcodes - README](https://www.triadicframeworks.org/rttcodes/README.md)
+- [resonance-substrate-model - README](https://www.triadicframeworks.org/resonance-substrate-model/README.md)
