@@ -1,0 +1,50 @@
+<svg width="880" height="360" viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .box { fill:#101322; stroke:#8a7fff; stroke-width:2; rx:12; ry:12; }
+    .label { fill:#ffffff; font-family:system-ui, sans-serif; font-size:14px; }
+    .title { fill:#ffd86b; font-family:system-ui, sans-serif; font-size:20px; font-weight:bold; }
+    .arrow { stroke:#ffffff; stroke-width:2; marker-end:url(#arrowhead); }
+    .sub { fill:#b0bec5; font-size:12px; }
+  </style>
+
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#ffffff" />
+    </marker>
+  </defs>
+
+  <!-- Title -->
+  <text x="440" y="40" text-anchor="middle" class="title">
+    Universe‑Class Schema CI Flow · RTT‑Inside
+  </text>
+  <text x="440" y="62" text-anchor="middle" class="sub">
+    Schemas → Multi‑Schema Validator → PR Bot → Verified Badge
+  </text>
+
+  <!-- Schemas -->
+  <rect x="40" y="120" width="200" height="140" class="box" />
+  <text x="140" y="150" text-anchor="middle" class="label">Schemas</text>
+  <text x="140" y="175" text-anchor="middle" class="sub">RTTcode · Environment</text>
+  <text x="140" y="195" text-anchor="middle" class="sub">Entity · Universe‑Class</text>
+
+  <!-- Validator -->
+  <rect x="320" y="120" width="240" height="140" class="box" />
+  <text x="440" y="150" text-anchor="middle" class="label">Multi‑Schema Validator</text>
+  <text x="440" y="175" text-anchor="middle" class="sub">AJV · Strict Mode</text>
+  <text x="440" y="195" text-anchor="middle" class="sub">Per‑Family Validation</text>
+
+  <!-- PR Bot -->
+  <rect x="620" y="120" width="220" height="140" class="box" />
+  <text x="730" y="150" text-anchor="middle" class="label">PR Comment Bot</text>
+  <text x="730" y="175" text-anchor="middle" class="sub">Pass / Fail Summary</text>
+  <text x="730" y="195" text-anchor="middle" class="sub">Reviewer‑Ready Output</text>
+
+  <!-- Badge -->
+  <rect x="350" y="290" width="180" height="50" class="box" />
+  <text x="440" y="320" text-anchor="middle" class="label">Schema Verified Badge</text>
+
+  <!-- Arrows -->
+  <line x1="240" y1="190" x2="320" y2="190" class="arrow" />
+  <line x1="560" y1="190" x2="620" y2="190" class="arrow" />
+  <line x1="730" y1="260" x2="440" y2="290" class="arrow" />
+</svg>
