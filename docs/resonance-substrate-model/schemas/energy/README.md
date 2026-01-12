@@ -9,6 +9,29 @@ Schemas defining energy-related structures, including:
 
 These schemas support energy-aware simulations and analysis.
 
+---
+
+# 🔍 What this schema captures
+
+### **energy_field**  
+Local energy magnitude, gradient, and units.
+
+### **resonance_amplitude**  
+Amplitude + coherence factor + stabilization bounds.
+
+### **dissipation**  
+Energy loss mechanisms (linear, nonlinear, threshold).
+
+### **stability**  
+Optional constraints for bounded evolution.
+
+### **coupling**  
+Energy coupling to scalar, vector/spin, and resonance fields.
+
+### **metadata**  
+Versioning and notes.
+
+This schema is fully aligned with your RSM v1.0 ontology and mirrors the structure of your other schema families.
 
 ---
 
