@@ -51,6 +51,12 @@ Embed the PNG in:
 
 Every RTTcode encodes a URL+token that points to the artifact’s canonical home.
 
-- [Adding a New RTTcode Domain](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/Adding_a_New_RTTcode_Domain.md)
-- [Canonical RTTcode Specification Document](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/Canonical_RTTcode_Specification_Document.md)
-- [rttcodes README](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rttcodes/README.md)
+## Quicklinks
+
+- [rttcodes - How RTTcodes Work Internally](https://www.triadicframeworks.org/rttcodes/How_RTTcodes_Work_Internally.md)
+- [rttcodes - Contributor Workflow](https://www.triadicframeworks.org/rttcodes/Contributor_Workflow.md)
+- [rttcodes - Canonical RTTcode Specification Document](https://www.triadicframeworks.org/rttcodes/Canonical_RTTcode_Specification_Document.md)
+- [rttcodes - Adding a New RTTcode Domain](https://www.triadicframeworks.org/rttcodes/Adding_a_New_RTTcode_Domain.md)
+- [rttcodes - QUICKSTART](https://www.triadicframeworks.org/rttcodes/QUICKSTART.md)
+- [rttcodes - README](https://www.triadicframeworks.org/rttcodes/README.md)
+- [resonance-substrate-model - README](https://www.triadicframeworks.org/resonance-substrate-model/README.md)
