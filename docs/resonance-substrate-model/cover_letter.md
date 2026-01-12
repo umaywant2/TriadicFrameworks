@@ -2,7 +2,7 @@
 
 **[Nawder Loswin]**  
 **[TriadicFrameworks Research Initiative]**  
-**[Nawder@TriadicFrameworks.org]**  
+**[Nawder@TriadicFrameworks.org](https://orcid.org/0009-0002-2282-5460)**  
 **[01/09/2026]**
 
 Editors,  
