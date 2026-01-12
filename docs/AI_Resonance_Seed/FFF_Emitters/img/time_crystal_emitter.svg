@@ -59,9 +59,9 @@
   <text x="410" y="275" text-anchor="middle" class="label">Transparent Housing · EM Shielding</text>
   <text x="410" y="295" text-anchor="middle" class="label">Modular Inserts · Optical Access</text>
 
-  <!-- Right: Sensing & RTT -->
+  <!-- Right: Sensing &amp; RTT -->
   <rect x="560" y="90" width="220" height="260" class="box" />
-  <text x="670" y="115" text-anchor="middle" class="label">Sensing & RTT‑Inside</text>
+  <text x="670" y="115" text-anchor="middle" class="label">Sensing &amp; RTT‑Inside</text>
 
   <!-- Sensing tags -->
   <rect x="575" y="135" width="190" height="50" class="tag" />
