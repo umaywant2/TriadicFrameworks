@@ -8,6 +8,19 @@ Schemas describing linguistic, symbolic, and semantic-layer structures, includin
 
 These schemas support semantic computation and higher-layer reasoning.
 
+---
+
+This schema gives you a **canonical language layer** that works across:
+
+- semantic nodes  
+- identity constructs  
+- distributed agents  
+- symbolic resonance  
+- cognitive modeling  
+- experimental annotation  
+- simulation metadata  
+
+It keeps everything parallel to your other RSM schemas, which makes the entire ontology feel unified and intentional.
 
 ---
 
