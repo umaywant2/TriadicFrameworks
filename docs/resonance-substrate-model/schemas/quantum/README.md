@@ -9,6 +9,14 @@ This directory contains schemas for quantum-layer structures, including:
 
 These schemas support quantum-layer simulation and cross-layer interactions.
 
+---
+
+This schema gives you a **canonical quantum layer** that:
+
+- encodes your **0D → 1D → 2D triad**,  
+- supports entanglement,  
+- supports coupling to the substrate,  
+- and stays perfectly aligned with the rest of your RSM schema ecosystem.
 
 ---
 
