@@ -9,6 +9,19 @@ Schemas defining experimental structures, including:
 
 These schemas support reproducible scientific workflows.
 
+---
+
+This schema gives you a **canonical lab layer** that works across:
+
+- physical labs  
+- simulated labs  
+- experimental setups  
+- safety and access control  
+- environmental conditions  
+- equipment inventories  
+- protocol definitions  
+
+It also keeps the structure parallel to your other RSM schemas, which makes the entire ontology feel coherent and intentional.
 
 ---
 
