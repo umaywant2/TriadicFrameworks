@@ -1,5 +1,6 @@
 ![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-QR%20Metadata%20Layer-00b3b8?style=flat-square&logo=qrcode&logoColor=white)
 ![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Canonical%20Identifier-1a1a1a?style=flat-square&logo=qrcode&logoColor=white)
+![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Resonance--Time%20Metadata-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)
 
 # 🏳️‍🌈 RTTcodes — A QR‑Compatible Metadata Layer for Resonance‑Time Theory
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
