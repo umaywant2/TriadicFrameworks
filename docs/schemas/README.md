@@ -35,6 +35,8 @@
   <img src="https://img.shields.io/badge/TriadicFrameworks-Universe--Class%20Certified-4527a0" />
   <img src="https://img.shields.io/badge/Canonical-Source%20of%20Truth-3949ab" />
 
+  <img src="https://www.triadicframeworks.org/schemas/img/schema_ci_flow.svg" width="820" />
+
 </p>
 
 <p align="center">
