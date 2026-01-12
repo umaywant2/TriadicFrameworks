@@ -54,6 +54,58 @@ The generators convert this into a QR‑compatible PNG.
 
 ---
 
+# 🌲 1. Folder Tree Diagram  
+*A clean, readable map of the RTTcodes subsystem.*
+
+```text
+docs/
+└── rttcodes/
+    ├── README.md
+    │
+    ├── schema/
+    │   ├── rttcode.schema.json
+    │   └── examples/
+    │       ├── minimal.json
+    │       ├── rtt.json
+    │       ├── set.json
+    │       └── substrate.json
+    │
+    ├── validators/
+    │   ├── README.md
+    │   ├── validate_js.js
+    │   └── validate_python.py
+    │
+    ├── generators/
+    │   ├── README.md
+    │   ├── js/
+    │   │   ├── README.md
+    │   │   └── generate_rttcode.js
+    │   └── python/
+    │       ├── README.md
+    │       └── generate_rttcode.py
+    │
+    ├── style/
+    │   ├── README.md
+    │   ├── visual-guidelines.md
+    │   ├── rttcode-layout.svg
+    │   └── color-domains.png
+    │
+    └── examples/
+        ├── README.md
+        ├── rtt/
+        │   ├── README.md
+        │   ├── payload.json
+        │   └── rtt-rttcode.png
+        ├── set/
+        │   ├── README.md
+        │   ├── payload.json
+        │   └── set-rttcode.png
+        └── substrate/
+            ├── README.md
+            ├── payload.json
+            └── substrate-rttcode.png
+```
+
 ## 📁 rttcodes - Folder Overview
 
 ### [schema/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rttcodes/schema/)
