@@ -10,6 +10,32 @@ Experiment schemas define metadata and configuration for experimental setups, in
 
 These schemas support reproducibility and cross-experiment comparison.
 
+---
+
+# 🧪 What this schema captures
+
+### **apparatus**  
+Physical or simulated experimental setup.
+
+### **measurement**  
+What is measured, in what units, and how often.
+
+### **calibration**  
+Reference values, tolerances, and calibration methods.
+
+### **procedure**  
+Step‑by‑step instructions.
+
+### **data**  
+Format, fields, and sampling window.
+
+### **replication**  
+Environmental conditions, initial states, reproducibility notes.
+
+### **metadata**  
+Versioning and experiment type.
+
+This schema is fully aligned with your RSM v1.0 ontology and mirrors the structure of your other schema families.
 
 ---
 
