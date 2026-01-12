@@ -1,1 +1,77 @@
+# RTTcode Generator (Python)
+# Usage:
+#   pip install qrcode[pil]
+#   python generate_rttcode.py rttcode-payload.json output.png
+
+import json
+import sys
+import qrcode
+from urllib.parse import urlencode
+
+def validate_payload(payload):
+    required = ["domain", "artifact_type", "version", "url"]
+    for key in required:
+        if key not in payload:
+            raise ValueError(f"Missing required field: {key}")
+
+    if not isinstance(payload["domain"], str):
+        raise TypeError("domain must be a string")
+    if not isinstance(payload["artifact_type"], str):
+        raise TypeError("artifact_type must be a string")
+    if not isinstance(payload["version"], str):
+        raise TypeError("version must be a string")
+    if not isinstance(payload["url"], str):
+        raise TypeError("url must be a string")
+
+    if "triad" in payload:
+        triad = payload["triad"]
+        for key in ["f_R", "tau_R", "Q_R"]:
+            if key in triad and not isinstance(triad[key], str):
+                raise TypeError(f"triad.{key} must be a string")
+
+def build_rttcode_url(payload):
+    base_url = "https://triadicframeworks.org/rttcode"
+    domain = payload["domain"]
+    version = payload["version"]
+
+    f = "f?" if "triad" not in payload or "f_R" not in payload["triad"] else f"f{payload['triad']['f_R']}"
+    t = "t?" if "triad" not in payload or "tau_R" not in payload["triad"] else f"t{payload['triad']['tau_R']}"
+    q = "Q?" if "triad" not in payload or "Q_R" not in payload["triad"] else f"Q{payload['triad']['Q_R']}"
+
+    token = f"{version}-{f}-{t}-{q}"
+    query = urlencode({domain: token})
+    return f"{base_url}?{query}"
+
+def generate_qr_code(data, output_path):
+    qr = qrcode.QRCode(
+        version=None,
+        error_correction=qrcode.constants.ERROR_CORRECT_H,
+        box_size=10,
+        border=2
+    )
+    qr.add_data(data)
+    qr.make(fit=True)
+    img = qr.make_image(fill_color="black", back_color="white")
+    img.save(output_path)
+
+def main():
+    if len(sys.argv) != 3:
+        print("Usage: python generate_rttcode.py <payload.json> <output.png>")
+        sys.exit(1)
+
+    payload_path = sys.argv[1]
+    output_path = sys.argv[2]
+
+    with open(payload_path, "r", encoding="utf-8") as f:
+        payload = json.load(f)
+
+    validate_payload(payload)
+    rtt_url = build_rttcode_url(payload)
+    print("RTTcode URL:", rtt_url)
+
+    generate_qr_code(rtt_url, output_path)
+    print("QR code saved to:", output_path)
+
+if __name__ == "__main__":
+    main()
 
