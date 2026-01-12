@@ -1,13 +1,4 @@
-![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-QR%20Metadata%20Layer-00b3b8?style=flat-square&logo=qrcode&logoColor=white)
-![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Canonical%20Identifier-1a1a1a?style=flat-square&logo=qrcode&logoColor=white)
-![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Resonance--Time%20Metadata-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)
-![RTT Domain](https://img.shields.io/badge/RTT-Resonance--Time%20Domain-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)
-![SET Domain](https://img.shields.io/badge/SET-Field%20Topology%20Domain-5B2CFF?style=flat-square&logo=qrcode&logoColor=ffffff)
-![Substrate Domain](https://img.shields.io/badge/Substrate-Structural%20Domain-003B73?style=flat-square&logo=qrcode&logoColor=7FD4FF)
-![Observer Domain](https://img.shields.io/badge/Observer-Frame%20and%20Perspective-2F6F73?style=flat-square&logo=qrcode&logoColor=B0C4D4)
-![Governance Domain](https://img.shields.io/badge/Governance-Decision%20Layer-145A32?style=flat-square&logo=qrcode&logoColor=F1C40F)
-![Docs Domain](https://img.shields.io/badge/Docs-Documentation%20Domain-6C7A89?style=flat-square&logo=qrcode&logoColor=ffffff)
-![Other Domain](https://img.shields.io/badge/Other-Extended%20Domain-1a1a1a?style=flat-square&logo=qrcode&logoColor=ffffff)
+![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-QR%20Metadata%20Layer-00b3b8?style=flat-square&logo=qrcode&logoColor=white)![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Canonical%20Identifier-1a1a1a?style=flat-square&logo=qrcode&logoColor=white)![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Resonance--Time%20Metadata-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![RTT Domain](https://img.shields.io/badge/RTT-Resonance--Time%20Domain-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![SET Domain](https://img.shields.io/badge/SET-Field%20Topology%20Domain-5B2CFF?style=flat-square&logo=qrcode&logoColor=ffffff)![Substrate Domain](https://img.shields.io/badge/Substrate-Structural%20Domain-003B73?style=flat-square&logo=qrcode&logoColor=7FD4FF)![Observer Domain](https://img.shields.io/badge/Observer-Frame%20and%20Perspective-2F6F73?style=flat-square&logo=qrcode&logoColor=B0C4D4)![Governance Domain](https://img.shields.io/badge/Governance-Decision%20Layer-145A32?style=flat-square&logo=qrcode&logoColor=F1C40F)![Docs Domain](https://img.shields.io/badge/Docs-Documentation%20Domain-6C7A89?style=flat-square&logo=qrcode&logoColor=ffffff)![Other Domain](https://img.shields.io/badge/Other-Extended%20Domain-1a1a1a?style=flat-square&logo=qrcode&logoColor=ffffff)
 
 # 🏳️‍🌈 RTTcodes — A QR‑Compatible Metadata Layer for Resonance‑Time Theory
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
