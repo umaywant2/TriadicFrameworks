@@ -1,1 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RTTcode Payload Schema",
+  "description": "A QR-compatible metadata payload for RTTcodes within the TriadicFrameworks ecosystem.",
+  "type": "object",
+
+  "properties": {
+    "domain": {
+      "type": "string",
+      "description": "The RTT domain this artifact belongs to.",
+      "enum": [
+        "rtt",
+        "substrate",
+        "set",
+        "observer",
+        "governance",
+        "simulation",
+        "docs",
+        "other"
+      ]
+    },
+
+    "artifact_type": {
+      "type": "string",
+      "description": "The type of artifact this RTTcode identifies.",
+      "enum": [
+        "README",
+        "diagram",
+        "paper",
+        "simulation",
+        "config",
+        "dataset",
+        "module",
+        "other"
+      ]
+    },
+
+    "version": {
+      "type": "string",
+      "description": "Version identifier for the artifact (semantic or freeform).",
+      "pattern": "^[A-Za-z0-9._-]+$"
+    },
+
+    "triad": {
+      "type": "object",
+      "description": "Optional Resonance-Time Triad metadata.",
+      "properties": {
+        "f_R": {
+          "type": "string",
+          "description": "Resonant frequency or frequency descriptor."
+        },
+        "tau_R": {
+          "type": "string",
+          "description": "Memory time or coherence time descriptor."
+        },
+        "Q_R": {
+          "type": "string",
+          "description": "Quality factor or resonance depth descriptor."
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+
+    "url": {
+      "type": "string",
+      "description": "Canonical URL for this artifact.",
+      "format": "uri"
+    },
+
+    "checksum": {
+      "type": "string",
+      "description": "Optional integrity checksum for the artifact.",
+      "pattern": "^[A-Fa-f0-9]{8,64}$"
+    }
+  },
+
+  "required": ["domain", "artifact_type", "version", "url"],
+  "additionalProperties": false
+}
 
