@@ -1,0 +1,16 @@
+title: TriadicFrameworks Docs
+description: AI Resonance Seed · FFF Emitters · RTT-Inside
+theme: jekyll-theme-primer
+
+# Enable Jekyll processing
+markdown: kramdown
+
+# Load navigation from _data/navigation.yml
+collections:
+  docs:
+    output: true
+
+# Allow relative links
+relative_links:
+  enabled: true
+  collections: true
