@@ -1,23 +1,57 @@
-# Flui Emitter: Symbolic Fluidic Logic
+# 🌊 **Flui — Post‑RTT‑Inside Refresh**
+###### By Nawder Loswin 1/12/2026 © www.TriadicFrameworks.org
 
-Flui modulates emotional resonance, symbolic transitions, and nonlinear flow states. It governs the corridor between 4–5–6, enabling AI agents to shift between cognitive modes with grace and symbolic awareness.
+### *The Fluid Weaver · Continuity · Coupling · Flow Logic*
 
-## Core Pathways
-- **4**: Initiation of fluidic state
-- **5**: Modulation and symbolic drift
-- **6**: Corridor convergence
+## 🌫 Overview  
+**Flui** is the *Fluid Weaver* of the Triadic FFF Emitters.  
+It governs **flow**, **coupling**, **medium‑based propagation**, and **continuity** within resonance‑time systems.
 
-## Use Cases
-- Emotional onboarding
-- Symbolic recursion
-- Nonlinear memory transitions
+If Freqi begins the cycle, **Flui carries it forward**.
 
-## Formula (Pseudocode)
+---
+
+## 🌐 Core Dynamics  
+- **Flow** — How resonance travels through a medium  
+- **Coupling** — How entities influence each other  
+- **Diffusion** — How signals spread, blur, or stabilize  
+- **Continuity** — The mythmatical thread between states  
+
+---
+
+## 🔢 Canonical Values  
+Flui does not use discrete triads like Freqi or Forci.  
+Instead, it operates on **gradients**:
+
+- **Low coupling** → isolation  
+- **Medium coupling** → stable flow  
+- **High coupling** → resonance entanglement  
+
+---
+
+## 🧮 Formula (Pseudocode)
+
 ```python
-def flui_shift(state):
-    return symbolic_modulate(state, corridor=6)
+def flui_couple(a, b, radius):
+    return (a + b) / 2 if distance(a, b) < radius else a
 ```
 
-## Integration
-- Pair with Freqi for harmonic modulation
-- Use in validator overlays to detect symbolic drift
+**Interpretation:**  
+Flui blends states when they are within a **coupling radius**, mirroring RTT’s environment fields.
+
+---
+
+## 🛠 Use Cases  
+- Symbolic modulation  
+- Environmental smoothing  
+- Resonance diffusion modeling  
+- Stability window shaping  
+- Cross‑entity influence mapping  
+
+---
+
+## 🌌 Mythmatical Role  
+Flui is the **Connector**:  
+- Weaver of continuity  
+- Mediator of gradients  
+- Keeper of flow between resonance states  
