@@ -62,29 +62,39 @@ This repository is the canonical home for the model and all supporting artifacts
 
 # **📁 How to Navigate This Repository**
 
-### **`docs/`**  
+### [docs/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/docs/)
+
 Whitepapers, diagrams, conceptual notes, and experimental write‑ups.
 
-### **`schemas/`**  
+### [schemas/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/)
+
 The full ontology of the substrate — primitives, dimensional, quantum, sensing, identity, language, networking, infrastructure, lab, finance, coeus, universe‑core.
 
-### **`simulations/`**  
+### [simulations/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/simulations/)
+
 Executable examples demonstrating operator sequences and cross‑layer dynamics.
 
-### **`experiments/`**  
+### [experiments/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/experiments/)
+
 Apparatus definitions, measurement procedures, and validation datasets.
 
-### **`data/`**  
+### [data/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/data/)
+
 Raw and processed datasets used in simulations and experiments.
 
-### **`src/`**  
+### [src/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/src/)
+
 Core implementation of fields, operators, integrators, and diagnostics.
 
-### **`tests/`**  
+### [tests/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/tests/)
+
 Unit and integration tests ensuring correctness and stability.
 
-### **Top‑Level Metadata**  
-`LICENSE`, `CITATION.cff`, `README.md`, `CONTRIBUTING.md`.
+### **Top‑Level Metadata**
+- [LICENSE](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/LICENSE)
+- [CITATION.cff](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/CITATION.cff)
+- [README.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/README.md)
+- [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/CONTRIBUTING.md)
 
 ---
 
@@ -105,8 +115,6 @@ A fast, friendly on‑ramp for newcomers:
 
 ### **📘 Full Contribution Guide**
 The canonical reference for contributing to the Resonance Substrate Model.
-
-👉 See: **[`CONTRIBUTING.md`](CONTRIBUTING.md)**
 
 ---
 
@@ -131,3 +139,25 @@ The canonical reference for contributing to the Resonance Substrate Model.
 # **📬 Citation**
 
 If you use this work, please cite it using the `CITATION.cff` file included in the repository.
+
+---
+
+# 🔗 **Operator Equations → Simulation Config Alignment**
+
+Here’s the alignment table that ties the math to your config keys.
+
+| Mathematical Symbol | Meaning | Simulation Config Key |
+|---------------------|---------|------------------------|
+| $$D_\phi$$ | scalar diffusion | `diffusion.scalar` |
+| $$D_V$$ | vector diffusion | `diffusion.vector` |
+| $$D_R$$ | resonance diffusion | `diffusion.resonance` |
+| $$\alpha_\phi$$ , $$\alpha_V$$ , $$\alpha_R$$ | alignment strengths | `alignment.scalar`, `alignment.vector`, `alignment.resonance` |
+| $$\beta_\phi$$ , $$\beta_V$$ , $$\beta_R$$ | coupling strengths | `coupling.scalar`, `coupling.vector`, `coupling.resonance` |
+| $$\gamma_\phi$$ , $$\gamma_V$$ , $$\gamma_R$$ | activation strengths | `activation.scalar`, `activation.vector`, `activation.resonance` |
+| $$\lambda_\phi$$ , $$\lambda_V$$ , $$\lambda_R$$ | damping | `stabilization.scalar`, `stabilization.vector`, `stabilization.resonance` |
+| $$R_{\max}$$ | resonance saturation | `resonance.max` |
+| $$\kappa$$ | coherence‑driven excitation | `resonance.coherence_gain` |
+| $$\phi^\ast$$ | target scalar profile | `targets.scalar` |
+| $$\vec{V}_{\mathrm{tar}}$$ | target vector field | `targets.vector` |
+
+This is exactly the kind of mapping reviewers love — it shows that our model is not just theoretical but **implemented and reproducible**.
