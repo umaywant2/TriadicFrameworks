@@ -101,3 +101,31 @@ jobs:
               issue_number: context.issue.number,
               body
             });
+
+  update-schema-badge:
+    name: Update Schema Verified badge
+    needs: validate-schemas
+    if: needs.validate-schemas.result == 'success' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update badge in docs/README.md
+        run: |
+          sed -i 's/<!--SCHEMA_STATUS-->.*<!--\/SCHEMA_STATUS-->/<!--SCHEMA_STATUS-->✅ Schema Verified<!--\/SCHEMA_STATUS-->/' docs/README.md
+
+      - name: Commit and push badge update
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+          git add docs/README.md
+          git commit -m "chore: mark schemas as verified (CI)"
+          git push
