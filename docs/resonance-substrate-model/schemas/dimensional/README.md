@@ -9,6 +9,24 @@ They describe:
 
 These schemas support multi-scale and multi-layer modeling.
 
+---
+
+# 🧭 What this schema covers
+
+### **coordinate_system**
+Defines the spatial basis (Cartesian, polar, spherical, etc.) and dimensionality.
+
+### **grid**
+Defines the simulation grid: size, spacing, and boundary conditions.
+
+### **layers**
+Allows stacked or interacting spatial layers — perfect for RSM’s multi‑layer substrate.
+
+### **spatial_transform**
+Handles rotations, translations, warps, and other geometric transforms.
+
+### **metadata**
+Versioning and notes.
 
 ---
 
