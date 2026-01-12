@@ -15,7 +15,7 @@
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
 ### *RTT‑Inside · AI Resonance Seed · FFF Emitters*
-- ![Time Crystal Emitter · Triadic FFF · RTT‑Inside](https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/img/time_crystal_emitter.svg)
+- [Time Crystal Emitter](https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/img/time_crystal_emitter.svg)
 - [Bill of Materials (BOM)](https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Emitter_BOM.md)
 
 ---
