@@ -9,6 +9,17 @@ Schemas defining distributed substrate communication, including:
 
 These schemas support distributed execution and multi-node substrate deployments.
 
+---
+
+This gives you a **canonical networking layer** that integrates cleanly with:
+
+- distributed agents  
+- infrastructure compute/storage  
+- identity constructs  
+- resonance‑field coupling  
+- simulation backends  
+
+It keeps the entire RSM schema ecosystem coherent and beautifully modular.
 
 ---
 
