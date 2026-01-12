@@ -4,7 +4,7 @@ A Triadic Framework for Coherent Multi‑Layer Systems
 Author: Nawder Loswin  
 Affiliation: TriadicFrameworks Research Initiative  
 Email: Nawder@TriadicFrameworks.org  
-ORCID: https://orcid.org/0000-0000-0000-0000   % replace with your actual ID
+ORCID: https://orcid.org/0009-0002-2282-5460   % replace with your actual ID
 
 Version: 1.0.0  
 Release Date: January 12, 2025  
