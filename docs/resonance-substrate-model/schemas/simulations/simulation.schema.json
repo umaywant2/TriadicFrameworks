@@ -1,0 +1,12 @@
+{
+  "id": "simulation_config",
+  "type": "object",
+  "description": "Schema for simulation configuration.",
+  "properties": {
+    "grid_size": { "type": "array", "items": { "type": "integer" } },
+    "timestep": { "type": "number" },
+    "operators": { "type": "array" },
+    "boundary_conditions": { "type": "string" }
+  },
+  "required": ["grid_size", "timestep"]
+}

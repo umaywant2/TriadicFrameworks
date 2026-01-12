@@ -1,0 +1,52 @@
+# Default Simulation Configuration
+# Resonance Substrate Model — Triadic Frameworks
+
+grid:
+  nx: 128
+  ny: 128
+  dx: 1.0
+  dy: 1.0
+
+time:
+  dt: 0.01
+  steps: 8000
+  snapshot_interval: 200
+
+params:
+  # Diffusion coefficients
+  D_S: 1.0
+  D_C: 1.0
+  D_T: 1.0
+
+  # Decay rates
+  gamma_S: 0.05
+  gamma_C: 0.05
+  gamma_T: 0.05
+
+  # Coupling strengths
+  lambda_SC: 1.0     # spin aligns with charge gradients
+  lambda_ST: 0.5     # temperature destabilizes spin
+  beta_CS: 0.4       # spin induces charge
+
+  # Noise levels
+  eta_S: 0.05
+  eta_C: 0.05
+
+  # Temperature baseline
+  T0: 0.0
+
+envelope:
+  alpha: 1.0
+  theta: 0.10
+
+output:
+  save_snapshots: true
+  save_final_state: true
+  save_envelope: true
+  save_metrics: true
+
+metadata:
+  profile: "default"
+  description: "Balanced configuration for general-purpose SET substrate simulations."
+  version: 1.0
+

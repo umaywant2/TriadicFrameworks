@@ -1,0 +1,12 @@
+{
+  "description": "Example resonance field snapshot for demonstration purposes.",
+  "grid_size": [4, 4],
+  "values": [
+    [0.0, 0.1, 0.2, 0.1],
+    [0.1, 0.3, 0.4, 0.2],
+    [0.0, 0.2, 0.3, 0.1],
+    [0.0, 0.1, 0.1, 0.0]
+  ],
+  "notes": "Placeholder resonance envelope sample."
+}
+

@@ -1,0 +1,52 @@
+# Experimental Simulation Configuration
+# Resonance Substrate Model — Triadic Frameworks
+
+grid:
+  nx: 192
+  ny: 192
+  dx: 1.0
+  dy: 1.0
+
+time:
+  dt: 0.01
+  steps: 12000
+  snapshot_interval: 300
+
+params:
+  # Diffusion coefficients (intentionally asymmetric)
+  D_S: 0.9
+  D_C: 0.6
+  D_T: 1.2
+
+  # Decay rates (slightly underdamped)
+  gamma_S: 0.03
+  gamma_C: 0.015
+  gamma_T: 0.025
+
+  # Coupling strengths (non‑standard experimental regime)
+  lambda_SC: 1.8     # strong spin alignment to charge gradients
+  lambda_ST: 1.1     # strong temperature‑driven destabilization
+  beta_CS: 0.7       # spin‑induced charge generation
+
+  # Noise levels (elevated for exploratory behavior)
+  eta_S: 0.15
+  eta_C: 0.12
+
+  # Temperature baseline (slightly offset)
+  T0: 0.2
+
+envelope:
+  alpha: 0.9
+  theta: 0.12
+
+output:
+  save_snapshots: true
+  save_final_state: true
+  save_envelope: true
+  save_metrics: true
+
+metadata:
+  profile: "experimental"
+  description: "High‑variance exploratory configuration for probing non‑equilibrium resonance dynamics."
+  version: 1.0
+
