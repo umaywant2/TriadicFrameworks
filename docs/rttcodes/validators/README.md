@@ -1,3 +1,5 @@
+![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Resonance--Time%20Metadata-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)
+
 # RTTcode Validators
 
 This folder contains tools that verify whether an RTTcode payload is valid,
@@ -18,3 +20,4 @@ Use these validators when:
 - testing generators
 
 Each validator is intentionally lightweight and easy to embed into other tools.
+
