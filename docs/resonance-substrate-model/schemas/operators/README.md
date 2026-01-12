@@ -11,6 +11,9 @@ Operator schemas define the configuration and parameters for all substrate opera
 
 These schemas ensure operators are validated, composable, and compatible across simulations.
 
+---
+
+This one completes the substrate’s core machinery — the operators are the verbs of your ontology, the rules of motion and transformation. Everything else you’ve built plugs into this.
 
 ---
 
