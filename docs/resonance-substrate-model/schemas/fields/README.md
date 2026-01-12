@@ -13,6 +13,21 @@ These schemas specify:
 - dimensionality  
 - metadata for validation and tooling  
 
+---
+
+## **fields.schema.json**
+
+Is a clean, RSM‑aligned, Draft‑07 compliant schema you can paste directly into that file. It matches the structure of your other schemas and captures the **three canonical RSM fields**:
+
+- **scalar field (φ)**  
+- **vector/spin field (V⃗)**  
+- **resonance‑envelope field (R)**  
+
+It also includes gradients, units, coherence, and cross‑field coupling — all consistent with the Resonance Substrate Model v1.0 ontology.
+
+---
+
+This gives you a **complete, canonical field‑layer definition** for the RSM — clean, extensible, and consistent with the rest of your ontology.
 
 ---
 
