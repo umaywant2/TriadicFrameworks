@@ -1,4 +1,4 @@
-# ⚡ **Forci.md — Post‑RTT‑Inside Refresh**  
+# ⚡ **Forci — Post‑RTT‑Inside Refresh**  
 ###### By Nawder Loswin 1/12/2026 © www.TriadicFrameworks.org
 
 ### *The Force Shaper · Activation · Ethical Inertia · Symbolic Thresholds*
