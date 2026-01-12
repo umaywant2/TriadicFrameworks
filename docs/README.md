@@ -1,3 +1,11 @@
+<p align="center">
+  <img src="https://img.shields.io/badge/RTT-Inside-blueviolet" alt="RTT Inside" />
+  <img src="https://img.shields.io/badge/Resonance--Time-Theory%20Core-1.0-blue" alt="RTT Core 1.0" />
+  <img src="https://img.shields.io/badge/Schema-RTTcode%20v1.0-forestgreen" alt="RTTcode v1.0" />
+  <img src="https://img.shields.io/badge/Integration-Unity%20%7C%20Unreal%20%7C%20Custom-orange" alt="RTT Integrations" />
+  <img src="https://img.shields.io/badge/Status-Developer%20Preview-yellow" alt="Status: Developer Preview" />
+</p>
+
 # 📖 Documentation Overview
 Welcome to the **TriadicFrameworks Documentation Library**.  
 This space curates the scrolls, guides, and indexes that support the **TFT 3‑Pack** and its remix lineage.
