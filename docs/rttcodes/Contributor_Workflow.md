@@ -248,3 +248,14 @@ RTTcodes are the portable, scannable representation of this metadata.
 TF‑MS ensures that all TriadicFrameworks artifacts — from theory papers to
 substrate models — share a common identity layer that is stable, searchable, and
 machine‑readable.
+
+---
+
+## Quicklinks
+
+- [rttcodes - How RTTcodes Work Internally](https://www.triadicframeworks.org/rttcodes/How_RTTcodes_Work_Internally.md)
+- [rttcodes - Canonical RTTcode Specification Document](https://www.triadicframeworks.org/rttcodes/Canonical_RTTcode_Specification_Document.md)
+- [rttcodes - Adding a New RTTcode Domain](https://www.triadicframeworks.org/rttcodes/Adding_a_New_RTTcode_Domain.md)
+- [rttcodes - QUICKSTART](https://www.triadicframeworks.org/rttcodes/QUICKSTART.md)
+- [rttcodes - README](https://www.triadicframeworks.org/rttcodes/README.md)
+- [resonance-substrate-model - README](https://www.triadicframeworks.org/resonance-substrate-model/README.md)
