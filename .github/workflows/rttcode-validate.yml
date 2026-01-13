@@ -34,7 +34,7 @@ jobs:
           for file in $(find docs -name "*.json"); do
             echo "Checking: $file"
             ajv validate \
-              -s schemas/rttcode.v1.json \
+              -s docs/schemas/rttcode.v1.json \
               -d "$file" \
               --strict=true \
               || exit 1
