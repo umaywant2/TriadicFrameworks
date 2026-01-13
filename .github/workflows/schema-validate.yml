@@ -1,5 +1,8 @@
 name: Schema Validation
 
+permissions:
+  contents: read
+
 on:
   push:
     paths:
@@ -77,6 +80,8 @@ jobs:
     needs: validate-schemas
     if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
 
     steps:
       - name: Post PR comment with schema validation summary
@@ -107,6 +112,8 @@ jobs:
     needs: validate-schemas
     if: needs.validate-schemas.result == 'success' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
