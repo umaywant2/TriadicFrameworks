@@ -4,6 +4,7 @@ Author: Nawder Loswin
 Affiliation: TriadicFrameworks Research Initiative
 Email: Nawder@TriadicFrameworks.org
 ORCID: https://orcid.org/0009-0002-2282-5460
+10.5281/zenodo.18227748
 
 Version: 1.0.0
 Release Date: January 12, 2025
@@ -568,3 +569,5 @@ The following works provide foundational context for the physical, computational
 - [papers substrate_model_whitepaper citation_map.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/citation_map.md)
 - [papers substrate_model_whitepaper supplementary README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/supplementary/README.md)
 - [papers substrate_model_whitepaper figures README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/figures/README.md)
+
+10.5281/zenodo.18227748
