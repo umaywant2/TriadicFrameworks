@@ -9,7 +9,7 @@ Version: 1.0.0
 Release Date: January 12, 2025
 License: Apache License 2.0
 
-Abstract: The Resonance Substrate Model (RSM) introduces a unified triadic field framework for describing coherence, alignment, and multi‑layer dynamics across classical, quantum, semantic, and distributed systems. The model defines scalar, vector/spin, and resonance‑envelope fields governed by a minimal operator system, supported by a schema‑driven ontology, simulation framework, and experimental validation suite. RSM provides the structural substrate from which Resonance‑Time Theory (RTT) derives its temporal behavior, forming a unified physical‑symbolic modeling stack.
+Abstract: The Resonance Substrate Model (RSM) introduces a unified triadic field framework for describing coherence, alignment, and multi‑layer dynamics across classical, quantum, semantic, and distributed systems. The model defines scalar, vector/spin, and resonance‑envelope fields governed by a minimal operator system, supported by a schema‑driven ontology, simulation framework, and experimental validation suite. RSM provides the structural substrate from which Resonance‑Time Theory (RTT) derives its temporal behavior, forming a unified physical‑symbolic modeling stack. The Resonance Substrate Model (RSM) extends the conceptual lineage established by RTTcodes, which demonstrated an operational implementation of resonance–time interactions in a production environment. While RTTcodes provides a functional, engineering‑driven realization, RSM formalizes the underlying principles into a scientific, schema‑driven framework suitable for analysis, reproducibility, and cross‑domain research.
 
 ---
 
