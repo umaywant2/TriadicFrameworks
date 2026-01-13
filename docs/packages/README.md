@@ -9,7 +9,7 @@ The packages in this folder represent the *runtime surface* of the framework —
 
 ## 🔷 **Current Packages**
 
-### ⚜️ **`3pak-shell/`**
+### ⚜️ **`3pak-shell/`** (dev testing, pre-packaging stage)
 A lightweight, resonance‑aware enhancement layer for Linux shells.
 
 Includes:
