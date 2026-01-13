@@ -103,6 +103,8 @@
     "metadata": {
       "type": "object",
       "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
       "properties": {
         "version": {
           "type": "string",
@@ -110,8 +112,6 @@
         },
         "notes": {
           "type": "string",
-          "version": "1.0.0",
-          "notes": "Initial seed release",
           "description": "Freeform notes or comments."
         }
       }
