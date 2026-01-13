@@ -10,7 +10,7 @@
 
 This package provides a minimal, portable shell interface for WRSADC‑aligned operations. It includes two core scripts:
 
-### **1. `[install.sh](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/install.sh)`**  
+### 🛠️ [install.sh](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/install.sh)
 A simple installer that:
 
 - validates the environment  
@@ -20,7 +20,7 @@ A simple installer that:
 
 Ideal for quick setup or embedding into larger automation flows.
 
-### **2. `[wrsadc_shell.sh](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/wrsadc_shell.sh)`**  
+### ⚡ [wrsadc_shell.sh](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/wrsadc_shell.sh)
 The primary shell tool. It provides:
 
 - a clean command‑line wrapper for WRSADC‑style actions  
@@ -32,7 +32,7 @@ This script is intentionally lightweight so it can run in constrained or contain
 
 ---
 
-## 📦 `[package.json](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/package.json)`  
+## 📦 [package.json](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-shell/package.json)
 *A metadata anchor for tooling, versioning, and ecosystem alignment*
 
 Although `wrsadc-shell` is a shell‑based utility, it includes a minimal `package.json` to support:
