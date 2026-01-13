@@ -36,7 +36,7 @@ jobs:
         run: |
           echo "Validating RTTcode examples..."
           ajv validate \
-            -s schemas/rttcode.v1.json \
+            -s docs/schemas/rttcode.v1.json \
             -d "docs/**/rttcode*.json" \
             --strict=true
 
