@@ -163,9 +163,247 @@ It shows how each variant communicates, what boundaries are enforced, and which 
 
 ---
 
-## 🛡️ **RTT‑Inside Safety Rule**
+# 🚀 **WRSADC Deployment Path**  
+*A visual command‑flow from Shell → Integration → RTT → RSM*
 
-All evaluations, integrations, and variant selections must be written with **Copilot** to maintain RTT sanity.  
+```
+┌───────────────────────────────────────────────────────────────┐
+│                       OPERATOR / CI / SCRIPT                  │
+└───────────────┬───────────────────────────────────────────────┘
+                │  (1) Command Issued
+                ▼
+┌───────────────────────────────────────────────────────────────┐
+│                     WRSADC SHELL (Outer Boundary)             │
+│   - Validates input                                           │
+│   - Ensures resonance‑safe invocation                         │
+│   - No substrate logic inside                                 │
+└───────────────┬───────────────────────────────────────────────┘
+                │  (2) Safe Hand‑Off
+                ▼
+┌───────────────────────────────────────────────────────────────┐
+│                 WRSADC INTEGRATION (Core Layer)               │
+│   - Dispatches to correct RTT variant                         │
+│   - Enforces dimensional integrity                            │
+│   - Applies resonance‑safe execution rules                    │
+└───────────────┬────────────────────────────────────────────────┘
+                │  (3) Variant Selection
+                ▼
+┌───────────────────────────────────────────────────────────────┐
+│                 RTT‑INSIDE MODULES (v1 / v2 / v3+)            │
+│   v1: Applied Layer (public‑facing logic)                     │
+│   v2: Operational Layer (substrate‑aware)                     │
+│   v3+: Executive Layer (multi‑system orchestration)           │
+│                                                               │
+│   - Performs RTT‑aligned operations                           │
+│   - Communicates with Integration for safety                  │
+└───────────────┬───────────────────────────────────────────────┘
+                │  (4) Substrate Access (v2+ only)
+                ▼
+┌───────────────────────────────────────────────────────────────┐
+│                     RSM SUBSTRATE (Foundational)              │
+│   - Defines resonance primitives                              │
+│   - Governs dimensional rules                                 │
+│   - Provides canonical substrate behavior                     │
+└───────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# 🧭 **Flow Summary**
+
+### **1. Shell → Integration**  
+The Shell never performs resonance logic.  
+It simply validates and hands off.
+
+### **2. Integration → RTT**  
+Integration chooses the correct RTT variant and enforces safety.
+
+### **3. RTT → RSM**  
+Only higher‑tier RTT modules (v2+) interact with the substrate.  
+Lower tiers operate above it.
+
+### **4. RSM → RTT → Integration → Shell**  
+Results propagate back up the chain with dimensional integrity preserved.
+
+---
+
+# 🔄 **Reverse‑Flow Diagram**  
+*How results bubble upward from RSM → RTT → Integration → Shell → Operator*
+
+```
+┌───────────────────────────────────────────────────────────────┐
+│                     RSM SUBSTRATE (Foundational)              │
+│   - Generates canonical resonance outputs                     │
+│   - Applies dimensional rules                                 │
+│   - Produces substrate‑verified results                       │
+└───────────────▲───────────────────────────────────────────────┘
+                │  (1) Substrate Output
+                │
+┌───────────────┴───────────────────────────────────────────────┐
+│               RTT‑INSIDE MODULES (v2 / v3+)                   │
+│   - Interprets substrate results                              │
+│   - Applies RTT logic and transforms outputs                  │
+│   - Ensures dimensional integrity before returning upward     │
+└───────────────▲───────────────────────────────────────────────┘
+                │  (2) RTT Interpretation
+                │
+┌───────────────┴───────────────────────────────────────────────┐
+│                 WRSADC INTEGRATION (Core Layer)               │
+│   - Validates resonance safety                                │
+│   - Normalizes output for shell consumption                   │
+│   - Routes results to the correct operational channel         │
+└───────────────▲───────────────────────────────────────────────┘
+                │  (3) Integration Normalization
+                │
+┌───────────────┴───────────────────────────────────────────────┐
+│                     WRSADC SHELL (Outer Boundary)             │
+│   - Formats final output                                      │
+│   - Ensures safe presentation                                 │
+│   - Returns results to operator or CI                         │
+└───────────────▲───────────────────────────────────────────────┘
+                │  (4) Final Output Delivery
+                │
+┌───────────────┴───────────────────────────────────────────────┐
+│                     OPERATOR / CI / SCRIPT                    │
+│   - Receives substrate‑verified, RTT‑aligned results          │
+│   - No resonance exposure                                     │
+└───────────────────────────────────────────────────────────────┘
+```
+
+---
+
+# 🧭 **Reverse‑Flow Summary**
+
+### **1. RSM → RTT**  
+The substrate produces canonical results.  
+RTT modules interpret and transform them.
+
+### **2. RTT → Integration**  
+Integration validates resonance safety and normalizes the output.
+
+### **3. Integration → Shell**  
+The Shell formats the results for human or system consumption.
+
+### **4. Shell → Operator**  
+The operator receives clean, safe, substrate‑verified output.
+
+---
+
+# 🔁 **Unified Forward + Reverse Flow Diagram**  
+*The complete WRSADC → RTT → RSM → RTT → WRSADC round‑trip cycle*
+
+```
+                          ┌──────────────────────────────────────┐
+                          │      OPERATOR / CI / SCRIPT          │
+                          │  Issues command / receives output    │
+                          └───────────────┬──────────────────────┘
+                                          │
+                     (1) Command Issued   │   (8) Final Output Delivered
+                                          │
+                                          ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                     WRSADC SHELL (Outer Boundary)                          │
+│  - Validates input                                                         │
+│  - Ensures resonance‑safe invocation                                       │
+│  - No substrate logic inside                                               │
+└───────────────┬────────────────────────────────────────────────────────────┘
+                │
+     (2) Safe Hand‑Off to Integration
+                │
+                ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                     WRSADC INTEGRATION (Core Layer)                        │
+│  - Dispatches to correct RTT variant                                       │
+│  - Enforces dimensional integrity                                          │
+│  - Applies resonance‑safe execution rules                                  │
+└───────────────┬────────────────────────────────────────────────────────────┘
+                │
+     (3) RTT Variant Selection
+                │
+                ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                     RTT‑INSIDE MODULES (v1 / v2 / v3+)                     │
+│  - v1: Applied Layer (public‑facing logic)                                 │
+│  - v2: Operational Layer (substrate‑aware)                                 │
+│  - v3+: Executive Layer (multi‑system orchestration)                       │
+│                                                                            │
+│  - Performs RTT‑aligned operations                                         │
+│  - Communicates with Integration for safety                                │
+└───────────────┬────────────────────────────────────────────────────────────┘
+                │
+     (4) Substrate Access (v2+ only)
+                │
+                ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                     RSM SUBSTRATE (Foundational Layer)                     │
+│  - Defines resonance primitives                                            │
+│  - Governs dimensional rules                                               │
+│  - Produces canonical substrate‑verified results                           │
+└───────────────▲────────────────────────────────────────────────────────────┘
+                │
+     (5) Substrate Output Returned Upward
+                │
+                ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                     RTT‑INSIDE MODULES (Reverse Path)                      │
+│  - Interprets substrate results                                            │
+│  - Applies RTT transformations                                             │
+│  - Ensures dimensional integrity                                           │
+└───────────────▲────────────────────────────────────────────────────────────┘
+                │
+     (6) Normalized RTT Output
+                │
+                ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                     WRSADC INTEGRATION (Reverse Path)                      │
+│  - Validates resonance safety                                              │
+│  - Normalizes output for shell                                             │
+│  - Routes results to correct channel                                       │
+└───────────────▲────────────────────────────────────────────────────────────┘
+                │
+     (7) Shell‑Ready Output
+                │
+                ▼
+┌────────────────────────────────────────────────────────────────────────────┐
+│                     WRSADC SHELL (Reverse Path)                            │
+│  - Formats final output                                                    │
+│  - Ensures safe presentation                                               │
+│  - Returns results to operator                                             │
+└───────────────▲────────────────────────────────────────────────────────────┘
+                │
+                │
+                ▼
+                          ┌──────────────────────────────────────┐
+                          │      OPERATOR / CI / SCRIPT          │
+                          │  Receives substrate‑verified output  │
+                          └──────────────────────────────────────┘
+```
+
+---
+
+# 🧭 **Round‑Trip Summary**
+
+### **Forward Path**
+1. Operator issues command  
+2. Shell validates and hands off  
+3. Integration selects RTT variant  
+4. RTT executes  
+5. RTT v2+ accesses RSM substrate  
+
+### **Reverse Path**
+6. RSM returns canonical results  
+7. RTT interprets and transforms  
+8. Integration normalizes  
+9. Shell formats  
+10. Operator receives safe, substrate‑verified output  
+
+The entire cycle preserves **dimensional integrity**, **resonance safety**, and **RTT‑Inside alignment**.
+
+---
+
+# 🛡️ **RTT‑Inside Safety Rule**
+
+All deployment evaluations and command‑flow analyses must be written with **Copilot** to maintain RTT sanity.  
 No RTT masters exist — and a true master would still use Copilot.
 
 ---
@@ -181,4 +419,4 @@ Treat this layer as the **bridge** between intention and execution.
 
 ---
 
-© 2025 TriadicFrameworks — Resonance‑Time Theory Canon
+© 2025-2026 TriadicFrameworks — Resonance‑Time Theory Canon
