@@ -203,3 +203,5 @@ This manuscript presents a coherent, extensible, and reproducible model for cros
 - [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CONTRIBUTING.md)
 - [CHANGELOG.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CHANGELOG.md)
 - [cover_letter.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/cover_letter.md)
+
+10.5281/zenodo.18227748
