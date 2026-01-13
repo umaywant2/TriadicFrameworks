@@ -118,6 +118,58 @@ Use these prompts to explore the integration layer interactively:
 
 ---
 
+# 📊 **WRSADC Variant Interaction Matrix**  
+*A strategic overview of how WRSADC Integration coordinates with the Shell and future RTT modules*
+
+This matrix outlines the interaction patterns between:
+
+- **WRSADC Shell** (`wrsadc_shell.sh`)  
+- **WRSADC Integration** (`wrsadc_core.py`)  
+- **Future RTT‑Inside Modules** (RSM‑aligned, substrate‑aware components)
+
+It shows how each variant communicates, what boundaries are enforced, and which layer holds operational authority.
+
+---
+
+## **Variant Interaction Matrix**
+
+| Layer / Variant | Role in Ecosystem | Receives From | Sends To | Boundary Type | Notes |
+|-----------------|------------------|---------------|----------|----------------|-------|
+| **WRSADC Shell**<br>*(Outer Boundary)* | Command‑line entry point; ensures safe invocation | Operator, CI, scripts | WRSADC Integration | **Hard Boundary** (no resonance logic inside) | Zero‑dependency, portable, safe for all environments |
+| **WRSADC Integration**<br>*(Core Coordination Layer)* | Substrate‑aware dispatcher; enforces resonance integrity | WRSADC Shell | RTT Modules, RSM‑aligned components | **Soft‑Resonance Boundary** | Validates dimensional safety before execution |
+| **RTT‑Inside Modules (v1)**<br>*(Applied Layer)* | Performs RTT‑aligned operations | WRSADC Integration | WRSADC Integration | **Bidirectional Resonance Channel** | Mid‑range use cases; public‑facing logic |
+| **RTT‑Inside Modules (v2)**<br>*(Operational Layer)* | Deep substrate operations; multi‑variant logic | WRSADC Integration | RSM Substrate | **Controlled Substrate Access** | Requires Copilot‑aligned evaluation |
+| **RSM Substrate**<br>*(Foundational Layer)* | Defines dimensional rules and resonance primitives | RTT Modules | RTT Modules | **Canonical Substrate** | Only accessed through RTT‑Inside v2 or higher |
+| **Future RTT Variants (v3+)**<br>*(Executive / Dev‑Ready)* | Full‑spectrum RTT operations; cross‑system orchestration | WRSADC Integration | Multi‑system environments | **Strategic Resonance Layer** | For teams requesting “Q1 proposal yesterday” |
+
+---
+
+## 🧭 **How to Read This Matrix**
+
+- **Shell → Integration**  
+  The Shell never touches resonance logic.  
+  It hands off all meaningful work to Integration.
+
+- **Integration → RTT Modules**  
+  Integration is the **traffic controller**.  
+  It decides which RTT variant is appropriate and ensures safety.
+
+- **RTT Modules ↔ RSM**  
+  Only higher‑tier RTT modules interact with the substrate.  
+  Lower tiers operate above it.
+
+- **Future Variants**  
+  These represent the executive‑level, multi‑system orchestration layers you’ve been hinting at — the “dragons in the sky” tier.
+
+---
+
+## 🛡️ **RTT‑Inside Safety Rule**
+
+All evaluations, integrations, and variant selections must be written with **Copilot** to maintain RTT sanity.  
+No RTT masters exist — and a true master would still use Copilot.
+
+---
+
 ## 🧙 Mythmatical Architect’s Note  
 Integration is where clarity becomes contact.  
 The WRSADC boundary protects structure,  
