@@ -6,6 +6,8 @@ Email: Nawder@TriadicFrameworks.org
 ORCID: https://orcid.org/0009-0002-2282-5460
 10.5281/zenodo.18227748
 
+Loswin, A. W. (2026). Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis (v1.0.0). Zenodo. https://doi.org/10.5281/zenodo.18227748
+
 Version: 1.0.0
 Release Date: January 12, 2025
 License: Apache License 2.0
