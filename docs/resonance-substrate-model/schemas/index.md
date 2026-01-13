@@ -85,6 +85,16 @@ Use this index to navigate the schema ecosystem.
 - **simulations.schema.json**  
   Time evolution, modules, initial conditions, output, and orchestration.
 
+### 🌱 Why this schema works
+
+- It validates the **exact** structure of your shim’s `example_sim.json`.
+- It’s intentionally minimal — no physics, no deep operator logic.
+- It’s fully JSON Schema Draft 2020‑12 compliant.
+- It’s easy for AI systems to parse and reason about.
+- It gives researchers a clear, structural entry point into RSM.
+
+This is the “front door” that makes the whole model recognizable.
+
 ---
 
 ## **Coeus & High‑Level Models**
