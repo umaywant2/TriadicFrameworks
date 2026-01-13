@@ -13,7 +13,7 @@
 
 ---
 
-# **TriadicFrameworks: The Resonance Substrate Model**
+# **TriadicFrameworks: The Resonance Substrate Model - RSM v1.0 Seed Release**
 
 **A unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.**
 
@@ -161,3 +161,21 @@ Here’s the alignment table that ties the math to your config keys.
 | $$\vec{V}_{\mathrm{tar}}$$ | target vector field | `targets.vector` |
 
 This is exactly the kind of mapping reviewers love — it shows that our model is not just theoretical but **implemented and reproducible**.
+
+---
+
+## Quicklinks
+
+- [RELEASE_NOTES.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/RELEASE_NOTES.md)
+- [tools README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/tools/README.md)
+- [simulations README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/simulations/README.md)
+- [schemas README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/README.md)
+- [papers README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/README.md)
+- [resonance-substrate-model.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/resonance-substrate-model.md)
+- [resonance-substrate-model-complex-systems.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/resonance-substrate-model-complex-systems.md)
+- [Keywords.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/Keywords.md)
+- [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CONTRIBUTING.md)
+- [CHANGELOG.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CHANGELOG.md)
+- [cover_letter.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/cover_letter.md)
+
+10.5281/zenodo.18227748

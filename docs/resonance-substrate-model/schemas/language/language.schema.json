@@ -1,0 +1,123 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Language Schema",
+  "description": "Defines linguistic tokens, grammar structures, semantic roles, embeddings, and resonance-language coupling for the Resonance Substrate Model (RSM). Supports symbolic, semantic, and cognitive layers interacting through language constructs.",
+
+  "type": "object",
+
+  "properties": {
+    "token": {
+      "type": "object",
+      "description": "A single linguistic token (word, symbol, unit).",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "Literal text of the token."
+        },
+        "type": {
+          "type": "string",
+          "enum": ["word", "symbol", "punctuation", "number", "custom"],
+          "description": "Token classification."
+        },
+        "embedding": {
+          "type": "array",
+          "description": "Optional vector embedding for semantic alignment.",
+          "items": { "type": "number" }
+        }
+      },
+      "required": ["text"]
+    },
+
+    "grammar": {
+      "type": "object",
+      "description": "Grammar rules and structural relationships.",
+      "properties": {
+        "part_of_speech": {
+          "type": "string",
+          "description": "POS tag (e.g., noun, verb, adjective)."
+        },
+        "dependencies": {
+          "type": "array",
+          "description": "Dependency links to other tokens.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "relation": { "type": "string" },
+              "target": { "type": "string" }
+            },
+            "required": ["relation", "target"]
+          }
+        }
+      }
+    },
+
+    "semantic_role": {
+      "type": "object",
+      "description": "Semantic role assigned to a token or phrase.",
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Role label (e.g., agent, patient, action, modifier)."
+        },
+        "confidence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Confidence in the role assignment."
+        }
+      },
+      "required": ["role"]
+    },
+
+    "phrase": {
+      "type": "object",
+      "description": "A multi-token linguistic unit.",
+      "properties": {
+        "tokens": {
+          "type": "array",
+          "description": "List of token IDs composing the phrase.",
+          "items": { "type": "string" }
+        },
+        "meaning": {
+          "type": "string",
+          "description": "Optional high-level semantic meaning."
+        }
+      },
+      "required": ["tokens"]
+    },
+
+    "resonance_coupling": {
+      "type": "object",
+      "description": "Defines how language interacts with resonance fields.",
+      "properties": {
+        "semantic_alignment": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Degree to which language aligns with semantic resonance."
+        },
+        "symbolic_amplification": {
+          "type": "number",
+          "description": "Amplification factor for symbolic resonance."
+        },
+        "phase_shift": {
+          "type": "number",
+          "description": "Phase shift induced by linguistic constructs."
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["token"]
+}

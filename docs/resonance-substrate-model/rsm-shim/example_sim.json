@@ -1,0 +1,24 @@
+{
+  "grid": {
+    "dimensions": [4, 4, 4]
+  },
+  "fields": {
+    "temperature": {
+      "type": "scalar_field",
+      "default": 0.5
+    },
+    "envelope": {
+      "type": "resonance_envelope",
+      "amplitude": 1.0,
+      "phase": 0.0
+    }
+  },
+  "operators": [
+    {
+      "type": "diffusion",
+      "target": "temperature",
+      "rate": 0.1
+    }
+  ]
+}
+

@@ -26,3 +26,14 @@ Brief overview of the manuscript being reviewed.
 ## 6. Action Items
 A checklist for revisions based on the review.
 
+---
+
+## Quicklinks
+
+- [papers README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/README.md)
+- [papers replication_report_template.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/replication_report_template.md)
+- [papers substrate_model_whitepaper README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/README.md)
+- [papers substrate_model_whitepaper citation_map.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/citation_map.md)
+- [papers substrate_model_whitepaper manuscript.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/manuscript.md)
+- [papers substrate_model_whitepaper supplementary README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/supplementary/README.md)
+- [papers substrate_model_whitepaper figures README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/figures/README.md)

@@ -1,0 +1,145 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Operators Schema",
+  "description": "Defines substrate operators for the Resonance Substrate Model (RSM), including diffusion, alignment, coupling, activation, and stabilization. Operators govern field evolution, coherence propagation, and multi-layer interactions.",
+
+  "type": "object",
+
+  "properties": {
+    "diffusion": {
+      "type": "object",
+      "description": "Controls how scalar, vector, and resonance fields diffuse across the substrate.",
+      "properties": {
+        "rate": {
+          "type": "number",
+          "description": "Base diffusion rate."
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["linear", "nonlinear", "anisotropic"],
+          "description": "Diffusion behavior model."
+        },
+        "constraints": {
+          "type": "object",
+          "description": "Optional constraints on diffusion.",
+          "additionalProperties": {
+            "type": ["string", "number", "boolean"]
+          }
+        }
+      },
+      "required": ["rate"]
+    },
+
+    "alignment": {
+      "type": "object",
+      "description": "Controls alignment of vector/spin fields and resonance-phase synchronization.",
+      "properties": {
+        "strength": {
+          "type": "number",
+          "description": "Alignment strength."
+        },
+        "mode": {
+          "type": "string",
+          "enum": ["local", "global", "neighborhood"],
+          "description": "Scope of alignment."
+        },
+        "tolerance": {
+          "type": "number",
+          "description": "Allowed deviation before alignment activates."
+        }
+      },
+      "required": ["strength"]
+    },
+
+    "coupling": {
+      "type": "object",
+      "description": "Defines cross-field coupling between scalar, vector, and resonance fields.",
+      "properties": {
+        "scalar_to_vector": {
+          "type": "number",
+          "description": "Coupling strength from scalar to vector field."
+        },
+        "vector_to_resonance": {
+          "type": "number",
+          "description": "Coupling strength from vector field to resonance envelope."
+        },
+        "resonance_to_scalar": {
+          "type": "number",
+          "description": "Coupling strength from resonance envelope to scalar field."
+        }
+      }
+    },
+
+    "activation": {
+      "type": "object",
+      "description": "Defines activation thresholds and nonlinear responses.",
+      "properties": {
+        "threshold": {
+          "type": "number",
+          "description": "Activation threshold."
+        },
+        "response": {
+          "type": "string",
+          "enum": ["sigmoid", "relu", "step", "custom"],
+          "description": "Activation response function."
+        },
+        "parameters": {
+          "type": "object",
+          "description": "Additional parameters for activation functions.",
+          "additionalProperties": {
+            "type": ["string", "number", "boolean"]
+          }
+        }
+      }
+    },
+
+    "stabilization": {
+      "type": "object",
+      "description": "Defines stabilization operators to maintain bounded field evolution.",
+      "properties": {
+        "mode": {
+          "type": "string",
+          "enum": ["clamp", "normalize", "dampening", "custom"],
+          "description": "Stabilization strategy."
+        },
+        "strength": {
+          "type": "number",
+          "description": "Strength of stabilization effect."
+        },
+        "bounds": {
+          "type": "object",
+          "description": "Upper and lower bounds for stabilization.",
+          "properties": {
+            "min": { "type": "number" },
+            "max": { "type": "number" }
+          }
+        }
+      }
+    },
+
+    {
+       "id": "diffusion_operator",
+       "type": "object",
+       "description": "Schema for diffusion operator configuration.",
+       "properties": {
+       "rate": { "type": "number" },
+       "anisotropy": { "type": "number" },
+       "enabled": { "type": "boolean" }
+     },
+     "required": ["rate"]
+    }
+    
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["diffusion", "alignment"]
+}

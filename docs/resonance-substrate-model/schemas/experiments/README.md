@@ -9,3 +9,53 @@ Experiment schemas define metadata and configuration for experimental setups, in
 - links to raw and processed data  
 
 These schemas support reproducibility and cross-experiment comparison.
+
+---
+
+# 🧪 What this schema captures
+
+### **apparatus**  
+Physical or simulated experimental setup.
+
+### **measurement**  
+What is measured, in what units, and how often.
+
+### **calibration**  
+Reference values, tolerances, and calibration methods.
+
+### **procedure**  
+Step‑by‑step instructions.
+
+### **data**  
+Format, fields, and sampling window.
+
+### **replication**  
+Environmental conditions, initial states, reproducibility notes.
+
+### **metadata**  
+Versioning and experiment type.
+
+This schema is fully aligned with your RSM v1.0 ontology and mirrors the structure of your other schema families.
+
+---
+
+## Quicklinks
+
+- [schemas README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/README.md)
+- [schemas coeus README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/coeus/README.md)
+- [schemas dimensional README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/dimensional/README.md)
+- [schemas distributed README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/distributed/README.md)
+- [schemas energy README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/energy/README.md)
+- [schemas fields README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/fields/README.md)
+- [schemas finance README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/finance/README.md)
+- [schemas identity README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/identity/README.md)
+- [schemas infrastructure README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/infrastructure/README.md)
+- [schemas lab README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/lab/README.md)
+- [schemas language README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/language/README.md)
+- [schemas networking README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/networking/README.md)
+- [schemas operators README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/operators/README.md)
+- [schemas primitives README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/primitives/README.md)
+- [schemas quantum README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/quantum/README.md)
+- [schemas sensing README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/sensing/README.md)
+- [schemas simulations README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/simulations/README.md)
+- [schemas universe-core README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/universe-core/README.md)

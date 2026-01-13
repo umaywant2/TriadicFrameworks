@@ -1,0 +1,139 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Infrastructure Schema",
+  "description": "Defines compute, storage, networking, and service-layer infrastructure for the Resonance Substrate Model (RSM). Supports simulation backends, distributed execution, resource allocation, and system orchestration.",
+
+  "type": "object",
+
+  "properties": {
+    "compute": {
+      "type": "object",
+      "description": "Defines compute resources available to the system.",
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "description": "List of compute nodes or execution units.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "type": {
+                "type": "string",
+                "enum": ["cpu", "gpu", "accelerator", "virtual", "custom"]
+              },
+              "cores": { "type": "integer", "minimum": 1 },
+              "memory": { "type": "number", "description": "Memory in GB." },
+              "capabilities": {
+                "type": "array",
+                "items": { "type": "string" }
+              }
+            },
+            "required": ["id", "type"]
+          }
+        },
+        "scheduler": {
+          "type": "string",
+          "description": "Scheduling strategy (e.g., round_robin, priority, load_balanced)."
+        }
+      }
+    },
+
+    "storage": {
+      "type": "object",
+      "description": "Defines storage resources and data persistence.",
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["local", "distributed", "memory", "object_store", "custom"]
+        },
+        "capacity": {
+          "type": "number",
+          "description": "Total storage capacity in GB."
+        },
+        "paths": {
+          "type": "array",
+          "description": "Storage paths or mount points.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "networking": {
+      "type": "object",
+      "description": "Defines networking topology and communication parameters.",
+      "properties": {
+        "topology": {
+          "type": "string",
+          "enum": ["mesh", "star", "ring", "tree", "hybrid", "custom"]
+        },
+        "bandwidth": {
+          "type": "number",
+          "description": "Network bandwidth in Gbps."
+        },
+        "latency": {
+          "type": "number",
+          "description": "Network latency in milliseconds."
+        },
+        "protocols": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "services": {
+      "type": "object",
+      "description": "Defines service-layer components supporting the system.",
+      "properties": {
+        "logging": {
+          "type": "object",
+          "properties": {
+            "level": {
+              "type": "string",
+              "enum": ["debug", "info", "warn", "error"]
+            },
+            "destination": { "type": "string" }
+          }
+        },
+        "monitoring": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean" },
+            "metrics": {
+              "type": "array",
+              "items": { "type": "string" }
+            }
+          }
+        },
+        "orchestration": {
+          "type": "object",
+          "properties": {
+            "engine": {
+              "type": "string",
+              "enum": ["local", "docker", "kubernetes", "custom"]
+            },
+            "config": {
+              "type": "object",
+              "additionalProperties": {
+                "type": ["string", "number", "boolean", "object", "array"]
+              }
+            }
+          }
+        }
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+      "description": "Optional metadata for documentation, provenance, or schema evolution.",
+      "version": "1.0.0",
+      "notes": "Initial seed release",
+      "properties": {
+        "version": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    }
+  },
+
+  "required": ["compute", "storage", "networking"]
+}

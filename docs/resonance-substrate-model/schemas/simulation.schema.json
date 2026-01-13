@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RSM Simulation Configuration",
+  "type": "object",
+
+  "properties": {
+    "grid": {
+      "type": "object",
+      "properties": {
+        "dimensions": {
+          "type": "array",
+          "items": { "type": "integer", "minimum": 1 },
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Grid dimensions [x, y, z]"
+        }
+      },
+      "required": ["dimensions"]
+    },
+
+    "fields": {
+      "type": "object",
+      "description": "Collection of fields defined in the substrate",
+      "patternProperties": {
+        "^[a-zA-Z0-9_]+$": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "scalar_field",
+                "resonance_envelope"
+              ]
+            },
+
+            "default": {
+              "type": "number",
+              "description": "Default scalar value (for scalar_field)"
+            },
+
+            "amplitude": {
+              "type": "number",
+              "description": "Resonance envelope amplitude"
+            },
+
+            "phase": {
+              "type": "number",
+              "description": "Resonance envelope phase"
+            }
+          },
+          "required": ["type"]
+        }
+      }
+    },
+
+    "operators": {
+      "type": "array",
+      "description": "List of operators applied to fields",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["diffusion"]
+          },
+          "target": {
+            "type": "string",
+            "description": "Name of the field the operator acts on"
+          },
+          "rate": {
+            "type": "number",
+            "minimum": 0,
+            "description": "Diffusion rate"
+          }
+        },
+        "required": ["type", "target"]
+      }
+    }
+  },
+
+  "required": ["grid", "fields", "operators"]
+}
