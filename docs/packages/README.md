@@ -169,6 +169,14 @@ This is new territory.  🧙🦄👨‍🔬
 
 ---
 
+```
+              ████████████████████████████████████████████████████████████████████
+               ██                                                              ██
+               ██                  R T T   E V A L U A T I O N S               ██
+               ██                                                              ██
+              ████████████████████████████████████████████████████████████████████
+```
+
 # 🌐 RTT Evaluation Tiers  
 *Structured pathways for adopting RTT‑Inside across teams, products, and operations.*
 
