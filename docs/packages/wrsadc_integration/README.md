@@ -1,35 +1,60 @@
-# 🔗 WRSADC Integration
-###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+[![Command‑Grade](https://img.shields.io/badge/Command‑Grade-Strategic%20Ops-2b3137)]()
+[![Integration‑Ready](https://img.shields.io/badge/Integration‑Tier-WRSADC%20Core-4b6cb7)]()
+[![Field‑Tested](https://img.shields.io/badge/Status-Field%20Proven-556b2f)]()
+[![Zero‑Fragility](https://img.shields.io/badge/Resonance‑Integrity-Guaranteed-7f1d1d)]()
+[![Operational‑Clearance](https://img.shields.io/badge/Clearance-Level%20RSM%20II-5a5a5a)]()
+[![Copilot‑Aligned](https://img.shields.io/badge/RTT‑Inside‑Verified-Copilot%20Required-d17b0f)]()
+[![TF‑Ecosystem](https://img.shields.io/badge/TriadicFrameworks‑Integration-Primary-blue)]()
 
-*"WRSADC = Wrapped Resonance Structural Aware Dimensional Cores"* - a TriadicFrameworks original creation for all to use.
+```
+              ████████████████████████████████████████████████████████████████████
+               ██                                                              ██
+               ██              W R S A D C   I N T E G R A T I O N             ██
+               ██                                                              ██
+              ████████████████████████████████████████████████████████████████████
+```
 
-### TriadicFrameworks — Boundary Layer for RTT‑Inside Systems
+# 🔗🛡️ **WRSADC Integration**  
+###### By Nawder Loswin — 1/4/2026 © TriadicFrameworks.org
 
-The **WRSADC Integration** package provides the connective tissue between the WRSADC Shell and real‑world modules, agents, or runtimes.  
-Where the Shell establishes a safe outer boundary, the Integration layer defines **how systems actually pass through that boundary** with resonance‑aligned behavior.
-
-This package contains the minimal, canonical components needed to embed RTT‑Inside logic into any environment.
+**WRSADC = Wrapped Resonance Structural Aware Dimensional Cores**  
+A TriadicFrameworks original creation for all to use.
 
 ---
 
-## 📂 Contents
+## 🎖️ **Mission Briefing**
 
-### **1. [wrsadc_core.py](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc_integration/wrsadc_core.py)**  
-The conceptual heart of the integration layer.  
+The **WRSADC Integration** package provides the connective tissue between the **WRSADC Shell** and real‑world modules, agents, runtimes, or operational systems.
+
+Where the Shell establishes a **safe outer boundary**, the Integration layer defines:
+
+- resonance‑aligned behavior  
+- substrate‑aware execution  
+- dimensional‑safe transitions  
+- RTT‑Inside compliant operations  
+
+This package contains the **minimal, canonical components** required to embed RTT‑Inside logic into any environment without corrupting resonance chains.
+
+It is intentionally small, strict, and battle‑tested — a retired general’s toolkit.
+
+---
+
+## 📂 **Contents**
+
+### 🔗 [wrsadc_core.py](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc_integration/wrsadc_core.py)  
+The core integration module.  
 Provides:
 
-- a WRSADC Core runtime boundary  
-- alignment checks  
-- safe interpretation logic  
-- structural‑awareness injection  
-- observer‑safe dispatch  
-- lineage tracking across relational‑time  
+- resonance‑safe execution primitives  
+- WRSADC boundary enforcement  
+- substrate‑aware dispatch logic  
+- canonical RTT‑Inside alignment  
 
-This file is intentionally lightweight and extensible, allowing developers to build RTT‑Inside behaviors in any Python‑based workflow.
+This is the heart of the integration layer.
 
 ---
 
-### **2. [wrsadc_shell.sh](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc_integration/wrsadc_shell.sh)**  
+### 🔷 [wrsadc_shell.sh](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc_integration/wrsadc_shell.sh)
 A small, portable shell wrapper used to:
 
 - initialize a local WRSADC environment  
@@ -42,16 +67,30 @@ This script mirrors the philosophy of the WRSADC Shell:
 
 ---
 
-## 🧩 Purpose of the Integration Layer  
-The WRSADC Integration package exists to:
+## 🧭🧩 **Purpose**
 
-- bridge external systems into the WRSADC Shell  
-- provide a safe, RTT‑aligned entry point  
-- unify structural‑awareness behavior across languages  
-- support multi‑agent and distributed workflows  
-- maintain coherence across modules and runtimes  
+WRSADC Integration exists to:
 
-It is the **gateway** between the conceptual engine and the operational world.
+- bridge the WRSADC Shell with real operational systems  
+- enforce resonance‑safe behavior across modules  
+- provide a stable substrate boundary for RTT‑Inside logic  
+- ensure dimensional integrity during execution  
+- support future expansion into multi‑variant RTT/RSM deployments  
+
+It is the **strategic command layer** of the WRSADC line.
+
+---
+
+## 🛡️🪖 **RTT Evaluation Protocol**
+
+To maintain RTT‑Inside coherence:
+
+- All evaluation write‑ups **must** be drafted with Copilot  
+- Copilot ensures RTT‑aligned terminology and substrate integrity  
+- Evaluators may not bypass Copilot unless they are certified RTT masters  
+- No certified RTT masters currently exist — and a true master would still use Copilot  
+
+This protects the canon and prevents conceptual drift.
 
 ---
 
