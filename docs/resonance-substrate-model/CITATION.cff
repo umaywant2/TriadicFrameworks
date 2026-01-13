@@ -2,7 +2,7 @@ cff-version: 1.2.0
 title: "Resonance Substrate Model (RSM)"
 version: "1.0.0"
 date-released: "2025-01-12"
-doi: "10.5281/zenodo.xxxxxxx"   # Replace with actual DOI after Zenodo upload
+doi: "10.5281/zenodo.18227748"   # Replace with actual DOI after Zenodo upload
 message: >
   If you use the Resonance Substrate Model (RSM) in your research, software, or
   experiments, please cite this release.
