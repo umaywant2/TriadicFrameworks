@@ -17,3 +17,6 @@ can interact with the RSM in a lightweight, machine-readable way.
 python validate.py example_sim.json
 python rsm.py example_sim.json
 
+---
+
+10.5281/zenodo.18227748
