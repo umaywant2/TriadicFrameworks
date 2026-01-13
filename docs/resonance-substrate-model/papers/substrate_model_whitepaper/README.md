@@ -29,3 +29,5 @@ companion to the code, schemas, and simulations in the broader
 - [papers substrate_model_whitepaper manuscript.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/manuscript.md)
 - [papers substrate_model_whitepaper supplementary README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/supplementary/README.md)
 - [papers substrate_model_whitepaper figures README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/figures/README.md)
+
+10.5281/zenodo.18227748
