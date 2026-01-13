@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://triadicframeworks.org/schemas/rttcode.v1.json",
+  "$id": "https://triadicframeworks.org/docs/schemas/rttcode.v1.json",
   "title": "RTTcode v1.0",
   "description": "Canonical payload schema for RTT-Inside integrations.",
   "type": "object",
