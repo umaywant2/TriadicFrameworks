@@ -39,6 +39,7 @@
 
   <!-- Custom Nawderian Badge -->
   <img src="https://img.shields.io/badge/Triadic%20Resonance-Certified-6f42c1" />
+  <a href="https://doi.org/10.5281/zenodo.18227748"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18227748.svg" alt="DOI"></a>
 
 </p>
 
@@ -177,5 +178,3 @@ This is exactly the kind of mapping reviewers love — it shows that our model i
 - [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CONTRIBUTING.md)
 - [CHANGELOG.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CHANGELOG.md)
 - [cover_letter.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/cover_letter.md)
-
-10.5281/zenodo.18227748
