@@ -117,6 +117,18 @@
       }
     },
 
+    {
+       "id": "diffusion_operator",
+       "type": "object",
+       "description": "Schema for diffusion operator configuration.",
+       "properties": {
+       "rate": { "type": "number" },
+       "anisotropy": { "type": "number" },
+       "enabled": { "type": "boolean" }
+     },
+     "required": ["rate"]
+    }
+    
     "metadata": {
       "type": "object",
       "description": "Optional metadata for documentation, provenance, or schema evolution.",
