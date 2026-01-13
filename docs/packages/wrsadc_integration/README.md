@@ -14,7 +14,7 @@ This package contains the minimal, canonical components needed to embed RTT‑In
 
 ## 📂 Contents
 
-### **1. [wrsadc_core.py](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc-python/wrsadc_core.py)**  
+### **1. [wrsadc_core.py](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc_integration/wrsadc_core.py)**  
 The conceptual heart of the integration layer.  
 Provides:
 
@@ -29,7 +29,7 @@ This file is intentionally lightweight and extensible, allowing developers to bu
 
 ---
 
-### **2. [wrsadc_shell.sh](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc-shell/wrsadc_shell.sh)**  
+### **2. [wrsadc_shell.sh](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/wrsadc_integration/wrsadc_shell.sh)**  
 A small, portable shell wrapper used to:
 
 - initialize a local WRSADC environment  
