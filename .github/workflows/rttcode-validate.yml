@@ -32,6 +32,9 @@ jobs:
         run: |
           echo "Validating RTTcode packets..."
           for file in $(find docs -name "*.json"); do
+            if [[ "$file" == docs/schemas/* ]]; then
+              continue
+            fi
             echo "Checking: $file"
             ajv validate \
               -s docs/schemas/rttcode.v1.json \
@@ -39,3 +42,4 @@ jobs:
               --strict=true \
               || exit 1
           done
+
