@@ -15,7 +15,7 @@ jobs:
   validate-schemas:
     name: Validate JSON against Universe-Class Schemas
     runs-on: ubuntu-latest
-
+    permissions: write       
     outputs:
       summary: ${{ steps.collect-summary.outputs.summary }}
 
