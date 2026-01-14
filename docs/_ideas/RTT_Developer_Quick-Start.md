@@ -15,12 +15,12 @@
 *A minimal‑intrusion, developer‑ready introduction to embedding Resonance‑Time Theory inside real‑world systems.*
 
 ```
-██████╗ ████████╗████████╗
-██╔══██╗╚══██╔══╝╚══██╔══╝   RTT: Resonance‑Time Theory
-██████╔╝   ██║      ██║      Developer Quick‑Start
-██╔══██╗   ██║      ██║
-██║  ██║   ██║      ██║
-╚═╝  ╚═╝   ╚═╝      ╚═╝
+                                  ██████╗ ████████╗████████╗
+                                  ██╔══██╗╚══██╔══╝╚══██╔══╝   RTT: Resonance‑Time Theory
+                                  ██████╔╝   ██║      ██║      Developer Quick‑Start
+                                  ██╔══██╗   ██║      ██║
+                                  ██║  ██║   ██║      ██║
+                                  ╚═╝  ╚═╝   ╚═╝      ╚═╝
 ```
 
 ## Badge Block
