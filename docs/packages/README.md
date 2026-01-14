@@ -9,7 +9,7 @@ The packages in this folder represent the *runtime surface* of the framework —
 
 ## 🔷 **Current Packages**
 
-### ⚜️ **`3pak-shell/`** (dev testing, pre-packaging stage)
+### ⚜️ [wrsadc-shell](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc-shell/)
 A lightweight, resonance‑aware enhancement layer for Linux shells.
 
 Includes:
@@ -23,7 +23,7 @@ This is the recommended entry point for early adopters and distribution packagin
 
 ---
 
-### 🐍 **`wrsadc-python/`**
+### 🐍 [wrsadc-python](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc-python/)
 A minimal Python implementation of the WRSADC runtime core.
 
 Provides:
@@ -34,7 +34,18 @@ Provides:
 
 ---
 
-### 🪐 **`tft-3pack/`**
+### 🔗🛡️ [wrsadc-integration](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc_integration/)
+The WRSADC Integration package provides the connective tissue between the WRSADC Shell and real‑world modules, agents, runtimes, or operational systems.
+
+Where the Shell establishes a safe outer boundary, the Integration layer defines:
+- resonance‑aligned behavior
+- substrate‑aware execution
+- dimensional‑safe transitions
+- RTT‑Inside compliant operations
+
+---
+
+### 🪐 [tft-3pack](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/tft-3pack/)
 The Triadic Framework Tools (3‑Pack), version 1.3.
 
 Includes:
