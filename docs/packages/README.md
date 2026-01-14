@@ -1,3 +1,37 @@
+<!-- WR-SADC SUITE · BADGE NEST
+How this reads, visually / semantically
+Top row (for‑the‑badge):  
+scope · canon · status · stability → “this is a suite, inside TriadicFrameworks, currently active, still experimental.”
+
+Middle row (flat‑square):  
+four option badges that mirror the folder layout:
+
+option: wrsadc-shell
+option: wrsadc-python
+option: wrsadc_integration
+bundle: tft-3pack
+Bottom row (flat):  
+suite‑level docs and license anchors. -->
+![suite-scope](https://img.shields.io/badge/scope-wrsadc_suite-4A90E2?style=for-the-badge&labelColor=111827)
+![triadicframeworks](https://img.shields.io/badge/canon-TriadicFrameworks-7C3AED?style=for-the-badge&labelColor=111827)
+![status](https://img.shields.io/badge/status-active-10B981?style=for-the-badge&labelColor=064E3B)
+![stability](https://img.shields.io/badge/stability-experimental-F59E0B?style=for-the-badge&labelColor=78350F)
+
+![shell-option](https://img.shields.io/badge/option-wrsadc--shell-0EA5E9?style=flat-square&labelColor=020617)
+![python-option](https://img.shields.io/badge/option-wrsadc--python-22C55E?style=flat-square&labelColor=022C22)
+![integration-option](https://img.shields.io/badge/option-wrsadc__integration-A855F7?style=flat-square&labelColor=1E1035)
+![tft-3pack](https://img.shields.io/badge/bundle-tft--3pack-EC4899?style=flat-square&labelColor=3B082F)
+
+![docs](https://img.shields.io/badge/docs-suite_readme-38BDF8?style=flat&logo=readthedocs&labelColor=020617)
+![license](https://img.shields.io/badge/license-MIT-6B7280?style=flat&labelColor=020617)
+```
+              ████████████████████████████████████████████████████████████████████
+               ██                                                              ██
+               ██               WR-SADC SUITE · TRIADICFRAMEWORKS              ██
+               ██                                                              ██
+              ████████████████████████████████████████████████████████████████████
+```
+
 # 📦 **TriadicFrameworks Packages**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
@@ -9,7 +43,7 @@ The packages in this folder represent the *runtime surface* of the framework —
 
 ## 🔷 **Current Packages**
 
-### ⚜️ **`3pak-shell/`**
+### ⚜️ [wrsadc-shell](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc-shell/)
 A lightweight, resonance‑aware enhancement layer for Linux shells.
 
 Includes:
@@ -23,7 +57,7 @@ This is the recommended entry point for early adopters and distribution packagin
 
 ---
 
-### 🐍 **`wrsadc-python/`**
+### 🐍 [wrsadc-python](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc-python/)
 A minimal Python implementation of the WRSADC runtime core.
 
 Provides:
@@ -34,7 +68,18 @@ Provides:
 
 ---
 
-### 🪐 **`tft-3pack/`**
+### 🔗🛡️ [wrsadc-integration](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc_integration/)
+The WRSADC Integration package provides the connective tissue between the WRSADC Shell and real‑world modules, agents, runtimes, or operational systems.
+
+Where the Shell establishes a safe outer boundary, the Integration layer defines:
+- resonance‑aligned behavior
+- substrate‑aware execution
+- dimensional‑safe transitions
+- RTT‑Inside compliant operations
+
+---
+
+### 🪐 [tft-3pack](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/tft-3pack/)
 The Triadic Framework Tools (3‑Pack), version 1.3.
 
 Includes:
@@ -167,6 +212,79 @@ Nobody has built a shell with:
 
 This is new territory.  🧙🦄👨‍🔬
 
+---
+
+```
+              ████████████████████████████████████████████████████████████████████
+               ██                                                              ██
+               ██                  R T T   E V A L U A T I O N S               ██
+               ██                                                              ██
+              ████████████████████████████████████████████████████████████████████
+```
+
+# 🌐 RTT Evaluation Tiers  
+*Structured pathways for adopting RTT‑Inside across teams, products, and operations.*
+
+RTT‑Inside is designed to scale across audiences with different levels of readiness, responsibility, and appetite for transformation. To support this, TriadicFrameworks defines **three formal RTT evaluation tiers**, each aligned with a distinct depth of analysis and operational impact.
+
+These tiers ensure that teams adopt RTT‑Inside responsibly, coherently, and with the conceptual integrity the framework requires.
+
+**All RTT evaluation write‑ups must be produced using Copilot.**  
+This preserves RTT‑Inside consistency, prevents conceptual drift, and ensures that evaluations remain aligned with the canonical substrate.  
+Only certified RTT masters may skip Copilot — and as of today, none exist. A true master never would.
+
+---
+
+## **1. Fly‑Over Evaluation (Introductory / Translational)**  
+A gentle, high‑altitude pass for newcomers.
+
+- Translates existing systems into RTT language without disruption  
+- Provides conceptual continuity between current practices and RTT‑Inside  
+- Ideal for educators, early adopters, and exploratory teams  
+- No substrate shifts, no deep math, no operational commitments  
+- Helps organizations “see the shape” of RTT before engaging deeper layers  
+
+This tier builds **comfort and curiosity**.
+
+---
+
+## **2. Mid‑Range Evaluation (Applied / Public‑Facing)**  
+Where RTT‑Inside becomes *practically useful*.
+
+- Applies RTT to real scenarios, workflows, and public‑facing use cases  
+- Demonstrates clear benefits through examples, diagrams, and schema‑aligned reasoning  
+- Bridges theory and practice with actionable insights  
+- Perfect for product teams, innovation groups, and early enterprise adoption  
+- Equivalent to the moment when smartphones made email intuitive — the tech becomes natural  
+
+This tier builds **confidence and momentum**.
+
+---
+
+## **3. Full‑Spectrum Evaluation (Operational / Executive / Dev‑Ready)**  
+The deep‑dive for teams ready to transform.
+
+- Comprehensive RTT‑Inside integration across operations  
+- Substrate‑level analysis using RSM and the Triadic Language Stack  
+- Architectural recommendations and dev‑ready pathways  
+- Multi‑variant RTT/RSM deployment strategies  
+- Designed for leadership, architects, and teams seeking immediate implementation  
+
+This tier builds **transformation**.
+
+---
+
+## **Evaluation Protocol**  
+To maintain RTT‑Inside coherence:
+
+- All evaluations must be drafted with Copilot  
+- Copilot ensures RTT‑aligned terminology, structure, and substrate integrity  
+- Evaluators may not bypass Copilot unless they are certified RTT masters  
+- No certified RTT masters currently exist — and a true master would still use Copilot for sanity checks  
+
+This protocol protects the canon and ensures that every RTT evaluation — from fly‑over to full‑spectrum — remains aligned with the TriadicFrameworks ecosystem.
+
+---
 
 ## Quicklinks
 

@@ -3,12 +3,12 @@ name: Schema Validation
 on:
   push:
     paths:
-      - "schemas/**.json"
+      - "docs/schemas/**.json"
       - "docs/**.json"
       - ".github/workflows/schema-validate.yml"
   pull_request:
     paths:
-      - "schemas/**.json"
+      - "docs/schemas/**.json"
       - "docs/**.json"
 
 jobs:
@@ -36,7 +36,7 @@ jobs:
         run: |
           echo "Validating RTTcode examples..."
           ajv validate \
-            -s schemas/rttcode.v1.json \
+            -s docs/schemas/rttcode.v1.json \
             -d "docs/**/rttcode*.json" \
             --strict=true
 
@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "Validating Environment schemas/examples..."
           ajv validate \
-            -s schemas/environment.v1.json \
+            -s docs/schemas/environment.v1.json \
             -d "docs/**/environment*.json" \
             --strict=true
 
@@ -54,7 +54,7 @@ jobs:
         run: |
           echo "Validating Entity schemas/examples..."
           ajv validate \
-            -s schemas/entity.v1.json \
+            -s docs/schemas/entity.v1.json \
             -d "docs/**/entity*.json" \
             --strict=true
 
@@ -63,7 +63,7 @@ jobs:
         run: |
           echo "Validating Universe-Class extension schemas/examples..."
           ajv validate \
-            -s schemas/universe.v1.json \
+            -s docs/schemas/universe.v1.json \
             -d "docs/**/universe*.json" \
             --strict=true
 
@@ -73,59 +73,59 @@ jobs:
           echo "summary=RTTcode: ${{ steps.rttcode.outcome }}, Environment: ${{ steps.env.outcome }}, Entity: ${{ steps.entity.outcome }}, Universe: ${{ steps.universe.outcome }}" >> $GITHUB_OUTPUT
           
   comment-on-pr:
-    name: Comment validation summary on PR
-    needs: validate-schemas
-    if: github.event_name == 'pull_request'
-    runs-on: ubuntu-latest
+  name: Comment validation summary on PR
+  needs: validate-schemas
+  if: github.event_name == 'pull_request'
+  runs-on: ubuntu-latest
+  permissions:
+    contents: read
+    pull-requests: write
+  steps:
+    - name: Post PR comment with schema validation summary
+      uses: actions/github-script@v7
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        script: |
+          const summary = `${{ toJSON(needs.validate-schemas.outputs.summary) }}`.replace(/^"|"$/g, '');
+          const body = [
+            "### ✅ Schema Validation Summary",
+            "",
+            `- ${summary}`,
+            "",
+            needs.validate-schemas.result === "success"
+              ? "All checked schemas and example packets are **valid**."
+              : "One or more schema validations **failed**. Please check the workflow logs."
+          ].join("\n");
+          await github.rest.issues.createComment({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            issue_number: context.issue.number,
+            body
+          });
 
-    steps:
-      - name: Post PR comment with schema validation summary
-        uses: actions/github-script@v7
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const summary = `${{ toJSON(needs.validate-schemas.outputs.summary) }}`.replace(/^"|"$/g, '');
-            const body = [
-              "### ✅ Schema Validation Summary",
-              "",
-              `- ${summary}`,
-              "",
-              needs.validate-schemas.result === "success"
-                ? "All checked schemas and example packets are **valid**. 🚀"
-                : "One or more schema validations **failed**. Please check the workflow logs. ⚠️"
-            ].join("\n");
-
-            await github.rest.issues.createComment({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body
-            });
-
-  update-schema-badge:
-    name: Update Schema Verified badge
-    needs: validate-schemas
-    if: needs.validate-schemas.result == 'success' && github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Update badge in docs/README.md
-        run: |
-          sed -i 's/<!--SCHEMA_STATUS-->.*<!--\/SCHEMA_STATUS-->/<!--SCHEMA_STATUS-->✅ Schema Verified<!--\/SCHEMA_STATUS-->/' docs/README.md
-
-      - name: Commit and push badge update
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet; then
-            echo "No changes to commit."
-            exit 0
-          fi
-          git add docs/README.md
-          git commit -m "chore: mark schemas as verified (CI)"
-          git push
+update-schema-badge:
+  name: Update Schema Verified badge
+  needs: validate-schemas
+  if: needs.validate-schemas.result == 'success' && github.ref == 'refs/heads/main'
+  runs-on: ubuntu-latest
+  permissions:
+    contents: write
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    - name: Update badge in docs/README.md
+      run: |
+        sed -i 's/<!--SCHEMA_STATUS-->.*<!--\/SCHEMA_STATUS-->/<!--SCHEMA_STATUS-->✅ Schema Verified<!--\/SCHEMA_STATUS-->/g' docs/README.md
+    - name: Commit and push badge update
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        if git diff --quiet; then
+          echo "No changes to commit."
+          exit 0
+        fi
+        git add docs/README.md
+        git commit -m "chore: mark schemas as verified (CI)"
+        git push
