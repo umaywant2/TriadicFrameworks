@@ -1,3 +1,37 @@
+<!-- WR-SADC SUITE · BADGE NEST
+How this reads, visually / semantically
+Top row (for‑the‑badge):  
+scope · canon · status · stability → “this is a suite, inside TriadicFrameworks, currently active, still experimental.”
+
+Middle row (flat‑square):  
+four option badges that mirror the folder layout:
+
+option: wrsadc-shell
+option: wrsadc-python
+option: wrsadc_integration
+bundle: tft-3pack
+Bottom row (flat):  
+suite‑level docs and license anchors. -->
+![suite-scope](https://img.shields.io/badge/scope-wrsadc_suite-4A90E2?style=for-the-badge&labelColor=111827)
+![triadicframeworks](https://img.shields.io/badge/canon-TriadicFrameworks-7C3AED?style=for-the-badge&labelColor=111827)
+![status](https://img.shields.io/badge/status-active-10B981?style=for-the-badge&labelColor=064E3B)
+![stability](https://img.shields.io/badge/stability-experimental-F59E0B?style=for-the-badge&labelColor=78350F)
+
+![shell-option](https://img.shields.io/badge/option-wrsadc--shell-0EA5E9?style=flat-square&labelColor=020617)
+![python-option](https://img.shields.io/badge/option-wrsadc--python-22C55E?style=flat-square&labelColor=022C22)
+![integration-option](https://img.shields.io/badge/option-wrsadc__integration-A855F7?style=flat-square&labelColor=1E1035)
+![tft-3pack](https://img.shields.io/badge/bundle-tft--3pack-EC4899?style=flat-square&labelColor=3B082F)
+
+![docs](https://img.shields.io/badge/docs-suite_readme-38BDF8?style=flat&logo=readthedocs&labelColor=020617)
+![license](https://img.shields.io/badge/license-MIT-6B7280?style=flat&labelColor=020617)
+```
+__        __            _           _        ______        _                 
+\ \      / /  _ __  ___| |_   _ ___| |__    / / ___   ___ | |__   ___  _ __  
+ \ \ /\ / /  | '_ \/ __| | | | / __| '_ \  / / / _ \ / __|| '_ \ / _ \| '_ \ 
+  \ V  V /   | |_) \__ \ | |_| \__ \ | | |/ /_| (_) |\__ \| | | | (_) | | | |
+   \_/\_/    | .__/|___/_|\__,_|___/_| |_/_/(_\____/ |___/|_| |_|\___/|_| |_|
+             |_|                     WR-SADC SUITE · TRIADICFRAMEWORKS
+```
 # 📦 **TriadicFrameworks Packages**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
