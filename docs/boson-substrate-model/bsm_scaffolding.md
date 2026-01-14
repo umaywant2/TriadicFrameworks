@@ -1,4 +1,5 @@
 # 🧭 The smartest place to dive first is **the Boson Substrate Model (BSM)**
+###### By Nawder Loswin 1/14/2026 © www.TriadicFrameworks.org
 
 And the reason is structural, not stylistic.
 
