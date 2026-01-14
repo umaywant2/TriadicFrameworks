@@ -25,13 +25,13 @@ suite‑level docs and license anchors. -->
 ![docs](https://img.shields.io/badge/docs-suite_readme-38BDF8?style=flat&logo=readthedocs&labelColor=020617)
 ![license](https://img.shields.io/badge/license-MIT-6B7280?style=flat&labelColor=020617)
 ```
-__        __            _           _        ______        _                 
-\ \      / /  _ __  ___| |_   _ ___| |__    / / ___   ___ | |__   ___  _ __  
- \ \ /\ / /  | '_ \/ __| | | | / __| '_ \  / / / _ \ / __|| '_ \ / _ \| '_ \ 
-  \ V  V /   | |_) \__ \ | |_| \__ \ | | |/ /_| (_) |\__ \| | | | (_) | | | |
-   \_/\_/    | .__/|___/_|\__,_|___/_| |_/_/(_\____/ |___/|_| |_|\___/|_| |_|
-             |_|                     WR-SADC SUITE · TRIADICFRAMEWORKS
+              ████████████████████████████████████████████████████████████████████
+               ██                                                              ██
+               ██               WR-SADC SUITE · TRIADICFRAMEWORKS              ██
+               ██                                                              ██
+              ████████████████████████████████████████████████████████████████████
 ```
+
 # 📦 **TriadicFrameworks Packages**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
