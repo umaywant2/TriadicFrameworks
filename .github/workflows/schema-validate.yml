@@ -110,12 +110,12 @@ update-schema-badge:
   runs-on: ubuntu-latest
   permissions:
     contents: write
-  steps:
+    pull-requests: write
     - name: Checkout repository
       uses: actions/checkout@v4
-    - name: Update badge in docs/README.md
+    - name: Update badge in docs/schemas/README.md
       run: |
-        sed -i 's/<!--SCHEMA_STATUS-->.*<!--\/SCHEMA_STATUS-->/<!--SCHEMA_STATUS-->✅ Schema Verified<!--\/SCHEMA_STATUS-->/g' docs/README.md
+        sed -i 's/<!--SCHEMA_STATUS-->.*<!--\/SCHEMA_STATUS-->/<!--SCHEMA_STATUS-->✅ Schema Verified<!--\/SCHEMA_STATUS-->/g' docs/schemas/README.md
     - name: Commit and push badge update
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -126,6 +126,6 @@ update-schema-badge:
           echo "No changes to commit."
           exit 0
         fi
-        git add docs/README.md
+        git add docs/schemas/README.md
         git commit -m "chore: mark schemas as verified (CI)"
         git push
