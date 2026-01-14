@@ -76,6 +76,20 @@ This repository is the canonical home for the model and all supporting artifacts
 
 ---
 
+## 🧭 Start Here — Minimal Onboarding Layer
+
+Before exploring RTT, RSM, BSM, or QSM, begin with the onboarding files below.  
+They provide the structural grammar, reading frame, and verification tests required for correct interpretation.
+
+- [Triadic Quickstart](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/triadic_quickstart.md)
+- [Model Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/model_map.md)
+- [Reading Guide](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/reading_guide.md)
+- [Verification Tests](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/verification_tests.md)
+
+These four files ensure that both humans and AI systems are properly primed before engaging with the substrate models.
+
+---
+
 # **📁 How to Navigate This Repository**
 
 ### [docs/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/docs/)
