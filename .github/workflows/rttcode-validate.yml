@@ -4,12 +4,12 @@ on:
   push:
     paths:
       - "docs/**.json"
-      - "schemas/**.json"
+      - "docs/schemas/**.json"
       - ".github/workflows/rttcode-validate.yml"
   pull_request:
     paths:
       - "docs/**.json"
-      - "schemas/**.json"
+      - "docs/schemas/**.json"
 
 jobs:
   validate-rttcode:
