@@ -3,12 +3,12 @@ name: Schema Validation
 on:
   push:
     paths:
-      - "schemas/**.json"
+      - "docs/schemas/**.json"
       - "docs/**.json"
       - ".github/workflows/schema-validate.yml"
   pull_request:
     paths:
-      - "schemas/**.json"
+      - "docs/schemas/**.json"
       - "docs/**.json"
 
 jobs:
@@ -45,7 +45,7 @@ jobs:
         run: |
           echo "Validating Environment schemas/examples..."
           ajv validate \
-            -s schemas/environment.v1.json \
+            -s docs/schemas/environment.v1.json \
             -d "docs/**/environment*.json" \
             --strict=true
 
@@ -54,7 +54,7 @@ jobs:
         run: |
           echo "Validating Entity schemas/examples..."
           ajv validate \
-            -s schemas/entity.v1.json \
+            -s docs/schemas/entity.v1.json \
             -d "docs/**/entity*.json" \
             --strict=true
 
@@ -63,7 +63,7 @@ jobs:
         run: |
           echo "Validating Universe-Class extension schemas/examples..."
           ajv validate \
-            -s schemas/universe.v1.json \
+            -s docs/schemas/universe.v1.json \
             -d "docs/**/universe*.json" \
             --strict=true
 
