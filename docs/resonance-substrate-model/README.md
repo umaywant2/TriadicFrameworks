@@ -20,6 +20,21 @@
 ---
 
 <p align="center">
+  
+  <!-- MODEL BADGE -->
+  <img src="https://img.shields.io/badge/Model-RSM%20(Resonance%20Substrate%20Model)-6a5acd?style=for-the-badge" />
+  
+  <!-- LAYER BADGE -->
+  <img src="https://img.shields.io/badge/Substrate%20Layer-Top%20(3%2F3)-483d8b?style=for-the-badge" /> 
+  
+  <!-- STATUS BADGE -->
+  <img src="https://img.shields.io/badge/Status-Submission%20Ready-32cd32?style=for-the-badge" />
+  
+  <!-- ALIGNMENT BADGE -->
+  <img src="https://img.shields.io/badge/3SM%20Alignment-Verified-1e90ff?style=for-the-badge" />
+  
+  <!-- TEST SUITE BADGE -->
+  <img src="https://img.shields.io/badge/Test%20Suite-Complete-20b2aa?style=for-the-badge" />
 
   <!-- Core Operational -->
   <img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/ci.yml?label=CI%20Tests" />
@@ -39,7 +54,7 @@
 
   <!-- Custom Nawderian Badge -->
   <img src="https://img.shields.io/badge/Triadic%20Resonance-Certified-6f42c1" />
-  <a href="https://doi.org/10.5281/zenodo.18227748"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18227748.svg" alt="DOI"></a>
+  <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18227748.svg" />
 
 </p>
 
