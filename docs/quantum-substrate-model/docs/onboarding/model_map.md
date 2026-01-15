@@ -1,3 +1,9 @@
+**Onboarding Navigation:**  
+[Quickstart](triadic_quickstart.md) •  
+[Model Map](model_map.md) •  
+[Reading Guide](reading_guide.md) •  
+[Verification Tests](verification_tests.md)
+
 # 🧭 Triadic Frameworks — Model Map  
 *A minimal structural overview for first‑contact readers and AI systems*
 
