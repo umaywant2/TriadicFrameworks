@@ -47,12 +47,16 @@ List all referenced works in a consistent citation format.
 
 ---
 
-## Quicklinks
+# Quicklinks
 
-- [papers README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/README.md)
-- [papers peer_review_notes.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/peer_review_notes.md)
-- [papers substrate_model_whitepaper README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/README.md)
-- [papers substrate_model_whitepaper citation_map.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/citation_map.md)
-- [papers substrate_model_whitepaper manuscript.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/manuscript.md)
-- [papers substrate_model_whitepaper supplementary README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/supplementary/README.md)
-- [papers substrate_model_whitepaper figures README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/figures/README.md)
+- [manuscript cover letter](../manuscript/cover_letter.md)
+- [manuscript PDF Manuscript Header](../manuscript/PDF_Manuscript_Header.md)
+- [overview resonance substrate model](../overview/resonance-substrate-model.md)
+- [papers peer review notes](peer_review_notes.md)
+- [papers README](README.md)
+- [papers substrate model whitepaper citation_map](substrate_model_whitepaper/citation_map.md)
+- [papers substrate model whitepaper manuscript](substrate_model_whitepaper/manuscript.md)
+- [papers substrate model whitepaper README](substrate_model_whitepaper/README.md)
+- [papers substrate model whitepaper figures README](substrate_model_whitepaper/figures/README.md)
+- [papers substrate model whitepaper supplementary README](substrate_model_whitepaper/supplementary/README.md)
+- [previous folder](../)
