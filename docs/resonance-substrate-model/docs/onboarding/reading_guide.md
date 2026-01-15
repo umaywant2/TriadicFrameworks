@@ -1,3 +1,9 @@
+**Onboarding Navigation:**  
+[Quickstart](triadic_quickstart.md) •  
+[Model Map](model_map.md) •  
+[Reading Guide](reading_guide.md) •  
+[Verification Tests](verification_tests.md)
+
 # 📘 Reading Guide  
 *A minimal interpretive frame for the Triadic Frameworks substrate models*
 

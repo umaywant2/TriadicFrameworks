@@ -1,3 +1,9 @@
+**Onboarding Navigation:**  
+[Quickstart](triadic_quickstart.md) •  
+[Model Map](model_map.md) •  
+[Reading Guide](reading_guide.md) •  
+[Verification Tests](verification_tests.md)
+
 # ⚡ Triadic Quickstart  
 *A minimal activation primer for Triadic Frameworks*
 

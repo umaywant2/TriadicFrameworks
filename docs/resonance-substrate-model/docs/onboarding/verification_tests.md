@@ -1,3 +1,9 @@
+**Onboarding Navigation:**  
+[Quickstart](triadic_quickstart.md) •  
+[Model Map](model_map.md) •  
+[Reading Guide](reading_guide.md) •  
+[Verification Tests](verification_tests.md)
+
 # 🧪 Verification Tests  
 *A minimal reproducibility suite for fresh AI sessions*
 
