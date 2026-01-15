@@ -43,4 +43,5 @@ Simulations provide a computational environment for exploring substrate dynamics
 - [tools cli README](../tools/cli/README.md)
 - [tools converters README](../tools/converters/README.md)
 - [tools visualization README](../tools/visualization/README.md)
+- [Triadic Quickstart](../docs/onboarding/triadic_quickstart.md)
 - [previous folder](../)
