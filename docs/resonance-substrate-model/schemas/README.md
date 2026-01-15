@@ -29,6 +29,7 @@ TriadicFrameworks modules.
 - [schemas sensing README](sensing/README.md)
 - [schemas simulations README](simulations/README.md)
 - [schemas universe-core README](universe-core/README.md)
+- [Triadic Quickstart](../docs/onboarding/triadic_quickstart.md)
 - [previous folder](../)
 
 ---
