@@ -1,3 +1,21 @@
+## Quicklinks
+
+- [applications complex systems](applications/complex-systems.md)
+- [CHANGELOG](CHANGELOG.md)
+- [CONTRIBUTING](CONTRIBUTING.md)
+- [docs README](docs/README.md)
+- [data README](data/README.md)
+- [experiments README](experiments/README.md)
+- [papers substrate model whitepaper manuscript](papers/substrate_model_whitepaper/manuscript.md)
+- [papers README](papers/README.md)
+- [reference Keywords](reference/Keywords.md)
+- [schemas README](schemas/README.md)
+- [simulations README](simulations/README.md)
+- [tools README](tools/README.md)
+- [README](README.md)
+- [RELEASE NOTES](RELEASE_NOTES.md)
+- [previous folder](../)
+
 # 🌌 **Zenodo / ORCID Release Text (Apache‑2.0 Edition)**  
 ### *Resonance Substrate Model (RSM) v1.0*  
 **Author:** Nawder Loswin  
@@ -131,16 +149,3 @@ This work is part of the **TriadicFrameworks Research Initiative**, an independe
 
 ---
 
-## Quicklinks
-
-- [Main README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/README.md)
-- [tools README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/tools/README.md)
-- [simulations README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/simulations/README.md)
-- [schemas README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/README.md)
-- [papers README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/README.md)
-- [resonance-substrate-model.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/resonance-substrate-model.md)
-- [resonance-substrate-model-complex-systems.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/resonance-substrate-model-complex-systems.md)
-- [Keywords.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/Keywords.md)
-- [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CONTRIBUTING.md)
-- [CHANGELOG.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CHANGELOG.md)
-- [cover_letter.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/cover_letter.md)
