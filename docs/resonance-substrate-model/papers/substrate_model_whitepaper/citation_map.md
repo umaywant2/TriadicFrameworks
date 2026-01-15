@@ -138,14 +138,16 @@ You can now:
 
 ---
 
-## Quicklinks
+# Quicklinks
 
-- [papers README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/README.md)
-- [papers peer_review_notes.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/peer_review_notes.md)
-- [papers replication_report_template.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/replication_report_template.md)
-- [papers substrate_model_whitepaper README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/README.md)
-- [papers substrate_model_whitepaper manuscript.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/manuscript.md)
-- [papers substrate_model_whitepaper supplementary README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/supplementary/README.md)
-- [papers substrate_model_whitepaper figures README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/substrate_model_whitepaper/figures/README.md)
-
-10.5281/zenodo.18227748
+- [manuscript cover letter](../../manuscript/cover_letter.md)
+- [manuscript PDF Manuscript Header](../../manuscript/PDF_Manuscript_Header.md)
+- [overview resonance substrate model](../../overview/resonance-substrate-model.md)
+- [papers peer review notes](../peer_review_notes.md)
+- [papers README](../README.md)
+- [papers replication report template](../replication_report_template.md)
+- [papers substrate model whitepaper manuscript](manuscript.md)
+- [papers substrate model whitepaper README](README.md)
+- [papers substrate model whitepaper figures README](figures/README.md)
+- [papers substrate model whitepaper supplementary README](supplementary/README.md)
+- [previous folder](../)
