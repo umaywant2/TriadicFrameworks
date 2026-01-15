@@ -23,7 +23,6 @@ These files support analysis, visualization, and comparison across runs.
 - [experiments faraday paradox analysis.ipynb](../analysis.ipynb.md)
 - [experiments faraday paradox protocol](../protocol.md)
 - [experiments faraday paradox README](../README.md)
-- [experiments faraday paradox processed data README](README.md)
 - [experiments faraday paradox raw data data dictionary](../raw_data/data_dictionary.md)
 - [experiments faraday paradox raw data README](../raw_data/README.md)
 - [experiments replication guides README](../../replication_guides/README.md)
