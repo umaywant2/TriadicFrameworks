@@ -1,3 +1,20 @@
+## Quicklinks
+
+- [CHANGELOG](../CHANGELOG.md)
+- [CONTRIBUTING](../CONTRIBUTING.md)
+- [docs README](../docs/README.md)
+- [data README](../data/README.md)
+- [experiments README](../experiments/README.md)
+- [papers substrate model whitepaper manuscript](../papers/substrate_model_whitepaper/manuscript.md)
+- [papers README](../papers/README.md)
+- [reference Keywords](../reference/Keywords.md)
+- [schemas README](../schemas/README.md)
+- [simulations README](../simulations/README.md)
+- [tools README](../tools/README.md)
+- [README](../README.md)
+- [RELEASE NOTES](../RELEASE_NOTES.md)
+- [previous folder](../)
+
 # 🌌 **The Resonance Substrate Model: A Triadic Framework for Coherent Multi‑Layer Systems**  
 **Nawder Loswin**  
 **TriadicFrameworks Research Initiative**  
@@ -189,19 +206,5 @@ This manuscript presents a coherent, extensible, and reproducible model for cros
 18. R. Zwanzig, *Nonequilibrium Statistical Mechanics*. Oxford University Press, 2001.
 
 ---
-
-## Quicklinks
-
-- [Main README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/README.md)
-- [RELEASE_NOTES.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/RELEASE_NOTES.md)
-- [tools README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/tools/README.md)
-- [simulations README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/simulations/README.md)
-- [schemas README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/README.md)
-- [papers README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/README.md)
-- [resonance-substrate-model.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/resonance-substrate-model.md)
-- [Keywords.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/Keywords.md)
-- [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CONTRIBUTING.md)
-- [CHANGELOG.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CHANGELOG.md)
-- [cover_letter.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/cover_letter.md)
 
 10.5281/zenodo.18227748
