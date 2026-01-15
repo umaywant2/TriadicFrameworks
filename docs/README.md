@@ -154,4 +154,11 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 
 ---
 
+<p>
+For the technical substrate that implements Resonance‑Time Theory, see the 
+<a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/bridges">Bridge Layer</a>.
+</p>
+
+---
+
 © 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
