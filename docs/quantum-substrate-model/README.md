@@ -1,3 +1,10 @@
+> **Conceptual Integration:**  
+> For the conceptual foundations that connect Resonance‑Time Theory to the substrate architecture, see the Bridge Layer:  
+> [Why Resonance Is the Substrate](../bridges/why_resonance_is_the_substrate.md) •  
+> [Triad → Field Mapping](../bridges/triad_to_field_mapping.md) •  
+> [Concepts → Operators](../bridges/concepts_to_operators.md) •  
+> [Cosmology → Layers](../bridges/cosmology_to_layers.md)
+
 # ⚛️ Quantum Substrate Model — RSM‑Aligned Scaffolding  
 *(for the `quantum-substrate-model/README.md` repo/folder)*
 
