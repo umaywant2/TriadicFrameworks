@@ -85,9 +85,11 @@ They provide the structural grammar, reading frame, and verification tests requi
 - [Model Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/model_map.md)
 - [Reading Guide](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/reading_guide.md)
 - [Verification Tests](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/verification_tests.md)
-- [Bridges Overview](../bridges/bridge_layer_overview.md)
+  
+Conceptual Bridges:
+[Bridge Overview](../bridges/bridge_layer_overview.md)
 
-These four files ensure that both humans and AI systems are properly primed before engaging with the substrate models.
+These files ensure that both humans and AI systems are properly primed before engaging with the substrate models.
 
 ---
 
@@ -128,8 +130,6 @@ Unit and integration tests ensuring correctness and stability.
 - [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/CONTRIBUTING.md)
 
 ---
-
-👉 See: **[`CONTRIBUTING.md`](CONTRIBUTING.md)**
 
 ### **📘 Full Contribution Guide**
 The canonical reference for contributing to the Resonance Substrate Model.
