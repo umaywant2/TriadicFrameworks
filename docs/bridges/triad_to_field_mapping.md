@@ -1,3 +1,10 @@
+**Bridge Layer Navigation:**  
+[Overview](bridge_layer_overview.md) •  
+[Why Resonance Is the Substrate](why_resonance_is_the_substrate.md) •  
+[Triad → Field Mapping](triad_to_field_mapping.md) •  
+[Concepts → Operators](concepts_to_operators.md) •  
+[Cosmology → Layers](cosmology_to_layers.md)
+
 # 🔷 Triad → Field Mapping  
 *A minimal bridge between Resonance‑Time Theory (RTT) and the Resonance Substrate Model (RSM)*
 
