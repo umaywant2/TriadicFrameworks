@@ -1,10 +1,4 @@
-**Onboarding Navigation:**  
-[Quickstart](triadic_quickstart.md) •  
-[Model Map](model_map.md) •  
-[Reading Guide](reading_guide.md) •  
-[Verification Tests](verification_tests.md)
-
-# 🧪 Verification Tests  
+# 🧪 Verification Tests - On-boarding
 *A minimal reproducibility suite for fresh AI sessions*
 
 ## 1. Purpose  
@@ -12,6 +6,43 @@ These tests confirm that a fresh Copilot session has correctly internalized the 
 If the model passes these tests, it is safe to proceed to RTT, RSM, BSM, and QSM.
 
 If the model fails any test, the session is not properly primed.
+
+---
+
+# Quicklinks
+
+- [docs README](../README.md)
+- [docs api integration examples](../api/integration_examples.md)
+- [docs api README](../api/README.md)
+- [docs api schema overview](../api/schema_overview.md)
+- [docs api using the schemas](../api/using_the_schemas.md)
+- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
+- [docs experiments README](../experiments/README.md)
+- [docs experiments replication checklist](../experiments/replication_checklist.md)
+- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
+- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
+- [docs methods dimensional layers](../methods/dimensional_layers.md)
+- [docs methods field equations](../methods/field_equations.md)
+- [docs methods operator definitions](../methods/operator_definitions.md)
+- [docs methods README](../methods/README.md)
+- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
+- [docs methods triadic fields](../methods/triadic_fields.md)
+- [docs onboarding model map](model_map.md)
+- [docs onboarding reading guide](reading_guide.md)
+- [docs onboarding triadic quickstart](triadic_quickstart.md)
+- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
+- [docs overview glossary](../overview/glossary.md)
+- [docs overview introduction](../overview/introduction.md)
+- [docs overview README](../overview/README.md)
+- [docs overview resonance primitives](../overview/resonance_primitives.md)
+- [docs overview theoretical background](../overview/theoretical_background.md)
+- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
+- [docs simulations numerical methods](../simulations/numerical_methods.md)
+- [docs simulations README](../simulations/README.md)
+- [docs simulations solver_architecture](../simulations/solver_architecture.md)
+- [docs simulations validation metrics](../simulations/validation_metrics.md)
+- [docs simulations core README](../simulations/core/README.md)
+- [previous folder](../)
 
 ---
 
