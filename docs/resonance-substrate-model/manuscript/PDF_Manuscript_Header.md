@@ -21,17 +21,16 @@ derives its temporal behavior, forming a unified physical‑symbolic modeling st
 
 ---
 
-## Quicklinks
+# Quicklinks
 
-- [Main README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/README.md)
-- [RELEASE_NOTES.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/RELEASE_NOTES.md)
-- [tools README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/tools/README.md)
-- [simulations README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/simulations/README.md)
-- [schemas README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/README.md)
-- [papers README](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/papers/README.md)
-- [resonance-substrate-model.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/resonance-substrate-model.md)
-- [resonance-substrate-model-complex-systems.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/resonance-substrate-model-complex-systems.md)
-- [Keywords.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/Keywords.md)
-- [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CONTRIBUTING.md)
-- [CHANGELOG.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/CHANGELOG.md)
-- [cover_letter.md](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/cover_letter.md)
+- [manuscript cover letter](cover_letter.md)
+- [overview resonance substrate model](../overview/resonance-substrate-model.md)
+- [papers peer review notes](../papers/peer_review_notes.md)
+- [papers README](../papers/README.md)
+- [papers replication report template](../papers/replication_report_template.md)
+- [papers substrate model whitepaper citation_map](../papers/substrate_model_whitepaper/citation_map.md)
+- [papers substrate model whitepaper manuscript](../papers/substrate_model_whitepaper/manuscript.md)
+- [papers substrate model whitepaper README](../papers/substrate_model_whitepaper/README.md)
+- [papers substrate model whitepaper figures README](../papers/substrate_model_whitepaper/figures/README.md)
+- [papers substrate model whitepaper supplementary README](../papers/substrate_model_whitepaper/supplementary/README.md)
+- [previous folder](../)
