@@ -104,3 +104,5 @@ This is a **living canonical document set**.
 Revisions are tracked explicitly and conservatively.
 
 See `CHANGELOG.md` and `VERSIONING.md` for details.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/consciousness_substrate_model)
