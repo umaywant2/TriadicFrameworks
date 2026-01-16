@@ -26,3 +26,5 @@ This work is intended for:
 MSRM extends substrate‑based modeling principles developed in related works, including the Boson Substrate Model (BSM), Quantum Substrate Model (QSM), and Resonance Substrate Model (RSM), adapting them to the context of extreme manufacturing environments.
 
 MSRM is descriptive and structural in nature. It makes no empirical claims and does not prescribe implementation details.
+
+- [repo folder](../)
