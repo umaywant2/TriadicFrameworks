@@ -8,6 +8,7 @@ authors:
     affiliation: Independent Researcher
 version: 1.0.0
 date-released: 2026-01-15
+doi: 10.5281/zenodo.XXXXXXX
 license: CC-BY-4.0
 abstract: >
   The Boson Substrate Model (BSM) defines a minimal structural substrate intended
@@ -18,3 +19,4 @@ abstract: >
   details. The BSM is architecture-agnostic and compatible with layered
   modeling approaches, providing a stable foundation beneath higher-level
   systems without constraining their semantics or objectives.
+
