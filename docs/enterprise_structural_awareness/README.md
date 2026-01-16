@@ -28,3 +28,5 @@ In relation to the broader canon:
 Enterprise Structural Awareness is intentionally quiet. Its value lies in making assumptions visible, transitions legible, and operations calmer over long system lifecycles.
 
 It is offered as a reference surface rather than a prescription, enabling enterprise teams to recognize and articulate structural context that already exists within their systems.
+
+- [repo folder](../)
