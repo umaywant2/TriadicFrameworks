@@ -14,3 +14,5 @@ The substrate is designed to support:
 - mixed human–machine collaboration
 
 Coordination is achieved structurally, not procedurally.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_coordination_substrate/)
