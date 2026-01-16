@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 title: "Global Energy Regime Awareness"
 message: "If you use this work, please cite it as below."
+doi: "10.5281/zenodo.18266407"
 authors:
   - family-names: Loswin
     given-names: Nawder
