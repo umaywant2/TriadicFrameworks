@@ -62,3 +62,5 @@ This work is prepared as a standalone technical note with citation and archival 
 ## License
 
 This work is released under the Creative Commons Attribution 4.0 International (CC‑BY‑4.0) license.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/quantum-substrate-model)
