@@ -2,6 +2,7 @@
   "title": "Enterprise Structural Awareness",
   "upload_type": "publication",
   "publication_type": "technicalnote",
+   "doi": "10.5281/zenodo.18265872",
   "description": "Enterprise Structural Awareness is a descriptive framework for introducing regime context, validity assumptions, and boundary semantics into existing enterprise IT systems using standards-based, non-intrusive approaches. The work focuses on interpretability, coherence, and long-term operational clarity without altering system behavior or control logic.",
   "creators": [
     {
