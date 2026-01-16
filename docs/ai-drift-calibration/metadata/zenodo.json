@@ -2,6 +2,7 @@
   "title": "Calibrating AI Drift via Declared Operating Regimes",
   "upload_type": "publication",
   "publication_type": "article",
+  "doi": "10.5281/zenodo.18263036",
   "description": "A minimal technical note demonstrating how AI behavioral drift can be calibrated through explicit declaration of operating regimes, transforming drift from an uncontrolled failure mode into a bounded, analyzable dynamic.",
   "creators": [
     {
