@@ -5,7 +5,7 @@ authors:
   - family-names: Loswin
     given-names: Nawder
     affiliation: Independent Researcher
-version: 0.1.0
+version: 1.0.0
 date-released: 2026-01-15
 license: CC-BY-4.0
 abstract: >
@@ -14,3 +14,4 @@ abstract: >
   descriptors, and operator-mediated interactions. The model extends minimal
   substrate modeling principles without embedding empirical claims, physical
   interpretation, or domain-specific semantics.
+
