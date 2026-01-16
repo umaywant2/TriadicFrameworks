@@ -6,6 +6,9 @@ This changelog follows a conservative, publication‑oriented format. Structural
 
 ---
 
+## [1.0.0] — 2026‑01‑15
+Initial publication of the Quantum Substrate Model.
+
 ## [0.1.0] — 2026‑01‑15
 
 ### Added
@@ -24,3 +27,4 @@ This version establishes the structural and organizational foundation for the Qu
 - Patch versions address typographical or formatting corrections only.
 - Minor versions introduce clarifications without altering declared assumptions.
 - Major versions reflect substantive changes to substrate definition, regime structure, or operating assumptions.
+
