@@ -2,6 +2,7 @@
   "title": "Quantum Substrate Model: Regime Structure and Dimensional Organization",
   "version": "0.1.0",
   "publication_date": "2026-01-15",
+  "doi": "10.5281/zenodo.18264063",
   "creators": [
     {
       "name": "Loswin, Nawder",
@@ -20,3 +21,4 @@
   "license": "CC-BY-4.0",
   "access_right": "open"
 }
+
