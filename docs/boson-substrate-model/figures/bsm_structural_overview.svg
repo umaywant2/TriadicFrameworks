@@ -39,7 +39,7 @@ These represent **relational structure**, not particles.
 - Simple arrows, waves, or connectors between substrate regions
 - Labeled:
   ```
-  Operator Interaction
+  Operator_Mediated Interaction
   ```
 - Directional but not force‑like
 
@@ -140,7 +140,7 @@ The editor view doesn’t expose the SVG’s internal elements (paths, groups, l
 
 #### 3) Operators (Mediators)
 - **Present:** Simple arrows/waves/connectors between regions.
-- **Label:** “Operator Interaction”.
+- **Label:** “Operator_Mediated Interaction”.
 - **Check:** Procedural look (no force vectors, no energy cues).
 
 #### 4) Locality Boundary
