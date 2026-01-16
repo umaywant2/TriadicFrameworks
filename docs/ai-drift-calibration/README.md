@@ -9,4 +9,4 @@ This repository section contains a minimal technical note intended for citation 
 
 The goal is clarity, not adoption.
 
-[repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration)
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration)
