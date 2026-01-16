@@ -8,3 +8,5 @@ Instead, drift can be calibrated by explicitly declaring the operating regimes u
 This repository section contains a minimal technical note intended for citation and reference. It does not propose a new AI architecture, safety framework, or governance model. The approach is compatible with existing systems and focuses solely on structural declaration rather than enforcement.
 
 The goal is clarity, not adoption.
+
+[repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/ai-drift-calibration)
