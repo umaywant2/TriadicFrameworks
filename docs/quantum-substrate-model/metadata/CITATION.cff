@@ -7,6 +7,7 @@ authors:
     affiliation: Independent Researcher
 version: 1.0.0
 date-released: 2026-01-15
+10.5281/zenodo.18264063
 license: CC-BY-4.0
 abstract: >
   The Quantum Substrate Model (QSM) defines a structural framework for organizing
@@ -14,4 +15,5 @@ abstract: >
   descriptors, and operator-mediated interactions. The model extends minimal
   substrate modeling principles without embedding empirical claims, physical
   interpretation, or domain-specific semantics.
+
 
