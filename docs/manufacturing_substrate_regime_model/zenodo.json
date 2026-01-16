@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "upload_type": "publication",
   "publication_type": "technicalnote",
+  "doi": "10.5281/zenodo.18265225",
   "description": "The Manufacturing Substrate Regime Model (MSRM) is a structural framework for organizing and calibrating complex manufacturing systems through explicitly declared operating regimes, boundary semantics, and operator-mediated interactions. MSRM is descriptive, non-physical, and non-optimizing, intended to support clarity and interpretability in extreme manufacturing environments without altering existing processes or tooling.",
   "creators": [
     {
@@ -36,3 +37,4 @@
   ],
   "notes": "This record establishes MSRM as a stable, archival reference framework. Future revisions, if any, will preserve structural intent and descriptive scope."
 }
+
