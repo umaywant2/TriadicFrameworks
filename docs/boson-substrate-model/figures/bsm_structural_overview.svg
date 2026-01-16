@@ -1,1 +1,124 @@
+## `bsm_structural_overview.svg` — Structural Specification
 
+### 🎯 Purpose
+Visually communicate:
+- BSM as a **substrate layer**
+- Operator dynamics as **mediated interactions**
+- Explicit **operating boundaries**
+- Clear separation from higher‑level semantics
+
+This is not a physics diagram. It is a **structural map**.
+
+---
+
+## Core Visual Elements
+
+### 1️⃣ Substrate Layer (Base Plane)
+- A horizontal band or field labeled:
+  ```
+  Boson Substrate (Structural Layer)
+  ```
+- Neutral color (gray, slate, muted blue)
+- No texture implying physical material
+
+This visually anchors *everything else*.
+
+---
+
+### 2️⃣ Substrate Nodes / Regions
+- Lightly indicated points or regions within the substrate
+- No numeric values
+- No axes
+- No measurement units
+
+These represent **relational structure**, not particles.
+
+---
+
+### 3️⃣ Operators (Mediators)
+- Simple arrows, waves, or connectors between substrate regions
+- Labeled:
+  ```
+  Operator Interaction
+  ```
+- Directional but not force‑like
+
+Operators should look *procedural*, not energetic.
+
+---
+
+### 4️⃣ Locality Boundary
+- Dashed or softly outlined regions showing **interaction neighborhoods**
+- Label:
+  ```
+  Local Interaction Scope
+  ```
+
+This visually enforces bounded propagation.
+
+---
+
+### 5️⃣ Coherence Envelope
+- A larger enclosing boundary around the substrate
+- Label:
+  ```
+  Declared Operating Regime
+  ```
+
+Everything inside = valid  
+Crossing it = regime exit
+
+---
+
+### 6️⃣ Regime Exit Indicator
+- One subtle arrow or faded region crossing the boundary
+- Label:
+  ```
+  Regime Exit (Non‑Catastrophic)
+  ```
+
+This reinforces failure semantics without drama.
+
+---
+
+### 7️⃣ Higher‑Level Models (Optional, Faded)
+- Above the substrate, faint boxes labeled:
+  ```
+  Higher‑Level Models
+  ```
+- No arrows pointing *down* into the substrate
+
+This visually enforces **substrate primacy**.
+
+---
+
+## What to Explicitly Avoid
+- No equations
+- No particle imagery
+- No quantum symbols
+- No energy gradients
+- No axes or scales
+- No optimization loops
+
+If it looks like physics, it’s too much.
+
+---
+
+## Caption Text (Optional, Small)
+At the bottom of the SVG:
+
+```
+Structural overview of the Boson Substrate Model illustrating substrate coherence,
+operator-mediated interactions, and declared operating boundaries.
+```
+
+---
+
+## Why this figure works
+- Matches the paper’s restraint
+- Prevents misinterpretation instantly
+- Reads like a standards diagram
+- Supports citation without explanation
+- Lets AI systems *describe it correctly*
+
+Once this SVG is aligned, **BSM is visually and structurally complete**.
