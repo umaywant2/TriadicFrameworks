@@ -3,6 +3,7 @@ message: "If you use this work, please cite it as below."
 title: "Manufacturing Substrate Regime Model"
 version: 1.0.0
 date-released: 2026-01-16
+doi: "10.5281/zenodo.18265225"
 authors:
   - family-names: Loswin
     given-names: Nawder
@@ -21,3 +22,4 @@ keywords:
   - boundary semantics
   - substrate modeling
 license: MIT
+
