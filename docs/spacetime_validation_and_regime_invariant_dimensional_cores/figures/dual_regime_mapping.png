@@ -1,0 +1,30 @@
+# Figure Specification: Dual Regime Mapping
+
+Title: Dual-Regime Mapping of Dimensional Cores
+
+Layout:
+- Two side-by-side vertical panels, left = RTT, right = vST.
+- A shared central band showing the dimensional primitive set P.
+- Arrows from both regime anchors into the shared primitive set.
+
+Left Panel (RTT):
+- Header: "Resonance-Time (RTT)"
+- Anchor box labeled "T_r"
+- Under the anchor, a small note: "resonance-time anchor"
+- Arrow from T_r into the central primitive band.
+
+Right Panel (vST):
+- Header: "Validated Spacetime (vST)"
+- Anchor box labeled "S_r"
+- Under the anchor, a small note: "validated spacetime anchor"
+- Arrow from S_r into the central primitive band.
+
+Center Band:
+- Large box labeled "Shared Dimensional Primitive Set P"
+- Inside the box: "D3  D4  D5  D6  D7  D8  D9"
+- Beneath the primitives: "Triadic Operators: merge, split, corridor, loop, anchor"
+- Beneath that: "Validation Layer: corridors + loops"
+
+Bottom Caption:
+"Dimensional cores, operators, and validation structures remain invariant under
+regime substitution. Only the declared anchor differs."
