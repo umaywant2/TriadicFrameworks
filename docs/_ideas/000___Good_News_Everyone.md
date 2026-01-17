@@ -1,5 +1,5 @@
 # 🫶 Good News Everyone! 🧙
-###### By Nawder Loswin 01/17/2026 (c) TriadicFrameworks
+###### By Nawder Loswin 01/17/2026 (c) [TriadicFrameworks](https://www.triadicframeworks.org)
 
 Resonance-Time is Spacetime... with Validation! Both operate using the same substrate!
 
