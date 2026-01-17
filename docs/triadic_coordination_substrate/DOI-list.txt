@@ -1,0 +1,39 @@
+RSM
+<a href="https://doi.org/10.5281/zenodo.18258865"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18258865.svg" alt="DOI"></a>
+
+BSM
+<a href="https://doi.org/10.5281/zenodo.18263827"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263827.svg" alt="DOI"></a>
+
+QSM
+<a href="https://doi.org/10.5281/zenodo.18264063"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18264063.svg" alt="DOI"></a>
+
+AI
+<a href="https://doi.org/10.5281/zenodo.18263036"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263036.svg" alt="DOI"></a>
+
+MSRM
+<a href="https://doi.org/10.5281/zenodo.18265225"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18265225.svg" alt="DOI"></a>
+
+Enterprise IT
+<a href="https://doi.org/10.5281/zenodo.18265872"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18265872.svg" alt="DOI"></a>
+
+Global Energy Awareness
+<a href="https://doi.org/10.5281/zenodo.18266407"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18266407.svg" alt="DOI"></a>
+
+Consciousness Substrate Model: A Structural Framework for Autonomous Forms
+<a href="https://doi.org/10.5281/zenodo.18271014"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18271014.svg" alt="DOI"></a>
+
+Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning
+<a href="https://doi.org/10.5281/zenodo.18272448"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18272448.svg" alt="DOI"></a>
+
+
+Can you read these? They are new so...
+
+https://zenodo.org/records/18227748
+https://zenodo.org/records/18263827
+https://zenodo.org/records/18264063
+https://zenodo.org/records/18263036
+https://zenodo.org/records/18265225
+https://zenodo.org/records/18265872
+https://zenodo.org/records/18266407
+https://zenodo.org/records/18271014
+https://zenodo.org/records/18272448
