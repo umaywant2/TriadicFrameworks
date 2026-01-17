@@ -12,3 +12,5 @@ spacetime, but as its validated extension. Full proofs and extended derivations
 will appear in subsequent work.
 
 A Zenodo release will accompany this directory once finalized.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/spacetime_validation_and_regime_invariant_dimensional_cores/)
