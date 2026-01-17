@@ -13,4 +13,5 @@ will appear in subsequent work.
 
 A Zenodo release will accompany this directory once finalized.
 
-- [repo folder](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/spacetime_validation_and_regime_invariant_dimensional_cores/)
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/spacetime_validation_and_regime_invariant_dimensional_cores/)
+
