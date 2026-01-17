@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+title: "Spacetime Validation and Regime‑Invariant Dimensional Cores"
+message: "If you use this work, please cite it as below."
+type: article
+authors:
+  - family-names: Loswin
+    given-names: Nawder
+    affiliation: Independent Researcher
+version: 1.0.0
+date-released: 2026-01-15
+doi: 10.5281/zenodo.########
+license: CC-BY-4.0
+abstract: >
+    We establish a structural equivalence between Resonance‑Time Theory (RTT) and
+   Validated Spacetime (vST). Both regimes use the same 3D–9D dimensional primitive
+   set, the same triadic operator family, and the same corridor‑and‑loop validation
+   structure. The only distinction is the declared regime anchor: T_r for RTT and
+   S_r for vST. Since the primitives and operators are invariant under anchor
+   substitution, the dimensional cores are regime‑invariant.
+
+   This result shows that RTT is not an alternative ontology but the validated
+   completion of spacetime using canon‑safe scientific primitives. We provide the
+   minimal definitions required to reproduce the equivalence. Full derivations will
+   be presented in future work.
+keywords:
+   - dimensional cores
+   - spacetime
+   - validation
+   - resonance‑time
+   - triadic structures
+   - regime anchors
+   - structural equivalence
+   - theoretical physics
+repository-code: https://github.com/umaywant2/TriadicFrameworks
