@@ -63,21 +63,8 @@ def primitive_1(entity_id: str, raw_input: str):
 # without changing its conceptual simplicity.
 
 # Shell Example (Optional)
-source wrsadc_shell.sh
-wrsadc_init "tft-3pack"
 
-primitive_1() {
-  local entity="$1"
-  local input="$2"
 
-  wrsadc_mark "primitive_1" "$entity" "perceive"
-  local interpreted="$(interpret_signal "$input")"
-  wrsadc_mark "primitive_1" "$entity" "interpret"
-  local orientation="$(orient_to_meaning "$interpreted")"
-  wrsadc_mark "primitive_1" "$entity" "orient"
-
-  echo "$orientation"
-}
 
 # Structural Snapshot
 # At any point, a tool or developer can request:
@@ -98,3 +85,19 @@ primitive_1() {
 # WRSADC summarizes
 
 # This creates a clean, introspective loop without adding conceptual weight.
+
+source wrsadc_shell.sh
+wrsadc_init "tft-3pack"
+
+primitive_1() {
+  local entity="$1"
+  local input="$2"
+
+  wrsadc_mark "primitive_1" "$entity" "perceive"
+  local interpreted="$(interpret_signal "$input")"
+  wrsadc_mark "primitive_1" "$entity" "interpret"
+  local orientation="$(orient_to_meaning "$interpreted")"
+  wrsadc_mark "primitive_1" "$entity" "orient"
+
+  echo "$orientation"
+}
