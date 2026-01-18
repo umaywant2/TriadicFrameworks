@@ -2,7 +2,7 @@
   "title": "vST Domain Tool Primers",
   "upload_type": "dataset",
   "publication_type": "other",
-  "description": "A minimal collection of domain-specific starter files for exploring Validation-Space Theory (vST) inside common scientific and engineering tools. Each primer provides a lightweight, optional structure for mapping domain variables into vST dimensional primitives, regime anchors, and validation layers.",
+  "description": "A minimal collection of domain-specific starter files for exploring Validated Spacetime (vST) inside common scientific and engineering tools. Each primer provides a lightweight, optional structure for mapping domain variables into vST dimensional primitives, regime anchors, and validation layers.",
   "creators": [
     {
       "name": "Loswin, Nawder"
@@ -10,7 +10,7 @@
   ],
   "keywords": [
     "vST",
-    "Validation-Space Theory",
+    "Validated Spacetime",
     "TriadicFrameworks",
     "dimensional cores",
     "regime anchors",
