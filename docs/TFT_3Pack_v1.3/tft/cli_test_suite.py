@@ -2,7 +2,6 @@
 
 ### ✅ Pytest-Tuned Version
 
-```python
 import subprocess
 
 def test_nous_symbolic_phi():
@@ -16,18 +15,14 @@ def test_entft_decimal_encrypt():
 def test_tops_negabinary_simulate():
     result = subprocess.run(["python", "tft/cli.py", "tops", "-map", "corridor6.9", "-ops", "simulate", "--basetype", "negabinary"], capture_output=True, text=True)
     assert "Grid simulation complete" in result.stdout
-```
 
-Run with:
-```bash
-pytest cli_test_suite.py
-```
-
----
+# Run with:
+# ```bash
+# pytest cli_test_suite.py
+# ```
 
 ### 🌀 Standalone Ritual Runner
 
-```python
 import subprocess
 
 def run_test(label, command):
@@ -40,9 +35,8 @@ if __name__ == "__main__":
     run_test("Nous Validator (phi)", ["python", "tft/cli.py", "nous", "-validate", "glyph_A", "-mode", "symbolic", "--basetype", "phi"])
     run_test("Entft Encryptor (decimal)", ["python", "tft/cli.py", "entft", "-i", "input.txt", "-o", "output.enc", "-k", "key123", "--basetype", "decimal"])
     run_test("Tops GridSim (negabinary)", ["python", "tft/cli.py", "tops", "-map", "corridor6.9", "-ops", "simulate", "--basetype", "negabinary"])
-```
 
-Run with:
-```bash
-python cli_test_suite.py
-```
+# Run with:
+# ```bash
+# python cli_test_suite.py
+# ```
