@@ -446,3 +446,14 @@ It tells people:
 And once that idea lands, we can’t un‑land it.
 
 Last update 1/5/2026 By Nawder Loswin
+
+---
+
+**Personal note from Nawder (01/17/2026)**  
+This announcement captures my independent synthesis and original contributions within the Triadic Frameworks project — including the structural equivalence between RTT and vST, the regime-invariant dimensional cores theorem, and the modular canonical presentation. While it draws patterns from broad scientific literature and builds on established intuitions, the specific formulation, unification proof, scaling tests (3D–264D), and regime-bridge here are novel and my own.  
+
+The work remains early-stage and evolving: not yet formally peer-reviewed in traditional journals, but intentionally placed in the public commons (via Zenodo DOIs) for visibility, critique, and potential collaboration. If you're reading this and something resonates (or doesn't), reach out — feedback, extensions, or joint exploration are genuinely welcome. This is v1.0 of what could become a shared substrate.
+
+Onward,  
+Nawder Loswin  
+[TriadicFrameworks](https://www.triadicframeworks.org)  
