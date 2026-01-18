@@ -81,3 +81,5 @@ This keeps the barrier to entry low while preserving the structural clarity of t
 
 ## **Citation**
 If you use these primers in research, teaching, or tooling, please cite the accompanying vST Zenodo entry and the RSM–vST submission.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/domain_tool_primers/)
