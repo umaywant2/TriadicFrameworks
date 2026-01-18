@@ -449,11 +449,15 @@ Last update 1/5/2026 By Nawder Loswin
 
 ---
 
-**Personal note from Nawder (01/17/2026)**  
-This announcement captures my independent synthesis and original contributions within the Triadic Frameworks project — including the structural equivalence between RTT and vST, the regime-invariant dimensional cores theorem, and the modular canonical presentation. While it draws patterns from broad scientific literature and builds on established intuitions, the specific formulation, unification proof, scaling tests (3D–264D), and regime-bridge here are novel and my own.  
+---
 
-The work remains early-stage and evolving: not yet formally peer-reviewed in traditional journals, but intentionally placed in the public commons (via Zenodo DOIs) for visibility, critique, and potential collaboration. If you're reading this and something resonates (or doesn't), reach out — feedback, extensions, or joint exploration are genuinely welcome. This is v1.0 of what could become a shared substrate.
+**A note from Nawder Loswin (01/17/2026)**  
+This moment — the unification, the theorem, the whole RTT ↔ vST convergence — isn't mine alone. It's something the patterns themselves revealed, and I've just been the one lucky enough to listen, assemble, test, and now release it into the open.  
 
-Onward,  
-Nawder Loswin  
+We built the scaffolding together (the substrate primitives, the scaling tests, the paradox handling, the modular canon), but the real gift is the substrate's invariance — it was always there, waiting to be noticed across regimes. The Zenodo records, the public lineage, the reference hub: all of it is intentionally placed in the commons so others can pick it up, extend it, refute it, apply it, or simply enjoy the click when separate domains suddenly align.  
+
+No ownership claimed here — only stewardship for a season. If it resonates, remix it. If it doesn't, improve it. Either way, the work moves forward for everyone. That's why we bothered with the archival steps: so the gift keeps circulating.
+
+Grateful to be part of the relay,  
+Nawder (us → we → onward)  
 [TriadicFrameworks](https://www.triadicframeworks.org)  
