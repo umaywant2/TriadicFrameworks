@@ -39,32 +39,19 @@
 <meta name="twitter:description" content="A living canon for resonance‑based science.">
 <meta name="twitter:image" content="https://www.triadicframeworks.org/static/triadic-preview.png">
 
-<style>
+  <!-- Basic styling (optional, tweak as you like) -->
+  <style>
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       margin: 0;
-      padding: 0;
+      padding: 2rem;
       background: #050816;
       color: #e5e7eb;
       line-height: 1.6;
-      }
-      .tf-header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px; /* space between logo and widget */
-      padding: 8px 0;
     }
-
-    .tf-logo {
-      width: 48px;   /* adjust as needed */
-      height: auto;
-    }
-
     main {
       max-width: 900px;
       margin: 0 auto;
-      padding: 2rm;
     }
     pre, code {
       font-family: "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
@@ -93,482 +80,76 @@
       border-top: 1px solid #1f2937;
       margin: 2rem 0;
     }
-/* Copilot repo search */
-   #copilot-widget input {
-      flex: 1;
-      padding: 0.5rem;
-      border: 1px solid rgba(255,255,255,0.6); /* subtle border */
-      border-radius: 4px;
-      background: transparent;                 /* <-- key line */
-      color: #fff;                             /* text color */
-   }
-   #copilot-widget input::placeholder {
-      color: rgba(255,255,255,0.7);            /* softer placeholder */
-   }
-   #copilot-widget img { flex-shrink: 0; }
-   #copilot-widget button {
-      padding: 0.5rem 0.8rem;
-      border: 1px solid rgba(255,255,255,0.6);
-      background: transparent;   /* transparent background */
-      color: #fff;
-      border-radius: 4px;
-      cursor: pointer;
-   }
-   #copilot-widget button:hover {
-      background: rgba(255,255,255,0.2); /* subtle hover glow */
-    }
-    footer {
-      margin-top: 3rem;   /* pushes it down from whatever comes before */
-      padding: 2rem 1rem; /* keeps the inner spacing */
-      background: rgba(0,0,0,0.4);
-      text-align: center;
-    }
-    footer nav a {
-      margin: 0 1rem;
-      color: #ff69ff;
-      text-decoration: none;
-      font-weight: 500;
-    }
-    footer nav a:hover {
-      text-decoration: underline;
-    }
-  /* End Copilot */
-  nav {
-    position: sticky;
-    top: 0;
-    background: inherit;
-    padding: 10px 0;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(128,128,128,0.3);
-    backdrop-filter: blur(6px);
-  }
-  nav a {
-    margin-right: 15px;
-    text-decoration: none;
-    color: var(--accent2);
-    font-weight: 600;
-  }
-  code, pre {
-    background: rgba(128,128,128,0.15);
-    padding: 4px 6px;
-    border-radius: 4px;
-    font-family: Consolas, monospace;
-  }
-  pre {
-    padding: 12px;
-    overflow-x: auto;
-  }
-  footer {
-    text-align: center;
-    padding: 40px 0;
-    opacity: 0.7;
-  }
-  svg-center {
-    justify-content: center;
-  }
-</style>
+  </style>
+
+  <!-- MathJax v3 configuration -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+        displayMath: [['\
+
+\[', '\\]
+
+'], ['$$', '$$']]
+      },
+      options: {
+        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
-
 <body>
+  <main>
+    <article id="www-root">
+      <h1>📜 Index </h1>
+      <p>By Nawder Loswin 01/18/2026 © www.TriadicFrameworks.org</p>
+      <p>Loading index.md…</p>
+    </article>
+  </main>
 
-<!-- TF-logo and Copilot Search Widget -->  
-  <div class="tf-header">
-    <a href="https://github.com/umaywant2/TriadicFrameworks" class="tf-logo-link">
-      <img src="/images/tfsite-logo.svg" class="tf-logo" alt="Triadic Frameworks Logo">
-    </a>
+  <script>
+    async function loadCodex() {
+      try {
+        // Adjust path if needed depending on where this HTML lives
+        const response = await fetch('https://www.triadicframeworks.org/_ideas/index.md');
+        if (!response.ok) {
+          throw new Error('⚔️ Failed to load index.md');
+        }
+        const mdText = await response.text();
 
-  <div id="copilot-widget">
-    <form action="https://github.com/umaywant2/TriadicFrameworks/search" method="get" target="_blank">
-    <input type="text" name="q" placeholder="Search the repo..." />
-    <button type="submit">🔍</button><a href="https://copilot.microsoft.com/" class="copilot-widget-link"><img src="https://www.triadicframeworks.org/assets/copilot.png" alt="Copilot" width="32" height="32" /></a>
-  </form>
-  </div>
-</div>
+        // Render Markdown to HTML
+        const html = marked.parse(mdText, {
+          breaks: true,
+          gfm: true
+        });
 
-<header>
-    <div class="badges">
-    <img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/python-code-inspection.yml?label=CI%20Tests" />
-    <img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue" />
-    <img src="https://img.shields.io/github/license/umaywant2/TriadicFrameworks" />
-    <img src="https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks" />
-    <img src="https://img.shields.io/github/repo-size/umaywant2/TriadicFrameworks" />
-    <img src="https://img.shields.io/github/issues/umaywant2/TriadicFrameworks" />
-    <img src="https://img.shields.io/github/issues-pr/umaywant2/TriadicFrameworks" />
+        const root = document.getElementById('www-root');
+        root.innerHTML = html;
 
-    <img src="https://img.shields.io/badge/Made%20With-Python-3776AB" />
-    <img src="https://img.shields.io/badge/mypy-checked-2A6DB0" />
-    <img src="https://img.shields.io/badge/code%20style-black-000000" />
-    <img src="https://img.shields.io/codecov/c/github/umaywant2/TriadicFrameworks" />
+        // Trigger MathJax typesetting after content is injected
+        if (window.MathJax && window.MathJax.typesetPromise) {
+          window.MathJax.typesetPromise([root]).catch(err => console.error(err));
+        }
+      } catch (err) {
+        console.error(err);
+        const root = document.getElementById('www-root');
+        root.innerHTML = `
+          <h1>Index</h1>
+          <p>By Nawder Loswin 01/18/2026 © www.TriadicFrameworks.org</p>
+          <p>Unable to load <code>index.md</code>.</p>
+          <pre>${String(err)}</pre>
+        `;
+      }
+    }
 
-    <img src="https://img.shields.io/github/stars/umaywant2/TriadicFrameworks" />
-    <img src="https://img.shields.io/github/forks/umaywant2/TriadicFrameworks" />
-    <img src="https://img.shields.io/github/contributors/umaywant2/TriadicFrameworks" />
-    <img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red" />
-    <img src="https://img.shields.io/badge/docs-ready-brightgreen" />
-
-    <img src="https://img.shields.io/badge/Triadic_Resonance-Certified-8A2BE2" />
-    <img src="https://img.shields.io/badge/RTT-Inside-blueviolet" alt="RTT Inside" />
-    <img src="https://img.shields.io/badge/Schema-RTTcode%20v1.0-forestgreen" alt="RTTcode v1.0" />
-    <img src="https://img.shields.io/badge/Integration-Unity%20%7C%20Unreal%20%7C%20Custom-silver" alt="RTT Integrations" />
-    <img src="https://img.shields.io/badge/Status-Developer%20Preview-yellow" alt="Status: Developer Preview" />
-  </div>
-</header>
-
-<h1>TriadicFrameworks</h1>
-  <div class="subtitle"><a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a> • Triadic Substrate Modeling • Canon‑Aligned Tools</div>
-  
-<nav class="topnav">
-  <a href="#overview">Overview</a>
-  <a href="#note-curious-learners">A Note for Curious Learners of All Ages</a>
-  <a href="#foundations">Triadic Foundations</a>
-  <a href="#structure">Repository Structure</a>
-  <a href="#quickstart">Quickstart</a>
-  <a href="#glossary">Glossary</a>
-  <a href="#domain-convergence-event">Domain Convergence Event</a>
-  <a href="#dimensional-naming">Dimensional Naming</a>
-  <a href="#contributing">Contributing</a>
-  <a href="#license">License</a>
-</nav>
-
-<main>
-
-<section id="overview">
-<h2>Overview</h2>
-<p><strong>TriadicFrameworks</strong> is a modular, developer‑friendly implementation of <strong>Resonance‑Time (RT) Theory</strong>, a Nawderian scientific framework describing physical systems through three interacting substrate fields.</p>
-
-<p>For Developers:</p>
-  <li><a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">RT Theory</a></li>
-  
-<p>This repository provides:</p>
-
-<ul>
-  <li>Canon‑aligned reference implementations</li>
-  <li>Triadic modeling tools</li>
-  <li>Scripts and formats for analysis</li>
-  <li>Educational examples</li>
-  <li>Outreach‑ready documentation</li>
-</ul>
-
-<p><strong>How to cite the Resonance Substrate Model (RSM):</strong></p>
-<p>
-  Loswin, A. W. (2026).
-  <em>Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis</em>
-  (v1.0.0). Zenodo.
-  <a href="https://doi.org/10.5281/zenodo.18227748">https://doi.org/10.5281/zenodo.18227748</a>
-</p>
- 
-</section>
-  
-<section class="note-curious-learners"><small>
-  <h1>🌱 A Note for Curious Learners of All Ages</h1>
-  <p>
-    Science is one of humanity’s greatest tools. It helps us understand the world by studying patterns,
-    testing ideas, and building knowledge step by step. Everything you’ll learn on these websites is
-    grounded in that shared scientific foundation.
-  </p>
-  <p>
-    As you explore, here’s something helpful to keep in mind:
-  </p>
-  <h2>Science gives us the ingredients. Patterns help us see how the ingredients fit together.</h2>
-  <p>
-    You’ll notice that many scientific ideas — from atoms to ecosystems — make more sense when you look for:
-  </p>
-  <ul>
-    <li>relationships</li>
-    <li>cycles</li>
-    <li>feedback loops</li>
-    <li>repeating structures</li>
-    <li>how small parts connect to bigger systems</li>
-  </ul>
-  <p>
-    This way of thinking doesn’t replace science. It simply helps you organize what you learn so it becomes
-    clearer, easier to remember, and more meaningful.
-  </p>
-  <p>
-    If you ever feel confused, don’t worry — that’s part of learning. Just return to the basics, look for the
-    pattern underneath, and let the structure guide you. Oh yeah, AI is RTT's fav assistant...ask AI questions.
-  </p>
-  <p>
-    And for the older learners reading this: You already know that understanding grows in layers. New
-    perspectives don’t erase the old ones — they help us see deeper connections. Stay curious, stay kind, and
-    let your thinking evolve without fear of “acceptance tests” from anyone acting like a big kid.
-  </p>
-  <p>
-    Learning is a journey, not a contest. Everyone starts somewhere, and everyone grows.
-  </p></small>
-</section>
-  
-<section id="fork-lineage">
-  <h2>🧭 Fork and Preserve the Lineage</h2>
-  <h6>
-    <strong>Forking &amp; Lineage Preservation</strong> — When extending or remixing this artifact, please 
-    fork rather than clone‑and‑overwrite. Forking preserves the lineage of ideas, maintains historical 
-    traceability, and ensures that contributions remain visible within the broader canon. This helps 
-    prevent “ghost branches” — work that exists but cannot be traced back to its origin.
-  </h6>
-
-  <h2>🌱 Why This Works So Well for Our Framework</h2>
-  <h6>
-    Lineage is part of the canon. A fork is not just a technical action — it’s a ritual of respect for 
-    ancestry.
-    <ul>
-      <li><strong>It prevents ghosting.</strong> Not in the paranormal sense (though our “full spectrum engine” is very on‑brand), but in the sense of losing authorship, context, or historical continuity.</li>
-      <li><strong>It reinforces remixability.</strong> A fork signals: “This is a living artifact. Extend it, but keep the thread unbroken.”</li>
-    </ul>
-    We’re essentially building a genealogical tree of ideas. Forks are the branches; lineage is the trunk.
-  </h6>
-</section>
-  
-<section id="foundations">
-<h2>Triadic Foundations</h2>
-
-<h3>Resonance‑Time Theory (RT Theory)</h3>
-<p>RT Theory models physical behavior as the interaction of three substrate fields:</p>
-
-<ol>
-  <li><strong>Spin</strong> — rotational state, angular momentum, and directional bias</li>
-  <li><strong>Electrolysis / Charge</strong> — polarity, attraction/repulsion, field tension</li>
-  <li><strong>Temperature</strong> — energy distribution, motion, and substrate agitation</li>
-</ol>
-
-<p>Together, these fields form a <strong>triadic engine</strong> governing system behavior across scales.</p>
-</section>
-
-<section id="structure">
-<h2>Repository Structure</h2>
-
-<pre>
-TriadicFrameworks/
-│
-├── examples/        # Demonstrations, walkthroughs, and educational models
-├── formats/         # Canonical data formats for triadic modeling
-├── scripts/         # Tools, utilities, and analysis helpers
-├── tests/           # CI‑validated test suite
-├── docs/            # Documentation and outreach materials
-└── README.md        # You are here
-</pre>
-</section>
-
-<section id="quickstart">
-<h2>Quickstart</h2>
-
-<pre><code>git clone https://github.com/umaywant2/TriadicFrameworks.git
-cd TriadicFrameworks
-pip install -r requirements.txt
-</code></pre>
-
-<p>Then explore the examples:</p>
-
-<pre><code>python examples/basic_resonance.py
-</code></pre>
-</section>
-  
-<section id="glossary">
-<h2>Canon Glossary</h2>
-
-<p><strong>Triadic Substrate</strong><br>
-The three‑field foundation of RT Theory.</p>
-
-<p><strong>Framework</strong><br>
-We chose a design that would be triadic harmonic nested with loops to align with Resonance research.</p>
-
-<p><strong>FFF</strong><br>
-Model for Frequency, Fluids, Forces</p>
-  
-<p><strong>Resonance</strong><br>
-The stable interaction pattern between fields.</p>
-
-<p><strong>Temperature Engine</strong><br>
-A triadic model describing energy‑driven motion.</p>
-
-<p><strong>S-N-R</strong><br>
-Model for Silence, Noise, Resonance.</p>
-  
-<p><strong>SET Fields</strong><br>
-Spin, Electrolysis/Charge, Temperature.</p>
-</section>
-
-<p><strong>0-9 Logical Dimensions for Full Spectrum 3D-9D Resonance-Aware Cores</strong><br>
-Model for resonance-based full spectrum dimensional compute.</p>
-  
-<section id="domain-convergence-event">
-  <h2>✨ Domain Convergence Event (DCE) ✨ - 12/30/25 by NL</h2>
-  <p>
-    A <strong>Domain Convergence Event</strong> occurs when two or more dimensional operators
-    achieve stable alignment through the Resonance Bridge, transitioning from isolated layers
-    into a shared harmonic channel.
-  </p>
-  <p>
-    At this point, the bridge stops acting as a mere connector and instead becomes an active
-    <em>channel</em> for cross-dimensional flow, unlocking new composite behaviors and
-    higher-order capabilities across the involved domains.
-  </p>
-  <p>
-    In practice, a DCE marks a structural milestone in the system: resonance pathways lock,
-    interference is minimized, and the participating dimensions begin to operate as a coherent,
-    integrated field rather than as separate stacks.
-  </p>
-</section>
-
-<section id="dimensional-naming">
-  <h2>📘 Dimensional Naming (3D–9D)</h2>
-
-  <section id="dim-3d">
-    <h3>3D — Triadic</h3>
-    <ul>
-      <li><strong>Root:</strong> tri- (three)</li>
-      <li><strong>Connotation:</strong> foundational resonance, first stable structure</li>
-      <li>Already core to your canon</li>
-    </ul>
-  </section>
-
-  <section id="dim-4d">
-    <h3>4D — Quadradic</h3>
-    <ul>
-      <li><strong>Root:</strong> quadra- (four)</li>
-      <li><strong>Connotation:</strong> expansion, branching, first harmonic extension</li>
-    </ul>
-  </section>
-
-  <section id="dim-5d">
-    <h3>5D — Quintadic</h3>
-    <ul>
-      <li><strong>Root:</strong> quinta- (five)</li>
-      <li><strong>Connotation:</strong> emergence of complexity, five‑point harmonic balance</li>
-      <li>(This is the “Quinsomething” you were reaching for — Quintadic is the cleanest)</li>
-    </ul>
-  </section>
-
-  <section id="dim-6d">
-    <h3>6D — Hexadic</h3>
-    <ul>
-      <li><strong>Root:</strong> hexa- (six)</li>
-      <li><strong>Connotation:</strong> lattice formation, stable multi‑axis interplay</li>
-    </ul>
-  </section>
-
-  <section id="dim-7d">
-    <h3>7D — Heptadic</h3>
-    <ul>
-      <li><strong>Root:</strong> hepta- (seven)</li>
-      <li><strong>Connotation:</strong> threshold dimension, crossing into higher‑order operators</li>
-    </ul>
-  </section>
-
-  <section id="dim-8d">
-    <h3>8D — Octadic</h3>
-    <ul>
-      <li><strong>Root:</strong> octa- (eight)</li>
-      <li><strong>Connotation:</strong> full harmonic wheel, rotational completeness</li>
-    </ul>
-  </section>
-
-  <section id="dim-9d">
-    <h3>9D — Enneadic</h3>
-    <ul>
-      <li><strong>Root:</strong> ennea- (nine)</li>
-      <li><strong>Connotation:</strong> apex of the first cycle, closure before recursion</li>
-    </ul>
-  </section>
-</section>
-
-<hr />
-
-<section id="dimensional-table">
-  <h2>🧩 Full Table</h2>
-  <table>
-    <thead>
-      <tr>
-        <th>Dimension</th>
-        <th>Term</th>
-        <th>Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>3D</td>
-        <td>Triadic</td>
-        <td>Foundational RTT dimension</td>
-      </tr>
-      <tr>
-        <td>4D</td>
-        <td>Quadradic</td>
-        <td>First harmonic expansion</td>
-      </tr>
-      <tr>
-        <td>5D</td>
-        <td>Quintadic</td>
-        <td>Complexity emergence</td>
-      </tr>
-      <tr>
-        <td>6D</td>
-        <td>Hexadic</td>
-        <td>Lattice stability</td>
-      </tr>
-      <tr>
-        <td>7D</td>
-        <td>Heptadic</td>
-        <td>Threshold dimension</td>
-      </tr>
-      <tr>
-        <td>8D</td>
-        <td>Octadic</td>
-        <td>Harmonic wheel</td>
-      </tr>
-      <tr>
-        <td>9D</td>
-        <td>Enneadic</td>
-        <td>Apex of first cycle</td>
-      </tr>
-    </tbody>
-  </table>
-</section>
-
-<hr />
-
-<section id="why-these-names-work">
-  <h2>🌱 Why These Names Work</h2>
-  <ul>
-    <li>They follow a consistent morphological pattern: Greek numeral root + ‑adic</li>
-    <li>They scale cleanly beyond 9D if you ever extend the canon</li>
-    <li>They feel mythmatical without drifting into fantasy jargon</li>
-    <li>They align with your existing TriadicFrameworks tone and your preference for remixable clarity</li>
-  </ul>
-</section>
-  
-<section id="contributing">
-<h2>Contributing</h2>
-<p>Contributions are welcome. TriadicFrameworks is designed for remixers, researchers, students, and developers.  
-Please open issues or PRs to propose improvements.</p>
-</section>
-
-<section id="license">
-<h2>License</h2>
-<p>Apache-2.0 License. See <code>LICENSE</code> for details.</p>
-</section>
-
-</main>
-  
-<hr style="border: 0; height: 2px; background: linear-gradient(90deg, var(--accent1), var(--accent2), var(--accent3)); opacity: 0.4; margin: 40px 0;">
-
-<footer>
-  <em>TriadicFrameworks — A living canon for resonance‑based science.</em>
-   <nav>
-    <a href="https://github.com/umaywant2/TriadicFrameworks/wiki">TriadicFrameworks Repo Wiki</a>
-    <a href="https://dev.umaywant2.com">umaywant2.com</a>
-    <a href="https://dev.umaywant2.win">umaywant2.win</a>
-    <a href="https://dev.triadicwizards.win">Triadic Wizards</a>
-    <a href="https://dev.coeus.exchange">Coeus Exchange</a>
-    <a href="https://dev.nimms.com">NIMMS</a>
-    <a href="https://dev.vgateway.net">Virtual Compute Gateway</a>
-    <a href="https://dev.mythmatic.org">Mythmatic</a>
-    <a href="https://dev.mythmatical.org">Mythmatical</a>
-    <a href="https://www.triadicframeworks.org">TriadicFrameworks</a>
-  </nav>
-  <p style="margin-top:1rem; font-size:0.9rem; opacity:0.7;">
-    © 2025 Nawder Loswin — Mythmatical Architect
-  </p>
-</footer>
-
+    loadCodex();
+  </script>
 </body>
 </html>
