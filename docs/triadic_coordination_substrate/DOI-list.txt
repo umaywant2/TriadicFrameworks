@@ -25,10 +25,13 @@ Consciousness Substrate Model: A Structural Framework for Autonomous Forms
 Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning
 <a href="https://doi.org/10.5281/zenodo.18272448"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18272448.svg" alt="DOI"></a>
 
+Spacetime Validation and Regime‑Invariant Dimensional Cores
+<a href="https://doi.org/10.5281/zenodo.18281561"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18281561.svg" alt="DOI"></a>
 
-Can you read these? They are new so...
+vST Domain Tool Primers
+<a href="https://doi.org/10.5281/zenodo.18286463"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18286463.svg" alt="DOI"></a>
 
-https://zenodo.org/records/18227748
+https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
 https://zenodo.org/records/18263036
@@ -37,3 +40,19 @@ https://zenodo.org/records/18265872
 https://zenodo.org/records/18266407
 https://zenodo.org/records/18271014
 https://zenodo.org/records/18272448
+https://zenodo.org/records/18281561
+https://zenodo.org/records/18286463
+
+10.5281/zenodo.18258865
+10.5281/zenodo.18263827
+10.5281/zenodo.18264063
+10.5281/zenodo.18263036
+10.5281/zenodo.18265225
+10.5281/zenodo.18265872
+10.5281/zenodo.18266407
+10.5281/zenodo.18271014
+10.5281/zenodo.18272448
+10.5281/zenodo.18281561
+10.5281/zenodo.18286463
+
+
