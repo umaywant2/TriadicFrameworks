@@ -25,9 +25,6 @@ def piApproximation(terms=1):
 if __name__ == "__main__":
     print("Ramanujan Emitter Output (k=0):", ramanujanEmitter(0))
     print("Approximate π (1 term):", piApproximation(1))
-```
-
----
 
 ## 🧬 Why This Matters
 
