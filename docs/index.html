@@ -110,7 +110,7 @@
     <article id="www-root">
       <h1>📜 Index </h1>
       <p>By Nawder Loswin 01/18/2026 © www.TriadicFrameworks.org</p>
-      <p>Loading index.md…</p>
+      <p>Loading README.md…</p>
     </article>
   </main>
 
@@ -118,9 +118,9 @@
     async function loadCodex() {
       try {
         // Adjust path if needed depending on where this HTML lives
-        const response = await fetch('https://www.triadicframeworks.org/index.md');
+        const response = await fetch('https://www.triadicframeworks.org/README.md');
         if (!response.ok) {
-          throw new Error('⚔️ Failed to load index.md');
+          throw new Error('⚔️ Failed to load README.md');
         }
         const mdText = await response.text();
 
@@ -143,7 +143,7 @@
         root.innerHTML = `
           <h1>Index</h1>
           <p>By Nawder Loswin 01/18/2026 © www.TriadicFrameworks.org</p>
-          <p>Unable to load <code>index.md</code>.</p>
+          <p>Unable to load <code>README.md</code>.</p>
           <pre>${String(err)}</pre>
         `;
       }
