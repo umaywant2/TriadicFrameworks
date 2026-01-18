@@ -2,7 +2,6 @@
 
 ### ✅ Pytest-Tuned Version
 
-```python
 import os
 import json
 import pandas as pd
@@ -38,18 +37,14 @@ def test_fff_output(tmp_path):
     with open(file.with_suffix(".fff")) as f:
         lines = f.readlines()
     assert any("META::" in line for line in lines)
-```
 
-Run with:
-```bash
-pytest output_test_suite.py
-```
-
----
+# Run with:
+# ```bash
+# pytest output_test_suite.py
+# ```
 
 ### 🌀 Standalone Ritual Runner
 
-```python
 from tft.output_manager import save_output
 import os
 
@@ -66,9 +61,8 @@ if __name__ == "__main__":
     run_test("JSON Export", [[5, 6], [7, 8]], ["json"], {"mode": "numeric", "lens": "phi"})
     run_test("Parquet Export", [[9, 10], [11, 12]], ["parquet"])
     run_test("FFF Export", [[13, 14], [15, 16]], ["fff"], {"observer": "ScrollFork"})
-```
 
-Run with:
-```bash
-python output_test_suite.py
-```
+# Run with:
+# ```bash
+# python output_test_suite.py
+# ```
