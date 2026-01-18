@@ -22,14 +22,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
   </url>
-    
-  <url>
-    <loc>https://www.triadicframeworks.org/Coeus/Coeus_Protocol-Complete.html</loc>
-    <lastmod>2026-01-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.95</priority>
-  </url>
-  
+   
  <url>
    <loc>https://www.triadicframeworks.org/schemas/README.html</loc>
    <lastmod>2026-01-08</lastmod>
@@ -37,88 +30,4 @@
    <priority>0.95</priority>
  </url>
 
- <url>
-   <loc>https://www.triadicframeworks.org/rttcodes/README.html</loc>
-   <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.90</priority>
- </url>
-  
- <url>
-   <loc>https://www.triadicframeworks.org/charts/README.html</loc>
-   <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.90</priority>
- </url>
-
- <url>
-  <loc>https://www.triadicframeworks.org/data/resonance_council.html</loc>
-   <lastmod>2026-01-08</lastmod>
-   <changefreq>yearly</changefreq>
-   <priority>0.90</priority>
- </url>
-
- <url>
-  <loc>https://www.triadicframeworks.org/engine/README.html</loc>
-   <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.85</priority>
- </url>
-
-  <url>
-  <loc>https://www.triadicframeworks.org/data/README.html</loc>
-   <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.85</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/packages/README.html</loc>
-   <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.85</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/packages/tft-3pack/README.html</loc>
-    <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.80</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/packages/wrsadc-python/README.html</loc>
-    <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.80</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/packages/wrsadc-shell/README.html</loc>
-    <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.80</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/packages/wrsadc_integration/README.html</loc>
-    <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.80</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/profile.d/README.html</loc>
-    <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.80</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/README.html</loc>
-    <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.75</priority>
- </url>
-  
 </urlset>
