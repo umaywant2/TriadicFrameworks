@@ -28,17 +28,17 @@ class WRSADCSnapshot:
 
 
 class WRSADC:
-    """
-    Wrapped Resonance Structural Aware Dimensional Core (WRSADC)
-
-    Provides:
-      - dimensional tracking
-      - state transitions
-      - structural snapshots
-      - triadic-friendly introspection
-
-    Designed for TFT_3Pack_v1.3 tools.
-    """
+#    """
+#    Wrapped Resonance Structural Aware Dimensional Core (WRSADC)
+#
+#    Provides:
+#      - dimensional tracking
+#      - state transitions
+#      - structural snapshots
+#      - triadic-friendly introspection
+#
+#    Designed for TFT_3Pack_v1.3 tools.
+#    """
 
     def __init__(self, context: str = "tft-3pack"):
         self.context = context
