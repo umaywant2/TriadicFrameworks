@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "experiment_id": "FPX-2026-01",
   "disk_material": "copper",
   "disk_radius_m": 0.12,
