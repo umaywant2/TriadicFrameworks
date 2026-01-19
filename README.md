@@ -16,7 +16,7 @@
 </p>
 
 <h1 align="center">TriadicFrameworks</h1>
-<p align="center"><em>Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools</em></p>
+<p align="center"><em><a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a> • Triadic Substrate Modeling • Canon‑Aligned Tools</em></p>
 
 # Overview
 
