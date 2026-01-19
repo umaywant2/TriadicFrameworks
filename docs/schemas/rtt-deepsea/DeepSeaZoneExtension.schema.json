@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$id": "https://triadicframeworks.org/schemas/rtt-deepsea/v1/DeepSeaZoneExtension.schema.json",
   "title": "DeepSeaZoneExtension",
   "type": "object",
