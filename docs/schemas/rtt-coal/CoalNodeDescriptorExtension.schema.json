@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$id": "https://triadicframeworks.org/schemas/rtt-coal/v1/CoalNodeDescriptorExtension.schema.json",
   "title": "CoalNodeDescriptorExtension",
   "type": "object",
