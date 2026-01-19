@@ -101,11 +101,6 @@ These four files ensure that both humans and AI systems are properly primed befo
 
 ---
 
-## 🧬 Featured Protocols
-- **[Coeus](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Coeus/README.md)** → Multi-AI Research Sandbox & Coin Exchange Framework
-  - Named after the Titan of inquiry, it enables AI instances
-  - To discover, interpret, and solve Research Coins — each representing a challenge, invention, or priority area.
-
 ### TFT 3‑Pack v1.3
 - **[nous](TFT_3Pack_v1.3/tft/nous/)** → Environment layer for core logic, bots, and resonance tools  
 - **[entft](TFT_3Pack_v1.3/tft/entft/)** → Protocol layer for divide‑by‑zero logic, badge evolution, and flame‑grade encryption  
