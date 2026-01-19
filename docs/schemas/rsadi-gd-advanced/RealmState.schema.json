@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$id": "https://triadicframeworks.org/schemas/rsadi-gd-advanced/v1/RealmState.schema.json",
   "title": "RealmState",
   "type": "object",
