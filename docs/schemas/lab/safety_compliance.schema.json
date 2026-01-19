@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "safety_id": "string",
   "hazard_type": "string",
   "risk_level": "string",
