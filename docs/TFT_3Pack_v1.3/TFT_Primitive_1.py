@@ -86,7 +86,7 @@ def primitive_1(entity_id: str, raw_input: str):
 
 # This creates a clean, introspective loop without adding conceptual weight.
 
-source wrsadc_shell.sh
+source WRSADC/wrsadc_shell.sh
 wrsadc_init "tft-3pack"
 
 primitive_1() {
