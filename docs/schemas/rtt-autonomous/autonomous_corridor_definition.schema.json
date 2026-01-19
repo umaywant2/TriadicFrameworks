@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$id": "https://triadicframeworks.org/schemas/rtt-autonomous/v1/autonomous_corridor_definition.schema.json",
   "title": "autonomous_corridor_definition",
   "type": "object",
