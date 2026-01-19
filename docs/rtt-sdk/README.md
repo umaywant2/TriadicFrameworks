@@ -1,115 +1,58 @@
-# 📦 **RTT Client SDK (Outline)**  
-*JavaScript + Python editions*
+# RTT SDK (Beta)
 
-The SDK provides a stable, versioned interface for interacting with the RTT API:
+The RTT SDK provides a minimal, stable, and forward‑compatible interface for interacting with the RTT API. It supports early RTT‑Inside integrations across browsers, services, and research environments while the full vST substrate remains in development.
 
-- sending beacon events  
-- managing site profiles  
-- preparing for vST‑beta diagnostics  
-- enabling RTT‑Inside integrations  
-
-The SDK does **not** expose substrate logic.  
-It defines the *contract*, not the implementation.
+This SDK defines the **shape** of RTT interactions without exposing internal substrate logic. It is safe for early adopters and suitable for experimentation, prototyping, and structural‑awareness tooling.
 
 ---
 
-# 🟦 **JavaScript SDK Outline**  
-*(Node + Browser compatible)*
+## Features
 
-```
-rtt-sdk/
-├── package.json
-├── src/
-│   ├── index.js
-│   ├── client.js
-│   ├── beacon.js
-│   ├── profile.js
-│   └── diagnostics.js
-└── README.md
-```
-
-## `src/index.js`
-
-```js
-import { RTTClient } from "./client.js";
-
-export default {
-  RTTClient
-};
-```
+- Send RTT beacon events  
+- Create and validate RTT site profiles  
+- Prepare vST‑beta diagnostics payloads  
+- Unified client for all RTT API endpoints  
+- Identical API surface across JavaScript and Python  
+- Stable versioning (`0.1.0`) for long‑term compatibility  
 
 ---
 
-## `src/client.js`
+## Directory Structure
 
-```js
-export class RTTClient {
-  constructor(options = {}) {
-    this.baseUrl = options.baseUrl || "https://www.triadicframeworks.org/api/rtt";
-    this.version = "0.1.0";
-  }
-
-  async beacon(payload) {
-    const res = await fetch(`${this.baseUrl}/beacon`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    return res.json();
-  }
-
-  async getProfile(site) {
-    const res = await fetch(`${this.baseUrl}/profile/${site}`);
-    return res.json();
-  }
-
-  async setProfile(site, profile) {
-    const res = await fetch(`${this.baseUrl}/profile/${site}`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(profile)
-    });
-    return res.json();
-  }
-
-  // Diagnostics (reserved)
-  async validate(payload) {
-    const res = await fetch(`${this.baseUrl}/validate`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    return res.json();
-  }
-
-  async corridor(payload) {
-    const res = await fetch(`${this.baseUrl}/corridor`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    return res.json();
-  }
-
-  async topology(payload) {
-    const res = await fetch(`${this.baseUrl}/topology`, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload)
-    });
-    return res.json();
-  }
-}
 ```
+docs/rtt-sdk/
+├── beacon.js
+├── beacon.py
+├── client.js
+├── client.py
+├── diagnostics.js
+├── diagnostics.py
+├── index.js
+├── profile.js
+├── profile.py
+└── __init__.py
+```
+
+Each file provides a minimal, well‑defined interface for its domain:
+
+- **beacon** — session IDs, structural snapshots, beacon payloads  
+- **profile** — RTT‑Inside profile creation and validation  
+- **diagnostics** — vST‑beta payload builders (placeholders)  
+- **client** — unified RTT API client (JS + Python)  
+- **index / \_\_init\_\_** — clean package exports  
 
 ---
 
-## Example Usage
+# JavaScript Usage
+
+## Install (local copy)
+
+Place the SDK folder in your project and import:
 
 ```js
-import RTT from "rtt-sdk";
+import { RTTClient } from "./rtt-sdk/index.js";
 
-const client = new RTT.RTTClient();
+const client = new RTTClient();
 
 await client.beacon({
   site: "example.com",
@@ -118,87 +61,115 @@ await client.beacon({
 });
 ```
 
+## Build a Beacon Payload
+
+```js
+import { build_beacon_payload, create_session_id } from "./rtt-sdk/beacon.js";
+
+const payload = build_beacon_payload({
+  site: "example.com",
+  session: create_session_id(),
+  event: "manual_ping"
+});
+```
+
+## Manage Profiles
+
+```js
+import { create_profile } from "./rtt-sdk/profile.js";
+
+const profile = create_profile({
+  version: "1.0",
+  supports: ["coherence"],
+  contact: "ops@example.com"
+});
+
+await client.setProfile("example.com", profile);
+```
+
 ---
 
-# 🐍 **Python SDK Outline**
+# Python Usage
 
-```
-rtt_sdk/
-├── __init__.py
-├── client.py
-├── beacon.py
-├── profile.py
-└── diagnostics.py
-```
-
----
-
-## `client.py`
+## Import
 
 ```python
-import requests
-import json
-
-class RTTClient:
-    def __init__(self, base_url="https://www.triadicframeworks.org/api/rtt"):
-        self.base_url = base_url
-        self.version = "0.1.0"
-
-    def beacon(self, payload):
-        r = requests.post(f"{self.base_url}/beacon", json=payload)
-        return r.json()
-
-    def get_profile(self, site):
-        r = requests.get(f"{self.base_url}/profile/{site}")
-        return r.json()
-
-    def set_profile(self, site, profile):
-        r = requests.post(f"{self.base_url}/profile/{site}", json=profile)
-        return r.json()
-
-    # Diagnostics (reserved)
-    def validate(self, payload):
-        r = requests.post(f"{self.base_url}/validate", json=payload)
-        return r.json()
-
-    def corridor(self, payload):
-        r = requests.post(f"{self.base_url}/corridor", json=payload)
-        return r.json()
-
-    def topology(self, payload):
-        r = requests.post(f"{self.base_url}/topology", json=payload)
-        return r.json()
+from rtt_sdk import RTTClient, build_beacon_payload, create_session_id
 ```
 
----
-
-## Example Usage
+## Send a Beacon
 
 ```python
-from rtt_sdk.client import RTTClient
-
 client = RTTClient()
 
-resp = client.beacon({
-    "site": "example.com",
-    "event": "page_load",
-    "ts": "2026-01-19T14:22:00Z"
-})
+payload = build_beacon_payload(
+    site="example.com",
+    session=create_session_id(),
+    event="page_load"
+)
 
+resp = client.beacon(payload)
 print(resp)
 ```
 
+## Create a Profile
+
+```python
+from rtt_sdk import create_profile
+
+profile = create_profile(
+    version="1.0",
+    supports=["coherence"],
+    contact="ops@example.com"
+)
+
+client.set_profile("example.com", profile)
+```
+
 ---
 
-# 🎯 Design Principles
+# Diagnostics (Reserved)
 
-Both SDKs follow the same structural rules:
+The following methods exist for future vST‑beta validators:
 
-- **Stable versioning** (`0.1.0` for early adopters)  
-- **Minimal surface** (beacon, profile, diagnostics)  
-- **No substrate exposure**  
-- **Forward‑compatible with vST**  
-- **Drop‑in simplicity**  
+- `validate(payload)`  
+- `corridor(payload)`  
+- `topology(payload)`  
 
-This is the exact shape you want for a future ecosystem:  
-clear, predictable, and ready for expansion.
+These endpoints currently return placeholder responses but define the stable API surface for future structural analysis.
+
+---
+
+# API Reference
+
+Full RTT API documentation is available in:
+
+```
+docs/api/rtt/
+```
+
+Key files:
+
+- **README.md** — overview of the RTT API  
+- **beacon.md** — beacon endpoint  
+- **profile.md** — RTT‑Inside site profiles  
+- **diagnostics.md** — vST‑beta endpoint shapes  
+- **router.md** — endpoint wiring and routing philosophy  
+
+---
+
+# Versioning
+
+The SDK follows semantic versioning:
+
+- **0.1.x** — early adopters, stable shapes, no substrate logic  
+- **0.2.x** — vST‑beta integration  
+- **1.x.x** — full validator support  
+
+---
+
+# Status
+
+**Beta.**  
+The SDK is stable for integration and experimentation.  
+Internal substrate logic will activate as vST research becomes public.
