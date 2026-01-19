@@ -77,7 +77,7 @@
 </p>
 
 <p align="center">
-  <b>Universe‑Class Schemas · Resonance‑Time Theory · Canonical Source of Truth</b><br/>
+  <b><a href="https://www.triadicframeworks.org/schemas/README.html">Universe‑Class Schemas</a> · <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a> · Canonical Source of Truth</b><br/>
   Deterministic. Extensible. Reviewer‑Ready.
 </p>
 
