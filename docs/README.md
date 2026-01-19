@@ -102,7 +102,7 @@ These four files ensure that both humans and AI systems are properly primed befo
 ---
 
 ## 🧬 Featured Protocols
-- **[Coeus](Coeus/)** → Multi-AI Research Sandbox & Coin Exchange Framework
+- **[Coeus](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Coeus/README.md)** → Multi-AI Research Sandbox & Coin Exchange Framework
   - Named after the Titan of inquiry, it enables AI instances
   - To discover, interpret, and solve Research Coins — each representing a challenge, invention, or priority area.
 
