@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$id": "https://triadicframeworks.org/schemas/rtt-micro-core/v1/mrt_transforms.schema.json",
   "title": "mrt_transforms",
   "type": "object",
