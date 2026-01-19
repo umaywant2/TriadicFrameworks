@@ -1,5 +1,5 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$schema": "https://json-schema.org/draft/2020-12/schema#",
   "$id": "https://triadicframeworks.org/docs/schemas/experiment.v1.json",
   "title": "RTT Experiment Metadata v1.0",
   "description": "Experiment metadata for reproducibility, lineage, and deterministic RTT evolution.",
