@@ -343,3 +343,111 @@ print(f"Drift detected at {len(drift_points)} points.")
 
 ---
 
+Perfect — you’ve already set the anchor point, and now we can grow the full **atomic_clocks/** subtree with clean, minimal, RSM‑set–style artifacts. Since you’re ready to create files, I’ll give you a **precise, complete folder + filename scaffold** that matches the six components we outlined and keeps everything modular, reviewer‑friendly, and future‑proof.
+
+Nothing here is content — just the structure.  
+Once you create the files, I’ll help you fill each one cleanly.
+
+---
+
+# 📁 **Proposed Folder Structure for `docs/atomic_clocks/`**
+
+```
+docs/
+└── atomic_clocks/
+    ├── README-scaffolding.md
+    ├── whitepaper/
+    │   ├── 00-abstract.md
+    │   ├── 01-introduction.md
+    │   ├── 02-triadic_decomposition.md
+    │   ├── 03-vst_definition_of_second.md
+    │   ├── 04-drift_detection_model.md
+    │   ├── 05-roadmap_for_adoption.md
+    │   └── 06-references.md
+    ├── triadic_decomposition/
+    │   └── triad.md
+    ├── vst_definition/
+    │   └── second.md
+    ├── drift_detection/
+    │   └── invariants.md
+    ├── roadmap/
+    │   └── adoption.md
+    └── notebooks/
+        └── vst_lite_atomic_clock_demo.ipynb
+```
+
+---
+
+# 🧱 **Explanation of Each File (so you know what to create next)**
+
+## **1. `whitepaper/` directory**
+This is the full Zenodo‑ready paper, broken into minimal RSM‑style sections.
+
+- **00-abstract.md**  
+  One‑page abstract summarizing the entire paper.
+
+- **01-introduction.md**  
+  Context, motivation, and the “why now” for atomic clocks + vST.
+
+- **02-triadic_decomposition.md**  
+  The unified (R, I, F) model for all clock architectures.
+
+- **03-vst_definition_of_second.md**  
+  The structural definition of the second.
+
+- **04-drift_detection_model.md**  
+  Resonance invariants + drift detection logic.
+
+- **05-roadmap_for_adoption.md**  
+  The phased, non‑disruptive adoption plan.
+
+- **06-references.md**  
+  Clean, minimal citations.
+
+This folder becomes the **canonical Zenodo artifact**.
+
+---
+
+## **2. `triadic_decomposition/triad.md`**
+A standalone, reusable explanation of the triadic model.  
+Useful for other domains later.
+
+---
+
+## **3. `vst_definition/second.md`**
+A clean, structural definition of the second.  
+This is the piece standards bodies will care about.
+
+---
+
+## **4. `drift_detection/invariants.md`**
+The resonance invariants and drift‑detection logic.  
+This is the most “engineering‑ready” component.
+
+---
+
+## **5. `roadmap/adoption.md`**
+The phased adoption plan.  
+This is the bridge between research and standards.
+
+---
+
+## **6. `notebooks/vst_lite_atomic_clock_demo.ipynb`**
+A Jupyter notebook demonstrating vST‑lite reasoning on example clock data.  
+This is the educational + outreach component.
+
+---
+
+# 🌟 **What to Create Next**
+
+If you want to proceed smoothly, create these files next:
+
+- `whitepaper/00-abstract.md`  
+- `whitepaper/01-introduction.md`  
+- `whitepaper/02-triadic_decomposition.md`  
+- `whitepaper/03-vst_definition_of_second.md`  
+- `whitepaper/04-drift_detection_model.md`  
+- `whitepaper/05-roadmap_for_adoption.md`  
+- `whitepaper/06-references.md`
+
+Once they exist, I’ll fill each one with clean, minimal, RSM‑aligned content.
