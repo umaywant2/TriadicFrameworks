@@ -1,42 +1,48 @@
-# Atomic Clocks — Structural Scaffolding
+# Atomic Clocks — Structural Alignment
 
-This directory contains the scaffolding for the Resonance‑Time (RT) and
-Validated Spacetime (vST) alignment work applied to modern atomic
-timekeeping. Atomic clocks represent the closest existing scientific
-practice to a resonance‑based definition of time, and this folder
-collects the minimal structural artifacts needed to formalize that
-connection.
+This directory contains the complete scaffolding for the Resonance‑Time
+(RT) and Validated Spacetime (vST) alignment work applied to modern
+atomic timekeeping. It includes the full whitepaper, standalone
+structural artifacts, and an educational vST‑lite demonstration
+notebook.
 
 ## Contents
 
+- **whitepaper.md**  
+  Combined Zenodo‑ready paper integrating all sections.
+
 - **whitepaper/**  
-  Minimal RSM‑style sections for the Zenodo paper:
-  - abstract  
-  - introduction  
-  - triadic decomposition  
-  - vST‑aligned definition of the second  
-  - drift‑detection model  
-  - roadmap for adoption  
-  - references  
+  Individual section files used to assemble the full paper.
 
 - **triadic_decomposition/**  
-  Unified (R, I, F) model for all clock architectures.
+  Structural definition of the (R, I, F) triad.
 
 - **vst_definition/**  
-  Structural definition of the second as a resonance‑based quantity.
+  Structural definition of the second.
 
 - **drift_detection/**  
-  Resonance invariants and structural drift‑detection logic.
+  Resonance invariants for drift detection.
 
 - **roadmap/**  
-  Non‑disruptive adoption pathway for the atomic‑clock community.
+  Adoption pathway for research groups and standards bodies.
 
 - **notebooks/**  
-  Jupyter demonstration of vST‑lite reasoning using example clock data.
+  vST‑lite demonstration using synthetic clock data.
 
 ## Purpose
 
-This folder provides a clean, minimal substrate for researchers,
-standards bodies, and contributors exploring the structural alignment
-between atomic timekeeping and Resonance‑Time. It is intentionally
-modular, reviewer‑friendly, and suitable for direct Zenodo publication.
+This directory provides a minimal, architecture‑agnostic framework for
+interpreting atomic timekeeping through the lens of Resonance‑Time. The
+goal is to supply a validation layer that clarifies structure, reduces
+conceptual drift, and supports future standards without altering current
+practice.
+
+## License
+
+This project is released under the Creative Commons Attribution 4.0
+International (CC BY 4.0) license. See `LICENSE_NOTES.md` for details.
+
+## Citation
+
+If you use this work, please cite it using the metadata in
+`CITATION.cff`.
