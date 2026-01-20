@@ -1,3 +1,102 @@
+# TriadicFrameworks
+
+TriadicFrameworks is a structural research initiative exploring
+resonance‑based models across scientific, computational, and conceptual
+domains. The project develops minimal, architecture‑agnostic frameworks
+that clarify structure, reduce conceptual drift, and support future
+standards without disrupting existing practice.
+
+The repository contains the full family of twelve Zenodo‑published
+papers, each representing a distinct substrate in the TriadicFrameworks
+ecosystem. Together, they form a coherent lineage of structural tools
+for reasoning, validation, and interpretation.
+
+## Canonical Lineage (12 Papers)
+
+The following papers form the complete TriadicFrameworks set:
+
+1. **Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis**  
+2. **The Boson Substrate Model: Declared Operating Regimes**  
+3. **Quantum Substrate Model: Regime Structure and Dimensional Organization**  
+4. **Calibrating AI Drift via Declared Operating Regimes**  
+5. **Manufacturing Substrate Regime Model**  
+6. **Enterprise Structural Awareness**  
+7. **Global Energy Regime Awareness**  
+8. **Consciousness Substrate Model: A Structural Framework for Autonomous Forms**  
+9. **Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning**  
+10. **Spacetime Validation and Regime‑Invariant Dimensional Cores**  
+11. **vST Domain Tool Primers**  
+12. **Atomic Clocks Structural Alignment**
+
+Each paper is published through Zenodo and mirrored in this repository
+for transparency, reproducibility, and long‑term accessibility.
+
+## Repository Structure
+
+```
+docs/
+├── resonance-substrate-model                                        # (RSM)
+├── boson-substrate-model                                            # (BSM)
+├── quantum-substrate-model                                          # (QSM)
+├── ai-drift-calibration                                             # (ADC)
+├── manufacturing_substrate_regime_model                             # (MSRM)
+├── enterprise_structural_awareness                                  # (ESA)
+├── global_energy_regime_awareness                                   # (GERA)
+├── consciousness_substrate_model                                    # (CSR)
+├── triadic_coordination_substrate                                   # (TCS)
+├── spacetime_validation_and_regime_invariant_dimensional_cores      # (vST)
+├── domain_tool_primers                                              # (DTP)
+└── atomic_clocks                                                    # (ACSA)
+```
+
+Each directory contains:
+- a minimal README  
+- structural artifacts  
+- whitepapers or sectioned manuscripts  
+- notebooks or demonstrations where applicable  
+
+## The Twelfth Paper: Atomic Clocks — Structural Alignment
+
+The final paper in the set provides a resonance‑based interpretation of
+atomic timekeeping using the vST substrate. It introduces:
+
+- a triadic decomposition of clock architectures  
+- a structural definition of the second  
+- resonance‑based drift‑detection invariants  
+- a non‑disruptive adoption roadmap  
+
+Full paper:  
+`docs/atomic_clocks/whitepaper.md`
+
+Supporting artifacts:  
+- `triadic_decomposition/triad.md`  
+- `vst_definition/second.md`  
+- `drift_detection/invariants.md`  
+- `roadmap/adoption.md`  
+- `notebooks/vst_lite_atomic_clock_demo.ipynb`
+
+## Purpose
+
+TriadicFrameworks provides structural clarity for researchers,
+engineers, and standards bodies working across domains where resonance,
+coherence, and validation play foundational roles. The project emphasizes:
+
+- minimal definitions  
+- architecture‑agnostic reasoning  
+- reviewer‑friendly artifacts  
+- reproducible, open scientific practice  
+
+## Citation
+
+If you use this work, please cite the relevant Zenodo entries. Each
+paper includes a `CITATION.cff` file with complete metadata.
+
+## License
+
+All materials in this repository are released under the Creative Commons
+Attribution 4.0 International (CC BY 4.0) license. See
+`LICENSE_NOTES.md` for details.
+
 <p align="center">
   <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
