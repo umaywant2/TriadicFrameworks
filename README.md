@@ -148,8 +148,8 @@ coherence, and validation play foundational roles. The project emphasizes:
                                        │
                                        ▼
                         ┌──────────────────────────┐
-                        │ 12. Theories for         │
-                        │     Everything Compared  │
+                        │ 12. Atomic Clocks        │
+                        │     Structural Alignment │
                         └──────────────────────────┘
 ```
 
