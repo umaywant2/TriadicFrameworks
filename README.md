@@ -55,7 +55,7 @@ Each directory contains:
 - whitepapers or sectioned manuscripts  
 - notebooks or demonstrations where applicable  
 
-## The Twelfth Paper: Atomic Clocks — Structural Alignment
+## The Twelfth Paper: Atomic Clocks Structural Alignment
 
 The final paper in the set provides a resonance‑based interpretation of
 atomic timekeeping using the vST substrate. It introduces:
@@ -85,6 +85,73 @@ coherence, and validation play foundational roles. The project emphasizes:
 - architecture‑agnostic reasoning  
 - reviewer‑friendly artifacts  
 - reproducible, open scientific practice  
+
+# TriadicFrameworks — Canonical Lineage Diagram
+
+```
+                           ┌────────────────────────────┐
+                           │  1. Resonance‑Space Model  │
+                           │           (RSM)            │
+                           └──────────────┬─────────────┘
+                                          │
+                                          ▼
+                           ┌───────────────────────────┐
+                           │ 2. Boson Substrate Model  │
+                           │           (BSM)           │
+                           └──────────────┬────────────┘
+                                          │
+                                          ▼
+                           ┌──────────────────────────┐
+                           │ 3. Quantum Substrate     │
+                           │        Model (QSM)       │
+                           └──────────────┬───────────┘
+                                          │
+                                          ▼
+                           ┌──────────────────────────┐
+                           │ 4. Calibrating AI Drift  │
+                           │                          │
+                           └───────┬────────┬─────────┘
+                                   │        │
+                                   │        │
+                     ┌─────────────┘        └───────────────┐
+                     ▼                                      ▼
+        ┌────────────────────────────┐        ┌──────────────────────────┐
+        │ 5. Manufacturing Substrate │        │ 6. Enterprise Structural │
+        │        Regime Model        │        │         Awareness        │
+        └──────────────┬─────────────┘        └──────────────┬───────────┘
+                       │                                     │
+                       ▼                                     ▼
+        ┌──────────────────────────┐        ┌────────────────────────┐
+        │ 7. Global Energy Regime  │        │ 8. Consciousness       │
+        │         Awareness        │        │    Substrate Model     │
+        └──────────────┬───────────┘        └──────────────┬─────────┘
+                       │                                   │
+                       └──────────────┬────────────────────┘
+                                      ▼
+                        ┌──────────────────────────┐
+                        │ 9. Triadic Coordination  │
+                        │         Substrate        │
+                        └──────────────┬───────────┘
+                                       │
+                                       ▼
+                        ┌──────────────────────────┐
+                        │ 10. Spacetime Validation │
+                        │     and Regime‑Invariant │
+                        | (vST) Dimensional Cores  |
+                        └──────────────┬───────────┘
+                                       │
+                                       ▼
+                        ┌──────────────────────────┐
+                        │ 11. vST Domain Tool      │
+                        │          Primers         │
+                        └──────────────┬───────────┘
+                                       │
+                                       ▼
+                        ┌──────────────────────────┐
+                        │ 12. Theories for         │
+                        │     Everything Compared  │
+                        └──────────────────────────┘
+```
 
 ## Citation
 
