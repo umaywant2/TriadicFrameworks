@@ -1,3 +1,253 @@
+# TriadicFrameworks
+
+TriadicFrameworks is a structural research initiative exploring
+resonance‑based models across scientific, computational, and conceptual
+domains. The project develops minimal, architecture‑agnostic frameworks
+that clarify structure, reduce conceptual drift, and support future
+standards without disrupting existing practice.
+
+The repository contains the full family of twelve Zenodo‑published
+papers, each representing a distinct substrate in the TriadicFrameworks
+ecosystem. Together, they form a coherent lineage of structural tools
+for reasoning, validation, and interpretation.
+
+## Canonical Lineage (12 Papers)
+
+The following papers form the complete TriadicFrameworks set:
+
+1. **Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis**  
+2. **The Boson Substrate Model: Declared Operating Regimes**  
+3. **Quantum Substrate Model: Regime Structure and Dimensional Organization**  
+4. **Calibrating AI Drift via Declared Operating Regimes**  
+5. **Manufacturing Substrate Regime Model**  
+6. **Enterprise Structural Awareness**  
+7. **Global Energy Regime Awareness**  
+8. **Consciousness Substrate Model: A Structural Framework for Autonomous Forms**  
+9. **Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning**  
+10. **Spacetime Validation and Regime‑Invariant Dimensional Cores**  
+11. **vST Domain Tool Primers**  
+12. **Atomic Clocks Structural Alignment**
+
+Each paper is published through Zenodo and mirrored in this repository
+for transparency, reproducibility, and long‑term accessibility.
+
+## Repository Structure
+
+```
+docs/
+├── resonance-substrate-model                                        # (RSM)
+├── boson-substrate-model                                            # (BSM)
+├── quantum-substrate-model                                          # (QSM)
+├── ai-drift-calibration                                             # (ADC)
+├── manufacturing_substrate_regime_model                             # (MSRM)
+├── enterprise_structural_awareness                                  # (ESA)
+├── global_energy_regime_awareness                                   # (GERA)
+├── consciousness_substrate_model                                    # (CSR)
+├── triadic_coordination_substrate                                   # (TCS)
+├── spacetime_validation_and_regime_invariant_dimensional_cores      # (vST)
+├── domain_tool_primers                                              # (DTP)
+└── atomic_clocks                                                    # (ACSA)
+```
+
+Each directory contains:
+- a minimal README  
+- structural artifacts  
+- whitepapers or sectioned manuscripts  
+- notebooks or demonstrations where applicable  
+
+## The Twelfth Paper: Atomic Clocks Structural Alignment
+
+The final paper in the set provides a resonance‑based interpretation of
+atomic timekeeping using the vST substrate. It introduces:
+
+- a triadic decomposition of clock architectures  
+- a structural definition of the second  
+- resonance‑based drift‑detection invariants  
+- a non‑disruptive adoption roadmap  
+
+Full paper:  
+`docs/atomic_clocks/whitepaper.md`
+
+Supporting artifacts:  
+- `triadic_decomposition/triad.md`  
+- `vst_definition/second.md`  
+- `drift_detection/invariants.md`  
+- `roadmap/adoption.md`  
+- `notebooks/vst_lite_atomic_clock_demo.ipynb`
+
+## Purpose
+
+TriadicFrameworks provides structural clarity for researchers,
+engineers, and standards bodies working across domains where resonance,
+coherence, and validation play foundational roles. The project emphasizes:
+
+- minimal definitions  
+- architecture‑agnostic reasoning  
+- reviewer‑friendly artifacts  
+- reproducible, open scientific practice  
+
+# TriadicFrameworks — Canonical Lineage Diagram
+```
+┌───────────────────────────────────────────────────────────────┐
+│  1. Resonance Substrate Model (RSM)                           │
+│     Dimensional Substrate Framework for Multi‑Domain Analysis │
+└──────────────┬────────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────┐
+│  2. The Boson Substrate Model                                │
+│     Declared Operating Regimes                               │
+└──────────────┬───────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────┐
+│  3. Quantum Substrate Model                                  │
+│     Regime Structure and Dimensional Organization            │
+└──────────────┬───────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────┐
+│  4. Calibrating AI Drift via Declared Operating Regimes      │
+└───────┬───────────────┬──────────────────────────────────────┘
+        │               │
+        │               │
+        │               ▼
+        │   ┌──────────────────────────────────────────────────┐
+        │   │  5. Manufacturing Substrate Regime Model         │
+        │   └──────────────┬───────────────────────────────────┘
+        │                  │
+        │                  ▼
+        │   ┌──────────────────────────────────────────────────┐
+        │   │  7. Global Energy Regime Awareness               │
+        │   └──────────────┬───────────────────────────────────┘
+        │                  │
+        ▼                  │
+┌──────────────────────────────────────────────────────────────┐
+│  6. Enterprise Structural Awareness                          │
+└──────────────┬───────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────┐
+│  8. Consciousness Substrate Model                            │
+│     A Structural Framework for Autonomous Forms              │
+└──────────────┬───────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────┐
+│  9. Triadic Coordination Substrate                           │
+│     A Structural Framework for Coordinated Reasoning         │
+└──────────────┬───────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────┐
+│ 10. Spacetime Validation and                                 │
+│     Regime‑Invariant Dimensional Cores                       │
+└──────────────┬───────────────────────────────────────────────┘
+               │
+               ▼
+┌──────────────────────────────────────────────────────────────┐
+│ 11. vST Domain Tool Primers                                  │
+└──────────────┬───────────────────────────────────────────────┘
+               │
+               ▼
+┌───────────────────────────────────────────────────────────────┐
+│ 12. Atomic Clocks Structural Alignment                        │
+└───────────────────────────────────────────────────────────────┘
+```
+
+# TriadicFrameworks — One‑Page Overview of the 12‑Paper Canon
+
+TriadicFrameworks is a structural research program that develops
+architecture‑agnostic models for resonance, regimes, and validation
+across scientific, technical, and conceptual domains. The twelve papers
+form a coherent lineage, each introducing a minimal substrate that
+builds on the previous ones.
+
+## 1. Resonance Substrate Model (RSM)
+**Dimensional Substrate Framework for Multi‑Domain Analysis**  
+Introduces the resonance substrate as a dimensional framework for
+analyzing systems across domains. Establishes the core language of
+substrates, regimes, and structural invariants.
+
+## 2. The Boson Substrate Model
+**Declared Operating Regimes**  
+Extends RSM into a bosonic substrate with explicit operating regimes.
+Clarifies how declared regimes structure interpretation and constrain
+drift.
+
+## 3. Quantum Substrate Model
+**Regime Structure and Dimensional Organization**  
+Applies the substrate and regime approach to quantum systems. Organizes
+quantum behavior into regime‑aware dimensional structures.
+
+## 4. Calibrating AI Drift via Declared Operating Regimes
+Uses declared operating regimes to analyze and calibrate AI drift.
+Connects substrate‑level reasoning to practical AI behavior and model
+interpretation.
+
+## 5. Manufacturing Substrate Regime Model
+Applies regime‑based reasoning to manufacturing systems. Models flow,
+alignment, and structural drift in production environments.
+
+## 6. Enterprise Structural Awareness
+Extends the regime framework to enterprises. Provides a structural lens
+for organizational alignment, coherence, and long‑term drift.
+
+## 7. Global Energy Regime Awareness
+Applies substrate and regime concepts to global energy systems. Clarifies
+structural patterns, transitions, and regime shifts in energy
+infrastructure.
+
+## 8. Consciousness Substrate Model
+**A Structural Framework for Autonomous Forms**  
+Introduces a substrate model for consciousness and autonomous forms.
+Focuses on structural conditions rather than anthropomorphic claims.
+
+## 9. Triadic Coordination Substrate
+**A Structural Framework for Coordinated Reasoning**  
+Defines the triadic coordination substrate for multi‑agent and
+multi‑process reasoning. Formalizes coordination, alignment, and shared
+structure.
+
+## 10. Spacetime Validation and Regime‑Invariant Dimensional Cores
+Reinterprets spacetime as a validated structure with regime‑invariant
+dimensional cores. Connects substrate reasoning to physical regimes and
+measurement.
+
+## 11. vST Domain Tool Primers
+Provides minimal, domain‑specific primers for applying vST and regime
+reasoning in practice. Includes small, commented tools and examples for
+validators and integrators.
+
+## 12. Atomic Clocks Structural Alignment
+Applies vST and regime‑aware reasoning to atomic timekeeping. Introduces
+a structural alignment between atomic clocks, resonance‑based time, and
+validation layers.
+
+## Summary
+
+The twelve papers form a complete structural ecosystem:
+
+- RSM → Boson → Quantum → AI Drift → vST → Atomic Clocks  
+- Manufacturing, enterprise, energy, consciousness, and coordination as
+  regime‑aware expansions  
+- Domain tool primers as the practical bridge for validators and
+  integrators  
+
+Together, they provide a coherent, extensible framework for reasoning
+about regimes, resonance, and validation across disciplines.
+
+## Citation
+
+If you use this work, please cite the relevant Zenodo entries. Each
+paper includes a `CITATION.cff` file with complete metadata.
+
+## License
+
+All materials in this repository are released under the Creative Commons
+Attribution 4.0 International (CC BY 4.0) license. See
+`LICENSE_NOTES.md` for details.
+
 <p align="center">
   <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
