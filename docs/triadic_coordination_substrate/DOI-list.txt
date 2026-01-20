@@ -1,22 +1,22 @@
 RSM
 <a href="https://doi.org/10.5281/zenodo.18258865"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18258865.svg" alt="DOI"></a>
 
-BSM
+The Boson Substrate Model: Declared Operating Regimes
 <a href="https://doi.org/10.5281/zenodo.18263827"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263827.svg" alt="DOI"></a>
 
-QSM
+Quantum Substrate Model: Regime Structure and Dimensional Organization
 <a href="https://doi.org/10.5281/zenodo.18264063"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18264063.svg" alt="DOI"></a>
 
-AI
+Calibrating AI Drift via Declared Operating Regimes
 <a href="https://doi.org/10.5281/zenodo.18263036"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263036.svg" alt="DOI"></a>
 
-MSRM
+Manufacturing Substrate Regime Model
 <a href="https://doi.org/10.5281/zenodo.18265225"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18265225.svg" alt="DOI"></a>
 
-Enterprise IT
+Enterprise Structural Awareness
 <a href="https://doi.org/10.5281/zenodo.18265872"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18265872.svg" alt="DOI"></a>
 
-Global Energy Awareness
+Global Energy Regime Awareness
 <a href="https://doi.org/10.5281/zenodo.18266407"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18266407.svg" alt="DOI"></a>
 
 Consciousness Substrate Model: A Structural Framework for Autonomous Forms
@@ -31,6 +31,9 @@ Spacetime Validation and Regime‑Invariant Dimensional Cores
 vST Domain Tool Primers
 <a href="https://doi.org/10.5281/zenodo.18286463"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18286463.svg" alt="DOI"></a>
 
+Atomic Clocks Structural Alignment
+<a href="https://doi.org/10.5281/zenodo.18316763"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18316763.svg" alt="DOI"></a>
+
 https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
@@ -42,6 +45,7 @@ https://zenodo.org/records/18271014
 https://zenodo.org/records/18272448
 https://zenodo.org/records/18281561
 https://zenodo.org/records/18286463
+https://zenodo.org/records/18316763
 
 10.5281/zenodo.18258865
 10.5281/zenodo.18263827
@@ -54,5 +58,5 @@ https://zenodo.org/records/18286463
 10.5281/zenodo.18272448
 10.5281/zenodo.18281561
 10.5281/zenodo.18286463
-
+10.5281/zenodo.18316763
 
