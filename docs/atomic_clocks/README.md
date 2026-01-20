@@ -46,3 +46,5 @@ International (CC BY 4.0) license. See `LICENSE_NOTES.md` for details.
 
 If you use this work, please cite it using the metadata in
 `CITATION.cff`.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/atomic_clocks)
