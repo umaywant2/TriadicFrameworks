@@ -257,4 +257,4 @@ For the technical substrate that implements Resonance‑Time Theory, see the
 
 ---
 
-© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+© 2025-2026 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
