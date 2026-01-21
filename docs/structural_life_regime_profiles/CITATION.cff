@@ -3,6 +3,8 @@ title: "Structural Life‑Regime Profiles"
 message: "If you use this work, please cite it using the metadata below."
 type: software
 version: "1.0.0"
+date-released: 2026-01-20
+doi: 10.5281/zenodo.18330076
 authors:
   - family-names: "Loswin"
     given-names: "Nawder"
