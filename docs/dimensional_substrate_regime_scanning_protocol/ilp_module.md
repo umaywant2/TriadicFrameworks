@@ -3,11 +3,7 @@
 The ILP module provides an optional secondary analysis step for estimating the 
 probability that a detected life‑regime exhibits intelligent agency.
 
-## Inputs
-- structural features
-- behavioral patterns
-- environmental coupling
-- spectral/temporal anomalies
+This module is engine‑agnostic and can be consumed by RSM or vST systems.
 
 ## Core Metrics
 - SET (Structural Entanglement Threshold)
@@ -16,17 +12,4 @@ probability that a detected life‑regime exhibits intelligent agency.
 - FFF (Form‑Function Fit)
 
 ## Output
-A stable hash and a probability score:
-
-{
-  "ilp_probability": 0.42,
-  "set": 0.31,
-  "snr": 0.55,
-  "ser": 0.48,
-  "fff": 0.34,
-  "notes": "non‑random motion; moderate environmental coupling"
-}
-
-## Purpose
-Provide a human‑readable indicator for dashboards and navigation systems.
-
+A stable hash and a probability score.
