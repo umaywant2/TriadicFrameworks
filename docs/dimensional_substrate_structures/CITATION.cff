@@ -6,6 +6,10 @@ authors:
   - family-names: Loswin
     given-names: Nawder
     affiliation: TriadicFrameworks
+version: "1.0.0"
+date-released: 2026-01-20
+doi: 10.5281/zenodo.18321015
+url: https://github.com/umaywant2/TriadicFrameworks
 abstract: >
   A dimensional-substrate framework extending the Resonance Substrate Model from
   3D–9D triadic cores to 64D–1024D research-grade substrates. Includes
@@ -19,5 +23,3 @@ keywords:
   - vST Validation
   - Regime Analysis
 license: MIT
-version: "1.0.0"
-date-released: "2026-01-20"

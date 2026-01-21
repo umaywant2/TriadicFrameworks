@@ -8,7 +8,7 @@ authors:
     affiliation: TriadicFrameworks
 version: "1.0.0"
 date-released: 2026-01-20
-doi: 10.5281/zenodo.########
+doi: 10.5281/zenodo.18320863
 url: https://github.com/umaywant2/TriadicFrameworks
 abstract: >
   A substrate-level framework for interpreting AlphaFold-class inference systems,
