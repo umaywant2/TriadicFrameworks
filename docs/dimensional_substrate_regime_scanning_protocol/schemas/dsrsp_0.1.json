@@ -1,1 +1,13 @@
-
+{
+  "title": "dsrsp/0.1 regime profile",
+  "type": "object",
+  "properties": {
+    "scan_id": { "type": "string" },
+    "regime_type": { "type": "string" },
+    "structural_regime": { "type": "object" },
+    "sensory_regime": { "type": "object" },
+    "environmental_regime": { "type": "object" },
+    "drift_indicators": { "type": "object" }
+  },
+  "required": ["scan_id", "regime_type"]
+}
