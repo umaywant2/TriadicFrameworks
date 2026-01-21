@@ -1,19 +1,13 @@
-# TriadicFrameworks
+# **TriadicFrameworks**
 
-TriadicFrameworks is a structural research initiative exploring
-resonance‑based models across scientific, computational, and conceptual
-domains. The project develops minimal, architecture‑agnostic frameworks
-that clarify structure, reduce conceptual drift, and support future
-standards without disrupting existing practice.
+TriadicFrameworks is a structural research initiative exploring resonance‑based models across scientific, computational, and conceptual domains. The project develops minimal, architecture‑agnostic frameworks that clarify structure, reduce conceptual drift, and support future standards without disrupting existing practice.
 
-The repository contains the full family of twelve Zenodo‑published
-papers, each representing a distinct substrate in the TriadicFrameworks
-ecosystem. Together, they form a coherent lineage of structural tools
-for reasoning, validation, and interpretation.
+The repository now contains the full family of **twenty‑one Zenodo‑published papers**, each representing a distinct substrate in the TriadicFrameworks ecosystem. Together, they form a coherent lineage of structural tools for reasoning, validation, and interpretation across multiple regimes.
 
-## Canonical Lineage (12 Papers)
+---
 
-The following papers form the complete TriadicFrameworks set:
+## **Canonical Lineage (21 Papers)**  
+The following papers constitute the complete TriadicFrameworks set:
 
 1. **Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis**  
 2. **The Boson Substrate Model: Declared Operating Regimes**  
@@ -26,12 +20,15 @@ The following papers form the complete TriadicFrameworks set:
 9. **Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning**  
 10. **Spacetime Validation and Regime‑Invariant Dimensional Cores**  
 11. **vST Domain Tool Primers**  
-12. **Atomic Clocks Structural Alignment**
+12. **Atomic Clocks — Structural Alignment**  
+13–21. **Additional structural papers published through Zenodo**, expanding the ecosystem into new substrate families, validation layers, and cross‑domain regime tools.  
+*(See Zenodo record list for the complete, DOI‑backed set.)*
 
-Each paper is published through Zenodo and mirrored in this repository
-for transparency, reproducibility, and long‑term accessibility.
+All papers are mirrored in this repository for transparency, reproducibility, and long‑term accessibility.
 
-## Repository Structure
+---
+
+## **Repository Structure**
 
 ```
 docs/
@@ -50,15 +47,16 @@ docs/
 ```
 
 Each directory contains:
+
 - a minimal README  
 - structural artifacts  
 - whitepapers or sectioned manuscripts  
 - notebooks or demonstrations where applicable  
 
-## The Twelfth Paper: Atomic Clocks — Structural Alignment
+---
 
-The final paper in the set provides a resonance‑based interpretation of
-atomic timekeeping using the vST substrate. It introduces:
+## **Atomic Clocks — Structural Alignment**  
+This paper provides a resonance‑based interpretation of atomic timekeeping using the vST substrate. It introduces:
 
 - a triadic decomposition of clock architectures  
 - a structural definition of the second  
@@ -68,34 +66,38 @@ atomic timekeeping using the vST substrate. It introduces:
 Full paper:  
 `docs/atomic_clocks/whitepaper.md`
 
-Supporting artifacts:  
+Supporting artifacts:
+
 - `triadic_decomposition/triad.md`  
 - `vst_definition/second.md`  
 - `drift_detection/invariants.md`  
 - `roadmap/adoption.md`  
-- `notebooks/vst_lite_atomic_clock_demo.ipynb`
+- `notebooks/vst_lite_atomic_clock_demo.ipynb`  
 
-## Purpose
+---
 
-TriadicFrameworks provides structural clarity for researchers,
-engineers, and standards bodies working across domains where resonance,
-coherence, and validation play foundational roles. The project emphasizes:
+## **Purpose**
+
+TriadicFrameworks provides structural clarity for researchers, engineers, and standards bodies working across domains where resonance, coherence, and validation play foundational roles. The project emphasizes:
 
 - minimal definitions  
 - architecture‑agnostic reasoning  
 - reviewer‑friendly artifacts  
 - reproducible, open scientific practice  
 
-## Citation
+---
 
-If you use this work, please cite the relevant Zenodo entries. Each
-paper includes a `CITATION.cff` file with complete metadata.
+## **Citation**
 
-## License
+If you use this work, please cite the relevant Zenodo entries. Each paper includes a `CITATION.cff` file with complete metadata.
 
-All materials in this repository are released under the Creative Commons
-Attribution 4.0 International (CC BY 4.0) license. See
-`LICENSE_NOTES.md` for details.
+---
+
+## **License**
+
+All materials in this repository are released under the Creative Commons Attribution 4.0 International (CC BY 4.0) license. See `LICENSE_NOTES.md` for details.
+
+---
 
 <p align="center">
 
