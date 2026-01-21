@@ -1,8 +1,8 @@
 {
-  "title": "vST for <DOMAIN>",
+  "title": "vST for Large Language Models",
   "upload_type": "software",
   "publication_type": "article",
-  "description": "This artifact defines the Validation-Space-Time (vST) framework for <DOMAIN>, including substrate definitions, regime structures, scaling behavior, projection and alignment methods, validation layers, drift detection, examples, and appendices. It is part of the seven-artifact vST canon.",
+  "description": "This artifact defines the Validation-Space-Time (vST) framework for Large Language Models, including substrate definitions, regime structures, scaling behavior, projection and alignment methods, validation layers, drift detection, examples, and appendices. It is part of the seven-artifact vST canon.",
   "doi": "10.5281/zenodo.18322485",
   "creators": [
     {
@@ -31,3 +31,4 @@
   ],
   "language": "en"
 }
+
