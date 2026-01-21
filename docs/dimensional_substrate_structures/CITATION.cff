@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "AlphaFold Substrate Alignments: A Resonance Substrate Model Framework"
+title: "Dimensional Substrate Structures: Triadic Dimensional Cores and High-Dimensional Scaling"
 message: "If you use this artifact, please cite it using the metadata below."
 type: software
 authors:
@@ -7,17 +7,17 @@ authors:
     given-names: Nawder
     affiliation: TriadicFrameworks
 abstract: >
-  A substrate-level framework for interpreting AlphaFold-class inference systems,
-  including dimensional cores, alignment principles, folding regimes, validation
-  layers, and drift detection. Designed for reproducibility and cross-model
-  comparison within the Resonance Substrate Model.
+  A dimensional-substrate framework extending the Resonance Substrate Model from
+  3D–9D triadic cores to 64D–1024D research-grade substrates. Includes
+  dimensional primitives, scaling laws, invariants, high-dimensional regimes,
+  computational implications, validation layers, and reproducible examples.
 keywords:
   - Resonance Substrate Model
-  - AlphaFold
-  - Dimensional Cores
-  - Inference Alignment
+  - Dimensional Substrate
+  - High-Dimensional Scaling
+  - Triadic Dimensional Cores
   - vST Validation
-  - Drift Detection
+  - Regime Analysis
 license: MIT
 version: "1.0.0"
 date-released: "2026-01-20"
