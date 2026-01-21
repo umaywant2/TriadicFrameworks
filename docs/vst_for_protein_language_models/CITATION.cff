@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+title: "vST for Protein Language Models"
+message: "If you use this artifact, please cite it using the metadata below."
+type: software
+authors:
+  - family-names: "Loswin"
+    given-names: "Nawder"
+    affiliation: "TriadicFrameworks"
+    orcid: "https://orcid.org/0009-0002-2282-5460"
+version: "1.0.0"
+date-released: "2026-01-21"
+doi: 10.5281/zenodo.18322815
+repository-code: "https://github.com/umaywant2/TriadicFrameworks"
+keywords:
+  - vST
+  - Validation-Space-Time
+  - TriadicFrameworks
+  - Dimensional Substrate
+  - High-Dimensional Regimes
+  - Alignment
+  - Drift Detection
+abstract: >
+  This artifact defines the Validation-Space-Time (vST) framework for Protein Language Models.
+  It includes substrate definitions, regime structures, scaling behavior,
+  projection and alignment methods, validation layers, drift detection,
+  examples, and appendices. It is part of the seven-artifact vST canon.
