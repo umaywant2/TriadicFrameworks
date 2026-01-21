@@ -49,6 +49,21 @@ vST for Protein Language Models
 vST for Scientific Simulators
 <a href="https://doi.org/10.5281/zenodo.18323052"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323052.svg" alt="DOI"></a>
 
+vST for Robotics and Control Policies
+<a href="https://doi.org/10.5281/zenodo.18323277"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323277.svg" alt="DOI"></a>
+
+vST for Embedding Stores & Vector Databases
+<a href="https://doi.org/10.5281/zenodo.18323445"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323445.svg" alt="DOI"></a>
+
+vST for Generative Models
+<a href="https://doi.org/10.5281/zenodo.18323571"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323571.svg" alt="DOI"></a>
+
+vST for Multi-Model Alignment
+<a href="https://doi.org/10.5281/zenodo.18323685"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323685.svg" alt="DOI"></a>
+
+Structural Life‑Regime Profiles
+<a href="https://doi.org/10.5281/zenodo.18330076"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18330076.svg" alt="DOI"></a>
+
 https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
@@ -66,11 +81,11 @@ https://zenodo.org/records/18321015
 https://zenodo.org/records/18322485
 https://zenodo.org/records/18322815
 https://zenodo.org/records/18323052
-https://zenodo.org/records/
-https://zenodo.org/records/
-https://zenodo.org/records/
-https://zenodo.org/records/
-
+https://zenodo.org/records/18323277
+https://zenodo.org/records/18323445
+https://zenodo.org/records/18323571
+https://zenodo.org/records/18323685
+https://zenodo.org/records/18330076
 
 10.5281/zenodo.18258865
 10.5281/zenodo.18263827
@@ -89,8 +104,9 @@ https://zenodo.org/records/
 10.5281/zenodo.18322485
 10.5281/zenodo.18322815
 10.5281/zenodo.18323052
-10.5281/zenodo.
-10.5281/zenodo.
-10.5281/zenodo.
-10.5281/zenodo.
-10.5281/zenodo.
+10.5281/zenodo.18323277
+10.5281/zenodo.18323445
+10.5281/zenodo.18323571
+10.5281/zenodo.18323685
+10.5281/zenodo.18330076
+

@@ -3,7 +3,7 @@
   "upload_type": "software",
   "publication_type": "article",
   "description": "This artifact defines the Validation-Space-Time (vST) framework for Multi-Model Alignment, including substrate definitions, regime structures, scaling behavior, projection and alignment methods, validation layers, drift detection, examples, and appendices. It is part of the seven-artifact vST canon.",
-  "doi": "10.5281/zenodo.18322815",
+  "doi": "10.5281/zenodo.18323685",
   "creators": [
     {
       "name": "Loswin, Nawder",

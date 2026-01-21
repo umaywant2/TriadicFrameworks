@@ -1,9 +1,9 @@
 {
-  "title": "vST for Protein Language Models",
+  "title": "vST for Generative Models",
   "upload_type": "software",
   "publication_type": "article",
-  "description": "This artifact defines the Validation-Space-Time (vST) framework for Protein Language Models, including substrate definitions, regime structures, scaling behavior, projection and alignment methods, validation layers, drift detection, examples, and appendices. It is part of the seven-artifact vST canon.",
-  "doi": "10.5281/zenodo.18322815",
+  "description": "This artifact defines the Validation-Space-Time (vST) framework for Generative Models, including substrate definitions, regime structures, scaling behavior, projection and alignment methods, validation layers, drift detection, examples, and appendices. It is part of the seven-artifact vST canon.",
+  "doi": "10.5281/zenodo.18323571",
   "creators": [
     {
       "name": "Loswin, Nawder",
