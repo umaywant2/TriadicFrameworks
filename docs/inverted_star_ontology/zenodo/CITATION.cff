@@ -1,6 +1,7 @@
 cff-version: 1.2.0
 title: "Inverted Star Ontology: A vST-Aligned Regime Inversion Model"
 message: "If you use this work, please cite it using the metadata below."
+doi: "10.5281/zenodo.18316763"
 authors:
   - family-names: "Loswin"
     given-names: "Nawder"
