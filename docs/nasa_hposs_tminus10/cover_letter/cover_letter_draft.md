@@ -2,7 +2,7 @@ Nawder Loswin
 TriadicFrameworks Research Initiative  
 Belleville, Michigan, USA  
 ORCID: 0009-0002-2282-5460  
-Nawder@triadicframeworks.org
+Nawder@triadicframeworks.org  
 1-734-846-3927
 
 01/21/2026
