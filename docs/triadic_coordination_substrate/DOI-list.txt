@@ -67,6 +67,9 @@ Structural Life‑Regime Profiles
 Dimensional Substrate Regime Scanning Protocol (dsrsp/0.1)
 <a href="https://doi.org/10.5281/zenodo.18331997"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18331997.svg" alt="DOI"></a>
 
+Inverted Star Ontology: A vST-Aligned Regime Inversion Model
+<a href="https://doi.org/10.5281/zenodo.18334261"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18334261.svg" alt="DOI"></a>
+
 https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
@@ -90,6 +93,7 @@ https://zenodo.org/records/18323571
 https://zenodo.org/records/18323685
 https://zenodo.org/records/18330076
 https://zenodo.org/records/18331997
+https://zenodo.org/records/18334261
 
 10.5281/zenodo.18258865
 10.5281/zenodo.18263827
@@ -114,3 +118,10 @@ https://zenodo.org/records/18331997
 10.5281/zenodo.18323685
 10.5281/zenodo.18330076
 10.5281/zenodo.18331997
+10.5281/zenodo.18334261
+
+
+
+
+
+
