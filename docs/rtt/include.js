@@ -6,14 +6,14 @@ document.addEventListener("DOMContentLoaded", () => {
     el.innerHTML = await resp.text();
   });
 
-  const toggle = () => {
-    document.body.classList.toggle("light-mode");
-    document.body.classList.toggle("dark-mode");
-  };
-
   setTimeout(() => {
-    const btn = document.getElementById("themeToggle");
-    if (btn) btn.addEventListener("click", toggle);
+    const toggle = document.getElementById("navToggle");
+    const drawer = document.getElementById("navDrawer");
+    if (toggle && drawer) {
+      toggle.addEventListener("click", () => {
+        drawer.classList.toggle("open");
+      });
+    }
   }, 50);
 });
 </script>
