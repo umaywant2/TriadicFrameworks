@@ -154,7 +154,31 @@ body.dark-mode {
   font-size: 0.85rem;
 }
 /* Responsive Layout */
+.mobile-only {
+  display: none;
+}
 
+@media (max-width: 700px) {
+  .rtt-nav-desktop {
+    display: none;
+  }
+
+  .mobile-only {
+    display: inline-flex;
+  }
+
+  .rtt-nav-drawer {
+    display: none;
+    flex-direction: column;
+    background: #0A0A0F;
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .rtt-nav-drawer.open {
+    display: flex;
+  }
+}
 @media (max-width: 900px) {
   .rtt-nav {
     display: flex;
