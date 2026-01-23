@@ -202,6 +202,12 @@ These four files ensure that both humans and AI systems are properly primed befo
 
 ---
 
+### RTT API and SDK
+- **[API](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/api/rtt)**
+- **[SDK](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt-sdk)**
+
+---
+
 ### TFT 3‑Pack v1.3
 - **[nous](TFT_3Pack_v1.3/tft/nous/)** → Environment layer for core logic, bots, and resonance tools  
 - **[entft](TFT_3Pack_v1.3/tft/entft/)** → Protocol layer for divide‑by‑zero logic, badge evolution, and flame‑grade encryption  
