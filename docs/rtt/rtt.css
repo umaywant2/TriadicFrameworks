@@ -359,3 +359,23 @@ body.dark-mode {
     grid-template-columns: 1fr;
   }
 }
+.rtt-ladder {
+  display: flex;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.rtt-ladder-bar {
+  width: 6px;
+  height: 60px;
+  background: linear-gradient(180deg, var(--rtt-resonance-blue), var(--rtt-helix-violet));
+  opacity: 0.2;
+  animation: rtt-ladder-pulse 1.8s infinite;
+  animation-delay: calc(var(--i) * 0.05s);
+  border-radius: 999px;
+}
+
+@keyframes rtt-ladder-pulse {
+  0%, 100% { opacity: 0.2; transform: scaleY(0.6); }
+  50% { opacity: 1; transform: scaleY(1.2); }
+}
