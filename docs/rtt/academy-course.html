@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RTT Academy — Course Detail</title>
+  <link rel="stylesheet" href="rtt.css" />
+  <script src="include.js"></script>
+</head>
+
+<body class="dark-mode">
+  <div data-include="nav.html"></div>
+
+  <main class="rtt-page">
+
+    <h1 class="rtt-hero-title" id="courseTitle">Course Title</h1>
+    <p class="rtt-hero-subtitle" id="courseSubtitle">Course subtitle goes here.</p>
+
+    <div id="courseTier" class="rtt-badge rtt-badge-foundations">Foundations</div>
+
+    <hr class="rtt-divider" />
+
+    <section>
+      <h2 class="rtt-section-title">Overview</h2>
+      <p id="courseOverview"></p>
+    </section>
+
+    <section>
+      <h2 class="rtt-section-title">What You’ll Learn</h2>
+      <ul id="courseObjectives"></ul>
+    </section>
+
+    <section>
+      <h2 class="rtt-section-title">Related Documentation</h2>
+      <div id="courseDocs" class="rtt-tier-grid"></div>
+    </section>
+
+    <section>
+      <h2 class="rtt-section-title">Related Engines</h2>
+      <div id="courseEngines" class="rtt-tier-grid"></div>
+    </section>
+
+    <section>
+      <h2 class="rtt-section-title">Next Steps</h2>
+      <div id="courseNext" class="rtt-tier-grid"></div>
+    </section>
+
+    <footer class="rtt-footer">
+      © TriadicFrameworks — Resonance‑Time Technology
+    </footer>
+
+  </main>
+
+  <script>
+    // Example course data — this is where the graph wiring happens
+    const course = {
+      title: "Intro to the 24D Ladder",
+      subtitle: "Understanding the dimensional architecture of RTT",
+      tier: "foundations",
+      overview: "This course introduces the 24-dimensional ladder that structures all RTT capabilities.",
+      objectives: [
+        "Understand the four 6D strata",
+        "Learn how tiers map to product capabilities",
+        "Explore dimensional progression"
+      ],
+      docs: [
+        { name: "RSM Schema", link: "docs.html#rsm" },
+        { name: "RTT Primer", link: "docs.html#primer" }
+      ],
+      engines: [
+        { name: "Wrapped Core L1", link: "wrapped-core-l1.html" }
+      ],
+      next: [
+        { name: "Building with Wrapped Core", link: "academy-course.html?course=wrapped-core" },
+        { name: "Systems Track Overview", link: "academy.html#systems" }
+      ]
+    };
+
+    // Render
+    document.getElementById("courseTitle").textContent = course.title;
+    document.getElementById("courseSubtitle").textContent = course.subtitle;
+    document.getElementById("courseOverview").textContent = course.overview;
+
+    // Tier badge
+    const tierMap = {
+      foundations: "rtt-badge-foundations",
+      systems: "rtt-badge-systems",
+      intelligence: "rtt-badge-intelligence",
+      aeonic: "rtt-badge-aeonic"
+    };
+    const tierEl = document.getElementById("courseTier");
+    tierEl.className = "rtt-badge " + tierMap[course.tier];
+    tierEl.textContent = course.tier.charAt(0).toUpperCase() + course.tier.slice(1);
+
+    // Objectives
+    document.getElementById("courseObjectives").innerHTML =
+      course.objectives.map(o => `<li>${o}</li>`).join("");
+
+    // Docs
+    document.getElementById("courseDocs").innerHTML =
+      course.docs.map(d => `
+        <div class="rtt-card">
+          <div class="rtt-card-title">${d.name}</div>
+          <a class="rtt-btn rtt-btn-secondary" href="${d.link}">Open</a>
+        </div>
+      `).join("");
+
+    // Engines
+    document.getElementById("courseEngines").innerHTML =
+      course.engines.map(e => `
+        <div class="rtt-card">
+          <div class="rtt-card-title">${e.name}</div>
+          <a class="rtt-btn rtt-btn-secondary" href="${e.link}">View Engine</a>
+        </div>
+      `).join("");
+
+    // Next steps
+    document.getElementById("courseNext").innerHTML =
+      course.next.map(n => `
+        <div class="rtt-card">
+          <div class="rtt-card-title">${n.name}</div>
+          <a class="rtt-btn rtt-btn-primary" href="${n.link}">Continue</a>
+        </div>
+      `).join("");
+  </script>
+
+</body>
+</html>
