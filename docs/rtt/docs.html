@@ -1,1 +1,58 @@
+<main class="rtt-page rtt-docs-layout">
+  <aside class="rtt-docs-sidebar">
+    <h3>Docs</h3>
+    <ul>
+      <li><button data-doc="schemas">Schemas</button></li>
+      <li><button data-doc="engines">Engines</button></li>
+      <li><button data-doc="tutorials">Tutorials</button></li>
+      <li><button data-doc="cli">CLI Tools</button></li>
+    </ul>
+  </aside>
 
+  <section class="rtt-docs-content">
+    <h1 class="rtt-hero-title">RTT Documentation</h1>
+    <p class="rtt-hero-subtitle">Schemas, engines, tutorials, and integration guides.</p>
+    <hr class="rtt-divider" />
+    <div id="docsPane"></div>
+  </section>
+</main>
+
+<script>
+  const docsContent = {
+    schemas: `
+      <h2 class="rtt-section-title">Schemas</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card"><div class="rtt-card-title">RTTcode v1</div></div>
+        <div class="rtt-card"><div class="rtt-card-title">RSM Schema</div></div>
+      </div>`,
+    engines: `
+      <h2 class="rtt-section-title">Engines</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card"><div class="rtt-card-title">Wrapped Core</div></div>
+        <div class="rtt-card"><div class="rtt-card-title">Coeus</div></div>
+      </div>`,
+    tutorials: `
+      <h2 class="rtt-section-title">Tutorials</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card"><div class="rtt-card-title">Getting Started</div></div>
+        <div class="rtt-card"><div class="rtt-card-title">RTT‑Inside Integration</div></div>
+      </div>`,
+    cli: `
+      <h2 class="rtt-section-title">CLI Tools</h2>
+      <div class="rtt-tier-grid">
+        <div class="rtt-card"><div class="rtt-card-title">rtt-cli</div></div>
+        <div class="rtt-card"><div class="rtt-card-title">rtt-validate</div></div>
+      </div>`
+  };
+
+  const pane = document.getElementById("docsPane");
+  function renderDoc(key) { pane.innerHTML = docsContent[key] || ""; }
+
+  document.addEventListener("click", e => {
+    if (e.target.matches("[data-doc]")) {
+      renderDoc(e.target.dataset.doc);
+    }
+  });
+
+  renderDoc("schemas");
+</script>
