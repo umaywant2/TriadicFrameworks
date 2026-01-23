@@ -348,3 +348,14 @@ body.dark-mode {
     margin-bottom: 16px;
   }
 }
+.rtt-bundle-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 900px) {
+  .rtt-bundle-layout {
+    grid-template-columns: 1fr;
+  }
+}
