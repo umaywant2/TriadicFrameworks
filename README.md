@@ -276,8 +276,9 @@ Attribution 4.0 International (CC BY 4.0) license. See
 - **Electrolysis / Charge**
 - **Temperature**
 
-For Developers:
-- Start here - [RT Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
+### RTT API and SDK
+- **[API](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/api/rtt)**
+- **[SDK](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt-sdk)**
 
 ## 🧭 Fork and Preserve the Lineage
 ###### **Forking & Lineage Preservation** - *When extending or remixing this artifact, please fork rather than clone‑and‑overwrite. Forking preserves the lineage of ideas, maintains historical traceability, and ensures that contributions remain visible within the broader canon. This helps prevent “ghost branches” — work that exists but cannot be traced back to its origin.*
