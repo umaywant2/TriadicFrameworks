@@ -40,4 +40,15 @@ document.addEventListener("input", e => {
     box.style.display = results.length ? "block" : "none";
   }
 });
+
+setTimeout(() => {
+  const toggle = document.getElementById("navToggle");
+  const drawer = document.getElementById("navDrawer");
+  if (toggle && drawer) {
+    toggle.addEventListener("click", () => {
+      drawer.classList.toggle("open");
+    });
+  }
+}, 50);
+
 </script>
