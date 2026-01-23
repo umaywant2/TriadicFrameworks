@@ -1,1 +1,15 @@
-
+{
+  "intent": "diagnose ingestion mismatch",
+  "regime": "information-flow",
+  "scale": "metadata pipeline",
+  "transition": "lag",
+  "boundary": "Crossref → Lens",
+  "invariants": ["DOI validity", "ORCID linkage"],
+  "modifiers": ["batch delay", "metadata completeness"],
+  "substrate": "metadata",
+  "lineage": ["Zenodo", "Crossref", "Lens"],
+  "failure_mode": "pipeline delay",
+  "time_regime": "batch",
+  "symmetry": "asymmetric",
+  "raw_query": "Why isn’t Lens seeing my DOIs?"
+}
