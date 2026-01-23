@@ -248,3 +248,20 @@ body.dark-mode {
   transform: scaleY(1);
   opacity: 1;
 }
+.rtt-compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.rtt-compare-table th,
+.rtt-compare-table td {
+  border: 1px solid rgba(255,255,255,0.15);
+  padding: 12px;
+  text-align: left;
+}
+
+.rtt-compare-table th {
+  background: rgba(255,255,255,0.05);
+  font-weight: 600;
+}
