@@ -1,1 +1,23 @@
-
+{
+  "title": "vST Micro-Agent: Spacetime Structural Query Wrapper",
+  "upload_type": "software",
+  "description": "A minimal vST-aware micro-agent that extracts structural invariants from arbitrary queries using a 12-question decision tree and outputs a substrate-aligned query envelope.",
+  "creators": [
+    {
+      "name": "Loswin, Nawder",
+      "orcid": "YOUR-ORCID-HERE"
+    }
+  ],
+  "keywords": [
+    "vST",
+    "TriadicFrameworks",
+    "structural intelligence",
+    "micro-agent",
+    "semantic substrate",
+    "query envelope"
+  ],
+  "license": "MIT",
+  "version": "1.0.0",
+  "related_identifiers": [],
+  "notes": "Part of the TriadicFrameworks canon."
+}
