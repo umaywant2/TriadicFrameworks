@@ -135,3 +135,39 @@ body {
   color: var(--rtt-drift-silver);
   font-size: 0.85rem;
 }
+/* Responsive Layout */
+
+@media (max-width: 900px) {
+  .rtt-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .rtt-hero-title {
+    font-size: 2rem;
+  }
+
+  .rtt-tier-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rtt-header pre {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .rtt-hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .rtt-nav a {
+    margin-left: 0;
+  }
+
+  .rtt-page {
+    padding: 20px;
+  }
+}
