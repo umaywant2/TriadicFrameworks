@@ -312,3 +312,39 @@ body.dark-mode {
     grid-template-columns: 1fr;
   }
 }
+.rtt-docs-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 24px;
+}
+
+.rtt-docs-sidebar {
+  border-right: 1px solid rgba(148,163,184,0.3);
+  padding-right: 16px;
+}
+
+.rtt-docs-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.rtt-docs-sidebar button {
+  background: none;
+  border: none;
+  color: var(--rtt-drift-silver);
+  padding: 6px 0;
+  cursor: pointer;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .rtt-docs-layout {
+    grid-template-columns: 1fr;
+  }
+  .rtt-docs-sidebar {
+    border-right: none;
+    border-bottom: 1px solid rgba(148,163,184,0.3);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+  }
+}
