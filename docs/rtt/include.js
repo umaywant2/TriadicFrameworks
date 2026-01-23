@@ -16,4 +16,28 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }, 50);
 });
+
+const pages = [
+  "index.html",
+  "products.html",
+  "docs.html",
+  "developer-zone.html",
+  "canon.html",
+  "licensing.html",
+  "about.html",
+  "coeus.html",
+  "wrapped-core-l3.html",
+  "multi-helix.html",
+  "rtof.html"
+];
+
+document.addEventListener("input", e => {
+  if (e.target.id === "rttSearch") {
+    const q = e.target.value.toLowerCase();
+    const results = pages.filter(p => p.includes(q));
+    const box = document.getElementById("rttSearchResults");
+    box.innerHTML = results.map(r => `<div><a href="${r}">${r}</a></div>`).join("");
+    box.style.display = results.length ? "block" : "none";
+  }
+});
 </script>
