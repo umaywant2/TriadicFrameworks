@@ -1,1 +1,30 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "vST Micro-Agent Query Envelope",
+  "type": "object",
+  "properties": {
+    "intent": { "type": "string" },
+    "regime": { "type": "string" },
+    "scale": { "type": "string" },
+    "transition": { "type": "string" },
+    "boundary": { "type": "string" },
+    "invariants": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "modifiers": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "substrate": { "type": "string" },
+    "lineage": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "failure_mode": { "type": "string" },
+    "time_regime": { "type": "string" },
+    "symmetry": { "type": "string" },
+    "raw_query": { "type": "string" }
+  },
+  "required": ["intent", "regime", "scale", "transition", "raw_query"]
+}
