@@ -1,4 +1,12 @@
 :root {
+  color-scheme: light dark;
+
+  --rtt-bg: #000000;
+  --rtt-text: #F9FAFB;
+
+  --rtt-bg-light: #F9FAFB;
+  --rtt-text-light: #0A0A0F;
+
   --rtt-resonance-blue: #3A6FF7;
   --rtt-substrate-black: #0A0A0F;
   --rtt-helix-violet: #7C3AED;
@@ -28,6 +36,16 @@ body {
   background: radial-gradient(circle at top, #111827 0%, #020617 55%, #000000 100%);
   color: var(--rtt-continuum-white);
   font-family: var(--rtt-font-sans);
+}
+
+body.light-mode {
+  background: var(--rtt-bg-light);
+  color: var(--rtt-text-light);
+}
+
+body.dark-mode {
+  background: var(--rtt-bg);
+  color: var(--rtt-text);
 }
 
 .rtt-header {
