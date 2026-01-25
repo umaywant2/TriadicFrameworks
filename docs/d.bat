@@ -1,7 +1,7 @@
 @ echo off
 echo Creating...
 md rtt_store
-cd rtt-store
+cd rtt_store
 copy con README.md
 copy con index.md
 md tiers
