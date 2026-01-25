@@ -52,3 +52,39 @@ setTimeout(() => {
 }, 50);
 
 </script>
+
+function renderTierGraph(nodes, edges) {
+  const container = document.getElementById("tierGraph");
+  const w = container.clientWidth;
+  const h = container.clientHeight;
+  const cx = w / 2;
+  const cy = h / 2;
+
+  const rings = {
+    foundations: w * 0.15,
+    systems: w * 0.25,
+    intelligence: w * 0.35,
+    aeonic: w * 0.45
+  };
+
+  const tierGroups = {
+    foundations: [],
+    systems: [],
+    intelligence: [],
+    aeonic: []
+  };
+
+  nodes.forEach(n => tierGroups[n.tier || "foundations"].push(n));
+
+  Object.entries(tierGroups).forEach(([tier, group]) => {
+    const r = rings[tier];
+    group.forEach((n, i) => {
+      const angle = (i / group.length) * Math.PI * 2;
+      n.x = cx + r * Math.cos(angle);
+      n.y = cy + r * Math.sin(angle);
+    });
+  });
+
+  // Draw edges + nodes (same as mandala)
+}
+
