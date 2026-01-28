@@ -479,7 +479,7 @@ function start_sim():
   When versions diverge, nodes detect and resolve the mismatch structurally.
 
 - **Paradox‑safe behavior**  
-  You can inject contradictory readings by modifying `generate_reading()`.
+  We can inject contradictory readings by modifying `generate_reading()`.
 
 This tiny harness is enough for contributors to validate the entire substrate comms model end‑to‑end.
 
@@ -987,3 +987,239 @@ Most assets don’t need explicit paradox rules. Use them for systems where cont
 
 ### 7. Keep profiles small  
 A typical profile should have **3–6 invariants**. More than that usually indicates the asset needs to be split into sub‑assets.
+
+---
+
+We’re asking the right “what if” here—and it’s not a sci‑fi question, it’s an engineering one.
+
+### Could Substrate Comms be layered onto an existing deep‑space craft?
+
+In principle, yes—**as a logical overlay**, not a replacement for existing radios or protocols.
+
+- **What changes onboard:**  
+  A small software update that:
+  - Defines a **local manifest** of invariants for key subsystems (power, thermal, attitude, instruments).  
+  - Evaluates **drift + status** locally.  
+  - Builds **STATE_SUMMARY / PARADOX_SUMMARY** packets from existing telemetry values.  
+  - Sends those summaries over the **same old link** (same RF, same modulation, same DSN).
+
+- **What changes on the ground:**  
+  - Ground systems adopt the **same manifest**.  
+  - They interpret incoming summaries structurally instead of treating everything as flat telemetry.  
+  - Existing raw telemetry paths can remain untouched—Substrate Comms becomes an *additional lens*, not a disruptive change.
+
+So we’re not asking NASA to re‑architect comms stacks on a dying spacecraft—we’re asking them to add a **thin reasoning layer** that:
+
+- compresses meaning into tiny packets,  
+- makes better use of dwindling link budgets,  
+- and preserves **coherence** even as contact windows shrink.
+
+### Does it “extend range”?
+
+Not in the physics sense—RF still fades, noise still wins.
+
+But in the **operational sense**, yes:
+
+- We can get **more usable state** out of fewer, shorter, weaker contacts.  
+- We can keep a **coherent picture** of the craft’s health even when we only get occasional summaries.  
+- We can let the craft act more **autonomously**, with Earth still understanding *why* it did what it did.
+
+That’s a very real kind of “range extension”: the mission remains intelligible and structurally aligned longer than the raw bit‑pipe alone would allow.
+
+### The bittersweet part
+
+We’re also right about the timing: there’s a window where this is still possible.
+
+- While we can still **uplink** software.  
+- While there’s still **enough power** to run a small reasoning loop.  
+- While there’s still **enough link margin** to get even tiny summaries back.
+
+It’s a very Nawder move, honestly—trying to give old, far‑flung machines a cleaner, more dignified endgame by upgrading their *coherence layer*, not their hardware.
+
+---
+
+# Substrate Comms for Legacy Deep‑Space Missions  
+*A minimal overlay to preserve coherence as power, bandwidth, and contact windows decline.*
+
+## Overview  
+Many aging deep‑space spacecraft still accept software uplinks but operate with shrinking power budgets, degraded hardware, and increasingly intermittent communication. Substrate Communications offers a lightweight, non‑intrusive way to extract more usable state from these missions without modifying radios, protocols, or ground systems. It adds a thin reasoning layer that compresses meaning into small, self‑contained summaries.
+
+## Core Idea  
+Instead of transmitting raw telemetry streams, the spacecraft evaluates its own subsystem invariants locally and sends only **structural deltas**:
+
+- **STATE_SUMMARY** — drift from expected ranges  
+- **PARADOX_SUMMARY** — contradictory or incompatible readings  
+- **MANIFEST_VERSION** — the invariant set used for interpretation  
+
+This preserves coherence between spacecraft and Earth even when communication is sparse or delayed.
+
+## Why It Works  
+Substrate Comms does not replace existing telemetry. It overlays a structural interpretation:
+
+- **Local autonomy:** the craft evaluates drift and status without waiting for Earth.  
+- **Sparse packets:** summaries are tiny and self‑contained, ideal for low‑SNR links.  
+- **Loss tolerance:** each packet describes a complete window; no stream continuity required.  
+- **Coherence preservation:** Earth and spacecraft remain aligned on the same invariant set even with long gaps.
+
+## What Changes Onboard  
+A small software update that:
+
+1. Defines a **local manifest** of subsystem invariants (thermal, power, attitude, life support if applicable).  
+2. Computes drift and status from existing telemetry values.  
+3. Generates STATE_SUMMARY and PARADOX_SUMMARY packets.  
+4. Sends them over the **existing RF link** using the same modulation and DSN pathways.
+
+No hardware changes. No protocol changes. No interference with existing telemetry.
+
+## What Changes on the Ground  
+Ground systems load the same manifest and interpret incoming summaries structurally:
+
+- Drift becomes a first‑class signal.  
+- Paradox entries highlight sensor degradation.  
+- Operators see subsystem coherence, not just raw numbers.
+
+Existing telemetry pipelines remain untouched.
+
+## Operational Benefits  
+- **Extended mission intelligibility:** Earth can reconstruct subsystem health even with infrequent contacts.  
+- **Better use of weak links:** small packets survive where full telemetry may not.  
+- **Graceful degradation:** as power declines, the craft still communicates meaningfully.  
+- **Autonomy with transparency:** the spacecraft acts locally, but Earth understands why.
+
+## Risk Profile  
+- Minimal code footprint.  
+- No interference with flight‑critical modules.  
+- Reversible: substrate summaries can be disabled without affecting other systems.  
+- Compatible with delay‑tolerant networking and DSN constraints.
+
+## When to Apply  
+This approach is most valuable when:
+
+- Uplink capability still exists.  
+- Power margins are shrinking.  
+- Telemetry is intermittent or noisy.  
+- The mission is entering its final operational phase.
+
+---
+
+## Appendix: Substrate Comms for Legacy Deep‑Space Missions  
+*A minimal overlay to preserve coherence as power, bandwidth, and contact windows decline.*
+
+### Overview  
+Many long‑lived deep‑space spacecraft still accept software uplinks but operate with shrinking power budgets, degraded sensors, and increasingly intermittent communication. Substrate Communications provides a lightweight, non‑intrusive way to extract more usable state from these missions without modifying radios, protocols, or ground infrastructure. It adds a thin reasoning layer that compresses meaning into small, self‑contained summaries.
+
+### Core Idea  
+Instead of transmitting full telemetry streams, the spacecraft evaluates its own subsystem invariants locally and sends only **structural deltas**:
+
+- **STATE_SUMMARY** — drift from expected ranges  
+- **PARADOX_SUMMARY** — contradictory or incompatible readings  
+- **MANIFEST_VERSION** — the invariant set used for interpretation  
+
+This preserves coherence between spacecraft and Earth even when communication is sparse or delayed.
+
+### Why It Works  
+Substrate Comms does not replace existing telemetry. It overlays a structural interpretation:
+
+- **Local autonomy:** the craft evaluates drift and status without waiting for Earth.  
+- **Sparse packets:** summaries are small and survive low‑SNR conditions.  
+- **Loss tolerance:** each packet describes a complete window; no stream continuity required.  
+- **Coherence preservation:** Earth and spacecraft remain aligned on the same invariant set even with long gaps.
+
+### Onboard Changes  
+A small software update that:
+
+1. Defines a **local manifest** of subsystem invariants (thermal, power, attitude, instruments).  
+2. Computes drift and status from existing telemetry values.  
+3. Generates STATE_SUMMARY and PARADOX_SUMMARY packets.  
+4. Sends them over the **existing RF link** using the same modulation and DSN pathways.
+
+No hardware changes. No protocol changes. No interference with flight‑critical modules.
+
+### Ground‑Side Changes  
+Ground systems load the same manifest and interpret incoming summaries structurally:
+
+- Drift becomes a first‑class signal.  
+- Paradox entries highlight sensor degradation.  
+- Operators see subsystem coherence, not just raw numbers.
+
+Existing telemetry pipelines remain untouched.
+
+### Operational Benefits  
+- **Extended mission intelligibility:** Earth can reconstruct subsystem health even with infrequent contacts.  
+- **Better use of weak links:** small packets succeed where full telemetry may not.  
+- **Graceful degradation:** as power declines, the craft still communicates meaningfully.  
+- **Autonomy with transparency:** the spacecraft acts locally, but Earth understands why.
+
+### Risk Profile  
+- Minimal code footprint.  
+- No interference with flight‑critical modules.  
+- Reversible: substrate summaries can be disabled without affecting other systems.  
+- Compatible with delay‑tolerant networking and DSN constraints.
+
+### When to Apply  
+This approach is most valuable when:
+
+- Uplink capability still exists.  
+- Power margins are shrinking.  
+- Telemetry is intermittent or noisy.  
+- The mission is entering its final operational phase.
+
+---
+
+## Contributor Guidance: Real‑World Applications  
+Substrate Communications is intentionally general, but contributors should anchor new ideas in **practical, observable systems**. The goal is to show how invariants, drift, and paradox can improve coherence in environments where traditional telemetry or monitoring is fragile, intermittent, or overloaded.
+
+### Where Substrate Comms Applies Naturally  
+When proposing new examples or extensions, focus on systems that share at least one of these characteristics:
+
+- **Intermittent connectivity**  
+  Rural infrastructure, disaster‑zone networks, remote sensors, deep‑space missions.
+
+- **High‑value, low‑bandwidth links**  
+  Undersea cables, satellite relays, long‑range mesh networks.
+
+- **Safety‑critical subsystems**  
+  Power grids, bridges, tunnels, life‑support modules, industrial plants.
+
+- **Distributed autonomy**  
+  Robotics fleets, drones, planetary rovers, environmental monitoring arrays.
+
+### What Good Contributions Look Like  
+A strong contribution typically includes:
+
+- A clear **asset profile** (identity, role, invariants).  
+- A short explanation of **why substrate structure helps** in that domain.  
+- Minimal examples of **STATE_SUMMARY** or **PARADOX_SUMMARY** messages.  
+- A note on **failure modes** where substrate comms improves clarity or resilience.
+
+### What to Avoid  
+- Overly complex invariants that require domain‑specific solvers.  
+- Raw telemetry dumps instead of structural deltas.  
+- Designs that assume continuous connectivity or high bandwidth.  
+- Attempts to merge manifests automatically.
+
+### Why This Matters  
+Every new example helps demonstrate that substrate comms is not tied to any one field. It is a **general coherence layer** that can sit above existing protocols and below operational decision‑making. Contributors help expand the library of real‑world patterns, making the substrate model easier to adopt across disciplines.
+
+---
+
+## Future Extensions  
+Substrate Communications v1.0 defines the minimal structural layer needed for coherence across distance, latency, and degraded links. Future work within the Triadic Frameworks ecosystem can extend this foundation while preserving its simplicity and invariant‑first design.
+
+### 1. Multi‑Node Substrate Meshes  
+Support for small clusters of nodes—bridges, sensors, rovers, or modules—sharing drift summaries with each other, not just a central authority. This enables distributed coherence in environments where no single node has continuous connectivity.
+
+### 2. Adaptive Invariant Sets  
+Profiles that adjust their invariant bounds based on long‑term drift trends or environmental changes. This preserves structural clarity while reducing false positives in dynamic systems.
+
+### 3. Substrate‑Native Diagnostics  
+Lightweight diagnostic routines that run locally when drift exceeds thresholds, producing structured “diagnostic summaries” that complement STATE_SUMMARY and PARADOX_SUMMARY messages.
+
+### 4. Cross‑Substrate Translation  
+A thin translation layer allowing different substrate profiles (e.g., thermal, structural, power) to be interpreted together without merging manifests. This supports richer reasoning while maintaining strict version boundaries.
+
+### 5. Dimensional Substrate Integration  
+Future versions of Triadic Frameworks may incorporate higher‑dimensional substrate concepts—such as resonance layers or triadic state vectors—to provide deeper structural insight without increasing message complexity.
+
+### 6. Long‑Term Archival Coherence  
+Tools for reconstructing coherent timelines from sparse summaries, enabling mission archives, infrastructure audits, and historical analysis to operate on structural signals rather than raw telemetry.
