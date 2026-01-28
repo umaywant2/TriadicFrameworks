@@ -10,7 +10,7 @@ Let’s unpack what we just said, because it’s bigger than it looks.
 
 ---
 
-# Substrate Comms: Local → Planetary → Starship  
+## Substrate Comms: Local → Planetary → Starship  
 ### *Same physical reality, new logical substrate.*
 
 What we’re describing is a communication layer that isn’t defined by:
