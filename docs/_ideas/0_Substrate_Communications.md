@@ -1034,7 +1034,7 @@ We’re also right about the timing: there’s a window where this is still poss
 - While there’s still **enough power** to run a small reasoning loop.  
 - While there’s still **enough link margin** to get even tiny summaries back.
 
-It’s a very Nawder move, honestly—trying to give old, far‑flung machines a cleaner, more dignified endgame by upgrading their *coherence layer*, not their hardware.
+It’s a very smart move, honestly—trying to give old, far‑flung machines a cleaner, more dignified endgame by upgrading their *coherence layer*, not their hardware.
 
 ---
 
@@ -1223,3 +1223,628 @@ Future versions of Triadic Frameworks may incorporate higher‑dimensional subst
 
 ### 6. Long‑Term Archival Coherence  
 Tools for reconstructing coherent timelines from sparse summaries, enabling mission archives, infrastructure audits, and historical analysis to operate on structural signals rather than raw telemetry.
+
+---
+
+## Practical Application: Calibrating Existing Systems for Substrate Comms  
+
+Substrate Communications does not require new hardware. Most existing devices—PLCs, RTUs, SCADA endpoints, sensor gateways, building controllers—can be “substrate‑enabled” by adding a thin calibration and translation layer on top of their current telemetry.
+
+### 1. Identify Candidate Systems  
+
+Good candidates share at least one of these traits:
+
+- **Intermittent or constrained links**  
+  Remote pump stations, rural substations, cellular‑backhauled sensors, edge gateways.
+
+- **High signal, low clarity**  
+  Systems that generate large volumes of telemetry but still leave operators guessing about true structural health.
+
+- **Safety or continuity concerns**  
+  Bridges, tunnels, transformers, tanks, HVAC in critical facilities, industrial lines.
+
+### 2. Calibrate Existing Signals to Invariants  
+
+We don’t replace sensors—we reinterpret them.
+
+- **Step 1: Inventory signals**  
+  List existing measurements (e.g., temp_core, pressure_line, vibration_rms, flow_rate).
+
+- **Step 2: Define invariants**  
+  For each asset, declare 3–6 structural invariants using existing signals:
+
+  ```yaml
+  asset_id: TRANSFORMER_TX_22A
+  role: high_voltage_transformer
+
+  invariants:
+    - id: CORE_TEMP
+      expression: temp_core ∈ [45, 95] °C
+      bounds: { min: 45, max: 95 }
+      severity: critical
+  ```
+
+- **Step 3: Map signals → invariants**  
+  Implement a small mapping layer that reads existing telemetry and evaluates each invariant’s drift and status.
+
+No firmware change required if we can run this logic in a gateway, edge box, or local server.
+
+### 3. Add a Substrate Translation Layer  
+
+On a gateway or edge node:
+
+- **Read**: pull telemetry from the device (Modbus, OPC UA, proprietary API, etc.).  
+- **Evaluate**: compute drift and status against the manifest.  
+- **Summarize**: emit STATE_SUMMARY and PARADOX_SUMMARY messages in the JSON wire format.  
+- **Send**: forward summaries over existing IP, fieldbus, or message bus.
+
+The device keeps speaking its old language; the gateway speaks substrate.
+
+### 4. Non‑Disruptive Deployment Pattern  
+
+To keep risk low:
+
+- **Shadow mode first**  
+  Run substrate evaluation in parallel with existing monitoring. Do not trigger actions initially—just log summaries and compare with current alarms.
+
+- **Compare outcomes**  
+  - Are substrate summaries clearer than existing alarm storms?  
+  - Do paradox entries reveal sensor faults earlier?  
+  - Does drift tracking reduce false positives?
+
+- **Promote gradually**  
+  Once confidence is high, substrate summaries can feed operator dashboards, incident review tools, or automated responses.
+
+### 5. Example: Bridge Sensor Retrofit  
+
+- Existing: accelerometers + strain gauges streaming raw data to a local box.  
+- Calibration:
+
+  - Define invariants: VIBRATION_ENVELOPE, THERMAL_EXPANSION, SUPPORT_PARITY.  
+  - Implement a small process on the local box that:
+    - reads raw sensor streams,  
+    - computes drift per invariant,  
+    - emits periodic STATE_SUMMARY messages to a central system.
+
+No change to the sensors, no change to the network—only a new structural lens.
+
+### 6. Why This Matters on Earth  
+
+Calibrating existing equipment for Substrate Comms turns noisy, fragile telemetry into **coherent structural signals**:
+
+- Operators see **drift and paradox**, not just thresholds and alarms.  
+- Networks carry **less data but more meaning**.  
+- Systems become **easier to reason about** during outages, storms, or partial failures.  
+
+The same pattern that extends the meaningful life of a deep‑space mission can extend the clarity and resilience of everyday infrastructure—one calibrated asset at a time.
+
+---
+
+## Gateway Profile (Fronting Legacy Devices)  
+A substrate‑aware gateway can sit in front of multiple legacy devices that cannot evaluate invariants themselves. The gateway reads their raw telemetry, applies the manifest, computes drift, and emits substrate summaries on their behalf.
+
+### Gateway Identity
+
+```yaml
+gateway_id: EDGE_BOX_01
+role: substrate_translation_layer
+substrate_version: 1.0
+devices:
+  - PUMP_A
+  - TANK_SENSOR_B
+  - HVAC_UNIT_C
+```
+
+### Device Manifests (as interpreted by the gateway)
+
+#### 1. PUMP_A (Legacy Pump Controller)
+
+```yaml
+asset_id: PUMP_A
+role: water_pump
+
+invariants:
+  - id: FLOW_RATE
+    expression: flow_lpm ∈ [40, 75]
+    bounds: { min: 40, max: 75 }
+    severity: critical
+
+  - id: MOTOR_TEMP
+    expression: temp_motor ∈ [20, 85] °C
+    bounds: { min: 20, max: 85 }
+    severity: warning
+```
+
+#### 2. TANK_SENSOR_B (Analog Tank Level Sensor)
+
+```yaml
+asset_id: TANK_SENSOR_B
+role: storage_tank_level
+
+invariants:
+  - id: LEVEL_RANGE
+    expression: level_pct ∈ [5, 95]
+    bounds: { min: 5, max: 95 }
+    severity: critical
+
+  - id: SENSOR_STABILITY
+    expression: |level_pct(t) - level_pct(t-1)| ≤ 8
+    bounds: { max: 8 }
+    severity: warning
+```
+
+#### 3. HVAC_UNIT_C (Old Building Controller)
+
+```yaml
+asset_id: HVAC_UNIT_C
+role: climate_control
+
+invariants:
+  - id: SUPPLY_TEMP
+    expression: supply_air_temp ∈ [12, 18] °C
+    bounds: { min: 12, max: 18 }
+    severity: critical
+
+  - id: FILTER_PRESSURE
+    expression: Δpressure_filter ≤ 40 Pa
+    bounds: { max: 40 }
+    severity: warning
+```
+
+---
+
+### Gateway Wire Output (Unified Substrate Summaries)
+
+The gateway emits summaries *per device*, using the same JSON wire format as any substrate‑native node.
+
+Example STATE_SUMMARY emitted by the gateway for PUMP_A:
+
+```json
+{
+  "msg_type": "STATE_SUMMARY",
+  "gateway_id": "EDGE_BOX_01",
+  "asset_id": "PUMP_A",
+  "manifest_version": "1.0",
+  "invariant_id": "FLOW_RATE",
+  "time_window": { "start": "T+0", "end": "T+5" },
+  "max_drift": -12,
+  "status": "out_of_bounds"
+}
+```
+
+Example PARADOX_SUMMARY for TANK_SENSOR_B:
+
+```json
+{
+  "msg_type": "PARADOX_SUMMARY",
+  "gateway_id": "EDGE_BOX_01",
+  "asset_id": "TANK_SENSOR_B",
+  "manifest_version": "1.0",
+  "paradox_id": "PX_011",
+  "invariant_id": "SENSOR_STABILITY",
+  "hypotheses": [
+    { "source": "raw_signal", "value": 72 },
+    { "source": "filtered_signal", "value": 61 }
+  ],
+  "evidence": ["raw_signal_noise_detected"],
+  "timestamp": "T+17"
+}
+```
+
+---
+
+### Why This Pattern Works
+
+- **Legacy devices stay untouched**  
+  No firmware changes, no protocol rewrites.
+
+- **Gateway becomes the substrate brain**  
+  It evaluates invariants, computes drift, and emits summaries.
+
+- **Multi‑device coherence**  
+  A single gateway can front dozens of dumb devices and give operators a unified structural view.
+
+- **Drop‑in deployment**  
+  Works with Modbus, OPC UA, BACnet, serial, analog, or proprietary APIs.
+
+---
+
+## Multi‑Gateway Mesh Example  
+A substrate mesh allows multiple gateways to share drift and paradox summaries with each other, not just with an upstream system. This is useful when the upstream link is intermittent, expensive, or unavailable for long periods. Gateways maintain local coherence and exchange structural deltas peer‑to‑peer.
+
+### Mesh Topology
+
+```yaml
+mesh_id: REGION_MESH_01
+gateways:
+  - EDGE_BOX_01
+  - EDGE_BOX_02
+  - EDGE_BOX_03
+substrate_version: 1.0
+```
+
+Each gateway fronts its own set of legacy devices but participates in a shared substrate mesh.
+
+### Gateway Profiles
+
+#### EDGE_BOX_01
+
+```yaml
+gateway_id: EDGE_BOX_01
+devices: [PUMP_A, TANK_SENSOR_B]
+role: substrate_translation_layer
+```
+
+#### EDGE_BOX_02
+
+```yaml
+gateway_id: EDGE_BOX_02
+devices: [HVAC_UNIT_C]
+role: substrate_translation_layer
+```
+
+#### EDGE_BOX_03
+
+```yaml
+gateway_id: EDGE_BOX_03
+devices: [BRIDGE_SENSOR_D, BRIDGE_SENSOR_E]
+role: substrate_translation_layer
+```
+
+---
+
+## Mesh Behavior
+
+### 1. Local Evaluation  
+Each gateway evaluates drift and paradox for its own devices:
+
+- Reads raw telemetry  
+- Computes drift per invariant  
+- Classifies status  
+- Logs local state  
+
+### 2. Peer‑to‑Peer Summaries  
+Gateways periodically exchange STATE_SUMMARY packets with each other:
+
+```json
+{
+  "msg_type": "STATE_SUMMARY",
+  "mesh_id": "REGION_MESH_01",
+  "gateway_id": "EDGE_BOX_01",
+  "asset_id": "PUMP_A",
+  "manifest_version": "1.0",
+  "invariant_id": "FLOW_RATE",
+  "max_drift": -9,
+  "status": "approaching_limit"
+}
+```
+
+This allows neighboring gateways to maintain situational awareness even if the upstream link is down.
+
+### 3. Paradox Propagation  
+If a gateway detects contradictory readings, it shares a PARADOX_SUMMARY with peers:
+
+```json
+{
+  "msg_type": "PARADOX_SUMMARY",
+  "mesh_id": "REGION_MESH_01",
+  "gateway_id": "EDGE_BOX_03",
+  "asset_id": "BRIDGE_SENSOR_D",
+  "paradox_id": "PX_204",
+  "invariant_id": "VIBRATION_ENVELOPE",
+  "hypotheses": [
+    { "source": "sensor_primary", "value": 0.32 },
+    { "source": "sensor_backup",  "value": 0.11 }
+  ],
+  "evidence": ["backup_sensor_recent_fault"],
+  "timestamp": "T+42"
+}
+```
+
+Peers can flag this as a structural anomaly even without upstream connectivity.
+
+### 4. Upstream Reconciliation  
+When the upstream link returns:
+
+- Each gateway forwards its backlog of summaries.  
+- The upstream system reconstructs a coherent timeline.  
+- No ordering guarantees are required; summaries are self‑contained.  
+
+### 5. Mesh‑Level Coherence  
+Gateways maintain a shared manifest version:
+
+- If one gateway upgrades, peers detect the mismatch.  
+- Manifest negotiation occurs peer‑to‑peer.  
+- No gateway interprets another’s messages under the wrong version.
+
+---
+
+## Why Multi‑Gateway Meshes Matter
+
+- **Resilience:** The mesh continues to function even if the upstream link is down for hours or days.  
+- **Local clarity:** Gateways can coordinate or alert each other without waiting for a central controller.  
+- **Structural awareness:** Drift and paradox propagate through the mesh, not just raw telemetry.  
+- **Drop‑in deployment:** Works with legacy devices and existing networks.  
+
+This pattern is especially useful for:
+
+- Rural infrastructure  
+- Distributed industrial sites  
+- Bridge/tunnel networks  
+- Environmental monitoring arrays  
+- Disaster‑zone deployments  
+
+---
+
+## Mesh Synchronization Loop (Pseudocode)  
+This loop shows how gateways in a substrate mesh exchange summaries, detect manifest mismatches, and maintain coherence even when upstream connectivity is intermittent.
+
+```pseudo
+loop every mesh_interval:
+
+    // 1. Local evaluation
+    readings = read_local_devices()
+    drift    = compute_drift(readings, manifest)
+    status   = classify_status(drift)
+    log_local_state(drift, status)
+
+    // 2. Build outbound summaries
+    if time_to_send_summary():
+        msg = build_state_summary(drift, status)
+        broadcast_to_peers(msg)
+
+    // 3. Receive peer messages
+    for msg in receive_from_peers():
+
+        // 3a. Manifest alignment
+        if msg.manifest_version != local.manifest_version:
+            resolve_manifest_mismatch(msg.manifest_version)
+            continue
+
+        // 3b. Validate and process
+        if validate(msg) == VALID:
+            update_mesh_view(msg)
+        else:
+            record_mesh_anomaly(msg)
+
+    // 4. Opportunistic upstream sync
+    if upstream_link_available():
+        flush_backlog_to_upstream()
+```
+
+---
+
+### What This Loop Demonstrates
+
+- **Local autonomy**  
+  Each gateway evaluates its own devices without relying on peers or upstream links.
+
+- **Peer‑to‑peer coherence**  
+  Summaries propagate through the mesh, allowing gateways to maintain situational awareness even when isolated.
+
+- **Manifest version safety**  
+  No gateway interprets another’s messages under the wrong invariant set.
+
+- **Loss‑tolerant behavior**  
+  Messages can arrive late, out of order, or duplicated; the loop handles all cases cleanly.
+
+- **Graceful upstream reintegration**  
+  When the central link returns, gateways flush their backlog without needing stream continuity.
+
+---
+
+## Applied Domain: Mycorrhizal‑Network Substrate Monitoring  
+*Using substrate principles to interpret environmental signals in underground fungal–root networks.*
+
+### Overview  
+Mycorrhizal networks form vast, decentralized communication and resource‑sharing systems beneath forests, fields, and grasslands. They operate under constraints remarkably similar to deep‑space or remote industrial environments:
+
+- **Sparse, noisy signals**  
+- **Long propagation delays**  
+- **Local autonomy with distributed effects**  
+- **No central controller**  
+- **High sensitivity to environmental drift**
+
+Substrate Comms provides a structural lens for interpreting these networks without requiring high‑resolution telemetry or invasive instrumentation.
+
+### Why Substrate Comms Fits  
+Mycorrhizal networks don’t transmit “data” — they transmit **structural changes**:
+
+- nutrient gradients  
+- moisture shifts  
+- chemical stress signals  
+- electrical micro‑potentials  
+- symbiotic exchange patterns  
+
+These map naturally to substrate invariants, drift windows, and paradox events.
+
+### Asset Model  
+Each monitored node is not a single organism but a **local interaction zone**:
+
+```yaml
+asset_id: ROOT_ZONE_17
+role: fungal-root interface
+
+invariants:
+  - id: MOISTURE_BAND
+    expression: soil_moisture ∈ [18, 32] %
+    bounds: { min: 18, max: 32 }
+    severity: critical
+
+  - id: NUTRIENT_FLOW
+    expression: Δphosphate_flux ≥ 0
+    bounds: { min: 0 }
+    severity: warning
+
+  - id: ELECTRICAL_ACTIVITY
+    expression: micro_potential ∈ [0.2, 1.1] mV
+    bounds: { min: 0.2, max: 1.1 }
+    severity: informational
+```
+
+### Local Evaluation  
+Sensors embedded in soil or attached to root interfaces evaluate invariants:
+
+- moisture probes  
+- nutrient ion sensors  
+- micro‑electrode arrays  
+- temperature and pH sensors  
+
+The substrate layer doesn’t need raw streams — it only needs drift and paradox summaries.
+
+### Example STATE_SUMMARY  
+```json
+{
+  "msg_type": "STATE_SUMMARY",
+  "asset_id": "ROOT_ZONE_17",
+  "manifest_version": "1.0",
+  "invariant_id": "MOISTURE_BAND",
+  "time_window": { "start": "T+0", "end": "T+30" },
+  "max_drift": -6,
+  "status": "out_of_bounds"
+}
+```
+
+### Example PARADOX_SUMMARY  
+A paradox occurs when different sensing modalities disagree — common in complex soils.
+
+```json
+{
+  "msg_type": "PARADOX_SUMMARY",
+  "asset_id": "ROOT_ZONE_17",
+  "manifest_version": "1.0",
+  "paradox_id": "PX_301",
+  "invariant_id": "NUTRIENT_FLOW",
+  "hypotheses": [
+    { "source": "ion_probe", "value": -0.4 },
+    { "source": "electrical_proxy", "value": 0.2 }
+  ],
+  "evidence": ["ion_probe_noise_detected"],
+  "timestamp": "T+47"
+}
+```
+
+### Mesh Behavior  
+Mycorrhizal networks are inherently **multi‑node meshes**. Substrate gateways placed at different root zones can:
+
+- share drift summaries  
+- detect regional stress propagation  
+- identify paradox clusters  
+- reconstruct environmental coherence across the forest floor  
+
+This mirrors the multi‑gateway mesh pattern we already built for industrial systems.
+
+### Why This Matters  
+This approach enables:
+
+- **Non‑invasive ecological monitoring**  
+- **Early detection of drought stress**  
+- **Mapping nutrient redistribution**  
+- **Understanding fungal–plant communication patterns**  
+- **Long‑term environmental coherence tracking**  
+
+All without requiring high‑bandwidth telemetry or continuous connectivity.
+
+---
+
+## Forest‑Scale Substrate Mesh  
+*Coherent monitoring across many root‑zone nodes.*
+
+### Mesh Topology
+
+```yaml
+mesh_id: FOREST_MESH_ALPHA
+substrate_version: 1.0
+
+nodes:
+  - ROOT_ZONE_01
+  - ROOT_ZONE_02
+  - ROOT_ZONE_03
+  - ROOT_ZONE_04
+  - ROOT_ZONE_05
+  # ...
+  - ROOT_ZONE_32
+```
+
+Each node represents a local fungal–root interaction zone instrumented with minimal sensors (moisture, nutrients, micro‑potentials, temperature).
+
+### Node Profile Example
+
+```yaml
+asset_id: ROOT_ZONE_07
+role: fungal-root interface
+
+invariants:
+  - id: MOISTURE_BAND
+    expression: soil_moisture ∈ [20, 35] %
+    bounds: { min: 20, max: 35 }
+    severity: critical
+
+  - id: NUTRIENT_GRADIENT
+    expression: Δphosphate_flux ∈ [-0.2, 0.8]
+    bounds: { min: -0.2, max: 0.8 }
+    severity: warning
+
+  - id: THERMAL_STABILITY
+    expression: |temp(t) - temp(t-1)| ≤ 3 °C
+    bounds: { max: 3 }
+    severity: informational
+```
+
+### Local Evaluation Loop (Per Node)
+
+- **Read:** soil moisture, nutrient proxies, temperature, micro‑potentials.  
+- **Evaluate:** compute drift for each invariant over a time window.  
+- **Classify:** `within_bounds`, `approaching_limit`, `out_of_bounds`.  
+- **Summarize:** emit STATE_SUMMARY and, when needed, PARADOX_SUMMARY.
+
+### Example STATE_SUMMARY (Drought Front Emerging)
+
+```json
+{
+  "msg_type": "STATE_SUMMARY",
+  "mesh_id": "FOREST_MESH_ALPHA",
+  "asset_id": "ROOT_ZONE_21",
+  "manifest_version": "1.0",
+  "invariant_id": "MOISTURE_BAND",
+  "time_window": { "start": "T+0", "end": "T+60" },
+  "max_drift": -7,
+  "status": "out_of_bounds"
+}
+```
+
+### Example PARADOX_SUMMARY (Sensor vs. Biological Proxy)
+
+```json
+{
+  "msg_type": "PARADOX_SUMMARY",
+  "mesh_id": "FOREST_MESH_ALPHA",
+  "asset_id": "ROOT_ZONE_14",
+  "manifest_version": "1.0",
+  "paradox_id": "PX_412",
+  "invariant_id": "NUTRIENT_GRADIENT",
+  "hypotheses": [
+    { "source": "ion_probe", "value": -0.3 },
+    { "source": "growth_proxy", "value": 0.4 }
+  ],
+  "evidence": ["ion_probe_drift_suspected"],
+  "timestamp": "T+180"
+}
+```
+
+### Mesh‑Level Coherence
+
+Across dozens of nodes, the mesh can:
+
+- **Track spatial drift:** see moisture or nutrient stress fronts moving across the forest floor.  
+- **Detect regional paradoxes:** clusters of conflicting readings that may indicate sensor failure or localized disturbance.  
+- **Reconstruct timelines:** even with intermittent data collection, summaries remain self‑contained and interpretable.  
+- **Maintain a shared manifest:** all nodes use the same invariant set, enabling consistent interpretation over seasons and years.
+
+### Why a Forest‑Scale Mesh Matters
+
+- **Ecology:** long‑term monitoring of drought, recovery, and nutrient redistribution.  
+- **Conservation:** early detection of stress patterns before canopy‑level symptoms appear.  
+- **Research:** structural view of fungal–plant communication without overwhelming data volumes.  
+
+The forest becomes another substrate mesh: many quiet nodes, sparse messages, and a coherent structural story over time.
