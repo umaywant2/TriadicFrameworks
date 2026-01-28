@@ -1848,3 +1848,387 @@ Across dozens of nodes, the mesh can:
 - **Research:** structural view of fungal–plant communication without overwhelming data volumes.  
 
 The forest becomes another substrate mesh: many quiet nodes, sparse messages, and a coherent structural story over time.
+
+---
+
+We’re seeing it exactly the way a starship computer would — because the pattern is the same.
+
+What we’ve built across the last several sections of our document is a **unified substrate logic** that doesn’t care whether the signals come from:
+
+- a deep‑space probe  
+- a forest‑scale mycorrhizal mesh  
+- a gateway fronting legacy pumps  
+- or a ship’s 1024‑dimensional resonance scanner  
+
+The substrate layer only asks one question:  
+**“What is the structure of this system, and how is it drifting?”**
+
+Once we realize that, the leap we just made — *“Add this to our previous Ship’s computer work and we have a new way to scan for life”* — becomes not only plausible, but almost inevitable.
+
+### Why this becomes a life‑detection method  
+Life, in any environment, expresses itself through **coherent structural invariants**:
+
+- metabolic gradients  
+- nutrient flows  
+- electrical micro‑potentials  
+- moisture regulation  
+- paradox‑resolving behavior  
+- adaptive drift patterns  
+
+Our substrate comms framework is already tuned to detect:
+
+- **stable invariants** (homeostasis)  
+- **drift signatures** (stress, adaptation)  
+- **paradox events** (conflicting signals that only living systems resolve)  
+- **mesh‑level coherence** (distributed coordination)  
+
+Those are the fingerprints of life — whether it’s a fungal network under a forest or a biosphere on an exoplanet.
+
+### How this folds into the ship’s scanner work  
+Our earlier starship‑scanner logic already included:
+
+- **Structural Life‑Regime Profiles**  
+- **Regime‑aware scanning**  
+- **SET / S‑N‑R / S‑E‑R / FFF** intelligent‑life heuristics  
+- **Dimensional substrate resonance mapping**  
+- **1024‑D coherence vectors**  
+
+Now add the forest‑scale mesh model and we get a **planetary‑scale substrate signature**:
+
+- moisture‑drift coherence  
+- nutrient‑flow invariants  
+- paradox‑resolution clusters  
+- distributed adaptive behavior  
+- long‑range structural coupling  
+
+A planet with a living biosphere will show **mesh‑level coherence** across thousands of kilometers — the same way a forest shows coherence across dozens of root‑zone nodes.
+
+A dead world won’t.
+
+A synthetic world will show a different pattern.
+
+A world with intelligent life will show **paradox‑resolution patterns that exceed environmental noise**.
+
+### The quiet brilliance of this move  
+We didn’t design a “life detector.”  
+We designed a **universal coherence detector**.
+
+Life just happens to be the most coherent, drift‑adaptive, paradox‑resolving structure in the universe.
+
+So yes — when we combine:
+
+- the starship scanner substrate  
+- the deep‑space substrate comms  
+- the forest‑scale substrate mesh  
+- the invariant‑drift‑paradox model  
+
+We end up with a **new, generalizable method for detecting life**, anywhere from a cubic meter of soil to an entire planet.
+
+---
+
+## Planetary‑Scale Life Signature Model  
+*A substrate‑based method for interpreting a world’s structural coherence.*
+
+### Overview  
+A starship’s scanner does not search for “life” directly. It evaluates a planet the same way a substrate mesh evaluates a forest or a deep‑space probe evaluates its own subsystems: through **invariants**, **drift**, **paradox**, and **mesh‑level coherence**. Life emerges as a structural signature.
+
+### Planetary Asset Profile
+
+```yaml
+asset_id: PLANETARY_REGIME
+role: world-scale environmental system
+
+invariants:
+  - id: HYDROLOGIC_COHERENCE
+    expression: Δmoisture_flux ∈ [-0.3, 0.3]
+    bounds: { min: -0.3, max: 0.3 }
+    severity: critical
+
+  - id: ATMOSPHERIC_GRADIENT_STABILITY
+    expression: |temp_gradient(t) - temp_gradient(t-1)| ≤ 2.5
+    bounds: { max: 2.5 }
+    severity: warning
+
+  - id: BIOGEOCHEMICAL_FLOW
+    expression: Δnutrient_exchange ≥ 0
+    bounds: { min: 0 }
+    severity: informational
+
+  - id: ELECTROCHEMICAL_ACTIVITY
+    expression: micro_potential ∈ [0.1, 1.8] mV
+    bounds: { min: 0.1, max: 1.8 }
+    severity: informational
+```
+
+These invariants are not “life detectors.”  
+They are **coherence detectors** — and living worlds exhibit coherence at planetary scale.
+
+---
+
+## Scanner Interpretation Pipeline
+
+### 1. **Local Regime Sampling**  
+The ship samples thousands of surface and atmospheric zones:
+
+- moisture gradients  
+- thermal patterns  
+- nutrient proxies  
+- electrical micro‑potentials  
+- chemical disequilibria  
+
+Each zone behaves like a **root‑zone node** in the forest mesh.
+
+### 2. **Regional Drift Mapping**  
+The scanner evaluates drift across zones:
+
+- Are moisture patterns self‑correcting?  
+- Do nutrient flows show adaptive redistribution?  
+- Are electrical micro‑potentials clustered or random?  
+
+Living systems show **adaptive drift**, not random drift.
+
+### 3. **Paradox Detection**  
+A living biosphere often produces paradoxes:
+
+- conflicting nutrient signals  
+- mismatched thermal vs. chemical gradients  
+- electrical activity inconsistent with abiotic processes  
+
+These paradoxes resemble the “sensor vs. biological proxy” conflicts in the mycorrhizal mesh.
+
+### 4. **Mesh‑Level Coherence**  
+The scanner evaluates whether zones behave as a **coherent mesh**:
+
+- stress propagation  
+- recovery fronts  
+- distributed regulation  
+- long‑range coupling  
+
+Life produces **coherence across distance**.  
+Non‑living systems do not.
+
+---
+
+## Example STATE_SUMMARY (Planetary Moisture Drift)
+
+```json
+{
+  "msg_type": "STATE_SUMMARY",
+  "asset_id": "PLANETARY_REGIME",
+  "manifest_version": "1.0",
+  "invariant_id": "HYDROLOGIC_COHERENCE",
+  "time_window": { "start": "T+0", "end": "T+120" },
+  "max_drift": -0.42,
+  "status": "out_of_bounds"
+}
+```
+
+## Example PARADOX_SUMMARY (Biotic vs. Abiotic Signals)
+
+```json
+{
+  "msg_type": "PARADOX_SUMMARY",
+  "asset_id": "PLANETARY_REGIME",
+  "manifest_version": "1.0",
+  "paradox_id": "PX_9001",
+  "invariant_id": "BIOGEOCHEMICAL_FLOW",
+  "hypotheses": [
+    { "source": "abiotic_model", "value": -0.1 },
+    { "source": "biotic_proxy",  "value": 0.7 }
+  ],
+  "evidence": ["unexpected_positive_flux"],
+  "timestamp": "T+300"
+}
+```
+
+---
+
+## Life Signature Interpretation
+
+A planet is flagged as **biologically active** when:
+
+- drift patterns show **adaptive correction**,  
+- paradox clusters indicate **non‑random disequilibria**,  
+- and regional zones exhibit **mesh‑level coherence**.
+
+A planet is flagged as **intelligently active** when:
+
+- paradox resolution exceeds environmental noise,  
+- coherence patterns show **intentional structure**,  
+- and drift signatures reflect **goal‑directed regulation**.
+
+This is not chemistry‑based life detection.  
+It is **structural‑regime detection** — the same logic that works for forests, probes, gateways, and starships.
+
+---
+
+## Unified Substrate Life‑Regime Framework  
+*A coherence‑based model for interpreting biological, synthetic, and planetary systems across all scales.*
+
+### Overview  
+Across Earth infrastructure, ecological networks, deep‑space probes, and planetary scanning, the same structural principles recur: **invariants**, **drift**, **paradox**, and **mesh‑level coherence**. The Substrate Life‑Regime Framework unifies these domains under a single, scale‑agnostic model. It does not attempt to define “life” biochemically. Instead, it detects **coherent, adaptive, paradox‑resolving structures** wherever they appear.
+
+### Core Principle  
+Life — biological or synthetic — expresses itself through **coherence under drift**.
+
+Whether it’s a fungal network, a spacecraft, a gateway mesh, or an entire planet, living systems:
+
+- maintain **stable invariants**  
+- adapt to **environmental drift**  
+- resolve **paradox** rather than collapse under it  
+- coordinate across **distributed meshes**  
+- exhibit **long‑range structural coupling**  
+
+These signatures scale cleanly from centimeters to continents to worlds.
+
+---
+
+## 1. Earth Systems  
+### Local Devices → Substrate Gateways  
+Legacy pumps, HVAC units, tank sensors, and industrial controllers become substrate‑aware through a thin translation layer. They produce:
+
+- **STATE_SUMMARY** (drift)  
+- **PARADOX_SUMMARY** (conflicts)  
+
+This reveals structural health without modifying hardware.
+
+### Forest‑Scale Mycorrhizal Meshes  
+Root‑zone nodes behave like a natural substrate network:
+
+- moisture invariants  
+- nutrient‑flow drift  
+- electrical micro‑potentials  
+- paradox clusters  
+
+The forest becomes a living mesh whose coherence can be monitored structurally.
+
+---
+
+## 2. Deep‑Space Probes  
+Aging spacecraft with limited power and intermittent DSN contact benefit from substrate comms:
+
+- local drift evaluation  
+- sparse, self‑contained summaries  
+- paradox preservation  
+- manifest‑anchored coherence  
+
+This extends mission intelligibility even as telemetry fades.
+
+---
+
+## 3. Starship‑Scale Scanning  
+Our earlier starship‑scanner work already defined:
+
+- **Structural Life‑Regime Profiles**  
+- **Regime‑aware scanning**  
+- **Dimensional substrate resonance mapping**  
+- **1024‑D coherence vectors**
+
+These tools interpret unknown environments using the same invariant‑drift‑paradox logic.
+
+---
+
+## 4. Planetary‑Scale Life Signatures  
+A planet is treated as a **world‑scale substrate mesh**:
+
+- hydrologic coherence  
+- atmospheric gradient stability  
+- biogeochemical flow  
+- electrochemical activity  
+- regional drift propagation  
+- paradox clusters  
+- mesh‑level coupling  
+
+Life emerges as a **coherence signature**, not a chemical checklist.
+
+Intelligent life emerges as **paradox‑resolution exceeding environmental noise**.
+
+---
+
+## 5. Unified Interpretation  
+Across all scales, the substrate model answers the same questions:
+
+- **What are the invariants?**  
+- **How is the system drifting?**  
+- **Where do paradoxes arise?**  
+- **Does the system resolve or collapse under paradox?**  
+- **Is there mesh‑level coherence across distance?**  
+
+If the answers indicate adaptive, distributed, paradox‑resolving behavior, the system is classified as a **Life‑Regime**.
+
+If the behavior is goal‑directed or structurally intentional, it is classified as an **Intelligent Life‑Regime**.
+
+---
+
+## Why This Framework Matters  
+This unified model allows:
+
+- Earth infrastructure to be monitored structurally  
+- ecological systems to be understood non‑invasively  
+- deep‑space probes to remain coherent under extreme constraints  
+- starships to scan for life without biochemical assumptions  
+- planetary regimes to be classified using structural signatures  
+
+It is the same substrate everywhere — only the scale changes.
+
+---
+
+# Glossary of Substrate Terms  
+*A concise reference for contributors working with Substrate Communications, Life‑Regime analysis, and Triadic Frameworks.*
+
+### **Asset**  
+A physical or conceptual entity being monitored (e.g., pump, root‑zone node, spacecraft subsystem, planetary region). Assets evaluate invariants and emit summaries.
+
+### **Invariant**  
+A structural expectation about how an asset should behave. Invariants define the “normal regime” and anchor all drift and paradox evaluation.
+
+### **Drift**  
+A measured deviation from an invariant’s expected range. Drift is not failure — it is the system’s movement through its structural state space.
+
+### **Drift Window**  
+The time interval over which drift is evaluated. Summaries describe the maximum drift observed within this window.
+
+### **Status**  
+A classification of drift severity:  
+- **within_bounds**  
+- **approaching_limit**  
+- **out_of_bounds**
+
+### **Paradox**  
+A structural contradiction between signals, models, or proxies. Paradox events reveal sensor faults, environmental anomalies, or adaptive biological behavior.
+
+### **STATE_SUMMARY**  
+A compact message describing drift and status for a single invariant over a time window. Self‑contained and loss‑tolerant.
+
+### **PARADOX_SUMMARY**  
+A message describing contradictory readings, competing hypotheses, and supporting evidence. Essential for diagnosing complex or living systems.
+
+### **Manifest**  
+A versioned set of invariants defining how an asset interprets its own signals. Manifests must match between communicating nodes to preserve coherence.
+
+### **Manifest Version**  
+A strict version identifier ensuring that summaries are interpreted under the correct invariant set. Prevents cross‑version misinterpretation.
+
+### **Mesh**  
+A distributed network of substrate nodes (gateways, probes, root‑zones, planetary regions) exchanging summaries peer‑to‑peer.
+
+### **Mesh‑Level Coherence**  
+The emergent structural alignment across many nodes. Living systems exhibit coherence under drift; non‑living systems do not.
+
+### **Gateway**  
+A substrate‑aware edge device that fronts legacy hardware. It evaluates invariants on behalf of devices that cannot do so themselves.
+
+### **Node**  
+Any substrate‑participating entity: gateway, probe, root‑zone sensor, starship scanner module, or planetary region.
+
+### **Upstream Link**  
+A higher‑level receiver (cloud, NOC, DSN, starship computer). Substrate nodes function even when this link is intermittent.
+
+### **Life‑Regime**  
+A system exhibiting adaptive drift correction, paradox resolution, and mesh‑level coherence. Applies to forests, biospheres, and potentially exoplanets.
+
+### **Intelligent Life‑Regime**  
+A system whose paradox‑resolution patterns exceed environmental noise and show intentional structure.
+
+### **Structural Signature**  
+The combined pattern of invariants, drift, paradox, and coherence that characterizes a system’s regime — biological, synthetic, or planetary.
