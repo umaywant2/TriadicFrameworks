@@ -3,6 +3,9 @@
 
 We just pivoted into the *real* frontier — the thing sci‑fi has gestured at for decades but never had the conceptual machinery to make coherent. And the timing is perfect, because everything we’ve built in RTT, vST, and the triadic substrate slots directly into this without needing to invent new physics or hand‑wave exotic tech.
 
+```python
+Substrate comms is RTT applied to distributed systems; invariants are resonant‑structure constraints, drift is coherence decay
+```
 Let’s unpack what we just said, because it’s bigger than it looks.
 
 ---
@@ -166,6 +169,375 @@ Same drift bounds.
 Same paradox handling.
 
 That’s why this feels so clean.
+
+---
+
+## Design Principles for Wire Formats  
+Substrate Communications uses intentionally minimal wire formats. These messages are not general‑purpose telemetry packets—they are structural deltas designed to preserve coherence across distance, latency, and intermittent connectivity. The following principles guide every message type.
+
+### 1. **Structure over bandwidth**  
+Substrate messages carry *structure*, not streams.  
+Only the invariant ID, drift summary, paradox entries, and manifest version are transmitted. Everything else—raw sensor data, local logs, high‑frequency readings—remains local. This keeps messages small, predictable, and resilient under constrained links.
+
+### 2. **Deterministic interpretation**  
+Every field in a substrate message has a single, unambiguous meaning.  
+Two nodes separated by minutes or hours of latency can interpret the same message identically because the invariants are shared and versioned. This eliminates ambiguity and prevents divergence during long communication gaps.
+
+### 3. **Sparse, loss‑tolerant updates**  
+Messages are designed to be sparse and self‑contained.  
+A node can miss several summaries and still reconstruct a coherent state because each packet describes a complete drift window or paradox event. There is no dependency on continuous streams or ordered delivery.
+
+### 4. **Manifest‑anchored coherence**  
+Every message includes the manifest version.  
+This ensures that Earth and a starship remain aligned on the same invariant set even if they exchange only a handful of packets over long intervals. If manifest versions diverge, nodes can detect and resolve the mismatch structurally.
+
+### 5. **Paradox‑first safety**  
+Contradictions are preserved, not overwritten.  
+The wire format explicitly supports paradox entries so that conflicting readings or incompatible states are logged and transmitted without forcing premature resolution. This is essential for deep‑space operations where local autonomy and remote oversight must coexist.
+
+### 6. **Minimal assumptions about transport**  
+Substrate messages do not rely on:  
+- low latency  
+- high bandwidth  
+- ordered delivery  
+- continuous connectivity  
+
+They can be sent over radio, optical links, delay‑tolerant networks, or even physical media if necessary. The structure remains valid regardless of transport.
+
+### 7. **Human‑auditable by design**  
+Messages are small enough to be read, logged, and reasoned about by humans.  
+This is critical for mission operations, incident analysis, and long‑term archival. The wire format is intentionally simple so that operators can inspect it without specialized tooling.
+
+---
+
+## Developer Notes  
+These notes outline practical guidance for implementers building substrate‑aware systems. The goal is to keep validation simple, predictable, and aligned with the invariant‑first design of Substrate Communications.
+
+### Manifest Version Negotiation  
+Nodes must agree on the same manifest version before interpreting each other’s messages.
+
+- **Always include `manifest_version`** in every message.  
+- **Reject or quarantine** any message whose version does not match the local manifest.  
+- **Perform negotiation explicitly**:
+  - If a node receives a message with a newer version, it should request the updated manifest.
+  - If a node receives an older version, it should send its current manifest proactively.
+- **Never auto‑merge manifests.**  
+  Structural invariants must be identical across nodes; merging introduces ambiguity.
+
+A node is considered “coherence‑aligned” only when both sides confirm the same manifest hash.
+
+### Message Validation  
+Substrate messages are intentionally small, so validation is straightforward.
+
+- **Check required fields**  
+  - `msg_type`  
+  - `manifest_version`  
+  - `invariant_id` (for summaries)  
+  - `paradox_id` (for paradox entries)  
+  - `time_window` (for summaries)  
+- **Verify bounds**  
+  - Ensure drift values and statuses are consistent with the invariant definition.
+- **Reject malformed paradox entries**  
+  - Hypotheses must be an array.  
+  - Evidence must be explicit.  
+  - Timestamps must be monotonic within the message.
+- **Signature verification**  
+  - Optional for local deployments.  
+  - Recommended for distributed or mission‑critical systems.
+
+### Local Autonomy  
+Nodes should always act on local sensor data immediately, regardless of link status.
+
+- Validation failures must **not** block local safety actions.  
+- Remote summaries are for coherence, not control.
+
+### Idempotency  
+Every substrate message should be safe to process multiple times.
+
+- STATE_SUMMARY and PARADOX_SUMMARY entries are **append‑only**.  
+- Duplicate messages should be detected via `msg_id` and ignored without error.
+
+### Transport Agnosticism  
+Substrate messages make no assumptions about the underlying channel.
+
+- They can be sent over radio, optical links, delay‑tolerant networks, or stored‑forward relays.  
+- Validation rules remain identical regardless of transport.
+
+---
+
+## Reference Implementation Notes  
+These pseudocode sketches illustrate how a minimal substrate validator and manifest synchronizer might behave. They are intentionally small and declarative, mirroring the substrate philosophy: invariants first, drift second, coherence always.
+
+### Minimal Manifest Synchronizer
+
+```pseudo
+function handle_incoming_message(msg):
+    if msg.manifest_version != local.manifest_version:
+        resolve_manifest_mismatch(msg.manifest_version)
+
+function resolve_manifest_mismatch(remote_version):
+    if remote_version > local.manifest_version:
+        request_manifest(remote_version)
+    else if remote_version < local.manifest_version:
+        send_manifest(local.manifest_version)
+    // No merging. No guessing. Versions must match exactly.
+```
+
+### Minimal Message Validator
+
+```pseudo
+function validate_message(msg):
+    if missing_required_fields(msg):
+        return INVALID
+
+    if msg.manifest_version != local.manifest_version:
+        return VERSION_MISMATCH
+
+    if msg.type == "STATE_SUMMARY":
+        return validate_state_summary(msg)
+
+    if msg.type == "PARADOX_SUMMARY":
+        return validate_paradox_summary(msg)
+
+    return UNKNOWN_TYPE
+```
+
+### STATE_SUMMARY Validation
+
+```pseudo
+function validate_state_summary(msg):
+    inv = manifest.get_invariant(msg.invariant_id)
+    if inv is null:
+        return UNKNOWN_INVARIANT
+
+    if not drift_within_possible_bounds(msg.max_drift, inv.bounds):
+        return INVALID_DRIFT
+
+    if not valid_status(msg.status):
+        return INVALID_STATUS
+
+    return VALID
+```
+
+### PARADOX_SUMMARY Validation
+
+```pseudo
+function validate_paradox_summary(msg):
+    if msg.hypotheses is empty:
+        return INVALID_PARADOX
+
+    if not array(msg.hypotheses):
+        return INVALID_PARADOX
+
+    if not array(msg.evidence):
+        return INVALID_PARADOX
+
+    return VALID
+```
+
+### Idempotent Processing
+
+```pseudo
+function process_message(msg):
+    if seen_before(msg.msg_id):
+        return  // Safe to ignore duplicates
+
+    store(msg)
+    update_local_view(msg)
+```
+
+### Local Autonomy Loop
+
+```pseudo
+loop every sensor_interval:
+    readings = read_sensors()
+    drift = compute_drift(readings, manifest)
+    status = classify_status(drift)
+    log_local_state(drift, status)
+
+    if status != WITHIN_BOUNDS:
+        trigger_local_actions(status)
+
+    if time_to_send_summary():
+        send_state_summary(drift, status)
+```
+
+These sketches demonstrate the core behaviors: strict manifest alignment, simple validation, idempotent processing, and local autonomy. They are intentionally transport‑agnostic and can be implemented in any environment that supports structured messages and periodic evaluation.
+
+---
+
+## Testing & Simulation Notes  
+Substrate Communications can be exercised entirely in software. Contributors do not need physical sensors, radios, or embedded devices to validate behavior. The substrate model is structural, so simulation focuses on invariants, drift, paradox, and message flow.
+
+### 1. Local Drift Simulation  
+A simple loop can emulate sensor drift and invariant evaluation.
+
+- Define a test invariant (e.g., pressure, vibration, temperature).  
+- Generate synthetic readings over time.  
+- Compute drift and classify status (`within_bounds`, `approaching_limit`, `out_of_bounds`).  
+- Log summaries exactly as a real node would.
+
+This validates the local autonomy loop and STATE_SUMMARY generation.
+
+### 2. Paradox Injection  
+To test paradox handling:
+
+- Generate two or more conflicting readings for the same invariant.  
+- Produce a PARADOX_SUMMARY with multiple hypotheses.  
+- Verify that the system logs the paradox without collapsing it.
+
+This ensures paradox‑safe behavior across nodes.
+
+### 3. Latency & Drop Simulation  
+Substrate comms are designed for sparse, lossy links. Simulate:
+
+- 30–60 minute one‑way delays  
+- Out‑of‑order delivery  
+- Dropped packets  
+- Duplicate packets  
+
+Nodes should still converge on a coherent state because summaries are self‑contained and idempotent.
+
+### 4. Manifest Mismatch Scenarios  
+Test manifest negotiation by intentionally misaligning versions:
+
+- Node A uses manifest v1.0  
+- Node B uses manifest v1.1  
+
+Send any message between them and confirm:
+
+- The mismatch is detected  
+- The correct manifest request/response occurs  
+- No message is interpreted under the wrong version
+
+This validates the structural safety of the channel.
+
+### 5. End‑to‑End Scenario  
+A full simulation can be run with two processes:
+
+- **Earth node**  
+- **Starship node**
+
+Each runs:
+
+- Local drift simulation  
+- Periodic summary generation  
+- Manifest negotiation  
+- Paradox injection  
+- Latency/delay simulation
+
+Even with no real hardware, this produces a complete substrate comms lifecycle.
+
+---
+
+## Minimal Test Harness (Pseudocode)  
+This harness spins up two substrate nodes—**Earth** and **Starship**—and runs a full comms loop in under 40 lines. It exercises drift, summaries, latency, and manifest negotiation without any hardware.
+
+```pseudo
+function start_sim():
+    earth     = Node("EARTH",     manifest_v1)
+    starship  = Node("STARSHIP",  manifest_v1)
+
+    link = DelayChannel(latency=30min)
+
+    loop every 1min:
+        // Starship simulates drift
+        reading = starship.generate_reading()
+        drift   = starship.compute_drift(reading)
+        status  = starship.classify(drift)
+        starship.log_local(drift, status)
+
+        // Starship sends summary occasionally
+        if starship.time_to_send():
+            msg = starship.build_state_summary(drift, status)
+            link.send(starship, earth, msg)
+
+        // Earth receives delayed messages
+        for msg in link.deliver_ready():
+            if earth.validate(msg) == VALID:
+                earth.process(msg)
+            else:
+                earth.handle_invalid(msg)
+
+        // Manifest mismatch test
+        if random_event():
+            starship.manifest_version += 1  // simulate upgrade
+```
+
+### What this harness demonstrates
+
+- **Local autonomy**  
+  Starship evaluates drift and status without waiting for Earth.
+
+- **Sparse, delayed comms**  
+  Messages arrive 30 minutes late but still reconstruct a coherent timeline.
+
+- **Idempotent processing**  
+  Earth can process duplicates safely.
+
+- **Manifest negotiation**  
+  When versions diverge, nodes detect and resolve the mismatch structurally.
+
+- **Paradox‑safe behavior**  
+  You can inject contradictory readings by modifying `generate_reading()`.
+
+This tiny harness is enough for contributors to validate the entire substrate comms model end‑to‑end.
+
+---
+
+## JSON Wire Format Examples  
+These minimal schemas illustrate how substrate messages appear “on the wire.” They are intentionally sparse: only identity, versioning, and structural deltas are transmitted. Everything else is local interpretation.
+
+### Manifest (shared invariants)
+
+```json
+{
+  "manifest_version": "1.0",
+  "node_id": "NODE_001",
+  "invariants": [
+    {
+      "id": "CABIN_PRESSURE",
+      "expression": "P ∈ [95, 105] kPa",
+      "bounds": { "min": 95, "max": 105 },
+      "severity": "critical"
+    }
+  ],
+  "signature": "BASE64_SIGNATURE"
+}
+```
+
+### STATE_SUMMARY (drift + status over a window)
+
+```json
+{
+  "msg_type": "STATE_SUMMARY",
+  "manifest_version": "1.0",
+  "invariant_id": "CABIN_PRESSURE",
+  "time_window": { "start": "T+0", "end": "T+5" },
+  "max_drift": -7,
+  "status": "out_of_bounds",
+  "notable_events": ["AUTO_SEAL_ACTIVATED"]
+}
+```
+
+### PARADOX_SUMMARY (conflicting or incompatible readings)
+
+```json
+{
+  "msg_type": "PARADOX_SUMMARY",
+  "manifest_version": "1.0",
+  "paradox_id": "PX_003",
+  "invariant_id": "CABIN_PRESSURE",
+  "hypotheses": [
+    { "source": "sensor_A", "value": 101 },
+    { "source": "sensor_B", "value": 94 }
+  ],
+  "evidence": ["sensor_A_calibration_ok", "sensor_B_recent_fault"],
+  "timestamp": "T+12"
+}
+```
+
+These examples give developers a clear sense of how substrate comms look in practice: small, structured, and focused entirely on coherence, drift, and paradox rather than raw telemetry.
 
 ---
 
