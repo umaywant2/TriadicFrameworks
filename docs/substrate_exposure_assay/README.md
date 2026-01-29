@@ -16,4 +16,18 @@ It measures **regimes**, **drift**, and **paradox** — the structural signature
 
 All files are intentionally minimal and version‑stable.
 
-For a narrative example of this assay applied to three AI models, see the exploratory write‑up in docs/_ideas/3_AI_test_of_rtt_nimms_com.md
+For a narrative example, see the exploratory write‑up in docs/_ideas/3_AI_test_of_rtt_nimms_com.md
+
+## Contributor Onboarding (Minimal)
+
+This folder follows the RSM/vST minimal‑artifact style.  
+When extending or contributing:
+
+- keep files **small, structural, and self‑contained**  
+- avoid adding narrative results or logs  
+- place new examples or experiments in separate folders, not here  
+- preserve the existing file boundaries (`protocol`, `message patterns`, `regime interpretation`)  
+- do not introduce dependencies or tooling requirements  
+
+This directory defines the **canonical assay**.  
+All applied work should reference it, not modify it.
