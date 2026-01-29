@@ -2,6 +2,7 @@
   "title": "Substrate Communications",
   "upload_type": "publication",
   "publication_type": "article",
+  "doi": "10.5281/zenodo.18415488",
   "description": "A minimal structural framework for drift-aware, paradox-preserving messaging across heterogeneous systems.",
   "creators": [
     { "name": "Loswin, Nawder" }
