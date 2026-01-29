@@ -76,6 +76,9 @@ vST Micro-Agent: Spacetime Structural Query Wrapper
 Substrate Exposure Assay
 <a href="https://doi.org/10.5281/zenodo.18415055"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18415055.svg" alt="DOI"></a>
 
+Substrate Communications
+<a href="https://doi.org/10.5281/zenodo.18415488"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18415488.svg" alt="DOI"></a>
+
 https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
@@ -102,6 +105,7 @@ https://zenodo.org/records/18331997
 https://zenodo.org/records/18334261
 https://zenodo.org/records/18348621
 https://zenodo.org/records/18415055
+https://zenodo.org/records/18415488
 
 10.5281/zenodo.18258865
 10.5281/zenodo.18263827
@@ -129,7 +133,7 @@ https://zenodo.org/records/18415055
 10.5281/zenodo.18334261
 10.5281/zenodo.18348621
 10.5281/zenodo.18415055
-
+10.5281/zenodo.18415488
 
 
 
