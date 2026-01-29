@@ -803,3 +803,130 @@ We’re *recognizing* it.
 
 That’s the hallmark of someone who has moved from **Knowing** to **Meaning** in their own arc.
 
+---
+
+# **The Redwood Model — A Triadic Framework Across Scales**  
+*A biological illustration of how Being, Knowing, and Meaning express themselves in living systems, cognition, and planetary regimes.*
+
+The Redwood is a natural triadic organism. It expresses **Being**, **Knowing**, and **Meaning** through visible and hidden structures that remain coherent across centuries. This makes it an ideal example for contributors learning how Triadic Frameworks apply across biological, cognitive, and planetary domains.
+
+---
+
+## **1. Triadic Structure of a Redwood**
+
+### **BEING (B)**  
+*Root system, soil mesh, unseen coherence*
+
+- mycorrhizal networks  
+- nutrient gradients  
+- moisture regulation  
+- electrical micro‑potentials  
+- long‑range underground coupling  
+
+This is the Redwood’s **substrate layer** — the part that exists whether anyone sees it or not.
+
+### **KNOWING (K)**  
+*Adaptive regulation, growth logic, environmental learning*
+
+- seasonal cycles  
+- drought response  
+- stress propagation  
+- growth/decay rates  
+- canopy–root signaling  
+
+This is the Redwood’s **processing layer**, where it interprets drift and resolves paradox.
+
+### **MEANING (M)**  
+*Visible structure, ecological role, emergent coherence*
+
+- fractal branching  
+- symmetry  
+- height and canopy architecture  
+- habitat creation  
+- long‑term ecosystem impact  
+
+This is the Redwood’s **expression layer**, where its full structural meaning becomes visible.
+
+---
+
+## **2. Redwood as a BKM Signature System**
+
+A Redwood doesn’t have a single “life signature.”  
+It has **multiple BKM signatures**, each one structural:
+
+- **Being‑signatures** → root coherence, nutrient flux, soil‑mesh stability  
+- **Knowing‑signatures** → adaptive cycles, stress responses, growth logic  
+- **Meaning‑signatures** → fractal geometry, ecological integration, longevity  
+
+These signatures are **fractal** — they appear at:
+
+- the cellular level  
+- the organism level  
+- the forest level  
+- the planetary level  
+
+This mirrors the structure of Triadic Frameworks.
+
+---
+
+## **3. Redwood Arc = Idea Arc = Planetary Arc**
+
+A Redwood grows through a triadic arc:
+
+1. **Being** → seed, root establishment  
+2. **Knowing** → adaptive growth, environmental learning  
+3. **Meaning** → full ecological integration  
+
+Ideas follow the same arc.  
+Civilizations follow the same arc.  
+Planets follow the same arc.
+
+This is why the Redwood is such a powerful teaching model.
+
+---
+
+## **4. Structural Grammar Across Domains**
+
+The Redwood’s triadic structure maps directly onto the three major domains of Triadic Frameworks:
+
+### **Biological Systems**  
+- roots = Being  
+- regulation = Knowing  
+- canopy = Meaning  
+
+### **Cognitive Systems**  
+- intuition = Being  
+- comprehension = Knowing  
+- insight = Meaning  
+
+### **Planetary Systems**  
+- geochemical substrate = Being  
+- climate regulation = Knowing  
+- biosphere expression = Meaning  
+
+The grammar is identical.  
+Only the scale changes.
+
+---
+
+## **5. Diagram (Contributor‑Ready)**
+
+```
+                 MEANING (M)
+        (visible structure, canopy, fractals)
+                         ▲
+                         │
+                         │
+                 KNOWING (K)
+        (growth regulation, cycles, adaptation)
+                         ▲
+                         │
+                         │
+                  BEING (B)
+        (roots, soil mesh, unseen coherence)
+```
+
+This diagram can be reused across biological, cognitive, and planetary examples.
+
+---
+
