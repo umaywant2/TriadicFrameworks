@@ -73,6 +73,9 @@ Inverted Star Ontology: A vST-Aligned Regime Inversion Model
 vST Micro-Agent: Spacetime Structural Query Wrapper
 <a href="https://doi.org/10.5281/zenodo.18348621"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18348621.svg" alt="DOI"></a>
 
+Substrate Exposure Assay
+<a href="https://doi.org/10.5281/zenodo.18415055"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18415055.svg" alt="DOI"></a>
+
 https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
@@ -98,6 +101,7 @@ https://zenodo.org/records/18330076
 https://zenodo.org/records/18331997
 https://zenodo.org/records/18334261
 https://zenodo.org/records/18348621
+https://zenodo.org/records/18415055
 
 10.5281/zenodo.18258865
 10.5281/zenodo.18263827
@@ -124,7 +128,7 @@ https://zenodo.org/records/18348621
 10.5281/zenodo.18331997
 10.5281/zenodo.18334261
 10.5281/zenodo.18348621
-
+10.5281/zenodo.18415055
 
 
 
