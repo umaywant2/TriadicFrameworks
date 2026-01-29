@@ -1,1 +1,10 @@
-
+```yaml
+cff-version: 1.2.0
+title: "Substrate Exposure Assay"
+authors:
+  - family-names: "Loswin"
+    given-names: "Nawder"
+version: "1.0.0"
+date-released: "2026-01-29"
+license: "CC-BY-4.0"
+```
