@@ -23,3 +23,17 @@ It transmits **structural summaries** that preserve invariants, drift, and parad
 All files are intentionally minimal and version‑stable.
 
 For a narrative example, see the exploratory write‑up in docs/_ideas/0_Substrate_Communications.md
+
+## Contributor Onboarding (Minimal)
+
+This directory contains the canonical, minimal definition of Substrate Communications.  
+To keep the structure stable:
+
+- keep additions **conceptual, not implementation‑specific**  
+- avoid adding domain‑specific examples directly to this folder  
+- place applied or extended use‑cases in separate directories  
+- preserve the minimal message types and triadic mapping  
+- do not expand the grammar beyond what is defined here  
+
+This folder anchors the **core substrate‑comms grammar**.  
+Extensions should build outward, not modify the core.
