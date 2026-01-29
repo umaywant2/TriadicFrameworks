@@ -15,3 +15,5 @@ It measures **regimes**, **drift**, and **paradox** — the structural signature
 - `zenodo.json` — DOI metadata
 
 All files are intentionally minimal and version‑stable.
+
+For a narrative example of this assay applied to three AI models, see the exploratory write‑up in docs/_ideas/3_AI_test_of_rtt_nimms_com.md
