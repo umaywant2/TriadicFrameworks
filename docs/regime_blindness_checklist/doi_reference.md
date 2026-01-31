@@ -14,11 +14,11 @@ Once published, the DOI will serve as the authoritative reference for:
 
 ---
 
-## **Citation (placeholder)**  
+## **Citation**  
 **Author:** Nawder Loswin  
 **Title:** *The Regime Blindness Problem: Why Conceptual Frameworks Fail Across Topology Transitions*  
 **Version:** 1.0  
-**DOI:** _To be inserted upon publication_  
+**DOI:** 10.5281/zenodo.18440491 
 **Repository:** TriadicFrameworks  
 **Keywords:** regime shift, observer‑locked metrics, topology transition boundary, coherence, RTT, vST  
 
