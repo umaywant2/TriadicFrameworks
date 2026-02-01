@@ -1,4 +1,4 @@
-RSM
+Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis
 <a href="https://doi.org/10.5281/zenodo.18258865"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18258865.svg" alt="DOI"></a>
 
 The Boson Substrate Model: Declared Operating Regimes
@@ -79,6 +79,9 @@ Substrate Exposure Assay
 Substrate Communications
 <a href="https://doi.org/10.5281/zenodo.18415488"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18415488.svg" alt="DOI"></a>
 
+The Regime Blindness Problem: Structural Failures at Topology Transition Boundaries
+<a href="https://doi.org/10.5281/zenodo.18440491"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18440491.svg" alt="DOI"></a>
+
 https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
@@ -106,6 +109,7 @@ https://zenodo.org/records/18334261
 https://zenodo.org/records/18348621
 https://zenodo.org/records/18415055
 https://zenodo.org/records/18415488
+https://zenodo.org/records/18440491
 
 10.5281/zenodo.18258865
 10.5281/zenodo.18263827
@@ -134,7 +138,7 @@ https://zenodo.org/records/18415488
 10.5281/zenodo.18348621
 10.5281/zenodo.18415055
 10.5281/zenodo.18415488
-
+10.5281/zenodo.18440491
 
 
 
