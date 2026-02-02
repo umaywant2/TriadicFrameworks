@@ -1,4 +1,73 @@
-# TriadicFrameworks
+# **TriadicFrameworks**  
+*A unified substrate for structure, resonance, and transformation across domains*
+
+## **Purpose of the Repository**
+
+This repository serves as:
+
+- a **canonical reference** for RTT/vST  
+- a **unified substrate** for cross‑domain reasoning  
+- a **structural framework** for rebuilding fragmented disciplines  
+- a **pedagogical foundation** for clarity and accelerated learning  
+- a **research platform** for substrate‑aligned models and simulations  
+
+The goal is not to replace existing fields.  
+The goal is to reveal the substrate they all share.
+
+---
+
+# **Core Concepts**
+
+### **RTT: The Primitive Triad**
+- **pos** — constructive assertion  
+- **Q** — relational resonance  
+- **neg** — constraint and boundary  
+
+This triad appears in every domain, from algebra to physics to cognition.
+
+### **vST: Dimensional Modes**
+- spatial  
+- transformational  
+- spectral  
+- temporal  
+- combinatorial  
+- logical  
+
+These modes are not “subjects” — they are substrate dimensions.
+
+---
+
+## **Philosophy**
+
+TriadicFrameworks is built on three commitments:
+
+### **1. Clarity over tradition**  
+Legacy frameworks are respected but not allowed to dictate structure.
+
+### **2. Substrate before branches**  
+Disciplines are expressions of the substrate, not isolated silos.
+
+### **3. Learners first**  
+Pedagogy must be aligned with cognition, not historical accident.
+
+---
+
+# **Who This Is For**
+
+- researchers  
+- mathematicians  
+- physicists  
+- computer scientists  
+- cognitive scientists  
+- educators  
+- systems theorists  
+- anyone seeking structural clarity  
+
+TriadicFrameworks is designed to be accessible, rigorous, and deeply integrative.
+
+---
+
+# About TriadicFrameworks
 
 TriadicFrameworks is a structural research initiative exploring
 resonance‑based models across scientific, computational, and conceptual
@@ -11,7 +80,7 @@ papers, each representing a distinct substrate in the TriadicFrameworks
 ecosystem. Together, they form a coherent lineage of structural tools
 for reasoning, validation, and interpretation.
 
-## Canonical Lineage (12 Papers)
+## Canonical Lineage (28+ Papers)
 
 The following papers form the complete TriadicFrameworks set:
 
