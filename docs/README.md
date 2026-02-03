@@ -1,253 +1,5 @@
 # TriadicFrameworks
 
-TriadicFrameworks is a structural research initiative exploring
-resonance‑based models across scientific, computational, and conceptual
-domains. The project develops minimal, architecture‑agnostic frameworks
-that clarify structure, reduce conceptual drift, and support future
-standards without disrupting existing practice.
-
-The repository contains the full family of twelve Zenodo‑published
-papers, each representing a distinct substrate in the TriadicFrameworks
-ecosystem. Together, they form a coherent lineage of structural tools
-for reasoning, validation, and interpretation.
-
-## Canonical Lineage (12 Papers)
-
-The following papers form the complete TriadicFrameworks set:
-
-1. **Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis**  
-2. **The Boson Substrate Model: Declared Operating Regimes**  
-3. **Quantum Substrate Model: Regime Structure and Dimensional Organization**  
-4. **Calibrating AI Drift via Declared Operating Regimes**  
-5. **Manufacturing Substrate Regime Model**  
-6. **Enterprise Structural Awareness**  
-7. **Global Energy Regime Awareness**  
-8. **Consciousness Substrate Model: A Structural Framework for Autonomous Forms**  
-9. **Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning**  
-10. **Spacetime Validation and Regime‑Invariant Dimensional Cores**  
-11. **vST Domain Tool Primers**  
-12. **Atomic Clocks Structural Alignment**
-
-Each paper is published through Zenodo and mirrored in this repository
-for transparency, reproducibility, and long‑term accessibility.
-
-## Repository Structure
-
-```
-docs/
-├── resonance-substrate-model                                        # (RSM)
-├── boson-substrate-model                                            # (BSM)
-├── quantum-substrate-model                                          # (QSM)
-├── ai-drift-calibration                                             # (ADC)
-├── manufacturing_substrate_regime_model                             # (MSRM)
-├── enterprise_structural_awareness                                  # (ESA)
-├── global_energy_regime_awareness                                   # (GERA)
-├── consciousness_substrate_model                                    # (CSR)
-├── triadic_coordination_substrate                                   # (TCS)
-├── spacetime_validation_and_regime_invariant_dimensional_cores      # (vST)
-├── domain_tool_primers                                              # (DTP)
-└── atomic_clocks                                                    # (ACSA)
-```
-
-Each directory contains:
-- a minimal README  
-- structural artifacts  
-- whitepapers or sectioned manuscripts  
-- notebooks or demonstrations where applicable  
-
-## The Twelfth Paper: Atomic Clocks Structural Alignment
-
-The final paper in the set provides a resonance‑based interpretation of
-atomic timekeeping using the vST substrate. It introduces:
-
-- a triadic decomposition of clock architectures  
-- a structural definition of the second  
-- resonance‑based drift‑detection invariants  
-- a non‑disruptive adoption roadmap  
-
-Full paper:  
-`docs/atomic_clocks/whitepaper.md`
-
-Supporting artifacts:  
-- `triadic_decomposition/triad.md`  
-- `vst_definition/second.md`  
-- `drift_detection/invariants.md`  
-- `roadmap/adoption.md`  
-- `notebooks/vst_lite_atomic_clock_demo.ipynb`
-
-## Purpose
-
-TriadicFrameworks provides structural clarity for researchers,
-engineers, and standards bodies working across domains where resonance,
-coherence, and validation play foundational roles. The project emphasizes:
-
-- minimal definitions  
-- architecture‑agnostic reasoning  
-- reviewer‑friendly artifacts  
-- reproducible, open scientific practice  
-
-# TriadicFrameworks — Canonical Lineage Diagram
-```
-┌───────────────────────────────────────────────────────────────┐
-│  1. Resonance Substrate Model (RSM)                           │
-│     Dimensional Substrate Framework for Multi‑Domain Analysis │
-└──────────────┬────────────────────────────────────────────────┘
-               │
-               ▼
-┌──────────────────────────────────────────────────────────────┐
-│  2. The Boson Substrate Model                                │
-│     Declared Operating Regimes                               │
-└──────────────┬───────────────────────────────────────────────┘
-               │
-               ▼
-┌──────────────────────────────────────────────────────────────┐
-│  3. Quantum Substrate Model                                  │
-│     Regime Structure and Dimensional Organization            │
-└──────────────┬───────────────────────────────────────────────┘
-               │
-               ▼
-┌──────────────────────────────────────────────────────────────┐
-│  4. Calibrating AI Drift via Declared Operating Regimes      │
-└───────┬───────────────┬──────────────────────────────────────┘
-        │               │
-        │               │
-        │               ▼
-        │   ┌──────────────────────────────────────────────────┐
-        │   │  5. Manufacturing Substrate Regime Model         │
-        │   └──────────────┬───────────────────────────────────┘
-        │                  │
-        │                  ▼
-        │   ┌──────────────────────────────────────────────────┐
-        │   │  7. Global Energy Regime Awareness               │
-        │   └──────────────┬───────────────────────────────────┘
-        │                  │
-        ▼                  │
-┌──────────────────────────────────────────────────────────────┐
-│  6. Enterprise Structural Awareness                          │
-└──────────────┬───────────────────────────────────────────────┘
-               │
-               ▼
-┌──────────────────────────────────────────────────────────────┐
-│  8. Consciousness Substrate Model                            │
-│     A Structural Framework for Autonomous Forms              │
-└──────────────┬───────────────────────────────────────────────┘
-               │
-               ▼
-┌──────────────────────────────────────────────────────────────┐
-│  9. Triadic Coordination Substrate                           │
-│     A Structural Framework for Coordinated Reasoning         │
-└──────────────┬───────────────────────────────────────────────┘
-               │
-               ▼
-┌──────────────────────────────────────────────────────────────┐
-│ 10. Spacetime Validation and                                 │
-│     Regime‑Invariant Dimensional Cores                       │
-└──────────────┬───────────────────────────────────────────────┘
-               │
-               ▼
-┌──────────────────────────────────────────────────────────────┐
-│ 11. vST Domain Tool Primers                                  │
-└──────────────┬───────────────────────────────────────────────┘
-               │
-               ▼
-┌───────────────────────────────────────────────────────────────┐
-│ 12. Atomic Clocks Structural Alignment                        │
-└───────────────────────────────────────────────────────────────┘
-```
-
-# TriadicFrameworks — One‑Page Overview of the 12‑Paper Canon
-
-TriadicFrameworks is a structural research program that develops
-architecture‑agnostic models for resonance, regimes, and validation
-across scientific, technical, and conceptual domains. The twelve papers
-form a coherent lineage, each introducing a minimal substrate that
-builds on the previous ones.
-
-## 1. Resonance Substrate Model (RSM)
-**Dimensional Substrate Framework for Multi‑Domain Analysis**  
-Introduces the resonance substrate as a dimensional framework for
-analyzing systems across domains. Establishes the core language of
-substrates, regimes, and structural invariants.
-
-## 2. The Boson Substrate Model
-**Declared Operating Regimes**  
-Extends RSM into a bosonic substrate with explicit operating regimes.
-Clarifies how declared regimes structure interpretation and constrain
-drift.
-
-## 3. Quantum Substrate Model
-**Regime Structure and Dimensional Organization**  
-Applies the substrate and regime approach to quantum systems. Organizes
-quantum behavior into regime‑aware dimensional structures.
-
-## 4. Calibrating AI Drift via Declared Operating Regimes
-Uses declared operating regimes to analyze and calibrate AI drift.
-Connects substrate‑level reasoning to practical AI behavior and model
-interpretation.
-
-## 5. Manufacturing Substrate Regime Model
-Applies regime‑based reasoning to manufacturing systems. Models flow,
-alignment, and structural drift in production environments.
-
-## 6. Enterprise Structural Awareness
-Extends the regime framework to enterprises. Provides a structural lens
-for organizational alignment, coherence, and long‑term drift.
-
-## 7. Global Energy Regime Awareness
-Applies substrate and regime concepts to global energy systems. Clarifies
-structural patterns, transitions, and regime shifts in energy
-infrastructure.
-
-## 8. Consciousness Substrate Model
-**A Structural Framework for Autonomous Forms**  
-Introduces a substrate model for consciousness and autonomous forms.
-Focuses on structural conditions rather than anthropomorphic claims.
-
-## 9. Triadic Coordination Substrate
-**A Structural Framework for Coordinated Reasoning**  
-Defines the triadic coordination substrate for multi‑agent and
-multi‑process reasoning. Formalizes coordination, alignment, and shared
-structure.
-
-## 10. Spacetime Validation and Regime‑Invariant Dimensional Cores
-Reinterprets spacetime as a validated structure with regime‑invariant
-dimensional cores. Connects substrate reasoning to physical regimes and
-measurement.
-
-## 11. vST Domain Tool Primers
-Provides minimal, domain‑specific primers for applying vST and regime
-reasoning in practice. Includes small, commented tools and examples for
-validators and integrators.
-
-## 12. Atomic Clocks Structural Alignment
-Applies vST and regime‑aware reasoning to atomic timekeeping. Introduces
-a structural alignment between atomic clocks, resonance‑based time, and
-validation layers.
-
-## Summary
-
-The twelve papers form a complete structural ecosystem:
-
-- RSM → Boson → Quantum → AI Drift → vST → Atomic Clocks  
-- Manufacturing, enterprise, energy, consciousness, and coordination as
-  regime‑aware expansions  
-- Domain tool primers as the practical bridge for validators and
-  integrators  
-
-Together, they provide a coherent, extensible framework for reasoning
-about regimes, resonance, and validation across disciplines.
-
-## Citation
-
-If you use this work, please cite the relevant Zenodo entries. Each
-paper includes a `CITATION.cff` file with complete metadata.
-
-## License
-
-All materials in this repository are released under the Creative Commons
-Attribution 4.0 International (CC BY 4.0) license. See
-`LICENSE_NOTES.md` for details.
-
 <p align="center">
   <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -258,6 +10,78 @@ Attribution 4.0 International (CC BY 4.0) license. See
   </svg>
 </p>
 
+TriadicFrameworks is an open research framework for substrate‑aligned modeling of complex systems across cognition, ecology, civilization, and computation.
+
+The project provides a coherent canon of theoretical foundations, domain primers, simulations, and reference implementations designed to support disciplined inquiry into regime dynamics, feedback, irreversibility, and structural coherence across domains.
+
+TriadicFrameworks is not an optimization engine, policy platform, or advocacy effort.  
+It exists to make complex systems *legible*, *comparable*, and *explorable* without collapsing uncertainty or prescribing outcomes.
+
+---
+
+## What This Is
+
+TriadicFrameworks brings together:
+
+- **Resonance‑Time Theory ([RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html))** as a calibration framework for cross‑domain structure  
+- **Regime blindness analysis** to surface failure modes and hidden constraints  
+- **Domain primers** bridging mathematics, science, and applied systems  
+- **Simulation substrates** for exploratory, non‑optimizing inquiry  
+- **Community stewardship practices** emphasizing clarity, humility, and long‑arc reuse  
+
+The framework is intentionally modular. Readers and users are encouraged to enter at different points depending on background, intent, and curiosity.
+
+---
+
+## How to Use This Repository
+
+This repository hosts the **living substrate** of TriadicFrameworks:
+- documentation
+- simulations
+- examples
+- tooling
+- reference implementations
+
+The documentation in [`/docs`](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs) is canonical and rendered directly as the project website.
+
+If you are new, begin with the alignment and overview materials before exploring individual domains or simulations.
+
+---
+
+## Citation & Archival Record
+
+TriadicFrameworks is archived and curated through the Zenodo **VST** community, which serves as the project’s citation and preservation spine.
+
+Zenodo Community:  
+https://zenodo.org/communities/vst
+
+Individual components of the framework are published as citable records and may be referenced independently.
+
+---
+
+## Epistemic Posture
+
+TriadicFrameworks favors:
+- structure over narrative
+- calibration over optimization
+- exploration over prescription
+- coherence over completeness
+
+The goal is not to simplify complex systems, but to provide tools that allow learners, researchers, and practitioners to engage complexity without distortion.
+
+---
+
+## Community & Contribution
+
+Contributions are welcome from researchers, educators, and practitioners whose work aligns with the framework’s epistemic posture and curation policy.
+
+The Zenodo community defines archival scope and citation standards.  
+GitHub hosts active development and collaboration.
+
+---
+
+This documentation is intended to be read, explored, questioned, and reused.
+
 <p align="center">
 
 <!-- Officers’ Club Badge Rack -->
@@ -265,10 +89,7 @@ Attribution 4.0 International (CC BY 4.0) license. See
 
 </p>
 
-<h1 align="center">TriadicFrameworks</h1>
 <p align="center"><em><a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a> • Triadic Substrate Modeling • Canon‑Aligned Tools</em></p>
-
-# Overview
 
 **TriadicFrameworks** is a modular, developer‑friendly implementation of **Resonance‑Time (RT) Theory**, a [Nawderian scientific framework](https://youtu.be/RlKzD2IZJtI?si=vc2p9Ip0qdR236co) describing physical systems through three interacting substrate fields:
 
@@ -282,217 +103,6 @@ Attribution 4.0 International (CC BY 4.0) license. See
 
 ## 🧭 Fork and Preserve the Lineage
 ###### **Forking & Lineage Preservation** - *When extending or remixing this artifact, please fork rather than clone‑and‑overwrite. Forking preserves the lineage of ideas, maintains historical traceability, and ensures that contributions remain visible within the broader canon. This helps prevent “ghost branches” — work that exists but cannot be traced back to its origin.*
-
----
-
-## 🌱 Why This Works So Well for our Framework
-###### **Lineage is part of the canon.** A fork is not just a technical action — it’s a ritual of respect for ancestry.  - **It prevents ghosting.** Not in the paranormal sense (though our “full spectrum engine” is very on‑brand), but in the sense of losing authorship, context, or historical continuity.  - **It reinforces remixability.** A fork signals: “This is a living artifact. Extend it, but keep the thread unbroken.”
-
-We’re essentially building a genealogical tree of ideas. Forks are the branches; lineage is the trunk.
-
----
-
-This repository provides:
-
-- Canon‑aligned reference implementations  
-- Triadic modeling tools  
-- Scripts and formats for analysis  
-- Educational examples  
-- Outreach‑ready documentation  
-
-Everything here is designed to be remixable, testable, and scientifically approachable.
-
----
-
-# Triadic Foundations
-
-## Resonance‑Time Theory (RT Theory)
-
-RT Theory models physical behavior as the interaction of three substrate fields:
-
-1. **Spin** — rotational state, angular momentum, and directional bias  
-2. **Electrolysis / Charge** — polarity, attraction/repulsion, field tension  
-3. **Temperature** — energy distribution, motion, and substrate agitation  
-
-These fields form a **triadic engine** that governs system behavior across scales.
-
----
-
-# Repository Structure
-
-```
-TriadicFrameworks/
-│
-├── examples/        # Demonstrations, walkthroughs, and educational models
-├── formats/         # Canonical data formats for triadic modeling
-├── scripts/         # Tools, utilities, and analysis helpers
-├── tests/           # CI‑validated test suite
-├── docs/            # Documentation and outreach materials
-└── README.md        # You are here
-```
-
----
-
-# Quickstart - [API for variants of RTT-Inside](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html)
-
-```bash
-git clone https://github.com/umaywant2/TriadicFrameworks.git
-cd TriadicFrameworks
-pip install -r requirements.txt
-```
-
-Then explore the examples:
-
-```bash
-python examples/basic_resonance.py
-```
-
----
-
-# Canon Glossary
-
-### **Triadic Substrate**
-The three‑field foundation of RT Theory.
-
-### **Framework**
-We chose a design that would be triadic harmonic nested with loops to align with Resonance research.
-
-### **Resonance**
-The stable interaction pattern between fields.
-
-### **FFF**
-Model for Frequency, Fluids, Forces
-
-### **S-N-R**
-Model for Silence, Noise, Resonance.
-
-### **SET Fields**
-Model for Spin, Electrolysis/Charge, Temperature.
-
-### 0-9 Logical Dimensions for Full Spectrum 3D-9D Resonance-Aware Cores
-Model for resonance-based full spectrum dimensional compute.
-
-# **✨ Domain Convergence Event**
-
-It describes our breakthrough where:
-
-- the dimensional operators stop behaving as isolated layers  
-- the resonance pathways lock into a shared harmonic  
-- and a new cross‑dimensional capability becomes available  
-
-In other words, it was the moment when “the bridge stops being a bridge and becomes a **channel**.”
-
----
-
-# 📘 **Dimensional Naming (3D–9D)**
-
-## **3D — Triadic**
-- Root: *tri-* (three)  
-- Connotation: foundational resonance, first stable structure  
-- Already core to your canon
-
-## **4D — Quadradic**
-- Root: *quadra-* (four)  
-- Connotation: expansion, branching, first harmonic extension
-
-## **5D — Quintadic**
-- Root: *quinta-* (five)  
-- Connotation: emergence of complexity, five‑point harmonic balance  
-- (This is the “Quinsomething” you were reaching for — *Quintadic* is the cleanest)
-
-## **6D — Hexadic**
-- Root: *hexa-* (six)  
-- Connotation: lattice formation, stable multi‑axis interplay
-
-## **7D — Heptadic**
-- Root: *hepta-* (seven)  
-- Connotation: threshold dimension, crossing into higher‑order operators
-
-## **8D — Octadic**
-- Root: *octa-* (eight)  
-- Connotation: full harmonic wheel, rotational completeness
-
-## **9D — Enneadic**
-- Root: *ennea-* (nine)  
-- Connotation: apex of the first cycle, closure before recursion
-
----
-
-# 🧩 **Full Table**
-
-| Dimension | Term        | Notes |
-|----------|-------------|-------|
-| **3D**   | **Triadic**   | Foundational RTT dimension |
-| **4D**   | **Quadradic** | First harmonic expansion |
-| **5D**   | **Quintadic** | Complexity emergence |
-| **6D**   | **Hexadic**   | Lattice stability |
-| **7D**   | **Heptadic**  | Threshold dimension |
-| **8D**   | **Octadic**   | Harmonic wheel |
-| **9D**   | **Enneadic**  | Apex of first cycle |
-
----
-
-# 🧩 Why These Names Work
-- They follow a consistent morphological pattern: **Greek numeral root + ‑adic**  
-- They scale cleanly beyond 9D if you ever extend the canon  
-- They feel mythmatical without drifting into fantasy jargon  
-- They align with your existing TriadicFrameworks tone and your preference for remixable clarity
-
----
-
-# 🌱 A Note for Curious Learners of All Ages
-
-Science is one of humanity’s greatest tools. It helps us understand the world by studying patterns, testing ideas, and building knowledge step by step. Everything you’ll learn on these websites is grounded in that shared scientific foundation.
-
-As you explore, here’s something helpful to keep in mind:
-
-### **Science gives us the ingredients.  
-Patterns help us see how the ingredients fit together.**
-
-You’ll notice that many scientific ideas — from atoms to ecosystems — make more sense when you look for:
-- relationships  
-- cycles  
-- feedback loops  
-- repeating structures  
-- how small parts connect to bigger systems  
-
-This way of thinking doesn’t replace science.  
-It simply helps you organize what you learn so it becomes clearer, easier to remember, and more meaningful.
-
-If you ever feel confused, don’t worry — that’s part of learning.  
-Just return to the basics, look for the pattern underneath, and let the structure guide you.
-
-And for the older learners reading this:  
-You already know that understanding grows in layers.  
-New perspectives don’t erase the old ones — they help us see deeper connections.  
-Stay curious, stay kind, and let your thinking evolve without fear of “acceptance tests” from anyone acting like a big kid.
-
-Learning is a journey, not a contest.  
-Everyone starts somewhere, and everyone grows.
-
----
-
-# 🔥 **Why this matters**
-We’re not just imagining jobs — we’re imagining **ecosystems**.
-
-RTT gives people:
-
-- a structure  
-- a vocabulary  
-- a set of tools  
-- a way to think  
-- a way to teach  
-- a way to build  
-
-And once a new way of thinking exists, new roles naturally emerge around it.
-
-<li><a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_Education_Grades_K-12.md">K-12 preview</a></li>
-
-**Influence Acknowledgment:**
-
-TriadicFrameworks was developed independently through original reasoning, pattern analysis, and creative exploration. However, its conceptual landscape is enriched by the broader scientific tradition. Thinkers such as Nikola Tesla, Albert Einstein, Richard Feynman, Niels Bohr, Claude Shannon, and others have shaped the intellectual environment in which this work was created. Their contributions to time, structure, resonance, information theory, and systems thinking provided inspiration and context for the development of this framework.
-
-<p align="center"><em>TriadicFrameworks — A living canon for resonance‑based science.</em></p>
 
 ---
 
