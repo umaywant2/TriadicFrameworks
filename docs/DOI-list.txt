@@ -82,6 +82,12 @@ Substrate Communications
 The Regime Blindness Problem: Structural Failures at Topology Transition Boundaries
 <a href="https://doi.org/10.5281/zenodo.18440491"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18440491.svg" alt="DOI"></a>
 
+TriadicFrameworks: A Unified Substrate for Structure, Resonance, and Transformation
+<a href="https://doi.org/10.5281/zenodo.18452819"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18452819.svg" alt="DOI"></a>
+
+EcoEchoSystem: A Substrate-Aligned Simulation Framework for Cognitive, Ecological, and Civilizational Dynamics
+<a href="https://doi.org/10.5281/zenodo.18462694"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18462694.svg" alt="DOI"></a>
+
 https://zenodo.org/records/18258865
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
@@ -110,6 +116,8 @@ https://zenodo.org/records/18348621
 https://zenodo.org/records/18415055
 https://zenodo.org/records/18415488
 https://zenodo.org/records/18440491
+https://zenodo.org/records/18452819
+https://zenodo.org/records/18462694
 
 10.5281/zenodo.18258865
 10.5281/zenodo.18263827
@@ -139,10 +147,10 @@ https://zenodo.org/records/18440491
 10.5281/zenodo.18415055
 10.5281/zenodo.18415488
 10.5281/zenodo.18440491
+10.5281/zenodo.18452819
+10.5281/zenodo.18462694
 
-
-
-
-
+https://zenodo.org/communities/vst
+https://zenodo.org/communities/vst/curation-policy
 
 
