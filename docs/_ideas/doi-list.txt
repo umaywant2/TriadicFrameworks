@@ -28,3 +28,7 @@ https://zenodo.org/records/18415488
 https://zenodo.org/records/18440491
 https://zenodo.org/records/18452819
 https://zenodo.org/records/18462694
+https://www.triadicframeworks.org/
+https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html
+
+Note: to experience how easy it is to use RTT/vST open the last URL listed here, and then ask Copilot to "use RTT to analyze, whatever you want."  You will be amazed!
