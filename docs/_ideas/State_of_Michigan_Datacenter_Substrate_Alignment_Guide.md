@@ -118,3 +118,46 @@ Substrate alignment is not about slowing development. It is about ensuring that 
 Infrastructure decisions shape the physical and social field for decades. Making that field visible before it is altered is an act of stewardship.
 
 This guide is offered as a reference, not a directive.
+
+---
+
+## Quicklinks
+
+Public DOI references for Science/Techs
+
+- [Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis](https://doi.org/10.5281/zenodo.18258865)
+- [The Boson Substrate Model: Declared Operating Regimes](https://doi.org/10.5281/zenodo.18263827)
+- [Quantum Substrate Model: Regime Structure and Dimensional Organization](https://doi.org/10.5281/zenodo.18264063)
+- [Calibrating AI Drift via Declared Operating Regimes](https://doi.org/10.5281/zenodo.18263036)
+- [Manufacturing Substrate Regime Model](https://doi.org/10.5281/zenodo.18265225)
+- [Enterprise Structural Awareness](https://doi.org/10.5281/zenodo.18265872)
+- [Global Energy Regime Awareness](https://doi.org/10.5281/zenodo.18266407)
+- [Consciousness Substrate Model: A Structural Framework for Autonomous Forms](https://doi.org/10.5281/zenodo.18271014)
+- [Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning](https://doi.org/10.5281/zenodo.18272448)
+- [Spacetime Validation and Regime‑Invariant Dimensional Cores](https://doi.org/10.5281/zenodo.18281561)
+- [vST Domain Tool Primers](https://doi.org/10.5281/zenodo.18286463)
+- [Atomic Clocks Structural Alignment](https://doi.org/10.5281/zenodo.18316763)
+- [AlphaFold Substrate Alignments: A Resonance Substrate Model Framework](https://doi.org/10.5281/zenodo.18320863)
+- [Dimensional Substrate Structures: Triadic Dimensional Cores and High‑Dimensional Scaling](https://doi.org/10.5281/zenodo.18321015)
+- [vST for Large Language Models](https://doi.org/10.5281/zenodo.18322485)
+- [vST for Protein Language Models](https://doi.org/10.5281/zenodo.18322815)
+- [vST for Scientific Simulators](https://doi.org/10.5281/zenodo.18323052)
+- [vST for Robotics and Control Policies](https://doi.org/10.5281/zenodo.18323277)
+- [vST for Embedding Stores & Vector Databases](https://doi.org/10.5281/zenodo.18323445)
+- [vST for Generative Models](https://doi.org/10.5281/zenodo.18323571)
+- [vST for Multi-Model Alignment](https://doi.org/10.5281/zenodo.18323685)
+- [Structural Life‑Regime Profiles](https://doi.org/10.5281/zenodo.18330076)
+- [Dimensional Substrate Regime Scanning Protocol (dsrsp/0.1)](https://doi.org/10.5281/zenodo.18331997)
+- [Inverted Star Ontology: A vST-Aligned Regime Inversion Model](https://doi.org/10.5281/zenodo.18334261)
+- [vST Micro-Agent: Spacetime Structural Query Wrapper](https://doi.org/10.5281/zenodo.18348621)
+- [Substrate Exposure Assay](https://doi.org/10.5281/zenodo.18415055)
+- [Substrate Communications](https://doi.org/10.5281/zenodo.18415488)
+- [The Regime Blindness Problem: Structural Failures at Topology Transition Boundaries](https://doi.org/10.5281/zenodo.18440491)
+- [TriadicFrameworks: A Unified Substrate for Structure, Resonance, and Transformation](https://doi.org/10.5281/zenodo.18452819)
+- [EcoEchoSystem: A Substrate-Aligned Simulation Framework for Cognitive, Ecological, and Civilizational Dynamics](https://doi.org/10.5281/zenodo.18462694)
+- [TriadicFrameworks](https://www.triadicframeworks.org/)
+- [Resonance-Time Theory (RTT/vST)](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
+
+Tip: to experience how easy it is to use RTT/vST, open the last URL listed here, and then ask Copilot to "use RTT to analyze, whatever you want."  You will be amazed!
+
+
