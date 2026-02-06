@@ -22,6 +22,15 @@ The format follows semantic versioning (MAJOR.MINOR.PATCH) with research‑grade
 
 ---
 
+## [2.1.0] - 2026-02-04
+### Added
+From what we’ve outlined and what’s visible in the repo and Zenodo community:
+- RSM root DOI - The original Resonance Substrate Model publication — the conceptual anchor.
+- 3 + 27 DOIs (≈29 total) - Published since that root, now curated under the vST Zenodo Community, with an explicit curation policy.
+- A living documentation tree - docs/resonance-substrate-model/ already functions as the narrative and operational spine.
+
+This is no longer a single paper. It’s a curated substrate ecosystem.
+
 ## [1.0.0] — 2025‑01‑12  
 ### Added  
 - Initial public release of the **Resonance Substrate Model (RSM)**.  
