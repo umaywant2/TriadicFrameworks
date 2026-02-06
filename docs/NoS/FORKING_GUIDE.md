@@ -149,6 +149,64 @@ This isn’t about ownership — it’s about traceability.
 
 ---
 
+### 🔖 RTT Badge Suffix Convention
+
+Forks that extend NawderOS in specific directions may annotate the **RTT Baseline** badge using suffixes.
+
+Suffixes are **descriptive**, not evaluative.  
+They indicate *direction*, not *authority*.
+
+#### Format
+
+```text
+RTT-baseline+<suffix>
+```
+
+The `RTT-baseline` prefix must remain intact.
+
+---
+
+#### Common Suffixes
+
+**Simulation & Modeling**
+- `+sim` — simulation‑focused fork  
+- `+rsm` — Resonance Substrate Modeling integration  
+- `+vst` — validated Spacetime integration  
+
+**Systems & OS Exploration**
+- `+kernel` — deeper kernel instrumentation  
+- `+sched` — scheduler‑focused work  
+- `+memory` — memory corridor specialization  
+
+**Education**
+- `+edu` — teaching or classroom fork  
+- `+lab` — guided experiments  
+- `+sandbox` — safe exploration environment  
+
+**Experimental**
+- `+exp` — experimental concepts  
+- `+proto` — early prototype  
+
+Multiple suffixes may be chained sparingly:
+
+```text
+RTT-baseline+vst+edu
+```
+
+---
+
+#### What Suffixes Must Not Do
+
+Suffixes must not:
+- imply correctness or superiority
+- redefine RTT itself
+- obscure lineage
+- replace the `RTT-baseline` prefix
+
+RTT has no “official” forks — only honest ones 🙂
+
+---
+
 ## Final Thought 🌌
 
 NawderOS exists to make RTT **touchable**.
