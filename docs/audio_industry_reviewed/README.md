@@ -1,1 +1,0 @@
-This document set reviews the historical evolution of the audio industry through the lens of perceptual clarity, substrate alignment, and vST principles. It examines where technical progress succeeded, where it introduced distortion, and how future audio systems can remain expressive while respecting human perceptual boundaries and parent regime constraints.
