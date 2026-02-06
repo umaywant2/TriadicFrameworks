@@ -13,11 +13,21 @@
 - [simulations README](simulations/README.md)
 - [tools README](tools/README.md)
 - [README](README.md)
-- [RELEASE NOTES](RELEASE_NOTES.md)
 - [previous folder](../)
 
-# 🌌 **Zenodo / ORCID Release Text (Apache‑2.0 Edition)**  
-### *Resonance Substrate Model (RSM) v1.0*  
+# 🌌 **Release Notes**  
+
+### Version 2.1.0
+
+This release updates Resonance Substrate Model documentation to reflect
+its role as the root substrate for a curated family of vST-aligned DOIs.
+No core invariants are altered.
+- The context of the artifact has changed
+- The ecosystem around it is now formalized
+- The curation policy exists
+- The lineage is explicit
+
+### *Resonance Substrate Model (RSM)*
 **Author:** Nawder Loswin  
 **Affiliation:** TriadicFrameworks Research Initiative  
 **Keywords:** resonance, coherence, triadic fields, multi‑layer systems, RTT‑Inside, schema‑driven modeling, nonlinear dynamics, complex systems
