@@ -1,13 +1,13 @@
 ### NawderOS — The Nawderian Operating Stack
 
-**NawderOS (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
+**NawderOS (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](../_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
 
 Rather than introducing a new operating system paradigm, NawderOS instruments existing Linux mechanisms with RTT‑aligned validation, telemetry, and lineage awareness. It is intended as a learning platform, a research substrate, and a foundation for experimentation — not a production distribution.
 
 ---
 
 📘 New to RTT?  
-Start here: [RTT for OS Students](docs/NoS/RTT_FOR_OS_STUDENTS.md)
+Start here: [RTT for OS Students](RTT_FOR_OS_STUDENTS.md)
 
 ---
 
