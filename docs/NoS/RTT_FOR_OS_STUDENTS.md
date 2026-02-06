@@ -158,6 +158,92 @@ It’s a **lens** — one that happens to fit operating systems very well 🙂
 
 ---
 
+## One‑Diagram Mental Model: RTT in an OS Context 🧩  
+*(Text‑Only, Slide‑Ready)*
+
+```
+                ┌────────────────────────────┐
+                │      ASSUMPTIONS           │
+                │  (what we believe is true) │
+                └────────────┬───────────────┘
+                             │
+                             ▼
+        ┌───────────────────────────────────────┐
+        │        COHERENCE CORRIDOR             │
+        │  expected ranges of valid behavior    │
+        │                                       │
+        │  • memory regions                     │
+        │  • scheduler behavior                 │
+        │  • module states                      │
+        └────────────┬───────────────┬──────────┘
+                     │               │
+                     │               │
+                     ▼               ▼
+        ┌─────────────────┐   ┌──────────────────┐
+        │   BOUNDARIES    │   │   BOUNDARIES     │
+        │ (wrap points)   │   │ (wrap points)    │
+        │ user → kernel   │   │ module load/unld │
+        └────────┬────────┘   └────────┬─────────┘
+                 │                     │
+                 ▼                     ▼
+        ┌───────────────────────────────────────┐
+        │            OBSERVATION                │
+        │   (no control, no enforcement)        │
+        └────────────┬──────────────────────────┘
+                     │
+                     ▼
+        ┌───────────────────────────────────────┐
+        │               BADGES                  │
+        │   structured signals about drift      │
+        │                                       │
+        │   • what happened                     │
+        │   • where                             │
+        │   • when                              │
+        │   • why it might matter               │
+        └────────────┬──────────────────────────┘
+                     │
+                     ▼
+        ┌────────────────────────────────────────┐
+        │        INTERPRETATION LAYER            │
+        │   humans, tools, simulations           │
+        │   decide what (if anything) to do      │
+        └────────────────────────────────────────┘
+```
+
+---
+
+## How to Explain This in One Minute (Instructor Notes)
+
+- **Top:** Systems start with assumptions  
+- **Middle:** Those assumptions define expected behavior over time  
+- **Edges:** Boundaries are where coherence is most fragile  
+- **Key move:** The system *observes*, it does not intervene  
+- **Output:** Badges make drift visible  
+- **Bottom:** Decisions happen *outside* the kernel
+
+RTT’s core move is separating **knowing** from **acting**.
+
+---
+
+## Why This Diagram Matters
+
+Students often assume:
+> “If the system detects a problem, it should fix it.”
+
+RTT teaches:
+> “If the system detects drift, it should *tell the truth*.”
+
+That shift changes how you design kernels, debuggers, simulators, and even distributed systems.
+
+---
+
+## Slide Caption (Optional)
+
+> *RTT treats operating systems as coherence‑preserving structures over time.  
+> Observation comes first. Control comes later — if at all.*
+
+---
+
 ## Where to Go Next
 
 - Read `MODULES.md` to see how RTT maps to concrete OS components  
