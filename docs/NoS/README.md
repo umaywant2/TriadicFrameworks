@@ -51,12 +51,26 @@ Badges describe **lineage and direction**, not quality or authority.
 
 ---
 
-### What NawderOS Is Not
+### 🚧 What This Is *Not*
 
-- Not a finished distribution or consumer OS  
-- Not a performance‑optimized kernel fork  
-- Not a replacement for existing Linux security or observability frameworks  
-- Not a speculative rewrite of physics inside the kernel  
+> **NawderOS is not a production operating system.**  
+> It does not optimize performance, enforce correctness, or automatically fix problems.
+
+NawderOS exists to **observe coherence over time**, not to control system behavior.
+
+If you’re expecting:
+- dashboards
+- alerts
+- remediation
+- guardrails
+- “smart” automation
+
+you won’t find them here — by design.
+
+Before compiling or booting anything, please read:  
+📄 **`[Looks like the result wasn't safe to show. Let's switch things up and try something else!]`**
+
+This will save you time, confusion, and a few false assumptions.
 
 ---
 
