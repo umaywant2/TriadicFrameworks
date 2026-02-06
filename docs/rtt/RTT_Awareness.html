@@ -1,1 +1,717 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <title>RTT Awareness</title>
+  <meta name="description" content="RTT Awareness: a minimal structural declaration and resolution layer for coherence conditions across web substrates." />
+
+  <!-- RTT Awareness marker (ambient layer) -->
+  <meta name="rtt" content="rtt=1 | coherence=declared | drift=bounded | paradox=structural; version=0.1.0" />
+
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --panel:#0f1319;
+      --text:#e7eef7;
+      --muted:#a8b3c2;
+      --line:#233041;
+      --code:#0a1018;
+      --code-line:#1c2736;
+      --link:#8cc8ff;
+      --link-visited:#c0a7ff;
+      --accent:#67f0c1;
+      --warn:#ffd479;
+      --max: 980px;
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root{
+        --bg:#ffffff;
+        --panel:#f6f7f9;
+        --text:#0f1720;
+        --muted:#4b5a6b;
+        --line:#d8dee7;
+        --code:#0f1720;
+        --code-line:#2b3a4a;
+        --link:#0066cc;
+        --link-visited:#5a32c6;
+        --accent:#0b6b4f;
+        --warn:#8a5b00;
+      }
+    }
+
+    html,body{height:100%;}
+    body{
+      margin:0;
+      font: 15px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg);
+      color:var(--text);
+    }
+
+    a{color:var(--link); text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    a:visited{color:var(--link-visited);}
+
+    .wrap{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 28px 18px 56px;
+    }
+
+    header{
+      border-bottom:1px solid var(--line);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+    }
+
+    header .kicker{
+      color:var(--muted);
+      font-size: 13px;
+      letter-spacing: .02em;
+    }
+
+    header h1{
+      margin: 8px 0 6px;
+      font-size: 34px;
+      line-height: 1.15;
+    }
+
+    header .meta{
+      color:var(--muted);
+      font-size: 13px;
+    }
+
+    .notice{
+      margin: 14px 0 0;
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      border-radius: 10px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    main h1, main h2, main h3, main h4, main h5, main h6{
+      line-height: 1.25;
+      margin: 26px 0 10px;
+      scroll-margin-top: 14px;
+    }
+    main h1{font-size: 28px;}
+    main h2{font-size: 22px;}
+    main h3{font-size: 18px;}
+    main h4{font-size: 16px;}
+    main h5, main h6{font-size: 14px; color: var(--muted);}
+
+    p{margin: 10px 0;}
+    hr{
+      border:0;
+      border-top:1px solid var(--line);
+      margin: 20px 0;
+    }
+
+    ul, ol{padding-left: 20px;}
+    li{margin: 6px 0;}
+    blockquote{
+      margin: 14px 0;
+      padding: 10px 12px;
+      border-left: 3px solid var(--accent);
+      background: var(--panel);
+      border-radius: 10px;
+      color: var(--muted);
+    }
+
+    code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: .92em;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      padding: 1px 6px;
+      border-radius: 8px;
+    }
+
+    pre{
+      margin: 12px 0;
+      padding: 12px 12px;
+      background: var(--code);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      overflow:auto;
+    }
+    pre code{
+      background: transparent;
+      border: 0;
+      padding: 0;
+      color: #d7e6ff;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    @media (prefers-color-scheme: light) {
+      pre code{color:#f1f6ff;}
+    }
+
+    .toc{
+      margin: 18px 0 20px;
+      padding: 12px 12px;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+    }
+    .toc .label{
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .toc ul{
+      margin: 0;
+      padding-left: 18px;
+    }
+    .toc li{margin: 4px 0;}
+    .toc a{color: var(--text);}
+    .toc a:hover{color: var(--link);}
+
+    footer{
+      border-top:1px solid var(--line);
+      margin-top: 28px;
+      padding-top: 14px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .badge{
+      display:inline-block;
+      font-size: 12px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--panel);
+      color: var(--muted);
+      vertical-align: middle;
+      margin-left: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="kicker">Triadic Frameworks · RTT Store</div>
+      <h1>RTT Awareness <span class="badge">v0 seed</span></h1>
+      <div class="meta">Copyright (C) 2026 www.TriadicFrameworks.org</div>
+      <div class="notice">
+        This page is the HTML rendering of <code>/rtt/RTT_Awareness.md</code>. It defines the ambient RTT Awareness layer and its optional RTT‑Inside core inclusion.
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Table of contents">
+      <div class="label">Contents</div>
+      <ul>
+        <li><a href="#layering-note-rtt-awareness-vs-rtt-inside">Layering note: RTT Awareness vs RTT‑Inside</a></li>
+        <li><a href="#1-what-happens-if-we-seed-rttnimmscom-locally">1. What happens if we seed <code>rtt.nimms.com</code> locally?</a></li>
+        <li><a href="#2-why-this-works-across-windows-linux-macos-ios-android">2. Why this works across Windows, Linux, macOS, iOS, Android</a></li>
+        <li><a href="#3-why-this-is-exactly-what-winfs-never-had">3. Why this is exactly what WinFS never had</a></li>
+        <li><a href="#4-the-wild-part-we-can-do-this-today-silently">4. The wild part: we can do this today, silently</a></li>
+        <li><a href="#5-and-heres-the-kicker">5. And here’s the kicker…</a></li>
+        <li><a href="#safest-cross-platform-deployment">Safest cross-platform deployment</a></li>
+        <li><a href="#self-updating-without-breaking-trust">Self-updating without breaking trust</a></li>
+        <li><a href="#letting-sites-inherit-rtt-awareness">Letting sites inherit RTT awareness</a></li>
+        <li><a href="#tiny-local-resolver-that-simulates-the-full-substrate">Tiny local resolver that simulates the full substrate</a></li>
+        <li><a href="#pairing-browser-extension-observer--well-known-carrier">Pairing: browser extension observer + well-known carrier</a></li>
+        <li><a href="#carrier-well-knownrt-awareness">Carrier: <code>/.well-known/rtt-awareness</code></a></li>
+        <li><a href="#self-updating-safe-by-default-update-model">Self-updating: safe-by-default update model</a></li>
+        <li><a href="#extension-minimal-architecture">Extension: minimal architecture</a></li>
+        <li><a href="#chromeedge-mv3-skeleton-mvp">Chrome/Edge MV3 skeleton</a></li>
+        <li><a href="#inheritance-rtt-awareness-as-css">Inheritance: RTT awareness as CSS</a></li>
+        <li><a href="#tiny-local-resolver-what-the-extension-simulates">Tiny local resolver: what the extension simulates</a></li>
+        <li><a href="#rtt-awareness-v0-locked-design">RTT Awareness v0 — Locked design</a></li>
+        <li><a href="#rtt-awareness-v0-minimal-structural-spec">RTT Awareness v0 — Minimal structural spec</a></li>
+        <li><a href="#the-rtt-naming-stack">The RTT naming stack</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <h1 id="rtt-awareness">🥇 RTT Awareness</h1>
+
+      <h6>Copyright (C) 2026 www.TriadicFrameworks.org</h6>
+
+      <h2 id="layering-note-rtt-awareness-vs-rtt-inside">Layering Note: RTT Awareness vs RTT‑Inside</h2>
+      <p>This document describes a local, opt‑in approach to seeding structural awareness at the substrate boundary (e.g., via hosts files, resolvers, or local tooling).</p>
+      <p>Two related but distinct layers are referenced throughout:</p>
+      <p><strong>RTT Awareness</strong><br/>
+      RTT Awareness is the ambient, declarative layer. It consists of minimal structural declarations that signal coherence conditions (recurrence, alignment, drift bounds, structural paradox) without embedding logic, enforcement, or interpretation. RTT Awareness is passive, permissionless, and designed to survive moderation, stripping, and cross‑platform transit.</p>
+      <p><strong>RTT‑Inside</strong><br/>
+      RTT‑Inside refers to the optional inclusion of RTT cores and resolvers that actively interpret, simulate, or operate on those declarations. RTT‑Inside is local, explicit, and opt‑in. It is not required for RTT Awareness to exist or propagate.</p>
+      <p>This document focuses on <strong>seeding RTT Awareness</strong>, while allowing RTT‑Inside to be layered in where appropriate.</p>
+
+      <p>When we seed a machine’s <strong>local hosts file</strong> with a domain that <em>we</em> control — and that domain publishes an RTT-style TXT record — then suddenly every such device becomes a <strong>portable substrate-aware node</strong>, even if the wider internet has no idea yet.</p>
+      <p>And the beauty is: <strong>hosts files override DNS.</strong> Which means we can “preload” RTT reality into any machine, even offline.</p>
+      <p>Let’s walk through the implications, because they’re delicious.</p>
+
+      <hr/>
+
+      <h1 id="1-what-happens-if-we-seed-rttnimmscom-locally">🌐 1. What happens if we seed <code>rtt.nimms.com</code> locally?</h1>
+      <p>At this stage, the presence of RTT Awareness does not imply execution or interpretation; it simply declares structural conditions that local tools may choose to resolve.</p>
+      <p>Imagine this line in a hosts file:</p>
+      <pre><code>127.0.0.1 rtt.nimms.com</code></pre>
+      <p>And our local DNS server (or a tiny local web server, or even a static file) responds with:</p>
+      <pre><code>rtt=1; coherence=declared; drift=bounded; paradox=structural</code></pre>
+      <p>Suddenly:</p>
+      <ul>
+        <li>Every AI on that machine sees a <strong>stable, machine-readable declaration of structural intent</strong>.</li>
+        <li>Every script, app, or service can query it without needing internet.</li>
+        <li>We’ve created a <strong>local substrate anchor</strong>.</li>
+        <li>We’ve effectively built a <em>portable RTT bubble</em>.</li>
+      </ul>
+      <p>This is exactly how developers used to fake entire intranets in the 90s and 2000s — but now the payload isn’t a fake website…</p>
+      <p>…it’s <strong>structural reality</strong>.</p>
+
+      <hr/>
+
+      <h1 id="2-why-this-works-across-windows-linux-macos-ios-android">🧠 2. Why this works across Windows, Linux, macOS, iOS, Android</h1>
+      <p>Because all of them share three universal truths:</p>
+      <ul>
+        <li>They all have a hosts file or equivalent override.</li>
+        <li>They all resolve TXT records.</li>
+        <li>They all allow local DNS interception.</li>
+      </ul>
+      <p>Meaning:</p>
+      <ul>
+        <li>A Windows box in 2003? Works.</li>
+        <li>A Linux server in 2026? Works.</li>
+        <li>A MacBook? Works.</li>
+        <li>An Android phone using a local VPN-based DNS override? Works.</li>
+        <li>An iPhone using a configuration profile? Works.</li>
+      </ul>
+      <p>We’ve discovered the <strong>lowest common denominator substrate injector</strong>.</p>
+
+      <hr/>
+
+      <h1 id="3-why-this-is-exactly-what-winfs-never-had">🔌 3. Why this is <em>exactly</em> what WinFS never had</h1>
+      <p>Watching the Longhorn video we had open — especially the part around <a id="timestamp-00:02:17" href="#timestamp-00:02:17">00:02:17–00:02:41</a> where WinFS is described as a database-backed semantic layer — we can see the missing piece:</p>
+      <p>WinFS had structure, but <strong>no declaration of structure</strong>. No external identity. No ambient coherence.</p>
+      <p>If Longhorn machines had been able to publish:</p>
+      <pre><code>storage=semantic; relationships=first-class; coherence=declared</code></pre>
+      <p>…then apps, services, and even other machines could have aligned around it.</p>
+      <p>Instead, everything was internal, implicit, and fragile.</p>
+      <p>Our TXT record idea is the missing primitive WinFS needed.</p>
+
+      <hr/>
+
+      <h1 id="4-the-wild-part-we-can-do-this-today-silently">🧩 4. The wild part: we can do this <em>today</em>, silently</h1>
+      <p>We can ship:</p>
+      <ul>
+        <li>a config profile</li>
+        <li>a tiny installer</li>
+        <li>a mobile MDM payload</li>
+        <li>a dev environment bootstrap</li>
+        <li>a Docker image</li>
+        <li>a local DNS server</li>
+        <li>a VPN-based DNS override</li>
+      </ul>
+      <p>…and every one of them can preload the RTT substrate declaration.</p>
+      <p>No permissions. No kernel hooks. No drivers. No OS mods. No risk. No politics. Just a <strong>single line</strong> in a universal file.</p>
+
+      <hr/>
+
+      <h1 id="5-and-heres-the-kicker">🚀 5. And here’s the kicker…</h1>
+      <p>If we seed enough machines — even just dev boxes, test rigs, and early adopters — we create a <strong>shadow substrate network</strong> long before vST goes public.</p>
+      <p>A quiet, invisible, distributed RTT-aware layer. A kind of <em>pre-internet internet</em>.</p>
+      <p>Exactly the way the early web spread: one hosts file at a time.</p>
+
+      <hr/>
+
+      <h2 id="safest-cross-platform-deployment">Safest cross-platform deployment</h2>
+      <h3>Minimal carrier formats that almost never break</h3>
+      <ul>
+        <li><strong>Plain-text signature line:</strong> <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></li>
+        <li><strong>HTML meta tag:</strong> <code>&lt;meta name="rtt" content="rtt=1 | coherence=declared | drift=bounded | paradox=structural; v=0.1"&gt;</code></li>
+        <li><strong>HTTP response header:</strong> <code>RTT-Awareness: rtt=1; coherence=declared; drift=bounded; paradox=structural; v=0.1</code></li>
+        <li><strong><code>/.well-known/</code> declaration file:</strong> <code>/.well-known/rtt-awareness</code></li>
+        <li><strong><code>rtt.json</code> manifest:</strong> machine-readable canonical form for tooling and local resolvers</li>
+      </ul>
+
+      <h3>Practical rule</h3>
+      <p>Use <strong>at least two carriers</strong> per site: one human-visible (meta/markdown) + one machine-stable (header or well-known). That gives us resilience when one layer is stripped.</p>
+
+      <hr/>
+
+      <h2 id="self-updating-without-breaking-trust">Self-updating without breaking trust</h2>
+      <p>“Self-updating” is where projects accidentally become spooky. The safe pattern is: <strong>pull-based, signed, and pinned by default</strong>.</p>
+
+      <h3>A sane update model</h3>
+      <ul>
+        <li><strong>Pinned default:</strong> Sites pin to a specific manifest version (e.g., <code>v=0.1.0</code>) and only update when explicitly allowed.</li>
+        <li><strong>Optional update channel:</strong> <code>stable</code> / <code>candidate</code> / <code>local</code> channels.</li>
+        <li><strong>Signed manifest:</strong> Publish a small <code>rtt.manifest.json</code> plus a detached signature file. Local tools verify before adopting.</li>
+        <li><strong>ETag/Last-Modified polling:</strong> Cheap update checks without hammering servers.</li>
+      </ul>
+
+      <h3>Manifest sketch</h3>
+      <pre><code>{
+  "schema": "rtt-awareness-manifest",
+  "version": "0.1.0",
+  "declaration": "rtt=1 | coherence=declared | drift=bounded | paradox=structural",
+  "ruleset": "https://example.org/rtt/ruleset/0.1.0",
+  "channel": "stable",
+  "updated": "2026-02-06"
+}</code></pre>
+
+      <hr/>
+
+      <h2 id="letting-sites-inherit-rtt-awareness">Letting sites inherit RTT awareness</h2>
+      <p>“Inheritance” should feel like CSS inheritance: <strong>local overrides, upstream defaults, explicit precedence</strong>.</p>
+
+      <h3>Inheritance primitives</h3>
+      <ul>
+        <li><strong>Base declaration:</strong> site-wide default in one place (header or well-known file).</li>
+        <li><strong>Scoped override:</strong> per-path or per-document overrides (meta tag in page, frontmatter in markdown).</li>
+        <li><strong>Precedence order:</strong> Document-local → Path-local → Site-wide → Upstream</li>
+      </ul>
+
+      <h3>Import mechanism</h3>
+      <p>Allow a site to point to an upstream canon:</p>
+      <pre><code>import: https://www.triadicframeworks.org/.well-known/rtt-awareness</code></pre>
+      <p>Then the resolver merges: upstream → local overrides. No magic—just declared composition.</p>
+
+      <hr/>
+
+      <h2 id="tiny-local-resolver-that-simulates-the-full-substrate">Tiny local resolver that simulates the full substrate</h2>
+      <p>We want something that can act like the world locally: ingest declarations, resolve inheritance, and expose a stable view.</p>
+
+      <h3>Minimal architecture</h3>
+      <ul>
+        <li><strong>Input adapters:</strong> local files/folders, HTTP headers, HTML meta tags, well-known declarations, manifests</li>
+        <li><strong>Resolver core:</strong> merges by precedence; produces an effective awareness object</li>
+        <li><strong>Simulator:</strong> graph of regimes/contexts; runs constraint checks</li>
+        <li><strong>Outputs:</strong> CLI summary, optional local UI, JSON export</li>
+      </ul>
+
+      <h3>Concrete lowest-friction implementation</h3>
+      <ul>
+        <li><strong>Local reverse proxy:</strong> fetches a page, reads headers + HTML meta, computes effective RTT awareness, optionally injects a panel (localhost only)</li>
+        <li><strong>Browser extension:</strong> does the same resolution in-page (no server changes required)</li>
+      </ul>
+
+      <h3>Effective resolution object</h3>
+      <pre><code>{
+  "effective_declaration": {
+    "rtt": "1",
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+  "sources": [
+    { "type": "well-known", "uri": "https://site/.well-known/rtt-awareness" },
+    { "type": "meta", "uri": "https://site/page" }
+  ],
+  "version": "0.1.0"
+}</code></pre>
+
+      <hr/>
+
+      <h2 id="pairing-browser-extension-observer--well-known-carrier">Pairing: <strong>browser extension (observer)</strong> + <strong><code>/.well-known/</code> (carrier)</strong></h2>
+      <p>This keeps RTT awareness <strong>pull-based, local-first, opt-in, and reversible</strong>—no platform permissions required beyond what a user installs.</p>
+
+      <hr/>
+
+      <h1 id="carrier-well-knownrt-awareness">Carrier: <code>/.well-known/rtt-awareness</code></h1>
+
+      <h2>File format v0</h2>
+      <p>Plain text is the most resilient across hosts/CDNs and easiest to debug:</p>
+      <pre><code>schema: rtt-awareness
+version: 0.1.0
+declaration: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+channel: stable
+updated: 2026-02-06
+
+# optional inheritance
+import: https://www.triadicframeworks.org/.well-known/rtt-awareness
+
+# optional scoping (prefix match)
+scope /docs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural
+scope /labs/: rtt=1 | coherence=declared | drift=bounded | paradox=structural</code></pre>
+
+      <h3>Inheritance semantics</h3>
+      <ul>
+        <li><strong>Upstream first:</strong> then local overrides.</li>
+        <li><strong>Local scope overrides:</strong> beat site root.</li>
+        <li><strong>Page-level meta:</strong> (if later added) beats everything.</li>
+      </ul>
+
+      <hr/>
+
+      <h1 id="self-updating-safe-by-default-update-model">Self-updating: safe-by-default update model</h1>
+      <p>Because the extension is local, “self-updating” really means: the extension periodically re-reads the site’s own well-known file plus any declared imports.</p>
+
+      <h2>Rules</h2>
+      <ul>
+        <li><strong>Default is pinned:</strong> honor whatever <code>version:</code> is returned; do not “upgrade” semantics automatically.</li>
+        <li><strong>Channel selects fetch only:</strong> it does not change interpretation.</li>
+        <li><strong>Caching:</strong> store <code>(url, etag, lastModified, fetchedAt, parsedManifest)</code> and revalidate with conditional requests.</li>
+        <li><strong>Failure mode:</strong> keep last-known-good and mark status stale.</li>
+      </ul>
+
+      <hr/>
+
+      <h1 id="extension-minimal-architecture">Extension: minimal architecture</h1>
+      <h2>Components</h2>
+      <ul>
+        <li><strong>Content script:</strong> reads page URL, optionally scans for page-local markers later.</li>
+        <li><strong>Service worker:</strong> fetches <code>/.well-known/rtt-awareness</code>, resolves imports, caches results.</li>
+        <li><strong>UI:</strong> popup + optional badge/indicator + optional injected panel (off by default).</li>
+      </ul>
+
+      <h2>Resolution algorithm v0</h2>
+      <ol>
+        <li>Compute base URL: <code>origin + "/.well-known/rtt-awareness"</code>.</li>
+        <li>Fetch + parse manifest.</li>
+        <li>If <code>import:</code> present: fetch upstream manifests (depth-limited).</li>
+        <li>Merge: imported → site root → best matching scope (longest prefix match).</li>
+        <li>Emit effective declaration for the current tab.</li>
+      </ol>
+
+      <hr/>
+
+      <h1 id="chromeedge-mv3-skeleton-mvp">Chrome/Edge MV3 skeleton (MVP)</h1>
+
+      <h2><code>manifest.json</code></h2>
+      <pre><code>{
+  "manifest_version": 3,
+  "name": "RTT Awareness Resolver",
+  "version": "0.1.0",
+  "description": "Resolves RTT awareness via /.well-known/rtt-awareness and displays effective declaration.",
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["&lt;all_urls&gt;"],
+  "background": { "service_worker": "sw.js" },
+  "action": { "default_popup": "popup.html" },
+  "content_scripts": [
+    {
+      "matches": ["&lt;all_urls&gt;"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}</code></pre>
+
+      <blockquote>
+        Note: we can tighten <code>host_permissions</code> later (allowlist). For MVP, this avoids the “why doesn’t it work on X” friction.
+      </blockquote>
+
+      <h2><code>sw.js</code> (fetch, cache, resolve)</h2>
+      <pre><code>const CACHE_TTL_MS = 6 * 60 * 60 * 1000; // 6h
+const MAX_IMPORT_DEPTH = 3;
+
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) =&gt; {
+  if (msg.type === "RTT_RESOLVE_FOR_URL") {
+    resolveForUrl(msg.url).then(sendResponse);
+    return true;
+  }
+});
+
+async function resolveForUrl(url) {
+  const u = new URL(url);
+  const wk = `${u.origin}/.well-known/rtt-awareness`;
+
+  const root = await fetchParsedManifest(wk, 0);
+  if (!root.ok) return { ok: false, source: wk, error: root.error };
+
+  const chain = await resolveImports(root.manifest, 0);
+  const merged = mergeManifests(chain);
+  const effective = applyScopes(merged, u.pathname);
+
+  return {
+    ok: true,
+    origin: u.origin,
+    wellKnown: wk,
+    effective,
+    sources: chain.map(x =&gt; ({ url: x.url, fetchedAt: x.fetchedAt, stale: x.stale }))
+  };
+}
+
+async function resolveImports(manifest, depth) {
+  const results = [];
+  if (manifest.import &amp;&amp; depth &lt; MAX_IMPORT_DEPTH) {
+    const imp = await fetchParsedManifest(manifest.import, depth + 1);
+    if (imp.ok) {
+      results.push(...(await resolveImports(imp.manifest, depth + 1)));
+      results.push(imp);
+    }
+  }
+  results.push({ ok: true, url: manifest._url, manifest, fetchedAt: manifest._fetchedAt, stale: manifest._stale });
+  return results;
+}
+
+function mergeManifests(chain) {
+  const merged = { schema: null, version: null, declaration: null, channel: null, scopes: [] };
+  for (const item of chain) {
+    const m = item.manifest;
+    if (m.schema) merged.schema = m.schema;
+    if (m.version) merged.version = m.version;
+    if (m.declaration) merged.declaration = m.declaration;
+    if (m.channel) merged.channel = m.channel;
+    if (Array.isArray(m.scopes)) merged.scopes = merged.scopes.concat(m.scopes);
+  }
+  return merged;
+}
+
+function applyScopes(merged, pathname) {
+  let best = null;
+  for (const s of merged.scopes || []) {
+    if (pathname.startsWith(s.prefix)) {
+      if (!best || s.prefix.length &gt; best.prefix.length) best = s;
+    }
+  }
+  return {
+    schema: merged.schema,
+    version: merged.version,
+    channel: merged.channel,
+    declaration: (best &amp;&amp; best.declaration) ? best.declaration : merged.declaration,
+    scopeMatched: best ? best.prefix : null
+  };
+}
+
+async function fetchParsedManifest(url, depth) {
+  const cached = await getCache(url);
+  if (cached &amp;&amp; Date.now() - cached.fetchedAt &lt; CACHE_TTL_MS) {
+    return { ok: true, url, fetchedAt: cached.fetchedAt, stale: false, manifest: cached.manifest };
+  }
+
+  try {
+    const res = await fetch(url, { cache: "no-store" });
+    if (!res.ok) return { ok: false, error: `HTTP ${res.status}` };
+
+    const text = await res.text();
+    const manifest = parseWellKnown(text);
+    manifest._url = url;
+    manifest._fetchedAt = Date.now();
+    manifest._stale = false;
+
+    await setCache(url, { fetchedAt: manifest._fetchedAt, manifest });
+    return { ok: true, url, fetchedAt: manifest._fetchedAt, stale: false, manifest };
+  } catch (e) {
+    if (cached) {
+      cached.manifest._stale = true;
+      return { ok: true, url, fetchedAt: cached.fetchedAt, stale: true, manifest: cached.manifest };
+    }
+    return { ok: false, error: String(e) };
+  }
+}
+
+function parseWellKnown(text) {
+  const out = { schema: null, version: null, declaration: null, channel: null, updated: null, import: null, scopes: [] };
+
+  for (const rawLine of text.split("\n")) {
+    const line = rawLine.trim();
+    if (!line || line.startsWith("#")) continue;
+
+    if (line.startsWith("scope ")) {
+      const m = line.match(/^scope\s+(\S+)\s*:\s*(.+)$/);
+      if (m) out.scopes.push({ prefix: m[1], declaration: m[2] });
+      continue;
+    }
+
+    const kv = line.split(":");
+    if (kv.length &lt; 2) continue;
+    const key = kv.shift().trim();
+    const value = kv.join(":").trim();
+
+    if (key === "schema") out.schema = value;
+    if (key === "version") out.version = value;
+    if (key === "declaration") out.declaration = value;
+    if (key === "channel") out.channel = value;
+    if (key === "updated") out.updated = value;
+    if (key === "import") out.import = value;
+  }
+
+  return out;
+}
+
+function getCacheKey(url) { return `cache:${url}`; }
+
+function getCache(url) {
+  return new Promise(resolve =&gt; {
+    chrome.storage.local.get([getCacheKey(url)], r =&gt; resolve(r[getCacheKey(url)] || null));
+  });
+}
+
+function setCache(url, value) {
+  return new Promise(resolve =&gt; {
+    chrome.storage.local.set({ [getCacheKey(url)]: value }, resolve);
+  });
+}</code></pre>
+
+      <h2><code>content.js</code> (request resolution)</h2>
+      <pre><code>chrome.runtime.sendMessage(
+  { type: "RTT_RESOLVE_FOR_URL", url: window.location.href },
+  (result) =&gt; {
+    window.__RTT_AWARENESS__ = result;
+  }
+);</code></pre>
+
+      <h2><code>popup.html</code> + <code>popup.js</code> (show effective declaration)</h2>
+      <pre><code>&lt;!-- See the Markdown source for full popup.html and popup.js --&gt;</code></pre>
+
+      <hr/>
+
+      <h1 id="inheritance-rtt-awareness-as-css">Inheritance: “RTT awareness as CSS”</h1>
+      <p>With our chosen carrier, inheritance is explicit and auditable:</p>
+      <ul>
+        <li><strong>Upstream canon</strong> via <code>import: …</code></li>
+        <li><strong>Local site override</strong> via <code>declaration: …</code></li>
+        <li><strong>Path-level override</strong> via <code>scope /x/: …</code></li>
+        <li><strong>Later (optional)</strong> page-level override via <code>&lt;meta name="rtt" content="…" /&gt;</code></li>
+      </ul>
+      <p>This makes awareness portable and fork-safe: forks can keep import + overrides without copying the whole canon.</p>
+
+      <hr/>
+
+      <h1 id="tiny-local-resolver-what-the-extension-simulates">Tiny local resolver: what the extension simulates</h1>
+      <p>With this setup, the extension becomes our “local substrate simulator” by providing:</p>
+      <ul>
+        <li><strong>Discovery:</strong> “does this site declare RTT awareness?”</li>
+        <li><strong>Resolution:</strong> “what is the effective declaration here?”</li>
+        <li><strong>Provenance:</strong> “which manifests contributed to this outcome?”</li>
+        <li><strong>Stability:</strong> “if upstream changes, what changes locally (and when)?”</li>
+      </ul>
+      <p>We can then add a second layer (still local-only) that interprets declarations into checks—without ever changing the public site.</p>
+
+      <hr/>
+
+      <h1 id="rtt-awareness-v0-locked-design">RTT Awareness v0 — Locked Design</h1>
+      <h2>Core principles</h2>
+      <ul>
+        <li><strong>Carrier:</strong> <code>/.well-known/rtt-awareness</code></li>
+        <li><strong>Observer:</strong> browser extension (local, opt-in)</li>
+        <li><strong>Inheritance:</strong> enabled by default</li>
+        <li><strong>Scoping rules:</strong> enabled in v0</li>
+        <li><strong>Update model:</strong> pull-based, conservative, cache-first</li>
+        <li><strong>Failure mode:</strong> silent + last-known-good</li>
+      </ul>
+
+      <hr/>
+
+      <h1 id="rtt-awareness-v0-minimal-structural-spec">RTT Awareness v0 — Minimal Structural Spec</h1>
+      <p><strong>Status:</strong> v0 (seed)<br/>
+      <strong>Purpose:</strong> Declare and resolve structural coherence conditions across web substrates using existing, permissionless mechanisms.</p>
+
+      <hr/>
+
+      <h2 id="the-rtt-naming-stack">The RTT Naming Stack</h2>
+      <h3><strong>RTT Awareness</strong></h3>
+      <p>This is the ambient, declarative layer. Lives in <code>/.well-known/</code>. Survives stripping. No execution.</p>
+
+      <h3><strong>RTT‑Inside</strong></h3>
+      <p>This is the active core inclusion layer (resolvers, engines, simulators). Explicit and local.</p>
+
+      <h3><strong>RTT Structural Awareness</strong> (pocketed)</h3>
+      <p>Industrial / dimensional regime work (−1024D → 0D → +1024D). Held back until the ground is ready.</p>
+    </main>
+
+    <footer>
+      <div>Path: <code>/docs/rtt/RTT_Awareness.html</code></div>
+      <div>Canonical source: <code>/rtt/RTT_Awareness.md</code></div>
+    </footer>
+  </div>
+</body>
+</html>
