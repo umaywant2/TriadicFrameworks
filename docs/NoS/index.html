@@ -160,29 +160,42 @@ code {
 
 <script>
 
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
 const DOC_MAP = {
   README: 'README.md',
   FIRST_BOOT_EXPECTATIONS: 'FIRST_BOOT_EXPECTATIONS.md',
   NAWDEROS: 'NawderOS.md',
-
   RTT_FOR_OS_STUDENTS: 'RTT_FOR_OS_STUDENTS.md',
   RTT_BASELINE_RELEASE: 'RTT_Baseline_Release.md',
   V0_1_0_TAG: 'v0.1.0-rtt-baseline.md',
-
   MODULES: 'MODULES.md',
   BADGE_LOGIC: 'BADGE_LOGIC.md',
   BADGE_SUFFIX_CONVENTION: 'badge_suffix_convention.md',
   GLYPHIC_COMPILER: 'GLYPHIC_COMPILER.md',
-
   INSTALLATION: 'INSTALLATION.md',
   KERNEL_BUILD: 'KERNEL_BUILD.md',
   KERNEL_PATCH_MVP: 'kernel_patch_MVP.md',
-
   TOY_OS_USING_RTT: 'Toy_OS_Using_RTT.md',
   DISTRIBUTED_SYSTEM_USING_RTT: 'Distributed_System_Using_RTT.md',
   TWO_NODES_VS_N_NODES: 'Two_Nodes_vs_N_Nodes.md',
   GRADING_RUBRIC: 'Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md',
-
   FORKING_GUIDE: 'FORKING_GUIDE.md',
   ROADMAP: 'ROADMAP.md',
   CHANGELOG: 'CHANGELOG.md',
@@ -202,6 +215,7 @@ window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
 </script>
+
 
 </body>
 </html>
