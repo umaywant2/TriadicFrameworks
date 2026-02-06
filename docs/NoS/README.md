@@ -6,6 +6,11 @@ Rather than introducing a new operating system paradigm, NawderOS instruments ex
 
 ---
 
+📘 New to RTT?  
+Start here: [RTT for OS Students](docs/NoS/RTT_FOR_OS_STUDENTS.md)
+
+---
+
 ### 🏷️ Badge Legend (Quick Guide)
 
 You’ll see a few badges at the top of this README. Here’s what they mean:
