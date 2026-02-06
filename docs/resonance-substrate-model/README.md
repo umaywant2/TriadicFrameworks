@@ -138,14 +138,23 @@ The canonical reference for contributing to the Resonance Substrate Model.
 
 # **🚀 Roadmap**
 
-### **v0.1.0 (current)**
+### **v0.1.0 (original)**
 - full schema taxonomy  
 - whitepaper draft  
 - simulation engine  
 - experimental datasets  
 - repo hygiene pass  
 
-### **v0.2.0 (planned)**
+### **v2.1.0 (current)**
+- RSM root DOI - The original Resonance Substrate Model publication — the conceptual anchor.
+- 3 + 27 DOIs (≈29 total) - Published since that root, now curated under the vST Zenodo Community, with an explicit curation policy.
+- A living documentation tree - docs/resonance-substrate-model/ already functions as the narrative and operational spine.
+- The context of the artifact has changed
+- The ecosystem around it is now formalized
+- The curation policy exists
+- The lineage is explicit
+
+### **v2.2.0 (planned)**
 - expanded operator families  
 - additional coherence experiments  
 - semantic‑layer simulations  
