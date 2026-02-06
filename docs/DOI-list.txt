@@ -1,5 +1,5 @@
 Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis
-<a href="https://doi.org/10.5281/zenodo.18258865"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18258865.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18510618"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18510618.svg" alt="DOI"></a>
 
 The Boson Substrate Model: Declared Operating Regimes
 <a href="https://doi.org/10.5281/zenodo.18263827"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263827.svg" alt="DOI"></a>
@@ -88,7 +88,7 @@ TriadicFrameworks: A Unified Substrate for Structure, Resonance, and Transformat
 EcoEchoSystem: A Substrate-Aligned Simulation Framework for Cognitive, Ecological, and Civilizational Dynamics
 <a href="https://doi.org/10.5281/zenodo.18462694"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18462694.svg" alt="DOI"></a>
 
-https://zenodo.org/records/18258865
+https://zenodo.org/records/18510618
 https://zenodo.org/records/18263827
 https://zenodo.org/records/18264063
 https://zenodo.org/records/18263036
@@ -119,7 +119,7 @@ https://zenodo.org/records/18440491
 https://zenodo.org/records/18452819
 https://zenodo.org/records/18462694
 
-10.5281/zenodo.18258865
+10.5281/zenodo.18510618
 10.5281/zenodo.18263827
 10.5281/zenodo.18264063
 10.5281/zenodo.18263036
