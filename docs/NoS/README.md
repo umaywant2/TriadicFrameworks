@@ -6,6 +6,37 @@ Rather than introducing a new operating system paradigm, NawderOS instruments ex
 
 ---
 
+### 🏷️ Badge Legend (Quick Guide)
+
+You’ll see a few badges at the top of this README. Here’s what they mean:
+
+- **RTT Baseline**  
+  This project is explicitly anchored in **Resonance‑Time Theory (RTT)** and preserves observation‑first, badge‑based signaling.
+
+- **RTT Baseline + suffix**  
+  Indicates how a fork extends RTT concepts.  
+  Examples:
+  - `RTT-baseline+vst` → validated spacetime integration  
+  - `RTT-baseline+edu` → teaching‑focused fork  
+  - `RTT-baseline+kernel` → deeper kernel instrumentation  
+
+- **CI / Status badges**  
+  Show basic repo health. Green means nothing broke — not that anything is “finished” 🙂
+
+Badges describe **lineage and direction**, not quality or authority.
+
+---
+
+## Why This Works
+
+- Students understand the badges in **10 seconds**
+- Forks stay legible without governance
+- RTT remains the anchor everywhere
+- No badge inflation
+- No hierarchy creep
+
+---
+
 ### What NawderOS Is
 
 - An **RTT‑anchored Linux baseline** that exposes resonance, validation, and coherence concepts through concrete system interfaces  
