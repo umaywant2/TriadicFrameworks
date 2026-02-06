@@ -244,6 +244,98 @@ That shift changes how you design kernels, debuggers, simulators, and even distr
 
 ---
 
+## Contrast Diagram: Traditional Control‑Centric OS vs RTT‑Aligned OS 🔄  
+*(Text‑Only, Slide‑Ready)*
+
+```
+TRADITIONAL CONTROL‑CENTRIC OS
+─────────────────────────────
+
+   ASSUMPTIONS
+        │
+        ▼
+   RULES / POLICIES
+        │
+        ▼
+   ENFORCEMENT LOGIC
+        │
+        ▼
+   SYSTEM ACTION
+        │
+        ▼
+   ERROR / FAILURE
+        │
+        ▼
+   REPAIR / RECOVERY
+```
+
+```
+RTT‑ALIGNED OBSERVATIONAL OS
+───────────────────────────
+
+   ASSUMPTIONS
+        │
+        ▼
+   COHERENCE CORRIDORS
+        │
+        ▼
+   BOUNDARY OBSERVATION
+        │
+        ▼
+   BADGE EMISSION
+        │
+        ▼
+   INTERPRETATION
+   (human / tools / models)
+```
+
+---
+
+## One‑Sentence Contrast (Instructor Caption)
+
+> Traditional OS design asks *“How do we stop bad behavior?”*  
+> RTT asks *“How do we know when our assumptions stop holding?”*
+
+---
+
+## Key Differences to Emphasize in Lecture
+
+| Traditional OS | RTT‑Aligned OS |
+|----------------|---------------|
+| Control‑first | Observation‑first |
+| Enforces correctness | Observes coherence |
+| Acts immediately | Signals and defers |
+| Hides assumptions | Makes assumptions explicit |
+| Failure is an event | Drift is a process |
+
+---
+
+## Why This Matters for Students
+
+Most OS bugs aren’t caused by:
+- missing rules
+- weak enforcement
+
+They’re caused by:
+- **silent assumption drift**
+- **unobserved boundary changes**
+- **time‑dependent behavior**
+
+RTT doesn’t replace traditional OS design — it **adds a missing layer of visibility**.
+
+---
+
+## Teaching Tip
+
+Put both diagrams on one slide.
+
+Then ask:
+> “Which system tells you *why* it failed?”
+
+Students usually answer correctly without further explanation 🙂
+
+---
+
 ## Where to Go Next
 
 - Read `MODULES.md` to see how RTT maps to concrete OS components  
