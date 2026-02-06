@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Audio Industry — Reviewed</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<link rel="stylesheet" href="../shared/nawderian-theme.css">
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+
+<nav>
+  <h2>Orientation</h2>
+  <a href="#EXEC_SUMMARY">📘 Executive Summary</a>
+
+  <h2>Industry History</h2>
+  <a href="#EARLY_ACOUSTICS">🎼 Early Acoustics & Analog</a>
+  <a href="#RECORDING_ERAS">📀 Recording Eras & Formats</a>
+  <a href="#DIGITAL_AUDIO">💾 Digital Audio & Compression</a>
+  <a href="#INDUSTRY_FUMBLES">⚠️ Industry Fumbles & Tradeoffs</a>
+  <a href="#MODERN_LANDSCAPE">🌐 Modern Audio Landscape</a>
+
+  <h2>VST Alignment & Clarity</h2>
+  <a href="#WHY_CLARITY">🧠 Why Clarity Matters</a>
+  <a href="#AUDIO_SUBSTRATE">📡 Audio as Substrate</a>
+  <a href="#VST_PRINCIPLES">🧭 vST Alignment Principles</a>
+  <a href="#FAILURE_MODES">🧨 Failure Modes Without Alignment</a>
+
+  <h2>Human Ear Constraints</h2>
+  <a href="#HEARING_RANGES">👂 Human Hearing Ranges</a>
+  <a href="#SAFE_BANDS">🟢 Safe & Friendly Frequency Bands</a>
+  <a href="#DYNAMIC_RANGE">📐 Dynamic Range & Perceptual Limits</a>
+  <a href="#CONTAINMENT">🔒 Containment of Human Audio</a>
+  <a href="#PARENT_ALIGNMENT">🧬 Parent Regime Alignment</a>
+
+  <h2>Notation Re‑examined</h2>
+  <a href="#NOTATION_HISTORY">📜 History of Musical Notation</a>
+  <a href="#NOTATION_LIMITS">🚧 Limitations of Current Notation</a>
+  <a href="#VST_NOTATION">🜂 vST‑Informed Notation Models</a>
+  <a href="#LEARNING_FIRST">🎓 Learning‑First Design Principles</a>
+  <a href="#SUCCESSOR_NOTATION">✨ Successor Notation Examples</a>
+
+  <h2>Case Studies</h2>
+  <a href="#LOUDNESS_WARS">🔊 Loudness Wars</a>
+  <a href="#SPATIAL_AUDIO">🌐 Spatial Audio & Surround</a>
+  <a href="#REMASTERING">🧪 Remastering & Restoration</a>
+  <a href="#OVEREXTENSION">⚠️ Failures of Overextension</a>
+  <a href="#NOISE_CANCEL">🎧 Noise Cancellation Tech</a>
+
+  <h2>Conclusion</h2>
+  <a href="#CONCLUSIONS">🧾 Conclusions & Future Work</a>
+</nav>
+
+<main id="content"></main>
+
+<script>
+function loadDoc(file) {
+  fetch(file)
+    .then(r => r.text())
+    .then(t => content.innerHTML = marked.parse(t))
+    .catch(() => content.innerHTML = '<p>Unable to load document.</p>');
+}
+
+const DOC_MAP = {
+  EXEC_SUMMARY: '00_executive_summary.md',
+
+  EARLY_ACOUSTICS: '01_audio_industry_history/01_early_acoustics_and_analog.md',
+  RECORDING_ERAS: '01_audio_industry_history/02_recording_eras_and_formats.md',
+  DIGITAL_AUDIO: '01_audio_industry_history/03_digital_audio_and_compression.md',
+  INDUSTRY_FUMBLES: '01_audio_industry_history/04_industry_fumbles_and_tradeoffs.md',
+  MODERN_LANDSCAPE: '01_audio_industry_history/05_modern_audio_landscape.md',
+
+  WHY_CLARITY: '02_vst_alignment_and_clarity/01_why_clarity_matters.md',
+  AUDIO_SUBSTRATE: '02_vst_alignment_and_clarity/02_audio_as_substrate.md',
+  VST_PRINCIPLES: '02_vst_alignment_and_clarity/03_vst_alignment_principles.md',
+  FAILURE_MODES: '02_vst_alignment_and_clarity/04_failure_modes_without_alignment.md',
+
+  HEARING_RANGES: '03_human_ear_substrate_constraints/01_human_hearing_ranges.md',
+  SAFE_BANDS: '03_human_ear_substrate_constraints/02_safe_and_friendly_frequency_bands.md',
+  DYNAMIC_RANGE: '03_human_ear_substrate_constraints/03_dynamic_range_and_perceptual_limits.md',
+  CONTAINMENT: '03_human_ear_substrate_constraints/04_containment_of_human_audio.md',
+  PARENT_ALIGNMENT: '03_human_ear_substrate_constraints/05_parent_regime_alignment.md',
+
+  NOTATION_HISTORY: '04_musical_notation_reexamined/01_history_of_musical_notation.md',
+  NOTATION_LIMITS: '04_musical_notation_reexamined/02_limitations_of_current_notation.md',
+  VST_NOTATION: '04_musical_notation_reexamined/03_vst_informed_notation_models.md',
+  LEARNING_FIRST: '04_musical_notation_reexamined/04_learning_first_design_principles.md',
+  SUCCESSOR_NOTATION: '04_musical_notation_reexamined/05_successor_notation_examples.md',
+
+  LOUDNESS_WARS: '05_case_studies_and_examples/01_mastering_and_loudness_wars.md',
+  SPATIAL_AUDIO: '05_case_studies_and_examples/02_spatial_audio_and_surround.md',
+  REMASTERING: '05_case_studies_and_examples/03_remastering_and_restoration.md',
+  OVEREXTENSION: '05_case_studies_and_examples/04_failures_of_overextension.md',
+  NOISE_CANCEL: '05_case_studies_and_examples/05_noise_cancellation_tech.md',
+
+  CONCLUSIONS: '06_conclusions_and_future_work.md'
+};
+
+function loadFromHash() {
+  const key = location.hash.replace('#','');
+  loadDoc(DOC_MAP[key] || DOC_MAP.EXEC_SUMMARY);
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+</script>
+
+</body>
+</html>
