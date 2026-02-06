@@ -13,7 +13,7 @@
 
 ---
 
-# **TriadicFrameworks: The Resonance Substrate Model - RSM v1.0 Seed Release**
+# **TriadicFrameworks: The Resonance Substrate Model - RSM v2.1 Seed Release**
 
 **A unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.**
 
