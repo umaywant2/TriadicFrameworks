@@ -5,59 +5,72 @@
 <title>NawderOS — Documentation Index</title>
 
 <style>
+:root {
+  --bg-main: #0f1115;
+  --bg-nav: #151821;
+  --border-subtle: #2a2f3a;
+  --text-main: #d8dee9;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #88c0d0;
+}
+
 body {
   margin: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-  background: #1e1e1e;
-  color: #e0e0e0;
+  background: var(--bg-main);
+  color: var(--text-main);
   display: flex;
   height: 100vh;
 }
 
 nav {
-  width: 280px;
-  background: #252526;
-  padding: 1rem;
+  width: 300px;
+  background: var(--bg-nav);
+  padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid #333;
+  border-right: 1px solid var(--border-subtle);
 }
 
 nav h2 {
-  font-size: 1rem;
-  color: #88c0d0;
-  margin-top: 0;
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
 }
 
 nav a {
   display: block;
-  color: #ccc;
+  color: var(--text-muted);
   text-decoration: none;
-  padding: 0.4rem 0;
+  padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: #fff;
+  color: var(--text-main);
 }
 
 main {
   flex: 1;
-  padding: 2rem;
+  padding: 2.5rem;
   overflow-y: auto;
 }
 
 main h1, main h2, main h3 {
-  color: #88c0d0;
+  color: var(--accent-rtt);
+  font-weight: 500;
 }
 
 pre {
-  background: #111;
+  background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
 }
 
 code {
-  color: #d8dee9;
+  color: var(--text-main);
 }
 </style>
 
@@ -67,45 +80,41 @@ code {
 <body>
 
 <nav>
-  <h2>NawderOS Docs</h2>
-
-  <a href="#" onclick="loadDoc('README.md')">README</a>
-  <a href="#" onclick="loadDoc('FIRST_BOOT_EXPECTATIONS.md')">First Boot Expectations</a>
-  <a href="#" onclick="loadDoc('NawderOS.md')">NawderOS Overview</a>
+  <h2>Orientation</h2>
+  <a href="#" onclick="loadDoc('README.md')">📘 README</a>
+  <a href="#" onclick="loadDoc('FIRST_BOOT_EXPECTATIONS.md')">🧭 First Boot Expectations</a>
+  <a href="#" onclick="loadDoc('NawderOS.md')">🌌 NawderOS Overview</a>
 
   <h2>RTT Foundations</h2>
-  <a href="#" onclick="loadDoc('RTT_FOR_OS_STUDENTS.md')">RTT for OS Students</a>
-  <a href="#" onclick="loadDoc('RTT_Baseline_Release.md')">RTT Baseline Release</a>
-  <a href="#" onclick="loadDoc('v0.1.0-rtt-baseline.md')">v0.1.0 Tag</a>
+  <a href="#" onclick="loadDoc('RTT_FOR_OS_STUDENTS.md')">🧠 RTT for OS Students</a>
+  <a href="#" onclick="loadDoc('RTT_Baseline_Release.md')">🏷️ RTT Baseline Release</a>
+  <a href="#" onclick="loadDoc('v0.1.0-rtt-baseline.md')">🧾 v0.1.0 Tag</a>
 
   <h2>System Design</h2>
-  <a href="#" onclick="loadDoc('MODULES.md')">Modules</a>
-  <a href="#" onclick="loadDoc('BADGE_LOGIC.md')">Badge Logic</a>
-  <a href="#" onclick="loadDoc('badge_suffix_convention.md')">Badge Suffix Convention</a>
-  <a href="#" onclick="loadDoc('GLYPHIC_COMPILER.md')">Glyphic Compiler</a>
+  <a href="#" onclick="loadDoc('MODULES.md')">🧩 Modules</a>
+  <a href="#" onclick="loadDoc('BADGE_LOGIC.md')">🏷️ Badge Logic</a>
+  <a href="#" onclick="loadDoc('badge_suffix_convention.md')">➕ Badge Suffix Convention</a>
+  <a href="#" onclick="loadDoc('GLYPHIC_COMPILER.md')">🜂 Glyphic Compiler</a>
 
   <h2>Kernel & Build</h2>
-  <a href="#" onclick="loadDoc('INSTALLATION.md')">Installation</a>
-  <a href="#" onclick="loadDoc('KERNEL_BUILD.md')">Kernel Build</a>
-  <a href="#" onclick="loadDoc('kernel_patch_MVP.md')">Kernel Patch MVP</a>
+  <a href="#" onclick="loadDoc('INSTALLATION.md')">🛠️ Installation</a>
+  <a href="#" onclick="loadDoc('KERNEL_BUILD.md')">⚙️ Kernel Build</a>
+  <a href="#" onclick="loadDoc('kernel_patch_MVP.md')">🧬 Kernel Patch MVP</a>
 
   <h2>Education & Labs</h2>
-  <a href="#" onclick="loadDoc('Toy_OS_Using_RTT.md')">Toy OS Using RTT</a>
-  <a href="#" onclick="loadDoc('Distributed_System_Using_RTT.md')">Distributed Systems Using RTT</a>
-  <a href="#" onclick="loadDoc('Two_Nodes_vs_N_Nodes.md')">Two Nodes vs N Nodes</a>
-  <a href="#" onclick="loadDoc('Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md')">Grading Rubric</a>
+  <a href="#" onclick="loadDoc('Toy_OS_Using_RTT.md')">🧪 Toy OS Using RTT</a>
+  <a href="#" onclick="loadDoc('Distributed_System_Using_RTT.md')">🌐 Distributed Systems Using RTT</a>
+  <a href="#" onclick="loadDoc('Two_Nodes_vs_N_Nodes.md')">🔗 Two Nodes vs N Nodes</a>
+  <a href="#" onclick="loadDoc('Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md')">📊 Grading Rubric</a>
 
   <h2>Project Meta</h2>
-  <a href="#" onclick="loadDoc('FORKING_GUIDE.md')">Forking Guide</a>
-  <a href="#" onclick="loadDoc('ROADMAP.md')">Roadmap</a>
-  <a href="#" onclick="loadDoc('CHANGELOG.md')">Changelog</a>
-  <a href="#" onclick="loadDoc('What_Devs_Students_and_Researchers_Are_Doing.md')">Context</a>
+  <a href="#" onclick="loadDoc('FORKING_GUIDE.md')">🍴 Forking Guide</a>
+  <a href="#" onclick="loadDoc('ROADMAP.md')">🛣️ Roadmap</a>
+  <a href="#" onclick="loadDoc('CHANGELOG.md')">🧾 Changelog</a>
+  <a href="#" onclick="loadDoc('What_Devs_Students_and_Researchers_Are_Doing.md')">🧠 Context</a>
 </nav>
 
-<main id="content">
-  <h1>NawderOS Documentation</h1>
-  <p>Select a document from the left to begin.</p>
-</main>
+<main id="content"></main>
 
 <script>
 function loadDoc(file) {
@@ -119,6 +128,9 @@ function loadDoc(file) {
         '<p>Unable to load document.</p>';
     });
 }
+
+// Default document on first load
+loadDoc('FIRST_BOOT_EXPECTATIONS.md');
 </script>
 
 </body>
