@@ -81,56 +81,84 @@ code {
 
 <nav>
   <h2>Orientation</h2>
-  <a href="#" onclick="loadDoc('README.md')">📘 README</a>
-  <a href="#" onclick="loadDoc('FIRST_BOOT_EXPECTATIONS.md')">🧭 First Boot Expectations</a>
-  <a href="#" onclick="loadDoc('NawderOS.md')">🌌 NawderOS Overview</a>
+  <a href="#README" onclick="loadDoc('README.md','README')">📘 README</a>
+  <a href="#FIRST_BOOT_EXPECTATIONS" onclick="loadDoc('FIRST_BOOT_EXPECTATIONS.md','FIRST_BOOT_EXPECTATIONS')">🧭 First Boot Expectations</a>
+  <a href="#NawderOS" onclick="loadDoc('NawderOS.md','NawderOS')">🌌 NawderOS Overview</a>
 
   <h2>RTT Foundations</h2>
-  <a href="#" onclick="loadDoc('RTT_FOR_OS_STUDENTS.md')">🧠 RTT for OS Students</a>
-  <a href="#" onclick="loadDoc('RTT_Baseline_Release.md')">🏷️ RTT Baseline Release</a>
-  <a href="#" onclick="loadDoc('v0.1.0-rtt-baseline.md')">🧾 v0.1.0 Tag</a>
+  <a href="#RTT_FOR_OS_STUDENTS" onclick="loadDoc('RTT_FOR_OS_STUDENTS.md','RTT_FOR_OS_STUDENTS')">🧠 RTT for OS Students</a>
+  <a href="#RTT_Baseline_Release" onclick="loadDoc('RTT_Baseline_Release.md','RTT_Baseline_Release')">🏷️ RTT Baseline Release</a>
+  <a href="#v0.1.0-rtt-baseline" onclick="loadDoc('v0.1.0-rtt-baseline.md','v0.1.0-rtt-baseline')">🧾 v0.1.0 Tag</a>
 
   <h2>System Design</h2>
-  <a href="#" onclick="loadDoc('MODULES.md')">🧩 Modules</a>
-  <a href="#" onclick="loadDoc('BADGE_LOGIC.md')">🏷️ Badge Logic</a>
-  <a href="#" onclick="loadDoc('badge_suffix_convention.md')">➕ Badge Suffix Convention</a>
-  <a href="#" onclick="loadDoc('GLYPHIC_COMPILER.md')">🜂 Glyphic Compiler</a>
+  <a href="#MODULES" onclick="loadDoc('MODULES.md'.'MODULES')">🧩 Modules</a>
+  <a href="#BADGE_LOGIC" onclick="loadDoc('BADGE_LOGIC.md','BADGE_LOGIC')">🏷️ Badge Logic</a>
+  <a href="#badge_suffix_convention" onclick="loadDoc('badge_suffix_convention.md'.'badge_suffix_convention')">➕ Badge Suffix Convention</a>
+  <a href="#GLYPHIC_COMPILER" onclick="loadDoc('GLYPHIC_COMPILER.md','GLYPHIC_COMPILER')">🜂 Glyphic Compiler</a>
 
   <h2>Kernel & Build</h2>
-  <a href="#" onclick="loadDoc('INSTALLATION.md')">🛠️ Installation</a>
-  <a href="#" onclick="loadDoc('KERNEL_BUILD.md')">⚙️ Kernel Build</a>
-  <a href="#" onclick="loadDoc('kernel_patch_MVP.md')">🧬 Kernel Patch MVP</a>
+  <a href="#INSTALLATION" onclick="loadDoc('INSTALLATION.md','INSTALLATION')">🛠️ Installation</a>
+  <a href="#KERNEL_BUILD" onclick="loadDoc('KERNEL_BUILD.md','KERNEL_BUILD')">⚙️ Kernel Build</a>
+  <a href="#kernel_patch_MVP" onclick="loadDoc('kernel_patch_MVP.md','kernel_patch_MVP')">🧬 Kernel Patch MVP</a>
 
   <h2>Education & Labs</h2>
-  <a href="#" onclick="loadDoc('Toy_OS_Using_RTT.md')">🧪 Toy OS Using RTT</a>
-  <a href="#" onclick="loadDoc('Distributed_System_Using_RTT.md')">🌐 Distributed Systems Using RTT</a>
-  <a href="#" onclick="loadDoc('Two_Nodes_vs_N_Nodes.md')">🔗 Two Nodes vs N Nodes</a>
-  <a href="#" onclick="loadDoc('Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md')">📊 Grading Rubric</a>
+  <a href="#Toy_OS_Using_RTT" onclick="loadDoc('Toy_OS_Using_RTT.md','Toy_OS_Using_RTT')">🧪 Toy OS Using RTT</a>
+  <a href="#Distributed_System_Using_RTT" onclick="loadDoc('Distributed_System_Using_RTT.md','Distributed_System_Using_RTT')">🌐 Distributed Systems Using RTT</a>
+  <a href="#Two_Nodes_vs_N_Nodes" onclick="loadDoc('Two_Nodes_vs_N_Nodes.md','Two_Nodes_vs_N_Nodes')">🔗 Two Nodes vs N Nodes</a>
+  <a href="#Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab" onclick="loadDoc('Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md','Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab')">📊 Grading Rubric</a>
 
   <h2>Project Meta</h2>
-  <a href="#" onclick="loadDoc('FORKING_GUIDE.md')">🍴 Forking Guide</a>
-  <a href="#" onclick="loadDoc('ROADMAP.md')">🛣️ Roadmap</a>
-  <a href="#" onclick="loadDoc('CHANGELOG.md')">🧾 Changelog</a>
-  <a href="#" onclick="loadDoc('What_Devs_Students_and_Researchers_Are_Doing.md')">🧠 Context</a>
+  <a href="#FORKING_GUIDE" onclick="loadDoc('FORKING_GUIDE.md','FORKING_GUIDE')">🍴 Forking Guide</a>
+  <a href="#ROADMAP" onclick="loadDoc('ROADMAP.md','ROADMAP')">🛣️ Roadmap</a>
+  <a href="#CHANGELOG" onclick="loadDoc('CHANGELOG.md','CHANGELOG')">🧾 Changelog</a>
+  <a href="#What_Devs_Students_and_Researchers_Are_Doing" onclick="loadDoc('What_Devs_Students_and_Researchers_Are_Doing.md','What_Devs_Students_and_Researchers_Are_Doing')">🧠 Context</a>
 </nav>
 
 <main id="content"></main>
 
 <script>
-function loadDoc(file) {
-  fetch(file)
-    .then(response => response.text())
-    .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
-    })
-    .catch(() => {
-      document.getElementById('content').innerHTML =
-        '<p>Unable to load document.</p>';
-    });
+
+const DOC_MAP = {
+  README: 'README.md',
+  FIRST_BOOT_EXPECTATIONS: 'FIRST_BOOT_EXPECTATIONS.md',
+  NAWDEROS: 'NawderOS.md',
+
+  RTT_FOR_OS_STUDENTS: 'RTT_FOR_OS_STUDENTS.md',
+  RTT_BASELINE_RELEASE: 'RTT_Baseline_Release.md',
+  V0_1_0_TAG: 'v0.1.0-rtt-baseline.md',
+
+  MODULES: 'MODULES.md',
+  BADGE_LOGIC: 'BADGE_LOGIC.md',
+  BADGE_SUFFIX_CONVENTION: 'badge_suffix_convention.md',
+  GLYPHIC_COMPILER: 'GLYPHIC_COMPILER.md',
+
+  INSTALLATION: 'INSTALLATION.md',
+  KERNEL_BUILD: 'KERNEL_BUILD.md',
+  KERNEL_PATCH_MVP: 'kernel_patch_MVP.md',
+
+  TOY_OS_USING_RTT: 'Toy_OS_Using_RTT.md',
+  DISTRIBUTED_SYSTEM_USING_RTT: 'Distributed_System_Using_RTT.md',
+  TWO_NODES_VS_N_NODES: 'Two_Nodes_vs_N_Nodes.md',
+  GRADING_RUBRIC: 'Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md',
+
+  FORKING_GUIDE: 'FORKING_GUIDE.md',
+  ROADMAP: 'ROADMAP.md',
+  CHANGELOG: 'CHANGELOG.md',
+  CONTEXT: 'What_Devs_Students_and_Researchers_Are_Doing.md'
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('FIRST_BOOT_EXPECTATIONS.md');
+  }
 }
 
-// Default document on first load
-loadDoc('FIRST_BOOT_EXPECTATIONS.md');
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
 </script>
 
 </body>
