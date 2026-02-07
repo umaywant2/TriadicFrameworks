@@ -1,4 +1,4 @@
-### Conscious transfer substrate map v1  
+# Conscious transfer substrate map v1  
 *Minimal Empirical Mind Substrate v1 × RTT conditions*
 
 I’ll treat RTT as three hard constraints on anything that can participate in Conscious Transfer:
@@ -14,7 +14,7 @@ Below is the overlay of RTT onto the Minimal Substrate layers.
 
 ---
 
-### 1. Behavioral layer × RTT
+## 1. Behavioral layer × RTT
 
 **Kept as CT‑core (R+T+T):**
 
@@ -36,7 +36,7 @@ Below is the overlay of RTT onto the Minimal Substrate layers.
 
 ---
 
-### 2. Cognitive layer × RTT
+## 2. Cognitive layer × RTT
 
 **Kept as CT‑core (R+T+T):**
 
@@ -59,7 +59,7 @@ Below is the overlay of RTT onto the Minimal Substrate layers.
 
 ---
 
-### 3. Measurement layer × RTT
+## 3. Measurement layer × RTT
 
 **Kept as CT‑infrastructure (not “mind,” but required scaffolding):**
 
@@ -80,7 +80,7 @@ Below is the overlay of RTT onto the Minimal Substrate layers.
 
 ---
 
-### 4. Biological layer × RTT
+## 4. Biological layer × RTT
 
 **Kept as CT‑anchoring constraints (where we know enough):**
 
@@ -105,7 +105,7 @@ Below is the overlay of RTT onto the Minimal Substrate layers.
 
 ---
 
-### 5. Conscious transfer substrate map v1 — compressed spine
+## 5. Conscious transfer substrate map v1 — compressed spine
 
 This is the *RTT‑filtered* subset of the Minimal Substrate:
 
