@@ -172,7 +172,7 @@ This layer exists to:
 
 - Preserve historical + cultural context  
 - Prevent contamination of the empirical substrate  
-- Allow reinterpretation under RTT or future frameworks  
+- Allow reinterpretation under [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html) or future frameworks  
 - Maintain intellectual honesty about what is *not* science  
 - Provide a clean boundary for Conscious Transfer work  
 
