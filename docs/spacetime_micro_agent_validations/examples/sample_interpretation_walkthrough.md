@@ -1,137 +1,102 @@
-# **sample_interpretation_walkthrough.md**  
-*A complete walkthrough of the vST Micro‑Agent interpreting a real query*
+# Sample Interpretation Walkthrough (v2.0.0)
+
+This walkthrough demonstrates how the vST Micro‑Agent processes an unknown
+input stream using a vST Structural Query Envelope (vST‑SQL).  
+The goal is to illustrate the interpreter’s structural‑first approach:
+no semantics, no domain assumptions, and no inference about meaning.
+
+The micro‑agent operates solely on **repeatable, traceable, and
+transfer‑addressable** structural features.
 
 ---
 
-## 🧭 Purpose  
-This walkthrough demonstrates how the **vST Micro‑Agent** processes an arbitrary human query using its 12‑question structural decision tree. The goal is to show how a raw, ambiguous question becomes a clean, substrate‑aligned **query envelope**.
+## 1. Inputs
 
-This example uses a real‑world scenario involving metadata ingestion delays across research infrastructure.
-
----
-
-## 🗣️ **Raw User Query**  
-```
-“Why isn’t Lens seeing my DOIs?”
-```
-
-This is intentionally vague, domain‑specific, and structurally underspecified — the perfect test case for the micro‑agent.
-
----
-
-## 🧩 **Step‑by‑Step Interpretation Using the 12 Questions**
-
-### **1. What regime is this operating in?**  
-**Information‑flow**  
-The issue concerns metadata propagation across systems.
-
----
-
-### **2. What scale is relevant?**  
-**Metadata pipeline scale**  
-Not cosmic, not microphysical — this is a multi‑service ingestion chain.
-
----
-
-### **3. What transition type is occurring?**  
-**Lag / delayed propagation**  
-The user is experiencing a temporal mismatch between systems.
-
----
-
-### **4. What boundary condition defines the system?**  
-**Crossref → Lens ingestion boundary**  
-The transition point where metadata should flow but hasn’t yet.
-
----
-
-### **5. What invariants must remain true?**  
-- DOI validity  
-- ORCID linkage  
-- Metadata completeness  
-
-These are required for ingestion to succeed.
-
----
-
-### **6. What modifiers influence the system?**  
-- Batch delays  
-- Queue load  
-- Metadata formatting differences  
-
-These shape the behavior but are not fundamental.
-
----
-
-### **7. What substrate is involved?**  
-**Metadata**  
-Specifically DOI records, ORCID identity data, and Crossref feeds.
-
----
-
-### **8. What is the intended outcome or function?**  
-**Diagnose ingestion mismatch**  
-The user wants to understand *why* the system isn’t updating.
-
----
-
-### **9. What lineage or dependency chain exists?**  
-- Zenodo  
-- Crossref  
-- Lens  
-
-This is the upstream‑to‑downstream flow.
-
----
-
-### **10. What is the failure mode or tension?**  
-**Pipeline delay**  
-Not corruption, not deletion — simply lag.
-
----
-
-### **11. What is the time‑regime?**  
-**Batch**  
-Crossref → Lens ingestion is not real‑time.
-
----
-
-### **12. What symmetry or asymmetry is present?**  
-**Asymmetric**  
-Metadata flows one‑way; the user cannot push updates upstream.
-
----
-
-## 📦 **Final Query Envelope**  
-This is the micro‑agent’s output — the structured substrate representation.
+### **Signal Input**
+A numeric stream of arbitrary origin:
 
 ```json
 {
-  "intent": "diagnose ingestion mismatch",
-  "regime": "information-flow",
-  "scale": "metadata pipeline",
-  "transition": "lag",
-  "boundary": "Crossref → Lens",
-  "invariants": ["DOI validity", "ORCID linkage", "metadata completeness"],
-  "modifiers": ["batch delay", "queue load", "formatting differences"],
-  "substrate": "metadata",
-  "lineage": ["Zenodo", "Crossref", "Lens"],
-  "failure_mode": "pipeline delay",
-  "time_regime": "batch",
-  "symmetry": "asymmetric",
-  "raw_query": "Why isn’t Lens seeing my DOIs?"
+  "signal_id": "walkthrough_signal_v1",
+  "stream": [0.14, 0.10, 0.12, 0.47, 0.50, 0.48, 0.13, 0.11, 0.12],
+  "metadata": {
+    "sampling_rate_hz": 1000,
+    "units": "arbitrary"
+  }
+}
+```
+
+### **Query Envelope**
+A minimal vST‑SQL structural query:
+
+```json
+{
+  "query": {
+    "select": ["pattern", "periodicity"],
+    "where": {
+      "min_repetition": 2,
+      "min_similarity": 0.85
+    }
+  },
+  "input_binding": {
+    "signal_source": "walkthrough_signal_v1",
+    "stream_key": "stream"
+  }
 }
 ```
 
 ---
 
-## 🧠 **Why This Matters**  
-This walkthrough shows how the micro‑agent:
+## 2. Interpreter Pipeline
 
-- extracts structure from ambiguity  
-- identifies the correct regime and scale  
-- isolates the transition and failure mode  
-- maps the lineage of the system  
-- produces a substrate‑aligned envelope that any AI can use  
+### **Step 1 — Normalization**
+The stream is normalized to a consistent internal representation.  
+No semantic meaning is applied.
 
-It demonstrates the *nimbleness* and *universality* of the micro‑agent — a tiny layer that dramatically improves interpretability across domains.
+### **Step 2 — Pattern Extraction**
+The interpreter scans for repeating motifs using sliding‑window similarity.
+
+A candidate pattern emerges:
+
+```
+[0.14, 0.10, 0.12]
+```
+
+It recurs with similarity values between **0.88–0.93**, satisfying the
+`min_similarity` constraint.
+
+### **Step 3 — Periodicity Detection**
+Autocorrelation reveals a stable periodicity of **3 samples**.
+
+### **Step 4 — Constraint Filtering**
+The pattern appears **twice**, satisfying `min_repetition = 2`.
+
+### **Step 5 — Structural Consolidation**
+The interpreter merges overlapping detections and produces a canonical
+structural description.
+
+---
+
+## 3. Output Summary
+
+- **Detected pattern:** `[0.14, 0.10, 0.12]`  
+- **Repetitions:** 2  
+- **Similarity range:** 0.88–0.93  
+- **Periodicity:** 3 samples  
+- **Notes:**  
+  - No semantic interpretation performed  
+  - No assumptions about origin or meaning  
+  - Structural invariants only  
+
+---
+
+## 4. Purpose of This Walkthrough
+
+This example demonstrates:
+
+- how vST‑SQL queries operate  
+- how the micro‑agent extracts structure from unknown signals  
+- how RTT principles guide the detection process  
+- how structural invariants can be identified without domain knowledge  
+
+It is intentionally minimal and substrate‑agnostic.
