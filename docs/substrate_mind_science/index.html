@@ -9,7 +9,7 @@
    NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
    ============================================================ */
 
-:root {
+  :root {
   --bg-main: #0d0f12;
   --bg-nav: #15181d;
   --border-subtle: #2a2f38;
@@ -20,11 +20,11 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-}
+  }
 
-html { scroll-behavior: smooth; }
-
-body {
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
@@ -34,10 +34,10 @@ body {
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  }
 
-/* Headings */
-h1, h2, h3, h4 {
+  /* Headings */
+  h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
@@ -45,33 +45,32 @@ h1, h2, h3, h4 {
   background: var(--triadic);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+  }
 
-/* Paragraphs and lists */
-p, ul, ol {
+  /* Paragraphs and lists */
+  p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
   color: #dfe7f3;
-}
+  }
 
-/* Code/pre */
-pre, code {
+  /* Code/pre */
+  pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
   background: rgba(255,255,255,0.02);
   padding: 0.4em 0.6em;
   border-radius: 6px;
   color: #cfe8ff;
-}
+  }
 
-/* Layout */
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
+  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
   border-right: 1px solid var(--border-subtle);
-  height: 100vh;
 }
 
 nav h2 {
@@ -95,7 +94,7 @@ nav a:hover {
 }
 
 main {
-  margin-left: 260px;
+  flex: 1;
   padding: 2.5rem;
   overflow-y: auto;
 }
@@ -116,7 +115,7 @@ code {
   color: var(--text-main);
 }
 </style>
-
+   
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
@@ -168,13 +167,22 @@ code {
 <main id="content"></main>
 
 <script>
+
 function loadDoc(file) {
   fetch(file)
-    .then(r => r.text())
-    .then(t => { document.getElementById('content').innerHTML = marked.parse(t); })
-    .catch(() => {
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
       document.getElementById('content').innerHTML =
         `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
     });
 }
 
