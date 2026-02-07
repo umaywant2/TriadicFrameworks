@@ -1,4 +1,4 @@
-# Section B — Diagnostic systems (Green / Yellow / Red)
+# SECTION B — Diagnostic systems (Green / Yellow / Red)
 
 Here’s a clean pass over the diagnostic stack, same lens as Section A.
 
