@@ -1,4 +1,4 @@
-# SECTION G — Ethical & institutional structures (Green / Yellow / Red)
+# 🧱 SECTION G — Ethical & institutional structures (Green / Yellow / Red)
 
 This is where “science,” power, and institutions braid together. Let’s keep it sharp.
 
