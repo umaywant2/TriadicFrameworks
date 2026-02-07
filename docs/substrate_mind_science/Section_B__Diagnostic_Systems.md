@@ -1,10 +1,10 @@
-### Section B — Diagnostic systems (Green / Yellow / Red)
+# Section B — Diagnostic systems (Green / Yellow / Red)
 
 Here’s a clean pass over the diagnostic stack, same lens as Section A.
 
 ---
 
-#### ✅ GREEN — Methods or tools with real empirical backbone
+## ✅ GREEN — Methods or tools with real empirical backbone
 
 - **Differential diagnosis (as a method):**  
   **Label:** **Differential diagnosis method**  
@@ -28,7 +28,7 @@ Here’s a clean pass over the diagnostic stack, same lens as Section A.
 
 ---
 
-#### ⚠️ YELLOW — Structured, partially empirical, but conceptually shaky
+## ⚠️ YELLOW — Structured, partially empirical, but conceptually shaky
 
 - **DSM‑5 as a classification system:**  
   **Label:** **DSM‑5 nosology**  
@@ -56,7 +56,7 @@ Here’s a clean pass over the diagnostic stack, same lens as Section A.
 
 ---
 
-#### ❌ RED — Institutional / cultural constructs treated as if they were discovered entities
+## ❌ RED — Institutional / cultural constructs treated as if they were discovered entities
 
 - **Diagnostic categories treated as “diseases” (e.g., “Major Depressive Disorder” as a discrete biological entity):**  
   **Label:** **Reified symptom labels**  
@@ -76,7 +76,7 @@ Here’s a clean pass over the diagnostic stack, same lens as Section A.
 
 ---
 
-### Structural snapshot for Section B
+# Structural snapshot for Section B
 
 - **Green:** methods and tools that *measure something real* (tests, imaging, genetics, differential diagnosis).  
 - **Yellow:** classification systems and semi‑structured exams—organized, useful, but conceptually floating.  
