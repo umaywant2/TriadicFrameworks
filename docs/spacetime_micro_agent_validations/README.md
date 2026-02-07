@@ -16,3 +16,45 @@ Contents:
 - `metadata/` — DOI‑ready metadata for Zenodo publication.
 
 This module is intentionally small, fast, and substrate‑agnostic.
+
+---
+
+## 📐 Minimal Structural Detection — Conceptual Diagram
+
+Below is a high‑level diagram showing how the vST Micro‑Agent processes
+an unknown signal using a minimal structural query envelope.
+
+```
+                ┌───────────────────────────────┐
+                │   Unknown Input Stream        │
+                │  (example_signal_input.json)  │
+                └────────────────┬──────────────┘
+                                 │
+                                 ▼
+                ┌───────────────────────────────┐
+                │  vST Structural Query Layer   │
+                │ (example_query_envelope.json) │
+                └────────────────┬──────────────┘
+                                 │ binds
+                                 ▼
+                ┌───────────────────────────────┐
+                │   vST Micro‑Agent Interpreter │
+                │   • pattern extraction        │
+                │   • periodicity detection     │
+                │   • local symmetry scan       │
+                └────────────────┬──────────────┘
+                                 │
+                                 ▼
+                ┌────────────────────────────────────┐
+                │  Structural Interpretation         │
+                │ (example_interpretation_output.md) │
+                └────────────────────────────────────┘
+```
+
+**What this diagram conveys:**
+
+- The micro‑agent never assumes semantics.  
+- It operates purely on **structure**, not meaning.  
+- The query envelope defines *what* to look for.  
+- The interpreter extracts **repeatable, traceable, transfer‑addressable** patterns.  
+- The output is a structural description, not a claim about the domain.
