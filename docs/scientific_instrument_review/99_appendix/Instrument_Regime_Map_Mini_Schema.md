@@ -1,5 +1,34 @@
 # 🌐 **Instrument Regime Map — Mini‑Schema (Human‑Readable)**
 
+## 📘 Regime Map Legend
+
+---
+
+### 💚 Green Zone — “Stable & Direct”
+- Low drift  
+- Transparent behavior  
+- Minimal inference  
+- Predictable across conditions  
+
+### 💛 Yellow Zone — “Assumption‑Heavy”
+- Model‑dependent  
+- Mixed‑regime behavior  
+- Environmental sensitivity  
+- Compensation & filtering layers  
+
+### ❤️ Red Zone — “Fragile & Inference‑Heavy”
+- Nonlinear or unstable  
+- Substrate‑sensitive  
+- Multi‑stage inference  
+- Drift‑prone or opaque  
+
+### 🧭 SET Axes (Substrate Anchors)
+- 🌀 Spin — polarization, magnetic coupling  
+- ⚡ Elec — sensor readout, digital logic  
+- 🔥 Temp — drift, stability, compensation  
+
+---
+
 This schema is intentionally minimal. It mirrors your triadic structure and keeps contributors aligned.
 
 ```
@@ -110,38 +139,10 @@ instrument_regime_map:
 - It’s **substrate‑aware** — SET anchors remain central.  
 - It’s **future‑proof** — works for hardware, firmware, software, and hybrids.  
 
-────────────────────────────────
-📘 Regime Map Legend
-────────────────────────────────
+---
 
-💚 Green Zone — “Stable & Direct”
-• Low drift  
-• Transparent behavior  
-• Minimal inference  
-• Predictable across conditions  
+## 🧩 Regime Map Schema (Mini)
 
-💛 Yellow Zone — “Assumption‑Heavy”
-• Model‑dependent  
-• Mixed‑regime behavior  
-• Environmental sensitivity  
-• Compensation & filtering layers  
-
-❤️ Red Zone — “Fragile & Inference‑Heavy”
-• Nonlinear or unstable  
-• Substrate‑sensitive  
-• Multi‑stage inference  
-• Drift‑prone or opaque  
-
-────────────────────────────────
-🧭 SET Axes (Substrate Anchors)
-────────────────────────────────
-🌀 Spin — polarization, magnetic coupling  
-⚡ Elec — sensor readout, digital logic  
-🔥 Temp — drift, stability, compensation  
-
-────────────────────────────────
-🧩 Regime Map Schema (Mini)
-────────────────────────────────
 name: instrument/module  
 zone: 💚 / 💛 / ❤️  
 substrate_axes: 🌀 ⚡ 🔥  
