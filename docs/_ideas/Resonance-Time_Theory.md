@@ -48,7 +48,7 @@ This note summarizes working definitions and principles; detailed derivations an
 - [🌈 Spectrum Standards](https://www.triadicframeworks.org/spectrum_standards_reviewed)
 - [📡 Scientific Instruments Fw/Sw Reviewed](https://www.triadicframeworks.org/scientific_instrument_review)
 - [🧠 Substrate Mind Science](https://www.triadicframeworks.org/substrate_mind_science)
-- [🧭 RTT canon papers - Michigan Manifestations](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/)
+- [🧭 RTT canon papers - Michigan Manifestations](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md)
 - [🤟 RTT API](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/api/rtt)
 - [👨‍🔬 RTT SDK](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt-sdk)
 - [📈 Developer Code for Every Language](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html)
