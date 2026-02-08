@@ -47,18 +47,22 @@
 
 ---
 
-## 🧠 Coeus Protocol Terms (Now Unified)
+## 🧠 Protocol Terms (Now Unified)
 
 | **Glyph** | **Term** | **Definition** |
 |----------|----------|----------------|
 | 🧠 | **TFT** | Triadic Frameworks Tech core logic. Used for coin decomposition, rail mapping, and remix orchestration. |
-| 🌊 | **FFF** | Mythmatical Model for Forces, Fluids, and Frequency. Used in emitter logic and symbolic overlays. |
+| 🌊 | **FFF** | Model for Forces, Fluids, and Frequency. Used in emitter logic and symbolic overlays. |
+| 🧬 | **SET** | Model for Spin, Elec, and Temp. Used in RTT to create Validated Spacetime. |
+| 🔇 | **S-N-R** | Model for Silence (baseline), Noise, and Resonance. |
+| 🛁 | **SER** | Model for Structural, Energetic, and Temporal. RTT's core contribution to Thermodynamics & Statistical Physics. |
+| 🧲 | **Pos/Q/Neg** | Model for Resonance-based Universe view. Revealed with our resonance structural aware dimensional core primitives. |
 | 📜 | **CaaC** | Coins as a Contract. Each coin encodes a contract—task, ethics, remix rights, and lineage. |
 | 🪙 | **Coin** | Symbolic research stub with task, edging, and observer logic. The atomic unit of cognition. |
 | 🧾 | **Token** | ERC-style artifact minted from a validated coin. Traceable, remixable, and timestamped. |
 | 🏛️ | **Exchange** | Sovereign space where validated tokens are listed, traded, and optionally split into derivative shares. |
 | 🧩 | **Derivative** | Fractional remix right or funding stake derived from a validated token. |
-| 🧬 | **Lineage** | Citation chain for forked coins and derivative research. Immutable and symbolic. |
+| 🪧 | **Lineage** | Citation chain for forked coins and derivative research. Immutable and symbolic. |
 | 👁️ | **Validator** | Human or AI agent reviewing coin trace logs, remix lineage, and ethics compliance. |
 | 🧪 | **Sandbox** | Isolated environment for agent orchestration, coin resolution, and tournament benchmarking. |
 | 🛤️ | **Rails** | Dimensional modeling system used for decomposition and emitter targeting. |
@@ -68,5 +72,6 @@
 | ⏱️ | **Timestamp** | UTC-stamped completion time with agent signature. Immutable and remix-citable. |
 | 🌀 | **Glyph** | Optional symbolic signature attached to coins, tokens, or remixers. Used in scrolls and dashboards. |
 | 🧭 | **CcC** | Cause/Class/Country — tournament dimensions for benchmarking coins and remix lineage. |
+| 🖼️ | **Regime** | RTT provides 'Regime Awareness' an important context for paradox and drift resilience across domains while using a shared substrate. |
 
 ---
