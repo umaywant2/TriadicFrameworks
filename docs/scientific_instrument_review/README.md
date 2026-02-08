@@ -133,3 +133,92 @@ The hardware and FW/SW audits form a **single conceptual map**:
 - Regimes show where the system is **aligned**, **assumption‑dependent**, or **fragile**.  
 
 This unified structure helps learners understand not just *what* instruments measure, but *how* those measurements become data.
+
+---
+
+# **Scientific Measurement Stack — Text Diagram**
+
+```
+┌───────────────────────────────────────────────────────────────┐
+│                     SCIENTIFIC MEASUREMENT STACK              │
+└───────────────────────────────────────────────────────────────┘
+
+                    (What is physically measured)
+┌───────────────────────────────────────────────────────────────┐
+│                           HARDWARE                            │
+│   • sensors, optics, mechanics                                │
+│   • produces raw physical signals                             │
+│   • governed by physical regimes (pos / Q / neg)              │
+└───────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+                    (How signals are captured)
+┌───────────────────────────────────────────────────────────────┐
+│                     EMBEDDED FIRMWARE                         │
+│   • timing loops, ADC readout, control logic                  │
+│   • low‑level, deterministic, substrate‑aware                 │
+│   • introduces minimal inference                              │
+└───────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+                    (How signals are interpreted)
+┌───────────────────────────────────────────────────────────────┐
+│                         SOFTWARE                              │
+│   • drivers, UIs, analysis pipelines, visualization tools     │
+│   • introduces models, assumptions, and inference layers      │
+│   • can amplify or stabilize hardware behavior                │
+└───────────────────────────────────────────────────────────────┘
+                                │
+                                ▼
+                    (How meaning is extracted)
+┌───────────────────────────────────────────────────────────────┐
+│                     INTERPRETIVE LAYER                        │
+│   • peak fitting, inversion, reconstruction, AI models        │
+│   • highest inference, highest fragility                      │
+│   • where regime transitions are most visible                 │
+└───────────────────────────────────────────────────────────────┘
+
+
+──────────────────────────────────────────────────────────────────
+                TRIADIC REGIMES ACROSS THE STACK
+──────────────────────────────────────────────────────────────────
+
+┌──────────────┬─────────────────────────────┬───────────────────────┐
+│  GREEN ZONE  │          YELLOW ZONE        │   RED ZONE            │
+├──────────────┼─────────────────────────────┼───────────────────────┤
+│ • stable     │ • assumption‑dependent      │ • fragile             │
+│ • coherent   │ • mixed‑regime              │ • inference‑heavy     │
+│ • low drift  │ • compensation & modeling   │ • substrate‑sensitive │
+│ • direct     │ • adaptive behavior         │ • nonlinear           │
+└──────────────┴─────────────────────────────┴───────────────────────┘
+
+Hardware, firmware, and software can each sit in **different regimes**  
+at the same time. The overall system inherits the **weakest link**.
+
+Example:
+- stable optics (Green)  
+- adaptive filtering firmware (Yellow)  
+- AI‑based interpretation (Red)  
+→ overall system behaves as **Red‑zone**.
+
+
+──────────────────────────────────────────────────────────────────
+                HOW THE LAYERS INTERACT (AT A GLANCE)
+──────────────────────────────────────────────────────────────────
+
+RAW PHYSICAL SIGNAL
+        │
+        ▼
+HARDWARE  ──►  produces data with physical constraints
+        │
+        ▼
+FIRMWARE ───►  captures & conditions data (low inference)
+        │
+        ▼
+SOFTWARE ───►  interprets & transforms data (medium inference)
+        │
+        ▼
+INTERPRETIVE LAYER ─► meaning, models, reconstruction (high inference)
+```
+
+Regime transitions can occur at **any layer**, but they compound as you move upward.
