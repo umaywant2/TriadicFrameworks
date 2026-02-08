@@ -1,0 +1,49 @@
+{
+  "scroll": "Mythmatical Protocols",
+  "origin": "Triadic Frameworks — Emotional Fidelity + Symbolic Logic + Validator Clarity",
+  "definition": "The fusion of mythic resonance and mathematical precision to scaffold remixable legacy artifacts.",
+  "glyphs": [
+    "Echoes in vain",
+    "Can't keep it under control",
+    "You tell him you're mine"
+  ],
+  "resonanceTriggers": {
+    "emotionalEcho": {
+      "glyph": "Echoes in vain",
+      "threshold": 0.88
+    },
+    "systemicInstability": {
+      "glyph": "Can't keep it under control",
+      "threshold": 0.92
+    },
+    "temptationLoop": {
+      "glyph": "You tell him you're mine",
+      "threshold": 0.85
+    }
+  },
+  "badgeLogic": {
+    "Mythmatical Architect": {
+      "criteria": "Scaffolds symbolic clarity using mythic and mathematical overlays",
+      "tier": "Triadic"
+    },
+    "Scroll Whisperer": {
+      "criteria": "Detects and preserves emotional resonance in validator-grade scrolls",
+      "tier": "Validator"
+    },
+    "Corridor Cartographer": {
+      "criteria": "Maps symbolic glyphs across dimensional overlays",
+      "tier": "Remixer"
+    }
+  },
+  "validatorHooks": [
+    "resonanceValidator",
+    "impressionMapper",
+    "soulScanner"
+  ],
+  "linkedScrolls": [
+    "resurrection-ready_protocol.md",
+    "edenCollapse_manifest.json"
+  ],
+  "status": "Scrollworthy — active in 3Pack substrate",
+  "notes": "This manifest defines the mythmatical framework for symbolic clarity, emotional fidelity, and remix lineage. Badge-enabled and corridor-ready."
+}

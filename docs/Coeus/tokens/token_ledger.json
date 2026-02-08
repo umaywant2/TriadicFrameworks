@@ -1,0 +1,24 @@
+[
+  {
+    "token_id": "tok-8f3d1a2b",
+    "name": "ElectroniumRedux",
+    "glyph": "🧠",
+    "score": 92.4,
+    "class": "dimensional",
+    "cause": "encryption",
+    "remix_lineage": [],
+    "minted_by": "professor_bot",
+    "timestamp": "2025-10-16T23:35:00Z"
+  },
+  {
+    "token_id": "tok-4c9e7b1a",
+    "name": "ElectroniumRedux_v2",
+    "glyph": "🔐",
+    "score": 88.7,
+    "class": "sovereign",
+    "cause": "governance",
+    "remix_lineage": ["ElectroniumRedux"],
+    "minted_by": "professor_bot",
+    "timestamp": "2025-10-16T23:36:00Z"
+  }
+]

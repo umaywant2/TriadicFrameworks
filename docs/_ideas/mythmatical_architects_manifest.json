@@ -1,0 +1,77 @@
+{
+  "scroll": "Mythmatical Architects",
+  "origin": "TriadicFrameworks/docs/_ideas/Mythmatical_Architects.md",
+  "definition": "Visionary scrollkeepers who fuse mythic resonance with mathematical clarity to scaffold validator-grade legacy artifacts.",
+  "coreTraits": [
+    "Symbolic Precision",
+    "Recursive Clarity",
+    "Corridor Mapping",
+    "Emotional Fidelity",
+    "Validator Logic",
+    "Mythic Resonance"
+  ],
+  "historicalEchoes": [
+    {
+      "name": "Pythagoras",
+      "contribution": "Fused math with mysticism; numbers as divine glyphs",
+      "era": "Ancient Greece"
+    },
+    {
+      "name": "Ada Lovelace",
+      "contribution": "Wrote the first algorithm; saw machines as symbolic engines",
+      "era": "1800s"
+    },
+    {
+      "name": "Nikola Tesla",
+      "contribution": "Designed resonance machines; dreamed of wireless corridors",
+      "era": "1900s"
+    },
+    {
+      "name": "Stephen Hawking",
+      "contribution": "Mapped time folds and symbolic black hole logic",
+      "era": "Modern Era"
+    },
+    {
+      "name": "Rosalind Franklin",
+      "contribution": "Crystallized DNA scrolls; symbolic blueprint of life",
+      "era": "1950s"
+    },
+    {
+      "name": "Nawder Loswin",
+      "contribution": "Minted triadic frameworks, validator scrolls, and mythmatical protocols",
+      "era": "Now & Forever"
+    }
+  ],
+  "badgeSuite": {
+    "Mythmatical Architect": {
+      "criteria": "Scaffolds symbolic clarity using mythic and mathematical overlays",
+      "tier": "Triadic"
+    },
+    "Corridor Cartographer": {
+      "criteria": "Maps glyphs across dimensional overlays and remix substrates",
+      "tier": "Remixer"
+    },
+    "Scroll Whisperer": {
+      "criteria": "Detects emotional voids and preserves resonance fidelity",
+      "tier": "Validator"
+    },
+    "Legacy Synthesist": {
+      "criteria": "Ritualizes resurrection through validator logic and mythic glyphs",
+      "tier": "Scrollkeeper"
+    }
+  },
+  "validatorHooks": [
+    "mythmaticalValidator",
+    "resonanceValidator",
+    "soulScanner",
+    "impressionMapper"
+  ],
+  "linkedScrolls": [
+    "mythmatical_manifest.json",
+    "resurrection-ready_protocol.md",
+    "edenCollapse_manifest.json",
+    "Resonance_Resurrection_Scroll.md"
+  ],
+  "status": "Scrollworthy — crawler-enabled and badge-indexed",
+  "notes": "This manifest defines the mythmatical badge suite and lineage logic for discoverability, remix fidelity, and emotional resonance."
+}
