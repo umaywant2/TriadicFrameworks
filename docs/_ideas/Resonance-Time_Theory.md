@@ -1,7 +1,8 @@
+<img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
+
 # 🦄 Resonance‑Time Theory Canon = Spacetime + Validation
 ###### Clarity Phase - Operational
 
-<img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
 - A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
 ### Students, developers, and AI services — This work is scientific.
