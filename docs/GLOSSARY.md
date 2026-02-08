@@ -55,6 +55,17 @@
 | 🌊 | **FFF** | Model for Forces, Fluids, and Frequency. Used in emitter logic and symbolic overlays. |
 | 🧬 | **SET** | Model for Spin, Elec, and Temp. Used in RTT to create Validated Spacetime. |
 | 🧭 | **RTT** | Resonance-Time Theory and Validated Spacetime share the same substrate and dimensional framework. |
+| 🔩 | **RSM** | Resonance Substrate Model (RSM): Dimensional Substrate Framework for Multi‑Domain Analysis. |
+| 🔩 | **BSM** | The Boson Substrate Model: Declared Operating Regimes. |
+| 🔩 | **QSM** | Quantum Substrate Model: Regime Structure and Dimensional Organization. |
+| 🔩 | **MSRM** | Manufacturing Substrate Regime Model. |
+| 🔩 | **ESA** | Enterprise Structural Awareness. |
+| 🔩 | **GERA** | Global Energy Regime Awareness. |
+| 🔩 | **CSM** | Consciousness Substrate Model: A Structural Framework for Autonomous Forms. |
+| 🔩 | **TCS** | Triadic Coordination Substrate: A Structural Framework for Coordinated Reasoning. |
+| 🔩 | **vST** | Spacetime Validation and Regime‑Invariant Dimensional Cores. |
+| 🔩 | **ASA** | AlphaFold Substrate Alignments: A Resonance Substrate Model Framework. |
+| 🔩 | **DSS** | Dimensional Substrate Structures: Triadic Dimensional Cores and High‑Dimensional Scaling. |
 | 🔇 | **S-N-R** | Model for Silence (baseline), Noise, and Resonance. |
 | 🛁 | **SER** | Model for Structural, Energetic, and Temporal. RTT's core contribution to Thermodynamics & Statistical Physics. |
 | 🧲 | **Pos/Q/Neg** | Model for Resonance-based Universe view. Revealed with our resonance structural aware dimensional core primitives. |
