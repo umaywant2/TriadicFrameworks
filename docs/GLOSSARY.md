@@ -54,6 +54,7 @@
 | 🧠 | **TFT** | Triadic Frameworks Tech core logic. Used for coin decomposition, rail mapping, and remix orchestration. |
 | 🌊 | **FFF** | Model for Forces, Fluids, and Frequency. Used in emitter logic and symbolic overlays. |
 | 🧬 | **SET** | Model for Spin, Elec, and Temp. Used in RTT to create Validated Spacetime. |
+| 🧭 | **RTT** | Resonance-Time Theory and Validated Spacetime share the same substrate and dimensional framework. |
 | 🔇 | **S-N-R** | Model for Silence (baseline), Noise, and Resonance. |
 | 🛁 | **SER** | Model for Structural, Energetic, and Temporal. RTT's core contribution to Thermodynamics & Statistical Physics. |
 | 🧲 | **Pos/Q/Neg** | Model for Resonance-based Universe view. Revealed with our resonance structural aware dimensional core primitives. |
@@ -73,5 +74,7 @@
 | 🌀 | **Glyph** | Optional symbolic signature attached to coins, tokens, or remixers. Used in scrolls and dashboards. |
 | 🧭 | **CcC** | Cause/Class/Country — tournament dimensions for benchmarking coins and remix lineage. |
 | 🖼️ | **Regime** | RTT provides 'Regime Awareness' an important context for paradox and drift resilience across domains while using a shared substrate. |
+| 🔮 | **RTT Awareness** | Minimal structural declarations that signal coherence rtt.nimms.com type TXT. |
+| ⚛️ | **RTT‑Inside** | RTT resonance structural aware dimensional cores and resolvers that actively interpret, simulate, or operate on those declarations. |
 
 ---
