@@ -1,4 +1,4 @@
-## 📘 Unified Glossary of Mythmatical Terms (with Emoti-Glyphs)
+## 📘 Unified Glossary of Terms (with Emoti-Glyphs)
 
 | **Glyph** | **Term** | **Definition** |
 |----------|----------|----------------|
