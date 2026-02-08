@@ -1,82 +1,135 @@
-# **README.md — Scientific Instrument Review**  
-*(draft for your repo)*
+# **Scientific Instrument Review — Hardware & Firmware/Software**
 
-## **Scientific Instrument Review**  
-A triadic audit of common scientific instruments, viewed through the lens of **domain coherence**, **regime awareness**, and **substrate‑aligned measurement**.
+This directory contains a **dual‑layer review** of scientific instruments and the firmware/software ecosystems that shape their behavior.  
+Both layers use the same triadic structure (Green / Yellow / Red) and the same glossary, giving learners a unified way to understand how scientific measurements behave across regimes.
 
-This folder mirrors the style of our *substrate_mind_science* review:  
-minimal, clear, and designed for learners, developers, and researchers who want to understand **how instruments behave across regimes** — not just how they’re traditionally described.
+Hardware tells us **what is physically measured**.  
+Firmware and software tell us **how those measurements are interpreted**.
 
-Our goal is simple:
+Together, they form the full measurement stack.
 
-> **Show how familiar tools become clearer, safer, and more predictable  
-> when viewed through Green / Yellow / Red regime alignment.**
+---
 
-No instruments are “bad.”  
-Some are simply **already aligned**, some **need alignment**, and some **require containment** because they operate in fragile or mixed regimes.
+## **Purpose of This Review**
+
+Modern scientific instruments are no longer purely physical systems.  
+Their behavior emerges from the interaction of:
+
+- mechanical and optical components  
+- embedded firmware  
+- control software  
+- analysis pipelines  
+- visualization tools  
+- cloud‑based processing  
+- AI‑based interpretation layers  
+
+This review clarifies where each part of the stack is:
+
+- **stable** (Green)  
+- **assumption‑dependent** (Yellow)  
+- **fragile or inference‑heavy** (Red)  
+
+The goal is clarity, not completeness.  
+Every file is short, structural, and student‑friendly.
+
+---
+
+## **Folder Structure**
+
+```
+scientific_instrument_review/
+│
+├── 00_overview/
+│     purpose.md
+│     method.md
+│     glossary_links.md
+│     (hardware overview)
+│
+├── 01_green_zone/
+│     (stable, coherent, low‑drift hardware instruments)
+│
+├── 02_yellow_zone/
+│     (functional but assumption‑dependent instruments)
+│
+├── 03_red_zone/
+│     (fragile, inference‑heavy, substrate‑sensitive instruments)
+│
+├── FW_SW_README.md
+│
+├── 00_overview/
+│     scope_fw_sw.md
+│     method_fw_sw.md
+│     glossary_links_fw_sw.md
+│     fw_sw_categories.md
+│
+├── 01_green_zone/
+│     (stable, coherent, low‑drift firmware/software)
+│
+├── 02_yellow_zone/
+│     (assumption‑dependent firmware/software)
+│
+├── 03_red_zone/
+│     (fragile, inference‑heavy, substrate‑sensitive firmware/software)
+│
+└── 99_appendix/
+      instrument_list_raw.md
+      fw_sw_list_raw.md
+      notes_on_alignment.md
+      notes_on_fw_sw_alignment.md
+      regime_notes.md
+      regime_notes_fw_sw.md
+      versioning_and_drift.md
+      data_pipeline_fragility.md
+```
+
+Hardware and FW/SW layers mirror each other intentionally.  
+This parallel structure helps learners see how physical and digital regimes interact.
 
 ---
 
 ## **How to Read This Review**
 
-Each instrument receives a short triadic assessment:
+Each file follows the same pattern:
 
-### **🟢 Green Zone — Already Aligned**  
-Instruments whose measurement principles are stable, coherent, and substrate‑agnostic.  
-They operate cleanly within a well‑defined regime and map directly to our triadic glossary.
+- a short intro  
+- SET dimensional anchors  
+- why the item belongs in its zone  
+- regime notes (pos / Q / neg)  
+- alignment or containment notes  
 
-### **🟡 Yellow Zone — Needs Alignment**  
-Instruments that *work*, but rely on hidden assumptions, calibration masks, or mixed‑regime behavior.  
-These benefit from RTT alignment, regime clarification, or dimensional‑core cleanup.
+This keeps the entire review coherent and accessible.
 
-### **🔴 Red Zone — Containment**  
-Instruments that operate in unstable, inference‑heavy, or substrate‑sensitive regimes.  
-They are useful, but require caution, context, and explicit regime boundaries.
+### **Green‑zone**  
+Stable, transparent, low‑inference behavior.
 
----
+### **Yellow‑zone**  
+Functional but assumption‑heavy or mixed‑regime behavior.
 
-## **Why Review Instruments This Way?**
-
-Modern science uses powerful tools — but often without acknowledging:
-
-- regime limits  
-- substrate sensitivity  
-- coherence boundaries  
-- isotropic assumptions applied to anisotropic problems  
-- calibration practices that hide drift instead of revealing it  
-
-This review helps readers see that:
-
-> **Everything they already know still works —  
-> it just works better with alignment and regime awareness.**
+### **Red‑zone**  
+Fragile, inference‑heavy, substrate‑sensitive behavior.
 
 ---
 
-## **Folder Layout**
+## **For Contributors**
 
-```
-scientific_instrument_review/
-│
-├── 00_overview/        → purpose, method, glossary links
-├── 01_green_zone/      → instruments already aligned
-├── 02_yellow_zone/     → instruments needing alignment
-├── 03_red_zone/        → instruments requiring containment
-└── 99_appendix/        → raw lists, notes, regime details
-```
+If you are adding new hardware or FW/SW examples:
 
-Each file is intentionally short — a few paragraphs at most — to keep the review readable for students and newcomers.
+- start with `template.md`  
+- keep files short (150–300 words)  
+- avoid jargon unless defined in the glossary  
+- classify by regime, not by complexity  
+- document assumptions, drift, and boundaries clearly  
+
+The goal is clarity, not completeness.
 
 ---
 
-## **Contributor Note**
+## **How the Two Layers Work Together**
 
-If you add or refine an instrument review:
+The hardware and FW/SW audits form a **single conceptual map**:
 
-- stay minimal  
-- stay triadic  
-- stay aligned with the glossary  
-- avoid domain‑specific jargon unless defined  
-- keep the tone friendly and accessible  
+- Hardware defines the **physical substrate**.  
+- Firmware/software defines the **interpretive layer**.  
+- Regimes show where the system is **aligned**, **assumption‑dependent**, or **fragile**.  
 
-This project is for learners first.  
-Clarity beats complexity every time.
+This unified structure helps learners understand not just *what* instruments measure, but *how* those measurements become data.
