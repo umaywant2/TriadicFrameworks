@@ -3,26 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <title>Scientific Instrument Review — Index</title>
-
 <style>
 /* ============================================================
-   TRIADICFRAMEWORKS COSMIC DARK THEME — MOBILE FIRST
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
    ============================================================ */
 
-:root {
+  :root {
   --bg-main: #0d0f12;
   --bg-nav: #15181d;
   --border-subtle: #2a2f38;
   --text-main: #dfe7f3;
   --text-muted: #9aa4b2;
-  --accent: #8ab4ff;
+  --accent-rtt: #8ab4ff;
   --radius: 10px;
   --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-}
-
-html { scroll-behavior: smooth; }
-body {
+  }
+   
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
@@ -30,15 +31,45 @@ body {
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   line-height: 1.65;
   font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: flex;
   height: 100vh;
   overflow: hidden;
 }
+   
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 
-/* Sidebar */
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
 nav {
-  width: 300px;
+  width: 260px;
+  float: left;
   background: var(--bg-nav);
+  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
   border-right: 1px solid var(--border-subtle);
@@ -46,11 +77,10 @@ nav {
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent);
-  margin-top: 1.4rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 nav a {
@@ -65,7 +95,6 @@ nav a:hover {
   color: var(--text-main);
 }
 
-/* Content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -73,24 +102,21 @@ main {
 }
 
 main h1, main h2, main h3 {
-  background: var(--triadic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  color: var(--accent-rtt);
+  font-weight: 500;
 }
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent);
+  border-left: 2px solid var(--accent-rtt);
 }
 
 code {
   color: var(--text-main);
 }
 </style>
-
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
