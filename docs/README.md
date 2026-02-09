@@ -1,5 +1,3 @@
-# TriadicFrameworks
-
 <p align="center">
   <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
   <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,7 +6,9 @@
     <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
-</p>
+</p> 
+
+# TriadicFrameworks
 
 TriadicFrameworks is an open research framework for substrate‑aligned modeling of complex systems across cognition, ecology, civilization, and computation.
 
