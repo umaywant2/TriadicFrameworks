@@ -1,3 +1,4 @@
+```javascript
 // index.js — RTT SDK entrypoint (beta)
 
 import { RTTClient } from "./client.js";
@@ -11,4 +12,4 @@ export {
   Profile,
   Diagnostics
 };
-
+```
