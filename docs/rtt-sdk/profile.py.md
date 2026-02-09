@@ -1,3 +1,4 @@
+```python
 # profile.py — helper utilities for RTT site profiles (beta)
 
 def create_profile(version="1.0", supports=None, contact=""):
@@ -18,4 +19,4 @@ def validate_profile(profile):
     if "supports" not in profile or not isinstance(profile["supports"], list):
         return False
     return True
-
+```
