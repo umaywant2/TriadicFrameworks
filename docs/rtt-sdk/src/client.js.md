@@ -1,3 +1,4 @@
+```javascript
 // client.js — unified RTT API client (beta)
 
 export class RTTClient {
@@ -46,4 +47,4 @@ export class RTTClient {
     return res.json();
   }
 }
-
+```
