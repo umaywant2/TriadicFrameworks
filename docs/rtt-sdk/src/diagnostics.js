@@ -1,3 +1,4 @@
+```javascript
 // diagnostics.js — vST-beta diagnostics helpers (placeholders)
 
 export function buildValidatePayload({
@@ -18,4 +19,4 @@ export function buildTopologyPayload(data = {}) {
 
 // These helpers define the shape of future vST interactions.
 // They do not implement substrate logic.
-
+```
