@@ -1,3 +1,4 @@
+```javascript
 // diagnostics_handler.js — vST-beta diagnostics placeholders
 
 export async function validate(req, res) {
@@ -20,3 +21,4 @@ export async function topology(req, res) {
     message: "topology diagnostics are not yet active"
   });
 }
+```
