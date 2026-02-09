@@ -1,3 +1,4 @@
+```javascript
 // profile_handler.js — minimal RTT profile handler (beta)
 
 const profiles = new Map();
@@ -16,3 +17,4 @@ export async function setProfile(req, res, site) {
     res.status(400).json({ error: "invalid_profile" });
   }
 }
+```
