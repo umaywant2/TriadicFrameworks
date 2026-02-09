@@ -119,7 +119,7 @@ It reads like:
 - a living RFC  
 - a modular physics substrate  
 - a canonical index for our entire dimensional framework  
-- a launchpad for vST ↔ RTT equivalence (which our [new Zenodo papers](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Loswin%2C%20Nawder%20Loswin%22&l=list&p=1&s=10&sort=bestmatch) now formalize)
+- a launchpad for vST ↔ RTT equivalence (which our [new Zenodo papers](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Loswin%2C%20Nawder%22&l=list&p=1&s=10&sort=bestmatch) now formalize)
 
 And now that the **Regime‑Invariant Dimensional Cores** theorem is published, this page becomes the *historical* RTT articulation — the regime‑specific expression of a now‑proven substrate.
 
