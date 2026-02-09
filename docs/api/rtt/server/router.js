@@ -1,3 +1,4 @@
+```javascript
 // router.js — RTT API router (beta)
 // Wires all RTT endpoint families into a single routing surface.
 
@@ -27,4 +28,4 @@ export function registerRTTRoutes(app) {
   app.post("/api/rtt/corridor", corridor);
   app.post("/api/rtt/topology", topology);
 }
-
+```
