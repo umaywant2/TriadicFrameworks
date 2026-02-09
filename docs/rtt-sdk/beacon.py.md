@@ -1,3 +1,4 @@
+```python
 # beacon.py — helper utilities for RTT beacon events (beta)
 
 import time
@@ -29,4 +30,4 @@ def build_beacon_payload(site, session, event):
         "ts": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "structure": collect_structure_snapshot()
     }
-
+```
