@@ -1,3 +1,4 @@
+```javascript
 // server.js — minimal RTT API server (beta)
 // This file wires the RTT router into a tiny HTTP server.
 // It is intentionally lightweight and suitable for local testing.
@@ -102,4 +103,4 @@ registerRTTRoutes(app);
 app.listen(3000, () => {
   console.log("RTT API server running on http://localhost:3000");
 });
-
+```
