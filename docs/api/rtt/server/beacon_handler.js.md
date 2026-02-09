@@ -1,3 +1,4 @@
+```javascript
 // beacon_handler.js — minimal RTT beacon handler (beta)
 
 export async function handleBeacon(req, res) {
@@ -12,3 +13,4 @@ export async function handleBeacon(req, res) {
     res.status(400).json({ error: "invalid_request" });
   }
 }
+```
