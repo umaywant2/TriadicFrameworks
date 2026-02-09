@@ -1,3 +1,4 @@
+```python
 # __init__.py — RTT SDK package initializer (beta)
 
 from .client import RTTClient
@@ -27,3 +28,4 @@ __all__ = [
     "build_corridor_payload",
     "build_topology_payload"
 ]
+```
