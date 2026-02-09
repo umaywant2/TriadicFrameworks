@@ -1,3 +1,4 @@
+```javascript
 // beacon.js — helper utilities for RTT beacon events (beta)
 
 export function createSessionId() {
@@ -32,4 +33,4 @@ export function buildBeaconPayload({ site, session, event }) {
     structure: collectStructureSnapshot()
   };
 }
-
+```
