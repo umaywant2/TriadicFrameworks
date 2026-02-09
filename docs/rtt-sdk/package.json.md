@@ -1,3 +1,4 @@
+```json
 {
   "name": "rtt-sdk",
   "version": "0.1.0",
@@ -14,4 +15,4 @@
   "author": "TriadicFrameworks",
   "license": "MIT"
 }
-
+```
