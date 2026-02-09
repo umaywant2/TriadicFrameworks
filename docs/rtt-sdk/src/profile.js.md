@@ -1,3 +1,4 @@
+```javascript
 // profile.js — helper utilities for RTT site profiles (beta)
 
 export function createProfile({
@@ -18,4 +19,4 @@ export function validateProfile(profile) {
   if (!Array.isArray(profile.supports)) return false;
   return true;
 }
-
+```
