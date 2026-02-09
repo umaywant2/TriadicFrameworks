@@ -1,3 +1,4 @@
+```python
 # diagnostics.py — vST-beta diagnostics helpers (placeholders)
 
 def build_validate_payload(system_map=None, flows=None, constraints=None):
@@ -17,4 +18,4 @@ def build_topology_payload(data=None):
 
 # These helpers define the shape of future vST interactions.
 # They do not implement substrate logic.
-
+```
