@@ -1,3 +1,4 @@
+```python
 import requests
 import json
 
@@ -30,3 +31,4 @@ class RTTClient:
     def topology(self, payload):
         r = requests.post(f"{self.base_url}/topology", json=payload)
         return r.json()
+```
