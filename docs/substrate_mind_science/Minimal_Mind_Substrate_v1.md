@@ -1,4 +1,8 @@
-# Minimal Empirical Mind Substrate v1
+# Substrate Mind Science using [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst/curation-policy)
+
+With an absurd goal of Consciousness Transfers believed to be possible, we imagine.
+
+## Minimal Empirical Mind Substrate v1
 
 ## 1. Scope
    - This substrate describes only those aspects of “mind” that can be:
