@@ -1,3 +1,4 @@
+<!-- quantum_energy_bank_protocols.svg -->
 <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
   <!-- Hybrid Battery Node -->
   <polygon points="150,100 180,120 180,160 150,180 120,160 120,120" fill="#FFD700" stroke="#333" stroke-width="2"/>
