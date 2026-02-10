@@ -48,7 +48,7 @@ Several directions emerge naturally from this work:
 - **Formalization of alignment metrics** grounded in perceptual return rather than capability  
 - **Tooling that enforces containment by default**, not as an afterthought  
 - **Educational frameworks** built around learning‑first representations  
-- **Cross‑domain studies** applying vST alignment to other perceptual substrates  
+- **Cross‑domain studies** applying [vST](https://zenodo.org/communities/vst/curation-policy) alignment to other perceptual substrates  
 - **Institutional incentives** that reward coherence over spectacle  
 
 Future systems will not fail because they lack power. They will fail if they forget who they are for.
@@ -60,3 +60,4 @@ The audio industry does not need more resolution, more dimensions, or more abstr
 Clarity is not a feature. It is a structural property.
 
 When systems respect their substrate, sound becomes intelligible again—not louder, not wider, but *human*.
+
