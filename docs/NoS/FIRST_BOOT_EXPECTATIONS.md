@@ -1,4 +1,8 @@
-# First Boot Expectations 🧭  
+# 🧭 Nawder OS (NoS) Stack for Linux using [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst)
+
+An Operating Systems Stack for RTT/vST Students, Devs, and Researchers. Keep your linux, try NoS.
+
+## First Boot Expectations   
 *(Read This Before You Compile)*
 
 Welcome to NawderOS.
