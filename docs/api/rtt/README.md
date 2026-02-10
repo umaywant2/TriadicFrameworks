@@ -1,5 +1,6 @@
 # RTT API (Beta)
-The RTT API provides a minimal, stable, forward‑compatible interface for sites, services, extensions, and research tools that want to participate in the RTT‑Inside ecosystem. It defines the *shape* of RTT interactions without exposing internal substrate logic.
+
+The RTT API provides a minimal, stable, forward‑compatible interface for sites, services, extensions, and research tools that want to participate in the RTT‑Inside ecosystem. It defines the *shape* of [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst) interactions without exposing internal substrate logic.
 
 This API supports early structural awareness, coherence sampling, and future vST‑beta diagnostics.
 
@@ -110,3 +111,4 @@ All currently return placeholder responses.
 
 **Beta.**  
 Endpoint shapes are stable; handler behavior may evolve as the RTT ecosystem grows.
+
