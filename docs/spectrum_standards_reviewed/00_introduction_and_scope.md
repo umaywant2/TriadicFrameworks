@@ -1,3 +1,7 @@
+# Spectrum Standards Reviewed with [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst/curation-policy)
+
+May the many substrate regimes be aligned!
+
 ## Introduction and Scope
 
 Modern spectrum standards underpin nearly every layer of contemporary infrastructure, from communications and navigation to sensing, automation, and environmental monitoring. These standards have evolved through decades of technical innovation, institutional coordination, and market‑driven allocation. As a result, they are often treated as fixed technical artifacts rather than as expressions of deeper structural assumptions.
