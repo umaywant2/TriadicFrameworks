@@ -2,7 +2,7 @@
 
 The RTT SDK provides a minimal, stable, and forward‑compatible interface for interacting with the RTT API. It supports early RTT‑Inside integrations across browsers, services, and research environments while the full vST substrate remains in development.
 
-This SDK defines the **shape** of RTT interactions without exposing internal substrate logic. It is safe for early adopters and suitable for experimentation, prototyping, and structural‑awareness tooling.
+This SDK defines the **shape** of [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst) interactions without exposing internal substrate logic. It is safe for early adopters and suitable for experimentation, prototyping, and structural‑awareness tooling.
 
 ---
 
