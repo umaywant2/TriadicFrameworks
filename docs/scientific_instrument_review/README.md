@@ -1,4 +1,8 @@
-# **Scientific Instrument Review — Hardware & Firmware/Software**
+# Scientific Instrument Review using [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst/curation-policy)
+
+May the many tools of science align with the substrate!
+
+## Hardware & Firmware/Software
 
 This directory contains a **dual‑layer review** of scientific instruments and the firmware/software ecosystems that shape their behavior.  
 Both layers use the same triadic structure (Green / Yellow / Red) and the same glossary, giving learners a unified way to understand how scientific measurements behave across regimes.
@@ -222,3 +226,4 @@ INTERPRETIVE LAYER ─► meaning, models, reconstruction (high inference)
 ```
 
 Regime transitions can occur at **any layer**, but they compound as you move upward.
+
