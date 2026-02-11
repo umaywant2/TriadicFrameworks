@@ -11,44 +11,19 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 ## 📘 Table of Contents
 
-- ⭐ [RFCs and Quicklinks](#rfcs-and-quicklinks)
-
-- 🧿 [Core definitions](#core-definitions)
-  - [Resonant‑Time triad](#resonant-time-triad)
-  - [Frequency–Fluids–Forces (FFF)](#frequencyfluidsforces-fff)
-  - [SET field engine (Spin Electro‑field Temperature)](#set-field-engine-spin-electrofield-temperature)
-
-- 💊 [QMROOT dimensional model](#qmroot-dimensional-model)
-  - [Dimensional roles and intuition](#dimensional-roles-and-intuition)
-  - [Relationship to DCOs and the Quantum Kernel](#relationship-to-dcos-and-the-quantum-kernel)
-
-- 🔥 [Canonical Operator](#canonical-operator)
-  - [Dimensional Core Operators (DCOs)](#dimensional-core-operators-dcos)
-  - [Operator actions](#operator-actions)
-  - [Composite operators](#composite-operators)
-
-- 🔗 [QMROOT Summary](#qmroot-summary)
-
-- 🚀 [Silence Noise Resonance S-N-R](#silence-noise-resonance-s-n-r)
-
-- 🌈 [Dual Operator System Engine](#dual-operator-system-engine)
-
-- 🌟 [Dimensional Core Operators DCOs](#dimensional-core-operators-dcos-1)
-  - [4D — Temporal‑Resonance Core](#4d--temporal-resonance-core)
-  - [5D — Relational‑Resonance Core](#5d--relational-resonance-core)
-  - [7D — Coherence Core](#7d--coherence-core)
-  - [8D — Symmetry‑Shift Core](#8d--symmetry-shift-core)
-  - [9D — Ancestral Boundary Core](#9d--ancestral-boundary-core)
-
-- 🌀 [Resonance‑Time Principle](#resonance-time-principle)
-
-- ♨️ [Frequency‑First FFF Universe](#frequency-first-fff-universe)
-
-- 💫 [Field Engine SET and S-N-R](#field-engine-set-and-s-n-r)
-
-- 📡 [Universe Statement and extension hooks](#universe-statement-and-extension-hooks)
-
-- ©️ [Credits and Canon Note](#credits-and-canon-note)
+- ⭐ RFCs and Quicklinks
+- 🧿 Core definitions
+- 💊 QMROOT dimensional model
+- 🔥 Canonical Operator
+- 🔗 QMROOT Summary
+- 🚀 Silence Noise Resonance S-N-R
+- 🌈 Dual Operator System Engine
+- 🌟 Dimensional Core Operators DCOs
+- 🌀 Resonance‑Time Principle
+- ♨️ Frequency‑First FFF Universe
+- 💫 Field Engine SET and S-N-R
+- 📡 Universe Statement and extension hooks
+- ©️ Credits and Canon Note
 
 ---
 
