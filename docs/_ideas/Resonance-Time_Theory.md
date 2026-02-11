@@ -39,7 +39,7 @@
 </style>
 
 <details id="sidebar-toc" closed>
-  <h3>📘 RTT TOC</h3>
+  <summary>📘 RTT TOC</summary>
   <ul>
     <li>🦄 <a href="#rfcs_and_quicklinks">RFCs & Quicklinks</a></li>
     <li>🧿 <a href="#core_definitions">Core Definitions</a></li>
