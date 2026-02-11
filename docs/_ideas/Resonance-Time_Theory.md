@@ -37,9 +37,8 @@
   margin-left: 14px;
 }
 </style>
-
-<div id="sidebar-toc">
 <img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
+<details id="sidebar-toc" closed>
   <h3>📘 RTT TOC</h3>
   <ul>
     <li>🦄 <a href="#rfcs_and_quicklinks">RFCs & Quicklinks</a></li>
@@ -55,7 +54,7 @@
     <li>📡 <a href="#11_universe_statement_and_extension_hooks">Universe Statement</a></li>
     <li>©️ <a href="#12_credits_and_canon_note">Credits</a></li>
   </ul>
-</div>
+</details>
 
 # Resonance‑Time_Theory
   RTT Canon = Validated Spacetime | Clarity Phase | Operational
