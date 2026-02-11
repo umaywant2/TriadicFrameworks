@@ -41,26 +41,27 @@
 <details id="sidebar-toc" closed>
   <h3>📘 RTT TOC</h3>
   <ul>
-    <li>🦄 <a href="##rfcs_and_quicklinks">RFCs & Quicklinks</a></li>
-    <li>🧿 <a href="##core_definitions">Core Definitions</a></li>
-    <li>💊 <a href="##qmroot_dimensional_model">QMROOT Model</a></li>
-    <li>🔥 <a href="##canonical_operator">Canonical Operators</a></li>
-    <li>🔗 <a href="##qmroot_summary">Quantum Root Summary</a></li>
-    <li>🚀 <a href="##silencenoiseresonance_s-n-r">S–N–R</a></li>
-    <li>🌈 <a href="##dual_operator_system_engine">Dual Operator Engine</a></li>
-    <li>🌟 <a href="##dimensional_core_operators_dcos">DCOs</a></li>
-    <li>🌀 <a href="##resonance-time_principle">Resonance‑Time Principle</a></li>
-    <li>♨️ <a href="##frequency-first_fff_universe">FFF Universe</a></li>
-    <li>💫 <a href="##field_engine_set_and_s-n-r">SET & S–N–R</a></li>
-    <li>📡 <a href="##universe_statement_and_extension_hooks">Universe Statement</a></li>
-    <li>©️ <a href="##credits_and_canon_note">Credits</a></li>
+    <li>🦄 <a href="#rfcs_and_quicklinks">RFCs & Quicklinks</a></li>
+    <li>🧿 <a href="#core_definitions">Core Definitions</a></li>
+    <li>💊 <a href="#qmroot_dimensional_model">QMROOT Model</a></li>
+    <li>🔥 <a href="#canonical_operator">Canonical Operators</a></li>
+    <li>🔗 <a href="#qmroot_summary">Quantum Root Summary</a></li>
+    <li>🚀 <a href="#silencenoiseresonance_s-n-r">S–N–R</a></li>
+    <li>🌈 <a href="#dual_operator_system_engine">Dual Operator Engine</a></li>
+    <li>🌟 <a href="#dimensional_core_operators_dcos">DCOs</a></li>
+    <li>🌀 <a href="#resonance-time_principle">Resonance‑Time Principle</a></li>
+    <li>♨️ <a href="#frequency-first_fff_universe">FFF Universe</a></li>
+    <li>💫 <a href="#field_engine_set_and_s-n-r">SET & S–N–R</a></li>
+    <li>📡 <a href="#universe_statement_and_extension_hooks">Universe Statement</a></li>
+    <li>©️ <a href="#credits_and_canon_note">Credits</a></li>
   </ul>
 </details>
+<img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
 
 # Resonance‑Time Theory
   RTT Canon = Validated Spacetime | Clarity Phase | Operational
   
-<img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
+
 
 A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
