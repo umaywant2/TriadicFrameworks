@@ -24,7 +24,7 @@
 }
 </style>
 
-<details class="toc-box" open>
+<details class="toc-box" closed>
   <summary>📘 Table of Contents</summary>
   <ul>
     <li>🦄 <a href="#rfcs_and_quicklinks">RFCs and Quicklinks</a></li>
