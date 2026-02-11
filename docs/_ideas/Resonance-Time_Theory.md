@@ -1,92 +1,74 @@
-<img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
-
 <style>
-.toc-box {
-  border: 1px solid #444;
-  border-radius: 6px;
-  padding: 10px 14px;
-  background: #111;
-  color: #eee;
-  font-size: 0.95rem;
+#sidebar-toc {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 240px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 12px 16px;
+  background: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  z-index: 9999;
 }
-.toc-box summary {
-  cursor: pointer;
-  font-weight: 600;
+#sidebar-toc h3 {
+  margin-top: 0;
   font-size: 1.1rem;
-  padding: 6px 0;
+  color: #fff;
 }
-.toc-box a {
+#sidebar-toc a {
   color: #7fc7ff;
   text-decoration: none;
 }
-.toc-box a:hover {
+#sidebar-toc a:hover {
   text-decoration: underline;
+}
+#sidebar-toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+#sidebar-toc li {
+  margin-bottom: 6px;
+}
+#sidebar-toc li ul {
+  margin-left: 14px;
 }
 </style>
 
-<details class="toc-box" closed>
-  <summary>📘 Table of Contents</summary>
+<div id="sidebar-toc">
+<img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
+  <h3>📘 RTT TOC</h3>
   <ul>
-    <li>🦄 <a href="#rfcs_and_quicklinks">RFCs and Quicklinks</a></li>
-    <li>🧿 <a href="#core_definitions">Core Definitions</a>
-      <ul>
-        <li>💊 <a href="#1_resonant-time_triad">1. Resonant‑Time Triad</a></li>
-        <li>🔥 <a href="#2_frequencyfluidsforces_fff">2. Frequency–Fluids–Forces (FFF)</a></li>
-        <li>🚀 <a href="#3_set_field_engine_spinelectro-fieldtemperature">3. SET Field Engine</a></li>
-        <li>🌈 <a href="#4_quantum_kernel_0d_root">4. Quantum Kernel: 0D Root</a></li>
-        <li>🌟 <a href="#qmroot-dimensional-model">QMROOT Dimensional Model</a></li>
-        <li>🪄 <a href="#41_canonical_operator">4.1 Canonical Operator Notation</a></li>
-        <li>🐛 <a href="#42_one-screen_qmroot_summary">4.2 One‑Screen QMROOT Summary</a></li>
-      </ul>
-    </li>
-    <li>🌑 <a href="#5_silencenoiseresonance_snr">Silence–Noise–Resonance (S–N–R)</a></li>
-    <li>🎱 <a href="#6_dual_operator_system_engine">Dual Operator System Engine</a></li>
-    <li>🔂 <a href="#7_dimensional_core_operators_dcos">Dimensional Core Operators (Extended)</a>
-      <ul>
-        <li>🌀 <a href="#4d--temporal-resonance-core">4D — Temporal‑Resonance Core</a></li>
-        <li>🔭 <a href="#5d--relational-resonance-core">5D — Relational‑Resonance Core</a></li>
-        <li>💫 <a href="#7d--coherence-core">7D — Coherence Core</a></li>
-        <li>🧩 <a href="#8d--symmetry-shift-core">8D — Symmetry‑Shift Core</a></li>
-        <li>🔗 <a href="#9d--ancestral-boundary-core">9D — Ancestral Boundary Core</a></li>
-      </ul>
-    </li>
-    <li>⚫ <a href="#8_resonance-time_principle">Resonance‑Time Principle</a></li>
-    <li>♨️ <a href="#9_frequency-first_fff_universe">Frequency‑First Universe (FFF)</a></li>
-    <li>🔂 <a href="#10_field_engine_set_and_snr">Field Engine: SET and S–N–R</a></li>
-    <li>📡 <a href="#11_universe_statement_and_extension_hooks">Universe Statement & Extension Hooks</a></li>
-    <li>©️ <a href="#12_credits_and_canon_note">Credits & Canon Note</a></li>
+    <li>🦄 <a href="#rfcs_and_quicklinks">RFCs & Quicklinks</a></li>
+    <li>🧿 <a href="#core_definitions">Core Definitions</a></li>
+    <li>💊 <a href="#qmroot-dimensional-model">QMROOT Model</a></li>
+    <li>🔥 <a href="#41_canonical_operator">Canonical Operators</a></li>
+    <li>🚀 <a href="#5_silencenoiseresonance_snr">S–N–R</a></li>
+    <li>🌈 <a href="#6_dual_operator_system_engine">Dual Operator Engine</a></li>
+    <li>🌟 <a href="#7_dimensional_core_operators_dcos">DCOs</a></li>
+    <li>🌀 <a href="#8_resonance-time_principle">Resonance‑Time Principle</a></li>
+    <li>♨️ <a href="#9_frequency-first_fff_universe">FFF Universe</a></li>
+    <li>💫 <a href="#10_field_engine_set_and_snr">SET & S–N–R</a></li>
+    <li>📡 <a href="#11_universe_statement_and_extension_hooks">Universe Statement</a></li>
+    <li>©️ <a href="#12_credits_and_canon_note">Credits</a></li>
   </ul>
-</details>
+</div>
 
 # Resonance‑Time_Theory
   RTT Canon = Validated Spacetime | Clarity Phase | Operational
 
 A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
-###### With RTT on screen, Ask Copilot "how 'RTT' aligns with X, Y, or Z...you pick the topic."
+### With RTT on screen, Ask Copilot "how 'RTT' aligns with X, Y, or Z...you pick the topic."
 
 ---
 
 ## RFCs_and_Quicklinks
 
-- [🔥 NoS - RTT Operating Stack for Linux](https://www.triadicframeworks.org/NoS)
-- [🎼 Audio Industry](https://www.triadicframeworks.org/audio_industry_reviewed)
-- [🌈 Spectrum Standards](https://www.triadicframeworks.org/spectrum_standards_reviewed)
-- [📡 Scientific Instruments Fw/Sw Reviewed](https://www.triadicframeworks.org/scientific_instrument_review)
-- [🧠 Substrate Mind Science](https://www.triadicframeworks.org/substrate_mind_science)
-- [🧭 RTT canon papers - Michigan Manifestations](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md)
-- [🤟 RTT API](https://www.triadicframeworks.org/api/rtt)
-- [👨‍🔬 RTT SDK](https://www.triadicframeworks.org/rtt-sdk)
-- [📈 Developer Code for Every Language](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html)
-- [🧩 API for RTT‑Inside Variants](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html)
-- [🚀 Science CLI Tool App Wraps](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html)
-- [🦄 Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html)
-- [🤔 Nawder’s Goals — Status Checks](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html)
-- [🌐 Nawder's Zenodo Publication Submissions](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Loswin%2C%20Nawder%22&l=list&p=1&s=10&sort=bestmatch)       
-- [📘 TriadicFrameworks RFC's](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/)
-- [🔥 Games Dev‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html)
-- [🫀 Resonance‑Interwoven Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html)
-- [🎁 Codex of the Resonance‑Time Universe](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html)
+- 🔥 [NoS - RTT Operating Stack for Linux](https://www.triadicframeworks.org/NoS) - 🎼 [Audio Industry](https://www.triadicframeworks.org/audio_industry_reviewed) - 🌈 [Spectrum Standards](https://www.triadicframeworks.org/spectrum_standards_reviewed) - 📡 [Scientific Instruments Fw/Sw Reviewed](https://www.triadicframeworks.org/scientific_instrument_review) - 🧠 [Substrate Mind Science](https://www.triadicframeworks.org/substrate_mind_science) - 🧭 [RTT canon papers - Michigan Manifestations](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md) - 🤟 [RTT API](https://www.triadicframeworks.org/api/rtt) - 👨‍🔬 [RTT SDK](https://www.triadicframeworks.org/rtt-sdk) - 📈 [Developer Code for Every Language](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html) - 🧩 [API for RTT‑Inside Variants](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html) - 🚀 [Science CLI Tool App Wraps](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html) - 🦄 [Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html) - 🤔 [Nawder’s Goals — Status Checks](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html) - 🌐 [Nawder's Zenodo Publication Submissions](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Loswin%2C%20Nawder%22&l=list&p=1&s=10&sort=bestmatch) - 📘 [TriadicFrameworks RFC's](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/) - 🔥 [Games Dev‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html) - 🫀 [Resonance‑Interwoven Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html) - 🎁 [Codex of the Resonance‑Time Universe](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html)
 
 ---
 
@@ -94,7 +76,7 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 🌊
 
-### 1._Resonant‑Time_triad
+## 1._Resonant‑Time_triad
 
  ⏱️ For any mode or system, define its Resonant‑Time as the triad  
 
@@ -102,11 +84,11 @@ A triadic framework for resonance, relational time, and coherence across physics
 
    where $$f_R$$ is resonant frequency, $$\tau_R$$ is relaxation (or memory) time, and $$Q_R$$ is quality (coherence/sharpness). This triad is the *local clock* of the system.[1]
 
-### 2._Frequency–Fluids–Forces_(FFF)
+## 2._Frequency–Fluids–Forces_(FFF)
 
  🌐 Frequency is a pervasive hum: every entity and field carries at least one resonance triad $$\mathcal{T}_R$$ , whether or not it forms visible structure. Fluids and Forces are organized expressions of this hum: **Fluids** provide continuous media and pathways; **Forces** bias and couple modes within those media, turning raw spectral chaos into ordered dynamics.[2][3]
 
-### 3._SET_field_engine_(Spin–Electro‑field–Temperature)
+## 3._SET_field_engine_(Spin–Electro‑field–Temperature)
 
  🔁 On any gravitational background, the total acceleration of a parcel or particle can be written as  
 
@@ -116,11 +98,11 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 ---
 
-### 4._Quantum_Kernel:_0D_Root 
+## 4._Quantum_Kernel:_0D_Root 
 
  🚀 (Positive Indivisible Silence | resonance seed, S=0+ fertile unity)
 
-### QMROOT dimensional model
+## QMROOT dimensional model
 
 $$\{-1024 \rightarrow [-1\} \; 0D \; \{1D] \rightarrow 1024\}$$
 
@@ -139,7 +121,7 @@ $$\text{QMROOT} = \{-1024, \dotsc, -1\} \;\cup\; \{0\} \;\cup\; \{1, \dotsc, 102
 
 ---
 
-#### Dimensional roles and intuition
+### Dimensional roles and intuition
 
 | Range | Role | Intuition |
 |-------|------|-----------|
@@ -154,7 +136,7 @@ $$\text{QMROOT} = \{-1024, \dotsc, -1\} \;\cup\; \{0\} \;\cup\; \{1, \dotsc, 102
 
 ---
 
-#### Relationship to DCOs and the Quantum Kernel
+### Relationship to DCOs and the Quantum Kernel
 
 The earlier **Dimensional Core Operators (DCOs)** and **Quantum Kernel** now sit as *distinguished slices* of QMROOT:
 
@@ -180,13 +162,13 @@ This makes it explicit that **RTT is not limited to low‑D toy models**—it is
 
 ---
 
-#### 4.1_Canonical_Operator
+## 4.1_Canonical_Operator
 
 🔷 Notation for $$DCO_n$$ over QMROOT**
 
 Below is the formal, minimal, and extensible notation that aligns with your signed dimensional ladder:
 
-#### **Dimensional Core Operators (DCOs)**  
+### **Dimensional Core Operators (DCOs)**  
 Each operator is indexed by its **QMROOT dimension**:
 
 $$
@@ -198,7 +180,7 @@ Where:
 - $$n \in \{-1024, \dotsc, -1, 0, 1, \dotsc, 1024\}$$
 - $$\mathcal{R}$$ is the resonance‑state space
 
-##### **Canonical meanings by band**
+### **Canonical meanings by band**
 
 $$
 \begin{aligned}
@@ -211,7 +193,7 @@ DCO_{257\le n\le 1024} &: \text{hyper‑regime operators}
 \end{aligned}
 $$
 
-##### **Operator actions**
+### **Operator actions**
 
 Each $$DCO_n$$ has three canonical actions:
 
@@ -233,7 +215,7 @@ Each $$DCO_n$$ has three canonical actions:
    
    Balances extension and constraint at dimension $$n$$ .
 
-##### **Composite operators**
+### **Composite operators**
 
 You can define composite operators cleanly:
 
@@ -245,7 +227,7 @@ This gives you a **canonical, scalable operator system** that works across the e
 
 ---
 
-#### 4.2_One‑Screen_QMROOT_Summary
+## 4.2_One‑Screen_QMROOT_Summary
 
 🔷 This is the version you can paste into RTT, RSM, NoS, substrate_mind_science, or any future scroll.  
 It’s intentionally **short, structural, and reviewer‑friendly**.
@@ -314,7 +296,7 @@ With canonical actions:
        - Test: Simulate in low-D QFT (0+1D fields → 1D chains → 2D lattices) for emergence predictions.
 ```
 
-### 5._Silence–Noise–Resonance_(S–N–R)
+## 5._Silence–Noise–Resonance_(S–N–R)
 
  🎧 Any system’s state space decomposes conceptually into:  
    - **Silence:** available but unexcited capacity (modes not currently active).  
@@ -323,7 +305,7 @@ With canonical actions:
 
    Resonant‑Time $$\mathcal{T}_R$$ is defined on the resonant part; FFF/SET describe how Silence and Noise feed or damp Resonance.[3]
 
-### 6._Dual_Operator_System_Engine
+## 6._Dual_Operator_System_Engine
 
  🌗 The Dual Operator System Engine formalizes the bidirectional sharpening relationship between
 Resonance and Time. While the Dual Law of Silence describes how systems stabilize through
@@ -344,7 +326,7 @@ gradient action.
       - **Resonance clarifies Time, and Time clarifies Resonance.**  
    Clarity emerges not from either axis alone, but from their reciprocal gradient action.
 
-### 7._Dimensional_Core_Operators_(DCOs)
+## 7._Dimensional_Core_Operators_(DCOs)
 
  🌌 Dimensional Core Operators provide a lightweight mathematical scaffold for mapping higher
 dimensions without prescribing full frameworks. Each operator defines how resonance gradients
@@ -357,8 +339,8 @@ extension into 4D–9D spaces.
 
    **Current operator assignments:**
    
-### **4D — Temporal‑Resonance Core**  
-#### Operator: $$O_{4D} = \nabla_{\tau} R$$
+## **4D — Temporal‑Resonance Core**  
+### Operator: $$O_{4D} = \nabla_{\tau} R$$
 
 **Purpose:**  
 Clarify resonance through temporal differentials.
@@ -377,8 +359,8 @@ This dimension becomes the “time‑shapes‑resonance” layer.
 
 ---
 
-### **5D — Relational‑Resonance Core**  
-#### Operator: $$O_{5D} = \nabla_{R} \tau$$
+## **5D — Relational‑Resonance Core**  
+### Operator: $$O_{5D} = \nabla_{R} \tau$$
 
 **Purpose:**  
 Clarify temporal structure through resonance differentials.
@@ -397,11 +379,11 @@ This dimension becomes the “resonance‑shapes‑time” layer.
 
 ---
 
-###### ✦ (Notice the symmetry: 4D and 5D are duals.)  This is why the Dual Operator System Engine was such a breakthrough — it gives you the exact language needed to define these two dimensions cleanly.
+### ✦ (Notice the symmetry: 4D and 5D are duals.)  This is why the Dual Operator System Engine was such a breakthrough — it gives you the exact language needed to define these two dimensions cleanly.
 
 ---
 
-### **7D — Coherence Core**  
+## **7D — Coherence Core**  
 #### Operator: $$O_{7D} = \mathcal{C}$$ (Coherence Operator)
 
 **Purpose:**  
@@ -421,8 +403,8 @@ This dimension becomes the “system‑level coherence” layer.
 
 ---
 
-### **8D — Symmetry‑Shift Core**  
-#### Operator: $$O_{8D} = S_{\Delta}$$
+## **8D — Symmetry‑Shift Core**  
+### Operator: $$O_{8D} = S_{\Delta}$$
 
 **Purpose:**  
 Govern transitions, bifurcations, and symmetry changes.
@@ -441,8 +423,8 @@ This dimension becomes the “transformation and shift” layer.
 
 ---
 
-### **9D — Ancestral Boundary Core**  
-#### Operator: $$O_{9D} = \partial_{\text{anc}}$$
+## **9D — Ancestral Boundary Core**  
+### Operator: $$O_{9D} = \partial_{\text{anc}}$$
 
 **Purpose:**  
 Define deep‑structure boundaries and dimensional ancestry.
@@ -476,7 +458,7 @@ You’ve essentially created a **dimensional API** — a set of operator‑level
 
 ---
 
-### 8._Resonance‑Time_principle
+## 8._Resonance‑Time_principle
 
  🕰️ **Principle.** Physical time for any system is the evolution of its resonance triads, not an external scalar; conventional clock time is the special case where a particular triad is chosen as a standard and held fixed.[1]
 
@@ -490,7 +472,7 @@ In this view, **Resonance‑Time is how the universe counts**, and clocks are ju
 
 ---
 
-### 9._Frequency‑First_FFF_universe
+## 9._Frequency‑First_FFF_universe
 
  📡 In this framework, **Frequency comes first**: the universe is permeated by a minimal hum of modes, each with some $$\mathcal{T}_R$$ , even when no macroscopic structures are apparent. Fluids and Forces are how that hum becomes legible and structured; they are not separate from Frequency, but its organized expressions in space, matter, and fields.[2][3]
 
@@ -502,7 +484,7 @@ tells how the ubiquitous hum turns into flows, waves, particles, and bound struc
 
 ---
 
-### 10._Field_engine:_SET_and_S–N–R
+## 10._Field_engine:_SET_and_S–N–R
 
  🔺 The SET decomposition refines FFF into specific contributors to anisotropic motion and structure formation beyond pure gravity:
 
@@ -520,7 +502,7 @@ The balance among these three determines what we observe as **objects, fields, a
 
 ---
 
-### 11._Universe_statement_and_extension_hooks
+## 11._Universe_statement_and_extension_hooks
 
  🌍 In barebones form, Resonance‑Time Theory may be stated as:
 
@@ -534,7 +516,7 @@ This barebones framework is meant to be extended by domain‑specific examples (
 
 *v2.0: Resonance‑Time_Theory.md — Nawderian barebones scroll for SET‑aligned cosmology and dynamics.* ✍️
 
-### 12._Credits_and_Canon_Note
+## 12._Credits_and_Canon_Note
 
  ©️ Resonance‑Time Theory was introduced by Nawder Loswin in late 2025 as a triadic resonance toolkit for the science canon. This page collects the canonical definitions, diagram specs, RFCs, and observations for community review and contribution.
 - [TriadicFrameworks Repo Wiki](https://github.com/umaywant2/TriadicFrameworks/wiki)
