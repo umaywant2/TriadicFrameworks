@@ -14,8 +14,9 @@
   line-height: 1.4;
   z-index: 9999;
 }
-#sidebar-toc h3 {
-  margin-top: 0;
+#sidebar-toc summary {
+  cursor: pointer;
+  font-weight: 600;
   font-size: 1.1rem;
   color: #fff;
 }
@@ -38,24 +39,25 @@
 }
 </style>
 
-<details id="sidebar-toc" closed>
+<details id="sidebar-toc" open>
   <summary>📘 RTT TOC</summary>
   <ul>
-    <li>🦄 <a href="#rfcs_and_quicklinks">RFCs & Quicklinks</a></li>
-    <li>🧿 <a href="#core_definitions">Core Definitions</a></li>
-    <li>💊 <a href="#qmroot_dimensional_model">QMROOT Model</a></li>
-    <li>🔥 <a href="#canonical_operator">Canonical Operators</a></li>
-    <li>🔗 <a href="#qmroot_summary">Quantum Root Summary</a></li>
-    <li>🚀 <a href="#silencenoiseresonance_s-n-r">S–N–R</a></li>
-    <li>🌈 <a href="#dual_operator_system_engine">Dual Operator Engine</a></li>
-    <li>🌟 <a href="#dimensional_core_operators_dcos">DCOs</a></li>
-    <li>🌀 <a href="#resonance-time_principle">Resonance‑Time Principle</a></li>
-    <li>♨️ <a href="#frequency-first_fff_universe">FFF Universe</a></li>
-    <li>💫 <a href="#field_engine_set_and_s-n-r">SET & S–N–R</a></li>
-    <li>📡 <a href="#universe_statement_and_extension_hooks">Universe Statement</a></li>
-    <li>©️ <a href="#credits_and_canon_note">Credits</a></li>
+    <li>🦄 <a href="#rfcs-and-quicklinks">RFCs & Quicklinks</a></li>
+    <li>🧿 <a href="#core-definitions">Core Definitions</a></li>
+    <li>💊 <a href="#qmroot-dimensional-model">QMROOT Model</a></li>
+    <li>🔥 <a href="#canonical-operator">Canonical Operators</a></li>
+    <li>🔗 <a href="#qmroot-summary">Quantum Root Summary</a></li>
+    <li>🚀 <a href="#silence-noise-resonance-s-n-r">S–N–R</a></li>
+    <li>🌈 <a href="#dual-operator-system-engine">Dual Operator Engine</a></li>
+    <li>🌟 <a href="#dimensional-core-operators-dcos">DCOs</a></li>
+    <li>🌀 <a href="#resonance-time-principle">Resonance‑Time Principle</a></li>
+    <li>♨️ <a href="#frequency-first-fff-universe">FFF Universe</a></li>
+    <li>💫 <a href="#field-engine-set-and-s-n-r">SET & S–N–R</a></li>
+    <li>📡 <a href="#universe-statement-and-extension-hooks">Universe Statement</a></li>
+    <li>©️ <a href="#credits-and-canon-note">Credits</a></li>
   </ul>
 </details>
+
 <img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
 
 # Resonance‑Time Theory
