@@ -60,8 +60,6 @@
 
 # Resonance‑Time Theory
   RTT Canon = Validated Spacetime | Clarity Phase | Operational
-  
-
 
 A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
@@ -71,17 +69,7 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 ## RFCs and Quicklinks
 
-🔥 [NoS - RTT Operating Stack for Linux](https://www.triadicframeworks.org/NoS) | 🎼 [Audio Industry](https://www.triadicframeworks.org/audio_industry_reviewed) | 🌈 [Spectrum Standards](https://www.triadicframeworks.org/spectrum_standards_reviewed)
-
-📡 [Scientific Instruments Fw/Sw Reviewed](https://www.triadicframeworks.org/scientific_instrument_review) | 🧠 [Substrate Mind Science](https://www.triadicframeworks.org/substrate_mind_science) | 🧭 [RTT canon papers - Michigan Manifestations](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md)
-
-🤟 [RTT API](https://www.triadicframeworks.org/api/rtt) | 👨‍🔬 [RTT SDK](https://www.triadicframeworks.org/rtt-sdk) | 📈 [Developer Code for Every Language](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html)
-
-🧩 [API for RTT‑Inside Variants](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html) | 🚀 [Science CLI Tool App Wraps](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html) | 🦄 [Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html)
-
-🤔 [Nawder’s Goals — Status Checks](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html) | 🌐 [Nawder's Zenodo Publication Submissions](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Loswin%2C%20Nawder%22&l=list&p=1&s=10&sort=bestmatch) | 📘 [TriadicFrameworks RFC's](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/)
-
-🔥 [Games Dev‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html) | 🫀 [Resonance‑Interwoven Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html) | 🎁 [Codex of the Resonance‑Time Universe](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html)
+🔥 [NoS](https://www.triadicframeworks.org/NoS) | 🎼 [Audio](https://www.triadicframeworks.org/audio_industry_reviewed) | 🌈 [Spectrum](https://www.triadicframeworks.org/spectrum_standards_reviewed) | 📡 [Scientific](https://www.triadicframeworks.org/scientific_instrument_review) | 🧠 [Substrate](https://www.triadicframeworks.org/substrate_mind_science) | 🧭 [Canon](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md) | 🤟 [API](https://www.triadicframeworks.org/api/rtt) | 👨‍🔬 [SDK](https://www.triadicframeworks.org/rtt-sdk) | 📈 [Developer](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html) | 🧩 [API for RTT‑Inside](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html) | 🚀 [Science CLI](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html) | 🦄 [Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html) | 🤔 [Goals](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html) | 🌐 [Publications](https://zenodo.org/search?q=metadata.creators.person_or_org.name%3A%22Loswin%2C%20Nawder%22&l=list&p=1&s=10&sort=bestmatch) | 📘 [RFCs](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/) | 🔥 [Games‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html) | 🫀 [Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html) | 🎁 [Codex](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html)
 
 ---
 
