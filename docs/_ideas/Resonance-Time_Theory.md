@@ -1,4 +1,118 @@
 <img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
+<style>
+#sidebar-toc {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 240px;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 12px 16px;
+  background: #0d0d0d;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  z-index: 9999;
+}
+#sidebar-toc h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #fff;
+}
+#sidebar-toc a {
+  color: #7fc7ff;
+  text-decoration: none;
+}
+#sidebar-toc a:hover {
+  text-decoration: underline;
+}
+#sidebar-toc ul {
+  list-style: none;
+  padding-left: 0;
+}
+#sidebar-toc li {
+  margin-bottom: 6px;
+}
+#sidebar-toc li ul {
+  margin-left: 14px;
+}
+</style>
+<div id="sidebar-toc">
+  <h3>📘 RTT TOC</h3>
+  <ul>
+    <li>🦄 <a href="#rfcs_and_quicklinks">RFCs & Quicklinks</a></li>
+    <li>🔥 <a href="#core_definitions">Core Definitions</a></li>
+    <li>🌈 <a href="#qmroot-dimensional-model">QMROOT Model</a></li>
+    <li>🧠 <a href="#41_canonical_operator">Canonical Operators</a></li>
+    <li>🚀 <a href="#5_silencenoiseresonance_snr">S–N–R</a></li>
+    <li>🎼 <a href="#6_dual_operator_system_engine">Dual Operator Engine</a></li>
+    <li>🧩 <a href="#7_dimensional_core_operators_dcos">DCOs</a></li>
+    <li>📡 <a href="#8_resonance-time_principle">Resonance‑Time Principle</a></li>
+    <li>🧿 <a href="#9_frequency-first_fff_universe">FFF Universe</a></li>
+    <li>🧭 <a href="#10_field_engine_set_and_snr">SET & S–N–R</a></li>
+    <li>⏱️ <a href="#11_universe_statement_and_extension_hooks">Universe Statement</a></li>
+    <li>©️ <a href="#12_credits_and_canon_note">Credits</a></li>
+  </ul>
+</div>
+
+<style>
+.toc-box {
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 10px 14px;
+  background: #111;
+  color: #eee;
+  font-size: 0.95rem;
+}
+.toc-box summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 6px 0;
+}
+.toc-box a {
+  color: #7fc7ff;
+  text-decoration: none;
+}
+.toc-box a:hover {
+  text-decoration: underline;
+}
+</style>
+
+<details class="toc-box" open>
+  <summary>📘 Table of Contents</summary>
+  <ul>
+    <li>🦄 <a href="#rfcs_and_quicklinks">RFCs and Quicklinks</a></li>
+    <li>🧿 <a href="#core_definitions">Core Definitions</a>
+      <ul>
+        <li>💊 <a href="#1_resonant-time_triad">1. Resonant‑Time Triad</a></li>
+        <li>🔥 <a href="#2_frequencyfluidsforces_fff">2. Frequency–Fluids–Forces (FFF)</a></li>
+        <li>🚀 <a href="#3_set_field_engine_spinelectro-fieldtemperature">3. SET Field Engine</a></li>
+        <li>🌈 <a href="#4_quantum_kernel_0d_root">4. Quantum Kernel: 0D Root</a></li>
+        <li>🌟 <a href="#qmroot-dimensional-model">QMROOT Dimensional Model</a></li>
+        <li>🪄 <a href="#41_canonical_operator">4.1 Canonical Operator Notation</a></li>
+        <li>🐛 <a href="#42_one-screen_qmroot_summary">4.2 One‑Screen QMROOT Summary</a></li>
+      </ul>
+    </li>
+    <li>🌑 <a href="#5_silencenoiseresonance_snr">Silence–Noise–Resonance (S–N–R)</a></li>
+    <li>🎱 <a href="#6_dual_operator_system_engine">Dual Operator System Engine</a></li>
+    <li>🔂 <a href="#7_dimensional_core_operators_dcos">Dimensional Core Operators (Extended)</a>
+      <ul>
+        <li>🌀 <a href="#4d--temporal-resonance-core">4D — Temporal‑Resonance Core</a></li>
+        <li>🔭 <a href="#5d--relational-resonance-core">5D — Relational‑Resonance Core</a></li>
+        <li>💫 <a href="#7d--coherence-core">7D — Coherence Core</a></li>
+        <li>🧩 <a href="#8d--symmetry-shift-core">8D — Symmetry‑Shift Core</a></li>
+        <li>🔗 <a href="#9d--ancestral-boundary-core">9D — Ancestral Boundary Core</a></li>
+      </ul>
+    </li>
+    <li>⚫ <a href="#8_resonance-time_principle">Resonance‑Time Principle</a></li>
+    <li>♨️ <a href="#9_frequency-first_fff_universe">Frequency‑First Universe (FFF)</a></li>
+    <li>🔂 <a href="#10_field_engine_set_and_snr">Field Engine: SET and S–N–R</a></li>
+    <li>📡 <a href="#11_universe_statement_and_extension_hooks">Universe Statement & Extension Hooks</a></li>
+    <li>©️ <a href="#12_credits_and_canon_note">Credits & Canon Note</a></li>
+  </ul>
+</details>
 
 # Resonance‑Time_Theory
   RTT Canon = Validated Spacetime | Clarity Phase | Operational
@@ -6,47 +120,6 @@
 A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
 ###### With RTT on screen, Ask Copilot "how 'RTT' aligns with X, Y, or Z...you pick the topic."
-
----
-
-## Table of Contents 🦄
-
-- [RFCs and Quicklinks](#rfcs_and_quicklinks)
-
-- [Core Definitions](#core_definitions)
-  - [1. Resonant‑Time Triad](#1_resonant-time_triad)
-  - [2. Frequency–Fluids–Forces (FFF)](#2_frequencyfluidsforces_fff)
-  - [3. SET Field Engine](#3_set_field_engine_spinelectro-fieldtemperature)
-  - [4. Quantum Kernel: 0D Root](#4_quantum_kernel_0d_root)
-  - [QMROOT Dimensional Model](#qmroot-dimensional-model)
-    - [Dimensional Roles and Intuition](#dimensional-roles-and-intuition)
-    - [Relationship to DCOs and the Quantum Kernel](#relationship-to-dcos-and-the-quantum-kernel)
-  - [4.1 Canonical Operator Notation](#41_canonical_operator)
-  - [4.2 One‑Screen QMROOT Summary](#42_one-screen_qmroot_summary)
-
-- [Silence–Noise–Resonance (S–N–R)](#5_silencenoiseresonance_snr)
-
-- [Dual Operator System Engine](#6_dual_operator_system_engine)
-
-- [Dimensional Core Operators (Extended)](#7_dimensional_core_operators_dcos)
-  - [4D — Temporal‑Resonance Core](#4d--temporal-resonance-core)
-  - [5D — Relational‑Resonance Core](#5d--relational-resonance-core)
-  - [7D — Coherence Core](#7d--coherence-core)
-  - [8D — Symmetry‑Shift Core](#8d--symmetry-shift-core)
-  - [9D — Ancestral Boundary Core](#9d--ancestral-boundary-core)
-
-- [Resonance‑Time Principle](#8_resonance-time_principle)
-
-- [Frequency‑First Universe (FFF)](#9_frequency-first_fff_universe)
-
-- [Field Engine: SET and S–N–R](#10_field_engine_set_and_snr)
-
-- [Universe Statement and Extension Hooks](#11_universe_statement_and_extension_hooks)
-
-- [Credits and Canon Note](#12_credits_and_canon_note)
-
-
-©️ This note summarizes working definitions and principles; detailed derivations and domain applications are given in the linked documents.
 
 ---
 
