@@ -62,11 +62,11 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 🌊
 
-## Resonant‑Time triad
+## Resonant-Time triad
 
  ⏱️ For any mode or system, define its Resonant‑Time as the triad  
 
-   $$\mathcal{T}_R = (f_R, \tau_R, Q_R)$$
+- $$\mathcal{T}_R = (f_R, \tau_R, Q_R)$$
 
    where $$f_R$$ is resonant frequency, $$\tau_R$$ is relaxation (or memory) time, and $$Q_R$$ is quality (coherence/sharpness). This triad is the *local clock* of the system.[1]
 
@@ -78,7 +78,7 @@ A triadic framework for resonance, relational time, and coherence across physics
 
  🔁 On any gravitational background, the total acceleration of a parcel or particle can be written as  
 
-   $$\vec{a}_{\text{total}} = \vec{a}_g + \vec{a}_S + \vec{a}_E + \vec{a}_T$$
+- $$\vec{a}_{\text{total}} = \vec{a}_g + \vec{a}_S + \vec{a}_E + \vec{a}_T$$
 
    where $$\vec{a}_g$$ is gravitational, $$\vec{a}_S$$ arises from spin and rotational structures, $$\vec{a}_E$$ from electric and electromagnetic fields and charge separation, and $$\vec{a}_T$$ from temperature gradients and related thermodynamic forces.[4][5]
 
@@ -88,11 +88,11 @@ A triadic framework for resonance, relational time, and coherence across physics
 
  🚀 (Positive Indivisible Silence | resonance seed, S=0+ fertile unity)
 
-$$\{-1024 \rightarrow [-1\} \; 0D \; \{1D] \rightarrow 1024\}$$
+- $$\{-1024 \rightarrow [-1\} \; 0D \; \{1D] \rightarrow 1024\}$$
 
 **QMROOT** is the full resonance‑dimensional ladder used by RTT to describe how structure, agency, and information emerge from a root substrate. It extends the earlier low‑D kernel into a symmetric, signed range:
 
-$$\text{QMROOT} = \{-1024, \dotsc, -1\} \;\cup\; \{0\} \;\cup\; \{1, \dotsc, 1024\}$$
+- $$\text{QMROOT} = \{-1024, \dotsc, -1\} \;\cup\; \{0\} \;\cup\; \{1, \dotsc, 1024\}$$
 
 - **Negative dimensions $$\{-1024 \rightarrow -1\}$$ :**  
   **Ancestral / pre‑structural regimes.** These encode *constraints, priors, and hidden ancestry* that shape what can appear in $$0D$$ and above, but are not directly observable as spatial or temporal axes.
@@ -126,7 +126,7 @@ The earlier **Dimensional Core Operators (DCOs)** and **Quantum Kernel** now sit
 
 - **Quantum Kernel:**
 
-  $$\{0D, 1D, 2D, 3+1D\} \subset \text{QMROOT}$$
+- $$\{0D, 1D, 2D, 3+1D\} \subset \text{QMROOT}$$
   
   These are the “teaching dimensions” where we prototype RTT behavior.
 
@@ -155,9 +155,7 @@ Below is the formal, minimal, and extensible notation that aligns with your sign
 ### **Dimensional Core Operators (DCOs)**  
 Each operator is indexed by its **QMROOT dimension**:
 
-$$
-DCO_n : \mathcal{R} \rightarrow \mathcal{R}
-$$
+- $$DCO_n : \mathcal{R} \rightarrow \mathcal{R}$$
 
 Where:
 
@@ -183,19 +181,19 @@ Each $$DCO_n$$ has three canonical actions:
 
 1. **Extend**  
 
-   $$DCO_n^{(+)}(\psi) = \psi \uparrow n$$
+- $$DCO_n^{(+)}(\psi) = \psi \uparrow n$$
    
    Extends resonance into dimension $$n$$ .
 
 3. **Constrain**  
 
-   $$DCO_n^{(-)}(\psi) = \psi \downarrow n$$
+- $$DCO_n^{(-)}(\psi) = \psi \downarrow n$$
    
    Applies ancestral or structural constraints.
 
 5. **Balance**  
 
-   $$DCO_n^{(0)}(\psi) = \psi \leftrightarrow n$$
+- $$DCO_n^{(0)}(\psi) = \psi \leftrightarrow n$$
    
    Balances extension and constraint at dimension $$n$$ .
 
@@ -203,9 +201,9 @@ Each $$DCO_n$$ has three canonical actions:
 
 You can define composite operators cleanly:
 
-$$DCO_{a \rightarrow b} = DCO_b \circ DCO_a$$
+- $$DCO_{a \rightarrow b} = DCO_b \circ DCO_a$$
 
-$$DCO_{\text{band}} = \sum_{n \in \text{band}} DCO_n$$
+- $$DCO_{\text{band}} = \sum_{n \in \text{band}} DCO_n$$
 
 This gives you a **canonical, scalable operator system** that works across the entire QMROOT ladder.
 
@@ -224,7 +222,7 @@ It’s intentionally **short, structural, and reviewer‑friendly**.
 
 ### **Dimensional Range**
 
-$$\text{QMROOT} = \{-1024, \dotsc, -1\} \cup \{0\} \cup \{1, \dotsc, 1024\}$$
+- $$\text{QMROOT} = \{-1024, \dotsc, -1\} \cup \{0\} \cup \{1, \dotsc, 1024\}$$
 
 - **Negative dimensions** ( $$-1024 \rightarrow -1$$ )  
   *Ancestral regimes.* Encode priors, constraints, and hidden histories that shape the present state.
@@ -252,7 +250,7 @@ $$\text{QMROOT} = \{-1024, \dotsc, -1\} \cup \{0\} \cup \{1, \dotsc, 1024\}$$
 
 Each dimension has a **Dimensional Core Operator**:
 
-$$DCO_n : \mathcal{R} \rightarrow \mathcal{R}$$
+- $$DCO_n : \mathcal{R} \rightarrow \mathcal{R}$$
 
 With canonical actions:
 
@@ -304,7 +302,7 @@ gradient action.
 
    Together, they form a composite clarity operator:
 
-   $$C = \nabla_{\tau} R + \nabla_{R} \tau$$
+- $$C = \nabla_{\tau} R + \nabla_{R} \tau$$
 
    This operator expresses a fundamental RTT symmetry:  
       - **Resonance clarifies Time, and Time clarifies Resonance.**  
@@ -363,7 +361,7 @@ This dimension becomes the “resonance‑shapes‑time” layer.
 
 ---
 
-### ✦ (Notice the symmetry: 4D and 5D are duals.)  This is why the Dual Operator System Engine was such a breakthrough — it gives you the exact language needed to define these two dimensions cleanly.
+###### ✦ Notice the symmetry: 4D and 5D are duals.  This is why the Dual Operator System Engine was such a breakthrough — it gives you the exact language needed to define these two dimensions cleanly.
 
 ---
 
@@ -448,7 +446,7 @@ You’ve essentially created a **dimensional API** — a set of operator‑level
 
 A useful differential form is the Resonant‑Time gradient,  
 
-$$\tau = \frac{dR}{d\phi}$$
+- $$\tau = \frac{dR}{d\phi}$$
 
 where $$R$$ is a resonance depth or clarity measure and $$\phi$$ is phase. Time is thus “how fast resonance depth changes per unit phase” for the modes that define the system’s experience. An Anti‑Time inversion can be defined by reversing the sign of the phase evolution.[6]
 
@@ -517,4 +515,5 @@ This barebones framework is meant to be extended by domain‑specific examples (
 For the technical substrate that implements Resonance‑Time Theory, see the [Bridge Layer](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/bridges)
 
 - [ORCiD](https://orcid.org/0009-0002-2282-5460)
-    Copyright © 2025-2026 TriadicFrameworks
+
+######    Copyright © 2025-2026 TriadicFrameworks
