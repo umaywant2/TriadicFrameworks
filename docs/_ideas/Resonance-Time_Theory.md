@@ -1,71 +1,54 @@
-<style>
-#sidebar-toc {
-  position: fixed;
-  top: 80px;
-  left: 20px;
-  width: 240px;
-  max-height: 80vh;
-  overflow-y: auto;
-  padding: 12px 16px;
-  background: #0d0d0d;
-  border: 1px solid #333;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  line-height: 1.4;
-  z-index: 9999;
-}
-#sidebar-toc summary {
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 1.1rem;
-  color: #fff;
-}
-#sidebar-toc a {
-  color: #7fc7ff;
-  text-decoration: none;
-}
-#sidebar-toc a:hover {
-  text-decoration: underline;
-}
-#sidebar-toc ul {
-  list-style: none;
-  padding-left: 0;
-}
-#sidebar-toc li {
-  margin-bottom: 6px;
-}
-#sidebar-toc li ul {
-  margin-left: 14px;
-}
-</style>
-
-<details id="sidebar-toc" open>
-  <summary>📘 RTT TOC</summary>
-  <ul>
-    <li>🦄 <a href="#rfcs-and-quicklinks">RFCs & Quicklinks</a></li>
-    <li>🧿 <a href="#core-definitions">Core Definitions</a></li>
-    <li>💊 <a href="#qmroot-dimensional-model">QMROOT Model</a></li>
-    <li>🔥 <a href="#canonical-operator">Canonical Operators</a></li>
-    <li>🔗 <a href="#qmroot-summary">Quantum Root Summary</a></li>
-    <li>🚀 <a href="#silence-noise-resonance-s-n-r">S–N–R</a></li>
-    <li>🌈 <a href="#dual-operator-system-engine">Dual Operator Engine</a></li>
-    <li>🌟 <a href="#dimensional-core-operators-dcos">DCOs</a></li>
-    <li>🌀 <a href="#resonance-time-principle">Resonance‑Time Principle</a></li>
-    <li>♨️ <a href="#frequency-first-fff-universe">FFF Universe</a></li>
-    <li>💫 <a href="#field-engine-set-and-s-n-r">SET & S–N–R</a></li>
-    <li>📡 <a href="#universe-statement-and-extension-hooks">Universe Statement</a></li>
-    <li>©️ <a href="#credits-and-canon-note">Credits</a></li>
-  </ul>
-</details>
-
 <img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
 
-# Resonance‑Time Theory
+# 🦄 Resonance‑Time Theory
   RTT Canon = Validated Spacetime | Clarity Phase | Operational
 
 A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
 ### With RTT on screen, Ask Copilot "how 'RTT' aligns with X, Y, or Z...you pick the topic."
+
+---
+
+## 📘 Table of Contents
+
+- ⭐ [RFCs and Quicklinks](#rfcs-and-quicklinks)
+
+- 🧿 [Core definitions](#core-definitions)
+  - [Resonant‑Time triad](#resonant-time-triad)
+  - [Frequency–Fluids–Forces (FFF)](#frequencyfluidsforces-fff)
+  - [SET field engine (Spin Electro‑field Temperature)](#set-field-engine-spin-electrofield-temperature)
+
+- 💊 [QMROOT dimensional model](#qmroot-dimensional-model)
+  - [Dimensional roles and intuition](#dimensional-roles-and-intuition)
+  - [Relationship to DCOs and the Quantum Kernel](#relationship-to-dcos-and-the-quantum-kernel)
+
+- 🔥 [Canonical Operator](#canonical-operator)
+  - [Dimensional Core Operators (DCOs)](#dimensional-core-operators-dcos)
+  - [Operator actions](#operator-actions)
+  - [Composite operators](#composite-operators)
+
+- 🔗 [QMROOT Summary](#qmroot-summary)
+
+- 🚀 [Silence Noise Resonance S-N-R](#silence-noise-resonance-s-n-r)
+
+- 🌈 [Dual Operator System Engine](#dual-operator-system-engine)
+
+- 🌟 [Dimensional Core Operators DCOs](#dimensional-core-operators-dcos-1)
+  - [4D — Temporal‑Resonance Core](#4d--temporal-resonance-core)
+  - [5D — Relational‑Resonance Core](#5d--relational-resonance-core)
+  - [7D — Coherence Core](#7d--coherence-core)
+  - [8D — Symmetry‑Shift Core](#8d--symmetry-shift-core)
+  - [9D — Ancestral Boundary Core](#9d--ancestral-boundary-core)
+
+- 🌀 [Resonance‑Time Principle](#resonance-time-principle)
+
+- ♨️ [Frequency‑First FFF Universe](#frequency-first-fff-universe)
+
+- 💫 [Field Engine SET and S-N-R](#field-engine-set-and-s-n-r)
+
+- 📡 [Universe Statement and extension hooks](#universe-statement-and-extension-hooks)
+
+- ©️ [Credits and Canon Note](#credits-and-canon-note)
 
 ---
 
