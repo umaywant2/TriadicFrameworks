@@ -12,9 +12,7 @@ No assumption of chaos, equilibrium, or privileged dimensionality is made.
 
 The canonical structural primitive is the resonance triad:
 
-$$
-(f_R,\ \tau_R,\ Q_R)
-$$
+$$(f_R,\ \tau_R,\ Q_R)$$
 
 where:
 
