@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta http-equiv="Content-Language" content="en">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
@@ -122,74 +122,68 @@ code {
   color: var(--text-main);
 }
 </style>
-  <!-- MathJax v3 configuration -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']],
-        displayMath: [['\
 
-\[', '\\]
-
-'], ['$$', '$$']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    };
-  </script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
-  <!-- Marked.js for Markdown rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
-  <main>
-    <article id="low-dim">
-      <h1>🫶 Low Dimensional Structures 🧙</h1>
-      <p>By Nawder Loswin 01/17/2026 © www.TriadicFrameworks.org</p>
-      <p>Loading 🫶 README.md…</p>
-    </article>
-  </main>
+   
+<nav>
+<h2>Low Dimensional Structures</h2>
+  <a href="#DOI_MIN">🌍 DOI‑Minimal, canonical statement of how low‑dimensional structures are treated within RTT/vST.</a>
+  <a href="#RES_PRI">🧬 Resonance Primitives, Definition of the core resonance primitives used to represent structure.</a>
+  <a href="#DIM_SCALE">🧩 Dimensional Scaling, Notes on dimensionality as an observer‑relative, scale‑dependent property.</a>
+  <a href="#HISTORY_CONTEXT">🏛️ Historical Context, Absorption of chaos‑era concepts without preserving foundational assumptions.</a>
+  <a href="#CONTROLS_VALIDATION">🛠️ Controls and Validation, Requirements for reproducible identification of structure.</a>
+  
+  <h2>Substrate regime aware dimensional architecture</h2>
+  <a href="#README">📘 README</a>
+</nav>
 
-  <script>
-    async function loadCodex() {
-      try {
-        // Adjust path if needed depending on where this HTML lives
-        const response = await fetch('https://www.triadicframeworks.org/Low_Dimensional_Structures/README.md');
-        if (!response.ok) {
-          throw new Error('⚔️ Failed to load README.md');
-        }
-        const mdText = await response.text();
+<main id="content"></main>
 
-        // Render Markdown to HTML
-        const html = marked.parse(mdText, {
-          breaks: true,
-          gfm: true
-        });
+<script>
 
-        const root = document.getElementById('low-dim');
-        root.innerHTML = html;
-
-        // Trigger MathJax typesetting after content is injected
-        if (window.MathJax && window.MathJax.typesetPromise) {
-          window.MathJax.typesetPromise([root]).catch(err => console.error(err));
-        }
-      } catch (err) {
-        console.error(err);
-        const root = document.getElementById('low-dim');
-        root.innerHTML = `
-          <h1>Low Dimensional Structures</h1>
-          <p>By Nawder Loswin 01/17/2026 © www.TriadicFrameworks.org</p>
-          <p>Unable to load <code>README.md</code>.</p>
-          <pre>${String(err)}</pre>
-        `;
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
       }
-    }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
 
-    loadCodex();
-  </script>
+const DOC_MAP = {
+  DOI_MIN: 'doi_minimal_low_dimensional_structures.md',
+  RES_PRI: 'resonance_primitives.md',
+  DIM_SCALE: 'dimensional_scaling_notes.md',
+  HISTORY_CONTEXT: 'historical_context__absorbing_chaos.md',
+  CONTROLS_VALIDATION: 'controls_and_validation.md',
+  README: 'README.md'
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
 </body>
 </html>
