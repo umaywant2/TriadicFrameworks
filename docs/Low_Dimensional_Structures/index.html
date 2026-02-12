@@ -122,20 +122,9 @@ code {
   color: var(--text-main);
 }
 </style>
- <script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\
 
-\[', '\\]
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-']]
-    },
-    svg: { fontCache: 'global' }
-  };
- </script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
@@ -197,6 +186,13 @@ function loadFromHash() {
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
+</script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    if (window.MathJax) {
+      MathJax.typesetPromise();
+    }
+  });
 </script>
 
 </body>
