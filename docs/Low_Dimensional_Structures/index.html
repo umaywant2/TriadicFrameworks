@@ -182,14 +182,28 @@ function loadFromHash() {
     loadDoc('README.md');
   }
 }
-.then(text => {
-  const content = document.getElementById('content');
-  content.innerHTML = marked.parse(text);
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
-  if (window.MathJax) {
-    MathJax.typesetPromise([content]);
-  }
-});
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
   
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
