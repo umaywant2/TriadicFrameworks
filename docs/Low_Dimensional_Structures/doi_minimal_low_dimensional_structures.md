@@ -36,14 +36,12 @@ Low‑dimensional structure is represented using resonance primitives rather tha
 
 The canonical primitive is the triad:
 
-\[
-(f_R,\ \tau_R,\ Q_R)
-\]
+$$(f_R,\ \tau_R,\ Q_R)$$
 
 where:
-- \(f_R\) is the dominant resonance frequency,
-- \(\tau_R\) is the characteristic decay time,
-- \(Q_R = \pi f_R \tau_R\) is the resonance sharpness.
+- $$f_R$$ is the dominant resonance frequency,
+- $$\tau_R$$ is the characteristic decay time,
+- $$Q_R = \pi f_R \tau_R$$ is the resonance sharpness.
 
 These primitives are invariant under scale normalization and suitable for cross‑substrate comparison.
 
