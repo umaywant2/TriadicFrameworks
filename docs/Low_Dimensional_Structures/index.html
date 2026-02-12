@@ -182,17 +182,15 @@ function loadFromHash() {
     loadDoc('README.md');
   }
 }
-
-window.addEventListener('hashchange', loadFromHash);
-loadFromHash();
-
-</script>
-<script>
   document.addEventListener("DOMContentLoaded", () => {
     if (window.MathJax) {
       MathJax.typesetPromise();
     }
   });
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
 </script>
 
 </body>
