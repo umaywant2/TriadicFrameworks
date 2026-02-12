@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="Content-Language" content="en">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
 <link rel="canonical" href="https://www.pr.com/press-release/957074">
+   
    <title>AI | Triadic Frameworks</title>
+
 <style>
 /* ============================================================
    NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
@@ -121,30 +122,67 @@ code {
   color: var(--text-main);
 }
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
+   
+<nav>
+  <h2>This defines a minimal, layered AI instrument architecture.</h2>
+  <a href="#NOS_AI">🌍 NoS AI — constitutional constraints</a>
+  <a href="#REGIME_HEADER">🧩 Regime Header — regime declaration grammar</a>
+  <a href="#LINEAGE_LEDGER">🌱 Lineage Ledger — provenance and reproducibility</a>
+  <a href="#MINIMAL_AI">🛠️ Minimal AI Stack — reference architecture</a>
+    
+  <h2>Models are treated as components, not authorities.</h2>
+  <a href="#README">📘 README</a>
+</nav>
 
-<h1>AI</h1>
+<main id="content"></main>
 
-<p>
-This section defines a minimal, layered AI instrument architecture.
-</p>
+<script>
 
-<p>
-The system is designed for reproducible behavior under declared operating regimes,
-with explicit retrieval scope and append‑only lineage.
-</p>
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
 
-<ul>
-  <li><a href="NoS_AI.md">NoS_AI.md</a> — constitutional constraints</li>
-  <li><a href="Regime_Header.md">Regime_Header.md</a> — regime declaration grammar</li>
-  <li><a href="Lineage_Ledger.md">Lineage_Ledger.md</a> — provenance and reproducibility</li>
-  <li><a href="Minimal_AI_Stack.md">Minimal_AI_Stack.md</a> — reference architecture</li>
-</ul>
+const DOC_MAP = {
+  NOS_AI: 'NoS_AI.md',
+  REGIME_HEADER: 'Regime_Header.md',
+  LINEAGE_LEDGER: 'Lineage_Ledger.md',
+  MINIMAL_AI: 'Minimal_AI_Stack.md',
+  README: 'README.md'
+};
 
-<p>
-Models are treated as components, not authorities.
-</p>
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
 
 </body>
 </html>
