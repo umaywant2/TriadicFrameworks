@@ -1,0 +1,169 @@
+{
+  "artifact_id": "Physics_RefTables_2025",
+  "version": "1.0.0",
+  "type": "rtt_vst_physics_reference",
+  "provenance": {
+    "source": "NYSED Physics Reference Tables 2025 Edition",
+    "url": "https://www.nysed.gov/sites/default/files/programs/state-assessment/physics-ref-tables-2025.pdf",
+    "notes": "All values and equations preserved exactly; reorganized into RTT/vST substrate-regime-resonance structure."
+  },
+
+  "substrates": {
+    "material": {
+      "description": "Mass–motion substrate governing classical state-change under applied force.",
+      "regimes": {
+        "classical_low_velocity": {
+          "constants": [
+            { "symbol": "g", "value": "9.8 m/s^2", "meaning": "acceleration due to gravity" }
+          ],
+          "equations": [
+            "v_f = v_i + a t",
+            "d = v_i t + (1/2) a t^2",
+            "v_f^2 = v_i^2 + 2 a d",
+            "F_net = m a",
+            "F_g = m g",
+            "p = m v"
+          ],
+          "resonance_behavior": ["linear", "quadratic"]
+        },
+        "gravitational_inverse_square": {
+          "constants": [
+            { "symbol": "G", "value": "6.67 × 10^-11 N·m^2/kg^2", "meaning": "universal gravitational constant" }
+          ],
+          "equations": [
+            "F_g = G (m1 m2) / r^2"
+          ],
+          "resonance_behavior": ["inverse_square"]
+        }
+      }
+    },
+
+    "geometric": {
+      "description": "Spatial curvature, circular motion, and geometric constraints.",
+      "regimes": {
+        "circular_motion": {
+          "equations": [
+            "a_c = v^2 / r",
+            "C = 2πr"
+          ],
+          "resonance_behavior": ["quadratic_velocity", "inverse_radius"]
+        }
+      }
+    },
+
+    "energy": {
+      "description": "Potential, kinetic, thermal, and mechanical energy substrates.",
+      "regimes": {
+        "mechanical_energy": {
+          "equations": [
+            "KE = (1/2) m v^2",
+            "ΔPE_g = m g Δh",
+            "PE_s = (1/2) k x^2",
+            "W = F d",
+            "W_net = ΔE_T",
+            "E_T = PE + KE + E_other"
+          ],
+          "resonance_behavior": ["quadratic", "linear"]
+        },
+        "thermal_energy": {
+          "equations": [
+            "Q = m c ΔT",
+            "P = W / t"
+          ],
+          "resonance_behavior": ["linear"]
+        }
+      }
+    },
+
+    "field": {
+      "description": "Electromagnetic field substrate: forces, potentials, and circuit behavior.",
+      "regimes": {
+        "electrostatic_inverse_square": {
+          "constants": [
+            { "symbol": "k", "value": "9.0 × 10^9 N·m^2/C^2", "meaning": "electrostatic constant" }
+          ],
+          "equations": [
+            "F_e = k (q1 q2) / r^2",
+            "E = F_e / q"
+          ],
+          "resonance_behavior": ["inverse_square"]
+        },
+        "circuit_linear": {
+          "equations": [
+            "V = I R",
+            "P = V I",
+            "W = q V",
+            "I = Δq / t"
+          ],
+          "resonance_behavior": ["linear"]
+        }
+      }
+    },
+
+    "resonance": {
+      "description": "Wave, photon, and frequency-dominant substrates.",
+      "regimes": {
+        "wave_harmonic": {
+          "equations": [
+            "v = f λ",
+            "T = 1 / f",
+            "n1 sinθ1 = n2 sinθ2"
+          ],
+          "constants": [
+            { "symbol": "c", "value": "3.00 × 10^8 m/s", "meaning": "speed of light in vacuum" },
+            { "symbol": "h", "value": "6.63 × 10^-34 J·s", "meaning": "Planck constant" }
+          ],
+          "resonance_behavior": ["harmonic", "frequency_dominant"]
+        },
+        "photon_quantized": {
+          "equations": [
+            "E_photon = h f"
+          ],
+          "resonance_behavior": ["quantized_energy"]
+        }
+      }
+    },
+
+    "information": {
+      "description": "Scaling rules, constants, and dimensional anchors.",
+      "regimes": {
+        "prefix_scaling": {
+          "prefixes": [
+            { "prefix": "tera", "symbol": "T", "value": "10^12" },
+            { "prefix": "giga", "symbol": "G", "value": "10^9" },
+            { "prefix": "mega", "symbol": "M", "value": "10^6" },
+            { "prefix": "kilo", "symbol": "k", "value": "10^3" },
+            { "prefix": "centi", "symbol": "c", "value": "10^-2" },
+            { "prefix": "milli", "symbol": "m", "value": "10^-3" },
+            { "prefix": "micro", "symbol": "μ", "value": "10^-6" },
+            { "prefix": "nano", "symbol": "n", "value": "10^-9" },
+            { "prefix": "pico", "symbol": "p", "value": "10^-12" }
+          ],
+          "resonance_behavior": ["logarithmic_scaling"]
+        }
+      }
+    }
+  },
+
+  "semantic_layers": {
+    "phase_alignment": {
+      "phase": "IV–VI",
+      "rationale": "Physics tables span classical substrates (Phase IV), field substrates (Phase V), and resonance substrates (Phase VI)."
+    },
+    "resonance_tags": [
+      "linear",
+      "quadratic",
+      "inverse_square",
+      "harmonic",
+      "frequency_dominant",
+      "quantized_energy",
+      "geometric_constraint"
+    ],
+    "usage_context": [
+      "RTT/vST teaching modules",
+      "substrate‑aligned physics instruction",
+      "student‑authored extensions",
+      "cross‑regime mapping exercises"
+    ]
+  }
+}
