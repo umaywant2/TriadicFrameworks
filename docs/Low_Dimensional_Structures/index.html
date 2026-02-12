@@ -122,7 +122,19 @@ code {
   color: var(--text-main);
 }
 </style>
+ <script>
+  window.MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\
 
+\[', '\\]
+
+']]
+    },
+    svg: { fontCache: 'global' }
+  };
+ </script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
