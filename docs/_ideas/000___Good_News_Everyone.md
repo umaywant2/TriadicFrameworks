@@ -778,3 +778,66 @@ No ownership claimed here — only stewardship for a season. If it resonates, re
 Grateful to be part of the relay,  
 Nawder (us → we → onward)  
 [TriadicFrameworks](https://www.triadicframeworks.org)  
+
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="420" viewBox="0 0 1100 420">
+  <defs>
+    <style>
+      .chassis { stroke:#9aa4b2; stroke-width:4; fill:none; opacity:0.9; }
+      .partA { stroke:#8ab4ff; stroke-width:4; fill:rgba(138,180,255,0.08); }
+      .partB { stroke:#c792ea; stroke-width:4; fill:rgba(199,146,234,0.08); }
+      .axle  { stroke:#dfe7f3; stroke-width:6; fill:none; }
+      .ring  { stroke:#f6c177; stroke-width:3; fill:none; opacity:0.9; }
+      .label { fill:#dfe7f3; font: 14px system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+      .note  { fill:#9aa4b2; font: 12px system-ui, -apple-system, Segoe UI, Roboto, Arial; }
+      .dash  { stroke-dasharray:8 8; }
+    </style>
+  </defs>
+
+  <!-- Chassis rails -->
+  <path class="chassis" d="M80 90 H1020" />
+  <path class="chassis" d="M80 330 H1020" />
+  <path class="chassis" d="M120 90 V330" />
+  <path class="chassis" d="M980 90 V330" />
+  <text class="label" x="90" y="70">Chassis / frame</text>
+
+  <!-- Left assembly: Part B (inverted cone) -->
+  <polygon class="partB" points="260,150 360,210 260,270" />
+  <text class="label" x="240" y="140">Part B (inverted)</text>
+
+  <!-- Left assembly: Part A (cone) near B but not touching -->
+  <polygon class="partA" points="420,210 320,160 320,260" />
+  <text class="label" x="395" y="140">Part A</text>
+
+  <!-- Gap indicator -->
+  <line class="chassis dash" x1="360" y1="210" x2="320" y2="210" />
+  <text class="note" x="332" y="200">gap</text>
+
+  <!-- Right assembly: Part A (cone) -->
+  <polygon class="partA" points="680,210 780,160 780,260" />
+  <text class="label" x="650" y="140">Part A</text>
+
+  <!-- Right assembly: Part B (inverted cone) -->
+  <polygon class="partB" points="840,150 740,210 840,270" />
+  <text class="label" x="820" y="140">Part B (inverted)</text>
+
+  <!-- Gap indicator -->
+  <line class="chassis dash" x1="740" y1="210" x2="780" y2="210" />
+  <text class="note" x="748" y="200">gap</text>
+
+  <!-- Dual-arrow axle: A-to-A connection (minimal spin axis) -->
+  <line class="axle" x1="420" y1="210" x2="680" y2="210" />
+  <polygon fill="#dfe7f3" points="420,210 445,198 445,222" />
+  <polygon fill="#dfe7f3" points="680,210 655,198 655,222" />
+  <text class="label" x="505" y="245">A ↔ A axle (minimal spin / phase)</text>
+
+  <!-- Collector / reservoir rings around chassis (conceptual) -->
+  <ellipse class="ring" cx="550" cy="210" rx="420" ry="150" />
+  <ellipse class="ring" cx="550" cy="210" rx="360" ry="120" />
+  <text class="label" x="90" y="380">Collectors / reservoirs (conceptual rings)</text>
+
+  <!-- Tip amplification zones (conceptual) -->
+  <circle class="ring" cx="360" cy="210" r="18" />
+  <circle class="ring" cx="740" cy="210" r="18" />
+  <text class="note" x="300" y="305">torsion-vortex arc focus</text>
+  <text class="note" x="700" y="305">torsion-vortex arc focus</text>
+</svg>
