@@ -81,6 +81,7 @@ The pipeline automatically checks every JSON file under `schemas/` and `docs/` a
 | **Entity** | Entity state, resonance, kinematics | `schemas/entity.v1.json` |
 | **Universe‑Class Extensions** | Orbital harmonics, SAR overlays, deep‑time, GPR, ATC | `schemas/universe.v1.json` |
 | **Physics Ref Tables 2025** | RTT/vST substrate logic preserving constants and equations | `schemas/Physics_RefTables_2025_RTTvST.json` |
+| **Periodic Table RTT/vST** | Reorganizes by **substrate class**, **regime**, **resonance behavior**, **phase alignment** | `schemas/Periodic_Table_RTTvST.json` |
 
 Every commit and pull request triggers validation.
 
