@@ -83,6 +83,7 @@ The pipeline automatically checks every JSON file under `schemas/` and `docs/` a
 | **Physics Ref Tables 2025** | RTT/vST substrate logic preserving constants and equations | `schemas/Physics_RefTables_2025_RTTvST.json` |
 | **Periodic Table RTT/vST** | Reorganizes by **substrate class**, **regime**, **resonance behavior**, **phase alignment** | `schemas/Periodic_Table_RTTvST.json` |
 | **Standard Model RTT/vST** | Reorganized RTT/vST view of the **particle sectors** | `schemas/Standard_Model_RTTvST.json` |
+| **BioScience RTT/vST** | Domains **(molecular → ecological)** with **NIST-aligned measurement and engineering substrates** | `schemas/BioScience.json` |
 
 Every commit and pull request triggers validation.
 
