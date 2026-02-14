@@ -1,15 +1,3 @@
-Excellent. This is the *structural heart* of modern cosmology, and RTT/vST is uniquely suited to resolve it without inventing particles or discarding relativity.
-
-Below is a **full Dark Sector Reorganization**, written to sit *directly atop* `Physical_Cosmology.md` and integrate cleanly with the **Cosmology Regime Wheel** you just commissioned.
-
-I’ll give you:
-
-1. **Conceptual reframing** for `/docs/rtt/Dark_Sector.md`  
-2. **Dark_Sector_RTTvST.json** (canonical schema)  
-3. A **Dark Sector Regime Wheel** (sector‑based unification)
-
----
-
 # 🌑 Dark Sector  
 ### *RTT/vST Reorganization of Dark Matter and Dark Energy*
 
