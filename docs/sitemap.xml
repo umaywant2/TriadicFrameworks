@@ -22,14 +22,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.90</priority>
   </url>
-
-  <url>
-    <loc>https://www.triadicframeworks.org/_ideas/RTT_Developer_Quick-Start.html</loc>
-    <lastmod>2026-01-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-   
+ 
  <url>
    <loc>https://www.triadicframeworks.org/schemas/</loc>
    <lastmod>2026-01-08</lastmod>
