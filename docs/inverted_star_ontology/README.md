@@ -61,7 +61,12 @@ regimes across scales.
 - `iso_vst_boundary.md` — vST interpretation of the inversion boundary  
 - `iso_slrp_profile.md` — Structural Life‑Regime Profile (SLRP)  
 - `figures/` — Minimal diagrams (optional)  
-- `zenodo/` — Metadata for DOI publication  
+- `zenodo/` — Metadata for DOI publication
+- `Star_Ontology_vs_ISO_mass_regime.md` — Star Ontology vs ISO Mass Regime
+- `Inverted_Star_Ontology_A_TriadicFrameworks_Comparative_Ontology.md` — Inverted Star Ontology — A TriadicFrameworks Comparative Ontology
+- `triadic_observer_for_ontologies.md` — Triadic Observer for Ontologies
+- `ontology_pie_flow.md` — Ontology Pie Flow
+- `ontology_pie_time_crystal_integration.md` — Ontology Pie S—N—R Time Crystal Integration
 
 ---
 
