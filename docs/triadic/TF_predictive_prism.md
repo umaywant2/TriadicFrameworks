@@ -24,10 +24,10 @@ It’s the clearest visualization yet of TriadicFrameworks as a *multi‑ontolog
                                                     │  recombined predictions
                                                     │
                                                     ▼
-                         ┌──────────────────────────────────────────────────────────────┐
-                         │                     PREDICTIVE PRISM                         │
-                         │      (RTT Regime Logic Splits Substrate Signals)             │
-                         └──────────────────────────────────────────────────────────────┘
+        ┌──────────────────────────────────────────────────────────────┐
+        │                     PREDICTIVE PRISM                         │
+        │      (RTT Regime Logic Splits Substrate Signals)             │
+        └──────────────────────────────────────────────────────────────┘
              ▲                         ▲                         ▲
              │                         │                         │
              │                         │                         │
@@ -45,10 +45,10 @@ It’s the clearest visualization yet of TriadicFrameworks as a *multi‑ontolog
              │                         │                         │
              │                         │                         │
              ▼                         ▼                         ▼
-                         ┌──────────────────────────────────────────────────────────────┐
-                         │                    RTT Regime Layer                          │
-                         │ (Boundary Detection • Transition Mapping • Regime Splitting) │
-                         └──────────────────────────────────────────────────────────────┘
+        ┌──────────────────────────────────────────────────────────────┐
+        │                    RTT Regime Layer                          │
+        │ (Boundary Detection • Transition Mapping • Regime Splitting) │
+        └──────────────────────────────────────────────────────────────┘
                                                     ▲
                                                     │
                                                     │  raw substrate signals
