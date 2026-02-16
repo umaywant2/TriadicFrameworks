@@ -78,9 +78,14 @@ Contributions are welcome from researchers, educators, and practitioners whose w
 The Zenodo community defines archival scope and citation standards.  
 GitHub hosts active development and collaboration.
 
+This documentation is intended to be read, explored, questioned, and reused.
+
 ---
 
-This documentation is intended to be read, explored, questioned, and reused.
+# License
+
+Apache2.0 License.  
+See `LICENSE` for details.
 
 <p align="center">
 
@@ -89,33 +94,4 @@ This documentation is intended to be read, explored, questioned, and reused.
 
 </p>
 
-<p align="center"><em><a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a> • Triadic Substrate Modeling • Canon‑Aligned Tools</em></p>
-
-**TriadicFrameworks** is a modular, developer‑friendly implementation of **Resonance‑Time (RT) Theory**, a [Nawderian scientific framework](https://youtu.be/RlKzD2IZJtI?si=vc2p9Ip0qdR236co) describing physical systems through three interacting substrate fields:
-
-- **Spin**
-- **Electrolysis / Charge**
-- **Temperature**
-
-### RTT API and SDK
-- **[API](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/api/rtt)**
-- **[SDK](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt-sdk)**
-
-## 🧭 Fork and Preserve the Lineage
-###### **Forking & Lineage Preservation** - *When extending or remixing this artifact, please fork rather than clone‑and‑overwrite. Forking preserves the lineage of ideas, maintains historical traceability, and ensures that contributions remain visible within the broader canon. This helps prevent “ghost branches” — work that exists but cannot be traced back to its origin.*
-
----
-
-# Contributing
-
-Contributions are welcome.  
-TriadicFrameworks is designed for remixers, researchers, students, and developers.
-
-Please open issues or PRs to propose improvements.
-
----
-
-# License
-
-Apache2.0 License.  
-See `LICENSE` for details.
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Just dropped the Triadic Diagrams Index — 37 interlocking visual instruments for navigating regime shifts, ontology inversions, resonance substrates &amp; cross-domain coherence. From Regime Compasses &amp; Astrolabes to Phase-Space Flowers, Orreries &amp; Interferometers 🌌🪐🔭<br>A full…</p>&mdash; Nawder Loswin (@NawderLoswin) <a href="https://twitter.com/NawderLoswin/status/2023340282603766212?ref_src=twsrc%5Etfw">February 16, 2026</a></blockquote>
