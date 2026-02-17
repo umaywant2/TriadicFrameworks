@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
+  <title>Global Energy Regime Awareness</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+<h2>Global Energy Regime Awareness — Documentation Index</h2>
+
+<!-- ROOT -->
+<a href="#README">📘 README — Introduction to global energy regime awareness.</a>
+
+<!-- OVERVIEW -->
+<a href="#OVERVIEW_PURPOSE">🎯 Purpose — Why regime awareness matters for energy systems.</a>
+<a href="#OVERVIEW_SCOPE_AND_NON_GOALS">📏 Scope & Non‑Goals — What this framework does and does not attempt.</a>
+<a href="#OVERVIEW_TERMINOLOGY_ALIGNMENT">📚 Terminology Alignment — Shared language across energy domains.</a>
+
+<!-- ENERGY REGIMES -->
+<a href="#REGIME_STEADY_STATE_GENERATION">⚡ Steady‑State Generation — Normal operating conditions.</a>
+<a href="#REGIME_PEAK_DEMAND_CONDITIONS">📈 Peak Demand Conditions — High‑load and stress regimes.</a>
+<a href="#REGIME_RENEWABLE_VARIABILITY">🌬️ Renewable Variability — Intermittent and variable generation.</a>
+<a href="#REGIME_EMERGENCY_OPERATIONS">🚨 Emergency Operations — Faults, outages, and crisis response.</a>
+
+<!-- GRID ENTRY POINTS -->
+<a href="#GRID_GENERATION_ASSETS">🏭 Generation Assets — Power plants and generation sources.</a>
+<a href="#GRID_TRANSMISSION_NETWORKS">🗼 Transmission Networks — High‑voltage transport infrastructure.</a>
+<a href="#GRID_DISTRIBUTION_SYSTEMS">🏘️ Distribution Systems — Local delivery and last‑mile grids.</a>
+<a href="#GRID_STORAGE_AND_BUFFERING">🔋 Storage & Buffering — Energy storage and buffering mechanisms.</a>
+
+<!-- MINIMAL SCHEMA -->
+<a href="#SCHEMA_ENERGY_REGIME_AWARENESS">🧬 Energy Regime Awareness Schema — Minimal declarative schema.</a>
+<a href="#SCHEMA_EXAMPLE_GRID_DECLARATION">📄 Example Grid Declaration — Minimal working example.</a>
+<a href="#SCHEMA_DESIGN_NOTES">📝 Schema Design Notes — Rationale and design constraints.</a>
+
+<!-- INTEGRATION PATTERNS -->
+<a href="#INTEGRATION_PASSIVE_GRID_DECLARATION">🕊️ Passive Grid Declaration — Awareness without control.</a>
+<a href="#INTEGRATION_OPERATOR_CONTEXT_ALIGNMENT">👷 Operator Context Alignment — Supporting human operators.</a>
+<a href="#INTEGRATION_OBSERVABILITY_AND_SCADA">📊 Observability & SCADA — Aligning telemetry with regimes.</a>
+<a href="#INTEGRATION_AUTOMATION_BOUNDARY_MARKERS">🚦 Automation Boundary Markers — Declaring safe automation edges.</a>
+
+<!-- OPERATIONAL IMPLICATIONS -->
+<a href="#OPERATIONS_GRID_EVENT_INTERPRETATION">🧯 Grid Event Interpretation — Understanding grid events structurally.</a>
+<a href="#OPERATIONS_LOAD_SHEDDING_CONTEXT">⚖️ Load Shedding Context — Structural context for shedding decisions.</a>
+<a href="#OPERATIONS_POST_EVENT_ANALYSIS">🧾 Post‑Event Analysis — Clear, regime‑aware retrospectives.</a>
+
+<!-- RELATIONSHIPS -->
+<a href="#RELATIONSHIP_TO_ENTERPRISE_STRUCTURAL_AWARENESS">🔗 Relationship to Enterprise Structural Awareness.</a>
+<a href="#RELATIONSHIP_TO_MSRM">🏗️ Relationship to MSRM — Manufacturing substrate alignment.</a>
+<a href="#RELATIONSHIP_TO_RSM">🌊 Relationship to RSM — Resonance substrate alignment.</a>
+
+<!-- FUTURE -->
+<a href="#FUTURE_DIRECTIONS">🔮 Future Directions — Possible extensions and explorations.</a>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: 'README.md',
+
+  // Overview
+  OVERVIEW_PURPOSE: 'overview/purpose.md',
+  OVERVIEW_SCOPE_AND_NON_GOALS: 'overview/scope_and_non_goals.md',
+  OVERVIEW_TERMINOLOGY_ALIGNMENT: 'overview/terminology_alignment.md',
+
+  // Energy Regimes
+  REGIME_STEADY_STATE_GENERATION: 'energy_regimes/steady_state_generation.md',
+  REGIME_PEAK_DEMAND_CONDITIONS: 'energy_regimes/peak_demand_conditions.md',
+  REGIME_RENEWABLE_VARIABILITY: 'energy_regimes/renewable_variability.md',
+  REGIME_EMERGENCY_OPERATIONS: 'energy_regimes/emergency_operations.md',
+
+  // Grid Entry Points
+  GRID_GENERATION_ASSETS: 'grid_entry_points/generation_assets.md',
+  GRID_TRANSMISSION_NETWORKS: 'grid_entry_points/transmission_networks.md',
+  GRID_DISTRIBUTION_SYSTEMS: 'grid_entry_points/distribution_systems.md',
+  GRID_STORAGE_AND_BUFFERING: 'grid_entry_points/storage_and_buffering.md',
+
+  // Minimal Schema
+  SCHEMA_ENERGY_REGIME_AWARENESS: 'minimal_schema/energy_regime_awareness.schema.json',
+  SCHEMA_EXAMPLE_GRID_DECLARATION: 'minimal_schema/example_grid_declaration.yaml',
+  SCHEMA_DESIGN_NOTES: 'minimal_schema/schema_design_notes.md',
+
+  // Integration Patterns
+  INTEGRATION_PASSIVE_GRID_DECLARATION: 'integration_patterns/passive_grid_declaration.md',
+  INTEGRATION_OPERATOR_CONTEXT_ALIGNMENT: 'integration_patterns/operator_context_alignment.md',
+  INTEGRATION_OBSERVABILITY_AND_SCADA: 'integration_patterns/observability_and_scada.md',
+  INTEGRATION_AUTOMATION_BOUNDARY_MARKERS: 'integration_patterns/automation_boundary_markers.md',
+
+  // Operational Implications
+  OPERATIONS_GRID_EVENT_INTERPRETATION: 'operational_implications/grid_event_interpretation.md',
+  OPERATIONS_LOAD_SHEDDING_CONTEXT: 'operational_implications/load_shedding_context.md',
+  OPERATIONS_POST_EVENT_ANALYSIS: 'operational_implications/post_event_analysis.md',
+
+  // Relationships
+  RELATIONSHIP_TO_ENTERPRISE_STRUCTURAL_AWARENESS: 'relationship_to_enterprise_structural_awareness.md',
+  RELATIONSHIP_TO_MSRM: 'relationship_to_msrm.md',
+  RELATIONSHIP_TO_RSM: 'relationship_to_rsm.md',
+
+  // Future
+  FUTURE_DIRECTIONS: 'future_directions.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
+
+
