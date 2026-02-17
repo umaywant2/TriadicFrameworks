@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
+  <title>EcoEchoSystem</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+<h2>EcoEchoSystem — Documentation Index</h2>
+
+<!-- ROOT -->
+<a href="#README">📘 README — Entry point to the EcoEchoSystem.</a>
+<a href="#OVERVIEW">🌍 Overview — System‑level orientation and intent.</a>
+
+<!-- COMMUNITY MODES -->
+<a href="#COMMUNITY_README">👥 Community — Participation and contribution model.</a>
+<a href="#COMMUNITY_EDUCATION_MODE">🎓 Education Mode — Learning‑oriented usage patterns.</a>
+<a href="#COMMUNITY_RESEARCH_MODE">🔬 Research Mode — Exploratory and analytical workflows.</a>
+<a href="#COMMUNITY_SHARED_TEMPLATES">📂 Shared Templates — Reusable community artifacts.</a>
+
+<!-- CROSS‑DOMAIN SUBSTRATE -->
+<a href="#CROSS_DOMAIN_README">🌐 Cross‑Domain Substrate — Shared regime infrastructure.</a>
+<a href="#CROSS_DOMAIN_OVERVIEW">🧭 Cross‑Domain Overview — How domains interlock.</a>
+<a href="#CROSS_DOMAIN_INTERFACES">🔗 Interfaces — Domain‑to‑domain interaction surfaces.</a>
+<a href="#CROSS_DOMAIN_NETWORKS">🕸️ Networks — Cross‑domain connectivity structures.</a>
+<a href="#CROSS_DOMAIN_FEEDBACK_LOOPS">🔁 Feedback Loops — Recursive influence patterns.</a>
+<a href="#CROSS_DOMAIN_STABILITY_CYCLES">⚖️ Stability Cycles — Multi‑domain equilibrium dynamics.</a>
+<a href="#CROSS_DOMAIN_TRANSITIONS">🚪 Transitions — Regime change across domains.</a>
+<a href="#CROSS_DOMAIN_SUBSTRATE_INTERACTIONS">🧬 Substrate Interactions — Shared structural mechanics.</a>
+<a href="#CROSS_DOMAIN_MULTI_SCALE_SIMULATION">📐 Multi‑Scale Simulation — Nested temporal and spatial scales.</a>
+<a href="#CROSS_DOMAIN_MAPPINGS">🗺️ Cross‑Domain Mappings — Structural correspondences.</a>
+<a href="#CROSS_DOMAIN_REGIME_COUPLING_ENGINE">⚙️ Regime Coupling Engine — Coordinated regime dynamics.</a>
+
+<!-- DOMAIN MODULES -->
+<a href="#DOMAIN_MODULES_README">📦 Domain Modules — Specialized regime lenses.</a>
+
+<!-- AI AGENTS -->
+<a href="#AI_AGENTS_README">🤖 AI Agents — Autonomous regime participants.</a>
+<a href="#AI_ALIGNMENT_CONSTRAINTS">🧠 Alignment Constraints — Safety and coherence bounds.</a>
+<a href="#AI_LEARNING_REGIMES">📈 Learning Regimes — Adaptive behavior patterns.</a>
+<a href="#AI_MULTI_REGIME_AGENTS">🔀 Multi‑Regime Agents — Cross‑context autonomy.</a>
+
+<!-- BIOLOGY -->
+<a href="#BIOLOGY_README">🧬 Biology — Living system regimes.</a>
+<a href="#BIOLOGY_STRUCTURES">🏗️ Structures — Biological organization.</a>
+<a href="#BIOLOGY_REGIMES">🧭 Regimes — Functional biological states.</a>
+<a href="#BIOLOGY_RELATIONAL_TIME">⏳ Relational Time — Temporal coupling in biology.</a>
+<a href="#BIOLOGY_ACTIVATION_DYNAMICS">⚡ Activation Dynamics — Biological response triggers.</a>
+<a href="#BIOLOGY_ACTIVATION_RESPONSE_CYCLES">🔄 Activation Cycles — Recurrent biological patterns.</a>
+<a href="#BIOLOGY_ECOSYSTEM_DYNAMICS">🌱 Ecosystem Dynamics — System‑level biological behavior.</a>
+<a href="#BIOLOGY_ECOSYSTEM_INTERACTIONS">🤝 Ecosystem Interactions — Species and environment coupling.</a>
+<a href="#BIOLOGY_ECOSYSTEM_NETWORKS">🕸️ Ecosystem Networks — Biological connectivity.</a>
+<a href="#BIOLOGY_ECOSYSTEM_FEEDBACK_LOOPS">🔁 Ecosystem Feedback — Reinforcing and damping loops.</a>
+<a href="#BIOLOGY_ECOSYSTEM_STABILITY_CYCLES">⚖️ Ecosystem Stability — Persistence and collapse modes.</a>
+<a href="#BIOLOGY_ECOSYSTEM_RESILIENCE">🛡️ Ecosystem Resilience — Recovery and adaptation.</a>
+<a href="#BIOLOGY_ENVIRONMENTAL_INTERACTIONS">🌍 Environmental Interactions — External coupling.</a>
+<a href="#BIOLOGY_EVOLUTIONARY_REGIMES">🧬 Evolutionary Regimes — Long‑term biological change.</a>
+<a href="#BIOLOGY_INTERFACES">🔗 Biological Interfaces — Cross‑domain touchpoints.</a>
+<a href="#BIOLOGY_TRANSITIONS">🚪 Biological Transitions — Regime shifts in life systems.</a>
+
+<!-- ECONOMICS -->
+<a href="#ECONOMICS_README">💰 Economics — Resource and exchange regimes.</a>
+<a href="#ECONOMICS_MARKET_REGIMES">📊 Market Regimes — Economic state patterns.</a>
+<a href="#ECONOMICS_RESOURCE_FLOWS">🔄 Resource Flows — Material and value circulation.</a>
+<a href="#ECONOMICS_STABILITY_CYCLES">⚖️ Economic Stability — Boom‑bust dynamics.</a>
+
+<!-- GOVERNANCE -->
+<a href="#GOVERNANCE_README">🏛️ Governance — Collective decision regimes.</a>
+<a href="#GOVERNANCE_COLLECTIVE_BEHAVIOR">👥 Collective Behavior — Group‑level dynamics.</a>
+<a href="#GOVERNANCE_POLICY_REGIMES">📜 Policy Regimes — Rule‑based governance states.</a>
+<a href="#GOVERNANCE_INSTITUTIONAL_TRANSITIONS">🏗️ Institutional Transitions — Structural change.</a>
+
+<!-- PHYSICS -->
+<a href="#PHYSICS_README">⚛️ Physics — Fundamental regime constraints.</a>
+<a href="#PHYSICS_CLASSICAL_REGIMES">📐 Classical Regimes — Macroscopic physics.</a>
+<a href="#PHYSICS_QUANTUM_REGIMES">🔬 Quantum Regimes — Microscopic behavior.</a>
+<a href="#PHYSICS_FIELD_INTERACTIONS">🌌 Field Interactions — Force and field coupling.</a>
+<a href="#PHYSICS_VST_CONSTRAINTS">🧭 vST Constraints — Spacetime regime limits.</a>
+
+<!-- PSYCHOLOGY -->
+<a href="#PSYCHOLOGY_README">🧠 Psychology — Cognitive and emotional regimes.</a>
+<a href="#PSYCHOLOGY_COGNITIVE_REGIMES">💭 Cognitive Regimes — Thought patterns.</a>
+<a href="#PSYCHOLOGY_EMOTIONAL_ACTIVATION">❤️ Emotional Activation — Affective triggers.</a>
+<a href="#PSYCHOLOGY_IDENTITY_TRANSITIONS">🔄 Identity Transitions — Self‑model shifts.</a>
+<a href="#PSYCHOLOGY_TRAUMA_REGIMES">🩹 Trauma Regimes — Stress and recovery states.</a>
+
+<!-- SUBSTRATE ENGINE -->
+<a href="#SUBSTRATE_ENGINE_README">⚙️ Substrate Engine — Execution backbone.</a>
+<a href="#SUBSTRATE_TRIADIC_ENGINE">🔺 Triadic Substrate — Core structural engine.</a>
+<a href="#SUBSTRATE_EVENT_BUS">📡 Event Bus — Signal propagation.</a>
+<a href="#SUBSTRATE_INVARIANTS">♾️ Invariants — Structural constants.</a>
+<a href="#SUBSTRATE_REGIME_AWARENESS">👁️ Regime Awareness — Context sensitivity.</a>
+<a href="#SUBSTRATE_REGIME_TRANSITIONS">🚪 Regime Transitions — State change mechanics.</a>
+<a href="#SUBSTRATE_VST_ALIGNMENT">🧭 vST Alignment — Spacetime coherence.</a>
+
+<!-- TECH TREE -->
+<a href="#TECH_TREE_README">🌳 Tech Tree — Capability progression.</a>
+<a href="#TECH_TIER_0">🪨 Tier 0 — Pre‑existing tools.</a>
+<a href="#TECH_TIER_1">🧬 Tier 1 — Substrate unlocks.</a>
+<a href="#TECH_TIER_2">📦 Tier 2 — Domain unlocks.</a>
+<a href="#TECH_TIER_3">🌐 Tier 3 — Cross‑domain unlocks.</a>
+<a href="#TECH_TIER_4">🏙️ Tier 4 — Civilization unlocks.</a>
+
+<!-- TEMPLATES -->
+<a href="#TEMPLATES_README">📐 Templates — Reusable simulation scaffolds.</a>
+<a href="#DOMAIN_MODULE_TEMPLATE">📄 Domain Module Template — Standardized module design.</a>
+
+<!-- UI LAYER -->
+<a href="#UI_LAYER_README">🖥️ UI Layer — Human‑system interaction.</a>
+<a href="#UI_ACTIVATION_HEATMAPS">🔥 Activation Heatmaps — Regime intensity visualization.</a>
+<a href="#UI_REGIME_OVERLAYS">🧭 Regime Overlays — Contextual state layers.</a>
+<a href="#UI_SCENARIO_BUILDER">🧩 Scenario Builder — Interactive simulation design.</a>
+<a href="#UI_TIME_REGIME_CONTROLS">⏱️ Time & Regime Controls — Temporal navigation.</a>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: 'README.md',
+  OVERVIEW: 'OVERVIEW.md',
+
+  // Community Modes
+  COMMUNITY_README: 'community/README.md',
+  COMMUNITY_EDUCATION_MODE: 'community/education_mode.md',
+  COMMUNITY_RESEARCH_MODE: 'community/research_mode.md',
+  COMMUNITY_SHARED_TEMPLATES: 'community/shared_templates.md',
+
+  // Cross‑Domain Substrate
+  CROSS_DOMAIN_README: 'cross_domain/README.md',
+  CROSS_DOMAIN_OVERVIEW: 'cross_domain/overview.md',
+  CROSS_DOMAIN_INTERFACES: 'cross_domain/interfaces.md',
+  CROSS_DOMAIN_NETWORKS: 'cross_domain/networks.md',
+  CROSS_DOMAIN_FEEDBACK_LOOPS: 'cross_domain/feedback_loops.md',
+  CROSS_DOMAIN_STABILITY_CYCLES: 'cross_domain/stability_cycles.md',
+  CROSS_DOMAIN_TRANSITIONS: 'cross_domain/transitions.md',
+  CROSS_DOMAIN_SUBSTRATE_INTERACTIONS: 'cross_domain/substrate_interactions.md',
+  CROSS_DOMAIN_MULTI_SCALE_SIMULATION: 'cross_domain/multi_scale_simulation.md',
+  CROSS_DOMAIN_MAPPINGS: 'cross_domain/cross_domain_mappings.md',
+  CROSS_DOMAIN_REGIME_COUPLING_ENGINE: 'cross_domain/regime_coupling_engine.md',
+
+  // Domain Modules
+  DOMAIN_MODULES_README: 'domain_modules/README.md',
+
+  // AI Agents
+  AI_AGENTS_README: 'domain_modules/ai_agents/README.md',
+  AI_ALIGNMENT_CONSTRAINTS: 'domain_modules/ai_agents/alignment_constraints.md',
+  AI_LEARNING_REGIMES: 'domain_modules/ai_agents/learning_regimes.md',
+  AI_MULTI_REGIME_AGENTS: 'domain_modules/ai_agents/multi_regime_agents.md',
+
+  // Biology
+  BIOLOGY_README: 'domain_modules/biology/README.md',
+  BIOLOGY_STRUCTURES: 'domain_modules/biology/structures.md',
+  BIOLOGY_REGIMES: 'domain_modules/biology/regimes.md',
+  BIOLOGY_RELATIONAL_TIME: 'domain_modules/biology/relational_time.md',
+  BIOLOGY_ACTIVATION_DYNAMICS: 'domain_modules/biology/activation_dynamics.md',
+  BIOLOGY_ACTIVATION_RESPONSE_CYCLES: 'domain_modules/biology/activation_response_cycles.md',
+  BIOLOGY_ECOSYSTEM_DYNAMICS: 'domain_modules/biology/ecosystem_dynamics.md',
+  BIOLOGY_ECOSYSTEM_INTERACTIONS: 'domain_modules/biology/ecosystem_interactions.md',
+  BIOLOGY_ECOSYSTEM_NETWORKS: 'domain_modules/biology/ecosystem_networks.md',
+  BIOLOGY_ECOSYSTEM_FEEDBACK_LOOPS: 'domain_modules/biology/ecosystem_feedback_loops.md',
+  BIOLOGY_ECOSYSTEM_STABILITY_CYCLES: 'domain_modules/biology/ecosystem_stability_cycles.md',
+  BIOLOGY_ECOSYSTEM_RESILIENCE: 'domain_modules/biology/ecosystem_resilience.md',
+  BIOLOGY_ENVIRONMENTAL_INTERACTIONS: 'domain_modules/biology/environmental_interactions.md',
+  BIOLOGY_EVOLUTIONARY_REGIMES: 'domain_modules/biology/evolutionary_regimes.md',
+  BIOLOGY_INTERFACES: 'domain_modules/biology/interfaces.md',
+  BIOLOGY_TRANSITIONS: 'domain_modules/biology/transitions.md',
+
+  // Economics
+  ECONOMICS_README: 'domain_modules/economics/README.md',
+  ECONOMICS_MARKET_REGIMES: 'domain_modules/economics/market_regimes.md',
+  ECONOMICS_RESOURCE_FLOWS: 'domain_modules/economics/resource_flows.md',
+  ECONOMICS_STABILITY_CYCLES: 'domain_modules/economics/stability_cycles.md',
+
+  // Governance
+  GOVERNANCE_README: 'domain_modules/governance/README.md',
+  GOVERNANCE_COLLECTIVE_BEHAVIOR: 'domain_modules/governance/collective_behavior.md',
+  GOVERNANCE_POLICY_REGIMES: 'domain_modules/governance/policy_regimes.md',
+  GOVERNANCE_INSTITUTIONAL_TRANSITIONS: 'domain_modules/governance/institutional_transitions.md',
+
+  // Physics
+  PHYSICS_README: 'domain_modules/physics/README.md',
+  PHYSICS_CLASSICAL_REGIMES: 'domain_modules/physics/classical_regimes.md',
+  PHYSICS_QUANTUM_REGIMES: 'domain_modules/physics/quantum_regimes.md',
+  PHYSICS_FIELD_INTERACTIONS: 'domain_modules/physics/field_interactions.md',
+  PHYSICS_VST_CONSTRAINTS: 'domain_modules/physics/vST_constraints.md',
+
+  // Psychology
+  PSYCHOLOGY_README: 'domain_modules/psychology/README.md',
+  PSYCHOLOGY_COGNITIVE_REGIMES: 'domain_modules/psychology/cognitive_regimes.md',
+  PSYCHOLOGY_EMOTIONAL_ACTIVATION: 'domain_modules/psychology/emotional_activation.md',
+  PSYCHOLOGY_IDENTITY_TRANSITIONS: 'domain_modules/psychology/identity_transitions.md',
+  PSYCHOLOGY_TRAUMA_REGIMES: 'domain_modules/psychology/trauma_regimes.md',
+
+  // Substrate Engine
+  SUBSTRATE_ENGINE_README: 'substrate_engine/README.md',
+  SUBSTRATE_TRIADIC_ENGINE: 'substrate_engine/triadic_substrate.md',
+  SUBSTRATE_EVENT_BUS: 'substrate_engine/event_bus.md',
+  SUBSTRATE_INVARIANTS: 'substrate_engine/invariants.md',
+  SUBSTRATE_REGIME_AWARENESS: 'substrate_engine/regime_awareness.md',
+  SUBSTRATE_REGIME_TRANSITIONS: 'substrate_engine/regime_transitions.md',
+  SUBSTRATE_VST_ALIGNMENT: 'substrate_engine/vST_alignment.md',
+
+  // Tech Tree
+  TECH_TREE_README: 'tech_tree/README.md',
+  TECH_TIER_0: 'tech_tree/tier0_preexisting_tools.md',
+  TECH_TIER_1: 'tech_tree/tier1_substrate_unlocks.md',
+  TECH_TIER_2: 'tech_tree/tier2_domain_unlocks.md',
+  TECH_TIER_3: 'tech_tree/tier3_cross_domain_unlocks.md',
+  TECH_TIER_4: 'tech_tree/tier4_civilization_unlocks.md',
+
+  // Templates
+  TEMPLATES_README: 'templates/README.md',
+  DOMAIN_MODULE_TEMPLATE: 'templates/domain_module_template.md',
+
+  // City Simulation Templates
+  CITY_SIM_README: 'templates/city_sim/README.md',
+  CITY_SIM_LOOP: 'templates/city_sim/city_simulation_loop.md',
+  CITY_SIM_ECONOMIC_ACTIVATION: 'templates/city_sim/economic_activation.md',
+  CITY_SIM_GOVERNANCE_RESPONSE: 'templates/city_sim/governance_response.md',
+  CITY_SIM_INEQUALITY_DYNAMICS: 'templates/city_sim/inequality_dynamics.md',
+  CITY_SIM_INFORMATION_FLOW: 'templates/city_sim/information_flow.md',
+  CITY_SIM_INFRASTRUCTURE_REGIMES: 'templates/city_sim/infrastructure_regimes.md',
+  CITY_SIM_POPULATION_ACTIVATION: 'templates/city_sim/population_activation.md',
+  CITY_SIM_RESOURCE_DYNAMICS: 'templates/city_sim/resource_dynamics.md',
+  CITY_SIM_SCENARIOS: 'templates/city_sim/scenario_templates.md',
+
+  // Civilization Simulation Templates
+  CIV_SIM_README: 'templates/civ_sim/README.md',
+  CIV_SIM_LOOP: 'templates/civ_sim/civilization_simulation_loop.md',
+  CIV_SIM_SCENARIOS: 'templates/civ_sim/civilization-scale_scenario_templates.md',
+  CIV_SIM_CROSS_CIV_INTERACTIONS: 'templates/civ_sim/cross-civilization_interaction_models.md',
+  CIV_SIM_CULTURAL_REGIMES: 'templates/civ_sim/cultural_regimes.md',
+  CIV_SIM_GOVERNANCE_TRANSITIONS: 'templates/civ_sim/governance_transitions.md',
+  CIV_SIM_TECH_TREE_INTEGRATION: 'templates/civ_sim/tech_tree_integration.md',
+
+  // Cognitive Agent Simulation Templates
+  COG_AGENT_README: 'templates/cognitive_agent_sim/README.md',
+  COG_AGENT_LOOP: 'templates/cognitive_agent_sim/agent_loop.md',
+  COG_AGENT_METRICS: 'templates/cognitive_agent_sim/agent_metrics.md',
+  COG_AGENT_IDENTITY_DEVELOPMENT: 'templates/cognitive_agent_sim/identity_development.md',
+  COG_AGENT_IDENTITY_TRANSITIONS: 'templates/cognitive_agent_sim/identity_transitions.md',
+  COG_AGENT_LEARNING_CURVES: 'templates/cognitive_agent_sim/learning_curves.md',
+  COG_AGENT_MISLEARNING: 'templates/cognitive_agent_sim/mislearning_and_overconfidence.md',
+  COG_AGENT_SOCIAL_INTERACTIONS: 'templates/cognitive_agent_sim/social_interactions.md',
+
+  // Ecosystem Simulation Templates
+  ECOSYSTEM_SIM_README: 'templates/ecosystem_sim/README.md',
+  ECOSYSTEM_SIM_DYNAMICS: 'templates/ecosystem_sim/ecosystem_dynamics.md',
+  ECOSYSTEM_SIM_REGIME_MAP: 'templates/ecosystem_sim/ecosystem_regime_map.md',
+  ECOSYSTEM_SIM_ENV_FEEDBACK: 'templates/ecosystem_sim/environmental_feedback.md',
+  ECOSYSTEM_SIM_EVOLUTION: 'templates/ecosystem_sim/evolutionary_dynamics.md',
+  ECOSYSTEM_SIM_SPECIES_INTERACTIONS: 'templates/ecosystem_sim/species_interactions.md',
+
+  // UI Layer
+  UI_LAYER_README: 'ui_layer/README.md',
+  UI_ACTIVATION_HEATMAPS: 'ui_layer/activation_heatmaps.md',
+  UI_REGIME_OVERLAYS: 'ui_layer/regime_overlays.md',
+  UI_SCENARIO_BUILDER: 'ui_layer/scenario_builder.md',
+  UI_TIME_REGIME_CONTROLS: 'ui_layer/time_regime_controls.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
