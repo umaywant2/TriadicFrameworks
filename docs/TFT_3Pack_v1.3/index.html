@@ -2,48 +2,245 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>TFT_3Pack v1.3</title>
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
+  <title>TFT_3Pack v1.3</title>
 
 <style>
-    body { background:#0d0d0d; color:#e0e0e0; font-family:"Segoe UI",Roboto,sans-serif; margin:0; padding:0; }
-    h1,h2 { text-align:center; margin-top:40px; color:#fff; letter-spacing:1px; }
-    h1 { font-size:2.8rem; }
-    h2 { font-size:1.4rem; opacity:0.8; }
-    .banner { width:100%; padding:60px 0; background:linear-gradient(135deg,#1f1f1f,#0b0b0b); text-align:center; }
-    .banner span { font-size:3.2rem; display:block; margin-bottom:10px; }
-    .section { width:90%; max-width:1100px; margin:40px auto; padding:30px; background:#1a1a1a; border-radius:12px; box-shadow:0 0 20px rgba(0,0,0,0.6); }
-    a { color:#76c7ff; text-decoration:none; }
-    a:hover { color:#c0e8ff; }
-    ul { line-height:1.8; }
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
 
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
 </style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
+   
+<nav>
+  <h2>📚 TFT_3Pack v1.3 — Documentation Index</h2>
 
-<!-- Logo banner start -->
-<div style="width:100%; padding:60px 0; background:linear-gradient(135deg,#1f1f1f,#0b0b0b); text-align:center;">
-    <span style="font-size:3.2rem; display:block; margin-bottom:10px;">🔱</span>
-    <h1 style="color:#fff; font-size:2.6rem; margin:0;">TFT_3Pack v1.3</h1>
-    <h2 style="color:#ccc; font-size:1.2rem; margin-top:10px;">TriadicFrameworks • Nawderian Theorem • Resonant-Time Engine</h2>
-</div>
-<!-- Logo banner end  -->
+  <!-- Root -->
+  <ul>
+    <li>🏠 <a href="#INDEX">Main Index</a></li>
+  </ul>
 
-<div class="section">
-    <h2>📁 Project Overview</h2>
-    <p>TFT_3Pack is a cross‑disciplinary example suite demonstrating the TriadicFrameworks model across 12 academic domains.</p>
-    <p>Explore:</p>
-    <ul>
-        <li><a href="scripts/index.html">⚙️ Scripts</a></li>
-        <li><a href="formats/index.html">📜 File Formats</a></li>
-        <li><a href="examples/index.html">📚 Example Sets</a></li>
-    </ul>
-</div>
+  <!-- Examples -->
+  <h3>🎓 Examples</h3>
+  <ul>
+    <li>📁 <a href="#EXAMPLES_INDEX">Examples Overview</a></li>
+    <li>🎨 <a href="#EXAMPLES_ART">Art</a></li>
+    <li>🧬 <a href="#EXAMPLES_BIOLOGY">Biology</a></li>
+    <li>⚗️ <a href="#EXAMPLES_CHEMISTRY">Chemistry</a></li>
+    <li>💻 <a href="#EXAMPLES_COMPUTER_SCIENCE">Computer Science</a></li>
+    <li>📈 <a href="#EXAMPLES_ECONOMICS">Economics</a></li>
+    <li>🛠️ <a href="#EXAMPLES_ENGINEERING">Engineering</a></li>
+    <li>⚖️ <a href="#EXAMPLES_LAW">Law</a></li>
+    <li>➗ <a href="#EXAMPLES_MATH">Math</a></li>
+    <li>🩺 <a href="#EXAMPLES_MEDICINE">Medicine</a></li>
+    <li>🎵 <a href="#EXAMPLES_MUSIC">Music</a></li>
+    <li>📚 <a href="#EXAMPLES_PHILOSOPHY">Philosophy</a></li>
+    <li>🔭 <a href="#EXAMPLES_PHYSICS">Physics</a></li>
+  </ul>
 
-<div class="section">
-    <h2>📘 Documentation</h2>
-    <p>See the <a href="README.md">README.md</a> for full project details.</p>
-</div>
+  <!-- Formats -->
+  <h3>📦 Formats</h3>
+  <ul>
+    <li>🗂️ <a href="#FORMATS_INDEX">Formats Index</a></li>
+  </ul>
+
+  <!-- Melodic Table of Elements -->
+  <h3>🎼 Melodic Table of Elements</h3>
+  <ul>
+    <li>🎹 <a href="#MELODIC_TABLE_OF_ELEMENTS">Melodic Table</a></li>
+  </ul>
+
+  <!-- Scripts -->
+  <h3>⚙️ Scripts</h3>
+  <ul>
+    <li>📜 <a href="#SCRIPTS_INDEX">Scripts Index</a></li>
+  </ul>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Root
+  INDEX: 'index.html',
+
+  // Examples (Main + 12 Majors)
+  EXAMPLES_INDEX: 'examples/index.html',
+  EXAMPLES_ART: 'examples/Art/index.html',
+  EXAMPLES_BIOLOGY: 'examples/Biology/index.html',
+  EXAMPLES_CHEMISTRY: 'examples/Chemistry/index.html',
+  EXAMPLES_COMPUTER_SCIENCE: 'examples/Computer_Science/index.html',
+  EXAMPLES_ECONOMICS: 'examples/Economics/index.html',
+  EXAMPLES_ENGINEERING: 'examples/Engineering/index.html',
+  EXAMPLES_LAW: 'examples/Law/index.html',
+  EXAMPLES_MATH: 'examples/Math/index.html',
+  EXAMPLES_MEDICINE: 'examples/Medicine/index.html',
+  EXAMPLES_MUSIC: 'examples/Music/index.html',
+  EXAMPLES_PHILOSOPHY: 'examples/Philosophy/index.html',
+  EXAMPLES_PHYSICS: 'examples/Physics/index.html',
+
+  // Formats
+  FORMATS_INDEX: 'formats/index.html',
+
+  // Melodic Table of Elements
+  MELODIC_TABLE_OF_ELEMENTS: 'melodic-table-of-elements/index.html',
+
+  // Scripts
+  SCRIPTS_INDEX: 'scripts/index.html',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('index.html');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
 
 </body>
 </html>
