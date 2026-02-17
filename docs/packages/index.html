@@ -1,121 +1,272 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <!-- By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org -->
-  <title>📜 Packages README</title>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
+  <title>Packages README</title>
 
-  <!-- Basic styling (optional, tweak as you like) -->
-  <style>
-    body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background: #050816;
-      color: #e5e7eb;
-      line-height: 1.6;
-    }
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    pre, code {
-      font-family: "Fira Code", Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      background: #020617;
-      color: #e5e7eb;
-    }
-    pre {
-      padding: 0.75rem 1rem;
-      border-radius: 6px;
-      overflow-x: auto;
-    }
-    code {
-      padding: 0.1rem 0.25rem;
-      border-radius: 4px;
-    }
-    h1, h2, h3, h4 {
-      color: #f9fafb;
-      margin-top: 2rem;
-      margin-bottom: 0.75rem;
-    }
-    a {
-      color: #38bdf8;
-    }
-    hr {
-      border: none;
-      border-top: 1px solid #1f2937;
-      margin: 2rem 0;
-    }
-  </style>
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
 
-  <!-- MathJax v3 configuration -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']],
-        displayMath: [['\
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
 
-\[', '\\]
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
 
-'], ['$$', '$$']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    };
-  </script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 
-  <!-- Marked.js for Markdown rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
-  <main>
-    <article id="pack-read">
-      <h1>📜 Packages README 🔮</h1>
-      <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
-      <p>Loading 🌌 AI_Drift_Gone_with_RTT-Inside.md…</p>
-    </article>
-  </main>
+   
+<nav>
+  <h2>📦 Packages — Documentation Index</h2>
 
-  <script>
-    async function loadCodex() {
-      try {
-        // Adjust path if needed depending on where this HTML lives
-        const response = await fetch('https://www.triadicframeworks.org/packages/README.md');
-        if (!response.ok) {
-          throw new Error('⚔️ Failed to load Packages README');
-        }
-        const mdText = await response.text();
+  <!-- Root -->
+  <ul>
+    <li>🏠 <a href="#ROOT_README">Root README</a></li>
+  </ul>
 
-        // Render Markdown to HTML
-        const html = marked.parse(mdText, {
-          breaks: true,
-          gfm: true
-        });
+  <!-- tft-3pack Core -->
+  <h3>🔱 tft‑3pack (Core Package)</h3>
+  <ul>
+    <li>📘 <a href="#T3P_README">tft‑3pack README</a></li>
+    <li>🗺️ <a href="#T3P_CROSS_PACKAGE_INTERACTION_MAP">Cross‑Package Interaction Map</a></li>
+    <li>🎛️ <a href="#T3P_DIVISIONAL_RESONANCE_OVERLAYS">Divisional Resonance Overlays</a></li>
+  </ul>
 
-        const root = document.getElementById('pack-read');
-        root.innerHTML = html;
+  <!-- TFT Primitives -->
+  <h3>🧩 TFT Primitives</h3>
+  <ul>
+    <li>🔹 <a href="#T3P_PRIMITIVE_1">TFT Primitive 1</a></li>
+    <li>🔸 <a href="#T3P_PRIMITIVE_2">TFT Primitive 2</a></li>
+    <li>🔻 <a href="#T3P_PRIMITIVE_3">TFT Primitive 3</a></li>
+  </ul>
 
-        // Trigger MathJax typesetting after content is injected
-        if (window.MathJax && window.MathJax.typesetPromise) {
-          window.MathJax.typesetPromise([root]).catch(err => console.error(err));
-        }
-      } catch (err) {
-        console.error(err);
-        const root = document.getElementById('pack-read');
-        root.innerHTML = `
-          <h1>Packages README</h1>
-          <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
-          <p>Unable to load <code>https://www.triadicframeworks.org/packages/README.md</code>.</p>
-          <pre>${String(err)}</pre>
-        `;
+  <!-- Triadic Pattern Suite -->
+  <h3>🌐 Triadic Pattern Suite</h3>
+  <ul>
+    <li>🧭 <a href="#T3P_TRIADIC_PATTERN_API">Triadic Pattern API</a></li>
+    <li>🍳 <a href="#T3P_TRIADIC_PATTERN_COOKBOOK">Triadic Pattern Cookbook</a></li>
+    <li>🌳 <a href="#T3P_TRIADIC_PATTERN_DECISION_TREE">Triadic Pattern Decision Tree</a></li>
+    <li>📐 <a href="#T3P_TRIADIC_PATTERN_DESIGN_MANUAL">Triadic Pattern Design Manual</a></li>
+    <li>📖 <a href="#T3P_TRIADIC_PATTERN_GLOSSARY">Triadic Pattern Glossary</a></li>
+    <li>🖼️ <a href="#T3P_TRIADIC_PATTERN_POSTER">Triadic Pattern Poster</a></li>
+    <li>🔡 <a href="#T3P_TRIADIC_PATTERN_POSTER_ASCII">Triadic Pattern Poster (ASCII)</a></li>
+  </ul>
+
+  <!-- 3pak-shell -->
+  <h3>🐚 3pak‑shell</h3>
+  <ul>
+    <li>📘 <a href="#SHELL_README">3pak‑shell README</a></li>
+    <li>📂 <a href="#SHELL_PROFILED_README">profile.d README</a></li>
+  </ul>
+
+  <!-- Primitive Wrappers -->
+  <h3>🧰 Primitive Wrappers</h3>
+  <ul>
+    <li>📘 <a href="#WRAPPERS_README">Wrappers README</a></li>
+    <li>🗺️ <a href="#WRAPPERS_ATLAS">ATLAS Wrapper</a></li>
+    <li>⚡ <a href="#WRAPPERS_QUICKSTART">Quickstart Wrapper</a></li>
+    <li>📎 <a href="#WRAPPERS_TRIADIC_PATTERN_CHEATSHEET">Triadic Pattern Cheatsheet</a></li>
+  </ul>
+
+  <!-- WRSADC Modules -->
+  <h3>🛰️ WRSADC Modules</h3>
+  <ul>
+    <li>🐍 <a href="#WRSADC_PYTHON_README">WRSADC Python README</a></li>
+    <li>💻 <a href="#WRSADC_SHELL_README">WRSADC Shell README</a></li>
+    <li>🔗 <a href="#WRSADC_INTEGRATION_README">WRSADC Integration README</a></li>
+  </ul>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Root
+  ROOT_README: 'README.md',
+
+  // tft-3pack (Core Package)
+  T3P_README: 'tft-3pack/README.md',
+  T3P_CROSS_PACKAGE_INTERACTION_MAP: 'tft-3pack/Cross-Package_Interaction_Map.md',
+  T3P_DIVISIONAL_RESONANCE_OVERLAYS: 'tft-3pack/DIVISIONAL_RESONANCE_OVERLAYS.md',
+
+  // TFT Primitives
+  T3P_PRIMITIVE_1: 'tft-3pack/TFT_Primitive_1.md',
+  T3P_PRIMITIVE_2: 'tft-3pack/TFT_Primitive_2.md',
+  T3P_PRIMITIVE_3: 'tft-3pack/TFT_Primitive_3.md',
+
+  // Triadic Pattern Suite
+  T3P_TRIADIC_PATTERN_API: 'tft-3pack/TRIADIC_PATTERN_API.md',
+  T3P_TRIADIC_PATTERN_COOKBOOK: 'tft-3pack/TRIADIC_PATTERN_COOKBOOK.md',
+  T3P_TRIADIC_PATTERN_DECISION_TREE: 'tft-3pack/TRIADIC_PATTERN_DECISION_TREE.md',
+  T3P_TRIADIC_PATTERN_DESIGN_MANUAL: 'tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL.md',
+  T3P_TRIADIC_PATTERN_GLOSSARY: 'tft-3pack/TRIADIC_PATTERN_GLOSSARY.md',
+  T3P_TRIADIC_PATTERN_POSTER: 'tft-3pack/TRIADIC_PATTERN_POSTER.md',
+  T3P_TRIADIC_PATTERN_POSTER_ASCII: 'tft-3pack/TRIADIC_PATTERN_POSTER_ASCII.md',
+
+  // 3pak-shell
+  SHELL_README: 'tft-3pack/3pak-shell/README.md',
+  SHELL_PROFILED_README: 'tft-3pack/3pak-shell/profile.d/README.md',
+
+  // Primitive Wrappers
+  WRAPPERS_README: 'tft-3pack/3pak-shell/tft_primitive_wrappers/README.md',
+  WRAPPERS_ATLAS: 'tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS.md',
+  WRAPPERS_QUICKSTART: 'tft-3pak-shell/tft_primitive_wrappers/QUICKSTART.md',
+  WRAPPERS_TRIADIC_PATTERN_CHEATSHEET: 'tft-3pak-shell/tft_primitive_wrappers/TRIADIC_PATTERN_CHEATSHEET.md',
+
+  // WRSADC Modules
+  WRSADC_PYTHON_README: 'wrsadc-python/README.md',
+  WRSADC_SHELL_README: 'wrsadc-shell/README.md',
+  WRSADC_INTEGRATION_README: 'wrsadc_integration/README.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
       }
-    }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
-    loadCodex();
-  </script>
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
 </body>
 </html>
