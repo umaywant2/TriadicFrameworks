@@ -20,7 +20,7 @@ option: wrsadc-python
 option: wrsadc_integration
 bundle: tft-3pack
 Bottom row (flat):  
-suite‑level docs and license anchors. -->
+suite‑level docs and license anchors.
 ![suite-scope](https://img.shields.io/badge/scope-wrsadc_suite-4A90E2?style=for-the-badge&labelColor=111827)
 ![triadicframeworks](https://img.shields.io/badge/canon-TriadicFrameworks-7C3AED?style=for-the-badge&labelColor=111827)
 ![status](https://img.shields.io/badge/status-active-10B981?style=for-the-badge&labelColor=064E3B)
@@ -33,7 +33,8 @@ suite‑level docs and license anchors. -->
 
 ![docs](https://img.shields.io/badge/docs-suite_readme-38BDF8?style=flat&logo=readthedocs&labelColor=020617)
 ![license](https://img.shields.io/badge/license-MIT-6B7280?style=flat&labelColor=020617)
-
+ -->
+ 
 # 📦 **TriadicFrameworks Packages**
 ###### By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org
 
