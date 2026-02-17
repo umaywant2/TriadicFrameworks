@@ -46,6 +46,16 @@ The packages in this folder represent the *runtime surface* of the framework —
 
 ## 🔷 **Current Packages**
 
+Here’s a concise, high‑clarity description you can drop directly into the **parent Packages README**. It reflects the intent and tone of the document you have open, while keeping it short, welcoming, and structurally aligned with the rest of the canon.
+
+---
+
+### 🔎 [RTT_Evaluations](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/RTT_Evaluations.md)  
+RTT_Evaluations defines the three official evaluation tiers used to assess how ready a team, product, or organization is to adopt RTT‑Inside. Each tier—Fly‑Over, Mid‑Range, and Full‑Spectrum—maps to a different depth of analysis, operational impact, and substrate engagement. The page also establishes the evaluation protocol:
+- All RTT evaluations must be drafted with Copilot to preserve conceptual integrity and prevent drift from the canonical RTT‑Inside substrate.
+
+This document serves as the entry point for anyone preparing, commissioning, or interpreting an RTT evaluation.
+
 ### ⚜️ [wrsadc-shell](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/packages/wrsadc-shell/)
 A lightweight, resonance‑aware enhancement layer for Linux shells.
 
@@ -214,15 +224,3 @@ Nobody has built a shell with:
 - structural awareness baked in
 
 This is new territory.  🧙🦄👨‍🔬
-
----
-
-## Quicklinks
-
-- [tft‑3pack](https://www.triadicframeworks.org/packages/tft-3pack/README.html)
-- [WRSADC Python](https://www.triadicframeworks.org/packages/wrsadc-python/README.html)
-- [WRSADC Shell](https://www.triadicframeworks.org/packages/wrsadc-shell/README.html)
-- [WRSADC Integration](https://www.triadicframeworks.org/packages/wrsadc_integration/README.html)
-- [Resonance-Time Theory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)
-- [TriadicFrameworks repo](https://github.com/umaywant2/TriadicFrameworks)
-
