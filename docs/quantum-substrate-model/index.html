@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+  <!-- By Nawder Loswin 02/16/2026 © www.TriadicFrameworks.org -->
+  <title>Quantum Substrate Model</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+<h2>Quantum‑Substrate Model — Documentation Index</h2>
+
+<!-- ROOT -->
+<a href="#README">📘 README — Overview of the Quantum‑Substrate Model.</a>
+
+<!-- FIGURES -->
+<a href="#FIGURE_STRUCTURAL_OVERVIEW">🖼️ Structural Overview — Canonical QSM structural diagram.</a>
+
+<!-- METADATA -->
+<a href="#METADATA_README">📑 Metadata — Dataset and metadata documentation.</a>
+
+<!-- PAPER -->
+<a href="#PAPER_ABSTRACT">🧾 Abstract — Summary of the QSM manuscript.</a>
+<a href="#PAPER_DISCUSSION">💬 Discussion — Interpretation and implications of the quantum substrate.</a>
+<a href="#PAPER_INTRODUCTION">📘 Introduction — Conceptual entry point into QSM.</a>
+<a href="#PAPER_LIMITATIONS">⚠️ Limitations — Declared constraints and boundaries of the model.</a>
+<a href="#PAPER_OPERATOR_DYNAMICS">🔧 Operator Dynamics — Behavior of operators within the quantum substrate.</a>
+<a href="#PAPER_REGIME_STRUCTURE">🧭 Regime Structure — Quantum regime architecture and layering.</a>
+<a href="#PAPER_SCOPE_AND_ASSUMPTIONS">📐 Scope & Assumptions — Declared scope and foundational assumptions.</a>
+<a href="#PAPER_SUBSTRATE_DEFINITION">🌌 Substrate Definition — Formal definition of the quantum substrate.</a>
+<a href="#PAPER_VALIDATION_CHECKS">🧪 Validation Checks — Consistency and correctness tests.</a>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const QSM_DOC_MAP = {
+  README: 'README.md',
+
+  FIGURE_STRUCTURAL_OVERVIEW: 'figures/qsm_structural_overview.svg',
+
+  METADATA_README: 'metadata/README.md',
+
+  PAPER_ABSTRACT: 'paper/abstract.md',
+  PAPER_DISCUSSION: 'paper/discussion.md',
+  PAPER_INTRODUCTION: 'paper/introduction.md',
+  PAPER_LIMITATIONS: 'paper/limitations.md',
+  PAPER_OPERATOR_DYNAMICS: 'paper/operator_dynamics.md',
+  PAPER_REGIME_STRUCTURE: 'paper/regime_structure.md',
+  PAPER_SCOPE_AND_ASSUMPTIONS: 'paper/scope_and_assumptions.md',
+  PAPER_SUBSTRATE_DEFINITION: 'paper/substrate_definition.md',
+  PAPER_VALIDATION_CHECKS: 'paper/validation_checks.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
+
