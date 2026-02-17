@@ -743,3 +743,7 @@ ui_layer/README.md
 ui_layer/regime_overlays.md
 ui_layer/scenario_builder.md
 ui_layer/time_regime_controls.md
+
+Excellent. Next, please create a sorted html index with emojis for the following DOC_MAP
+
+Please create a const DOC_MAP section for the following md files
