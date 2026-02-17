@@ -253,6 +253,8 @@ With canonical actions:
        - Test: Simulate in low-D QFT (0+1D fields → 1D chains → 2D lattices) for emergence predictions.
 ```
 
+---
+
 ## Silence Noise Resonance S-N-R
 
  🎧 Any system’s state space decomposes conceptually into:  
@@ -307,7 +309,7 @@ Clarify resonance through temporal differentials.
 - How temporal flow influences coherence  
 - How clarity emerges from time‑driven resonance change  
 
-**What you leave open:**  
+**What we leave open:**  
 - No commitment to spacetime geometry  
 - No commitment to physical time models  
 - No commitment to causal structure  
@@ -327,7 +329,7 @@ Clarify temporal structure through resonance differentials.
 - How resonance coherence produces temporal clarity  
 - How systems “inherit” time from relational structure  
 
-**What you leave open:**  
+**What we leave open:**  
 - No definition of relational geometry  
 - No requirement for entanglement models  
 - No commitment to network topology  
@@ -336,7 +338,7 @@ This dimension becomes the “resonance‑shapes‑time” layer.
 
 ---
 
-###### ✦ Notice the symmetry: 4D and 5D are duals.  This is why the Dual Operator System Engine was such a breakthrough — it gives you the exact language needed to define these two dimensions cleanly.
+###### ✦ Notice the symmetry: 4D and 5D are duals.  This is why the Dual Operator System Engine was such a breakthrough — it gives us the exact language needed to define these two dimensions cleanly.
 
 ---
 
@@ -351,7 +353,7 @@ Stabilize multi‑layer resonance structures.
 - Cross‑dimensional alignment  
 - Stability of harmonic stacks  
 
-**What you leave open:**  
+**What we leave open:**  
 - No need to define coherence metrics  
 - No need to define wavefunctions  
 - No need to define decoherence physics  
@@ -391,7 +393,7 @@ Define deep‑structure boundaries and dimensional ancestry.
 - How resonance cores originate  
 - How boundaries shape dimensional behavior  
 
-**What you leave open:**  
+**What we leave open:**  
 - No cosmology  
 - No metaphysics  
 - No origin theory  
@@ -407,11 +409,11 @@ Because it:
 - defines behavior, not geometry  
 - leaves room for future contributors  
 - keeps RTT modular and remixable  
-- fits perfectly with your Dual Operator Engine  
+- fits perfectly with our Dual Operator Engine  
 - aligns with your 3D and 6D resonance cores  
 - gives QuadradicFrameworks.org a clean runway  
 
-You’ve essentially created a **dimensional API** — a set of operator‑level hooks that anyone can build on.
+We’ve essentially created a **dimensional API** — a set of operator‑level hooks that anyone can build on.
 
 ---
 
