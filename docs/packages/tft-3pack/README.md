@@ -1,11 +1,12 @@
 ```
-                 ████████████████████████████████████████████████████████████████████████████
-                  ███▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀███
-                  ███   T R I A D I C F R A M E W O R K S   ·   t f t - 3 p a c k        ███
-                  ███▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███
-                 ████████████████████████████████████████████████████████████████████████████
-```
 
+████████████████████████████████████████████████████████████████████████████
+ ███▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀███
+ ███   T R I A D I C F R A M E W O R K S   ·   t f t - 3 p a c k        ███
+ ███▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄███
+████████████████████████████████████████████████████████████████████████████
+```
+<!-- 
 <p align="center">
   <img src="https://img.shields.io/badge/TriadicFrameworks-RTT%20Core-blueviolet?style=for-the-badge" />
   <img src="https://img.shields.io/badge/Package-tft--3pack-6f42c1?style=for-the-badge" />
@@ -13,24 +14,10 @@
   <img src="https://img.shields.io/badge/Manpages-Generated-success?style=for-the-badge" />
   <img src="https://img.shields.io/badge/License-Open%20Canon-informational?style=for-the-badge" />
 </p>
+-->
 
 # 📦 tft‑3pack  
-###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
-
-## [Table of Contents](#overview)
-
-- [Overview](#overview)
-- [The 3‑Pack Cycle](#the-3pack-cycle)
-- [Included Primitives](#included-primitives)
-- [Sensor Architecture](#sensor-architecture)
-  - [Divisional Resonance Overlays (DRO)](#divisional-resonance-overlays-dro)
-  - [Clarity‑Enhancement Pipelines (CEP)](#clarity-enhancement-pipelines-cep)
-  - [Sensor Subsystems](#sensor-subsystems)
-  - [Multi‑Sensor Fusion Core](#multi-sensor-fusion-core)
-  - [Sensor Governance & Constitution](#sensor-governance-constitution)
-  - [Operator‑Facing Guides](#operator-facing-guides)
-- [Manpage Index](#manpage-index)
-- [Purpose of the Expanded Suite](#purpose-of-the-expanded-suite)
+###### By Nawder Loswin 02/4/2026 © www.TriadicFrameworks.org
 
 ### The 3pack Cycle
 
@@ -194,25 +181,6 @@ Each entry is designed to be:
 
 📚 This README now reflects the full scope of the package as it exists in the TriadicFrameworks canon.
 
-## Quicklinks
-- [3PAK Shell](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/README.html)
-- [3PAK Shell — profile.d](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/profile.d/README.html)
-- [tft_primitive_wrappers](https://www.triadicframeworks.org/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/README.html)
-- [tft‑3pack Quick‑Start Guide](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/QUICKSTART.md)
-- [Triadic‑Pattern Atlas](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS.md)
-- [Triadic Pattern Cheat‑Sheet](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/3pak-shell/tft_primitive_wrappers/TRIADIC_PATTERN_CHEATSHEET.md)
-- [TriadicFrameworks Cross‑Package Interaction Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/Cross-Package_Interaction_Map.md)
-- [DIVISIONAL RESONANCE OVERLAYS](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/DIVISIONAL_RESONANCE_OVERLAYS.md)
-- [TFT Primitive 1](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TFT_Primitive_1.md)
-- [TFT Primitive 2](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TFT_Primitive_2.md)
-- [TFT Primitive 3](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TFT_Primitive_3.md)
-- [Triadic Pattern API](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_API.md)
-- [Triadic Pattern Cookbook](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_COOKBOOK.md)
-- [Triadic Pattern Decision Tree](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_DECISION_TREE.md)
-- [Triadic Pattern Design Manual](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_DESIGN_MANUAL.md)
-- [Triadic Pattern Glossary](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_GLOSSARY.md)
-- [Triadic Pattern Poster](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_POSTER.md)
-- [TRIADIC_PATTERN_POSTER_ASCII](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/tft-3pack/TRIADIC_PATTERN_POSTER_ASCII.md)
 
 ──────────────────────────────────────────────────────────────────────────────
 TriadicFrameworks · Resonance‑Time Theory Canon  
