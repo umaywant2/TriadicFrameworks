@@ -182,24 +182,6 @@ code {
 
 <script>
 
-function loadDoc(file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${file}`);
-      }
-      return response.text();
-    })
-    .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
-    })
-    .catch(err => {
-      document.getElementById('content').innerHTML =
-        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
-      console.error(err);
-    });
-}
-
 const DOC_MAP = {
   README: 'README.md',
 
@@ -285,6 +267,7 @@ loadFromHash();
 
 </body>
 </html>
+
 
 
 
