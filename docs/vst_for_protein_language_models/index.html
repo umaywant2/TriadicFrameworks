@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
+  <title>vST for Protein Language Models</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+<h2>vST for Protein Language Models — Documentation Index</h2>
+
+<!-- ROOT -->
+<a href="#README">📘 README — Overview of vST applied to protein language models.</a>
+
+<!-- FOUNDATIONS -->
+<a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the protein‑sequence substrate.</a>
+<a href="#SEQUENCE_EMBEDDING_REGIMES">🧭 Sequence Embedding Regimes — Regimes of sequence representation.</a>
+
+<!-- SCALING & STRUCTURE -->
+<a href="#DIMENSIONAL_SCALING_PROTEIN_MODELS">📈 Dimensional Scaling — Scaling behavior of protein models.</a>
+<a href="#PROJECTION_INTO_STRUCTURAL_CORES">🔗 Projection into Structural Cores — Mapping embeddings to structure.</a>
+
+<!-- VALIDATION & DRIFT -->
+<a href="#VALIDATION_LAYERS_VST_PLM">✔️ Validation Layers (vST) — Validation across sequence regimes.</a>
+<a href="#DRIFT_DETECTION_PLM">📉 Drift Detection — Detecting embedding drift over time.</a>
+
+<!-- EXAMPLES -->
+<a href="#EXAMPLE_SEQUENCE_REGIME_TRANSITION">🧪 Sequence Regime Transition — Regime change example.</a>
+<a href="#EXAMPLE_EMBEDDING_PROJECTION_1024D">🌐 1024D Embedding Projection — High‑dimensional embedding example.</a>
+
+<!-- APPENDIX -->
+<a href="#APPENDIX_TERMINOLOGY">📚 Terminology — Controlled vocabulary.</a>
+<a href="#APPENDIX_REFERENCES">📖 References — Source material and citations.</a>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: 'README.md',
+
+  // Foundations
+  SUBSTRATE_DEFINITION: 'substrate_definition.md',
+  SEQUENCE_EMBEDDING_REGIMES: 'sequence_embedding_regimes.md',
+
+  // Scaling & Structure
+  DIMENSIONAL_SCALING_PROTEIN_MODELS: 'dimensional_scaling_protein_models.md',
+  PROJECTION_INTO_STRUCTURAL_CORES: 'projection_into_structural_cores.md',
+
+  // Validation & Drift
+  VALIDATION_LAYERS_VST_PLM: 'validation_layers_vst_plm.md',
+  DRIFT_DETECTION_PLM: 'drift_detection_plm.md',
+
+  // Examples
+  EXAMPLE_SEQUENCE_REGIME_TRANSITION: 'examples/example_sequence_regime_transition.md',
+  EXAMPLE_EMBEDDING_PROJECTION_1024D: 'examples/example_embedding_projection_1024d.md',
+
+  // Appendix
+  APPENDIX_TERMINOLOGY: 'appendix/terminology.md',
+  APPENDIX_REFERENCES: 'appendix/references.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
