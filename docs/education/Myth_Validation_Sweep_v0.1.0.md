@@ -2,86 +2,86 @@
 Below is a curated set of myths across domains — chosen because they’re widely believed, emotionally charged, and *not* paradoxes.  
 Each is phrased in its “folk belief” form so we can later validate or debunk.
 
-I’ve grouped them into **10 domains**, each with **3–5 high‑signal myths**.
+We’ve grouped them into **10 domains**, each with **3–5 high‑signal myths**.
 
 ---
 
 ## 1. **Cosmology & Space**
-- “The Big Bang was an explosion in space.”  
-- “Black holes suck everything like cosmic vacuums.”  
-- “The universe has a single center.”  
+- “The Big Bang was an explosion in space.”
+- “Black holes suck everything like cosmic vacuums.”
+- “The universe has a single center.”
 - “We know what dark matter is — it’s just invisible stuff.”
 
 ---
 
 ## 2. **Physics & Energy**
-- “Quantum mechanics means thoughts influence reality.”  
-- “Gravity is a force pulling things down.”  
-- “Nuclear energy is inherently dangerous.”  
+- “Quantum mechanics means thoughts influence reality.”
+- “Gravity is a force pulling things down.”
+- “Nuclear energy is inherently dangerous.”
 - “Perpetual motion is impossible because physics says so.”
 
 ---
 
 ## 3. **Biology & Evolution**
-- “Humans evolved from monkeys.”  
-- “Evolution has a direction or goal.”  
-- “You only use 10% of your brain.”  
+- “Humans evolved from monkeys.”
+- “Evolution has a direction or goal.”
+- “You only use 10% of your brain.”
 - “Genes determine everything about you.”
 
 ---
 
 ## 4. **Medicine & Health**
-- “Sugar causes hyperactivity in children.”  
-- “Cracking your knuckles causes arthritis.”  
-- “You must drink 8 glasses of water a day.”  
+- “Sugar causes hyperactivity in children.”
+- “Cracking your knuckles causes arthritis.”
+- “You must drink 8 glasses of water a day.”
 - “Vaccines overload the immune system.”
 
 ---
 
 ## 5. **Psychology & Behavior**
-- “Left‑brained people are logical; right‑brained people are creative.”  
-- “Memory works like a video recorder.”  
-- “You can learn better while you sleep.”  
+- “Left‑brained people are logical; right‑brained people are creative.”
+- “Memory works like a video recorder.”
+- “You can learn better while you sleep.”
 - “Introverts hate people; extroverts love people.”
 
 ---
 
 ## 6. **Technology & AI**
-- “AI is just statistics and can’t understand anything.”  
-- “More data always makes AI smarter.”  
-- “5G towers cause illness.”  
+- “AI is just statistics and can’t understand anything.”
+- “More data always makes AI smarter.”
+- “5G towers cause illness.”
 - “Quantum computers will break all encryption overnight.”
 
 ---
 
 ## 7. **Earth Science & Climate**
-- “Climate has always changed, so current warming is natural.”  
-- “Hurricanes are getting stronger because of the ozone hole.”  
-- “Earth’s magnetic pole flips cause mass extinctions.”  
+- “Climate has always changed, so current warming is natural.”
+- “Hurricanes are getting stronger because of the ozone hole.”
+- “Earth’s magnetic pole flips cause mass extinctions.”
 - “Volcanoes emit more CO₂ than humans.”
 
 ---
 
 ## 8. **Economics & Society**
-- “Printing money always causes inflation.”  
-- “Immigration hurts the economy.”  
-- “Robots will take all the jobs.”  
+- “Printing money always causes inflation.”
+- “Immigration hurts the economy.”
+- “Robots will take all the jobs.”
 - “The rich get richer because of hard work alone.”
 
 ---
 
 ## 9. **History & Culture**
-- “Medieval people thought the Earth was flat.”  
-- “Vikings wore horned helmets.”  
-- “The pyramids were built by slaves.”  
+- “Medieval people thought the Earth was flat.”
+- “Vikings wore horned helmets.”
+- “The pyramids were built by slaves.”
 - “Ancient civilizations were too primitive to build megaliths.”
 
 ---
 
 ## 10. **Everyday Science & Common Sense**
-- “Lightning never strikes the same place twice.”  
-- “Goldfish have a 3‑second memory.”  
-- “Bulls hate the color red.”  
+- “Lightning never strikes the same place twice.”
+- “Goldfish have a 3‑second memory.”
+- “Bulls hate the color red.”
 - “Dropping a penny from a skyscraper can kill someone.”
 
 ---
@@ -94,7 +94,7 @@ I’ve grouped them into **10 domains**, each with **3–5 high‑signal myths**
 
 ---
 
-Let’s run the **full RTT validation sweep** across the entire myth‑scaffold.  
+Below is the **full RTT validation sweep** across the entire myth‑scaffold.  
 This is the kind of thing RTT was *born* to do: take a messy cross‑domain set of folk beliefs and run them through **S/E/R regime sorting**, **context restoration**, and **scale‑aware validation**.
 
 Below is a clean, canonical sweep:  
