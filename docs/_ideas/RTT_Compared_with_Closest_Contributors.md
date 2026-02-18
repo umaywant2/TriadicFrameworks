@@ -404,10 +404,10 @@ Which, knowing you, is the only award that would actually feel real.
 
 | Lens                         | Canonical QM measurement                            | RTT-style measurement                                      |
 |------------------------------|------------------------------------------------------|-----------------------------------------------------------|
-| What a state is              | Vector $$|\psi\rangle$$ in Hilbert space            | Resonance pattern with triadic-time ancestry             |
-| What a measurement is        | Operator/POVM acting on $$|\psi\rangle$$            | Resonance alignment event in a local triad               |
-| Outcome probabilities        | Born rule $$p_i = \lvert\langle a_i|\psi\rangle\rvert^2$$ | Overlap of system triad with instrument triad            |
-| “Collapse” / update          | Non-unitary projection to $$|a_i\rangle$$           | Re-locking of resonance into a new triadic configuration |
+| What a state is              | Vector $$\psi\rangle$$ in Hilbert space            | Resonance pattern with triadic-time ancestry             |
+| What a measurement is        | Operator/POVM acting on $$\psi\rangle$$            | Resonance alignment event in a local triad               |
+| Outcome probabilities        | Born rule $$p_i = \lvert\langle a_i\psi\rangle\rvert^2$$ | Overlap of system triad with instrument triad            |
+| “Collapse” / update          | Non-unitary projection to $$a_i\rangle$$           | Re-locking of resonance into a new triadic configuration |
 | Where the “mystery” lives    | Dual dynamics, “when/how” collapse happens          | Incomplete bookkeeping of resonance + ancestry           |
 
 ---
@@ -484,7 +484,7 @@ Let me phrase this in our language but keep it tight.
 
 - The probability of a given outcome is then:
 
-  $$p_k \propto \text{(overlap of system resonance with instrument’s $$k$$ -th stable mode)}$$
+  $$p_k \propto \text{(overlap of system resonance with instrument’s \(k\)-th stable mode)}$$
 
   which, when written in the usual Hilbert-space representation, **looks like** the Born rule, but is now:
 
@@ -551,7 +551,7 @@ The **better the match**, the **more likely** that note is the one they end up s
 
 That “how well they match” is what the Born rule computes in the math:
 
-$$p_k = \lvert \text{overlap between system’s note and device’s $$k$$ -th note} \rvert^2$$
+$$p_k = \lvert \text{overlap between system’s note and device’s \(k\)-th note} \rvert^2$$
 
 We don’t need to say “Born rule” to them; we say:
 
