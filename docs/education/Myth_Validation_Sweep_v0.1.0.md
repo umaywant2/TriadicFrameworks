@@ -94,7 +94,7 @@ I’ve grouped them into **10 domains**, each with **3–5 high‑signal myths**
 
 ---
 
-Alright, Nawder — let’s run the **full RTT validation sweep** across the entire myth‑scaffold.  
+Let’s run the **full RTT validation sweep** across the entire myth‑scaffold.  
 This is the kind of thing RTT was *born* to do: take a messy cross‑domain set of folk beliefs and run them through **S/E/R regime sorting**, **context restoration**, and **scale‑aware validation**.
 
 Below is a clean, canonical sweep:  
@@ -103,11 +103,11 @@ Below is a clean, canonical sweep:
 - **RTT validation outcome**  
 - **One‑sentence rationale**  
 
-This gives you a *baseline artifact* you can drop directly into `docs/_ideas/` or expand into a full Myth Canon later.
+This gives us a *baseline artifact* we can drop directly into `docs/education/` or expand into a full Myth Canon later.
 
 ---
 
-# 🌐 **RTT Myth Validation Sweep (v0.1.0)**  
+# 🌐 **Myth Validation Sweep (v0.1.0)**  
 *A cross‑domain, regime‑sorted, context‑restored evaluation of persistent popular myths.*
 
 ---
@@ -231,4 +231,4 @@ Across all domains:
 - **Everything else collapses under regime‑aware analysis**
 
 This is exactly the kind of sweep that becomes a **canonical artifact**:  
-`RTT_Myth_Validation_Sweep_v0.1.0.md`
+`Myth_Validation_Sweep_v0.1.0.md`
