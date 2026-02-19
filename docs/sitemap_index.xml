@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core Site -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/docs/sitemap.xml</loc>
+    <lastmod>2026-02-19</lastmod>
+  </sitemap>
+
+  <!-- Canon Ideas -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/docs/_ideas/sitemap.xml</loc>
+    <lastmod>2026-02-19</lastmod>
+  </sitemap>
+
+  <!-- Substrate Layer -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/docs/sitemap_substrate.xml</loc>
+    <lastmod>2026-02-19</lastmod>
+  </sitemap>
+
+  <!-- Protocol Layer -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/docs/sitemap_protocols.xml</loc>
+    <lastmod>2026-02-19</lastmod>
+  </sitemap>
+
+  <!-- Domains & Living Surfaces -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/docs/sitemap_domains.xml</loc>
+    <lastmod>2026-02-19</lastmod>
+  </sitemap>
+
+</sitemapindex>
