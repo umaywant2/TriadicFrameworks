@@ -129,78 +129,22 @@ code {
 <body>
    
 <nav id="doc-map" aria-labelledby="doc-map-title">
-  <h2 id="doc-map-title">📚 Doc map</h2>
-  <p>
-    Quick navigation for the Inverted Economics + Triadic Audio Observer artifacts—templates, examples, notebooks, and diagrams.
-  </p>
-
+  <h2 id="doc-map-title">📚 Field Menu</h2>
   <h3>🧭 Core</h3>
-  <ul>
-    <li>
-      <span>🏁 <code>README.md</code></span><br />
-      <small>Entry point for the Inverted Economics domain. Explains purpose, philosophy, and how RTT Eval is used as a pre-tool calibration layer.</small>
-    </li>
-    <li>
-      <span>🤝 <code>CONTRIBUTING.md</code></span><br />
-      <small>Guidance for contributors. Describes workflow, structural focus, and expectations for regime-aware, non-political analysis.</small>
-    </li>
-  </ul>
-
+      <a href="#README">🏁 README</a>
+      <a href="#CONTRIBUTING">🤝 CONTRIBUTING</a>
   <h3>🧩 Templates</h3>
-  <ul>
-    <li>
-      <span>🌀 <code>RTT_Eval_Inverted_Economics_Cycle.md</code></span><br />
-      <small>Template for structural audits of completed economic cycles. Focuses on drift accumulation, paradox zones, regime imbalance, and coherence gaps.</small>
-    </li>
-    <li>
-      <span>💰 <code>RTT_Eval_Inverted_Economics_Budget.md</code></span><br />
-      <small>Template for analyzing a single budget as a structural artifact. Reveals true system priorities, substrate alignment, and brute-force spending patterns.</small>
-    </li>
-    <li>
-      <span>⚡ <code>RTT_Eval_Inverted_Economics_Event.md</code></span><br />
-      <small>Template for evaluating discrete economic events. Highlights regime transitions, emergency responses, and coherence restoration attempts.</small>
-    </li>
-  </ul>
-
+      <a href="#RTT_Eval_Inverted_Economics_Cycle">🌀 Cycle</a>
+      <a href="#RTT_Eval_Inverted_Economics_Budget">💰 Budget</a>
+      <a href="#RTT_Eval_Inverted_Economics_Event">⚡ Event</a>
   <h3>🧪 Examples</h3>
-  <ul>
-    <li>
-      <span>🗂️ <code>examples/</code></span><br />
-      <small>Example analyses demonstrating how to apply the templates.</small>
-    </li>
-    <li>
-      <span>🧾 <code>examples/sample.md</code></span><br />
-      <small>Starter example applying RTT Eval to a real historical economic cycle using structural, non-political analysis.</small>
-    </li>
-  </ul>
-
+      <a href="#Examples">🧾 Example Sample</a>
   <h3>📓 Notebooks</h3>
-  <ul>
-    <li>
-      <span>📁 <code>notebooks/</code></span><br />
-      <small>Notebook scaffolds for interactive exploration and extension.</small>
-    </li>
-    <li>
-      <span>🧠 <code>notebooks/starter_notebook_outline.md</code></span><br />
-      <small>General Inverted Economics notebook outline guiding regime mapping, drift analysis, paradox detection, and forward feedback.</small>
-    </li>
-    <li>
-      <span>🎧 <code>notebooks/audio_starter_notebook.md</code></span><br />
-      <small>Starter notebook for the Triadic Audio Observer. Demonstrates RTT concepts applied to audio signals, resonance, and perceptual coherence.</small>
-    </li>
-  </ul>
-
+      <a href="#starter_notebook_outline">🧠 Starter Notebook Outline</a>
+      <a href="#audio_starter_notebook">🎧 Audio Starter Notebook</a>
   <h3>🗺️ Diagrams</h3>
-  <ul>
-    <li>
-      <span>🧭 <code>visual_diagram.txt</code></span><br />
-      <small>Text-form visual diagram of the Inverted Economics workflow from input selection through forward planning feedback.</small>
-    </li>
-    <li>
-      <span>🔊 <code>triadic_audio_observer_diagram.txt</code></span><br />
-      <small>Text-form visual diagram of the Triadic Audio Observer, mapping audio input through regimes, drift analysis, coherence mapping, and structural insight.</small>
-    </li>
-  </ul>
+      <a href="#visual_diagram">🧭 Visual Diagram</a>
+      <a href="#triadic_audio_observer_diagram">🔊 Triadic Audio Observer Diagram</a>
 </nav>
 
 <main id="content"></main>
@@ -208,72 +152,16 @@ code {
 <script>
 
 const DOC_MAP = {
-  core: {
-    README: {
-      file: "README.md",
-      description:
-        "Entry point for the Inverted Economics domain. Explains purpose, philosophy, and how RTT Eval is used as a pre-tool calibration layer."
-    },
-    CONTRIBUTING: {
-      file: "CONTRIBUTING.md",
-      description:
-        "Guidance for contributors. Describes workflow, structural focus, and expectations for regime-aware, non-political analysis."
-    }
-  },
-
-  templates: {
-    Cycle: {
-      file: "RTT_Eval_Inverted_Economics_Cycle.md",
-      description:
-        "Template for structural audits of completed economic cycles. Focuses on drift accumulation, paradox zones, regime imbalance, and coherence gaps."
-    },
-    Budget: {
-      file: "RTT_Eval_Inverted_Economics_Budget.md",
-      description:
-        "Template for analyzing a single budget as a structural artifact. Reveals true system priorities, substrate alignment, and brute-force spending patterns."
-    },
-    Event: {
-      file: "RTT_Eval_Inverted_Economics_Event.md",
-      description:
-        "Template for evaluating discrete economic events. Highlights regime transitions, emergency responses, and coherence restoration attempts."
-    }
-  },
-
-  examples: {
-    directory: "examples",
-    Sample: {
-      file: "examples/sample.md",
-      description:
-        "Starter example applying RTT Eval to a real historical economic cycle using structural, non-political analysis."
-    }
-  },
-
-  notebooks: {
-    directory: "notebooks",
-    StarterOutline: {
-      file: "notebooks/starter_notebook_outline.md",
-      description:
-        "General Inverted Economics notebook outline guiding regime mapping, drift analysis, paradox detection, and forward feedback."
-    },
-    AudioStarter: {
-      file: "notebooks/audio_starter_notebook.md",
-      description:
-        "Starter notebook for the Triadic Audio Observer. Demonstrates RTT concepts applied to audio signals, resonance, and perceptual coherence."
-    }
-  },
-
-  diagrams: {
-    InvertedEconomicsWorkflow: {
-      file: "visual_diagram.txt",
-      description:
-        "Text-form visual diagram of the Inverted Economics workflow from input selection through forward planning feedback."
-    },
-    TriadicAudioObserver: {
-      file: "triadic_audio_observer_diagram.txt",
-      description:
-        "Text-form visual diagram of the Triadic Audio Observer, mapping audio input through regimes, drift analysis, coherence mapping, and structural insight."
-    }
-  }
+  README: 'README.md',
+  CONTRIBUTING: 'CONTRIBUTING.md',
+  RTT_Eval_Inverted_Economics_Cycle: 'RTT_Eval_Inverted_Economics_Cycle.md',
+  RTT_Eval_Inverted_Economics_Budget: 'RTT_Eval_Inverted_Economics_Budget.md',
+  RTT_Eval_Inverted_Economics_Event: 'RTT_Eval_Inverted_Economics_Event.md',
+  Examples: 'examples/sample.md',
+  starter_notebook_outline: 'notebooks/starter_notebook_outline.md',
+  audio_starter_notebook: 'notebooks/audio_starter_notebook.md',
+  visual_diagram: 'visual_diagram.txt',
+  triadic_audio_observer_diagram: 'triadic_audio_observer_diagram.txt',
 };
 
 function loadFromHash() {
