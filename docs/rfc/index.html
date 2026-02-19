@@ -8,8 +8,8 @@
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
 <link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-<title>Request For Comments</title>
+  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
+  <title>Request For Comments</title>
 
 <style>
 /* ============================================================
@@ -122,13 +122,12 @@ code {
   color: var(--text-main);
 }
 </style>
-
-<link rel="stylesheet" href="../shared/nawderian-theme.css">
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-
+   
 <nav>
   <!-- ========================= -->
   <!-- 0. ROOT & INDEXING       -->
@@ -250,12 +249,6 @@ code {
 <main id="content"></main>
 
 <script>
-function loadDoc(file) {
-  fetch(file)
-    .then(r => r.text())
-    .then(t => content.innerHTML = marked.parse(t))
-    .catch(() => content.innerHTML = '<p>Unable to load document.</p>');
-}
 
 const DOC_MAP = {
   README: 'README.md',
@@ -363,12 +356,39 @@ const DOC_MAP = {
 };
 
 function loadFromHash() {
-  const key = location.hash.replace('#','');
-  loadDoc(DOC_MAP[key] || DOC_MAP.EXEC_SUMMARY);
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
 }
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
+
 </script>
 
 </body>
