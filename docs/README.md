@@ -229,7 +229,7 @@ They are organized by **structural dependency**, from foundational grammar throu
 
 ### VIII. Ecosystem‑Scale Instantiations, Simulation & Education
 
-- **Inverted Economics**
+- **Inverted Economics**  
   https://www.triadicframeworks.org/Inverted_Economics/
 
 - **EcoEchoSystem**  
