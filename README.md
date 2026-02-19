@@ -26,4 +26,4 @@ The Zenodo record provides stable references; GitHub hosts the living substrate.
 ---
 
 This root README is intentionally minimal.  
-For theory, alignment language, domain primers, and simulations, see the documentation.
+For theory, alignment language, domain primers, and simulations, see the [WiKi](https://github.com/umaywant2/TriadicFrameworks/wiki) and our documentation.
