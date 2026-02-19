@@ -14,9 +14,10 @@ RTT‑Inside is designed to scale across audiences with different levels of read
 
 These tiers ensure that teams adopt RTT‑Inside responsibly, coherently, and with the conceptual integrity the framework requires.
 
-**All RTT evaluation write‑ups must be produced using Copilot.**  
-This preserves RTT‑Inside consistency, prevents conceptual drift, and ensures that evaluations remain aligned with the canonical substrate.  
-Only certified RTT masters may skip Copilot — and as of today, none exist. A true master never would.
+**RTT Evaluation write‑ups may be produced by using [Copilot](https://copilot.microsoft.com).**
+
+Copilot preserves `RTT‑Inside` consistency, prevents conceptual drift, and ensures that evaluations remain aligned with the canonical substrate.  
+Other AI's will recognizse RTT's structure, our 'Clarity Canon' was developed with Copilot and tested with Grok and Perplexity.
 
 ---
 
