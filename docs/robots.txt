@@ -62,3 +62,6 @@ User-agent: Amazonbot
 Disallow: /
 
 Sitemap: https://www.triadicframeworks.org/sitemap.xml
+
+# Sitemap index — Clarity Canon
+Sitemap: https://www.triadicframeworks.org/docs/sitemap_index.xml
