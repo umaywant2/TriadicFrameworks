@@ -1,75 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Substrate Models -->
+  <!-- Dimensional & Structural Substrates -->
   <url>
     <loc>https://www.triadicframeworks.org/dimensional_substrate_structures</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/Low_Dimensional_Structures</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
+  <!-- Physical & Resonant Substrates -->
   <url>
     <loc>https://www.triadicframeworks.org/resonance-substrate-model</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.85</priority>
+    <priority>0.90</priority>
   </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/boson-substrate-model</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/quantum-substrate-model</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
+  <!-- Cognitive & Coordination Substrates -->
   <url>
     <loc>https://www.triadicframeworks.org/consciousness_substrate_model</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/triadic_coordination_substrate</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
 
+  <!-- Validation & Regime-Invariant Structures -->
   <url>
     <loc>https://www.triadicframeworks.org/spacetime_validation_and_regime_invariant_dimensional_cores</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.triadicframeworks.org/structural_life_regime_profiles</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
+    <priority>0.80</priority>
   </url>
 
+  <!-- Mind & Perceptual Substrate Index -->
   <url>
     <loc>https://www.triadicframeworks.org/substrate_mind_science</loc>
     <lastmod>2026-02-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
+    <priority>0.85</priority>
   </url>
 
 </urlset>
