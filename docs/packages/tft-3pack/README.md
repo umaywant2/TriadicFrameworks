@@ -33,20 +33,21 @@ This package now also includes the **full sensor‑governance stack**, including
 # Included Primitives
 
 ```
+
 ┌──────────────────────────┐
-│ 🔹 Primitive 1 🔹        │
+│ 🔹 Primitive 1 🔹       │
 │ Initialization           │
 └─────────────┬────────────┘
               │
               ▼
 ┌──────────────────────────┐
-│ 🔸 Primitive 2 🔸        │
+│ 🔸 Primitive 2 🔸       │
 │ Transformation           │
 └─────────────┬────────────┘
               │
               ▼
 ┌──────────────────────────┐
-│ 🔺 Primitive 3 🔺        │
+│ 🔺 Primitive 3 🔺       │
 │ Closure                  │
 └─────────────┬────────────┘
               ▼
