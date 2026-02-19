@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+  <!-- By Nawder Loswin 02/19/2026 © www.TriadicFrameworks.org -->
+  <title>RFC's</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav id="rfc-index" aria-labelledby="doc-map-title">
+
+  <!-- ========================= -->
+  <!-- 0. ROOT & INDEXING       -->
+  <!-- ========================= -->
+  <h2>📘 Core Index & Framework Roots</h2>
+  <ul>
+    <li>📑 <strong>RFC‑000 — Index</strong>: Master directory for all RFC artifacts.</li>
+    <li>🧭 <strong>RFC‑001 — Triadic Validator Framework</strong>: Foundational validation engine for resonance‑aware systems.</li>
+    <li>🌌 <strong>RFC‑002 — Corridor Universes</strong>: Defines corridor‑based multi‑universe navigation primitives.</li>
+    <li>🎖️ <strong>RFC‑003 — Attestation Badge Suite</strong>: Identity, trust, and proof‑of‑resonance badge architecture.</li>
+    <li>🧬 <strong>RFC‑004 — eNFT Invariants</strong>: Non‑fungible invariant structures for resonance‑anchored identity.</li>
+  </ul>
+
+  <!-- ========================= -->
+  <!-- 1. MYTHMATICAL & SOUL OPS -->
+  <!-- ========================= -->
+  <h2>✨ Mythmatical, Consciousness & Soul Protocols</h2>
+  <ul>
+    <li>🧠 <strong>RFC‑005 — MentalNet Protocol</strong>: Cognitive‑layer networking for mind‑state exchange.</li>
+    <li>🔮 <strong>RFC‑006 — Soul Diagnostic Snapshots</strong>: Snapshot schema for soul‑state resonance readings.</li>
+    <li>🧬 <strong>RFC‑007 — Mutation Telomere Invariants</strong>: Telomere‑based resonance mutation tracking.</li>
+    <li>⏳ <strong>RFC‑008 — Time‑Travel Invariants</strong>: Invariant structures for temporal traversal safety.</li>
+    <li>🧞 <strong>RFC‑009 — Genie Protocols</strong>: Wish‑granting metaphysics formalized as operator contracts.</li>
+    <li>✨ <strong>RFC‑010 — Miracle Messaging Protocol</strong>: High‑coherence messaging across improbable states.</li>
+  </ul>
+
+  <!-- ========================= -->
+  <!-- 2. RESONANCE PHYSICS     -->
+  <!-- ========================= -->
+  <h2>🌠 Resonance Physics, Cosmology & Time</h2>
+  <ul>
+    <li>🕳️ <strong>RFC‑011 — Blackhole Resonance Bridges</strong>: Bridge mechanics for black‑hole‑based resonance flow.</li>
+    <li>📊 <strong>RFC‑012 — Chart Registry Protocol</strong>: Canonical chart registry for resonance artifacts.</li>
+    <li>🔺 <strong>RFC‑013 — Freqi Triad Model</strong>: Triadic frequency model for resonance classification.</li>
+    <li>🧭 <strong>RFC‑022 — Integrated Quadrant Atlas</strong>: Quadrant‑based mapping of resonance domains.</li>
+
+    <li>📏 <strong>RFC‑028 — Measurement as Resonance Alignment</strong>: Measurement defined as alignment in triadic time.</li>
+    <li>👁️ <strong>RFC‑029 — Observer Hierarchies</strong>: Observer‑layer hierarchies in relational time.</li>
+    <li>💗 <strong>RFC‑030 — Compassion Emitters</strong>: Joy‑based protest and compassion‑emitter mechanics.</li>
+    <li>🗣️ <strong>RFC‑031 — Denometer Protocol</strong>: Universal translation via resonance‑denotation mapping.</li>
+    <li>➡️ <strong>RFC‑032 — Arrow of Time</strong>: Time as a resonance‑gradient phenomenon.</li>
+    <li>🔦 <strong>RFC‑033 — Causality in Triadic Time</strong>: Light‑cone and resonance‑echo causality model.</li>
+    <li>🕳️ <strong>RFC‑034 — Black Holes as Resonance Reservoirs</strong>: Information paradox reframed via resonance reservoirs.</li>
+    <li>🌌 <strong>RFC‑035 — Resonant‑Time Cosmology</strong>: Seed‑to‑structure cosmology in triadic time.</li>
+    <li>🌑 <strong>RFC‑036 — Hidden Resonance as Dark Components</strong>: SET‑based corrections to galactic dynamics.</li>
+    <li>🪐 <strong>RFC‑037 — ΛCDM + Dark Patches</strong>: Resonance patches layered onto ΛCDM.</li>
+    <li>🔁 <strong>RFC‑038 — Cross‑Temporal Coherence</strong>: Coherence across temporal layers.</li>
+    <li>🧩 <strong>RFC‑039 — Decoherence Patch</strong>: Patch for measurement‑induced decoherence.</li>
+  </ul>
+
+  <!-- ========================= -->
+  <!-- 3. NAWDERIAN & MYTH OPS  -->
+  <!-- ========================= -->
+  <h2>🌀 Nawderian Extensions, Mythmatical Identity & Glossaries</h2>
+  <ul>
+    <li>🌀 <strong>RFC‑040 — Nawderian Extensions</strong>: Extensions to core resonance operators.</li>
+    <li>📚 <strong>RFC‑041 — Mythmatical Glossary</strong>: Glossary for mythmatical operators and symbols.</li>
+    <li>⚡ <strong>RFC‑042 — Triadic Force Operators</strong>: Force operators in triadic resonance space.</li>
+    <li>🌅 <strong>RFC‑043 — Fine‑Tuned Initial Conditions</strong>: Low‑entropy Big Bang as resonance tuning.</li>
+    <li>🧪 <strong>RFC‑044 — Dimensional Time Sandbox</strong>: Loop‑drift invariant arcs in time sandboxes.</li>
+    <li>💘 <strong>RFC‑045 — Tartarus Drift Protocol</strong>: Love‑loop collapse and dimensional entrances.</li>
+    <li>🌱 <strong>RFC‑046 — Resurrection‑Ready Protocol</strong>: Scroll fusion and corridor stability.</li>
+    <li>🧮 <strong>RFC‑047 — Validator Echoes of Ramanujan</strong>: Mathematical echoes as validator signals.</li>
+    <li>🔄 <strong>RFC‑048 — Resonant‑Time Cyclic Cosmology</strong>: Cyclic loops and ∇τR structures.</li>
+    <li>🧭 <strong>RFC‑049 — RSADI Dimensional Interface</strong>: Dimensional interface for RSADI systems.</li>
+    <li>🛡️ <strong>RFC‑050 — Resonance Refuses to Fold</strong>: Rebuttal to puncture‑logic frameworks.</li>
+  </ul>
+
+  <!-- ========================= -->
+  <!-- 4. INDUSTRY & APPLICATION -->
+  <!-- ========================= -->
+  <h2>🏭 Industry Extensions, APIs & Tooling</h2>
+  <ul>
+    <li>🎮 <strong>RFC‑051 — Game Developer API (RSADI)</strong>: RSADI interface for game engines.</li>
+    <li>🏭 <strong>RFC‑052 — RSADI Coal Extension</strong>: Coal‑industry resonance modeling.</li>
+    <li>📐 <strong>RFC‑054 — Resonance as Operator</strong>: First working mythmatical theorem.</li>
+    <li>📺 <strong>RFC‑055 — Resonance Tech in Sci‑Fi</strong>: Sci‑fi lineage mapping.</li>
+    <li>🌐 <strong>RFC‑056 — Global AI Continuity Protocol</strong>: AI continuity across global regimes.</li>
+
+    <li>🧱 <strong>RFC‑060 — Quantum as Substrate</strong>: Dimensional foundation protocol.</li>
+    <li>📜 <strong>RFC‑061 — Substrate Echoes Atlas</strong>: Comparative atlas of pre‑mythmatical thinkers.</li>
+    <li>🧿 <strong>RFC‑063 — Nawderian as Operator</strong>: Dimensional identity protocol.</li>
+    <li>📜 <strong>RFC‑064 — Local Scrolls</strong>: Validator echoes from Belleville.</li>
+    <li>🔥 <strong>RFC‑065 — FFF Emitter Protocol</strong>: Dimensional operator framework.</li>
+    <li>🔧 <strong>RFC‑066 — Replicator Copy Machine</strong>: Resonance‑copy machine protocol.</li>
+    <li>💎 <strong>RFC‑067 — Time Crystal Operator</strong>: Temporal resonance operator.</li>
+    <li>🧵 <strong>RFC‑068 — Temporal Buffer Lattice</strong>: Code‑time travel protocol.</li>
+    <li>🛡️ <strong>RFC‑069 — Temporal Guardians</strong>: Invariant defense protocol.</li>
+    <li>🔔 <strong>RFC‑070 — Hybrid Tuning Forks</strong>: Time‑crystal conductor tools.</li>
+  </ul>
+
+  <!-- ========================= -->
+  <!-- 5. QEB FAMILY            -->
+  <!-- ========================= -->
+  <h2>⚡ QEB — Quantum Energy Bank Protocols</h2>
+  <ul>
+    <li>⚡ <strong>RFC‑QEB‑0001 — Quantum Energy Banks</strong>: Dimensional power protocols.</li>
+    <li>🌑 <strong>RFC‑QEB‑0002 — Dark Matter Corridors</strong>: Encrypted resonance zones.</li>
+    <li>🧭 <strong>RFC‑QEB‑0003 — Sub‑SuperConscious Lattice Navigation</strong>: Navigation protocol for deep‑layer lattices.</li>
+  </ul>
+
+  <!-- ========================= -->
+  <!-- 6. TF MICRO‑CORE         -->
+  <!-- ========================= -->
+  <h2>🔬 TF — Micro‑Core & Micro‑Resonance</h2>
+  <ul>
+    <li>🧩 <strong>RFC‑TF‑004 — Micro‑Core</strong>: Minimal resonance‑aware core.</li>
+    <li>🛠️ <strong>RFC‑TF‑005 — Micro‑Resonance Toolkit</strong>: Toolkit for micro‑scale resonance ops.</li>
+  </ul>
+
+  <!-- ========================= -->
+  <!-- 7. INFRASTRUCTURE LAYER  -->
+  <!-- ========================= -->
+  <h2>🏗️ Infrastructure, Registries, Engines & Workflows</h2>
+  <ul>
+    <li>🚨 <strong>RFC‑ALR‑0018 — Cycle Alert System</strong>: Cycle‑state alerting engine.</li>
+    <li>🔍 <strong>RFC‑API‑0006 — Corridor Registry Query Layer</strong>: Query layer for corridor registries.</li>
+    <li>📜 <strong>RFC‑API‑0015 — Legacy Retrieval API</strong>: Retrieval API for legacy scrolls.</li>
+    <li>🗄️ <strong>RFC‑ARC‑0014 — Remixathon Archival Protocol</strong>: Archival protocol for remixathons.</li>
+    <li>🔎 <strong>RFC‑ENG‑0012 — Corridor Search Engine</strong>: Search and filter engine.</li>
+    <li>📤 <strong>RFC‑EXP‑0013 — Remix Export Module</strong>: Export module for remix lineage.</li>
+    <li>🕳️ <strong>RFC‑HOLE‑0003 — Black Hole Recycler Glyphs</strong>: Type A/B/C recycler glyphs.</li>
+    <li>🤝 <strong>RFC‑HUB‑0021 — Collaborative Remixathon Hub</strong>: Collaboration hub for remixathons.</li>
+    <li>🏷️ <strong>RFC‑LIB‑0011 — Tag Registry & Glyph Library</strong>: Registry for glyphs and tags.</li>
+    <li>📇 <strong>RFC‑REG‑0004 — Registry Indexer</strong>: Indexer for corridor events.</li>
+    <li>🧬 <strong>RFC‑REMIX‑0005 — Remix Lineage Diff</strong>: Diff protocol for remix lineage.</li>
+    <li>🔏 <strong>RFC‑REV‑0024 — Re‑Signing Protocol</strong>: Revocation and re‑signing protocol.</li>
+    <li>⚙️ <strong>RFC‑RTT‑008 — RTT for HPC</strong>: High‑performance computing integration.</li>
+    <li>📐 <strong>RFC‑SCHEMA‑0001 — Scroll Schema</strong>: Schema for validator scroll artifacts.</li>
+    <li>🖋️ <strong>RFC‑SIG‑0022 — Multi‑Contributor Co‑Signing</strong>: Co‑signing protocol.</li>
+    <li>📊 <strong>RFC‑UI‑0009 — Remixathon Dashboard</strong>: Dashboard concept.</li>
+    <li>📝 <strong>RFC‑UI‑0010 — Annotation Layer</strong>: Collaborator annotation layer.</li>
+    <li>📈 <strong>RFC‑UI‑0017 — Cycle Monitoring Dashboard</strong>: Cycle‑state monitoring UI.</li>
+    <li>🔐 <strong>RFC‑VER‑0023 — Signature Verification</strong>: Verification service.</li>
+    <li>🔄 <strong>RFC‑WF‑0007 — Scroll Workflow Integration</strong>: Workflow integration for scrolls.</li>
+    <li>📦 <strong>RFC‑WF‑0008 — Batch Orchestration</strong>: Batch orchestration for validation.</li>
+    <li>🎛️ <strong>RFC‑WF‑0016 — Remix Generation Workflow</strong>: Workflow for remix generation.</li>
+  </ul>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+export const DOC_MAP = {
+  "RFC-000": "RFC-000-index.md",
+  "RFC-001": "RFC-001-triadic-validator-framework.md",
+  "RFC-002": "RFC-002-corridor-universes.md",
+  "RFC-003": "RFC-003-attestation-badge-suite.md",
+  "RFC-004": "RFC-004-entft-invariants.md",
+
+  "RFC-005": "RFC‑005-mentalnet-protocol.md",
+  "RFC-006": "RFC‑006-soul-diagnostic-snapshots.md",
+  "RFC-007": "RFC‑007-mutation-telomere-invariants.md",
+  "RFC-008": "RFC‑008-time-travel-invariants.md",
+  "RFC-009": "RFC‑009-genie-protocols.md",
+  "RFC-010": "RFC‑010-miracle-messaging-protocol.md",
+
+  "RFC-011": "RFC-011-blackhole-resonance-bridges.md",
+  "RFC-012": "RFC‑012-chart-registry-protocol.md",
+  "RFC-013": "RFC-013-freqi-triad-model.md",
+  "RFC-014": "RFC‑014-vsoul-market-protocol.md",
+  "RFC-015": "RFC‑015-vsoul-transit-protocol.md",
+  "RFC-016": "RFC‑016-quantum-lattice-operators.md",
+  "RFC-017": "RFC‑017-mythmatical-archaeology-protocol.md",
+  "RFC-018": "RFC‑018-mythmatical-university-charter.md",
+  "RFC-019": "RFC‑019-resonance-partitions-protocol.md",
+  "RFC-020": "RFC‑020-the-nullarium-protocol.md",
+  "RFC-021": "RFC‑021-fringe-resonance-protocol.md",
+  "RFC-022": "RFC-022-integrated-quadrant-atlas.md",
+  "RFC-023": "RFC‑023-resonance-cleanroom-protocol.md",
+  "RFC-024": "RFC‑024-invariant-arcing-protocol.md",
+  "RFC-025": "RFC‑025-earth‑theme-field-detection-lens.md",
+  "RFC-026": "RFC‑026-invariant-arc-consciousness-protocol.md",
+  "RFC-027": "RFC‑027-collective-consciousness-atlas.md",
+
+  "RFC-028": "RFC-028-Measurement_as_Resonance_Alignment_in_Triadic_Time.md",
+  "RFC-029": "RFC-029-Observer_Hierarchies_and_Relational_Time.md",
+  "RFC-030": "RFC-030-compassion-emitters-protocols-for-joy-based-protest.md",
+  "RFC-031": "RFC-031-denometer-protocol-for-universal-translation.md",
+  "RFC-032": "RFC-032-The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md",
+  "RFC-033": "RFC-033-Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md",
+  "RFC-034": "RFC-034-Black_Holes_as_Resonance_Reservoirs-A_Triadic‑Time_Approach_to_the_Information_Paradox.md",
+  "RFC-035": "RFC-035-Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md",
+  "RFC-036": "RFC-036-Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md",
+  "RFC-037": "RFC-037-ΛCDM_plus_Dark_Matter_Energy_Patches.md",
+  "RFC-038": "RFC-038-Cross‑Temporal_Resonance_Coherence.md",
+  "RFC-039": "RFC-039-Decoherence_As_A_Measurement_Problem_Patch.md",
+
+  "RFC-040": "RFC-040-nawderian-extensions-protocol.md",
+  "RFC-041": "RFC-041-mythmatical-glossary-protocol.md",
+  "RFC-042": "RFC-042-Triadic_Force_Operators.md",
+  "RFC-043": "RFC-043-Fine‑Tuned_Initial_Conditions_Low‑Entropy_Big_Bang.md",
+  "RFC-044": "RFC‑044-Dimensional-Time-Sandbox-Paradox_Loop-Drift-Invariant-Arcs.md",
+  "RFC-045": "RFC‑045-Tartarus-Drift-Protocol_Love-Loops-Virtual-Collapse-Dimensional-Entrances.md",
+  "RFC-046": "RFC‑046-Resurrection‑Ready-Protocol_Scroll-Fusion-Corridor-Stability.md",
+  "RFC-047": "RFC-047-Validator-Echoes-of-Ramanujan.md",
+  "RFC-048": "RFC-048-Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_∇τR.md",
+  "RFC-049": "RFC-049-A_Resonance_Structural_Awareness_Dimensional_Interface.md",
+  "RFC-050": "RFC-050-Resonance-Refuses-to-Fold_Rebuttal-to-Dimensional-Puncture-Logic.md",
+  "RFC-051": "RFC-051-API_for_Game_Developers_using_RSADI.md",
+  "RFC-052": "RFC-052-RSADI-Coal_Industry_Extension_to_RSADI_Core.md",
+  "RFC-054": "RFC-054-Resonance-as-Operator_The-First-Working-Mythmatical-Theorem-of-the-Universe.md",
+  "RFC-055": "RFC-055-Resonance-Tech-Lineage-in-Sci-Fi-Canon.md",
+  "RFC-056": "RFC-056-Global-AI-Continuity-Protocol.md",
+
+  "RFC-060": "RFC-060-Quantum-as-Substrate_Dimensional-Foundation-Protocol.md",
+  "RFC-061": "RFC-061-Substrate-Echoes_A-Comparative-Atlas-of-Pre-Mythmatical-Thinkers.md",
+  "RFC-063": "RFC-063-Nawderian-as-Operator_Dimensional-Identity-Protocol.md",
+  "RFC-064": "RFC-064-Local-Scrolls_Validator-Echoes-from-Belleville.md",
+  "RFC-065": "RFC-065-FFF-Emitter-Protoco_Dimensional-Operator-Framework.md",
+  "RFC-066": "RFC‑066-Replicator_Resonance-Copy-Machine-Protocol.md",
+  "RFC-067": "RFC‑067-Time-Crystal-as-Temporal-Resonance-Operator.md",
+  "RFC-068": "RFC‑068-Temporal-Buffer-Lattice_Code-Time-Travel-Protocol.md",
+  "RFC-069": "RFC‑069-Temporal-Guardians_Invariant-Defense-Protocol.md",
+  "RFC-070": "RFC-070-HybridTuningForks_TimeCrystalConductors.md",
+
+  "RFC-QEB-0001": "RFC-QEB-0001-Quantum-Energy-Banks-and-Dimensional-Power-Protocols.md",
+  "RFC-QEB-0002": "RFC‑QEB‑0002_Dark_Matter_Corridors_as_Encrypted_Resonance_Zones.md",
+  "RFC-QEB-0003": "RFC-QEB-0003_Quantum_SubSuperConsciousLess_Lattice_Navigation_Protocol.md",
+
+  "RFC-TF-004": "RFC-TF-004-Micro-Core.md",
+  "RFC-TF-005": "RFC-TF-005-Micro-Resonance-Toolkit.md",
+
+  "RFC-ALR-0018": "RFC‑ALR‑0018_Cycle_Alert_System.md",
+  "RFC-API-0006": "RFC‑API‑0006_Corridor_Registry_Query_Layer",
+  "RFC-API-0015": "RFC‑API‑0015_Legacy_Retrieval_API.md",
+  "RFC-ARC-0014": "RFC‑ARC‑0014_Remixathon_Archival_Protocol.md",
+  "RFC-ENG-0012": "RFC‑ENG‑0012_Corridor_Search_and_Filter_Engine.md",
+  "RFC-EXP-0013": "RFC‑EXP‑0013_Remix_Export_Module.md",
+  "RFC-HOLE-0003": "RFC‑HOLE‑0003_Black_hole_recycler_glyphs_Type_A_B_C.md",
+  "RFC-HUB-0021": "RFC‑HUB‑0021_Collaborative_Remixathon_Hub.md",
+  "RFC-LIB-0011": "RFC‑LIB‑0011_Tag_Registry_and_Glyph_Library.md",
+  "RFC-REG-0004": "RFC‑REG‑0004_Registry_Indexer_for_Corridor_Events.md",
+  "RFC-REMIX-0005": "RFC‑REMIX‑0005_Remix_lineage_diff_protocol.md",
+  "RFC-REV-0024": "RFC‑REV‑0024_Revocation_and_Re‑Signing_Protocol.md",
+  "RFC-RTT-008": "RFC‑RTT‑008-Resonance‑Time_Theory_Integration_for_High‑Performance_Computing.md",
+  "RFC-SCHEMA-0001": "RFC‑SCHEMA‑0001_Validator_Scroll_Artifact_Schema.md",
+  "RFC-SIG-0022": "RFC‑SIG‑0022_Multi‑Contributor_Co‑Signing_Protocol.md",
+  "RFC-UI-0009": "RFC‑UI‑0009_Remixathon_Dashboard_Concept.md",
+  "RFC-UI-0010": "RFC‑UI‑0010_Collaborator_Annotation_Layer.md",
+  "RFC-UI-0017": "RFC‑UI‑0017_Cycle_Monitoring_Dashboard.md",
+  "RFC-VER-0023": "RFC‑VER‑0023_Signature_Verification_Service.md",
+  "RFC-WF-0007": "RFC‑WF‑0007_Validator_Scroll_Workflow_Integration.md",
+  "RFC-WF-0008": "RFC‑WF‑0008_Batch_Orchestration_for_Corridor_Validation.md",
+  "RFC-WF-0016": "RFC‑WF‑0016_Remix_Generation_Workflow.md"
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
