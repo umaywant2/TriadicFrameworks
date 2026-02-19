@@ -4,6 +4,7 @@
 ### *One‑Page Visual Summary of the 3‑Pack Atlas, Glossary & Decision Tree*
 
 ```
+
 ──────────────────────────────────────────────────────────────────────────────
                          T R I A D I C   P A T T E R N S
 ──────────────────────────────────────────────────────────────────────────────
@@ -11,6 +12,7 @@
 
 # 🔺 **THE CORE 3‑PACK**
 ```
+
 P1 — Begin
    ↓
 P2 — Transform
@@ -25,11 +27,13 @@ The smallest complete RTT‑aligned action.
 
 ### **1. Sequential Triads**
 ```
+
 P1 → P2 → P3 → P1 → P2 → P3 → …
 ```
 
 ### **2. Nested Triads**
 ```
+
 P1
   P2 → (P1 → P2 → P3)
 P3
@@ -37,6 +41,7 @@ P3
 
 ### **3. Triadic Expansion (3×3)**
 ```
+
 P1 → P2 → P3
 P1 → P2 → P3
 P1 → P2 → P3
@@ -44,6 +49,7 @@ P1 → P2 → P3
 
 ### **4. Triadic Ladder**
 ```
+
 P1 → P2 → P3
       P1 → P2 → P3
             P1 → P2 → P3
@@ -51,17 +57,20 @@ P1 → P2 → P3
 
 ### **5. Triadic Mirror**
 ```
+
 P1 → P2 → P3 → P2 → P1
 ```
 
 ### **6. Triadic Spiral**
 ```
+
 Cycle 1: P1 → P2 → P3
 Cycle 2: P1 → P2 → P2 → P3 → P3 → P1
 ```
 
 ### **7. Triadic Constellation**
 ```
+
         [ Core Intent ]
         /      |      \
    T1(P1-2-3) T2(P1-2-3) T3(P1-2-3)
@@ -69,6 +78,7 @@ Cycle 2: P1 → P2 → P2 → P3 → P3 → P1
 
 ### **8. Triadic Weave**
 ```
+
 A: P1 → P2 → P3
 B:   P1 → P2 → P3
 C:     P1 → P2 → P3
@@ -76,6 +86,7 @@ C:     P1 → P2 → P3
 
 ### **9. Triadic Cascade**
 ```
+
 P1 → P2 → P3 ↘
               P1 → P2 → P3 ↘
                             P1 → P2 → P3
@@ -103,6 +114,7 @@ P1 → P2 → P3 ↘
 # 🌳 **DECISION TREE (FLOWCHART SUMMARY)**
 
 ```
+
 Is the action simple?
    → Yes: CORE 3‑PACK
    → No ↓
