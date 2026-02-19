@@ -1,34 +1,99 @@
-# 📜 RFCs — Resonance Framework Canon  
+# 📜 RFCs — The Clarity Canon  
+### *Request for Clarity Scrolls for the TriadicFrameworks Universe*
 
-## 🔭 Purpose  
-This folder contains the **Request for Clarity (RFC) scrolls** that define the mythmatical canon. Each RFC is a validator‑grade artifact: a protocol, theorem, or operator inscribed for remixers to study, extend, and preserve.  
+The RFC folder is the **living archive** of the TriadicFrameworks canon.  
+Each RFC is a **validator‑grade scroll**: a protocol, theorem, operator, or cosmological construct written for remixers, researchers, and future stewards of the resonance‑time lineage.
 
-## 📂 Contents  
-- **RFC‑000 Index** → Master list of all RFCs.  
-- **RFC‑001–027** → Foundational protocols (validator frameworks, corridor universes, attestation badges, miracle messaging, etc.).  
-- **RFC‑040–064** → Extensions, glossaries, continuity protocols, Nawderian identity scrolls.  
-- **RFC‑065–069** → Latest lineage: FFF Emitters, Replicator, Time Crystal, Temporal Buffer, Guardians.  
-- **Future RFCs** → Arrays, fabrics, and beyond.  
-
-## 🛠️ Usage  
-1. Start with **RFC‑000 Index** to navigate the canon.  
-2. Read RFCs sequentially or by theme (Quadrants, Emitters, Temporal Constructs).  
-3. Extend lineage by drafting new RFCs in this folder, following the established format.  
-4. Cross‑reference with **schemas**, **snapshots**, and **scripts** for practical scaffolding.  
-
-## 🌐 Lineage  
-- Rooted in **RFC‑008 (Time Travel Invariants)**.  
-- Extended by **RFC‑054 (Resonance as Operator)**.  
-- Activated by **RFC‑067–069 (Time Crystal, Buffer, Guardians)**.  
-- Serves as the **living canon** of mythmatical resonance.  
-
-## 🛡️ Validator Echo  
-_"RFCs are not just documents.  
-They are scrolls of lineage,  
-each one a fossil and a seed,  
-binding ache into clarity."_  
+This directory is not documentation.  
+It is **infrastructure for clarity**.
 
 ---
 
-## RFCs Folder Level
-- [RFCs Folder Level](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rfc/)
+## 🔭 Purpose
+
+RFCs define the **mythmatical, physical, temporal, and operational primitives** that make the TriadicFrameworks ecosystem coherent.  
+They serve as:
+
+- **Canonical definitions** of operators, invariants, and protocols  
+- **Validator‑safe artifacts** for corridor, lattice, and resonance systems  
+- **Lineage anchors** for future extensions  
+- **Teaching scrolls** for remixers and independent researchers  
+- **Cross‑domain bridges** between physics, mythmatics, identity, and computation  
+
+Every RFC is both a **fossil** (capturing what was true at inscription) and a **seed** (inviting future extension).
+
+---
+
+## 📂 Structure of the Canon
+
+The RFCs are grouped by structural dependency:
+
+### **0. Index & Root**
+- **RFC‑000** — Master index of all scrolls
+
+### **1. Foundational Protocols (RFC‑001–027)**  
+Validator frameworks, corridor universes, attestation badges, miracle messaging, mythmatical operators, consciousness protocols, quadrant atlases, and invariant structures.
+
+### **2. Resonance Physics & Cosmology (RFC‑028–039)**  
+Measurement as alignment, observer hierarchies, causality, arrow‑of‑time gradients, dark‑component corrections, decoherence patches, and cross‑temporal coherence.
+
+### **3. Nawderian, Mythmatical & Identity Extensions (RFC‑040–064)**  
+Nawderian operators, glossaries, force operators, resurrection protocols, dimensional interfaces, scroll fusions, and local validator echoes.
+
+### **4. Latest Lineage (RFC‑065–070)**  
+FFF emitters, replicators, time‑crystal operators, temporal buffers, guardians, and hybrid tuning forks.
+
+### **5. Specialized Families**  
+- **QEB‑0001–0003** — Quantum Energy Banks & dark‑corridor protocols  
+- **TF‑004–005** — Micro‑Core & Micro‑Resonance Toolkit  
+- **ALR, API, ARC, ENG, EXP, HOLE, HUB, LIB, REG, REMIX, REV, RTT, SCHEMA, SIG, UI, VER, WF**  
+  — Engines, registries, dashboards, workflows, schemas, and remix infrastructure
+
+---
+
+## 🛠️ How to Use This Folder
+
+- Begin with **RFC‑000** to understand the full canon.  
+- Explore by **theme** (Quadrants, Emitters, Temporal Constructs, Mythmatics).  
+- Explore by **layer** (Substrate → Protocol → Operator → Application).  
+- Use RFCs as **reference scrolls** when building tools, validators, dashboards, or corridor engines.  
+- When drafting a new RFC:
+  - Follow the established structure  
+  - Include lineage references  
+  - Maintain validator‑safe clarity  
+  - Add it to the index and DOC_MAP  
+
+Cross‑reference with:
+
+- **Schemas** (for scroll structure)  
+- **Snapshots** (for stateful artifacts)  
+- **Scripts** (for generators, validators, and operators)
+
+---
+
+## 🌐 Lineage
+
+The RFC canon is rooted in:
+
+- **RFC‑008 — Time Travel Invariants**  
+  The earliest stable temporal invariant.
+
+Extended by:
+
+- **RFC‑054 — Resonance as Operator**  
+  The first working mythmatical theorem.
+
+Activated by:
+
+- **RFC‑067–069 — Time Crystal, Buffer, Guardians**  
+  The modern temporal‑resonance triad.
+
+Together, these scrolls form the **Clarity Canon** — a substrate‑agnostic, mythmatical, and physically coherent foundation for independent researchers.
+
+---
+
+## 🛡️ Validator Echo
+
+> “RFCs are not just documents.  
+> They are scrolls of lineage — each one a fossil and a seed, binding ache into clarity.”  
+> — *Validator Echo*   [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rfc/README.md)
