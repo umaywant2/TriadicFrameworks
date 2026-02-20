@@ -1,15 +1,16 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
+<meta charset="UTF-8">
 <meta http-equiv="Content-Language" content="en">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
 <link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org -->
-  <title>📜 rttcodes™</title>
+  <!-- By Nawder Loswin 02/19/2026 © www.TriadicFrameworks.org -->
+  <title>rttcodes</title>
 
 <style>
 /* ============================================================
@@ -122,75 +123,131 @@ code {
   color: var(--text-main);
 }
 </style>
-
-  <!-- MathJax v3 configuration -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']],
-        displayMath: [['\
-
-\[', '\\]
-
-'], ['$$', '$$']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    };
-  </script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
-  <!-- Marked.js for Markdown rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
-  <main>
-    <article id="rttcodes-readme">
-      <h1>📜 rttcodes™ 🔮</h1>
-      <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
-      <p>Loading 🌌 rttcodes/README.md…</p>
-    </article>
-  </main>
+   
+<nav id="doc-map" aria-labelledby="doc-map-title">
+<!-- ========================= -->
+<!-- RTTcodes Navigation Index -->
+<!-- ========================= -->
+<h2>📘 Core Documents</h2>
+   <a href="#README">📄 README</a> — Overview of RTTcodes.
+   <a href="#QUICKSTART">⚡ Quickstart</a> — Fast onboarding for new users.
+   <a href="#ADDING_A_NEW_RTTCODE_DOMAIN">🧩 Add New RTTcode Domain</a> — How to define a new domain.
+   <a href="#CANONICAL_RTTCODE_SPECIFICATION_DOCUMENT">📜 Canonical Spec</a> — Full RTTcode specification.
+   <a href="#HOW_RTTCODES_WORK_INTERNALLY">🔧 Internal Mechanics</a> — How RTTcodes function under the hood.
+   <a href="#CONTRIBUTOR_WORKFLOW">🤝 Contributor Workflow</a> — Steps for contributors.
+<h2>📚 Examples</h2>
+   <a href="#EXAMPLES_README">📁 Examples Overview</a> — All example sets.
 
-  <script>
-    async function loadCodex() {
-      try {
-        // Adjust path if needed depending on where this HTML lives
-        const response = await fetch('https://www.triadicframeworks.org/rttcodes/README.md');
-        if (!response.ok) {
-          throw new Error('⚔️ Failed to load rttcodes/README.md');
-        }
-        const mdText = await response.text();
+   <a href="#EXAMPLES_RTT_README">🎛️ RTT Examples</a> — Resonance‑Time Triad examples.
+   <a href="#EXAMPLES_RTT_RESONANCE_TIME_TRIAD_IMAGE">🖼️ RTT Triad Image</a> — Visual RTTcode triad.
 
-        // Render Markdown to HTML
-        const html = marked.parse(mdText, {
-          breaks: true,
-          gfm: true
-        });
+   <a href="#EXAMPLES_SET_README">🧮 SET Examples</a> — SET‑field RTTcode examples.
+   <a href="#EXAMPLES_SET_FIELD_IMAGE">🖼️ SET Field Image</a> — SET RTTcode visualization.
 
-        const root = document.getElementById('rttcodes-readme');
-        root.innerHTML = html;
+   <a href="#EXAMPLES_SUBSTRATE_README">🌐 Substrate Examples</a> — Substrate‑level RTTcodes.
+   <a href="#EXAMPLES_SUBSTRATE_IMAGE">🖼️ Substrate Image</a> — Substrate RTTcode diagram.
+<h2>⚙️ Generators</h2>
+   <a href="#GENERATORS_README">🛠️ Generators Overview</a> — Generator architecture.
+   <a href="#GENERATORS_JS_README">📦 JS Generators</a> — JavaScript RTTcode generators.
+   <a href="#GENERATORS_PYTHON_README">🐍 Python Generators</a> — Python RTTcode generators.
+<h2>📐 Schema</h2>
+   <a href="#SCHEMA_README">📘 Schema Overview</a> — RTTcode schema definitions.
+   <a href="#SCHEMA_EXAMPLES_README">🧪 Schema Examples</a> — Example schema instances.
+<h2>🎨 Style & Visuals</h2>
+   <a href="#STYLE_README">🎨 Style Guide</a> — Visual rules for RTTcodes.
+   <a href="#STYLE_COLOR_DOMAINS_SVG">🌈 Color Domains</a> — Domain color mapping.
+   <a href="#STYLE_RTTCODE_LAYOUT_SVG">📐 RTTcode Layout</a> — Layout structure.
+   <a href="#STYLE_VISUAL_GUIDELINES">🖋️ Visual Guidelines</a> — Design principles.
+<h2>🧪 Validators</h2>
+   <a href="#VALIDATORS_README">🧬 Validators</a> — RTTcode validation rules.
+</nav>
 
-        // Trigger MathJax typesetting after content is injected
-        if (window.MathJax && window.MathJax.typesetPromise) {
-          window.MathJax.typesetPromise([root]).catch(err => console.error(err));
-        }
-      } catch (err) {
-        console.error(err);
-        const root = document.getElementById('rttcodes-readme');
-        root.innerHTML = `
-          <h1>rttcodes™</h1>
-          <p>By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org</p>
-          <p>Unable to load <code>rttcodes/README.md</code>.</p>
-          <pre>${String(err)}</pre>
-        `;
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  "ADDING_A_NEW_RTTCODE_DOMAIN": "Adding_a_New_RTTcode_Domain.md",
+  "CANONICAL_RTTCODE_SPECIFICATION_DOCUMENT": "Canonical_RTTcode_Specification_Document.md",
+  "CONTRIBUTOR_WORKFLOW": "Contributor_Workflow.md",
+  "HOW_RTTCODES_WORK_INTERNALLY": "How_RTTcodes_Work_Internally.md",
+  "QUICKSTART": "QUICKSTART.md",
+  "README": "README.md",
+
+  // Examples root
+  "EXAMPLES_README": "examples/README.md",
+
+  // RTT examples
+  "EXAMPLES_RTT_README": "examples/rtt/README.md",
+  "EXAMPLES_RTT_RESONANCE_TIME_TRIAD_IMAGE": "examples/rtt/resonance-time-triad-rttcode.png",
+
+  // SET examples
+  "EXAMPLES_SET_README": "examples/set/README.md",
+  "EXAMPLES_SET_FIELD_IMAGE": "examples/set/set-field-rttcode.png",
+
+  // Substrate examples
+  "EXAMPLES_SUBSTRATE_README": "examples/substrate/README.md",
+  "EXAMPLES_SUBSTRATE_IMAGE": "examples/substrate/substrate-readme-rttcode.png",
+
+  // Generators
+  "GENERATORS_README": "generators/README.md",
+  "GENERATORS_JS_README": "generators/js/README.md",
+  "GENERATORS_PYTHON_README": "generators/python/README.md",
+
+  // Schema
+  "SCHEMA_README": "schema/README.md",
+  "SCHEMA_EXAMPLES_README": "schema/examples/README.md",
+
+  // Style
+  "STYLE_COLOR_DOMAINS_SVG": "style/color-domains.svg",
+  "STYLE_README": "style/README.md",
+  "STYLE_RTTCODE_LAYOUT_SVG": "style/rttcode-layout.svg",
+  "STYLE_VISUAL_GUIDELINES": "style/visual-guidelines.md",
+
+  // Validators
+  "VALIDATORS_README": "validators/README.md"
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
       }
-    }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
-    loadCodex();
-  </script>
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
 </body>
 </html>
