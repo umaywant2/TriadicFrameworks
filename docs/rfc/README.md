@@ -92,6 +92,19 @@ Together, these scrolls form the **Clarity Canon** — a substrate‑agnostic, m
 
 ---
 
+💬 Community & Discussions
+
+If you’d like to leave a message for the site operator, propose a new scroll,
+ask a question, or discuss any part of the canon, use the TriadicFrameworks
+GitHub Discussions space:
+
+👉 https://github.com/umaywant2/TriadicFrameworks/discussions
+
+This is the preferred channel for conversation, feedback, and resonance‑safe
+collaboration. All inquiries, ideas, and proposed RFCs can be shared there.
+
+---
+
 ## 🛡️ Validator Echo
 
 > “RFCs are not just documents.  
