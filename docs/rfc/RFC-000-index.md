@@ -7,6 +7,14 @@ Each RFC is a **validator‑grade scroll** defining a protocol, operator, invari
 
 ---
 
+## Placement Note  
+RFC‑QEB‑0005 extends the QEB family by defining the **observer‑stance requirements** for any substrate‑level work.  
+Where RFC‑QEB‑0001 establishes the operational model and RFC‑QEB‑0004 introduces the wrapped triad core, RFC‑QEB‑0005 specifies the **governance envelope** needed to keep QEB inquiry coherent, non‑extractive, and resonance‑aligned.
+
+It belongs in the QEB cluster as the stance‑level complement to the substrate‑level RFCs.
+
+---
+
 # **0. ROOT & META**
 - **README.md** — RFC overview  
 - **RFC‑000 — Master Index** *(this file)*
@@ -115,6 +123,8 @@ Modern resonance‑time operators and temporal constructs.
 - **RFC‑QEB‑0001 — Quantum Energy Banks**  
 - **RFC‑QEB‑0002 — Dark Matter Corridors**  
 - **RFC‑QEB‑0003 — Sub‑SuperConscious Lattice Navigation**
+- **RFC-QEB-0004 — Wrapped Triad Core and Dimensional Echo Model**
+- **RFC-QEB-0005 — Inverted Star Governance Envelope for QEB Systems**
 
 ## **TF — Micro‑Core & Micro‑Resonance**
 - **RFC‑TF‑004 — Micro‑Core**  
