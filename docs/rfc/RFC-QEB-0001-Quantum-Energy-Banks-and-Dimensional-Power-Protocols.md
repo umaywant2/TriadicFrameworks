@@ -1,77 +1,118 @@
-## ⚡ RFC-QEB-0001: Quantum Energy Banks and Dimensional Power Protocols
+# ⚡ RFC‑QEB‑0001: Quantum Energy Banks and Dimensional Power Protocols  
+**RTT‑Aligned, QMROOT‑Rooted Edition**
 
-### 🧬 Abstract
-This RFC defines the architecture for Quantum Energy Banks (QEBs), hybrid battery systems that operate within the mythmatical dimensional framework. QEBs inherit the 1D–2D quantum lattice and integrate 6D corridor logic to enable ambient, subscription-based wireless power. The system does not simulate quantum—it **grounds to it**, treating 1D and 2D as the substrate of unformed energy, outside time, awaiting resonance.
+## 🧬 Abstract  
+Quantum Energy Banks (QEBs) are hybrid resonance‑time battery systems grounded directly to the quantum‑mythmatical substrate. Unlike classical or simulated‑quantum systems, QEBs anchor to **QMROOT (0D)** — the indivisible, pre‑geometric source dimension — and extend upward through the resonance‑time stack.  
+QEBs use the 1D–2D substrate as their grounding lattice and operate through the 6D corridor to provide ambient, subscription‑based wireless power.
+
+QEBs do not approximate quantum behavior.  
+They **inherit from it**, using the dimensional substrate as the operational foundation.
 
 ---
 
-### 🌀 Dimensional Inheritance Model
+## 📚 Resonant Dimensional Model (RTT‑Aligned)
+
+This model restates the full dimensional stack using RTT’s substrate‑first logic.
+
+### 0D — QMROOT (“the indivisible source”)  
+The unfactored source. No extension, no coordinates, no separation.  
+All QEB grounding begins here.
+
+### 1D — Potential Line  
+The first extension of QMROOT. Pure directed potential.
+
+### 2D — Awareness Plane  
+The first echo of structure. A stable substrate surface for grounding.
+
+### 3D — Corridor Volume  
+Resonant volumetric space where QEB vaults and reservoirs instantiate.
+
+### 4D — Temporal Gradient  
+Resonance‑time extension. Used for policy time, decay curves, and vesting.
+
+### 5D — Fluidic Resonance Layer  
+Flow‑based modulation for adaptive energy routing.
+
+### 6D — Corridor Axis  
+The stabilizing channel shared by all inheritance models.  
+All QEB operations pass through 6D.
+
+### 7D — Force Weave  
+Structural reinforcement for cross‑corridor guarantees.
+
+### 8D — Field Coherence Layer  
+Maintains stable resonance envelopes across banks.
+
+### 9D — Frequency Wrap  
+High‑order resonance harmonics for multi‑bank synchronization.
+
+---
+
+## 🌀 Dimensional Inheritance Model
 
 | Archetype | Inherits | Corridor | Wrap |
 |-----------|----------|----------|------|
-| **Quantum (QEB)** | 1D, 2D | 6D | — |
-| **Frequency** | 1D, 2D | 6D | 3D, 9D |
-| **Fluids** | 1D, 2D | 6D | 4D, 5D |
-| **Forces** | 1D, 2D | 6D | 7D, 8D |
+| Quantum (QEB) | 0D, 1D, 2D | 6D | — |
+| Frequency | 1D, 2D | 6D | 3D, 9D |
+| Fluids | 1D, 2D | 6D | 4D, 5D |
+| Forces | 1D, 2D | 6D | 7D, 8D |
 
-- **1D**: *He Who Is* — pure potential, unformed energy.
-- **2D**: *Sofia* — dimensional awareness, the first echo.
-- **6D**: The corridor — the stabilizing channel for resonance inheritance.
+- 0D: QMROOT — the indivisible source.  
+- 1D: Potential line.  
+- 2D: Awareness plane.  
+- 6D: Corridor axis — the universal stabilizer.
 
 ---
 
-### 🧬 Dimensional Inheritance: Dual-Triad Model
+## 🧬 Dual‑Triad Resonance Model
 
 | Realm | Triad | Role |
 |-------|-------|------|
-| **Quantum Realm** | 1D, 2D, 6D | Substrate, pre-resonance, outside time |
-| **Resonance Realm A** | 3D, 6D, 9D | Frequency wrap |
-| **Resonance Realm B** | 4D, 5D, 6D | Fluid wrap |
-| **Resonance Realm C** | 6D, 7D, 8D | Force wrap |
+| Quantum Realm | 0D, 1D, 2D | Substrate, pre‑resonance, outside time |
+| Resonance Realm A | 3D, 6D, 9D | Frequency wrap |
+| Resonance Realm B | 4D, 5D, 6D | Fluid wrap |
+| Resonance Realm C | 6D, 7D, 8D | Force wrap |
 
-- **1D**: *He Who Is* — pure potential, unformed energy.
-- **2D**: *Sofia* — dimensional awareness, the first echo.
-- **6D**: The corridor — the stabilizing channel, shared by all.
+The 6D corridor is the shared axis across all triads.
 
 ---
 
-### 🌀 Why This Model Resonates
+## 🌀 Why This Model Resonates
 
-- **Quantum is not part of the universe—it’s the seedbed.**
-- **Resonance realms are the wrappers—they give form, flow, and force.**
-- **6D is the bridge**—the corridor that links substrate to structure.
-- **Three triads = Nine dimensions**—and from that, the universe unfolds.
+- QMROOT (0D) is not a point — it is the **unfactored source**.  
+- 1D and 2D form the **quantum substrate**, outside time.  
+- 6D is the **corridor axis**, the stabilizing channel for all inheritance.  
+- Higher dimensions provide **wraps**, not origins.  
+- QEBs operate by grounding downward (0D–2D) and streaming upward (3D–9D).
 
 ---
 
-### 🔧 QEB Core Components
+## 🔧 QEB Core Components
 
 | Component | Description |
 |-----------|-------------|
-| **Quantum Lattice Interface (QLI)** | Grounds the QEB to the 1D–2D substrate. No time dependency. |
-| **Dimensional Processing Unit (DPU)** | Operates within the 6D corridor. Manages resonance keys, fault detection, and subscription logic. |
-| **Resonance Key** | Validator-grade token for energy access. Encoded with 6D corridor harmonics. |
-| **Nullarium Buffer** | Captures out-of-phase requests. Reroutes through entangled fallback channels. |
-| **Time Crystal Node (TCN)** | Optional module for pre-resonance diagnostics. Not required for QEB operation. |
+| Quantum Lattice Interface (QLI) | Grounds the QEB to QMROOT → 1D → 2D. No time dependency. |
+| Dimensional Processing Unit (DPU) | Operates in 6D. Manages resonance keys, subscription logic, and fault detection. |
+| Resonance Key | Validator‑grade token encoded with 6D harmonics. |
+| Nullarium Buffer | Captures out‑of‑phase or misaligned requests. Reroutes through entangled fallback channels. |
+| Time Crystal Node (TCN) | Optional diagnostic module for pre‑resonance analysis. Not required for operation. |
 
 ---
 
-### 🔗 Operational Flow
+## 🔗 Operational Flow
 
-1. **Grounding**: QLI anchors to 1D–2D lattice.
-2. **Handshake**: DPU initiates 6D corridor sync.
-3. **Authentication**: Resonance Key validates access tier.
-4. **Streaming**: Energy flows ambiently, no physical contact.
-5. **Fault Handling**: Nullarium Buffer reroutes misaligned requests.
-
----
-
-### 📜 Glossary Stubs
-
-- `QuantumEnergyBank`: A hybrid battery system grounded to the 1D–2D quantum lattice, operating through the 6D corridor.
-- `QuantumLatticeInterface`: The grounding module that connects QEBs to the pre-resonance substrate.
-- `DimensionalProcessingUnit`: Logic core operating within 6D, managing resonance and fault protocols.
-- `NullariumBuffer`: Fault-aware rerouter for out-of-phase energy requests.
-- `ResonanceKey`: Validator-grade token encoded with 6D harmonics for energy access.
+1. Grounding: QLI anchors to QMROOT → 1D → 2D.  
+2. Corridor Sync: DPU establishes 6D alignment.  
+3. Authentication: Resonance Key validates access tier.  
+4. Streaming: Energy flows ambiently through corridor harmonics.  
+5. Fault Handling: Nullarium Buffer reroutes misaligned requests.
 
 ---
+
+## 📜 Glossary Stubs
+
+- **QuantumEnergyBank**: A hybrid resonance‑time battery grounded to QMROOT and operating through the 6D corridor.  
+- **QuantumLatticeInterface**: The grounding module linking QEBs to the pre‑resonance substrate.  
+- **DimensionalProcessingUnit**: The 6D logic core managing resonance, authentication, and continuity.  
+- **NullariumBuffer**: A fault‑aware rerouter for out‑of‑phase requests.  
+- **ResonanceKey**: A validator‑grade token encoded with 6D corridor harmonics.
