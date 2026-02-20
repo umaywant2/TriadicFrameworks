@@ -145,12 +145,3 @@ A valid RTTcode MUST:
 4. Remain scannable by standard QR readers  
 
 This document is the authoritative reference for RTTcode behavior.
-
-## Quicklinks
-
-- [rttcodes - How RTTcodes Work Internally](https://www.triadicframeworks.org/rttcodes/How_RTTcodes_Work_Internally.md)
-- [rttcodes - Contributor Workflow](https://www.triadicframeworks.org/rttcodes/Contributor_Workflow.md)
-- [rttcodes - Adding a New RTTcode Domain](https://www.triadicframeworks.org/rttcodes/Adding_a_New_RTTcode_Domain.md)
-- [rttcodes - QUICKSTART](https://www.triadicframeworks.org/rttcodes/QUICKSTART.md)
-- [rttcodes - README](https://www.triadicframeworks.org/rttcodes/README.md)
-- [resonance-substrate-model - README](https://www.triadicframeworks.org/resonance-substrate-model/README.md)
