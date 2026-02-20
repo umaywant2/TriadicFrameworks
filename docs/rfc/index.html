@@ -355,14 +355,6 @@ const DOC_MAP = {
   RFC-WF-0016: 'RFC‑WF‑0016_Remix_Generation_Workflow.md',
 };
 
-function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc('README.md');
-  }
-}
 function loadDoc(file) {
   fetch(file)
     .then(response => {
