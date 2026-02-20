@@ -252,13 +252,12 @@ const DOC_MAP = {
 };
 
 function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc('README.md');
-  }
+    const hash = window.location.hash.substring(1);
+    if (hash && DOC_MAP[hash]) {
+        loadDoc(DOC_MAP[hash]);
+    }
 }
+
 function loadDoc(file) {
   fetch(file)
     .then(response => {
@@ -282,8 +281,12 @@ function loadDoc(file) {
     });
 }
   
-window.addEventListener('hashchange', loadFromHash);
-loadFromHash();
+window.onload = loadFromHash;
+window.onhashchange = loadFromHash;
+
+if (!window.location.hash) {
+    loadDoc("RFC-000-index.md");
+}
 
 </script>
 
