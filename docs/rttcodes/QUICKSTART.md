@@ -1,4 +1,4 @@
-## ⚡ Quickstart
+# ⚡ Quickstart
 
 RTTcodes are QR‑compatible identifiers that bind any artifact to its canonical
 TriadicFrameworks metadata. To generate one:
