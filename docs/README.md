@@ -271,6 +271,12 @@ They are organized by **structural dependency**, from foundational grammar throu
 
 - **RTT Request For Comments (rfc)**
   https://www.triadicframeworks.org/rfc/
+
+- **Resonance Atlas**
+  https://www.triadicframeworks.org/resonance_atlas/
+
+- **Schemas for RTT**
+  https://www.triadicframeworks.org/schemas/
   
 ---
 
