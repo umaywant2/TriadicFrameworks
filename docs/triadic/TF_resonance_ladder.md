@@ -16,6 +16,7 @@ This diagram shows the **vertical ascent** of stability and coherence as Triadic
 # **1. Resonance Ladder Diagram (Vertical Ascent)**
 
 ```
+
                                    ┌──────────────────────────────────────────┐
                                    │        LEVEL 6 — COMPUTE RESONANCE       │
                                    │  - regime‑ahead compute                  │
