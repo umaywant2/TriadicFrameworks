@@ -14,6 +14,7 @@ This wheel shows how the three major systems:
 # **1. The Alignment Wheel (ASCII Circular Diagram)**
 
 ```
+                                                   🧪
                                ┌──────────────────────────────┐
                                │        S–N–R Observer        │
                                │  (Signal • Noise • Regime)   │
