@@ -19,6 +19,7 @@ It’s the first full architecture that unifies:
 # **1. Full Integration Diagram**
 
 ```
+                                                                  🧪
                                            ┌──────────────────────────────────────────────┐
                                            │        Triadic Observer (S–N–R)              │
                                            │  Signal • Noise • Regime (Meta‑Analysis)     │
