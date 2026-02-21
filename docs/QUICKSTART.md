@@ -2,7 +2,7 @@
 
 Welcome to the **TFT 3‑Pack**:  
 - **nous** → the environment layer (runtime, bots, modules, outputs)  
-- **enTFT** → the protocol layer (quantum‑hostile encryption, scrolls, registries, hooks)  
+- **entft** → the protocol layer (quantum‑hostile encryption, scrolls, registries, hooks)  
 - **tops** → the orchestration layer (agents, folds, AI pipeline, overlays, outreach)
 
 This guide walks you through the **entire flow** in one ritual.
