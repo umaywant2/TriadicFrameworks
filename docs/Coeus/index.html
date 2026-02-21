@@ -1,0 +1,304 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+   
+   <title>Coeus | Triadic Frameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+
+  <h2>🪙 Coeus Layer — Index</h2>
+
+  <a href="#COIN_AS_A_CONTRACT">🪙 Coin as a Contract — Contract‑based coin model</a>
+  <a href="#FOLDER_USES">🗂️ Folder Uses — Directory purpose map</a>
+  <a href="#QUICKSTART">⚡ Quickstart — Fast onboarding</a>
+  <a href="#README">📄 README — Coeus overview</a>
+
+  <h3>🤖 Agents</h3>
+  <a href="#AGENTS_README">🤖 Agents README — Agent behaviors and roles</a>
+
+  <h3>🪙 Coins</h3>
+  <a href="#COINS_README">🪙 Coins README — Coin system overview</a>
+  <a href="#COINS_REMIX_OUTPUT">🎛️ Remix Output — Coin remix outputs</a>
+
+  <h3>📚 Docs (Manifestos, Logic, Indexes)</h3>
+  <a href="#DOCS_EMITTERS">📡 Emitters — Emitter logic</a>
+  <a href="#DOCS_GLOSSARY">📖 Glossary — Canon definitions</a>
+  <a href="#DOCS_HONOR_ROLL">🏅 Honor Roll — Contributors</a>
+  <a href="#DOCS_MANIFESTO">📜 Manifesto — Core principles</a>
+  <a href="#DOCS_Q_TRAVERSE">🌀 Q‑Traverse — Traversal logic</a>
+  <a href="#DOCS_QUICKSTART">⚡ Docs Quickstart — Docs onboarding</a>
+  <a href="#DOCS_RAIL_LOGIC">🛤️ Rail Logic — Rail‑based flows</a>
+  <a href="#DOCS_README">📄 Docs README — Docs overview</a>
+  <a href="#DOCS_CAUSE_MANIFESTO">🔥 Cause Manifesto — Cause‑based logic</a>
+  <a href="#DOCS_CLASS_MANIFESTO">🏛️ Class Manifesto — Class structures</a>
+  <a href="#DOCS_CORRIDOR_ALIGNMENT">🧭 Corridor Alignment — Corridor mapping</a>
+  <a href="#DOCS_DASHBOARD_LOGIC">📊 Dashboard Logic — Dashboard rules</a>
+  <a href="#DOCS_EXCHANGE_MANIFESTO">💱 Exchange Manifesto — Exchange rules</a>
+  <a href="#DOCS_FOLDER_USES">🗂️ Folder Uses — Docs folder map</a>
+  <a href="#DOCS_FUTURE_ENHANCEMENTS">🚀 Future Enhancements — Planned upgrades</a>
+  <a href="#DOCS_GLYPH_MANIFESTO">🔮 Glyph Manifesto — Glyph logic</a>
+  <a href="#DOCS_HONOR_ROLLS">🏅 Honor Rolls — Additional honors</a>
+  <a href="#DOCS_LEGACY_MANIFESTO">📜 Legacy Manifesto — Legacy rules</a>
+  <a href="#DOCS_MINT_READY_MANIFESTO">🪙 Mint‑Ready Manifesto — Minting rules</a>
+  <a href="#DOCS_MUTATION_TYPES">🧬 Mutation Types — Mutation taxonomy</a>
+  <a href="#DOCS_REMIX_RIGHTS_MANIFESTO">🎚️ Remix Rights — Remix permissions</a>
+  <a href="#DOCS_SCROLL_INDEX">📜 Scroll Index — Scroll directory</a>
+  <a href="#DOCS_SCROLL_PROVENANCE">🧾 Scroll Provenance — Scroll lineage</a>
+  <a href="#DOCS_SOVEREIGN_MANIFESTO">👑 Sovereign Manifesto — Sovereignty rules</a>
+  <a href="#DOCS_VALIDATOR_FOCUS_MANIFESTO">🛡️ Validator Focus — Validator priorities</a>
+
+  <h3>🧪 Sandbox</h3>
+  <a href="#SANDBOX_MINT_COIN">🪙 Mint Coin — Sandbox minting</a>
+  <a href="#SANDBOX_README">📄 Sandbox README — Sandbox overview</a>
+  <a href="#SANDBOX_LOGS_README">📜 Logs README — Sandbox logs</a>
+
+  <h3>🔖 Tokens</h3>
+  <a href="#TOKENS_README">🔖 Tokens README — Token system</a>
+
+  <h3>🏆 Tournaments</h3>
+  <a href="#TOURNAMENTS_README">🏆 Tournaments README — Tournament overview</a>
+  <a href="#TOURNAMENT_MANIFESTO">📜 Tournament Manifesto — Tournament rules</a>
+  <a href="#TOURNAMENT_CAUSE_README">🔥 Cause Tournament — Cause rules</a>
+  <a href="#TOURNAMENT_CLASS_README">🏛️ Class Tournament — Class rules</a>
+  <a href="#TOURNAMENT_COUNTRY_README">🌍 Country Tournament — Country rules</a>
+  <a href="#TOURNAMENT_EMITTER_README">📡 Emitter Tournament — Emitter rules</a>
+  <a href="#TOURNAMENT_LEADERBOARDS_README">📊 Leaderboards — Rankings</a>
+  <a href="#TOURNAMENT_MASCOT_README">🐾 Mascot Tournament — Mascot rules</a>
+
+  <h3>🛡️ Validators</h3>
+  <a href="#VALIDATORS_PROFESSOR_REVIEW">🎓 Professor Review — Academic validator review</a>
+  <a href="#VALIDATORS_README">🛡️ Validators README — Validator overview</a>
+  <a href="#VALIDATORS_SCORE_TRACE_MANIFESTO">📈 Score Trace Manifesto — Scoring logic</a>
+  <a href="#VALIDATORS_VALIDATOR_REVIEW">🧾 Validator Review — Validator assessments</a>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const DOC_MAP = {
+  COIN_AS_A_CONTRACT: 'Coin_as_a_Contract.md',
+  FOLDER_USES: 'FOLDER_USES.md',
+  QUICKSTART: 'QUICKSTART.md',
+  README: 'README.md',
+
+  // agents/
+  AGENTS_README: 'agents/README.md',
+
+  // coins/
+  COINS_README: 'coins/README.md',
+  COINS_REMIX_OUTPUT: 'coins/REMIX_OUTPUT.md',
+
+  // docs/
+  DOCS_EMITTERS: 'docs/EMITTERS.md',
+  DOCS_GLOSSARY: 'docs/GLOSSARY.md',
+  DOCS_HONOR_ROLL: 'docs/HONOR_ROLL.md',
+  DOCS_MANIFESTO: 'docs/MANIFESTO.md',
+  DOCS_Q_TRAVERSE: 'docs/Q-TRAVERSE.md',
+  DOCS_QUICKSTART: 'docs/QUICKSTART.md',
+  DOCS_RAIL_LOGIC: 'docs/RAIL_LOGIC.md',
+  DOCS_README: 'docs/README.md',
+  DOCS_CAUSE_MANIFESTO: 'docs/cause_manifesto.md',
+  DOCS_CLASS_MANIFESTO: 'docs/class_manifesto.md',
+  DOCS_CORRIDOR_ALIGNMENT: 'docs/corridor_alignment.md',
+  DOCS_DASHBOARD_LOGIC: 'docs/dashboard_logic.md',
+  DOCS_EXCHANGE_MANIFESTO: 'docs/exchange_manifesto.md',
+  DOCS_FOLDER_USES: 'docs/FOLDER_USES.md',
+  DOCS_FUTURE_ENHANCEMENTS: 'docs/Future_Enhancements.md',
+  DOCS_GLYPH_MANIFESTO: 'docs/glyph_manifesto.md',
+  DOCS_HONOR_ROLLS: 'docs/honor_rolls.md',
+  DOCS_LEGACY_MANIFESTO: 'docs/legacy_manifesto.md',
+  DOCS_MINT_READY_MANIFESTO: 'docs/mint_ready_manifesto.md',
+  DOCS_MUTATION_TYPES: 'docs/mutation_types.md',
+  DOCS_REMIX_RIGHTS_MANIFESTO: 'docs/remix_rights_manifesto.md',
+  DOCS_SCROLL_INDEX: 'docs/scroll_index.md',
+  DOCS_SCROLL_PROVENANCE: 'docs/scroll_provenance.md',
+  DOCS_SOVEREIGN_MANIFESTO: 'docs/sovereign_manifesto.md',
+  DOCS_VALIDATOR_FOCUS_MANIFESTO: 'docs/validator_focus_manifesto.md',
+
+  // sandbox/
+  SANDBOX_MINT_COIN: 'sandbox/mint_coin.md',
+  SANDBOX_README: 'sandbox/README.md',
+  SANDBOX_LOGS_README: 'sandbox/logs/README.md',
+
+  // tokens/
+  TOKENS_README: 'tokens/README.md',
+
+  // tournaments/
+  TOURNAMENTS_README: 'tournaments/README.md',
+  TOURNAMENT_MANIFESTO: 'tournaments/tournament_manifesto.md',
+  TOURNAMENT_CAUSE_README: 'tournaments/cause/README.md',
+  TOURNAMENT_CLASS_README: 'tournaments/class/README.md',
+  TOURNAMENT_COUNTRY_README: 'tournaments/country/README.md',
+  TOURNAMENT_EMITTER_README: 'tournaments/emitter/README.md',
+  TOURNAMENT_LEADERBOARDS_README: 'tournaments/leaderboards/README.md',
+  TOURNAMENT_MASCOT_README: 'tournaments/mascot/README.md',
+
+  // validators/
+  VALIDATORS_PROFESSOR_REVIEW: 'validators/professor_review.md',
+  VALIDATORS_README: 'validators/README.md',
+  VALIDATORS_SCORE_TRACE_MANIFESTO: 'validators/score_trace_manifesto.md',
+  VALIDATORS_VALIDATOR_REVIEW: 'validators/validator_review.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+
+</body>
+</html>
