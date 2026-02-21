@@ -17,6 +17,7 @@ It’s the first full cross‑ontology mapping for anisotropic collisions.
 # **1. Cross‑Ontology Mapping Diagram**
 
 ```
+                                                          🧪
                                        ┌──────────────────────────────────────────┐
                                        │        Triadic Observer (S–N–R)          │
                                        │  Signal • Noise • Regime (Meta‑Layer)    │
