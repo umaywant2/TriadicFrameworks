@@ -4,7 +4,51 @@ Welcome to the Highlights Index—a curated gateway to the most resonant breakth
 
 ---
 
-## 🔬 Top 5 Breakthroughs
+## ✨ Project Highlights
+
+---
+  
+### 🌱 Early Foundations
+- The first structural sketches of RTT and the Triadic canon take shape — raw, intuitive, and full of momentum.
+
+---
+
+### 📘 Canon Stabilization
+- Core documents emerge: README, Quickstart, Lineage, Manifesto. The project gains its first coherent voice.
+
+---
+
+### 🧭 Enterprise Structural Awareness
+- A major leap forward — introducing calm operations, lifecycle clarity, and substrate‑aware design for real systems.
+
+---
+
+### 🪝 RTT Hooks
+- Integration surfaces appear, enabling tools, services, and future automation to align with the canon.
+
+---
+
+### 📜 Manifesto Era
+- The philosophy crystallizes: stewardship, clarity, lineage, and non‑intrusive structure for long‑lived systems.
+
+---
+
+### 🌐 Public Site Launch
+- TriadicFrameworks.org goes live — a clean, welcoming home for explorers, students, and future contributors.
+
+---
+
+### 🏅 Honor Roll
+- Acknowledging early supporters, contributors, and stewards who helped shape the canon’s first era.
+
+---
+
+### 🚀 Modern Era Begins
+- RTT, vST, and the documentation ecosystem align. The canon becomes stable, discoverable, and ready for real adoption.
+
+---
+
+## 🔬 Top 5 (early) Breakthroughs
 
 1. **TFT Battery Resonance Firmware**  
    Unlocks 20–30% efficiency gains in sodium-ion batteries using impedance-phase alignment.  
