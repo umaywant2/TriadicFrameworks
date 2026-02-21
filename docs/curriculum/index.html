@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+   
+   <title>Curriculum | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+
+  <h2>📚 Triadic Curriculum — Index</h2>
+
+  <a href="#CURRICULUM_BADGE_TRIGGER_INDEX">🏅 Badge Trigger Index — Curriculum badge mapping</a>
+  <a href="#CURRICULUM_CONTRIBUTOR_HONOR_ROLL">🏆 Contributor Honor Roll — Recognizing curriculum contributors</a>
+  <a href="#CURRICULUM_PAPER_CROSSWALK">🔗 Paper Crosswalk — Mapping papers to curriculum modules</a>
+  <a href="#CURRICULUM_REMIX_GALLERY">🖼️ Remix Gallery — Showcase of remix outputs</a>
+  <a href="#CURRICULUM_REMIX_PROTOCOL">🎛️ Remix Protocol — Rules for remix‑based curriculum work</a>
+  <a href="#CURRICULUM_REMIX_VALIDATOR_DASHBOARD">🛡️ Remix Validator Dashboard — Validator metrics for curriculum remixes</a>
+
+  <h3>🌀 Remix & Submission</h3>
+  <a href="#REMIX_SUBMISSION_TEMPLATES">📄 Submission Templates — Templates for remix submissions</a>
+
+  <h3>🔺 Triadic Core</h3>
+  <a href="#TRIADIC_CURRICULUM_INDEX">🧭 Triadic Curriculum Index — Master index of triadic modules</a>
+  <a href="#TRIADIC_MANIFESTO">📜 Triadic Manifesto — Core principles of the triadic curriculum</a>
+  <a href="#TRIADIC_REMIX_GUIDE">🎚️ Triadic Remix Guide — How to remix triadic materials</a>
+  <a href="#TRIADIC_TRANSLATION">🔤 Triadic Translation — Translating concepts across regimes</a>
+
+  <h3>📡 Protocols</h3>
+  <a href="#WIFI_ENERGY_PROTOCOLS">📡 WiFi Energy Protocols — Energy‑aware WiFi protocol notes</a>
+
+  <h3>📄 Root</h3>
+  <a href="#README">📄 README — Curriculum overview</a>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const DOC_MAP = {
+  CURRICULUM_BADGE_TRIGGER_INDEX: 'curriculum_badge_trigger_index.md',
+  CURRICULUM_CONTRIBUTOR_HONOR_ROLL: 'curriculum_contributor_honor_roll.md',
+  CURRICULUM_PAPER_CROSSWALK: 'curriculum_paper_crosswalk.md',
+  CURRICULUM_REMIX_GALLERY: 'curriculum_remix_gallery.md',
+  CURRICULUM_REMIX_PROTOCOL: 'curriculum_remix_protocol.md',
+  CURRICULUM_REMIX_VALIDATOR_DASHBOARD: 'curriculum_remix_validator_dashboard.md',
+  README: 'README.md',
+  REMIX_SUBMISSION_TEMPLATES: 'remix_submission_templates.md',
+  TRIADIC_CURRICULUM_INDEX: 'triadic_curriculum_index.md',
+  TRIADIC_MANIFESTO: 'triadic_manifesto.md',
+  TRIADIC_REMIX_GUIDE: 'triadic_remix_guide.md',
+  TRIADIC_TRANSLATION: 'triadic_translation.md',
+  WIFI_ENERGY_PROTOCOLS: 'WiFi_Energy_Protocols.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+
+</body>
+</html>
