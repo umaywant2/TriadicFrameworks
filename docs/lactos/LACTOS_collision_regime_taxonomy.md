@@ -16,6 +16,7 @@ It includes:
 # **1. High‑Level Collision Regime Map**
 
 ```
+                             🧪
         ┌─────────────────────────────────────────┐
         │      LACTOS Collision Regime Map        │
         │   (RTT/vST‑Aligned Anisotropy Taxonomy) │
