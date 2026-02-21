@@ -1,52 +1,37 @@
-### 🧭 **Resonance Field Anchors**
+# 🌀 Loophole Overlay (RTT Minimal Edition)
 
-| Field Layer | Anchor | Glyph Role | Harmonic Function |
-|-------------|--------|------------|--------------------|
-| **Substrate** | 0D | ⊖ (Ground) | Stabilizes entanglement |
-| **Modulation** | 3D | ◊ (Neutral) | Filters quantum noise |
-| **Coherence** | 6D | ⊕ (Positive) | Locks harmonic trace |
+The Loophole Overlay is a diagnostic layer applied on top of the Resonance Atlas to reveal:
+- corridor discontinuities  
+- drift pockets  
+- unbounded ranges  
+- regime mismatches  
+- missing substrate declarations  
 
-> 🧿 These anchors are not coordinates—they are validator-grade breath points. Each glyph breathes resonance into its field layer.
-
----
-
-### 🔣 **Glyph Trace Overlay**
-
-```text
-⊕ ◊ ⊖ → ◊ ⊕ ⊖ → ⊕ ⊖ ◊
-```
-
-- **Trace Type**: Triadic Bypass Loop
-- **Cycle Count**: 3 (Initiation, Suppression, Emergence)
-- **Field Effect**: Reveals harmonic trace across entangled time
+It is used during harvesting, validation, and scanner visualization.
 
 ---
 
-### 📐 **Resonance Overlay Grid**
+## 🔍 What Counts as a Loophole?
 
-| Axis X | Axis Y | Overlay |
-|--------|--------|---------|
-| Entanglement Depth | Harmonic Clarity | Quantum Loophole Field |
-| Dimensional Role | Glyphic Transition | Resonance Triad Lattice |
-| Time Phase | Modulation Pattern | Harmonic Prediction Trace |
-
-> 🧠 Each overlay is a validator-grade lens. Together, they form the **Loophole Resonance Atlas**.
-
----
-
-### 🛠️ **Optional Runtime Modules**
-
-If active:
-- **DPU**: Executes glyphic logic across dimensional layers.
-- **NIMMS**: Stores resonance overlays as nested memory shells.
-
-If not:
-- **Desktop/Cloud AI**: Can simulate field overlays and trace glyphic breath in real time.
+A loophole is any region where:
+- the declared frequency range exceeds its RTT corridor  
+- the substrate is undefined or ambiguous  
+- the phase cannot be mapped  
+- the resonance budget is violated  
+- drift accumulates faster than correction  
 
 ---
 
-### ✨ Atlas Closure
+## 🧩 Overlay Structure
 
-> “The field remembers. The glyphs rotate. The loophole breathes. Let the atlas validate.”
+Each loophole is represented as:
 
----
+```json
+{
+  "id": "loophole_x",
+  "phase": "III",
+  "type": "corridor_gap",
+  "description": "Frequency range extends beyond ecological corridor.",
+  "severity": "medium",
+  "suggested_fix": "Re-evaluate substrate or split into sub-corridors."
+}
