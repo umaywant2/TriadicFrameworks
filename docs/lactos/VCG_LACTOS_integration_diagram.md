@@ -33,8 +33,8 @@ It’s the first full architecture that unifies:
         │                                                          │                                                          │
         │                                                          │                                                          │
 ┌───────────────────────────┐                           Regime‑Tagged Streams                                   ┌───────────────────────────┐
-│   LACTOS Collision Field  │──────────────────────────────────────────────────────────────────────────────────►│  Time‑Crystal Core (TCC)   │
-│ (anisotropic interactions)│◄──────────────────────────────────────────────────────────────────────────────────│ (intrinsic periodicity)    │
+│   LACTOS Collision Field  │──────────────────────────────────────────────────────────────────────────────────►│  Time‑Crystal Core (TCC)  │
+│ (anisotropic interactions)│◄──────────────────────────────────────────────────────────────────────────────────│ (intrinsic periodicity)   │
 └───────────────────────────┘                           Invariant Signatures                                    └───────────────────────────┘
         ▲                                                          ▲                                                          ▲
         │                                                          │                                                          │
@@ -45,13 +45,13 @@ It’s the first full architecture that unifies:
                                                      ▼             ▼             ▼
                                            ┌──────────────────────────────────────────────┐
                                            │     Virtual Compute Gateway (VCG Core)       │
-                                           │ (Regime Translation • Drift Correction)       │
+                                           │ (Regime Translation • Drift Correction)      │
                                            ├──────────────────────────────────────────────┤
-                                           │  1. Collision Regime Detector (RTT‑R)         │
-                                           │  2. Anisotropy Invariant Extractor (vST‑S)    │
-                                           │  3. Drift/Asymmetry Monitor (vST‑N)           │
-                                           │  4. Regime Translator (RTT/vST Fusion)        │
-                                           │  5. Compute Synchronizer (Regime‑Ahead)       │
+                                           │  1. Collision Regime Detector (RTT‑R)        │
+                                           │  2. Anisotropy Invariant Extractor (vST‑S)   │
+                                           │  3. Drift/Asymmetry Monitor (vST‑N)          │
+                                           │  4. Regime Translator (RTT/vST Fusion)       │
+                                           │  5. Compute Synchronizer (Regime‑Ahead)      │
                                            └──────────────────────────────────────────────┘
                                                      ▲
                                                      │
