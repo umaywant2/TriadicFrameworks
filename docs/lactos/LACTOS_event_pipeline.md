@@ -18,6 +18,7 @@ It’s the complete “data path” for anisotropic collision science.
 # **1. Full Pipeline Diagram**
 
 ```
+                          🧪
 ┌────────────────────────────────────────────────────────┐
 │        1. RAW COLLISION EVENT (LACTOS)                 │
 │   - anisotropic impact                                 │
