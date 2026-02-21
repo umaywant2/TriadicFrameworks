@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+   
+   <title>Onboarding | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+
+  <h2>🌱 Onboarding — Index</h2>
+  <a href="#TRIADIC_QUICKSTART">🚀 Triadic Quickstart — Fast entry into the canon</a>
+  <a href="#READING_GUIDE">📘 Reading Guide — How to navigate onboarding materials</a>
+  <a href="#MODEL_MAP">🗺️ Model Map — Structural overview of onboarding models</a>
+  <a href="#ONBOARDING_SCROLL">📜 Onboarding Scroll — Ritualized onboarding narrative</a>
+  <a href="#BADGE_LOGIC">🏅 Badge Logic — Badge behavior for onboarding pathways</a>
+  <a href="#GLYPHSTREAM_GUIDE">🔣 Glyphstream Guide — Glyphstream usage for new initiates</a>
+  <a href="#HONOR_ROLL">🏆 Honor Roll — Recognition for onboarding contributors</a>
+  <h3>🔮 Initiation Surfaces</h3>
+  <a href="#INITIATION">🔮 Initiation — Core initiation overview</a>
+  <a href="#INITIATION_PROTOCOL">📜 Initiation Protocol — Rules and sequence of initiation</a>
+  <a href="#INITIATION_RITUAL">🔥 Initiation Ritual — Ritual steps for new members</a>
+  <a href="#INITIATION_RITUAL_MANIFEST_GUARDIAN">🛡️ Manifest Guardian — Guardian‑aligned ritual manifest</a>
+  <a href="#VISITOR_RITUAL">🚪 Visitor Ritual — Lightweight ritual for non‑initiates</a>
+  <a href="#RITUAL_EMBED">🧿 Ritual Embed — Embedding rituals into other surfaces</a>
+  <h3>🧪 Verification</h3>
+  <a href="#VERIFICATION_TESTS">✔️ Verification Tests — Onboarding validation checks</a>
+  <h3>📄 Root</h3>
+  <a href="#README">📄 README — Onboarding subsystem overview</a>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const DOC_MAP = {
+  BADGE_LOGIC: 'badge_logic.md',
+  GLYPHSTREAM_GUIDE: 'glyphstream_guide.md',
+  HONOR_ROLL: 'honor_roll.md',
+  INITIATION: 'initiation.md',
+  INITIATION_PROTOCOL: 'initiation_protocol.md',
+  INITIATION_RITUAL: 'initiation_ritual.md',
+  INITIATION_RITUAL_MANIFEST_GUARDIAN: 'initiation_ritual_manifest_guardian.md',
+  MODEL_MAP: 'model_map.md',
+  ONBOARDING_SCROLL: 'onboarding_scroll.md',
+  READING_GUIDE: 'reading_guide.md',
+  README: 'README.md',
+  RITUAL_EMBED: 'ritual_embed.md',
+  TRIADIC_QUICKSTART: 'triadic_quickstart.md',
+  VERIFICATION_TESTS: 'verification_tests.md',
+  VISITOR_RITUAL: 'visitor_ritual.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+
+</body>
+</html>
