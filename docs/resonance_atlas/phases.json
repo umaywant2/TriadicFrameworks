@@ -2,49 +2,49 @@
   {
     "phase": "I",
     "symbol": "⚛️",
-    "frequency_range": "TODO",
+    "frequency_range_hz": "1e11–1e14",
     "source": "NIST Vibrational Frequencies",
     "glyph": "Blue Atom",
-    "notes": "Infrared/Raman vibrational placeholder"
+    "notes": "Infrared/Raman vibrational corridor."
   },
   {
     "phase": "II",
     "symbol": "🧬",
-    "frequency_range": "TODO",
-    "source": "Biological cycles",
+    "frequency_range_hz": "1e-5–1e1",
+    "source": "Biological Rhythms",
     "glyph": "Green DNA",
-    "notes": "Heartbeat, circadian rhythms"
+    "notes": "Heartbeat, neural oscillations, circadian cycles."
   },
   {
     "phase": "III",
     "symbol": "🍃",
-    "frequency_range": "TODO",
-    "source": "Seasonal cycles",
+    "frequency_range_hz": "1e-7–1e-3",
+    "source": "Ecological Cycles",
     "glyph": "Teal Leaf",
-    "notes": "Placeholder seasonal resonance"
+    "notes": "Seasonal and environmental rhythms."
   },
   {
     "phase": "IV",
     "symbol": "⛰️",
-    "frequency_range": "TODO",
-    "source": "Seismic/geological datasets",
+    "frequency_range_hz": "1e-12–1e-8",
+    "source": "Geological Datasets",
     "glyph": "Brown Mountain",
-    "notes": "Placeholder planetary resonance"
+    "notes": "Seismic and tectonic resonance."
   },
   {
     "phase": "V",
     "symbol": "📜",
-    "frequency_range": "TODO",
-    "source": "Validator mythic epochs",
+    "frequency_range_hz": "1e-14–1e-12",
+    "source": "Civilizational Epochs",
     "glyph": "Purple Scroll",
-    "notes": "Placeholder mythic resonance"
+    "notes": "Long-range cultural and mythic cycles."
   },
   {
     "phase": "VI",
     "symbol": "⭐",
-    "frequency_range": "TODO",
+    "frequency_range_hz": "1e9–1e11",
     "source": "NASA Cosmic Background Radiation",
     "glyph": "Gold Star",
-    "notes": "Placeholder cosmic resonance"
+    "notes": "CMB and stellar resonance."
   }
 ]
