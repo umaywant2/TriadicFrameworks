@@ -17,6 +17,7 @@ It’s the first metaphor where TriadicFrameworks becomes a *spectral analysis l
 # **1. Regime Spectrograph Diagram (ASCII Spectral Geometry)**
 
 ```
+
                                         ✦  COMPUTE PERIODICITY LOCK  ✦
                          (VCG • TCR • Regime‑Ahead Spectral Stabilization)
                                        ────────────────┬───────────────
