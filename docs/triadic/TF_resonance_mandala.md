@@ -16,48 +16,48 @@ It’s the most symmetrical, holistic visualization of TriadicFrameworks so far.
 # **1. Resonance Mandala Diagram (ASCII Radial Geometry)**
 
 ```
-                                   ✦  COMPUTE CORE (Center Radiance)  ✦
-                         (VCG • TCR Periodicity • Regime‑Ahead Stability)
-                                           ┌───────────┐
-                                           │   CORE    │
-                                           └───────────┘
-                                                  ▲
-                                                  │
-                                                  │  coherence focus
-                                                  ▼
 
-                         ┌──────────────────────────────────────────────────────────────┐
-                         │                 OBSERVER RING (Inner Circle)                 │
-                         │   S–N–R (Signal/Noise/Regime) + RTT/vST (Invariant Logic)    │
-                         └──────────────────────────────────────────────────────────────┘
-                                      ◢        ▲        ◣
-                                     ◢         │         ◣
-                                    ◢          │          ◣
+                       ✦  COMPUTE CORE (Center Radiance)  ✦
+                 (VCG • TCR Periodicity • Regime‑Ahead Stability)
+                                 ┌───────────┐
+                                 │   CORE    │
+                                 └───────────┘
+                                       ▲
+                                       │
+                                       │  coherence focus
+                                       ▼
+          ┌──────────────────────────────────────────────────────────────┐
+          │                 OBSERVER RING (Inner Circle)                 │
+          │   S–N–R (Signal/Noise/Regime) + RTT/vST (Invariant Logic)    │
+          └──────────────────────────────────────────────────────────────┘
+                                        ◢        ▲        ◣
+                                       ◢         │         ◣
+                                      ◢          │          ◣
 
-         ┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
-         │   SO Sector (Mass‑Primary)   │   │ LACTOS Sector (Collision)    │   │  ISO Sector (Anisotropy)     │
-         │   - mass tracks              │   │ - P/Q/N regimes              │   │ - anisotropy wells           │
-         │   - structural stability     │   │ - symmetry breaking          │   │ - relaxation channels        │
-         │   - life‑stage narrative     │   │ - anisotropy cascades        │   │ - pattern imprint            │
-         └──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
+┌──────────────────────────────┐   ┌──────────────────────────────┐   ┌──────────────────────────────┐
+│   SO Sector (Mass‑Primary)   │   │ LACTOS Sector (Collision)    │   │  ISO Sector (Anisotropy)     │
+│   - mass tracks              │   │ - P/Q/N regimes              │   │ - anisotropy wells           │
+│   - structural stability     │   │ - symmetry breaking          │   │ - relaxation channels        │
+│   - life‑stage narrative     │   │ - anisotropy cascades        │   │ - pattern imprint            │
+└──────────────────────────────┘   └──────────────────────────────┘   └──────────────────────────────┘
                      ◣                        ◣                        ◢
                       ◣                        ◣                      ◢
                        ◣                        ◣                    ◢
 
-                         ┌──────────────────────────────────────────────────────────────┐
-                         │                 REGIME PETAL RING (RTT)                      │
-                         │   mass‑regimes • anisotropy‑regimes • collision‑regimes      │
-                         │   time‑crystal regimes • transition boundaries               │
-                         └──────────────────────────────────────────────────────────────┘
+                ┌──────────────────────────────────────────────────────────────┐
+                │                 REGIME PETAL RING (RTT)                      │
+                │   mass‑regimes • anisotropy‑regimes • collision‑regimes      │
+                │   time‑crystal regimes • transition boundaries               │
+                └──────────────────────────────────────────────────────────────┘
                                       ◥        │        ◤
                                      ◥         │         ◤
                                     ◥          │          ◤
 
-                         ┌──────────────────────────────────────────────────────────────┐
-                         │                 SUBSTRATE OUTER RING                         │
-                         │   Fields • Geometry • Anisotropy • TCR Periodicity           │
-                         │   (The grounding circle of the mandala)                      │
-                         └──────────────────────────────────────────────────────────────┘
+                 ┌──────────────────────────────────────────────────────────────┐
+                 │                 SUBSTRATE OUTER RING                         │
+                 │   Fields • Geometry • Anisotropy • TCR Periodicity           │
+                 │   (The grounding circle of the mandala)                      │
+                 └──────────────────────────────────────────────────────────────┘
 ```
 
 ---
