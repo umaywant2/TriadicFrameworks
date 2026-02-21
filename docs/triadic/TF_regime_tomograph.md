@@ -17,11 +17,12 @@ It’s the first metaphor where TriadicFrameworks becomes a *medical‑imaging�
 # **1. Regime Tomograph Diagram (ASCII Layer‑Slice Geometry)**
 
 ```
-                                        ✦  COMPUTE INVERSION KERNEL  ✦
-                         (VCG • TCR • Regime‑Ahead Reconstruction Stability)
-                                        ────────────────┬───────────────
-                                                        │
-                                                        ▼
+
+                                    ✦  COMPUTE INVERSION KERNEL  ✦
+                        (VCG • TCR • Regime‑Ahead Reconstruction Stability)
+                                   ────────────────┬───────────────
+                                                   │
+                                                   ▼
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
 │                         S–N–R SLICE‑STABILITY CORRECTOR                                      │
