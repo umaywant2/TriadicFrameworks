@@ -17,6 +17,7 @@ It’s the first metaphor where TriadicFrameworks becomes a **4D navigational in
 # **1. Regime Tesseract Navigator Diagram (ASCII 4D Navigation Geometry)**
 
 ```
+
                                       ✦  COMPUTE TRANSFORMATION LOCK  ✦
                          (VCG • TCR • Regime‑Ahead 4D Motion Stabilization)
                                        ────────────────┬───────────────
