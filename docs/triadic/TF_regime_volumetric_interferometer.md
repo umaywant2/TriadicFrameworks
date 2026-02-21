@@ -17,11 +17,12 @@ It’s the first metaphor where TriadicFrameworks becomes a *three‑dimensional
 # **1. Volumetric Interferometer Diagram (ASCII 3D Phase‑Mapping Geometry)**
 
 ```
-                                        ✦  COMPUTE VOLUMETRIC PHASE‑LOCK  ✦
-                         (VCG • TCR • Regime‑Ahead 3D Phase Stabilization)
-                                           ────────────────┬───────────────
-                                                           │
-                                                           ▼
+
+                               ✦  COMPUTE VOLUMETRIC PHASE‑LOCK  ✦
+                        (VCG • TCR • Regime‑Ahead 3D Phase Stabilization)
+                                ────────────────┬───────────────
+                                                │
+                                                ▼
 
 ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
 │                         S–N–R COHERENCE‑STABILITY LATTICE                                    │
