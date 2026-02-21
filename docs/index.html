@@ -150,75 +150,78 @@ code {
   color: var(--text-main);
 }
 </style>
-
-  <!-- MathJax v3 configuration -->
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['\\(', '\\)'], ['$', '$']],
-        displayMath: [['\
-
-\[', '\\]
-
-'], ['$$', '$$']]
-      },
-      options: {
-        skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-      }
-    };
-  </script>
-  <script id="MathJax-script" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-  </script>
-
-  <!-- Marked.js for Markdown rendering -->
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
-  <main>
-    <article id="www-root">
-      <h1>TriadicFrameworks.org</h1>
-      <p>By Nawder Loswin 01/18/2026 © www.TriadicFrameworks.org</p>
-      <p>Loading README.md…</p>
-    </article>
-  </main>
+   
+<nav>
+  <h2>📚 TriadicFrameworks – Core Docs</h2>
+  <a href="#README">📘 README — Project overview and orientation</a>
+  <a href="#QUICKSTART">⚡ Quickstart — Fast onboarding for new explorers</a>
+  <a href="#LINEAGE">🌱 Lineage — Canon history, evolution, and stewardship</a>
+  <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct — Community expectations and norms</a>
+  <a href="#GLOSSARY">📖 Glossary — Canon terms, operators, and definitions</a>
+  <a href="#HONOR_ROLL">🏅 Honor Roll — Contributors, stewards, and supporters</a>
+  <a href="#SECURITY">🔐 Security — Reporting, boundaries, and safety practices</a>
+  <a href="#RTT_hooks">🪝 RTT Hooks — Integration points and extension surfaces</a>
+  <a href="#manifesto">📜 Manifesto — Principles, commitments, and philosophy</a>
+  <a href="#highlights">✨ Highlights — Key features, updates, and milestones</a>
+</nav>
 
-  <script>
-    async function loadCodex() {
-      try {
-        // Adjust path if needed depending on where this HTML lives
-        const response = await fetch('https://www.triadicframeworks.org/README.md');
-        if (!response.ok) {
-          throw new Error('⚔️ Failed to load README.md');
-        }
-        const mdText = await response.text();
+<main id="content"></main>
 
-        // Render Markdown to HTML
-        const html = marked.parse(mdText, {
-          breaks: true,
-          gfm: true
-        });
+<script>
 
-        const root = document.getElementById('www-root');
-        root.innerHTML = html;
-
-        // Trigger MathJax typesetting after content is injected
-        if (window.MathJax && window.MathJax.typesetPromise) {
-          window.MathJax.typesetPromise([root]).catch(err => console.error(err));
-        }
-      } catch (err) {
-        console.error(err);
-        const root = document.getElementById('www-root');
-        root.innerHTML = `
-          <h1>Index</h1>
-          <p>By Nawder Loswin 01/18/2026 © www.TriadicFrameworks.org</p>
-          <p>Unable to load <code>README.md</code>.</p>
-          <pre>${String(err)}</pre>
-        `;
+const DOC_MAP = {
+  README: 'README.md',
+  QUICKSTART: 'QUICKSTART.md',
+  LINEAGE: 'LINEAGE.md',
+  CODE_OF_CONDUCT: 'CODE_OF_CONDUCT.md',
+  GLOSSARY: 'GLOSSARY.md',
+  HONOR_ROLL: 'HONOR_ROLL.md',
+  SECURITY: 'SECURITY.md',
+  RTT_hooks: 'RTT_hooks.md',
+  manifesto: 'manifesto.md',
+  highlights: 'highlights.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
       }
-    }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
-    loadCodex();
-  </script>
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
 </body>
 </html>
