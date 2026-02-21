@@ -163,27 +163,27 @@ They are organized by **structural dependency**, from foundational grammar throu
 
 ### X. Interfaces & Tooling
 
-- **NoS AI**
+- **NoS AI**  
   https://www.triadicframeworks.org/ai/
   
-- **RTT API**
+- **RTT API**  
   https://www.triadicframeworks.org/api/rtt
 
 - **RTT SDK**  
   https://www.triadicframeworks.org/rtt-sdk
 
-- **TFT 3Pack v1.3**
+- **TFT 3Pack v1.3**  
   https://www.triadicframeworks.org/TFT_3Pack_v1.3/
 
-- **RTT Packages and Evaluations**
+- **RTT Packages and Evaluations**  
   https://www.triadicframeworks.org/packages/
 
-- **RTT Request For Comments (rfc)**
+- **RTT Request For Comments (rfc)**  
   https://www.triadicframeworks.org/rfc/
 
-- **Resonance Atlas**
+- **Resonance Atlas**  
   https://www.triadicframeworks.org/resonance_atlas/
 
-- **Schemas for RTT**
+- **Schemas for RTT**  
   https://www.triadicframeworks.org/schemas/
   
