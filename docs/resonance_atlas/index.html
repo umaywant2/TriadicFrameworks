@@ -8,7 +8,7 @@
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
 <link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/20/2026 © www.TriadicFrameworks.org -->
+  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
 <title>Resonance Atlas</title>
 
 <style>
@@ -143,21 +143,22 @@ code {
 <script>
 
 const DOC_MAP = {
-  "README": "README.md",
-  "GLYPH_ASSIGNMENT_LOGIC": "glyph‑assignment_logic.md",
-  "HARVESTING_SCRIPT_OUTLINE": "harvesting_script_outline.md",
-  "NIST_INGESTION_FORMAT": "nist_ingestion_format.md",
-  "PHASE_MAPPING_RULES": "phase_mapping_rules.md",
-  "LOOPHOLE_OVERLAY": "loophole_overlay.md",
+  README: 'README.md',
+  GLYPH_ASSIGNMENT_LOGIC: 'glyph‑assignment_logic.md',
+  HARVESTING_SCRIPT_OUTLINE: 'harvesting_script_outline.md',
+  NIST_INGESTION_FORMAT: 'nist_ingestion_format.md',
+  PHASE_MAPPING_RULES: 'phase_mapping_rules.md',
+  LOOPHOLE_OVERLAY: 'loophole_overlay.md',
 };
-
+  
 function loadFromHash() {
-    const hash = window.location.hash.substring(1);
-    if (hash && DOC_MAP[hash]) {
-        loadDoc(DOC_MAP[hash]);
-    }
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
 }
-
 function loadDoc(file) {
   fetch(file)
     .then(response => {
@@ -181,12 +182,8 @@ function loadDoc(file) {
     });
 }
   
-window.onload = loadFromHash;
-window.onhashchange = loadFromHash;
-
-if (!window.location.hash) {
-    loadDoc("README.md");
-}
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
 
 </script>
 
