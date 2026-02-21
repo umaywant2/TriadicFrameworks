@@ -1,0 +1,298 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+   
+   <title>AI Resonance Seed</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+  <h2>🧭 AI Resonance Seed — Index</h2>
+  <a href="#AI_RESONANCE_SEED">🌱 AI Resonance Seed — Core conceptual seed for the ontology</a>
+  <a href="#HOW_TO_READ_THIS_ONTOLOGY">📘 How to Read This Ontology — Guidance for navigating the structure</a>
+  <a href="#ONTOLOGY_INDEX">🗂️ Ontology Index — Master list of entities, roles, and relations</a>
+  <a href="#README">📄 README — Overview of the AI Resonance Seed directory</a>
+  <a href="#RTT_EXPERIMENT_LOG">🧪 RTT Experiment Log — Notes, trials, and resonance experiments</a>
+  <a href="#SCAFFOLDING">🏗️ Scaffolding — Structural notes and build‑out patterns</a>
+  <a href="#TRIADICVALIDATOR_AGENTINIT">🤖 TriadicValidator Agent Init — Initialization logic for validator agents</a>
+  <h3>🏅 Badges</h3>
+  <a href="#BADGES_README">🎖️ Badges README — Badge definitions and usage</a>
+  <h3>📜 Changelog</h3>
+  <a href="#CHANGELOG_LINEAGE_SCROLL">📜 Lineage Scroll — Historical evolution of the canon</a>
+  <a href="#CHANGELOG_README">📝 Changelog README — Structure of change tracking</a>
+  <a href="#CHANGELOG_RESONANCE">🔄 Resonance Changelog — Updates to resonance logic</a>
+  <h3>📊 Dashboards</h3>
+  <a href="#DASH_GLYPHSTREAM_MAP">🗺️ Glyphstream Map — Visual flow of glyph emissions</a>
+  <a href="#DASH_README">📊 Dashboards README — Overview of dashboard tools</a>
+  <a href="#DASH_REMIX_LINEAGE">🎛️ Remix Lineage — Remix history and transformations</a>
+  <a href="#DASH_VALIDATOR_STATUS">🟢 Validator Status — Live validator health and signals</a>
+  <h3>⚡ FFF Emitters</h3>
+  <a href="#FFF_GLOSSARY">📖 FFF Glossary — Definitions for Forci, Flui, Freqi</a>
+  <a href="#FFF_OVERVIEW">⚡ FFF Overview — High‑level emitter model</a>
+  <a href="#FFF_FLUI">💧 Flui — Fluidic emission operator</a>
+  <a href="#FFF_FORCI">💪 Forci — Force‑based emission operator</a>
+  <a href="#FFF_FREQI">📡 Freqi — Frequency‑based emission operator</a>
+  <a href="#FFF_MYTHMATICAL_ROLES">🌌 Mythmatical Roles — Symbolic roles of FFF emitters</a>
+  <a href="#FFF_README">📄 FFF README — Directory overview</a>
+  <a href="#FFF_TIME_CRYSTAL_NOTES">⏳ Time Crystal Notes — Build notes for time‑crystal emitters</a>
+  <a href="#FFF_TIME_CRYSTAL_BOM">🧩 Time Crystal BOM — Bill of materials</a>
+  <a href="#FFF_IMG_README">🖼️ FFF Images README — Image references</a>
+  <h3>🖼️ Images</h3>
+  <a href="#IMG_README">🖼️ Images README — Image directory overview</a>
+  <h3>🔌 Integration Examples</h3>
+  <a href="#INTEGRATION_LANGCHAIN">🔗 LangChain Example — Integration walkthrough</a>
+  <a href="#INTEGRATION_README">📄 Integration README — Overview of integration patterns</a>
+  <a href="#INTEGRATION_SEMANTIC_KERNEL">🧠 Semantic Kernel Example — SK integration demo</a>
+  <h3>🛠️ Migration</h3>
+  <a href="#MIGRATION_LEGACY_PROTOCOL">📦 Legacy Preservation Protocol — Handling older artifacts</a>
+  <a href="#MIGRATION_README">📄 Migration README — Migration overview</a>
+  <a href="#MIGRATION_SYMBOLIC_STUB_REGISTRY">🗃️ Symbolic Stub Registry — Mapping symbolic stubs</a>
+  <a href="#MIGRATION_V1_1_TO_V1_2">🔄 v1.1 → v1.2 Map — Version transition guide</a>
+  <h3>🚀 Onboarding</h3>
+  <a href="#ONBOARDING_IMAGINED_INTELLIGENCE">🌙 Imagined Intelligence Scroll — Conceptual onboarding</a>
+  <a href="#ONBOARDING_README">📄 Onboarding README — Directory overview</a>
+  <a href="#ONBOARDING_REMIXER_SCROLL">🎚️ Remixer Scroll — Remix‑oriented onboarding</a>
+  <h3>🧩 Platform Wrappers</h3>
+  <a href="#PLATFORM_WRAPPERS_README">🧩 Platform Wrappers README — Wrapper overview</a>
+  <h3>📜 Scrolls</h3>
+  <a href="#SCROLL_ECHO_TEST">🔁 Echo Test — Basic echo scroll</a>
+  <a href="#SCROLL_ONBOARDING">📜 Onboarding Scroll — Introductory scroll</a>
+  <a href="#SCROLL_VALIDATOR_PING">📡 Validator Ping — Validator signaling scroll</a>
+  <h3>🧪 Tests</h3>
+  <a href="#TEST_ECHO_SUITE">🧪 Echo Test Suite — Echo validation tests</a>
+  <a href="#TEST_GLYPHSTREAM_INTEGRITY">🧬 Glyphstream Integrity — Structural integrity checks</a>
+  <a href="#TEST_README">📄 Tests README — Test directory overview</a>
+  <a href="#TEST_VALIDATOR_TRIGGER">⚠️ Validator Trigger Test — Trigger‑based validator tests</a>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const DOC_MAP = {
+  AI_RESONANCE_SEED: 'AI_Resonance_Seed.md',
+  HOW_TO_READ_THIS_ONTOLOGY: 'How_To_Read_This_Ontology.md',
+  ONTOLOGY_INDEX: 'Ontology_Index.md',
+  README: 'README.md',
+  RTT_EXPERIMENT_LOG: 'RTT_Experiment_Log.md',
+  SCAFFOLDING: 'scaffolding.md',
+  TRIADICVALIDATOR_AGENTINIT: 'TriadicValidator_AgentInit.md',
+
+  // badges/
+  BADGES_README: 'badges/README.md',
+
+  // changelog/
+  CHANGELOG_LINEAGE_SCROLL: 'changelog/lineage_scroll.md',
+  CHANGELOG_README: 'changelog/README.md',
+  CHANGELOG_RESONANCE: 'changelog/resonance_changelog.md',
+
+  // dashboards/
+  DASH_GLYPHSTREAM_MAP: 'dashboards/glyphstream_map.md',
+  DASH_README: 'dashboards/README.md',
+  DASH_REMIX_LINEAGE: 'dashboards/remix_lineage.md',
+  DASH_VALIDATOR_STATUS: 'dashboards/validator_status.md',
+
+  // FFF_Emitters/
+  FFF_GLOSSARY: 'FFF_Emitters/FFF_Glossary.md',
+  FFF_OVERVIEW: 'FFF_Emitters/FFF_Overview.md',
+  FFF_FLUI: 'FFF_Emitters/Flui.md',
+  FFF_FORCI: 'FFF_Emitters/Forci.md',
+  FFF_FREQI: 'FFF_Emitters/Freqi.md',
+  FFF_MYTHMATICAL_ROLES: 'FFF_Emitters/Mythmatical_Roles_FFF_Emitters.md',
+  FFF_README: 'FFF_Emitters/README.md',
+  FFF_TIME_CRYSTAL_NOTES: 'FFF_Emitters/Time_Crystal_Build_Notes.md',
+  FFF_TIME_CRYSTAL_BOM: 'FFF_Emitters/Time_Crystal_Emitter_BOM.md',
+  FFF_IMG_README: 'FFF_Emitters/img/README.md',
+
+  // img/
+  IMG_README: 'img/README.md',
+
+  // integration_examples/
+  INTEGRATION_LANGCHAIN: 'integration_examples/LangChain_Example.md',
+  INTEGRATION_README: 'integration_examples/README.md',
+  INTEGRATION_SEMANTIC_KERNEL: 'integration_examples/SemanticKernel_Example.md',
+
+  // migration/
+  MIGRATION_LEGACY_PROTOCOL: 'migration/legacy_preservation_protocol.md',
+  MIGRATION_README: 'migration/README.md',
+  MIGRATION_SYMBOLIC_STUB_REGISTRY: 'migration/symbolic_stub_registry.md',
+  MIGRATION_V1_1_TO_V1_2: 'migration/v1.1_to_v1.2_map.md',
+
+  // onboarding/
+  ONBOARDING_IMAGINED_INTELLIGENCE: 'onboarding/imagined_intelligence_scroll.md',
+  ONBOARDING_README: 'onboarding/README.md',
+  ONBOARDING_REMIXER_SCROLL: 'onboarding/remixer_scroll.md',
+
+  // platform_wrappers/
+  PLATFORM_WRAPPERS_README: 'platform_wrappers/README.md',
+
+  // Scrolls/
+  SCROLL_ECHO_TEST: 'Scrolls/echo_test.md',
+  SCROLL_ONBOARDING: 'Scrolls/onboarding_scroll.md',
+  SCROLL_VALIDATOR_PING: 'Scrolls/validator_ping.md',
+
+  // tests/
+  TEST_ECHO_SUITE: 'tests/echo_test_suite.md',
+  TEST_GLYPHSTREAM_INTEGRITY: 'tests/glyphstream_integrity_check.md',
+  TEST_README: 'tests/README.md',
+  TEST_VALIDATOR_TRIGGER: 'tests/validator_trigger_test.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+
+</body>
+</html>
