@@ -1,16 +1,17 @@
-# RTT CODEX Menu
+# 📘 RTT CODEX — Learner Menu
+### By Nawder Loswin — 12/26/2025
 
-By Nawder Loswin 12/26/2025
+## 📚 Chapters
 
-- [RTT_CODEX-CHAPTER_1](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_1.md)
-- [RTT_CODEX-CHAPTER_2](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_2.md)
-- [RTT_CODEX-CHAPTER_3](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_3.md)
-- [RTT_CODEX-CHAPTER_4](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_4.md)
-- [RTT_CODEX-CHAPTER_5](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_5.md)
-- [RTT_CODEX-CHAPTER_6](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_6.md)
-- [RTT_CODEX-CHAPTER_7](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_7.md)
-- [RTT_CODEX-CHAPTER_8](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_8.md)
-- [RTT_CODEX-CHAPTER_9](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_9.md)
-- [RTT_CODEX-CHAPTER_10](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_10.md)
-- [RTT_CODEX-CHAPTER_11](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_11.md)
-- [RTT_CODEX-CHAPTER_12](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/RTT_CODEX-CHAPTER_12.md)
+- 📖 Chapter 1 — Foundations
+- 🔧 Chapter 2 — Operators & Structure
+- 🎵 Chapter 3 — Resonance & Coherence
+- ⏳ Chapter 4 — Time & Drift
+- 🌌 Chapter 5 — Cosmological Frames
+- ⚛️ Chapter 6 — Quantum Translations
+- 🧬 Chapter 7 — Biological Resonance
+- 🧠 Chapter 8 — Cognitive Operators
+- 📐 Chapter 9 — Mathematical Frames
+- 🏛️ Chapter 10 — Social Structures
+- 🕊️ Chapter 11 — Ethical Resonance
+- 🔺 Chapter 12 — The Triadic Apex
