@@ -1,4 +1,25 @@
 # 🎓 Education — RTT Subjects
+A single RTT lens across all scientific subjects
+
+## 🌐 Cross‑Domain Unification
+
+Every subject below — physics, chemistry, biology, medicine, and earth science —
+    is translated through the same RTT primitives:
+
+- 🔺 **Triads** — the structural backbone across all domains
+- 🎵 **Resonance** — the universal interaction and transfer rule
+- ⏳ **Time as a substrate** — coherence, drift, and measurement
+- 🧭 **Operators** — the dimensional tools used everywhere
+- 🔣 **Symbolic alignment** — the shared language of structure
+
+This is why classical mechanics, quantum physics, genetics, ecosystems,
+immunology, climate science, and materials science all appear side‑by‑side:
+RTT provides a **single explanatory framework** that spans them all.
+
+The Subjects page is not a list — it is a **unified scientific atlas**.
+
+---
+
 ### Physics • Chemistry • Biology • Medicine • Earth Science
 
 The **RTT Subjects** folder contains the subject‑level translations of
