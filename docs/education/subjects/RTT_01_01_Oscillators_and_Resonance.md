@@ -1,9 +1,3 @@
-# **RTT_01_01_Oscillators_and_Resonance.md**
-
-This one is foundational — it’s the beating heart of RTT’s physics, cognition, and systems modeling. Let’s give it the clarity and elegance it deserves.
-
----
-
 # **RTT_01_01_Oscillators_and_Resonance**  
 *Resonance‑Time Theory Subdomain Overview*
 
