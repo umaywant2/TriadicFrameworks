@@ -1,34 +1,19 @@
-\# Phase VI Consciousness Atlas Schema
+# Phase VI Consciousness Atlas Schema
 
+## Arrays
 
+- consciousness_amplitude[N, H, W]
+- consciousness_phase[N, H, W]
+- fusion_full_spectrum[N, H, W]
+- confidence[N, H, W]
 
-\## Arrays
+## Metadata
 
-\- consciousness\_amplitude\[N, H, W]
+- operator_cycles
+- resonance_modes
+- fusion_offsets
+- safety_flags
 
-\- consciousness\_phase\[N, H, W]
-
-\- fusion\_full\_spectrum\[N, H, W]
-
-\- confidence\[N, H, W]
-
-
-
-\## Metadata
-
-\- operator\_cycles
-
-\- resonance\_modes
-
-\- fusion\_offsets
-
-\- safety\_flags
-
-
-
-\## Notes
+## Notes
 
 Schema for storing consciousness resonance and full-spectrum fusion atlases in NPZ/HDF5 format.
-
-
-
