@@ -1,5 +1,5 @@
 # 📘 RTT CODEX — Learner Menu
-### By Nawder Loswin — 12/26/2025
+###### Copyright (C) 2025-2026 www.TriadicFrameworks.org
 
 ---
 
