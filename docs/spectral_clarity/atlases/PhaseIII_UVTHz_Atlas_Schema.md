@@ -1,38 +1,21 @@
-\# Phase III UV/THz Atlas Schema
+# Phase III UV/THz Atlas Schema
 
+## Arrays
 
+- uv_amplitude[N, H, W]
+- uv_phase[N, H, W]
+- thz_amplitude[N, H, W]
+- thz_phase[N, H, W]
+- confidence[N, H, W]
 
-\## Arrays
+## Metadata
 
-\- uv\_amplitude\[N, H, W]
+- f_uv
+- f_thz
+- pulse_widths
+- safety_flags
+- PLL_status
 
-\- uv\_phase\[N, H, W]
-
-\- thz\_amplitude\[N, H, W]
-
-\- thz\_phase\[N, H, W]
-
-\- confidence\[N, H, W]
-
-
-
-\## Metadata
-
-\- f\_uv
-
-\- f\_thz
-
-\- pulse\_widths
-
-\- safety\_flags
-
-\- PLL\_status
-
-
-
-\## Notes
+## Notes
 
 Schema for storing UV/THz strobe atlases in NPZ/HDF5 format.
-
-
-
