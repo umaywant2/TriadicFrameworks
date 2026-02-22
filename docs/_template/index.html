@@ -1,35 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>{{PROJECT_NAME}} – Project Home</title>
-  <link rel="stylesheet" href="../../styles/project.css"/>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+   
+   <title>_template | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
+
 <body>
-  <header>
-    <h1>{{PROJECT_NAME}}</h1>
-    <p>{{SHORT_TAGLINE}}</p>
-  </header>
+   
+<nav>
 
-  <nav>
-    <ul>
-      <li><a href="overview.md">Overview</a></li>
-      <li><a href="labs/">Labs</a></li>
-      <li><a href="equations/">Equations</a></li>
-      <li><a href="badges/">Badges</a></li>
-      <li><a href="validator/">Validator</a></li>
-      <li><a href="honor_roll/">Honor Roll</a></li>
-    </ul>
-  </nav>
+  <h2>🧩 _template — Index</h2>
+  <a href="#README">📄 README — Template overview and usage guide</a>
+  <a href="#OVERVIEW">🗺️ Overview — High‑level structure of this template</a>
+  <h3>📁 Assets</h3>
+  <a href="#ASSETS_REACHOUT_PLAN">📬 Reachout Plan — Template outreach planning surface</a>
+  <h3>🔁 Echo</h3>
+  <a href="#ECHO_PLACEHOLDER">🔁 Echo Placeholder — Placeholder for echo‑layer content</a>
+  <h3>📐 Equations</h3>
+  <a href="#EQUATIONS_MAIN">🔢 Equations — Core template equations surface</a>
+  <a href="#EQUATIONS_PLACEHOLDER">📄 Equations Placeholder — Reserved for future math surfaces</a>
+  <h3>🏅 Honor Roll</h3>
+  <a href="#HONOR_ROLL_PROJECT">🏅 Project Honor Roll — Template project recognition surface</a>
+  <a href="#HONOR_ROLL_PLACEHOLDER">📄 Honor Roll Placeholder — Reserved for future entries</a>
+  <h3>🧪 Labs</h3>
+  <a href="#LAB01_README">🧪 Lab 01 — Template lab starter</a>
+  <a href="#LAB_ONBOARDING_PLACEHOLDER">🚪 Onboarding Placeholder — Future onboarding lab content</a>
+  <a href="#LAB_SCROLLS_PLACEHOLDER">📜 Scrolls Placeholder — Reserved for scroll‑based labs</a>
+  <h3>🛡️ Validator</h3>
+  <a href="#VALIDATOR_RESONANCE_PASSPORT">🛡️ Resonance Passport — Template validator passport</a>
+  <a href="#VALIDATOR_PLACEHOLDER">📄 Validator Placeholder — Reserved for validator surfaces</a>
 
-  <main>
-    <h2>Welcome</h2>
-    <p>This project is part of the Triadic Frameworks ecosystem. Fork it, explore, and remix it to suit your vision.</p>
-  </main>
+</nav>
 
-  <footer>
-    <p>© {{YEAR}} Triadic Frameworks. Licensed under {{LICENSE}}.</p>
-  </footer>
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const DOC_MAP = {
+  OVERVIEW: 'overview.md',
+  README: 'README.md',
+  // assets/
+  ASSETS_REACHOUT_PLAN: 'assets/ReachoutPlan.md',
+  // echo/
+  ECHO_PLACEHOLDER: 'echo/placeholder.md',
+  // equations/
+  EQUATIONS_MAIN: 'equations/equations.md',
+  EQUATIONS_PLACEHOLDER: 'equations/placeholder.md',
+  // honor_roll/
+  HONOR_ROLL_PLACEHOLDER: 'honor_roll/placeholder.md',
+  HONOR_ROLL_PROJECT: 'honor_roll/project.md',
+  // labs/
+  LAB01_README: 'labs/lab-01/README.md',
+  LAB_ONBOARDING_PLACEHOLDER: 'labs/onboarding/placeholder.md',
+  LAB_SCROLLS_PLACEHOLDER: 'labs/scrolls/placeholder.md',
+  // validator/
+  VALIDATOR_PLACEHOLDER: 'validator/placeholder.md',
+  VALIDATOR_RESONANCE_PASSPORT: 'validator/resonance-passport-template.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+
 </body>
 </html>
