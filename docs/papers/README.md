@@ -362,11 +362,9 @@ RTT Decoherence Model (measurement & drift)
         │
         ▼
 RSM Quantum‑Resonant Systems
+```
 
 ---
-
-# 🌳 **Pre‑RTT → RTT Cluster Map (Ancestry Tree of the Canon)**  
-### Which Pre‑RTT Papers Seeded Which RTT Components
 
 # 🌳 Pre‑RTT → RTT Cluster Map
 ### The Ancestry Tree of Triads, Resonance, Time, Decoherence, Operators & Symbolic Structure
