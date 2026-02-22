@@ -1,82 +1,44 @@
-\# Spectral Clarity — Phase V Runtime Guide
+# Spectral Clarity — Phase V Runtime Guide
 
-
-
-Phase V introduces \*\*neutron stroboscopy\*\* and \*\*quantum lattice overlays\*\*, completing the full-spectrum runtime.
-
-
+Phase V introduces **neutron stroboscopy** and **quantum lattice overlays**, completing the full-spectrum runtime.
 
 ---
 
+## 📂 File Map
 
-
-\## 📂 File Map
-
-\- `manifests/PhaseV\_NeutronQuantum\_Manifest.yaml` → Session manifest for neutron runs.
-
-\- `manifests/Quantum\_Lattice\_Config.yaml` → Quantum lattice configuration.
-
-\- `overlays/Neutron\_Overlay\_Template.json` → Overlay template for neutron maps.
-
-\- `overlays/QuantumLattice\_Overlay.json` → Overlay template for lattice overlays.
-
-\- `atlases/PhaseV\_NeutronQuantum\_Atlas\_Schema.md` → Schema for neutron/quantum atlas storage.
-
-\- `scrolls/SpectralClarity\_PhaseV\_Scroll.md` → Narrative scroll for Phase V.
-
-\- `runtime/neutron\_strobe\_engine.py` → Neutron strobe runtime scaffold.
-
-\- `runtime/quantum\_lattice\_overlay.py` → Quantum lattice overlay scaffold.
-
-\- `runtime/full\_spectrum\_fusion.py` → Full-spectrum fusion scaffold.
-
-
+- `manifests/PhaseV_NeutronQuantum_Manifest.yaml` → Session manifest for neutron runs.
+- `manifests/Quantum_Lattice_Config.yaml` → Quantum lattice configuration.
+- `overlays/Neutron_Overlay_Template.json` → Overlay template for neutron maps.
+- `overlays/QuantumLattice_Overlay.json` → Overlay template for lattice overlays.
+- `atlases/PhaseV_NeutronQuantum_Atlas_Schema.md` → Schema for neutron/quantum atlas storage.
+- `scrolls/SpectralClarity_PhaseV_Scroll.md` → Narrative scroll for Phase V.
+- `runtime/neutron_strobe_engine.py` → Neutron strobe runtime scaffold.
+- `runtime/quantum_lattice_overlay.py` → Quantum lattice overlay scaffold.
+- `runtime/full_spectrum_fusion.py` → Full-spectrum fusion scaffold.
 
 ---
 
+## ⚙️ Workflow Steps
 
-
-\## ⚙️ Workflow Steps
-
-1\. Configure neutron source and detectors.
-
-2\. Edit manifests with session parameters and lattice schema.
-
-3\. Run `neutron\_strobe\_engine.py` for gated captures.
-
-4\. Build lattice overlays with `quantum\_lattice\_overlay.py`.
-
-5\. Fuse all bands using `full\_spectrum\_fusion.py`.
-
-6\. Document findings in `SpectralClarity\_PhaseV\_Scroll.md`.
-
-
+1. Configure neutron source and detectors.
+2. Edit manifests with session parameters and lattice schema.
+3. Run `neutron_strobe_engine.py` for gated captures.
+4. Build lattice overlays with `quantum_lattice_overlay.py`.
+5. Fuse all bands using `full_spectrum_fusion.py`.
+6. Document findings in `SpectralClarity_PhaseV_Scroll.md`.
 
 ---
 
+## 🌀 Validator Practices
 
-
-\## 🌀 Validator Practices
-
-\- Enforce neutron safety protocols and dosimetry.
-
-\- Document lattice parameters and resonance modes.
-
-\- Use atlas schema for reproducibility.
-
-\- Render uncertainty masks for low-confidence zones.
-
-
+- Enforce neutron safety protocols and dosimetry.
+- Document lattice parameters and resonance modes.
+- Use atlas schema for reproducibility.
+- Render uncertainty masks for low-confidence zones.
 
 ---
 
+## 🔮 Next Steps
 
-
-\## 🔮 Next Steps
-
-\- Phase VI: Consciousness resonance mapping and validator canon integration.
-
-\- Publish full-spectrum fusion artifacts for communal remix.
-
-
-
+- Phase VI: Consciousness resonance mapping and validator canon integration.
+- Publish full-spectrum fusion artifacts for communal remix.
