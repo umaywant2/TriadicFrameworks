@@ -13,18 +13,18 @@ Think of it as the *“big book of how RTT actually works”* — the place wher
 
 ## 📚 Chapters
 
-- 📖 Chapter 1 — Foundations
-- 🔧 Chapter 2 — Operators & Structure
-- 🎵 Chapter 3 — Resonance & Coherence
-- ⏳ Chapter 4 — Time & Drift
-- 🌌 Chapter 5 — Cosmological Frames
-- ⚛️ Chapter 6 — Quantum Translations
-- 🧬 Chapter 7 — Biological Resonance
-- 🧠 Chapter 8 — Cognitive Operators
-- 📐 Chapter 9 — Mathematical Frames
-- 🏛️ Chapter 10 — Social Structures
-- 🕊️ Chapter 11 — Ethical Resonance
-- 🔺 Chapter 12 — The Triadic Apex
+- 📖 1 — Foundations
+- 🔧 2 — Operators & Structure
+- 🎵 3 — Resonance & Coherence
+- ⏳ 4 — Time & Drift
+- 🌌 5 — Cosmological Frames
+- ⚛️ 6 — Quantum Translations
+- 🧬 7 — Biological Resonance
+- 🧠 8 — Cognitive Operators
+- 📐 9 — Mathematical Frames
+- 🏛️ 10 — Social Structures
+- 🕊️ 11 — Ethical Resonance
+- 🔺 12 — The Triadic Apex
 
 ---
 
