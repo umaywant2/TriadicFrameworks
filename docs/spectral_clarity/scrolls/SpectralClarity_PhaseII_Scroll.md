@@ -1,34 +1,20 @@
-\# Spectral Clarity Scroll — Phase II
+# Spectral Clarity Scroll — Phase II
 
-
-
-\## Intent
+## Intent
 
 Extend Phase I with RF lock-in overlays and chirp scans.
 
+## Setup
 
+- RF generator drives system at f_rf.
+- Visible strobe detuned by Δf for beat mapping.
+- SDR captures quadratures; camera captures phase-stepped frames.
 
-\## Setup
-
-\- RF generator drives system at f\_rf.
-
-\- Visible strobe detuned by Δf for beat mapping.
-
-\- SDR captures quadratures; camera captures phase-stepped frames.
-
-
-
-\## Findings
+## Findings
 
 Placeholder for lock-in overlays and chirp bifurcation maps.
 
+## Remix Pathways
 
-
-\## Remix Pathways
-
-\- Add THz strobe modules.
-
-\- Integrate UV fluorescence overlays.
-
-
-
+- Add THz strobe modules.
+- Integrate UV fluorescence overlays.
