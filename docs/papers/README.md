@@ -245,11 +245,9 @@ This is the **current era** — the fully realized canon.
 
 ---
 
-# 🦴 **The Fossil Record Diagram**  
+# 🦴 Fossil Record of the Proto‑Canon
 *A visual lineage of how triads, resonance, and time evolved across the archive.*
 
-
-# 🦴 Fossil Record of the Proto‑Canon
 ### Evolution of Triads, Resonance, and Time Across Pre‑RTT Papers
 
 ```
@@ -598,5 +596,5 @@ META & SCROLLS ───────┘
       Resonant Systems Model (RSM)
           │
           ▼
-      vibrational Substrate Theory (vST)
+      Validation Spacetime (vST)
 ```
