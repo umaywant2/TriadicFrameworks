@@ -1,36 +1,20 @@
-\# Phase II RF/Chirp Atlas Schema
+# Phase II RF/Chirp Atlas Schema
 
+## Arrays
 
+- rf_quadrature[N, H, W]
+- rf_phase_bins[N]
+- chirp_phase[N, H, W]
+- confidence[N, H, W]
 
-\## Arrays
+## Metadata
 
-\- rf\_quadrature\[N, H, W]
+- f_rf
+- chirp_start
+- chirp_end
+- chirp_rate
+- PLL_status
 
-\- rf\_phase\_bins\[N]
-
-\- chirp\_phase\[N, H, W]
-
-\- confidence\[N, H, W]
-
-
-
-\## Metadata
-
-\- f\_rf
-
-\- chirp\_start
-
-\- chirp\_end
-
-\- chirp\_rate
-
-\- PLL\_status
-
-
-
-\## Notes
+## Notes
 
 Schema for storing RF lock-in and chirp scan atlases in NPZ/HDF5 format.
-
-
-
