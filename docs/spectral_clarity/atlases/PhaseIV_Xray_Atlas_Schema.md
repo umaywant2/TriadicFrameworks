@@ -1,32 +1,18 @@
-\# Phase IV X-ray Atlas Schema
+# Phase IV X-ray Atlas Schema
 
+## Arrays
 
+- xray_amplitude[N, H, W]
+- xray_phase[N, H, W]
+- confidence[N, H, W]
 
-\## Arrays
+## Metadata
 
-\- xray\_amplitude\[N, H, W]
+- f_xray
+- pulse_width
+- facility_sync_clock
+- safety_flags
 
-\- xray\_phase\[N, H, W]
-
-\- confidence\[N, H, W]
-
-
-
-\## Metadata
-
-\- f\_xray
-
-\- pulse\_width
-
-\- facility\_sync\_clock
-
-\- safety\_flags
-
-
-
-\## Notes
+## Notes
 
 Schema for storing X-ray strobe atlases in NPZ/HDF5 format.
-
-
-
