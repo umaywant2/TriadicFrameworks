@@ -1,10 +1,3 @@
-# 🌐 **TriadicFrameworks — Canonical Site‑Map (Structural Edition)**
-
-Below is the **structural hierarchy** of your entire ecosystem, organized the way RTT itself would organize it:  
-**substrates → frameworks → tools → domains → artifacts**.
-
----
-
 # 🌐 **TriadicFrameworks — Visual Site‑Map Diagram**  
 ### *Structural, harmonic, and substrate‑aligned overview*
 
