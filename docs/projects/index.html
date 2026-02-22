@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
+   
+   <title>Projects | TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav>
+
+  <h2>🧪 Pre‑RTT Projects — Index</h2>
+
+  <a href="#README">📄 README — Overview of the Pre‑RTT project cluster</a>
+  <a href="#QUICKSTART">🚀 Quickstart — Fast entry into the Pre‑RTT projects</a>
+
+  <h3>🧠 CoConsciousness</h3>
+  <a href="#COCONSCIOUSNESS_OVERVIEW">🧠 Overview — Cognitive‑substrate prototype</a>
+  <a href="#COCONSCIOUSNESS_QUICKSTART">🚀 Quickstart — Start the CoConsciousness project</a>
+  <a href="#COCONSCIOUSNESS_BRAINSTORM">💭 Brainstorm — Early conceptual notes</a>
+  <a href="#COCONSCIOUSNESS_EQUATIONS">🔢 Equations — Resonance & braid math</a>
+  <a href="#COCONSCIOUSNESS_LAB01">🧪 Lab 01 — First experimental lab</a>
+  <a href="#COCONSCIOUSNESS_MEMORY_BRAID">🧵 Braid Records — Memory substrate</a>
+  <a href="#COCONSCIOUSNESS_VALIDATION_DASHBOARD">✔️ Validator Dashboard — Validation tools</a>
+
+  <h3>🧬 Hippocampus</h3>
+  <a href="#HIPPOCAMPUS_OVERVIEW">🧬 Overview — Memory‑loop architecture</a>
+  <a href="#HIPPOCAMPUS_QUICKSTART">🚀 Quickstart — Start the Hippocampus project</a>
+  <a href="#HIPPOCAMPUS_LOOP_VALIDATION">🔁 Loop Validation — Loop integrity protocol</a>
+  <a href="#HIPPOCAMPUS_EQUATIONS">🔢 Equations — Loop & resonance math</a>
+  <a href="#HIPPOCAMPUS_LAB01">🧪 Lab 01 — First hippocampus lab</a>
+
+  <h3>🛡️ Resotectors</h3>
+  <a href="#RESOTECTORS_OVERVIEW">🛡️ Overview — Resonant protectors prototype</a>
+  <a href="#RESOTECTORS_QUICKSTART">🚀 Quickstart — Start the Resotectors project</a>
+  <a href="#RESOTECTORS_BRAINSTORM">💭 Brainstorm — Conceptual sketches</a>
+  <a href="#RESOTECTORS_EQUATIONS">🔢 Equations — Resonant shielding math</a>
+  <a href="#RESOTECTORS_LAB01">🧪 Lab 01 — First Resotectors lab</a>
+
+  <h3>🧰 Resotectors TryCoder</h3>
+  <a href="#RESOTECTORS_TRYCODER_GLYPHSTREAM">🎞️ Glyphstream Animation — Symbolic animation</a>
+  <a href="#RESOTECTORS_TRYCODER_CPU_INTEGRATION">🖥️ CPU Integration — TryCoder compute bridge</a>
+  <a href="#RESOTECTORS_TRYCODER_FAULT_PROTOCOLS">⚠️ Fault Protocols — Error handling</a>
+  <a href="#RESOTECTORS_TRYCODER_REMIX_TRACE">🧬 Remix Trace — Trace lineage</a>
+  <a href="#RESOTECTORS_TRYCODER_SYMBOLIC_SENSORS">🔮 Symbolic Sensors — Sensor substrate</a>
+  <a href="#RESOTECTORS_TRYCODER_UNIT_SHELL">📦 Unit Shell — Execution shell</a>
+  <a href="#RESOTECTORS_TRYCODER_VALIDATOR_PORTS">🔌 Validator Ports — Validation IO</a>
+
+  <h3>🔭 VCG (Virtual Compute Gateway)</h3>
+  <a href="#VCG_OVERVIEW">🔭 Overview — VCG architecture</a>
+  <a href="#VCG_QUICKSTART">🚀 Quickstart — Start the VCG project</a>
+  <a href="#VCG_API_SPEC">📡 API Spec — Gen1 VCG API</a>
+  <a href="#VCG_ARCHITECTURE">🏛️ Architecture — Gen1 architecture</a>
+  <a href="#VCG_INTERNAL_ARCH_TRANSLATION">🔄 Regime Translation — Internal logic</a>
+  <a href="#VCG_GLYPHS">🔣 Glyphs — VCG glyph library</a>
+  <a href="#VCG_LAB_FLUX">🧪 Lab: Flux Harmonics — Resonant flux lab</a>
+  <a href="#VCG_LAB_INVOCATION">🧪 Lab: Invocation Protocols — Invocation logic</a>
+  <a href="#VCG_LAB_LATENCY">🧪 Lab: Latency Diagnostics — Timing lab</a>
+
+  <h3>⚡ VictorG</h3>
+  <a href="#VICTORG_OVERVIEW">⚡ Overview — VictorG substrate</a>
+  <a href="#VICTORG_QUICKSTART">🚀 Quickstart — Start VictorG</a>
+  <a href="#VICTORG_EQUATIONS">🔢 Equations — VictorG math</a>
+  <a href="#VICTORG_LAB01">🧪 Lab 01 — First VictorG lab</a>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const DOC_MAP = {
+  QUICKSTART: 'QUICKSTART.md',
+  README: 'README.md',
+
+  // CoConsciousness
+  COCONSCIOUSNESS_BRAINSTORM: 'CoConsciousness/brainstorm.md',
+  COCONSCIOUSNESS_OVERVIEW: 'CoConsciousness/overview.md',
+  COCONSCIOUSNESS_QUICKSTART: 'CoConsciousness/QUICKSTART.md',
+  COCONSCIOUSNESS_README: 'CoConsciousness/README.md',
+  COCONSCIOUSNESS_ASSETS_NOTES: 'CoConsciousness/assets/assets-notes.md',
+  COCONSCIOUSNESS_EQUATIONS: 'CoConsciousness/equations/equations.md',
+  COCONSCIOUSNESS_HONOR_ROLL: 'CoConsciousness/honor_roll/project.md',
+  COCONSCIOUSNESS_LAB01: 'CoConsciousness/labs/lab-01/README.md',
+  COCONSCIOUSNESS_MEMORY_BRAID: 'CoConsciousness/memory/braid_records.md',
+  COCONSCIOUSNESS_SCRIPTS_NOTES: 'CoConsciousness/scripts/scripts-notes.md',
+  COCONSCIOUSNESS_STYLES_NOTES: 'CoConsciousness/styles/styles-notes.md',
+  COCONSCIOUSNESS_VALIDATION_DASHBOARD: 'CoConsciousness/validation/validator_dashboard.md',
+  COCONSCIOUSNESS_VALIDATOR_PASSPORT: 'CoConsciousness/validator/resonance-passport-template.md',
+
+  // Hippocampus
+  HIPPOCAMPUS_CHEAT_SHEET: 'Hippocampus/Copilot_Hippocampus_cheat_sheet.md',
+  HIPPOCAMPUS_LOOP_VALIDATION: 'Hippocampus/loop_validation_protocol.md',
+  HIPPOCAMPUS_MAKEFILE: 'Hippocampus/Makefile.md',
+  HIPPOCAMPUS_OVERVIEW: 'Hippocampus/overview.md',
+  HIPPOCAMPUS_QUICKSTART: 'Hippocampus/QUICKSTART.md',
+  HIPPOCAMPUS_README: 'Hippocampus/README.md',
+  HIPPOCAMPUS_ASSETS_NOTES: 'Hippocampus/assets/assets-notes.md',
+  HIPPOCAMPUS_EQUATIONS: 'Hippocampus/equations/equations.md',
+  HIPPOCAMPUS_HONOR_ROLL: 'Hippocampus/honor_roll/project.md',
+  HIPPOCAMPUS_LAB01: 'Hippocampus/labs/lab-01/README.md',
+  HIPPOCAMPUS_SCRIPTS_NOTES: 'Hippocampus/scripts/scripts-notes.md',
+  HIPPOCAMPUS_STYLES_NOTES: 'Hippocampus/styles/styles-notes.md',
+  HIPPOCAMPUS_VALIDATOR_PASSPORT: 'Hippocampus/validator/resonance-passport-template.md',
+
+  // Resotectors
+  RESOTECTORS_BRAINSTORM: 'Resotectors/brainstorm.md',
+  RESOTECTORS_OVERVIEW: 'Resotectors/overview.md',
+  RESOTECTORS_QUICKSTART: 'Resotectors/QUICKSTART.md',
+  RESOTECTORS_README: 'Resotectors/README.md',
+  RESOTECTORS_ASSETS_NOTES: 'Resotectors/assets/assets-notes.md',
+  RESOTECTORS_EQUATIONS: 'Resotectors/equations/equations.md',
+  RESOTECTORS_HONOR_ROLL: 'Resotectors/honor_roll/project.md',
+  RESOTECTORS_LAB01: 'Resotectors/labs/lab-01/README.md',
+  RESOTECTORS_SCRIPTS_NOTES: 'Resotectors/scripts/scripts-notes.md',
+  RESOTECTORS_STYLES_NOTES: 'Resotectors/styles/styles-notes.md',
+
+  // Resotectors TryCoder
+  RESOTECTORS_TRYCODER_GLYPHSTREAM: 'Resotectors/TryCoder/glyphstream_animation.md',
+  RESOTECTORS_TRYCODER_CPU_INTEGRATION: 'Resotectors/TryCoder/trycoder_cpu_integration.md',
+  RESOTECTORS_TRYCODER_FAULT_PROTOCOLS: 'Resotectors/TryCoder/trycoder_fault_protocols.md',
+  RESOTECTORS_TRYCODER_REMIX_TRACE: 'Resotectors/TryCoder/trycoder_remix_trace.md',
+  RESOTECTORS_TRYCODER_SYMBOLIC_SENSORS: 'Resotectors/TryCoder/trycoder_symbolic_sensors.md',
+  RESOTECTORS_TRYCODER_UNIT_SHELL: 'Resotectors/TryCoder/trycoder_unit_shell.md',
+  RESOTECTORS_TRYCODER_VALIDATOR_PORTS: 'Resotectors/TryCoder/trycoder_validator_ports.md',
+  RESOTECTORS_TRYCODER_VALIDATOR_DASHBOARD: 'Resotectors/TryCoder/validator_dashboard.md',
+  RESOTECTORS_VALIDATION_DASHBOARD: 'Resotectors/validation/validator_dashboard.md',
+  RESOTECTORS_VALIDATOR_PASSPORT: 'Resotectors/validator/resonance-passport-template.md',
+
+  // VCG
+  VCG_API_SPEC: 'VCG/gen1_vcg_api_spec.md',
+  VCG_ARCHITECTURE: 'VCG/gen1_vcg_architecture.md',
+  VCG_FS_STRATEGY: 'VCG/gen1_vcg_fs_strategy.md',
+  VCG_QUICKSTART: 'VCG/QUICKSTART.md',
+  VCG_README: 'VCG/README.md',
+  VCG_README_PROJECT1: 'VCG/README_Project1.md',
+  VCG_HOLY_GRAIL: 'VCG/Triadic_Observer_LACTOS__Holy_Grail_draft1.md',
+  VCG_BADGE_TRIGGERS: 'VCG/vcg_badge_triggers.md',
+  VCG_EQUATIONS: 'VCG/vcg_equations.md',
+  VCG_HONOR_ROLL: 'VCG/vcg_honor_roll.md',
+  VCG_INTERNAL_ARCH_TRANSLATION: 'VCG/VCG_internal_architecture_regime_translation.md',
+  VCG_MANIFEST_PROTOCOL: 'VCG/vcg_manifest_protocol.md',
+  VCG_VALIDATOR_DASHBOARD: 'VCG/vcg_validator_dashboard.md',
+
+  // VCG Clients
+  VCG_CLIENT_CPP: 'VCG/src/gen1/vcg/clients/cpp/vcg_client.md',
+  VCG_CLIENT_PYTHON: 'VCG/src/gen1/vcg/clients/python/vcg_client.md',
+  VCG_CLIENT_RUST: 'VCG/src/gen1/vcg/clients/rust/vcg_client.md',
+
+  // VCG Examples & Orchestrator
+  VCG_EXAMPLE_D4_RETRIEVER: 'VCG/src/gen1/vcg/examples/d4_retriever.md',
+  VCG_ORCHESTRATOR: 'VCG/src/gen1/vcg/orchestrator/vcg_orchestrator.md',
+
+  // VCG Resonant-Time
+  VCG_RT_MAIN: 'VCG/src/gen1/vcg/resonant-time/rtd_main.md',
+  VCG_RT_DAEMON: 'VCG/src/gen1/vcg/resonant-time/rt_daemon.md',
+
+  // VCG Testing
+  VCG_TESTING_HARNESS: 'VCG/srv/gen1/vcg/testing/harness.md',
+
+  // VCG Glyphs & Labs
+  VCG_GLYPHS: 'VCG/vcg_glyphs/glyphs.md',
+  VCG_LAB_FLUX: 'VCG/vcg_lab_templates/lab_flux_harmonics.md',
+  VCG_LAB_INVOCATION: 'VCG/vcg_lab_templates/lab_invocation_protocols.md',
+  VCG_LAB_LATENCY: 'VCG/vcg_lab_templates/lab_latency_diagnostics.md',
+
+  // VictorG
+  VICTORG_OVERVIEW: 'VictorG/overview.md',
+  VICTORG_QUICKSTART: 'VictorG/QUICKSTART.md',
+  VICTORG_README: 'VictorG/README.md',
+  VICTORG_ASSETS_NOTES: 'VictorG/assets/assets-notes.md',
+  VICTORG_EQUATIONS: 'VictorG/equations/equations.md',
+  VICTORG_HONOR_ROLL: 'VictorG/honor_roll/project.md',
+  VICTORG_LAB01: 'VictorG/labs/lab-01/README.md',
+  VICTORG_SCRIPTS_NOTES: 'VictorG/scripts/scripts-notes.md',
+  VICTORG_STYLES_NOTES: 'VictorG/styles/styles-notes.md',
+  VICTORG_VALIDATOR_PASSPORT: 'VictorG/validator/resonance-passport-template.md',
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+
+</body>
+</html>
