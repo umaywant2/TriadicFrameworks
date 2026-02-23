@@ -13,4 +13,4 @@ Public Support is the **outreach layer** — it helps newcomers engage, learn, a
 
 ## Cross‑Links
 - [../onboarding](../onboarding) → initiation guides
-- [../wiki_scrolls](../wiki_scrolls) → public‑facing wiki scrolls
+- [../rfc](../rfc) → public‑facing request for comments
