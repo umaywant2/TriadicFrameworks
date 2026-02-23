@@ -1,4 +1,5 @@
 ```markdown
+                              🪴
         ╔═════════════════════════════════════════════╗
         ║      T R I A D I C F R A M E W O R K S      ║
         ║      Resonance • Alignment • Coherence      ║
