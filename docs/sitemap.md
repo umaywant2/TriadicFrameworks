@@ -125,11 +125,11 @@ TriadicFrameworks/
 
 These are the frameworks that define the architecture of the entire system.
 
-- [/RTT/](https://www.triadicframeworks.org/RTT/)  
-- [/RTT/RTT_12/](https://www.triadicframeworks.org/RTT/RTT_12/)  
-- [/RTT/codex/](https://www.triadicframeworks.org/RTT/codex/)  
+- [/RTT/](https://www.triadicframeworks.org/rtt/)  
+- [/RTT/RTT_12/](https://www.triadicframeworks.org/rtt/rtt_12/)  
+- [/RTT/codex/](https://www.triadicframeworks.org/rtt/codex/)  
 - [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
-- [/Triadic/](https://www.triadicframeworks.org/Triadic/)  
+- [/Triadic/](https://www.triadicframeworks.org/triadic/)  
 - [/substrate/](https://www.triadicframeworks.org/substrate/)  
 - [/substrate_mind_science/](https://www.triadicframeworks.org/substrate_mind_science/)  
 - [/substrate_communications/](https://www.triadicframeworks.org/substrate_communications/)  
