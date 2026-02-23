@@ -1,186 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Resonance‑Time Theory — Paradox Resilience</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta http-equiv="Content-Language" content="en">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
+<link rel="canonical" href="https://www.pr.com/press-release/957074">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: linear-gradient(135deg, #0b1020, #1a2a4f, #2b4a7a);
-      color: #e8eefc;
-      line-height: 1.6;
-    }
+   <title>Resilience Checker | TriadicFrameworks</title>
 
-    header {
-      padding: 3rem 1.5rem 2rem;
-      text-align: center;
-    }
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
 
-    header h1 {
-      font-size: 2.2rem;
-      margin-bottom: 0.5rem;
-    }
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
 
-    header p {
-      max-width: 720px;
-      margin: 0 auto;
-      font-size: 1.1rem;
-      opacity: 0.9;
-    }
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
 
-    main {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 2rem 1.5rem;
-    }
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 
-    section {
-      margin-bottom: 2.5rem;
-    }
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
 
-    section h2 {
-      color: #9fc3ff;
-      margin-bottom: 0.75rem;
-    }
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
 
-    .card {
-      background: rgba(255, 255, 255, 0.06);
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-    }
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
 
-    code {
-      background: rgba(0,0,0,0.35);
-      padding: 0.2rem 0.4rem;
-      border-radius: 4px;
-      font-family: monospace;
-      color: #cfe0ff;
-    }
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
 
-    pre {
-      background: rgba(0,0,0,0.45);
-      padding: 1rem;
-      border-radius: 8px;
-      overflow-x: auto;
-      color: #cfe0ff;
-    }
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
 
-    footer {
-      margin-top: 3rem;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      background: rgba(0,0,0,0.35);
-    }
+nav a:hover {
+  color: var(--text-main);
+}
 
-    footer a {
-      color: #9fc3ff;
-      text-decoration: none;
-      margin: 0 0.75rem;
-    }
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
+   
+<nav id="resilience-map">
 
-<header>
-  <h1>Resonance‑Time Theory: Paradox Resilience 🧭</h1>
-  <p>
-    Santa’s chief elf technologist is testing reality itself — and RTT is the tool.
-    This page explains how Resonance‑Time Theory stays stable even when paradoxes appear,
-    and how *you* can test it locally.
-  </p>
-</header>
+  <h2>🧠 #Foundational_Logic_and_Physics</h2>
+  <p>🧩 Core paradoxes of logic, computation, and physical law — where consistency, causality, and explanation first fracture.</p>
 
-<main>
+  <h2>👁️ #Mind_Identity_and_Observation</h2>
+  <p>🧠 Consciousness, identity, and observation — probing what it means to know, persist, or observe in a physical universe.</p>
 
-  <section>
-    <h2>What Is Paradox Resilience?</h2>
-    <div class="card">
-      <p>
-        In Resonance‑Time Theory, paradoxes aren’t failures — they’re stress tests.
-        A paradox appears when assumptions collide, but a resilient system doesn’t break.
-        It absorbs the contradiction, redistributes resonance, and remains coherent.
-      </p>
-      <p>
-        RTT models time as an emergent property of resonance.
-        When paradoxes arise, the system checks whether resonance remains balanced
-        across its triadic structure.
-      </p>
-    </div>
-  </section>
+  <h2>♾️ #Mathematics_Decision_and_Infinity</h2>
+  <p>📐 Infinity, undecidability, and rational choice — where mathematics and logic confront their own limits.</p>
 
-  <section>
-    <h2>Why This Matters</h2>
-    <div class="card">
-      <p>
-        Most theories collapse when pushed too hard.
-        RTT is designed to be <strong>tested</strong> — by students, developers,
-        and curious minds of all ages.
-      </p>
-      <p>
-        If reality throws a paradox at us, RTT asks:
-        <em>Does resonance still make sense?</em>
-        If yes, the system passes.
-      </p>
-    </div>
-  </section>
+  <h2>🔥 #Thermodynamics_and_Statistical_Reality</h2>
+  <p>🌡️ Entropy, probability, and irreversibility — explaining why time, disorder, and information behave asymmetrically.</p>
 
-  <section>
-    <h2>Try It Yourself (Fork & Validate)</h2>
-    <div class="card">
-      <p>
-        You don’t need a lab or a particle accelerator.
-        You just need curiosity and a local machine.
-      </p>
+  <h2>🌌 #Cosmology_and_Spacetime</h2>
+  <p>🪐 The origin, structure, and fate of the universe — from singularities to multiverses and cosmic law.</p>
 
-      <pre>
-git clone https://github.com/umaywant2/TriadicFrameworks.git
-cd TriadicFrameworks
-npm install
-npm run validate
-      </pre>
+  <h2>⚛️ #Quantum_Reality_and_Observers</h2>
+  <p>🔬 Measurement, decoherence, and observer roles — where quantum theory meets classical experience.</p>
 
-      <p>
-        The validator checks whether RTT outputs remain consistent,
-        even when paradox‑like scenarios are introduced.
-      </p>
-      <p>
-        If the system stays coherent, it passes.
-        If not, you’ve discovered something worth exploring.
-      </p>
-    </div>
-  </section>
+  <h2>🎯 #Anthropic_and_Cosmological_Measure</h2>
+  <p>📊 Typicality, selection, and probability — why this universe looks the way it does to observers like us.</p>
 
-  <section>
-    <h2>For New Explorers</h2>
-    <div class="card">
-      <p>
-        This isn’t about being “right.”
-        It’s about learning how structure, time, and resonance interact.
-      </p>
-      <p>
-        Kids, students, engineers — everyone starts the same way:
-        by asking good questions and testing ideas safely.
-      </p>
-    </div>
-  </section>
+  <h2>🕳️ #Quantum_Gravity_and_Holography</h2>
+  <p>🧵 Black holes, spacetime emergence, and holographic encoding — reconciling gravity with quantum information.</p>
 
-</main>
+  <h2>🔄 #Effective_Theories_and_Backreaction</h2>
+  <p>⚙️ Scale, approximation, and feedback — how effective descriptions survive despite quantum and gravitational corrections.</p>
 
-<footer>
-  <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a>
-  <a href="https://www.triadicframeworks.org">TriadicFrameworks.org</a>
-  <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub</a>
-</footer>
+  <h2>💾 #Information_Computation_and_Causation</h2>
+  <p>🧠 Information flow, entropy, and causal structure — where computation, memory, and physics intersect.</p>
+
+  <h2>🧬 #Computation_Modeling_and_Emergence</h2>
+  <p>🏗️ Simulation, complexity, emergence, and causation — the capstone arc explaining why limits, models, and macro‑laws exist.</p>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+
+const DOC_MAP = {
+  "#Foundational_Logic_and_Physics": [
+    "Paradox_01_EPR_Paradox.md",
+    "Paradox_02_Gibbs_Paradox.md",
+    "Paradox_03_Loschmidt_Paradox.md",
+    "Paradox_04_Halting_Problem.md",
+    "Paradox_05_Russells_Paradox.md",
+    "Paradox_06_Frame_Problem.md",
+    "Paradox_07_Arrow_of_Time.md",
+    "Paradox_08_Currys_Paradox.md",
+    "Paradox_09_Chinese_Room.md",
+    "Paradox_10_Infinite_Regress_Justification.md"
+  ],
+
+  "#Mind_Identity_and_Observation": [
+    "Paradox_11_Boltzmann_Brain.md",
+    "Paradox_12_Simulation_Argument.md",
+    "Paradox_13_Quantum_Zeno.md",
+    "Paradox_14_Ship_of_Theseus.md",
+    "Paradox_15_Double_Slit_Which_Way.md",
+    "Paradox_16_Sorites_Heap_Paradox.md",
+    "Paradox_17_P_vs_NP.md",
+    "Paradox_18_Unexpected_Hanging.md",
+    "Paradox_19_Quantum_Eraser.md",
+    "Paradox_20_Liar_Paradox.md"
+  ],
+
+  "#Mathematics_Decision_and_Infinity": [
+    "Paradox_21_Banach_Tarski.md",
+    "Paradox_22_Newcombs_Problem.md",
+    "Paradox_23_Prisoners_Dilemma.md",
+    "Paradox_24_Buridan’s_Ass.md",
+    "Paradox_25_Ravens_Paradox.md",
+    "Paradox_26_Hilberts_Hotel.md",
+    "Paradox_27_Zenos_Paradoxes.md",
+    "Paradox_28_Arrow_Paradox.md",
+    "Paradox_29_Arrow_of_Time.md",
+    "Paradox_30_Loschmidt_Paradox.md"
+  ],
+
+  "#Thermodynamics_and_Statistical_Reality": [
+    "Paradox_31_Maxwell’s_Demon.md",
+    "Paradox_32_Boltzmann_Brain.md",
+    "Paradox_33_Olmstead’s_Anthropic_Paradox.md",
+    "Paradox_34_Fine_Tuning_Problem.md",
+    "Paradox_35_Measure_Problem_in_Cosmology.md",
+    "Paradox_36_Heat_Death_vs_Recurrence.md",
+    "Paradox_37_Information_Paradox_(Black_Holes).md",
+    "Paradox_38_Firewall_Paradox.md",
+    "Paradox_39_ER_equals_EPR.md",
+    "Paradox_40_Holographic_Principle.md"
+  ],
+
+  "#Cosmology_and_Spacetime": [
+    "Paradox_41_Spacetime_Emergence.md",
+    "Paradox_42_Cosmic_Censorship.md",
+    "Paradox_43_Strong_vs_Weak_Cosmic_Censorship.md",
+    "Paradox_44_Singularity_Resolution_(Quantum_Gravity).md",
+    "Paradox_45_Bounce_vs_Beginning_(Cosmology).md",
+    "Paradox_46_Eternal_Inflation_vs_Finite_Cosmos.md",
+    "Paradox_47_Quantum_Creation_vs_Classical_Origin.md",
+    "Paradox_48_Vacuum_Selection_vs_Landscape_Degeneracy.md",
+    "Paradox_49_Meta_Laws_vs_Lawless_Landscape.md",
+    "Paradox_50_Mathematical_Universe_vs_Physical_Universe.md"
+  ],
+
+  "#Quantum_Reality_and_Observers": [
+    "Paradox_51_Computability_vs_Continuum_Reality.md",
+    "Paradox_52_Simulation_Hypothesis_vs_Physical_Autonomy.md",
+    "Paradox_53_Observer_Dependence_vs_Objective_Reality.md",
+    "Paradox_54_Wigners_Friend_vs_Universal_Unitarity.md",
+    "Paradox_55_Schrödinger_Evolution_vs_Measurement_Collapse.md",
+    "Paradox_56_Decoherence_vs_Classical_Emergence.md",
+    "Paradox_57_Quantum_Chaos_vs_Classical_Chaos.md",
+    "Paradox_58_Reversibility_vs_Irreversibility.md",
+    "Paradox_59_Poincaré_Recurrence_vs_Entropy_Increase.md",
+    "Paradox_60_Heat_Death_vs_Eternal_Fluctuations.md"
+  ],
+
+  "#Anthropic_and_Cosmological_Measure": [
+    "Paradox_61_Boltzmann_Brains_vs_Cosmological_Coherence.md",
+    "Paradox_62_Typicality_vs_Anthropic_Selection.md",
+    "Paradox_63_Measure_Problem_vs_Predictive_Power.md",
+    "Paradox_64_Eternal_Inflation_vs_Observable_Uniqueness.md",
+    "Paradox_65_Horizon_Problem_vs_Inflationary_Smoothness.md",
+    "Paradox_66_Flatness_Problem_vs_Inflationary_Fine_Tuning.md",
+    "Paradox_67_Baryon_Asymmetry_vs_Symmetric_Laws.md",
+    "Paradox_68_Neutrino_Mass_vs_Standard_Model_Completeness.md",
+    "Paradox_69_Hierarchy_Problem_vs_Naturalness.md",
+    "Paradox_70_Vacuum_Energy_vs_Cosmological_Constant.md"
+  ],
+
+  "#Quantum_Gravity_and_Holography": [
+    "Paradox_71_Black_Hole_Information_vs_Unitarity.md",
+    "Paradox_72_Firewalls_vs_Smooth_Horizons.md",
+    "Paradox_73_Holographic_Encoding_vs_Local_Bulk_Reality.md",
+    "Paradox_74_Entanglement_Wedge_Reconstruction_vs_Bulk_Locality.md",
+    "Paradox_75_ER_EPR_vs_Classical_Spacetime_Intuition.md",
+    "Paradox_76_Quantum_Error_Correction_vs_Physical_Locality.md",
+    "Paradox_77_Tensor_Networks_vs_Continuum_Geometry.md",
+    "Paradox_78_Discrete_Causality_vs_Lorentz_Invariance.md",
+    "Paradox_79_Minimal_Length_vs_Continuous_Fields.md",
+    "Paradox_80_UV_IR_Mixing_vs_Scale_Separation.md"
+  ],
+
+  "#Effective_Theories_and_Backreaction": [
+    "Paradox_81_Running_Couplings_vs_Fixed_Background_Geometry.md",
+    "Paradox_82_Background_Independence_vs_Effective_Field_Theory.md",
+    "Paradox_83_Semiclassical_Gravity_vs_Quantum_Backreaction.md",
+    "Paradox_84_Quantum_State_Reduction_vs_Covariant_Dynamics.md",
+    "Paradox_85_Observer_Dependent_Horizons_vs_Objective_Quantum_States.md",
+    "Paradox_86_Cosmological_Horizons_vs_Global_Quantum_Coherence.md",
+    "Paradox_87_Inflationary_Mode_Freezing_vs_Quantum_Unitarity.md",
+    "Paradox_88_Eternal_Inflation_vs_Global_Unitarity.md",
+    "Paradox_89_Measure_Problem_vs_Predictive_Probability.md",
+    "Paradox_90_Anthropic_Selection_vs_Physical_Explanation.md"
+  ],
+
+  "#Information_Computation_and_Causation": [
+    "Paradox_91_Typicality_Assumptions_vs_Observer_Self_Location.md",
+    "Paradox_92_Boltzmann_Brains_vs_Cognitive_Typicality.md",
+    "Paradox_93_Arrow_of_Time_vs_Time_Symmetric_Laws.md",
+    "Paradox_94_Loschmidts_Reversibility_vs_Entropy_Increase.md",
+    "Paradox_95_Poincaré_Recurrence_vs_Macroscopic_Irreversibility.md",
+    "Paradox_96_Maxwells_Demon_vs_Information_Conservation.md",
+    "Paradox_97_Quantum_Eraser_vs_Information_Irreversibility.md",
+    "Paradox_98_No_Cloning_vs_Classical_Copying.md",
+    "Paradox_99_No_Deleting_vs_Classical_Erasure.md",
+    "Paradox_100_No_Hiding_vs_Classical_Forgetting.md"
+  ],
+
+  "#Computation_Modeling_and_Emergence": [
+    "Paradox_101_Computational_Irreversibility_vs_Microscopic_Reversibility.md",
+    "Paradox_102_Computational_Complexity_vs_Physical_Realizability.md",
+    "Paradox_103_Analog_Continuity_vs_Digital_Precision.md",
+    "Paradox_104_Chaos_Sensitivity_vs_Predictive_Determinism.md",
+    "Paradox_105_Simulation_Accuracy_vs_Physical_Fidelity.md",
+    "Paradox_106_Model_Idealization_vs_Physical_Completeness.md",
+    "Paradox_107_Reductionism_vs_Emergent_Complexity.md",
+    "Paradox_108_Micro_Causality_vs_Macro_Causation.md",
+    "Meta_Summary_Paradoxes_101–108.md"
+  ]
+};
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
 
 </body>
 </html>
