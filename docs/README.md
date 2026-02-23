@@ -27,7 +27,8 @@ TriadicFrameworks brings together:
 - **Regime blindness analysis** to surface failure modes and hidden constraints  
 - **Domain primers** bridging mathematics, science, and applied systems  
 - **Simulation substrates** for exploratory, non‑optimizing inquiry  
-- **Community stewardship practices** emphasizing clarity, humility, and long‑arc reuse  
+- **Community stewardship practices** emphasizing clarity, humility, and long‑arc reuse
+- **[Resilience Checker](https://www.triadicframeworks.org/Resilience_Checker/)** A diagnostic instrument for testing paradox survivability across regimes
 
 The framework is intentionally modular. Readers and users are encouraged to enter at different points depending on background, intent, and curiosity.
 
