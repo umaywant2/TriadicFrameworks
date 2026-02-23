@@ -70,7 +70,7 @@ These pages explore cognition, society, and meaning.
 - [/spectral_clarity/](https://www.triadicframeworks.org/spectral_clarity/)  
 - [/glyphic_resonance/](https://www.triadicframeworks.org/glyphic_resonance/)  
 - [/glyphs/](https://www.triadicframeworks.org/glyphs/)  
-- [/ecoecosystem/](https://www.triadicframeworks.org/ecoecosystem/)  
+- [/ecoechosystem/](https://www.triadicframeworks.org/ecoechosystem/)  
 
 This is the **mind + society** substrate.
 
