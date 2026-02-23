@@ -10,7 +10,7 @@
 These are the frameworks that define the architecture of the entire system.
 
 - [/rtt/](https://www.triadicframeworks.org/rtt/)  
-- [/rtt/rtt_12/](https://www.triadicframeworks.org/rtt/rtt_12/)  
+- [/rtt/RTT_12/](https://www.triadicframeworks.org/rtt/RTT_12/)  
 - [/rtt/codex/](https://www.triadicframeworks.org/rtt/codex/)  
 - [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
 - [/triadic/](https://www.triadicframeworks.org/triadic/)  
