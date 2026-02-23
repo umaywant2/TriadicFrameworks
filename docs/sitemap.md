@@ -1,123 +1,7 @@
 # 🌐 **TriadicFrameworks — Visual Site‑Map Diagram**  
 ### *Structural, harmonic, and substrate‑aligned overview*
 
-🦄[Repo:](https://github.com/umaywant2/TriadicFrameworks) 
-```
-   
-TriadicFrameworks/
-│
-├── 1. CORE FRAMEWORKS (Structural Spine)
-│     ├── RTT/
-│     │     ├── RTT_12/
-│     │     └── codex/
-│     ├── Triadic/
-│     ├── unified_resonance/
-│     ├── substrate/
-│     ├── substrate_mind_science/
-│     ├── substrate_communications/
-│     ├── substrate_exposure_assay/
-│     ├── dimensional_substrate_structures/
-│     ├── dimensional_substrate_regime_scanning_protocol/
-│     ├── quantum-substrate-model/
-│     ├── boson-substrate-model/
-│     ├── resonance-substrate-model/
-│     ├── consciousness_substrate_model/
-│     └── triadic_coordination_substrate/
-│
-├── 2. VALIDATION & VERIFICATION (Coherence Layer)
-│     ├── validation/
-│     ├── validators/
-│     ├── Resilience_Checker/
-│     ├── regime_blindness_checklist/
-│     ├── spacetime_micro_agent_validations/
-│     └── spacetime_validation_and_regime_invariant_dimensional_cores/
-│
-├── 3. SCIENTIFIC & TECHNICAL SUBSTRATES (Empirical Layer)
-│     ├── atomic_clocks/
-│     ├── alphafold_substrate_alignments/
-│     ├── scientific_instrument_review/
-│     ├── manufacturing_substrate_regime_model/
-│     ├── Low_Dimensional_Structures/
-│     └── global_energy_regime_awareness/
-│
-├── 4. COGNITIVE & SOCIAL SUBSTRATES (Human Layer)
-│     ├── inverted_star_ontology/
-│     ├── Inverted_Economics/
-│     ├── structural_life_regime_profiles/
-│     ├── spectral_clarity/
-│     ├── glyphic_resonance/
-│     ├── glyphs/
-│     └── ecoechosystem/
-│
-├── 5. EDUCATION & CURRICULUM (Teaching Layer)
-│     ├── education/
-│     │     ├── subjects/
-│     │     └── translations/
-│     ├── curriculum/
-│     ├── equations/
-│     ├── charts/
-│     └── domain_tool_primers/
-│
-├── 6. DEVELOPER & API LAYER (Tooling Layer)
-│     ├── api/rtt/
-│     ├── rtt-sdk/
-│     ├── packages/
-│     ├── data/
-│     ├── schemas/
-│     ├── vst_for_embedding_stores_vector_databases/
-│     ├── vst_for_generative_models/
-│     ├── vst_for_large_language_models/
-│     ├── vst_for_multi_model_alignment/
-│     ├── vst_for_protein_language_models/
-│     ├── vst_for_robotics_and_control_policies/
-│     └── vst_for_scientific_simulators/
-│
-├── 7. CREATIVE & MYTHIC LAYER (Symbolic Substrate)
-│     ├── Paradoxes_canon/
-│     ├── resonance/
-│     ├── resonance_atlas/
-│     ├── AI_Resonance_Seed/
-│     ├── bridges/
-│     ├── TFT_3Pack_v1.3/
-│     └── audio_industry_reviewed/
-│
-├── 8. COMMUNITY & GOVERNANCE (Continuity Layer)
-│     ├── contributors/
-│     ├── governance/
-│     ├── public_support/
-│     ├── honor_roll/
-│     ├── registry/
-│     ├── feedback/
-│     └── legal/
-│
-├── 9. PROJECTS & LABS (Experimental Layer)
-│     ├── projects/
-│     │     ├── CoConsciousness/
-│     │     ├── Hippocampus/
-│     │     ├── Resotectors/
-│     │     └── VictorG/
-│     ├── labs/
-│     └── lactos/
-│
-├── 10. FUTURE SYSTEMS (Aeonic Layer)
-│     ├── enterprise_structural_awareness/
-│     ├── horizon_agent_framework/
-│     ├── mandalic_orchestration_engine/
-│     ├── resonance_autonomous_agents/
-│     ├── stability_24d_framework/
-│     └── foresight_architect_suite/
-│
-├── 11. STORE, BRANDING & ASSETS (Economic + Aesthetic Layer)
-│     ├── rtt_store/
-│     ├── assets/
-│     ├── badges/
-│     ├── gallery/
-│     └── metadata/
-│
-└── 12. SANDBOX & TEMPLATES (Nawderian Sandbox)
-      ├── _ideas/
-      └── _template/
-```
+🦄[GitHub TriadicFrameworks Repo:](https://github.com/umaywant2/TriadicFrameworks) 
 
 ---
 
@@ -315,3 +199,124 @@ These are early prototypes, sketches, and templates.
 - [/_template/](https://www.triadicframeworks.org/_template/)  
 
 This is the **Nawderian Sandbox** — the birthplace of new structures.
+
+---
+
+## ASCII folder layout
+
+```
+   
+TriadicFrameworks/
+│
+├── 1. CORE FRAMEWORKS (Structural Spine)
+│     ├── RTT/
+│     │     ├── RTT_12/
+│     │     └── codex/
+│     ├── Triadic/
+│     ├── unified_resonance/
+│     ├── substrate/
+│     ├── substrate_mind_science/
+│     ├── substrate_communications/
+│     ├── substrate_exposure_assay/
+│     ├── dimensional_substrate_structures/
+│     ├── dimensional_substrate_regime_scanning_protocol/
+│     ├── quantum-substrate-model/
+│     ├── boson-substrate-model/
+│     ├── resonance-substrate-model/
+│     ├── consciousness_substrate_model/
+│     └── triadic_coordination_substrate/
+│
+├── 2. VALIDATION & VERIFICATION (Coherence Layer)
+│     ├── validation/
+│     ├── validators/
+│     ├── Resilience_Checker/
+│     ├── regime_blindness_checklist/
+│     ├── spacetime_micro_agent_validations/
+│     └── spacetime_validation_and_regime_invariant_dimensional_cores/
+│
+├── 3. SCIENTIFIC & TECHNICAL SUBSTRATES (Empirical Layer)
+│     ├── atomic_clocks/
+│     ├── alphafold_substrate_alignments/
+│     ├── scientific_instrument_review/
+│     ├── manufacturing_substrate_regime_model/
+│     ├── Low_Dimensional_Structures/
+│     └── global_energy_regime_awareness/
+│
+├── 4. COGNITIVE & SOCIAL SUBSTRATES (Human Layer)
+│     ├── inverted_star_ontology/
+│     ├── Inverted_Economics/
+│     ├── structural_life_regime_profiles/
+│     ├── spectral_clarity/
+│     ├── glyphic_resonance/
+│     ├── glyphs/
+│     └── ecoechosystem/
+│
+├── 5. EDUCATION & CURRICULUM (Teaching Layer)
+│     ├── education/
+│     │     ├── subjects/
+│     │     └── translations/
+│     ├── curriculum/
+│     ├── equations/
+│     ├── charts/
+│     └── domain_tool_primers/
+│
+├── 6. DEVELOPER & API LAYER (Tooling Layer)
+│     ├── api/rtt/
+│     ├── rtt-sdk/
+│     ├── packages/
+│     ├── data/
+│     ├── schemas/
+│     ├── vst_for_embedding_stores_vector_databases/
+│     ├── vst_for_generative_models/
+│     ├── vst_for_large_language_models/
+│     ├── vst_for_multi_model_alignment/
+│     ├── vst_for_protein_language_models/
+│     ├── vst_for_robotics_and_control_policies/
+│     └── vst_for_scientific_simulators/
+│
+├── 7. CREATIVE & MYTHIC LAYER (Symbolic Substrate)
+│     ├── Paradoxes_canon/
+│     ├── resonance/
+│     ├── resonance_atlas/
+│     ├── AI_Resonance_Seed/
+│     ├── bridges/
+│     ├── TFT_3Pack_v1.3/
+│     └── audio_industry_reviewed/
+│
+├── 8. COMMUNITY & GOVERNANCE (Continuity Layer)
+│     ├── contributors/
+│     ├── governance/
+│     ├── public_support/
+│     ├── honor_roll/
+│     ├── registry/
+│     ├── feedback/
+│     └── legal/
+│
+├── 9. PROJECTS & LABS (Experimental Layer)
+│     ├── projects/
+│     │     ├── CoConsciousness/
+│     │     ├── Hippocampus/
+│     │     ├── Resotectors/
+│     │     └── VictorG/
+│     ├── labs/
+│     └── lactos/
+│
+├── 10. FUTURE SYSTEMS (Aeonic Layer)
+│     ├── enterprise_structural_awareness/
+│     ├── horizon_agent_framework/
+│     ├── mandalic_orchestration_engine/
+│     ├── resonance_autonomous_agents/
+│     ├── stability_24d_framework/
+│     └── foresight_architect_suite/
+│
+├── 11. STORE, BRANDING & ASSETS (Economic + Aesthetic Layer)
+│     ├── rtt_store/
+│     ├── assets/
+│     ├── badges/
+│     ├── gallery/
+│     └── metadata/
+│
+└── 12. SANDBOX & TEMPLATES (Nawderian Sandbox)
+      ├── _ideas/
+      └── _template/
+```
