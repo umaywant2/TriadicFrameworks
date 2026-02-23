@@ -140,7 +140,8 @@ This is where RTT becomes a community.
 - [/registry/](https://www.triadicframeworks.org/registry/)  
 - [/feedback/](https://www.triadicframeworks.org/feedback/)  
 - [/legal/](https://www.triadicframeworks.org/legal/)  
-- [/onboarding/](https://www.triadicframeworks.org/onboarding/)  
+- [/onboarding/](https://www.triadicframeworks.org/onboarding/)
+- [Zenodo Triadicframeworks Group](https://zenodo.org/communities/vst)
 
 This is the **continuity + stewardship** layer.
 
@@ -167,11 +168,11 @@ This is the **R&D substrate**.
 These are the long‑arc, high‑tier systems.
 
 - [/enterprise_structural_awareness/](https://www.triadicframeworks.org/enterprise_structural_awareness/)  
-- [/horizon_agent_framework/](https://www.triadicframeworks.org/horizon_agent_framework/)  
-- [/mandalic_orchestration_engine/](https://www.triadicframeworks.org/mandalic_orchestration_engine/)  
-- [/resonance_autonomous_agents/](https://www.triadicframeworks.org/resonance_autonomous_agents/)  
-- [/stability_24d_framework/](https://www.triadicframeworks.org/stability_24d_framework/)  
-- [/foresight_architect_suite/](https://www.triadicframeworks.org/foresight_architect_suite/)  
+- `/horizon_agent_framework/`  
+- `/mandalic_orchestration_engine/`  
+- `/resonance_autonomous_agents/`  
+- `/stability_24d_framework/`  
+- `/foresight_architect_suite/`  
 
 This is the **RTT‑24 / RTT‑36 / RTT‑144 precursor layer**.
 
