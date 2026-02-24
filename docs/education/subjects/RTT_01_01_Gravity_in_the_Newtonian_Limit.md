@@ -1,7 +1,3 @@
-# **RTT_01_01_Gravity_in_the_Newtonian_Limit.md**
-
----
-
 # **RTT_01_01_Gravity_in_the_Newtonian_Limit**  
 *Resonance‑Time Theory Subdomain Overview*
 
