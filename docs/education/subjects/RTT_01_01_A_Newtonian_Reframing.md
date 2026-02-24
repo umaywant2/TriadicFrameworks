@@ -118,10 +118,10 @@ This subdomain provides:
 
 Future sub‑pages will include:
 
-- [RTT_01_01_Inertia_and_Mass.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Inertia_and_Mass.md)  
-- [RTT_01_01_Forces_and_Interactions.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Forces_and_Interactions.md)  
-- [RTT_01_01_Gravity_in_the_Newtonian_Limit.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Gravity_in_the_Newtonian_Limit.md)  
-- [RTT_01_01_Conservation_Laws_Reframed.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Conservation_Laws_Reframed.md)  
+- [RTT_01_01_Inertia_and_Mass.md](RTT_01_01_Inertia_and_Mass.md)  
+- [RTT_01_01_Forces_and_Interactions.md](RTT_01_01_Forces_and_Interactions.md)  
+- [RTT_01_01_Gravity_in_the_Newtonian_Limit.md](RTT_01_01_Gravity_in_the_Newtonian_Limit.md)  
+- [RTT_01_01_Conservation_Laws_Reframed.md](RTT_01_01_Conservation_Laws_Reframed.md)  
 
 ---
 
