@@ -142,10 +142,10 @@ This subdomain provides:
 
 Future sub‑pages will include:
 
-- [RTT_01_01_Force_and_Acceleration.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Force_and_Acceleration.md)  
-- [RTT_01_01_Contact_Forces_Reframed.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Contact_Forces_Reframed.md)  
-- [RTT_01_01_Field_Forces_and_Potentials.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Field_Forces_and_Potentials.md)  
-- [RTT_01_01_Momentum_and_Impulse.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Impulse.md)  
+- [RTT_01_01_Force_and_Acceleration.md](RTT_01_01_Force_and_Acceleration.md)  
+- [RTT_01_01_Contact_Forces_Reframed.md](RTT_01_01_Contact_Forces_Reframed.md)  
+- [RTT_01_01_Field_Forces_and_Potentials.md](RTT_01_01_Field_Forces_and_Potentials.md)  
+- [RTT_01_01_Momentum_and_Impulse.md](RTT_01_01_Momentum_and_Impulse.md)  
 
 ---
 
