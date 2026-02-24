@@ -1,11 +1,7 @@
-# **RTT_01_01_Forces_and_Interactions.md**
-
-This one is a major pillar of the classical suite — and RTT gives it a beautifully clean, triadic interpretation that ties directly into the deeper physics you’ve been scaffolding.
-
----
-
 # **RTT_01_01_Forces_and_Interactions**  
 *Resonance‑Time Theory Subdomain Overview*
+
+This one is a major pillar of the classical suite — and RTT gives it a beautifully clean, triadic interpretation that ties directly into the deeper physics we’ve been scaffolding.
 
 ## **1. Subdomain Purpose**
 Forces and interactions describe how objects influence one another’s motion. RTT reframes forces as **changes in S–E–R alignment** — structural (S), energetic (E), and temporal (R) coherence shifts that alter a system’s trajectory.
