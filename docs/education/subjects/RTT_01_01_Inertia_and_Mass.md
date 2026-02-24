@@ -1,11 +1,7 @@
-# **RTT_01_01_Inertia_and_Mass.md**
-
-This one is foundational — inertia is where classical mechanics, resonance, and RTT’s deeper temporal logic all meet.
-
----
-
 # **RTT_01_01_Inertia_and_Mass**  
 *Resonance‑Time Theory Subdomain Overview*
+
+This one is foundational — inertia is where classical mechanics, resonance, and RTT’s deeper temporal logic all meet.
 
 ## **1. Subdomain Purpose**
 Inertia and mass describe how objects resist changes in motion. RTT reframes inertia as a **structural‑energetic‑temporal coherence property**, and mass as the **degree of resonance stability** within a system.
