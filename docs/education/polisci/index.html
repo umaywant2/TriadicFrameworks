@@ -235,6 +235,8 @@ const DOC_MAP = {
   UNIVERSAL_TEMPLATE: 'Universal_Governance_Resonance_Template.md',
 };
 
+console.log('MathJax:', window.MathJax ? 'loaded' : 'missing');
+   
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -243,7 +245,7 @@ function loadFromHash() {
     loadDoc("README.md");
   }
 }
-
+   
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 </script>
