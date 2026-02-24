@@ -120,10 +120,10 @@ This subdomain provides:
 
 Future sub‑pages will include:
 
-- [RTT_01_01_A_Newtonian_Reframing.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_A_Newtonian_Reframing.md)  
-- [RTT_01_01_Oscillators_and_Resonance.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Oscillators_and_Resonance.md)  
-- [RTT_01_01_Rotational_Dynamics.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Rotational_Dynamics.md)  
-- [RTT_01_01_Stability_and_Chaos.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Stability_and_Chaos.md)  
+- [RTT_01_01_A_Newtonian_Reframing.md](https://www.triadicframeworks.org/education/subjects/RTT_01_01_A_Newtonian_Reframing.md)  
+- [RTT_01_01_Oscillators_and_Resonance.md](https://www.triadicframeworks.org/education/subjects/RTT_01_01_Oscillators_and_Resonance.md)  
+- [RTT_01_01_Rotational_Dynamics.md](https://www.triadicframeworks.org/education/subjects/RTT_01_01_Rotational_Dynamics.md)  
+- [RTT_01_01_Stability_and_Chaos.md](https://www.triadicframeworks.org/education/subjects/RTT_01_01_Stability_and_Chaos.md)  
 
 ---
 
