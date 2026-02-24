@@ -1,11 +1,7 @@
-# **RTT_01_01_A_Newtonian_Reframing.md**
-
-This opens Domain‑01 with the same triadic clarity and resonance‑aware structure you’ve been building across the RTT physics suite.
-
----
-
 # **RTT_01_01_A_Newtonian_Reframing**  
 *Resonance‑Time Theory Subdomain Overview*
+
+This opens Domain‑01 with the same triadic clarity and resonance‑aware structure we’ve been building across the RTT physics suite.
 
 ## **1. Subdomain Purpose**
 Newtonian mechanics describes motion, forces, and interactions at everyday scales. RTT reframes Newtonian physics as a **triadic structural‑energetic‑temporal system**, where structure (S), energy/flux (E), and relational time (R) interact to produce classical motion, inertia, forces, and stability.
