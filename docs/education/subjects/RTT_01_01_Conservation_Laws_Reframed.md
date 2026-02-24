@@ -134,10 +134,10 @@ This subdomain provides:
 
 Future sub‑pages will include:
 
-- [RTT_01_01_Momentum_and_Coherence.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Momentum_and_Coherence.md)  
-- [RTT_01_01_Energy_Transformation_and_Leakage.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Energy_Transformation_and_Leakage.md)  
-- [RTT_01_01_Angular_Momentum_and_Rotation.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Angular_Momentum_and_Rotation.md)  
-- [RTT_01_01_Symmetry_and_Invariance.md](https://www.triadicframeworks.org/_ideas/RTT_01_01_Symmetry_and_Invariance.md)  
+- [RTT_01_01_Momentum_and_Coherence.md](RTT_01_01_Momentum_and_Coherence.md)  
+- [RTT_01_01_Energy_Transformation_and_Leakage.md](RTT_01_01_Energy_Transformation_and_Leakage.md)  
+- [RTT_01_01_Angular_Momentum_and_Rotation.md](RTT_01_01_Angular_Momentum_and_Rotation.md)  
+- [RTT_01_01_Symmetry_and_Invariance.md](RTT_01_01_Symmetry_and_Invariance.md)  
 
 ---
 
