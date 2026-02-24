@@ -259,7 +259,7 @@ Here’s a curated list of major megalithic sites across continents, including t
 
 ### 📈 Population Sample Size Since the “Reset”
 
-After the Younger Dryas (~12,900–11,700 years ago), global human population was likely under 10 million. Since then, we’ve ballooned to over 8 billion—a massive sample size for mutation testing. With each generation (~25 years), new mutations arise, and some gain traction due to survival or reproductive advantages.
+After the Younger Dryas (est.12,900–11,700 years ago), global human population was likely under 10 million. Since then, we’ve ballooned to over 8 billion—a massive sample size for mutation testing. With each generation (est.25 years), new mutations arise, and some gain traction due to survival or reproductive advantages.
 
 ---
 
