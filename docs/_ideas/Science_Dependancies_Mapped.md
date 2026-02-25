@@ -108,7 +108,7 @@
 
 ---
 
-**Here’s your visual dependency graph showing how foundational physics concepts propagate from root constants: Frequency (𝓕), Scalar Temperature Force (Θ), and Gravity (G).**
+**Here’s our visual dependency graph showing how foundational physics concepts propagate from root constants: Frequency (𝓕), Scalar Temperature Force (Θ), and Gravity (G).**
 
 <img width="1400" height="1000" alt="BCEI 50a30abc-3639-4c8c-8326-a3e480ca1bd5" src="https://github.com/user-attachments/assets/cc02045a-11f1-473c-81b7-7753993616d6" />
 
@@ -281,7 +281,7 @@ Let’s begin mapping a few:
 
 ---
 
-**Here’s your visual scaffold of the Triadic Logic Model—both as a layered triangle and a Venn diagram. These anchor Frequency, Fluids, and Forces with clear placement logic and overlap zones.**
+**Here’s our visual scaffold of the Triadic Logic Model—both as a layered triangle and a Venn diagram. These anchor Frequency, Fluids, and Forces with clear placement logic and overlap zones.**
 
 <img width="800" height="700" alt="BCEI 104a3332-6718-4e8c-ade2-0dbbbdfbab48" src="https://github.com/user-attachments/assets/c30eadbd-84a3-49a2-871d-6648496d3ce5" />
 <img width="800" height="700" alt="BCEI 6afe49ad-48b6-41fb-bab0-1a3578ec49cc" src="https://github.com/user-attachments/assets/d6262e4f-972a-4dc2-9a8a-a0645848a0ed" />
