@@ -2,6 +2,7 @@
 *Diagrammed for explorers, engineers, and myth‑sayers alike*
 
 ```
+                           🔮
                  ┌─────────────────────┐
                  │   DYNAMIC SPACE     │
                  │  (Motion · Noise)   │
