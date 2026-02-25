@@ -110,7 +110,7 @@
 
 **Here’s our visual dependency graph showing how foundational physics concepts propagate from root constants: Frequency (𝓕), Scalar Temperature Force (Θ), and Gravity (G).**
 
-<img width="1400" height="1000" alt="BCEI 50a30abc-3639-4c8c-8326-a3e480ca1bd5" src="https://github.com/user-attachments/assets/cc02045a-11f1-473c-81b7-7753993616d6" />
+<img width="700" height="500" alt="BCEI 50a30abc-3639-4c8c-8326-a3e480ca1bd5" src="https://github.com/user-attachments/assets/cc02045a-11f1-473c-81b7-7753993616d6" />
 
 ---
 
