@@ -3,7 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
@@ -123,14 +122,14 @@ code {
   color: var(--text-main);
 }
 </style>
-   
+
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-
+   
 <nav>
-
+   
   <h2>🧑‍🚀 RTT - Kindling</h2>
     <a href="#README">📘 Framework Overview</a>
   <h3>🧬 Alignment & Capability</h3>
@@ -145,7 +144,7 @@ code {
   <h3>✍️ Captions & Notations</h3>
     <a href="#CAPTIONS_NOTATIONS">✍️ Captions & Notations</a>
     <a href="../">🔙</a>
-
+   
 </nav>
 
 <main id="content"></main>
@@ -170,7 +169,7 @@ function loadDoc(file) {
     });
 }
 
-export const DOC_MAP = {
+const DOC_MAP = {
   // Core
   README: 'README.md',
   // Alignment & Capability
@@ -183,7 +182,7 @@ export const DOC_MAP = {
   EXECUTIVE_ACADEMIC_CLASSROOM_CONTEXT_EXAMPLES: 'Executive_Academic_Classroom_Context_Examples.md',
   KID_FRIENDLY_VERSION: 'Kid‑Friendly_Version.md',
   // Notation & Captions
-  CAPTIONS_NOTATIONS: 'Captions_Notations.md',
+  CAPTIONS_NOTATIONS: 'Captions_Notations.md'
 };
 
 function loadFromHash() {
@@ -191,12 +190,13 @@ function loadFromHash() {
   if (DOC_MAP[key]) {
     loadDoc(DOC_MAP[key]);
   } else {
-    loadDoc("README.md");
+    loadDoc('README.md');
   }
 }
 
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
+
 </script>
 
 </body>
