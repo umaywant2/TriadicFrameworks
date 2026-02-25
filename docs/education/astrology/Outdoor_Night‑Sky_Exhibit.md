@@ -14,6 +14,7 @@
 The exhibit unfolds as a **guided constellation on the ground**, not a linear hallway.
 
 ```
+      🔮
 [ Ancient Sky ]
       ✦
 [ Memory & Naming ]
