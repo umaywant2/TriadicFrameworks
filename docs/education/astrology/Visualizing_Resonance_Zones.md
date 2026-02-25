@@ -4,6 +4,7 @@
 Rather than points on a map, RTT treats navigational landmarks as **zones of coherence** — regions where multiple dimensions stabilize together. These zones can be visualized as layered fields rather than coordinates.
 
 ```
+                        🔮
                  ┌───────────────┐
                  │  HIGH CHANGE  │
                  │  (Turbulent)  │
