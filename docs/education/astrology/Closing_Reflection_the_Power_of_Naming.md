@@ -12,6 +12,7 @@ As humanity moves beyond Earth, familiar constellations will fade, but the need 
 *From Ancient Stars to Dimensional Coherence*
 
 ```
+               🔮
 ┌───────────────────────────────┐
 │        ANCIENT SKY            │
 │  Named Stars · Cycles · Myth  │
@@ -91,6 +92,7 @@ This palette works equally well for slides, posters, and printed materials.
 > **Purpose:** Help students see continuity between myth, science, and future exploration.
 
 ```
+                       🔮
 ┌──────────────────────────────────────────┐
 │ 🔵 ANCIENT SKY                           │
 │ Named Stars · Cycles · Myth              │
