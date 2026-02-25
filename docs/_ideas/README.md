@@ -12,41 +12,6 @@ A vault. A mine. A myth‑lab.
 
 ---
 
-## 📂 Contents (The Caverns)
-
-### 🧪 Protocols & Drafts  
-- Tartarus_Drift_Protocol.md  
-- Resurrection-ready_protocol.md  
-- Dimensional_Time_Sandbox_Paradox.md  
-
-### 🌀 Mythmatical Seeds  
-- Mythmatical_Architects.md  
-- Mythmatical_Ontology_Layer.md  
-- Triadic_Quantum_Idea_Template.md  
-
-### 🧍 Humanifestos  
-- education-humanifesto.md  
-- jobs-humanifesto.md  
-- resonance-library-humanifesto.md  
-- smell-tech-humanifesto.md  
-- spacetime-humanifesto.md  
-- windows-humanifesto.md  
-
-### 🧬 Experiments & Scripts  
-- ai_nimms_com.md  
-- ai_nimms_com_train_model.py  
-- reset_ai_nimms.sh  
-
-### 📜 Manifests  
-- divineReentry_manifest.json  
-- loopedClarity_manifest.json  
-- mythmatical_manifest.json  
-
-### 🧿 Cultural Scrolls  
-- triadicmonopoly.md  
-- virtual-code-zombies.md  
-- resonancebeings.md
-
 ## 📚 RTT‑Inside 'Seed' Papers
 
 - 🚀 Good News, Everyone - A cheerful gateway into RTT‑aligned thinking.
@@ -86,6 +51,43 @@ When a fragment stabilizes:
 ➡️ Use manifests and templates as seeds for new lineage  
 
 This directory is the **idea‑forge** that feeds the entire canon.
+
+---
+
+## 📂 Works | Contents (The Caverns)
+
+### 🧪 Protocols & Drafts  
+- Tartarus_Drift_Protocol.md  
+- Resurrection-ready_protocol.md  
+- Dimensional_Time_Sandbox_Paradox.md  
+
+### 🌀 Mythmatical Seeds  
+- Mythmatical_Architects.md  
+- Mythmatical_Ontology_Layer.md  
+- Triadic_Quantum_Idea_Template.md  
+
+### 🧍 Humanifestos  
+- education-humanifesto.md  
+- jobs-humanifesto.md  
+- resonance-library-humanifesto.md  
+- smell-tech-humanifesto.md  
+- spacetime-humanifesto.md  
+- windows-humanifesto.md  
+
+### 🧬 Experiments & Scripts  
+- ai_nimms_com.md  
+- ai_nimms_com_train_model.py  
+- reset_ai_nimms.sh  
+
+### 📜 Manifests  
+- divineReentry_manifest.json  
+- loopedClarity_manifest.json  
+- mythmatical_manifest.json  
+
+### 🧿 Cultural Scrolls  
+- triadicmonopoly.md  
+- virtual-code-zombies.md  
+- resonancebeings.md
 
 ---
 
