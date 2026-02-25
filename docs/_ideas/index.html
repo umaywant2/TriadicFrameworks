@@ -8,7 +8,7 @@
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
 <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
 <link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
+
 <title>Ideas | Triadicframeworks</title>
 
 <style>
@@ -123,13 +123,13 @@ code {
 }
 </style>
 
-<link rel="stylesheet" href="../shared/nawderian-theme.css">
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-
-<nav>
+   
+<nav id="ideas-map">
+   
    <h2>🤔 Ideas | TriadicFrameworks</h2>
      <a href="#README">🔰 README Folder Index</a>
    <h3>🌱 RTT‑Inside 'Seed' Papers</h3>
@@ -159,11 +159,23 @@ code {
 <main id="content"></main>
 
 <script>
+
 function loadDoc(file) {
   fetch(file)
-    .then(r => r.text())
-    .then(t => content.innerHTML = marked.parse(t))
-    .catch(() => content.innerHTML = '<p>Unable to load document.</p>');
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      document.getElementById('content').innerHTML = marked.parse(text);
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
 }
 
 const DOC_MAP = {
@@ -188,14 +200,19 @@ const DOC_MAP = {
   WARP_DRIVE_ARCHITECTURE: 'Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md',
   DEEP_SEA_RTT_DOMAIN: 'Why_Deep_Sea_Is_a_Natural_RTT_Domain.md'
 };
-  
+
 function loadFromHash() {
-  const key = location.hash.replace('#','');
-  loadDoc(DOC_MAP[key] || DOC_MAP.EXEC_SUMMARY);
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
 }
 
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
+
 </script>
 
 </body>
