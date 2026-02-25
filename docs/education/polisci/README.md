@@ -77,7 +77,7 @@ These are not biological bottlenecks, but symbolic convergence points—where th
 
 This model resonates with:
 - **Genetic Adam & Mitochondrial Eve**: Genetic common ancestors estimated 100,000–200,000 years ago.
-- **Cultural Restarts**: Post-plague Europe (~1350), post-Columbian exchange (~1500), or even post-Ice Age (~10,000 BCE).
+- **Cultural Restarts**: Post-plague Europe (1350), post-Columbian exchange (1500), or even post-Ice Age (10,000 BCE).
 
 ---
 
