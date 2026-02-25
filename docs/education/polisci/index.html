@@ -123,29 +123,8 @@ code {
   color: var(--text-main);
 }
 </style>
-   <!-- Removing troubleshooting mathjax 
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
-
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [['$', '$'], ['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\
-
-\[', '\\]
-
-']]
-    },
-    options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
-    }
-  };
-</script>
-
-<script
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-  defer>
-</script>
+   
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
 </head>
 
@@ -263,8 +242,6 @@ function loadFromHash() {
    
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
-
-console.log('MathJax:', window.MathJax ? 'loaded' : 'missing');
    
 </script>
 
