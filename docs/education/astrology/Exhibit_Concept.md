@@ -14,6 +14,7 @@
 Visitors move through **physical resonance zones**, making choices that affect their path. There is no single correct route — success is measured by **coherence**, not arrival.
 
 ```
+      🔮
 [ Ancient Sky ]
       ↓
 [ Memory & Naming ]
