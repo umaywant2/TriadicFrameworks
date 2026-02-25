@@ -1,7 +1,7 @@
 ## 🌐 What RTT Unlocked
 
 **FFF**  
-A way to see systems not as static objects, but as *flows that stabilize*. It revealed how form, function, and future co‑emerge — allowing RTT to treat change as structure, not noise. 🌊
+A way to see systems not as static objects, but as *flows that stabilize*. It revealed how frequency, fluids, and forces co‑emerge — allowing RTT to treat change as structure, not noise. 🌊
 
 **SET**  
 A lens for understanding how boundaries arise naturally from interaction. Instead of imposed categories, RTT gained a way to observe how coherence forms through shared constraints and mutual influence. 🧭
