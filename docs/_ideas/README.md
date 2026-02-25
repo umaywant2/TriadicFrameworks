@@ -106,4 +106,4 @@ This is the **ancestral layer** of the framework — the mythic substrate beneat
 > “Ideas are not lost. They crystallize in caverns, waiting for the young wizard to return with new light.”  
 
 ## _ideas/ Folder Level
-- [RFC'sl](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/) - Folder Level
+- [_ideas](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/) - Folder Level
