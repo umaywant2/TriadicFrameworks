@@ -16,5 +16,5 @@ It enables TFT calculations across distributed systems.
 - Testing cross‑platform TFT calculations
 
 ## Cross‑Links
-- [../VictorG](../VictorG) → resonance pattern simulations
-- [../engine](../engine) → runtime logic
+- [../VictorG](https://www.triadicframeworks.org/projects/VictorG) → resonance pattern simulations
+- [../engine](https://www.triadicframeworks.org/engine) → runtime logic
