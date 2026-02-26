@@ -14,11 +14,6 @@ This library exists to ensure:
 
 Each subfolder represents a **domain**, and each schema inside it defines the **structural invariants** of that domain.
 
----
-
-
----
-
 <p align="center">
 
   <!-- Core Identity -->
