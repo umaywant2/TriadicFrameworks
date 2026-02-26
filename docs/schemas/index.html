@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +9,7 @@
 <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
 <link rel="canonical" href="https://www.pr.com/press-release/957074">
   <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>RTT Schemas</title>
+  <title>Schemas | Triadicframeworks</title>
 
 <style>
 /* ============================================================
@@ -130,20 +129,43 @@ code {
 <body>
    
 <nav>
-  <h2>📚 Schemas - RTT</h2>
-      <a href="#README">📘 README.md</a>
-      <a href="#SCHEMA_BROWSER_SPEC">💻 Schema Browser Spec</a>
-      <a href="#COORDINATION_TRIAD_SKETCH">🌳 The Coordination Triad Sketch</a>
-      <a href="#RSADI_GD_README">🎮 RSADI‑GD README</a>
-      <a href="#RSADI_GD_MINIMAL_DEMO_SCENE_SPEC">📐 RSADI‑GD Minimal Demo Scene Spec</a>
-      <a href="#RTT_AUTONOMOUS_README">🤖 RTT Autonomous README</a>
-      <a href="#RTT_AUTONOMOUS_DRONE_README">🛸 RTT Autonomous Drone README</a>
-      <a href="#RTT_AUTONOMOUS_FISH_README">🐟 RTT Autonomous Fish README</a>
-      <a href="#RTT_COAL_README">⛏️ RTT Coal README</a>
-      <a href="#RTT_CORE_README">🧩 RTT Core README</a>
-      <a href="#RTT_MICRO_CORE_README">📘 RTT Micro‑Core README</a>
-      <a href="#RTT_MICRO_CORE_V1_MRT1_TRANSFORMS">🔬 MRT‑1 Transforms (v1)</a>
-      <a href="#TEMPLATE_README">📄 Template README</a>
+  
+  <h2>📚 RTT Schemas — System Architecture & Tooling</h2>
+
+  <h3>⛏️ Core</h3>
+    <a href="#README">📘 README</a>
+    <a href="#SCHEMA_BROWSER_SPEC">💻 Schema Browser Spec</a>
+    <a href="#COORDINATION_TRIAD_SKETCH">🧭 Coordination Triad Sketch</a>
+    <a href="#BROWSER_UI_MOCKUP">🧪 Browser UI Mockup</a>
+    <a href="#CLI_TOOL_SPEC">🖥️ CLI Tool Spec</a>
+    <a href="#CONTRIBUTING">🤝 Contributing Guide</a>
+    <a href="#CROSS_DOMAIN_DEPENDANCY_GRAPH">🌐 Cross‑Domain Dependency Graph</a>
+    <a href="#DESIGN_PRINCIPALS">🎨 Design Principles</a>
+    <a href="#DIRECTORY_OVERVIEW">>🗂️ Directory Overview</a>
+    <a href="#TIGHTENED_RTTCODE">🧩 Tightened RTTcode</a>
+    <a href="#UI_FEATURES">🖼️ UI Features</a>
+    <a href="#VALIDATION_PIPELINE">🧪 Validation Pipeline</a>
+  <h3>🎮 RSADI-GD</h3>
+    <a href="#PRODUCT_OVERVIEW">📦 Product Overview</a>
+    <a href="#RSADI_GD_README">🎮 RSADI‑GD README</a>
+    <a href="#RSADI_GD_MINIMAL_DEMO_SCENE_SPEC">📐 RSADI‑GD Minimal Demo Scene Spec</a>
+  <h3>🤖 RTT Autonomous (General)</h3>
+    <a href="#RTT_AUTONOMOUS_README">🤖 RTT Autonomous README</a>
+  <h3>🛸 RTT Autonomous: Drone</h3>
+    <a href="#RTT_AUTONOMOUS_DRONE_README">🛸 RTT Autonomous Drone README</a>
+  <h3>🐟 RTT Autonomous: Fish</h3>
+    <a href="#RTT_AUTONOMOUS_FISH_README">🐟 RTT Autonomous Fish README</a>
+  <h3>⛏️ RTT Coal</h3>
+    <a href="#RTT_COAL_README">⛏️ RTT Coal README</a>
+  <h3>🧩 RTT Core</h3>
+    <a href="#RTT_CORE_README">🧩 RTT Core README</a>
+  <h3>🔬 RTT Micro-Core</h3>
+    <a href="#RTT_MICRO_CORE_README">📘 RTT Micro‑Core README</a>
+    <a href="#RTT_MICRO_CORE_V1_MRT1_TRANSFORMS">🔬 MRT‑1 Transforms (v1)</a>
+  <h3>📄 Template</h3>
+    <a href="#TEMPLATE_README">📄 Template README</a>
+    <a href="../">🔙</a>
+  
 </nav>
 
 <main id="content"></main>
@@ -151,21 +173,47 @@ code {
 <script>
 
 const DOC_MAP = {
-  README: 'README.md',
-  SCHEMA_BROWSER_SPEC: 'SCHEMA_BROWSER_SPEC.md',
-  COORDINATION_TRIAD_SKETCH: 'The_Coordination_Triad_sketch.md',
-  RSADI_GD_README: 'rsadi-gd/README.md',
-  RSADI_GD_MINIMAL_DEMO_SCENE_SPEC: 'rsadi-gd/RSADI‑GD_Minimal_Demo_Scene_Spec.md',
-  RTT_AUTONOMOUS_README: 'rtt-autonomous/README.md',
-  RTT_AUTONOMOUS_DRONE_README: 'rtt-autonomous-drone/README.md',
-  RTT_AUTONOMOUS_FISH_README: 'rtt-autonomous-fish/README.md',
-  RTT_COAL_README: 'rtt-coal/README.md',
-  RTT_CORE_README: 'rtt-core/README.md',
-  RTT_MICRO_CORE_README: 'rtt-micro-core/README.md',
-  RTT_MICRO_CORE_V1_MRT1_TRANSFORMS: 'rtt-micro-core/v1/mrt-1_transforms.md',
-  TEMPLATE_README: 'TEMPLATE/README.md',
-};
+  // Core
+  BROWSER_UI_MOCKUP: "Browser_UI_Mockup.md",
+  CLI_TOOL_SPEC: "CLI_Tool_Spec.md",
+  CONTRIBUTING: "Contributing.md",
+  COORDINATION_TRIAD_SKETCH: "The_Coordination_Triad_sketch.md",
+  CROSS_DOMAIN_DEPENDANCY_GRAPH: "Cross-Domain_Dependancy_Graph.md",
+  DESIGN_PRINCIPALS: "Design_Principals.md",
+  DIRECTORY_OVERVIEW: "Directory_Overview.md",
+  PRODUCT_OVERVIEW: "product_overview.md",
+  README: "README.md",
+  SCHEMA_BROWSER_SPEC: "SCHEMA_BROWSER_SPEC.md",
+  TIGHTENED_RTTCODE: "Tightened_RTTcode.md",
+  UI_FEATURES: "UI_Features.md",
+  VALIDATION_PIPELINE: "Validation_Pipeline.md",
 
+  // RSADI-GD
+  RSADI_GD_MINIMAL_DEMO_SCENE_SPEC: "rsadi-gd/RSADI‑GD_Minimal_Demo_Scene_Spec.md",
+  RSADI_GD_README: "rsadi-gd/README.md",
+
+  // RTT Autonomous (General)
+  RTT_AUTONOMOUS_README: "rtt-autonomous/README.md",
+
+  // RTT Autonomous: Drone
+  RTT_AUTONOMOUS_DRONE_README: "rtt-autonomous-drone/README.md",
+
+  // RTT Autonomous: Fish
+  RTT_AUTONOMOUS_FISH_README: "rtt-autonomous-fish/README.md",
+
+  // RTT Coal
+  RTT_COAL_README: "rtt-coal/README.md",
+
+  // RTT Core
+  RTT_CORE_README: "rtt-core/README.md",
+
+  // RTT Micro-Core
+  RTT_MICRO_CORE_README: "rtt-micro-core/README.md",
+  RTT_MICRO_CORE_V1_MRT1_TRANSFORMS: "rtt-micro-core/v1/mrt-1_transforms.md",
+
+  // Template
+  TEMPLATE_README: "TEMPLATE/README.md"
+};
   
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
