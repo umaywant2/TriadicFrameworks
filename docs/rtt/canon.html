@@ -20,15 +20,13 @@
 </pre>
     </div>
 
-    <nav class="rtt-nav">
-      <a href="index.html">Home</a>
-      <a href="products.html">Products</a>
-      <a href="docs.html">Documentation</a>
-      <a href="canon.html">Canon Library</a>
-      <a href="developer-zone.html">Developer Zone</a>
-      <a href="licensing.html">Licensing</a>
-      <a href="about.html">About</a>
-    </nav>
+    <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
   </header>
 
   <main class="rtt-page">
