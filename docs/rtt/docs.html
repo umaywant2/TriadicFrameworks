@@ -1,4 +1,11 @@
 <main class="rtt-page rtt-docs-layout">
+  <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
   <aside class="rtt-docs-sidebar">
     <h3>Docs</h3>
     <ul>
