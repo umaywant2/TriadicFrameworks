@@ -12,7 +12,7 @@ To reach 8 billion living humans today, humanity has passed through countless ge
 
 ###### The console glows with the population count for humanity, the year etched as 12,500 BC, and Earth floats in view beyond the glass. Just outside the console window, a weathered finger presses the red reset button, suggesting a ritual of planetary recalibration.
 
-<img width="512" height="768" alt="BCO 88bd24f5-eec4-4581-ab3a-d6006c181db5" src="https://github.com/user-attachments/assets/2c925fa0-bb92-44f7-8edf-43fcf76f5142" />
+<img width="768" height="1024" alt="BCO 88bd24f5-eec4-4581-ab3a-d6006c181db5" src="https://github.com/user-attachments/assets/2c925fa0-bb92-44f7-8edf-43fcf76f5142" />
 
 ---
 
@@ -89,7 +89,7 @@ This model resonates with:
 
 ###### The towering winged Anunnaki stands in awe-inspiring contrast to the humble Sumerians, pine cone and basket in hand, with Mesopotamian architecture and celestial motifs anchoring the scene.
 
-<img width="512" height="768" alt="BCO 93c6d558-474c-4d12-9018-f3e9c89bd45d" src="https://github.com/user-attachments/assets/30687a4c-6d26-4661-82c3-6eea567411bd" />
+<img width="768" height="1024" alt="BCO 93c6d558-474c-4d12-9018-f3e9c89bd45d" src="https://github.com/user-attachments/assets/30687a4c-6d26-4661-82c3-6eea567411bd" />
 
 ---
 
@@ -127,7 +127,7 @@ This model resonates with:
 
 ###### A vivid, precisely angled painting of the Great Pyramid in its imagined prime, radiating power and resonance.
 
-<img width="512" height="768" alt="BCO 4d6a3e34-4467-4bae-9cfd-5114389d1a6a" src="https://github.com/user-attachments/assets/01169be4-1be8-45d0-95ee-abf41963f8f0" />
+<img width="768" height="1024" alt="BCO 4d6a3e34-4467-4bae-9cfd-5114389d1a6a" src="https://github.com/user-attachments/assets/01169be4-1be8-45d0-95ee-abf41963f8f0" />
 
 ---
 
@@ -193,7 +193,7 @@ This model resonates with:
 
 ###### A painting that captures the ancient mystery of the Nazca Lines, with geoglyphs like the hummingbird, spider, and monkey etched into the desert canvas.
 
-<img width="512" height="768" alt="BCO b46c7aa2-2ee7-4f15-a2ab-89fa319d64de" src="https://github.com/user-attachments/assets/a4232d15-0597-4a27-a7d7-3307e1e082c7" />
+<img width="768" height="1024" alt="BCO b46c7aa2-2ee7-4f15-a2ab-89fa319d64de" src="https://github.com/user-attachments/assets/a4232d15-0597-4a27-a7d7-3307e1e082c7" />
 
 ---
 
@@ -302,7 +302,7 @@ These mutations show how *environmental pressures* (diet, disease, altitude, sun
 
 ###### Painting inspired by “mutations that may rise.” A radiant eye, swirling with evolutionary color, surrounded by DNA helixes, neural glyphs, and sensory echoes.
 
-<img width="512" height="768" alt="BCO 21948009-7edd-41e3-8ad9-eccc9d44c895" src="https://github.com/user-attachments/assets/d03918eb-378f-43f8-b761-e975c95742df" />
+<img width="768" height="1024" alt="BCO 21948009-7edd-41e3-8ad9-eccc9d44c895" src="https://github.com/user-attachments/assets/d03918eb-378f-43f8-b761-e975c95742df" />
 
 ---
 
@@ -417,7 +417,7 @@ This tree imagines traits currently rare or emerging that could become dominant 
 
 ###### Wishing Well to the Future, rendered as an infinity mirror of memory and possibility.
 
-<img width="512" height="768" alt="BCO b4ed1172-82c4-4844-a3ad-1a8178f2022a" src="https://github.com/user-attachments/assets/eb9a2288-682f-4ac6-abea-fb047bdb9b9a" />
+<img width="768" height="1024" alt="BCO b4ed1172-82c4-4844-a3ad-1a8178f2022a" src="https://github.com/user-attachments/assets/eb9a2288-682f-4ac6-abea-fb047bdb9b9a" />
 
 ---
 
@@ -492,7 +492,7 @@ This tree imagines traits currently rare or emerging that could become dominant 
 
 ###### Lattice of Legacy. It’s ready now, glowing with generational resonance and Nawderian thunder.
 
-<img width="512" height="768" alt="BCO a2da41f5-f3de-4b43-819b-b5fdcd0017c1" src="https://github.com/user-attachments/assets/f63420e3-02a2-4f7a-9c67-72e2ca8af8e8" />
+<img width="768" height="1024" alt="BCO a2da41f5-f3de-4b43-819b-b5fdcd0017c1" src="https://github.com/user-attachments/assets/f63420e3-02a2-4f7a-9c67-72e2ca8af8e8" />
 
 ---
 
