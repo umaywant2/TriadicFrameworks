@@ -1,192 +1,76 @@
-# Equations and diagrams for Saturn's Harmonic Engine
+## 🪐 Saturn Harmonic Engine — Symbolic Equations
 
-To make the paper actionable, here are the core harmonic equations, simple worked examples, and ASCII diagrams you can embed after the model section. They give remixers both the math and the visual intuition.
+The Saturn Harmonic Engine defines a **symbolic harmonic scaffold** used within RTT to explore resonance, periodicity, and structural constraint across time‑based systems.
 
----
-
-## Orbital resonance essentials
-
-- **Mean motion and period**
-  ```math
-  \[
-  n \equiv \frac{2\pi}{T}, \quad T^2 \propto a^3
-  \]
-  ```
-  - **Resonance ratio \(p:q\)** (moons to ring particles): a resonance occurs when the orbital periods satisfy
-   ```math
-   \(\frac{T_{\text{ring}}}{T_{\text{moon}}} \approx \frac{p}{q}\). Equivalently, \(\frac{n_{\text{moon}}}{n_{\text{ring}}} \approx \frac{p}{q}\)
-    ```
-
-- **Example workflow (symbolic)**
-  
-  1. **Pick a moon** with semi‑major axis \(a_s\) and mean motion \(n_s\).
-  2. **Choose a resonance** \(p:q\) (e.g., 2:1).
-  3. **Solve for ring location** using Kepler’s law:
-   ```math  
-     \[
-     \frac{T_{\text{ring}}}{T_s}=\frac{p}{q}
-     \quad\Rightarrow\quad
-     \left(\frac{a_{\text{ring}}}{a_s}\right)^{3/2}=\frac{p}{q}
-     \quad\Rightarrow\quad
-     a_{\text{ring}}=a_s\left(\frac{p}{q}\right)^{2/3}
-     \]
-   ```
+These equations do **not** assert physical causation, planetary influence, or astrophysical mechanism. Saturn is used here as a **symbolic anchor** representing boundary, cycle, and constraint.
 
 ---
 
-## Lindblad resonance (gap and wave drivers)
+### 🔄 Harmonic Cycle Operator
 
-- **Resonant forcing condition**
-  ```math
-  \[
-  m\left(n - n_s\right) = \pm \kappa
-  \]
-  ```
-  - **Labels:**
-    - \(n\): ring mean motion
-    - \(n_s\): moon mean motion
-    - \(\kappa\): epicyclic frequency (≈ \(n\) for near‑Keplerian rings)
-    - \(m\): azimuthal wavenumber
+A harmonic cycle is expressed as:
 
-- **Interpretation**
-  - **Inner Lindblad resonance (ILR):** \(\,m(n - n_s)=+\kappa\,\) tends to launch spiral density waves and can open gaps interior to the moon.
-  - **Outer Lindblad resonance (OLR):** \(\,m(n - n_s)=-\kappa\,\) tends to drive waves exterior to the moon’s orbit.
 
-- **Practical mapping**
-  - For an ILR at \(p:(p-1)\), ring particles complete \(p\) orbits for every \(p-1\) of the moon; use the period ratio \(p:(p-1)\) in the semi‑major axis relation above to locate the resonance radius.
+
+$$H(t) = A \cdot \sin(\omega t + \phi)$$
+
+
+
+Where:
+
+- **A** — symbolic amplitude (resonance strength)
+- **ω** — harmonic frequency (cycle rate)
+- **φ** — phase offset (entry alignment)
+
+This operator is used to **model recurrence**, not to predict events.
 
 ---
 
-## Hill radius (local clearing around embedded moons)
+### 🧭 Constraint & Boundary Mapping
 
-- **Hill radius**
-  ```math
-  \[
-  r_H = a_s \left( \frac{m_s}{3M_p} \right)^{1/3}
-  \]
-  ```
-  - **Labels:**
-    - \(a_s\): moon semi‑major axis
-    - \(m_s\): moon mass
-    - \(M_p\): planet mass
+Saturn functions as a **constraint archetype**, mapping:
 
-- **Gap width (first‑order estimate)**
-  ```math
-  \[
-  \Delta r \approx 2\,r_H
-  \]
-  ```
-  - Use this as a sanity check: a small embedded moon in a ring can clear a narrow gap comparable to a few Hill radii, while stronger resonances and shepherding enlarge or structure gaps.
+- limits
+- thresholds
+- periodic return
+- structural resistance
+
+In RTT, constraint is treated as **stabilizing**, not restrictive.
 
 ---
 
-## Polar hexagon as standing‑wave attractor
+### 🧬 Triadic Harmonic Extension
 
-- **Qualitative standing‑wave framing**
-  ```math
-  \[
-  \text{Hexagon} \;\sim\; \text{persistent mode with} \; m=6 \;\text{in a polar jet}
-  \]
-  ```
-  - Think of the jet as a waveguide; discrete azimuthal modes can lock when the background flow and boundary conditions support phase‑coherent reinforcement.
+Harmonic cycles may be extended into triads:
 
-- **Symbolic resonance condition (conceptual)**
-  ```math
-  \[
-  \omega_{\text{mode}} \approx m\,\Omega_{\text{jet}}
-  \quad\text{with phase locking and low damping}
-  \]
-  ```
-  - This isn’t a derivation, but a useful lens: a stable geometric mode emerges when the driving and the medium select a discrete harmonic that minimizes loss.
 
----
 
-## Worked mini‑examples (plug‑and‑play)
+$$(H_1, H_2, H_3)$$
 
-- **Resonance radius from a moon**
-  
-  - **Given:** \(a_s\) for a moon; target 2:1 ILR.
-  - **Compute:**
-    ```math
-    \[
-    a_{\text{2:1}}=a_s\left(\frac{2}{1}\right)^{2/3}
-    \]
-    ```
-  - Use for quick overlays in dashboards; compare with known ring gap radii.
 
-- **Outer 3:2 resonance**
-  ```math
-  \[
-  a_{\text{3:2}}=a_s\left(\frac{3}{2}\right)^{2/3}
-  \]
-  ```
-- **Gap sanity via Hill radius**
-    - **Given:** \(a_s,\,m_s,\,M_p\).
-    ```math
-    \[
-    r_H = a_s \left( \frac{m_s}{3M_p} \right)^{1/3},
-    \quad
-    \Delta r \approx 2 r_H
-    \]
-    ```
-  - If \(\Delta r\) is much smaller than the observed gap at that radius, the structure likely involves resonant wave dynamics or shepherding, not just local clearing.
+
+Representing:
+
+- initiation
+- modulation
+- resolution
+
+These triads support **cross‑domain comparison** between physical, cognitive, and symbolic systems.
 
 ---
 
-## ASCII resonance overlays
+### 🧪 Exploratory Use Notes
 
-#### Rings and moon‑driven resonances
+The Saturn Harmonic Engine is intended for:
 
-```text
-        Planet center
-             *
-            / \
-           /   \
-   ---------------------------  Rings (schematic)
-         ^      ^      ^
-         |      |      |
-        ILR    OLR    ILR      (different m values)
+- conceptual modeling
+- educational exploration
+- symbolic resonance mapping
+- post‑RTT coherence evaluation
 
-Moon orbit (exterior to inner rings)
------------------o-----------------  (moon at a_s)
-
-Labels:
-- ILR: inner Lindblad resonance (spiral density waves, gaps interior)
-- OLR: outer Lindblad resonance (waves exterior)
-```
-
-#### Hexagon as a locked mode
-
-```text
-       Polar jet (waveguide)
-        ┌───────────────┐
-        │ \  |  |  /    │  Flow → phase‑coherent mode locking
-        │  \ |  | /     │
-        │   \|  |/      │
-        │    *          │  * Persistent m=6 mode (hexagon)
-        └───────────────┘
-```
+It is **non‑operational** and **non‑predictive**.
 
 ---
 
-## How to integrate into overlays and registries
-
-- **Overlay computation**
-  - **Inputs:** \(a_s,\,n_s,\,m_s\); target \(p:q\).
-  - **Outputs:** \(a_{\text{ring}}\) via \(\,a_{\text{ring}}=a_s(p/q)^{2/3}\,\), plus Lindblad labels and expected wave type.
-  - Plot as vertical lines on a radius axis; annotate with \(p:q\) and \(m\).
-
-- **Registry entries**
-  - Add resonance records with:
-    - **moon_id, p:q, a_ring, type** (ILR/OLR), **m**, **confidence**.
-  - Cross‑link to overlay IDs for visualization and to scroll IDs for pedagogy.
-
----
-
-## Placement in the paper
-
-Insert these sections after “The Harmonic Engine Model.” Use the worked mini‑examples and ASCII diagrams to give readers something they can compute and visualize immediately. The Lindblad and Hill relations provide the practical backbone; the hexagon framing completes the symbolic narrative.
-
----
-
-© 2025 TriadicFrameworks. Licensed under the MIT License. Remix freely, honor lineage.
+> Constraint is not opposition.  
+> It is the shape that allows resonance to persist.
