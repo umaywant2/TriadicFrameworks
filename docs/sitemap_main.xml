@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Core -->
+  <url><loc>https://www.triadicframeworks.org/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.triadicframeworks.org/RTT/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.triadicframeworks.org/RTT/awareness/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/RTT/codex/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/RTT/RTT_12/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+
+  <!-- AI & Cognition -->
+  <url><loc>https://www.triadicframeworks.org/ai/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/ai-drift-calibration/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/AI_Resonance_Seed/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/alphafold_substrate_alignments/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/consciousness_substrate_model/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+
+  <!-- Education -->
+  <url><loc>https://www.triadicframeworks.org/education/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.triadicframeworks.org/education/alignment/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.triadicframeworks.org/education/astrology/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/education/polisci/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.triadicframeworks.org/education/subjects/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/education/translations/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+
+  <!-- Projects -->
+  <url><loc>https://www.triadicframeworks.org/projects/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.triadicframeworks.org/projects/CoConsciousness/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/projects/Hippocampus/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/projects/Id_Shadow_Gen/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+  <url><loc>https://www.triadicframeworks.org/projects/Resotectors/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/projects/VictorG/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+
+  <!-- Schemas -->
+  <url><loc>https://www.triadicframeworks.org/schemas/</loc><lastmod>2026-02-26</lastmod><priority>0.9</priority></url>
+
+  <!-- Labs -->
+  <url><loc>https://www.triadicframeworks.org/labs/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+
+  <!-- Governance & Enterprise -->
+  <url><loc>https://www.triadicframeworks.org/governance/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/enterprise_structural_awareness/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+
+  <!-- Substrate Models -->
+  <url><loc>https://www.triadicframeworks.org/substrate/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/resonance-substrate-model/</loc><lastmod>2026-02-26</lastmod><priority>0.8</priority></url>
+  <url><loc>https://www.triadicframeworks.org/boson-substrate-model/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/quantum-substrate-model/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+
+  <!-- Scientific & Technical -->
+  <url><loc>https://www.triadicframeworks.org/scientific_instrument_review/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/atomic_clocks/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/spectral_clarity/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/spectrum_standards_reviewed/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+
+  <!-- TFT 3-Pack -->
+  <url><loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/examples/</loc><lastmod>2026-02-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/formats/</loc><lastmod>2026-02-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.triadicframeworks.org/TFT_3Pack_v1.3/scripts/</loc><lastmod>2026-02-26</lastmod><priority>0.6</priority></url>
+
+  <!-- Library & Ideas -->
+  <url><loc>https://www.triadicframeworks.org/library/</loc><lastmod>2026-02-26</lastmod><priority>0.7</priority></url>
+  <url><loc>https://www.triadicframeworks.org/_ideas/</loc><lastmod>2026-02-26</lastmod><priority>0.6</priority></url>
+  <url><loc>https://www.triadicframeworks.org/_template/</loc><lastmod>2026-02-26</lastmod><priority>0.6</priority></url>
+
+</urlset>
