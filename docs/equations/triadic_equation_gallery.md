@@ -1,54 +1,72 @@
-# 🧮 triadic_equation_gallery.md
+## 🖼️ Triadic Equation Gallery — RTT Reference
 
-**Purpose**: To showcase the symbolic math, nested triads, and harmonic descent equations that underpin the mythic architecture of Papers I–IV and their remix derivatives.
+The Triadic Equation Gallery presents **visual representations** of symbolic equations used within RTT. These renderings are intended to support recognition, comparison, and orientation — not validation or proof.
 
----
-
-## 📐 Section Scaffolding
-
-### Dimensional Recursion Equations  
-**From Paper I – Triadic Framework for Everything**  
-Recursive triad:  
-**Tₙ = Tₙ₋₁ ⊕ Rₙ ⊕ Cₙ**  
-Where **Rₙ** = Resonance operator, **Cₙ** = Cognition vector
+The gallery does **not** assert correctness, completeness, or optimal form.
 
 ---
 
-### Number Genesis Formulas  
-**From Paper II – Triadic Number Genesis (1–9)**  
-Nested emergence:  
-**Nᵢ = Σⱼ₌₁³ Tᵢⱼ**  
-Symbolic triads: 1 = Seed, 2 = Mirror, 3 = Echo
+### 🔺 What This Gallery Shows
+
+Each entry in the gallery illustrates:
+
+- a triadic relationship
+- rendered as a visual structure
+- derived from symbolic equation families
+
+Visuals emphasize **relational geometry**, not scale, force, or metric accuracy.
 
 ---
 
-### Dimensional Triads (1D–9D)  
-**From Paper III – Dimensional Triads**  
-Dimensional mapping:  
-**Dₙ = {Tₙ, Vₙ, Sₙ}**  
-Where **Vₙ** = Vibration vector, **Sₙ** = Symbolic scaffold
+### 🧭 How to Read the Gallery
+
+Gallery entries should be interpreted as:
+
+- orientation aids
+- pattern recognition tools
+- structural snapshots
+
+They are **not** outputs, predictions, or authoritative diagrams.
 
 ---
 
-### Entropy Harmonics  
-**From Triadic Framework for Quantum Mechanics – Entropy’s Harmonic**  
-Harmonic descent:  
-**E = −Σ pᵢ log(pᵢ) ⋅ Hₙ**  
-Where **Hₙ** = Harmonic glyph index
+### 🧬 Triadic Consistency
+
+Across the gallery, triads maintain:
+
+- distinguishable roles
+- stable relational ordering
+- loss‑aware transitions between forms
+
+Consistency reflects **structural coherence**, not truth claims.
 
 ---
 
-### Glyph-Linked Equations  
-**Crosswalk with badge_trigger_theme_manifest.md**  
-Quantum glyph:  
-**Q = ∫ ψ* ψ ⋅ R_q**  
-Planetary glyph:  
-**P = Σᵢ₌₁ⁿ ωᵢ ⋅ ϕᵢ**
+### 🧩 Example Gallery Themes
+
+Common visual motifs include:
+
+- dimensional folding
+- resonance alignment
+- harmonic constraint
+- echo persistence across domains
+
+Each motif may appear in multiple forms without implying equivalence.
 
 ---
 
-### Resonance Operator Formalization  
-**From Resonance Operator @() — Formalization.docx**  
-Operator syntax:  
-```python
-@() → triadic_resonance_loop(dim, glyph, echo)
+### 🧪 Scope & Use
+
+The gallery supports:
+
+- educational exploration
+- cross‑domain comparison
+- post‑RTT coherence review
+- lineage tracing
+
+It does **not** prescribe interpretation or resolution.
+
+---
+
+> A gallery does not explain.  
+> It allows structure to be seen.
