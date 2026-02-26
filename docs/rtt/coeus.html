@@ -1,4 +1,11 @@
 <h1 class="rtt-hero-title">Coeus Pattern Engine</h1>
+  <div id="rtt-nav"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
+
 <p class="rtt-hero-subtitle">Fractal cognition for multi‑horizon intelligence.</p>
 
 <div class="rtt-badge rtt-badge-intelligence">Intelligence Tier</div>
