@@ -1,4 +1,10 @@
-  <link rel="stylesheet" href="rtt.css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RTT Academy</title>
+<link rel="stylesheet" href="rtt.css" />
 <main class="rtt-page">
     <div id="rtt-nav"></div>
     <script>
@@ -6,7 +12,8 @@
         .then(r => r.text())
         .then(html => document.getElementById('rtt-nav').innerHTML = html);
     </script>
-
+  
+<body>
   <h1 class="rtt-hero-title">RTT Academy</h1>
   <p class="rtt-hero-subtitle">Learn the canon, the engines, and the 24D ladder.</p>
 
@@ -28,7 +35,8 @@
     © TriadicFrameworks — Resonance‑Time Technology
   </footer>
 </main>
-
+</body>
+  
 <script>
   async function loadAcademy() {
     const res = await fetch("docs/academy/academy-courses.json");
@@ -67,3 +75,5 @@
 
   loadAcademy();
 </script>
+</head>
+</html>
