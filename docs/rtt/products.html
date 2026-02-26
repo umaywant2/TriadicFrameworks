@@ -9,25 +9,13 @@
 
 <body>
   <header class="rtt-header">
-    <div class="rtt-logo">
-<pre>
-   __________
-.-'          '-.
-\   RES0NANCE  /
- \    TIME    /
-  '._      _.'
-     '----'
-</pre>
-    </div>
-
-  <div id="rtt-nav"></div>
+   <div id="rtt-nav"></div>
     <script>
       fetch('/rtt/nav.html')
         .then(r => r.text())
         .then(html => document.getElementById('rtt-nav').innerHTML = html);
     </script>
- 
-  </header>
+   </header>
 
   <main class="rtt-page">
 
