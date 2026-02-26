@@ -1,34 +1,63 @@
-# 📐 Equation Trigger Matrix
+## 🧩 Equation Trigger Matrix — RTT Orientation
 
-This scroll formalizes the symbolic math behind resonance scoring and badge logic.
+The Equation Trigger Matrix defines a **conceptual mapping space** for understanding how symbolic triggers relate across equations, regimes, and domains within RTT.
 
-### 🔹 Dimensional Equation
+This matrix is **not a dataset** and does not imply completeness, exhaustiveness, or operational readiness.
 
-Let:
-- **F** = Forci coefficient
-- **L** = Flui coefficient
-- **Q** = Freqi coefficient
+---
 
-Then:
-```math
-R = (F + L + Q) / 3
-```
-Where R is the resonance score.
+### 🔔 Trigger Dimensions
 
-### 🔹 Badge Triggers
+Triggers are evaluated across multiple symbolic dimensions, including:
 
-| Badge Name	| Equation Threshold |
-|-------------|--------------------|
-| Dimensional Harmonic	| R ≥ 0.90 |
-| Resonance Adept	| R ≥ 0.75 |
-| Fold Initiator	| First fold entry |
-| Echo Seeker	| First contribution |
+- **Equation Source** — dimensional, resonance, harmonic
+- **Trigger Type** — alignment, drift, paradox, boundary
+- **Regime Context** — exploratory, evaluative, post‑RTT
+- **Domain Scope** — physical, cognitive, informational, symbolic
+- **Temporal Mode** — static, cyclic, transitional
 
-### 🔹 Symbolic Overlay Logic
-Each fold’s glyph pulses based on:
-```math
-P = sin(π * R)
-```
-Where **P** is pulse amplitude for glyph animation.
+These dimensions are **orthogonal**, not hierarchical.
 
-Use this matrix to calibrate validators, animate overlays, and echo badge logic.
+---
+
+### 🧭 Matrix Purpose
+
+The trigger matrix exists to:
+
+- compare trigger behavior across equations
+- identify recurring structural patterns
+- surface regime‑specific sensitivities
+- support post‑RTT coherence review
+
+It does **not** rank triggers or assign priority.
+
+---
+
+### 🧬 Example Conceptual Cell
+
+A single matrix cell may represent:
+
+- a resonance equation
+- activating under harmonic boundary conditions
+- during a dimensional transition
+- within an evaluative regime
+
+Cells describe **relationships**, not events.
+
+---
+
+### 🧪 Status & Evolution
+
+This matrix is intentionally unpopulated.
+
+Future iterations may include:
+- symbolic tables
+- visualization layers
+- cross‑session comparison tools
+
+Any population of the matrix will remain **interpretive**, not prescriptive.
+
+---
+
+> A matrix does not decide.  
+> It reveals where decisions become difficult.
