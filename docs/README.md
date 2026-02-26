@@ -17,13 +17,16 @@ The project provides a coherent canon of theoretical foundations, domain primers
 TriadicFrameworks is not an optimization engine, policy platform, or advocacy effort.  
 It exists to make complex systems *legible*, *comparable*, and *explorable* without collapsing uncertainty or prescribing outcomes.
 
+#[RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html) #[TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/wiki) #[ResonanceTimeTheory](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Resonance-Time_Theory.md)
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+
 ---
 
 ## What This Is
 
 TriadicFrameworks brings together:
 
-- **Resonance‑Time Theory ([RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html))** as a calibration framework for cross‑domain structure  
+- **Resonance‑Time Theory RTT** as a calibration framework for cross‑domain structure  
 - **Regime blindness analysis** to surface failure modes and hidden constraints  
 - **Domain primers** bridging mathematics, science, and applied systems  
 - **Simulation substrates** for exploratory, non‑optimizing inquiry  
