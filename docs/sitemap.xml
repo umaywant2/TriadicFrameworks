@@ -1,68 +1,7 @@
-<?xml version="1.1" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <!-- Root landing -->
-  <url>
-    <loc>https://www.triadicframeworks.org/index.html</loc>
-    <lastmod>2026-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-  <loc>https://www.triadicframeworks.org/NoS</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.95</priority>
-  </url>
-
-  <url>
-    <loc>https://www.triadicframeworks.org/resonance-substrate-model/README.html</loc>
-    <lastmod>2026-01-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.90</priority>
-  </url>
-  
-  <url>
-   <loc>https://www.triadicframeworks.org/triadic/</loc>
-   <lastmod>2026-02-16</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.85</priority>
-  </url>
-  
- <url>
-   <loc>https://www.triadicframeworks.org/schemas/</loc>
-   <lastmod>2026-01-08</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.80</priority>
- </url>
-
- <url>
-   <loc>https://www.triadicframeworks.org/education/</loc>
-   <lastmod>2026-02-12</lastmod>
-   <changefreq>monthly</changefreq>
-   <priority>0.80</priority>
- </url>
-  
-<url>
-  <loc>https://www.triadicframeworks.org/audio_industry_reviewed/</loc>
-  <lastmod>2026-02-04</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.75</priority>
-</url>
-
-<url>
-  <loc>https://www.triadicframeworks.org/spectrum_standards_reviewed/</loc>
-  <lastmod>2026-02-04</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.70</priority>
-</url>
-
-<url>
-  <loc>https://www.triadicframeworks.org/substrate_mind_science/</loc>
-  <lastmod>2026-02-06</lastmod>
-  <changefreq>monthly</changefreq>
-  <priority>0.65</priority>
-</url>
-  
-</urlset>
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/sitemap_main.xml</loc>
+    <lastmod>2026-02-26</lastmod>
+  </sitemap>
+</sitemapindex>
