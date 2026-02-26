@@ -251,7 +251,7 @@ Here’s a curated list of major megalithic sites across continents, including t
 
 ###### Satellite-style rendering of the Younger Dryas flood, captured from orbit as glacial torrents reshape the land.
 
-<img width="1024" height="1024" alt="BCO 78e69031-3fb9-4f3a-a590-e3f3110ebb60" src="https://github.com/user-attachments/assets/f011623a-413d-4add-bd2e-6b323930926a" />
+<img width="768" height="768" alt="BCO 78e69031-3fb9-4f3a-a590-e3f3110ebb60" src="https://github.com/user-attachments/assets/f011623a-413d-4add-bd2e-6b323930926a" />
 
 ---
 
@@ -369,7 +369,7 @@ This tree imagines traits currently rare or emerging that could become dominant 
 
 ###### Painting expressing the arc from the 1700s to today. It flows from steam and rivets to satellites and smartphones, each era rendered in texture and light.
 
-<img width="1536" height="1024" alt="BCO a8d76a4d-8fe8-46f4-8b47-9a54943ba885" src="https://github.com/user-attachments/assets/9f772a06-9136-488f-bc37-a089b16e354a" />
+<img width="768" height="512" alt="BCO a8d76a4d-8fe8-46f4-8b47-9a54943ba885" src="https://github.com/user-attachments/assets/9f772a06-9136-488f-bc37-a089b16e354a" />
 
 ---
 
