@@ -26,7 +26,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 TriadicFrameworks brings together:
 
-- **Resonance‑Time Theory RTT** as a calibration framework for cross‑domain structure  
+- **Resonance‑Time Theory (RTT)** as a calibration framework for cross‑domain structure  
 - **Regime blindness analysis** to surface failure modes and hidden constraints  
 - **Domain primers** bridging mathematics, science, and applied systems  
 - **Simulation substrates** for exploratory, non‑optimizing inquiry  
