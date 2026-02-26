@@ -15,5 +15,5 @@ It reimagines sensor systems as resonance‑aware instruments for data interpret
 - Testing resonance‑aware interpretation protocols
 
 ## Cross‑Links
-- [../resonance](../resonance) → dashboards for data visualization
-- [../labs](../labs) → experimental trials of lens designs
+- [../resonance](https://www.triadicframeworks.org/resonance) → dashboards for data visualization
+- [../labs](https://www.triadicframeworks.org/labs) → experimental trials of lens designs
