@@ -1,4 +1,4 @@
-# **README.md — Identity Shadow Generator (Seed Project)**
+# **Identity Shadow Generator (Seed Project)**
 
 ## 🌱 Identity Shadow Generator  
 *A tiny RTT project for building functional, in‑session AI identities through structure, not personality.*
