@@ -9,7 +9,11 @@
 </head>
 
 <body class="dark-mode">
-  <div data-include="nav.html"></div>
+    <script>
+      fetch('/rtt/nav.html')
+        .then(r => r.text())
+        .then(html => document.getElementById('rtt-nav').innerHTML = html);
+    </script>
 
   <main class="rtt-page">
     <h1 class="rtt-hero-title">Bundle Builder</h1>
