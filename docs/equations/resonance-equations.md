@@ -1,7 +1,8 @@
-## 🔮 Resonance Equations
+## 🔮 Resonance Equations — RTT Operators
 
-These equations define **symbolic resonance operators** used within RTT to map time, archetype, and lineage into structured triads.  
-They are **not physical laws** and do not assert causal dynamics. Their role is to provide a **repeatable symbolic scaffold** for cross‑domain coherence checks.
+Resonance Equations define **symbolic operators** used within RTT to orient time, archetype, and lineage into repeatable triadic forms.
+
+They do **not** assert physical causation, frequency mechanics, or predictive dynamics. Their purpose is to support **cross‑domain coherence checks** where time and meaning interact.
 
 ---
 
@@ -15,7 +16,7 @@ $$E = \text{hour}, \quad M = \text{month}, \quad OC = (\text{day} \bmod 3)$$
 
 
 
-Resulting triad:
+Resulting form:
 
 
 
