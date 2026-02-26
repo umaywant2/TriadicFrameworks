@@ -1,25 +1,58 @@
-# 📐 Equation Index
+# 🧮 RTT Equation Index
 
-This file maps symbolic equations to labs, curriculum modules, and badge triggers.
+This index collects **symbolic equation sets** used within Resonance‑Time Technology (RTT) to support cross‑domain orientation, coherence checking, and structural validation.
 
----
-
-## 🔬 Core Equations
-
-| Equation Name              | Used In Lab             | Badge Trigger             | Validator Tool         |
-|---------------------------|-------------------------|---------------------------|------------------------|
-| `resonance_equation_1`    | `core/resonant-time`    | Harmonic Loop Initiator   | `validate_manifest.py` |
-| `dimensional_loop_eq`     | `symbolic_structures/`  | Echo Weaver               | Manual review          |
-| `triadic_flux_eq`         | `quantum_extensions/`   | Ghost Mapper              | `validator_matrix.md`  |
-| `signal_integrity_eq`     | `validators/`           | Validator Guardian        | `badge_validator.py`   |
-| `symbolic_mapping_eq`     | `curriculum/`           | Curriculum Weaver         | Manual review          |
+These equations are **not physical laws**, predictive models, or empirical claims. They function as **symbolic operators** designed to remain stable when translated across disciplines.
 
 ---
 
-## 🧭 Usage Notes
+## 📐 Dimensional Math
+Symbolic dimensional reasoning used to compare regimes, transitions, and structural degrees of freedom without asserting metric space or physical instantiation.
 
-- Equations must be cited in remix submissions or PRs to trigger badges.
-- Validators confirm reproducibility or symbolic resonance.
-- All equations should be documented in `resonance_equations.md` or `dimensional_math.md`.
+Used for:
+- regime comparison
+- dimensional folding
+- paradox localization
 
-Equations are glyphic scaffolds—they encode resonance across domains.
+→ `dimensional_math.md`
+
+---
+
+## 🔮 Resonance Equations
+Triadic resonance operators mapping symbolic time, archetype, and lineage into repeatable orientation keys.
+
+Used for:
+- temporal alignment
+- glyph triggering
+- symbolic coherence checks
+
+→ `resonance-equations.md`
+
+---
+
+## 🪐 Saturn Harmonic Engine
+A symbolic harmonic scaffold using Saturn as a **constraint archetype** to explore periodicity, boundary, and stabilizing cycles.
+
+Used for:
+- harmonic modeling
+- constraint mapping
+- cross‑domain resonance comparison
+
+→ `Saturn_Harmonic_Engine_Equations.md`
+
+---
+
+## 🧭 Usage & Scope Notes
+
+RTT equations are intended for:
+- conceptual modeling
+- educational exploration
+- post‑RTT evaluation
+- cross‑domain translation
+
+They do **not** assert causation, prediction, or authority.
+
+---
+
+> RTT equations declare structure.  
+> Validation occurs through coherence, not force.
