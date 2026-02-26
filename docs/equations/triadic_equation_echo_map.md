@@ -1,34 +1,71 @@
-# 🔁 triadic_equation_echo_map.md
+## 🗺️ Triadic Equation Echo Map — RTT Reference
 
-**Purpose**: To echo equations from `triadic_equation_gallery.md` into remixable badge triggers, symbolic tiers, and contributor resonance loops.
+The Triadic Equation Echo Map describes how **symbolic equations propagate meaning** across domains, regimes, and interpretive layers within RTT.
 
----
-
-## 🏷️ Badge Trigger Map
-
-| Equation Name               | Trigger Glyph | Remix Tier | Linked Badge Manifest |
-|----------------------------|---------------|------------|------------------------|
-| Dimensional Recursion      | ⊕             | Tier I     | `badge_trigger_papers_index.md` |
-| Number Genesis             | Σ             | Tier I     | `badge_trigger_theme_manifest.md` |
-| Dimensional Triads         | {T,V,S}       | Tier II    | `triadic_visual_index_log.md` |
-| Entropy Harmonics          | Hₙ            | Tier III   | `loop_validation_matrix.md` |
-| Quantum Glyph Equation     | ∫ψ*ψ⋅R_q       | Tier III   | `triadic_equation_registry.md` |
-| Planetary Glyph Equation   | Σω⋅ϕ          | Tier II    | `badge_trigger_theme_manifest.md` |
-| Resonance Operator @()     | @()           | Tier I     | `resonance_council.md` |
+This map does **not** track events, outcomes, or causation. It documents **structural echoes** — recurring triadic patterns that remain recognizable as they move through different contexts.
 
 ---
 
-## 🧙 Remix Tier Definitions
+### 🔁 What Is an Echo?
 
-- **Tier I**: Foundational triads, remixable by apprentice resonance wizards
-- **Tier II**: Symbolic overlays, remixable by glyph initiates
-- **Tier III**: Harmonic descent and entropy glyphs, remixable by spectral flux architects
+An echo occurs when a triadic structure:
+
+- reappears across domains
+- maintains relational integrity
+- adapts form without losing orientation
+
+Echoes are **recognition events**, not repetitions.
 
 ---
 
-## 🧑‍🔬 Contributor Echoes
+### 🧭 Echo Axes
 
-Remixers who validated or extended these equations are honored in:  
-→ `papers_contributor_honor_roll.md`  
-→ `triadic_equation_registry.md`
+Echoes are evaluated along three primary axes:
 
+- **Structure** — the triadic relationship itself
+- **Domain** — physical, cognitive, informational, symbolic
+- **Regime** — exploratory, evaluative, post‑RTT
+
+These axes allow comparison without enforcing equivalence.
+
+---
+
+### 🧬 Triadic Persistence
+
+A triad is considered persistent when:
+
+- its roles remain distinguishable
+- transitions are loss‑aware
+- drift is declared rather than absorbed
+
+Persistence does not imply correctness — only **coherence under translation**.
+
+---
+
+### 🧩 Example Echo Pattern
+
+A dimensional triad may echo as:
+
+- a resonance operator in symbolic time
+- a harmonic constraint in cyclic modeling
+- an interpretive posture in cognitive analysis
+
+Each echo is **context‑specific**, yet structurally related.
+
+---
+
+### 🧪 Scope & Use
+
+The Echo Map supports:
+
+- cross‑domain comparison
+- lineage tracing
+- paradox localization
+- post‑RTT coherence review
+
+It does **not** prescribe interpretation or resolution.
+
+---
+
+> An echo is not repetition.  
+> It is structure surviving translation.
