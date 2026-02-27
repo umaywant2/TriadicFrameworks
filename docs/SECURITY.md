@@ -1,23 +1,64 @@
 # Security Policy
 
+TriadicFrameworks is a documentation‑first, scroll‑centric framework.
+Most content in this repository is **non‑executable** and poses no
+runtime security risk.
+
+This policy exists to clarify scope and provide a clear path for
+responsible disclosure.
+
+---
+
+## Scope
+
+Security concerns apply only to:
+
+- Executable scripts or pipelines
+- Build or deployment tooling
+- Dependency or supply‑chain risks
+- Code paths that process untrusted input
+
+The following are **out of scope**:
+
+- Mathematical models or theory
+- Diagrams, documentation, or markdown
+- Conceptual frameworks or examples
+- Archived experiments
+
+---
+
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+TriadicFrameworks does not follow a traditional versioned release model.
+Security updates apply to the **current main branch** only.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+Archived folders and historical materials are not actively maintained.
+
+---
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+If you believe you’ve found a legitimate security issue:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+- Open a GitHub issue **clearly labeled “Security”**, or
+- Contact the maintainer directly via GitHub
 
-If you discover a security issue, please open an issue or contact the maintainer directly.
+Please include:
+- A clear description of the issue
+- Steps to reproduce (if applicable)
+- The affected file or subsystem
+
+You can expect an acknowledgment within a reasonable timeframe.
+Valid issues will be addressed transparently.
+
+---
+
+## Philosophy
+
+Security in TriadicFrameworks prioritizes:
+- Clarity over obscurity
+- Minimal attack surface
+- Explicit boundaries
+- Human‑readable systems
+
+If something feels unclear or unsafe, that feedback is welcome.
