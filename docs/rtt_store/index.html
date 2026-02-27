@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>RTT Store | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -30,7 +35,32 @@
   --rtt-accent-low:  #7aa2f7;   /* cool / entry */
   --rtt-accent-mid:  #9ece6a;   /* balance */
   --rtt-accent-high: #f7768e;   /* emphasis */
-  } 
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -45,7 +75,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   }
-   
+
   /* Headings */
   h1, h2, h3, h4 {
   font-weight: 700;
@@ -73,31 +103,6 @@
   color: #cfe8ff;
   }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-   
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-   
 nav {
   width: 260px;
   float: left;
@@ -150,17 +155,17 @@ code {
   color: var(--text-main);
 }
 </style>
-
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
    
-<nav>
-
+<nav class="nav-band">
+  
   <h2>🛒 RTT Store | TriadicFrameworks</h2>
 
-    <a href="#README">📄 Store Overview — Philosophy, structure, and how to navigate offerings</a>
+    <a href="#README">🔰 Store Overview — Philosophy, structure, and how to navigate offerings</a>
 
   <h3>🎨 Branding</h3>
     <a href="#BRANDING_README">🧩 Branding Overview — Identity and usage guidelines</a>
@@ -224,30 +229,16 @@ code {
   <a href="#TRAINING_LLM_RESONANCE">🤖 LLM Resonance Training — AI alignment tools</a>
   <a href="#TRAINING_RTT_KIDS">🧒 RTT Kids — Child‑friendly RTT learning</a>
   <a href="../">🔙</a>
-
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+  
 </nav>
 
 <main id="content"></main>
 
 <script>
-
-function loadDoc(file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${file}`);
-      }
-      return response.text();
-    })
-    .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
-    })
-    .catch(err => {
-      document.getElementById('content').innerHTML =
-        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
-      console.error(err);
-    });
-}
 
 const DOC_MAP = {
   README: 'README.md',
@@ -313,7 +304,7 @@ const DOC_MAP = {
   TRAINING_LLM_RESONANCE: 'training/llm_resonance_training.md',
   TRAINING_RTT_KIDS: 'training/rtt_kids.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -322,14 +313,33 @@ function loadFromHash() {
     loadDoc('README.md');
   }
 }
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
 </script>
 
-
 </body>
 </html>
-
-
