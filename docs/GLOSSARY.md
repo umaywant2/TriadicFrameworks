@@ -1,102 +1,58 @@
-## Core RTT & TriadicFrameworks Terms (what should be here)
+## Core RTT & TriadicFrameworks Terms 
 
-Based on your repo, site sitemap, workflows, awareness page, and recent cleanups, these are the **must‑have terms** that help people orient *today*.
+> This glossary defines the current, canonical terms used across TriadicFrameworks. Historical and pre‑RTT terminology has been archived for reference.
 
-### Core substrate & theory
-- **RTT (Resonance‑Time Theory)** — The triadic substrate model underlying the framework.
+### 1. RTT & TriadicFrameworks (foundation)
+
+These terms anchor *everything else*. If any are missing or only implied, they should be explicit.
+
+- **RTT (Resonance‑Time Theory)** — The triadic substrate model underlying TriadicFrameworks.
 - **Triadic Substrate** — A three‑component structural basis shared across domains.
 - **Resonance** — Stable alignment across triadic components.
-- **Time (RTT context)** — A structural dimension, not just a clock.
 - **Invariant** — A property preserved across transformations.
-- **Triphasic** — Three‑phase structural behavior (keep concise).
+- **Triphasic** — Three‑phase structural behavior within the substrate.
+- **Time (RTT context)** — A structural dimension, not merely a clock or sequence.
 
-### Scroll‑centric architecture
+These definitions should be short, calm, and non‑speculative.
+
+---
+
+### 2. Scroll‑centric architecture (what people actually use)
+
+This is the most important section for newcomers today.
+
 - **Scroll** — Canonical RTT artifact used for execution, remix, and lineage.
-- **Scroll Pipeline** — Engine that executes scrolls (Python or JS).
+- **Scroll Pipeline** — Engine that executes scrolls (Python or JavaScript).
 - **Remix** — Lineage‑safe transformation of a scroll.
 - **Batch Orchestrator** — Executes multiple scrolls or variants.
 - **Lineage** — Traceable ancestry of scroll variants.
 - **Canonical** — Authoritative, stable reference form.
 
-### Awareness & education
+If someone reads the Workflows page and then opens the glossary, *every noun they saw should be here*.
+
+---
+
+### 3. Awareness & education (how people encounter RTT)
+
+This section prevents the “fish story” reaction by setting boundaries.
+
 - **RTT Awareness** — Passive understanding of RTT concepts without execution.
 - **RTT‑Inside** — Optional local execution or experimentation.
 - **Substrate‑agnostic** — Works without replacing existing tools.
 - **Multi‑domain** — Applicable across disciplines without collision.
+- **Wrapper Model** — Adds structure without breaking existing systems.
 
-### Project structure & philosophy
+These terms should explicitly say what RTT **does not** do as much as what it does.
+
+---
+
+### 4. Project structure & philosophy (why the repo looks this way)
+
+This helps contributors and reviewers.
+
 - **Documentation‑first** — Docs are primary artifacts, not afterthoughts.
 - **Archive Experiments** — Preserved historical or exploratory materials.
 - **Non‑enforcing** — RTT does not impose control or authority.
-- **Wrapper Model** — Adds structure without breaking existing systems.
+- **Lineage Preservation** — Historical materials are kept, not erased.
 
-If any of these are missing or only implied in the current glossary, they should be added.
-
----
-
-## Pre‑RTT / Historical Terms (what should move down)
-
-These are valuable, but they **no longer belong in the main cognitive path**.
-
-Typical candidates (based on your repo history and tabs):
-
-- **TFT 3‑Pack**
-- **entft**
-- **nous**
-- **corridor**
-- **early hooks**
-- **legacy engines**
-- **experimental validators**
-- **pre‑scroll artifacts**
-- **early awareness metaphors**
-
-They should be clearly labeled as:
-> “Terms used during early development prior to the current scroll‑centric architecture.”
-
-No rewriting needed — just relocation.
-
----
-
-## Tone guidance (this matters)
-
-For the main glossary:
-- Declarative, calm, non‑mythic
-- No “this explains everything”
-- No future promises
-
-For Pre‑RTT:
-- Historical, reflective, honest
-- “This is how we thought about it then”
-
-That contrast alone dissolves the “fish story” problem.
-
----
-
-## Best‑effort check against the site sitemap
-
-From the sitemap and awareness pages, the glossary should **at least** support:
-- RTT
-- Awareness
-- Education
-- Workflows
-- Scrolls
-- Remix
-- Batch
-- Lineage
-- Canonical artifacts
-
-If a reader clicks any of those and then opens the glossary, they should feel *relief*, not confusion.
-
----
-
-## The quiet win here
-
-Once this is done:
-- The glossary becomes a **trust anchor**
-- Pre‑RTT becomes **lineage, not baggage**
-- New readers stop wondering “is this a cult or a framework?”
-- Old readers still see the full arc
-
-That’s maturity, not erasure.
-
-When you’re ready, paste the current `GLOSSARY.md` content and I’ll do a **surgical re‑ordering** — no fluff, no over‑editing, just clean separation and missing‑term fill‑ins.
+This section quietly signals maturity.
