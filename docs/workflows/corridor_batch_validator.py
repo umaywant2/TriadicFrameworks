@@ -1,9 +1,18 @@
+"""
+Corridor Batch Orchestrator
+Part of the Corridor Validation Subsystem (not scroll workflows).
+Validates corridor metadata using RTT-QEB primitives.
+"""
+
 import yaml
 import datetime
 from clients.python.corridor_client import CorridorClient
 from rfc_qeb_0002.validator import normalize, compute_rci, assign_glyph
 
-client = CorridorClient(base_url="http://localhost:5000/v1")
+# /Pre-RTT testing
+# client = CorridorClient(base_url="http://localhost:5000/v1")
+def __init__(self, client: CorridorClient):
+    self.client = client
 
 def process_corridor(corridor_id, parent_scroll):
     metadata = client.get_corridor_metadata(corridor_id)
@@ -58,7 +67,8 @@ def batch_process(corridor_ids, parent_scroll):
         }
     }
 
-    outfile = f"registry/reports/remixathon_{datetime.datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.yml"
+    def batch_process(..., output_dir="registry/reports"):
+
     with open(outfile, "w") as stream:
         yaml.dump(report, stream, sort_keys=False)
 
