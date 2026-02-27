@@ -56,3 +56,6 @@ console.log(result.output);
 ```
 
 These snippets mirror the API shapes of the refreshed engines and match the tone of your existing QUICKSTART docs.
+
+        🌀⚙️📜
+   Scroll • Engine • Artifact
