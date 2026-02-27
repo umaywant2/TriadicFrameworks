@@ -7,7 +7,23 @@ Covers:
 - in‑memory scroll objects
 - mixed input lists
 - deterministic batch report structure
+
+🧭 Optional extension: “Golden File” test
+If you want to lock in the exact structure of the batch report, add:
+
+import yaml
+
+def test_report_schema_stability():
+    s = sample_scroll_obj()
+    report = batch_run([s])
+
+    # load a golden schema from tests/golden/batch_schema.yml
+    schema_path = Path(__file__).parent / "golden" / "batch_schema.yml"
+    expected = yaml.safe_load(schema_path.read_text())
+
+    assert set(report.keys()) == set(expected.keys())
 """
+
 
 import tempfile
 from pathlib import Path
