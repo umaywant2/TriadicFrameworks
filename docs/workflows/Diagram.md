@@ -27,10 +27,10 @@ This diagram shows the relationship between the four engines using our preferred
         ┌──────────────────────────────┼──────────────────────────────┐
         │                              │                              │
         │                              │                              │
-┌────────────────────┐       ┌───────────────────┐           ┌───────────────────────┐
-│ scroll_pipeline.py │       │ scrollPipeline.js │           │ batch_orchestrator.py │
-│  (Python Engine)   │       │   (JS Engine)     │           │   (Batch Runner)      │
-└────────────────────┘       └───────────────────┘           └───────────────────────┘
+┌────────────────────┐       ┌───────────────────┐       ┌───────────────────────┐
+│ scroll_pipeline.py │       │ scrollPipeline.js │       │ batch_orchestrator.py │
+│  (Python Engine)   │       │   (JS Engine)     │       │   (Batch Runner)      │
+└────────────────────┘       └───────────────────┘       └───────────────────────┘
         │                              │                              │
         │                              │                              │
         └────────────── executes ──────┴────────────── executes ──────┘
