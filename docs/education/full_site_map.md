@@ -321,3 +321,8 @@ TriadicFrameworks/
       ├── _ideas/
       └── _template/
 ```
+
+---
+
+###### #[RTT](https://www.triadicframeworks.org/rtt) #[TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/wiki) #[ResonanceTimeTheory](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Resonance-Time_Theory.md)  
+###### rtt=1 | coherence=declared | drift=bounded | paradox=structural
