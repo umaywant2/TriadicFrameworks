@@ -5,7 +5,7 @@ This directory contains **lightweight, substrate‑agnostic workflow modules** u
 
 Each workflow is intentionally minimal: no external dependencies, no hidden state, and no assumptions about the host environment. They are designed to be **portable**, **inspectable**, and **safe to remix**.
 
-> ## 🌀 Workflow Engines — Index Card
+> ## 🗂️ Index Card
 > Lightweight, substrate‑agnostic execution tools for scrolls, batches, and remix lineages.
 >
 > - **📦 Batch Orchestrator** — deterministic multi‑scroll execution  
