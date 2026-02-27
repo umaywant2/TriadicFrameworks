@@ -25,7 +25,7 @@ python logic_shells/full_symbolic_fidelity_shell.py
 
 ## 2. Invoke the Protocol
 ```bash
-cd ../enTFT/protocol-core
+cd ../entft/protocol-core
 python resonance_cipher.py --input sample.txt --output encrypted.tft
 ```
 Activate a scroll:
@@ -76,7 +76,7 @@ echo "Your Name — Contribution" >> ../contributors/honor_roll.md
 
 ## 7. Cross‑links
 - [nous](docs/TFT_3Pack_v1.3/tft/nous/) → runtime environment
-- [enTFT](docs/TFT_3Pack_v1.3/tft/entft/) → protocol layer
+- [entft](docs/TFT_3Pack_v1.3/tft/entft/) → protocol layer
 - [tops](docs/TFT_3Pack_v1.3/tft/tops/) → orchestration layer
 - [folds](docs/TFT_3Pack_v1.3/tft/tops/folds/) → resonance data
 - [ai_pipeline](docs/TFT_3Pack_v1.3/tft/tops/ai_pipeline) → predictive intelligence
