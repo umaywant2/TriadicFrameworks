@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>Enterprise Structural Awareness</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Structural Awareness | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,53 +161,57 @@ code {
 
 <body>
    
-<nav>
+<nav class="nav-band">
   
   <h2>🛂 Enterprise Structural Awareness — Documentation Index</h2>
   <!-- ROOT -->
     <a href="#README">📘 README — Introduction to enterprise structural awareness.</a>
-  <h2>🎯 Overview — Purpose and boundaries</h2>
+  <h3>🎯 Overview — Purpose and boundaries</h3>
   <!-- OVERVIEW -->
     <a href="#OVERVIEW_PURPOSE">🎯 Purpose — Why structural awareness matters in enterprise systems.</a>
     <a href="#OVERVIEW_SCOPE_AND_NON_GOALS">📏 Scope & Non‑Goals — What this framework does and does not attempt.</a>
     <a href="#OVERVIEW_TERMINOLOGY_ALIGNMENT">📚 Terminology Alignment — Shared language across teams and systems.</a>
-  <h2>🧩 Entry Points — Where structure already exists</h2>
+  <h3>🧩 Entry Points — Where structure already exists</h3>
   <!-- ENTRY POINTS -->
     <a href="#ENTRY_CONFIGURATION_SURFACES">🧩 Configuration Surfaces — Where structure already exists.</a>
     <a href="#ENTRY_POLICY_OBJECTS">📜 Policy Objects — Declarative policy as structural signal.</a>
     <a href="#ENTRY_METADATA_AND_ANNOTATIONS">🏷️ Metadata & Annotations — Lightweight structural markers.</a>
     <a href="#ENTRY_LIFECYCLE_STATES">🔄 Lifecycle States — Structural awareness across system lifecycles.</a>
-  <h2>🧬 Minimal Schema — Declarative foundations</h2>
+  <h3>🧬 Minimal Schema — Declarative foundations</h3>
   <!-- MINIMAL SCHEMA -->
     <a href="#SCHEMA_STRUCTURAL_AWARENESS">🧬 Structural Awareness Schema — Minimal declarative schema.</a>
     <a href="#SCHEMA_EXAMPLE_SINGLE_FILE">📄 Example Single File — Minimal working example.</a>
     <a href="#SCHEMA_DESIGN_NOTES">📝 Schema Design Notes — Rationale and design constraints.</a>
-  <h2>🕊️ Integration Patterns — Non‑intrusive adoption</h2>
+  <h3>🕊️ Integration Patterns — Non‑intrusive adoption</h3>
   <!-- INTEGRATION PATTERNS -->
     <a href="#INTEGRATION_PASSIVE_DECLARATION">🕊️ Passive Declaration — Structural awareness without enforcement.</a>
     <a href="#INTEGRATION_DOCUMENTATION_ONLY_ADOPTION">📖 Documentation‑Only Adoption — Zero‑risk entry pattern.</a>
     <a href="#INTEGRATION_OBSERVABILITY_ALIGNMENT">📊 Observability Alignment — Aligning metrics with structure.</a>
     <a href="#INTEGRATION_AUTOMATION_BOUNDARY_MARKERS">🚦 Automation Boundary Markers — Declaring safe automation edges.</a>
-  <h2>⚙️ Enterprise Examples — Applied clarity</h2>
+  <h3>⚙️ Enterprise Examples — Applied clarity</h3>
   <!-- ENTERPRISE EXAMPLES -->
     <a href="#EXAMPLE_CONFIGURATION_MANAGEMENT">⚙️ Configuration Management — Structural clarity in config systems.</a>
     <a href="#EXAMPLE_IDENTITY_AND_ACCESS">🔐 Identity & Access — Structural awareness in IAM.</a>
     <a href="#EXAMPLE_MONITORING_AND_ALERTING">🚨 Monitoring & Alerting — Interpreting signals structurally.</a>
     <a href="#EXAMPLE_SERVICE_ORCHESTRATION">🧵 Service Orchestration — Structural coordination across services.</a>
-  <h2>🔧 Operational Implications — Change and incidents</h2>
+  <h3>🔧 Operational Implications — Change and incidents</h3>
   <!-- OPERATIONAL IMPLICATIONS -->
     <a href="#OPERATIONS_CHANGE_MANAGEMENT">🔧 Change Management — Structural context for change.</a>
     <a href="#OPERATIONS_INCIDENT_INTERPRETATION">🧯 Incident Interpretation — Understanding incidents structurally.</a>
     <a href="#OPERATIONS_POSTMORTEM_CLARITY">🧾 Postmortem Clarity — Clear narratives without blame.</a>
-  <h2>🔗 Relationships — Adjacent frameworks</h2>
+  <h3>🔗 Relationships — Adjacent frameworks</h3>
   <!-- RELATIONSHIPS -->
     <a href="#RELATIONSHIP_TO_MSRM">🔗 Relationship to MSRM — Manufacturing substrate alignment.</a>
     <a href="#RELATIONSHIP_TO_RSM">🌊 Relationship to RSM — Resonance substrate alignment.</a>
-  <h2>🔮 Future Directions — Open exploration</h2>
+  <h3>🔮 Future Directions — Open exploration</h3>
   <!-- FUTURE -->
     <a href="#FUTURE_DIRECTIONS">🔮 Future Directions — Possible extensions and explorations.</a>
     <a href="../">🔙</a>
-
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+  
 </nav>
 
 <main id="content"></main>
@@ -183,48 +220,40 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Overview
   OVERVIEW_PURPOSE: 'overview/purpose.md',
   OVERVIEW_SCOPE_AND_NON_GOALS: 'overview/scope_and_non_goals.md',
   OVERVIEW_TERMINOLOGY_ALIGNMENT: 'overview/terminology_alignment.md',
-
   // Entry Points
   ENTRY_CONFIGURATION_SURFACES: 'entry_points/configuration_surfaces.md',
   ENTRY_POLICY_OBJECTS: 'entry_points/policy_objects.md',
   ENTRY_METADATA_AND_ANNOTATIONS: 'entry_points/metadata_and_annotations.md',
   ENTRY_LIFECYCLE_STATES: 'entry_points/lifecycle_states.md',
-
   // Minimal Schema
   SCHEMA_STRUCTURAL_AWARENESS: 'minimal_schema/structural_awareness.schema.json',
   SCHEMA_EXAMPLE_SINGLE_FILE: 'minimal_schema/example_single_file.yaml',
   SCHEMA_DESIGN_NOTES: 'minimal_schema/schema_design_notes.md',
-
   // Integration Patterns
   INTEGRATION_PASSIVE_DECLARATION: 'integration_patterns/passive_declaration.md',
   INTEGRATION_DOCUMENTATION_ONLY_ADOPTION: 'integration_patterns/documentation_only_adoption.md',
   INTEGRATION_OBSERVABILITY_ALIGNMENT: 'integration_patterns/observability_alignment.md',
   INTEGRATION_AUTOMATION_BOUNDARY_MARKERS: 'integration_patterns/automation_boundary_markers.md',
-
   // Enterprise Examples
   EXAMPLE_CONFIGURATION_MANAGEMENT: 'enterprise_examples/configuration_management.md',
   EXAMPLE_IDENTITY_AND_ACCESS: 'enterprise_examples/identity_and_access.md',
   EXAMPLE_MONITORING_AND_ALERTING: 'enterprise_examples/monitoring_and_alerting.md',
   EXAMPLE_SERVICE_ORCHESTRATION: 'enterprise_examples/service_orchestration.md',
-
   // Operational Implications
   OPERATIONS_CHANGE_MANAGEMENT: 'operational_implications/change_management.md',
   OPERATIONS_INCIDENT_INTERPRETATION: 'operational_implications/incident_interpretation.md',
   OPERATIONS_POSTMORTEM_CLARITY: 'operational_implications/postmortem_clarity.md',
-
   // Relationships
   RELATIONSHIP_TO_MSRM: 'relationship_to_msrm.md',
   RELATIONSHIP_TO_RSM: 'relationship_to_rsm.md',
-
   // Future
   FUTURE_DIRECTIONS: 'future_directions.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -263,6 +292,3 @@ loadFromHash();
 
 </body>
 </html>
-
-
-
