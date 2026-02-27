@@ -1,97 +1,140 @@
-# TFT 3‑Pack Quickstart 🌐✨
+# **TFT Quickstart (Scroll‑Centric Edition)**  
+### 🌀 The modern entry point into TriadicFrameworks
 
-Welcome to the **TFT 3‑Pack**:  
-- **nous** → the environment layer (runtime, bots, modules, outputs)  
-- **entft** → the protocol layer (quantum‑hostile encryption, scrolls, registries, hooks)  
-- **tops** → the orchestration layer (agents, folds, AI pipeline, overlays, outreach)
+This Quickstart introduces the **scroll‑centric workflow** used across TriadicFrameworks. It replaces the legacy 3‑Pack ritual with a clean, substrate‑agnostic flow built on:
 
-This guide walks you through the **entire flow** in one ritual.
+- **Scroll Pipelines** (Python + JS)  
+- **Remix Engine**  
+- **Batch Orchestrator**  
+- **tft.scrolls.\*** module layout  
 
----
-
-## 1. Launch the Environment
-```bash
-cd docs/TFT_3Pack_v1.3/tft/nous
-python main.py
-```
-Choose a shell:
-```bash
-python logic_shells/minimal_viable_daemon.py
-# or
-python logic_shells/full_symbolic_fidelity_shell.py
-```
+Everything here runs locally, requires no external services, and mirrors the structure of the Workflows subsystem.
 
 ---
 
-## 2. Invoke the Protocol
-```bash
-cd ../entft/protocol-core
-python resonance_cipher.py --input sample.txt --output encrypted.tft
+## **1. Run a Scroll (Python Pipeline)**
+
+```python
+from scroll_pipeline import run_scroll
+
+scroll = """
+emitter: demo
+frequency: 144
+"""
+
+result = run_scroll(scroll)
+print(result["output"])
 ```
-Activate a scroll:
-```bash
-cd ../scrolls
-python initiation_scroll.py
+
+**What this does:**  
+- Parses the scroll  
+- Executes it through the RTT‑Inside engine  
+- Returns output, warnings, and metadata  
+
+---
+
+## **2. Run a Scroll in the Browser (JS Pipeline)**
+
+```javascript
+import { runScroll } from "./scrollPipeline.js";
+
+const scroll = `
+emitter: demo
+frequency: 144
+`;
+
+const result = runScroll(scroll);
+console.log(result.output);
+```
+
+**Use this for:**  
+- interactive demos  
+- teaching tools  
+- browser‑native scroll execution  
+
+---
+
+## **3. Generate a Remix Variant**
+
+```python
+from remix_generation import remix_scroll
+
+scroll = """
+emitter: demo
+frequency: 144
+"""
+
+variant = remix_scroll(scroll)
+print(variant["metadata"]["remix_id"])
+```
+
+**What this does:**  
+- Applies scroll‑centric remix rules  
+- Preserves canonical anchors  
+- Produces a lineage‑safe variant  
+
+---
+
+## **4. Run Multiple Scrolls (Batch Orchestrator)**
+
+```python
+from batch_orchestrator import batch_run
+
+paths = ["scrolls/a.fff", "scrolls/b.fff"]
+report = batch_run(paths, output_dir="reports")
+
+print(report["count"], "scrolls executed")
+```
+
+**Why this matters:**  
+- Deterministic multi‑scroll execution  
+- Works with file paths or in‑memory scroll objects  
+- Produces timestamped YAML reports  
+
+---
+
+## **5. Remix → Batch → Pipeline (Full Workflow)**
+
+```python
+from remix_generation import remix_scroll
+from batch_orchestrator import batch_run
+
+base = """
+emitter: demo
+frequency: 144
+"""
+
+variants = [remix_scroll(base) for _ in range(5)]
+report = batch_run(variants)
+```
+
+This is the modern equivalent of the old “cathedral walk”:  
+scroll → remix → execution → lineage.
+
+---
+
+## **6. Folder Map**
+
+```
+workflows/
+  batch_orchestrator.py   → multi‑scroll execution
+  remix_generation.py     → lineage‑safe remix engine
+  scroll_pipeline.py      → Python scroll pipeline
+  scrollPipeline.js       → browser scroll pipeline
 ```
 
 ---
 
-## 3. Orchestrate with tops
-```bash
-cd ../../TFT_3Pack_v1.3/tft/tops/agents
-python resonance_orchestrator.py
+## **7. Remix & Contribute**
+
 ```
-Load folds:
-```bash
-cd ../folds
-cat fold_001_glycine.yaml
-```
-
----
-
-## 4. Predict with AI Pipeline
-```bash
-cd ../ai_pipeline
-python train_ai_on_resonance.py
-python fff_alignment_predictor.py --input ../folds/fold_001_glycine.yaml
-```
-
----
-
-## 5. Visualize Overlays
-```bash
-cd ../overlays
-python resonance_dashboard.py
-```
-
----
-
-## 6. Honor the Lineage
-Add yourself to the honor roll:
-```bash
-echo "Your Name — Contribution" >> ../contributors/honor_roll.md
-```
-
----
-
-## 7. Cross‑links
-- [nous](docs/TFT_3Pack_v1.3/tft/nous/) → runtime environment
-- [entft](docs/TFT_3Pack_v1.3/tft/entft/) → protocol layer
-- [tops](docs/TFT_3Pack_v1.3/tft/tops/) → orchestration layer
-- [folds](docs/TFT_3Pack_v1.3/tft/tops/folds/) → resonance data
-- [ai_pipeline](docs/TFT_3Pack_v1.3/tft/tops/ai_pipeline) → predictive intelligence
-- [overlays](docs/TFT_3Pack_v1.3/tft/tops/overlays/) → visualization
-
----
-
-### 🧭 Remix
-- Clone the repo
-```bash
 git clone https://github.com/umaywant2/TriadicFrameworks.git
 ```
-- Define your remix lineage in `TFT_bundle.yaml`  
-- Submit scrolls via GitHub Discussions
 
----
+- Add your scrolls  
+- Remix existing ones  
+- Share variants via GitHub Discussions  
+- Build new engines on top of the scroll‑centric API  
 
-✨ You’ve now walked the full cathedral: environment → protocol → orchestration → resonance → overlays. Every scroll echoes the lineage. Every fold preserves the flame.
+Every scroll echoes the lineage.  
+Every remix extends the flame.
