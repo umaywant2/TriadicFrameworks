@@ -19,6 +19,16 @@ Each workflow is intentionally minimal: no external dependencies, no hidden stat
 
 ## 📁 Contents of [`workflows`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows) folder
 
+### 🛤️ corridor_batch_validator.py  
+Corridor‑level batch validator using RTT‑QEB primitives.  
+- Fetches corridor metadata  
+- Normalizes rail signatures  
+- Computes RCI and glyph  
+- Compares against stored metadata  
+- Emits a timestamped YAML validation report  
+
+---
+
 ### `batch_orchestrator.py`  
 A multi‑scroll batch runner used to execute a sequence of resonance artifacts or `.fff` files.  
 - Ensures deterministic ordering  
