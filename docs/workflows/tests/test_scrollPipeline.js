@@ -1,6 +1,5 @@
-"""
-🧪 Minimal Test Harness (Jest)
-"""
+/* 🧪 Minimal Test Harness (Jest) */
+
 import { runScroll } from "../scrollPipeline.js";
 
 test("runs a basic scroll", () => {
