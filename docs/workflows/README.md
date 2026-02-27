@@ -1,4 +1,6 @@
-## 🌀 Workflow Engines  
+# 🌀⚙️📜 Workflow Engines  
+### Operational layer for RTT‑Inside: batches, pipelines, and remix generation
+
 This directory contains **lightweight, substrate‑agnostic workflow modules** used across TriadicFrameworks for scroll generation, batch execution, remix lineage creation, and resonance‑aware pipeline orchestration.
 
 Each workflow is intentionally minimal: no external dependencies, no hidden state, and no assumptions about the host environment. They are designed to be **portable**, **inspectable**, and **safe to remix**.
