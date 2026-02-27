@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Pre-RTT Papers | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -122,72 +155,58 @@ code {
   color: var(--text-main);
 }
 </style>
-
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
    
-<nav>
-
+<nav class="nav-band">
+  
   <h2>📜 Pre‑RTT Papers — Index</h2>
-  <a href="#CATEGORY_INDEX">📁 Category Index — Master index of pre‑RTT papers</a>
-  <a href="#README">📄 README — Overview of the pre‑RTT archive</a>
+    <a href="#CATEGORY_INDEX">📁 Category Index — Master index of pre‑RTT papers</a>
+    <a href="#README">📄 README — Overview of the pre‑RTT archive</a>
   <h3>🌱 Early Triadic Foundations</h3>
-  <a href="#TRIADIC_FRAMEWORK_FOR_EVERYTHING">🌐 Triadic Framework for Everything — Early unification attempt</a>
-  <a href="#TRIADIC_NUMBER_GENESIS">🔢 Triadic Number Genesis — Proto‑numeric triads</a>
-  <a href="#DIMENSIONAL_TRIADS">📐 Dimensional Triads — Early dimensional structure</a>
-  <a href="#HOLE_TYPES_COMPARED">🕳️ Hole Types Compared — Pre‑RTT hole taxonomy</a>
+    <a href="#TRIADIC_FRAMEWORK_FOR_EVERYTHING">🌐 Triadic Framework for Everything — Early unification attempt</a>
+    <a href="#TRIADIC_NUMBER_GENESIS">🔢 Triadic Number Genesis — Proto‑numeric triads</a>
+    <a href="#DIMENSIONAL_TRIADS">📐 Dimensional Triads — Early dimensional structure</a>
+    <a href="#HOLE_TYPES_COMPARED">🕳️ Hole Types Compared — Pre‑RTT hole taxonomy</a>
   <h3>⚛️ Quantum & Resonance</h3>
-  <a href="#QUANTUM_LOOPHOLE_MEETS_RESONANCE_TRIAD">🌀 Quantum Loophole Meets Resonance Triad — Early quantum‑triadic bridge</a>
-  <a href="#QUANTUM_ENTANGLEMENT_NONLOCALITY">🔗 Entanglement & Nonlocality — Pre‑RTT quantum notes</a>
-  <a href="#QUANTUM_RESONANCE_UNIVERSE">🌌 Quantum Resonance Universe — Pre‑RTT cosmological model</a>
+    <a href="#QUANTUM_LOOPHOLE_MEETS_RESONANCE_TRIAD">🌀 Quantum Loophole Meets Resonance Triad — Early quantum‑triadic bridge</a>
+    <a href="#QUANTUM_ENTANGLEMENT_NONLOCALITY">🔗 Entanglement & Nonlocality — Pre‑RTT quantum notes</a>
+    <a href="#QUANTUM_RESONANCE_UNIVERSE">🌌 Quantum Resonance Universe — Pre‑RTT cosmological model</a>
   <h3>🔧 Technology & Engineering</h3>
-  <a href="#DPU_DIMENSIONAL_PROCESSING_UNIT">🖥️ DPU — Dimensional Processing Unit concept</a>
-  <a href="#DPU_REPLACEMENT_CPUS_GPUS_NPUS">⚙️ DPU vs CPU/GPU/NPU — Replacement architecture</a>
-  <a href="#TRIADIC_QUANTUM_COMPUTERS">💻 Triadic Quantum Computers — Early architecture</a>
+    <a href="#DPU_DIMENSIONAL_PROCESSING_UNIT">🖥️ DPU — Dimensional Processing Unit concept</a>
+    <a href="#DPU_REPLACEMENT_CPUS_GPUS_NPUS">⚙️ DPU vs CPU/GPU/NPU — Replacement architecture</a>
+    <a href="#TRIADIC_QUANTUM_COMPUTERS">💻 Triadic Quantum Computers — Early architecture</a>
   <h3>🌍 Science, Systems & Society</h3>
-  <a href="#ECONOMICS_REFRAMING_SYSTEMS">💱 Economics — Systems reframed through triads</a>
-  <a href="#MENTAL_HEALTH_REFORM">🧠 Mental Health — Systemic reform concepts</a>
-  <a href="#HEALTH_CARE_MIRACLE">🏥 Health Care — Modern miracle analysis</a>
-  <a href="#HOUSING_EVOLUTION">🏡 Housing Evolution — Solar confinement path</a>
+    <a href="#ECONOMICS_REFRAMING_SYSTEMS">💱 Economics — Systems reframed through triads</a>
+    <a href="#MENTAL_HEALTH_REFORM">🧠 Mental Health — Systemic reform concepts</a>
+    <a href="#HEALTH_CARE_MIRACLE">🏥 Health Care — Modern miracle analysis</a>
+    <a href="#HOUSING_EVOLUTION">🏡 Housing Evolution — Solar confinement path</a>
   <h3>🎶 Culture, Music & Symbolism</h3>
-  <a href="#ALGORITHMIC_MUSIC_EMOTIONAL_PHYSICS">🎼 Algorithmic Music — Emotional physics</a>
-  <a href="#TFT_FOR_MUSIC">🎵 TFT for Music — Quadratic & temporal extensions</a>
-  <a href="#SYMBOLIC_LANGUAGE_EMERGENCE">🔣 Symbolic Language Emergence — Early glyph theory</a>
+    <a href="#ALGORITHMIC_MUSIC_EMOTIONAL_PHYSICS">🎼 Algorithmic Music — Emotional physics</a>
+    <a href="#TFT_FOR_MUSIC">🎵 TFT for Music — Quadratic & temporal extensions</a>
+    <a href="#SYMBOLIC_LANGUAGE_EMERGENCE">🔣 Symbolic Language Emergence — Early glyph theory</a>
   <h3>🧪 Resonance & Physics</h3>
-  <a href="#FORCES_FLUIDS_FREQUENCY">🌊 Forces, Fluids & Frequency — Pre‑RTT physics</a>
-  <a href="#SPECTRAL_FLUX_DIVISIONAL_RESONANCE">🌈 Spectral Flux — Divisional resonance</a>
-  <a href="#RES_RESONANT_TIME">⏳ Resonant Time — Pre‑RTT temporal model</a>
+    <a href="#FORCES_FLUIDS_FREQUENCY">🌊 Forces, Fluids & Frequency — Pre‑RTT physics</a>
+    <a href="#SPECTRAL_FLUX_DIVISIONAL_RESONANCE">🌈 Spectral Flux — Divisional resonance</a>
+    <a href="#RES_RESONANT_TIME">⏳ Resonant Time — Pre‑RTT temporal model</a>
   <h3>📚 Meta, Reflections & Scrolls</h3>
-  <a href="#FUNHOUSE_OF_MIRRORS">🪞 Funhouse of Mirrors — Repo self‑reflection</a>
-  <a href="#SCROLL_BUNDLE_MANIFEST">📜 Scroll Bundle Manifest — Early scroll format</a>
-  <a href="#COLLATZ_SCROLL">🧮 Collatz Scroll — Triadic reinterpretation</a>
-  <a href="../">🔙</a>
-   
+    <a href="#FUNHOUSE_OF_MIRRORS">🪞 Funhouse of Mirrors — Repo self‑reflection</a>
+    <a href="#SCROLL_BUNDLE_MANIFEST">📜 Scroll Bundle Manifest — Early scroll format</a>
+    <a href="#COLLATZ_SCROLL">🧮 Collatz Scroll — Triadic reinterpretation</a>
+    <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+  
 </nav>
 
 <main id="content"></main>
 
 <script>
-
-function loadDoc(file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${file}`);
-      }
-      return response.text();
-    })
-    .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
-    })
-    .catch(err => {
-      document.getElementById('content').innerHTML =
-        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
-      console.error(err);
-    });
-}
 
 const DOC_MAP = {
   CATEGORY_INDEX: '000_Category_Index.md',
@@ -299,7 +318,7 @@ const DOC_MAP = {
   ZERO_POINT_COLD_FUSION: 'Zero-Point_Cold-Fusion_and_Wireless_Energy.md',
   PROFESSORS_ABSTRACT_SUMMARY_ALT: '_Professors_Abstract_Summary-The_FFF_Dimensional_Triads_and_Resonance_Clarity.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -308,12 +327,33 @@ function loadFromHash() {
     loadDoc('README.md');
   }
 }
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
 </script>
-
 
 </body>
 </html>
