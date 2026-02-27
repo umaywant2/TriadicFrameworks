@@ -5,6 +5,16 @@ This directory contains **lightweight, substrate‑agnostic workflow modules** u
 
 Each workflow is intentionally minimal: no external dependencies, no hidden state, and no assumptions about the host environment. They are designed to be **portable**, **inspectable**, and **safe to remix**.
 
+> ## 🌀 Workflow Engines — Index Card
+> Lightweight, substrate‑agnostic execution tools for scrolls, batches, and remix lineages.
+>
+> - **📦 Batch Orchestrator** — deterministic multi‑scroll execution  
+> - **🎨 Remix Generator** — lineage‑safe remix creation  
+> - **🌐 Scroll Pipeline (JS)** — browser‑native execution path  
+> - **🐍 Scroll Pipeline (Python)** — programmatic scroll engine  
+>
+> These engines form the operational layer of RTT‑Inside, bridging scroll artifacts with executable pipelines across languages and environments.
+
 ---
 
 ## 📁 Contents of [`workflows`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows) folder
