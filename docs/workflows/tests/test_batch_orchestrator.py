@@ -9,9 +9,10 @@ Covers:
 - deterministic batch report structure
 
 🧭 Optional extension: “Golden File” test
-If you want to lock in the exact structure of the batch report, add:
+Ensures long‑term stability of the batch report schema across refactors.
 
 import yaml
+from pathlib import Path
 
 def test_report_schema_stability():
     s = sample_scroll_obj()
