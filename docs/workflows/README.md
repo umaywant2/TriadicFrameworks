@@ -43,7 +43,7 @@ This engine is substrate‑agnostic and forms the batch‑execution counterpart 
 
 ---
 
-### `remix_generation.py`  
+### 🎨 `remix_generation.py`  
 A remix‑lineage generator that produces new scroll variants from a base artifact.  
 - Applies remix rules from TFT_3Pack  
 - Preserves canonical anchors (τᵣ, D3/D6/D9, emitter constants)  
@@ -52,7 +52,7 @@ A remix‑lineage generator that produces new scroll variants from a base artifa
 
 ---
 
-### `scrollPipeline.js`  
+### 🌐 `scrollPipeline.js`  
 A JavaScript‑based scroll pipeline for browser‑side or lightweight client execution.  
 - Runs resonance flows without Python  
 - Integrates with `rtt.js` and site‑level overlays  
@@ -60,7 +60,7 @@ A JavaScript‑based scroll pipeline for browser‑side or lightweight client ex
 
 ---
 
-### `scroll_pipeline.py`  
+### 🐍 `scroll_pipeline.py`  
 The Python counterpart to the JS pipeline.  
 - Provides a stable API for scroll parsing, validation, and execution  
 - Supports `.fff` format operations  
