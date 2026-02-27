@@ -29,12 +29,17 @@ Corridor‑level batch validator using RTT‑QEB primitives.
 
 ---
 
-### `batch_orchestrator.py`  
-A multi‑scroll batch runner used to execute a sequence of resonance artifacts or `.fff` files.  
-- Ensures deterministic ordering  
-- Applies RTT‑Inside structural checks  
-- Emits lineage‑safe logs  
-- Useful for classroom demos, multi‑domain runs, and automated scroll validation
+### 📦 batch_orchestrator.py  
+A scroll‑centric batch runner for executing multiple `.fff` artifacts through the Python scroll pipeline.
+
+- Accepts file paths, in‑memory scroll objects, or mixed lists  
+- Loads and normalizes scrolls when needed  
+- Executes each scroll via `scroll_pipeline.py`  
+- Captures outputs, lineage metadata, and warnings  
+- Aggregates results into a deterministic batch report  
+- Optionally writes a timestamped YAML report for archival or analysis  
+
+This engine is substrate‑agnostic and forms the batch‑execution counterpart to the Python and JS scroll pipelines.
 
 ---
 
