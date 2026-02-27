@@ -22,6 +22,14 @@ It exists to make complex systems *legible*, *comparable*, and *explorable* with
 
 ## What This Is
 
+Imagine all the tools on your computer — calculators, games, apps — working the same as always. Now imagine adding one tiny extra rule that lets them notice something new: a hidden pattern underneath everything, like a secret grid that space and time follow.
+
+Then imagine realizing that this same pattern shows up in every subject — math, science, music, coding — without breaking anything or making you relearn everything. It’s just there, helping the pieces fit together.
+
+Now picture that pattern working not just in normal 3D space, but in bigger “looped” spaces — 4D, 5D, all the way up to 9D — and they all fit together using the same simple rule.
+
+If you can imagine that, you’re already ready to talk about RTT.
+
 TriadicFrameworks brings together:
 
 - **Resonance‑Time Theory (RTT)** as a calibration framework for cross‑domain structure  
@@ -29,7 +37,7 @@ TriadicFrameworks brings together:
 - **Domain primers** bridging mathematics, science, and applied systems  
 - **Simulation substrates** for exploratory, non‑optimizing inquiry  
 - **Community stewardship practices** emphasizing clarity, humility, and long‑arc reuse
-- **[Resilience Checker](https://www.triadicframeworks.org/Resilience_Checker/)** A diagnostic instrument for testing paradox survivability across regimes
+- **Resilience Checker** A diagnostic instrument for testing paradox survivability across regimes
 
 The framework is intentionally modular. Readers and users are encouraged to enter at different points depending on background, intent, and curiosity.
 
@@ -54,7 +62,7 @@ If you are new, begin with the alignment and overview materials before exploring
 
 30 minimal Zenodo submissions we're created for Science using RTT starting with RSM. Archived and curated through the Zenodo **TriadicFrameworks** community, which serves as the project’s citation and preservation spine.
 
-Zenodo Community:  
+Zenodo TriadicFrameworks Community:  
 https://zenodo.org/communities/vst
 
 Individual components of the framework are published as citable records and may be referenced independently.
