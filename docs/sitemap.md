@@ -83,8 +83,8 @@ This is where RTT becomes teachable.
 - [/education/](https://www.triadicframeworks.org/education/)  
 - [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)  
 - [/education/translations/](https://www.triadicframeworks.org/education/translations/)  
+- [/education/equations/](https://www.triadicframeworks.org/education/equations/)
 - [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
-- [/equations/](https://www.triadicframeworks.org/equations/)  
 - [/charts/](https://www.triadicframeworks.org/charts/)  
 - [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)  
 
