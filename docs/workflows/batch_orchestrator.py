@@ -1,65 +1,62 @@
+"""
+Scroll Batch Orchestrator
+Part of the TriadicFrameworks Workflows subsystem.
+
+Runs a batch of scrolls (.fff files or in‑memory scroll objects)
+through the Python scroll pipeline and aggregates results into
+a structured batch report.
+
+This engine is substrate‑agnostic and contains no external service
+dependencies. It is the batch counterpart to scroll_pipeline.py.
+"""
+
+from pathlib import Path
+from datetime import datetime
 import yaml
-import datetime
-from clients.python.corridor_client import CorridorClient
-from rfc_qeb_0002.validator import normalize, compute_rci, assign_glyph
 
-client = CorridorClient(base_url="http://localhost:5000/v1")
+from scroll_pipeline import run_scroll
 
-def process_corridor(corridor_id, parent_scroll):
-    metadata = client.get_corridor_metadata(corridor_id)
 
-    Cf = normalize(metadata["rail_signatures"]["frequency"])
-    Cfl = normalize(metadata["rail_signatures"]["fluids"])
-    Cfo = normalize(metadata["rail_signatures"]["forces"])
-    RCI = compute_rci(Cf, Cfl, Cfo, precision=3)
-    glyph = assign_glyph(RCI, Cf, Cfl, Cfo)
+def is_path(x):
+    return isinstance(x, str) and x.endswith(".fff")
 
-    status = "validation_passed" if (
-        round(RCI, 3) == metadata["resonance_clarity_index"] and glyph == metadata["glyph"]
-    ) else "validation_failed"
 
-    return {
-        "corridor_id": corridor_id,
-        "parent_scroll": parent_scroll,
-        "child_scroll": f"{parent_scroll}-{corridor_id}",
-        "previous_glyph": metadata["glyph"],
-        "new_glyph": glyph,
-        "previous_rci": metadata["resonance_clarity_index"],
-        "new_rci": RCI,
-        "status": status,
-    }
+def load_scroll(path):
+    with open(path, "r", encoding="utf-8") as f:
+        return f.read()
 
-def batch_process(corridor_ids, parent_scroll):
-    events = [process_corridor(cid, parent_scroll) for cid in corridor_ids]
 
-    # Summary statistics
-    glyph_counts = {}
-    band_counts = {"low": 0, "medium": 0, "high": 0}
-    for ev in events:
-        glyph_counts[ev["new_glyph"]] = glyph_counts.get(ev["new_glyph"], 0) + 1
-        if ev["new_rci"] <= 0.33:
-            band_counts["low"] += 1
-        elif ev["new_rci"] <= 0.66:
-            band_counts["medium"] += 1
-        else:
-            band_counts["high"] += 1
+def process_scroll(scroll_obj):
+    return run_scroll(scroll_obj)
+
+
+def batch_run(items, output_dir=None):
+    """
+    items: list of file paths OR in‑memory scroll objects.
+    output_dir: optional directory for writing a timestamped YAML report.
+    """
+    batch_results = []
+
+    for item in items:
+        scroll = load_scroll(item) if is_path(item) else item
+        output = process_scroll(scroll)
+
+        batch_results.append({
+            "input": item,
+            "output": output
+        })
 
     report = {
-        "remixathon_report": {
-            "timestamp": datetime.datetime.utcnow().isoformat(),
-            "parent_scroll": parent_scroll,
-            "events": events,
-            "summary": {
-                "glyph_distribution": glyph_counts,
-                "rci_band_counts": band_counts,
-                "validation_passed": sum(1 for e in events if e["status"] == "validation_passed"),
-                "validation_failed": sum(1 for e in events if e["status"] == "validation_failed"),
-            },
-        }
+        "timestamp": datetime.now().isoformat(),
+        "count": len(batch_results),
+        "results": batch_results
     }
 
-    outfile = f"registry/reports/remixathon_{datetime.datetime.utcnow().strftime('%Y%m%d_%H%M%S')}.yml"
-    with open(outfile, "w") as stream:
-        yaml.dump(report, stream, sort_keys=False)
+    if output_dir:
+        Path(output_dir).mkdir(parents=True, exist_ok=True)
+        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
+        outfile = Path(output_dir) / f"batch_{ts}.yml"
+        with open(outfile, "w", encoding="utf-8") as f:
+            yaml.dump(report, f, sort_keys=False)
 
     return report
