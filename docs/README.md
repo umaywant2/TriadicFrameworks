@@ -52,7 +52,7 @@ If you are new, begin with the alignment and overview materials before exploring
 
 ## Citation & Archival Record
 
-TriadicFrameworks is archived and curated through the Zenodo **VST** community, which serves as the project’s citation and preservation spine.
+30 minimal Zenodo submissions we're created for Science using RTT starting with RSM. Archived and curated through the Zenodo **TriadicFrameworks** community, which serves as the project’s citation and preservation spine.
 
 Zenodo Community:  
 https://zenodo.org/communities/vst
