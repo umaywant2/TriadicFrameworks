@@ -7,7 +7,7 @@ Each workflow is intentionally minimal: no external dependencies, no hidden stat
 
 ---
 
-## 📁 Contents
+## 📁 Contents of [`workflows`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows) folder
 
 ### `batch_orchestrator.py`  
 A multi‑scroll batch runner used to execute a sequence of resonance artifacts or `.fff` files.  
