@@ -80,12 +80,12 @@ This is the **mind + society** substrate.
 
 This is where RTT becomes teachable.
 
-- [/education/](https://www.triadicframeworks.org/education/)  
+- [/education/](https://www.triadicframeworks.org/education/)
 - [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)  
 - [/education/translations/](https://www.triadicframeworks.org/education/translations/)  
 - [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
-- [/equations/](https://www.triadicframeworks.org/equations/)  
-- [/charts/](https://www.triadicframeworks.org/charts/)  
+- [/charts/](https://www.triadicframeworks.org/charts/)
+- [/education/equations/](https://www.triadicframeworks.org/education/equations/)  
 - [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)  
 
 This is the **G1 → G2 → G3 learning arc**.
