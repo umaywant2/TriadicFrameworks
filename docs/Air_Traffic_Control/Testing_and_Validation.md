@@ -14,3 +14,13 @@ This allows ANSPs to validate:
 - Drift prediction quality  
 - Operator workload impact  
 - False positive/negative rates  
+
+## 5.2 Success Criteria
+
+A Phase‑1 deployment is considered successful when:
+
+- Operators report improved situational awareness  
+- Drift predictions match real‑world outcomes  
+- No interference with certified systems  
+- Overlay performance meets latency requirements  
+- No increase in controller workload  
