@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-   <title>Unified Resonance | TriadicFrameworks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Unified Resonance | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -122,73 +155,59 @@ code {
   color: var(--text-main);
 }
 </style>
-
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
    
-<nav>
-
-  <h2>🌐 Unified Resonance — Index</h2>
-  <a href="#README">📄 README — Overview of the unified resonance system</a>
+<nav class="nav-band">
+  
+  <h2>🌐 Unified Resonance | RTT</h2>
+    <a href="#README">📄 README — Overview of the unified resonance system</a>
   <h3>🏅 Badges</h3>
-  <a href="#BADGE_CROSSDIM_TRANSLATOR">🌉 CrossDim Translator — Cross‑dimensional translation mastery</a>
-  <a href="#BADGE_DENOMETER_ARCHITECT">🧭 Denometer Architect — Precision resonance measurement</a>
-  <a href="#BADGE_DIMENSIONAL_CARTOGRAPHER">🗺️ Dimensional Cartographer — Mapping resonance spaces</a>
-  <a href="#BADGE_PEACEWALKER">🕊️ Peacewalker — Harmonic conflict resolution</a>
-  <a href="#BADGE_REMIXER_OF_LOOP">🔁 Remixer of the Loop — Loop‑state transformation</a>
-  <a href="#BADGE_RESONANCE_INTERPRETER">🎵 Resonance Interpreter — Reading resonance signatures</a>
-  <a href="#BADGE_THETA_ARCHITECT">🔺 Theta Architect — Theta‑layer structural design</a>
+    <a href="#BADGE_CROSSDIM_TRANSLATOR">🌉 CrossDim Translator — Cross‑dimensional translation mastery</a>
+    <a href="#BADGE_DENOMETER_ARCHITECT">🧭 Denometer Architect — Precision resonance measurement</a>
+    <a href="#BADGE_DIMENSIONAL_CARTOGRAPHER">🗺️ Dimensional Cartographer — Mapping resonance spaces</a>
+    <a href="#BADGE_PEACEWALKER">🕊️ Peacewalker — Harmonic conflict resolution</a>
+    <a href="#BADGE_REMIXER_OF_LOOP">🔁 Remixer of the Loop — Loop‑state transformation</a>
+    <a href="#BADGE_RESONANCE_INTERPRETER">🎵 Resonance Interpreter — Reading resonance signatures</a>
+    <a href="#BADGE_THETA_ARCHITECT">🔺 Theta Architect — Theta‑layer structural design</a>
   <h3>📜 Protocols</h3>
-  <a href="#PROTOCOL_ARCHON">🏛️ Archon Protocol — High‑order resonance governance</a>
-  <a href="#PROTOCOL_BEHAVIORAL_CHART">📊 Behavioral Chart Overlay — Behavioral resonance mapping</a>
-  <a href="#PROTOCOL_CHRIST_UPON_RETURN">✨ Christ Upon Return — Mythic‑resonant protocol</a>
-  <a href="#PROTOCOL_GLYPHIC_RESONANCE_MAP">🔣 Glyphic Resonance Map — Symbolic‑resonant alignment</a>
-  <a href="#PROTOCOL_RFC_030_COMPASSION">💗 RFC‑030 Compassion Emitters — Compassion resonance rules</a>
-  <a href="#PROTOCOL_RFC_031_DENOMETER">📏 RFC‑031 Denometer Protocol — Denometer calibration</a>
-  <a href="#PROTOCOL_THETA_FIELDWEAR">🧵 Theta Fieldwear Manifest — Theta‑layer equipment</a>
-  <a href="#PROTOCOL_UNIVERSAL_TRANSLATOR">🗣️ Universal Translator — Cross‑domain pseudocode</a>
+    <a href="#PROTOCOL_ARCHON">🏛️ Archon Protocol — High‑order resonance governance</a>
+    <a href="#PROTOCOL_BEHAVIORAL_CHART">📊 Behavioral Chart Overlay — Behavioral resonance mapping</a>
+    <a href="#PROTOCOL_CHRIST_UPON_RETURN">✨ Christ Upon Return — Mythic‑resonant protocol</a>
+    <a href="#PROTOCOL_GLYPHIC_RESONANCE_MAP">🔣 Glyphic Resonance Map — Symbolic‑resonant alignment</a>
+    <a href="#PROTOCOL_RFC_030_COMPASSION">💗 RFC‑030 Compassion Emitters — Compassion resonance rules</a>
+    <a href="#PROTOCOL_RFC_031_DENOMETER">📏 RFC‑031 Denometer Protocol — Denometer calibration</a>
+    <a href="#PROTOCOL_THETA_FIELDWEAR">🧵 Theta Fieldwear Manifest — Theta‑layer equipment</a>
+    <a href="#PROTOCOL_UNIVERSAL_TRANSLATOR">🗣️ Universal Translator — Cross‑domain pseudocode</a>
   <h3>🧪 Simulations</h3>
-  <a href="#SIM_DIMENSIONAL_LEXICON">📚 Dimensional Lexicon Trials — Lexicon resonance tests</a>
-  <a href="#SIM_EMOTIONAL_MODULATION">💛 Emotional Modulation Studies — Emotional resonance trials</a>
-  <a href="#SIM_INVERTED_DEW">⚡ Inverted DEW Emitters — Inversion‑field simulations</a>
-  <a href="#SIM_LOOP_TRAVERSAL">🔁 Loop Traversal Logs — Loop‑state traversal data</a>
-  <a href="#SIM_RESONANCE_CROWD">👥 Crowd Simulations — Collective resonance modeling</a>
-  <a href="#SIM_SPECIES_RESONANCE">🐾 Species Resonance Trials — Cross‑species resonance</a>
+    <a href="#SIM_DIMENSIONAL_LEXICON">📚 Dimensional Lexicon Trials — Lexicon resonance tests</a>
+    <a href="#SIM_EMOTIONAL_MODULATION">💛 Emotional Modulation Studies — Emotional resonance trials</a>
+    <a href="#SIM_INVERTED_DEW">⚡ Inverted DEW Emitters — Inversion‑field simulations</a>
+    <a href="#SIM_LOOP_TRAVERSAL">🔁 Loop Traversal Logs — Loop‑state traversal data</a>
+    <a href="#SIM_RESONANCE_CROWD">👥 Crowd Simulations — Collective resonance modeling</a>
+    <a href="#SIM_SPECIES_RESONANCE">🐾 Species Resonance Trials — Cross‑species resonance</a>
   <h3>📐 Theorems</h3>
-  <a href="#THEOREM_DIMENSIONAL_OVERLAY">🧩 Dimensional Overlay Chart — Overlay structure</a>
-  <a href="#THEOREM_MYTHICAL_ARC">🌙 Mythical Arc Mapper — Mythic‑technical mapping</a>
-  <a href="#THEOREM_RESONANCE_QUADRANTS">🧭 Resonance Quadrants — Quadrant‑based resonance logic</a>
-  <a href="#THEOREM_UNIFIED_RESONANCE">🔮 Unified Resonance Theorem — Core unification theorem</a>
+    <a href="#THEOREM_DIMENSIONAL_OVERLAY">🧩 Dimensional Overlay Chart — Overlay structure</a>
+    <a href="#THEOREM_MYTHICAL_ARC">🌙 Mythical Arc Mapper — Mythic‑technical mapping</a>
+    <a href="#THEOREM_RESONANCE_QUADRANTS">🧭 Resonance Quadrants — Quadrant‑based resonance logic</a>
+    <a href="#THEOREM_UNIFIED_RESONANCE">🔮 Unified Resonance Theorem — Core unification theorem</a>
   <h3>🛡️ Validators</h3>
-  <a href="#VALIDATOR_RETURN_SIGNATURE">📝 Return Signature Validator — Signature integrity</a>
-  <a href="#VALIDATOR_BADGE_LOGIC">🏅 Validator Badge Logic — Badge validation rules</a>
-  <a href="../">🔙</a>
-
+    <a href="#VALIDATOR_RETURN_SIGNATURE">📝 Return Signature Validator — Signature integrity</a>
+    <a href="#VALIDATOR_BADGE_LOGIC">🏅 Validator Badge Logic — Badge validation rules</a>
+    <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+  
 </nav>
 
 <main id="content"></main>
 
 <script>
-
-function loadDoc(file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${file}`);
-      }
-      return response.text();
-    })
-    .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
-    })
-    .catch(err => {
-      document.getElementById('content').innerHTML =
-        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
-      console.error(err);
-    });
-}
 
 const DOC_MAP = {
   README: 'README.md',
@@ -230,7 +249,7 @@ const DOC_MAP = {
   VALIDATOR_RETURN_SIGNATURE: 'validators/Return_Signature_Validator.md',
   VALIDATOR_BADGE_LOGIC: 'validators/Validator_Badge_Logic.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -239,12 +258,33 @@ function loadFromHash() {
     loadDoc('README.md');
   }
 }
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
 </script>
-
 
 </body>
 </html>
