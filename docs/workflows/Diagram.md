@@ -43,3 +43,34 @@ This diagram shows the relationship between the four engines using our preferred
 - All engines orbit the **scroll artifact** as the canonical center.  
 
 This matches our structural philosophy: scrolls as the invariant, engines as the operators.
+
+---
+
+### 🔷 Visual Triadic Glyph — Batch Orchestrator
+
+A glyph for this engine should express its role relative to the other workflow components shown in your folder index and diagram   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows). The batch orchestrator sits beneath the pipelines, coordinating multiple scroll executions while remaining scroll‑centric.
+
+```
+                🌀
+           Scroll Artifact
+                 │
+     ┌───────────┼───────────┐
+     │           │           │
+   🌐 JS      🐍 Python     🎨 Remix
+ Pipeline     Pipeline      Engine
+     │           │           │
+     └───────────┴───────────┘
+                 ▼
+                📦
+        Batch Orchestrator
+```
+
+**Interpretation:**
+
+- The scroll artifact remains the invariant center.  
+- Pipelines (JS and Python) and the remix engine orbit horizontally.  
+- The batch orchestrator anchors the system by coordinating multi‑scroll execution.  
+- The glyph mirrors the structural relationships already present in your workflows diagram.
+
+---
+
