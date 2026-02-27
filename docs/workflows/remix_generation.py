@@ -1,20 +1,40 @@
-from api.legacy_retrieval import get_by_glyph, get_scroll_metadata
-from engine.remix_export import export_remix_scroll
-from registry.archive import archive_scroll
+"""
+Remix Generation Engine
+TriadicFrameworks • Workflows Subsystem
 
-def remix_cycle(glyph, parent_scroll, tags, narratives):
-    # Step 1: Retrieval
-    scrolls = get_by_glyph(glyph)["scrolls"]
-    metadata = [get_scroll_metadata(s) for s in scrolls]
+Produces remix variants of `.fff` scroll artifacts using scroll‑centric
+remix rules. This engine is substrate‑agnostic and preserves canonical
+anchors (τᵣ, dimensional constants, emitter identity) while generating
+lineage‑safe remix metadata.
 
-    # Step 2: Remix
-    filtered_results = [{"corridor_id": c, "new_glyph": glyph, "new_rci": 0.55,
-                         "child_scroll": f"{parent_scroll}-{c}"} for c in ["c-001","c-002"]]
+API:
+    remix_scroll(scroll_obj, *, rules=None)
+"""
 
-    # Step 3: Export
-    remix_scroll = export_remix_scroll(filtered_results, parent_scroll, narratives, tags)
+from pathlib import Path
+import uuid
+import yaml
 
-    # Step 4: Archive
-    archive_entry = archive_scroll(remix_scroll)
+from tft.scrolls.parse import parse_scroll
+from tft.scrolls.remix import apply_remix_rules
+from tft.scrolls.export import export_scroll
 
-    return {"remix_scroll": remix_scroll, "archive_entry": archive_entry}
+
+def remix_scroll(scroll_obj, *, rules=None):
+    """Return a new remix variant of a scroll object."""
+    base = parse_scroll(scroll_obj)
+    remixed = apply_remix_rules(base, rules=rules)
+
+    remixed["metadata"]["remix_id"] = str(uuid.uuid4())
+    remixed["metadata"]["lineage"] = base["metadata"].get("id")
+
+    return remixed
+
+
+def remix_to_file(scroll_obj, outfile, *, rules=None):
+    """Generate a remix and write it to a `.fff` file."""
+    remixed = remix_scroll(scroll_obj, rules=rules)
+    text = export_scroll(remixed)
+
+    Path(outfile).write_text(text, encoding="utf-8")
+    return outfile
