@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Projects Virtual Compute Gateway (VCG) | RTT</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+<h2>🧭 Orientation & Entry</h2>
+  <h3>🚀 Quickstart</h3>
+    <a href="QUICKSTART.md">Fast path into the VCG system.</a>
+  <h3>📘 README</h3>
+    <a href="README.md">Canonical overview and grounding context.</a>
+  <h3>📂 Project 1 README</h3>
+    <a href="README_Project1.md">Focused scope and intent for Project 1.</a>
+<h2>🏗️ Architecture & Specification</h2>
+  <h3>📡 Gen1 VCG API Spec</h3>
+    <a href="gen1_vcg_api_spec.md">Interface contracts and API definitions.</a>
+  <h3>🏛️ Gen1 VCG Architecture</h3>
+    <a href="gen1_vcg_architecture.md">System‑level design and component layout.</a>
+  <h3>🗄️ Filesystem Strategy</h3>
+    <a href="gen1_vcg_fs_strategy.md">Storage layout and data flow conventions.</a>
+  <h3>🔄 Regime Translation</h3>
+    <a href="VCG_internal_architecture_regime_translation.md">Internal architecture mapping across regimes.</a>
+<h2>📜 Conceptual Canon</h2>
+  <h3>🧠 Triadic Observer (Draft)</h3>
+    <a href="Triadic_Observer_LACTOS__Holy_Grail_draft1.md">Foundational observer model and conceptual synthesis.</a>
+<h2>🛂 Protocols & Validation</h2>
+  <h3>📑 Manifest Protocol</h3>
+    <a href="vcg_manifest_protocol.md">Operational rules and declaration format.</a>
+  <h3>📊 Validator Dashboard</h3>
+    <a href="vcg_validator_dashboard.md">System health and validation surfaces.</a>
+<h2>📐 Mathematics & Formalism</h2>
+  <h3>🧮 VCG Equations</h3>
+    <a href="vcg_equations.md">Mathematical foundations and derivations.</a>
+<h2>🏅 Lineage & Recognition</h2>
+  <h3>🌟 Honor Roll</h3>
+    <a href="vcg_honor_roll.md">Acknowledgments and contributor lineage.</a>
+  <h3>🎖️ Badge Triggers</h3>
+    <a href="vcg_badge_triggers.md">Achievement and participation signals.</a>
+<h2>🧩 Clients</h2>
+  <h3>💠 C++ Client</h3>
+    <a href="src/gen1/vcg/clients/cpp/vcg_client.md">Native client integration reference.</a>
+  <h3>🐍 Python Client</h3>
+    <a href="src/gen1/vcg/clients/python/vcg_client.md">Scripting and rapid‑prototyping client.</a>
+  <h3>🦀 Rust Client</h3>
+    <a href="src/gen1/vcg/clients/rust/vcg_client.md">Safe, high‑performance client implementation.</a>
+<h2>🎛️ Orchestration & Examples</h2>
+  <h3>🔁 D4 Retriever Example</h3>
+    <a href="src/gen1/vcg/examples/d4_retriever.md">Reference retrieval workflow example.</a>
+  <h3>🧠 VCG Orchestrator</h3>
+    <a href="src/gen1/vcg/orchestrator/vcg_orchestrator.md">Coordination and execution logic.</a>
+<h2>⏱️ Resonant Time</h2>
+  <h3>🕰️ RTD Main</h3>
+    <a href="src/gen1/vcg/resonant-time/rtd_main.md">Primary resonant‑time control loop.</a>
+  <h3>⚙️ RT Daemon</h3>
+    <a href="src/gen1/vcg/resonant-time/rt_daemon.md">Background timing and synchronization service.</a>
+<h2>🧪 Testing</h2>
+  <h3>🧰 Test Harness</h3>
+    <a href="srv/gen1/vcg/testing/harness.md">Validation and regression testing framework.</a>
+<h2>🔣 Glyphs & Visual Language</h2>
+  <h3>🧿 VCG Glyphs</h3>
+    <a href="vcg_glyphs/glyphs.md">Symbolic and visual grammar reference.</a>
+<h2>🧬 Lab Templates</h2>
+  <h3>🌊 Flux Harmonics Lab</h3>
+    <a href="vcg_lab_templates/lab_flux_harmonics.md">Exploration of dynamic resonance patterns.</a>
+  <h3>🗣️ Invocation Protocols Lab</h3>
+    <a href="vcg_lab_templates/lab_invocation_protocols.md">Structured activation and invocation flows.</a>
+  <h3>📡 Latency Diagnostics Lab</h3>
+    <a href="vcg_lab_templates/lab_latency_diagnostics.md">Timing analysis and performance diagnostics.</a>
+    <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+  
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Root / Orientation
+  QUICKSTART: 'QUICKSTART.md',
+  README: 'README.md',
+  README_PROJECT_1: 'README_Project1.md',
+  // Core Architecture & Specification
+  GEN1_VCG_API_SPEC: 'gen1_vcg_api_spec.md',
+  GEN1_VCG_ARCHITECTURE: 'gen1_vcg_architecture.md',
+  GEN1_VCG_FS_STRATEGY: 'gen1_vcg_fs_strategy.md',
+  VCG_INTERNAL_ARCHITECTURE_REGIME_TRANSLATION:
+    'VCG_internal_architecture_regime_translation.md',
+  // Conceptual & Canonical
+  TRIADIC_OBSERVER_LACTOS_HOLY_GRAIL_DRAFT:
+    'Triadic_Observer_LACTOS__Holy_Grail_draft1.md',
+  // Protocols & Validation
+  VCG_MANIFEST_PROTOCOL: 'vcg_manifest_protocol.md',
+  VCG_VALIDATOR_DASHBOARD: 'vcg_validator_dashboard.md',
+  // Mathematics & Formalism
+  VCG_EQUATIONS: 'vcg_equations.md',
+  // Recognition & Lineage
+  VCG_HONOR_ROLL: 'vcg_honor_roll.md',
+  VCG_BADGE_TRIGGERS: 'vcg_badge_triggers.md',
+  // Clients
+  VCG_CLIENT_CPP: 'src/gen1/vcg/clients/cpp/vcg_client.md',
+  VCG_CLIENT_PYTHON: 'src/gen1/vcg/clients/python/vcg_client.md',
+  VCG_CLIENT_RUST: 'src/gen1/vcg/clients/rust/vcg_client.md',
+  // Examples & Orchestration
+  VCG_EXAMPLE_D4_RETRIEVER:
+    'src/gen1/vcg/examples/d4_retriever.md',
+  VCG_ORCHESTRATOR:
+    'src/gen1/vcg/orchestrator/vcg_orchestrator.md',
+  // Resonant Time
+  RTD_MAIN:
+    'src/gen1/vcg/resonant-time/rtd_main.md',
+  RT_DAEMON:
+    'src/gen1/vcg/resonant-time/rt_daemon.md',
+  // Testing
+  VCG_TESTING_HARNESS:
+    'srv/gen1/vcg/testing/harness.md',
+  // Glyphs & Visual Language
+  VCG_GLYPHS:
+    'vcg_glyphs/glyphs.md',
+  // Lab Templates
+  LAB_FLUX_HARMONICS:
+    'vcg_lab_templates/lab_flux_harmonics.md',
+  LAB_INVOCATION_PROTOCOLS:
+    'vcg_lab_templates/lab_invocation_protocols.md',
+  LAB_LATENCY_DIAGNOSTICS:
+    'vcg_lab_templates/lab_latency_diagnostics.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
