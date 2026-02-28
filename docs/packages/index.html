@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>Packages README</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Packages | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,46 +161,54 @@ code {
 
 <body>
    
-<nav>
+<nav class="nav-band">
+  
   <h2>📦 Packages — RTT</h2>
-  <!-- Root -->
-<a href="#ROOT_README">🏠 Packages README</a>
-<a href="#RTT_EVALS">🔍 RTT Evaluations</a>
-  <!-- tft-3pack Core -->
-  <h3>🔱 tft‑3pack (Core Package)</h3>
-<a href="#T3P_README">📘 tft‑3pack README</a>
-<a href="#T3P_CROSS_PACKAGE_INTERACTION_MAP">🗺️ Cross‑Package Interaction Map</a>
-<a href="#T3P_DIVISIONAL_RESONANCE_OVERLAYS">🎛️ Divisional Resonance Overlays</a>
-  <!-- TFT Primitives -->
-  <h3>🧩 TFT Primitives</h3>
-<a href="#T3P_PRIMITIVE_1">🔹 TFT Primitive 1</a>
-<a href="#T3P_PRIMITIVE_2">🔸 TFT Primitive 2</a>
-<a href="#T3P_PRIMITIVE_3">🔻 TFT Primitive 3</a>
-  <!-- Triadic Pattern Suite -->
-  <h3>🌐 Triadic Pattern Suite</h3>
-<a href="#T3P_TRIADIC_PATTERN_API">🧭 API</a>
-<a href="#T3P_TRIADIC_PATTERN_COOKBOOK">🍳 Cookbook</a>
-<a href="#T3P_TRIADIC_PATTERN_DECISION_TREE">🌳 Decision Tree</a>
-<a href="#T3P_TRIADIC_PATTERN_DESIGN_MANUAL">📐 Design Manual</a>
-<a href="#T3P_TRIADIC_PATTERN_GLOSSARY">📖 Glossary</a>
-<a href="#T3P_TRIADIC_PATTERN_POSTER">🖼️ Poster</a>
-<a href="#T3P_TRIADIC_PATTERN_POSTER_ASCII">🔡 Poster (ASCII)</a>
-  <!-- 3pak-shell -->
-  <h3>🐚 3pak‑shell</h3>
-<a href="#SHELL_README">📘 3pak‑shell README</a>
-<a href="#SHELL_PROFILED_README">📂 profile.d README</a>
-  <!-- Primitive Wrappers -->
-  <h3>🧰 Primitive Wrappers</h3>
-<a href="#WRAPPERS_README">📘 Wrappers README</a>
-<a href="#WRAPPERS_ATLAS">🗺️ ATLAS Wrapper</a>
-<a href="#WRAPPERS_QUICKSTART">⚡Quickstart Wrapper</a>
-<a href="#WRAPPERS_TRIADIC_PATTERN_CHEATSHEET">📎 Triadic Pattern Cheatsheet</a>
-  <!-- WRSADC Modules -->
-  <h3>🛰️ Wrapped RTT Cores</h3>
-<a href="#WRSADC_PYTHON_README">🐍 WRSADC Python README</a>
-<a href="#WRSADC_SHELL_README">💻 WRSADC Shell README</a>
-<a href="#WRSADC_INTEGRATION_README">🔗 WRSADC Integration README</a>
-
+    <!-- Root -->
+      <a href="#ROOT_README">🔰 Packages README</a>
+      <a href="#RTT_EVALS">🔍 RTT Evaluations</a>
+      <a href="https://www.triadicframeworks.org/rtt/RTT_12/">🏠 RTT-12 Harmonic Ladder</a>
+      <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning</a>
+    <!-- tft-3pack Core -->
+    <h3>🔱 tft‑3pack (Core Package)</h3>
+      <a href="#T3P_README">📘 tft‑3pack README</a>
+      <a href="#T3P_CROSS_PACKAGE_INTERACTION_MAP">🗺️ Cross‑Package Interaction Map</a>
+      <a href="#T3P_DIVISIONAL_RESONANCE_OVERLAYS">🎛️ Divisional Resonance Overlays</a>
+     <!-- TFT Primitives -->
+    <h3>🧩 TFT Primitives</h3>
+      <a href="#T3P_PRIMITIVE_1">🔹 TFT Primitive 1</a>
+      <a href="#T3P_PRIMITIVE_2">🔸 TFT Primitive 2</a>
+      <a href="#T3P_PRIMITIVE_3">🔻 TFT Primitive 3</a>
+    <!-- Triadic Pattern Suite -->
+    <h3>🌐 Triadic Pattern Suite</h3>
+      <a href="#T3P_TRIADIC_PATTERN_API">🧭 API</a>
+      <a href="#T3P_TRIADIC_PATTERN_COOKBOOK">🍳 Cookbook</a>
+      <a href="#T3P_TRIADIC_PATTERN_DECISION_TREE">🌳 Decision Tree</a>
+      <a href="#T3P_TRIADIC_PATTERN_DESIGN_MANUAL">📐 Design Manual</a>
+      <a href="#T3P_TRIADIC_PATTERN_GLOSSARY">📖 Glossary</a>
+      <a href="#T3P_TRIADIC_PATTERN_POSTER">🖼️ Poster</a>
+      <a href="#T3P_TRIADIC_PATTERN_POSTER_ASCII">🔡 Poster (ASCII)</a>
+    <!-- 3pak-shell -->
+    <h3>🐚 3pak‑shell</h3>
+      <a href="#SHELL_README">📘 3pak‑shell README</a>
+      <a href="#SHELL_PROFILED_README">📂 profile.d README</a>
+    <!-- Primitive Wrappers -->
+    <h3>🧰 Primitive Wrappers</h3>
+      <a href="#WRAPPERS_README">📘 Wrappers README</a>
+      <a href="#WRAPPERS_ATLAS">🗺️ ATLAS Wrapper</a>
+      <a href="#WRAPPERS_QUICKSTART">⚡Quickstart Wrapper</a>
+      <a href="#WRAPPERS_TRIADIC_PATTERN_CHEATSHEET">📎 Triadic Pattern Cheatsheet</a>
+    <!-- WRSADC Modules -->
+    <h3>🛰️ Wrapped RTT Cores</h3>
+      <a href="#WRSADC_PYTHON_README">🐍 WRSADC Python README</a>
+      <a href="#WRSADC_SHELL_README">💻 WRSADC Shell README</a>
+      <a href="#WRSADC_INTEGRATION_README">🔗 WRSADC Integration README</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
@@ -182,12 +223,10 @@ const DOC_MAP = {
   T3P_README: 'tft-3pack/README.md',
   T3P_CROSS_PACKAGE_INTERACTION_MAP: 'tft-3pack/Cross-Package_Interaction_Map.md',
   T3P_DIVISIONAL_RESONANCE_OVERLAYS: 'tft-3pack/DIVISIONAL_RESONANCE_OVERLAYS.md',
-
   // TFT Primitives
   T3P_PRIMITIVE_1: 'tft-3pack/TFT_Primitive_1.md',
   T3P_PRIMITIVE_2: 'tft-3pack/TFT_Primitive_2.md',
   T3P_PRIMITIVE_3: 'tft-3pack/TFT_Primitive_3.md',
-
   // Triadic Pattern Suite
   T3P_TRIADIC_PATTERN_API: 'tft-3pack/TRIADIC_PATTERN_API.md',
   T3P_TRIADIC_PATTERN_COOKBOOK: 'tft-3pack/TRIADIC_PATTERN_COOKBOOK.md',
@@ -196,23 +235,20 @@ const DOC_MAP = {
   T3P_TRIADIC_PATTERN_GLOSSARY: 'tft-3pack/TRIADIC_PATTERN_GLOSSARY.md',
   T3P_TRIADIC_PATTERN_POSTER: 'tft-3pack/TRIADIC_PATTERN_POSTER.md',
   T3P_TRIADIC_PATTERN_POSTER_ASCII: 'tft-3pack/TRIADIC_PATTERN_POSTER_ASCII.md',
-
   // 3pak-shell
   SHELL_README: 'tft-3pack/3pak-shell/README.md',
   SHELL_PROFILED_README: 'tft-3pack/3pak-shell/profile.d/README.md',
-
   // Primitive Wrappers
   WRAPPERS_README: 'tft-3pack/3pak-shell/tft_primitive_wrappers/README.md',
   WRAPPERS_ATLAS: 'tft-3pack/3pak-shell/tft_primitive_wrappers/ATLAS.md',
   WRAPPERS_QUICKSTART: 'tft-3pack/3pak-shell/tft_primitive_wrappers/QUICKSTART.md',
   WRAPPERS_TRIADIC_PATTERN_CHEATSHEET: 'tft-3pack/3pak-shell/tft_primitive_wrappers/TRIADIC_PATTERN_CHEATSHEET.md',
-                                      
   // WRSADC Modules
   WRSADC_PYTHON_README: 'wrsadc-python/README.md',
   WRSADC_SHELL_README: 'wrsadc-shell/README.md',
   WRSADC_INTEGRATION_README: 'wrsadc_integration/README.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
