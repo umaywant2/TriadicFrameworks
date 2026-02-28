@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-   <title>Coeus | Triadic Frameworks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Coeus | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -122,28 +155,24 @@ code {
   color: var(--text-main);
 }
 </style>
-
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
    
-<nav>
-
-  <h2>🪙 Coeus Layer — Index</h2>
-
+<nav class="nav-band">
+  
+  <h2>🪙 Coeus Layer — RTT</h2>
      <a href="#COIN_AS_A_CONTRACT">🪙 Coin as a Contract — Contract‑based coin model</a>
      <a href="#FOLDER_USES">🗂️ Folder Uses — Directory purpose map</a>
      <a href="#QUICKSTART">⚡ Quickstart — Fast onboarding</a>
      <a href="#README">📄 README — Coeus overview</a>
-
   <h3>🤖 Agents</h3>
      <a href="#AGENTS_README">🤖 Agents README — Agent behaviors and roles</a>
-
   <h3>🪙 Coins</h3>
      <a href="#COINS_README">🪙 Coins README — Coin system overview</a>
      <a href="#COINS_REMIX_OUTPUT">🎛️ Remix Output — Coin remix outputs</a>
-
   <h3>📚 Docs (Manifestos, Logic, Indexes)</h3>
      <a href="#DOCS_EMITTERS">📡 Emitters — Emitter logic</a>
      <a href="#DOCS_GLOSSARY">📖 Glossary — Canon definitions</a>
@@ -170,15 +199,12 @@ code {
      <a href="#DOCS_SCROLL_PROVENANCE">🧾 Scroll Provenance — Scroll lineage</a>
      <a href="#DOCS_SOVEREIGN_MANIFESTO">👑 Sovereign Manifesto — Sovereignty rules</a>
      <a href="#DOCS_VALIDATOR_FOCUS_MANIFESTO">🛡️ Validator Focus — Validator priorities</a>
-
   <h3>🧪 Sandbox</h3>
      <a href="#SANDBOX_MINT_COIN">🪙 Mint Coin — Sandbox minting</a>
      <a href="#SANDBOX_README">📄 Sandbox README — Sandbox overview</a>
      <a href="#SANDBOX_LOGS_README">📜 Logs README — Sandbox logs</a>
-
   <h3>🔖 Tokens</h3>
      <a href="#TOKENS_README">🔖 Tokens README — Token system</a>
-
   <h3>🏆 Tournaments</h3>
      <a href="#TOURNAMENTS_README">🏆 Tournaments README — Tournament overview</a>
      <a href="#TOURNAMENT_MANIFESTO">📜 Tournament Manifesto — Tournament rules</a>
@@ -188,20 +214,36 @@ code {
      <a href="#TOURNAMENT_EMITTER_README">📡 Emitter Tournament — Emitter rules</a>
      <a href="#TOURNAMENT_LEADERBOARDS_README">📊 Leaderboards — Rankings</a>
      <a href="#TOURNAMENT_MASCOT_README">🐾 Mascot Tournament — Mascot rules</a>
-
   <h3>🛡️ Validators</h3>
      <a href="#VALIDATORS_PROFESSOR_REVIEW">🎓 Professor Review — Academic validator review</a>
      <a href="#VALIDATORS_README">🛡️ Validators README — Validator overview</a>
      <a href="#VALIDATORS_SCORE_TRACE_MANIFESTO">📈 Score Trace Manifesto — Scoring logic</a>
      <a href="#VALIDATORS_VALIDATOR_REVIEW">🧾 Validator Review — Validator assessments</a>
      <a href="../">🔙</a>
-
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
 
 <script>
 
+const DOC_MAP = {
+  QUICKSTART: 'QUICKSTART.md',
+  README: 'README.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
 function loadDoc(file) {
   fetch(file)
     .then(response => {
@@ -211,7 +253,12 @@ function loadDoc(file) {
       return response.text();
     })
     .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
     })
     .catch(err => {
       document.getElementById('content').innerHTML =
@@ -219,86 +266,11 @@ function loadDoc(file) {
       console.error(err);
     });
 }
-
-const DOC_MAP = {
-  COIN_AS_A_CONTRACT: 'Coin_as_a_Contract.md',
-  FOLDER_USES: 'FOLDER_USES.md',
-  QUICKSTART: 'QUICKSTART.md',
-  README: 'README.md',
-
-  // agents/
-  AGENTS_README: 'agents/README.md',
-
-  // coins/
-  COINS_README: 'coins/README.md',
-  COINS_REMIX_OUTPUT: 'coins/REMIX_OUTPUT.md',
-
-  // docs/
-  DOCS_EMITTERS: 'docs/EMITTERS.md',
-  DOCS_GLOSSARY: 'docs/GLOSSARY.md',
-  DOCS_HONOR_ROLL: 'docs/HONOR_ROLL.md',
-  DOCS_MANIFESTO: 'docs/MANIFESTO.md',
-  DOCS_Q_TRAVERSE: 'docs/Q-TRAVERSE.md',
-  DOCS_QUICKSTART: 'docs/QUICKSTART.md',
-  DOCS_RAIL_LOGIC: 'docs/RAIL_LOGIC.md',
-  DOCS_README: 'docs/README.md',
-  DOCS_CAUSE_MANIFESTO: 'docs/cause_manifesto.md',
-  DOCS_CLASS_MANIFESTO: 'docs/class_manifesto.md',
-  DOCS_CORRIDOR_ALIGNMENT: 'docs/corridor_alignment.md',
-  DOCS_DASHBOARD_LOGIC: 'docs/dashboard_logic.md',
-  DOCS_EXCHANGE_MANIFESTO: 'docs/exchange_manifesto.md',
-  DOCS_FOLDER_USES: 'docs/FOLDER_USES.md',
-  DOCS_FUTURE_ENHANCEMENTS: 'docs/Future_Enhancements.md',
-  DOCS_GLYPH_MANIFESTO: 'docs/glyph_manifesto.md',
-  DOCS_HONOR_ROLLS: 'docs/honor_rolls.md',
-  DOCS_LEGACY_MANIFESTO: 'docs/legacy_manifesto.md',
-  DOCS_MINT_READY_MANIFESTO: 'docs/mint_ready_manifesto.md',
-  DOCS_MUTATION_TYPES: 'docs/mutation_types.md',
-  DOCS_REMIX_RIGHTS_MANIFESTO: 'docs/remix_rights_manifesto.md',
-  DOCS_SCROLL_INDEX: 'docs/scroll_index.md',
-  DOCS_SCROLL_PROVENANCE: 'docs/scroll_provenance.md',
-  DOCS_SOVEREIGN_MANIFESTO: 'docs/sovereign_manifesto.md',
-  DOCS_VALIDATOR_FOCUS_MANIFESTO: 'docs/validator_focus_manifesto.md',
-
-  // sandbox/
-  SANDBOX_MINT_COIN: 'sandbox/mint_coin.md',
-  SANDBOX_README: 'sandbox/README.md',
-  SANDBOX_LOGS_README: 'sandbox/logs/README.md',
-
-  // tokens/
-  TOKENS_README: 'tokens/README.md',
-
-  // tournaments/
-  TOURNAMENTS_README: 'tournaments/README.md',
-  TOURNAMENT_MANIFESTO: 'tournaments/tournament_manifesto.md',
-  TOURNAMENT_CAUSE_README: 'tournaments/cause/README.md',
-  TOURNAMENT_CLASS_README: 'tournaments/class/README.md',
-  TOURNAMENT_COUNTRY_README: 'tournaments/country/README.md',
-  TOURNAMENT_EMITTER_README: 'tournaments/emitter/README.md',
-  TOURNAMENT_LEADERBOARDS_README: 'tournaments/leaderboards/README.md',
-  TOURNAMENT_MASCOT_README: 'tournaments/mascot/README.md',
-
-  // validators/
-  VALIDATORS_PROFESSOR_REVIEW: 'validators/professor_review.md',
-  VALIDATORS_README: 'validators/README.md',
-  VALIDATORS_SCORE_TRACE_MANIFESTO: 'validators/score_trace_manifesto.md',
-  VALIDATORS_VALIDATOR_REVIEW: 'validators/validator_review.md',
-};
-
-function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc('README.md');
-  }
-}
-
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
 </script>
-
 
 </body>
 </html>
