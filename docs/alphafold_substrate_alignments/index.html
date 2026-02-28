@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>AlphaFold Substrate Alignments</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>AlphaFold Substrate Alignments | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,33 +161,34 @@ code {
 
 <body>
    
-<nav>
-<h2>AlphaFold Substrate Alignments — Documentation Index</h2>
-
-<!-- ROOT -->
-<a href="#README">📘 README — Overview of AlphaFold substrate alignment.</a>
-
-<!-- SCOPE & FOUNDATIONS -->
-<a href="#SCOPE_AND_ASSUMPTIONS">📏 Scope & Assumptions — Boundaries and foundational assumptions.</a>
-<a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Definition of the alignment substrate.</a>
-
-<!-- ALIGNMENT FRAMEWORK -->
-<a href="#ALIGNMENT_PRINCIPLES">🧭 Alignment Principles — Core principles guiding alignment.</a>
-<a href="#FOLDING_REGIMES">🧩 Folding Regimes — Distinct protein folding regimes.</a>
-<a href="#DIMENSIONAL_CORES">🔷 Dimensional Cores — Core dimensional structures.</a>
-<a href="#INFERENCE_MAPPING">🧠 Inference Mapping — Mapping inference across substrates.</a>
-
-<!-- VALIDATION & DRIFT -->
-<a href="#VALIDATION_LAYERS_VST">✔️ Validation Layers (vST) — Validation via validated spacetime.</a>
-<a href="#DRIFT_DETECTION">📉 Drift Detection — Detecting alignment drift.</a>
-
-<!-- EXAMPLES -->
-<a href="#EXAMPLE_ALIGNMENT_WALKTHROUGH">🧪 Alignment Walkthrough — Step‑by‑step example.</a>
-<a href="#EXAMPLE_DIMENSIONAL_PROJECTION">📐 Dimensional Projection — Projection example.</a>
-
-<!-- APPENDIX -->
-<a href="#APPENDIX_TERMINOLOGY">📚 Terminology — Controlled vocabulary.</a>
-<a href="#APPENDIX_REFERENCES">📖 References — Source material and citations.</a>
+<nav class="nav-band">
+  
+  <h2>⚕️ AlphaFold Substrate Alignments — Documentation Index</h2>
+      <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
+      <a href="#README">🔰 README — Overview of AlphaFold substrate alignment.</a>
+    <h3>🚦 Scope & Foundations</h3>
+      <a href="#SCOPE_AND_ASSUMPTIONS">📏 Scope & Assumptions — Boundaries and foundational assumptions.</a>
+      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Definition of the alignment substrate.</a>
+    <h3>🔱 Alignment Framework</h3>
+      <a href="#ALIGNMENT_PRINCIPLES">🧭 Alignment Principles — Core principles guiding alignment.</a>
+      <a href="#FOLDING_REGIMES">🧩 Folding Regimes — Distinct protein folding regimes.</a>
+      <a href="#DIMENSIONAL_CORES">🔷 Dimensional Cores — Core dimensional structures.</a>
+      <a href="#INFERENCE_MAPPING">🧠 Inference Mapping — Mapping inference across substrates.</a>
+    <h3>🚸 Validation & Drift</h3>
+      <a href="#VALIDATION_LAYERS_VST">✔️ Validation Layers (vST) — Validation via validated spacetime.</a>
+      <a href="#DRIFT_DETECTION">📉 Drift Detection — Detecting alignment drift.</a>
+    <h3>📣 Examples</h3>
+      <a href="#EXAMPLE_ALIGNMENT_WALKTHROUGH">🧪 Alignment Walkthrough — Step‑by‑step example.</a>
+      <a href="#EXAMPLE_DIMENSIONAL_PROJECTION">📐 Dimensional Projection — Projection example.</a>
+    <h3>🔸 Appendix</h3>
+      <a href="#APPENDIX_TERMINOLOGY">📚 Terminology — Controlled vocabulary.</a>
+      <a href="#APPENDIX_REFERENCES">📖 References — Source material and citations.</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
@@ -163,30 +197,25 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Scope & Foundations
   SCOPE_AND_ASSUMPTIONS: 'scope_and_assumptions.md',
   SUBSTRATE_DEFINITION: 'substrate_definition.md',
-
   // Alignment Framework
   ALIGNMENT_PRINCIPLES: 'alignment_principles.md',
   FOLDING_REGIMES: 'folding_regimes.md',
   DIMENSIONAL_CORES: 'dimensional_cores.md',
   INFERENCE_MAPPING: 'inference_mapping.md',
-
   // Validation & Drift
   VALIDATION_LAYERS_VST: 'validation_layers_vst.md',
   DRIFT_DETECTION: 'drift_detection.md',
-
   // Examples
   EXAMPLE_ALIGNMENT_WALKTHROUGH: 'examples/example_alignment_walkthrough.md',
   EXAMPLE_DIMENSIONAL_PROJECTION: 'examples/example_dimensional_projection.md',
-
   // Appendix
   APPENDIX_TERMINOLOGY: 'appendix/terminology.md',
   APPENDIX_REFERENCES: 'appendix/references.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
