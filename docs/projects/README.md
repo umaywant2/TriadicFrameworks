@@ -3,6 +3,8 @@
 The **Projects Constellation** of TriadicFrameworks extends the lattice into cognition, memory, data, compute, and flux.  
 Each project is a living scroll — active, evolving, and echoing into remix lineage.
 
+Each project is looking for small teams (working solo or together) with Copilot to futher the work. Have some fun, please review <a href="https://www.triadicframeworks.org/#SECURITY">our security policy</a>
+
 ---
 
 ## 🌐 CoConsciousness
