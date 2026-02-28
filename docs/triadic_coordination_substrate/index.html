@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/11/2026 © www.TriadicFrameworks.org -->
-  <title>Triadic Coordination Substrate</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Triadic Coordination Substrate | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,30 +161,30 @@ code {
 
 <body>
    
-<nav>
-  
+<nav class="nav-band">
+
   <h2>🔺 Triadic Coordination Substrate — Documentation Index</h2>
-
-  <h3>🌱 Orientation — What this substrate defines</h3>
-    <a href="#README">📘 README — Overview of the Triadic Coordination Substrate.</a>
-
-  <h3>🪴 Foundational Declarations — Assumptions and axioms</h3>
-    <a href="#CREATORS_ASSUMPTION">🌇 Creator’s Assumption — Foundational assumptions of the coordination model.</a>
-    <a href="#MINIMAL_AXIOMS">📐 Minimal Axioms — Core axioms required for triadic coordination.</a>
-
-  <h3>🌲 Structural Geometry — How coordination is shaped</h3>
-    <a href="#TRIADIC_STRUCTURE">🔺 Triadic Structure — Fundamental triadic coordination geometry.</a>
-    <a href="#CORRIDOR_SEPARATION">🚧 Corridor Separation — Separation and isolation of coordination corridors.</a>
-
-  <h3>🌳 Dynamics & Alignment — How coordination behaves</h3>
-    <a href="#ALIGNMENT_DYNAMICS">⚙️ Alignment Dynamics — Dynamic behavior of aligned triadic systems.</a>
-    <a href="#FAILURE_MODES">⚠️ Failure Modes — Known breakdowns and misalignment patterns.</a>
-
-  <h3>🪚 Application & Interoperability — Where coordination applies</h3>
-    <a href="#HUMAN_TEAM_MAPPING">👥 Human Team Mapping — Mapping triadic coordination onto human teams.</a>
-    <a href="#INTEROPERABILITY_WITH_CSM">🔗 Interoperability with CSM — Integration with the Coordination Substrate Model.</a>
-    <a href="../">🔙</a>
-
+      <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
+    <h3>🌱 Orientation — What this substrate defines</h3>
+      <a href="#README">🔰 README — Overview of the Triadic Coordination Substrate.</a>
+    <h3>🪴 Foundational Declarations — Assumptions and axioms</h3>
+      <a href="#CREATORS_ASSUMPTION">🌇 Creator’s Assumption — Foundational assumptions of the coordination model.</a>
+      <a href="#MINIMAL_AXIOMS">📐 Minimal Axioms — Core axioms required for triadic coordination.</a>
+    <h3>🌲 Structural Geometry — How coordination is shaped</h3>
+      <a href="#TRIADIC_STRUCTURE">🔺 Triadic Structure — Fundamental triadic coordination geometry.</a>
+      <a href="#CORRIDOR_SEPARATION">🚧 Corridor Separation — Separation and isolation of coordination corridors.</a>
+    <h3>🌳 Dynamics & Alignment — How coordination behaves</h3>
+      <a href="#ALIGNMENT_DYNAMICS">⚙️ Alignment Dynamics — Dynamic behavior of aligned triadic systems.</a>
+      <a href="#FAILURE_MODES">⚠️ Failure Modes — Known breakdowns and misalignment patterns.</a>
+    <h3>🪚 Application & Interoperability — Where coordination applies</h3>
+      <a href="#HUMAN_TEAM_MAPPING">👥 Human Team Mapping — Mapping triadic coordination onto human teams.</a>
+      <a href="#INTEROPERABILITY_WITH_CSM">🔗 Interoperability with CSM — Integration with the Coordination Substrate Model.</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
@@ -160,25 +193,20 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Foundational Declarations
   CREATORS_ASSUMPTION: 'creators_assumption.md',
   MINIMAL_AXIOMS: 'minimal_axioms.md',
-
   // Structural Geometry
   TRIADIC_STRUCTURE: 'triadic_structure.md',
   CORRIDOR_SEPARATION: 'corridor_separation.md',
-
   // Dynamics & Alignment
   ALIGNMENT_DYNAMICS: 'alignment_dynamics.md',
   FAILURE_MODES: 'failure_modes.md',
-
   // Application & Interoperability
   HUMAN_TEAM_MAPPING: 'human_team_mapping.md',
   INTEROPERABILITY_WITH_CSM: 'interoperability_with_csm.md',
 };
-
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -217,6 +245,3 @@ loadFromHash();
 
 </body>
 </html>
-
-
-
