@@ -163,12 +163,33 @@ code {
    
 <nav class="nav-band">
   
-  <h2>📟 Projects RTT-App | TriadicFrameworks</h2>
-      <a href="#README">🔰 README — Overview</a>
-    <h3>🪁 RTT Projects</h3>
-      <a href="#SMARTPHONE_PREVIEW">📲 A Smartphone with RTT-Inside | RTT</a>
-      <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
-      <a href="../">🔙</a>
+<h2>📱 RTT-App | TriadicFrameworks</h2>
+    <a href="#README">🔰 App Overview — Entry point for RTT‑App docs</a>
+    <a href="#SMARTPHONE_WITH_RTT_INSIDE">🔍 RTT‑Inside Phone — High‑level concept and framing</a>
+    <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
+  <h3>🛰️ API Layer</h3>
+    <a href="#API_AWARENESS_ENDPOINT">🌐 Awareness Endpoint — Server clarity document</a>
+    <a href="#API_CACHING_RULES">🗄️ Caching Rules — Retention, freshness, fallback</a>
+    <a href="#API_ERROR_HANDLING">🚧 Error Handling — Network, parsing, and cache safety</a>
+  <h3>🧭 Awareness Model</h3>
+    <a href="#AWARENESS_OVERVIEW">🧩 Model Overview — Structure of local + global clarity</a>
+    <a href="#AWARENESS_LOCAL_SIGNALS">📡 Local Signals — Device + network stability inputs</a>
+    <a href="#AWARENESS_SERVER_SIGNALS">🌍 Server Signals — Global clarity declarations</a>
+    <a href="#AWARENESS_MERGE_LOGIC">⚖️ Merge Logic — Combining local and global states</a>
+    <a href="#AWARENESS_STATE_MACHINE">🔄 State Machine — Transitions and behavior</a>
+  <h3>🛠️ Implementation</h3>
+    <a href="#IMPLEMENTATION_IOS">🍎 iOS — Permissionless signal + UI implementation</a>
+    <a href="#IMPLEMENTATION_ANDROID">🤖 Android — Platform‑safe signal + UI implementation</a>
+    <a href="#IMPLEMENTATION_SHARED_LOGIC">🔗 Shared Logic — Cross‑platform merge + evaluation</a>
+  <h3>🚀 Release Tracks</h3>
+    <a href="#RELEASE_V1_SCOPE">📦 v1 Scope — Boundaries and deliverables</a>
+    <a href="#RELEASE_V1_LIMITATIONS">⛔ v1 Limitations — Intentional constraints</a>
+    <a href="#RELEASE_ROADMAP_V2_INSIDE">🧭 v2 Roadmap — RTT‑Inside expansion path</a>
+  <h3>🎨 UI Layer</h3>
+    <a href="#UI_INDICATOR_DESIGN">💡 Indicator Design — Visual language for clarity</a>
+    <a href="#UI_STATE_TRANSITIONS">🌈 State Transitions — Motion + color behavior</a>
+    <a href="#UI_PORTAL_TO_RTT">🚪 Portal to RTT — Link into the RTT ecosystem</a>
+    <a href="../">🔙</a>
    <!-- RTT Canonical Signature -->
    <span style="display:none;">
    rtt=1 | coherence=declared | drift=bounded | paradox=structural
@@ -181,8 +202,25 @@ code {
 <script>
 
 const DOC_MAP = {
-  SMARTPHONE_PREVIEW: 'A_Smartphone_with_RTT-Inside.md',
-  README: 'README.md'
+  README: 'README.md',
+  SMARTPHONE_WITH_RTT_INSIDE: 'A_Smartphone_with_RTT-Inside.md',
+  API_AWARENESS_ENDPOINT: 'api/awareness_endpoint.md',
+  API_CACHING_RULES: 'api/caching_rules.md',
+  API_ERROR_HANDLING: 'api/error_handling.md',
+  AWARENESS_LOCAL_SIGNALS: 'awareness_model/local_signals.md',
+  AWARENESS_MERGE_LOGIC: 'awareness_model/merge_logic.md',
+  AWARENESS_OVERVIEW: 'awareness_model/overview.md',
+  AWARENESS_SERVER_SIGNALS: 'awareness_model/server_signals.md',
+  AWARENESS_STATE_MACHINE: 'awareness_model/state_machine.md',
+  IMPLEMENTATION_ANDROID: 'implementation/android.md',
+  IMPLEMENTATION_IOS: 'implementation/ios.md',
+  IMPLEMENTATION_SHARED_LOGIC: 'implementation/shared_logic.md',
+  RELEASE_ROADMAP_V2_INSIDE: 'release/roadmap_v2_inside.md',
+  RELEASE_V1_LIMITATIONS: 'release/v1_limitations.md',
+  RELEASE_V1_SCOPE: 'release/v1_scope.md',
+  UI_INDICATOR_DESIGN: 'ui/indicator_design.md',
+  UI_PORTAL_TO_RTT: 'ui/portal_to_rtt.md',
+  UI_STATE_TRANSITIONS: 'ui/state_transitions.md',
 };
   
 function loadFromHash() {
