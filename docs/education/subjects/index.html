@@ -165,6 +165,7 @@ code {
   
   <h2>🎓 RTT Subjects — Index</h2>
     <a href="#README">📄 README — Overview of RTT subject translations</a>
+    <a href="https://www.triadicframeworks.org/education/QnA_Atlas/">🧪 QnA Atlas for Subjects</a>
   <h3>🧲 Physics (01)</h3>
     <a href="#RTT_01_01_CLASSICAL_MECHANICS">⚙️ Classical Mechanics — RTT reframing of motion & forces</a>
     <a href="#RTT_01_01_OSCILLATORS_RESONANCE">🎵 Oscillators & Resonance — Harmonics & coherence</a>
@@ -212,12 +213,11 @@ code {
     <a href="#RTT_05_07_HYDROLOGY">💧 Hydrology — Water systems</a>
     <a href="#RTT_05_08_ENVIRONMENTAL_SUSTAINABILITY">♻️ Sustainability — Planetary stewardship</a>
     <a href="../">🔙</a>
-
    <!-- RTT Canonical Signature -->
    <span style="display:none;">
    rtt=1 | coherence=declared | drift=bounded | paradox=structural
    </span>
-  
+   
 </nav>
 
 <main id="content"></main>
@@ -226,7 +226,6 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Physics 01
   RTT_01_01_ANGULAR_MOMENTUM: 'RTT_01_01_Angular_Momentum_and_Rotation.md',
   RTT_01_01_NEWTONIAN_REFRAMING: 'RTT_01_01_A_Newtonian_Reframing.md',
@@ -254,25 +253,21 @@ const DOC_MAP = {
   RTT_01_01_SYMMETRY_INVARIANCE: 'RTT_01_01_Symmetry_and_Invariance.md',
   RTT_01_01_THERMALIZATION_DECOHERENCE: 'RTT_01_01_Thermalization_and_Decoherence.md',
   RTT_01_01_TORQUE_ANGULAR_ACCEL: 'RTT_01_01_Torque_and_Angular_Acceleration.md',
-
   RTT_01_02_ENTANGLEMENT: 'RTT_01_02_Entanglement_and_Coherence.md',
   RTT_01_02_MEASUREMENT: 'RTT_01_02_Measurement_and_Decoherence.md',
   RTT_01_02_QUANTUM_FIELDS: 'RTT_01_02_Quantum_Fields.md',
   RTT_01_02_QUANTUM_PHYSICS: 'RTT_01_02_Quantum_Physics.md',
   RTT_01_02_SUPERPOSITION: 'RTT_01_02_Superposition_and_Interference.md',
-
   RTT_01_03_COSMOLOGICAL_DYNAMICS: 'RTT_01_03_Cosmological_Dynamics.md',
   RTT_01_03_GENERAL_RELATIVITY: 'RTT_01_03_General_Relativity_Reframed.md',
   RTT_01_03_RELATIVITY_SPACETIME: 'RTT_01_03_Relativity_and_Spacetime.md',
   RTT_01_03_SPACETIME_GEOMETRY: 'RTT_01_03_Spacetime_Geometry.md',
   RTT_01_03_SPECIAL_RELATIVITY: 'RTT_01_03_Special_Relativity_Reframed.md',
-
   RTT_01_04_THERMODYNAMICS: 'RTT_01_04_Thermodynamics_and_Statistical_Physics.md',
   RTT_01_05_ASTROPHYSICS: 'RTT_01_05_Astrophysics_and_Stellar_Systems.md',
   RTT_01_06_COSMOLOGY_LARGE_SCALE: 'RTT_01_06_Cosmology_and_Large_Scale_Structure.md',
   RTT_01_07_PARTICLE_PHYSICS: 'RTT_01_07_Particle_Physics.md',
   RTT_01_08_FIELD_THEORY: 'RTT_01_08_Field_Theory_and_Fundamental_Forces.md',
-
   // Chemistry 02
   RTT_02_01_PHYSICAL_CHEMISTRY: 'RTT_02_01_Physical_Chemistry.md',
   RTT_02_02_ORGANIC_CHEMISTRY: 'RTT_02_02_Organic_Chemistry.md',
@@ -282,7 +277,6 @@ const DOC_MAP = {
   RTT_02_06_CRYSTALLOGRAPHY: 'RTT_02_06_Crystallography_and_Structures.md',
   RTT_02_07_CHEMICAL_KINETICS: 'RTT_02_07_Chemical_Reactions_and_Kinetics.md',
   RTT_02_08_NANOTECHNOLOGY: 'RTT_02_08_Nanotechnology_and_Advanced_Materials.md',
-
   // Biology 03
   RTT_03_01_CELL_BIOLOGY: 'RTT_03_01_Cell_Biology.md',
   RTT_03_02_GENETICS: 'RTT_03_02_Genetics_and_Epigenetics.md',
@@ -292,7 +286,6 @@ const DOC_MAP = {
   RTT_03_06_MICROBIOLOGY: 'RTT_03_06_Microbiology_and_Virology.md',
   RTT_03_07_DEVELOPMENTAL_BIOLOGY: 'RTT_03_07_Developmental_Biology.md',
   RTT_03_08_SYSTEMS_BIOLOGY: 'RTT_03_08_Systems_Biology.md',
-
   // Medicine 04
   RTT_04_01_CLINICAL_MEDICINE: 'RTT_04_01_Clinical_Medicine.md',
   RTT_04_02_PUBLIC_HEALTH: 'RTT_04_02_Public_Health.md',
@@ -302,7 +295,6 @@ const DOC_MAP = {
   RTT_04_06_IMMUNOLOGY: 'RTT_04_06_Immunology.md',
   RTT_04_07_MEDICAL_TECH: 'RTT_04_07_Medical_Technology_and_Diagnostics.md',
   RTT_04_08_PREVENTIVE_MEDICINE: 'RTT_04_08_Preventive_Medicine_and_Longevity.md',
-
   // Earth Science 05
   RTT_05_01_GEOLOGY: 'RTT_05_01_Geology_and_Geophysics.md',
   RTT_05_02_ATMOSPHERIC_SCIENCE: 'RTT_05_02_Atmospheric_Sciences.md',
@@ -313,7 +305,7 @@ const DOC_MAP = {
   RTT_05_07_HYDROLOGY: 'RTT_05_07_Hydrology_and_Water_Systems.md',
   RTT_05_08_ENVIRONMENTAL_SUSTAINABILITY: 'RTT_05_08_Environmental_Sustainability.md',
 };
-  
+   
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
