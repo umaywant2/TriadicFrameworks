@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-   <title>Contributors | TriadicFrameworks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Contributors | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -122,26 +155,48 @@ code {
   color: var(--text-main);
 }
 </style>
-
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
    
-<nav>
-
+<nav class="nav-band">
+  
   <h2>🤝 Contributors — Index</h2>
 
-  <a href="#CONTRIBUTORS_ARCHITECTS">🏛️ Architects — Core structural designers of the canon</a>
-  <a href="#CONTRIBUTORS_LIST">🧑‍🤝‍🧑 Contributors — Full list of contributors and supporters</a>
-  <a href="#CONTRIBUTORS_README">📄 Contributors README — Overview of contributor roles</a>
-
+      <a href="#CONTRIBUTORS_ARCHITECTS">🏛️ Architects — Core structural designers of the canon</a>
+      <a href="#CONTRIBUTORS_LIST">🧑‍🤝‍🧑 Contributors — Full list of contributors and supporters</a>
+      <a href="#CONTRIBUTORS_README">🔰 Contributors README — Overview of contributor roles</a>
+    <h3>🏅 RTT Projects and Learning</h3>
+      <a href="https://www.triadicframeworks.org/projects/">👩‍🌾Projects (seed examples) | RTT</a>
+      <a href="https://www.triadicframeworks.org/education/">🧑‍🚀 RTT Learning Resources</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
 
 <script>
 
+const DOC_MAP = {
+  CONTRIBUTORS_ARCHITECTS: 'architects.md',
+  CONTRIBUTORS_LIST: 'contributors.md',
+  CONTRIBUTORS_README: 'README.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
 function loadDoc(file) {
   fetch(file)
     .then(response => {
@@ -151,7 +206,12 @@ function loadDoc(file) {
       return response.text();
     })
     .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
     })
     .catch(err => {
       document.getElementById('content').innerHTML =
@@ -159,27 +219,11 @@ function loadDoc(file) {
       console.error(err);
     });
 }
-
-const DOC_MAP = {
-  CONTRIBUTORS_ARCHITECTS: 'architects.md',
-  CONTRIBUTORS_LIST: 'contributors.md',
-  CONTRIBUTORS_README: 'README.md',
-};
-
-function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc('README.md');
-  }
-}
-
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
 </script>
-
 
 </body>
 </html>
