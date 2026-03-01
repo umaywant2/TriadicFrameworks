@@ -323,15 +323,26 @@ const DOC_MAP = {
   PHYSICS_THERMODYNAMICS_INT: 'physics/thermodynamics/intermediate.md',
   PHYSICS_THERMODYNAMICS_ADV: 'physics/thermodynamics/advanced.md',
 };
-  
-function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc('README.md');
+   
+  function scrollContentToTop() {
+  const content = document.getElementById('content');
+  if (content) {
+    content.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
+
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+    scrollContentToTop();
+  } else {
+    loadDoc('README.md');
+    scrollContentToTop();
+  }
+}
+
 function loadDoc(file) {
   fetch(file)
     .then(response => {
