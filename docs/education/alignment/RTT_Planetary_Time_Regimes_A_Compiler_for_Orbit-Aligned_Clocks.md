@@ -1,4 +1,12 @@
-# RTT Planetary Time Regimes: A Compiler for Orbit‑Aligned Clocks
+## 🜁 RTT Triad: Planetary Time Regimes
+
+**Substrate —** Orbital and rotational periods measured in a stable reference frame. These values are treated as invariants: the planet’s structural rhythm, independent of any narrative unit system.
+
+**Gauge —** Integer scaffolds chosen by the operator (days per year, hours per day, minutes per hour, seconds per minute). These define the shape of the calendar and clock without constraining the substrate.
+
+**Translator —** The derived planet‑second and its conversion factors, enabling lossless mapping between the scaffold and the substrate, and between any two planetary regimes.
+
+---
 
 ## Abstract
 This document introduces the **RTT Planetary Time Compiler**, a regime‑aware system for generating coherent, orbit‑aligned time standards for any planetary body. Instead of forcing inherited Earth‑centric units (seconds, minutes, hours, days, months) onto non‑integer orbital and rotational ratios, the compiler derives a **planet‑specific second** from structural measurements of orbit and rotation. Integer scaffolds—such as days per year or hours per day—become narrative gauges layered atop substrate truth, not constraints imposed upon it. The result is a universal, translation‑safe time regime that preserves structural invariants while enabling clean, canonical calendars for any world encountered.
