@@ -169,6 +169,22 @@ code {
 </head>
 <body>
 
+<nav class="nav-band">
+  
+  <h2>🌱 Education (seed examples) | RTT</h2>
+       <a href="https://www.triadicframeworks.org/education/">🧑‍🚀 RTT Learning Resources</a>
+    <h3>🔬 Paradox Resilience Checker</h3>
+       <a href="https://www.triadicframeworks.org/Resilience_Checker/">🧭 Resilience Checker | RTT</a>
+       <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
+</nav>
+
+<main id="content">
+
 <header>
   <h1>Resonance‑Time Theory: Paradox Resilience 🧭</h1>
   <p>
@@ -177,8 +193,6 @@ code {
     and how *you* can test it locally.
   </p>
 </header>
-
-<main>
 
   <section>
     <h2>What Is Paradox Resilience?</h2>
@@ -252,8 +266,6 @@ npm run validate
     </div>
   </section>
 
-</main>
-
 <footer>
      <center>
        <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">Resonance‑Time Theory</a> ✧
@@ -261,6 +273,51 @@ npm run validate
        <a href="https://github.com/umaywant2/TriadicFrameworks">GitHub</a>
      </center>
 </footer>
+     
+</main>
+     
+<script>
 
+const DOC_MAP = {
+  QUICKSTART: 'QUICKSTART.md',
+  README: 'README.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+     
 </body>
 </html>
