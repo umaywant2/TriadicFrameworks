@@ -324,22 +324,37 @@ const DOC_MAP = {
   PHYSICS_THERMODYNAMICS_ADV: 'physics/thermodynamics/advanced.md',
 };
    
-  function scrollContentToTop() {
-  const content = document.getElementById('content');
-  if (content) {
-    content.scrollTo({ top: 0, behavior: 'smooth' });
+function scrollViewerToTop() {
+  const viewer =
+    document.getElementById('doc') ||
+    document.getElementById('content') ||
+    document.querySelector('main');
+
+  if (viewer && viewer.scrollTo) {
+    viewer.scrollTo({ top: 0, behavior: 'smooth' });
+    return;
   }
+
+  // Fallback: page scroll
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+async function loadDoc(file) {
+  const md = await fetch(file).then(r => r.text());
+
+  // whatever you already do to render markdown:
+  // viewer.innerHTML = marked.parse(md);
+
+  // IMPORTANT: scroll AFTER DOM update
+  requestAnimationFrame(() => scrollViewerToTop());
 }
 
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
-
   if (DOC_MAP[key]) {
     loadDoc(DOC_MAP[key]);
-    scrollContentToTop();
   } else {
     loadDoc('README.md');
-    scrollContentToTop();
   }
 }
 
