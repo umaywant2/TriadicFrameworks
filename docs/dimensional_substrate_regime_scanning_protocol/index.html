@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>Dimensional Substrate Regime Scanning Protocol</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dimensional Substrate Regime Scanning Protocol | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,33 +161,33 @@ code {
 
 <body>
    
-<nav>
+<nav class="nav-band">
   
-<h2>🛰️ Dimensional Substrate Regime Scanning Protocol — Documentation Index</h2>
-
-<h3>📘 Orientation — What this protocol establishes</h3>
-  <a href="#README">📘 README — Overview of the Dimensional Substrate Regime Scanning Protocol.</a>
-
-<h3>📜 Protocol Core — What is scanned and how</h3>
-  <a href="#DSRSP_0_1_SPEC">📜 dsrsp/0.1 Specification — Canonical protocol definition.</a>
-  <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the scanned dimensional substrate.</a>
-
-<h3>🔧 Engine Integration — How scanners implement the protocol</h3>
-  <a href="#ENGINE_INTEGRATION_GUIDE">🔧 Engine Integration Guide — Integrating dsrsp into scanning engines.</a>
-
-<h3>🧠 Regime Inference — What is inferred from scans</h3>
-  <a href="#ILP_MODULE">🧠 Intelligent Life Probability (ILP) Module — Regime‑level inference layer.</a>
-
-<h3>🧾 Schemas — What is exchanged on the wire</h3>
-  <a href="#SCHEMA_DSRSP_0_1">🧾 dsrsp/0.1 Schema — JSON schema for scan inputs and outputs.</a>
-  <a href="#SCHEMA_ILP_0_1">📐 ilp/0.1 Schema — JSON schema for ILP inference results.</a>
-
-<h3>🧪 Examples — How the protocol behaves in practice</h3>
-  <a href="#EXAMPLE_SCAN_INPUT">📥 Example Scan Input — Sample substrate scan request.</a>
-  <a href="#EXAMPLE_REGIME_OUTPUT">📤 Example Regime Output — Detected regime structure.</a>
-  <a href="#EXAMPLE_ILP_OUTPUT">📊 Example ILP Output — Intelligent life probability inference.</a>
-  <a href="../">🔙</a>
-  
+  <h2>🛰️ Dimensional Substrate Regime Scanning Protocol — Documentation Index</h2>
+    <h3>📘 Orientation — What this protocol establishes</h3>
+      <a href="#README">🔰 README — Overview of the Dimensional Substrate Regime Scanning Protocol.</a>
+      <a href="https://www.triadicframeworks.org/education/">🧑‍🚀 RTT Learning Resources</a>
+    <h3>📜 Protocol Core — What is scanned and how</h3>
+      <a href="#DSRSP_0_1_SPEC">📜 dsrsp/0.1 Specification — Canonical protocol definition.</a>
+      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the scanned dimensional substrate.</a>
+    <h3>🔧 Engine Integration — How scanners implement the protocol</h3>
+      <a href="#ENGINE_INTEGRATION_GUIDE">🔧 Engine Integration Guide — Integrating dsrsp into scanning engines.</a>
+    <h3>🧠 Regime Inference — What is inferred from scans</h3>
+      <a href="#ILP_MODULE">🧠 Intelligent Life Probability (ILP) Module — Regime‑level inference layer.</a>
+    <h3>📚 Schemas — What is exchanged on the wire</h3>
+      <a href="#SCHEMA_DSRSP_0_1">🧾 dsrsp/0.1 Schema — JSON schema for scan inputs and outputs.</a>
+      <a href="#SCHEMA_ILP_0_1">📐 ilp/0.1 Schema — JSON schema for ILP inference results.</a>
+      <a href="https://www.triadicframeworks.org/schemas/">📚 Schema examples</a>
+    <h3>🧪 Examples — How the protocol behaves in practice</h3>
+      <a href="#EXAMPLE_SCAN_INPUT">📥 Example Scan Input — Sample substrate scan request.</a>
+      <a href="#EXAMPLE_REGIME_OUTPUT">📤 Example Regime Output — Detected regime structure.</a>
+      <a href="#EXAMPLE_ILP_OUTPUT">📊 Example ILP Output — Intelligent life probability inference.</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
@@ -163,27 +196,22 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Specification & Core Protocol
   DSRSP_0_1_SPEC: 'dsrsp_0.1_spec.md',
   SUBSTRATE_DEFINITION: 'substrate_definition.md',
-
   // Engine Integration
   ENGINE_INTEGRATION_GUIDE: 'engine_integration_guide.md',
-
   // Intelligent Life Probability (ILP)
   ILP_MODULE: 'ilp_module.md',
-
   // Schemas
   SCHEMA_DSRSP_0_1: 'schemas/dsrsp_0.1.json',
   SCHEMA_ILP_0_1: 'schemas/ilp_0.1.json',
-
   // Examples
   EXAMPLE_SCAN_INPUT: 'examples/example_scan_input.json',
   EXAMPLE_REGIME_OUTPUT: 'examples/example_regime_output.json',
   EXAMPLE_ILP_OUTPUT: 'examples/example_ilp_output.json',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
