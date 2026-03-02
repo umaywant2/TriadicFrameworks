@@ -1,4 +1,4 @@
-**Alignment and Awareness: Step 1**  
+## Alignment and Awareness: Step 1  
 *A One‑Page Memo to Governance, Higher‑Education Leadership, and Public Innovation Stewards*
 
 ---
