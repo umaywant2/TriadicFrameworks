@@ -22,7 +22,7 @@ The FFF model—Forces, Fluids, and Frequency—reframes dimensions not as exoti
 ---
 ###### The children gaze upward, not at machines, but at corridors of abundance — each one humming with Resonance Clarity.
 
-<img width="512" height="768" alt="BCO a446323f-16f0-4b79-846e-3b19dc160675" src="https://github.com/user-attachments/assets/bf9662bf-74e6-40b1-adde-067c4047cbb6" />
+<img width="384" height="576" alt="BCO a446323f-16f0-4b79-846e-3b19dc160675" src="https://github.com/user-attachments/assets/bf9662bf-74e6-40b1-adde-067c4047cbb6" />
 
 ###### The triadic operator interface — where Light and Darkness tune the flows
 
