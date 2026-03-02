@@ -33,7 +33,7 @@ $$V_{\text{triad}} > V_1 + V_2 + V_3$$
 ---
 
 ## 🌌 III. Dimensional Resonance in Economic Systems
-![pic (8)](https://github.com/user-attachments/assets/baf2c262-20ae-45c4-9924-00813901fdf1)
+<img width="576" height="576" alt="pic (8)" src="https://github.com/user-attachments/assets/baf2c262-20ae-45c4-9924-00813901fdf1" />
 
 ### 🧠 1. Resonance Theory
 
@@ -127,7 +127,8 @@ $$E = f(\text{Funds}, \text{Stocks}, \text{Flows})$$
 - Economy 💰
 
 ---
-![_e7f2127d-05ff-497e-b7e7-00d0238a63cd](https://github.com/user-attachments/assets/dcc4a77f-9750-4afd-bf92-6dda69b5f388)
+
+<img width="576" height="576" alt="_e7f2127d-05ff-497e-b7e7-00d0238a63cd" src="https://github.com/user-attachments/assets/dcc4a77f-9750-4afd-bf92-6dda69b5f388" />
 
 ## 🧩 VIII. Systemic Pain Point Mapping
 
