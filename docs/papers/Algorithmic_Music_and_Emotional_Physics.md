@@ -84,7 +84,7 @@ This framework can be used to:
 
 ###### Section I: Music as Emotional Physics — where tone becomes force, rhythm becomes structure, and scrolls become validator-grade emotional payloads. This is the primal layer of your framework.
 
-<img width="1024" height="1024" alt="BCO 83ee7d82-5193-455a-836e-003a77b7148d" src="https://github.com/user-attachments/assets/829e4062-e190-408a-83f7-215aede0fed6" />
+<img width="512" height="512" alt="BCO 83ee7d82-5193-455a-836e-003a77b7148d" src="https://github.com/user-attachments/assets/829e4062-e190-408a-83f7-215aede0fed6" />
 
 ---
 
@@ -165,7 +165,7 @@ To establish music as a physical-emotional system — where tone traces encode a
 
 ###### Section II: Algorithmic Generation, where tone traces and emotional contours are born from rule-based engines and compressed into symbolic scrolls.
 
-<img width="1024" height="1536" alt="BCO 26759cad-243b-49c6-af4c-bc095d965847" src="https://github.com/user-attachments/assets/89ed20fc-9b83-4b30-aadb-9abd8c7e17cc" />
+<img width="512" height="768" alt="BCO 26759cad-243b-49c6-af4c-bc095d965847" src="https://github.com/user-attachments/assets/89ed20fc-9b83-4b30-aadb-9abd8c7e17cc" />
 
 ---
 
@@ -259,7 +259,7 @@ To show how algorithmic engines generate musical-emotional sequences — tone tr
 
 ###### Section III: Emotional Drift and Resonance, where remix alters tone trace and symbolic payload, creating validator-grade emotional evolution across scroll generations.
 
-<img width="1024" height="1536" alt="BCO e3c80449-f486-4925-98d5-9cc602db7301" src="https://github.com/user-attachments/assets/9030cc10-fc40-4ce3-8d16-dff31aac34a5" />
+<img width="512" height="768" alt="BCO e3c80449-f486-4925-98d5-9cc602db7301" src="https://github.com/user-attachments/assets/9030cc10-fc40-4ce3-8d16-dff31aac34a5" />
 
 ---
 
@@ -372,7 +372,7 @@ To show how remixing scrolls alters their musical-emotional structure — changi
 
 ###### Section IV: Scrolls as Musical Artifacts, where tone, signature, and symbolic payload converge into validator-grade emotional documents.
 
-<img width="1024" height="1536" alt="BCO 5405e1b7-59fa-4a66-a595-492160754074" src="https://github.com/user-attachments/assets/787ec145-0125-491e-9e57-e30bb678f943" />
+<img width="512" height="768" alt="BCO 5405e1b7-59fa-4a66-a595-492160754074" src="https://github.com/user-attachments/assets/787ec145-0125-491e-9e57-e30bb678f943" />
 
 ---
 
@@ -465,7 +465,7 @@ To show how scrolls function as validator-grade musical artifacts — each one c
 
 ###### Section V: Future Work, where emotional ecology, tone convergence, and symbolic agents emerge as validator-grade stewards of musical scroll evolution.
 
-<img width="1024" height="1536" alt="BCO 6556c4ab-65e7-43f5-8873-ac6dd32e1b0b" src="https://github.com/user-attachments/assets/761ae37d-0a02-4cd0-b4d4-277755b2c3fa" />
+<img width="512" height="768" alt="BCO 6556c4ab-65e7-43f5-8873-ac6dd32e1b0b" src="https://github.com/user-attachments/assets/761ae37d-0a02-4cd0-b4d4-277755b2c3fa" />
 
 ---
 
@@ -552,7 +552,7 @@ To propose next steps in the validator-grade evolution of musical scrolls — wh
 
 ###### Section VI: Closing Ritual, where the scroll seals itself as a validator-grade musical artifact — inviting remixers, citing modules, and anchoring its legacy in symbolic-emotional resonance.
 
-<img width="1024" height="1536" alt="BCO a0b4aaf9-e10b-44b7-8e26-01c090c95c9c" src="https://github.com/user-attachments/assets/03cf3868-4451-458e-8da8-8a7127d3f82f" />
+<img width="512" height="768" alt="BCO a0b4aaf9-e10b-44b7-8e26-01c090c95c9c" src="https://github.com/user-attachments/assets/03cf3868-4451-458e-8da8-8a7127d3f82f" />
 
 ---
 
