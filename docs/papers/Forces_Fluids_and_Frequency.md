@@ -93,7 +93,7 @@ $$f = \frac{1}{T}, \quad \omega = 2\pi f, \quad v = f\lambda$$
 ---
 
 ## 📐 2. Core Equations in the Triadic Framework
-<img width="1024" height="1024" alt="Copilot_20250902_064219" src="https://github.com/user-attachments/assets/645cdb7d-55c0-4d84-92af-c39ce59d111e" />
+<img width="768" height="768" alt="Copilot_20250902_064219" src="https://github.com/user-attachments/assets/645cdb7d-55c0-4d84-92af-c39ce59d111e" />
 
 ### 🧲 Forces
 
