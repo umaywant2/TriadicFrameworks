@@ -214,7 +214,20 @@ Here’s the resonance wheel scaffold you asked for—three side‑by‑side cir
 
 Click the card to open it in full view:
 
-![Resonance Wheels](https://copilot.microsoft.com/th/id/BCO.12095757-5b82-4ffc-bed2-de98c1820efb.png)
+```
+
+          [ Observable Domains ]
+     Physics • Computation • Biology
+        ↺        ↺        ↺
+   --------------------------------
+        [ Resonance / Translation ]
+     Number Bases • Dimensional Maps
+        ↺        ↺        ↺
+   --------------------------------
+          [ Invariant Structure ]
+     Ratios • Symmetry • Conservation
+
+```
 
 ---
 
@@ -231,7 +244,21 @@ Here’s the overlay you asked for—now the **nucleosome scale (147 bp ≈ 14 t
 
 ---
 
-![Nucleosome resonance overlay](https://copilot.microsoft.com/th/id/BCO.c22abc55-1ee2-4cfc-bacd-df197f97b38e.png)
+🧾 Textual Diagram (safe, durable, publishable)
+This is a clean textual stand‑in that works in Markdown and HTML:
+
+```
+
+[ DNA Sequence ]
+  ─────────────────────────────
+   ↺   ↺   ↺   ↺   ↺   ↺
+[ Nucleosome Periodicity ]
+  ─────────────────────────────
+   ◉       ◉       ◉
+[ Accessibility Windows ]
+```
+- The arrows indicate cyclic revisit, not direction.
+- The dots indicate structural hubs, not control points.
 
 ---
 
@@ -251,7 +278,21 @@ Here’s the next rung of the ladder you asked for—now the **nucleosome scale 
 
 ---
 
-![Harmonic ladder into chromatin loops](https://copilot.microsoft.com/th/id/BCO.ce9bf3d2-264a-48b1-97bc-ffeb5a30d4e6.png)
+🧬 Harmonic Ladder → Chromatin Loops (Textual Diagram)
+Purpose: Show how periodic structure can scale into looped organization without asserting new biology.
+
+```
+
+[ DNA Sequence ]
+────────────────────────────────────
+  ↺     ↺     ↺     ↺     ↺
+[ Periodic Structural Intervals ]
+────────────────────────────────────
+     ⤴──────────⤵
+        Chromatin Loop
+```
+**Interpretive note (one sentence):**  
+Periodic spacing along DNA can be viewed as enabling loop formation through structural alignment, without altering canonical chromatin mechanisms.
 
 ---
 
@@ -273,8 +314,21 @@ Here’s the next rung of the ladder you asked for—now the **nucleosome scale 
 Here’s the next rung of the harmonic ladder—now extended into the **megabase-scale chromatin domains (TADs: Topologically Associating Domains)**. This is where DNA’s resonance architecture begins to shape the **3D “score” of the genome**:
 
 ---
+🧬 Harmonic Ladder → TADs (Topologically Associating Domains)
+Purpose: Extend the same ladder logic upward, showing domain‑level organization as an emergent grouping.
 
-![Harmonic ladder into TADs](https://copilot.microsoft.com/th/id/BCO.cc79ffed-93ba-494b-8064-7292039a5645.png)
+```
+
+[ DNA + Nucleosome Periodicity ]
+────────────────────────────────────
+  ↺     ↺     ↺     ↺     ↺
+[ Loop Groupings ]
+────────────────────────────────────
+   ⟦──────────────⟧
+        TAD
+```        
+**Interpretive note:**  
+TADs can be interpreted as higher‑order groupings of looped regions, where structural proximity dominates over linear distance.
 
 ---
 
@@ -304,7 +358,18 @@ Here it is—the **full harmonic ladder extended all the way to the nuclear scal
 
 ---
 
-![Genomic Symphony](https://copilot.microsoft.com/th/id/BCO.5dc42215-e427-4a6f-92d4-baadbe346acc.png)
+🎼 Genomic Symphony (Multi‑Scale Coordination)
+Purpose: Replace the “symphony” imagery with a coordination model, not a musical claim.
+
+```
+
+[ Sequence Layer ]        — invariant
+[ Structural Layer ]      — loops / domains
+[ Accessibility Layer ]   — context‑dependent
+[ Expression Layer ]      — observable outcome
+```
+**Interpretive note:**  
+Gene expression reflects coordinated interaction across multiple structural layers rather than a single controlling mechanism.
 
 ---
 
@@ -352,7 +417,21 @@ Here’s the **zoomed‑out score of the genome**—a metaphorical composition w
 
 ---
 
-![DNA resonance symphony](https://copilot.microsoft.com/th/id/BCO.bd511c2a-a7bf-4b0c-8c9d-ab9105bf3a09.png)
+🎶 DNA Resonance Symphony (Phase‑Aware View)
+Purpose: Preserve the intuition of resonance while staying strictly interpretive.
+
+```
+
+[ DNA Sequence ]
+────────────────────────────────────
+[ Structural Modulation ]
+────────────────────────────────────
+[ Accessibility Windows ]
+────────────────────────────────────
+[ Expression Outcomes ]
+```
+**Interpretive note:**  
+Expression outcomes can be viewed as phase‑dependent with respect to structural context, without invoking non‑canonical forces.
 
 ---
 
