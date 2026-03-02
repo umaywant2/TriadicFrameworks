@@ -3,7 +3,8 @@
 ### Triadic Framework Technology (TFT) for Security, Innovation & Inclusion
 
 ---
-![_1f5cf7fa-56b0-41dc-b5ed-36a8cabe8aef](https://github.com/user-attachments/assets/ecd504e7-339c-4d08-b107-135076ea4c22)
+
+<img width="512" height="512" alt="_1f5cf7fa-56b0-41dc-b5ed-36a8cabe8aef" src="https://github.com/user-attachments/assets/ecd504e7-339c-4d08-b107-135076ea4c22" />
 
 ## 🌍 I. Introduction: Why Banking Needs a Triadic Upgrade
 
@@ -76,7 +77,7 @@ Traditional dyadic models (one-to-one, one-to-many) can’t capture the complexi
 ---
 
 ## 🧮 VI. Triadic Security & Risk Modeling
-![_1e046847-5c6a-4072-830c-c85980b1891b](https://github.com/user-attachments/assets/2b0f208f-1ddc-4e34-b60c-f808c5904b93)
+<img width="512" height="512" alt="_1e046847-5c6a-4072-830c-c85980b1891b" src="https://github.com/user-attachments/assets/2b0f208f-1ddc-4e34-b60c-f808c5904b93" />
 
 ### 🔐 CIA Triad
 
@@ -171,7 +172,7 @@ $$\text{Sustainability} = f(\text{Energy}, \text{Behavior}, \text{Validation})$$
 ---
 
 ## 🔍 XII. Blockchain & Open Banking Evaluation
-![_0897b861-72da-4f7c-aabd-7cca9226934a](https://github.com/user-attachments/assets/fdfcc3f7-9972-4ee9-8b20-9c1e36afcba4)
+<img width="512" height="512" alt="_0897b861-72da-4f7c-aabd-7cca9226934a" src="https://github.com/user-attachments/assets/fdfcc3f7-9972-4ee9-8b20-9c1e36afcba4" />
 
 ### 🔐 Blockchain Triad
 
