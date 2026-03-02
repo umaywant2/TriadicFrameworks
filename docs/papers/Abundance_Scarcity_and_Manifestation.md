@@ -3,7 +3,7 @@
 ### A Triadic Framework of Forces, Fluids, and Frequencies (FFF)
 
 ---
-<img width="1024" height="1024" alt="Copilot_20250902_064226" src="https://github.com/user-attachments/assets/7c9704c2-bf09-451c-9428-adf38c5f39f5" />
+<img width="576" height="576" alt="Copilot_20250902_064226" src="https://github.com/user-attachments/assets/7c9704c2-bf09-451c-9428-adf38c5f39f5" />
 
 ## 🧭 I. Introduction: Rethinking Economics as Spectral Physics
 
@@ -66,7 +66,7 @@ $$Z = f(\gamma_f, \text{entropy}, \text{transfer efficiency})$$
 ---
 
 ## 🔁 V. Nonlinear & Multimodal Systems
-<img width="1024" height="1536" alt="header" src="https://github.com/user-attachments/assets/85ec8953-ca07-4b74-b724-8aa0bfbc51a4" />
+<img width="432" height="648" alt="header" src="https://github.com/user-attachments/assets/85ec8953-ca07-4b74-b724-8aa0bfbc51a4" />
 
 ### 🧠 A. Triadic Resonance
 
@@ -112,7 +112,7 @@ $$f_1 + f_2 = f_3, \quad \vec{k}_1 + \vec{k}_2 = \vec{k}_3$$
 - Edge AI for real-time inference
 
 ---
-<img width="1536" height="1024" alt="tft-hero-equations" src="https://github.com/user-attachments/assets/20d2e1f2-e194-403d-832f-537a11709cb4" />
+<img width="648" height="432" alt="tft-hero-equations" src="https://github.com/user-attachments/assets/20d2e1f2-e194-403d-832f-537a11709cb4" />
 
 ## 🤖 VIII. AI Inference Pipelines
 
@@ -169,7 +169,7 @@ $$f_1 + f_2 = f_3, \quad \vec{k}_1 + \vec{k}_2 = \vec{k}_3$$
 - Additive manufacturing
 
 ---
-<img width="1180" height="854" alt="stained-Neon-1757378903607" src="https://github.com/user-attachments/assets/0753400d-a3bb-4d02-8812-1357d6228fc5" />
+<img width="590" height="427" alt="stained-Neon-1757378903607" src="https://github.com/user-attachments/assets/0753400d-a3bb-4d02-8812-1357d6228fc5" />
 
 ## 🧮 XI. Roadmap Milestones
 
@@ -207,7 +207,7 @@ $$f_1 + f_2 = f_3, \quad \vec{k}_1 + \vec{k}_2 = \vec{k}_3$$
 - Risk-free debugging and improvement
 
 ---
-![pic (12)](https://github.com/user-attachments/assets/14bfc0d8-b2cc-44da-9e00-f29cfd7743a9)
+<img width="590" height="427" alt="possibility-pic" src="https://github.com/user-attachments/assets/14bfc0d8-b2cc-44da-9e00-f29cfd7743a9" />
 
 ## 🎯 XIII. Conclusion: Engineering the Spectrum of Possibility
 
