@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Governance Substrate Model | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+  <h2>🧭 Governance Substrate Model — Structural Navigation</h2>
+
+    <h3>📘 <a href="#README">Root Orientation</a></h3>
+      <p>Defines governance as substrate behavior — alignment, awareness, and continuity over authority.</p>
+
+    <h3>🧱 <a href="#01_Invariants">Invariants — What Must Never Break</a></h3>
+      <p>Load‑bearing principles that stabilize systems across cultures, regimes, and centuries.</p>
+
+    <h3>👁️ <a href="#02_Awareness">Awareness — How Drift Is Detected</a></h3>
+      <p>Early sensing of misalignment, escalation, and coherence loss before damage accumulates.</p>
+
+    <h3>🧪 <a href="#03_Evaluation">Evaluation — How Decisions Are Tested</a></h3>
+      <p>Regime‑aware stress testing to ensure decisions survive translation across domains.</p>
+
+    <h3>✅ <a href="#04_Validation">Validation — What Earns Trust</a></h3>
+      <p>Structural criteria for canon‑worthy knowledge, curated by humans and stress‑tested by AI.</p>
+
+    <h3>🏗️ <a href="#05_Implementation">Implementation — How Alignment Becomes Real</a></h3>
+      <p>Embedding invariants into infrastructure, education, and AI systems.</p>
+
+    <h3>🧑‍✈️ <a href="#06_Leadership">Leadership — What Leaders Are Responsible For</a></h3>
+      <p>Stewardship, legibility, and phase management without becoming the bottleneck.</p>
+
+    <h3>🌱 <a href="#07_Incubation">Incubation — How New Systems Are Born</a></h3>
+      <p>Student‑led, globally aligned experimentation that enables safe future formation.</p>
+
+    <h3>📜 <a href="#08_History">History — Why These Rules Exist</a></h3>
+      <p>Lessons from failure that prevent rediscovery through harm.</p>
+
+    <h3>📎 <a href="#09_Appendices">Appendices — Living Extensions</a></h3>
+      <p>Case studies, open questions, and future work that remain intentionally unfrozen.</p>
+
+    <h3>🔌 <a href="#10_Adapters">Adapters — How Existing Systems Translate</a></h3>
+      <p>Respectful pathways for legacy systems to align, adapt, or contain when translation fails.</p>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   <!-- Emoji Legend — Structural Semantics -->
+<p>
+  🧭 Orientation & Purpose &nbsp;|&nbsp;
+  🧱 Invariants & Stability &nbsp;|&nbsp;
+  👁️ Awareness & Detection &nbsp;|&nbsp;
+  🧪 Evaluation & Testing &nbsp;|&nbsp;
+  ✅ Validation & Trust &nbsp;|&nbsp;
+  🏗️ Implementation & Embodiment &nbsp;|&nbsp;
+  🧑‍✈️ Leadership & Stewardship &nbsp;|&nbsp;
+  🌱 Incubation & Emergence &nbsp;|&nbsp;
+  📜 History & Memory &nbsp;|&nbsp;
+  📎 Appendices & Extensions &nbsp;|&nbsp;
+  🔌 Adapters & Translation
+</p>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Root
+  ROOT_README: 'README.md',
+  // 01 — Invariants (What Must Never Break)
+  INVARIANTS: {
+    ALIGNMENT_OVER_ENFORCEMENT: '01_Invariants/Alignment_Over_Enforcement.md',
+    INVARIANT_PRINCIPLES: '01_Invariants/Invariant_Principles.md',
+    MINIMAL_MORAL_DENOMINATOR: '01_Invariants/Minimal_Moral_Denominator.md',
+    REGIME_AWARENESS_AS_DUTY: '01_Invariants/Regime_Awareness_As_Duty.md',
+  },
+  // 02 — Awareness (How Drift Is Detected)
+  AWARENESS: {
+    AI_ASSISTED_SENSING: '02_Awareness/AI_Assisted_Sensing.md',
+    EARLY_WARNING_SIGNALS: '02_Awareness/Early_Warning_Signals.md',
+    ESCALATION_PATTERNS: '02_Awareness/Escalation_Patterns.md',
+    INTERRUPTION_WITHOUT_DOMINATION: '02_Awareness/Interruption_Without_Domination.md',
+  },
+  // 03 — Evaluation (How Decisions Are Tested)
+  EVALUATION: {
+    CROSS_REGIME_STRESS_TESTS: '03_Evaluation/Cross_Regime_Stress_Tests.md',
+    FAILURE_MODE_MAPPING: '03_Evaluation/Failure_Mode_Mapping.md',
+    MINIMAL_SUFFICIENCY_CHECKS: '03_Evaluation/Minimal_Sufficiency_Checks.md',
+    RTT_EVALUATION_FRAMEWORK: '03_Evaluation/RTT_Evaluation_Framework.md',
+  },
+  // 04 — Validation (What Earns Trust)
+  VALIDATION: {
+    DOI_CANON_INTERFACE: '04_Validation/DOI_Canon_Interface.md',
+    HUMAN_CURATED_AI_SIFT: '04_Validation/Human_Curated_AI_Sift.md',
+    MINIMAL_THEME_SUBMISSIONS: '04_Validation/Minimal_Theme_Submissions.md',
+    VALIDATED_SCIENCE_CRITERIA: '04_Validation/Validated_Science_Criteria.md',
+  },
+  // 05 — Implementation (How Alignment Becomes Real)
+  IMPLEMENTATION: {
+    AI_ALIGNMENT_SURFACES: '05_Implementation/AI_Alignment_Surfaces.md',
+    CORE_SYSTEM_DESIGN: '05_Implementation/Core_System_Design.md',
+    EDUCATION_EMBEDDING: '05_Implementation/Education_Embedding.md',
+    INFRASTRUCTURE_RETROFIT_PATTERNS: '05_Implementation/Infrastructure_Retrofit_Patterns.md',
+  },
+  // 06 — Leadership (What Leaders Are Responsible For)
+  LEADERSHIP: {
+    MAINTAINING_LEGIBILITY: '06_Leadership/Maintaining_Legibility.md',
+    PHASE_MANAGEMENT: '06_Leadership/Phase_Management.md',
+    STEWARDSHIP_NOT_CONTROL: '06_Leadership/Stewardship_Not_Control.md',
+    WHEN_NOT_TO_ACT: '06_Leadership/When_Not_To_Act.md',
+  },
+  // 07 — Incubation (How New Systems Are Born)
+  INCUBATION: {
+    GLOBAL_COORDINATION: '07_Incubation/Global_Coordination.md',
+    RTT_INCUBATOR_TRIAD_MODEL: '07_Incubation/RTT_Incubator_Triad_Model.md',
+    STUDENT_LED_GOVERNANCE: '07_Incubation/Student_Led_Governance.md',
+    UNTETHERED_VENTURE_GROWTH: '07_Incubation/Untethered_Venture_Growth.md',
+  },
+  // 08 — History (Why These Rules Exist)
+  HISTORY: {
+    LATE_CORRECTION_COSTS: '08_History/Late_Correction_Costs.md',
+    LESSONS_FROM_FAILURE: '08_History/Lessons_From_Failure.md',
+    RESOURCE_MISALLOCATION: '08_History/Resource_Misallocation.md',
+    WHY_GOVERNANCE_FAILED_BEFORE: '08_History/Why_Governance_Failed_Before.md',
+  },
+  // 09 — Appendices (Living Extensions)
+  APPENDICES: {
+    CASE_STUDIES: '09_Appendices/Case_Studies.md',
+    FUTURE_WORK: '09_Appendices/Future_Work.md',
+    GLOSSARY: '09_Appendices/Glossary.md',
+    OPEN_QUESTIONS: '09_Appendices/Open_Questions.md',
+  },
+  // 10 — Adapters (How Existing Systems Translate)
+  ADAPTERS: {
+    ADAPTER_PRINCIPLES: '10_Adapters/Adapter_Principles.md',
+    CONTAINMENT_WHEN_TRANSLATION_FAILS: '10_Adapters/Containment_When_Translation_Fails.md',
+    LEGACY_SYSTEM_MAPPING: '10_Adapters/Legacy_System_Mapping.md',
+    PARTIAL_ALIGNMENT_STRATEGIES: '10_Adapters/Partial_Alignment_Strategies.md',
+  },
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
