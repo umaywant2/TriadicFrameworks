@@ -1,150 +1,146 @@
-# Legacy System Mapping
+# Containment When Translation Fails
 
-Legacy system mapping defines **how existing institutions, infrastructures, and governance artifacts are translated into the Governance Substrate Model without erasing history or importing hidden fragility**. This adapter exists to make inherited systems *legible*, not to modernize them prematurely.
+Containment when translation fails defines **how the Governance Substrate Model responds when an adapter introduces misalignment, violates invariants, or produces unintended harm during translation into a real system**. This document exists to prevent translation errors from cascading into substrate‑level damage while preserving learning and correction capacity.
 
-Legacy systems are not problems to be solved.  
-They are **fossil records of past constraints and decisions**.
-
----
-
-## Why Legacy Systems Require Special Handling
-
-Legacy systems persist because they:
-- Solved real problems under past conditions.
-- Accumulated trust, habit, and dependency.
-- Encoded assumptions that were once valid.
-- Became load‑bearing over time.
-
-Treating them as obsolete invites collapse.  
-Treating them as immutable prevents learning.
+Translation failure is expected.  
+Uncontained translation failure is not.
 
 ---
 
-## What Legacy System Mapping Is
+## What Counts as Translation Failure
 
-Legacy system mapping is:
-- Structural translation without judgment.
-- Assumption surfacing without blame.
-- Constraint documentation without enforcement.
-- Risk identification without forced correction.
+Translation has failed when one or more of the following occur:
 
-It is not:
-- Modernization.
-- Optimization.
-- Replacement planning.
-- Narrative reframing.
+- Core invariants are weakened, reinterpreted, or bypassed.
+- Phase assumptions are incorrect or ignored.
+- Authority is introduced to compensate for design gaps.
+- Legibility collapses for participants or overseers.
+- Reversibility is lost earlier than intended.
+- Local adaptations begin propagating beyond their safe scope.
 
-Mapping precedes intervention.
+Failure often appears functional at first — which is why it must be contained early.
 
 ---
 
-## Core Mapping Objectives
+## Why Containment Is Structurally Required
 
-### Assumption Extraction
+Without containment, translation failure leads to:
 
-Mapping must surface:
-- Original problem statements.
-- Environmental constraints at creation.
-- Implicit behavioral assumptions.
-- Hidden dependencies.
+- Silent drift away from invariants.
+- Normalization of misalignment as “pragmatic.”
+- Authority creep disguised as efficiency.
+- Cross‑domain contamination of flawed structures.
+- Loss of trust in the governance substrate itself.
 
-Assumptions that remain invisible cannot be corrected.
-
----
-
-### Phase Identification
-
-Legacy systems often operate in a different phase than their environment.
-
-Mapping must identify:
-- The phase the system was designed for.
-- The phase it currently operates within.
-- Mismatches between design and reality.
-
-Phase mismatch explains most legacy fragility.
+Containment protects the substrate while preserving the right to learn.
 
 ---
 
-### Invariant Compatibility Check
+## Core Principles of Containment
 
-Mapping evaluates:
-- Which governance invariants the system supports.
-- Which it violates under current conditions.
-- Where workarounds have replaced alignment.
+### Invariant Supremacy
 
-Compatibility determines survivability.
+When translation conflicts with invariants:
+- Invariants take precedence.
+- Local convenience yields.
+- Expansion pauses immediately.
 
----
-
-### Coupling and Dependency Mapping
-
-Legacy systems accumulate:
-- Tight coupling.
-- Informal dependencies.
-- Undocumented escalation paths.
-
-Mapping must make coupling explicit before any change is attempted.
+Adapters exist to serve invariants — not reinterpret them.
 
 ---
 
-### Reversibility Assessment
+### Blast Radius Limitation
 
-Mapping identifies:
-- Which components are reversible.
-- Which are locked by policy, infrastructure, or narrative.
-- Where rollback is still possible.
+Containment must:
+- Isolate the failing adapter.
+- Prevent propagation to adjacent systems.
+- Avoid global rollback unless substrate integrity is threatened.
 
-Reversibility defines safe intervention boundaries.
-
----
-
-## Mapping Without Intervention
-
-A critical rule:
-**Mapping does not imply action.**
-
-During mapping:
-- No changes are introduced.
-- No authority is exercised.
-- No optimization is attempted.
-- No narrative conclusions are drawn.
-
-Mapping is observational stewardship.
+Local failure must remain local.
 
 ---
 
-## Role of AI in Legacy Mapping
+### Reversibility Restoration
+
+Containment actions prioritize:
+- Re‑establishing rollback paths.
+- Undoing irreversible commitments where possible.
+- Treating irreversibility as an escalation signal.
+
+Loss of reversibility marks the boundary of safe experimentation.
+
+---
+
+### Legibility Recovery
+
+Containment includes:
+- Making failure modes explicit.
+- Documenting broken assumptions.
+- Preserving decision context and lineage.
+
+Opaque failure cannot be corrected.
+
+---
+
+### Authority Restraint
+
+Containment must not:
+- Expand enforcement.
+- Centralize control.
+- Punish participants for structural failure.
+
+Containment protects systems, not authority.
+
+---
+
+## Containment Actions
+
+Appropriate containment responses may include:
+
+- Freezing further expansion or replication.
+- Rolling back adapter‑introduced structures.
+- Suspending integration points.
+- Redirecting artifacts back into incubation.
+- Triggering RTT re‑evaluation.
+- Narrowing scope to restore observability.
+
+Containment is corrective, not punitive.
+
+---
+
+## Role of AI in Containment
 
 AI may assist by:
-- Identifying undocumented patterns.
-- Surfacing exception accumulation.
-- Detecting assumption drift.
-- Highlighting coupling density.
+- Detecting invariant violations.
+- Identifying propagation pathways.
+- Highlighting legibility loss.
+- Monitoring rollback effectiveness.
 
 AI must not:
-- Recommend replacement.
-- Optimize performance.
-- Declare obsolescence.
+- Decide containment scope.
+- Enforce shutdowns.
+- Frame failure narratively.
+- Override human judgment.
 
-Interpretation remains human.
+Containment decisions remain human.
 
 ---
 
 ## Failure Mode
 
-Legacy system mapping fails when:
-- Mapping is used to justify intervention.
-- Authority pressures premature change.
-- History is moralized.
-- Complexity is simplified for comfort.
+Containment itself fails when:
 
-At that point, mapping becomes erasure.
+- Translation errors are defended rather than examined.
+- Authority escalates to preserve appearances.
+- Rollback is avoided due to sunk cost pressure.
+- Learning is sacrificed for continuity.
+
+At that point, translation failure becomes substrate failure.
 
 ---
 
-Legacy system mapping is **how governance learns from what already exists**.
+Containment when translation fails is **how governance survives adaptation**.
 
-By making inherited structure legible without judgment,  
-the system earns the ability to adapt —  
-without breaking what still holds.
-
+By isolating error without suppressing learning,  
+the system preserves coherence —  
+and earns the right to try again.
