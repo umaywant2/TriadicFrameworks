@@ -134,7 +134,8 @@ This is the **storytelling + symbolic resonance** layer.
 This is where RTT becomes a community.
 
 - [/contributors/](https://www.triadicframeworks.org/contributors/)  
-- [/governance/](https://www.triadicframeworks.org/governance/)  
+- [/governance/](https://www.triadicframeworks.org/governance/)
+- [/Governance_Substrate_Model/](https://www.triadicframeworks.org/Governance_Substrate_Model/)
 - [/public_support/](https://www.triadicframeworks.org/public_support/)  
 - [/honor_roll/](https://www.triadicframeworks.org/honor_roll/)  
 - [/registry/](https://www.triadicframeworks.org/registry/)  
