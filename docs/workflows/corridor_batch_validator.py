@@ -38,14 +38,16 @@ def process_corridor(corridor_id, parent_scroll):
         "status": status,
     }
 
-def batch_process(corridor_ids, parent_scroll):
+def batch_process(corridor_ids, parent_scroll, output_dir="registry/reports"):
     events = [process_corridor(cid, parent_scroll) for cid in corridor_ids]
 
     # Summary statistics
     glyph_counts = {}
     band_counts = {"low": 0, "medium": 0, "high": 0}
+
     for ev in events:
         glyph_counts[ev["new_glyph"]] = glyph_counts.get(ev["new_glyph"], 0) + 1
+
         if ev["new_rci"] <= 0.33:
             band_counts["low"] += 1
         elif ev["new_rci"] <= 0.66:
@@ -67,8 +69,7 @@ def batch_process(corridor_ids, parent_scroll):
         }
     }
 
-    def batch_process(..., output_dir="registry/reports"):
-
+    outfile = f"{output_dir}/{parent_scroll}_corridor_validation_report.yaml"
     with open(outfile, "w") as stream:
         yaml.dump(report, stream, sort_keys=False)
 
