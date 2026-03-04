@@ -103,4 +103,73 @@ The observer consumes structured emissions from existing systems using a minimal
   "confidence": "provisional",
   "notes": "late upload due to network outage"
 }
+```
 
+No cryptography is required to begin.  
+No authority is implied by emission.
+
+---
+
+## What the Observer Produces
+
+From incoming observations, the layer generates:
+
+- **Phase coherence maps** — where transitions align or break.
+- **Temporal resonance analysis** — stalls, jumps, and out‑of‑order events.
+- **Pattern classifications** — clerical, procedural, statistical, unresolved.
+- **Lineage artifacts** — replayable, inspectable histories.
+
+Language remains descriptive, not moral.
+
+---
+
+## Domains
+
+The Triadic Observer Layer is domain‑agnostic.
+
+Elections are the first exemplar because they already contain:
+- Multiple phases.
+- Distributed sources.
+- High scrutiny.
+- Existing artifacts.
+
+Other domains follow the same structure:
+- Supply chains
+- Scientific replication
+- Infrastructure monitoring
+- Budget execution
+- Emergency response
+- AI system behavior
+
+Only the schema changes.
+
+---
+
+## Invariants
+
+The observer layer must never violate:
+
+- **Non‑authority** — observation without control.
+- **Phase honesty** — no collapse of states.
+- **Artifact lineage** — every number has a source and time.
+- **Read‑only posture** — no intervention.
+- **Regime awareness** — uncertainty is allowed to exist.
+
+These invariants are what make adoption possible.
+
+---
+
+## Why This Layer Matters
+
+Trust does not fail because people disagree.  
+It fails when systems insist on certainty faster than reality can provide it.
+
+The Triadic Observer Layer allows systems to remain legitimate **while uncertainty is still present**, by making structure visible instead of hiding it.
+
+That is how coherence survives scale.
+
+---
+
+This repository documents the observer layer itself, followed by domain‑specific exemplars that demonstrate how the same triadic substrate applies across contexts.
+
+This README establishes the layer as **foundational, neutral, and reusable**, without anchoring it too tightly to elections while still making that first use‑case obvious.
