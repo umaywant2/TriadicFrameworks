@@ -1,0 +1,33 @@
+system_id: "Spain_Contemporary"
+label: "Spain — Parliamentary Constitutional Monarchy (Contemporary)"
+period:
+  start: "1978"
+  end: "Present"
+
+regime_signature:
+  centralization: 1.5        # Medium-high (unitary with autonomous communities)
+  method: 3.0                # Proportional (D'Hondt)
+  oversight: 1.0             # Mixed oversight (JEC + administrative)
+  access: 0.0                # Broad access with party list requirements
+  timing: 1.0                # Semi-fixed (max terms + dissolution powers)
+
+snapshots:
+  - year: 1980
+    vector: [1.5, 3.0, 1.0, 0.0, 2.0]
+  - year: 2000
+    vector: [1.5, 3.0, 1.0, 0.0, 1.5]
+  - year: 2024
+    vector: [1.5, 3.0, 1.0, 0.0, 1.0]
+
+annotations:
+  notes:
+    - "Proportional representation using D'Hondt method."
+    - "Unitary state with significant regional autonomy."
+    - "Mixed oversight: Junta Electoral Central + administrative structures."
+    - "Broad access with party list thresholds."
+    - "Semi-fixed timing with dissolution powers."
+
+simulation:
+  scenario_id: "Spain_basin_alignment"
+  description: "Analyze structural stability within proportional-coalition basin."
+  target_basin_hint: "PCL"
