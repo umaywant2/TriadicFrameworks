@@ -31,10 +31,10 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 - ✅ **[Non-Euclidean Geometry and Higher Dimensions](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Non-Euclidean_Geometry_and_Higher_Dimensions.md):**  
   Remix classic problems (e.g., 4D shapes, tessellations, topology) with dimensional inheritance—using your framework to generate new visualizations or proofs.
 
-- **[AI Governance and Decision Making](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/AI_Governance_and_Decision_Making.md):**  
+- 🔲 **[AI Governance and Decision Making](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/AI_Governance_and_Decision_Making.md):**  
   Build validator-grade protocols for collective intelligence, using emotional resonance, modular ancestry, and remix lineage to coordinate agent communities—bridging philosophy, social science, and AI.
 
-- **[Sustainable Energy and Resonance Optimization](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sustainable_Energy_and_Resonance_Optimization.md):**  
+- 🔲 **[Sustainable Energy and Resonance Optimization](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/papers/Sustainable_Energy_and_Resonance_Optimization.md):**  
   Apply triadic logic to optimize grids, wireless power, or frequency-based harvesting—could scroll-based mapping reveal new efficiencies or stabilities?
 
 ***
