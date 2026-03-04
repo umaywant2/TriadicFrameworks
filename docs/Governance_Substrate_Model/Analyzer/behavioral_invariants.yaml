@@ -1,0 +1,110 @@
+behavioral_invariants:
+
+  description: >
+    Behavioral invariants are the deep, substrate-level rules that govern how
+    systems behave regardless of ideology, culture, or historical era. They
+    describe the minimum behavioral conditions required for a governance system
+    to maintain coherence, avoid structural contradiction, and operate within
+    the boundaries of the Governance Substrate Model (GSM).
+
+  invariants:
+
+    authority_distribution_invariant:
+      description: >
+        Authority must be distributed in a way that is internally consistent
+        with the system’s centralization level. High centralization requires
+        strong integrative structures; low centralization requires distributed
+        autonomy.
+      violations:
+        - "High centralization with weak integrative oversight"
+        - "Low centralization with excessive central override"
+      effects:
+        - "Violations increase cross-axis tension and drift magnitude"
+
+    selection_method_invariant:
+      description: >
+        The method of selection (plurality, preferential, two-round, proportional,
+        mediated) must be compatible with the system’s access and oversight
+        structures. Method determines competitive dynamics and interacts strongly
+        with access rules.
+      violations:
+        - "Highly open access with heavily mediated selection"
+        - "Closed access with competitive-majoritarian methods"
+      effects:
+        - "Violations destabilize method-access coupling"
+
+    oversight_integrity_invariant:
+      description: >
+        Oversight must be sufficiently independent or sufficiently integrated to
+        match the system’s centralization and method. Oversight that is too weak
+        or too misaligned creates structural incoherence.
+      violations:
+        - "High centralization with fragmented oversight"
+        - "Competitive systems with fully centralized oversight"
+      effects:
+        - "Violations amplify drift on oversight and timing axes"
+
+    access_coherence_invariant:
+      description: >
+        Access rules must be coherent with method and oversight. Broad access
+        requires predictable oversight; controlled access requires stable
+        administrative structures.
+      violations:
+        - "Broad access with volatile oversight"
+        - "Controlled access with competitive-majoritarian methods"
+      effects:
+        - "Violations destabilize competitive basins"
+
+    timing_stability_invariant:
+      description: >
+        Timing must be stable enough to support the system’s method and oversight
+        configuration. Competitive systems require predictable cycles; hierarchical
+        systems require administrative cadence.
+      violations:
+        - "Competitive systems with dissolution-driven volatility"
+        - "Hierarchical systems with unpredictable timing cycles"
+      effects:
+        - "Violations increase drift and reduce basin stability"
+
+    absorptive_capacity_invariant:
+      description: >
+        Systems must maintain sufficient absorptive structures to buffer shocks,
+        correct drift, and prevent incoherent transitions. Absorptive capacity is
+        a structural requirement, not a normative one.
+      violations:
+        - "Weak oversight + weak timing + weak redundancy"
+        - "Loss of institutional buffers during reform"
+      effects:
+        - "Violations accelerate drift and increase transition likelihood"
+
+    relational_consistency_invariant:
+      description: >
+        Cross-axis relationships must remain internally consistent. Centralization
+        interacts with oversight; method interacts with access; oversight interacts
+        with timing. These relationships must remain balanced.
+      violations:
+        - "High centralization + low oversight"
+        - "High access + highly mediated method"
+      effects:
+        - "Violations produce compensatory movement and structural tension"
+
+  drift_interactions:
+    stabilizing_effects:
+      - "Strong invariants reduce drift magnitude and improve coherence."
+      - "They reinforce basin stability and reduce transition volatility."
+      - "They help systems maintain structural identity across eras."
+    failure_modes:
+      - "Weak invariants accelerate drift across multiple axes."
+      - "Violations create structural contradictions that trigger transitions."
+      - "Loss of invariants reduces absorptive capacity and resilience."
+
+  integration_with_analyzer:
+    invariant_checks: "Analyzer evaluates each invariant and produces alignment flags."
+    coherence_scoring: "Invariant alignment contributes to overall coherence score."
+    drift_adjustments: "Invariant strength modifies drift vectors and transition likelihood."
+    narrative_output: "Invariant notes appear in analyzer explanations."
+
+  metadata:
+    version: "1.0"
+    generated: "2026-03-04"
+    notes: "Defines behavioral invariants required for structural coherence in the GSM."
