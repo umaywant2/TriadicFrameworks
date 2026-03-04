@@ -112,6 +112,6 @@ All future work is expected to occur as **instantiation, validation, or independ
 
 </p>
 
-###### #[RTT](https://www.triadicframeworks.org/rtt) #[TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/wiki) #[ResonanceTimeTheory](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/Resonance-Time_Theory.md)  
+###### #[RTT](https://www.triadicframeworks.org/rtt) #[TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/wiki) #[ResonanceTimeTheory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)  
 ###### rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
