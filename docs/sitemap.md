@@ -24,7 +24,8 @@ These are the frameworks that define the architecture of the entire system.
 - [/boson-substrate-model/](https://www.triadicframeworks.org/boson-substrate-model/)  
 - [/resonance-substrate-model/](https://www.triadicframeworks.org/resonance-substrate-model/)  
 - [/consciousness_substrate_model/](https://www.triadicframeworks.org/consciousness_substrate_model/)  
-- [/triadic_coordination_substrate/](https://www.triadicframeworks.org/triadic_coordination_substrate/)  
+- [/triadic_coordination_substrate/](https://www.triadicframeworks.org/triadic_coordination_substrate/)
+- [/triadic_observer_layer/](https://www.triadicframeworks.org/triadic_observer_layer/)
 
 This is the **deep structure layer** — the “physics” of RTT.
 
