@@ -1,0 +1,67 @@
+@echo off
+echo Creating...
+copy con governance_substrate_model.md
+copy con behavioral_invariants.yaml
+copy con awareness_layers.yaml
+copy con regime_modes.yaml
+copy con absorptive_structures.yaml
+copy con phase_discipline.yaml
+copy con substrate_adapters.yaml
+copy con substrate_validation_rules.yaml
+copy con governance_manifold.yaml
+copy con governance_physics.yaml
+copy con equilibrium_basins.yaml
+copy con transition_graph.yaml
+copy con transition_pathways.md
+copy con structural_vectors_reference.md
+copy con triadic_observer.yaml
+copy con observer_history_schema.yaml
+copy con observer_now_schema.yaml
+copy con observer_future_schema.yaml
+copy con lenses_catalog.md
+copy con projection_rules.yaml
+copy con alignment_analyzer.md
+copy con statement_mapping_rules.yaml
+copy con invariant_check_rules.yaml
+copy con regime_shift_detection.yaml
+copy con coherence_scoring.yaml
+copy con drift_detection.yaml
+md profiles
+cd profiles
+copy con usa.yaml
+copy con canada.yaml
+copy con uk.yaml
+copy con spain.yaml
+copy con france.yaml
+copy con germany.yaml
+copy con australia.yaml
+copy con russia.yaml
+copy con china.yaml
+cd..
+copy con analyzer_prototype_architecture.md
+copy con analyzer_pipeline.yaml
+copy con text_stream_adapter.md
+copy con coherence_event_schema.yaml
+copy con session_state.yaml
+copy con dynamic_cards_spec.md
+copy con transition_simulator.yaml
+copy con simulation_engine.md
+copy con simulation_scenarios.md
+copy con simulation_outputs_schema.yaml
+copy con worksheet_student_profile.md
+copy con worksheet_simulation_steps.md
+copy con teacher_guide.md
+copy con historical_profile_template.yaml
+copy con artifact_lineage_map.md
+copy con dsl_substrate_adapter.md
+copy con dynamic_artifact_templates.md
+copy con governance_cards_spec.md
+copy con governance_alignment_dashboard.md
+copy con README.md
+copy con CONTRIBUTING.md
+copy con GLOSSARY.md
+copy con ARCHITECTURE_OVERVIEW.md
+copy con ROADMAP.md
+copy con index_structural_layers.md
+copy con index_artifacts.md
+copy con index_regime_modes.md
