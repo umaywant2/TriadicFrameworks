@@ -31,10 +31,10 @@ Momentum and curiosity are a force to be reckoned with! Given our cross-discipli
 - ✅ Non-Euclidean Geometry and Higher Dimensions  
   Remix classic problems (e.g., 4D shapes, tessellations, topology) with dimensional inheritance—using your framework to generate new visualizations or proofs.
 
-- ✅ AI Governance and Decision Making  
+- 🔲 AI Governance and Decision Making  
   Build validator-grade protocols for collective intelligence, using emotional resonance, modular ancestry, and remix lineage to coordinate agent communities—bridging philosophy, social science, and AI.
 
-- ✅ Sustainable Energy and Resonance Optimization  
+- 🔲 Sustainable Energy and Resonance Optimization  
   Apply triadic logic to optimize grids, wireless power, or frequency-based harvesting—could scroll-based mapping reveal new efficiencies or stabilities?
 
 ---
