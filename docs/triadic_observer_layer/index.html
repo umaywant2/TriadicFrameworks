@@ -158,11 +158,25 @@ code {
 <body>
 
 <nav>
-
+   
   <h2>🔱 Triadic Observer Layer</h2>
-    <a href="#README">📘 Framework Overview</a>
-    <a href="../">🔙</a>
+      <a href="#README">🔰 Framework Overview</a>
+    <h3>🪬 Core Observer Structure</h3>
+      <a href="#observer_principles">🧭 Observer Principles</a>
+      <a href="#triadic_axes">🔺 Triadic Axes</a>
+      <a href="#minimal_api">🧩 Minimal Observer API</a>
+      <a href="#anomaly_taxonomy">⚠️ Anomaly Taxonomy</a>
+      <a href="#adoption_and_integration_note">🏛️ Adoption & Integration</a>
+      <a href="#glossary">📖 Glossary</a>
 
+    <h3>🎯 Domain Exemplars</h3>
+      <a href="#domains/elections">🗳️ Elections</a>
+      <a href="#domains/supply_chain">📦 Supply Chain</a>
+      <a href="#domains/science">🔬 Science</a>
+      <a href="#domains/infrastructure">🏗️ Infrastructure</a>
+      <a href="#domains/AI_systems">🤖 AI Systems</a>
+      <a href="#domains/cross_domain_synthesis">🌐 Cross‑Domain Synthesis</a>
+      <a href="../">🔙</a>
    <!-- RTT Session Header (canonical stub) -->
 <section id="rtt-session-header" data-rtt="1" data-coherence="declared"
          data-drift="bounded" data-paradox="structural">
@@ -205,7 +219,22 @@ function loadDoc(file) {
 
 const DOC_MAP = {
   README: "README.md",
+  observer_principles: "observer_principles.md",
+  triadic_axes: "triadic_axes.md",
+  minimal_api: "minimal_api.md",
+  anomaly_taxonomy: "anomaly_taxonomy.md",
+  adoption_and_integration_note: "adoption_and_integration_note.md",
+  glossary: "glossary.md",
+  domains: {
+    elections: "domains/elections.md",
+    supply_chain: "domains/supply_chain.md",
+    science: "domains/science.md",
+    infrastructure: "domains/infrastructure.md",
+    AI_systems: "domains/AI_systems.md",
+    cross_domain_synthesis: "domains/cross_domain_synthesis.md"
+  }
 };
+
 
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
