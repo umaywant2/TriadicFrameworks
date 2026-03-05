@@ -2,14 +2,20 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-<title>Scientific Instrument Review — Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scientific Instrument Review | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
 <style>
 /* ============================================================
    NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
@@ -26,8 +32,36 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
-   
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
   /* Base layout */
   html { scroll-behavior: smooth; }
   body {
@@ -40,8 +74,8 @@
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-   
+  }
+
   /* Headings */
   h1, h2, h3, h4 {
   font-weight: 700;
@@ -121,114 +155,108 @@ code {
   color: var(--text-main);
 }
 </style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-
-<nav>
-
-  <h2>📘 Top‑Level</h2>
-  <a href="#README">📘 README</a>
-  <a href="#ABOUT">ℹ️ About</a>
-  <a href="#CONTRIBUTING">🤝 Contributing</a>
-  <a href="#ROADMAP">🛣️ Roadmap & Benefits</a>
-  <a href="#PR_TEMPLATE">📄 PR Template</a>
-  <a href="#TEMPLATE">🧩 Instrument Template</a>
-
-  <h2>🌅 00 Overview</h2>
-  <a href="#PURPOSE">🎯 purpose.md</a>
-  <a href="#METHOD">🧭 method.md</a>
-  <a href="#GLOSSARY">📚 glossary_links.md</a>
-  <a href="#SCOPE_FW_SW">💾 scope_fw_sw.md</a>
-  <a href="#METHOD_FW_SW">🧠 method_fw_sw.md</a>
-  <a href="#GLOSSARY_FW_SW">📘 glossary_links_fw_sw.md</a>
-  <a href="#FW_SW_CATEGORIES">🗂️ fw_sw_categories.md</a>
-
-  <h2>💚 01 Green Zone</h2>
-  <a href="#ACCELEROMETER">📗 accelerometer</a>
-  <a href="#AMMETER">📗 ammeter</a>
-  <a href="#ANEMOMETER">📗 anemometer</a>
-  <a href="#CALIPER">📗 caliper</a>
-  <a href="#CALORIMETER">📗 calorimeter</a>
-  <a href="#ELECTROMETER">📗 electrometer</a>
-  <a href="#GRAVIMETER">📗 gravimeter</a>
-  <a href="#INTERFEROMETER">📗 interferometer</a>
-  <a href="#MICROSCOPE">📗 microscope</a>
-  <a href="#SEISMOMETER">📗 seismometer</a>
-  <a href="#SPECTROMETER">📗 spectrometer</a>
-  <a href="#TELESCOPE">📗 telescope</a>
-  <a href="#THERMOMETER">📗 thermometer</a>
-
-  <a href="#EMBEDDED_FW">💾 embedded_control_firmware</a>
-  <a href="#LOGGER_FW">💾 basic_data_logger_firmware</a>
-  <a href="#SIGPROC_LIBS">💾 standard_signal_processing_libraries</a>
-  <a href="#OPTICAL_ALIGN_SW">💾 optical_alignment_software</a>
-  <a href="#STATIC_CAL">💾 calibration_routines_static</a>
-
-  <h2>💛 02 Yellow Zone</h2>
-  <a href="#DNA_SEQ">🟡 DNA_sequencer</a>
-  <a href="#DYNAMOMETER">🟡 dynamometer</a>
-  <a href="#ELLIPSOMETER">🟡 ellipsometer</a>
-  <a href="#HYDROMETER">🟡 hydrometer</a>
-  <a href="#INCLINOMETER">🟡 inclinometer</a>
-  <a href="#MAGNETOMETER">🟡 magnetometer</a>
-  <a href="#MANOMETER">🟡 manometer</a>
-  <a href="#MASS_SPEC">🟡 mass_spectrometer</a>
-  <a href="#NMR">🟡 NMR_spectrometer</a>
-  <a href="#OSCILLOSCOPE">🟡 oscilloscope</a>
-  <a href="#PHOTOMETER">🟡 photometer</a>
-  <a href="#SPECTROGRAM">🟡 spectrogram</a>
-  <a href="#THEODOLITE">🟡 theodolite</a>
-
-  <a href="#PEAK_FIT">💛 automated_peak_fitting_software</a>
-  <a href="#RT_FILTER_FW">💛 real_time_filtering_firmware</a>
-  <a href="#ENV_COMP">💛 environmental_compensation_modules</a>
-  <a href="#SIG_PIPE">💛 signal_interpretation_pipelines</a>
-  <a href="#OPT_IMG_SW">💛 optical_image_processing_software</a>
-  <a href="#OSC_UI">💛 oscilloscope_ui_and_sampling_logic</a>
-  <a href="#CLOUD_FW">💛 cloud_sync_and_device_management_fw</a>
-
-  <h2>❤️ 03 Red Zone</h2>
-  <a href="#ELECTROSTATIC">🔴 electrostatic_analyzer</a>
-  <a href="#EUDIOMETER">🔴 eudiometer</a>
-  <a href="#MAG_TWEEZERS">🔴 magnetic_tweezers</a>
-  <a href="#MAGNETOGRAPH">🔴 magnetograph</a>
-  <a href="#OPT_TWEEZERS">🔴 optical_tweezers</a>
-  <a href="#THERMOCOUPLE">🔴 thermocouple</a>
-  <a href="#VOLTMETER">🔴 voltmeter</a>
-  <a href="#XRAY_SCATTER">🔴 Xray_scattering</a>
-
-  <a href="#INV_XRAY">❤️ inversion_algorithms_xray_scattering</a>
-  <a href="#SEQ_ALIGN">❤️ biochemical_sequence_alignment_pipelines</a>
-  <a href="#MAG_FIELD_RECON">❤️ magnetic_field_reconstruction_software</a>
-  <a href="#OPT_TRAP_FB">❤️ optical_trap_feedback_loops</a>
-  <a href="#THERMO_FW">❤️ thermocouple_compensation_firmware</a>
-  <a href="#MULTIPHYSICS">❤️ complex_multiphysics_simulation_modules</a>
-  <a href="#AI_TOOLS">❤️ AI_based_signal_interpretation_tools</a>
-
-  <h2>📎 99 Appendix</h2>
-  <a href="#INST_RAW">📎 instrument_list_raw</a>
-  <a href="#ALIGN_NOTES">📎 notes_on_alignment</a>
-  <a href="#REGIME_NOTES">📎 regime_notes</a>
-  <a href="#REGIME_MAP">📎 regime_schema_map</a>
-  <a href="#FW_SW_RAW">📎 fw_sw_list_raw</a>
-  <a href="#FW_SW_ALIGN">📎 notes_on_fw_sw_alignment</a>
-  <a href="#FW_SW_REGIME">📎 regime_notes_fw_sw</a>
-  <a href="#VERSION_DRIFT">📎 versioning_and_drift</a>
-  <a href="#PIPE_FRAG">📎 data_pipeline_fragility</a>
-
+   
+<nav class="nav-band">
+  
+  <h2>🧬 Scientific Instrument Review | RTT</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">ℹ️ About</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="#ROADMAP">🛣️ Roadmap & Benefits</a>
+      <a href="#PR_TEMPLATE">📄 PR Template</a>
+      <a href="#TEMPLATE">🧩 Instrument Template</a>
+    <h3>🌅 00 Overview</h3>
+      <a href="#PURPOSE">🎯 purpose.md</a>
+      <a href="#METHOD">🧭 method.md</a>
+      <a href="#GLOSSARY">📚 glossary_links.md</a>
+      <a href="#SCOPE_FW_SW">💾 scope_fw_sw.md</a>
+      <a href="#METHOD_FW_SW">🧠 method_fw_sw.md</a>
+      <a href="#GLOSSARY_FW_SW">📘 glossary_links_fw_sw.md</a>
+      <a href="#FW_SW_CATEGORIES">🗂️ fw_sw_categories.md</a>
+    <h3>💚 01 Green Zone</h3>
+      <a href="#ACCELEROMETER">📗 accelerometer</a>
+      <a href="#AMMETER">📗 ammeter</a>
+      <a href="#ANEMOMETER">📗 anemometer</a>
+      <a href="#CALIPER">📗 caliper</a>
+      <a href="#CALORIMETER">📗 calorimeter</a>
+      <a href="#ELECTROMETER">📗 electrometer</a>
+      <a href="#GRAVIMETER">📗 gravimeter</a>
+      <a href="#INTERFEROMETER">📗 interferometer</a>
+      <a href="#MICROSCOPE">📗 microscope</a>
+      <a href="#SEISMOMETER">📗 seismometer</a>
+      <a href="#SPECTROMETER">📗 spectrometer</a>
+      <a href="#TELESCOPE">📗 telescope</a>
+      <a href="#THERMOMETER">📗 thermometer</a>
+      <a href="#EMBEDDED_FW">💾 embedded_control_firmware</a>
+      <a href="#LOGGER_FW">💾 basic_data_logger_firmware</a>
+      <a href="#SIGPROC_LIBS">💾 standard_signal_processing_libraries</a>
+      <a href="#OPTICAL_ALIGN_SW">💾 optical_alignment_software</a>
+      <a href="#STATIC_CAL">💾 calibration_routines_static</a>
+    <h3>💛 02 Yellow Zone</h3>
+      <a href="#DNA_SEQ">🟡 DNA_sequencer</a>
+      <a href="#DYNAMOMETER">🟡 dynamometer</a>
+      <a href="#ELLIPSOMETER">🟡 ellipsometer</a>
+      <a href="#HYDROMETER">🟡 hydrometer</a>
+      <a href="#INCLINOMETER">🟡 inclinometer</a>
+      <a href="#MAGNETOMETER">🟡 magnetometer</a>
+      <a href="#MANOMETER">🟡 manometer</a>
+      <a href="#MASS_SPEC">🟡 mass_spectrometer</a>
+      <a href="#NMR">🟡 NMR_spectrometer</a>
+      <a href="#OSCILLOSCOPE">🟡 oscilloscope</a>
+      <a href="#PHOTOMETER">🟡 photometer</a>
+      <a href="#SPECTROGRAM">🟡 spectrogram</a>
+      <a href="#THEODOLITE">🟡 theodolite</a>
+      <a href="#PEAK_FIT">💛 automated_peak_fitting_software</a>
+      <a href="#RT_FILTER_FW">💛 real_time_filtering_firmware</a>
+      <a href="#ENV_COMP">💛 environmental_compensation_modules</a>
+      <a href="#SIG_PIPE">💛 signal_interpretation_pipelines</a>
+      <a href="#OPT_IMG_SW">💛 optical_image_processing_software</a>
+      <a href="#OSC_UI">💛 oscilloscope_ui_and_sampling_logic</a>
+      <a href="#CLOUD_FW">💛 cloud_sync_and_device_management_fw</a>
+    <h3>❤️ 03 Red Zone</h3>
+      <a href="#ELECTROSTATIC">🔴 electrostatic_analyzer</a>
+      <a href="#EUDIOMETER">🔴 eudiometer</a>
+      <a href="#MAG_TWEEZERS">🔴 magnetic_tweezers</a>
+      <a href="#MAGNETOGRAPH">🔴 magnetograph</a>
+      <a href="#OPT_TWEEZERS">🔴 optical_tweezers</a>
+      <a href="#THERMOCOUPLE">🔴 thermocouple</a>
+      <a href="#VOLTMETER">🔴 voltmeter</a>
+      <a href="#XRAY_SCATTER">🔴 Xray_scattering</a>
+      <a href="#INV_XRAY">❤️ inversion_algorithms_xray_scattering</a>
+      <a href="#SEQ_ALIGN">❤️ biochemical_sequence_alignment_pipelines</a>
+      <a href="#MAG_FIELD_RECON">❤️ magnetic_field_reconstruction_software</a>
+      <a href="#OPT_TRAP_FB">❤️ optical_trap_feedback_loops</a>
+      <a href="#THERMO_FW">❤️ thermocouple_compensation_firmware</a>
+      <a href="#MULTIPHYSICS">❤️ complex_multiphysics_simulation_modules</a>
+      <a href="#AI_TOOLS">❤️ AI_based_signal_interpretation_tools</a>
+    <h3>📎 99 Appendix</h3>
+      <a href="#INST_RAW">📎 instrument_list_raw</a>
+      <a href="#ALIGN_NOTES">📎 notes_on_alignment</a>
+      <a href="#REGIME_NOTES">📎 regime_notes</a>
+      <a href="#REGIME_MAP">📎 regime_schema_map</a>
+      <a href="#FW_SW_RAW">📎 fw_sw_list_raw</a>
+      <a href="#FW_SW_ALIGN">📎 notes_on_fw_sw_alignment</a>
+      <a href="#FW_SW_REGIME">📎 regime_notes_fw_sw</a>
+      <a href="#VERSION_DRIFT">📎 versioning_and_drift</a>
+      <a href="#PIPE_FRAG">📎 data_pipeline_fragility</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+  
 </nav>
 
 <main id="content"></main>
 
 <script>
-/* ============================================================
-   HASH → FILE MAP
-   ============================================================ */
 
 const DOC_MAP = {
-
   /* Top Level */
   README: "README.md",
   ABOUT: "About.md",
@@ -236,7 +264,6 @@ const DOC_MAP = {
   ROADMAP: "Suggested_Roadmap_Timeline_and_Benefits.md",
   PR_TEMPLATE: "pull_request_template.md",
   TEMPLATE: "template.md",
-
   /* 00 Overview */
   PURPOSE: "00_overview/purpose.md",
   METHOD: "00_overview/method.md",
@@ -245,7 +272,6 @@ const DOC_MAP = {
   METHOD_FW_SW: "00_overview/method_fw_sw.md",
   GLOSSARY_FW_SW: "00_overview/glossary_links_fw_sw.md",
   FW_SW_CATEGORIES: "00_overview/fw_sw_categories.md",
-
   /* 01 Green Zone */
   ACCELEROMETER: "01_green_zone/accelerometer.md",
   AMMETER: "01_green_zone/ammeter.md",
@@ -260,13 +286,11 @@ const DOC_MAP = {
   SPECTROMETER: "01_green_zone/spectrometer.md",
   TELESCOPE: "01_green_zone/telescope.md",
   THERMOMETER: "01_green_zone/thermometer.md",
-
   EMBEDDED_FW: "01_green_zone/embedded_control_firmware.md",
   LOGGER_FW: "01_green_zone/basic_data_logger_firmware.md",
   SIGPROC_LIBS: "01_green_zone/standard_signal_processing_libraries.md",
   OPTICAL_ALIGN_SW: "01_green_zone/optical_alignment_software.md",
   STATIC_CAL: "01_green_zone/calibration_routines_static.md",
-
   /* 02 Yellow Zone */
   DNA_SEQ: "02_yellow_zone/DNA_sequencer.md",
   DYNAMOMETER: "02_yellow_zone/dynamometer.md",
@@ -281,7 +305,6 @@ const DOC_MAP = {
   PHOTOMETER: "02_yellow_zone/photometer.md",
   SPECTROGRAM: "02_yellow_zone/spectrogram.md",
   THEODOLITE: "02_yellow_zone/theodolite.md",
-
   PEAK_FIT: "02_yellow_zone/automated_peak_fitting_software.md",
   RT_FILTER_FW: "02_yellow_zone/real_time_filtering_firmware.md",
   ENV_COMP: "02_yellow_zone/environmental_compensation_modules.md",
@@ -289,7 +312,6 @@ const DOC_MAP = {
   OPT_IMG_SW: "02_yellow_zone/optical_image_processing_software.md",
   OSC_UI: "02_yellow_zone/oscilloscope_ui_and_sampling_logic.md",
   CLOUD_FW: "02_yellow_zone/cloud_sync_and_device_management_fw.md",
-
   /* 03 Red Zone */
   ELECTROSTATIC: "03_red_zone/electrostatic_analyzer.md",
   EUDIOMETER: "03_red_zone/eudiometer.md",
@@ -299,7 +321,6 @@ const DOC_MAP = {
   THERMOCOUPLE: "03_red_zone/thermocouple.md",
   VOLTMETER: "03_red_zone/voltmeter.md",
   XRAY_SCATTER: "03_red_zone/Xray_scattering.md",
-
   INV_XRAY: "03_red_zone/inversion_algorithms_xray_scattering.md",
   SEQ_ALIGN: "03_red_zone/biochemical_sequence_alignment_pipelines.md",
   MAG_FIELD_RECON: "03_red_zone/magnetic_field_reconstruction_software.md",
@@ -307,7 +328,6 @@ const DOC_MAP = {
   THERMO_FW: "03_red_zone/thermocouple_compensation_firmware.md",
   MULTIPHYSICS: "03_red_zone/complex_multiphysics_simulation_modules.md",
   AI_TOOLS: "03_red_zone/AI_based_signal_interpretation_tools.md",
-
   /* 99 Appendix */
   INST_RAW: "99_appendix/instrument_list_raw.md",
   ALIGN_NOTES: "99_appendix/notes_on_alignment.md",
@@ -319,34 +339,41 @@ const DOC_MAP = {
   VERSION_DRIFT: "99_appendix/versioning_and_drift.md",
   PIPE_FRAG: "99_appendix/data_pipeline_fragility.md"
 };
-
-/* ============================================================
-   Loader
-   ============================================================ */
-
-function loadDoc(file) {
-  fetch(file)
-    .then(r => r.text())
-    .then(t => {
-      document.getElementById("content").innerHTML = marked.parse(t);
-    })
-    .catch(() => {
-      document.getElementById("content").innerHTML =
-        `<h2>Unable to load: ${file}</h2>`;
-    });
-}
-
+  
 function loadFromHash() {
-  const key = window.location.hash.replace("#", "");
+  const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
     loadDoc(DOC_MAP[key]);
   } else {
-    loadDoc("README.md");
+    loadDoc('README.md');
   }
 }
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
-window.addEventListener("hashchange", loadFromHash);
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
+
 </script>
 
 </body>
