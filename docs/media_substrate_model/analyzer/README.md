@@ -145,5 +145,5 @@ The MSM Analyzer documentation includes:
 - `adapter_integration.md` — adapter expectations  
 - `examples.md` — worked examples  
 - `schema.json` — Analyzer I/O schema  
-- `DOC_MAP.json` — programmatic doc index  
-- `navigation.html` — HTML navigation block  
+- `schema.json.md` — Analyzer I/O schema web copy
+- `index.html` — HTML canonical example site
