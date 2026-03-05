@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-<title>Substrate Mind Science — Documentation Index</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Substrate Mind Science | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -122,61 +155,92 @@ code {
   color: var(--text-main);
 }
 </style>
-   
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-
-<nav>
-
+   
+<nav class="nav-band">
+  
   <h2>🧠 Substrate Mind Science — Orientation</h2>
-     <a href="#MIN_MIND_SUB">🧩 Minimal Mind Substrate</a>
-     <a href="#LEG_MIND_NAR">📚 Legacy Narratives</a>
-     <a href="#CON_TRAN_SUB_MAP">🧭 CT Substrate Map</a>
-     <a href="#CON_TRAN_SUB_SCHEMA">📐 CT Schema</a>
-
-  <h2>🧪 Audit Sections</h2>
-
-     <a href="#SECTION_A1">🅰️📌 A — Core Definition</a>
-     <a href="#SECTION_A2">🅰️🧠 A — Psychology</a>
-
-     <a href="#SECTION_B1">🅱️🛠️ B — Diagnostic Systems</a>
-     <a href="#SECTION_B2">🅱️🧪 B — Psychology Methods</a>
-
-     <a href="#SECTION_C1">🅲️🧬 C — Psych Subfields</a>
-     <a href="#SECTION_C2">🅲️💊 C — Treatment Modalities</a>
-
-     <a href="#SECTION_D1">🅳️📐 D — Theoretical Approaches</a>
-     <a href="#SECTION_D2">🅳️🧩 D — Psych Frameworks</a>
-
-     <a href="#SECTION_E1">🅴️⚙️ E — Applied Psychology</a>
-     <a href="#SECTION_E2">🅴️🔍 E — Subspecialties</a>
-
-     <a href="#SECTION_F1">🅵️🔬 F — Research Domains</a>
-     <a href="#SECTION_F2">🅵️📊 F — Psych Research</a>
-
-     <a href="#SECTION_G1">🅶️⚖️ G — Ethics & Institutions</a>
-     <a href="#SECTION_H1">🅷️📜 H — Historical Layers</a>
-     <a href="#SECTION_I1">🅸️❗ I — Criticisms</a>
-
-  <h2>📂 CT Substrate Directory</h2>
-     <a href="#CT_SCHEMA">📐 Schema JSON</a>
-     <a href="#CT_README">📘 CT README</a>
-
-   <h2>🧪 Examples</h2>
-     <a href="#CT_EXAMPLE">🧪 Example (Typical)</a>
-     <a href="#CT_EXAMPLE_ANN">📝 Example Annotations</a>
-     <a href="#CT_EXAMPLE_MAX">🌌 Maximal Example</a>
-     <a href="#CT_EXAMPLE_MIN">🔹 Minimal Example</a>
-     <a href="../">🔙</a>
-
+       <a href="#MIN_MIND_SUB">🧩 Minimal Mind Substrate</a>
+       <a href="#LEG_MIND_NAR">📚 Legacy Narratives</a>
+       <a href="#CON_TRAN_SUB_MAP">🧭 CT Substrate Map</a>
+       <a href="#CON_TRAN_SUB_SCHEMA">📐 CT Schema</a>
+       <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
+    <h3>🧪 Audit Sections</h3>
+       <a href="#SECTION_A1">🅰️📌 A — Core Definition</a>
+       <a href="#SECTION_A2">🅰️🧠 A — Psychology</a>
+       <a href="#SECTION_B1">🅱️🛠️ B — Diagnostic Systems</a>
+       <a href="#SECTION_B2">🅱️🧪 B — Psychology Methods</a>
+       <a href="#SECTION_C1">🅲️🧬 C — Psych Subfields</a>
+       <a href="#SECTION_C2">🅲️💊 C — Treatment Modalities</a>
+       <a href="#SECTION_D1">🅳️📐 D — Theoretical Approaches</a>
+       <a href="#SECTION_D2">🅳️🧩 D — Psych Frameworks</a>
+       <a href="#SECTION_E1">🅴️⚙️ E — Applied Psychology</a>
+       <a href="#SECTION_E2">🅴️🔍 E — Subspecialties</a>
+       <a href="#SECTION_F1">🅵️🔬 F — Research Domains</a>
+       <a href="#SECTION_F2">🅵️📊 F — Psych Research</a>
+       <a href="#SECTION_G1">🅶️⚖️ G — Ethics & Institutions</a>
+       <a href="#SECTION_H1">🅷️📜 H — Historical Layers</a>
+       <a href="#SECTION_I1">🅸️❗ I — Criticisms</a>
+    <h3>📂 CT Substrate Directory</h3>
+       <a href="#CT_SCHEMA">📐 Schema JSON</a>
+       <a href="#CT_README">🔰 CT README</a>
+    <h3>🧪 Examples</h3>
+       <a href="#CT_EXAMPLE">🧪 Example (Typical)</a>
+       <a href="#CT_EXAMPLE_ANN">📝 Example Annotations</a>
+       <a href="#CT_EXAMPLE_MAX">🌌 Maximal Example</a>
+       <a href="#CT_EXAMPLE_MIN">🔹 Minimal Example</a>
+       <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
 
 <script>
 
+const DOC_MAP = {
+  MIN_MIND_SUB: "Minimal_Mind_Substrate_v1.md",
+  LEG_MIND_NAR: "Legacy_Mind_Narratives_v1.md",
+  CON_TRAN_SUB_MAP: "Conscious_Transfer_Substrate_Map_v1.md",
+  CON_TRAN_SUB_SCHEMA: "Conscious_Transfer_Substrate_Schema_v1.md",
+  SECTION_A1: "Section_A__Core_Definition_and_Scope.md",
+  SECTION_A2: "SECTION_A__Core_Definition_and_Scope_(Psychology).md",
+  SECTION_B1: "Section_B__Diagnostic_Systems.md",
+  SECTION_B2: "SECTION_B__Methods_and_Research_Approaches_(Psychology).md",
+  SECTION_C1: "SECTION_C__Major_Subfields_of_Psychology.md",
+  SECTION_C2: "Section_C__Treatment_Modalities.md",
+  SECTION_D1: "Section_D__Theoretical_Approaches.md",
+  SECTION_D2: "SECTION_D__Theoretical_Frameworks_of_Psychology.md",
+  SECTION_E1: "SECTION_E__Applied_Fields_of_Psychology.md",
+  SECTION_E2: "Section_E__Subspecialties.md",
+  SECTION_F1: "Section_F__Research_Domains.md",
+  SECTION_F2: "SECTION_F__Research_Domains_in_Psychology.md",
+  SECTION_G1: "Section_G__Ethical_and_Institutional_Structures.md",
+  SECTION_H1: "Section_H__Historical_Layers.md",
+  SECTION_I1: "Section_I__Criticisms_and_Controversies.md",
+  CT_SCHEMA: "ct_substrate/ct_substrate.schema.json.md",
+  CT_README: "ct_substrate/README.md",
+  CT_EXAMPLE: "ct_substrate/examples/ct_example.json.md",
+  CT_EXAMPLE_ANN: "ct_substrate/examples/ct_example_annotations.md",
+  CT_EXAMPLE_MAX: "ct_substrate/examples/ct_example_maximal.json.md",
+  CT_EXAMPLE_MIN: "ct_substrate/examples/ct_example_minimal.json.md"
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
 function loadDoc(file) {
   fetch(file)
     .then(response => {
@@ -186,7 +250,12 @@ function loadDoc(file) {
       return response.text();
     })
     .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
     })
     .catch(err => {
       document.getElementById('content').innerHTML =
@@ -194,55 +263,10 @@ function loadDoc(file) {
       console.error(err);
     });
 }
-
-const DOC_MAP = {
-  MIN_MIND_SUB: "Minimal_Mind_Substrate_v1.md",
-  LEG_MIND_NAR: "Legacy_Mind_Narratives_v1.md",
-  CON_TRAN_SUB_MAP: "Conscious_Transfer_Substrate_Map_v1.md",
-  CON_TRAN_SUB_SCHEMA: "Conscious_Transfer_Substrate_Schema_v1.md",
-
-  SECTION_A1: "Section_A__Core_Definition_and_Scope.md",
-  SECTION_A2: "SECTION_A__Core_Definition_and_Scope_(Psychology).md",
-
-  SECTION_B1: "Section_B__Diagnostic_Systems.md",
-  SECTION_B2: "SECTION_B__Methods_and_Research_Approaches_(Psychology).md",
-
-  SECTION_C1: "SECTION_C__Major_Subfields_of_Psychology.md",
-  SECTION_C2: "Section_C__Treatment_Modalities.md",
-
-  SECTION_D1: "Section_D__Theoretical_Approaches.md",
-  SECTION_D2: "SECTION_D__Theoretical_Frameworks_of_Psychology.md",
-
-  SECTION_E1: "SECTION_E__Applied_Fields_of_Psychology.md",
-  SECTION_E2: "Section_E__Subspecialties.md",
-
-  SECTION_F1: "Section_F__Research_Domains.md",
-  SECTION_F2: "SECTION_F__Research_Domains_in_Psychology.md",
-
-  SECTION_G1: "Section_G__Ethical_and_Institutional_Structures.md",
-  SECTION_H1: "Section_H__Historical_Layers.md",
-  SECTION_I1: "Section_I__Criticisms_and_Controversies.md",
-
-  CT_SCHEMA: "ct_substrate/ct_substrate.schema.json",
-  CT_README: "ct_substrate/README.md",
-
-  CT_EXAMPLE: "ct_substrate/examples/ct_example.json",
-  CT_EXAMPLE_ANN: "ct_substrate/examples/ct_example_annotations.md",
-  CT_EXAMPLE_MAX: "ct_substrate/examples/ct_example_maximal.json",
-  CT_EXAMPLE_MIN: "ct_substrate/examples/ct_example_minimal.json"
-};
-
-function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc("Minimal_Mind_Substrate_v1.md");
-  }
-}
-
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
+
 </script>
 
 </body>
