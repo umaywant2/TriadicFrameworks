@@ -1,0 +1,134 @@
+substrate_validation_rules:
+
+  description: >
+    Defines validation rules for all substrate objects entering the GSM
+    Analyzer. Ensures structural vectors, drift signals, invariant states,
+    physics forces, basin classifications, regime modes, and observer records
+    conform to the manifold, normalization pipeline, and structural integrity
+    requirements.
+
+  version: "1.0"
+
+  validation_pipeline:
+    - "Check required fields"
+    - "Validate axis ranges"
+    - "Validate normalization"
+    - "Validate coupling coherence"
+    - "Validate invariant structure"
+    - "Validate physics force structure"
+    - "Validate drift classification"
+    - "Validate basin classification"
+    - "Validate regime mode"
+    - "Validate phase state"
+    - "Emit validation report"
+
+  structural_vector_rules:
+    required_fields: ["C", "M", "O", "A", "T"]
+    axis_range: [0.0, 1.0]
+    normalization_required: true
+    coupling_checks:
+      C_O:
+        rule: "abs(C - O) <= 1.0"
+        tension_flag: "abs(C - O) > 0.8"
+      M_A:
+        rule: "abs(M - A) <= 1.0"
+        tension_flag: "M > 0.7 and A > 0.7"
+      O_T:
+        rule: "O <= 1.0 and T <= 1.0"
+        tension_flag: "O > 0.7 and T_volatility > 0.6"
+
+  drift_rules:
+    required_fields: ["vector", "magnitude", "category"]
+    magnitude_formula: "sqrt(dC^2 + dM^2 + dO^2 + dA^2 + dT^2)"
+    categories:
+      micro: "<0.15"
+      meso: "0.15–0.35"
+      macro: "0.35–0.60"
+      regime_shift: ">0.60"
+    directional_consistency_required_for:
+      - "macro"
+      - "regime_shift"
+
+  invariant_rules:
+    required_fields: ["aligned", "tension", "violated", "tension_score"]
+    tension_score_range: [0, 10]
+    violation_thresholds:
+      moderate: 1
+      severe: 2
+    structural_debt_trigger: "violated >= 2 and tension_score > 6"
+
+  physics_rules:
+    required_fields: ["axis_pair", "magnitude", "direction"]
+    axis_pairs:
+      - "C↔O"
+      - "M↔A"
+      - "O↔T"
+    magnitude_range: [0.0, 1.0]
+    destabilization_threshold: 0.7
+
+  basin_rules:
+    required_fields: ["nearest_basin", "basin_distance", "boundary_proximity", "stability_score"]
+    basins:
+      - "CPL"
+      - "CPF"
+      - "CTR"
+      - "PCL"
+      - "HCL"
+    distance_range: [0.0, 1.0]
+    boundary_proximity_threshold: 0.7
+    stability_score_range: [0.0, 1.0]
+
+  regime_mode_rules:
+    valid_modes:
+      - "stable"
+      - "tension"
+      - "drift"
+      - "compensatory"
+      - "transition"
+      - "absorptive"
+      - "fragmentation"
+      - "reconstruction"
+    mode_consistency_checks:
+      stable:
+        requires: ["tension_score <= 3", "drift_category == micro"]
+      tension:
+        requires: ["3 < tension_score <= 6"]
+      drift:
+        requires: ["drift_category == meso"]
+      transition:
+        requires: ["boundary_proximity > 0.7"]
+      fragmentation:
+        requires: ["violated >= 2", "coherence_score < 40"]
+      reconstruction:
+        requires: ["drift_category == micro", "tension_score < 4"]
+
+  phase_state_rules:
+    valid_phases:
+      - "stable_phase"
+      - "tension_phase"
+      - "drift_phase"
+      - "transition_phase"
+      - "reconstruction_phase"
+    monotonicity_required: true
+    skip_allowed_only_if: "drift_category == regime_shift"
+
+  observer_record_rules:
+    required_fields:
+      history: ["record_id", "structural_vector", "basin_classification"]
+      now: ["state_id", "structural_vector", "regime_mode"]
+      future: ["projection_id", "projected_vector", "transition_signals"]
+    timestamp_required: true
+
+  validation_output:
+    schema:
+      valid: "<true|false>"
+      errors: ["<list_of_errors>"]
+      warnings: ["<list_of_warnings>"]
+      metadata:
+        source: "<adapter|simulation|projection|manual>"
+        timestamp: "<YYYY-MM-DD>"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Ensures structural integrity of all GSM substrate objects."
