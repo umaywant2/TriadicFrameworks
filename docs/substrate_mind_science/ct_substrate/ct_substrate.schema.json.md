@@ -1,0 +1,229 @@
+```json
+
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/ct_substrate.schema.json",
+  "title": "Conscious Transfer Substrate Map v1",
+  "type": "object",
+  "required": [
+    "behavioral_layer",
+    "cognitive_layer",
+    "measurement_layer",
+    "anchoring_constraints"
+  ],
+  "properties": {
+    "behavioral_layer": { "$ref": "#/$defs/BehavioralLayer" },
+    "cognitive_layer": { "$ref": "#/$defs/CognitiveLayer" },
+    "measurement_layer": { "$ref": "#/$defs/MeasurementLayer" },
+    "anchoring_constraints": { "$ref": "#/$defs/AnchoringConstraints" }
+  },
+
+  "$defs": {
+    "BehavioralLayer": {
+      "type": "object",
+      "required": ["conditioning_models", "performance_metrics"],
+      "properties": {
+        "conditioning_models": { "$ref": "#/$defs/ConditioningModels" },
+        "performance_metrics": { "$ref": "#/$defs/PerformanceMetrics" }
+      }
+    },
+
+    "ConditioningModels": {
+      "type": "object",
+      "properties": {
+        "classical": {
+          "type": "object",
+          "properties": {
+            "cs_us_mapping": { "type": "array", "items": { "type": "string" } },
+            "acquisition_rate": { "type": "number" },
+            "extinction_rate": { "type": "number" }
+          }
+        },
+        "operant": {
+          "type": "object",
+          "properties": {
+            "reinforcement_schedule": { "type": "string" },
+            "learning_rate": { "type": "number" },
+            "discount_factor": { "type": "number" }
+          }
+        }
+      }
+    },
+
+    "PerformanceMetrics": {
+      "type": "object",
+      "properties": {
+        "reaction_time_distribution": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "accuracy": { "type": "number" },
+        "error_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "speed_accuracy_tradeoff": {
+          "type": "object",
+          "properties": {
+            "slope": { "type": "number" },
+            "intercept": { "type": "number" }
+          }
+        }
+      }
+    },
+
+    "CognitiveLayer": {
+      "type": "object",
+      "required": [
+        "working_memory",
+        "attention",
+        "decision_models",
+        "learning_models"
+      ],
+      "properties": {
+        "working_memory": { "$ref": "#/$defs/WorkingMemory" },
+        "attention": { "$ref": "#/$defs/Attention" },
+        "decision_models": { "$ref": "#/$defs/DecisionModels" },
+        "learning_models": { "$ref": "#/$defs/LearningModels" }
+      }
+    },
+
+    "WorkingMemory": {
+      "type": "object",
+      "properties": {
+        "capacity": { "type": "integer" },
+        "decay_rate": { "type": "number" },
+        "refresh_rate": { "type": "number" }
+      }
+    },
+
+    "Attention": {
+      "type": "object",
+      "properties": {
+        "selective_filter_strength": { "type": "number" },
+        "sustained_attention_stability": { "type": "number" },
+        "switching_cost": { "type": "number" }
+      }
+    },
+
+    "DecisionModels": {
+      "type": "object",
+      "properties": {
+        "drift_diffusion": {
+          "type": "object",
+          "properties": {
+            "drift_rate": { "type": "number" },
+            "boundary_separation": { "type": "number" },
+            "non_decision_time": { "type": "number" }
+          }
+        },
+        "signal_detection": {
+          "type": "object",
+          "properties": {
+            "sensitivity_d_prime": { "type": "number" },
+            "criterion_c": { "type": "number" }
+          }
+        }
+      }
+    },
+
+    "LearningModels": {
+      "type": "object",
+      "properties": {
+        "reinforcement_learning": {
+          "type": "object",
+          "properties": {
+            "learning_rate": { "type": "number" },
+            "exploration_rate": { "type": "number" },
+            "reward_sensitivity": { "type": "number" }
+          }
+        }
+      }
+    },
+
+    "MeasurementLayer": {
+      "type": "object",
+      "required": ["psychometrics", "neuropsych_tests"],
+      "properties": {
+        "psychometrics": { "$ref": "#/$defs/Psychometrics" },
+        "neuropsych_tests": { "$ref": "#/$defs/NeuropsychTests" }
+      }
+    },
+
+    "Psychometrics": {
+      "type": "object",
+      "properties": {
+        "reliability_alpha": { "type": "number" },
+        "test_retest_stability": { "type": "number" },
+        "factor_structure": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "NeuropsychTests": {
+      "type": "object",
+      "properties": {
+        "task_battery": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "task_name": { "type": "string" },
+              "score": { "type": "number" },
+              "normative_z": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
+
+    "AnchoringConstraints": {
+      "type": "object",
+      "properties": {
+        "circuit_mappings": { "$ref": "#/$defs/CircuitMappings" },
+        "neurophys_signatures": { "$ref": "#/$defs/NeurophysSignatures" },
+        "pharmacological_profiles": { "$ref": "#/$defs/PharmacologicalProfiles" }
+      }
+    },
+
+    "CircuitMappings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "region": { "type": "string" },
+          "associated_function": { "type": "string" },
+          "lesion_effect": { "type": "string" }
+        }
+      }
+    },
+
+    "NeurophysSignatures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "task": { "type": "string" },
+          "frequency_band": { "type": "string" },
+          "amplitude": { "type": "number" },
+          "latency": { "type": "number" }
+        }
+      }
+    },
+
+    "PharmacologicalProfiles": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "agent": { "type": "string" },
+          "receptor_target": { "type": "string" },
+          "effect_profile": { "type": "string" }
+        }
+      }
+    }
+  }
+}
+```
