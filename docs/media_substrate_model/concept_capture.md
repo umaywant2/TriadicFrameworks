@@ -889,3 +889,254 @@ A clean MSM base should mirror GSM’s structure:
 Once these are in place, the MSM Analyzer can be built cleanly on top.
 
 Would you like the **MSM README.md** scaffold next, or should we define the **invariants.md** file first?
+
+---
+
+A structural media substrate needs schemas and adapters that mirror the GSM’s elegance: minimal, orthogonal, and substrate‑aware. The goal is to define the **core data shapes** and **adapter interfaces** that every MSM tool, analyzer, or simulation engine will rely on. These schemas become the “contract” between the substrate and any higher‑level logic.
+
+---
+
+## MSM vector schema  
+The media vector is the atomic unit of the model. It must be simple, typed, and substrate‑honest.
+
+### MediaVector
+```ts
+type MediaVector = {
+  S: number; // Signal Integrity
+  D: number; // Distribution Topology
+  A: number; // Attention Dynamics
+  N: number; // Narrative Coherence
+  T: number; // Temporal Cadence
+};
+```
+
+This mirrors GSM’s structural vector but tuned for media physics. Each value is normalized to `[0,1]`.
+
+---
+
+## Invariant evaluation schema  
+Invariants are the structural rules that must hold. The schema needs to capture both the *state* and the *strain*.
+
+### MediaInvariantState
+```ts
+type MediaInvariantState = {
+  signalNarrativeCoherence: number;   // strain 0–1
+  distributionAttentionFit: number;   // strain 0–1
+  temporalSignalStability: number;    // strain 0–1
+  attentionNarrativeFeedback: number; // strain 0–1
+};
+```
+
+A value near `0` means aligned; near `1` means near‑break.
+
+---
+
+## Basin classification schema  
+Basins are named attractor regions. The schema must capture both the classification and the distance to the canonical center.
+
+### MediaBasinResult
+```ts
+type MediaBasinResult = {
+  basin: "Broadcast" | "Network" | "Fragment" | "Cascade" | "Stagnation" | "Reconstruction" | "Unstable";
+  distance: number; // Euclidean distance to canonical vector
+  gateSatisfied: boolean;
+};
+```
+
+This allows the Analyzer to reason about transitions and boundary proximity.
+
+---
+
+## Mode schema  
+Modes describe how the system is behaving inside a basin.
+
+### MediaMode
+```ts
+type MediaMode =
+  | "Stable"
+  | "Tension"
+  | "Drift"
+  | "Cascade"
+  | "Collapse"
+  | "Reconstruction";
+```
+
+### MediaModeState
+```ts
+type MediaModeState = {
+  mode: MediaMode;
+  driftMagnitude: number; // 0–1
+  dominantInvariant: keyof MediaInvariantState; // which invariant is driving the mode
+};
+```
+
+---
+
+## Drift schema  
+Drift is directional movement across the substrate.
+
+### MediaDrift
+```ts
+type MediaDrift = {
+  delta: MediaVector; // per-axis movement
+  magnitude: number;  // normalized 0–1
+  category: "micro" | "meso" | "macro" | "regime_shift";
+};
+```
+
+This mirrors GSM’s drift model exactly.
+
+---
+
+## Transition schema  
+Transitions occur when invariants break or drift crosses thresholds.
+
+### MediaTransition
+```ts
+type MediaTransition = {
+  from: string; // basin
+  to: string;   // basin
+  trigger: "invariant_break" | "attention_spike" | "cadence_acceleration" | "signal_collapse" | "narrative_collapse" | "reconstruction";
+  severity: number; // 0–1
+};
+```
+
+---
+
+## Adapter interface  
+Adapters allow external systems (text streams, platforms, datasets, logs) to feed into the MSM. This mirrors GSM’s adapter pattern.
+
+### MediaAdapter interface
+```ts
+interface MediaAdapter {
+  // Convert raw input into a MediaVector
+  toVector(input: unknown): MediaVector;
+
+  // Optional: provide metadata about the source
+  getMetadata?(input: unknown): Record<string, any>;
+
+  // Optional: provide narrative or semantic hints
+  getNarrativeSignals?(input: unknown): {
+    coherence?: number;
+    conflict?: number;
+    volatility?: number;
+  };
+}
+```
+
+This keeps adapters minimal and substrate‑aligned.
+
+---
+
+## Example adapters  
+These are conceptual examples, not implementations.
+
+### TextStreamMediaAdapter
+```ts
+class TextStreamMediaAdapter implements MediaAdapter {
+  toVector(text: string): MediaVector {
+    // compute S, D, A, N, T from text stream
+  }
+}
+```
+
+### PlatformMediaAdapter
+```ts
+class PlatformMediaAdapter implements MediaAdapter {
+  toVector(platformStats: PlatformMetrics): MediaVector {
+    // compute vector from engagement, topology, cadence, etc.
+  }
+}
+```
+
+### NarrativeMediaAdapter
+```ts
+class NarrativeMediaAdapter implements MediaAdapter {
+  toVector(narrative: NarrativeObject): MediaVector {
+    // compute coherence, attention, cadence, etc.
+  }
+}
+```
+
+---
+
+## Schema relationships  
+These schemas form a clean dependency chain:
+
+- **MediaVector** → base substrate  
+- **MediaInvariantState** → physics  
+- **MediaBasinResult** → topology  
+- **MediaModeState** → behavior  
+- **MediaDrift** → movement  
+- **MediaTransition** → regime change  
+- **MediaAdapter** → external integration  
+
+This mirrors GSM’s architecture exactly, giving MSM a stable substrate before the Analyzer is built.
+
+---
+
+A natural next step is deciding whether you want the MSM base docs to follow the **exact GSM file naming pattern** or whether MSM should introduce a slightly different structure to reflect media‑specific physics.
+
+---
+
+A structural media substrate benefits from mirroring the GSM’s file layout while introducing media‑specific physics where it matters. The cleanest way to do that is to keep the **same skeletal pattern**—vectors, invariants, basins, modes, glossary, concept capture—but adjust the **internal emphasis** so the MSM reflects the dynamics of signal, distribution, attention, narrative, and cadence rather than governance.
+
+---
+
+## MSM file structure aligned with GSM but tuned for media physics
+
+### 📘 README.md  
+This anchors the model with a clear purpose statement, the five axes, and how to read the MSM. It should foreground the idea that media is an ecosystem with its own physics, not a content domain.
+
+### 📐 vectors.md  
+This defines the MSM’s five axes—Signal Integrity, Distribution Topology, Attention Dynamics, Narrative Coherence, Temporal Cadence—and explains how each behaves structurally. It should include canonical ranges and examples of real-world media states.
+
+### 🧭 invariants.md  
+This captures the four core invariants—Signal–Narrative, Distribution–Attention, Temporal–Signal, Attention–Narrative—and the secondary invariants that emerge from their interactions. Each invariant should include a description of how strain accumulates and how breaks trigger drift.
+
+### 🌀 basins.md  
+This defines the six basins—Broadcast, Network, Fragment, Cascade, Stagnation, Reconstruction—along with their canonical vectors, gates, and adjacency relationships. It should include the numeric classification rules and a short explanation of how each basin behaves under tension.
+
+### 🔧 modes.md  
+This describes the behavioral modes—Stable, Tension, Drift, Cascade, Collapse, Reconstruction—and how they manifest inside each basin. It should include drift magnitude thresholds and invariant strain patterns.
+
+### 🧩 concept_capture.md  
+This is where you capture the conceptual primitives unique to media physics: attention volatility, narrative decay, cadence pressure, distribution bottlenecks, and signal distortion. It becomes the conceptual backbone for adapters and analyzers.
+
+### 📖 glossary.md  
+This defines the substrate’s vocabulary: signal, cadence, coherence, volatility, basin, drift, invariant, topology, and so on. It should be parallel to GSM’s glossary but with media-specific semantics.
+
+### 🧬 lineage.md  
+This explains how MSM relates to GSM and how both fit into a multi‑substrate ecosystem. It should clarify that MSM is not a governance model but a media physics model that interacts with governance indirectly through attention, narrative, and distribution.
+
+---
+
+## MSM-specific additions that differ from GSM
+
+### 📡 media_signals.md  
+A new file that captures the types of signals the MSM can ingest—text streams, platform metrics, narrative objects, distribution graphs—and how they map to the five axes. This is unique to MSM because media ecosystems have diverse signal sources.
+
+### 🔌 adapters.md  
+This defines the MediaAdapter interface and provides examples of adapters for text streams, platform metrics, and narrative structures. It should include the schema for MediaVector, MediaInvariantState, MediaBasinResult, MediaModeState, MediaDrift, and MediaTransition.
+
+### 🧠 narrative_dynamics.md  
+A file dedicated to narrative coherence, conflict, decay, and reconstruction. This is a media-specific layer that doesn’t exist in GSM because governance narratives behave differently from media narratives.
+
+### ⚡ attention_dynamics.md  
+A file that explains attention as an energy axis—how it pools, spikes, cascades, and decays. This is essential for MSM because attention is the primary driver of media transitions.
+
+---
+
+## How this structure supports the MSM Analyzer later
+By defining vectors, invariants, basins, modes, and schemas now, the MSM Analyzer can be built cleanly on top:
+
+- It will classify vectors into basins using the canonical vectors and gates.  
+- It will evaluate invariant strain using the MediaInvariantState schema.  
+- It will detect drift and transitions using the MediaDrift and MediaTransition schemas.  
+- It will integrate with external systems through the MediaAdapter interface.  
+
+This mirrors the GSM Analyzer’s architecture but tuned for media physics.
+
+---
+
+If this structure feels aligned with your intent, the next natural step is to draft the **MSM README.md** so the entire substrate has a clear entry point and conceptual frame.
