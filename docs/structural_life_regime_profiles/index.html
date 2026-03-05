@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>Structural Life‑Regime Profiles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Structural Life‑Regime Profiles | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,36 +161,38 @@ code {
 
 <body>
    
-<nav>
-<h2>Structural Life‑Regime Profiles — Documentation Index</h2>
-
-<!-- ROOT -->
-<a href="#README">📘 README — Overview of structural life‑regime profiling.</a>
-
-<!-- FOUNDATIONS -->
-<a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the life‑regime substrate.</a>
-<a href="#REGIME_AXES">📐 Regime Axes — Axes defining life‑regime structure.</a>
-<a href="#LIFE_REGIME_TAXONOMY">🧭 Life‑Regime Taxonomy — Classification of life regimes.</a>
-
-<!-- COMPARATIVE & ALIGNMENT ANALYSIS -->
-<a href="#CROSS_SPECIES_COMPARISON">🔬 Cross‑Species Comparison — Comparative regime analysis.</a>
-<a href="#AUTONOMOUS_SYSTEM_ALIGNMENT">🤖 Autonomous System Alignment — Alignment across autonomous systems.</a>
-
-<!-- STABILITY & DRIFT -->
-<a href="#DRIFT_AND_STABILITY_PROFILES">📉 Drift & Stability Profiles — Regime stability and drift analysis.</a>
-
-<!-- REFERENCE MATERIAL -->
-<a href="#GLOSSARY">📚 Glossary — Controlled terminology.</a>
-<a href="#REFERENCES">📖 References — Source material and citations.</a>
-
-<!-- EXAMPLE PROFILES -->
-<a href="#EXAMPLE_HUMAN">🧠 Human — Human life‑regime profile.</a>
-<a href="#EXAMPLE_CHIMPANZEE">🐒 Chimpanzee — Primate comparative profile.</a>
-<a href="#EXAMPLE_CHRYSINA_GLORIOSA">🪲 Chrysina gloriosa — Structural biological regime.</a>
-<a href="#EXAMPLE_CRYSTALLINE_ENTITY">💎 Crystalline Entity — Non‑biological structural regime.</a>
-<a href="#EXAMPLE_LLM_AGENT">🧠🤖 LLM Agent — Synthetic cognitive regime.</a>
-<a href="#EXAMPLE_ROBOTICS_STACK">🦾 Robotics Stack — Integrated autonomous system.</a>
-<a href="#EXAMPLE_SYNTHETIC_LIFEFORM">🧬🤖 Synthetic Lifeform — Engineered life‑regime profile.</a>
+<nav class="nav-band">
+  
+  <h2>🧬 Structural Life‑Regime Profiles | RTT</h2>
+      <a href="#README">🔰 Overview of structural life‑regime profiling.</a>
+      <a href="https://www.triadicframeworks.org/substrate_mind_science/">🧠 Substrate Mind Science</a>
+      <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
+    <h3>🧱 Foundations</h3>
+      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition</a>
+      <a href="#REGIME_AXES">📐 Regime Axes</a>
+      <a href="#LIFE_REGIME_TAXONOMY">🧭 Life‑Regime Taxonomy</a>
+    <h3>📊 Comparitive & Alignment Analysis</h3>
+      <a href="#CROSS_SPECIES_COMPARISON">🔬 Cross‑Species Comparison</a>
+      <a href="#AUTONOMOUS_SYSTEM_ALIGNMENT">🤖 Autonomous System Alignment</a>
+    <h3>⚖️ Stability & Drift</h3>
+      <a href="#DRIFT_AND_STABILITY_PROFILES">📉 Drift & Stability Profiles</a>
+    <h3>🗺️ Reference Material</h3>
+      <a href="#GLOSSARY">📚 Glossary — Controlled terminology.</a>
+      <a href="#REFERENCES">📖 References — Source material and citations.</a>
+    <h3>📚 Example Profiles</h3>
+      <a href="#EXAMPLE_HUMAN">🧠 Human — Human life‑regime profile.</a>
+      <a href="#EXAMPLE_CHIMPANZEE">🐒 Chimpanzee — Primate comparative profile.</a>
+      <a href="#EXAMPLE_CHRYSINA_GLORIOSA">🪲 Chrysina gloriosa — Structural biological regime.</a>
+      <a href="#EXAMPLE_CRYSTALLINE_ENTITY">💎 Crystalline Entity — Non‑biological structural regime.</a>
+      <a href="#EXAMPLE_LLM_AGENT">🧠🤖 LLM Agent — Synthetic cognitive regime.</a>
+      <a href="#EXAMPLE_ROBOTICS_STACK">🦾 Robotics Stack — Integrated autonomous system.</a>
+      <a href="#EXAMPLE_SYNTHETIC_LIFEFORM">🧬🤖 Synthetic Lifeform — Engineered life‑regime profile.</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
@@ -166,23 +201,18 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Foundations
   SUBSTRATE_DEFINITION: 'substrate_definition.md',
   REGIME_AXES: 'regime_axes.md',
   LIFE_REGIME_TAXONOMY: 'life_regime_taxonomy.md',
-
   // Comparative & Alignment Analysis
   CROSS_SPECIES_COMPARISON: 'cross_species_comparison.md',
   AUTONOMOUS_SYSTEM_ALIGNMENT: 'autonomous_system_alignment.md',
-
   // Stability & Drift
   DRIFT_AND_STABILITY_PROFILES: 'drift_and_stability_profiles.md',
-
   // Reference Material
   GLOSSARY: 'glossary.md',
   REFERENCES: 'references.md',
-
   // Example Profiles
   EXAMPLE_HUMAN: 'examples/human.md',
   EXAMPLE_CHIMPANZEE: 'examples/chimpanzee.md',
@@ -192,7 +222,7 @@ const DOC_MAP = {
   EXAMPLE_ROBOTICS_STACK: 'examples/robotics_stack.md',
   EXAMPLE_SYNTHETIC_LIFEFORM: 'examples/synthetic_lifeform.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
