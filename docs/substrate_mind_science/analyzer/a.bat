@@ -1,6 +1,5 @@
 @echo off
 echo Creating...
-copy con copy con README.md
 copy con workflow_overview.md
 copy con student_disclaimer.md
 md examples
