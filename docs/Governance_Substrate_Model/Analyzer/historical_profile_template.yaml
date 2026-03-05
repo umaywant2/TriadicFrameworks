@@ -1,0 +1,77 @@
+historical_profile_template:
+
+  description: >
+    Template for representing historical governance configurations within the
+    Governance Substrate Model (GSM). Each profile captures a system at a
+    specific moment in time, including its structural vector, basin alignment,
+    drift context, and narrative interpretation. Profiles can be chained to
+    form structural timelines for the Triadic Observer.
+
+  version: "1.0"
+
+  profile:
+
+    id: "<unique_id>"
+    name: "<system_or_period_name>"
+    date: "<YYYY-MM-DD or era label>"
+    source_type: "historical_record | constitution | reform | academic_analysis"
+
+    structural_vector:
+      C: <number>
+      M: <number>
+      O: <number>
+      A: <number>
+      T: <number>
+      metadata:
+        confidence: <0–1>
+        notes: "<optional>"
+
+    basin_classification:
+      nearest_basin: <CPL | CPF | CTR | PCL | HCL>
+      basin_distance: <number>
+      stability_score: <0–1>
+      movement: "approaching | departing | stable"
+
+    invariants:
+      aligned: [<list_of_invariants>]
+      tension: [<list_of_invariants>]
+      violated: [<list_of_invariants>]
+
+    awareness_layers:
+      structural: <0–10>
+      procedural: <0–10>
+      historical: <0–10>
+      anticipatory: <0–10>
+      relational: <0–10>
+
+    drift_context:
+      previous_profile_id: "<optional>"
+      drift_vector: [<dC>, <dM>, <dO>, <dA>, <dT>]
+      drift_magnitude: <number>
+      drift_category: "micro | meso | macro | regime_shift"
+      active_forces:
+        - axis_pair: "<C↔O | M↔A | O↔T>"
+          magnitude: <number>
+          direction: "positive | negative"
+      invariant_tension_score: <number>
+      absorptive_strength: <number>
+      basin_movement_direction: "approaching | departing | crossing"
+
+    narrative:
+      summary: "<short structural interpretation>"
+      key_events:
+        - "<event_1>"
+        - "<event_2>"
+      structural_highlights:
+        - "<highlight_1>"
+        - "<highlight_2>"
+      drift_explanation:
+        - "<explanation_1>"
+      basin_context:
+        - "<context_1>"
+
+    metadata:
+      author: "<optional>"
+      created: "<YYYY-MM-DD>"
+      last_updated: "<YYYY-MM-DD>"
+      notes: "<optional>"
