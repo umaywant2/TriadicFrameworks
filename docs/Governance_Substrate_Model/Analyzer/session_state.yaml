@@ -1,0 +1,98 @@
+session_state:
+
+  description: >
+    Tracks the active state of an Analyzer session, including structural
+    vectors, basin identity, drift context, invariant status, regime mode,
+    phase state, and observer lens positions. This enables reproducible
+    analysis, multi-step workflows, and interactive dashboards.
+
+  version: "1.0"
+
+  session_metadata:
+    session_id: "<unique_id>"
+    created: "<YYYY-MM-DD>"
+    last_updated: "<YYYY-MM-DD>"
+    user: "<optional>"
+    notes: "<optional>"
+
+  active_structural_state:
+    vector:
+      C: <number>
+      M: <number>
+      O: <number>
+      A: <number>
+      T: <number>
+      confidence: <0–1>
+    basin:
+      nearest_basin: <CPL | CPF | CTR | PCL | HCL>
+      basin_distance: <number>
+      stability_score: <0–1>
+      boundary_proximity: <0–1>
+    invariants:
+      aligned: [<list>]
+      tension: [<list>]
+      violated: [<list>]
+      tension_score: <0–10>
+    awareness_layers:
+      structural: <0–10>
+      procedural: <0–10>
+      historical: <0–10>
+      anticipatory: <0–10>
+      relational: <0–10>
+
+  drift_state:
+    drift_vector: [<dC>, <dM>, <dO>, <dA>, <dT>]
+    magnitude: <number>
+    category: "micro | meso | macro | regime_shift"
+    active_forces:
+      - axis_pair: "<C↔O | M↔A | O↔T>"
+        magnitude: <number>
+        direction: "positive | negative"
+    absorptive_strength: <0–1>
+
+  regime_context:
+    regime_mode: "stable | tension | drift | compensatory | transition | absorptive | fragmentation | reconstruction"
+    phase_state: "stable_phase | tension_phase | drift_phase | transition_phase | reconstruction_phase"
+    structural_debt: <number>
+
+  observer_positions:
+    history_pointer: "<record_id or null>"
+    now_pointer: "<state_id>"
+    future_pointer: "<projection_id or null>"
+
+  projection_context:
+    projected_vector: [<C>, <M>, <O>, <A>, <T>]
+    projected_drift:
+      vector: [<dC>, <dM>, <dO>, <dA>, <dT>]
+      magnitude: <number>
+      category: "micro | meso | macro | regime_shift"
+    transition_signals:
+      likelihood: <0–1>
+      boundary_pressure: <0–1>
+    absorptive_forecast:
+      projected_strength: <0–1>
+      failure_risk: <0–1>
+    projected_regime_mode: "<mode>"
+    confidence: <0–1>
+
+  event_log:
+    events:
+      - event_id: "<unique_id>"
+        type: "alignment | tension | drift | transition | regime_shift | reconstruction"
+        timestamp: "<YYYY-MM-DD>"
+        summary: "<short description>"
+        metadata: "<optional>"
+
+  ui_state:
+    active_lens: "axis | coupling | invariant | drift | basin | narrative | comparison | history | now | future"
+    active_card: "<card_id or null>"
+    filters:
+      show_invariants: true
+      show_forces: true
+      show_drift: true
+      show_basin: true
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Tracks Analyzer session state for reproducible structural workflows."
