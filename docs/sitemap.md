@@ -67,7 +67,9 @@ These pages explore cognition, society, and meaning.
 
 - [/inverted_star_ontology/](https://www.triadicframeworks.org/inverted_star_ontology/)  
 - [/Inverted_Economics/](https://www.triadicframeworks.org/Inverted_Economics/)  
-- [/structural_life_regime_profiles/](https://www.triadicframeworks.org/structural_life_regime_profiles/)  
+- [/structural_life_regime_profiles/](https://www.triadicframeworks.org/structural_life_regime_profiles/)
+- [/media_substrate_model/](https://www.triadicframeworks.org/media_substrate_model/)
+- [/media_substrate_model/analyzer/](https://www.triadicframeworks.org/media_substrate_model/analyzer/)
 - [/spectral_clarity/](https://www.triadicframeworks.org/spectral_clarity/)  
 - [/glyphic_resonance/](https://www.triadicframeworks.org/glyphic_resonance/)  
 - [/glyphs/](https://www.triadicframeworks.org/glyphs/)  
@@ -137,6 +139,7 @@ This is where RTT becomes a community.
 - [/contributors/](https://www.triadicframeworks.org/contributors/)  
 - [/governance/](https://www.triadicframeworks.org/governance/)
 - [/Governance_Substrate_Model/](https://www.triadicframeworks.org/Governance_Substrate_Model/)
+- [/Governance_Substrate_Model/Analyzer/](https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/)
 - [/public_support/](https://www.triadicframeworks.org/public_support/)  
 - [/honor_roll/](https://www.triadicframeworks.org/honor_roll/)  
 - [/registry/](https://www.triadicframeworks.org/registry/)  
