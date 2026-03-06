@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/16/2026 © www.TriadicFrameworks.org -->
-  <title>Manufacturing Substrate Regime Model</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Manufacturing Substrate Regime Model | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,54 +161,69 @@ code {
 
 <body>
    
-<nav>
-<h2>Manufacturing Substrate Regime Model — Documentation Index</h2>
-
-<!-- ROOT -->
-<a href="#README">📘 README — Overview of the Manufacturing Substrate Regime Model.</a>
-
-<!-- CALIBRATION LAYER -->
-<a href="#CALIBRATION_AS_STRUCTURE">🧩 Calibration as Structure — Treating calibration as a structural primitive.</a>
-<a href="#CALIBRATION_DRIFT_DETECTION">📡 Drift Detection — Detecting drift within manufacturing regimes.</a>
-<a href="#CALIBRATION_NON_CATASTROPHIC_EXIT">🚪 Non‑Catastrophic Exit — Safe exit semantics for calibration boundaries.</a>
-<a href="#CALIBRATION_REGIME_AWARE">🎛️ Regime‑Aware Calibration — Calibration aligned with declared regimes.</a>
-
-<!-- DISCUSSION -->
-<a href="#DISCUSSION_DEPLOYMENT_CONSIDERATIONS">🏭 Deployment Considerations — Practical constraints in manufacturing environments.</a>
-<a href="#DISCUSSION_FUTURE_EXTENSIONS">🔮 Future Extensions — Potential expansions of the MSRM framework.</a>
-<a href="#DISCUSSION_IMPLICATIONS_FOR_MANUFACTURING">⚙️ Implications for Manufacturing — Impact on yield, reliability, and process control.</a>
-
-<!-- FIGURES -->
-<a href="#FIGURE_BOUNDARY_AND_EXIT_SEMANTICS">🖼️ Boundary & Exit Semantics — Visual model of exit and boundary behavior.</a>
-<a href="#FIGURE_MSRM_STRUCTURAL_OVERVIEW">🏗️ Structural Overview — Canonical MSRM structural diagram.</a>
-<a href="#FIGURE_REGIME_CALIBRATION_FLOW">🔁 Regime Calibration Flow — Flow diagram of calibration across regimes.</a>
-
-<!-- MANUFACTURING CONTEXT -->
-<a href="#CONTEXT_EXTREME_REGIME_CONSTRAINTS">🔥 Extreme Regime Constraints — High‑stress manufacturing conditions.</a>
-<a href="#CONTEXT_LITHOGRAPHY_SYSTEMS">🔬 Lithography Systems — Regime behavior in lithographic processes.</a>
-<a href="#CONTEXT_YIELD_AND_VARIABILITY">📈 Yield & Variability — Variability sources and yield implications.</a>
-
-<!-- OPERATORS -->
-<a href="#OPERATORS_INTER_REGIME_MEDIATION">🔧 Inter‑Regime Mediation — Operator behavior across regime boundaries.</a>
-<a href="#OPERATORS_MEDIATION_PATTERNS">🧠 Mediation Patterns — Canonical mediation strategies.</a>
-<a href="#OPERATORS_ROLES">👤 Operator Roles — Defined roles within the MSRM operator layer.</a>
-
-<!-- OVERVIEW -->
-<a href="#OVERVIEW_ABSTRACT">🧾 Abstract — Summary of the MSRM conceptual model.</a>
-<a href="#OVERVIEW_LIMITATIONS">⚠️ Limitations — Declared constraints and boundaries of MSRM.</a>
-<a href="#OVERVIEW_SCOPE_AND_ASSUMPTIONS">📐 Scope & Assumptions — Foundational assumptions and scope definition.</a>
-<a href="#OVERVIEW_TERMINOLOGY">📚 Terminology — Canonical definitions for MSRM vocabulary.</a>
-
-<!-- RELATED WORKS -->
-<a href="#RELATED_TO_BSM">🪐 Relationship to BSM — How MSRM relates to the Boson‑Substrate Model.</a>
-<a href="#RELATED_TO_QSM">🔮 Relationship to QSM — Connections to the Quantum‑Substrate Model.</a>
-<a href="#RELATED_TO_RSM">🌊 Relationship to RSM — Alignment with the Resonance‑Substrate Model.</a>
-
-<!-- SUBSTRATE LAYER -->
-<a href="#SUBSTRATE_BOUNDARY_SEMANTICS">🚧 Boundary Semantics — Boundary behavior in manufacturing substrates.</a>
-<a href="#SUBSTRATE_OPERATING_ENVELOPES">📏 Operating Envelopes — Declared safe and valid operating ranges.</a>
-<a href="#SUBSTRATE_REGIME_DECLARATION">🗂️ Regime Declaration — Declaring manufacturing regimes.</a>
-<a href="#SUBSTRATE_DEFINITION">🌐 Substrate Definition — Formal definition of the manufacturing substrate.</a>
+<nav class="nav-band">
+  
+  <h2>🤖 Manufacturing Substrate Regime Model | RTT</h2>
+      <a href="#README">🔰 README — Overview</a>
+    <h3>🪛 Calibration Layer</h3>
+      <a href="#CALIBRATION_AS_STRUCTURE">🧩 Calibration as Structure</a>
+      <a href="#CALIBRATION_DRIFT_DETECTION">📡 Drift Detection</a>
+      <a href="#CALIBRATION_NON_CATASTROPHIC_EXIT">🚪 Non‑Catastrophic Exit</a>
+      <a href="#CALIBRATION_REGIME_AWARE">🎛️ Regime‑Aware Calibration</a>
+    <h3>📳 Discussion</h3>
+      <a href="#DISCUSSION_DEPLOYMENT_CONSIDERATIONS">🏭 Deployment Considerations</a>
+      <a href="#DISCUSSION_FUTURE_EXTENSIONS">🔮 Future Extensions</a>
+      <a href="#DISCUSSION_IMPLICATIONS_FOR_MANUFACTURING">⚙️ Implications for Manufacturing</a>
+    <h3>📊 Figures</h3>
+      <a href="#FIGURE_BOUNDARY_AND_EXIT_SEMANTICS">🖼️ Boundary & Exit Semantics</a>
+      <a href="#FIGURE_MSRM_STRUCTURAL_OVERVIEW">🏗️ Structural Overview</a>
+      <a href="#FIGURE_REGIME_CALIBRATION_FLOW">🔁 Regime Calibration Flow</a>
+    <h3>🥾 Manufacturing Content</h3>
+      <a href="#CONTEXT_EXTREME_REGIME_CONSTRAINTS">🔥 Extreme Regime Constraints</a>
+      <a href="#CONTEXT_LITHOGRAPHY_SYSTEMS">🔬 Lithography Systems</a>
+      <a href="#CONTEXT_YIELD_AND_VARIABILITY">📈 Yield & Variability</a>
+    <h3>🦮 Operators</h3>
+      <a href="#OPERATORS_INTER_REGIME_MEDIATION">🔧 Inter‑Regime Mediation</a>
+      <a href="#OPERATORS_MEDIATION_PATTERNS">🧠 Mediation Patterns</a>
+      <a href="#OPERATORS_ROLES">👤 Operator Roles</a>
+    <h3>🚁 Overview</h3>
+      <a href="#OVERVIEW_ABSTRACT">🧾 Abstract</a>
+      <a href="#OVERVIEW_LIMITATIONS">⚠️ Limitations</a>
+      <a href="#OVERVIEW_SCOPE_AND_ASSUMPTIONS">📐 Scope & Assumptions</a>
+      <a href="#OVERVIEW_TERMINOLOGY">📚 Terminology</a>
+    <h3>🪙 Related Works</h3>
+      <a href="#RELATED_TO_BSM">🪐 Relationship to BSM</a>
+      <a href="#RELATED_TO_QSM">🔮 Relationship to QSM</a>
+      <a href="#RELATED_TO_RSM">🌊 Relationship to RSM</a>
+    <h3>💎 Substrate Layer</h3>
+      <a href="#SUBSTRATE_BOUNDARY_SEMANTICS">🚧 Boundary Semantics</a>
+      <a href="#SUBSTRATE_OPERATING_ENVELOPES">📏 Operating Envelopes</a>
+      <a href="#SUBSTRATE_REGIME_DECLARATION">🗂️ Regime Declaration</a>
+      <a href="#SUBSTRATE_DEFINITION">🌐 Substrate Definition</a>
+  <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">📚 Schemas | RTT</a>  
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+# RTT # TriadicFrameworks # ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+  
 </nav>
 
 <main id="content"></main>
@@ -184,51 +232,43 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Calibration Layer
   CALIBRATION_AS_STRUCTURE: 'calibration/calibration_as_structure.md',
   CALIBRATION_DRIFT_DETECTION: 'calibration/drift_detection.md',
   CALIBRATION_NON_CATASTROPHIC_EXIT: 'calibration/non_catastrophic_exit.md',
   CALIBRATION_REGIME_AWARE: 'calibration/regime_aware_calibration.md',
-
   // Discussion
   DISCUSSION_DEPLOYMENT_CONSIDERATIONS: 'discussion/deployment_considerations.md',
   DISCUSSION_FUTURE_EXTENSIONS: 'discussion/future_extensions.md',
   DISCUSSION_IMPLICATIONS_FOR_MANUFACTURING: 'discussion/implications_for_manufacturing.md',
-
   // Figures
   FIGURE_BOUNDARY_AND_EXIT_SEMANTICS: 'figures/boundary_and_exit_semantics.svg',
   FIGURE_MSRM_STRUCTURAL_OVERVIEW: 'figures/msrm_structural_overview.svg',
   FIGURE_REGIME_CALIBRATION_FLOW: 'figures/regime_calibration_flow.svg',
-
   // Manufacturing Context
   CONTEXT_EXTREME_REGIME_CONSTRAINTS: 'manufacturing_context/extreme_regime_constraints.md',
   CONTEXT_LITHOGRAPHY_SYSTEMS: 'manufacturing_context/lithography_systems.md',
   CONTEXT_YIELD_AND_VARIABILITY: 'manufacturing_context/yield_and_variability.md',
-
   // Operators
   OPERATORS_INTER_REGIME_MEDIATION: 'operators/inter_regime_mediation.md',
   OPERATORS_MEDIATION_PATTERNS: 'operators/mediation_patterns.md',
   OPERATORS_ROLES: 'operators/operator_roles.md',
-
   // Overview
   OVERVIEW_ABSTRACT: 'overview/abstract.md',
   OVERVIEW_LIMITATIONS: 'overview/limitations.md',
   OVERVIEW_SCOPE_AND_ASSUMPTIONS: 'overview/scope_and_assumptions.md',
   OVERVIEW_TERMINOLOGY: 'overview/terminology.md',
-
   // Related Works
   RELATED_TO_BSM: 'related_works/relationship_to_bsm.md',
   RELATED_TO_QSM: 'related_works/relationship_to_qsm.md',
   RELATED_TO_RSM: 'related_works/relationship_to_rsm.md',
-
   // Substrate Layer
   SUBSTRATE_BOUNDARY_SEMANTICS: 'substrate/boundary_semantics.md',
   SUBSTRATE_OPERATING_ENVELOPES: 'substrate/operating_envelopes.md',
   SUBSTRATE_REGIME_DECLARATION: 'substrate/regime_declaration.md',
   SUBSTRATE_DEFINITION: 'substrate/substrate_definition.md',
 };
-
+ 
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -267,9 +307,3 @@ loadFromHash();
 
 </body>
 </html>
-
-
-
-
-
-
