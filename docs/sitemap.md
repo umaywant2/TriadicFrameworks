@@ -84,10 +84,15 @@ This is the **mind + society** substrate.
 
 This is where RTT becomes teachable.
 
-- [/education/](https://www.triadicframeworks.org/education/)  
-- [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)  
-- [/education/translations/](https://www.triadicframeworks.org/education/translations/)  
+- [/education/](https://www.triadicframeworks.org/education/)
+- [/education/alignment/](https://www.triadicframeworks.org/education/alignment/)
+- [/education/astrology/](https://www.triadicframeworks.org/education/astrology/)
+- [/education/awareness/](https://www.triadicframeworks.org/education/awareness/)
 - [/education/equations/](https://www.triadicframeworks.org/education/equations/)
+- [/education/polisci/](https://www.triadicframeworks.org/education/polisci/)
+- [/education/QnA_Atlas/](https://www.triadicframeworks.org/education/QnA_Atlas/)
+- [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)
+- [/education/translations/](https://www.triadicframeworks.org/education/translations/)  
 - [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
 - [/charts/](https://www.triadicframeworks.org/charts/)  
 - [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)  
@@ -121,6 +126,7 @@ This is the **developer substrate** — the programmable RTT layer.
 
 This is where RTT expresses its narrative and symbolic side.
 
+- [/papers/](https://www.triadicframeworks.org/papers/)
 - [/Paradoxes_canon/](https://www.triadicframeworks.org/Paradoxes_canon/)  
 - [/resonance/](https://www.triadicframeworks.org/resonance/)  
 - [/resonance_atlas/](https://www.triadicframeworks.org/resonance_atlas/)  
