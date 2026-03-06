@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>vST for Embedding Stores & Vector Databases</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>vST for Embedding Stores & Vector Databases | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,33 +161,50 @@ code {
 
 <body>
    
-<nav>
-<h2>vST for Embedding Stores & Vector Databases — Documentation Index</h2>
-
-<!-- ROOT -->
-<a href="#README">📘 README — Overview of vST applied to embedding stores and vector databases.</a>
-
-<!-- FOUNDATIONS -->
-<a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the embedding‑store substrate.</a>
-<a href="#EMBEDDING_CLUSTER_REGIMES">🧭 Embedding Cluster Regimes — Regimes of vector clustering behavior.</a>
-
-<!-- SCALING & BEHAVIOR -->
-<a href="#SCALING_BEHAVIOR_VECTOR_SPACES">📈 Scaling Behavior — Scaling properties of vector spaces.</a>
-
-<!-- PROJECTION & FRAGMENTATION -->
-<a href="#PROJECTION_AND_FRAGMENTATION_ANALYSIS">🧩 Projection & Fragmentation Analysis — Structural fragmentation in embedding spaces.</a>
-
-<!-- VALIDATION & DRIFT -->
-<a href="#VALIDATION_LAYERS_VST_EMBEDDINGS">✔️ Validation Layers (vST) — Validation across embedding regimes.</a>
-<a href="#DRIFT_DETECTION_EMBEDDINGS">📉 Drift Detection — Detecting embedding and retrieval drift.</a>
-
-<!-- EXAMPLES -->
-<a href="#EXAMPLE_CLUSTER_REGIME_TRANSITION">🧪 Cluster Regime Transition — Example of clustering regime change.</a>
-<a href="#EXAMPLE_EMBEDDING_DRIFT_DETECTION">🔍 Embedding Drift Detection — Practical drift detection example.</a>
-
-<!-- APPENDIX -->
-<a href="#APPENDIX_TERMINOLOGY">📚 Terminology — Controlled vocabulary.</a>
-<a href="#APPENDIX_REFERENCES">📖 References — Source material and citations.</a>
+<nav class="nav-band">
+  
+  <h2>🏗️ vST for Embedding Stores & Vector Databases — Documentation Index</h2>
+      <a href="#README">🔰 README — Overview of vST applied to embedding stores and vector databases.</a>
+    <h3>🧱 Foundations</h3>
+      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the embedding‑store substrate.</a>
+      <a href="#EMBEDDING_CLUSTER_REGIMES">🧭 Embedding Cluster Regimes — Regimes of vector clustering behavior.</a>
+    <h3>🌐 Scaling & Behavior</h3>
+      <a href="#SCALING_BEHAVIOR_VECTOR_SPACES">📈 Scaling Behavior — Scaling properties of vector spaces.</a>
+    <h3>🔆 Projection & Fragmentation</h3>
+      <a href="#PROJECTION_AND_FRAGMENTATION_ANALYSIS">🧩 Projection & Fragmentation Analysis — Structural fragmentation in embedding spaces.</a>
+    <h3>✅ Validation & Drift</h3>
+      <a href="#VALIDATION_LAYERS_VST_EMBEDDINGS">✔️ Validation Layers (vST) — Validation across embedding regimes.</a>
+      <a href="#DRIFT_DETECTION_EMBEDDINGS">📉 Drift Detection — Detecting embedding and retrieval drift.</a>
+    <h3>🛢️ Examples</h3>
+      <a href="#EXAMPLE_CLUSTER_REGIME_TRANSITION">🧪 Cluster Regime Transition — Example of clustering regime change.</a>
+      <a href="#EXAMPLE_EMBEDDING_DRIFT_DETECTION">🔍 Embedding Drift Detection — Practical drift detection example.</a>
+    <h3>🈴 Appendix</h3>
+      <a href="#APPENDIX_TERMINOLOGY">📚 Terminology — Controlled vocabulary.</a>
+      <a href="#APPENDIX_REFERENCES">📖 References — Source material and citations.</a>
+  <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">📚 Schemas | RTT</a>  
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+# RTT # TriadicFrameworks # ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+  
 </nav>
 
 <main id="content"></main>
@@ -163,30 +213,24 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Foundations
   SUBSTRATE_DEFINITION: 'substrate_definition.md',
   EMBEDDING_CLUSTER_REGIMES: 'embedding_cluster_regimes.md',
-
   // Scaling & Behavior
   SCALING_BEHAVIOR_VECTOR_SPACES: 'scaling_behavior_vector_spaces.md',
-
   // Projection & Fragmentation
   PROJECTION_AND_FRAGMENTATION_ANALYSIS: 'projection_and_fragmentation_analysis.md',
-
   // Validation & Drift
   VALIDATION_LAYERS_VST_EMBEDDINGS: 'validation_layers_vst_embeddings.md',
   DRIFT_DETECTION_EMBEDDINGS: 'drift_detection_embeddings.md',
-
   // Examples
   EXAMPLE_CLUSTER_REGIME_TRANSITION: 'examples/example_cluster_regime_transition.md',
   EXAMPLE_EMBEDDING_DRIFT_DETECTION: 'examples/example_embedding_drift_detection.md',
-
   // Appendix
   APPENDIX_TERMINOLOGY: 'appendix/terminology.md',
   APPENDIX_REFERENCES: 'appendix/references.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
