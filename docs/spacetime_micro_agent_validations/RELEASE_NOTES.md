@@ -70,6 +70,8 @@ It simply provides the tools and examples needed for researchers to explore stru
 Here is the recommended structure including the new example:
 
 ```
+📐
+
 README.md
 
 examples/
