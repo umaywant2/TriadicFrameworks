@@ -165,7 +165,10 @@ This is where RTT prototypes live.
 
 - [/projects/](https://www.triadicframeworks.org/projects/)  
 - [/projects/CoConsciousness/](https://www.triadicframeworks.org/projects/CoConsciousness/)  
-- [/projects/Hippocampus/](https://www.triadicframeworks.org/projects/Hippocampus/)  
+- [/projects/Hippocampus/](https://www.triadicframeworks.org/projects/Hippocampus/)
+- [/projects/Id_Shadow_Gen/](https://www.triadicframeworks.org/projects/Id_Shadow_Gen/)
+- [/projects/lens/](https://www.triadicframeworks.org/projects/lens/)
+- [/projects/poker-variants/](https://www.triadicframeworks.org/projects/poker-variants/)
 - [/projects/Resotectors/](https://www.triadicframeworks.org/projects/Resotectors/)  
 - [/projects/VictorG/](https://www.triadicframeworks.org/projects/VictorG/)  
 - [/labs/](https://www.triadicframeworks.org/labs/)  
