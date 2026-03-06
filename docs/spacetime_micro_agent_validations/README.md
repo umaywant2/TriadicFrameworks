@@ -25,6 +25,7 @@ Below is a high‑level diagram showing how the vST Micro‑Agent processes
 an unknown signal using a minimal structural query envelope.
 
 ```
+                                 📐
                 ┌───────────────────────────────┐
                 │   Unknown Input Stream        │
                 │  (example_signal_input.json)  │
