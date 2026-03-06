@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-  <!-- By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org -->
-  <title>vST for Robotics and Control Policies</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>vST for Robotics and Control Policies | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -128,33 +161,50 @@ code {
 
 <body>
    
-<nav>
-<h2>vST for Robotics and Control Policies — Documentation Index</h2>
-
-<!-- ROOT -->
-<a href="#README">📘 README — Overview of vST applied to robotics and control policies.</a>
-
-<!-- FOUNDATIONS -->
-<a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the control‑policy substrate.</a>
-<a href="#POLICY_LATENT_REGIMES">🧭 Policy Latent Regimes — Distinct regimes of policy behavior.</a>
-
-<!-- SCALING & BEHAVIOR -->
-<a href="#SCALING_BEHAVIOR_RL_POLICIES">📈 Scaling Behavior — Scaling properties of RL control policies.</a>
-
-<!-- PROJECTION & ALIGNMENT -->
-<a href="#PROJECTION_AND_POLICY_ALIGNMENT">🎯 Projection & Policy Alignment — Aligning policies across control spaces.</a>
-
-<!-- VALIDATION & DRIFT -->
-<a href="#VALIDATION_LAYERS_VST_RL">✔️ Validation Layers (vST) — Validation across policy regimes.</a>
-<a href="#DRIFT_DETECTION_RL">📉 Drift Detection — Detecting policy drift over time.</a>
-
-<!-- EXAMPLES -->
-<a href="#EXAMPLE_POLICY_REGIME_SHIFT">🧪 Policy Regime Shift — Example of policy regime transition.</a>
-<a href="#EXAMPLE_CONTROL_SURFACE_PROJECTION">🕹️ Control Surface Projection — Projecting policies onto control surfaces.</a>
-
-<!-- APPENDIX -->
-<a href="#APPENDIX_TERMINOLOGY">📚 Terminology — Controlled vocabulary.</a>
-<a href="#APPENDIX_REFERENCES">📖 References — Source material and citations.</a>
+<nav class="nav-band">
+  
+  <h2>🏗️ vST for Robotics and Control Policies</h2>
+      <a href="#README">🔰 README — Overview</a>
+    <h3>🧱 Foundations</h3>
+      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition</a>
+      <a href="#POLICY_LATENT_REGIMES">🧭 Policy Latent Regimes</a>
+    <h3>⚖️ Scaling & Behavior</h3>
+      <a href="#SCALING_BEHAVIOR_RL_POLICIES">📈 Scaling Behavior</a>
+    <h3>🔆 Projection & Alignment</h3>
+      <a href="#PROJECTION_AND_POLICY_ALIGNMENT">🎯 Projection & Policy Alignment</a>
+    <h3>✅ Validation & Drift</h3>
+      <a href="#VALIDATION_LAYERS_VST_RL">✔️ Validation Layers (vST)</a>
+      <a href="#DRIFT_DETECTION_RL">📉 Drift Detection</a>
+    <h3>🛢️ Examples</h3>
+      <a href="#EXAMPLE_POLICY_REGIME_SHIFT">🧪 Policy Regime Shift</a>
+      <a href="#EXAMPLE_CONTROL_SURFACE_PROJECTION">🕹️ Control Surface Projection</a>
+    <h3>🈴 Appendix</h3>
+      <a href="#APPENDIX_TERMINOLOGY">📚 Terminology</a>
+      <a href="#APPENDIX_REFERENCES">📖 References</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">📚 Schemas | RTT</a>  
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+# RTT # TriadicFrameworks # ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+  
 </nav>
 
 <main id="content"></main>
@@ -163,30 +213,24 @@ code {
 
 const DOC_MAP = {
   README: 'README.md',
-
   // Foundations
   SUBSTRATE_DEFINITION: 'substrate_definition.md',
   POLICY_LATENT_REGIMES: 'policy_latent_regimes.md',
-
   // Scaling & Behavior
   SCALING_BEHAVIOR_RL_POLICIES: 'scaling_behavior_rl_policies.md',
-
   // Projection & Alignment
   PROJECTION_AND_POLICY_ALIGNMENT: 'projection_and_policy_alignment.md',
-
   // Validation & Drift
   VALIDATION_LAYERS_VST_RL: 'validation_layers_vst_rl.md',
   DRIFT_DETECTION_RL: 'drift_detection_rl.md',
-
   // Examples
   EXAMPLE_POLICY_REGIME_SHIFT: 'examples/example_policy_regime_shift.md',
   EXAMPLE_CONTROL_SURFACE_PROJECTION: 'examples/example_control_surface_projection.md',
-
   // Appendix
   APPENDIX_TERMINOLOGY: 'appendix/terminology.md',
   APPENDIX_REFERENCES: 'appendix/references.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
