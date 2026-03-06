@@ -2,14 +2,19 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
-<link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
-<link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-   <title>Glyphs | TriadicFrameworks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+           <title>Glyphs | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
 
 <style>
 /* ============================================================
@@ -27,7 +32,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -122,52 +155,51 @@ code {
   color: var(--text-main);
 }
 </style>
-
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
    
-<nav>
-
-  <h3>🪟 Glyphs — Index</h3>
-    <a href="#BRIDGE_GLYPH_OVERLAY_01">🌉 Bridge Glyph Overlay — Bridge‑layer SVG descriptive seed</a>
-    <a href="#DIMENSIONAL_SPECTRUM_MAP">🌈 Dimensional Spectrum Map — Spectrum‑based SVG mapping</a>
-    <a href="#GLYPHSTREAM_ANIMATION">🎞️ Glyphstream Animation — Animated glyphstream behavior</a>
-    <a href="#GLYPH_PROTEIN_ECHO_01">🧬 Protein Echo 01 — Descriptive seed for echo protein</a>
-    <a href="#GLYPH_PROTEIN_ECHO_02">🧬 Protein Echo 02 — SVG descriptive seed for echo protein</a>
-    <a href="#TRIADIC_VALIDATOR_GLYPH">🛡️ Triadic Validator Glyph — Validator glyph specification</a>
-    <a href="#README">🔰 README — Overview of glyph artifacts</a>
-    <a href="https://www.triadicframeworks.org/education/">🧑‍🚀 RTT Learning Resources</a>
-    <a href="../">🔙</a>
-   <!-- RTT Canonical Signature -->
-   <span style="display:none;">
-   rtt=1 | coherence=declared | drift=bounded | paradox=structural
-   </span>
-   
+<nav class="nav-band">
+  
+  <h2>🪟 Glyphs | RTT</h2>
+      <a href="#README">🔰 README — Overview</a>
+      <a href="#BRIDGE_GLYPH_OVERLAY_01">🌉 Bridge Glyph Overlay</a>
+      <a href="#DIMENSIONAL_SPECTRUM_MAP">🌈 Dimensional Spectrum Map</a>
+      <a href="#GLYPHSTREAM_ANIMATION">🎞️ Glyphstream Animation</a>
+      <a href="#GLYPH_PROTEIN_ECHO_01">🧬 Protein Echo 01</a>
+      <a href="#GLYPH_PROTEIN_ECHO_02">🧬 Protein Echo 02</a>
+      <a href="#TRIADIC_VALIDATOR_GLYPH">🛡️ Triadic Validator Glyph</a>
+  <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">📚 Schemas | RTT</a>  
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+# RTT # TriadicFrameworks # ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+  
 </nav>
 
 <main id="content"></main>
 
 <script>
-
-function loadDoc(file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${file}`);
-      }
-      return response.text();
-    })
-    .then(text => {
-      document.getElementById('content').innerHTML = marked.parse(text);
-    })
-    .catch(err => {
-      document.getElementById('content').innerHTML =
-        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
-      console.error(err);
-    });
-}
 
 const DOC_MAP = {
   BRIDGE_GLYPH_OVERLAY_01: 'bridge_glyph_overlay_01_svg_descriptive_seed.md',
@@ -178,7 +210,7 @@ const DOC_MAP = {
   README: 'README.md',
   TRIADIC_VALIDATOR_GLYPH: 'triadic_validator_glyph.md',
 };
-
+  
 function loadFromHash() {
   const key = window.location.hash.replace('#', '');
   if (DOC_MAP[key]) {
@@ -187,7 +219,29 @@ function loadFromHash() {
     loadDoc('README.md');
   }
 }
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
 
