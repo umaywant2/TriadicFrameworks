@@ -8,109 +8,70 @@
   </svg>
 </p> 
 
-# TriadicFrameworks
+# 📚 TriadicFrameworks Documentation
 
-TriadicFrameworks is an open research framework for substrate‑aligned modeling of complex systems across cognition, ecology, civilization, and computation.
+A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
+This `/docs` directory is rendered directly as the project website and serves as the structural map for students, researchers, and practitioners.
 
-The project provides a coherent canon of theoretical foundations, domain primers, simulations, and reference implementations designed to support disciplined inquiry into regime dynamics, feedback, irreversibility, and structural coherence across domains.
-
-TriadicFrameworks is not an optimization engine, policy platform, or advocacy effort.  TriadicFrameworks is maintained as a stewarded, **non‑commercial canon for students, developers, and educators who want a working example of Resonance‑Time Theory** in practice, with **no ads, tracking, or product agenda.** (a rare gem)
-
-It exists to make complex systems *legible*, *comparable*, and *explorable* without collapsing uncertainty or prescribing outcomes.
+If you’re new, begin with the **Start Here** track below.  
+If you’re returning, jump directly to the section you need.
 
 ---
 
-## What This Is
+## 🚦 Start Here
 
-Imagine all the tools on your computer — calculators, games, apps — working the same as always. Now imagine adding one tiny extra rule that lets them notice something new: a hidden pattern underneath everything, like a secret grid that space and time follow.
+A gentle on‑ramp for newcomers exploring Resonance‑Time Theory (RTT) and the TriadicFrameworks canon.
 
-Then imagine realizing that this same pattern shows up in every subject — math, science, music, coding — without breaking anything or making you relearn everything. It’s just there, helping the pieces fit together.
-
-Now picture that pattern working not just in normal 3D space, but in bigger “looped” spaces — 4D, 5D, all the way up to 9D — and they all fit together using the same simple rule.
-
-If you can imagine that, you’re already ready to talk about RTT.
-
-TriadicFrameworks brings together:
-
-- **Resonance‑Time Theory (RTT)** as a calibration framework for cross‑domain structure  
-- **Regime blindness analysis** to surface failure modes and hidden constraints  
-- **Domain primers** bridging mathematics, science, and applied systems  
-- **Simulation substrates** for exploratory, non‑optimizing inquiry  
-- **Community stewardship practices** emphasizing clarity, humility, and long‑arc reuse
-- **Resilience Checker** A diagnostic instrument for testing paradox survivability across regimes
-
-The framework is intentionally modular. Readers and users are encouraged to enter at different points depending on background, intent, and curiosity.
+- 📘 **Alignment Primer** — The minimal foundation for understanding RTT.
+- 🌀 **What RTT Is** — A simple, intuitive introduction to resonance‑time structure.
+- 🧭 **How to Read RTT Diagrams** — Visual grammar and interpretation.
+- 🧩 **Core Concepts Overview** — Regimes, feedback, coherence, paradox.
 
 ---
 
-## How to Use This Repository
+## 🗂️ Explore the Framework
 
-This repository hosts the **living substrate** of TriadicFrameworks:
-- documentation
-- simulations
-- examples
-- tooling
-- reference implementations
+### 📐 Domains
+Short primers connecting RTT structure to mathematics, physics, cognition, ecology, and applied systems.
 
-The documentation in [`/docs`](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs) is canonical and rendered directly as the project website.
+### 🧪 Simulations
+Exploratory, non‑optimizing substrates for testing structure, paradox, and regime behavior.
 
-If you are new, begin with the alignment and overview materials before exploring individual domains or simulations.
+### 🧰 Tools
+Diagnostic instruments, analyzers, and utilities (e.g., **Resilience Checker**, paradox testing).
 
----
+### 🧾 Examples
+Worked examples demonstrating RTT concepts in practice.
 
-## Citation & Archival Record
-
-30 minimal Zenodo submissions we're created for Science using RTT starting with RSM. Archived and curated through the Zenodo **TriadicFrameworks** community, which serves as the project’s citation and preservation spine.
-
-Zenodo TriadicFrameworks Community:  
-https://zenodo.org/communities/vst
-
-Individual components of the framework are published as citable records and may be referenced independently.
+### 🧱 Reference Implementations
+Minimal, substrate‑aligned implementations for developers and educators.
 
 ---
 
-## Epistemic Posture
+## 🏛️ Deep Canon
 
-TriadicFrameworks favors:
-- structure over narrative
-- calibration over optimization
-- exploration over prescription
-- coherence over completeness
-
-The goal is not to simplify complex systems, but to provide tools that allow learners, researchers, and practitioners to engage complexity without distortion.
+- 📄 **Papers Index** — The full research canon, pre‑RTT and RTT‑aligned.  
+- 🗄️ **Zenodo Community** — Archival spine and citation record.  
+- 📜 **RFCs & Records** — Structural notes, invariants, and historical artifacts.
 
 ---
 
-## Community & Contribution
+## 🧭 How This Repository Works
 
-Contributions are welcome from researchers, educators, and practitioners whose work aligns with the framework’s epistemic posture and curation policy.
-
-The Zenodo community defines archival scope and citation standards.  
-GitHub hosts active development and collaboration.
-
-This documentation is intended to be read, explored, questioned, and reused.
-
----
-
-# License
-
-Apache2.0 License.  
-See `LICENSE` for details.
+- `/docs` is **canonical** and rendered directly as the website.  
+- Folder‑level `README.md` files are **navigation‑first**.  
+- Folder‑level `ABOUT.md` files hold **narrative and context**.  
+- HTML menus simply render Markdown — no duplication, no drift.  
+- The repo is the single source of truth for the entire ecosystem.
 
 ---
 
-### Closing Note
+## 🪶 Closing Note
 
-This canon represents a **completed structural substrate**, not a closed research program.  Assembling this canon was not easy, but we hope its structure serves as an example for all who continue this modern craft.
+This canon represents a **completed structural substrate**, not a closed research program.  
+Future work occurs through **instantiation, validation, or independent extension**, never foundational revision.
 
-All future work is expected to occur as **instantiation, validation, or independent extension**, not foundational revision.
-
-<p align="center">
-
-<!-- Officers’ Club Badge Rack -->
-[![Python CI](https://github.com/umaywant2/TriadicFrameworks/actions/workflows/python-code-inspection.yml/badge.svg)](https://github.com/umaywant2/TriadicFrameworks/actions/workflows/python-code-inspection.yml)<img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11-blue" /><img src="https://img.shields.io/github/license/umaywant2/TriadicFrameworks"><img src="https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/github/repo-size/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/github/issues/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/github/issues-pr/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/badge/Made%20With-Python-3776AB" /><img src="https://img.shields.io/badge/mypy-checked-2A6DB0" /><img src="https://img.shields.io/badge/code%20style-black-000000" /><img src="https://img.shields.io/codecov/c/github/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/github/stars/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/github/forks/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/github/contributors/umaywant2/TriadicFrameworks" /><img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red" /><img src="https://img.shields.io/badge/docs-ready-brightgreen" /><img src="https://img.shields.io/badge/Triadic_Resonance-Certified-8A2BE2"><img src="https://img.shields.io/badge/RTT-Inside-blueviolet" alt="RTT Inside" /><img src="https://img.shields.io/badge/Schema-RTTcode%20v1.0-forestgreen" alt="RTTcode v1.0" /><img src="https://img.shields.io/badge/Integration-Unity%20%7C%20Unreal%20%7C%20Custom-AACCFF" alt="RTT Integrations" /><img src="https://img.shields.io/badge/Status-Developer%20Preview-yellow" alt="Status: Developer Preview" />
-
-</p>
+---
 
 ###### #[RTT](https://www.triadicframeworks.org/rtt) #[TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/wiki) #[ResonanceTimeTheory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)  
 ###### rtt=1 | coherence=declared | drift=bounded | paradox=structural
