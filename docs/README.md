@@ -14,7 +14,7 @@ TriadicFrameworks is an open research framework for substrate‑aligned modeling
 
 The project provides a coherent canon of theoretical foundations, domain primers, simulations, and reference implementations designed to support disciplined inquiry into regime dynamics, feedback, irreversibility, and structural coherence across domains.
 
-TriadicFrameworks is not an optimization engine, policy platform, or advocacy effort.  TriadicFrameworks is maintained as a stewarded, non‑commercial canon for students, developers, and educators who want a working example of Resonance‑Time Theory in practice, with no ads, tracking, or product agenda.
+TriadicFrameworks is not an optimization engine, policy platform, or advocacy effort.  TriadicFrameworks is maintained as a stewarded, **non‑commercial canon for students, developers, and educators who want a working example of Resonance‑Time Theory** in practice, with **no ads, tracking, or product agenda.** (a rare gem)
 
 It exists to make complex systems *legible*, *comparable*, and *explorable* without collapsing uncertainty or prescribing outcomes.
 
