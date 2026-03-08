@@ -1,3 +1,5 @@
+```yaml
+
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://example.org/structural-awareness.schema.json",
@@ -35,3 +37,4 @@
   },
   "additionalProperties": true
 }
+```
