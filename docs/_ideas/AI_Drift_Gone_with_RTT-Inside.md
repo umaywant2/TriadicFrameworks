@@ -1,10 +1,6 @@
 # 🤷 **AI Drift Gone with RTT-Inside**
 ###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
-Absolutely—here’s a **drop‑in `<svg>` header** (dark theme) you can paste directly into the RTT page (or a repo README). It renders a **vST core torus**, an **RTT framing arc**, subtle **triadic markers**, and a **physics canon baseline**—all as clean vector shapes.
-
----
-
 ### **A Research‑Style Manifesto on Chimera, Drift, and Structural Correction**
 
 ---
