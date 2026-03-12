@@ -1,5 +1,3 @@
-###### This page is a cross‑domain example for students. It is not a physics claim and not a cosmological model.
-
 <img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
 
 # 🦄 Resonance‑Time Theory
