@@ -336,3 +336,36 @@ TriadicFrameworks/
       ├── _ideas/
       └── _template/
 ```
+
+---
+
+<a href="https://doi.org/10.5281/zenodo.18510618"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18510618.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18263827"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263827.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18264063"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18264063.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18263036"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263036.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18265225"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18265225.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18265872"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18265872.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18266407"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18266407.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18271014"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18271014.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18272448"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18272448.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18281561"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18281561.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18286463"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18286463.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18316763"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18316763.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18320863"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18320863.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18321015"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18321015.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18322485"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18322485.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18322815"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18322815.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18323052"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323052.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18323277"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323277.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18323445"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323445.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18323571"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323571.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18323685"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18323685.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18330076"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18330076.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18331997"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18331997.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18653049"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18653049.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18519110"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18519110.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18415055"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18415055.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18415488"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18415488.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18440491"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18440491.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18452819"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18452819.svg" alt="DOI"></a>
+<a href="https://doi.org/10.5281/zenodo.18462694"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18462694.svg" alt="DOI"></a>
