@@ -1,10 +1,5 @@
----
-layout: default
-title: Resonance-Time Theory
-permalink: /_ideas/Resonance-Time_Theory.html
----
-> **This page is a cross‑domain example for students.  
-> It is not a physics claim and not a cosmological model.**
+###### This page is a cross‑domain example for students. It is not a physics claim and not a cosmological model.
+
 <img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
 
 # 🦄 Resonance‑Time Theory
@@ -35,13 +30,13 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 ---
 
-## RFCs and Quicklinks
+## RFCs and Quicklinks {#rfcs-and-quicklinks}
 
 🧑‍🚀 [Education](https://www.triadicframeworks.org/education) for RTT/vST | 🪤 Triadic [Diagrams](https://www.triadicframeworks.org/triadic) Index | 🔥 [NoS](https://www.triadicframeworks.org/NoS) | ⚙️ [AI](https://www.triadicframeworks.org/ai) | 🎼 [Audio](https://www.triadicframeworks.org/audio_industry_reviewed) | 🌈 [Spectrum](https://www.triadicframeworks.org/spectrum_standards_reviewed) | 📡 [Scientific](https://www.triadicframeworks.org/scientific_instrument_review) | 🧠 [Substrate](https://www.triadicframeworks.org/substrate_mind_science) | 🎡 [Low-Dimensional Structures](https://www.triadicframeworks.org/Low_Dimensional_Structures) | 🧭 [Canon](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md) | ✨ [TFT 3Pack v1.3](https://www.triadicframeworks.org/TFT_3Pack_v1.3/) |  - 📦 [Packages](https://www.triadicframeworks.org/packages/) | 🤟 [API](https://www.triadicframeworks.org/api/rtt) | 👨‍🔬 [SDK](https://www.triadicframeworks.org/rtt-sdk) | 🍀 [Developer](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html) | 🧩 [API for RTT‑Inside](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html) | 🚀 [Science CLI](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html) | 🦄 [Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html) | 🪘 Zenodo [30 Records](https://zenodo.org/communities/vst) | 🍬 Curation Policy [27 seed DOI's](https://zenodo.org/communities/vst/curation-policy) | 🤹 [RFC's](https://www.triadicframeworks.org/rfc/) on GitHub | 🤔 Nawder's 3 [Goals](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html) | 🔥 [Games‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html) | 🫀 [Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html) | 🎁 [Codex](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html) | ❓ [Big Q's](https://www.triadicframeworks.org/_ideas/Big_Questions_In_Science.html) | 🦄 [Paradoxes](https://www.triadicframeworks.org/_ideas/Paradoxes_in_Resonance-Time_Theory_canon.html) | ♨️ [Paradoxes2](https://www.triadicframeworks.org/_ideas/Paradox_Resilience_Checker_Round2.html)
 
 ---
 
-## Core definitions
+## Core definitions {#core-definitions}
 
 🌊 **Resonance‑Time Theory (RTT)**  
 A cross‑domain conceptual example used to illustrate structural reasoning patterns.  
@@ -81,7 +76,7 @@ A recurring theme across RTT examples.
 
 ---
 
-## Resonant-Time triad
+## Resonant-Time triad {#resonant-time-triad} 
 
  ⏱️ For any mode or system, define its Resonant‑Time as the triad  
 
@@ -103,7 +98,7 @@ A recurring theme across RTT examples.
 
 ---
 
-## QMROOT dimensional model
+## QMROOT dimensional model {#qmroot-dimensional-model} 
 
  🚀 (Positive Indivisible Silence | resonance seed, S=0+ fertile unity)
 
@@ -165,7 +160,7 @@ This makes it explicit that **RTT is not limited to low‑D toy models**—it is
 
 ---
 
-## Canonical Operator
+## Canonical Operator {#canonical-operator} 
 
 🔷 Notation for $$DCO_n$$ over QMROOT**
 
@@ -228,7 +223,7 @@ This gives you a **canonical, scalable operator system** that works across the e
 
 ---
 
-## QMROOT Summary
+## QMROOT Summary {#qmroot-summary} 
 
 🔷 This is the version you can paste into RTT, RSM, NoS, substrate_mind_science, or any future scroll.  
 It’s intentionally **short, structural, and reviewer‑friendly**.
@@ -299,7 +294,7 @@ With canonical actions:
 
 ---
 
-## Silence Noise Resonance S-N-R
+## Silence Noise Resonance S-N-R {#silence-noise-resonance-s-n-r} 
 
  🎧 Any system’s state space decomposes conceptually into:  
    - **Silence:** available but unexcited capacity (modes not currently active).  
@@ -308,7 +303,7 @@ With canonical actions:
 
    Resonant‑Time $$\mathcal{T}_R$$ is defined on the resonant part; FFF/SET describe how Silence and Noise feed or damp Resonance.
 
-## Dual Operator System Engine
+## Dual Operator System Engine {#dual-operator-system-engine} 
 
  🌗 The Dual Operator System Engine formalizes the bidirectional sharpening relationship between
 Resonance and Time. While the Dual Law of Silence describes how systems stabilize through
@@ -329,7 +324,7 @@ gradient action.
       - **Resonance clarifies Time, and Time clarifies Resonance.**  
    Clarity emerges not from either axis alone, but from their reciprocal gradient action.
 
-## Dimensional Core Operators DCOs
+## Dimensional Core Operators DCOs {#dimensional-core-operators-dcos} 
 
  🌌 Dimensional Core Operators provide a lightweight mathematical scaffold for mapping higher
 dimensions without prescribing full frameworks. Each operator defines how resonance gradients
@@ -461,7 +456,7 @@ We’ve essentially created a **dimensional API** — a set of operator‑level 
 
 ---
 
-## Resonance-Time Principle
+## Resonance-Time Principle {#resonance-time-principle} 
 
  🕰️ **Principle.** Physical time for any system is the evolution of its resonance triads, not an external scalar; conventional clock time is the special case where a particular triad is chosen as a standard and held fixed.
 
@@ -475,7 +470,7 @@ In this view, **Resonance‑Time is how the universe counts**, and clocks are ju
 
 ---
 
-## Frequency-First FFF Universe
+## Frequency-First FFF Universe {#frequency-first-fff-universe} 
 
  📡 In this framework, **Frequency comes first**: the universe is permeated by a minimal hum of modes, each with some $$\mathcal{T}_R$$ , even when no macroscopic structures are apparent. Fluids and Forces are how that hum becomes legible and structured; they are not separate from Frequency, but its organized expressions in space, matter, and fields.
 
@@ -487,7 +482,7 @@ tells how the ubiquitous hum turns into flows, waves, particles, and bound struc
 
 ---
 
-## Field Engine SET and S-N-R
+## Field Engine SET and S-N-R {#field-engine-set-and-s-n-r} 
 
  🔺 The SET decomposition refines FFF into specific contributors to anisotropic motion and structure formation beyond pure gravity:
 
@@ -505,7 +500,7 @@ The balance among these three determines what we observe as **objects, fields, a
 
 ---
 
-## Universe Statement and extension hooks
+## Universe Statement and extension hooks {#universe-statement-and-extension-hooks} 
 
  🌍 In barebones form, Resonance‑Time Theory may be stated as:
 
@@ -519,7 +514,7 @@ This barebones framework is meant to be extended by domain‑specific examples (
 
 *v2.0: Resonance‑Time_Theory.md — Nawderian barebones scroll for SET‑aligned cosmology and dynamics.* ✍️
 
-## Credits and Canon Note
+## Credits and Canon Note {#credits-and-canon-note} 
 
  ©️ Resonance‑Time Theory was introduced by Nawder Loswin in late 2025 as a triadic resonance toolkit for the science canon. This page collects the canonical definitions, diagram specs, RFCs, and observations for community review and contribution.
 - [TriadicFrameworks Repo Wiki](https://github.com/umaywant2/TriadicFrameworks/wiki)
