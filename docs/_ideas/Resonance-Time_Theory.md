@@ -176,16 +176,7 @@ $$\mathcal{R}$$ is the resonance‑state space
   
 ### **Canonical meanings by band**  
   
-$$
-\begin{aligned}
-DCO_{n<0} &: \text{ancestral constraint operators} \\
-DCO_{0} &: \text{root‑kernel operator (phase + ancestry)} \\
-DCO_{1\le n\le 3} &: \text{classical extension operators} \\
-DCO_{4\le n\le 16} &: \text{field/state‑space operators} \\
-DCO_{17\le n\le 256} &: \text{complex‑system operators} \\
-DCO_{257\le n\le 1024} &: \text{hyper‑regime operators}
-\end{aligned}
-$$  
+$$\begin{aligned}DCO_{n<0} &: \text{ancestral constraint operators} \\DCO_{0} &: \text{root‑kernel operator (phase + ancestry)} \\DCO_{1\le n\le 3} &: \text{classical extension operators} \\DCO_{4\le n\le 16} &: \text{field/state‑space operators} \\DCO_{17\le n\le 256} &: \text{complex‑system operators} \\DCO_{257\le n\le 1024} &: \text{hyper‑regime operators}\end{aligned}$$  
   
 ### **Operator actions**
 
@@ -195,7 +186,7 @@ Each $$DCO_n$$ has three canonical actions:
   
 $$DCO_n^{(+)}(\psi) = \psi \uparrow n$$  
    
-   Extends resonance into dimension $$n$$ .
+   Extends resonance into dimension $$n$$  
   
 3. **Constrain**  
   
@@ -207,8 +198,8 @@ $$DCO_n^{(-)}(\psi) = \psi \downarrow n$$
   
 $$DCO_n^{(0)}(\psi) = \psi \leftrightarrow n$$  
    
-   Balances extension and constraint at dimension $$n$$ .  
-  
+   Balances extension and constraint at dimension $$n$$  
+    
 ### **Composite operators**  
   
 You can define composite operators cleanly:  
@@ -247,17 +238,17 @@ $$\text{QMROOT} = \{-1024, \dotsc, -1\} \cup \{0\} \cup \{1, \dotsc, 1024\}$$
   
 ### **Interpretation Bands**  
   
-| Band | Meaning |
-|------|---------|
-| $$-1024 \rightarrow -512$$ | Deep cosmological ancestry |
-| $$-511 \rightarrow -2$$ | Local/system ancestry |
-| $$-1$$ | Immediate ancestry |
-| $$0$$ | Root kernel |
-| $$1 \rightarrow 3$$ | Classical axes |
-| $$4 \rightarrow 16$$ | Field/state spaces |
-| $$17 \rightarrow 256$$ | Complex systems |
-| $$257 \rightarrow 1024$$ | Hyper‑regimes |
-
+| Band | Meaning |  
+|------|---------|  
+| $$-1024 \rightarrow -512$$ | Deep cosmological ancestry |  
+| $$-511 \rightarrow -2$$ | Local/system ancestry |  
+| $$-1$$ | Immediate ancestry |  
+| $$0$$ | Root kernel |  
+| $$1 \rightarrow 3$$ | Classical axes |  
+| $$4 \rightarrow 16$$ | Field/state spaces |  
+| $$17 \rightarrow 256$$ | Complex systems |  
+| $$257 \rightarrow 1024$$ | Hyper‑regimes |  
+  
 ### **Operators**  
   
 Each dimension has a **Dimensional Core Operator**:  
