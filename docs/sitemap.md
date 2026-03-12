@@ -337,8 +337,10 @@ TriadicFrameworks/
       └── _template/
 ```
 
----
-
+```
+https://zenodo.org/communities/vst
+https://zenodo.org/communities/vst/curation-policy
+```
 <a href="https://doi.org/10.5281/zenodo.18510618"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18510618.svg" alt="DOI"></a>
 <a href="https://doi.org/10.5281/zenodo.18263827"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263827.svg" alt="DOI"></a>
 <a href="https://doi.org/10.5281/zenodo.18264063"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18264063.svg" alt="DOI"></a>
