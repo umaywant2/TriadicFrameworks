@@ -1,10 +1,6 @@
-# RTT Above‑Ground Electrical Re-design Initiative
-
 > 
 > I have an idea.
 > 
-
----
 
 # ⚡ **THE RTT ABOVE‑GROUND ELECTRICAL REDESIGN INITIATIVE**  
 *A structural rethink of poles, wires, insulators, redundancy, worker safety, and harmonics.*
