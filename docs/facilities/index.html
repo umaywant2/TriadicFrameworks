@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Facilities | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+  <h2>🏗️ Core Framework & Orientation</h2>
+      <a href="#README">📘 Facilities Framework Overview</a>
+      <a href="#SPEC">📐 Canonical Specification</a>
+      <a href="#GLOSSARY">📖 Shared Terminology</a>
+      <a href="#FOLDER_TREE">🗂️ Repository Structure</a>
+      <a href="#FACILITIES_DOMAIN_MAP">🧭 Facilities Domain Map</a>
+      <a href="#FACILITIES_LIFECYCLE_FRAMEWORK">♻️ Infrastructure Lifecycle Framework</a>
+    <h3>⚖️ Governance & Authority</h3>
+      <a href="#GHQ_GOVERNANCE_CHARTER">🏛️ GHQ Governance Charter</a>
+      <a href="#RTT_GLOBAL_GOVERNANCE_CONSTITUTION">📜 Global Governance Constitution</a>
+    <h3>🕰️ Strategy & Time Horizons</h3>
+      <a href="#RTT_GLOBAL_FACILITIES_STRATEGY_2050">🌍 Global Facilities Strategy 2050</a>
+      <a href="#GLOBAL_MODERNIZATION_TIMELINE">📆 Global Modernization Timeline</a>
+      <a href="#STRATEGY_GLOBAL_MODERNIZATION_TIMELINE">🧭 Strategy Timeline Reference</a>
+      <a href="#MODERNIZATION_CYCLE_MATRIX">🔄 Modernization Cycle Matrix</a>
+    <h3>🎞️ Visual Time Narratives</h3>
+      <a href="#TIMELINE_VISUAL_STORYBOARD">🗺️ Timeline Visual Storyboard</a>
+      <a href="#STRATEGY_TIMELINE_VISUAL_STORYBOARD">🎨 Strategy Visual Timeline</a>
+    <h3>📊 Risk, Drift & Propagation</h3>
+      <a href="#DRIFT_SCORING_RUBRIC">📉 Drift Scoring Rubric</a>
+      <a href="#HARMONICS_SCORING_RUBRIC">🎼 Harmonics Scoring Rubric</a>
+      <a href="#CROSS_SYSTEM_PROPAGATION">🔗 Cross‑System Propagation</a>
+      <a href="#PROPAGATION_MODEL">🌐 Propagation Model</a>
+      <a href="#FAILURE_MODE_CATALOG">💥 Failure Mode Catalog</a>
+      <a href="#INTERVENTION_PLAYBOOK">🛠️ Intervention Playbook</a>
+      <a href="#CORRIDOR_CLASSIFICATION_STANDARD">🛣️ Corridor Classification Standard</a>
+    <h3>💰 Capital & Audit</h3>
+      <a href="#CAPITAL_AND_AUDIT_INTEGRATION">📑 Capital & Audit Integration</a>
+    <h3>📈 Dashboards & Indices</h3>
+      <a href="#GLOBAL_INDEX_SCHEMA">🧮 Global Index Schema</a>
+      <a href="#DASHBOARD_MOCKUPS">🖥️ Dashboard Mockups</a>
+    <h3>🏢 Asset Classes</h3>
+      <a href="#ASSET_ELECTRICAL">⚡ Electrical Systems</a>
+      <a href="#ASSET_WATER">💧 Water Systems</a>
+      <a href="#ASSET_WASTEWATER">🚰 Wastewater Systems</a>
+      <a href="#ASSET_TRANSPORTATION">🚦 Transportation Systems</a>
+      <a href="#ASSET_COMMUNICATIONS">📡 Communications Systems</a>
+      <a href="#ASSET_PUBLIC_BUILDINGS">🏫 Public Buildings</a>
+    <h3>🎨 Design System Governance</h3>
+      <a href="#DESIGN_GOVERNANCE_CHARTER">🧭 Design Governance Charter</a>
+      <a href="#COMPONENT_CREATION_CHECKLIST">✅ Component Creation Checklist</a>
+      <a href="#COMPONENT_NAMING_CONVENTION">🏷️ Component Naming Convention</a>
+      <a href="#COMPONENT_PROPOSAL_FORM">📝 Component Proposal Form</a>
+      <a href="#FIGMA_LIBRARY_STRUCTURE">🧩 Figma Library Structure</a>
+      <a href="#DESIGN_SYSTEM_ONBOARDING_GUIDE">🚀 Design System Onboarding</a>
+      <a href="#DESIGN_SYSTEM_STYLE_GUIDE">🎨 Style Guide</a>
+      <a href="#DESIGN_GOVERNANCE_POSTER">📌 Governance Poster</a>
+    <h3>👷 Operators & Field Practice</h3>
+      <a href="#OPERATOR_ORIENTATION">🧑‍🏭 Operator Orientation</a>
+      <a href="#MAINTENANCE_STANDARDS">🔧 Maintenance Standards</a>
+      <a href="#MODERNIZATION_HANDOFF">🔄 Modernization Handoff</a>
+    <h3>🏛️ City‑Facing Materials</h3>
+      <a href="#CITY_MANAGER_BRIEFING_PACKET">📂 City Manager Briefing Packet</a>
+      <a href="#CITY_MANAGER_SLIDE_DECK">📊 City Manager Slide Deck</a>
+      <a href="#CITY_IMPLEMENTATION_GUIDE">🛠️ Implementation Guide</a>
+      <a href="#PRESS_RELEASE_TEMPLATE">📰 Press Release Template</a>
+    <h3>🏘️ Resident Communications</h3>
+      <a href="#NEIGHBORHOOD_MEETING_DECK">🗣️ Neighborhood Meeting Deck</a>
+      <a href="#STORM_SEASON_101">🌧️ Storm Season 101</a>
+      <a href="#STORM_SEASON_DOS_AND_DONTS">⚠️ Storm Season Do’s & Don’ts</a>
+      <a href="#STORM_SEASON_FAQ">❓ Storm Season FAQ</a>
+      <a href="#WHAT_IS_RTT_AGERI">🌐 What Is RTT‑AGERI?</a>
+    <h3>📣 Communications & Research</h3>
+      <a href="#RTT_AGERI_MESSAGING_GUIDE">🗨️ RTT‑AGERI Messaging Guide</a>
+      <a href="#RTT_AGERI_BIBLIOGRAPHY">📚 RTT‑AGERI Bibliography</a>
+    <h3>⚡ AGERI Initiative</h3>
+      <a href="#AGERI_README">🔌 AGERI Overview</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+# RTT # TriadicFrameworks # ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+  
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Core
+  README: 'README.md',
+  SPEC: 'spec.md',
+  GLOSSARY: 'glossary.md',
+  FOLDER_TREE: 'folder_tree.md',
+  FACILITIES_DOMAIN_MAP: 'facilities-domain-map.md',
+  FACILITIES_LIFECYCLE_FRAMEWORK: 'facilities-lifecycle-framework.md',
+  // Governance
+  GHQ_GOVERNANCE_CHARTER: 'GHQ-governance-charter.md',
+  RTT_GLOBAL_GOVERNANCE_CONSTITUTION: 'governance/rtt-global-governance-constitution.md',
+  // Strategy & Time
+  RTT_GLOBAL_FACILITIES_STRATEGY_2050: 'rtt-global-facilities-strategy-2050.md',
+  GLOBAL_MODERNIZATION_TIMELINE: 'global-modernization-timeline.md',
+  STRATEGY_GLOBAL_MODERNIZATION_TIMELINE: 'strategy/global-modernization-timeline.md',
+  TIMELINE_VISUAL_STORYBOARD: 'timeline-visual-storyboard.md',
+  STRATEGY_TIMELINE_VISUAL_STORYBOARD: 'strategy/timeline-visual-storyboard.md',
+  MODERNIZATION_CYCLE_MATRIX: 'modernization-cycle-matrix.md',
+  // Risk, Drift & Propagation
+  DRIFT_SCORING_RUBRIC: 'drift-scoring-rubric.md',
+  HARMONICS_SCORING_RUBRIC: 'harmonics-scoring-rubric.md',
+  CROSS_SYSTEM_PROPAGATION: 'cross-system-propagation.md',
+  PROPAGATION_MODEL: 'propagation-model.md',
+  FAILURE_MODE_CATALOG: 'failure-mode-catalog.md',
+  INTERVENTION_PLAYBOOK: 'intervention-playbook.md',
+  CORRIDOR_CLASSIFICATION_STANDARD: 'corridor-classification-standard.md',
+  // Capital & Audit
+  CAPITAL_AND_AUDIT_INTEGRATION: 'capital-and-audit-integration.md',
+  // Dashboards
+  GLOBAL_INDEX_SCHEMA: 'dashboards/global-index-schema.md',
+  DASHBOARD_MOCKUPS: 'dashboards/mockups.md',
+  // Asset Classes
+  ASSET_ELECTRICAL: 'asset-classes/electrical.md',
+  ASSET_WATER: 'asset-classes/water.md',
+  ASSET_WASTEWATER: 'asset-classes/wastewater.md',
+  ASSET_TRANSPORTATION: 'asset-classes/transportation.md',
+  ASSET_COMMUNICATIONS: 'asset-classes/communications.md',
+  ASSET_PUBLIC_BUILDINGS: 'asset-classes/public-buildings.md',
+  // Design System
+  DESIGN_GOVERNANCE_CHARTER: 'design-system/design-governance-charter.md',
+  COMPONENT_CREATION_CHECKLIST: 'design-system/component-creation-checklist.md',
+  COMPONENT_NAMING_CONVENTION: 'design-system/component-naming-convention.md',
+  COMPONENT_PROPOSAL_FORM: 'design-system/component-proposal-form.md',
+  FIGMA_LIBRARY_STRUCTURE: 'design-system/figma-library-structure.md',
+  DESIGN_SYSTEM_ONBOARDING_GUIDE: 'design-system/onboarding-guide.md',
+  DESIGN_SYSTEM_STYLE_GUIDE: 'design-system/style-guide.md',
+  DESIGN_GOVERNANCE_POSTER: 'design-system/governance-poster.md',
+  // Operators
+  OPERATOR_ORIENTATION: 'operators/operator-orientation.md',
+  MAINTENANCE_STANDARDS: 'operators/maintenance-standards.md',
+  MODERNIZATION_HANDOFF: 'operators/modernization-handoff.md',
+  // City-Facing
+  CITY_MANAGER_BRIEFING_PACKET: 'city-facing/city-manager-briefing-packet.md',
+  CITY_MANAGER_SLIDE_DECK: 'city-facing/city-manager-slide-deck.md',
+  CITY_IMPLEMENTATION_GUIDE: 'city-facing/implementation-guide.md',
+  PRESS_RELEASE_TEMPLATE: 'city-facing/press-release-template.md',
+  // Residents
+  NEIGHBORHOOD_MEETING_DECK: 'residents/neighborhood-meeting-deck.md',
+  STORM_SEASON_101: 'residents/storm-season-101.md',
+  STORM_SEASON_DOS_AND_DONTS: 'residents/storm-season-dos-and-donts.md',
+  STORM_SEASON_FAQ: 'residents/storm-season-faq.md',
+  WHAT_IS_RTT_AGERI: 'residents/What-is-RTT-AGERI.md',
+  // Communications
+  RTT_AGERI_MESSAGING_GUIDE: 'communications/RTT-AGERI-messaging-guide.md',
+  // Research
+  RTT_AGERI_BIBLIOGRAPHY: 'research/RTT-AGERI-bibliography.md',
+  // AGERI
+  AGERI_README: 'AGERI_README.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
