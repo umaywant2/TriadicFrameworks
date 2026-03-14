@@ -1,16 +1,57 @@
 # 🔰 Facilities Documentation  
 **RTT Facilities · City Systems · Modernization Frameworks**
 
-This folder contains all documentation, templates, and governance materials related to **RTT Facilities** — the physical, operational, and communication infrastructure that cities, residents, and GHQ rely on during modernization cycles.
+This folder contains all documentation, templates, and governance materials related to **RTT Facilities** — the physical, operational, and communication infrastructure that cities, residents, operators, and GHQ rely on during modernization cycles.
 
-Facilities documentation is organized into **four audiences**:
+The Facilities domain is grounded in the **RTT Facilities Playbook**, which defines facilities as **living systems** governed across asset classes, lifecycle phases, and audiences.
 
-- **City‑Facing** — city managers, public works, utilities, emergency operations  
-- **Residents** — public education, safety, storm‑season awareness  
-- **Design System** — component governance, naming, onboarding, visual standards  
-- **Strategy & Governance** — long‑horizon modernization, global alignment, GHQ charters  
+This README serves as the **navigation anchor** for all Facilities‑related work.
 
-Use this README as your **navigation anchor**.
+---
+
+# 🧭 Facilities Scope
+
+RTT Facilities covers:
+
+- Electrical infrastructure (above‑ground and underground)
+- Water and wastewater systems
+- Transportation corridors
+- Communications infrastructure
+- Public buildings and emergency systems
+
+Facilities work spans the full lifecycle:
+
+- Design  
+- Construction  
+- Operation  
+- Maintenance  
+- Modernization  
+- Decommissioning  
+
+Domain‑specific initiatives (such as RTT‑AGERI) live **within** this broader Facilities framework.
+
+---
+
+# ⚡ Active Facilities Domains
+
+### **RTT‑AGERI**
+**Above‑Ground Electrical Resilience Initiative**
+
+RTT‑AGERI is the first fully articulated Facilities domain, focused on modernizing **above‑ground electrical infrastructure** using:
+
+- Drift scoring  
+- Harmonics analysis  
+- Propagation modeling  
+- Corridor classification  
+- Capital‑timed modernization cycles  
+
+RTT‑AGERI documentation lives under:
+
+```
+/docs/facilities/RTT-AGERI/
+```
+
+Additional Facilities domains will follow this same structural pattern.
 
 ---
 
@@ -24,7 +65,7 @@ Guides and communication materials for city leadership and operational teams.
 - `city-facing/press-release-template.md`  
 
 **Purpose:**  
-Provide cities with clear, ready‑to‑use materials for modernization planning, public communication, and emergency coordination.
+Enable cities to plan, communicate, and coordinate facilities modernization and emergency response.
 
 ---
 
@@ -37,12 +78,12 @@ Public‑facing education and safety materials.
 - `residents/storm-season-faq.md`  
 
 **Purpose:**  
-Equip residents with accessible, non‑technical guidance during storm seasons and modernization work.
+Provide clear, non‑technical guidance for residents during storm seasons and modernization work.
 
 ---
 
 ## **3. Design System**
-Governance and standards for all visual, structural, and component‑level design work.
+Governance and standards for all facilities‑related components and visual assets.
 
 - `design-system/component-creation-checklist.md`  
 - `design-system/component-naming-convention.md`  
@@ -54,12 +95,12 @@ Governance and standards for all visual, structural, and component‑level desig
 - `design-system/style-guide.md`  
 
 **Purpose:**  
-Ensure consistency, clarity, and governance across all facilities‑related components and visual assets.
+Ensure consistency, clarity, and governance across all Facilities artifacts.
 
 ---
 
 ## **4. Strategy & Governance**
-Long‑horizon modernization planning and GHQ‑grade governance.
+Long‑horizon planning and GHQ‑grade governance.
 
 - `strategy/global-modernization-timeline.md`  
 - `strategy/rtt-global-facilities-strategy-2050.md`  
@@ -67,11 +108,11 @@ Long‑horizon modernization planning and GHQ‑grade governance.
 - `governance/rtt-global-governance-constitution.md`  
 
 **Purpose:**  
-Define global modernization cycles, strategic priorities, and governance structures that guide all facilities work.
+Define global modernization cycles, capital timing, and governance structures.
 
 ---
 
-# 🧭 Root‑Level Files
+# 🧱 Root‑Level Orientation Files
 
 - `index.md` — high‑level overview of the Facilities domain  
 - `global-modernization-timeline.md` — modernization cycles and capital timing  
@@ -84,7 +125,21 @@ These files provide **top‑level orientation** for contributors and partners.
 
 # 📌 Contribution Notes
 
-- Each subfolder is audience‑specific — keep materials scoped accordingly.  
-- Use the Design System folder for any new components, templates, or visual assets.  
-- Strategy and Governance documents should remain **canonical** and **stable**.  
-- City‑facing and resident‑facing materials should remain **clear**, **non‑technical**, and **actionable**.
+- Facilities documentation is **audience‑segmented** — keep materials scoped accordingly.  
+- Domain‑specific initiatives (e.g., RTT‑AGERI) should live in their own subfolders.  
+- Strategy and governance documents should remain **canonical and stable**.  
+- City‑ and resident‑facing materials should remain **clear, actionable, and non‑technical**.  
+
+---
+
+# 🧭 Looking Ahead
+
+The Facilities Playbook anticipates additional shared layers, including:
+
+- Asset‑class registries  
+- Lifecycle frameworks  
+- Cross‑system propagation modeling  
+- Operator and contractor interfaces  
+- Capital and audit integration  
+
+These will be scaffolded incrementally as Facilities domains mature.
