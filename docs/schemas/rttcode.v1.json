@@ -21,10 +21,7 @@
         "type": "object",
         "required": ["id", "state"],
         "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1
-          },
+          "id": { "type": "string", "minLength": 1 },
           "state": {
             "type": "object",
             "required": ["position", "velocity", "resonance"],
@@ -41,9 +38,7 @@
                 "minItems": 3,
                 "maxItems": 3
               },
-              "resonance": {
-                "type": "number"
-              }
+              "resonance": { "type": "number" }
             },
             "additionalProperties": true
           }
@@ -67,7 +62,6 @@
     },
     "metadata": {
       "type": "object",
-      "description": "Optional metadata for debugging, tracing, or experiment tagging.",
       "additionalProperties": true
     }
   },
