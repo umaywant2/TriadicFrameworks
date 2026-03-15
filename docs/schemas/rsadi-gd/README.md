@@ -1,4 +1,5 @@
-# 🎮 **RSADI‑GD JSON Schemas (Draft 2020‑12)**  
+# 🎮 Resonance Structural Awareness Dimensional Interface — Game Developer  
+JSON Schemas (Draft 2020‑12)  
 ### *Game Developer Variant of the Resonance Structural Awareness Dimensional Interface*
 
 Below are the canonical schemas for:
