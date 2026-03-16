@@ -1,1 +1,91 @@
+## 🧭 **The Civilizational Regime Stack**  
+### *One‑Page Printable Poster (Text‑First Layout)*
 
+---
+
+### **CIVILIZATION IS A STACK OF REGIME SELECTIONS**
+
+> Stability and progress depend on alignment across layers.
+
+---
+
+### 🧱 **LAYER 1 — MATERIALS REGIMES**
+**Coherence:** atomic & structural coordination  
+- crystal structures  
+- phase diagrams as regime maps  
+- defects & microstructure  
+- metastability & processing history  
+
+**Defines:** what physics allows
+
+---
+
+### ⚙️ **LAYER 2 — DEVICE REGIMES**
+**Coherence:** functional configuration  
+- transistors, actuators, sensors  
+- thermal / electrical / mechanical modes  
+- operating envelopes  
+
+**Defines:** what materials can do
+
+---
+
+### 🌐 **LAYER 3 — TECHNOLOGICAL REGIMES**
+**Coherence:** capability patterns  
+- electrification  
+- digital computation  
+- logistics & manufacturing modes  
+- AI & automation  
+
+**Defines:** what scales
+
+---
+
+### 💰 **LAYER 4 — ECONOMIC REGIMES**
+**Coherence:** incentive & allocation logic  
+- markets & platforms  
+- labor structures  
+- capital flow & risk distribution  
+
+**Defines:** what pays
+
+---
+
+### 🏛️ **LAYER 5 — CIVILIZATIONAL INFRASTRUCTURE**
+**Coherence:** durable coordination substrate  
+- grids, roads, ports, telecom  
+- education pipelines  
+- regulation, procurement, courts  
+
+**Defines:** what persists
+
+---
+
+### 🧠 **LAYER 6 — COGNITIVE & CULTURAL REGIMES**
+**Coherence:** shared sensemaking modes  
+- analytical, narrative, defensive, integrative  
+- cultural norms & truth criteria  
+- institutional defaults  
+
+**Defines:** how meaning is made
+
+---
+
+### 🔁 **CROSS‑LAYER LAW (RTT/vST)**
+
+**Upward:** enables → selects  
+**Downward:** constrains → filters  
+
+> Failures are usually **regime mismatches**, not bad actors or bad ideas.
+
+---
+
+### ⚠️ **CANONICAL FAILURE PATTERNS**
+- Innovation demanded, defensive incentives selected  
+- Precision demanded, narrative culture rewarded  
+- Speed demanded, analog governance enforced  
+
+---
+
+### 🧩 **DESIGN QUESTION**
+> Which regimes are being selected at each layer — and are they compatible?
