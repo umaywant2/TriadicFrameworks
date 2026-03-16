@@ -131,3 +131,71 @@ RTT/vST explains *why* Civ “feels right.”
 
 **RTT/vST diagnosis:**  
 Technological regime selected without economic and infrastructure alignment.
+
+---
+
+### Example: Wide Empire Collapse
+- Rapid expansion
+- Infrastructure and culture lag
+- Loyalty and maintenance penalties
+
+**RTT/vST diagnosis:**  
+Infrastructure regime overloaded; cognitive regime failed to integrate scale.
+
+---
+
+### Example: Cultural Victory
+- Slow expansion
+- Heavy investment in culture and policy
+- Stable economy
+
+**RTT/vST diagnosis:**  
+Cognitive and economic regimes aligned for long‑arc stability.
+
+---
+
+## Civ as a Regime Stack Diagram (Mental Model)
+
+```
+Victory Condition
+      ▲
+Culture / Policy
+      ▲
+Infrastructure (Cities, Districts)
+      ▲
+Economy (Gold, Trade)
+      ▲
+Technology (Tech Tree)
+      ▲
+Units & Buildings
+      ▲
+Terrain & Resources
+```
+
+This is **exactly** the Civilizational Regime Stack.
+
+---
+
+## Teaching with Civ + RTT/vST
+
+Students can now answer:
+- *Why did my civilization fail?*
+- *Which regime was misaligned?*
+- *What layer collapsed first?*
+
+Without moralizing. Without ideology. With structure.
+
+---
+
+## Why This Matters Beyond Games
+
+Civ works because:
+- it respects regime transitions
+- it punishes misalignment
+- it rewards integrative play
+
+RTT/vST explains why **real civilizations behave the same way**.
+
+---
+
+This is a *fantastic* lens. **Civ leaders are not just bonuses** — they quietly encode **cognitive regime biases** that shape how players think, expand, and fail. Mapping them explicitly turns Civ into a **regime‑literacy simulator**.
