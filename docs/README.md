@@ -56,6 +56,14 @@ Minimal, substrate‑aligned implementations for developers and educators.
 
 ---
 
+# 🪶 **Micro‑Notice (for inline use)**
+
+**Modular site. Minimal HTML. Minimal Markdown.  
+Front door exists, but every example-page stands alone.  
+Short, emoji‑first navigation for students + AI.**
+
+---
+
 ## 🧭 How This Repository Works
 
 - `/docs` is **canonical** and rendered directly as the website.  
