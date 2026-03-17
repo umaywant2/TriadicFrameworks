@@ -40,3 +40,105 @@ We didn’t inflate the idea.
 We *flattened it into the field* — which is exactly where dew lives.
 
 And yes… this is absolutely the kind of thinking we’d need for Mars, lunar habitats, or any environment where water arrives quietly, briefly, and only if we’re paying attention.
+
+---
+
+What’s fun now is that we’ve opened a whole **family** of ideas that live in the same “quiet, overlooked, regime‑aware” space as dew. When students land this pattern once, they start seeing it everywhere.
+
+Here are a few **siblings to Dew/Manna** that fit beautifully alongside this DEWMANA section.
+
+---
+
+## 🌬️ **Fog & Low‑Cloud Interception**
+Closely related, but distinct from dew.
+
+- Occurs when moist air moves horizontally across cooler surfaces  
+- Already harvested in places like coastal deserts  
+- Works as a **boundary interception**, not storage  
+- Scales by surface geometry, not energy input  
+
+**RTT note:** Fog is a *moving volume* regime; dew is a *moving boundary* regime. Students learn to tell the difference.
+
+---
+
+## 🌡️ **Night‑Sky Radiative Cooling**
+Another “felt but ignored” phenomenon.
+
+- Surfaces lose heat directly to the night sky  
+- Can drop below ambient air temperature  
+- Enables passive cooling and condensation  
+- Drives both dew and frost formation  
+
+**RTT note:** This is the *hidden driver* behind dew — a substrate‑level energy flow most people never notice.
+
+---
+
+## 🌱 **Soil Moisture Recharge via Condensation**
+Not harvested directly, but ecologically critical.
+
+- Dew and vapor condense into topsoil layers  
+- Supports plants during dry periods  
+- Stabilizes micro‑ecosystems  
+- Invisible unless you’re watching closely  
+
+**RTT note:** This is dew as an **ecosystem service**, not a human utility.
+
+---
+
+## 🌊 **Tidal & Estuarine Phase Windows**
+Water that appears and disappears on a schedule.
+
+- Predictable but intermittent  
+- Not “stored,” but intercepted  
+- Used historically for mills, irrigation, transport  
+
+**RTT note:** Another example of **phase‑locked planetary motion** creating usable windows.
+
+---
+
+## 🌬️ **Thermal Inversion Layers**
+Air that traps moisture and heat near the ground.
+
+- Common in valleys and basins  
+- Shapes dew, fog, and pollution behavior  
+- Can be mapped and anticipated  
+
+**RTT note:** Students learn that *vertical structure* matters as much as horizontal geography.
+
+---
+
+## 🌾 **Crop Canopy Micro‑Climates**
+Plants creating their own dew regimes.
+
+- Leaf geometry amplifies condensation  
+- Canopies slow heat loss and airflow  
+- Farmers have exploited this intuitively for centuries  
+
+**RTT note:** Nature already builds dew collectors — we’re just learning to notice.
+
+---
+
+## 🧠 The Pattern Students Should See
+
+All of these share the same core lesson:
+
+> **Important resources often arrive as brief, repeatable phase transitions — not as continuous supplies.**
+
+That’s the DEWMANA insight.
+
+- Not centralized  
+- Not loud  
+- Not energy‑hungry  
+- But reliable if respected  
+
+Once students see this, they stop asking “Why didn’t we notice?” and start asking “What else are we standing inside without realizing it?”
+
+---
+
+## 🪶 A Closing Line for DEWMANA
+
+**Dew is not unique — it’s a reminder. Many vital resources arrive quietly, briefly, and only if we’re paying attention to the regime.**
+
+That line ties dew, manna, fog, soil, tides, and even future off‑world habitats into one coherent mental model.
+
+We’ve given students a lens they’ll never unsee.
