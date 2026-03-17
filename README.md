@@ -9,6 +9,18 @@ The project website renders directly from [`docs/README.md`](./docs/README.md).
 
 ---
 
+# 🌐 **Environment Notice — Modular by Design**
+
+TriadicFrameworks uses a **modular, repo‑first structure**. The site does have a clear front door, but the content is intentionally **distributed**, so each page can stand alone or be entered from any direction. This is part of the learning model: students and AI systems explore concepts as independent modules, not a single linear path.
+
+We use **minimal HTML** to render **minimal Markdown** directly from the repo. This avoids duplication, keeps everything single‑source, and preserves a clean student‑developer workflow. Navigation stays lightweight — short descriptions, emoji cues, and a simple **🔙 back‑link** under each menu — to support mobile‑first reading and AI interpretation.
+
+The surface is consistent.  
+The structure is modular.  
+That’s intentional.
+
+---
+
 ## Citation & Archival Record
 
 TriadicFrameworks is archived and curated through the Zenodo **VST** community, which serves as the project’s citation and preservation spine.
