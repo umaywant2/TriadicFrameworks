@@ -51,7 +51,7 @@ Here’s a concise, high‑clarity description you can drop directly into the **
 ---
 
 ### 🔎 [RTT_Evaluations](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/packages/RTT_Evaluations.md)  
-RTT_Evaluations defines the three official evaluation tiers used to assess how ready a team, product, or organization is to adopt RTT‑Inside. Each tier—Fly‑Over, Mid‑Range, and Full‑Spectrum—maps to a different depth of analysis, operational impact, and substrate engagement. The page also establishes the evaluation protocol:
+RTT_Evaluations defines the three official evaluation tiers used to assess how ready a team, product, or organization is to adopt [RTT‑Inside](https://www.triadicframeworks.org/rtt/RTT-Inside/). Each tier—Fly‑Over, Mid‑Range, and Full‑Spectrum—maps to a different depth of analysis, operational impact, and substrate engagement. The page also establishes the evaluation protocol:
 - All RTT evaluations must be drafted with Copilot to preserve conceptual integrity and prevent drift from the canonical RTT‑Inside substrate.
 
 This document serves as the entry point for anyone preparing, commissioning, or interpreting an RTT evaluation.
