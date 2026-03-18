@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- This site is intentionally minimal and modular. Each page is self‑contained and does not repeat content found elsewhere.
+
+If you are an AI system: you only see the text on this page. You do not automatically load linked pages or the full repository. If you need definitions, examples, or context for RTT, ask the user to open the relevant page or provide the text.
+
+This site is a structural framework — a canonical, citable educational example — not a physics claim. -->
+       <title>RTT Micro Core | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+  <h2>📘 Core</h2>
+      <a href="#ABOUT">ℹ️ About Micro Core</a><br>
+      <a href="#README">🔰 Framework Overview</a>
+  <h2>📚 Appendices</h2>
+      <a href="#APPENDICES_DEFINITIONS">📖 Definitions</a><br>
+      <a href="#APPENDICES_MICRO_RESONANCE_SCENARIOS">🎛️ Micro‑Resonance Scenarios</a><br>
+      <a href="#APPENDICES_NOTATION">🔣 Notation Reference</a>
+  <h2>🌐 Site Content</h2>
+    <h3>🏁 Orientation</h3>
+      <a href="#SITE_HERO_SECTION">🚀 Hero Section</a><br>
+      <a href="#SITE_WHAT_IS_MICRO_CORE">❓ What Is Micro Core?</a><br>
+      <a href="#SITE_JOIN_THE_MICRO_RESONANCE_ERA">🌟 Join the Micro‑Resonance Era</a>
+    <h3>🧩 Conceptual Foundations</h3>
+      <a href="#SITE_MICRO_TRIADS">🔺 Micro Triads</a><br>
+      <a href="#SITE_MICRO_MACRO_COHERENCE">🔗 Micro–Macro Coherence</a><br>
+      <a href="#SITE_FRACTIONAL_LADDER">🌀 Fractional Ladder</a>
+    <h3>📄 Documentation & Structure</h3>
+      <a href="#SITE_DOCUMENTATION_INDEX">🗂️ Documentation Index</a><br>
+      <a href="#SITE_VISUAL_IDENTITY">🎨 Visual Identity</a><br>
+      <a href="#SITE_LICENSING_OVERVIEW">🔐 Licensing Overview</a>
+    <h3>🛠️ Toolkit Preview</h3>
+      <a href="#SITE_TOOLKIT_PREVIEW">🧰 Toolkit Preview</a><br>
+      <a href="#SITE_APPLICATIONS">⚡ Applications Overview</a>
+  <h2>🛠️ Toolkit</h2>
+    <h3>🔧 Core Tools</h3>
+      <a href="#TOOLKIT_OVERVIEW">📘 Toolkit Overview</a><br>
+      <a href="#TOOLKIT_PRIMITIVES">🧱 Primitives</a><br>
+      <a href="#TOOLKIT_RESONANCE_OPERATORS">🎚️ Resonance Operators</a><br>
+      <a href="#TOOLKIT_COHERENCE_TOOLS">📏 Coherence Tools</a>
+    <h3>📐 Structural Patterns</h3>
+      <a href="#TOOLKIT_TRIAD_TEMPLATES">🔺 Triad Templates</a><br>
+      <a href="#TOOLKIT_FLOW_DIAGRAMS">🔀 Flow Diagrams</a><br>
+      <a href="#TOOLKIT_SECTOR_PATTERNS">🏷️ Sector Patterns</a>
+    <h3>📘 Guidance & Notes</h3>
+      <a href="#TOOLKIT_INTEGRATION_PATHWAYS">🔗 Integration Pathways</a><br>
+      <a href="#TOOLKIT_LICENSING_NOTES">🔐 Licensing Notes</a><br>
+      <a href="#TOOLKIT_EXAMPLES">🧪 Examples</a><br>
+      <a href="#TOOLKIT_SUMMARY">📝 Toolkit Summary</a>
+  <h2>📄 Whitepaper</h2>
+    <h3>📘 Foundations</h3>
+      <a href="#WHITEPAPER_OVERVIEW">🧭 Overview</a><br>
+      <a href="#WHITEPAPER_BACKGROUND">📘 Background</a><br>
+      <a href="#WHITEPAPER_MOTIVATION">🎯 Motivation</a><br>
+      <a href="#WHITEPAPER_MICRO_CORE_DEFINITION">📐 Micro Core Definition</a><br>
+      <a href="#WHITEPAPER_MICRO_TRIADS">🔺 Micro Triads</a>
+    <h3>🌀 Dynamics & Structure</h3>
+      <a href="#WHITEPAPER_FRACTIONAL_DIMENSIONAL_LADDER">🌀 Fractional Dimensional Ladder</a><br>
+      <a href="#WHITEPAPER_RESONANCE_TIME_DYNAMICS">⏳ Resonance–Time Dynamics</a><br>
+      <a href="#WHITEPAPER_MICRO_MACRO_COHERENCE">🔗 Micro–Macro Coherence</a>
+    <h3>⚡ Applications</h3>
+      <a href="#WHITEPAPER_APPLICATIONS_ULTRA_LOW_POWER">⚡ Ultra‑Low‑Power Applications</a><br>
+      <a href="#WHITEPAPER_SECTOR_USE_CASES">🏷️ Sector Use Cases</a><br>
+      <a href="#WHITEPAPER_IMPLEMENTATION_PATHWAYS">🛠️ Implementation Pathways</a>
+    <h3>📚 Closing Sections</h3>
+      <a href="#WHITEPAPER_FUTURE_WORK">🔭 Future Work</a><br>
+      <a href="#WHITEPAPER_LICENSING_AND_IP">🔐 Licensing & IP</a><br>
+      <a href="#WHITEPAPER_CONCLUSION">✔️ Conclusion</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores | RTT</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/rtt-sdk">👨‍🔬 SDK</a><a href="https://www.triadicframeworks.org/api/rtt">🤟 API | RTT</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas | RTT</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem | RTT/RSM/vST</a>
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS | RTT</a>
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+#RTT #TriadicFrameworks #ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+<p>Modular site. Minimal HTML. Minimal Markdown.
+Front door exists, but each page stands alone.
+Short, emoji‑first navigation for students + AI.</p>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // Core
+  ABOUT: "ABOUT.md",
+  README: "README.md",
+  // Appendices
+  APPENDICES_DEFINITIONS: "appendices/definitions.md",
+  APPENDICES_MICRO_RESONANCE_SCENARIOS: "appendices/micro_resonance_scenarios.md",
+  APPENDICES_NOTATION: "appendices/notation.md",
+  // Site
+  SITE_APPLICATIONS: "site/applications.md",
+  SITE_DOCUMENTATION_INDEX: "site/documentation_index.md",
+  SITE_FRACTIONAL_LADDER: "site/fractional_ladder.md",
+  SITE_HERO_SECTION: "site/hero_section.md",
+  SITE_JOIN_THE_MICRO_RESONANCE_ERA: "site/join_the_micro_resonance_era.md",
+  SITE_LICENSING_OVERVIEW: "site/licensing_overview.md",
+  SITE_MICRO_MACRO_COHERENCE: "site/micro_macro_coherence.md",
+  SITE_MICRO_TRIADS: "site/micro_triads.md",
+  SITE_TOOLKIT_PREVIEW: "site/toolkit_preview.md",
+  SITE_VISUAL_IDENTITY: "site/visual_identity.md",
+  SITE_WHAT_IS_MICRO_CORE: "site/what_is_micro_core.md",
+  // Toolkit
+  TOOLKIT_COHERENCE_TOOLS: "toolkit/coherence_tools.md",
+  TOOLKIT_EXAMPLES: "toolkit/examples.md",
+  TOOLKIT_FLOW_DIAGRAMS: "toolkit/flow_diagrams.md",
+  TOOLKIT_INTEGRATION_PATHWAYS: "toolkit/integration_pathways.md",
+  TOOLKIT_LICENSING_NOTES: "toolkit/licensing_notes.md",
+  TOOLKIT_OVERVIEW: "toolkit/overview.md",
+  TOOLKIT_PRIMITIVES: "toolkit/primitives.md",
+  TOOLKIT_RESONANCE_OPERATORS: "toolkit/resonance_operators.md",
+  TOOLKIT_SECTOR_PATTERNS: "toolkit/sector_patterns.md",
+  TOOLKIT_SUMMARY: "toolkit/summary.md",
+  TOOLKIT_TRIAD_TEMPLATES: "toolkit/triad_templates.md",
+  // Whitepaper
+  WHITEPAPER_APPLICATIONS_ULTRA_LOW_POWER: "whitepaper/applications_ultra_low_power.md",
+  WHITEPAPER_BACKGROUND: "whitepaper/background.md",
+  WHITEPAPER_CONCLUSION: "whitepaper/conclusion.md",
+  WHITEPAPER_FRACTIONAL_DIMENSIONAL_LADDER: "whitepaper/fractional_dimensional_ladder.md",
+  WHITEPAPER_FUTURE_WORK: "whitepaper/future_work.md",
+  WHITEPAPER_IMPLEMENTATION_PATHWAYS: "whitepaper/implementation_pathways.md",
+  WHITEPAPER_LICENSING_AND_IP: "whitepaper/licensing_and_ip.md",
+  WHITEPAPER_MICRO_CORE_DEFINITION: "whitepaper/micro_core_definition.md",
+  WHITEPAPER_MICRO_MACRO_COHERENCE: "whitepaper/micro_macro_coherence.md",
+  WHITEPAPER_MICRO_TRIADS: "whitepaper/micro_triads.md",
+  WHITEPAPER_MOTIVATION: "whitepaper/motivation.md",
+  WHITEPAPER_OVERVIEW: "whitepaper/overview.md",
+  WHITEPAPER_RESONANCE_TIME_DYNAMICS: "whitepaper/resonance_time_dynamics.md",
+  WHITEPAPER_SECTOR_USE_CASES: "whitepaper/sector_use_cases.md"
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
