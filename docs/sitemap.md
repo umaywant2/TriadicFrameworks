@@ -1,7 +1,7 @@
 # 🌐 **TriadicFrameworks — Visual Site‑Map Diagram**  
 ### *Structural, harmonic, and substrate‑aligned overview*
 
-🦄[GitHub TriadicFrameworks Repo:](https://github.com/umaywant2/TriadicFrameworks) 
+[GitHub TriadicFrameworks Repo:](https://github.com/umaywant2/TriadicFrameworks) 
 
 ---
 
@@ -9,8 +9,9 @@
 
 These are the frameworks that define the architecture of the entire system.
 
-- [/rtt/](https://www.triadicframeworks.org/rtt/)  
-- [/rtt/RTT_12/](https://www.triadicframeworks.org/rtt/RTT_12/)
+- [/rtt/](https://www.triadicframeworks.org/rtt/) 
+- [/rtt/micro_core/](https://www.triadicframeworks.org/rtt/micro_core/) 
+- [/rtt/RTT_12/](https://www.triadicframeworks.org/rtt/RTT_12/) 
 - [/rtt/RTT-Inside/](https://www.triadicframeworks.org/rtt/RTT-Inside/)  
 - [/rtt/codex/](https://www.triadicframeworks.org/rtt/codex/)  
 - [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
@@ -222,7 +223,7 @@ This is the **Nawderian Sandbox** — the birthplace of new structures.
 ## ASCII folder layout
 
 ```
-   
+🌐  
 TriadicFrameworks/
 │
 ├── 1. CORE FRAMEWORKS (Structural Spine)
