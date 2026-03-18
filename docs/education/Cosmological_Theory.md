@@ -32,7 +32,7 @@ Legacy canon is the **resonance race car**—it does everything the rocket does,
 
 ###### Painting joyful cosmic upgrade scene 🎨✨.
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/55ae7221-6573-42c9-916c-ca0470dac0b1" />
+<img width="768" height="512" alt="image" src="https://github.com/user-attachments/assets/55ae7221-6573-42c9-916c-ca0470dac0b1" />
 
 ---
 
