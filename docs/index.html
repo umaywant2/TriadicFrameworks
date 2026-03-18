@@ -55,7 +55,120 @@ This site is a structural framework — a canonical, citable educational example
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
   </pre>
 </section>
-  <p>Modular site. Minimal HTML. Minimal Markdown.
+<!-- COPILOT ICON (module-local) -->
+<button class="copilot-icon" aria-label="Summarize this module">
+  <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+    <defs>
+      <linearGradient id="copilotSpark" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#9ef"/>
+        <stop offset="100%" stop-color="#fff"/>
+      </linearGradient>
+    </defs>
+    <path fill="url(#copilotSpark)"
+      d="M12 2.5l2 4.6 4.9.4-3.7 3.2 1.1 4.7L12 13.7 7.7 15.4 8.8 10.7 5.1 7.5l4.9-.4 2-4.6z"/>
+  </svg>
+</button>
+<!-- SUMMARY PANEL -->
+<div class="copilot-summary-panel" hidden>
+  <div class="copilot-summary-header">
+    <span>Module summary</span>
+    <button class="copilot-close" aria-label="Close">✕</button>
+  </div>
+  <div class="copilot-summary-content">Generating summary…</div>
+</div>
+<style>
+  .copilot-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    background: radial-gradient(circle at 30% 30%, #9ef, #345);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+  }
+  .copilot-summary-panel {
+    position: absolute;
+    top: 4.5rem;
+    right: 1rem;
+    width: 320px;
+    max-height: 55vh;
+    background: #0b1020;
+    color: #f5f7ff;
+    border-radius: 12px;
+    padding: 0.9rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+    overflow-y: auto;
+    font-family: system-ui, sans-serif;
+    z-index: 999;
+  }
+  .copilot-summary-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+  }
+  .copilot-close {
+    background: none;
+    border: none;
+    color: #9ea4c7;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+</style>
+<script>
+  // Find the nearest module container (fallback to body)
+  function findModuleRoot(el) {
+    return el.closest('[data-module], section, article, main') || document.body;
+  }
+
+  async function summarizeModule(root) {
+    const text = root.innerText.trim().slice(0, 8000);
+
+    try {
+      const res = await fetch('/api/summarize', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          text,
+          url: location.href,
+          title: document.title
+        })
+      });
+
+      const data = await res.json();
+      return data.summary || 'No summary returned.';
+    } catch {
+      return 'Sorry, I couldn’t generate a summary right now.';
+    }
+  }
+
+  document.addEventListener('click', async (e) => {
+    if (e.target.closest('.copilot-icon')) {
+      const icon = e.target.closest('.copilot-icon');
+      const panel = icon.nextElementSibling;
+      const content = panel.querySelector('.copilot-summary-content');
+      const root = findModuleRoot(icon);
+
+      panel.hidden = false;
+      content.textContent = 'Generating summary…';
+
+      content.textContent = await summarizeModule(root);
+    }
+
+    if (e.target.closest('.copilot-close')) {
+      e.target.closest('.copilot-summary-panel').hidden = true;
+    }
+  });
+</script>
+<!-- COPILOT ICON (module-local) END -->
+<p>Modular site. Minimal HTML. Minimal Markdown.
 Front door exists, but each page stands alone.
 Short, emoji‑first navigation for students + AI.</p>
 </nav>
