@@ -22,8 +22,8 @@ If you’re returning, jump directly to the section you need.
 
 A gentle on‑ramp for newcomers exploring Resonance‑Time Theory (RTT) and the TriadicFrameworks canon.
 
-- 📘 **Alignment Primer** — The minimal foundation for understanding RTT.
-- 🌀 **What RTT Is** — A simple, intuitive introduction to resonance‑time structure.
+- 📘 **[Alignment](https://www.triadicframeworks.org/education/alignment/) Primer** — The minimal foundation for understanding RTT.
+- 🌀 **[What RTT Is](https://www.triadicframeworks.org/education/#RTT_PRIMER)** — A simple, intuitive introduction to resonance‑time structure.
 - 🧭 **How to Read RTT Diagrams** — Visual grammar and interpretation.
 - 🧩 **Core Concepts Overview** — Regimes, feedback, coherence, paradox.
 
