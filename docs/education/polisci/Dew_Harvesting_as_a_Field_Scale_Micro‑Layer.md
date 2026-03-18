@@ -18,7 +18,7 @@ The goal is not to force condensation, but to **amplify surface opportunity** du
 
 ### Placement in the Water Stack
 
-Dew harvesting at field scale does not replace water infrastructure. Dew yields are modest by nature. Its value lies elsewhere:
+[Dew harvesting](https://youtu.be/rLL54cppuCc?si=70zVC9NQCvJkEfQx) at field scale does not replace water infrastructure. Dew yields are modest by nature. Its value lies elsewhere:
 
 - as a **distributed resilience layer**
 - as a **buffer during drought or disruption**
