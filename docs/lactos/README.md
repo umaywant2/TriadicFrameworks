@@ -1,4 +1,4 @@
-# 🧪 LACTOS — *Localized Anisotropic Collision & Triadic Ontology System*  
+# 🧪 *Localized Anisotropic Collision & Triadic Ontology System*  
 ### Collision Regimes • Cross‑Ontology Mapping • VCG Integration • Triadic Alignment
 
 The **LACTOS** folder contains the core artifacts that define how collisions, anisotropic interactions, and triadic ontologies interoperate across the TriadicFrameworks canon.  
