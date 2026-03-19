@@ -3,19 +3,18 @@ name: RTTcode Validation
 on:
   push:
     paths:
-      - "docs/**.json"
-      - "docs/schemas/**.json"
+      - "docs/**/*.json"
       - ".github/workflows/rttcode-validate.yml"
   pull_request:
     paths:
-      - "docs/**.json"
-      - "docs/schemas/**.json"
+      - "docs/**/*.json"
 
 jobs:
   validate-rttcode:
     name: Validate RTTcode Packets
     runs-on: ubuntu-latest
     permissions: write-all
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,16 +24,16 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install JSON Schema validator
+      - name: Install AJV
         run: npm install -g ajv-cli
+
+      - name: Add JSON Schema meta-schema
+        run: ajv add-schema https://json-schema.org/draft/2020-12/schema
 
       - name: Validate RTTcode packets
         run: |
           echo "Validating RTTcode packets..."
-          for file in $(find docs -name "*.json"); do
-            if [[ "$file" == docs/schemas/* ]]; then
-              continue
-            fi
+          for file in $(find docs -name "rttcode*.json"); do
             echo "Checking: $file"
             ajv validate \
               -s docs/schemas/rttcode.v1.json \
@@ -42,4 +41,3 @@ jobs:
               --strict=true \
               || exit 1
           done
-
