@@ -27,15 +27,16 @@ jobs:
       - name: Install AJV
         run: npm install -g ajv-cli
 
-      - name: Add JSON Schema meta-schema
-        run: ajv add-schema https://json-schema.org/draft/2020-12/schema
-
       - name: Validate RTTcode packets
         run: |
           echo "Validating RTTcode packets..."
           for file in $(find docs -name "rttcode*.json"); do
+            case "$file" in
+              */schemas/*) continue ;;
+            esac
             echo "Checking: $file"
             ajv validate \
+              --spec=draft2020 \
               -s docs/schemas/rttcode.v1.json \
               -d "$file" \
               --strict=true \
