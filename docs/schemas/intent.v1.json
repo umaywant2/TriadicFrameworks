@@ -1,1 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/intent.v1.json",
+  "title": "RTT Intent Block (v1)",
+  "description": "Defines the minimal intent substrate for RTTcode packets, capturing directional influence and desired micro-state adjustments.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "intent_version",
+    "target",
+    "direction",
+    "magnitude"
+  ],
+
+  "properties": {
+    "intent_version": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Version of the intent schema."
+    },
+
+    "target": {
+      "type": "string",
+      "description": "The entity or subsystem the intent is directed toward."
+    },
+
+    "direction": {
+      "type": "string",
+      "enum": ["increase", "decrease", "stabilize", "invert"],
+      "description": "Desired directional influence on the target."
+    },
+
+    "magnitude": {
+      "type": "number",
+      "description": "Strength of the intended influence."
+    }
+  }
+}
 
