@@ -3,17 +3,20 @@ name: RTTcode Validation
 on:
   push:
     paths:
-      - "docs/**/*.json"
+      - "docs/rttcodes/*.json"
+      - "docs/schemas/*.json"
+      - "docs/schemas/manifest.json"
       - ".github/workflows/rttcode-validate.yml"
   pull_request:
     paths:
-      - "docs/**/*.json"
+      - "docs/rttcodes/*.json"
+      - "docs/schemas/*.json"
+      - "docs/schemas/manifest.json"
 
 jobs:
   validate-rttcode:
     name: Validate RTTcode Packets
     runs-on: ubuntu-latest
-    permissions: write-all
 
     steps:
       - name: Checkout repository
@@ -24,21 +27,26 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Install AJV
+      - name: Install AJV CLI
         run: npm install -g ajv-cli
+
+      - name: Load RTT manifest
+        id: manifest
+        run: |
+          MANIFEST_PATH="docs/schemas/manifest.json"
+          echo "MANIFEST_PATH=$MANIFEST_PATH" >> $GITHUB_ENV
+          echo "SCHEMA_DIR=$(jq -r '.paths.schema_dir' $MANIFEST_PATH)" >> $GITHUB_ENV
+          echo "PACKET_DIR=$(jq -r '.paths.packet_dir' $MANIFEST_PATH)" >> $GITHUB_ENV
+          echo "PACKET_PATTERN=$(jq -r '.validation.packet_pattern' $MANIFEST_PATH)" >> $GITHUB_ENV
+          echo "SPEC=$(jq -r '.validation.spec' $MANIFEST_PATH)" >> $GITHUB_ENV
+          echo "STRICT=$(jq -r '.validation.strict' $MANIFEST_PATH)" >> $GITHUB_ENV
+          echo "PACKET_SCHEMA=$(jq -r '.schemas.packet' $MANIFEST_PATH)" >> $GITHUB_ENV
 
       - name: Validate RTTcode packets
         run: |
-          echo "Validating RTTcode packets..."
-          for file in $(find docs -name "rttcode*.json"); do
-            case "$file" in
-              */schemas/*) continue ;;
-            esac
-            echo "Checking: $file"
-            ajv validate \
-              --spec=draft2020 \
-              -s docs/schemas/rttcode.v1.json \
-              -d "$file" \
-              --strict=true \
-              || exit 1
-          done
+          echo "Validating RTTcode packets using manifest..."
+          ajv validate \
+            --spec="$SPEC" \
+            -s "$SCHEMA_DIR$PACKET_SCHEMA" \
+            -d "$PACKET_PATTERN" \
+            ${STRICT:+--strict=true}
