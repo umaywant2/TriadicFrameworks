@@ -1,0 +1,23 @@
+{
+  "rttcode_version": "1.0.0",
+
+  "schemas": {
+    "packet": "rttcode.v1.json",
+    "tick": "tick.v1.json",
+    "entity": "entity.v1.json",
+    "environment": "environment.v1.json",
+    "intent": "intent.v1.json"
+  },
+
+  "paths": {
+    "schema_dir": "docs/schemas/",
+    "packet_dir": "docs/rttcodes/"
+  },
+
+  "validation": {
+    "packet_pattern": "docs/rttcodes/*.json",
+    "schema_pattern": "docs/schemas/*.json",
+    "strict": true,
+    "spec": "draft2020"
+  }
+}
