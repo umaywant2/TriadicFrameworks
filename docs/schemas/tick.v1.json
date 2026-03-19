@@ -1,1 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/tick.v1.json",
+  "title": "RTT Tick Block (v1)",
+  "description": "Defines the minimal tick substrate for RTTcode packets, representing bounded temporal progression.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "tick_version",
+    "index",
+    "timestamp",
+    "coherence"
+  ],
+
+  "properties": {
+    "tick_version": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Version of the tick schema."
+    },
+
+    "index": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Monotonic tick counter within the packet sequence."
+    },
+
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO timestamp marking the tick’s occurrence."
+    },
+
+    "coherence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Coherence score for the tick, representing temporal stability."
+    }
+  }
+}
 
