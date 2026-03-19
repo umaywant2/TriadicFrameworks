@@ -36,12 +36,12 @@ jobs:
       - name: Validate RTTcode examples
         id: rttcode
         run: |
-          echo "Validating RTTcode examples..."
+          echo "Validating RTTcode packets..."
           ajv validate \
-           --spec=draft2020 \
-           -s docs/schemas/rttcode.v1.json \
-           -d "docs/**/rttcode*.json" \
-           --strict=true
+            --spec=draft2020 \
+            -s docs/schemas/rttcode.v1.json \
+            -d "docs/rttcodes/*.json" \
+            --strict=true
 
       - name: Validate Environment schemas/examples
         id: env
