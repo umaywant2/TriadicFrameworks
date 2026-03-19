@@ -1,1 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/entity.v1.json",
+  "title": "RTT Entity Block (v1)",
+  "description": "Defines a minimal entity substrate for RTTcode packets, including identity, state, and resonance alignment.",
+  "type": "object",
+  "additionalProperties": false,
+
+  "required": [
+    "entity_version",
+    "id",
+    "state",
+    "resonance"
+  ],
+
+  "properties": {
+    "entity_version": {
+      "type": "string",
+      "const": "1.0.0",
+      "description": "Version of the entity schema."
+    },
+
+    "id": {
+      "type": "string",
+      "description": "Unique identifier for the entity."
+    },
+
+    "state": {
+      "type": "object",
+      "description": "Current micro-state of the entity.",
+      "additionalProperties": false,
+      "required": ["value"],
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "Primary scalar representing the entity’s micro-state."
+        }
+      }
+    },
+
+    "resonance": {
+      "type": "object",
+      "description": "Resonance alignment parameters for the entity.",
+      "additionalProperties": false,
+      "required": ["amplitude", "phase"],
+      "properties": {
+        "amplitude": {
+          "type": "number",
+          "description": "Resonance amplitude of the entity."
+        },
+        "phase": {
+          "type": "number",
+          "description": "Resonance phase of the entity."
+        }
+      }
+    }
+  }
+}
 
