@@ -1,5 +1,8 @@
 name: RTTcode Validation
 
+permissions:
+  contents: read
+
 on:
   push:
     paths:
