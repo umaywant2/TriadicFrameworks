@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "/docs/schemas/rttcode.v1.json",
+  "$id": "rttcode.v1.json",
   "title": "RTTcode Packet (v1)",
   "description": "Master RTTcode packet schema composed of tick, entities, environment, and intent blocks.",
   "type": "object",
@@ -22,24 +22,24 @@
     },
 
     "tick": {
-      "$ref": "/docs/schemas/tick.v1.json"
+      "$ref": "tick.v1.json"
     },
 
     "entities": {
       "type": "array",
       "items": {
-        "$ref": "/docs/schemas/entity.v1.json"
+        "$ref": "entity.v1.json"
       },
       "minItems": 1,
       "description": "List of entities participating in the RTT micro‑regime."
     },
 
     "environment": {
-      "$ref": "/docs/schemas/environment.v1.json"
+      "$ref": "environment.v1.json"
     },
 
     "intent": {
-      "$ref": "/docs/schemas/intent.v1.json"
+      "$ref": "intent.v1.json"
     }
   }
 }
