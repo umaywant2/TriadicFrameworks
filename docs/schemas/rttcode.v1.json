@@ -22,24 +22,24 @@
     },
 
     "tick": {
-      "$ref": "docs/schemas/tick.v1.json"
+      "$ref": "schemas/tick.v1.json"
     },
 
     "entities": {
       "type": "array",
       "items": {
-        "$ref": "docs/schemas/entity.v1.json"
+        "$ref": "schemas/entity.v1.json"
       },
       "minItems": 1,
       "description": "List of entities participating in the RTT micro‑regime."
     },
 
     "environment": {
-      "$ref": "docs/schemas/environment.v1.json"
+      "$ref": "schemas/environment.v1.json"
     },
 
     "intent": {
-      "$ref": "docs/schemas/intent.v1.json"
+      "$ref": "schemas/intent.v1.json"
     }
   }
 }
