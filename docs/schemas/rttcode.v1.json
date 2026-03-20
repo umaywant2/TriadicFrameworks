@@ -22,24 +22,24 @@
     },
 
     "tick": {
-      "$ref": "schemas/tick.v1.json"
+      "$ref": "https://triadicframeworks.org/schemas/tick.v1.json"
     },
 
     "entities": {
       "type": "array",
       "items": {
-        "$ref": "schemas/entity.v1.json"
+        "$ref": "https://triadicframeworks.org/schemas/entity.v1.json"
       },
       "minItems": 1,
       "description": "List of entities participating in the RTT micro‑regime."
     },
 
     "environment": {
-      "$ref": "schemas/environment.v1.json"
+      "$ref": "https://triadicframeworks.org/schemas/environment.v1.json"
     },
 
     "intent": {
-      "$ref": "schemas/intent.v1.json"
+      "$ref": "https://triadicframeworks.org/schemas/intent.v1.json"
     }
   }
 }
