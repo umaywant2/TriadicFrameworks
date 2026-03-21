@@ -1,1 +1,36 @@
+name: Generate Sitemap
 
+on:
+  push:
+    branches: [ "main" ]
+  schedule:
+    - cron: "0 2 * * *"   # nightly at 2 AM UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # required for git log timestamps
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Run sitemap generator
+        run: |
+          chmod +x scripts/generate_sitemap.js
+          node scripts/generate_sitemap.js
+
+      - name: Commit updated sitemap
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add docs/sitemap_main.xml
+          git commit -m "Auto-update sitemap" || echo "No changes"
+          git push
