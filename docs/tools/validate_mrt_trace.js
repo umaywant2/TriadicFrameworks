@@ -39,7 +39,8 @@ if (!rawArg) {
 
 const candidateTracePath = path.resolve(ROOT_DIR, rawArg);
 const resolvedTracePath = fs.realpathSync(candidateTracePath);
-if (!resolvedTracePath.startsWith(ROOT_DIR + path.sep)) {
+const rootWithSep = ROOT_DIR.endsWith(path.sep) ? ROOT_DIR : ROOT_DIR + path.sep;
+if (resolvedTracePath !== ROOT_DIR && !resolvedTracePath.startsWith(rootWithSep)) {
   console.error("Error: Trace path must be within the project root directory.");
   process.exit(1);
 }
