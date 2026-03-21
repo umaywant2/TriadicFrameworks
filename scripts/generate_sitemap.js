@@ -7,7 +7,7 @@ const path = require("path");
 // --- CONFIG -------------------------------------------------------------
 
 const SOURCE_FILE = path.join(__dirname, "sitemap_sources.txt");
-const OUTPUT_FILE = path.join(__dirname, "..", "docs", "sitemap_main.xml");
+const OUTPUT_FILE = path.join(__dirname, "..", "sitemap_main.xml");
 
 // Priority + changefreq rules
 function getMeta(url) {
