@@ -1,10 +1,11 @@
 const fs = require("fs");
 const Ajv = require("ajv");
+const path = require("path");
 
 const ajv = new Ajv();
 
-function load(path) {
-  return JSON.parse(fs.readFileSync(path, "utf8"));
+function load(filePath) {
+  return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
 function validateTrace(tracePath) {
@@ -28,8 +29,21 @@ function validateTrace(tracePath) {
   return true;
 }
 
-const tracePath = process.argv[2];
-const valid = validateTrace(tracePath);
+const ROOT_DIR = path.resolve(__dirname, "../..");
+const rawArg = process.argv[2];
+
+if (!rawArg) {
+  console.error("Usage: node validate_mrt_trace.js <trace-file-relative-to-project-root>");
+  process.exit(1);
+}
+
+const resolvedTracePath = path.resolve(ROOT_DIR, rawArg);
+if (!resolvedTracePath.startsWith(ROOT_DIR + path.sep)) {
+  console.error("Error: Trace path must be within the project root directory.");
+  process.exit(1);
+}
+
+const valid = validateTrace(resolvedTracePath);
 
 if (valid) {
   console.log("MRT trace is VALID.");
