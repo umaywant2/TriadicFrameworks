@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require("fs");
-const { execSync } = require("child_process");
+const { execFileSync } = require("child_process");
 const path = require("path");
 
 // --- CONFIG -------------------------------------------------------------
@@ -52,7 +52,7 @@ function urlToPath(url) {
 // Get last commit timestamp for a path
 function getLastMod(repoPath) {
   try {
-    const ts = execSync(`git log -1 --format=%cI -- ${repoPath}`, { encoding: "utf8" }).trim();
+    const ts = execFileSync("git", ["log", "-1", "--format=%cI", "--", repoPath], { encoding: "utf8" }).trim();
     return ts || "2026-03-15";
   } catch {
     return "2026-03-15";
