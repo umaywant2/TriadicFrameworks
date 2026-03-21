@@ -21,17 +21,35 @@
     window.location.hostname ||
     "unknown-site";
 
+  function generateRandomIdPart() {
+    try {
+      const cryptoObj = window.crypto || window.msCrypto;
+      if (cryptoObj && typeof cryptoObj.getRandomValues === "function") {
+        const bytes = new Uint8Array(16);
+        cryptoObj.getRandomValues(bytes);
+        let out = "";
+        for (let i = 0; i < bytes.length; i++) {
+          out += bytes[i].toString(36);
+        }
+        return out;
+      }
+    } catch (e) {
+      // fall through to Math.random-based best-effort below
+    }
+    return Math.random().toString(36).slice(2);
+  }
+
   const SESSION_ID = (() => {
     try {
       const key = "rtt_session_id";
       let id = sessionStorage.getItem(key);
       if (!id) {
-        id = "rtt-" + Math.random().toString(36).slice(2) + Date.now().toString(36);
+        id = "rtt-" + generateRandomIdPart() + Date.now().toString(36);
         sessionStorage.setItem(key, id);
       }
       return id;
     } catch (e) {
-      return "rtt-" + Math.random().toString(36).slice(2);
+      return "rtt-" + generateRandomIdPart();
     }
   })();
 
