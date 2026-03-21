@@ -1,7 +1,6 @@
 > 
 > Hi Grok,
 > Dare I request, two of your best... A review of the good and meaningful, and what an AI or student may find teamingful. ;) (rhymin' to entertain) A full site content review, without the critique previews. On screen
-> https://www.triadicframeworks.org/education/
 > 
 
 ---
