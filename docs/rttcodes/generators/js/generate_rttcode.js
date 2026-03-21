@@ -14,6 +14,21 @@ import path from "node:path";
 import process from "node:process";
 import QRCode from "qrcode";
 
+const ROOT_DIR = fs.realpathSync(process.cwd());
+
+/**
+ * Resolve a user-supplied path under ROOT_DIR and ensure it does not escape.
+ */
+function toSafePath(rootDir, userPath) {
+  const resolved = path.resolve(rootDir, userPath);
+  const real = fs.realpathSync(resolved);
+  const rootWithSep = rootDir.endsWith(path.sep) ? rootDir : rootDir + path.sep;
+  if (!real.startsWith(rootWithSep)) {
+    throw new Error(`Path is outside of allowed directory: ${userPath}`);
+  }
+  return real;
+}
+
 /**
  * Basic shape validation aligned with rttcode.schema.json.
  * This is intentionally lightweight; full JSON Schema validation
@@ -104,8 +119,15 @@ async function main() {
     process.exit(1);
   }
 
-  const absPayloadPath = path.resolve(payloadPath);
-  const absOutputPath = path.resolve(outputPath);
+  let absPayloadPath;
+  let absOutputPath;
+  try {
+    absPayloadPath = toSafePath(ROOT_DIR, payloadPath);
+    absOutputPath = toSafePath(ROOT_DIR, outputPath);
+  } catch (err) {
+    console.error("Invalid path:", err.message);
+    process.exit(1);
+  }
 
   const raw = fs.readFileSync(absPayloadPath, "utf8");
   const payload = JSON.parse(raw);
