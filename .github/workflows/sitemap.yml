@@ -1,5 +1,8 @@
 name: Generate Sitemap
 
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ "main" ]
