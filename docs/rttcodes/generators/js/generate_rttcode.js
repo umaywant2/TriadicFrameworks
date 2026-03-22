@@ -16,13 +16,15 @@ function safeLoadJSON(filePath) {
 }
 
 function ensureInsideRoot(root, candidate) {
-  const resolved = fs.realpathSync(candidate);
+  // Resolve the candidate path relative to the root, then normalize and resolve symlinks.
+  const resolvedPath = path.resolve(root, candidate);
+  const realPath = fs.realpathSync(resolvedPath);
   const rootWithSep = root.endsWith(path.sep) ? root : root + path.sep;
 
-  if (resolved !== root && !resolved.startsWith(rootWithSep)) {
+  if (realPath !== root && !realPath.startsWith(rootWithSep)) {
     throw new Error(`Path escape detected: ${candidate}`);
   }
-  return resolved;
+  return realPath;
 }
 
 // --- Main generator ------------------------------------------------------
@@ -35,9 +37,8 @@ if (!rawArg) {
   process.exit(1);
 }
 
-// Normalize + validate path
-const candidateOut = path.resolve(ROOT, rawArg);
-const outputPath = ensureInsideRoot(ROOT, candidateOut);
+// Normalize + validate path (ensure it stays inside ROOT)
+const outputPath = ensureInsideRoot(ROOT, rawArg);
 
 // Whitelist allowed extensions
 const allowedExt = [".json", ".rtt", ".txt"];
