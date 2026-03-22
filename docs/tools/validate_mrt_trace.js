@@ -13,10 +13,13 @@ function load(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-// --- Validation logic ----------------------------------------------------
-function validateTrace(tracePath) {
-  const trace = load(tracePath);
+// Dedicated loader for trace files (called only with validated paths)
+function loadTrace(tracePath) {
+  return JSON.parse(fs.readFileSync(tracePath, "utf8"));
+}
 
+// --- Validation logic ----------------------------------------------------
+function validateTrace(trace) {
   const schemas = {
     operators: load("docs/schemas/rtt-micro-core/v1/mrt_operators.schema.json"),
     envelopes: load("docs/schemas/rtt-micro-core/v1/mrt_envelopes.schema.json"),
@@ -63,7 +66,8 @@ if (!allowedExtensions.includes(path.extname(resolvedTracePath))) {
 }
 
 // --- Validation + safe override -----------------------------------------
-const valid = validateTrace(resolvedTracePath);
+const trace = loadTrace(resolvedTracePath);
+const valid = validateTrace(trace);
 
 // CodeQL: INTERNAL_OVERRIDE is trusted (environment-controlled, not user input).
 const INTERNAL_OVERRIDE = process.env.MRT_INTERNAL_OVERRIDE === "1";
