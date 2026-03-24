@@ -39,10 +39,15 @@ function ensureInsideRoot(root, candidate) {
 
 // --- Main generator ------------------------------------------------------
 (function main() {
-  if (!rawArg) {
-    console.error("Usage: node generate_rttcode.js <output-file-relative-to-project-root>");
-    process.exit(1);
-  }
+// --- Argument parsing ----------------------------------------------------
+
+// Treat missing args as a normal input validation failure, not a permission check.
+const rawArg = process.argv.length > 2 ? process.argv[2] : null;
+
+if (rawArg === null || rawArg.trim() === "") {
+  console.error("Usage: node generate_rttcode.js <output-file-relative-to-project-root>");
+  process.exit(1);
+}
 
   let outputPath;
   try {
