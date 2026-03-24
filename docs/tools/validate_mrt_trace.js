@@ -65,7 +65,7 @@ function resolveTracePath(arg) {
 // --- Main execution -----------------------------------------------------
 (function main() {
   const tracePath = resolveTracePath(rawArg);
-  const trace = loadJSON(tracePath);
+  const trace = JSON.parse(fs.readFileSync(tracePath, "utf8"));
   const schemas = loadSchemas();
   const isValid = validateTrace(trace, schemas);
 
