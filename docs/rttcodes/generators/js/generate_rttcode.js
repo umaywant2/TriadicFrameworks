@@ -22,6 +22,22 @@ function safeLoadJSON(filePath) {
 }
 
 function ensureInsideRoot(root, candidate) {
+  // Treat this helper as the single sanitization point for user-controlled paths.
+  // It ensures the final path is a file within ROOT_DIR and has an allowed extension.
+  if (typeof candidate !== "string" || candidate.trim() === "") {
+    throw new Error("Path must be a non-empty string");
+  }
+
+  // Disallow absolute paths supplied directly by the user.
+  if (path.isAbsolute(candidate)) {
+    throw new Error("Absolute paths are not allowed");
+  }
+
+  // Disallow candidates that end with a path separator (likely a directory).
+  if (candidate.endsWith(path.sep)) {
+    throw new Error("Path must refer to a file, not a directory");
+  }
+
   const resolvedPath = path.resolve(root, candidate);
   const realPath = fs.realpathSync(resolvedPath);
   const rootWithSep = root.endsWith(path.sep) ? root : root + path.sep;
