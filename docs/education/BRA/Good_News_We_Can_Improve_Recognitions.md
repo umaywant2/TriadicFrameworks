@@ -1,8 +1,10 @@
-> "Well, some say life will beat you down
-> Break your heart, steal your crown
-> So I've started out for God knows where
-> I guess I'll know when I get there
->   -Tom Petty & the Heartbreakers
+>  
+> "Well, some say life will beat you down  
+> Break your heart, steal your crown  
+> So I've started out for God knows where  
+> I guess I'll know when I get there  
+>      -Tom Petty & the Heartbreakers
+>  
 
 # 🌐 **1. Physics**
 ### **Recent cross‑domain synthesizers**
