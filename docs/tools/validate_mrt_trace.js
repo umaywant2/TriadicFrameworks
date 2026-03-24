@@ -42,6 +42,20 @@ function validateTrace(trace) {
 const ROOT_DIR = path.resolve(__dirname, "../..");
 const rawArg = process.argv[2];
 
+var express = require('express');
+var app = express();
+// ...
+app.get('/full-profile/:userId', function(req, res) {
+
+    if (req.signedCookies.loggedInUserId !== req.params.userId) {
+        // GOOD: login decision made based on server controlled data
+        requireLogin();
+    } else {
+        // ... show private information
+    }
+
+});
+
 if (!rawArg) {
   console.error("Usage: node validate_mrt_trace.js <trace-file-relative-to-project-root>");
   process.exit(1);
