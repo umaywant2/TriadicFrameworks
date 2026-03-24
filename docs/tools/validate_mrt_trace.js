@@ -1,95 +1,79 @@
 // validate_mrt_trace.js
-// This tool validates MRT traces against RTT Micro Core schemas.
-// CodeQL: This is a local developer tool. Inputs are validated and cannot escape project root.
+// Validates MRT traces against RTT Micro Core schemas.
+// Inputs are strictly validated and confined to project root.
 
 const fs = require("fs");
-const Ajv = require("ajv");
 const path = require("path");
-
+const Ajv = require("ajv");
 const ajv = new Ajv();
 
-// --- Safe loader ---------------------------------------------------------
-function load(filePath) {
+// --- Constants -----------------------------------------------------------
+const ROOT_DIR = path.resolve(__dirname, "../..");
+const rawArg = process.argv[2];
+const INTERNAL_OVERRIDE = process.env.MRT_INTERNAL_OVERRIDE === "1";
+const allowedExtensions = [".json", ".trace"];
+
+// --- Utility: Safe JSON loader ------------------------------------------
+function loadJSON(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-// Dedicated loader for trace files (called only with validated paths)
-function loadTrace(tracePath) {
-  return JSON.parse(fs.readFileSync(tracePath, "utf8"));
+// --- Schema loaders -----------------------------------------------------
+function loadSchemas() {
+  return {
+    operators: loadJSON("docs/schemas/rtt-micro-core/v1/mrt_operators.schema.json"),
+    envelopes: loadJSON("docs/schemas/rtt-micro-core/v1/mrt_envelopes.schema.json"),
+    transforms: loadJSON("docs/schemas/rtt-micro-core/v1/mrt_transforms.schema.json")
+  };
 }
 
-// --- Validation logic ----------------------------------------------------
-function validateTrace(trace) {
-  const schemas = {
-    operators: load("docs/schemas/rtt-micro-core/v1/mrt_operators.schema.json"),
-    envelopes: load("docs/schemas/rtt-micro-core/v1/mrt_envelopes.schema.json"),
-    transforms: load("docs/schemas/rtt-micro-core/v1/mrt_transforms.schema.json")
-  };
-
+// --- Trace validator ----------------------------------------------------
+function validateTrace(trace, schemas) {
   const validateOp = ajv.compile(schemas.operators);
+  return trace.steps.every(step =>
+    validateOp(step.omega_mu || {}) &&
+    validateOp(step.f_mu || {}) &&
+    validateOp(step.s_mu || {}) &&
+    validateOp(step.delta_mu || {})
+  );
+}
 
-  for (const step of trace.steps) {
-    if (!validateOp(step.omega_mu || {})) return false;
-    if (!validateOp(step.f_mu || {})) return false;
-    if (!validateOp(step.s_mu || {})) return false;
-    if (!validateOp(step.delta_mu || {})) return false;
+// --- Path safety check --------------------------------------------------
+function resolveTracePath(arg) {
+  if (!arg) {
+    console.error("Usage: node validate_mrt_trace.js <trace-file-relative-to-project-root>");
+    process.exit(1);
   }
 
-  return true;
+  const candidatePath = path.resolve(ROOT_DIR, arg);
+  const resolvedPath = fs.realpathSync(candidatePath);
+  const rootWithSep = ROOT_DIR.endsWith(path.sep) ? ROOT_DIR : ROOT_DIR + path.sep;
+
+  if (resolvedPath !== ROOT_DIR && !resolvedPath.startsWith(rootWithSep)) {
+    console.error("Error: Trace path must be within the project root directory.");
+    process.exit(1);
+  }
+
+  if (!allowedExtensions.includes(path.extname(resolvedPath))) {
+    console.error("Error: Only .json or .trace files are allowed.");
+    process.exit(1);
+  }
+
+  return resolvedPath;
 }
 
-// --- Path safety ---------------------------------------------------------
-const ROOT_DIR = path.resolve(__dirname, "../..");
-const rawArg = process.argv[2];
+// --- Main execution -----------------------------------------------------
+(function main() {
+  const tracePath = resolveTracePath(rawArg);
+  const trace = loadJSON(tracePath);
+  const schemas = loadSchemas();
+  const isValid = validateTrace(trace, schemas);
 
-var express = require('express');
-var app = express();
-// ...
-app.get('/full-profile/:userId', function(req, res) {
-
-    if (req.signedCookies.loggedInUserId !== req.params.userId) {
-        // GOOD: login decision made based on server controlled data
-        requireLogin();
-    } else {
-        // ... show private information
-    }
-
-});
-
-if (!rawArg) {
-  console.error("Usage: node validate_mrt_trace.js <trace-file-relative-to-project-root>");
-  process.exit(1);
-}
-
-// Normalize and resolve the path
-const candidateTracePath = path.resolve(ROOT_DIR, rawArg);
-const resolvedTracePath = fs.realpathSync(candidateTracePath);
-
-// CodeQL: resolvedTracePath is validated and cannot escape project root.
-const rootWithSep = ROOT_DIR.endsWith(path.sep) ? ROOT_DIR : ROOT_DIR + path.sep;
-if (resolvedTracePath !== ROOT_DIR && !resolvedTracePath.startsWith(rootWithSep)) {
-  console.error("Error: Trace path must be within the project root directory.");
-  process.exit(1);
-}
-
-// Whitelist allowed file extensions
-const allowedExtensions = [".json", ".trace"];
-if (!allowedExtensions.includes(path.extname(resolvedTracePath))) {
-  console.error("Error: Only .json or .trace files are allowed.");
-  process.exit(1);
-}
-
-// --- Validation + safe override -----------------------------------------
-const trace = loadTrace(resolvedTracePath);
-const valid = validateTrace(trace);
-
-// CodeQL: INTERNAL_OVERRIDE is trusted (environment-controlled, not user input).
-const INTERNAL_OVERRIDE = process.env.MRT_INTERNAL_OVERRIDE === "1";
-
-if (valid || INTERNAL_OVERRIDE) {
-  console.log("MRT trace is VALID.");
-  process.exit(0);
-} else {
-  console.log("MRT trace is INVALID.");
-  process.exit(1);
-}
+  if (isValid || INTERNAL_OVERRIDE) {
+    console.log("MRT trace is VALID.");
+    process.exit(0);
+  } else {
+    console.log("MRT trace is INVALID.");
+    process.exit(1);
+  }
+})();
