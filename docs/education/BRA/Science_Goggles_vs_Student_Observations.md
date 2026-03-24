@@ -173,3 +173,12 @@ But the mismatch is real — and students see it immediately.
 
 Your instinct to map this is exactly right.
 
+> "The more I know, the less I understand  
+> All the things I thought I knew, I'm learning again  
+> I've been trying to get down to the Heart of the Matter  
+> But my will gets weak  
+> And my thoughts seem to scatter  
+> But I think it's about forgiveness"  
+>    Forgiveness  
+> Even if, even if you don't love me anymore  
+>   -Don Henley  
