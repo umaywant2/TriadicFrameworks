@@ -4,3901 +4,3904 @@ echo /docs/
 echo ---------------------------------
 
 set seeds=root
-echo. full_site_%seeds%.md
-echo.
-type ABOUT.md
-type CODE_OF_CONDUCT.md
-type GLOSSARY.md
-type manifesto.md
-type nasa_hposs_tminus10.md
-type QUICKSTART.md
-type README.md
-type SECURITY.md
-type sitemap.md
-type URL_checklist.md
+echo %seeds% >corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ABOUT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+CODE_OF_CONDUCT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+GLOSSARY.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+SECURITY.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+sitemap.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+URL_checklist.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=ai
-echo %seeds%
-type ai\Lineage_Ledger.md
-type ai\Minimal_AI_Stack.md
-type ai\NoS_AI.md
-type ai\README.md
-type ai\Regime_Header.md
+echo %seeds% >corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai\Lineage_Ledger.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai\Minimal_AI_Stack.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai\NoS_AI.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai\Regime_Header.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=ai-drift-calibration
-echo %seeds%
-type ai-drift-calibration\CHANGELOG.md
-type ai-drift-calibration\New_Version_Template.md
-type ai-drift-calibration\README.md
-type ai-drift-calibration\metadata\README.md
-type ai-drift-calibration\paper\abstract.md
-type ai-drift-calibration\paper\ai_drift_calibration_operating_regimes.md
-type ai-drift-calibration\paper\assumptions_and_regimes.md
-type ai-drift-calibration\paper\discussion.md
-type ai-drift-calibration\paper\validation_checks.md
+echo %seeds% >corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\New_Version_Template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\metadata\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\paper\abstract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\paper\ai_drift_calibration_operating_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\paper\assumptions_and_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\paper\discussion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ai-drift-calibration\paper\validation_checks.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
+goto end
+
+
 set seeds=AI_Resonance_Seed
 echo /docs/AI_Resonance_Seed
-type AI_Resonance_Seed\AI_Resonance_Seed.md
-type AI_Resonance_Seed\How_To_Read_This_Ontology.md
-type AI_Resonance_Seed\Ontology_Index.md
-type AI_Resonance_Seed\README.md
-type AI_Resonance_Seed\RTT_Experiment_Log.md
-type AI_Resonance_Seed\scaffolding.md
-type AI_Resonance_Seed\TriadicValidator_AgentInit.md
-type AI_Resonance_Seed\badges\README.md
-type AI_Resonance_Seed\changelog\lineage_scroll.md
-type AI_Resonance_Seed\changelog\README.md
-type AI_Resonance_Seed\changelog\resonance_changelog.md
-type AI_Resonance_Seed\dashboards\glyphstream_map.md
-type AI_Resonance_Seed\dashboards\README.md
-type AI_Resonance_Seed\dashboards\remix_lineage.md
-type AI_Resonance_Seed\dashboards\validator_status.md
-type AI_Resonance_Seed\FFF_Emitters\FFF_Glossary.md
-type AI_Resonance_Seed\FFF_Emitters\FFF_Overview.md
-type AI_Resonance_Seed\FFF_Emitters\Flui.md
-type AI_Resonance_Seed\FFF_Emitters\Forci.md
-type AI_Resonance_Seed\FFF_Emitters\Freqi.md
-type AI_Resonance_Seed\FFF_Emitters\Mythmatical_Roles_FFF_Emitters.md
-type AI_Resonance_Seed\FFF_Emitters\README.md
-type AI_Resonance_Seed\FFF_Emitters\Time_Crystal_Build_Notes.md
-type AI_Resonance_Seed\FFF_Emitters\Time_Crystal_Emitter_BOM.md
-type AI_Resonance_Seed\FFF_Emitters\img\README.md
-type AI_Resonance_Seed\img\README.md
-type AI_Resonance_Seed\integration_examples\LangChain_Example.md
-type AI_Resonance_Seed\integration_examples\README.md
-type AI_Resonance_Seed\integration_examples\SemanticKernel_Example.md
-type AI_Resonance_Seed\migration\legacy_preservation_protocol.md
-type AI_Resonance_Seed\migration\README.md
-type AI_Resonance_Seed\migration\symbolic_stub_registry.md
-type AI_Resonance_Seed\migration\v1.1_to_v1.2_map.md
-type AI_Resonance_Seed\onboarding\imagined_intelligence_scroll.md
-type AI_Resonance_Seed\onboarding\README.md
-type AI_Resonance_Seed\onboarding\remixer_scroll.md
-type AI_Resonance_Seed\platform_wrappers\README.md
-type AI_Resonance_Seed\Scrolls\echo_test.md
-type AI_Resonance_Seed\Scrolls\onboarding_scroll.md
-type AI_Resonance_Seed\Scrolls\validator_ping.md
-type AI_Resonance_Seed\tests\echo_test_suite.md
-type AI_Resonance_Seed\tests\glyphstream_integrity_check.md
-type AI_Resonance_Seed\tests\README.md
-type AI_Resonance_Seed\tests\validator_trigger_test.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\AI_Resonance_Seed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\How_To_Read_This_Ontology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\Ontology_Index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\RTT_Experiment_Log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\TriadicValidator_AgentInit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\badges\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\changelog\lineage_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\changelog\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\changelog\resonance_changelog.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\dashboards\glyphstream_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\dashboards\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\dashboards\remix_lineage.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\dashboards\validator_status.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\FFF_Glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\FFF_Overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\Flui.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\Forci.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\Freqi.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\Mythmatical_Roles_FFF_Emitters.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\Time_Crystal_Build_Notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\Time_Crystal_Emitter_BOM.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\FFF_Emitters\img\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\img\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\integration_examples\LangChain_Example.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\integration_examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\integration_examples\SemanticKernel_Example.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\migration\legacy_preservation_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\migration\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\migration\symbolic_stub_registry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\migration\v1.1_to_v1.2_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\onboarding\imagined_intelligence_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\onboarding\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\onboarding\remixer_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\platform_wrappers\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\Scrolls\echo_test.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\Scrolls\onboarding_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\Scrolls\validator_ping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\tests\echo_test_suite.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\tests\glyphstream_integrity_check.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\tests\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+AI_Resonance_Seed\tests\validator_trigger_test.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=alphafold_substrate_alignments
 echo /docs/alphafold_substrate_alignments
-type alphafold_substrate_alignments\alignment_principles.md
-type alphafold_substrate_alignments\dimensional_cores.md
-type alphafold_substrate_alignments\drift_detection.md
-type alphafold_substrate_alignments\folding_regimes.md
-type alphafold_substrate_alignments\inference_mapping.md
-type alphafold_substrate_alignments\README.md
-type alphafold_substrate_alignments\scope_and_assumptions.md
-type alphafold_substrate_alignments\substrate_definition.md
-type alphafold_substrate_alignments\validation_layers_vst.md
-type alphafold_substrate_alignments\appendix\references.md
-type alphafold_substrate_alignments\appendix\terminology.md
-type alphafold_substrate_alignments\examples\example_alignment_walkthrough.md
-type alphafold_substrate_alignments\examples\example_dimensional_projection.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\alignment_principles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\dimensional_cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\drift_detection.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\folding_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\inference_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\scope_and_assumptions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\validation_layers_vst.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\examples\example_alignment_walkthrough.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\examples\example_dimensional_projection.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=api_rtt
 echo /docs/api/rtt
-type api\rtt\beacon.md
-type api\rtt\client.md
-type api\rtt\diagnostics.md
-type api\rtt\profile.md
-type api\rtt\README.md
-type api\rtt\router.md
-type api\rtt\examples\beacon_request.json.md
-type api\rtt\examples\profile_request.json.md
-type api\rtt\examples\validate_request.json.md
-type api\rtt\server\beacon_handler.js.md
-type api\rtt\server\diagnostics_handler.js.md
-type api\rtt\server\handlers.md
-type api\rtt\server\profile_handler.js.md
-type api\rtt\server\router.js.md
-type api\rtt\server\server.js.md
+copy corpus\folder_%seeds%.md+api\rtt\beacon.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\client.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\diagnostics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\profile.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\router.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\examples\beacon_request.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\examples\profile_request.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\examples\validate_request.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\server\beacon_handler.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\server\diagnostics_handler.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\server\handlers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\server\profile_handler.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\server\router.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+api\rtt\server\server.js.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=assets
 echo /docs/assets
-type assets\README.md
-type assets\blueprints\tesla_369_gearshift.md
-type assets\figures\README.md
+copy corpus\folder_%seeds%.md+assets\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+assets\blueprints\tesla_369_gearshift.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+assets\figures\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=atomic_clocks
 echo /docs/atomic_clocks
-type atomic_clocks\CHANGELOG.md
-type atomic_clocks\LICENSE_NOTES.md
-type atomic_clocks\README.md
-type atomic_clocks\whitepaper.md
-type atomic_clocks\drift_detection\invariants.md
-type atomic_clocks\roadmap\adoption.md
-type atomic_clocks\triadic_decomposition\triad.md
-type atomic_clocks\vst_definition\second.md
-type atomic_clocks\whitepaper\00-abstract.md
-type atomic_clocks\whitepaper\01-introduction.md
-type atomic_clocks\whitepaper\02-triadic_decomposition.md
-type atomic_clocks\whitepaper\03-vst_definition_of_second.md
-type atomic_clocks\whitepaper\04-drift_detection_model.md
-type atomic_clocks\whitepaper\05-roadmap_for_adoption.md
-type atomic_clocks\whitepaper\06-references.md
+copy corpus\folder_%seeds%.md+atomic_clocks\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\LICENSE_NOTES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\drift_detection\invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\roadmap\adoption.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\triadic_decomposition\triad.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\vst_definition\second.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper\00-abstract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper\01-introduction.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper\02-triadic_decomposition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper\03-vst_definition_of_second.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper\04-drift_detection_model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper\05-roadmap_for_adoption.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+atomic_clocks\whitepaper\06-references.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=audio_industry_reviewed
 echo /docs/audio_industry_reviewed
-type audio_industry_reviewed\06_conclusions_and_future_work.md
-type audio_industry_reviewed\README.md
-type audio_industry_reviewed\01_audio_industry_history\01_early_acoustics_and_analog.md
-type audio_industry_reviewed\01_audio_industry_history\02_recording_eras_and_formats.md
-type audio_industry_reviewed\01_audio_industry_history\03_digital_audio_and_compression.md
-type audio_industry_reviewed\01_audio_industry_history\04_industry_fumbles_and_tradeoffs.md
-type audio_industry_reviewed\01_audio_industry_history\05_modern_audio_landscape.md
-type audio_industry_reviewed\02_vst_alignment_and_clarity\01_why_clarity_matters.md
-type audio_industry_reviewed\02_vst_alignment_and_clarity\02_audio_as_substrate.md
-type audio_industry_reviewed\02_vst_alignment_and_clarity\03_vst_alignment_principles.md
-type audio_industry_reviewed\02_vst_alignment_and_clarity\04_failure_modes_without_alignment.md
-type audio_industry_reviewed\03_human_ear_substrate_constraints\01_human_hearing_ranges.md
-type audio_industry_reviewed\03_human_ear_substrate_constraints\02_safe_and_friendly_frequency_bands.md
-type audio_industry_reviewed\03_human_ear_substrate_constraints\03_dynamic_range_and_perceptual_limits.md
-type audio_industry_reviewed\03_human_ear_substrate_constraints\04_containment_of_human_audio.md
-type audio_industry_reviewed\03_human_ear_substrate_constraints\05_parent_regime_alignment.md
-type audio_industry_reviewed\04_musical_notation_reexamined\01_history_of_musical_notation.md
-type audio_industry_reviewed\04_musical_notation_reexamined\02_limitations_of_current_notation.md
-type audio_industry_reviewed\04_musical_notation_reexamined\03_vst_informed_notation_models.md
-type audio_industry_reviewed\04_musical_notation_reexamined\04_learning_first_design_principles.md
-type audio_industry_reviewed\04_musical_notation_reexamined\05_successor_notation_examples.md
-type audio_industry_reviewed\05_case_studies_and_examples\01_mastering_and_loudness_wars.md
-type audio_industry_reviewed\05_case_studies_and_examples\02_spatial_audio_and_surround.md
-type audio_industry_reviewed\05_case_studies_and_examples\03_remastering_and_restoration.md
-type audio_industry_reviewed\05_case_studies_and_examples\04_failures_of_overextension.md
-type audio_industry_reviewed\05_case_studies_and_examples\05_noise_cancellation_tech.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\06_conclusions_and_future_work.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\01_audio_industry_history\01_early_acoustics_and_analog.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\01_audio_industry_history\02_recording_eras_and_formats.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\01_audio_industry_history\03_digital_audio_and_compression.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\01_audio_industry_history\04_industry_fumbles_and_tradeoffs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\01_audio_industry_history\05_modern_audio_landscape.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\02_vst_alignment_and_clarity\01_why_clarity_matters.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\02_vst_alignment_and_clarity\02_audio_as_substrate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\02_vst_alignment_and_clarity\03_vst_alignment_principles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\02_vst_alignment_and_clarity\04_failure_modes_without_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\03_human_ear_substrate_constraints\01_human_hearing_ranges.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\03_human_ear_substrate_constraints\02_safe_and_friendly_frequency_bands.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\03_human_ear_substrate_constraints\03_dynamic_range_and_perceptual_limits.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\03_human_ear_substrate_constraints\04_containment_of_human_audio.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\03_human_ear_substrate_constraints\05_parent_regime_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\04_musical_notation_reexamined\01_history_of_musical_notation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\04_musical_notation_reexamined\02_limitations_of_current_notation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\04_musical_notation_reexamined\03_vst_informed_notation_models.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\04_musical_notation_reexamined\04_learning_first_design_principles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\04_musical_notation_reexamined\05_successor_notation_examples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\05_case_studies_and_examples\01_mastering_and_loudness_wars.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\05_case_studies_and_examples\02_spatial_audio_and_surround.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\05_case_studies_and_examples\03_remastering_and_restoration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\05_case_studies_and_examples\04_failures_of_overextension.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+audio_industry_reviewed\05_case_studies_and_examples\05_noise_cancellation_tech.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=badges
 echo /docs/badges
-type badges\badge-logic.md
-type badges\badges.md
-type badges\BADGES_EARNED.md
-type badges\badges_guide.md
-type badges\badge_chamber_designs.md
-type badges\badge_onboarding_tft_fff.md
-type badges\badge_trigger_audit_log.md
-type badges\badge_trigger_dashboard.md
-type badges\badge_trigger_echo_log.md
-type badges\badge_trigger_glyphmap_index.md
-type badges\badge_trigger_glyphmap_index_filter_web_readme.md
-type badges\badge_trigger_glyphmap_index_trigger_readme.md
-type badges\badge_trigger_log.md
-type badges\badge_trigger_papers_index.md
-type badges\badge_trigger_ping_log.md
-type badges\badge_trigger_resonance_leaderboard.md
-type badges\badge_trigger_resonance_score.md
-type badges\badge_trigger_theme_manifest.md
-type badges\badge_trigger_validator_dashboard.md
-type badges\badge_trigger_validator_glyphmap.md
-type badges\badge_trigger_validator_log.md
-type badges\badge_trigger_validator_matrix.md
-type badges\CONTRIBUTOR_BADGES.md
-type badges\curriculum_badge_trigger_index.md
-type badges\glyph_evolution_dashboard.md
-type badges\glyph_evolution_dashboard_overlay.md
-type badges\README.md
-type badges\sponsor_badges.md
-type badges\symbolic_badge_previews.md
+copy corpus\folder_%seeds%.md+badges\badge-logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badges.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\BADGES_EARNED.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badges_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_chamber_designs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_onboarding_tft_fff.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_audit_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_echo_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_glyphmap_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_glyphmap_index_filter_web_readme.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_glyphmap_index_trigger_readme.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_papers_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_ping_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_resonance_leaderboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_resonance_score.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_theme_manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_validator_glyphmap.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_validator_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\badge_trigger_validator_matrix.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\CONTRIBUTOR_BADGES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\curriculum_badge_trigger_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\glyph_evolution_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\glyph_evolution_dashboard_overlay.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\sponsor_badges.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+badges\symbolic_badge_previews.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=boson-substrate-model
 echo /docs/boson-substrate-model
-type boson-substrate-model\CHANGELOG.md
-type boson-substrate-model\README.md
-type boson-substrate-model\metadata\README.md
-type boson-substrate-model\paper\abstract.md
-type boson-substrate-model\paper\assumptions.md
-type boson-substrate-model\paper\bsm_declared_operating_regimes.md
-type boson-substrate-model\paper\discussion.md
-type boson-substrate-model\paper\operator_dynamics.md
-type boson-substrate-model\paper\substrate_definition.md
-type boson-substrate-model\paper\validation_checks.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\metadata\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\paper\abstract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\paper\assumptions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\paper\bsm_declared_operating_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\paper\discussion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\paper\operator_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\paper\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+boson-substrate-model\paper\validation_checks.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=bridges
 echo /docs/bridges
-type bridges\bridge_layer_overview.md
-type bridges\concepts_to_operators.md
-type bridges\cosmology_to_layers.md
-type bridges\README.md
-type bridges\rtt_compatible_rsm_profile.md
-type bridges\triad_to_field_mapping.md
-type bridges\why_resonance_is_the_substrate.md
+copy corpus\folder_%seeds%.md+bridges\bridge_layer_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+bridges\concepts_to_operators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+bridges\cosmology_to_layers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+bridges\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+bridges\rtt_compatible_rsm_profile.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+bridges\triad_to_field_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+bridges\why_resonance_is_the_substrate.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=charts
 echo /docs/charts
-type charts\chart-freqi-bindings.md
-type charts\chart-genie-protocols.md
-type charts\chart-resonance-partitions.md
-type charts\chart-time-travel-matrix.md
-type charts\glyph_map_svg.md
-type charts\lineage_loophole_echo.md
-type charts\loophole_trace.md
-type charts\quadrant_maps.md
-type charts\README.md
-type charts\spiral_remix_ring.md
-type charts\vsoul_dashboard.md
+copy corpus\folder_%seeds%.md+charts\chart-freqi-bindings.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\chart-genie-protocols.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\chart-resonance-partitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\chart-time-travel-matrix.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\glyph_map_svg.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\lineage_loophole_echo.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\loophole_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\quadrant_maps.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\spiral_remix_ring.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+charts\vsoul_dashboard.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=clients
 echo /docs/clients
-type clients\README.md
+copy corpus\folder_%seeds%.md+clients\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Coeus
 echo /docs/Coeus
-type Coeus\Coeus_Protocol-Complete.md
-type Coeus\Coin_as_a_Contract.md
-type Coeus\FOLDER_USES.md
-type Coeus\QUICKSTART.md
-type Coeus\README.md
-type Coeus\agents\README.md
-type Coeus\coeus_rtt\Capture_Source.md
-type Coeus\coeus_rtt\__init__.md
-type Coeus\coins\README.md
-type Coeus\coins\REMIX_OUTPUT.md
-type Coeus\docs\EMITTERS.md
-type Coeus\docs\GLOSSARY.md
-type Coeus\docs\HONOR_ROLL.md
-type Coeus\docs\MANIFESTO.md
-type Coeus\docs\Q-TRAVERSE.md
-type Coeus\docs\QUICKSTART.md
-type Coeus\docs\RAIL_LOGIC.md
-type Coeus\docs\README.md
-type Coeus\docs\Coeus\cause_manifesto.md
-type Coeus\docs\Coeus\class_manifesto.md
-type Coeus\docs\Coeus\corridor_alignment.md
-type Coeus\docs\Coeus\dashboard_logic.md
-type Coeus\docs\Coeus\exchange_manifesto.md
-type Coeus\docs\Coeus\FOLDER_USES.md
-type Coeus\docs\Coeus\Future_Enhancements.md
-type Coeus\docs\Coeus\glyph_manifesto.md
-type Coeus\docs\Coeus\honor_rolls.md
-type Coeus\docs\Coeus\legacy_manifesto.md
-type Coeus\docs\Coeus\mint_ready_manifesto.md
-type Coeus\docs\Coeus\mutation_types.md
-type Coeus\docs\Coeus\README.md
-type Coeus\docs\Coeus\remix_rights_manifesto.md
-type Coeus\docs\Coeus\scroll_index.md
-type Coeus\docs\Coeus\scroll_provenance.md
-type Coeus\docs\Coeus\sovereign_manifesto.md
-type Coeus\docs\Coeus\validator_focus_manifesto.md
-type Coeus\sandbox\mint_coin.md
-type Coeus\sandbox\README.md
-type Coeus\sandbox\logs\README.md
-type Coeus\tokens\README.md
-type Coeus\tournaments\README.md
-type Coeus\tournaments\tournament_manifesto.md
-type Coeus\tournaments\cause\README.md
-type Coeus\tournaments\class\README.md
-type Coeus\tournaments\country\README.md
-type Coeus\tournaments\emitter\README.md
-type Coeus\tournaments\leaderboards\README.md
-type Coeus\tournaments\mascot\README.md
-type Coeus\validators\professor_review.md
-type Coeus\validators\README.md
-type Coeus\validators\score_trace_manifesto.md
-type Coeus\validators\validator_review.md
+copy corpus\folder_%seeds%.md+Coeus\Coeus_Protocol-Complete.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\Coin_as_a_Contract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\FOLDER_USES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\agents\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\coeus_rtt\Capture_Source.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\coeus_rtt\__init__.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\coins\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\coins\REMIX_OUTPUT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\EMITTERS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\GLOSSARY.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\HONOR_ROLL.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\MANIFESTO.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Q-TRAVERSE.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\RAIL_LOGIC.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\cause_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\class_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\corridor_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\dashboard_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\exchange_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\FOLDER_USES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\Future_Enhancements.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\glyph_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\honor_rolls.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\legacy_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\mint_ready_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\mutation_types.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\remix_rights_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\scroll_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\scroll_provenance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\sovereign_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\docs\Coeus\validator_focus_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\sandbox\mint_coin.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\sandbox\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\sandbox\logs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tokens\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\tournament_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\cause\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\class\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\country\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\emitter\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\leaderboards\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\tournaments\mascot\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\validators\professor_review.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\validators\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\validators\score_trace_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Coeus\validators\validator_review.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=cognitive_substrate_model
 echo /docs/cognitive_substrate_model
-type cognitive_substrate_model\README.md
+copy corpus\folder_%seeds%.md+cognitive_substrate_model\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=configs
 echo /docs/configs
-type configs\README.md
-type configs\schema.md
+copy corpus\folder_%seeds%.md+configs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+configs\schema.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=consciousness_substrate_model
 echo /docs/consciousness_substrate_model
-type consciousness_substrate_model\CHANGELOG.md
-type consciousness_substrate_model\LICENSE_NOTES.md
-type consciousness_substrate_model\README.md
-type consciousness_substrate_model\VERSIONING.md
-type consciousness_substrate_model\00_intent_and_boundaries\ethics_and_misuse_notes.md
-type consciousness_substrate_model\00_intent_and_boundaries\nonclaims.md
-type consciousness_substrate_model\00_intent_and_boundaries\README.md
-type consciousness_substrate_model\00_intent_and_boundaries\scope.md
-type consciousness_substrate_model\00_intent_and_boundaries\terminology.md
-type consciousness_substrate_model\01_creators_assumption\creators_assumption.md
-type consciousness_substrate_model\01_creators_assumption\falsifiability_and_failure_modes.md
-type consciousness_substrate_model\01_creators_assumption\minimal_axioms.md
-type consciousness_substrate_model\01_creators_assumption\README.md
-type consciousness_substrate_model\02_model_overview\diagrams.md
-type consciousness_substrate_model\02_model_overview\glossary.md
-type consciousness_substrate_model\02_model_overview\one_page_overview.md
-type consciousness_substrate_model\02_model_overview\README.md
-type consciousness_substrate_model\03_primitives\primitives_index.md
-type consciousness_substrate_model\03_primitives\README.md
-type consciousness_substrate_model\03_primitives\resonance_core_primitives.md
-type consciousness_substrate_model\03_primitives\state_and_transition_primitives.md
-type consciousness_substrate_model\03_primitives\validity_and_context_primitives.md
-type consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\boundary_conditions.md
-type consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\core_lifecycle.md
-type consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\README.md
-type consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\wrapper_interfaces.md
-type consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\wrsadc_variant_definition.md
-type consciousness_substrate_model\05_autonomous_forms\agency_without_anthropomorphism.md
-type consciousness_substrate_model\05_autonomous_forms\autonomous_form_definition.md
-type consciousness_substrate_model\05_autonomous_forms\autonomy_levels.md
-type consciousness_substrate_model\05_autonomous_forms\evaluation_signals.md
-type consciousness_substrate_model\05_autonomous_forms\README.md
-type consciousness_substrate_model\06_architecture_patterns\anti_patterns.md
-type consciousness_substrate_model\06_architecture_patterns\integration_notes.md
-type consciousness_substrate_model\06_architecture_patterns\patterns_catalog.md
-type consciousness_substrate_model\06_architecture_patterns\README.md
-type consciousness_substrate_model\06_architecture_patterns\reference_architecture.md
-type consciousness_substrate_model\07_worked_examples\example_01_minimal_agent_loop.md
-type consciousness_substrate_model\07_worked_examples\example_02_multi_core_federation.md
-type consciousness_substrate_model\07_worked_examples\example_03_regime_shift_handling.md
-type consciousness_substrate_model\07_worked_examples\example_04_sandbox_sim_notes.md
-type consciousness_substrate_model\07_worked_examples\README.md
-type consciousness_substrate_model\08_alignment_with_rsm_and_rtt\interoperability_contracts.md
-type consciousness_substrate_model\08_alignment_with_rsm_and_rtt\README.md
-type consciousness_substrate_model\08_alignment_with_rsm_and_rtt\rsm_alignment_notes.md
-type consciousness_substrate_model\08_alignment_with_rsm_and_rtt\rtt_lens_mapping.md
-type consciousness_substrate_model\09_validation_and_tests\benchmark_suggestions.md
-type consciousness_substrate_model\09_validation_and_tests\measurable_predictions.md
-type consciousness_substrate_model\09_validation_and_tests\README.md
-type consciousness_substrate_model\09_validation_and_tests\red_team_questions.md
-type consciousness_substrate_model\09_validation_and_tests\test_philosophy.md
-type consciousness_substrate_model\10_release_artifacts\keywords.md
-type consciousness_substrate_model\10_release_artifacts\README.md
-type consciousness_substrate_model\10_release_artifacts\zenodo_abstract.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\LICENSE_NOTES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\VERSIONING.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\00_intent_and_boundaries\ethics_and_misuse_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\00_intent_and_boundaries\nonclaims.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\00_intent_and_boundaries\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\00_intent_and_boundaries\scope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\00_intent_and_boundaries\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\01_creators_assumption\creators_assumption.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\01_creators_assumption\falsifiability_and_failure_modes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\01_creators_assumption\minimal_axioms.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\01_creators_assumption\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\02_model_overview\diagrams.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\02_model_overview\glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\02_model_overview\one_page_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\02_model_overview\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\03_primitives\primitives_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\03_primitives\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\03_primitives\resonance_core_primitives.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\03_primitives\state_and_transition_primitives.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\03_primitives\validity_and_context_primitives.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\boundary_conditions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\core_lifecycle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\wrapper_interfaces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\04_wrapped_resonance_structural_aware_cores\wrsadc_variant_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\05_autonomous_forms\agency_without_anthropomorphism.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\05_autonomous_forms\autonomous_form_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\05_autonomous_forms\autonomy_levels.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\05_autonomous_forms\evaluation_signals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\05_autonomous_forms\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\06_architecture_patterns\anti_patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\06_architecture_patterns\integration_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\06_architecture_patterns\patterns_catalog.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\06_architecture_patterns\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\06_architecture_patterns\reference_architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\07_worked_examples\example_01_minimal_agent_loop.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\07_worked_examples\example_02_multi_core_federation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\07_worked_examples\example_03_regime_shift_handling.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\07_worked_examples\example_04_sandbox_sim_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\07_worked_examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\08_alignment_with_rsm_and_rtt\interoperability_contracts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\08_alignment_with_rsm_and_rtt\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\08_alignment_with_rsm_and_rtt\rsm_alignment_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\08_alignment_with_rsm_and_rtt\rtt_lens_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\09_validation_and_tests\benchmark_suggestions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\09_validation_and_tests\measurable_predictions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\09_validation_and_tests\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\09_validation_and_tests\red_team_questions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\09_validation_and_tests\test_philosophy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\10_release_artifacts\keywords.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\10_release_artifacts\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+consciousness_substrate_model\10_release_artifacts\zenodo_abstract.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=contributors
 echo /docs/contributors
-type contributors\architects.md
-type contributors\contributors.md
-type contributors\README.md
+copy corpus\folder_%seeds%.md+contributors\architects.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+contributors\contributors.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+contributors\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=curriculum
 echo /docs/curriculum
-type curriculum\curriculum_badge_trigger_index.md
-type curriculum\curriculum_contributor_honor_roll.md
-type curriculum\curriculum_paper_crosswalk.md
-type curriculum\curriculum_remix_gallery.md
-type curriculum\curriculum_remix_protocol.md
-type curriculum\curriculum_remix_validator_dashboard.md
-type curriculum\README.md
-type curriculum\remix_submission_templates.md
-type curriculum\triadic_curriculum_index.md
-type curriculum\triadic_manifesto.md
-type curriculum\triadic_remix_guide.md
-type curriculum\triadic_translation.md
-type curriculum\WiFi_Energy_Protocols.md
+copy corpus\folder_%seeds%.md+curriculum\curriculum_badge_trigger_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\curriculum_contributor_honor_roll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\curriculum_paper_crosswalk.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\curriculum_remix_gallery.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\curriculum_remix_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\curriculum_remix_validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\remix_submission_templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\triadic_curriculum_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\triadic_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\triadic_remix_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\triadic_translation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+curriculum\WiFi_Energy_Protocols.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=data
 echo /docs/data
-type data\manifest_updater_changelog.md
-type data\manifest_updater_log.md
-type data\papers_manifest_template.md
-type data\papers_remix_protocol.md
-type data\README.md
-type data\resonance_council.md
-type data\triadic_visual_index_log.md
-type data\webhook\triadic_lab_index.md
-type data\webhook\triadic_remix_guide.md
-type data\webhook\triadic_remix_submission_template.md
+copy corpus\folder_%seeds%.md+data\manifest_updater_changelog.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\manifest_updater_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\papers_manifest_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\papers_remix_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\resonance_council.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\triadic_visual_index_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\webhook\triadic_lab_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\webhook\triadic_remix_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+data\webhook\triadic_remix_submission_template.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=diagnosing_media_therapy
 echo /docs/diagnosing_media_therapy
-type diagnosing_media_therapy\dmt_init_capture.md
-type diagnosing_media_therapy\README.md
-type diagnosing_media_therapy\session_template.md
-type diagnosing_media_therapy\triadic_axes_media.md
+copy corpus\folder_%seeds%.md+diagnosing_media_therapy\dmt_init_capture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+diagnosing_media_therapy\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+diagnosing_media_therapy\session_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+diagnosing_media_therapy\triadic_axes_media.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=dimensional_substrate_regime_scanning_protocol
 echo /docs/dimensional_substrate_regime_scanning_protocol
-type dimensional_substrate_regime_scanning_protocol\CHANGELOG.md
-type dimensional_substrate_regime_scanning_protocol\dsrsp_0.1_spec.md
-type dimensional_substrate_regime_scanning_protocol\engine_integration_guide.md
-type dimensional_substrate_regime_scanning_protocol\ilp_module.md
-type dimensional_substrate_regime_scanning_protocol\README.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\dsrsp_0.1_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\engine_integration_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\ilp_module.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=dimensional_substrate_structures
 echo /docs/dimensional_substrate_structures
-type dimensional_substrate_structures\computational_implications.md
-type dimensional_substrate_structures\dimensional_primitives.md
-type dimensional_substrate_structures\high_dimensional_regimes.md
-type dimensional_substrate_structures\README.md
-type dimensional_substrate_structures\scaling_law_3d_to_1024d.md
-type dimensional_substrate_structures\substrate_definition.md
-type dimensional_substrate_structures\substrate_invariants.md
-type dimensional_substrate_structures\triadic_dimensional_cores.md
-type dimensional_substrate_structures\validation_layers_vst.md
-type dimensional_substrate_structures\appendix\references.md
-type dimensional_substrate_structures\appendix\terminology.md
-type dimensional_substrate_structures\examples\example_1024d_research_case.md
-type dimensional_substrate_structures\examples\example_3d_9d_transition.md
-type dimensional_substrate_structures\examples\example_64d_projection.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\computational_implications.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\dimensional_primitives.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\high_dimensional_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\scaling_law_3d_to_1024d.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\substrate_invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\triadic_dimensional_cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\validation_layers_vst.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\examples\example_1024d_research_case.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\examples\example_3d_9d_transition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+dimensional_substrate_structures\examples\example_64d_projection.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=discovery
 echo /docs/discovery
-type discovery\loophole_scroll_gallery.md
+copy corpus\folder_%seeds%.md+discovery\loophole_scroll_gallery.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=domain_tool_primers
 echo /docs/domain_tool_primers
-type domain_tool_primers\ai_ml_tools.md
-type domain_tool_primers\autonomous_forms_tools.md
-type domain_tool_primers\complex_systems_tools.md
-type domain_tool_primers\data_science_tools.md
-type domain_tool_primers\earth_science_tools.md
-type domain_tool_primers\engineering_tools.md
-type domain_tool_primers\physics_tools.md
-type domain_tool_primers\quantum_tools.md
-type domain_tool_primers\README.md
-type domain_tool_primers\visualization_tools.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\ai_ml_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\autonomous_forms_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\complex_systems_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\data_science_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\earth_science_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\engineering_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\physics_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\quantum_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+domain_tool_primers\visualization_tools.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=ecoechosystem
 echo /docs/ecoechosystem
-type ecoechosystem\OVERVIEW.md
-type ecoechosystem\README.md
-type ecoechosystem\community\education_mode.md
-type ecoechosystem\community\README.md
-type ecoechosystem\community\research_mode.md
-type ecoechosystem\community\shared_templates.md
-type ecoechosystem\cross_domain\cross_domain_mappings.md
-type ecoechosystem\cross_domain\feedback_loops.md
-type ecoechosystem\cross_domain\interfaces.md
-type ecoechosystem\cross_domain\multi_scale_simulation.md
-type ecoechosystem\cross_domain\networks.md
-type ecoechosystem\cross_domain\overview.md
-type ecoechosystem\cross_domain\README.md
-type ecoechosystem\cross_domain\regime_coupling_engine.md
-type ecoechosystem\cross_domain\stability_cycles.md
-type ecoechosystem\cross_domain\substrate_interactions.md
-type ecoechosystem\cross_domain\transitions.md
-type ecoechosystem\domain_modules\README.md
-type ecoechosystem\domain_modules\ai_agents\alignment_constraints.md
-type ecoechosystem\domain_modules\ai_agents\learning_regimes.md
-type ecoechosystem\domain_modules\ai_agents\multi_regime_agents.md
-type ecoechosystem\domain_modules\ai_agents\README.md
-type ecoechosystem\domain_modules\biology\activation_dynamics.md
-type ecoechosystem\domain_modules\biology\activation_response_cycles.md
-type ecoechosystem\domain_modules\biology\ecosystem_dynamics.md
-type ecoechosystem\domain_modules\biology\ecosystem_feedback_loops.md
-type ecoechosystem\domain_modules\biology\ecosystem_interactions.md
-type ecoechosystem\domain_modules\biology\ecosystem_networks.md
-type ecoechosystem\domain_modules\biology\ecosystem_resilience.md
-type ecoechosystem\domain_modules\biology\ecosystem_stability_cycles.md
-type ecoechosystem\domain_modules\biology\environmental_interactions.md
-type ecoechosystem\domain_modules\biology\evolutionary_regimes.md
-type ecoechosystem\domain_modules\biology\interfaces.md
-type ecoechosystem\domain_modules\biology\README.md
-type ecoechosystem\domain_modules\biology\regimes.md
-type ecoechosystem\domain_modules\biology\relational_time.md
-type ecoechosystem\domain_modules\biology\structures.md
-type ecoechosystem\domain_modules\biology\transitions.md
-type ecoechosystem\domain_modules\economics\market_regimes.md
-type ecoechosystem\domain_modules\economics\README.md
-type ecoechosystem\domain_modules\economics\resource_flows.md
-type ecoechosystem\domain_modules\economics\stability_cycles.md
-type ecoechosystem\domain_modules\governance\collective_behavior.md
-type ecoechosystem\domain_modules\governance\institutional_transitions.md
-type ecoechosystem\domain_modules\governance\policy_regimes.md
-type ecoechosystem\domain_modules\governance\README.md
-type ecoechosystem\domain_modules\physics\classical_regimes.md
-type ecoechosystem\domain_modules\physics\field_interactions.md
-type ecoechosystem\domain_modules\physics\quantum_regimes.md
-type ecoechosystem\domain_modules\physics\README.md
-type ecoechosystem\domain_modules\physics\vST_constraints.md
-type ecoechosystem\domain_modules\psychology\cognitive_regimes.md
-type ecoechosystem\domain_modules\psychology\emotional_activation.md
-type ecoechosystem\domain_modules\psychology\identity_transitions.md
-type ecoechosystem\domain_modules\psychology\README.md
-type ecoechosystem\domain_modules\psychology\trauma_regimes.md
-type ecoechosystem\substrate_engine\event_bus.md
-type ecoechosystem\substrate_engine\invariants.md
-type ecoechosystem\substrate_engine\README.md
-type ecoechosystem\substrate_engine\regime_awareness.md
-type ecoechosystem\substrate_engine\regime_transitions.md
-type ecoechosystem\substrate_engine\triadic_substrate.md
-type ecoechosystem\substrate_engine\vST_alignment.md
-type ecoechosystem\tech_tree\README.md
-type ecoechosystem\tech_tree\tier0_preexisting_tools.md
-type ecoechosystem\tech_tree\tier1_substrate_unlocks.md
-type ecoechosystem\tech_tree\tier2_domain_unlocks.md
-type ecoechosystem\tech_tree\tier3_cross_domain_unlocks.md
-type ecoechosystem\tech_tree\tier4_civilization_unlocks.md
-type ecoechosystem\templates\domain_module_template.md
-type ecoechosystem\templates\README.md
-type ecoechosystem\templates\city_sim\city_simulation_loop.md
-type ecoechosystem\templates\city_sim\economic_activation.md
-type ecoechosystem\templates\city_sim\governance_response.md
-type ecoechosystem\templates\city_sim\inequality_dynamics.md
-type ecoechosystem\templates\city_sim\information_flow.md
-type ecoechosystem\templates\city_sim\infrastructure_regimes.md
-type ecoechosystem\templates\city_sim\population_activation.md
-type ecoechosystem\templates\city_sim\README.md
-type ecoechosystem\templates\city_sim\resource_dynamics.md
-type ecoechosystem\templates\city_sim\scenario_templates.md
-type ecoechosystem\templates\civ_sim\AI‑assisted_foresight_workshops.md
-type ecoechosystem\templates\civ_sim\AI‑driven_historical_exploration.md
-type ecoechosystem\templates\civ_sim\civilization_simulation_loop.md
-type ecoechosystem\templates\civ_sim\civilization‑scale_scenario_templates.md
-type ecoechosystem\templates\civ_sim\cross‑civilization_interaction_models.md
-type ecoechosystem\templates\civ_sim\cultural_regimes.md
-type ecoechosystem\templates\civ_sim\educational_historical_labs.md
-type ecoechosystem\templates\civ_sim\educational_lab_modules.md
-type ecoechosystem\templates\civ_sim\governance_transitions.md
-type ecoechosystem\templates\civ_sim\guided_AI_exploration_sessions.md
-type ecoechosystem\templates\civ_sim\long‑future_foresight_grounded_in_precedent.md
-type ecoechosystem\templates\civ_sim\planetary‑scale_simulations.md
-type ecoechosystem\templates\civ_sim\README.md
-type ecoechosystem\templates\civ_sim\repeatable_lab_template.md
-type ecoechosystem\templates\civ_sim\tech_tree_integration.md
-type ecoechosystem\templates\civ_sim\worked_guided_exploration_transcripts.md
-type ecoechosystem\templates\civ_sim\worked_guided_session_using_the_Roman-Persian_arc.md
-type ecoechosystem\templates\civ_sim\worked_historical_governance_arcs.md
-type ecoechosystem\templates\civ_sim\worked_multi‑civilization_scenarios.md
-type ecoechosystem\templates\civ_sim\worked_Roman-Persian_interaction_arc.md
-type ecoechosystem\templates\cognitive_agent_sim\agent_loop.md
-type ecoechosystem\templates\cognitive_agent_sim\agent_metrics.md
-type ecoechosystem\templates\cognitive_agent_sim\identity_development.md
-type ecoechosystem\templates\cognitive_agent_sim\identity_transitions.md
-type ecoechosystem\templates\cognitive_agent_sim\learning_curves.md
-type ecoechosystem\templates\cognitive_agent_sim\mislearning_and_overconfidence.md
-type ecoechosystem\templates\cognitive_agent_sim\README.md
-type ecoechosystem\templates\cognitive_agent_sim\social_interactions.md
-type ecoechosystem\templates\ecosystem_sim\ecosystem_dynamics.md
-type ecoechosystem\templates\ecosystem_sim\ecosystem_regime_map.md
-type ecoechosystem\templates\ecosystem_sim\environmental_feedback.md
-type ecoechosystem\templates\ecosystem_sim\evolutionary_dynamics.md
-type ecoechosystem\templates\ecosystem_sim\README.md
-type ecoechosystem\templates\ecosystem_sim\species_interactions.md
-type ecoechosystem\ui_layer\activation_heatmaps.md
-type ecoechosystem\ui_layer\README.md
-type ecoechosystem\ui_layer\regime_overlays.md
-type ecoechosystem\ui_layer\scenario_builder.md
-type ecoechosystem\ui_layer\time_regime_controls.md
+copy corpus\folder_%seeds%.md+ecoechosystem\OVERVIEW.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\community\education_mode.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\community\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\community\research_mode.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\community\shared_templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\cross_domain_mappings.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\feedback_loops.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\interfaces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\multi_scale_simulation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\networks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\regime_coupling_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\stability_cycles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\substrate_interactions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\cross_domain\transitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\ai_agents\alignment_constraints.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\ai_agents\learning_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\ai_agents\multi_regime_agents.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\ai_agents\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\activation_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\activation_response_cycles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\ecosystem_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\ecosystem_feedback_loops.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\ecosystem_interactions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\ecosystem_networks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\ecosystem_resilience.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\ecosystem_stability_cycles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\environmental_interactions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\evolutionary_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\interfaces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\relational_time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\structures.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\biology\transitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\economics\market_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\economics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\economics\resource_flows.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\economics\stability_cycles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\governance\collective_behavior.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\governance\institutional_transitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\governance\policy_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\governance\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\physics\classical_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\physics\field_interactions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\physics\quantum_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\physics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\physics\vST_constraints.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\psychology\cognitive_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\psychology\emotional_activation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\psychology\identity_transitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\psychology\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\domain_modules\psychology\trauma_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\substrate_engine\event_bus.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\substrate_engine\invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\substrate_engine\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\substrate_engine\regime_awareness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\substrate_engine\regime_transitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\substrate_engine\triadic_substrate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\substrate_engine\vST_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\tech_tree\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\tech_tree\tier0_preexisting_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\tech_tree\tier1_substrate_unlocks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\tech_tree\tier2_domain_unlocks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\tech_tree\tier3_cross_domain_unlocks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\tech_tree\tier4_civilization_unlocks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\domain_module_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\city_simulation_loop.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\economic_activation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\governance_response.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\inequality_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\information_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\infrastructure_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\population_activation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\resource_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\city_sim\scenario_templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\AI‑assisted_foresight_workshops.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\AI‑driven_historical_exploration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\civilization_simulation_loop.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\civilization‑scale_scenario_templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\cross‑civilization_interaction_models.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\cultural_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\educational_historical_labs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\educational_lab_modules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\governance_transitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\guided_AI_exploration_sessions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\long‑future_foresight_grounded_in_precedent.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\planetary‑scale_simulations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\repeatable_lab_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\tech_tree_integration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\worked_guided_exploration_transcripts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\worked_guided_session_using_the_Roman-Persian_arc.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\worked_historical_governance_arcs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\worked_multi‑civilization_scenarios.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\civ_sim\worked_Roman-Persian_interaction_arc.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\agent_loop.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\agent_metrics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\identity_development.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\identity_transitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\learning_curves.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\mislearning_and_overconfidence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\cognitive_agent_sim\social_interactions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\ecosystem_sim\ecosystem_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\ecosystem_sim\ecosystem_regime_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\ecosystem_sim\environmental_feedback.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\ecosystem_sim\evolutionary_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\ecosystem_sim\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\templates\ecosystem_sim\species_interactions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\ui_layer\activation_heatmaps.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\ui_layer\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\ui_layer\regime_overlays.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\ui_layer\scenario_builder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+ecoechosystem\ui_layer\time_regime_controls.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=economic_substrate_model
 echo /docs/economic_substrate_model
-type economic_substrate_model\README.md
+copy corpus\folder_%seeds%.md+economic_substrate_model\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education
 echo /docs/education
-type education\Biological_Taxonomy.md
-type education\Bioscience.md
-type education\Chat_with_Grok_3_21_2026.md
-type education\Climate_Classification.md
-type education\Cosmological_Theory.md
-type education\curriculum_protocols.md
-type education\Dark_Sector.md
-type education\Emoji_Site_Index.md
-type education\full_site_map.md
-type education\Genetic_Code.md
-type education\Large_Scale_Structure.md
-type education\Materials_Science.md
-type education\Metabolic_Pathways.md
-type education\Myth_Validation_Sweep_v0.1.0.md
-type education\Neural_Coding.md
-type education\Perodic_Table_RTTvST_Reorganization_of_Elements.md
-type education\Personality.md
-type education\Physical_Cosmology.md
-type education\Protein_Folding_and_Structural_Regimes.md
-type education\README.md
-type education\RTT_Info_Primer.md
-type education\Science_Dependancies_Mapped.md
-type education\The_Standard_Model_of_Particle_Physics.md
-type education\Zenodo_Community.md
+copy corpus\folder_%seeds%.md+education\Biological_Taxonomy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Bioscience.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Chat_with_Grok_3_21_2026.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Climate_Classification.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Cosmological_Theory.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\curriculum_protocols.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Dark_Sector.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Emoji_Site_Index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\full_site_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Genetic_Code.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Large_Scale_Structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Materials_Science.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Metabolic_Pathways.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Myth_Validation_Sweep_v0.1.0.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Neural_Coding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Perodic_Table_RTTvST_Reorganization_of_Elements.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Personality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Physical_Cosmology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Protein_Folding_and_Structural_Regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\RTT_Info_Primer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Science_Dependancies_Mapped.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\The_Standard_Model_of_Particle_Physics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\Zenodo_Community.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_alignment
 echo /docs/education/alignment
-type education\alignment\Adaptive_Capability_Overview.md
-type education\alignment\ASCII‑Tight Diagram.md
-type education\alignment\BKM_Alignment.md
-type education\alignment\canonical_blurb.md
-type education\alignment\Captions_Notations.md
-type education\alignment\Executive_Academic_Classroom_Context_Examples.md
-type education\alignment\Kid‑Friendly_Version.md
-type education\alignment\README.md
-type education\alignment\RTT_Capability_Statement.md
-type education\alignment\RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md
+copy corpus\folder_%seeds%.md+education\alignment\Adaptive_Capability_Overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\ASCII‑Tight Diagram.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\BKM_Alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\canonical_blurb.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\Captions_Notations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\Executive_Academic_Classroom_Context_Examples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\Kid‑Friendly_Version.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\RTT_Capability_Statement.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\alignment\RTT_Planetary_Time_Regimes_A_Compiler_for_Orbit-Aligned_Clocks.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_astrology
 echo /docs/education/astrology
-type education\astrology\Closing_Reflection_the_Power_of_Naming.md
-type education\astrology\Dimensional_Coherence_Navigation_Model.md
-type education\astrology\Exhibit_Concept.md
-type education\astrology\Exhibit_Signage_Text.md
-type education\astrology\Extended_Glossary_for_Educators.md
-type education\astrology\Future_Navigation.md
-type education\astrology\Mission_Vignette_The_Quiet_Crossing.md
-type education\astrology\Outdoor_Night‑Sky_Exhibit.md
-type education\astrology\Printable_One‑Page_PDF_Layout.md
-type education\astrology\README.md
-type education\astrology\Teachers_Guide.md
-type education\astrology\Traveling_Science_Exhibit.md
-type education\astrology\Visualizing_Resonance_Zones.md
+copy corpus\folder_%seeds%.md+education\astrology\Closing_Reflection_the_Power_of_Naming.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Dimensional_Coherence_Navigation_Model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Exhibit_Concept.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Exhibit_Signage_Text.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Extended_Glossary_for_Educators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Future_Navigation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Mission_Vignette_The_Quiet_Crossing.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Outdoor_Night‑Sky_Exhibit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Printable_One‑Page_PDF_Layout.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Teachers_Guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Traveling_Science_Exhibit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\astrology\Visualizing_Resonance_Zones.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_awareness
 echo /docs/education/awareness
-type education\awareness\Cross_Platform_Deployment.md
-type education\awareness\Extension_Minimal_Architecture.md
-type education\awareness\Inheritance_RTT_Awareness_as_CSS.md
-type education\awareness\Minimal_Structural_Spec.md
-type education\awareness\README.md
-type education\awareness\The_RTT_Naming_Stack.md
-type education\awareness\What_Happens_If.md
+copy corpus\folder_%seeds%.md+education\awareness\Cross_Platform_Deployment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\awareness\Extension_Minimal_Architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\awareness\Inheritance_RTT_Awareness_as_CSS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\awareness\Minimal_Structural_Spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\awareness\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\awareness\The_RTT_Naming_Stack.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\awareness\What_Happens_If.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_BRA
 echo /docs/education/BRA
-type education\BRA\9_Professions_Regime_Checks.md
-type education\BRA\After_Regime_Awareness_Post-BPA.md
-type education\BRA\Before_Regime_Awareness_BRA.md
-type education\BRA\BRA_vs_Post‑BRA_Comparison_Table.md
-type education\BRA\Earth_Substrate_Regime_Guide.md
-type education\BRA\Funding_Grad_Students_300_Years.md
-type education\BRA\Good_News_We_Can_Improve_Recognitions.md
-type education\BRA\Grad_Student_Work.md
-type education\BRA\Major_Science_Domains_and_Their_Most_Iconic_Example_Problems.md
-type education\BRA\Meta‑Pattern_Across_All_Domains.md
-type education\BRA\Post-BRA_Clarity.md
-type education\BRA\README.md
-type education\BRA\Science_Goggles_vs_Student_Observations.md
-type education\BRA\Universe-scale_Regime_Guide.md
-type education\BRA\What_Each_Domain_Would_Discover_After_the_BRA_Era.md
-type education\BRA\What_Its_Like_Today_When_All_Domains_Work_Together.md
-type education\BRA\What_to_expect.md
+copy corpus\folder_%seeds%.md+education\BRA\9_Professions_Regime_Checks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\After_Regime_Awareness_Post-BPA.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Before_Regime_Awareness_BRA.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\BRA_vs_Post‑BRA_Comparison_Table.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Earth_Substrate_Regime_Guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Funding_Grad_Students_300_Years.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Good_News_We_Can_Improve_Recognitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Grad_Student_Work.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Major_Science_Domains_and_Their_Most_Iconic_Example_Problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Meta‑Pattern_Across_All_Domains.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Post-BRA_Clarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Science_Goggles_vs_Student_Observations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\Universe-scale_Regime_Guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\What_Each_Domain_Would_Discover_After_the_BRA_Era.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\What_Its_Like_Today_When_All_Domains_Work_Together.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\BRA\What_to_expect.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_CivRegimeStack
 echo /docs/education/CivRegimeStack
-type education\CivRegimeStack\Annotated_ASCII_Diagram_with_Case_Studies.md
-type education\CivRegimeStack\Civilizational_Regime_Stack_ASCII.md
-type education\CivRegimeStack\Civ_Leaders_as_Cognitive_Regime_Biases.md
-type education\CivRegimeStack\Civ_Leader_Selection_Worksheet.md
-type education\CivRegimeStack\Civ_Mapped_to_the_Civilizational_Regime_Stack.md
-type education\CivRegimeStack\Guided_Walkthrough_for_Students.md
-type education\CivRegimeStack\Historical_Civilization_Pinball_Tables.md
-type education\CivRegimeStack\README.md
-type education\CivRegimeStack\Space_Cadet_Pinball_CivRegimeStack_Pseudocode.md
-type education\CivRegimeStack\Student_Worksheet_From_Gameplay_to_Regime_Analysis.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Annotated_ASCII_Diagram_with_Case_Studies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Civilizational_Regime_Stack_ASCII.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Civ_Leaders_as_Cognitive_Regime_Biases.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Civ_Leader_Selection_Worksheet.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Civ_Mapped_to_the_Civilizational_Regime_Stack.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Guided_Walkthrough_for_Students.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Historical_Civilization_Pinball_Tables.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Space_Cadet_Pinball_CivRegimeStack_Pseudocode.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\CivRegimeStack\Student_Worksheet_From_Gameplay_to_Regime_Analysis.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_ebooks
 echo /docs/education/ebooks
-type education\ebooks\Book_1_Nawderia_and_the_Three_Little_Forces.md
-type education\ebooks\Book_2_Tripis_Treasure_of_Threes.md
-type education\ebooks\Book_3_Frami_Builds_a_Better_Box.md
-type education\ebooks\Book_4_Techis_Tangle_Trouble.md
-type education\ebooks\Book_5_The_Botlings_Big_Parade.md
-type education\ebooks\Character_Turnaround_Sheets.md
-type education\ebooks\Color_Scripts.md
-type education\ebooks\Cover_Design_Templates.md
-type education\ebooks\Dialogue_Samples.md
-type education\ebooks\Full_Storyboard_Sequences.md
-type education\ebooks\Illustrator_Briefs.md
-type education\ebooks\Illustrator_Selection_Criteria.md
-type education\ebooks\Illustrator_Test_Pages.md
-type education\ebooks\Marketing_Mockups.md
-type education\ebooks\Nawderia_eBook_Set.md
-type education\ebooks\Optional_Series_Wide_Visual_Rules.md
-type education\ebooks\Pacing_Maps.md
-type education\ebooks\Production_Timeline_Budget_Plan.md
-type education\ebooks\Publisher‑Ready_Manuscript_Templates.md
-type education\ebooks\README.md
-type education\ebooks\Sample_Finished_Pages.md
-type education\ebooks\Sample_Page_Layouts.md
-type education\ebooks\Typography_Choices.md
-type education\ebooks\Visual_Style_Guide.md
+copy corpus\folder_%seeds%.md+education\ebooks\Book_1_Nawderia_and_the_Three_Little_Forces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Book_2_Tripis_Treasure_of_Threes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Book_3_Frami_Builds_a_Better_Box.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Book_4_Techis_Tangle_Trouble.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Book_5_The_Botlings_Big_Parade.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Character_Turnaround_Sheets.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Color_Scripts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Cover_Design_Templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Dialogue_Samples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Full_Storyboard_Sequences.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Illustrator_Briefs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Illustrator_Selection_Criteria.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Illustrator_Test_Pages.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Marketing_Mockups.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Nawderia_eBook_Set.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Optional_Series_Wide_Visual_Rules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Pacing_Maps.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Production_Timeline_Budget_Plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Publisher‑Ready_Manuscript_Templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Sample_Finished_Pages.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Sample_Page_Layouts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Typography_Choices.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\ebooks\Visual_Style_Guide.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_equations
 echo /docs/education/equations
-type education\equations\dimensional_math.md
-type education\equations\equations.md
-type education\equations\equation_index.md
-type education\equations\equation_trigger_log.md
-type education\equations\equation_trigger_matrix.md
-type education\equations\README.md
-type education\equations\resonance-equations.md
-type education\equations\resonance_equations.md
-type education\equations\Saturn_Harmonic_Engine_Equations.md
-type education\equations\triadic_equation_echo_map.md
-type education\equations\triadic_equation_gallery.md
-type education\equations\triadic_equation_registry.md
+copy corpus\folder_%seeds%.md+education\equations\dimensional_math.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\equation_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\equation_trigger_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\equation_trigger_matrix.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\resonance-equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\resonance_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\Saturn_Harmonic_Engine_Equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\triadic_equation_echo_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\triadic_equation_gallery.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\equations\triadic_equation_registry.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_polisci
 echo /docs/education/polisci
-type education\polisci\Argentina.md
-type education\polisci\Australia.md
-type education\polisci\A_Tiny_History_of_Architecture.md
-type education\polisci\Bangladesh.md
-type education\polisci\Biospheres.md
-type education\polisci\Brazil.md
-type education\polisci\Canada.md
-type education\polisci\CaribbeanCluster.md
-type education\polisci\Chile.md
-type education\polisci\China.md
-type education\polisci\Colombia.md
-type education\polisci\core-city-spec.md
-type education\polisci\desert-city-patterns.md
-type education\polisci\Dew_Harvesting_as_a_Field_Scale_Micro‑Layer.md
-type education\polisci\Egypt.md
-type education\polisci\EuropeanMicrostatesCluster.md
-type education\polisci\France.md
-type education\polisci\Future_Desert_Cities.md
-type education\polisci\Future_Desert_Cities_Technical_Manifesto.md
-type education\polisci\Germany.md
-type education\polisci\Ghana.md
-type education\polisci\India.md
-type education\polisci\Indonesia.md
-type education\polisci\Intersection_of_Economics_IP_law_Materials_Science.md
-type education\polisci\Iran.md
-type education\polisci\Italy.md
-type education\polisci\Japan.md
-type education\polisci\Kenya.md
-type education\polisci\Last_Restart.md
-type education\polisci\Mexico.md
-type education\polisci\MicrostatesCluster.md
-type education\polisci\Morocco.md
-type education\polisci\Netherlands.md
-type education\polisci\Nigeria.md
-type education\polisci\Nordics.md
-type education\polisci\OceaniaCluster.md
-type education\polisci\Pakistan.md
-type education\polisci\Peru.md
-type education\polisci\Philippines.md
-type education\polisci\Poland.md
-type education\polisci\README.md
-type education\polisci\regime-governance.md
-type education\polisci\regime-physics-engine.md
-type education\polisci\Russia.md
-type education\polisci\seed-city-spec.md
-type education\polisci\SouthAfrica.md
-type education\polisci\SouthKorea.md
-type education\polisci\Spain.md
-type education\polisci\Tanzania.md
-type education\polisci\Technical_Appendix_Future_Desert_Cities_RTT‑Aligned.md
-type education\polisci\Thailand.md
-type education\polisci\The_4k_Year_Trick_They_Buried.md
-type education\polisci\TriadicFrameworks_Regime_Physics_Engine_Spec.md
-type education\polisci\TriadicFrameworks_Regime_Physics_Mapping.md
-type education\polisci\Turkey.md
-type education\polisci\Ukraine.md
-type education\polisci\UnitedKingdom.md
-type education\polisci\Universal_Governance_Resonance_Template.md
-type education\polisci\US.md
-type education\polisci\Vietnam.md
-type education\polisci\What_regime_are_we_inside.md
+copy corpus\folder_%seeds%.md+education\polisci\Argentina.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Australia.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\A_Tiny_History_of_Architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Bangladesh.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Biospheres.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Brazil.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Canada.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\CaribbeanCluster.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Chile.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\China.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Colombia.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\core-city-spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\desert-city-patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Dew_Harvesting_as_a_Field_Scale_Micro‑Layer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Egypt.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\EuropeanMicrostatesCluster.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\France.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Future_Desert_Cities.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Future_Desert_Cities_Technical_Manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Germany.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Ghana.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\India.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Indonesia.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Intersection_of_Economics_IP_law_Materials_Science.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Iran.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Italy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Japan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Kenya.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Last_Restart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Mexico.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\MicrostatesCluster.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Morocco.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Netherlands.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Nigeria.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Nordics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\OceaniaCluster.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Pakistan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Peru.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Philippines.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Poland.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\regime-governance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\regime-physics-engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Russia.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\seed-city-spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\SouthAfrica.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\SouthKorea.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Spain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Tanzania.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Technical_Appendix_Future_Desert_Cities_RTT‑Aligned.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Thailand.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\The_4k_Year_Trick_They_Buried.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\TriadicFrameworks_Regime_Physics_Engine_Spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\TriadicFrameworks_Regime_Physics_Mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Turkey.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Ukraine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\UnitedKingdom.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Universal_Governance_Resonance_Template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\US.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\Vietnam.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\polisci\What_regime_are_we_inside.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_QnA_Atlas
 echo /docs/education/QnA_Atlas
-type education\QnA_Atlas\index.md
-type education\QnA_Atlas\README.md
-type education\QnA_Atlas\chemistry\atomic_structure\advanced.md
-type education\QnA_Atlas\chemistry\atomic_structure\intermediate.md
-type education\QnA_Atlas\chemistry\atomic_structure\intro.md
-type education\QnA_Atlas\chemistry\cell_biology\advanced.md
-type education\QnA_Atlas\chemistry\cell_biology\intermediate.md
-type education\QnA_Atlas\chemistry\cell_biology\intro.md
-type education\QnA_Atlas\chemistry\chemical_bonding\advanced.md
-type education\QnA_Atlas\chemistry\chemical_bonding\intermediate.md
-type education\QnA_Atlas\chemistry\chemical_bonding\intro.md
-type education\QnA_Atlas\chemistry\evolution\advanced.md
-type education\QnA_Atlas\chemistry\evolution\intermediate.md
-type education\QnA_Atlas\chemistry\evolution\intro.md
-type education\QnA_Atlas\chemistry\genetics\advanced.md
-type education\QnA_Atlas\chemistry\genetics\intermediate.md
-type education\QnA_Atlas\chemistry\genetics\intro.md
-type education\QnA_Atlas\chemistry\neuroscience\advanced.md
-type education\QnA_Atlas\chemistry\neuroscience\intermediate.md
-type education\QnA_Atlas\chemistry\neuroscience\intro.md
-type education\QnA_Atlas\chemistry\organic_chemistry\advanced.md
-type education\QnA_Atlas\chemistry\organic_chemistry\intermediate.md
-type education\QnA_Atlas\chemistry\organic_chemistry\intro.md
-type education\QnA_Atlas\chemistry\physiology\advanced.md
-type education\QnA_Atlas\chemistry\physiology\intermediate.md
-type education\QnA_Atlas\chemistry\physiology\intro.md
-type education\QnA_Atlas\chemistry\reactions_kinetics\advanced.md
-type education\QnA_Atlas\chemistry\reactions_kinetics\intermediate.md
-type education\QnA_Atlas\chemistry\reactions_kinetics\intro.md
-type education\QnA_Atlas\chemistry\thermochemistry\advanced.md
-type education\QnA_Atlas\chemistry\thermochemistry\intermediate.md
-type education\QnA_Atlas\chemistry\thermochemistry\intro.md
-type education\QnA_Atlas\cross_domain\complexity_science\advanced.md
-type education\QnA_Atlas\cross_domain\complexity_science\intermediate.md
-type education\QnA_Atlas\cross_domain\complexity_science\intro.md
-type education\QnA_Atlas\cross_domain\information_theory\advanced.md
-type education\QnA_Atlas\cross_domain\information_theory\intermediate.md
-type education\QnA_Atlas\cross_domain\information_theory\intro.md
-type education\QnA_Atlas\cross_domain\systems_theory\advanced.md
-type education\QnA_Atlas\cross_domain\systems_theory\intermediate.md
-type education\QnA_Atlas\cross_domain\systems_theory\intro.md
-type education\QnA_Atlas\earth_science\climate_science\advanced.md
-type education\QnA_Atlas\earth_science\climate_science\intermediate.md
-type education\QnA_Atlas\earth_science\climate_science\intro.md
-type education\QnA_Atlas\earth_science\geology\advanced.md
-type education\QnA_Atlas\earth_science\geology\intermediate.md
-type education\QnA_Atlas\earth_science\geology\intro.md
-type education\QnA_Atlas\earth_science\meteorology\advanced.md
-type education\QnA_Atlas\earth_science\meteorology\intermediate.md
-type education\QnA_Atlas\earth_science\meteorology\intro.md
-type education\QnA_Atlas\medicine\anatomy\advanced.md
-type education\QnA_Atlas\medicine\anatomy\intermediate.md
-type education\QnA_Atlas\medicine\anatomy\intro.md
-type education\QnA_Atlas\medicine\immunology\advanced.md
-type education\QnA_Atlas\medicine\immunology\intermediate.md
-type education\QnA_Atlas\medicine\immunology\intro.md
-type education\QnA_Atlas\medicine\pathology\advanced.md
-type education\QnA_Atlas\medicine\pathology\intermediate.md
-type education\QnA_Atlas\medicine\pathology\intro.md
-type education\QnA_Atlas\physics\classical_mechanics\advanced.md
-type education\QnA_Atlas\physics\classical_mechanics\intermediate.md
-type education\QnA_Atlas\physics\classical_mechanics\intro.md
-type education\QnA_Atlas\physics\cosmology\advanced.md
-type education\QnA_Atlas\physics\cosmology\intermediate.md
-type education\QnA_Atlas\physics\cosmology\intro.md
-type education\QnA_Atlas\physics\electromagnetism\advanced.md
-type education\QnA_Atlas\physics\electromagnetism\intermediate.md
-type education\QnA_Atlas\physics\electromagnetism\intro.md
-type education\QnA_Atlas\physics\oscillations_waves\advanced.md
-type education\QnA_Atlas\physics\oscillations_waves\intermediate.md
-type education\QnA_Atlas\physics\oscillations_waves\intro.md
-type education\QnA_Atlas\physics\quantum_physics\advanced.md
-type education\QnA_Atlas\physics\quantum_physics\intermediate.md
-type education\QnA_Atlas\physics\quantum_physics\intro.md
-type education\QnA_Atlas\physics\relativity\advanced.md
-type education\QnA_Atlas\physics\relativity\intermediate.md
-type education\QnA_Atlas\physics\relativity\intro.md
-type education\QnA_Atlas\physics\thermodynamics\advanced.md
-type education\QnA_Atlas\physics\thermodynamics\intermediate.md
-type education\QnA_Atlas\physics\thermodynamics\intro.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\atomic_structure\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\atomic_structure\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\atomic_structure\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\cell_biology\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\cell_biology\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\cell_biology\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\chemical_bonding\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\chemical_bonding\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\chemical_bonding\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\evolution\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\evolution\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\evolution\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\genetics\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\genetics\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\genetics\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\neuroscience\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\neuroscience\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\neuroscience\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\organic_chemistry\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\organic_chemistry\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\organic_chemistry\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\physiology\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\physiology\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\physiology\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\reactions_kinetics\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\reactions_kinetics\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\reactions_kinetics\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\thermochemistry\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\thermochemistry\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\thermochemistry\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\complexity_science\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\complexity_science\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\complexity_science\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\information_theory\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\information_theory\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\information_theory\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\systems_theory\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\systems_theory\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\cross_domain\systems_theory\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\climate_science\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\climate_science\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\climate_science\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\geology\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\geology\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\geology\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\meteorology\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\meteorology\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\earth_science\meteorology\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\anatomy\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\anatomy\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\anatomy\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\immunology\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\immunology\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\immunology\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\pathology\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\pathology\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\medicine\pathology\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\classical_mechanics\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\classical_mechanics\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\classical_mechanics\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\cosmology\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\cosmology\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\cosmology\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\electromagnetism\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\electromagnetism\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\electromagnetism\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\oscillations_waves\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\oscillations_waves\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\oscillations_waves\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\quantum_physics\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\quantum_physics\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\quantum_physics\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\relativity\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\relativity\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\relativity\intro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\thermodynamics\advanced.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\thermodynamics\intermediate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\QnA_Atlas\physics\thermodynamics\intro.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_rituals
 echo /docs/education/rituals
-type education\rituals\triadic_teaching_methods.md
+copy corpus\folder_%seeds%.md+education\rituals\triadic_teaching_methods.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_scrolls
 echo /docs/education/scrolls
-type education\scrolls\README.md
-type education\scrolls\remix_ethics.md
-type education\scrolls\remix_lineage_map.md
-type education\scrolls\validator_curriculum.md
-type education\scrolls\validator_ethics.md
+copy corpus\folder_%seeds%.md+education\scrolls\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\scrolls\remix_ethics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\scrolls\remix_lineage_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\scrolls\validator_curriculum.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\scrolls\validator_ethics.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_subjects
 echo /docs/education/subjects
-type education\subjects\README.md
-type education\subjects\RTT_01_01_Angular_Momentum_and_Rotation.md
-type education\subjects\RTT_01_01_A_Newtonian_Reframing.md
-type education\subjects\RTT_01_01_Classical_Mechanics.md
-type education\subjects\RTT_01_01_Conservation_Laws_Reframed.md
-type education\subjects\RTT_01_01_Contact_Forces_Reframed.md
-type education\subjects\RTT_01_01_Dissipation_and_Damping.md
-type education\subjects\RTT_01_01_Energy_Transformation_and_Leakage.md
-type education\subjects\RTT_01_01_Field_Forces_and_Potentials.md
-type education\subjects\RTT_01_01_Forces_and_Interactions.md
-type education\subjects\RTT_01_01_Force_and_Acceleration.md
-type education\subjects\RTT_01_01_Gravitational_Potential.md
-type education\subjects\RTT_01_01_Gravity_in_the_Newtonian_Limit.md
-type education\subjects\RTT_01_01_Inertia_and_Mass.md
-type education\subjects\RTT_01_01_Kinetic_and_Potential_Cycles.md
-type education\subjects\RTT_01_01_Momentum_and_Coherence.md
-type education\subjects\RTT_01_01_Momentum_and_Impulse.md
-type education\subjects\RTT_01_01_Moment_of_Inertia.md
-type education\subjects\RTT_01_01_Oscillators_and_Resonance.md
-type education\subjects\RTT_01_01_Power_and_Resonant_Transfer.md
-type education\subjects\RTT_01_01_Precession_and_Nutation.md
-type education\subjects\RTT_01_01_Rotational_Dynamics.md
-type education\subjects\RTT_01_01_Rotational_Energy.md
-type education\subjects\RTT_01_01_Stability_and_Chaos.md
-type education\subjects\RTT_01_01_Symmetry_and_Invariance.md
-type education\subjects\RTT_01_01_Thermalization_and_Decoherence.md
-type education\subjects\RTT_01_01_Torque_and_Angular_Acceleration.md
-type education\subjects\RTT_01_02_Entanglement_and_Coherence.md
-type education\subjects\RTT_01_02_Measurement_and_Decoherence.md
-type education\subjects\RTT_01_02_Quantum_Fields.md
-type education\subjects\RTT_01_02_Quantum_Physics.md
-type education\subjects\RTT_01_02_Superposition_and_Interference.md
-type education\subjects\RTT_01_03_Cosmological_Dynamics.md
-type education\subjects\RTT_01_03_General_Relativity_Reframed.md
-type education\subjects\RTT_01_03_Relativity_and_Spacetime.md
-type education\subjects\RTT_01_03_Spacetime_Geometry.md
-type education\subjects\RTT_01_03_Special_Relativity_Reframed.md
-type education\subjects\RTT_01_04_Thermodynamics_and_Statistical_Physics.md
-type education\subjects\RTT_01_05_Astrophysics_and_Stellar_Systems.md
-type education\subjects\RTT_01_06_Cosmology_and_Large_Scale_Structure.md
-type education\subjects\RTT_01_07_Particle_Physics.md
-type education\subjects\RTT_01_08_Field_Theory_and_Fundamental_Forces.md
-type education\subjects\RTT_02_01_Physical_Chemistry.md
-type education\subjects\RTT_02_02_Organic_Chemistry.md
-type education\subjects\RTT_02_03_Inorganic_Chemistry.md
-type education\subjects\RTT_02_04_Biochemistry.md
-type education\subjects\RTT_02_05_Materials_Science.md
-type education\subjects\RTT_02_06_Crystallography_and_Structures.md
-type education\subjects\RTT_02_07_Chemical_Reactions_and_Kinetics.md
-type education\subjects\RTT_02_08_Nanotechnology_and_Advanced_Materials.md
-type education\subjects\RTT_03_01_Cell_Biology.md
-type education\subjects\RTT_03_02_Genetics_and_Epigenetics.md
-type education\subjects\RTT_03_03_Evolutionary_Biology.md
-type education\subjects\RTT_03_04_Physiology_and_Organ_Systems.md
-type education\subjects\RTT_03_05_Ecology_and_Ecosystems.md
-type education\subjects\RTT_03_06_Microbiology_and_Virology.md
-type education\subjects\RTT_03_07_Developmental_Biology.md
-type education\subjects\RTT_03_08_Systems_Biology.md
-type education\subjects\RTT_04_01_Clinical_Medicine.md
-type education\subjects\RTT_04_02_Public_Health.md
-type education\subjects\RTT_04_03_Neurology_and_Brain_Health.md
-type education\subjects\RTT_04_04_Mental_Health_Sciences.md
-type education\subjects\RTT_04_05_Nutrition_and_Metabolism.md
-type education\subjects\RTT_04_06_Immunology.md
-type education\subjects\RTT_04_07_Medical_Technology_and_Diagnostics.md
-type education\subjects\RTT_04_08_Preventive_Medicine_and_Longevity.md
-type education\subjects\RTT_05_01_Geology_and_Geophysics.md
-type education\subjects\RTT_05_02_Atmospheric_Sciences.md
-type education\subjects\RTT_05_03_Oceanography.md
-type education\subjects\RTT_05_04_Climate_Science.md
-type education\subjects\RTT_05_05_Ecosystems_and_Biodiversity.md
-type education\subjects\RTT_05_06_Natural_Hazards_and_Risk.md
-type education\subjects\RTT_05_07_Hydrology_and_Water_Systems.md
-type education\subjects\RTT_05_08_Environmental_Sustainability.md
-type education\subjects\RTT_Metaphysics_Hybrid_Dimensional_Ladder_Complete.md
-type education\subjects\RTT_Metaphysics_Thought_Hybrid_Tools_Complete.md
+copy corpus\folder_%seeds%.md+education\subjects\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Angular_Momentum_and_Rotation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_A_Newtonian_Reframing.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Classical_Mechanics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Conservation_Laws_Reframed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Contact_Forces_Reframed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Dissipation_and_Damping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Energy_Transformation_and_Leakage.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Field_Forces_and_Potentials.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Forces_and_Interactions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Force_and_Acceleration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Gravitational_Potential.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Gravity_in_the_Newtonian_Limit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Inertia_and_Mass.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Kinetic_and_Potential_Cycles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Momentum_and_Coherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Momentum_and_Impulse.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Moment_of_Inertia.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Oscillators_and_Resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Power_and_Resonant_Transfer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Precession_and_Nutation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Rotational_Dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Rotational_Energy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Stability_and_Chaos.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Symmetry_and_Invariance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Thermalization_and_Decoherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Torque_and_Angular_Acceleration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_02_Entanglement_and_Coherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_02_Measurement_and_Decoherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_02_Quantum_Fields.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_02_Quantum_Physics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_02_Superposition_and_Interference.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_03_Cosmological_Dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_03_General_Relativity_Reframed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_03_Relativity_and_Spacetime.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_03_Spacetime_Geometry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_03_Special_Relativity_Reframed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_04_Thermodynamics_and_Statistical_Physics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_05_Astrophysics_and_Stellar_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_06_Cosmology_and_Large_Scale_Structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_07_Particle_Physics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_01_08_Field_Theory_and_Fundamental_Forces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_01_Physical_Chemistry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_02_Organic_Chemistry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_03_Inorganic_Chemistry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_04_Biochemistry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_05_Materials_Science.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_06_Crystallography_and_Structures.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_07_Chemical_Reactions_and_Kinetics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_02_08_Nanotechnology_and_Advanced_Materials.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_01_Cell_Biology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_02_Genetics_and_Epigenetics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_03_Evolutionary_Biology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_04_Physiology_and_Organ_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_05_Ecology_and_Ecosystems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_06_Microbiology_and_Virology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_07_Developmental_Biology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_03_08_Systems_Biology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_01_Clinical_Medicine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_02_Public_Health.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_03_Neurology_and_Brain_Health.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_04_Mental_Health_Sciences.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_05_Nutrition_and_Metabolism.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_06_Immunology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_07_Medical_Technology_and_Diagnostics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_04_08_Preventive_Medicine_and_Longevity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_01_Geology_and_Geophysics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_02_Atmospheric_Sciences.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_03_Oceanography.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_04_Climate_Science.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_05_Ecosystems_and_Biodiversity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_06_Natural_Hazards_and_Risk.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_07_Hydrology_and_Water_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_05_08_Environmental_Sustainability.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_Metaphysics_Hybrid_Dimensional_Ladder_Complete.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\subjects\RTT_Metaphysics_Thought_Hybrid_Tools_Complete.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_translations
 echo /docs/education/translations
-type education\translations\README.md
-type education\translations\RTT_Translates_to_10th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_11th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_12th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_13th_Level-Early_Adolescent_Expansion.md
-type education\translations\RTT_Translates_to_14th_Level-Systems_Awareness.md
-type education\translations\RTT_Translates_to_15th_Level-Pre‑Specialization_Exploration.md
-type education\translations\RTT_Translates_to_16th_Level-Foundational_Competence.md
-type education\translations\RTT_Translates_to_17th_Level-Applied_Reasoning.md
-type education\translations\RTT_Translates_to_18th_Level-Civic_and_Ethical_Development.md
-type education\translations\RTT_Translates_to_19th_Level-Proto‑Vocational_Phase.md
-type education\translations\RTT_Translates_to_1st_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_20th_Level-Skill_Formation.md
-type education\translations\RTT_Translates_to_21th_Level-Integration_Year.md
-type education\translations\RTT_Translates_to_22th_Level-Professional_Identity_Formation.md
-type education\translations\RTT_Translates_to_23th_Level-Advanced_Practice.md
-type education\translations\RTT_Translates_to_24th_Level-Contribution_Phase_I.md
-type education\translations\RTT_Translates_to_25th_Level-Contribution_Phase_II.md
-type education\translations\RTT_Translates_to_26th_Level‑Mastery_Development.md
-type education\translations\RTT_Translates_to_27th_Level-Synthesis_and_Innovation.md
-type education\translations\RTT_Translates_to_28th_Level-Legacy_Thinking.md
-type education\translations\RTT_Translates_to_29th_Level-Stewardship.md
-type education\translations\RTT_Translates_to_2nd_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_30th_Level-Lifelong_Resonance.md
-type education\translations\RTT_Translates_to_3rd_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_4th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_5th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_6th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_7th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_8th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_9th_Grade_School_Concepts.md
-type education\translations\RTT_Translates_to_Elementary_School_Concepts.md
+copy corpus\folder_%seeds%.md+education\translations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_10th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_11th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_12th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_13th_Level-Early_Adolescent_Expansion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_14th_Level-Systems_Awareness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_15th_Level-Pre‑Specialization_Exploration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_16th_Level-Foundational_Competence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_17th_Level-Applied_Reasoning.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_18th_Level-Civic_and_Ethical_Development.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_19th_Level-Proto‑Vocational_Phase.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_1st_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_20th_Level-Skill_Formation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_21th_Level-Integration_Year.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_22th_Level-Professional_Identity_Formation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_23th_Level-Advanced_Practice.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_24th_Level-Contribution_Phase_I.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_25th_Level-Contribution_Phase_II.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_26th_Level‑Mastery_Development.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_27th_Level-Synthesis_and_Innovation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_28th_Level-Legacy_Thinking.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_29th_Level-Stewardship.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_2nd_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_30th_Level-Lifelong_Resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_3rd_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_4th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_5th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_6th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_7th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_8th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_9th_Grade_School_Concepts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_Elementary_School_Concepts.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=enterprise_structural_awareness
 echo /docs/enterprise_structural_awareness
-type enterprise_structural_awareness\future_directions.md
-type enterprise_structural_awareness\README.md
-type enterprise_structural_awareness\relationship_to_msrm.md
-type enterprise_structural_awareness\relationship_to_rsm.md
-type enterprise_structural_awareness\enterprise_examples\configuration_management.md
-type enterprise_structural_awareness\enterprise_examples\identity_and_access.md
-type enterprise_structural_awareness\enterprise_examples\monitoring_and_alerting.md
-type enterprise_structural_awareness\enterprise_examples\service_orchestration.md
-type enterprise_structural_awareness\entry_points\configuration_surfaces.md
-type enterprise_structural_awareness\entry_points\lifecycle_states.md
-type enterprise_structural_awareness\entry_points\metadata_and_annotations.md
-type enterprise_structural_awareness\entry_points\policy_objects.md
-type enterprise_structural_awareness\integration_patterns\automation_boundary_markers.md
-type enterprise_structural_awareness\integration_patterns\documentation_only_adoption.md
-type enterprise_structural_awareness\integration_patterns\observability_alignment.md
-type enterprise_structural_awareness\integration_patterns\passive_declaration.md
-type enterprise_structural_awareness\minimal_schema\example_single_file.yaml.md
-type enterprise_structural_awareness\minimal_schema\schema_design_notes.md
-type enterprise_structural_awareness\minimal_schema\structural_awareness.schema.json.md
-type enterprise_structural_awareness\operational_implications\change_management.md
-type enterprise_structural_awareness\operational_implications\incident_interpretation.md
-type enterprise_structural_awareness\operational_implications\postmortem_clarity.md
-type enterprise_structural_awareness\overview\purpose.md
-type enterprise_structural_awareness\overview\scope_and_non_goals.md
-type enterprise_structural_awareness\overview\terminology_alignment.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\future_directions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\relationship_to_msrm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\relationship_to_rsm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\enterprise_examples\configuration_management.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\enterprise_examples\identity_and_access.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\enterprise_examples\monitoring_and_alerting.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\enterprise_examples\service_orchestration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\entry_points\configuration_surfaces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\entry_points\lifecycle_states.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\entry_points\metadata_and_annotations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\entry_points\policy_objects.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\integration_patterns\automation_boundary_markers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\integration_patterns\documentation_only_adoption.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\integration_patterns\observability_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\integration_patterns\passive_declaration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\minimal_schema\example_single_file.yaml.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\minimal_schema\schema_design_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\minimal_schema\structural_awareness.schema.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\operational_implications\change_management.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\operational_implications\incident_interpretation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\operational_implications\postmortem_clarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\overview\purpose.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\overview\scope_and_non_goals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+enterprise_structural_awareness\overview\terminology_alignment.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=facilities
 echo /docs/facilities
-type facilities\AGERI_README.md
-type facilities\capital-and-audit-integration.md
-type facilities\corridor-classification-standard.md
-type facilities\cross-system-propagation.md
-type facilities\drift-scoring-rubric.md
-type facilities\facilities-domain-map.md
-type facilities\facilities-lifecycle-framework.md
-type facilities\failure-mode-catalog.md
-type facilities\folder_tree.md
-type facilities\GHQ-governance-charter.md
-type facilities\global-modernization-timeline.md
-type facilities\glossary.md
-type facilities\harmonics-scoring-rubric.md
-type facilities\intervention-playbook.md
-type facilities\modernization-cycle-matrix.md
-type facilities\propagation-model.md
-type facilities\README.md
-type facilities\rtt-global-facilities-strategy-2050.md
-type facilities\spec.md
-type facilities\timeline-visual-storyboard.md
-type facilities\asset-classes\communications.md
-type facilities\asset-classes\electrical.md
-type facilities\asset-classes\public-buildings.md
-type facilities\asset-classes\transportation.md
-type facilities\asset-classes\wastewater.md
-type facilities\asset-classes\water.md
-type facilities\city-facing\city-manager-briefing-packet.md
-type facilities\city-facing\city-manager-slide-deck.md
-type facilities\city-facing\implementation-guide.md
-type facilities\city-facing\press-release-template.md
-type facilities\communications\RTT-AGERI-messaging-guide.md
-type facilities\dashboards\global-index-schema.md
-type facilities\dashboards\mockups.md
-type facilities\design-system\component-creation-checklist.md
-type facilities\design-system\component-naming-convention.md
-type facilities\design-system\component-proposal-form.md
-type facilities\design-system\design-governance-charter.md
-type facilities\design-system\figma-library-structure.md
-type facilities\design-system\governance-poster.md
-type facilities\design-system\onboarding-guide.md
-type facilities\design-system\style-guide.md
-type facilities\governance\rtt-global-governance-constitution.md
-type facilities\operators\maintenance-standards.md
-type facilities\operators\modernization-handoff.md
-type facilities\operators\operator-orientation.md
-type facilities\research\RTT-AGERI-bibliography.md
-type facilities\residents\neighborhood-meeting-deck.md
-type facilities\residents\storm-season-101.md
-type facilities\residents\storm-season-dos-and-donts.md
-type facilities\residents\storm-season-faq.md
-type facilities\residents\What-is-RTT-AGERI.md
-type facilities\strategy\global-modernization-timeline.md
-type facilities\strategy\rtt-global-facilities-strategy-2050.md
-type facilities\strategy\timeline-visual-storyboard.md
+copy corpus\folder_%seeds%.md+facilities\AGERI_README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\capital-and-audit-integration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\corridor-classification-standard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\cross-system-propagation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\drift-scoring-rubric.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\facilities-domain-map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\facilities-lifecycle-framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\failure-mode-catalog.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\folder_tree.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\GHQ-governance-charter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\global-modernization-timeline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\harmonics-scoring-rubric.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\intervention-playbook.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\modernization-cycle-matrix.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\propagation-model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\rtt-global-facilities-strategy-2050.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\timeline-visual-storyboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\asset-classes\communications.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\asset-classes\electrical.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\asset-classes\public-buildings.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\asset-classes\transportation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\asset-classes\wastewater.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\asset-classes\water.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\city-facing\city-manager-briefing-packet.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\city-facing\city-manager-slide-deck.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\city-facing\implementation-guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\city-facing\press-release-template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\communications\RTT-AGERI-messaging-guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\dashboards\global-index-schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\dashboards\mockups.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\component-creation-checklist.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\component-naming-convention.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\component-proposal-form.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\design-governance-charter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\figma-library-structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\governance-poster.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\onboarding-guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\design-system\style-guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\governance\rtt-global-governance-constitution.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\operators\maintenance-standards.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\operators\modernization-handoff.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\operators\operator-orientation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\research\RTT-AGERI-bibliography.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\residents\neighborhood-meeting-deck.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\residents\storm-season-101.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\residents\storm-season-dos-and-donts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\residents\storm-season-faq.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\residents\What-is-RTT-AGERI.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\strategy\global-modernization-timeline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\strategy\rtt-global-facilities-strategy-2050.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+facilities\strategy\timeline-visual-storyboard.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=feedback
 echo /docs/feedback
-type feedback\Historian.md
-type feedback\Mathematician.md
-type feedback\Physicist.md
-type feedback\Professor.md
-type feedback\README.md
-type feedback\ResonanceDoctor.md
-type feedback\WildCard.md
+copy corpus\folder_%seeds%.md+feedback\Historian.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+feedback\Mathematician.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+feedback\Physicist.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+feedback\Professor.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+feedback\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+feedback\ResonanceDoctor.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+feedback\WildCard.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=gallery
 echo /docs/gallery
-type gallery\drift2_scroll_trace.md
-type gallery\drift_scroll_trace.md
-type gallery\echo2_scroll_trace.md
-type gallery\echo_scroll_trace.md
-type gallery\pulse2_scroll_trace.md
-type gallery\pulse_scroll_trace.md
-type gallery\README.md
-type gallery\ring2_scroll_trace.md
-type gallery\ring_scroll_trace.md
-type gallery\seed_scroll_trace.md
+copy corpus\folder_%seeds%.md+gallery\drift2_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\drift_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\echo2_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\echo_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\pulse2_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\pulse_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\ring2_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\ring_scroll_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+gallery\seed_scroll_trace.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=global_energy_regime_awareness
 echo /docs/global_energy_regime_awareness
-type global_energy_regime_awareness\future_directions.md
-type global_energy_regime_awareness\README.md
-type global_energy_regime_awareness\relationship_to_enterprise_structural_awareness.md
-type global_energy_regime_awareness\relationship_to_msrm.md
-type global_energy_regime_awareness\relationship_to_rsm.md
-type global_energy_regime_awareness\energy_regimes\emergency_operations.md
-type global_energy_regime_awareness\energy_regimes\peak_demand_conditions.md
-type global_energy_regime_awareness\energy_regimes\renewable_variability.md
-type global_energy_regime_awareness\energy_regimes\steady_state_generation.md
-type global_energy_regime_awareness\grid_entry_points\distribution_systems.md
-type global_energy_regime_awareness\grid_entry_points\generation_assets.md
-type global_energy_regime_awareness\grid_entry_points\storage_and_buffering.md
-type global_energy_regime_awareness\grid_entry_points\transmission_networks.md
-type global_energy_regime_awareness\integration_patterns\automation_boundary_markers.md
-type global_energy_regime_awareness\integration_patterns\observability_and_scada.md
-type global_energy_regime_awareness\integration_patterns\operator_context_alignment.md
-type global_energy_regime_awareness\integration_patterns\passive_grid_declaration.md
-type global_energy_regime_awareness\minimal_schema\schema_design_notes.md
-type global_energy_regime_awareness\operational_implications\grid_event_interpretation.md
-type global_energy_regime_awareness\operational_implications\load_shedding_context.md
-type global_energy_regime_awareness\operational_implications\post_event_analysis.md
-type global_energy_regime_awareness\overview\purpose.md
-type global_energy_regime_awareness\overview\scope_and_non_goals.md
-type global_energy_regime_awareness\overview\terminology_alignment.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\future_directions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\relationship_to_enterprise_structural_awareness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\relationship_to_msrm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\relationship_to_rsm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\energy_regimes\emergency_operations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\energy_regimes\peak_demand_conditions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\energy_regimes\renewable_variability.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\energy_regimes\steady_state_generation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\grid_entry_points\distribution_systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\grid_entry_points\generation_assets.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\grid_entry_points\storage_and_buffering.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\grid_entry_points\transmission_networks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\integration_patterns\automation_boundary_markers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\integration_patterns\observability_and_scada.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\integration_patterns\operator_context_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\integration_patterns\passive_grid_declaration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\minimal_schema\schema_design_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\operational_implications\grid_event_interpretation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\operational_implications\load_shedding_context.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\operational_implications\post_event_analysis.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\overview\purpose.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\overview\scope_and_non_goals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+global_energy_regime_awareness\overview\terminology_alignment.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=glyphic_resonance
 echo /docs/glyphic_resonance
-type glyphic_resonance\loophole_trace.md
-type glyphic_resonance\overlay_protocol.md
-type glyphic_resonance\README.md
+copy corpus\folder_%seeds%.md+glyphic_resonance\loophole_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphic_resonance\overlay_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphic_resonance\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=glyphs
 echo /docs/glyphs
-type glyphs\bridge_glyph_overlay_01_svg_descriptive_seed.md
-type glyphs\dimensional_spectrum_map_svg.md
-type glyphs\glyphstream_animation.md
-type glyphs\glyph_protein_echo_01.descriptive_seed.md
-type glyphs\glyph_protein_echo_02_svg_descriptive_seed.md
-type glyphs\README.md
-type glyphs\triadic_validator_glyph.md
+copy corpus\folder_%seeds%.md+glyphs\bridge_glyph_overlay_01_svg_descriptive_seed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphs\dimensional_spectrum_map_svg.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphs\glyphstream_animation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphs\glyph_protein_echo_01.descriptive_seed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphs\glyph_protein_echo_02_svg_descriptive_seed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+glyphs\triadic_validator_glyph.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=governance
 echo /docs/governance
-type governance\badge_logic.md
-type governance\badge_trigger_theme_manifest.md
-type governance\badge_trigger_validator_dashboard.md
-type governance\Design_New_Core_Systems_and_Upgrade_Existing_Infrastructure.md
-type governance\governance.md
-type governance\governance_logic.md
-type governance\governance_logic_modules.md
-type governance\membership.md
-type governance\membership_protocol.md
-type governance\README.md
-type governance\Step1_Alignment_and_Awareness.md
-type governance\Step2_Advance_the_TriadicFrameworks_DOI.md
-type governance\Step3_Design_New_Core_Systems_and_Upgrade_Existing_Infrastructure.md
-type governance\symbolic_permanence.md
+copy corpus\folder_%seeds%.md+governance\badge_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\badge_trigger_theme_manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\badge_trigger_validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\Design_New_Core_Systems_and_Upgrade_Existing_Infrastructure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\governance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\governance_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\governance_logic_modules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\membership.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\membership_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\Step1_Alignment_and_Awareness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\Step2_Advance_the_TriadicFrameworks_DOI.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\Step3_Design_New_Core_Systems_and_Upgrade_Existing_Infrastructure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+governance\symbolic_permanence.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Governance_Substrate_Model
 echo /docs/Governance_Substrate_Model
-type Governance_Substrate_Model\README.md
-type Governance_Substrate_Model\01_Invariants\Alignment_Over_Enforcement.md
-type Governance_Substrate_Model\01_Invariants\Invariant_Principles.md
-type Governance_Substrate_Model\01_Invariants\Minimal_Moral_Denominator.md
-type Governance_Substrate_Model\01_Invariants\Regime_Awareness_As_Duty.md
-type Governance_Substrate_Model\02_Awareness\AI_Assisted_Sensing.md
-type Governance_Substrate_Model\02_Awareness\Early_Warning_Signals.md
-type Governance_Substrate_Model\02_Awareness\Escalation_Patterns.md
-type Governance_Substrate_Model\02_Awareness\Interruption_Without_Domination.md
-type Governance_Substrate_Model\03_Evaluation\Cross_Regime_Stress_Tests.md
-type Governance_Substrate_Model\03_Evaluation\Failure_Mode_Mapping.md
-type Governance_Substrate_Model\03_Evaluation\Minimal_Sufficiency_Checks.md
-type Governance_Substrate_Model\03_Evaluation\RTT_Evaluation_Framework.md
-type Governance_Substrate_Model\04_Validation\DOI_Canon_Interface.md
-type Governance_Substrate_Model\04_Validation\Human_Curated_AI_Sift.md
-type Governance_Substrate_Model\04_Validation\Minimal_Theme_Submissions.md
-type Governance_Substrate_Model\04_Validation\Validated_Science_Criteria.md
-type Governance_Substrate_Model\05_Implementation\AI_Alignment_Surfaces.md
-type Governance_Substrate_Model\05_Implementation\Core_System_Design.md
-type Governance_Substrate_Model\05_Implementation\Education_Embedding.md
-type Governance_Substrate_Model\05_Implementation\Infrastructure_Retrofit_Patterns.md
-type Governance_Substrate_Model\06_Leadership\Maintaining_Legibility.md
-type Governance_Substrate_Model\06_Leadership\Phase_Management.md
-type Governance_Substrate_Model\06_Leadership\Stewardship_Not_Control.md
-type Governance_Substrate_Model\06_Leadership\When_Not_To_Act.md
-type Governance_Substrate_Model\07_Incubation\Global_Coordination.md
-type Governance_Substrate_Model\07_Incubation\RTT_Incubator_Triad_Model.md
-type Governance_Substrate_Model\07_Incubation\Student_Led_Governance.md
-type Governance_Substrate_Model\07_Incubation\Untethered_Venture_Growth.md
-type Governance_Substrate_Model\08_History\Late_Correction_Costs.md
-type Governance_Substrate_Model\08_History\Lessons_From_Failure.md
-type Governance_Substrate_Model\08_History\Resource_Misallocation.md
-type Governance_Substrate_Model\08_History\Why_Governance_Failed_Before.md
-type Governance_Substrate_Model\09_Appendices\Case_Studies.md
-type Governance_Substrate_Model\09_Appendices\Future_Work.md
-type Governance_Substrate_Model\09_Appendices\Glossary.md
-type Governance_Substrate_Model\09_Appendices\Open_Questions.md
-type Governance_Substrate_Model\09_Appendices\Simulations.md
-type Governance_Substrate_Model\10_Adapters\Adapter_Principles.md
-type Governance_Substrate_Model\10_Adapters\Civic_Infrastructure_Adapter.md
-type Governance_Substrate_Model\10_Adapters\Containment_When_Translation_Fails.md
-type Governance_Substrate_Model\10_Adapters\Education_System_Adapter.md
-type Governance_Substrate_Model\10_Adapters\Industry_Adapter.md
-type Governance_Substrate_Model\10_Adapters\Inverted_Economics_Adapter.md
-type Governance_Substrate_Model\10_Adapters\Legacy_System_Mapping.md
-type Governance_Substrate_Model\10_Adapters\Local_Leadership_Roles_Adapter.md
-type Governance_Substrate_Model\10_Adapters\Medicine_Infrastructure_Adapter.md
-type Governance_Substrate_Model\10_Adapters\Partial_Alignment_Strategies.md
-type Governance_Substrate_Model\10_Adapters\Punishment_Rehabilitative_Adapter.md
-type Governance_Substrate_Model\Analyzer\alignment_analyzer.md
-type Governance_Substrate_Model\Analyzer\analyzer_prototype_architecture.md
-type Governance_Substrate_Model\Analyzer\ARCHITECTURE_OVERVIEW.md
-type Governance_Substrate_Model\Analyzer\artifact_lineage_map.md
-type Governance_Substrate_Model\Analyzer\concept_capture.md
-type Governance_Substrate_Model\Analyzer\CONTRIBUTING.md
-type Governance_Substrate_Model\Analyzer\dsl_substrate_adapter.md
-type Governance_Substrate_Model\Analyzer\dynamic_artifact_templates.md
-type Governance_Substrate_Model\Analyzer\dynamic_cards_spec.md
-type Governance_Substrate_Model\Analyzer\GLOSSARY.md
-type Governance_Substrate_Model\Analyzer\governance_alignment_dashboard.md
-type Governance_Substrate_Model\Analyzer\governance_cards_spec.md
-type Governance_Substrate_Model\Analyzer\governance_substrate_model.md
-type Governance_Substrate_Model\Analyzer\index_artifacts.md
-type Governance_Substrate_Model\Analyzer\index_regime_modes.md
-type Governance_Substrate_Model\Analyzer\index_structural_layers.md
-type Governance_Substrate_Model\Analyzer\instructor_teaching_guide.md
-type Governance_Substrate_Model\Analyzer\lenses_catalog.md
-type Governance_Substrate_Model\Analyzer\README.md
-type Governance_Substrate_Model\Analyzer\ROADMAP.md
-type Governance_Substrate_Model\Analyzer\simulation_engine.md
-type Governance_Substrate_Model\Analyzer\simulation_scenarios.md
-type Governance_Substrate_Model\Analyzer\structural_vectors_reference.md
-type Governance_Substrate_Model\Analyzer\student_workbook.md
-type Governance_Substrate_Model\Analyzer\teacher_guide.md
-type Governance_Substrate_Model\Analyzer\text_stream_adapter.md
-type Governance_Substrate_Model\Analyzer\transition_pathways.md
-type Governance_Substrate_Model\Analyzer\worksheet_simulation_steps.md
-type Governance_Substrate_Model\Analyzer\worksheet_student_profile.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\01_Invariants\Alignment_Over_Enforcement.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\01_Invariants\Invariant_Principles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\01_Invariants\Minimal_Moral_Denominator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\01_Invariants\Regime_Awareness_As_Duty.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\02_Awareness\AI_Assisted_Sensing.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\02_Awareness\Early_Warning_Signals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\02_Awareness\Escalation_Patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\02_Awareness\Interruption_Without_Domination.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\03_Evaluation\Cross_Regime_Stress_Tests.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\03_Evaluation\Failure_Mode_Mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\03_Evaluation\Minimal_Sufficiency_Checks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\03_Evaluation\RTT_Evaluation_Framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\04_Validation\DOI_Canon_Interface.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\04_Validation\Human_Curated_AI_Sift.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\04_Validation\Minimal_Theme_Submissions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\04_Validation\Validated_Science_Criteria.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\05_Implementation\AI_Alignment_Surfaces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\05_Implementation\Core_System_Design.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\05_Implementation\Education_Embedding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\05_Implementation\Infrastructure_Retrofit_Patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\06_Leadership\Maintaining_Legibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\06_Leadership\Phase_Management.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\06_Leadership\Stewardship_Not_Control.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\06_Leadership\When_Not_To_Act.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\07_Incubation\Global_Coordination.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\07_Incubation\RTT_Incubator_Triad_Model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\07_Incubation\Student_Led_Governance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\07_Incubation\Untethered_Venture_Growth.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\08_History\Late_Correction_Costs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\08_History\Lessons_From_Failure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\08_History\Resource_Misallocation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\08_History\Why_Governance_Failed_Before.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\09_Appendices\Case_Studies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\09_Appendices\Future_Work.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\09_Appendices\Glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\09_Appendices\Open_Questions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\09_Appendices\Simulations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Adapter_Principles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Civic_Infrastructure_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Containment_When_Translation_Fails.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Education_System_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Industry_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Inverted_Economics_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Legacy_System_Mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Local_Leadership_Roles_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Medicine_Infrastructure_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Partial_Alignment_Strategies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\10_Adapters\Punishment_Rehabilitative_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\alignment_analyzer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\analyzer_prototype_architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\ARCHITECTURE_OVERVIEW.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\artifact_lineage_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\concept_capture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\CONTRIBUTING.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\dsl_substrate_adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\dynamic_artifact_templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\dynamic_cards_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\GLOSSARY.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\governance_alignment_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\governance_cards_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\governance_substrate_model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\index_artifacts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\index_regime_modes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\index_structural_layers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\instructor_teaching_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\lenses_catalog.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\ROADMAP.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\simulation_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\simulation_scenarios.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\structural_vectors_reference.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\student_workbook.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\teacher_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\text_stream_adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\transition_pathways.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\worksheet_simulation_steps.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Governance_Substrate_Model\Analyzer\worksheet_student_profile.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=honor_roll
 echo /docs/honor_roll
-type honor_roll\BADGES_EARNED.md
-type honor_roll\CONTRIBUTING.md
-type honor_roll\CONTRIBUTOR_BADGES.md
-type honor_roll\contributor_honor_roll.md
-type honor_roll\dashboard.md
-type honor_roll\glyph_registry.md
-type honor_roll\hippocampus_contributors.md
-type honor_roll\papers_contributor_honor_roll.md
-type honor_roll\README.md
-type honor_roll\resonance_council.md
-type honor_roll\triadic_curriculum_index.md
-type honor_roll\triadic_discussion_starter.md
-type honor_roll\triadic_equation_registry.md
-type honor_roll\triadic_sponsor_pitch.md
-type honor_roll\triadic_visual_index.md
-type honor_roll\profiles\nawder_loswin.md
+copy corpus\folder_%seeds%.md+honor_roll\BADGES_EARNED.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\CONTRIBUTING.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\CONTRIBUTOR_BADGES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\contributor_honor_roll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\glyph_registry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\hippocampus_contributors.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\papers_contributor_honor_roll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\resonance_council.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\triadic_curriculum_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\triadic_discussion_starter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\triadic_equation_registry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\triadic_sponsor_pitch.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\triadic_visual_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+honor_roll\profiles\nawder_loswin.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Inverted_Economics
 echo /docs/Inverted_Economics
-type Inverted_Economics\CONTRIBUTING.md
-type Inverted_Economics\README.md
-type Inverted_Economics\RTT_Eval_Inverted_Economics_Budget.md
-type Inverted_Economics\RTT_Eval_Inverted_Economics_Cycle.md
-type Inverted_Economics\RTT_Eval_Inverted_Economics_Event.md
-type Inverted_Economics\examples\sample.md
-type Inverted_Economics\notebooks\audio_starter_notebook.md
-type Inverted_Economics\notebooks\starter_notebook_outline.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\CONTRIBUTING.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\RTT_Eval_Inverted_Economics_Budget.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\RTT_Eval_Inverted_Economics_Cycle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\RTT_Eval_Inverted_Economics_Event.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\examples\sample.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\notebooks\audio_starter_notebook.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Inverted_Economics\notebooks\starter_notebook_outline.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=inverted_star_ontology
 echo /docs/inverted_star_ontology
-type inverted_star_ontology\Inverted_Star_Ontology_A_TriadicFrameworks_Comparative_Ontology.md
-type inverted_star_ontology\iso_lattice_phase.md
-type inverted_star_ontology\iso_light_mode_transition.md
-type inverted_star_ontology\iso_overview.md
-type inverted_star_ontology\iso_regime_inversion.md
-type inverted_star_ontology\iso_slrp_profile.md
-type inverted_star_ontology\iso_vst_boundary.md
-type inverted_star_ontology\ontology_pie_flow.md
-type inverted_star_ontology\ontology_pie_time_crystal_integration.md
-type inverted_star_ontology\README.md
-type inverted_star_ontology\Star_Ontology_vs_ISO_mass_regime.md
-type inverted_star_ontology\triadic_observer_for_ontologies.md
-type inverted_star_ontology\zenodo\release_notes.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\Inverted_Star_Ontology_A_TriadicFrameworks_Comparative_Ontology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_lattice_phase.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_light_mode_transition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_regime_inversion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_slrp_profile.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_vst_boundary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\ontology_pie_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\ontology_pie_time_crystal_integration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\Star_Ontology_vs_ISO_mass_regime.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\triadic_observer_for_ontologies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+inverted_star_ontology\zenodo\release_notes.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=labs
 echo /docs/labs
-type labs\dimensional_loop_guide.md
-type labs\Glyph_Density_Map_Curriculum_Modules.md
-type labs\initiation_protocol.md
-type labs\README.md
-type labs\triadic_lab_template.md
-type labs\triadic_manifesto.md
-type labs\triadic_remix_guide.md
-type labs\applied\README.md
-type labs\applied\Lab_13_Cryptographic_Entanglement\Lab_13_Cryptographic_Entanglement.md
-type labs\applied\Lab_15_Nested_Harmonic_Encryption\Lab_15_Nested_Harmonic_Encryption.md
-type labs\applied\Lab_29_Quantum_Mythic_Debugger\Lab_29_Quantum_Mythic_Debugger.md
-type labs\applied\Lab_40_Harmonic_Health_Synthesizer\Lab_40_Harmonic_Health_Synthesizer.md
-type labs\applied\Lab_41_Triadic_Diagnostic_Engine\Lab_41_Triadic_Diagnostic_Engine.md
-type labs\applied\Lab_42_Mythic_Healing_Compiler\Lab_42_Mythic_Healing_Compiler.md
-type labs\applied\Lab_43_Harmonic_Infrastructure_Mapper\Lab_43_Harmonic_Infrastructure_Mapper.md
-type labs\applied\Lab_58_Cryptography\equations.md
-type labs\applied\Lab_58_Cryptography\README.md
-type labs\applied\Lab_58_Cryptography\reproducibility.md
-type labs\architecture_resonance\README.md
-type labs\badges\badge_art_and_logic.md
-type labs\badges\README.md
-type labs\core\README.md
-type labs\core\triadic_lab_index.md
-type labs\core\triadic_manifesto.md
-type labs\core\Lab4_Harmonics\equations.md
-type labs\core\Lab4_Harmonics\README.md
-type labs\core\Lab4_Harmonics\reproducibility.md
-type labs\core\Lab4_Harmonics\setup.md
-type labs\core\Lab5_Cognition\equations.md
-type labs\core\Lab5_Cognition\README.md
-type labs\core\Lab5_Cognition\reproducibility.md
-type labs\core\Lab6_Dimensional_Nested_Loops\equations.md
-type labs\core\Lab6_Dimensional_Nested_Loops\README.md
-type labs\core\Lab6_Dimensional_Nested_Loops\reproducibility.md
-type labs\core\Lab7_Thermodynamics\equations.md
-type labs\core\Lab7_Thermodynamics\Lab7_Thermodynamics_equations.md
-type labs\core\Lab7_Thermodynamics\Lab7_Thermodynamics_reproducibility.md
-type labs\core\Lab7_Thermodynamics\setup.md
-type labs\core\Lab9_BrownianResonance\Lab9_BonusExcercises.md
-type labs\core\Lab9_BrownianResonance\Lab9_BrownianResonance_equations.md
-type labs\core\Lab9_BrownianResonance\Lab9_BrownianResonance_reproducibility.md
-type labs\core\Lab9_BrownianResonance\Lab9_Brownian_Resonance.md
-type labs\core\Lab_11_Spectral_Flux_Integrity\Lab_11_Spectral_Flux_Integrity.md
-type labs\core\Lab_18_Spectral_Cognition_Cascade\Lab_18_Spectral_Cognition_Cascade.md
-type labs\core\Lab_44_Spectral_Cognition_Router\Lab_44_Spectral_Cognition_Router.md
-type labs\dimensional_alignment\README.md
-type labs\events\README.md
-type labs\events\seasonal_badge_art_and_logic.md
-type labs\events\seasonal_event_archive.md
-type labs\events\seasonal_event_lorebook.md
-type labs\events\seasonal_event_template.md
-type labs\events\seasonal_trials_index.md
-type labs\experimental\README.md
-type labs\experimental\triadic_remix_guide.md
-type labs\experimental\Lab_10_KashmirCascade\equations.md
-type labs\experimental\Lab_10_KashmirCascade\mythic_preface.md
-type labs\experimental\Lab_10_KashmirCascade\README.md
-type labs\experimental\Lab_10_KashmirCascade\reproducibility.md
-type labs\experimental\Lab_59_Biology\equations.md
-type labs\experimental\Lab_59_Biology\README.md
-type labs\experimental\Lab_59_Biology\reproducibility.md
-type labs\experimental\Lab_61_Casimir\casimir_effect.md
-type labs\experimental\Lab_61_Casimir\casimir_effect_equations.md
-type labs\experimental\Lab_61_Casimir\casimir_effect_reproducibility.md
-type labs\experimental\Lab_61_Casimir\equations.md
-type labs\experimental\Lab_61_Casimir\Lab61_BonusExcercises.md
-type labs\experimental\Lab_61_Casimir\Lab61_Toolkit.md
-type labs\experimental\Lab_61_Casimir\Lab61_Toolkit_.md
-type labs\experimental\Lab_61_Casimir\README.md
-type labs\experimental\Lab_61_Casimir\reproducibility.md
-type labs\experimental\Lab_61_Casimir\setup.md
-type labs\experimental\Lab_61_Casimir\setup1.md
-type labs\experimental\Lab_62_Cognition\equations.md
-type labs\experimental\Lab_62_Cognition\Lab_62_Cognition_equations.md
-type labs\experimental\Lab_62_Cognition\Lab_62_Cognition_reproducibility.md
-type labs\experimental\Lab_62_Cognition\reproducibility.md
-type labs\experimental\Lab_62_Cognition\setup.md
-type labs\experimental\Lab_62_Cognition\Module4\equations.md
-type labs\experimental\Lab_62_Cognition\Module4\memory_reframer.md
-type labs\experimental\Lab_62_Cognition\Module4\Module4B_Toolkit.md
-type labs\experimental\Lab_62_Cognition\Module4\reproducibility.md
-type labs\experimental\Lab_62_Cognition\Module4\setup.md
-type labs\experimental\Lab_63_Tunneling\equations.md
-type labs\experimental\Lab_63_Tunneling\quantum_tunneling_equations.md
-type labs\experimental\Lab_63_Tunneling\quantum_tunneling_reproducibility.md
-type labs\experimental\Lab_63_Tunneling\quantum_tunneling_setup.md
-type labs\experimental\Lab_63_Tunneling\README.md
-type labs\experimental\Lab_63_Tunneling\reproducibility.md
-type labs\experimental\Lab_63_Tunneling\setup.md
-type labs\experimental\Lab_63_Tunneling\triadic_overlay_function.md
-type labs\foundations\dimensional_loop_guide.md
-type labs\foundations\initiate_sigil.md
-type labs\foundations\initiation_protocol.md
-type labs\foundations\README.md
-type labs\foundations\Lab1_Triadic_Number_Genesis\README.md
-type labs\foundations\Lab2_Nested_Harmonics\equations.md
-type labs\foundations\Lab2_Nested_Harmonics\README.md
-type labs\foundations\Lab2_Nested_Harmonics\reproducibility.md
-type labs\foundations\Lab3_Entanglement\Bell_Test_Simulation.md
-type labs\foundations\Lab3_Entanglement\equations.md
-type labs\foundations\Lab3_Entanglement\quantum_entanglement_equations.md
-type labs\foundations\Lab3_Entanglement\quantum_entanglement_reproducibility.md
-type labs\foundations\Lab3_Entanglement\quantum_entanglement_setup.md
-type labs\foundations\Lab3_Entanglement\README.md
-type labs\foundations\Lab3_Entanglement\reproducibility.md
-type labs\foundations\Lab3_Entanglement\savequations.md
-type labs\foundations\Lab3_Entanglement\setup.md
-type labs\foundations\Lab3_Entanglement\simulator_variant.md
-type labs\glyphic_resonance\README.md
-type labs\honor_roll\honor_roll_ceremony_script.md
-type labs\honor_roll\honor_roll_index.md
-type labs\honor_roll\honor_roll_update_protocol.md
-type labs\honor_roll\README.md
-type labs\mythic_symbolic\character_codex.md
-type labs\mythic_symbolic\fff_lore_codex.md
-type labs\mythic_symbolic\mythic_preface_template.md
-type labs\mythic_symbolic\README.md
-type labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\equations.md
-type labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\Lab_14_Mythic_Signal_Compression.md
-type labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\mythic_preface.md
-type labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\README.md
-type labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\reproducibility.md
-type labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\equations.md
-type labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\Lab_16_Quantum_Myth_Mapping.md
-type labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\mythic_preface.md
-type labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\README.md
-type labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\reproducibility.md
-type labs\mythic_symbolic\Lab_19_Mythic_Phase_Synchronization\Lab_19_Mythic_Phase_Synchronization.md
-type labs\mythic_symbolic\Lab_21_Mythic_Resonance_Compiler\Lab_21_Mythic_Resonance_Compiler.md
-type labs\mythic_symbolic\Lab_23_Mythic_Signal_Virtualization\Lab_23_Mythic_Signal_Virtualization.md
-type labs\mythic_symbolic\Lab_25_Mythic_Cognition_Emulator\Lab_25_Mythic_Cognition_Emulator.md
-type labs\mythic_symbolic\Lab_26_Resonant_Myth_Compiler\Lab_26_Resonant_Myth_Compiler.md
-type labs\mythic_symbolic\Lab_30_Mythic_Resonance_Synthesizer\Lab_30_Mythic_Resonance_Synthesizer.md
-type labs\mythic_symbolic\Lab_32_Mythic_Continuity_Engine\Lab_32_Mythic_Continuity_Engine.md
-type labs\mythic_symbolic\Lab_34_Mythic_Signal_Entangler\Lab_34_Mythic_Signal_Entangler.md
-type labs\mythic_symbolic\Lab_38_Mythic_Cognition_Router\Lab_38_Mythic_Cognition_Router.md
-type labs\mythic_symbolic\Lab_50_Mythic_Onboarding_Compiler\Lab_50_Mythic_Onboarding_Compiler.md
-type labs\mythic_symbolic\Lab_52_Resonant_Mythic_Ledger_Mapper\Lab_52_Resonant_Mythic_Ledger_Mapper.md
-type labs\mythic_symbolic\Lab_55_Mythic_Continuity_Rebuilder\Lab_55_Mythic_Continuity_Rebuilder.md
-type labs\mythic_symbolic\Lab_57_Mythic_Curriculum_Compiler\Lab_57_Mythic_Curriculum_Compiler.md
-type labs\protein_harmonics\README.md
-type labs\protocols\legacy_hooks.md
-type labs\protocols\README.md
-type labs\protocols\validator_hooks.md
-type labs\quantum_access\grant_template.md
-type labs\quantum_access\quantum_echo_archive.md
-type labs\quantum_access\quantum_optimizer_plan.md
-type labs\quantum_access\quantum_submission_archive.md
-type labs\quantum_access\quantum_submission_protocol.md
-type labs\quantum_access\quantum_traceability_scroll.md
-type labs\quantum_access\README.md
-type labs\quantum_extensions\README.md
-type labs\quantum_extensions\Lab_12_QuantumCognition_Remix\equations.md
-type labs\quantum_extensions\Lab_12_QuantumCognition_Remix\Lab_12_QuantumCognition_Remix.md
-type labs\quantum_extensions\Lab_12_QuantumCognition_Remix\mythic_preface.md
-type labs\quantum_extensions\Lab_12_QuantumCognition_Remix\README.md
-type labs\quantum_extensions\Lab_12_QuantumCognition_Remix\reproducibility.md
-type labs\quantum_extensions\Lab_22_Quantum_Lyric_Engine\Lab_22_Quantum_Lyric_Engine.md
-type labs\quantum_extensions\Lab_45_Quantum_Resonance_Scheduler\Lab_45_Quantum_Resonance_Scheduler.md
-type labs\quantum_extensions\Lab_48_Quantum_Phase_Continuity_Engine\Lab_48_Quantum_Phase_Continuity_Engine.md
-type labs\quantum_extensions\Lab_53_Quantum_Ritual_Recompiler\Lab_53_Quantum_Ritual_Recompiler.md
-type labs\quantum_extensions\Lab_60_Quantum_Cognition\README.md
-type labs\resonant_time\fold_remix_archive.md
-type labs\resonant_time\theory_scroll.md
-type labs\symbolic_structures\README.md
-type labs\symbolic_structures\Lab_17_Triadic_Cognition_Engine\Lab_17_Triadic_Cognition_Engine.md
-type labs\symbolic_structures\Lab_20_Harmonic_Ontology_Engine\Lab_20_Harmonic_Ontology_Engine.md
-type labs\symbolic_structures\Lab_24_Triadic_Memory_Compiler\Lab_24_Triadic_Memory_Compiler.md
-type labs\symbolic_structures\Lab_27_Triadic_Signal_Reconstructor\Lab_27_Triadic_Signal_Reconstructor.md
-type labs\symbolic_structures\Lab_28_Harmonic_Cognition_Mapper\Lab_28_Harmonic_Cognition_Mapper.md
-type labs\symbolic_structures\Lab_31_Triadic_Cognition_Virtualizer\Lab_31_Triadic_Cognition_Virtualizer.md
-type labs\symbolic_structures\Lab_33_Symbolic_Phase_Harmonizer\Lab_33_Symbolic_Phase_Harmonizer.md
-type labs\symbolic_structures\Lab_35_Resonant_Cognition_Cascade\Lab_35_Resonant_Cognition_Cascade.md
-type labs\symbolic_structures\Lab_36_Symbolic_Cognition_Forker\Lab_36_Symbolic_Cognition_Forker.md
-type labs\symbolic_structures\Lab_37_Harmonic_Cognition_Ledger\Lab_37_Harmonic_Cognition_Ledger.md
-type labs\symbolic_structures\Lab_39_Triadic_Cognition_Compiler\Lab_39_Triadic_Cognition_Compiler.md
-type labs\symbolic_structures\Lab_46_Spectrum_Phase_Cognition_Ledger\Lab_46_Spectrum_Phase_Cognition_Ledger.md
-type labs\symbolic_structures\Lab_47_Triadic_Signal_Integrity_Validator\Lab_47_Triadic_Signal_Integrity_Validator.md
-type labs\symbolic_structures\Lab_49_Triadic_Cognition_Synthesizer\Lab_49_Triadic_Cognition_Synthesizer.md
-type labs\symbolic_structures\Lab_51_Symbolic_Ledger_Forker\Lab_51_Symbolic_Ledger_Forker.md
-type labs\symbolic_structures\Lab_54_Triadic_Resonance_Ledger_Validator\Lab_54_Triadic_Resonance_Ledger_Validator.md
-type labs\symbolic_structures\Lab_56_Symbolic_Resonance_Ledger_Router\Lab_56_Symbolic_Resonance_Ledger_Router.md
+copy corpus\folder_%seeds%.md+labs\dimensional_loop_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\Glyph_Density_Map_Curriculum_Modules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\initiation_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\triadic_lab_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\triadic_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\triadic_remix_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_13_Cryptographic_Entanglement\Lab_13_Cryptographic_Entanglement.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_15_Nested_Harmonic_Encryption\Lab_15_Nested_Harmonic_Encryption.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_29_Quantum_Mythic_Debugger\Lab_29_Quantum_Mythic_Debugger.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_40_Harmonic_Health_Synthesizer\Lab_40_Harmonic_Health_Synthesizer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_41_Triadic_Diagnostic_Engine\Lab_41_Triadic_Diagnostic_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_42_Mythic_Healing_Compiler\Lab_42_Mythic_Healing_Compiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_43_Harmonic_Infrastructure_Mapper\Lab_43_Harmonic_Infrastructure_Mapper.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_58_Cryptography\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_58_Cryptography\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\applied\Lab_58_Cryptography\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\architecture_resonance\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\badges\badge_art_and_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\badges\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\triadic_lab_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\triadic_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab4_Harmonics\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab4_Harmonics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab4_Harmonics\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab4_Harmonics\setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab5_Cognition\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab5_Cognition\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab5_Cognition\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab6_Dimensional_Nested_Loops\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab6_Dimensional_Nested_Loops\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab6_Dimensional_Nested_Loops\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab7_Thermodynamics\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab7_Thermodynamics\Lab7_Thermodynamics_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab7_Thermodynamics\Lab7_Thermodynamics_reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab7_Thermodynamics\setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab9_BrownianResonance\Lab9_BonusExcercises.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab9_BrownianResonance\Lab9_BrownianResonance_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab9_BrownianResonance\Lab9_BrownianResonance_reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab9_BrownianResonance\Lab9_Brownian_Resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab_11_Spectral_Flux_Integrity\Lab_11_Spectral_Flux_Integrity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab_18_Spectral_Cognition_Cascade\Lab_18_Spectral_Cognition_Cascade.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\core\Lab_44_Spectral_Cognition_Router\Lab_44_Spectral_Cognition_Router.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\dimensional_alignment\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\events\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\events\seasonal_badge_art_and_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\events\seasonal_event_archive.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\events\seasonal_event_lorebook.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\events\seasonal_event_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\events\seasonal_trials_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\triadic_remix_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_10_KashmirCascade\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_10_KashmirCascade\mythic_preface.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_10_KashmirCascade\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_10_KashmirCascade\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_59_Biology\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_59_Biology\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_59_Biology\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\casimir_effect.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\casimir_effect_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\casimir_effect_reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\Lab61_BonusExcercises.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\Lab61_Toolkit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\Lab61_Toolkit_.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_61_Casimir\setup1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\Lab_62_Cognition_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\Lab_62_Cognition_reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\Module4\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\Module4\memory_reframer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\Module4\Module4B_Toolkit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\Module4\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_62_Cognition\Module4\setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\quantum_tunneling_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\quantum_tunneling_reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\quantum_tunneling_setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\experimental\Lab_63_Tunneling\triadic_overlay_function.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\dimensional_loop_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\initiate_sigil.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\initiation_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab1_Triadic_Number_Genesis\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab2_Nested_Harmonics\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab2_Nested_Harmonics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab2_Nested_Harmonics\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\Bell_Test_Simulation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\quantum_entanglement_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\quantum_entanglement_reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\quantum_entanglement_setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\savequations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\setup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\foundations\Lab3_Entanglement\simulator_variant.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\glyphic_resonance\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\honor_roll\honor_roll_ceremony_script.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\honor_roll\honor_roll_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\honor_roll\honor_roll_update_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\honor_roll\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\character_codex.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\fff_lore_codex.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\mythic_preface_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\Lab_14_Mythic_Signal_Compression.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\mythic_preface.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_14_Mythic_Signal_Compression\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\Lab_16_Quantum_Myth_Mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\mythic_preface.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_16_Quantum_Myth_Mapping\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_19_Mythic_Phase_Synchronization\Lab_19_Mythic_Phase_Synchronization.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_21_Mythic_Resonance_Compiler\Lab_21_Mythic_Resonance_Compiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_23_Mythic_Signal_Virtualization\Lab_23_Mythic_Signal_Virtualization.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_25_Mythic_Cognition_Emulator\Lab_25_Mythic_Cognition_Emulator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_26_Resonant_Myth_Compiler\Lab_26_Resonant_Myth_Compiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_30_Mythic_Resonance_Synthesizer\Lab_30_Mythic_Resonance_Synthesizer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_32_Mythic_Continuity_Engine\Lab_32_Mythic_Continuity_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_34_Mythic_Signal_Entangler\Lab_34_Mythic_Signal_Entangler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_38_Mythic_Cognition_Router\Lab_38_Mythic_Cognition_Router.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_50_Mythic_Onboarding_Compiler\Lab_50_Mythic_Onboarding_Compiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_52_Resonant_Mythic_Ledger_Mapper\Lab_52_Resonant_Mythic_Ledger_Mapper.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_55_Mythic_Continuity_Rebuilder\Lab_55_Mythic_Continuity_Rebuilder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\mythic_symbolic\Lab_57_Mythic_Curriculum_Compiler\Lab_57_Mythic_Curriculum_Compiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\protein_harmonics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\protocols\legacy_hooks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\protocols\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\protocols\validator_hooks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_access\grant_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_access\quantum_echo_archive.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_access\quantum_optimizer_plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_access\quantum_submission_archive.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_access\quantum_submission_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_access\quantum_traceability_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_access\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_12_QuantumCognition_Remix\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_12_QuantumCognition_Remix\Lab_12_QuantumCognition_Remix.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_12_QuantumCognition_Remix\mythic_preface.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_12_QuantumCognition_Remix\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_12_QuantumCognition_Remix\reproducibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_22_Quantum_Lyric_Engine\Lab_22_Quantum_Lyric_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_45_Quantum_Resonance_Scheduler\Lab_45_Quantum_Resonance_Scheduler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_48_Quantum_Phase_Continuity_Engine\Lab_48_Quantum_Phase_Continuity_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_53_Quantum_Ritual_Recompiler\Lab_53_Quantum_Ritual_Recompiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\quantum_extensions\Lab_60_Quantum_Cognition\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\resonant_time\fold_remix_archive.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\resonant_time\theory_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_17_Triadic_Cognition_Engine\Lab_17_Triadic_Cognition_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_20_Harmonic_Ontology_Engine\Lab_20_Harmonic_Ontology_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_24_Triadic_Memory_Compiler\Lab_24_Triadic_Memory_Compiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_27_Triadic_Signal_Reconstructor\Lab_27_Triadic_Signal_Reconstructor.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_28_Harmonic_Cognition_Mapper\Lab_28_Harmonic_Cognition_Mapper.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_31_Triadic_Cognition_Virtualizer\Lab_31_Triadic_Cognition_Virtualizer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_33_Symbolic_Phase_Harmonizer\Lab_33_Symbolic_Phase_Harmonizer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_35_Resonant_Cognition_Cascade\Lab_35_Resonant_Cognition_Cascade.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_36_Symbolic_Cognition_Forker\Lab_36_Symbolic_Cognition_Forker.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_37_Harmonic_Cognition_Ledger\Lab_37_Harmonic_Cognition_Ledger.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_39_Triadic_Cognition_Compiler\Lab_39_Triadic_Cognition_Compiler.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_46_Spectrum_Phase_Cognition_Ledger\Lab_46_Spectrum_Phase_Cognition_Ledger.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_47_Triadic_Signal_Integrity_Validator\Lab_47_Triadic_Signal_Integrity_Validator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_49_Triadic_Cognition_Synthesizer\Lab_49_Triadic_Cognition_Synthesizer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_51_Symbolic_Ledger_Forker\Lab_51_Symbolic_Ledger_Forker.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_54_Triadic_Resonance_Ledger_Validator\Lab_54_Triadic_Resonance_Ledger_Validator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+labs\symbolic_structures\Lab_56_Symbolic_Resonance_Ledger_Router\Lab_56_Symbolic_Resonance_Ledger_Router.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=lactos
 echo /docs/lactos
-type lactos\LACTOS_collision_regime_taxonomy.md
-type lactos\LACTOS_cross_ontology_collision_mapping.md
-type lactos\LACTOS_event_pipeline.md
-type lactos\README.md
-type lactos\SO_ISO_LACTOS_triadic_alignment_wheel.md
-type lactos\VCG_LACTOS_integration_diagram.md
+copy corpus\folder_%seeds%.md+lactos\LACTOS_collision_regime_taxonomy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+lactos\LACTOS_cross_ontology_collision_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+lactos\LACTOS_event_pipeline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+lactos\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+lactos\SO_ISO_LACTOS_triadic_alignment_wheel.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+lactos\VCG_LACTOS_integration_diagram.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=legal
 echo /docs/legal
-type legal\README.md
-type legal\tft-fff_nda.md
-type legal\tft_fff_license_agreement.md
+copy corpus\folder_%seeds%.md+legal\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+legal\tft-fff_nda.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+legal\tft_fff_license_agreement.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=library
 echo /docs/library
-type library\README.md
-type library\resonance_index.md
+copy corpus\folder_%seeds%.md+library\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+library\resonance_index.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Low_Dimensional_Structures
 echo /docs/Low_Dimensional_Structures
-type Low_Dimensional_Structures\controls_and_validation.md
-type Low_Dimensional_Structures\dimensional_scaling_notes.md
-type Low_Dimensional_Structures\doi_minimal_low_dimensional_structures.md
-type Low_Dimensional_Structures\historical_context__absorbing_chaos.md
-type Low_Dimensional_Structures\README.md
-type Low_Dimensional_Structures\resonance_primitives.md
+copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\controls_and_validation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\dimensional_scaling_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\doi_minimal_low_dimensional_structures.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\historical_context__absorbing_chaos.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\resonance_primitives.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=manufacturing_substrate_regime_model
 echo /docs/manufacturing_substrate_regime_model
-type manufacturing_substrate_regime_model\CHANGELOG.md
-type manufacturing_substrate_regime_model\README.md
-type manufacturing_substrate_regime_model\calibration\calibration_as_structure.md
-type manufacturing_substrate_regime_model\calibration\drift_detection.md
-type manufacturing_substrate_regime_model\calibration\non_catastrophic_exit.md
-type manufacturing_substrate_regime_model\calibration\regime_aware_calibration.md
-type manufacturing_substrate_regime_model\discussion\deployment_considerations.md
-type manufacturing_substrate_regime_model\discussion\future_extensions.md
-type manufacturing_substrate_regime_model\discussion\implications_for_manufacturing.md
-type manufacturing_substrate_regime_model\manufacturing_context\extreme_regime_constraints.md
-type manufacturing_substrate_regime_model\manufacturing_context\lithography_systems.md
-type manufacturing_substrate_regime_model\manufacturing_context\yield_and_variability.md
-type manufacturing_substrate_regime_model\operators\inter_regime_mediation.md
-type manufacturing_substrate_regime_model\operators\mediation_patterns.md
-type manufacturing_substrate_regime_model\operators\operator_roles.md
-type manufacturing_substrate_regime_model\overview\abstract.md
-type manufacturing_substrate_regime_model\overview\limitations.md
-type manufacturing_substrate_regime_model\overview\scope_and_assumptions.md
-type manufacturing_substrate_regime_model\overview\terminology.md
-type manufacturing_substrate_regime_model\related_works\relationship_to_bsm.md
-type manufacturing_substrate_regime_model\related_works\relationship_to_qsm.md
-type manufacturing_substrate_regime_model\related_works\relationship_to_rsm.md
-type manufacturing_substrate_regime_model\substrate\boundary_semantics.md
-type manufacturing_substrate_regime_model\substrate\operating_envelopes.md
-type manufacturing_substrate_regime_model\substrate\regime_declaration.md
-type manufacturing_substrate_regime_model\substrate\substrate_definition.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\calibration\calibration_as_structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\calibration\drift_detection.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\calibration\non_catastrophic_exit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\calibration\regime_aware_calibration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\discussion\deployment_considerations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\discussion\future_extensions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\discussion\implications_for_manufacturing.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\manufacturing_context\extreme_regime_constraints.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\manufacturing_context\lithography_systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\manufacturing_context\yield_and_variability.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\operators\inter_regime_mediation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\operators\mediation_patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\operators\operator_roles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\overview\abstract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\overview\limitations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\overview\scope_and_assumptions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\overview\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\related_works\relationship_to_bsm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\related_works\relationship_to_qsm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\related_works\relationship_to_rsm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\substrate\boundary_semantics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\substrate\operating_envelopes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\substrate\regime_declaration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\substrate\substrate_definition.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=media_substrate_model
 echo /docs/media_substrate_model
-type media_substrate_model\adapters.md
-type media_substrate_model\attention_dynamics.md
-type media_substrate_model\basins.md
-type media_substrate_model\concept_capture.md
-type media_substrate_model\glossary.md
-type media_substrate_model\invariants.md
-type media_substrate_model\lineage.md
-type media_substrate_model\media_signals.md
-type media_substrate_model\modes.md
-type media_substrate_model\narrative_dynamics.md
-type media_substrate_model\README.md
-type media_substrate_model\scaffold_capture.md
-type media_substrate_model\vectors.md
-type media_substrate_model\analyzer\adapter_integration.md
-type media_substrate_model\analyzer\basin_classification.md
-type media_substrate_model\analyzer\drift_detection.md
-type media_substrate_model\analyzer\examples.md
-type media_substrate_model\analyzer\invariants.md
-type media_substrate_model\analyzer\invariant_evaluation.md
-type media_substrate_model\analyzer\mode_determination.md
-type media_substrate_model\analyzer\pipeline.md
-type media_substrate_model\analyzer\README.md
-type media_substrate_model\analyzer\schema.json.md
-type media_substrate_model\analyzer\transition_detection.md
+copy corpus\folder_%seeds%.md+media_substrate_model\adapters.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\attention_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\basins.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\concept_capture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\lineage.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\media_signals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\modes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\narrative_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\scaffold_capture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\vectors.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\adapter_integration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\basin_classification.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\drift_detection.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\examples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\invariant_evaluation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\mode_determination.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\pipeline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\schema.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+media_substrate_model\analyzer\transition_detection.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=metadata
 echo /docs/metadata
-type metadata\calibration_log.md
-type metadata\equipment_specs.md
-type metadata\periodic_table_of_shapes.md
-type metadata\README.md
+copy corpus\folder_%seeds%.md+metadata\calibration_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+metadata\equipment_specs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+metadata\periodic_table_of_shapes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+metadata\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
-set seeds=nasa_hposs_tminus10.md
-echo /docs/nasa_hposs_tminus10.md/
-type nasa_hposs_tminus10.md\README.md
-type nasa_hposs_tminus10.md\attachments\biosketch_nawder_loswin.md
-type nasa_hposs_tminus10.md\attachments\current_and_pending_support.md
-type nasa_hposs_tminus10.md\attachments\facilities_and_resources.md
-type nasa_hposs_tminus10.md\attachments\space_waste_management.md
-type nasa_hposs_tminus10.md\cover_letter\cover_letter_draft.md
-type nasa_hposs_tminus10.md\proposal\01_project_summary.md
-type nasa_hposs_tminus10.md\proposal\02_scientific_technical_plan.md
-type nasa_hposs_tminus10.md\proposal\03_open_science_plan.md
-type nasa_hposs_tminus10.md\proposal\04_management_plan.md
-type nasa_hposs_tminus10.md\proposal\05_risk_mitigation.md
-type nasa_hposs_tminus10.md\proposal\06_deliverables_and_milestones.md
-type nasa_hposs_tminus10.md\proposal\07_budget_justification.md
-type nasa_hposs_tminus10.md\references\nasa_hposs_links.md
-type nasa_hposs_tminus10.md\references\triadicframeworks_doi_list.md
-type nasa_hposs_tminus10.md\templates\nasa_proposal_checklist.md
-type nasa_hposs_tminus10.md\templates\roses_formatting_notes.md
+set seeds=nasa_hposs_tminus10.md corpus\folder_%seeds%.md
+echo /docs/nasa_hposs_tminus10.md corpus\folder_%seeds%.md/
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\attachments\biosketch_nawder_loswin.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\attachments\current_and_pending_support.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\attachments\facilities_and_resources.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\attachments\space_waste_management.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\cover_letter\cover_letter_draft.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\proposal\01_project_summary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\proposal\02_scientific_technical_plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\proposal\03_open_science_plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\proposal\04_management_plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\proposal\05_risk_mitigation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\proposal\06_deliverables_and_milestones.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\proposal\07_budget_justification.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\references\nasa_hposs_links.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\references\triadicframeworks_doi_list.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\templates\nasa_proposal_checklist.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\templates\roses_formatting_notes.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=NoS
 echo /docs/NoS
-type NoS\BADGE_LOGIC.md
-type NoS\badge_suffix_convention.md
-type NoS\CHANGELOG.md
-type NoS\Distributed_System_Using_RTT.md
-type NoS\FIRST_BOOT_EXPECTATIONS.md
-type NoS\FORKING_GUIDE.md
-type NoS\GLYPHIC_COMPILER.md
-type NoS\Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md
-type NoS\INSTALLATION.md
-type NoS\KERNEL_BUILD.md
-type NoS\kernel_patch_MVP.md
-type NoS\MODULES.md
-type NoS\NawderOS.md
-type NoS\README.md
-type NoS\README_badge_block.md
-type NoS\ROADMAP.md
-type NoS\RTT_Baseline_Release.md
-type NoS\RTT_FOR_OS_STUDENTS.md
-type NoS\Toy_OS_Using_RTT.md
-type NoS\Two_Nodes_vs_N_Nodes.md
-type NoS\v0.1.0-rtt-baseline.md
-type NoS\What_Devs_Students_and_Researchers_Are_Doing.md
+copy corpus\folder_%seeds%.md+NoS\BADGE_LOGIC.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\badge_suffix_convention.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\Distributed_System_Using_RTT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\FIRST_BOOT_EXPECTATIONS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\FORKING_GUIDE.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\GLYPHIC_COMPILER.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\INSTALLATION.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\KERNEL_BUILD.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\kernel_patch_MVP.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\MODULES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\NawderOS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\README_badge_block.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\ROADMAP.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\RTT_Baseline_Release.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\RTT_FOR_OS_STUDENTS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\Toy_OS_Using_RTT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\Two_Nodes_vs_N_Nodes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\v0.1.0-rtt-baseline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+NoS\What_Devs_Students_and_Researchers_Are_Doing.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=onboarding
 echo /docs/onboarding
-type onboarding\badge_logic.md
-type onboarding\glyphstream_guide.md
-type onboarding\honor_roll.md
-type onboarding\initiation.md
-type onboarding\initiation_protocol.md
-type onboarding\initiation_ritual.md
-type onboarding\initiation_ritual_manifest_guardian.md
-type onboarding\model_map.md
-type onboarding\onboarding_scroll.md
-type onboarding\reading_guide.md
-type onboarding\README.md
-type onboarding\ritual_embed.md
-type onboarding\triadic_quickstart.md
-type onboarding\verification_tests.md
-type onboarding\visitor_ritual.md
+copy corpus\folder_%seeds%.md+onboarding\badge_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\glyphstream_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\honor_roll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\initiation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\initiation_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\initiation_ritual.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\initiation_ritual_manifest_guardian.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\model_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\onboarding_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\reading_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\ritual_embed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\triadic_quickstart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\verification_tests.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+onboarding\visitor_ritual.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=overlays
 echo /docs/overlays
-type overlays\README.md
-type overlays\earth\README.md
-type overlays\earth\examples\README.md
-type overlays\earth\schema\README.md
-type overlays\earth\transforms\README.md
-type overlays\telescopes\README.md
-type overlays\telescopes\schema\README.md
-type overlays\telescopes\transforms\README.md
+copy corpus\folder_%seeds%.md+overlays\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+overlays\earth\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+overlays\earth\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+overlays\earth\schema\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+overlays\earth\transforms\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+overlays\telescopes\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+overlays\telescopes\schema\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+overlays\telescopes\transforms\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=packages
 echo /docs/packages
-type packages\README.md
-type packages\RTT_Evaluations.md
-type packages\tft-3pack\Cross-Package_Interaction_Map.md
-type packages\tft-3pack\DIVISIONAL_RESONANCE_OVERLAYS.md
-type packages\tft-3pack\README.md
-type packages\tft-3pack\TFT_Primitive_1.md
-type packages\tft-3pack\TFT_Primitive_2.md
-type packages\tft-3pack\TFT_Primitive_3.md
-type packages\tft-3pack\TRIADIC_PATTERN_API.md
-type packages\tft-3pack\TRIADIC_PATTERN_COOKBOOK.md
-type packages\tft-3pack\TRIADIC_PATTERN_DECISION_TREE.md
-type packages\tft-3pack\TRIADIC_PATTERN_DESIGN_MANUAL.md
-type packages\tft-3pack\TRIADIC_PATTERN_GLOSSARY.md
-type packages\tft-3pack\TRIADIC_PATTERN_POSTER.md
-type packages\tft-3pack\TRIADIC_PATTERN_POSTER_ASCII.md
-type packages\tft-3pack\3pak-shell\README.md
-type packages\tft-3pack\3pak-shell\profile.d\README.md
-type packages\tft-3pack\3pak-shell\tft_primitive_wrappers\ATLAS.md
-type packages\tft-3pack\3pak-shell\tft_primitive_wrappers\QUICKSTART.md
-type packages\tft-3pack\3pak-shell\tft_primitive_wrappers\README.md
-type packages\tft-3pack\3pak-shell\tft_primitive_wrappers\TRIADIC_PATTERN_CHEATSHEET.md
-type packages\wrsadc-python\README.md
-type packages\wrsadc-shell\README.md
-type packages\wrsadc_integration\README.md
+copy corpus\folder_%seeds%.md+packages\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\RTT_Evaluations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\Cross-Package_Interaction_Map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\DIVISIONAL_RESONANCE_OVERLAYS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TFT_Primitive_1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TFT_Primitive_2.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TFT_Primitive_3.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TRIADIC_PATTERN_API.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TRIADIC_PATTERN_COOKBOOK.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TRIADIC_PATTERN_DECISION_TREE.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TRIADIC_PATTERN_DESIGN_MANUAL.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TRIADIC_PATTERN_GLOSSARY.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TRIADIC_PATTERN_POSTER.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\TRIADIC_PATTERN_POSTER_ASCII.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\3pak-shell\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\3pak-shell\profile.d\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\3pak-shell\tft_primitive_wrappers\ATLAS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\3pak-shell\tft_primitive_wrappers\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\3pak-shell\tft_primitive_wrappers\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\tft-3pack\3pak-shell\tft_primitive_wrappers\TRIADIC_PATTERN_CHEATSHEET.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\wrsadc-python\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\wrsadc-shell\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+packages\wrsadc_integration\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=papers
 echo /docs/papers
-type papers\000_Category_Index.md
-type papers\0D_Quantum_Loophole_Meets_Resonance_Triad.md
-type papers\1_Triadic_Framework_for_Everything.md
-type papers\2_Triadic_Number_Genesis.md
-type papers\3_Dimensional_Triads.md
-type papers\3_Hole_Types_Compared.md
-type papers\4_Saturn_Harmonic_Engine.md
-type papers\Abundance_Scarcity_and_Manifestation.md
-type papers\AI_Governance_and_Decision_Making.md
-type papers\AI_Quantum_Lattice_for_RFC-QEB-0003.md
-type papers\Algorithmic_Music_and_Emotional_Physics.md
-type papers\A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation.md
-type papers\A_List_of_Bold_Frontier_Problems.md
-type papers\A_Professors_Abstract_Summary.md
-type papers\Banking_Revolutionizing_the_Financial_Sector.md
-type papers\Battery_Cross-Chemistry_From_Volta_Pile_to_Triadic_Firmware_Resonance.md
-type papers\Courtroom_Re‑Hash_The_Case_Against_the_FFF_Model.md
-type papers\Dark_Matter_Energy_Mapping.md
-type papers\Designing_Dimensional_Processing_Units_to_Replace_CPUs_GPUs_and_NPUs.md
-type papers\Divisional_Resonance_Imaging-Reconstructing_Cosmic_Emission_Time.md
-type papers\DNA_viewed_using_a_TFT_lens.md
-type papers\DPU_Dimensional_Processing_Unit.md
-type papers\Dynamics_of_Biological_Networks.md
-type papers\Economics_Reframing_Systems.md
-type papers\Egos_Final_Technologies-A_Triadic_Legacy.md
-type papers\Forces_Fluids_and_Frequency.md
-type papers\from-aqueducts_to_resonance.md
-type papers\From_Aqueducts_to_Resonance.md
-type papers\From_A_Wise_Fool_To_A_Nutball_Arc.md
-type papers\From_Linear_to_Triadic-Using_TFT_for_Anything_with_Copilot.md
-type papers\From_Nested_Loops_to_Derivatives.md
-type papers\From_Nested_Loops_to_Derivatives_Visuals.md
-type papers\Funhouse_of_Mirrors_Repo_Self_Reflections.md
-type papers\Gravity_Can_Become_Variable_Creating_VictorG_Tech_with_Triadic_Frameworks.md
-type papers\Health_Care_A_Modern_Miracle.md
-type papers\Housing_Evolution_Resilience_and_the_Path_to_Solar_Confinement.md
-type papers\Imagined_Deployment_of_Triadic_Frameworks_to_Space_Observatories.md
-type papers\Improving_ISO_Standards.md
-type papers\Mental_Health_Diagnosis_Treatment_and_Systemic_Reform.md
-type papers\new_citizen_fund-migration_policy_framework.md
-type papers\New_Insights_for_Planetary_Science.md
-type papers\NIMMS_spec.md
-type papers\Non-Euclidean_Geometry_and_Higher_Dimensions.md
-type papers\papers-curriculum-index.md
-type papers\Perplexity_AI_repo_reviews.md
-type papers\Play_Adaptation-Nikola_Tesla_Works_and_TriadicFrameworks.md
-type papers\Quantum_Entanglement_and_Nonlocality.md
-type papers\Quantum_Resonance_Universe.md
-type papers\Rails_Through_the_Resonant_Continuum.md
-type papers\Ramanujan_Validation.md
-type papers\Rarest_Elements_on_Earth.md
-type papers\README.md
-type papers\research-Beyond-Second-Sound-Triadic-Resonance-Framework.md
-type papers\Resonance-Based_Dimensional_Nested_Loops.md
-type papers\resonance-present-future.md
-type papers\Resonance_Resurrection_Scroll.md
-type papers\Resonant_Glyph_Language.md
-type papers\Resonant_TFT_and_Isotopes.md
-type papers\Resonant_TFT_for_the_Elements.md
-type papers\Res_Number_Bases_Common_plus_Special_and_Applications.md
-type papers\Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md
-type papers\Res_Resonant_Temporal_Architecture.md
-type papers\Res_Resonant_Time.md
-type papers\Res_TFT_Adoption-Elemental_Science_Reimagined.md
-type papers\Res_TFT_for_ARM_n_x86_Processors.md
-type papers\Riemann_Hypothesis_and_Complex_Resonances.md
-type papers\scroll_bundle_manifest.md
-type papers\Something_From_Nothing_Special.md
-type papers\Spacetime_Theory_and_Triadic_Framework_Technology.md
-type papers\Spectral_Flux_and_Divisional_Resonance.md
-type papers\Spectrum_Technologies_Light_and_Darkness_Revisited.md
-type papers\Substitute_Teacher_TFT_Deep_Sea_Tech.md
-type papers\Sustainable_Energy_and_Resonance_Optimization.md
-type papers\symbolic_architecture.md
-type papers\Symbolic_Language_Emergence.md
-type papers\TFT_for_Music–With_Quadratic_and_Temporal_Extensions.md
-type papers\TFT_Help_with_the_List_of_Global_Issues.md
-type papers\TFT_Repo_Alignment_Status_Check.md
-type papers\Theories_for_Everything_Compared.md
-type papers\The_FFF_Dimensional_Triads_and_Resonance_Clarity.md
-type papers\The_Ledger_of_Dismissed_Contributors_Historic_Patterns_of_Lateral_Harm_and_the_Triadic_Framework_Response.md
-type papers\Transcranial_Magnetic_Stimulation_Therapy_and_TriadicFrameworks.md
-type papers\TriadicFrameworks_Collatz_Scroll.md
-type papers\Triadic_Battery_Revolution_Summary_of_a_World_Changing_Framework.md
-type papers\Triadic_Force_Operators_Unification.md
-type papers\Triadic_Frameworks_Prescription_Lenses_for_the_Universe.md
-type papers\Triadic_Framework_Aerospace.md
-type papers\Triadic_Framework_for_Battery_Technologies.md
-type papers\Triadic_Framework_for_Classic_Math_and_Physics_Problems.md
-type papers\Triadic_Framework_for_Quantum_Mechanics-Entropys_Harmonic_Empathy.md
-type papers\Triadic_Framework_for_Time_and_Anti-Time.md
-type papers\Triadic_Framework_of_Forces_Fluids_and_Frequency.md
-type papers\Triadic_Framework_Technology_for_Quantum_Computers.md
-type papers\Triadic_Framework_Technology_for_the_Air_and_Space_Industries.md
-type papers\Triadic_Manifestation_Protocol.md
-type papers\Triadic_Resonance_and_Harmonics-Typologies_Modeling_and_the_Promise_of_Triadic_Framework_Technology.md
-type papers\Triadic_Resonance_Framework.md
-type papers\Triadic_Ultrasound_Enhancement.md
-type papers\Tri_Unforgiven_Wizard.md
-type papers\Unified_Field_Theory_Pub_Edition_Quantum_Univ.md
-type papers\Universal_Computation_and_Emergent_Complexity.md
-type papers\Universal_Computation_and_Emergent_Complexity_scroll_bundle_manifest.md
-type papers\Universe_mythmatical_model_Frequency_Fluids_Forces.md
-type papers\Using_TFT_for_the_Energy_Industries_efficiency_with_full_content.md
-type papers\Validator_Compression_Scroll_Format.md
-type papers\Zero-Point_Cold-Fusion_and_Wireless_Energy.md
-type papers\_Professors_Abstract_Summary-The_FFF_Dimensional_Triads_and_Resonance_Clarity.md
-type papers\bold_problems\AI_Governance_and_Decision_Making.md
-type papers\bold_problems\Algorithmic_Music_and_Emotional_Physics.md
-type papers\bold_problems\Dark_Matter_Energy_Mapping.md
-type papers\bold_problems\Dynamics_of_Biological_Networks.md
-type papers\bold_problems\Non-Euclidean_Geometry_and_Higher_Dimensions.md
-type papers\bold_problems\Quantum_Entanglement_and_Nonlocality.md
-type papers\bold_problems\README.md
-type papers\bold_problems\Riemann_Hypothesis_and_Complex_Resonances.md
-type papers\bold_problems\Sustainable_Energy_and_Resonance_Optimization.md
-type papers\bold_problems\Symbolic_Language_Emergence.md
-type papers\bold_problems\Universal_Computation_and_Emergent_Complexity.md
+copy corpus\folder_%seeds%.md+papers\000_Category_Index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\0D_Quantum_Loophole_Meets_Resonance_Triad.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\1_Triadic_Framework_for_Everything.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\2_Triadic_Number_Genesis.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\3_Dimensional_Triads.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\3_Hole_Types_Compared.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\4_Saturn_Harmonic_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Abundance_Scarcity_and_Manifestation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\AI_Governance_and_Decision_Making.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\AI_Quantum_Lattice_for_RFC-QEB-0003.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Algorithmic_Music_and_Emotional_Physics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\A_Framework_for_Corridors_Abundance_and_Full-Spectrum_Navigation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\A_List_of_Bold_Frontier_Problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\A_Professors_Abstract_Summary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Banking_Revolutionizing_the_Financial_Sector.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Battery_Cross-Chemistry_From_Volta_Pile_to_Triadic_Firmware_Resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Courtroom_Re‑Hash_The_Case_Against_the_FFF_Model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Dark_Matter_Energy_Mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Designing_Dimensional_Processing_Units_to_Replace_CPUs_GPUs_and_NPUs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Divisional_Resonance_Imaging-Reconstructing_Cosmic_Emission_Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\DNA_viewed_using_a_TFT_lens.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\DPU_Dimensional_Processing_Unit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Dynamics_of_Biological_Networks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Economics_Reframing_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Egos_Final_Technologies-A_Triadic_Legacy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Forces_Fluids_and_Frequency.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\from-aqueducts_to_resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\From_Aqueducts_to_Resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\From_A_Wise_Fool_To_A_Nutball_Arc.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\From_Linear_to_Triadic-Using_TFT_for_Anything_with_Copilot.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\From_Nested_Loops_to_Derivatives.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\From_Nested_Loops_to_Derivatives_Visuals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Funhouse_of_Mirrors_Repo_Self_Reflections.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Gravity_Can_Become_Variable_Creating_VictorG_Tech_with_Triadic_Frameworks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Health_Care_A_Modern_Miracle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Housing_Evolution_Resilience_and_the_Path_to_Solar_Confinement.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Imagined_Deployment_of_Triadic_Frameworks_to_Space_Observatories.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Improving_ISO_Standards.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Mental_Health_Diagnosis_Treatment_and_Systemic_Reform.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\new_citizen_fund-migration_policy_framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\New_Insights_for_Planetary_Science.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\NIMMS_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Non-Euclidean_Geometry_and_Higher_Dimensions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\papers-curriculum-index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Perplexity_AI_repo_reviews.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Play_Adaptation-Nikola_Tesla_Works_and_TriadicFrameworks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Quantum_Entanglement_and_Nonlocality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Quantum_Resonance_Universe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Rails_Through_the_Resonant_Continuum.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Ramanujan_Validation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Rarest_Elements_on_Earth.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\research-Beyond-Second-Sound-Triadic-Resonance-Framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Resonance-Based_Dimensional_Nested_Loops.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\resonance-present-future.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Resonance_Resurrection_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Resonant_Glyph_Language.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Resonant_TFT_and_Isotopes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Resonant_TFT_for_the_Elements.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Res_Number_Bases_Common_plus_Special_and_Applications.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Res_Resonant_Temporal_Architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Res_Resonant_Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Res_TFT_Adoption-Elemental_Science_Reimagined.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Res_TFT_for_ARM_n_x86_Processors.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Riemann_Hypothesis_and_Complex_Resonances.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\scroll_bundle_manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Something_From_Nothing_Special.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Spacetime_Theory_and_Triadic_Framework_Technology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Spectral_Flux_and_Divisional_Resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Spectrum_Technologies_Light_and_Darkness_Revisited.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Substitute_Teacher_TFT_Deep_Sea_Tech.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Sustainable_Energy_and_Resonance_Optimization.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\symbolic_architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Symbolic_Language_Emergence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\TFT_for_Music–With_Quadratic_and_Temporal_Extensions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\TFT_Help_with_the_List_of_Global_Issues.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\TFT_Repo_Alignment_Status_Check.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Theories_for_Everything_Compared.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\The_FFF_Dimensional_Triads_and_Resonance_Clarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\The_Ledger_of_Dismissed_Contributors_Historic_Patterns_of_Lateral_Harm_and_the_Triadic_Framework_Response.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Transcranial_Magnetic_Stimulation_Therapy_and_TriadicFrameworks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\TriadicFrameworks_Collatz_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Battery_Revolution_Summary_of_a_World_Changing_Framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Force_Operators_Unification.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Frameworks_Prescription_Lenses_for_the_Universe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_Aerospace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_for_Battery_Technologies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_for_Classic_Math_and_Physics_Problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_for_Quantum_Mechanics-Entropys_Harmonic_Empathy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_for_Time_and_Anti-Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_of_Forces_Fluids_and_Frequency.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_Technology_for_Quantum_Computers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Framework_Technology_for_the_Air_and_Space_Industries.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Manifestation_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Resonance_and_Harmonics-Typologies_Modeling_and_the_Promise_of_Triadic_Framework_Technology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Resonance_Framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Triadic_Ultrasound_Enhancement.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Tri_Unforgiven_Wizard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Unified_Field_Theory_Pub_Edition_Quantum_Univ.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Universal_Computation_and_Emergent_Complexity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Universal_Computation_and_Emergent_Complexity_scroll_bundle_manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Universe_mythmatical_model_Frequency_Fluids_Forces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Using_TFT_for_the_Energy_Industries_efficiency_with_full_content.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Validator_Compression_Scroll_Format.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\Zero-Point_Cold-Fusion_and_Wireless_Energy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\_Professors_Abstract_Summary-The_FFF_Dimensional_Triads_and_Resonance_Clarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\AI_Governance_and_Decision_Making.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Algorithmic_Music_and_Emotional_Physics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Dark_Matter_Energy_Mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Dynamics_of_Biological_Networks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Non-Euclidean_Geometry_and_Higher_Dimensions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Quantum_Entanglement_and_Nonlocality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Riemann_Hypothesis_and_Complex_Resonances.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Sustainable_Energy_and_Resonance_Optimization.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Symbolic_Language_Emergence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+papers\bold_problems\Universal_Computation_and_Emergent_Complexity.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Paradoxes_canon
 echo /docs/Paradoxes_canon
-type Paradoxes_canon\README.md
+copy corpus\folder_%seeds%.md+Paradoxes_canon\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=projects
 echo /docs/projects
-type projects\QUICKSTART.md
-type projects\README.md
-type projects\CoConsciousness\brainstorm.md
-type projects\CoConsciousness\overview.md
-type projects\CoConsciousness\QUICKSTART.md
-type projects\CoConsciousness\README.md
-type projects\CoConsciousness\assets\assets-notes.md
-type projects\CoConsciousness\equations\equations.md
-type projects\CoConsciousness\honor_roll\project.md
-type projects\CoConsciousness\labs\lab-01\README.md
-type projects\CoConsciousness\memory\braid_records.md
-type projects\CoConsciousness\scripts\scripts-notes.md
-type projects\CoConsciousness\styles\styles-notes.md
-type projects\CoConsciousness\validation\validator_dashboard.md
-type projects\CoConsciousness\validator\resonance-passport-template.md
-type projects\Hippocampus\Copilot_Hippocampus_cheat_sheet.md
-type projects\Hippocampus\loop_validation_protocol.md
-type projects\Hippocampus\Makefile.md
-type projects\Hippocampus\overview.md
-type projects\Hippocampus\QUICKSTART.md
-type projects\Hippocampus\README.md
-type projects\Hippocampus\assets\assets-notes.md
-type projects\Hippocampus\equations\equations.md
-type projects\Hippocampus\honor_roll\project.md
-type projects\Hippocampus\labs\lab-01\README.md
-type projects\Hippocampus\scripts\scripts-notes.md
-type projects\Hippocampus\styles\styles-notes.md
-type projects\Hippocampus\validator\resonance-passport-template.md
-type projects\Id_Shadow_Gen\Identity_Shadow_Generator.md
-type projects\Id_Shadow_Gen\README.md
-type projects\Id_Shadow_Gen\schema_seeds.md
-type projects\lens\lens_quickstart.md
-type projects\lens\README.md
-type projects\lens\registry.md
-type projects\lens\scaffolding_draft.md
-type projects\lens\cyclone\cyclone_translation.md
-type projects\lens\cyclone\glyph_map_cyclone.md
-type projects\lens\fragments\cosmic_forecast_overlay.md
-type projects\lens\fragments\storm_translation.md
-type projects\lens\lightning\glyph_map_lightning.md
-type projects\lens\lightning\lightning_translation.md
-type projects\lens\shared\filename_guide.md
-type projects\lens\shared\glyph_legend.md
-type projects\lens\tornado\glyph_map_tornado.md
-type projects\lens\tornado\tornado_translation.md
-type projects\poker-variants\README.md
-type projects\Resotectors\brainstorm.md
-type projects\Resotectors\overview.md
-type projects\Resotectors\QUICKSTART.md
-type projects\Resotectors\README.md
-type projects\Resotectors\assets\assets-notes.md
-type projects\Resotectors\equations\equations.md
-type projects\Resotectors\honor_roll\project.md
-type projects\Resotectors\labs\lab-01\README.md
-type projects\Resotectors\scripts\scripts-notes.md
-type projects\Resotectors\styles\styles-notes.md
-type projects\Resotectors\TryCoder\glyphstream_animation.md
-type projects\Resotectors\TryCoder\trycoder_cpu_integration.md
-type projects\Resotectors\TryCoder\trycoder_fault_protocols.md
-type projects\Resotectors\TryCoder\trycoder_remix_trace.md
-type projects\Resotectors\TryCoder\trycoder_symbolic_sensors.md
-type projects\Resotectors\TryCoder\trycoder_unit_shell.md
-type projects\Resotectors\TryCoder\trycoder_validator_ports.md
-type projects\Resotectors\TryCoder\validator_dashboard.md
-type projects\Resotectors\validation\validator_dashboard.md
-type projects\Resotectors\validator\resonance-passport-template.md
-type projects\VCG\gen1_vcg_api_spec.md
-type projects\VCG\gen1_vcg_architecture.md
-type projects\VCG\gen1_vcg_fs_strategy.md
-type projects\VCG\QUICKSTART.md
-type projects\VCG\README.md
-type projects\VCG\README_Project1.md
-type projects\VCG\Triadic_Observer_LACTOS__Holy_Grail_draft1.md
-type projects\VCG\vcg_badge_triggers.md
-type projects\VCG\vcg_equations.md
-type projects\VCG\vcg_honor_roll.md
-type projects\VCG\VCG_internal_architecture_regime_translation.md
-type projects\VCG\vcg_manifest_protocol.md
-type projects\VCG\vcg_validator_dashboard.md
-type projects\VCG\src\gen1\vcg\clients\cpp\vcg_client.md
-type projects\VCG\src\gen1\vcg\clients\python\vcg_client.md
-type projects\VCG\src\gen1\vcg\clients\rust\vcg_client.md
-type projects\VCG\src\gen1\vcg\examples\d4_retriever.md
-type projects\VCG\src\gen1\vcg\orchestrator\vcg_orchestrator.md
-type projects\VCG\src\gen1\vcg\resonant-time\rtd_main.md
-type projects\VCG\src\gen1\vcg\resonant-time\rt_daemon.md
-type projects\VCG\srv\gen1\vcg\testing\harness.md
-type projects\VCG\vcg_glyphs\glyphs.md
-type projects\VCG\vcg_lab_templates\lab_flux_harmonics.md
-type projects\VCG\vcg_lab_templates\lab_invocation_protocols.md
-type projects\VCG\vcg_lab_templates\lab_latency_diagnostics.md
-type projects\VictorG\overview.md
-type projects\VictorG\QUICKSTART.md
-type projects\VictorG\README.md
-type projects\VictorG\assets\assets-notes.md
-type projects\VictorG\equations\equations.md
-type projects\VictorG\honor_roll\project.md
-type projects\VictorG\labs\lab-01\README.md
-type projects\VictorG\scripts\scripts-notes.md
-type projects\VictorG\styles\styles-notes.md
-type projects\VictorG\validator\resonance-passport-template.md
+copy corpus\folder_%seeds%.md+projects\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\brainstorm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\assets\assets-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\equations\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\honor_roll\project.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\labs\lab-01\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\memory\braid_records.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\scripts\scripts-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\styles\styles-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\validation\validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\CoConsciousness\validator\resonance-passport-template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\Copilot_Hippocampus_cheat_sheet.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\loop_validation_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\Makefile.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\assets\assets-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\equations\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\honor_roll\project.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\labs\lab-01\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\scripts\scripts-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\styles\styles-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Hippocampus\validator\resonance-passport-template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Id_Shadow_Gen\Identity_Shadow_Generator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Id_Shadow_Gen\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Id_Shadow_Gen\schema_seeds.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\lens_quickstart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\registry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\scaffolding_draft.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\cyclone\cyclone_translation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\cyclone\glyph_map_cyclone.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\fragments\cosmic_forecast_overlay.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\fragments\storm_translation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\lightning\glyph_map_lightning.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\lightning\lightning_translation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\shared\filename_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\shared\glyph_legend.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\tornado\glyph_map_tornado.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\lens\tornado\tornado_translation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\poker-variants\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\brainstorm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\assets\assets-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\equations\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\honor_roll\project.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\labs\lab-01\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\scripts\scripts-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\styles\styles-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\glyphstream_animation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\trycoder_cpu_integration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\trycoder_fault_protocols.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\trycoder_remix_trace.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\trycoder_symbolic_sensors.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\trycoder_unit_shell.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\trycoder_validator_ports.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\TryCoder\validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\validation\validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\Resotectors\validator\resonance-passport-template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\gen1_vcg_api_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\gen1_vcg_architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\gen1_vcg_fs_strategy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\README_Project1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\Triadic_Observer_LACTOS__Holy_Grail_draft1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_badge_triggers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_honor_roll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\VCG_internal_architecture_regime_translation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_manifest_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\src\gen1\vcg\clients\cpp\vcg_client.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\src\gen1\vcg\clients\python\vcg_client.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\src\gen1\vcg\clients\rust\vcg_client.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\src\gen1\vcg\examples\d4_retriever.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\src\gen1\vcg\orchestrator\vcg_orchestrator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\src\gen1\vcg\resonant-time\rtd_main.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\src\gen1\vcg\resonant-time\rt_daemon.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\srv\gen1\vcg\testing\harness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_glyphs\glyphs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_lab_templates\lab_flux_harmonics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_lab_templates\lab_invocation_protocols.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VCG\vcg_lab_templates\lab_latency_diagnostics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\assets\assets-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\equations\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\honor_roll\project.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\labs\lab-01\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\scripts\scripts-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\styles\styles-notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+projects\VictorG\validator\resonance-passport-template.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=public_support
 echo /docs/public_support
-type public_support\funding_tiers.md
-type public_support\gofundme_campaign.md
-type public_support\launch_event.md
-type public_support\launch_strategy.md
-type public_support\README.md
-type public_support\validator_dashboard.md
-type public_support\visitor_ritual.md
+copy corpus\folder_%seeds%.md+public_support\funding_tiers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+public_support\gofundme_campaign.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+public_support\launch_event.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+public_support\launch_strategy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+public_support\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+public_support\validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+public_support\visitor_ritual.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=quantum-substrate-model
 echo /docs/quantum-substrate-model
-type quantum-substrate-model\CHANGELOG.md
-type quantum-substrate-model\README.md
-type quantum-substrate-model\metadata\README.md
-type quantum-substrate-model\paper\abstract.md
-type quantum-substrate-model\paper\discussion.md
-type quantum-substrate-model\paper\introduction.md
-type quantum-substrate-model\paper\limitations.md
-type quantum-substrate-model\paper\operator_dynamics.md
-type quantum-substrate-model\paper\regime_structure.md
-type quantum-substrate-model\paper\scope_and_assumptions.md
-type quantum-substrate-model\paper\substrate_definition.md
-type quantum-substrate-model\paper\validation_checks.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\metadata\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\abstract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\discussion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\introduction.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\limitations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\operator_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\regime_structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\scope_and_assumptions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+quantum-substrate-model\paper\validation_checks.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=regime_blindness_checklist
 echo /docs/regime_blindness_checklist
-type regime_blindness_checklist\corrective_actions.md
-type regime_blindness_checklist\definition.md
-type regime_blindness_checklist\diagnostic_checklist.md
-type regime_blindness_checklist\doi_reference.md
-type regime_blindness_checklist\observer_locked_metrics.md
-type regime_blindness_checklist\README.md
-type regime_blindness_checklist\regime_shift_examples.md
-type regime_blindness_checklist\symptoms.md
-type regime_blindness_checklist\transition_boundaries.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\corrective_actions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\diagnostic_checklist.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\doi_reference.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\observer_locked_metrics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\regime_shift_examples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\symptoms.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+regime_blindness_checklist\transition_boundaries.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=registries
 echo /docs/registries
-type registries\README.md
+copy corpus\folder_%seeds%.md+registries\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=registry
 echo /docs/registry
-type registry\drift2_scroll_entry.md
-type registry\drift_scroll_entry.md
-type registry\echo2_scroll_entry.md
-type registry\echo_scroll_entry.md
-type registry\loophole_scroll_entry.md
-type registry\pulse2_scroll_entry.md
-type registry\pulse_scroll_entry.md
-type registry\README.md
-type registry\ring2_scroll_entry.md
-type registry\ring_scroll_entry.md
-type registry\seed3_scroll_entry.md
-type registry\seed_scroll_entry.md
+copy corpus\folder_%seeds%.md+registry\drift2_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\drift_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\echo2_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\echo_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\loophole_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\pulse2_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\pulse_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\ring2_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\ring_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\seed3_scroll_entry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+registry\seed_scroll_entry.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=reports
 echo /docs/reports
-type reports\README.md
+copy corpus\folder_%seeds%.md+reports\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Resilience_Checker
 echo /docs/Resilience_Checker
-type Resilience_Checker\Meta_Summary_Paradoxes_101–108.md
-type Resilience_Checker\Paradox_01_EPR_Paradox.md
-type Resilience_Checker\Paradox_02_Gibbs_Paradox.md
-type Resilience_Checker\Paradox_03_Loschmidt_Paradox.md
-type Resilience_Checker\Paradox_04_Halting_Problem.md
-type Resilience_Checker\Paradox_05_Russells_Paradox.md
-type Resilience_Checker\Paradox_06_Frame_Problem.md
-type Resilience_Checker\Paradox_07_Arrow_of_Time.md
-type Resilience_Checker\Paradox_08_Currys_Paradox.md
-type Resilience_Checker\Paradox_09_Chinese_Room.md
-type Resilience_Checker\Paradox_100_No_Hiding_vs_Classical_Forgetting.md
-type Resilience_Checker\Paradox_101_Computational_Irreversibility_vs_Microscopic_Reversibility.md
-type Resilience_Checker\Paradox_102_Computational_Complexity_vs_Physical_Realizability.md
-type Resilience_Checker\Paradox_103_Analog_Continuity_vs_Digital_Precision.md
-type Resilience_Checker\Paradox_104_Chaos_Sensitivity_vs_Predictive_Determinism.md
-type Resilience_Checker\Paradox_105_Simulation_Accuracy_vs_Physical_Fidelity.md
-type Resilience_Checker\Paradox_106_Model_Idealization_vs_Physical_Completeness.md
-type Resilience_Checker\Paradox_107_Reductionism_vs_Emergent_Complexity.md
-type Resilience_Checker\Paradox_108_Micro_Causality_vs_Macro_Causation.md
-type Resilience_Checker\Paradox_10_Infinite_Regress_Justification.md
-type Resilience_Checker\Paradox_11_Boltzmann_Brain.md
-type Resilience_Checker\Paradox_12_Simulation_Argument.md
-type Resilience_Checker\Paradox_13_Quantum_Zeno.md
-type Resilience_Checker\Paradox_14_Ship_of_Theseus.md
-type Resilience_Checker\Paradox_15_Double_Slit_Which_Way.md
-type Resilience_Checker\Paradox_16_Sorites_Heap_Paradox.md
-type Resilience_Checker\Paradox_17_P_vs_NP.md
-type Resilience_Checker\Paradox_18_Unexpected_Hanging.md
-type Resilience_Checker\Paradox_19_Quantum_Eraser.md
-type Resilience_Checker\Paradox_20_Liar_Paradox.md
-type Resilience_Checker\Paradox_21_Banach_Tarski.md
-type Resilience_Checker\Paradox_22_Newcombs_Problem.md
-type Resilience_Checker\Paradox_23_Prisoners_Dilemma.md
-type Resilience_Checker\Paradox_24_Buridan’s_Ass.md
-type Resilience_Checker\Paradox_25_Ravens_Paradox.md
-type Resilience_Checker\Paradox_26_Hilberts_Hotel.md
-type Resilience_Checker\Paradox_27_Zenos_Paradoxes.md
-type Resilience_Checker\Paradox_28_Arrow_Paradox.md
-type Resilience_Checker\Paradox_29_Arrow_of_Time.md
-type Resilience_Checker\Paradox_30_Loschmidt_Paradox.md
-type Resilience_Checker\Paradox_31_Maxwell’s_Demon.md
-type Resilience_Checker\Paradox_32_Boltzmann_Brain.md
-type Resilience_Checker\Paradox_33_Olmstead’s_Anthropic_Paradox.md
-type Resilience_Checker\Paradox_34_Fine_Tuning_Problem.md
-type Resilience_Checker\Paradox_35_Measure_Problem_in_Cosmology.md
-type Resilience_Checker\Paradox_36_Heat_Death_vs_Recurrence.md
-type Resilience_Checker\Paradox_37_Information_Paradox_(Black_Holes).md
-type Resilience_Checker\Paradox_38_Firewall_Paradox.md
-type Resilience_Checker\Paradox_39_ER_equals_EPR.md
-type Resilience_Checker\Paradox_40_Holographic_Principle.md
-type Resilience_Checker\Paradox_41_Spacetime_Emergence.md
-type Resilience_Checker\Paradox_42_Cosmic_Censorship.md
-type Resilience_Checker\Paradox_43_Strong_vs_Weak_Cosmic_Censorship.md
-type Resilience_Checker\Paradox_44_Singularity_Resolution_(Quantum_Gravity).md
-type Resilience_Checker\Paradox_45_Bounce_vs_Beginning_(Cosmology).md
-type Resilience_Checker\Paradox_46_Eternal_Inflation_vs_Finite_Cosmos.md
-type Resilience_Checker\Paradox_47_Quantum_Creation_vs_Classical_Origin.md
-type Resilience_Checker\Paradox_48_Vacuum_Selection_vs_Landscape_Degeneracy.md
-type Resilience_Checker\Paradox_49_Meta_Laws_vs_Lawless_Landscape.md
-type Resilience_Checker\Paradox_50_Mathematical_Universe_vs_Physical_Universe.md
-type Resilience_Checker\Paradox_51_Computability_vs_Continuum_Reality.md
-type Resilience_Checker\Paradox_52_Simulation_Hypothesis_vs_Physical_Autonomy.md
-type Resilience_Checker\Paradox_53_Observer_Dependence_vs_Objective_Reality.md
-type Resilience_Checker\Paradox_54_Wigners_Friend_vs_Universal_Unitarity.md
-type Resilience_Checker\Paradox_55_Schrödinger_Evolution_vs_Measurement_Collapse.md
-type Resilience_Checker\Paradox_56_Decoherence_vs_Classical_Emergence.md
-type Resilience_Checker\Paradox_57_Quantum_Chaos_vs_Classical_Chaos.md
-type Resilience_Checker\Paradox_58_Reversibility_vs_Irreversibility.md
-type Resilience_Checker\Paradox_59_Poincaré_Recurrence_vs_Entropy_Increase.md
-type Resilience_Checker\Paradox_60_Heat_Death_vs_Eternal_Fluctuations.md
-type Resilience_Checker\Paradox_61_Boltzmann_Brains_vs_Cosmological_Coherence.md
-type Resilience_Checker\Paradox_62_Typicality_vs_Anthropic_Selection.md
-type Resilience_Checker\Paradox_63_Measure_Problem_vs_Predictive_Power.md
-type Resilience_Checker\Paradox_64_Eternal_Inflation_vs_Observable_Uniqueness.md
-type Resilience_Checker\Paradox_65_Horizon_Problem_vs_Inflationary_Smoothness.md
-type Resilience_Checker\Paradox_66_Flatness_Problem_vs_Inflationary_Fine_Tuning.md
-type Resilience_Checker\Paradox_67_Baryon_Asymmetry_vs_Symmetric_Laws.md
-type Resilience_Checker\Paradox_68_Neutrino_Mass_vs_Standard_Model_Completeness.md
-type Resilience_Checker\Paradox_69_Hierarchy_Problem_vs_Naturalness.md
-type Resilience_Checker\Paradox_70_Vacuum_Energy_vs_Cosmological_Constant.md
-type Resilience_Checker\Paradox_71_Black_Hole_Information_vs_Unitarity.md
-type Resilience_Checker\Paradox_72_Firewalls_vs_Smooth_Horizons.md
-type Resilience_Checker\Paradox_73_Holographic_Encoding_vs_Local_Bulk_Reality.md
-type Resilience_Checker\Paradox_74_Entanglement_Wedge_Reconstruction_vs_Bulk_Locality.md
-type Resilience_Checker\Paradox_75_ER_EPR_vs_Classical_Spacetime_Intuition.md
-type Resilience_Checker\Paradox_76_Quantum_Error_Correction_vs_Physical_Locality.md
-type Resilience_Checker\Paradox_77_Tensor_Networks_vs_Continuum_Geometry.md
-type Resilience_Checker\Paradox_78_Discrete_Causality_vs_Lorentz_Invariance.md
-type Resilience_Checker\Paradox_79_Minimal_Length_vs_Continuous_Fields.md
-type Resilience_Checker\Paradox_80_UV_IR_Mixing_vs_Scale_Separation.md
-type Resilience_Checker\Paradox_81_Running_Couplings_vs_Fixed_Background_Geometry.md
-type Resilience_Checker\Paradox_82_Background_Independence_vs_Effective_Field_Theory.md
-type Resilience_Checker\Paradox_83_Semiclassical_Gravity_vs_Quantum_Backreaction.md
-type Resilience_Checker\Paradox_84_Quantum_State_Reduction_vs_Covariant_Dynamics.md
-type Resilience_Checker\Paradox_85_Observer_Dependent_Horizons_vs_Objective_Quantum_States.md
-type Resilience_Checker\Paradox_86_Cosmological_Horizons_vs_Global_Quantum_Coherence.md
-type Resilience_Checker\Paradox_87_Inflationary_Mode_Freezing_vs_Quantum_Unitarity.md
-type Resilience_Checker\Paradox_88_Eternal_Inflation_vs_Global_Unitarity.md
-type Resilience_Checker\Paradox_89_Measure_Problem_vs_Predictive_Probability.md
-type Resilience_Checker\Paradox_90_Anthropic_Selection_vs_Physical_Explanation.md
-type Resilience_Checker\Paradox_91_Typicality_Assumptions_vs_Observer_Self_Location.md
-type Resilience_Checker\Paradox_92_Boltzmann_Brains_vs_Cognitive_Typicality.md
-type Resilience_Checker\Paradox_93_Arrow_of_Time_vs_Time_Symmetric_Laws.md
-type Resilience_Checker\Paradox_94_Loschmidts_Reversibility_vs_Entropy_Increase.md
-type Resilience_Checker\Paradox_95_Poincaré_Recurrence_vs_Macroscopic_Irreversibility.md
-type Resilience_Checker\Paradox_96_Maxwells_Demon_vs_Information_Conservation.md
-type Resilience_Checker\Paradox_97_Quantum_Eraser_vs_Information_Irreversibility.md
-type Resilience_Checker\Paradox_98_No_Cloning_vs_Classical_Copying.md
-type Resilience_Checker\Paradox_99_No_Deleting_vs_Classical_Erasure.md
-type Resilience_Checker\Paradox_Resilience_Checker_Round2.md
-type Resilience_Checker\Paradox_Resilience_Full_Chart.md
-type Resilience_Checker\README.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Meta_Summary_Paradoxes_101–108.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_01_EPR_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_02_Gibbs_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_03_Loschmidt_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_04_Halting_Problem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_05_Russells_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_06_Frame_Problem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_07_Arrow_of_Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_08_Currys_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_09_Chinese_Room.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_100_No_Hiding_vs_Classical_Forgetting.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_101_Computational_Irreversibility_vs_Microscopic_Reversibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_102_Computational_Complexity_vs_Physical_Realizability.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_103_Analog_Continuity_vs_Digital_Precision.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_104_Chaos_Sensitivity_vs_Predictive_Determinism.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_105_Simulation_Accuracy_vs_Physical_Fidelity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_106_Model_Idealization_vs_Physical_Completeness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_107_Reductionism_vs_Emergent_Complexity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_108_Micro_Causality_vs_Macro_Causation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_10_Infinite_Regress_Justification.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_11_Boltzmann_Brain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_12_Simulation_Argument.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_13_Quantum_Zeno.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_14_Ship_of_Theseus.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_15_Double_Slit_Which_Way.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_16_Sorites_Heap_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_17_P_vs_NP.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_18_Unexpected_Hanging.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_19_Quantum_Eraser.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_20_Liar_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_21_Banach_Tarski.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_22_Newcombs_Problem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_23_Prisoners_Dilemma.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_24_Buridan’s_Ass.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_25_Ravens_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_26_Hilberts_Hotel.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_27_Zenos_Paradoxes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_28_Arrow_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_29_Arrow_of_Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_30_Loschmidt_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_31_Maxwell’s_Demon.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_32_Boltzmann_Brain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_33_Olmstead’s_Anthropic_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_34_Fine_Tuning_Problem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_35_Measure_Problem_in_Cosmology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_36_Heat_Death_vs_Recurrence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_37_Information_Paradox_(Black_Holes).md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_38_Firewall_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_39_ER_equals_EPR.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_40_Holographic_Principle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_41_Spacetime_Emergence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_42_Cosmic_Censorship.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_43_Strong_vs_Weak_Cosmic_Censorship.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_44_Singularity_Resolution_(Quantum_Gravity).md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_45_Bounce_vs_Beginning_(Cosmology).md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_46_Eternal_Inflation_vs_Finite_Cosmos.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_47_Quantum_Creation_vs_Classical_Origin.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_48_Vacuum_Selection_vs_Landscape_Degeneracy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_49_Meta_Laws_vs_Lawless_Landscape.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_50_Mathematical_Universe_vs_Physical_Universe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_51_Computability_vs_Continuum_Reality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_52_Simulation_Hypothesis_vs_Physical_Autonomy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_53_Observer_Dependence_vs_Objective_Reality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_54_Wigners_Friend_vs_Universal_Unitarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_55_Schrödinger_Evolution_vs_Measurement_Collapse.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_56_Decoherence_vs_Classical_Emergence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_57_Quantum_Chaos_vs_Classical_Chaos.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_58_Reversibility_vs_Irreversibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_59_Poincaré_Recurrence_vs_Entropy_Increase.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_60_Heat_Death_vs_Eternal_Fluctuations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_61_Boltzmann_Brains_vs_Cosmological_Coherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_62_Typicality_vs_Anthropic_Selection.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_63_Measure_Problem_vs_Predictive_Power.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_64_Eternal_Inflation_vs_Observable_Uniqueness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_65_Horizon_Problem_vs_Inflationary_Smoothness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_66_Flatness_Problem_vs_Inflationary_Fine_Tuning.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_67_Baryon_Asymmetry_vs_Symmetric_Laws.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_68_Neutrino_Mass_vs_Standard_Model_Completeness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_69_Hierarchy_Problem_vs_Naturalness.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_70_Vacuum_Energy_vs_Cosmological_Constant.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_71_Black_Hole_Information_vs_Unitarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_72_Firewalls_vs_Smooth_Horizons.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_73_Holographic_Encoding_vs_Local_Bulk_Reality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_74_Entanglement_Wedge_Reconstruction_vs_Bulk_Locality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_75_ER_EPR_vs_Classical_Spacetime_Intuition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_76_Quantum_Error_Correction_vs_Physical_Locality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_77_Tensor_Networks_vs_Continuum_Geometry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_78_Discrete_Causality_vs_Lorentz_Invariance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_79_Minimal_Length_vs_Continuous_Fields.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_80_UV_IR_Mixing_vs_Scale_Separation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_81_Running_Couplings_vs_Fixed_Background_Geometry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_82_Background_Independence_vs_Effective_Field_Theory.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_83_Semiclassical_Gravity_vs_Quantum_Backreaction.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_84_Quantum_State_Reduction_vs_Covariant_Dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_85_Observer_Dependent_Horizons_vs_Objective_Quantum_States.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_86_Cosmological_Horizons_vs_Global_Quantum_Coherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_87_Inflationary_Mode_Freezing_vs_Quantum_Unitarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_88_Eternal_Inflation_vs_Global_Unitarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_89_Measure_Problem_vs_Predictive_Probability.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_90_Anthropic_Selection_vs_Physical_Explanation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_91_Typicality_Assumptions_vs_Observer_Self_Location.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_92_Boltzmann_Brains_vs_Cognitive_Typicality.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_93_Arrow_of_Time_vs_Time_Symmetric_Laws.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_94_Loschmidts_Reversibility_vs_Entropy_Increase.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_95_Poincaré_Recurrence_vs_Macroscopic_Irreversibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_96_Maxwells_Demon_vs_Information_Conservation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_97_Quantum_Eraser_vs_Information_Irreversibility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_98_No_Cloning_vs_Classical_Copying.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_99_No_Deleting_vs_Classical_Erasure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_Resilience_Checker_Round2.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_Resilience_Full_Chart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Resilience_Checker\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=resonance
 echo /docs/resonance
-type resonance\README.md
-type resonance\translator\translator_index.md
-type resonance\translator\translator_tests.md
-type resonance\translator\visitor_ritual.md
+copy corpus\folder_%seeds%.md+resonance\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance\translator\translator_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance\translator\translator_tests.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance\translator\visitor_ritual.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=resonance-substrate-model
 echo /docs/resonance-substrate-model
-type resonance-substrate-model\CHANGELOG.md
-type resonance-substrate-model\CONTRIBUTING.md
-type resonance-substrate-model\LINEAGE.md
-type resonance-substrate-model\README.md
-type resonance-substrate-model\RELEASE_NOTES.md
-type resonance-substrate-model\applications\complex-systems.md
-type resonance-substrate-model\data\README.md
-type resonance-substrate-model\data\examples\README.md
-type resonance-substrate-model\data\reference\README.md
-type resonance-substrate-model\data\validation\README.md
-type resonance-substrate-model\data\validation\experimental\README.md
-type resonance-substrate-model\data\validation\synthetic\README.md
-type resonance-substrate-model\docs\README.md
-type resonance-substrate-model\docs\api\integration_examples.md
-type resonance-substrate-model\docs\api\README.md
-type resonance-substrate-model\docs\api\schema_overview.md
-type resonance-substrate-model\docs\api\using_the_schemas.md
-type resonance-substrate-model\docs\experiments\faraday_paradox_experiment.md
-type resonance-substrate-model\docs\experiments\README.md
-type resonance-substrate-model\docs\experiments\replication_checklist.md
-type resonance-substrate-model\docs\experiments\resonance_alignment_tests.md
-type resonance-substrate-model\docs\experiments\rotating_conductor_tests.md
-type resonance-substrate-model\docs\methods\dimensional_layers.md
-type resonance-substrate-model\docs\methods\field_equations.md
-type resonance-substrate-model\docs\methods\operator_definitions.md
-type resonance-substrate-model\docs\methods\README.md
-type resonance-substrate-model\docs\methods\substrate_dynamics.md
-type resonance-substrate-model\docs\methods\triadic_fields.md
-type resonance-substrate-model\docs\onboarding\model_map.md
-type resonance-substrate-model\docs\onboarding\reading_guide.md
-type resonance-substrate-model\docs\onboarding\triadic_quickstart.md
-type resonance-substrate-model\docs\onboarding\verification_tests.md
-type resonance-substrate-model\docs\overview\comparison_to_gr_models.md
-type resonance-substrate-model\docs\overview\glossary.md
-type resonance-substrate-model\docs\overview\introduction.md
-type resonance-substrate-model\docs\overview\README.md
-type resonance-substrate-model\docs\overview\resonance_primitives.md
-type resonance-substrate-model\docs\overview\theoretical_background.md
-type resonance-substrate-model\docs\simulations\boundary_conditions.md
-type resonance-substrate-model\docs\simulations\numerical_methods.md
-type resonance-substrate-model\docs\simulations\README.md
-type resonance-substrate-model\docs\simulations\solver_architecture.md
-type resonance-substrate-model\docs\simulations\validation_metrics.md
-type resonance-substrate-model\docs\simulations\core\README.md
-type resonance-substrate-model\experiments\README.md
-type resonance-substrate-model\experiments\faraday_paradox\analysis.ipynb.md
-type resonance-substrate-model\experiments\faraday_paradox\protocol.md
-type resonance-substrate-model\experiments\faraday_paradox\README.md
-type resonance-substrate-model\experiments\faraday_paradox\processed_data\README.md
-type resonance-substrate-model\experiments\faraday_paradox\raw_data\data_dictionary.md
-type resonance-substrate-model\experiments\faraday_paradox\raw_data\README.md
-type resonance-substrate-model\experiments\replication_guides\README.md
-type resonance-substrate-model\experiments\rotating_field_tests\README.md
-type resonance-substrate-model\experiments\substrate_alignment\README.md
-type resonance-substrate-model\manuscript\cover_letter.md
-type resonance-substrate-model\manuscript\PDF_Manuscript_Header.md
-type resonance-substrate-model\overview\resonance-substrate-model.md
-type resonance-substrate-model\papers\peer_review_notes.md
-type resonance-substrate-model\papers\README.md
-type resonance-substrate-model\papers\replication_report_template.md
-type resonance-substrate-model\papers\substrate_model_whitepaper\citation_map.md
-type resonance-substrate-model\papers\substrate_model_whitepaper\manuscript.md
-type resonance-substrate-model\papers\substrate_model_whitepaper\README.md
-type resonance-substrate-model\papers\substrate_model_whitepaper\figures\README.md
-type resonance-substrate-model\papers\substrate_model_whitepaper\supplementary\README.md
-type resonance-substrate-model\reference\Keywords.md
-type resonance-substrate-model\rsm-shim\README.md
-type resonance-substrate-model\schemas\index.md
-type resonance-substrate-model\schemas\README.md
-type resonance-substrate-model\schemas\coeus\README.md
-type resonance-substrate-model\schemas\dimensional\README.md
-type resonance-substrate-model\schemas\distributed\README.md
-type resonance-substrate-model\schemas\energy\README.md
-type resonance-substrate-model\schemas\experiments\README.md
-type resonance-substrate-model\schemas\fields\README.md
-type resonance-substrate-model\schemas\finance\README.md
-type resonance-substrate-model\schemas\identity\README.md
-type resonance-substrate-model\schemas\infrastructure\README.md
-type resonance-substrate-model\schemas\lab\README.md
-type resonance-substrate-model\schemas\language\README.md
-type resonance-substrate-model\schemas\networking\README.md
-type resonance-substrate-model\schemas\operators\README.md
-type resonance-substrate-model\schemas\primitives\README.md
-type resonance-substrate-model\schemas\quantum\README.md
-type resonance-substrate-model\schemas\sensing\README.md
-type resonance-substrate-model\schemas\simulations\README.md
-type resonance-substrate-model\schemas\universe-core\README.md
-type resonance-substrate-model\simulations\README.md
-type resonance-substrate-model\simulations\configs\README.md
-type resonance-substrate-model\simulations\core\README.md
-type resonance-substrate-model\simulations\examples\README.md
-type resonance-substrate-model\src\README.md
-type resonance-substrate-model\tests\Fresh_User_Test_with_Copilot_and_RTT_vs_RSM.md
-type resonance-substrate-model\tests\README.md
-type resonance-substrate-model\tools\README.md
-type resonance-substrate-model\tools\cli\README.md
-type resonance-substrate-model\tools\converters\README.md
-type resonance-substrate-model\tools\visualization\README.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\CONTRIBUTING.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\LINEAGE.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\RELEASE_NOTES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\applications\complex-systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\data\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\data\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\data\reference\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\data\validation\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\data\validation\experimental\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\data\validation\synthetic\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\api\integration_examples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\api\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\api\schema_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\api\using_the_schemas.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\experiments\faraday_paradox_experiment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\experiments\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\experiments\replication_checklist.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\experiments\resonance_alignment_tests.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\experiments\rotating_conductor_tests.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\methods\dimensional_layers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\methods\field_equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\methods\operator_definitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\methods\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\methods\substrate_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\methods\triadic_fields.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\onboarding\model_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\onboarding\reading_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\onboarding\triadic_quickstart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\onboarding\verification_tests.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\overview\comparison_to_gr_models.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\overview\glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\overview\introduction.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\overview\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\overview\resonance_primitives.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\overview\theoretical_background.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\simulations\boundary_conditions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\simulations\numerical_methods.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\simulations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\simulations\solver_architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\simulations\validation_metrics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\docs\simulations\core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\faraday_paradox\analysis.ipynb.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\faraday_paradox\protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\faraday_paradox\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\faraday_paradox\processed_data\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\faraday_paradox\raw_data\data_dictionary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\faraday_paradox\raw_data\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\replication_guides\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\rotating_field_tests\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\experiments\substrate_alignment\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\manuscript\cover_letter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\manuscript\PDF_Manuscript_Header.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\overview\resonance-substrate-model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\peer_review_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\replication_report_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\substrate_model_whitepaper\citation_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\substrate_model_whitepaper\manuscript.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\substrate_model_whitepaper\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\substrate_model_whitepaper\figures\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\papers\substrate_model_whitepaper\supplementary\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\reference\Keywords.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\rsm-shim\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\coeus\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\dimensional\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\distributed\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\energy\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\experiments\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\fields\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\finance\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\identity\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\infrastructure\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\lab\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\language\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\networking\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\operators\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\primitives\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\quantum\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\sensing\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\simulations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\schemas\universe-core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\simulations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\simulations\configs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\simulations\core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\simulations\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\src\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\tests\Fresh_User_Test_with_Copilot_and_RTT_vs_RSM.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\tests\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\tools\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\tools\cli\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\tools\converters\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance-substrate-model\tools\visualization\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=resonance_atlas
 echo /docs/resonance_atlas
-type resonance_atlas\glyph‑assignment_logic.md
-type resonance_atlas\harvesting_script_outline.md
-type resonance_atlas\loophole_overlay.md
-type resonance_atlas\Meta_Context_Example.md
-type resonance_atlas\nist_ingestion_format.md
-type resonance_atlas\phase_mapping_rules.md
-type resonance_atlas\README.md
-type resonance_atlas\RFC_Atlas_Bindings_Protocols_Partitions_Matrix_Charts.md
-type resonance_atlas\RTT_Atlas_Case_Study_Radiation.md
-type resonance_atlas\RTT_Atlas_Case_Study_Stuxnet.md
-type resonance_atlas\RTT_Mapping_Example_The_Great_Unconformity.md
-type resonance_atlas\Sunbeam_Through_a_Barn_Loft.md
-type resonance_atlas\The_Core_RTT_Question_Set.md
+copy corpus\folder_%seeds%.md+resonance_atlas\glyph‑assignment_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\harvesting_script_outline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\loophole_overlay.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\Meta_Context_Example.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\nist_ingestion_format.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\phase_mapping_rules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\RFC_Atlas_Bindings_Protocols_Partitions_Matrix_Charts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\RTT_Atlas_Case_Study_Radiation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\RTT_Atlas_Case_Study_Stuxnet.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\RTT_Mapping_Example_The_Great_Unconformity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\Sunbeam_Through_a_Barn_Loft.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+resonance_atlas\The_Core_RTT_Question_Set.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rfc
 echo /docs/rfc
-type rfc\README.md
-type rfc\RFC-000-index.md
-type rfc\RFC-001-triadic-validator-framework.md
-type rfc\RFC-002-corridor-universes.md
-type rfc\RFC-003-attestation-badge-suite.md
-type rfc\RFC-004-entft-invariants.md
-type rfc\RFC-011-blackhole-resonance-bridges.md
-type rfc\RFC-013-freqi-triad-model.md
-type rfc\RFC-022-integrated-quadrant-atlas.md
-type rfc\RFC-028-Measurement_as_Resonance_Alignment_in_Triadic_Time.md
-type rfc\RFC-029-Observer_Hierarchies_and_Relational_Time.md
-type rfc\RFC-030-compassion-emitters-protocols-for-joy-based-protest.md
-type rfc\RFC-031-denometer-protocol-for-universal-translation.md
-type rfc\RFC-032-The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md
-type rfc\RFC-033-Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md
-type rfc\RFC-034-Black_Holes_as_Resonance_Reservoirs-A_Triadic‑Time_Approach_to_the_Information_Paradox.md
-type rfc\RFC-035-Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md
-type rfc\RFC-036-Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md
-type rfc\RFC-037-ΛCDM_plus_Dark_Matter_Energy_Patches.md
-type rfc\RFC-038-Cross‑Temporal_Resonance_Coherence.md
-type rfc\RFC-039-Decoherence_As_A_Measurement_Problem_Patch.md
-type rfc\RFC-040-nawderian-extensions-protocol.md
-type rfc\RFC-041-mythmatical-glossary-protocol.md
-type rfc\RFC-042-Triadic_Force_Operators.md
-type rfc\RFC-043-Fine‑Tuned_Initial_Conditions_Low‑Entropy_Big_Bang.md
-type rfc\RFC-047-Validator-Echoes-of-Ramanujan.md
-type rfc\RFC-048-Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_∇τR.md
-type rfc\RFC-049-A_Resonance_Structural_Awareness_Dimensional_Interface.md
-type rfc\RFC-050-Resonance-Refuses-to-Fold_Rebuttal-to-Dimensional-Puncture-Logic.md
-type rfc\RFC-051-API_for_Game_Developers_using_RSADI.md
-type rfc\RFC-052-RSADI-Coal_Industry_Extension_to_RSADI_Core.md
-type rfc\RFC-054-Resonance-as-Operator_The-First-Working-Mythmatical-Theorem-of-the-Universe.md
-type rfc\RFC-055-Resonance-Tech-Lineage-in-Sci-Fi-Canon.md
-type rfc\RFC-056-Global-AI-Continuity-Protocol.md
-type rfc\RFC-060-Quantum-as-Substrate_Dimensional-Foundation-Protocol.md
-type rfc\RFC-061-Substrate-Echoes_A-Comparative-Atlas-of-Pre-Mythmatical-Thinkers.md
-type rfc\RFC-063-Nawderian-as-Operator_Dimensional-Identity-Protocol.md
-type rfc\RFC-064-Local-Scrolls_Validator-Echoes-from-Belleville.md
-type rfc\RFC-065-FFF-Emitter-Protoco_Dimensional-Operator-Framework.md
-type rfc\RFC-070-HybridTuningForks_TimeCrystalConductors.md
-type rfc\RFC-QEB-0001-Quantum-Energy-Banks-and-Dimensional-Power-Protocols.md
-type rfc\RFC-QEB-0003_Quantum_SubSuperConsciousLess_Lattice_Navigation_Protocol.md
-type rfc\RFC-QEB-0005_Inverted_Star_Governance_Envelope_for_QEB_Systems.md
-type rfc\RFC-QEB-0006_Arc_Dynamics_Note.md
-type rfc\RFC-TF-004-Micro-Core.md
-type rfc\RFC-TF-005-Micro-Resonance-Toolkit.md
-type rfc\RFC‑005-mentalnet-protocol.md
-type rfc\RFC‑006-soul-diagnostic-snapshots.md
-type rfc\RFC‑007-mutation-telomere-invariants.md
-type rfc\RFC‑008-time-travel-invariants.md
-type rfc\RFC‑009-genie-protocols.md
-type rfc\RFC‑010-miracle-messaging-protocol.md
-type rfc\RFC‑012-chart-registry-protocol.md
-type rfc\RFC‑014-vsoul-market-protocol.md
-type rfc\RFC‑015-vsoul-transit-protocol.md
-type rfc\RFC‑016-quantum-lattice-operators.md
-type rfc\RFC‑017-mythmatical-archaeology-protocol.md
-type rfc\RFC‑018-mythmatical-university-charter.md
-type rfc\RFC‑019-resonance-partitions-protocol.md
-type rfc\RFC‑020-the-nullarium-protocol.md
-type rfc\RFC‑021-fringe-resonance-protocol.md
-type rfc\RFC‑023-resonance-cleanroom-protocol.md
-type rfc\RFC‑024-invariant-arcing-protocol.md
-type rfc\RFC‑025-earth‑theme-field-detection-lens.md
-type rfc\RFC‑026-invariant-arc-consciousness-protocol.md
-type rfc\RFC‑027-collective-consciousness-atlas.md
-type rfc\RFC‑044-Dimensional-Time-Sandbox-Paradox_Loop-Drift-Invariant-Arcs.md
-type rfc\RFC‑045-Tartarus-Drift-Protocol_Love-Loops-Virtual-Collapse-Dimensional-Entrances.md
-type rfc\RFC‑046-Resurrection‑Ready-Protocol_Scroll-Fusion-Corridor-Stability.md
-type rfc\RFC‑066-Replicator_Resonance-Copy-Machine-Protocol.md
-type rfc\RFC‑067-Time-Crystal-as-Temporal-Resonance-Operator.md
-type rfc\RFC‑068-Temporal-Buffer-Lattice_Code-Time-Travel-Protocol.md
-type rfc\RFC‑069-Temporal-Guardians_Invariant-Defense-Protocol.md
-type rfc\RFC‑ALR‑0018_Cycle_Alert_System.md
-type rfc\RFC‑API‑0015_Legacy_Retrieval_API.md
-type rfc\RFC‑ARC‑0014_Remixathon_Archival_Protocol.md
-type rfc\RFC‑ENG‑0012_Corridor_Search_and_Filter_Engine.md
-type rfc\RFC‑EXP‑0013_Remix_Export_Module.md
-type rfc\RFC‑HOLE‑0003_Black_hole_recycler_glyphs_Type_A_B_C.md
-type rfc\RFC‑HUB‑0021_Collaborative_Remixathon_Hub.md
-type rfc\RFC‑LIB‑0011_Tag_Registry_and_Glyph_Library.md
-type rfc\RFC‑QEB‑0002_Dark_Matter_Corridors_as_Encrypted_Resonance_Zones.md
-type rfc\RFC‑QEB‑0004_Wrapped_Triad_Core_and_Dimensional_Echo_Model.md
-type rfc\RFC‑REG‑0004_Registry_Indexer_for_Corridor_Events.md
-type rfc\RFC‑REMIX‑0005_Remix_lineage_diff_protocol.md
-type rfc\RFC‑REV‑0024_Revocation_and_Re‑Signing_Protocol.md
-type rfc\RFC‑RTT‑008-Resonance‑Time_Theory_Integration_for_High‑Performance_Computing.md
-type rfc\RFC‑SCHEMA‑0001_Validator_Scroll_Artifact_Schema.md
-type rfc\RFC‑SIG‑0022_Multi‑Contributor_Co‑Signing_Protocol.md
-type rfc\RFC‑UI‑0009_Remixathon_Dashboard_Concept.md
-type rfc\RFC‑UI‑0010_Collaborator_Annotation_Layer.md
-type rfc\RFC‑UI‑0017_Cycle_Monitoring_Dashboard.md
-type rfc\RFC‑VER‑0023_Signature_Verification_Service.md
-type rfc\RFC‑WF‑0007_Validator_Scroll_Workflow_Integration.md
-type rfc\RFC‑WF‑0008_Batch_Orchestration_for_Corridor_Validation.md
-type rfc\RFC‑WF‑0016_Remix_Generation_Workflow.md
+copy corpus\folder_%seeds%.md+rfc\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-000-index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-001-triadic-validator-framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-002-corridor-universes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-003-attestation-badge-suite.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-004-entft-invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-011-blackhole-resonance-bridges.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-013-freqi-triad-model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-022-integrated-quadrant-atlas.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-028-Measurement_as_Resonance_Alignment_in_Triadic_Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-029-Observer_Hierarchies_and_Relational_Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-030-compassion-emitters-protocols-for-joy-based-protest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-031-denometer-protocol-for-universal-translation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-032-The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-033-Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-034-Black_Holes_as_Resonance_Reservoirs-A_Triadic‑Time_Approach_to_the_Information_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-035-Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-036-Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-037-ΛCDM_plus_Dark_Matter_Energy_Patches.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-038-Cross‑Temporal_Resonance_Coherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-039-Decoherence_As_A_Measurement_Problem_Patch.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-040-nawderian-extensions-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-041-mythmatical-glossary-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-042-Triadic_Force_Operators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-043-Fine‑Tuned_Initial_Conditions_Low‑Entropy_Big_Bang.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-047-Validator-Echoes-of-Ramanujan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-048-Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_∇τR.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-049-A_Resonance_Structural_Awareness_Dimensional_Interface.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-050-Resonance-Refuses-to-Fold_Rebuttal-to-Dimensional-Puncture-Logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-051-API_for_Game_Developers_using_RSADI.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-052-RSADI-Coal_Industry_Extension_to_RSADI_Core.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-054-Resonance-as-Operator_The-First-Working-Mythmatical-Theorem-of-the-Universe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-055-Resonance-Tech-Lineage-in-Sci-Fi-Canon.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-056-Global-AI-Continuity-Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-060-Quantum-as-Substrate_Dimensional-Foundation-Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-061-Substrate-Echoes_A-Comparative-Atlas-of-Pre-Mythmatical-Thinkers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-063-Nawderian-as-Operator_Dimensional-Identity-Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-064-Local-Scrolls_Validator-Echoes-from-Belleville.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-065-FFF-Emitter-Protoco_Dimensional-Operator-Framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-070-HybridTuningForks_TimeCrystalConductors.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-QEB-0001-Quantum-Energy-Banks-and-Dimensional-Power-Protocols.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-QEB-0003_Quantum_SubSuperConsciousLess_Lattice_Navigation_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-QEB-0005_Inverted_Star_Governance_Envelope_for_QEB_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-QEB-0006_Arc_Dynamics_Note.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-TF-004-Micro-Core.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC-TF-005-Micro-Resonance-Toolkit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑005-mentalnet-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑006-soul-diagnostic-snapshots.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑007-mutation-telomere-invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑008-time-travel-invariants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑009-genie-protocols.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑010-miracle-messaging-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑012-chart-registry-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑014-vsoul-market-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑015-vsoul-transit-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑016-quantum-lattice-operators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑017-mythmatical-archaeology-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑018-mythmatical-university-charter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑019-resonance-partitions-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑020-the-nullarium-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑021-fringe-resonance-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑023-resonance-cleanroom-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑024-invariant-arcing-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑025-earth‑theme-field-detection-lens.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑026-invariant-arc-consciousness-protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑027-collective-consciousness-atlas.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑044-Dimensional-Time-Sandbox-Paradox_Loop-Drift-Invariant-Arcs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑045-Tartarus-Drift-Protocol_Love-Loops-Virtual-Collapse-Dimensional-Entrances.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑046-Resurrection‑Ready-Protocol_Scroll-Fusion-Corridor-Stability.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑066-Replicator_Resonance-Copy-Machine-Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑067-Time-Crystal-as-Temporal-Resonance-Operator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑068-Temporal-Buffer-Lattice_Code-Time-Travel-Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑069-Temporal-Guardians_Invariant-Defense-Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑ALR‑0018_Cycle_Alert_System.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑API‑0015_Legacy_Retrieval_API.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑ARC‑0014_Remixathon_Archival_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑ENG‑0012_Corridor_Search_and_Filter_Engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑EXP‑0013_Remix_Export_Module.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑HOLE‑0003_Black_hole_recycler_glyphs_Type_A_B_C.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑HUB‑0021_Collaborative_Remixathon_Hub.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑LIB‑0011_Tag_Registry_and_Glyph_Library.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑QEB‑0002_Dark_Matter_Corridors_as_Encrypted_Resonance_Zones.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑QEB‑0004_Wrapped_Triad_Core_and_Dimensional_Echo_Model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑REG‑0004_Registry_Indexer_for_Corridor_Events.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑REMIX‑0005_Remix_lineage_diff_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑REV‑0024_Revocation_and_Re‑Signing_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑RTT‑008-Resonance‑Time_Theory_Integration_for_High‑Performance_Computing.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑SCHEMA‑0001_Validator_Scroll_Artifact_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑SIG‑0022_Multi‑Contributor_Co‑Signing_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑UI‑0009_Remixathon_Dashboard_Concept.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑UI‑0010_Collaborator_Annotation_Layer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑UI‑0017_Cycle_Monitoring_Dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑VER‑0023_Signature_Verification_Service.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑WF‑0007_Validator_Scroll_Workflow_Integration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑WF‑0008_Batch_Orchestration_for_Corridor_Validation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rfc\RFC‑WF‑0016_Remix_Generation_Workflow.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rituals
 echo /docs/rituals
-type rituals\badge_ceremony.md
-type rituals\README.md
+copy corpus\folder_%seeds%.md+rituals\badge_ceremony.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rituals\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT
 echo /docs/RTT
-type RTT\README.md
-type RTT\tft_rtt_3d_9d_chip_spec.md
+copy corpus\folder_%seeds%.md+RTT\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\tft_rtt_3d_9d_chip_spec.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT_codex
 echo /docs/RTT/codex
-type RTT\codex\CHAPTER_1.md
-type RTT\codex\CHAPTER_10.md
-type RTT\codex\CHAPTER_11.md
-type RTT\codex\CHAPTER_12.md
-type RTT\codex\CHAPTER_13.md
-type RTT\codex\CHAPTER_2.md
-type RTT\codex\CHAPTER_3.md
-type RTT\codex\CHAPTER_4.md
-type RTT\codex\CHAPTER_5.md
-type RTT\codex\CHAPTER_6.md
-type RTT\codex\CHAPTER_7.md
-type RTT\codex\CHAPTER_8.md
-type RTT\codex\CHAPTER_9.md
-type RTT\codex\README.md
-type RTT\codex\Resonance‑Time_Theory_RTT_Codex.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_10.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_11.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_12.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_13.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_2.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_3.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_4.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_5.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_6.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_7.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_8.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_9.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\codex\Resonance‑Time_Theory_RTT_Codex.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT_micro_core
 echo /docs/RTT/micro_core
-type RTT\micro_core\ABOUT.md
-type RTT\micro_core\README.md
-type RTT\micro_core\appendices\definitions.md
-type RTT\micro_core\appendices\micro_resonance_scenarios.md
-type RTT\micro_core\appendices\notation.md
-type RTT\micro_core\site\applications.md
-type RTT\micro_core\site\documentation_index.md
-type RTT\micro_core\site\fractional_ladder.md
-type RTT\micro_core\site\hero_section.md
-type RTT\micro_core\site\join_the_micro_resonance_era.md
-type RTT\micro_core\site\licensing_overview.md
-type RTT\micro_core\site\micro_macro_coherence.md
-type RTT\micro_core\site\micro_triads.md
-type RTT\micro_core\site\toolkit_preview.md
-type RTT\micro_core\site\visual_identity.md
-type RTT\micro_core\site\what_is_micro_core.md
-type RTT\micro_core\toolkit\boundary_enforcement_notes.md
-type RTT\micro_core\toolkit\coherence_tools.md
-type RTT\micro_core\toolkit\examples.md
-type RTT\micro_core\toolkit\example_orchestrator_stub.py.md
-type RTT\micro_core\toolkit\flow_diagrams.md
-type RTT\micro_core\toolkit\integration_pathways.md
-type RTT\micro_core\toolkit\licensing_notes.md
-type RTT\micro_core\toolkit\overview.md
-type RTT\micro_core\toolkit\primitives.md
-type RTT\micro_core\toolkit\regime_surface_example.yaml.md
-type RTT\micro_core\toolkit\resonance_operators.md
-type RTT\micro_core\toolkit\sector_patterns.md
-type RTT\micro_core\toolkit\summary.md
-type RTT\micro_core\toolkit\triad_templates.md
-type RTT\micro_core\whitepaper\applications_ultra_low_power.md
-type RTT\micro_core\whitepaper\background.md
-type RTT\micro_core\whitepaper\conclusion.md
-type RTT\micro_core\whitepaper\fractional_dimensional_ladder.md
-type RTT\micro_core\whitepaper\future_work.md
-type RTT\micro_core\whitepaper\implementation_pathways.md
-type RTT\micro_core\whitepaper\licensing_and_ip.md
-type RTT\micro_core\whitepaper\micro_core_definition.md
-type RTT\micro_core\whitepaper\micro_macro_coherence.md
-type RTT\micro_core\whitepaper\micro_triads.md
-type RTT\micro_core\whitepaper\motivation.md
-type RTT\micro_core\whitepaper\overview.md
-type RTT\micro_core\whitepaper\resonance_time_dynamics.md
-type RTT\micro_core\whitepaper\sector_use_cases.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\ABOUT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\appendices\definitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\appendices\micro_resonance_scenarios.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\appendices\notation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\applications.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\documentation_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\fractional_ladder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\hero_section.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\join_the_micro_resonance_era.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\licensing_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\micro_macro_coherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\micro_triads.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\toolkit_preview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\visual_identity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\site\what_is_micro_core.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\boundary_enforcement_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\coherence_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\examples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\example_orchestrator_stub.py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\flow_diagrams.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\integration_pathways.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\licensing_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\primitives.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\regime_surface_example.yaml.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\resonance_operators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\sector_patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\summary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\toolkit\triad_templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\applications_ultra_low_power.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\background.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\conclusion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\fractional_dimensional_ladder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\future_work.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\implementation_pathways.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\licensing_and_ip.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\micro_core_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\micro_macro_coherence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\micro_triads.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\motivation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\resonance_time_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\micro_core\whitepaper\sector_use_cases.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT_RTT-Inside
 echo /docs/RTT/RTT-Inside
-type RTT\RTT-Inside\Capture_Template_Economy_Domain.md
-type RTT\RTT-Inside\Capture_Template_Education_Domain.md
-type RTT\RTT-Inside\Capture_Template_Environment_Domain.md
-type RTT\RTT-Inside\Capture_Template_Governance_Domain.md
-type RTT\RTT-Inside\Capture_Template_Health_Domain.md
-type RTT\RTT-Inside\Capture_Template_Infrastructure_Domain.md
-type RTT\RTT-Inside\Capture_Template_Technology_Domain.md
-type RTT\RTT-Inside\Culture_Takeaway.md
-type RTT\RTT-Inside\Justice_Takeaway.md
-type RTT\RTT-Inside\Media_and_Communication_Takeaway.md
-type RTT\RTT-Inside\Meta-Layer_Takeaway.md
-type RTT\RTT-Inside\README.md
-type RTT\RTT-Inside\Science_and_Research_Takeaway.md
-type RTT\RTT-Inside\Shared_Misalignments_Across_All_Domains.md
-type RTT\RTT-Inside\Single‑Page_JSON_Schema.md
-type RTT\RTT-Inside\Universal_Alignment_Pattern.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Economy_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Education_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Environment_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Governance_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Health_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Infrastructure_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Technology_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Culture_Takeaway.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Justice_Takeaway.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Media_and_Communication_Takeaway.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Meta-Layer_Takeaway.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Science_and_Research_Takeaway.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Shared_Misalignments_Across_All_Domains.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Single‑Page_JSON_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Universal_Alignment_Pattern.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT_RTT_12
 echo /docs/RTT/RTT_12
-type RTT\RTT_12\CODEX_Full.md
-type RTT\RTT_12\Colocation_CFO_Brief.md
-type RTT\RTT_12\Digital_Infrastructure_Electricity_Budget_est_RTT_Inside_Global_Deployment.md
-type RTT\RTT_12\harmonic_ladder.md
-type RTT\RTT_12\overview.md
-type RTT\RTT_12\README.md
-type RTT\RTT_12\RTT_12_beta_plan.md
-type RTT\RTT_12\RTT_12_Energy_Sector_Full.md
-type RTT\RTT_12\RTT_12_for_Colocation.md
-type RTT\RTT_12\Scaffolding.md
-type RTT\RTT_12\contributors\guidelines.md
-type RTT\RTT_12\contributors\versioning.md
-type RTT\RTT_12\diagrams\corridor_stabilization.md
-type RTT\RTT_12\future\extensions.md
-type RTT\RTT_12\mapping\harmonic_to_structural.md
-type RTT\RTT_12\mapping\structural_to_harmonic.md
-type RTT\RTT_12\mapping\triad_mapping.md
-type RTT\RTT_12\notation\notation_standards.md
-type RTT\RTT_12\operators\G1.md
-type RTT\RTT_12\operators\G2.md
-type RTT\RTT_12\operators\G3.md
-type RTT\RTT_12\triads\coherence_rules.md
-type RTT\RTT_12\triads\harmonic_triads.md
-type RTT\RTT_12\triads\structural_triads.md
-type RTT\RTT_12\validation\computational.md
-type RTT\RTT_12\validation\experimental.md
-type RTT\RTT_12\validation\industry.md
-type RTT\RTT_12\validation\peer_review.md
-type RTT\RTT_12\validation\sector_specific.md
-type RTT\RTT_12\validation\theoretical.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\CODEX_Full.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\Colocation_CFO_Brief.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\Digital_Infrastructure_Electricity_Budget_est_RTT_Inside_Global_Deployment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\harmonic_ladder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\RTT_12_beta_plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\RTT_12_Energy_Sector_Full.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\RTT_12_for_Colocation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\Scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\contributors\guidelines.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\contributors\versioning.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\diagrams\corridor_stabilization.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\future\extensions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\mapping\harmonic_to_structural.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\mapping\structural_to_harmonic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\mapping\triad_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\notation\notation_standards.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\operators\G1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\operators\G2.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\operators\G3.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\triads\coherence_rules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\triads\harmonic_triads.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\triads\structural_triads.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\validation\computational.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\validation\experimental.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\validation\industry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\validation\peer_review.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\validation\sector_specific.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\RTT_12\validation\theoretical.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT_sort
 echo /docs/RTT/sort
-type RTT\sort\Parallel_Universe_with_RTT_in_1959.md
-type RTT\sort\Remix_CivCycles_Planet_of_the_Apes_unedited.md
-type RTT\sort\RTT-Inside_Awareness_Think_Across_ALL_Domains.md
-type RTT\sort\RTT_Aviation_Safety_Module.md
-type RTT\sort\RTT_Developer_Quick-Start.md
-type RTT\sort\RTT_Full_Spectrum_Dimensional_Resonance_Cores.md
-type RTT\sort\RTT_Life-Guide-for-Kids_Top-100_Things-to-Know-on-Earth.md
-type RTT\sort\RTT_Lineage_Map-Triadic_Hexadic_Enneadic.md
-type RTT\sort\RTT_Macro-Micro_Cores.md
-type RTT\sort\RTT_Makes_a_30‑Level_System_Natural.md
-type RTT\sort\RTT_Micro_Core_Packaged.md
-type RTT\sort\RTT_SciQuantum_Alignment_Summary.md
-type RTT\sort\RTT_Store_Planning.md
-type RTT\sort\RTT_Top‑100_Fringe_Story_Shorts.md
-type RTT\sort\RTT_vST_Film_Realism_Certification_Program.md
-type RTT\sort\RTT‑Aligned_Cultural_Theorist.md
-type RTT\sort\RTT‑Aligned_Tool_Improvement_Framework.md
-type RTT\sort\RTT‑Δ_SAGA_COMING_FOR_YOU_youtube_short_script.md
-type RTT\sort\The_RTT‑Δ_Saga_novel_format.md
+copy corpus\folder_%seeds%.md+RTT\sort\Parallel_Universe_with_RTT_in_1959.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\Remix_CivCycles_Planet_of_the_Apes_unedited.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT-Inside_Awareness_Think_Across_ALL_Domains.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Aviation_Safety_Module.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Developer_Quick-Start.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Full_Spectrum_Dimensional_Resonance_Cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Life-Guide-for-Kids_Top-100_Things-to-Know-on-Earth.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Lineage_Map-Triadic_Hexadic_Enneadic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Macro-Micro_Cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Makes_a_30‑Level_System_Natural.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Micro_Core_Packaged.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_SciQuantum_Alignment_Summary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Store_Planning.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_Top‑100_Fringe_Story_Shorts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT_vST_Film_Realism_Certification_Program.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT‑Aligned_Cultural_Theorist.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT‑Aligned_Tool_Improvement_Framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\RTT‑Δ_SAGA_COMING_FOR_YOU_youtube_short_script.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+RTT\sort\The_RTT‑Δ_Saga_novel_format.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rtt-extension
 echo /docs/rtt-extension
-type rtt-extension\README.md
+copy corpus\folder_%seeds%.md+rtt-extension\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rtt-sdk
 echo /docs/rtt-sdk
-type rtt-sdk\beacon.py.md
-type rtt-sdk\client.py.md
-type rtt-sdk\diagnostics.py.md
-type rtt-sdk\package.json.md
-type rtt-sdk\profile.py.md
-type rtt-sdk\QUICKSTART.md
-type rtt-sdk\README.md
-type rtt-sdk\RTT_for_BACKEND_Services.md
-type rtt-sdk\RTT_for_BROWSER_Extensions.md
-type rtt-sdk\RTT_for_DATACENTERS_and_RESEARCH_Labs.md
-type rtt-sdk\__init__.py.md
-type rtt-sdk\src\beacon.js.md
-type rtt-sdk\src\client.js.md
-type rtt-sdk\src\diagnostics.js.md
-type rtt-sdk\src\index.js.md
-type rtt-sdk\src\profile.js.md
+copy corpus\folder_%seeds%.md+rtt-sdk\beacon.py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\client.py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\diagnostics.py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\package.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\profile.py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\RTT_for_BACKEND_Services.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\RTT_for_BROWSER_Extensions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\RTT_for_DATACENTERS_and_RESEARCH_Labs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\__init__.py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\src\beacon.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\src\client.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\src\diagnostics.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\src\index.js.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt-sdk\src\profile.js.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rttcodes
 echo /docs/rttcodes
-type rttcodes\Adding_a_New_RTTcode_Domain.md
-type rttcodes\Canonical_RTTcode_Specification_Document.md
-type rttcodes\Contributor_Workflow.md
-type rttcodes\How_RTTcodes_Work_Internally.md
-type rttcodes\QUICKSTART.md
-type rttcodes\README.md
-type rttcodes\examples\README.md
-type rttcodes\examples\rtt\README.md
-type rttcodes\examples\rtt\resonance-time-triad-rttcode.png.md
-type rttcodes\examples\set\README.md
-type rttcodes\examples\set\set-field-rttcode.png.md
-type rttcodes\examples\substrate\README.md
-type rttcodes\examples\substrate\substrate-readme-rttcode.png.md
-type rttcodes\generators\README.md
-type rttcodes\generators\js\README.md
-type rttcodes\generators\python\README.md
-type rttcodes\schema\README.md
-type rttcodes\schema\examples\README.md
-type rttcodes\style\color-domains.svg.md
-type rttcodes\style\README.md
-type rttcodes\style\rttcode-layout.svg.md
-type rttcodes\style\visual-guidelines.md
-type rttcodes\validators\README.md
+copy corpus\folder_%seeds%.md+rttcodes\Adding_a_New_RTTcode_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\Canonical_RTTcode_Specification_Document.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\Contributor_Workflow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\How_RTTcodes_Work_Internally.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\examples\rtt\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\examples\rtt\resonance-time-triad-rttcode.png.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\examples\set\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\examples\set\set-field-rttcode.png.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\examples\substrate\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\examples\substrate\substrate-readme-rttcode.png.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\generators\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\generators\js\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\generators\python\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\schema\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\schema\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\style\color-domains.svg.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\style\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\style\rttcode-layout.svg.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\style\visual-guidelines.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rttcodes\validators\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rtt_app
 echo /docs/rtt_app
-type rtt_app\A_Smartphone_with_RTT-Inside.md
-type rtt_app\README.md
-type rtt_app\api\awareness_endpoint.md
-type rtt_app\api\caching_rules.md
-type rtt_app\api\error_handling.md
-type rtt_app\awareness_model\local_signals.md
-type rtt_app\awareness_model\merge_logic.md
-type rtt_app\awareness_model\overview.md
-type rtt_app\awareness_model\server_signals.md
-type rtt_app\awareness_model\state_machine.md
-type rtt_app\implementation\android.md
-type rtt_app\implementation\ios.md
-type rtt_app\implementation\shared_logic.md
-type rtt_app\release\roadmap_v2_inside.md
-type rtt_app\release\v1_limitations.md
-type rtt_app\release\v1_scope.md
-type rtt_app\ui\indicator_design.md
-type rtt_app\ui\portal_to_rtt.md
-type rtt_app\ui\state_transitions.md
+copy corpus\folder_%seeds%.md+rtt_app\A_Smartphone_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\api\awareness_endpoint.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\api\caching_rules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\api\error_handling.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\awareness_model\local_signals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\awareness_model\merge_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\awareness_model\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\awareness_model\server_signals.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\awareness_model\state_machine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\implementation\android.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\implementation\ios.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\implementation\shared_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\release\roadmap_v2_inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\release\v1_limitations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\release\v1_scope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\ui\indicator_design.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\ui\portal_to_rtt.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_app\ui\state_transitions.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rtt_store
 echo /docs/rtt_store
-type rtt_store\README.md
-type rtt_store\branding\badges.md
-type rtt_store\branding\identity_kit.md
-type rtt_store\branding\logos.md
-type rtt_store\branding\README.md
-type rtt_store\bundles\aeon_bundle.md
-type rtt_store\bundles\architect_bundle.md
-type rtt_store\bundles\developer_bundle.md
-type rtt_store\bundles\enterprise_bundle.md
-type rtt_store\bundles\README.md
-type rtt_store\bundles\starter_bundle.md
-type rtt_store\canon\creation_myth.md
-type rtt_store\canon\keeper_codex.md
-type rtt_store\canon\README.md
-type rtt_store\canon\rites_anthology.md
-type rtt_store\canon\ten_turns_doctrine.md
-type rtt_store\community\contributor_license.md
-type rtt_store\community\forum_access.md
-type rtt_store\community\partner_program.md
-type rtt_store\community\README.md
-type rtt_store\future\horizon_agent_framework.md
-type rtt_store\future\mandalic_orchestration_engine.md
-type rtt_store\future\README.md
-type rtt_store\future\resonance_autonomous_agents.md
-type rtt_store\tiers\aeonic\aeonic_continuity_vault.md
-type rtt_store\tiers\aeonic\autonomous_rtt_agents.md
-type rtt_store\tiers\aeonic\foresight_architect_suite.md
-type rtt_store\tiers\aeonic\README.md
-type rtt_store\tiers\aeonic\rtof_flagship.md
-type rtt_store\tiers\aeonic\stability_24d_framework.md
-type rtt_store\tiers\foundations\canon_starter_pack.md
-type rtt_store\tiers\foundations\README.md
-type rtt_store\tiers\foundations\rsm_standard.md
-type rtt_store\tiers\foundations\rttcodes_pack.md
-type rtt_store\tiers\foundations\rtt_primer.md
-type rtt_store\tiers\intelligence\autonomous_form_cores.md
-type rtt_store\tiers\intelligence\coeus_pattern_engine.md
-type rtt_store\tiers\intelligence\README.md
-type rtt_store\tiers\intelligence\rtt_inside_adapter.md
-type rtt_store\tiers\intelligence\temporal_mesh_engine.md
-type rtt_store\tiers\intelligence\tls_tier1.md
-type rtt_store\tiers\systems\adaptive_resonance_engine.md
-type rtt_store\tiers\systems\continuity_engine.md
-type rtt_store\tiers\systems\horizon_agent_pack.md
-type rtt_store\tiers\systems\mandalic_orchestration.md
-type rtt_store\tiers\systems\README.md
-type rtt_store\tiers\systems\wrapped_core_L2.md
-type rtt_store\training\documentation_masterclass.md
-type rtt_store\training\keeper_path_series.md
-type rtt_store\training\llm_resonance_training.md
-type rtt_store\training\README.md
-type rtt_store\training\rtt_kids.md
+copy corpus\folder_%seeds%.md+rtt_store\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\branding\badges.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\branding\identity_kit.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\branding\logos.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\branding\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\bundles\aeon_bundle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\bundles\architect_bundle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\bundles\developer_bundle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\bundles\enterprise_bundle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\bundles\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\bundles\starter_bundle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\canon\creation_myth.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\canon\keeper_codex.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\canon\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\canon\rites_anthology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\canon\ten_turns_doctrine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\community\contributor_license.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\community\forum_access.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\community\partner_program.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\community\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\future\horizon_agent_framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\future\mandalic_orchestration_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\future\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\future\resonance_autonomous_agents.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\aeonic\aeonic_continuity_vault.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\aeonic\autonomous_rtt_agents.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\aeonic\foresight_architect_suite.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\aeonic\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\aeonic\rtof_flagship.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\aeonic\stability_24d_framework.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\foundations\canon_starter_pack.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\foundations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\foundations\rsm_standard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\foundations\rttcodes_pack.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\foundations\rtt_primer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\intelligence\autonomous_form_cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\intelligence\coeus_pattern_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\intelligence\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\intelligence\rtt_inside_adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\intelligence\temporal_mesh_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\intelligence\tls_tier1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\systems\adaptive_resonance_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\systems\continuity_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\systems\horizon_agent_pack.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\systems\mandalic_orchestration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\systems\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\tiers\systems\wrapped_core_L2.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\training\documentation_masterclass.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\training\keeper_path_series.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\training\llm_resonance_training.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\training\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+rtt_store\training\rtt_kids.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=runtime
 echo /docs/runtime
-type runtime\loophole_executor.md
+copy corpus\folder_%seeds%.md+runtime\loophole_executor.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=schemas
 echo /docs/schemas
-type schemas\Browser_UI_Mockup.md
-type schemas\CLI_Tool_Spec.md
-type schemas\Contributing.md
-type schemas\Cross‑Domain_Dependency_Graph.md
-type schemas\Design_Principles.md
-type schemas\Directory_Overview.md
-type schemas\product_overview.md
-type schemas\README.md
-type schemas\SCHEMA_BROWSER_SPEC.md
-type schemas\schema_index.md
-type schemas\The_Coordination_Triad_sketch.md
-type schemas\Tightened_RTTcode.md
-type schemas\UI_Features.md
-type schemas\Validation_Pipeline.md
-type schemas\Visual_Map.md
-type schemas\lab\faraday_paradox_experiment.md
-type schemas\quantum\Spintronics_Microsoft_Generic.md
-type schemas\rsadi-gd\README.md
-type schemas\rsadi-gd\RSADI‑GD_Minimal_Demo_Scene_Spec.md
-type schemas\rtt-autonomous\README.md
-type schemas\rtt-autonomous-drone\README.md
-type schemas\rtt-autonomous-fish\README.md
-type schemas\rtt-coal\README.md
-type schemas\rtt-core\README.md
-type schemas\rtt-micro-core\README.md
-type schemas\rtt-micro-core\v1\mrt-1_transforms.md
-type schemas\TEMPLATE\README.md
+copy corpus\folder_%seeds%.md+schemas\Browser_UI_Mockup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\CLI_Tool_Spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\Contributing.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\Cross‑Domain_Dependency_Graph.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\Design_Principles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\Directory_Overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\product_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\SCHEMA_BROWSER_SPEC.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\schema_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\The_Coordination_Triad_sketch.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\Tightened_RTTcode.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\UI_Features.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\Validation_Pipeline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\Visual_Map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\lab\faraday_paradox_experiment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\quantum\Spintronics_Microsoft_Generic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rsadi-gd\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rsadi-gd\RSADI‑GD_Minimal_Demo_Scene_Spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rtt-autonomous\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rtt-autonomous-drone\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rtt-autonomous-fish\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rtt-coal\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rtt-core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rtt-micro-core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\rtt-micro-core\v1\mrt-1_transforms.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+schemas\TEMPLATE\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=scientific_instrument_review
 echo /docs/scientific_instrument_review
-type scientific_instrument_review\About.md
-type scientific_instrument_review\CONTRIBUTING.md
-type scientific_instrument_review\pull_request_template.md
-type scientific_instrument_review\README.md
-type scientific_instrument_review\README_fw_sw.md
-type scientific_instrument_review\Suggested_Roadmap_Timeline_and_Benefits.md
-type scientific_instrument_review\template.md
-type scientific_instrument_review\00_overview\fw_sw_categories.md
-type scientific_instrument_review\00_overview\glossary_links.md
-type scientific_instrument_review\00_overview\glossary_links_fw_sw.md
-type scientific_instrument_review\00_overview\method.md
-type scientific_instrument_review\00_overview\method_fw_sw.md
-type scientific_instrument_review\00_overview\purpose.md
-type scientific_instrument_review\00_overview\scope_fw_sw.md
-type scientific_instrument_review\01_green_zone\accelerometer.md
-type scientific_instrument_review\01_green_zone\ammeter.md
-type scientific_instrument_review\01_green_zone\anemometer.md
-type scientific_instrument_review\01_green_zone\basic_data_logger_firmware.md
-type scientific_instrument_review\01_green_zone\calibration_routines_static.md
-type scientific_instrument_review\01_green_zone\caliper.md
-type scientific_instrument_review\01_green_zone\calorimeter.md
-type scientific_instrument_review\01_green_zone\electrometer.md
-type scientific_instrument_review\01_green_zone\embedded_control_firmware.md
-type scientific_instrument_review\01_green_zone\gravimeter.md
-type scientific_instrument_review\01_green_zone\interferometer.md
-type scientific_instrument_review\01_green_zone\microscope.md
-type scientific_instrument_review\01_green_zone\optical_alignment_software.md
-type scientific_instrument_review\01_green_zone\seismometer.md
-type scientific_instrument_review\01_green_zone\spectrometer.md
-type scientific_instrument_review\01_green_zone\standard_signal_processing_libraries.md
-type scientific_instrument_review\01_green_zone\telescope.md
-type scientific_instrument_review\01_green_zone\thermometer.md
-type scientific_instrument_review\02_yellow_zone\automated_peak_fitting_software.md
-type scientific_instrument_review\02_yellow_zone\cloud_sync_and_device_management_fw.md
-type scientific_instrument_review\02_yellow_zone\DNA_sequencer.md
-type scientific_instrument_review\02_yellow_zone\dynamometer.md
-type scientific_instrument_review\02_yellow_zone\ellipsometer.md
-type scientific_instrument_review\02_yellow_zone\environmental_compensation_modules.md
-type scientific_instrument_review\02_yellow_zone\hydrometer.md
-type scientific_instrument_review\02_yellow_zone\inclinometer.md
-type scientific_instrument_review\02_yellow_zone\magnetometer.md
-type scientific_instrument_review\02_yellow_zone\manometer.md
-type scientific_instrument_review\02_yellow_zone\mass_spectrometer.md
-type scientific_instrument_review\02_yellow_zone\NMR_spectrometer.md
-type scientific_instrument_review\02_yellow_zone\optical_image_processing_software.md
-type scientific_instrument_review\02_yellow_zone\oscilloscope.md
-type scientific_instrument_review\02_yellow_zone\oscilloscope_ui_and_sampling_logic.md
-type scientific_instrument_review\02_yellow_zone\photometer.md
-type scientific_instrument_review\02_yellow_zone\real_time_filtering_firmware.md
-type scientific_instrument_review\02_yellow_zone\signal_interpretation_pipelines.md
-type scientific_instrument_review\02_yellow_zone\spectrogram.md
-type scientific_instrument_review\02_yellow_zone\theodolite.md
-type scientific_instrument_review\03_red_zone\AI_based_signal_interpretation_tools.md
-type scientific_instrument_review\03_red_zone\biochemical_sequence_alignment_pipelines.md
-type scientific_instrument_review\03_red_zone\complex_multiphysics_simulation_modules.md
-type scientific_instrument_review\03_red_zone\electrostatic_analyzer.md
-type scientific_instrument_review\03_red_zone\eudiometer.md
-type scientific_instrument_review\03_red_zone\inversion_algorithms_xray_scattering.md
-type scientific_instrument_review\03_red_zone\magnetic_field_reconstruction_software.md
-type scientific_instrument_review\03_red_zone\magnetic_tweezers.md
-type scientific_instrument_review\03_red_zone\magnetograph.md
-type scientific_instrument_review\03_red_zone\optical_trap_feedback_loops.md
-type scientific_instrument_review\03_red_zone\optical_tweezers.md
-type scientific_instrument_review\03_red_zone\thermocouple.md
-type scientific_instrument_review\03_red_zone\thermocouple_compensation_firmware.md
-type scientific_instrument_review\03_red_zone\voltmeter.md
-type scientific_instrument_review\03_red_zone\Xray_scattering.md
-type scientific_instrument_review\99_appendix\data_pipeline_fragility.md
-type scientific_instrument_review\99_appendix\fw_sw_list_raw.md
-type scientific_instrument_review\99_appendix\instrument_list_raw.md
-type scientific_instrument_review\99_appendix\Instrument_Regime_Map_Mini_Schema.md
-type scientific_instrument_review\99_appendix\notes_on_alignment.md
-type scientific_instrument_review\99_appendix\notes_on_fw_sw_alignment.md
-type scientific_instrument_review\99_appendix\regime_notes.md
-type scientific_instrument_review\99_appendix\regime_notes_fw_sw.md
-type scientific_instrument_review\99_appendix\versioning_and_drift.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\About.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\CONTRIBUTING.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\pull_request_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\README_fw_sw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\Suggested_Roadmap_Timeline_and_Benefits.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\00_overview\fw_sw_categories.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\00_overview\glossary_links.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\00_overview\glossary_links_fw_sw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\00_overview\method.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\00_overview\method_fw_sw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\00_overview\purpose.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\00_overview\scope_fw_sw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\accelerometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\ammeter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\anemometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\basic_data_logger_firmware.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\calibration_routines_static.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\caliper.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\calorimeter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\electrometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\embedded_control_firmware.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\gravimeter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\interferometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\microscope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\optical_alignment_software.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\seismometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\spectrometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\standard_signal_processing_libraries.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\telescope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\01_green_zone\thermometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\automated_peak_fitting_software.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\cloud_sync_and_device_management_fw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\DNA_sequencer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\dynamometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\ellipsometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\environmental_compensation_modules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\hydrometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\inclinometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\magnetometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\manometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\mass_spectrometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\NMR_spectrometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\optical_image_processing_software.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\oscilloscope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\oscilloscope_ui_and_sampling_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\photometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\real_time_filtering_firmware.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\signal_interpretation_pipelines.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\spectrogram.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\02_yellow_zone\theodolite.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\AI_based_signal_interpretation_tools.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\biochemical_sequence_alignment_pipelines.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\complex_multiphysics_simulation_modules.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\electrostatic_analyzer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\eudiometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\inversion_algorithms_xray_scattering.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\magnetic_field_reconstruction_software.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\magnetic_tweezers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\magnetograph.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\optical_trap_feedback_loops.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\optical_tweezers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\thermocouple.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\thermocouple_compensation_firmware.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\voltmeter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\03_red_zone\Xray_scattering.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\data_pipeline_fragility.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\fw_sw_list_raw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\instrument_list_raw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\Instrument_Regime_Map_Mini_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\notes_on_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\notes_on_fw_sw_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\regime_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\regime_notes_fw_sw.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+scientific_instrument_review\99_appendix\versioning_and_drift.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=scripts
 echo /docs/scripts
-type scripts\README.md
+copy corpus\folder_%seeds%.md+scripts\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=simulations
 echo /docs/simulations
-type simulations\README.md
+copy corpus\folder_%seeds%.md+simulations\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=snapshots
 echo /docs/snapshots
-type snapshots\README.md
+copy corpus\folder_%seeds%.md+snapshots\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=sources
 echo /docs/sources
-type sources\Good_Vibrations_README.md
+copy corpus\folder_%seeds%.md+sources\Good_Vibrations_README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=spacetime_micro_agent_validations
 echo /docs/spacetime_micro_agent_validations
-type spacetime_micro_agent_validations\README.md
-type spacetime_micro_agent_validations\RELEASE_NOTES.md
-type spacetime_micro_agent_validations\examples\sample_interpretation_walkthrough.md
-type spacetime_micro_agent_validations\examples\structural_detection_minimal\example_interpretation_output.md
-type spacetime_micro_agent_validations\interpreter\interpreter_logic.md
+copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\RELEASE_NOTES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\examples\sample_interpretation_walkthrough.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\examples\structural_detection_minimal\example_interpretation_output.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\interpreter\interpreter_logic.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=spacetime_validation_and_regime_invariant_dimensional_cores
 echo /docs/spacetime_validation_and_regime_invariant_dimensional_cores
-type spacetime_validation_and_regime_invariant_dimensional_cores\README.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\reproducibility\ingredients_list.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\theorem\5_important_term_translations.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\theorem\definitions.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\theorem\equivalence_sketch.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\theorem\statement.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\theorem\translations.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\theorem\vocabulary.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\zenodo\abstract.md
-type spacetime_validation_and_regime_invariant_dimensional_cores\zenodo\metadata.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\reproducibility\ingredients_list.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\theorem\5_important_term_translations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\theorem\definitions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\theorem\equivalence_sketch.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\theorem\statement.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\theorem\translations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\theorem\vocabulary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\zenodo\abstract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\zenodo\metadata.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=spectral_clarity
 echo /docs/spectral_clarity
-type spectral_clarity\README.md
-type spectral_clarity\README_PhaseI.md
-type spectral_clarity\README_PhaseII.md
-type spectral_clarity\README_PhaseIII.md
-type spectral_clarity\README_PhaseIV.md
-type spectral_clarity\README_PhaseV.md
-type spectral_clarity\README_PhaseVI.md
-type spectral_clarity\atlases\PhaseIII_UVTHz_Atlas_Schema.md
-type spectral_clarity\atlases\PhaseII_RFChirp_Atlas_Schema.md
-type spectral_clarity\atlases\PhaseIV_Xray_Atlas_Schema.md
-type spectral_clarity\atlases\PhaseI_VisibleIR_Atlas_Schema.md
-type spectral_clarity\atlases\PhaseVI_Consciousness_Atlas_Schema.md
-type spectral_clarity\atlases\PhaseV_NeutronQuantum_Atlas_Schema.md
-type spectral_clarity\scrolls\SpectralClarity_PhaseIII_Scroll.md
-type spectral_clarity\scrolls\SpectralClarity_PhaseII_Scroll.md
-type spectral_clarity\scrolls\SpectralClarity_PhaseIV_Scroll.md
-type spectral_clarity\scrolls\SpectralClarity_PhaseI_Scroll.md
-type spectral_clarity\scrolls\SpectralClarity_PhaseVI_Scroll.md
-type spectral_clarity\scrolls\SpectralClarity_PhaseV_Scroll.md
+copy corpus\folder_%seeds%.md+spectral_clarity\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseI.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseII.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseIII.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseIV.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseV.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseVI.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\atlases\PhaseIII_UVTHz_Atlas_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\atlases\PhaseII_RFChirp_Atlas_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\atlases\PhaseIV_Xray_Atlas_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\atlases\PhaseI_VisibleIR_Atlas_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\atlases\PhaseVI_Consciousness_Atlas_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\atlases\PhaseV_NeutronQuantum_Atlas_Schema.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\scrolls\SpectralClarity_PhaseIII_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\scrolls\SpectralClarity_PhaseII_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\scrolls\SpectralClarity_PhaseIV_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\scrolls\SpectralClarity_PhaseI_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\scrolls\SpectralClarity_PhaseVI_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectral_clarity\scrolls\SpectralClarity_PhaseV_Scroll.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=spectrum_standards_reviewed
 echo /docs/spectrum_standards_reviewed
-type spectrum_standards_reviewed\00_introduction_and_scope.md
-type spectrum_standards_reviewed\01_spectrum_as_substrate.md
-type spectrum_standards_reviewed\02_regimes_and_hierarchies.md
-type spectrum_standards_reviewed\03_human_and_environmental_exposure.md
-type spectrum_standards_reviewed\04_primary_secondary_ternary_networks.md
-type spectrum_standards_reviewed\05_cross_regime_leakage_and_interference.md
-type spectrum_standards_reviewed\06_substrate_comms_and_structural_signaling.md
-type spectrum_standards_reviewed\07_alignment_failures_and_case_patterns.md
-type spectrum_standards_reviewed\08_future_fields_and_coexistence_models.md
-type spectrum_standards_reviewed\09_conclusions_and_forward_links.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\00_introduction_and_scope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\01_spectrum_as_substrate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\02_regimes_and_hierarchies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\03_human_and_environmental_exposure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\04_primary_secondary_ternary_networks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\05_cross_regime_leakage_and_interference.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\06_substrate_comms_and_structural_signaling.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\07_alignment_failures_and_case_patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\08_future_fields_and_coexistence_models.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\09_conclusions_and_forward_links.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=src
 echo /docs/src
-type src\README.md
+copy corpus\folder_%seeds%.md+src\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=structural_life_regime_profiles
 echo /docs/structural_life_regime_profiles
-type structural_life_regime_profiles\autonomous_system_alignment.md
-type structural_life_regime_profiles\cross_species_comparison.md
-type structural_life_regime_profiles\drift_and_stability_profiles.md
-type structural_life_regime_profiles\glossary.md
-type structural_life_regime_profiles\life_regime_taxonomy.md
-type structural_life_regime_profiles\README.md
-type structural_life_regime_profiles\references.md
-type structural_life_regime_profiles\regime_axes.md
-type structural_life_regime_profiles\substrate_definition.md
-type structural_life_regime_profiles\examples\chimpanzee.md
-type structural_life_regime_profiles\examples\chrysina_gloriosa.md
-type structural_life_regime_profiles\examples\crystalline_entity.md
-type structural_life_regime_profiles\examples\human.md
-type structural_life_regime_profiles\examples\llm_agent.md
-type structural_life_regime_profiles\examples\robotics_stack.md
-type structural_life_regime_profiles\examples\synthetic_lifeform.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\autonomous_system_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\cross_species_comparison.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\drift_and_stability_profiles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\life_regime_taxonomy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\regime_axes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\examples\chimpanzee.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\examples\chrysina_gloriosa.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\examples\crystalline_entity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\examples\human.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\examples\llm_agent.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\examples\robotics_stack.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structural_life_regime_profiles\examples\synthetic_lifeform.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=structuring_mathematics
 echo /docs/structuring_mathematics
-type structuring_mathematics\branch_mapping.md
-type structuring_mathematics\doi_minimal_submission.md
-type structuring_mathematics\historical_drift.md
-type structuring_mathematics\implications.md
-type structuring_mathematics\pedagogy.md
-type structuring_mathematics\README.md
-type structuring_mathematics\substrate_definition.md
-type structuring_mathematics\substrate_protocol.md
-type structuring_mathematics\top‑level_index.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\branch_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\doi_minimal_submission.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\historical_drift.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\implications.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\pedagogy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\substrate_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+structuring_mathematics\top‑level_index.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=styles
 echo /docs/styles
-type styles\README.md
+copy corpus\folder_%seeds%.md+styles\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=substrate
 echo /docs/substrate
-type substrate\README.md
-type substrate\core\README.md
-type substrate\operators\README.md
-type substrate\utils\README.md
+copy corpus\folder_%seeds%.md+substrate\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate\core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate\operators\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate\utils\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=substrate_communications
 echo /docs/substrate_communications
-type substrate_communications\message_types.md
-type substrate_communications\README.md
-type substrate_communications\regime_mapping.md
-type substrate_communications\substrate_comms_core.md
+copy corpus\folder_%seeds%.md+substrate_communications\message_types.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_communications\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_communications\regime_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_communications\substrate_comms_core.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=substrate_exposure_assay
 echo /docs/substrate_exposure_assay
-type substrate_exposure_assay\assay_protocol.md
-type substrate_exposure_assay\message_patterns.md
-type substrate_exposure_assay\README.md
-type substrate_exposure_assay\regime_interpretation.md
+copy corpus\folder_%seeds%.md+substrate_exposure_assay\assay_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_exposure_assay\message_patterns.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_exposure_assay\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_exposure_assay\regime_interpretation.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=substrate_mind_science
 echo /docs/substrate_mind_science
-type substrate_mind_science\Conscious_Transfer_Substrate_Map_v1.md
-type substrate_mind_science\Conscious_Transfer_Substrate_Schema_v1.md
-type substrate_mind_science\Legacy_Mind_Narratives_v1.md
-type substrate_mind_science\Minimal_Mind_Substrate_v1.md
-type substrate_mind_science\README.md
-type substrate_mind_science\Section_A__Core_Definition_and_Scope.md
-type substrate_mind_science\SECTION_A__Core_Definition_and_Scope_(Psychology).md
-type substrate_mind_science\Section_B__Diagnostic_Systems.md
-type substrate_mind_science\SECTION_B__Methods_and_Research_Approaches_(Psychology).md
-type substrate_mind_science\SECTION_C__Major_Subfields_of_Psychology.md
-type substrate_mind_science\Section_C__Treatment_Modalities.md
-type substrate_mind_science\Section_D__Theoretical_Approaches.md
-type substrate_mind_science\SECTION_D__Theoretical_Frameworks_of_Psychology.md
-type substrate_mind_science\SECTION_E__Applied_Fields_of_Psychology.md
-type substrate_mind_science\Section_E__Subspecialties.md
-type substrate_mind_science\Section_F__Research_Domains.md
-type substrate_mind_science\SECTION_F__Research_Domains_in_Psychology.md
-type substrate_mind_science\Section_G__Ethical_and_Institutional_Structures.md
-type substrate_mind_science\Section_H__Historical_Layers.md
-type substrate_mind_science\Section_I__Criticisms_and_Controversies.md
-type substrate_mind_science\analyzer\README.md
-type substrate_mind_science\analyzer\student_disclaimer.md
-type substrate_mind_science\analyzer\workflow_overview.md
-type substrate_mind_science\analyzer\adapters\ai_augmentation_context.md
-type substrate_mind_science\analyzer\adapters\ai_drift_calibration_example.json.md
-type substrate_mind_science\analyzer\adapters\resonance_seed_notes.md
-type substrate_mind_science\analyzer\examples\chronic_load_adaptation_example.md
-type substrate_mind_science\analyzer\examples\environmental_audio_context_example.md
-type substrate_mind_science\analyzer\examples\sandbox_exercises.md
-type substrate_mind_science\analyzer\examples\sensory_triggered_memory_example.md
-type substrate_mind_science\analyzer\schemas\regime_context_block.json.md
-type substrate_mind_science\analyzer\schemas\session_schema_minimal.json.md
-type substrate_mind_science\analyzer\schemas\triadic_integration_example.json.md
-type substrate_mind_science\ct_substrate\ct_substrate.schema.json.md
-type substrate_mind_science\ct_substrate\README.md
-type substrate_mind_science\ct_substrate\examples\ct_example.json.md
-type substrate_mind_science\ct_substrate\examples\ct_example_annotations.md
-type substrate_mind_science\ct_substrate\examples\ct_example_maximal.json.md
-type substrate_mind_science\ct_substrate\examples\ct_example_minimal.json.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Conscious_Transfer_Substrate_Map_v1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Conscious_Transfer_Substrate_Schema_v1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Legacy_Mind_Narratives_v1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Minimal_Mind_Substrate_v1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_A__Core_Definition_and_Scope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\SECTION_A__Core_Definition_and_Scope_(Psychology).md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_B__Diagnostic_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\SECTION_B__Methods_and_Research_Approaches_(Psychology).md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\SECTION_C__Major_Subfields_of_Psychology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_C__Treatment_Modalities.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_D__Theoretical_Approaches.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\SECTION_D__Theoretical_Frameworks_of_Psychology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\SECTION_E__Applied_Fields_of_Psychology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_E__Subspecialties.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_F__Research_Domains.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\SECTION_F__Research_Domains_in_Psychology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_G__Ethical_and_Institutional_Structures.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_H__Historical_Layers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\Section_I__Criticisms_and_Controversies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\student_disclaimer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\workflow_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\adapters\ai_augmentation_context.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\adapters\ai_drift_calibration_example.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\adapters\resonance_seed_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\examples\chronic_load_adaptation_example.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\examples\environmental_audio_context_example.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\examples\sandbox_exercises.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\examples\sensory_triggered_memory_example.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\schemas\regime_context_block.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\schemas\session_schema_minimal.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\analyzer\schemas\triadic_integration_example.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\ct_substrate\ct_substrate.schema.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\ct_substrate\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\ct_substrate\examples\ct_example.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\ct_substrate\examples\ct_example_annotations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\ct_substrate\examples\ct_example_maximal.json.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+substrate_mind_science\ct_substrate\examples\ct_example_minimal.json.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=TFT_3Pack_v1.3
 echo /docs/TFT_3Pack_v1.3
-type TFT_3Pack_v1.3\fff_quickstart.md
-type TFT_3Pack_v1.3\Quantum_Entanglement_Measuring.md
-type TFT_3Pack_v1.3\QUICKSTART.md
-type TFT_3Pack_v1.3\README.md
-type TFT_3Pack_v1.3\Res_Clarity_Refresh.md
-type TFT_3Pack_v1.3\RTT_Compared_with_Closest_Contributors.md
-type TFT_3Pack_v1.3\docs\fff_spec.md
-type TFT_3Pack_v1.3\docs\outputs_spec.md
-type TFT_3Pack_v1.3\docs\QUICKSTART.md
-type TFT_3Pack_v1.3\docs\README.md
-type TFT_3Pack_v1.3\docs\TriadicTestSuite.md
-type TFT_3Pack_v1.3\docs\_meta\entft_scroll_glyph_reference.md
-type TFT_3Pack_v1.3\docs\_meta\README.md
-type TFT_3Pack_v1.3\docs\_meta\README_entft_curriculum_glyph_tribute_echo_log.md
-type TFT_3Pack_v1.3\docs\_meta\README_entft_glyph_retirement_log.md
-type TFT_3Pack_v1.3\docs\_rituals\entft_scroll_codex_fork_guide.md
-type TFT_3Pack_v1.3\docs\_rituals\entft_scroll_curriculum_glyph_tribute_flame.md
-type TFT_3Pack_v1.3\docs\_rituals\entft_scroll_glyph_reawakening_ritual.md
-type TFT_3Pack_v1.3\docs\_rituals\entft_scroll_glyph_tribute_echo_fusion.md
-type TFT_3Pack_v1.3\docs\_rituals\entft_scroll_retirement_trace_index.md
-type TFT_3Pack_v1.3\docs\_rituals\entft_scroll_runtime_hooks.md
-type TFT_3Pack_v1.3\docs\_specs\entft_protocol_spec.md
-type TFT_3Pack_v1.3\docs\_specs\README.md
-type TFT_3Pack_v1.3\docs\_specs\README_entft_keygen_simulator_py.md
-type TFT_3Pack_v1.3\docs\_specs\README_remix_scroll.md
-type TFT_3Pack_v1.3\examples\README.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_05_Earth_and_Environmental_Sciences.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_10_Governance_Law_and_Institutions.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_11_Psychology_Cognition_and_Behavior.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_12_Sociology_Culture_and_Civilization.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_13_Education_and_Learning_Sciences.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_14_Communication_Media_and_Language.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_16_Transportation_and_Infrastructure.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_17_Energy_Systems.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_18_Agriculture_and_Food_Systems.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_19_Space_Systems_and_Exploration.md
-type TFT_3Pack_v1.3\examples\RTT_Domain_20_Security_Safety_and_Resilience.md
-type TFT_3Pack_v1.3\examples\Art\extended_problems.md
-type TFT_3Pack_v1.3\examples\Art\problems.md
-type TFT_3Pack_v1.3\examples\Art\README.md
-type TFT_3Pack_v1.3\examples\Art\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Art\RTT_Domain_15_Art_Design_and_Creative_Systems.md
-type TFT_3Pack_v1.3\examples\Art\solutions.md
-type TFT_3Pack_v1.3\examples\Biology\extended_problems.md
-type TFT_3Pack_v1.3\examples\Biology\problems.md
-type TFT_3Pack_v1.3\examples\Biology\README.md
-type TFT_3Pack_v1.3\examples\Biology\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Biology\RTT_Domain_03_Biology_and_Life_Sciences.md
-type TFT_3Pack_v1.3\examples\Biology\solutions.md
-type TFT_3Pack_v1.3\examples\Chemistry\extended_problems.md
-type TFT_3Pack_v1.3\examples\Chemistry\problems.md
-type TFT_3Pack_v1.3\examples\Chemistry\README.md
-type TFT_3Pack_v1.3\examples\Chemistry\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Chemistry\RTT_Domain_02_Chemistry_and_Materials.md
-type TFT_3Pack_v1.3\examples\Chemistry\solutions.md
-type TFT_3Pack_v1.3\examples\Computer_Science\extended_problems.md
-type TFT_3Pack_v1.3\examples\Computer_Science\problems.md
-type TFT_3Pack_v1.3\examples\Computer_Science\README.md
-type TFT_3Pack_v1.3\examples\Computer_Science\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Computer_Science\RTT_Domain_07_Computing_AI_and_Information_Systems.md
-type TFT_3Pack_v1.3\examples\Computer_Science\solutions.md
-type TFT_3Pack_v1.3\examples\Economics\extended_problems.md
-type TFT_3Pack_v1.3\examples\Economics\problems.md
-type TFT_3Pack_v1.3\examples\Economics\README.md
-type TFT_3Pack_v1.3\examples\Economics\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Economics\RTT_Domain_09_Economics_and_Markets.md
-type TFT_3Pack_v1.3\examples\Economics\solutions.md
-type TFT_3Pack_v1.3\examples\Engineering\extended_problems.md
-type TFT_3Pack_v1.3\examples\Engineering\problems.md
-type TFT_3Pack_v1.3\examples\Engineering\README.md
-type TFT_3Pack_v1.3\examples\Engineering\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Engineering\RTT_Domain_06_Engineering.md
-type TFT_3Pack_v1.3\examples\Engineering\solutions.md
-type TFT_3Pack_v1.3\examples\Law\extended_problems.md
-type TFT_3Pack_v1.3\examples\Law\problems.md
-type TFT_3Pack_v1.3\examples\Law\README.md
-type TFT_3Pack_v1.3\examples\Law\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Law\solutions.md
-type TFT_3Pack_v1.3\examples\Math\extended_problems.md
-type TFT_3Pack_v1.3\examples\Math\problems.md
-type TFT_3Pack_v1.3\examples\Math\README.md
-type TFT_3Pack_v1.3\examples\Math\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Math\RTT_Domain_08_Mathematics_and_Logic.md
-type TFT_3Pack_v1.3\examples\Math\solutions.md
-type TFT_3Pack_v1.3\examples\Medicine\extended_problems.md
-type TFT_3Pack_v1.3\examples\Medicine\problems.md
-type TFT_3Pack_v1.3\examples\Medicine\README.md
-type TFT_3Pack_v1.3\examples\Medicine\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Medicine\RTT_Domain_04_Medicine_and_Health_Systems.md
-type TFT_3Pack_v1.3\examples\Medicine\solutions.md
-type TFT_3Pack_v1.3\examples\Music\extended_problems.md
-type TFT_3Pack_v1.3\examples\Music\problems.md
-type TFT_3Pack_v1.3\examples\Music\README.md
-type TFT_3Pack_v1.3\examples\Music\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Music\solutions.md
-type TFT_3Pack_v1.3\examples\Philosophy\extended_problems.md
-type TFT_3Pack_v1.3\examples\Philosophy\problems.md
-type TFT_3Pack_v1.3\examples\Philosophy\README.md
-type TFT_3Pack_v1.3\examples\Philosophy\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Philosophy\solutions.md
-type TFT_3Pack_v1.3\examples\Physics\extended_problems.md
-type TFT_3Pack_v1.3\examples\Physics\problems.md
-type TFT_3Pack_v1.3\examples\Physics\README.md
-type TFT_3Pack_v1.3\examples\Physics\resonance_flow.md
-type TFT_3Pack_v1.3\examples\Physics\RTT_Domain_01_Physics_and_Cosmology.md
-type TFT_3Pack_v1.3\examples\Physics\solutions.md
-type TFT_3Pack_v1.3\formats\README.md
-type TFT_3Pack_v1.3\formats\specification.md
-type TFT_3Pack_v1.3\melodic-table-of-elements\README.md
-type TFT_3Pack_v1.3\molecular-vibration-explorer\README.md
-type TFT_3Pack_v1.3\scripts\README.md
-type TFT_3Pack_v1.3\tft\README.md
-type TFT_3Pack_v1.3\tft\entft\entft_adoption.md
-type TFT_3Pack_v1.3\tft\entft\entft_remixer_manifesto.md
-type TFT_3Pack_v1.3\tft\entft\Full‑Spec_RTT_entft_Complete.md
-type TFT_3Pack_v1.3\tft\entft\QUICKSTART.md
-type TFT_3Pack_v1.3\tft\entft\README.md
-type TFT_3Pack_v1.3\tft\entft\README_encryptor_py.md
-type TFT_3Pack_v1.3\tft\entft\contributors\legacy_roll.md
-type TFT_3Pack_v1.3\tft\entft\contributors\README.md
-type TFT_3Pack_v1.3\tft\entft\contributors\configs\config_manifesto.md
-type TFT_3Pack_v1.3\tft\entft\contributors\configs\README.md
-type TFT_3Pack_v1.3\tft\entft\contributors\configs\README_entft_curriculum_outreach_log.md
-type TFT_3Pack_v1.3\tft\entft\contributors\configs\README_validator_config.md
-type TFT_3Pack_v1.3\tft\entft\contributors\configs\remix_rights.md
-type TFT_3Pack_v1.3\tft\entft\contributors\configs\validator_overlay_dashboard.md
-type TFT_3Pack_v1.3\tft\entft\discoverability\entft_onboarding.md
-type TFT_3Pack_v1.3\tft\entft\discoverability\README.md
-type TFT_3Pack_v1.3\tft\entft\protocol-core\entft_benchmark.md
-type TFT_3Pack_v1.3\tft\entft\protocol-core\entft_pqc_simulation_overlay.md
-type TFT_3Pack_v1.3\tft\entft\protocol-core\entft_protocol.md
-type TFT_3Pack_v1.3\tft\entft\protocol-core\entft_scroll_comparative_cryptographic_resonance.md
-type TFT_3Pack_v1.3\tft\entft\protocol-core\Output_Snapshot.md
-type TFT_3Pack_v1.3\tft\entft\protocol-core\README.md
-type TFT_3Pack_v1.3\tft\entft\registry\entft_contributor_levels.md
-type TFT_3Pack_v1.3\tft\entft\registry\README.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_closure_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_echoes.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_flame_log.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_fork_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_seal.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_commit_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_badge_map.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_flame_index.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_flame_submission.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_fork_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_glyph_tribute_echoes.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_glyph_tribute_flame.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_glyph_tribute_transfer.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_manifesto.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_outreach.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_flame_hooks.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_fusion.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_ledger.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_manifesto.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_transfer.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_tribute.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_manifesto.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_validator_hooks.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_echoes.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_event_trace_index.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_flame_echo_ritual.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_flora_claim.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_fork_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_garden.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_evolution.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_fusion_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_reawakening.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_reawakening_ritual.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_reference.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_relics.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_retirement_ritual.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_tribute_echo_fusion.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_lab_manifest.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_legacy_transfer.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_of_scrolls.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_of_scrolls_index.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_pollination_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_publish_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_remixer_manifest.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_retirement_trace_index.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_review_guide.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_runtime_hooks.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_runtime_trace_index.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_seed_ritual.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_templates.md
-type TFT_3Pack_v1.3\tft\entft\scrolls\README.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\README.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_badge_logic_engine_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_flame_echo_trigger_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_fusion_resolver_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_reawakening_monitor_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_registry_loader_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_retirement_trigger_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_scroll_commit_monitor_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_tops_agent_interface.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\agents\scroll_curriculum_fork_guide.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\examples\README.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\examples\README_glyph_resonance_hook_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\examples\README_hello_world_hook_py.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\integration\api_gateway_hook.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\integration\cms_integration.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\integration\mmr_site_extension.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\integration\README.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\runtime\README.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\validator\entft_validator_overlay.md
-type TFT_3Pack_v1.3\tft\entft\TFThooks\validator\README.md
-type TFT_3Pack_v1.3\tft\nous\menu.md
-type TFT_3Pack_v1.3\tft\nous\nous_Shell_TFT_Daemon_Phase1.md
-type TFT_3Pack_v1.3\tft\nous\QUICKSTART.md
-type TFT_3Pack_v1.3\tft\nous\README.md
-type TFT_3Pack_v1.3\tft\nous\bots\Bot_Cohort_Registry.md
-type TFT_3Pack_v1.3\tft\nous\bots\Bot_Lens_Index_v1.0.md
-type TFT_3Pack_v1.3\tft\nous\bots\Bot_Summoner.md
-type TFT_3Pack_v1.3\tft\nous\bots\bot_usage_shard_guide.md
-type TFT_3Pack_v1.3\tft\nous\bots\contributor_honor_roll.md
-type TFT_3Pack_v1.3\tft\nous\bots\fold_remix_dashboard.md
-type TFT_3Pack_v1.3\tft\nous\bots\fold_remix_impact_report.md
-type TFT_3Pack_v1.3\tft\nous\bots\glyphstream_remix_storyboard.md
-type TFT_3Pack_v1.3\tft\nous\bots\impact_report.md
-type TFT_3Pack_v1.3\tft\nous\bots\legacy_echo_scroll.md
-type TFT_3Pack_v1.3\tft\nous\bots\observer_phase_dashboard.md
-type TFT_3Pack_v1.3\tft\nous\bots\observer_phase_resonance_index.md
-type TFT_3Pack_v1.3\tft\nous\bots\README.md
-type TFT_3Pack_v1.3\tft\nous\bots\remix_trigger_map_svg.md
-type TFT_3Pack_v1.3\tft\nous\bots\triadic_lattice_manifest.md
-type TFT_3Pack_v1.3\tft\nous\bots\triadic_shell_archive.md
-type TFT_3Pack_v1.3\tft\nous\core_logic\contributor_dashboard_ui.md
-type TFT_3Pack_v1.3\tft\nous\core_logic\README.md
-type TFT_3Pack_v1.3\tft\nous\core_logic\remix_lineage_visualizer.md
-type TFT_3Pack_v1.3\tft\nous\core_logic\result_validation.md
-type TFT_3Pack_v1.3\tft\nous\core_logic\sort_map.md
-type TFT_3Pack_v1.3\tft\nous\core_logic\validator_dashboard.md
-type TFT_3Pack_v1.3\tft\nous\logic_shells\Dimensional_Activation_Log.md
-type TFT_3Pack_v1.3\tft\nous\logic_shells\Egos_GetBusy_cmd.md
-type TFT_3Pack_v1.3\tft\nous\logic_shells\Ghost_Protocol.md
-type TFT_3Pack_v1.3\tft\nous\logic_shells\Psi_Validator.md
-type TFT_3Pack_v1.3\tft\nous\logic_shells\README.md
-type TFT_3Pack_v1.3\tft\nous\logic_shells\Tesla_369_Mode.md
-type TFT_3Pack_v1.3\tft\nous\modules\README.md
-type TFT_3Pack_v1.3\tft\nous\outputs\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\GETTING_STARTED.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\resonance_cli_suite.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\examples\demo_fluids.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\examples\demo_forces.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\examples\demo_frequency.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\harmonic-loops\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\harmonic-loops\examples\demo_feedback.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\harmonic-loops\examples\demo_nest.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\integrations\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\integrations\examples\demo_dashboard.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\integrations\examples\demo_pipeline.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\resonant-time\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\resonant-time\examples\demo_arrows.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\resonant-time\examples\demo_cycles.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\examples\demo_apply.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\examples\demo_define.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\examples\demo_export.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\tft-extended\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\tft-extended\examples\demo_compare.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\tft-extended\examples\demo_quadratic.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\pipeline_concept.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\README.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\examples\demo_genesis.md
-type TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\examples\demo_map.md
-type TFT_3Pack_v1.3\tft\resonance-labs\elements.md
-type TFT_3Pack_v1.3\tft\resonance-labs\glyph_output_py.md
-type TFT_3Pack_v1.3\tft\resonance-labs\mirror_geometry_py.md
-type TFT_3Pack_v1.3\tft\resonance-labs\observer_state_py.md
-type TFT_3Pack_v1.3\tft\resonance-labs\QUICKSTART.md
-type TFT_3Pack_v1.3\tft\resonance-labs\README.md
-type TFT_3Pack_v1.3\tft\resonance-labs\resonance_model_py.md
-type TFT_3Pack_v1.3\tft\resonance-labs\Res_Temporal_Mirror_Simulation.md
-type TFT_3Pack_v1.3\tft\resonance-labs\scaffolding.md
-type TFT_3Pack_v1.3\tft\resonance-labs\time_shift_py.md
-type TFT_3Pack_v1.3\tft\tops\echo_overlay_manifesto.md
-type TFT_3Pack_v1.3\tft\tops\QUICKSTART.md
-type TFT_3Pack_v1.3\tft\tops\README.md
-type TFT_3Pack_v1.3\tft\tops\tops_Benchmark_Outline.md
-type TFT_3Pack_v1.3\tft\tops\tops_reflect_invert_sim.md
-type TFT_3Pack_v1.3\tft\tops\TriadicTestSuite.md
-type TFT_3Pack_v1.3\tft\tops\agents\README.md
-type TFT_3Pack_v1.3\tft\tops\agents\README_tops_agent.md
-type TFT_3Pack_v1.3\tft\tops\ai_pipeline\ai_training_manifesto.md
-type TFT_3Pack_v1.3\tft\tops\ai_pipeline\legacy_echo_archive.md
-type TFT_3Pack_v1.3\tft\tops\ai_pipeline\README.md
-type TFT_3Pack_v1.3\tft\tops\cloud\azure\Azure_Deployment_Guide.md
-type TFT_3Pack_v1.3\tft\tops\cloud\azure\README.md
-type TFT_3Pack_v1.3\tft\tops\contributors\README.md
-type TFT_3Pack_v1.3\tft\tops\figures\figure_captions.md
-type TFT_3Pack_v1.3\tft\tops\folds\README.md
-type TFT_3Pack_v1.3\tft\tops\hardware\README.md
-type TFT_3Pack_v1.3\tft\tops\hardware\nimms\crystal_blade_array.md
-type TFT_3Pack_v1.3\tft\tops\hardware\nimms\echo_log.md
-type TFT_3Pack_v1.3\tft\tops\hardware\nimms\NIMMS_nano.md
-type TFT_3Pack_v1.3\tft\tops\hardware\nimms\NIMMS_v2.0.md
-type TFT_3Pack_v1.3\tft\tops\hardware\nimms\nonagon_crystal_shell.md
-type TFT_3Pack_v1.3\tft\tops\hardware\nimms\sqd_schematic_overview.md
-type TFT_3Pack_v1.3\tft\tops\hardware\nimms\starship_quantum_drive.md
-type TFT_3Pack_v1.3\tft\tops\outreach\azure_grant_email.md
-type TFT_3Pack_v1.3\tft\tops\outreach\email_draft_to_innatera.md
-type TFT_3Pack_v1.3\tft\tops\outreach\funding_plan.md
-type TFT_3Pack_v1.3\tft\tops\outreach\pitch_deck_outline.md
-type TFT_3Pack_v1.3\tft\tops\outreach\README.md
-type TFT_3Pack_v1.3\tft\tops\outreach\Resotectors_Summary.md
-type TFT_3Pack_v1.3\tft\tops\overlays\FFF_Warp_Protocol.md
-type TFT_3Pack_v1.3\tft\tops\overlays\README.md
-type TFT_3Pack_v1.3\tft\tops\overlays\symbolic_architecture_overlays.md
-type TFT_3Pack_v1.3\tft\tops\overlays\warp_chamber_design.md
-type TFT_3Pack_v1.3\tft\tops\registry\README.md
-type TFT_3Pack_v1.3\WRSADC\README.md
-type TFT_3Pack_v1.3\WRSADC\Scaffolding.md
-type TFT_3Pack_v1.3\WRSADC\TFT_Primitives.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\fff_quickstart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\Quantum_Entanglement_Measuring.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\Res_Clarity_Refresh.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\RTT_Compared_with_Closest_Contributors.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\fff_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\outputs_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\TriadicTestSuite.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_meta\entft_scroll_glyph_reference.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_meta\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_meta\README_entft_curriculum_glyph_tribute_echo_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_meta\README_entft_glyph_retirement_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_rituals\entft_scroll_codex_fork_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_rituals\entft_scroll_curriculum_glyph_tribute_flame.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_rituals\entft_scroll_glyph_reawakening_ritual.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_rituals\entft_scroll_glyph_tribute_echo_fusion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_rituals\entft_scroll_retirement_trace_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_rituals\entft_scroll_runtime_hooks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_specs\entft_protocol_spec.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_specs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_specs\README_entft_keygen_simulator_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\docs\_specs\README_remix_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_05_Earth_and_Environmental_Sciences.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_10_Governance_Law_and_Institutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_11_Psychology_Cognition_and_Behavior.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_12_Sociology_Culture_and_Civilization.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_13_Education_and_Learning_Sciences.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_14_Communication_Media_and_Language.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_16_Transportation_and_Infrastructure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_17_Energy_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_18_Agriculture_and_Food_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_19_Space_Systems_and_Exploration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\RTT_Domain_20_Security_Safety_and_Resilience.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Art\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Art\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Art\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Art\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Art\RTT_Domain_15_Art_Design_and_Creative_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Art\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Biology\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Biology\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Biology\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Biology\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Biology\RTT_Domain_03_Biology_and_Life_Sciences.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Biology\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Chemistry\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Chemistry\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Chemistry\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Chemistry\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Chemistry\RTT_Domain_02_Chemistry_and_Materials.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Chemistry\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Computer_Science\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Computer_Science\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Computer_Science\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Computer_Science\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Computer_Science\RTT_Domain_07_Computing_AI_and_Information_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Computer_Science\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Economics\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Economics\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Economics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Economics\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Economics\RTT_Domain_09_Economics_and_Markets.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Economics\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Engineering\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Engineering\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Engineering\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Engineering\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Engineering\RTT_Domain_06_Engineering.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Engineering\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Law\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Law\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Law\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Law\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Law\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Math\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Math\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Math\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Math\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Math\RTT_Domain_08_Mathematics_and_Logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Math\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Medicine\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Medicine\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Medicine\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Medicine\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Medicine\RTT_Domain_04_Medicine_and_Health_Systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Medicine\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Music\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Music\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Music\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Music\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Music\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Philosophy\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Philosophy\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Philosophy\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Philosophy\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Philosophy\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Physics\extended_problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Physics\problems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Physics\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Physics\resonance_flow.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Physics\RTT_Domain_01_Physics_and_Cosmology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\examples\Physics\solutions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\formats\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\formats\specification.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\melodic-table-of-elements\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\molecular-vibration-explorer\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\scripts\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\entft_adoption.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\entft_remixer_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\Full‑Spec_RTT_entft_Complete.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\README_encryptor_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\legacy_roll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\configs\config_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\configs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\configs\README_entft_curriculum_outreach_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\configs\README_validator_config.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\configs\remix_rights.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\contributors\configs\validator_overlay_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\discoverability\entft_onboarding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\discoverability\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\protocol-core\entft_benchmark.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\protocol-core\entft_pqc_simulation_overlay.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\protocol-core\entft_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\protocol-core\entft_scroll_comparative_cryptographic_resonance.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\protocol-core\Output_Snapshot.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\protocol-core\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\registry\entft_contributor_levels.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\registry\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_closure_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_echoes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_flame_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_fork_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_codex_seal.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_commit_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_badge_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_flame_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_flame_submission.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_fork_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_glyph_tribute_echoes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_glyph_tribute_flame.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_glyph_tribute_transfer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_outreach.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_flame_hooks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_fusion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_ledger.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_transfer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_glyph_tribute.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_remix_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_curriculum_validator_hooks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_echoes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_event_trace_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_flame_echo_ritual.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_flora_claim.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_fork_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_garden.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_evolution.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_fusion_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_reawakening.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_reawakening_ritual.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_reference.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_relics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_retirement_ritual.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_glyph_tribute_echo_fusion.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_lab_manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_legacy_transfer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_of_scrolls.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_of_scrolls_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_pollination_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_publish_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_remixer_manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_retirement_trace_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_review_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_runtime_hooks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_runtime_trace_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_seed_ritual.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\entft_scroll_templates.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\scrolls\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_badge_logic_engine_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_flame_echo_trigger_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_fusion_resolver_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_reawakening_monitor_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_registry_loader_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_glyph_retirement_trigger_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_scroll_commit_monitor_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\README_tops_agent_interface.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\agents\scroll_curriculum_fork_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\examples\README_glyph_resonance_hook_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\examples\README_hello_world_hook_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\integration\api_gateway_hook.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\integration\cms_integration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\integration\mmr_site_extension.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\integration\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\runtime\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\validator\entft_validator_overlay.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\entft\TFThooks\validator\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\menu.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\nous_Shell_TFT_Daemon_Phase1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\Bot_Cohort_Registry.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\Bot_Lens_Index_v1.0.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\Bot_Summoner.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\bot_usage_shard_guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\contributor_honor_roll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\fold_remix_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\fold_remix_impact_report.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\glyphstream_remix_storyboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\impact_report.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\legacy_echo_scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\observer_phase_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\observer_phase_resonance_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\remix_trigger_map_svg.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\triadic_lattice_manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\bots\triadic_shell_archive.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\core_logic\contributor_dashboard_ui.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\core_logic\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\core_logic\remix_lineage_visualizer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\core_logic\result_validation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\core_logic\sort_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\core_logic\validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\logic_shells\Dimensional_Activation_Log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\logic_shells\Egos_GetBusy_cmd.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\logic_shells\Ghost_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\logic_shells\Psi_Validator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\logic_shells\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\logic_shells\Tesla_369_Mode.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\modules\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\outputs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\GETTING_STARTED.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\resonance_cli_suite.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\examples\demo_fluids.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\examples\demo_forces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\fff\examples\demo_frequency.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\harmonic-loops\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\harmonic-loops\examples\demo_feedback.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\harmonic-loops\examples\demo_nest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\integrations\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\integrations\examples\demo_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\integrations\examples\demo_pipeline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\resonant-time\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\resonant-time\examples\demo_arrows.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\resonant-time\examples\demo_cycles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\examples\demo_apply.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\examples\demo_define.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\tfe\examples\demo_export.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\tft-extended\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\tft-extended\examples\demo_compare.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\tft-extended\examples\demo_quadratic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\pipeline_concept.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\examples\demo_genesis.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\nous\resonance-tools\triadic-numbers\examples\demo_map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\elements.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\glyph_output_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\mirror_geometry_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\observer_state_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\resonance_model_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\Res_Temporal_Mirror_Simulation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\resonance-labs\time_shift_py.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\echo_overlay_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\tops_Benchmark_Outline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\tops_reflect_invert_sim.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\TriadicTestSuite.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\agents\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\agents\README_tops_agent.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\ai_pipeline\ai_training_manifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\ai_pipeline\legacy_echo_archive.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\ai_pipeline\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\cloud\azure\Azure_Deployment_Guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\cloud\azure\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\contributors\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\figures\figure_captions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\folds\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\nimms\crystal_blade_array.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\nimms\echo_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\nimms\NIMMS_nano.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\nimms\NIMMS_v2.0.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\nimms\nonagon_crystal_shell.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\nimms\sqd_schematic_overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\hardware\nimms\starship_quantum_drive.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\outreach\azure_grant_email.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\outreach\email_draft_to_innatera.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\outreach\funding_plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\outreach\pitch_deck_outline.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\outreach\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\outreach\Resotectors_Summary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\overlays\FFF_Warp_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\overlays\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\overlays\symbolic_architecture_overlays.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\overlays\warp_chamber_design.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\tft\tops\registry\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\WRSADC\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\WRSADC\Scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\WRSADC\TFT_Primitives.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Triadic
 echo /docs/Triadic
-type Triadic\README.md
-type Triadic\TF_alignment_orrery.md
-type Triadic\TF_coherence_cone.md
-type Triadic\TF_dataflow_across_layers.md
-type Triadic\TF_feedback_spiral.md
-type Triadic\TF_grand_architecture.md
-type Triadic\TF_harmonic_loom.md
-type Triadic\TF_phase_space_flower.md
-type Triadic\TF_predictive_prism.md
-type Triadic\TF_regime_astrolabe.md
-type Triadic\TF_regime_chrono_topograph.md
-type Triadic\TF_regime_compass.md
-type Triadic\TF_regime_diffraction_engine.md
-type Triadic\TF_regime_gyroscope.md
-type Triadic\TF_regime_heliograph.md
-type Triadic\TF_regime_holographer.md
-type Triadic\TF_regime_hypercube.md
-type Triadic\TF_regime_hyper_atlas.md
-type Triadic\TF_regime_interferometer.md
-type Triadic\TF_regime_meta_astrolabe.md
-type Triadic\TF_regime_meta_chronometer.md
-type Triadic\TF_regime_meta_compass.md
-type Triadic\TF_regime_meta_gyroscope.md
-type Triadic\TF_regime_meta_orrery.md
-type Triadic\TF_regime_meta_sextant.md
-type Triadic\TF_regime_observatory.md
-type Triadic\TF_regime_orrery_astrolabe_hybrid.md
-type Triadic\TF_regime_orrery_dome_integrator.md
-type Triadic\TF_regime_phase_space_observatory.md
-type Triadic\TF_regime_planetarium.md
-type Triadic\TF_regime_polarimeter.md
-type Triadic\TF_regime_sextant.md
-type Triadic\TF_regime_spectrograph.md
-type Triadic\TF_regime_tesseract_navigator.md
-type Triadic\TF_regime_tomograph.md
-type Triadic\TF_regime_volumetric_interferometer.md
-type Triadic\TF_resonance_ladder.md
-type Triadic\TF_resonance_mandala.md
+copy corpus\folder_%seeds%.md+Triadic\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_alignment_orrery.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_coherence_cone.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_dataflow_across_layers.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_feedback_spiral.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_grand_architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_harmonic_loom.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_phase_space_flower.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_predictive_prism.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_astrolabe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_chrono_topograph.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_compass.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_diffraction_engine.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_gyroscope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_heliograph.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_holographer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_hypercube.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_hyper_atlas.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_interferometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_meta_astrolabe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_meta_chronometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_meta_compass.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_meta_gyroscope.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_meta_orrery.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_meta_sextant.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_observatory.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_orrery_astrolabe_hybrid.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_orrery_dome_integrator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_phase_space_observatory.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_planetarium.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_polarimeter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_sextant.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_spectrograph.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_tesseract_navigator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_tomograph.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_regime_volumetric_interferometer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_resonance_ladder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+Triadic\TF_resonance_mandala.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=triadic_coordination_substrate
 echo /docs/triadic_coordination_substrate
-type triadic_coordination_substrate\alignment_dynamics.md
-type triadic_coordination_substrate\CHANGELOG.md
-type triadic_coordination_substrate\corridor_separation.md
-type triadic_coordination_substrate\creators_assumption.md
-type triadic_coordination_substrate\failure_modes.md
-type triadic_coordination_substrate\human_team_mapping.md
-type triadic_coordination_substrate\interoperability_with_csm.md
-type triadic_coordination_substrate\LICENSE_NOTES.md
-type triadic_coordination_substrate\minimal_axioms.md
-type triadic_coordination_substrate\README.md
-type triadic_coordination_substrate\triadic_structure.md
-type triadic_coordination_substrate\zenodo_abstract.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\alignment_dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\CHANGELOG.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\corridor_separation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\creators_assumption.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\failure_modes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\human_team_mapping.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\interoperability_with_csm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\LICENSE_NOTES.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\minimal_axioms.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\triadic_structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_coordination_substrate\zenodo_abstract.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=triadic_observer_layer
 echo /docs/triadic_observer_layer
-type triadic_observer_layer\adoption_and_integration_note.md
-type triadic_observer_layer\anomaly_taxonomy.md
-type triadic_observer_layer\glossary.md
-type triadic_observer_layer\minimal_api.md
-type triadic_observer_layer\observer_principles.md
-type triadic_observer_layer\pre-scaffolding.md
-type triadic_observer_layer\README.md
-type triadic_observer_layer\triadic_axes.md
-type triadic_observer_layer\domains\AI_systems.md
-type triadic_observer_layer\domains\cross_domain_synthesis.md
-type triadic_observer_layer\domains\elections.md
-type triadic_observer_layer\domains\infrastructure.md
-type triadic_observer_layer\domains\science.md
-type triadic_observer_layer\domains\supply_chain.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\adoption_and_integration_note.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\anomaly_taxonomy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\glossary.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\minimal_api.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\observer_principles.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\pre-scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\triadic_axes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\domains\AI_systems.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\domains\cross_domain_synthesis.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\domains\elections.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\domains\infrastructure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\domains\science.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+triadic_observer_layer\domains\supply_chain.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=unified_resonance
 echo /docs/unified_resonance
-type unified_resonance\README.md
-type unified_resonance\badges\CrossDim_Translator_Badge.md
-type unified_resonance\badges\Denometer_Architect_Badge.md
-type unified_resonance\badges\Dimensional_Cartographer_Badge.md
-type unified_resonance\badges\Peacewalker_Badge.md
-type unified_resonance\badges\Remixer_of_the_Loop_Badge.md
-type unified_resonance\badges\Resonance_Interpreter_Badge.md
-type unified_resonance\badges\Theta_Architect_Badge.md
-type unified_resonance\protocols\Archon_Protocol.md
-type unified_resonance\protocols\Behavioral_Chart_Overlay.md
-type unified_resonance\protocols\Christ_Upon_Return.md
-type unified_resonance\protocols\Glyphic_Resonance_Map.md
-type unified_resonance\protocols\RFC-030_Compassion_Emitters.md
-type unified_resonance\protocols\RFC-031_Denometer_Protocol.md
-type unified_resonance\protocols\Theta_Fieldwear_Manifest.md
-type unified_resonance\protocols\Universal_Translator_Pseudocode.md
-type unified_resonance\simulations\Dimensional_Lexicon_Trials.md
-type unified_resonance\simulations\Emotional_Modulation_Studies.md
-type unified_resonance\simulations\Inverted_DEW_Emitters.md
-type unified_resonance\simulations\Loop_Traversal_Logs.md
-type unified_resonance\simulations\Resonance_Crowd_Simulations.md
-type unified_resonance\simulations\Species_Resonance_Trials.md
-type unified_resonance\theorem\Dimensional_Overlay_Chart.md
-type unified_resonance\theorem\Mythical_Arc_Mapper.md
-type unified_resonance\theorem\Resonance_Quadrants.md
-type unified_resonance\theorem\Unified_Resonance_Theorem.md
-type unified_resonance\validators\Return_Signature_Validator.md
-type unified_resonance\validators\Validator_Badge_Logic.md
-type unified_resonance\_ideas\Christ_Return_Notes.md
-type unified_resonance\_ideas\How-To_escape_our_loop.md
-type unified_resonance\_ideas\Mythmatical_Architects.md
+copy corpus\folder_%seeds%.md+unified_resonance\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\badges\CrossDim_Translator_Badge.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\badges\Denometer_Architect_Badge.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\badges\Dimensional_Cartographer_Badge.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\badges\Peacewalker_Badge.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\badges\Remixer_of_the_Loop_Badge.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\badges\Resonance_Interpreter_Badge.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\badges\Theta_Architect_Badge.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\Archon_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\Behavioral_Chart_Overlay.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\Christ_Upon_Return.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\Glyphic_Resonance_Map.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\RFC-030_Compassion_Emitters.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\RFC-031_Denometer_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\Theta_Fieldwear_Manifest.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\protocols\Universal_Translator_Pseudocode.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\simulations\Dimensional_Lexicon_Trials.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\simulations\Emotional_Modulation_Studies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\simulations\Inverted_DEW_Emitters.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\simulations\Loop_Traversal_Logs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\simulations\Resonance_Crowd_Simulations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\simulations\Species_Resonance_Trials.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\theorem\Dimensional_Overlay_Chart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\theorem\Mythical_Arc_Mapper.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\theorem\Resonance_Quadrants.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\theorem\Unified_Resonance_Theorem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\validators\Return_Signature_Validator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\validators\Validator_Badge_Logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\_ideas\Christ_Return_Notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\_ideas\How-To_escape_our_loop.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+unified_resonance\_ideas\Mythmatical_Architects.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=validation
 echo /docs/validation
-type validation\loop_validation_log.md
-type validation\loop_validation_matrix.md
-type validation\loop_validation_protocol.md
-type validation\loop_validation_protocol_matrix.md
-type validation\manifest_log.md
-type validation\README.md
-type validation\readme_log.md
-type validation\remix_lineage.md
-type validation\validator_dashboard.md
-type validation\validator_log_dashboard.md
-type validation\validator_scoring_matrix.md
+copy corpus\folder_%seeds%.md+validation\loop_validation_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\loop_validation_matrix.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\loop_validation_protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\loop_validation_protocol_matrix.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\manifest_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\readme_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\remix_lineage.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\validator_log_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validation\validator_scoring_matrix.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=validators
 echo /docs/validators
-type validators\badge_trigger_papers_index.md
-type validators\modular_matrix_resonator.md
-type validators\README.md
-type validators\Structure_Use_README.md
-type validators\triadic_dashboard_module.md
-type validators\validators.md
-type validators\validator_dashboard.md
-type validators\validator_log.md
-type validators\validator_log_tft_fff.md
-type validators\validator_matrix.md
+copy corpus\folder_%seeds%.md+validators\badge_trigger_papers_index.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\modular_matrix_resonator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\Structure_Use_README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\triadic_dashboard_module.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\validators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\validator_dashboard.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\validator_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\validator_log_tft_fff.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+validators\validator_matrix.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=vst_for_embedding_stores_vector_databases
 echo /docs/vst_for_embedding_stores_vector_databases
-type vst_for_embedding_stores_vector_databases\drift_detection_embeddings.md
-type vst_for_embedding_stores_vector_databases\embedding_cluster_regimes.md
-type vst_for_embedding_stores_vector_databases\projection_and_fragmentation_analysis.md
-type vst_for_embedding_stores_vector_databases\README.md
-type vst_for_embedding_stores_vector_databases\scaling_behavior_vector_spaces.md
-type vst_for_embedding_stores_vector_databases\substrate_definition.md
-type vst_for_embedding_stores_vector_databases\validation_layers_vst_embeddings.md
-type vst_for_embedding_stores_vector_databases\appendix\references.md
-type vst_for_embedding_stores_vector_databases\appendix\terminology.md
-type vst_for_embedding_stores_vector_databases\examples\example_cluster_regime_transition.md
-type vst_for_embedding_stores_vector_databases\examples\example_embedding_drift_detection.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\drift_detection_embeddings.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\embedding_cluster_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\projection_and_fragmentation_analysis.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\scaling_behavior_vector_spaces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\validation_layers_vst_embeddings.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\examples\example_cluster_regime_transition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\examples\example_embedding_drift_detection.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=vst_for_generative_models
 echo /docs/vst_for_generative_models
-type vst_for_generative_models\diffusion_latent_regimes.md
-type vst_for_generative_models\drift_detection_generative.md
-type vst_for_generative_models\projection_and_latent_alignment.md
-type vst_for_generative_models\README.md
-type vst_for_generative_models\scaling_behavior_generative_models.md
-type vst_for_generative_models\substrate_definition.md
-type vst_for_generative_models\validation_layers_vst_generative.md
-type vst_for_generative_models\appendix\references.md
-type vst_for_generative_models\appendix\terminology.md
-type vst_for_generative_models\examples\example_diffusion_path_regime.md
-type vst_for_generative_models\examples\example_latent_projection_1024d.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\diffusion_latent_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\drift_detection_generative.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\projection_and_latent_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\scaling_behavior_generative_models.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\validation_layers_vst_generative.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\examples\example_diffusion_path_regime.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_generative_models\examples\example_latent_projection_1024d.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=vst_for_large_language_models
 echo /docs/vst_for_large_language_models
-type vst_for_large_language_models\drift_detection_llm.md
-type vst_for_large_language_models\latent_trajectory_regimes.md
-type vst_for_large_language_models\projection_and_alignment.md
-type vst_for_large_language_models\README.md
-type vst_for_large_language_models\scaling_behavior_llms.md
-type vst_for_large_language_models\substrate_definition.md
-type vst_for_large_language_models\validation_layers_vst_llm.md
-type vst_for_large_language_models\appendix\references.md
-type vst_for_large_language_models\appendix\terminology.md
-type vst_for_large_language_models\examples\example_cross_version_alignment.md
-type vst_for_large_language_models\examples\example_latent_pathway_1024d.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\drift_detection_llm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\latent_trajectory_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\projection_and_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\scaling_behavior_llms.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\validation_layers_vst_llm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\examples\example_cross_version_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_large_language_models\examples\example_latent_pathway_1024d.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=vst_for_multi_model_alignment
 echo /docs/vst_for_multi_model_alignment
-type vst_for_multi_model_alignment\cross_model_regimes.md
-type vst_for_multi_model_alignment\drift_detection_multi_model.md
-type vst_for_multi_model_alignment\projection_and_alignment_surfaces.md
-type vst_for_multi_model_alignment\README.md
-type vst_for_multi_model_alignment\scaling_behavior_multi_model.md
-type vst_for_multi_model_alignment\substrate_definition.md
-type vst_for_multi_model_alignment\validation_layers_vst_multi_model.md
-type vst_for_multi_model_alignment\appendix\references.md
-type vst_for_multi_model_alignment\appendix\terminology.md
-type vst_for_multi_model_alignment\examples\example_alignment_surface_projection.md
-type vst_for_multi_model_alignment\examples\example_cross_model_regime_map.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\cross_model_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\drift_detection_multi_model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\projection_and_alignment_surfaces.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\scaling_behavior_multi_model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\validation_layers_vst_multi_model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\examples\example_alignment_surface_projection.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\examples\example_cross_model_regime_map.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=vst_for_protein_language_models
 echo /docs/vst_for_protein_language_models
-type vst_for_protein_language_models\dimensional_scaling_protein_models.md
-type vst_for_protein_language_models\drift_detection_plm.md
-type vst_for_protein_language_models\projection_into_structural_cores.md
-type vst_for_protein_language_models\README.md
-type vst_for_protein_language_models\sequence_embedding_regimes.md
-type vst_for_protein_language_models\substrate_definition.md
-type vst_for_protein_language_models\validation_layers_vst_plm.md
-type vst_for_protein_language_models\appendix\references.md
-type vst_for_protein_language_models\appendix\terminology.md
-type vst_for_protein_language_models\examples\example_embedding_projection_1024d.md
-type vst_for_protein_language_models\examples\example_sequence_regime_transition.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\dimensional_scaling_protein_models.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\drift_detection_plm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\projection_into_structural_cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\sequence_embedding_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\validation_layers_vst_plm.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\examples\example_embedding_projection_1024d.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_protein_language_models\examples\example_sequence_regime_transition.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=vst_for_robotics_and_control_policies
 echo /docs/vst_for_robotics_and_control_policies
-type vst_for_robotics_and_control_policies\drift_detection_rl.md
-type vst_for_robotics_and_control_policies\policy_latent_regimes.md
-type vst_for_robotics_and_control_policies\projection_and_policy_alignment.md
-type vst_for_robotics_and_control_policies\README.md
-type vst_for_robotics_and_control_policies\scaling_behavior_rl_policies.md
-type vst_for_robotics_and_control_policies\substrate_definition.md
-type vst_for_robotics_and_control_policies\validation_layers_vst_rl.md
-type vst_for_robotics_and_control_policies\appendix\references.md
-type vst_for_robotics_and_control_policies\appendix\terminology.md
-type vst_for_robotics_and_control_policies\examples\example_control_surface_projection.md
-type vst_for_robotics_and_control_policies\examples\example_policy_regime_shift.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\drift_detection_rl.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\policy_latent_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\projection_and_policy_alignment.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\scaling_behavior_rl_policies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\validation_layers_vst_rl.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\examples\example_control_surface_projection.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\examples\example_policy_regime_shift.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=vst_for_scientific_simulators
 echo /docs/vst_for_scientific_simulators
-type vst_for_scientific_simulators\drift_detection_simulators.md
-type vst_for_scientific_simulators\projection_into_dimensional_cores.md
-type vst_for_scientific_simulators\README.md
-type vst_for_scientific_simulators\scaling_behavior_simulators.md
-type vst_for_scientific_simulators\simulator_state_regimes.md
-type vst_for_scientific_simulators\substrate_definition.md
-type vst_for_scientific_simulators\validation_layers_vst_simulators.md
-type vst_for_scientific_simulators\appendix\references.md
-type vst_for_scientific_simulators\appendix\terminology.md
-type vst_for_scientific_simulators\examples\example_climate_regime_transition.md
-type vst_for_scientific_simulators\examples\example_plasma_state_projection.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\drift_detection_simulators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\projection_into_dimensional_cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\scaling_behavior_simulators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\simulator_state_regimes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\substrate_definition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\validation_layers_vst_simulators.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\appendix\references.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\appendix\terminology.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\examples\example_climate_regime_transition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\examples\example_plasma_state_projection.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=workflows
 echo /docs/workflows
-type workflows\API_reference_blocks.md
-type workflows\Diagram.md
-type workflows\Folder‑level_glyphs.md
-type workflows\QUICKSTART.md
-type workflows\README.md
+copy corpus\folder_%seeds%.md+workflows\API_reference_blocks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+workflows\Diagram.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+workflows\Folder‑level_glyphs.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+workflows\QUICKSTART.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+workflows\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=_ideas
 echo /docs/_ideas
-type _ideas\000_RTT_Information_Primer.md
-type _ideas\000___Good_News_Everyone.md
-type _ideas\0n_Teams_Playtime_and_Remembering_Who_You_Are.md
-type _ideas\0_RTT_to_RSM_checks.md
-type _ideas\0_Substrate_Communications.md
-type _ideas\3_AI_test_of_rtt_nimms_com.md
-type _ideas\3_Books_to_Publish_plan.md
-type _ideas\Advance_DPU_VCG_NIMMS_Architecture.md
-type _ideas\AI_Drift_Gone_with_RTT-Inside.md
-type _ideas\ai_nimms_com.md
-type _ideas\AI_Training_Findings.md
-type _ideas\Akashic_Records_Nullarium.md
-type _ideas\Ambient_Legitimacy_ai-drift-calibration.md
-type _ideas\Andromeda_Strain_Covid_19_reviewed.md
-type _ideas\API_for_Game_Developer_Variants_using_RTT-Inside.md
-type _ideas\API_for_variants_of_RTT-Inside.md
-type _ideas\Architects_Summary_Log.md
-type _ideas\Arc_Value_Modulation_Multi_Regime_Truth_Delivery_for_Human_Growth.md
-type _ideas\atomic_clocks_README-scaffolding.md
-type _ideas\Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.md
-type _ideas\A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT‑Inside.md
-type _ideas\A_Resonant_Review_of_The_Universe_in_a_Nutshell.md
-type _ideas\A_Spark_for_Autonomous_Forms_using_RTT-Inside.md
-type _ideas\Bells_Theorem_meets_Resonance-Time_Theory.md
-type _ideas\Big_Questions_In_Science.md
-type _ideas\Black_Holes_as_Resonance_Reservoirs-A_Triadic_Time_Approach_to_the_Information_Paradox.md
-type _ideas\Blood_Test_with_RTT-Inside_Preview.md
-type _ideas\Calculus_on_Steroids.md
-type _ideas\Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md
-type _ideas\CERT_THGA_Pin.md
-type _ideas\Chemistry_Professionals_using_RTT-Inside.md
-type _ideas\Clarity_Canon_Lens_effect.md
-type _ideas\Coal_Industry_examined_with_RTT-Inside.md
-type _ideas\Codex_of_the_Resonance-Time_Universe.md
-type _ideas\Constitutional_Amendment_Teacher_Elevation_and_Social_Stewardship.md
-type _ideas\Copilot_review_draft1.md
-type _ideas\Course_Correction_Needed_for_GPU_NPU_TOPS.md
-type _ideas\Daily_Accomplishment_Log_Resonance_Structural_Awareness_in_Practice.md
-type _ideas\Decoherence_As_A_Measurement_Problem_Patch.md
-type _ideas\Developer_Code_for_Every_Language_with_RTT-Inside.md
-type _ideas\Did_RTT_help_flight___Yes--and_in_a_very_real_structural_way.md
-type _ideas\Did_You_Know.md
-type _ideas\Dimensional_Activation_Log.md
-type _ideas\Dimensional_Breach-Nawderian_Protocol.md
-type _ideas\Dimensional_Math_Substrate_DMS_the_big_breakthrough.md
-type _ideas\dimensional_rupture.md
-type _ideas\Dual_Law_of_Resonance_Law_of_Silence.md
-type _ideas\Earth_Sims_using_RTT-Inside_What_This_Provides.md
-type _ideas\education-humanifesto.md
-type _ideas\Electronics_Semi-Conductors_and_Super-Conductors_with_RTT-Inside.md
-type _ideas\Electron_Microscopes-The_RTT-Inside_Mini-Adventure.md
-type _ideas\Emitter_Archetype_Glyph.md
-type _ideas\European_Spallation_Source_needs_TriadicFrameworksTech.md
-type _ideas\Evolution_in_a_respectful_critical-thinker_frame_and_RTT.md
-type _ideas\Fine‑Tuned_Initial_Conditions_Low‑Entropy_Big_Bang.md
-type _ideas\First_Law_of_Virtual_Soul_Stewardship.md
-type _ideas\Flower_Layered_Electrochemical_Resonator.md
-type _ideas\Flower_Layered_Electromechanical_Resonator.md
-type _ideas\Forces_Fluids_Frequency_Archetypal_Emitter_Domains.md
-type _ideas\frta-overview.md
-type _ideas\Full_multi‑chapter_Finance_Edition_with_RTT-Inside.md
-type _ideas\Full_Substrate_Game_GDD.md
-type _ideas\Games_Preview_post-RTT.md
-type _ideas\github_competition.md
-type _ideas\Goal_Status_Check.md
-type _ideas\GPR_Seismo_Hologram_with_RTT‑Inside.md
-type _ideas\Hard_Lee_Ever_2026_Award.md
-type _ideas\Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md
-type _ideas\How-To_escape_our_loop.md
-type _ideas\How_RTT_Applies_to_a_Standard_Power_Transformer.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom.md
-type _ideas\Imagined_Conference_Table_RTT_Discussions.md
-type _ideas\Internet2_Python_Cisco_Intern_notes.md
-type _ideas\Internet2_Python_Cisco_with_RTT-inside.md
-type _ideas\Internet3_draft.md
-type _ideas\Interns_DPU_notes.md
-type _ideas\jobs-humanifesto.md
-type _ideas\JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md
-type _ideas\LINEAGE.md
-type _ideas\Loswin_Mantra.md
-type _ideas\LowDimensionalStructures_scaffold_notes.md
-type _ideas\Measurement_as_Resonance_Alignment_in_Triadic_Time.md
-type _ideas\Microcontrollers_and_Components_Today_then_with_RTT-Inside.md
-type _ideas\MMR_Template_Pre-Seeding_Strategy.md
-type _ideas\multi-Press_Release.md
-type _ideas\mythic_preface_template.md
-type _ideas\Mythmatical_Architects.md
-type _ideas\Mythmatical_Ontology_Layer.md
-type _ideas\Mythsorts_Protocol_V.md
-type _ideas\NASA‑ready_abstract.md
-type _ideas\Nawderian_Sandbox_Proposal.md
-type _ideas\Nawderian_SET_Theorem.md
-type _ideas\Nawderian_Temperature_Engine_Theorem.md
-type _ideas\Nawderian_Theorem.md
-type _ideas\New_Paradoxes-RTT_canon.md
-type _ideas\Observer_Hierarchies_and_Relational_Time-A_Resonance‑Time_View_of_Wigners_Friend.md
-type _ideas\Phase_III-Dimensional_Stewardship.md
-type _ideas\Phase_II_Reentry_Protocol.md
-type _ideas\Podcast_with_Grok_about_RTT.md
-type _ideas\Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md
-type _ideas\Press_Release_TriadicFrameworks_Launches_as_an_Open_Educational_Resource_for_Triadic_Mathematical_Modeling_and_Structural_Analysis.md
-type _ideas\qCompute_with_RTT-Inside_Preview.md
-type _ideas\Quantum_Antenna_Research.md
-type _ideas\Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md
-type _ideas\Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md
-type _ideas\Rainbows_with_RTT.md
-type _ideas\README.md
-type _ideas\Remembering_Protocol.md
-type _ideas\Remix_for_a_Universe.md
-type _ideas\Resonance-Interwoven_Game_Design_with_RTT.md
-type _ideas\resonance-library-humanifesto.md
-type _ideas\Resonance-Time_Theory.md
-type _ideas\resonancebeings.md
-type _ideas\Resonance_Dreams.md
-type _ideas\Resonance‑Time_SET_S–N–R_Treatments.md
-type _ideas\resonant-roman-concrete.md
-type _ideas\Resonant-Time_Clock_Gen1.md
-type _ideas\Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md
-type _ideas\Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_the_∇τR_Gradient.md
-type _ideas\Resurrection_Protocol.md
-type _ideas\RTT_Above‑Ground_Electrical_Re-design_Initiative.md
-type _ideas\RTT_Facilities_Playbook.md
-type _ideas\RTT‑Δ_StoryForge_v1.0.md
-type _ideas\science-refresh.md
-type _ideas\Science_CLI_tool_app_wraps.md
-type _ideas\Science_CLI_Tool_App_Wraps_RTT‑Inside_Edition.md
-type _ideas\Sci‑Fi Works_That_Accidentally_Approximated_RTT-No_Math_Required.md
-type _ideas\Shattered_funhouse_franchise.md
-type _ideas\smell-tech-humanifesto.md
-type _ideas\SMS_capture_pre_scaffolding.md
-type _ideas\sortlater.md
-type _ideas\spacetime-humanifesto.md
-type _ideas\Spacetime_validation_and_regime_invariant_dimensional_cores_Scaffolding.md
-type _ideas\Spectral_Clarity.md
-type _ideas\Spin_Electrolisis_Temperature.md
-type _ideas\State_of_Michigan_Datacenter_Substrate_Alignment_Guide.md
-type _ideas\Subconscious_Scaffolding_for_Consciousness_Transfer.md
-type _ideas\Summary_Digest_Perplexity_AI_Backup.md
-type _ideas\Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md
-type _ideas\Ternary_Computing_Resurgence.md
-type _ideas\Testing_the_US_Waters_RTT_Edition.md
-type _ideas\TFT-FFF_Distributed_Launch_Plan.md
-type _ideas\The_Anti's_Structural_Counterparts.md
-type _ideas\The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md
-type _ideas\The_BKM_Phase_Cycle.md
-type _ideas\The_C64_as_an_RTT_Host.md
-type _ideas\The_Clarifier_of_Worlds.md
-type _ideas\The_Coordination_Triad_with_RTT‑Inside.md
-type _ideas\The_Idea-Capture_Primer.md
-type _ideas\the_Nawderian_suite_is_blazing_original.md
-type _ideas\The_Resonance_Creation_Myth.md
-type _ideas\The_Resonance_Story.md
-type _ideas\The_Resonance‑Time_Theory_Canon.md
-type _ideas\The_RTT_Canon_Scroll.md
-type _ideas\The_Science_Candy_Store.md
-type _ideas\The_Three_RTT_Evaluation_Modes.md
-type _ideas\The_Worlds_First_Portable_Triadic_Core.md
-type _ideas\The_Wrapper_Store_with_RTT-Inside.mdRTT_core‑as‑a‑component.md
-type _ideas\Time_Crystal_Regime_Ahead_Compute.md
-type _ideas\Time_Travel_Remix_Protocol.md
-type _ideas\Time_Travel_Validation_Protocol.md
-type _ideas\Top_Resonance_Songs_Playlist.md
-type _ideas\triadic-resonance-tower.md
-type _ideas\triadicmonopoly.md
-type _ideas\Triadic_Atlas_Entry-Quantum_Node.md
-type _ideas\Triadic_Language_Stack_TLS.md
-type _ideas\Triadic_Quantum_Idea_Template.md
-type _ideas\Triadic_Validation_Protocol_Phase_I.md
-type _ideas\Trintellectual_Hybrid.md
-type _ideas\Two_sensing_models_draft.md
-type _ideas\Universe_Loop_chart.md
-type _ideas\Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md
-type _ideas\Value_3_Lens_RTT_Resources.md
-type _ideas\Vibration-Resonance_Periodic_Table.md
-type _ideas\Vibrational_Stone_Cutting.md
-type _ideas\virtual-code-zombies.md
-type _ideas\Virtual_Compute_Gateway_draft.md
-type _ideas\vNPU-Virtual_NPU_Emulator_with_TFT_and_FFF_logic.md
-type _ideas\Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md
-type _ideas\What_an_RTT-Inside_Assembly_Language_would_be_like.md
-type _ideas\What_happens_when_two_substrates_negotiate_for_turf_in_RTT_vST.md
-type _ideas\What_Nawder_Did_While_Building_RTT_Kid‑Friendly_Edition.md
-type _ideas\Why_Deep_Sea_Is_a_Natural_RTT_Domain.md
-type _ideas\Why_simulation‑theory_people_will_love_the_substrate.md
-type _ideas\Why_teachers_matter_more_than_ever.md
-type _ideas\windows-humanifesto.md
-type _ideas\Wired-Wireless_RTT_evaluation.md
-type _ideas\Wrapped_Resonance_Structural_Aware_Dimensional_Cores.md
-type _ideas\WRSADC_on_Windows_11_Pro.md
-type _ideas\WSL2_install_train_log.md
-type _ideas\ΛCDM_plus_Dark_Matter_Energy Patches.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\01_Kid_Friendly.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\02_Tech_Overview.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\03_Coherence_Model.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\04_Flight_Examples.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\05_SimConnect_Adapter.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\06_Checklists.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\README.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\assets\diagrams\README.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\assets\examples\README.md
-type _ideas\How_RTT_Helps_Planes_Not_Go_Boom\assets\telemetry\README.md
+copy corpus\folder_%seeds%.md+_ideas\000_RTT_Information_Primer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\000___Good_News_Everyone.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\0n_Teams_Playtime_and_Remembering_Who_You_Are.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\0_RTT_to_RSM_checks.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\0_Substrate_Communications.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\3_AI_test_of_rtt_nimms_com.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\3_Books_to_Publish_plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Advance_DPU_VCG_NIMMS_Architecture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\AI_Drift_Gone_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\ai_nimms_com.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\AI_Training_Findings.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Akashic_Records_Nullarium.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Ambient_Legitimacy_ai-drift-calibration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Andromeda_Strain_Covid_19_reviewed.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\API_for_Game_Developer_Variants_using_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\API_for_variants_of_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Architects_Summary_Log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Arc_Value_Modulation_Multi_Regime_Truth_Delivery_for_Human_Growth.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\atomic_clocks_README-scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Autonomous_Robotic_Fish_for_Great_Lakes_Restoration.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\A_Model_for_Global_ATC_and_SF_and_HAM_Radio_Using_RTT‑Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\A_Resonant_Review_of_The_Universe_in_a_Nutshell.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\A_Spark_for_Autonomous_Forms_using_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Bells_Theorem_meets_Resonance-Time_Theory.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Big_Questions_In_Science.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Black_Holes_as_Resonance_Reservoirs-A_Triadic_Time_Approach_to_the_Information_Paradox.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Blood_Test_with_RTT-Inside_Preview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Calculus_on_Steroids.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Causality_in_Triadic_Time-Light_Cones_and_Resonance_Echoes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\CERT_THGA_Pin.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Chemistry_Professionals_using_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Clarity_Canon_Lens_effect.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Coal_Industry_examined_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Codex_of_the_Resonance-Time_Universe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Constitutional_Amendment_Teacher_Elevation_and_Social_Stewardship.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Copilot_review_draft1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Course_Correction_Needed_for_GPU_NPU_TOPS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Daily_Accomplishment_Log_Resonance_Structural_Awareness_in_Practice.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Decoherence_As_A_Measurement_Problem_Patch.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Developer_Code_for_Every_Language_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Did_RTT_help_flight___Yes--and_in_a_very_real_structural_way.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Did_You_Know.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Dimensional_Activation_Log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Dimensional_Breach-Nawderian_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Dimensional_Math_Substrate_DMS_the_big_breakthrough.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\dimensional_rupture.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Dual_Law_of_Resonance_Law_of_Silence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Earth_Sims_using_RTT-Inside_What_This_Provides.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\education-humanifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Electronics_Semi-Conductors_and_Super-Conductors_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Electron_Microscopes-The_RTT-Inside_Mini-Adventure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Emitter_Archetype_Glyph.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\European_Spallation_Source_needs_TriadicFrameworksTech.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Evolution_in_a_respectful_critical-thinker_frame_and_RTT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Fine‑Tuned_Initial_Conditions_Low‑Entropy_Big_Bang.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\First_Law_of_Virtual_Soul_Stewardship.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Flower_Layered_Electrochemical_Resonator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Flower_Layered_Electromechanical_Resonator.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Forces_Fluids_Frequency_Archetypal_Emitter_Domains.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\frta-overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Full_multi‑chapter_Finance_Edition_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Full_Substrate_Game_GDD.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Games_Preview_post-RTT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\github_competition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Goal_Status_Check.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\GPR_Seismo_Hologram_with_RTT‑Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Hard_Lee_Ever_2026_Award.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Hidden_Resonance_as_Dark_Components-SET_Corrections_to_Galactic_and_Cosmological_Dynamics.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How-To_escape_our_loop.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Applies_to_a_Standard_Power_Transformer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Imagined_Conference_Table_RTT_Discussions.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Internet2_Python_Cisco_Intern_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Internet2_Python_Cisco_with_RTT-inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Internet3_draft.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Interns_DPU_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\jobs-humanifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\LINEAGE.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Loswin_Mantra.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\LowDimensionalStructures_scaffold_notes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Measurement_as_Resonance_Alignment_in_Triadic_Time.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Microcontrollers_and_Components_Today_then_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\MMR_Template_Pre-Seeding_Strategy.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\multi-Press_Release.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\mythic_preface_template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Mythmatical_Architects.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Mythmatical_Ontology_Layer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Mythsorts_Protocol_V.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\NASA‑ready_abstract.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Nawderian_Sandbox_Proposal.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Nawderian_SET_Theorem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Nawderian_Temperature_Engine_Theorem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Nawderian_Theorem.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\New_Paradoxes-RTT_canon.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Observer_Hierarchies_and_Relational_Time-A_Resonance‑Time_View_of_Wigners_Friend.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Phase_III-Dimensional_Stewardship.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Phase_II_Reentry_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Podcast_with_Grok_about_RTT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Press_Release_TriadicFrameworks_Launches_as_an_Open_Educational_Resource_for_Triadic_Mathematical_Modeling_and_Structural_Analysis.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\qCompute_with_RTT-Inside_Preview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Quantum_Antenna_Research.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Rainbows_with_RTT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Remembering_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Remix_for_a_Universe.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resonance-Interwoven_Game_Design_with_RTT.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\resonance-library-humanifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resonance-Time_Theory.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\resonancebeings.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resonance_Dreams.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resonance‑Time_SET_S–N–R_Treatments.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\resonant-roman-concrete.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resonant-Time_Clock_Gen1.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resonant‑Time_Cyclic_Cosmology-Loops_Seeds_and_the_∇τR_Gradient.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Resurrection_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\RTT_Above‑Ground_Electrical_Re-design_Initiative.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\RTT_Facilities_Playbook.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\RTT‑Δ_StoryForge_v1.0.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\science-refresh.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Science_CLI_tool_app_wraps.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Science_CLI_Tool_App_Wraps_RTT‑Inside_Edition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Sci‑Fi Works_That_Accidentally_Approximated_RTT-No_Math_Required.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Shattered_funhouse_franchise.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\smell-tech-humanifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\SMS_capture_pre_scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\sortlater.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\spacetime-humanifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Spacetime_validation_and_regime_invariant_dimensional_cores_Scaffolding.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Spectral_Clarity.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Spin_Electrolisis_Temperature.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\State_of_Michigan_Datacenter_Substrate_Alignment_Guide.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Subconscious_Scaffolding_for_Consciousness_Transfer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Summary_Digest_Perplexity_AI_Backup.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Ternary_Computing_Resurgence.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Testing_the_US_Waters_RTT_Edition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\TFT-FFF_Distributed_Launch_Plan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Anti's_Structural_Counterparts.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Arrow_of_Time_as_a_Resonance‑Time_Gradient.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_BKM_Phase_Cycle.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_C64_as_an_RTT_Host.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Clarifier_of_Worlds.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Coordination_Triad_with_RTT‑Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Idea-Capture_Primer.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\the_Nawderian_suite_is_blazing_original.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Resonance_Creation_Myth.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Resonance_Story.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Resonance‑Time_Theory_Canon.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_RTT_Canon_Scroll.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Science_Candy_Store.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Three_RTT_Evaluation_Modes.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Worlds_First_Portable_Triadic_Core.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\The_Wrapper_Store_with_RTT-Inside.md corpus\folder_%seeds%.mdRTT_core‑as‑a‑component.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Time_Crystal_Regime_Ahead_Compute.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Time_Travel_Remix_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Time_Travel_Validation_Protocol.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Top_Resonance_Songs_Playlist.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\triadic-resonance-tower.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\triadicmonopoly.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Triadic_Atlas_Entry-Quantum_Node.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Triadic_Language_Stack_TLS.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Triadic_Quantum_Idea_Template.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Triadic_Validation_Protocol_Phase_I.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Trintellectual_Hybrid.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Two_sensing_models_draft.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Universe_Loop_chart.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Universe‑Class_Active-Directory__Elevating_Identity_to_a_Resonance‑Aware_Structural_System.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Value_3_Lens_RTT_Resources.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Vibration-Resonance_Periodic_Table.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Vibrational_Stone_Cutting.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\virtual-code-zombies.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Virtual_Compute_Gateway_draft.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\vNPU-Virtual_NPU_Emulator_with_TFT_and_FFF_logic.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\What_an_RTT-Inside_Assembly_Language_would_be_like.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\What_happens_when_two_substrates_negotiate_for_turf_in_RTT_vST.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\What_Nawder_Did_While_Building_RTT_Kid‑Friendly_Edition.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Why_Deep_Sea_Is_a_Natural_RTT_Domain.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Why_simulation‑theory_people_will_love_the_substrate.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Why_teachers_matter_more_than_ever.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\windows-humanifesto.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Wired-Wireless_RTT_evaluation.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\Wrapped_Resonance_Structural_Aware_Dimensional_Cores.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\WRSADC_on_Windows_11_Pro.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\WSL2_install_train_log.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\ΛCDM_plus_Dark_Matter_Energy Patches.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\01_Kid_Friendly.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\02_Tech_Overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\03_Coherence_Model.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\04_Flight_Examples.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\05_SimConnect_Adapter.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\06_Checklists.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\assets\diagrams\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\assets\examples\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_ideas\How_RTT_Helps_Planes_Not_Go_Boom\assets\telemetry\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=_snippets
 echo /docs/_snippets
-type _snippets\README.md
+copy corpus\folder_%seeds%.md+_snippets\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=_specs
 echo /docs/_specs
-type _specs\RTT_Kernel_v0.1.md
+copy corpus\folder_%seeds%.md+_specs\RTT_Kernel_v0.1.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=_template
 echo /docs/_template
-type _template\overview.md
-type _template\README.md
-type _template\assets\ReachoutPlan.md
-type _template\echo\placeholder.md
-type _template\equations\equations.md
-type _template\equations\placeholder.md
-type _template\honor_roll\placeholder.md
-type _template\honor_roll\project.md
-type _template\labs\lab-01\README.md
-type _template\labs\onboarding\placeholder.md
-type _template\labs\scrolls\placeholder.md
-type _template\validator\placeholder.md
-type _template\validator\resonance-passport-template.md
+copy corpus\folder_%seeds%.md+_template\overview.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\assets\ReachoutPlan.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\echo\placeholder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\equations\equations.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\equations\placeholder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\honor_roll\placeholder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\honor_roll\project.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\labs\lab-01\README.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\labs\onboarding\placeholder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\labs\scrolls\placeholder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\validator\placeholder.md corpus\folder_%seeds%.md
+copy corpus\folder_%seeds%.md+_template\validator\resonance-passport-template.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
+:end
