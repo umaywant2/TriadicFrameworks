@@ -3,6 +3,8 @@ echo Creating a corpus...
 echo /docs/
 echo ---------------------------------
 
+goto continue
+
 set seeds=root
 echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+ABOUT.md corpus\folder_%seeds%.md
@@ -42,11 +44,11 @@ copy corpus\folder_%seeds%.md+ai-drift-calibration\paper\validation_checks.md co
 echo ---------------------------------
 echo.
 
-goto end
+:continue
 
 
 set seeds=AI_Resonance_Seed
-echo /docs/AI_Resonance_Seed
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+AI_Resonance_Seed\AI_Resonance_Seed.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+AI_Resonance_Seed\How_To_Read_This_Ontology.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+AI_Resonance_Seed\Ontology_Index.md corpus\folder_%seeds%.md
@@ -95,7 +97,7 @@ echo ---------------------------------
 echo.
 
 set seeds=alphafold_substrate_alignments
-echo /docs/alphafold_substrate_alignments
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\alignment_principles.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\dimensional_cores.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+alphafold_substrate_alignments\drift_detection.md corpus\folder_%seeds%.md
@@ -113,7 +115,7 @@ echo ---------------------------------
 echo.
 
 set seeds=api_rtt
-echo /docs/api/rtt
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+api\rtt\beacon.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+api\rtt\client.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+api\rtt\diagnostics.md corpus\folder_%seeds%.md
@@ -133,7 +135,7 @@ echo ---------------------------------
 echo.
 
 set seeds=assets
-echo /docs/assets
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+assets\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+assets\blueprints\tesla_369_gearshift.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+assets\figures\README.md corpus\folder_%seeds%.md
@@ -141,7 +143,7 @@ echo ---------------------------------
 echo.
 
 set seeds=atomic_clocks
-echo /docs/atomic_clocks
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+atomic_clocks\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+atomic_clocks\LICENSE_NOTES.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+atomic_clocks\README.md corpus\folder_%seeds%.md
@@ -161,7 +163,7 @@ echo ---------------------------------
 echo.
 
 set seeds=audio_industry_reviewed
-echo /docs/audio_industry_reviewed
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+audio_industry_reviewed\06_conclusions_and_future_work.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+audio_industry_reviewed\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+audio_industry_reviewed\01_audio_industry_history\01_early_acoustics_and_analog.md corpus\folder_%seeds%.md
@@ -192,7 +194,7 @@ echo ---------------------------------
 echo.
 
 set seeds=badges
-echo /docs/badges
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+badges\badge-logic.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+badges\badges.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+badges\BADGES_EARNED.md corpus\folder_%seeds%.md
@@ -226,7 +228,7 @@ echo ---------------------------------
 echo.
 
 set seeds=boson-substrate-model
-echo /docs/boson-substrate-model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+boson-substrate-model\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+boson-substrate-model\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+boson-substrate-model\metadata\README.md corpus\folder_%seeds%.md
@@ -241,7 +243,7 @@ echo ---------------------------------
 echo.
 
 set seeds=bridges
-echo /docs/bridges
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+bridges\bridge_layer_overview.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+bridges\concepts_to_operators.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+bridges\cosmology_to_layers.md corpus\folder_%seeds%.md
@@ -253,7 +255,7 @@ echo ---------------------------------
 echo.
 
 set seeds=charts
-echo /docs/charts
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+charts\chart-freqi-bindings.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+charts\chart-genie-protocols.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+charts\chart-resonance-partitions.md corpus\folder_%seeds%.md
@@ -269,13 +271,13 @@ echo ---------------------------------
 echo.
 
 set seeds=clients
-echo /docs/clients
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+clients\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Coeus
-echo /docs/Coeus
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Coeus\Coeus_Protocol-Complete.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Coeus\Coin_as_a_Contract.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Coeus\FOLDER_USES.md corpus\folder_%seeds%.md
@@ -332,20 +334,20 @@ echo ---------------------------------
 echo.
 
 set seeds=cognitive_substrate_model
-echo /docs/cognitive_substrate_model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+cognitive_substrate_model\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=configs
-echo /docs/configs
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+configs\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+configs\schema.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=consciousness_substrate_model
-echo /docs/consciousness_substrate_model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+consciousness_substrate_model\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+consciousness_substrate_model\LICENSE_NOTES.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+consciousness_substrate_model\README.md corpus\folder_%seeds%.md
@@ -404,7 +406,7 @@ echo ---------------------------------
 echo.
 
 set seeds=contributors
-echo /docs/contributors
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+contributors\architects.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+contributors\contributors.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+contributors\README.md corpus\folder_%seeds%.md
@@ -412,7 +414,7 @@ echo ---------------------------------
 echo.
 
 set seeds=curriculum
-echo /docs/curriculum
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+curriculum\curriculum_badge_trigger_index.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+curriculum\curriculum_contributor_honor_roll.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+curriculum\curriculum_paper_crosswalk.md corpus\folder_%seeds%.md
@@ -430,7 +432,7 @@ echo ---------------------------------
 echo.
 
 set seeds=data
-echo /docs/data
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+data\manifest_updater_changelog.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+data\manifest_updater_log.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+data\papers_manifest_template.md corpus\folder_%seeds%.md
@@ -445,7 +447,7 @@ echo ---------------------------------
 echo.
 
 set seeds=diagnosing_media_therapy
-echo /docs/diagnosing_media_therapy
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+diagnosing_media_therapy\dmt_init_capture.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+diagnosing_media_therapy\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+diagnosing_media_therapy\session_template.md corpus\folder_%seeds%.md
@@ -454,7 +456,7 @@ echo ---------------------------------
 echo.
 
 set seeds=dimensional_substrate_regime_scanning_protocol
-echo /docs/dimensional_substrate_regime_scanning_protocol
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\dsrsp_0.1_spec.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+dimensional_substrate_regime_scanning_protocol\engine_integration_guide.md corpus\folder_%seeds%.md
@@ -464,7 +466,7 @@ echo ---------------------------------
 echo.
 
 set seeds=dimensional_substrate_structures
-echo /docs/dimensional_substrate_structures
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+dimensional_substrate_structures\computational_implications.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+dimensional_substrate_structures\dimensional_primitives.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+dimensional_substrate_structures\high_dimensional_regimes.md corpus\folder_%seeds%.md
@@ -483,13 +485,13 @@ echo ---------------------------------
 echo.
 
 set seeds=discovery
-echo /docs/discovery
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+discovery\loophole_scroll_gallery.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=domain_tool_primers
-echo /docs/domain_tool_primers
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+domain_tool_primers\ai_ml_tools.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+domain_tool_primers\autonomous_forms_tools.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+domain_tool_primers\complex_systems_tools.md corpus\folder_%seeds%.md
@@ -504,7 +506,7 @@ echo ---------------------------------
 echo.
 
 set seeds=ecoechosystem
-echo /docs/ecoechosystem
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+ecoechosystem\OVERVIEW.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+ecoechosystem\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+ecoechosystem\community\education_mode.md corpus\folder_%seeds%.md
@@ -629,13 +631,13 @@ echo ---------------------------------
 echo.
 
 set seeds=economic_substrate_model
-echo /docs/economic_substrate_model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+economic_substrate_model\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education
-echo /docs/education
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\Biological_Taxonomy.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\Bioscience.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\Chat_with_Grok_3_21_2026.md corpus\folder_%seeds%.md
@@ -664,7 +666,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_alignment
-echo /docs/education/alignment
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\alignment\Adaptive_Capability_Overview.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\alignment\ASCII‑Tight Diagram.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\alignment\BKM_Alignment.md corpus\folder_%seeds%.md
@@ -679,7 +681,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_astrology
-echo /docs/education/astrology
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\astrology\Closing_Reflection_the_Power_of_Naming.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\astrology\Dimensional_Coherence_Navigation_Model.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\astrology\Exhibit_Concept.md corpus\folder_%seeds%.md
@@ -697,7 +699,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_awareness
-echo /docs/education/awareness
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\awareness\Cross_Platform_Deployment.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\awareness\Extension_Minimal_Architecture.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\awareness\Inheritance_RTT_Awareness_as_CSS.md corpus\folder_%seeds%.md
@@ -709,7 +711,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_BRA
-echo /docs/education/BRA
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\BRA\9_Professions_Regime_Checks.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\BRA\After_Regime_Awareness_Post-BPA.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\BRA\Before_Regime_Awareness_BRA.md corpus\folder_%seeds%.md
@@ -731,7 +733,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_CivRegimeStack
-echo /docs/education/CivRegimeStack
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\CivRegimeStack\Annotated_ASCII_Diagram_with_Case_Studies.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\CivRegimeStack\Civilizational_Regime_Stack_ASCII.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\CivRegimeStack\Civ_Leaders_as_Cognitive_Regime_Biases.md corpus\folder_%seeds%.md
@@ -746,7 +748,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_ebooks
-echo /docs/education/ebooks
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\ebooks\Book_1_Nawderia_and_the_Three_Little_Forces.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\ebooks\Book_2_Tripis_Treasure_of_Threes.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\ebooks\Book_3_Frami_Builds_a_Better_Box.md corpus\folder_%seeds%.md
@@ -775,7 +777,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_equations
-echo /docs/education/equations
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\equations\dimensional_math.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\equations\equations.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\equations\equation_index.md corpus\folder_%seeds%.md
@@ -792,7 +794,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_polisci
-echo /docs/education/polisci
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\polisci\Argentina.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\polisci\Australia.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\polisci\A_Tiny_History_of_Architecture.md corpus\folder_%seeds%.md
@@ -858,7 +860,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_QnA_Atlas
-echo /docs/education/QnA_Atlas
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\QnA_Atlas\index.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\QnA_Atlas\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\QnA_Atlas\chemistry\atomic_structure\advanced.md corpus\folder_%seeds%.md
@@ -943,13 +945,13 @@ echo ---------------------------------
 echo.
 
 set seeds=education_rituals
-echo /docs/education/rituals
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\rituals\triadic_teaching_methods.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=education_scrolls
-echo /docs/education/scrolls
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\scrolls\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\scrolls\remix_ethics.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\scrolls\remix_lineage_map.md corpus\folder_%seeds%.md
@@ -959,7 +961,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_subjects
-echo /docs/education/subjects
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\subjects\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_Angular_Momentum_and_Rotation.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\subjects\RTT_01_01_A_Newtonian_Reframing.md corpus\folder_%seeds%.md
@@ -1040,7 +1042,7 @@ echo ---------------------------------
 echo.
 
 set seeds=education_translations
-echo /docs/education/translations
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\translations\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_10th_Grade_School_Concepts.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+education\translations\RTT_Translates_to_11th_Grade_School_Concepts.md corpus\folder_%seeds%.md
@@ -1077,7 +1079,7 @@ echo ---------------------------------
 echo.
 
 set seeds=enterprise_structural_awareness
-echo /docs/enterprise_structural_awareness
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+enterprise_structural_awareness\future_directions.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+enterprise_structural_awareness\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+enterprise_structural_awareness\relationship_to_msrm.md corpus\folder_%seeds%.md
@@ -1107,7 +1109,7 @@ echo ---------------------------------
 echo.
 
 set seeds=facilities
-echo /docs/facilities
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+facilities\AGERI_README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+facilities\capital-and-audit-integration.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+facilities\corridor-classification-standard.md corpus\folder_%seeds%.md
@@ -1166,7 +1168,7 @@ echo ---------------------------------
 echo.
 
 set seeds=feedback
-echo /docs/feedback
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+feedback\Historian.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+feedback\Mathematician.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+feedback\Physicist.md corpus\folder_%seeds%.md
@@ -1178,7 +1180,7 @@ echo ---------------------------------
 echo.
 
 set seeds=gallery
-echo /docs/gallery
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+gallery\drift2_scroll_trace.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+gallery\drift_scroll_trace.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+gallery\echo2_scroll_trace.md corpus\folder_%seeds%.md
@@ -1193,7 +1195,7 @@ echo ---------------------------------
 echo.
 
 set seeds=global_energy_regime_awareness
-echo /docs/global_energy_regime_awareness
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+global_energy_regime_awareness\future_directions.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+global_energy_regime_awareness\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+global_energy_regime_awareness\relationship_to_enterprise_structural_awareness.md corpus\folder_%seeds%.md
@@ -1222,7 +1224,7 @@ echo ---------------------------------
 echo.
 
 set seeds=glyphic_resonance
-echo /docs/glyphic_resonance
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+glyphic_resonance\loophole_trace.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+glyphic_resonance\overlay_protocol.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+glyphic_resonance\README.md corpus\folder_%seeds%.md
@@ -1230,7 +1232,7 @@ echo ---------------------------------
 echo.
 
 set seeds=glyphs
-echo /docs/glyphs
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+glyphs\bridge_glyph_overlay_01_svg_descriptive_seed.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+glyphs\dimensional_spectrum_map_svg.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+glyphs\glyphstream_animation.md corpus\folder_%seeds%.md
@@ -1242,7 +1244,7 @@ echo ---------------------------------
 echo.
 
 set seeds=governance
-echo /docs/governance
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+governance\badge_logic.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+governance\badge_trigger_theme_manifest.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+governance\badge_trigger_validator_dashboard.md corpus\folder_%seeds%.md
@@ -1261,7 +1263,7 @@ echo ---------------------------------
 echo.
 
 set seeds=Governance_Substrate_Model
-echo /docs/Governance_Substrate_Model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Governance_Substrate_Model\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Governance_Substrate_Model\01_Invariants\Alignment_Over_Enforcement.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Governance_Substrate_Model\01_Invariants\Invariant_Principles.md corpus\folder_%seeds%.md
@@ -1344,7 +1346,7 @@ echo ---------------------------------
 echo.
 
 set seeds=honor_roll
-echo /docs/honor_roll
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+honor_roll\BADGES_EARNED.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+honor_roll\CONTRIBUTING.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+honor_roll\CONTRIBUTOR_BADGES.md corpus\folder_%seeds%.md
@@ -1365,7 +1367,7 @@ echo ---------------------------------
 echo.
 
 set seeds=Inverted_Economics
-echo /docs/Inverted_Economics
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Inverted_Economics\CONTRIBUTING.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Inverted_Economics\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Inverted_Economics\RTT_Eval_Inverted_Economics_Budget.md corpus\folder_%seeds%.md
@@ -1378,7 +1380,7 @@ echo ---------------------------------
 echo.
 
 set seeds=inverted_star_ontology
-echo /docs/inverted_star_ontology
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+inverted_star_ontology\Inverted_Star_Ontology_A_TriadicFrameworks_Comparative_Ontology.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_lattice_phase.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+inverted_star_ontology\iso_light_mode_transition.md corpus\folder_%seeds%.md
@@ -1396,7 +1398,7 @@ echo ---------------------------------
 echo.
 
 set seeds=labs
-echo /docs/labs
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+labs\dimensional_loop_guide.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+labs\Glyph_Density_Map_Curriculum_Modules.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+labs\initiation_protocol.md corpus\folder_%seeds%.md
@@ -1583,7 +1585,7 @@ echo ---------------------------------
 echo.
 
 set seeds=lactos
-echo /docs/lactos
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+lactos\LACTOS_collision_regime_taxonomy.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+lactos\LACTOS_cross_ontology_collision_mapping.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+lactos\LACTOS_event_pipeline.md corpus\folder_%seeds%.md
@@ -1594,7 +1596,7 @@ echo ---------------------------------
 echo.
 
 set seeds=legal
-echo /docs/legal
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+legal\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+legal\tft-fff_nda.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+legal\tft_fff_license_agreement.md corpus\folder_%seeds%.md
@@ -1602,14 +1604,14 @@ echo ---------------------------------
 echo.
 
 set seeds=library
-echo /docs/library
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+library\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+library\resonance_index.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Low_Dimensional_Structures
-echo /docs/Low_Dimensional_Structures
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\controls_and_validation.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\dimensional_scaling_notes.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Low_Dimensional_Structures\doi_minimal_low_dimensional_structures.md corpus\folder_%seeds%.md
@@ -1620,7 +1622,7 @@ echo ---------------------------------
 echo.
 
 set seeds=manufacturing_substrate_regime_model
-echo /docs/manufacturing_substrate_regime_model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+manufacturing_substrate_regime_model\calibration\calibration_as_structure.md corpus\folder_%seeds%.md
@@ -1651,7 +1653,7 @@ echo ---------------------------------
 echo.
 
 set seeds=media_substrate_model
-echo /docs/media_substrate_model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+media_substrate_model\adapters.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+media_substrate_model\attention_dynamics.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+media_substrate_model\basins.md corpus\folder_%seeds%.md
@@ -1680,7 +1682,7 @@ echo ---------------------------------
 echo.
 
 set seeds=metadata
-echo /docs/metadata
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+metadata\calibration_log.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+metadata\equipment_specs.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+metadata\periodic_table_of_shapes.md corpus\folder_%seeds%.md
@@ -1689,7 +1691,7 @@ echo ---------------------------------
 echo.
 
 set seeds=nasa_hposs_tminus10.md corpus\folder_%seeds%.md
-echo /docs/nasa_hposs_tminus10.md corpus\folder_%seeds%.md/
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\attachments\biosketch_nawder_loswin.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+nasa_hposs_tminus10.md corpus\folder_%seeds%.md\attachments\current_and_pending_support.md corpus\folder_%seeds%.md
@@ -1711,7 +1713,7 @@ echo ---------------------------------
 echo.
 
 set seeds=NoS
-echo /docs/NoS
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+NoS\BADGE_LOGIC.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+NoS\badge_suffix_convention.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+NoS\CHANGELOG.md corpus\folder_%seeds%.md
@@ -1738,7 +1740,7 @@ echo ---------------------------------
 echo.
 
 set seeds=onboarding
-echo /docs/onboarding
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+onboarding\badge_logic.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+onboarding\glyphstream_guide.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+onboarding\honor_roll.md corpus\folder_%seeds%.md
@@ -1758,7 +1760,7 @@ echo ---------------------------------
 echo.
 
 set seeds=overlays
-echo /docs/overlays
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+overlays\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+overlays\earth\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+overlays\earth\examples\README.md corpus\folder_%seeds%.md
@@ -1771,7 +1773,7 @@ echo ---------------------------------
 echo.
 
 set seeds=packages
-echo /docs/packages
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+packages\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+packages\RTT_Evaluations.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+packages\tft-3pack\Cross-Package_Interaction_Map.md corpus\folder_%seeds%.md
@@ -1800,7 +1802,7 @@ echo ---------------------------------
 echo.
 
 set seeds=papers
-echo /docs/papers
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+papers\000_Category_Index.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+papers\0D_Quantum_Loophole_Meets_Resonance_Triad.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+papers\1_Triadic_Framework_for_Everything.md corpus\folder_%seeds%.md
@@ -1923,13 +1925,13 @@ echo ---------------------------------
 echo.
 
 set seeds=Paradoxes_canon
-echo /docs/Paradoxes_canon
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Paradoxes_canon\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=projects
-echo /docs/projects
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+projects\QUICKSTART.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+projects\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+projects\CoConsciousness\brainstorm.md corpus\folder_%seeds%.md
@@ -2035,7 +2037,7 @@ echo ---------------------------------
 echo.
 
 set seeds=public_support
-echo /docs/public_support
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+public_support\funding_tiers.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+public_support\gofundme_campaign.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+public_support\launch_event.md corpus\folder_%seeds%.md
@@ -2047,7 +2049,7 @@ echo ---------------------------------
 echo.
 
 set seeds=quantum-substrate-model
-echo /docs/quantum-substrate-model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+quantum-substrate-model\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+quantum-substrate-model\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+quantum-substrate-model\metadata\README.md corpus\folder_%seeds%.md
@@ -2064,7 +2066,7 @@ echo ---------------------------------
 echo.
 
 set seeds=regime_blindness_checklist
-echo /docs/regime_blindness_checklist
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+regime_blindness_checklist\corrective_actions.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+regime_blindness_checklist\definition.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+regime_blindness_checklist\diagnostic_checklist.md corpus\folder_%seeds%.md
@@ -2078,13 +2080,13 @@ echo ---------------------------------
 echo.
 
 set seeds=registries
-echo /docs/registries
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+registries\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=registry
-echo /docs/registry
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+registry\drift2_scroll_entry.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+registry\drift_scroll_entry.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+registry\echo2_scroll_entry.md corpus\folder_%seeds%.md
@@ -2101,13 +2103,13 @@ echo ---------------------------------
 echo.
 
 set seeds=reports
-echo /docs/reports
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+reports\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=Resilience_Checker
-echo /docs/Resilience_Checker
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Resilience_Checker\Meta_Summary_Paradoxes_101–108.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_01_EPR_Paradox.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Resilience_Checker\Paradox_02_Gibbs_Paradox.md corpus\folder_%seeds%.md
@@ -2224,7 +2226,7 @@ echo ---------------------------------
 echo.
 
 set seeds=resonance
-echo /docs/resonance
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance\translator\translator_index.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance\translator\translator_tests.md corpus\folder_%seeds%.md
@@ -2233,7 +2235,7 @@ echo ---------------------------------
 echo.
 
 set seeds=resonance-substrate-model
-echo /docs/resonance-substrate-model
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance-substrate-model\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance-substrate-model\CONTRIBUTING.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance-substrate-model\LINEAGE.md corpus\folder_%seeds%.md
@@ -2336,7 +2338,7 @@ echo ---------------------------------
 echo.
 
 set seeds=resonance_atlas
-echo /docs/resonance_atlas
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance_atlas\glyph‑assignment_logic.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance_atlas\harvesting_script_outline.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+resonance_atlas\loophole_overlay.md corpus\folder_%seeds%.md
@@ -2354,7 +2356,7 @@ echo ---------------------------------
 echo.
 
 set seeds=rfc
-echo /docs/rfc
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rfc\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rfc\RFC-000-index.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rfc\RFC-001-triadic-validator-framework.md corpus\folder_%seeds%.md
@@ -2455,21 +2457,21 @@ echo ---------------------------------
 echo.
 
 set seeds=rituals
-echo /docs/rituals
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rituals\badge_ceremony.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rituals\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT
-echo /docs/RTT
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\tft_rtt_3d_9d_chip_spec.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=RTT_codex
-echo /docs/RTT/codex
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_1.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_10.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\codex\CHAPTER_11.md corpus\folder_%seeds%.md
@@ -2489,7 +2491,7 @@ echo ---------------------------------
 echo.
 
 set seeds=RTT_micro_core
-echo /docs/RTT/micro_core
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\micro_core\ABOUT.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\micro_core\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\micro_core\appendices\definitions.md corpus\folder_%seeds%.md
@@ -2538,7 +2540,7 @@ echo ---------------------------------
 echo.
 
 set seeds=RTT_RTT-Inside
-echo /docs/RTT/RTT-Inside
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Economy_Domain.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Education_Domain.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\RTT-Inside\Capture_Template_Environment_Domain.md corpus\folder_%seeds%.md
@@ -2559,7 +2561,7 @@ echo ---------------------------------
 echo.
 
 set seeds=RTT_RTT_12
-echo /docs/RTT/RTT_12
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\RTT_12\CODEX_Full.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\RTT_12\Colocation_CFO_Brief.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\RTT_12\Digital_Infrastructure_Electricity_Budget_est_RTT_Inside_Global_Deployment.md corpus\folder_%seeds%.md
@@ -2594,7 +2596,7 @@ echo ---------------------------------
 echo.
 
 set seeds=RTT_sort
-echo /docs/RTT/sort
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\sort\Parallel_Universe_with_RTT_in_1959.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\sort\Remix_CivCycles_Planet_of_the_Apes_unedited.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+RTT\sort\RTT-Inside_Awareness_Think_Across_ALL_Domains.md corpus\folder_%seeds%.md
@@ -2618,13 +2620,13 @@ echo ---------------------------------
 echo.
 
 set seeds=rtt-extension
-echo /docs/rtt-extension
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt-extension\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=rtt-sdk
-echo /docs/rtt-sdk
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt-sdk\beacon.py.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt-sdk\client.py.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt-sdk\diagnostics.py.md corpus\folder_%seeds%.md
@@ -2645,7 +2647,7 @@ echo ---------------------------------
 echo.
 
 set seeds=rttcodes
-echo /docs/rttcodes
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rttcodes\Adding_a_New_RTTcode_Domain.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rttcodes\Canonical_RTTcode_Specification_Document.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rttcodes\Contributor_Workflow.md corpus\folder_%seeds%.md
@@ -2673,7 +2675,7 @@ echo ---------------------------------
 echo.
 
 set seeds=rtt_app
-echo /docs/rtt_app
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt_app\A_Smartphone_with_RTT-Inside.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt_app\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt_app\api\awareness_endpoint.md corpus\folder_%seeds%.md
@@ -2697,7 +2699,7 @@ echo ---------------------------------
 echo.
 
 set seeds=rtt_store
-echo /docs/rtt_store
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt_store\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt_store\branding\badges.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+rtt_store\branding\identity_kit.md corpus\folder_%seeds%.md
@@ -2754,13 +2756,13 @@ echo ---------------------------------
 echo.
 
 set seeds=runtime
-echo /docs/runtime
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+runtime\loophole_executor.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=schemas
-echo /docs/schemas
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+schemas\Browser_UI_Mockup.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+schemas\CLI_Tool_Spec.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+schemas\Contributing.md corpus\folder_%seeds%.md
@@ -2792,7 +2794,7 @@ echo ---------------------------------
 echo.
 
 set seeds=scientific_instrument_review
-echo /docs/scientific_instrument_review
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+scientific_instrument_review\About.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+scientific_instrument_review\CONTRIBUTING.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+scientific_instrument_review\pull_request_template.md corpus\folder_%seeds%.md
@@ -2873,31 +2875,31 @@ echo ---------------------------------
 echo.
 
 set seeds=scripts
-echo /docs/scripts
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+scripts\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=simulations
-echo /docs/simulations
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+simulations\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=snapshots
-echo /docs/snapshots
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+snapshots\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=sources
-echo /docs/sources
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+sources\Good_Vibrations_README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=spacetime_micro_agent_validations
-echo /docs/spacetime_micro_agent_validations
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\RELEASE_NOTES.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spacetime_micro_agent_validations\examples\sample_interpretation_walkthrough.md corpus\folder_%seeds%.md
@@ -2907,7 +2909,7 @@ echo ---------------------------------
 echo.
 
 set seeds=spacetime_validation_and_regime_invariant_dimensional_cores
-echo /docs/spacetime_validation_and_regime_invariant_dimensional_cores
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\reproducibility\ingredients_list.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spacetime_validation_and_regime_invariant_dimensional_cores\theorem\5_important_term_translations.md corpus\folder_%seeds%.md
@@ -2922,7 +2924,7 @@ echo ---------------------------------
 echo.
 
 set seeds=spectral_clarity
-echo /docs/spectral_clarity
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spectral_clarity\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseI.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spectral_clarity\README_PhaseII.md corpus\folder_%seeds%.md
@@ -2946,7 +2948,7 @@ echo ---------------------------------
 echo.
 
 set seeds=spectrum_standards_reviewed
-echo /docs/spectrum_standards_reviewed
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\00_introduction_and_scope.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\01_spectrum_as_substrate.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+spectrum_standards_reviewed\02_regimes_and_hierarchies.md corpus\folder_%seeds%.md
@@ -2961,13 +2963,13 @@ echo ---------------------------------
 echo.
 
 set seeds=src
-echo /docs/src
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+src\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=structural_life_regime_profiles
-echo /docs/structural_life_regime_profiles
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+structural_life_regime_profiles\autonomous_system_alignment.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+structural_life_regime_profiles\cross_species_comparison.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+structural_life_regime_profiles\drift_and_stability_profiles.md corpus\folder_%seeds%.md
@@ -2988,7 +2990,7 @@ echo ---------------------------------
 echo.
 
 set seeds=structuring_mathematics
-echo /docs/structuring_mathematics
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+structuring_mathematics\branch_mapping.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+structuring_mathematics\doi_minimal_submission.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+structuring_mathematics\historical_drift.md corpus\folder_%seeds%.md
@@ -3002,13 +3004,13 @@ echo ---------------------------------
 echo.
 
 set seeds=styles
-echo /docs/styles
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+styles\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=substrate
-echo /docs/substrate
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate\core\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate\operators\README.md corpus\folder_%seeds%.md
@@ -3017,7 +3019,7 @@ echo ---------------------------------
 echo.
 
 set seeds=substrate_communications
-echo /docs/substrate_communications
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_communications\message_types.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_communications\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_communications\regime_mapping.md corpus\folder_%seeds%.md
@@ -3026,7 +3028,7 @@ echo ---------------------------------
 echo.
 
 set seeds=substrate_exposure_assay
-echo /docs/substrate_exposure_assay
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_exposure_assay\assay_protocol.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_exposure_assay\message_patterns.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_exposure_assay\README.md corpus\folder_%seeds%.md
@@ -3035,7 +3037,7 @@ echo ---------------------------------
 echo.
 
 set seeds=substrate_mind_science
-echo /docs/substrate_mind_science
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_mind_science\Conscious_Transfer_Substrate_Map_v1.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_mind_science\Conscious_Transfer_Substrate_Schema_v1.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+substrate_mind_science\Legacy_Mind_Narratives_v1.md corpus\folder_%seeds%.md
@@ -3079,7 +3081,7 @@ echo ---------------------------------
 echo.
 
 set seeds=TFT_3Pack_v1.3
-echo /docs/TFT_3Pack_v1.3
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\fff_quickstart.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\Quantum_Entanglement_Measuring.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+TFT_3Pack_v1.3\QUICKSTART.md corpus\folder_%seeds%.md
@@ -3402,7 +3404,7 @@ echo ---------------------------------
 echo.
 
 set seeds=Triadic
-echo /docs/Triadic
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Triadic\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Triadic\TF_alignment_orrery.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+Triadic\TF_coherence_cone.md corpus\folder_%seeds%.md
@@ -3445,7 +3447,7 @@ echo ---------------------------------
 echo.
 
 set seeds=triadic_coordination_substrate
-echo /docs/triadic_coordination_substrate
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+triadic_coordination_substrate\alignment_dynamics.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+triadic_coordination_substrate\CHANGELOG.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+triadic_coordination_substrate\corridor_separation.md corpus\folder_%seeds%.md
@@ -3462,7 +3464,7 @@ echo ---------------------------------
 echo.
 
 set seeds=triadic_observer_layer
-echo /docs/triadic_observer_layer
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+triadic_observer_layer\adoption_and_integration_note.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+triadic_observer_layer\anomaly_taxonomy.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+triadic_observer_layer\glossary.md corpus\folder_%seeds%.md
@@ -3481,7 +3483,7 @@ echo ---------------------------------
 echo.
 
 set seeds=unified_resonance
-echo /docs/unified_resonance
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+unified_resonance\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+unified_resonance\badges\CrossDim_Translator_Badge.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+unified_resonance\badges\Denometer_Architect_Badge.md corpus\folder_%seeds%.md
@@ -3517,7 +3519,7 @@ echo ---------------------------------
 echo.
 
 set seeds=validation
-echo /docs/validation
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+validation\loop_validation_log.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+validation\loop_validation_matrix.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+validation\loop_validation_protocol.md corpus\folder_%seeds%.md
@@ -3533,7 +3535,7 @@ echo ---------------------------------
 echo.
 
 set seeds=validators
-echo /docs/validators
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+validators\badge_trigger_papers_index.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+validators\modular_matrix_resonator.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+validators\README.md corpus\folder_%seeds%.md
@@ -3548,7 +3550,7 @@ echo ---------------------------------
 echo.
 
 set seeds=vst_for_embedding_stores_vector_databases
-echo /docs/vst_for_embedding_stores_vector_databases
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\drift_detection_embeddings.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\embedding_cluster_regimes.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_embedding_stores_vector_databases\projection_and_fragmentation_analysis.md corpus\folder_%seeds%.md
@@ -3564,7 +3566,7 @@ echo ---------------------------------
 echo.
 
 set seeds=vst_for_generative_models
-echo /docs/vst_for_generative_models
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_generative_models\diffusion_latent_regimes.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_generative_models\drift_detection_generative.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_generative_models\projection_and_latent_alignment.md corpus\folder_%seeds%.md
@@ -3580,7 +3582,7 @@ echo ---------------------------------
 echo.
 
 set seeds=vst_for_large_language_models
-echo /docs/vst_for_large_language_models
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_large_language_models\drift_detection_llm.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_large_language_models\latent_trajectory_regimes.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_large_language_models\projection_and_alignment.md corpus\folder_%seeds%.md
@@ -3596,7 +3598,7 @@ echo ---------------------------------
 echo.
 
 set seeds=vst_for_multi_model_alignment
-echo /docs/vst_for_multi_model_alignment
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\cross_model_regimes.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\drift_detection_multi_model.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_multi_model_alignment\projection_and_alignment_surfaces.md corpus\folder_%seeds%.md
@@ -3612,7 +3614,7 @@ echo ---------------------------------
 echo.
 
 set seeds=vst_for_protein_language_models
-echo /docs/vst_for_protein_language_models
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_protein_language_models\dimensional_scaling_protein_models.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_protein_language_models\drift_detection_plm.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_protein_language_models\projection_into_structural_cores.md corpus\folder_%seeds%.md
@@ -3628,7 +3630,7 @@ echo ---------------------------------
 echo.
 
 set seeds=vst_for_robotics_and_control_policies
-echo /docs/vst_for_robotics_and_control_policies
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\drift_detection_rl.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\policy_latent_regimes.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_robotics_and_control_policies\projection_and_policy_alignment.md corpus\folder_%seeds%.md
@@ -3644,7 +3646,7 @@ echo ---------------------------------
 echo.
 
 set seeds=vst_for_scientific_simulators
-echo /docs/vst_for_scientific_simulators
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\drift_detection_simulators.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\projection_into_dimensional_cores.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+vst_for_scientific_simulators\README.md corpus\folder_%seeds%.md
@@ -3660,7 +3662,7 @@ echo ---------------------------------
 echo.
 
 set seeds=workflows
-echo /docs/workflows
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+workflows\API_reference_blocks.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+workflows\Diagram.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+workflows\Folder‑level_glyphs.md corpus\folder_%seeds%.md
@@ -3670,7 +3672,7 @@ echo ---------------------------------
 echo.
 
 set seeds=_ideas
-echo /docs/_ideas
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_ideas\000_RTT_Information_Primer.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_ideas\000___Good_News_Everyone.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_ideas\0n_Teams_Playtime_and_Remembering_Who_You_Are.md corpus\folder_%seeds%.md
@@ -3876,19 +3878,19 @@ echo ---------------------------------
 echo.
 
 set seeds=_snippets
-echo /docs/_snippets
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_snippets\README.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=_specs
-echo /docs/_specs
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_specs\RTT_Kernel_v0.1.md corpus\folder_%seeds%.md
 echo ---------------------------------
 echo.
 
 set seeds=_template
-echo /docs/_template
+echo %seeds% >corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_template\overview.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_template\README.md corpus\folder_%seeds%.md
 copy corpus\folder_%seeds%.md+_template\assets\ReachoutPlan.md corpus\folder_%seeds%.md
