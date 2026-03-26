@@ -64,3 +64,12 @@ Horses generalize coherence across modalities through rhythm, balance, and propr
 - RTT maps well because horses constantly reconcile expected vs. actual movement patterns.
 - Their “Pull” action is often a return to rhythm, alignment, or balance.
 ```
+
+---
+
+# 🧭 **MID INTELLIGENCE TIER**
+
+## 🐎 Horse
+- **Regimes Perceived:** Rhythm, proprioceptive balance, spatial alignment, pressure cues.  
+- **Regimes Missed by Humans:** Their ability to detect *micro‑timing drift* in human posture.  
+- **Perspective:** Horses show that coherence is often a matter of shared rhythm.
