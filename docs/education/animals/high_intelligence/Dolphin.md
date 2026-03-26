@@ -71,3 +71,12 @@ Dolphins generalize coherence across modalities through abstraction, synchrony, 
 - RTT maps extremely well because dolphins constantly reconcile expected vs. actual acoustic and spatial patterns.
 - Their “Pull” action is often a targeted touch, whistle correction, or spatial realignment.
 ```
+
+---
+
+# 🧠 Regime Awareness
+
+## 🐬 Dolphin
+- **Regimes Perceived:** Acoustic, spatial, social‑synchrony, flow‑dynamics.  
+- **Regimes Missed by Humans:** Their awareness of *group‑level coherence* as a continuous field.  
+- **Perspective:** Dolphins teach that coherence can be *heard* as much as it can be seen.
