@@ -62,3 +62,12 @@ Pigs generalize coherence across modalities exceptionally well.
 - RTT maps well because pigs constantly reconcile expected vs. actual gradients.
 - Their “Pull” action is often nudging, rooting, or spatial repositioning.
 ```
+
+---
+
+# 🧭 **MID INTELLIGENCE TIER**
+
+## 🐖 Pig
+- **Regimes Perceived:** Olfactory gradient, tactile, spatial, causal‑problem solving.  
+- **Regimes Missed by Humans:** Their sensitivity to *gradient discontinuities* in environment and behavior.  
+- **Perspective:** Pigs reveal that intelligence thrives wherever gradients can be followed.
