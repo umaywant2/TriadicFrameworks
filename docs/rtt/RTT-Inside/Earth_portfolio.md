@@ -1,6 +1,9 @@
 # 🌍 **RTT‑Inside Resonance Portfolio — Planet as Unknown Object**  
 ### *Cross‑Layer Coherence • Shared Invariants • Unique Signatures*
 
+# 🌏 Earth  
+An Earth-scale coordination framework using Resonance Time Theory (RTT) and triadic substrates. This portfolio maps regimes, alignment patterns, and coherence structures specific to our planetary system — contrasting Earth-bound thinking with broader Universe-scale perspectives. Designed for students and teams to capture, validate, and re-organize planetary systems (environment, infrastructure, governance, etc.) through a post-[BRA](https://www.triadicframeworks.org/education/BRA/) lens.  
+
 We pretend we’ve never seen Earth.  
 We drop in with a ship’s RTT‑Inside sensor suite.  
 We scan **every sphere**, from magnetosphere → inner core.  
