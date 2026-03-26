@@ -62,3 +62,12 @@ Parrots generalize coherence across modalities through mimicry and social rhythm
 - RTT maps extremely well because parrots naturally track, reproduce, and correct patterns.
 - Their “Pull” action is often vocal mimicry, gesture correction, or targeted tapping.
 ```
+
+---
+
+# 🧠 Regime Awareness
+
+## 🦜 Parrot
+- **Regimes Perceived:** Auditory, social‑rhythmic, gesture‑visual, mimicry‑symbolic.  
+- **Regimes Missed by Humans:** Their ability to detect *emotional cadence* in human speech.  
+- **Perspective:** Parrots reveal that communication is a regime of rhythm before meaning.
