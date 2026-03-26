@@ -70,3 +70,12 @@ Octopuses generalize coherence across modalities through distributed sensing and
 - RTT maps exceptionally well because octopuses operate on prediction, correction, and distributed inference.
 - Their “Pull” action is often object manipulation, flow adjustment, or multi-arm realignment.
 ```
+
+---
+
+# 🧠 Regime Awareness
+
+## 🐙 Octopus
+- **Regimes Perceived:** Tactile, flow‑gradient, visual‑contrast, distributed proprioception.  
+- **Regimes Missed by Humans:** Their *multi‑arm parallelism* as a regime of decentralized coherence.  
+- **Perspective:** Octopuses show that intelligence can be *plural* within a single body.
