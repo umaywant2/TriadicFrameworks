@@ -68,3 +68,12 @@ Crows generalize coherence across modalities through abstraction and causal reas
 - RTT maps extremely well because crows naturally test, probe, and correct environmental structure.
 - Their “Pull” action is often object manipulation, tool adjustment, or rhythmic correction.
 ```
+
+---
+
+# 🧠 Regime Awareness
+
+## 🪶 Crow
+- **Regimes Perceived:** Causal, spatial, symbolic, object‑mechanical.  
+- **Regimes Missed by Humans:** Their sensitivity to *pattern symmetry* and rotational invariants.  
+- **Perspective:** Crows show that intelligence emerges wherever prediction meets curiosity.
