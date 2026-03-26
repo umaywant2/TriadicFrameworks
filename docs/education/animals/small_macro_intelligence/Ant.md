@@ -59,3 +59,12 @@ Ants generalize coherence across modalities surprisingly well.
 - RTT maps beautifully onto ant behavior because their cognition is gradient‑first, not symbolic.
 - The colony, not the individual, is the true “learner” in this substrate.
 ```
+
+---
+
+# 🔬 **SMALL MACRO INTELLIGENCE TIER**
+
+## 🐜 Ant
+- **Regimes Perceived:** Chemical gradient, swarm‑coherence, spatial‑pathing.  
+- **Regimes Missed by Humans:** Their ability to detect *collective drift* before it becomes visible.  
+- **Perspective:** Ants reveal that intelligence can be distributed across many bodies.
