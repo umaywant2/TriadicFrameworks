@@ -70,3 +70,12 @@ Chimpanzees generalize coherence across modalities through abstraction and socia
 - RTT maps extremely well because chimps constantly reconcile expected vs. actual outcomes.
 - Their “Pull” action is often tool adjustment, gesture correction, or spatial realignment.
 ```
+
+---
+
+# 🧠 Regime Awareness
+
+## 🧩 Chimpanzee
+- **Regimes Perceived:** Social, tool‑mechanical, spatial, emotional.  
+- **Regimes Missed by Humans:** Their ability to track *multi‑agent drift* across time, not just in the moment.  
+- **Perspective:** Chimps reveal that coherence is often a *shared* property, not an individual one.
