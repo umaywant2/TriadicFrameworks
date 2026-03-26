@@ -62,3 +62,12 @@ Geckos generalize coherence across sensory channels through spatial and tactile 
 - RTT maps well to geckos because their cognition is built around environmental prediction and surface coherence.
 - Their climbing behavior provides a natural “Pull” mechanism: they move to restore stability.
 ```
+
+---
+
+# 🔬 **SMALL MACRO INTELLIGENCE TIER**
+
+## 🦎 Gecko
+- **Regimes Perceived:** Micro‑motion, surface‑texture, thermal gradient, spatial mapping.  
+- **Regimes Missed by Humans:** Their sensitivity to *vibration drift* through surfaces.  
+- **Perspective:** Geckos show that coherence can be felt through the feet.
