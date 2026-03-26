@@ -63,3 +63,12 @@ Raccoons generalize coherence across modalities through object manipulation and 
 - RTT maps extremely well because raccoons constantly test, probe, and correct environmental patterns.
 - Their “Pull” action is often resetting a mechanism, repositioning an object, or re‑establishing expected resistance.
 ```
+
+---
+
+# 🧭 **MID INTELLIGENCE TIER**
+
+## 🦝 Raccoon
+- **Regimes Perceived:** Tactile‑mechanical, object‑spatial, causal, opportunistic patterning.  
+- **Regimes Missed by Humans:** Their awareness of *mechanical drift* in objects and environments.  
+- **Perspective:** Raccoons teach that curiosity is a regime of its own.
