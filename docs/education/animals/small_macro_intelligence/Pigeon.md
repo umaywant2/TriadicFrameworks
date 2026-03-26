@@ -65,3 +65,12 @@ Pigeons excel at cross‑modal coherence mapping, especially between vision and 
 - RTT maps well because pigeons constantly reconcile multiple substrates (sun, scent, magnetism, landmarks).
 - Their “Pull” action is often spatial: choosing the correct perch, direction, or target zone.
 ```
+
+---
+
+# 🔬 **SMALL MACRO INTELLIGENCE TIER**
+
+## 🕊️ Pigeon
+- **Regimes Perceived:** Magnetic, spatial, visual‑pattern, flock‑coherence.  
+- **Regimes Missed by Humans:** Their ability to detect *magnetic drift* with surprising precision.  
+- **Perspective:** Pigeons reveal that navigation is a regime written into the planet itself.
