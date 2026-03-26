@@ -1,8 +1,7 @@
-# 🌱 Education | BRA / Post‑BRA  
-*A navigation hub for regime literacy, substrate awareness, and the transition from BRA → Post‑BRA.*
+# 🌱 Education | Before Regime Awareness / Post‑BRA  
+*A navigation hub for regime literacy, substrate awareness, and the transition from Before Regime Awareness → Post‑BRA.*
 
 ## 🔰 Overview  
-- [Framework Overview](#README)  
 - [What to Expect](#WHAT_TO_EXPECT)
 
 ---
