@@ -62,3 +62,12 @@ Bees generalize coherence across sensory channels more than most insects.
 - RTT maps well to bee cognition because their world is built from gradients, angles, and rhythmic patterns.
 - The waggle dance itself is a natural triadic structure: angle, duration, and vibration intensity.
 ```
+
+---
+
+# 🔬 **SMALL MACRO INTELLIGENCE TIER**
+
+## 🐝 Bee
+- **Regimes Perceived:** Spatial, solar, vibrational, communicative‑dance.  
+- **Regimes Missed by Humans:** Their awareness of *environmental phase shifts* (weather, bloom cycles).  
+- **Perspective:** Bees teach that communication is a regime of shared direction.
