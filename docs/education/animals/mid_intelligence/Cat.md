@@ -62,3 +62,12 @@ Cats generalize coherence across modalities through motion prediction and spatia
 - RTT maps well because cats constantly reconcile expected vs. actual movement.
 - Their “Pull” action is often a targeted tap, pounce, or spatial repositioning.
 ```
+
+---
+
+# 🧭 **MID INTELLIGENCE TIER**
+
+## 🐈 Cat
+- **Regimes Perceived:** Motion, spatial, tactile‑whisker, micro‑rhythm.  
+- **Regimes Missed by Humans:** Their sensitivity to *prediction error* as a regime of safety.  
+- **Perspective:** Cats teach that coherence is often a private negotiation with the world.
