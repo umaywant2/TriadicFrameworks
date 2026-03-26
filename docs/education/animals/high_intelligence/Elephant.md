@@ -70,3 +70,12 @@ Elephants generalize coherence across modalities through memory, empathy, and gr
 - RTT maps extremely well because elephants maintain multi-modal coherence across large distances and long timescales.
 - Their “Pull” action is often spatial realignment, call correction, or tactile reassurance.
 ```
+
+---
+
+# 🧠 Regime Awareness
+
+## 🐘 Elephant
+- **Regimes Perceived:** Emotional, spatial, vibrational, social‑memory.  
+- **Regimes Missed by Humans:** Their ability to track *long‑arc temporal regimes* across seasons and generations.  
+- **Perspective:** Elephants remind us that memory is a regime, not a storage unit.
