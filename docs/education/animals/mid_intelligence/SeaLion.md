@@ -62,3 +62,12 @@ Sea lions generalize coherence across modalities through motion prediction and h
 - RTT maps well because sea lions constantly reconcile expected vs. actual movement patterns.
 - Their “Pull” action is often a targeted touch, swim‑through, or spatial repositioning.
 ```
+
+---
+
+# 🧭 **MID INTELLIGENCE TIER**
+
+## 🦭 Sea Lion
+- **Regimes Perceived:** Flow‑dynamics, motion, acoustic, spatial‑trajectory.  
+- **Regimes Missed by Humans:** Their ability to sense *hydrodynamic coherence* as a continuous field.  
+- **Perspective:** Sea lions show that movement is a regime shaped by water’s memory.
