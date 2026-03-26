@@ -70,3 +70,12 @@ Dogs generalize coherence across modalities through social synchrony and emotion
 - RTT maps extremely well because dogs track human intention through multi-modal cues.
 - Their “Pull” action is often repositioning, gesture matching, or emotional alignment.
 ```
+
+---
+
+# 🧭 **MID INTELLIGENCE TIER**
+
+## 🐕 Dog
+- **Regimes Perceived:** Social‑emotional, vocal, spatial, olfactory‑gradient.  
+- **Regimes Missed by Humans:** Their awareness of *human intention drift* before it’s expressed.  
+- **Perspective:** Dogs remind us that synchrony is a regime built from trust.
