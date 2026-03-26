@@ -65,3 +65,12 @@ Goldfish generalize coherence across modalities through spatial and flow‑based
 - RTT maps well because goldfish behavior is built around restoring predictable environmental patterns.
 - Their “Pull” action is often spatial: swimming into a corrective zone or nudging a target.
 ```
+
+---
+
+# 🔬 **SMALL MACRO INTELLIGENCE TIER**
+
+## 🐠 Goldfish
+- **Regimes Perceived:** Flow, spatial boundary, light‑gradient, simple motion patterns.  
+- **Regimes Missed by Humans:** Their awareness of *micro‑flow turbulence* as a navigational regime.  
+- **Perspective:** Goldfish remind us that even simple regimes create stable worlds.
