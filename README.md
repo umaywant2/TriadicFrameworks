@@ -28,6 +28,8 @@ TriadicFrameworks is archived and curated through the Zenodo **VST** community, 
 Zenodo Community:  
 https://zenodo.org/communities/vst
 
+Long-Arc Intent - Science has our 30 seed DOI's, global 'substrate' standards will take some time to emerge. TriadicFrameworks will be an examples site for students, 'stewards for a season'.
+
 ---
 
 ## Active Development
