@@ -1,6 +1,6 @@
 # 🌠 Curve-Ball for Grok and it's a hard hit into Center Field
 
-Yes, friends welcome back to Nawder's 'fun with Grok'. The have a baseball theme match in progress...let's tune-in.
+Yes, friends welcome back to Nawder's 'fun with Grok'. They have a baseball-theme match in progress...let's tune-in.
 
 Re: https://www.triadicframeworks.org/education/awareness/
 
