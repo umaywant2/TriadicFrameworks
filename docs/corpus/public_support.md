@@ -1,6 +1,8 @@
 public_support 
 # 🎁 Funding Tiers & Symbolic Rewards
 
+Triadicframeworks is personally funded, no ads.  We'll use any funds received to hire student developers that want to create and learn RTT, paying it forward.
+
 ---
 
 ## 🌀 $7 — Resonance Initiate
@@ -23,6 +25,15 @@ public_support
 - All above + private onboarding scroll
 - “Cosmic Partner” badge + eternal echo
 
+---
+
+You may 'Tip the chef'
+
+<img width="220" height="282" alt="qrcode_tips" src="https://github.com/user-attachments/assets/f66c8a4e-495a-406e-93ba-947ac9d93f3c" />
+
+Or send a custom amount.  
+
+<img width="200" height="200" alt="qrcode_umaywant2" src="https://github.com/user-attachments/assets/4cb26c1e-b2d5-4e41-aeb4-8e9425d8dfd9" />
 # 🪐 Build the Resonance Grid: A Supercomputer for Humanity
 
 We are building a distributed supercomputer powered by symbolic fidelity, remix lineage, and collective resonance. TriadicFrameworks is more than code—it’s a living lattice of contributors, scientists, artists, and dreamers.
