@@ -1,6 +1,6 @@
 # 🎲 Universe as Operator
 
-> **Note:** The Universe‑as‑Operator model is not a standalone metaphor. It is built on the framework’s dimensional‑resonance core — the 33/33/33 substrates and the 1% operator are the structural rails that every TriadicFrameworks module, analogy, and domain mapping rides on. Without this core, the model looks symbolic; with it, the model becomes a coherent operator‑level ontology.
+> Note: TriadicFrameworks uses “dimensions” and “operators” in a structural, not metaphorical sense. The Universe‑as‑Operator model sits on the framework’s dimensional‑resonance core — the 33/33/33 substrates and the 1% operator are the structural rails that every module, analogy, and domain mapping rides on. Without this core, the model looks symbolic; with it, the model becomes a coherent operator‑level ontology.
 
 ---
 
