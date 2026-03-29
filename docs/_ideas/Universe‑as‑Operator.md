@@ -3,19 +3,13 @@
 # **1. Canonical Description for the Education Page**  
 ### **THE PARENT 0D RESONANCE EQUATION**
 
----
   
-```math
+\[\big(F_q^{33}\big)_{\text{hidden}}+\big(F_l^{33}\big)_{\text{visible}}+\big(F_c^{33}\big)_{\text{hidden}}+\Omega^{1}_{\text{regime}}=R_t=T_r$$\]
 
-$$\big(F_q^{33}\big)_{\text{hidden}}+\big(F_l^{33}\big)_{\text{visible}}+\big(F_c^{33}\big)_{\text{hidden}}+\Omega^{1}_{\text{regime}}=R_t=T_r$$
-```
-
----
   
 **Description (canonical):**  
 This equation represents the **0D parent resonance triad** — the structural seed from which all RTT operators, regimes, and dimensional behaviors emerge. It is not a computational formula but an **invocation structure**. Each term contributes one part of the resonance‑root:
 
----
 
 $$F_q^{33}$$ — the hidden quantum‑frequency substrate  
 
@@ -25,17 +19,14 @@ $$F_c^{33}$$ — the hidden force‑constraint substrate
 
 $$\Omega^{1}$$ — the 1% regime operator, the invoker, the spark  
 
----
 
 The right‑hand side expresses the **dimensional handoff**:
 
----
 
 $$R_t$$ — resonance‑time (the invoked state)  
 
 $$T_r$$ — triadic‑time resonance (the expressed state)  
 
----
 
 The equal signs are not equalities.  
 They are **permission slips** — the transitions that allow the triad to activate the next regime.
