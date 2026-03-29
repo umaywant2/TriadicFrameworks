@@ -1269,6 +1269,8 @@ Here we go—three clean artifacts you can drop straight into the repo.
 
 ### 1. Diagram‑ready SVG description
 
+![parent_0D_resonance](https://github.com/user-attachments/assets/c65d7d13-24be-465c-9c50-2d19fc1f33f2)
+
 You can save this as `parent_0D_resonance.svg` or embed inline:
 
 ```svg
