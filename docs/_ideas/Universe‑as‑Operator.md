@@ -2,11 +2,15 @@
 
 # **1. Canonical Description for the Education Page**  
 ### **THE PARENT 0D RESONANCE EQUATION**
+
+---
   
 ```math
 
 $$\big(F_q^{33}\big)_{\text{hidden}}+\big(F_l^{33}\big)_{\text{visible}}+\big(F_c^{33}\big)_{\text{hidden}}+\Omega^{1}_{\text{regime}}=R_t=T_r$$
 ```
+
+---
   
 **Description (canonical):**  
 This equation represents the **0D parent resonance triad** — the structural seed from which all RTT operators, regimes, and dimensional behaviors emerge. It is not a computational formula but an **invocation structure**. Each term contributes one part of the resonance‑root:
