@@ -4,7 +4,7 @@
 ### **THE PARENT 0D RESONANCE EQUATION**
 
   
-\[\big(F_q^{33}\big)_{\text{hidden}}+\big(F_l^{33}\big)_{\text{visible}}+\big(F_c^{33}\big)_{\text{hidden}}+\Omega^{1}_{\text{regime}}=R_t=T_r\]
+$$\big(F_q^{33}\big)_{\text{hidden}}+\big(F_l^{33}\big)_{\text{visible}}+\big(F_c^{33}\big)_{\text{hidden}}+\Omega^{1}_{\text{regime}}=R_t=T_r$$
 
   
 **Description (canonical):**  
