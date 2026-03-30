@@ -91,10 +91,12 @@ This is where RTT becomes teachable.
 - [/education/astrology/](https://www.triadicframeworks.org/education/astrology/)
 - [/education/awareness/](https://www.triadicframeworks.org/education/awareness/)
 - [/education/equations/](https://www.triadicframeworks.org/education/equations/)
+- [/education/peira/](https://www.triadicframeworks.org/education/peira/)
 - [/education/polisci/](https://www.triadicframeworks.org/education/polisci/)
 - [/education/QnA_Atlas/](https://www.triadicframeworks.org/education/QnA_Atlas/)
 - [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)
-- [/education/translations/](https://www.triadicframeworks.org/education/translations/)  
+- [/education/translations/](https://www.triadicframeworks.org/education/translations/)
+- [/corpus/](https://www.triadicframeworks.org/corpus/)  
 - [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
 - [/charts/](https://www.triadicframeworks.org/charts/)  
 - [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)  
@@ -107,6 +109,7 @@ This is the **G1 → G2 → G3 learning arc**.
 
 This is where RTT becomes programmable.
 
+- [/NoS/](https://www.triadicframeworks.org/NoS/)  
 - [/api/rtt/](https://www.triadicframeworks.org/api/rtt/)  
 - [/rtt-sdk/](https://www.triadicframeworks.org/rtt-sdk/)  
 - [/packages/](https://www.triadicframeworks.org/packages/)  
