@@ -36,8 +36,43 @@ This example serves as the perfect starting point for RTT reinterpretation:
 
 ---
 
-## **2. Breaking Water Into Hydrogen and Oxygen**  
-*(placeholder — to be filled later)*
+## **2. Breaking Water Into Hydrogen and Oxygen**
+
+**Traditional Framing**  
+Splitting water into hydrogen and oxygen is often presented as an energy‑inefficient process. Standard electrolysis requires more energy input than the chemical energy stored in the resulting hydrogen. Because of this, many discussions frame water splitting as fundamentally “uneconomical” or “impractical” at scale.
+
+**Why It Looks Impossible**  
+The traditional calculation assumes:
+- direct brute‑force electrolysis  
+- no catalytic assistance  
+- no heat recovery  
+- no phase‑change integration  
+- no atmospheric or hydraulic analogs  
+- no gradient exploitation  
+
+Under this framing, the energy cost appears fixed, high, and unavoidable.
+
+**Why It’s Actually a Regime Problem**  
+Water splitting is treated as a **force problem**:  
+apply enough voltage, break the bond, accept the losses.
+
+But the atmosphere shows a different truth:  
+water can be separated *without ever breaking the molecule* — through phase change, transport, condensation, and gradients.
+
+Electrolysis itself also changes dramatically depending on:
+- catalyst regime  
+- membrane regime  
+- temperature regime  
+- pressure regime  
+- electrical regime  
+- flow regime  
+
+The “energy wall” arises from assuming a single brute‑force regime is the only valid one.
+
+RTT reframes this example as a **regime‑alignment problem**, not an energy impossibility.  
+When the correct regime is chosen — catalytic, thermal, electrochemical, or atmospheric‑inspired — the system behaves entirely differently.
+
+This example demonstrates how a stable molecule becomes “impossible” only when approached with the wrong technique.
 
 ## **3. Fusion Ignition**  
 *(placeholder)*
