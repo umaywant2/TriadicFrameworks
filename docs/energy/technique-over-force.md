@@ -6,3 +6,24 @@ This section explores the principle of technique over force — the idea that ma
 
 Here we examine how nature solves “impossible” problems quietly, efficiently, and beautifully — and how those same principles can reshape our understanding of energy systems.
 
+---
+
+## **1. Atmospheric Technique — Phase Change as Separation**
+*(placeholder)*
+
+## **2. Hydraulic Technique — Leverage Over Power**
+*(placeholder)*
+
+## **3. Electrochemical Technique — Precision Over Heat**
+*(placeholder)*
+
+## **4. Mechanical‑Field Technique — Pressure and Membranes**
+*(placeholder)*
+
+## **5. Gradient‑Based Design — The Hidden Architecture of Energy**
+*(placeholder)*
+
+## **6. Case Studies in Technique Replacing Force**
+*(placeholder)*
+
+---
