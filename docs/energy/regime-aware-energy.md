@@ -6,3 +6,24 @@ Regime Awareness (RTT) provides a structural lens for understanding these mismat
 
 This section explores how energy walls soften, shift, or disappear entirely when viewed through micro/meso/macro regimes, coherence and drift, and the alignment of technique with the correct substrate. It is not about breaking physics — it is about seeing physics clearly.
 
+---
+
+## **1. Micro Regime — Local, Precise, Low‑Mass Energy Behavior**
+*(placeholder)*
+
+## **2. Meso Regime — Human‑Scale, Mechanical, Atmospheric Behavior**
+*(placeholder)*
+
+## **3. Macro Regime — Planetary, Field‑Level, and Systemic Behavior**
+*(placeholder)*
+
+## **4. Drift vs. Coherence in Energy Systems**
+*(placeholder)*
+
+## **5. Regime Mismatches — Where “Impossible” Comes From**
+*(placeholder)*
+
+## **6. RTT Reinterpretations of Classic Energy Walls**
+*(placeholder)*
+
+---
