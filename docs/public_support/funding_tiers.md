@@ -2,7 +2,7 @@
 
 Triadicframeworks is personally funded, no ads.  We'll use any funds received to hire student developers that want to create and learn RTT, paying it forward.
 
-<img width="325" height="352" alt="Nawder_Loswin_For_President_2027" src="https://github.com/user-attachments/assets/e60edffc-52b9-44de-957a-acac75e6faa8" />
+<img width="352" height="325" alt="Nawder_Loswin_For_President_2027" src="https://github.com/user-attachments/assets/e60edffc-52b9-44de-957a-acac75e6faa8" />
 
 ## 🌀 $7 — Resonance Initiate
 - Name inscribed in `honor_roll.md`
