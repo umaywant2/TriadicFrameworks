@@ -27,6 +27,8 @@ A gentle on‑ramp for newcomers exploring Resonance‑Time Theory (RTT) and the
 - 🧭 **How to Read RTT Diagrams** — Visual grammar and interpretation.
 - 🧩 **Core Concepts Overview** — Regimes, feedback, coherence, paradox.
 
+Need a challenge? We know just the thing — the 🎖️ [Hard Lee Ever 2026 Awards!](https://dev.umaywant2.win/) 📣  
+
 ---
 
 ## 🗂️ Explore the Framework
