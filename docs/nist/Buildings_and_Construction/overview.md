@@ -1,44 +1,106 @@
 # 📘 Buildings & Construction — Overview  
-*A minimal orientation for students and AIs*
+*A minimal orientation for students and AIs*  
+*(Grounded in the NIST Buildings & Construction publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
 
-## What This Domain Covers  
-NIST’s **Buildings & Construction** publications span the full lifecycle of the built environment, from materials and components to whole‑building performance and community‑scale resilience. The publication list includes work in:
-
-- structural engineering and seismic behavior  
-- reinforced concrete and steel system performance  
-- HVAC, plumbing, and indoor environmental quality  
-- natural ventilation and airflow modeling  
-- building energy modeling and grid‑interactive systems  
-- additive construction and acceptance criteria  
-- embodied carbon and life‑cycle assessment  
-- earthquake reconnaissance and hazard characterization  
-- building envelope durability and weathering  
-- fire‑adjacent building performance (e.g., WUI smoke impacts)  
-
-Examples visible on the NIST page include studies on precast concrete moment connections, pressure‑loss measurements in plumbing fittings, natural‑ventilation airflow models, acceptance criteria for additive construction, embodied‑carbon assessments, and earthquake observations (  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)).
+## 🏗️ What This Domain Covers  
+NIST’s **Buildings & Construction** research spans structural performance, building systems, materials, energy modeling, safety, codes, and community resilience.  
+Your active tab shows work in:
 
 ---
 
-## Why This Domain Matters  
-Buildings & Construction research supports:
+## **Structural Engineering & Seismic Behavior**  
+- Precast concrete moment‑resisting connections under **column‑removal scenarios**  
+- Autoregularized models for **reinforced‑concrete wall boundary elements**  
+- Component‑level **fragility functions** with multiple uncertainty sources  
+- Performance‑based design tools for **dynamically sensitive steel and RC buildings**  
+- Earthquake reconnaissance (e.g., **2024 New Jersey Mw4.8 event**)  
 
-- safer, more resilient buildings and communities  
-- improved structural performance under extreme loads  
-- healthier indoor environments and better ventilation  
-- reduced carbon emissions across building lifecycles  
-- reliable plumbing, HVAC, and energy systems  
-- innovation in construction methods and materials  
-- performance‑based design for tall and dynamically sensitive structures  
-
-NIST’s work provides the measurement and modeling foundations that allow engineers, architects, and policymakers to design safer, more efficient, and more resilient built environments.
+This work strengthens structural reliability and informs modern building codes.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
 
 ---
 
-## How This Primer Uses the Domain  
+## **Wind, Ventilation & Building‑Energy Modeling**  
+- Lumped‑parameter models for **natural ventilation** at urban scale  
+- Performance‑based **wind design** for tall buildings  
+- Pressure‑loss measurements in **plumbing pipes and fittings**  
+- Flexible Resource Controller for **heat pumps, EV charging, and water heaters**  
+
+These studies support energy efficiency, indoor‑air quality, and urban‑scale modeling.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
+
+---
+
+## **Materials, Durability & Weathering**  
+- Effects of **weathering and formulation** on vinyl siding  
+- Water‑vapor impacts on **flammability of fluorinated refrigerants**  
+- High‑energy arcing‑fault experiments for electrical enclosures  
+
+This work connects materials science to long‑term building performance and safety.  
+
+
+---
+
+## **Additive Construction & Emerging Methods**  
+- *Additive Construction – Path to Standardization* workshop series  
+- Acceptance‑criteria development for **3D‑printed structural elements**  
+- Real‑world challenges in **construction‑scale AM adoption**  
+
+NIST is helping define the standards that will govern construction‑scale 3D printing.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
+
+---
+
+## **Indoor Air Quality & Building Health**  
+- In‑situ GC + PTR‑MS for **indoor VOC speciation**  
+- Water‑heater temperature and plumbing‑demand effects on **OPPP growth**  
+
+These studies link building operation to occupant health and environmental quality.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
+
+---
+
+## **Sustainability, Carbon & Decarbonization**  
+- Gap analysis of **LCA standards** for industry  
+- Systematic review of **embodied‑carbon assessment** in building life cycles  
+- Life‑cycle inventory analysis for **residential PV systems**  
+
+This work supports national decarbonization goals and next‑generation building standards.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
+
+---
+
+## **Fire‑Adjacent Building Research**  
+(While Fire is its own domain, several publications intersect with buildings.)  
+- Refrigerant **flammability** in HVAC systems  
+- Machine‑learning detection of **firefighter tenability** in commercial buildings  
+
+These studies bridge building systems with fire‑safety engineering.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
+
+---
+
+## 🎯 Why This Domain Matters  
+Buildings & Construction research at NIST supports:
+
+- **structural safety & code development**  
+- **energy‑efficient building operation**  
+- **urban‑scale ventilation & airflow modeling**  
+- **material durability & weathering standards**  
+- **additive‑construction standardization**  
+- **indoor‑air‑quality and occupant health**  
+- **community resilience & disaster recovery**  
+- **decarbonization and life‑cycle assessment**
+
+It is one of NIST’s most interdisciplinary and policy‑relevant domains.
+
+---
+
+## 🎓 How This Primer Is Used  
 This overview prepares students for:
 
-- **regime alignment** (R0–R3 mapping)  
-- **triadic awareness** (how TF complements NIST’s building‑science work)  
-- **student exercises** (to build structural reasoning)  
+- **regime_alignment.md** — mapping R0–R3 structure  
+- **student_exercises.md** — short reasoning tasks  
+- **triadic_awareness.md** — connecting TF to building‑metrology work  
 
-The goal is not to summarize all 3,800+ publications — only to give students a clear, respectful starting point grounded in the domain’s visible structure.
+It doesn’t attempt to summarize all 3,800+ publications — only to give a clear, respectful starting point grounded in the domain’s visible structure.
