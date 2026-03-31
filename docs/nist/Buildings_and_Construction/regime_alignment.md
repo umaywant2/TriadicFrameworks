@@ -2,66 +2,66 @@
 *A minimal structural map for students and AIs*
 
 ## **R3 — Energetic / Measurement Layer (Primary)**  
-Most NIST Buildings & Construction work sits firmly in **R3**, focusing on empirical measurement, modeling, and performance verification. Examples visible on the NIST page include:
+Buildings & Construction at NIST is heavily **R3**, defined by empirical measurement, system‑level testing, and validation of models. Your active tab shows:  
 
-- **precast concrete moment‑connection experiments** under column‑removal scenarios  
-- **pressure‑loss measurements** in plumbing elbows, couplings, and pipes  
-- **natural‑ventilation airflow model validation** at urban scale  
-- **flammability and refrigerant behavior** under controlled conditions  
-- **structural wall boundary‑element compressive behavior**  
-- **indoor‑air VOC speciation** using PTR‑MS and GC  
-- **performance‑based design tools** for dynamically sensitive steel and RC buildings  
-- **earthquake reconnaissance observations** (e.g., the 2024 New Jersey event)  
-- **weathering effects on vinyl siding**  
-- **acceptance criteria for additive construction**  
+- **Precast concrete moment‑connection experiments** under column‑removal scenarios   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
+- **Pressure‑loss measurements** in plumbing elbows and couplings (Re ≈ 10⁴–10⁵)   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
+- **Natural‑ventilation model validation** using urban‑scale airflow data   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
+- **Refrigerant‑flammability experiments** under varying water‑vapor conditions   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
+- **Weathering tests on vinyl siding** and formulation‑dependent degradation   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
+- **High‑energy arcing‑fault experiments** in electrical enclosures   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
+- **Indoor‑air VOC speciation** using in‑situ GC + PTR‑MS   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
+- **OPPP growth experiments** in residential plumbing systems under varying temperatures and demand profiles   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)  
 
-These outputs are experimental, standards‑driven, and measurement‑heavy — classic R3 work.   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248371)
+These are measurement‑centric, calibration‑centric, or validation‑centric — classic R3 behavior.
 
 ---
 
 ## **R2 — Coherence Layer (Often Implicit)**  
-Behind the measurements, NIST’s building‑science work assumes coherence structures such as:
+Behind the downstream measurements, the domain relies on coherence structures such as:
 
-- how loads, materials, and structural systems behave under defined conditions  
-- how airflow, ventilation, and contaminant transport should operate in buildings  
-- how plumbing systems respond to pressure, flow, and temperature variations  
-- how building envelopes weather, degrade, and transfer heat and moisture  
-- how uncertainty propagates through structural, environmental, and energy models  
+- how **load paths, ductility, and boundary‑element behavior** govern RC wall performance under seismic demand  
+- how **urban morphology, wind pressure, and buoyancy** shape natural‑ventilation rates  
+- how **fluid dynamics** determines pressure losses in plumbing systems  
+- how **material chemistry and UV/weathering mechanisms** drive long‑term siding degradation  
+- how **flammability limits** shift with refrigerant composition and humidity  
+- how **electrical‑fault physics** governs arcing‑fault behavior  
+- how **indoor‑air chemistry** couples with ventilation and source emissions  
 
-These coherence structures shape the design of experiments, simulations, and standards.
+These structures explain why the experiments and models take the form they do.
 
 ---
 
 ## **R1 — Directional Layer (Strategic Aims)**  
-NIST’s Buildings & Construction research is guided by directional goals like:
+NIST’s Buildings & Construction trajectory is guided by aims such as:
 
-- improving building and community resilience  
-- reducing embodied and operational carbon  
-- supporting performance‑based structural and wind design  
-- improving indoor environmental quality and ventilation  
-- enabling safe, reliable additive construction  
-- strengthening infrastructure safety under extreme events  
+- improving **structural safety** under extreme loads (earthquake, progressive collapse)  
+- strengthening **building‑energy performance** and natural‑ventilation modeling  
+- supporting **HVAC and refrigerant‑safety standards**  
+- advancing **additive‑construction standardization**  
+- improving **indoor‑air‑quality and occupant health**  
+- supporting **community resilience** and recovery planning  
+- reducing **embodied and operational carbon** through LCA and decarbonization frameworks  
 
-These aims provide direction but are not themselves measurements.
+These aims shape the domain’s direction but are not themselves measurements.
 
 ---
 
 ## **R0 — Operator Layer (Foundational Assumptions)**  
-At the deepest layer, the domain rests on operator‑level assumptions such as:
+At the deepest layer, the domain rests on assumptions such as:
 
-- building performance can be characterized through controlled measurement  
-- reproducibility and standardization are essential for safety and interoperability  
-- physical and computational models can meaningfully represent real‑world behavior  
-- shared standards improve resilience, safety, and energy performance  
+- buildings are **measurable physical systems** governed by structural mechanics, thermodynamics, and fluid dynamics  
+- reproducibility is essential for **codes, standards, and public safety**  
+- physical models (seismic, wind, ventilation, combustion, hydraulics) can **predict and constrain** system behavior  
+- uncertainty must be **quantified, bounded, and communicated**  
+- community resilience depends on **evidence‑based planning** and validated models  
 
-These assumptions anchor the entire domain and make downstream work possible.
+These assumptions make the downstream metrology possible.
 
 ---
 
 ## **Summary for Students**  
-- **R3**: NIST’s building‑science work — structural tests, airflow models, plumbing measurements, earthquake observations, additive‑construction criteria.  
-- **R2**: Coherence structures behind loads, ventilation, materials, and building‑performance models.  
-- **R1**: Strategic aims guiding resilience, carbon reduction, and performance‑based design.  
-- **R0**: Foundational assumptions about measurement, reproducibility, and model validity.
-
-This alignment helps students see how a complex, multi‑disciplinary domain organizes itself across the regime ladder.
+- **R3**: structural‑connection tests, plumbing pressure‑loss measurements, refrigerant‑flammability experiments, ventilation‑model validation, weathering studies, VOC speciation, arcing‑fault experiments.  
+- **R2**: coherence structures behind seismic behavior, airflow modeling, fluid dynamics, material degradation, refrigerant chemistry, and indoor‑air processes.  
+- **R1**: strategic aims in structural safety, energy efficiency, HVAC safety, additive‑construction standards, IAQ, resilience, and decarbonization.  
+- **R0**: foundational assumptions about building measurability, physical modeling, uncertainty, and reproducibility.
