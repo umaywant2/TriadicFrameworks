@@ -2,62 +2,65 @@
 *A minimal structural map for students and AIs*
 
 ## **R3 — Energetic / Measurement Layer (Primary)**  
-NIST’s Chemistry publications operate overwhelmingly in **R3**, focusing on empirical, measurable, and reproducible chemical science. Examples visible on the Chemistry publications page include:
+NIST Chemistry is overwhelmingly **R3**, defined by empirical, quantitative, reproducible chemical measurement. Your active tab shows:
 
-- reference materials for water content, metabolites, and polymers  
-- spectroscopy studies (X‑ray absorption, vibrational, NMR)  
-- thermodynamic modeling and phase equilibria  
-- catalysis mechanism generalizability  
-- nanoporous ion transport and electrochemical behavior  
-- chromatography and separations reproducibility  
-- photolysis and reaction‑pathway characterization  
+- **Standard Reference Materials (SRMs)** such as *Water in 1‑Octanol (SRM 2890a)* for validating trace‑water quantification  
+- **spectroscopy**: Fe L‑edge XAS of oxyhemoglobin, solvent‑exclusion IR, UV peptide photolysis  
+- **chromatography & macromolecular metrology**: SEC/MALS molar‑mass determination, analyte‑protectant GC‑MS for THC/THCA  
+- **electrochemistry & energy materials**: interfacial‑water dynamics, electrolytes reducing electro‑osmotic drag  
+- **quantum & nanoscale methods**: vibro‑polaritonic sensing, nanoporous 2D‑material ion‑transport studies  
+- **environmental & forensic chemistry**: cannabinoid detection in breath, uranium particle age‑dating  
+- **computational & AI‑assisted catalysis**: generalizability of ML models for catalytic systems  
 
-These outputs are experimental, standards‑driven, and designed to support chemical measurement, calibration, and inter‑laboratory consistency.
+All of these are measurement‑centric, calibration‑centric, or validation‑centric — classic R3 behavior.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248416)
 
 ---
 
 ## **R2 — Coherence Layer (Often Implicit)**  
-Behind the measurements, NIST’s chemical research assumes coherence structures such as:
+Behind the measurements, the domain relies on coherence structures such as:
 
-- how molecules, ions, and materials behave under defined conditions  
-- how reaction pathways, equilibria, and kinetics should unfold  
-- what counts as “purity,” “stability,” or “compatibility” in chemical systems  
-- how spectroscopic signatures map onto molecular structure  
-- how uncertainty propagates through chemical measurements  
+- how **molecular interactions** shape IR, UV, and X‑ray absorption  
+- how **polymer and macromolecule behavior** maps onto SEC/MALS response  
+- how **ion transport** behaves under nanoscale confinement  
+- how **thermodynamic models** (e.g., Peng–Robinson EOS for N₂O₄ ⇄ 2NO₂) structure equilibrium predictions  
+- how **electrochemical interfaces** govern reactivity and charge transport  
+- how **combustion chemistry** produces NMOGs in WUI smoke  
 
-These coherence assumptions shape the structure of chemical standards and reference materials.
+These structures explain why the experiments and SRMs take the form they do.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248416)
 
 ---
 
 ## **R1 — Directional Layer (Strategic Aims)**  
-NIST’s chemistry work is guided by directional goals like:
+NIST’s chemistry work is guided by aims such as:
 
-- improving chemical measurement accuracy and reproducibility  
-- supporting biomedical, environmental, and industrial analysis  
-- enabling reliable reference materials for national and global use  
-- advancing chemical modeling and predictive tools  
-- strengthening chemical safety and process reliability  
+- improving **trace‑level quantification** across environmental, industrial, and biomedical contexts  
+- supporting **forensic defensibility** (e.g., cannabis quantitation, uranium particle dating)  
+- advancing **energy‑storage innovation** through electrochemical metrology  
+- strengthening **polymer and soft‑matter standards**  
+- enabling **quantum‑enhanced sensing**  
+- improving **interlaboratory comparability** via SRMs and reference correlations  
 
-These aims provide direction but are not themselves measurements.
+These aims shape the domain’s trajectory but are not themselves measurements.
 
 ---
 
 ## **R0 — Operator Layer (Foundational Assumptions)**  
-At the deepest layer, the domain rests on operator‑level assumptions such as:
+At the deepest layer, the domain rests on assumptions such as:
 
-- chemical behavior can be characterized through controlled measurement  
-- shared standards improve scientific and industrial interoperability  
-- reproducibility is essential for chemical science  
-- molecular and material systems can be modeled and validated experimentally  
+- chemical systems can be **characterized through controlled measurement**  
+- reproducibility is essential for **regulation, industry, and scientific trust**  
+- physical and chemical models can **predict and constrain** measurement behavior  
+- shared standards improve **comparability and interoperability**  
+- uncertainty can be **quantified, bounded, and communicated**  
 
-These assumptions anchor the entire domain and make downstream work possible.
+These assumptions make the downstream metrology possible.
 
 ---
 
 ## **Summary for Students**  
-- **R3**: NIST’s chemistry work — experiments, measurements, reference materials, standards.  
-- **R2**: Coherence structures behind chemical behavior and analytical methods.  
-- **R1**: Strategic aims guiding chemical metrology and modeling.  
-- **R0**: Foundational assumptions about measurement, reproducibility, and chemical systems.
-
-This alignment helps students see how a real scientific institution organizes its work across the regime ladder.
+- **R3**: SRMs, spectroscopy, chromatography, electrochemistry, quantum sensing, nanoscale transport, forensic chemistry.  
+- **R2**: Coherence structures behind molecular interactions, polymer behavior, ion transport, thermodynamics, and interfacial chemistry.  
+- **R1**: Strategic aims in trace quantification, energy materials, forensic science, polymer metrology, and quantum sensing.  
+- **R0**: Foundational assumptions about measurement, uncertainty, and standardization.
