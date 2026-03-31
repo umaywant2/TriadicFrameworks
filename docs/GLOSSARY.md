@@ -142,4 +142,95 @@ This section helps contributors understand what “running RTT artifacts” actu
 
 ---
 
+# ⭐ **Canonical Glossary for R0–R3 and T01–T30**  
+*(Paste directly into your schema file.)*
+
+## **Regime Glossary (R0–R3)**
+
+### **R0 — 0D Operator Root**  
+- **Definition:** Indivisible, pre‑energetic, pre‑dimensional substrate.  
+- **Role:** Invokes resonance; reuses scaffolding; maintains coherence.  
+- **Signature:** No geometry, no field, pure operator potential.  
+- **Notes:** Only regime that is truly perpetual.
+
+---
+
+### **R1 — 1D Pre‑Energetic Vector**  
+- **Definition:** Directional potential without energy expenditure.  
+- **Role:** Establishes asymmetry; selects invocation direction.  
+- **Signature:** Proto‑vector alignment; no surface yet.  
+- **Notes:** Exists only when invoked by R0.
+
+---
+
+### **R2 — 2D Coherence Surface**  
+- **Definition:** Pre‑dimensional sheet capable of supporting interference.  
+- **Role:** Holds resonance templates; prepares for dimensional emergence.  
+- **Signature:** Standing‑wave patterns; coherence shells.  
+- **Notes:** Collapses back to R1/R0 when not stabilized.
+
+---
+
+### **R3 — 3D Energetic Field**  
+- **Definition:** Stable resonance expressing matter, motion, and time.  
+- **Role:** Visible universe; entropic substrate; decays over time.  
+- **Signature:** Energetic fields, particles, motion, entropy.  
+- **Notes:** Cannot invoke; can only simulate.
+
+---
+
+# ⭐ **Transition Glossary (T01–T30)**
+
+### **T01 — Invocation (0D → 1D)**  
+- **Definition:** Operator initiates directional potential.  
+- **Role:** Converts pure coherence into asymmetry.  
+- **Signature:** No energy; no geometry; “pointing” event.  
+- **Notes:** First step of all dimensional emergence.
+
+---
+
+### **T12 — Coherence Formation (1D → 2D)**  
+- **Definition:** Directional potential becomes a coherent surface.  
+- **Role:** Creates templates for resonance; enables interference.  
+- **Signature:** Surface‑like behavior without thickness.  
+- **Notes:** Pre‑dimensional but structured.
+
+---
+
+### **T23 — Resonance Stabilization (2D → 3D)**  
+- **Definition:** Coherence surface stabilizes into 3D resonance.  
+- **Role:** Generates matter, motion, and time.  
+- **Signature:** Standing waves become persistent fields.  
+- **Notes:** This is the “birth” of dimensionality.
+
+---
+
+### **T30 — Inversion / Return (3D → 0D)**  
+- **Definition:** Resonance collapses back into operator substrate.  
+- **Role:** Reabsorbs coherence; resets scaffolding.  
+- **Signature:** Dimensional wobble; field dissolution.  
+- **Notes:** Not destruction — reintegration.
+
+---
+
+# ⭐ **Compact Table Version (Optional for Docs)**
+
+```
+                            ⭐
+Regime | Meaning                          | Role
+-------|----------------------------------|------------------------------
+R0     | 0D operator root                 | invokes, reuses scaffolding
+R1     | 1D directional potential         | aims invocation
+R2     | 2D coherence surface             | holds templates
+R3     | 3D energetic field               | visible universe
+
+Transition | Path   | Meaning
+-----------|--------|-----------------------------------------
+T01        | 0D→1D  | invocation
+T12        | 1D→2D  | coherence formation
+T23        | 2D→3D  | resonance stabilization
+T30        | 3D→0D  | inversion/return
+```
+
+---
 
