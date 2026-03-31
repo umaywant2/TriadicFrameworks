@@ -1,41 +1,107 @@
 # 📘 Fire — Overview  
-*A minimal orientation for students and AIs*
+*A minimal orientation for students and AIs*  
+*(Grounded in the NIST Fire publications visible in your active tab)*   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
 
-## What This Domain Covers  
-NIST’s **Fire** publications focus on understanding, measuring, and modeling fire behavior across a wide range of scenarios. This includes work such as:
+## 🔥 What This Domain Covers  
+NIST’s **Fire** publications span measurement science for combustion, ignition, flame spread, smoke production, battery hazards, WUI fire behavior, evacuation modeling, and firefighter safety.
 
-- combustion science and chemical kinetics  
-- thermal runaway in lithium‑ion batteries  
-- flame spread and burning behavior of materials  
-- wildland‑urban interface (WUI) fire hazards  
-- smoke production and gas emissions  
-- calorimetry and heat release measurements  
-- firebrand behavior and ignition pathways  
-- fire model validation and uncertainty analysis  
-
-These topics appear throughout the Fire publication listings, including studies on thermal runaway, flame spread, WUI smoke yields, calorimetry response, and burning characteristics of materials and structures   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586).
+Your active tab shows work in:
 
 ---
 
-## Why This Domain Matters  
-Fire research supports:
+## **Lithium‑Ion Battery Hazards & Thermal Runaway**  
+- Acoustic‑based early‑stage thermal‑runaway detection  
+- Multi‑source data analysis of lithium‑ion battery fires  
+- Thermal‑runaway behavior of 18650 cells at different inclination angles  
 
-- building and residential safety  
-- wildfire mitigation and WUI protection  
-- battery safety and energy storage systems  
-- firefighter decision‑making and protective equipment  
-- industrial and materials safety  
-- national standards for fire modeling and testing  
-
-NIST’s work provides the measurement foundations that help engineers, scientists, and public safety organizations understand and reduce fire risks.
+This is one of the fastest‑growing fire‑research areas, with direct implications for consumer safety, transportation, and energy storage.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
 
 ---
 
-## How This Primer Uses the Domain  
+## **Wildland‑Urban Interface (WUI) Fire Spread**  
+- Burning rates of firebrands on shredded‑paper beds  
+- Wind‑driven fire spread from composite fences and landscape timbers  
+- NMOG smoke yields from burning residential‑surrogate materials  
+- Full‑scale eave‑vent fire‑exposure experiments (EaVE Phase A)  
+
+WUI fires are a national‑scale hazard, and NIST’s work here is deeply empirical and field‑driven.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
+
+---
+
+## **Combustion Chemistry & Pyrolysis**  
+- Chemical kinetics of flames and fires  
+- Molecular‑weight measurement of gaseous pyrolyzates  
+- Smoldering and flaming heats of combustion of vegetative fuels  
+- Variability in PMMA fire behavior and kinetic‑parameter uncertainty  
+
+These studies support fire‑model validation and improve predictive accuracy.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
+
+---
+
+## **Smoke Production & Air‑Quality Impacts**  
+- NMOG emissions from WUI structural surrogates  
+- Smoke emission from mixed‑fuel cribs  
+- Burning characteristics of residential and office items  
+
+This work connects fire behavior to indoor and outdoor air‑quality consequences.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
+
+---
+
+## **Fire Modeling, AI, and Evacuation Science**  
+- Machine‑learning forecasting for building fires  
+- Unsafe‑area prediction for evacuation using dynamic directional exit signs  
+- Uncertainty quantification of pyrolysis‑kinetics parameters  
+- Intermediate‑scale flame‑spread test apparatus for CFD validation  
+
+NIST is increasingly integrating AI with classical fire‑dynamics modeling.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
+
+---
+
+## **Firefighter Safety & Materials**  
+- PFAS suspect screening in firefighter turnout gear  
+- AI considerations for electronic safety equipment  
+- Burning characteristics of large vegetative fuels (e.g., Douglas‑fir trees)  
+
+This work supports standards, protective‑equipment design, and occupational safety.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
+
+---
+
+## **Large‑Scale & Full‑Scale Experiments**  
+- Calorimetry time‑response characterization  
+- Full‑scale burning of trees, furniture, and structural assemblies  
+- Field experiments on landscape‑feature ignition and fire spread  
+
+These experiments anchor the entire domain’s measurement credibility.  
+  [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)
+
+---
+
+## 🎯 Why This Domain Matters  
+Fire research at NIST supports:
+
+- **building codes and standards**  
+- **battery‑safety regulations**  
+- **WUI fire‑mitigation strategies**  
+- **fire‑model validation and uncertainty quantification**  
+- **firefighter protective‑equipment design**  
+- **evacuation‑system safety**  
+- **air‑quality and smoke‑exposure assessment**
+
+It is one of the most cross‑disciplinary and societally impactful NIST domains.
+
+---
+
+## 🎓 How This Primer Is Used  
 This overview prepares students for:
 
-- **regime alignment** (R0–R3 mapping)  
-- **triadic awareness** (how TF complements NIST’s fire research)  
-- **student exercises** (to build structural reasoning)  
+- **regime_alignment.md** — mapping R0–R3 structure  
+- **student_exercises.md** — short reasoning tasks  
+- **triadic_awareness.md** — connecting TF to fire‑metrology work  
 
-The goal is not to summarize all 3,900+ Fire publications — only to give students a clear, respectful starting point grounded in the domain’s visible structure.
+It doesn’t attempt to summarize all 3,900+ publications — only to give a clear, respectful starting point grounded in the domain’s visible structure.
