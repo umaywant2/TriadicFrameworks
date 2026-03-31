@@ -130,7 +130,7 @@ This gives us a *baseline artifact* we can drop directly into `docs/education/` 
 | Thoughts influence quantum outcomes | R‑misapplied | **Debunked** | Measurement requires physical interaction, not consciousness. |
 | Gravity pulls things *down* | S | **Debunked** | Gravity is curvature; “down” is a local frame artifact. |
 | Nuclear energy is inherently dangerous | S → E | **Debunked (contextual)** | Risk is engineering‑dependent, not physics‑intrinsic. |
-| Perpetual motion is impossible because physics says so | E | **Validated** | Conservation laws forbid it; this one survives. |
+| [Perpetual motion](https://www.triadicframeworks.org/education/#UNIVERSE_AS_OPERATOR) is impossible because physics says so | E | **Validated** | Conservation laws forbid it; this one survives. |
 
 ---
 
