@@ -2,61 +2,66 @@
 *A minimal structural map for students and AIs*
 
 ## **R3 — Energetic / Measurement Layer (Primary)**  
-NIST’s Fire publications operate overwhelmingly in **R3**, focusing on empirical, measurable, and reproducible fire behavior. Examples visible on the Fire publications page include:
+Fire research at NIST is overwhelmingly **R3**, defined by empirical, high‑fidelity, often full‑scale measurement. Your active tab shows:  
 
-- thermal runaway detection and characterization in lithium‑ion batteries  
-- flame spread and burning behavior of materials  
-- wildland‑urban interface (WUI) fire spread and smoke yields  
-- calorimetry time‑response characterization  
-- burning rates of firebrands and vegetative fuels  
-- pyrolysis kinetics and uncertainty quantification  
-- large‑scale and intermediate‑scale fire model validation  
+- **Lithium‑ion battery thermal‑runaway experiments** — acoustic detection, multi‑source data analysis, inclination‑angle effects   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)  
+- **WUI fire‑spread studies** — composite fences, landscape timbers, shredded‑paper firebrand beds   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)  
+- **Smoke‑yield and NMOG characterization** — structural‑surrogate combustion, mixed‑fuel cribs   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)  
+- **Combustion‑chemistry measurements** — pyrolyzate molecular weights, heats of combustion of vegetative fuels   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)  
+- **Full‑scale experiments** — eave‑vent exposures (EaVE Phase A), burning of Douglas‑fir trees, residential/office items   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)  
+- **Fire‑model validation** — intermediate‑scale flame‑spread apparatus, pyrolysis‑kinetics uncertainty quantification   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)  
+- **Firefighter‑safety metrology** — PFAS screening in turnout gear, AI‑enabled safety‑equipment considerations   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586)  
 
-These outputs are deeply experimental and standards‑driven, consistent with NIST’s role in fire measurement and modeling   [nist.gov](https://www.nist.gov/publications/search?ta%5B0%5D=248586).
+These are measurement‑centric, calibration‑centric, or validation‑centric — classic R3 behavior.
 
 ---
 
 ## **R2 — Coherence Layer (Often Implicit)**  
-Behind the measurements, NIST’s fire research assumes coherence structures such as:
+Behind the downstream measurements, the domain relies on coherence structures such as:
 
-- how flames, heat release, and smoke production should behave under defined conditions  
-- how materials respond to ignition, pyrolysis, and flame spread  
-- what constitutes “hazard,” “compatibility,” or “risk” in fire scenarios  
-- how firebrands, fuels, and structures interact in WUI environments  
+- how **thermal‑runaway kinetics** propagate through lithium‑ion cells  
+- how **wind, geometry, and fuel arrangement** govern WUI fire spread  
+- how **pyrolysis chemistry** shapes flame structure and smoke composition  
+- how **material properties** (e.g., PMMA variability) influence ignition and flame‑spread behavior  
+- how **ventilation, pressure, and flow paths** shape building‑fire dynamics  
+- how **evacuation behavior** couples to hazard‑zone evolution  
+- how **PFAS chemistry** interacts with textile microstructure in turnout gear  
 
-These coherence assumptions shape the structure of fire models, experiments, and standards.
+These structures explain why the experiments and models take the form they do.
 
 ---
 
 ## **R1 — Directional Layer (Strategic Aims)**  
-NIST’s fire research is guided by directional goals like:
+NIST’s fire‑research trajectory is guided by aims such as:
 
-- improving fire safety for buildings, communities, and infrastructure  
-- supporting wildfire and WUI hazard mitigation  
-- advancing battery safety and energy storage system reliability  
-- enabling accurate fire modeling and predictive tools  
-- supporting firefighter decision‑making and protective equipment design  
+- improving **battery‑safety standards** and early‑warning detection  
+- strengthening **WUI fire‑mitigation strategies**  
+- advancing **fire‑model accuracy** through validated kinetics and smoke data  
+- supporting **building‑code development** with full‑scale evidence  
+- improving **firefighter safety** through materials testing and AI‑augmented equipment  
+- enhancing **evacuation‑system design** with predictive modeling  
+- reducing **air‑quality impacts** from smoke and NMOG emissions  
 
-These aims provide direction but are not themselves measurements.
+These aims shape the domain’s direction but are not themselves measurements.
 
 ---
 
 ## **R0 — Operator Layer (Foundational Assumptions)**  
-At the deepest layer, the domain rests on operator‑level assumptions such as:
+At the deepest layer, the domain rests on assumptions such as:
 
-- fire behavior can be characterized through controlled measurement  
-- shared standards improve safety and interoperability  
-- reproducibility is essential for fire science and engineering  
-- physical models can meaningfully represent real‑world fire dynamics  
+- fire behavior can be **measured, modeled, and predicted**  
+- full‑scale experiments are essential for **ground truth**  
+- combustion chemistry and heat transfer obey **physical laws** that can be quantified  
+- uncertainty must be **bounded, propagated, and communicated**  
+- reproducibility is essential for **codes, standards, and public safety**  
+- human behavior during fire can be **modeled and improved** through design  
 
-These assumptions anchor the entire domain and make downstream work possible.
+These assumptions make the downstream metrology possible.
 
 ---
 
 ## **Summary for Students**  
-- **R3**: NIST’s fire work — experiments, measurements, standards, modeling validation.  
-- **R2**: Coherence structures behind fire behavior and modeling.  
-- **R1**: Strategic aims guiding fire research and safety goals.  
-- **R0**: Foundational assumptions about measurement, reproducibility, and fire dynamics.
-
-This alignment helps students see how a real scientific institution organizes its work across the regime ladder.
+- **R3**: battery thermal‑runaway experiments, WUI fire‑spread studies, NMOG smoke yields, flame‑spread kinetics, refrigerant flammability, PFAS screening, full‑scale burns.  
+- **R2**: coherence structures behind pyrolysis chemistry, WUI spread mechanics, smoke formation, evacuation dynamics, and material‑flammability behavior.  
+- **R1**: strategic aims in battery safety, WUI mitigation, model validation, firefighter protection, and evacuation‑system design.  
+- **R0**: foundational assumptions about fire measurability, physical modeling, uncertainty, and reproducibility.
