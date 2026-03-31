@@ -1,22 +1,34 @@
 # 🔷 Regime Alignment — Information Technology  
 *A minimal structural map for students and AIs*
 
-NIST’s Information Technology publications span quantum computing, quantum communication, quantum error correction, post‑quantum cryptography, complexity theory, and quantum‑enhanced learning.  
-This domain is unusually upstream‑heavy: deep mathematics, physics‑driven coherence structures, and security‑critical operator assumptions.  
-But the downstream layer (R3) is still present — in benchmarking, protocol validation, and cryptographic migration studies.
+NIST’s Information Technology domain spans quantum computing, quantum communication, quantum error correction, post‑quantum cryptography, complexity theory, and quantum‑enhanced learning.  
+Unlike materials or fire science, this domain is **coherence‑heavy** (R2‑dominant) but still contains essential downstream validation (R3).
 
 ---
 
 ## **R3 — Energetic / Measurement Layer (Selective but Critical)**  
-While IT is not as measurement‑dense as Fire or Ceramics, it still contains essential R3 artifacts:
+Although IT is not measurement‑dense like Fire or Ceramics, it still produces essential R3 artifacts:
 
-- **Quantum‑device benchmarking** (e.g., trapped‑ion coherence, resonant‑exchange qubit stability)  
-- **QKD system validation** (polarization recovery, dead‑time analysis, high‑speed QKD performance)  
-- **Quantum‑network protocol testing** (one‑time‑pad stream managers, authenticated‑channel performance)  
-- **Cryptographic‑migration studies** (PQC transition readiness, algorithm‑performance evaluation)  
-- **Simulation‑validated complexity results** (e.g., classical simulation of Yang–Baxter gates)  
+- **Quantum‑device benchmarking**  
+  - coherence‑time measurements  
+  - gate‑fidelity characterization  
+  - resonant‑exchange qubit stability  
+- **QKD system validation**  
+  - polarization‑recovery performance  
+  - APD dead‑time analysis  
+  - authenticated‑channel throughput  
+- **Quantum‑network protocol testing**  
+  - repeater‑chain performance  
+  - one‑time‑pad stream managers  
+- **PQC migration studies**  
+  - algorithm performance  
+  - interoperability testing  
+  - transition‑risk analysis  
+- **Simulation‑validated complexity results**  
+  - classical simulation of Yang–Baxter gates  
+  - empirical checks of algorithmic hardness assumptions  
 
-These outputs are empirical, test‑driven, or validation‑driven — the R3 backbone of the domain.
+These are empirical, test‑driven, or validation‑driven — the R3 backbone of the domain.
 
 ---
 
@@ -24,12 +36,18 @@ These outputs are empirical, test‑driven, or validation‑driven — the R3 ba
 Information Technology is one of the most coherence‑dense domains at NIST.  
 Its R2 structures include:
 
-- **quantum‑mechanical coherence** (superposition, entanglement, decoherence channels)  
-- **error‑correction frameworks** (stabilizers, serialized QEC, syndrome extraction)  
-- **quantum‑network models** (loss channels, repeater architectures, entanglement distribution)  
-- **cryptographic‑security reductions** (hardness assumptions, algebraic invariants, lattice structures)  
-- **complexity‑theoretic classifications** (BQP, QCMA, co‑QMA, completeness proofs)  
-- **quantum‑algorithmic structure** (compressed sensing, measurement‑induced phases, expanders)  
+- **quantum‑mechanical coherence**  
+  superposition, entanglement, decoherence channels  
+- **error‑correction frameworks**  
+  stabilizers, serialized QEC, syndrome extraction  
+- **quantum‑network models**  
+  loss channels, repeater architectures, entanglement distribution  
+- **cryptographic‑security reductions**  
+  algebraic invariants, lattice hardness, multivariate structures  
+- **complexity‑theoretic classifications**  
+  BQP, QCMA, co‑QMA, completeness proofs  
+- **quantum‑algorithmic structure**  
+  compressed sensing, measurement‑induced phases, expanders  
 
 These coherence structures explain why the downstream experiments and security analyses take the form they do.
 
@@ -41,7 +59,7 @@ NIST’s IT trajectory is shaped by national‑scale aims:
 - enabling **quantum‑secure communication infrastructure**  
 - guiding the **post‑quantum cryptographic transition**  
 - supporting **scalable quantum‑computing architectures**  
-- strengthening **complexity‑theoretic foundations** for algorithm design  
+- strengthening **complexity‑theoretic foundations**  
 - ensuring **interoperability and security** across quantum and classical networks  
 - preparing for **5G/6G security** in a quantum‑capable world  
 
