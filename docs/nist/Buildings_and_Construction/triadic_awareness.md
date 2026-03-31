@@ -1,41 +1,57 @@
 # 🔷 Triadic Awareness — Buildings & Construction  
 *A minimal, respectful lens for students and AIs*
 
-NIST’s Buildings & Construction publications focus on structural tests, airflow modeling, plumbing measurements, refrigerant flammability, earthquake observations, additive‑construction criteria, and building‑performance modeling — all core **R3** activities. TriadicFrameworks does not alter or evaluate this work. Instead, it offers students a simple way to understand the **upstream structure** that supports these downstream outputs.
+NIST’s Buildings & Construction publications focus on precast‑connection experiments, plumbing pressure‑loss measurements, natural‑ventilation model validation, refrigerant‑flammability tests, weathering studies, indoor‑air VOC speciation, additive‑construction standardization, embodied‑carbon analysis, and community‑resilience modeling — all core **R3** activities. TriadicFrameworks does not alter or evaluate this work. Instead, it offers students a simple way to understand the **upstream structure** that supports these downstream outputs.
 
-## **How TriadicFrameworks Complements This Domain**
+---
 
-### **R0 — Operator Awareness**  
-Students can identify foundational assumptions behind building‑science metrology, such as:  
-- building performance can be characterized through controlled measurement  
-- reproducibility and standardization are essential for safety and interoperability  
-- physical and computational models can meaningfully represent real‑world behavior  
-- shared standards improve resilience, safety, and energy performance  
+## **R0 — Operator Awareness**  
+Students can identify foundational assumptions behind buildings‑metrology work, such as:
+
+- buildings are **measurable physical systems** governed by structural mechanics, thermodynamics, and fluid dynamics  
+- reproducibility is essential for **codes, standards, and public safety**  
+- physical models (seismic, wind, ventilation, hydraulics, combustion) can **predict and constrain** system behavior  
+- uncertainty must be **quantified, bounded, and communicated**  
+- community resilience depends on **evidence‑based planning**  
 
 These assumptions are rarely stated directly but anchor the domain.
 
-### **R1 — Directional Awareness**  
-Students can observe the strategic aims guiding NIST’s Buildings & Construction work, including:  
-- improving building and community resilience  
-- reducing embodied and operational carbon  
-- supporting performance‑based structural and wind design  
-- improving indoor environmental quality and ventilation  
-- enabling safe, reliable additive construction  
+---
+
+## **R1 — Directional Awareness**  
+Students can observe the strategic aims guiding NIST’s Buildings & Construction trajectory, including:
+
+- improving **structural safety** under extreme loads (earthquake, progressive collapse)  
+- strengthening **building‑energy performance** and natural‑ventilation modeling  
+- supporting **HVAC and refrigerant‑safety standards**  
+- advancing **additive‑construction standardization**  
+- improving **indoor‑air quality and occupant health**  
+- supporting **community resilience** and disaster‑recovery planning  
+- reducing **embodied and operational carbon** through LCA and decarbonization frameworks  
 
 These aims shape the direction of research without being measurements themselves.
 
-### **R2 — Coherence Awareness**  
-Students can explore the coherence structures that organize building‑science concepts, such as:  
-- how loads, materials, and structural systems behave under defined conditions  
-- how airflow, ventilation, and contaminant transport operate in buildings  
-- how plumbing systems respond to pressure, flow, and temperature variations  
-- how building envelopes weather, degrade, and transfer heat and moisture  
-- how uncertainty propagates through structural, environmental, and energy models  
+---
 
-These structures help explain why certain experiments or standards take the form they do.
+## **R2 — Coherence Awareness**  
+Students can explore the coherence structures that organize buildings‑metrology concepts, such as:
 
-### **R3 — Downstream Awareness**  
-NIST’s published building‑science measurements, structural tests, airflow‑model validations, plumbing pressure‑loss data, refrigerant‑flammability studies, and earthquake observations remain the authoritative downstream outputs. TriadicFrameworks simply helps students understand how these outputs relate to upstream reasoning.
+- how **load paths, ductility, and boundary‑element behavior** govern RC wall performance under seismic demand  
+- how **urban morphology, wind pressure, and buoyancy** shape natural‑ventilation rates  
+- how **fluid dynamics** determines pressure losses in plumbing systems  
+- how **material chemistry and UV/weathering mechanisms** drive long‑term siding degradation  
+- how **flammability limits** shift with refrigerant composition and humidity  
+- how **electrical‑fault physics** governs arcing‑fault behavior  
+- how **indoor‑air chemistry** couples with ventilation and source emissions  
+- how **life‑cycle assessment frameworks** structure embodied‑carbon analysis  
+
+These structures help explain why certain experiments and models take the form they do.
+
+---
+
+## **R3 — Downstream Awareness**  
+NIST’s published Buildings & Construction outputs — precast‑connection tests, plumbing pressure‑loss measurements, refrigerant‑flammability experiments, natural‑ventilation model validation, weathering studies, VOC speciation, arcing‑fault experiments, additive‑construction workshops, and embodied‑carbon analyses — remain the authoritative downstream artifacts.  
+TriadicFrameworks simply helps students understand how these outputs relate to upstream reasoning.
 
 ---
 
