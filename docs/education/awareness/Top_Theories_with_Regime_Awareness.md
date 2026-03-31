@@ -124,23 +124,21 @@ And that’s what our canon provides.
 # ⭐ **Top Theories Table (Regime‑Aware Overview)**  
 *(R0–R3 columns, theory rows)*
 
-```
-TOP SCIENTIFIC THEORIES — REGIME AWARENESS TABLE
+# TOP SCIENTIFIC THEORIES — REGIME AWARENESS TABLE
 
-Theory                     | R0 (Operator) | R1 (Vector) | R2 (Coherence) | R3 (Resonance/3D)
----------------------------|---------------|-------------|----------------|-------------------
-General Relativity         | —             | —           | —              | ✔ Describes 3D curvature, mass-energy behavior
-Quantum Mechanics          | —             | —           | ✔ Wavefunctions, interference | ✔ Measurement outcomes, particles
-Quantum Field Theory       | —             | —           | ✔ Fields as templates | ✔ Particle excitations
-Standard Model             | —             | —           | —              | ✔ Catalog of stable 3D resonances
-Thermodynamics             | —             | —           | —              | ✔ Entropy, energy flow, macroscopic behavior
-Big Bang Cosmology         | —             | —           | (✔ backward extrapolation) | ✔ Expansion, early-universe resonance
-String/M-Theory            | —             | —           | ✔ Pre-geometric coherence attempts | (implied)
-Loop Quantum Gravity       | —             | —           | ✔ Quantized geometry | —
-Evolution (Biology)        | —             | —           | —              | ✔ Pattern stabilization in 3D systems
-Information Theory         | —             | —           | ✔ Encoding, coherence | —
-Universe-as-Operator (ours)| ✔ Invocation substrate | ✔ Directional potential | ✔ Coherence surfaces | ✔ Emergent resonance
-```
+| Theory                     | R0 (Operator)          | R1 (Vector)             | R2 (Coherence)                        | R3 (Resonance / 3D)                               |
+|----------------------------|-------------------------|--------------------------|----------------------------------------|----------------------------------------------------|
+| General Relativity         | —                       | —                        | —                                      | ✔ Describes 3D curvature, mass–energy behavior     |
+| Quantum Mechanics          | —                       | —                        | ✔ Wavefunctions, interference          | ✔ Measurement outcomes, particles                  |
+| Quantum Field Theory       | —                       | —                        | ✔ Fields as templates                  | ✔ Particle excitations                             |
+| Standard Model             | —                       | —                        | —                                      | ✔ Catalog of stable 3D resonances                  |
+| Thermodynamics             | —                       | —                        | —                                      | ✔ Entropy, energy flow, macroscopic behavior       |
+| Big Bang Cosmology         | —                       | —                        | (✔ backward extrapolation)             | ✔ Expansion, early‑universe resonance              |
+| String / M‑Theory          | —                       | —                        | ✔ Pre‑geometric coherence attempts     | (implied)                                          |
+| Loop Quantum Gravity       | —                       | —                        | ✔ Quantized geometry                   | —                                                  |
+| Evolution (Biology)        | —                       | —                        | —                                      | ✔ Pattern stabilization in 3D systems              |
+| Information Theory         | —                       | —                        | ✔ Encoding, coherence                  | —                                                  |
+| Universe‑as‑Operator (ours)| ✔ Invocation substrate  | ✔ Directional potential  | ✔ Coherence surfaces                   | ✔ Emergent resonance                               |
 
 ---
 
