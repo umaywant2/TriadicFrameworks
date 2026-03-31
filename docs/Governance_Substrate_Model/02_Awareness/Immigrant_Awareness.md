@@ -656,20 +656,21 @@ Even under pessimistic assumptions, once you include R2 and R3, the long‑horiz
 **What serious analysts already find**
 
 - **Long‑run fiscal impact tends to be neutral to positive.**  
-  The National Academies’ major report on *The Economic and Fiscal Consequences of Immigration* finds that, over the long run, immigrants’ net fiscal impact is generally small to positive, especially when descendants are included.   [National Academies](https://www.nationalacademies.org/read/23550/chapter/1)  
+  The National Academies’ major report on *The Economic and Fiscal Consequences of Immigration* finds that, over the long run, immigrants’ net fiscal impact is generally small to positive, especially when descendants are included.   [National Academies](https://www.nationalacademies.org/read/23550/chapter/1)[1]  
 
 - **Short‑run costs, long‑run gains.**  
-  Summaries of that work (e.g., Blau & Hunt) emphasize that immigrants can impose short‑term fiscal costs at some state/local levels, but over time they increase GDP, slow population aging, and often contribute positively to public finances.   [JSTOR](https://www.jstor.org/stable/48755674)  
+  Summaries of that work (e.g., Blau & Hunt) emphasize that immigrants can impose short‑term fiscal costs at some state/local levels, but over time they increase GDP, slow population aging, and often contribute positively to public finances.   [JSTOR](https://www.jstor.org/stable/48755674)[2]  
 
 - **Age and education matter, but the “window” matters too.**  
-  More recent work (e.g., Manhattan Institute 10‑ and 30‑year budget window modeling) shows that younger and more educated immigrants generate large fiscal surpluses over 10–30 years, and that the choice of time horizon heavily shapes the apparent impact.   [manhattan.institute](https://manhattan.institute/article/the-fiscal-impact-of-immigration-2025-update)  [National Academies](https://www.nationalacademies.org/read/23550/chapter/1)  
+  More recent work (e.g., Manhattan Institute 10‑ and 30‑year budget window modeling) shows that younger and more educated immigrants generate large fiscal surpluses over 10–30 years, and that the choice of time horizon heavily shapes the apparent impact.   [manhattan.institute](https://manhattan.institute/article/the-fiscal-impact-of-immigration-2025-update)[3][1] 
 
 **How this matches our regime model**
 
 - Our **R1 (cost) → R2 (contribution) → R3 (multiplicative)** structure mirrors the empirical pattern:  
-  short‑term costs, medium‑term net contributions, long‑term compounding effects.   [JSTOR](https://www.jstor.org/stable/48755674)  [National Academies](https://www.nationalacademies.org/read/23550/chapter/1)  
-- Our emphasis on **time horizon and regime** is exactly what the literature flags: 10‑ and 30‑year windows tell a very different story than 1‑ to 2‑year snapshots.   [manhattan.institute](https://manhattan.institute/article/the-fiscal-impact-of-immigration-2025-update)  [National Academies](https://www.nationalacademies.org/read/23550/chapter/1)  
-- Our claim that “R1‑only math overstates the drain and misses the engine” is consistent with the broad conclusion that immigration’s long‑run economic and fiscal effects are generally positive or modestly positive, not a persistent net drain.   [JSTOR](https://www.jstor.org/stable/48755674)  [National Academies](https://www.nationalacademies.org/read/23550/chapter/1)  
+  short‑term costs, medium‑term net contributions, long‑term compounding effects. [2][1]
+   
+- Our emphasis on **time horizon and regime** is exactly what the literature flags: 10‑ and 30‑year windows tell a very different story than 1‑ to 2‑year snapshots. [3][1]  
+- Our claim that “R1‑only math overstates the drain and misses the engine” is consistent with the broad conclusion that immigration’s long‑run economic and fiscal effects are generally positive or modestly positive, not a persistent net drain. [2][1]  
 
 So: the toy model you built is stylized, but its **shape**—front‑loaded costs, then rising net benefits over longer horizons—is strongly aligned with mainstream empirical work.
 
