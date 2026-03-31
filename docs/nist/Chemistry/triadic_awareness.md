@@ -1,39 +1,54 @@
 # 🔷 Triadic Awareness — Chemistry  
 *A minimal, respectful lens for students and AIs*
 
-NIST’s Chemistry publications focus on measurement, calibration, analytical reproducibility, and chemical modeling — all core **R3** activities. TriadicFrameworks does not alter or evaluate this work. Instead, it offers students a simple way to understand the **upstream structure** that supports these downstream outputs.
+NIST’s Chemistry publications focus on SRM certification, spectroscopy, chromatography, polymer and macromolecular characterization, electrochemical interfaces, quantum sensing, nanoscale ion transport, combustion chemistry, forensic chemistry, and thermodynamic modeling — all core **R3** activities. TriadicFrameworks does not alter or evaluate this work. Instead, it offers students a simple way to understand the **upstream structure** that supports these downstream outputs.
 
-## **How TriadicFrameworks Complements This Domain**
+---
 
-### **R0 — Operator Awareness**  
-Students can identify foundational assumptions behind chemical metrology, such as:  
-- chemical behavior can be characterized through controlled measurement  
-- reproducibility is essential for chemical science  
-- shared standards improve scientific and industrial interoperability  
-- molecular and material systems can be modeled and validated experimentally  
+## **R0 — Operator Awareness**  
+Students can identify foundational assumptions behind chemical‑metrology work, such as:
+
+- chemical systems can be **characterized through controlled measurement**  
+- reproducibility is essential for **regulation, industry, and scientific trust**  
+- physical and chemical models can **predict and constrain** measurement behavior  
+- shared standards (SRMs, reference correlations) improve **comparability and interoperability**  
+- uncertainty can be **quantified, bounded, and communicated**  
 
 These assumptions are rarely stated directly but anchor the domain.
 
-### **R1 — Directional Awareness**  
-Students can observe the strategic aims guiding NIST’s chemistry work, including:  
-- improving chemical measurement accuracy and reproducibility  
-- supporting biomedical, environmental, and industrial analysis  
-- enabling reliable reference materials for national and global use  
-- advancing chemical modeling and predictive tools  
+---
+
+## **R1 — Directional Awareness**  
+Students can observe the strategic aims guiding NIST’s chemistry work, including:
+
+- improving **trace‑level quantification** across environmental, industrial, and biomedical contexts  
+- strengthening **forensic defensibility** (e.g., cannabis quantitation, uranium particle dating)  
+- advancing **energy‑storage innovation** through electrochemical metrology  
+- supporting **polymer and soft‑matter standards**  
+- enabling **quantum‑enhanced sensing**  
+- improving **interlaboratory comparability** via SRMs and reference data  
 
 These aims shape the direction of research without being measurements themselves.
 
-### **R2 — Coherence Awareness**  
-Students can explore the coherence structures that organize chemical concepts, such as:  
-- how molecules, ions, and materials behave under defined conditions  
-- how reaction pathways, equilibria, and kinetics unfold  
-- how spectroscopic signatures map onto molecular structure  
-- how uncertainty propagates through chemical measurements  
+---
 
-These structures help explain why certain experiments or standards take the form they do.
+## **R2 — Coherence Awareness**  
+Students can explore the coherence structures that organize chemical‑metrology concepts, such as:
 
-### **R3 — Downstream Awareness**  
-NIST’s published chemical measurements, reference materials, and analytical methods remain the authoritative downstream outputs. TriadicFrameworks simply helps students understand how these outputs relate to upstream reasoning.
+- how **molecular interactions** shape IR, UV, and X‑ray absorption spectra  
+- how **polymer and macromolecule behavior** maps onto SEC/MALS response  
+- how **ion transport** behaves under nanoscale confinement  
+- how **thermodynamic models** (e.g., Peng–Robinson EOS for N₂O₄ ⇄ 2NO₂) structure equilibrium predictions  
+- how **electrochemical interfaces** govern reactivity and charge transport  
+- how **combustion chemistry** produces NMOGs in WUI smoke  
+
+These structures help explain why certain experiments, SRMs, and reference correlations take the form they do.
+
+---
+
+## **R3 — Downstream Awareness**  
+NIST’s published chemistry outputs — SRM 2890a certification, Fe L‑edge XAS of oxyhemoglobin, SEC/MALS molar‑mass accuracy studies, electro‑osmotic‑drag electrolyte characterization, nanoporous‑membrane ion‑transport modeling, UV peptide photolysis, uranium particle age‑dating, and quantum vibro‑polaritonic sensing — remain the authoritative downstream artifacts.  
+TriadicFrameworks simply helps students understand how these outputs relate to upstream reasoning.
 
 ---
 
