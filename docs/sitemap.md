@@ -53,6 +53,7 @@ These pages connect RTT to real‑world scientific domains.
 
 - [/atomic_clocks/](https://www.triadicframeworks.org/atomic_clocks/)  
 - [/alphafold_substrate_alignments/](https://www.triadicframeworks.org/alphafold_substrate_alignments/)  
+- [/energy/](https://www.triadicframeworks.org/energy/)  
 - [/scientific_instrument_review/](https://www.triadicframeworks.org/scientific_instrument_review/)  
 - [/manufacturing_substrate_regime_model/](https://www.triadicframeworks.org/manufacturing_substrate_regime_model/)  
 - [/Low_Dimensional_Structures/](https://www.triadicframeworks.org/Low_Dimensional_Structures/)  
