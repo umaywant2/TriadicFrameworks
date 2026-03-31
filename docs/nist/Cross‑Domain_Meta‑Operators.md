@@ -264,4 +264,27 @@ This is the **entire NIST ecosystem collapsed into one triadic organism** — up
 | **Physics** | Stable Hamiltonians | Coherence, topology | Optical clocks, neutron data |
 | **Polymers** | Rheology & degradation | Topology, LLPS, self‑assembly | Rheology, SANS, degradation |
 
-This table is the **Rosetta Stone** of the entire NIST corpus — the cross‑domain operators laid bare.
+- This table is the **Rosetta Stone** of the entire NIST corpus — the cross‑domain operators laid bare.
+
+---
+
+### Cross‑domain meta‑operator table  
+*(Meta‑operators × domains — where they show up most strongly)*
+
+| Domain                         | Measurability (R0)                                      | Coherence Structures (R2)                                                | Downstream Validation (R3)                                      |
+|--------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------|------------------------------------------------------------------|
+| Analytical Chemistry           | Quantifiable analytes, purity, traceable assays        | Chromatographic regimes, spectral signatures, mass‑spec models           | Reference materials, purity certificates, method validation      |
+| Biomaterials                   | Biocompatibility, degradability, assayability          | Cell–material mechanics, scaffold architecture                           | Biocompatibility tests, degradation profiles                     |
+| Bioscience                     | Countable, sequenceable, imageable biological states   | Genomic/transcriptomic structure, nanoparticle scattering, variability   | Reference datasets, assay standards, imaging benchmarks          |
+| Buildings & Construction       | Measurable loads, energy flows, durability             | Structural mechanics, thermal transport, fire–structure coupling         | Durability tests, energy‑efficiency metrics, code‑aligned data   |
+| Ceramics                       | Stable phases, fracture metrics, thermal properties    | Grain‑boundary physics, sintering, phase equilibria                      | Fracture toughness, thermal‑shock tests, reference data          |
+| Chemistry                      | Reaction yields, thermodynamic quantities              | Kinetics, equilibria, molecular energetics                               | Thermochemical tables, spectroscopic standards                   |
+| Cybersecurity & Privacy        | Loggable events, measurable risk, protocol behavior    | Adversarial models, crypto primitives, identity/zero‑trust coherence     | Conformance tests, protocol validation, benchmark suites         |
+| Electromagnetics               | Field strengths, S‑parameters, antenna patterns        | Maxwell equations, waveguides, scattering regimes                        | Antenna calibration, EMC tests, field‑strength standards         |
+| Fire                           | Heat release, smoke, toxicity, spread rates            | Combustion regimes, plume dynamics, heat‑transfer models                 | Flammability tests, smoke‑toxicity data, fire‑safety guidelines  |
+| Information Technology         | Runtime, accuracy, throughput, error rates             | Algorithmic structure, data models, protocol semantics                   | Benchmarks, interoperability tests, conformance suites           |
+| Manufacturing                  | Dimensional tolerances, throughput, defect rates       | Process–structure–property maps, machine dynamics                        | Dimensional metrology, machine calibration, process capability   |
+| Materials                      | Mechanical, thermal, electrical properties             | Microstructure, phase diagrams, defect physics                           | Mechanical tests, scattering data, reference microstructures     |
+| Metrology                      | Invariance, traceability, uncertainty formalisms       | Quantum invariants, GUM frameworks, traceability chains                  | National standards, calibration services, handbooks              |
+| Physics                        | Stable Hamiltonians, invariants, reproducible states   | Coherence, entanglement, topology, relativistic corrections              | Optical‑clock ratios, neutron‑lifetime data, precision tests     |
+| Polymers                       | Rheological, structural, and degradation measurability | Topology, LLPS, charge transport, self‑assembly, flow–structure coupling | Rheology, SANS/SAXS, degradation studies, composite benchmarks   |
