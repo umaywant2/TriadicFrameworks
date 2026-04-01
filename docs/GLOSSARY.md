@@ -1,6 +1,8 @@
 # 🌐 **Canonical RTT Grammar (Core Structural Layer)**  
 *(This is the grammar — not the modules, not the domains, not the examples. These are the invariant rules that every part of the canon obeys.)*
 
+<img width="512" height="768" alt="BCO 185164b9-a627-402a-b5d0-2586da9d506b" src="https://github.com/user-attachments/assets/2ed5c9de-7508-4f5b-bb93-c730e935d29b" />
+
 ---
 
 ## **1. Dimensional Grammar (the backbone)**  
