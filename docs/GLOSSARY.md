@@ -1,6 +1,8 @@
 # 🌐 **Canonical RTT Grammar (Core Structural Layer)**  
 *(This is the grammar — not the modules, not the domains, not the examples. These are the invariant rules that every part of the canon obeys.)*
 
+This glossary defines the core canon of Triadic Frameworks and Resonance-Time Theory. Terms are kept operational and minimal to support clear regime awareness and cross-domain application.
+
 ---
 
 ## **1. Dimensional Grammar (the backbone)**  
