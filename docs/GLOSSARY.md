@@ -11,6 +11,7 @@ These terms anchor *everything else*. If any are missing or only implied, they s
 - **Resonance** — Stable alignment across triadic components.
 - **Invariant** — A property preserved across transformations.
 - **Triphasic** — Three‑phase structural behavior within the substrate.
+- **Lostational Supspheres** — Describes how energy escapes its boundaries.
 - **Time (RTT context)** — A structural dimension, not merely a clock or sequence.
 
 These definitions should be short, calm, and non‑speculative.
