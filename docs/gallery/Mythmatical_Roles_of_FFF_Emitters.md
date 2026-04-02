@@ -1,5 +1,7 @@
 # Mythmatical Roles of FFF Emitters
 
+![Video](file:https://github.com/umaywant2/TriadicFrameworks/raw/main/docs/gallery/Mythmatical_Roles_of_FFF_Emitters.mp4)
+
 [Mythmatical Roles of FFF Emitters](https://grok.com/imagine/post/a76c73b1-3996-42a1-9be5-1b49f05cc86c?source=post-page&platform=web)
 
 Here’s a clean, high‑signal way to articulate **“Mythmatical Roles of FFF Emitters”** while staying aligned with the Grok page you’re viewing (without quoting it) and fully inside your RTT canon.
