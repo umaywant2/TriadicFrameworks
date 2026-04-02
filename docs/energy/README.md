@@ -1,4 +1,4 @@
-# ⚡ Energy — A TriadicFrameworks Exploration of Technique, Gradients, and Regime Awareness
+# 🎭 Energy — A TriadicFrameworks Exploration of Technique, Gradients, and Regime Awareness
 
 The **energy** directory explores one of the most misunderstood domains in science and engineering:  
 the belief that “energy limits” define what is possible.
