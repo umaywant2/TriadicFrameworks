@@ -1,5 +1,4 @@
-# `Department_of_National_Arrivals.md`  
-### *(D.N.A. — A Life‑Aligned Governance Model)*
+## *(D.N.A. — A Life‑Aligned Governance Model)*
 
 ## **1. Overview**
 The **Department of National Arrivals (D.N.A.)** is a governance model designed around a simple biological truth:
