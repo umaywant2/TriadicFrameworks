@@ -7,6 +7,7 @@ The `operators/` directory implements the five operator families defined in the 
 - **Coupling**  
 - **Activation**  
 - **Stabilization**
+- **Arrival**
 
 Each operator acts on one or more of the triadic fields:
 
