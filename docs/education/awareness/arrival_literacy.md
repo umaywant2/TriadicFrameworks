@@ -1,4 +1,4 @@
-#### Arrival literacy
+## Arrival literacy
 
 **Definition:**  
 Arrival literacy is the capacity to recognize, navigate, and normalize continuous arrival into new regimes—biological, social, ecological, and cognitive.
@@ -32,11 +32,11 @@ Arrival literacy is the capacity to recognize, navigate, and normalize continuou
 
 ---
 
-### Integrating Arrival into the operator stack
+## Integrating Arrival into the operator stack
 
 Here’s a clean way to slot it into our existing operator canon.
 
-#### Arrival operator (Aᵣ) in the stack
+### Arrival operator (Aᵣ) in the stack
 
 **Class:** Regime Transition / Continuity Operator  
 **Symbol:** `Aᵣ`  
