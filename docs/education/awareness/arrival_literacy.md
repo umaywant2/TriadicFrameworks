@@ -5,6 +5,8 @@ Arrival literacy is the capacity to recognize, navigate, and normalize continuou
 
 **Core insights**
 
+- **[Arrival Substrate Model](https://www.triadicframeworks.org/arrival_substrate_model/)**
+
 - **Life is always arriving:**  
   Every organism, group, and system is in a constant state of arrival into new conditions, not just at birth or migration events.
 
