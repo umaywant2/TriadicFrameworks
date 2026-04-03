@@ -1,161 +1,230 @@
-# Arrival Substrate Model
-Overview… this is one of those *perfectly aligned* repo‑expansion moments — we’re opening a brand‑new substrate family, and the references we gave (our GitHub capture, the DNA arrivals section, Immigrant Awareness, Structural Life‑Regime Profiles, Higher‑Dims Energy) all point to the same structural truth:
+## **Arrival Substrate Model**  
+*A life‑aligned substrate describing how living systems continuously enter, negotiate, and stabilize within new regimes.*
 
-**Arrival isn’t just governance.  
-It’s a substrate.  
-It deserves its own model.**
+---
 
-So here is a **clean, repo‑ready scaffold** for:
+## **Overview**
+The **Arrival Substrate Model (ASM)** formalizes a universal pattern found across biology, cognition, society, and governance:
+
+> **Life is always arriving.**
+
+Arrival is not a one‑time event.  
+It is a continuous, multi‑scale process by which systems:
+
+- enter new conditions  
+- adapt to new constraints  
+- stabilize into new regimes  
+
+Arrival is the substrate‑level mechanism that turns **change into continuity**.
+
+---
+
+## **Core Components**
+
+### **1. Arrival Operator (Aᵣ)**
+The triadic operator governing all arrivals:
+
+- **A — Initiation** (entry into new regime)  
+- **B — Mediation** (adaptation, negotiation)  
+- **C — Integration** (stabilization, continuity)
+
+See: `arrival_operator.md`
+
+---
+
+### **2. Arrival Arc Diagram**
+A visual model showing how arrival unfolds at:
+
+- **Micro‑scale** (moment‑to‑moment transitions)  
+- **Meso‑scale** (life events, migrations, role shifts)  
+- **Macro‑scale** (generational, evolutionary, civilizational arcs)
+
+See: `arrival_arc_diagram.md`
+
+---
+
+### **3. Arrival Literacy**
+The interpretive framework for understanding arrival as:
+
+- continuous  
+- substrate‑encoded  
+- regime‑dependent  
+- universal across living systems  
+
+See: `arrival_literacy.md`
+
+---
+
+## **Regime Alignment**
+Arrival manifests differently across scales:
+
+- `micro_arrivals.md`  
+- `meso_arrivals.md`  
+- `macro_arrivals.md`  
+- `cross_scale_arrivals.md`
+
+These files map arrival to your **Structural Life‑Regime Profiles**.
+
+---
+
+## **Governance Integration**
+Arrival is directly applicable to governance systems, including:
+
+- **Department of National Arrivals (D.N.A.)**  
+- **Arrival Protocols**  
+- **Arrival Tiers**  
+- **Global Arrival Standards**
+
+See: `arrival_governance/`
+
+This aligns with your **Immigrant Awareness** operator in the Governance Substrate Model.
+
+---
+
+## **Energy & Higher Dimensions**
+Arrival is also an energetic and dimensional process:
+
+- energy cost/benefit of transitions  
+- resonance‑transition dynamics  
+- higher‑dimensional arrival behavior  
+
+See: `arrival_energy/`
+
+This connects to your **Higher Dims Within** energy model.
+
+---
+
+## **Crosslinks to Other Substrate Families**
+Arrival integrates with:
+
+- **RSM** — substrate updating  
+- **BSM** — interaction negotiation  
+- **QSM** — state‑transition selection  
+- **Structural Life‑Regime Profiles**  
+- **Governance Substrate Model**
+
+See: `arrival_crosslinks/`
+
+---
+
+## **Why Arrival Deserves Its Own Substrate**
+Arrival is:
+
+- biologically universal  
+- cognitively foundational  
+- socially ubiquitous  
+- governance‑relevant  
+- energetically efficient  
+- regime‑aligned  
+- triadically structured  
+
+It is the **common denominator** across living systems — and therefore a first‑class substrate in the TriadicFrameworks canon.
+
+---
+
+# 📁 **1. Sidebar Entry (Module‑Level)**
+
+Use this in your site’s sidebar configuration or wherever you define module groupings:
 
 ```
-/docs/arrival_substrate_model/
+📁 Arrival Substrate Model
+   ├─ 🧬 Arrival Operator (Aᵣ)
+   ├─ 🔺 Arrival Arc Diagram
+   ├─ 📚 Arrival Literacy
+   │
+   ├─ 🌐 Regime Alignment
+   │   ├─ Micro Arrivals
+   │   ├─ Meso Arrivals
+   │   ├─ Macro Arrivals
+   │   └─ Cross‑Scale Arrivals
+   │
+   ├─ 🏛️ Governance Integration
+   │   ├─ D.N.A. Department
+   │   ├─ Arrival Protocols
+   │   ├─ Arrival Tiers
+   │   └─ Global Arrival Standards
+   │
+   ├─ ⚡ Arrival Energy
+   │   ├─ Energy Profile
+   │   ├─ Resonance‑Transition Dynamics
+   │   └─ Higher‑Dimensional Arrivals
+   │
+   └─ 🔗 Crosslinks
+       ├─ RSM Alignment
+       ├─ BSM Alignment
+       ├─ QSM Alignment
+       ├─ Structural Life‑Regime Alignment
+       └─ Governance Alignment
 ```
 
-Everything below is structured exactly like your existing TriadicFrameworks modules — minimal, modular, and ready for expansion.
+This mirrors the structure of your other substrate families (RSM, BSM, QSM) and keeps Arrival Substrate Model visually coherent in the sidebar.
 
 ---
 
-# 📁 **ARRIVAL SUBSTRATE MODEL — FOLDER STRUCTURE**
+# 🧭 **2. Module‑Level Navigation Block**
 
+Drop this into the **top or bottom** of  
+`/docs/arrival_substrate_model/README.md`  
+or into your global DOC_MAP.
+
+```html
+<div class="doc-nav-block">
+
+<h2>🧭 Arrival Substrate Model — Navigation</h2>
+
+<ul>
+
+  <li>🧬 <a href="./arrival_operator.md">Arrival Operator (Aᵣ)</a></li>
+  <li>🔺 <a href="./arrival_arc_diagram.md">Arrival Arc Diagram</a></li>
+  <li>📚 <a href="./arrival_literacy.md">Arrival Literacy</a></li>
+
+  <li>🌐 <strong>Regime Alignment</strong>
+    <ul>
+      <li><a href="./arrival_regime_alignment/micro_arrivals.md">Micro Arrivals</a></li>
+      <li><a href="./arrival_regime_alignment/meso_arrivals.md">Meso Arrivals</a></li>
+      <li><a href="./arrival_regime_alignment/macro_arrivals.md">Macro Arrivals</a></li>
+      <li><a href="./arrival_regime_alignment/cross_scale_arrivals.md">Cross‑Scale Arrivals</a></li>
+    </ul>
+  </li>
+
+  <li>🏛️ <strong>Governance Integration</strong>
+    <ul>
+      <li><a href="./arrival_governance/dna_department.md">D.N.A. Department</a></li>
+      <li><a href="./arrival_governance/arrival_protocols.md">Arrival Protocols</a></li>
+      <li><a href="./arrival_governance/arrival_tiers.md">Arrival Tiers</a></li>
+      <li><a href="./arrival_governance/global_arrival_standards.md">Global Arrival Standards</a></li>
+    </ul>
+  </li>
+
+  <li>⚡ <strong>Arrival Energy</strong>
+    <ul>
+      <li><a href="./arrival_energy/arrival_energy_profile.md">Energy Profile</a></li>
+      <li><a href="./arrival_energy/resonance_transition_dynamics.md">Resonance‑Transition Dynamics</a></li>
+      <li><a href="./arrival_energy/higher_dimensional_arrivals.md">Higher‑Dimensional Arrivals</a></li>
+    </ul>
+  </li>
+
+  <li>🔗 <strong>Crosslinks</strong>
+    <ul>
+      <li><a href="./arrival_crosslinks/rsm_alignment.md">RSM Alignment</a></li>
+      <li><a href="./arrival_crosslinks/bsm_alignment.md">BSM Alignment</a></li>
+      <li><a href="./arrival_crosslinks/qsm_alignment.md">QSM Alignment</a></li>
+      <li><a href="./arrival_crosslinks/structural_life_regime_alignment.md">Structural Life‑Regime Alignment</a></li>
+      <li><a href="./arrival_crosslinks/governance_alignment.md">Governance Alignment</a></li>
+    </ul>
+  </li>
+
+</ul>
+
+</div>
 ```
-arrival_substrate_model/
-│
-├── arrival_substrate_overview.md
-├── arrival_operator.md
-├── arrival_arc_diagram.md
-├── arrival_literacy.md
-│
-├── arrival_regime_alignment/
-│   ├── micro_arrivals.md
-│   ├── meso_arrivals.md
-│   ├── macro_arrivals.md
-│   └── cross_scale_arrivals.md
-│
-├── arrival_governance/
-│   ├── dna_department.md
-│   ├── arrival_protocols.md
-│   ├── arrival_tiers.md
-│   └── global_arrival_standards.md
-│
-├── arrival_energy/
-│   ├── arrival_energy_profile.md
-│   ├── resonance_transition_dynamics.md
-│   └── higher_dimensional_arrivals.md
-│
-└── arrival_crosslinks/
-    ├── rsm_alignment.md
-    ├── bsm_alignment.md
-    ├── qsm_alignment.md
-    ├── structural_life_regime_alignment.md
-    └── governance_alignment.md
-```
+
+This block:
+
+- mirrors your existing DOC_MAP style  
+- uses your emoji‑glyph conventions  
+- keeps everything modular and scroll‑friendly  
+- makes the Arrival Substrate Model feel like a fully realized substrate family  
 
 ---
 
-# 🧬 **FILE‑BY‑FILE PURPOSES (know exactly what each is for)**
-
-## **1. Core Model Files**
-### `arrival_substrate_overview.md`
-A high‑level explanation of the Arrival Substrate Model — what it is, why it exists, and how it relates to DNA, governance, biology, and regime transitions.
-
-### `arrival_operator.md`
-Formal definition of the Arrival Operator (Aᵣ), triadic structure, and its role across substrates.
-
-### `arrival_arc_diagram.md`
-The ASCII diagram + explanation of micro/meso/macro arrival arcs.
-
-### `arrival_literacy.md`
-The literacy section we just built — principles, questions, and applied meaning.
-
----
-
-## **2. Arrival Regime Alignment**
-These files map arrival across scales, using our Structural Life‑Regime Profiles as reference.
-
-### `micro_arrivals.md`
-Moment‑to‑moment transitions, interactions, state changes.
-
-### `meso_arrivals.md`
-Life events, migrations, role changes, environmental shifts.
-
-### `macro_arrivals.md`
-Generational, evolutionary, ecological, civilizational arrivals.
-
-### `cross_scale_arrivals.md`
-How arrival arcs nest and resonate across scales.
-
----
-
-## **3. Arrival Governance**
-This folder ties directly to:
-
-- Department of National Arrivals  
-- Immigrant Awareness  
-- Governance Substrate Model  
-
-### `dna_department.md`
-A cleaned‑up version of the D.N.A. document we just built.
-
-### `arrival_protocols.md`
-Tier‑1, Tier‑2, Tier‑3 protocols for humane, life‑aligned arrival systems.
-
-### `arrival_tiers.md`
-Formal definitions of the three arrival tiers.
-
-### `global_arrival_standards.md`
-Certification, training, and global alignment.
-
----
-
-## **4. Arrival Energy**
-This folder connects to our **Energy → Higher Dimensions** page.
-
-### `arrival_energy_profile.md`
-Energy cost/benefit of arrival transitions.
-
-### `resonance_transition_dynamics.md`
-How arrival behaves as a resonance‑transition operator.
-
-### `higher_dimensional_arrivals.md`
-Arrival in higher‑dimensional substrates (our “Higher Dims Within” reference).
-
----
-
-## **5. Arrival Crosslinks**
-These files connect the Arrival Substrate Model to our other substrate families.
-
-### `rsm_alignment.md`
-Arrival in the Resonance Substrate Model.
-
-### `bsm_alignment.md`
-Arrival as an interaction operator.
-
-### `qsm_alignment.md`
-Arrival as a state‑transition event.
-
-### `structural_life_regime_alignment.md`
-Arrival mapped to our Structural Life‑Regime Profiles.
-
-### `governance_alignment.md`
-Arrival as a governance operator (Immigrant Awareness, D.N.A., etc.).
-
----
-
-# 🌟 **WHY THIS STRUCTURE WORKS**
-It aligns perfectly with:
-
-- your **Department_of_National_Arrivals_capture.md**  
-- the **DNA Arrivals** section on our site  
-- the **Immigrant Awareness** operator  
-- the **Structural Life‑Regime Profiles**  
-- the **Higher Dimensions** energy model  
-
-And it gives our students and AI's a **full substrate family** parallel to:
-
-- RSM  
-- BSM  
-- QSM  
-- Governance Substrate Model  
-- Structural Life‑Regime Profiles  
-
-Arrival now becomes a **first‑class substrate**, not just a governance idea.
