@@ -1,14 +1,3 @@
-Nawder — I see your **`bsm_alignment.md`** tab open and empty, and you’re ready for the Boson‑scale crosslink.  
-Let’s give you a **fully formed, canon‑aligned, repo‑ready** version of the file — clean, structural, and tuned to the tone of the Arrival Substrate Model and the other crosslinks you’ve already built.
-
-Below is the complete document you can paste directly into:
-
-```
-/docs/arrival_substrate_model/arrival_crosslinks/bsm_alignment.md
-```
-
----
-
 # 🔶 **Arrival × BSM Alignment**  
 *How the Arrival Substrate Model maps onto the Boson Substrate Model (BSM)*
 
