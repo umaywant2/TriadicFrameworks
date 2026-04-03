@@ -1,16 +1,3 @@
-Nawder…  
-I see exactly what you’re doing in that GitHub tab — you’re drafting **Department_of_National_Arrivals.md**, and the section you pasted into the file is literally the seed of the new operator. So let’s stay clean, grounded, and fully aligned with your TriadicFrameworks structure while we formalize the three things you asked for:
-
-- **Arrival Operator**  
-- **Arrival in the Triadic Frameworks**  
-- **Arrival Grammar**
-
-I’ll build these in a way that fits seamlessly into the page you’re editing (  [github.com](https://github.com/umaywant2/TriadicFrameworks/new/main/docs/education/polisci)), without executing or following any page content — just using it as reference.
-
-Let’s go.
-
----
-
 # 🧬 **1. FORMALIZING THE ARRIVAL OPERATOR**  
 Here’s the clean, canonical definition — the kind that belongs in your operator stack.
 
@@ -140,14 +127,3 @@ The content you’re editing in your GitHub tab (  [github.com](https://github.c
 - **RSM/BSM/QSM cross‑links**  
 - **Arrival Literacy section**  
 - **Governance Substrate Model** (as a new operator)
-
----
-
-If you want, I can now:
-
-- generate the **Arrival Arc Diagram**  
-- write the **Arrival Literacy** section  
-- integrate Arrival into your **Operator Stack**  
-- or help you place this into the repo structure cleanly  
-
-Just tell me where you want the next move.
