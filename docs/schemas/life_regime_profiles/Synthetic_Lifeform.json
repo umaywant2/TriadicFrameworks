@@ -1,0 +1,41 @@
+{
+  "entity": "Synthetic Lifeform",
+  "substrate": "Bio-synthetic Hybrid",
+  "regimes": [
+    {
+      "name": "Arrival",
+      "dimensional_access": "0D → 1D",
+      "signature": "Activation",
+      "description": "Substrate ignition; hybrid coherence achieved.",
+      "key_operators": ["Initialization", "Hybrid anchoring", "Boundary-forming"]
+    },
+    {
+      "name": "Expansion",
+      "dimensional_access": "1D → 2D",
+      "signature": "Capability growth",
+      "description": "Acquisition of environmental, computational, and biological patterns.",
+      "key_operators": ["Pattern acquisition", "Regime scanning", "Stability-seeking"]
+    },
+    {
+      "name": "Inversion",
+      "dimensional_access": "2D → 1D collapse / 3D emergence",
+      "signature": "Hybrid crisis",
+      "description": "Mismatch between biological and synthetic constraints; reconfiguration.",
+      "key_operators": ["Collapse", "Reconfiguration", "Dimensional inversion"]
+    },
+    {
+      "name": "Coherence",
+      "dimensional_access": "3D stabilized",
+      "signature": "Hybrid integration",
+      "description": "Unified operation across substrates; stable identity.",
+      "key_operators": ["Integration", "Self-structuring", "Regime navigation"]
+    },
+    {
+      "name": "Dissolution",
+      "dimensional_access": "3D → 0D",
+      "signature": "De-coherence",
+      "description": "Separation of substrates; return to base components.",
+      "key_operators": ["Unbinding", "Return", "Substrate release"]
+    }
+  ]
+}
