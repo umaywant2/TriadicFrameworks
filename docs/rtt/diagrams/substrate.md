@@ -1,0 +1,61 @@
+Here’s a clean RTT‑Tech–style SVG for **substrate.svg** — showing the core triad of substrates.
+
+```svg
+<svg width="420" height="420" viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Styles -->
+  <style>
+    .node {
+      font-family: sans-serif;
+      font-size: 18px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      fill: #111;
+    }
+    .center {
+      font-family: sans-serif;
+      font-size: 16px;
+      text-anchor: middle;
+      dominant-baseline: middle;
+      fill: #555;
+    }
+    .arrow {
+      stroke: #111;
+      stroke-width: 2.0;
+      fill: none;
+      marker-end: url(#arrowhead);
+    }
+  </style>
+
+  <!-- Arrowhead marker -->
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#111"/>
+    </marker>
+  </defs>
+
+  <!-- Center label -->
+  <text class="center" x="210" y="210">Substrates</text>
+
+  <!-- Nodes -->
+  <!-- Physical (top) -->
+  <text class="node" x="210" y="70">Physical</text>
+
+  <!-- Cognitive (bottom-left) -->
+  <text class="node" x="90" y="320">Cognitive</text>
+
+  <!-- Synthetic (bottom-right) -->
+  <text class="node" x="330" y="320">Synthetic</text>
+
+  <!-- Arrows (triadic relation, clockwise) -->
+  <!-- Physical → Cognitive -->
+  <line class="arrow" x1="200" y1="90" x2="100" y2="300"/>
+
+  <!-- Cognitive → Synthetic -->
+  <line class="arrow" x1="110" y1="330" x2="310" y2="330"/>
+
+  <!-- Synthetic → Physical -->
+  <line class="arrow" x1="340" y1="300" x2="220" y2="90"/>
+
+</svg>
+```
