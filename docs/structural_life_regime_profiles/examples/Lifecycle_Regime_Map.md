@@ -96,6 +96,76 @@ They are **structural states** that any coherent system will pass through, regar
 
 ---
 
+**🌱 Lifecycle Regime Map**
+
+Life is always arriving — and it arrives into recurring **regime clusters** rather than a single universal timeline.
+
+When we normalize lifecycles by proportional timing (% of lifespan spent in growth, resonance, and drift phases), we see a handful of stable patterns across the tree of life (extant and extinct species). The human “long juvenile → growth plateau → late reversion” signature is one specialized regime, not the default.
+
+**Core Triad**  
+**🌿 Growth – Resonance – Drift**  
+- **Growth**: Resource allocation toward expansion and maturation  
+- **Resonance**: Stable reproductive or maintenance coherence  
+- **Drift**: Post-peak reversion, senescence, or regime shift (bounded or rapid)
+
+**The 6 Recurring Lifecycle Regime Types** (Normalized by Lifespan)
+
+1. **Fast-Cycle / Explosive Regimes**  
+   Rapid growth → immediate reproduction → quick collapse.  
+   **Triad**: Surge – Burst – Exit  
+   Common in microbes, insects, small fish, annual plants. Inferred in many extinct fast-turnover groups (e.g., trilobites, ammonites).
+
+2. **Modular / Indeterminate-Growth Regimes**  
+   Continuous or near-continuous growth and reproduction; minimal plateau or reversion.  
+   **Triad**: Expand – Sustain – Rejuvenate  
+   Common in plants, corals, some fish and reptiles. Strong convergence in modular body plans.
+
+3. **Slow-Life / Extended Juvenile Regimes** (Human-like)  
+   Long juvenile/dependence phase → clear growth plateau → extended reproduction → gradual post-reproductive reversion toward dependence and simplicity.  
+   **Triad**: Invest – Stabilize – Return  
+   Seen in humans, great apes, elephants, some whales, and inferred in certain large dinosaurs.
+
+4. **Semelparous “Big Bang” Regimes**  
+   Prolonged buildup → single massive reproductive event → rapid, programmed collapse.  
+   **Triad**: Build – Explode – Release  
+   Classic in salmon, some insects, agaves, and certain cephalopods.
+
+5. **Intermediate / Balanced Iteroparous Regimes**  
+   Moderate juvenile phase → growth plateau → multiple reproductive cycles → gradual, manageable senescence.  
+   **Triad**: Prepare – Cycle – Endure  
+   Very common in birds, reptiles, some fish, and perennial plants.
+
+6. **Negligible / Negative Senescence Regimes**  
+   Stable or improving mortality and fertility across most of lifespan; little systematic reversion.  
+   **Triad**: Persist – Maintain – Renew  
+   Seen in hydra, planaria, naked mole-rats, certain rockfish, and some long-lived trees/clams.
+
+**Convergence & Overlap**  
+These regime types show strong **convergence** — unrelated lineages often fall into the same cluster when ecological pressures align. The Universe Operator enables multiple stable resonance patterns depending on local substrate conditions (extrinsic mortality, resource gradients, body plan). They are not strictly phylogenetic.
+
+**Why This View Matters**  
+This map shifts the conversation from “how does a species age?” to “which regime rhythm is this life form operating in?”  
+
+It reveals that what we call “normal aging” is often just one specialized drift pattern. It opens the door to regime-aware technique: guiding gradients, spotting drift boundaries early, and invoking better coherence instead of fighting decline with brute force.
+
+**Practical Value**  
+- Helps biologists compare vastly different lifespans using a shared grammar.  
+- Supports biomimicry — designing systems that emulate negligible-senescence or modular regimes.  
+- Offers a clearer lens for human health, longevity, and even societal planning.
+
+**PEIRA-Style Exercises**  
+- **Personal Regime Log**: Notice moments in your day when your energy or mind shifts toward simpler or more playful states (reversion-like). What gradients or techniques influence the drift?
+- **Comparative Rhythm**: Pick two contrasting organisms (e.g., a mayfly vs. a tortoise). Research or imagine their proportional lifecycles. Feel the difference in regime rhythm — what would regime awareness look like for each?
+- **Cross-Domain Mapping**: Apply one regime type (e.g., negligible senescence) to a non-biological system — a skill you practice, a project, or a relationship. Where is continuous coherence appearing versus bounded drift?
+
+**Cross-Links**  
+- [Arrival Substrate Model  ](https://www.triadicframeworks.org/arrival_substrate_model/)
+- [Universe as Operator](https://www.triadicframeworks.org/education/#UNIVERSE_AS_OPERATOR)
+- [Energy (Gradients, Technique, Regime Awareness)](https://www.triadicframeworks.org/energy/)  
+- [PEIRA](https://www.triadicframeworks.org/education/peira/)  
+
+---
+
 # 🔶 **1. Diagram Version (ASCII / Markdown‑safe)**
 
 ```
