@@ -1,11 +1,10 @@
-# 📘 Appendix A — Notation (RTT Micro Core)
-
-This appendix defines the minimal symbolic system used throughout the RTT Micro Core whitepaper and the Micro‑Resonance Toolkit (MRT).  
+# 📘 **Appendix A — Notation (RTT Micro‑Core)**  
+This appendix defines the minimal symbolic system used throughout the RTT Micro‑Core whitepaper and the Micro‑Resonance Toolkit (MRT).  
 Notation is intentionally compact and scoped to micro‑scale behavior.
 
 ---
 
-## 🔺 Triads & Structure
+## 🔺 **Triads & Structure**
 
 **T**  
 A micro‑triad (three‑node structural unit).
@@ -18,7 +17,7 @@ A triad considered as a coherent unit.
 
 ---
 
-## 🔄 Transitions & Dynamics
+## 🔄 **Transitions & Dynamics**
 
 **→**  
 State or structural transition.
@@ -34,7 +33,7 @@ Micro‑scale time step.
 
 ---
 
-## ⚡ Energy & Drift
+## ⚡ **Energy & Drift**
 
 **E**  
 Energy level of a micro‑state.
@@ -50,7 +49,7 @@ Drift threshold for coherence loss.
 
 ---
 
-## 🧭 Coherence & Boundaries
+## 🧭 **Coherence & Boundaries**
 
 **C**  
 Coherence of a micro‑regime.
@@ -66,7 +65,7 @@ Expanding vs. contracting boundary.
 
 ---
 
-## 🌀 Fractional Dimensions
+## 🌀 **Fractional Dimensions**
 
 **Dᶠ**  
 Fractional dimension of a micro‑state.
@@ -76,7 +75,7 @@ Fractional‑ladder transition.
 
 ---
 
-## 🔗 Micro–Macro Bridge
+## 🔗 **Micro–Macro Bridge**
 
 **μ → Μ**  
 Micro‑to‑macro influence.
@@ -86,7 +85,7 @@ Macro‑to‑micro constraint.
 
 ---
 
-## 🛠️ Toolkit Operators (MRT)
+## 🛠️ **Toolkit Operators (MRT)**
 
 **Pₙ**  
 Primitive operator *n*.
@@ -102,7 +101,7 @@ Flow diagram or flow operator.
 
 ---
 
-## ✔️ Status
+## ✔️ **Status**
 
-This notation set is canonical for Micro Core.  
+This notation set is canonical for Micro‑Core.  
 Additional symbols appear in the full RTT notation appendix.
