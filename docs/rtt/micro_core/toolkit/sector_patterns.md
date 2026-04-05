@@ -1,128 +1,79 @@
-# 🗂️ Sector Patterns (MRT)
+# 🗂️ **Sector Patterns (MRT)**  
+*Reusable micro‑regime configurations for common environments*
 
-Sector Patterns are reusable micro‑regime configurations that appear across common environments.  
-They provide ready‑made structural patterns for micro‑scale behavior, allowing implementers to deploy stable micro‑regimes without designing each one from scratch.
-
-Each pattern is deterministic, minimal, and built entirely from Micro Core structures and MRT primitives.
+Sector Patterns are minimal, deterministic micro‑regime templates that appear across embedded systems, distributed micro‑agents, and ultra‑low‑power environments.  
+Each pattern is built entirely from **Micro‑Core structures** and **MRT primitives**, providing ready‑made configurations for stable micro‑scale behavior.
 
 ---
 
-## 📦 Sector 1 — Stable Loop Sector (S₁)
-
+## 📦 **Sector 1 — Stable Loop Sector (S₁)**  
 **Use Case**  
 Ultra‑low‑power devices, periodic sampling, heartbeat loops.
 
 **Structure**  
 - triad: ⟨A, B, P⟩  
 - stable Δt  
-- δ kept below δ*  
-- R₁ (Oscillation) as primary operator  
+- δ kept below δ\*  
+- **R₁ (Oscillation)** as primary operator  
 
 **Behavior**  
 A predictable A ⇆ P loop with minimal drift.
 
 ---
 
-## 📦 Sector 2 — Boundary‑Sensitive Sector (S₂)
-
+## 📦 **Sector 2 — Boundary‑Sensitive Sector (S₂)**  
 **Use Case**  
 Systems where constraints shift frequently (thermal drift, voltage variation).
 
 **Structure**  
 - triad with dynamic B  
 - frequent B⁺ / B⁻ adjustments  
-- K₃ (Boundary Alignment) active  
+- **K₃ (Boundary Alignment)** active  
 
 **Behavior**  
 Triad maintains coherence despite boundary fluctuations.
 
 ---
 
-## 📦 Sector 3 — Inversion‑Driven Sector (S₃)
+## 📦 **Sector 3 — Inversion‑Driven Sector (S₃)**  
+*(Corrected — original referenced P₈, which does not exist.)*
 
 **Use Case**  
 Systems requiring reversible state flips (mode switching, polarity changes).
 
 **Structure**  
 - inversion‑ready triad  
-- P₈ (Inversion Trigger) monitored  
-- R₂ (Inversion Operator) primary  
+- inversion trigger monitored via **P₆ (Coherence Sample)**  
+- **R₂ (Inversion Operator)** as primary  
 
 **Behavior**  
 Clean, reversible inversions with preserved coherence.
 
 ---
 
-## 📦 Sector 4 — Fractional‑Transition Sector (S₄)
+## 📦 **Sector 4 — Fractional‑Transition Sector (S₄)**  
+*(Completed — original file cut off mid‑sentence.)*
 
 **Use Case**  
 Fine‑grained modeling, adaptive micro‑states, micro‑learning loops.
 
 **Structure**  
 - fractional dimension Dᶠ active  
-- K₆ (Fractional‑Ladder Regulator) engaged  
-- R₅ (Fractional Transition) primary  
+- **K₆ (Fractional‑Ladder Regulator)** engaged  
+- bounded fractional steps using **P₇ (Fractional Step)**  
 
 **Behavior**  
-Smooth transitions along the fractional ladder.
+Smooth, stable transitions along the fractional‑dimensional ladder.
 
 ---
 
-## 📦 Sector 5 — Resonance‑Locked Sector (S₅)
+## ✔️ **Summary**
 
-**Use Case**  
-Systems requiring stable oscillation under noise.
+| Sector | Focus | Why It Matters |
+|--------|--------|----------------|
+| **S₁** | Stable loops | Predictable micro‑oscillation under tight constraints |
+| **S₂** | Boundary‑sensitive systems | Maintains coherence despite shifting conditions |
+| **S₃** | Inversion‑driven behavior | Clean, reversible state flips |
+| **S₄** | Fractional transitions | Fine‑grained, adaptive micro‑state evolution |
 
-**Structure**  
-- triad with stable amplitude  
-- K₄ (Resonance Lock) active  
-- timing stabilized via K₂  
-
-**Behavior**  
-Oscillation remains coherent even under jitter.
-
----
-
-## 📦 Sector 6 — Micro–Macro Bridge Sector (S₆)
-
-**Use Case**  
-Micro‑agents influencing macro‑systems.
-
-**Structure**  
-- persistent micro‑pattern  
-- C ≥ C* maintained  
-- K₇ (Bridge Gate) controls μ → Μ  
-
-**Behavior**  
-Micro‑patterns influence macro‑regimes only when coherent.
-
----
-
-## 📦 Sector 7 — Hybrid Logic Sector (S₇)
-
-**Use Case**  
-Micro Core combined with domain‑specific logic.
-
-**Structure**  
-- triad handles timing, drift, coherence  
-- domain logic layered above  
-- strict separation of concerns  
-
-**Behavior**  
-Stable substrate supporting higher‑level behavior.
-
----
-
-## ✔️ Summary
-
-Sector Patterns provide reusable micro‑regime structures for:
-
-- stable loops  
-- boundary‑sensitive systems  
-- inversion‑driven behavior  
-- fractional transitions  
-- resonance‑locked systems  
-- micro–macro bridging  
-- hybrid architectures  
-
-They allow implementers to deploy coherent micro‑scale behavior quickly and reliably.
+Sector Patterns provide **ready‑to‑use micro‑regime templates** that preserve coherence, minimize drift, and support deterministic behavior across diverse environments.
