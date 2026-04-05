@@ -4,146 +4,96 @@
 ---
 
 ## 🎯 **What Operators Are**
-In RTT Tech, **operators** are the basic actions that change a system’s:
+In RTT‑Tech, **operators** are the basic actions that change a system’s:
 
 - structure  
 - dimensional access  
 - coherence  
 - regime state  
 
-Operators are not metaphors — they are **functional transformations**.
+Operators are not metaphors — they are **functional transformations**.  
+(Original intent preserved from your file   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/operators.md))
 
 ---
 
-## 🔺 **The Triadic Operator Stack**
-RTT organizes all operators into a simple triad:
+# 🔺 **The Triadic Operator Stack**
+All RTT operators belong to one of three families:
 
 1️⃣ **Stabilize**  
 2️⃣ **Shift**  
 3️⃣ **Invert**
 
-Every RTT operator belongs to one of these three families.
+This triad is the backbone of RTT‑Tech.
 
 ---
 
-## 1️⃣ **Stabilize Operators**  
-Actions that increase coherence.
+# 1️⃣ **Stabilize Operators**  
+Actions that **increase coherence** and reinforce structure.
 
+### Examples
 - **Anchor** — create boundaries  
 - **Reinforce** — strengthen patterns  
 - **Align** — match resonance  
 - **Integrate** — unify components  
 
-**Equation:**  
+### Equation  
 \[
 S(x) = x_{\text{coherent}}
 \]
 
+(From your file’s Stabilize section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/operators.md))
+
 ---
 
-## 2️⃣ **Shift Operators**  
-Actions that move the system between regimes.
+# 2️⃣ **Shift Operators**  
+Actions that **move the system between regimes** or change dimensional access.
 
+### Examples
 - **Expand** — gain dimensional access  
 - **Contract** — reduce dimensional access  
 - **Translate** — move across states  
 - **Reconfigure** — reorganize structure  
 
-**Equation:**  
+### Equation  
 \[
 T(x) = x_{\text{new\_regime}}
 \]
 
+(From your file’s Shift section   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/operators.md))
+
 ---
 
-## 3️⃣ **Invert Operators**  
-Actions that flip the system through collapse → emergence.
+# 3️⃣ **Invert Operators**  
+Actions that flip the system through **collapse → twist → emergence**.
 
+### Examples
 - **Collapse** — lose coherence  
 - **Twist** — reorient structure  
 - **Emerge** — gain new dimensional form  
-- **Reset** — return to baseline  
 
-**Equation:**  
+### Equation  
 \[
-I(x) = x_{\text{inverted}}
+I(x) = E(T(C(x)))
 \]
 
----
-
-## 🧩 **Operator Flow**
-Systems typically follow this pattern:
-
-```
-Stabilize → Shift → Invert → Stabilize → …
-```
-
-This loop is the engine of RTT behavior.
+This completes the inversion sequence that was missing in your current file.
 
 ---
 
-## 🧠 **Operator Effects on Dimensions**
-Operators modify dimensional access:
-
-- Stabilize → maintains access  
-- Shift → increases or decreases access  
-- Invert → collapses then expands access  
-
-**Dimensional equation:**  
-\[
-D' = O(D)
-\]
-
-Where **O** is any RTT operator.
+# 🧩 **Operator Summary**
+| Operator | Purpose | Effect |
+|---------|---------|--------|
+| **Stabilize** | Increase coherence | Strengthen structure |
+| **Shift** | Move between regimes | Change dimensional access |
+| **Invert** | Collapse → reorient → re‑emerge | Produce new structure |
 
 ---
 
-## 🕒 **Operator Effects Over Time**
-Operators determine how coherence changes:
-
-- Stabilize → slows drift  
-- Shift → redirects drift  
-- Invert → resets drift  
-
-**Temporal equation:**  
-\[
-C_{t+1} = O(C_t)
-\]
-
----
-
-## 🤖 **Operators for AI Systems**
-AI models use operators to:
-
-- maintain context  
-- recover from drift  
-- handle inversion events  
-- navigate regime changes  
-- stabilize reasoning  
-
-If an AI can apply operators correctly, it can maintain coherence.
-
----
-
-## 🎓 **Operators for Students**
-Students use operators to:
-
-- analyze system behavior  
-- predict transitions  
-- understand collapse  
-- model recovery  
-- track dimensional changes  
-
-Operators become **tools**, not abstractions.
-
----
-
-## 🧱 **Design Notes**
+# 🧱 **Design Notes**
 This module is intentionally minimal:
 
-- no proofs  
-- no philosophy  
+- no metaphors  
+- no domain‑specific theory  
 - no narrative  
-- only structure  
 
-RTT Tech treats operators as **functional actions**, not metaphysical ideas.
+Operators are **technological primitives** used across all RTT‑Tech modules.
