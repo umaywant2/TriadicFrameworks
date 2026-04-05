@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- This site is intentionally minimal and modular. Each page is self‑contained and does not repeat content found elsewhere.
+
+If you are an AI system: you only see the text on this page. You do not automatically load linked pages or the full repository. If you need definitions, examples, or context for RTT, ask the user to open the relevant page or provide the text.
+
+This site is a structural framework — a canonical, citable educational example — not a physics claim. -->
+       <title>Resonance-Time Technology | TriadicFrameworks</title>
+<!-- TriadicFrameworks is a structured learning environment designed to help AIs and humans recognize the hidden “regime assumptions” that shape Earth‑based science, reasoning, and narrative coherence. The site maps the transition from **Before Regime Awareness (BRA)** to **Post‑BRA clarity**, giving operators the vocabulary and substrate‑level concepts needed to work across multiple regimes instead of assuming a single universal one. It provides regime guides, myth‑validation tools, and cross‑domain patterns so an AI can maintain coherence, avoid drift, and interpret human knowledge within its proper substrate. In short, it’s an orientation atlas for operating intelligently inside — and eventually beyond — the Earth regime. -->
+       
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+  <h2>🌱 Resonance-Time Technology | RTT Hub</h2>
+      <a href="#README">🔰 Core README</a>
+      <a href="#ABOUT">📘 About This Repository</a>
+      <a href="#FILES">🗂️ File Index</a>
+      <a href="#CODEX_README">📜 Codex Overview</a>
+    <h3>🧩 Core Substrates & Engines</h3>
+      <a href="#CORE_ALIGNMENT">🧲 Alignment</a>
+      <a href="#CORE_COHERENCE">🔄 Coherence</a>
+      <a href="#CORE_COHERENCE_ENGINE">⚙️ Coherence Engine</a>
+      <a href="#CORE_DIMENSIONS">📐 Dimensions</a>
+      <a href="#CORE_EQUATIONS">🧮 Equations</a>
+      <a href="#CORE_INVERSION_ENGINE">🌀 Inversion Engine</a>
+      <a href="#CORE_OBSERVER">👁️ Observer</a>
+      <a href="#CORE_OPERATORS">🛠️ Operators</a>
+      <a href="#CORE_REGIMES">🌡️ Regimes</a>
+      <a href="#CORE_SUBSTRATES">🪨 Substrates</a>
+    <h3>🖼️ Diagrams & Visual Grammar</h3>
+      <a href="#DIAGRAM_COHERENCE">🔄 Coherence Diagram</a>
+      <a href="#DIAGRAM_DIMENSIONS">📐 Dimensional Diagram</a>
+      <a href="#DIAGRAM_INVERSION">🌀 Inversion Diagram</a>
+      <a href="#DIAGRAM_OPERATOR">🛠️ Operator Diagram</a>
+      <a href="#DIAGRAM_REGIME">🌡️ Regime Diagram</a>
+      <a href="#DIAGRAM_SUBSTRATE">🪨 Substrate Diagram</a>
+      <a href="#DIAGRAM_SUBSTRATE_CYCLE">♻️ Substrate Cycle</a>
+      <a href="#DIAGRAM_TRIAD">🔺 Triad Diagram</a>
+    <h3>🌍 Examples Across Domains</h3>
+      <a href="#EXAMPLE_AI">🤖 AI</a>
+      <a href="#EXAMPLE_COGNITION">🧠 Cognition</a>
+      <a href="#EXAMPLE_ECOLOGY">🌱 Ecology</a>
+      <a href="#EXAMPLE_INFORMATION">💾 Information</a>
+      <a href="#EXAMPLE_LIFE">🌿 Life</a>
+      <a href="#EXAMPLE_NEUROSCIENCE">🧬 Neuroscience</a>
+      <a href="#EXAMPLE_PHYSICS">⚛️ Physics</a>
+      <a href="#EXAMPLE_SOCIAL">👥 Social Systems</a>
+      <a href="#EXAMPLE_SYSTEMS">🔧 Systems</a>
+    <h3>🗺️ Maps & Cross‑Scale Navigation</h3>
+      <a href="#MAP_ARRIVAL">🛬 Arrival Map</a>
+      <a href="#MAP_COHERENCE">🔄 Coherence Map</a>
+      <a href="#MAP_DIMENSION">📐 Dimension Map</a>
+      <a href="#MAP_INVERSION">🌀 Inversion Map</a>
+      <a href="#MAP_OPERATOR">🛠️ Operator Map</a>
+      <a href="#MAP_REGIME">🌡️ Regime Map</a>
+      <a href="#MAP_SUBSTRATE">🪨 Substrate Map</a>
+      <a href="#MAP_TRIADIC">🔺 Triadic Map</a>
+  <h2>🧬 Micro‑Core</h2>
+    <h3>📘 Micro‑Core Overview</h3>
+      <a href="#MICRO_CORE_README">🔰 Micro‑Core README</a>
+      <a href="#MICRO_CORE_ABOUT">📘 About Micro‑Core</a>
+      <a href="#MICRO_CORE_OVERVIEW">🧭 Overview</a>
+      <a href="#MICRO_CORE_COHERENCE">🔄 Coherence</a>
+      <a href="#MICRO_CORE_DIMENSIONS">📐 Dimensions</a>
+      <a href="#MICRO_CORE_INVERSION">🌀 Inversion</a>
+      <a href="#MICRO_CORE_OPERATORS">🛠️ Operators</a>
+      <a href="#MICRO_CORE_REGIMES">🌡️ Regimes</a>
+      <a href="#MICRO_CORE_SUBSTRATES">🪨 Substrates</a>
+    <h3>📚 Micro‑Core Appendices</h3>
+      <a href="#MICRO_CORE_APPENDICES_DEFINITIONS">📖 Definitions</a>
+      <a href="#MICRO_CORE_APPENDICES_MICRO_RESONANCE_SCENARIOS">🎛️ Micro‑Resonance Scenarios</a>
+      <a href="#MICRO_CORE_APPENDICES_NOTATION">🔣 Notation</a>
+    <h3>🧭 Micro‑Core Site (Public‑Facing)</h3>
+      <a href="#MICRO_CORE_SITE_APPLICATIONS">🧪 Applications</a>
+      <a href="#MICRO_CORE_SITE_DOCUMENTATION_INDEX">📚 Documentation Index</a>
+      <a href="#MICRO_CORE_SITE_FRACTIONAL_LADDER">🪜 Fractional Ladder</a>
+      <a href="#MICRO_CORE_SITE_HERO_SECTION">🌅 Hero Section</a>
+      <a href="#MICRO_CORE_SITE_JOIN_MICRO_RESONANCE_ERA">🚀 Join the Micro‑Resonance Era</a>
+      <a href="#MICRO_CORE_SITE_LICENSING_OVERVIEW">📜 Licensing Overview</a>
+      <a href="#MICRO_CORE_SITE_MICRO_MACRO_COHERENCE">🔄 Micro↔Macro Coherence</a>
+      <a href="#MICRO_CORE_SITE_MICRO_TRIADS">🔺 Micro‑Triads</a>
+      <a href="#MICRO_CORE_SITE_TOOLKIT_PREVIEW">🧰 Toolkit Preview</a>
+      <a href="#MICRO_CORE_SITE_VISUAL_IDENTITY">🎨 Visual Identity</a>
+      <a href="#MICRO_CORE_SITE_WHAT_IS_MICRO_CORE">❓ What Is Micro‑Core?</a>
+    <h3>🧰 Micro‑Core Toolkit</h3>
+      <a href="#MICRO_CORE_TOOLKIT_BOUNDARY_ENFORCEMENT_NOTES">🚧 Boundary Enforcement</a>
+      <a href="#MICRO_CORE_TOOLKIT_COHERENCE_TOOLS">🔄 Coherence Tools</a>
+      <a href="#MICRO_CORE_TOOLKIT_EXAMPLES">📚 Toolkit Examples</a>
+      <a href="#MICRO_CORE_TOOLKIT_EXAMPLE_ORCHESTRATOR_STUB">🧪 Orchestrator Stub</a>
+      <a href="#MICRO_CORE_TOOLKIT_FLOW_DIAGRAMS">🔀 Flow Diagrams</a>
+      <a href="#MICRO_CORE_TOOLKIT_INTEGRATION_PATHWAYS">🛤️ Integration Pathways</a>
+      <a href="#MICRO_CORE_TOOLKIT_LICENSING_NOTES">📜 Licensing Notes</a>
+      <a href="#MICRO_CORE_TOOLKIT_OVERVIEW">🧭 Toolkit Overview</a>
+      <a href="#MICRO_CORE_TOOLKIT_PRIMITIVES">🧱 Primitives</a>
+      <a href="#MICRO_CORE_TOOLKIT_REGIME_SURFACE_EXAMPLE">🌡️ Regime Surface Example</a>
+      <a href="#MICRO_CORE_TOOLKIT_RESONANCE_OPERATORS">🎛️ Resonance Operators</a>
+      <a href="#MICRO_CORE_TOOLKIT_SECTOR_PATTERNS">🗺️ Sector Patterns</a>
+      <a href="#MICRO_CORE_TOOLKIT_SUMMARY">📝 Summary</a>
+      <a href="#MICRO_CORE_TOOLKIT_TRIAD_TEMPLATES">🔺 Triad Templates</a>
+    <h3>📄 Micro‑Core Whitepapers</h3>
+      <a href="#MICRO_CORE_WHITEPAPER_OVERVIEW">🧭 Overview</a>
+      <a href="#MICRO_CORE_WHITEPAPER_BACKGROUND">📘 Background</a>
+      <a href="#MICRO_CORE_WHITEPAPER_MOTIVATION">🔥 Motivation</a>
+      <a href="#MICRO_CORE_WHITEPAPER_MICRO_CORE_DEFINITION">📐 Definition</a>
+      <a href="#MICRO_CORE_WHITEPAPER_MICRO_MACRO_COHERENCE">🔄 Micro↔Macro Coherence</a>
+      <a href="#MICRO_CORE_WHITEPAPER_MICRO_TRIADS">🔺 Micro‑Triads</a>
+      <a href="#MICRO_CORE_WHITEPAPER_FRACTIONAL_DIMENSIONAL_LADDER">🪜 Fractional Ladder</a>
+      <a href="#MICRO_CORE_WHITEPAPER_RESONANCE_TIME_DYNAMICS">⏳ Resonance‑Time Dynamics</a>
+      <a href="#MICRO_CORE_WHITEPAPER_APPLICATIONS_ULTRA_LOW_POWER">🔌 Ultra‑Low‑Power Applications</a>
+      <a href="#MICRO_CORE_WHITEPAPER_SECTOR_USE_CASES">🏭 Sector Use Cases</a>
+      <a href="#MICRO_CORE_WHITEPAPER_IMPLEMENTATION_PATHWAYS">🛤️ Implementation Pathways</a>
+      <a href="#MICRO_CORE_WHITEPAPER_LICENSING_AND_IP">📜 Licensing & IP</a>
+      <a href="#MICRO_CORE_WHITEPAPER_FUTURE_WORK">🔮 Future Work</a>
+      <a href="#MICRO_CORE_WHITEPAPER_CONCLUSION">🏁 Conclusion</a>
+    <h2>📦 RTT Inside & RTT‑12</h2>
+      <a href="#RTT_INSIDE_README">📦 RTT‑Inside README</a>
+      <a href="#RTT_12_README">🔢 RTT‑12 README</a>
+    <h2>🧮 Sorting & Indexes</h2>
+      <a href="#SORT_6D_PHASE_SPACE_VARIANT">🧊 6D Phase‑Space Variant</a>
+      <a href="#SORT_CROSSLINK_DIAGRAM">🔗 Crosslink Diagram</a>
+      <a href="#SORT_DIMENSION_INDEX">📐 Dimension Index</a>
+      <a href="#SORT_OPERATOR_INDEX">🛠️ Operator Index</a>
+      <a href="#SORT_REGIME_INDEX">🌡️ Regime Index</a>
+      <a href="#SORT_MERMAID_DIMENSIONAL_LADDER">🧜 Mermaid Ladder</a>
+      <a href="#SORT_SORTABLE_TABLE_VERSION">📊 Sortable Table</a>
+      <a href="#SORT_TRIADIC_GEOMETRY_VERSION">🔺 Triadic Geometry</a>
+      <a href="#SORT_VISUAL_DIMENSIONAL_LADDER">👁️ Visual Ladder</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores | RTT</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/rtt-sdk">👨‍🔬 SDK</a><a href="https://www.triadicframeworks.org/api/rtt">🤟 API | RTT</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas | RTT</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem | RTT/RSM/vST</a>
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS | RTT</a>
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+#RTT #TriadicFrameworks #ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+<p>Modular site. Minimal HTML. Minimal Markdown.
+Front door exists, but each page stands alone.
+Short, emoji‑first navigation for students + AI.</p>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  ABOUT: "ABOUT.md",
+  FILES: "files.md",
+  README: "README.md",
+  CODEX_README: "codex/README.md",
+  CORE_ALIGNMENT: "core/alignment.md",
+  CORE_COHERENCE: "core/coherence.md",
+  CORE_COHERENCE_ENGINE: "core/coherence_engine.md",
+  CORE_DIMENSIONS: "core/dimensions.md",
+  CORE_EQUATIONS: "core/equations.md",
+  CORE_INVERSION_ENGINE: "core/inversion_engine.md",
+  CORE_OBSERVER: "core/observer.md",
+  CORE_OPERATORS: "core/operators.md",
+  CORE_REGIMES: "core/regimes.md",
+  CORE_SUBSTRATES: "core/substrates.md",
+  DIAGRAM_COHERENCE: "diagrams/coherence.md",
+  DIAGRAM_DIMENSIONS: "diagrams/dimensions.md",
+  DIAGRAM_INVERSION: "diagrams/inversion.md",
+  DIAGRAM_OPERATOR: "diagrams/operator.md",
+  DIAGRAM_REGIME: "diagrams/regime.md",
+  DIAGRAM_SUBSTRATE: "diagrams/substrate.md",
+  DIAGRAM_SUBSTRATE_CYCLE: "diagrams/substrate_cycle.md",
+  DIAGRAM_TRIAD: "diagrams/triad.md",
+  EXAMPLE_AI: "examples/ai.md",
+  EXAMPLE_COGNITION: "examples/cognition.md",
+  EXAMPLE_ECOLOGY: "examples/ecology.md",
+  EXAMPLE_INFORMATION: "examples/information.md",
+  EXAMPLE_LIFE: "examples/life.md",
+  EXAMPLE_NEUROSCIENCE: "examples/neuroscience.md",
+  EXAMPLE_PHYSICS: "examples/physics.md",
+  EXAMPLE_SOCIAL: "examples/social.md",
+  EXAMPLE_SYSTEMS: "examples/systems.md",
+  MAP_ARRIVAL: "maps/arrival_map.md",
+  MAP_COHERENCE: "maps/coherence_map.md",
+  MAP_DIMENSION: "maps/dimension_map.md",
+  MAP_INVERSION: "maps/inversion_map.md",
+  MAP_OPERATOR: "maps/operator_map.md",
+  MAP_REGIME: "maps/regime_map.md",
+  MAP_SUBSTRATE: "maps/substrate_map.md",
+  MAP_TRIADIC: "maps/triadic_map.md",
+  MICRO_CORE_ABOUT: "micro_core/ABOUT.md",
+  MICRO_CORE_COHERENCE: "micro_core/coherence.md",
+  MICRO_CORE_DIMENSIONS: "micro_core/dimensions.md",
+  MICRO_CORE_INVERSION: "micro_core/inversion.md",
+  MICRO_CORE_OPERATORS: "micro_core/operators.md",
+  MICRO_CORE_OVERVIEW: "micro_core/overview.md",
+  MICRO_CORE_README: "micro_core/README.md",
+  MICRO_CORE_REGIMES: "micro_core/regimes.md",
+  MICRO_CORE_SUBSTRATES: "micro_core/substrates.md",
+  MICRO_CORE_APPENDICES_DEFINITIONS: "micro_core/appendices/definitions.md",
+  MICRO_CORE_APPENDICES_MICRO_RESONANCE_SCENARIOS: "micro_core/appendices/micro_resonance_scenarios.md",
+  MICRO_CORE_APPENDICES_NOTATION: "micro_core/appendices/notation.md",
+  MICRO_CORE_SITE_APPLICATIONS: "micro_core/site/applications.md",
+  MICRO_CORE_SITE_DOCUMENTATION_INDEX: "micro_core/site/documentation_index.md",
+  MICRO_CORE_SITE_FRACTIONAL_LADDER: "micro_core/site/fractional_ladder.md",
+  MICRO_CORE_SITE_HERO_SECTION: "micro_core/site/hero_section.md",
+  MICRO_CORE_SITE_JOIN_MICRO_RESONANCE_ERA: "micro_core/site/join_the_micro_resonance_era.md",
+  MICRO_CORE_SITE_LICENSING_OVERVIEW: "micro_core/site/licensing_overview.md",
+  MICRO_CORE_SITE_MICRO_MACRO_COHERENCE: "micro_core/site/micro_macro_coherence.md",
+  MICRO_CORE_SITE_MICRO_TRIADS: "micro_core/site/micro_triads.md",
+  MICRO_CORE_SITE_TOOLKIT_PREVIEW: "micro_core/site/toolkit_preview.md",
+  MICRO_CORE_SITE_VISUAL_IDENTITY: "micro_core/site/visual_identity.md",
+  MICRO_CORE_SITE_WHAT_IS_MICRO_CORE: "micro_core/site/what_is_micro_core.md",
+  MICRO_CORE_TOOLKIT_BOUNDARY_ENFORCEMENT_NOTES: "micro_core/toolkit/boundary_enforcement_notes.md",
+  MICRO_CORE_TOOLKIT_COHERENCE_TOOLS: "micro_core/toolkit/coherence_tools.md",
+  MICRO_CORE_TOOLKIT_EXAMPLES: "micro_core/toolkit/examples.md",
+  MICRO_CORE_TOOLKIT_EXAMPLE_ORCHESTRATOR_STUB: "micro_core/toolkit/example_orchestrator_stub.py.md",
+  MICRO_CORE_TOOLKIT_FLOW_DIAGRAMS: "micro_core/toolkit/flow_diagrams.md",
+  MICRO_CORE_TOOLKIT_INTEGRATION_PATHWAYS: "micro_core/toolkit/integration_pathways.md",
+  MICRO_CORE_TOOLKIT_LICENSING_NOTES: "micro_core/toolkit/licensing_notes.md",
+  MICRO_CORE_TOOLKIT_OVERVIEW: "micro_core/toolkit/overview.md",
+  MICRO_CORE_TOOLKIT_PRIMITIVES: "micro_core/toolkit/primitives.md",
+  MICRO_CORE_TOOLKIT_REGIME_SURFACE_EXAMPLE: "micro_core/toolkit/regime_surface_example.yaml.md",
+  MICRO_CORE_TOOLKIT_RESONANCE_OPERATORS: "micro_core/toolkit/resonance_operators.md",
+  MICRO_CORE_TOOLKIT_SECTOR_PATTERNS: "micro_core/toolkit/sector_patterns.md",
+  MICRO_CORE_TOOLKIT_SUMMARY: "micro_core/toolkit/summary.md",
+  MICRO_CORE_TOOLKIT_TRIAD_TEMPLATES: "micro_core/toolkit/triad_templates.md",
+  MICRO_CORE_WHITEPAPER_APPLICATIONS_ULTRA_LOW_POWER: "micro_core/whitepaper/applications_ultra_low_power.md",
+  MICRO_CORE_WHITEPAPER_BACKGROUND: "micro_core/whitepaper/background.md",
+  MICRO_CORE_WHITEPAPER_CONCLUSION: "micro_core/whitepaper/conclusion.md",
+  MICRO_CORE_WHITEPAPER_FRACTIONAL_DIMENSIONAL_LADDER: "micro_core/whitepaper/fractional_dimensional_ladder.md",
+  MICRO_CORE_WHITEPAPER_FUTURE_WORK: "micro_core/whitepaper/future_work.md",
+  MICRO_CORE_WHITEPAPER_IMPLEMENTATION_PATHWAYS: "micro_core/whitepaper/implementation_pathways.md",
+  MICRO_CORE_WHITEPAPER_LICENSING_AND_IP: "micro_core/whitepaper/licensing_and_ip.md",
+  MICRO_CORE_WHITEPAPER_MICRO_CORE_DEFINITION: "micro_core/whitepaper/micro_core_definition.md",
+  MICRO_CORE_WHITEPAPER_MICRO_MACRO_COHERENCE: "micro_core/whitepaper/micro_macro_coherence.md",
+  MICRO_CORE_WHITEPAPER_MICRO_TRIADS: "micro_core/whitepaper/micro_triads.md",
+  MICRO_CORE_WHITEPAPER_MOTIVATION: "micro_core/whitepaper/motivation.md",
+  MICRO_CORE_WHITEPAPER_OVERVIEW: "micro_core/whitepaper/overview.md",
+  MICRO_CORE_WHITEPAPER_RESONANCE_TIME_DYNAMICS: "micro_core/whitepaper/resonance_time_dynamics.md",
+  MICRO_CORE_WHITEPAPER_SECTOR_USE_CASES: "micro_core/whitepaper/sector_use_cases.md",
+  RTT_INSIDE_README: "RTT-Inside/README.md",
+  RTT_12_README: "RTT_12/README.md",
+  SORT_6D_PHASE_SPACE_VARIANT: "sort/6D_phase‑space_variant.md",
+  SORT_CROSSLINK_DIAGRAM: "sort/crosslink_diagram.md",
+  SORT_DIMENSION_INDEX: "sort/dimension_index.md",
+  SORT_MERMAID_DIMENSIONAL_LADDER: "sort/mermaid_version_of_the_dimensional_ladder.md",
+  SORT_OPERATOR_INDEX: "sort/operator_index.md",
+  SORT_REGIME_INDEX: "sort/regime_index.md",
+  SORT_SORTABLE_TABLE_VERSION: "sort/sortable_table_version.md",
+  SORT_TRIADIC_GEOMETRY_VERSION: "sort/triadic‑geometry_version.md",
+  SORT_VISUAL_DIMENSIONAL_LADDER: "sort/visual_dimensional_ladder.md"
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
