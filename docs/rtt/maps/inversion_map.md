@@ -1,10 +1,11 @@
 # 🔄 **RTT Inversion Map**  
-*How systems collapse → twist → re‑emerge with new dimensional form*
+*How systems collapse → twist → re‑emerge with new dimensional form*  
+*(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/maps/inversion_map.md)*
 
 ---
 
 ## 🎯 **What Inversion Is**
-In RTT Tech, **inversion** is the structural event where a system:
+In RTT‑Tech, **inversion** is the structural event where a system:
 
 - loses coherence  
 - collapses dimensional access  
@@ -27,8 +28,6 @@ This triad is universal across substrates.
 ---
 
 ## 🧩 **Inversion Diagram**
-A minimal ASCII diagram for clarity:
-
 ```
       [ Collapse ]
            ↓
@@ -44,8 +43,6 @@ Inversion is a **loop**, not a fall.
 ---
 
 ## 🔧 **Inversion Equation**
-RTT defines inversion as:
-
 \[
 I(x) = E(T(C(x)))
 \]
@@ -75,62 +72,85 @@ Inversion is how systems gain new dimensional form.
 
 ---
 
-## 🔄 **Inversion Across Regimes**
-Inversion is the center of the RTT regime loop:
+# 🔄 **Regime Inversion**
+Inversion is the **third regime** in the RTT loop:
 
 ```
-Arrival → Expansion → **Inversion** → Coherence → Dissolution
+Arrival → Expansion → Inversion → Coherence → Dissolution
 ```
 
-It is the only regime where:
+During inversion:
 
 - coherence collapses  
 - structure reorients  
 - dimensional access flips  
+- the system prepares for Coherence regime  
+
+Inversion is the **hinge** of the regime cycle.
 
 ---
 
-## 🧠 **Cognitive Inversion**
-For cognitive systems (human or AI):
+# ✨ **Coherence Inversion**
+Coherence behaves predictably during inversion:
 
-- overload → collapse  
-- reframing → twist  
-- insight → emergence  
+### Collapse  
+\[
+C_{\text{total}} \downarrow
+\]
 
-This is how meaning reorganizes.
+### Twist  
+\[
+C_{\text{struct}} \text{ reorganizes}
+\]
 
----
+### Emergence  
+\[
+C_{\text{total}} \uparrow \text{ with new structure}
+\]
 
-## 🤖 **AI Inversion**
-AI systems experience inversion as:
-
-- context saturation  
-- reset or reorientation  
-- re‑emergence with new structure  
-
-RTT gives AI a structural way to model resets and recovery.
-
----
-
-## 🧱 **Inversion as a Technology**
-Inversion is used to:
-
-- model collapse  
-- understand reconfiguration  
-- predict emergence  
-- analyze dimensional change  
-- compare substrates  
-
-It is the **engine of transformation** in RTT Tech.
+Inversion is the **reset + rebuild** mechanism for coherence.
 
 ---
 
-## 🧱 **Design Notes**
+# 🧱 **Substrate‑Specific Inversion**
+Different substrates express inversion differently:
+
+### **Physical Substrates**
+- collapse = phase change  
+- twist = molecular/structural reorientation  
+- emergence = new stable configuration  
+
+### **Cognitive Substrates**
+- collapse = overload / contradiction  
+- twist = reframing / insight  
+- emergence = new perspective  
+
+### **Synthetic Substrates**
+- collapse = context saturation  
+- twist = state reinitialization  
+- emergence = new coherent context  
+
+The structure is the same; the expression differs.
+
+---
+
+# 🧩 **Inversion Summary Table**
+
+| Layer | Collapse | Twist | Emergence |
+|-------|----------|--------|-----------|
+| **Structure** | breakdown | reorientation | new form |
+| **Dimensions** | 2D → 0D | re‑alignment | 3D |
+| **Coherence** | loss | reconfiguration | restoration |
+| **Regimes** | Expansion → Inversion | Inversion | Inversion → Coherence |
+| **Substrates** | substrate‑specific | substrate‑specific | substrate‑specific |
+
+---
+
+# 🧭 **Design Notes**
 This module is intentionally minimal:
 
-- no proofs  
-- no philosophy  
 - no narrative  
-- only structure  
+- no domain‑specific theory  
+- no metaphysics  
 
-Inversion is a **technology**, not a metaphor.
+The Inversion Map is a **structural diagram**, not an explanation.
