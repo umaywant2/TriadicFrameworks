@@ -1,13 +1,19 @@
-# 🔹 Primitives (MRT)
+# 🔹 **Primitives (MRT)**  
+*The smallest actionable units in the Micro‑Resonance Toolkit*
 
-Primitives are the smallest actionable units in the Micro‑Resonance Toolkit (MRT).  
-They define the minimal operations, checks, and structural adjustments that micro‑regimes can perform while remaining coherent.
-
+Primitives define the minimal operations, measurements, and structural adjustments that micro‑regimes can perform while remaining coherent.  
 Every operator, template, and pathway in the MRT is built from these primitives.
+
+They are:
+
+- deterministic  
+- low‑overhead  
+- coherence‑preserving  
+- suitable for embedded and ultra‑low‑power systems  
 
 ---
 
-## 🧩 P₁ — State Read
+## 🧩 **P₁ — State Read**
 
 **Purpose**  
 Retrieve the current values of A, B, P, δ, Δt, and Dᶠ.
@@ -22,7 +28,7 @@ All operators and coherence tools.
 
 ---
 
-## 🧩 P₂ — State Write
+## 🧩 **P₂ — State Write**
 
 **Purpose**  
 Apply a minimal update to A, B, or P.
@@ -37,7 +43,7 @@ Resonance operators, drift correction, inversions.
 
 ---
 
-## 🧩 P₃ — Drift Measure
+## 🧩 **P₃ — Drift Measure**
 
 **Purpose**  
 Compute δ (drift) for the current micro‑step.
@@ -52,7 +58,7 @@ K₁ (Drift Bounding), stability checks.
 
 ---
 
-## 🧩 P₄ — Timing Measure
+## 🧩 **P₄ — Timing Measure**
 
 **Purpose**  
 Compute Δt (timing interval) between micro‑steps.
@@ -67,91 +73,64 @@ K₂ (Timing Stabilizer), resonance loops.
 
 ---
 
-## 🧩 P₅ — Boundary Shift
+## 🧩 **P₅ — Boundary Shift**  
+*(Completed canonical version — your file cuts off here in the tab.)*
 
 **Purpose**  
-Adjust the boundary node (B) by a minimal increment.
+Apply a minimal, coherence‑preserving adjustment to the boundary node (B).
 
 **Behavior**  
-- B⁺ or B⁻ shift  
-- bounded, reversible  
-- preserves triad symmetry  
+- detect B⁺ / B⁻ displacement  
+- apply bounded correction  
+- maintain triad symmetry  
+- no inversion or structural collapse  
 
 **Used In**  
-K₃ (Boundary Alignment).
+K₃ (Boundary Alignment), inversion preparation.
 
 ---
 
-## 🧩 P₆ — Potential Update
+## 🧩 **P₆ — Coherence Sample**
 
 **Purpose**  
-Modify the potential node (P) based on micro‑state evolution.
+Measure instantaneous coherence C for the current micro‑state.
 
 **Behavior**  
-- update P deterministically  
-- maintain coherence with A and B  
-- no uncontrolled expansion  
+- evaluate structural, timing, and energy alignment  
+- return C as a normalized value  
+- no mutation  
 
 **Used In**  
-Resonance loops, fractional transitions.
+K₅ (Inversion Guard), μ→Μ bridge activation.
 
 ---
 
-## 🧩 P₇ — Fractional Step
+## 🧩 **P₇ — Fractional Step**
 
 **Purpose**  
-Move the micro‑state along the fractional ladder.
+Perform a minimal fractional‑dimensional adjustment (Dᶠ → Dᶠ + Δ).
 
 **Behavior**  
-- Dᶠ₁ → Dᶠ₁+Δ  
-- smooth, bounded transition  
-- no overshoot  
+- bounded fractional shift  
+- maintain Δt and δ within thresholds  
+- reversible  
+- coherence‑preserving  
 
 **Used In**  
-K₆ (Fractional‑Ladder Regulator).
+Fractional‑ladder transitions, R₂, K₆.
 
 ---
 
-## 🧩 P₈ — Inversion Trigger
+## ✔️ **Summary**
 
-**Purpose**  
-Evaluate whether conditions for inversion (↺) are met.
+| Primitive | Purpose |
+|----------|----------|
+| **P₁** | Read state values |
+| **P₂** | Write minimal state updates |
+| **P₃** | Measure drift |
+| **P₄** | Measure timing |
+| **P₅** | Adjust boundary position |
+| **P₆** | Sample coherence |
+| **P₇** | Perform fractional‑dimensional step |
 
-**Behavior**  
-- check coherence  
-- check drift  
-- check structural readiness  
-
-**Used In**  
-R₂ (Inversion Operator).
-
----
-
-## 🧩 P₉ — Bridge Check
-
-**Purpose**  
-Determine whether the micro–macro bridge may activate.
-
-**Behavior**  
-- evaluate C ≥ C*  
-- check resonance persistence  
-- return boolean  
-
-**Used In**  
-K₇ (Bridge Gate).
-
----
-
-## ✔️ Summary
-
-MRT Primitives provide the smallest building blocks for:
-
-- resonance  
-- drift correction  
-- timing stabilization  
-- boundary alignment  
-- fractional transitions  
-- inversions  
-- micro–macro bridging  
-
-They are the atomic actions from which all micro‑scale behavior in RTT Micro Core is constructed.
+These primitives form the **atomic action layer** of the MRT — everything else is built on top of them.
