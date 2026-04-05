@@ -1,14 +1,13 @@
-# 🔬 What Is Micro Core?
-
-RTT Micro Core is the smallest stable unit of Resonance–Time Theory — a compact, self‑consistent substrate for micro‑scale resonance, coherence, and triadic structure.
-
+# 🔬 **What Is Micro Core?**  
+**RTT Micro Core** is the smallest stable unit of Resonance–Time Theory — a compact, self‑consistent substrate for micro‑scale resonance, coherence, and triadic structure.  
 It defines the essential operators, invariants, and transitions needed to model micro‑regimes with precision and ultra‑low computational cost.
 
-Micro Core is RTT at its most minimal, and its most portable.
+Micro Core is RTT at its **most minimal**, and its **most portable**.  
+It is designed to remain stable where larger models cannot.
 
 ---
 
-## 🧩 Why Micro Core Exists
+## 🧩 **Why Micro Core Exists**
 
 Micro‑scale systems operate under tight constraints:
 
@@ -25,23 +24,30 @@ Micro Core provides a stable foundation for these environments by offering:
 - predictable micro‑resonance  
 - clean triadic structure  
 
-It is designed to remain stable where larger models cannot.
+It is built to function reliably in places where traditional models collapse under noise, timing pressure, or resource scarcity.
 
 ---
 
-## 🔺 The Micro Triad
+## 🔺 **The Micro Triad**
 
-At the heart of Micro Core is the **Micro Triad**:
+At the heart of Micro Core is the **Micro Triad**, the smallest structure capable of resonance, inversion, and coherent change.
 
-- **Active Node** — the current micro‑state  
-- **Boundary Node** — the local constraint  
-- **Potential Node** — the next possible transition  
+- **Active Node (A)** — the current micro‑state  
+- **Boundary Node (B)** — the local constraint  
+- **Potential Node (P)** — the next possible transition  
 
-This triadic structure is the smallest unit capable of resonance, inversion, and coherent change.
+This triadic structure is the minimal unit that can support:
+
+- oscillation  
+- inversion  
+- boundary modulation  
+- fractional‑dimensional evolution  
+
+The triad is the “atom” of Micro‑Core reasoning.
 
 ---
 
-## 🌀 Fractional Dimensions
+## 🌀 **Fractional Dimensions**
 
 Micro Core uses **fractional dimensions** to describe how micro‑states:
 
@@ -50,42 +56,35 @@ Micro Core uses **fractional dimensions** to describe how micro‑states:
 - invert  
 - stabilize  
 
-These transitions form the **Fractional Dimensional Ladder**, a smooth pathway for micro‑scale change.
+These transitions form the **Fractional Dimensional Ladder** — a smooth, coherence‑preserving pathway for micro‑scale change.  
+Fractional dimensions allow Micro Core to model subtle, continuous transitions without requiring heavy computation.
 
 ---
 
-## 🔗 Micro–Macro Coherence
+## 🔗 **Micro–Macro Coherence**
 
 Micro Core defines the smallest reliable bridge between micro‑scale and macro‑scale behavior.
 
-When a micro‑pattern is coherent enough, it can influence larger systems through a controlled, predictable operator.
+When a micro‑pattern becomes coherent enough (C ≥ C\*), it can influence larger systems through a controlled, predictable operator.  
+This bridge is:
 
-This is not amplification — it is alignment.
+- bounded  
+- deterministic  
+- aggregate‑only  
+- coherence‑validated  
 
----
-
-## ⚡ Where Micro Core Is Used
-
-Micro Core is ideal for:
-
-- ultra‑low‑power devices  
-- embedded decision loops  
-- distributed micro‑agents  
-- constrained compute environments  
-- micro‑scale modeling and simulation  
-
-Anywhere stability matters under tight constraints, Micro Core fits.
+It ensures that micro‑scale behavior can inform macro‑scale systems **without amplification or instability**.
 
 ---
 
-## 🧭 Summary
+## ✔️ **Summary**
 
 RTT Micro Core is:
 
-- minimal  
-- coherent  
-- stable  
-- portable  
-- precise  
+- the **minimal substrate** of Resonance–Time Theory  
+- a **triadic**, **coherence‑preserving** micro‑model  
+- designed for **ultra‑low‑power**, **embedded**, and **constrained** environments  
+- capable of **fractional‑dimensional evolution**  
+- able to **bridge micro‑patterns to macro‑systems** safely  
 
-It provides the smallest possible RTT substrate — a foundation for building, teaching, and deploying micro‑scale resonance systems.
+It is the foundation upon which the entire Micro‑Resonance Toolkit (MRT) is built.
