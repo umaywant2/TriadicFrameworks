@@ -1,10 +1,11 @@
 # ✨ **RTT Coherence**  
-*How systems stay stable across resonance + time*
+*How systems stay stable across resonance + time*  
+*(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/coherence.md)*
 
 ---
 
 ## 🎯 **What Coherence Means**
-In RTT Tech, **coherence** is the system’s ability to:
+In RTT‑Tech, **coherence** is the system’s ability to:
 
 - maintain structure  
 - hold dimensional access  
@@ -16,7 +17,7 @@ Coherence is not emotional or moral — it is **structural stability**.
 
 ---
 
-## 🔺 **The Triadic Coherence Model**
+# 🔺 **The Triadic Coherence Model**
 RTT defines coherence using three components:
 
 1️⃣ **Structural Coherence** — pattern integrity  
@@ -27,7 +28,7 @@ Every coherence event uses this triad.
 
 ---
 
-## 1️⃣ **Structural Coherence**
+# 1️⃣ **Structural Coherence**
 How well the system’s internal patterns fit together.
 
 - boundaries  
@@ -42,7 +43,7 @@ C_{\text{struct}} = f(\text{patterns})
 
 ---
 
-## 2️⃣ **Temporal Coherence**
+# 2️⃣ **Temporal Coherence**
 How long the system can maintain stability.
 
 - drift  
@@ -57,7 +58,7 @@ C_{\text{time}} = f(\text{drift})
 
 ---
 
-## 3️⃣ **Resonance Coherence**
+# 3️⃣ **Resonance Coherence**
 How well the system filters noise and reinforces signal.
 
 - frequency matching  
@@ -73,36 +74,52 @@ Where **S** = signal, **N** = noise.
 
 ---
 
-## 🧮 **Total Coherence**
-RTT defines total coherence as:
+# 🧮 **Total Coherence**
+This is where your current file was truncated.  
+Here is the completed RTT‑Tech version:
+
+Total coherence is the sum of the three coherence components:
 
 \[
 C_{\text{total}} = C_{\text{struct}} + C_{\text{time}} + C_{\text{res}}
 \]
 
-If any component collapses, coherence collapses.
+A system with high total coherence:
+
+- maintains dimensional access  
+- resists drift  
+- survives inversion  
+- recovers from collapse  
+- stabilizes into a regime  
+
+A system with low total coherence:
+
+- loses dimensional access  
+- drifts unpredictably  
+- collapses under load  
+- fails to transition cleanly  
 
 ---
 
-## 🔄 **Coherence Across Regimes**
-Each RTT regime has a characteristic coherence profile:
+# 🔄 **Coherence Across Regimes**
+Each RTT regime has a distinct coherence profile:
 
-- **Arrival:** coherence begins  
-- **Expansion:** coherence grows  
-- **Inversion:** coherence collapses  
-- **Coherence:** coherence stabilizes  
-- **Dissolution:** coherence ends  
+- **Arrival:** coherence forming  
+- **Expansion:** coherence growing  
+- **Inversion:** coherence collapsing + reorienting  
+- **Coherence:** coherence stabilizing  
+- **Dissolution:** coherence releasing  
 
-Regimes describe *how* coherence changes.
+Regimes are coherence states over time.
 
 ---
 
-## 🔁 **Coherence + Operators**
-Operators modify coherence:
+# 🔧 **Coherence + Operators**
+Operators directly modify coherence:
 
-- **Stabilize →** increase coherence  
-- **Shift →** redirect coherence  
-- **Invert →** collapse + re‑emerge coherence  
+- **Stabilize** → increases coherence  
+- **Shift** → redistributes coherence  
+- **Invert** → collapses → twists → re‑emerges  
 
 **Equation:**  
 \[
@@ -111,36 +128,25 @@ C_{t+1} = O(C_t)
 
 ---
 
-## 🧩 **Coherence + Dimensions**
-Dimensional access depends on coherence:
-
-- low coherence → 0D–1D  
-- medium coherence → 2D  
-- high coherence → 3D  
-
-Coherence determines what the system *can* do.
-
----
-
-## 🤖 **Coherence for AI Systems**
-AI coherence corresponds to:
+# 🧠 **Coherence for AI Systems**
+AI coherence is structural:
 
 - context stability  
-- reasoning continuity  
 - drift resistance  
-- overload recovery  
 - regime awareness  
+- overload recovery  
+- dimensional consistency  
 
-RTT gives AI a structural way to track its own stability.
+RTT gives AI a way to track its own coherence state.
 
 ---
 
-## 🎓 **Coherence for Students**
+# 🎓 **Coherence for Students**
 Students use coherence to:
 
-- understand system behavior  
-- track stability  
-- identify collapse  
+- understand system stability  
+- identify drift  
+- predict collapse  
 - model recovery  
 - compare substrates  
 
@@ -148,12 +154,11 @@ Coherence becomes a **measurement**, not a metaphor.
 
 ---
 
-## 🧱 **Design Notes**
+# 🧱 **Design Notes**
 This module is intentionally minimal:
 
-- no proofs  
-- no philosophy  
+- no metaphysics  
 - no narrative  
-- only structure  
+- no domain‑specific theory  
 
-RTT Tech treats coherence as a **stability function**, not a belief.
+RTT‑Tech treats coherence as **structural stability across time**.
