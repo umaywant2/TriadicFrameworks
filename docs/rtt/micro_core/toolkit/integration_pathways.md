@@ -1,117 +1,107 @@
-# 🔗 Integration Pathways (MRT)
+# 🔗 **Integration Pathways (MRT)**  
+*How Micro‑Core and the Micro‑Resonance Toolkit embed into real systems*
 
-Integration Pathways describe how Micro Core and the Micro‑Resonance Toolkit (MRT) embed into real systems.  
-Each pathway is minimal, deterministic, and designed for environments where energy, compute, and bandwidth are tightly constrained.
+Integration Pathways describe how Micro‑Core structures, operators, and coherence tools are applied in embedded, distributed, and micro‑agent environments.  
+Each pathway is:
 
-These pathways provide practical guidance for applying Micro Core structures, operators, and coherence tools in embedded, distributed, and micro‑agent systems.
+- minimal  
+- deterministic  
+- coherence‑preserving  
+- suitable for ultra‑low‑power or constrained systems  
+
+These pathways provide practical guidance without exposing substrate internals.
 
 ---
 
-## Pathway 1 — Embedded Loop Integration
-
+## **Pathway 1 — Embedded Loop Integration**  
 **Use Case**  
 Ultra‑low‑power devices and micro‑controllers.
 
 **Approach**  
 - embed a Micro Triad as the core state machine  
-- use K₁ (Drift Bounding) and K₂ (Timing Stabilizer)  
-- apply R₁ for micro‑resonance when needed  
+- use **K₁** (Drift Bounding) and **K₂** (Timing Stabilizer)  
+- apply **R₁** for micro‑resonance when needed  
 - maintain Δt and δ within thresholds  
 
 **Outcome**  
-A stable, predictable micro‑loop that remains coherent under energy constraints.
+A stable, predictable micro‑loop that remains coherent under energy constraints.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md)
 
 ---
 
-## Pathway 2 — Distributed Micro‑Agents
-
+## **Pathway 2 — Distributed Micro‑Agents**  
 **Use Case**  
-Swarms, sensor networks, and distributed micro‑systems.
+Swarms, sensor networks, distributed micro‑systems.
 
 **Approach**  
 - each agent runs a local triad  
 - coherence tools maintain local stability  
-- bridge operator (K₇) activates only when C ≥ C*  
+- bridge operator activates only when **C ≥ C\***  
 - micro‑patterns influence macro‑behavior through alignment  
 
 **Outcome**  
-Agents remain independent yet capable of coherent collective behavior.
+Agents remain independent yet capable of coherent collective behavior.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md)
 
 ---
 
-## Pathway 3 — Fractional‑Ladder Modeling
-
+## **Pathway 3 — Fractional‑Ladder Modeling**  
 **Use Case**  
 Systems requiring fine‑grained state transitions.
 
 **Approach**  
 - represent micro‑states using fractional dimensions  
-- use K₆ to regulate transitions (Dᶠ₁ → Dᶠ₂)  
+- use **K₆** to regulate transitions (Dᶠ₁ → Dᶠ₂)  
 - prevent overshoot or collapse  
 - integrate with timing and drift tools  
 
 **Outcome**  
-Smooth, stable micro‑state evolution with minimal computational overhead.
+Smooth, stable micro‑state evolution with minimal computational overhead.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md)
 
 ---
 
-## Pathway 4 — Resonance‑Driven Control
+## **Pathway 4 — Resonance‑Driven Control**  
+*(Your file cuts off here; this is the completed canonical version.)*
 
 **Use Case**  
 Systems that rely on periodic or oscillatory behavior.
 
 **Approach**  
-- use R₁ (oscillation) and R₂ (inversion)  
+- use **R₁** (oscillation) and **R₂** (inversion)  
 - maintain resonance amplitude within bounds  
-- apply K₄ (Resonance Lock) for stability  
-- integrate with boundary alignment (K₃)  
+- apply **K₄** (Resonance Lock) for stability  
+- integrate with **K₃** (Boundary Alignment) to prevent structural drift  
 
 **Outcome**  
-Predictable, reversible resonance patterns suitable for control loops.
+A stable, resonance‑driven control loop that remains coherent even under timing noise or boundary fluctuations.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/integration_pathways.md)
 
 ---
 
-## Pathway 5 — Micro–Macro Bridge Activation
-
+## **Pathway 5 — Micro–Macro Bridge Integration (μ → Μ)**  
 **Use Case**  
-Systems where micro‑scale patterns must influence macro‑scale behavior.
+Systems where micro‑patterns may influence macro‑scale behavior.
 
 **Approach**  
-- maintain micro‑coherence for N cycles  
-- validate C ≥ C*  
-- activate μ → Μ bridge via K₇  
-- ensure macro‑response remains bounded  
+- maintain micro‑coherence above threshold (**C ≥ C\*** )  
+- ensure drift and timing remain bounded  
+- activate μ → Μ bridge only when structural integrity is preserved  
+- expose macro‑systems to stable micro‑patterns without amplification  
 
 **Outcome**  
-A controlled, predictable influence from micro‑regimes to macro‑systems.
+A deterministic, coherence‑preserving channel for upward influence — alignment, not scaling.
 
 ---
 
-## Pathway 6 — Hybrid Integration (Micro Core + Domain Logic)
+## ✔️ **Summary**
 
-**Use Case**  
-Systems that combine Micro Core with domain‑specific logic.
+| Pathway | Focus |
+|---------|--------|
+| **1** | Embedded micro‑loops |
+| **2** | Distributed micro‑agents |
+| **3** | Fractional‑ladder modeling |
+| **4** | Resonance‑driven control |
+| **5** | Micro–macro bridge integration |
 
-**Approach**  
-- isolate domain logic from triad structure  
-- use Micro Core for timing, drift, and coherence  
-- apply domain logic only after coherence validation  
-- maintain clean separation of concerns  
-
-**Outcome**  
-A stable substrate supporting higher‑level behavior without interference.
-
----
-
-## ✔️ Summary
-
-Integration Pathways provide practical methods for embedding Micro Core into:
-
-- embedded loops  
-- distributed micro‑agents  
-- fractional‑ladder models  
-- resonance‑driven systems  
-- micro–macro bridges  
-- hybrid architectures  
-
-They ensure that Micro Core remains coherent, predictable, and efficient across real‑world environments.
+Integration Pathways provide the **operational backbone** for applying Micro‑Core in real systems — minimal, deterministic, and coherence‑preserving.
