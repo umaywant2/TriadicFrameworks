@@ -1,57 +1,109 @@
-## 2️⃣ `regime_surface_example.yaml`
-**Purpose:** Show regime surfaces as declarative interfaces  
-**Audience:** Systems thinkers, Kubernetes / infra folks, educators
+# 🧩 **Regime Surface Example (`regime_surface_example.yaml`)**  
+*A declarative interface for defining regime boundaries without exposing behavior*
 
-### Structure
+**Purpose**  
+Show how a regime surface can be expressed declaratively — inspectable, teachable, and structurally meaningful, without encoding substrate logic.
+
+**Audience**  
+Systems thinkers, infra/Kubernetes engineers, educators, and reviewers.
+
+---
+
+## 📘 **Structure**
+
 ```yaml
 # RTT Regime Surface Example
-# This file defines a regime boundary without encoding behavior.
+# Defines a regime boundary without encoding behavior.
 
 regime:
   name: "Thermal-Coherence-Band"
   description: >
-    Stable operation where temperature gradients dominate
-    over electrical coupling noise.
+    Stable operation where temperature gradients dominate over
+    electrical coupling noise.
 
-signals:
-  spin:
-    role: orientation
-    stability: high
-  elec:
-    role: coupling
-    stability: medium
-  temp:
-    role: governor
-    stability: dominant
+  signals:
+    spin:
+      role: orientation
+      stability: high
+    elec:
+      role: coupling
+      stability: medium
+    temp:
+      role: governor
+      stability: dominant
 
-constraints:
-  qroot_boundary:
-    allow_raw_state: false
-    export_aggregates_only: true
+  constraints:
+    qroot_boundary:
+      allow_raw_state: false
+      export_aggregates_only: true
 
-status_conditions:
-  - Ready
-  - Degraded
-  - Transitioning
-  - Unknown
+  status_conditions:
+    - Ready
+    - Degraded
+    - Transitioning
+    - Unknown
 ```
-
-### Why this works
-- Mirrors CRDs and OpenTelemetry specs
-- Makes regimes *inspectable* without being executable
-- Reinforces that **regimes are surfaces, not states**
-- Educators can point to this and say “this is the idea”
 
 ---
 
-## Why this trio is enough
+## 🧭 **How to Read This**
 
-Together, these three files:
-- Answer Grok’s “quick win” suggestion
-- Provide **examples without commitment**
-- Preserve RTT’s identity as a *regime-aware framework*
-- Give educators, engineers, and reviewers something concrete
+### **Regime Name & Description**  
+Defines the *surface*, not the internal physics.  
+It tells educators and engineers what the regime *means*, not how it behaves.
 
-Most importantly:  
-They **don’t turn Micro Core into a product**.  
-They turn it into a *touchpoint*.
+### **Signals Block**  
+Each signal is a **declared input channel** with:
+
+- a role (orientation, coupling, governor)  
+- a stability profile (high, medium, dominant)  
+
+This mirrors CRDs, OpenTelemetry schemas, and other declarative specs.
+
+### **Constraints Block**  
+The `qroot_boundary` enforces:
+
+- **no raw state exposure**  
+- **aggregate‑only export**  
+
+This preserves RTT’s boundary‑first identity.
+
+### **Status Conditions**  
+A simple, Kubernetes‑style readiness set:
+
+- Ready  
+- Degraded  
+- Transitioning  
+- Unknown  
+
+These allow orchestration layers to reason about the regime without touching internals.
+
+---
+
+## 🌉 **Why This Works**
+
+This example succeeds because it:
+
+- mirrors familiar infra patterns (CRDs, OTel, spec files)  
+- is **inspectable** but not executable  
+- reinforces that **regimes are surfaces, not states**  
+- gives educators a concrete artifact to point to  
+- provides engineers with a mental model without revealing substrate logic  
+
+It is a *touchpoint*, not an implementation.
+
+---
+
+## 🧱 **Why This Trio of Files Is Enough**
+
+Together with the orchestrator stub and boundary notes, this file:
+
+- satisfies Grok’s “quick win” suggestion  
+- provides **examples without commitment**  
+- preserves RTT’s identity as a **regime‑aware framework**  
+- gives educators, engineers, and reviewers something concrete to anchor to  
+
+Most importantly:
+
+### **It does not turn Micro‑Core into a product.  
+It turns it into a touchpoint.**
