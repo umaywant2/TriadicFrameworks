@@ -1,14 +1,19 @@
-# 🔸 Resonance Operators (MRT)
+# 🔸 **Resonance Operators (MRT)**  
+*Core actions that shape micro‑scale resonance within RTT Micro‑Core*
 
-Resonance Operators define the core actions that micro‑regimes can perform within RTT Micro Core.  
-They shape oscillation, inversion, stability, and transition — the essential behaviors of micro‑scale resonance.
+Resonance Operators define the essential behaviors that micro‑regimes can perform.  
+They shape oscillation, inversion, stability, boundary modulation, and fractional‑dimensional transitions.
 
-Each operator is deterministic, minimal, and built entirely from MRT Primitives.
+Each operator is:
+
+- deterministic  
+- minimal  
+- coherence‑preserving  
+- built entirely from MRT Primitives  
 
 ---
 
-## 🔸 R₁ — Oscillation Operator
-
+## 🔸 **R₁ — Oscillation Operator**  
 **Purpose**  
 Create a stable oscillation between Active (A) and Potential (P) nodes.
 
@@ -16,31 +21,33 @@ Create a stable oscillation between Active (A) and Potential (P) nodes.
 - read A and P (P₁)  
 - update A ⇆ P (P₂, P₆)  
 - maintain Δt using timing tools  
-- ensure δ ≤ δ*  
+- ensure δ ≤ δ\*  
 
 **Outcome**  
-A coherent micro‑resonance loop.
+A coherent micro‑resonance loop.  
+(From your original file    [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/resonance_operators.md))
 
 ---
 
-## 🔸 R₂ — Inversion Operator (↺)
+## 🔸 **R₂ — Inversion Operator (↺)**  
+*(Corrected — your file referenced P₈, which does not exist.)*
 
 **Purpose**  
 Perform a controlled, reversible inversion of the triad.
 
 **Behavior**  
-- evaluate inversion trigger (P₈)  
+- evaluate inversion trigger using coherence sample (P₆)  
 - swap A and B roles (P₂, P₅)  
 - preserve P  
 - validate coherence before and after  
 
 **Outcome**  
-A clean inversion with no structural drift.
+A clean inversion with no structural drift.  
+(From your original file, corrected    [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/resonance_operators.md))
 
 ---
 
-## 🔸 R₃ — Boundary Modulation
-
+## 🔸 **R₃ — Boundary Modulation**  
 **Purpose**  
 Adjust the boundary node (B) to shape resonance amplitude or stability.
 
@@ -50,12 +57,12 @@ Adjust the boundary node (B) to shape resonance amplitude or stability.
 - maintain triad symmetry  
 
 **Outcome**  
-Fine‑grained control of micro‑resonance behavior.
+Fine‑grained control of micro‑resonance behavior.  
+(From your original file    [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/resonance_operators.md))
 
 ---
 
-## 🔸 R₄ — Resonance Lock
-
+## 🔸 **R₄ — Resonance Lock**  
 **Purpose**  
 Stabilize oscillatory behavior when resonance amplitude is within bounds.
 
@@ -65,66 +72,50 @@ Stabilize oscillatory behavior when resonance amplitude is within bounds.
 - enforce timing consistency  
 
 **Outcome**  
-A locked, stable resonance pattern.
+A locked, stable resonance pattern.  
+(From your original file    [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/resonance_operators.md))
 
 ---
 
-## 🔸 R₅ — Fractional Transition Operator
-
+## 🔸 **R₅ — Fractional‑Ladder Transition**  
 **Purpose**  
-Move the micro‑state along the fractional‑dimensional ladder.
+Perform a controlled transition across fractional dimensions (Dᶠ₁ → Dᶠ₂).
 
 **Behavior**  
-- evaluate dimensional stability  
+- evaluate boundary compatibility (P₁, P₅)  
 - apply fractional step (P₇)  
-- prevent overshoot or collapse  
+- maintain Δt and δ within thresholds  
+- ensure C ≥ C\* throughout  
 
 **Outcome**  
-Smooth, coherent dimensional transitions.
+A smooth, coherence‑preserving fractional‑dimensional transition.
 
 ---
 
-## 🔸 R₆ — Potential Rebuild
-
+## 🔸 **R₆ — Micro–Macro Bridge Activation (μ → Μ)**  
 **Purpose**  
-Reconstruct the Potential node (P) after transitions or inversions.
+Expose a coherent micro‑pattern to macro‑scale systems.
 
 **Behavior**  
-- read current triad state (P₁)  
-- compute new P based on micro‑regime conditions  
-- apply bounded update (P₂, P₆)  
+- sample coherence (P₆)  
+- validate C ≥ C\*  
+- export aggregate‑only pattern  
+- activate μ → Μ bridge  
 
 **Outcome**  
-A refreshed, coherent potential for future transitions.
+A deterministic, safe upward influence channel — alignment, not amplification.
 
 ---
 
-## 🔸 R₇ — Micro–Macro Bridge Operator (μ → Μ)
+## ✔️ **Summary**
 
-**Purpose**  
-Transmit a coherent micro‑pattern to a macro‑regime.
+| Operator | Purpose |
+|----------|----------|
+| **R₁** | Oscillation (A ⇆ P) |
+| **R₂** | Controlled inversion |
+| **R₃** | Boundary modulation |
+| **R₄** | Resonance lock |
+| **R₅** | Fractional‑ladder transition |
+| **R₆** | Micro–macro bridge activation |
 
-**Behavior**  
-- check bridge readiness (P₉)  
-- validate C ≥ C*  
-- emit stable micro‑signal  
-- maintain micro‑regime integrity  
-
-**Outcome**  
-A controlled influence from micro‑scale to macro‑scale behavior.
-
----
-
-## ✔️ Summary
-
-Resonance Operators define the essential actions of micro‑scale behavior:
-
-- oscillation  
-- inversion  
-- boundary modulation  
-- resonance locking  
-- fractional transitions  
-- potential rebuilding  
-- micro–macro bridging  
-
-They form the operational core of the Micro‑Resonance Toolkit and enable coherent, predictable micro‑regime dynamics.
+These operators form the **action layer** of micro‑scale resonance — minimal, deterministic, and coherence‑preserving.
