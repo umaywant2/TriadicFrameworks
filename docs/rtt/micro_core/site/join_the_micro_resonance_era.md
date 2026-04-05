@@ -1,14 +1,18 @@
-# 🚀 Join the Micro‑Resonance Era
+# 🚀 **Join the Micro‑Resonance Era**
 
 RTT Micro Core marks the beginning of a new phase in resonance‑time reasoning — one where micro‑scale coherence, stability, and structure become accessible to anyone working with constrained systems.
 
-Micro Core is small enough to learn quickly,  
-strong enough to deploy anywhere,  
-and clear enough to teach without friction.
+Micro Core is:
+
+- small enough to learn quickly  
+- strong enough to deploy anywhere  
+- clear enough to teach without friction  
+
+It is RTT at its most portable.
 
 ---
 
-## 🔬 Why This Matters Now
+## 🔬 **Why This Matters Now**
 
 Modern systems are shrinking:
 
@@ -17,13 +21,13 @@ Modern systems are shrinking:
 - smaller compute envelopes  
 - smaller agents acting in larger swarms  
 
-Micro Core gives these systems a stable substrate — a way to maintain coherence, manage drift, and operate predictably even under extreme constraints.
+Micro Core provides a stable substrate for these environments — a way to maintain coherence, manage drift, and operate predictably even under extreme constraint.
 
-This is RTT at its most portable.
+This is the foundation for the next generation of micro‑scale reasoning.
 
 ---
 
-## 🧩 What You Can Do Next
+## 🧩 **What You Can Do Next**
 
 - Explore the **Fractional Dimensional Ladder**  
 - Learn how **Micro Triads** maintain structure  
@@ -37,7 +41,7 @@ Start anywhere. Follow your curiosity.
 
 ---
 
-## ⚡ A New Foundation for Small Systems
+## ⚡ **A New Foundation for Small Systems**
 
 Micro Core is designed for:
 
@@ -47,14 +51,13 @@ Micro Core is designed for:
 - constrained compute environments  
 - micro‑scale modeling and simulation  
 
-If your system needs to stay coherent when everything else is tight —  
-Micro Core is the substrate.
+If your system needs to stay coherent when everything else is tight — Micro Core is the substrate.
 
 ---
 
-## 🌐 Step Into the Era
+## 🌐 **Step Into the Era**
 
-You’re now standing at the threshold of the micro‑resonance era.  
+You’re standing at the threshold of the micro‑resonance era.  
 The tools are here.  
 The structure is here.  
 The path is clear.
