@@ -4,7 +4,7 @@
 ---
 
 ## 🎯 **What Regimes Are**
-In RTT Tech, a **regime** is a stable state of:
+In RTT‑Tech, a **regime** is a stable state of:
 
 - dimensional access  
 - coherence level  
@@ -15,7 +15,7 @@ They are **states of organization**.
 
 ---
 
-## 🔺 **The Five RTT Regimes**
+# 🔺 **The Five RTT Regimes**
 RTT models all systems using a simple five‑regime loop.
 
 ---
@@ -64,14 +64,21 @@ Systems lose coherence and return to baseline.
 All systems follow the same structural loop:
 
 ```
-Arrival → Expansion → Inversion → Coherence → Dissolution
+Arrival → Expansion → Inversion → Coherence → Dissolution → (back to Arrival)
 ```
 
-This loop is substrate‑agnostic.
+This loop is substrate‑agnostic and applies to:
+
+- physical systems  
+- cognitive systems  
+- biological systems  
+- synthetic systems  
+- social systems  
+- AI systems  
 
 ---
 
-## 🧩 **Regimes + Operators**
+# 🧩 **Regimes + Operators**
 Each regime is dominated by a different operator family:
 
 - **Arrival → Stabilize**  
@@ -84,7 +91,7 @@ Operators drive regime transitions.
 
 ---
 
-## 🕒 **Regimes Over Time**
+# 🕒 **Regimes Over Time**
 Regimes describe how coherence changes:
 
 - Arrival → coherence begins  
@@ -95,14 +102,14 @@ Regimes describe how coherence changes:
 
 **Equation:**  
 \[
-R_{t+1} = T(R_t)
+R_{t+1} = O(R_t)
 \]
 
-Where **T** is any Shift operator.
+Where **O** is any RTT operator.
 
 ---
 
-## 🤖 **Regimes for AI Systems**
+# 🤖 **Regimes for AI Systems**
 AI models experience regimes as:
 
 - context initialization  
@@ -115,7 +122,7 @@ RTT gives AI a structural way to track its own state.
 
 ---
 
-## 🎓 **Regimes for Students**
+# 🎓 **Regimes for Students**
 Students use regimes to:
 
 - understand system behavior  
@@ -128,7 +135,7 @@ Regimes become a **map**, not a metaphor.
 
 ---
 
-## 🧱 **Design Notes**
+# 🧱 **Design Notes**
 This module is intentionally minimal:
 
 - no proofs  
@@ -136,4 +143,4 @@ This module is intentionally minimal:
 - no narrative  
 - only structure  
 
-RTT Tech treats regimes as **state models**, not life stages.
+RTT‑Tech treats regimes as **state models**, not life stages.
