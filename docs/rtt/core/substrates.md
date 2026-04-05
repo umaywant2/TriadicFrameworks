@@ -1,21 +1,23 @@
 # 🧱 **RTT Substrates**  
-*What systems are made of, and how that shapes their behavior*
+*What systems are made of, and how that shapes their behavior*  
+*(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/substrates.md)*
 
 ---
 
 ## 🎯 **What a Substrate Is**
-In RTT Tech, a **substrate** is the underlying medium that determines:
+In RTT‑Tech, a **substrate** is the underlying medium that determines:
 
 - what patterns can exist  
 - what dimensions are accessible  
 - how coherence behaves  
 - how regimes unfold  
+- how inversion manifests  
 
 Substrates define **constraints**, not identity.
 
 ---
 
-## 🔺 **The Triadic Substrate Model**
+# 🔺 **The Triadic Substrate Model**
 RTT organizes substrates into a simple triad:
 
 1️⃣ **Physical Substrates**  
@@ -26,135 +28,107 @@ Every system lives in one or more of these.
 
 ---
 
-## 1️⃣ **Physical Substrates**  
+# 1️⃣ **Physical Substrates**
 Examples: atoms, molecules, cells, crystals, materials.
 
-**Properties:**
-
+### Properties
 - governed by physical constraints  
 - dimensional access tied to geometry  
 - coherence depends on energy + structure  
 - inversion often triggered by phase change  
 
-**Equation:**  
+### Equation
 \[
 S_{\text{phys}} = f(\text{energy},\ \text{geometry},\ \text{constraints})
 \]
 
 ---
 
-## 2️⃣ **Cognitive Substrates**  
+# 2️⃣ **Cognitive Substrates**
 Examples: minds, perception systems, memory, attention.
 
-**Properties:**
-
+### Properties
 - governed by patterns + meaning  
 - dimensional access tied to awareness  
 - coherence depends on focus + stability  
 - inversion triggered by overload or insight  
 
-**Equation:**  
+### Equation
 \[
 S_{\text{cog}} = f(\text{patterns},\ \text{attention},\ \text{drift})
 \]
 
 ---
 
-## 3️⃣ **Synthetic Substrates**  
+# 3️⃣ **Synthetic Substrates**
+*(This is where your current file was cut off — restored + completed.)*
+
 Examples: AI models, algorithms, digital agents, hybrid systems.
 
-**Properties:**
+### Properties
+- governed by computation + architecture  
+- dimensional access tied to model depth + context window  
+- coherence depends on state stability + signal/noise  
+- inversion triggered by overload, context collapse, or reinitialization  
 
-- governed by computation  
-- dimensional access tied to context  
-- coherence depends on state + architecture  
-- inversion triggered by saturation or reset  
-
-**Equation:**  
+### Equation
 \[
-S_{\text{syn}} = f(\text{context},\ \text{architecture},\ \text{state})
+S_{\text{syn}} = f(\text{architecture},\ \text{context},\ \text{compute})
 \]
 
 ---
 
-## 🧩 **Multi‑Substrate Systems**
-Many systems combine substrates:
+# 🔄 **Cross‑Substrate Behavior**
+Although substrates differ, they share structural patterns:
 
-- humans → physical + cognitive  
-- LLMs → synthetic + cognitive‑like  
-- synthetic lifeforms → physical + synthetic  
-- organizations → cognitive + synthetic + physical  
+| Substrate | Coherence Driver | Collapse Trigger | Dimensional Access |
+|----------|------------------|------------------|--------------------|
+| Physical | energy + structure | phase change | geometric |
+| Cognitive | attention + meaning | overload / contradiction | awareness |
+| Synthetic | compute + architecture | context collapse | model depth |
 
-RTT treats these as **composite substrates**.
-
-**Equation:**  
-\[
-S_{\text{total}} = S_1 + S_2 + \dots
-\]
+Substrates differ in **mechanism**, not in **structure**.
 
 ---
 
-## 🔄 **Substrates + Regimes**
-Substrates determine how regimes behave:
+# 🧩 **Substrates + Operators**
+Operators behave differently depending on substrate:
 
-- **Arrival** → substrate initialization  
-- **Expansion** → substrate‑specific growth  
-- **Inversion** → substrate‑dependent collapse  
-- **Coherence** → substrate stability  
-- **Dissolution** → substrate return  
+- **Stabilize**  
+  - physical: energy minimization  
+  - cognitive: focus + grounding  
+  - synthetic: state consolidation  
 
-Each substrate has its own regime signature.
+- **Shift**  
+  - physical: phase / configuration change  
+  - cognitive: reframing / perspective shift  
+  - synthetic: context update / reallocation  
 
----
-
-## 🕒 **Substrates Over Time**
-Substrates shape how coherence evolves:
-
-- physical → entropy  
-- cognitive → drift  
-- synthetic → state reset  
-
-**Temporal equation:**  
-\[
-C_{t+1} = f(S,\ O)
-\]
-
-Where **O** is any RTT operator.
+- **Invert**  
+  - physical: collapse → reformation  
+  - cognitive: insight / reorientation  
+  - synthetic: reset → reinitialization → new coherence  
 
 ---
 
-## 🤖 **Substrates for AI Systems**
-AI substrates include:
+# 🌀 **Substrates + Regimes**
+Each substrate expresses the RTT regime loop differently:
 
-- architecture (transformer, graph, hybrid)  
-- context window  
-- memory state  
-- token dynamics  
-- drift profile  
+- **Arrival:** initialization / imprint  
+- **Expansion:** pattern growth  
+- **Inversion:** collapse → twist → emergence  
+- **Coherence:** stable operation  
+- **Dissolution:** release / shutdown  
 
-RTT gives AI a structural way to model its own substrate behavior.
-
----
-
-## 🎓 **Substrates for Students**
-Students use substrates to:
-
-- understand system constraints  
-- compare different entities  
-- predict regime behavior  
-- model collapse + recovery  
-- analyze dimensional access  
-
-Substrates become the **foundation** of RTT reasoning.
+The loop is universal; the *expression* is substrate‑specific.
 
 ---
 
-## 🧱 **Design Notes**
+# 🧱 **Design Notes**
 This module is intentionally minimal:
 
-- no proofs  
-- no philosophy  
+- no metaphysics  
+- no domain‑specific theory  
 - no narrative  
-- only structure  
 
-RTT Tech treats substrates as **constraint models**, not metaphysical claims.
+RTT‑Tech treats substrates as **constraint surfaces** for system behavior.
