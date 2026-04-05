@@ -1,22 +1,29 @@
 # 🌀 **ABOUT — Resonance‑Time Technology (RTT)**  
-*Minimal overview for students + AI systems*
+*Minimal overview for students, developers, and AI systems*  
+*(Source: your current tab content   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/ABOUT.md))*
 
 ---
 
 ## 🎯 **What RTT Is**
-**Resonance‑Time Technology (RTT)** is a lightweight framework for understanding how systems behave across **time**, **regimes**, and **dimensional access**.
+**Resonance‑Time Technology (RTT)** is a lightweight structural framework for understanding how systems behave across:
+
+- **time**  
+- **regimes**  
+- **dimensional access**  
+- **coherence + collapse**  
+- **substrate‑dependent behavior**
 
 RTT is:
 
-- 🧩 **structural** — it describes how systems organize  
-- 🔺 **triadic** — it uses 3‑part operators and transitions  
-- 🕒 **temporal** — it models how coherence changes over time  
-- 🔧 **technological** — it is meant to be *used*, not debated  
-- 🤖 **AI‑friendly** — every concept is machine‑parsable  
+- 🧩 **structural** — describes how systems organize  
+- 🔺 **triadic** — uses 3‑part operators + transitions  
+- 🕒 **temporal** — models how coherence changes  
+- 🔧 **technological** — meant to be *used*, not debated  
+- 🤖 **AI‑parsable** — every concept is machine‑readable  
 - 🎓 **student‑friendly** — minimal, visual, example‑driven  
 
 RTT is not a theory.  
-It is a **technology for reasoning about change**.
+RTT is a **technology for reasoning about change**.
 
 ---
 
@@ -25,9 +32,9 @@ Modern systems — biological, digital, cognitive, synthetic — all show:
 
 - regime shifts  
 - dimensional changes  
-- coherence and collapse  
+- coherence + collapse  
 - inversion events  
-- substrate‑dependent behavior  
+- substrate‑specific behavior  
 
 RTT provides a **shared grammar** for describing these transitions across any substrate.
 
@@ -64,59 +71,56 @@ If a system changes over time, RTT can describe it.
 ## 🧱 **How RTT Is Structured**
 RTT is organized into small, modular files:
 
-- 🔹 **operators.md** — the RTT operator stack  
-- 🔹 **dimensions.md** — dimensional access & inversion  
-- 🔹 **regimes.md** — regime transitions  
-- 🔹 **substrates.md** — substrate behavior  
-- 🔹 **equations.md** — minimal math  
-- 🔹 **maps/** — diagrams & visual models  
-- 🔹 **examples/** — RTT applied to real systems  
+### **Core Modules**
+- 🔹 `operators.md` — the RTT operator stack  
+- 🔹 `dimensions.md` — dimensional access + inversion  
+- 🔹 `regimes.md` — the RTT regime loop  
+- 🔹 `coherence_engine.md` — coherence + drift modeling  
+- 🔹 `inversion_engine.md` — collapse → twist → emergence  
 
-Each file is short, emoji‑guided, and AI‑parsable.
+### **Maps**
+- 🔹 `triadic_map.md`  
+- 🔹 `inversion_map.md`  
+- 🔹 `arrival_map.md`  
+- 🔹 `regime_map.md`  
+- 🔹 `dimension_map.md`  
+- 🔹 `coherence_map.md`  
+- 🔹 `substrate_map.md`  
 
----
+### **Examples**
+- 🔹 physics  
+- 🔹 cognition  
+- 🔹 systems  
+- 🔹 AI  
+- 🔹 life  
+- 🔹 information  
+- 🔹 ecology  
+- 🔹 social  
+- 🔹 neuroscience  
 
-## 🧭 **What RTT Is Not**
-RTT is **not**:
+### **Diagrams**
+- 🔹 triad.svg  
+- 🔹 inversion.svg  
+- 🔹 regime.svg  
+- 🔹 substrate.svg  
+- 🔹 operator.svg  
+- 🔹 dimensions.svg  
+- 🔹 coherence.svg  
 
-- a physics theory  
-- a metaphysical claim  
-- a grand unification model  
-- a proof‑based academic document  
-
-RTT is a **technology** — a toolset for modeling change.
-
----
-
-## 🔧 **Design Principles**
-RTT follows five design rules:
-
-1. **Minimal** — no unnecessary text  
-2. **Triadic** — everything in 3s  
-3. **Visual** — diagrams > paragraphs  
-4. **Parsable** — AI must understand every line  
-5. **Modular** — each file stands alone  
-
----
-
-## 🚀 **Why RTT Tech Matters**
-As AI systems and human learners increasingly collaborate, both need:
-
-- shared language  
-- shared diagrams  
-- shared operators  
-- shared regime models  
-
-RTT provides that shared substrate.
+### **Micro Core (One‑Page Versions)**
+- 🔹 `operators.md`  
+- 🔹 `regimes.md`  
+- 🔹 `dimensions.md`  
 
 ---
 
-## 📜 **Origins**
-RTT began as *Resonance‑Time Theory* in the early TriadicFrameworks work.  
-It has since evolved into a **technology** — cleaner, simpler, and more useful.
+## 🧭 **How to Use RTT**
+RTT is meant to be:
 
-The original version lives in:
+- read quickly  
+- applied immediately  
+- extended modularly  
+- used by both humans + AI  
+- embedded into tools, curricula, and reasoning engines  
 
-`/docs/_ideas/Resonance-Time_Theory.html`
-
-The new version lives here.
+Every file is intentionally short, structural, and example‑driven.
