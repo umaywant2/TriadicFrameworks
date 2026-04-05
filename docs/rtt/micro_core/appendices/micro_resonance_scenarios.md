@@ -1,91 +1,82 @@
-# 📘 Appendix C — Micro‑Resonance Scenarios (RTT Micro Core)
-
-This appendix provides minimal examples of micro‑scale resonance behavior.  
+# 📘 **Appendix C — Micro‑Resonance Scenarios (RTT Micro‑Core)**  
+This appendix provides minimal, self‑contained examples of micro‑scale resonance behavior.  
 Each scenario illustrates a single operator, transition, or coherence condition within a micro‑regime.
 
-Scenarios are intentionally small: one triad, one boundary, one transition.
+Scenarios are intentionally small:  
+**one triad, one boundary, one transition.**
 
 ---
 
-## 🧩 Scenario 1 — Stable Micro‑Resonance
+## 🧩 **Scenario 1 — Stable Micro‑Resonance**  
 A micro‑state oscillates between two energy levels while maintaining coherence across its boundary.
 
-**Conditions**
+### **Conditions**
 - bounded drift  
 - consistent timing  
 - no structural inversion  
 
-**Outcome**  
-A stable micro‑resonance pattern emerges and persists.
+### **Outcome**  
+A stable micro‑resonance pattern emerges and persists.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/appendices/micro_resonance_scenarios.md)
 
 ---
 
-## 🔄 Scenario 2 — Drift‑Induced Collapse
-A micro‑regime accumulates small timing deviations.  
-Drift exceeds the coherence threshold.
+## 🔄 **Scenario 2 — Drift‑Induced Collapse**  
+A micro‑regime accumulates small timing deviations until drift exceeds the coherence threshold.
 
-**Conditions**
+### **Conditions**
 - unbounded drift  
 - timing slippage  
 - boundary mismatch  
 
-**Outcome**  
-Resonance collapses; the micro‑regime returns to a lower‑energy attractor.
+### **Outcome**  
+Resonance collapses; the micro‑regime returns to a lower‑energy attractor.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/appendices/micro_resonance_scenarios.md)
 
 ---
 
-## 🔺 Scenario 3 — Triad Inversion
-A micro‑triad experiences a structural inversion where the boundary node becomes the active node.
+## 🔺 **Scenario 3 — Triad Inversion**  
+A micro‑triad undergoes a structural inversion in which the boundary node becomes the active node.
 
-**Conditions**
+### **Conditions**
 - local paradox  
 - reversible inversion  
 - fractional‑ladder shift  
 
-**Outcome**  
-A new micro‑resonance pattern forms with inverted roles.
+### **Outcome**  
+A new micro‑resonance pattern forms with inverted roles.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/appendices/micro_resonance_scenarios.md)
 
 ---
 
-## ⚡ Scenario 4 — Energy‑Constrained Resonance
+## ⚡ **Scenario 4 — Energy‑Constrained Resonance**  
 A micro‑regime operates under strict energy limits (e.g., ultra‑low‑power environments).
 
-**Conditions**
+### **Conditions**
 - minimal energy input  
 - high coherence  
 - reduced transition bandwidth  
 
-**Outcome**  
-A compressed but stable resonance pattern emerges.
+### **Outcome**  
+A compressed but stable resonance pattern emerges.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/appendices/micro_resonance_scenarios.md)
 
 ---
 
-## 🌀 Scenario 5 — Fractional‑Ladder Transition
+## 🌀 **Scenario 5 — Fractional‑Ladder Transition**  
 A micro‑state transitions across fractional dimensions (e.g., 0.7 → 1.2).
 
-**Conditions**
+### **Conditions**
 - partial dimensional expansion  
 - coherent boundary shift  
 - stable transition timing  
 
-**Outcome**  
-The micro‑regime enters a new fractional layer with preserved resonance.
+### **Outcome**  
+The micro‑regime enters a new fractional layer while preserving resonance and coherence.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/appendices/micro_resonance_scenarios.md)
 
 ---
 
-## 🔗 Scenario 6 — Micro–Macro Bridge Activation
-A micro‑resonance pattern influences a macro‑scale behavior through a bridge operator.
-
-**Conditions**
-- stable micro‑pattern  
-- bridge operator engaged  
-- macro‑regime receptive  
-
-**Outcome**  
-A small micro‑state produces a measurable macro‑effect.
-
----
-
-## ✔️ Status
-These scenarios are canonical for Micro Core.  
-Additional domain‑specific examples appear in their respective modules.
+## ✔️ **Status**  
+These scenarios are canonical for Micro‑Core.  
+Domain‑specific examples appear in their respective modules.
