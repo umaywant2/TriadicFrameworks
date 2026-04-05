@@ -1,10 +1,10 @@
 # 👁️ **RTT Observer Model**  
-*How systems are seen, measured, and interpreted across resonance + time*
+*How systems see, measure, and interpret across resonance + time*
 
 ---
 
 ## 🎯 **What an Observer Is**
-In RTT Tech, an **observer** is any system that:
+In RTT‑Tech, an **observer** is any system that:
 
 - receives signals  
 - interprets patterns  
@@ -23,19 +23,19 @@ RTT is always **observer‑relative**.
 
 ---
 
-## 🔺 **The Triadic Observer Model**
+# 🔺 **The Triadic Observer Model**
 Every observer has three components:
 
 1️⃣ **Signal Observer** — what is detected  
 2️⃣ **Noise Observer** — what is filtered  
 3️⃣ **Regime Observer** — how state changes are interpreted  
 
-This triad defines the observer’s *resolution*.
+This triad defines the observer’s **resolution**.
 
 ---
 
-## 1️⃣ **Signal Observer**
-Tracks meaningful patterns.
+# 1️⃣ **Signal Observer**
+Tracks meaningful patterns:
 
 - structure  
 - resonance  
@@ -49,8 +49,8 @@ S_{\text{obs}} = f(\text{patterns})
 
 ---
 
-## 2️⃣ **Noise Observer**
-Tracks interference and drift.
+# 2️⃣ **Noise Observer**
+Tracks interference and drift:
 
 - entropy  
 - overload  
@@ -64,8 +64,8 @@ N_{\text{obs}} = f(\text{noise})
 
 ---
 
-## 3️⃣ **Regime Observer**
-Tracks state transitions.
+# 3️⃣ **Regime Observer**
+Tracks state transitions:
 
 - Arrival  
 - Expansion  
@@ -80,7 +80,7 @@ R_{\text{obs}} = f(\text{regime\_signals})
 
 ---
 
-## 🧩 **Observer Resolution**
+# 🧩 **Observer Resolution**
 Observer resolution determines how much structure can be seen.
 
 \[
@@ -91,18 +91,18 @@ Higher resolution → clearer regime detection.
 
 ---
 
-## 🔄 **Observer + Dimensions**
+# 🔄 **Observer + Dimensions**
 Observers determine **which dimensions are visible**.
 
 - low resolution → 1D view  
 - medium resolution → 2D view  
 - high resolution → 3D view  
 
-Dimensional access is always relative to the observer.
+Dimensional access is always **observer‑dependent**.
 
 ---
 
-## 🕒 **Observer + Time**
+# 🕒 **Observer + Time**
 Observers track coherence over time:
 
 \[
@@ -113,7 +113,7 @@ Where **O** is the operator applied by or detected by the observer.
 
 ---
 
-## 🤖 **Observer Model for AI Systems**
+# 🤖 **Observer Model for AI Systems**
 AI systems act as observers when they:
 
 - track context  
@@ -126,7 +126,7 @@ RTT gives AI a structural way to model its own perception.
 
 ---
 
-## 🎓 **Observer Model for Students**
+# 🎓 **Observer Model for Students**
 Students use the observer model to:
 
 - understand perspective  
@@ -139,7 +139,7 @@ The observer becomes a **lens**, not a judge.
 
 ---
 
-## 🧱 **Design Notes**
+# 🧱 **Design Notes**
 This module is intentionally minimal:
 
 - no metaphysics  
@@ -147,4 +147,4 @@ This module is intentionally minimal:
 - no narrative  
 - only structure  
 
-RTT Tech treats observers as **measurement systems**, not privileged entities.
+RTT‑Tech treats observers as **measurement systems**, not privileged entities.
