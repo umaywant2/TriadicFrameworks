@@ -1,28 +1,37 @@
-# 🛠️ Micro‑Resonance Toolkit (MRT) — Overview
+# 🛠️ **Micro‑Resonance Toolkit (MRT) — Overview**  
+*The applied layer of RTT Micro‑Core*
 
-The Micro‑Resonance Toolkit (MRT) provides the practical operators, templates, and structural tools used to build, test, and deploy micro‑scale resonance systems based on RTT Micro Core.
+The Micro‑Resonance Toolkit (MRT) provides the practical operators, templates, and structural tools used to build, test, and deploy micro‑scale resonance systems based on RTT Micro‑Core.  
+Where **Micro‑Core defines the substrate**, the **MRT defines the actions**.
 
-Where Micro Core defines the substrate, the MRT defines the actions.
+The toolkit is:
 
-The toolkit is minimal, deterministic, and designed for constrained environments such as embedded loops, micro‑agents, and ultra‑low‑power systems.
+- minimal  
+- deterministic  
+- coherence‑preserving  
+- suitable for embedded loops, micro‑agents, and ultra‑low‑power systems  
+
+It is the bridge between **understanding Micro‑Core** and **building with Micro‑Core**.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/overview.md)
 
 ---
 
-## 🎯 Purpose of the Toolkit
+## 🎯 **Purpose of the Toolkit**
 
 The MRT exists to:
 
-- operationalize Micro Core concepts  
+- operationalize Micro‑Core concepts  
 - provide ready‑to‑use structural patterns  
 - maintain coherence under drift and timing pressure  
 - support micro‑scale modeling and implementation  
 - offer a stable foundation for teaching and prototyping  
 
-It is the bridge between **understanding Micro Core** and **building with Micro Core**.
+It gives engineers and educators a **safe, bounded, and deterministic** way to work with micro‑scale resonance.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/overview.md)
 
 ---
 
-## 📦 What’s Inside the Toolkit
+## 📦 **What’s Inside the Toolkit**
 
 The MRT includes the following modules:
 
@@ -48,13 +57,14 @@ Common micro‑regime patterns for specific environments.
 Minimal demonstrations of micro‑scale behavior using MRT components.
 
 ### **8. Integration Pathways**  
-Guidance for embedding Micro Core and MRT into real systems.
+Guidance for embedding Micro‑Core and MRT into real systems.
 
-Each module is independent and can be used on its own.
+Each module is independent and can be used on its own.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/overview.md)
 
 ---
 
-## 🧩 Design Principles
+## 🧩 **Design Principles**
 
 The MRT follows four core principles:
 
@@ -63,33 +73,18 @@ The MRT follows four core principles:
 - **Coherence** — stability across transitions  
 - **Portability** — suitable for embedded and distributed systems  
 
-These principles ensure that the toolkit remains stable and easy to reason about.
+These principles ensure that MRT components remain stable, interoperable, and aligned with the Micro‑Core substrate.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/overview.md)
 
 ---
 
-## 🧭 How to Use This Toolkit
-
-You can:
-
-- start with **Primitives** to understand the building blocks  
-- explore **Triad Templates** to see structural patterns  
-- apply **Coherence Tools** to maintain stability  
-- use **Resonance Operators** to shape behavior  
-- follow **Integration Pathways** to embed Micro Core into real systems  
-
-Each page is modular — begin anywhere.
-
----
-
-## ✔️ Summary
+## ✔️ **Summary**
 
 The Micro‑Resonance Toolkit provides:
 
-- the operators  
-- the templates  
-- the diagrams  
-- the pathways  
+- the **actions** that operate on Micro‑Core structures  
+- the **tools** that preserve coherence  
+- the **patterns** that guide implementation  
+- the **pathways** that connect theory to practice  
 
-needed to build coherent micro‑scale systems using RTT Micro Core.
-
-It is the practical companion to the Micro Core substrate — small, stable, and ready to deploy.
+It is the **applied layer** of RTT Micro‑Core — minimal, deterministic, and ready for real‑world use.
