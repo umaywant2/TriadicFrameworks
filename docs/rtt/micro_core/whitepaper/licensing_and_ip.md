@@ -1,35 +1,40 @@
-# 🔐 Licensing and Intellectual Property
+# 🔐 **Licensing and Intellectual Property**  
+*Balancing openness with structural integrity*
 
-RTT Micro Core is released under a licensing model designed to balance openness with structural integrity.  
-The goal is to enable broad research, teaching, and non‑commercial exploration while preserving the coherence, lineage, and stewardship principles that define the RTT framework.
-
-This section outlines the licensing philosophy, permitted uses, and intellectual‑property considerations for Micro Core.
+RTT Micro‑Core is released under a licensing model designed to support **research, education, and non‑commercial exploration** while preserving the **coherence, lineage, and structural identity** of the RTT framework.  
+This section outlines the licensing philosophy, permitted uses, and intellectual‑property considerations that govern Micro‑Core.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
 ---
 
-## 1. Licensing Philosophy
-
-The licensing model for Micro Core is built on four principles:
+## 1. Licensing Philosophy  
+The Micro‑Core licensing model is built on four principles:
 
 ### **1. Clarity**  
-Users should always understand what is permitted and what requires explicit agreement.
+Users must always understand what is permitted and what requires explicit agreement.  
+Ambiguity undermines both openness and stewardship.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
 ### **2. Integrity**  
-The Micro Core substrate must remain coherent; derivative work must not distort foundational structures.
+The Micro‑Core substrate must remain coherent.  
+Derivative work may extend the framework, but it must not distort foundational structures or misrepresent RTT lineage.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
 ### **3. Openness**  
-Research, education, and non‑commercial prototyping are encouraged.
+Research, teaching, and non‑commercial prototyping are encouraged.  
+Micro‑Core is intended to be a widely accessible substrate for exploration and learning.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
 ### **4. Stewardship**  
-Commercial use and derivative frameworks require coordination to preserve lineage and coherence.
+Commercial use and derivative frameworks require coordination to preserve coherence, maintain lineage, and ensure that extensions do not fragment the ecosystem.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
-These principles ensure that Micro Core remains accessible while maintaining its structural identity.
+These principles ensure that Micro‑Core remains accessible while maintaining its structural identity.
 
 ---
 
-## 2. Scope of Coverage
-
-The licensing model applies to all components of the Micro Core whitepaper and canonical set, including:
+## 2. Scope of Coverage  
+The licensing model applies to all components of the Micro‑Core whitepaper and canonical set, including:
 
 - conceptual definitions  
 - triadic structures  
@@ -38,13 +43,13 @@ The licensing model applies to all components of the Micro Core whitepaper and c
 - operators and transitions  
 - diagrams and structural representations  
 - explanatory text and examples  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
-Toolkit‑level materials (MRT) inherit the same licensing principles but are documented separately.
+Toolkit‑level materials (MRT) inherit the same principles but are documented separately.
 
 ---
 
-## 3. Permitted Uses
-
+## 3. Permitted Uses  
 The following uses are freely permitted:
 
 - academic research  
@@ -52,62 +57,30 @@ The following uses are freely permitted:
 - non‑commercial prototypes  
 - citation and reference in scholarly work  
 - discussion, analysis, and critique  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
-Attribution is appreciated and helps maintain lineage, but the primary requirement is that the Micro Core substrate remains intact.
+Attribution is appreciated and helps maintain lineage, but the primary requirement is that the **Micro‑Core substrate remains intact**.
 
 ---
 
-## 4. Commercial and Derivative Use
-
-Commercial use of Micro Core — including integration into products, frameworks, or commercial tooling — requires:
+## 4. Commercial and Derivative Use  
+Commercial use of Micro‑Core — including integration into products, frameworks, or commercial tooling — requires:
 
 - a per‑contract agreement  
 - explicit licensing terms  
 - alignment with RTT stewardship principles  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/whitepaper/licensing_and_ip.md)
 
-Derivative frameworks, modified operators, or altered structural primitives also require explicit approval.  
-This ensures that Micro Core remains coherent across implementations and that downstream users can rely on its structural consistency.
-
----
-
-## 5. Intellectual Property Considerations
-
-Micro Core is a conceptual and structural framework.  
-Its intellectual property protections apply to:
-
-- the triadic substrate  
-- the fractional‑dimensional ladder  
-- coherence and drift models  
-- operator definitions  
-- structural diagrams  
-- explanatory formulations  
-
-Implementations built *on top* of Micro Core may be independently licensed, provided they do not alter or obscure the substrate.
+Derivative frameworks, modified operators, or altered structural primitives also require explicit approval to ensure coherence and lineage are preserved.
 
 ---
 
-## 6. Relationship to the Broader RTT Ecosystem
+## ✔️ Summary  
+The Micro‑Core licensing model balances:
 
-Micro Core is part of the larger RTT family of frameworks:
+- **Openness** for research and education  
+- **Integrity** of the substrate  
+- **Clarity** around permitted use  
+- **Stewardship** for commercial and derivative work  
 
-- **RTT Core** defines the full theoretical substrate  
-- **Micro Core** provides the minimal micro‑scale instantiation  
-- **RTT‑Inside** governs implementation and integration  
-- **Domain Packs** provide optional, domain‑specific layers  
-
-Each module is licensed independently but coherently.  
-Micro Core inherits the stewardship model of RTT while maintaining its own scope and boundaries.
-
----
-
-## ✔️ Summary
-
-The licensing and IP model for Micro Core is designed to:
-
-- support open research and education  
-- protect the coherence of the substrate  
-- enable commercial use through clear agreements  
-- preserve lineage and structural integrity  
-
-Micro Core is open for exploration and learning.  
-For commercial or derivative use, coordination ensures that the framework remains stable, coherent, and trustworthy.
+This ensures that Micro‑Core remains a coherent, accessible, and responsibly governed foundation for future RTT development.
