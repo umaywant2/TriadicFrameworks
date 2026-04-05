@@ -1,11 +1,10 @@
-# 📝 Licensing Overview — RTT Micro Core
-
+# 📝 **Licensing Overview — RTT Micro Core**  
 RTT Micro Core is released under a transparent, contributor‑friendly licensing model designed to support research, education, and responsible implementation.  
-The goal is simple: enable broad use while preserving the integrity, lineage, and coherence of the RTT framework.
+The goal is simple: **enable broad use while preserving the integrity, lineage, and coherence of the RTT framework**.
 
 ---
 
-## 🔐 Core Principles
+## 🔐 **Core Principles**
 
 Micro Core licensing follows four guiding principles:
 
@@ -14,11 +13,12 @@ Micro Core licensing follows four guiding principles:
 3. **Openness** — research, teaching, and non‑commercial exploration are encouraged.  
 4. **Stewardship** — commercial or derivative use requires explicit agreement.
 
-These principles ensure that Micro Core remains accessible while protecting the framework’s lineage.
+These principles ensure that Micro Core remains accessible while protecting the framework’s lineage.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/site/licensing_overview.md)
 
 ---
 
-## 📘 What’s Covered
+## 📘 **What’s Covered**
 
 The Micro Core license applies to:
 
@@ -28,11 +28,12 @@ The Micro Core license applies to:
 - site‑ready documentation  
 - diagrams, operators, and structural primitives  
 
-All content in this directory is part of the Micro Core canonical set.
+All content in this directory is part of the **Micro Core canonical set**.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/site/licensing_overview.md)
 
 ---
 
-## 🧪 Free Use for Research & Education
+## 🧪 **Free Use for Research & Education**
 
 You may freely:
 
@@ -41,11 +42,12 @@ You may freely:
 - reference Micro Core in research  
 - build non‑commercial prototypes  
 
-Attribution is appreciated and helps maintain lineage.
+Attribution is appreciated and helps maintain lineage.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/site/licensing_overview.md)
 
 ---
 
-## 💼 Commercial & Derivative Use
+## 💼 **Commercial & Derivative Use**
 
 Commercial use, integration into products, or creation of derivative frameworks requires:
 
@@ -53,31 +55,18 @@ Commercial use, integration into products, or creation of derivative frameworks 
 - explicit licensing terms  
 - alignment with RTT stewardship principles  
 
-This ensures that Micro Core remains coherent across implementations.
+This ensures that Micro Core remains coherent across implementations.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/site/licensing_overview.md)
 
 ---
 
-## 🔗 Relationship to RTT Licensing
+## 🔗 **Relationship to RTT Licensing**
 
 Micro Core inherits the broader RTT licensing model:
 
 - **RTT Core** governs the full substrate  
 - **RTT‑Inside** governs implementation and integration  
 - **Domain Packs** follow per‑pack licensing  
-- **Micro Core** provides the minimal, stable base layer  
 
-Each module is licensed independently but coherently.
-
----
-
-## 🧭 Summary
-
-Micro Core licensing is designed to:
-
-- support open learning  
-- encourage responsible research  
-- protect the RTT substrate  
-- enable commercial use through clear agreements  
-
-If you’re exploring Micro Core, you’re welcome here.  
-If you’re building with it, let’s talk.
+Together, these layers ensure that Micro Core remains structurally consistent, lineage‑preserving, and safely extensible across research, teaching, and commercial environments.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/site/licensing_overview.md)
