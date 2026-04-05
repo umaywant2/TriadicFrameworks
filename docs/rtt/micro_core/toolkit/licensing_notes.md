@@ -1,30 +1,30 @@
-# 📝 Licensing Notes — Micro‑Resonance Toolkit (MRT)
+# 📝 **Licensing Notes — Micro‑Resonance Toolkit (MRT)**  
+*How MRT components are licensed within the RTT Micro‑Core ecosystem*
 
-These notes clarify how the Micro‑Resonance Toolkit (MRT) is licensed within the RTT Micro Core ecosystem.  
-They supplement the site‑level Licensing Overview and provide guidance for contributors, implementers, and educators working directly with toolkit materials.
+These notes clarify how the Micro‑Resonance Toolkit (MRT) is licensed within the RTT Micro‑Core framework.  
+They supplement the site‑level **Licensing Overview** and provide guidance for contributors, implementers, and educators working directly with toolkit materials.  
+(Original content referenced from active tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/licensing_notes.md))
 
 ---
 
-## 🔐 Purpose of These Notes
-
+## 🔐 **Purpose of These Notes**  
 The MRT contains:
 
-- primitives  
+- structural primitives  
 - operators  
 - templates  
 - diagrams  
 - examples  
 - integration pathways  
 
-Because these components are used in teaching, prototyping, and implementation, the licensing notes ensure clarity about what is allowed and what requires explicit agreement.
+Because these components are used in teaching, prototyping, and implementation, the licensing notes ensure clarity about what is freely available and what requires explicit agreement.  
+(Original content referenced from active tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/licensing_notes.md))
 
 ---
 
-## 📘 What’s Covered
-
+## 📘 **What’s Covered**  
 These notes apply to all toolkit materials, including:
 
-- structural primitives  
 - triad templates  
 - coherence tools  
 - resonance operators  
@@ -33,12 +33,12 @@ These notes apply to all toolkit materials, including:
 - example scenarios  
 - integration pathways  
 
-All MRT content is part of the **Micro Core canonical set**.
+All MRT content is part of the **Micro‑Core canonical set**.  
+(Original content referenced from active tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/licensing_notes.md))
 
 ---
 
-## 🧪 Free Use for Research, Teaching & Prototyping
-
+## 🧪 **Free Use for Research, Teaching & Prototyping**  
 You may freely:
 
 - study and teach MRT components  
@@ -46,56 +46,31 @@ You may freely:
 - build non‑commercial prototypes  
 - reference MRT structures in research  
 
-Attribution is appreciated and helps maintain lineage.
+Attribution is appreciated and helps maintain lineage.  
+(Original content referenced from active tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/licensing_notes.md))
 
 ---
 
-## 💼 Commercial & Derivative Use
-
+## 💼 **Commercial & Derivative Use**  
 Commercial use of MRT components — including integration into products, frameworks, or commercial tooling — requires:
 
 - a per‑contract agreement  
 - explicit licensing terms  
 - alignment with RTT stewardship principles  
 
-Derivative toolkits or modified operators also require explicit approval to preserve coherence across implementations.
+Derivative toolkits, modified operators, or altered coherence tools also require explicit approval to preserve coherence across implementations.  
+(Original content referenced from active tab   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/micro_core/toolkit/licensing_notes.md))
 
 ---
 
-## 🔗 Relationship to Micro Core Licensing
+## 🔗 **Relationship to Micro‑Core Licensing**  
+The MRT inherits the broader Micro‑Core licensing model:
 
-The MRT inherits the Micro Core licensing model:
+- **Micro‑Core** defines the substrate, operators, invariants, and coherence conditions  
+- **MRT** provides applied tools built *on top* of that substrate  
+- Both require stewardship to maintain structural integrity and lineage  
+- Commercial or derivative use of either layer requires explicit agreement  
 
-- **Micro Core** defines the substrate  
-- **MRT** provides operational tools  
-- both follow the same principles of clarity, integrity, openness, and stewardship  
-
-Toolkit‑level licensing is therefore consistent with the broader RTT licensing structure.
-
----
-
-## 🧭 Contributor Notes
-
-When contributing to the MRT:
-
-- maintain structural clarity  
-- avoid domain‑specific drift  
-- preserve triadic and fractional‑dimensional consistency  
-- document new primitives or operators clearly  
-- ensure diagrams follow the Micro Core visual identity  
-
-Contributions must align with the canonical Micro Core substrate.
-
----
-
-## ✔️ Summary
-
-The MRT licensing model is designed to:
-
-- support open learning and research  
-- enable responsible prototyping  
-- protect the coherence of the RTT substrate  
-- allow commercial use through clear agreements  
-
-If you’re exploring or teaching the MRT, you’re welcome here.  
-If you’re integrating it into a product or derivative framework, let’s coordinate.
+In short:  
+**Micro‑Core governs the substrate; MRT governs the applied layer.**  
+Both remain aligned under the same stewardship principles.
