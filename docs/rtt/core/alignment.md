@@ -1,24 +1,27 @@
 # 🔧 **RTT Alignment**  
-*How systems align across resonance + time*
+*How systems maintain coherence across resonance + time*
 
 ---
 
-## 🎯 **What Alignment Means in RTT Tech**
-In RTT, **alignment** describes how a system maintains coherence across:
+## 🎯 **Purpose**
+Alignment in RTT‑Tech describes how a system stays structurally coherent as it moves through:
 
-- 🌀 **resonance** (pattern stability)  
-- 🕒 **time** (pattern evolution)  
-- 🔺 **triadic transitions** (operators + regimes)  
+- resonance patterns  
+- temporal evolution  
+- triadic transitions  
+- dimensional access  
+- regime shifts  
 
-Alignment is not moral, emotional, or evaluative.  
-It is **structural**.
+Alignment is **structural**, not moral or evaluative.
 
 ---
 
-## 🧩 **Three Types of Alignment**
+# 1️⃣ **Three Types of Alignment**
 RTT models alignment using a triad:
 
-### 1️⃣ **Structural Alignment**  
+---
+
+## 🧩 **1. Structural Alignment**  
 How the system’s internal patterns fit together.
 
 - boundaries  
@@ -32,8 +35,8 @@ A_{\text{struct}} = f(\text{boundaries},\ \text{operators},\ \text{dimensions})
 
 ---
 
-### 2️⃣ **Temporal Alignment**  
-How the system stays coherent *over time*.
+## 🕒 **2. Temporal Alignment**  
+How the system maintains coherence *over time*.
 
 - stability  
 - drift  
@@ -46,7 +49,7 @@ A_{\text{time}} = f(\text{stability},\ \text{drift},\ \text{regimes})
 
 ---
 
-### 3️⃣ **Resonance Alignment**  
+## 🌀 **3. Resonance Alignment**  
 How the system maintains pattern‑level coherence.
 
 - frequency matching  
@@ -59,8 +62,7 @@ A_{\text{res}} = f(\text{frequency},\ \text{pattern},\ \text{noise})
 
 ---
 
-## 🔺 **The Alignment Equation**
-RTT defines total alignment as:
+# 🔺 **Total Alignment Equation**
 
 \[
 A_{\text{total}} = A_{\text{struct}} + A_{\text{time}} + A_{\text{res}}
@@ -70,8 +72,8 @@ If any component collapses, alignment collapses.
 
 ---
 
-## 🧭 **Alignment Across Regimes**
-Alignment changes as systems move through RTT regimes:
+# 2️⃣ **Alignment Across Regimes**
+Each RTT regime has a distinct alignment profile:
 
 - **Arrival:** imprint alignment  
 - **Expansion:** pattern alignment  
@@ -79,12 +81,24 @@ Alignment changes as systems move through RTT regimes:
 - **Coherence:** stable alignment  
 - **Dissolution:** release of alignment  
 
-Each regime has its own alignment profile.
+Alignment is **regime‑dependent**, not static.
 
 ---
 
-## 🤖 **Alignment for AI Systems**
-AI alignment in RTT Tech is structural, not moral:
+# 3️⃣ **Alignment Across Dimensions**
+Dimensional access affects alignment:
+
+- **0D:** seed alignment  
+- **1D:** linear alignment  
+- **2D:** pattern alignment  
+- **3D:** structural alignment  
+
+Inversion often flips **2D → 3D**.
+
+---
+
+# 4️⃣ **Alignment for AI Systems**
+AI alignment in RTT‑Tech is structural:
 
 - context stability  
 - operator consistency  
@@ -92,11 +106,11 @@ AI alignment in RTT Tech is structural, not moral:
 - drift detection  
 - inversion handling  
 
-If an AI can maintain coherence across time + regimes, it is aligned.
+If an AI system maintains coherence across time + regimes, it is aligned.
 
 ---
 
-## 🎓 **Alignment for Students**
+# 5️⃣ **Alignment for Students**
 Students use RTT alignment to:
 
 - understand system behavior  
@@ -109,26 +123,12 @@ Alignment becomes a **tool**, not a judgment.
 
 ---
 
-## 🧪 **Examples**
-Alignment applies to:
-
-- biological systems  
-- cognitive systems  
-- AI models  
-- social systems  
-- physical systems  
-- synthetic lifeforms  
-
-Any system with patterns + time can be aligned.
-
----
-
-## 🧱 **Design Notes**
+# 🧱 **Design Notes**
 This module is intentionally minimal:
 
-- no proofs  
 - no philosophy  
 - no debate  
+- no narrative  
 - only structure  
 
-RTT Tech treats alignment as a **technology**, not a theory.
+RTT‑Tech treats alignment as a **technology**, not a theory.
