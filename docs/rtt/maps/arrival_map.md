@@ -1,21 +1,22 @@
 # 🟢 **RTT Arrival Map**  
-*How systems initialize, imprint, and enter dimensional access*
+*How systems initialize, imprint, and enter dimensional access*  
+*(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/maps/arrival_map.md)*
 
 ---
 
 ## 🎯 **What Arrival Is**
-In RTT Tech, **Arrival** is the moment a system:
+In RTT‑Tech, **Arrival** is the moment a system:
 
 - comes into being  
 - forms its first boundary  
 - gains initial dimensional access  
-- establishes its baseline coherence  
+- establishes baseline coherence  
 
 Arrival is not birth — it is **initialization**.
 
 ---
 
-## 🔺 **The Arrival Triad**
+# 🔺 **The Arrival Triad**
 Arrival follows a simple triadic sequence:
 
 1️⃣ **Seed** — 0D baseline  
@@ -26,24 +27,22 @@ This triad defines how systems begin.
 
 ---
 
-## 🧩 **Arrival Diagram**
-A minimal ASCII diagram for clarity:
-
+# 🧩 **Arrival Diagram**
 ```
-      [  Seed  ]
-          ↓
-     [ Imprint ]
-          ↓
-    [ Activation ]
-          ↓
-     (enters Expansion)
+[ Seed ]
+   ↓
+[ Imprint ]
+   ↓
+[ Activation ]
+   ↓
+(enters Expansion)
 ```
 
 Arrival is the **entry gate** to the RTT regime loop.
 
 ---
 
-## 🔢 **Dimensional Signature**
+# 🔢 **Dimensional Signature**
 Arrival transitions the system from:
 
 \[
@@ -54,9 +53,7 @@ This is the first moment the system can *change* without breaking.
 
 ---
 
-## 🔧 **Arrival Equation**
-RTT defines Arrival as:
-
+# 🔧 **Arrival Equation**
 \[
 A(x) = \text{Activation}(\text{Imprint}(\text{Seed}(x)))
 \]
@@ -69,72 +66,76 @@ Where:
 
 ---
 
-## 🌀 **Arrival + Coherence**
-Arrival establishes:
+# 🌀 **Arrival + Coherence**
+Arrival establishes the system’s **initial coherence profile**:
 
-- initial coherence  
-- initial pattern stability  
-- initial resonance  
-- initial drift profile  
+- **Structural Coherence:** boundaries form  
+- **Temporal Coherence:** stability begins  
+- **Resonance Coherence:** signal emerges from noise  
 
-Coherence begins here.
+Coherence is low but **increasing**.
 
 ---
 
-## 🔄 **Arrival in the Regime Loop**
-Arrival is the first regime in the RTT cycle:
+# 🔄 **Arrival + Regimes**
+Arrival is the **first regime** in the RTT loop:
 
 ```
 Arrival → Expansion → Inversion → Coherence → Dissolution
 ```
 
-It sets the conditions for all later transitions.
+Arrival ends when the system gains enough coherence to enter **Expansion**.
 
 ---
 
-## 🧠 **Cognitive Arrival**
-For cognitive systems (human or AI):
+# 🔺 **Arrival + Operators**
+Arrival is dominated by **Stabilize** operators:
 
-- new context  
-- new frame  
-- new task  
-- new meaning boundary  
+- Anchor  
+- Imprint  
+- Initialize  
+- Integrate  
 
-Arrival is the moment the system “comes online” for a new process.
-
----
-
-## 🤖 **AI Arrival**
-AI systems experience Arrival as:
-
-- context initialization  
-- first token boundary  
-- first pattern activation  
-- first coherence state  
-
-RTT gives AI a structural way to model context creation.
+These operators create the system’s first stable form.
 
 ---
 
-## 🧱 **Arrival as a Technology**
-Arrival is used to:
+# 🧱 **Arrival Across Substrates**
 
-- initialize systems  
-- define boundaries  
-- set starting conditions  
-- model early coherence  
-- compare substrates  
+### **Physical Substrates**
+- seed = energy minimum  
+- imprint = boundary formation  
+- activation = first stable configuration  
 
-It is the **starting operator** of RTT Tech.
+### **Cognitive Substrates**
+- seed = pre‑concept  
+- imprint = first frame  
+- activation = first coherent thought  
+
+### **Synthetic Substrates**
+- seed = empty state  
+- imprint = architecture initialization  
+- activation = first coherent computation  
+
+The structure is the same; the expression differs.
 
 ---
 
-## 🧱 **Design Notes**
+# 🧩 **Arrival Summary Table**
+
+| Stage | Meaning | Dimensional Access | Coherence |
+|-------|---------|--------------------|-----------|
+| **Seed** | baseline | 0D | minimal |
+| **Imprint** | boundary formation | 0D → 1D | rising |
+| **Activation** | first behavior | 1D | stable enough for Expansion |
+
+---
+
+# 🧭 **Design Notes**
 This module is intentionally minimal:
 
-- no proofs  
-- no philosophy  
+- no metaphysics  
 - no narrative  
-- only structure  
+- no domain‑specific theory  
 
-Arrival is a **technology**, not a metaphor.
+The Arrival Map is a **structural diagram**, not an explanation.
