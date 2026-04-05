@@ -1,5 +1,6 @@
 # 🧠 **RTT Example — Cognition**  
-*How minds perceive, interpret, and reorganize across resonance + time*
+*How minds perceive, interpret, and reorganize across resonance + time*  
+*(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/examples/cognition.md)*
 
 ---
 
@@ -65,31 +66,95 @@ RTT dimensions describe **functional access**, not spatial axes.
 ### **0D → Pre‑conceptual**
 - raw sensation  
 - unstructured input  
+- pre‑frame awareness  
 
 ### **1D → Linear Thought**
 - single chain of reasoning  
+- one perspective at a time  
 - sequential interpretation  
 
 ### **2D → Pattern Thought**
 - multiple associations  
 - cross‑linking ideas  
+- conceptual patterning  
 
 ### **3D → Structural Thought**
 - integrated models  
 - multi‑perspective reasoning  
 - stable conceptual coherence  
 
-Inversion often flips **2D → 3D** (insight).
+### **Dimensional Transitions in Cognition**
+- **0D → 1D:** first frame  
+- **1D → 2D:** associative growth  
+- **2D → 3D:** structural integration  
+- **3D → 2D:** partial collapse  
+- **2D → 1D:** narrowing  
+- **1D → 0D:** full collapse  
 
 ---
 
-# 4️⃣ **Operators in Cognition**
-RTT operators describe how cognition transforms.
+# 4️⃣ **Coherence in Cognition**
+Coherence describes **how stable a cognitive frame is**.
+
+### **Structural Coherence**
+- how well ideas fit together  
+- pattern integrity  
+- conceptual boundaries  
+
+### **Temporal Coherence**
+- how long a frame holds  
+- drift resistance  
+- stability across time  
+
+### **Resonance Coherence**
+- signal vs. noise  
+- clarity vs. interference  
+- reinforcement of meaning  
+
+### **Total Cognitive Coherence**
+\[
+C_{\text{total}} = C_{\text{struct}} + C_{\text{time}} + C_{\text{res}}
+\]
+
+High coherence → clarity.  
+Low coherence → confusion, overload, collapse.
+
+---
+
+# 5️⃣ **Inversion in Cognition**
+Inversion is the RTT mechanism for **insight**.
+
+### **Collapse**
+- overload  
+- contradiction  
+- frame failure  
+
+### **Twist**
+- reinterpretation  
+- reframing  
+- new alignment of meaning  
+
+### **Emergence**
+- new understanding  
+- new dimensional access  
+- new stable frame  
+
+### **Canonical Cognitive Inversion**
+\[
+2D \rightarrow 0D \rightarrow 3D
+\]
+
+This is the structure of **insight**.
+
+---
+
+# 6️⃣ **Operators in Cognition**
+Operators describe **how** cognition transforms.
 
 ### **Stabilize**
-- focus  
 - grounding  
-- maintaining a frame  
+- focusing  
+- reinforcing a frame  
 
 ### **Shift**
 - changing perspective  
@@ -101,75 +166,44 @@ RTT operators describe how cognition transforms.
 - insight  
 - collapse → twist → new meaning  
 
-Operators give a **functional language** for cognitive change.
+Operators give cognition a **functional language** for change.
 
 ---
 
-# 5️⃣ **Coherence in Cognition**
-Coherence describes cognitive stability.
+# 7️⃣ **Worked RTT‑Cognition Examples**
 
-### **High Coherence**
-- clarity  
-- strong understanding  
-- stable reasoning  
-
-### **Medium Coherence**
-- partial understanding  
-- shifting interpretations  
-
-### **Low Coherence**
-- confusion  
-- overload  
-- fragmentation  
-
-RTT tracks how coherence evolves across cognitive regimes.
+## **Example A — Learning a New Concept**
+- **Arrival:** first exposure  
+- **Expansion:** associations form  
+- **Inversion:** confusion → insight  
+- **Coherence:** stable understanding  
+- **Dissolution:** forgetting or updating  
 
 ---
 
-# 6️⃣ **Inversion Events in Cognition**
-Inversion is the heart of cognitive transformation.
-
-Examples:
-
-- **Insight**  
-  sudden reorganization of meaning
-
-- **Reframing**  
-  collapse of old interpretation → emergence of new one
-
-- **Overload → Reset**  
-  too much input → collapse → new structure
-
-- **Paradigm Shift**  
-  entire model flips to a new dimensional form
-
-RTT models these as:
-
-\[
-I(x) = E(T(C(x)))
-\]
+## **Example B — Reframing a Belief**
+- **Arrival:** new information  
+- **Expansion:** tension builds  
+- **Inversion:** collapse → reinterpretation  
+- **Coherence:** new belief structure  
+- **Dissolution:** old frame released  
 
 ---
 
-# 7️⃣ **Why RTT Helps Cognitive Students**
-RTT gives students:
-
-- a structural map of thought  
-- a way to understand insight  
-- a grammar for reframing  
-- a tool for tracking drift  
-- a model for cognitive collapse + recovery  
-
-RTT doesn’t replace psychology — it **clarifies** cognition.
+## **Example C — AI Context Reset**
+- **Arrival:** new prompt  
+- **Expansion:** pattern accumulation  
+- **Inversion:** overload → reset  
+- **Coherence:** stable reasoning  
+- **Dissolution:** context cleared  
 
 ---
 
-# 🧱 **Design Notes**
+# 🧭 **Design Notes**
 This example is intentionally minimal:
 
-- no neuroscience  
 - no psychology theory  
+- no neuroscience  
 - no metaphysics  
-- only structural mapping  
 
-RTT Tech is a **technology**, not a theory of mind.
+RTT provides **structure**, not replacement.
