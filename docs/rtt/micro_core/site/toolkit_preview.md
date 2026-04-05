@@ -1,13 +1,20 @@
-# 🛠️ Micro‑Resonance Toolkit (MRT) — Preview
+# 🛠️ **Micro‑Resonance Toolkit (MRT) — Preview**
 
-The Micro‑Resonance Toolkit (MRT) is the practical companion to RTT Micro Core.  
-Where the whitepaper defines the substrate, the MRT provides the tools — the operators, templates, and patterns you can use to build, test, and deploy micro‑scale resonance systems.
+The **Micro‑Resonance Toolkit (MRT)** is the practical companion to RTT Micro Core.  
+Where the whitepaper defines the substrate, the MRT provides the **tools** — the operators, templates, and patterns you can use to build, test, and deploy micro‑scale resonance systems.
 
-The MRT is minimal, modular, and designed for constrained environments.
+The MRT is:
+
+- minimal  
+- modular  
+- deterministic  
+- designed for constrained environments  
+
+It is the applied layer of Micro Core.
 
 ---
 
-## 🔧 What the Toolkit Provides
+## 🔧 **What the Toolkit Provides**
 
 The MRT includes:
 
@@ -39,7 +46,7 @@ Each module stands alone and can be used independently.
 
 ---
 
-## 🧩 Why the MRT Exists
+## 🧩 **Why the MRT Exists**
 
 Micro Core defines:
 
@@ -55,11 +62,11 @@ But applying these concepts requires tools that are:
 - easy to reason about  
 - suitable for embedded and distributed systems  
 
-The MRT fills that gap.
+The MRT fills that gap by turning the substrate into a usable toolkit.
 
 ---
 
-## ⚡ Who the Toolkit Is For
+## ⚡ **Who the Toolkit Is For**
 
 The MRT is designed for:
 
@@ -67,13 +74,14 @@ The MRT is designed for:
 - researchers modeling micro‑regimes  
 - students learning micro‑scale RTT  
 - developers building micro‑agents or embedded loops  
+- educators teaching resonance‑time concepts  
 - anyone needing a stable micro‑substrate for constrained systems  
 
 If you’re working small, the MRT is your toolbox.
 
 ---
 
-## 🧭 Where to Go Next
+## 🧭 **Where to Go Next**
 
 Explore the full toolkit in the `/toolkit/` directory:
 
