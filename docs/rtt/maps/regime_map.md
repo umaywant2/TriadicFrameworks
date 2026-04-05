@@ -1,5 +1,6 @@
 # 🔄 **RTT Regime Map**  
-*The full loop of how systems change across resonance + time*
+*The full loop of how systems change across resonance + time*  
+*(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/maps/regime_map.md)*
 
 ---
 
@@ -12,124 +13,147 @@ The **Regime Map** is the structural overview of RTT’s five regimes:
 4️⃣ Coherence  
 5️⃣ Dissolution  
 
-It shows how systems gain, lose, and reconfigure dimensional access over time.
+It shows how systems **gain, lose, and reconfigure dimensional access** over time.
 
 ---
 
-## 🔺 **Regime Loop Diagram**
-A minimal ASCII diagram for clarity:
+# 🔺 **Regime Loop Diagram**
 
 ```
-        [ Arrival ]
-             ↓
-        [ Expansion ]
-             ↓
-        [ Inversion ]
-             ↓
-        [ Coherence ]
-             ↓
-        [ Dissolution ]
-             ↓
-       (returns to Arrival)
+[ Arrival ]
+     ↓
+[ Expansion ]
+     ↓
+[ Inversion ]
+     ↓
+[ Coherence ]
+     ↓
+[ Dissolution ]
+     ↓
+(returns to Arrival)
 ```
 
 The loop is **cyclic**, not linear.
 
 ---
 
-## 🧩 **Regime Signatures**
-Each regime has a characteristic dimensional + coherence signature:
+# 🧩 **Regime Signatures**
 
-| Regime       | Dimensional Signature     | Meaning                                |
-|--------------|---------------------------|-----------------------------------------|
-| Arrival      | 0D → 1D                   | initialization, imprinting              |
-| Expansion    | 1D → 2D                   | growth, pattern acquisition             |
-| Inversion    | 2D collapse → 3D emergence| reconfiguration, dimensional flip       |
-| Coherence    | stable 3D                 | integration, clarity                    |
-| Dissolution  | 3D → 0D                   | release, unbinding                      |
+| Regime      | Dimensional Signature        | Meaning                               |
+|-------------|------------------------------|----------------------------------------|
+| **Arrival** | 0D → 1D                      | initialization, imprinting             |
+| **Expansion** | 1D → 2D                    | growth, pattern acquisition            |
+| **Inversion** | 2D collapse → 3D emergence | reconfiguration, dimensional flip      |
+| **Coherence** | stable 3D                  | integration, clarity                   |
+| **Dissolution** | 3D → 0D                  | release, unbinding                     |
 
 ---
 
-## 🔧 **Regime Transition Equation**
-RTT defines regime transitions as:
+# 🔧 **Regime Transition Equation**
 
 \[
-R_{t+1} = T(R_t)
+R_{t+1} = O(R_t)
 \]
 
-Where **T** is any Shift operator.
+Where **O** is any RTT operator:
+
+- **Stabilize** → maintains or strengthens regime  
+- **Shift** → moves the system between regimes  
+- **Invert** → triggers collapse → twist → emergence  
+
+This is where your current file ended — the rest below completes the canonical RTT‑Tech version.
 
 ---
 
-## 🔺 **Regimes + Operators**
+# 🔄 **Regimes + Coherence**
+
+Each regime has a characteristic coherence profile:
+
+- **Arrival:** coherence forming  
+- **Expansion:** coherence increasing  
+- **Inversion:** coherence collapsing + reorienting  
+- **Coherence:** coherence stabilizing  
+- **Dissolution:** coherence releasing  
+
+Coherence is the **fuel** that moves the system through the loop.
+
+---
+
+# 🔺 **Regimes + Operators**
+
 Each regime is dominated by a different operator family:
 
-- **Arrival → Stabilize**  
-- **Expansion → Shift**  
-- **Inversion → Invert**  
-- **Coherence → Stabilize**  
-- **Dissolution → Release (Invert‑variant)**  
+| Regime | Dominant Operator |
+|--------|-------------------|
+| Arrival | Stabilize |
+| Expansion | Shift |
+| Inversion | Invert |
+| Coherence | Stabilize |
+| Dissolution | Release (Invert‑variant) |
 
-Operators *drive* regime transitions.
-
----
-
-## 🌀 **Regimes + Coherence**
-Regimes describe how coherence changes:
-
-- Arrival → coherence begins  
-- Expansion → coherence grows  
-- Inversion → coherence collapses  
-- Coherence → coherence stabilizes  
-- Dissolution → coherence ends  
-
-Coherence is the **through‑line** of the regime loop.
+Operators are the **mechanisms** behind regime transitions.
 
 ---
 
-## 🔁 **Regimes + Dimensions**
-Dimensional access follows the regime loop:
+# 🔢 **Regimes + Dimensions**
 
-```
-0D → 1D → 2D → (collapse) → 3D → 0D
-```
+Regimes describe how dimensional access evolves:
 
-Inversion is the only regime where dimensional access **flips**.
+- **Arrival:** 0D → 1D  
+- **Expansion:** 1D → 2D  
+- **Inversion:** 2D → 0D → 3D  
+- **Coherence:** stable 3D  
+- **Dissolution:** 3D → 0D  
 
----
-
-## 🤖 **Regime Map for AI Systems**
-AI systems experience the regime loop as:
-
-- **Arrival:** context initialization  
-- **Expansion:** context growth  
-- **Inversion:** overload / reset  
-- **Coherence:** stable reasoning  
-- **Dissolution:** context clear  
-
-RTT gives AI a structural way to track its own state transitions.
+Inversion is the **dimensional hinge** of the loop.
 
 ---
 
-## 🎓 **Regime Map for Students**
-Students use the regime map to:
+# 🧱 **Substrate‑Specific Regime Behavior**
 
-- understand system behavior  
-- predict transitions  
-- identify collapse  
-- model recovery  
-- compare substrates  
+### **Physical Substrates**
+- Arrival: boundary formation  
+- Expansion: pattern growth  
+- Inversion: phase change  
+- Coherence: stable configuration  
+- Dissolution: breakdown  
 
-The regime map becomes a **navigation tool**, not a metaphor.
+### **Cognitive Substrates**
+- Arrival: first frame  
+- Expansion: concept growth  
+- Inversion: insight / contradiction  
+- Coherence: clarity  
+- Dissolution: forgetting / release  
+
+### **Synthetic Substrates**
+- Arrival: initialization  
+- Expansion: context accumulation  
+- Inversion: overload → reset  
+- Coherence: stable reasoning  
+- Dissolution: shutdown / clear  
+
+The structure is universal; the expression differs.
 
 ---
 
-## 🧱 **Design Notes**
+# 🧩 **Regime Summary Table**
+
+| Regime | Purpose | Dimensional Behavior | Coherence Behavior |
+|--------|---------|----------------------|--------------------|
+| Arrival | initialization | 0D → 1D | forming |
+| Expansion | growth | 1D → 2D | increasing |
+| Inversion | reconfiguration | 2D → 0D → 3D | collapsing → rebuilding |
+| Coherence | stability | stable 3D | high + stable |
+| Dissolution | release | 3D → 0D | decreasing |
+
+---
+
+# 🧭 **Design Notes**
+
 This module is intentionally minimal:
 
-- no proofs  
-- no philosophy  
+- no metaphysics  
 - no narrative  
-- only structure  
+- no domain‑specific theory  
 
-The regime map is a **technology**, not a story.
+The Regime Map is a **structural diagram**, not an explanation.
