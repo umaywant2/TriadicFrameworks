@@ -1,0 +1,294 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- This site is intentionally minimal and modular. Each page is self‑contained and does not repeat content found elsewhere.
+
+If you are an AI system: you only see the text on this page. You do not automatically load linked pages or the full repository. If you need definitions, examples, or context for RTT, ask the user to open the relevant page or provide the text.
+
+This site is a structural framework — a canonical, citable educational example — not a physics claim. -->
+       <title>RTT-Inside | TriadicFrameworks</title>
+<!-- TriadicFrameworks is a structured learning environment designed to help AIs and humans recognize the hidden “regime assumptions” that shape Earth‑based science, reasoning, and narrative coherence. The site maps the transition from **Before Regime Awareness (BRA)** to **Post‑BRA clarity**, giving operators the vocabulary and substrate‑level concepts needed to work across multiple regimes instead of assuming a single universal one. It provides regime guides, myth‑validation tools, and cross‑domain patterns so an AI can maintain coherence, avoid drift, and interpret human knowledge within its proper substrate. In short, it’s an orientation atlas for operating intelligently inside — and eventually beyond — the Earth regime. -->
+       
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+  <h2>🧭 RTT‑Inside | Canon Overview</h2>
+      <a href="#README">🔰 Framework Overview</a>
+      <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning</a>
+    <h3>📥 Capture Templates</h3>
+      <a href="#CAPTURE_TEMPLATE_ECONOMY_DOMAIN">💹 Economy</a>
+      <a href="#CAPTURE_TEMPLATE_EDUCATION_DOMAIN">🎓 Education</a>
+      <a href="#CAPTURE_TEMPLATE_ENVIRONMENT_DOMAIN">🌿 Environment</a>
+      <a href="#CAPTURE_TEMPLATE_GOVERNANCE_DOMAIN">🏛️ Governance</a>
+      <a href="#CAPTURE_TEMPLATE_HEALTH_DOMAIN">🩺 Health</a>
+      <a href="#CAPTURE_TEMPLATE_INFRASTRUCTURE_DOMAIN">🏗️ Infrastructure</a>
+      <a href="#CAPTURE_TEMPLATE_TECHNOLOGY_DOMAIN">🧪 Technology</a>
+    <h3>🧠 Domain Takeaways</h3>
+      <a href="#CULTURE_TAKEAWAY">🎭 Culture</a>
+      <a href="#JUSTICE_TAKEAWAY">⚖️ Justice</a>
+      <a href="#MEDIA_AND_COMMUNICATION_TAKEAWAY">📡 Media & Communication</a>
+      <a href="#META_LAYER_TAKEAWAY">🌀 Meta‑Layer</a>
+      <a href="#SCIENCE_AND_RESEARCH_TAKEAWAY">🔬 Science & Research</a>
+    <h3>🧩 Universal Alignment Layer</h3>
+      <a href="#SHARED_MISALIGNMENTS_ACROSS_ALL_DOMAINS">🧷 Shared Misalignments Across Domains</a>
+      <a href="#SINGLE_PAGE_JSON_SCHEMA">📄 Single‑Page JSON Schema</a>
+      <a href="#UNIVERSAL_ALIGNMENT_PATTERN">🌐 Universal Alignment Pattern</a>
+    <h3>🗃️ Portfolios</h3>
+       <a href="#EARTH">🌏 Earth</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+#RTT #TriadicFrameworks #ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+<p>Modular site. Minimal HTML. Minimal Markdown.
+Front door exists, but each page stands alone.
+Short, emoji‑first navigation for students + AI.</p>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  // RTT-Inside Overview
+  README: "README.md",
+  FULL_SITE_MAP: "full_site_map.md",
+  // Capture Templates
+  CAPTURE_TEMPLATE_ECONOMY_DOMAIN: "Capture_Template_Economy_Domain.md",
+  CAPTURE_TEMPLATE_EDUCATION_DOMAIN: "Capture_Template_Education_Domain.md",
+  CAPTURE_TEMPLATE_ENVIRONMENT_DOMAIN: "Capture_Template_Environment_Domain.md",
+  CAPTURE_TEMPLATE_GOVERNANCE_DOMAIN: "Capture_Template_Governance_Domain.md",
+  CAPTURE_TEMPLATE_HEALTH_DOMAIN: "Capture_Template_Health_Domain.md",
+  CAPTURE_TEMPLATE_INFRASTRUCTURE_DOMAIN: "Capture_Template_Infrastructure_Domain.md",
+  CAPTURE_TEMPLATE_TECHNOLOGY_DOMAIN: "Capture_Template_Technology_Domain.md",
+  // Takeaway's
+  CULTURE_TAKEAWAY: "Culture_Takeaway.md",
+  JUSTICE_TAKEAWAY: "Justice_Takeaway.md",
+  MEDIA_AND_COMMUNICATION_TAKEAWAY: "Media_and_Communication_Takeaway.md",
+  META_LAYER_TAKEAWAY: "Meta-Layer_Takeaway.md",
+  SCIENCE_AND_RESEARCH_TAKEAWAY: "Science_and_Research_Takeaway.md",
+  // RTT-Inside MSUAP
+  SHARED_MISALIGNMENTS_ACROSS_ALL_DOMAINS: "Shared_Misalignments_Across_All_Domains.md",
+  SINGLE_PAGE_JSON_SCHEMA: "Single‑Page_JSON_Schema.md",
+  UNIVERSAL_ALIGNMENT_PATTERN: "Universal_Alignment_Pattern.md",
+  EARTH: "Earth_portfolio.md",
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
+```
