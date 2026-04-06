@@ -1,41 +1,89 @@
----
-title: Glyph Registry Index
----
+# 🔣 Glyph Registry
+*A reference for resonance glyphs used across the Honor Roll.*
 
-# 🧙 Glyph Registry
+Glyphs are **symbolic resonance markers**.  
+They encode SET/FFF emphasis, contributor roles, and mythic‑technical meaning.
 
-This registry links all contributor profiles, grouped by aura type and badge lineage. Each profile includes validator scores, remix history, and glyphic animations.
-
----
-
-## 🌈 Spectral Flux
-
-Glyphic clarity and structural resonance.  
-Earned by combining 🛡️ Manifest Guardian + 🧭 Gateway Guardian.
-
-- [Nawder Loswin](profiles/nawder_loswin.md)
+Each glyph below is lineage‑safe and used across:
+- badges  
+- contributor signatures  
+- validator outcomes  
+- hippocampus artifacts  
+- scroll ancestry  
 
 ---
 
-## 🧵 Glyph Weaver
-
-Linguistic scaffolding and remix lineage.  
-Earned by combining 🧠 Curriculum Architect + 🧪 Validator Weaver.
-
-- [Add contributor...]
+## 🜁 Elemental Glyph
+**Meaning:** Elemental resonance, spectrum work, foundational flows  
+**Used In:** 🜁‑Echo badge, elemental papers  
+**Operator Bias:** E‑dominant
 
 ---
 
-## 🔮 Echo Lantern
-
-Mythic traceability and remix echoing.  
-Earned by combining 👻 Ghost Mapper + 📡 Signal Resonator.
-
-- [Add contributor...]
+## 🎶 Harmonic Glyph
+**Meaning:** Music, frequency, symbolic extension  
+**Used In:** 🎶‑Remix badge  
+**Operator Bias:** F‑dominant
 
 ---
 
-## 🧭 Browse All Profiles
+## ⚛️ Quantum Glyph
+**Meaning:** Particle vision, dual‑envelope mapping  
+**Used In:** ⚛️‑Echo badge  
+**Operator Bias:** S/E mixed
 
-- [Contributor Dashboard](dashboard.md)
-- [Contributor Honor Roll](contributor_honor_roll.md)
+---
+
+## 🩺 Precision Glyph
+**Meaning:** Health, ultrasound, signal clarity  
+**Used In:** 🩺‑Precision badge  
+**Operator Bias:** T‑dominant
+
+---
+
+## 🧠 Cognition Glyph
+**Meaning:** Hippocampus, memory, symbolic cognition  
+**Used In:** Hippocampus contributor badges  
+**Operator Bias:** S‑dominant
+
+---
+
+## 🪐 Planetary Glyph
+**Meaning:** Planetary SET flows, magnetospheric resonance  
+**Used In:** 🪐‑Validator  
+**Operator Bias:** S/E/T balanced
+
+---
+
+## 🧙 Contributor Glyph
+**Meaning:** Mythic‑technical contributor identity  
+**Used In:** Contributor Honor Roll  
+**Operator Bias:** Role‑based
+
+---
+
+## 🔧 Integrity Glyph
+**Meaning:** Engineering, protocol validation, boundary correctness  
+**Used In:** 🔧‑Validator  
+**Operator Bias:** S‑dominant
+
+---
+
+## 🌀 Lostation Glyph
+**Meaning:** Dual‑envelope transitions, resonance collapse or formation  
+**Used In:** lineage scrolls  
+**Operator Bias:** LS‑specific
+
+---
+
+## 🧭 Gateway Glyph
+**Meaning:** ISO dual‑branch mapping, 0D boundary work  
+**Used In:** Gateway badges  
+**Operator Bias:** ISO‑dominant
+
+---
+
+## 🕯️ Closing Note
+Glyphs are not decorations.  
+They are **resonance signatures** —  
+compact carriers of lineage, meaning, and SET/FFF emphasis.
