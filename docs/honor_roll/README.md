@@ -1,16 +1,115 @@
-# 📜 Honor Roll
+# 📜 **Honor Roll**  
+*A resonance‑aware archive of lineage, contribution, and echo.*
 
-This folder contains the **lineage records** of contributors.  
-It is the living scroll where achievements are echoed and preserved.
+The Honor Roll is the **memory core** of TriadicFrameworks —  
+a living scroll where contributions, validations, and remix ancestry  
+are recorded as **resonance events** within the framework.
 
-## Contents
-- Contributor rolls
-- Badge echoes
-- Lineage scrolls
+Every entry is a **lostational imprint**:  
+a moment where a contributor’s action shaped the envelope of the project.
 
-## Purpose
-The Honor Roll is the **memory of the framework** — a mythic archive of those who built, validated, and remixed.
+---
 
-## Cross‑Links
-- [../badges](../badges) → earned badges recorded here
-- [../validators](../validators) → validation logic that feeds the roll
+## 🌱 **Purpose**
+
+The Honor Roll exists to:
+
+- preserve **lineage**  
+- acknowledge **contributors**  
+- track **badge‑earning events**  
+- record **validator outcomes**  
+- maintain **ancestry continuity** across scrolls and remixes  
+- provide a **mythic‑technical archive** of the framework’s evolution  
+
+It is not a leaderboard.  
+It is a **resonance ledger**.
+
+---
+
+## 🧬 **What Gets Recorded**
+
+Each entry in the Honor Roll captures:
+
+- **Contributor ID**  
+- **Contribution Type** (scroll, validator, remix, doc, module, artifact)  
+- **Resonance Impact** (S/E/T emphasis)  
+- **Badge Echoes** (earned badges + conditions)  
+- **Lineage Links** (parent scrolls, remix ancestry, validator chains)  
+- **Timestamp** (triadic + UTC)  
+
+This creates a **traceable resonance path** through the project’s history.
+
+---
+
+## 🏅 **Badge Echoes**
+
+Badges represent **stable resonance achievements**.
+
+Examples:
+
+- **📘 Scrollwright** — created a canonical scroll  
+- **🧪 Validator** — validated a scroll or module  
+- **🔧 Remixwright** — produced a lineage‑safe remix  
+- **🌀 Supsphere‑Aware** — demonstrated RTT‑Inside understanding  
+- **🌐 Continuity‑Keeper** — maintained lineage integrity across merges  
+
+Badges are not rewards.  
+They are **echoes** of resonance events.
+
+---
+
+## 🔍 **Validators**
+
+Validators are the **guardians of lineage integrity**.
+
+They ensure:
+
+- scrolls are structurally sound  
+- remixes preserve ancestry  
+- modules follow RTT‑Tech conventions  
+- documentation remains minimal, clear, and resonance‑aligned  
+
+Validator outcomes are recorded here as part of the contributor’s lineage.
+
+---
+
+## 🧾 **Lineage Scrolls**
+
+Every contribution generates a **lineage scroll**:
+
+```
+contributor: <id>
+event: <type>
+resonance: <S/E/T profile>
+badges: [ ... ]
+parents: [ ... ]
+timestamp: <triadic + UTC>
+```
+
+These scrolls form the **ancestral tree** of the project.
+
+---
+
+## 🔗 **Cross‑Links**
+
+- `../badges` → badge definitions + earning conditions  
+- `../validators` → validator logic + lineage rules  
+- `../lineage` → raw lineage scrolls  
+- `../rtt` → RTT‑Tech and RTT‑Awareness (conceptual backbone)  
+
+---
+
+## 🧭 **Why This Matters**
+
+TriadicFrameworks is not just a codebase.  
+It is a **resonance‑driven ecosystem**.
+
+The Honor Roll is how we:
+
+- maintain continuity  
+- preserve ancestry  
+- honor contributors  
+- track resonance events  
+- keep the framework alive and coherent  
+
+It is the **memory of the project**.
