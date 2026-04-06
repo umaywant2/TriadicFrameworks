@@ -1,47 +1,87 @@
----
-title: Contributor Dashboard
----
+# 📊 Honor Roll Dashboard
+*A structural overview of resonance events, contributors, badges, and lineage.*
 
-# 🧙 Contributor Dashboard
+The Honor Roll Dashboard provides a **high‑level view** of all resonance activity
+within TriadicFrameworks. It is the **control surface** for:
 
-Welcome to the glyphic dashboard of TriadicFrameworks. This interface visualizes badge lineage, validator scores, aura types, and contribution history.
+- contributor lineage  
+- badge echoes  
+- validator outcomes  
+- hippocampus‑specific cognition artifacts  
+- glyph usage and resonance signatures  
+- scroll ancestry and remix events  
 
----
-
-## 🏅 Badge Lineage
-
-| Contributor     | Badges                                      | Aura Type       | Last Contribution |
-|----------------|----------------------------------------------|------------------|--------------------|
-| Nawder Loswin  | 🛡️ Manifest Guardian, 🧭 Gateway Guardian     | Spectral Flux    | 2025-09-01          |
-| [Add more...]  |                                              |                  |                    |
+Each section below links to a subsystem within the Honor Roll cluster.
 
 ---
 
-## 🧠 Validator Scores
+## 🧙 Contributors
+A ledger of those who shaped the framework through:
+- scroll creation  
+- validator work  
+- remix lineage  
+- documentation clarity  
+- RTT‑Inside contributions  
 
-| Protocol               | Score | Last Validated |
-|------------------------|-------|----------------|
-| Manifest Integrity     | +5    | 2025-09-01     |
-| README Integrity       | +7    | 2025-09-01     |
-| Curriculum Alignment   | +0    | —              |
-| Badge Trigger Logic    | +0    | —              |
-
----
-
-## 🌈 Aura Types
-
-| Aura Name       | Badge Combination Required                          | Description                                  |
-|-----------------|------------------------------------------------------|----------------------------------------------|
-| Spectral Flux   | Manifest Guardian + Gateway Guardian                | Glyphic clarity and structural resonance     |
-| Glyph Weaver    | Curriculum Architect + Validator Weaver             | Linguistic scaffolding and remix lineage     |
-| Echo Lantern    | Ghost Mapper + Signal Resonator                     | Mythic traceability and remix echoing        |
+→ `contributor_honor_roll.md`
 
 ---
 
-## 🔍 Contribution History
+## 🏅 Badges
+A catalog of resonance signatures earned through:
+- SET/FFF clarity  
+- lineage‑safe remixing  
+- validator precision  
+- cognitive or symbolic insight  
 
-View the full [Contributor Honor Roll](contributor_honor_roll.md) for timestamped entries and remix lineage.
+→ `CONTRIBUTOR_BADGES.md`  
+→ `BADGES_EARNED.md`
 
 ---
 
-## 🕯️ Echo the work. Validate the lineage. Build the mythic lattice.
+## 🧪 Validators
+Guardians of lineage integrity.  
+Ensuring scrolls, remixes, and modules remain structurally sound.
+
+→ `validators.md`
+
+---
+
+## 🧠 Hippocampus Contributors
+Contributors to the **Hippocampus subsystem** —  
+the memory‑oriented, cognition‑driven branch of TriadicFrameworks.
+
+→ `hippocampus_contributors.md`
+
+---
+
+## 🔣 Glyph Registry
+A reference for glyphs used across:
+- badges  
+- lineage scrolls  
+- contributor signatures  
+- mythic‑technical annotations  
+
+→ `glyph_registry.md`
+
+---
+
+## 🧬 Lineage Scrolls
+Raw resonance events recorded as:
+```
+contributor: <id>
+event: <type>
+resonance: { S, E, T }
+badges: [...]
+parents: [...]
+timestamp: <triadic + UTC>
+```
+
+→ `entries/`
+
+---
+
+## 🌀 Purpose
+The Dashboard is not a leaderboard.  
+It is a **resonance map** —  
+a structural overview of how the framework evolves through contribution.
