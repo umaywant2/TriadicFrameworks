@@ -18,145 +18,187 @@ This site is a structural framework — a canonical, citable educational example
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
 
 <style>
-  :root {
-    --bg-main: #0d0f12;
-    --bg-nav: #15181d;
-    --border-subtle: #2a2f38;
-    --text-main: #dfe7f3;
-    --text-muted: #9aa4b2;
-    --accent-rtt: #8ab4ff;
-    --radius: 10px;
-    --shadow: 0 0 20px rgba(0,0,0,0.4);
-    --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-    --rtt-accent-low: #7aa2f7;
-    --rtt-accent-mid: #9ece6a;
-    --rtt-accent-high: #f7768e;
-  }
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST + SEAMLESS NAV
+   ============================================================ */
 
-  /* Base styles */
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    padding: 0;
-    background: var(--bg-main);
-    color: var(--text-main);
-    font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    line-height: 1.65;
-    font-size: 17px;
-    overflow-x: hidden;
-  }
+:root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;
+  --rtt-accent-mid:  #9ece6a;
+  --rtt-accent-high: #f7768e;
+}
 
-  /* ==================== NAV MENU - EDGE HOVER BEHAVIOR ==================== */
-  nav {
-    position: fixed;
-    top: 0;
-    left: -260px;                    /* Start hidden off-screen */
-    width: 260px;
-    height: 100vh;
-    background: var(--bg-nav);
-    padding: 1.2rem;
-    overflow-y: auto;
-    border-right: 1px solid var(--border-subtle);
-    box-shadow: var(--shadow);
-    transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1); /* smooth slide */
-    z-index: 1000;
-  }
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
 
-  /* Trigger zone - invisible strip on the far left edge */
-  .nav-trigger {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 20px;                     /* How wide the "hot edge" is */
-    height: 100vh;
-    z-index: 999;
-    cursor: pointer;
-  }
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
 
-  /* Show nav when hovering the trigger OR the nav itself */
-  .nav-trigger:hover ~ nav,
-  nav:hover {
-    left: 0;                         /* Slide in */
-  }
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
-  /* Optional: slight delay when leaving to feel more natural */
-  nav {
-    transition-delay: 0s;
-  }
-  .nav-trigger:not(:hover) ~ nav:not(:hover) {
-    transition-delay: 150ms;         /* small delay before hiding */
-  }
+/* Base layout */
+html { 
+  scroll-behavior: smooth; 
+}
 
-  /* Nav content styling */
-  nav h2 {
-    font-size: 0.9rem;
-    color: var(--accent-rtt);
-    margin-top: 1.2rem;
-    margin-bottom: 0.4rem;
-    letter-spacing: 0.04em;
-  }
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
 
-  nav a {
-    display: block;
-    color: var(--text-muted);
-    text-decoration: none;
-    padding: 0.35rem 0;
-    font-size: 0.9rem;
-  }
+/* ==================== NAV MENU - EDGE HOVER + SEAMLESS SCROLL ==================== */
+nav {
+  position: fixed;
+  top: 0;
+  left: -260px;                    /* Hidden by default */
+  width: 260px;
+  height: 100vh;
+  background: var(--bg-nav);
+  padding: 1.2rem 1.4rem 1.2rem 1.2rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  border-right: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow);
+  transition: left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1000;
 
-  nav a:hover {
-    color: var(--text-main);
-  }
+  /* Seamless thin scrollbar */
+  scrollbar-width: thin;                    /* Firefox */
+  scrollbar-color: rgba(138, 180, 255, 0.18) transparent;
+}
 
-  /* Main content area - shifts right when nav is open */
-  main {
-    margin-left: 0;
-    padding: 2.5rem;
-    min-height: 100vh;
-    transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+nav::-webkit-scrollbar {
+  width: 6px;
+}
 
-  /* When nav is visible, push main content over slightly (optional) */
-  nav:hover ~ main,
-  .nav-trigger:hover ~ main {
-    margin-left: 20px;               /* subtle shift, or set to 260px if you want full push */
-  }
+nav::-webkit-scrollbar-thumb {
+  background: rgba(138, 180, 255, 0.18);
+  border-radius: 10px;
+}
 
-  /* Headings, paragraphs, etc. (kept similar) */
-  h1, h2, h3, h4 {
-    font-weight: 700;
-    margin-top: 1.8em;
-    margin-bottom: 0.5em;
-    line-height: 1.2;
-    background: var(--triadic);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(138, 180, 255, 0.35);
+}
 
-  main h1, main h2, main h3 {
-    color: var(--accent-rtt);
-    font-weight: 500;
-  }
+nav::-webkit-scrollbar-track {
+  background: transparent;
+}
 
-  p, ul, ol {
-    padding: 0 1em;
-    margin: 0 0 1.1em 0;
-  }
+/* Trigger zone - invisible strip on far left edge */
+.nav-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 18px;                     /* Narrow hot edge - feels more seamless */
+  height: 100vh;
+  z-index: 999;
+  cursor: pointer;
+}
 
-  pre, code {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-    background: rgba(255,255,255,0.02);
-    padding: 0.4em 0.6em;
-    border-radius: 6px;
-    color: #cfe8ff;
-  }
+/* Show nav when hovering trigger OR nav itself */
+.nav-trigger:hover ~ nav,
+nav:hover {
+  left: 0;
+}
 
-  pre {
-    background: #0b0d12;
-    padding: 1rem;
-    overflow-x: auto;
-    border-left: 2px solid var(--accent-rtt);
-  }
+/* Slight delay on hide for polished feel */
+nav {
+  transition-delay: 0s;
+}
+.nav-trigger:not(:hover) ~ nav:not(:hover) {
+  transition-delay: 180ms;
+}
+
+/* Main content area */
+main {
+  margin-left: 0;
+  padding: 2.5rem;
+  min-height: 100vh;
+  transition: margin-left 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle content shift when nav is open */
+.nav-trigger:hover ~ main,
+nav:hover ~ main {
+  margin-left: 25px;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+/* Paragraphs and lists */
+p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+}
+
+/* Code/pre */
+pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+
+/* Protocol and equation link styling */
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
 </style>
 
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
