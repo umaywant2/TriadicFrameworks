@@ -4,6 +4,8 @@
 
 This is a fully‑formed block we can paste directly into our site.
 
+[Dimensional_Science_Lineage](Dimensional_Science_Lineage.svg)
+
 ---
 
 ## **The Four Great Ladders of Systemic Awareness**  
