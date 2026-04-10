@@ -544,7 +544,6 @@ export class DimensionalEchoAPIImpl implements DimensionalEchoAPI {
 
 # **Dimensional Echo API — Example Queries**
 
-```markdown
 ## Example Queries
 
 ### 1. GET /echo/6D
