@@ -7,7 +7,7 @@ This is the narrative bridge that ties:
 - the **Seven Universal Operators**, and  
 - the **3×9 dimensional grid**  
 
-into a single, coherent RTT canon, and [API](https://www.triadicframeworks.org/api/rtt/The_Dimensional_Echo_API.md)
+into a single, coherent RTT canon, and [API](https://www.triadicframeworks.org/api/rtt/#DIMENSIONAL_ECHOS)
 
 <img width="512" height="768" alt="BCO efdb8b15-1259-4060-a89f-0ab40825cc3a" src="https://github.com/user-attachments/assets/d9f36309-a01c-4886-b48c-1fba14053e93" />
 
