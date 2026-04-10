@@ -1970,7 +1970,6 @@ Scenario Browser UI across any modern frontend framework.
 # **Scenario Browser UI — Wireframes**  
 ### *ASCII wireframes for browsing, running, and visualizing RTT scenarios*
 
-```markdown
 # Scenario Browser UI — Wireframes
 
 These wireframes illustrate the minimal layout and interactions for the
@@ -2110,7 +2109,6 @@ Sequence: [○─○] [≈] [→]
 
 These wireframes define the minimal, human‑scale UI for exploring RTT scenarios
 across the 3D–9D ladder.
-```
 
 ---
 
@@ -2665,7 +2663,6 @@ and navigable for all users, across all input modes.
 # **Scenario Browser UI — Minimal CSS Theme (Dark + Light Modes)**  
 ### *Dual‑mode palette, spacing, glyph colors, and layout primitives*
 
-```markdown
 # Scenario Browser UI — Minimal CSS Theme (Dark + Light Modes)
 
 This theme defines the dual‑mode visual system for the Scenario Browser UI.
@@ -3779,7 +3776,6 @@ This minimal Python kit is enough to get them started — and enough for them to
 # **Minimal Python Notebook Version**  
 ### *A single notebook‑friendly block students can run top‑to‑bottom*
 
-```markdown
 # Minimal Python Notebook — Dimensional Echo Starter
 
 This notebook provides a tiny, runnable version of the Dimensional Echo API.
@@ -3789,6 +3785,7 @@ It is intentionally minimal so students can extend it with AI.
 
 ## 1. Imports & Data Models
 
+```
 from dataclasses import dataclass
 from typing import List, Dict
 
@@ -3803,11 +3800,13 @@ class DimensionEcho:
     dimension: str
     echo_theme: str
     operators: List[OperatorExpression]
+```
 
 ---
 
 ## 2. Mock Echo Table (3D–6D sample)
 
+```
 ECHO_TABLE: Dict[str, DimensionEcho] = {
     "6D": DimensionEcho(
         dimension="6D",
@@ -3826,21 +3825,25 @@ ECHO_TABLE: Dict[str, DimensionEcho] = {
         ]
     )
 }
+```
 
 ---
 
 ## 3. Query a Dimension
 
+```
 def get_echo(dimension: str) -> DimensionEcho:
     return ECHO_TABLE[dimension]
 
 echo = get_echo("6D")
 echo
+```
 
 ---
 
 ## 4. Apply an Operator
 
+```
 def apply_operator(dimension: str, operator: str):
     echo = get_echo(dimension)
     op = next(o for o in echo.operators if o.operator == operator)
@@ -3857,6 +3860,7 @@ def apply_operator(dimension: str, operator: str):
     }
 
 apply_operator("6D", "Rhythm-Op")
+```
 
 ---
 
