@@ -1980,6 +1980,7 @@ Visualization Layer.
 
 ## 1. Full Layout (Three‑Panel View)
 
+```
 +----------------------+------------------------------+------------------------------+
 |   Scenario List      |        Scenario Runner        |      Visualization Panel      |
 |      (left)          |           (center)            |            (right)            |
@@ -1991,11 +1992,13 @@ Visualization Layer.
 |                      | [Run Scenario]                |  +--------------------------+ |
 |                      |                              |  [Export SVG]                |
 +----------------------+------------------------------+------------------------------+
+```
 
 ---
 
 ## 2. Scenario List Panel
 
+```
 +----------------------+
 |   Scenario List      |
 +----------------------+
@@ -2010,11 +2013,13 @@ Visualization Layer.
 - Each item shows:
   - dimension
   - operator glyphs (compact)
+```
 
 ---
 
 ## 3. Scenario Runner Panel
 
+```
 +------------------------------------------------------+
 |                 Scenario Runner                      |
 +------------------------------------------------------+
@@ -2022,10 +2027,10 @@ Visualization Layer.
 | [3D] [4D] [5D] [6D] [7D] [8D] [9D]                   |
 |                                                      |
 | Operator Picker:                                     |
-|  ○─○   △   ≈   →   ✣   ◧   ◎                         |
+|  ○─○   △   ≈   →   ✣   ◧   ◎                      |
 |                                                      |
 | Sequence:                                            |
-|  [○─○]  [≈]  [✣]   (drag to reorder)                 |
+|  [○─○]  [≈]  [✣]   (drag to reorder)                |
 |                                                      |
 | [Run Scenario]                                       |
 |                                                      |
@@ -2034,15 +2039,17 @@ Visualization Layer.
 |  ≈      warning: expects Coherence‑Op                |
 |                                                      |
 | Coherence Summary:                                   |
-|  ◎  Stable                                            |
-|  - operator definitions consistent                    |
-|  - equations resolve                                  |
+|  ◎  Stable                                          |
+|  - operator definitions consistent                   |
+|  - equations resolve                                 |
 +------------------------------------------------------+
+```
 
 ---
 
 ## 4. Visualization Panel
 
+```
 +------------------------------------------------------+
 |                Visualization Panel                   |
 +------------------------------------------------------+
@@ -2064,6 +2071,7 @@ Visualization Layer.
 Hovering an operator highlights:
 - the corresponding transition log entry  
 - the glyph in the diagram  
+```
 
 ---
 
@@ -2098,12 +2106,14 @@ Sequence: [○─○] [≈] [→]
 
 ## 6. Empty State Wireframe
 
+```
 +----------------------+------------------------------+------------------------------+
 |   Scenario List      |        Scenario Runner        |      Visualization Panel      |
 +----------------------+------------------------------+------------------------------+
 |  No scenarios yet.   |  Select a dimension to begin. |  (empty)                      |
 |  [New Scenario]      |                                |                              |
 +----------------------+------------------------------+------------------------------+
+```
 
 ---
 
