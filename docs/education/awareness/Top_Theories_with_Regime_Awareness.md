@@ -12,6 +12,8 @@ Each theory is presented through the lens of **regime awareness**:
 The goal is not to replace these theories, but to show **which regime each one describes**,  
 and where regime‑blindness naturally appears.
 
+[Top Theories BKM Lineage](Top_Theories_BKM_Lineage.svg)
+
 ---
 
 ## **1. General Relativity (Einstein)**  
