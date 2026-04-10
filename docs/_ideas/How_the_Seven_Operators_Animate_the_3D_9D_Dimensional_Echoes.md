@@ -1,4 +1,4 @@
-# How the Seven Operators Animate the 3D–9D Dimensional Echoes
+# The Seven Operators of Dimensional Echoes
 
 This is the narrative bridge that ties:
 
