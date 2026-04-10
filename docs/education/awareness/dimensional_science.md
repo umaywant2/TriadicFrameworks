@@ -1,6 +1,6 @@
 # ⭐ **A New Comparative Example for our “Top Theories” Page**  
 ### *“The Four Great Ladders of Systemic Awareness”*  
-### *(Triadic Frameworks × Fuller × Haskell × Young × Peirce)*
+### *(TriadicFrameworks × Fuller × Haskell × Young × Peirce)*
 
 This is a fully‑formed block we can paste directly into our site.
 
@@ -26,7 +26,7 @@ The geometry of stability.
 The tetrahedron as the minimum system.  
 The vector equilibrium as the “zero state.”
 
-**How it maps to Triadic Frameworks:**  
+**How it maps to TriadicFrameworks:**  
 This is the **3D–4D substrate** of RTT.  
 It’s where **Boundary‑Op** and **Envelope‑Op** first become meaningful.  
 It’s the *hardware* of dimensional science.
@@ -42,7 +42,7 @@ We cannot have operators without a scaffold.
 A universal grammar of relationships:  
 (+,+), (+,0), (+,-), (0,0), etc.
 
-**How it maps to Triadic Frameworks:**  
+**How it maps to TriadicFrameworks:**  
 This is the **5D–6D layer** where **Relation‑Op** and **Rhythm‑Op** dominate.  
 It’s the *network* layer of dimensional science.
 
@@ -57,7 +57,7 @@ We discovered the **operator** of interactions.
 A 7‑stage arc of increasing freedom.  
 The descent into matter and ascent into awareness.
 
-**How it maps to Triadic Frameworks:**  
+**How it maps to TriadicFrameworks:**  
 This is the **7D–8D layer**, where **Transition‑Op** and **Lineage‑Op** become central.  
 It’s the *runtime* of dimensional science.
 
@@ -71,7 +71,7 @@ Young gives the “time axis” that RTT formalizes as **Resonance‑Time**.
 Firstness, Secondness, Thirdness.  
 The irreducible triad of meaning.
 
-**How it maps to Triadic Frameworks:**  
+**How it maps to TriadicFrameworks:**  
 This is the **9D layer**, where **Coherence‑Op** becomes the governing principle.  
 It’s the *semantic layer* of dimensional science.
 
@@ -99,7 +99,7 @@ This is the “full stack” of systemic awareness across history.
 
 This is a clean, one‑paragraph explanation that ties everything together:
 
-> Across the last century, multiple independent thinkers—Fuller, Haskell, Young, Peirce—each discovered a different “slice” of the same underlying structure: a layered universe where geometry gives rise to interaction, interaction gives rise to process, and process gives rise to meaning. Triadic Frameworks unifies these layers through the Seven Operators and the Resonance‑Time model, offering a single coherent grammar for structural, relational, temporal, and semantic change. Dimensional science emerges when these layers are treated not as competing theories, but as different projections of the same underlying operator stack.
+> Across the last century, multiple independent thinkers—Fuller, Haskell, Young, Peirce—each discovered a different “slice” of the same underlying structure: a layered universe where geometry gives rise to interaction, interaction gives rise to process, and process gives rise to meaning. TriadicFrameworks unifies these layers through the Seven Operators and the Resonance‑Time model, offering a single coherent grammar for structural, relational, temporal, and semantic change. Dimensional science emerges when these layers are treated not as competing theories, but as different projections of the same underlying operator stack.
 
 This is the kind of paragraph that makes a student go:  
 “Oh. This is a *field*, not a hobby.”
@@ -136,7 +136,7 @@ We made them runnable.
 
 # ⭐ **1. Dimensional Science Lineage Map**  
 ### *Diagram‑Ready (ASCII + Markdown)*  
-### *Fuller → Haskell → Young → Peirce → Triadic Frameworks*
+### *Fuller → Haskell → Young → Peirce → TriadicFrameworks*
 
 We can paste this directly into our Awareness page.
 
@@ -173,7 +173,7 @@ We can paste this directly into our Awareness page.
                                     │
                                     ▼
                      ┌──────────────────────────────┐
-                     │   Triadic Frameworks (RTT)    │
+                     │   TriadicFrameworks (RTT)    │
                      │   *Seven Operators*           │
                      │   Resonance‑Time Science      │
                      └──────────────────────────────┘
