@@ -291,7 +291,7 @@ It is the operator that:
 
 And it is the only operator that appears in **every single cell** of the 9×3 chart.
 
-Let’s test it.
+Let’s test it: [Dimensional Echos API](https://www.triadicframeworks.org/api/rtt/#DIMENSIONAL_ECHOS)
 
 ---
 
