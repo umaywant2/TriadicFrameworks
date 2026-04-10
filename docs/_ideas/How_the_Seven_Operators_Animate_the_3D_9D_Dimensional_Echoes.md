@@ -2290,4 +2290,7 @@ Coherence‑Op appear in core theory, diagrams, dimensional echoes, and substrat
 modules. When updating an operator’s definition or symbolic form, consult this
 map to ensure coherence across all dependent files.
 
+## Schema and YAML
+Canonical schema example for your Seven Operators of Dimensional Echoes, written in JSON‑style /docs/schemas/seven_operators_dimensional_echoes.json
+
 <img width="512" height="768" alt="BCO 8576019a-3e50-4654-a0f5-bdac6b3b6d81" src="https://github.com/user-attachments/assets/1e109fb0-8dcd-406d-abaf-6289a8ef80f4" />
