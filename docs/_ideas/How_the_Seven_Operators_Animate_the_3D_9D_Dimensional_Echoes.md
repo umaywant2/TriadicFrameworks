@@ -9,6 +9,8 @@ This is the narrative bridge that ties:
 
 into a single, coherent RTT canon.
 
+<img width="512" height="768" alt="BCO efdb8b15-1259-4060-a89f-0ab40825cc3a" src="https://github.com/user-attachments/assets/d9f36309-a01c-4886-b48c-1fba14053e93" />
+
 Below is the repo‑ready narrative section.
 
 ---
@@ -2287,3 +2289,5 @@ It serves as a navigation layer: a way to trace how Relation‑Op through
 Coherence‑Op appear in core theory, diagrams, dimensional echoes, and substrate
 modules. When updating an operator’s definition or symbolic form, consult this
 map to ensure coherence across all dependent files.
+
+<img width="512" height="768" alt="BCO 8576019a-3e50-4654-a0f5-bdac6b3b6d81" src="https://github.com/user-attachments/assets/1e109fb0-8dcd-406d-abaf-6289a8ef80f4" />
