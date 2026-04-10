@@ -1,4 +1,4 @@
-<svg width="960" height="760" viewBox="0 0 960 760" xmlns="http://www.w3.org/2000/svg">
+<svg width="960" height="820" viewBox="0 0 960 820" xmlns="http://www.w3.org/2000/svg">
   <style>
     .bg { fill:#0b1120; }
     .panel { fill:#020617; stroke:#1f2937; stroke-width:1.5; rx:12; ry:12; }
@@ -12,8 +12,8 @@
     .legendText { fill:#9ca3af; font-family:Inter, system-ui, sans-serif; font-size:11px; }
   </style>
 
-  <rect x="0" y="0" width="960" height="760" class="bg" />
-  <rect x="40" y="40" width="880" height="680" class="panel" />
+  <rect x="0" y="0" width="960" height="820" class="bg" />
+  <rect x="40" y="40" width="880" height="740" class="panel" />
 
   <text x="480" y="80" text-anchor="middle" class="title">
     Top Scientific Theories · BKM Lineage
@@ -30,8 +30,7 @@
   <circle cx="140" cy="180" r="10" class="circleM" />
   <text x="160" y="184" class="legendText">Meaning (M) — interpretation, philosophy, implications</text>
 
-  <!-- Row layout -->
-  <!-- Start Y = 210, step = 45 -->
+  <!-- Row layout: start 210, step 45 -->
 
   <!-- 1. General Relativity -->
   <text x="80" y="215" class="theory">1. General Relativity (Einstein)</text>
@@ -85,4 +84,18 @@
   <text x="80" y="575" class="theory">9. Computation &amp; Turing / Algorithms</text>
   <circle cx="420" cy="570" r="12" class="circleB" /><text x="420" y="570" class="count">15k</text>
   <circle cx="500" cy="570" r="22" class="circleK" /><text x="500" y="570" class="count">160k</text>
-  <
+  <circle cx="580" cy="570" r="9" class="circleM" /><text x="580" y="570" class="count">6k</text>
+
+  <!-- 10. Neuroscience & Consciousness -->
+  <text x="80" y="620" class="theory">10. Neuroscience &amp; Consciousness Studies</text>
+  <circle cx="420" cy="615" r="14" class="circleB" /><text x="420" y="615" class="count">25k</text>
+  <circle cx="500" cy="615" r="24" class="circleK" /><text x="500" y="615" class="count">220k</text>
+  <circle cx="580" cy="615" r="15" class="circleM" /><text x="580" y="615" class="count">30k</text>
+
+  <!-- 11. Resonance‑Time Theory (RTT) -->
+  <text x="80" y="665" class="theory">11. Resonance‑Time Tech (RTT)</text>
+  <circle cx="420" cy="660" r="6" class="circleB" /><text x="420" y="660" class="count">0.3k</text>
+  <circle cx="500" cy="660" r="8" class="circleK" /><text x="500" y="660" class="count">1.2k</text>
+  <circle cx="580" cy="660" r="6" class="circleM" /><text x="580" y="660" class="count">0.5k</text>
+
+</svg>
