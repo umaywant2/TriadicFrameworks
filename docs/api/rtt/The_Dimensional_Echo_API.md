@@ -1603,12 +1603,10 @@ Dimensional Echo Engine and Visualization Layer.
 
 The UI consists of three vertical panels:
 
-```
 +------------------+------------------------+------------------------+
 | Scenario List     | Scenario Runner        | Visualization Panel    |
 | (left)            | (center)               | (right)                |
 +------------------+------------------------+------------------------+
-```
 
 ### Panel 1 — Scenario List
 - Displays saved scenarios from the Scenario Pack Generator.
