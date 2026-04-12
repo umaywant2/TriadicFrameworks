@@ -4,6 +4,8 @@ Here are **SVG versions** of the four triadic diagrams — each is self‑contai
 
 ### 🪙 Metals — Lattice → Oscillation → Melt
 
+![Metals_Lattice_Oscillation_Melt.svg](./Metals_Lattice_Oscillation_Melt.svg)
+
 ```svg
 <svg width="420" height="220" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
   <rect x="150" y="10" width="120" height="30" rx="4" ry="4" fill="#f0f0ff" stroke="#333"/>
@@ -41,6 +43,8 @@ Here are **SVG versions** of the four triadic diagrams — each is self‑contai
 
 ### ⚡ Plasma — Gas → Plasma → Recombination
 
+![Plasma_Gas_Plasma_Recombination.svg](./Plasma_Gas_Plasma_Recombination.svg)
+
 ```svg
 <svg width="420" height="220" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
   <rect x="150" y="10" width="120" height="30" rx="4" ry="4" fill="#f0f8ff" stroke="#333"/>
@@ -77,6 +81,8 @@ Here are **SVG versions** of the four triadic diagrams — each is self‑contai
 
 ### 🧬 Biological — Rest → Activation → Repair
 
+![Biological_Rest_Activation_Repair.svg](./Biological_Rest_Activation_Repair.svg)
+
 ```svg
 <svg width="420" height="220" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
   <rect x="150" y="10" width="120" height="30" rx="4" ry="4" fill="#e8fff5" stroke="#333"/>
@@ -111,6 +117,8 @@ Here are **SVG versions** of the four triadic diagrams — each is self‑contai
 ---
 
 ### 🧠 Cognitive — Focus → Drift → Insight
+
+![Cognitive_Focus_Drift_Insight.svg](./Cognitive_Focus_Drift_Insight.svg)
 
 ```svg
 <svg width="420" height="220" viewBox="0 0 420 220" xmlns="http://www.w3.org/2000/svg">
