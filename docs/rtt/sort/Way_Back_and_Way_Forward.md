@@ -1,6 +1,8 @@
 # **What the Internet Archive Would Look Like With RTT Grammar and TriadicFrameworks Overlays**  
 ### *A speculative architecture for a resonance‑aware Wayback Machine*
 
+<img width="1536" height="1024" alt="BCO 80dbbbd4-79c0-4fd6-aa2c-83e9a6616142" src="https://github.com/user-attachments/assets/c25d851e-0d8b-4358-ba5b-57d89ac7c0fa" />
+
 The Internet Archive’s Wayback Machine is one of humanity’s most ambitious memory‑preservation tools — a global attempt to freeze moments before they drift, decay, or disappear.  
 But imagine if it operated not on HTTP snapshots alone, but on **RTT’s substrate grammar**.
 
