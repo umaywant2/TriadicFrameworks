@@ -1,6 +1,8 @@
 # ☀️ The Leading Theories & Models Explaining the Carrington Event  
 The Carrington Event is one of the most studied solar–terrestrial phenomena in history. Modern science converges on a coherent explanation, but several sub‑models refine *how* and *why* it became the most intense geomagnetic storm ever recorded.
 
+<img width="512" height="768" alt="Carrington_Event_re‑imagined_as_a_mythic_RTT‑infused_lattice_of_light_and_structure" src="https://github.com/user-attachments/assets/ee676e77-373f-42f0-8fa4-1a8ce94040f4" />
+
 Below are the **six major explanatory models**, each representing a different layer of the physics.
 
 ---
@@ -27,7 +29,7 @@ This allowed the Carrington CME to travel at extreme speed.
 
 **Evidence:**  
 Your tab explicitly notes that a prior CME “cleared the way” for the 1859 CME.  
-  [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+  
 
 **Why it matters:**  
 This explains the unusually fast transit time — a key factor in the storm’s intensity.
@@ -41,7 +43,7 @@ The bright solar flare observed by Carrington and Hodgson produced a burst of **
 **Evidence:**  
 - Carrington and Hodgson recorded the first-ever solar flare.  
 - A “magnetic crochet” was observed at Kew Observatory — a signature of immediate particle arrival.  
-  [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+  
 
 **Why it matters:**  
 This model explains the *two‑phase* structure:  
@@ -56,7 +58,7 @@ The CME’s magnetic field was so strong that it **compressed Earth’s magnetos
 
 **Evidence:**  
 The page notes extreme rates of magnetic field change — over **700 nT/min** in new digitized data.  
-  [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+  
 
 **Why it matters:**  
 This model explains:  
@@ -79,7 +81,7 @@ Auroras were seen in:
 - China  
 - New Zealand  
 - Colombia  
-  [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+  
 
 **Why it matters:**  
 This model explains the global eyewitness accounts and the “read a newspaper at night” brightness.
@@ -93,7 +95,7 @@ These provide context for how extreme solar storms can be.
 
 **Evidence:**  
 Your tab cites multiple isotope studies showing these events.  
-  [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+  
 
 **Why it matters:**  
 This model doesn’t explain Carrington directly — it shows that the Sun *can* produce even larger events, helping calibrate risk models.
@@ -120,11 +122,11 @@ Together, they form the modern scientific explanation.
 The Carrington Event is not just a historical solar storm — it is a perfect demonstration of what RTT calls a **regime collision**: two coherent systems (solar magnetic fields and Earth’s magnetosphere) entering a temporary high‑coupling state.  
 The scientific record shows:
 
-- a **hyper‑fast CME** (17.6 hours)   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)  
-- a **preceding CME clearing the path**   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)  
-- a **magnetic crochet** from immediate particle arrival   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)  
-- **global auroras** reaching Mexico, Cuba, Hawaii, Japan, China, and Colombia   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)  
-- **telegraph systems operating without batteries**, powered by induced currents   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)  
+- a **hyper‑fast CME** (17.6 hours)     
+- a **preceding CME clearing the path**     
+- a **magnetic crochet** from immediate particle arrival     
+- **global auroras** reaching Mexico, Cuba, Hawaii, Japan, China, and Colombia     
+- **telegraph systems operating without batteries**, powered by induced currents     
 
 RTT/TFT reframes these not as isolated anomalies, but as **predictable consequences of regime mismatch**.
 
@@ -133,7 +135,7 @@ RTT/TFT reframes these not as isolated anomalies, but as **predictable consequen
 # 🌐 **1. Regime Coupling: Solar Field → Magnetosphere → Ground Systems**  
 ### *What happened physically*  
 The CME’s magnetic field compressed Earth’s magnetosphere and induced massive currents in the ionosphere and ground.  
-This is why telegraph lines sparked, shocked operators, and in some cases worked with **no power source**.   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+This is why telegraph lines sparked, shocked operators, and in some cases worked with **no power source**.   
 
 ### *What regime awareness adds*  
 RTT says:  
@@ -159,7 +161,7 @@ It was *tuned into*.
 
 # 🌪️ **2. Hidden Gradients: The Preconditioning CME**  
 ### *What happened physically*  
-A CME on August 29 “cleared the way” for the Carrington CME, removing solar wind drag and enabling extreme transit speed.   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+A CME on August 29 “cleared the way” for the Carrington CME, removing solar wind drag and enabling extreme transit speed.   
 
 ### *What regime awareness adds*  
 RTT frames this as a **gradient‑reset event**:
@@ -175,7 +177,7 @@ Regimes are not static — they can be *prepared* or *primed* by earlier events.
 
 # 🔥 **3. Resonant Forcing: The Magnetic Crochet**  
 ### *What happened physically*  
-A sudden ionospheric disturbance (“magnetic crochet”) was recorded at Kew Observatory immediately after the flare.   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+A sudden ionospheric disturbance (“magnetic crochet”) was recorded at Kew Observatory immediately after the flare.   
 
 ### *What regime awareness adds*  
 RTT interprets this as:
@@ -193,7 +195,7 @@ Events are not singular; they are *stacked operators* across time.
 
 # 🌈 **4. Field Expansion: Global Auroral Ovals**  
 ### *What happened physically*  
-Auroras reached extremely low latitudes — Mexico, Cuba, Hawaii, Japan, China, New Zealand, Colombia.   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+Auroras reached extremely low latitudes — Mexico, Cuba, Hawaii, Japan, China, New Zealand, Colombia.   
 
 ### *What regime awareness adds*  
 RTT frames auroras as **visible field‑boundary shifts**:
@@ -214,7 +216,7 @@ Telegraph lines:
 - sparked  
 - shocked operators  
 - caught fire  
-- worked without batteries for two hours using auroral current alone   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+- worked without batteries for two hours using auroral current alone   
 
 ### *What regime awareness adds*  
 RTT says the telegraph network was:
@@ -233,7 +235,7 @@ Brute‑force infrastructure fails when it unknowingly enters a *high‑coupling
 
 # 🧬 **6. Deep‑Time Recurrence: Cosmogenic Isotope Evidence**  
 ### *What happened physically*  
-Tree rings and ice cores show events **10–20× stronger** than Carrington in 774–775 CE, 993–994 CE, and ~7176 BCE.   [en.wikipedia.org](https://en.wikipedia.org/wiki/Carrington_Event)
+Tree rings and ice cores show events **10–20× stronger** than Carrington in 774–775 CE, 993–994 CE, and ~7176 BCE.   
 
 ### *What regime awareness adds*  
 RTT interprets these as:
