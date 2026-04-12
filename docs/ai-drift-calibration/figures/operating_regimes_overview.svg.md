@@ -1,3 +1,5 @@
+<img width="681" height="364" alt="Declared_Operating_Regime_SVG" src="https://github.com/user-attachments/assets/30cee286-8456-4662-83a2-622f2ec3635e" />
+
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-label="Operating regimes overview schematic">
   <defs>
