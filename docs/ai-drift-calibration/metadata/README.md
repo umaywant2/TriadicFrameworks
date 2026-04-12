@@ -11,10 +11,10 @@ version of the paper is released.
 
 ## Files
 
-- `[CITATION.cff](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai-drift-calibration/metadata/citation.cff)`  
+- [CITATION.cff](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai-drift-calibration/metadata/citation.cff)  
   Canonical citation metadata used by GitHub, Zenodo, and reference managers.
 
-- `zenodo.json`  
+- [zenodo.json](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/ai-drift-calibration/metadata/zenodo.json)  
   Upload metadata used during Zenodo publication.
 
 ## Update Policy
