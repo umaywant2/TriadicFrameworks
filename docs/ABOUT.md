@@ -24,7 +24,9 @@ This site is intentionally minimal, structural, and resonance‑oriented.
 It is not a textbook.  
 It is a cognitive scaffold — a way to see the architecture of change.
 
-**Nawder Loswin** (pen name) is the creator of TriadicFrameworks, a structural learning project that teaches students and AIs how to understand complex systems through gradients, triads, and coherence.
+TriadicFrameworks is a structural learning project that teaches students and AIs how to understand complex systems through gradients, triads, and coherence.
+
+---
 
 # 🎯 **The One‑Sentence Answer**  
 **TriadicFrameworks gives students and AIs a *structural language* for understanding systems — not facts, not content, but the grammar behind how systems behave, change, collapse, and evolve.**
