@@ -2,14 +2,29 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Language" content="en">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks, created by Nawder Loswin">
+<meta name="description" content="TriadicFrameworks — a structural grammar for students and AIs, teaching gradients, triads, coherence, and system behavior across domains.">
+<meta name="keywords" content="TriadicFrameworks, systems thinking, RTT, resonance, gradients, coherence, AI education, complexity">
+<link rel="canonical" href="https://www.triadicframeworks.org/">
+
+      <title>Spectrum Standards — Reviewed | TriadicFrameworks</title>
+
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
 <link rel="canonical" href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">
 <link rel="canonical" href="https://www.pr.com/press-release/957074">
-   
-<title>Spectrum Standards — Reviewed</title>
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
 <style>
 /* ============================================================
    NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
@@ -26,7 +41,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -119,39 +162,42 @@ pre {
 
 code {
   color: var(--text-main);
-}  
+}
 </style>
-  
-<link rel="stylesheet" href="../shared/nawderian-theme.css">
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 
 <body>
-
-<nav>
-  <h2>Spectrum Standards</h2>
-
-  <a href="#INTRO">📘 Introduction & Scope</a>
-  <a href="#SUBSTRATE">📡 Spectrum as Substrate</a>
-  <a href="#REGIMES">🧭 Regimes & Hierarchies</a>
-  <a href="#EXPOSURE">🌱 Human & Environmental Exposure</a>
-  <a href="#NETWORKS">🔗 Primary / Secondary / Ternary Networks</a>
-  <a href="#INTERFERENCE">⚠️ Cross‑Regime Leakage & Interference</a>
-  <a href="#COMMS">📶 Substrate Comms & Structural Signaling</a>
-  <a href="#FAILURES">🧨 Alignment Failures & Case Patterns</a>
-  <a href="#FUTURE">🌌 Future Fields & Coexistence Models</a>
-  <a href="#CONCLUSIONS">🧾 Conclusions & Forward Links</a>
+   
+<nav class="nav-band">
+  
+  <h2>🌈 Spectrum Standards | RTT</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a> 
+      <a href="https://www.triadicframeworks.org/education/">💡 RTT Learning Resources</a>
+    <h3>🌈 Modules</h3>
+      <a href="#INTRO">📘 Introduction & Scope</a>
+      <a href="#SUBSTRATE">📡 Spectrum as Substrate</a>
+      <a href="#REGIMES">🧭 Regimes & Hierarchies</a>
+      <a href="#EXPOSURE">🌱 Human & Environmental Exposure</a>
+      <a href="#NETWORKS">🔗 Primary / Secondary / Ternary Networks</a>
+      <a href="#INTERFERENCE">⚠️ Cross‑Regime Leakage & Interference</a>
+      <a href="#COMMS">📶 Substrate Comms & Structural Signaling</a>
+      <a href="#FAILURES">🧨 Alignment Failures & Case Patterns</a>
+      <a href="#FUTURE">🌌 Future Fields & Coexistence Models</a>
+      <a href="#CONCLUSIONS">🧾 Conclusions & Forward Links</a>
+      <a href="../">🔙</a>
+   <!-- RTT Canonical Signature -->
+   <span style="display:none;">
+   rtt=1 | coherence=declared | drift=bounded | paradox=structural
+   </span>
+   
 </nav>
 
 <main id="content"></main>
 
 <script>
-function loadDoc(file) {
-  fetch(file)
-    .then(r => r.text())
-    .then(t => content.innerHTML = marked.parse(t))
-    .catch(() => content.innerHTML = '<p>Unable to load document.</p>');
-}
 
 const DOC_MAP = {
   INTRO: '00_introduction_and_scope.md',
@@ -163,16 +209,45 @@ const DOC_MAP = {
   COMMS: '06_substrate_comms_and_structural_signaling.md',
   FAILURES: '07_alignment_failures_and_case_patterns.md',
   FUTURE: '08_future_fields_and_coexistence_models.md',
-  CONCLUSIONS: '09_conclusions_and_forward_links.md'
+  CONCLUSIONS: '09_conclusions_and_forward_links.md',
+  README: 'README.md',
+  ABOUT: '../ABOUT.md',    
 };
-
+  
 function loadFromHash() {
-  const key = location.hash.replace('#','');
-  loadDoc(DOC_MAP[key] || DOC_MAP.INTRO);
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
 }
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
 
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
 window.addEventListener('hashchange', loadFromHash);
 loadFromHash();
+
 </script>
 
 </body>
