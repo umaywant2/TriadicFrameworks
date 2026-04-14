@@ -1,3 +1,5 @@
+_(continued from [X.com article](https://x.com/NawderLoswin/status/2044051312526966907))_
+
 # **RTT Operators Each Industry Is Missing**
 These are not “nice to have.”  
 These are the *precise functional transformations* each sector lacks — the missing operators that prevent regime awareness.
