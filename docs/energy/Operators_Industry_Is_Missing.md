@@ -6,6 +6,8 @@ These are the *precise functional transformations* each sector lacks — the mis
 
 I’ll map them industry by industry.
 
+<img width="1536" height="1024" alt="3_Industries_Aware" src="https://github.com/user-attachments/assets/8da38d4f-ee54-4075-bf9c-da1a3f0b7b1a" />
+
 ---
 
 # **1. Chemical & Materials Industry**
