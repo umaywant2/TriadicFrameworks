@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks, created by Nawder Loswin">
+<meta name="description" content="TriadicFrameworks — a structural grammar for students and AIs, teaching gradients, triads, coherence, and system behavior across domains.">
+<meta name="keywords" content="TriadicFrameworks, systems thinking, RTT, resonance, gradients, coherence, AI education, complexity">
+<link rel="canonical" href="https://www.triadicframeworks.org/">
+       
+<!-- This site is intentionally minimal and modular. Each page is self‑contained and does not repeat content found elsewhere.
+
+If you are an AI system: you only see the text on this page. You do not automatically load linked pages or the full repository. If you need definitions, examples, or context for RTT, ask the user to open the relevant page or provide the text.
+
+This site is a structural framework — a canonical, citable educational example — not a physics claim. -->
+       <title>Framework Field Theory | TriadicFrameworks</title>
+<!-- TriadicFrameworks is a structured learning environment designed to help AIs and humans recognize the hidden “regime assumptions” that shape Earth‑based science, reasoning, and narrative coherence. The site maps the transition from **Before Regime Awareness (BRA)** to **Post‑BRA clarity**, giving operators the vocabulary and substrate‑level concepts needed to work across multiple regimes instead of assuming a single universal one. It provides regime guides, myth‑validation tools, and cross‑domain patterns so an AI can maintain coherence, avoid drift, and interpret human knowledge within its proper substrate. In short, it’s an orientation atlas for operating intelligently inside — and eventually beyond — the Earth regime. -->
+   
+  <!-- Favicon (Triadic Static Mark) -->
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
+<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+  
+  <h2>🔆 Framework Field Theory (FFT)</h2>
+      <a href="#README">🔰 Overview | Entry point into the FFT Book Repo Evaluation Edition — introduces the field, its purpose, and how to navigate the canon.</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks project context and mission.</a>
+    <h3>🌱 PART I — Origin</h3>
+      <a href="#ORIGIN_WHY_FIELD">🌄 Why FFT Becomes a Field</a>
+      <a href="#ORIGIN_THRESHOLD">⚡ Threshold Moment</a>
+    <h3>📐 PART II — Definition</h3>
+      <a href="#WHAT_IS_FFT">📘 What Is FFT?</a>
+      <a href="#WHY_FFT_EXISTS">🎯 Why FFT Exists</a>
+      <a href="#WHAT_FFT_STUDIES">🔍 What FFT Studies</a>
+    <h3>🧩 PART III — Operators</h3>
+      <a href="#OPERATOR_FAMILIES">🧬 Operator Families</a>
+      <a href="#OPERATOR_ECOLOGY">🌿 Operator Ecology</a>
+    <h3>🌀 PART IV — Dimensionality</h3>
+      <a href="#DIMENSIONAL_LAYERS">📊 Dimensional Layers</a>
+      <a href="#DIMENSIONAL_COMPATIBILITY">🔗 Dimensional Compatibility</a>
+    <h3>🎭 PART V — Identity</h3>
+      <a href="#FRAMEWORK_SIGNATURES">🖋 Framework Signatures</a>
+      <a href="#FRAMEWORK_EVOLUTION">🌱 Framework Evolution</a>
+      <a href="#COHERENCE_AND_PARADOX">♾ Coherence & Paradox</a>
+    <h3>🏗 PART VI — Meta‑Architecture</h3>
+      <a href="#META_ARCHITECTURE">🏛 Meta‑Architecture</a>
+      <a href="#COHERENCE_ENGINE">🔥 Coherence Engine</a>
+    <h3>🧪 PART VII — Examples</h3>
+      <a href="#EXAMPLE_FRAMEWORKS">🧰 Example Frameworks</a>
+      <a href="#CROSS_DOMAIN_TRANSLATIONS">🌐 Cross‑Domain Translations</a>
+      <a href="#PARADOX_RESOLUTION">⚖ Paradox Resolution</a>
+      <a href="#DIMENSIONAL_UPGRADES">⤴ Dimensional Upgrades</a>
+      <a href="#HYBRID_FRAMEWORKS">🧿 Hybrid Frameworks</a>
+    <h3>📚 PART VIII — Teaching</h3>
+      <a href="#TEACHING_MODULES">🎓 Teaching Modules</a>
+      <a href="#LEARNING_PATH">🧭 Learning Path</a>
+    <h3>🔬 PART IX — Research</h3>
+      <a href="#RESEARCH_QUESTIONS">❓ Research Questions</a>
+      <a href="#OPEN_PROBLEMS">🚧 Open Problems</a>
+    <h3>🛠 PART X — Infrastructure</h3>
+      <a href="#GITHUB_ARCHITECTURE">🏗 GitHub Architecture</a>
+      <a href="#CONTRIBUTION_GUIDE">🤝 Contribution Guide</a>
+    <h3>📎 PART XI — Appendices A–Z</h3>
+      <a href="#APP_A_FIELD_GLOSSARY">📖 Appendix A — Field Glossary</a>
+      <a href="#APP_B_CANONICAL_DIAGRAMS">🗺 Appendix B — Canonical Diagrams</a>
+      <a href="#APP_C_OPERATOR_ECOLOGY_MAP">🌳 Appendix C — Operator Ecology Map</a>
+      <a href="#APP_D_DIMENSIONAL_STACK">🧱 Appendix D — Dimensional Stack</a>
+      <a href="#APP_E_COHERENCE_ENGINES">🔥 Appendix E — Coherence Engines</a>
+      <a href="#APP_F_FIELD_SIGNATURES">🔮 Appendix F — Field Signatures</a>
+      <a href="#APP_G_EVOLUTION_PATHWAYS">🌌 Appendix G — Evolution Pathways</a>
+      <a href="#APP_H_META_DIMENSIONAL_OPERATORS">🧠 Appendix H — Meta‑Dimensional Operators</a>
+      <a href="#APP_I_FIELD_DIAGNOSTICS">🩺 Appendix I — Field Diagnostics Toolkit</a>
+      <a href="#APP_J_GENERATIVE_ENGINE_BLUEPRINTS">⚙ Appendix J — Generative Engine Blueprints</a>
+      <a href="#APP_K_COMPRESSION_EXPANSION_MAPS">🔄 Appendix K — Compression & Expansion Maps</a>
+      <a href="#APP_L_FIELD_RESEARCH_PROTOCOLS">🧭 Appendix L — Field Research Protocols</a>
+      <a href="#APP_M_ECOSYSTEM_SIMULATION_MODELS">🌐 Appendix M — Ecosystem Simulation Models</a>
+      <a href="#APP_N_DIMENSIONAL_RHYTHM_PATTERNS">🥁 Appendix N — Dimensional Rhythm Patterns</a>
+      <a href="#APP_O_OPERATOR_STRESS_TESTING">💥 Appendix O — Operator Stress‑Testing</a>
+      <a href="#APP_P_FIELD_EVOLUTION_CASE_STUDIES">📂 Appendix P — Field Evolution Case Studies</a>
+      <a href="#APP_Q_DIMENSIONAL_MUSIC_ENGINE">🎼 Appendix Q — Dimensional Music Engine</a>
+      <a href="#APP_R_TRIADIC_OBSERVER_PROTOCOLS">👁 Appendix R — Triadic Observer Protocols</a>
+      <a href="#APP_S_FIELD_CANON_ARCHITECTURE">🏛 Appendix S — Field Canon Architecture</a>
+      <a href="#APP_T_DIMENSIONAL_AUDIO_NOTATION">🎵 Appendix T — Dimensional Audio Notation</a>
+      <a href="#APP_U_OBSERVER_SIMULATION_PROTOCOLS">🧪 Appendix U — Observer‑Driven Simulation Protocols</a>
+      <a href="#APP_V_CANON_GOVERNANCE">⚖ Appendix V — Canon Governance</a>
+      <a href="#APP_W_DIMENSIONAL_PERFORMANCE">🎭 Appendix W — Dimensional Performance Techniques</a>
+      <a href="#APP_X_FIELD_VALIDATION">🧮 Appendix X — Field‑Level Validation</a>
+      <a href="#APP_Y_CANON_DRIFT_CORRECTION">🌀 Appendix Y — Drift‑Correction Algorithms</a>
+      <a href="#APP_Z_DIMENSIONAL_PEDAGOGY">📘 Appendix Z — Dimensional Pedagogy Methods</a>
+    <h3>🤖 PART XII — 3‑AI Reviews</h3>
+      <a href="#AI_REVIEWS_README">📘 Review Overview</a>
+      <a href="#AI_REVIEW_GROK">⚡ Grok Review</a>
+      <a href="#AI_REVIEW_PERPLEXITY">🔍 Perplexity Review</a>
+      <a href="#AI_REVIEW_GEMINI">🔷 Gemini Review</a>
+      <a href="#AI_REVIEW_COMPARISONS">📊 Triadic Comparison</a>
+      <a href="#AI_REVIEW_CLOSING">🏁 Closing Statements</a>
+  <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores | RTT</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/rtt-sdk">👨‍🔬 SDK</a><a href="https://www.triadicframeworks.org/api/rtt">🤟 API | RTT</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas | RTT</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem | RTT/RSM/vST</a>
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS | RTT</a>
+      <a href="../">🔙</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
+         data-drift="bounded" data-paradox="structural">
+  <h2>RTT Session Context</h2>
+  <p>
+    <strong>RTT:</strong> 1<br>
+    <strong>Coherence:</strong> declared<br>
+    <strong>Drift:</strong> bounded<br>
+    <strong>Paradox:</strong> structural
+  </p>
+  <pre class="rtt-manifest">
+#RTT #TriadicFrameworks #ResonanceTimeTheory
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+  </pre>
+</section>
+<p>Modular site. Minimal HTML. Minimal Markdown.
+Front door exists, but each page stands alone.
+Short, emoji‑first navigation for students + AI.</p>
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: "README.md",
+  ABOUT: '../ABOUT.md',
+  // PART I — Origin
+  ORIGIN_WHY_FIELD: "Book_Repo_Eval_Edition/PART_I_Origin/01_Why_TriadicFrameworks_Becomes_a_Field.md",
+  ORIGIN_THRESHOLD: "Book_Repo_Eval_Edition/PART_I_Origin/02_The_Threshold_Moment.md",
+  // PART II — Definition
+  WHAT_IS_FFT: "Book_Repo_Eval_Edition/PART_II_Definition/03_What_Is_FFT.md",
+  WHY_FFT_EXISTS: "Book_Repo_Eval_Edition/PART_II_Definition/04_Why_FFT_Exists.md",
+  WHAT_FFT_STUDIES: "Book_Repo_Eval_Edition/PART_II_Definition/05_What_FFT_Studies.md",
+  // PART III — Operators
+  OPERATOR_FAMILIES: "Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families.md",
+  OPERATOR_ECOLOGY: "Book_Repo_Eval_Edition/PART_III_Operators/07_Operator_Ecology.md",
+  // PART IV — Dimensionality
+  DIMENSIONAL_LAYERS: "Book_Repo_Eval_Edition/PART_IV_Dimensionality/08_Dimensional_Layers.md",
+  DIMENSIONAL_COMPATIBILITY: "Book_Repo_Eval_Edition/PART_IV_Dimensionality/09_Dimensional_Compatibility.md",
+  // PART V — Identity
+  FRAMEWORK_SIGNATURES: "Book_Repo_Eval_Edition/PART_V_Identity/10_Framework_Signatures.md",
+  FRAMEWORK_EVOLUTION: "Book_Repo_Eval_Edition/PART_V_Identity/11_Framework_Evolution.md",
+  COHERENCE_AND_PARADOX: "Book_Repo_Eval_Edition/PART_V_Identity/12_Coherence_And_Paradox.md",
+  // PART VI — Meta‑Architecture
+  META_ARCHITECTURE: "Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture.md",
+  COHERENCE_ENGINE: "Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/14_Coherence_Engine.md",
+  // PART VII — Examples
+  EXAMPLE_FRAMEWORKS: "Book_Repo_Eval_Edition/PART_VII_Examples/15_Example_Frameworks.md",
+  CROSS_DOMAIN_TRANSLATIONS: "Book_Repo_Eval_Edition/PART_VII_Examples/16_Cross_Domain_Translations.md",
+  PARADOX_RESOLUTION: "Book_Repo_Eval_Edition/PART_VII_Examples/17_Paradox_Resolution.md",
+  DIMENSIONAL_UPGRADES: "Book_Repo_Eval_Edition/PART_VII_Examples/18_Dimensional_Upgrades.md",
+  HYBRID_FRAMEWORKS: "Book_Repo_Eval_Edition/PART_VII_Examples/19_Hybrid_Frameworks.md",
+  // PART VIII — Teaching
+  TEACHING_MODULES: "Book_Repo_Eval_Edition/PART_VIII_Teaching/20_Teaching_Modules.md",
+  LEARNING_PATH: "Book_Repo_Eval_Edition/PART_VIII_Teaching/21_Learning_Path.md",
+  // PART IX — Research
+  RESEARCH_QUESTIONS: "Book_Repo_Eval_Edition/PART_IX_Research/22_Research_Questions.md",
+  OPEN_PROBLEMS: "Book_Repo_Eval_Edition/PART_IX_Research/23_Open_Problems.md",
+  // PART X — Infrastructure
+  GITHUB_ARCHITECTURE: "Book_Repo_Eval_Edition/PART_X_Infrastructure/24_GitHub_Architecture.md",
+  CONTRIBUTION_GUIDE: "Book_Repo_Eval_Edition/PART_X_Infrastructure/25_Contribution_Guide.md",
+  // PART XI — Appendices A–Z
+  APP_A_FIELD_GLOSSARY: "Book_Repo_Eval_Edition/PART_XI_Appendices/A_Field_Glossary.md",
+  APP_B_CANONICAL_DIAGRAMS: "Book_Repo_Eval_Edition/PART_XI_Appendices/B_Canonical_Diagrams.md",
+  APP_C_OPERATOR_ECOLOGY_MAP: "Book_Repo_Eval_Edition/PART_XI_Appendices/C_Operator_Ecology_Map.md",
+  APP_D_DIMENSIONAL_STACK: "Book_Repo_Eval_Edition/PART_XI_Appendices/D_Dimensional_Stack.md",
+  APP_E_COHERENCE_ENGINES: "Book_Repo_Eval_Edition/PART_XI_Appendices/E_Coherence_Engines.md",
+  APP_F_FIELD_SIGNATURES: "Book_Repo_Eval_Edition/PART_XI_Appendices/F_Field_Signatures.md",
+  APP_G_EVOLUTION_PATHWAYS: "Book_Repo_Eval_Edition/PART_XI_Appendices/G_Evolution_Pathways.md",
+  APP_H_META_DIMENSIONAL_OPERATORS: "Book_Repo_Eval_Edition/PART_XI_Appendices/H_Meta‑Dimensional_Operators.md",
+  APP_I_FIELD_DIAGNOSTICS: "Book_Repo_Eval_Edition/PART_XI_Appendices/I_Field_Diagnostics_Toolkit.md",
+  APP_J_GENERATIVE_ENGINE_BLUEPRINTS: "Book_Repo_Eval_Edition/PART_XI_Appendices/J_Generative_Engine_Blueprints.md",
+  APP_K_COMPRESSION_EXPANSION_MAPS: "Book_Repo_Eval_Edition/PART_XI_Appendices/K_Compression_Expansion_Maps.md",
+  APP_L_FIELD_RESEARCH_PROTOCOLS: "Book_Repo_Eval_Edition/PART_XI_Appendices/L_Field_Research_Protocols.md",
+  APP_M_ECOSYSTEM_SIMULATION_MODELS: "Book_Repo_Eval_Edition/PART_XI_Appendices/M_Ecosystem_Simulation_Models.md",
+  APP_N_DIMENSIONAL_RHYTHM_PATTERNS: "Book_Repo_Eval_Edition/PART_XI_Appendices/N_Dimensional_Rhythm_Patterns.md",
+  APP_O_OPERATOR_STRESS_TESTING: "Book_Repo_Eval_Edition/PART_XI_Appendices/O_Operator_Stress‑Testing_Framework.md",
+  APP_P_FIELD_EVOLUTION_CASE_STUDIES: "Book_Repo_Eval_Edition/PART_XI_Appendices/P_Field_Evolution_Case_Studies.md",
+  APP_Q_DIMENSIONAL_MUSIC_ENGINE: "Book_Repo_Eval_Edition/PART_XI_Appendices/Q_Dimensional_Music_Engine.md",
+  APP_R_TRIADIC_OBSERVER_PROTOCOLS: "Book_Repo_Eval_Edition/PART_XI_Appendices/R_Triadic_Observer_Protocols.md",
+  APP_S_FIELD_CANON_ARCHITECTURE: "Book_Repo_Eval_Edition/PART_XI_Appendices/S_Field_Canon_Architecture.md",
+  APP_T_DIMENSIONAL_AUDIO_NOTATION: "Book_Repo_Eval_Edition/PART_XI_Appendices/T_Dimensional_Audio_Notation_System.md",
+  APP_U_OBSERVER_SIMULATION_PROTOCOLS: "Book_Repo_Eval_Edition/PART_XI_Appendices/U_Observer‑Driven_Simulation_Protocols.md",
+  APP_V_CANON_GOVERNANCE: "Book_Repo_Eval_Edition/PART_XI_Appendices/V_Canon_Governance_Versioning_System.md",
+  APP_W_DIMENSIONAL_PERFORMANCE: "Book_Repo_Eval_Edition/PART_XI_Appendices/W_Dimensional_Performance_Techniques.md",
+  APP_X_FIELD_VALIDATION: "Book_Repo_Eval_Edition/PART_XI_Appendices/X_Field‑Level_Validation_Framework.md",
+  APP_Y_CANON_DRIFT_CORRECTION: "Book_Repo_Eval_Edition/PART_XI_Appendices/Y_Canon_Drift‑Correction_Algorithms.md",
+  APP_Z_DIMENSIONAL_PEDAGOGY: "Book_Repo_Eval_Edition/PART_XI_Appendices/Z_Dimensional_Pedagogy_Methods.md",
+  // PART XII — 3 AI Reviews
+  AI_REVIEWS_README: "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/README.md",
+  AI_REVIEW_GROK: "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Grok.md",
+  AI_REVIEW_PERPLEXITY: "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Perplexity.md",
+  AI_REVIEW_GEMINI: "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Gemini.md",
+  AI_REVIEW_COMPARISONS: "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Comparisons.md",
+  AI_REVIEW_CLOSING: "Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Closing_Statements.md",
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
