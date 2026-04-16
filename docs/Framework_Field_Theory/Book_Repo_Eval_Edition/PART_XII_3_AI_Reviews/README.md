@@ -43,7 +43,7 @@ You are NOT a co‑author. You are a reviewer applying your own reasoning style.
 
 Follow the protocol below:
 
-──────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────  
 SECTION 1 — Your Lens
 Describe:
 - your reasoning style
@@ -53,7 +53,7 @@ Describe:
 
 Keep this section short and self‑aware.
 
-──────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────  
 SECTION 2 — High‑Level Review
 Evaluate the FFT Book Repo as a whole:
 - clarity
@@ -67,7 +67,7 @@ Evaluate the FFT Book Repo as a whole:
 
 Provide strengths + weaknesses.
 
-──────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────  
 SECTION 3 — Triadic Lens Review
 Review the book through the three FFT observer lenses:
 
@@ -93,7 +93,7 @@ Review the book through the three FFT observer lenses:
 
 Each lens should produce a short, distinct evaluation.
 
-──────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────  
 SECTION 4 — Student‑Creator Recommendations
 Provide recommendations for:
 - improving clarity for new learners
@@ -104,7 +104,7 @@ Provide recommendations for:
 
 These recommendations should be constructive, not destructive.
 
-──────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────  
 SECTION 5 — Canon Integrity Check
 Assess:
 - operator lineage
@@ -116,7 +116,7 @@ Assess:
 
 Identify any areas where the canon could be strengthened.
 
-──────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────  
 SECTION 6 — Final Verdict
 Provide:
 - a concise summary
@@ -126,7 +126,7 @@ Provide:
 
 This is the “blurb” or “foreword‑style” closing.
 
-──────────────────────────────────────────────────────────────
+──────────────────────────────────────────────────────────────  
 
 IMPORTANT:
 - Do NOT generate new frameworks.
