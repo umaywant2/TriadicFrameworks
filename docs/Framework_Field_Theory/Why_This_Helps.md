@@ -1,4 +1,4 @@
-### Why This Helps
+## Why This Helps
 There are a few other meta-frameworks...is really something new? Fair question!  
 
 Most 'meta-frameworks' (higher-level tools that organize or connect regular theories) are specialized—they help in one area (like business, healthcare implementation, or systems thinking) but don't try to be a universal playground for *all* frameworks across fields.  
