@@ -311,6 +311,76 @@ Each chapter title is derived directly from the themes, claims, and structures i
 ### **Appendix Z — Dimensional Pedagogy Methods**  
 [Z_Dimensional_Pedagogy_Methods.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/Z_Dimensional_Pedagogy_Methods.md)
 
+## 📚 PART XI — Appendices (AA–AL)
+
+### **AA — Operator Definitions**
+[AA_Operator_Definitions.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AA_Operator_Definitions.md)  
+  Canonical definitions of FFT’s operator families (D, A, C, α, S).  
+
+### **AB — ΔSET Parameterization**
+[AB_ΔSET_Parameterization.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AB_ΔSET_Parameterization.md)
+  Formal structure of ΔSET and κ-parameter roles.  
+
+### **AC — Simulation Protocols**
+[AC_Simulation_Protocols.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AC_Simulation_Protocols.md)
+  Standardized procedures for running FFT simulations.  
+
+### **AD — Kernel Families & Nonlocality**
+[AD_Kernel_Families_Nonlocality.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AD_Kernel_Families_Nonlocality.md)
+  Gaussian, exponential, power-law, and anisotropic kernels.  
+
+### **AE — Triadic‑Time Simulation Methods**
+[AE_Triadic‑Time_Simulation_Methods.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AE_Triadic‑Time_Simulation_Methods.md)
+  Resonant, diffusive, and alignment temporal modes.  
+
+### **AF — Regime‑Dependent Operator Scaling**
+[AF_Regime‑Dependent_Operator_Scaling.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AF_Regime‑Dependent_Operator_Scaling.md)
+  Operator dominance across FFT’s five canonical regimes.  
+
+### **AG — Multi‑Scale Numerical Stability Methods**
+[AG_Multi‑Scale_Numerical_Stability_Methods.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AG_Multi‑Scale_Numerical_Stability_Methods.md)
+  Stability strategies for multi‑scale, tri‑time, nonlocal FFT systems.  
+  
+### **AH — Regime Transition Surfaces**
+[AH_Regime_Transition_Surfaces.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AH_Regime_Transition_Surfaces.md)
+  Geometry of regime boundaries in CI–FI–ΔSET space.  
+  
+### **AI — Numerical Drift Detection & Correction**
+[AI_Numerical_Drift_Detection_and_Correction.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AI_Numerical_Drift_Detection_and_Correction.md)
+  Drift taxonomy, detection metrics, and correction protocols.  
+  
+### **AJ — Regime‑Aware Visualization Methods**
+[AJ_Regime‑Aware_Visualization_Methods.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AJ_Regime‑Aware_Visualization_Methods.md)
+  Canonical visualization techniques for fields, regimes, and transitions.  
+  
+### **AK — FFT Simulation Benchmark Suite**
+[AK_FFT_Simulation_Benchmark_Suite.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AK_FFT_Simulation_Benchmark_Suite.md)
+  Standardized benchmark problems for validating FFT solvers.  
+
+### **AL — Canonical Diagram Templates**
+[AL_Canonical_Diagram_Templates.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/AL_Canonical_Diagram_Templates.md)
+  SVG‑ready templates for the FFT visual canon.  
+  
+---
+
+## 🎨 Visualization Artifacts (SVG, Diagram, Figma, Grammar)
+
+### **Regime‑Aware Visualization (SVG)**
+[regime_aware_visualization.svg.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/regime_aware_visualization.svg.md)
+  High‑resolution SVG specification.  
+
+### **Regime‑Aware Visualization Diagram**
+[Regime‑Aware_Visualization_Diagram.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/Regime‑Aware_Visualization_Diagram.md)
+  Full composite visualization of regimes, fields, and transitions.  
+  
+### **Figma Modular Component Set**
+[Regime‑Aware_Visualization_Figma_Modular_Component_Set.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/Regime‑Aware_Visualization_Figma_Modular_Component_Set.md)
+  Componentized Figma library for the visualization canon.  
+  
+### **Regime‑Aware Visual Grammar**
+[Regime‑Aware_Visual_Grammar.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/Regime‑Aware_Visual_Grammar.md)
+  Canonical rules for FFT’s visual language.  
+  
 ---
 
 # **PART XII — 3 AI Reviews** 
@@ -326,6 +396,17 @@ Each chapter title is derived directly from the themes, claims, and structures i
 
 ### **Creators**
 [Creators.md](./Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/README.md)
+
+---
+
+# **PART XIII — External Reviewer** 
+### **Duck**
+[Duck_ai.md](./Book_Repo_Eval_Edition/PART_XIII_External_Reviewer/Duck_ai.md)
+
+---
+
+# **PART XIV — Mathematical Foundations** 
+[README](./Book_Repo_Eval_Edition/PART_XIV_Mathematical_Foundations/README.md)
 
 ---
 
@@ -347,4 +428,6 @@ docs/
       PART_X_Infrastructure/
       PART_XI_Appendices/
       PART_XII_3_AI_Reviews/
+      PART_XIII_External_Reviewer/
+      PART_XIV_Mathematical_Foundations/
 ```
