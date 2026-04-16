@@ -10,6 +10,7 @@
   </url>
 
   <!-- DOI Substrate Models -->
+  <url><loc>https://www.triadicframeworks.org/Framework_Field_Theory/</loc><lastmod>2026-03-01</lastmod><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.triadicframeworks.org/resonance-substrate-model/</loc><lastmod>2026-03-01</lastmod><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.triadicframeworks.org/boson-substrate-model/</loc><lastmod>2026-03-01</lastmod><priority>0.9</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.triadicframeworks.org/quantum-substrate-model/</loc><lastmod>2026-03-01</lastmod><priority>0.9</priority><changefreq>monthly</changefreq></url>
