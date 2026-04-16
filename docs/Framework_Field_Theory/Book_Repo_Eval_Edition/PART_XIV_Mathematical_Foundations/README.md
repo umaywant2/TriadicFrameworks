@@ -60,8 +60,9 @@ $$A[R,V] = (V \cdot \nabla) R$$
 
 ### **Coupling Operator — C[φ,V]**  
 Represents nonlocal influence between fields.
-
-$$C = \int_{\Omega} K(x-y)\, g(\phi(y), V(y))\, dy$$
+```math
+C[φ,V](x) = \int_{\Omega} K(x - y)\, g(\phi(y), V(y))\, dy
+```
 
 ### **Activation Operator — α[R]**  
 Represents local amplification or resonance growth.
