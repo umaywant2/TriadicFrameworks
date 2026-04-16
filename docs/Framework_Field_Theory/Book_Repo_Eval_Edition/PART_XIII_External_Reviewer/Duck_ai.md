@@ -112,3 +112,73 @@ Together, they form a **four‑observer coherence square**:
 - Mathematical  
 
 Duck.ai is the only reviewer that attempted **quantitative reconstruction**, which confirms FFT’s latent mathematical coherence.
+
+---
+
+# **MATHEMATICAL FFT ROADMAP**  
+### *A clean, actionable roadmap based on Duck.ai’s suggestions*
+
+## **Phase 1 — Define the Mathematical Substrate**
+- Choose domains Ω ⊂ ℝ³ and time interval [0,T]  
+- Define φ, V, R ∈ C²(Ω×[0,T])  
+- Establish units and dimensional consistency  
+- Define triadic‑time mapping t ↔ (tr, td, ta)
+
+---
+
+## **Phase 2 — Specify Operator Families**
+Minimal viable definitions:
+
+- **Diffusion:** D[X] = ν∇²X  
+- **Advection:** A[R,V] = (V·∇)R  
+- **Coupling:** C[φ,V] = ∫ K(x−y) g(φ(y),V(y)) dy  
+- **Activation:** α[R] = aR − bR³  
+- **Stabilization:** S[R] = γR  
+
+These can be generalized later.
+
+---
+
+## **Phase 3 — Construct the Governing PDE System**
+Candidate system:
+
+- ∂t φ = D_φ[φ] + C_φ[φ,V,R]  
+- ∂t V = −∇P + ν∇²V + C_V[φ,R]  
+- ∂t R = −(V·∇)R + ν_R∇²R + C[φ,V] + aR − bR³ − γR  
+
+This is the minimal closed system consistent with FFT’s conceptual structure.
+
+---
+
+## **Phase 4 — Define ΔSET**
+Minimal parameterization:
+
+ΔSET = κ₁R + κ₂|V|² + κ₃φ + nonlocal terms
+
+Insert into gravitational potential equation:
+
+∇²Φ = 4πG (ρ_baryon + ΔSET/c²)
+
+---
+
+## **Phase 5 — Empirical Testing**
+- Fit ΔSET to SPARC rotation curves  
+- Predict lensing mass maps  
+- Explore lab‑scale SET signatures  
+- Test scaling relations  
+
+---
+
+## **Phase 6 — Simulation & Visualization**
+- Build 1D radial solvers  
+- Extend to 2D/3D simulations  
+- Visualize R, φ, V evolution  
+- Explore bifurcations and regime transitions  
+
+---
+
+## **Phase 7 — Canon Integration**
+- Add PART XIV: Mathematical Foundations  
+- Add Appendix AA: Operator Definitions  
+- Add Appendix AB: ΔSET Parameterization  
+- Add Appendix AC: Simulation Protocols  
