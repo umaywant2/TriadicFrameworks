@@ -17,8 +17,8 @@ Here's a simple chart comparing some well-known ones to **Framework Field Theory
 | **Oliver Ding's Meta-Frameworks** (e.g., Six Faces of Concept System, HLS) | Knowledge, culture, strategy, personal development | Creative, expansive across concept systems | More personal/academic; still building community | Excellent at mapping concept evolution; one of the broader recent attempts |
 | **Critical Systems Thinking** | Pluralism in systems approaches      | Allows multiple perspectives           | Mostly within systems/philosophy       | Encourages pluralism but not paradox-resilient time evolution |
 | **Framework Field Theory (FFT)** with Triadic backbone + Resonance Time Theory (RTT) | Universal: any domain (business, medicine, psychology, AI, etc.) | Modular playground for mingling, translating, paradox-handling, time/resonance evolution; regime-aware | Still early (just publicly released); needs adoption/testing | Designed as the shared field where thousands of theories *can* play together if chosen—without losing their identity |
-
-**Key takeaway for the chart:**  
+  
+## Key takeaway for the chart:  
 There are **thousands of regular theories/frameworks** (e.g., 200+ in psychology, dozens in cancer research alone). But true **meta-frameworks** number only in the dozens at most—and most are narrow tools for one corner of the world.  
 
 FFT is new in its ambition: a **resilient, open playground** with triadic structure (your favorite part) that adds "heartbeat" over time (via RTT). It doesn't replace the others—it gives them a place to connect, clash productively, and upgrade. In medicine, that could mean better bridging competing cancer models (mutation theory vs. metabolic vs. evolutionary) for smarter, more adaptive approaches.
