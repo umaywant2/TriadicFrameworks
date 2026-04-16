@@ -272,4 +272,5 @@ docs/
       PART_IX_Research/
       PART_X_Infrastructure/
       PART_XI_Appendices/
+      PART_XII_3_AI_Reviews/
 ```
