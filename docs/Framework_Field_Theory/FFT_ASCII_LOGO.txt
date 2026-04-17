@@ -1,0 +1,28 @@
+```text
++
+      ▲
+     /|\
+    / | \
+   /  |  \
+  /   |   \
+ ▼    ▼    ▼
+SUB   REG  OPS
+STR   IME  TRIADIC
+ATE   S    OPERATORS
+
+FRAMEWORK FIELD THEORY
+TriadicFrameworks.org
+```
+
+Or a more compact variant:
+
+```text
+-
+╔══════════════════════════════╗
+║   F R A M E W O R K   F F T  ║
+║   FIELD THEORY               ║
+║                              ║
+║   SUBSTRATE • REGIME • OPS   ║
+║   DRIFT • COHERENCE • TOOLS  ║
+╚══════════════════════════════╝
+```
