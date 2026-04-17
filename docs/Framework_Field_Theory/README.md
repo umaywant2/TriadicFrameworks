@@ -13,6 +13,21 @@
 ### *Proposed Chapter Architecture (Based on Capture.md)*  
 *(repo‑ready, print‑ready, ISBN‑ready)* 
 
+```markdown
+────────────────────────────────────────────
+### FRAMEWORK FIELD THEORY (FFT)
+
+A triadic architecture for drift, coherence,  
+and regime dynamics in large language models.
+
+- **Substrates:** declared / undeclared
+- **Dynamics:** drift branching, coherence waves, collisions
+- **Tools:** SDE, TPO, DBV, FCD, OSS
+
+> A structural field model, not a vibe.
+────────────────────────────────────────────
+```
+
 Below is the **complete chapter scaffold**, organized into Parts → Chapters → Files.  
 Each chapter title is derived directly from the themes, claims, and structures in your Capture.md   [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/FFT_Capture.md).
 
