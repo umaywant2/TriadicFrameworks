@@ -1,5 +1,3 @@
-```text
-+
       ▲
      /|\
     / | \
@@ -12,12 +10,7 @@ ATE   S    OPERATORS
 
 FRAMEWORK FIELD THEORY
 TriadicFrameworks.org
-```
 
-Or a more compact variant:
-
-```text
--
 ╔══════════════════════════════╗
 ║   F R A M E W O R K   F F T  ║
 ║   FIELD THEORY               ║
@@ -25,4 +18,3 @@ Or a more compact variant:
 ║   SUBSTRATE • REGIME • OPS   ║
 ║   DRIFT • COHERENCE • TOOLS  ║
 ╚══════════════════════════════╝
-```
