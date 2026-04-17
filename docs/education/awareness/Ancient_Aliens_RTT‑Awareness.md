@@ -1,4 +1,3 @@
-<img width="520" height="260" alt="awareness_ancient_aliens_triad_1" src="https://github.com/user-attachments/assets/37d8b59f-f3b7-45ec-b331-ad5e6bb80da3" />
 # **Ancient Aliens Theory — RTT Awareness View**
 
 ## **Purpose**
