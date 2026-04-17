@@ -1,3 +1,14 @@
+```
+ ███████╗███████╗████████╗     ███████╗██╗██╗     ██████╗ 
+  ██╔════╝██╔════╝╚══██╔══╝     ██╔════╝██║██║     ██╔══██╗
+  █████╗  ███████╗   ██║        █████╗  ██║██║     ██████╔╝
+  ██╔══╝  ╚════██║   ██║        ██╔══╝  ██║██║     ██╔══██╗
+  ███████╗███████║   ██║        ██║     ██║███████╗██║  ██║
+  ╚══════╝╚══════╝   ╚═╝        ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
+
+                 FRAMEWORK FIELD THEORY
+         Triadic Substrates • Drift • Coherence
+```
 # **📘 Framework Field Theory — Repo Eval Edition**  
 ### *Proposed Chapter Architecture (Based on Capture.md)*  
 *(repo‑ready, print‑ready, ISBN‑ready)* 
