@@ -1,3 +1,4 @@
+<img width="520" height="260" alt="awareness_ancient_aliens_triad_1" src="https://github.com/user-attachments/assets/37d8b59f-f3b7-45ec-b331-ad5e6bb80da3" />
 # **Ancient Aliens Theory — RTT Awareness View**
 
 ## **Purpose**
@@ -185,6 +186,8 @@ Short caption suggestion:
 
 #### 1.2 SVG‑ready version
 
+<img width="451" height="231" alt="awareness_ancient_aliens_triad_1" src="https://github.com/user-attachments/assets/304e8a4d-085a-4a21-bc85-ea4087470969" />
+
 ```svg
 <svg width="520" height="260" viewBox="0 0 520 260" xmlns="http://www.w3.org/2000/svg">
   <!-- Nodes -->
@@ -264,6 +267,8 @@ Caption:
 ---
 
 #### 2.2 SVG‑ready version
+
+<img width="466" height="188" alt="awareness_ancient_aliens_triad_2" src="https://github.com/user-attachments/assets/c0081509-0c9e-44db-8893-4bf8727fe0cb" />
 
 ```svg
 <svg width="520" height="220" viewBox="0 0 520 220" xmlns="http://www.w3.org/2000/svg">
@@ -355,6 +360,8 @@ Caption:
 ---
 
 #### 3.2 SVG‑ready version
+
+<img width="315" height="270" alt="awareness_ancient_aliens_triad_3" src="https://github.com/user-attachments/assets/949d2054-8507-49d1-966a-3fbcd98d5fac" />
 
 ```svg
 <svg width="520" height="320" viewBox="0 0 520 320" xmlns="http://www.w3.org/2000/svg">
