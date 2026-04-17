@@ -281,6 +281,21 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - AI Alignment, Interpretability & LLM Behavior
 - Linguistics & Narrative Structure
 
+### **Incidentals**
+[Incidentals](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory/incidentals)
+- arXiv, release notes, IEEE, abstracts, diagrams, references, logo, press release info
+
+### **Civ Unlocks**
+[Civilization Unlocks](./incidentals/FFT_RTT_Civilization_Unlocks.md)
+- Cross‑Domain Predictive Power
+- Civilization‑Scale Debugging
+- A Shared Language Between Scientists, Engineers, Artists, and Strategists
+- Early Civilization‑Scale Coherence
+- A Way to Validate Fictional Futures
+- A Framework for Safe, Aligned AI
+- A Civilization‑Wide “Design System”
+- The Meta‑Unlock: Civilization Becomes Self‑Aware
+
 ---
 
 # **PART X — FIELD INFRASTRUCTURE**
