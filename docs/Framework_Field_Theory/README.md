@@ -207,6 +207,54 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - Framework phylogeny  
 - Operator emergence  
 
+### **Chapter 26 — Testable Predictions**
+[26_Testable_Predictions.md](./Book_Repo_Eval_Edition/PART_IX_Research/26_Testable_Predictions.md)
+- Drift Branching Under Undeclared Regimes
+- Substrate Declaration Reduces Drift Variance
+- Triadic Structures Compress More Efficiently
+- Coherence Waves Emerge in Multi‑Step Reasoning
+- Framework Collisions Produce Predictable Failure Modes
+- Declared Regime Prevents Framework Collisions
+- Observer Style Changes System Behavior
+- Observer Consistency Increases Coherence
+
+### **Chapter 27 — LLM Behavior Simulations**
+[27_LLM_Behavior_Simulations.md](./Book_Repo_Eval_Edition/PART_IX_Research/27_LLM_Behavior_Simulations.md)
+- Drift Branching Under Undeclared Regimes
+- Substrate Declaration Reduces Drift Variance
+- Triadic Compression Advantage
+- Coherence Waves in Multi‑Step Reasoning
+- Framework Collision Modes
+- Regime Declaration Prevents Collisions
+- Observer‑Style Effects
+- Observer Consistency Increases Coherence
+
+### **Chapter 28 — Peer-Review Validation**
+[28_Peer-Review_Validation.md](./Book_Repo_Eval_Edition/PART_IX_Research/28_Peer-Review_Validation.md)
+- What Counts as Peer Review for FFT
+- Minimal Peer‑Review Packet
+- Criteria for Peer‑Review Evaluation
+- Pathway to Formal Review
+- Peer‑Review Roadmap (Minimal)
+
+### **Chapter 29 — Engineering Breakthroughs**
+[29_Engineering_Breakthroughs.md](./Book_Repo_Eval_Edition/PART_IX_Research/29_Engineering_Breakthroughs.md)
+- Substrate Declaration Engine (SDE)
+- Triadic Prompt Optimizer (TPO)
+- Drift Branching Visualizer (DBV)
+- Framework Collision Detector (FCD)
+- Observer‑Style Stabilizer (OSS)
+
+### **Chapter 30 — Citations and Established Literature**
+[30_Citations_Established_Literature.md](./Book_Repo_Eval_Edition/PART_IX_Research/30_Citations_Established_Literature.md)
+- Information Theory & Communication Structure
+- Systems Theory & Dynamical Structure
+- Cognitive Science & Representation
+- Sociology of Knowledge & Field Theory
+- Complexity, Emergence & Nonlinear Dynamics
+- AI Alignment, Interpretability & LLM Behavior
+- Linguistics & Narrative Structure
+
 ---
 
 # **PART X — FIELD INFRASTRUCTURE**
