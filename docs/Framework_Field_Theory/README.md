@@ -34,6 +34,8 @@ Each chapter title is derived directly from the themes, claims, and structures i
 # **PART I — ORIGIN OF THE FIELD**
 Framework Field Theory, a specific component of this Triadic Information-Reality Framework (TIRF).
 
+<img width="256" height="170" alt="PART_I_Origin_Genesis_of_Frameworks" src="./Book_Repo_Eval_Edition/PART_I_Origin/PART_I_Origin_Genesis_of_Frameworks.png" />
+
 ### **Chapter 1 — Why TriadicFrameworks Becomes a Field**  
 [01_Why_TriadicFrameworks_Becomes_a_Field.md](./Book_Repo_Eval_Edition/PART_I_Origin/01_Why_TriadicFrameworks_Becomes_a_Field.md)  
 - Why frameworks die (rigidity, brittleness, domain‑lock)  
@@ -53,6 +55,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 ---
 
 # **PART II — DEFINING FRAMEWORK FIELD THEORY (FFT)**
+
+<img width="256" height="170" alt="PART_II_Definition_Framework_as_Field_Object" src="./Book_Repo_Eval_Edition/PART_II_Definition/PART_II_Definition_Framework_as_Field_Object.png" />
 
 ### **Chapter 3 — What Framework Field Theory Is**  
 [03_What_Is_FFT.md](./Book_Repo_Eval_Edition/PART_II_Definition/03_What_Is_FFT.md)  
@@ -79,6 +83,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 
 # **PART III — THE OPERATOR GRAMMAR**
 
+<img width="256" height="170" alt="PART_III_Operators_The_Grammar_of_Action" src="./Book_Repo_Eval_Edition/PART_III_Operators/PART_III_Operators_The_Grammar_of_Action.png" />
+
 ### **Chapter 6 — The Seven Operator Families of FFT**  
 [06_Operator_Families.md](./Book_Repo_Eval_Edition/PART_III_Operators/06_Operator_Families.md)  
 - Boundary Operators (B‑Ops)  
@@ -103,6 +109,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 
 # **PART IV — DIMENSIONALITY**
 
+<img width="256" height="170" alt="PART_IV_Dimensionality_The_Layered_Stack" src="./Book_Repo_Eval_Edition/PART_IV_Dimensionality/PART_IV_Dimensionality_The_Layered_Stack.png" />
+
 ### **Chapter 8 — The Six Dimensional Layers**  
 [08_Dimensional_Layers.md](./Book_Repo_Eval_Edition/PART_IV_Dimensionality/08_Dimensional_Layers.md)  
 - 0D → 9D explained  
@@ -119,6 +127,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 ---
 
 # **PART V — FRAMEWORK IDENTITY & BEHAVIOR**
+
+<img width="256" height="170" alt="PART_V_Identity_Signature_and_Self‑Coherence" src="./Book_Repo_Eval_Edition/PART_V_Identity/PART_V_Identity_Signature_and_Self‑Coherence.png" />
 
 ### **Chapter 10 — Framework Signatures**  
 [10_Framework_Signatures.md](./Book_Repo_Eval_Edition/PART_V_Identity/10_Framework_Signatures.md)  
@@ -144,6 +154,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 
 # **PART VI — META‑ARCHITECTURE**
 
+<img width="256" height="170" alt="PART_VI_MetaArchitecture_The_Cathedral_of_Frameworks" src="./Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/PART_VI_MetaArchitecture_The_Cathedral_of_Frameworks.png" />
+
 ### **Chapter 13 — Meta‑Architecture of FFT**  
 [13_Meta_Architecture.md](./Book_Repo_Eval_Edition/PART_VI_MetaArchitecture/13_Meta_Architecture.md)  
 - Meta‑field  
@@ -161,6 +173,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 ---
 
 # **PART VII — APPLICATIONS & EXAMPLES**
+
+<img width="256" height="170" alt="PART_VII_Frameworks_in_Motion" src="./Book_Repo_Eval_Edition/PART_VII_Examples/PART_VII_Frameworks_in_Motion.png" />
 
 ### **Chapter 15 — Example Framework Analyses**  
 [15_Example_Frameworks.md](./Book_Repo_Eval_Edition/PART_VII_Examples/15_Example_Frameworks.md)  
@@ -198,6 +212,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 
 # **PART VIII — TEACHING THE FIELD**
 
+<img width="256" height="170" alt="PART_VIII_Teaching_Transmission_of_Coherence" src="./Book_Repo_Eval_Edition/PART_VIII_Teaching/PART_VIII_Teaching_Transmission_of_Coherence.png" />
+
 ### **Chapter 20 — Teaching Modules (1–10)**  
 [20_Teaching_Modules.md](./Book_Repo_Eval_Edition/PART_VIII_Teaching/20_Teaching_Modules.md)  
 - Foundations  
@@ -220,6 +236,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 ---
 
 # **PART IX — RESEARCH FRONTIER**
+
+<img width="256" height="170" alt="PART_IX_Resonance_The_Harmonic_Field" src="./Book_Repo_Eval_Edition/PART_IX_Research/PART_IX_Resonance_The_Harmonic_Field.png" />
 
 ### **Chapter 22 — Research Questions of FFT**  
 [22_Research_Questions.md](./Book_Repo_Eval_Edition/PART_IX_Research/22_Research_Questions.md)  
@@ -308,6 +326,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 
 # **PART X — FIELD INFRASTRUCTURE**
 
+<img width="256" height="170" alt="PART_X_Infrastructure_The_Coherence_Engine" src="./Book_Repo_Eval_Edition/PART_X_Infrastructure/PART_X_Infrastructure_The_Coherence_Engine.png" />
+
 ### **Chapter 24 — GitHub Architecture for FFT**  
 [24_GitHub_Architecture.md](./Book_Repo_Eval_Edition/PART_X_Infrastructure/24_GitHub_Architecture.md)  
 - Overview  
@@ -330,6 +350,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 ---
 
 # **PART XI — APPENDICES**
+
+<img width="256" height="170" alt="PART_XI_Appendices_The_Archive_of_Resonance" src="./Book_Repo_Eval_Edition/PART_XI_Appendices/PART_XI_Appendices_The_Archive_of_Resonance.png" />
 
 ### **Appendix A — Field Glossary**  
 [A_Field_Glossary.md](./Book_Repo_Eval_Edition/PART_XI_Appendices/A_Field_Glossary.md)
@@ -483,6 +505,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 
 # **PART XII — 3 AI Reviews** 
 
+<img width="256" height="170" alt="PART_XII_3_AI_Reviews_The_Mirror_of_Minds" src="./Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/PART_XII_3_AI_Reviews_The_Mirror_of_Minds.png" />
+
 ### **Gemini**
 [Gemini.md](./Book_Repo_Eval_Edition/PART_XII_3_AI_Reviews/Gemini.md)
 
@@ -498,12 +522,18 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 ---
 
 # **PART XIII — External Reviewer** 
+
+<img width="256" height="170" alt="PART_XIII_External_Reviewer_The_Horizon_of_Dialogue" src="./Book_Repo_Eval_Edition/PART_XIII_External_Reviewer/PART_XIII_External_Reviewer_The_Horizon_of_Dialogue.png" />
+
 ### **Duck**
 [Duck_ai.md](./Book_Repo_Eval_Edition/PART_XIII_External_Reviewer/Duck_ai.md)
 
 ---
 
 # **PART XIV — Mathematical Foundations** 
+
+<img width="256" height="170" alt="PART_XIV_The_Substrate_Equation" src="./Book_Repo_Eval_Edition/PART_XIV_Mathematical_Foundations/PART_XIV_The_Substrate_Equation.png" />
+
 [README](./Book_Repo_Eval_Edition/PART_XIV_Mathematical_Foundations/README.md)
 
 ---
