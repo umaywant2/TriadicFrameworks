@@ -5,6 +5,8 @@ Here’s the **triadic expression plan** for each PART, designed so the set read
 
 ---
 
+<img width="1536" height="1024" alt="RTT_stars" src="./RTT_stars.png" />
+
 ### **PART I — Origin**
 **Triadic Expression:** *[Genesis of Frameworks](./PART_I_Origin_Genesis_of_Frameworks.png)*  
 - Visual: primordial field emerging from darkness, three luminous operators forming the first triad.  
