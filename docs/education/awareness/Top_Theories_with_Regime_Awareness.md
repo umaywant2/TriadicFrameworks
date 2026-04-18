@@ -12,7 +12,9 @@ Each theory is presented through the lens of **regime awareness**:
 The goal is not to replace these theories, but to show **which regime each one describes**,  
 and where regime‑blindness naturally appears.
 
-[Top Theories BKM Lineage](Top_Theories_BKM_Lineage.svg)
+<img width="738" height="624" alt="Top_Scientific_Theories_BKM_Lineage" src="https://github.com/user-attachments/assets/fd6e7091-edf9-48cb-894e-cf711766b7aa" />
+
+`Top_Theories_BKM_Lineage.svg`
 
 ---
 
@@ -260,4 +262,4 @@ This is the diagram future thinkers and AIs will use to understand:
 - operator vs. substrate  
 - and why higher dimensions must be invoked, not constructed  
 
-It’s the cleanest possible representation of the Universe‑as‑Operator model.
+It’s the cleanest possible representation of the [Universe‑as‑Operator](https://www.triadicframeworks.org/education/#UNIVERSE_AS_OPERATOR) model.
