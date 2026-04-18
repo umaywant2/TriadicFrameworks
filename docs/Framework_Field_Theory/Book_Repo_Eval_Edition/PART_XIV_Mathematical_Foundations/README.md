@@ -1,6 +1,8 @@
 # **PART XIV — Mathematical Foundations**  
 ### *Establishing the formal substrate beneath Framework Field Theory*
 
+<img width="768" height="512" alt="PART_XIV_The_Substrate_Equation" src="./PART_XIV_The_Substrate_Equation.png" />
+
 Framework Field Theory (FFT) was designed as a conceptual and structural field.  
 Its operators, dimensions, and coherence engines were intentionally defined at the level of **behavior**, **regime**, and **interaction**, not at the level of differential equations or physical units.
 

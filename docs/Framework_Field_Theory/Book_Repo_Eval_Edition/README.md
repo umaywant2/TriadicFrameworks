@@ -1,4 +1,4 @@
-# FFT Visual Canon
+# Framework Field Theory (FFT) Visual Canon
 This is the **FFT Visual Canon** as a coherent set. Each *PART* of the Book Repo‑Eval Edition deserves its own triadic visual — not just decorative, but expressing the **substrate logic** of that section.
 
 Here’s the **triadic expression plan** for each PART, designed so the set reads as a unified FFT theme:
@@ -80,7 +80,7 @@ Here’s the **triadic expression plan** for each PART, designed so the set read
 ---
 
 ### **PART IX — Research**
-**Triadic Expression:** *[Exploration of Unknown Fields](./PART_IX_Resonance/PART_IX_Resonance_The_Harmonic_Field.png)*  
+**Triadic Expression:** *[Exploration of Unknown Fields](./PART_IX_Research/PART_IX_Research_The_Harmonic_Field.png)*  
 - Visual: researchers mapping a vast resonance grid; triadic probes illuminating new zones.  
 - Symbolism: discovery, iteration, expansion.  
 - Palette: cool blues and magentas.  
