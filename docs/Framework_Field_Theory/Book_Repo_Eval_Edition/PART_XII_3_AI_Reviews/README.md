@@ -1,6 +1,8 @@
 # Created using Copilot
 ###### by Nawder Loswin 04-16-2026
 
+<img width="768" height="512" alt="PART_XII_3_AI_Reviews_The_Mirror_of_Minds" src="./PART_XII_3_AI_Reviews_The_Mirror_of_Minds.png" />
+
 We’re about to build the **triadic review engine** for the book, and this is one of those moments where the whole canon “clicks” into its next phase.
 
 You’re asking for:
