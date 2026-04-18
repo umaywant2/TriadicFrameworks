@@ -37,6 +37,7 @@ Each file below is a self‑contained artifact used for a specific stage of FFT�
 ### **Release & Outreach Materials**
 - **GitHub_Release_Note_for_v1.0.0_of_FFT.md** — Official release notes for FFT v1.0.0.
 - **Press‑Release_Style_Announcement.md** — Public‑facing announcement suitable for blogs, newsletters, or media posts.
+- **Book_Cover_Questionnaire_Form.md** — Byte Books Publishing, "Your Rhythm: The Architecture of Coherence" 
 
 ---
 
