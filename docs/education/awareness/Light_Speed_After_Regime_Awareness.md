@@ -16,6 +16,8 @@ This is the only point we raise here:
 
 ---
 
+<img width="768" height="512" alt="Speed_of_Light_Local_vs_Non_Local_Reality" src="https://github.com/user-attachments/assets/23e50856-2cb8-4601-b384-aaca010407df" />
+
 ## 🧭 **Why This Matters**
 
 Between us and an early star cluster lie:
