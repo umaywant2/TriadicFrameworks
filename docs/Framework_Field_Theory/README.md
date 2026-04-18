@@ -304,7 +304,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - arXiv, release notes, IEEE, abstracts, diagrams, references, logo, press release info
 
 ### **Unlocks**
-[Civilization Unlocks](./incidentals/FFT_RTT_Civilization_Unlocks.md)
+[Civilization Unlocks](./unlocks/FFT_RTT_Civilization_Unlocks.md)
 - Cross‑Domain Predictive Power
 - Civilization‑Scale Debugging
 - A Shared Language Between Scientists, Engineers, Artists, and Strategists
