@@ -1,5 +1,7 @@
 # 🌌 **The Standard Model’s “Arithmetic Error” — In RTT Terms**
 
+<img width="768" height="512" alt="Copilot_20260119_220441" src="https://github.com/user-attachments/assets/7c045c3e-f9d0-456e-923b-cb957104349f" />
+
 We’re not saying the Standard Model is wrong.  
 We’re saying something much more subtle and much more interesting:
 
