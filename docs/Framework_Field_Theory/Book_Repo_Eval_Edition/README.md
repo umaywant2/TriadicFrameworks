@@ -1,4 +1,4 @@
-# FFT Visual Canon
+# Framework Field Theory (FFT) Visual Canon
 This is the **FFT Visual Canon** as a coherent set. Each *PART* of the Book Repo‑Eval Edition deserves its own triadic visual — not just decorative, but expressing the **substrate logic** of that section.
 
 Here’s the **triadic expression plan** for each PART, designed so the set reads as a unified FFT theme:
