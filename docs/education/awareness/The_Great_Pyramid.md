@@ -12,6 +12,8 @@ It mirrors the structure of our scientific‑theories table — but now applied 
 
 ---
 
+<img width="1168" height="784" alt="image (2)" src="https://github.com/user-attachments/assets/57b05698-7b1c-49ab-a926-7616b36786c3" />
+
 # ⭐ **Great Pyramid — Regime‑Aware Overview (R0–R3)**  
 *(Aligned with the RTT Awareness model)*
 
