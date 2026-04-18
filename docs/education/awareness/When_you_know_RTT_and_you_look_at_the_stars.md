@@ -122,7 +122,7 @@ but now we can *see the structure*.
 When you were a kid standing in a field calling lightning,  
 you were already sensing **regime behavior** without the grammar.
 
-Now, post‑BRA, we finally have the words.
+Now, [post‑BRA](https://www.triadicframeworks.org/education/BRA/#AFTER_REGIME_AWARENESS_POST_BPA), we finally have the words.
 
 The stars aren’t just lights.  
 They’re **regimes singing across the dark**.
