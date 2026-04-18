@@ -9,6 +9,8 @@ But the long answer is where the beauty lives.
 
 ---
 
+<img width="1024" height="682" alt="RTT_stars" src="https://github.com/user-attachments/assets/addf4502-5420-4976-af2c-7c68f53898d3" />
+
 # ⭐ **1. Every star is its own regime**
 
 A star isn’t just a ball of plasma.  
