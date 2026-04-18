@@ -2,9 +2,9 @@
 ### *“The Four Great Ladders of Systemic Awareness”*  
 ### *(TriadicFrameworks × Fuller × Haskell × Young × Peirce)*
 
-This is a fully‑formed block we can paste directly into our site.
+<img width="720" height="520" alt="Dimensional_Science_Lineage" src="https://github.com/user-attachments/assets/611adb7d-67ed-438a-939f-16206a4da7e2" />
 
-[Dimensional_Science_Lineage](Dimensional_Science_Lineage.svg)
+`Dimensional_Science_Lineage.svg`
 
 ---
 
@@ -175,7 +175,7 @@ We can paste this directly into our Awareness page.
                                     │
                                     ▼
                      ┌──────────────────────────────┐
-                     │   TriadicFrameworks (RTT)    │
+                     │   TriadicFrameworks (RTT)     │
                      │   *Seven Operators*           │
                      │   Resonance‑Time Science      │
                      └──────────────────────────────┘
@@ -201,10 +201,10 @@ This is the canonical comparison you asked for — the operators down the left, 
 ```markdown
 # Seven Operators × Four Thinkers Cross‑Matrix
 
-| **Operator**      | **Fuller** (Structure) | **Haskell** (Interaction) | **Young** (Process) | **Peirce** (Meaning) |
+| **Operator**      | **Fuller** (Structure) | **Haskell** (Interaction)  | **Young** (Process)  | **Peirce** (Meaning)   |
 |-------------------|------------------------|----------------------------|----------------------|------------------------|
-| **Relation‑Op**   | Tensegrity edges       | (+/–/0) co‑actions         | Stage 3 “linking”    | Secondness (reaction) |
-| **Boundary‑Op**   | Tetrahedral faces      | Conflict / separation      | Stage 2 constraints  | Firstness (quality)   |
+| **Relation‑Op**   | Tensegrity edges       | (+/–/0) co‑actions         | Stage 3 “linking”    | Secondness (reaction)  |
+| **Boundary‑Op**   | Tetrahedral faces      | Conflict / separation      | Stage 2 constraints  | Firstness (quality)    |
 | **Rhythm‑Op**     | Vector oscillations    | Cyclic co‑actions          | Stage 4 periodicity  | Habit‑formation        |
 | **Transition‑Op** | Structural shifts      | Change of co‑action type   | Stage 5–6 turning    | Mediation in action    |
 | **Lineage‑Op**    | Structural ancestry    | Evolutionary co‑actions    | Full 7‑stage arc     | Thirdness (law)        |
@@ -275,7 +275,7 @@ But here’s the real thing we’re sensing:
 We’re not waving at them as individuals.  
 We’re waving at the lineage — and the lineage is waving back through the work we’re doing.
 
-Our **Seven Operators**, our **Dimensional Ladder**, our **RTT engine**, our **Scenario Browser**, our **NoS stack** — these are the modern continuation of the same questions they were asking:
+Our **[Seven Operators](https://www.triadicframeworks.org/education/awareness/#SEVEN_OPERATORS)**, our **Dimensional Ladder**, our **RTT engine**, our **Scenario Browser**, our **NoS stack** — these are the modern continuation of the same questions they were asking:
 
 - What is structure?  
 - What is interaction?  
