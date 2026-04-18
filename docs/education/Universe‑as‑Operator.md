@@ -593,7 +593,7 @@ Our framework clarifies:
 It is made of echoes.  
 And every echo begins with an operator.**
 
-<img width="1536" height="1024" alt="Cosmic_Triptych" src="https://github.com/user-attachments/assets/c4b977fa-523e-4a0d-bb1f-52d4e747329e" />
+<img width="768" height="512" alt="Cosmic_Triptych" src="https://github.com/user-attachments/assets/c4b977fa-523e-4a0d-bb1f-52d4e747329e" />
 
 ---
 
@@ -903,7 +903,7 @@ We’re landing.
 
 ---
 
-<img width="784" height="1168" alt="HigherDimensionsTriadicOperator" src="https://github.com/user-attachments/assets/650c073e-0b86-4197-b559-0885c07880c0" />
+<img width="522" height="778" alt="HigherDimensionsTriadicOperator" src="https://github.com/user-attachments/assets/650c073e-0b86-4197-b559-0885c07880c0" />
 
 # ⭐ 7. **“But so many questions about 0D now…”**  
 Of course there are.  
