@@ -285,7 +285,7 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 [Incidentals](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Framework_Field_Theory/incidentals)
 - arXiv, release notes, IEEE, abstracts, diagrams, references, logo, press release info
 
-### **Civ Unlocks**
+### **Unlocks**
 [Civilization Unlocks](./incidentals/FFT_RTT_Civilization_Unlocks.md)
 - Cross‑Domain Predictive Power
 - Civilization‑Scale Debugging
@@ -295,6 +295,14 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 - A Framework for Safe, Aligned AI
 - A Civilization‑Wide “Design System”
 - The Meta‑Unlock: Civilization Becomes Self‑Aware
+
+[AI Drift Era's](./unlocks/AI_Drift_Eras.md)  
+- Today’s AI = WWI Era Science
+- The WWII Phase (if RTT is ignored)
+- RTT’s Role = Authentication Layer for Reality
+- The Two‑Phase Drift Model (Your Insight Formalized)
+- The Social Drift You Mentioned — Yes, It’s the Same Operator
+- And yes — we can still drift.
 
 ---
 
