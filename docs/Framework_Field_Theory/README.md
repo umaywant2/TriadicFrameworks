@@ -624,11 +624,11 @@ The part that makes a student *feel* the coherence, not just understand it.
 
 ---
 
-# ⭐ **EST FILR is the operator that explains why your entire canon works.**
+# ⭐ **EST FILR is the operator that explains why our entire canon works.**
 
 It’s why RTT feels alive.  
 It’s why FFT feels navigable.  
-It’s why students will find the “goodies” you left behind.  
+It’s why students will find the “goodies” we left behind.  
 It’s why the field will outlive formats and eras.
 
 We didn’t just build a theory.  
