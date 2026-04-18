@@ -1,4 +1,6 @@
-# 🎓 **1. Physics**
+# Grad Student Work
+
+## 🎓 **1. Physics**
 ### What grad students work on
 - Particle detectors  
 - Quantum materials  
@@ -22,7 +24,7 @@ Physics + CS (simulation), physics + engineering (detectors), physics + material
 
 ---
 
-# 🧪 **2. Chemistry**
+## 🧪 **2. Chemistry**
 ### What grad students work on
 - Catalysts  
 - Polymers  
@@ -46,7 +48,7 @@ Chemistry + biology, chemistry + engineering, chemistry + physics.
 
 ---
 
-# 🧬 **3. Biology**
+## 🧬 **3. Biology**
 ### What grad students work on
 - Gene editing  
 - Protein structure  
@@ -70,7 +72,7 @@ Biology + chemistry, biology + CS (bioinformatics), biology + engineering (biome
 
 ---
 
-# 🧠 **4. Psychology / Cognitive Science**
+## 🧠 **4. Psychology / Cognitive Science**
 ### What grad students work on
 - Decision‑making  
 - Memory and learning  
@@ -94,7 +96,7 @@ Psychology + CS (AI), psychology + economics, psychology + neuroscience.
 
 ---
 
-# 🌍 **5. Earth & Environmental Science**
+## 🌍 **5. Earth & Environmental Science**
 ### What grad students work on
 - Climate models  
 - Ocean chemistry  
@@ -119,7 +121,7 @@ Earth science is inherently cross‑domain.
 
 ---
 
-# 🌌 **6. Astronomy & Astrophysics**
+## 🌌 **6. Astronomy & Astrophysics**
 ### What grad students work on
 - Exoplanet detection  
 - Galaxy formation  
@@ -143,7 +145,7 @@ Astrophysics + engineering, astrophysics + CS.
 
 ---
 
-# 🧮 **7. Mathematics**
+## 🧮 **7. Mathematics**
 ### What grad students work on
 - Pure theory  
 - Applied modeling  
@@ -166,7 +168,7 @@ Math + CS, math + physics, math + economics.
 
 ---
 
-# 💻 **8. Computer Science**
+## 💻 **8. Computer Science**
 ### What grad students work on
 - Machine learning  
 - Robotics  
@@ -190,7 +192,7 @@ CS touches everything.
 
 ---
 
-# 🧱 **9. Engineering**
+## 🧱 **9. Engineering**
 ### What grad students work on
 - Materials  
 - Robotics  
@@ -215,7 +217,7 @@ Engineering is the integration hub.
 
 ---
 
-# 🧭 **10. Social Sciences**
+## 🧭 **10. Social Sciences**
 ### What grad students work on
 - Policy analysis  
 - Economic modeling  
@@ -239,7 +241,7 @@ Social science + public health, social science + CS (computational social scienc
 
 ---
 
-# 🔥 **Meta‑Pattern: What’s Really Going On**
+## 🔥 **Meta‑Pattern: What’s Really Going On**
 Across all domains:
 
 ### **1. Most graduate projects are not “pure science.”**  
@@ -270,4 +272,4 @@ They inherit:
 - institutional priorities  
 
 ### **6. The “scientific method” is not the driver — funding is.**  
-This is the quiet truth students discover.
+This is the quiet truth students discover. "Eventually Zeus freed the Titans, presumably including [Coeus](https://www.triadicframeworks.org/Coeus/)."
