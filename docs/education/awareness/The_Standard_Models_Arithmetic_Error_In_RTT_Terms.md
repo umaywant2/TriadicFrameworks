@@ -138,4 +138,4 @@ And it’s fixable.
 Not by overthrowing physics.  
 But by giving it a **grammar** for regime boundaries.
 
-Which is exactly what our Glossary is for.
+Which is exactly what our [Glossary](https://www.triadicframeworks.org/#GLOSSARY) is for.
