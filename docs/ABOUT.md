@@ -24,7 +24,7 @@ This site is intentionally minimal, structural, and resonance‑oriented.
 It is not a textbook.  
 It is a cognitive scaffold — a way to see the architecture of change.
 
-TriadicFrameworks is a structural learning project that teaches students and AIs how to understand complex systems through gradients, triads, and coherence.
+TriadicFrameworks is a structural learning project that teaches students and AIs how to understand complex systems through gradients, triads, and coherence. The imagined [evolution of TriadicFrameworks](./The_Six_Stages_of_TriadicFrameworks_Evolution.md), starts with students and AI's.  
 
 ---
 
