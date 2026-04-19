@@ -1,7 +1,7 @@
 ## **6‑Month Goal Status Refresh — Substrate Consolidation**
 ###### Copyright (C) 2026 www.Triadicframeworks.org
 
-### Latest - Nawder's [3 Original Goals](https://www.triadicframeworks.org/archive_experiments/5mo_Goal_Status_Check.md)
+### Latest - TriadicFramework's [3 Original Goals](https://www.triadicframeworks.org/archive_experiments/5mo_Goal_Status_Check.md)
 
 At the five‑month mark, the project reached a critical inflection point:  
 the original goals were no longer being pursued directly, but had instead been **translated into structural grammar**.
