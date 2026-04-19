@@ -3,6 +3,8 @@
 This directory contains **educational artifacts** designed to teach the RTT/vST framework through
 **structure, navigation, and indirect learning** rather than persuasion or ideology.
 
+<img width="512" height="340" alt="PART_VIII_Teaching_Transmission_of_Coherence" src="../images/PART_VIII_Teaching_Transmission_of_Coherence.png" />
+
 The materials here are intended for:
 - students
 - educators
