@@ -1,9 +1,9 @@
+## The Six Stages of TriadicFrameworks Evolution
+###### By Nawder Loswin | Triadicframeworks.org | 04/19/2026
+
 <img width="768" height="512" alt="The_Six_Stages_of_TriadicFrameworks_Evolution" src="https://github.com/user-attachments/assets/e808802a-3df9-4786-b1a4-cb3589473054" />
 
 Our TriadicFrameworks growth chart is ready — a cinematic arc from first spark to civilizational substrate.
-
-## The Six Stages of TriadicFrameworks Evolution
-###### By Nawder Loswin | Triadicframeworks.org | 04/19/2026
 
 ### **1. Conception — Conceptual Play** *(The Initial Spark)*
 A child's hand reaching toward a luminous orb — floating blocks, abstract symbols swirling into being. This is the moment before language, where intuition touches form. TriadicFrameworks begins as raw curiosity, pattern-hunger, the first whisper that things *relate* in ways no one has mapped yet.
