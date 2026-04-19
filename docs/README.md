@@ -50,7 +50,7 @@ Minimal, substrate‑aligned implementations for developers and educators.
 
 ---
 
-## 🏛️ Deep Canon
+## 🏛️ Deep Canon | Imagined Student + AI [evolution of TriadicFrameworks](./The_Six_Stages_of_TriadicFrameworks_Evolution.md)
 
 - 📄 **Papers Index** — The full research canon, pre‑RTT and RTT‑aligned.  
 - 🗄️ **Zenodo Community** — Archival spine and citation record.  
