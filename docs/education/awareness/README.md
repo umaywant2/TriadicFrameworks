@@ -2,6 +2,8 @@
 
 RTT Awareness is a **passive, non‑enforcing introduction** to Resonance‑Time Theory (RTT) and the triadic substrate that underlies TriadicFrameworks.
 
+<img width="512" height="340" alt="RTT_Awareness" src="../../images/RTT_Awareness.png" />
+
 It is designed for readers who want to *understand the structure* without running code, installing tools, or committing to any implementation path.
 
 ---
