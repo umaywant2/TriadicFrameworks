@@ -1,5 +1,8 @@
 # **TriadicFrameworks — Triadic Diagrams Index**  
-### *A Living Atlas of Regime, Ontology, and Substrate Interactions*
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *A Living Atlas of Regime, Ontology, and Substrate Interactions*
 
 The **Triadic Diagrams** are the canonical visualization layer of TriadicFrameworks.  
 Each diagram is a **standalone artifact** and a **member of a growing lineage**, expressing one facet of the architecture through a precise metaphor: optical, geometric, temporal, celestial, mechanical, or multidimensional.
