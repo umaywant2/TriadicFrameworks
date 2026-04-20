@@ -1,5 +1,8 @@
-# ✔️ Validation — Logs, Protocols & Lineage Integrity
-### Loop Integrity • Drift Detection • Remix Lineage • Validator Dashboards
+# ✔️ Validation — Logs, Protocols & Lineage Integrity 
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## Loop Integrity • Drift Detection • Remix Lineage • Validator Dashboards
 
 The **Validation** folder contains the core artifacts that ensure structural integrity,
 lineage clarity, and drift‑safe evolution across the TriadicFrameworks canon.
