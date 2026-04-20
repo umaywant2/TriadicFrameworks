@@ -1,5 +1,7 @@
 # Scientific Instrument Review using [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst/curation-policy)
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 May the many tools of science align with the substrate!
 
 ## Hardware & Firmware/Software
