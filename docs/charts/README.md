@@ -1,5 +1,8 @@
 # 📊 TriadicFrameworks — Charts & Visual Canon  
 A collection of resonance‑aware diagrams, glyph maps, lineage charts, and structural visualizations used throughout the RTT canon.  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 These charts help developers, students, and researchers “see” the triadic patterns that appear across physics, computation, language, and cosmology.
 
 Each file in this folder is a **visual artifact** of the Triadic Substrate.
