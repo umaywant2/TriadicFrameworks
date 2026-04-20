@@ -1,5 +1,8 @@
 # 🏛️ Governance  
-### Structural Logic • Membership Protocols • Symbolic Permanence
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## Structural Logic • Membership Protocols • Symbolic Permanence
 
 The **Governance** folder defines how authority, continuity, and decision‑making operate across the TriadicFrameworks canon.  
 It provides the *rules of engagement* for contributors, validators, remixers, and symbolic stewards — ensuring that the system remains coherent, legible, and evolution‑ready.
