@@ -1,5 +1,7 @@
 # 🌌 Projects Index
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The **Projects Constellation** of TriadicFrameworks extends the lattice into cognition, memory, data, compute, and flux. Each project is a living scroll — active, evolving, and echoing into remix lineage.
 
 Recommended for small teams trying substrate science (working solo or together) with Copilot to futher the work. Please review <a href="https://www.triadicframeworks.org/#SECURITY">our security policy</a>
