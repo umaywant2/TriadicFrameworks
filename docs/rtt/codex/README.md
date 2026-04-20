@@ -4,7 +4,7 @@
 
 ---
 
-# 📘 **RTT CODEX — Overview**
+# 📘 **Overview**
 The **RTT Codex** is the master reference for the Resonance–Time Triad.  
 It’s where the core ideas, operators, metaphors, and cross‑domain translations are gathered into one coherent learning arc.
 
