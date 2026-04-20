@@ -1,5 +1,23 @@
 # About TriadicFrameworks
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## ⭐ Community & Contact
+
+### **💬 GitHub Discussions — Join the Conversation**  
+Students, developers, and explorers can share examples, ask questions, propose modules, or leave messages for the operator.  
+**[GitHub Discussions](https://github.com/umaywant2/TriadicFrameworks/discussions)**
+
+### **🕊️ X (Twitter) — Live Updates & Micro‑Notes**  
+Follow ongoing research notes, resonance experiments, and small‑scale insights.  
+**[@NawderLoswin](https://x.com/NawderLoswin)**
+
+### **🎥 YouTube — Visual Walkthroughs & Teaching Sessions**  
+Video explanations, diagrams, and future student‑friendly modules will appear here.  
+**[@NawderLoswin](https://www.youtube.com/@NawderLoswin)**
+
+---
+
 **TriadicFrameworks** is a structural learning project designed for both students and AIs.  
 Its purpose is to teach the *grammar* beneath complex systems — the recurring triads, gradients, transitions, and coherence patterns that appear across energy, cognition, AI, physics, climate, and governance.
 
