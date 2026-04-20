@@ -1,5 +1,7 @@
 # RTT‑Inside Browser Extension (Beta)
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This folder contains a minimal, forward‑compatible starter template for building RTT‑aware browser extensions. These extensions provide structural clarity, coherence cues, and early resonance‑time awareness directly inside the user’s browsing environment.
 
 The extension is intentionally lightweight. It defines the *shape* of RTT‑Inside browser tooling without exposing internal substrate logic.
