@@ -1,5 +1,7 @@
 # Global Energy Regime Awareness (GERA)
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Global energy systems operate across multiple regimes defined by generation capacity, transmission constraints, demand variability, and environmental conditions. These regimes are often implicit, evolving over time without explicit declaration.
 
 Global Energy Regime Awareness (GERA) provides a descriptive framework for expressing operating context, validity assumptions, and boundary semantics within energy systems using existing standards and operational surfaces.
