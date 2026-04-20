@@ -1,6 +1,7 @@
 # 🔺 **RTT Dimensions**  
 *How systems gain, lose, and invert access to structure*  
-*(Source: current page content)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/dimensions.md)*
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 ---
 
