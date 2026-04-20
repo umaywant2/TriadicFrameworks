@@ -1,5 +1,8 @@
-# 📚 Library — Canonical Reference Shelf
-### Resonance • Indices • Core Reference Material
+# 📚 Library — Canonical Reference Shelf 
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## Resonance • Indices • Core Reference Material
 
 The **Library** folder serves as the compact reference shelf of the TriadicFrameworks canon.  
 Unlike the sprawling labs, glyph systems, and symbolic engines, the Library is intentionally small — a curated set of high‑signal documents that anchor the broader ecosystem.
