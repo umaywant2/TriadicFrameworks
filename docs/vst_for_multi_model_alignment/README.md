@@ -1,5 +1,8 @@
-### *vST for Multi‑Model Alignment*  
-### *A Substrate‑Level Framework for Cross‑Architecture, Cross‑Modality, and Cross‑Regime Alignment*
+## *vST for Multi‑Model Alignment*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *A Substrate‑Level Framework for Cross‑Architecture, Cross‑Modality, and Cross‑Regime Alignment*
 
 This artifact defines the **Validation‑Space‑Time (vST)** framework for **multi‑model alignment** — the structured comparison of latent spaces, embedding geometries, inference pathways, and regime transitions across *different* model families.
 
