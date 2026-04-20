@@ -1,5 +1,7 @@
 # NASA HPOSS — T‑Minus‑10 Submission Workspace
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This directory contains the working materials for preparing a NASA High Priority 
 Open‑Source Science (HPOSS) proposal for the TriadicFrameworks Research Initiative.
 
