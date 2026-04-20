@@ -1,5 +1,7 @@
 # Spacetime Validation and Regime‑Invariant Dimensional Cores
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This short paper announces a structural result: the dimensional primitives used in
 Resonance‑Time Theory (RTT) and Validated Spacetime (vST) are identical once an
 explicit validation layer is applied to spacetime. The only distinction between
