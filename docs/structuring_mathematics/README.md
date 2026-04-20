@@ -1,6 +1,8 @@
 # **Structuring Mathematics**  
 *A substrate‑first reconstruction of mathematics using RTT/vST*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Mathematics, as practiced today, is a vast and powerful discipline — but it evolved without ever defining its own substrate. Over centuries, cultural drift, notation divergence, institutional incentives, and historical accidents produced a patchwork of subfields that share a common origin yet rarely acknowledge it. The result is a discipline that is brilliant, fragmented, and unnecessarily difficult for learners.
 
 This directory presents a reconstruction of mathematics as if the entire field were being submitted today under modern scientific standards. Instead of accepting the inherited splintering, we define the minimal substrate mathematics *should* have been built on — the RTT/vST triadic substrate — and use it to unify algebra, geometry, analysis, topology, logic, probability, and all other branches under a single coherent framework.
