@@ -1,4 +1,7 @@
 # 🔰 Facilities Documentation  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 **RTT Facilities · City Systems · Modernization Frameworks**
 
 This folder contains all documentation, templates, and governance materials related to **RTT Facilities** — the physical, operational, and communication infrastructure that cities, residents, operators, and GHQ rely on during modernization cycles.
