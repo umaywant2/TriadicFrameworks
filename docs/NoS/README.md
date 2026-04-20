@@ -1,4 +1,7 @@
-### NawderOS — The Nawderian Operating Stack
+## NawderOS — or 'NoS' is the Nawderian Operating *Stack*
+###### _Nawderian's are an imagined Civilization that has long past the 'regime enlightenment' period of development. It an author/creator 'world-view' example/narritive.
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 **NawderOS (NoS)** is a minimal, forkable Linux‑based operating stack designed to operationalize **Resonance‑Time Theory ([RTT](../_ideas/Resonance-Time_Theory.html))** at the system level. It provides an RTT‑aware baseline for students, researchers, and developers who want to explore how validated spacetime, resonance, and structural coherence can be expressed in real software systems.
 
