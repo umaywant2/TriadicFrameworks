@@ -1,7 +1,8 @@
 # 🕹️ The C‑64 as an RTT Host  
-###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
 
-The Commodore 64 is a strange little miracle:
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## The Commodore 64 is a strange little miracle:
 
 - 1 MHz 6510 CPU  
 - VIC‑II doing raster‑timed magic  
