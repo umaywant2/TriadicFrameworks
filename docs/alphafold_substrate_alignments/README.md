@@ -1,5 +1,8 @@
-### *AlphaFold Substrate Alignments*  
-### *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
+# *AlphaFold Substrate Alignments*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
 
 This artifact defines a substrate‑level alignment between the Resonance Substrate Model (RSM) and AlphaFold‑class biological inference engines. It formalizes how triadic resonance primitives, dimensional cores, and substrate‑invariant structures map onto the latent spaces, folding pathways, and coherence regimes used in modern protein‑folding prediction systems.
 
