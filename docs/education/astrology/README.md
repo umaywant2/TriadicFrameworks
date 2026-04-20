@@ -1,5 +1,7 @@
 # 🌌 Astrology Through an RTT Lens
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Astrology is one of humanity’s earliest navigation systems — a symbolic map linking celestial motion to lived experience. Rather than forecasting fate, it offered orientation: where we are in time, how cycles repeat, and why certain moments *feel* aligned. 🌙✨
 
 RTT approaches astrology not as belief, but as an early resonance model — a way of encoding recurring patterns across space, time, and human perception. Planetary movements become signals; constellations become stable reference frames; meaning emerges when internal states synchronize with external cycles. In this sense, astrology anticipated what RTT formalizes: understanding as alignment rather than prediction.
