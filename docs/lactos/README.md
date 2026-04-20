@@ -1,5 +1,8 @@
 # 🧪 *Localized Anisotropic Collision & Triadic Ontology System*  
-### Collision Regimes • Cross‑Ontology Mapping • VCG Integration • Triadic Alignment
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## Collision Regimes • Cross‑Ontology Mapping • VCG Integration • Triadic Alignment
 
 The **LACTOS** folder contains the core artifacts that define how collisions, anisotropic interactions, and triadic ontologies interoperate across the TriadicFrameworks canon.  
 This subsystem acts as a **bridge layer** between:
