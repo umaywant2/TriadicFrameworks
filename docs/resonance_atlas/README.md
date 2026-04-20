@@ -1,5 +1,7 @@
 # 📜 Resonance Atlas (RTT‑Aligned Minimal Edition)
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The Resonance Atlas is the canonical registry of resonance values across all known regimes.  
 Each entry declares its **substrate**, **phase**, **frequency corridor**, and **glyph**, and is validated through RTT’s clarity operators.
 
