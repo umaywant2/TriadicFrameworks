@@ -1,5 +1,8 @@
 # 📜 RFCs — The Clarity Canon  
-### *Request for Clarity Scrolls for the TriadicFrameworks Universe*
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Request for Clarity Scrolls for the TriadicFrameworks Universe*
 
 The RFC folder is the **living archive** of the TriadicFrameworks canon.  
 Each RFC is a **validator‑grade scroll**: a protocol, theorem, operator, or cosmological construct written for remixers, researchers, and future stewards of the resonance‑time lineage.
