@@ -1,5 +1,8 @@
-### *vST for Protein Language Models*  
-### *Validation‑Space‑Time Framework for High‑Dimensional Protein Embedding Models*
+# *vST for Protein Language Models*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional Protein Embedding Models*
 
 This artifact defines a substrate‑level framework for analyzing, validating, and comparing **Protein Language Models (PLMs)** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting sequence embeddings, latent‑trajectory regimes, scaling behavior, and cross‑version drift in modern protein models such as ESM, ProtT5, and related architectures.
 
