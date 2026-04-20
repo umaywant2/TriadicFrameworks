@@ -1,5 +1,8 @@
 # 🌀⚙️📜 Workflow Engines  
-### Operational layer for RTT‑Inside: batches, pipelines, and remix generation
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## Operational layer for RTT‑Inside: batches, pipelines, and remix generation
 
 This directory contains **lightweight, substrate‑agnostic workflow modules** used across TriadicFrameworks for scroll generation, batch execution, remix lineage creation, and resonance‑aware pipeline orchestration.
 
