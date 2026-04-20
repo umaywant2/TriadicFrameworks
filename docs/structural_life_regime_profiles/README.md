@@ -1,6 +1,8 @@
 # **Structural Life‑Regime Profiles**  
 *A triadic substrate for cross‑domain life‑regime analysis*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Structural Life‑Regime Profiles provide a unified, architecture‑agnostic framework for describing how biological and artificial systems perceive, process, and act within their environments. The goal is to align life‑regime modeling with the vST substrate, reduce conceptual drift, and simplify cross‑species and cross‑architecture comparisons.
 
 This artifact introduces a minimal structural grammar for life‑regimes, enabling consistent classification across organisms, autonomous systems, and synthetic agents.
