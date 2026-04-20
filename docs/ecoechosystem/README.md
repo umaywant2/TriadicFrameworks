@@ -1,5 +1,8 @@
 # **EcoEchoSystem**  
-### *A Cross‑Domain, Substrate‑Aligned Simulation Environment*
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *A Cross‑Domain, Substrate‑Aligned Simulation Environment*
 
 The **EcoEchoSystem** is a multi‑layer, forkable simulation substrate built on **Resonance‑Time Theory (RTT)** and **Validated Spacetime (vST)**. It provides a unified environment where physics, psychology, economics, governance, AI, biology, and cognition operate on a shared **triadic substrate**.
 
