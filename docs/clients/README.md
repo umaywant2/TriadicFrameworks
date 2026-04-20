@@ -1,5 +1,7 @@
 # 📚 Query Client Library
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 in both Python and JavaScript, designed to call the corridor API endpoints we defined in RFC‑API‑0006. This gives collaborators a clean way to embed corridor queries into their validator workflows without touching raw YAML.
 
 ---
