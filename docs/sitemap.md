@@ -151,6 +151,7 @@ This is the **storytelling + symbolic resonance** layer.
 This is where RTT becomes a community.
 
 - [/nist/](https://www.triadicframeworks.org/nist/)
+- [/arrival_substrate_model/](https://www.triadicframeworks.org/arrival_substrate_model/)
 - [/contributors/](https://www.triadicframeworks.org/contributors/)  
 - [/governance/](https://www.triadicframeworks.org/governance/)
 - [/Governance_Substrate_Model/](https://www.triadicframeworks.org/Governance_Substrate_Model/)
