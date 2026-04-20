@@ -1,6 +1,8 @@
 # Bridges Layer  
 Connecting conceptual clarity to operational practice
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The **Bridges** directory contains four lightweight documents that link the
 core TriadicFrameworks canon to the practical environments where reviewers,
 operators, and developers work. Each bridge provides a minimal, stable
