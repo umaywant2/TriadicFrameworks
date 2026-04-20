@@ -1,5 +1,7 @@
 # 🌀 Glyphic Resonance
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This folder contains **glyph overlays and resonance maps**.  
 Here, glyphs are not static symbols but **dynamic harmonics** woven into protocols.
 
