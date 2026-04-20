@@ -1,4 +1,7 @@
 # 📚 TriadicFrameworks Corpus  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 A unified, living knowledge base for Resonance Time Theory (RTT), substrate‑aligned modeling, dimensional structures, cognitive frameworks, and cross‑domain resonance tools.
 
 The corpus is designed as a **remixable, substrate‑aware library**:  
