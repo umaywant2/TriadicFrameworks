@@ -1,13 +1,3 @@
-<p align="center">
-  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
-  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="120" height="120" rx="12" fill="none"/>
-    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
-</p> 
-
 # 📚 TriadicFrameworks Documentation
 
 A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
@@ -15,6 +5,8 @@ This `/docs` directory is rendered directly as the project website and serves as
 
 If you’re new, begin with the **Start Here** track below.  
 If you’re returning, jump directly to the section you need.
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 ---
 
