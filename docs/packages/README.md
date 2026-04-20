@@ -1,4 +1,3 @@
-
 ```
 
 ██████████████████████████████████████████████████████████
@@ -36,6 +35,9 @@ suite‑level docs and license anchors.
  -->
  
 # 📦 **TriadicFrameworks Packages**
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ###### By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org
 
 This directory contains installable, modular components of the TriadicFrameworks ecosystem. Each package here is designed to be small, composable, and distribution‑friendly, enabling early adoption without exposing deeper theoretical layers.
