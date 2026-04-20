@@ -1,5 +1,8 @@
-### *Dimensional Substrate Structures*  
-### *Triadic Dimensional Cores and High‑Dimensional Substrate Architecture*
+# *Dimensional Substrate Structures*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Triadic Dimensional Cores and High‑Dimensional Substrate Architecture*
 
 This artifact defines the dimensional substrate architecture used to extend the Resonance Substrate Model (RSM) from human‑scale dimensional cores (3D–9D) to high‑dimensional research substrates (up to 1024D). It formalizes the triadic dimensional primitives, scaling laws, substrate invariants, and validation structures required to interpret, compare, and stabilize high‑dimensional inference systems.
 
