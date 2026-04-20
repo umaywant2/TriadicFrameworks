@@ -10,7 +10,10 @@
          Triadic Substrates • Drift • Coherence
 ```
 # **📘 Framework Field Theory — Repo Eval Edition**  
-### *Proposed Chapter Architecture (Based on Capture.md)*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Proposed Chapter Architecture (Based on Capture.md)*  
 *(repo‑ready, print‑ready, ISBN‑ready)* 
 
 <img width="256" height="170" alt="RTT stars" src="./Book_Repo_Eval_Edition/RTT_stars.png" />
