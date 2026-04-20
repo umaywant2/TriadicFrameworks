@@ -1,6 +1,8 @@
 # ⭐ Inverted Economics
 _A structural, RTT‑aligned approach to understanding past economic cycles._
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Inverted Economics is a new field within the TriadicFrameworks ecosystem.  
 Its purpose is simple and radical:
 
