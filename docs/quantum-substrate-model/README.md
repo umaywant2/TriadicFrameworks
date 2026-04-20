@@ -1,5 +1,7 @@
 # Quantum Substrate Model (QSM)
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The Quantum Substrate Model (QSM) defines a structured extension of substrate‑level modeling in which regime structure, dimensional constraints, and interaction domains are explicitly declared.
 
 Building on the principles established by the Boson Substrate Model (BSM), the QSM formalizes how multiple substrate regimes may coexist, transition, or interact without embedding empirical claims, physical interpretation, or domain‑specific semantics.
