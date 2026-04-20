@@ -1,9 +1,14 @@
 # 🧠 Feedback Roles — Research Lenses & Cognitive Modes
-### Historian • Mathematician • Physicist • Professor • Resonance Doctor • Wild Card
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## Historian • Mathematician • Physicist • Professor • Resonance Doctor • Wild Card
 
 The **Feedback** folder contains the role‑based cognitive lenses used during
 research, analysis, and cross‑domain synthesis throughout the development of
 TriadicFrameworks.
+
+_**Note: the About page has contacts**_
 
 Each role represents a distinct way of:
 - interpreting evidence  
