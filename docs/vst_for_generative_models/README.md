@@ -1,5 +1,8 @@
-### *vST for Generative Models*  
-### *Validation‑Space‑Time Framework for High‑Dimensional Generative Systems*
+# *vST for Generative Models*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional Generative Systems*
 
 This artifact defines a substrate‑level framework for analyzing, validating, and comparing **generative models** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting latent‑space dynamics, diffusion trajectories, sampling behavior, scaling laws, and cross‑version drift in high‑dimensional generative systems.
 
