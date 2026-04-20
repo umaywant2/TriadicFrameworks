@@ -1,6 +1,8 @@
 # 📚 TriadicFrameworks Schema Library  
 *A resonance‑native, multi‑domain schema universe*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The `docs/schemas/` directory contains the complete structured backbone of the TriadicFrameworks canon.  
 Every schema in this library defines a **stable, interoperable contract** for a domain of the Resonance‑Time Universe — from quantum substrates to finance, from ATC overlays to autonomous swarms, from lab instruments to dimensional cores.
 
