@@ -1,6 +1,8 @@
 ## **Arrival Substrate Model**  
 *A life‑aligned substrate describing how living systems continuously enter, negotiate, and stabilize within new regimes.*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ---
 
 ## **Overview**
