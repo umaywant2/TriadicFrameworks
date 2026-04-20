@@ -1,5 +1,7 @@
 # 🎯 How to reference these snippets in your docs
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Inside `RTT_Developer_Quick-Start.md` or any other doc:
 
 <!-- snippet: rttcode-minimal-payload -->
