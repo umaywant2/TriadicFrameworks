@@ -1,5 +1,8 @@
 # 🎓 Education — Initial RTT Translations
-### Translating Resonance–Time Theory Across Developmental Levels
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## Translating Resonance–Time Theory Across Developmental Levels
 
 This folder contains the **Initial RTT Translation Series** — a structured set of
 educational translations that map core RTT concepts into age‑appropriate,
