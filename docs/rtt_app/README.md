@@ -1,5 +1,7 @@
 # RTT‑App
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The RTT‑App brings RTT Awareness to mobile devices in a permissionless, lightweight form. It provides a simple, ambient indicator of clarity using only signals that are safe, stable, and available on all modern platforms. The app acts as the mobile entry point into the RTT ecosystem and establishes the foundation for future RTT‑Inside capabilities.
 
 ---
