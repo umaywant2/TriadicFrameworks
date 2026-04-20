@@ -1,5 +1,8 @@
-### *vST for Robotics and Control Policies*  
-### *Validation‑Space‑Time Framework for High‑Dimensional Control Systems*
+# *vST for Robotics and Control Policies*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional Control Systems*
 
 This artifact defines a substrate‑level framework for analyzing, validating, and comparing **robotics and control policies** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting policy behavior, latent‑space dynamics, scaling behavior, and cross‑version drift in robotic controllers and reinforcement‑learning (RL) policies.
 
