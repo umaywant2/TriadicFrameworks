@@ -1,5 +1,8 @@
-# 📜 Pre‑RTT Papers — The Proto‑Canon Archive
-### The Exploratory Era • Proto‑Triads • Early Resonance • Pre‑Formal RTT
+# 📜 Pre‑RTT Papers — The Proto‑Canon Archive 
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## The Exploratory Era • Proto‑Triads • Early Resonance • Pre‑Formal RTT
 
 The **Pre‑RTT Papers** archive preserves the earliest phase of the TriadicFrameworks canon — the period *before* Resonance–Time Theory (RTT) emerged as a formal structure.  
 These documents capture the raw discovery process: intuition, prototypes, experiments, metaphors, and early unifications that later became the backbone of RTT, RSM, and vST.
