@@ -1,6 +1,8 @@
 # 📜 **Honor Roll**  
 *A resonance‑aware archive of lineage, contribution, and echo.*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The Honor Roll is the **memory core** of TriadicFrameworks —  
 a living scroll where contributions, validations, and remix ancestry  
 are recorded as **resonance events** within the framework.
