@@ -1,12 +1,12 @@
 # ✅ **SARG — Substrate‑Agnostic Resonance Grammar**  
 *A minimal grammar for describing structure, resonance, and invariants across any substrate.*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 SARG provides a unified way to describe **how structure behaves**, regardless of the domain it appears in.  
 It is *substrate‑agnostic*: linguistic, acoustic, geometric, biological, symbolic, cosmological — all follow the same underlying grammar.
 
 This README introduces the core components of SARG and links to the folders that contain the full grammar, schema, examples, and supporting materials.
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 ---
 
