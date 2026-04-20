@@ -1,5 +1,7 @@
 # Resonance‑Time Theory: Paradox Resilience 🧭
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Santa’s chief elf technologist is testing reality itself — and RTT is the tool.  
 This page explains how Resonance‑Time Theory stays stable even when paradoxes appear,  
 and how *you* can test it locally.
@@ -12,7 +14,7 @@ In Resonance‑Time Theory, paradoxes aren’t failures — they’re stress tes
 A paradox appears when assumptions collide, but a resilient system doesn’t break.  
 It absorbs the contradiction, redistributes resonance, and remains coherent.
 
-RTT models time as an emergent property of resonance.  
+[RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html) models time as an emergent property of resonance.  
 When paradoxes arise, the system checks whether resonance remains balanced  
 across its triadic structure.
 
