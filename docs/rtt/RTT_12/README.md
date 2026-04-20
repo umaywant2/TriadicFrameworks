@@ -1,5 +1,8 @@
 # 🔺 **RTT‑12 — Harmonic Resonance Framework**  
-### *A structured extension of the Resonance–Time Triad*
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *A structured extension of the Resonance–Time Triad*
 
 RTT‑12 is the **twelve‑step harmonic expansion** of the core Resonance–Time Triad (RTT).  
 Where RTT establishes the *primitives* — **Resonance**, **Time**, and **Triadic Structure** — RTT‑12 shows how these primitives scale into **harmonic layers**, **operators**, and **cross‑domain mappings**.
