@@ -1,5 +1,7 @@
 # Enterprise Structural Awareness
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 Enterprise systems are composed of layered products, policies, configurations, and operational practices that evolve over long lifecycles. While these systems are highly capable, they often lack explicit mechanisms for declaring when assumptions hold, when they drift, and when operating contexts change.
 
 This documentation explores how structural awareness concepts—such as regime declaration, boundary semantics, and validity context—can be introduced into existing enterprise IT systems using standards‑based, non‑disruptive approaches.
