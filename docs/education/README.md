@@ -1,5 +1,7 @@
 # Education
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This directory contains **educational artifacts** designed to teach the RTT/vST framework through
 **structure, navigation, and indirect learning** rather than persuasion or ideology.
 
