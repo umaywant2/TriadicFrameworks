@@ -1,6 +1,8 @@
 # **vST Domain Tool Primers**  
 *A lightweight starter kit for cross‑domain validation of the Validation‑Space Theory (vST)*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This directory provides **minimal, tool‑specific primer files** designed to help early validators explore vST concepts inside the scientific and engineering tools they already use. Each primer offers:
 
 - a short domain overview  
