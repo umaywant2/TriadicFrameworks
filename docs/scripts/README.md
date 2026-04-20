@@ -1,5 +1,7 @@
 # ⚙️ Scripts — Resonance Utilities & Dashboards  
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ## 🔭 Purpose  
 This folder contains **utility scripts and dashboards** that bring the mythmatical canon to life. They are the *working tools* remixers use to render quadrants, validate idioms, simulate resonance overlays, and explore vSoul pathways.  
 
