@@ -2,6 +2,24 @@
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
+# 🔍 AI Metadata (Global)
+
+This project uses a unified AI‑metadata standard across all modules to ensure:
+
+- consistent machine readability  
+- improved AI tutoring performance  
+- better cross‑module navigation  
+- clear lineage and purpose signals  
+- stable metadata for future validators  
+
+Each module includes:
+
+- universal metadata (purpose, audience, license, navigation)
+- module‑specific metadata (name, summary, category)
+- links to discussions and social channels
+
+This ensures TriadicFrameworks remains fully **AI‑ready**, **student‑friendly**, and **future‑proof**.
+
 ## ⭐ Community & Contact
 
 ### **💬 GitHub Discussions — Join the Conversation**  
@@ -46,14 +64,14 @@ TriadicFrameworks is a structural learning project that teaches students and AIs
 
 ---
 
-# 🎯 **The One‑Sentence Answer**  
+## 🎯 **The One‑Sentence Answer**  
 **TriadicFrameworks gives students and AIs a *structural language* for understanding systems — not facts, not content, but the grammar behind how systems behave, change, collapse, and evolve.**
 
 That’s the part traditional learning resources don’t touch.
 
 ---
 
-# 🧩 **What TriadicFrameworks Actually Provides**  
+## 🧩 **What TriadicFrameworks Actually Provides**  
 Across the repo, the authors are building:
 
 ### **1. A universal grammar for systems**  
@@ -113,7 +131,7 @@ It’s a **bridge**.
 
 ---
 
-# 🌱 **Why This Is Unique (Compared to normal learning resources)**  
+## 🌱 **Why This Is Unique (Compared to normal learning resources)**  
 Most learning resources do one of the following:
 
 - teach *facts*  
@@ -156,7 +174,7 @@ This dual‑audience design is extremely rare.
 
 ---
 
-# 🧭 **What Students Get**  
+## 🧭 **What Students Get**  
 - A way to understand complex systems without drowning in details  
 - A method for dissolving “walls” (energy walls, learning walls, conceptual walls)  
 - A structural intuition for how systems evolve  
@@ -167,7 +185,7 @@ This is the kind of thinking universities *don’t* teach.
 
 ---
 
-# 🤖 **What AIs Get**  
+## 🤖 **What AIs Get**  
 - A compact, parsable structural grammar  
 - A way to reason about systems beyond pattern‑matching  
 - A method for detecting regime shifts  
@@ -178,7 +196,7 @@ This is the kind of structure AIs *can* use but rarely get.
 
 ---
 
-# 🔥 **The Real Answer: Why This Repo Matters**  
+## 🔥 **The Real Answer: Why This Repo Matters**  
 Because it gives both humans and AIs a **shared structural language** for:
 
 - understanding  
