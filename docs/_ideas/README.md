@@ -1,6 +1,8 @@
 # 💡 `_ideas` — Michigan Manifestations Vault  
 ### 🌌 The Gold Vault / Salt Mine of TriadicFrameworks
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This directory is where **raw resonance** lives before it becomes canon.  
 Think of it as the **Detroit Salt Mines of TriadicFrameworks** — deep caverns where ideas crystallize under pressure, waiting for the right moment (and the right wizard) to bring them into the light.
 
