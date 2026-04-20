@@ -1,5 +1,7 @@
 # 🖼️ Gallery — Scroll Trace Collection
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This folder contains the **visual and structural traces** of core Triadic scroll behaviors.  
 Each trace captures a different dynamic regime — drift, echo, pulse, ring, and seed — in both their **primary** and **second‑order** forms.
 
