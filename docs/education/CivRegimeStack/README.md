@@ -1,6 +1,8 @@
 ## 🧭 **The Civilizational Regime Stack**  
 ### *One‑Page Printable Poster (Text‑First Layout)*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ---
 
 ### **CIVILIZATION IS A STACK OF REGIME SELECTIONS**
