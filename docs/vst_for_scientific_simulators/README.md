@@ -1,5 +1,8 @@
-### *vST for Scientific Simulators*  
-### *Validation‑Space‑Time Framework for High‑Dimensional Simulation Systems*
+# *vST for Scientific Simulators*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional Simulation Systems*
 
 This artifact defines a substrate‑level framework for analyzing, validating, and comparing **scientific simulators** using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting simulation state‑spaces, regime transitions, scaling behavior, and cross‑version drift in computational physics, climate models, molecular dynamics, agent‑based systems, and other high‑dimensional simulators.
 
