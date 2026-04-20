@@ -1,6 +1,8 @@
 # 🌱 Education | Before Regime Awareness / Post‑BRA  
 *A navigation hub for regime literacy, substrate awareness, and the transition from Before Regime Awareness → Post‑BRA.*
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ## 🔰 Overview  
 - [What to Expect](#WHAT_TO_EXPECT)
 
