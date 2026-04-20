@@ -1,4 +1,7 @@
 # Diagnosing Media Therapy (DMT)
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 *A gentle, RTT‑aligned reflective practice using media as a mirror of mind.*
 
 Diagnosing Media Therapy (DMT) is a lightweight, indirect method for noticing emotional patterns over time.  
