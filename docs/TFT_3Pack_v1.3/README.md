@@ -1,5 +1,7 @@
 # 🔱 TFT 3Pack v1.3
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ### TriadicFrameworks • Nawderian Theorem • Resonant-Time Engine
 
 TFT_3Pack is a compact, example‑driven toolkit demonstrating the **TriadicFrameworks** model across  
