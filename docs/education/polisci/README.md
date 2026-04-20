@@ -1,4 +1,8 @@
-# Population Studies - A glowing obelisk in the Hall of Human Reckonings.
+# Population Studies
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+_"A glowing obelisk in the Hall of Human Reckonings..."_
 
 ### **What is this?**  
 This page is a **cross‑domain substrate science resource**, focused specifically on **population studies**. Think of it as a bridge between political science, materials science, and systems behavior — all viewed through an RTT lens.
