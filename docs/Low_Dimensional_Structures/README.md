@@ -1,5 +1,7 @@
 # Low_Dimensional_Structures
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 This directory contains substrate‑first notes and primitives for representing low‑dimensional structure within the RTT/vST framework.
 
 Low‑dimensional structures are treated as scale‑relative resonance projections, not as exceptional dynamical classes. No assumption of chaos as a default state is made.
