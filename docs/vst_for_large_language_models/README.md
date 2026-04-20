@@ -1,5 +1,8 @@
-### *vST for Large Language Models*  
-### *Validation‑Space‑Time Framework for High‑Dimensional LLM Inference*
+# *vST for Large Language Models*  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## *Validation‑Space‑Time Framework for High‑Dimensional LLM Inference*
 
 This artifact defines a substrate‑level framework for analyzing, validating, and comparing Large Language Models (LLMs) using the **Validation‑Space‑Time (vST)** system and the **1024D dimensional substrate**. It provides a structured, invariant‑preserving method for interpreting latent trajectories, regime behavior, scaling patterns, and cross‑version drift in modern LLMs.
 
