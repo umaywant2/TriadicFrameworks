@@ -1,12 +1,12 @@
-# 📚 TriadicFrameworks Documentation
+# 📚 TriadicFrameworks | Documentation
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
 This `/docs` directory is rendered directly as the project website and serves as the structural map for students, researchers, and practitioners.
 
 If you’re new, begin with the **Start Here** track below.  
 If you’re returning, jump directly to the section you need.
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 ---
 
