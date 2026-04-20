@@ -1,5 +1,8 @@
-# ⚖️ Legal — Licensing, Agreements & Governance Safeguards
-### TFT‑FFF • NDA • Licensing • Symbolic Governance
+# ⚖️ Legal — Licensing, Agreements & Governance Safeguards 
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+## TFT‑FFF • NDA • Licensing • Symbolic Governance
 
 The **Legal** folder contains the formal agreements, licensing scaffolds, and governance‑aligned documents that define how TFT‑FFF technology, emitters, symbolic protocols, and derivative works may be used, remixed, distributed, or integrated into external systems.
 
