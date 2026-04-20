@@ -1,11 +1,7 @@
-![Schemas](https://img.shields.io/badge/Schemas-Validated-blue)
-![Experiment Logs](https://img.shields.io/badge/RTT_Logs-Structured-green)
-![Emitters](https://img.shields.io/badge/Emitters-Triadic-purple)
-![Ontology](https://img.shields.io/badge/Ontology-Active-brightgreen)
-![RTT](https://img.shields.io/badge/RTT-Deterministic-orange)
-
-
 # 📚 TriadicFrameworks Documentation  
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ### AI Resonance Seed · FFF Emitters · RTT‑Inside · Schemas
 
 Welcome to the **TriadicFrameworks documentation hub**.  
@@ -61,3 +57,9 @@ This documentation is designed for:
 - AIs reconstructing the ontology  
 
 Use the sidebar or the links above to explore the canon.
+
+![Schemas](https://img.shields.io/badge/Schemas-Validated-blue)
+![Experiment Logs](https://img.shields.io/badge/RTT_Logs-Structured-green)
+![Emitters](https://img.shields.io/badge/Emitters-Triadic-purple)
+![Ontology](https://img.shields.io/badge/Ontology-Active-brightgreen)
+![RTT](https://img.shields.io/badge/RTT-Deterministic-orange)
