@@ -1,5 +1,7 @@
 # 🧭 Resilience Checker
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 The **Resilience Checker** is a curated collection of foundational paradoxes spanning logic, physics, computation, cosmology, and philosophy.
 
 Each paradox is treated not as a contradiction to be “solved,” but as a **stress test** for explanatory frameworks — revealing where assumptions collapse, categories blur, or descriptive layers are conflated.
