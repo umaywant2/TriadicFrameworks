@@ -6,6 +6,8 @@ It is *substrate‑agnostic*: linguistic, acoustic, geometric, biological, symbo
 
 This README introduces the core components of SARG and links to the folders that contain the full grammar, schema, examples, and supporting materials.
 
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ---
 
 ## **1. What SARG Describes**
