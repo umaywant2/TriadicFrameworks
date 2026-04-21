@@ -1,7 +1,24 @@
-# **Structuring Mathematics**  
-*A substrate‑first reconstruction of mathematics using RTT/vST*
+## **Structuring Mathematics**  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+*A substrate‑first reconstruction of mathematics using RTT/vST*
+
+*A triadic substrate for cross‑domain life‑regime analysis*
 
 Mathematics, as practiced today, is a vast and powerful discipline — but it evolved without ever defining its own substrate. Over centuries, cultural drift, notation divergence, institutional incentives, and historical accidents produced a patchwork of subfields that share a common origin yet rarely acknowledge it. The result is a discipline that is brilliant, fragmented, and unnecessarily difficult for learners.
 
