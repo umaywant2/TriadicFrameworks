@@ -1,4 +1,4 @@
-# 🌱 Education | Before Regime Awareness / Post‑BRA  
+# 🌱 Before Regime Awareness & Post‑BRA | Education
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
