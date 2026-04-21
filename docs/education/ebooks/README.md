@@ -1,4 +1,4 @@
-# 🌳 **Nawderia Kids Series — eBooks Directory**
+# 🌳 eBooks | Education
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
