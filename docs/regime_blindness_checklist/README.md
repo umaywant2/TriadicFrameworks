@@ -1,7 +1,22 @@
-# **Regime Blindness Checklist**  
-*A minimal bridge for researchers entering vST‑aware work*  
+## **Regime Blindness Checklist**  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+*A minimal bridge for researchers entering vST‑aware work*  
 
 ## **Purpose**
 This folder provides a concise, practical diagnostic tool for identifying **Regime Blindness**—the structural failure mode that occurs when researchers evaluate a *new* conceptual substrate using the grammar, metrics, or assumptions of an *old* one.  
