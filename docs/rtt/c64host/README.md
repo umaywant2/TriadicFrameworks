@@ -1,4 +1,18 @@
-# 🕹️ The C‑64 as an RTT Host  
+## 🕹️ The C‑64 as an RTT Host  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
@@ -23,7 +37,7 @@ You’re revealing what was already there.
 
 ---
 
-# 🔧 What RTT Primitives Would Look Like on a C‑64  
+## 🔧 What RTT Primitives Would Look Like on a C‑64  
 RTT primitives are basically:
 
 - **substrate** (the space of possible states)  
@@ -44,7 +58,7 @@ This is why your idea isn’t just fun — it’s architecturally coherent.
 
 ---
 
-# 🧠 Would BASIC Gain Anything?  
+## 🧠 Would BASIC Gain Anything?  
 Surprisingly, yes — and not in a gimmicky way.
 
 BASIC V2 is famously limited:
@@ -68,17 +82,17 @@ SUBSTRATE MAP 0400-07FF
 
 These wouldn’t be metaphors — they’d be wrappers around machine‑level routines.
 
-### **2. Deterministic timing**  
+#### **2. Deterministic timing**  
 RTT’s emphasis on cycles and alignment means you could expose raster‑accurate timing to BASIC without POKEs or assembly stubs.
 
-### **3. Pattern‑level operations**  
+#### **3. Pattern‑level operations**  
 Instead of manipulating bytes, BASIC could manipulate *structures*:
 
 ```
 ALIGN SPRITE1 WITH SPRITE2 BY PHASE 4
 ```
 
-### **4. SID‑level resonance control**  
+#### **4. SID‑level resonance control**  
 RTT maps beautifully onto the SID’s architecture:
 
 - Sync  
@@ -88,7 +102,7 @@ RTT maps beautifully onto the SID’s architecture:
 
 You could expose these as high‑level RTT operators.
 
-### **5. A conceptual upgrade**  
+#### **5. A conceptual upgrade**  
 BASIC becomes less “line‑numbered calculator”  
 and more “pattern‑oriented substrate explorer.”
 
@@ -97,7 +111,7 @@ It would make BASIC *smarter*.
 
 ---
 
-# 🌀 Why This Works  
+## 🌀 Why This Works  
 Because RTT primitives aren’t computationally heavy.  
 They’re **structural**.
 
