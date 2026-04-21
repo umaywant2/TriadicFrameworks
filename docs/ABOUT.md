@@ -42,11 +42,11 @@ Students, developers, and explorers can share examples, ask questions, propose m
 
 ### **🕊️ X (Twitter) — Live Updates & Micro‑Notes**  
 Follow ongoing research notes, resonance experiments, and small‑scale insights.  
-**[@NawderLoswin](https://x.com/NawderLoswin)**  (pending: **[@TriadicFrameworks](https://www.x.com/@TriadicFrameworks)**)
+**[@NawderLoswin](https://x.com/NawderLoswin)**
 
 ### **🎥 YouTube — Visual Walkthroughs & Teaching Sessions**  
 Video explanations, diagrams, and future student‑friendly modules will appear here.  
-**[@NawderLoswin](https://www.youtube.com/@NawderLoswin)**  (pending: **[@TriadicFrameworks](https://www.youtube.com/@TriadicFrameworks)**)
+**[@TriadicFrameworks](https://www.youtube.com/@TriadicFrameworks)**
 
 ---
 
