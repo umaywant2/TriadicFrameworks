@@ -26,7 +26,7 @@ This README serves as the **navigation anchor** for all Facilities‑related wor
 
 ---
 
-# 🧭 Facilities Scope
+## 🧭 Facilities Scope
 
 RTT Facilities covers:
 
@@ -49,7 +49,7 @@ Domain‑specific initiatives (such as RTT‑AGERI) live **within** this broader
 
 ---
 
-# ⚡ Active Facilities Domains
+## ⚡ Active Facilities Domains
 
 ### **RTT‑AGERI**
 **Above‑Ground Electrical Resilience Initiative**
@@ -72,7 +72,7 @@ Additional Facilities domains will follow this same structural pattern.
 
 ---
 
-# 🗂️ Folder Map
+## 🗂️ Folder Map
 
 ## **1. City‑Facing**
 Guides and communication materials for city leadership and operational teams.
@@ -129,7 +129,7 @@ Define global modernization cycles, capital timing, and governance structures.
 
 ---
 
-# 🧱 Root‑Level Orientation Files
+## 🧱 Root‑Level Orientation Files
 
 - `index.md` — high‑level overview of the Facilities domain  
 - `global-modernization-timeline.md` — modernization cycles and capital timing  
@@ -140,7 +140,7 @@ These files provide **top‑level orientation** for contributors and partners.
 
 ---
 
-# 📌 Contribution Notes
+## 📌 Contribution Notes
 
 - Facilities documentation is **audience‑segmented** — keep materials scoped accordingly.  
 - Domain‑specific initiatives (e.g., RTT‑AGERI) should live in their own subfolders.  
@@ -149,7 +149,7 @@ These files provide **top‑level orientation** for contributors and partners.
 
 ---
 
-# 🧭 Looking Ahead
+## 🧭 Looking Ahead
 
 The Facilities Playbook anticipates additional shared layers, including:
 
