@@ -1,4 +1,4 @@
-# 🎼 **What “pied‑piper’d structural notes” really means**
+# 🎼 Animals | Education
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -15,6 +15,8 @@
 </div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+_**What “pied‑piper’d structural notes” really means**_
 
 We’re imagining:
 
