@@ -1,10 +1,9 @@
 ```
-
 ██████████████████████████████████████████████████████████
- ██                                                    ██
- ██         WR-SADC SUITE · TRIADICFRAMEWORKS          ██
- ██                                                    ██
-██████████████████████████████████████████████████████████
+  ██                                                    ██
+  ██         WR-SADC SUITE · TRIADICFRAMEWORKS          ██
+  ██                                                    ██
+ ██████████████████████████████████████████████████████████
 ```
 <!-- WR-SADC SUITE · BADGE NEST
 How this reads, visually / semantically
@@ -34,11 +33,23 @@ suite‑level docs and license anchors.
 ![license](https://img.shields.io/badge/license-MIT-6B7280?style=flat&labelColor=020617)
  -->
  
-# 📦 **TriadicFrameworks Packages**
+## 📦 **TriadicFrameworks Packages**
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-###### By Nawder Loswin 02/17/2026 © www.TriadicFrameworks.org
 
 This directory contains installable, modular components of the TriadicFrameworks ecosystem. Each package here is designed to be small, composable, and distribution‑friendly, enabling early adoption without exposing deeper theoretical layers.
 
