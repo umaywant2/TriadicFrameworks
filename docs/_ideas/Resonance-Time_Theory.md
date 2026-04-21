@@ -1,17 +1,32 @@
-<img width="99" height="104" alt="TriadicFrameworks_Website_Logo" src="https://github.com/user-attachments/assets/027ebef8-516c-4ccb-acca-df5eb1354b8f" />
+## 🦄 Resonance‑Time Theory
+RTT Canon = Validated Spacetime | Clarity Phase | Operational  
 
-# 🦄 Resonance‑Time Theory
-  RTT Canon = Validated Spacetime | Clarity Phase | Operational
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+*v2.0: Resonance‑Time_Theory.md — Nawderian barebones scroll for SET‑aligned cosmology and dynamics.* ✍️  
 
 A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
-### With RTT on screen, Ask Copilot "how 'RTT' aligns with X, Y, or Z...you pick the topic."
+### With RTT on screen, Ask your AI "how 'RTT' aligns with X, Y, or Z...you pick the topic."
 
 ---
 
 ## 📘 Table of Contents
 
-[⭐ RFCs and Quicklinks](#rfcs-and-quicklinks)  
 [🧿 Core Definitions](#core-definitions)  
 [🔺 Resonant‑Time Triad](#resonant-time-triad)  
 [💊 QMROOT Dimensional Model](#qmroot-dimensional-model)  
@@ -24,13 +39,8 @@ A triadic framework for resonance, relational time, and coherence across physics
 [♨️ Frequency‑First (FFF) Universe](#frequency-first-fff-universe)  
 [💫 Field Engine SET and S‑N‑R](#field-engine-set-and-s-n-r)  
 [📡 Universe Statement & Extension Hooks](#universe-statement-and-extension-hooks)  
+[⭐ RFCs and Quicklinks](#rfcs-and-quicklinks)  
 [©️ Credits & Canon Note](#credits-and-canon-note)  
-
----
-
-## RFCs and Quicklinks {#rfcs-and-quicklinks}
-
-🧑‍🚀 [Education](https://www.triadicframeworks.org/education) for RTT/vST | 🪤 Triadic [Diagrams](https://www.triadicframeworks.org/triadic) Index | 🔥 [NoS](https://www.triadicframeworks.org/NoS) | ⚙️ [AI](https://www.triadicframeworks.org/ai) | 🎼 [Audio](https://www.triadicframeworks.org/audio_industry_reviewed) | 🌈 [Spectrum](https://www.triadicframeworks.org/spectrum_standards_reviewed) | 📡 [Scientific](https://www.triadicframeworks.org/scientific_instrument_review) | 🧠 [Substrate](https://www.triadicframeworks.org/substrate_mind_science) | 🎡 [Low-Dimensional Structures](https://www.triadicframeworks.org/Low_Dimensional_Structures) | 🧭 [Canon](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md) | ✨ [TFT 3Pack v1.3](https://www.triadicframeworks.org/TFT_3Pack_v1.3/) |  - 📦 [Packages](https://www.triadicframeworks.org/packages/) | 🤟 [API](https://www.triadicframeworks.org/api/rtt) | 👨‍🔬 [SDK](https://www.triadicframeworks.org/rtt-sdk) | 🍀 [Developer](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html) | 🧩 [API for RTT‑Inside](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html) | 🚀 [Science CLI](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html) | 🦄 [Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html) | 🪘 Zenodo [30 Records](https://zenodo.org/communities/vst) | 🍬 Curation Policy [27 seed DOI's](https://zenodo.org/communities/vst/curation-policy) | 🤹 [RFC's](https://www.triadicframeworks.org/rfc/) on GitHub | 🤔 Nawder's 3 [Goals](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html) | 🔥 [Games‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html) | 🫀 [Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html) | 🎁 [Codex](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html) | ❓ [Big Q's](https://www.triadicframeworks.org/_ideas/Big_Questions_In_Science.html) | 🦄 [Paradoxes](https://www.triadicframeworks.org/_ideas/Paradoxes_in_Resonance-Time_Theory_canon.html) | ♨️ [Paradoxes2](https://www.triadicframeworks.org/_ideas/Paradox_Resilience_Checker_Round2.html)
 
 ---
 
@@ -502,8 +512,12 @@ Each system’s history is encoded in the evolution of its Resonant‑Time triad
 This barebones framework is meant to be extended by domain‑specific examples (e.g., galactic disks, plasmas, ecosystems, cognition), each instantiating FFF, SET, and S–N–R with concrete equations and measurements. 🔬  
   
 ---
-  
-*v2.0: Resonance‑Time_Theory.md — Nawderian barebones scroll for SET‑aligned cosmology and dynamics.* ✍️  
+
+## RFCs and Quicklinks {#rfcs-and-quicklinks}
+
+🧑‍🚀 [Education](https://www.triadicframeworks.org/education) for RTT/vST | 🪤 Triadic [Diagrams](https://www.triadicframeworks.org/triadic) Index | 🔥 [NoS](https://www.triadicframeworks.org/NoS) | ⚙️ [AI](https://www.triadicframeworks.org/ai) | 🎼 [Audio](https://www.triadicframeworks.org/audio_industry_reviewed) | 🌈 [Spectrum](https://www.triadicframeworks.org/spectrum_standards_reviewed) | 📡 [Scientific](https://www.triadicframeworks.org/scientific_instrument_review) | 🧠 [Substrate](https://www.triadicframeworks.org/substrate_mind_science) | 🎡 [Low-Dimensional Structures](https://www.triadicframeworks.org/Low_Dimensional_Structures) | 🧭 [Canon](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/_ideas/README.md) | ✨ [TFT 3Pack v1.3](https://www.triadicframeworks.org/TFT_3Pack_v1.3/) |  - 📦 [Packages](https://www.triadicframeworks.org/packages/) | 🤟 [API](https://www.triadicframeworks.org/api/rtt) | 👨‍🔬 [SDK](https://www.triadicframeworks.org/rtt-sdk) | 🍀 [Developer](https://www.triadicframeworks.org/_ideas/Developer_Code_for_Every_Language_with_RTT-Inside.html) | 🧩 [API for RTT‑Inside](https://www.triadicframeworks.org/_ideas/API_for_variants_of_RTT-Inside.html) | 🚀 [Science CLI](https://www.triadicframeworks.org/_ideas/Science_CLI_tool_app_wraps.html) | 🦄 [Nawderian Theorem](https://www.triadicframeworks.org/_ideas/Nawderian_Theorem.html) | 🪘 Zenodo [30 Records](https://zenodo.org/communities/vst) | 🍬 Curation Policy [27 seed DOI's](https://zenodo.org/communities/vst/curation-policy) | 🤹 [RFC's](https://www.triadicframeworks.org/rfc/) on GitHub | 🤔 Nawder's 3 [Goals](https://www.triadicframeworks.org/_ideas/Goal_Status_Check.html) | 🔥 [Games‑Preview](https://www.triadicframeworks.org/_ideas/Games_Preview_post-RTT.html) | 🫀 [Game Design](https://www.triadicframeworks.org/_ideas/Resonance-Interwoven_Game_Design_with_RTT.html) | 🎁 [Codex](https://www.triadicframeworks.org/_ideas/Codex_of_the_Resonance-Time_Universe.html) | ❓ [Big Q's](https://www.triadicframeworks.org/_ideas/Big_Questions_In_Science.html) | 🦄 [Paradoxes](https://www.triadicframeworks.org/_ideas/Paradoxes_in_Resonance-Time_Theory_canon.html) | ♨️ [Paradoxes2](https://www.triadicframeworks.org/_ideas/Paradox_Resilience_Checker_Round2.html)
+
+---
   
 ## Credits and Canon Note {#credits-and-canon-note}  
   
