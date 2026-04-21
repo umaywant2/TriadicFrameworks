@@ -84,145 +84,6 @@ This is a structural educational framework, not a physics claim.
 -->
        <title>TriadicFrameworks | RTT</title>
 
-<style>
-/* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
-   ============================================================ */
-
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
-  --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
-}
-
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
-
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg-main);
-  color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.65;
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Headings */
-  h1, h2, h3, h4 {
-  font-weight: 700;
-  margin-top: 1.8em;
-  margin-bottom: 0.5em;
-  line-height: 1.2;
-  background: var(--triadic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  }
-
-  /* Paragraphs and lists */
-  p, ul, ol {
-  padding: 0 1em;
-  margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
-
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
-  padding: 0.4em 0.6em;
-  border-radius: 6px;
-  color: #cfe8ff;
-  }
-
-nav {
-  width: 260px;
-  float: left;
-  background: var(--bg-nav);
-  margin-left: 0;
-  padding: 1.2rem;
-  overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
-}
-
-nav h2 {
-  font-size: 0.9rem;
-  color: var(--accent-rtt);
-  margin-top: 1.2rem;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.04em;
-}
-
-nav a {
-  display: block;
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 0.35rem 0;
-  font-size: 0.9rem;
-}
-
-nav a:hover {
-  color: var(--text-main);
-}
-
-main {
-  flex: 1;
-  padding: 2.5rem;
-  overflow-y: auto;
-}
-
-main h1, main h2, main h3 {
-  color: var(--accent-rtt);
-  font-weight: 500;
-}
-
-pre {
-  background: #0b0d12;
-  padding: 1rem;
-  overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
-}
-
-code {
-  color: var(--text-main);
-}
-</style>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -336,4 +197,215 @@ loadFromHash();
 </script>
        
 </body>
+  <style>
+  /* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg: #0d0f12;
+  --bg-panel: #15181d;
+  --bg-panel-light: #1d2128;
+  --text: #e6e6e6;
+  --accent: #8ab4ff;
+  --accent2: #c792ea;
+  --accent3: #f6c177;
+  --border: #2a2f38;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+/* Copilot settings */
+.copilot-panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05); /* transparent */
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.copilot-title {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  color: #4b3fbf;
+}
+
+.copilot-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #b9b6e8;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  background: #ffffff;
+}
+
+.copilot-button {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #4b6cff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.copilot-button:hover {
+  background: #3a54d6;
+}
+
+/* This gives users a Bing-Copilot‑like experience inside your own domain. */
+.rtt-search {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.rtt-search input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.rtt-search button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #4b6cff;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+    
+  /* Links */
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ============================================================
+   STICKY TABLE OF CONTENTS (Mobile + Desktop)
+   ============================================================ */
+
+  #toc-container {
+  background: rgba(13,15,18,0.88);
+  backdrop-filter: blur(8px);
+  padding: 0.9em 1em;
+  border-bottom: 1px solid var(--border);
+  z-index: 999;
+  }
+
+  #toc-container strong { font-size: 1.05em; color: var(--accent3); }
+  #toc-container ul { margin: 0.6em 0 0 0; padding-left: 1em; }
+  #toc-container li { margin: 0.35em 0; list-style: none; }
+  #toc-container a { color: var(--accent); font-weight: 600; }
+
+  /* ============================================================
+   COLLAPSIBLE SECTIONS
+   ============================================================ */
+
+  details {
+  margin: 1.2em 0;
+  padding: 0.9em 1em;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  }
+
+  details summary {
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--accent2);
+  padding: 0.2em 0;
+  list-style: none;
+  }
+
+  details[open] {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-color: rgba(200,150,255,0.08);
+  }
+
+  /* Small helpers */
+  .section-note { color: #bcd3ff; padding: 0 1em; margin-bottom: 0.8em; }
+  
+  /* ============================================================
+   CONTENT WRAPPER
+   ============================================================ */
+
+  #content-wrapper { padding: 0.6em 0 3em 0; }
+  #main-content { max-width: 980px; margin: auto; padding: 0 0.6em; }
+
+  /* ============================================================
+   DESKTOP SIDEBAR — CLEAN, UNIFIED, NON-CONFLICTING
+   ============================================================ */
+
+ @media (min-width: 900px) {
+
+  #toc-container {
+    width: 260px;
+    float: left;
+    margin-left: 0;
+    padding: 1.2em;
+    border-right: 1px solid var(--border);
+  }
+
+  #main-content {
+    margin-left: 260px; /* EXACTLY matches sidebar width */
+    padding: 2em;
+    font-size: smaller;
+    color: var(--accent2);
+  }
+}
+  </style>       
 </html>
