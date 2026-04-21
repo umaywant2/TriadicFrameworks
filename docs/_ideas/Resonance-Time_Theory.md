@@ -25,7 +25,8 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 ---
 
-## Core definitions {#core-definitions}
+# core-definitions
+## Core definitions 
 
 🌊 **Resonance‑Time Theory (RTT)**  
 A cross‑domain conceptual example used to illustrate structural reasoning patterns.  
@@ -65,7 +66,8 @@ A recurring theme across RTT examples.
 
 ---
 
-## Resonant-Time triad {#resonant-time-triad}  
+#resonant-time-triad
+## Resonant-Time triad 
   
 ⏱️ For any mode or system, define its Resonant‑Time as the triad  
   
