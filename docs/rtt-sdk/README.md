@@ -1,4 +1,18 @@
-# RTT SDK (Beta)
+## RTT SDK (Beta)
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
@@ -45,9 +59,9 @@ Each file provides a minimal, well‑defined interface for its domain:
 
 ---
 
-# JavaScript Usage
+## JavaScript Usage
 
-## Install (local copy)
+### Install (local copy)
 
 Place the SDK folder in your project and import:
 
@@ -63,7 +77,7 @@ await client.beacon({
 });
 ```
 
-## Build a Beacon Payload
+### Build a Beacon Payload
 
 ```js
 import { build_beacon_payload, create_session_id } from "./rtt-sdk/beacon.js";
@@ -75,7 +89,7 @@ const payload = build_beacon_payload({
 });
 ```
 
-## Manage Profiles
+### Manage Profiles
 
 ```js
 import { create_profile } from "./rtt-sdk/profile.js";
@@ -91,15 +105,15 @@ await client.setProfile("example.com", profile);
 
 ---
 
-# Python Usage
+## Python Usage
 
-## Import
+### Import
 
 ```python
 from rtt_sdk import RTTClient, build_beacon_payload, create_session_id
 ```
 
-## Send a Beacon
+### Send a Beacon
 
 ```python
 client = RTTClient()
@@ -114,7 +128,7 @@ resp = client.beacon(payload)
 print(resp)
 ```
 
-## Create a Profile
+### Create a Profile
 
 ```python
 from rtt_sdk import create_profile
@@ -130,7 +144,7 @@ client.set_profile("example.com", profile)
 
 ---
 
-# Diagnostics (Reserved)
+## Diagnostics (Reserved)
 
 The following methods exist for future vST‑beta validators:
 
@@ -142,7 +156,7 @@ These endpoints currently return placeholder responses but define the stable API
 
 ---
 
-# API Reference
+## API Reference
 
 Full RTT API documentation is available in:
 
@@ -160,7 +174,7 @@ Key files:
 
 ---
 
-# Versioning
+## Versioning
 
 The SDK follows semantic versioning:
 
@@ -170,7 +184,7 @@ The SDK follows semantic versioning:
 
 ---
 
-# Status
+## Status
 
 **Beta.**  
 The SDK is stable for integration and experimentation.  
