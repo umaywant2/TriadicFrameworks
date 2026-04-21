@@ -1,7 +1,22 @@
 # Bridges Layer  
-Connecting conceptual clarity to operational practice
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+Connecting conceptual clarity to operational practice
 
 The **Bridges** directory contains four lightweight documents that link the
 core TriadicFrameworks canon to the practical environments where reviewers,
