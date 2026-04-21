@@ -1,3 +1,15 @@
+```
+ ███████╗███████╗████████╗     ███████╗██╗██╗     ██████╗ 
+  ██╔════╝██╔════╝╚══██╔══╝     ██╔════╝██║██║     ██╔══██╗
+  █████╗  ███████╗   ██║        █████╗  ██║██║     ██████╔╝
+  ██╔══╝  ╚════██║   ██║        ██╔══╝  ██║██║     ██╔══██╗
+  ███████╗███████║   ██║        ██║     ██║███████╗██║  ██║
+  ╚══════╝╚══════╝   ╚═╝        ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
+
+                 FRAMEWORK FIELD THEORY
+         Triadic Substrates • Drift • Coherence
+```
+
 # **📘 Framework Field Theory — Repo Eval Edition**  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
@@ -15,18 +27,6 @@
 </div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-```
- ███████╗███████╗████████╗     ███████╗██╗██╗     ██████╗ 
-  ██╔════╝██╔════╝╚══██╔══╝     ██╔════╝██║██║     ██╔══██╗
-  █████╗  ███████╗   ██║        █████╗  ██║██║     ██████╔╝
-  ██╔══╝  ╚════██║   ██║        ██╔══╝  ██║██║     ██╔══██╗
-  ███████╗███████║   ██║        ██║     ██║███████╗██║  ██║
-  ╚══════╝╚══════╝   ╚═╝        ╚═╝     ╚═╝╚══════╝╚═╝  ╚═╝
-
-                 FRAMEWORK FIELD THEORY
-         Triadic Substrates • Drift • Coherence
-```
 
 ## *Proposed Chapter Architecture (Based on Capture.md)*  
 *(repo‑ready, print‑ready, ISBN‑pending)* 
