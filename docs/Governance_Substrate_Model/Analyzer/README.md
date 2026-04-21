@@ -1,4 +1,21 @@
-# Governance Alignment Analyzer  
+## Governance Alignment Analyzer  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 *A structural engine for interpreting governance systems through the Governance Substrate Model (GSM)*
 
 The Governance Alignment Analyzer is the layer that interprets **statements, systems, reforms, and historical profiles** through the structural logic of the Governance Substrate Model. It converts raw descriptions into **structural vectors**, evaluates them against **invariants**, detects **drift**, and determines **basin alignment** inside the governance manifold.
