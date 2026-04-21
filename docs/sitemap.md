@@ -1,11 +1,28 @@
-# 🌐 **TriadicFrameworks — Visual Site‑Map Diagram**  
+## 🌐 Site‑Map | TriadicFrameworks  
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
 ### *Structural, harmonic, and substrate‑aligned overview*
 
-[GitHub TriadicFrameworks Repo:](https://github.com/umaywant2/TriadicFrameworks) 
+[GitHub Repo](https://github.com/umaywant2/TriadicFrameworks) 
 
 ---
 
-# 1. **Core Frameworks (The Structural Spine)**
+## 1. **Core Frameworks (The Structural Spine)**
 
 These are the frameworks that define the architecture of the entire system.
 
@@ -34,7 +51,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 
 ---
 
-# 2. **Validation & Verification (The Coherence Layer)**
+## 2. **Validation & Verification (The Coherence Layer)**
 
 These are the tools that ensure RTT remains stable, reversible, and drift‑bounded.
 
@@ -49,7 +66,7 @@ This is the **G2‑heavy** layer — structural correctness, coherence, and safe
 
 ---
 
-# 3. **Scientific & Technical Substrates (The Empirical Layer)**
+## 3. **Scientific & Technical Substrates (The Empirical Layer)**
 
 These pages connect RTT to real‑world scientific domains.
 
@@ -65,7 +82,7 @@ This is where RTT meets physics, biology, engineering, and computation.
 
 ---
 
-# 4. **Cognitive, Behavioral & Social Substrates (The Human Layer)**
+## 4. **Cognitive, Behavioral & Social Substrates (The Human Layer)**
 
 These pages explore cognition, society, and meaning.
 
@@ -85,7 +102,7 @@ This is the **mind + society** substrate.
 
 ---
 
-# 5. **Education & Curriculum (The Teaching Layer)**
+## 5. **Education & Curriculum (The Teaching Layer)**
 
 This is where RTT becomes teachable.
 
@@ -108,7 +125,7 @@ This is the **G1 → G2 → G3 learning arc**.
 
 ---
 
-# 6. **Developer & API Layer (The Tooling Layer)**
+## 6. **Developer & API Layer (The Tooling Layer)**
 
 This is where RTT becomes programmable.
 
@@ -130,7 +147,7 @@ This is the **developer substrate** — the programmable RTT layer.
 
 ---
 
-# 7. **Creative, Mythic & Narrative Layer (The Mythic Substrate)**
+## 7. **Creative, Mythic & Narrative Layer (The Mythic Substrate)**
 
 This is where RTT expresses its narrative and symbolic side.
 
@@ -147,7 +164,7 @@ This is the **storytelling + symbolic resonance** layer.
 
 ---
 
-# 8. **Community, Governance & Social Infrastructure (The Continuity Layer)**
+## 8. **Community, Governance & Social Infrastructure (The Continuity Layer)**
 
 This is where RTT becomes a community.
 
@@ -169,7 +186,7 @@ This is the **continuity + stewardship** layer.
 
 ---
 
-# 9. **Projects & Labs (The Experimental Layer)**
+## 9. **Projects & Labs (The Experimental Layer)**
 
 This is where RTT prototypes live.
 
@@ -188,7 +205,7 @@ This is the **R&D substrate**.
 
 ---
 
-# 10. **Future Systems (The Aeonic Layer)**
+## 10. **Future Systems (The Aeonic Layer)**
 
 These are the long‑arc, high‑tier systems.
 
@@ -203,7 +220,7 @@ This is the **RTT‑24 / RTT‑36 / RTT‑144 precursor layer**.
 
 ---
 
-# 11. **Store, Branding & Assets (The Economic + Aesthetic Layer)**
+## 11. **Store, Branding & Assets (The Economic + Aesthetic Layer)**
 
 This is where RTT becomes a product ecosystem.
 
@@ -217,7 +234,7 @@ This is the **presentation + distribution** layer.
 
 ---
 
-# 12. **Miscellaneous & Idea Space (The Sandbox Layer)**
+## 12. **Miscellaneous & Idea Space (The Sandbox Layer)**
 
 These are early prototypes, sketches, and templates.
 
