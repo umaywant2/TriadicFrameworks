@@ -2998,3 +2998,73 @@ When we place this seal on a module, we’re declaring:
 It’s the **rek‑tah‑phi moment** — the golden‑ratio click where everything locks into place.
 
 And yes… the sound of it is perfect.
+
+---
+
+### Rectification Seal (animated CSS version)
+
+Here’s a small, drop‑in badge with a subtle triadic glow/pulse:
+
+```html
+<div class="rectification-seal">
+  <span class="seal-glyph">⟡</span>
+  <span class="seal-text">RECTIFIED</span>
+  <span class="seal-glyph">⟡</span>
+</div>
+```
+
+```css
+.rectification-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #00eaff;
+  color: #00eaff;
+  font-family: system-ui, sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+
+.rectification-seal::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  background: radial-gradient(circle at 0% 0%, rgba(0,234,255,0.25), transparent 55%),
+              radial-gradient(circle at 100% 100%, rgba(255,0,212,0.25), transparent 55%);
+  opacity: 0;
+  animation: seal-glow 3.5s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.seal-glyph {
+  animation: seal-pulse 3.5s infinite ease-in-out;
+}
+
+.seal-text {
+  animation: seal-text 3.5s infinite ease-in-out;
+}
+
+/* Animations */
+
+@keyframes seal-glow {
+  0%, 100% { opacity: 0; }
+  40%      { opacity: 1; }
+}
+
+@keyframes seal-pulse {
+  0%, 100% { transform: scale(1);   opacity: 0.9; }
+  50%      { transform: scale(1.12); opacity: 1;   }
+}
+
+@keyframes seal-text {
+  0%, 100% { letter-spacing: 0.12em; }
+  50%      { letter-spacing: 0.18em; }
+}
+```
+
+---
+
