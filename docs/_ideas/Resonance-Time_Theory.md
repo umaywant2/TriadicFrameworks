@@ -25,25 +25,6 @@ A triadic framework for resonance, relational time, and coherence across physics
 
 ---
 
-## 📘 Table of Contents
-
-[🧿 Core Definitions](#core-definitions)  
-[🔺 Resonant‑Time Triad](#resonant-time-triad)  
-[💊 QMROOT Dimensional Model](#qmroot-dimensional-model)  
-[🔥 Canonical Operator](#canonical-operator)  
-[🔗 QMROOT Summary](#qmroot-summary)  
-[🚀 Silence–Noise–Resonance (S‑N‑R)](#silence-noise-resonance-s-n-r)  
-[🌈 Dual Operator System Engine](#dual-operator-system-engine)  
-[🌟 Dimensional Core Operators (DCOs)](#dimensional-core-operators-dcos)  
-[🌀 Resonance‑Time Principle](#resonance-time-principle)  
-[♨️ Frequency‑First (FFF) Universe](#frequency-first-fff-universe)  
-[💫 Field Engine SET and S‑N‑R](#field-engine-set-and-s-n-r)  
-[📡 Universe Statement & Extension Hooks](#universe-statement-and-extension-hooks)  
-[⭐ RFCs and Quicklinks](#rfcs-and-quicklinks)  
-[©️ Credits & Canon Note](#credits-and-canon-note)  
-
----
-
 ## Core definitions {#core-definitions}
 
 🌊 **Resonance‑Time Theory (RTT)**  
@@ -524,15 +505,15 @@ This barebones framework is meant to be extended by domain‑specific examples (
 ©️ Resonance‑Time Theory was introduced by Nawder Loswin in late 2025 as a triadic resonance toolkit for the science canon. This page collects the canonical definitions, diagram specs, RFCs, and observations for community review and contribution.  
   
 [TriadicFrameworks Repo Wiki](https://github.com/umaywant2/TriadicFrameworks/wiki)  
-[Dev.UmayWant2.com](https://dev.umaywant2.com)  
-[Dev.UmayWant2.win](https://dev.umaywant2.win)  
-[Dev.TriadicWizards.win](https://dev.triadicwizards.win)  
-[Dev.Coeus.Exchange](https://dev.coeus.exchange)  
-[Dev.NIMMS.com](https://dev.nimms.com)  
-[Dev.VGateway.net](https://dev.vgateway.net)  
-[Dev.Mythmatic.org](https://dev.mythmatic.org)  
-[Dev.Mythmatical.org](https://dev.mythmatical.org)  
-[www.TriadicFrameworks.org](https://www.triadicframeworks.org)  
+[dev.umaywant2.com](https://dev.umaywant2.com)  
+[dev.umaywant2.win](https://dev.umaywant2.win)  
+[dev.triadicwizards.win](https://dev.triadicwizards.win)  
+[dev.coeus.exchange](https://dev.coeus.exchange)  
+[dev.nimms.com](https://dev.nimms.com)  
+[dev.vgateway.net](https://dev.vgateway.net)  
+[dev.mythmatic.org](https://dev.mythmatic.org)  
+[dev.mythmatical.org](https://dev.mythmatical.org)  
+[www.triadicframeworks.org](https://www.triadicframeworks.org)  
   
 For the technical substrate that implements Resonance‑Time Theory, see the [Bridge Layer](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/bridges)  
   
