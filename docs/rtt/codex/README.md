@@ -1,10 +1,24 @@
-# 📘 RTT CODEX — Learner Menu
+## 📘 RTT CODEX — Learner Menu
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 ---
 
-# 📘 **Overview**
+## 📘 **Overview**
 The **RTT Codex** is the master reference for the Resonance–Time Triad.  
 It’s where the core ideas, operators, metaphors, and cross‑domain translations are gathered into one coherent learning arc.
 
@@ -67,7 +81,7 @@ It’s a ladder, not a maze.
 
 ---
 
-# 🔑 **Key Takeaways**
+## 🔑 **Key Takeaways**
 - RTT is a **triadic framework**, not a linear one.  
 - Resonance and time are **primitives**, not emergent properties.  
 - Operators give structure; resonance gives motion; time gives meaning.  
@@ -77,7 +91,7 @@ It’s a ladder, not a maze.
 
 ---
 
-# 😄 **Triadic Observer Joke**
+## 😄 **Triadic Observer Joke**
 > **Why did the triadic observer refuse to sit in a chair?**  
 > Because it only had *two* legs — and everyone knows you can’t maintain coherence without a stable third point.
 
