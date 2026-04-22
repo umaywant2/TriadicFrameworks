@@ -16822,3 +16822,894 @@ Just tell me where you want the canon to grow next.
 
 ---
 
+### 1. Brand‑system changelog (versioned brand lineage)
+
+`/docs/brand/brand_changelog.md`
+
+```markdown
+# TriadicFrameworks Brand Changelog
+
+A living record of visual + verbal brand evolution.
+
+---
+
+## v1.0 · Initial Canon
+**Date:** 2025‑01‑01  
+**Scope:**
+- Core triadic palette (Gold, Cyan, Magenta)
+- Primary logo (triangle + wave + node)
+- Dark‑mode base styling
+- Initial brand voice (calm, precise, invitational)
+
+---
+
+## v1.1 · Logo & Layout Refinement
+**Date:** 2025‑02‑10  
+**Changes:**
+- Refined logo gradients and stroke weights
+- Introduced global navigation bar
+- Added Creation Guide layout template
+
+**Impact:**
+- All docs using `_layout.html`
+- Homepage and Creation Guide index
+
+---
+
+## v1.2 · Brand System Formalization
+**Date:** 2025‑03‑05  
+**Changes:**
+- Brand Kit page (logo usage, clear space, do/don’t)
+- Brand Voice guide
+- Brand Governance micro‑doc
+- Slide deck template
+
+**Impact:**
+- `/docs/brand/` hub
+- Presentation materials
+
+---
+
+## v1.3 · Motion & Icons
+**Date:** 2025‑04‑01  
+**Changes:**
+- Logo animation spec (CSS + Lottie‑style)
+- Triadic icon set (operator, regime, field)
+- Icon font mapping
+
+**Impact:**
+- Navigation, diagrams, UI elements
+
+---
+
+## v1.4 · Accessibility & Grid
+**Date:** 2025‑04‑20  
+**Changes:**
+- Accessibility guide (contrast, motion, typography)
+- Canonical triadic grid system (layout math + CSS)
+
+**Impact:**
+- All new pages and refactors should follow these rules.
+
+---
+```
+
+---
+
+### 2. Brand‑system “starter kit” ZIP structure (folders + placeholders)
+
+`/brand_starter_kit/` structure (documented as tree):
+
+```text
+brand_starter_kit/
+├─ README.md
+├─ logo/
+│  ├─ triadic_logo.svg
+│  ├─ triadic_logo_monochrome_light.svg
+│  ├─ triadic_logo_monochrome_dark.svg
+├─ icons/
+│  ├─ operator.svg
+│  ├─ regime.svg
+│  ├─ field.svg
+│  ├─ triadic-icons.css
+├─ colors/
+│  ├─ triadic-vars.css
+│  ├─ palette.png
+├─ templates/
+│  ├─ slide_template.html
+│  ├─ brand_kit.html
+│  ├─ basic_page_layout.html
+├─ docs/
+│  ├─ brand_voice.md
+│  ├─ brand_governance.md
+│  ├─ brand_changelog.md
+│  ├─ accessibility_guide.md
+│  ├─ grid_system.md
+├─ favicons/
+│  ├─ favicon.svg
+│  ├─ favicon-32.png
+│  ├─ app-icon-180.png
+│  ├─ app-icon-192.png
+```
+
+`brand_starter_kit/README.md`:
+
+```markdown
+# TriadicFrameworks Brand Starter Kit
+
+Drop this folder into a new project to inherit the TriadicFrameworks brand system:
+logo, colors, icons, templates, and docs.
+```
+
+---
+
+### 3. TriadicFrameworks press kit (logos, screenshots, descriptions)
+
+`/docs/brand/press_kit.md`
+
+```markdown
+# TriadicFrameworks Press Kit
+
+## 1. Short Description
+
+TriadicFrameworks is a resonance‑driven ecosystem for designing, evolving, and
+teaching high‑dimensional conceptual frameworks.
+
+## 2. Long Description
+
+TriadicFrameworks provides a structured way to capture, generate, and stabilize
+frameworks using operators, regimes, fields, and dimensional profiles. It blends
+cinematic visuals with rigorous, diagrammatic thinking to make complex ideas
+teachable and reusable.
+
+---
+
+## 3. Logos
+
+- Primary logo (SVG): `../assets/triadic_logo.svg`
+- Monochrome light: `../assets/triadic_logo_monochrome_light.svg`
+- Monochrome dark: `../assets/triadic_logo_monochrome_dark.svg`
+
+Usage rules: see [Brand Kit](brand_kit.html).
+
+---
+
+## 4. Screenshots
+
+Suggested exports (place actual files in `/docs/brand/screenshots/`):
+
+- `home_page.png` — TriadicFrameworks homepage
+- `creation_guide_generator.png` — Generator page with diagram
+- `fft_overview.png` — FFT overview page
+- `slide_sample.png` — Slide deck template in use
+
+---
+
+## 5. Boilerplate (for articles / talks)
+
+> TriadicFrameworks is an open, triadic design system for frameworks. It treats
+> ideas as fields, operators, and regimes—making complex structures visible,
+> teachable, and evolvable across domains.
+
+---
+
+## 6. Contact
+
+- Repo: `https://github.com/umaywant2/TriadicFrameworks`
+```
+
+---
+
+### 4. Brand‑system accessibility guide (contrast, motion, typography)
+
+`/docs/design_system/accessibility_guide.md`
+
+```markdown
+# TriadicFrameworks Accessibility Guide
+
+## 1. Contrast
+
+- Aim for WCAG AA or better.
+- Text on dark backgrounds:
+  - Use near‑white (`#f5f5f5`) on `#0a0d14` or `#0f131c`.
+- Text on light backgrounds:
+  - Use near‑black (`#1a1a1a`) on `#fafafa` or `#ffffff`.
+- Avoid placing text directly on busy gradients or imagery.
+
+---
+
+## 2. Motion
+
+- Motion is subtle, slow, and optional.
+- Logo and background animations:
+  - Duration ≥ 3s per loop
+  - No sudden flashes or large movements
+- Provide a “reduced motion” option:
+  - Wrap animations in a class and disable when `prefers-reduced-motion: reduce`.
+
+Example:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+  .animated {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+```
+
+---
+
+## 3. Typography
+
+- Base size: 16px for body text.
+- Minimum size: 14px for secondary text.
+- Line height: 1.45–1.6 for readability.
+- Avoid long line lengths:
+  - Target 60–80 characters per line.
+
+---
+
+## 4. Keyboard & Structure
+
+- Use semantic HTML (`<main>`, `<nav>`, `<header>`, `<footer>`).
+- Ensure all interactive elements are reachable via keyboard.
+- Use visible focus states (outline or border change).
+
+---
+
+## 5. Color‑Only Communication
+
+- Do not rely solely on color to convey meaning.
+- Pair color with labels, icons, or patterns where possible.
+```
+
+---
+
+### 5. Canonical triadic grid system (layout math + CSS)
+
+`/docs/design_system/grid_system.md`
+
+```markdown
+# TriadicFrameworks Grid System
+
+A simple, triadic‑inspired layout grid for docs and UI.
+
+---
+
+## 1. Core Math
+
+- Base unit: **8px**
+- Triadic blocks:
+  - 3 × 8px = 24px
+  - 6 × 8px = 48px
+  - 9 × 8px = 72px
+
+Use 24/48/72px for:
+- Section spacing
+- Padding around major blocks
+- Vertical rhythm
+
+---
+
+## 2. Columns
+
+### Single‑Column Layout
+- Max width: 720–900px
+- Centered with 24–40px side padding
+
+### Two‑Column Layout
+- Sidebar: 260px
+- Content: remaining width (max 900px)
+
+---
+
+## 3. CSS Implementation
+
+```css
+:root {
+  --unit: 8px;
+  --space-1: calc(var(--unit) * 3);  /* 24px */
+  --space-2: calc(var(--unit) * 6);  /* 48px */
+  --space-3: calc(var(--unit) * 9);  /* 72px */
+  --content-max: 900px;
+}
+
+.page {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 260px;
+  padding: var(--space-1);
+}
+
+.content {
+  flex: 1;
+  padding: var(--space-2);
+  max-width: var(--content-max);
+}
+```
+
+---
+
+## 4. Vertical Rhythm
+
+- Section top margin: `var(--space-2)` (48px)
+- Section bottom margin: `var(--space-2)` (48px)
+- Headings:
+  - H1 margin‑top: `var(--space-3)` (72px)
+  - H2 margin‑top: `var(--space-2)` (48px)
+
+---
+
+## 5. Alignment
+
+- Align diagrams and hero blocks to the same left edge as body text.
+- Use the same grid across pages to create a continuous visual field.
+
+If you want, next step could be to generate a tiny “Brand Starter” README that tells a new collaborator: “Drop this kit in, follow these five rules, and you’re instantly on‑canon.”
+
+---
+
+Oh this is the perfect moment for a **tiny, high‑signal “Brand Starter” README** — the kind of thing you hand to a new collaborator and instantly bring them into the TriadicFrameworks orbit without overwhelming them.
+
+It’s short.  
+It’s warm.  
+It’s authoritative.  
+And it tells them exactly how to stay **on‑canon** with almost no cognitive load.
+
+Here it is — tuned to your voice, your canon, your clarity.
+
+---
+
+# **Brand Starter — TriadicFrameworks**  
+*A tiny guide for new collaborators. Drop this kit in, follow these five rules, and you’re instantly on‑canon.*
+
+```markdown
+# TriadicFrameworks · Brand Starter
+
+Welcome — this is the tiny starter kit for staying visually and narratively
+on‑canon inside the TriadicFrameworks ecosystem.
+
+If you follow the five rules below, everything you create will feel like it
+belongs to the same world.
+
+---
+
+## 1. Use the Canonical Logo
+- Primary logo: `/assets/triadic_logo.svg`
+- Keep clear space equal to the central node’s height.
+- Do not recolor, distort, or place on busy backgrounds.
+
+---
+
+## 2. Use the Triadic Palette
+- **Gold** `#f5d37a` (primary accent)
+- **Cyan** `#7dd6ff` (secondary)
+- **Magenta** `#ff7ad9` (tertiary)
+- Dark surfaces: `#0a0d14`, `#0f131c`
+- Light surfaces: `#fafafa`, `#ffffff`
+
+These colors are the backbone of the visual canon.
+
+---
+
+## 3. Use the Core Components
+- Sidebar layout (260px)
+- Max content width (900px)
+- Hero block with cinematic gradient
+- Diagram cards with subtle borders
+- Triadic icons (operator, regime, field)
+
+These keep the entire ecosystem visually coherent.
+
+---
+
+## 4. Follow the Brand Voice
+- Calm, precise, invitational
+- Mythic hints, grounded clarity
+- High signal, low noise
+- Lists for structure, diagrams for insight
+
+Avoid hype, vagueness, or academic gatekeeping.
+
+---
+
+## 5. Respect the Lineage
+- Major brand changes require review
+- Minor tweaks are fine with a quick PR
+- Keep old assets in `/archive/brand/`
+- Update `brand_changelog.md` when anything shifts
+
+The brand is a living system — treat it like one.
+
+---
+
+## That’s it.
+Drop this kit in, follow these five rules, and you’re instantly on‑canon.
+
+For deeper reference:
+- Brand Kit → `brand_kit.html`
+- Voice Guide → `brand_voice.md`
+- Governance → `brand_governance.md`
+- Icons → `/icons/`
+- Colors → `triadic-vars.css`
+
+© TriadicFrameworks — Canon Brand Starter
+```
+
+---
+
+If you want, I can also generate:
+
+- a **one‑page printable version**  
+- a **“for contributors” version** tuned for GitHub PR templates  
+- a **visual poster** version (ASCII or SVG‑layout)  
+- or a **“brand starter + code starter” hybrid** for new devs joining the repo  
+
+Just tell me which direction you want to extend this little starter seed.
+
+---
+
+Nawder — here are the **three final pieces** that complete the Brand Starter suite:  
+a printable one‑pager, a GitHub‑PR‑friendly contributor version, and a visual poster version.  
+All three are tuned to your canon: clean, triadic, cinematic, and instantly usable.
+
+No tools, no exports — just pure, repo‑ready content.
+
+---
+
+# **1. One‑Page Printable Version**  
+Drop into:
+
+```
+/docs/brand/brand_starter_print.md
+```
+
+This is the **single sheet** you’d hand to a new collaborator.
+
+```markdown
+# TriadicFrameworks · Brand Starter (One‑Page)
+
+A tiny guide for staying visually and narratively on‑canon.
+
+---
+
+## 1. Logo
+- Use `/assets/triadic_logo.svg`
+- Keep clear space = height of central node
+- No recoloring, distortion, or busy backgrounds
+
+---
+
+## 2. Colors
+- Gold `#f5d37a` (primary)
+- Cyan `#7dd6ff`
+- Magenta `#ff7ad9`
+- Dark surfaces: `#0a0d14`, `#0f131c`
+- Light surfaces: `#fafafa`, `#ffffff`
+
+---
+
+## 3. Components
+- Sidebar (260px)
+- Content max width (900px)
+- Cinematic hero block
+- Diagram cards
+- Triadic icons (operator, regime, field)
+
+---
+
+## 4. Voice
+- Calm, precise, invitational
+- Mythic hints, grounded clarity
+- High signal, low noise
+- Lists + diagrams for structure
+
+Avoid hype, vagueness, or academic gatekeeping.
+
+---
+
+## 5. Lineage
+- Major brand changes → review required
+- Minor tweaks → normal PR
+- Archive old assets
+- Update `brand_changelog.md`
+
+---
+
+## Quick Links
+- Brand Kit → `brand_kit.html`
+- Voice → `brand_voice.md`
+- Governance → `brand_governance.md`
+- Icons → `/icons/`
+- Colors → `triadic-vars.css`
+
+© TriadicFrameworks — Canon Brand Starter
+```
+
+---
+
+# **2. “For Contributors” Version (GitHub PR Template‑Ready)**  
+Drop into:
+
+```
+/docs/brand/brand_starter_contributors.md
+```
+
+Or embed directly into `.github/pull_request_template.md`.
+
+```markdown
+# TriadicFrameworks · Brand Starter (For Contributors)
+
+Welcome — if you’re contributing to TriadicFrameworks, follow these quick rules
+to stay on‑canon.
+
+---
+
+## ✔ 1. Use the Canonical Logo
+- `/assets/triadic_logo.svg`
+- Keep clear space
+- No recoloring or distortion
+
+---
+
+## ✔ 2. Use the Triadic Palette
+- Gold `#f5d37a`
+- Cyan `#7dd6ff`
+- Magenta `#ff7ad9`
+- Dark surfaces: `#0a0d14`, `#0f131c`
+
+---
+
+## ✔ 3. Use the Standard Layout
+- Sidebar: 260px
+- Content max width: 900px
+- Hero block: cinematic gradient
+- Diagram cards: subtle borders
+
+---
+
+## ✔ 4. Follow the Brand Voice
+- Calm, precise, invitational
+- High signal, low noise
+- Lists + diagrams encouraged
+
+---
+
+## ✔ 5. Respect Brand Lineage
+- Major changes → open an issue first
+- Minor tweaks → PR is fine
+- Update `brand_changelog.md` if needed
+
+---
+
+## Quick Links
+- Brand Kit → `/docs/brand/brand_kit.html`
+- Voice Guide → `/docs/brand/brand_voice.md`
+- Governance → `/docs/brand/brand_governance.md`
+
+Thank you for helping keep the canon coherent.
+```
+
+---
+
+# **3. Visual Poster Version (ASCII Layout)**  
+Drop into:
+
+```
+/docs/brand/brand_starter_poster.txt
+```
+
+This is the **wall‑poster / terminal‑friendly** version — clean, bold, and iconic.
+
+```
+===========================================================
+                 TRIADICFRAMEWORKS · BRAND STARTER
+===========================================================
+
+   LOGO
+   ----
+   Use: /assets/triadic_logo.svg
+   Keep clear space = central node height
+   No recolor · No distortion · No busy backgrounds
+
+   COLORS
+   ------
+   Gold     #f5d37a
+   Cyan     #7dd6ff
+   Magenta  #ff7ad9
+   Dark     #0a0d14 / #0f131c
+   Light    #fafafa / #ffffff
+
+   COMPONENTS
+   ----------
+   • Sidebar (260px)
+   • Content max width (900px)
+   • Cinematic hero block
+   • Diagram cards
+   • Triadic icons (operator / regime / field)
+
+   VOICE
+   -----
+   Calm · Precise · Invitational
+   Mythic hints · Grounded clarity
+   High signal · Low noise
+
+   LINEAGE
+   -------
+   Major changes → review
+   Minor tweaks → PR
+   Archive old assets
+   Update brand_changelog.md
+
+   QUICK LINKS
+   -----------
+   Brand Kit ........ brand_kit.html
+   Voice Guide ...... brand_voice.md
+   Governance ....... brand_governance.md
+   Icons ............ /icons/
+   Colors ........... triadic-vars.css
+
+===========================================================
+                  © TriadicFrameworks — Canon
+===========================================================
+```
+
+---
+
+If you want, I can also generate:
+
+- a **SVG poster version** (vector, triadic‑gradient, cinematic)  
+- a **dark‑mode PDF‑optimized version**  
+- a **“brand starter + code starter” hybrid** for onboarding new devs  
+- or a **brand‑starter card** for the homepage sidebar  
+
+Just tell me which direction you want to extend the canon.
+
+---
+
+Nawder — here are the **three final expansions**, each crafted to drop straight into your brand system without friction.  
+They’re cinematic, triadic, and tuned to your repo’s aesthetic.
+
+No tools, no exports — just clean, repo‑ready artifacts.
+
+---
+
+# **1. SVG Poster Version (Vector, Triadic‑Gradient, Cinematic)**  
+Drop into:
+
+```
+/docs/brand/brand_starter_poster.svg
+```
+
+This is a **full vector poster**, using triadic gradients and clean geometry.  
+It’s intentionally minimal so it prints well and scales infinitely.
+
+```svg
+<svg width="900" height="1200" viewBox="0 0 900 1200" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0f131c"/>
+      <stop offset="100%" stop-color="#050712"/>
+    </linearGradient>
+
+    <linearGradient id="tri-gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f5d37a"/>
+      <stop offset="100%" stop-color="#c49a2c"/>
+    </linearGradient>
+
+    <linearGradient id="tri-cyan" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7dd6ff"/>
+      <stop offset="100%" stop-color="#2a9adf"/>
+    </linearGradient>
+
+    <linearGradient id="tri-magenta" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff7ad9"/>
+      <stop offset="100%" stop-color="#c02c8a"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="1200" fill="url(#bg)" />
+
+  <!-- Logo -->
+  <g transform="translate(450,200)">
+    <polygon points="0,-120 104,60 -104,60" fill="url(#tri-gold)" />
+    <path d="M-120 40 Q-40 -20 0 40 T120 40"
+          stroke="url(#tri-cyan)" stroke-width="10" fill="none"/>
+    <circle cx="0" cy="0" r="20" fill="url(#tri-magenta)" />
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="380" text-anchor="middle"
+        font-family="system-ui" font-size="48" fill="#f5d37a">
+    TRIADICFRAMEWORKS · BRAND STARTER
+  </text>
+
+  <!-- Sections -->
+  <g font-family="system-ui" font-size="28" fill="#f5f5f5">
+    <text x="100" y="480">1. USE THE CANONICAL LOGO</text>
+    <text x="100" y="560">2. USE THE TRIADIC PALETTE</text>
+    <text x="100" y="640">3. USE THE CORE COMPONENTS</text>
+    <text x="100" y="720">4. FOLLOW THE BRAND VOICE</text>
+    <text x="100" y="800">5. RESPECT THE LINEAGE</text>
+  </g>
+
+  <!-- Footer -->
+  <text x="450" y="1120" text-anchor="middle"
+        font-family="system-ui" font-size="20" fill="#888">
+    © TriadicFrameworks — Canon Brand Starter
+  </text>
+
+</svg>
+```
+
+This is the **cinematic poster** you can embed, print, or use as a repo banner.
+
+---
+
+# **2. Dark‑Mode PDF‑Optimized Version**  
+Drop into:
+
+```
+/docs/brand/brand_starter_print_dark.css
+```
+
+This stylesheet is designed for **printing the brand starter** as a dark‑mode PDF without muddy blacks or crushed gradients.
+
+```css
+/* Dark‑Mode PDF Stylesheet — TriadicFrameworks */
+
+@media print {
+
+  body {
+    background: #0a0d14 !important;
+    color: #f5f5f5 !important;
+    font-family: system-ui, sans-serif;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  h1, h2, h3 {
+    color: #f5d37a !important;
+    page-break-after: avoid;
+  }
+
+  .section {
+    margin-bottom: 32px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #0f131c;
+    border: 1px solid #2a3244;
+  }
+
+  a {
+    color: #7dd6ff !important;
+    text-decoration: none;
+  }
+
+  img, svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  footer {
+    color: #888 !important;
+  }
+}
+```
+
+This ensures your PDF exports look **clean, cinematic, and intentional** — not washed out or over‑darkened.
+
+---
+
+# **3. “Brand Starter + Code Starter” Hybrid (Onboarding New Devs)**  
+Drop into:
+
+```
+/docs/brand/brand_starter_dev.md
+```
+
+This is the **perfect onboarding doc** for a new collaborator who needs both the brand rules *and* the code structure.
+
+```markdown
+# TriadicFrameworks · Brand + Code Starter
+
+Welcome — this is the tiny onboarding kit for contributing to TriadicFrameworks.
+Follow these rules and you’ll be visually, structurally, and technically on‑canon.
+
+---
+
+# PART I — BRAND STARTER
+
+## 1. Logo
+Use `/assets/triadic_logo.svg`  
+Keep clear space = central node height  
+No recolor · No distortion · No busy backgrounds
+
+## 2. Colors
+Gold `#f5d37a` · Cyan `#7dd6ff` · Magenta `#ff7ad9`  
+Dark: `#0a0d14` / `#0f131c`  
+Light: `#fafafa` / `#ffffff`
+
+## 3. Components
+Sidebar (260px) · Content max width (900px)  
+Cinematic hero block · Diagram cards · Triadic icons
+
+## 4. Voice
+Calm · Precise · Invitational  
+Mythic hints · Grounded clarity  
+High signal · Low noise
+
+## 5. Lineage
+Major changes → review  
+Minor tweaks → PR  
+Archive old assets  
+Update `brand_changelog.md`
+
+---
+
+# PART II — CODE STARTER
+
+## 6. Repo Structure (Core)
+```
+docs/
+  brand/
+  frameworks/
+    creation_guide/
+    fft/
+  design_system/
+assets/
+scripts/
+```
+
+## 7. Layout
+Use `_layout.html`  
+Sidebar + content  
+Max width: 900px  
+Triadic variables: `triadic-vars.css`
+
+## 8. Components
+- Hero block: gradient background  
+- Diagram container: subtle border  
+- Icons: `/icons/` or `triadic-icons.css`  
+- Theme switcher: `theme.js`
+
+## 9. Conventions
+- Use inline SVG for diagrams  
+- Use Markdown for content  
+- Use semantic HTML  
+- Keep spacing triadic (24/48/72px)
+
+## 10. PR Checklist
+- Brand‑safe colors  
+- Brand voice alignment  
+- Layout consistency  
+- Update changelog if needed
+
+---
+
+You’re now fully on‑canon — visually, structurally, and technically.
+
+© TriadicFrameworks — Brand + Code Starter
+```
+
+---
+
+# If you want, I can now generate:
+
+### **Next expansions**
+- A **triadic animated splash screen** for the homepage  
+- A **brand‑system CLI scaffold** (generate new pages with canon defaults)  
+- A **triadic CSS utility library** (spacing, colors, grids, components)  
+- A **repo‑wide “design tokens” JSON** for future automation  
+- A **cinematic intro animation** for the Generator page  
+
+Just tell me where you want the canon to evolve next.
+
+---
+
