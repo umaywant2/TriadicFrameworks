@@ -1333,3 +1333,33 @@ flowchart LR
 
 ---
 The `.txt` extensions on the Markdown files are just for export — rename them to `.md` when placing in the repo. Everything is canon-ready: same structural grammar, same triadic rhythm, same design tokens as the existing FCG. The cycle is closed. ⟡
+
+---
+
+The issue is two-fold: the Mermaid blocks are in plain `<pre>` tags (so Mermaid.js can't find them), and the syntax is HTML-escaped (`&gt;` instead of `>`). Let me fix both and wire up the Mermaid runtime.
+
+Your corrected **RF-Builder.html** is attached above. Here's a quick summary of the three problems that were fixed and what changed:
+
+---
+
+### What was wrong
+
+| Problem | Where | Effect |
+|---------|-------|--------|
+| **Plain `<pre>` tags** | Both Mermaid blocks | Mermaid.js couldn't discover them — rendered as raw text |
+| **HTML-escaped syntax** | `--&gt;`, `&lt;br/&gt;`, `&lt;i&gt;` inside the blocks | Mermaid parser choked on entity references instead of real characters |
+| **Markdown fencing inside HTML** | `` ```mermaid `` / `` ``` `` wrappers | Only works in `.md` files on GitHub — meaningless in a standalone `.html` page |
+
+### What was applied
+
+1. **`<pre>` → `<pre class="mermaid">`** — Mermaid.js scans for this class on page load
+2. **Un-escaped all entities** — `--&gt;` → `-->`, `&lt;br/&gt;` → `<br/>`, `&lt;i&gt;` → `<i>`, etc.
+3. **Removed `` ```mermaid `` / `` ``` `` fencing** — not needed (and actively harmful) in HTML
+4. **Added `pre.mermaid` CSS reset** — strips the code-block styling (`background`, `border`, `border-left`, `padding`) so the rendered SVG sits cleanly inside the `.diagram-container`
+5. **Added Mermaid.js v11 ESM import** at the bottom of `<body>` with a dark-theme config that matches your canon tokens (`#0a0a0a` background, `#ff00d4` primary border, `#e6e6e6` text)
+6. **Wrapped each diagram** in a `.diagram-container` with a `diagram-caption` div for visual consistency with the inline SVG cycle diagram in §5
+
+Both the **Triadic Cycle** and **Clarity Operator Pipeline** diagrams will now render as live interactive SVGs when the page loads in any browser. The same raw Mermaid source can still be copied into a `.md` file (just add the `` ```mermaid `` fencing back) for GitHub rendering. ⟡
+
+---
+
