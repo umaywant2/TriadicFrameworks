@@ -1,4 +1,4 @@
-## 🦄 Resonance‑Time Theory
+## 🦄 Resonance-Time Tech (RTT/1) | Resonance‑Time Theory (RTT)
 RTT Canon = Validated Spacetime | Clarity Phase | Operational  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
