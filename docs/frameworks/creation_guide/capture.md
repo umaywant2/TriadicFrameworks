@@ -13500,3 +13500,3325 @@ Want me to assemble the entire RF‑Builder module as a unified artifact with Co
 
 ---
 
+Perfect — I’ll generate the full **/docs/frameworks/creation_guide/generator.html** page, and I’ll integrate all four additional sources you listed (Epic PCG docs, Electric Dreams, Grokipedia, and the *Nature* paper) as **explicitly cited, context‑relevant anchors** inside the Generator Protocol.
+
+Since your active tab is the *capture.md* page (), I won’t pull content from it — your request is independent of that page — but I *will* maintain continuity with the structure and tone of the other Creation Guide pages we’ve already built.
+
+Below is the **complete, drop‑in generator.html** page: cinematic, diagrammatic, substrate‑aligned, and ready for your repo.
+
+---
+
+# **/docs/frameworks/creation_guide/generator.html**  
+### **Framework Generator — Procedural Protocol for High‑Dimensional Framework Synthesis**
+
+---
+
+## **1. Purpose of the Generator**
+The **Framework Generator** is the engine that transforms raw conceptual substrates into fully realized frameworks. It is the *procedural content generation (PCG) layer* of TriadicFrameworks — but unlike game‑engine PCG, this generator operates on **operators, regimes, dimensions, and resonance‑fields** rather than meshes or landscapes.
+
+The Generator:
+
+- Produces new frameworks from minimal seeds  
+- Evolves existing frameworks into higher‑dimensional variants  
+- Recombines operators into hybrid structures  
+- Stabilizes paradox and reorganizes conceptual regimes  
+- Generates field‑level architectures that can spawn entire families of frameworks  
+
+This page defines the **protocol**, **pipeline**, **inputs**, **outputs**, and **integration points** with external procedural systems.
+
+---
+
+## **2. Conceptual Lineage & External Inspirations**
+The Generator draws from multiple procedural traditions:
+
+### **2.1 Unreal Engine Procedural Content Generation (PCG) Framework**  
+Epic’s PCG system demonstrates how **graph‑driven, node‑based procedural logic** can generate coherent worlds from minimal seeds.  
+- Modular graph execution  
+- Deterministic or stochastic branching  
+- Attribute propagation  
+- Hierarchical generation  
+
+
+### **2.2 Electric Dreams Environment (UE)**  
+The Electric Dreams project shows how **cinematic coherence** can emerge from procedural rules when constraints and artistic intent are aligned.  
+
+
+### **2.3 Grokipedia PCG Overview**  
+Grokipedia’s PCG summary emphasizes **pipeline clarity**, **seed‑driven variation**, and **repeatable generative passes** — all directly relevant to framework synthesis.  
+
+
+### **2.4 Nature Scientific Reports (2026)**  
+The referenced *Nature* paper explores **algorithmic emergence**, **pattern stabilization**, and **multi‑scale generative behavior**, reinforcing the Generator’s emphasis on **resonance‑driven evolution**.  
+
+
+---
+
+## **3. Generator Architecture**
+The Generator is built around a **Triadic Procedural Loop**:
+
+### **3.1 Seed → Operator Expansion → Regime Formation → Field Stabilization**
+
+1. **Seed Initialization**  
+   - Minimal conceptual input  
+   - Can be a phrase, operator, paradox, or resonance pattern  
+
+2. **Operator Expansion**  
+   - Seed is decomposed into **operators**  
+   - Operators are expanded using triadic combinatorics  
+   - External PCG analog: *scatter → expand → attribute propagation*
+
+3. **Regime Formation**  
+   - Operators cluster into **regimes**  
+   - Regimes define the framework’s internal logic  
+   - External PCG analog: *graph clustering / biome formation*
+
+4. **Field Stabilization**  
+   - Regimes are arranged into a **resonance field**  
+   - Field determines dimensional behavior  
+   - External PCG analog: *world partitioning / hierarchical generation*
+
+---
+
+## **4. Generator Modes**
+The Generator supports **five generative modes** (as established in earlier modules):
+
+### **4.1 New Framework Generation**  
+From a minimal seed → produce a complete framework.
+
+### **4.2 Dimensional Upgrade**  
+Take an existing framework → increase dimensionality, resonance depth, or operator complexity.
+
+### **4.3 Hybrid Framework Generation**  
+Combine two or more frameworks → produce a coherent hybrid.
+
+### **4.4 Paradox‑Driven Generation**  
+Use paradox as the seed → generate a stabilizing framework.
+
+### **4.5 Field‑Level Generation**  
+Generate an entire **family** of frameworks from a single field‑level seed.
+
+---
+
+## **5. Generator Pipeline (PCG‑Aligned)**
+The pipeline mirrors modern PCG systems but operates on conceptual substrates:
+
+### **5.1 Input Layer**
+- Seed (text, operator, paradox, symbol, diagram)  
+- Optional constraints (tone, domain, dimensionality, operator bias)  
+- Optional external references (e.g., UE PCG graphs, scientific models)
+
+### **5.2 Procedural Passes**
+1. **Seed Decomposition Pass**  
+2. **Operator Expansion Pass**  
+3. **Regime Clustering Pass**  
+4. **Field Stabilization Pass**  
+5. **Dimensional Harmonization Pass**  
+6. **Coherence Validation Pass**
+
+### **5.3 Output Layer**
+- Framework object  
+- Metadata block  
+- Operator map  
+- Regime map  
+- Field diagram  
+- Optional: Generator provenance (seed lineage)
+
+---
+
+## **6. Generator Graph (Node‑Based Representation)**
+Inspired by UE’s PCG Graphs, the Generator uses a **conceptual node graph**:
+
+- **Seed Node**  
+- **Operator Expansion Node**  
+- **Regime Cluster Node**  
+- **Field Stabilizer Node**  
+- **Dimensional Harmonizer Node**  
+- **Output Node**
+
+Each node is deterministic or stochastic depending on constraints.
+
+---
+
+## **7. Integration with External PCG Systems**
+The Generator can interface with:
+
+### **7.1 Unreal Engine PCG Graphs**  
+- Frameworks can be exported as **semantic graphs**  
+- Operators map to **PCG nodes**  
+- Regimes map to **PCG subgraphs**  
+- Fields map to **PCG hierarchical layers**
+
+### **7.2 Scientific Generative Models**  
+- Pattern‑stabilization algorithms  
+- Multi‑scale emergence models  
+- Resonance‑based clustering
+
+### **7.3 AI‑Assisted Framework Generator Utility**  
+This page links directly to the Generator Utility (from earlier modules), enabling:
+
+- One‑click generation  
+- Variant generation  
+- Dimensional upgrades  
+- Hybridization  
+- Export to JSON / GraphML (conceptual, not file‑export)
+
+---
+
+## **8. Example: Seed → Framework Walkthrough**
+**Seed:** *“Echo Release”*  
+1. Decompose into operators: Echo, Release, Boundary, Return  
+2. Expand operators into triads  
+3. Cluster into regimes: Reflection, Dissolution, Reformation  
+4. Stabilize field: Echo‑Field with 3D resonance  
+5. Output: *Echo Release Framework (ERF‑3D)*
+
+---
+
+## **9. Links & References**
+### **Primary External Sources**
+- Epic Games — Procedural Content Generation Framework  
+- Epic Games — Electric Dreams Environment  
+- Grokipedia — PCG Framework Overview  
+- *Nature Scientific Reports* (2026) — Emergent Pattern Stabilization  
+
+### **Internal TriadicFrameworks Modules**
+- Framework Creation Guide (index)  
+- Principles  
+- Models  
+- FFT  
+- Generator Utility  
+- Capture Module  
+
+---
+
+## **10. Footer**
+© TriadicFrameworks — Resonance‑Driven Framework Creation
+
+---
+
+If you want, I can also generate:
+
+- A **diagrammatic version** of the Generator Graph  
+- A **cinematic hero image** for the top of the page  
+- A **variant** tuned for the Repo‑Eval Edition  
+- A **side‑by‑side comparison** of UE PCG vs. Triadic Generator  
+- A **Generator Quick‑Start** block for the sidebar  
+
+Which direction do you want to expand next?
+
+---
+
+Absolutely, Nawder — let’s expand the Generator page with **five new canonical artifacts**, each tuned to your visual canon, triadic pedagogy, and cinematic substrate.  
+No files, no exports — everything inline, repo‑ready, and diagrammatically clean.
+
+---
+
+# **1. Diagrammatic Generator Graph (ASCII + SVG‑ready layout)**  
+A **node‑based conceptual graph** mirroring UE’s PCG Graph structure but tuned to triadic substrate logic.
+
+### **ASCII Version (clean, monospaced, repo‑safe)**
+
+```
+                         ┌──────────────────────┐
+                         │      SEED NODE       │
+                         │  (text / operator /  │
+                         │   paradox / symbol)  │
+                         └──────────┬───────────┘
+                                    │
+                                    ▼
+                     ┌──────────────────────────────┐
+                     │   OPERATOR EXPANSION NODE    │
+                     │  (triadic combinatorics,     │
+                     │   operator unfolding)        │
+                     └──────────┬───────────────────┘
+                                │
+                                ▼
+                 ┌────────────────────────────────────┐
+                 │        REGIME CLUSTER NODE         │
+                 │  (operator clustering, regime      │
+                 │   formation, coherence shaping)    │
+                 └──────────┬─────────────────────────┘
+                            │
+                            ▼
+              ┌──────────────────────────────────────────┐
+              │          FIELD STABILIZER NODE            │
+              │   (resonance field formation,            │
+              │    dimensional alignment)                │
+              └──────────┬───────────────────────────────┘
+                         │
+                         ▼
+        ┌────────────────────────────────────────────────────────┐
+        │              DIMENSIONAL HARMONIZER NODE               │
+        │   (upgrade, hybridization, paradox resolution,         │
+        │    field‑level coherence)                              │
+        └──────────┬─────────────────────────────────────────────┘
+                   │
+                   ▼
+        ┌────────────────────────────────────────────────────────┐
+        │                     OUTPUT NODE                         │
+        │   (framework object + metadata + maps + diagrams)      │
+        └────────────────────────────────────────────────────────┘
+```
+
+This is fully SVG‑ready: each block is a clean rectangle, each arrow is a single directional edge, and the vertical stack preserves triadic flow.
+
+---
+
+# **2. Cinematic Hero Image (text‑described, repo‑ready)**  
+A **cinematic, mythic, diagrammatic hero image** for the top of generator.html — designed to match your canon’s golden‑light, substrate‑driven aesthetic.
+
+### **Hero Image Description (for your image generator pipeline)**  
+**Title:** *The Generator: Emergence from Seed to Field*  
+**Style:** Cinematic, golden‑hour volumetric light, diagrammatic overlays, mythic‑technical hybrid  
+**Composition:**  
+- A dark, deep‑blue conceptual void  
+- A single glowing **seed‑glyph** at the bottom center  
+- Rising above it: five ascending luminous layers (Operators → Regimes → Field → Dimension → Output)  
+- Each layer represented by geometric forms:  
+  - Operators: rotating triangles  
+  - Regimes: clustered hexagonal lattices  
+  - Field: a wide resonance plane with wave interference  
+  - Dimensional Harmonizer: spiraling triadic helix  
+  - Output: a crystalline framework‑glyph suspended in light  
+- Thin diagrammatic lines connect each layer  
+- Subtle triadic color palette: gold, cyan, magenta  
+- Cinematic bloom + soft depth‑of‑field  
+- No text in the image — pure visual canon  
+
+This becomes the **canonical hero image** for the Generator page.
+
+---
+
+# **3. Repo‑Eval Edition Variant (cleaner, stricter, evaluation‑friendly)**  
+This version removes cinematic language, compresses conceptual steps, and foregrounds **deterministic reproducibility**, **pipeline clarity**, and **operator lineage**.
+
+### **Repo‑Eval Generator Summary (Variant)**
+
+**Purpose:**  
+A deterministic, seed‑driven procedural system for generating conceptual frameworks.
+
+**Pipeline:**  
+1. **Seed → Operators**  
+2. **Operators → Regimes**  
+3. **Regimes → Field**  
+4. **Field → Dimensional Harmonization**  
+5. **Harmonization → Output Framework**
+
+**Inputs:**  
+- Seed (text/operator/paradox)  
+- Constraints (domain, dimensionality, operator bias)  
+
+**Outputs:**  
+- Framework object  
+- Operator map  
+- Regime map  
+- Field diagram  
+- Metadata (seed lineage, generative mode)
+
+**Modes:**  
+- New Framework  
+- Dimensional Upgrade  
+- Hybridization  
+- Paradox Resolution  
+- Field‑Level Generation  
+
+**Evaluation Notes:**  
+- All steps are reproducible from seed + constraints  
+- Operator lineage is traceable  
+- Regime clustering is deterministic unless stochasticity is explicitly enabled  
+- Field stabilization follows triadic resonance rules  
+
+This is the version you’d use for **repo evaluation, academic review, or automated testing**.
+
+---
+
+# **4. Side‑by‑Side Comparison: UE PCG vs. Triadic Generator**  
+A clean, evaluative table for the docs.
+
+### **Comparison Table**
+
+| Aspect | UE PCG Framework | Triadic Framework Generator |
+|-------|------------------|-----------------------------|
+| **Domain** | 3D environments, meshes, landscapes | Conceptual frameworks, operators, regimes, fields |
+| **Input** | Points, meshes, attributes, seeds | Seeds (text/operators/paradox), constraints |
+| **Core Unit** | PCG Node | Triadic Operator |
+| **Graph Structure** | Node‑based procedural graph | Node‑based conceptual graph |
+| **Expansion Logic** | Scatter, transform, filter | Operator expansion, regime clustering |
+| **Hierarchy** | Subgraphs, world partition | Regimes, fields, dimensional layers |
+| **Output** | Geometry, instances, environments | Framework object + metadata + maps |
+| **Determinism** | Optional deterministic | Deterministic unless stochasticity enabled |
+| **Emergence** | Spatial patterns | Conceptual resonance patterns |
+| **Use Case** | Game worlds | Framework creation, theory‑building, meta‑design |
+
+This table is tuned for clarity, not marketing — perfect for the docs.
+
+---
+
+# **5. Generator Quick‑Start (Sidebar Block)**  
+A compact, high‑signal block for the left sidebar.
+
+### **Quick‑Start: Generator**
+
+**1. Choose a Seed**  
+A word, operator, paradox, or symbol.
+
+**2. Select a Mode**  
+- New Framework  
+- Dimensional Upgrade  
+- Hybrid  
+- Paradox  
+- Field‑Level
+
+**3. Apply Constraints (Optional)**  
+Tone, domain, dimensionality, operator bias.
+
+**4. Run the Pipeline**  
+Seed → Operators → Regimes → Field → Dimension → Output.
+
+**5. Review Output**  
+Framework object + maps + metadata.
+
+**6. Iterate**  
+Adjust seed or constraints → regenerate variants.
+
+This is the minimal, high‑clarity version that belongs in the sidebar.
+
+---
+
+# **If you want, I can now generate:**
+- SVG‑encoded version of the diagram  
+- A dark‑mode variant of the hero image description  
+- A “Generator API” pseudo‑spec for the Dimensional Echo backend  
+- A triadic motion‑stack animation concept for the Generator page  
+- A printable one‑page Generator cheat‑sheet  
+
+Which artifact do you want next?
+
+---
+
+### 1. SVG‑encoded version of the Generator Graph
+
+```svg
+<svg width="720" height="520" viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node { fill:#0b1020; stroke:#f5d37a; stroke-width:1.5; rx:8; ry:8; }
+    .label { fill:#f5f5f5; font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:12px; }
+    .title { font-weight:bold; font-size:13px; }
+    .edge { stroke:#f5d37a; stroke-width:1.5; marker-end:url(#arrow); }
+    .bg { fill:#050712; }
+  </style>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L8,3 L0,6 z" fill="#f5d37a" />
+    </marker>
+  </defs>
+
+  <!-- background -->
+  <rect x="0" y="0" width="720" height="520" class="bg"/>
+
+  <!-- positions -->
+  <!-- Seed -->
+  <rect x="230" y="40" width="260" height="60" class="node"/>
+  <text x="360" y="65" text-anchor="middle" class="label title">SEED NODE</text>
+  <text x="360" y="82" text-anchor="middle" class="label">text / operator / paradox / symbol</text>
+
+  <!-- Operator Expansion -->
+  <rect x="210" y="130" width="300" height="70" class="node"/>
+  <text x="360" y="155" text-anchor="middle" class="label title">OPERATOR EXPANSION NODE</text>
+  <text x="360" y="172" text-anchor="middle" class="label">triadic combinatorics, operator unfolding</text>
+
+  <!-- Regime Cluster -->
+  <rect x="190" y="230" width="340" height="70" class="node"/>
+  <text x="360" y="255" text-anchor="middle" class="label title">REGIME CLUSTER NODE</text>
+  <text x="360" y="272" text-anchor="middle" class="label">operator clustering, regime formation, coherence shaping</text>
+
+  <!-- Field Stabilizer -->
+  <rect x="170" y="330" width="380" height="70" class="node"/>
+  <text x="360" y="355" text-anchor="middle" class="label title">FIELD STABILIZER NODE</text>
+  <text x="360" y="372" text-anchor="middle" class="label">resonance field formation, dimensional alignment</text>
+
+  <!-- Dimensional Harmonizer -->
+  <rect x="150" y="430" width="420" height="70" class="node"/>
+  <text x="360" y="455" text-anchor="middle" class="label title">DIMENSIONAL HARMONIZER NODE</text>
+  <text x="360" y="472" text-anchor="middle" class="label">upgrade, hybridization, paradox resolution, field‑level coherence</text>
+
+  <!-- Output (badge style, right side) -->
+  <rect x="540" y="230" width="150" height="80" class="node"/>
+  <text x="615" y="255" text-anchor="middle" class="label title">OUTPUT NODE</text>
+  <text x="615" y="272" text-anchor="middle" class="label">framework object</text>
+  <text x="615" y="288" text-anchor="middle" class="label">+ metadata &amp; maps</text>
+
+  <!-- vertical edges -->
+  <line x1="360" y1="100" x2="360" y2="130" class="edge"/>
+  <line x1="360" y1="200" x2="360" y2="230" class="edge"/>
+  <line x1="360" y1="300" x2="360" y2="330" class="edge"/>
+  <line x1="360" y1="400" x2="360" y2="430" class="edge"/>
+
+  <!-- side edge to Output -->
+  <line x1="530" y1="265" x2="540" y2="270" class="edge"/>
+
+  <!-- subtle caption -->
+  <text x="20" y="510" class="label">TriadicFrameworks · Generator Graph · Seed → Operators → Regimes → Field → Dimension → Output</text>
+</svg>
+```
+
+---
+
+### 2. Dark‑mode variant of the hero image description
+
+**Title:** *The Generator: Night‑Field Emergence*  
+**Style:** Dark‑mode cinematic, deep indigo and charcoal, neon triadic accents, minimal bloom.  
+**Composition:**  
+- Background: near‑black gradient (charcoal to deep indigo), faint star‑like noise.  
+- At the bottom: a small, sharp **seed‑glyph** in electric cyan, casting a subtle circular glow.  
+- Rising vertically: five translucent planes, each slightly brighter than the last:  
+  - Operators: thin neon triangles, orbiting the seed.  
+  - Regimes: clustered hex grids in muted magenta, softly lit from below.  
+  - Field: a wide, semi‑transparent resonance sheet with cyan–magenta interference waves.  
+  - Dimensional Harmonizer: a triadic spiral of three intertwined neon strands (cyan, magenta, amber).  
+  - Output: a faceted, glass‑like framework crystal in warm amber‑gold, hovering near the top.  
+- Diagrammatic overlays: fine white lines and node markers, very subtle, like UI wireframes.  
+- Overall: dark, quiet, technical; light is used sparingly as **signal**, not decoration.
+
+---
+
+### 3. “Generator API” pseudo‑spec for Dimensional Echo backend
+
+```text
+Generator API (Dimensional Echo – Pseudo‑Spec)
+
+Base Concept:
+  The Generator is a deterministic, seed‑driven service that transforms conceptual inputs
+  into structured Framework objects with full lineage and resonance metadata.
+
+Core Types:
+  Seed:
+    - id: string
+    - content: string            # text, operator, paradox, symbol
+    - tags: string[]             # domain, tone, context
+    - created_at: timestamp
+
+  Constraints:
+    - domain: string | null      # e.g., "pedagogy", "systems", "narrative"
+    - dimensionality: string | null  # e.g., "2D", "3D", "ND"
+    - operator_bias: string[]    # operators to emphasize
+    - stochastic: boolean        # default: false
+    - max_depth: integer         # pipeline depth / complexity cap
+
+  Framework:
+    - id: string
+    - name: string
+    - seed_id: string
+    - mode: string               # "new", "upgrade", "hybrid", "paradox", "field"
+    - operators: Operator[]
+    - regimes: Regime[]
+    - field: Field
+    - dimensional_profile: DimensionalProfile
+    - metadata: Metadata
+
+  Operator:
+    - id: string
+    - label: string
+    - triad: string[]            # triadic decomposition
+    - role: string               # "core", "support", "boundary"
+
+  Regime:
+    - id: string
+    - label: string
+    - operator_ids: string[]
+    - function: string           # short description
+
+  Field:
+    - id: string
+    - label: string
+    - regimes: string[]          # regime ids
+    - resonance_pattern: string  # e.g., "triadic‑wave‑3D"
+
+  DimensionalProfile:
+    - level: string              # "2D", "3D", "ND"
+    - axes: string[]             # conceptual axes
+    - notes: string
+
+  Metadata:
+    - lineage: string[]          # prior framework ids (for upgrades / hybrids)
+    - created_at: timestamp
+    - generator_version: string
+    - notes: string
+
+Endpoints (conceptual):
+
+  POST /generator/run
+    Input:
+      - seed: Seed
+      - mode: string
+      - constraints: Constraints
+    Output:
+      - framework: Framework
+
+  POST /generator/variant
+    Input:
+      - framework_id: string
+      - constraints: Constraints
+    Output:
+      - framework: Framework      # variant with preserved lineage
+
+  GET /generator/framework/{id}
+    Output:
+      - framework: Framework
+
+  GET /generator/lineage/{id}
+    Output:
+      - lineage_graph: object     # frameworks + edges (upgrade, hybrid, field‑spawn)
+
+Determinism:
+  - framework is reproducible from (seed, mode, constraints, generator_version)
+  - stochastic = true adds controlled randomness but still logs full parameters in metadata.
+```
+
+---
+
+### 4. Triadic motion‑stack animation concept for the Generator page
+
+**Concept:** A subtle, looping motion stack that visually encodes **Seed → Operators → Regimes → Field → Output** without distracting from reading.
+
+**Layers (from back to front):**
+
+1. **Background Field Layer**  
+   - Slow, low‑opacity wave pattern moving horizontally.  
+   - Represents the **resonance field**—barely visible, just enough to feel alive.
+
+2. **Operator Particles Layer**  
+   - Small triangular glyphs drifting upward from the bottom center.  
+   - Occasionally cluster briefly, then disperse—hinting at **operator expansion**.
+
+3. **Regime Bands Layer**  
+   - Three semi‑transparent horizontal bands that gently pulse in brightness.  
+   - Their pulse is slightly offset (triadic phase), suggesting **regime clustering**.
+
+4. **Dimensional Spiral Layer**  
+   - A faint, slow‑rotating triadic spiral in the center (very low opacity).  
+   - Encodes **dimensional harmonization**; rotation is extremely slow (30–60s per revolution).
+
+5. **Output Glyph Layer**  
+   - A small central glyph that subtly “breathes” (scale 0.98–1.02).  
+   - Breath cycle ~8–10 seconds, easing in/out—symbolizing the **framework output**.
+
+**Behavior:**  
+- Loop duration: ~45–60 seconds.  
+- No abrupt changes; all motion is easing, low amplitude, and opacity‑limited.  
+- Dark‑mode friendly; colors: muted cyan, magenta, and amber on near‑black.
+
+---
+
+### 5. Printable one‑page Generator cheat‑sheet
+
+You can drop this into `docs/frameworks/creation_guide/generator_cheatsheet.md` or a PDF layout.
+
+```text
+TRIADICFRAMEWORKS · GENERATOR CHEAT‑SHEET (ONE PAGE)
+
+1. PURPOSE
+  The Generator is a procedural system that turns minimal conceptual seeds
+  into fully structured frameworks (operators, regimes, fields, dimensions).
+
+2. CORE FLOW
+  Seed → Operators → Regimes → Field → Dimension → Output
+
+3. INPUTS
+  - Seed:
+      • Word, phrase, operator, paradox, or symbol
+  - Constraints (optional):
+      • Domain (e.g., pedagogy, systems, narrative)
+      • Dimensionality (2D, 3D, ND)
+      • Operator bias (which operators to emphasize)
+      • Stochastic (true/false)
+
+4. MODES
+  - New Framework:
+      • From seed → full framework
+  - Dimensional Upgrade:
+      • Existing framework → higher dimensional profile
+  - Hybrid:
+      • Combine multiple frameworks → coherent hybrid
+  - Paradox:
+      • Seed is a paradox → stabilizing framework
+  - Field‑Level:
+      • Seed defines a field → family of related frameworks
+
+5. PIPELINE PASSES
+  1) Seed Decomposition
+      • Extract operators, boundaries, tensions
+  2) Operator Expansion
+      • Triadic combinatorics, role assignment
+  3) Regime Clustering
+      • Group operators into functional regimes
+  4) Field Stabilization
+      • Arrange regimes into a resonance field
+  5) Dimensional Harmonization
+      • Align axes, resolve paradox, set dimensional profile
+  6) Coherence Check
+      • Sanity pass: does the framework hold together?
+
+6. OUTPUTS
+  - Framework object (name, description)
+  - Operator map (who does what)
+  - Regime map (how operators cluster)
+  - Field diagram (how regimes relate)
+  - Metadata:
+      • Seed lineage
+      • Mode
+      • Constraints
+      • Generator version
+
+7. QUICK USAGE
+  1) Write a seed (e.g., "Echo Release").
+  2) Pick a mode (e.g., New Framework).
+  3) Set constraints (e.g., domain = "pedagogy", 3D).
+  4) Run the pipeline.
+  5) Inspect operators, regimes, field.
+  6) Iterate: adjust seed/constraints and regenerate.
+
+8. MENTAL MODEL
+  - Think of UE PCG graphs, but instead of meshes and landscapes,
+    you are generating conceptual architectures.
+  - The Generator is your "world builder" for frameworks.
+
+© TriadicFrameworks · Generator Protocol · Seed → Field → Dimension
+```
+
+If you want, next step could be: wiring these into the actual `generator.html` markup (hero, SVG embed, sidebar block, and links to cheat‑sheet/API).
+
+---
+
+Absolutely, Nawder — here is the **fully wired, drop‑in `generator.html` markup**, with:
+
+- **Hero image block** (dark‑mode + light‑mode ready)  
+- **Inline SVG embed** of the Generator Graph  
+- **Sidebar Quick‑Start block**  
+- **Links to the Cheat‑Sheet + Generator API pseudo‑spec**  
+- **Clean, repo‑eval‑safe structure**  
+- **No external dependencies**, no JS required, pure HTML/CSS  
+
+This is ready to paste directly into:
+
+```
+/docs/frameworks/creation_guide/generator.html
+```
+
+---
+
+# ✅ **COMPLETE `generator.html` PAGE (wired with all new artifacts)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Framework Generator · TriadicFrameworks</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: #0a0d14;
+      color: #f5f5f5;
+      line-height: 1.55;
+    }
+
+    /* Layout */
+    .page {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .sidebar {
+      width: 260px;
+      padding: 24px;
+      background: #0f131c;
+      border-right: 1px solid #1c2230;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px 60px;
+      max-width: 900px;
+    }
+
+    h1, h2, h3 {
+      color: #f5d37a;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #8ac7ff;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Hero image placeholder */
+    .hero {
+      width: 100%;
+      height: 280px;
+      border-radius: 12px;
+      background: linear-gradient(180deg, #1b2233 0%, #0a0d14 100%);
+      border: 1px solid #2a3244;
+      margin-bottom: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f5d37a;
+      font-size: 20px;
+      letter-spacing: 0.5px;
+    }
+
+    /* SVG container */
+    .diagram {
+      margin: 40px 0;
+      border: 1px solid #2a3244;
+      border-radius: 12px;
+      padding: 20px;
+      background: #0f131c;
+    }
+
+    /* Sidebar quick-start */
+    .quick-block {
+      background: #151b27;
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid #2a3244;
+      margin-bottom: 30px;
+    }
+
+    .quick-block h3 {
+      margin-top: 0;
+      color: #f5d37a;
+    }
+
+    .quick-block ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .quick-block li {
+      margin-bottom: 6px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 80px;
+      padding-top: 40px;
+      border-top: 1px solid #2a3244;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <h2>Generator</h2>
+
+    <div class="quick-block">
+      <h3>Quick‑Start</h3>
+      <ul>
+        <li>Choose a seed</li>
+        <li>Select a mode</li>
+        <li>Apply constraints</li>
+        <li>Run pipeline</li>
+        <li>Review output</li>
+        <li>Iterate</li>
+      </ul>
+    </div>
+
+    <h3>Resources</h3>
+    <ul>
+      <li><a href="generator_cheatsheet.html">Printable Cheat‑Sheet</a></li>
+      <li><a href="generator_api.html">Generator API Spec</a></li>
+      <li><a href="#diagram">Generator Graph</a></li>
+      <li><a href="#modes">Modes</a></li>
+      <li><a href="#pipeline">Pipeline</a></li>
+    </ul>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="content">
+
+    <div class="hero">
+      CINEMATIC HERO IMAGE — “THE GENERATOR”
+    </div>
+
+    <h1>Framework Generator</h1>
+    <p>
+      The Generator is the procedural engine that transforms minimal conceptual seeds into
+      fully structured frameworks. It mirrors the logic of modern PCG systems (e.g., Unreal Engine)
+      but operates on operators, regimes, fields, and dimensional profiles.
+    </p>
+
+    <h2 id="diagram">Generator Graph (SVG)</h2>
+    <div class="diagram">
+      <!-- INLINE SVG -->
+      <!-- (SVG from previous step pasted exactly as-is) -->
+      <!-- BEGIN SVG -->
+      <svg width="720" height="520" viewBox="0 0 720 520" xmlns="http://www.w3.org/2000/svg">
+        <style>
+          .node { fill:#0b1020; stroke:#f5d37a; stroke-width:1.5; rx:8; ry:8; }
+          .label { fill:#f5f5f5; font-family:system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size:12px; }
+          .title { font-weight:bold; font-size:13px; }
+          .edge { stroke:#f5d37a; stroke-width:1.5; marker-end:url(#arrow); }
+          .bg { fill:#050712; }
+        </style>
+
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L8,3 L0,6 z" fill="#f5d37a" />
+          </marker>
+        </defs>
+
+        <rect x="0" y="0" width="720" height="520" class="bg"/>
+
+        <rect x="230" y="40" width="260" height="60" class="node"/>
+        <text x="360" y="65" text-anchor="middle" class="label title">SEED NODE</text>
+        <text x="360" y="82" text-anchor="middle" class="label">text / operator / paradox / symbol</text>
+
+        <rect x="210" y="130" width="300" height="70" class="node"/>
+        <text x="360" y="155" text-anchor="middle" class="label title">OPERATOR EXPANSION NODE</text>
+        <text x="360" y="172" text-anchor="middle" class="label">triadic combinatorics, operator unfolding</text>
+
+        <rect x="190" y="230" width="340" height="70" class="node"/>
+        <text x="360" y="255" text-anchor="middle" class="label title">REGIME CLUSTER NODE</text>
+        <text x="360" y="272" text-anchor="middle" class="label">operator clustering, regime formation</text>
+
+        <rect x="170" y="330" width="380" height="70" class="node"/>
+        <text x="360" y="355" text-anchor="middle" class="label title">FIELD STABILIZER NODE</text>
+        <text x="360" y="372" text-anchor="middle" class="label">resonance field formation, dimensional alignment</text>
+
+        <rect x="150" y="430" width="420" height="70" class="node"/>
+        <text x="360" y="455" text-anchor="middle" class="label title">DIMENSIONAL HARMONIZER NODE</text>
+        <text x="360" y="472" text-anchor="middle" class="label">upgrade, hybridization, paradox resolution</text>
+
+        <rect x="540" y="230" width="150" height="80" class="node"/>
+        <text x="615" y="255" text-anchor="middle" class="label title">OUTPUT NODE</text>
+        <text x="615" y="272" text-anchor="middle" class="label">framework object</text>
+        <text x="615" y="288" text-anchor="middle" class="label">+ metadata &amp; maps</text>
+
+        <line x1="360" y1="100" x2="360" y2="130" class="edge"/>
+        <line x1="360" y1="200" x2="360" y2="230" class="edge"/>
+        <line x1="360" y1="300" x2="360" y2="330" class="edge"/>
+        <line x1="360" y1="400" x2="360" y2="430" class="edge"/>
+
+        <line x1="530" y1="265" x2="540" y2="270" class="edge"/>
+
+        <text x="20" y="510" class="label">TriadicFrameworks · Generator Graph</text>
+      </svg>
+      <!-- END SVG -->
+    </div>
+
+    <h2 id="modes">Generator Modes</h2>
+    <p>New, Upgrade, Hybrid, Paradox, Field‑Level.</p>
+
+    <h2 id="pipeline">Pipeline</h2>
+    <p>Seed → Operators → Regimes → Field → Dimension → Output.</p>
+
+    <h2>Additional Artifacts</h2>
+    <ul>
+      <li><a href="generator_api.html">Generator API (Dimensional Echo)</a></li>
+      <li><a href="generator_cheatsheet.html">Printable Cheat‑Sheet</a></li>
+      <li><a href="#motion">Triadic Motion‑Stack Concept</a></li>
+    </ul>
+
+    <h2 id="motion">Triadic Motion‑Stack Animation Concept</h2>
+    <p>
+      A layered, low‑motion background animation representing operators, regimes, field waves,
+      and dimensional spirals. Designed for subtlety and dark‑mode readability.
+    </p>
+
+    <footer>
+      © TriadicFrameworks — Resonance‑Driven Framework Creation
+    </footer>
+
+  </main>
+</div>
+
+</body>
+</html>
+```
+
+---
+
+# ✔️ **This gives you a fully wired, production‑ready Generator page**  
+Everything is now integrated:
+
+- Hero image placeholder  
+- Inline SVG diagram  
+- Sidebar quick‑start  
+- Links to API + cheat‑sheet  
+- Motion‑stack concept section  
+- Clean dark‑mode styling  
+- Repo‑Eval‑friendly structure  
+
+If you want, I can now generate:
+
+### **Next possible expansions**
+- A matching **light‑mode stylesheet**  
+- A **triadic color‑themed CSS variables file**  
+- A **shared layout template** for all Creation Guide pages  
+- A **GitHub‑friendly README version** of this page  
+- A **print‑optimized PDF stylesheet**  
+
+Which direction do you want to take next?
+
+---
+
+Nawder, here you go — **five fully‑formed, repo‑ready artifacts**, each designed to drop directly into your TriadicFrameworks ecosystem.  
+Everything is clean, modular, and consistent with the Generator page you just built.
+
+No fluff — just the exact components you asked for.
+
+---
+
+# **1. Light‑Mode Stylesheet (matching the dark‑mode version)**  
+Drop this into:
+
+```
+/docs/frameworks/creation_guide/light.css
+```
+
+```css
+/* Light Mode — TriadicFrameworks Creation Guide */
+
+:root {
+  --bg: #fafafa;
+  --bg-alt: #ffffff;
+  --text: #1a1a1a;
+  --text-soft: #444;
+  --border: #d0d0d0;
+  --accent-gold: #c49a2c;
+  --accent-blue: #005bbb;
+  --accent-magenta: #b4007a;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.sidebar {
+  background: var(--bg-alt);
+  border-right: 1px solid var(--border);
+}
+
+.hero {
+  background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
+  border: 1px solid var(--border);
+  color: var(--accent-gold);
+}
+
+.diagram {
+  background: #ffffff;
+  border: 1px solid var(--border);
+}
+
+h1, h2, h3 {
+  color: var(--accent-gold);
+}
+
+a {
+  color: var(--accent-blue);
+}
+```
+
+---
+
+# **2. Triadic Color‑Themed CSS Variables File**  
+Drop into:
+
+```
+/docs/frameworks/creation_guide/triadic-vars.css
+```
+
+```css
+/* TriadicFrameworks — Canonical Color Variables */
+
+:root {
+  /* Core Triadic Palette */
+  --tri-gold: #f5d37a;
+  --tri-cyan: #7dd6ff;
+  --tri-magenta: #ff7ad9;
+
+  /* Dark Mode Base */
+  --dark-bg: #0a0d14;
+  --dark-bg-alt: #0f131c;
+  --dark-border: #2a3244;
+  --dark-text: #f5f5f5;
+
+  /* Light Mode Base */
+  --light-bg: #fafafa;
+  --light-bg-alt: #ffffff;
+  --light-border: #d0d0d0;
+  --light-text: #1a1a1a;
+
+  /* Semantic Tokens */
+  --accent-primary: var(--tri-gold);
+  --accent-secondary: var(--tri-cyan);
+  --accent-tertiary: var(--tri-magenta);
+
+  --surface-1: var(--dark-bg-alt);
+  --surface-2: var(--dark-bg);
+  --surface-3: #151b27;
+
+  --radius: 10px;
+  --radius-lg: 14px;
+}
+```
+
+---
+
+# **3. Shared Layout Template for All Creation Guide Pages**  
+Drop into:
+
+```
+/docs/frameworks/creation_guide/_layout.html
+```
+
+This becomes the **canonical wrapper** for every page in the Creation Guide.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{PAGE_TITLE}} · TriadicFrameworks</title>
+
+  <link rel="stylesheet" href="../triadic-vars.css" />
+  <link rel="stylesheet" href="../dark.css" />
+  <!-- Optional: <link rel="stylesheet" href="../light.css" /> -->
+
+  <style>
+    body {
+      margin: 0;
+      background: var(--dark-bg);
+      color: var(--dark-text);
+      font-family: system-ui, sans-serif;
+    }
+
+    .page {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 260px;
+      background: var(--surface-1);
+      border-right: 1px solid var(--dark-border);
+      padding: 24px;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .content {
+      flex: 1;
+      padding: 40px 60px;
+      max-width: 900px;
+    }
+
+    h1, h2, h3 {
+      color: var(--accent-primary);
+    }
+  </style>
+</head>
+
+<body>
+<div class="page">
+
+  <aside class="sidebar">
+    {{SIDEBAR}}
+  </aside>
+
+  <main class="content">
+    {{CONTENT}}
+  </main>
+
+</div>
+</body>
+</html>
+```
+
+Usage example:
+
+```
+{{PAGE_TITLE}} → "Generator"
+{{SIDEBAR}} → Quick‑Start block
+{{CONTENT}} → Page body
+```
+
+---
+
+# **4. GitHub‑Friendly README Version of the Generator Page**  
+Drop into:
+
+```
+/docs/frameworks/creation_guide/README.md
+```
+
+This is optimized for GitHub’s renderer: no HTML, no heavy styling, no SVG.
+
+```markdown
+# Framework Generator
+
+The Framework Generator is the procedural engine of TriadicFrameworks.  
+It transforms minimal conceptual seeds into complete frameworks using a
+triadic pipeline inspired by procedural content generation (PCG) systems.
+
+---
+
+## 🌱 Purpose
+
+The Generator produces:
+
+- New frameworks  
+- Dimensional upgrades  
+- Hybrids  
+- Paradox‑driven frameworks  
+- Field‑level families  
+
+It operates on **operators**, **regimes**, **fields**, and **dimensional profiles**.
+
+---
+
+## 🔧 Pipeline
+
+```
+Seed → Operators → Regimes → Field → Dimension → Output
+```
+
+### 1. Seed Decomposition  
+Extract operators, tensions, boundaries.
+
+### 2. Operator Expansion  
+Triadic combinatorics, role assignment.
+
+### 3. Regime Clustering  
+Operators → functional regimes.
+
+### 4. Field Stabilization  
+Regimes → resonance field.
+
+### 5. Dimensional Harmonization  
+Axes, paradox resolution, dimensional profile.
+
+### 6. Coherence Check  
+Structural integrity.
+
+---
+
+## 🧩 Generator Modes
+
+- **New Framework**  
+- **Dimensional Upgrade**  
+- **Hybrid**  
+- **Paradox**  
+- **Field‑Level**
+
+---
+
+## 📊 Generator Graph (ASCII)
+
+```
+SEED
+  ↓
+OPERATOR EXPANSION
+  ↓
+REGIME CLUSTER
+  ↓
+FIELD STABILIZER
+  ↓
+DIMENSIONAL HARMONIZER
+  → OUTPUT
+```
+
+---
+
+## 📚 Additional Resources
+
+- [Generator Cheat‑Sheet](generator_cheatsheet.md)  
+- [Generator API Spec](generator_api.md)  
+
+---
+
+© TriadicFrameworks — Resonance‑Driven Framework Creation
+```
+
+---
+
+# **5. Print‑Optimized PDF Stylesheet**  
+Drop into:
+
+```
+/docs/frameworks/creation_guide/print.css
+```
+
+This ensures clean, professional PDF output when printing from browser.
+
+```css
+/* Print Stylesheet — TriadicFrameworks */
+
+@media print {
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-family: Georgia, serif;
+    line-height: 1.45;
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .content {
+    padding: 0;
+    max-width: 100%;
+  }
+
+  a {
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  .hero,
+  .diagram {
+    border: 1px solid #000;
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  h1, h2, h3 {
+    color: #000 !important;
+    page-break-after: avoid;
+  }
+
+  pre, code {
+    font-size: 12px;
+    border: 1px solid #000;
+    background: #f5f5f5;
+  }
+
+  footer {
+    display: none;
+  }
+}
+```
+
+---
+
+# If you want, I can now generate:
+
+### **Next expansions**
+- A **Creation Guide master index.html** that auto‑links all modules  
+- A **triadic icon set** (SVG glyphs for operators, regimes, fields)  
+- A **CSS theme switcher** (dark/light auto‑toggle)  
+- A **PDF‑ready single‑file version** of the entire Creation Guide  
+- A **TriadicFrameworks site‑wide design system**  
+
+Just tell me which direction you want to push the canon next.
+
+---
+
+Nawder — I’ve got you.  
+Here are **all five expansions**, clean, modular, and ready to drop into the TriadicFrameworks ecosystem.  
+No tools, no exports — just pure, repo‑ready artifacts you can paste directly into your project.
+
+I’ll keep everything structured so you can slot each piece exactly where it belongs.
+
+---
+
+# **1. Creation Guide Master `index.html` (auto‑links all modules)**  
+Drop into:
+
+```
+/docs/frameworks/creation_guide/index.html
+```
+
+This is the **top‑level hub** for the entire Creation Guide.
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creation Guide · TriadicFrameworks</title>
+
+  <link rel="stylesheet" href="triadic-vars.css" />
+  <link rel="stylesheet" href="dark.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background: var(--dark-bg);
+      color: var(--dark-text);
+      font-family: system-ui, sans-serif;
+    }
+    .container {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+    h1, h2 {
+      color: var(--accent-primary);
+    }
+    .module-list {
+      margin-top: 40px;
+      padding-left: 0;
+      list-style: none;
+    }
+    .module-list li {
+      margin-bottom: 14px;
+      font-size: 18px;
+    }
+    a {
+      color: var(--accent-secondary);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Framework Creation Guide</h1>
+    <p>
+      The Creation Guide teaches you how to design, refine, and stabilize conceptual frameworks
+      using the triadic principles of the TriadicFrameworks ecosystem.
+    </p>
+
+    <h2>Modules</h2>
+    <ul class="module-list">
+      <li><a href="capture.html">Capture</a></li>
+      <li><a href="history.html">History</a></li>
+      <li><a href="principles.html">Core Principles</a></li>
+      <li><a href="models.html">Models</a></li>
+      <li><a href="fft.html">Framework Field Theory (FFT)</a></li>
+      <li><a href="generator.html">Framework Generator</a></li>
+      <li><a href="generator_cheatsheet.html">Generator Cheat‑Sheet</a></li>
+      <li><a href="generator_api.html">Generator API Spec</a></li>
+    </ul>
+
+    <footer style="margin-top:60px; color:#888;">
+      © TriadicFrameworks — Resonance‑Driven Framework Creation
+    </footer>
+  </div>
+</body>
+</html>
+```
+
+---
+
+# **2. Triadic Icon Set (SVG glyphs for Operators, Regimes, Fields)**  
+Drop into:
+
+```
+/docs/frameworks/creation_guide/icons/
+```
+
+### **operator.svg**
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="50,10 90,85 10,85" fill="#f5d37a" />
+</svg>
+```
+
+### **regime.svg**
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <polygon points="25,20 75,20 90,50 75,80 25,80 10,50" fill="#7dd6ff" />
+</svg>
+```
+
+### **field.svg**
+```svg
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <path d="M10 50 Q30 20 50 50 T90 50" stroke="#ff7ad9" stroke-width="6" fill="none"/>
+</svg>
+```
+
+These are **canonical triadic glyphs**: triangle (operator), hex (regime), wave (field).
+
+---
+
+# **3. CSS Theme Switcher (dark/light auto‑toggle)**  
+Drop into:
+
+```
+/docs/frameworks/creation_guide/theme.js
+```
+
+This uses the browser’s `prefers-color-scheme` and allows manual override.
+
+```html
+<script>
+(function() {
+  const root = document.documentElement;
+  const stored = localStorage.getItem("triadic-theme");
+
+  function apply(theme) {
+    if (theme === "light") {
+      root.classList.add("light");
+      root.classList.remove("dark");
+    } else {
+      root.classList.add("dark");
+      root.classList.remove("light");
+    }
+  }
+
+  if (stored) {
+    apply(stored);
+  } else {
+    const prefersLight = window.matchMedia("(prefers-color-scheme: light)").matches;
+    apply(prefersLight ? "light" : "dark");
+  }
+
+  window.toggleTheme = function() {
+    const current = root.classList.contains("light") ? "light" : "dark";
+    const next = current === "light" ? "dark" : "light";
+    localStorage.setItem("triadic-theme", next);
+    apply(next);
+  };
+})();
+</script>
+```
+
+Add this button anywhere:
+
+```html
+<button onclick="toggleTheme()">Toggle Theme</button>
+```
+
+---
+
+# **4. PDF‑Ready Single‑File Version of the Entire Creation Guide**  
+This is a **single HTML file** containing all modules in one scrollable document, optimized for printing.
+
+Drop into:
+
+```
+/docs/frameworks/creation_guide/creation_guide_full.html
+```
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Creation Guide (Full) · TriadicFrameworks</title>
+
+  <link rel="stylesheet" href="triadic-vars.css" />
+  <link rel="stylesheet" href="print.css" />
+
+  <style>
+    body {
+      font-family: Georgia, serif;
+      background: #ffffff;
+      color: #000000;
+      margin: 40px;
+      line-height: 1.45;
+    }
+    h1, h2 {
+      color: #000;
+      page-break-after: avoid;
+    }
+    section {
+      margin-bottom: 80px;
+      page-break-inside: avoid;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>Framework Creation Guide — Full Edition</h1>
+
+<section id="capture">
+  <h2>Capture</h2>
+  {{CAPTURE_CONTENT}}
+</section>
+
+<section id="history">
+  <h2>History</h2>
+  {{HISTORY_CONTENT}}
+</section>
+
+<section id="principles">
+  <h2>Core Principles</h2>
+  {{PRINCIPLES_CONTENT}}
+</section>
+
+<section id="models">
+  <h2>Models</h2>
+  {{MODELS_CONTENT}}
+</section>
+
+<section id="fft">
+  <h2>Framework Field Theory (FFT)</h2>
+  {{FFT_CONTENT}}
+</section>
+
+<section id="generator">
+  <h2>Framework Generator</h2>
+  {{GENERATOR_CONTENT}}
+</section>
+
+<section id="appendices">
+  <h2>Appendices</h2>
+  <ul>
+    <li>Generator Cheat‑Sheet</li>
+    <li>Generator API Spec</li>
+  </ul>
+</section>
+
+</body>
+</html>
+```
+
+You simply paste each module’s content into the placeholders.
+
+---
+
+# **5. TriadicFrameworks Site‑Wide Design System**  
+Drop into:
+
+```
+/docs/design_system/design_system.md
+```
+
+This becomes the **canonical design system** for the entire project.
+
+```markdown
+# TriadicFrameworks Design System
+
+A unified visual and structural language for all TriadicFrameworks modules.
+
+---
+
+## 1. Color System
+
+### Core Triadic Palette
+- **Gold** — `#f5d37a` — primary accent  
+- **Cyan** — `#7dd6ff` — secondary accent  
+- **Magenta** — `#ff7ad9` — tertiary accent  
+
+### Dark Mode
+- Background: `#0a0d14`  
+- Surface: `#0f131c`  
+- Border: `#2a3244`  
+- Text: `#f5f5f5`  
+
+### Light Mode
+- Background: `#fafafa`  
+- Surface: `#ffffff`  
+- Border: `#d0d0d0`  
+- Text: `#1a1a1a`  
+
+---
+
+## 2. Typography
+
+### Primary
+- **System UI** stack for digital docs  
+- **Georgia** for print/PDF  
+
+### Rules
+- H1: 32–40px  
+- H2: 24–28px  
+- H3: 18–20px  
+- Body: 16–18px  
+
+---
+
+## 3. Iconography
+
+### Canonical Glyphs
+- **Operator** — triangle  
+- **Regime** — hexagon  
+- **Field** — wave  
+
+All icons are monochrome, single‑stroke or filled, using triadic colors.
+
+---
+
+## 4. Layout
+
+### Page Structure
+- Sidebar (260px)  
+- Content (max 900px)  
+- Sticky navigation  
+- Generous spacing (40–60px blocks)  
+
+### Components
+- Hero block  
+- Diagram container  
+- Quick‑Start block  
+- Footer  
+
+---
+
+## 5. Motion
+
+### Triadic Motion Stack
+- Background wave (field)  
+- Operator particles  
+- Regime pulse bands  
+- Dimensional spiral  
+- Output glyph breathing  
+
+Motion is subtle, slow, and non‑distracting.
+
+---
+
+## 6. Code & Diagrams
+
+- Inline SVG for diagrams  
+- ASCII fallback for GitHub  
+- No external JS dependencies  
+
+---
+
+## 7. Accessibility
+
+- High contrast  
+- Keyboard‑friendly  
+- Motion‑reduced mode supported  
+
+---
+
+© TriadicFrameworks — Canon Design System
+```
+
+---
+
+# If you want, I can now generate:
+
+### **Next tier expansions**
+- A **TriadicFrameworks homepage** for the entire repo  
+- A **searchable navigation sidebar** for all modules  
+- A **Figma component library spec**  
+- A **Triadic icon font** (operators/regimes/fields as a font)  
+- A **dark‑mode cinematic background pack**  
+
+Just tell me where you want the canon to grow next.
+
+---
+
+Absolutely — this is the moment where RF‑Builder becomes *real*.  
+You’re asking for four deliverables:
+
+1. **The official FCG section introducing the trio**  
+2. **Canonical diagrams**  
+3. **RTT‑native mathematical definitions**  
+4. **The HTML/Markdown skeleton for RF‑Builder**
+
+That’s a *full module build*, not just a chat answer — it’s exactly the kind of multi‑artifact, multi‑format output Copilot Tasks is built for.
+
+I can generate:
+
+- A polished, publication‑ready **FCG section**  
+- Clean, canonical **ASCII + Mermaid diagrams**  
+- Formal **RTT math definitions** using your operator conventions  
+- A complete **RF‑Builder skeleton** (index.md + subpages + prompt templates)  
+
+All bundled into a coherent, ready‑to‑commit package.
+
+If you want, I can also structure it so it drops directly into:
+
+```
+docs/frameworks/creation_guide/
+docs/frameworks/RF-Builder/
+```
+
+and cross‑links cleanly with RTT/1 and FFT.
+
+Want me to assemble the entire RF‑Builder module as a unified artifact with Copilot Tasks? 
+
+---
+
+### 1. TriadicFrameworks homepage for the entire repo
+
+`/docs/index.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TriadicFrameworks</title>
+  <link rel="stylesheet" href="frameworks/creation_guide/triadic-vars.css" />
+  <link rel="stylesheet" href="frameworks/creation_guide/dark.css" />
+  <style>
+    body {
+      margin: 0;
+      background: var(--dark-bg);
+      color: var(--dark-text);
+      font-family: system-ui, sans-serif;
+    }
+    .wrap {
+      max-width: 960px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+    h1, h2 {
+      color: var(--accent-primary);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .card {
+      background: var(--surface-1);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--dark-border);
+      padding: 20px;
+    }
+    a {
+      color: var(--accent-secondary);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>TriadicFrameworks</h1>
+    <p>
+      A resonance‑driven ecosystem for designing, evolving, and teaching high‑dimensional frameworks.
+    </p>
+
+    <h2>Core Areas</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Framework Creation Guide</h3>
+        <p>Step‑by‑step process for capturing, shaping, and stabilizing frameworks.</p>
+        <p><a href="frameworks/creation_guide/index.html">Open Creation Guide →</a></p>
+      </div>
+      <div class="card">
+        <h3>Framework Field Theory (FFT)</h3>
+        <p>Field‑level view of frameworks, resonance, and dimensional behavior.</p>
+        <p><a href="frameworks/fft/index.html">Open FFT →</a></p>
+      </div>
+      <div class="card">
+        <h3>Design System</h3>
+        <p>Canonical colors, typography, icons, and layout primitives.</p>
+        <p><a href="design_system/design_system.md">View Design System →</a></p>
+      </div>
+    </div>
+
+    <footer style="margin-top:60px;color:#888;">
+      © TriadicFrameworks — Resonance‑Driven Framework Creation
+    </footer>
+  </div>
+</body>
+</html>
+```
+
+---
+
+### 2. Searchable navigation sidebar for all modules
+
+Minimal, no external deps. Add this to a shared layout (e.g. `_layout.html`) and include on Creation Guide pages.
+
+```html
+<aside class="sidebar">
+  <h2>Creation Guide</h2>
+
+  <input
+    id="nav-search"
+    type="search"
+    placeholder="Search modules…"
+    style="width:100%;padding:6px 8px;margin:8px 0 16px;border-radius:6px;border:1px solid var(--dark-border);background:#050712;color:var(--dark-text);"
+  />
+
+  <ul id="nav-list" style="list-style:none;padding-left:0;margin:0;">
+    <li data-label="capture"><a href="capture.html">Capture</a></li>
+    <li data-label="history"><a href="history.html">History</a></li>
+    <li data-label="principles"><a href="principles.html">Core Principles</a></li>
+    <li data-label="models"><a href="models.html">Models</a></li>
+    <li data-label="fft"><a href="fft.html">FFT</a></li>
+    <li data-label="generator"><a href="generator.html">Generator</a></li>
+    <li data-label="generator cheat sheet"><a href="generator_cheatsheet.html">Generator Cheat‑Sheet</a></li>
+    <li data-label="generator api"><a href="generator_api.html">Generator API</a></li>
+  </ul>
+
+  <script>
+    (function () {
+      const input = document.getElementById('nav-search');
+      const list = document.getElementById('nav-list');
+      if (!input || !list) return;
+
+      input.addEventListener('input', function () {
+        const q = this.value.toLowerCase().trim();
+        Array.from(list.children).forEach(li => {
+          const label = li.getAttribute('data-label') || '';
+          li.style.display = label.includes(q) ? '' : 'none';
+        });
+      });
+    })();
+  </script>
+</aside>
+```
+
+---
+
+### 3. Figma component library spec
+
+`/docs/design_system/figma_components.md`
+
+```markdown
+# TriadicFrameworks Figma Component Library Spec
+
+This spec defines the core components to build in Figma so the UI matches the codebase.
+
+---
+
+## 1. Color Styles
+
+Create color styles:
+
+- `Triadic / Gold` — `#f5d37a`
+- `Triadic / Cyan` — `#7dd6ff`
+- `Triadic / Magenta` — `#ff7ad9`
+- `Triadic / Dark / BG` — `#0a0d14`
+- `Triadic / Dark / Surface` — `#0f131c`
+- `Triadic / Dark / Border` — `#2a3244`
+- `Triadic / Light / BG` — `#fafafa`
+- `Triadic / Light / Surface` — `#ffffff`
+- `Triadic / Light / Border` — `#d0d0d0`
+
+---
+
+## 2. Text Styles
+
+- `Heading / H1` — 32–40px, Bold, system UI
+- `Heading / H2` — 24–28px, Semi‑Bold
+- `Heading / H3` — 18–20px, Semi‑Bold
+- `Body / Default` — 16px, Regular
+- `Body / Small` — 14px, Regular
+- `Code` — 13–14px, Monospace
+
+---
+
+## 3. Components
+
+### 3.1 Sidebar
+
+- Width: 260px  
+- Background: `Triadic / Dark / Surface`  
+- Contains:
+  - Logo/Title
+  - Search field
+  - Nav list (text + optional icon)
+
+Variants:
+- With search / without search  
+- Dark / Light
+
+---
+
+### 3.2 Hero Block
+
+- Size: 100% width, 240–320px height  
+- Background: gradient (dark or light)  
+- Optional overlay text: title + subtitle  
+
+Variants:
+- Cinematic (image placeholder)
+- Diagrammatic (grid/lines)
+
+---
+
+### 3.3 Diagram Card
+
+- Padding: 20px  
+- Border radius: 10–14px  
+- Border: 1px  
+- Slot for SVG or image  
+
+---
+
+### 3.4 Quick‑Start Block
+
+- Background: slightly elevated surface  
+- Title + bullet list  
+- Optional icon (operator/regime/field)
+
+---
+
+## 4. Icon Components
+
+Create vector components:
+
+- `Icon / Operator` — triangle  
+- `Icon / Regime` — hexagon  
+- `Icon / Field` — wave  
+
+Each with color variants:
+- Gold, Cyan, Magenta, Monochrome.
+
+---
+
+## 5. Layout Templates
+
+Frames:
+
+- `Page / Creation Guide` — Sidebar + Content  
+- `Page / Single Column` — for README / docs  
+
+Use auto‑layout for responsiveness.
+
+---
+
+© TriadicFrameworks — Figma Component Spec
+```
+
+---
+
+### 4. Triadic icon font (operators/regimes/fields as a font)
+
+Simple CSS + mapping; you can later replace `src` with a real font file.
+
+`/docs/frameworks/creation_guide/triadic-icons.css`
+
+```css
+@font-face {
+  font-family: "TriadicIcons";
+  src: url("triadic-icons.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ti {
+  font-family: "TriadicIcons", system-ui, sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+/* Codepoints (placeholder mapping) */
+.ti-operator::before { content: "\e001"; }
+.ti-regime::before   { content: "\e002"; }
+.ti-field::before    { content: "\e003"; }
+```
+
+Usage:
+
+```html
+<link rel="stylesheet" href="triadic-icons.css" />
+
+<span class="ti ti-operator"></span>
+<span class="ti ti-regime"></span>
+<span class="ti ti-field"></span>
+```
+
+---
+
+### 5. Dark‑mode cinematic background pack
+
+Describe as a pack for your generator; you can store as JSON or markdown.
+
+`/docs/design_system/background_pack_dark.md`
+
+```markdown
+# Dark‑Mode Cinematic Background Pack
+
+Canonical background concepts for TriadicFrameworks pages.
+
+---
+
+## 1. Echo Field
+
+- Base: deep indigo → near‑black vertical gradient  
+- Elements: soft horizontal wave bands (low opacity cyan)  
+- Noise: subtle star‑like grain  
+- Usage: FFT, Generator, high‑dimensional sections.
+
+---
+
+## 2. Operator Constellations
+
+- Base: charcoal  
+- Elements: small triangular glyphs scattered like stars  
+- Occasional triads forming faint constellations  
+- Usage: Operator‑heavy pages, models, principles.
+
+---
+
+## 3. Regime Lattice
+
+- Base: dark blue  
+- Elements: hexagonal grid, barely visible  
+- Select cells highlighted in gold/cyan  
+- Usage: Regime/structure‑focused docs.
+
+---
+
+## 4. Field Interference
+
+- Base: near‑black  
+- Elements: overlapping sine waves in cyan and magenta  
+- Slight blur, low contrast  
+- Usage: resonance, fields, motion‑stack sections.
+
+---
+
+## 5. Dimensional Spiral
+
+- Base: deep navy  
+- Elements: large, faint triadic spiral (gold/cyan/magenta)  
+- Center slightly brighter, edges fade to black  
+- Usage: hero sections, full‑bleed intros.
+
+---
+
+Each background should:
+
+- Stay low‑contrast behind text  
+- Avoid hard edges near content  
+- Be exportable at 4K for future‑proofing.
+
+© TriadicFrameworks — Cinematic Background Pack
+```
+
+If you want, next we can wire the theme switcher + icon font into the homepage and Creation Guide layout so everything feels like one continuous surface.
+
+---
+
+Let’s wire everything together so the **homepage**, **Creation Guide layout**, **theme switcher**, and **Triadic icon font** feel like one continuous, intentional surface — the way a real design system breathes across an ecosystem.
+
+Below is the **exact integration layer** you need: clean, modular, and ready to paste into your repo.
+
+---
+
+# **1. Wire the Theme Switcher Into the Homepage**
+
+Add this inside `<head>` of `/docs/index.html`:
+
+```html
+<script src="frameworks/creation_guide/theme.js"></script>
+```
+
+Add a toggle button anywhere in the header or footer:
+
+```html
+<button onclick="toggleTheme()" style="
+  background: none;
+  border: 1px solid var(--dark-border);
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: var(--accent-primary);
+  cursor: pointer;
+">
+  Toggle Theme
+</button>
+```
+
+Then add the theme classes to `<html>`:
+
+```html
+<html lang="en" class="dark">
+```
+
+The theme switcher will automatically flip between `.dark` and `.light`.
+
+---
+
+# **2. Wire the Theme Switcher Into the Creation Guide Layout**
+
+In `_layout.html`, update the `<html>` tag:
+
+```html
+<html lang="en" class="dark">
+```
+
+Add the script:
+
+```html
+<script src="theme.js"></script>
+```
+
+Add a toggle button to the sidebar:
+
+```html
+<button onclick="toggleTheme()" style="
+  width: 100%;
+  margin-top: 20px;
+  padding: 8px 0;
+  border-radius: 8px;
+  border: 1px solid var(--dark-border);
+  background: var(--surface-1);
+  color: var(--accent-primary);
+  cursor: pointer;
+">
+  Toggle Theme
+</button>
+```
+
+Now every Creation Guide page inherits the theme switcher.
+
+---
+
+# **3. Wire the Triadic Icon Font Into the Layout**
+
+Add this to `_layout.html` inside `<head>`:
+
+```html
+<link rel="stylesheet" href="triadic-icons.css" />
+```
+
+Now you can use icons anywhere:
+
+```html
+<span class="ti ti-operator"></span>
+<span class="ti ti-regime"></span>
+<span class="ti ti-field"></span>
+```
+
+Example in the sidebar:
+
+```html
+<li><span class="ti ti-operator"></span> <a href="capture.html">Capture</a></li>
+```
+
+This gives the whole ecosystem a recognizable visual signature.
+
+---
+
+# **4. Wire the Searchable Navigation Sidebar Into the Layout**
+
+Replace the existing sidebar block in `_layout.html` with:
+
+```html
+<aside class="sidebar">
+  <h2>Creation Guide</h2>
+
+  <input
+    id="nav-search"
+    type="search"
+    placeholder="Search modules…"
+    class="nav-search"
+  />
+
+  <ul id="nav-list" class="nav-list">
+    <li data-label="capture"><a href="capture.html"><span class="ti ti-operator"></span> Capture</a></li>
+    <li data-label="history"><a href="history.html"><span class="ti ti-regime"></span> History</a></li>
+    <li data-label="principles"><a href="principles.html"><span class="ti ti-field"></span> Core Principles</a></li>
+    <li data-label="models"><a href="models.html"><span class="ti ti-operator"></span> Models</a></li>
+    <li data-label="fft"><a href="fft.html"><span class="ti ti-regime"></span> FFT</a></li>
+    <li data-label="generator"><a href="generator.html"><span class="ti ti-field"></span> Generator</a></li>
+    <li data-label="generator cheat sheet"><a href="generator_cheatsheet.html">Cheat‑Sheet</a></li>
+    <li data-label="generator api"><a href="generator_api.html">API Spec</a></li>
+  </ul>
+
+  <button onclick="toggleTheme()" class="theme-toggle">Toggle Theme</button>
+
+  <script src="theme.js"></script>
+  <script src="sidebar-search.js"></script>
+</aside>
+```
+
+And create `sidebar-search.js`:
+
+```html
+<script>
+(function () {
+  const input = document.getElementById('nav-search');
+  const list = document.getElementById('nav-list');
+
+  input.addEventListener('input', function () {
+    const q = this.value.toLowerCase().trim();
+    Array.from(list.children).forEach(li => {
+      const label = li.getAttribute('data-label') || '';
+      li.style.display = label.includes(q) ? '' : 'none';
+    });
+  });
+})();
+</script>
+```
+
+Now the entire Creation Guide has a **searchable, icon‑enhanced, theme‑aware sidebar**.
+
+---
+
+# **5. Wire the Dark‑Mode Cinematic Background Pack Into the Homepage + Guide**
+
+Add this to `dark.css`:
+
+```css
+/* Background pack classes */
+
+.bg-echo-field {
+  background: radial-gradient(circle at 50% 70%, #1b2233 0%, #0a0d14 70%);
+}
+
+.bg-operator-constellations {
+  background: #0a0d14 url('../design_system/bg_operator_constellations.png') repeat;
+}
+
+.bg-regime-lattice {
+  background: #0a0d14 url('../design_system/bg_regime_lattice.png') repeat;
+}
+
+.bg-field-interference {
+  background: #0a0d14 url('../design_system/bg_field_interference.png') no-repeat center/cover;
+}
+
+.bg-dimensional-spiral {
+  background: #0a0d14 url('../design_system/bg_dimensional_spiral.png') no-repeat center/cover;
+}
+```
+
+Then apply them:
+
+### Homepage hero:
+
+```html
+<div class="hero bg-dimensional-spiral">
+  TriadicFrameworks
+</div>
+```
+
+### Generator page hero:
+
+```html
+<div class="hero bg-field-interference">
+  THE GENERATOR
+</div>
+```
+
+### FFT page hero:
+
+```html
+<div class="hero bg-echo-field">
+  Framework Field Theory
+</div>
+```
+
+This gives every module a **cinematic identity**.
+
+---
+
+# **6. Wire Everything Together Into a Continuous Surface**
+
+Here’s the final integration checklist:
+
+### Homepage
+- Add theme switcher script  
+- Add toggle button  
+- Add icon font  
+- Add background class to hero  
+
+### Creation Guide Layout
+- Add theme switcher  
+- Add icon font  
+- Replace sidebar with searchable version  
+- Add background classes to hero blocks  
+- Ensure `.dark` / `.light` classes wrap the entire document  
+
+### Modules
+- Use triadic icons in nav  
+- Use cinematic backgrounds in hero  
+- Use consistent spacing + typography from design system  
+
+Everything now feels like **one coherent, cinematic, triadic ecosystem**.
+
+---
+
+If you want, I can now generate:
+
+### **Next expansions**
+- A **TriadicFrameworks global navigation bar**  
+- A **site‑wide search engine** (client‑side, no backend)  
+- A **componentized HTML partials system** for DRY layouts  
+- A **dark/light animated transition** for theme switching  
+- A **TriadicFrameworks logo glyph** (SVG, canonical)  
+
+Just tell me where you want the canon to evolve next..
+
+---
+
+### TriadicFrameworks global navigation bar
+
+Add this to a shared layout (e.g. `_layout.html`), just inside `<body>`:
+
+```html
+<header class="tf-global-nav">
+  <div class="tf-nav-inner">
+    <div class="tf-nav-left">
+      <a href="/docs/index.html" class="tf-logo-link">
+        <span class="tf-logo-mark"></span>
+        <span class="tf-logo-text">TriadicFrameworks</span>
+      </a>
+    </div>
+    <nav class="tf-nav-right">
+      <a href="/docs/frameworks/creation_guide/index.html">Creation Guide</a>
+      <a href="/docs/frameworks/fft/index.html">FFT</a>
+      <a href="/docs/design_system/design_system.md">Design System</a>
+      <button type="button" onclick="toggleTheme()" class="tf-theme-toggle">Theme</button>
+    </nav>
+  </div>
+</header>
+```
+
+Add styles (in `dark.css` / shared CSS):
+
+```css
+.tf-global-nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(10, 13, 20, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--dark-border);
+}
+.tf-nav-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.tf-logo-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent-primary);
+  text-decoration: none;
+}
+.tf-logo-mark {
+  width: 20px;
+  height: 20px;
+  background: conic-gradient(from 210deg, var(--tri-gold), var(--tri-cyan), var(--tri-magenta), var(--tri-gold));
+  clip-path: polygon(50% 0%, 100% 86%, 0% 86%);
+}
+.tf-logo-text {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.tf-nav-right a,
+.tf-theme-toggle {
+  margin-left: 16px;
+  color: var(--dark-text);
+  text-decoration: none;
+  font-size: 14px;
+}
+.tf-theme-toggle {
+  border: 1px solid var(--dark-border);
+  background: var(--surface-1);
+  border-radius: 999px;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+```
+
+---
+
+### Site‑wide search engine (client‑side)
+
+Add this to the global nav (inside `.tf-nav-right`):
+
+```html
+<input
+  id="tf-search"
+  type="search"
+  placeholder="Search site…"
+  class="tf-search-input"
+/>
+```
+
+Add styles:
+
+```css
+.tf-search-input {
+  margin-left: 16px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--dark-border);
+  background: #050712;
+  color: var(--dark-text);
+  font-size: 13px;
+}
+```
+
+Add a small script (e.g. `site-search.js`, included in all pages):
+
+```html
+<script>
+(function () {
+  const index = [
+    { label: "Creation Guide", url: "/docs/frameworks/creation_guide/index.html" },
+    { label: "Capture", url: "/docs/frameworks/creation_guide/capture.html" },
+    { label: "Generator", url: "/docs/frameworks/creation_guide/generator.html" },
+    { label: "FFT", url: "/docs/frameworks/fft/index.html" },
+    { label: "Design System", url: "/docs/design_system/design_system.md" }
+  ];
+
+  const input = document.getElementById("tf-search");
+  if (!input) return;
+
+  input.addEventListener("keydown", function (e) {
+    if (e.key !== "Enter") return;
+    const q = this.value.toLowerCase().trim();
+    if (!q) return;
+    const match = index.find(item => item.label.toLowerCase().includes(q));
+    if (match) window.location.href = match.url;
+  });
+})();
+</script>
+```
+
+---
+
+### Componentized HTML partials system (DRY layouts)
+
+Use simple placeholder tokens and a build step (or manual includes).
+
+`/docs/_partials/header.html`:
+
+```html
+<header class="tf-global-nav">
+  <!-- global nav markup here -->
+</header>
+```
+
+`/docs/_partials/footer.html`:
+
+```html
+<footer class="tf-footer">
+  © TriadicFrameworks — Resonance‑Driven Framework Creation
+</footer>
+```
+
+Page template (e.g. `_layout.html`):
+
+```html
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{PAGE_TITLE}} · TriadicFrameworks</title>
+  <link rel="stylesheet" href="triadic-vars.css" />
+  <link rel="stylesheet" href="dark.css" />
+</head>
+<body>
+  {{PARTIAL_HEADER}}
+
+  <div class="page">
+    <aside class="sidebar">
+      {{SIDEBAR}}
+    </aside>
+    <main class="content">
+      {{CONTENT}}
+    </main>
+  </div>
+
+  {{PARTIAL_FOOTER}}
+</body>
+</html>
+```
+
+Your build step (or manual process) replaces `{{PARTIAL_HEADER}}` and `{{PARTIAL_FOOTER}}` with the partials.
+
+---
+
+### Dark/light animated transition for theme switching
+
+Extend `theme.js`:
+
+```js
+function apply(theme) {
+  const root = document.documentElement;
+  root.classList.add("theme-transition");
+  window.requestAnimationFrame(() => {
+    if (theme === "light") {
+      root.classList.add("light");
+      root.classList.remove("dark");
+    } else {
+      root.classList.add("dark");
+      root.classList.remove("light");
+    }
+    window.setTimeout(() => {
+      root.classList.remove("theme-transition");
+    }, 250);
+  });
+}
+```
+
+Add CSS:
+
+```css
+:root.theme-transition {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+:root.dark body {
+  background: var(--dark-bg);
+  color: var(--dark-text);
+}
+:root.light body {
+  background: var(--light-bg);
+  color: var(--light-text);
+}
+```
+
+---
+
+### TriadicFrameworks logo glyph (SVG, canonical)
+
+`/docs/assets/triadic_logo.svg`:
+
+```svg
+<svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tri-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5d37a"/>
+      <stop offset="100%" stop-color="#c49a2c"/>
+    </linearGradient>
+    <linearGradient id="tri-cyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7dd6ff"/>
+      <stop offset="100%" stop-color="#2a9adf"/>
+    </linearGradient>
+    <linearGradient id="tri-magenta" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7ad9"/>
+      <stop offset="100%" stop-color="#c02c8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer circle (field) -->
+  <circle cx="60" cy="60" r="54" fill="#050712" stroke="#2a3244" stroke-width="4"/>
+
+  <!-- Triadic triangle (operator core) -->
+  <polygon points="60,16 100,92 20,92" fill="url(#tri-gold)"/>
+
+  <!-- Inner wave (field resonance) -->
+  <path d="M20 70 Q40 50 60 70 T100 70"
+        fill="none" stroke="url(#tri-cyan)" stroke-width="4"/>
+
+  <!-- Central node (regime nexus) -->
+  <circle cx="60" cy="60" r="8" fill="url(#tri-magenta)"/>
+</svg>
+```
+
+You can inline it in HTML:
+
+```html
+<img src="/docs/assets/triadic_logo.svg" alt="TriadicFrameworks logo" />
+```
+
+or use it as the `.tf-logo-mark` background if you prefer `<img>` over CSS shapes.
+
+If you want, next step can be: a tiny “brand kit” page that documents logo usage, clear space, and do/don’t examples.
+
+---
+
+Absolutely, Nawder — here is a **tight, elegant, repo‑ready “Brand Kit” page** that documents the TriadicFrameworks logo, its usage rules, clear‑space requirements, color variants, and do/don’t examples.  
+It’s intentionally compact — the kind of page a designer or contributor can glance at and immediately understand the canon.
+
+No tools, no exports — just clean HTML/Markdown you can drop directly into:
+
+```
+/docs/design_system/brand_kit.html
+```
+
+---
+
+# **TriadicFrameworks Brand Kit (Tiny Edition)**  
+*A compact, authoritative reference for logo usage, spacing, and visual integrity.*
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brand Kit · TriadicFrameworks</title>
+
+  <link rel="stylesheet" href="../frameworks/creation_guide/triadic-vars.css" />
+  <link rel="stylesheet" href="../frameworks/creation_guide/dark.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background: var(--dark-bg);
+      color: var(--dark-text);
+      font-family: system-ui, sans-serif;
+      padding: 40px 60px;
+      max-width: 900px;
+    }
+    h1, h2 {
+      color: var(--accent-primary);
+    }
+    .logo-block {
+      margin: 40px 0;
+      padding: 20px;
+      background: var(--surface-1);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--dark-border);
+      text-align: center;
+    }
+    .example-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .example {
+      padding: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--dark-border);
+      background: var(--surface-1);
+      text-align: center;
+      font-size: 14px;
+    }
+    .bad {
+      border-color: #ff4d6d;
+      color: #ff4d6d;
+    }
+    .good {
+      border-color: #7dd6ff;
+      color: #7dd6ff;
+    }
+    img.logo {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>TriadicFrameworks Brand Kit</h1>
+<p>
+  This page defines the canonical TriadicFrameworks logo, its clear‑space rules,
+  approved variants, and usage guidelines. Keep this page close when designing
+  documentation, slides, or UI surfaces.
+</p>
+
+<!-- LOGO -->
+<h2>Primary Logo</h2>
+<div class="logo-block">
+  <img src="../assets/triadic_logo.svg" alt="TriadicFrameworks Logo" class="logo" />
+  <p>Primary TriadicFrameworks Logo (SVG)</p>
+</div>
+
+<!-- CLEAR SPACE -->
+<h2>Clear Space</h2>
+<p>
+  Maintain a minimum clear space equal to the height of the central node (the magenta circle)
+  on all sides of the logo. No text, icons, or UI elements should intrude into this zone.
+</p>
+
+<div class="example-grid">
+  <div class="example good">
+    <img src="../assets/triadic_logo.svg" class="logo" />
+    Proper clear space
+  </div>
+  <div class="example bad">
+    <img src="../assets/triadic_logo.svg" class="logo" />
+    Crowded / touching elements
+  </div>
+</div>
+
+<!-- COLOR VARIANTS -->
+<h2>Color Variants</h2>
+<p>
+  The logo supports three approved variants:
+</p>
+
+<ul>
+  <li><strong>Full Triadic</strong> — Gold + Cyan + Magenta (primary)</li>
+  <li><strong>Monochrome Light</strong> — White on dark backgrounds</li>
+  <li><strong>Monochrome Dark</strong> — Black on light backgrounds</li>
+</ul>
+
+<div class="example-grid">
+  <div class="example good">
+    <img src="../assets/triadic_logo.svg" class="logo" />
+    Full Triadic
+  </div>
+  <div class="example good">
+    <div style="background:#0a0d14;padding:20px;border-radius:10px;">
+      <img src="../assets/triadic_logo.svg" class="logo" style="filter:brightness(0) invert(1);" />
+    </div>
+    Monochrome Light
+  </div>
+  <div class="example good">
+    <div style="background:#ffffff;padding:20px;border-radius:10px;">
+      <img src="../assets/triadic_logo.svg" class="logo" style="filter:brightness(0);" />
+    </div>
+    Monochrome Dark
+  </div>
+</div>
+
+<!-- DO / DON'T -->
+<h2>Do & Don’t</h2>
+
+<div class="example-grid">
+  <div class="example good">
+    <img src="../assets/triadic_logo.svg" class="logo" />
+    ✔ Use on clean, uncluttered backgrounds
+  </div>
+  <div class="example bad">
+    <img src="../assets/triadic_logo.svg" class="logo" style="filter:hue-rotate(90deg);" />
+    ✘ Do not recolor arbitrarily
+  </div>
+  <div class="example bad">
+    <img src="../assets/triadic_logo.svg" class="logo" style="transform:skewX(20deg);" />
+    ✘ Do not distort or skew
+  </div>
+  <div class="example bad">
+    <img src="../assets/triadic_logo.svg" class="logo" style="opacity:0.3;" />
+    ✘ Do not reduce contrast excessively
+  </div>
+</div>
+
+<!-- MINIMUM SIZE -->
+<h2>Minimum Size</h2>
+<p>
+  For digital surfaces, the logo should never appear smaller than <strong>24px</strong> in height.
+  For print, minimum recommended size is <strong>8mm</strong>.
+</p>
+
+<!-- BACKGROUND USAGE -->
+<h2>Background Usage</h2>
+<p>
+  The logo works best on:
+</p>
+
+<ul>
+  <li>Solid dark backgrounds (preferred)</li>
+  <li>Solid light backgrounds</li>
+  <li>Low‑noise cinematic gradients</li>
+</ul>
+
+<p>
+  Avoid placing the logo on:
+</p>
+
+<ul>
+  <li>High‑contrast photography</li>
+  <li>Busy textures</li>
+  <li>Cluttered UI regions</li>
+</ul>
+
+<!-- FOOTER -->
+<footer style="margin-top:60px;color:#888;">
+  © TriadicFrameworks — Canon Brand Kit
+</footer>
+
+</body>
+</html>
+```
+
+---
+
+# **This brand kit is intentionally tiny, elegant, and authoritative.**  
+It gives contributors exactly what they need — no more, no less — and it fits perfectly into the design system you’re building.
+
+If you want, I can now generate:
+
+### **Next brand‑system expansions**
+- A **TriadicFrameworks logo animation** (CSS or Lottie‑style spec)  
+- A **brand‑voice guide** (tone, vocabulary, narrative rules)  
+- A **slide deck template** (triadic, cinematic, repo‑ready)  
+- A **favicon + app‑icon pack** (SVG + PNG variants)  
+- A **brand‑governance micro‑document** (rules for updates, approvals, lineage)
+
+Just tell me where you want the canon to grow next.
+
+---
+
+### 1. TriadicFrameworks logo animation (CSS + Lottie‑style spec)
+
+#### CSS animation (simple, repo‑ready)
+
+Use with the existing SVG logo wrapped in a container:
+
+```html
+<div class="tf-logo-anim">
+  <img src="../assets/triadic_logo.svg" alt="TriadicFrameworks logo" />
+</div>
+```
+
+```css
+.tf-logo-anim img {
+  width: 80px;
+  height: auto;
+  animation: tf-logo-pulse 3.5s ease-in-out infinite;
+}
+
+@keyframes tf-logo-pulse {
+  0%   { transform: scale(1);   filter: drop-shadow(0 0 0px rgba(245,211,122,0.0)); }
+  40%  { transform: scale(1.04); filter: drop-shadow(0 0 10px rgba(245,211,122,0.6)); }
+  60%  { transform: scale(1.02); filter: drop-shadow(0 0 6px rgba(125,214,255,0.4)); }
+  100% { transform: scale(1);   filter: drop-shadow(0 0 0px rgba(245,211,122,0.0)); }
+}
+```
+
+#### Lottie‑style motion spec (conceptual)
+
+- **Duration:** 2.5–3.0s loop  
+- **Tracks:**
+  - Triangle: subtle scale 1 → 1.05 → 1  
+  - Wave: horizontal phase shift (slow, 1 cycle per loop)  
+  - Central node: glow pulse (opacity 0.6 → 1 → 0.6)  
+- **Easing:** `easeInOutSine`  
+- **Loop:** seamless, no hard cuts  
+
+---
+
+### 2. Brand‑voice guide (tone, vocabulary, narrative rules)
+
+`/docs/design_system/brand_voice.md`
+
+```markdown
+# TriadicFrameworks Brand Voice
+
+## 1. Tone
+
+- **Calm, precise, invitational**
+- Confident but not grandiose
+- Mythic hints, grounded in clarity
+
+Avoid:
+- Hype, over‑promising, or vague mysticism
+- Heavy academic gatekeeping
+
+---
+
+## 2. Vocabulary
+
+Preferred:
+- Framework, field, resonance, operator, regime, dimension
+- Canon, lineage, substrate, triadic, cinematic, diagrammatic
+
+Avoid:
+- “Magic”, “disruption”, “game‑changer”
+- Overloaded buzzwords without definition
+
+---
+
+## 3. Narrative Rules
+
+- Lead with **clarity**, then add **mythic color**.
+- Always connect visuals to **function** (“what this helps you do”).
+- Emphasize **lineage**: how an artifact fits into the larger canon.
+- Use **second person** sparingly; focus on the work and the framework.
+
+---
+
+## 4. Structural Patterns
+
+- Short paragraphs, high signal.
+- Lists for operators, modes, steps.
+- Diagrams + text, never diagrams alone.
+
+---
+
+## 5. Example Voice
+
+> “The Generator is your world‑builder for frameworks: it takes a single seed and unfolds a full field.”
+```
+
+---
+
+### 3. Slide deck template (triadic, cinematic, repo‑ready)
+
+`/docs/design_system/slide_template.html`
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>TriadicFrameworks Slide Deck</title>
+  <link rel="stylesheet" href="../frameworks/creation_guide/triadic-vars.css" />
+  <style>
+    body {
+      margin: 0;
+      background: #050712;
+      color: #f5f5f5;
+      font-family: system-ui, sans-serif;
+    }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      margin: 0 auto;
+      padding: 60px 80px;
+      box-sizing: border-box;
+      background: radial-gradient(circle at 50% 70%, #1b2233 0%, #050712 70%);
+      color: #f5f5f5;
+    }
+    .slide-title {
+      font-size: 40px;
+      color: var(--tri-gold);
+      margin-bottom: 20px;
+    }
+    .slide-subtitle {
+      font-size: 22px;
+      color: #c0c6d8;
+      margin-bottom: 40px;
+    }
+    .slide-content {
+      font-size: 20px;
+      line-height: 1.5;
+    }
+    .slide-footer {
+      position: absolute;
+      bottom: 30px;
+      left: 80px;
+      font-size: 14px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<div class="slide">
+  <div class="slide-title">TriadicFrameworks</div>
+  <div class="slide-subtitle">Resonance‑Driven Framework Creation</div>
+  <div class="slide-content">
+    <ul>
+      <li>Framework Creation Guide</li>
+      <li>Framework Field Theory (FFT)</li>
+      <li>Generator Protocol</li>
+    </ul>
+  </div>
+  <div class="slide-footer">© TriadicFrameworks</div>
+</div>
+
+</body>
+</html>
+```
+
+You can duplicate the `.slide` block per slide or export to PDF.
+
+---
+
+### 4. Favicon + app‑icon pack (SVG + PNG variants)
+
+**Favicon SVG** — `/docs/assets/favicon.svg`
+
+```svg
+<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="32" cy="32" r="30" fill="#050712"/>
+  <polygon points="32,8 54,52 10,52" fill="#f5d37a"/>
+  <circle cx="32" cy="34" r="5" fill="#ff7ad9"/>
+</svg>
+```
+
+**HTML link tags** (in `<head>`):
+
+```html
+<link rel="icon" type="image/svg+xml" href="/docs/assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="/docs/assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/docs/assets/app-icon-192.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/docs/assets/app-icon-180.png" />
+```
+
+PNG variants can be exported from the SVG at 32, 64, 128, 180, 192, 512 px.
+
+---
+
+### 5. Brand‑governance micro‑document (updates, approvals, lineage)
+
+`/docs/design_system/brand_governance.md`
+
+```markdown
+# TriadicFrameworks Brand Governance (Micro‑Doc)
+
+## 1. Purpose
+
+Keep the visual and verbal identity coherent as the canon grows.
+
+---
+
+## 2. Ownership
+
+- **Brand steward:** TriadicFrameworks maintainer(s)
+- **Scope:** Logo, colors, typography, icons, voice, key layouts
+
+---
+
+## 3. Change Rules
+
+1. **Minor changes** (spacing, small CSS tweaks)
+   - Allowed via normal PR
+   - Require at least one maintainer review
+
+2. **Major changes** (logo, core colors, typography, voice)
+   - Require:
+     - Issue describing rationale
+     - Before/after examples
+     - Impact notes (where it propagates)
+   - Must be approved by brand steward(s)
+
+3. **Experimental variants**
+   - Live in `/experiments/brand/`
+   - Never shipped as default without explicit promotion + review
+
+---
+
+## 4. Lineage & Versioning
+
+- Maintain a `CHANGELOG` section in `design_system.md` for brand changes.
+- Tag major brand updates with a short label (e.g., `Brand v1.1 — Logo refinement`).
+- Keep old assets in `/archive/brand/` with dates.
+
+---
+
+## 5. Non‑Negotiables
+
+- Core triadic palette (Gold, Cyan, Magenta) remains recognizable.
+- Logo geometry (triangle + wave + node) is preserved.
+- Voice stays calm, precise, and invitational.
+
+---
+
+## 6. External Use
+
+- Third‑party use should:
+  - Use official logo files
+  - Avoid recoloring or distortion
+  - Link back to the main repo when possible
+
+© TriadicFrameworks — Brand Governance
+```
+
+If you want, next we can bundle all of this into a small “/brand” index page that links: logo, brand kit, voice, governance, and assets as a single, browsable surface.
+
+---
+
+Nawder — here is the **tiny, elegant, repo‑ready `/brand` index page** that ties the entire brand system together into one browsable surface.  
+It’s intentionally minimal, cinematic, and structurally aligned with the rest of the TriadicFrameworks canon.
+
+No tools, no exports — just clean HTML you can drop directly into:
+
+```
+/docs/brand/index.html
+```
+
+---
+
+# **/docs/brand/index.html — TriadicFrameworks Brand Hub**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Brand · TriadicFrameworks</title>
+
+  <link rel="stylesheet" href="../frameworks/creation_guide/triadic-vars.css" />
+  <link rel="stylesheet" href="../frameworks/creation_guide/dark.css" />
+
+  <style>
+    body {
+      margin: 0;
+      background: var(--dark-bg);
+      color: var(--dark-text);
+      font-family: system-ui, sans-serif;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 60px auto;
+      padding: 0 40px;
+    }
+
+    h1, h2 {
+      color: var(--accent-primary);
+    }
+
+    .hero {
+      width: 100%;
+      height: 240px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 50% 70%, #1b2233 0%, #050712 70%);
+      border: 1px solid var(--dark-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .hero img {
+      width: 120px;
+      height: auto;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .card {
+      background: var(--surface-1);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--dark-border);
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--accent-primary);
+    }
+
+    a {
+      color: var(--accent-secondary);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #888;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="../assets/triadic_logo.svg" alt="TriadicFrameworks Logo" />
+  </div>
+
+  <h1>TriadicFrameworks Brand</h1>
+  <p>
+    The brand system defines the visual, verbal, and structural identity of TriadicFrameworks.
+    This hub links all canonical brand artifacts: logo, kit, voice, governance, and assets.
+  </p>
+
+  <h2>Brand Components</h2>
+
+  <div class="grid">
+
+    <div class="card">
+      <h3>Logo</h3>
+      <p>The canonical TriadicFrameworks mark (triangle + wave + node).</p>
+      <p><a href="../assets/triadic_logo.svg">View Logo →</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Brand Kit</h3>
+      <p>Usage rules, clear space, color variants, do/don’t examples.</p>
+      <p><a href="brand_kit.html">Open Brand Kit →</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Brand Voice</h3>
+      <p>Tone, vocabulary, narrative rules, and canonical phrasing.</p>
+      <p><a href="brand_voice.md">Brand Voice Guide →</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Governance</h3>
+      <p>Rules for updates, approvals, lineage, and versioning.</p>
+      <p><a href="brand_governance.md">Governance Micro‑Doc →</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Logo Animation</h3>
+      <p>CSS + Lottie‑style motion spec for the animated mark.</p>
+      <p><a href="logo_animation_spec.md">Animation Spec →</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Slide Template</h3>
+      <p>Cinematic, triadic slide deck template for presentations.</p>
+      <p><a href="slide_template.html">Slide Template →</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Icon Pack</h3>
+      <p>Operator, Regime, and Field glyphs (SVG + font).</p>
+      <p><a href="../frameworks/creation_guide/icons/">Icon Set →</a></p>
+    </div>
+
+    <div class="card">
+      <h3>Favicon & App Icons</h3>
+      <p>SVG + PNG variants for browsers and mobile surfaces.</p>
+      <p><a href="../assets/favicon.svg">Favicon →</a></p>
+    </div>
+
+  </div>
+
+  <footer>
+    © TriadicFrameworks — Brand System
+  </footer>
+
+</div>
+
+</body>
+</html>
+```
+
+---
+
+# **What this gives you**
+A single, elegant `/brand` hub that:
+
+- Mirrors the cinematic, triadic aesthetic  
+- Links every brand artifact you’ve created  
+- Uses the canonical logo as the hero  
+- Provides a clean grid of brand components  
+- Fits seamlessly into the existing design system  
+- Requires no JS, no build step, no external dependencies  
+
+It’s the **brand system’s front door** — the page you’d send to collaborators, designers, or contributors.
+
+---
+
+If you want, I can now generate:
+
+### **Next expansions**
+- A **brand‑system changelog** (versioned brand lineage)  
+- A **brand‑system “starter kit” ZIP structure** (folders + placeholders)  
+- A **TriadicFrameworks press kit** (logos, screenshots, descriptions)  
+- A **brand‑system accessibility guide** (contrast, motion, typography)  
+- A **canonical triadic grid system** (layout math + CSS)  
+
+Just tell me where you want the canon to grow next.
+
+---
+
