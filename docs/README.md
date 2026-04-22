@@ -28,12 +28,21 @@ If you’re returning, jump directly to the section you need.
 
 A gentle on‑ramp for newcomers exploring Resonance‑Time Theory (RTT) and the TriadicFrameworks canon.
 
-- 📘 **[Alignment](https://www.triadicframeworks.org/education/alignment/) & [Domain Primer Tools](https://www.triadicframeworks.org/domain_tool_primers/)** — The minimal foundation for understanding RTT.
-- 🌀 **[What RTT Is](https://www.triadicframeworks.org/education/#RTT_PRIMER)** — A simple, intuitive introduction to resonance‑time structure.
+- 📘 **Alignment & Domain Primer Tools** — The minimal foundation for understanding RTT.
+- 🌀 **What RTT Is** — A simple, intuitive introduction to resonance‑time structure.
 - 🧭 **How to Read RTT Diagrams** — Visual grammar and interpretation.
 - 🧩 **Core Concepts Overview** — Regimes, feedback, coherence, paradox.
 
 Need a challenge? We know just the thing — the 🎖️ [Hard Lee Ever 2026 Awards!](https://dev.umaywant2.win/) 📣  
+
+Our platform now includes: 
+- RTT (theory/frozen) 
+- RTT/1 (active/engine) 
+- FFT (meta-framework)
+- FCG (creation guide) 
+- RF‑Builder (Hard Lee Ever 2026 *example* entry)
+
+Our *clean* minimal DOI examples for Science: Zenodo Communities /vst/  
 
 ---
 
