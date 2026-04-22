@@ -33,14 +33,14 @@ A gentle on‑ramp for newcomers exploring Resonance‑Time Theory (RTT) and the
 - 🧭 **How to Read RTT Diagrams** — Visual grammar and interpretation.
 - 🧩 **Core Concepts Overview** — Regimes, feedback, coherence, paradox.
 
-Need a challenge? We know just the thing — the 🎖️ [Hard Lee Ever 2026 Awards!](https://dev.umaywant2.win/) 📣  
+Need a challenge? We know just the thing — the 
 
 Our platform now includes: 
 - RTT (theory/frozen) 
 - RTT/1 (active/engine) 
 - FFT (meta-framework)
 - FCG (creation guide) 
-- RF‑Builder (Hard Lee Ever 2026 *example* entry)
+- RF‑Builder (🎖️ [Hard Lee Ever 2026 Awards!](https://dev.umaywant2.win/) 📣 *example* entry)
 
 Our *clean* minimal DOI examples for Science: Zenodo Communities /vst/  
 
@@ -65,7 +65,7 @@ Minimal, substrate‑aligned implementations for developers and educators.
 
 ---
 
-## 🏛️ Deep Canon | Imagined Student + AI [evolution of TriadicFrameworks](./The_Six_Stages_of_TriadicFrameworks_Evolution.md)
+## 🏛️ Deep Canon | Imagined Student + AI 
 
 - 📄 **Papers Index** — The full research canon, pre‑RTT and RTT‑aligned.  
 - 🗄️ **Zenodo Community** — Archival spine and citation record.  
@@ -98,6 +98,6 @@ Future work occurs through **instantiation, validation, or independent extension
 
 ---
 
-###### #[RTT](https://www.triadicframeworks.org/rtt) #[TriadicFrameworks](https://github.com/umaywant2/TriadicFrameworks/wiki) #[ResonanceTimeTheory](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)  
+###### #[RTT](https://www.triadicframeworks.org/rtt) #[TriadicFrameworks](https://www.triadicframeworks.org) #[ResonanceTimeTech](https://www.triadicframeworks.org/rtt/1/)  
 ###### rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
