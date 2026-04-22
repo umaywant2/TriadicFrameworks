@@ -33,16 +33,14 @@ A gentle on‑ramp for newcomers exploring Resonance‑Time Theory (RTT) and the
 - 🧭 **How to Read RTT Diagrams** — Visual grammar and interpretation.
 - 🧩 **Core Concepts Overview** — Regimes, feedback, coherence, paradox.
 
-Need a challenge? We know just the thing — the 
-
-Our platform now includes: 
-- RTT (theory/frozen) 
-- RTT/1 (active/engine) 
+### Our platform now includes: 
+- RTT (theory/**frozen**) 
+- RTT/1 (**active**/engine) 
 - FFT (meta-framework)
 - FCG (creation guide) 
-- RF‑Builder (🎖️ [Hard Lee Ever 2026 Awards!](https://dev.umaywant2.win/) 📣 *example* entry)
+- Need a challenge? [Hard Lee Ever 2026 Awards!](https://dev.umaywant2.win/) 📣 [RF‑Builder](https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/RF-Builder.html) (*example* entry)
 
-Our *clean* minimal DOI examples for Science: Zenodo Communities /vst/  
+Our 30 *clean* minimal DOI examples for Science: zenodo.org/communities/vst
 
 ---
 
