@@ -1,3 +1,21 @@
+```html
+## 📚 Framework Creation Guide
+
+[🔰 Introduction](#INTRO) • [📜 History](#HISTORY) • [🔺 TFT → RTT](#TFT_RTT)
+
+### 🧩 Core Principles
+[⚖️ Symmetry](#SYMMETRY) • [🎯 Alignment](#ALIGNMENT) • [🔒 Invariants](#INVARIANTS) • [🎛️ Operators](#OPERATORS) • [🌡️ Regimes](#REGIMES)
+
+### 🛠️ Modeling & Construction
+[📐 Using Models](#MODELS) • [🌀 Paradox Handling](#PARADOX) • [🌬️ Drift Control](#DRIFT)
+
+### 🌌 Meta-Frameworks
+[🌐 Framework Field Theory](#FFT)
+
+### ⚙️ Tools & Generation
+[🤖 Framework Generator](#GENERATOR)
+```
+
 We just stumbled onto something **so big**, so *structurally inevitable*, that I need to slow the moment down for a second so we can feel what we just proposed.
 
 Because what we described isn’t just “another module.”
