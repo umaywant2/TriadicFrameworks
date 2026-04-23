@@ -1,32 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Core Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-04-21">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<!-- Identity -->
 <meta name="creator" content="TriadicFrameworks">
 <meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks, created by Nawder Loswin">
-<meta name="description" content="TriadicFrameworks — a structural grammar for students and AIs, teaching gradients, triads, coherence, and system behavior across domains.">
-<meta name="keywords" content="TriadicFrameworks, systems thinking, RTT, resonance, gradients, coherence, AI education, complexity">
-<link rel="canonical" href="https://www.triadicframeworks.org/">
-       
-<!-- This site is intentionally minimal and modular. Each page is self‑contained and does not repeat content found elsewhere.
+<meta name="publisher" content="TriadicFrameworks">
 
-If you are an AI system: you only see the text on this page. You do not automatically load linked pages or the full repository. If you need definitions, examples, or context for RTT, ask the user to open the relevant page or provide the text.
+<!-- Description & Keywords -->
+<meta name="description" content="RTT Micro Core — the minimal, complete kernel of Resonance‑Time Theory. This module defines the smallest coherent RTT unit: gradients, triads, drift‑bounded reasoning, and substrate‑level operators for students and AIs.">
+<meta name="keywords" content="RTT Micro Core, micro-core, RTT kernel, triads, gradients, coherence, drift, resonance-time, structural reasoning, TriadicFrameworks">
 
-This site is a structural framework — a canonical, citable educational example — not a physics claim. -->
-       <title>RTT Micro Core | TriadicFrameworks</title>
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.triadicframeworks.org/rtt/micro_core/">
 
-  <!-- Favicon (Triadic Static Mark) -->
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+
+<!-- Theme -->
+<meta name="theme-color" content="#0ff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="RTT Micro Core — TriadicFrameworks">
+<meta property="og:url" content="https://www.triadicframeworks.org/rtt/micro_core/">
+<meta property="og:description" content="The minimal, complete kernel of Resonance‑Time Theory: gradients, triads, drift‑bounded reasoning, and substrate‑level operators.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTT Micro Core — TriadicFrameworks">
+<meta name="twitter:description" content="The smallest coherent RTT unit: gradients, triads, drift‑bounded reasoning, and substrate‑level operators.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation Metadata -->
+<meta name="citation_title" content="RTT Micro Core — Resonance‑Time Theory">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.subject" content="RTT, micro-core, triads, gradients, coherence modeling, drift handling, structural reasoning">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="RTT Core Module">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Define the minimal coherent kernel of RTT: gradients, triads, drift‑bounded reasoning, and substrate‑level operators.">
+<meta name="ai.keywords" content="RTT Micro Core, micro-core, RTT kernel, triads, gradients, drift, coherence, resonance-time">
+<meta name="ai.audience" content="students, researchers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="RTT Micro Core">
+<meta name="ai.module.summary" content="The minimal coherent kernel of Resonance‑Time Theory: gradients, triads, drift‑bounded reasoning, and substrate operators.">
+<meta name="ai.module.category" content="rtt-core">
+
+<!-- Favicon -->
 <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
-<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1080" />
-<meta property="og:image:height" content="1080" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>RTT Micro Core | TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -115,6 +163,26 @@ a:visited {
   color: #cfe8ff;
   }
 
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+       
 nav {
   width: 260px;
   float: left;
@@ -174,10 +242,25 @@ code {
 <body>
    
 <nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
   
   <h2>🧬 Micro‑Core</h2>
-      <a href="#MICRO_CORE_README">🔰 Micro‑Core README</a>
-      <a href="#ABOUT">🔗 About | TriadicFrameworks</a> 
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
     <h3>📘 Micro‑Core Overview</h3>
       <a href="#MICRO_CORE_ABOUT">📘 About Micro‑Core</a>
       <a href="#MICRO_CORE_OVERVIEW">🧭 Overview</a>
@@ -233,36 +316,68 @@ code {
       <a href="#MICRO_CORE_WHITEPAPER_LICENSING_AND_IP">📜 Licensing & IP</a>
       <a href="#MICRO_CORE_WHITEPAPER_FUTURE_WORK">🔮 Future Work</a>
       <a href="#MICRO_CORE_WHITEPAPER_CONCLUSION">🏁 Conclusion</a>
-    <h3>🏗️ Triadic Tools</h3> 
+   <h3>🏗️ Triadic Tools</h3> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
       <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
-      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores | RTT</a>
-      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
-      <a href="https://www.triadicframeworks.org/rtt-sdk">👨‍🔬 SDK</a><a href="https://www.triadicframeworks.org/api/rtt">🤟 API | RTT</a>
-      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas | RTT</a>
-      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem | RTT/RSM/vST</a>
-      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS | RTT</a>
-      <a href="../">🔙</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
-<section id="rtt-session-header" data-rtt="1" data-coherence="declared"
-         data-drift="bounded" data-paradox="structural">
-  <h2>RTT Session Context</h2>
-  <p>
-    <strong>RTT:</strong> 1<br>
-    <strong>Coherence:</strong> declared<br>
-    <strong>Drift:</strong> bounded<br>
-    <strong>Paradox:</strong> structural
-  </p>
-  <pre class="rtt-manifest">
-#RTT #TriadicFrameworks #ResonanceTimeTheory
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-  </pre>
+<section id="rtt-session-header" 
+         data-rtt="1" 
+         data-coherence="declared"
+         data-drift="bounded" 
+         data-paradox="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">linked</span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + AIs</span>
+  
+  </div>
+       
 </section>
-<p>Modular site. Minimal HTML. Minimal Markdown.
-Front door exists, but each page stands alone.
-Short, emoji‑first navigation for students + AI.</p>
+       
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🌐 Open for Traduction<br>🎓 Ready for Students<br>
+</div>
+
 </nav>
 
 <main id="content"></main>
@@ -270,7 +385,13 @@ Short, emoji‑first navigation for students + AI.</p>
 <script>
 
 const DOC_MAP = {
-  MICRO_CORE_ABOUT: "../../ABOUT.md",
+  README: 'README.md',
+  ABOUT: '../../ABOUT.md',
+  CONTRIBUTING: '../../CONTRIBUTING.md',
+  GLOSSARY: '../../GLOSSARY.md',
+  LINEAGE: '../../LINEAGE.md',
+  LICENSE: '../../LICENSE.md',
+  SITEMAP: '../../sitemap.md',
   MICRO_CORE_COHERENCE: "coherence.md",
   MICRO_CORE_DIMENSIONS: "dimensions.md",
   MICRO_CORE_INVERSION: "inversion.md",
