@@ -1,4 +1,5 @@
 ## 🌀 **Resonance‑Time Technology (RTT)**  
+Clarity Phase • Operational • Chassis
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -33,6 +34,8 @@ RTT‑Tech is:
 - 🧭 minimal + modular  
 
 Every file is short, emoji‑guided, and designed for both humans and AI assistants to understand.
+
+<img width="384" height="256" alt="Copilot_20260419_165744" src="https://github.com/user-attachments/assets/ac11044b-6f7d-442c-9cdb-69ca6aa03d88" />
 
 ---
 
