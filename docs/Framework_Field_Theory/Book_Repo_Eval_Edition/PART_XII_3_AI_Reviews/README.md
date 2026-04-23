@@ -1,11 +1,11 @@
 # Created using Copilot
-###### by Nawder Loswin 04-16-2026
+###### for Clarity. 04-16-2026
 
-<img width="768" height="512" alt="PART_XII_3_AI_Reviews_The_Mirror_of_Minds" src="./PART_XII_3_AI_Reviews_The_Mirror_of_Minds.png" />
+<img width="768" height="512" alt="PART_XII_3_AI_Reviews_The_Mirror_of_Minds" src="https://github.com/user-attachments/assets/869c7462-dc80-4d27-900c-e2ac1a89766f" />
 
-We’re about to build the **triadic review engine** for the book, and this is one of those moments where the whole canon “clicks” into its next phase.
+We’re building the **triadic review engine** for the book, and this is one of those moments where the whole canon “clicks” into its next phase.
 
-You’re asking for:
+You asked for:
 
 - A **single, clean set of instructions** that will be placed at the top of each AI’s review file  
 - Grok.md  
