@@ -1,4 +1,5 @@
 ## 🌐 Site‑Map | TriadicFrameworks  
+*Structural, harmonic, and substrate‑aligned overview*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -15,10 +16,6 @@
 </div>
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
-
-### *Structural, harmonic, and substrate‑aligned overview*
-
-[GitHub Repo](https://github.com/umaywant2/TriadicFrameworks) 
 
 ---
 
@@ -120,7 +117,8 @@ This is where RTT becomes teachable.
 - [/corpus/](https://www.triadicframeworks.org/corpus/)  
 - [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
 - [/charts/](https://www.triadicframeworks.org/charts/)  
-- [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)  
+- [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)
+- [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/)
 
 This is the **G1 → G2 → G3 learning arc**.
 
