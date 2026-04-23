@@ -90,7 +90,7 @@ These pages explore cognition, society, and meaning.
 - [/media_substrate_model/](https://www.triadicframeworks.org/media_substrate_model/)
 - [/media_substrate_model/analyzer/](https://www.triadicframeworks.org/media_substrate_model/analyzer/)
 - [/substrate_mind_science/](https://www.triadicframeworks.org/substrate_mind_science/)
-- [/substrate_mind_science/analyzer/](https://www.triadicframeworks.org/substrate_mind_science/analyzer/))  
+- [/substrate_mind_science/analyzer/](https://www.triadicframeworks.org/substrate_mind_science/analyzer/)  
 - [/spectral_clarity/](https://www.triadicframeworks.org/spectral_clarity/)  
 - [/glyphic_resonance/](https://www.triadicframeworks.org/glyphic_resonance/)  
 - [/glyphs/](https://www.triadicframeworks.org/glyphs/)  
@@ -295,6 +295,15 @@ TriadicFrameworks/
 │
 ├── 5. EDUCATION & CURRICULUM (Teaching Layer)
 │     ├── education/
+│     │     ├── alignment/
+│     │     ├── astrology/
+│     │     ├── awareness/
+│     │     ├── equations/
+│     │     ├── peira/
+│     │     ├── polisci/
+│     │     ├── animals/
+│     │     ├── ebooks/
+│     │     ├── QnA_Atlas/
 │     │     ├── subjects/
 │     │     └── translations/
 │     ├── curriculum/
