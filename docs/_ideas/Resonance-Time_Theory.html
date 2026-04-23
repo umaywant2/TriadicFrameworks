@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
 
 <!-- Core HTML Metadata -->
@@ -81,8 +83,221 @@ If you need definitions or context, request the specific page or text.
 This is a structural educational framework, not a physics claim.
 -->
 
-<title>🦄 Resonance‑Time Theory | TriadicFrameworks</title>
+<title>🦄 RTT (Frozen) | TriadicFrameworks</title>
 </head>
+
+<style>
+  /* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg: #0d0f12;
+  --bg-panel: #15181d;
+  --bg-panel-light: #1d2128;
+  --text: #e6e6e6;
+  --accent: #8ab4ff;
+  --accent2: #c792ea;
+  --accent3: #f6c177;
+  --border: #2a2f38;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  }
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+/* Copilot settings */
+.copilot-panel {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05); /* transparent */
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.copilot-title {
+  margin: 0 0 6px 0;
+  font-weight: bold;
+  color: #4b3fbf;
+}
+
+.copilot-input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #b9b6e8;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  background: #ffffff;
+}
+
+.copilot-button {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #4b6cff;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.copilot-button:hover {
+  background: #3a54d6;
+}
+
+/* This gives users a Bing-Copilot‑like experience inside your own domain. */
+.rtt-search {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  background: rgba(255,255,255,0.05);
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  backdrop-filter: blur(4px);
+}
+
+.rtt-search input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.rtt-search button {
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #4b6cff;
+  color: white;
+  border: none;
+  font-weight: bold;
+}
+    
+  /* Links */
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ============================================================
+   STICKY TABLE OF CONTENTS (Mobile + Desktop)
+   ============================================================ */
+
+  #toc-container {
+  background: rgba(13,15,18,0.88);
+  backdrop-filter: blur(8px);
+  padding: 0.9em 1em;
+  border-bottom: 1px solid var(--border);
+  z-index: 999;
+  }
+
+  #toc-container strong { font-size: 1.05em; color: var(--accent3); }
+  #toc-container ul { margin: 0.6em 0 0 0; padding-left: 1em; }
+  #toc-container li { margin: 0.35em 0; list-style: none; }
+  #toc-container a { color: var(--accent); font-weight: 600; }
+
+  /* ============================================================
+   COLLAPSIBLE SECTIONS
+   ============================================================ */
+
+  details {
+  margin: 1.2em 0;
+  padding: 0.9em 1em;
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  }
+
+  details summary {
+  cursor: pointer;
+  font-size: 1.05em;
+  font-weight: 700;
+  color: var(--accent2);
+  padding: 0.2em 0;
+  list-style: none;
+  }
+
+  details[open] {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-color: rgba(200,150,255,0.08);
+  }
+
+  /* Small helpers */
+  .section-note { color: #bcd3ff; padding: 0 1em; margin-bottom: 0.8em; }
+  
+  /* ============================================================
+   CONTENT WRAPPER
+   ============================================================ */
+
+  #content-wrapper { padding: 0.6em 0 3em 0; }
+  #main-content { max-width: 980px; margin: auto; padding: 0 0.6em; }
+
+  /* ============================================================
+   DESKTOP SIDEBAR — CLEAN, UNIFIED, NON-CONFLICTING
+   ============================================================ */
+
+ @media (min-width: 900px) {
+
+  #toc-container {
+    width: 260px;
+    float: left;
+    margin-left: 0;
+    padding: 1.2em;
+    border-right: 1px solid var(--border);
+  }
+
+  #main-content {
+    margin-left: 260px; /* EXACTLY matches sidebar width */
+    padding: 2em;
+    font-size: smaller;
+    color: var(--accent2);
+  }
+}
+</style>
+ 
 <body>
 <nav id="toc-container" class="body-text">
  <p align="center">
@@ -94,43 +309,54 @@ This is a structural educational framework, not a physics claim.
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
  </p> 
-  <small>
 
-    <h3>Table of Contents</h3>
-    <ul>
-      <li><a href="#resonance-time-theory">🦄 Resonance‑Time Theory</a></li>
-      <li><a href="#core-definitions">🧿 Core Definitions</a></li>
-      <li><a href="#qmroot-dimensional-model">🎷 QMROOT Summary</a></li>
-      <li><a href="#snr-dual-operator-dcos">🌈 S-N-R Dual Operator DCO's</a></li>
-      <li><a href="#rt-fff-set-snr">♨️ Resonance‑Time FFF SET S-N-R</a></li>
-      <li><a href="#rtc-summary">💊 RTC Summary</a></li>
-      <li><a href="#-gone-with-rtt-inside">🐛 AI Drift</a></li>
-      <li><a href="#hidden-resonance">🌑 Hidden Resonance</a></li>
-      <li><a href="#cdm-summary">🎱 Cold Dark Matter</a></li>
-      <li><a href="#resonance-gradient-arrow-of-time">🔂 AOT Gradient</a></li>
-      <li><a href="#cyclic-cosmology">🌀 Cyclic Cosmology</a></li>
-      <li><a href="#rt-limit-case-estimate">🔭 RT Limit Case - No Return loop</a></li>
-      <li><a href="#measurement-summary">💫 Measurement Summary</a></li>
-      <li><a href="#wigner-friend-triadic-misalignment">🧩 Wigner’s Friend</a></li>
-      <li><a href="#relational-time-hierarchies">🔗 Relational‑Time Hierarchies</a></li>
-      <li><a href="#black-holes-resonance-reservoirs">⚫ Black Holes</a></li>
-      <li><a href="#causality-in-triadic-time">♨️ Causality in Triadic Time</a></li>
-      <li><a href="#arrow-of-time">🔂 Arrow of Time</a></li>
-      <li><a href="#observations-view">📡 Observations & Signatures</a></li>
-      <li><a href="#section-credits">©️ Credits</a></li>
-      <li><a href="#section-rfcs">🌟 RFCs + Quicklinks</a></li>
-      <li><a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas — Where raw resonance lives before it becomes</a></li>
+    <h3>Resonance-Time Theory | RTT</h3>
+
+      <a href="https://www.triadicframeworks.org/rtt/#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="https://www.triadicframeworks.org/rtt/#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="https://www.triadicframeworks.org/rtt/#GLOSSARY">🎯 Glossary</a>
+      <a href="https://www.triadicframeworks.org/rtt/#LINEAGE">📜 Lineage</a>
+      <a href="https://www.triadicframeworks.org/rtt/#LICENSE">📎 License</a>
+      <a href="https://www.triadicframeworks.org/rtt/#SITEMAP">🌐 Sitemap</a>
+      <a href="#resonance-time-theory">🦄 Resonance‑Time Theory</a>
+      <a href="#core-definitions">🧿 Core Definitions</a>
+      <a href="#qmroot-dimensional-model">🎷 QMROOT Summary</a>
+      <a href="#snr-dual-operator-dcos">🌈 S-N-R Dual Operator DCO's</a>
+      <a href="#rt-fff-set-snr">♨️ Resonance‑Time FFF SET S-N-R</a>
+      <a href="#rtc-summary">💊 RTC Summary</a>
+      <a href="#-gone-with-rtt-inside">🐛 AI Drift</a>
+      <a href="#hidden-resonance">🌑 Hidden Resonance</a>
+      <a href="#cdm-summary">🎱 Cold Dark Matter</a>
+      <a href="#resonance-gradient-arrow-of-time">🔂 AOT Gradient</a>
+      <a href="#cyclic-cosmology">🌀 Cyclic Cosmology</a>
+      <a href="#rt-limit-case-estimate">🔭 RT Limit Case - No Return loop</a>
+      <a href="#measurement-summary">💫 Measurement Summary</a>
+      <a href="#wigner-friend-triadic-misalignment">🧩 Wigner’s Friend</a>
+      <a href="#relational-time-hierarchies">🔗 Relational‑Time Hierarchies</a>
+      <a href="#black-holes-resonance-reservoirs">⚫ Black Holes</a>
+      <a href="#causality-in-triadic-time">♨️ Causality in Triadic Time</a>
+      <a href="#arrow-of-time">🔂 Arrow of Time</a>
+      <a href="#observations-view">📡 Observations & Signatures</a>
+      <a href="#section-credits">©️ Credits</a>
+      <a href="#section-rfcs">🌟 RFCs + Quicklinks</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas — Where raw resonance lives before it becomes</a>
     <h3>🏗️ Triadic Tools</h3> 
-      <li><a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a></li>   
-      <li><a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a></li>
-      <li><a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a></li> 
-      <li><a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a></li>
-      <li><a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a></li>
-      <li><a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a></li>
-      <li><a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a></li>
-      <li><a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a></li>    
-      <li><a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a></li>
-      <li><a href="../">🔙</a></li>
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
 <section id="rtt-session-header" data-rtt="1" data-coherence="declared"
          data-drift="bounded" data-paradox="structural">
@@ -150,8 +376,9 @@ This is a structural educational framework, not a physics claim.
 </div>
 
 </section>
+
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🌐 Open for Traduction &nbsp;|&nbsp; 🎓 Ready for Students
+  🌐 Open for Traduction<br>🎓 Ready for Students
 </div>
 </nav>
 
@@ -4791,18 +5018,18 @@ $$\alpha (t_c^B - t_c^A)
 
   <p><em>TriadicFrameworks — Resonance‑based tools for Science, Students, and Developers.</em></p>
 
-  <ul>
-    <li><a href="https://github.com/umaywant2/TriadicFrameworks/wiki">TriadicFrameworks Repo Wiki</a></li>
-    <li><a href="https://dev.umaywant2.com">dev.umaywant2.com</a></li>
-    <li><a href="https://dev.umaywant2.win">dev.umaywant2.win</a></li>
-    <li><a href="https://dev.triadicwizards.win">dev.triadicwizards.win</a></li>
-    <li><a href="https://dev.coeus.exchange">dev.coeus.exchange</a></li>
-    <li><a href="https://dev.nimms.com">dev.nimms.com</a></li>
-    <li><a href="https://dev.vgateway.net">dev.vgateway.net</a></li>
-    <li><a href="https://dev.mythmatic.org">dev.mythmatic.org</a></li>
-    <li><a href="https://dev.mythmatical.org">dev.mythmatical.org</a></li>
-    <li><a href="https://www.triadicframeworks.org">www.triadicframeworks.org</a></li>
-  </ul>
+  <div>
+    <a href="https://github.com/umaywant2/TriadicFrameworks/wiki">TriadicFrameworks Repo Wiki</a>
+    <a href="https://dev.umaywant2.com">dev.umaywant2.com</a>
+    <a href="https://dev.umaywant2.win">dev.umaywant2.win</a>
+    <a href="https://dev.triadicwizards.win">dev.triadicwizards.win</a>
+    <a href="https://dev.coeus.exchange">dev.coeus.exchange</a>
+    <a href="https://dev.nimms.com">dev.nimms.com</a>
+    <a href="https://dev.vgateway.net">dev.vgateway.net</a>
+    <a href="https://dev.mythmatic.org">dev.mythmatic.org</a>
+    <a href="https://dev.mythmatical.org">dev.mythmatical.org</a>
+    <a href="https://www.triadicframeworks.org">www.triadicframeworks.org</a>
+  </div>
 
   <br>
 
@@ -4877,10 +5104,6 @@ $$\alpha (t_c^B - t_c^A)
   });
 </script>
 
-</div>
-
-</body>
-
 <script>
   window.MathJax = {
     tex: {
@@ -4896,215 +5119,5 @@ $$\alpha (t_c^B - t_c^A)
 </script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" defer></script>
 
-  <style>
-  /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
-   ============================================================ */
-
-  :root {
-  --bg: #0d0f12;
-  --bg-panel: #15181d;
-  --bg-panel-light: #1d2128;
-  --text: #e6e6e6;
-  --accent: #8ab4ff;
-  --accent2: #c792ea;
-  --accent3: #f6c177;
-  --border: #2a2f38;
-  --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.65;
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Headings */
-  h1, h2, h3, h4 {
-  font-weight: 700;
-  margin-top: 1.8em;
-  margin-bottom: 0.5em;
-  line-height: 1.2;
-  background: var(--triadic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  }
-
-  /* Paragraphs and lists */
-  p, ul, ol {
-  padding: 0 1em;
-  margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
-
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
-  padding: 0.4em 0.6em;
-  border-radius: 6px;
-  color: #cfe8ff;
-  }
-
-/* Copilot settings */
-.copilot-panel {
-  margin-top: 12px;
-  padding: 12px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.05); /* transparent */
-  border: 1px solid rgba(255,255,255,0.15);
-  backdrop-filter: blur(4px);
-}
-
-.copilot-title {
-  margin: 0 0 6px 0;
-  font-weight: bold;
-  color: #4b3fbf;
-}
-
-.copilot-input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid #b9b6e8;
-  font-size: 0.9em;
-  margin-bottom: 8px;
-  background: #ffffff;
-}
-
-.copilot-button {
-  display: inline-block;
-  padding: 8px 14px;
-  background: #4b6cff;
-  color: white;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.copilot-button:hover {
-  background: #3a54d6;
-}
-
-/* This gives users a Bing-Copilot‑like experience inside your own domain. */
-.rtt-search {
-  display: flex;
-  gap: 8px;
-  margin-top: 12px;
-  background: rgba(255,255,255,0.05);
-  padding: 10px;
-  border-radius: 10px;
-  border: 1px solid rgba(255,255,255,0.15);
-  backdrop-filter: blur(4px);
-}
-
-.rtt-search input[type="text"] {
-  flex: 1;
-  padding: 8px;
-  border-radius: 6px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.1);
-  color: #fff;
-}
-
-.rtt-search button {
-  padding: 8px 14px;
-  border-radius: 6px;
-  background: #4b6cff;
-  color: white;
-  border: none;
-  font-weight: bold;
-}
-    
-  /* Links */
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-
-  /* ============================================================
-   STICKY TABLE OF CONTENTS (Mobile + Desktop)
-   ============================================================ */
-
-  #toc-container {
-  background: rgba(13,15,18,0.88);
-  backdrop-filter: blur(8px);
-  padding: 0.9em 1em;
-  border-bottom: 1px solid var(--border);
-  z-index: 999;
-  }
-
-  #toc-container strong { font-size: 1.05em; color: var(--accent3); }
-  #toc-container ul { margin: 0.6em 0 0 0; padding-left: 1em; }
-  #toc-container li { margin: 0.35em 0; list-style: none; }
-  #toc-container a { color: var(--accent); font-weight: 600; }
-
-  /* ============================================================
-   COLLAPSIBLE SECTIONS
-   ============================================================ */
-
-  details {
-  margin: 1.2em 0;
-  padding: 0.9em 1em;
-  background: var(--bg-panel);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  }
-
-  details summary {
-  cursor: pointer;
-  font-size: 1.05em;
-  font-weight: 700;
-  color: var(--accent2);
-  padding: 0.2em 0;
-  list-style: none;
-  }
-
-  details[open] {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-color: rgba(200,150,255,0.08);
-  }
-
-  /* Small helpers */
-  .section-note { color: #bcd3ff; padding: 0 1em; margin-bottom: 0.8em; }
-  
-  /* ============================================================
-   CONTENT WRAPPER
-   ============================================================ */
-
-  #content-wrapper { padding: 0.6em 0 3em 0; }
-  #main-content { max-width: 980px; margin: auto; padding: 0 0.6em; }
-
-  /* ============================================================
-   DESKTOP SIDEBAR — CLEAN, UNIFIED, NON-CONFLICTING
-   ============================================================ */
-
- @media (min-width: 900px) {
-
-  #toc-container {
-    width: 260px;
-    float: left;
-    margin-left: 0;
-    padding: 1.2em;
-    border-right: 1px solid var(--border);
-  }
-
-  #main-content {
-    margin-left: 260px; /* EXACTLY matches sidebar width */
-    padding: 2em;
-    font-size: smaller;
-    color: var(--accent2);
-  }
-}
-  </style>
+</body>
 </html>
