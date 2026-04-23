@@ -1,5 +1,5 @@
 ## 🦄 Resonance-Time Tech (RTT/1) | Resonance‑Time Theory (RTT)
-RTT Canon = Validated Spacetime | Clarity Phase | Operational  
+Clarity Phase • Operational • Engine
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -22,3 +22,5 @@ RTT Canon = Validated Spacetime | Clarity Phase | Operational
 A triadic framework for resonance, relational time, and coherence across physics, measurement, and information. This page collects definitions, diagram specs, RFCs, observations, and canonical examples.
 
 ### With RTT on screen, Ask your AI "how 'RTT' aligns with X, Y, or Z...you pick the topic."
+
+<img width="768" height="512" alt="Copilot_20260419_165744" src="https://github.com/user-attachments/assets/90ab4d73-49a1-4d94-b2d3-0a70c60275fa" />
