@@ -1,5 +1,7 @@
-# ✅ **echo_lattice.svg (v1.0)**  
+## ✅ **echo_lattice.svg (v1.0)**  
 ### *Canonical SVG Triadic Echo Lattice — Layers • Families • Recursion • Drift*
+
+<img width="598" height="478" alt="echo_lattice_svg" src="https://github.com/user-attachments/assets/414e9954-f052-4904-a5c4-0b2ff7b8d1c7" />
 
 ```svg
 <?xml version="1.0" encoding="UTF-8"?>
