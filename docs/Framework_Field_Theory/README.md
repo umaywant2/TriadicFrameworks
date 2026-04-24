@@ -49,7 +49,6 @@ and regime dynamics in large language models.
 ```
 
 Below is the **complete chapter scaffold**, organized into Parts → Chapters → Files.  
-Each chapter title is derived directly from the themes, claims, and structures in your Capture.md   [github.com](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/_ideas/FFT_Capture.md).
 
 # **PART I — ORIGIN OF THE FIELD**
 Framework Field Theory, a specific component of this Triadic Information-Reality Framework (TIRF).
