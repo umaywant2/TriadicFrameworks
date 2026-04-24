@@ -21,7 +21,9 @@ This page applies the RTT Awareness model to a culturally persistent narrative: 
 The goal is **recognition**, not validation; **structure**, not belief; **resonance‑mapping**, not adjudication.
 
 <img width="606" height="341" alt="ancient_aiens_tvmovie_de_pubic_image" src="https://github.com/user-attachments/assets/1d39dea7-17fe-4b6a-b78e-a1444334f53d" />
-- Source: `https://images.tvmovie.de/9a077d6b43d1946b0c0a147b46093c0cf20fde81,id=9ccbd426,b=tvmovie,w=910,ca=0.00,4.06,100.00,85.94,rm=sk.webp`
+
+- Source: `images.tvmovie.de`
+
 ---
 
 Ancient Aliens is treated here as a **case study in fragment‑artifact accumulation**, explanatory pressure, and cross‑cultural resonance.
