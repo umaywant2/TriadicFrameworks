@@ -1,4 +1,4 @@
-# 📜 **LINEAGE.md — Canonical Lineage of TriadicFrameworks (2026 Edition)**  
+## 📜 **LINEAGE.md — Canonical Lineage of TriadicFrameworks**  
 *A structural, educational, resonance‑time‑aligned history of the canon.*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
@@ -136,7 +136,7 @@
 
 ---
 
-## **1. Triadic Frameworks (TFT_3Pack)**  
+### **1. Triadic Frameworks (TFT_3Pack)**  
 **What:**  
 The original triadic operator lattice — the earliest articulation of *three interacting forces* that shaped all later work.
 
@@ -148,7 +148,7 @@ A repeatable way to classify behavior, gradients, and coherence patterns.
 
 ---
 
-## **2. Mythmatical Model (Early Emitters Era)**  
+### **2. Mythmatical Model (Early Emitters Era)**  
 **What:**  
 An early attempt to map resonance into “forces,” “fluids,” and “frequencies” — a proto‑substrate.
 
@@ -161,7 +161,7 @@ The first safety protocols, early cleanroom logic, and the idea of resonance as 
 
 ---
 
-## **3. Nawderian Theorem (Dimensional Corridor Logic)**  
+### **3. Nawderian Theorem (Dimensional Corridor Logic)**  
 **What:**  
 A symbolic expression describing how **dimensional clarity emerges from ordered triads**.
 
@@ -173,7 +173,7 @@ The confidence that the framework could support **mathematical, educational, and
 
 ---
 
-## **4. Resonance Protocols (RFCs 019–026)**  
+### **4. Resonance Protocols (RFCs 019–026)**  
 **What:**  
 A set of scroll‑style documents defining partitions, arcs, cleanrooms, consciousness lenses, and earth‑theme mappings.
 
@@ -185,7 +185,7 @@ The first practical workflows for mapping systems, questions, and conceptual uni
 
 ---
 
-## **5. Manifests & Atlases**  
+### **5. Manifests & Atlases**  
 **What:**  
 Machine‑readable registries: idioms, quadrants, earth fields, question sets, fringe sets.
 
@@ -197,7 +197,7 @@ The Collective Consciousness Atlas and the first resonance‑cartography tools.
 
 ---
 
-## **6. Nullaium OS (NoS)**  
+### **6. Nullaium OS (NoS)**  
 **What:**  
 A research distribution embedding the early triadic kernel.
 
@@ -209,7 +209,7 @@ AI‑service experiments and the idea of a living, executable resonance‑time e
 
 ---
 
-## **7. Virtual Universe Remix**  
+### **7. Virtual Universe Remix**  
 **What:**  
 A lightweight document for constructing conceptual universes.
 
@@ -233,7 +233,7 @@ A Rosetta‑style onboarding map for students and AIs.
 
 ---
 
-## **9. Universal Translator (Resonance‑Based)**  
+### **9. Universal Translator (Resonance‑Based)**  
 **What:**  
 A scaffold for translating emotional, symbolic, and dimensional meaning across overlays.
 
@@ -245,7 +245,7 @@ The first cross‑overlay clarity tools.
 
 ---
 
-# 🧭 **2026 Canon Alignment Notes**
+## 🧭 **2026 Canon Alignment Notes**
 
 This refreshed lineage:
 
@@ -260,7 +260,7 @@ It is now ready to be used as the **canonical lineage document** across all modu
 
 ---
 
-## TriadicFrameworks Canon Timeline
+### TriadicFrameworks Canon Timeline
 
 - **1. Triadic Frameworks (TFT_3Pack)**  
   Origin of the triadic operator lattice and structural grammar.
@@ -291,7 +291,7 @@ It is now ready to be used as the **canonical lineage document** across all modu
 
 ---
 
-## Lineage → Modules Mapping
+### Lineage → Modules Mapping
 
 | Lineage Element                  | Primary Modern Modules                                      | Role in 2026 Canon                                  |
 |----------------------------------|-------------------------------------------------------------|-----------------------------------------------------|
