@@ -18,6 +18,8 @@
 
 ### *RTT‑Native Analytics Suite — Overview & Navigation*
 
+<img width="768" height="512" alt="Harmonic_Stability_Profile" src="https://github.com/user-attachments/assets/9a8680b6-617f-4862-82ae-cfa43b0f1ce0" />
+
 The **Harmonic Stability Profile** is the RTT‑native analytics suite used to:
 
 - detect harmonic stability and instability  
