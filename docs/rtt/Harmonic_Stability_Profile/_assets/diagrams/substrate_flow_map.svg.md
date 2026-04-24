@@ -1,5 +1,7 @@
-# ✅ **substrate_flow_map.svg (v1.0)**  
+## ✅ **substrate_flow_map.svg (v1.0)**  
 ### *Canonical SVG Substrate Flow Map — S → C ↔ H → So → A*
+
+<img width="599" height="365" alt="substrate_flow_map_svg" src="https://github.com/user-attachments/assets/3b5ff9a2-4c2c-4211-b9f0-9530b95bd285" />
 
 ```svg
 <?xml version="1.0" encoding="UTF-8"?>
