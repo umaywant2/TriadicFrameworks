@@ -2,35 +2,6 @@
      width="2400" height="1600"
      viewBox="0 0 2400 1600">
 
-  <defs>
-    <!-- Regime colors -->
-    <style>
-      .bg { fill: #0b0b10; }
-      .axis { stroke: #ffffff; stroke-width: 3; }
-      .axis-label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 32px; }
-      .label { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 28px; }
-      .small { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 22px; }
-      .title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 40px; font-weight: 600; }
-      .subtitle { fill: #cccccc; font-family: system-ui, sans-serif; font-size: 26px; }
-
-      .stable { fill: #1f4b99; }
-      .transitional { fill: #ffb347; }
-      .paradox { fill: #c62828; }
-      .interference { fill: #7e57c2; }
-      .coherence { fill: #2e7d32; }
-
-      .stable-stroke { stroke: #1f4b99; }
-      .transitional-stroke { stroke: #ffb347; }
-      .paradox-stroke { stroke: #c62828; }
-      .interference-stroke { stroke: #7e57c2; }
-      .coherence-stroke { stroke: #2e7d32; }
-
-      .panel { fill: #15151f; stroke: #444a60; stroke-width: 2; rx: 16; ry: 16; }
-      .panel-title { fill: #ffffff; font-family: system-ui, sans-serif; font-size: 30px; font-weight: 600; }
-      .mono { font-family: "SF Mono", "Fira Code", monospace; }
-    </style>
-  </defs>
-
   <!-- Background -->
   <rect x="0" y="0" width="2400" height="1600" class="bg"/>
 
