@@ -1,19 +1,3 @@
-# ✅ **README.md (v1.0)**  
-### *Harmonic Stability Profile — Suite Overview*
-
-```markdown
-<!-- ========================================================= -->
-<!--  HARMONIC STABILITY PROFILE (HSP) — TriadicFrameworks      -->
-<!--  Directory: /docs/rtt/Harmonic_Stability_Profile/          -->
-<!--  Version: v1.0                                             -->
-<!--  Status: Canon-Stable                                      -->
-<!--  Author: Nawder Loswin                                     -->
-<!--  Purpose: Entry point for the RTT-native analytics suite   -->
-<!-- ========================================================= -->
-```
-
----
-
 # 🎼 **Harmonic Stability Profile (HSP)**  
 ### *RTT‑Native Analytics Suite — Overview & Navigation*
 
