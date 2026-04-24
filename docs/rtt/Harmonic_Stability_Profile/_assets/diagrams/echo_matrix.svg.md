@@ -1,5 +1,7 @@
-# ✅ **echo_matrix.svg (v1.0)**  
+## ✅ **echo_matrix.svg (v1.0)**  
 ### *Canonical SVG Echo Matrix — Families × Substrates × Stability*
+
+<img width="597" height="439" alt="echo_matrix_svg" src="https://github.com/user-attachments/assets/eecc19a6-1ae1-4bdf-a11b-4df5fdbaa547" />
 
 ```svg
 <?xml version="1.0" encoding="UTF-8"?>
