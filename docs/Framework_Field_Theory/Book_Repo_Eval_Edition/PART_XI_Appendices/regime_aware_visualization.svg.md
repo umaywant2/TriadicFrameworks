@@ -1,3 +1,5 @@
+<img width="1506" height="1005" alt="Regime_Aware_Visualization_Diagram_Framework_Field_Theory" src="https://github.com/user-attachments/assets/6cb487c0-7ded-4e73-bd18-53b4be0584c5" />  
+
 ```svg
 <svg xmlns="http://www.w3.org/2000/svg"
      width="2400" height="1600"
