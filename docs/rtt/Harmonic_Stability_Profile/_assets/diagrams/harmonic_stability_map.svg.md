@@ -1,5 +1,8 @@
-# ✅ **harmonic_stability_map.svg (v1.0)**  
+## ✅ **harmonic_stability_map.svg (v1.0)**  
 ### *Canonical SVG Harmonic Stability Map — Metrics × Tiers*
+
+<img width="597" height="439" alt="harmonic_stability_map_svg" src="https://github.com/user-attachments/assets/f6e18a73-9c81-4bac-acea-2c78deeb8f75" />
+
 
 ```svg
 <?xml version="1.0" encoding="UTF-8"?>
