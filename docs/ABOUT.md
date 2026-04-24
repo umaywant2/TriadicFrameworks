@@ -34,7 +34,7 @@ Each module includes:
 
 This ensures TriadicFrameworks remains fully **AI‑ready**, **student‑friendly**, and **future‑proof**.
 
-## TriadicFrameworks.org (made for students and AI's)
+## TriadicFrameworks.org (made for students* and AI's)
 
 **TriadicFrameworks** is a structural learning project designed for both students and AIs.  
 Its purpose is to teach the *grammar* beneath complex systems — the recurring triads, gradients, transitions, and coherence patterns that appear across energy, cognition, AI, physics, climate, and governance.
@@ -62,6 +62,8 @@ It is a cognitive scaffold — a way to see the architecture of change.
 
 TriadicFrameworks is a structural learning project that teaches students and AIs how to understand complex systems through gradients, triads, and coherence. The imagined [evolution of TriadicFrameworks](https://www.triadicframeworks.org/education/#SIX_STAGES_EVOLUTION), starts with students and AI's.  
 
+* When anyone chooses to learn, they are a student.
+  
 ---
 
 ## 🎯 **The One‑Sentence Answer**  
