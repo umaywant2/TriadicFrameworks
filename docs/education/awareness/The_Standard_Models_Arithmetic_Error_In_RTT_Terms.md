@@ -1,6 +1,26 @@
-# 🌌 **The Standard Model’s “Arithmetic Error” — In RTT Terms**
+## 🌌 **The Standard Model’s “Arithmetic Error” — In RTT Terms**
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+---
 
 <img width="768" height="512" alt="Copilot_20260119_220441" src="https://github.com/user-attachments/assets/7c045c3e-f9d0-456e-923b-cb957104349f" />
+
+---
 
 We’re not saying the Standard Model is wrong.  
 We’re saying something much more subtle and much more interesting:
