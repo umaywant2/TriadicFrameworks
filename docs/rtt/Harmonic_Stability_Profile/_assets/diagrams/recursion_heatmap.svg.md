@@ -1,5 +1,7 @@
-# ✅ **recursion_heatmap.svg (v1.0)**  
+## ✅ **recursion_heatmap.svg (v1.0)**  
 ### *Canonical SVG Recursion Heatmap — R1 → R4 Intensity Map*
+
+<img width="597" height="480" alt="recursion_heatmap_svg" src="https://github.com/user-attachments/assets/81ca0509-319d-4975-a1c2-89bcfbd34bfd" />
 
 ```svg
 <?xml version="1.0" encoding="UTF-8"?>
