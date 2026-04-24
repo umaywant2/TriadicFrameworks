@@ -1,7 +1,9 @@
-# ✅ **drift_map.svg (v1.0)**  
+## ✅ **drift_map.svg (v1.0)**  
 ### *Canonical SVG Drift Map — D1 → D2 → D3 → D4*
 
-````svg
+<img width="598" height="245" alt="drift_map_svg" src="https://github.com/user-attachments/assets/e639d0e2-fa70-43f9-a755-33a7a35284c7" />
+
+```svg
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="880" height="360" viewBox="0 0 880 360"
      xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +66,7 @@
   </g>
 
 </svg>
-````
+```
 
 ---
 
