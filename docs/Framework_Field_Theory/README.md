@@ -31,7 +31,7 @@
 ## *Proposed Chapter Architecture (Based on Capture.md)*  
 *(repo‑ready, print‑ready, ISBN‑pending)* 
 
-<img width="256" height="170" alt="RTT stars" src="./Book_Repo_Eval_Edition/RTT_stars.png" />
+<img width="768" height="512" alt="RTT stars" src="./Book_Repo_Eval_Edition/RTT_stars.png" />
 
 ```markdown
 ────────────────────────────────────────────
