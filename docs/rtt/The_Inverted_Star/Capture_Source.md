@@ -1,7 +1,5 @@
 ## The Inverted Star - Capture Source
 
-# **📘 Framework Field Theory — Repo Eval Edition**  
-
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
