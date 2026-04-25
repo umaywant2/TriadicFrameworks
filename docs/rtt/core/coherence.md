@@ -38,9 +38,8 @@ How well the system’s internal patterns fit together.
 - substrate constraints  
 
 **Equation:**  
-\[
-C_{\text{struct}} = f(\text{patterns})
-\]
+
+$$C_{\text{struct}} = f(\text{patterns})$$
 
 ---
 
@@ -53,9 +52,8 @@ How long the system can maintain stability.
 - collapse thresholds  
 
 **Equation:**  
-\[
-C_{\text{time}} = f(\text{drift})
-\]
+
+$$C_{\text{time}} = f(\text{drift})$$
 
 ---
 
@@ -67,9 +65,8 @@ How well the system filters noise and reinforces signal.
 - noise reduction  
 
 **Equation:**  
-\[
-C_{\text{res}} = S - N
-\]
+
+$$C_{\text{res}} = S - N$$
 
 Where **S** = signal, **N** = noise.
 
@@ -81,9 +78,7 @@ Here is the completed RTT‑Tech version:
 
 Total coherence is the sum of the three coherence components:
 
-\[
-C_{\text{total}} = C_{\text{struct}} + C_{\text{time}} + C_{\text{res}}
-\]
+$$C_{\text{total}} = C_{\text{struct}} + C_{\text{time}} + C_{\text{res}}$$
 
 A system with high total coherence:
 
@@ -123,9 +118,8 @@ Operators directly modify coherence:
 - **Invert** → collapses → twists → re‑emerges  
 
 **Equation:**  
-\[
-C_{t+1} = O(C_t)
-\]
+
+$$C_{t+1} = O(C_t)$$
 
 ---
 
