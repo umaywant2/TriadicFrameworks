@@ -47,9 +47,8 @@ The system loses coherence and dimensional access.
 - boundary dissolution  
 
 ### Equation
-\[
-C(x) = x_{\text{collapsed}}
-\]
+
+$$C(x) = x_{\text{collapsed}}$$
 
 Collapse is not failure — it is **release**.
 
@@ -65,9 +64,8 @@ The system reorients its internal structure.
 - substrate‑specific reordering  
 
 ### Equation
-\[
-T(x) = x_{\text{reoriented}}
-\]
+
+$$T(x) = x_{\text{reoriented}}$$
 
 Twist is the **reconfiguration engine** of RTT.
 
@@ -83,9 +81,8 @@ The system reappears with new dimensional access.
 - new operator availability  
 
 ### Equation
-\[
-E(x) = x_{\text{emergent}}
-\]
+
+$$E(x) = x_{\text{emergent}}$$
 
 Emergence is the **return to form**.
 
@@ -94,9 +91,7 @@ Emergence is the **return to form**.
 # 🧮 **Full Inversion Equation**
 The complete inversion sequence is:
 
-\[
-I(x) = E(T(C(x)))
-\]
+$$I(x) = E(T(C(x)))$$
 
 This is the canonical RTT inversion formula.
 
@@ -107,9 +102,7 @@ Inversion is the primary mechanism for dimensional change.
 
 Typical pattern:
 
-\[
-2D \rightarrow 0D \rightarrow 3D
-\]
+$$2D \rightarrow 0D \rightarrow 3D$$
 
 Meaning:
 
