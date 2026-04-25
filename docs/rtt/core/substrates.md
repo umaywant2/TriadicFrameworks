@@ -39,9 +39,8 @@ Examples: atoms, molecules, cells, crystals, materials.
 - inversion often triggered by phase change  
 
 ### Equation
-\[
-S_{\text{phys}} = f(\text{energy},\ \text{geometry},\ \text{constraints})
-\]
+
+$$S_{\text{phys}} = f(\text{energy},\ \text{geometry},\ \text{constraints})$$
 
 ---
 
@@ -55,9 +54,8 @@ Examples: minds, perception systems, memory, attention.
 - inversion triggered by overload or insight  
 
 ### Equation
-\[
-S_{\text{cog}} = f(\text{patterns},\ \text{attention},\ \text{drift})
-\]
+
+$$S_{\text{cog}} = f(\text{patterns},\ \text{attention},\ \text{drift})$$
 
 ---
 
@@ -73,9 +71,8 @@ Examples: AI models, algorithms, digital agents, hybrid systems.
 - inversion triggered by overload, context collapse, or reinitialization  
 
 ### Equation
-\[
-S_{\text{syn}} = f(\text{architecture},\ \text{context},\ \text{compute})
-\]
+
+$$S_{\text{syn}} = f(\text{architecture},\ \text{context},\ \text{compute})$$
 
 ---
 
