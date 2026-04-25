@@ -35,24 +35,19 @@ This triad loops every time the system changes.
 # 1️⃣ **Measure Coherence**
 Coherence is computed from three components:
 
-\[
-C_{\text{total}} = C_{\text{struct}} + C_{\text{time}} + C_{\text{res}}
-\]
+$$C_{\text{total}} = C_{\text{struct}} + C_{\text{time}} + C_{\text{res}}$$
 
 ### Structural Coherence
-\[
-C_{\text{struct}} = f(\text{patterns})
-\]
+
+$$C_{\text{struct}} = f(\text{patterns})$$
 
 ### Temporal Coherence
-\[
-C_{\text{time}} = f(\text{drift})
-\]
+
+$$C_{\text{time}} = f(\text{drift})$$
 
 ### Resonance Coherence
-\[
-C_{\text{res}} = S - N
-\]
+
+$$C_{\text{res}} = S - N$$
 
 Where **S** = signal, **N** = noise.
 
@@ -61,9 +56,7 @@ Where **S** = signal, **N** = noise.
 # 2️⃣ **Update Coherence (Operator‑Driven)**
 Every RTT operator transforms coherence:
 
-\[
-C_{t+1} = O(C_t)
-\]
+$$C_{t+1} = O(C_t)$$
 
 ### Stabilize Operators  
 Increase coherence.
@@ -79,9 +72,7 @@ Collapse → twist → re‑emerge with new coherence structure.
 # 3️⃣ **Recover Coherence**
 Recovery is triggered when coherence falls below a threshold:
 
-\[
-C_{\text{total}} < C_{\text{min}}
-\]
+$$C_{\text{total}} < C_{\text{min}}$$
 
 Recovery uses a three‑step inversion micro‑sequence:
 
@@ -96,9 +87,7 @@ This is a local inversion, not a full regime inversion.
 # 🔄 **Dimensional Effects**
 Dimensional access updates automatically:
 
-\[
-D_{t+1} = O(D_t)
-\]
+$$D_{t+1} = O(D_t)$$
 
 - High coherence → stable 2D/3D  
 - Medium coherence → unstable 2D  
@@ -112,9 +101,7 @@ The engine ensures dimensional access always matches coherence.
 # 🔁 **Regime Effects**
 Regimes update through the same operator equation:
 
-\[
-R_{t+1} = O(R_t)
-\]
+$$R_{t+1} = O(R_t)$$
 
 Typical patterns:
 
