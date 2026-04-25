@@ -45,9 +45,8 @@ Tracks meaningful patterns:
 - operator effects  
 
 **Equation:**  
-\[
-S_{\text{obs}} = f(\text{patterns})
-\]
+
+$$S_{\text{obs}} = f(\text{patterns})$$
 
 ---
 
@@ -60,9 +59,8 @@ Tracks interference and drift:
 - collapse signals  
 
 **Equation:**  
-\[
-N_{\text{obs}} = f(\text{noise})
-\]
+
+$$N_{\text{obs}} = f(\text{noise})$$
 
 ---
 
@@ -76,18 +74,15 @@ Tracks state transitions:
 - Dissolution  
 
 **Equation:**  
-\[
-R_{\text{obs}} = f(\text{regime\_signals})
-\]
+
+$$R_{\text{obs}} = f(\text{regime\_signals})$$
 
 ---
 
 # 🧩 **Observer Resolution**
 Observer resolution determines how much structure can be seen.
 
-\[
-\text{Resolution} = S_{\text{obs}} - N_{\text{obs}}
-\]
+$$\text{Resolution} = S_{\text{obs}} - N_{\text{obs}}$$
 
 Higher resolution → clearer regime detection.
 
@@ -107,9 +102,7 @@ Dimensional access is always **observer‑dependent**.
 # 🕒 **Observer + Time**
 Observers track coherence over time:
 
-\[
-C_{t+1} = O(C_t)
-\]
+$$C_{t+1} = O(C_t)$$
 
 Where **O** is the operator applied by or detected by the observer.
 
