@@ -48,9 +48,7 @@ This triad is the backbone of RTT dimensional reasoning.
 # 1️⃣ **Dimensional Access**
 Access describes what the system *can* do.
 
-\[
-D_{\text{access}} = \{0D,\ 1D,\ 2D,\ 3D\}
-\]
+$$D_{\text{access}} = \{0D,\ 1D,\ 2D,\ 3D\}$$
 
 (From your original file)
 
@@ -59,9 +57,7 @@ D_{\text{access}} = \{0D,\ 1D,\ 2D,\ 3D\}
 # 2️⃣ **Dimensional Stability**
 Stability describes how long the system can *stay* in a dimension.
 
-\[
-D_{\text{stable}} = f(\text{coherence},\ \text{substrate})
-\]
+$$D_{\text{stable}} = f(\text{coherence},\ \text{substrate})$$
 
 (From your original file)
 
@@ -73,9 +69,7 @@ Here is the completed RTT‑Tech version:
 
 Dimensional transitions describe **how** a system moves between 0D, 1D, 2D, and 3D.
 
-\[
-D_{t+1} = O(D_t)
-\]
+$$D_{t+1} = O(D_t)$$
 
 Where **O** is any RTT operator:
 
@@ -94,9 +88,7 @@ Where **O** is any RTT operator:
 ### Inversion‑Driven Transitions
 Inversion often flips:
 
-\[
-2D \rightarrow 3D
-\]
+$$2D \rightarrow 3D$$
 
 after collapse → twist → emergence.
 
