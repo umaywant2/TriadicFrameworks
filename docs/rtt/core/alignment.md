@@ -31,9 +31,7 @@ How the system’s internal patterns fit together.
 - dimensional access  
 - substrate constraints  
 
-\[
-A_{\text{struct}} = f(\text{boundaries},\ \text{operators},\ \text{dimensions})
-\]
+$$A_{\text{struct}} = f(\text{boundaries},\ \text{operators},\ \text{dimensions})$$
 
 ---
 
@@ -45,9 +43,7 @@ How the system maintains coherence *over time*.
 - regime transitions  
 - inversion events  
 
-\[
-A_{\text{time}} = f(\text{stability},\ \text{drift},\ \text{regimes})
-\]
+$$A_{\text{time}} = f(\text{stability},\ \text{drift},\ \text{regimes})$$
 
 ---
 
@@ -58,17 +54,13 @@ How the system maintains pattern‑level coherence.
 - pattern reinforcement  
 - noise reduction  
 
-\[
-A_{\text{res}} = f(\text{frequency},\ \text{pattern},\ \text{noise})
-\]
+$$A_{\text{res}} = f(\text{frequency},\ \text{pattern},\ \text{noise})$$
 
 ---
 
 # 🔺 **Total Alignment Equation**
 
-\[
-A_{\text{total}} = A_{\text{struct}} + A_{\text{time}} + A_{\text{res}}
-\]
+$$A_{\text{total}} = A_{\text{struct}} + A_{\text{time}} + A_{\text{res}}$$
 
 If any component collapses, alignment collapses.
 
