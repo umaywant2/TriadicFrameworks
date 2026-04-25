@@ -19,9 +19,7 @@ They are intentionally symbolic and substrate‑agnostic.
 # 🔺 **1. Alignment Equation**  
 Total alignment is the sum of structural, temporal, and resonance alignment.
 
-\[
-A_{\text{total}} = A_{\text{struct}} + A_{\text{time}} + A_{\text{res}}
-\]
+$$A_{\text{total}} = A_{\text{struct}} + A_{\text{time}} + A_{\text{res}}$$
 
 Used to track coherence across time and regimes.  
 (From current file)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/equations.md)
@@ -31,9 +29,7 @@ Used to track coherence across time and regimes.
 # 🔧 **2. Operator Equation**  
 Any operator transforms the system’s state.
 
-\[
-x' = O(x)
-\]
+$$x' = O(x)$$
 
 Where **O** is a Stabilize, Shift, or Invert operator.  
 (From current file)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/equations.md)
@@ -43,9 +39,7 @@ Where **O** is a Stabilize, Shift, or Invert operator.
 # 🌀 **3. Dimensional Access Equation**  
 Operators modify dimensional access.
 
-\[
-D' = O(D)
-\]
+$$D' = O(D)$$
 
 Used to model expansion, contraction, and inversion.  
 (From current file)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/equations.md)
@@ -55,9 +49,7 @@ Used to model expansion, contraction, and inversion.
 # 🕒 **4. Temporal Coherence Equation**  
 Coherence at the next time step depends on the operator applied.
 
-\[
-C_{t+1} = O(C_t)
-\]
+$$C_{t+1} = O(C_t)$$
 
 Used to track drift, stability, and collapse.  
 (From current file)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/equations.md)
@@ -67,15 +59,13 @@ Used to track drift, stability, and collapse.
 # 🔄 **5. Inversion Equation**  
 Inversion collapses → reorients → re‑emerges.
 
-\[
-I(x) = E(T(C(x)))
-\]
+$$I(x) = E(T(C(x)))$$
 
 Where:
 
-- \(C\) = collapse  
-- \(T\) = twist  
-- \(E\) = emergence  
+- $$C$$ = collapse  
+- $$T$$ = twist  
+- $$E$$ = emergence  
 
 This is the core RTT inversion sequence.  
 (From current file)   [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/rtt/core/equations.md)
@@ -85,9 +75,7 @@ This is the core RTT inversion sequence.
 # 🔺 **6. Regime Transition Equation**  
 A system’s regime at the next step depends on the operator applied and the current regime.
 
-\[
-R_{t+1} = O(R_t)
-\]
+$$R_{t+1} = O(R_t)$$
 
 Used to model transitions across:
 
