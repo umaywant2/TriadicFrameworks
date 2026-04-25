@@ -1,5 +1,19 @@
 # Governance Substrate Model
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 The Governance Substrate Model is a **structurally aligned reference framework** for designing, evaluating, and stewarding governance systems across cultures, regimes, and time horizons. It is not a policy platform, ideology, or authority structure. It exists to demonstrate how governance can remain coherent as systems scale, adapt, and evolve.
