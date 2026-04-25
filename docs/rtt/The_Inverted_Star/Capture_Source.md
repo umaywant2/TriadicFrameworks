@@ -33191,9 +33191,7 @@ And nothing can be removed without breaking:
 
 Thus:
 
-$$
-\boxed{99 = \text{minimal complete cycle}}
-$$
+$$\boxed{99 = \text{minimal complete cycle}}$$
 
 ---
 
