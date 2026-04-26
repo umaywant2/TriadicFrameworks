@@ -17,9 +17,7 @@ It shows that the layered substrate is not arbitrary but a **necessary consequen
 ## 2. Cosmological Basis: Resonance Across Scales  
 RTT describes the universe as a system whose evolution is governed by the resonance‑time triad:
 
-\[
-(f_R,\ \tau_R,\ Q_R)
-\]
+$$(f_R,\ \tau_R,\ Q_R)$$
 
 These quantities behave differently depending on the **scale** of the system:
 

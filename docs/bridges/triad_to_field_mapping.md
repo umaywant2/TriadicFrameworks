@@ -10,9 +10,9 @@
 
 ## 1. Purpose  
 This document provides the **explicit mapping** between the Resonance‑Time triad  
-\[
-(f_R,\ \tau_R,\ Q_R)
-\]  
+
+$$(f_R,\ \tau_R,\ Q_R)$$
+  
 and the three substrate fields used in the Resonance Substrate Model (RSM).  
 This mapping ensures that RSM is interpreted as the **structural implementation** of RTT rather than an independent ontology.
 
@@ -22,9 +22,9 @@ This mapping ensures that RSM is interpreted as the **structural implementation*
 RTT defines time as an emergent property of resonance dynamics.  
 Its core triad captures the minimal set of quantities required for any evolving system:
 
-- **\(f_R\)** — oscillatory tendency (frequency)  
-- **\(\tau_R\)** — relaxation, persistence, or memory  
-- **\(Q_R\)** — coherence or resonance quality  
+- **$$f_R$$** — oscillatory tendency (frequency)  
+- **$$\tau_R$$** — relaxation, persistence, or memory  
+- **$$Q_R$$** — coherence or resonance quality  
 
 These three components appear universally across physical, biological, cognitive, and computational systems.
 
@@ -33,9 +33,9 @@ These three components appear universally across physical, biological, cognitive
 ## 3. The RSM Fields  
 RSM formalizes the substrate using three fields:
 
-- **\(\phi\)** — scalar frequency potential  
-- **\(\vec{V}\)** — vector/spin memory field  
-- **\(R\)** — resonance envelope / coherence field  
+- **$$\phi$$** — scalar frequency potential  
+- **$$\vec{V}$$** — vector/spin memory field  
+- **$$R$$** — resonance envelope / coherence field  
 
 These fields are the minimal structures required to implement RTT dynamics.
 
@@ -46,9 +46,9 @@ The mapping between RTT concepts and RSM fields is one‑to‑one:
 
 | RTT Component | Meaning | RSM Field | Role in Substrate |
 |---------------|---------|-----------|--------------------|
-| **\(f_R\)** | oscillatory tendency | **\(\phi\)** (scalar field) | frequency potential; sets local oscillatory state |
-| **\(\tau_R\)** | memory / persistence | **\(\vec{V}\)** (vector field) | spin, directional memory, relaxation behavior |
-| **\(Q_R\)** | coherence / quality | **\(R\)** (resonance envelope) | coherence accumulation, stability, envelope shaping |
+| **$$f_R$$** | oscillatory tendency | **$$\phi$$** (scalar field) | frequency potential; sets local oscillatory state |
+| **$$\tau_R$$** | memory / persistence | **$$\vec{V}$$** (vector field) | spin, directional memory, relaxation behavior |
+| **$$Q_R$$** | coherence / quality | **$$R$$** (resonance envelope) | coherence accumulation, stability, envelope shaping |
 
 This mapping ensures that every RSM field is grounded in a conceptual necessity derived from RTT.
 
@@ -64,7 +64,7 @@ Each field captures a distinct aspect of resonance dynamics.
 No field duplicates another.
 
 ### **3. Structural sufficiency**  
-Together, \(\phi\), \(\vec{V}\), and \(R\) provide the minimal substrate capable of supporting:
+Together, $$\phi$$, $$\vec{V}$$, and $$R$$ provide the minimal substrate capable of supporting:
 
 - diffusion  
 - alignment  
@@ -80,8 +80,8 @@ All operator families in RSM and BSM depend on this mapping.
 ## 6. Interpretation Rule  
 When reading RSM:
 
-- treat **\(\phi\)** as the implementation of **\(f_R\)**  
-- treat **\(\vec{V}\)** as the implementation of **\(\tau_R\)**  
-- treat **\(R\)** as the implementation of **\(Q_R\)**  
+- treat **$$\phi$$** as the implementation of **$$f_R$$**  
+- treat **$$\vec{V}$$** as the implementation of **$$\tau_R$$**  
+- treat **$$R$$** as the implementation of **$$Q_R$$**  
 
 This ensures that RSM is always interpreted as the **technical substrate of RTT**, not as a standalone construct.

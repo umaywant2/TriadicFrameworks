@@ -17,15 +17,13 @@ This document explains **why resonance is the foundational organizing principle*
 RTT defines time not as a background parameter but as an **emergent property of resonance dynamics**.  
 The core triad:
 
-\[
-(f_R,\ \tau_R,\ Q_R)
-\]
+$$(f_R,\ \tau_R,\ Q_R)$$
 
 captures three universal aspects of any evolving system:
 
-- **\(f_R\)** — frequency or oscillatory tendency  
-- **\(\tau_R\)** — relaxation, memory, or persistence  
-- **\(Q_R\)** — coherence or quality of resonance  
+- **$$f_R$$** — frequency or oscillatory tendency  
+- **$$\tau_R$$** — relaxation, memory, or persistence  
+- **$$Q_R$$** — coherence or quality of resonance  
 
 These three quantities appear across physical, biological, cognitive, and computational systems.  
 They form the **minimal triadic structure** required to describe:
@@ -64,9 +62,9 @@ RSM formalizes the RTT triad into three substrate fields:
 
 | RTT Concept | Meaning | RSM Field | Role in Substrate |
 |-------------|---------|-----------|--------------------|
-| \(f_R\) | oscillatory tendency | \(\phi\) (scalar field) | frequency potential |
-| \(\tau_R\) | memory / persistence | \(\vec{V}\) (vector field) | spin / directional memory |
-| \(Q_R\) | coherence / quality | \(R\) (resonance envelope) | coherence and stability |
+| $$f_R$$ | oscillatory tendency | $$\phi$$ (scalar field) | frequency potential |
+| $$\tau_R$$ | memory / persistence | $$\vec{V}$$ (vector field) | spin / directional memory |
+| $$Q_R$$ | coherence / quality | $$R$$ (resonance envelope) | coherence and stability |
 
 This mapping ensures that **every RSM field is grounded in a physical or conceptual necessity** derived from RTT.
 
@@ -78,7 +76,7 @@ Once the substrate is defined by resonance fields, the operator families follow 
 - **Diffusion** arises from frequency gradients.  
 - **Alignment** arises from vector/spin coherence.  
 - **Coupling** arises from interactions between oscillatory modes.  
-- **Activation and damping** arise from changes in coherence \(Q_R\).  
+- **Activation and damping** arise from changes in coherence $$Q_R$$   
 - **Stabilization** arises from resonance envelope dynamics.
 
 These operators are not arbitrary.  

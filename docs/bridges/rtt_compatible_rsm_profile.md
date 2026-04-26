@@ -31,9 +31,9 @@ An RTT‑compatible RSM configuration must encode the Resonance‑Time triad exp
 
 | RTT Quantity | Meaning | RSM Field | Configuration Requirement |
 |--------------|---------|-----------|----------------------------|
-| \(f_R\) | oscillatory tendency | \(\phi\) | non‑uniform scalar frequency potential |
-| \(\tau_R\) | memory / persistence | \(\vec{V}\) | anisotropic vector field with directional bias |
-| \(Q_R\) | coherence / quality | \(R\) | non‑zero resonance envelope with gain dynamics |
+| $$f_R$$ | oscillatory tendency | $$\phi$$ | non‑uniform scalar frequency potential |
+| $$\tau_R$$ | memory / persistence | $$\vec{V}$$ | anisotropic vector field with directional bias |
+| $$Q_R$$ | coherence / quality | $$R$$ | non‑zero resonance envelope with gain dynamics |
 
 **Constraint:**  
 All three fields must be initialized with **non‑zero baseline values**.  
@@ -80,9 +80,9 @@ Uniform operator weights suppress resonance differentiation.
 
 RTT‑compatible simulations must satisfy:
 
-- non‑zero baseline resonance \(R_0 > 0\)  
+- non‑zero baseline resonance $$R_0 > 0$$  
 - phase offsets between oscillatory modes  
-- spatial or structural gradients in \(\phi\) or \(\vec{V}\)  
+- spatial or structural gradients in $$\phi$$ or $$\vec{V}$$  
 - broken symmetry at initialization  
 
 These conditions reflect physical realism:

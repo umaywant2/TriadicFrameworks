@@ -31,7 +31,7 @@ These triads capture the minimal conceptual structure needed to describe resonan
 ---
 
 ## 3. Operator Families in RSM/BSM  
-The substrate models define operator families that act on the triadic fields \((\phi, \vec{V}, R)\):
+The substrate models define operator families that act on the triadic fields $$(\phi, \vec{V}, R)$$ 
 
 - **Diffusion operators**  
 - **Alignment operators**  
@@ -53,8 +53,8 @@ Each conceptual triad produces a specific family of operators.
 Frequency modes propagate like fluids and interact through forces.
 
 **Operator consequences:**  
-- **Diffusion** arises from frequency gradients in \(\phi\).  
-- **Flow/transport** arises from vector‑field dynamics in \(\vec{V}\).  
+- **Diffusion** arises from frequency gradients in $$\phi$$ .  
+- **Flow/transport** arises from vector‑field dynamics in $$\vec{V}$$ .  
 - **Coupling** arises from interactions between oscillatory modes.
 
 **Mapping:**  
@@ -71,8 +71,8 @@ These operators implement the propagation and interaction behaviors implied by F
 Systems store directional memory (spin), respond to fields (electro), and relax toward equilibrium (temperature).
 
 **Operator consequences:**  
-- **Alignment** operators adjust \(\vec{V}\) toward coherent spin states.  
-- **Spin‑response** operators mediate interactions between \(\vec{V}\) and \(\phi\).  
+- **Alignment** operators adjust $$\vec{V}$$ toward coherent spin states.  
+- **Spin‑response** operators mediate interactions between $$\vec{V}$$ and $$\phi$$ .  
 - **Relaxation** operators implement decay toward equilibrium.
 
 **Mapping:**  
@@ -89,8 +89,8 @@ These operators implement the memory and alignment behaviors implied by SET.
 Systems move between silence (low activity), noise (disorder), and resonance (coherence).
 
 **Operator consequences:**  
-- **Activation** increases resonance envelope \(R\).  
-- **Damping** decreases resonance envelope \(R\).  
+- **Activation** increases resonance envelope $$R$$ .  
+- **Damping** decreases resonance envelope $$R$$ .  
 - **Coherence‑gain** stabilizes resonant states.
 
 **Mapping:**  

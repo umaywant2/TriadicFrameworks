@@ -35,7 +35,7 @@ Each bridge document addresses one of these questions.
 
 ### **1. Why Resonance Is the Substrate**  
 Explains why resonance is the minimal, sufficient organizing principle for any system evolving under RTT.  
-Shows how the RTT triad \((f_R, \tau_R, Q_R)\) necessitates the three RSM fields.
+Shows how the RTT triad $$(f_R, \tau_R, Q_R)$$ necessitates the three RSM fields.
 
 → `why_resonance_is_the_substrate.md`
 
@@ -44,9 +44,9 @@ Shows how the RTT triad \((f_R, \tau_R, Q_R)\) necessitates the three RSM fields
 ### **2. Triad → Field Mapping**  
 Provides the explicit one‑to‑one mapping between RTT’s conceptual triad and RSM’s mathematical fields:
 
-- \(f_R \rightarrow \phi\)  
-- \(\tau_R \rightarrow \vec{V}\)  
-- \(Q_R \rightarrow R\)
+- $$f_R \rightarrow \phi$$  
+- $$\tau_R \rightarrow \vec{V}$$  
+- $$Q_R \rightarrow R\)
 
 → `triad_to_field_mapping.md`
 
