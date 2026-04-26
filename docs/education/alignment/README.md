@@ -1,4 +1,4 @@
-## 🌐 What RTT Unlocked
+## 🌐 Alignment - What RTT Unlocked
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🎯Education%20Core-🔺Alignment%20Pillars%20Active-4c8eda?style=for-the-badge" alt="🎯Education Core | 🔺Alignment Pillars Active"/>
 
 **FFF**  
 A way to see systems not as static objects, but as *flows that stabilize*. It revealed how frequency, fluids, and forces co‑emerge — allowing RTT to treat change as structure, not noise. 🌊
