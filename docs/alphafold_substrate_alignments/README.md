@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧬Substrate%20Aligned-🧪Validation%20Ready-4c8eda?style=for-the-badge" alt="🧬Substrate Aligned | 🧪Validation Ready"/>
 
 ## *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
 
