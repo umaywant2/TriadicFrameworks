@@ -15,7 +15,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/📘Glossary%20Module-🧩Canonical%20Grammar%20Active-4c8eda?style=for-the-badge" alt="📘Glossary Module | 🧩Canonical Grammar Active"/>
 
 This glossary defines the core canon of Triadic Frameworks and Resonance-Time Theory. Terms are kept operational and minimal to support clear regime awareness and cross-domain application.
 
