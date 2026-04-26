@@ -1,4 +1,4 @@
-## 📜 **LINEAGE.md — Canonical Lineage of TriadicFrameworks**  
+## 📜 LINEAGE.md — Canonical Lineage of TriadicFrameworks [html](https://www.triadicframeworks.org/lineage.html)  
 *A structural, educational, resonance‑time‑aligned history of the canon.*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
