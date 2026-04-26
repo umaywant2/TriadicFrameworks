@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧬RTT%20Micro%20Core-🔹Smallest%20Stable%20Unit%20Active-4c8eda?style=for-the-badge" alt="🧬RTT Micro Core | 🔹Smallest Stable Unit Active"/>
 
 A compact, substrate‑level specification of micro‑scale resonance, coherence, and triadic structure.  
 This folder contains the full whitepaper, appendices, Micro‑Resonance Toolkit (MRT), and site‑ready presentation files.
