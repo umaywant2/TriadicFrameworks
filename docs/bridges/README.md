@@ -32,7 +32,7 @@ guesswork.
 
 ## Navigation
 
-- [Bridge 1 — Conceptual ↔ Operational](bridge_1_conceptual_operational.md)  
+- [Bridge 1 — Conceptual ↔ Operational]([bridge_1_conceptual_operational.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/bridges/concepts_to_operators.md))  
 - [Bridge 2 — Substrate ↔ Implementation](bridge_2_substrate_implementation.md)  
 - [Bridge 3 — Regime ↔ Workflow](bridge_3_regime_workflow.md)  
 - [Bridge 4 — Validation ↔ Review](bridge_4_validation_review.md)  
