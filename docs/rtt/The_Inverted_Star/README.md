@@ -18,6 +18,8 @@
 
 ### RTT Structural Operator • Cycle Geometry • Inversion Engine (v1.0)
 
+<img width="853" height="480" alt="Central_Singularity_Core" src="https://github.com/user-attachments/assets/86cf0a24-0142-44fd-90a7-428459f24d62" />
+
 The **Inverted Star** is a structural operator inside the RTT substrate.  
 It describes the **full cycle** of a coherent manifold as it moves through:
 
