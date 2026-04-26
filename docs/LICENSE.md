@@ -20,7 +20,7 @@
 
 This framework is released under the MIT License.
 
-But before the legalese, a note from Nawder Loswin, 9D Wizard of Physics:
+But before the legalese, a note from Nawder Loswin, creator of TriadicFrameworks:
 
 > “This work is a lantern for the curious, a scaffold for the collective, and a song for the cosmos. Remix it, validate it, and pass it forward.”
 
@@ -28,7 +28,7 @@ But before the legalese, a note from Nawder Loswin, 9D Wizard of Physics:
 
 MIT License
 
-Copyright (c) 2025 umaywant2
+Copyright (c) 2025-2026 TriadicFrameworks.org
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
