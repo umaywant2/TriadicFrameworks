@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🪙Coeus%20Sandbox-🧩Multi%20Agent%20Research%20Canon%20Active-4c8eda?style=for-the-badge" alt="🪙Coeus Sandbox | 🧩Multi Agent Research Canon Active"/>
 
 **Multi-AI Research Sandbox & Coin Exchange Framework**  
 *A triadic system for recursive cognition, remixable research, and observer-grade ethics*
