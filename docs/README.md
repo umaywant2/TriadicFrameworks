@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/📘Docs%20Root-🧩Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="📘Docs Root | 🧩Structural Canon Active"/>
 
 A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
 This `/docs` directory is rendered directly as the project website and serves as the structural map for students, researchers, and practitioners.
