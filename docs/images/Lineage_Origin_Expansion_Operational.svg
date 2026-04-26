@@ -1,5 +1,5 @@
 <svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
-  <!-- Background -->
+
   <defs>
     <linearGradient id="triadic-bg" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#050816"/>
@@ -13,21 +13,20 @@
     </linearGradient>
   </defs>
   <rect x="0" y="0" width="1200" height="700" fill="url(#triadic-bg)" />
-  <!-- Title -->
+
   <text x="600" y="70" text-anchor="middle"
         fill="#f5f5f5" font-family="system-ui, sans-serif"
         font-size="32" letter-spacing="2">
     TriadicFrameworks — Canon Lineage
   </text>
-  <!-- Triadic columns: Origin / Expansion / Operational -->
-  <!-- Column labels -->
+
   <text x="200" y="130" fill="#a8b2ff" font-size="18" text-anchor="middle"
         font-family="system-ui, sans-serif">Origin Layer</text>
   <text x="600" y="130" fill="#a8ffdf" font-size="18" text-anchor="middle"
         font-family="system-ui, sans-serif">Expansion Layer</text>
   <text x="1000" y="130" fill="#ffc8ff" font-size="18" text-anchor="middle"
         font-family="system-ui, sans-serif">Operational Layer</text>
-  <!-- Origin nodes -->
+  
   <g>
     <rect x="120" y="170" width="160" height="60" rx="12"
           fill="none" stroke="url(#triadic-node)" stroke-width="2"/>
@@ -52,7 +51,7 @@
       Nawderian Theorem
     </text>
   </g>
-  <!-- Expansion nodes -->
+  
   <g>
     <rect x="520" y="170" width="160" height="60" rx="12"
           fill="none" stroke="#f97316" stroke-width="1.5"/>
@@ -73,7 +72,7 @@
       Nullaium OS
     </text>
   </g>
-  <!-- Operational nodes -->
+  
   <g>
     <rect x="920" y="170" width="160" height="60" rx="12"
           fill="none" stroke="#a855f7" stroke-width="1.5"/>
@@ -94,18 +93,18 @@
       Universal Translator
     </text>
   </g>
-  <!-- Connecting lines -->
+
   <g stroke="#64748b" stroke-width="1.2" stroke-linecap="round">
-    <!-- Origin → Expansion -->
+
     <line x1="280" y1="200" x2="520" y2="200" />
     <line x1="280" y1="290" x2="520" y2="290" />
     <line x1="280" y1="380" x2="520" y2="380" />
-    <!-- Expansion → Operational -->
+
     <line x1="680" y1="200" x2="920" y2="200" />
     <line x1="680" y1="290" x2="920" y2="290" />
     <line x1="680" y1="380" x2="920" y2="380" />
   </g>
-  <!-- Footer label -->
+
   <text x="600" y="650" text-anchor="middle"
         fill="#9ca3af" font-family="system-ui, sans-serif"
         font-size="12" letter-spacing="1">
