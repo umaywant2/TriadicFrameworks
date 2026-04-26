@@ -77,7 +77,7 @@ This is the reference for all visual language in the RTT canon.
 
 ---
 
-### 6. [idiom_dashboard.svg](https://www.triadicframeworks.org/charts/idiom_dashboard.svg) 
+### 6. [idiom_dashboard.svg.md](https://www.triadicframeworks.org/charts/idiom_dashboard.svg.md) 
 A dashboard‑style visualization of:
 - idioms  
 - motifs  
