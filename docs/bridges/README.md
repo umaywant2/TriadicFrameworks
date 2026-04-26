@@ -32,10 +32,11 @@ guesswork.
 
 ## Navigation
 
-- [Bridge 1 — Conceptual ↔ Operational]([bridge_1_conceptual_operational.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/bridges/concepts_to_operators.md))  
-- [Bridge 2 — Substrate ↔ Implementation](bridge_2_substrate_implementation.md)  
-- [Bridge 3 — Regime ↔ Workflow](bridge_3_regime_workflow.md)  
-- [Bridge 4 — Validation ↔ Review](bridge_4_validation_review.md)  
+- [Overview](bridge_layer_overview.md) •  
+- [Why Resonance Is the Substrate](why_resonance_is_the_substrate.md) •  
+- [Triad → Field Mapping](triad_to_field_mapping.md) •  
+- [Concepts → Operators](concepts_to_operators.md) •  
+- [Cosmology → Layers](cosmology_to_layers.md)
 
 Each bridge is intentionally short, self‑contained, and written to be read in
 any order.
