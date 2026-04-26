@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🌀RTT%20Inside%20Core-📚Cross%20Domain%20Learning%20Layer%20Active-4c8eda?style=for-the-badge" alt="🌀RTT Inside Core | 📚Cross‑Domain Learning Layer Active"/>
 
 **Quick answer:** *I mapped a concise RTT‑Inside lens across 10 broad societal domains, flagged the most common misalignments, and gave short, actionable alignment steps you can capture and expand in your document* ✨.
 
