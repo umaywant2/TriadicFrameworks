@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🔐Security%20Module-🧩Responsible%20Disclosure%20Active-4c8eda?style=for-the-badge" alt="🔐Security Module | 🧩Responsible Disclosure Active"/>
 
 ---
 
