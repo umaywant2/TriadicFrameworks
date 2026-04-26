@@ -14,9 +14,9 @@
   <!-- Styles -->
   <style>
     .node { fill:#0ff; stroke:#0aa; stroke-width:2; }
-    .connector { stroke:#0aa; stroke-width:2; }
-    .label { fill:#0ff; font-family:Arial, sans-serif; font-size:10px; text-anchor:middle; }
-    .tag { fill:#888; font-family:Arial, sans-serif; font-size:8px; text-anchor:middle; }
+    .connector { stroke:#f0a; stroke-width:2; }
+    .label { fill:#0af; font-family:Arial, sans-serif; font-size:10px; text-anchor:middle; }
+    .tag { fill:#0af; font-family:Arial, sans-serif; font-size:8px; text-anchor:middle; }
   </style>
 
   <!-- Triadic cluster: Signal–Noise–Regime -->
