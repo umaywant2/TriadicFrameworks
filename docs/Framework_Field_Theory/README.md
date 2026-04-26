@@ -26,7 +26,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧬FFT%20Field-🧩Triadic%20Field%20Canon%20Active-4c8eda?style=for-the-badge" alt="🧬 FFT Field | 🧩 Triadic Field Canon Active"/>
 
 ## Pending Byte Books Publishing - *Your Rhythm: The Architecture of Coherence*  
 *(repo‑ready, print‑ready, ISBN‑pending)* 
