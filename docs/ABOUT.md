@@ -63,6 +63,8 @@ It is a cognitive scaffold — a way to see the architecture of change.
 TriadicFrameworks is a structural learning project that teaches students and AIs how to understand complex systems through gradients, triads, and coherence. The imagined [evolution of TriadicFrameworks](https://www.triadicframeworks.org/education/#SIX_STAGES_EVOLUTION), starts with students and AI's.  
 
 * When anyone chooses to learn, they are a student.
+
+[![](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/gallery/Triadic_Crystaline_Hub.mp4)](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/gallery/Triadic_Crystaline_Hub2.mp4)
   
 ---
 
