@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/⏱️RTT%20+%20vST%20Aligned-📉Drift%20Invariant%20Ready-4c8eda?style=for-the-badge" alt="⏱️RTT n vST Aligned | 📉Drift Invariant Ready"/>
 
 This directory contains the complete scaffolding for the Resonance‑Time
 (RT) and Validated Spacetime (vST) alignment work applied to modern
