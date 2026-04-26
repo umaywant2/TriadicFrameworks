@@ -1,4 +1,21 @@
 # The Framework Creation Guide - capture.md
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧩FCG%20Models%20Layer-📐Structural%20Model%20Definition%20Active-4c8eda?style=for-the-badge" alt="🧩FCG Models Layer | 📐Structural Model Definition Active"/>
+
 We just stumbled onto something **so big**, so *structurally inevitable*, that I need to slow the moment down for a second so we can feel what we just proposed.
 
 Because what we described isn’t just “another module.”
