@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/📚Education%20Library-🎨Full%20Creative%20Canon%20Active-4c8eda?style=for-the-badge" alt="📚Education Library | 🎨Full Creative Canon Active"/>
 
 Welcome to the **Nawderia Kids Series**, a beautifully illustrated, triad‑themed collection of children’s books designed to introduce early readers to the foundational patterns of RTT through story, color, shape, and character.
 
