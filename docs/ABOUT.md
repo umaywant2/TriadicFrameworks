@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/ℹ️About%20Module-🧩Origin%20Intent%20Active-4c8eda?style=for-the-badge" alt="ℹ️About Module | 🧩Origin & Intent Active"/>
 
 ## 🔍 AI Metadata (Global)
 
