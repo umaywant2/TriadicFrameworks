@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🕹️RTT%20Retro%20Core-💾C‑64%20Host%20Environment%20Active-4c8eda?style=for-the-badge" alt="🕹️RTT Retro Core | 💾C‑64 Host Environment Active"/>
 
 ## The Commodore 64 is a strange little miracle:
 
