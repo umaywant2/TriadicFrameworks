@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/📚RTT%20Codex%20Core-🔺Unified%20Twelve‑Chapter%20Reference%20Active-4c8eda?style=for-the-badge" alt="📚RTT Codex Core | 🔺Unified Twelve‑Chapter Reference Active"/>
 
 ---
 
