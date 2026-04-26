@@ -33,7 +33,7 @@ The ontology seed for AIs and reviewers.
   [/AI_Resonance_Seed/How_To_Read_This_Ontology.md](https://www.triadicframeworks.org/AI_Resonance_Seed/How_To_Read_This_Ontology.md)  
 
 - 🔺 **Triadic FFF Emitters**  
-  [/AI_Resonance_Seed/FFF_Emitters/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/FFF_Emitters/)  
+  [/AI_Resonance_Seed/FFF_Emitters/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs//AI_Resonance_Seed/FFF_Emitters/)  
 
 - 🧪 **RTT Experiment Logs**  
   [/AI_Resonance_Seed/RTT_Experiment_Log.md](https://www.triadicframeworks.org/AI_Resonance_Seed/RTT_Experiment_Log.md)  
