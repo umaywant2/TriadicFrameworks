@@ -14,11 +14,11 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧭Education%20Core-🌱Recognition%20First%20Awareness%20Active-4c8eda?style=for-the-badge" alt="🧭Education Core | 🌱Recognition First Awareness Active"/>
 
 RTT Awareness is a **passive, non‑enforcing introduction** to Resonance‑Time Theory (RTT) and the triadic substrate that underlies TriadicFrameworks.
 
-<img width="512" height="340" alt="RTT_Awareness" src="../../images/RTT_Awareness.png" />
+<img width="768" height="512" alt="RTT_Awareness" src="../../images/RTT_Awareness.png" />
 
 It is designed for readers who want to *understand the structure* without running code, installing tools, or committing to any implementation path.
 
