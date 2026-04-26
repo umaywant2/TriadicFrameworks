@@ -1,4 +1,4 @@
-## 🧪 *Localized Anisotropic Collision & Triadic Ontology System*  
+# 🧪 Localized Anisotropic Collision & Triadic Ontology System
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🔬Collision%20Core-🔺Triadic%20Alignment%20Active-4c8eda?style=for-the-badge" alt="🔬Collision Core | 🔺Triadic Alignment Active"/>
 
 ## Collision Regimes • Cross‑Ontology Mapping • VCG Integration • Triadic Alignment
 
@@ -36,23 +36,23 @@ LACTOS is both a **taxonomy** and a **pipeline** — a way of turning physical o
 ## 📂 Contents
 
 ### 🔬 Collision Regimes & Taxonomy
-- **`LACTOS_collision_regime_taxonomy.md`**  
+- [LACTOS_collision_regime_taxonomy.md](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/lactos/LACTOS_collision_regime_taxonomy.md) 
   Defines the P/Q/N collision regime structure, stability classes, and anisotropic signatures.
 
 ### 🔗 Cross‑Ontology Mapping
-- **`LACTOS_cross_ontology_collision_mapping.md`**  
+- [LACTOS_cross_ontology_collision_mapping.md](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/lactos/LACTOS_cross_ontology_collision_mapping.md)  
   Maps LACTOS collision regimes into **SO** and **ISO** interpretations, enabling tri‑ontology coherence.
 
 ### 🧵 Event Pipeline
-- **`LACTOS_event_pipeline.md`**  
+- [LACTOS_event_pipeline.md](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/lactos/LACTOS_event_pipeline.md)  
   End‑to‑end pipeline from raw collision → regime classification → VCG translation → analysis.
 
 ### 🔺 Triadic Alignment
-- **`SO_ISO_LACTOS_triadic_alignment_wheel.md`**  
+- [SO_ISO_LACTOS_triadic_alignment_wheel.md](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/lactos/SO_ISO_LACTOS_triadic_alignment_wheel.md)  
   Visual + structural alignment wheel showing how LACTOS, SO, and ISO interlock.
 
 ### 🖧 VCG Integration
-- **`VCG_LACTOS_integration_diagram.md`**  
+- [VCG_LACTOS_integration_diagram.md](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/lactos/VCG_LACTOS_integration_diagram.md)
   Describes how LACTOS outputs feed into the Virtual Compute Gateway for compute‑safe translation.
 
 ---
