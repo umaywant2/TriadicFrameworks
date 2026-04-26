@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🏃‍♂️Education%20Core-🧩Embodied%20Regime%20Awareness%20Active-4c8eda?style=for-the-badge" alt="🏃‍♂️Education Core | 🧩Embodied Regime Awareness Active"/>
 
 ## Physical Education Indirect Regime Awareness  
 
