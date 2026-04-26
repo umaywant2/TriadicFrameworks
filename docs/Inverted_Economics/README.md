@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/📉Inverted%20Economics-🧩Structural%20Audit%20Canon%20Active-4c8eda?style=for-the-badge" alt="📉Inverted Economics | 🧩Structural Audit Canon Active"/>
 
 _A structural, RTT‑aligned approach to understanding past economic cycles._
 
