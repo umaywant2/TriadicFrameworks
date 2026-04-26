@@ -47,7 +47,7 @@ The ontology seed for AIs and reviewers.
 Universe‑Class JSON schemas for RTTcode and environment modeling.
 
 - [/schemas/](https://www.triadicframeworks.org/schemas/)  
-- [/AI_Resonance_Seed/schemas/](https://www.triadicframeworks.org/AI_Resonance_Seed/schemas/)  
+- [/AI_Resonance_Seed/schemas/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs//AI_Resonance_Seed/schemas/)  
 
 ---
 
