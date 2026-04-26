@@ -17,8 +17,8 @@
   <!-- Shared Styles -->
   <style>
     .node { fill:#0ff; stroke:#0aa; stroke-width:2; }
-    .label { fill:#fff; font-family:Arial, sans-serif; font-size:22px; text-anchor:middle; }
-    .idiom-title { fill:#0ff; font-family:Arial, sans-serif; font-size:28px; text-anchor:middle; }
+    .label { fill:#00a; font-family:Arial, sans-serif; font-size:22px; text-anchor:middle; }
+    .idiom-title { fill:#eee; font-family:Arial, sans-serif; font-size:28px; text-anchor:middle; }
     .connector { stroke:#0aa; stroke-width:2; }
   </style>
 
