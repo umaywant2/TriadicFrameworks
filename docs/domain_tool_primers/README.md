@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧪vST%20Starter%20Kit-🔧Domain%20Respectful-4c8eda?style=for-the-badge" alt="🧪vST Starter Kit | 🔧Domain Respectful"/>
 
 *A lightweight starter kit for cross‑domain validation of the Validation‑Space Theory (vST)*
 
