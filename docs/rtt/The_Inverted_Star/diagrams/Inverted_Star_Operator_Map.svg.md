@@ -1,6 +1,8 @@
 # ✅ **Canonical Inverted_Star_Operator_Map.svg (v1.0)**  
 ### *Operator dominance • triadic alignment • layer depth • inversion mechanics*
 
+<img width="746" height="609" alt="Inverted_Star_Operator_Map" src="https://github.com/user-attachments/assets/bfad861d-9b00-4bfc-8c4d-e35232b28f2a" />
+
 ```svg
 <svg width="1100" height="900" viewBox="0 0 1100 900" xmlns="http://www.w3.org/2000/svg">
 
