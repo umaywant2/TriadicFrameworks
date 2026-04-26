@@ -31,6 +31,7 @@ These are the frameworks that define the architecture of the entire system.
 - [/rtt/micro_core/](https://www.triadicframeworks.org/rtt/micro_core/) 
 - [/rtt/RTT_12/](https://www.triadicframeworks.org/rtt/RTT_12/) 
 - [/rtt/RTT-Inside/](https://www.triadicframeworks.org/rtt/RTT-Inside/)  
+- [/rtt/The_Inverted_Star/](https://www.triadicframeworks.org/rtt/The_Inverted_Star/)
 - [/rtt/codex/](https://www.triadicframeworks.org/rtt/codex/)  
 - [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
 - [/triadic/](https://www.triadicframeworks.org/triadic/)  
