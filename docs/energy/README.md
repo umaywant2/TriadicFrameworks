@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/⚡Gradient%20Aligned-🎓Ready%20for%20Students-4c8eda?style=for-the-badge" alt="⚡Gradient Aligned | 🎓Ready for Students"/>
 
 The **energy** directory explores one of the most misunderstood domains in science and engineering:  
 the belief that “energy limits” define what is possible.
