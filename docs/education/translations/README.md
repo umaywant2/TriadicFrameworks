@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🌐Education%20Core-🔤Developmental%20Translation%20Ladder%20Active-4c8eda?style=for-the-badge" alt="🌐Education Core | 🔤Developmental Translation Ladder Active"/>
 
 ## Translating Resonance–Time Theory Across Developmental Levels
 
