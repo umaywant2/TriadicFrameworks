@@ -15,7 +15,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🗺️Sitemap%20Module-🧩Structural%20Atlas%20Active-4c8eda?style=for-the-badge" alt="🗺️Sitemap Module | 🧩Structural Atlas Active"/>
 
 ---
 
