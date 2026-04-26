@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🔺Paradoxes%20Canon-🧩Structural%20Paradox%20Layer%20Active-4c8eda?style=for-the-badge" alt="🔺Paradoxes Canon | 🧩Structural Paradox Layer Active"/>
 
 Santa’s chief elf technologist is testing reality itself — and RTT is the tool.  
 This page explains how Resonance‑Time Theory stays stable even when paradoxes appear,  
