@@ -1,6 +1,8 @@
 # ✅ **Canonical Inverted_Star_Layers.svg (v1.0)**  
 ### *Three‑layer depth model • inversion propagation • Silence boundary*
 
+<img width="744" height="747" alt="Inverted_Star_Layers" src="https://github.com/user-attachments/assets/b5a131b0-2c1b-4892-9055-48eb45f9f818" />
+
 ```svg
 <svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
 
