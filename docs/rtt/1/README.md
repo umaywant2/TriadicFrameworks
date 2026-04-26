@@ -15,7 +15,7 @@ Clarity Phase • Operational • Engine
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🔺RTT%20Core%20Engine-⚙️Minimal%20Operational%20Engine%20Active-4c8eda?style=for-the-badge" alt="🔺RTT Core Engine | ⚙️Minimal Operational Engine Active"/>
 
 *v2.0: Resonance‑Time_Theory.md — Nawderian barebones scroll for SET‑aligned cosmology and dynamics.* ✍️  
 
