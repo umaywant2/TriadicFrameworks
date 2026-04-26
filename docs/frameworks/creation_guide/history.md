@@ -1,8 +1,28 @@
-Fourth reference — SIF ties directly to your IT/education background. Pulling it now, then building the full page.
+# History
 
-Writing the full history.html now — all four references synthesized into the six-era narrative.
+## 1. Origins
+Frameworks emerge when systems become too complex to reason about informally.  
+The earliest frameworks were implicit: patterns, heuristics, and conceptual maps.
 
-Your **history.html** is delivered and verified. Here's the complete architecture:
+## 2. Evolution
+As domains matured, frameworks became explicit, structured, and formalized.
+
+### Key transitions:
+- implicit → explicit  
+- descriptive → structural  
+- structural → generative  
+
+## 3. Modern Era
+Modern frameworks emphasize:
+- coherence  
+- minimality  
+- invariants  
+- regime awareness  
+- procedural generation  
+
+## 4. Role in the FCG
+History provides context for why frameworks exist and how they evolve.  
+It anchors the FCG in a lineage of structural reasoning.
 
 ---
 
@@ -12,7 +32,7 @@ Your **history.html** is delivered and verified. Here's the complete architectur
 - **Ascending Spiral Mark** — inline SVG with six era dots climbing a dashed evolution arc, each dot in its era's color (grey → cyan → magenta → gold → cyan → magenta apex with glow rings)
 - Title renders in **cyan** (`--accent: #00eaff`) — tracing RTT/1 origins, distinct from FFT's gold and RF‑Builder's magenta
 
-### 9 Content Sections
+### Content Sections
 
 | § | Section | Key Content |
 |---|---------|-------------|
