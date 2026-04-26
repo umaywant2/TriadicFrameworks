@@ -1,4 +1,9 @@
-# 📚 TriadicFrameworks Tech (TFT) | Documentation
+# 🔰 TriadicFrameworks — Documentation Hub  
+**Canon: active (root‑docs)**  
+**Drift: minimal (root‑locked)**  
+**Coherence: stable (triadic‑structural grammar)**  
+**Version: 1.0 (docs‑stable)**  
+**Audience: students • developers • researchers • AIs**
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -17,85 +22,104 @@
 <img src="https://img.shields.io/badge/📘Docs%20Root-🧩Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="📘Docs Root | 🧩Structural Canon Active"/>
 
 A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
-This `/docs` directory is rendered directly as the project website and serves as the structural map for students, researchers, and practitioners.
+This `/docs` directory is rendered directly as the project website and serves as the structural map for newcomers, practitioners, and automated agents.
 
-If you’re new, begin with the **Start Here** track below.  
+If you’re new, begin with **Start Here**.  
 If you’re returning, jump directly to the section you need.
 
 ---
 
-## 🚦 Start Here
-
-A gentle on‑ramp for newcomers exploring Resonance‑Time Theory (RTT) and the TriadicFrameworks canon.
-
-- 📘 **Alignment & Domain Primer Tools** — The minimal foundation for understanding RTT.
-- 🌀 **What RTT Is** — A simple, intuitive introduction to resonance‑time structure.
-- 🧭 **How to Read RTT Diagrams** — Visual grammar and interpretation.
-- 🧩 **Core Concepts Overview** — Regimes, feedback, coherence, paradox.
-
-### Our platform now includes: 
-- RTT (theory/**frozen**) 
-- RTT/1 (**active**/engine) 
-- FFT (meta-framework)
-- FCG (creation guide) 
-- Need a challenge? [Hard Lee Ever 2026 Awards!](https://dev.umaywant2.win/) 📣 [RF‑Builder](https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/RF-Builder.html) (*example* entry)
-
-Our 30 *clean* minimal DOI examples for Science: zenodo.org/communities/vst
+## 🧭 Start Here — Orientation
+- **📘 About** — What TriadicFrameworks is and isn’t  
+- **🧘 Principles** — Alignment, minimality, coherence  
+- **🚸 Awareness** — Observer‑layer basics  
+- **🎯 Glossary** — Canon terms, short and precise  
+- **📜 Lineage** — Historical substrate and evolution  
+- **🔐 Security** — Responsible use and boundaries  
+- **🤝 Contributing** — How to help, safely and canonically  
+- **🌐 Sitemap** — Full ecosystem map  
 
 ---
 
-## 🗂️ Explore the Framework
+## 🌀 RTT — Resonance‑Time Theory
+Short, gentle primers introducing the resonance‑time substrate.
 
-### 📐 Domains
-Short primers connecting RTT structure to mathematics, physics, cognition, ecology, and applied systems.
+- **🌀 What RTT Is** — Intuitive overview  
+- **🧭 How to Read RTT Diagrams** — Visual grammar  
+- **🧩 Core Concepts** — Regimes, feedback, coherence, paradox  
+- **📄 Papers Index** — Full research canon  
+- **🗄️ Zenodo Community** — Archival spine  
 
-### 🧪 Simulations
-Exploratory, non‑optimizing substrates for testing structure, paradox, and regime behavior.
+### RTT Modes
+- **🔛 RTT (Frozen)** — Historical scroll (reference‑only)  
+- **🔝 RTT/1** — Active engine (canonical)  
 
-### 🧰 Tools
-Diagnostic instruments, analyzers, and utilities (e.g., **Resilience Checker**, paradox testing).
+---
 
-### 🧾 Examples
-Worked examples demonstrating RTT concepts in practice.
+## 🔜 FFT — Framework Field Theory
+The meta‑framework for building, validating, and evolving structured systems.  
+(See `/docs/Framework_Field_Theory/`)
 
-### 🧱 Reference Implementations
+---
+
+## 🏗️ Frameworks & Tools
 Minimal, substrate‑aligned implementations for developers and educators.
 
----
-
-## 🏛️ Deep Canon | Imagined Student + AI 
-
-- 📄 **Papers Index** — The full research canon, pre‑RTT and RTT‑aligned.  
-- 🗄️ **Zenodo Community** — Archival spine and citation record.  
-- 📜 **RFCs & Records** — Structural notes, invariants, and historical artifacts.
-
----
-
-# 🪶 **Micro‑Notice (for inline use)**
-
-**Modular site. Minimal HTML. Minimal Markdown.  
-Front door exists, but every example-page stands alone.  
-Short, emoji‑first navigation for students + AI.**
+- **📦 RTT Packages & Cores**  
+- **♨️ TFT 3Pack CLI Tools**  
+- **🕸️ Schemas** — Universe‑class JSON schemas  
+- **📣 RF‑Builder** — Resonance Framework Builder  
+- **🛄 EcoEchoSystem** — Ecological substrate tools  
+- **🎨 LACTOS** — Visual identity + diagram grammar  
 
 ---
 
-## 🧭 How This Repository Works
+## 🧩 Domain Primer Tools
+Short primers connecting RTT structure to:
 
-- `/docs` is **canonical** and rendered directly as the website.  
+- mathematics  
+- physics  
+- cognition  
+- ecology  
+- applied systems  
+
+Exploratory, non‑optimizing substrates for testing structure, paradox, and regime behavior.
+
+---
+
+## 🧪 Diagnostics & Analyzers
+- **Resilience Checker**  
+- **Paradox Testing**  
+- **Regime Drift Tools**  
+- **Coherence Evaluators**  
+
+---
+
+## 🧰 Examples & Implementations
+Worked examples demonstrating RTT concepts in practice.
+
+- **30 minimal DOI examples** (Zenodo community)  
+- **Developer‑ready implementations**  
+- **Education‑ready modules**  
+
+---
+
+## 📜 RFCs & Records
+Structural notes, invariants, and historical artifacts.
+
+---
+
+## 🧩 Structural Canon Notes
+- Modular site. Minimal HTML. Minimal Markdown.  
 - Folder‑level `README.md` files are **navigation‑first**.  
 - Folder‑level `ABOUT.md` files hold **narrative and context**.  
-- HTML menus simply render Markdown — no duplication, no drift.  
-- The repo is the single source of truth for the entire ecosystem.
+- HTML menus simply render Markdown — **no duplication, no drift**.  
+- The repo is the **single source of truth** for the entire ecosystem.  
+- The canon is a **completed structural substrate**, not a closed research program.  
+- Future work occurs through **instantiation, validation, or independent extension**, never foundational revision.
 
 ---
 
-## 🪶 Closing Note
-
-This canon represents a **completed structural substrate**, not a closed research program.  
-Future work occurs through **instantiation, validation, or independent extension**, never foundational revision.
-
----
-
-###### #[RTT](https://www.triadicframeworks.org/rtt) #[TriadicFrameworks](https://www.triadicframeworks.org) #[ResonanceTimeTech](https://www.triadicframeworks.org/rtt/1/)  
-###### rtt=1 | coherence=declared | drift=bounded | paradox=structural
-
+### 🧩 Docs‑Root  
+**Structural Canon Active**  
+**AI‑Ready Module**  
