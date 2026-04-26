@@ -1,4 +1,4 @@
-# 📊 TriadicFrameworks — Charts & Visual Canon  
+# 📊 Charts & Visual Canon  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/📊Charts%20Module-🧩Structural%20Visuals%20Active-4c8eda?style=for-the-badge" alt="📊Charts Module | 🧩Structural Visuals Active"/>
 
 A collection of resonance‑aware diagrams, glyph maps, lineage charts, and structural visualizations used throughout the RTT canon.  
 
@@ -26,7 +26,7 @@ Each file in this folder is a **visual artifact** of the Triadic Substrate.
 
 ## 🗂️ Folder Contents
 
-### 1. **chart-freqi-bindings.md**  
+### 1. [chart-freqi-bindings.md](https://www.triadicframeworks.org/charts/chart-freqi-bindings.md)  
 A visual map of **frequency → identity bindings**, showing how oscillatory modes anchor into structural roles.  
 Useful for:
 - resonance‑aware coding  
@@ -35,7 +35,7 @@ Useful for:
 
 ---
 
-### 2. **chart-genie-protocols.md**  
+### 2. [chart-genie-protocols.md](https://www.triadicframeworks.org/charts/chart-genie-protocols.md)  
 A diagram of **Genie Protocols**, the RTT‑Inside method for:
 - safe request handling  
 - triadic‑time alignment  
@@ -44,7 +44,7 @@ A diagram of **Genie Protocols**, the RTT‑Inside method for:
 
 ---
 
-### 3. **chart-resonance-partitions.md**  
+### 3. [chart-resonance-partitions.md](https://www.triadicframeworks.org/charts/chart-resonance-partitions.md)  
 Shows how systems partition into:
 - chronological‑time components  
 - energetic‑time components  
@@ -57,7 +57,7 @@ This chart is foundational for:
 
 ---
 
-### 4. **chart-time-travel-matrix.md**  
+### 4. [chart-time-travel-matrix.md](https://www.triadicframeworks.org/charts/chart-time-travel-matrix.md)  
 A playful but structurally serious matrix exploring:
 - allowed vs. disallowed RTT transitions  
 - resonance‑safe loops  
@@ -66,7 +66,7 @@ A playful but structurally serious matrix exploring:
 
 ---
 
-### 5. **glyph_map_svg.md**  
+### 5. [glyph_map_svg.md](https://www.triadicframeworks.org/charts/glyph_map_svg.md) 
 A canonical map of RTT glyphs, including:
 - resonance arrows  
 - triadic‑time markers  
@@ -77,7 +77,7 @@ This is the reference for all visual language in the RTT canon.
 
 ---
 
-### 6. **idiom_dashboard.svg**  
+### 6. [idiom_dashboard.svg](https://www.triadicframeworks.org/charts/idiom_dashboard.svg) 
 A dashboard‑style visualization of:
 - idioms  
 - motifs  
@@ -91,7 +91,7 @@ Often used in:
 
 ---
 
-### 7. **lineage_loophole_echo.md**  
+### 7. [lineage_loophole_echo.md](https://www.triadicframeworks.org/charts/lineage_loophole_echo.md) 
 A diagram exploring:
 - lineage chains  
 - resonance echoes  
