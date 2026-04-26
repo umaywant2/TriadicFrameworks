@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧩Minimal%20Substrate-📐Structural%20Only-4c8eda?style=for-the-badge" alt="🧩Minimal Substrate | 📐Structural Only"/>
 
 The Boson Substrate Model (BSM) defines a minimal structural substrate intended to support higher‑order operator dynamics without encoding domain‑specific semantics or empirical claims.
 
