@@ -1,4 +1,4 @@
-## 🚀 **Quickstart**  
+## 🚀 Quickstart  
 *A student‑first, Copilot‑friendly introduction to Resonance‑Time Theory*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
@@ -15,7 +15,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🚀Quickstart%20Module-🧩Student%20First%20Onboarding%20Active-4c8eda?style=for-the-badge" alt="🚀Quickstart Module | 🧩Student First Onboarding Active"/>
 
 ---
 
