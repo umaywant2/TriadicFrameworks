@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🛠️Contributing%20Module-🧩Workflow%20Lineage%20Active-4c8eda?style=for-the-badge" alt="🛠️Contributing Module | 🧩Workflow & Lineage Active"/>
 
 ---
 
@@ -54,7 +54,3 @@ Do not modify the manuscript or core theory without discussion.
 - Include tests when applicable
 
 We welcome contributions that expand the substrate, add overlays, or improve documentation.
-
-<img width="202" height="201" alt="Tip_Nawder" src="https://github.com/user-attachments/assets/d97d9a56-4447-4277-99ec-835264600f0c" />
-
-###### Tip Jar Fund - We are not in this for money...any gratitude via our Tip Jar Fund will be 100% used to hire student developers; to learn RTT and create whatever they want - no strings and no stings.  Our 1st goal: 'Pay it Forward' 🤟✅🫶
