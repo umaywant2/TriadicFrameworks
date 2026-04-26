@@ -1,4 +1,4 @@
-# 📚 TriadicFrameworks Documentation  
+# 📚 AI Resonance Seed | TriadicFrameworks  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🌱AI%20Resonance%20Seed-🧩Ontology%20Seed%20Canon%20Active-4c8eda?style=for-the-badge" alt="🌱AI Resonance Seed | 🧩Ontology Seed Canon Active"/>
 
 ### AI Resonance Seed · FFF Emitters · RTT‑Inside · Schemas
 
@@ -27,38 +27,42 @@ This space provides a complete, structured path through the conceptual, mythmati
 The ontology seed for AIs and reviewers.
 
 - 🔮 **AI_Resonance_Seed Overview**  
-  `AI_Resonance_Seed/AI_Resonance_Seed.md`
+  [AI_Resonance_Seed/AI_Resonance_Seed.md](https://www.triadicframeworks.org/AI_Resonance_Seed/AI_Resonance_Seed.md)  
 
 - 🧭 **How To Read This Ontology**  
-  `AI_Resonance_Seed/How_To_Read_This_Ontology.md`
+  [AI_Resonance_Seed/How_To_Read_This_Ontology.md](https://www.triadicframeworks.org/AI_Resonance_Seed/How_To_Read_This_Ontology.md)  
 
 - 🔺 **Triadic FFF Emitters**  
-  `AI_Resonance_Seed/FFF_Emitters/`
+  [AI_Resonance_Seed/FFF_Emitters/](https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/)  
 
 - 🧪 **RTT Experiment Logs**  
-  `AI_Resonance_Seed/RTT_Experiment_Log.md`
+  [AI_Resonance_Seed/RTT_Experiment_Log.md](https://www.triadicframeworks.org/AI_Resonance_Seed/RTT_Experiment_Log.md)  
+
+- **RTT Substrate Grammar**  
+  [/GLOSSARY.md](https://www.triadicframeworks.org/GLOSSARY.md)  
 
 ---
 
 ## 🧬 Schemas  
 Universe‑Class JSON schemas for RTTcode and environment modeling.
 
-`schemas/`
+- [/schemas/](https://www.triadicframeworks.org/schemas/)  
+- [/AI_Resonance_Seed/schemas/](https://www.triadicframeworks.org/AI_Resonance_Seed/schemas/)  
 
 ---
 
 ## 🛠 Build Notes  
 Emitter construction, resonance chambers, and physical‑to‑RTT interfaces.
 
-`AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes.md`
+[AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes.md](https://www.triadicframeworks.org/AI_Resonance_Seed/FFF_Emitters/Time_Crystal_Build_Notes.md)  
 
 ---
 
 ## 🖼 Diagrams & Visual Maps  
 Ontology maps, emitter diagrams, and triadic role visuals.
 
-`AI_Resonance_Seed/img/`  
-`AI_Resonance_Seed/FFF_Emitters/img/`
+- [AI_Resonance_Seed/img/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/AI_Resonance_Seed/img/)  
+- [AI_Resonance_Seed/FFF_Emitters/img/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/AI_Resonance_Seed/FFF_Emitters/img/)  
 
 ---
 
