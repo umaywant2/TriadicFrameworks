@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🜂Myth%20Lab%20Active-🧪Pre%20Framework%20Zone-4c8eda?style=for-the-badge" alt="🜂Myth‑Lab Active | 🧪Pre‑Framework Zone"/>
 
 ### 🌌 The Gold Vault / Salt Mine of TriadicFrameworks
 
