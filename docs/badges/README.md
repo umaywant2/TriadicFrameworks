@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🏅Badge%20System-🧩Identity%20Layer%20Canon%20Active-4c8eda?style=for-the-badge" alt="🏅Badge System | 🧩Identity Layer Canon Active"/>
 
 This folder contains the **badge chamber designs** and trigger logic for TriadicFrameworks.  
 Badges are symbolic seals of achievement, earned through validator approval and remix lineage.
