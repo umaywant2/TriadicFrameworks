@@ -1,6 +1,8 @@
 # ✅ **Canonical Inverted_Star_Triads.svg (v1.0)**  
 ### *Triadic structure • S↔N flip • resonance invariance • inversion geometry*
 
+<img width="745" height="598" alt="Inverted_Star_Triads" src="https://github.com/user-attachments/assets/9ee8c564-c535-4a1b-8c85-151d1082e368" />
+
 ```svg
 <svg width="1000" height="800" viewBox="0 0 1000 800" xmlns="http://www.w3.org/2000/svg">
 
