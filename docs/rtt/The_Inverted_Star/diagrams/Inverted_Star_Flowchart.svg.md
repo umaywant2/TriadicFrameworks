@@ -1,6 +1,8 @@
 # ✅ **Canonical `Inverted_Star_Flowchart.svg` (v1.0)**  
 ### *Seven‑phase inversion flow • operator dominance • directional cycle*
 
+<img width="744" height="745" alt="Inverted_Star_Flowchart" src="https://github.com/user-attachments/assets/289a2a53-fd96-4abf-a607-11483757e33f" />
+
 ```svg
 <svg width="900" height="900" viewBox="0 0 900 900" xmlns="http://www.w3.org/2000/svg">
 
