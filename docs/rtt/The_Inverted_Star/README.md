@@ -14,7 +14,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/✧Inversion%20Operator-RTT%201%20Canon%20Module-4c8eda?style=for-the-badge" alt="✧Inversion Operator | RTT/1 Canon Module"/>
 
 ### RTT Structural Operator • Cycle Geometry • Inversion Engine (v1.0)
 
