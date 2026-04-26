@@ -1,17 +1,7 @@
-Below is a **clean, minimal, v1.0‑stable SVG** that encodes the Inverted Star’s:
-
-- 7 phases  
-- sector rotation  
-- axis geometry  
-- inversion singularity  
-- Silence boundary  
-
-It is intentionally **SVG‑pure**, **GitHub‑safe**, and **diagram‑ready**.
-
----
-
 # ✅ **Canonical `Inverted_Star_Diagram.svg` (v1.0)**  
 ### *(drop directly into your repo — no external dependencies)*
+
+<img width="745" height="745" alt="Inverted_Star_Diagram" src="https://github.com/user-attachments/assets/2c425879-2d6c-43f5-8037-78e0a79017b1" />
 
 ```svg
 <svg width="720" height="720" viewBox="0 0 720 720" xmlns="http://www.w3.org/2000/svg">
