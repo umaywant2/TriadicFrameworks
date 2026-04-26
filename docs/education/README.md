@@ -14,12 +14,12 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🎓Education%20Core-🧭Navigation%20First%20Pedagogy-4c8eda?style=for-the-badge" alt="🎓Education Core | 🧭Navigation First Pedagogy"/>
 
 This directory contains **educational artifacts** designed to teach the RTT/vST framework through
 **structure, navigation, and indirect learning** rather than persuasion or ideology.
 
-<img width="512" height="340" alt="PART_VIII_Teaching_Transmission_of_Coherence" src="../images/PART_VIII_Teaching_Transmission_of_Coherence.png" />
+<img width="768" height="512" alt="PART_VIII_Teaching_Transmission_of_Coherence" src="../images/PART_VIII_Teaching_Transmission_of_Coherence.png" />
 
 The materials here are intended for:
 - students
