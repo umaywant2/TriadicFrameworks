@@ -76,18 +76,18 @@ All expressed in **triadic, temporal, resonance‑based form**.
 
 This folder contains:
 
-- **Capture_Source.md** — raw conceptual capture  
-- **Inverted_Star_Definition.md** — formal definition  
-- **Inverted_Star_Structure.md** — layers, axes, sectors  
-- **Inverted_Star_Geometry.md** — shape, symmetry, inversion rules  
-- **Inverted_Star_Triads.md** — triadic mapping  
-- **Inverted_Star_Operators.md** — operator interactions  
-- **Inverted_Star_Flow.md** — flow diagrams, transitions  
-- **Inverted_Star_Use_Cases.md** — applied examples  
-- **diagrams/** — canonical diagrams  
-- **examples/** — concrete demonstrations  
-- **appendices/** — notation, symbols, transformations  
-- **metadata/** — machine‑readable metadata + session context  
+- **[Capture_Source.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Capture_Source.md)** — raw conceptual capture  
+- **[Inverted_Star_Definition.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Inverted_Star_Definition.md)** — formal definition  
+- **[Inverted_Star_Structure.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Inverted_Star_Structure.md)** — layers, axes, sectors  
+- **[Inverted_Star_Geometry.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Inverted_Star_Geometry.md)** — shape, symmetry, inversion rules  
+- **[Inverted_Star_Triads.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Inverted_Star_Triads.md)** — triadic mapping  
+- **[Inverted_Star_Operators.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Inverted_Star_Operators.md)** — operator interactions  
+- **[Inverted_Star_Flow.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Inverted_Star_Flow.md)** — flow diagrams, transitions  
+- **[Inverted_Star_Use_Cases.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/rtt/The_Inverted_Star/Inverted_Star_Use_Cases.md)** — applied examples  
+- **[diagrams/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt/The_Inverted_Star/diagrams/)** — canonical diagrams  
+- **[examples/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt/The_Inverted_Star/examples/)** — concrete demonstrations  
+- **[appendices/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt/The_Inverted_Star/appendices/)** — notation, symbols, transformations  
+- **[metadata/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/rtt/The_Inverted_Star/metadata/)** — machine‑readable metadata + session context  
 
 Each file is **standalone**, **drift‑free**, and **AI‑parsable**.
 
