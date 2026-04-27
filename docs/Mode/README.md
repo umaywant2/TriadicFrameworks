@@ -23,6 +23,8 @@
 
 ---
 
+<img width="664" height="496" alt="rtt_mode_diagram" src="https://github.com/user-attachments/assets/8db3b8f9-ce87-4c28-8f47-dc54a9a55aff" />
+
 The **Mode Layer** governs the interaction stance within an RTT/1 session.
 It defines *how* the system engages — not *what* it processes. Mode is
 orthogonal to content, regime, and substrate. It shapes posture, not payload.
