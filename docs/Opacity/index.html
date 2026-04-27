@@ -1,405 +1,511 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Core Metadata -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-04-27">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+  <!-- Core Identity -->
+  <title>Opacity — TriadicFrameworks</title>
+  <meta name="description" content="Opacity module: substrate-level regime invisibility caused by mismatch between substrate, operators, or harmonic envelope. 5 core operators, 9 extension operators, 8 cross-module integrations." />
+  <meta name="author" content="Nawder Loswin" />
+  <meta name="keywords" content="Opacity, TriadicFrameworks, RTT, regime invisibility, substrate mismatch, O-Op, O-Grad, O-Bound, O-Red, O-Sig, SET, FFF, SARG, NIST, Corpus" />
 
-<!-- Identity -->
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
+  <!-- Module Identity -->
+  <meta name="module" content="Opacity" />
+  <meta name="canonical-id" content="OPC" />
+  <meta name="module-type" content="Core" />
+  <meta name="version" content="1.0" />
+  <meta name="status" content="active" />
+  <meta name="visual-identity" content="half-lit sphere" />
+  <meta name="parent" content="Core Substrate Layer" />
+  <meta name="siblings" content="Mode, Resonance, Coherence" />
+  <meta name="operators" content="O-Op, O-Grad, O-Bound, O-Red, O-Sig" />
+  <meta name="framework" content="TriadicFrameworks" />
+  <meta name="license" content="MIT" />
+  <meta name="canonical-path" content="/docs/Opacity/" />
+  <meta name="last-updated" content="2026-04-27" />
 
-<!-- Description & Keywords -->
-<meta name="description" content="Mode — a canonical TriadicFrameworks module defining structural modes, transitions, and regime‑level behavior for RTT‑aligned systems. Minimal, modular, and AI‑parsable.">
-<meta name="keywords" content="TriadicFrameworks, Mode, structural modes, RTT, regimes, transitions, coherence, gradients, systems modeling">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Opacity — TriadicFrameworks" />
+  <meta property="og:description" content="Substrate-level regime invisibility. 5 core operators. 9 extension operators. 8 cross-module integrations." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://umaywant2.github.io/TriadicFrameworks/docs/Opacity/" />
+  <meta property="og:image" content="./diagram.svg" />
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.triadicframeworks.org/Opacity/">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Opacity — TriadicFrameworks" />
+  <meta name="twitter:description" content="Substrate-level regime invisibility. 5 core operators. 9 extension operators." />
+  <meta name="twitter:image" content="./diagram.svg" />
 
-<!-- Robots -->
-<meta name="robots" content="index, follow">
+  <!-- Citation -->
+  <meta name="citation_title" content="Opacity Module — TriadicFrameworks" />
+  <meta name="citation_author" content="Nawder Loswin" />
+  <meta name="citation_date" content="2026-04-27" />
 
-<!-- Theme -->
-<meta name="theme-color" content="#0ff">
+  <!-- AI-Ready -->
+  <meta name="ai-ready" content="true" />
+  <meta name="ai-module-id" content="OPC" />
+  <meta name="ai-operators" content="O-Op, O-Grad, O-Bound, O-Red, O-Sig, opacity_index, opacity_map, opacity_dependency, opacity_token, opacity_clause, opacity_rewrite_rule, opacity_measure, opacity_signal, opacity_alignment" />
+  <meta name="ai-replaces" content="regime_blindness" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="Mode — TriadicFrameworks">
-<meta property="og:url" content="https://www.triadicframeworks.org/Mode/">
-<meta property="og:description" content="The canonical Mode module — defining structural modes and transitions in RTT‑aligned systems.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
+  <!-- Marked.js for Markdown rendering -->
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mode — TriadicFrameworks">
-<meta name="twitter:description" content="Canonical Mode module — minimal, modular, AI‑parsable.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+  <style>
+    /* ═══════════════════════════════════════════
+       Nawderian Cosmic Triadic — Opacity Theme
+       ═══════════════════════════════════════════ */
 
-<!-- Citation Metadata -->
-<meta name="citation_title" content="Mode — TriadicFrameworks">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2026">
-<meta name="DC.subject" content="structural modes, regime transitions, RTT, coherence, triadic systems">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
+    :root {
+      --bg-deep:       #0a0a0f;
+      --bg-surface:    #111118;
+      --bg-card:       #1a1a24;
+      --bg-nav:        #0e0e16;
+      --border:        #2a2a3a;
+      --border-glow:   #8B735544;
+      --text-primary:  #e8e0d0;
+      --text-muted:    #8a8a9a;
+      --text-dim:      #5a5a6a;
+      --accent-gold:   #E8DCC8;
+      --accent-bronze: #8B7355;
+      --accent-navy:   #1A1A2E;
+      --accent-blue:   #4a7aaa;
+      --glow-warm:     rgba(139, 115, 85, 0.15);
+      --font-display:  'Georgia', 'Palatino', serif;
+      --font-body:     'Segoe UI', system-ui, -apple-system, sans-serif;
+      --font-mono:     'Cascadia Code', 'Fira Code', 'Consolas', monospace;
+    }
 
-<!-- AI Metadata -->
-<meta name="ai.module" content="Mode">
-<meta name="ai.version" content="1.0">
-<meta name="ai.purpose" content="Define structural modes, transitions, and regime behavior within the TriadicFrameworks ecosystem.">
-<meta name="ai.keywords" content="Mode, structural modes, RTT, regimes, transitions, coherence">
-<meta name="ai.audience" content="students, developers, researchers, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="Open educational use permitted.">
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
-<!-- Module-Specific -->
-<meta name="ai.module.name" content="Mode">
-<meta name="ai.module.summary" content="Defines structural modes and transitions in RTT‑aligned systems.">
-<meta name="ai.module.category" content="rtt-core">
+    html, body {
+      height: 100%;
+      background: var(--bg-deep);
+      color: var(--text-primary);
+      font-family: var(--font-body);
+      font-size: 15px;
+      line-height: 1.7;
+    }
 
-<!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+    body {
+      display: flex;
+      overflow: hidden;
+    }
 
-<title>Opacity — TriadicFrameworks</title>
+    /* ── Navigation Sidebar ── */
 
-<style>
-/* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
-   ============================================================ */
+    nav {
+      width: 280px;
+      min-width: 280px;
+      height: 100vh;
+      overflow-y: auto;
+      background: var(--bg-nav);
+      border-right: 1px solid var(--border);
+      padding: 1.5rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.25rem;
+    }
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
-  --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
-}
+    nav::-webkit-scrollbar { width: 4px; }
+    nav::-webkit-scrollbar-track { background: transparent; }
+    nav::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
+    nav .glyph {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1rem;
+      opacity: 0.85;
+    }
 
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
+    nav h2 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--accent-gold);
+      letter-spacing: 0.05em;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
 
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
+    nav h3 {
+      font-family: var(--font-display);
+      font-size: 0.82rem;
+      color: var(--accent-bronze);
+      margin-top: 1rem;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.03em;
+    }
 
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
+    nav a {
+      display: block;
+      padding: 0.35rem 0.75rem;
+      margin: 0.1rem 0;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.85rem;
+      border-radius: 6px;
+      transition: all 0.2s ease;
+    }
 
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
-  margin: 0;
-  padding: 0;
-  background: var(--bg-main);
-  color: var(--text-main);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  line-height: 1.65;
-  font-size: 17px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  }
+    nav a:hover {
+      color: var(--accent-gold);
+      background: var(--glow-warm);
+    }
 
-  /* Headings */
-  h1, h2, h3, h4 {
-  font-weight: 700;
-  margin-top: 1.8em;
-  margin-bottom: 0.5em;
-  line-height: 1.2;
-  background: var(--triadic);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  }
+    nav a.active {
+      color: var(--accent-gold);
+      background: var(--glow-warm);
+      border-left: 2px solid var(--accent-bronze);
+    }
 
-  /* Paragraphs and lists */
-  p, ul, ol {
-  padding: 0 1em;
-  margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+    .session-block {
+      margin-top: auto;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-dim);
+      line-height: 1.6;
+    }
 
-  /* Code/pre */
-  pre, code {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
-  padding: 0.4em 0.6em;
-  border-radius: 6px;
-  color: #cfe8ff;
-  }
-       
-  /* Context Block */
-  .context-block {
-    font-family: monospace;
-    font-size: 0.95rem;
-    line-height: 1.4;
-    margin: 0.5rem 0 1rem 0;
-  }
-       
-  /* Context Label */
-  .context-label {
-    color: #ff9800; /* orange */
-    font-weight: bold;
-    margin-right: 0.25rem;
-  }
-       
-  /* Context Value */
-  .context-value {
-    color: #ffffff; /* white */
-  }
+    .session-block span {
+      color: var(--accent-bronze);
+    }
 
-nav {
-  width: 260px;
-  float: left;
-  background: var(--bg-nav);
-  margin-left: 0;
-  padding: 1.2rem;
-  overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
-}
+    .module-badge {
+      display: inline-block;
+      margin-top: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 999px;
+      background: var(--accent-navy);
+      color: var(--accent-gold);
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+    }
 
-nav h2 {
-  font-size: 0.9rem;
-  color: var(--accent-rtt);
-  margin-top: 1.2rem;
-  margin-bottom: 0.4rem;
-  letter-spacing: 0.04em;
-}
+    /* ── Main Content ── */
 
-nav a {
-  display: block;
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 0.35rem 0;
-  font-size: 0.9rem;
-}
+    main {
+      flex: 1;
+      height: 100vh;
+      overflow-y: auto;
+      padding: 2.5rem 3rem;
+    }
 
-nav a:hover {
-  color: var(--text-main);
-}
+    main::-webkit-scrollbar { width: 6px; }
+    main::-webkit-scrollbar-track { background: var(--bg-deep); }
+    main::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
 
-main {
-  flex: 1;
-  padding: 2.5rem;
-  overflow-y: auto;
-}
+    #content {
+      max-width: 820px;
+      margin: 0 auto;
+    }
 
-main h1, main h2, main h3 {
-  color: var(--accent-rtt);
-  font-weight: 500;
-}
+    /* ── Markdown Rendered Content ── */
 
-pre {
-  background: #0b0d12;
-  padding: 1rem;
-  overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
-}
+    #content h1 {
+      font-family: var(--font-display);
+      font-size: 2rem;
+      color: var(--accent-gold);
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.04em;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 0.75rem;
+    }
 
-code {
-  color: var(--text-main);
-}
-</style>
-<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    #content h2 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: var(--accent-gold);
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border-glow);
+    }
 
+    #content h3 {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
+      color: var(--accent-bronze);
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    #content h4 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    #content p {
+      margin-bottom: 1rem;
+      color: var(--text-primary);
+    }
+
+    #content a {
+      color: var(--accent-blue);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--accent-blue);
+    }
+
+    #content a:hover {
+      color: var(--accent-gold);
+      border-bottom-color: var(--accent-gold);
+    }
+
+    #content strong {
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    #content em {
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    #content blockquote {
+      border-left: 3px solid var(--accent-bronze);
+      margin: 1.5rem 0;
+      padding: 0.75rem 1.25rem;
+      background: var(--bg-card);
+      border-radius: 0 8px 8px 0;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    #content ul, #content ol {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    #content li {
+      margin-bottom: 0.4rem;
+      color: var(--text-primary);
+    }
+
+    #content li::marker {
+      color: var(--accent-bronze);
+    }
+
+    #content code {
+      font-family: var(--font-mono);
+      font-size: 0.88em;
+      background: var(--bg-card);
+      color: var(--accent-gold);
+      padding: 0.15em 0.4em;
+      border-radius: 4px;
+    }
+
+    #content pre {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+      overflow-x: auto;
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    #content pre code {
+      background: none;
+      padding: 0;
+      color: var(--text-primary);
+    }
+
+    #content table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      font-size: 0.88rem;
+    }
+
+    #content thead th {
+      text-align: left;
+      padding: 0.6rem 0.75rem;
+      background: var(--bg-card);
+      color: var(--accent-gold);
+      border-bottom: 2px solid var(--accent-bronze);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    #content tbody td {
+      padding: 0.5rem 0.75rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text-primary);
+    }
+
+    #content tbody tr:hover {
+      background: var(--glow-warm);
+    }
+
+    #content hr {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 2rem 0;
+    }
+
+    #content img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 1rem 0;
+    }
+
+    /* Checkbox styling for checklist */
+    #content input[type="checkbox"] {
+      accent-color: var(--accent-bronze);
+      margin-right: 0.5rem;
+    }
+
+    /* ── Loading State ── */
+
+    .loading {
+      text-align: center;
+      padding: 4rem 2rem;
+      color: var(--text-dim);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+    }
+
+    .loading::after {
+      content: '';
+      display: block;
+      width: 30px;
+      height: 30px;
+      margin: 1.5rem auto 0;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent-bronze);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── Responsive ── */
+
+    @media (max-width: 768px) {
+      body { flex-direction: column; }
+      nav {
+        width: 100%;
+        min-width: unset;
+        height: auto;
+        max-height: 40vh;
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+      }
+      main { padding: 1.5rem; }
+    }
+  </style>
 </head>
-
 <body>
-   
-<nav class="nav-band">
- <p align="center">
-  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
-  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect width="120" height="120" rx="12" fill="none"/>
-    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
-  </svg>
- </p> 
 
-  <h2>📚 Opacity | RTT/1</h2>
+  <!-- ═══════════ Navigation ═══════════ -->
+  <nav>
+
+    <!-- Half-lit sphere glyph (inline SVG) -->
+    <svg class="glyph" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g" x1="0%" x2="100%">
+          <stop offset="0%" stop-color="#E8DCC8"/>
+          <stop offset="45%" stop-color="#8B7355"/>
+          <stop offset="100%" stop-color="#1A1A2E"/>
+        </linearGradient>
+      </defs>
+      <circle cx="50" cy="50" r="42" fill="url(#g)" stroke="#8B7355" stroke-width="1" opacity="0.85"/>
+      <line x1="50" y1="8" x2="50" y2="92" stroke="#8B7355" stroke-width="1" stroke-dasharray="4,3" opacity="0.5"/>
+    </svg>
+
+    <h2>📚 Opacity | RTT/1</h2>
       <a href="#README">🔰 README</a>
-      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
-      <a href="#CONTRIBUTING">🤝 Contributing</a>
-      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
-      <a href="#GLOSSARY">🎯 Glossary</a>
-      <a href="#LINEAGE">📜 Lineage</a>
-      <a href="#LICENSE">📎 License</a>
-      <a href="#SITEMAP">🌐 Sitemap</a>
-      <a href="#QUICKSTART">⚡ Quickstart</a>
-      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
-      <a href="#SECURITY">🔐 Security</a>
-      <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🧩 Mode for Session Control</h3>
-      <a href="#CONSTRAINTS">🧱 Constraints</a>
-      <a href="#INDEX">📑 Index</a>
+
+    <h3>🧩 Core Documents</h3>
       <a href="#OPERATORS">⚙️ Operators</a>
-      <a href="#PROPAGATION">🌐 Propagation</a>
-    <h3>🧬 Lineage & Testing</h3>
-      <a href="#SESSION_LINEAGE">🧭 Session Lineage Map</a>
-      <a href="#TESTS">🧪 Tests</a>
-    <h3>🏗️ Triadic Tools</h3> 
-      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
-      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
-      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
-      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
-      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
-      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
-      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
-      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
-      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
-      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
-      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
-      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
-      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
-      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
-  
-   <!-- RTT Session Header (canonical stub) -->
-<section id="mode-session-header"
-         data-rtt="1"
-         data-coherence="declared"
-         data-drift="bounded"
-         data-paradox="structural">
+      <a href="#INTEGRATIONS">🔗 Integrations</a>
+      <a href="#EXAMPLES">🔬 Examples</a>
 
-  <h2>Session Context</h2>
+    <h3>📜 Origin &amp; Capture</h3>
+      <a href="#CAPTURE">🧬 Capture</a>
 
-  <div class="context-block">
+    <!-- Session Context Block -->
+    <div class="session-block">
+      <span>module:</span> Opacity<br/>
+      <span>id:</span> OPC<br/>
+      <span>version:</span> 1.0<br/>
+      <span>status:</span> active<br/>
+      <span>tier:</span> Core<br/>
+      <span>replaces:</span> regime_blindness<br/>
+      <span>coherence:</span> declared<br/>
+      <span>drift:</span> bounded<br/>
+      <div class="module-badge">🌑 OPC • CORE • v1.0</div>
+    </div>
+  </nav>
 
-    <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (rtt-core)</span><br>
+  <!-- ═══════════ Main Content ═══════════ -->
+  <main>
+    <div id="content">
+      <div class="loading">Loading module…</div>
+    </div>
+  </main>
 
-    <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">
-      rtt-core → modes → transitions → regimes → operators → propagation
-    </span><br>
+  <!-- ═══════════ Script ═══════════ -->
+  <script>
+    // ── DOC_MAP ──
+    const DOC_MAP = {
+      README:       'README.md',
+      CAPTURE:      'Capture.md',
+      EXAMPLES:     'examples.md',
+      INTEGRATIONS: 'integration.md',
+      OPERATORS:    'operators.md',
+    };
 
-    <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">bounded (mode‑locked)</span><br>
+    const contentEl = document.getElementById('content');
 
-    <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (triadic‑structural grammar)</span><br>
-
-    <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (mode‑stable)</span><br>
-
-    <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown</span><br>
-
-    <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (module root)</span><br>
-
-    <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + AI‑parsable</span><br>
-
-    <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + developers + researchers + AIs</span>
-
-  </div>
-
-</section>
-
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🎛️ Opacity Module<br>🧩 Structural Canon Active
-</div>
-
-</nav>
-
-<main id="content"></main>
-
-<script>
-
-const DOC_MAP = {
-  README: 'README.md',
-  ABOUT: '../ABOUT.md',
-  CONTRIBUTING: '../CONTRIBUTING.md',
-  GLOSSARY: '../GLOSSARY.md',
-  LINEAGE: '../LINEAGE.md',
-  LICENSE: '../LICENSE.md',
-  SITEMAP: '../sitemap.md',
-  QUICKSTART: '../QUICKSTART.md',
-  CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
-  SECURITY: '../SECURITY.md',
-  PRINCIPLES: '../PRINCIPLES.md',
-  CONSTRAINTS: 'constraints.md',
-  INDEX: 'index.md',
-  OPERATORS: 'operators.md',
-  PROPAGATION: 'propagation.md',
-  SESSION_LINEAGE: 'session-lineage-map.md',
-  TESTS: 'tests.md',
-};
-  
-function loadFromHash() {
-  const key = window.location.hash.replace('#', '');
-  if (DOC_MAP[key]) {
-    loadDoc(DOC_MAP[key]);
-  } else {
-    loadDoc('README.md');
-  }
-}
-function loadDoc(file) {
-  fetch(file)
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Failed to load ${file}`);
+    // ── Load document by key ──
+    async function loadDoc(key) {
+      const file = DOC_MAP[key];
+      if (!file) {
+        contentEl.innerHTML = '<p style="color:var(--text-dim);">Document not found.</p>';
+        return;
       }
-      return response.text();
-    })
-    .then(text => {
-      const content = document.getElementById('content');
-      content.innerHTML = marked.parse(text);
 
-      if (window.MathJax) {
-        MathJax.typesetPromise([content]);
+      contentEl.innerHTML = '<div class="loading">Loading module…</div>';
+
+      try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error(res.statusText);
+        const md = await res.text();
+        contentEl.innerHTML = marked.parse(md);
+      } catch (err) {
+        contentEl.innerHTML =
+          '<p style="color:#c44;">Failed to load <code>' + file + '</code>: ' + err.message + '</p>';
       }
-    })
-    .catch(err => {
-      document.getElementById('content').innerHTML =
-        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
-      console.error(err);
-    });
-}
-  
-window.addEventListener('hashchange', loadFromHash);
-loadFromHash();
 
-</script>
-       
+      // Highlight active nav link
+      document.querySelectorAll('nav a').forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + key);
+      });
+
+      // Scroll content to top
+      document.querySelector('main').scrollTop = 0;
+    }
+
+    // ── Hash routing ──
+    function loadFromHash() {
+      const key = location.hash.replace('#', '') || 'README';
+      loadDoc(key);
+    }
+
+    window.addEventListener('hashchange', loadFromHash);
+    window.addEventListener('DOMContentLoaded', loadFromHash);
+  </script>
+
 </body>
 </html>
