@@ -130,7 +130,8 @@ This is the **G1 → G2 → G3 learning arc**.
 
 This is where RTT becomes programmable.
 
-- [/NoS/](https://www.triadicframeworks.org/NoS/)  
+- [/NoS/](https://www.triadicframeworks.org/NoS/)
+- [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/)
 - [/api/rtt/](https://www.triadicframeworks.org/api/rtt/)  
 - [/rtt-sdk/](https://www.triadicframeworks.org/rtt-sdk/)  
 - [/packages/](https://www.triadicframeworks.org/packages/)  
