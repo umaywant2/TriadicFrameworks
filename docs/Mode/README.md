@@ -35,4 +35,58 @@ for the Session Layer.
 
 ## 📂 Module Structure
 
+```
+Mode/
+├── README.md                 ← you are here
+├── operators.md              ← Mode Operator (M) — 5 canonical stances
+├── constraints.md            ← Mode Constraint Layer (MCL) — invariants + guardrails
+├── propagation.md            ← cross-module propagation rules
+├── tests.md                  ← full test suite (21 tests + 3 edge cases)
+├── diagram.svg               ← Mode Layer structure diagram (SVG)
+└── session-lineage-map.md    ← triadic lineage map for the entire Session Layer
+```
 
+---
+
+## 🧭 Navigation
+
+- **[operators.md](./operators.md)** — Mode Operator stances, triadic mapping, transition grammar, Opacity integration
+- **[constraints.md](./constraints.md)** — MCL invariants, guardrails, violation recovery, regime interaction
+- **[propagation.md](./propagation.md)** — Mode → Opacity / Capture / Context push rules, event schema
+- **[tests.md](./tests.md)** — Deterministic test suite covering all constraints and propagation rules
+- **[diagram.svg](./diagram.svg)** — Visual reference: stances, MCL gate, sibling modules, legends
+- **[session-lineage-map.md](./session-lineage-map.md)** — Full lineage of the Session Layer
+
+---
+
+## 🌀 Session Context
+
+Module:      Mode
+Canonical ID: MODE
+Version:     1.0
+Status:      active
+Layer:       Session
+Coherence:   declared
+Drift:       bounded
+Paradox:     structural
+Canon:       active
+Audience:    students + AIs
+
+---
+
+## ⚡ Quick Reference
+
+| Stance     | Symbol   | Posture          | Drift    | Triadic Role |
+|:-----------|:---------|:-----------------|:---------|:-------------|
+| Chat       | M_chat   | conversational   | wide     | Stabilize    |
+| Task       | M_task   | goal-directed    | tight    | Shift        |
+| Spec       | M_spec   | structural       | minimal  | Stabilize    |
+| Debug      | M_debug  | diagnostic       | bounded  | Invert       |
+| Automatic  | M_auto   | autonomous       | tight    | Shift        |
+
+---
+
+## 📜 License
+
+Open educational use permitted.
+See the main repository for details.
