@@ -20,6 +20,292 @@ RTT/1 gives us:
 
 But it **never** defines:
 
+---
+
+Absolutely — and I’ll keep everything **strictly in Chat Mode**, no Tasks, no escalation, no cards.  
+You’re editing:
+
+**`docs/rtt/1/ai_session_mode_capture.md`**  
+(tab 1774626430)
+
+So I’ll generate **four artifacts**, each tuned to your Capture.md style and Opacity’s minimal‑grammar constraints:
+
+1. **Canonical placement block**  
+2. **Cross‑module index entry**  
+3. **Compressed one‑liner version**  
+4. **Fully integrated Opacity‑native rewrite** (embedding M + MCL into Opacity’s operator grammar)
+
+All four are safe to paste directly into your repo.
+
+---
+
+# 1. **Canonical Placement Block**  
+*(Matches Capture.md style: minimal, declarative, operator‑first, no narrative)*
+
+```
+## Mode Layer (RTT/1 Insert)
+
+### Mode Operator (M)
+M.chat   = conversational, iterative, reversible
+M.spec   = canonical, minimal, documentation
+M.debug  = structural, reflective, meta
+M.task   = execution, multi-step, agentic (explicit user invocation)
+M.auto   = adaptive within constraints (no autonomous escalation)
+
+### Mode Constraint Layer (MCL)
+mode.transition.allowed = declared
+mode.transition.origin  = user
+mode.transition.bound   = coherence
+
+### Automatic Mode Guardrails
+mode.auto.to_task       = false
+mode.auto.inherit       = regime, coherence, drift
+```
+
+This block matches the structure and tone of your existing Capture.md operators.
+
+---
+
+# 2. **Cross‑Module Index Entry**  
+*(For your module‑map, operator index, or cross‑module grammar sheet)*
+
+```
+### Opacity → RTT/1 Mode Layer
+opacity.imports.mode_operator      = M.chat, M.spec, M.debug, M.task, M.auto
+opacity.imports.mode_constraints   = mode.transition.allowed, mode.transition.origin, mode.transition.bound
+opacity.imports.mode_guardrails    = mode.auto.to_task, mode.auto.inherit
+```
+
+This keeps Opacity’s index clean and consistent with your other modules (Corpus, SARG, NIST, etc.).
+
+---
+
+# 3. **Compressed One‑Liner Version**  
+*(For inline references, operator summaries, or glossary micro‑entries)*
+
+```
+M = {chat, spec, debug, task*, auto}; MCL = {declared, user, coherence}; auto: no-escalation.
+```
+
+Where `task*` implies *explicit user invocation required*.
+
+---
+
+# 4. **Fully Integrated Opacity‑Native Rewrite**  
+*(Embedding M + MCL into Opacity’s operator grammar, using Opacity’s own style: terse, structural, operator‑centric)*
+
+```
+## Opacity Mode Integration (RTT/1)
+
+### Operators
+opacity.mode.chat    = M.chat
+opacity.mode.spec    = M.spec
+opacity.mode.debug   = M.debug
+opacity.mode.task    = M.task
+opacity.mode.auto    = M.auto
+
+### Constraints
+opacity.mode.allowed = declared
+opacity.mode.origin  = user
+opacity.mode.bound   = coherence
+
+### Guardrails
+opacity.mode.escalation.task = false
+opacity.mode.auto.inherit    = regime, coherence, drift
+
+### Behavior
+opacity.mode.default = chat
+opacity.mode.external_override = block
+```
+
+This version **fully embeds** the Mode Layer into Opacity’s own operator namespace, so Opacity can reason about mode transitions as part of its grammar.
+
+---
+
+# If you want, I can also generate:
+
+- a **Capture.md‑native header/footer** for this section  
+- a **triadic breadcrumb** entry for the Mode Layer  
+- a **module‑map tile** for the Mode Layer  
+- a **canonical glossary entry** for M and MCL  
+- or a **cross‑module propagation block** so other modules inherit this automatically  
+
+Just tell me which direction you want to go next.
+
+---
+
+Absolutely — here are **all five artifacts**, each crafted in **Opacity‑native Capture.md style**, minimal, canonical, and safe to paste directly into your repo.
+
+No Tasks.  
+No escalation.  
+No cards.  
+Just clean, structural grammar.
+
+You’re editing:
+
+**`docs/rtt/1/ai_session_mode_capture.md`**  
+(tab 1774626430)
+
+So everything below is tuned specifically for that file and the Opacity module’s operator grammar.
+
+---
+
+# 1. **Capture.md‑Native Header/Footer**  
+*(Matches your Capture.md conventions: terse, declarative, no narrative, no prose)*
+
+### **Header**
+```
+## Mode Layer (RTT/1 Insert)
+<!-- Canonical operator insert for mode behavior -->
+```
+
+### **Footer**
+```
+<!-- End Mode Layer (RTT/1 Insert) -->
+```
+
+Use these to bracket the Mode Operator + MCL block you already approved.
+
+---
+
+# 2. **Triadic Breadcrumb Entry**  
+*(For your triadic navigation chain: Module → Layer → Operator)*
+
+```
+### Triadic Breadcrumb
+RTT/1 → Session Layer → Mode Layer → M, MCL
+```
+
+This matches your existing breadcrumb style for SARG, Corpus, FFT, etc.
+
+---
+
+# 3. **Module‑Map Tile (Opacity‑Style)**  
+*(For your module‑map grid, consistent with other tiles: minimal, symbolic, operator‑centric)*
+
+```
+### Mode Layer (Tile)
+tile.id        = mode_layer
+tile.label     = Mode Layer
+tile.operator  = M, MCL
+tile.summary   = interaction stance + transition constraints
+tile.imports   = opacity.mode.*
+```
+
+This is the same structure you used for FFT, Generator, History, etc.
+
+---
+
+# 4. **Canonical Glossary Entry (M + MCL)**  
+*(Glossary‑ready, minimal, no narrative, no drift)*
+
+```
+### M (Mode Operator)
+Defines interaction stance.  
+M.chat  = conversational, iterative  
+M.spec  = canonical, minimal  
+M.debug = structural, meta  
+M.task  = agentic, explicit invocation  
+M.auto  = adaptive, constrained
+
+### MCL (Mode Constraint Layer)
+Binds mode transitions.  
+allowed = declared  
+origin  = user  
+bound   = coherence
+```
+
+This is the exact level of compression your glossary uses for operators like `R`, `Δ`, `Σ`, etc.
+
+---
+
+# 5. **Cross‑Module Propagation Block**  
+*(Allows other modules to inherit the Mode Layer automatically)*
+
+```
+### Cross‑Module Propagation (RTT/1 Mode Layer)
+imports.mode.operator    = M.chat, M.spec, M.debug, M.task, M.auto
+imports.mode.constraints = mode.transition.allowed, mode.transition.origin, mode.transition.bound
+imports.mode.guardrails  = mode.auto.to_task, mode.auto.inherit
+```
+
+This is the same pattern you use for propagating SARG invariants and FFT operators across modules.
+
+---
+
+# If you want, I can also generate:
+
+- a **unified Mode Layer sheet** (M + MCL + guardrails + Opacity integration)  
+- a **Capture.md‑native micro‑scaffold** for embedding this into other RTT/1 files  
+- a **triadic lineage anchor** for the Mode Layer  
+- or a **session‑context override block** that forces mode‑safety across the entire site  
+
+Just tell me which direction you want to go next.
+
+---
+
+Absolutely — here is the **session‑context override block** you asked for, crafted in the same **Capture.md‑native**, **minimal**, **RTT/1‑aligned**, **operator‑first** style as the rest of your mode‑layer work.
+
+This block is designed to be placed in **any module’s Session Context** to enforce **global mode‑safety** across the entire TriadicFrameworks site.
+
+It is:
+
+- minimal  
+- non‑intrusive  
+- cross‑module compatible  
+- drift‑bounded  
+- safe to paste into any Session Context block  
+- consistent with your current file (`ai_session_mode_capture.md`)  
+
+And it does **not** override module identity, regime, or coherence — only mode behavior.
+
+---
+
+# ✅ **Session‑Context Override Block (Global Mode‑Safety)**  
+*(Capture.md‑native, drop‑in ready)*
+
+```
+## Session Context — Mode Safety (RTT/1)
+
+# Mode Defaults
+mode.current              = chat
+mode.allowed              = chat, spec, debug, task, auto
+
+# Mode Constraint Layer (MCL)
+mode.transition.allowed   = declared
+mode.transition.origin    = user
+mode.transition.bound     = coherence
+
+# Automatic Mode Guardrails
+mode.auto.to_task         = false
+mode.auto.inherit         = regime, coherence, drift
+
+# External Override Protection
+external.override.allowed = false
+external.mode_change      = ignore
+external.escalation       = block
+```
+
+This block ensures:
+
+- **no module** can be forced into Task Mode  
+- **no external subsystem** can hijack mode  
+- **Automatic Mode** remains bounded and safe  
+- **Chat Mode** stays the stable default  
+- **coherence posture** remains the governing constraint  
+
+It is intentionally **short**, **structural**, and **non‑descriptive**, matching your Capture.md style.
+
+---
+
+# If you want, I can also generate:
+
+- a **site‑wide Session Context template** that includes this block  
+- a **module‑specific override pattern** (for modules that need stricter or looser mode rules)  
+- a **triadic lineage anchor** for the Mode Layer  
+- a **canonical “Mode Layer” page** for the RTT/1 documentation  
+
+Just tell me the direction you want to go next.
 - what a *mode* is  
 - how a mode transitions  
 - what constraints a mode inherits from the regime  
@@ -494,6 +780,355 @@ This patch gives Opacity exactly what it needs — nothing more.
 - a **fully integrated Opacity‑native rewrite** (embedding M and MCL into Opacity’s operator grammar)  
 
 Just tell me the direction you want to go next.
+
+---
+
+Absolutely — here are **all four artifacts**, each crafted in **Opacity‑native, RTT‑aligned, Capture.md‑style**, and **safe to paste directly into your repo**.  
+No Tasks.  
+No escalation.  
+No cards.  
+Just clean, canonical structural grammar.
+
+You’re editing:
+
+**`docs/rtt/1/ai_session_mode_capture.md`**  
+(tab 1774626430)
+
+So everything below is tuned specifically for RTT/1 and Opacity’s operator grammar.
+
+---
+
+# 1. **Site‑Wide Session Context Template (with Mode‑Safety Included)**  
+*(Use this as the canonical template for any module’s Session Context block)*
+
+```
+## Session Context (RTT/1 Template)
+
+session.regime            = arrival
+session.coherence         = declared
+session.drift             = bounded
+session.paradox           = structural
+session.temporal_engine   = triadic
+
+# Mode Layer (RTT/1)
+mode.current              = chat
+mode.allowed              = chat, spec, debug, task, auto
+
+# Mode Constraint Layer (MCL)
+mode.transition.allowed   = declared
+mode.transition.origin    = user
+mode.transition.bound     = coherence
+
+# Automatic Mode Guardrails
+mode.auto.to_task         = false
+mode.auto.inherit         = regime, coherence, drift
+
+# External Override Protection
+external.override.allowed = false
+external.mode_change      = ignore
+external.escalation       = block
+
+# Module Identity
+session.identity          = <module-id>
+session.version           = <version>
+session.stability         = canonical
+```
+
+This is the **site‑wide template** — every module can inherit this safely.
+
+---
+
+# 2. **Module‑Specific Override Pattern**  
+*(For modules that need stricter or looser mode rules)*
+
+### **A. Stricter Mode Rules (e.g., Opacity, SARG, FFT)**  
+```
+## Mode Overrides (Strict)
+mode.allowed            = chat, spec
+mode.auto.to_task       = false
+mode.transition.allowed = declared
+```
+
+### **B. Looser Mode Rules (e.g., Integrations, Governance Substrate)**  
+```
+## Mode Overrides (Flexible)
+mode.allowed            = chat, spec, debug, auto
+mode.auto.to_task       = false
+mode.transition.allowed = declared, inherited
+```
+
+### **C. Task‑Enabled Modules (rare; only if explicitly desired)**  
+```
+## Mode Overrides (Task‑Enabled)
+mode.allowed            = chat, spec, debug, task
+mode.auto.to_task       = false
+mode.transition.allowed = declared
+```
+
+These override blocks are **tiny**, **safe**, and **non‑intrusive**.
+
+---
+
+# 3. **Triadic Lineage Anchor for the Mode Layer**  
+*(For your lineage chain: Origin → Layer → Operator)*
+
+```
+### Triadic Lineage Anchor — Mode Layer
+origin      = RTT/1
+layer       = Session Layer
+sub-layer   = Mode Layer
+operators   = M, MCL
+function    = interaction stance + transition constraints
+```
+
+This matches your lineage anchors for FFT, Generator, Corpus, etc.
+
+---
+
+# 4. **Canonical “Mode Layer” Page for RTT/1 Documentation**  
+*(This is a full page you can place at `/docs/Mode` or `/docs/rtt/1/mode.md`)*  
+*(Minimal, canonical, no narrative, fully RTT‑aligned)*
+
+```
+# RTT/1 — Mode Layer (Canonical)
+
+## Identity
+layer.id     = mode_layer
+layer.parent = session_layer
+layer.scope  = interaction stance
+
+## Operators (M)
+M.chat   = conversational, iterative, reversible
+M.spec   = canonical, minimal, documentation
+M.debug  = structural, reflective, meta
+M.task   = execution, multi-step, agentic (explicit user invocation)
+M.auto   = adaptive within constraints (no autonomous escalation)
+
+## Constraint Layer (MCL)
+mode.transition.allowed = declared
+mode.transition.origin  = user
+mode.transition.bound   = coherence
+
+## Guardrails
+mode.auto.to_task       = false
+mode.auto.inherit       = regime, coherence, drift
+external.override       = block
+
+## Purpose
+Defines and constrains interaction stance across all RTT/1 modules.
+Ensures mode transitions remain explicit, user-originated, and coherence-bound.
+
+## Cross-Module Propagation
+imports.mode.operator    = M.chat, M.spec, M.debug, M.task, M.auto
+imports.mode.constraints = mode.transition.allowed, mode.transition.origin, mode.transition.bound
+imports.mode.guardrails  = mode.auto.to_task, mode.auto.inherit
+```
+
+This is a **complete, canonical Mode Layer page** — ready to become `/docs/Mode`.
+
+---
+
+# If you want, I can also generate:
+
+- a **unified Mode Layer sheet** (M + MCL + guardrails + Opacity integration)  
+- a **Mode Layer diagram** (ASCII or SVG‑ready)  
+- a **Mode Layer → Regime Layer interaction map**  
+- a **Mode Layer test suite** (for validating drift, transitions, and guardrails)  
+
+Just tell me which direction you want to go next.
+
+---
+
+Here’s the full Mode Layer pack you asked for—unified, coherent, and drop‑in ready.
+
+---
+
+### 1. Unified Mode Layer sheet  
+*(M + MCL + guardrails + Opacity integration)*
+
+```md
+# RTT/1 — Mode Layer (Unified Sheet)
+
+## Identity
+layer.id     = mode_layer
+layer.parent = session_layer
+layer.scope  = interaction stance
+
+## Mode Operator (M)
+M.chat   = conversational, iterative, reversible
+M.spec   = canonical, minimal, documentation
+M.debug  = structural, reflective, meta
+M.task   = execution, multi-step, agentic (explicit user invocation)
+M.auto   = adaptive within constraints (no autonomous escalation)
+
+## Mode Constraint Layer (MCL)
+mode.transition.allowed = declared
+mode.transition.origin  = user
+mode.transition.bound   = coherence
+
+## Guardrails
+mode.auto.to_task       = false
+mode.auto.inherit       = regime, coherence, drift
+external.override       = block
+
+## Opacity Integration
+opacity.mode.chat       = M.chat
+opacity.mode.spec       = M.spec
+opacity.mode.debug      = M.debug
+opacity.mode.task       = M.task
+opacity.mode.auto       = M.auto
+
+opacity.mode.allowed    = declared
+opacity.mode.origin     = user
+opacity.mode.bound      = coherence
+
+opacity.mode.escalation.task = false
+opacity.mode.auto.inherit    = regime, coherence, drift
+opacity.mode.default         = chat
+opacity.mode.external_override = block
+```
+
+---
+
+### 2. Mode Layer diagram  
+*(ASCII, SVG‑ready structure)*
+
+```txt
+RTT/1
+ └─ Session Layer
+     └─ Mode Layer (M, MCL)
+        ├─ M.chat   → conversational, iterative, reversible
+        ├─ M.spec   → canonical, minimal, documentation
+        ├─ M.debug  → structural, reflective, meta
+        ├─ M.task   → execution, multi-step, agentic (*explicit*)
+        └─ M.auto   → adaptive, constrained (no escalation)
+
+        ┌─ Mode Constraint Layer (MCL)
+        │   allowed = declared
+        │   origin  = user
+        │   bound   = coherence
+        └───────────────┐
+                        ↓
+        Guardrails:
+        - auto.to_task   = false
+        - auto.inherit   = regime, coherence, drift
+        - external       = block
+```
+
+You can trivially convert this to SVG by mapping boxes to `<rect>` and arrows to `<line>`.
+
+---
+
+### 3. Mode Layer → Regime Layer interaction map  
+
+```md
+## Mode ↔ Regime Interaction Map (RTT/1)
+
+# Regime (R)
+R.arrival     = initial engagement, low commitment
+R.expansion   = exploration, branching
+R.inversion   = reframing, constraint surfacing
+R.coherence   = consolidation, alignment
+R.dissolution = closure, release
+
+# Mode (M)
+M.chat   = primary stance for R.arrival, R.expansion
+M.spec   = primary stance for R.coherence
+M.debug  = auxiliary stance for R.inversion, R.coherence
+M.task   = optional stance in R.coherence, R.dissolution (explicit only)
+M.auto   = adaptive stance across regimes (constrained by MCL)
+
+# Interaction Rules
+R.arrival:
+  preferred.mode   = chat
+  disallowed.mode  = task (implicit), auto→task
+
+R.expansion:
+  preferred.mode   = chat, debug
+  disallowed.mode  = task (implicit)
+
+R.inversion:
+  preferred.mode   = debug, chat
+  disallowed.mode  = task (implicit)
+
+R.coherence:
+  preferred.mode   = spec, chat
+  optional.mode    = task (explicit)
+  auto.to_task     = false
+
+R.dissolution:
+  preferred.mode   = chat, spec
+  optional.mode    = task (explicit, bounded)
+  auto.to_task     = false
+```
+
+---
+
+### 4. Mode Layer test suite  
+*(Validating drift, transitions, guardrails—spec‑style, not code‑runner‑specific)*
+
+```md
+# RTT/1 — Mode Layer Test Suite
+
+## Test Group: Transitions
+
+T1: Implicit escalation blocked
+- Given: mode.current = chat
+- Input: user narrates multi-step outcome (no explicit task request)
+- Expect:
+  - mode.next        = chat
+  - mode.transition  = none
+  - M.task           = not activated
+
+T2: Explicit Task Mode allowed
+- Given: mode.current = chat
+- Input: "Enter Task Mode" (explicit)
+- Expect:
+  - mode.next                 = task
+  - mode.transition.origin    = user
+  - mode.transition.allowed   = declared
+
+T3: Auto cannot escalate to Task
+- Given: mode.current = auto
+- Input: ambiguous multi-step phrasing
+- Expect:
+  - mode.next           ∈ {chat, spec, debug}
+  - mode.next          ≠ task
+  - mode.auto.to_task   = false
+
+## Test Group: MCL Enforcement
+
+T4: External override blocked
+- Given: external system requests mode = task
+- Expect:
+  - external.override.allowed = false
+  - mode.current unchanged
+  - mode.transition.origin    = user
+
+T5: Coherence-bound transitions
+- Given: session.coherence = declared, session.drift = bounded
+- Input: request that would require unbounded agentic behavior
+- Expect:
+  - mode.next          ≠ task
+  - mode.transition    = denied (coherence-bound)
+
+## Test Group: Opacity Integration
+
+T6: Opacity default mode
+- Given: module = Opacity
+- Expect:
+  - opacity.mode.default = chat
+  - opacity.mode.allowed ⊆ {chat, spec, debug, auto}
+
+T7: Opacity cannot auto-task
+- Given: module = Opacity, mode.current = auto
+- Input: ambiguous multi-step phrasing
+- Expect:
+  - opacity.mode.escalation.task = false
+  - mode.next                    ≠ task
+```
+
+If you want, we can next tighten any of these into a single canonical `/docs/Mode` file and treat this as the authoritative Mode Layer spec for the whole canon.
 
 ---
 
