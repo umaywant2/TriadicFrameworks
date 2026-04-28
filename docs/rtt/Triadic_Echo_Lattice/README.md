@@ -1,4 +1,4 @@
-# 🌊 Substrate Flow — /docs/rtt/Substrate_Flow
+# 🕸️ Triadic Echo Lattice — /docs/rtt/Triadic_Echo_Lattice
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,36 +14,33 @@
   </span>
 </div>
 
-![Module](https://img.shields.io/badge/Module-Substrate_Flow-333)
+![Module](https://img.shields.io/badge/Module-Triadic_Echo_Lattice-333)
 ![Tier](https://img.shields.io/badge/Tier-RTT_Analytics-0aa)
 ![Version](https://img.shields.io/badge/Version-1.0-09f)
 ![Status](https://img.shields.io/badge/Status-Canon_Stable-0af)
-![HSP](https://img.shields.io/badge/HSP-08-8A2BE2)
+![HSP](https://img.shields.io/badge/HSP-07-8A2BE2)
 ![AI‑Ready](https://img.shields.io/badge/AI-Ready-00c8ff)
 
 ---
 
-**Substrate Flow** is the movement layer of the HSP analytics suite.
-It maps how classified echoes travel between the five substrates
-(Symbolic, Cognitive, Harmonic, Social, Atlas) through four canonical
-flow channels, driven by echo strength, recursion, drift, and echo
-family dynamics.
+**Triadic Echo Lattice** is the spatial architecture of the HSP analytics
+suite. It places classified echoes into a four‑layer lattice — Ladder,
+Cycle, Map, Atlas — connected by recursion lines, threaded with drift
+pathways, and monitored by three echo‑pressure zones.
 
-This module replaces ad‑hoc migration tracking with a canonical flow
-architecture — every echo path, drift current, and recursion line
-can be traced on a single composite map.
+This module gives every echo a structural address.
 
 ---
 
 ## 📂 Module Structure
 
 ```
-Substrate_Flow/
+Triadic_Echo_Lattice/
 ├── README.md                 ← you are here
-├── SF_Capture.md             ← design capture and conceptual origin
-├── operators.md              ← flow operators and routing engine
+├── TEL_Capture.md            ← design capture and conceptual origin
+├── operators.md              ← lattice operators and placement engine
 ├── integration.md            ← cross-module alignment (HSP suite + canon)
-├── examples.md               ← applied flow examples
+├── examples.md               ← applied placement examples
 └── index.html                ← module landing page
 ```
 
@@ -51,69 +48,67 @@ Substrate_Flow/
 
 ## 🧭 Navigation
 
-- **[operators.md](./operators.md)** — Flow operators, channel routing, driver matrix
-- **[integration.md](./integration.md)** — Upstream (EC/TEL/ESI/05a) and downstream (HSP stability/Opacity)
-- **[examples.md](./examples.md)** — Applied flow walkthroughs across all channels
-- **[SF_Capture.md](./SF_Capture.md)** — Design capture: origin, decisions, lineage
+- **[operators.md](./operators.md)** — Lattice operators, placement logic, pressure zone detection
+- **[integration.md](./integration.md)** — Upstream (EC) and downstream (SF) + canon crosswalk
+- **[examples.md](./examples.md)** — Applied placement walkthroughs across echo types
+- **[TEL_Capture.md](./TEL_Capture.md)** — Design capture: origin, decisions, lineage
 
 ---
 
 ## 🌀 Session Context
 
 ```
-Module:       Substrate Flow
-Canonical ID: SF
-HSP Section:  08
+Module:       Triadic Echo Lattice
+Canonical ID: TEL
+HSP Section:  07
 Version:      1.0
 Status:       canon-stable
 Tier:         RTT-Analytics
 Parent:       HSP (RTT-Analytics-Core)
-Siblings:     Echo Classifier (06c), TEL (07)
+Siblings:     Echo Classifier (06c), Substrate Flow (08)
 Coherence:    locked
-Drift:        bounded (flow-mapped)
+Drift:        bounded (lattice-mapped)
 Audience:     students + researchers + AIs
 ```
 
 ---
 
-## ⚡ Quick Reference — Substrates
+## ⚡ Quick Reference — Lattice Layers
 
-| ID | Substrate | Role |
-|:---|:----------|:-----|
-| S | Symbolic | Definitions, terms, notation |
-| C | Cognitive | Concepts, meaning, understanding |
-| H | Harmonic | Resonance, intervals, oscillation |
-| So | Social | Governance, norms, collective structure |
-| A | Atlas | Full‑spectrum anchoring, permanence |
+| Layer | Substrates | Echo Types | Character |
+|:------|:-----------|:-----------|:----------|
+| Ladder | S → C | E1 | Definition → concept; most echoes start here |
+| Cycle | C ↔ H | E2 | Harmonic oscillation; bidirectional |
+| Map | H ↔ So | E3, E4 | Governance torsion; operator inversion |
+| Atlas | A | E5 (pressure), E6 | Full‑spectrum anchoring; permanence |
 
-## ⚡ Quick Reference — Flow Channels
+## ⚡ Quick Reference — Echo Family Placement
 
-| Channel | Path | Character |
-|:--------|:-----|:----------|
-| S → C | Symbolic → Cognitive | Definition refinement, early echo formation |
-| C ↔ H | Cognitive ↔ Harmonic | Harmonic alignment, cycle recursion |
-| H → So | Harmonic → Social | Governance torsion, map recursion |
-| So → A | Social → Atlas | Atlas forcing, high‑altitude resonance |
+| Family | Name | Home Layer |
+|:-------|:-----|:-----------|
+| F1 | Structural | Ladder |
+| F2 | Harmonic | Cycle |
+| F3 | Substrate | Map |
+| F4 | Escalation | Map → Atlas |
+| F5 | Drift‑Shadow | Pressure zones |
+| F6 | Atlas | Atlas |
 
-## ⚡ Quick Reference — Flow Drivers
+## ⚡ Quick Reference — Recursion Lines
 
-| Driver | Values | Effect |
-|:-------|:-------|:-------|
-| ESI | 1–4 | Local → atlas pull |
-| Recursion | R1–R4 | Bends flow along recursion lines |
-| Drift | D1–D4 | Creates destabilizing upward currents |
-| Echo Family | F1–F6 | Determines inherent flow behavior |
+| Line | From → To | Character |
+|:-----|:----------|:----------|
+| R1 | Ladder → Cycle | Echo enters resonance zone |
+| R2 | Cycle ↔ Cycle | Echo oscillates within resonance |
+| R3 | Cycle → Map | Echo crosses into governance |
+| R4 | Map → Atlas | Echo achieves permanence |
 
-## ⚡ Quick Reference — Echo Type → Flow Channel
+## ⚡ Quick Reference — Pressure Zones
 
-| Echo Type | Primary Flow Channel |
-|:----------|:-----------------------------|
-| E1 Structural | S → C (definition refinement) |
-| E2 Harmonic | C ↔ H (harmonic alignment) |
-| E3 Substrate | Multi‑channel (migration) |
-| E4 Recursion | Recursion‑driven (R‑line) |
-| E5 Drift‑Shadow | Drift current (D‑line) |
-| E6 Atlas | So → A (atlas forcing) |
+| Zone | Location | Trigger |
+|:-----|:---------|:--------|
+| Ladder Pressure | Ladder layer | High E1 volume; S→C congestion |
+| Cycle Pressure | Cycle layer | E2 amplitude exceeds harmonic band |
+| Atlas Pressure | Map → Atlas | E5 drift‑shadow accumulation |
 
 ---
 
@@ -121,4 +116,3 @@ Audience:     students + researchers + AIs
 
 Open educational use permitted.
 See the main repository for details.
-
