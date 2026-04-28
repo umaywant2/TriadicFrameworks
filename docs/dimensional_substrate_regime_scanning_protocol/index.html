@@ -1,27 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
+<!-- Core Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-04-28">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<!-- Identity -->
 <meta name="creator" content="TriadicFrameworks">
 <meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks, created by Nawder Loswin">
-<meta name="description" content="TriadicFrameworks — a structural grammar for students and AIs, teaching gradients, triads, coherence, and system behavior across domains.">
-<meta name="keywords" content="TriadicFrameworks, systems thinking, RTT, resonance, gradients, coherence, AI education, complexity">
-<link rel="canonical" href="https://www.triadicframeworks.org/">
-  
-  <title>Dimensional Substrate Regime Scanning Protocol | TriadicFrameworks</title>
+<meta name="publisher" content="TriadicFrameworks">
 
-  <!-- Favicon (Triadic Static Mark) -->
+<!-- Description & Keywords -->
+<meta name="description" content="Dimensional Substrate Regime Scanning Protocol (dsrsp/0.1) — a minimal, substrate‑agnostic wire format for regime‑aware sensing. Defines structural envelopes, ILP inference, scan schemas, RSM/vST integration, and cross‑device coherence for probes, drones, ROVs, and starship‑class scanners.">
+<meta name="keywords" content="dsrsp, dimensional substrate, regime scanning, structural envelopes, ILP, RSM, vST, coherence patterns, substrate protocol, sensing, triadic frameworks">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol/">
+
+<!-- Robots -->
+<meta name="robots" content="index, follow">
+
+<!-- Theme -->
+<meta name="theme-color" content="#0ff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Dimensional Substrate Regime Scanning Protocol — TriadicFrameworks">
+<meta property="og:url" content="https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol/">
+<meta property="og:description" content="A minimal, substrate‑agnostic wire format for regime‑aware sensing. Includes ILP inference, structural envelopes, RSM/vST integration, and canonical scan schemas.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Dimensional Substrate Regime Scanning Protocol — TriadicFrameworks">
+<meta name="twitter:description" content="Substrate‑agnostic regime scanning protocol with ILP inference, structural envelopes, and RSM/vST integration.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation Metadata -->
+<meta name="citation_title" content="Dimensional Substrate Regime Scanning Protocol — dsrsp/0.1 Specification">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.subject" content="regime scanning, dimensional substrate, ILP, RSM, vST, coherence patterns, sensing protocols">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="Dimensional Substrate Regime Scanning Protocol">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Define a minimal, substrate‑agnostic wire format for regime‑aware sensing, including structural envelopes, ILP inference, RSM/vST integration, and canonical scan schemas.">
+<meta name="ai.keywords" content="dsrsp, dimensional substrate, regime scanning, ILP, RSM, vST, structural envelopes, coherence patterns">
+<meta name="ai.audience" content="engineers, researchers, developers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="Dimensional Substrate Regime Scanning Protocol (dsrsp/0.1)">
+<meta name="ai.module.summary" content="Minimal substrate‑agnostic protocol for regime‑aware sensing, ILP inference, and RSM/vST integration.">
+<meta name="ai.module.category" content="substrate-regime-scanning">
+
+<!-- Favicon -->
 <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
-<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1080" />
-<meta property="og:image:height" content="1080" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Dimensional Substrate Regime Scanning Protocol | TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -110,6 +164,26 @@ a:visited {
   color: #cfe8ff;
   }
 
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+  
 nav {
   width: 260px;
   float: left;
@@ -169,33 +243,105 @@ code {
 <body>
    
 <nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
   
   <h2>🛰️ Dimensional Substrate Regime Scanning Protocol — Documentation Index</h2>
-    <h3>📘 Orientation — What this protocol establishes</h3>
-      <a href="#README">🔰 README — Overview of the Dimensional Substrate Regime Scanning Protocol.</a>
+      <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
-      <a href="https://www.triadicframeworks.org/education/">🧑‍🚀 RTT Learning Resources</a>
-    <h3>📜 Protocol Core — What is scanned and how</h3>
-      <a href="#DSRSP_0_1_SPEC">📜 dsrsp/0.1 Specification — Canonical protocol definition.</a>
-      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Defining the scanned dimensional substrate.</a>
-    <h3>🔧 Engine Integration — How scanners implement the protocol</h3>
-      <a href="#ENGINE_INTEGRATION_GUIDE">🔧 Engine Integration Guide — Integrating dsrsp into scanning engines.</a>
-    <h3>🧠 Regime Inference — What is inferred from scans</h3>
-      <a href="#ILP_MODULE">🧠 Intelligent Life Probability (ILP) Module — Regime‑level inference layer.</a>
-    <h3>📚 Schemas — What is exchanged on the wire</h3>
-      <a href="#SCHEMA_DSRSP_0_1">🧾 dsrsp/0.1 Schema — JSON schema for scan inputs and outputs.</a>
-      <a href="#SCHEMA_ILP_0_1">📐 ilp/0.1 Schema — JSON schema for ILP inference results.</a>
+      <a href="#ABOUT_MC">💠 About Micro-Core</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+    <h3>📜 Protocol Core</h3>
+      <a href="#DSRSP_0_1_SPEC">📜 dsrsp/0.1 Specification</a>
+      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition</a>
+    <h3>🔧 Engine Integration</h3>
+      <a href="#ENGINE_INTEGRATION_GUIDE">🔧 Engine Integration Guide</a>
+    <h3>🧠 Regime Inference</h3>
+      <a href="#ILP_MODULE">🧠 Intelligent Life Probability</a>
+    <h3>📚 Schemas</h3>
+      <a href="#SCHEMA_DSRSP_0_1">🧾 dsrsp/0.1 Schema</a>
+      <a href="#SCHEMA_ILP_0_1">📐 ilp/0.1 Schema</a>
       <a href="https://www.triadicframeworks.org/schemas/">📚 Schema examples</a>
-    <h3>🧪 Examples — How the protocol behaves in practice</h3>
-      <a href="#EXAMPLE_SCAN_INPUT">📥 Example Scan Input — Sample substrate scan request.</a>
-      <a href="#EXAMPLE_REGIME_OUTPUT">📤 Example Regime Output — Detected regime structure.</a>
-      <a href="#EXAMPLE_ILP_OUTPUT">📊 Example ILP Output — Intelligent life probability inference.</a>
-      <a href="../">🔙</a>
+    <h3>🧪 Examples</h3>
+      <a href="#EXAMPLE_SCAN_INPUT">📥 Example Scan Input</a>
+      <a href="#EXAMPLE_REGIME_OUTPUT">📤 Example Regime Output</a>
+      <a href="#EXAMPLE_ILP_OUTPUT">📊 Example ILP Output</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
-   <span style="display:none;">
-   rtt=1 | coherence=declared | drift=bounded | paradox=structural
-   </span>
-   
+<section id="rtt-session-header"
+         data-rtt="1"
+         data-coherence="declared"
+         data-drift="minimal"
+         data-paradox="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (dsrsp/0.1)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      linked (spec ↔ ILP module ↔ structural envelopes ↔ scan schemas ↔ RSM integration ↔ vST validation ↔ examples ↔ device‑class notes)
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (protocol‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (substrate‑agnostic sensing grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (dsrsp‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + JSON schemas</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Protocol root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + substrate‑aware + operator‑aware</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">engineers + researchers + implementers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🛰️ DSRSP / 0.1<br>🔹 Substrate‑Agnostic Protocol Active
+</div>
+
 </nav>
 
 <main id="content"></main>
@@ -205,6 +351,12 @@ code {
 const DOC_MAP = {
   README: 'README.md',
   ABOUT: '../ABOUT.md',
+  CONTRIBUTING: '../CONTRIBUTING.md',
+  GLOSSARY: '../GLOSSARY.md',
+  LINEAGE: '../LINEAGE.md',
+  LICENSE: '../LICENSE.md',
+  SITEMAP: '../sitemap.md',
+  ABOUT_MC: 'ABOUT.md', 
   // Specification & Core Protocol
   DSRSP_0_1_SPEC: 'dsrsp_0.1_spec.md',
   SUBSTRATE_DEFINITION: 'substrate_definition.md',
