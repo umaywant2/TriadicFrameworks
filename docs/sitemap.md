@@ -25,9 +25,9 @@ These are the frameworks that define the architecture of the entire system.
 
 - [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/)
 - [/SARG/](https://www.triadicframeworks.org/SARG/)
+- [/Mode/](https://www.triadicframeworks.org/Mode/)
 - [/rtt/](https://www.triadicframeworks.org/rtt/)
 - [/rtt/1/](https://www.triadicframeworks.org/rtt/1/)
-- [/Mode/](https://www.triadicframeworks.org/Mode/) 
 - [/rtt/Harmonic_Stability_Profile/](https://www.triadicframeworks.org/rtt/Harmonic_Stability_Profile/)
 - [/rtt/Echo_Classifier/](https://www.triadicframeworks.org/rtt/Echo_Classifier/)
 - [/rtt/Substrate_Flow/](https://www.triadicframeworks.org/rtt/Substrate_Flow/)
