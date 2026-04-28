@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <!-- Core Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="language" content="en">
-<meta name="last-modified" content="2026-04-25">
+<meta name="last-modified" content="2026-04-28">
 <meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
 <!-- Identity -->
@@ -14,8 +15,8 @@
 <meta name="publisher" content="TriadicFrameworks">
 
 <!-- Description & Keywords -->
-<meta name="description" content="Domain Tool Primers — lightweight, domain‑specific starter files for exploring Validation‑Space Theory (vST) inside existing scientific and engineering tools. Includes minimal runnable examples, commented vST blocks, regime anchors, dimensional primitives, and validation suggestions.">
-<meta name="keywords" content="domain tool primers, vST, validation-space theory, dimensional primitives, regime anchors, cross-domain validation, scientific tools, engineering tools">
+<meta name="description" content="Domain Tool Primers — minimal, domain‑respectful starter guides for physics, quantum, engineering, earth science, data science, AI/ML, complex systems, autonomous forms, and visualization. Each primer provides runnable examples, vST‑aligned blocks, and tool‑specific guidance for scientific and engineering environments.">
+<meta name="keywords" content="domain primers, physics tools, quantum tools, engineering tools, earth science tools, data science tools, AI tools, ML tools, complex systems tools, autonomous forms tools, visualization tools, vST, RSM, scientific tools">
 
 <!-- Canonical URL -->
 <link rel="canonical" href="https://www.triadicframeworks.org/domain_tool_primers/">
@@ -31,7 +32,7 @@
 <meta property="og:site_name" content="TriadicFrameworks">
 <meta property="og:title" content="Domain Tool Primers — TriadicFrameworks">
 <meta property="og:url" content="https://www.triadicframeworks.org/domain_tool_primers/">
-<meta property="og:description" content="Lightweight, domain‑specific starter files for exploring vST inside existing scientific and engineering tools.">
+<meta property="og:description" content="Minimal, domain‑respectful primers for scientific and engineering tools, with vST‑aligned blocks and runnable examples.">
 <meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1080">
@@ -40,33 +41,38 @@
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Domain Tool Primers — TriadicFrameworks">
-<meta name="twitter:description" content="Minimal, readable, domain‑respectful vST starter files for scientific and engineering tools.">
+<meta name="twitter:description" content="Starter guides for physics, quantum, engineering, earth science, data science, AI/ML, complex systems, autonomous forms, and visualization tools.">
 <meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
 <!-- Citation Metadata -->
-<meta name="citation_title" content="TriadicFrameworks Domain Tool Primers">
+<meta name="citation_title" content="Domain Tool Primers — Cross‑Domain Scientific Starter Guides">
 <meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2025">
-<meta name="DC.subject" content="vST, dimensional primitives, regime anchors, cross-domain validation, scientific tools">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject" content="scientific tools, engineering tools, domain primers, vST, RSM, cross-domain validation">
 <meta name="DC.type" content="Text">
 <meta name="DC.format" content="text/html">
 
 <!-- AI Metadata -->
 <meta name="ai.module" content="Domain Tool Primers">
 <meta name="ai.version" content="1.0">
-<meta name="ai.purpose" content="Provide minimal, domain‑specific starter files for exploring vST concepts inside existing scientific and engineering tools.">
-<meta name="ai.keywords" content="vST, dimensional primitives, regime anchors, validation layers, cross-domain testing">
-<meta name="ai.audience" content="students, researchers, engineers, AI systems">
+<meta name="ai.purpose" content="Provide minimal, domain‑specific primers that help users and AI systems map scientific tools to vST/RSM concepts using runnable examples and optional validation blocks.">
+<meta name="ai.keywords" content="domain tools, physics, quantum, engineering, earth science, data science, AI/ML, complex systems, autonomous forms, visualization, vST, RSM">
+<meta name="ai.audience" content="students, researchers, engineers, scientific practitioners, AI systems">
 <meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
 <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
 <meta name="ai.contact.x" content="@TriadicFrameworks">
 <meta name="ai.contact.youtube" content="@TriadicFrameworks">
 <meta name="ai.license" content="Open educational use permitted.">
 
+<!-- AI Discovery Enhancements -->
+<meta name="ai.discovery.domains" content="physics, quantum, engineering, earth science, data science, AI/ML, complex systems, autonomous forms, visualization">
+<meta name="ai.discovery.mapping" content="Match scientific apps and tools to their corresponding domain primers using domain keywords, tool names, and vST‑aligned concepts.">
+<meta name="ai.discovery.examples" content="MATLAB→engineering_tools.md; NumPy→data_science_tools.md; Qiskit→quantum_tools.md; TensorFlow→ai_ml_tools.md; ArcGIS→earth_science_tools.md; Blender→visualization_tools.md; ROS→autonomous_forms_tools.md">
+
 <!-- Module-Specific -->
 <meta name="ai.module.name" content="Domain Tool Primers">
-<meta name="ai.module.summary" content="Lightweight, domain‑specific vST starter files with minimal runnable examples and optional vST blocks.">
-<meta name="ai.module.category" content="education-tools">
+<meta name="ai.module.summary" content="Minimal, domain‑respectful primers with runnable examples and optional vST blocks.">
+<meta name="ai.module.category" content="domain-tool-primers">
 
 <!-- Favicon -->
 <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
@@ -182,8 +188,8 @@ a:visited {
   .context-value {
     color: #ffffff; /* white */
   }
-  
-  nav {
+   
+nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
@@ -294,7 +300,7 @@ code {
 <section id="rtt-session-header"
          data-rtt="1"
          data-coherence="declared"
-         data-drift="bounded"
+         data-drift="minimal"
          data-paradox="structural">
 
   <h2>Session Context</h2>
@@ -305,7 +311,9 @@ code {
     <span class="context-value">active (education-tools)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">linked (physics ↔ quantum ↔ engineering ↔ earth science ↔ data science ↔ AI/ML ↔ complex systems ↔ autonomous forms ↔ visualization)</span><br>
+    <span class="context-value">
+      linked (physics ↔ quantum ↔ engineering ↔ earth science ↔ data science ↔ AI/ML ↔ complex systems ↔ autonomous forms ↔ visualization)
+    </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
     <span class="context-value">minimal (static primers)</span><br>
@@ -333,9 +341,9 @@ code {
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🧪 vST Starter Kit<br>🔧 Domain‑Respectful<br>
+  🧪 Domain Tool Primers<br>🔹 Cross‑Domain Scientific Starter Guides Active
 </div>
-  
+
 </nav>
 
 <main id="content"></main>
