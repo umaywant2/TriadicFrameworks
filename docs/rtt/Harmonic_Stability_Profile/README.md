@@ -74,6 +74,10 @@ This directory contains the **full analytic pipeline** derived from the
 10_Timeline_of_Conceptual_Evolution.md
 11_Triadic_Summaries.md
 
+HSP_Suite_Operator_Grammar_Specification.md
+HSP_Suite_Student_Cheat_Sheet.md
+Operators.md
+
 _assets/
   diagrams/
   ascii/
