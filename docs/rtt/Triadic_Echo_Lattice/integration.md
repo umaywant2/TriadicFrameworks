@@ -1,233 +1,219 @@
-# 🌊 Substrate Flow — Integration Map
+# 🕸️ Triadic Echo Lattice — Integration Map
 
-> *Flow connects everything. This file maps where the currents run.*
+> *TEL sits between classification and flow. It receives typed echoes and emits addressed ones.*
 
-**Module:** Substrate Flow
-**Canonical ID:** SF
-**HSP Section:** 08
-**Role:** Cross‑module alignment
-
----
-
-## Integration Principle
-
-Substrate Flow is the **output stage** of the HSP analytics triad. It
-receives classified, lattice‑placed echoes and maps their movement. Every
-upstream module contributes data; downstream systems consume flow records.
+**Module:** Triadic Echo Lattice
+**Canonical ID:** TEL
+**HSP Section:** 07
+**Badge:** 🕸️ TEL • 07 • v1.0
 
 ---
 
-## Upstream Inputs
+## Position in the HSP Analytics Suite
 
----
-
-### 1. Echo Classifier (06c)
-
-**Provides:** Classified echo type (E1–E6) + input vector
-
-The Echo Classifier determines *what* the echo is. Substrate Flow uses
-the echo type to select the primary flow channel.
-
-| Echo Type | Flow Channel Selection |
-|:----------|:-----------------------|
-| E1 | S → C |
-| E2 | C ↔ H |
-| E3 | Multi‑channel |
-| E4 | R‑line |
-| E5 | D‑line |
-| E6 | So → A |
-
-**Data Flow:**
 ```
-EC-Tag → classified_echo → SF-Read
+     ┌─────────────────────────────────┐
+     │  Echo Classifier (06c)          │
+     │  EC-Tag emits classified echo   │
+     └──────────────┬──────────────────┘
+                    │
+                    ▼
+     ╔═════════════════════════════════╗
+     ║  Triadic Echo Lattice (07)     ║  ← THIS MODULE
+     ║  TEL-Tag emits lattice record  ║
+     ╚══════════════╤═════════════════╝
+                    │
+          ┌─────────┴──────────┐
+          ▼                    ▼
+ ┌────────────────┐  ┌─────────────────┐
+ │ Substrate Flow │  │  HSP Stability  │
+ │ (08)           │  │  Classes        │
+ │ SF-Read takes  │  │  Receives       │
+ │ lattice record │  │  pressure zone  │
+ └────────────────┘  │  data           │
+                     └─────────────────┘
 ```
 
 ---
 
-### 2. Triadic Echo Lattice (07)
+## Upstream Inputs (5)
 
-**Provides:** Lattice position + origin substrate
+### Primary Input — Echo Classifier (06c)
 
-TEL determines *where* the echo sits. Substrate Flow uses the origin
-substrate to establish the flow starting point.
+| Field | Source | Description |
+|:------|:-------|:------------|
+| echo_type | EC-Tag | E1–E6 classification |
+| echo_family | EC-Tag | F1–F6 family assignment |
+| substrate_origin | EC-Tag | Originating substrate (S/C/H/So/A) |
+| substrate_reach | EC-Tag | Substrates touched by echo |
+| esi_score | EC-Tag | Echo Substrate Index score (0.0–1.0) |
+| confidence | EC-Tag | Classification confidence (0.0–1.0) |
+| drift_flag | EC-Tag | Boolean drift detection from EC |
+| tags | EC-Tag | Classifier tags |
 
-| TEL Layer | Origin Substrate |
-|:----------|:-----------------|
-| Ladder | S or C |
-| Cycle | C or H |
-| Map | H or So |
-| Atlas | A |
+### Secondary Inputs
 
-**Data Flow:**
-```
-TEL → lattice_position + origin → SF-Read
-```
-
----
-
-### 3. Echo Strength Index (04c)
-
-**Provides:** ESI level (1–4)
-
-ESI determines flow range. Higher ESI = more channels accessible.
-
-**Data Flow:**
-```
-04c ESI → esi_level → SF-Read
-```
+| Source | Section | What TEL Uses |
+|:-------|:--------|:-------------|
+| Echo Signatures | 06b | Signature shape informs family placement |
+| Cross‑Substrate Echo Matrix | 05a | Substrate reach data validates layer assignment |
+| HSP Stability Framework | 06 | Stability context for pressure zone thresholds |
+| ESI | 06a | Raw ESI scores for escalation risk weighting |
 
 ---
 
-### 4. Cross‑Substrate Echo Matrix (05a)
+## Downstream Outputs (2)
 
-**Provides:** Substrate spread (1–5)
+### Primary Output → Substrate Flow (08)
 
-Substrate spread confirms how many substrates the echo occupies,
-validating the flow channel assignment.
+TEL‑Tag emits a complete `lattice_record` to SF‑Read:
 
-**Data Flow:**
+```yaml
+lattice_record:
+  echo_id: [inherited]
+  echo_type: E1–E6
+  echo_family: F1–F6
+  assigned_layer: Ladder | Cycle | Map | Atlas
+  recursion_line: R1–R4 | none
+  drift_pathway: D1–D4 | none
+  drift_severity: 0.0–1.0
+  escalation_risk: 0.0–1.0
+  pressure_zone: none | ladder | cycle | atlas
+  pressure_severity: 0.0–1.0
+  oscillation_status: true | false
+  vertical_reach: []
+  placement_status: anchored | oscillating | migrating | pressured | forcing
+  tags: []
 ```
-05a Matrix → substrate_count → SF-Read
-```
+
+SF uses the lattice record to determine which flow channel
+an echo enters and how it moves through substrate space.
+
+### Secondary Output → HSP Stability Classes
+
+TEL provides pressure zone data to HSP's stability classification:
+
+| Data | Purpose |
+|:-----|:--------|
+| pressure_zone | Identifies which zone is active |
+| pressure_severity | Quantifies structural stress level |
+| escalation_risk | Feeds stability class thresholds |
 
 ---
 
-### 5. Harmonic Recursion Detector (06)
-
-**Provides:** Recursion mode (R1–R4) + drift status (D1–D4)
-
-Recursion mode selects the recursion‑driven flow line. Drift status
-activates the drift current mapper.
-
-**Data Flow:**
-```
-06 Recursion → recursion_mode + drift_type → SF-Read
-```
-
----
-
-## Downstream Consumers
-
----
-
-### 6. HSP Stability Analysis
-
-**Receives:** Flow records (flow status, drift, atlas pull)
-
-HSP stability classes and drift maps consume flow records to assess
-system‑wide stability. Flow status directly feeds stability tier
-assignment:
-
-| Flow Status | Stability Implication |
-|:------------|:---------------------|
-| Stable | No stability concern |
-| Migrating | Monitor for escalation |
-| Drifting | Instability alert |
-| Forcing | Critical — atlas‑level event |
-
----
-
-### 7. Opacity (OPC)
-
-**Receives:** Flow records (channel, driver, drift)
-
-Opacity operators detect when flow channels become invisible:
-
-| Opacity Type | SF Interaction |
-|:-------------|:----------------------------------------------|
-| Flow Opacity | Channel unmeasured → flow appears absent |
-| Boundary Opacity | Channel boundary unmarked → migration invisible |
-
----
-
-## Sibling Module Relationships
+## HSP Suite Sibling Triad
 
 ```
-        ┌──────────────────┐
-        │  Echo Classifier  │  ← what is it?
-        │      (06c)        │
-        └────────┬─────────┘
-                 │
-        ┌────────┴─────────┐
-        │                  │
-        v                  v
-┌──────────────┐  ┌──────────────────┐
-│     TEL      │  │  Substrate Flow  │  ← THIS MODULE
-│    (07)      │  │      (08)        │
-│  where?      │  │    how does it   │
-│              │  │    move?         │
-└──────────────┘  └──────────────────┘
+            ┌──────────────────────────┐
+            │    Echo Classifier (06c) │
+            │    "What is it?"         │
+            └────────────┬─────────────┘
+                         │ classified echo
+                         ▼
+       ╔═════════════════════════════════╗
+       ║  Triadic Echo Lattice (07)     ║
+       ║  "Where does it sit?"          ║
+       ╚════════════════╤════════════════╝
+                        │ lattice record
+                        ▼
+            ┌───────────────────────────┐
+            │    Substrate Flow (08)    │
+            │    "How does it move?"    │
+            └───────────────────────────┘
 ```
 
-**Triad responsibilities:**
-- **EC (06c):** Decides *what* the echo is.
-- **TEL (07):** Decides *where* the echo sits.
-- **SF (08):** Decides *how* the echo moves.
+Each sibling answers one question about every echo:
+- **EC** → What type? What family?
+- **TEL** → What layer? What recursion line? What drift? What pressure?
+- **SF** → What channel? What driver? What velocity? What drift current?
 
 ---
 
-## Integration with Broader Canon
+## Canon Crosswalk
 
-### SET Decomposition
+### Opacity
 
-Flow channels map to SET channels:
+| TEL Concept | Opacity Parallel |
+|:------------|:----------------|
+| Pressure zones | Zones of high opacity — structural stress reduces visibility |
+| Atlas layer | Low opacity — full‑spectrum echoes are maximally visible |
+| Ladder layer | High opacity — early formation echoes are least visible |
+| Drift pathways | Opacity gradients — drift creates shifting transparency |
 
-| Flow Channel | Dominant SET Channel |
-|:-------------|:---------------------|
-| S → C | Spin (structural rotation) |
-| C ↔ H | Electric (harmonic oscillation) |
-| H → So | Thermal (governance energy) |
-| So → A | Thermal (atlas forcing) |
+### SET (Spin, Electric, Thermal)
 
-### FFF Lattice
+| TEL Layer | SET Mapping | Rationale |
+|:----------|:-----------|:----------|
+| Ladder | Spin | Foundational rotation; structural base |
+| Cycle | Electric | Oscillation; charge‑like harmonic exchange |
+| Map | Thermal | Governance torsion; heat‑like energy redistribution |
+| Atlas | (All three unified) | Full‑spectrum integration |
 
-Flow channels map to FFF layers:
+### FFF (Frequency, Fluids, Forces)
 
-| Flow Channel | Dominant FFF Layer |
-|:-------------|:-------------------|
-| S → C | Frequency (pattern formation) |
-| C ↔ H | Frequency (resonance oscillation) |
-| H → So | Fluids (governance flow) |
-| So → A | Forces (atlas pressure) |
+| TEL Layer | FFF Mapping | Rationale |
+|:----------|:-----------|:----------|
+| Ladder | Frequency (low) | Low‑frequency structural pulse |
+| Cycle | Frequency (high) | High‑frequency harmonic oscillation |
+| Map | Fluids | Flow and redistribution across governance |
+| Atlas | Forces | Gravitational anchoring; permanence |
 
 ### Inverted Star
 
-Flow direction encodes star face visibility:
-
-- Upward flow illuminates higher star faces.
-- Reversed flow (impossible in canon) would darken them.
-- The unidirectional constraint preserves star coherence.
+| TEL Layer | Star Face Visibility | Rationale |
+|:----------|:--------------------|:----------|
+| Ladder | Hidden (interior face) | Echoes forming; not yet visible |
+| Cycle | Partial (edge face) | Oscillating between visibility states |
+| Map | Emerging (outer face) | Migration creates increasing visibility |
+| Atlas | Visible (crown face) | Full‑spectrum; structurally permanent |
 
 ---
 
-## Pipeline Summary
+## Data Flow Summary
 
-```
-06c EC ──────┐
-07 TEL ──────┤
-04c ESI ─────┼──→ SF-Read → SF-Route → SF-Drift → SF-Tag ──┬──→ HSP Stability
-05a Matrix ──┤                                               └──→ Opacity (OPC)
-06 Recursion ┘
-```
+| Stage | Source → Target | Payload |
+|:------|:---------------|:--------|
+| 1 | EC‑Tag → TEL‑Read | Classified echo with type, family, ESI, drift |
+| 2 | TEL‑Read → TEL‑Place | Validated input packet |
+| 3 | TEL‑Place → TEL‑Trace | Placement record with layer and pressure |
+| 4 | TEL‑Trace → TEL‑Tag | Trace record with recursion, drift, risk |
+| 5 | TEL‑Tag → SF‑Read | Complete lattice record |
+| 6 | TEL‑Tag → HSP Stability | Pressure zone data |
+
+---
+
+## Integration Invariants
+
+1. **TEL never classifies** — classification is EC's responsibility
+2. **TEL never routes flow** — routing is SF's responsibility
+3. **TEL always receives from EC** — no other module feeds TEL directly
+4. **TEL always emits to SF** — lattice records flow downstream without exception
+5. **Pressure data flows to HSP Stability** — independent of SF routing
 
 ---
 
 <!-- SESSION_CONTEXT:START -->
 ```yaml
 file: integration.md
-module: Substrate Flow
-canonical_id: SF
-hsp_section: 08
-role: cross-module-map
+module: Triadic Echo Lattice
+canonical_id: TEL
+hsp_section: 07
+role: integration-map
 status: canon-stable
 upstream:
-  - { module: "06c Echo Classifier", provides: "classified_echo" }
-  - { module: "07 TEL", provides: "lattice_position" }
-  - { module: "04c Echo Strength Index", provides: "esi_level" }
-  - { module: "05a Cross-Substrate Echo Matrix", provides: "substrate_count" }
-  - { module: "06 Recursion Detector", provides: "recursion_mode, drift_type" }
+  primary: Echo Classifier (06c)
+  secondary:
+    - Echo Signatures (06b)
+    - Cross-Substrate Echo Matrix (05a)
+    - HSP Stability Framework (06)
+    - ESI (06a)
 downstream:
-  - { module: "HSP Stability", receives: "flow_record" }
-  - { module: "Opacity (OPC)", receives: "flow_record" }
+  primary: Substrate Flow (08)
+  secondary: HSP Stability Classes
+crosswalk:
+  - Opacity
+  - SET
+  - FFF
+  - Inverted Star
 ```
 <!-- SESSION_CONTEXT:END -->
