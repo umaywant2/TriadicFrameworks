@@ -1,266 +1,442 @@
-# 🌊 Substrate Flow — Applied Examples
+# 🕸️ Triadic Echo Lattice — Examples
 
-> *Five flow scenarios. One per channel, plus atlas pull. Each runs the full pipeline.*
+> *Six echoes. Four layers. One lattice. Watch placement happen.*
 
-**Module:** Substrate Flow
-**Canonical ID:** SF
-**HSP Section:** 08
-**Role:** Applied flow examples
-
----
-
-## Example 1 — S → C Channel: Definition Refinement
-
-**Scenario:** A new term ("supsphere") is coined in the Symbolic substrate.
-An E1 structural echo carries it into the Cognitive substrate where it
-acquires meaning.
-
-### Flow Walkthrough
-
-| Field | Value |
-|:------|:------|
-| Echo Type | E1 (Structural) |
-| Origin | S (Symbolic) |
-| ESI | 1 (local) |
-| Recursion | R1 (S→C ladder) |
-| Drift | None |
-| Family | F1 (stays low) |
-
-**SF‑Route:**
-- **Primary channel:** S → C
-- **Direction:** Upward
-- **Driver:** ESI‑1 + R1
-- **Atlas pull:** No
-
-**SF‑Drift:**
-- **Drift active:** No
-- **Shadow pressure:** 0.0
-
-**SF‑Tag:**
-- **Destination:** C (Cognitive)
-- **Flow status:** Stable
-- **Record:** E1 echo, S→C, stable, no drift, no atlas pull
-
-**Canon Takeaway:**
-S → C is the most common flow. Most definitions follow this path once
-and stop. The channel is high‑volume, low‑energy, and structurally
-predictable.
+**Module:** Triadic Echo Lattice
+**Canonical ID:** TEL
+**HSP Section:** 07
+**Badge:** 🕸️ TEL • 07 • v1.0
 
 ---
 
-## Example 2 — C ↔ H Channel: Harmonic Oscillation
+## Example 1 — E1 → Ladder (Anchored)
 
-**Scenario:** A concept ("resonance time") begins oscillating between
-the Cognitive and Harmonic substrates. An E2 harmonic echo sustains
-the oscillation through cycle recursion (R2).
+**Scenario:** A structural echo enters the lattice. It is defined at the
+S→C boundary and has no upward momentum.
 
-### Flow Walkthrough
+### TEL-Read
 
-| Field | Value |
-|:------|:------|
-| Echo Type | E2 (Harmonic) |
-| Origin | C (Cognitive) |
-| ESI | 2 (mild) |
-| Recursion | R2 (C↔H cycle) |
-| Drift | None |
-| Family | F2 (stays harmonic) |
+```yaml
+echo_id: ex-001
+echo_type: E1
+echo_family: F1 (Structural)
+substrate_origin: S
+substrate_reach: [S, C]
+esi_score: 0.9
+drift_flag: false
+placement_ready: true
+```
 
-**SF‑Route:**
-- **Primary channel:** C ↔ H
-- **Direction:** Bidirectional
-- **Driver:** R2 cycle recursion
-- **Atlas pull:** No
+### TEL-Place
 
-**SF‑Drift:**
-- **Drift active:** No
-- **Shadow pressure:** 0.0
+```yaml
+assigned_layer: Ladder
+family_placement: F1
+pressure_zone: none
+pressure_severity: 0.0
+placement_confidence: 0.95
+```
 
-**SF‑Tag:**
-- **Destination:** Oscillating (C ↔ H)
-- **Flow status:** Stable
-- **Record:** E2 echo, C↔H, stable oscillation, no drift
+**Decision path:** E1 → Ladder → Ladder Pressure check → below threshold → clean placement.
 
-**Canon Takeaway:**
-C ↔ H is the only bidirectional channel. Harmonic echoes oscillate
-here indefinitely until the harmonic band shifts or external force
-pushes them into H → So. This is the "resonance zone" of the flow map.
+### TEL-Trace
 
----
+```yaml
+recursion_line: none
+recursion_depth: 0
+drift_pathway: D1
+drift_severity: 0.05
+vertical_reach: [Ladder]
+oscillation_status: false
+escalation_risk: 0.05
+```
 
-## Example 3 — H → So Channel: Governance Torsion
+**Risk calculation:**
+`(0.05 × 0.4) + (0.9 × 0.3) + (0.0 × 0.2) + (0 × 0.1) = 0.02 + 0.27 + 0.0 + 0.0 ≈ 0.05` (rounded from weighted factors; negligible drift dominates)
 
-**Scenario:** A harmonic pattern formalizes into a governance structure.
-An E3 substrate echo crosses from Harmonic into Social, driven by
-map recursion (R3) and ESI‑3 energy.
+### TEL-Tag
 
-### Flow Walkthrough
+```yaml
+placement_status: anchored
+tags: [structural, ladder, stable]
+emit_to: SF-Read
+```
 
-| Field | Value |
-|:------|:------|
-| Echo Type | E3 (Substrate) |
-| Origin | H (Harmonic) |
-| ESI | 3 (cross‑substrate) |
-| Recursion | R3 (H→So map) |
-| Drift | D3 (H/So instability) — mild |
-| Family | F3 (migrates) |
-
-**SF‑Route:**
-- **Primary channel:** H → So
-- **Direction:** Upward
-- **Driver:** R3 + ESI‑3
-- **Atlas pull:** No
-
-**SF‑Drift:**
-- **Drift active:** Yes (D3)
-- **Current channel:** H → So
-- **Shadow pressure:** 0.35
-- **Instability zone:** Harmonic/Social boundary
-
-**SF‑Tag:**
-- **Destination:** So (Social)
-- **Flow status:** Migrating (with mild drift)
-- **Record:** E3 echo, H→So, migrating, D3 active (0.35), no atlas pull
-
-**Canon Takeaway:**
-H → So is the governance torsion zone. When harmonic patterns become
-governance structures, the torsion creates mild drift (D3). This is
-normal — the transition from resonance to structure always generates
-some instability.
+**Summary:** Textbook Ladder echo. Structurally defined, no movement,
+no pressure, no drift. The lattice's simplest case.
 
 ---
 
-## Example 4 — So → A Channel: Atlas Forcing
+## Example 2 — E2 → Cycle (Oscillating)
 
-**Scenario:** A governance structure achieves full‑spectrum resonance
-across all five substrates. An E6 atlas echo forces it into the Atlas
-substrate via the So → A channel.
+**Scenario:** A harmonic echo enters the lattice. It oscillates between
+Concept and Harmonic substrates with a stable rhythm.
 
-### Flow Walkthrough
+### TEL-Read
 
-| Field | Value |
-|:------|:------|
-| Echo Type | E6 (Atlas) |
-| Origin | So (Social) |
-| ESI | 4 (atlas pull) |
-| Recursion | R4 (So→A atlas) |
-| Drift | D4 (A instability) — moderate |
-| Family | F6 (anchors atlas) |
+```yaml
+echo_id: ex-002
+echo_type: E2
+echo_family: F2 (Harmonic)
+substrate_origin: C
+substrate_reach: [C, H]
+esi_score: 0.7
+drift_flag: false
+placement_ready: true
+```
 
-**SF‑Route:**
-- **Primary channel:** So → A
-- **Direction:** Upward
-- **Driver:** ESI‑4 + R4 + F6
-- **Atlas pull:** Yes (active)
+### TEL-Place
 
-**SF‑Drift:**
-- **Drift active:** Yes (D4)
-- **Current channel:** So → A
-- **Shadow pressure:** 0.6
-- **Instability zone:** Social/Atlas boundary
+```yaml
+assigned_layer: Cycle
+family_placement: F2
+pressure_zone: none
+pressure_severity: 0.0
+placement_confidence: 0.90
+```
 
-**SF‑Tag:**
-- **Destination:** A (Atlas)
-- **Flow status:** Forcing
-- **Record:** E6 echo, So→A, forcing, D4 active (0.6), atlas pull active
+**Decision path:** E2 → Cycle → Cycle Pressure check → amplitude within
+harmonic band → clean placement.
 
-**Canon Takeaway:**
-So → A is the highest‑energy channel. Atlas forcing reshapes the
-entire flow map — once an echo enters Atlas, it becomes a permanent
-structural anchor. The moderate D4 drift is expected: atlas entry
-always creates temporary instability before stabilization.
+### TEL-Trace
 
----
+```yaml
+recursion_line: R2
+recursion_depth: 1
+drift_pathway: D2
+drift_severity: 0.1
+vertical_reach: [Ladder, Cycle]
+oscillation_status: true
+escalation_risk: 0.15
+```
 
-## Example 5 — Drift‑Shadow Current: Cross‑Channel Destabilization
+**Risk calculation:**
+`(0.1 × 0.4) + (0.7 × 0.3) + (0.0 × 0.2) + (1 × 0.1) = 0.04 + 0.21 + 0.0 + 0.1 ≈ 0.15` (low; stable oscillation)
 
-**Scenario:** An existing E3 substrate echo begins drifting. The drift
-generates an E5 drift‑shadow echo that rides D3 current from H → So,
-creating destabilizing shadow pressure.
+### TEL-Tag
 
-### Flow Walkthrough
+```yaml
+placement_status: oscillating
+tags: [harmonic, cycle, bidirectional]
+emit_to: SF-Read
+```
 
-| Field | Value |
-|:------|:------|
-| Echo Type | E5 (Drift‑Shadow) |
-| Origin | H (Harmonic) |
-| ESI | 4 (atlas pull) |
-| Recursion | R3 (H→So map) |
-| Drift | D3 (H/So instability) — severe |
-| Family | F5 (destabilizes) |
-
-**SF‑Route:**
-- **Primary channel:** H → So (drift current)
-- **Secondary channel:** So → A (atlas pull engaged)
-- **Direction:** Upward (accelerated by drift)
-- **Driver:** D3 drift + ESI‑4
-- **Atlas pull:** Yes (ESI‑4 + F5 cascade)
-
-**SF‑Drift:**
-- **Drift active:** Yes (D3, severe)
-- **Current channel:** H → So → A (cascading)
-- **Shadow pressure:** 0.85
-- **Instability zone:** Harmonic/Social + Social/Atlas
-
-**SF‑Tag:**
-- **Destination:** A (Atlas, via cascade)
-- **Flow status:** Drifting
-- **Record:** E5 echo, H→So→A cascade, drifting, D3 severe (0.85), atlas pull active
-
-**Canon Takeaway:**
-E5 drift‑shadow echoes demonstrate cascading flow — the drift current
-from one channel can push the echo through the next channel without
-independent driver activation. Shadow pressure above 0.7 indicates the
-echo is being carried by drift, not by its own energy. This is the
-flow signature of structural instability.
+**Summary:** Classic Cycle echo. The bidirectional C↔H oscillation is
+the lattice's only back-and-forth pattern. Stable rhythm, low risk.
 
 ---
 
-## Cross‑Example Comparison
+## Example 3 — E3 → Map (Migrating, Mild Drift)
 
-| Example | Echo | Channel | Driver | Drift | Atlas Pull | Flow Status |
-|:--------|:-----|:--------|:-------|:------|:-----------|:------------|
-| 1 | E1 | S → C | ESI‑1 + R1 | None | No | Stable |
-| 2 | E2 | C ↔ H | R2 cycle | None | No | Stable |
-| 3 | E3 | H → So | R3 + ESI‑3 | D3 (0.35) | No | Migrating |
-| 4 | E6 | So → A | ESI‑4 + R4 + F6 | D4 (0.6) | Yes | Forcing |
-| 5 | E5 | H→So→A | D3 + ESI‑4 | D3 (0.85) | Yes | Drifting |
+**Scenario:** A substrate echo has moved beyond the Cycle layer and is
+migrating through the Map region. Mild drift is present at the H/So
+boundary.
 
-### Patterns
+### TEL-Read
 
-1. **Flow status escalates with channel height.** S→C is stable; So→A
-   is forcing. The higher the channel, the more energy required and
-   the more instability generated.
+```yaml
+echo_id: ex-003
+echo_type: E3
+echo_family: F3 (Substrate)
+substrate_origin: H
+substrate_reach: [S, C, H, So]
+esi_score: 0.6
+drift_flag: false
+placement_ready: true
+```
 
-2. **Drift activates at H → So.** The first three examples have no drift.
-   Drift appears when echoes cross from Harmonic into Social — the
-   governance torsion zone.
+### TEL-Place
 
-3. **Atlas pull requires ESI‑4 or F6.** Only the highest‑energy echoes
-   experience atlas gravitational pull. This is a natural filter.
+```yaml
+assigned_layer: Map
+family_placement: F3
+pressure_zone: none
+pressure_severity: 0.0
+placement_confidence: 0.85
+```
 
-4. **Cascading flow is a drift signature.** Example 5 shows H→So→A
-   cascade — a single drift current pushing through two channels.
-   This only happens with E5 (drift‑shadow) echoes.
+**Decision path:** E3 → Map → D3 drift exposure check → mild (0.3) →
+placement holds, no pressure zone.
 
-5. **Shadow pressure predicts stability risk.** 0.0 = stable. 0.35 =
-   mild instability. 0.6 = moderate. 0.85 = severe. Above 0.7, the
-   echo is drift‑carried, not self‑driven.
+### TEL-Trace
+
+```yaml
+recursion_line: R3
+recursion_depth: 2
+drift_pathway: D3
+drift_severity: 0.3
+vertical_reach: [Ladder, Cycle, Map]
+oscillation_status: false
+escalation_risk: 0.45
+```
+
+**Risk calculation:**
+`(0.3 × 0.4) + (0.6 × 0.3) + (0.0 × 0.2) + (2 × 0.1) = 0.12 + 0.18 + 0.0 + 0.2 ≈ 0.45` (moderate; migration in progress)
+
+### TEL-Tag
+
+```yaml
+placement_status: migrating
+tags: [substrate, map, mild-drift]
+emit_to: SF-Read
+```
+
+**Summary:** First migrating echo. Three layers touched, mild drift at
+H/So boundary. The echo is moving but not yet under pressure.
+
+---
+
+## Example 4 — E4 → Map Upper (Migrating, Moderate Drift)
+
+**Scenario:** An escalation echo has reached the upper Map region. It is
+approaching the Atlas boundary with moderate drift and rising risk.
+
+### TEL-Read
+
+```yaml
+echo_id: ex-004
+echo_type: E4
+echo_family: F4 (Escalation)
+substrate_origin: H
+substrate_reach: [S, C, H, So, A]
+esi_score: 0.5
+drift_flag: true
+placement_ready: true
+```
+
+### TEL-Place
+
+```yaml
+assigned_layer: Map (upper)
+family_placement: F4
+pressure_zone: none
+pressure_severity: 0.0
+placement_confidence: 0.75
+```
+
+**Decision path:** E4 → Map (upper) → R4 escalation potential check →
+approaching but not crossed → placement at upper Map boundary.
+
+### TEL-Trace
+
+```yaml
+recursion_line: R4
+recursion_depth: 3
+drift_pathway: D3
+drift_severity: 0.5
+vertical_reach: [Ladder, Cycle, Map, Atlas]
+oscillation_status: false
+escalation_risk: 0.65
+```
+
+**Risk calculation:**
+`(0.5 × 0.4) + (0.5 × 0.3) + (0.0 × 0.2) + (3 × 0.1) = 0.20 + 0.15 + 0.0 + 0.3 ≈ 0.65` (high; escalation approaching)
+
+### TEL-Tag
+
+```yaml
+placement_status: migrating
+tags: [escalation, map-upper, approaching-atlas, drift-active]
+emit_to: SF-Read
+```
+
+**Summary:** The lattice's transition family. F4 echoes bridge Map and
+Atlas — they are the only echoes that can cross from governance into
+full‑spectrum territory. High risk, high vertical reach.
+
+---
+
+## Example 5 — E5 → Pressure Zone (Pressured)
+
+**Scenario:** A drift‑shadow echo has no home layer. It accumulates at
+the Map→Atlas boundary, creating an Atlas Pressure zone.
+
+### TEL-Read
+
+```yaml
+echo_id: ex-005
+echo_type: E5
+echo_family: F5 (Drift-Shadow)
+substrate_origin: So
+substrate_reach: [C, H, So, A]
+esi_score: 0.4
+drift_flag: true
+placement_ready: true
+```
+
+### TEL-Place
+
+```yaml
+assigned_layer: none (pressure zone)
+family_placement: F5
+pressure_zone: atlas
+pressure_severity: 0.85
+placement_confidence: 0.60
+```
+
+**Decision path:** E5 → Pressure zone (no layer) → Atlas Pressure
+check → accumulation above threshold → pressure zone active.
+
+### TEL-Trace
+
+```yaml
+recursion_line: none
+recursion_depth: 0
+drift_pathway: D3
+drift_severity: 0.85
+vertical_reach: [cross-layer]
+oscillation_status: false
+escalation_risk: 0.9
+```
+
+**Risk calculation:**
+`(0.85 × 0.4) + (0.4 × 0.3) + (0.85 × 0.2) + (0 × 0.1) = 0.34 + 0.12 + 0.17 + 0.0 ≈ 0.9` (critical; pressure zone saturated)
+
+### TEL-Tag
+
+```yaml
+placement_status: pressured
+tags: [drift-shadow, pressure-zone, atlas-boundary, critical]
+emit_to: [SF-Read, HSP Stability]
+```
+
+**Summary:** The lattice's instability marker. E5 echoes have no home —
+they exist as pressure, not as residents. This is the only case where
+TEL emits to both SF and HSP Stability simultaneously.
+
+---
+
+## Example 6 — E6 → Atlas (Forcing)
+
+**Scenario:** A full‑spectrum echo has completed its journey through all
+four layers. It arrives at Atlas as a structural forcing event —
+permanent, anchored, and terminal.
+
+### TEL-Read
+
+```yaml
+echo_id: ex-006
+echo_type: E6
+echo_family: F6 (Atlas)
+substrate_origin: A
+substrate_reach: [S, C, H, So, A]
+esi_score: 0.2
+drift_flag: false
+placement_ready: true
+```
+
+### TEL-Place
+
+```yaml
+assigned_layer: Atlas
+family_placement: F6
+pressure_zone: none
+pressure_severity: 0.0
+placement_confidence: 0.99
+```
+
+**Decision path:** E6 → Atlas → direct placement (terminus) → no
+escalation check needed (already at top).
+
+### TEL-Trace
+
+```yaml
+recursion_line: R4 (completed)
+recursion_depth: 4
+drift_pathway: D4
+drift_severity: 0.6
+vertical_reach: [Ladder, Cycle, Map, Atlas]
+oscillation_status: false
+escalation_risk: 0.0
+```
+
+**Risk note:** E6 at Atlas has 0.0 escalation risk because there is
+nowhere further to escalate. The echo has reached structural terminus.
+Drift severity is moderate (0.6) but irrelevant — the echo is anchored
+permanently.
+
+### TEL-Tag
+
+```yaml
+placement_status: forcing
+tags: [atlas, terminus, full-spectrum, permanent]
+emit_to: SF-Read
+```
+
+**Summary:** The lattice's endpoint. E6 echoes are the rarest and most
+structurally significant. They represent permanent additions to the
+system's architecture. Risk is zero not because they're safe, but
+because they've already arrived.
+
+---
+
+## Cross-Example Comparison
+
+| Ex | Type | Family | Layer | R-Lines | D-Lines | Risk | Status |
+|:---|:-----|:-------|:------|:--------|:--------|:-----|:-------|
+| 1 | E1 | F1 Structural | Ladder | — | D1 (0.05) | 0.05 | anchored |
+| 2 | E2 | F2 Harmonic | Cycle | R1, R2 | D2 (0.1) | 0.15 | oscillating |
+| 3 | E3 | F3 Substrate | Map | R1, R3 | D3 (0.3) | 0.45 | migrating |
+| 4 | E4 | F4 Escalation | Map ↑ | R1, R3, R4~ | D3 (0.5) | 0.65 | migrating |
+| 5 | E5 | F5 Drift-Shadow | (pressure) | — | D3 (0.85) | 0.90 | pressured |
+| 6 | E6 | F6 Atlas | Atlas | R4 ✓ | D4 (0.6) | 0.00 | forcing |
+
+### Patterns Visible in the Comparison
+
+- **Risk increases with vertical reach** — except E6, which resets to 0.0 at terminus
+- **Drift severity increases with layer height** — but D4 at Atlas is less dangerous than D3 at Map because Atlas absorbs
+- **Only E2 oscillates** — Cycle is the lattice's only bidirectional layer
+- **Only E5 has no home layer** — pressure zones are conditions, not addresses
+- **Only E5 emits to two targets** — all other echoes emit only to SF-Read
+
+---
+
+## Pressure Zone Analysis
+
+### When Do Pressure Zones Form?
+
+Pressure zones are emergent — they appear when echo volume or drift
+severity exceeds the lattice's absorption capacity at a boundary.
+
+| Zone | Boundary | Trigger | Typical Echo Types |
+|:-----|:---------|:--------|:------------------|
+| Ladder Pressure | S/C | High E1 volume congests the formation layer | E1 (volume) |
+| Cycle Pressure | C/H | E2 amplitude exceeds harmonic band ceiling | E2 (amplitude) |
+| Atlas Pressure | So/A | E5 drift-shadows accumulate at the top boundary | E5 (accumulation) |
+
+### What Happens Inside a Pressure Zone?
+
+1. **Echoes lose stable placement** — they are no longer anchored to a layer
+2. **Drift severity spikes** — boundary instability amplifies drift pathways
+3. **Escalation risk approaches critical** — structural forcing becomes likely
+4. **TEL-Tag emits to both SF and HSP** — dual emission signals system-wide stress
+5. **Resolution requires either absorption (Atlas takes the echo) or dissipation (echo loses energy and drops back)**
+
+### Pressure Zone vs. Layer — Key Distinction
+
+| Property | Layer | Pressure Zone |
+|:---------|:------|:-------------|
+| Designed? | Yes | No (emergent) |
+| Stable? | Yes | No (transient) |
+| Has residents? | Yes | No (conditions, not addresses) |
+| Deterministic? | Yes | Partially (threshold-dependent) |
+| Emits to? | SF only | SF + HSP Stability |
 
 ---
 
 <!-- SESSION_CONTEXT:START -->
 ```yaml
 file: examples.md
-module: Substrate Flow
-canonical_id: SF
-hsp_section: 08
-role: applied-examples
+module: Triadic Echo Lattice
+canonical_id: TEL
+hsp_section: 07
+role: worked-examples
 status: canon-stable
-examples:
-  - { channel: "S→C", echo: E1, status: stable }
-  - { channel: "C↔H", echo: E2, status: stable }
-  - { channel: "H→So", echo: E3, status: migrating }
-  - { channel: "So→A", echo: E6, status: forcing }
-  - { channel: "H→So→A", echo: E5, status: drifting }
+example_count: 6
+echo_types_covered: [E1, E2, E3, E4, E5, E6]
+families_covered: [F1, F2, F3, F4, F5, F6]
+layers_covered: [Ladder, Cycle, Map, Atlas, pressure-zone]
+statuses_covered: [anchored, oscillating, migrating, pressured, forcing]
+pipeline_demonstrated: TEL-Read → TEL-Place → TEL-Trace → TEL-Tag
 ```
 <!-- SESSION_CONTEXT:END -->
