@@ -411,8 +411,8 @@ Comprehensive alphabetical index of every operator, parameter code, and classifi
 
 ---
 
-**HSP Suite Operators.md**
-Version: v1.0 | Status: Canon-Stable | Module: HSP Suite Operators
-TriadicFrameworks / Resonance-Time Theory (RTT)
+**HSP Suite Operators.md**  
+Version: v1.0 | Status: Canon-Stable | Module: HSP Suite Operators  
+TriadicFrameworks / Resonance-Time Theory (RTT) 
 🤖 AI-Ready Module • Machine-parseable • Canonical reference
 
