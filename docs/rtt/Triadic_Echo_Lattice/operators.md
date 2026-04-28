@@ -1,264 +1,316 @@
-# 🌊 Substrate Flow — Operators
+# 🕸️ Triadic Echo Lattice — Operators
 
-> *Four operators. One flow map. Every echo path traceable.*
+> *Four operators. One lattice. Every echo gets an address.*
 
-**Module:** Substrate Flow
-**Canonical ID:** SF
-**HSP Section:** 08
-
----
-
-## 1. Flow Operators
-
-Substrate Flow defines four operators that form the flow routing pipeline.
+**Module:** Triadic Echo Lattice
+**Canonical ID:** TEL
+**HSP Section:** 07
+**Badge:** 🕸️ TEL • 07 • v1.0
 
 ---
 
-### SF‑Read — Flow Input Reader
-
-**Function:** Receives a classified echo and extracts flow‑relevant data.
+## Operator Pipeline
 
 ```
-SF-Read(classified_echo) → flow_input {
-  echo_type:     E1–E6,
-  origin:        substrate_id,
-  esi:           1–4,
-  recursion:     R1–R4,
-  drift:         D1–D4 | null,
-  family:        F1–F6,
-  confidence:    definite | probable | ambiguous
-}
+Classified echo (from EC-Tag)
+    │
+    ▼
+┌──────────────┐
+│   TEL-Read   │  Lattice Input Reader
+│  extract     │  Receives classified echo, extracts placement-relevant data
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│  TEL-Place   │  Layer Assignment Engine
+│  assign      │  Assigns echo to layer; detects pressure zones
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│  TEL-Trace   │  Recursion & Drift Tracer
+│  map paths   │  Maps recursion path, drift exposure, escalation risk
+└──────┬───────┘
+       │
+       ▼
+┌──────────────┐
+│   TEL-Tag    │  Lattice Output Emitter
+│  emit record │  Packages lattice record with placement status
+└──────────────┘
+       │
+       ▼
+Lattice record → Substrate Flow (SF-Read)
 ```
-
-**Behavior:**
-- Receives classified echo from EC‑Tag (Echo Classifier, 06c).
-- Extracts origin substrate from TEL placement (07).
-- Pulls ESI, recursion mode, drift status, and echo family.
-- Validates completeness — all fields must be present for routing.
-
-**Key Constraint:**
-Ambiguous classifications (from EC‑Tag) are flagged but still routed.
-The flow map does not block ambiguous echoes — it routes them with a
-caution flag.
 
 ---
 
-### SF‑Route — Channel Router
+## Operator 1 — TEL-Read (Lattice Input Reader)
 
-**Function:** Assigns the echo to one or more flow channels.
+### Purpose
 
+Receives a classified echo from EC‑Tag and extracts the data fields
+required for lattice placement.
+
+### Input
+
+```yaml
+source: EC-Tag output
+fields:
+  - echo_type: E1–E6
+  - echo_family: F1–F6
+  - substrate_origin: S | C | H | So | A
+  - substrate_reach: [list of substrates touched]
+  - esi_score: 0.0–1.0
+  - confidence: 0.0–1.0
+  - drift_flag: boolean
+  - tags: []
 ```
-SF-Route(flow_input) → flow_path {
-  primary_channel:   channel_id,
-  secondary_channel: channel_id | null,
-  direction:         "upward" | "bidirectional" | "lateral",
-  driver:            "esi" | "recursion" | "drift" | "family",
-  atlas_pull:        boolean
-}
+
+### Output
+
+```yaml
+tel_input_packet:
+  echo_id: [inherited]
+  echo_type: E1–E6
+  echo_family: F1–F6
+  substrate_origin: S | C | H | So | A
+  substrate_reach: []
+  esi_score: 0.0–1.0
+  drift_flag: boolean
+  placement_ready: true
 ```
 
-**Routing Logic:**
+### Logic
 
-| Echo Type | Primary Channel | Direction | Driver |
-|:----------|:----------------|:----------|:-------|
-| E1 | S → C | Upward | ESI (1–2) |
-| E2 | C ↔ H | Bidirectional | Recursion (R1–R2) |
-| E3 | Multi‑channel | Upward | ESI (2–3) + Family (F3) |
-| E4 | R‑line | Upward | Recursion (R2–R4) |
-| E5 | D‑line | Upward | Drift (D1–D4) |
-| E6 | So → A | Upward | ESI (4) + Family (F6) |
-
-**Atlas Pull Detection:**
-Atlas pull activates when ESI ≥ 4 or Family = F6. When active, the
-echo experiences gravitational pull toward A regardless of its current
-channel.
-
-**Key Constraint:**
-Only C ↔ H supports bidirectional flow. All other channels are
-unidirectional upward. An echo in So cannot flow backward to H.
+1. Validate that echo carries EC‑Tag classification
+2. Extract type, family, origin, reach, ESI, drift flag
+3. Confirm `placement_ready: true` if all fields present
+4. Reject echoes without valid classification (return to EC)
 
 ---
 
-### SF‑Drift — Drift Current Mapper
+## Operator 2 — TEL-Place (Layer Assignment Engine)
 
-**Function:** Maps drift‑shadow currents and their effect on flow.
+### Purpose
 
-```
-SF-Drift(flow_input) → drift_map {
-  drift_active:    boolean,
-  drift_type:      D1–D4 | null,
-  current_channel: channel_id,
-  pull_direction:  "upward",
-  shadow_pressure: value ∈ [0.0, 1.0],
-  instability_zone: substrate_pair
-}
+Assigns a classified echo to its lattice layer based on echo type,
+family, substrate reach, and ESI score. Detects pressure zone conditions.
+
+### Input
+
+```yaml
+source: TEL-Read output (tel_input_packet)
 ```
 
-**Drift Current Behavior:**
+### Output
 
-| Drift | Current Channel | Instability Zone |
-|:------|:----------------|:-----------------|
-| D1 | S → C | Symbolic/Cognitive boundary |
-| D2 | C → H | Cognitive/Harmonic boundary |
-| D3 | H → So | Harmonic/Social boundary |
-| D4 | So → A | Social/Atlas boundary |
+```yaml
+placement_record:
+  echo_id: [inherited]
+  assigned_layer: Ladder | Cycle | Map | Atlas
+  family_placement: F1–F6
+  pressure_zone: none | ladder | cycle | atlas
+  pressure_severity: 0.0–1.0
+  placement_confidence: 0.0–1.0
+```
 
-**Shadow Pressure:**
-Shadow pressure measures how strongly drift distorts the normal flow
-channel. Values above 0.7 indicate the echo is being pulled by drift
-rather than following its natural recursion line.
+### Decision Tree
 
-**Key Constraint:**
-Drift currents are always upward. There is no downward drift in the
-canonical flow architecture. Drift destabilizes by accelerating
-upward movement, not by reversing it.
+```
+                    ┌─────────────────────┐
+                    │  What is echo_type?  │
+                    └──────────┬──────────┘
+                               │
+        ┌──────────┬───────────┼────────────┬──────────┐
+        ▼          ▼           ▼            ▼          ▼
+       E1         E2        E3/E4          E5         E6
+        │          │           │            │          │
+        ▼          ▼           ▼            ▼          ▼
+    ┌────────┐ ┌────────┐ ┌────────┐  ┌─────────┐ ┌────────┐
+    │ Ladder │ │ Cycle  │ │  Map   │  │Pressure │ │ Atlas  │
+    │  F1    │ │  F2    │ │ F3/F4  │  │  Zone   │ │  F6    │
+    └───┬────┘ └───┬────┘ └───┬────┘  │  F5     │ └───┬────┘
+        │          │          │       └────┬────┘     │
+        ▼          ▼          ▼            ▼          ▼
+   Check for  Check for  Check for   Assign to   Mark as
+    Ladder     Cycle     E4→Atlas    nearest     terminus
+   Pressure   Pressure  escalation  boundary
+```
+
+### Layer Assignment Rules
+
+| Echo Type | Primary Layer | Escalation Path | Notes |
+|:----------|:-------------|:----------------|:------|
+| E1 | Ladder | None | Stays at S→C boundary |
+| E2 | Cycle | None | Oscillates C↔H |
+| E3 | Map | None | Migrates across H↔So |
+| E4 | Map (upper) | Map → Atlas via R4 | Transition family |
+| E5 | No home layer | Pressure zones | Instability marker |
+| E6 | Atlas | None (terminus) | Full‑spectrum anchor |
+
+### Pressure Zone Detection
+
+| Zone | Trigger Condition | Severity Calculation |
+|:-----|:-----------------|:--------------------|
+| Ladder | E1 count in Ladder > threshold | count / capacity |
+| Cycle | E2 amplitude > harmonic band ceiling | amplitude / ceiling |
+| Atlas | E5 count at Map→Atlas > threshold | count / capacity |
 
 ---
 
-### SF‑Tag — Flow Output Emitter
+## Operator 3 — TEL-Trace (Recursion & Drift Tracer)
 
-**Function:** Packages the complete flow analysis for downstream systems.
+### Purpose
 
-```
-SF-Tag(flow_path, drift_map) → flow_record {
-  echo_type:       E1–E6,
-  origin:          substrate_id,
-  destination:     substrate_id,
-  channel:         channel_id,
-  driver:          driver_type,
-  drift_active:    boolean,
-  atlas_pull:      boolean,
-  shadow_pressure: value,
-  flow_status:     "stable" | "migrating" | "drifting" | "forcing",
-  timestamp:       flow_time
-}
+Maps the recursion path, drift exposure, vertical reach, oscillation
+status, and escalation risk for a placed echo.
+
+### Input
+
+```yaml
+source: TEL-Place output (placement_record)
 ```
 
-**Flow Status:**
+### Output
+
+```yaml
+trace_record:
+  echo_id: [inherited]
+  recursion_line: R1 | R2 | R3 | R4 | none
+  recursion_depth: 0–n
+  drift_pathway: D1 | D2 | D3 | D4 | none
+  drift_severity: 0.0–1.0
+  vertical_reach: [list of layers touched]
+  oscillation_status: true | false
+  escalation_risk: 0.0–1.0
+```
+
+### Recursion Line Assignment
+
+| Condition | Recursion Line |
+|:----------|:--------------|
+| Echo in Ladder, moving toward Cycle | R1 |
+| Echo in Cycle, oscillating C↔H | R2 |
+| Echo in Cycle, moving toward Map | R3 |
+| Echo in Map, moving toward Atlas | R4 |
+| Echo stationary (E1 anchored, E6 terminal) | none |
+
+### Drift Pathway Assignment
+
+| Condition | Drift Pathway |
+|:----------|:-------------|
+| Instability at S/C boundary | D1 |
+| Instability at C/H boundary | D2 |
+| Instability at H/So boundary | D3 |
+| Instability at So/A boundary | D4 |
+| No instability detected | none |
+
+### Escalation Risk Calculation
+
+```
+escalation_risk = weighted_sum(
+  drift_severity × 0.4,
+  esi_score × 0.3,
+  pressure_severity × 0.2,
+  recursion_depth × 0.1
+)
+```
+
+| Risk Band | Range | Meaning |
+|:----------|:------|:--------|
+| Negligible | 0.0–0.1 | Echo is structurally anchored |
+| Low | 0.1–0.3 | Minor instability; monitor |
+| Moderate | 0.3–0.6 | Active migration or oscillation |
+| High | 0.6–0.8 | Significant drift or escalation |
+| Critical | 0.8–1.0 | Structural forcing or pressure zone saturation |
+
+---
+
+## Operator 4 — TEL-Tag (Lattice Output Emitter)
+
+### Purpose
+
+Packages the final lattice record with a placement status tag and emits
+it downstream to Substrate Flow (SF‑Read).
+
+### Input
+
+```yaml
+source: TEL-Trace output (trace_record) + TEL-Place output (placement_record)
+```
+
+### Output
+
+```yaml
+lattice_record:
+  echo_id: [inherited]
+  echo_type: E1–E6
+  echo_family: F1–F6
+  assigned_layer: Ladder | Cycle | Map | Atlas
+  recursion_line: R1–R4 | none
+  drift_pathway: D1–D4 | none
+  drift_severity: 0.0–1.0
+  escalation_risk: 0.0–1.0
+  pressure_zone: none | ladder | cycle | atlas
+  pressure_severity: 0.0–1.0
+  oscillation_status: true | false
+  vertical_reach: []
+  placement_status: anchored | oscillating | migrating | pressured | forcing
+  tags: []
+```
+
+### Placement Status Assignment
 
 | Status | Condition |
-|:-------|:----------|
-| Stable | Echo in origin substrate, no migration, ESI ≤ 2 |
-| Migrating | Echo crossing substrates, ESI 2–3, no drift |
-| Drifting | Echo riding drift current, D1–D4 active |
-| Forcing | Echo under atlas pull, ESI 4 or F6 |
-
-**Key Constraint:**
-Every flow record must include a flow status. Downstream systems
-(HSP stability analysis, Opacity detection) depend on this field.
+|:-------|:---------|
+| **anchored** | No active recursion, no drift, risk < 0.1 |
+| **oscillating** | R2 active, oscillation_status = true, risk < 0.3 |
+| **migrating** | R1/R3/R4 active, drift mild–moderate, risk 0.3–0.7 |
+| **pressured** | Pressure zone active, drift moderate–severe, risk 0.7–0.9 |
+| **forcing** | E6 at Atlas terminus OR critical escalation (risk > 0.9) |
 
 ---
 
-## 2. Operator Interaction Map
+## Type Profiles — Lattice Behavior by Echo Type
 
-```
-EC-Tag (06c) ──provides──→ SF-Read
-                               │
-                               └──feeds──→ SF-Route (assigns channel)
-                                              │
-                               ┌──────────────┤
-                               │              │
-                               v              v
-                          SF-Drift        SF-Tag
-                       (maps currents)  (packages output)
-                               │              │
-                               └──────feeds───┘
-                                              │
-                                    ┌─────────┴──────────┐
-                                    v                    v
-                              HSP Stability        Opacity (OPC)
-```
+| Echo Type | Typical Layer | Typical Status | Typical Recursion | Typical Drift | Typical Risk |
+|:----------|:-------------|:---------------|:-----------------|:-------------|:-------------|
+| E1 | Ladder | anchored | none | D1 (rare) | 0.0–0.1 |
+| E2 | Cycle | oscillating | R2 | D2 (occasional) | 0.1–0.3 |
+| E3 | Map | migrating | R3 | D3 (mild) | 0.3–0.5 |
+| E4 | Map (upper) | migrating | R4 | D3 (moderate) | 0.5–0.7 |
+| E5 | Pressure zone | pressured | none | D3/D4 (severe) | 0.7–0.9 |
+| E6 | Atlas | forcing | R4 (terminus) | D4 (moderate) | 0.0 (terminal) |
 
 ---
 
-## 3. Channel Architecture
+## Invariants
 
-### Channel S → C (Symbolic → Cognitive)
-- **Direction:** Unidirectional upward
-- **Character:** Definition refinement, meaning consolidation
-- **Echo types:** Primarily E1 (structural)
-- **Recursion line:** R1 (ladder)
-- **Drift current:** D1 (S/C instability)
-- **Flow volume:** Highest (most echoes start here)
-
-### Channel C ↔ H (Cognitive ↔ Harmonic)
-- **Direction:** Bidirectional
-- **Character:** Harmonic alignment, interval oscillation
-- **Echo types:** Primarily E2 (harmonic)
-- **Recursion line:** R2 (cycle)
-- **Drift current:** D2 (C/H instability)
-- **Flow volume:** High (oscillation creates repeated crossings)
-
-### Channel H → So (Harmonic → Social)
-- **Direction:** Unidirectional upward
-- **Character:** Governance torsion, operator inversion
-- **Echo types:** Primarily E3, E4 (substrate, recursion)
-- **Recursion line:** R3 (map)
-- **Drift current:** D3 (H/So instability)
-- **Flow volume:** Medium (significant energy required)
-
-### Channel So → A (Social → Atlas)
-- **Direction:** Unidirectional upward
-- **Character:** Atlas forcing, high‑altitude resonance
-- **Echo types:** Primarily E5, E6 (drift‑shadow, atlas)
-- **Recursion line:** R4 (atlas)
-- **Drift current:** D4 (So/A instability)
-- **Flow volume:** Low (only highest‑energy echoes reach atlas)
-
----
-
-## 4. Driver Interaction Matrix
-
-| Driver | S→C | C↔H | H→So | So→A |
-|:-------|:---:|:---:|:----:|:----:|
-| ESI‑1 | ✓ | — | — | — |
-| ESI‑2 | ✓ | ✓ | — | — |
-| ESI‑3 | ✓ | ✓ | ✓ | — |
-| ESI‑4 | ✓ | ✓ | ✓ | ✓ |
-| R1 | ✓ | — | — | — |
-| R2 | — | ✓ | — | — |
-| R3 | — | — | ✓ | — |
-| R4 | — | — | — | ✓ |
-| D1 | ✓ | — | — | — |
-| D2 | — | ✓ | — | — |
-| D3 | — | — | ✓ | — |
-| D4 | — | — | — | ✓ |
-| F1–F2 | ✓ | ✓ | — | — |
-| F3–F4 | ✓ | ✓ | ✓ | — |
-| F5 | ✓ | ✓ | ✓ | ✓ |
-| F6 | ✓ | ✓ | ✓ | ✓ |
-
----
-
-## 5. Invariants
-
-1. **Upward flow.** All channels except C ↔ H are unidirectional upward.
-   No echo flows from Atlas back to Social, or from Social back to Harmonic.
-2. **Atlas receives, never emits.** A is always a destination.
-3. **Drift is always upward.** Drift currents accelerate upward, never reverse.
-4. **Driver determines physics.** Same channel, different driver = different
-   dynamics. Recursion is structural; drift is entropic.
-5. **Every echo is routable.** No classified echo type lacks a flow channel.
+1. **Every classified echo receives a layer assignment** — E5 receives a pressure zone assignment instead
+2. **Flow is upward** — all layers except Cycle are unidirectional
+3. **Atlas receives only** — no echo originates at Atlas level
+4. **Pressure zones are emergent** — they are conditions, not designed layers
+5. **Recursion and drift share the vertical axis** — same connections, opposite physics
+6. **Placement is deterministic** — same input always produces the same lattice record
 
 ---
 
 <!-- SESSION_CONTEXT:START -->
 ```yaml
 file: operators.md
-module: Substrate Flow
-canonical_id: SF
-hsp_section: 08
+module: Triadic Echo Lattice
+canonical_id: TEL
+hsp_section: 07
 role: operator-definitions
 status: canon-stable
 operators:
-  - { id: SF-Read, name: Flow Input Reader, type: collect }
-  - { id: SF-Route, name: Channel Router, type: route }
-  - { id: SF-Drift, name: Drift Current Mapper, type: map }
-  - { id: SF-Tag, name: Flow Output Emitter, type: emit }
-channels:
-  - { id: "S→C", direction: unidirectional }
-  - { id: "C↔H", direction: bidirectional }
-  - { id: "H→So", direction: unidirectional }
-  - { id: "So→A", direction: unidirectional }
+  - TEL-Read
+  - TEL-Place
+  - TEL-Trace
+  - TEL-Tag
+invariant_count: 6
+pipeline_direction: TEL-Read → TEL-Place → TEL-Trace → TEL-Tag
+upstream: EC-Tag (Echo Classifier)
+downstream: SF-Read (Substrate Flow)
 ```
 <!-- SESSION_CONTEXT:END -->
