@@ -1,6 +1,5 @@
 ### 📄 EC_Capture.md
 
-```
 # 🧪 Echo Classifier — Design Capture
 
 > *Every echo has a type. This module is the engine that assigns it.*
@@ -212,6 +211,7 @@ entire HSP analytics pipeline loses coherence.
 ---
 
 <!-- SESSION_CONTEXT:START -->
+
 ```yaml
 file: EC_Capture.md
 module: Echo Classifier
@@ -230,9 +230,9 @@ lineage_note: >
   module to complete the HSP analytics suite alongside TEL and
   Substrate Flow.
 ```
+
 <!-- SESSION_CONTEXT:END -->
 
----
 
 
 
