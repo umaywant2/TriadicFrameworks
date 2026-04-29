@@ -133,6 +133,8 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [/vst_for_robotics_and_control_policies/](https://www.triadicframeworks.org/vst_for_robotics_and_control_policies/)  
 - [/vst_for_scientific_simulators/](https://www.triadicframeworks.org/vst_for_scientific_simulators/)  
 
+_(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
+
 ---
 
 ## 7. Creative & Mythic Layer (Symbolic Substrate)
