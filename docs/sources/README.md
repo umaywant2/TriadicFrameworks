@@ -1,4 +1,4 @@
-# 🎶 Good Vibrations — Source Module README  
+# 🎶 Sources Module 'Good Vibrations'  
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
@@ -9,7 +9,7 @@ This module collects, parses, and resonates with **musical source data** (CSV, J
 - `Good_Vibrations.csv` → Raw resonance dataset.  
 - `Good_Vibrations_sources.json` → Metadata and lineage mapping.  
 - `Good_Vibrations.py` → Parser + loader for remixers.  
-- `Good_Vibrations_README.md` → This scroll (overview + onboarding).  
+- `README.md` → This scroll (overview + onboarding).  
 
 ## 🛠️ Usage  
 1. Load the dataset with `Good_Vibrations.py`.  
