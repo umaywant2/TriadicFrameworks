@@ -16,8 +16,6 @@
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
-###### Copyright © 2025-2026 www.TriadicFrameworks.org
-
 RTT/codes provide a universal, scannable way to identify, classify, and navigate
 artifacts across the TriadicFrameworks ecosystem. They bind any artifact—
 digital or physical—to its canonical documentation, lineage, and onboarding
