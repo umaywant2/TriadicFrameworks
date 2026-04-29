@@ -1,20 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Core Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Projects Virtual Compute Gateway (VCG) | RTT</title>
+<meta name="robots" content="index, follow">
+<meta name="author" content="Nawder Loswin">
+<meta name="description" content="VCG — the Virtual Compute Gateway: a distributed-compute, resonance-aware orchestration interface enabling TFT calculations across systems.">
+<meta name="keywords" content="VCG, Virtual Compute Gateway, distributed compute, TFT, regime translation, RTD, RT Daemon, Triadic Observer, API spec, orchestration">
+<link rel="canonical" href="https://www.triadicframeworks.org/projects/VCG/">
 
-  <!-- Favicon (Triadic Static Mark) -->
+<!-- Theme -->
+<meta name="theme-color" content="#0ff">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="VCG — Virtual Compute Gateway">
+<meta property="og:url" content="https://www.triadicframeworks.org/projects/VCG/">
+<meta property="og:description" content="Distributed-compute gateway for TFT calculations, regime translation, orchestration, diagnostics, and multi-language client integration.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VCG — Virtual Compute Gateway">
+<meta name="twitter:description" content="A modular, resonance-aware compute gateway enabling TFT calculations across distributed systems.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<!-- Citation Metadata -->
+<meta name="citation_title" content="VCG — Virtual Compute Gateway">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject" content="distributed compute, TFT, orchestration, regime translation, RTD, RT Daemon, Triadic Observer">
+<meta name="DC.type" content="Project">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="VCG">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Provide a distributed-compute gateway for TFT calculations, orchestration, diagnostics, and resonance-aware execution.">
+<meta name="ai.keywords" content="VCG, Virtual Compute Gateway, distributed compute, TFT, regime translation, RTD, RT Daemon, Triadic Observer, API spec, orchestration">
+<meta name="ai.audience" content="researchers, distributed-systems engineers, remixers, students, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<!-- Module-Specific -->
+<meta name="ai.module.name" content="VCG">
+<meta name="ai.module.summary" content="Distributed-compute gateway enabling TFT calculations, orchestration, diagnostics, and multi-language client integration.">
+<meta name="ai.module.category" content="projects-core">
+
+<!-- Favicon -->
 <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" type="image/png" sizes="16x16" />
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" type="image/png" sizes="32x32" />
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" type="image/png" sizes="192x192" />
-<meta property="og:title" content="Workflows | TFT | TriadicFrameworks | RTT" />
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
-<meta property="og:image:type" content="image/png" />
-<meta property="og:image:width" content="1080" />
-<meta property="og:image:height" content="1080" />
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>VCG — Virtual Compute Gateway</title>
 
 <style>
 /* ============================================================
@@ -103,6 +147,26 @@ a:visited {
   color: #cfe8ff;
   }
 
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+   
 nav {
   width: 260px;
   float: left;
@@ -162,50 +226,127 @@ code {
 <body>
    
 <nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
      
-<h2>🧭 Projects VCG | Orientation & Entry</h2>
-    <a href="#README">🔰 README - Canonical overview and grounding context.</a>
-    <a href="#QUICKSTART">🚀 Quickstart - Fast path into the VCG system.</a>
-    <a href="#README_PROJECT_1">📂 Project 1 README - Focused scope and intent for Project 1.</a>
-  <h3>🏗️ Architecture & Specification</h3>
-    <a href="#GEN1_VCG_API_SPEC">📡 Gen1 VCG API Spec - Interface contracts and API definitions.</a>
-    <a href="#GEN1_VCG_ARCHITECTURE">🏛️ Gen1 VCG Architecture - System‑level design and component layout.</a>
-    <a href="#GEN1_VCG_FS_STRATEGY">🗄️ Filesystem Strategy - Storage layout and data flow conventions.</a>
-    <a href="#VCG_INTERNAL_ARCHITECTURE_REGIME_TRANSLATION">🔄 Regime Translation - Internal architecture mapping across regimes.</a>
-  <h3>📜 Conceptual Canon</h3>
-    <a href="#TRIADIC_OBSERVER_LACTOS_HOLY_GRAIL_DRAFT">🧠 Triadic Observer (Draft) - Foundational observer model and conceptual synthesis.</a>
-  <h3>🛂 Protocols & Validation</h3>
-    <a href="#VCG_MANIFEST_PROTOCOL">📑 Manifest Protocol - Operational rules and declaration format.</a>
-    <a href="#VCG_VALIDATOR_DASHBOARD">📊 Validator Dashboard - System health and validation surfaces.</a>
-  <h3>📐 Mathematics & Formalism</h3>
-    <a href="#VCG_EQUATIONS">🧮 VCG Equations - Mathematical foundations and derivations.</a>
-  <h3>🏅 Lineage & Recognition</h3>
-    <a href="#VCG_HONOR_ROLL">🌟 Honor Roll - Acknowledgments and contributor lineage.</a>
-    <a href="#VCG_BADGE_TRIGGERS">🎖️ Badge Triggers - Achievement and participation signals.</a>
-  <h3>🧩 Clients</h3>
-    <a href="#VCG_CLIENT_CPP">💠 C++ Client - Native client integration reference.</a>
-    <a href="#VCG_CLIENT_PYTHON">🐍 Python Client - Scripting and rapid‑prototyping client.</a>
-    <a href="#VCG_CLIENT_RUST">🦀 Rust Client - Safe, high‑performance client implementation.</a>
-  <h3>🎛️ Orchestration & Examples</h3>
-    <a href="#VCG_EXAMPLE_D4_RETRIEVER">🔁 D4 Retriever Example - Reference retrieval workflow example.</a>
-    <a href="#VCG_ORCHESTRATOR">🧠 VCG Orchestrator - Coordination and execution logic.</a>
-  <h3>⏱️ Resonant Time</h3>
-    <a href="#RTD_MAIN">🕰️ RTD Main - Primary resonant‑time control loop.</a>
-    <a href="#RT_DAEMON">⚙️ RT Daemon - Background timing and synchronization service.</a>
-  <h3>🧪 Testing</h3>
-    <a href="#VCG_TESTING_HARNESS">🧰 Test Harness - Validation and regression testing framework.</a>
-  <h3>🔣 Glyphs & Visual Language</h3>
-    <a href="#VCG_GLYPHS">🧿 VCG Glyphs - Symbolic and visual grammar reference.</a>
-  <h3>🧬 Lab Templates</h3>
-    <a href="#LAB_FLUX_HARMONICS">🌊 Flux Harmonics Lab - Exploration of dynamic resonance patterns.</a>
-    <a href="#LAB_INVOCATION_PROTOCOLS">🗣️ Invocation Protocols Lab - Structured activation and invocation flows.</a>
-    <a href="#LAB_LATENCY_DIAGNOSTICS">📡 Latency Diagnostics Lab - Timing analysis and performance diagnostics.</a>
-    <a href="../">🔙</a>
+  <h2>🧭 Projects VCG | Orientation & Entry</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🏗️ Architecture & Specification</h3>
+      <a href="#README_PROJECT_1">📂 Project 1 README - Focused</a>
+      <a href="#GEN1_VCG_API_SPEC">📡 Gen1 VCG API Spec</a>
+      <a href="#GEN1_VCG_ARCHITECTURE">🏛️ Gen1 VCG Architecture</a>
+      <a href="#GEN1_VCG_FS_STRATEGY">🗄️ Filesystem Strategy</a>
+      <a href="#VCG_INTERNAL_ARCHITECTURE_REGIME_TRANSLATION">🔄 Regime Translation</a>
+    <h3>📜 Conceptual Canon</h3>
+      <a href="#TRIADIC_OBSERVER_LACTOS_HOLY_GRAIL_DRAFT">🧠 Triadic Observer (Draft)</a>
+    <h3>🛂 Protocols & Validation</h3>
+      <a href="#VCG_MANIFEST_PROTOCOL">📑 Manifest Protocol</a>
+      <a href="#VCG_VALIDATOR_DASHBOARD">📊 Validator Dashboard</a>
+    <h3>📐 Mathematics & Formalism</h3>
+      <a href="#VCG_EQUATIONS">🧮 VCG Equations - Mathematical</a>
+    <h3>🏅 Lineage & Recognition</h3>
+      <a href="#VCG_HONOR_ROLL">🌟 Honor Roll - Acknowledgments</a>
+      <a href="#VCG_BADGE_TRIGGERS">🎖️ Badge Triggers - Achievement</a>
+    <h3>🧩 Clients</h3>
+      <a href="#VCG_CLIENT_CPP">💠 C++ Client - Native</a>
+      <a href="#VCG_CLIENT_PYTHON">🐍 Python Client</a>
+      <a href="#VCG_CLIENT_RUST">🦀 Rust Client - Safe</a>
+    <h3>🎛️ Orchestration & Examples</h3>
+      <a href="#VCG_EXAMPLE_D4_RETRIEVER">🔁 D4 Retriever Example</a>
+      <a href="#VCG_ORCHESTRATOR">🧠 VCG Orchestrator</a>
+    <h3>⏱️ Resonant Time</h3>
+      <a href="#RTD_MAIN">🕰️ RTD Main - Primary</a>
+      <a href="#RT_DAEMON">⚙️ RT Daemon - Background</a>
+    <h3>🧪 Testing</h3>
+      <a href="#VCG_TESTING_HARNESS">🧰 Test Harness - Validation</a>
+    <h3>🔣 Glyphs & Visual Language</h3>
+      <a href="#VCG_GLYPHS">🧿 VCG Glyphs - Symbolic</a>
+    <h3>🧬 Lab Templates</h3>
+      <a href="#LAB_FLUX_HARMONICS">🌊 Flux Harmonics Lab - Exploration</a>
+      <a href="#LAB_INVOCATION_PROTOCOLS">🗣️ Invocation Protocols Lab - Structured</a>
+      <a href="#LAB_LATENCY_DIAGNOSTICS">📡 Latency Diagnostics Lab - Timing</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>  
+      <a href="../../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
-   <span style="display:none;">
-   rtt=1 | coherence=declared | drift=bounded | paradox=structural
-   </span>
-  
+<section id="vcg-session-header"
+         data-rtt="1"
+         data-coherence="declared"
+         data-drift="bounded"
+         data-paradox="compute">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (projects-core)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      projects → VCG → api_spec → architecture → filesystem_strategy → regime_translation → observer → orchestrator → rtd → daemon → diagnostics → dashboards → clients → labs → lineage
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">bounded (compute-stable)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (distributed-compute grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (compute-stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + specs + diagrams + labs + clients</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (VCG index)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI-parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">distributed-systems engineers + researchers + remixers + students + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🖧 VCG — Virtual Compute Gateway<br>⚡ Distributed‑Compute Orchestration Active
+</div>
+
 </nav>
 
 <main id="content"></main>
@@ -213,9 +354,17 @@ code {
 <script>
 
 const DOC_MAP = {
-  // Root / Orientation
-  QUICKSTART: 'QUICKSTART.md',
   README: 'README.md',
+  ABOUT: '../../ABOUT.md',
+  CONTRIBUTING: '../../CONTRIBUTING.md',
+  GLOSSARY: '../../GLOSSARY.md',
+  LINEAGE: '../../LINEAGE.md',
+  LICENSE: '../../LICENSE.md',
+  SITEMAP: '../../sitemap.md',
+  QUICKSTART: '../../QUICKSTART.md',
+  CODE_OF_CONDUCT: '../../CODE_OF_CONDUCT.md',
+  SECURITY: '../../SECURITY.md',
+  PRINCIPLES: '../../PRINCIPLES.md',
   README_PROJECT_1: 'README_Project1.md',
   // Core Architecture & Specification
   GEN1_VCG_API_SPEC: 'gen1_vcg_api_spec.md',
