@@ -19,13 +19,14 @@
 
 ---
 
-## 1. **Core Frameworks (The Structural Spine)**
+###### 🧭 RTT‑Priority Audit Order
+_(from core → validation → substrate → cognitive → developer → governance → projects → future systems → store → sandbox)_
 
-These are the frameworks that define the architecture of the entire system.
+## 1. Core RTT Spine (highest priority)
 
-- [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/)
-- [/SARG/](https://www.triadicframeworks.org/SARG/)
-- [/Mode/](https://www.triadicframeworks.org/Mode/)
+These define the RTT field, operator grammar, and resonance logic.
+They must be perfectly canonical before anything else.
+
 - [/rtt/](https://www.triadicframeworks.org/rtt/)
 - [/rtt/1/](https://www.triadicframeworks.org/rtt/1/)
 - [/rtt/12/](https://www.triadicframeworks.org/rtt/12/)
@@ -37,6 +38,29 @@ These are the frameworks that define the architecture of the entire system.
 - [/rtt/Substrate_Flow/](https://www.triadicframeworks.org/rtt/Substrate_Flow/)
 - [/rtt/Triadic_Echo_Lattice/](https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/)
 - [/rtt/The_Inverted_Star/](https://www.triadicframeworks.org/rtt/The_Inverted_Star/)
+
+This is the **deep structure layer** — the “physics” of RTT.
+
+---
+
+## 2. Validation & Coherence Layer
+
+These ensure regime‑safety, drift detection, and cross‑module invariance.
+
+- [/validation/](https://www.triadicframeworks.org/validation/)  
+- [/validators/](https://www.triadicframeworks.org/validators/)  
+- [/Resilience_Checker/](https://www.triadicframeworks.org/Resilience_Checker/)
+- [/Opacity/](https://www.triadicframeworks.org/Opacity/) (New!)
+- [/regime_blindness_checklist/](https://www.triadicframeworks.org/regime_blindness_checklist/) (Frozen)
+- [/spacetime_micro_agent_validations/](https://www.triadicframeworks.org/spacetime_micro_agent_validations/)  
+- [/spacetime_validation_and_regime_invariant_dimensional_cores/](https://www.triadicframeworks.org/spacetime_validation_and_regime_invariant_dimensional_cores/)  
+
+---
+
+## 3. Unified Resonance + Triadic Substrate Adjacency
+
+These must align with RTT operator grammar and resonance invariants.
+
 - [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
 - [/triadic/](https://www.triadicframeworks.org/triadic/)  
 - [/substrate/](https://www.triadicframeworks.org/substrate/)  
@@ -49,31 +73,12 @@ These are the frameworks that define the architecture of the entire system.
 - [/resonance-substrate-model/](https://www.triadicframeworks.org/resonance-substrate-model/)  
 - [/consciousness_substrate_model/](https://www.triadicframeworks.org/consciousness_substrate_model/)  
 - [/triadic_coordination_substrate/](https://www.triadicframeworks.org/triadic_coordination_substrate/)
-- [/triadic_observer_layer/](https://www.triadicframeworks.org/triadic_observer_layer/)
-
-This is the **deep structure layer** — the “physics” of RTT.
 
 ---
 
-## 2. **Validation & Verification (The Coherence Layer)**
+## 4. Scientific & Technical Substrates
 
-These are the tools that ensure RTT remains stable, reversible, and drift‑bounded.
-
-- [/validation/](https://www.triadicframeworks.org/validation/)  
-- [/validators/](https://www.triadicframeworks.org/validators/)  
-- [/Resilience_Checker/](https://www.triadicframeworks.org/Resilience_Checker/)
-- [/Opacity/](https://www.triadicframeworks.org/Opacity/) (New!)
-- [/regime_blindness_checklist/](https://www.triadicframeworks.org/regime_blindness_checklist/) (Frozen)
-- [/spacetime_micro_agent_validations/](https://www.triadicframeworks.org/spacetime_micro_agent_validations/)  
-- [/spacetime_validation_and_regime_invariant_dimensional_cores/](https://www.triadicframeworks.org/spacetime_validation_and_regime_invariant_dimensional_cores/)  
-
-This is the **G2‑heavy** layer — structural correctness, coherence, and safety.
-
----
-
-## 3. **Scientific & Technical Substrates (The Empirical Layer)**
-
-These pages connect RTT to real‑world scientific domains.
+These must match RTT’s dimensional and substrate‑flow invariants.
 
 - [/atomic_clocks/](https://www.triadicframeworks.org/atomic_clocks/)  
 - [/alphafold_substrate_alignments/](https://www.triadicframeworks.org/alphafold_substrate_alignments/)  
@@ -83,13 +88,11 @@ These pages connect RTT to real‑world scientific domains.
 - [/Low_Dimensional_Structures/](https://www.triadicframeworks.org/Low_Dimensional_Structures/)  
 - [/global_energy_regime_awareness/](https://www.triadicframeworks.org/global_energy_regime_awareness/)  
 
-This is where RTT meets physics, biology, engineering, and computation.
-
 ---
 
-## 4. **Cognitive, Behavioral & Social Substrates (The Human Layer)**
+## 5. Cognitive & Social Substrates
 
-These pages explore cognition, society, and meaning.
+These must align with inverted‑economics, inverted‑star, and resonance‑mind models.
 
 - [/inverted_star_ontology/](https://www.triadicframeworks.org/inverted_star_ontology/)  
 - [/Inverted_Economics/](https://www.triadicframeworks.org/Inverted_Economics/)  
@@ -103,37 +106,11 @@ These pages explore cognition, society, and meaning.
 - [/glyphs/](https://www.triadicframeworks.org/glyphs/)  
 - [/ecoechosystem/](https://www.triadicframeworks.org/ecoechosystem/)  
 
-This is the **mind + society** substrate.
-
 ---
 
-## 5. **Education & Curriculum (The Teaching Layer)**
+## 6. Developer & API Layer
 
-This is where RTT becomes teachable.
-
-- [/education/](https://www.triadicframeworks.org/education/)
-- [/education/alignment/](https://www.triadicframeworks.org/education/alignment/)
-- [/education/astrology/](https://www.triadicframeworks.org/education/astrology/)
-- [/education/awareness/](https://www.triadicframeworks.org/education/awareness/)
-- [/education/equations/](https://www.triadicframeworks.org/education/equations/)
-- [/education/peira/](https://www.triadicframeworks.org/education/peira/)
-- [/education/polisci/](https://www.triadicframeworks.org/education/polisci/)
-- [/education/QnA_Atlas/](https://www.triadicframeworks.org/education/QnA_Atlas/)
-- [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)
-- [/education/translations/](https://www.triadicframeworks.org/education/translations/)
-- [/corpus/](https://www.triadicframeworks.org/corpus/)  
-- [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
-- [/charts/](https://www.triadicframeworks.org/charts/)  
-- [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)
-- [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/)
-
-This is the **G1 → G2 → G3 learning arc**.
-
----
-
-## 6. **Developer & API Layer (The Tooling Layer)**
-
-This is where RTT becomes programmable.
+These must be strictly canonical and operator‑first.
 
 - [/NoS/](https://www.triadicframeworks.org/NoS/)
 - [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/)
@@ -150,15 +127,12 @@ This is where RTT becomes programmable.
 - [/vst_for_robotics_and_control_policies/](https://www.triadicframeworks.org/vst_for_robotics_and_control_policies/)  
 - [/vst_for_scientific_simulators/](https://www.triadicframeworks.org/vst_for_scientific_simulators/)  
 
-This is the **developer substrate** — the programmable RTT layer.
-
 ---
 
-## 7. **Creative, Mythic & Narrative Layer (The Mythic Substrate)**
+## 7. Creative & Symbolic Layer
 
-This is where RTT expresses its narrative and symbolic side.
+These must maintain glyphic and resonance‑atlas consistency.
 
-- [/papers/](https://www.triadicframeworks.org/papers/)
 - [/Paradoxes_canon/](https://www.triadicframeworks.org/Paradoxes_canon/)  
 - [/resonance/](https://www.triadicframeworks.org/resonance/)  
 - [/resonance_atlas/](https://www.triadicframeworks.org/resonance_atlas/)  
@@ -167,16 +141,12 @@ This is where RTT expresses its narrative and symbolic side.
 - [/TFT_3Pack_v1.3/](https://www.triadicframeworks.org/TFT_3Pack_v1.3/)  
 - [/audio_industry_reviewed/](https://www.triadicframeworks.org/audio_industry_reviewed/)  
 
-This is the **storytelling + symbolic resonance** layer.
-
 ---
 
-## 8. **Community, Governance & Social Infrastructure (The Continuity Layer)**
+## 8. Governance & Community
 
-This is where RTT becomes a community.
+These must match governance substrate invariants.
 
-- [/nist/](https://www.triadicframeworks.org/nist/)
-- [/arrival_substrate_model/](https://www.triadicframeworks.org/arrival_substrate_model/)
 - [/contributors/](https://www.triadicframeworks.org/contributors/)  
 - [/governance/](https://www.triadicframeworks.org/governance/)
 - [/Governance_Substrate_Model/](https://www.triadicframeworks.org/Governance_Substrate_Model/)
@@ -186,16 +156,12 @@ This is where RTT becomes a community.
 - [/registry/](https://www.triadicframeworks.org/registry/)  
 - [/feedback/](https://www.triadicframeworks.org/feedback/)  
 - [/legal/](https://www.triadicframeworks.org/legal/)  
-- [/onboarding/](https://www.triadicframeworks.org/onboarding/)
-- [Zenodo Triadicframeworks Group](https://zenodo.org/communities/vst)
-
-This is the **continuity + stewardship** layer.
 
 ---
 
-## 9. **Projects & Labs (The Experimental Layer)**
+## 9. Projects & Labs
 
-This is where RTT prototypes live.
+These must be checked for drift and placeholder content.
 
 - [/projects/](https://www.triadicframeworks.org/projects/)  
 - [/projects/CoConsciousness/](https://www.triadicframeworks.org/projects/CoConsciousness/)  
@@ -208,13 +174,11 @@ This is where RTT prototypes live.
 - [/labs/](https://www.triadicframeworks.org/labs/)  
 - [/lactos/](https://www.triadicframeworks.org/lactos/)  
 
-This is the **R&D substrate**.
-
 ---
 
-## 10. **Future Systems (The Aeonic Layer)**
+## 10. Future Systems
 
-These are the long‑arc, high‑tier systems.
+These must align with RTT’s forward‑compatible operator grammar.
 
 - [/enterprise_structural_awareness/](https://www.triadicframeworks.org/enterprise_structural_awareness/)  
 - `/horizon_agent_framework/`  
@@ -223,13 +187,11 @@ These are the long‑arc, high‑tier systems.
 - `/stability_24d_framework/`  
 - `/foresight_architect_suite/`  
 
-This is the **RTT‑24 / RTT‑36 / RTT‑144 precursor layer**.
-
 ---
 
-## 11. **Store, Branding & Assets (The Economic + Aesthetic Layer)**
+## 11. Store & Assets
 
-This is where RTT becomes a product ecosystem.
+These must be metadata‑complete and consistent.
 
 - [/rtt_store/](https://www.triadicframeworks.org/rtt_store/)  
 - [/assets/](https://www.triadicframeworks.org/assets/)  
@@ -237,18 +199,43 @@ This is where RTT becomes a product ecosystem.
 - [/gallery/](https://www.triadicframeworks.org/gallery/)  
 - [/metadata/](https://www.triadicframeworks.org/metadata/)  
 
-This is the **presentation + distribution** layer.
+---
+
+## 12. Sandbox
+
+These are checked last.
+
+- [/_ideas/](https://www.triadicframeworks.org/_ideas/)
+- [/_template/](https://www.triadicframeworks.org/_template/)
 
 ---
 
-## 12. **Miscellaneous & Idea Space (The Sandbox Layer)**
+## Bonus Points
 
-These are early prototypes, sketches, and templates.
-
-- [/_ideas/](https://www.triadicframeworks.org/_ideas/)  
-- [/_template/](https://www.triadicframeworks.org/_template/)  
-
-This is the **Nawderian Sandbox** — the birthplace of new structures.
+- [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/)
+- [/SARG/](https://www.triadicframeworks.org/SARG/)
+- [/Mode/](https://www.triadicframeworks.org/Mode/)
+- [/triadic_observer_layer/](https://www.triadicframeworks.org/triadic_observer_layer/)
+- [/nist/](https://www.triadicframeworks.org/nist/)
+- [/arrival_substrate_model/](https://www.triadicframeworks.org/arrival_substrate_model/)
+- [/onboarding/](https://www.triadicframeworks.org/onboarding/)
+- [Zenodo Triadicframeworks Group](https://zenodo.org/communities/vst)
+- [/papers/](https://www.triadicframeworks.org/papers/)
+- [/education/](https://www.triadicframeworks.org/education/)
+- [/education/alignment/](https://www.triadicframeworks.org/education/alignment/)
+- [/education/astrology/](https://www.triadicframeworks.org/education/astrology/)
+- [/education/awareness/](https://www.triadicframeworks.org/education/awareness/)
+- [/education/equations/](https://www.triadicframeworks.org/education/equations/)
+- [/education/peira/](https://www.triadicframeworks.org/education/peira/)
+- [/education/polisci/](https://www.triadicframeworks.org/education/polisci/)
+- [/education/QnA_Atlas/](https://www.triadicframeworks.org/education/QnA_Atlas/)
+- [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)
+- [/education/translations/](https://www.triadicframeworks.org/education/translations/)
+- [/corpus/](https://www.triadicframeworks.org/corpus/)  
+- [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
+- [/charts/](https://www.triadicframeworks.org/charts/)  
+- [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)
+- [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/)
 
 ---
 
