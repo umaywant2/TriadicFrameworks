@@ -1,4 +1,4 @@
-# 🏳️‍🌈 RTTcodes — A QR‑Compatible Metadata Layer 
+# 🏳️‍🌈 RTT/codes — A QR‑Compatible Metadata Layer 
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -18,7 +18,7 @@
 
 ###### Copyright © 2025-2026 www.TriadicFrameworks.org
 
-RTTcodes provide a universal, scannable way to identify, classify, and navigate
+RTT/codes provide a universal, scannable way to identify, classify, and navigate
 artifacts across the TriadicFrameworks ecosystem. They bind any artifact—
 digital or physical—to its canonical documentation, lineage, and onboarding
 guides.
@@ -32,13 +32,13 @@ An RTTcode is:
 - **tool‑generated** (JS and Python generators included)
 - **style‑guided** (consistent visual identity across domains)
 
-RTTcodes are designed to operate anywhere QR codes already function in science,
+RTT/codes are designed to operate anywhere QR codes already function in science,
 engineering, and documentation workflows, while adding an RTT‑native metadata
 layer.
 
 ---
 
-🎯 [QuickStart Guide](https://www.triadicframeworks.org/rttcodes/QUICKSTART.md)
+🎯 [QuickStart Guide](https://www.triadicframeworks.org/rtt/codes/QUICKSTART.md)
 
 ## 📦 RTTcode Structure
 
@@ -70,12 +70,12 @@ The generators convert this into a QR‑compatible PNG.
 ---
 
 # 🌲 1. Folder Tree Diagram  
-*A clean, readable map of the RTTcodes subsystem.*
+*A clean, readable map of the RTT/codes subsystem.*
 
 ```text
 
 docs/
-└── rttcodes/
+└── rtt/codes/
     ├── README.md
     │
     ├── schema/
@@ -122,28 +122,28 @@ docs/
             └── substrate-rttcode.png
 ```
 
-## 📁 rttcodes - Folder Overview
+## 📁 rtt/codes - Folder Overview
 
-### [schema/](https://www.triadicframeworks.org/rttcodes/schema/)
+### [schema/](https://www.triadicframeworks.org/rtt/codes/schema/)
 The canonical RTTcode JSON Schema and minimal examples.
 
-### [validators/](https://www.triadicframeworks.org/rttcodes/validators)
+### [validators/](https://www.triadicframeworks.org/rtt/codes/validators)
 Tools that verify RTTcode payload correctness.
 
-### [generators/](https://www.triadicframeworks.org/rttcodes/generators)
-Language‑specific RTTcode generators (JS and Python).
+### [generators/](https://www.triadicframeworks.org/rtt/codes/generators)
+Language‑specific RTT/codes generators (JS and Python).
 
-### [style/](https://www.triadicframeworks.org/rttcodes/style)
+### [style/](https://www.triadicframeworks.org/rtt/codes/style)
 Visual guidelines, color domains, and the RTTcode layout reference.
 
-### [examples/](https://www.triadicframeworks.org/rttcodes/examples)
-Fully generated RTTcodes for each domain, including styled PNGs.
+### [examples/](https://www.triadicframeworks.org/rtt/codes/examples)
+Fully generated RTT/codes for each domain, including styled PNGs.
 
 ---
 
-## 🛠 Generating RTTcodes
+## 🛠 Generating RTT/codes
 
-RTTcodes can be generated using:
+RTT/codes can be generated using:
 
 - **JavaScript** (`generators/js/generate_rttcode.js`)
 - **Python** (`generators/python/generate_rttcode.py`)
@@ -160,7 +160,7 @@ See the generator READMEs for usage.
 
 ## 🎨 Visual Identity
 
-RTTcodes follow a consistent visual language:
+RTT/codes follow a consistent visual language:
 
 - domain‑specific color palettes  
 - triadic overlay geometry  
@@ -185,7 +185,7 @@ See `examples/` for RTT, SET, Substrate, and more.
 
 ## 🌐 Purpose
 
-RTTcodes unify the TriadicFrameworks ecosystem by providing:
+RTT/codes unify the TriadicFrameworks ecosystem by providing:
 
 - a stable metadata layer  
 - a scannable entry point into canonical docs  
@@ -198,6 +198,6 @@ domain‑aware, and triad‑capable.
 ---
 
 For contributors, tool authors, and documentation maintainers, this folder is
-the authoritative reference for everything RTTcode‑related.
+the authoritative reference for everything RTT/codes‑related.
 
-![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-QR%20Metadata%20Layer-00b3b8?style=flat-square&logo=qrcode&logoColor=white)![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Canonical%20Identifier-1a1a1a?style=flat-square&logo=qrcode&logoColor=white)![RTTcodes Badge](https://img.shields.io/badge/RTTcodes-Resonance--Time%20Metadata-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![RTT Domain](https://img.shields.io/badge/RTT-Resonance--Time%20Domain-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![SET Domain](https://img.shields.io/badge/SET-Field%20Topology%20Domain-5B2CFF?style=flat-square&logo=qrcode&logoColor=ffffff)![Substrate Domain](https://img.shields.io/badge/Substrate-Structural%20Domain-003B73?style=flat-square&logo=qrcode&logoColor=7FD4FF)![Observer Domain](https://img.shields.io/badge/Observer-Frame%20and%20Perspective-2F6F73?style=flat-square&logo=qrcode&logoColor=B0C4D4)![Governance Domain](https://img.shields.io/badge/Governance-Decision%20Layer-145A32?style=flat-square&logo=qrcode&logoColor=F1C40F)![Docs Domain](https://img.shields.io/badge/Docs-Documentation%20Domain-6C7A89?style=flat-square&logo=qrcode&logoColor=ffffff)![Other Domain](https://img.shields.io/badge/Other-Extended%20Domain-1a1a1a?style=flat-square&logo=qrcode&logoColor=ffffff)
+![RTT/codes Badge](https://img.shields.io/badge/RTT_codes-QR%20Metadata%20Layer-00b3b8?style=flat-square&logo=qrcode&logoColor=white)![RTT/codes Badge](https://img.shields.io/badge/RTT_codes-Canonical%20Identifier-1a1a1a?style=flat-square&logo=qrcode&logoColor=white)![RTT/codes Badge](https://img.shields.io/badge/RTT_codes-Resonance--Time%20Metadata-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![RTT Domain](https://img.shields.io/badge/RTT-Resonance--Time%20Domain-F6B800?style=flat-square&logo=qrcode&logoColor=1a1a1a)![SET Domain](https://img.shields.io/badge/SET-Field%20Topology%20Domain-5B2CFF?style=flat-square&logo=qrcode&logoColor=ffffff)![Substrate Domain](https://img.shields.io/badge/Substrate-Structural%20Domain-003B73?style=flat-square&logo=qrcode&logoColor=7FD4FF)![Observer Domain](https://img.shields.io/badge/Observer-Frame%20and%20Perspective-2F6F73?style=flat-square&logo=qrcode&logoColor=B0C4D4)![Governance Domain](https://img.shields.io/badge/Governance-Decision%20Layer-145A32?style=flat-square&logo=qrcode&logoColor=F1C40F)![Docs Domain](https://img.shields.io/badge/Docs-Documentation%20Domain-6C7A89?style=flat-square&logo=qrcode&logoColor=ffffff)![Other Domain](https://img.shields.io/badge/Other-Extended%20Domain-1a1a1a?style=flat-square&logo=qrcode&logoColor=ffffff)
