@@ -1,4 +1,4 @@
-## 🔺 **RTT‑12 — Harmonic Resonance Framework**  
+## 🔺 **RTT/12 — Harmonic Resonance Framework**  
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -18,15 +18,15 @@
 
 ## *A structured extension of the Resonance–Time Triad*
 
-RTT‑12 is the **twelve‑step harmonic expansion** of the core Resonance–Time Triad (RTT).  
-Where RTT establishes the *primitives* — **Resonance**, **Time**, and **Triadic Structure** — RTT‑12 shows how these primitives scale into **harmonic layers**, **operators**, and **cross‑domain mappings**.
+RTT/12 is the **twelve‑step harmonic expansion** of the core Resonance–Time Triad (RTT).  
+Where RTT establishes the *primitives* — **Resonance**, **Time**, and **Triadic Structure** — RTT/12 shows how these primitives scale into **harmonic layers**, **operators**, and **cross‑domain mappings**.
 
-If RTT is the *root triad*, RTT‑12 is the **harmonic ladder** that grows from it.
+If RTT is the *root triad*, RTT/12 is the **harmonic ladder** that grows from it.
 
 ---
 
 ## 🌟 **Purpose**
-RTT‑12 provides:
+RTT/12 provides:
 
 - a **12‑layer harmonic model** for structural and resonant behavior  
 - a unified way to map between **structural triads** and **harmonic triads**  
@@ -38,7 +38,7 @@ RTT‑12 is not a replacement for RTT — it is the **scaling architecture** tha
 
 ---
 
-## 🧭 **What RTT‑12 Adds**
+## 🧭 **What RTT/12 Adds**
 ### **1. The Harmonic Ladder**  
 A 12‑step progression that describes how resonance evolves through increasing structural complexity.
 
@@ -57,7 +57,7 @@ A multi‑sector approach to verifying RTT‑12 across theory, computation, expe
 ---
 
 ## 🔧 **Folder Structure**
-RTT‑12 is organized into:
+RTT/12 is organized into:
 
 - **overview** — conceptual introduction  
 - **harmonic_ladder** — the 12‑step progression  
@@ -74,7 +74,7 @@ Each file is modular and can be read independently or as part of the full ladder
 ---
 
 ## 🧩 **Who This Is For**
-RTT‑12 is designed for:
+RTT/12 is designed for:
 
 - researchers  
 - educators  
@@ -87,7 +87,7 @@ Anyone working with resonance‑based models will find RTT‑12 to be the **scal
 ---
 
 ## 🔮 **The Road Ahead**
-RTT‑12 is the foundation for higher‑order expansions, including:
+RTT/12 is the foundation for higher‑order expansions, including:
 
 - harmonic clusters  
 - extended operator families  
