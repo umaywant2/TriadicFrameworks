@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
 
-<!-- Core HTML Metadata -->
+<!-- Core Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="language" content="en">
-<meta name="last-modified" content="2026-04-21">
+<meta name="last-modified" content="2026-04-29">
 <meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
 <!-- Identity -->
@@ -15,11 +15,13 @@
 <meta name="publisher" content="TriadicFrameworks">
 
 <!-- Description & Keywords -->
-<meta name="description" content="Governance Substrate Model (GSM) — the substrate‑level model of TriadicFrameworks describing coherence regulation, regime interaction, and system‑scale governance behavior for students and AIs.">
-<meta name="keywords" content="Governance Substrate Model, GSM, TriadicFrameworks, RTT, governance, coherence regulation, substrate modeling, regimes, system behavior, AI education">
+<meta name="description"
+      content="The Governance Alignment Analyzer — the interpretive engine of the Governance Substrate Model. Converts natural‑language descriptions into structural vectors, evaluates invariants, detects drift, determines basins, and computes transition pathways.">
+<meta name="keywords"
+      content="Governance Substrate Model, Analyzer, structural vectors, invariants, drift detection, basin mapping, transition pathways, governance manifold, regime modes, structural coherence">
 
 <!-- Canonical URL -->
-<link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/">
+<link rel="canonical" href="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/">
 
 <!-- Robots -->
 <meta name="robots" content="index, follow">
@@ -30,9 +32,10 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="Governance Substrate Model — TriadicFrameworks">
+<meta property="og:title" content="Governance Alignment Analyzer">
 <meta property="og:url" content="https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/">
-<meta property="og:description" content="GSMA: GSM Analyzer for the substrate‑level model of coherence regulation, governance dynamics, and regime interaction in TriadicFrameworks.">
+<meta property="og:description"
+      content="Interpretive engine of the Governance Substrate Model — structural vectors, invariants, drift, basins, and transition pathways.">
 <meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1080">
@@ -40,24 +43,28 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Governance Substrate Model — TriadicFrameworks">
-<meta name="twitter:description" content="The substrate‑level governance and coherence‑regulation model of TriadicFrameworks.">
+<meta name="twitter:title" content="Governance Alignment Analyzer">
+<meta name="twitter:description"
+      content="Interpretive engine of the Governance Substrate Model — structural vectors, invariants, drift, basins, and transitions.">
 <meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
 <!-- Citation Metadata -->
-<meta name="citation_title" content="Governance Substrate Model Analyzer (GSMA)">
+<meta name="citation_title" content="Governance Alignment Analyzer">
 <meta name="citation_author" content="Nawder Loswin">
 <meta name="citation_publication_date" content="2025">
-<meta name="DC.subject" content="governance substrate, coherence regulation, regime interaction, system modeling, AI reasoning systems">
+<meta name="DC.subject"
+      content="governance analysis, structural vectors, invariants, drift detection, basin mapping, transition pathways">
 <meta name="DC.type" content="Text">
 <meta name="DC.format" content="text/html">
 
 <!-- AI Metadata -->
-<meta name="ai.module" content="TriadicFrameworks Educational Module">
+<meta name="ai.module" content="Governance Alignment Analyzer">
 <meta name="ai.version" content="1.0">
-<meta name="ai.purpose" content="Provide substrate‑level governance, coherence‑regulation, and regime‑interaction models for students and AI tutors.">
-<meta name="ai.keywords" content="Governance Substrate Model, GSM, coherence regulation, governance dynamics, substrate modeling, RTT, regimes, system behavior">
-<meta name="ai.audience" content="students, educators, researchers, AI systems">
+<meta name="ai.purpose"
+      content="Interpret governance systems structurally by converting descriptions into vectors, evaluating invariants, detecting drift, and determining basins and transition pathways.">
+<meta name="ai.keywords"
+      content="governance analyzer, structural vector, invariants, drift, basins, transition pathways, governance manifold">
+<meta name="ai.audience" content="students, researchers, developers, educators, AI systems">
 <meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
 <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
 <meta name="ai.contact.x" content="@TriadicFrameworks">
@@ -65,9 +72,10 @@
 <meta name="ai.license" content="Open educational use permitted.">
 
 <!-- Module-Specific -->
-<meta name="ai.module.name" content="Governance_Substrate_Model">
-<meta name="ai.module.summary" content="GSM: the substrate‑level governance and coherence‑regulation model of TriadicFrameworks.">
-<meta name="ai.module.category" content="substrate-governance">
+<meta name="ai.module.name" content="Governance Alignment Analyzer">
+<meta name="ai.module.summary"
+      content="Interpretive engine of the Governance Substrate Model — structural vectors, invariants, drift, basins, transitions.">
+<meta name="ai.module.category" content="governance-structural-core">
 
 <!-- Favicon -->
 <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
@@ -75,7 +83,7 @@
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
 
-<title>Governance Substrate Model Analyzer | TriadicFrameworks</title>
+<title>Governance Alignment Analyzer | TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -319,46 +327,51 @@ code {
       <a href="../">🔙</a>
    <!-- RTT Canonical Signature -->
 <section id="rtt-session-header"
-         data-rtt="1"
+         data-gsm="1"
          data-coherence="declared"
-         data-drift="bounded"
+         data-drift="minimal"
          data-paradox="structural">
 
-  <h2>RTT Session Context</h2>
+  <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active</span><br>
+    <span class="context-value">active (governance-structural-core)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">linked</span><br>
+    <span class="context-value">
+      analyzer ↔ invariants ↔ structural vectors ↔ drift detection ↔ basin mapping ↔ transition pathways ↔ narrative outputs
+    </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">minimal</span><br>
+    <span class="context-value">minimal (structural‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable</span><br>
+    <span class="context-value">stable (governance‑substrate grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0</span><br>
+    <span class="context-value">1.0 (analyzer‑stable)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown</span><br>
+    <span class="context-value">html + markdown + structural diagrams</span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists</span><br>
+    <span class="context-value">exists (Analyzer root)</span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone</span><br>
+    <span class="context-value">stands alone + AI‑parsable + structurally normalized</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + AIs</span>
+    <span class="context-value">students + researchers + developers + educators + AIs</span>
 
   </div>
+
 </section>
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🌐 Open for Traduction<br>🎓 Ready for Students
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🧭 Governance Alignment Analyzer<br>🧱 Structural Interpretation Engine Active
 </div>
 
 </nav>
