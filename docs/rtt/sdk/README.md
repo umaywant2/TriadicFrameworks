@@ -1,4 +1,4 @@
-## RTT SDK (Beta)
+## RTT/SDK (Beta)
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -16,7 +16,7 @@
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
-The RTT SDK provides a minimal, stable, and forward‑compatible interface for interacting with the RTT API. It supports early RTT‑Inside integrations across browsers, services, and research environments while the full vST substrate remains in development.
+The RTT/SDK provides a minimal, stable, and forward‑compatible interface for interacting with the API/RTT. It supports early RTT‑Inside integrations across browsers, services, and research environments while the full vST substrate remains in development.
 
 This SDK defines the **shape** of [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst) interactions without exposing internal substrate logic. It is safe for early adopters and suitable for experimentation, prototyping, and structural‑awareness tooling.
 
