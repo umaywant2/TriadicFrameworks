@@ -1,4 +1,4 @@
-## RTT Store — Placeholder Copy
+## RTT/Store — Placeholder Copy
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -20,7 +20,7 @@
 
 This space is reserved for future **RTT‑aligned offerings**, including curated artifacts, reference materials, and engagement pathways associated with Resonance‑Time Technology.
 
-At present, the RTT Store is **under construction**.
+At present, the RTT/Store is **under construction**.
 
 RTT core systems, deployment tooling, and advanced integrations are not distributed through open storefronts. Access is established through **direct collaboration and contractual agreement**, with scope, reuse, and downstream rights defined per engagement.
 
