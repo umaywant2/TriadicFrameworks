@@ -1,4 +1,4 @@
-# **1. Ethics & Privacy**  
+# **1. Ethiics & Privacy**  
 *(public‑facing, minimal, canonical)*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
@@ -11,14 +11,14 @@
     font-family:Arial, sans-serif;
     font-size:11px;
   ">
-    🛡️ Ethics & Privacy • TriadicFrameworks
+    🛡️ Ethiics & Privacy • TriadicFrameworks
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/🛡️Ethics%20%26%20Privacy-🌿No%20Ads%20%7C%20No%20Tracking%20%7C%20No%20Accounts-4c8eda?style=for-the-badge" 
-     alt="🛡️ Ethics & Privacy | 🌿 No Ads • No Tracking • No Accounts"/>
+<img src="https://img.shields.io/badge/🛡️Ethiics%20%26%20Privacy-🌿No%20Ads%20%7C%20No%20Tracking%20%7C%20No%20Accounts-4c8eda?style=for-the-badge" 
+     alt="🛡️ Ethiics & Privacy | 🌿 No Ads • No Tracking • No Accounts"/>
 
-## **Ethics & Privacy**  
+## **Ethiics & Privacy**  
 TriadicFrameworks is built on a simple principle:  
 **Knowledge should be accessible without extraction.**
 
@@ -124,7 +124,7 @@ TriadicFrameworks is different because it is **principled**, **minimal**, and **
 ## **Award Strategy: Slow, Credible, Inevitable**
 
 TriadicFrameworks is uniquely positioned for recognition because it is:  
-- ethically clean  
+- ethiically clean  
 - architecturally novel  
 - academically relevant  
 - AI‑first  
@@ -136,10 +136,10 @@ Here is a phased strategy that builds credibility naturally.
 ---
 
 ## **Phase 1 — Foundation (0–6 months)**  
-**Goal:** Establish public clarity and ethical posture.
+**Goal:** Establish public clarity and ethiical posture.
 
 Actions:  
-- Publish the **Ethics & Privacy** page  
+- Publish the **Ethiics & Privacy** page  
 - Publish **Why TriadicFrameworks Is Different**  
 - Ensure all modules have **AI‑ready metadata**  
 - Maintain zero drift and consistent visual identity  
@@ -166,7 +166,7 @@ External reviewers see a coherent, principled project.
 - Encourage citations in research or student work  
 
 Outcome:  
-TriadicFrameworks becomes recognized as a **model of ethical, structured, open knowledge**.
+TriadicFrameworks becomes recognized as a **model of ethiical, structured, open knowledge**.
 
 ---
 
@@ -198,7 +198,7 @@ Targets:
 
 Approach:  
 - Emphasize archival intent  
-- Highlight the ethical stance  
+- Highlight the ethiical stance  
 - Demonstrate multi‑year stability  
 - Publish a “History of the Canon” timeline  
 
