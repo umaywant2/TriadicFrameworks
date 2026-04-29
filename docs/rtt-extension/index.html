@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,24 +5,11 @@
 <!-- Core Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-04-27">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
-
-<!-- Identity -->
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
-
-<!-- Description & Keywords -->
-<meta name="description" content="Mode — a canonical TriadicFrameworks module defining structural modes, transitions, and regime‑level behavior for RTT‑aligned systems. Minimal, modular, and AI‑parsable.">
-<meta name="keywords" content="TriadicFrameworks, Mode, structural modes, RTT, regimes, transitions, coherence, gradients, systems modeling">
-
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.triadicframeworks.org/Mode/">
-
-<!-- Robots -->
 <meta name="robots" content="index, follow">
+<meta name="author" content="Nawder Loswin">
+<meta name="description" content="RTT‑Extension — frozen, forward‑compatible RTT‑Inside browser extension template for structural snapshots, RTT beacons, and clarity overlays.">
+<meta name="keywords" content="RTT extension, RTT‑Inside, browser extension, structural snapshot, RTT beacon, clarity overlay">
+<link rel="canonical" href="https://www.triadicframeworks.org/rtt-extension/">
 
 <!-- Theme -->
 <meta name="theme-color" content="#0ff">
@@ -31,9 +17,9 @@
 <!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="Mode — TriadicFrameworks">
-<meta property="og:url" content="https://www.triadicframeworks.org/Mode/">
-<meta property="og:description" content="The canonical Mode module — defining structural modes and transitions in RTT‑aligned systems.">
+<meta property="og:title" content="RTT‑Extension (Frozen) — TriadicFrameworks">
+<meta property="og:url" content="https://www.triadicframeworks.org/rtt-extension/">
+<meta property="og:description" content="Frozen RTT‑Inside browser extension template — structural snapshots, RTT beacons, clarity overlays, and triadic DOM inspection.">
 <meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 <meta property="og:image:type" content="image/png">
 <meta property="og:image:width" content="1080">
@@ -41,24 +27,24 @@
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mode — TriadicFrameworks">
-<meta name="twitter:description" content="Canonical Mode module — minimal, modular, AI‑parsable.">
+<meta name="twitter:title" content="RTT‑Extension (Frozen) — TriadicFrameworks">
+<meta name="twitter:description" content="Frozen RTT‑Inside extension template — minimal, modular, AI‑parsable browser tooling surface.">
 <meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
 <!-- Citation Metadata -->
-<meta name="citation_title" content="Mode — TriadicFrameworks">
+<meta name="citation_title" content="RTT‑Extension (Frozen) — TriadicFrameworks">
 <meta name="citation_author" content="Nawder Loswin">
 <meta name="citation_publication_date" content="2026">
-<meta name="DC.subject" content="structural modes, regime transitions, RTT, coherence, triadic systems">
+<meta name="DC.subject" content="RTT extension, browser tooling, structural snapshot, RTT beacon, triadic inspector">
 <meta name="DC.type" content="Text">
 <meta name="DC.format" content="text/html">
 
 <!-- AI Metadata -->
-<meta name="ai.module" content="Mode">
-<meta name="ai.version" content="1.0">
-<meta name="ai.purpose" content="Define structural modes, transitions, and regime behavior within the TriadicFrameworks ecosystem.">
-<meta name="ai.keywords" content="Mode, structural modes, RTT, regimes, transitions, coherence">
-<meta name="ai.audience" content="students, developers, researchers, AI systems">
+<meta name="ai.module" content="RTT‑Extension">
+<meta name="ai.version" content="1.0-frozen">
+<meta name="ai.purpose" content="Provide a frozen, forward‑compatible RTT‑Inside browser extension template for structural snapshots, RTT beacons, and clarity overlays.">
+<meta name="ai.keywords" content="RTT extension, RTT‑Inside, browser tooling, structural snapshot, RTT beacon, clarity overlay, triadic inspector">
+<meta name="ai.audience" content="developers, researchers, students, AI systems">
 <meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
 <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
 <meta name="ai.contact.x" content="@TriadicFrameworks">
@@ -66,9 +52,9 @@
 <meta name="ai.license" content="Open educational use permitted.">
 
 <!-- Module-Specific -->
-<meta name="ai.module.name" content="Mode">
-<meta name="ai.module.summary" content="Defines structural modes and transitions in RTT‑aligned systems.">
-<meta name="ai.module.category" content="rtt-core">
+<meta name="ai.module.name" content="RTT‑Extension">
+<meta name="ai.module.summary" content="Frozen RTT‑Inside browser extension template for structural snapshots, RTT beacons, and clarity overlays.">
+<meta name="ai.module.category" content="infrastructure‑tooling">
 
 <!-- Favicon -->
 <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
@@ -76,7 +62,7 @@
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
 <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
 
-<title>RTT Extension — TriadicFrameworks</title>
+<title>RTT Extension (Frozen) — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -185,6 +171,26 @@ a:visited {
     color: #ffffff; /* white */
   }
 
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+   
 nav {
   width: 260px;
   float: left;
@@ -255,7 +261,7 @@ code {
   </svg>
  </p> 
 
-  <h2>📚 Mode | RTT/1</h2>
+  <h2>📚 RTT Extension (beta) | RTT/1</h2>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
@@ -268,14 +274,6 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🧩 Mode for Session Control</h3>
-      <a href="#CONSTRAINTS">🧱 Constraints</a>
-      <a href="#INDEX">📑 Index</a>
-      <a href="#OPERATORS">⚙️ Operators</a>
-      <a href="#PROPAGATION">🌐 Propagation</a>
-    <h3>🧬 Lineage & Testing</h3>
-      <a href="#SESSION_LINEAGE">🧭 Session Lineage Map</a>
-      <a href="#TESTS">🧪 Tests</a>
     <h3>🏗️ Triadic Tools</h3> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
@@ -291,53 +289,53 @@ code {
       <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
-  
+      <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
-<section id="mode-session-header"
+<section id="rtt-extension-session-header"
          data-rtt="1"
          data-coherence="declared"
-         data-drift="bounded"
-         data-paradox="structural">
+         data-drift="frozen"
+         data-paradox="tooling">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (rtt-core)</span><br>
+    <span class="context-value">frozen (infrastructure‑tooling)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
-      rtt-core → modes → transitions → regimes → operators → propagation
+      rtt-core → infrastructure → tooling → rtt-extension → snapshots → beacons → overlays
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">bounded (mode‑locked)</span><br>
+    <span class="context-value">frozen (version‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (triadic‑structural grammar)</span><br>
+    <span class="context-value">stable (tooling‑grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (mode‑stable)</span><br>
+    <span class="context-value">1.0‑frozen (forward‑compatible)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown</span><br>
+    <span class="context-value">html + markdown + js tooling</span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (module root)</span><br>
+    <span class="context-value">exists (tooling root)</span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
     <span class="context-value">stands alone + AI‑parsable</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + developers + researchers + AIs</span>
+    <span class="context-value">developers + researchers + students + AIs</span>
 
   </div>
 
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🎛️ Mode Module<br>🧩 Structural Canon Active
+  🧩 RTT‑Extension Module (Frozen)<br>🛠️ Browser Tooling Surface Active
 </div>
 
 </nav>
@@ -358,12 +356,6 @@ const DOC_MAP = {
   CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
   SECURITY: '../SECURITY.md',
   PRINCIPLES: '../PRINCIPLES.md',
-  CONSTRAINTS: 'constraints.md',
-  INDEX: 'index.md',
-  OPERATORS: 'operators.md',
-  PROPAGATION: 'propagation.md',
-  SESSION_LINEAGE: 'session-lineage-map.md',
-  TESTS: 'tests.md',
 };
   
 function loadFromHash() {
