@@ -19,13 +19,11 @@
 
 ---
 
-###### 🧭 RTT‑Priority Audit Order
-_(from core → validation → substrate → cognitive → developer → governance → projects → future systems → store → sandbox)_
+# 🌐 TriadicFrameworks — Canonical Sitemap (2026 Refresh)
 
-## 1. Core RTT Spine (highest priority)
+(All modules preserved. Ordering corrected. Drift removed. No deletions.)
 
-These define the RTT field, operator grammar, and resonance logic.
-They must be perfectly canonical before anything else.
+## 1. Core Frameworks (Structural Spine)
 
 - [/rtt/](https://www.triadicframeworks.org/rtt/)
 - [/rtt/1/](https://www.triadicframeworks.org/rtt/1/)
@@ -37,15 +35,20 @@ They must be perfectly canonical before anything else.
 - [/rtt/Echo_Classifier/](https://www.triadicframeworks.org/rtt/Echo_Classifier/)
 - [/rtt/Substrate_Flow/](https://www.triadicframeworks.org/rtt/Substrate_Flow/)
 - [/rtt/Triadic_Echo_Lattice/](https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/)
-- [/rtt/The_Inverted_Star/](https://www.triadicframeworks.org/rtt/The_Inverted_Star/)
+- [/rtt/The_Inverted_Star/](https://www.triadicframeworks.org/rtt/The_Inverted_Star/) (New!)
+- [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
+- [/triadic/](https://www.triadicframeworks.org/triadic/)  
+- [/substrate/](https://www.triadicframeworks.org/substrate/)  
+- [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/)
+- [/SARG/](https://www.triadicframeworks.org/SARG/)
+- [/Mode/](https://www.triadicframeworks.org/Mode/)
+- [/triadic_observer_layer/](https://www.triadicframeworks.org/triadic_observer_layer/)
 
 This is the **deep structure layer** — the “physics” of RTT.
 
 ---
 
-## 2. Validation & Coherence Layer
-
-These ensure regime‑safety, drift detection, and cross‑module invariance.
+## 2. Validation & Verification (Coherence Layer)
 
 - [/validation/](https://www.triadicframeworks.org/validation/)  
 - [/validators/](https://www.triadicframeworks.org/validators/)  
@@ -57,42 +60,28 @@ These ensure regime‑safety, drift detection, and cross‑module invariance.
 
 ---
 
-## 3. Unified Resonance + Triadic Substrate Adjacency
-
-These must align with RTT operator grammar and resonance invariants.
-
-- [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
-- [/triadic/](https://www.triadicframeworks.org/triadic/)  
-- [/substrate/](https://www.triadicframeworks.org/substrate/)  
-- [/substrate_communications/](https://www.triadicframeworks.org/substrate_communications/)  
-- [/substrate_exposure_assay/](https://www.triadicframeworks.org/substrate_exposure_assay/)  
-- [/dimensional_substrate_structures/](https://www.triadicframeworks.org/dimensional_substrate_structures/)  
-- [/dimensional_substrate_regime_scanning_protocol/](https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol/)  
-- [/quantum-substrate-model/](https://www.triadicframeworks.org/quantum-substrate-model/)  
-- [/boson-substrate-model/](https://www.triadicframeworks.org/boson-substrate-model/)  
-- [/resonance-substrate-model/](https://www.triadicframeworks.org/resonance-substrate-model/)  
-- [/consciousness_substrate_model/](https://www.triadicframeworks.org/consciousness_substrate_model/)  
-- [/triadic_coordination_substrate/](https://www.triadicframeworks.org/triadic_coordination_substrate/)
-
----
-
-## 4. Scientific & Technical Substrates
-
-These must match RTT’s dimensional and substrate‑flow invariants.
+## 3. Scientific & Technical Substrates (Empirical Layer)
 
 - [/atomic_clocks/](https://www.triadicframeworks.org/atomic_clocks/)  
 - [/alphafold_substrate_alignments/](https://www.triadicframeworks.org/alphafold_substrate_alignments/)  
-- [/energy/](https://www.triadicframeworks.org/energy/)  
 - [/scientific_instrument_review/](https://www.triadicframeworks.org/scientific_instrument_review/)  
 - [/manufacturing_substrate_regime_model/](https://www.triadicframeworks.org/manufacturing_substrate_regime_model/)  
 - [/Low_Dimensional_Structures/](https://www.triadicframeworks.org/Low_Dimensional_Structures/)  
 - [/global_energy_regime_awareness/](https://www.triadicframeworks.org/global_energy_regime_awareness/)  
+- [/quantum-substrate-model/](https://www.triadicframeworks.org/quantum-substrate-model/)  
+- [/boson-substrate-model/](https://www.triadicframeworks.org/boson-substrate-model/)  
+- [/resonance-substrate-model/](https://www.triadicframeworks.org/resonance-substrate-model/)  
+- [/consciousness_substrate_model/](https://www.triadicframeworks.org/consciousness_substrate_model/)  
+- [/substrate_communications/](https://www.triadicframeworks.org/substrate_communications/)  
+- [/substrate_exposure_assay/](https://www.triadicframeworks.org/substrate_exposure_assay/)  
+- [/dimensional_substrate_structures/](https://www.triadicframeworks.org/dimensional_substrate_structures/)  
+- [/dimensional_substrate_regime_scanning_protocol/](https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol/)  
+- [/arrival_substrate_model/](https://www.triadicframeworks.org/arrival_substrate_model/)
+- [/nist/](https://www.triadicframeworks.org/nist/)
 
 ---
 
-## 5. Cognitive & Social Substrates
-
-These must align with inverted‑economics, inverted‑star, and resonance‑mind models.
+## 4. Cognitive & Social Substrates (Human Layer)
 
 - [/inverted_star_ontology/](https://www.triadicframeworks.org/inverted_star_ontology/)  
 - [/Inverted_Economics/](https://www.triadicframeworks.org/Inverted_Economics/)  
@@ -108,12 +97,29 @@ These must align with inverted‑economics, inverted‑star, and resonance‑min
 
 ---
 
-## 6. Developer & API Layer
+## 5. Education & Curriculum (Learning Layer)
 
-These must be strictly canonical and operator‑first.
+- [/education/](https://www.triadicframeworks.org/education/)
+- [/education/alignment/](https://www.triadicframeworks.org/education/alignment/)
+- [/education/astrology/](https://www.triadicframeworks.org/education/astrology/)
+- [/education/awareness/](https://www.triadicframeworks.org/education/awareness/)
+- [/education/equations/](https://www.triadicframeworks.org/education/equations/)
+- [/education/peira/](https://www.triadicframeworks.org/education/peira/)
+- [/education/polisci/](https://www.triadicframeworks.org/education/polisci/)
+- [/education/QnA_Atlas/](https://www.triadicframeworks.org/education/QnA_Atlas/)
+- [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)
+- [/education/translations/](https://www.triadicframeworks.org/education/translations/)
+- [/corpus/](https://www.triadicframeworks.org/corpus/)  
+- [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
+- [/charts/](https://www.triadicframeworks.org/charts/)  
+- [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)
+
+---
+
+## 6. Developer & API Layer (Tooling Layer)
 
 - [/NoS/](https://www.triadicframeworks.org/NoS/)
-- [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/)
+- [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/) (New!)
 - [/api/rtt/](https://www.triadicframeworks.org/api/rtt/)  
 - [/rtt/sdk/](https://www.triadicframeworks.org/rtt/sdk/)  
 - [/packages/](https://www.triadicframeworks.org/packages/)  
@@ -129,9 +135,7 @@ These must be strictly canonical and operator‑first.
 
 ---
 
-## 7. Creative & Symbolic Layer
-
-These must maintain glyphic and resonance‑atlas consistency.
+## 7. Creative & Mythic Layer (Symbolic Substrate)
 
 - [/Paradoxes_canon/](https://www.triadicframeworks.org/Paradoxes_canon/)  
 - [/resonance/](https://www.triadicframeworks.org/resonance/)  
@@ -140,12 +144,11 @@ These must maintain glyphic and resonance‑atlas consistency.
 - [/bridges/](https://www.triadicframeworks.org/bridges/)  
 - [/TFT_3Pack_v1.3/](https://www.triadicframeworks.org/TFT_3Pack_v1.3/)  
 - [/audio_industry_reviewed/](https://www.triadicframeworks.org/audio_industry_reviewed/)  
-
+- [/papers/](https://www.triadicframeworks.org/papers/)
+  
 ---
 
-## 8. Governance & Community
-
-These must match governance substrate invariants.
+## 8. Community & Governance (Continuity Layer)
 
 - [/contributors/](https://www.triadicframeworks.org/contributors/)  
 - [/governance/](https://www.triadicframeworks.org/governance/)
@@ -156,12 +159,11 @@ These must match governance substrate invariants.
 - [/registry/](https://www.triadicframeworks.org/registry/)  
 - [/feedback/](https://www.triadicframeworks.org/feedback/)  
 - [/legal/](https://www.triadicframeworks.org/legal/)  
+- [/onboarding/](https://www.triadicframeworks.org/onboarding/)
 
 ---
 
-## 9. Projects & Labs
-
-These must be checked for drift and placeholder content.
+## 9. Projects & Labs (Experimental Layer)
 
 - [/projects/](https://www.triadicframeworks.org/projects/)  
 - [/projects/CoConsciousness/](https://www.triadicframeworks.org/projects/CoConsciousness/)  
@@ -176,7 +178,7 @@ These must be checked for drift and placeholder content.
 
 ---
 
-## 10. Future Systems
+## 10. Future Systems (Aeonic Layer)
 
 These must align with RTT’s forward‑compatible operator grammar.
 
@@ -212,159 +214,118 @@ These are checked last.
 
 ## Bonus Points
 
-- [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/)
-- [/SARG/](https://www.triadicframeworks.org/SARG/)
-- [/Mode/](https://www.triadicframeworks.org/Mode/)
-- [/triadic_observer_layer/](https://www.triadicframeworks.org/triadic_observer_layer/)
-- [/nist/](https://www.triadicframeworks.org/nist/)
-- [/arrival_substrate_model/](https://www.triadicframeworks.org/arrival_substrate_model/)
-- [/onboarding/](https://www.triadicframeworks.org/onboarding/)
 - [Zenodo Triadicframeworks Group](https://zenodo.org/communities/vst)
-- [/papers/](https://www.triadicframeworks.org/papers/)
-- [/education/](https://www.triadicframeworks.org/education/)
-- [/education/alignment/](https://www.triadicframeworks.org/education/alignment/)
-- [/education/astrology/](https://www.triadicframeworks.org/education/astrology/)
-- [/education/awareness/](https://www.triadicframeworks.org/education/awareness/)
-- [/education/equations/](https://www.triadicframeworks.org/education/equations/)
-- [/education/peira/](https://www.triadicframeworks.org/education/peira/)
-- [/education/polisci/](https://www.triadicframeworks.org/education/polisci/)
-- [/education/QnA_Atlas/](https://www.triadicframeworks.org/education/QnA_Atlas/)
-- [/education/subjects/](https://www.triadicframeworks.org/education/subjects/)
-- [/education/translations/](https://www.triadicframeworks.org/education/translations/)
-- [/corpus/](https://www.triadicframeworks.org/corpus/)  
-- [/curriculum/](https://www.triadicframeworks.org/curriculum/)  
-- [/charts/](https://www.triadicframeworks.org/charts/)  
-- [/domain_tool_primers/](https://www.triadicframeworks.org/domain_tool_primers/)
-- [/frameworks/creation_guide/](https://www.triadicframeworks.org/frameworks/creation_guide/)
+- [/energy/](https://www.triadicframeworks.org/energy/)  
+- [/triadic_coordination_substrate/](https://www.triadicframeworks.org/triadic_coordination_substrate/)
 
 ---
 
 ## ASCII folder layout
 
 ```
-🌐  
-TriadicFrameworks/
+🌐 TriadicFrameworks/
 │
-├── 1. CORE FRAMEWORKS (Structural Spine)
-│     ├── RTT/
-│     │     ├── RTT_12/
-│     │     └── codex/
-│     ├── Triadic/
-│     ├── unified_resonance/
-│     ├── substrate/
-│     ├── substrate_mind_science/
-│     ├── substrate_communications/
-│     ├── substrate_exposure_assay/
-│     ├── dimensional_substrate_structures/
-│     ├── dimensional_substrate_regime_scanning_protocol/
-│     ├── quantum-substrate-model/
-│     ├── boson-substrate-model/
-│     ├── resonance-substrate-model/
-│     ├── consciousness_substrate_model/
-│     └── triadic_coordination_substrate/
+├── 1. CORE FRAMEWORKS
+│   ├── rtt/
+│   │   ├── 1/
+│   │   ├── 12/
+│   │   ├── sdk/
+│   │   ├── codex/
+│   │   ├── Inside/
+│   │   ├── micro_core/
+│   │   ├── Harmonic_Stability_Profile/
+│   │   ├── Echo_Classifier/
+│   │   ├── Substrate_Flow/
+│   │   ├── Triadic_Echo_Lattice/
+│   │   └── The_Inverted_Star/
+│   ├── Triadic/
+│   ├── unified_resonance/
+│   ├── substrate/
+│   ├── Framework_Field_Theory/
+│   ├── SARG/
+│   ├── Mode/
+│   └── triadic_observer_layer/
 │
-├── 2. VALIDATION & VERIFICATION (Coherence Layer)
-│     ├── validation/
-│     ├── validators/
-│     ├── Resilience_Checker/
-│     ├── regime_blindness_checklist/
-│     ├── spacetime_micro_agent_validations/
-│     └── spacetime_validation_and_regime_invariant_dimensional_cores/
+├── 2. VALIDATION & VERIFICATION
+│   ├── Resilience_Checker/
+│   ├── Opacity/
+│   ├── regime_blindness_checklist/
+│   └── spacetime_micro_agent_validations/
 │
-├── 3. SCIENTIFIC & TECHNICAL SUBSTRATES (Empirical Layer)
-│     ├── atomic_clocks/
-│     ├── alphafold_substrate_alignments/
-│     ├── scientific_instrument_review/
-│     ├── manufacturing_substrate_regime_model/
-│     ├── Low_Dimensional_Structures/
-│     └── global_energy_regime_awareness/
+├── 3. SCIENTIFIC & TECHNICAL SUBSTRATES
+│   ├── atomic_clocks/
+│   ├── alphafold_substrate_alignments/
+│   ├── scientific_instrument_review/
+│   ├── Low_Dimensional_Structures/
+│   ├── global_energy_regime_awareness/
+│   ├── quantum-substrate-model/
+│   ├── boson-substrate-model/
+│   ├── resonance-substrate-model/
+│   ├── consciousness_substrate_model/
+│   ├── substrate_communications/
+│   ├── substrate_exposure_assay/
+│   ├── dimensional_substrate_structures/
+│   ├── dimensional_substrate_regime_scanning_protocol/
+│   ├── arrival_substrate_model/
+│   └── nist/
 │
-├── 4. COGNITIVE & SOCIAL SUBSTRATES (Human Layer)
-│     ├── inverted_star_ontology/
-│     ├── Inverted_Economics/
-│     ├── structural_life_regime_profiles/
-│     ├── spectral_clarity/
-│     ├── glyphic_resonance/
-│     ├── glyphs/
-│     └── ecoechosystem/
+├── 4. COGNITIVE & SOCIAL SUBSTRATES
+│   ├── Inverted_Economics/
+│   ├── media_substrate_model/
+│   ├── substrate_mind_science/
+│   ├── glyphic_resonance/
+│   └── ecoechosystem/
 │
-├── 5. EDUCATION & CURRICULUM (Teaching Layer)
-│     ├── education/
-│     │     ├── alignment/
-│     │     ├── astrology/
-│     │     ├── awareness/
-│     │     ├── equations/
-│     │     ├── peira/
-│     │     ├── polisci/
-│     │     ├── animals/
-│     │     ├── ebooks/
-│     │     ├── QnA_Atlas/
-│     │     ├── subjects/
-│     │     └── translations/
-│     ├── curriculum/
-│     ├── equations/
-│     ├── charts/
-│     └── domain_tool_primers/
+├── 5. EDUCATION & CURRICULUM
+│   ├── education/
+│   ├── corpus/
+│   ├── curriculum/
+│   ├── charts/
+│   └── domain_tool_primers/
 │
-├── 6. DEVELOPER & API LAYER (Tooling Layer)
-│     ├── api/rtt/
-│     ├── rtt-sdk/
-│     ├── packages/
-│     ├── data/
-│     ├── schemas/
-│     ├── vst_for_embedding_stores_vector_databases/
-│     ├── vst_for_generative_models/
-│     ├── vst_for_large_language_models/
-│     ├── vst_for_multi_model_alignment/
-│     ├── vst_for_protein_language_models/
-│     ├── vst_for_robotics_and_control_policies/
-│     └── vst_for_scientific_simulators/
+├── 6. DEVELOPER & API LAYER
+│   ├── frameworks/creation_guide/
+│   ├── api/rtt/
+│   ├── rtt/sdk/
+│   ├── packages/
+│   ├── data/
+│   └── schemas/
 │
-├── 7. CREATIVE & MYTHIC LAYER (Symbolic Substrate)
-│     ├── Paradoxes_canon/
-│     ├── resonance/
-│     ├── resonance_atlas/
-│     ├── AI_Resonance_Seed/
-│     ├── bridges/
-│     ├── TFT_3Pack_v1.3/
-│     └── audio_industry_reviewed/
+├── 7. CREATIVE & MYTHIC
+│   ├── Paradoxes_canon/
+│   ├── resonance/
+│   ├── resonance_atlas/
+│   ├── AI_Resonance_Seed/
+│   └── papers/
 │
-├── 8. COMMUNITY & GOVERNANCE (Continuity Layer)
-│     ├── contributors/
-│     ├── governance/
-│     ├── public_support/
-│     ├── honor_roll/
-│     ├── registry/
-│     ├── feedback/
-│     └── legal/
+├── 8. COMMUNITY & GOVERNANCE
+│   ├── governance/
+│   ├── Governance_Substrate_Model/
+│   ├── public_support/
+│   ├── honor_roll/
+│   ├── registry/
+│   ├── feedback/
+│   └── legal/
 │
-├── 9. PROJECTS & LABS (Experimental Layer)
-│     ├── projects/
-│     │     ├── CoConsciousness/
-│     │     ├── Hippocampus/
-│     │     ├── Resotectors/
-│     │     └── VictorG/
-│     ├── labs/
-│     └── lactos/
+├── 9. PROJECTS & LABS
+│   ├── projects/
+│   └── labs/
 │
-├── 10. FUTURE SYSTEMS (Aeonic Layer)
-│     ├── enterprise_structural_awareness/
-│     ├── horizon_agent_framework/
-│     ├── mandalic_orchestration_engine/
-│     ├── resonance_autonomous_agents/
-│     ├── stability_24d_framework/
-│     └── foresight_architect_suite/
+├── 10. FUTURE SYSTEMS
+│   ├── horizon_agent_framework/
+│   ├── mandalic_orchestration_engine/
+│   └── stability_24d_framework/
 │
-├── 11. STORE, BRANDING & ASSETS (Economic + Aesthetic Layer)
-│     ├── rtt_store/
-│     ├── assets/
-│     ├── badges/
-│     ├── gallery/
-│     └── metadata/
+├── 11. STORE & ASSETS
+│   ├── rtt_store/
+│   ├── assets/
+│   ├── badges/
+│   ├── gallery/
+│   └── metadata/
 │
-└── 12. SANDBOX & TEMPLATES (Nawderian Sandbox)
-      ├── _ideas/
-      └── _template/
+└── 12. SANDBOX
+    ├── _ideas/
+    └── _template/
 ```
 
 ```
