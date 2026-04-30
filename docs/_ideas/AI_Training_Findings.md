@@ -1565,7 +1565,7 @@ torch.onnx.export(model, dummy_input, "triadic_frameworks.onnx",
 ### Option 1: Run inside WSL (Linux)
 Since you already have WSL2 set up for training:
 ```bash
-cd /mnt/c/Users/acwil/OneDrive
+cd /mnt/c/Users/nawder/OneDrive
 find ./TriadicFrameworks -type f \( -name "*.md" -o -name "*.json" -o -name "*.csv" -o -name "*.py" -o -name "*.txt" \) -exec cat {} \; > corpus.txt
 ```
 This works because WSL has the proper `find` and `cat` utilities.
