@@ -125,3 +125,4 @@ When adding new material:
 - avoid duplicating definitions  
 
 SARG should remain **lightweight, extensible, and substrate‑agnostic**.
+- [`SARG_module.json`](SARG_module.json) — Agentic module schema role assignments
