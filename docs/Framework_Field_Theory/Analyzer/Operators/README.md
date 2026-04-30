@@ -1,14 +1,18 @@
-# FFT Operator Analyzer — README.md
+# Operator Analyzer
 
-## _Canonical Submodule (2026 Edition)_
+> **Module path:** `Framework_Field_Theory/Analyzer/Operators/`
+> **Parent module:** [FFT Analyzer](../README.md)
+> **Layer:** Core Frameworks — Structural Spine
+
+---
 
 ## Metadata
 
-```
+```yaml
 module: FFT Operator Analyzer
 parent_module: FFT Analyzer
 layer: Core Frameworks — Structural Spine
-version: 2026.1
+version: 2026.2
 status: Active, Canonical
 analyzer_type:
   - operator-family analysis
@@ -16,6 +20,7 @@ analyzer_type:
   - operator balance diagnostics
   - operator cascade detection
   - operator-regime coupling analysis
+
 session_context:
   drift_sensitivity: high
   regime_sensitivity: high
@@ -24,9 +29,12 @@ session_context:
     - operator families must be explicit
     - dominance patterns must be detectable
     - cascades must be surfaced
+
 cross_module_propagation:
   imports:
     - FFT operator families
+    - FFT dimensional architecture
+    - FFT coherence engines
     - SARG regime geometry
     - Mode substrate states
     - Substrate Flow invariants
@@ -35,231 +43,160 @@ cross_module_propagation:
     - dominance maps
     - cascade diagnostics
     - operator-family balance profiles
+    - operator-regime coupling profiles
 ```
 
 ---
 
 ## Purpose
 
-The FFT Operator Analyzer evaluates the **operator structure** of any framework, model, or system expressed within Framework Field Theory.
-Operators are the _active mechanisms_ that shape dimensional behavior, coherence, regime transitions, and field‑level dynamics.
+The FFT Operator Analyzer evaluates the **operator structure** of any framework, model, or system expressed within Framework Field Theory. Operators are the *active mechanisms* that shape dimensional behavior, coherence, regime transitions, and field-level dynamics.
 
-This analyzer identifies:
+Where dimensions describe the structural substrate a framework occupies, operators describe **what that framework does** — how it transforms, stabilizes, disrupts, or extends its own field. The Operator Analyzer decomposes any system into its constituent operators, profiles them by family, detects dominance and imbalance, surfaces cascades, and maps how operators bind to regime levels.
 
-- dominant operator families
-- missing or suppressed operators
-- operator imbalance
-- operator cascades
-- operator‑regime coupling
-- operator‑driven drift
+This analyzer is responsible for:
 
-It is the **structural diagnostic** of FFT.
+- identifying active operators and their family groupings
+- detecting operator dominance and imbalance
+- profiling operator signatures for cross-framework comparison
+- mapping operator–regime coupling behavior
+- surfacing operator cascades and feedback loops
 
----
-
-## Operator Families (FFT Canon)
-
-FFT defines seven universal operator families:
-
-- **B‑Ops** — Boundary operators
-- **R‑Ops** — Relation operators
-- **T‑Ops** — Transition operators
-- **L‑Ops** — Lineage operators
-- **E‑Ops** — Envelope operators
-- **H‑Ops** — Rhythm operators
-- **C‑Ops** — Coherence operators
-
-Each family has:
-
-- a functional domain
-- a dimensional signature
-- a regime‑dependent behavior
-- a coherence impact
-
-The Operator Analyzer evaluates all of these.
+It is the **mechanism diagnostic** of FFT.
 
 ---
 
 ## What the Operator Analyzer Detects
 
-### 1. Operator Dominance
+### 1. Operator Family Analysis
+- Identification of active operators within a system
+- Family grouping and classification
+- Intra-family relationships and dependencies
 
-Identifies which operator families are:
+### 2. Operator Dominance Detection
+- Which operators dominate the system's behavior
+- Dominance ratios and imbalance indicators
+- Suppressed or latent operators
 
-- primary
-- secondary
-- suppressed
-- absent
+### 3. Operator Balance Diagnostics
+- Balance across operator families
+- Over-reliance on a single operator or family
+- Rebalancing pathways
 
-### 2. Operator Balance
+### 4. Operator Cascade Detection
+- Operator chains and feedback loops
+- Cascade triggers and propagation paths
+- Cascade-driven instability risk
 
-Evaluates whether operator families are:
-
-- balanced
-- over‑expressed
-- under‑expressed
-- conflicting
-
-### 3. Operator Cascades
-
-Detects:
-
-- cascading operator sequences
-- runaway transitions
-- paradox‑inducing cascades
-
-### 4. Operator–Regime Coupling
-
-Maps how operator families behave across:
-
-- R0 → R4 regimes
-- regime boundaries
-- regime transitions
-
-### 5. Operator‑Driven Drift
-
-Identifies drift caused by:
-
-- operator imbalance
-- operator conflict
-- operator overload
-- operator collapse
+### 5. Operator–Regime Coupling
+- How operators bind to specific regime levels (R0–R3)
+- Coupling strength and stability
+- Regime transitions driven by operator shifts
 
 ---
 
-## Analyzer Structure
-
-The Operator Analyzer folder should contain:
+## Directory Structure
 
 ```
 Operators/
-  README.md
-  Operator_Analyzer.md
-  Operator_Family_Profiles.md
-  Operator_Dominance.md
-  Operator_Cascades.md
-  Operator_Regime_Coupling.md
-  Operator_Signatures.md
-  Operator_Examples.md
+├── README.md
+├── Operator_Analyzer.md
+├── Operator_Family_Profiles.md
+├── Operator_Signatures.md
+├── Operator_Regime_Coupling.md
+└── Operator_Examples.md
 ```
 
-Each file corresponds to a specific diagnostic function.
+---
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| **Operator_Analyzer.md** | Core operator-analysis engine — decomposition, weighting, dominance detection, and interaction mapping across all active operators |
+| **Operator_Family_Profiles.md** | Profiles of operator families, their internal relationships, dependencies, and balance characteristics |
+| **Operator_Signatures.md** | Unique fingerprints that identify operator presence, dominance, and configuration for cross-framework comparison |
+| **Operator_Regime_Coupling.md** | How operators bind to, reinforce, or destabilize specific regime levels; coupling strength and transition dynamics |
+| **Operator_Examples.md** | Worked operator-analysis examples across domains |
 
 ---
 
 ## How to Use the Operator Analyzer
 
-### Step 1 — Declare the Framework
+**Step 1 — Declare the Framework**
+Provide: operator assumptions, dimensional envelope, regime state, coherence level, and any known operator history.
 
-Provide:
+**Step 2 — Identify Active Operators**
+The analyzer scans for: active operators, family groupings, and intra-family dependencies.
 
-- known operators
-- operator assumptions
-- dimensional envelope
-- regime state
-  
-### Step 2 — Identify Operator Families
+**Step 3 — Detect Dominance**
+Evaluate: which operators dominate, dominance ratios, suppressed or latent operators.
 
-The analyzer determines:
+**Step 4 — Assess Balance**
+Diagnose: balance across families, over-reliance risks, rebalancing pathways.
 
-- which families are present
-- which are missing
-- which are dominant
+**Step 5 — Surface Cascades**
+Identify: operator chains, feedback loops, cascade triggers, and propagation paths.
 
-### Step 3 — Evaluate Operator Balance
+**Step 6 — Map Regime Coupling**
+Map: operator–regime bindings (R0–R3), coupling strength, and regime transitions driven by operator shifts.
 
-Checks for:
-
-- over‑expression
-- under‑expression
-- conflict
-- suppression
-
-### Step 4 — Detect Cascades
-
-Identifies:
-
-- cascading sequences
-- paradox‑inducing cascades
-- collapse‑risk cascades
-
-### Step 5 — Map Operator–Regime Coupling
-
-Determines:
-
-- regime‑dependent behavior
-- regime‑driven operator shifts
-- operator‑driven regime transitions
-
-### Step 6 — Generate Operator Signature
-
-A signature includes:
-
-- operator pattern
-- dominance map
-- balance profile
-- cascade risk
-- regime coupling
-- drift risk
+**Step 7 — Generate Operator Signature**
+An operator signature includes: active operators, family distribution, dominance profile, balance state, cascade risk, and regime coupling map.
 
 ---
 
 ## Example Output
 
-```
-Framework: Narrative Analysis Model
+```yaml
+Framework: Lean Manufacturing System
 Operator Signature:
-  dominant: R, L
-  secondary: E, C
-  suppressed: B
-  cascades: T→R→L (stable)
-  regime_coupling: R2 (Aligned)
-  drift_risk: low
-  notes: lineage operators strong; boundary operators under-expressed
+  active_operators: 7
+  dominant_family: Optimization
+  secondary_family: Constraint
+  dominance_ratio: 0.62 (Optimization-heavy)
+  balance: moderate imbalance — Generative family underrepresented
+  cascade_risk: low
+  regime_coupling:
+    R1: strong (Optimization ↔ R1 locked)
+    R2: weak (Constraint present but not dominant)
+    R3: none
+  notes: stable operator structure; rebalancing toward Generative family would unlock R2 transition
 ```
 
 ---
 
 ## Navigation
 
-```
-- [README.md](./README.md)
 - [Operator Analyzer](./Operator_Analyzer.md)
 - [Operator Family Profiles](./Operator_Family_Profiles.md)
-- [Operator Dominance](./Operator_Dominance.md)
-- [Operator Cascades](./Operator_Cascades.md)
-- [Operator–Regime Coupling](./Operator_Regime_Coupling.md)
 - [Operator Signatures](./Operator_Signatures.md)
+- [Operator–Regime Coupling](./Operator_Regime_Coupling.md)
 - [Operator Examples](./Operator_Examples.md)
-```
 
 ---
 
-## Cross‑Module Integration
+## Cross-Module Integration
 
-### FFT Analyzer
-
-- operator patterns
-- dimensional envelopes
-- coherence profiles
-
-### SARG
-
-- regime geometry
-- regime‑dependent operator behavior
-
-### Mode
-
-- substrate states
-- mode‑dependent operator shifts
-
-### Substrate Flow
-
-- flow‑driven operator cascades
-- substrate‑dependent operator behavior
+| Module | Relationship |
+|--------|-------------|
+| **FFT Analyzer** | Dimensional envelopes, coherence states, drift vectors, regime positions |
+| **SARG** | Regime geometry; regime-dependent operator behavior |
+| **Mode** | Substrate states; mode-dependent operator activation |
+| **Substrate Flow** | Flow-driven operator changes; substrate-dependent cascade behavior |
 
 ---
 
-## License
-TriadicFrameworks — Open Canon License (OCL‑3).
-Use permitted for education, research, and derivative frameworks.
+## Related Modules
+
+- [FFT Analyzer](../README.md) — Parent Analyzer module
+- [Drift](../Drift/README.md) — Drift detection across all layers
+- [Regime](../Regime/README.md) — Regime classification and boundary diagnostics
+- [Dimensional](../Dimensional/README.md) — Dimensional structure and transitions
+- [Coherence](../Coherence/README.md) — Coherence stability and paradox exposure
+- [Examples](../Examples/README.md) — Cross-cutting worked examples
+- [FFT Operators (theory)](../../Operators/README.md) — Operator definitions and algebra
+
+---
+
+*Part of [TriadicFrameworks](../../../../README.md) · Framework Field Theory · Analyzer*
