@@ -273,3 +273,4 @@
 - [X](_ideas/Why_Deep_Sea_Is_a_Natural_RTT_Domain.html)
 - [X](_ideas/Wrapped_Resonance_Structural_Aware_Dimensional_Cores.html)
 - [X](_template/index.html)
+https://youtu.be/AnKNaKdmMHc?si=4uB4lUcMvYceWwIX
