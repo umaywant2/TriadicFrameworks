@@ -28,6 +28,7 @@ Two implementations are provided:
 
 - `wrsadc_core.py` — Python core
 - `wrsadc_shell.sh` — shell-friendly logger
+- [`wrsadc_module.json`](wrsadc_module.json) — Module schema role assignments
 
 Designed to integrate seamlessly with TFT primitives.
 
