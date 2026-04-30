@@ -14,8 +14,8 @@ Each submodule targets a distinct diagnostic layer. Together they form a complet
 ```
 Analyzer/
 ├── README.md
-module.schema.json
-
+├── module.schema.json
+├── FFT_analyzer-module.json
 ├── Drift/
 │   ├── Drift_Analyzer.md
 │   ├── Drift_Cases.md
@@ -157,6 +157,8 @@ Operators ──► Dimensional ──► Regime ──► Coherence
 - [`Dimensionality/`](../Dimensionality/README.md) — Dimensional theory and structure
 - [`Coherence/`](../Coherence/README.md) — Coherence theory and measurement
 - [`Paradox/`](../Paradox/README.md) — Paradox taxonomy and resolution
+- [`module.schema.json`](./module.schema.json)
+- [`FFT_analyzer-module.json`](./FFT_analyzer-module.json)
 
 ---
 
