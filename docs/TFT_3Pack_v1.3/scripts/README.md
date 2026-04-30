@@ -27,3 +27,4 @@ Example:
 Notes
 
 These scripts are intentionally lightweight and transparent so students can inspect how resonance‑time, triadic operators, and TFT constants are processed.
+- [`scripts_module.json`](scripts_module.json) — Agentic module schema role assignments
