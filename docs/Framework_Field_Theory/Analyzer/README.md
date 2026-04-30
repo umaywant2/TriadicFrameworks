@@ -1,225 +1,161 @@
-# **FFT Analyzer — README.md**  
-### *Canonical Analyzer Module (2026 Edition)*
+# Analyzer
+
+> **Module path:** `Framework_Field_Theory/Analyzer/`
+> **Role:** Diagnostic engine of Framework Field Theory
+
+The Analyzer module provides the full diagnostic toolkit for Framework Field Theory (FFT). It decomposes any framework, system, or domain into its constituent operators, dimensional structure, regime alignment, drift behavior, and coherence profile — then surfaces contradictions, blind spots, and collapse risks that static analysis cannot reach.
+
+Each submodule targets a distinct diagnostic layer. Together they form a complete analysis pipeline: from individual operator signatures through regime-level mapping to whole-system coherence assessment.
 
 ---
 
-## **Metadata**
-```
-module: FFT Analyzer
-parent_module: Framework Field Theory (FFT)
-layer: Core Frameworks — Structural Spine
-version: 2026.1
-status: Active, Canonical
-analyzer_type:
-  - field-level analysis
-  - operator-family analysis
-  - dimensional analysis
-  - regime analysis
-  - drift analysis
-session_context:
-  drift_sensitivity: high
-  regime_sensitivity: very_high
-  dimensional_envelope: D0–D7
-  coherence_requirements:
-    - operator grammar must be declared
-    - dimensional transitions must be explicit
-    - regime state must be known or inferred
-cross_module_propagation:
-  imports:
-    - RTT resonance logic
-    - SARG regime geometry
-    - Mode substrate states
-    - Substrate Flow invariants
-  exports:
-    - FFT signatures
-    - dimensional diagnostics
-    - operator-family diagnostics
-    - drift maps
-    - regime maps
-```
-
----
-
-## **Purpose**
-The FFT Analyzer is the **primary diagnostic tool** for Framework Field Theory.  
-It evaluates frameworks, systems, or models as **field objects**, using FFT’s:
-
-- operator grammar  
-- dimensional layers  
-- coherence engines  
-- regime geometry  
-- drift behavior  
-- field‑flow dynamics  
-
-Where NIST analyzes *domains*, the FFT Analyzer analyzes **fields**.
-
----
-
-## **What the FFT Analyzer Does**
-### **1. Reads a Framework’s Signature**
-- operator pattern  
-- dimensional envelope  
-- coherence profile  
-- regime state  
-- lineage pattern  
-
-### **2. Detects Drift**
-- undeclared substrate drift  
-- operator‑family imbalance  
-- dimensional collapse  
-- paradox‑induced drift  
-- observer‑style drift  
-
-### **3. Maps Regime Geometry**
-- R0 → R4 transitions  
-- regime boundaries  
-- regime‑dependent operator dominance  
-
-### **4. Evaluates Coherence**
-- coherence envelope  
-- paradox resilience  
-- harmonic stability  
-- field‑flow coupling  
-
-### **5. Produces Field‑Level Diagnostics**
-- drift maps  
-- regime maps  
-- operator‑family charts  
-- dimensional compatibility tables  
-- coherence stability curves  
-
----
-
-## **Analyzer Structure**
-The Analyzer folder should contain the following submodules:
+## Directory Structure
 
 ```
 Analyzer/
-  README.md
-  Drift/
-    Drift_Analyzer.md
-    Drift_Cases.md
-  Regime/
-    Regime_Analyzer.md
-    Regime_Maps.md
-  Operators/
-    Operator_Analyzer.md
-    Operator_Family_Profiles.md
-  Dimensional/
-    Dimensional_Analyzer.md
-    Dimensional_Compatibility.md
-  Coherence/
-    Coherence_Analyzer.md
-    Coherence_Stability.md
-  Examples/
-    Example_Analyses.md
-    Example_Signatures.md
-```
-
-Each submodule corresponds to a major FFT diagnostic domain.
-
----
-
-## **How to Use the FFT Analyzer**
-### **Step 1 — Declare the Framework**
-Provide:
-- name  
-- purpose  
-- operator pattern (if known)  
-- dimensional assumptions  
-- regime state (if known)  
-
-### **Step 2 — Run Operator Analysis**
-The analyzer identifies:
-- dominant operator families  
-- missing operators  
-- conflicting operators  
-- operator cascades  
-
-### **Step 3 — Run Dimensional Analysis**
-The analyzer determines:
-- dimensional envelope  
-- compatibility  
-- translation requirements  
-- collapse risks  
-
-### **Step 4 — Run Regime Analysis**
-The analyzer maps:
-- current regime  
-- regime transitions  
-- regime boundaries  
-- regime‑dependent operator dominance  
-
-### **Step 5 — Run Drift Analysis**
-The analyzer detects:
-- drift branching  
-- collapse vectors  
-- paradox‑induced drift  
-- observer‑style drift  
-
-### **Step 6 — Generate Field Signature**
-The final output is a **Framework Field Signature**, which includes:
-- operator pattern  
-- dimensional envelope  
-- coherence profile  
-- regime state  
-- drift risk  
-- lineage pattern  
-
----
-
-## **Example Output**
-```
-Framework: Systems Thinking
-Signature:
-  operators: R, T, E dominant
-  dimensional_envelope: 3D → 4D
-  regime_state: R2 (Aligned)
-  coherence_profile: stable
-  drift_risk: moderate (paradox exposure)
-  lineage: ecological → systemic → triadic-compatible
+├── README.md
+├── Drift/
+│   ├── Drift_Analyzer.md
+│   ├── Drift_Cases.md
+│   └── Paradox_Drift.md
+├── Regime/
+│   ├── Regime_Analyzer.md
+│   ├── Regime_Maps.md
+│   ├── Regime_Drift.md
+│   ├── Regime_Contradictions.md
+│   ├── Regime_Boundaries.md
+│   ├── Regime_Examples.md
+│   ├── Blindness_Checks.md
+│   └── Boundary_Diagnostics.md
+├── Operators/
+│   ├── Operator_Analyzer.md
+│   ├── Operator_Family_Profiles.md
+│   ├── Operator_Signatures.md
+│   ├── Operator_Regime_Coupling.md
+│   └── Operator_Examples.md
+├── Dimensional/
+│   ├── Dimensional_Analyzer.md
+│   ├── Dimensional_Compatibility.md
+│   ├── Dimensional_Signatures.md
+│   ├── MetaDimensional_Extensions.md
+│   ├── Dimensional_Transitions.md
+│   ├── Dimensional_Collapse.md
+│   └── Dimensional_Examples.md
+├── Coherence/
+│   ├── Coherence_Analyzer.md
+│   ├── Coherence_Stability.md
+│   ├── Paradox_Exposure.md
+│   └── Coherence_Examples.md
+└── Examples/
+    ├── Example_Analyses.md
+    └── Example_Signatures.md
 ```
 
 ---
 
-## **Navigation**
-```
-- [README.md](./README.md)
-- [Drift Analyzer](./Drift/Drift_Analyzer.md)
-- [Regime Analyzer](./Regime/Regime_Analyzer.md)
-- [Operator Analyzer](./Operators/Operator_Analyzer.md)
-- [Dimensional Analyzer](./Dimensional/Dimensional_Analyzer.md)
-- [Coherence Analyzer](./Coherence/Coherence_Analyzer.md)
-- [Example Analyses](./Examples/Example_Analyses.md)
-```
+## Submodules
+
+### Drift
+
+Detects and characterizes how frameworks evolve, wander, or decay over time.
+
+| File | Purpose |
+|------|---------|
+| **Drift_Analyzer.md** | Core drift-detection engine — identifies directional shift, velocity, and decay patterns |
+| **Drift_Cases.md** | Catalogued drift scenarios with diagnostic walkthroughs |
+| **Paradox_Drift.md** | Drift behavior specific to paradox-bearing structures |
+
+### Regime
+
+Maps systems to regime levels (R0–R3) and diagnoses boundary integrity, contradictions, and blind spots.
+
+| File | Purpose |
+|------|---------|
+| **Regime_Analyzer.md** | Core regime-classification engine — assigns and validates R0–R3 alignment |
+| **Regime_Maps.md** | Visual and structural regime maps across domains |
+| **Regime_Drift.md** | Tracks how regime assignments shift under perturbation or reframing |
+| **Regime_Contradictions.md** | Surfaces contradictions between stated and enacted regime positions |
+| **Regime_Boundaries.md** | Defines and tests the edges between adjacent regime levels |
+| **Regime_Examples.md** | Worked regime-analysis examples across domains |
+| **Blindness_Checks.md** | Diagnostic routines for uncovering regime-level blind spots |
+| **Boundary_Diagnostics.md** | Stress-tests regime boundaries for leakage, overlap, and collapse |
+
+### Operators
+
+Profiles individual operators, their family groupings, signatures, and regime coupling behavior.
+
+| File | Purpose |
+|------|---------|
+| **Operator_Analyzer.md** | Core operator-analysis engine — decomposition, weighting, and interaction mapping |
+| **Operator_Family_Profiles.md** | Profiles of operator families and their internal relationships |
+| **Operator_Signatures.md** | Unique fingerprints that identify operator presence and dominance |
+| **Operator_Regime_Coupling.md** | How operators bind to, reinforce, or destabilize specific regime levels |
+| **Operator_Examples.md** | Worked operator-analysis examples across domains |
+
+### Dimensional
+
+Analyzes dimensional structure, compatibility, transitions, collapse risks, and meta-dimensional extensions.
+
+| File | Purpose |
+|------|---------|
+| **Dimensional_Analyzer.md** | Core dimensional-analysis engine — counts, classifies, and validates dimensional structure |
+| **Dimensional_Compatibility.md** | Tests whether dimensional structures across systems can interoperate |
+| **Dimensional_Signatures.md** | Unique dimensional fingerprints for system identification and comparison |
+| **MetaDimensional_Extensions.md** | Higher-order dimensional constructs that emerge from base-layer interactions |
+| **Dimensional_Transitions.md** | How systems move between dimensional states under transformation |
+| **Dimensional_Collapse.md** | Conditions and diagnostics for dimensional reduction or failure |
+| **Dimensional_Examples.md** | Worked dimensional-analysis examples across domains |
+
+### Coherence
+
+Assesses whole-system coherence, stability under stress, and paradox exposure.
+
+| File | Purpose |
+|------|---------|
+| **Coherence_Analyzer.md** | Core coherence-assessment engine — measures internal alignment and structural integrity |
+| **Coherence_Stability.md** | Stability analysis under perturbation, scaling, and reframing |
+| **Paradox_Exposure.md** | Identifies and quantifies a system's vulnerability to paradox |
+| **Coherence_Examples.md** | Worked coherence-analysis examples across domains |
+
+### Examples
+
+Cross-cutting worked examples that demonstrate the full Analyzer pipeline in action.
+
+| File | Purpose |
+|------|---------|
+| **Example_Analyses.md** | End-to-end analysis walkthroughs spanning multiple submodules |
+| **Example_Signatures.md** | Composite signature profiles drawn from complete analyses |
 
 ---
 
-## **Cross‑Module Integration**
-The FFT Analyzer is designed to work with:
+## How the Submodules Connect
 
-### **RTT**
-- resonance logic  
-- harmonic stability  
-- echo‑based diagnostics  
+```
+Operators ──► Dimensional ──► Regime ──► Coherence
+    │              │              │           │
+    └──── Drift detection spans all layers ───┘
+                       │
+                   Examples
+              (cross-cutting demos)
+```
 
-### **SARG**
-- regime geometry  
-- regime transitions  
-- regime‑blindness detection  
-
-### **Mode**
-- substrate states  
-- mode transitions  
-- mode‑dependent drift  
-
-### **Substrate Flow**
-- field‑flow coupling  
-- substrate transitions  
-- flow‑based coherence  
+1. **Operators** are identified and profiled first — they are the atomic units.
+2. **Dimensional** analysis maps the space those operators inhabit.
+3. **Regime** classification positions the system within R0–R3.
+4. **Coherence** evaluates whether the whole structure holds together.
+5. **Drift** monitors change across every layer over time.
+6. **Examples** demonstrate the full pipeline end-to-end.
 
 ---
 
-## **License**
-TriadicFrameworks — Open Canon License (OCL‑3).  
-Use permitted for education, research, and derivative frameworks.
+## Related Modules
+
+- [`Framework_Field_Theory/`](../README.md) — Parent module and FFT overview
+- [`Operators/`](../Operators/README.md) — Operator definitions and algebra
+- [`Dimensionality/`](../Dimensionality/README.md) — Dimensional theory and structure
+- [`Coherence/`](../Coherence/README.md) — Coherence theory and measurement
+- [`Paradox/`](../Paradox/README.md) — Paradox taxonomy and resolution
+
+---
+
+*Part of [TriadicFrameworks](../../../README.md) · Framework Field Theory*
