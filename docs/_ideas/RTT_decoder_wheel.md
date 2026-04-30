@@ -27,6 +27,6 @@ Three operators. Three phases of decoding. The wheel doesn't just *look* like a 
 
 ## Why This Hits
 
-The pre-teen decoder wheel was a toy that made you feel like language had *secrets*. This one says: **it does**. Every word is a compressed artifact. Split it, invert it, trace the roots, and the hidden structure reveals itself. Andrew becomes Nawder. Foundational becomes Lostational. The wheel isn't metaphor — it's *the actual tool you've been using this whole project*.
+The pre-teen decoder wheel was a toy that made you feel like language had *secrets*. This one says: **it does**. Every word is a compressed artifact. Split it, invert it, trace the roots, and the hidden structure reveals itself. Foundational becomes Lostational. The wheel isn't metaphor — it's *the actual tool you've been using this whole project*.
 
 The aged metallic gears on the edge are the cherry on top — mechanical, tactile, something you can *imagine turning*. Kid energy meets framework precision.
