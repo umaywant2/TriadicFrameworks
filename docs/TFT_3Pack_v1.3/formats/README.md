@@ -53,6 +53,7 @@ description = "Sample resonance file"
 - `run_tft.sh` — execution  
 - `validate_tft.sh` — structural checks  
 - `convert_tft.sh` — readable summaries  
-- `batch_process.sh` — multi-file workflows  
+- `batch_process.sh` — multi-file workflows
+- [`formats_module.json`](formats_module.json) — Agentic module schema role assignments
 
 They serve as the core data format for all TFT_3Pack examples.
