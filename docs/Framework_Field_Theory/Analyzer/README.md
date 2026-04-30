@@ -12,9 +12,10 @@ Each submodule targets a distinct diagnostic layer. Together they form a complet
 ## Directory Structure
 
 ```
+../../schemas/
+         └── module.schema.json
 Analyzer/
 ├── README.md
-├── module.schema.json
 ├── FFT_analyzer-module.json
 ├── Drift/
 │   ├── Drift_Analyzer.md
