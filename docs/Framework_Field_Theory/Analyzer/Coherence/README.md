@@ -1,23 +1,24 @@
-# FFT Coherence Analyzer — README.md
+# Coherence Analyzer
 
-### _Canonical Submodule (2026 Edition)_
+> **Module path:** `Framework_Field_Theory/Analyzer/Coherence/`
+> **Parent module:** [FFT Analyzer](../README.md)
+> **Layer:** Core Frameworks — Structural Spine
 
 ---
 
 ## Metadata
 
-```
+```yaml
 module: FFT Coherence Analyzer
 parent_module: FFT Analyzer
 layer: Core Frameworks — Structural Spine
-version: 2026.1
+version: 2026.2
 status: Active, Canonical
 analyzer_type:
   - coherence envelope analysis
   - harmonic stability diagnostics
   - paradox exposure detection
-  - coherence drift mapping
-  - field-locking evaluation
+
 session_context:
   drift_sensitivity: high
   regime_sensitivity: high
@@ -26,6 +27,7 @@ session_context:
     - coherence envelope must be declared or inferred
     - harmonic stability must be measurable
     - paradox exposure must be surfaced
+
 cross_module_propagation:
   imports:
     - FFT coherence engines
@@ -37,24 +39,21 @@ cross_module_propagation:
     - coherence signatures
     - stability curves
     - paradox maps
-    - coherence drift diagnostics
 ```
 
 ---
 
 ## Purpose
 
-The FFT Coherence Analyzer evaluates the **coherence envelope** of any framework, model, or system expressed within Framework Field Theory.
-Coherence determines whether a framework is stable, resonant, paradox‑resilient, and capable of dimensional or regime transitions.
+The FFT Coherence Analyzer evaluates the **coherence envelope** of any framework, model, or system expressed within Framework Field Theory. Coherence determines whether a framework is stable, resonant, paradox-resilient, and capable of dimensional or regime transitions.
 
 This analyzer identifies:
 
 - coherence stability
 - harmonic behavior
 - paradox exposure
-- coherence drift
-- field‑locking potential
-- operator‑coherence coupling
+- field-locking potential
+- operator–coherence coupling
 
 It is the **stability diagnostic** of FFT.
 
@@ -62,145 +61,86 @@ It is the **stability diagnostic** of FFT.
 
 ## Coherence Model (C0–C4)
 
-**C0 — Baseline**  
-Minimal coherence; unstable; drift likely.  
-
-**C1 — Stabilized**  
-Basic coherence achieved; low paradox resilience.  
-
-**C2 — Harmonic**  
-Harmonic patterns present; resonance forming.  
-
-**C3 — Resonant**  
-Strong coherence; stable resonance; low drift.  
-
-**C4 — Field‑Locked**  
-Maximum coherence; dimensional and regime transitions smooth.  
+| Level | Name | Description |
+|-------|------|-------------|
+| **C0** | Baseline | Minimal coherence; unstable; drift likely |
+| **C1** | Stabilized | Basic coherence achieved; low paradox resilience |
+| **C2** | Harmonic | Harmonic patterns present; resonance forming |
+| **C3** | Resonant | Strong coherence; stable resonance; low drift |
+| **C4** | Field-Locked | Maximum coherence; dimensional and regime transitions smooth |
 
 ---
 
 ## What the Coherence Analyzer Detects
 
 ### 1. Coherence Envelope
-
-Determines:
-
-- current coherence level (C0–C4)
-- envelope stability
-- envelope boundaries
+- Current coherence level (C0–C4)
+- Envelope stability
+- Envelope boundaries
 
 ### 2. Harmonic Stability
-
-Evaluates:
-
-- harmonic patterns
-- resonance formation
-- harmonic collapse risk
+- Harmonic patterns
+- Resonance formation
+- Harmonic collapse risk
 
 ### 3. Paradox Exposure
+- Paradox density
+- Paradox vectors
+- Paradox-induced drift
 
-Identifies:
-
-- paradox density
-- paradox vectors
-- paradox‑induced drift
-
-### 4. Coherence Drift
-
-Detects:
-
-- weakening coherence
-- operator‑driven coherence loss
-- regime‑driven coherence instability
-
-### 5. Field‑Locking Potential
-
-Determines whether the framework can:
-
-- stabilize
-- resonate
-- lock into field‑level coherence
+### 4. Field-Locking Potential
+- Can the framework stabilize?
+- Can it resonate?
+- Can it lock into field-level coherence?
 
 ---
 
-## Analyzer Structure
-
-The Coherence Analyzer folder should contain:
+## Directory Structure
 
 ```
 Coherence/
-  README.md
-  Coherence_Analyzer.md
-  Coherence_Stability.md
-  Coherence_Drift.md
-  Paradox_Exposure.md
-  Harmonic_Profiles.md
-  Coherence_Signatures.md
-  Examples.md
+├── README.md
+├── Coherence_Analyzer.md
+├── Coherence_Stability.md
+├── Paradox_Exposure.md
+└── Coherence_Examples.md
 ```
 
-Each file corresponds to a specific diagnostic function.
+---
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| **Coherence_Analyzer.md** | Core coherence-assessment engine — measures internal alignment, envelope state (C0–C4), and structural integrity |
+| **Coherence_Stability.md** | Stability analysis under perturbation, scaling, and reframing; harmonic patterns and collapse risk |
+| **Paradox_Exposure.md** | Identifies and quantifies a system's vulnerability to paradox; maps paradox density and vectors |
+| **Coherence_Examples.md** | Worked coherence-analysis examples across domains |
 
 ---
 
 ## How to Use the Coherence Analyzer
 
-### Step 1 — Declare the Framework
+**Step 1 — Declare the Framework**
+Provide: coherence assumptions, operator pattern, dimensional envelope, regime state.
 
-Provide:
+**Step 2 — Identify Coherence Envelope**
+The analyzer determines: C0–C4 state, envelope stability, envelope boundaries.
 
-- coherence assumptions
-- operator pattern
-- dimensional envelope
-- regime state
+**Step 3 — Evaluate Harmonic Stability**
+Checks: harmonic patterns, resonance formation, harmonic collapse risk.
 
-### Step 2 — Identify Coherence Envelope
+**Step 4 — Detect Paradox Exposure**
+Identifies: paradox density, paradox vectors, paradox-induced drift.
 
-The analyzer determines:
-
-- C0–C4 state
-- envelope stability
-- envelope boundaries
-
-### Step 3 — Evaluate Harmonic Stability
-
-Checks:
-
-- harmonic patterns
-- resonance formation
-- harmonic collapse risk
-
-### Step 4 — Detect Paradox Exposure
-
-Identifies:
-
-- paradox density
-- paradox vectors
-- paradox‑induced drift
-
-### Step 5 — Map Coherence Drift
-
-Evaluates:
-
-- drift vectors
-- drift magnitude
-- drift triggers
-
-### Step 6 — Generate Coherence Signature
-
-A coherence signature includes:
-
-- coherence level
-- harmonic stability
-- paradox exposure
-- drift risk
-- field‑locking potential
+**Step 5 — Generate Coherence Signature**
+A coherence signature includes: coherence level, harmonic stability, paradox exposure, drift risk, field-locking potential.
 
 ---
 
 ## Example Output
 
-```
+```yaml
 Framework: Organizational Learning Model
 Coherence Signature:
   coherence: C2 (Harmonic)
@@ -215,46 +155,33 @@ Coherence Signature:
 
 ## Navigation
 
-```
-- [README.md](./README.md)
 - [Coherence Analyzer](./Coherence_Analyzer.md)
 - [Coherence Stability](./Coherence_Stability.md)
-- [Coherence Drift](./Coherence_Drift.md)
 - [Paradox Exposure](./Paradox_Exposure.md)
-- [Harmonic Profiles](./Harmonic_Profiles.md)
-- [Coherence Signatures](./Coherence_Signatures.md)
-- [Examples](./Examples.md)
-```
+- [Coherence Examples](./Coherence_Examples.md)
 
 ---
 
-## Cross‑Module Integration
+## Cross-Module Integration
 
-### FFT Analyzer
-
-- operator patterns
-- dimensional envelopes
-- drift vectors
-- regime states
-
-### SARG
-
-- regime geometry
-- regime‑dependent coherence behavior
-
-### Mode
-
-- substrate states
-- mode‑dependent coherence shifts
-
-### Substrate Flow
-
-- flow‑driven coherence changes
-- substrate‑dependent harmonic behavior
+| Module | Relationship |
+|--------|-------------|
+| **FFT Analyzer** | Operator patterns, dimensional envelopes, drift vectors, regime states |
+| **SARG** | Regime geometry; regime-dependent coherence behavior |
+| **Mode** | Substrate states; mode-dependent coherence shifts |
+| **Substrate Flow** | Flow-driven coherence changes; substrate-dependent harmonic behavior |
 
 ---
 
-## License
+## Related Modules
 
-TriadicFrameworks — Open Canon License (OCL‑3).
-Use permitted for education, research, and derivative frameworks.
+- [FFT Analyzer](../README.md) — Parent Analyzer module
+- [Drift](../Drift/README.md) — Drift detection across all layers
+- [Regime](../Regime/README.md) — Regime classification and boundary diagnostics
+- [Operators](../Operators/README.md) — Operator profiling and regime coupling
+- [Dimensional](../Dimensional/README.md) — Dimensional structure and transitions
+- [FFT Coherence (theory)](../../Coherence/README.md) — Coherence theory and measurement
+
+---
+
+*Part of [TriadicFrameworks](../../../../README.md) · Framework Field Theory · Analyzer*
