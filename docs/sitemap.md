@@ -31,18 +31,18 @@
 - [/rtt/codex/](https://www.triadicframeworks.org/rtt/codex/)  
 - [/rtt/Inside/](https://www.triadicframeworks.org/rtt/Inside/)
 - [/rtt/micro_core/](https://www.triadicframeworks.org/rtt/micro_core/) 
-- [/rtt/Harmonic_Stability_Profile/](https://www.triadicframeworks.org/rtt/Harmonic_Stability_Profile/)
-- [/rtt/Echo_Classifier/](https://www.triadicframeworks.org/rtt/Echo_Classifier/)
-- [/rtt/Substrate_Flow/](https://www.triadicframeworks.org/rtt/Substrate_Flow/)
-- [/rtt/Triadic_Echo_Lattice/](https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/)
+- [/rtt/Harmonic_Stability_Profile/](https://www.triadicframeworks.org/rtt/Harmonic_Stability_Profile/) (New!)
+- [/rtt/Echo_Classifier/](https://www.triadicframeworks.org/rtt/Echo_Classifier/) (New!)
+- [/rtt/Substrate_Flow/](https://www.triadicframeworks.org/rtt/Substrate_Flow/) (New!)
+- [/rtt/Triadic_Echo_Lattice/](https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/) (New!)
 - [/rtt/The_Inverted_Star/](https://www.triadicframeworks.org/rtt/The_Inverted_Star/) (New!)
 - [/unified_resonance/](https://www.triadicframeworks.org/unified_resonance/)  
 - [/triadic/](https://www.triadicframeworks.org/triadic/)  
 - [/substrate/](https://www.triadicframeworks.org/substrate/)  
-- [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/)
-- [/Framework_Field_Theory/Analyzer/](https://www.triadicframeworks.org/Framework_Field_Theory/Analyzer/) 
+- [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/) (New!)
+- [/Framework_Field_Theory/Analyzer/](https://www.triadicframeworks.org/Framework_Field_Theory/Analyzer/) (New!)
 - [/SARG/](https://www.triadicframeworks.org/SARG/)
-- [/Mode/](https://www.triadicframeworks.org/Mode/)
+- [/Mode/](https://www.triadicframeworks.org/Mode/) (New!)
 - [/triadic_observer_layer/](https://www.triadicframeworks.org/triadic_observer_layer/)
 
 This is the **deep structure layer** — the “physics” of RTT.
@@ -78,14 +78,14 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [/dimensional_substrate_structures/](https://www.triadicframeworks.org/dimensional_substrate_structures/)  
 - [/dimensional_substrate_regime_scanning_protocol/](https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol/)  
 - [/arrival_substrate_model/](https://www.triadicframeworks.org/arrival_substrate_model/)
-- [/nist/](https://www.triadicframeworks.org/nist/)
+- [/nist/](https://www.triadicframeworks.org/nist/) (MVP)
 
 ---
 
 ## 4. Cognitive & Social Substrates (Human Layer)
 
 - [/inverted_star_ontology/](https://www.triadicframeworks.org/inverted_star_ontology/)  
-- [/Inverted_Economics/](https://www.triadicframeworks.org/Inverted_Economics/)  
+- [/Inverted_Economics/](https://www.triadicframeworks.org/Inverted_Economics/) (MVP!) 
 - [/structural_life_regime_profiles/](https://www.triadicframeworks.org/structural_life_regime_profiles/)
 - [/media_substrate_model/](https://www.triadicframeworks.org/media_substrate_model/)
 - [/media_substrate_model/analyzer/](https://www.triadicframeworks.org/media_substrate_model/analyzer/)
@@ -94,7 +94,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [/spectral_clarity/](https://www.triadicframeworks.org/spectral_clarity/)  
 - [/glyphic_resonance/](https://www.triadicframeworks.org/glyphic_resonance/)  
 - [/glyphs/](https://www.triadicframeworks.org/glyphs/)  
-- [/ecoechosystem/](https://www.triadicframeworks.org/ecoechosystem/)  
+- [/ecoechosystem/](https://www.triadicframeworks.org/ecoechosystem/) (Sims) 
 
 ---
 
@@ -217,7 +217,7 @@ These are checked last.
 
 ## Bonus Points
 
-- [Zenodo Triadicframeworks Group](https://zenodo.org/communities/vst)
+- [Zenodo Triadicframeworks Group](https://zenodo.org/communities/vst) (30 citations)
 - [/energy/](https://www.triadicframeworks.org/energy/)  
 - [/triadic_coordination_substrate/](https://www.triadicframeworks.org/triadic_coordination_substrate/)
 
