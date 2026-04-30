@@ -62,3 +62,4 @@ Whether you’re a validator, remixer, or architect, enTFT invites you to:
 - [`fff_spec.md`](../../docs/fff_spec.md) — Defines the `.fff` triadic file format and symbolic structure  
 - [`TriadicTestSuite.md`](../../docs/TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
 - [`outputs_spec.md`](../../docs/outputs_spec.md) — Defines the three-output logic: screen, file, glyph
+- [`entft_module.json`](entft_module.json) — Module schema role assignments
