@@ -32,3 +32,4 @@ Absolutely, Nawder—here are three canonical quicklinks you can embed at the bo
 - [`fff_quickstart.md`](../fff_quickstart.md) — Onboarding ritual for remixers using `.fff` bundles  
 - [`TriadicTestSuite.md`](/docs/TFT_3Pack_v1.3/docs/TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
 - [`outputs_spec.md`](/docs/TFT_3Pack_v1.3/docs/outputs_spec.md) — Defines the three-output logic: screen, file, glyph
+- [`docs-pack_module.json`](docs-pack_module.json) — Agentic module schema role assignments
