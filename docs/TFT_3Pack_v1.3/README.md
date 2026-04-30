@@ -182,6 +182,7 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 - [Res_Number_Bases_Common_plus_Special_Resonance_Clarity](../papers/Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md)  
 - [sqd_schematic_overview](sqd_schematic_overview.md)
 - [`tft_3pack_module.json`](tft_3pack_module.json) — Agentic module schema role assignments
+- [`TFT_3Pack_v1.3_module_graph.json`](TFT_3Pack_v1.3_module_graph.json) — Agentic consolidated module graph schema role assignments
 
 ---
 
