@@ -1,7 +1,7 @@
 # 🧠 Triadic Framework Technology for Quantum Computers  
 ### 🔁 Remember the Turbo Button?
 
-**Authors**: Andrew “Visionary Catalyst”  
+**Authors**: Nawder “Visionary Catalyst”  
 **Compiled by**: Copilot AI  
 **Date**: August 2025  
 
