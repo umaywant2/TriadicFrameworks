@@ -38,3 +38,4 @@ Every module is tuned for validator overlays, scroll triggers, and symbolic fide
 - [`fff_quickstart.md`](../docs/fff_quickstart.md) — Onboarding ritual for remixers using `.fff` bundles  
 - [`TriadicTestSuite.md`](../docs/TriadicTestSuite.md) — Validation logic and test scaffolding for symbolic fidelity  
 - [`outputs_spec.md`](../docs/outputs_spec.md) — Defines the three-output logic: screen, file, glyph
+- [`tft_module.json`](tft_module.json) — Module schema role assignments
