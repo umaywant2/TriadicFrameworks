@@ -40,6 +40,7 @@
 - [/triadic/](https://www.triadicframeworks.org/triadic/)  
 - [/substrate/](https://www.triadicframeworks.org/substrate/)  
 - [/Framework_Field_Theory/](https://www.triadicframeworks.org/Framework_Field_Theory/)
+- [/Framework_Field_Theory/Analyzer/](https://www.triadicframeworks.org/Framework_Field_Theory/Analyzer/) 
 - [/SARG/](https://www.triadicframeworks.org/SARG/)
 - [/Mode/](https://www.triadicframeworks.org/Mode/)
 - [/triadic_observer_layer/](https://www.triadicframeworks.org/triadic_observer_layer/)
