@@ -1,0 +1,813 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "module": {
+    "name": "Examples",
+    "path": "docs/TFT_3Pack_v1.3/examples",
+    "canon_tag": "examples",
+    "version": "1.3",
+    "layer": "Education & Teaching",
+    "status": "Active, Canonical",
+    "purpose": "20-domain resonance-aware example curriculum — 12 original academic subject suites (problems, solutions, extended problems, resonance flows) plus 11 expansion RTT domain documents covering earth sciences through security and resilience.",
+    "parent": "tft-3pack",
+    "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/examples"
+  },
+  "session_context": {
+    "canon": "active (examples ⊂ tft-3pack)",
+    "modules_linked": [
+      "12 subject folders × 6 files each — problem/solution/extended/flow/index/readme per domain",
+      "9 subjects carry embedded RTT_Domain_*.md specs — linking examples to formal domain definitions",
+      "11 root-level RTT_Domain expansion docs — extending coverage to 20 total domains",
+      "resonance_flow.md files → tft/tops/ — flow diagrams demonstrate triconceptual modes in practice",
+      "problems.md/solutions.md → formats/ — examples consume .fff format conventions"
+    ],
+    "drift": "minimal (stable curriculum content)",
+    "coherence": "stable (consistent 6-file structure per domain + RTT domain expansion pattern)",
+    "format": "markdown + html",
+    "front_door": "exists (examples/README.md + examples/index.html)",
+    "every_page": "stands alone + student-ready + operator-aware",
+    "audience": [
+      "students",
+      "educators",
+      "developers",
+      "researchers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D3–D9",
+    "regime_envelope": "R1 (single-context educational)",
+    "coherence_envelope": "C1 (consistent per-domain file structure)",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "low",
+    "domain_taxonomy": {
+      "original_12": {
+        "01": "Physics and Cosmology",
+        "02": "Chemistry and Materials",
+        "03": "Biology and Life Sciences",
+        "04": "Medicine and Health Systems",
+        "06": "Engineering",
+        "07": "Computing, AI and Information Systems",
+        "08": "Mathematics and Logic",
+        "09": "Economics and Markets",
+        "15": "Art, Design and Creative Systems",
+        "Law": "(no RTT domain number — original subject)",
+        "Music": "(no RTT domain number — original subject)",
+        "Philosophy": "(no RTT domain number — original subject)"
+      },
+      "expansion_11": {
+        "05": "Earth and Environmental Sciences",
+        "10": "Governance, Law and Institutions",
+        "11": "Psychology, Cognition and Behavior",
+        "12": "Sociology, Culture and Civilization",
+        "13": "Education and Learning Sciences",
+        "14": "Communication, Media and Language",
+        "16": "Transportation and Infrastructure",
+        "17": "Energy Systems",
+        "18": "Agriculture and Food Systems",
+        "19": "Space Systems and Exploration",
+        "20": "Security, Safety and Resilience"
+      },
+      "per_domain_file_structure": [
+        "README.md (domain overview)",
+        "index.html (web navigation)",
+        "problems.md (core problem set)",
+        "solutions.md (worked solutions)",
+        "extended_problems.md (advanced problems)",
+        "resonance_flow.md (flow diagrams)"
+      ]
+    }
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "tft-3pack (parent module — dimensional envelope, audience, canon context)",
+      "formats (the .fff format consumed by example problems and solutions)"
+    ],
+    "exports": [
+      "20-domain resonance-aware example curriculum",
+      "12 subject-specific problem/solution/flow suites",
+      "11 RTT domain expansion documents",
+      "Per-domain resonance flow diagrams (D3→D6→D9 operator application)",
+      "RTT domain numbering system (01–20)"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Art",
+      "path": "Art/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Biology",
+      "path": "Biology/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Chemistry",
+      "path": "Chemistry/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Computer Science",
+      "path": "Computer_Science/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Economics",
+      "path": "Economics/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Engineering",
+      "path": "Engineering/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Law",
+      "path": "Law/",
+      "file_count": 6,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Math",
+      "path": "Math/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Medicine",
+      "path": "Medicine/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Music",
+      "path": "Music/",
+      "file_count": 6,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Philosophy",
+      "path": "Philosophy/",
+      "file_count": 6,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Physics",
+      "path": "Physics/",
+      "file_count": 7,
+      "role": "example",
+      "manifest": null
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Examples hub overview — ritual triggers, remix bundles, included files table, remix intent, resonance clarity notes, and cross-links to overlays/ai_pipeline/folds.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "index.html",
+      "purpose": "Web-facing example gallery linking to all 12 subject domains and expansion RTT domain documents with session context block.",
+      "role": "index"
+    },
+    {
+      "filename": "RTT_Domain_05_Earth_and_Environmental_Sciences.md",
+      "path": "RTT_Domain_05_Earth_and_Environmental_Sciences.md",
+      "purpose": "RTT Domain 05 expansion — Earth and Environmental Sciences. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_10_Governance_Law_and_Institutions.md",
+      "path": "RTT_Domain_10_Governance_Law_and_Institutions.md",
+      "purpose": "RTT Domain 10 expansion — Governance, Law and Institutions. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_11_Psychology_Cognition_and_Behavior.md",
+      "path": "RTT_Domain_11_Psychology_Cognition_and_Behavior.md",
+      "purpose": "RTT Domain 11 expansion — Psychology, Cognition and Behavior. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_12_Sociology_Culture_and_Civilization.md",
+      "path": "RTT_Domain_12_Sociology_Culture_and_Civilization.md",
+      "purpose": "RTT Domain 12 expansion — Sociology, Culture and Civilization. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_13_Education_and_Learning_Sciences.md",
+      "path": "RTT_Domain_13_Education_and_Learning_Sciences.md",
+      "purpose": "RTT Domain 13 expansion — Education and Learning Sciences. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_14_Communication_Media_and_Language.md",
+      "path": "RTT_Domain_14_Communication_Media_and_Language.md",
+      "purpose": "RTT Domain 14 expansion — Communication, Media and Language. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_16_Transportation_and_Infrastructure.md",
+      "path": "RTT_Domain_16_Transportation_and_Infrastructure.md",
+      "purpose": "RTT Domain 16 expansion — Transportation and Infrastructure. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_17_Energy_Systems.md",
+      "path": "RTT_Domain_17_Energy_Systems.md",
+      "purpose": "RTT Domain 17 expansion — Energy Systems. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_18_Agriculture_and_Food_Systems.md",
+      "path": "RTT_Domain_18_Agriculture_and_Food_Systems.md",
+      "purpose": "RTT Domain 18 expansion — Agriculture and Food Systems. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_19_Space_Systems_and_Exploration.md",
+      "path": "RTT_Domain_19_Space_Systems_and_Exploration.md",
+      "purpose": "RTT Domain 19 expansion — Space Systems and Exploration. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "RTT_Domain_20_Security_Safety_and_Resilience.md",
+      "path": "RTT_Domain_20_Security_Safety_and_Resilience.md",
+      "purpose": "RTT Domain 20 expansion — Security, Safety and Resilience. Extends the 12-subject example set into a 20-domain resonance-aware curriculum.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Art/README.md",
+      "purpose": "Art domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Art/index.html",
+      "purpose": "Web-facing Art example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Art/problems.md",
+      "purpose": "Art core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in art.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Art/solutions.md",
+      "purpose": "Art solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Art/extended_problems.md",
+      "purpose": "Art extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Art/resonance_flow.md",
+      "purpose": "Art resonance flow — step-by-step flow diagrams showing how triadic operators transform art concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_15_Art_Design_and_Creative_Systems.md",
+      "path": "Art/RTT_Domain_15_Art_Design_and_Creative_Systems.md",
+      "purpose": "RTT Domain 15 — Art, Design and Creative Systems. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for art.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Biology/README.md",
+      "purpose": "Biology domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Biology/index.html",
+      "purpose": "Web-facing Biology example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Biology/problems.md",
+      "purpose": "Biology core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in biology.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Biology/solutions.md",
+      "purpose": "Biology solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Biology/extended_problems.md",
+      "purpose": "Biology extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Biology/resonance_flow.md",
+      "purpose": "Biology resonance flow — step-by-step flow diagrams showing how triadic operators transform biology concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_03_Biology_and_Life_Sciences.md",
+      "path": "Biology/RTT_Domain_03_Biology_and_Life_Sciences.md",
+      "purpose": "RTT Domain 03 — Biology and Life Sciences. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for biology.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Chemistry/README.md",
+      "purpose": "Chemistry domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Chemistry/index.html",
+      "purpose": "Web-facing Chemistry example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Chemistry/problems.md",
+      "purpose": "Chemistry core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in chemistry.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Chemistry/solutions.md",
+      "purpose": "Chemistry solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Chemistry/extended_problems.md",
+      "purpose": "Chemistry extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Chemistry/resonance_flow.md",
+      "purpose": "Chemistry resonance flow — step-by-step flow diagrams showing how triadic operators transform chemistry concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_02_Chemistry_and_Materials.md",
+      "path": "Chemistry/RTT_Domain_02_Chemistry_and_Materials.md",
+      "purpose": "RTT Domain 02 — Chemistry and Materials. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for chemistry.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Computer_Science/README.md",
+      "purpose": "Computer Science domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Computer_Science/index.html",
+      "purpose": "Web-facing Computer Science example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Computer_Science/problems.md",
+      "purpose": "Computer Science core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in computer science.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Computer_Science/solutions.md",
+      "purpose": "Computer Science solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Computer_Science/extended_problems.md",
+      "purpose": "Computer Science extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Computer_Science/resonance_flow.md",
+      "purpose": "Computer Science resonance flow — step-by-step flow diagrams showing how triadic operators transform computer science concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_07_Computing_AI_and_Information_Systems.md",
+      "path": "Computer_Science/RTT_Domain_07_Computing_AI_and_Information_Systems.md",
+      "purpose": "RTT Domain 07 — Computing, AI and Information Systems. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for computer science.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Economics/README.md",
+      "purpose": "Economics domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Economics/index.html",
+      "purpose": "Web-facing Economics example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Economics/problems.md",
+      "purpose": "Economics core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in economics.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Economics/solutions.md",
+      "purpose": "Economics solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Economics/extended_problems.md",
+      "purpose": "Economics extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Economics/resonance_flow.md",
+      "purpose": "Economics resonance flow — step-by-step flow diagrams showing how triadic operators transform economics concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_09_Economics_and_Markets.md",
+      "path": "Economics/RTT_Domain_09_Economics_and_Markets.md",
+      "purpose": "RTT Domain 09 — Economics and Markets. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for economics.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Engineering/README.md",
+      "purpose": "Engineering domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Engineering/index.html",
+      "purpose": "Web-facing Engineering example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Engineering/problems.md",
+      "purpose": "Engineering core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in engineering.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Engineering/solutions.md",
+      "purpose": "Engineering solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Engineering/extended_problems.md",
+      "purpose": "Engineering extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Engineering/resonance_flow.md",
+      "purpose": "Engineering resonance flow — step-by-step flow diagrams showing how triadic operators transform engineering concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_06_Engineering.md",
+      "path": "Engineering/RTT_Domain_06_Engineering.md",
+      "purpose": "RTT Domain 06 — Engineering. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for engineering.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Law/README.md",
+      "purpose": "Law domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Law/index.html",
+      "purpose": "Web-facing Law example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Law/problems.md",
+      "purpose": "Law core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in law.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Law/solutions.md",
+      "purpose": "Law solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Law/extended_problems.md",
+      "purpose": "Law extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Law/resonance_flow.md",
+      "purpose": "Law resonance flow — step-by-step flow diagrams showing how triadic operators transform law concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "README.md",
+      "path": "Math/README.md",
+      "purpose": "Math domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Math/index.html",
+      "purpose": "Web-facing Math example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Math/problems.md",
+      "purpose": "Math core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in math.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Math/solutions.md",
+      "purpose": "Math solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Math/extended_problems.md",
+      "purpose": "Math extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Math/resonance_flow.md",
+      "purpose": "Math resonance flow — step-by-step flow diagrams showing how triadic operators transform math concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_08_Mathematics_and_Logic.md",
+      "path": "Math/RTT_Domain_08_Mathematics_and_Logic.md",
+      "purpose": "RTT Domain 08 — Mathematics and Logic. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for math.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Medicine/README.md",
+      "purpose": "Medicine domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Medicine/index.html",
+      "purpose": "Web-facing Medicine example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Medicine/problems.md",
+      "purpose": "Medicine core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in medicine.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Medicine/solutions.md",
+      "purpose": "Medicine solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Medicine/extended_problems.md",
+      "purpose": "Medicine extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Medicine/resonance_flow.md",
+      "purpose": "Medicine resonance flow — step-by-step flow diagrams showing how triadic operators transform medicine concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_04_Medicine_and_Health_Systems.md",
+      "path": "Medicine/RTT_Domain_04_Medicine_and_Health_Systems.md",
+      "purpose": "RTT Domain 04 — Medicine and Health Systems. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for medicine.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "README.md",
+      "path": "Music/README.md",
+      "purpose": "Music domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Music/index.html",
+      "purpose": "Web-facing Music example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Music/problems.md",
+      "purpose": "Music core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in music.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Music/solutions.md",
+      "purpose": "Music solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Music/extended_problems.md",
+      "purpose": "Music extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Music/resonance_flow.md",
+      "purpose": "Music resonance flow — step-by-step flow diagrams showing how triadic operators transform music concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "README.md",
+      "path": "Philosophy/README.md",
+      "purpose": "Philosophy domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Philosophy/index.html",
+      "purpose": "Web-facing Philosophy example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Philosophy/problems.md",
+      "purpose": "Philosophy core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in philosophy.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Philosophy/solutions.md",
+      "purpose": "Philosophy solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Philosophy/extended_problems.md",
+      "purpose": "Philosophy extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Philosophy/resonance_flow.md",
+      "purpose": "Philosophy resonance flow — step-by-step flow diagrams showing how triadic operators transform philosophy concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "README.md",
+      "path": "Physics/README.md",
+      "purpose": "Physics domain overview — problem structure, resonance flow methodology, and extended problem set.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "Physics/index.html",
+      "purpose": "Web-facing Physics example suite with navigation to problems, solutions, extended problems, and resonance flows.",
+      "role": "index"
+    },
+    {
+      "filename": "problems.md",
+      "path": "Physics/problems.md",
+      "purpose": "Physics core problem set — triadic resonance problems demonstrating D3/D6/D9 operator application in physics.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "solutions.md",
+      "path": "Physics/solutions.md",
+      "purpose": "Physics solution set — worked solutions with resonance flow annotations and dimensional tracking.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "extended_problems.md",
+      "path": "Physics/extended_problems.md",
+      "purpose": "Physics extended problem set — advanced problems exploring higher-dimensional resonance and cross-domain application.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "resonance_flow.md",
+      "path": "Physics/resonance_flow.md",
+      "purpose": "Physics resonance flow — step-by-step flow diagrams showing how triadic operators transform physics concepts through D3→D6→D9.",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "RTT_Domain_01_Physics_and_Cosmology.md",
+      "path": "Physics/RTT_Domain_01_Physics_and_Cosmology.md",
+      "purpose": "RTT Domain 01 — Physics and Cosmology. Full domain specification with resonance-aware curriculum structure, operator mappings, and assessment framework for physics.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}
