@@ -167,7 +167,7 @@ Let’s scaffold the path:
 
 ---
 
-(aiwork) iphartonu@RYZEN9:/mnt/c/Users/acwil/OneDrive$ nvidia-smi
+(aiwork) nawder@RYZEN9:/mnt/c/Users/nawder/OneDrive$ nvidia-smi
 Sat Nov 22 18:32:20 2025
 +-----------------------------------------------------------------------------------------+
 | NVIDIA-SMI 560.35.02              Driver Version: 560.94         CUDA Version: 12.6     |
@@ -188,7 +188,7 @@ Sat Nov 22 18:32:20 2025
 |=========================================================================================|
 |  No running processes found                                                             |
 +-----------------------------------------------------------------------------------------+
-(aiwork) iphartonu@RYZEN9:/mnt/c/Users/acwil/OneDrive$ python ttrain.py
+(aiwork) nawder@RYZEN9:/mnt/c/Users/nawder/OneDrive$ python ttrain.py
 CUDA available: True
 GPU name: NVIDIA GeForce RTX 3060
   0%|                                                                                         | 0/56615 [00:00<?, ?it/s]`loss_type=None` was set in the config but it is unrecognized. Using the default loss: `ForCausalLMLoss`.
