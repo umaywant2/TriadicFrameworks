@@ -157,8 +157,8 @@ Operators ──► Dimensional ──► Regime ──► Coherence
 - [`Dimensionality/`](../Dimensionality/README.md) — Dimensional theory and structure
 - [`Coherence/`](../Coherence/README.md) — Coherence theory and measurement
 - [`Paradox/`](../Paradox/README.md) — Paradox taxonomy and resolution
-- [`module.schema.json`](./module.schema.json)
-- [`FFT_analyzer-module.json`](./FFT_analyzer-module.json)
+- [`module.schema.json`](../../schemas/module.schema.json) — the formal JSON Schema spec
+- [`FFT_analyzer-module.json`](./FFT_analyzer-module.json) — the working prototype for the FFT Analyzer
 
 ---
 
