@@ -28,7 +28,7 @@
 ---
 
 ## ⚠️ Slide 3: The Case for Change  
-- “I will not fly until I see a safe redesign” – Andrew  
+- “I will not fly until I see a safe redesign” – Nawder  
 - 🚀 Rockets: high propellant mass, narrow margins, long turnarounds  
 - ✈️ Aviation: turbulence pain, routing waste, gate energy burn  
 - 🌍 Emissions & cost pressures demand a leap, not a tweak
