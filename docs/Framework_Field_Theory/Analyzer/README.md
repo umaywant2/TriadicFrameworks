@@ -14,6 +14,8 @@ Each submodule targets a distinct diagnostic layer. Together they form a complet
 ```
 Analyzer/
 ├── README.md
+module.schema.json
+
 ├── Drift/
 │   ├── Drift_Analyzer.md
 │   ├── Drift_Cases.md
