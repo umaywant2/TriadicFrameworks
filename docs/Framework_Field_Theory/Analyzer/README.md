@@ -159,7 +159,7 @@ Operators ──► Dimensional ──► Regime ──► Coherence
 - [`Coherence/`](../Coherence/README.md) — Coherence theory and measurement
 - [`Paradox/`](../Paradox/README.md) — Paradox taxonomy and resolution
 - [`module.schema.json`](../../schemas/module.schema.json) — the formal JSON Schema spec
-- [`FFT_analyzer-module.json`](./FFT_analyzer-module.json) — the working prototype for the FFT Analyzer
+- [`FFT_analyzer-module.json`](./FFT_analyzer-module.json) — Agentic module schema role assignments
 
 ---
 
