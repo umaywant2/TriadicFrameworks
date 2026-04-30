@@ -1,0 +1,384 @@
+Your canonical **TFT_3Pack_v1.3 `module.json`** is ready — validated clean against your `module.schema.json` contract with zero enum violations.
+
+### What's inside
+
+| Section | Details |
+|---|---|
+| **Module identity** | `canon_tag: tft-3pack`, layer `Tools & Infrastructure`, status `Active, Canonical`, parent `null` (top-level) |
+| **Session context** | Mirrors your HTML session-context block — canon, drift (minimal), coherence (stable), audience, front door |
+| **Structural grammar** | Dimensional envelope `D3–D9`, regime envelope `R1–R2`, coherence envelope `C1–C3`, drift sensitivity `low`, regime sensitivity `medium` |
+| **Cross-module propagation** | Imports `rtt-core`, `rtt-inside`, `nawderian-theorem`; exports .fff format, triadic operators, 12-domain suites, shell pipeline, base-type lens switching, resonance constants |
+| **8 submodules** | Documentation (`reference`), Examples (`example`), Scripts (`engine`), Formats (`template`), TOPS/Resonance Labs/NOUS/ENTFT (all `engine`) |
+| **34 files catalogued** | 12 `example`, 11 `index`, 6 `engine`, 3 `template`, 1 `diagnostic`, 1 `reference` |
+
+### Analyzer layer coverage
+
+- **cross-cutting** — all 12 domain example suites + example indexes
+- **dimensional** — convert_tft.sh, grid_ops.sh, .fff format spec + templates
+- **operator** — run_tft.sh, batch_process.sh, logic_core.sh, reflection_inversion.fff
+- **regime** — encryption.sh, tft/ core indexes
+- **coherence** — validate_tft.sh
+
+Every role and `analyzer_layer` enum validated against the canonical schema — drop-in ready for `/docs/TFT_3Pack_v1.3/module.json`.
+
+```json
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "TFT 3Pack",
+    "path": "docs/TFT_3Pack_v1.3",
+    "canon_tag": "tft-3pack",
+    "version": "1.3",
+    "layer": "Tools & Infrastructure",
+    "status": "Active, Canonical",
+    "purpose": "Compact, example-driven toolkit demonstrating the TriadicFrameworks model across 12 academic domains via shell scripts, .fff resonance files, and a dark-themed documentation system.",
+    "parent": null,
+    "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/"
+  },
+
+  "session_context": {
+    "canon": "active (tft-3pack)",
+    "modules_linked": [
+      "shell scripts ↔ .fff formats ↔ 12 subject example sets ↔ resonance operators ↔ student workflows",
+      "RTT-Inside ↔ Wrapped Resonance Structural Aware Dimensional Cores"
+    ],
+    "drift": "minimal (example-stable)",
+    "coherence": "stable (triadic-example-grammar)",
+    "format": "html + markdown + shell scripts + .fff files",
+    "front_door": "exists (TFT_3Pack_v1.3/index.html)",
+    "every_page": "stands alone + student-ready + operator-aware",
+    "audience": ["students", "educators", "developers", "researchers", "AIs"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D3–D9",
+    "regime_envelope": "R1–R2",
+    "coherence_envelope": "C1–C3",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "rtt-core",
+      "rtt-inside",
+      "nawderian-theorem"
+    ],
+    "exports": [
+      ".fff resonance file format",
+      "triadic operator examples (D3, D6, D9)",
+      "12-domain academic example suites",
+      "shell execution pipeline (run, validate, convert, batch)",
+      "base-type lens switching (binary, decimal, hex, phi, pi, corridor6.9, etc.)",
+      "resonance constants (τ_r, T_f, ΛΘ, F3, X)"
+    ]
+  },
+
+  "submodules": [
+    {
+      "name": "Documentation",
+      "path": "docs/",
+      "file_count": 2,
+      "role": "reference",
+      "manifest": null
+    },
+    {
+      "name": "Examples",
+      "path": "examples/",
+      "file_count": 14,
+      "role": "example",
+      "manifest": null
+    },
+    {
+      "name": "Scripts",
+      "path": "scripts/",
+      "file_count": 9,
+      "role": "engine",
+      "manifest": null
+    },
+    {
+      "name": "Formats",
+      "path": "formats/",
+      "file_count": 5,
+      "role": "template",
+      "manifest": null
+    },
+    {
+      "name": "Core Framework — TOPS",
+      "path": "tft/tops/",
+      "file_count": 1,
+      "role": "engine",
+      "manifest": null
+    },
+    {
+      "name": "Core Framework — Resonance Labs",
+      "path": "tft/resonance-labs/",
+      "file_count": 1,
+      "role": "engine",
+      "manifest": null
+    },
+    {
+      "name": "Core Framework — NOUS",
+      "path": "tft/nous/",
+      "file_count": 1,
+      "role": "engine",
+      "manifest": null
+    },
+    {
+      "name": "Core Framework — ENTFT",
+      "path": "tft/entft/",
+      "file_count": 1,
+      "role": "engine",
+      "manifest": null
+    }
+  ],
+
+  "files": [
+
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Top-level module overview defining folder structure, purpose, quickstart, and remix lineage for TFT_3Pack.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "index.html",
+      "purpose": "Web-facing front door with dark-themed navigation to all pack sections and session context.",
+      "role": "index"
+    },
+
+
+    {
+      "filename": "README.md",
+      "path": "docs/README.md",
+      "purpose": "Documentation hub overview covering specifications, rituals, lineage notes, and illustration assets.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "docs/index.html",
+      "purpose": "Web-facing index for the documentation section with links to specs, rituals, meta, and SVG assets.",
+      "role": "index"
+    },
+
+
+    {
+      "filename": "README.md",
+      "path": "examples/README.md",
+      "purpose": "Overview of all 12 academic domain example suites with cross-domain navigation.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/index.html",
+      "purpose": "Web-facing example gallery linking to all 12 subject resonance example sets with session context block.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Art/index.html",
+      "purpose": "Resonance example suite for Art — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Biology/index.html",
+      "purpose": "Resonance example suite for Biology — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Chemistry/index.html",
+      "purpose": "Resonance example suite for Chemistry — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Computer_Science/index.html",
+      "purpose": "Resonance example suite for Computer Science — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Economics/index.html",
+      "purpose": "Resonance example suite for Economics — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Engineering/index.html",
+      "purpose": "Resonance example suite for Engineering — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Law/index.html",
+      "purpose": "Resonance example suite for Law — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Math/index.html",
+      "purpose": "Resonance example suite for Math — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Medicine/index.html",
+      "purpose": "Resonance example suite for Medicine — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Music/index.html",
+      "purpose": "Resonance example suite for Music — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Philosophy/index.html",
+      "purpose": "Resonance example suite for Philosophy — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "index.html",
+      "path": "examples/Physics/index.html",
+      "purpose": "Resonance example suite for Physics — problems, solutions, extended problems, and resonance flows.",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+
+
+    {
+      "filename": "README.md",
+      "path": "scripts/README.md",
+      "purpose": "Script documentation covering usage, flags, base-type lens options, and execution patterns.",
+      "role": "index"
+    },
+    {
+      "filename": "index.html",
+      "path": "scripts/index.html",
+      "purpose": "Web-facing index for shell script tools with descriptions and direct links.",
+      "role": "index"
+    },
+    {
+      "filename": "run_tft.sh",
+      "path": "scripts/run_tft.sh",
+      "purpose": "Executes a .fff resonance file and prints computed values (τ_r, D3, D6, D9, T_f, ΛΘ, F3, X).",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "depends_on": ["formats/example_basic.fff"]
+    },
+    {
+      "filename": "validate_tft.sh",
+      "path": "scripts/validate_tft.sh",
+      "purpose": "Validates .fff file structure and checks for required fields, enforcing format coherence.",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "convert_tft.sh",
+      "path": "scripts/convert_tft.sh",
+      "purpose": "Converts .fff files into human-readable summaries, translating dimensional data for review.",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "batch_process.sh",
+      "path": "scripts/batch_process.sh",
+      "purpose": "Runs multiple .fff files in sequence for bulk resonance computation across datasets.",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "depends_on": ["scripts/run_tft.sh"]
+    },
+    {
+      "filename": "logic_core.sh",
+      "path": "scripts/logic_core.sh",
+      "purpose": "Triadic Logic Trigger for Validator Overlays — activates core logical operator checks.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "encryption.sh",
+      "path": "scripts/encryption.sh",
+      "purpose": "Triggers encryption overlays with base-lens awareness, enforcing regime-level data boundaries.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "grid_ops.sh",
+      "path": "scripts/grid_ops.sh",
+      "purpose": "Activates grid overlays and validator logic with base-lens fidelity for dimensional alignment.",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+
+
+    {
+      "filename": "README.md",
+      "path": "formats/README.md",
+      "purpose": "Full .fff format specification defining resonance-time, triadic operators, TFT constants, and field semantics.",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "index.html",
+      "path": "formats/index.html",
+      "purpose": "Web-facing format specification hub with links to example .fff files.",
+      "role": "index"
+    },
+    {
+      "filename": "example_basic.fff",
+      "path": "formats/example_basic.fff",
+      "purpose": "Minimal resonance definition demonstrating core .fff field structure (τ_r, D3, D6, D9, T_f, ΛΘ, F3).",
+      "role": "template",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "example_extended.fff",
+      "path": "formats/example_extended.fff",
+      "purpose": "Extended resonance file including metadata fields and descriptive tags beyond the minimal set.",
+      "role": "template",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "example_reflection_inversion.fff",
+      "path": "formats/example_reflection_inversion.fff",
+      "purpose": "Resonance file demonstrating reflect and invert operator modes within .fff structure.",
+      "role": "template",
+      "analyzer_layer": "operator"
+    },
+
+
+    {
+      "filename": "README.md",
+      "path": "tft/README.md",
+      "purpose": "Core framework overview linking TOPS, Resonance Labs, NOUS, and ENTFT submodules.",
+      "role": "index",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "index.html",
+      "path": "tft/index.html",
+      "purpose": "Web-facing index for core framework navigation across all TFT submodules.",
+      "role": "index",
+      "analyzer_layer": "regime"
+    }
+  ]
+}
+```
