@@ -9,5 +9,6 @@ Modules include:
 - `resonance_model.py` — harmonic fields
 - `observer_state.py` — track observer resonance
 - `glyph_output.py` — render symbolic overlays
+- `resonance-labs_module.json` 
 
 This is where mythic experimentation meets technical rigor.
