@@ -30,3 +30,5 @@ Finally, the waveform is shaped with a Tukey window, with an exponential decay t
 ## Potential improvements
 
 One notable issue is the click sound that may appear when the pointer leaves and re-enters the element before the fade-out of the sound. This is due to the fact that the sound is stopped and restarted when the pointer leaves and re-enters the element. I tried to have an "emergency" fade-out of the sound when the pointer leaves and re-enters the element, but it did not work. If you have any idea on how to solve this issue, please let me know!
+
+- [`melodic-table_module.json`](melodic-table_module.json) — Agentic module schema role assignments
