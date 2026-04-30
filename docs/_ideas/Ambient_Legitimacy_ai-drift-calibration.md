@@ -708,7 +708,7 @@ What kind of TXT record are you expecting to find?
 
 # >> Ok... perhaps we're trying the wrong way... I see the record:
 # >> 
-# >> C:\Users\acwil>nslookup
+# >> C:\Users\nawder>nslookup
 # >> Default Server:  cdns01.comcast.net
 # >> Address:  2001:558:feed::1
 # >> 
