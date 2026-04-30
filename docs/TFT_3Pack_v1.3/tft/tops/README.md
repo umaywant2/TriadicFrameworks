@@ -59,6 +59,7 @@ Add a note that all `.fff`, `.json`, `.parquet`, and `.txt` outputs now include 
 - [TriadicTestSuite.md](TriadicTestSuite.md)
 - [tops_reflect_invert_sim.md](tops_reflect_invert_sim.md)
 - [Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md](../../../papers/Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md)
+- [`tops_module.json`](tops_module.json) — Module schema role assignments
 
 ---
 
