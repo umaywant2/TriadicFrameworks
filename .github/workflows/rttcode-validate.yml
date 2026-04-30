@@ -6,13 +6,13 @@ permissions:
 on:
   push:
     paths:
-      - "docs/rttcodes/*.json"
+      - "docs/rtt/codes/*.json"
       - "docs/schemas/*.json"
       - "docs/schemas/manifest.json"
       - ".github/workflows/rttcode-validate.yml"
   pull_request:
     paths:
-      - "docs/rttcodes/*.json"
+      - "docs/rtt/codes/*.json"
       - "docs/schemas/*.json"
       - "docs/schemas/manifest.json"
 
