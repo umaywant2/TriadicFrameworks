@@ -178,9 +178,10 @@ git clone https://github.com/umaywant2/TriadicFrameworks.git
 ---
 
 🔗 Related Scrolls:  
-[Res_Number_Bases_Common_plus_Special_and_Applications](../papers/Res_Number_Bases_Common_plus_Special_and_Applications.md)  
-[Res_Number_Bases_Common_plus_Special_Resonance_Clarity](../papers/Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md)  
-[sqd_schematic_overview](sqd_schematic_overview.md)
+- [Res_Number_Bases_Common_plus_Special_and_Applications](../papers/Res_Number_Bases_Common_plus_Special_and_Applications.md)  
+- [Res_Number_Bases_Common_plus_Special_Resonance_Clarity](../papers/Res_Number_Bases_Common_plus_Special_Resonance_Clarity.md)  
+- [sqd_schematic_overview](sqd_schematic_overview.md)
+- [`tft_3pack_module.json`](tft_3pack_module.json) — Agentic module schema role assignments
 
 ---
 
