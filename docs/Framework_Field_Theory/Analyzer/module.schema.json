@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.triadicframeworks.org/schemas/module.schema.json",
+  "title": "TriadicFrameworks Module Manifest",
+  "description": "Per-module manifest describing every file's purpose within the canon, using the canon's own structural grammar. Designed for AI agent discovery at the module level — beyond site-level discovery (llms.txt, ai.json).",
+  "type": "object",
+  "required": ["module", "files"],
+  "properties": {
+    "module": {
+      "type": "object",
+      "required": ["name", "path", "canon_tag", "version", "layer", "status", "purpose", "parent"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Human-readable module name"
+        },
+        "path": {
+          "type": "string",
+          "description": "Canonical path from repo root (e.g., docs/Framework_Field_Theory/Analyzer)"
+        },
+        "canon_tag": {
+          "type": "string",
+          "description": "Unique canon identifier (e.g., fft-analyzer, sarg-core, rtt-core)"
+        },
+        "version": {
+          "type": "string",
+          "description": "Module version (e.g., 2026.2)"
+        },
+        "layer": {
+          "type": "string",
+          "description": "Architectural layer within TriadicFrameworks",
+          "enum": [
+            "Core Frameworks — Structural Spine",
+            "Core Frameworks — Theoretical",
+            "Applied Domain Models",
+            "Research & Validation",
+            "Education & Teaching",
+            "Tools & Infrastructure",
+            "Meta & Governance"
+          ]
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active, Canonical", "Active, Draft", "Deprecated", "Planned"]
+        },
+        "purpose": {
+          "type": "string",
+          "description": "One-sentence module purpose"
+        },
+        "parent": {
+          "type": ["string", "null"],
+          "description": "Parent module canon_tag, or null if top-level"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Canonical URL on triadicframeworks.org"
+        }
+      }
+    },
+    "session_context": {
+      "type": "object",
+      "description": "Machine-readable session context — same fields as the HTML session context block",
+      "properties": {
+        "canon": { "type": "string" },
+        "modules_linked": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "drift": { "type": "string" },
+        "coherence": { "type": "string" },
+        "format": { "type": "string" },
+        "front_door": { "type": "string" },
+        "every_page": { "type": "string" },
+        "audience": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "structural_grammar": {
+      "type": "object",
+      "description": "RTT structural grammar coordinates for this module",
+      "properties": {
+        "dimensional_envelope": { "type": "string", "description": "e.g., D0–D7" },
+        "regime_envelope": { "type": "string", "description": "e.g., R0–R3" },
+        "coherence_envelope": { "type": "string", "description": "e.g., C0–C4" },
+        "drift_sensitivity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "very_high", "extremely_high"]
+        },
+        "regime_sensitivity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "very_high", "extremely_high"]
+        }
+      }
+    },
+    "cross_module_propagation": {
+      "type": "object",
+      "properties": {
+        "imports": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Modules this module depends on"
+        },
+        "exports": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "What this module provides to others"
+        }
+      }
+    },
+    "submodules": {
+      "type": "array",
+      "description": "Child submodules within this module",
+      "items": {
+        "type": "object",
+        "required": ["name", "path", "file_count"],
+        "properties": {
+          "name": { "type": "string" },
+          "path": { "type": "string" },
+          "file_count": { "type": "integer" },
+          "role": { "type": "string" },
+          "manifest": {
+            "type": "string",
+            "description": "Relative path to this submodule's own module.json"
+          }
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "description": "Every content file in this module with its canonical purpose",
+      "items": {
+        "type": "object",
+        "required": ["filename", "path", "purpose", "role"],
+        "properties": {
+          "filename": { "type": "string" },
+          "path": {
+            "type": "string",
+            "description": "Relative path from module root"
+          },
+          "purpose": {
+            "type": "string",
+            "description": "What this file does within the canon — one sentence"
+          },
+          "role": {
+            "type": "string",
+            "description": "Structural role within the module",
+            "enum": [
+              "engine",
+              "profile",
+              "signature",
+              "diagnostic",
+              "map",
+              "example",
+              "extension",
+              "index",
+              "reference",
+              "template"
+            ]
+          },
+          "analyzer_layer": {
+            "type": "string",
+            "description": "Which FFT Analyzer layer this file operates at (if applicable)",
+            "enum": ["operator", "dimensional", "regime", "drift", "coherence", "cross-cutting"]
+          },
+          "depends_on": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Other files in this module that this file references or requires"
+          }
+        }
+      }
+    }
+  }
+}
