@@ -5,4 +5,4 @@ It provides the conceptual backbone for simulations and file formats.
 
 Here, cognition is treated as resonance: direct, reflective, and inverted.
 
-- [`nous_module.json`](nous_module.json) — Module schema role assignments
+- [`nous_module.json`](nous_module.json) — Agentic module schema role assignments
