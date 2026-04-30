@@ -58,3 +58,5 @@ To use the application on one’s own DFT calculations, two scripts need to be r
 ## Acknowledgements
 
 This work received funding from the European Union’s Horizon 2020 research and innovation program under Grant Agreement No. 829067 (FET Open THOR). The authors want to thank Giovanni Pizzi and Dou Du for their technical support during the development of the website. 
+
+- [`mve_module.json`](mve_module.json) — Agentic module schema role assignments
