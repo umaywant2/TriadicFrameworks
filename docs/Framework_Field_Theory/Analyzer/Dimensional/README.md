@@ -1,16 +1,18 @@
-# FFT Dimensional Analyzer — README.md
+# Dimensional Analyzer
 
-### _Canonical Submodule (2026 Edition)_
-
-## Metadata
+> **Module path:** `Framework_Field_Theory/Analyzer/Dimensional/`
+> **Parent module:** [FFT Analyzer](../README.md)
+> **Layer:** Core Frameworks — Structural Spine
 
 ---
 
-```
+## Metadata
+
+```yaml
 module: FFT Dimensional Analyzer
 parent_module: FFT Analyzer
 layer: Core Frameworks — Structural Spine
-version: 2026.1
+version: 2026.2
 status: Active, Canonical
 analyzer_type:
   - dimensional envelope analysis
@@ -18,6 +20,7 @@ analyzer_type:
   - dimensional transition mapping
   - collapse detection
   - meta-dimensional extension analysis
+
 session_context:
   drift_sensitivity: high
   regime_sensitivity: medium
@@ -26,9 +29,11 @@ session_context:
     - dimensional assumptions must be explicit
     - transitions must be declared
     - collapse risks must be surfaced
+
 cross_module_propagation:
   imports:
     - FFT dimensional architecture
+    - FFT operator families
     - SARG regime geometry
     - Mode substrate states
     - Substrate Flow invariants
@@ -37,236 +42,179 @@ cross_module_propagation:
     - compatibility tables
     - transition maps
     - collapse diagnostics
+    - meta-dimensional extension profiles
 ```
 
 ---
 
 ## Purpose
 
-The FFT Dimensional Analyzer evaluates the **dimensional structure** of any framework, model, or system expressed within Framework Field Theory.
-Dimensions in FFT (D0–D7) define the **structural substrate** a framework occupies, and dimensional transitions determine how frameworks evolve, scale, or collapse.
+The FFT Dimensional Analyzer evaluates the **dimensional structure** of any framework, model, or system expressed within Framework Field Theory. Dimensions in FFT (D0–D7) define the **structural substrate** a framework occupies, and dimensional transitions determine how frameworks evolve, scale, or collapse.
 
 This analyzer identifies:
 
-- the current dimensional envelope
-- dimensional compatibility
-- dimensional stability
-- transition pathways
-- collapse risks
-- meta‑dimensional extensions
+- dimensional envelope and positioning (D0–D7)
+- compatibility between dimensional structures
+- unique dimensional signatures
+- transition pathways and risks
+- collapse conditions and diagnostics
+- meta-dimensional extensions beyond the base envelope
 
-It is the **spatial‑structural diagnostic** of FFT.
+It is the **structural geometry diagnostic** of FFT.
 
 ---
 
 ## Dimensional Model (D0–D7)
 
-**D0 — Null Substrate**  
-No structure; pre‑framework state.  
-
-**D1 — Linear Substrate**  
-Single‑axis logic; sequences; chains.  
-
-**D2 — Planar Substrate**  
-Dual‑axis logic; grids; surfaces.  
-
-**D3 — Spatial Substrate**  
-Three‑axis logic; volumes; systems.  
-
-**D4 — Resonant Substrate**  
-Harmonic coupling; resonance fields.  
-
-**D5 — Coherent Substrate**  
-Stable coherence; field‑locked behavior.  
-
-**D6 — Regime Substrate**  
-Regime‑aware dimensional behavior.  
-
-**D7 — Field Substrate**  
-Unified field behavior; meta‑dimensional.  
+| Level | Name | Description |
+|-------|------|-------------|
+| **D0** | Point | No dimensional structure; atomic, irreducible |
+| **D1** | Line | Single-axis structure; sequential, linear |
+| **D2** | Plane | Two-axis structure; relational, flat |
+| **D3** | Volume | Three-axis structure; contextual, spatial |
+| **D4** | Temporal | Time-aware structure; evolutionary, historical |
+| **D5** | Recursive | Self-referencing structure; meta-aware, layered |
+| **D6** | Relational Field | Field-level structure; interconnected, emergent |
+| **D7** | Universal | Full-envelope structure; substrate-complete |
 
 ---
 
 ## What the Dimensional Analyzer Detects
 
 ### 1. Dimensional Envelope
-
-Determines the framework’s:
-
-- current dimension
-- dimensional stability
-- dimensional boundaries
+- Current dimensional level (D0–D7)
+- Envelope boundaries and stability
+- Dimensional density
 
 ### 2. Dimensional Compatibility
+- Cross-system dimensional alignment
+- Interoperability between dimensional structures
+- Mismatch vectors
 
-Evaluates compatibility between:
+### 3. Dimensional Signatures
+- Unique fingerprints that identify a system's dimensional profile
+- Signature comparison across frameworks
 
-- operators and dimensions
-- regimes and dimensions
-- coherence envelopes and dimensions
+### 4. Dimensional Transitions
+- Pathways between dimensional states
+- Transition prerequisites and risks
+- Transition velocity and smoothness
 
-### 3. Dimensional Transitions
+### 5. Dimensional Collapse
+- Conditions triggering dimensional reduction
+- Collapse indicators and early warnings
+- Recovery pathways
 
-Maps:
-
-- upward transitions (e.g., D3 → D4)
-- downward transitions (e.g., D4 → D2)
-- blocked transitions
-- transition cost and risk
-
-### 4. Dimensional Collapse
-
-Detects:
-
-- collapse vectors
-- collapse triggers
-- paradox‑induced collapse
-- operator‑driven collapse
-
-### 5. Meta‑Dimensional Extensions
-
-Identifies:
-
-- D7+ extensions
-- field‑level coupling
-- cross‑framework dimensional behavior
+### 6. Meta-Dimensional Extensions
+- Higher-order constructs emerging from base-layer interactions
+- Extension stability and coherence requirements
+- Cross-dimensional resonance patterns
 
 ---
 
-## Analyzer Structure
-
-The Dimensional Analyzer folder should contain:
+## Directory Structure
 
 ```
 Dimensional/
-  README.md
-  Dimensional_Analyzer.md
-  Dimensional_Compatibility.md
-  Dimensional_Transitions.md
-  Dimensional_Collapse.md
-  Dimensional_Signatures.md
-  MetaDimensional_Extensions.md
-  Examples.md
+├── README.md
+├── Dimensional_Analyzer.md
+├── Dimensional_Compatibility.md
+├── Dimensional_Signatures.md
+├── MetaDimensional_Extensions.md
+├── Dimensional_Transitions.md
+├── Dimensional_Collapse.md
+└── Dimensional_Examples.md
 ```
 
-Each file corresponds to a specific diagnostic function.
+---
+
+## Files
+
+| File | Purpose |
+|------|---------|
+| **Dimensional_Analyzer.md** | Core dimensional-analysis engine — counts, classifies, and validates dimensional structure across D0–D7 |
+| **Dimensional_Compatibility.md** | Tests whether dimensional structures across systems can interoperate; surfaces mismatch vectors |
+| **Dimensional_Signatures.md** | Unique dimensional fingerprints for system identification and comparison |
+| **MetaDimensional_Extensions.md** | Higher-order dimensional constructs that emerge from base-layer interactions |
+| **Dimensional_Transitions.md** | How systems move between dimensional states under transformation; transition prerequisites and risks |
+| **Dimensional_Collapse.md** | Conditions and diagnostics for dimensional reduction or failure; early-warning indicators |
+| **Dimensional_Examples.md** | Worked dimensional-analysis examples across domains |
 
 ---
 
 ## How to Use the Dimensional Analyzer
 
-### Step 1 — Declare the Framework
+**Step 1 — Declare the Framework**
+Provide: dimensional assumptions, operator pattern, regime state, coherence envelope.
 
-Provide:
+**Step 2 — Identify Dimensional Envelope**
+The analyzer determines: D0–D7 position, envelope boundaries, dimensional density.
 
-- dimensional assumptions
-- operator pattern
-- regime state
-- coherence envelope
+**Step 3 — Test Compatibility**
+Cross-reference against other systems: dimensional alignment, interoperability, mismatch vectors.
 
-### Step 2 — Identify Dimensional Envelope
+**Step 4 — Map Transitions**
+Identify: available transition pathways, prerequisites, risks, velocity.
 
-The analyzer determines:
+**Step 5 — Detect Collapse Risks**
+Surface: collapse conditions, early-warning indicators, recovery pathways.
 
-- current dimension
-- dimensional stability
-- dimensional boundaries
+**Step 6 — Check Meta-Dimensional Extensions**
+Evaluate: emergent higher-order structures, extension stability, cross-dimensional resonance.
 
-### Step 3 — Evaluate Compatibility
-
-Checks:
-
-- operator–dimension compatibility
-- regime–dimension compatibility
-- coherence–dimension compatibility
-
-### Step 4 — Map Transitions
-
-Identifies:
-
-- upward transitions
-- downward transitions
-- blocked transitions
-- transition cost
-
-### Step 5 — Detect Collapse
-
-Evaluates:
-
-- collapse vectors
-- collapse risk
-- collapse triggers
-
-### Step 6 — Generate Dimensional Signature
-
-A dimensional signature includes:
-
-- dimensional envelope
-- compatibility profile
-- transition map
-- collapse risk
-- meta‑dimensional potential
+**Step 7 — Generate Dimensional Signature**
+A dimensional signature includes: D-level, envelope stability, compatibility profile, transition readiness, collapse risk, meta-dimensional potential.
 
 ---
 
 ## Example Output
 
-```
-Framework: Ecological Systems Model
+```yaml
+Framework: Agile Software Development
 Dimensional Signature:
-  envelope: D3 → D4 (transitioning)
-  compatibility: strong with R, E, C operators
-  transitions:
-    - D3 → D4 available
-    - D4 → D5 blocked (coherence insufficient)
+  dimension: D3 (Volume)
+  envelope_stability: high
+  compatibility: strong with D2–D4 systems
+  transition_readiness: D4 achievable (requires temporal awareness)
   collapse_risk: low
-  meta_dimensional: none
-  notes: resonance substrate forming; coherence envelope stabilizing
+  meta_dimensional: none detected
+  notes: stable volumetric structure; temporal extension pathway clear
 ```
 
 ---
 
 ## Navigation
 
-```
-- [README.md](./README.md)
 - [Dimensional Analyzer](./Dimensional_Analyzer.md)
 - [Dimensional Compatibility](./Dimensional_Compatibility.md)
+- [Dimensional Signatures](./Dimensional_Signatures.md)
+- [MetaDimensional Extensions](./MetaDimensional_Extensions.md)
 - [Dimensional Transitions](./Dimensional_Transitions.md)
 - [Dimensional Collapse](./Dimensional_Collapse.md)
-- [Dimensional Signatures](./Dimensional_Signatures.md)
-- [Meta-Dimensional Extensions](./MetaDimensional_Extensions.md)
-- [Examples](./Examples.md)
-```
+- [Dimensional Examples](./Dimensional_Examples.md)
 
 ---
 
-## Cross‑Module Integration
+## Cross-Module Integration
 
-### FFT Analyzer
-
-- operator patterns
-- coherence profiles
-- drift vectors
-
-### SARG
-
-- regime geometry
-- regime‑dependent dimensional behavior
-
-### Mode
-
-- substrate states
-- mode‑dependent dimensional shifts
-
-### Substrate Flow
-
-- flow‑driven dimensional transitions
-- substrate‑dependent collapse
+| Module | Relationship |
+|--------|-------------|
+| **FFT Analyzer** | Operator patterns, coherence envelopes, drift vectors, regime states |
+| **SARG** | Regime geometry; regime-dependent dimensional behavior |
+| **Mode** | Substrate states; mode-dependent dimensional shifts |
+| **Substrate Flow** | Flow-driven dimensional changes; substrate-dependent transition behavior |
 
 ---
 
-## License
+## Related Modules
 
-TriadicFrameworks — Open Canon License (OCL‑3).
-Use permitted for education, research, and derivative frameworks.
+- [FFT Analyzer](../README.md) — Parent Analyzer module
+- [Drift](../Drift/README.md) — Drift detection across all layers
+- [Regime](../Regime/README.md) — Regime classification and boundary diagnostics
+- [Operators](../Operators/README.md) — Operator profiling and regime coupling
+- [Coherence](../Coherence/README.md) — Coherence stability and paradox exposure
+- [FFT Dimensionality (theory)](../../Dimensionality/README.md) — Dimensional theory and architecture
+
+---
+
+*Part of [TriadicFrameworks](../../../../README.md) · Framework Field Theory · Analyzer*
