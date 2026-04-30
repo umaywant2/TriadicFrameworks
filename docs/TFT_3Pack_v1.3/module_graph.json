@@ -1,68 +1,82 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/module_graph.schema.json",
-  "$generated": "2026-04-30T17:09:00",
-  "$version": "3.0",
+  "$generated": "2026-04-30T17:34:00",
+  "$version": "4.0",
   "meta": {
-    "title": "TriadicFrameworks — Complete Module Graph (14 Schemas)",
-    "description": "Consolidated dependency graph stitching 14 canonical RTT module schemas — 13 from TFT_3Pack_v1.3 (including scripts and docs sub-modules) plus the Governance Substrate Model (GSM) as a peer top-level module under docs/. Includes hierarchy edges, import/export mappings, cross-references, circular dependency detection, and aggregate analytics.",
-    "root_module": "tft-3pack",
-    "schema_count": 14,
-    "total_files_catalogued": 954,
-    "total_submodules": 75,
+    "title": "TriadicFrameworks — Complete Module Graph (15 Schemas)",
+    "description": "Consolidated dependency graph stitching 15 canonical RTT module schemas — the universal web root (webroot) as the single root parent, containing TFT_3Pack_v1.3 (13 child module schemas) and the Governance Substrate Model (GSM). Includes hierarchy edges, import/export mappings, cross-references, circular dependency detection, and aggregate analytics.",
+    "root_module": "webroot",
+    "schema_count": 15,
+    "total_files_catalogued": 967,
+    "total_submodules": 77,
     "total_internal_dependency_arcs": 26,
     "total_import_edges": 2,
     "total_internal_import_edges": 0,
-    "total_external_import_edges": 2,
+    "total_external_import_edges": 5,
     "circular_dependency_count": 2
   },
   "hierarchy": {
     "tree": {
-      "tft-3pack": {
+      "webroot": {
         "children": {
-          "wrsadc": {
-            "children": {}
-          },
-          "examples": {
-            "children": {}
-          },
-          "formats": {
-            "children": {}
-          },
-          "melodic-table": {
-            "children": {}
-          },
-          "mve": {
-            "children": {}
-          },
-          "tft-core": {
+          "tft-3pack": {
             "children": {
-              "tops": {
+              "wrsadc": {
                 "children": {}
               },
-              "entft": {
+              "examples": {
                 "children": {}
               },
-              "nous": {
+              "formats": {
                 "children": {}
               },
-              "resonance-labs": {
+              "melodic-table": {
+                "children": {}
+              },
+              "mve": {
+                "children": {}
+              },
+              "tft-core": {
+                "children": {
+                  "tops": {
+                    "children": {}
+                  },
+                  "entft": {
+                    "children": {}
+                  },
+                  "nous": {
+                    "children": {}
+                  },
+                  "resonance-labs": {
+                    "children": {}
+                  }
+                }
+              },
+              "scripts": {
+                "children": {}
+              },
+              "docs": {
                 "children": {}
               }
             }
           },
-          "scripts": {
-            "children": {}
-          },
-          "docs": {
+          "gsm": {
             "children": {}
           }
         }
-      },
-      "gsm": {
-        "children": {}
       }
     },
     "edges": [
+      {
+        "parent": "webroot",
+        "child": "tft-3pack",
+        "relationship": "contains"
+      },
+      {
+        "parent": "webroot",
+        "child": "gsm",
+        "relationship": "contains"
+      },
       {
         "parent": "tft-3pack",
         "child": "wrsadc",
@@ -126,10 +140,13 @@
     ],
     "depth_map": {
       "0": [
+        "webroot"
+      ],
+      "1": [
         "tft-3pack",
         "gsm"
       ],
-      "1": [
+      "2": [
         "wrsadc",
         "examples",
         "formats",
@@ -139,7 +156,7 @@
         "scripts",
         "docs"
       ],
-      "2": [
+      "3": [
         "tops",
         "entft",
         "nous",
@@ -156,7 +173,7 @@
       "layer": "Tools & Infrastructure",
       "status": "Active, Canonical",
       "purpose": "Compact, example-driven toolkit demonstrating the TriadicFrameworks model across 12 academic domains via shell scripts, .fff resonance files, and a dark-themed documentation system.",
-      "parent": null,
+      "parent": "webroot",
       "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/",
       "structural_grammar": {
         "dimensional_envelope": "D3–D9",
@@ -657,7 +674,7 @@
       "version": "1.0",
       "status": "Active, Canonical",
       "purpose": "Structurally aligned reference framework for designing, evaluating, and stewarding governance systems across cultures, regimes, and time horizons. Encodes ten governance layers (Invariants through Adapters) plus a full Analyzer engine that maps systems into a five-axis structural space [C,M,O,A,T], checks alignment against invariants, computes drift vectors, and determines equilibrium basin membership. Behavior-first, non-ideological, substrate-agnostic — designed to remain legible hundreds of years forward.",
-      "parent": null,
+      "parent": "webroot",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model",
       "structural_grammar": {
         "dimensional_envelope": "D3–D9 (triadic governance geometry × regime modes × time horizons)",
@@ -788,6 +805,52 @@
         "internal_dependency_arcs": 1
       },
       "children": []
+    },
+    "webroot": {
+      "canon_tag": "webroot",
+      "name": "TriadicFrameworks Web Root",
+      "path": "docs",
+      "version": "1.0",
+      "layer": "Meta & Governance",
+      "status": "Active, Canonical",
+      "purpose": "Universal root of the TriadicFrameworks ecosystem — the canonical, navigation-first entry point rendered directly as the project website (triadicframeworks.org). Defines the site-wide structural grammar through 13 common scrolls covering identity, principles, ethics, lineage, security, contribution, licensing, and orientation. Parent to all child modules. Designed as an AI-ready substrate — every page stands alone, every module is machine-parsable, and the repo is the single source of truth.",
+      "parent": null,
+      "url": "https://www.triadicframeworks.org/",
+      "structural_grammar": {
+        "dimensional_envelope": "D3–D9 (inherited by all child modules)",
+        "regime_envelope": "R1–R3 (full regime range — child modules select within this envelope)",
+        "coherence_envelope": "C1–C3 (root coherence contract inherited ecosystem-wide)",
+        "drift_sensitivity": "minimal (root-locked)",
+        "regime_sensitivity": "high (root defines regime awareness as a structural duty)"
+      },
+      "session_summary": {
+        "drift": "minimal (root-locked — structural grammar is invariant by design)",
+        "coherence": "stable (triadic-structural grammar — the grammar that all child modules inherit)",
+        "format": "markdown",
+        "front_door": "exists (docs/README.md → triadicframeworks.org)"
+      },
+      "stats": {
+        "file_count": 13,
+        "submodule_count": 2,
+        "role_distribution": {
+          "reference": 11,
+          "index": 1,
+          "map": 1
+        },
+        "layer_distribution": {
+          "regime": 5,
+          "cross-cutting": 3,
+          "coherence": 2,
+          "drift": 1,
+          "operator": 1
+        },
+        "layer_coverage": "5/6",
+        "internal_dependency_arcs": 0
+      },
+      "children": [
+        "tft-3pack",
+        "gsm"
+      ]
     }
   },
   "edges": [
@@ -948,7 +1011,21 @@
         "Layer illustrations (entft_layers.svg, nous_logic.svg, tops_grid.svg)",
         "Glyph lifecycle SVG maps (fusion, reawakening, retirement, echo in _svg/)"
       ]
-    }
+    },
+    "webroot": [
+      "Site-wide structural grammar (13 common scrolls defining ecosystem identity and conventions)",
+      "10 canon principles (clarity, coherence, triads, resonance, modularity, lineage, mythic, safety, copilot, love→legacy→learning)",
+      "AI-readiness standard (metadata, module addressability, session-context blocks, operator grammar)",
+      "Privacy/architectural/ethical posture (zero tracking, knowledge substrate, open science)",
+      "9-element canonical lineage spine (TFT_3Pack → Universal Translator)",
+      "README authoring conventions (navigation-first, about-for-narrative, html-renders-markdown)",
+      "Canonical glossary (term definitions used across all child modules)",
+      "Contribution and code-of-conduct framework",
+      "Security and ethics/privacy boundaries",
+      "License framework (ecosystem-wide)",
+      "Sitemap (full ecosystem navigation structure)",
+      "Quickstart onboarding pathway"
+    ]
   },
   "cross_references": [
     {
@@ -1098,6 +1175,17 @@
         "index.ipynb → database.ipynb | molecule.ipynb | modes.ipynb | search.ipynb — Voilà entry point",
         "dft2app/ → data_*/ — Gaussian DFT output conversion pipeline for database extension",
         "tools/helper_functions.py ← all tools/*.py — shared tensor math and spectroscopy utilities"
+      ],
+      "webroot": [
+        "README.md → all child modules — canonical navigation hub",
+        "ABOUT.md ↔ PRINCIPLES.md — identity/intent ↔ structural foundations",
+        "LINEAGE.md → all child modules — 9-element canonical lineage",
+        "CONTRIBUTING.md ↔ CODE_OF_CONDUCT.md ↔ SECURITY.md — contribution → behavior → boundaries",
+        "GLOSSARY.md → all child modules — canonical term definitions",
+        "QUICKSTART.md → TFT_3Pack_v1.3/ — onboarding entry",
+        "sitemap.md → all child modules — full ecosystem map",
+        "ETHICS_PRIVACY.md ↔ LICENSE.md — ethical posture ↔ legal framework",
+        "Main_README_files.md → all child module READMEs — authoring standard"
       ]
     },
     {
@@ -1144,16 +1232,16 @@
     }
   ],
   "analytics": {
-    "total_files": 954,
-    "total_submodules": 75,
-    "schema_count": 14,
+    "total_files": 967,
+    "total_submodules": 77,
+    "schema_count": 15,
     "aggregate_role_distribution": {
-      "reference": 248,
+      "reference": 259,
       "profile": 248,
       "engine": 166,
-      "index": 99,
+      "index": 100,
       "example": 71,
-      "map": 53,
+      "map": 54,
       "template": 32,
       "diagnostic": 31,
       "extension": 4,
@@ -1161,11 +1249,11 @@
     },
     "aggregate_layer_distribution": {
       "dimensional": 239,
-      "cross-cutting": 229,
-      "regime": 133,
-      "operator": 131,
-      "drift": 79,
-      "coherence": 58
+      "cross-cutting": 232,
+      "regime": 138,
+      "operator": 132,
+      "drift": 80,
+      "coherence": 60
     },
     "modules_with_full_layer_coverage": [
       "tops",
@@ -1187,10 +1275,13 @@
     ],
     "depth_distribution": {
       "0": [
+        "webroot"
+      ],
+      "1": [
         "tft-3pack",
         "gsm"
       ],
-      "1": [
+      "2": [
         "wrsadc",
         "examples",
         "formats",
@@ -1200,7 +1291,7 @@
         "scripts",
         "docs"
       ],
-      "2": [
+      "3": [
         "tops",
         "entft",
         "nous",
@@ -1252,6 +1343,27 @@
       "to": "formats",
       "type": "import",
       "label": ".fff format spec mirrored in fff_spec.md"
+    },
+    {
+      "source": "webroot",
+      "target": "rtt-core",
+      "type": "import",
+      "internal": false,
+      "label": "resonance-aware structural grammar — dimensional envelopes, regime modes, coherence levels"
+    },
+    {
+      "source": "webroot",
+      "target": "rtt-inside",
+      "type": "import",
+      "internal": false,
+      "label": "wrapped resonance structural aware dimensional cores"
+    },
+    {
+      "source": "webroot",
+      "target": "nawderian-theorem",
+      "type": "import",
+      "internal": false,
+      "label": "dimensional corridor logic and resonance constants"
     }
   ]
 }

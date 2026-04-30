@@ -1,6 +1,5 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
   "module": {
     "name": "Governance Substrate Model",
     "path": "docs/Governance_Substrate_Model",
@@ -9,10 +8,9 @@
     "layer": "Meta & Governance",
     "status": "Active, Canonical",
     "purpose": "Structurally aligned reference framework for designing, evaluating, and stewarding governance systems across cultures, regimes, and time horizons. Encodes ten governance layers (Invariants through Adapters) plus a full Analyzer engine that maps systems into a five-axis structural space [C,M,O,A,T], checks alignment against invariants, computes drift vectors, and determines equilibrium basin membership. Behavior-first, non-ideological, substrate-agnostic — designed to remain legible hundreds of years forward.",
-    "parent": null,
+    "parent": "webroot",
     "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model"
   },
-
   "session_context": {
     "canon": "active (gsm — top-level TriadicFrameworks doc module)",
     "modules_linked": [
@@ -31,9 +29,15 @@
     "format": "markdown + yaml + html",
     "front_door": "exists (Governance_Substrate_Model/README.md + index.html)",
     "every_page": "stands alone + student-ready + operator-aware + regime-tagged",
-    "audience": ["students", "educators", "developers", "researchers", "AIs", "policymakers"]
+    "audience": [
+      "students",
+      "educators",
+      "developers",
+      "researchers",
+      "AIs",
+      "policymakers"
+    ]
   },
-
   "structural_grammar": {
     "dimensional_envelope": "D3–D9 (triadic governance geometry × regime modes × time horizons)",
     "regime_envelope": "R1–R3 (multi-regime governance design — R3 for cross-regime stress testing and adapter mapping)",
@@ -53,9 +57,21 @@
       "10_Adapters": "Domain-specific mappings — education, industry, medicine, economics, punishment/rehabilitation, legacy system, local leadership, partial alignment, containment"
     },
     "structural_vector_space": {
-      "axes": ["C (Centralization)", "M (Market Integration)", "O (Openness)", "A (Accountability)", "T (Time Horizon)"],
+      "axes": [
+        "C (Centralization)",
+        "M (Market Integration)",
+        "O (Openness)",
+        "A (Accountability)",
+        "T (Time Horizon)"
+      ],
       "purpose": "Five-axis coordinate system for positioning any governance system in the governance manifold",
-      "operations": ["invariant_check", "drift_detection", "basin_alignment", "regime_shift_detection", "coherence_scoring"]
+      "operations": [
+        "invariant_check",
+        "drift_detection",
+        "basin_alignment",
+        "regime_shift_detection",
+        "coherence_scoring"
+      ]
     },
     "alignment_primitives": {
       "P1": "Alignment precedes enforcement",
@@ -70,7 +86,6 @@
       "structural clarity > narrative persuasion"
     ]
   },
-
   "cross_module_propagation": {
     "imports": [
       "rtt-core (resonance-aware structural grammar — dimensional envelopes, regime modes, coherence levels)",
@@ -88,7 +103,6 @@
       "Observer schemas (past/now/future) for temporal governance tracking"
     ]
   },
-
   "submodules": [
     {
       "name": "01_Invariants",
@@ -168,7 +182,6 @@
       "manifest": null
     }
   ],
-
   "files": [
     {
       "filename": "README.md",
@@ -190,7 +203,6 @@
       "role": "profile",
       "analyzer_layer": "cross-cutting"
     },
-
     {
       "filename": "Alignment_Over_Enforcement.md",
       "path": "01_Invariants/Alignment_Over_Enforcement.md",
@@ -219,7 +231,6 @@
       "role": "reference",
       "analyzer_layer": "regime"
     },
-
     {
       "filename": "AI_Assisted_Sensing.md",
       "path": "02_Awareness/AI_Assisted_Sensing.md",
@@ -255,7 +266,6 @@
       "role": "reference",
       "analyzer_layer": "regime"
     },
-
     {
       "filename": "Cross_Regime_Stress_Tests.md",
       "path": "03_Evaluation/Cross_Regime_Stress_Tests.md",
@@ -284,7 +294,6 @@
       "role": "diagnostic",
       "analyzer_layer": "cross-cutting"
     },
-
     {
       "filename": "DOI_Canon_Interface.md",
       "path": "04_Validation/DOI_Canon_Interface.md",
@@ -313,7 +322,6 @@
       "role": "diagnostic",
       "analyzer_layer": "coherence"
     },
-
     {
       "filename": "AI_Alignment_Surfaces.md",
       "path": "05_Implementation/AI_Alignment_Surfaces.md",
@@ -342,7 +350,6 @@
       "role": "map",
       "analyzer_layer": "operator"
     },
-
     {
       "filename": "Maintaining_Legibility.md",
       "path": "06_Leadership/Maintaining_Legibility.md",
@@ -371,7 +378,6 @@
       "role": "reference",
       "analyzer_layer": "drift"
     },
-
     {
       "filename": "Global_Coordination.md",
       "path": "07_Incubation/Global_Coordination.md",
@@ -400,7 +406,6 @@
       "role": "reference",
       "analyzer_layer": "drift"
     },
-
     {
       "filename": "Late_Correction_Costs.md",
       "path": "08_History/Late_Correction_Costs.md",
@@ -429,7 +434,6 @@
       "role": "reference",
       "analyzer_layer": "regime"
     },
-
     {
       "filename": "Case_Studies.md",
       "path": "09_Appendices/Case_Studies.md",
@@ -462,7 +466,6 @@
       "role": "reference",
       "analyzer_layer": "cross-cutting"
     },
-
     {
       "filename": "Containment_When_Translation_Fails.md",
       "path": "10_Adapters/Containment_When_Translation_Fails.md",
@@ -490,7 +493,9 @@
       "purpose": "Adapter for inverted economics models — structural interface with GSM alignment principles",
       "role": "extension",
       "analyzer_layer": "dimensional",
-      "depends_on": ["Inverted_Economics module (TriadicFrameworks peer)"]
+      "depends_on": [
+        "Inverted_Economics module (TriadicFrameworks peer)"
+      ]
     },
     {
       "filename": "Legacy_System_Mapping.md",
@@ -527,7 +532,6 @@
       "role": "extension",
       "analyzer_layer": "regime"
     },
-
     {
       "filename": "README.md",
       "path": "Analyzer/README.md",
@@ -566,7 +570,6 @@
       "purpose": "Web entry point for the Analyzer documentation and interactive tools",
       "role": "index"
     },
-
     {
       "filename": "alignment_analyzer.md",
       "path": "Analyzer/alignment_analyzer.md",
@@ -630,7 +633,6 @@
       "role": "engine",
       "analyzer_layer": "operator"
     },
-
     {
       "filename": "governance_manifold.yaml",
       "path": "Analyzer/governance_manifold.yaml",
@@ -659,14 +661,15 @@
       "role": "reference",
       "analyzer_layer": "dimensional"
     },
-
     {
       "filename": "behavioral_invariants.yaml",
       "path": "Analyzer/behavioral_invariants.yaml",
       "purpose": "Machine-readable invariant rules derived from 01_Invariants — structural compliance checks",
       "role": "engine",
       "analyzer_layer": "coherence",
-      "depends_on": ["01_Invariants/Invariant_Principles.md"]
+      "depends_on": [
+        "01_Invariants/Invariant_Principles.md"
+      ]
     },
     {
       "filename": "invariant_check_rules.yaml",
@@ -674,7 +677,9 @@
       "purpose": "Specific check rules for evaluating invariant compliance in governance analysis",
       "role": "engine",
       "analyzer_layer": "coherence",
-      "depends_on": ["behavioral_invariants.yaml"]
+      "depends_on": [
+        "behavioral_invariants.yaml"
+      ]
     },
     {
       "filename": "coherence_event_schema.yaml",
@@ -697,7 +702,6 @@
       "role": "engine",
       "analyzer_layer": "coherence"
     },
-
     {
       "filename": "drift_detection.yaml",
       "path": "Analyzer/drift_detection.yaml",
@@ -719,14 +723,15 @@
       "role": "engine",
       "analyzer_layer": "regime"
     },
-
     {
       "filename": "awareness_layers.yaml",
       "path": "Analyzer/awareness_layers.yaml",
       "purpose": "Structural definition of awareness layers consumed by the sensing subsystem",
       "role": "profile",
       "analyzer_layer": "operator",
-      "depends_on": ["02_Awareness/"]
+      "depends_on": [
+        "02_Awareness/"
+      ]
     },
     {
       "filename": "phase_discipline.yaml",
@@ -770,7 +775,6 @@
       "role": "profile",
       "analyzer_layer": "operator"
     },
-
     {
       "filename": "transition_graph.yaml",
       "path": "Analyzer/transition_graph.yaml",
@@ -799,7 +803,6 @@
       "role": "profile",
       "analyzer_layer": "cross-cutting"
     },
-
     {
       "filename": "observer_now_schema.yaml",
       "path": "Analyzer/observer_now_schema.yaml",
@@ -835,7 +838,6 @@
       "role": "template",
       "analyzer_layer": "operator"
     },
-
     {
       "filename": "governance_alignment_dashboard.md",
       "path": "Analyzer/governance_alignment_dashboard.md",
@@ -878,7 +880,6 @@
       "role": "map",
       "analyzer_layer": "cross-cutting"
     },
-
     {
       "filename": "index_artifacts.md",
       "path": "Analyzer/index_artifacts.md",
@@ -899,7 +900,6 @@
       "role": "index",
       "analyzer_layer": "dimensional"
     },
-
     {
       "filename": "instructor_teaching_guide.md",
       "path": "Analyzer/instructor_teaching_guide.md",
@@ -930,7 +930,6 @@
       "purpose": "Student profile worksheet for self-assessment of governance substrate understanding",
       "role": "example"
     },
-
     {
       "filename": "australia.yaml",
       "path": "Analyzer/profiles/australia.yaml",
