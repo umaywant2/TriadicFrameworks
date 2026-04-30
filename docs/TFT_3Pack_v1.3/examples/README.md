@@ -39,3 +39,4 @@ Use them to:
 - [overlays](/docs/TFT_3Pack_v1.3/tft/tops/overlays/README.md) → agents feed glyphs into dashboards, now base-tagged
 - [ai_pipeline](/docs/TFT_3Pack_v1.3/tft/tops/ai_pipeline/README.md) → agents consume predictions, filtered by base lens
 - [folds](/docs/TFT_3Pack_v1.3/tft/tops/folds/README.md) → agents orchestrate bio-resonance data, declaring harmonic lens
+- [`examples_module.json`](examples_module.json) — Agentic module schema role assignments
