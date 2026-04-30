@@ -1,21 +1,25 @@
-# **FFT Drift Analyzer — README.md**  
-### *Canonical Submodule (2026 Edition)*
+# Drift Analyzer
+
+> **Module path:** `Framework_Field_Theory/Analyzer/Drift/`
+> **Parent module:** [FFT Analyzer](../README.md)
+> **Layer:** Core Frameworks — Structural Spine
 
 ---
 
-## **Metadata**
-```
+## Metadata
+
+```yaml
 module: FFT Drift Analyzer
 parent_module: FFT Analyzer
 layer: Core Frameworks — Structural Spine
-version: 2026.1
+version: 2026.2
 status: Active, Canonical
 analyzer_type:
   - drift detection
   - drift classification
   - drift mapping
   - paradox-induced drift analysis
-  - dimensional collapse detection
+
 session_context:
   drift_sensitivity: very_high
   regime_sensitivity: high
@@ -24,200 +28,159 @@ session_context:
     - operator grammar must be explicit
     - drift vectors must be declared
     - paradox exposure must be identified
+
 cross_module_propagation:
   imports:
     - FFT operator families
+    - FFT dimensional architecture
+    - FFT coherence engines
     - SARG regime geometry
     - Mode substrate states
     - Substrate Flow invariants
   exports:
     - drift signatures
     - drift maps
-    - collapse vectors
+    - drift case catalogues
     - paradox drift profiles
 ```
 
 ---
 
-## **Purpose**
-The FFT Drift Analyzer identifies, classifies, and maps **drift** within any framework, system, or conceptual structure modeled using Framework Field Theory.
+## Purpose
 
-Drift is defined as **unintended deviation from a framework’s declared dimensional, operator, or coherence envelope**.
+The FFT Drift Analyzer identifies, classifies, and maps **drift** within any framework, system, or conceptual structure modeled using Framework Field Theory. Drift is defined as **unintended deviation from a framework's declared dimensional, operator, or coherence envelope**.
+
+Unlike the other Analyzer submodules — which diagnose a single structural layer — Drift is the **cross-cutting monitor** that spans all layers: operators, dimensions, regimes, and coherence. It detects change over time and flags when that change is unintended, accelerating, or paradox-driven.
 
 This analyzer is responsible for:
-- detecting drift early  
-- classifying drift type  
-- mapping drift vectors  
-- identifying paradox‑induced drift  
-- diagnosing dimensional collapse  
-- generating drift signatures  
 
-It is the **primary tool** for maintaining coherence in complex or evolving frameworks.
+- detecting drift early
+- classifying drift type and velocity
+- mapping drift vectors across layers
+- identifying paradox-induced drift
 
----
-
-## **What the Drift Analyzer Detects**
-
-### **1. Operator Drift**
-Occurs when:
-- operators appear that were not declared  
-- operator families become unbalanced  
-- operator cascades form unintentionally  
-
-### **2. Dimensional Drift**
-Occurs when:
-- a framework shifts dimensions without a declared transition  
-- dimensional collapse occurs (e.g., D4 → D2)  
-- dimensional inflation occurs (e.g., D3 → D6)  
-
-### **3. Regime Drift**
-Occurs when:
-- regime state changes without a declared cause  
-- regime boundaries are crossed implicitly  
-- regime‑blindness is detected  
-
-### **4. Coherence Drift**
-Occurs when:
-- coherence envelope weakens  
-- paradox exposure increases  
-- harmonic stability degrades  
-
-### **5. Paradox‑Induced Drift**
-Occurs when:
-- paradoxes create structural tension  
-- operator families conflict  
-- dimensional assumptions contradict  
+It is the **temporal watchdog** of FFT.
 
 ---
 
-## **Drift Categories**
-The analyzer classifies drift into the following canonical categories:
+## What the Drift Analyzer Detects
 
-- **D0 — Null Drift** (no drift detected)  
-- **D1 — Operator Drift**  
-- **D2 — Dimensional Drift**  
-- **D3 — Regime Drift**  
-- **D4 — Coherence Drift**  
-- **D5 — Paradox Drift**  
-- **D6 — Collapse Drift** (severe)  
-- **D7 — Field Drift** (system‑wide)  
+### 1. Drift Detection
+- Presence or absence of drift
+- Drift onset and velocity
+- Drift direction relative to the declared envelope
 
-Each drift category has a corresponding diagnostic pathway.
+### 2. Drift Classification
+- **Gradual drift** — slow, incremental deviation
+- **Sudden drift** — abrupt structural shift
+- **Oscillating drift** — periodic deviation and return
+- **Paradox drift** — deviation caused or amplified by unresolved paradox
+
+### 3. Drift Mapping
+- Drift vectors across operator, dimensional, regime, and coherence layers
+- Drift magnitude and trajectory
+- Cross-layer drift correlation
+
+### 4. Paradox-Induced Drift
+- Paradox density as a drift accelerant
+- Feedback loops between drift and paradox exposure
+- Paradox-driven collapse risk
 
 ---
 
-## **Analyzer Structure**
-The Drift Analyzer folder should contain:
+## Directory Structure
 
 ```
 Drift/
-  README.md
-  Drift_Analyzer.md
-  Drift_Cases.md
-  Drift_Maps.md
-  Drift_Signatures.md
-  Collapse_Diagnostics.md
-  Paradox_Drift.md
+├── README.md
+├── Drift_Analyzer.md
+├── Drift_Cases.md
+└── Paradox_Drift.md
 ```
-
-Each file corresponds to a specific diagnostic function.
 
 ---
 
-## **How to Use the Drift Analyzer**
+## Files
 
-### **Step 1 — Declare the Framework**
-Provide:
-- operator pattern  
-- dimensional assumptions  
-- regime state  
-- coherence envelope  
-
-### **Step 2 — Run Drift Detection**
-The analyzer scans for:
-- operator imbalance  
-- dimensional mismatch  
-- regime inconsistencies  
-- paradox exposure  
-
-### **Step 3 — Classify Drift**
-The analyzer assigns a drift category (D0–D7).
-
-### **Step 4 — Map Drift Vectors**
-The analyzer identifies:
-- direction of drift  
-- magnitude  
-- rate  
-- affected operators  
-- affected dimensions  
-
-### **Step 5 — Generate Drift Signature**
-A drift signature includes:
-- drift category  
-- drift vector  
-- drift magnitude  
-- collapse risk  
-- paradox exposure  
-
-### **Step 6 — Recommend Corrections**
-The analyzer suggests:
-- operator rebalancing  
-- dimensional stabilization  
-- regime realignment  
-- coherence reinforcement  
+| File | Purpose |
+|------|---------|
+| **Drift_Analyzer.md** | Core drift-detection engine — identifies directional shift, velocity, decay patterns, and drift classification across all structural layers |
+| **Drift_Cases.md** | Catalogued drift scenarios with diagnostic walkthroughs; reference library of drift patterns and resolutions |
+| **Paradox_Drift.md** | Drift behavior specific to paradox-bearing structures; paradox density as accelerant, feedback loops, and collapse risk |
 
 ---
 
-## **Example Output**
-```
-Framework: Cognitive Systems Model
+## How to Use the Drift Analyzer
+
+**Step 1 — Declare the Framework**
+Provide: operator pattern, dimensional envelope, regime state, coherence level, and any known drift history.
+
+**Step 2 — Detect Drift**
+The analyzer scans for: drift presence, onset timing, velocity, and direction relative to the declared envelope.
+
+**Step 3 — Classify Drift Type**
+Categorize the drift as: gradual, sudden, oscillating, or paradox-induced.
+
+**Step 4 — Map Drift Vectors**
+Map drift across layers: operator drift, dimensional drift, regime drift, coherence drift. Identify cross-layer correlations.
+
+**Step 5 — Evaluate Paradox Exposure**
+If paradox is present: assess paradox density as a drift accelerant, identify feedback loops, flag collapse risk.
+
+**Step 6 — Generate Drift Signature**
+A drift signature includes: drift type, velocity, direction, layer distribution, paradox involvement, and projected trajectory.
+
+---
+
+## Example Output
+
+```yaml
+Framework: Legacy Enterprise Architecture
 Drift Signature:
-  category: D3 (Regime Drift)
-  vector: R2 → R0
-  magnitude: moderate
-  collapse_risk: low
-  paradox_exposure: elevated
-  notes: operator-family imbalance detected (E > R)
+  drift_detected: true
+  drift_type: gradual
+  velocity: moderate
+  direction: D3 → D2 (dimensional contraction)
+  layer_distribution:
+    operator: low
+    dimensional: high
+    regime: moderate
+    coherence: low
+  paradox_involvement: none
+  projected_trajectory: continued contraction without intervention
+  notes: dimensional envelope shrinking; operator grammar intact; regime drift secondary to dimensional loss
 ```
 
 ---
 
-## **Navigation**
-```
-- [README.md](./README.md)
+## Navigation
+
 - [Drift Analyzer](./Drift_Analyzer.md)
 - [Drift Cases](./Drift_Cases.md)
-- [Drift Maps](./Drift_Maps.md)
-- [Drift Signatures](./Drift_Signatures.md)
-- [Collapse Diagnostics](./Collapse_Diagnostics.md)
 - [Paradox Drift](./Paradox_Drift.md)
-```
 
 ---
 
-## **Cross‑Module Integration**
-The Drift Analyzer works closely with:
+## Cross-Module Integration
 
-### **FFT Analyzer**
-- operator patterns  
-- dimensional envelopes  
-- coherence profiles  
-
-### **SARG**
-- regime geometry  
-- regime transitions  
-- regime‑blindness detection  
-
-### **Mode**
-- substrate states  
-- mode transitions  
-
-### **Substrate Flow**
-- flow‑based drift  
-- substrate transitions  
+| Module | Relationship |
+|--------|-------------|
+| **FFT Analyzer** | Operator patterns, dimensional envelopes, coherence states, regime positions |
+| **SARG** | Regime geometry; regime-dependent drift behavior |
+| **Mode** | Substrate states; mode-dependent drift sensitivity |
+| **Substrate Flow** | Flow-driven drift; substrate-dependent drift velocity |
 
 ---
 
-## **License**
-TriadicFrameworks — Open Canon License (OCL‑3).  
-Use permitted for education, research, and derivative frameworks.
+## Related Modules
+
+- [FFT Analyzer](../README.md) — Parent Analyzer module
+- [Regime](../Regime/README.md) — Regime classification and boundary diagnostics
+- [Operators](../Operators/README.md) — Operator profiling and regime coupling
+- [Dimensional](../Dimensional/README.md) — Dimensional structure and transitions
+- [Coherence](../Coherence/README.md) — Coherence stability and paradox exposure
+- [Examples](../Examples/README.md) — Cross-cutting worked examples
+
+---
+
+*Part of [TriadicFrameworks](../../../../README.md) · Framework Field Theory · Analyzer*
