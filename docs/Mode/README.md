@@ -45,6 +45,7 @@ Mode/
 ├── propagation.md            ← cross-module propagation rules
 ├── tests.md                  ← full test suite (21 tests + 3 edge cases)
 ├── diagram.svg               ← Mode Layer structure diagram (SVG)
+Mode_module.json
 └── session-lineage-map.md    ← triadic lineage map for the entire Session Layer
 ```
 
@@ -58,6 +59,7 @@ Mode/
 - **[tests.md](./tests.md)** — Deterministic test suite covering all constraints and propagation rules
 - **[diagram.svg](./diagram.svg)** — Visual reference: stances, MCL gate, sibling modules, legends
 - **[session-lineage-map.md](./session-lineage-map.md)** — Full lineage of the Session Layer
+- **[Mode_module.json](Mode_module.json)** — Agentic module schema role assignments
 
 ---
 
