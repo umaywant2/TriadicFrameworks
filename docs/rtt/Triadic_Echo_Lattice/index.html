@@ -5,29 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Triadic Echo Lattice — TriadicFrameworks</title>
-  <meta name="description" content="Triadic Echo Lattice (07): spatial architecture of the HSP analytics suite. 4 layers, 6 family placements, 4 recursion lines, 3 pressure zones." />
+  <meta name="description"
+        content="Triadic Echo Lattice (06e): lattice-level engine for the HSP analytics suite. Defines echo adjacency, lattice geometry, propagation, lineage, invariants, and maps." />
   <meta name="author" content="Nawder Loswin" />
+  <meta name="keywords"
+        content="Triadic Echo Lattice, TEL, RTT, HSP, echo lattice, echo adjacency, echo propagation, echo lineage" />
+
+  <!-- Canonical Module Identity -->
   <meta name="module" content="Triadic Echo Lattice" />
   <meta name="canonical-id" content="TEL" />
   <meta name="module-type" content="RTT-Analytics" />
-  <meta name="hsp-section" content="07" />
+  <meta name="hsp-section" content="06e" />
   <meta name="version" content="1.0" />
   <meta name="status" content="canon-stable" />
   <meta name="parent" content="HSP (RTT-Analytics-Core)" />
-  <meta name="siblings" content="Echo Classifier (06c), Substrate Flow (08)" />
-  <meta name="operators" content="TEL-Read, TEL-Place, TEL-Trace, TEL-Tag" />
+  <meta name="siblings" content="Harmonic_Operators (06a), Stability_Envelope (06b), Echo_Classifier (06c), Substrate_Flow (06d)" />
+  <meta name="operators" content="TEL-Read, TEL-Trace, TEL-Propagate, TEL-Map" />
   <meta name="framework" content="TriadicFrameworks" />
   <meta name="license" content="MIT" />
   <meta name="canonical-path" content="/docs/rtt/Triadic_Echo_Lattice/" />
-  <meta name="last-updated" content="2026-04-27" />
+  <meta name="last-updated" content="2026-05-01" />
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Triadic Echo Lattice — TriadicFrameworks" />
-  <meta property="og:description" content="Lattice architecture: 4 layers, 6 families, 4 recursion lines, 3 pressure zones." />
+  <meta property="og:description"
+        content="Echo adjacency → lattice geometry → propagation → lineage → invariants → maps." />
   <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Triadic Echo Lattice — TriadicFrameworks" />
+  <meta name="twitter:description"
+        content="Lattice-level RTT analytics engine." />
+
+  <!-- Citation -->
+  <meta name="citation_title" content="Triadic Echo Lattice Module — TriadicFrameworks" />
+  <meta name="citation_author" content="Nawder Loswin" />
+  <meta name="citation_date" content="2026-05-01" />
+
+  <!-- AI Metadata -->
   <meta name="ai-ready" content="true" />
   <meta name="ai-module-id" content="TEL" />
-  <meta name="ai-operators" content="TEL-Read, TEL-Place, TEL-Trace, TEL-Tag" />
-  <meta name="ai-layers" content="ladder, cycle, map, atlas" />
+  <meta name="ai-operators" content="TEL-Read, TEL-Trace, TEL-Propagate, TEL-Map" />
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -188,18 +208,53 @@
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
     <div class="session-block">
-      <span>module:</span> Triadic Echo Lattice<br/>
-      <span>id:</span> TEL<br/>
-      <span>hsp:</span> 07<br/>
-      <span>version:</span> 1.0<br/>
-      <span>status:</span> canon-stable<br/>
-      <span>tier:</span> RTT-Analytics<br/>
-      <span>parent:</span> HSP<br/>
-      <span>siblings:</span> EC, SF<br/>
-      <span>drift:</span> bounded<br/>
-      <span>coherence:</span> locked<br/>
-      <div class="module-badge">🕸️ TEL • 07 • v1.0</div>
-    </div>
+<section id="tel-session-header"
+         data-tel="1"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-analytics="lattice">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (rtt‑analytics‑lattice)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      echo adjacency → lattice geometry → propagation → lineage → invariants → examples → maps
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (lattice‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (echo‑lattice grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (tel‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + diagrams + maps</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (TEL root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟣 Triadic Echo Lattice<br>📘 RTT‑Analytics • Lattice Engine
+</div>
+
   </nav>
 
   <main>
