@@ -1,80 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Core Metadata -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-04-25">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
-<!-- Identity -->
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Description & Keywords -->
-<meta name="description" content="The TriadicFrameworks Template — the canonical folder pattern for README.md, ABOUT.md, navigation surfaces, HTML wrappers, search integration, sitemap generation, and Start Here indexing. Defines the structural backbone for all documentation folders.">
-<meta name="keywords" content="TriadicFrameworks template, README template, ABOUT template, navigation philosophy, sitemap generator, search index, Start Here index, folder pattern, documentation substrate">
+<title>Module Template — TriadicFrameworks</title>
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.triadicframeworks.org/_template/">
+<meta name="description"
+      content="Universal module template for TriadicFrameworks. Defines canonical metadata, session context, operator grammar, and file layout." />
+<meta name="keywords"
+      content="template, module template, canonical structure, metadata, session context" />
+<meta name="author" content="Nawder Loswin" />
 
-<!-- Robots -->
-<meta name="robots" content="index, follow">
+<meta name="module" content="Module Template" />
+<meta name="canonical-id" content="TEMPLATE" />
+<meta name="module-type" content="Framework-Structural" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="TriadicFrameworks Root" />
+<meta name="siblings" content="SARG, Mode, FCG" />
+<meta name="canonical-path" content="/docs/_template/" />
+<meta name="last-updated" content="2026-05-01" />
+<meta name="license" content="MIT" />
 
-<!-- Theme -->
-<meta name="theme-color" content="#0ff">
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="TEMPLATE" />
+<meta name="ai-operators"
+      content="TEMPLATE-Define, TEMPLATE-Structure, TEMPLATE-Operators, TEMPLATE-Session, TEMPLATE-Validate" />
 
-<!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="Template — TriadicFrameworks">
-<meta property="og:url" content="https://www.triadicframeworks.org/_template/">
-<meta property="og:description" content="The canonical folder template for README.md, ABOUT.md, navigation, search, and sitemap generation.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
+<meta property="og:title" content="Module Template — TriadicFrameworks" />
+<meta property="og:description"
+      content="Universal canonical template for all modules." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.triadicframeworks.org/_template" />
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Template — TriadicFrameworks">
-<meta name="twitter:description" content="The structural template for all documentation folders — navigation-first, narrative-second, search-integrated.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Module Template — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="Canonical module template." />
 
-<!-- Citation Metadata -->
-<meta name="citation_title" content="TriadicFrameworks Documentation Template">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2025">
-<meta name="DC.subject" content="documentation template, navigation model, sitemap generation, search index, structural substrate">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
-
-<!-- AI Metadata -->
-<meta name="ai.module" content="TriadicFrameworks Documentation Template">
-<meta name="ai.version" content="1.0">
-<meta name="ai.purpose" content="Define the canonical folder structure, navigation model, HTML wrapper, sitemap generation, and search integration for TriadicFrameworks documentation.">
-<meta name="ai.keywords" content="README template, ABOUT template, navigation-first, search-first, sitemap, Start Here index, documentation substrate">
-<meta name="ai.audience" content="contributors, maintainers, educators, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="Open educational use permitted.">
-
-<!-- Module-Specific -->
-<meta name="ai.module.name" content="_template">
-<meta name="ai.module.summary" content="The canonical folder template defining README.md, ABOUT.md, navigation surfaces, HTML wrappers, and search/sitemap integration.">
-<meta name="ai.module.category" content="infrastructure-core">
-
-<!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-
-<title>Template | TriadicFrameworks</title>
+<meta name="citation_title" content="Module Template — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-01" />
 
 <style>
 /* ============================================================
@@ -261,6 +229,10 @@ code {
       <a href="#LINEAGE">📜 Lineage</a>
       <a href="#LICENSE">📎 License</a>
       <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
     <h3>📁 Assets</h3>
       <a href="#OVERVIEW">🗺️ Overview — High‑level structure of this template</a>
       <a href="#ASSETS_REACHOUT_PLAN">📬 Reachout Plan — Template outreach planning surface</a>
@@ -296,49 +268,51 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
-<section id="rtt-session-header"
-         data-rtt="1"
-         data-coherence="declared"
-         data-drift="bounded"
-         data-paradox="structural">
+<section id="template-session-header"
+         data-template="1"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-layer="framework-structural">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (infrastructure core)</span><br>
+    <span class="context-value">active (template)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">linked (README ↔ ABOUT ↔ HTML wrapper ↔ sitemap ↔ search)</span><br>
+    <span class="context-value">
+      metadata → session context → operators → structure → module.json
+    </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
     <span class="context-value">minimal (template‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (navigation-first)</span><br>
+    <span class="context-value">stable (canonical grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (canonical template)</span><br>
+    <span class="context-value">1.0 (template‑stable)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + scripts</span><br>
+    <span class="context-value">html + markdown + schema</span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
     <span class="context-value">exists (template root)</span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">inherits this pattern</span><br>
+    <span class="context-value">canonical + AI‑parsable</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">contributors + maintainers + AIs</span>
+    <span class="context-value">creators + maintainers + AIs</span>
 
   </div>
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🧩 Template‑Core<br>🗺️ Navigation‑First<br>
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟦 Module Template<br>📘 Canonical Structural Template
 </div>
 
 </nav>
@@ -348,30 +322,34 @@ code {
 <script>
 
 const DOC_MAP = {
-  README: 'README.md',
-  ABOUT: '../ABOUT.md',
-  CONTRIBUTING: '../CONTRIBUTING.md',
-  GLOSSARY: '../GLOSSARY.md',
-  LINEAGE: '../LINEAGE.md',
-  LICENSE: '../LICENSE.md',
-  SITEMAP: '../sitemap.md',      
-  // assets/
-  ASSETS_REACHOUT_PLAN: 'assets/ReachoutPlan.md',
-  // echo/
-  ECHO_PLACEHOLDER: 'echo/placeholder.md',
-  // equations/
-  EQUATIONS_MAIN: 'equations/equations.md',
-  EQUATIONS_PLACEHOLDER: 'equations/placeholder.md',
-  // honor_roll/
-  HONOR_ROLL_PLACEHOLDER: 'honor_roll/placeholder.md',
-  HONOR_ROLL_PROJECT: 'honor_roll/project.md',
-  // labs/
-  LAB01_README: 'labs/lab-01/README.md',
-  LAB_ONBOARDING_PLACEHOLDER: 'labs/onboarding/placeholder.md',
-  LAB_SCROLLS_PLACEHOLDER: 'labs/scrolls/placeholder.md',
-  // validator/
-  VALIDATOR_PLACEHOLDER: 'validator/placeholder.md',
-  VALIDATOR_RESONANCE_PASSPORT: 'validator/resonance-passport-template.md',
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',   
+      // assets/
+      ASSETS_REACHOUT_PLAN: 'assets/ReachoutPlan.md',
+      // echo/
+      ECHO_PLACEHOLDER: 'echo/placeholder.md',
+      // equations/
+      EQUATIONS_MAIN: 'equations/equations.md',
+      EQUATIONS_PLACEHOLDER: 'equations/placeholder.md',
+      // honor_roll/
+      HONOR_ROLL_PLACEHOLDER: 'honor_roll/placeholder.md',
+      HONOR_ROLL_PROJECT: 'honor_roll/project.md',
+      // labs/
+      LAB01_README: 'labs/lab-01/README.md',
+      LAB_ONBOARDING_PLACEHOLDER: 'labs/onboarding/placeholder.md',
+      LAB_SCROLLS_PLACEHOLDER: 'labs/scrolls/placeholder.md',
+      // validator/
+      VALIDATOR_PLACEHOLDER: 'validator/placeholder.md',
+      VALIDATOR_RESONANCE_PASSPORT: 'validator/resonance-passport-template.md',
 };
   
 function loadFromHash() {
