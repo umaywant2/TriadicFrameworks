@@ -1,4 +1,7 @@
 ## 🦄 Resonance-Time Tech (RTT/1) | Resonance‑Time Theory (RTT)
+
+- [`rtt-engine_module.json`](rtt-engine_module.json) — Agentic module schema role assignments
+
 Clarity Phase • Operational • Engine
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
