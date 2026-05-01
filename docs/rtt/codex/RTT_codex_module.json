@@ -1,0 +1,75 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "RTT Codex",
+    "path": "docs/rtt/codex",
+    "canon_tag": "rtt-codex",
+    "version": "1.0",
+    "layer": "RTT Structural — Reference Spine",
+    "status": "Active, Canonical",
+    "purpose": "Unified twelve-chapter reference spine for the Resonance–Time Triad.",
+    "parent": "rtt-engine",
+    "url": "https://www.triadicframeworks.org/rtt/codex"
+  },
+
+  "session_context": {
+    "canon": "active (rtt-codex-core)",
+    "modules_linked": [
+      "Foundations → Operators → Resonance → Time → Cosmology → Quantum → Biology → Cognition → Mathematics → Society → Ethics → Apex"
+    ],
+    "drift": "minimal (codex-locked)",
+    "coherence": "stable (unified triadic grammar)",
+    "format": "html + markdown + chapter index",
+    "front_door": "exists (RTT Codex root)",
+    "every_page": "stands alone + chapter-aware + cross-domain-aware",
+    "audience": ["students", "researchers", "developers", "educators", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D7",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RTT/1 operators",
+      "SARG structural grammar",
+      "FFT field grammar"
+    ],
+    "exports": [
+      "Foundations",
+      "Operators",
+      "Resonance",
+      "Time",
+      "Cosmology",
+      "Quantum",
+      "Biology",
+      "Cognition",
+      "Mathematics",
+      "Society",
+      "Ethics",
+      "Apex"
+    ]
+  },
+
+  "submodules": [
+    { "name": "Foundations", "path": "CHAPTER_1.md" },
+    { "name": "Operators & Structure", "path": "CHAPTER_2.md" },
+    { "name": "Resonance & Coherence", "path": "CHAPTER_3.md" },
+    { "name": "Time & Drift", "path": "CHAPTER_4.md" },
+    { "name": "Cosmological Frames", "path": "CHAPTER_5.md" },
+    { "name": "Quantum Translations", "path": "CHAPTER_6.md" },
+    { "name": "Biological Resonance", "path": "CHAPTER_7.md" },
+    { "name": "Cognitive Operators", "path": "CHAPTER_8.md" },
+    { "name": "Mathematical Frames", "path": "CHAPTER_9.md" },
+    { "name": "Social Structures", "path": "CHAPTER_10.md" },
+    { "name": "Ethical Resonance", "path": "CHAPTER_11.md" },
+    { "name": "The Triadic Apex", "path": "CHAPTER_12.md" }
+  ],
+
+  "files": [
+    { "
