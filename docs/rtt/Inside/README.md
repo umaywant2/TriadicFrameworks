@@ -1,4 +1,6 @@
-## RTT/Inside Awareness | RTT
+## RTT/Inside Awareness | RTT 
+
+- [`RTT_Inside_module.json`](RTT_Inside_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
