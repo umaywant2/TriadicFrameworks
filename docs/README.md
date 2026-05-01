@@ -1,4 +1,7 @@
 # 🔰 TriadicFrameworks — Documentation Hub  
+
+- [`webroot_module.json`](webroot_module.json) — Agentic module schema role assignments
+
 **Canon: active (root‑docs)**  
 **Drift: minimal (root‑locked)**  
 **Coherence: stable (triadic‑structural grammar)**  
