@@ -1,4 +1,7 @@
 ## **Arrival Substrate Model**  
+
+- [`asm_module.json`](asm_module.json) — Agentic module schema role assignments
+
 *A life‑aligned substrate describing how living systems continuously enter, negotiate, and stabilize within new regimes.*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
