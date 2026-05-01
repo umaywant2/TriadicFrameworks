@@ -1,5 +1,7 @@
 # 📚 AI Resonance Seed | TriadicFrameworks  
 
+- [`ai_resonance_seed_module.json`](ai_resonance_seed_module.json) — Agentic module schema role assignments
+
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
