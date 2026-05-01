@@ -1,0 +1,150 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "Opacity",
+    "path": "docs/Opacity",
+    "canon_tag": "rtt-opacity",
+    "version": "1.0",
+    "layer": "Core Frameworks — Interaction & Substrate Layer",
+    "status": "Active, Canonical",
+    "purpose": "Defines opacity as a substrate-level condition where a system becomes partially or fully non-observable due to mismatch between substrate, operators, harmonic envelope, or flow. Provides operators, diagnostics, lineage, examples, and integration rules.",
+    "parent": "rtt-core",
+    "url": "https://www.triadicframeworks.org/Opacity/"
+  },
+
+  "session_context": {
+    "canon": "active (rtt-core)",
+    "modules_linked": [
+      "substrate → operators → harmonic envelope → flow → boundary → diagnostics → examples → integration"
+    ],
+    "drift": "minimal (opacity-locked)",
+    "coherence": "stable (opacity grammar)",
+    "format": "html + markdown + diagrams",
+    "front_door": "exists (Opacity root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": [
+      "students",
+      "developers",
+      "researchers",
+      "AI systems"
+    ]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D5",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "high",
+    "regime_sensitivity": "high"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RTT/1 session architecture",
+      "SARG structural grammar",
+      "Corpus operators",
+      "NIST resonance primitives",
+      "Mode Layer (M → Opacity push rules)"
+    ],
+    "exports": [
+      "opacity_index",
+      "opacity_map",
+      "opacity_dependency",
+      "opacity_token",
+      "opacity_clause",
+      "opacity_rewrite_rule",
+      "opacity_measure",
+      "opacity_signal",
+      "opacity_alignment",
+      "substrate opacity classification",
+      "harmonic opacity envelope",
+      "flow opacity detection",
+      "boundary opacity mapping"
+    ]
+  },
+
+  "submodules": [
+    {
+      "name": "Operators",
+      "path": "operators.md",
+      "purpose": "Defines all 14 opacity operators and their interaction rules."
+    },
+    {
+      "name": "Examples",
+      "path": "examples.md",
+      "purpose": "Multi-scale examples demonstrating substrate, operator, harmonic, flow, and boundary opacity."
+    },
+    {
+      "name": "Integration",
+      "path": "integration.md",
+      "purpose": "Cross-module integration rules for SARG, Corpus, NIST, and RTT/1."
+    }
+  ],
+
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "High-level overview of opacity, definitions, operators, examples, and module navigation.",
+      "role": "index",
+      "depends_on": []
+    },
+    {
+      "filename": "operators.md",
+      "path": "operators.md",
+      "purpose": "Full definitions of all 14 opacity operators with signatures and interaction rules.",
+      "role": "engine",
+      "depends_on": []
+    },
+    {
+      "filename": "examples.md",
+      "path": "examples.md",
+      "purpose": "Expanded multi-scale examples: storms, planets, atoms, magnetospheres, structural systems.",
+      "role": "example",
+      "depends_on": ["operators.md"]
+    },
+    {
+      "filename": "integration.md",
+      "path": "integration.md",
+      "purpose": "Integration rules for SARG, Corpus, NIST, and RTT/1; cross-module propagation.",
+      "role": "reference",
+      "depends_on": ["operators.md"]
+    },
+    {
+      "filename": "diagnostics.md",
+      "path": "diagnostics.md",
+      "purpose": "Opacity diagnostics, drift detection, coherence checks, and structural invariants.",
+      "role": "diagnostic",
+      "depends_on": ["operators.md"]
+    },
+    {
+      "filename": "opacity_map.md",
+      "path": "opacity_map.md",
+      "purpose": "Dimensional and regime-level mapping of opacity conditions.",
+      "role": "map",
+      "depends_on": ["operators.md"]
+    },
+    {
+      "filename": "opacity_signatures.md",
+      "path": "opacity_signatures.md",
+      "purpose": "Signature-level definitions for opacity_index, opacity_token, opacity_clause, and related operators.",
+      "role": "signature",
+      "depends_on": ["operators.md"]
+    },
+    {
+      "filename": "session-lineage-map.md",
+      "path": "session-lineage-map.md",
+      "purpose": "Lineage mapping for opacity constructs across RTT/1.",
+      "role": "map",
+      "depends_on": ["operators.md"]
+    },
+    {
+      "filename": "index.html",
+      "path": "index.html",
+      "purpose": "Rendered front door for the Opacity module.",
+      "role": "index",
+      "depends_on": []
+    }
+  ]
+}
