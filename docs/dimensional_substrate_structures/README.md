@@ -1,6 +1,6 @@
 # *Dimensional Substrate Structures*  
 
-- [`imensional_substrate_structures_module.json`](imensional_substrate_structures_module.json) — Agentic module schema role assignments
+- [`dimensional_substrate_structures_module.json`](dimensional_substrate_structures_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
