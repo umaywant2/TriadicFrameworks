@@ -1,0 +1,64 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "Alignment",
+    "path": "docs/education/alignment",
+    "canon_tag": "alignment",
+    "version": "1.0",
+    "layer": "Education Core Layer",
+    "status": "Active, Canonical",
+    "purpose": "Defines the four RTT alignment pillars — FFF, SET, S‑N‑R, and Resonance‑Wrapped Cores — and their cross-domain coherence.",
+    "parent": "education-core",
+    "url": "https://www.triadicframeworks.org/education/alignment"
+  },
+
+  "session_context": {
+    "canon": "active (education-core)",
+    "modules_linked": [
+      "FFF → SET → S-N-R → Wrapped Cores → coherence examples → cross-domain alignment"
+    ],
+    "drift": "minimal (pillar-locked)",
+    "coherence": "stable (alignment grammar)",
+    "format": "html + markdown + diagrams",
+    "front_door": "exists (Alignment root)",
+    "every_page": "pillar-aware + standalone + AI-parsable",
+    "audience": ["students", "educators", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D3",
+    "regime_envelope": "R0–R2",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "education-core",
+      "awareness",
+      "curriculum"
+    ],
+    "exports": [
+      "FFF",
+      "SET",
+      "S-N-R",
+      "Wrapped Cores",
+      "coherence examples",
+      "cross-domain alignment"
+    ]
+  },
+
+  "submodules": [
+    { "name": "FFF", "path": "FFF.md" },
+    { "name": "SET", "path": "SET.md" },
+    { "name": "S-N-R", "path": "SNR.md" },
+    { "name": "Wrapped Cores", "path": "wrapped_cores.md" }
+  ],
+
+  "files": [
+    { "filename": "README.md", "path": "README.md", "purpose": "Alignment overview.", "role": "profile", "depends_on": [] },
+    { "filename": "index.html", "path": "index.html", "purpose": "Front door for Alignment.", "role": "index", "depends_on": [] }
+  ]
+}
