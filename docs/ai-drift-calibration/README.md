@@ -1,4 +1,6 @@
-# AI Drift Calibration — Operating Regimes
+# AI Drift Calibration — Operating Regimes 
+
+- [`ai-drift-calibration_module.json`](ai-drift-calibration_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
