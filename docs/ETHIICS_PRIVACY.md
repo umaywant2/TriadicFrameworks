@@ -1,4 +1,7 @@
 # **1. Ethiics & Privacy**  
+
+- [`ETHIICS_PRIVACY_module.json`](ETHIICS_PRIVACY_module.json) — Agentic module schema role assignments
+
 *(public‑facing, minimal, canonical)*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
