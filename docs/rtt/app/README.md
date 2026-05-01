@@ -1,4 +1,6 @@
-## RTT/App
+## RTT/App 
+
+- [`RTT_App_module.json`](RTT_App_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
