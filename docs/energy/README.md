@@ -1,5 +1,7 @@
 ## 🎭 Energy — A TriadicFrameworks Exploration of Technique, Gradients, and Regime Awareness
 
+- [`energy_module.json`](energy_module.json) — Agentic module schema role assignments
+
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
