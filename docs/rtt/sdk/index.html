@@ -2,88 +2,55 @@
 <html lang="en">
 <head>
 
-<!-- Core Metadata -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-04-29">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
-<!-- Identity -->
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
+<title>RTT/SDK — TriadicFrameworks</title>
 
-<!-- Description & Keywords -->
 <meta name="description"
-      content="RTT/SDK — the minimal, stable, forward‑compatible interface for interacting with the RTT API. Provides beacon events, profile creation, diagnostics payloads, unified JS/Python clients, and early RTT‑Inside integration.">
+      content="RTT/SDK: the developer integration layer of RTT/1. Defines SDK operators, APIs, integration rules, examples, and scaffolding." />
 <meta name="keywords"
-      content="RTT SDK, RTT API, beacon events, RTT profiles, diagnostics payloads, unified client, JavaScript SDK, Python SDK, vST beta, structural awareness tooling">
+      content="RTT SDK, RTT, SDK operators, SDK API, integration, examples, scaffolding" />
+<meta name="author" content="Nawder Loswin" />
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.triadicframeworks.org/rtt/sdk/">
+<!-- Canonical Identity -->
+<meta name="ai.module" content="RTT SDK">
+<meta name="ai.module.name" content="RTT SDK">
+<meta name="ai.module.category" content="rtt-sdk">
+<meta name="ai.module.summary"
+      content="Developer integration layer: SDK operators, APIs, integration rules, examples, scaffolding." />
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Provide the developer integration layer for RTT/1: SDK operators, APIs, integration rules, examples, scaffolding." />
+<meta name="ai.keywords"
+      content="SDK operators, SDK API, SDK integration, SDK examples, SDK scaffolding" />
+<meta name="ai.audience" content="developers, researchers, AI systems">
 
-<!-- Robots -->
-<meta name="robots" content="index, follow">
-
-<!-- Theme -->
-<meta name="theme-color" content="#0ff">
+<meta name="canonical-id" content="RTT-SDK" />
+<meta name="module-type" content="RTT-SDK" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="RTT/1" />
+<meta name="siblings" content="RTT/App, RTT/Inside, RTT/Micro_Core" />
+<meta name="canonical-path" content="/docs/rtt/sdk/" />
+<meta name="last-updated" content="2026-05-01" />
 
 <!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="RTT/SDK — Tooling Interface">
-<meta property="og:url" content="https://www.triadicframeworks.org/rtt/sdk/">
+<meta property="og:title" content="RTT/SDK — TriadicFrameworks">
 <meta property="og:description"
-      content="RTT/SDK — minimal, stable, forward‑compatible RTT API interface with beacon, profile, diagnostics, and unified JS/Python clients.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
+      content="Developer integration layer: SDK operators, APIs, integration rules, examples, scaffolding.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.triadicframeworks.org/rtt/sdk">
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RTT/SDK — Tooling Interface">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RTT/SDK — TriadicFrameworks">
 <meta name="twitter:description"
-      content="Minimal, stable, forward‑compatible RTT API interface with beacon, profile, diagnostics, and unified JS/Python clients.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+      content="RTT/1 developer integration layer.">
 
-<!-- Citation Metadata -->
-<meta name="citation_title" content="RTT/SDK — Tooling Interface">
+<!-- Citation -->
+<meta name="citation_title" content="RTT/SDK — TriadicFrameworks">
 <meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2025">
-<meta name="DC.subject"
-      content="RTT SDK, RTT API, beacon events, profiles, diagnostics, unified client, structural awareness">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
-
-<!-- AI Metadata -->
-<meta name="ai.module" content="RTT/SDK Module">
-<meta name="ai.version" content="0.1.0">
-<meta name="ai.purpose"
-      content="Provide a minimal, stable, forward‑compatible SDK for interacting with the RTT API, including beacon events, profile creation, diagnostics payloads, and unified JS/Python clients.">
-<meta name="ai.keywords"
-      content="RTT SDK, RTT API, beacon, profile, diagnostics, unified client, JS SDK, Python SDK, vST beta">
-<meta name="ai.audience" content="developers, researchers, students, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="Open educational use permitted.">
-
-<!-- Module-Specific -->
-<meta name="ai.module.name" content="RTT/SDK">
-<meta name="ai.module.summary"
-      content="Minimal, stable RTT API SDK: beacon events, profiles, diagnostics, unified JS/Python clients.">
-<meta name="ai.module.category" content="infrastructure-tooling">
-
-<!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-
-<title>RTT/SDK | TriadicFrameworks</title>
+<meta name="citation_date" content="2026-05-01">
 
 <style>
 /* ============================================================
@@ -308,52 +275,51 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
-<section id="rtt-session-header"
-         data-rtt="1"
-         data-coherence="declared"
-         data-drift="bounded"
-         data-paradox="structural">
+<section id="rtt-sdk-session-header"
+         data-sdk="1"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-layer="sdk">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (infrastructure‑tooling)</span><br>
+    <span class="context-value">active (rtt‑sdk)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
-      rtt-core → infrastructure → tooling → rtt-sdk → beacon → profile → diagnostics → client
+      SDK operators → SDK API → SDK integration → SDK examples → SDK map → SDK scaffolding
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">bounded (sdk‑stable)</span><br>
+    <span class="context-value">minimal (sdk‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (tooling‑grammar)</span><br>
+    <span class="context-value">stable (sdk grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">0.1.0 (early‑adopter stable)</span><br>
+    <span class="context-value">1.0 (sdk‑stable)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + js + python</span><br>
+    <span class="context-value">html + markdown + diagrams + examples</span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (SDK root)</span><br>
+    <span class="context-value">exists (RTT/SDK root)</span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
     <span class="context-value">stands alone + AI‑parsable</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">developers + researchers + students + AIs</span>
+    <span class="context-value">developers + researchers + AIs</span>
 
   </div>
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
-            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🧰 RTT/SDK Module<br>🔧 Tooling Interface Active
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟩 RTT/SDK<br>📘 Developer Integration Layer
 </div>
 
 </nav>
