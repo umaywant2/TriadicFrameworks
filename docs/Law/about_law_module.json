@@ -1,0 +1,13 @@
+{
+  "module": "About Law",
+  "version": "0.1.0",
+  "category": "law",
+  "summary": "Narrative entry point and orientation for the Law Module. Provides context, purpose, triadic framing, and high-level structure of the RTT domain primer on legal systems.",
+  "files": [
+    {
+      "path": "ABOUT-law.md",
+      "role": "about",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
