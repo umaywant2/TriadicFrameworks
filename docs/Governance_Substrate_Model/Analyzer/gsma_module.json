@@ -1,0 +1,63 @@
+{
+  "module": "Governance Alignment Analyzer",
+  "version": "1.0",
+  "category": "governance-analyzer",
+  "summary": "Interpretive engine of the Governance Substrate Model: vectors, invariants, coherence, drift, basins, transitions.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "alignment_analyzer.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "statement_mapping_rules.yaml",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "invariant_check_rules.yaml",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "coherence_scoring.yaml",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "drift_detection.yaml",
+      "role": "engine",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "regime_shift_detection.yaml",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "analyzer_pipeline.yaml",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "dynamic_cards_spec.md",
+      "role": "template",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "artifact_lineage_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
