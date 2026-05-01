@@ -1,6 +1,6 @@
 # README | Law Module
 
-[📘 ABOUT](../ABOUT-law.md) | [⚖️ Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md) | [🎯 Glossary](../law-references-glossary.md)
+[`law_module.json`](law_module.json) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md) | [🎯 Glossary](../law-references-glossary.md)
 
 ## 🔰 Quickstart
 
