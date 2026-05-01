@@ -1,0 +1,69 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "Resonance Substrate Model",
+    "path": "docs/resonance-substrate-model",
+    "canon_tag": "rsm",
+    "version": "2.1",
+    "layer": "RTT Analytics — Substrate Layer",
+    "status": "Active, Canonical",
+    "purpose": "Unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.",
+    "parent": "triadicframeworks-root",
+    "url": "https://www.triadicframeworks.org/resonance-substrate-model"
+  },
+
+  "session_context": {
+    "canon": "active (substrate-analytics)",
+    "modules_linked": [
+      "fields → operators → layers → schema taxonomy → simulations → experiments → onboarding → RTT-compatible profile"
+    ],
+    "drift": "bounded (declared regimes)",
+    "coherence": "stable (substrate grammar)",
+    "format": "html + markdown + schema + simulations",
+    "front_door": "exists (RSM root)",
+    "every_page": "stands alone + AI-parsable + citation-ready",
+    "audience": ["researchers", "developers", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D7",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "HSP analytics",
+      "TEL lattice",
+      "Substrate Flow"
+    ],
+    "exports": [
+      "triadic fields",
+      "operator families",
+      "layered substrates",
+      "schema taxonomy",
+      "simulation engine",
+      "validation datasets",
+      "RTT-compatible configuration profile"
+    ]
+  },
+
+  "submodules": [
+    { "name": "Fields", "path": "overview/triadic_fields.md" },
+    { "name": "Operators", "path": "overview/operators.md" },
+    { "name": "Layers", "path": "overview/layers.md" },
+    { "name": "Schema Taxonomy", "path": "schemas/README.md" },
+    { "name": "Simulations", "path": "simulations/README.md" },
+    { "name": "Experiments", "path": "experiments/README.md" },
+    { "name": "Onboarding", "path": "overview/onboarding.md" },
+    { "name": "RTT-Compatible Profile", "path": "overview/rtt_compatibility.md" }
+  ],
+
+  "files": [
+    { "filename": "README.md", "path": "README.md", "purpose": "Overview of RSM.", "role": "profile", "depends_on": [] },
+    { "filename": "index.html", "path": "index.html", "purpose": "Front door for RSM.", "role": "index", "depends_on": [] }
+  ]
+}
