@@ -1,4 +1,6 @@
-## RTT/Store — Placeholder Copy
+## RTT/Store — Placeholder Copy 
+
+- [`RTT_store_module.json`](RTT_store_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
