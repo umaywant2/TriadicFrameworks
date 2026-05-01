@@ -1,4 +1,6 @@
-# 🧪 Echo Classifier — /docs/rtt/Echo_Classifier
+# 🧪 Echo Classifier — /docs/rtt/Echo_Classifier  
+
+- [`rtt-echo-engine_module.json`](rtt-echo-engine_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
