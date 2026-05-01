@@ -1,4 +1,6 @@
-## RTT/SDK (Beta)
+## RTT/SDK (Beta)  
+
+- [`RTT_sdk_module.json`](RTT_sdk_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
