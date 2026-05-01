@@ -1,0 +1,63 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "Dimensional Substrate Regime Scanning Protocol",
+    "path": "docs/dimensional_substrate_regime_scanning_protocol",
+    "canon_tag": "dsrsp",
+    "version": "1.0",
+    "layer": "RTT Dimensional Layer",
+    "status": "Active, Canonical",
+    "purpose": "Scanning protocol for dimensional substrates, regime windows, transitions, heuristics, and safety envelope.",
+    "parent": "rtt",
+    "url": "https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol"
+  },
+
+  "session_context": {
+    "canon": "active (dimensional-protocol)",
+    "modules_linked": [
+      "scanning → windows → transitions → heuristics → safety → alignment"
+    ],
+    "drift": "minimal (protocol-locked)",
+    "coherence": "stable (protocol grammar)",
+    "format": "html + markdown + diagrams",
+    "front_door": "exists (DSRSP root)",
+    "every_page": "AI-parsable + protocol-aligned",
+    "audience": ["researchers", "developers", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D7",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C3",
+    "drift_sensitivity": "low",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "dimensional_substrate_structures",
+      "dimensional_substrate_model"
+    ],
+    "exports": [
+      "scanning protocol",
+      "regime windows",
+      "transitions",
+      "heuristics",
+      "safety envelope"
+    ]
+  },
+
+  "submodules": [
+    { "name": "Scanning", "path": "scanning.md" },
+    { "name": "Regime Windows", "path": "windows.md" },
+    { "name": "Transitions", "path": "transitions.md" },
+    { "name": "Heuristics", "path": "heuristics.md" },
+    { "name": "Safety Envelope", "path": "safety.md" }
+  ],
+
+  "files": [
+    { "filename": "README.md", "path": "README.md", "purpose": "Overview of DSRSP.", "role": "profile", "depends_on": [] },
+    { "filename": "index.html", "path": "index.html", "purpose": "Front door for DSRSP.", "role": "index", "depends_on": [] }
+  ]
+}
