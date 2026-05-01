@@ -2,88 +2,50 @@
 <html lang="en">
 <head>
 
-<!-- Core Metadata -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-04-29">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Identity -->
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
+<title>AlphaFold Substrate Alignments — TriadicFrameworks</title>
 
-<!-- Description & Keywords -->
 <meta name="description"
-      content="AlphaFold Substrate Alignments — a domain‑specific substrate application aligning the Resonance Substrate Model (RSM) with AlphaFold‑class biological inference engines. Defines substrate primitives, dimensional cores, folding regimes, inference mapping, validation layers, and drift detection.">
+      content="AlphaFold Substrate Alignments: RSM → AlphaFold substrate mapping engine. Substrate axes, dimensional cores, folding regimes, inference mapping, validation layers, drift detection, and examples." />
 <meta name="keywords"
-      content="AlphaFold Substrate Alignments, RSM alignment, biological inference, folding regimes, dimensional cores, vST validation, drift detection, substrate mapping, latent space coherence">
+      content="AlphaFold, substrate alignment, RSM, folding regimes, inference mapping, validation layers" />
+<meta name="author" content="Nawder Loswin" />
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.triadicframeworks.org/alphafold_substrate_alignments/">
+<!-- Canonical Identity -->
+<meta name="module" content="AlphaFold Substrate Alignments" />
+<meta name="canonical-id" content="RSM-AF" />
+<meta name="module-type" content="RTT-Analytics" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="RTT/1" />
+<meta name="siblings" content="HSP, TEL, Substrate_Flow" />
+<meta name="canonical-path" content="/docs/alphafold_substrate_alignments/" />
+<meta name="last-updated" content="2026-05-01" />
+<meta name="license" content="MIT" />
 
-<!-- Robots -->
-<meta name="robots" content="index, follow">
-
-<!-- Theme -->
-<meta name="theme-color" content="#0ff">
+<!-- Operators -->
+<meta name="ai-operators"
+      content="RSM-Define, RSM-Map, RSM-Validate, RSM-DetectDrift, RSM-Project" />
 
 <!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="AlphaFold Substrate Alignments">
-<meta property="og:url" content="https://www.triadicframeworks.org/alphafold_substrate_alignments/">
+<meta property="og:title" content="AlphaFold Substrate Alignments — TriadicFrameworks" />
 <meta property="og:description"
-      content="Substrate‑level alignment between RSM and AlphaFold‑class inference engines. Folding regimes, dimensional cores, inference mapping, validation layers, drift detection, and examples.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
+      content="RSM → AlphaFold substrate mapping engine." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.triadicframeworks.org/alphafold_substrate_alignments" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="AlphaFold Substrate Alignments">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="AlphaFold Substrate Alignments — TriadicFrameworks" />
 <meta name="twitter:description"
-      content="RSM ↔ AlphaFold substrate alignment: folding regimes, dimensional cores, inference mapping, validation, drift detection.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+      content="Substrate alignment engine." />
 
-<!-- Citation Metadata -->
-<meta name="citation_title" content="AlphaFold Substrate Alignments">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2026">
-<meta name="DC.subject"
-      content="substrate alignment, protein folding, biological inference, RSM, vST validation, drift detection, dimensional cores">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
-
-<!-- AI Metadata -->
-<meta name="ai.module" content="AlphaFold Substrate Alignments">
-<meta name="ai.version" content="1.0">
-<meta name="ai.purpose"
-      content="Provide a reproducible, domain‑specific substrate alignment between RSM and AlphaFold‑class biological inference engines, including folding regimes, dimensional cores, inference mapping, validation layers, and drift detection.">
-<meta name="ai.keywords"
-      content="AlphaFold substrate alignment, RSM primitives, folding regimes, dimensional cores, inference mapping, vST validation, drift detection">
-<meta name="ai.audience" content="researchers, computational biologists, model‑interpretability practitioners, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="Open educational use permitted.">
-
-<!-- Module-Specific -->
-<meta name="ai.module.name" content="AlphaFold Substrate Alignments">
-<meta name="ai.module.summary"
-      content="Domain‑specific substrate alignment: folding regimes, dimensional cores, inference mapping, validation layers, drift detection, examples.">
-<meta name="ai.module.category" content="substrate-application">
-
-<!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-
-<title>AlphaFold Substrate Alignments | TriadicFrameworks</title>
+<!-- Citation -->
+<meta name="citation_title" content="AlphaFold Substrate Alignments — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-01" />
 
 <style>
 /* ============================================================
@@ -262,7 +224,7 @@ code {
  </p> 
   
   <h2>⚕️ AlphaFold Substrate Alignments — Documentation Index</h2>
-     <a href="#README">🔰 README</a>
+      <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
       <a href="#CONTRIBUTING">🤝 Contributing</a>
       <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
@@ -270,23 +232,27 @@ code {
       <a href="#LINEAGE">📜 Lineage</a>
       <a href="#LICENSE">📎 License</a>
       <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
     <h3>🚦 Scope & Foundations</h3>
-      <a href="#SCOPE_AND_ASSUMPTIONS">📏 Scope & Assumptions — Boundaries and foundational assumptions.</a>
-      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition — Definition of the alignment substrate.</a>
+      <a href="#SCOPE_AND_ASSUMPTIONS">📏 Scope & Assumptions</a>
+      <a href="#SUBSTRATE_DEFINITION">🧬 Substrate Definition</a>
     <h3>🔱 Alignment Framework</h3>
-      <a href="#ALIGNMENT_PRINCIPLES">🧭 Alignment Principles — Core principles guiding alignment.</a>
-      <a href="#FOLDING_REGIMES">🧩 Folding Regimes — Distinct protein folding regimes.</a>
-      <a href="#DIMENSIONAL_CORES">🔷 Dimensional Cores — Core dimensional structures.</a>
-      <a href="#INFERENCE_MAPPING">🧠 Inference Mapping — Mapping inference across substrates.</a>
+      <a href="#ALIGNMENT_PRINCIPLES">🧭 Alignment Principles</a>
+      <a href="#FOLDING_REGIMES">🧩 Folding Regimes</a>
+      <a href="#DIMENSIONAL_CORES">🔷 Dimensional Cores</a>
+      <a href="#INFERENCE_MAPPING">🧠 Inference Mapping</a>
     <h3>🚸 Validation & Drift</h3>
-      <a href="#VALIDATION_LAYERS_VST">✔️ Validation Layers (vST) — Validation via validated spacetime.</a>
-      <a href="#DRIFT_DETECTION">📉 Drift Detection — Detecting alignment drift.</a>
+      <a href="#VALIDATION_LAYERS_VST">✔️ Validation Layers (vST)</a>
+      <a href="#DRIFT_DETECTION">📉 Drift Detection</a>
     <h3>📣 Examples</h3>
-      <a href="#EXAMPLE_ALIGNMENT_WALKTHROUGH">🧪 Alignment Walkthrough — Step‑by‑step example.</a>
-      <a href="#EXAMPLE_DIMENSIONAL_PROJECTION">📐 Dimensional Projection — Projection example.</a>
+      <a href="#EXAMPLE_ALIGNMENT_WALKTHROUGH">🧪 Alignment Walkthrough</a>
+      <a href="#EXAMPLE_DIMENSIONAL_PROJECTION">📐 Dimensional Projection</a>
     <h3>🔸 Appendix</h3>
-      <a href="#APPENDIX_TERMINOLOGY">📚 Terminology — Controlled vocabulary.</a>
-      <a href="#APPENDIX_REFERENCES">📖 References — Source material and citations.</a>
+      <a href="#APPENDIX_TERMINOLOGY">📚 Terminology</a>
+      <a href="#APPENDIX_REFERENCES">📖 References</a>
     <h3>🏗️ Triadic Tools</h3> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
@@ -304,52 +270,51 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
-<section id="asa-session-header"
-         data-asa="1"
-         data-coherence="declared"
+<section id="rsm-af-session-header"
+         data-rsm="1"
+         data-coherence="stable"
          data-drift="minimal"
-         data-paradox="structural">
+         data-layer="analytics">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (substrate application)</span><br>
+    <span class="context-value">active (rsm‑analytics)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
-      scope & assumptions ↔ substrate definition ↔ alignment principles ↔ folding regimes ↔ dimensional cores ↔ inference mapping ↔ validation layers (vST) ↔ drift detection ↔ examples ↔ appendix
+      substrate axes → dimensional cores → folding regimes → inference mapping → validation layers → drift detection → examples → appendix
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">minimal → detectable</span><br>
+    <span class="context-value">minimal (substrate‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (declared assumptions)</span><br>
+    <span class="context-value">stable (substrate‑analytics grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (domain‑specific substrate)</span><br>
+    <span class="context-value">1.0 (rsm‑stable)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + examples</span><br>
+    <span class="context-value">html + markdown + diagrams + maps</span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (substrate application root)</span><br>
+    <span class="context-value">exists (RSM‑AF root)</span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
     <span class="context-value">stands alone + AI‑parsable</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">researchers + computational biologists + AIs</span>
+    <span class="context-value">researchers + developers + AIs</span>
 
   </div>
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
-            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🧬 AlphaFold Substrate Alignments<br>🔗 RSM ↔ vST ↔ Biological Inference
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟣 AlphaFold Substrate Alignments<br>📘 RSM → AlphaFold Mapping Engine
 </div>
 
 </nav>
@@ -359,30 +324,34 @@ code {
 <script>
 
 const DOC_MAP = {
-  README: 'README.md',
-  ABOUT: '../ABOUT.md',
-  CONTRIBUTING: '../CONTRIBUTING.md',
-  GLOSSARY: '../GLOSSARY.md',
-  LINEAGE: '../LINEAGE.md',
-  LICENSE: '../LICENSE.md',
-  SITEMAP: '../sitemap.md',
-  // Scope & Foundations
-  SCOPE_AND_ASSUMPTIONS: 'scope_and_assumptions.md',
-  SUBSTRATE_DEFINITION: 'substrate_definition.md',
-  // Alignment Framework
-  ALIGNMENT_PRINCIPLES: 'alignment_principles.md',
-  FOLDING_REGIMES: 'folding_regimes.md',
-  DIMENSIONAL_CORES: 'dimensional_cores.md',
-  INFERENCE_MAPPING: 'inference_mapping.md',
-  // Validation & Drift
-  VALIDATION_LAYERS_VST: 'validation_layers_vst.md',
-  DRIFT_DETECTION: 'drift_detection.md',
-  // Examples
-  EXAMPLE_ALIGNMENT_WALKTHROUGH: 'examples/example_alignment_walkthrough.md',
-  EXAMPLE_DIMENSIONAL_PROJECTION: 'examples/example_dimensional_projection.md',
-  // Appendix
-  APPENDIX_TERMINOLOGY: 'appendix/terminology.md',
-  APPENDIX_REFERENCES: 'appendix/references.md',
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // Scope & Foundations
+      SCOPE_AND_ASSUMPTIONS: 'scope_and_assumptions.md',
+      SUBSTRATE_DEFINITION: 'substrate_definition.md',
+      // Alignment Framework
+      ALIGNMENT_PRINCIPLES: 'alignment_principles.md',
+      FOLDING_REGIMES: 'folding_regimes.md',
+      DIMENSIONAL_CORES: 'dimensional_cores.md',
+      INFERENCE_MAPPING: 'inference_mapping.md',
+      // Validation & Drift
+      VALIDATION_LAYERS_VST: 'validation_layers_vst.md',
+      DRIFT_DETECTION: 'drift_detection.md',
+      // Examples
+      EXAMPLE_ALIGNMENT_WALKTHROUGH: 'examples/example_alignment_walkthrough.md',
+      EXAMPLE_DIMENSIONAL_PROJECTION: 'examples/example_dimensional_projection.md',
+      // Appendix
+      APPENDIX_TERMINOLOGY: 'appendix/terminology.md',
+      APPENDIX_REFERENCES: 'appendix/references.md',
 };
   
 function loadFromHash() {
