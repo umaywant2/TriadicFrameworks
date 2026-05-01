@@ -1,47 +1,73 @@
-<section id="coeus-session-header"
-         data-coeus="1"
-         data-coherence="mythic-rational"
-         data-drift="minimal"
-         data-paradox="triadic">
-
-  <h2>Session Context</h2>
-
-  <div class="context-block">
-
-    <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (coeus‑operator)</span><br>
-
-    <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">
-      mythic layer → rational layer → symbolic operators → triadic recursion → multi‑agent sandbox → coin protocol → coherence scaffolding → lineage → examples → teaching → research
-    </span><br>
-
-    <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">minimal (operator‑locked)</span><br>
-
-    <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">mythic‑rational (structural intuition)</span><br>
-
-    <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (coeus‑stable)</span><br>
-
-    <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + yaml + diagrams + operators</span><br>
-
-    <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (Coeus root)</span><br>
-
-    <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + AI‑parsable</span><br>
-
-    <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + researchers + developers + designers + AIs</span>
-
-  </div>
-
-</section>
-
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
-            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🜁 Coeus<br>📘 Mythic‑Rational Operator • AI‑Ready
-</div>
+{
+  "module": "Coeus",
+  "version": "1.0",
+  "category": "coeus-operator",
+  "summary": "Mythic‑rational operator module: structural intuition, symbolic operators, triadic recursion, multi-agent sandbox, coin protocol, lineage-locked cognition.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "mythic_layer.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "rational_layer.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "symbolic_operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "triadic_recursion.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "multi_agent_sandbox.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "coin_protocol.md",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "coherence_scaffolding.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "lineage_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "examples.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "teaching.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "research.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
