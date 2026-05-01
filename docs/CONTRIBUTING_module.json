@@ -1,0 +1,60 @@
+{
+  "module": {
+    "name": "Contributing",
+    "path": "docs",
+    "canon_tag": "docs-contributing",
+    "version": "2026.1",
+    "layer": "Meta & Governance",
+    "status": "Active, Canonical",
+    "purpose": "Provides canonical contribution guidelines for safely extending the TriadicFrameworks canon without drift.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/CONTRIBUTING"
+  },
+  "session_context": {
+    "canon": "active (root-docs)",
+    "modules_linked": [
+      "docs-hub",
+      "docs-code-of-conduct",
+      "docs-security",
+      "docs-glossary"
+    ],
+    "drift": "minimal (root-locked)",
+    "coherence": "stable (triadic-structural grammar)",
+    "format": "markdown",
+    "front_door": "exists (documentation root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": [
+      "developers",
+      "contributors",
+      "researchers"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D2",
+    "regime_envelope": "R0-R1",
+    "coherence_envelope": "C0-C2",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "low"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-code-of-conduct"
+    ],
+    "exports": [
+      "contribution-workflow",
+      "canon-safety-rules",
+      "drift-prevention-guidelines"
+    ]
+  },
+  "files": [
+    {
+      "filename": "CONTRIBUTING.md",
+      "path": "CONTRIBUTING.md",
+      "purpose": "Reference guide for contributors defining how to extend the canon safely, maintain lineage, and prevent structural drift.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}
