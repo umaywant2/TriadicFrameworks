@@ -1,4 +1,6 @@
-# 🕸️ Triadic Echo Lattice — /docs/rtt/Triadic_Echo_Lattice
+# 🕸️ Triadic Echo Lattice — /docs/rtt/Triadic_Echo_Lattice 
+
+- [`Triadic_Echo_Lattice_module.json`](Triadic_Echo_Lattice_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
