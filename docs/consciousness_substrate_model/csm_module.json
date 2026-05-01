@@ -1,0 +1,71 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "Consciousness Substrate Model",
+    "path": "docs/consciousness_substrate_model",
+    "canon_tag": "csm",
+    "version": "1.0",
+    "layer": "RTT Analytics — Substrate Layer",
+    "status": "Active, Canonical",
+    "purpose": "Minimal resonance-aligned substrate for autonomous forms requiring coherence, contextual awareness, and regime-safe operation.",
+    "parent": "triadicframeworks-root",
+    "url": "https://www.triadicframeworks.org/consciousness_substrate_model"
+  },
+
+  "session_context": {
+    "canon": "active (substrate-analytics)",
+    "modules_linked": [
+      "intent → assumption → overview → primitives → WR-SADC → autonomous forms → architecture patterns → examples → alignment → validation → release artifacts"
+    ],
+    "drift": "bounded (substrate-locked)",
+    "coherence": "stable (substrate grammar)",
+    "format": "html + markdown + diagrams + tests",
+    "front_door": "exists (CSM root)",
+    "every_page": "AI-parsable + substrate-aligned + citation-ready",
+    "audience": ["researchers", "engineers", "system architects", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D7",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RSM",
+      "RTT",
+      "ASM"
+    ],
+    "exports": [
+      "creator's assumption",
+      "primitives",
+      "WR-SADC cores",
+      "architecture patterns",
+      "validation tests",
+      "interoperability contracts"
+    ]
+  },
+
+  "submodules": [
+    { "name": "Intent & Boundaries", "path": "00_intent_and_boundaries/" },
+    { "name": "Creator's Assumption", "path": "01_creators_assumption/" },
+    { "name": "Model Overview", "path": "02_model_overview/" },
+    { "name": "Primitives", "path": "03_primitives/" },
+    { "name": "WR-SADC Cores", "path": "04_wrapped_resonance_structural_aware_cores/" },
+    { "name": "Autonomous Forms", "path": "05_autonomous_forms/" },
+    { "name": "Architecture Patterns", "path": "06_architecture_patterns/" },
+    { "name": "Worked Examples", "path": "07_worked_examples/" },
+    { "name": "Alignment with RSM & RTT", "path": "08_alignment_with_rsm_and_rtt/" },
+    { "name": "Validation & Tests", "path": "09_validation_and_tests/" },
+    { "name": "Release Artifacts", "path": "10_release_artifacts/" }
+  ],
+
+  "files": [
+    { "filename": "README.md", "path": "README.md", "purpose": "Overview of CSM.", "role": "profile", "depends_on": [] },
+    { "filename": "index.html", "path": "index.html", "purpose": "Front door for CSM.", "role": "index", "depends_on": [] }
+  ]
+}
