@@ -1,0 +1,58 @@
+{
+  "module": "Law",
+  "version": "0.1.0",
+  "category": "domain-primer",
+  "summary": "RTT domain primer applying Resonance-Time Theory to legal systems. Full regime awareness (BRE/Post-BRA), foundational to emerging domains, triadic coherence analysis, and structural mapping of law as meta-regime substrate.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "ABOUT-law.md",
+      "role": "about",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "law-foundational-regimes.md",
+      "role": "core",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "law-private-domestic.md",
+      "role": "core",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "law-public-domestic.md",
+      "role": "core",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "law-commercial-economic.md",
+      "role": "core",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "law-international-global.md",
+      "role": "core",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "law-emerging-tech.md",
+      "role": "core",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "law-rtt-regime-awareness.md",
+      "role": "engine",
+      "analyzer_layer": "awareness"
+    },
+    {
+      "path": "law-references-glossary.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
