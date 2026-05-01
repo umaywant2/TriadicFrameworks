@@ -1,4 +1,6 @@
-# AI
+# AI 
+
+- [`ai_module.json`](ai_module.json) — Agentic module schema role assignments
 
 This directory defines a minimal, layered AI instrument architecture.
 
