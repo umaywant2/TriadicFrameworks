@@ -1,4 +1,6 @@
-# Audio Industry Reviewed using [RTT](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)/[vST](https://zenodo.org/communities/vst)
+# Audio Industry Reviewed
+
+- [`audio_module.json`](audio_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
