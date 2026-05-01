@@ -1,4 +1,6 @@
-## RTT‑Inside Browser Extension (Beta)
+## RTT‑Inside Browser Extension (Beta) 
+
+- [`RTT_extension_module.json`](RTT_extension_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
