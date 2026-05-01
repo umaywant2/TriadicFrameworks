@@ -1,4 +1,7 @@
 ## ⭐ **THE FRAMEWORK CREATION GUIDE (FCG)**  
+
+- [`FCG_module.json`](FCG_module.json) — Agentic module schema role assignments
+
 *A new top‑level module in the TriadicFrameworks canon*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
