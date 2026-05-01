@@ -1,0 +1,63 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "The Inverted Star",
+    "path": "docs/rtt/The_Inverted_Star",
+    "canon_tag": "rtt-inverted-star",
+    "version": "1.0",
+    "layer": "RTT Structural Engine — Inversion Layer",
+    "status": "Active, Canonical",
+    "purpose": "RTT structural inversion engine: geometry, operators, cycles, envelopes, lineage, diagrams, examples.",
+    "parent": "rtt-engine",
+    "url": "https://www.triadicframeworks.org/rtt/The_Inverted_Star"
+  },
+
+  "session_context": {
+    "canon": "active (rtt-inversion)",
+    "modules_linked": [
+      "inversion geometry → inversion operators → inversion cycles → inversion envelopes → inversion lineage → diagrams → examples"
+    ],
+    "drift": "minimal (inversion-locked)",
+    "coherence": "stable (inversion grammar)",
+    "format": "html + markdown + diagrams + maps",
+    "front_door": "exists (Inverted Star root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": ["students", "researchers", "developers", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D7",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RTT/1 operators",
+      "SARG structural grammar",
+      "FFT field grammar"
+    ],
+    "exports": [
+      "inversion geometry",
+      "inversion operators",
+      "inversion cycles",
+      "inversion envelopes",
+      "inversion lineage",
+      "inversion diagrams"
+    ]
+  },
+
+  "submodules": [
+    { "name": "Inversion Geometry", "path": "geometry.md" },
+    { "name": "Inversion Operators", "path": "operators.md" },
+    { "name": "Inversion Cycles", "path": "cycles.md" },
+    { "name": "Inversion Examples", "path": "examples.md" },
+    { "name": "Inversion Integration", "path": "integration.md" }
+  ],
+
+  "files": [
+    { "filename": "README.md", "path": "README.md", "purpose": "Overview of The Inverted Star.", "role": "profile", "depends_on": [] },
+    { "filename":
