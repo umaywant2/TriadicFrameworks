@@ -5,28 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Substrate Flow — TriadicFrameworks</title>
-  <meta name="description" content="Substrate Flow (08): echo movement layer of the HSP analytics suite. 5 substrates, 4 channels, 4 driver types." />
+  <meta name="description"
+        content="Substrate Flow (06d): flow‑dynamics engine for the HSP analytics suite. Defines substrate channels, flow drivers, flow envelopes, flow signatures, and flow‑to‑echo mapping." />
   <meta name="author" content="Nawder Loswin" />
+  <meta name="keywords"
+        content="Substrate Flow, RTT, HSP, flow channels, flow drivers, flow envelopes, flow signatures, flow mapping" />
+
+  <!-- Canonical Module Identity -->
   <meta name="module" content="Substrate Flow" />
   <meta name="canonical-id" content="SF" />
   <meta name="module-type" content="RTT-Analytics" />
-  <meta name="hsp-section" content="08" />
+  <meta name="hsp-section" content="06d" />
   <meta name="version" content="1.0" />
   <meta name="status" content="canon-stable" />
   <meta name="parent" content="HSP (RTT-Analytics-Core)" />
-  <meta name="siblings" content="Echo Classifier (06c), TEL (07)" />
-  <meta name="operators" content="SF-Read, SF-Route, SF-Drift, SF-Tag" />
+  <meta name="siblings" content="Harmonic_Operators (06a), Stability_Envelope (06b), Echo_Classifier (06c), Triadic_Echo_Lattice (06e)" />
+  <meta name="operators" content="SF-Read, SF-Flow, SF-Trace, SF-Align" />
   <meta name="framework" content="TriadicFrameworks" />
   <meta name="license" content="MIT" />
   <meta name="canonical-path" content="/docs/rtt/Substrate_Flow/" />
-  <meta name="last-updated" content="2026-04-27" />
+  <meta name="last-updated" content="2026-05-01" />
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Substrate Flow — TriadicFrameworks" />
-  <meta property="og:description" content="Echo movement layer: 5 substrates, 4 channels, 4 driver types." />
+  <meta property="og:description"
+        content="Flow channels → flow drivers → flow envelopes → flow signatures → flow‑to‑echo mapping." />
   <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.triadicframeworks.org/rtt/Substrate_Flow" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Substrate Flow — TriadicFrameworks" />
+  <meta name="twitter:description"
+        content="Flow‑dynamics engine for RTT/1 analytics." />
+
+  <!-- Citation -->
+  <meta name="citation_title" content="Substrate Flow Module — TriadicFrameworks" />
+  <meta name="citation_author" content="Nawder Loswin" />
+  <meta name="citation_date" content="2026-05-01" />
+
+  <!-- AI Metadata -->
   <meta name="ai-ready" content="true" />
   <meta name="ai-module-id" content="SF" />
-  <meta name="ai-operators" content="SF-Read, SF-Route, SF-Drift, SF-Tag" />
+  <meta name="ai-operators" content="SF-Read, SF-Flow, SF-Trace, SF-Align" />
 
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
@@ -168,19 +189,54 @@
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
-    <div class="session-block">
-      <span>module:</span> Substrate Flow<br/>
-      <span>id:</span> SF<br/>
-      <span>hsp:</span> 08<br/>
-      <span>version:</span> 1.0<br/>
-      <span>status:</span> canon-stable<br/>
-      <span>tier:</span> RTT-Analytics<br/>
-      <span>parent:</span> HSP<br/>
-      <span>siblings:</span> EC, TEL<br/>
-      <span>drift:</span> bounded<br/>
-      <span>coherence:</span> locked<br/>
-      <div class="module-badge">🌊 SF • 08 • v1.0</div>
-    </div>
+   <!-- Session Context Block -->
+<section id="substrate-flow-session-header"
+         data-sf="1"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-analytics="flow">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (rtt‑analytics‑flow)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      flow channels → flow drivers → flow envelopes → flow signatures → flow‑to‑echo mapping → examples → integration
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (flow‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (flow‑echo grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (sf‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + diagrams + maps</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Substrate Flow root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🜄 Substrate Flow<br>📘 RTT‑Analytics • Flow‑Dynamics Engine
+</div>
+
   </nav>
 
   <main>
