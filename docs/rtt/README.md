@@ -1,4 +1,7 @@
 ## 🌀 **Resonance‑Time Technology (RTT)**  
+
+- [`rtt-root_module.json`](rtt-root_module.json) — Agentic module schema role assignments
+
 Clarity Phase • Operational • Chassis
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
