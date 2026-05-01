@@ -14,7 +14,9 @@
 
 ---
 
-## **TriadicFrameworks: The Resonance Substrate Model - RSM v2.1 Seed Release**
+## **TriadicFrameworks: The Resonance Substrate Model - RSM v2.1 Seed Release**  
+
+- [`RSM_module.json`](RSM_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
