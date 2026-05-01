@@ -1,6 +1,6 @@
 # ABOUT | Law Module
 
-[🔰 README](../README.md) | [📘 Law Navigation](https://www.triadicframeworks.org/Law/) | [⚖️ Session Context](#law-session-header) | [🎯 Glossary](../law-references-glossary.md)
+[`about_law_module.json`](about_law_module.json) | [🔰 README](../README.md) | [📘 Law Navigation](https://www.triadicframeworks.org/Law/) | [⚖️ Session Context](#law-session-header) | [🎯 Glossary](../law-references-glossary.md)
 
 ## 🧭 What This Module Is
 
