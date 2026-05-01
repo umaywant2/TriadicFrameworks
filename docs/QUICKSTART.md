@@ -1,4 +1,7 @@
 ## 🚀 Quickstart  
+
+- [`QUICKSTART_module.json`](QUICKSTART_module.json) — Agentic module schema role assignments
+
 *A student‑first, Copilot‑friendly introduction to Resonance‑Time Theory*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
