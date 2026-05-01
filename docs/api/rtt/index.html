@@ -1,80 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Core Metadata -->
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-04-25">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
-<!-- Identity -->
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!-- Description & Keywords -->
-<meta name="description" content="The RTT API — a minimal, stable, forward‑compatible interface for sites, services, extensions, and research tools participating in the RTT‑Inside ecosystem. Defines beacon, profile, and diagnostics endpoint shapes without exposing substrate logic.">
-<meta name="keywords" content="RTT API, beacon endpoint, profile endpoint, diagnostics endpoint, vST beta, coherence sampling, structural signals, RTT-Inside, forward-compatible API">
+<title>RTT API — TriadicFrameworks</title>
 
-<!-- Canonical URL -->
-<link rel="canonical" href="https://www.triadicframeworks.org/api/rtt/">
+<meta name="description"
+      content="RTT API: the public API surface for RTT/1. Beacon, Profile, Diagnostics, Router, Client, Server, and the Dimensional Echo API." />
+<meta name="keywords"
+      content="RTT API, Beacon, Profile, Diagnostics, Router, Client, Server, Dimensional Echo API" />
+<meta name="author" content="Nawder Loswin" />
 
-<!-- Robots -->
-<meta name="robots" content="index, follow">
+<!-- Canonical Identity -->
+<meta name="module" content="RTT API" />
+<meta name="canonical-id" content="RTT-API" />
+<meta name="module-type" content="RTT-API" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="RTT/1" />
+<meta name="siblings" content="RTT/SDK, RTT/App, RTT/Micro_Core" />
+<meta name="canonical-path" content="/docs/api/rtt/" />
+<meta name="last-updated" content="2026-05-01" />
+<meta name="license" content="MIT" />
 
-<!-- Theme -->
-<meta name="theme-color" content="#0ff">
+<!-- Operators -->
+<meta name="ai-operators"
+      content="RTTAPI-Beacon, RTTAPI-Profile, RTTAPI-Diagnostics, RTTAPI-Validate, RTTAPI-Corridor, RTTAPI-Topology" />
 
 <!-- Open Graph -->
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="RTT API — TriadicFrameworks">
-<meta property="og:url" content="https://www.triadicframeworks.org/api/rtt/">
-<meta property="og:description" content="A minimal, stable, forward‑compatible interface for RTT‑Inside. Beacon, profile, and diagnostics endpoints for structural signals and coherence sampling.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
+<meta property="og:title" content="RTT API — TriadicFrameworks" />
+<meta property="og:description"
+      content="Public RTT/1 API surface: Beacon, Profile, Diagnostics, Router, Client, Server." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://www.triadicframeworks.org/api/rtt" />
 
 <!-- Twitter -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="RTT API — TriadicFrameworks">
-<meta name="twitter:description" content="A stable, forward‑compatible interface for RTT‑Inside structural signals and profiles.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="RTT API — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="RTT/1 public API surface." />
 
-<!-- Citation Metadata -->
-<meta name="citation_title" content="TriadicFrameworks RTT API">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2025">
-<meta name="DC.subject" content="API design, structural signals, coherence sampling, RTT ecosystem, vST beta">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
-
-<!-- AI Metadata -->
-<meta name="ai.module" content="RTT API">
-<meta name="ai.version" content="1.0">
-<meta name="ai.purpose" content="Provide a minimal, stable, forward‑compatible interface for RTT‑Inside structural signals, profiles, and future vST‑beta diagnostics.">
-<meta name="ai.keywords" content="beacon, profile, diagnostics, structural signals, coherence sampling, RTT-Inside, vST beta">
-<meta name="ai.audience" content="developers, researchers, integrators, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="Open educational use permitted.">
-
-<!-- Module-Specific -->
-<meta name="ai.module.name" content="RTT API">
-<meta name="ai.module.summary" content="A minimal, stable, forward‑compatible API for RTT‑Inside structural signals, profiles, and diagnostics.">
-<meta name="ai.module.category" content="infrastructure-api">
-
-<!-- Favicon -->
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-
-<title>RTT API | TriadicFrameworks</title>
+<!-- Citation -->
+<meta name="citation_title" content="RTT API — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-01" />
 
 <style>
 /* ============================================================
@@ -261,6 +232,10 @@ code {
       <a href="#LINEAGE">📜 Lineage</a>
       <a href="#LICENSE">📎 License</a>
       <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
     <h3>📘 Top‑Level</h3>
       <a href="#BEACON">📘 BEACON</a>
       <a href="#CLIENT">ℹ️ CLIENT</a>
@@ -296,39 +271,41 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
-<section id="rtt-session-header"
-         data-rtt="1"
-         data-coherence="declared"
-         data-drift="bounded"
-         data-paradox="structural">
+<section id="rtt-api-session-header"
+         data-api="1"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-layer="api">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (infrastructure API)</span><br>
+    <span class="context-value">active (rtt‑api)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">linked (beacon ↔ profile ↔ diagnostics)</span><br>
+    <span class="context-value">
+      Beacon → Profile → Diagnostics → Router → Client → Server → Dimensional Echo API → Examples
+    </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">minimal (endpoint‑stable)</span><br>
+    <span class="context-value">minimal (api‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (shape‑locked)</span><br>
+    <span class="context-value">stable (api grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (API‑stable)</span><br>
+    <span class="context-value">1.0 (api‑stable)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + JSON examples</span><br>
+    <span class="context-value">html + markdown + examples</span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (API root)</span><br>
+    <span class="context-value">exists (RTT API root)</span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone</span><br>
+    <span class="context-value">stands alone + API‑parsable</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
     <span class="context-value">developers + researchers + AIs</span>
@@ -337,8 +314,8 @@ code {
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🛰️ API‑Stable<br>📡 Beacon‑Ready<br>
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🟦 RTT API<br>📘 Public RTT/1 API Surface
 </div>
 
 </nav>
@@ -348,31 +325,35 @@ code {
 <script>
 
 const DOC_MAP = {
-   README: 'README.md',
-   ABOUT: '../ABOUT.md',
-   CONTRIBUTING: '../CONTRIBUTING.md',
-   GLOSSARY: '../GLOSSARY.md',
-   LINEAGE: '../LINEAGE.md',
-   LICENSE: '../LICENSE.md',
-   SITEMAP: '../sitemap.md',
-   /* Top Level */
-   BEACON: "beacon.md",
-   CLIENT: "client.md",
-   DIAGNOSTICS: "diagnostics.md",
-   PROFILE: "profile.md",
-   ROUTER: "router.md",
-   /* Examples */
-   DIMENSIONAL_ECHOS: "The_Dimensional_Echo_API.md",
-   BEACON_REQUEST: "examples/beacon_request.json.md",
-   PROFILE_REQUEST: "examples/profile_request.json.md",
-   VALIDATE_REQUEST: "examples/validate_request.json.md",
-   /* Server */
-   BEACON_HANDLER: "server/beacon_handler.js.md",
-   DIAGNOSTICS_HANDLER: "server/diagnostics_handler.js.md",
-   HANDLERS: "server/handlers.md",
-   PROFILE_HANDLER: "server/profile_handler.js.md",
-   ROUTER: "server/router.js.md",
-   SERVER: "server/server.js.md",  
+      README: 'README.md',
+      ABOUT: '../../ABOUT.md',
+      CONTRIBUTING: '../../CONTRIBUTING.md',
+      GLOSSARY: '../../GLOSSARY.md',
+      LINEAGE: '../../LINEAGE.md',
+      LICENSE: '../../LICENSE.md',
+      SITEMAP: '../../sitemap.md',
+      QUICKSTART: '../../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../../CODE_OF_CONDUCT.md',
+      SECURITY: '../../SECURITY.md',
+      PRINCIPLES: '../../PRINCIPLES.md',
+       /* Top Level */
+       BEACON: "beacon.md",
+       CLIENT: "client.md",
+       DIAGNOSTICS: "diagnostics.md",
+       PROFILE: "profile.md",
+       ROUTER: "router.md",
+       /* Examples */
+       DIMENSIONAL_ECHOS: "The_Dimensional_Echo_API.md",
+       BEACON_REQUEST: "examples/beacon_request.json.md",
+       PROFILE_REQUEST: "examples/profile_request.json.md",
+       VALIDATE_REQUEST: "examples/validate_request.json.md",
+       /* Server */
+       BEACON_HANDLER: "server/beacon_handler.js.md",
+       DIAGNOSTICS_HANDLER: "server/diagnostics_handler.js.md",
+       HANDLERS: "server/handlers.md",
+       PROFILE_HANDLER: "server/profile_handler.js.md",
+       ROUTER: "server/router.js.md",
+       SERVER: "server/server.js.md",  
 };
   
 function loadFromHash() {
