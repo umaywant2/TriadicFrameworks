@@ -1,0 +1,70 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "RTT/12",
+    "path": "docs/rtt/12",
+    "canon_tag": "rtt-engine-12",
+    "version": "1.0",
+    "layer": "RTT Engine Layer — Tier 12",
+    "status": "Active, Canonical",
+    "purpose": "Tier‑12 resonance‑time engine: high‑resolution operators, invariants, diagrams, and structural envelopes.",
+    "parent": "rtt-engine",
+    "url": "https://www.triadicframeworks.org/rtt/12"
+  },
+
+  "session_context": {
+    "canon": "active (rtt-engine-12)",
+    "modules_linked": [
+      "operators → invariants → envelopes → diagrams → maps → micro-core → examples"
+    ],
+    "drift": "minimal (tier-locked)",
+    "coherence": "stable (resonance-time grammar)",
+    "format": "html + markdown + diagrams + maps",
+    "front_door": "exists (RTT/12 root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": ["students", "developers", "researchers", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D12",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RTT/1 operators",
+      "SARG structural grammar",
+      "FFT field grammar"
+    ],
+    "exports": [
+      "tier-12 operators",
+      "high-resolution invariants",
+      "envelopes",
+      "diagrams",
+      "maps"
+    ]
+  },
+
+  "submodules": [],
+
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Overview of RTT/12 and navigation.",
+      "role": "profile",
+      "depends_on": []
+    },
+    {
+      "filename": "index.html",
+      "path": "index.html",
+      "purpose": "Front door for RTT/12.",
+      "role": "index",
+      "depends_on": []
+    }
+  ]
+}
