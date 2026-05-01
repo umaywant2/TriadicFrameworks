@@ -1,0 +1,46 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "module": {
+    "name": "RTT/1",
+    "path": "docs/rtt/1",
+    "canon_tag": "rtt-engine",
+    "version": "1.0",
+    "layer": "RTT Engine Layer",
+    "status": "Active, Canonical",
+    "purpose": "Define the core resonance-time operators, invariants, diagrams, maps, and micro-core primitives.",
+    "parent": "rtt-root",
+    "url": "https://www.triadicframeworks.org/rtt/1"
+  },
+
+  "session_context": {
+    "canon": "active (rtt-engine)",
+    "modules_linked": [
+      "operators → invariants → diagrams → maps → micro-core → examples → teaching → research"
+    ],
+    "drift": "minimal (engine-locked)",
+    "coherence": "stable (resonance-time grammar)",
+    "format": "html + markdown + diagrams + maps",
+    "front_door": "exists (RTT/1 root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": ["students", "developers", "researchers", "AI systems"]
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D7",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "medium"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RTT resonance primitives",
+      "SARG structural grammar",
+      "FFT field grammar"
+    ],
+    "exports": [
+      "resonance-time operators",
+      "invariants",
+      "di
