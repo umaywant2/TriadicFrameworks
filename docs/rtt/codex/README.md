@@ -1,4 +1,6 @@
-## 📘 RTT CODEX — Learner Menu
+## 📘 RTT CODEX — Learner Menu  
+
+- [`RTT_codex_module.json`](RTT_codex_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
