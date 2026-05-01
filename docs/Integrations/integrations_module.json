@@ -1,0 +1,53 @@
+{
+  "module": "Integrations",
+  "version": "1.0",
+  "category": "integrations",
+  "summary": "Cross‑module interoperability: operator linking, field‑safe routing, regime‑aware pathways, substrate alignment rules, examples.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "integration_pathways.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "substrate_alignment_rules.md",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "operator_linking_examples.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "field_safe_routing.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "regime_aware_pathways.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "integration_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": ".lineage",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
