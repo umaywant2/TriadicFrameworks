@@ -1,0 +1,68 @@
+{
+  "module": "Inverted Economics",
+  "version": "1.0",
+  "category": "inverted-economics",
+  "summary": "Domain-scale inversion engine: structural audits, regime literacy, drift exposure, clarity extraction, economic-system forensics.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "inversion_engine.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "structural_audit.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "regime_literacy.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "drift_exposure.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "clarity_extraction.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "past_cycle_reconstruction.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "examples.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "teaching.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "research.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": ".lineage",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
