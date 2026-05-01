@@ -1,4 +1,7 @@
 ## 📜 LINEAGE.md — Canonical Lineage of TriadicFrameworks [html](https://www.triadicframeworks.org/lineage.html)  
+
+- [`LINEAGE_module.json`](LINEAGE_module.json) — Agentic module schema role assignments
+
 *A structural, educational, resonance‑time‑aligned history of the canon.*
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
