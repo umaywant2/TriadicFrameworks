@@ -1,4 +1,4 @@
-# **1. Ethiics & Privacy**  
+## 😇 Ethiics & Privacy  
 
 - [`ETHIICS_PRIVACY_module.json`](ETHIICS_PRIVACY_module.json) — Agentic module schema role assignments
 
