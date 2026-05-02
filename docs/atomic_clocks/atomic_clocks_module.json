@@ -1,64 +1,83 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "Atomic Clocks",
-    "path": "docs/atomic_clocks",
-    "canon_tag": "ac",
-    "version": "1.0",
-    "layer": "Science Core Layer",
-    "status": "Active, Canonical",
-    "purpose": "Triadic decomposition of time, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper, and notebooks.",
-    "parent": "triadicframeworks-root",
-    "url": "https://www.triadicframeworks.org/atomic_clocks"
-  },
-
-  "session_context": {
-    "canon": "active (science-core)",
-    "modules_linked": [
-      "decomposition → vST second → drift invariants → roadmap → whitepaper → notebooks"
-    ],
-    "drift": "bounded (invariant-locked)",
-    "coherence": "stable (science grammar)",
-    "format": "html + markdown + notebooks + whitepaper",
-    "front_door": "exists (AC root)",
-    "every_page": "AI-parsable + citation-ready",
-    "audience": ["researchers", "developers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D3",
-    "regime_envelope": "R0–R1",
-    "coherence_envelope": "C0–C3",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "low"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "vST",
-      "RSM",
-      "HSP"
-    ],
-    "exports": [
-      "triadic decomposition",
-      "vST second",
-      "drift invariants",
-      "adoption roadmap"
-    ]
-  },
-
-  "submodules": [
-    { "name": "Triadic Decomposition", "path": "triadic_decomposition.md" },
-    { "name": "vST Second", "path": "vst_second.md" },
-    { "name": "Drift Invariants", "path": "drift_invariants.md" },
-    { "name": "Roadmap", "path": "roadmap.md" },
-    { "name": "Whitepaper", "path": "whitepaper.md" },
-    { "name": "Notebooks", "path": "notebooks/" }
-  ],
-
+  "module": "Atomic Clocks",
+  "version": "1.0",
+  "category": "science-core",
+  "summary": "Science‑core module — triadic decomposition of time, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper (single‑file and 7 modular sections), and interactive vST‑Lite notebook demo.",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of Atomic Clocks.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for AC.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/00-abstract.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/01-introduction.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/02-triadic_decomposition.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "whitepaper/03-vst_definition_of_second.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "whitepaper/04-drift_detection_model.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "whitepaper/05-roadmap_for_adoption.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "whitepaper/06-references.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "triadic_decomposition/triad.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "vst_definition/second.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "drift_detection/invariants.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "roadmap/adoption.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "notebooks/vst_lite_atomic_clock_demo.ipynb",
+      "role": "example",
+      "analyzer_layer": "operator"
+    }
   ]
 }
