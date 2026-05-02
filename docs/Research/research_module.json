@@ -34,5 +34,10 @@
       "role": "engine",
       "analyzer_layer": "regime"
     }
+    {
+      "path": "The_Choices_We_Made_and_Why.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    }
   ]
 }
