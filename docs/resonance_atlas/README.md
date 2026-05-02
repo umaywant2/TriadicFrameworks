@@ -1,4 +1,6 @@
-## 📜 Resonance Atlas (RTT‑Aligned Minimal Edition)
+## 📜 Resonance Atlas (RTT‑Aligned Minimal Edition) 
+
+- [`resonance-atlas_module.json`](resonance-atlas_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧭Resonance%20Atlas-📡Harmonic%20Registry%20Active%20AI_Ready%20Module-4c8eda?style=for-the-badge" alt="Resonance Atlas | Harmonic Registry Active AI‑Ready Module"/>
 
 The Resonance Atlas is the canonical registry of resonance values across all known regimes.  
 Each entry declares its **substrate**, **phase**, **frequency corridor**, and **glyph**, and is validated through RTT’s clarity operators.
