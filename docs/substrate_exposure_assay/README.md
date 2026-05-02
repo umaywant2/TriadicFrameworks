@@ -1,7 +1,9 @@
 # Substrate Exposure Assay  
 _A minimal RTT/vST‑aligned protocol for observing structural behavior across AI models._
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+- [`SEA_module.json`](SEA_module.json) — Agentic module schema role assignments
+
+<img src="https://img.shields.io/badge/🧫Substrate%20Exposure%20Assay-📘Canonical%20Exposure%20Protocol%20AI_Ready-4c8eda?style=for-the-badge" alt="Substrate Exposure Assay | Canonical Exposure Protocol AI‑Ready"/>
 
 This directory contains the canonical, self‑contained materials for the **Substrate Exposure Assay**, a minimal method for evaluating how different AI models behave when exposed to a shared set of substrate‑aware prompts.
 
