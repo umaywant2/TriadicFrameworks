@@ -1,46 +1,88 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "RTT/1",
-    "path": "docs/rtt/1",
-    "canon_tag": "rtt-engine",
-    "version": "1.0",
-    "layer": "RTT Engine Layer",
-    "status": "Active, Canonical",
-    "purpose": "Define the core resonance-time operators, invariants, diagrams, maps, and micro-core primitives.",
-    "parent": "rtt-root",
-    "url": "https://www.triadicframeworks.org/rtt/1"
-  },
-
-  "session_context": {
-    "canon": "active (rtt-engine)",
-    "modules_linked": [
-      "operators → invariants → diagrams → maps → micro-core → examples → teaching → research"
-    ],
-    "drift": "minimal (engine-locked)",
-    "coherence": "stable (resonance-time grammar)",
-    "format": "html + markdown + diagrams + maps",
-    "front_door": "exists (RTT/1 root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": ["students", "developers", "researchers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D7",
-    "regime_envelope": "R0–R3",
-    "coherence_envelope": "C0–C4",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "medium"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "RTT resonance primitives",
-      "SARG structural grammar",
-      "FFT field grammar"
-    ],
-    "exports": [
-      "resonance-time operators",
-      "invariants",
-      "di
+  "module": "RTT/1",
+  "version": "1.0",
+  "category": "rtt-engine",
+  "summary": "Core Resonance‑Time Tech Engine — RFCs, core definitions, Resonant Time Triad, QMRoot Dimensional Model, Canonical Operator, S‑N‑R (Silence‑Noise‑Resonance), Dual Operator System Engine, Dimensional Core Operators (DCOS), Resonance‑Time Principle, Frequency‑First (FFF) Universe, Field Engine Set, Universe Statement + Extension Hooks.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "rfcs_and_quicklinks.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "core_definitions.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "resonant_time_triad.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "qmroot_dimensional_model.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "canonical_operator.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "qmroot_summary.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "silence_noise_resonance_s_n_r.md",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "dual_operator_system_engine.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "dimensional_core_operators_dcos.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "resonance_time_principle.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "frequency_first_fff_universe.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "field_engine_set_and_s_n_r.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "universe_statement_and_extension_hooks.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "credits_and_canon_note.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}
