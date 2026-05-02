@@ -1,997 +1,263 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-  "module": {
-    "name": "Governance Substrate Model",
-    "path": "docs/Governance_Substrate_Model",
-    "canon_tag": "gsm",
-    "version": "1.0",
-    "layer": "Meta & Governance",
-    "status": "Active, Canonical",
-    "purpose": "Structurally aligned reference framework for designing, evaluating, and stewarding governance systems across cultures, regimes, and time horizons. Encodes ten governance layers (Invariants through Adapters) plus a full Analyzer engine that maps systems into a five-axis structural space [C,M,O,A,T], checks alignment against invariants, computes drift vectors, and determines equilibrium basin membership. Behavior-first, non-ideological, substrate-agnostic — designed to remain legible hundreds of years forward.",
-    "parent": "webroot",
-    "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model"
-  },
-  "session_context": {
-    "canon": "active (gsm — top-level TriadicFrameworks doc module)",
-    "modules_linked": [
-      "01_Invariants/ → Analyzer/behavioral_invariants.yaml — invariant principles → machine-checkable rules",
-      "02_Awareness/ → Analyzer/awareness_layers.yaml — awareness concepts → structural sensing layers",
-      "03_Evaluation/ → Analyzer/coherence_scoring.yaml — evaluation criteria → scoring framework",
-      "04_Validation/ → Analyzer/substrate_validation_rules.yaml — validation principles → rule sets",
-      "05_Implementation/ → 10_Adapters/ — implementation patterns → domain-specific adapters",
-      "06_Leadership/ → Analyzer/phase_discipline.yaml — leadership principles → phase management rules",
-      "08_History/ → Analyzer/profiles/ — historical lessons → country YAML profiles",
-      "10_Adapters/ → Analyzer/substrate_adapters.yaml — adapter specs → machine-readable adapter configs",
-      "Analyzer/ → all governance layers — interpretive engine consuming the full GSM substrate"
-    ],
-    "drift": "low (invariant-first design — structural stability is a core design principle)",
-    "coherence": "stable (10-layer governance hierarchy + 5-axis structural vector space + analyzer pipeline)",
-    "format": "markdown + yaml + html",
-    "front_door": "exists (Governance_Substrate_Model/README.md + index.html)",
-    "every_page": "stands alone + student-ready + operator-aware + regime-tagged",
-    "audience": [
-      "students",
-      "educators",
-      "developers",
-      "researchers",
-      "AIs",
-      "policymakers"
-    ]
-  },
-  "structural_grammar": {
-    "dimensional_envelope": "D3–D9 (triadic governance geometry × regime modes × time horizons)",
-    "regime_envelope": "R1–R3 (multi-regime governance design — R3 for cross-regime stress testing and adapter mapping)",
-    "coherence_envelope": "C1–C3 (invariant compliance → layer consistency → cross-adapter coherence)",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "high",
-    "governance_layers": {
-      "01_Invariants": "Non-negotiable structural principles — alignment over enforcement, minimal moral denominator, regime awareness as duty",
-      "02_Awareness": "Primary obligation of governance — AI-assisted sensing, early warning signals, escalation patterns, interruption without domination",
-      "03_Evaluation": "Cross-regime stress tests, failure mode mapping, minimal sufficiency checks, RTT evaluation framework",
-      "04_Validation": "DOI canon interface, human-curated AI sift, minimal theme submissions, validated science criteria",
-      "05_Implementation": "AI alignment surfaces, core system design, education embedding, infrastructure retrofit patterns",
-      "06_Leadership": "Stewardship not control — maintaining legibility, phase management, when not to act",
-      "07_Incubation": "Global coordination, RTT incubator triad model, student-led governance, untethered venture growth",
-      "08_History": "Why governance failed before — late correction costs, lessons from failure, resource misallocation",
-      "09_Appendices": "Case studies, glossary, open questions, future work, simulations",
-      "10_Adapters": "Domain-specific mappings — education, industry, medicine, economics, punishment/rehabilitation, legacy system, local leadership, partial alignment, containment"
-    },
-    "structural_vector_space": {
-      "axes": [
-        "C (Centralization)",
-        "M (Market Integration)",
-        "O (Openness)",
-        "A (Accountability)",
-        "T (Time Horizon)"
-      ],
-      "purpose": "Five-axis coordinate system for positioning any governance system in the governance manifold",
-      "operations": [
-        "invariant_check",
-        "drift_detection",
-        "basin_alignment",
-        "regime_shift_detection",
-        "coherence_scoring"
-      ]
-    },
-    "alignment_primitives": {
-      "P1": "Alignment precedes enforcement",
-      "P2": "Awareness precedes intervention",
-      "P3": "Validation precedes trust",
-      "P4": "Stewardship precedes authority"
-    },
-    "governance_priorities": [
-      "early interruption > late punishment",
-      "translation > domination",
-      "containment when no safe path exists",
-      "structural clarity > narrative persuasion"
-    ]
-  },
-  "cross_module_propagation": {
-    "imports": [
-      "rtt-core (resonance-aware structural grammar — dimensional envelopes, regime modes, coherence levels)",
-      "TriadicFrameworks structural grammar (triadic operators, observer states, drift/coherence semantics)"
-    ],
-    "exports": [
-      "10-layer governance reference framework (Invariants → Adapters)",
-      "Structural vector space [C,M,O,A,T] for governance system positioning",
-      "Alignment invariants (4 primitives: alignment > enforcement, awareness > intervention, validation > trust, stewardship > authority)",
-      "Governance manifold with equilibrium basins and transition pathways",
-      "Analyzer pipeline (statement → structural vector → invariant check → drift detection → basin alignment)",
-      "9 country governance profiles (YAML — USA, UK, Canada, Australia, France, Germany, Spain, Russia, China)",
-      "Domain adapter methodology (education, industry, medicine, economics, law, infrastructure)",
-      "Simulation engine and scenario framework for governance transitions",
-      "Observer schemas (past/now/future) for temporal governance tracking"
-    ]
-  },
-  "submodules": [
-    {
-      "name": "01_Invariants",
-      "path": "01_Invariants/",
-      "file_count": 4,
-      "role": "reference",
-      "manifest": null
-    },
-    {
-      "name": "02_Awareness",
-      "path": "02_Awareness/",
-      "file_count": 5,
-      "role": "reference",
-      "manifest": null
-    },
-    {
-      "name": "03_Evaluation",
-      "path": "03_Evaluation/",
-      "file_count": 4,
-      "role": "diagnostic",
-      "manifest": null
-    },
-    {
-      "name": "04_Validation",
-      "path": "04_Validation/",
-      "file_count": 4,
-      "role": "diagnostic",
-      "manifest": null
-    },
-    {
-      "name": "05_Implementation",
-      "path": "05_Implementation/",
-      "file_count": 4,
-      "role": "map",
-      "manifest": null
-    },
-    {
-      "name": "06_Leadership",
-      "path": "06_Leadership/",
-      "file_count": 4,
-      "role": "reference",
-      "manifest": null
-    },
-    {
-      "name": "07_Incubation",
-      "path": "07_Incubation/",
-      "file_count": 4,
-      "role": "reference",
-      "manifest": null
-    },
-    {
-      "name": "08_History",
-      "path": "08_History/",
-      "file_count": 4,
-      "role": "reference",
-      "manifest": null
-    },
-    {
-      "name": "09_Appendices",
-      "path": "09_Appendices/",
-      "file_count": 5,
-      "role": "reference",
-      "manifest": null
-    },
-    {
-      "name": "10_Adapters",
-      "path": "10_Adapters/",
-      "file_count": 9,
-      "role": "extension",
-      "manifest": null
-    },
-    {
-      "name": "Analyzer",
-      "path": "Analyzer/",
-      "file_count": 66,
-      "role": "engine",
-      "manifest": null
-    }
-  ],
+  "module": "Governance Substrate Model",
+  "version": "1.0",
+  "category": "governance-substrate",
+  "summary": "Structurally aligned reference substrate for designing, evaluating, and stewarding governance systems across regimes, cultures, and time horizons. 10 numbered directories (01 Invariants, 02 Awareness, 03 Evaluation, 04 Validation, 05 Implementation, 06 Leadership, 07 Incubation, 08 History, 09 Appendices, 10 Adapters) with 49 content files. GSM Analyzer tool available. Parallel to MSM.",
   "files": [
     {
-      "filename": "README.md",
-      "path": "Governance_Substrate_Model/README.md",
-      "purpose": "Primary module README — defines what the GSM is and is not, core assumptions, structural priorities, contribution guidelines, and time-horizon design philosophy",
-      "role": "reference",
+      "path": "README.md",
+      "role": "index",
       "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "index.html",
-      "path": "Governance_Substrate_Model/index.html",
-      "purpose": "Web entry point for the Governance Substrate Model documentation hub",
-      "role": "index"
-    },
-    {
-      "filename": "module.json",
-      "path": "Governance_Substrate_Model/module.json",
-      "purpose": "Existing module metadata file for GSM discovery and integration",
-      "role": "profile",
+      "path": "index.html",
+      "role": "index",
       "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "Alignment_Over_Enforcement.md",
       "path": "01_Invariants/Alignment_Over_Enforcement.md",
-      "purpose": "Invariant principle: structural alignment must precede and supersede enforcement mechanisms",
-      "role": "reference",
-      "analyzer_layer": "regime"
+      "role": "engine",
+      "analyzer_layer": "coherence"
     },
     {
-      "filename": "Invariant_Principles.md",
       "path": "01_Invariants/Invariant_Principles.md",
-      "purpose": "Master list of non-negotiable structural invariants for governance coherence",
-      "role": "reference",
+      "role": "engine",
       "analyzer_layer": "coherence"
     },
     {
-      "filename": "Minimal_Moral_Denominator.md",
       "path": "01_Invariants/Minimal_Moral_Denominator.md",
-      "purpose": "The smallest behavioral floor a governance system must hold — not a belief system but a structural minimum",
-      "role": "reference",
+      "role": "engine",
       "analyzer_layer": "coherence"
     },
     {
-      "filename": "Regime_Awareness_As_Duty.md",
       "path": "01_Invariants/Regime_Awareness_As_Duty.md",
-      "purpose": "Invariant: governance actors bear a structural duty to notice regime conditions before acting",
-      "role": "reference",
+      "role": "engine",
       "analyzer_layer": "regime"
     },
     {
-      "filename": "AI_Assisted_Sensing.md",
       "path": "02_Awareness/AI_Assisted_Sensing.md",
-      "purpose": "How AI can augment governance awareness without replacing human judgment",
-      "role": "reference",
+      "role": "engine",
       "analyzer_layer": "operator"
     },
     {
-      "filename": "Early_Warning_Signals.md",
       "path": "02_Awareness/Early_Warning_Signals.md",
-      "purpose": "Structural indicators of governance drift before visible failure",
-      "role": "reference",
+      "role": "diagnostic",
       "analyzer_layer": "drift"
     },
     {
-      "filename": "Escalation_Patterns.md",
       "path": "02_Awareness/Escalation_Patterns.md",
-      "purpose": "How governance failures compound when awareness mechanisms degrade",
-      "role": "reference",
-      "analyzer_layer": "drift"
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Immigrant_Awareness.md",
       "path": "02_Awareness/Immigrant_Awareness.md",
-      "purpose": "Awareness obligations toward population movement and integration in governance design",
-      "role": "reference",
-      "analyzer_layer": "dimensional"
+      "role": "engine",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Interruption_Without_Domination.md",
       "path": "02_Awareness/Interruption_Without_Domination.md",
-      "purpose": "How governance systems can interrupt harmful trajectories without imposing authoritarian control",
-      "role": "reference",
-      "analyzer_layer": "regime"
+      "role": "engine",
+      "analyzer_layer": "operator"
     },
     {
-      "filename": "Cross_Regime_Stress_Tests.md",
       "path": "03_Evaluation/Cross_Regime_Stress_Tests.md",
-      "purpose": "Test protocols for evaluating governance designs under different regime conditions",
       "role": "diagnostic",
       "analyzer_layer": "regime"
     },
     {
-      "filename": "Failure_Mode_Mapping.md",
       "path": "03_Evaluation/Failure_Mode_Mapping.md",
-      "purpose": "Taxonomy of governance failure modes with structural indicators",
       "role": "diagnostic",
-      "analyzer_layer": "drift"
+      "analyzer_layer": "coherence"
     },
     {
-      "filename": "Minimal_Sufficiency_Checks.md",
       "path": "03_Evaluation/Minimal_Sufficiency_Checks.md",
-      "purpose": "Minimum structural requirements a governance system must satisfy",
       "role": "diagnostic",
-      "analyzer_layer": "coherence"
+      "analyzer_layer": "operator"
     },
     {
-      "filename": "RTT_Evaluation_Framework.md",
       "path": "03_Evaluation/RTT_Evaluation_Framework.md",
-      "purpose": "Resonance-Time Theory evaluation framework for governance structural assessment",
-      "role": "diagnostic",
+      "role": "engine",
       "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "DOI_Canon_Interface.md",
       "path": "04_Validation/DOI_Canon_Interface.md",
-      "purpose": "Interface between DOI-registered sources and GSM validation pipeline",
-      "role": "diagnostic",
-      "analyzer_layer": "operator"
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "Human_Curated_AI_Sift.md",
       "path": "04_Validation/Human_Curated_AI_Sift.md",
-      "purpose": "Validation methodology combining human curation with AI-assisted filtering",
-      "role": "diagnostic",
+      "role": "engine",
       "analyzer_layer": "operator"
     },
     {
-      "filename": "Minimal_Theme_Submissions.md",
       "path": "04_Validation/Minimal_Theme_Submissions.md",
-      "purpose": "Minimum requirements for submitting governance themes to the validation pipeline",
-      "role": "diagnostic",
-      "analyzer_layer": "coherence"
+      "role": "reference",
+      "analyzer_layer": "operator"
     },
     {
-      "filename": "Validated_Science_Criteria.md",
       "path": "04_Validation/Validated_Science_Criteria.md",
-      "purpose": "Scientific validation criteria for governance structural claims",
       "role": "diagnostic",
       "analyzer_layer": "coherence"
     },
     {
-      "filename": "AI_Alignment_Surfaces.md",
       "path": "05_Implementation/AI_Alignment_Surfaces.md",
-      "purpose": "Implementation patterns for AI alignment within governance substrate structures",
-      "role": "map",
-      "analyzer_layer": "dimensional"
+      "role": "engine",
+      "analyzer_layer": "operator"
     },
     {
-      "filename": "Core_System_Design.md",
       "path": "05_Implementation/Core_System_Design.md",
-      "purpose": "Core architectural design patterns for implementing GSM-aligned governance systems",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
+      "role": "engine",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Education_Embedding.md",
       "path": "05_Implementation/Education_Embedding.md",
-      "purpose": "How to embed governance substrate awareness into educational systems",
-      "role": "map",
-      "analyzer_layer": "dimensional"
+      "role": "engine",
+      "analyzer_layer": "operator"
     },
     {
-      "filename": "Infrastructure_Retrofit_Patterns.md",
       "path": "05_Implementation/Infrastructure_Retrofit_Patterns.md",
-      "purpose": "Patterns for retrofitting existing infrastructure to align with GSM structural principles",
-      "role": "map",
-      "analyzer_layer": "operator"
+      "role": "engine",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Maintaining_Legibility.md",
       "path": "06_Leadership/Maintaining_Legibility.md",
-      "purpose": "Leadership obligation to keep governance structures legible across time horizons",
-      "role": "reference",
+      "role": "engine",
       "analyzer_layer": "coherence"
     },
     {
-      "filename": "Phase_Management.md",
       "path": "06_Leadership/Phase_Management.md",
-      "purpose": "How governance leaders navigate transitions between structural phases",
-      "role": "reference",
-      "analyzer_layer": "regime"
+      "role": "engine",
+      "analyzer_layer": "drift"
     },
     {
-      "filename": "Stewardship_Not_Control.md",
       "path": "06_Leadership/Stewardship_Not_Control.md",
-      "purpose": "Leadership as structural stewardship rather than authority — tending coherence, not commanding compliance",
-      "role": "reference",
+      "role": "engine",
       "analyzer_layer": "regime"
     },
     {
-      "filename": "When_Not_To_Act.md",
       "path": "06_Leadership/When_Not_To_Act.md",
-      "purpose": "Structural conditions under which governance restraint produces better outcomes than intervention",
-      "role": "reference",
-      "analyzer_layer": "drift"
+      "role": "engine",
+      "analyzer_layer": "operator"
     },
     {
-      "filename": "Global_Coordination.md",
       "path": "07_Incubation/Global_Coordination.md",
-      "purpose": "Coordination patterns for multi-national governance incubation without centralization",
-      "role": "reference",
-      "analyzer_layer": "dimensional"
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "RTT_Incubator_Triad_Model.md",
       "path": "07_Incubation/RTT_Incubator_Triad_Model.md",
-      "purpose": "Triadic incubation model for growing governance structures within RTT framework",
-      "role": "reference",
-      "analyzer_layer": "dimensional"
+      "role": "engine",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Student_Led_Governance.md",
       "path": "07_Incubation/Student_Led_Governance.md",
-      "purpose": "Incubation pathway for student-led governance experiments and learning",
-      "role": "reference",
+      "role": "engine",
       "analyzer_layer": "operator"
     },
     {
-      "filename": "Untethered_Venture_Growth.md",
       "path": "07_Incubation/Untethered_Venture_Growth.md",
-      "purpose": "Growth models for governance ventures that remain structurally aligned without top-down control",
-      "role": "reference",
-      "analyzer_layer": "drift"
+      "role": "engine",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Late_Correction_Costs.md",
       "path": "08_History/Late_Correction_Costs.md",
-      "purpose": "Historical analysis of how delayed governance correction amplifies structural damage",
       "role": "reference",
-      "analyzer_layer": "drift"
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "Lessons_From_Failure.md",
       "path": "08_History/Lessons_From_Failure.md",
-      "purpose": "Structural lessons extracted from historical governance failures",
       "role": "reference",
-      "analyzer_layer": "regime"
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "Resource_Misallocation.md",
       "path": "08_History/Resource_Misallocation.md",
-      "purpose": "How resource misallocation signals and accelerates governance drift",
       "role": "reference",
-      "analyzer_layer": "drift"
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Why_Governance_Failed_Before.md",
       "path": "08_History/Why_Governance_Failed_Before.md",
-      "purpose": "Root-cause analysis of governance failure patterns across historical regimes",
       "role": "reference",
       "analyzer_layer": "regime"
     },
     {
-      "filename": "Case_Studies.md",
       "path": "09_Appendices/Case_Studies.md",
-      "purpose": "Applied case studies demonstrating GSM analysis on real and hypothetical governance systems",
       "role": "example",
-      "analyzer_layer": "cross-cutting"
+      "analyzer_layer": "operator"
     },
     {
-      "filename": "Future_Work.md",
-      "path": "09_Appendices/Future_Work.md",
-      "purpose": "Roadmap of open research directions and planned extensions to the GSM",
-      "role": "reference"
-    },
-    {
-      "filename": "Glossary.md",
-      "path": "09_Appendices/Glossary.md",
-      "purpose": "Definitions of GSM-specific terminology and structural concepts",
-      "role": "reference"
-    },
-    {
-      "filename": "Open_Questions.md",
-      "path": "09_Appendices/Open_Questions.md",
-      "purpose": "Catalogued unresolved questions in governance substrate theory",
-      "role": "reference"
-    },
-    {
-      "filename": "Simulations.md",
       "path": "09_Appendices/Simulations.md",
-      "purpose": "Simulation specifications for governance transition and drift modeling",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "09_Appendices/Future_Work.md",
       "role": "reference",
       "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "Containment_When_Translation_Fails.md",
+      "path": "09_Appendices/Glossary.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "09_Appendices/Open_Questions.md",
+      "role": "diagnostic",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "10_Adapters/Adapter_Principles.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
       "path": "10_Adapters/Containment_When_Translation_Fails.md",
-      "purpose": "Containment strategies when cross-regime translation cannot achieve alignment",
-      "role": "extension",
-      "analyzer_layer": "regime"
+      "role": "engine",
+      "analyzer_layer": "coherence"
     },
     {
-      "filename": "Education_System_Adapter.md",
-      "path": "10_Adapters/Education_System_Adapter.md",
-      "purpose": "Adapter mapping existing education systems against GSM structural principles",
-      "role": "extension",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "Industry_Adapter.md",
-      "path": "10_Adapters/Industry_Adapter.md",
-      "purpose": "Adapter mapping industrial governance structures against the GSM substrate",
-      "role": "extension",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "Inverted_Economics_Adapter.md",
-      "path": "10_Adapters/Inverted_Economics_Adapter.md",
-      "purpose": "Adapter for inverted economics models — structural interface with GSM alignment principles",
-      "role": "extension",
-      "analyzer_layer": "dimensional",
-      "depends_on": [
-        "Inverted_Economics module (TriadicFrameworks peer)"
-      ]
-    },
-    {
-      "filename": "Legacy_System_Mapping.md",
       "path": "10_Adapters/Legacy_System_Mapping.md",
-      "purpose": "Methodology for mapping legacy governance systems into GSM structural space",
-      "role": "extension",
-      "analyzer_layer": "operator"
+      "role": "map",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Local_Leadership_Roles_Adapter.md",
-      "path": "10_Adapters/Local_Leadership_Roles_Adapter.md",
-      "purpose": "Adapter for mapping local leadership roles into GSM stewardship structures",
-      "role": "extension",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "Medicine_Infrastructure_Adapter.md",
-      "path": "10_Adapters/Medicine_Infrastructure_Adapter.md",
-      "purpose": "Adapter mapping medical/health infrastructure governance against GSM principles",
-      "role": "extension",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "Partial_Alignment_Strategies.md",
       "path": "10_Adapters/Partial_Alignment_Strategies.md",
-      "purpose": "Strategies for systems that can achieve partial but not full GSM alignment",
-      "role": "extension",
-      "analyzer_layer": "coherence"
+      "role": "engine",
+      "analyzer_layer": "regime"
     },
     {
-      "filename": "Punishment_Rehabilitative_Adapter.md",
+      "path": "10_Adapters/Education_System_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "10_Adapters/Civic_Infrastructure_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Industry_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Medicine_Infrastructure_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
       "path": "10_Adapters/Punishment_Rehabilitative_Adapter.md",
-      "purpose": "Adapter for mapping punitive and rehabilitative justice systems against GSM structural framework",
-      "role": "extension",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "README.md",
-      "path": "Analyzer/README.md",
-      "purpose": "Analyzer module README — describes the interpretive engine for the GSM: structural vector mapping, invariant checking, drift detection, basin alignment",
-      "role": "reference",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "ARCHITECTURE_OVERVIEW.md",
-      "path": "Analyzer/ARCHITECTURE_OVERVIEW.md",
-      "purpose": "Architectural overview of the Analyzer pipeline and component relationships",
-      "role": "reference",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "CONTRIBUTING.md",
-      "path": "Analyzer/CONTRIBUTING.md",
-      "purpose": "Contribution guidelines for the Analyzer module",
-      "role": "reference"
-    },
-    {
-      "filename": "GLOSSARY.md",
-      "path": "Analyzer/GLOSSARY.md",
-      "purpose": "Analyzer-specific terminology and structural definitions",
-      "role": "reference"
-    },
-    {
-      "filename": "ROADMAP.md",
-      "path": "Analyzer/ROADMAP.md",
-      "purpose": "Development roadmap for future Analyzer features and extensions",
-      "role": "reference"
-    },
-    {
-      "filename": "index.html",
-      "path": "Analyzer/index.html",
-      "purpose": "Web entry point for the Analyzer documentation and interactive tools",
-      "role": "index"
-    },
-    {
-      "filename": "alignment_analyzer.md",
-      "path": "Analyzer/alignment_analyzer.md",
-      "purpose": "Core alignment analysis specification — how the Analyzer evaluates structural alignment against GSM invariants",
-      "role": "engine",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "filename": "analyzer_pipeline.yaml",
-      "path": "Analyzer/analyzer_pipeline.yaml",
-      "purpose": "Machine-readable pipeline specification: input → structural vector → invariant check → drift → basin → output",
-      "role": "engine",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "analyzer_prototype_architecture.md",
-      "path": "Analyzer/analyzer_prototype_architecture.md",
-      "purpose": "Prototype architecture specification for Analyzer implementation",
-      "role": "engine",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "governance_substrate_model.md",
-      "path": "Analyzer/governance_substrate_model.md",
-      "purpose": "Analyzer-internal GSM reference — structural model definition consumed by the analysis pipeline",
-      "role": "engine",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "simulation_engine.md",
-      "path": "Analyzer/simulation_engine.md",
-      "purpose": "Specification for the governance transition simulation engine",
-      "role": "engine",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "simulation_scenarios.md",
-      "path": "Analyzer/simulation_scenarios.md",
-      "purpose": "Predefined governance scenarios for simulation testing and validation",
       "role": "engine",
       "analyzer_layer": "regime"
     },
     {
-      "filename": "concept_capture.md",
-      "path": "Analyzer/concept_capture.md",
-      "purpose": "Concept capture methodology for translating governance narratives into structural data",
+      "path": "10_Adapters/Inverted_Economics_Adapter.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "10_Adapters/Local_Leadership_Roles_Adapter.md",
       "role": "engine",
       "analyzer_layer": "operator"
-    },
-    {
-      "filename": "dsl_substrate_adapter.md",
-      "path": "Analyzer/dsl_substrate_adapter.md",
-      "purpose": "Domain-specific language adapter specification for substrate-level governance queries",
-      "role": "engine",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "text_stream_adapter.md",
-      "path": "Analyzer/text_stream_adapter.md",
-      "purpose": "Adapter for processing text streams (policy documents, legislation) into structural vectors",
-      "role": "engine",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "governance_manifold.yaml",
-      "path": "Analyzer/governance_manifold.yaml",
-      "purpose": "Machine-readable definition of the governance manifold — the space in which all systems are positioned",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "governance_physics.yaml",
-      "path": "Analyzer/governance_physics.yaml",
-      "purpose": "Structural physics rules governing transitions, forces, and equilibria in the governance manifold",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "equilibrium_basins.yaml",
-      "path": "Analyzer/equilibrium_basins.yaml",
-      "purpose": "Definition of equilibrium basins (attractor regions) in the governance manifold",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "structural_vectors_reference.md",
-      "path": "Analyzer/structural_vectors_reference.md",
-      "purpose": "Reference guide for constructing and interpreting [C,M,O,A,T] structural vectors",
-      "role": "reference",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "behavioral_invariants.yaml",
-      "path": "Analyzer/behavioral_invariants.yaml",
-      "purpose": "Machine-readable invariant rules derived from 01_Invariants — structural compliance checks",
-      "role": "engine",
-      "analyzer_layer": "coherence",
-      "depends_on": [
-        "01_Invariants/Invariant_Principles.md"
-      ]
-    },
-    {
-      "filename": "invariant_check_rules.yaml",
-      "path": "Analyzer/invariant_check_rules.yaml",
-      "purpose": "Specific check rules for evaluating invariant compliance in governance analysis",
-      "role": "engine",
-      "analyzer_layer": "coherence",
-      "depends_on": [
-        "behavioral_invariants.yaml"
-      ]
-    },
-    {
-      "filename": "coherence_event_schema.yaml",
-      "path": "Analyzer/coherence_event_schema.yaml",
-      "purpose": "Schema for coherence events — structural changes that affect governance alignment",
-      "role": "profile",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "filename": "coherence_scoring.yaml",
-      "path": "Analyzer/coherence_scoring.yaml",
-      "purpose": "Scoring framework for governance coherence across structural dimensions",
-      "role": "engine",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "filename": "substrate_validation_rules.yaml",
-      "path": "Analyzer/substrate_validation_rules.yaml",
-      "purpose": "Validation rule set for substrate-level governance structural claims",
-      "role": "engine",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "filename": "drift_detection.yaml",
-      "path": "Analyzer/drift_detection.yaml",
-      "purpose": "Configuration for detecting governance drift — velocity thresholds, alarm triggers, trajectory tracking",
-      "role": "engine",
-      "analyzer_layer": "drift"
-    },
-    {
-      "filename": "regime_modes.yaml",
-      "path": "Analyzer/regime_modes.yaml",
-      "purpose": "Definition of governance regime modes and their structural characteristics",
-      "role": "engine",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "regime_shift_detection.yaml",
-      "path": "Analyzer/regime_shift_detection.yaml",
-      "purpose": "Detection rules for regime transitions — structural signatures of regime change",
-      "role": "engine",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "awareness_layers.yaml",
-      "path": "Analyzer/awareness_layers.yaml",
-      "purpose": "Structural definition of awareness layers consumed by the sensing subsystem",
-      "role": "profile",
-      "analyzer_layer": "operator",
-      "depends_on": [
-        "02_Awareness/"
-      ]
-    },
-    {
-      "filename": "phase_discipline.yaml",
-      "path": "Analyzer/phase_discipline.yaml",
-      "purpose": "Phase management rules for governance transitions — when to advance, hold, or retreat",
-      "role": "engine",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "projection_rules.yaml",
-      "path": "Analyzer/projection_rules.yaml",
-      "purpose": "Rules for projecting governance system trajectories forward in the manifold",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "statement_mapping_rules.yaml",
-      "path": "Analyzer/statement_mapping_rules.yaml",
-      "purpose": "Rules for mapping natural-language governance statements to structural vectors",
-      "role": "engine",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "absorptive_structures.yaml",
-      "path": "Analyzer/absorptive_structures.yaml",
-      "purpose": "Definition of structures that absorb governance shocks without regime transition",
-      "role": "profile",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "session_state.yaml",
-      "path": "Analyzer/session_state.yaml",
-      "purpose": "Session state schema for Analyzer runtime — tracking current analysis context and history",
-      "role": "profile",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "substrate_adapters.yaml",
-      "path": "Analyzer/substrate_adapters.yaml",
-      "purpose": "Machine-readable adapter configurations for domain-specific GSM mappings",
-      "role": "profile",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "transition_graph.yaml",
-      "path": "Analyzer/transition_graph.yaml",
-      "purpose": "Graph specification for governance state transitions — nodes, edges, and transition costs",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "transition_pathways.md",
-      "path": "Analyzer/transition_pathways.md",
-      "purpose": "Documentation of governance transition pathways between basins",
-      "role": "reference",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "transition_simulator.yaml",
-      "path": "Analyzer/transition_simulator.yaml",
-      "purpose": "Simulator configuration for governance transition modeling",
-      "role": "engine",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "simulation_outputs_schema.yaml",
-      "path": "Analyzer/simulation_outputs_schema.yaml",
-      "purpose": "Output schema for simulation results — standardized format for transition and drift data",
-      "role": "profile",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "observer_now_schema.yaml",
-      "path": "Analyzer/observer_now_schema.yaml",
-      "purpose": "Observer schema for present-state governance analysis — current structural snapshot",
-      "role": "profile",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "observer_history_schema.yaml",
-      "path": "Analyzer/observer_history_schema.yaml",
-      "purpose": "Observer schema for historical governance analysis — past-state structural snapshots",
-      "role": "profile",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "observer_future_schema.yaml",
-      "path": "Analyzer/observer_future_schema.yaml",
-      "purpose": "Observer schema for projected governance analysis — future-state structural trajectories",
-      "role": "profile",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "triadic_observer.yaml",
-      "path": "Analyzer/triadic_observer.yaml",
-      "purpose": "Triadic observer configuration — past/now/future as a unified temporal observation triad",
-      "role": "engine",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "historical_profile_template.yaml",
-      "path": "Analyzer/historical_profile_template.yaml",
-      "purpose": "Template for constructing historical governance profiles in YAML format",
-      "role": "template",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "governance_alignment_dashboard.md",
-      "path": "Analyzer/governance_alignment_dashboard.md",
-      "purpose": "Dashboard specification for visualizing governance alignment, drift, and basin membership",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "governance_cards_spec.md",
-      "path": "Analyzer/governance_cards_spec.md",
-      "purpose": "Specification for governance system summary cards — compact visual profiles",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "dynamic_cards_spec.md",
-      "path": "Analyzer/dynamic_cards_spec.md",
-      "purpose": "Dynamic card rendering specification for real-time governance analysis display",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "dynamic_artifact_templates.md",
-      "path": "Analyzer/dynamic_artifact_templates.md",
-      "purpose": "Templates for generating dynamic analysis artifacts from Analyzer output",
-      "role": "template",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "lenses_catalog.md",
-      "path": "Analyzer/lenses_catalog.md",
-      "purpose": "Catalog of analytical lenses available for governance system interpretation",
-      "role": "reference",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "artifact_lineage_map.md",
-      "path": "Analyzer/artifact_lineage_map.md",
-      "purpose": "Lineage tracking for Analyzer artifacts — provenance and derivation chains",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "index_artifacts.md",
-      "path": "Analyzer/index_artifacts.md",
-      "purpose": "Index of all Analyzer artifacts and their relationships",
-      "role": "index"
-    },
-    {
-      "filename": "index_regime_modes.md",
-      "path": "Analyzer/index_regime_modes.md",
-      "purpose": "Index of regime modes supported by the Analyzer",
-      "role": "index",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "index_structural_layers.md",
-      "path": "Analyzer/index_structural_layers.md",
-      "purpose": "Index of structural layers in the Analyzer architecture",
-      "role": "index",
-      "analyzer_layer": "dimensional"
-    },
-    {
-      "filename": "instructor_teaching_guide.md",
-      "path": "Analyzer/instructor_teaching_guide.md",
-      "purpose": "Teaching guide for instructors using the Analyzer in educational settings",
-      "role": "reference"
-    },
-    {
-      "filename": "teacher_guide.md",
-      "path": "Analyzer/teacher_guide.md",
-      "purpose": "Teacher guide for classroom integration of governance substrate analysis",
-      "role": "reference"
-    },
-    {
-      "filename": "student_workbook.md",
-      "path": "Analyzer/student_workbook.md",
-      "purpose": "Student workbook for hands-on governance analysis exercises",
-      "role": "example"
-    },
-    {
-      "filename": "worksheet_simulation_steps.md",
-      "path": "Analyzer/worksheet_simulation_steps.md",
-      "purpose": "Step-by-step simulation worksheet for governance transition modeling",
-      "role": "example"
-    },
-    {
-      "filename": "worksheet_student_profile.md",
-      "path": "Analyzer/worksheet_student_profile.md",
-      "purpose": "Student profile worksheet for self-assessment of governance substrate understanding",
-      "role": "example"
-    },
-    {
-      "filename": "australia.yaml",
-      "path": "Analyzer/profiles/australia.yaml",
-      "purpose": "Structural governance profile for Australia — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "canada.yaml",
-      "path": "Analyzer/profiles/canada.yaml",
-      "purpose": "Structural governance profile for Canada — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "china.yaml",
-      "path": "Analyzer/profiles/china.yaml",
-      "purpose": "Structural governance profile for China — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "france.yaml",
-      "path": "Analyzer/profiles/france.yaml",
-      "purpose": "Structural governance profile for France — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "germany.yaml",
-      "path": "Analyzer/profiles/germany.yaml",
-      "purpose": "Structural governance profile for Germany — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "russia.yaml",
-      "path": "Analyzer/profiles/russia.yaml",
-      "purpose": "Structural governance profile for Russia — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "spain.yaml",
-      "path": "Analyzer/profiles/spain.yaml",
-      "purpose": "Structural governance profile for Spain — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "uk.yaml",
-      "path": "Analyzer/profiles/uk.yaml",
-      "purpose": "Structural governance profile for United Kingdom — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "usa.yaml",
-      "path": "Analyzer/profiles/usa.yaml",
-      "purpose": "Structural governance profile for United States — [C,M,O,A,T] vector, basin membership, drift indicators",
-      "role": "profile",
-      "analyzer_layer": "regime"
     }
   ]
 }
