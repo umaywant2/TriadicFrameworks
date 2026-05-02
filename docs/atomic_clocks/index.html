@@ -2,47 +2,81 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/atomic_clocks/index.html — <head> metadata block     -->
+<!-- Module: Atomic Clocks (science-core)                        -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-<title>Atomic Clocks — TriadicFrameworks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
 <meta name="description"
-      content="Atomic Clocks: triadic decomposition of time, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper, and notebooks." />
+      content="Atomic Clocks — triadic decomposition of time, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper (single‑file and modular), and interactive notebook demo.">
 <meta name="keywords"
-      content="atomic clocks, vST, drift detection, invariants, roadmap, time decomposition" />
-<meta name="author" content="Nawder Loswin" />
+      content="atomic clocks, vST, triadic decomposition, drift detection, invariants, adoption roadmap, time, second, whitepaper, notebook, triadic frameworks">
 
-<meta name="module" content="Atomic Clocks" />
-<meta name="canonical-id" content="AC" />
-<meta name="module-type" content="Science-Core" />
-<meta name="version" content="1.0" />
-<meta name="status" content="canon-stable" />
-<meta name="parent" content="TriadicFrameworks Root" />
-<meta name="siblings" content="vST, RSM, HSP" />
-<meta name="canonical-path" content="/docs/atomic_clocks/" />
-<meta name="last-updated" content="2026-05-01" />
-<meta name="license" content="MIT" />
+<link rel="canonical" href="https://www.triadicframeworks.org/atomic_clocks/">
 
-<meta name="ai-ready" content="true" />
-<meta name="ai-module-id" content="AC" />
-<meta name="ai-operators"
-      content="AC-Decompose, AC-DefineSecond, AC-DetectDrift, AC-ValidateInvariant, AC-Roadmap, AC-Demonstrate" />
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
 
-<meta property="og:title" content="Atomic Clocks — TriadicFrameworks" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Atomic Clocks — Triadic Time Decomposition">
+<meta property="og:url" content="https://www.triadicframeworks.org/atomic_clocks/">
 <meta property="og:description"
-      content="Triadic decomposition of time and vST definition of the second." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.triadicframeworks.org/atomic_clocks" />
+      content="Triadic decomposition of time, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper, and notebook demo.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Atomic Clocks — TriadicFrameworks" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Atomic Clocks — Triadic Time Decomposition">
 <meta name="twitter:description"
-      content="Science-core module for time and drift invariants." />
+      content="Triadic time decomposition → vST second → drift invariants → adoption roadmap → whitepaper → notebook demo.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
-<meta name="citation_title" content="Atomic Clocks — TriadicFrameworks" />
-<meta name="citation_author" content="Nawder Loswin" />
-<meta name="citation_date" content="2026-05-01" />
+<meta name="citation_title" content="Atomic Clocks — Triadic Time Decomposition">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="atomic clocks, vST, triadic decomposition, drift detection, invariants, adoption roadmap, time, second definition">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Atomic Clocks">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Apply triadic decomposition to atomic time: triadic time structure, vST definition of the second, drift detection invariants, adoption roadmap, whitepaper (single‑file and 7 modular sections), and interactive vST‑Lite notebook demo.">
+<meta name="ai.keywords"
+      content="atomic clocks, vST, triadic decomposition, drift detection, invariants, adoption roadmap, time, second, AC-Decompose, AC-DefineSecond, AC-DetectDrift, AC-ValidateInvariant, AC-Roadmap, AC-Demonstrate">
+<meta name="ai.audience" content="researchers, metrologists, developers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="MIT">
+
+<meta name="ai.module.name" content="Atomic Clocks">
+<meta name="ai.module.summary"
+      content="Science‑core module: whitepaper (single‑file + 7 modular sections: abstract, introduction, triadic decomposition, vST definition of the second, drift detection model, roadmap for adoption, references), core concepts (triadic decomposition, vST definition), drift detection invariants, adoption roadmap, and vST‑Lite atomic clock notebook demo.">
+<meta name="ai.module.category" content="science-core">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Atomic Clocks — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -269,11 +303,16 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/atomic_clocks — Session Context block                -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <section id="ac-session-header"
-         data-ac="1"
+         data-rtt="atomic-clocks"
          data-coherence="stable"
          data-drift="bounded"
-         data-layer="science-core">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
@@ -306,14 +345,15 @@ code {
     <span class="context-value">AI‑parsable + citation‑ready</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">researchers + developers + AIs</span>
+    <span class="context-value">researchers + metrologists + developers + AIs</span>
 
   </div>
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;border-radius:6px;font-size:13px;">
-  🟦 Atomic Clocks<br>📘 Science‑Core Module
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟦 Atomic Clocks<br>📘 Science‑Core Module • AI‑Ready
 </div>
 
 </nav>
