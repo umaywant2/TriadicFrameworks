@@ -1,5 +1,7 @@
 ## 🌀 Unified Resonance Canon  
 
+- [`unified_resonance_module.json`](unified_resonance_module.json) — Agentic module schema role assignments
+
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
