@@ -1,64 +1,93 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "RTT SDK",
-    "path": "docs/rtt/sdk",
-    "canon_tag": "rtt-sdk",
-    "version": "1.0",
-    "layer": "RTT SDK — Developer Integration Layer",
-    "status": "Active, Canonical",
-    "purpose": "Developer integration layer: SDK operators, APIs, integration rules, examples, scaffolding.",
-    "parent": "rtt-engine",
-    "url": "https://www.triadicframeworks.org/rtt/sdk"
-  },
-
-  "session_context": {
-    "canon": "active (rtt-sdk)",
-    "modules_linked": [
-      "SDK operators → SDK API → SDK integration → SDK examples → SDK map → SDK scaffolding"
-    ],
-    "drift": "minimal (sdk-locked)",
-    "coherence": "stable (sdk grammar)",
-    "format": "html + markdown + diagrams + examples",
-    "front_door": "exists (RTT/SDK root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": ["developers", "researchers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D4",
-    "regime_envelope": "R0–R2",
-    "coherence_envelope": "C0–C3",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "medium"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "RTT/1 operators",
-      "RTT Micro Core",
-      "SARG structural grammar"
-    ],
-    "exports": [
-      "SDK operators",
-      "SDK API",
-      "SDK integration rules",
-      "SDK examples",
-      "SDK scaffolding"
-    ]
-  },
-
-  "submodules": [
-    { "name": "SDK Operators", "path": "operators.md" },
-    { "name": "SDK API", "path": "api.md" },
-    { "name": "SDK Integration", "path": "integration.md" },
-    { "name": "SDK Examples", "path": "examples.md" },
-    { "name": "SDK Map", "path": "sdk_map.md" }
-  ],
-
+  "module": "RTT SDK",
+  "version": "1.0",
+  "category": "rtt-sdk",
+  "summary": "Developer integration layer of RTT/1 — beacon, client, diagnostics, profile, init scaffolding, package manifest, quickstart, and integration guides for backend services, browser extensions, and datacenter/research labs. Includes src/ JavaScript implementations.",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of RTT/SDK.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for RTT/SDK.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "beacon.py.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "client.py.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "diagnostics.py.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "profile.py.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "__init__.py.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "package.json.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "QUICKSTART.md",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "RTT_for_BACKEND_Services.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "RTT_for_BROWSER_Extensions.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "RTT_for_DATACENTERS_and_RESEARCH_Labs.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "src/beacon.js.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "src/client.js.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "src/diagnostics.js.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "src/index.js.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "src/profile.js.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    }
   ]
 }
