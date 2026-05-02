@@ -1,6 +1,6 @@
 # Private Domestic Law
 
-[🔰 README](../README.md) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md)
+[🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
 
 ## Overview (Triadic Framing)
 
@@ -93,6 +93,6 @@ In RTT terms, this is the **core interpersonal regime layer**:
 
 ---
 
-**References**: See [law-references-glossary.md](../law-references-glossary.md) for key doctrines, cases, and further reading.
+**References**: See [law-references-glossary.md](law-references-glossary.md) for key doctrines, cases, and further reading.
 
 **Contributing**: Examples of regime shifts in family or tort law under technological pressure are especially useful.
