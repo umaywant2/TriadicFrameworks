@@ -1,4 +1,6 @@
-# 🧪 Localized Anisotropic Collision & Triadic Ontology System
+# 🧪 Localized Anisotropic Collision & Triadic Ontology System  
+
+- [`lactos_module.json`](lactos_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
