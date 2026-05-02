@@ -32,7 +32,7 @@ Because the next generation of reasoning systems needs more than training data �
 
 The six-stage evolution we imagined starts with students and AIs. Everything else — industry adoption, institutional recognition, cross-domain validation — follows from that foundation. Not the other way around.
 
-### Post-Research Phase Insights
+## Post-Research Phase Insights
 
 Most frameworks stop at theory. They describe a model, publish a paper, and wait for someone else to apply it. We didn't stop there.
 
