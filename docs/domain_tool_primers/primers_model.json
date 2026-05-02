@@ -1,66 +1,63 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "Domain Tool Primers",
-    "path": "docs/domain_tool_primers",
-    "canon_tag": "primers",
-    "version": "1.0",
-    "layer": "vST Validation Layer",
-    "status": "Active, Canonical",
-    "purpose": "Minimal vST-aligned primers for scientific and engineering tools, enabling cross-domain unification testing.",
-    "parent": "vst",
-    "url": "https://www.triadicframeworks.org/domain_tool_primers"
-  },
-
-  "session_context": {
-    "canon": "active (vST-validation)",
-    "modules_linked": [
-      "physics → ai/ml → engineering → earth science → quantum → autonomous forms → complex systems → data science → visualization"
-    ],
-    "drift": "minimal (primer-locked)",
-    "coherence": "stable (primer grammar)",
-    "format": "markdown + code blocks + commented vST sections",
-    "front_door": "exists (Primers root)",
-    "every_page": "AI-parsable + validator-aligned",
-    "audience": ["validators", "researchers", "engineers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D2",
-    "regime_envelope": "R0–R1",
-    "coherence_envelope": "C0–C2",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "low"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "vst",
-      "rsm"
-    ],
-    "exports": [
-      "primer files",
-      "dimensional core declarations",
-      "regime anchors",
-      "validation suggestions"
-    ]
-  },
-
-  "submodules": [
-    { "name": "Physics Tools", "path": "physics_tools.md" },
-    { "name": "AI/ML Tools", "path": "ai_ml_tools.md" },
-    { "name": "Engineering Tools", "path": "engineering_tools.md" },
-    { "name": "Earth Science Tools", "path": "earth_science_tools.md" },
-    { "name": "Quantum Tools", "path": "quantum_tools.md" },
-    { "name": "Autonomous Forms Tools", "path": "autonomous_forms_tools.md" },
-    { "name": "Complex Systems Tools", "path": "complex_systems_tools.md" },
-    { "name": "Data Science Tools", "path": "data_science_tools.md" },
-    { "name": "Visualization Tools", "path": "visualization_tools.md" }
-  ],
-
+  "module": "Domain Tool Primers",
+  "version": "1.0",
+  "category": "vst-validation",
+  "summary": "Minimal vST‑aligned starter files for 9 tool domains — physics, quantum, engineering, earth science, data science, AI/ML, complex systems, autonomous forms, and visualization. Each primer provides dimensional cores, regime anchors, and cross‑domain validation.",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of Domain Tool Primers.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for Primers.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "physics_tools.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "quantum_tools.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "engineering_tools.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "earth_science_tools.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "data_science_tools.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "ai_ml_tools.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "complex_systems_tools.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "autonomous_forms_tools.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "visualization_tools.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    }
   ]
 }
