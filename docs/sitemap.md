@@ -163,7 +163,8 @@ _(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
 - [/public_support/](https://www.triadicframeworks.org/public_support/)  
 - [/honor_roll/](https://www.triadicframeworks.org/honor_roll/)  
 - [/registry/](https://www.triadicframeworks.org/registry/)  
-- [/feedback/](https://www.triadicframeworks.org/feedback/)  
+- [/feedback/](https://www.triadicframeworks.org/feedback/)
+- [/Law/](https://www.triadicframeworks.org/Law/)
 - [/legal/](https://www.triadicframeworks.org/legal/)  
 - [/onboarding/](https://www.triadicframeworks.org/onboarding/)
 
