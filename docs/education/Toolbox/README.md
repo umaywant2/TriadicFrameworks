@@ -33,6 +33,7 @@ This directory contains ready-to-deploy modules for immediate use:
 - [`grading-workflows-use-cases.md`](grading-workflows-use-cases.md) — Before/after comparisons with current tools.
 - [`triadic-observations-in-research.md`](triadic-observations-in-research.md) — Why current systems lack them — and how RTT supplies the missing grammar.
 - [`rtt-education-toolbox-roadmap.md`](rtt-education-toolbox-roadmap.md) — Phased rollout: grading → insights → multisensory extensions (including olfactory resonance profiles).
+- [`Operator-Layer_Summary.md`](Operator-Layer_Summary.md) — Metadata, sesion context, and ai module schema values. 
 
 ## Quickstart
 
