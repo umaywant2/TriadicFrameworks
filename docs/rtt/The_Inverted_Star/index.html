@@ -2,55 +2,81 @@
 <html lang="en">
 <head>
 
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/rtt/The_Inverted_Star/index.html — <head> metadata   -->
+<!-- Module: The Inverted Star (rtt-structural)                  -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
-<title>The Inverted Star — TriadicFrameworks</title>
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
 <meta name="description"
-      content="The Inverted Star: RTT structural engine for inversion geometry, inversion operators, inversion cycles, inversion envelopes, and inversion lineage." />
+      content="The Inverted Star — RTT/1 structural inversion engine. Inversion geometry, inversion operators, inversion cycles, inversion envelopes, inversion flow, inversion triads, use cases, 5 worked examples, 5 appendices (notation, symbols, transformations, star comparisons, historical notes), and 5 structural diagrams.">
 <meta name="keywords"
-      content="Inverted Star, RTT, inversion geometry, inversion operators, inversion cycles, inversion envelopes, inversion lineage" />
-<meta name="author" content="Nawder Loswin" />
+      content="Inverted Star, RTT, inversion geometry, inversion operators, inversion cycles, inversion envelopes, inversion flow, inversion triads, structural inversion, triadic frameworks">
 
-<!-- Canonical Identity -->
+<link rel="canonical" href="https://www.triadicframeworks.org/rtt/The_Inverted_Star/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="The Inverted Star — RTT/1 Structural Inversion Engine">
+<meta property="og:url" content="https://www.triadicframeworks.org/rtt/The_Inverted_Star/">
+<meta property="og:description"
+      content="Structural inversion engine: geometry → operators → cycles → envelopes → flow → triads → use cases. 5 worked examples, 5 appendices, 5 diagrams.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="The Inverted Star — RTT/1 Structural Inversion Engine">
+<meta name="twitter:description"
+      content="Inversion geometry → operators → cycles → envelopes → flow → triads. 5 worked examples, 5 appendices, 5 diagrams.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="The Inverted Star — RTT/1 Structural Inversion Engine">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="Inverted Star, inversion geometry, inversion operators, inversion cycles, inversion envelopes, structural inversion, RTT">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
 <meta name="ai.module" content="The Inverted Star">
-<meta name="ai.module.name" content="The Inverted Star">
-<meta name="ai.module.category" content="rtt-structural">
-<meta name="ai.module.summary"
-      content="Structural inversion engine: geometry, operators, cycles, envelopes, lineage, diagrams, examples.">
 <meta name="ai.version" content="1.0">
 <meta name="ai.purpose"
-      content="Define the RTT structural inversion engine: geometry, operators, cycles, envelopes, lineage.">
+      content="Define the RTT/1 structural inversion engine: inversion geometry, operators, cycles, envelopes, flow, triads, use cases, worked examples, appendices (notation, symbols, transformations, star comparisons, historical notes), and structural diagrams.">
 <meta name="ai.keywords"
-      content="inversion geometry, inversion operators, inversion cycles, inversion envelopes, inversion lineage">
+      content="Inverted Star, inversion geometry, inversion operators, inversion cycles, inversion envelopes, inversion flow, inversion triads, structural inversion">
 <meta name="ai.audience" content="students, developers, researchers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
 
-<meta name="canonical-id" content="INVSTAR">
-<meta name="module-type" content="RTT-Structural">
-<meta name="status" content="canon-stable">
-<meta name="parent" content="RTT/1">
-<meta name="siblings" content="Mode, Opacity, SARG, HSP, Substrate_Flow">
-<meta name="canonical-path" content="/docs/rtt/The_Inverted_Star/">
-<meta name="last-updated" content="2026-05-01">
+<meta name="ai.module.name" content="The Inverted Star">
+<meta name="ai.module.summary"
+      content="RTT/1 structural inversion engine: definition, structure, geometry, flow, operators, triads, use cases, 5 worked examples (basic inversion, triadic inversion, operator inversion, domain application, star→core), 5 appendices (notation, symbols, transformations, star comparisons, historical notes), 5 SVG diagrams (star diagram, flowchart, layers, operator map, triads), session context, local sitemap.">
+<meta name="ai.module.category" content="rtt-structural">
 
-<!-- Open Graph -->
-<meta property="og:title" content="The Inverted Star — TriadicFrameworks">
-<meta property="og:description"
-      content="Inversion geometry → inversion operators → inversion cycles → inversion envelopes → inversion lineage.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://www.triadicframeworks.org/rtt/The_Inverted_Star">
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="The Inverted Star — TriadicFrameworks">
-<meta name="twitter:description"
-      content="RTT structural inversion engine.">
-
-<!-- Citation -->
-<meta name="citation_title" content="The Inverted Star — TriadicFrameworks">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_date" content="2026-05-01">
+<title>The Inverted Star — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -291,22 +317,27 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/rtt/The_Inverted_Star — Session Context block        -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <section id="inverted-star-session-header"
-         data-inversion="1"
+         data-rtt="inverted-star"
          data-coherence="stable"
          data-drift="minimal"
-         data-structural="inversion">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (rtt‑inversion)</span><br>
+    <span class="context-value">active (rtt‑structural)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
-      inversion geometry → inversion operators → inversion cycles → inversion envelopes → inversion lineage → diagrams → examples
+      definition → structure → geometry → flow → operators → triads → use cases → examples → appendices → diagrams
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
@@ -334,8 +365,9 @@ code {
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
-  ⭐ The Inverted Star<br>📘 RTT Structural Inversion Engine
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-size:13px;">
+  ⭐ The Inverted Star<br>📘 RTT Structural Inversion Engine • AI‑Ready
 </div>
 
 </nav>
