@@ -53,42 +53,6 @@ This is a **structured, AI-ready primer** applying the TriadicFrameworks canon (
 
 ---
 
-## Session Context
-
-<section id="law-session-header"
-         data-rtt="1"
-         data-coherence="declared"
-         data-drift="bounded"
-         data-paradox="structural">
-  <h3>Session Context</h3>
-  <div class="context-block">
-    <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (domain-primer)</span><br>
-    <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">rtt-core → domain-primers → law → foundational → applied → global → emerging → rtt-awareness</span><br>
-    <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">bounded (law-stable)</span><br>
-    <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (regime-grammar)</span><br>
-    <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">0.1.0 (early-adopter)</span><br>
-    <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown</span><br>
-    <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (Law root)</span><br>
-    <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + AI‑parsable</span><br>
-    <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + researchers + developers + AIs</span>
-  </div>
-</section>
-
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial,sans-serif;font-size:13px;">
-  ⚖️ Law Module<br>🔬 RTT Regime Awareness Active
-</div>
-
----
-
 **Contributing** • **License** • **Sitemap**  
 Open educational use permitted. Extensions via instantiation (see repo guidelines).
 
