@@ -1,1 +1,170 @@
+{
+  "module": {
+    "name": "Media Substrate Model",
+    "path": "docs/media_substrate_model",
+    "canon_tag": "msm-core",
+    "version": "2026.1",
+    "layer": "Applied Domain Models",
+    "status": "Active, Canonical",
+    "purpose": "Describes the structural physics of media ecosystems through a five-axis vector substrate [S, D, A, N, T] — defining invariants, attractor basins, behavioral modes, and adapter integration for substrate-level media analysis parallel to the Governance Substrate Model.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/media_substrate_model"
+  },
+  "session_context": {
+    "canon": "active (media-substrate-core)",
+    "modules_linked": [
+      "[S, D, A, N, T] vector",
+      "invariants",
+      "basins",
+      "modes",
+      "primitives",
+      "adapters",
+      "schemas",
+      "GSM parallel substrate"
+    ],
+    "drift": "bounded (substrate-locked)",
+    "coherence": "declared (media-substrate grammar)",
+    "version": "1.0 (msm-stable)",
+    "format": "html + markdown + vector schemas",
+    "front_door": "exists (Media Substrate Model root)",
+    "every_page": "stands alone + substrate-aware + analyzer-ready",
+    "audience": [
+      "researchers",
+      "analysts",
+      "media theorists",
+      "governance architects",
+      "simulation engineers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D7",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C4",
+    "drift_sensitivity": "high",
+    "regime_sensitivity": "high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-principles"
+    ],
+    "exports": [
+      "SDANT-vector-model",
+      "media-invariants",
+      "attractor-basin-taxonomy",
+      "behavioral-mode-classification",
+      "attention-dynamics-primitives",
+      "narrative-dynamics-primitives",
+      "media-signal-vocabulary",
+      "adapter-integration-contracts",
+      "media-schema-definitions",
+      "GSM-parallel-substrate-mapping",
+      "concept-capture-methodology",
+      "scaffold-capture-framework"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Analyzer",
+      "path": "analyzer",
+      "canon_tag": "msm-analyzer",
+      "purpose": "MSM Analyzer engine mirroring the GSM Analyzer — substrate-level analysis, basin detection, mode classification, and drift measurement."
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation anchor for the Media Substrate Model — introduces the five-axis vector, invariants, basins, modes, primitives, adapters, and GSM relationship.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "vectors.md",
+      "path": "vectors.md",
+      "purpose": "Canonical signature defining the [S, D, A, N, T] five-axis media vector — Signal Integrity, Distribution Topology, Attention Dynamics, Narrative Coherence, Temporal Cadence.",
+      "role": "signature",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "invariants.md",
+      "path": "invariants.md",
+      "purpose": "Engine defining four core structural invariants — Signal-Narrative Coherence, Distribution-Attention Fit, Temporal-Signal Stability, Attention-Narrative Feedback.",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "basins.md",
+      "path": "basins.md",
+      "purpose": "Reference cataloging six attractor basins — Broadcast, Network, Fragment, Cascade, Stagnation, Reconstruction — with canonical vector signatures and gate conditions.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "modes.md",
+      "path": "modes.md",
+      "purpose": "Reference defining six behavioral modes — Stable, Tension, Drift, Cascade, Collapse, Reconstruction — that describe system trajectory within basins.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "attention_dynamics.md",
+      "path": "attention_dynamics.md",
+      "purpose": "Engine modeling attention as a structural force — scarcity, pooling, volatility, cascades, and decay as energy sources within the media substrate.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "narrative_dynamics.md",
+      "path": "narrative_dynamics.md",
+      "purpose": "Engine modeling narrative as a structural force — alignment, plurality, conflict, collapse, and decay as functions of cadence and coherence.",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "media_signals.md",
+      "path": "media_signals.md",
+      "purpose": "Reference defining media signal vocabulary — fidelity, noise, distortion, compression, and verification capacity as substrate-level signal primitives.",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "concept_capture.md",
+      "path": "concept_capture.md",
+      "purpose": "Reference documenting concept capture methodology — how media-specific primitives are identified, formalized, and integrated into the substrate model.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "scaffold_capture.md",
+      "path": "scaffold_capture.md",
+      "purpose": "Reference documenting scaffold capture — structural scaffolding for translating raw media observations into substrate-compatible declarations.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "adapters.md",
+      "path": "adapters.md",
+      "purpose": "Operator-facing engine defining adapter integration — active pipelines converting text streams, platform metrics, narrative structures, and distribution graphs into substrate vectors.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "glossary.md",
+      "path": "glossary.md",
+      "purpose": "Domain-specific terminology reference for the Media Substrate Model — definitions aligned with the canonical RTT glossary.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "lineage.md",
+      "path": "lineage.md",
+      "purpose": "Lineage signature tracing the MSM's evolution from early media analysis concepts through substrate formalization to the current five-axis vector model.",
+      "role": "signature",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}
 
