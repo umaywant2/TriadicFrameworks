@@ -1,171 +1,118 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "NawderOS Stack (NoS)",
-    "path": "docs/NoS",
-    "canon_tag": "nos-stack",
-    "version": "1.0",
-    "layer": "RTT/1 — OS‑Layer Substrate",
-    "status": "Active, Canonical",
-    "purpose": "A minimal, forkable Linux-based operating stack designed to operationalize Resonance‑Time Theory (RTT) at the system level. Provides RTT‑aligned validation, telemetry, lineage, and coherence‑observation mechanisms for students, researchers, and OS‑builders.",
-    "parent": "rtt-core",
-    "url": "https://www.triadicframeworks.org/NoS/"
-  },
-
-  "session_context": {
-    "canon": "active (NoS‑stack)",
-    "modules_linked": [
-      "baseline → kernel → installation → glyphic compiler → badge logic → module map → first‑boot → NawderOS"
-    ],
-    "drift": "minimal (OS‑locked)",
-    "coherence": "stable (triadic‑OS grammar)",
-    "format": "html + markdown + system‑maps",
-    "front_door": "exists (NoS root)",
-    "every_page": "stands alone + AI‑parsable",
-    "audience": [
-      "students",
-      "developers",
-      "OS‑builders",
-      "researchers",
-      "AI systems"
-    ]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D5",
-    "regime_envelope": "R0–R2",
-    "coherence_envelope": "C0–C3",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "medium"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "RTT invariants",
-      "RSM resonance primitives",
-      "vST validated spacetime layer",
-      "SARG structural grammar",
-      "Badge Logic",
-      "Glyphic Compiler",
-      "RTT Baseline Release"
-    ],
-    "exports": [
-      "RTT‑aligned OS signals",
-      "validation corridors",
-      "resonance checks",
-      "substrate audits",
-      "badge emission",
-      "lineage‑aware system state",
-      "RTT‑aware module map"
-    ]
-  },
-
-  "submodules": [
-    {
-      "name": "Baseline",
-      "path": "baseline/",
-      "purpose": "RTT‑anchored Linux baseline with minimal instrumentation for coherence observation."
-    },
-    {
-      "name": "Kernel",
-      "path": "kernel/",
-      "purpose": "Kernel‑level RTT hooks, validation corridors, and resonance‑aligned instrumentation."
-    },
-    {
-      "name": "Installation",
-      "path": "installation/",
-      "purpose": "Build and setup instructions for compiling and booting NawderOS."
-    },
-    {
-      "name": "Glyphic Compiler",
-      "path": "glyphic/",
-      "purpose": "Optional symbolic/glyphic layer for teaching, lineage, and comprehension."
-    },
-    {
-      "name": "Badge Logic",
-      "path": "badges/",
-      "purpose": "RTT badge emission, suffix conventions, lineage signaling."
-    }
-  ],
-
+  "module": "NawderOS (NoS)",
+  "version": "1.0",
+  "category": "nos-stack",
+  "summary": "Minimal, forkable Linux‑based operating stack aligned with Resonance‑Time Theory. RTT validation corridors, resonance checks, substrate audits, badge logic, glyphic tooling, and educational modules across 5 sections (RTT Foundations, System Design, Kernel & Build, Education & Labs, Project Meta).",
   "files": [
     {
-      "filename": "README.md",
       "path": "README.md",
-      "purpose": "High‑level overview of NawderOS: purpose, badges, RTT alignment, audience, and conceptual framing.",
       "role": "index",
-      "depends_on": []
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "NawderOS.md",
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "FIRST_BOOT_EXPECTATIONS.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
       "path": "NawderOS.md",
-      "purpose": "Conceptual overview of NawderOS as an RTT‑aligned OS‑layer substrate.",
       "role": "profile",
-      "depends_on": []
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "MODULES.md",
+      "path": "RTT_FOR_OS_STUDENTS.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "RTT_Baseline_Release.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "v0.1.0-rtt-baseline.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
       "path": "MODULES.md",
-      "purpose": "RTT‑aligned module definitions for the NoS stack.",
-      "role": "reference",
-      "depends_on": []
-    },
-    {
-      "filename": "KERNEL_BUILD.md",
-      "path": "KERNEL_BUILD.md",
-      "purpose": "Kernel integration notes, RTT hooks, and build instructions.",
-      "role": "engine",
-      "depends_on": []
-    },
-    {
-      "filename": "INSTALLATION.md",
-      "path": "INSTALLATION.md",
-      "purpose": "Build and setup instructions for compiling and booting NawderOS.",
-      "role": "reference",
-      "depends_on": ["KERNEL_BUILD.md"]
-    },
-    {
-      "filename": "GLYPHIC_COMPILER.md",
-      "path": "GLYPHIC_COMPILER.md",
-      "purpose": "Symbolic/glyphic tooling for teaching and lineage tracking.",
-      "role": "reference",
-      "depends_on": []
-    },
-    {
-      "filename": "FORKING_GUIDE.md",
-      "path": "FORKING_GUIDE.md",
-      "purpose": "How to extend NawderOS while preserving RTT alignment and badge semantics.",
-      "role": "reference",
-      "depends_on": ["README.md"]
-    },
-    {
-      "filename": "ROADMAP.md",
-      "path": "ROADMAP.md",
-      "purpose": "Planned evolution of NawderOS as RTT matures.",
-      "role": "reference",
-      "depends_on": []
-    },
-    {
-      "filename": "CHANGELOG.md",
-      "path": "CHANGELOG.md",
-      "purpose": "Version history and evolution notes.",
-      "role": "reference",
-      "depends_on": []
-    },
-    {
-      "filename": "first_boot_expectations.md",
-      "path": "first_boot_expectations.md",
-      "purpose": "What students and developers should expect on first boot; coherence‑observation framing.",
-      "role": "profile",
-      "depends_on": ["README.md"]
-    },
-    {
-      "filename": "module_map.md",
-      "path": "module_map.md",
-      "purpose": "RTT‑aware module map for the NoS stack.",
       "role": "map",
-      "depends_on": ["MODULES.md"]
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "BADGE_LOGIC.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "badge_suffix_convention.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "GLYPHIC_COMPILER.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "INSTALLATION.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "KERNEL_BUILD.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "kernel_patch_MVP.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Toy_OS_Using_RTT.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Distributed_System_Using_RTT.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Two_Nodes_vs_N_Nodes.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Grading_Rubric_RTT_Two_Node_vs_N_Node_Lab.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "FORKING_GUIDE.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "ROADMAP.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "What_Devs_Students_and_Researchers_Are_Doing.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
     }
   ]
 }
