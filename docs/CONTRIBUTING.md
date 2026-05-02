@@ -1,4 +1,4 @@
-# Contributing to TriadicFrameworks  
+## 💞 Contributing to TriadicFrameworks  
 
 - [`CONTRIBUTING_module.json`](CONTRIBUTING_module.json) — Agentic module schema role assignments
 
