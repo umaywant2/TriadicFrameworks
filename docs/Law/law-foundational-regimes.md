@@ -1,6 +1,6 @@
 # Foundational Regimes
 
-[🔰 README](../README.md) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md)
+[🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
 
 ## Overview (Triadic Framing)
 
@@ -92,6 +92,6 @@ In RTT terms, these are the **root regimes** and observer-layer structures:
 
 ---
 
-**References**: See [law-references-glossary.md](../law-references-glossary.md) for key texts (Hart, Dworkin, Aquinas, etc.) and further reading.
+**References**: See [law-references-glossary.md](law-references-glossary.md) for key texts (Hart, Dworkin, Aquinas, etc.) and further reading.
 
 **Contributing**: Deep dives into specific paradoxes or RTT-mapped jurisprudence models are highly valuable.
