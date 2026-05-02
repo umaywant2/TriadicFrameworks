@@ -1,10 +1,9 @@
 # Substrate Communications  
+_A minimal structural framework for drift‑aware, paradox‑preserving messaging across heterogeneous systems._
 
 - [`SubComm_module.json`](SubComm_module.json) — Agentic module schema role assignments
 
-_A minimal structural framework for drift‑aware, paradox‑preserving messaging across heterogeneous systems._
-
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🪁Substrate%20Communications-📘Pre_Semantic%20Messaging%20Layer%20AI_Ready-4c8eda?style=for-the-badge" alt="Substrate Communications | Pre‑Semantic Messaging Layer • AI‑Ready"/>
 
 This directory contains the canonical, self‑contained materials for **Substrate Communications**, a minimal message grammar designed for systems operating under:
 
