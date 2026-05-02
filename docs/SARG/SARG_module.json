@@ -1,292 +1,138 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "SARG — Substrate-Agnostic Resonance Grammar",
-    "path": "docs/SARG",
-    "canon_tag": "sarg-core",
-    "version": "1.0",
-    "layer": "Core Frameworks — Structural Spine",
-    "status": "Active, Canonical",
-    "purpose": "A minimal grammar for describing structure, resonance, and invariants across any substrate — substrate-agnostic by design, applicable to linguistic, acoustic, geometric, biological, symbolic, and cosmological domains.",
-    "parent": null,
-    "url": "https://www.triadicframeworks.org/SARG/"
-  },
-
-  "session_context": {
-    "canon": "active (sarg-core)",
-    "modules_linked": [
-      "substrates → lenses → invariants → resonance → atlas → examples → inversion → error taxonomy"
-    ],
-    "drift": "minimal (root-locked)",
-    "coherence": "stable (structural grammar)",
-    "format": "html + markdown + json + diagrams",
-    "front_door": "exists (SARG root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": ["students", "developers", "researchers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D7",
-    "regime_envelope": "R0–R3",
-    "coherence_envelope": "C0–C4",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "high"
-  },
-
-  "cross_module_propagation": {
-    "imports": [],
-    "exports": [
-      "Substrate definitions and types",
-      "Lens operators (VREL, VREL-A)",
-      "Invariant taxonomy (vertical, horizontal, dual)",
-      "Resonance families and mapping logic",
-      "Universal anchors",
-      "SARG JSON Schema",
-      "Error taxonomy and rectification flow",
-      "Atlas multi-scale resonance mapping"
-    ]
-  },
-
-  "submodules": [
-    {
-      "name": "Schema",
-      "path": "schema",
-      "file_count": 1,
-      "role": "Formal JSON Schema defining the SARG data model: substrate → lens → invariants → resonance"
-    },
-    {
-      "name": "Substrates",
-      "path": "substrates",
-      "file_count": 3,
-      "role": "Substrate identification, classification, and cross-domain examples"
-    },
-    {
-      "name": "Lenses",
-      "path": "lenses",
-      "file_count": 3,
-      "role": "Operators used to read or transform substrates — VREL and VREL-A"
-    },
-    {
-      "name": "Invariants",
-      "path": "invariants",
-      "file_count": 2,
-      "role": "Stable features that persist across transformations — vertical, horizontal, dual types"
-    },
-    {
-      "name": "Resonance",
-      "path": "resonance",
-      "file_count": 3,
-      "role": "Universal anchors, resonance families, and structure-to-anchor mapping logic"
-    },
-    {
-      "name": "Atlas",
-      "path": "atlas",
-      "file_count": 3,
-      "role": "Multi-scale resonance mapping from 0D → atomic → cosmic, including pre-atomic scaffolding"
-    },
-    {
-      "name": "Examples",
-      "path": "examples",
-      "file_count": 4,
-      "role": "Working SARG examples — Latin alphabet, Lostational Supsphere Atom, templates"
-    },
-    {
-      "name": "Inversion",
-      "path": "inversion",
-      "file_count": 2,
-      "role": "Inversion-side analysis — structural complement and placeholder expansion"
-    },
-    {
-      "name": "Error",
-      "path": "error",
-      "file_count": 3,
-      "role": "Error taxonomy, rectification flow, and mapping tables for structural errors"
-    }
-  ],
-
+  "module": "SARG",
+  "version": "1.0",
+  "category": "sarg-core",
+  "summary": "Structural Anchor Resonance Grammar — a minimal, substrate‑agnostic grammar for describing structure, invariants, lenses, VREL extraction, resonance mapping, error taxonomy, rectification flows, universal anchors, atlas levels, inversion logic, and worked examples across any domain.",
   "files": [
     {
-      "filename": "README.md",
       "path": "README.md",
-      "purpose": "Module overview — SARG architecture, minimal data model, folder structure, contributing guidelines",
       "role": "index",
-      "depends_on": []
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "Capture.md",
-      "path": "Capture.md",
-      "purpose": "Raw conceptual seed — original notes, operators, and scaffolding from which the grammar was derived",
-      "role": "reference",
-      "depends_on": []
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "sarg.schema.json",
-      "path": "schema/sarg.schema.json",
-      "purpose": "Formal JSON Schema defining the SARG data model: substrate → lens → invariants → resonance mapping",
-      "role": "template",
-      "depends_on": []
-    },
-    {
-      "filename": "Substrate_Overview.md",
-      "path": "substrates/Substrate_Overview.md",
-      "purpose": "What a substrate is, how to identify one, and the substrate-agnostic principle",
-      "role": "engine",
-      "depends_on": []
-    },
-    {
-      "filename": "Substrate_Types.md",
-      "path": "substrates/Substrate_Types.md",
-      "purpose": "Classification of substrate types across domains — linguistic, acoustic, geometric, biological, symbolic, cosmological",
-      "role": "profile",
-      "depends_on": ["substrates/Substrate_Overview.md"]
-    },
-    {
-      "filename": "Substrate_Examples.md",
-      "path": "substrates/Substrate_Examples.md",
-      "purpose": "Worked substrate identification examples across domains",
-      "role": "example",
-      "depends_on": ["substrates/Substrate_Overview.md", "substrates/Substrate_Types.md"]
-    },
-    {
-      "filename": "Lens_Overview.md",
-      "path": "lenses/Lens_Overview.md",
-      "purpose": "What a lens is, how lenses operate on substrates, lens taxonomy",
-      "role": "engine",
-      "depends_on": ["substrates/Substrate_Overview.md"]
-    },
-    {
-      "filename": "VREL.md",
-      "path": "lenses/VREL.md",
-      "purpose": "Validator Resonance Extraction Layer — primary lens for extracting structural resonance from any substrate",
-      "role": "engine",
-      "depends_on": ["lenses/Lens_Overview.md"]
-    },
-    {
-      "filename": "VREL_A.md",
-      "path": "lenses/VREL_A.md",
-      "purpose": "VREL-A (Anchor-focused) — specialized lens variant for anchor-priority extraction",
-      "role": "engine",
-      "depends_on": ["lenses/VREL.md"]
-    },
-    {
-      "filename": "Invariant_Types.md",
-      "path": "invariants/Invariant_Types.md",
-      "purpose": "Classification of invariants — vertical, horizontal, and dual types that persist across transformations",
-      "role": "profile",
-      "depends_on": ["lenses/Lens_Overview.md"]
-    },
-    {
-      "filename": "Invariant_Examples.md",
-      "path": "invariants/Invariant_Examples.md",
-      "purpose": "Worked examples of invariant identification across domains",
-      "role": "example",
-      "depends_on": ["invariants/Invariant_Types.md"]
-    },
-    {
-      "filename": "Resonance_Families.md",
-      "path": "resonance/Resonance_Families.md",
-      "purpose": "Classification of resonance families — how structural resonance patterns group across substrates",
-      "role": "profile",
-      "depends_on": ["invariants/Invariant_Types.md"]
-    },
-    {
-      "filename": "Resonance_Mapping.md",
-      "path": "resonance/Resonance_Mapping.md",
-      "purpose": "How to map extracted structure to universal anchors — the core SARG alignment procedure",
-      "role": "engine",
-      "depends_on": ["resonance/Resonance_Families.md"]
-    },
-    {
-      "filename": "Universal_Anchors.md",
-      "path": "resonance/Universal_Anchors.md",
-      "purpose": "The four universal anchors — definitions, properties, and cross-domain presence",
-      "role": "reference",
-      "depends_on": []
-    },
-    {
-      "filename": "Atlas_Levels.md",
-      "path": "atlas/Atlas_Levels.md",
-      "purpose": "Multi-scale resonance mapping hierarchy from 0D through atomic to cosmic scales",
+      "path": "atlas/ATLAS_LEVELS.md",
       "role": "map",
-      "depends_on": ["resonance/Resonance_Mapping.md"]
+      "analyzer_layer": "dimensional"
     },
     {
-      "filename": "Pre_Atomic_Scaffolding.md",
-      "path": "atlas/Pre_Atomic_Scaffolding.md",
-      "purpose": "Sub-atomic structural scaffolding — resonance patterns below the atomic scale",
-      "role": "extension",
-      "depends_on": ["atlas/Atlas_Levels.md"]
+      "path": "atlas/pre_atomic_scaffolding.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
     },
     {
-      "filename": "Resonance_Atlas_Overview.md",
-      "path": "atlas/Resonance_Atlas_Overview.md",
-      "purpose": "High-level overview of the Resonance Atlas — purpose, navigation, and integration with the SARG pipeline",
-      "role": "index",
-      "depends_on": ["atlas/Atlas_Levels.md"]
+      "path": "atlas/resonance_atlas_overview.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "Example_Templates.md",
-      "path": "examples/Example_Templates.md",
-      "purpose": "Reusable SARG analysis templates for applying the grammar to new substrates",
-      "role": "template",
-      "depends_on": ["schema/sarg.schema.json"]
-    },
-    {
-      "filename": "Latin_Alphabet_JSON.md",
-      "path": "examples/Latin_Alphabet_JSON.md",
-      "purpose": "Complete SARG analysis of the Latin alphabet as a linguistic substrate — JSON-format worked example",
-      "role": "example",
-      "depends_on": ["schema/sarg.schema.json"]
-    },
-    {
-      "filename": "Latin_Alphabet_Resonance_Map.md",
-      "path": "examples/Latin_Alphabet_Resonance_Map.md",
-      "purpose": "Resonance map visualization for the Latin alphabet SARG analysis",
-      "role": "example",
-      "depends_on": ["examples/Latin_Alphabet_JSON.md"]
-    },
-    {
-      "filename": "Lostational_Supsphere_Atom_JSON.md",
-      "path": "examples/Lostational_Supsphere_Atom_JSON.md",
-      "purpose": "Complete SARG analysis of the Lostational Supsphere Atom — geometric substrate worked example",
-      "role": "example",
-      "depends_on": ["schema/sarg.schema.json"]
-    },
-    {
-      "filename": "Inversion_Overview.md",
-      "path": "inversion/Inversion_Overview.md",
-      "purpose": "Inversion-side structural analysis — what happens when SARG operators are inverted",
-      "role": "reference",
-      "depends_on": ["lenses/Lens_Overview.md"]
-    },
-    {
-      "filename": "Inversion_Placeholders.md",
-      "path": "inversion/Inversion_Placeholders.md",
-      "purpose": "Placeholder stubs for future inversion-side expansion — planned directions and structural hooks",
-      "role": "reference",
-      "depends_on": ["inversion/Inversion_Overview.md"]
-    },
-    {
-      "filename": "SARG_Error_Taxonomy.md",
       "path": "error/SARG_Error_Taxonomy.md",
-      "purpose": "Classification of structural errors in SARG analyses — error types, severity, and detection patterns",
       "role": "diagnostic",
-      "depends_on": []
+      "analyzer_layer": "coherence"
     },
     {
-      "filename": "Rectification_Flow.md",
       "path": "error/Rectification_Flow.md",
-      "purpose": "Step-by-step rectification procedure for resolving structural errors detected by the SARG error taxonomy",
-      "role": "diagnostic",
-      "depends_on": ["error/SARG_Error_Taxonomy.md"]
+      "role": "engine",
+      "analyzer_layer": "drift"
     },
     {
-      "filename": "Error_Mapping_Table.md",
       "path": "error/Error_Mapping_Table.md",
-      "purpose": "Quick-reference mapping table linking error types to rectification steps and affected SARG components",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "examples/example_templates.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "examples/latin_alphabet.json.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "examples/latin_alphabet_resonance_map.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "examples/lostational_supsphere_atom.json.md",
+      "role": "example",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "invariants/invariant_types.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "invariants/invariant_examples.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "inversion/inversion_side_overview.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "inversion/inversion_placeholders.md",
       "role": "reference",
-      "depends_on": ["error/SARG_Error_Taxonomy.md", "error/Rectification_Flow.md"]
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "lenses/lens_overview.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "lenses/VREL.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "lenses/VREL-A.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "resonance/resonance_families.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "resonance/resonance_mapping.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "resonance/universal_anchors.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "schema/sarg.schema.json.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "substrates/substrate_overview.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrates/substrate_types.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrates/substrate_examples.md",
+      "role": "example",
+      "analyzer_layer": "regime"
     }
   ]
 }
