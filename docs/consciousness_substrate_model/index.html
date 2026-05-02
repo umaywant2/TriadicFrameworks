@@ -2,47 +2,81 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/consciousness_substrate_model/index.html — <head>    -->
+<!-- Module: Consciousness Substrate Model (substrate-csm)       -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-<title>Consciousness Substrate Model — TriadicFrameworks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
 <meta name="description"
-      content="Consciousness Substrate Model (CSM): a minimal, resonance-aligned substrate for autonomous forms requiring coherence, contextual awareness, and regime-safe operation." />
+      content="Consciousness Substrate Model (CSM) — a minimal, resonance‑aligned substrate for autonomous forms requiring coherence, contextual awareness, and regime‑safe operation. Covers intent and boundaries, creator's assumption, primitives, WR‑SADC cores, autonomous forms, architecture patterns, worked examples, alignment, validation, and release artifacts.">
 <meta name="keywords"
-      content="CSM, consciousness substrate, WR-SADC, primitives, autonomous forms, resonance substrate" />
-<meta name="author" content="Nawder Loswin" />
+      content="CSM, consciousness substrate, WR-SADC, primitives, autonomous forms, resonance substrate, agency, architecture patterns, regime-safe, coherence, triadic frameworks">
 
-<meta name="module" content="Consciousness Substrate Model" />
-<meta name="canonical-id" content="CSM" />
-<meta name="module-type" content="RTT-Analytics" />
-<meta name="version" content="1.0" />
-<meta name="status" content="canon-stable" />
-<meta name="parent" content="TriadicFrameworks Root" />
-<meta name="siblings" content="RSM, ASM, BSM" />
-<meta name="canonical-path" content="/docs/consciousness_substrate_model/" />
-<meta name="last-updated" content="2026-05-01" />
-<meta name="license" content="MIT" />
+<link rel="canonical" href="https://www.triadicframeworks.org/consciousness_substrate_model/">
 
-<meta name="ai-ready" content="true" />
-<meta name="ai-module-id" content="CSM" />
-<meta name="ai-operators"
-      content="CSM-Assume, CSM-Primitive, CSM-Wrap, CSM-Core, CSM-Align, CSM-Validate, CSM-Test" />
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
 
-<meta property="og:title" content="Consciousness Substrate Model — TriadicFrameworks" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Consciousness Substrate Model (CSM)">
+<meta property="og:url" content="https://www.triadicframeworks.org/consciousness_substrate_model/">
 <meta property="og:description"
-      content="Minimal resonance-aligned substrate for autonomous forms." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.triadicframeworks.org/consciousness_substrate_model" />
+      content="Minimal, resonance‑aligned substrate for autonomous forms: primitives, WR‑SADC cores, architecture patterns, alignment, validation.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Consciousness Substrate Model — TriadicFrameworks" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consciousness Substrate Model (CSM)">
 <meta name="twitter:description"
-      content="Autonomous-forms substrate model." />
+      content="Minimal resonance‑aligned substrate: primitives → WR‑SADC → autonomous forms → architecture → alignment → validation.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
-<meta name="citation_title" content="Consciousness Substrate Model — TriadicFrameworks" />
-<meta name="citation_author" content="Nawder Loswin" />
-<meta name="citation_date" content="2026-05-01" />
+<meta name="citation_title" content="Consciousness Substrate Model (CSM)">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="consciousness substrate, WR-SADC, primitives, autonomous forms, resonance substrate, agency, architecture patterns, coherence">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Consciousness Substrate Model">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Define a minimal, resonance‑aligned substrate for autonomous forms requiring coherence, contextual awareness, and regime‑safe operation — with primitives, WR‑SADC cores, architecture patterns, alignment, and validation.">
+<meta name="ai.keywords"
+      content="CSM, consciousness substrate, WR-SADC, primitives, autonomous forms, resonance substrate, agency, architecture patterns, regime-safe, coherence, CSM-Assume, CSM-Primitive, CSM-Wrap, CSM-Core, CSM-Align, CSM-Validate, CSM-Test">
+<meta name="ai.audience" content="researchers, engineers, system architects, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<meta name="ai.module.name" content="Consciousness Substrate Model">
+<meta name="ai.module.summary"
+      content="Autonomous‑forms substrate: 11 sections — 00 intent and boundaries (scope, non‑claims, terminology, ethics), 01 creator's assumption (axioms, falsifiability), 02 model overview (one‑page, diagrams, glossary), 03 primitives (resonance core, state and transition, validity and context), 04 WR‑SADC wrapped resonance cores (boundary conditions, lifecycle, wrapper interfaces, variant definition), 05 autonomous forms (definition, agency, autonomy levels, evaluation signals), 06 architecture patterns (reference, catalog, anti‑patterns, integration), 07 worked examples (minimal agent loop, multi‑core federation, regime shift, sandbox sim), 08 alignment (RSM notes, RTT lens mapping, interoperability contracts), 09 validation (test philosophy, measurable predictions, benchmarks, red‑team questions), 10 release artifacts (keywords).">
+<meta name="ai.module.category" content="substrate-csm">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Consciousness Substrate Model — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -310,18 +344,23 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/consciousness_substrate_model — Session Context       -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <section id="csm-session-header"
-         data-csm="1"
+         data-rtt="csm"
          data-coherence="stable"
          data-drift="bounded"
-         data-layer="substrate-analytics">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (substrate‑analytics)</span><br>
+    <span class="context-value">active (substrate‑csm)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
@@ -353,8 +392,9 @@ code {
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;border-radius:6px;font-size:13px;">
-  🟣 Consciousness Substrate Model<br>📘 Autonomous‑Forms Substrate
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟣 Consciousness Substrate Model<br>📘 Autonomous‑Forms Substrate • AI‑Ready
 </div>
 
 </nav>
