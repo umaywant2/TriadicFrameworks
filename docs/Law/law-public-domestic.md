@@ -1,6 +1,6 @@
 # Public Domestic Law
 
-[🔰 README](../README.md) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md)
+[🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
 
 ## Overview (Triadic Framing)
 
@@ -94,6 +94,6 @@ In RTT terms, this is the **state-citizen regime layer** and meta-governance sub
 
 ---
 
-**References**: See [law-references-glossary.md](../law-references-glossary.md) for key cases, constitutions, and further reading.
+**References**: See [law-references-glossary.md](law-references-glossary.md) for key cases, constitutions, and further reading.
 
 **Contributing**: Analyses of regime shifts in constitutional or criminal law (especially under technological or social pressure) are highly valuable.
