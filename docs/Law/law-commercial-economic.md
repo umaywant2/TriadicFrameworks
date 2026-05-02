@@ -1,6 +1,6 @@
 # Commercial & Economic Law
 
-[🔰 README](../README.md) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md)
+[🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
 
 ## Overview (Triadic Framing)
 
@@ -96,6 +96,6 @@ Roots in ancient trade customs (e.g., Lex Mercatoria / Law Merchant in medieval 
 
 ---
 
-**References**: See [law-references-glossary.md](../law-references-glossary.md) for sources and further reading.
+**References**: See [law-references-glossary.md](law-references-glossary.md) for sources and further reading.
 
 **Contributing**: Extensions via new regime mappings or case studies welcome.
