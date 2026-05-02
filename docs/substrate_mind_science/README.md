@@ -1,7 +1,10 @@
 # 🧠 Substrate Mind Science  
-A structural, substrate‑agnostic model for mapping cognition, psychological domains, and mind‑level invariants.
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+- [`SMS_module.json`](SMS_module.json) — Agentic module schema role assignments
+
+_A structural, substrate‑agnostic model for mapping cognition, psychological domains, and mind‑level invariants._
+
+<img src="https://img.shields.io/badge/🧠 Substrate%20Mind%20Science%20Module-🗺️Structural%20Substrate%20Active-4c8eda?style=for-the-badge" alt="Substrate Mind Science Module | Structural Substrate Active"/>
 
 The **Substrate Mind Science (SMS)** model provides a unified structural grammar for describing how minds organize, process, stabilize, and transform information across psychological, cognitive, and developmental layers. It is designed to be compatible with the broader TriadicFrameworks substrate family, including the Governance Substrate Model (GSM) and Media Substrate Model (MSM), while remaining grounded in established psychological science.
 
