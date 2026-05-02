@@ -1,1 +1,170 @@
+{
+  "module": {
+    "name": "Quantum Substrate Model",
+    "path": "docs/quantum-substrate-model",
+    "canon_tag": "qsm-core",
+    "version": "2026.1",
+    "layer": "Core Frameworks — Theoretical",
+    "status": "Active, Canonical",
+    "purpose": "Defines a structured extension of substrate-level modeling in which regime structure, dimensional constraints, and interaction domains are explicitly declared — formalizing how multiple substrate regimes may coexist, transition, or interact without embedding empirical claims or domain-specific semantics.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/quantum-substrate-model"
+  },
+  "session_context": {
+    "canon": "active (substrate layer)",
+    "modules_linked": [
+      "structural overview",
+      "metadata",
+      "abstract",
+      "substrate definition",
+      "regime structure",
+      "operator dynamics",
+      "scope & assumptions",
+      "limitations",
+      "discussion",
+      "validation checks"
+    ],
+    "drift": "minimal (substrate-locked)",
+    "coherence": "stable (regime-structured grammar)",
+    "version": "1.0 (publication-stable)",
+    "format": "html + markdown + schema",
+    "front_door": "exists (substrate root)",
+    "every_page": "stands alone + structural-only + AI-parsable",
+    "audience": [
+      "researchers",
+      "developers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D7",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "very_high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-principles"
+    ],
+    "exports": [
+      "multi-regime-substrate-structure",
+      "dimensional-constraint-formalism",
+      "interaction-domain-declarations",
+      "regime-coexistence-model",
+      "regime-transition-semantics",
+      "operator-dynamics-framework",
+      "structural-validation-checks",
+      "BSM-extension-pathway"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Figures",
+      "path": "figures",
+      "canon_tag": "qsm-figures",
+      "purpose": "Visual artifacts — structural overview diagram showing QSM architecture, regime layers, and dimensional organization."
+    },
+    {
+      "name": "Metadata",
+      "path": "metadata",
+      "canon_tag": "qsm-metadata",
+      "purpose": "Dataset and archival metadata documentation — DOI, citation, and versioning records."
+    },
+    {
+      "name": "Paper",
+      "path": "paper",
+      "canon_tag": "qsm-paper",
+      "purpose": "Complete publication surface — abstract, introduction, substrate definition, regime structure, operator dynamics, scope, limitations, discussion, and validation checks."
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation anchor for the QSM — introduces the structured substrate extension, scope, BSM relationship, contents, intended use, and publication status.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "abstract.md",
+      "path": "paper/abstract.md",
+      "purpose": "Publication abstract profiling the QSM as a structured extension of substrate-level modeling with explicit regime structure and dimensional constraints.",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "introduction.md",
+      "path": "paper/introduction.md",
+      "purpose": "Reference introducing the QSM motivation — why explicit regime structure and dimensional organization are needed beneath higher-level models.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "substrate_definition.md",
+      "path": "paper/substrate_definition.md",
+      "purpose": "Canonical signature defining the quantum substrate — the foundational structural layer with declared regime boundaries and dimensional constraints.",
+      "role": "signature",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "regime_structure.md",
+      "path": "paper/regime_structure.md",
+      "purpose": "Engine formalizing multi-regime substrate structure — how regimes coexist, relate, and maintain bounded independence within the substrate.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "operator_dynamics.md",
+      "path": "paper/operator_dynamics.md",
+      "purpose": "Operator-facing engine defining dynamics across regimes — how operators act on, transform, and mediate interactions between substrate regimes.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "scope_and_assumptions.md",
+      "path": "paper/scope_and_assumptions.md",
+      "purpose": "Reference defining QSM scope (structural, not empirical; architecture-agnostic; compatible with layered approaches) and explicit non-goals.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "limitations.md",
+      "path": "paper/limitations.md",
+      "purpose": "Diagnostic reference documenting known limitations and boundary conditions of the QSM framework.",
+      "role": "diagnostic",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "discussion.md",
+      "path": "paper/discussion.md",
+      "purpose": "Forward-looking profile discussing QSM implications, potential extensions, and relationship to broader substrate modeling efforts.",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "validation_checks.md",
+      "path": "paper/validation_checks.md",
+      "purpose": "Diagnostic framework defining structural validation checks — internal consistency tests for regime declarations, dimensional constraints, and transition semantics.",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "qsm_structural_overview.svg",
+      "path": "figures/qsm_structural_overview.svg",
+      "purpose": "Visual map of QSM architecture — structural overview showing regime layers, dimensional organization, and interaction domains.",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "zenodo.json",
+      "path": "metadata/zenodo.json",
+      "purpose": "Zenodo deposit metadata enabling DOI-based archival and citability of the QSM as a versioned research artifact.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}
 
