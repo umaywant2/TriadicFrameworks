@@ -1,71 +1,18 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "Paradoxes Canon",
-    "path": "docs/Paradoxes_canon",
-    "canon_tag": "paradoxes-canon",
-    "version": "1.0",
-    "layer": "Structural Paradox Layer",
-    "status": "Active, Canonical",
-    "purpose": "Teach structural paradox-resilience across logic, computation, thermodynamics, cosmology, quantum, and emergence. Provide stress tests, resonance checks, and coherence analysis.",
-    "parent": "rtt-core",
-    "url": "https://www.triadicframeworks.org/Paradoxes_canon/"
-  },
-
-  "session_context": {
-    "canon": "active (paradoxes-canon)",
-    "modules_linked": [
-      "logic ↔ computation ↔ thermodynamics ↔ cosmology ↔ quantum ↔ emergence"
-    ],
-    "drift": "minimal (root-locked)",
-    "coherence": "stable (triadic structural grammar)",
-    "format": "html + markdown",
-    "front_door": "exists (Paradoxes Canon root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": ["students", "developers", "researchers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D7",
-    "regime_envelope": "R0–R3",
-    "coherence_envelope": "C0–C4",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "medium"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "RTT resonance primitives",
-      "SARG structural grammar",
-      "Resilience Checker paradox files",
-      "Framework Field Theory (FFT)"
-    ],
-    "exports": [
-      "paradox stress tests",
-      "resonance checks",
-      "coherence analysis",
-      "triadic paradox classification",
-      "teaching examples"
-    ]
-  },
-
-  "submodules": [],
-
+  "module": "Paradoxes Canon",
+  "version": "1.0",
+  "category": "paradoxes-canon",
+  "summary": "Structural paradox layer and gateway — how RTT maintains coherence under paradox stress tests across logic, computation, thermodynamics, cosmology, quantum, and emergence. Links to Resilience Checker (108 paradox analyses across 11 structural categories). Sibling: Resilience Checker.",
   "files": [
     {
-      "filename": "index.html",
-      "path": "index.html",
-      "purpose": "Front door for the Paradoxes Canon module.",
+      "path": "README.md",
       "role": "index",
-      "depends_on": []
+      "analyzer_layer": "cross-cutting"
     },
     {
-      "filename": "README.md",
-      "path": "README.md",
-      "purpose": "High-level overview of paradox-resilience and module navigation.",
-      "role": "profile",
-      "depends_on": []
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
     }
   ]
 }
