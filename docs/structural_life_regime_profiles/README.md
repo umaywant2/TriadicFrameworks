@@ -1,5 +1,7 @@
 ## **Structural Life‑Regime Profiles**  
 
+- [`SLRP_module.json`](SLRP_module.json) — Agentic module schema role assignments
+
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🧬Structural%20Life%20Regime%20Profiles-📘Regime%20Aware%20Profiling%20AI%20Ready-4c8eda?style=for-the-badge" alt="Structural Life‑Regime Profiles | Regime‑Aware Profiling • AI‑Ready"/>
 
 *A triadic substrate for cross‑domain life‑regime analysis*
 
