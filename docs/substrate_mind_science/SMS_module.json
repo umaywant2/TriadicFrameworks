@@ -1,0 +1,143 @@
+{
+  "module": "Substrate Mind Science",
+  "version": "1.0",
+  "category": "substrate-core",
+  "summary": "Structural, substrate‑agnostic model for mapping cognition, psychological domains, and mind‑level invariants — Minimal Mind Substrate, Legacy Mind Narratives, Conscious Transfer Substrate (map, schema, 4 examples), 17 audit sections (A–I), and analyzer tool.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Minimal_Mind_Substrate_v1.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Legacy_Mind_Narratives_v1.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Conscious_Transfer_Substrate_Map_v1.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Conscious_Transfer_Substrate_Schema_v1.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Section_A__Core_Definition_and_Scope.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "SECTION_A__Core_Definition_and_Scope_(Psychology).md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Section_B__Diagnostic_Systems.md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "SECTION_B__Methods_and_Research_Approaches_(Psychology).md",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "SECTION_C__Major_Subfields_of_Psychology.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Section_C__Treatment_Modalities.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Section_D__Theoretical_Approaches.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "SECTION_D__Theoretical_Frameworks_of_Psychology.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "SECTION_E__Applied_Fields_of_Psychology.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Section_E__Subspecialties.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Section_F__Research_Domains.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "SECTION_F__Research_Domains_in_Psychology.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Section_G__Ethical_and_Institutional_Structures.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "Section_H__Historical_Layers.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Section_I__Criticisms_and_Controversies.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "ct_substrate/README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "ct_substrate/ct_substrate.schema.json.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "ct_substrate/examples/ct_example.json.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "ct_substrate/examples/ct_example_annotations.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "ct_substrate/examples/ct_example_maximal.json.md",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "ct_substrate/examples/ct_example_minimal.json.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
