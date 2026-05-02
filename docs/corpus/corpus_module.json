@@ -1,73 +1,313 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "Corpus",
-    "path": "docs/corpus",
-    "canon_tag": "corpus",
-    "version": "1.0",
-    "layer": "Library Structural Layer",
-    "status": "Active, Canonical",
-    "purpose": "Unified, living knowledge base for RTT, substrates, dimensional structures, cognitive frameworks, and cross-domain resonance tools.",
-    "parent": "triadicframeworks-root",
-    "url": "https://www.triadicframeworks.org/corpus"
-  },
-
-  "session_context": {
-    "canon": "active (library-structural)",
-    "modules_linked": [
-      "substrates → cognition → governance → education → science → tools → glyphs → data → labs → canon → media → engineering → biology → navigation"
-    ],
-    "drift": "minimal (index-locked)",
-    "coherence": "stable (library grammar)",
-    "format": "markdown + html + json index",
-    "front_door": "exists (Corpus root)",
-    "every_page": "AI-parsable + index-aligned + hashtag-navigable",
-    "audience": ["students", "researchers", "developers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D4",
-    "regime_envelope": "R0–R2",
-    "coherence_envelope": "C0–C3",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "low"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "metadata",
-      "registries",
-      "education"
-    ],
-    "exports": [
-      "corpus index",
-      "structural grammar",
-      "hashtag navigation",
-      "DOC_MAP lookup"
-    ]
-  },
-
-  "submodules": [
-    { "name": "Index", "path": "_index.json" },
-    { "name": "Foundational Substrates", "path": "RTT.md" },
-    { "name": "Cognitive Models", "path": "cognitive_substrate_model.md" },
-    { "name": "Governance", "path": "governance.md" },
-    { "name": "Education", "path": "education.md" },
-    { "name": "Scientific Substrates", "path": "scientific_instrument_review.md" },
-    { "name": "Tools & SDKs", "path": "rtt-sdk.md" },
-    { "name": "Glyphs", "path": "glyphs.md" },
-    { "name": "Data & Registries", "path": "data.md" },
-    { "name": "Labs & Simulations", "path": "labs.md" },
-    { "name": "Canon & Papers", "path": "papers.md" },
-    { "name": "Media Substrates", "path": "media_substrate_model.md" },
-    { "name": "Engineering", "path": "manufacturing_substrate_regime_model.md" },
-    { "name": "Biological Substrates", "path": "alphafold_substrate_alignments.md" },
-    { "name": "Navigation & Meta", "path": "metadata.md" }
-  ],
-
+  "module": "Corpus",
+  "version": "1.0",
+  "category": "library-structural",
+  "summary": "Unified, living knowledge base and master index of the entire TriadicFrameworks canon — ~120 indexed entries spanning 14 navigational categories (foundational substrates, cognitive/consciousness models, social/economic/governance, education/learning, scientific/technical, tools/SDKs/runtime, glyphs/symbols/aesthetic, data/registries/validation, labs/experiments/simulations, canon/papers/RFCs, media/audio/cultural, engineering/manufacturing/infrastructure, biological/alignment, navigation/meta‑structure).",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Corpus overview.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for Corpus.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "RTT.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Triadic.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "unified_resonance.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "dimensional_substrate_structures.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "substrate.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "consciousness_substrate_model.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "substrate_mind_science.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "inverted_star_ontology.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "governance.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Governance_Substrate_Model.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Inverted_Economics.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "public_support.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "education.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "education_subjects.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "education_alignment.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "education_rituals.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "education_scrolls.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "education_translations.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "curriculum.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "quantum-substrate-model.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "atomic_clocks.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "scientific_instrument_review.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "spacetime_micro_agent_validations.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "spacetime_validation_and_regime_invariant_dimensional_cores.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "rtt-sdk.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "RTT_micro_core.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "runtime.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "scripts.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "packages.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "glyphs.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "glyphic_resonance.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "spectral_clarity.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "data.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "registry.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "registries.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "validation.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "validators.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "labs.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "simulations.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "discovery.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "snapshots.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "papers.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Paradoxes_canon.md",
+      "role": "reference",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "rfc.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "reports.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "audio_industry_reviewed.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "media_substrate_model.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "diagnosing_media_therapy.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "manufacturing_substrate_regime_model.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "facilities.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "bridges.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "alphafold_substrate_alignments.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "lactos.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "metadata.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "_index.json",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "_ideas.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "_template.md",
+      "role": "template",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "_snippets.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "_specs.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
   ]
 }
