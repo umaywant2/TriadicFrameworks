@@ -181,7 +181,8 @@ _(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
 - [/projects/Resotectors/](https://www.triadicframeworks.org/projects/Resotectors/)  
 - [/projects/VictorG/](https://www.triadicframeworks.org/projects/VictorG/)  
 - [/labs/](https://www.triadicframeworks.org/labs/)  
-- [/lactos/](https://www.triadicframeworks.org/lactos/)  
+- [/lactos/](https://www.triadicframeworks.org/lactos/)
+- [/Research/](https://www.triadicframeworks.org/Research/)  
 
 ---
 
