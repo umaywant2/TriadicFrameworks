@@ -1,70 +1,68 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "Charts",
-    "path": "docs/charts",
-    "canon_tag": "charts",
-    "version": "1.0",
-    "layer": "Visual Structural Layer",
-    "status": "Active, Canonical",
-    "purpose": "Resonance-aware diagrams, glyph maps, lineage charts, idiom dashboards, quadrant maps, and structural visualizations.",
-    "parent": "triadicframeworks-root",
-    "url": "https://www.triadicframeworks.org/charts"
-  },
-
-  "session_context": {
-    "canon": "active (visual-structural)",
-    "modules_linked": [
-      "freqi-bindings → genie-protocols → resonance-partitions → time-travel-matrix → glyph-map → idiom-dashboard → lineage-loophole → quadrant-maps → spiral-remix → vSoul dashboards"
-    ],
-    "drift": "minimal (visual-locked)",
-    "coherence": "stable (visual grammar)",
-    "format": "svg + html + markdown",
-    "front_door": "exists (Charts root)",
-    "every_page": "AI-parsable + diagram-aligned",
-    "audience": ["students", "researchers", "developers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D3",
-    "regime_envelope": "R0–R2",
-    "coherence_envelope": "C0–C3",
-    "drift_sensitivity": "low",
-    "regime_sensitivity": "low"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "glyphs",
-      "assets",
-      "idioms"
-    ],
-    "exports": [
-      "resonance diagrams",
-      "glyph maps",
-      "lineage charts",
-      "idiom dashboards",
-      "quadrant maps",
-      "vSoul dashboards"
-    ]
-  },
-
-  "submodules": [
-    { "name": "Frequency Bindings", "path": "chart-freqi-bindings.md" },
-    { "name": "Genie Protocols", "path": "chart-genie-protocols.md" },
-    { "name": "Resonance Partitions", "path": "chart-resonance-partitions.md" },
-    { "name": "Time Travel Matrix", "path": "chart-time-travel-matrix.md" },
-    { "name": "Glyph Map", "path": "glyph_map_svg.md" },
-    { "name": "Idiom Dashboard", "path": "idiom_dashboard.svg.md" },
-    { "name": "Lineage Loophole Echo", "path": "lineage_loophole_echo.md" },
-    { "name": "Quadrant Maps", "path": "quadrant_maps.md" },
-    { "name": "Spiral Remix Ring", "path": "spiral_remix_ring.md" },
-    { "name": "vSoul Dashboard", "path": "vsoul_dashboard.md" }
-  ],
-
+  "module": "Charts",
+  "version": "1.0",
+  "category": "visual-structural",
+  "summary": "Visual backbone of the RTT canon — resonance‑aware diagrams, glyph maps, lineage charts, quadrant maps, dashboards, and structural visualizations. 4 root charts (freqi bindings, genie protocols, resonance partitions, time‑travel matrix), 4 maps and traces (glyph map SVG, lineage loophole echo, loophole trace, quadrant maps), and 2 dashboards (spiral remix ring, vSoul dashboard).",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of Charts.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for Charts.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "chart-freqi-bindings.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "chart-genie-protocols.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "chart-resonance-partitions.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "chart-time-travel-matrix.md",
+      "role": "map",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "glyph_map_svg.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "lineage_loophole_echo.md",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "loophole_trace.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "path": "quadrant_maps.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "spiral_remix_ring.md",
+      "role": "map",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "vsoul_dashboard.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    }
   ]
 }
