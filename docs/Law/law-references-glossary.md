@@ -1,6 +1,6 @@
 # References & Glossary
 
-[🔰 README](../README.md) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/)
+[🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/)
 
 ## Glossary (Triadic + Legal Terms)
 
