@@ -2,6 +2,22 @@
 
 - [`edu-toolbox_module.json`](edu-toolbox_module.json) — Agentic module schema role assignments
 
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧰Education%20Toolbox-📘A%20Guide%20for%20Science%20RTT/1%20AI‑Ready-4c8eda?style=for-the-badge" alt="🧰Education Toolbox | 📘A Guide for Science • RTT/1 • AI‑Ready"/>
+
 **A Guide for Science — Built on Resonance-Time Tech (RTT/1)**
 
 The TriadicFrameworks Education Toolbox delivers **RTT-powered modules** that transform how educators, researchers, and students engage with grading, paper analysis, literature review, and insight generation.  
