@@ -16,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🟦Curriculum-📘Learning%20Pathway%20Substrate-4c8eda?style=for-the-badge" alt="Curriculum | Learning Pathway Substrate"/>
 
 *A structured learning pathway for regime‑aware thinking, design, and stewardship.*
 
