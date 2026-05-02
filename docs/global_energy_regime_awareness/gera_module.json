@@ -1,0 +1,122 @@
+{
+  "module": {
+    "name": "Global Energy Regime Awareness",
+    "path": "docs/global_energy_regime_awareness",
+    "canon_tag": "gera-core",
+    "version": "2026.1",
+    "layer": "Applied Domain Models",
+    "status": "Active, Canonical",
+    "purpose": "Passive, descriptive, operator-aligned framework for expressing operating context, validity assumptions, and boundary semantics within global energy systems — covering generation, transmission, distribution, and storage domains without prescribing control or optimization.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/global_energy_regime_awareness"
+  },
+  "session_context": {
+    "canon": "active (energy-regime-awareness)",
+    "modules_linked": [
+      "steady-state",
+      "peak-demand",
+      "renewable-variability",
+      "emergency-operations",
+      "generation",
+      "transmission",
+      "distribution",
+      "storage",
+      "SCADA",
+      "automation-boundaries",
+      "event-interpretation",
+      "post-event-analysis"
+    ],
+    "drift": "minimal (regime-locked)",
+    "coherence": "stable (energy-regime grammar)",
+    "version": "1.0 (GERA-stable)",
+    "format": "html + markdown + schema + examples",
+    "front_door": "exists (GERA root)",
+    "every_page": "stands alone + passive + non-prescriptive",
+    "audience": [
+      "operators",
+      "planners",
+      "researchers",
+      "analysts",
+      "engineers",
+      "policymakers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D7",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C4",
+    "drift_sensitivity": "high",
+    "regime_sensitivity": "very_high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-principles",
+      "facilities-core"
+    ],
+    "exports": [
+      "energy-regime-taxonomy",
+      "operating-envelope-semantics",
+      "boundary-condition-grammar",
+      "grid-entry-point-classification",
+      "passive-declaration-schema",
+      "operator-context-alignment-model",
+      "SCADA-observability-patterns",
+      "automation-boundary-semantics",
+      "event-interpretation-framework",
+      "load-shedding-context-model",
+      "post-event-analysis-framework"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Overview",
+      "path": "overview",
+      "canon_tag": "gera-overview",
+      "purpose": "Establishes GERA purpose, scope, non-goals, and terminology alignment with substrate-based regime models."
+    },
+    {
+      "name": "Energy Regimes",
+      "path": "energy_regimes",
+      "canon_tag": "gera-energy-regimes",
+      "purpose": "Defines four canonical operating regimes — steady-state generation, peak demand, renewable variability, and emergency operations."
+    },
+    {
+      "name": "Grid Entry Points",
+      "path": "grid_entry_points",
+      "canon_tag": "gera-grid-entry-points",
+      "purpose": "Describes structural entry points into regime awareness — generation assets, transmission networks, distribution systems, and storage and buffering."
+    },
+    {
+      "name": "Minimal Schema",
+      "path": "minimal_schema",
+      "canon_tag": "gera-minimal-schema",
+      "purpose": "Provides the energy regime awareness schema, example declarations, design notes, and passive grid declaration templates."
+    },
+    {
+      "name": "Integration Patterns",
+      "path": "integration_patterns",
+      "canon_tag": "gera-integration-patterns",
+      "purpose": "Defines operator context alignment, SCADA observability, and automation boundary markers for regime-aware integration."
+    },
+    {
+      "name": "Operational Implications",
+      "path": "operational_implications",
+      "canon_tag": "gera-operational-implications",
+      "purpose": "Covers grid event interpretation, load shedding context, and post-event analysis within a regime-aware operational model."
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation anchor for the GERA domain — introduces the passive descriptive framework, scopes the module, and links all six subdirectories.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "purpose.md",
+      "path": "overview/purpose.md",
+      "purpose": "Profiles the GERA purpose — making structural context visible within energy systems to support interpret
