@@ -1,5 +1,7 @@
 ## Inverted Star Ontology  
 
+- [`ISO_module.json`](ISO_module.json) — Agentic module schema role assignments
+
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/⭐Regime%20Inversion%20Core-🪐Non_Singular%20Compact%20Object%20Model-4c8eda?style=for-the-badge" alt="Regime‑Inversion Core | Non‑Singular Compact Object Model"/>
 
 ## A vST‑Aligned Minimal Artifact  
 
