@@ -1,0 +1,693 @@
+{
+  "_meta": {
+    "title": "TriadicFrameworks — Modules Group Registry",
+    "description": "Canonical registry of all refreshed modules with metadata, session context, and module.json status. Place at /docs/modules_group.json",
+    "last_updated": "2026-05-02",
+    "total_refreshed": 62,
+    "sessions": {
+      "prior_sessions": { "count": 32, "note": "Reconstructed from cross-references — verify against your local records" },
+      "session_2026_05_02": { "count": 30, "note": "All 30 confirmed and fully detailed in this conversation" }
+    }
+  },
+
+  "refreshed_modules": [
+
+    {
+      "path": "/docs/rtt/",
+      "module": "RTT Root (RTT/1)",
+      "category": "rtt-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/consciousness_substrate_model/",
+      "module": "Consciousness Substrate Model",
+      "category": "substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/quantum-substrate-model/",
+      "module": "Quantum Substrate Model",
+      "category": "substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/boson-substrate-model/",
+      "module": "Boson Substrate Model",
+      "category": "substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/resonance-substrate-model/",
+      "module": "Resonance Substrate Model",
+      "category": "substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/scientific_instrument_review/",
+      "module": "Scientific Instrument Review",
+      "category": "rtt-vst-validation",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/global_energy_regime_awareness/",
+      "module": "Global Energy Regime Awareness",
+      "category": "regime-awareness",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/manufacturing_substrate_regime_model/",
+      "module": "Manufacturing Substrate Regime Model",
+      "category": "substrate-manufacturing",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/spectral_clarity/",
+      "module": "Spectral Clarity",
+      "category": "rtt-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/facilities/",
+      "module": "Facilities",
+      "category": "infrastructure",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/bridges/",
+      "module": "Bridges",
+      "category": "infrastructure",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/alphafold_substrate_alignments/",
+      "module": "AlphaFold Substrate Alignments",
+      "category": "biological-alignment",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/public_support/",
+      "module": "Public Support",
+      "category": "governance-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/packages/",
+      "module": "Packages",
+      "category": "infrastructure",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/schemas/",
+      "module": "Schemas",
+      "category": "infrastructure",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/runtime/",
+      "module": "Runtime",
+      "category": "rtt-runtime",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/spacetime_validation_and_regime_invariant_dimensional_cores/",
+      "module": "Spacetime Validation and Regime-Invariant Dimensional Cores",
+      "category": "rtt-vst-validation",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/spacetime_micro_agent_validations/",
+      "module": "Spacetime Micro-Agent Validations",
+      "category": "rtt-vst-validation",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/atomic_clocks/",
+      "module": "Atomic Clocks",
+      "category": "rtt-vst-validation",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/audio_industry_reviewed/",
+      "module": "Audio Industry Reviewed",
+      "category": "media-substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/diagnosing_media_therapy/",
+      "module": "Diagnosing Media Therapy",
+      "category": "media-substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/Framework_Field_Theory/",
+      "module": "Framework Field Theory",
+      "category": "framework-structural",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/SARG/",
+      "module": "SARG",
+      "category": "framework-structural",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/Mode/",
+      "module": "Mode",
+      "category": "framework-structural",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/unified_resonance/",
+      "module": "Unified Resonance",
+      "category": "rtt-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/triadic/",
+      "module": "Triadic",
+      "category": "rtt-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/triadic_observer_layer/",
+      "module": "Triadic Observer Layer",
+      "category": "rtt-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/triadic_coordination_substrate/",
+      "module": "Triadic Coordination Substrate",
+      "category": "substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/substrate/",
+      "module": "Substrate Primer",
+      "category": "substrate-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/glyphs/",
+      "module": "Glyphs",
+      "category": "glyphic-resonance-core",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/Low_Dimensional_Structures/",
+      "module": "Low Dimensional Structures",
+      "category": "rtt-dimensional",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+    {
+      "path": "/docs/spectrum_standards_reviewed/",
+      "module": "Spectrum Standards Reviewed",
+      "category": "rtt-vst-validation",
+      "session": "prior",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"]
+    },
+
+
+
+    {
+      "path": "/docs/substrate_communications/",
+      "module": "Substrate Communications",
+      "category": "substrate-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Full ground-up rewrite. Was bare-bones template with generic description, wrong canonical URL, wrong OG title, no Twitter card, no citation, no ai.* tags. Hidden span instead of proper session block."
+    },
+    {
+      "path": "/docs/substrate_exposure_assay/",
+      "module": "Substrate Exposure Assay",
+      "category": "substrate-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Full ground-up rewrite. Same bare-bones template as SubComm. Hidden span replaced with proper session block."
+    },
+    {
+      "path": "/docs/dimensional_substrate_structures/",
+      "module": "Dimensional Substrate Structures",
+      "category": "rtt-dimensional",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. data-dss='1' → data-rtt='dss'. Sibling: DSRSP."
+    },
+    {
+      "path": "/docs/dimensional_substrate_regime_scanning_protocol/",
+      "module": "Dimensional Substrate Regime Scanning Protocol",
+      "category": "rtt-dimensional-protocol",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. data-dsrsp='1' → data-rtt='dsrsp'. Sibling: DSS."
+    },
+    {
+      "path": "/docs/arrival_substrate_model/",
+      "module": "Arrival Substrate Model",
+      "category": "substrate-arrival",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. 24-file manifest spanning 5 directories. 7 crosslinks to sibling substrates.",
+      "file_count": 24
+    },
+    {
+      "path": "/docs/media_substrate_model/",
+      "module": "Media Substrate Model",
+      "category": "media-substrate-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec with ai.discovery.msm.* tags. Minimal patch: date bump + ai.module.summary expansion. Session attributes fixed.",
+      "file_count": 14
+    },
+    {
+      "path": "/docs/substrate_mind_science/",
+      "module": "Substrate Mind Science",
+      "category": "substrate-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Added language, generator, creator, publisher. 17 audit sections + CT substrate directory. 27-file manifest.",
+      "file_count": 27
+    },
+    {
+      "path": "/docs/Inverted_Economics/",
+      "module": "Inverted Economics",
+      "category": "inverted-economics",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. Minimal patch: date bump + ai.module.summary. Session: data-inverted='1' → data-rtt='inverted-economics'.",
+      "file_count": 10
+    },
+    {
+      "path": "/docs/inverted_star_ontology/",
+      "module": "Inverted Star Ontology",
+      "category": "ontology-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. Minimal patch: date bump + ai.module.summary. 15-file manifest including 2 figures.",
+      "file_count": 15
+    },
+    {
+      "path": "/docs/glyphic_resonance/",
+      "module": "Glyphic Resonance",
+      "category": "glyphic-resonance-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Near-complete canon-spec. Added og:image dimensions. Session: data-gr='1' → data-rtt='glyphic-resonance'. 4-file manifest.",
+      "file_count": 4
+    },
+    {
+      "path": "/docs/structural_life_regime_profiles/",
+      "module": "Structural Life-Regime Profiles",
+      "category": "slrp-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Full ground-up rewrite. Was bare-bones template with hidden span. 18-file manifest with 7 example profiles (human, chimpanzee, chrysina gloriosa, crystalline entity, LLM agent, robotics stack, synthetic lifeform).",
+      "file_count": 18
+    },
+    {
+      "path": "/docs/ecoechosystem/",
+      "module": "EcoEchoSystem",
+      "category": "rtt-vst-simulation",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Broken double-DOCTYPE replaced. LARGEST MODULE IN CANON: ~103 files across 11 directories. 6 domain modules, 4 sim template families, substrate engine, tech tree, UI layer.",
+      "file_count": 103
+    },
+    {
+      "path": "/docs/education/",
+      "module": "Education-Core",
+      "category": "education-structural",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. 22 content files + 12+ sub-modules (BRA, subjects, animals, translations, astrology, CivRegimeStack, populations, PEIRA, eBooks, equations, alignment, awareness).",
+      "file_count": 22
+    },
+    {
+      "path": "/docs/corpus/",
+      "module": "Corpus",
+      "category": "library-structural",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. MASTER INDEX of entire canon: ~120 DOC_MAP entries, 14 navigational categories. 61-file manifest.",
+      "file_count": 61
+    },
+    {
+      "path": "/docs/curriculum/",
+      "module": "Curriculum",
+      "category": "education-structural",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. 14-file manifest. Parent: Education-Core.",
+      "file_count": 14
+    },
+    {
+      "path": "/docs/charts/",
+      "module": "Charts",
+      "category": "visual-structural",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. CRITICAL: Duplicate code block at end of file (double </nav>, <main>, <script>) needs removal. 12-file manifest.",
+      "file_count": 12
+    },
+    {
+      "path": "/docs/domain_tool_primers/",
+      "module": "Domain Tool Primers",
+      "category": "vst-validation",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. 9 domain primers (physics, quantum, engineering, earth science, data science, AI/ML, complex systems, autonomous forms, visualization).",
+      "file_count": 11
+    },
+    {
+      "path": "/docs/validation/",
+      "module": "Validation",
+      "category": "infrastructure-validation",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Near-complete. Added language, generator, creator, publisher. 12-file manifest (4 loop validation, 3 lineage/manifest, 3 dashboards).",
+      "file_count": 12
+    },
+    {
+      "path": "/docs/Resilience_Checker/",
+      "module": "Resilience Checker",
+      "category": "paradox-structural",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. Added og:image dimensions. 108 paradox analyses across 11 structural categories. 14-file manifest.",
+      "file_count": 14
+    },
+    {
+      "path": "/docs/Opacity/",
+      "module": "Opacity",
+      "category": "rtt-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Full canon-spec metadata. Session required FULL REWRITE — was using non-standard fields (Module, Canonical ID, Status, Tier, Replaces). 6-file manifest. Replaces regime_blindness.",
+      "file_count": 6
+    },
+    {
+      "path": "/docs/NoS/",
+      "module": "NawderOS (NoS)",
+      "category": "nos-stack",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. Citation year bump + ai.module.summary expansion. 22-file manifest across 5 nav sections.",
+      "file_count": 22
+    },
+    {
+      "path": "/docs/frameworks/creation_guide/",
+      "module": "Framework Creation Guide",
+      "category": "framework-structural",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. Fixed citation_date → citation_publication_date. 12-file manifest. RF-Builder submodule.",
+      "file_count": 12
+    },
+    {
+      "path": "/docs/Governance_Substrate_Model/",
+      "module": "Governance Substrate Model",
+      "category": "governance-substrate",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. 51-file manifest across 10 numbered directories. 4th largest in canon. GSM Analyzer tool available. Parallel to MSM.",
+      "file_count": 51
+    },
+    {
+      "path": "/docs/governance/",
+      "module": "Governance",
+      "category": "governance-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. Added og:image dimensions. 14-file manifest. Constitution layer. Sibling: GSM.",
+      "file_count": 14
+    },
+    {
+      "path": "/docs/Paradoxes_canon/",
+      "module": "Paradoxes Canon",
+      "category": "paradoxes-canon",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. Added og:image dimensions. Lightweight gateway module. Links to Resilience Checker.",
+      "file_count": 2
+    },
+    {
+      "path": "/docs/lactos/",
+      "module": "LACTOS",
+      "category": "collision-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Pristine — full canon-spec with full og:image dimensions already present. Only needed date bump + session attribute fixes. 7-file manifest. Siblings: SO, ISO, VCG.",
+      "file_count": 7
+    },
+    {
+      "path": "/docs/projects/",
+      "module": "Projects",
+      "category": "infrastructure",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Near-complete. Added language, generator, creator, publisher. Gateway module. 1 RTT + 8 pre-RTT projects.",
+      "file_count": 2
+    },
+    {
+      "path": "/docs/enterprise_structural_awareness/",
+      "module": "Enterprise Structural Awareness",
+      "category": "organizational-substrate",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. Fixed og:type, twitter:card, citation_date. 26-file manifest across 6 directories. Siblings: MSRM, RSM, GSM.",
+      "file_count": 26
+    },
+    {
+      "path": "/docs/rtt/store/",
+      "module": "RTT Store",
+      "category": "rtt-storage",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Non-standard meta stripped. 53-file manifest across 8 directories (branding, bundles, canon, community, future, 4 tier levels, training). 5th largest in canon.",
+      "file_count": 53
+    },
+    {
+      "path": "/docs/resonance_atlas/",
+      "module": "Resonance Atlas",
+      "category": "rtt-core",
+      "session": "2026-05-02",
+      "status": "refreshed",
+      "artifacts": ["meta", "session", "module.json"],
+      "notes": "Already full canon-spec. Added og:image dimensions. 13-file manifest. Case studies, mapping examples, technical files.",
+      "file_count": 13
+    }
+  ],
+
+  "remaining_directories": {
+    "_note": "Directories in /docs/ not yet refreshed. Some are content modules needing refresh; others are infrastructure/asset directories that may not need index.html treatment.",
+    "likely_content_modules": [
+      "/docs/AI_Resonance_Seed/",
+      "/docs/Coeus/",
+      "/docs/Integrations/",
+      "/docs/Law/",
+      "/docs/Research/",
+      "/docs/TFT_3Pack_v1.3/",
+      "/docs/ai/",
+      "/docs/ai-drift-calibration/",
+      "/docs/amateur_radio/",
+      "/docs/energy/",
+      "/docs/discovery/",
+      "/docs/gallery/",
+      "/docs/honor_roll/",
+      "/docs/labs/",
+      "/docs/legal/",
+      "/docs/library/",
+      "/docs/metadata/",
+      "/docs/nist/",
+      "/docs/onboarding/",
+      "/docs/overlays/",
+      "/docs/papers/",
+      "/docs/regime_blindness_checklist/",
+      "/docs/registries/",
+      "/docs/registry/",
+      "/docs/reports/",
+      "/docs/resonance/",
+      "/docs/rfc/",
+      "/docs/rituals/",
+      "/docs/simulations/",
+      "/docs/snapshots/",
+      "/docs/sources/",
+      "/docs/structuring_mathematics/",
+      "/docs/tools/",
+      "/docs/validators/",
+      "/docs/vst_for_embedding_stores_vector_databases/",
+      "/docs/vst_for_generative_models/",
+      "/docs/vst_for_large_language_models/",
+      "/docs/vst_for_multi_model_alignment/",
+      "/docs/vst_for_protein_language_models/",
+      "/docs/vst_for_robotics_and_control_policies/",
+      "/docs/vst_for_scientific_simulators/",
+      "/docs/wiki_scrolls/",
+      "/docs/contributors/",
+      "/docs/archive_experiments/"
+    ],
+    "infrastructure_or_assets": [
+      "/docs/_data/",
+      "/docs/_ideas/",
+      "/docs/_snippets/",
+      "/docs/_specs/",
+      "/docs/_template/",
+      "/docs/api/",
+      "/docs/assets/",
+      "/docs/badges/",
+      "/docs/clients/",
+      "/docs/config/",
+      "/docs/configs/",
+      "/docs/data/",
+      "/docs/diagrams/",
+      "/docs/feedback/",
+      "/docs/images/",
+      "/docs/img/",
+      "/docs/jobs/",
+      "/docs/js/",
+      "/docs/scripts/",
+      "/docs/src/",
+      "/docs/styles/",
+      "/docs/tests/",
+      "/docs/workflows/"
+    ]
+  },
+
+  "size_ranking": [
+    { "rank": 1, "module": "EcoEchoSystem",        "files": 103, "category": "rtt-vst-simulation" },
+    { "rank": 2, "module": "Resonance Substrate Model", "files": 97, "category": "substrate-core" },
+    { "rank": 3, "module": "Scientific Instrument Review", "files": 74, "category": "rtt-vst-validation" },
+    { "rank": 4, "module": "Corpus",                "files": 61, "category": "library-structural" },
+    { "rank": 5, "module": "RTT Store",             "files": 53, "category": "rtt-storage" },
+    { "rank": 6, "module": "Governance Substrate Model", "files": 51, "category": "governance-substrate" },
+    { "rank": 7, "module": "Substrate Mind Science", "files": 27, "category": "substrate-core" },
+    { "rank": 8, "module": "Enterprise Structural Awareness", "files": 26, "category": "organizational-substrate" },
+    { "rank": 9, "module": "Arrival Substrate Model", "files": 24, "category": "substrate-arrival" },
+    { "rank": 10, "module": "Education-Core",       "files": 22, "category": "education-structural" }
+  ],
+
+  "category_index": {
+    "rtt-core": ["RTT Root", "Spectral Clarity", "Unified Resonance", "Triadic", "Triadic Observer Layer", "Opacity", "Resonance Atlas"],
+    "substrate-core": ["CSM", "QSM", "BSM", "RSM", "Substrate Primer", "Triadic Coordination Substrate", "Substrate Communications", "Substrate Exposure Assay", "Substrate Mind Science"],
+    "substrate-arrival": ["Arrival Substrate Model"],
+    "rtt-dimensional": ["DSS", "Low Dimensional Structures"],
+    "rtt-dimensional-protocol": ["DSRSP"],
+    "rtt-vst-validation": ["SIR", "Spacetime Validation", "Spacetime Micro-Agent", "Atomic Clocks", "Spectrum Standards Reviewed"],
+    "rtt-vst-simulation": ["EcoEchoSystem"],
+    "rtt-storage": ["RTT Store"],
+    "rtt-runtime": ["Runtime"],
+    "regime-awareness": ["GERA"],
+    "substrate-manufacturing": ["MSRM"],
+    "media-substrate-core": ["MSM", "Audio Industry Reviewed", "Diagnosing Media Therapy"],
+    "ontology-core": ["Inverted Star Ontology"],
+    "collision-core": ["LACTOS"],
+    "slrp-core": ["Structural Life-Regime Profiles"],
+    "paradox-structural": ["Resilience Checker"],
+    "paradoxes-canon": ["Paradoxes Canon"],
+    "governance-substrate": ["Governance Substrate Model"],
+    "governance-core": ["Governance", "Public Support"],
+    "organizational-substrate": ["Enterprise Structural Awareness"],
+    "education-structural": ["Education-Core", "Curriculum"],
+    "library-structural": ["Corpus"],
+    "visual-structural": ["Charts"],
+    "vst-validation": ["Domain Tool Primers"],
+    "infrastructure-validation": ["Validation"],
+    "infrastructure": ["Facilities", "Bridges", "Packages", "Schemas", "Projects"],
+    "framework-structural": ["FFT", "SARG", "Mode", "Framework Creation Guide"],
+    "inverted-economics": ["Inverted Economics"],
+    "glyphic-resonance-core": ["Glyphs", "Glyphic Resonance"],
+    "biological-alignment": ["AlphaFold Substrate Alignments"],
+    "nos-stack": ["NawderOS"]
+  }
+}
