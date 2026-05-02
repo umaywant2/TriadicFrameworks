@@ -1,4 +1,4 @@
-# LICENSE.md  
+## 👮 License | Open 
 
 - [`LICENSE_module.json`](LICENSE_module.json) — Agentic module schema role assignments
 
