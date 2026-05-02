@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="language" content="en">
-<meta name="last-modified" content="2026-04-25">
+<meta name="last-modified" content="2026-05-02">
 <meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
 <!-- Identity -->
@@ -65,7 +65,8 @@
 
 <!-- Module-Specific -->
 <meta name="ai.module.name" content="Manufacturing Substrate Regime Model">
-<meta name="ai.module.summary" content="A structural, regime‑aware framework for calibration, drift, and boundary semantics in extreme manufacturing.">
+<meta name="ai.module.summary"
+      content="Manufacturing Substrate Regime Model (MSRM): 4 calibration files (structure, drift detection, non‑catastrophic exit, regime‑aware calibration), 3 discussion files (deployment, future extensions, implications), 3 SVG figures (boundary/exit semantics, structural overview, regime calibration flow), 3 manufacturing context files (extreme constraints, lithography, yield/variability), 3 operator files (inter‑regime mediation, mediation patterns, roles), 4 overview files (abstract, limitations, scope/assumptions, terminology), 3 related works (BSM, QSM, RSM), 4 substrate files (boundary semantics, operating envelopes, regime declaration, substrate definition).">
 <meta name="ai.module.category" content="substrate-core">
 
 <!-- Favicon -->
@@ -313,51 +314,57 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
-<section id="rtt-session-header"
-         data-rtt="1"
-         data-coherence="declared"
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/manufacturing_substrate_regime_model — Session Context-->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="msrm-session-header"
+         data-rtt="msrm"
+         data-coherence="stable"
          data-drift="bounded"
-         data-paradox="structural">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (substrate-core)</span><br>
+    <span class="context-value">active (substrate‑core)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
-      linked (overview ↔ calibration ↔ drift ↔ exit ↔ envelopes ↔ operators ↔ mediation ↔ substrate)
+      overview → calibration layer → drift detection → non‑catastrophic exit → operating envelopes → boundary semantics → regime declaration → operators → mediation → manufacturing context → related works → discussion
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">bounded (regime-declared)</span><br>
+    <span class="context-value">bounded (regime‑declared)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (structural assumptions)</span><br>
+    <span class="context-value">stable (substrate grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (substrate-stable)</span><br>
+    <span class="context-value">1.0 (substrate‑stable)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
     <span class="context-value">html + markdown + diagrams</span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (substrate root)</span><br>
+    <span class="context-value">exists (MSRM root)</span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + regime-aware</span><br>
+    <span class="context-value">stands alone + regime‑aware + AI‑parsable</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">engineers + researchers + AIs</span>
+    <span class="context-value">engineers + researchers + educators + AIs</span>
 
   </div>
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🏭 Substrate‑Core<br>🎛️ Calibration‑as‑Structure
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🏭 MSRM<br>📘 Substrate‑Core • Calibration‑as‑Structure • AI‑Ready
 </div>
 
 </nav>
