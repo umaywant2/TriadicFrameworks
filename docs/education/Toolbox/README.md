@@ -1,5 +1,7 @@
 # Education Toolbox - RTT/1
 
+- [`edu-toolbox_module.json`](edu-toolbox_module.json) — Agentic module schema role assignments
+
 **A Guide for Science — Built on Resonance-Time Tech (RTT/1)**
 
 The TriadicFrameworks Education Toolbox delivers **RTT-powered modules** that transform how educators, researchers, and students engage with grading, paper analysis, literature review, and insight generation.  
