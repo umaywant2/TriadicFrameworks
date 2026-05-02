@@ -104,6 +104,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 ## 5. Education & Curriculum (Learning Layer)
 
 - [/education/](https://www.triadicframeworks.org/education/)
+- [/education/Toolbox/](https://www.triadicframeworks.org/education/Toolbox/) 
 - [/education/alignment/](https://www.triadicframeworks.org/education/alignment/)
 - [/education/astrology/](https://www.triadicframeworks.org/education/astrology/)
 - [/education/awareness/](https://www.triadicframeworks.org/education/awareness/)
