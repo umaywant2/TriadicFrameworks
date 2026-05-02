@@ -49,7 +49,7 @@
     {
       "filename": "SECURITY.md",
       "path": "SECURITY.md",
-      "purpose": "Security policy reference scoping vulnerability disclosure to executable scripts and build tooling — documentation and theory are explicitly out of scope.",
+      "purpose": "Security policy reference scoping vulnerability disclosure to executable scripts and build tooling \u2014 documentation and theory are explicitly out of scope.",
       "role": "reference",
       "analyzer_layer": "regime"
     }

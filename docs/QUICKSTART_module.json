@@ -52,7 +52,7 @@
     {
       "filename": "QUICKSTART.md",
       "path": "QUICKSTART.md",
-      "purpose": "Entry-point index for new users — teaches RTT concepts first, then scrolls, then tools, then workflows in a canonical learning sequence.",
+      "purpose": "Entry-point index for new users \u2014 teaches RTT concepts first, then scrolls, then tools, then workflows in a canonical learning sequence.",
       "role": "index",
       "analyzer_layer": "operator"
     }

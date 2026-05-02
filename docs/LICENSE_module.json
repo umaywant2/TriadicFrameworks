@@ -50,7 +50,8 @@
       "filename": "LICENSE.md",
       "path": "LICENSE.md",
       "purpose": "Legal reference establishing the Apache 2.0 licensing terms for all TriadicFrameworks content and derivative works.",
-      "role": "reference"
+      "role": "reference",
+      "analyzer_layer": "regime"
     }
   ]
 }

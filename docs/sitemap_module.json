@@ -52,7 +52,7 @@
     {
       "filename": "sitemap.md",
       "path": "sitemap.md",
-      "purpose": "Structural map of the full TriadicFrameworks ecosystem — twelve layers from Core Frameworks through Future Systems, with canonical URLs and folder layout.",
+      "purpose": "Structural map of the full TriadicFrameworks ecosystem \u2014 twelve layers from Core Frameworks through Future Systems, with canonical URLs and folder layout.",
       "role": "map",
       "analyzer_layer": "cross-cutting"
     }
