@@ -1,14 +1,14 @@
 # README | Law Module
 
-[`law_module.json`](law_module.json) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md) | [🎯 Glossary](../law-references-glossary.md)
+[`law_module.json`](law_module.json) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md) | [🎯 Glossary](law-references-glossary.md)
 
 ## 🔰 Quickstart
 
 Welcome to the **Law Module** — an RTT domain primer that brings Resonance-Time Theory to legal systems.
 
-- **Start here** for regime awareness: [law-rtt-regime-awareness.md](../law-rtt-regime-awareness.md)
+- **Start here** for regime awareness: [law-rtt-regime-awareness.md](law-rtt-regime-awareness.md)
 - Core structure: Foundational regimes → Domestic → International/Global → Emerging Tech
-- Full module context: [ABOUT-law.md](../ABOUT-law.md)
+- Full module context: [ABOUT-law.md](ABOUT-law.md)
 
 ```markdown
 🧭 Jump to:
@@ -42,14 +42,14 @@ This is a **structured, AI-ready primer** applying the TriadicFrameworks canon (
 
 | Section                        | Focus                                      | File |
 |--------------------------------|--------------------------------------------|------|
-| Foundational Regimes           | Jurisprudence, philosophy, invariants      | [law-foundational-regimes.md](../law-foundational-regimes.md) |
-| Private Domestic               | Contracts, torts, property, family         | [law-private-domestic.md](../law-private-domestic.md) |
-| Public Domestic                | Constitutional, criminal, administrative   | [law-public-domestic.md](../law-public-domestic.md) |
-| Commercial & Economic          | Corporate, IP, labor, markets              | [law-commercial-economic.md](../law-commercial-economic.md) |
-| International & Global         | Treaties, cross-border coherence           | [law-international-global.md](../law-international-global.md) |
-| Emerging Tech                  | AI, cyber, space, climate                  | [law-emerging-tech.md](../law-emerging-tech.md) |
-| RTT Regime Awareness           | BRE/Post-BRA, diagrams, diagnostics        | [law-rtt-regime-awareness.md](../law-rtt-regime-awareness.md) |
-| References & Glossary          | Sources, terms, further reading            | [law-references-glossary.md](../law-references-glossary.md) |
+| Foundational Regimes           | Jurisprudence, philosophy, invariants      | [law-foundational-regimes.md](law-foundational-regimes.md) |
+| Private Domestic               | Contracts, torts, property, family         | [law-private-domestic.md](law-private-domestic.md) |
+| Public Domestic                | Constitutional, criminal, administrative   | [law-public-domestic.md](law-public-domestic.md) |
+| Commercial & Economic          | Corporate, IP, labor, markets              | [law-commercial-economic.md](law-commercial-economic.md) |
+| International & Global         | Treaties, cross-border coherence           | [law-international-global.md](law-international-global.md) |
+| Emerging Tech                  | AI, cyber, space, climate                  | [law-emerging-tech.md](law-emerging-tech.md) |
+| RTT Regime Awareness           | BRE/Post-BRA, diagrams, diagnostics        | [law-rtt-regime-awareness.md](law-rtt-regime-awareness.md) |
+| References & Glossary          | Sources, terms, further reading            | [law-references-glossary.md](law-references-glossary.md) |
 
 ---
 
