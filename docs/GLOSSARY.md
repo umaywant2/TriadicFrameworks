@@ -1,4 +1,4 @@
-# 🌐 **Canonical RTT Grammar (Core Structural Layer)**  
+## 🌐 Canonical RTT Grammar (Core Structural Layer)
 
 - [`GLOSSARY_module.json`](GLOSSARY_module.json) — Agentic module schema role assignments
 
