@@ -1,75 +1,128 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "Arrival Substrate Model",
-    "path": "docs/arrival_substrate_model",
-    "canon_tag": "asm",
-    "version": "1.0",
-    "layer": "RTT Analytics — Substrate Layer",
-    "status": "Active, Canonical",
-    "purpose": "Life-aligned substrate describing how living systems enter, negotiate, and stabilize within new regimes across micro, meso, macro, and cross-scale layers.",
-    "parent": "triadicframeworks-root",
-    "url": "https://www.triadicframeworks.org/arrival_substrate_model"
-  },
-
-  "session_context": {
-    "canon": "active (substrate-analytics)",
-    "modules_linked": [
-      "operator → arc → literacy → regime alignment → governance → energy → crosslinks"
-    ],
-    "drift": "bounded (arrival-locked)",
-    "coherence": "stable (arrival grammar)",
-    "format": "html + markdown + diagrams + maps",
-    "front_door": "exists (ASM root)",
-    "every_page": "AI-parsable + substrate-aligned",
-    "audience": ["researchers", "developers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D7",
-    "regime_envelope": "R0–R3",
-    "coherence_envelope": "C0–C4",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "medium"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "RSM",
-      "BSM",
-      "QSM",
-      "Governance Substrate Model",
-      "Structural Life-Regime Profiles"
-    ],
-    "exports": [
-      "arrival operator",
-      "arrival arc",
-      "arrival literacy",
-      "regime alignment",
-      "governance integration",
-      "arrival energy",
-      "crosslinks"
-    ]
-  },
-
-  "submodules": [
-    { "name": "Arrival Operator", "path": "arrival_operator.md" },
-    { "name": "Arrival Arc Diagram", "path": "arrival_arc_diagram.md" },
-    { "name": "Arrival Literacy", "path": "arrival_literacy.md" },
-
-    { "name": "Micro Arrivals", "path": "arrival_regime_alignment/micro_arrivals.md" },
-    { "name": "Meso Arrivals", "path": "arrival_regime_alignment/meso_arrivals.md" },
-    { "name": "Macro Arrivals", "path": "arrival_regime_alignment/macro_arrivals.md" },
-    { "name": "Cross-Scale Arrivals", "path": "arrival_regime_alignment/cross_scale_arrivals.md" },
-
-    { "name": "Governance Integration", "path": "arrival_governance/" },
-    { "name": "Arrival Energy", "path": "arrival_energy/" },
-    { "name": "Crosslinks", "path": "arrival_crosslinks/" }
-  ],
-
+  "module": "Arrival Substrate Model",
+  "version": "1.0",
+  "category": "substrate-arrival",
+  "summary": "Life‑aligned substrate describing how living systems enter, negotiate, and stabilize within new regimes — arrival operators, arcs, literacy, energy profiles, governance protocols, tiers, regime alignment across micro/meso/macro/cross‑scale, and 7 cross‑substrate alignments (BSM, QSM, RSM, PEIRA, Facilities, Governance, Structural Life‑Regime).",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of ASM.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for ASM.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "arrival_arc_diagram.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "arrival_literacy.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "arrival_operator.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "arrival_substrate_overview.md",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "arrival_crosslinks/bsm_alignment.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_crosslinks/facilities_alignment.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_crosslinks/governance_alignment.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_crosslinks/peira_alignment.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_crosslinks/qsm_alignment.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_crosslinks/rsm_alignment.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_crosslinks/structural_life_regime_alignment.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_energy/arrival_energy_profile.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "arrival_energy/higher_dimensional_arrivals.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "arrival_energy/resonance_transition_dynamics.md",
+      "role": "engine",
+      "analyzer_layer": "drift"
+    },
+    {
+      "path": "arrival_governance/arrival_protocols.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "arrival_governance/arrival_tiers.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_governance/dna_department.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_governance/global_arrival_standards.md",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_regime_alignment/cross_scale_arrivals.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "arrival_regime_alignment/macro_arrivals.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_regime_alignment/meso_arrivals.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "arrival_regime_alignment/micro_arrivals.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    }
   ]
 }
