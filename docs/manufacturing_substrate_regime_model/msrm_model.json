@@ -1,1 +1,321 @@
+{
+  "module": {
+    "name": "Manufacturing Substrate Regime Model",
+    "path": "docs/manufacturing_substrate_regime_model",
+    "canon_tag": "msrm-core",
+    "version": "2026.1",
+    "layer": "Applied Domain Models",
+    "status": "Active, Canonical",
+    "purpose": "Structural framework for describing, calibrating, and managing extreme manufacturing systems through explicitly declared operating regimes, boundary semantics, and operator-mediated interactions — architecture-agnostic and domain-neutral.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/manufacturing_substrate_regime_model"
+  },
+  "session_context": {
+    "canon": "active (substrate-core)",
+    "modules_linked": [
+      "overview",
+      "calibration",
+      "drift",
+      "exit",
+      "envelopes",
+      "operators",
+      "mediation",
+      "substrate"
+    ],
+    "drift": "bounded (regime-declared)",
+    "coherence": "stable (structural assumptions)",
+    "version": "1.0 (substrate-stable)",
+    "format": "html + markdown + diagrams",
+    "front_door": "exists (substrate root)",
+    "every_page": "stands alone + regime-aware",
+    "audience": [
+      "engineers",
+      "researchers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D7",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C4",
+    "drift_sensitivity": "high",
+    "regime_sensitivity": "very_high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-principles",
+      "facilities-core"
+    ],
+    "exports": [
+      "regime-declaration-model",
+      "structural-calibration-layers",
+      "boundary-semantics",
+      "operating-envelope-definitions",
+      "operator-mediated-interactions",
+      "non-catastrophic-exit-semantics",
+      "drift-detection-framework",
+      "extreme-regime-constraints",
+      "lithography-system-patterns",
+      "yield-variability-analysis",
+      "inter-regime-mediation-model"
+    ]
+  },
+  "submodules": [
+    {
+      "name": "Calibration",
+      "path": "calibration",
+      "canon_tag": "msrm-calibration",
+      "purpose": "Defines calibration-as-structure — regime-aware calibration layers, drift detection, and non-catastrophic exit semantics for manufacturing substrates."
+    },
+    {
+      "name": "Discussion",
+      "path": "discussion",
+      "canon_tag": "msrm-discussion",
+      "purpose": "Forward-looking discussion of deployment considerations, future extensions, and implications for manufacturing systems."
+    },
+    {
+      "name": "Figures",
+      "path": "figures",
+      "canon_tag": "msrm-figures",
+      "purpose": "Visual artifacts — structural overview, regime calibration flow, extreme regime constraints, and boundary/exit semantics diagrams."
+    },
+    {
+      "name": "Manufacturing Context",
+      "path": "manufacturing_context",
+      "canon_tag": "msrm-manufacturing-context",
+      "purpose": "Domain-specific application — lithography systems, yield and variability analysis, and extreme regime constraint documentation."
+    },
+    {
+      "name": "Operators",
+      "path": "operators",
+      "canon_tag": "msrm-operators",
+      "purpose": "Operator-mediated interaction layer — operator roles, inter-regime mediation, and mediation pattern documentation."
+    },
+    {
+      "name": "Overview",
+      "path": "overview",
+      "canon_tag": "msrm-overview",
+      "purpose": "Module overview — abstract, limitations, scope and assumptions, and terminology reference."
+    },
+    {
+      "name": "Related Works",
+      "path": "related_works",
+      "canon_tag": "msrm-related-works",
+      "purpose": "Cross-model relationship mapping — connections to BSM, QSM, and RSM substrate models."
+    },
+    {
+      "name": "Substrate",
+      "path": "substrate",
+      "canon_tag": "msrm-substrate",
+      "purpose": "Core substrate definitions — boundary semantics, operating envelopes, regime declarations, and substrate definition."
+    }
+  ],
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation anchor for the MSRM domain — introduces the structural framework, key concepts, intended audience, and relationship to BSM/QSM/RSM.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "abstract.md",
+      "path": "overview/abstract.md",
+      "purpose": "Publication abstract profiling the MSRM as a substrate-level organizational layer for extreme manufacturing systems.",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "scope_and_assumptions.md",
+      "path": "overview/scope_and_assumptions.md",
+      "purpose": "Reference defining MSRM scope (structural, descriptive, architecture-agnostic) and explicit non-goals (no empirical claims, no process optimization).",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "limitations.md",
+      "path": "overview/limitations.md",
+      "purpose": "Diagnostic reference documenting known limitations and boundary conditions of the MSRM framework.",
+      "role": "diagnostic",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "terminology.md",
+      "path": "overview/terminology.md",
+      "purpose": "Reference aligning MSRM terminology with substrate-based regime models and manufacturing domain conventions.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "substrate_definition.md",
+      "path": "substrate/substrate_definition.md",
+      "purpose": "Canonical signature defining the manufacturing substrate — the foundational structural layer on which all MSRM regimes, envelopes, and boundaries are declared.",
+      "role": "signature",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "regime_declaration.md",
+      "path": "substrate/regime_declaration.md",
+      "purpose": "Engine formalizing how manufacturing operating regimes are explicitly declared — regime identity, boundary conditions, and transition semantics.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "operating_envelopes.md",
+      "path": "substrate/operating_envelopes.md",
+      "purpose": "Reference defining operating envelopes — dimensional bounds within which a manufacturing regime maintains validity and coherence.",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "boundary_semantics.md",
+      "path": "substrate/boundary_semantics.md",
+      "purpose": "Reference defining boundary semantics — structural rules governing what happens at regime edges, including approach indicators and exit conditions.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "calibration_as_structure.md",
+      "path": "calibration/calibration_as_structure.md",
+      "purpose": "Engine treating calibration as a structural concern — layered calibration architecture integrated with regime declaration rather than ad-hoc process adjustment.",
+      "role": "engine",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "drift_detection.md",
+      "path": "calibration/drift_detection.md",
+      "purpose": "Diagnostic framework for detecting manufacturing drift — systematic identification of regime departure before boundary breach.",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "filename": "non_catastrophic_exit.md",
+      "path": "calibration/non_catastrophic_exit.md",
+      "purpose": "Engine defining non-catastrophic exit semantics — structured regime transitions that preserve system integrity during boundary approach or breach.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "regime_aware_calibration.md",
+      "path": "calibration/regime_aware_calibration.md",
+      "purpose": "Engine integrating calibration with regime awareness — calibration procedures that adapt based on declared regime state and envelope position.",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "operator_roles.md",
+      "path": "operators/operator_roles.md",
+      "purpose": "Operator-facing reference defining human operator roles within MSRM — decision authority, regime monitoring responsibilities, and mediation triggers.",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "inter_regime_mediation.md",
+      "path": "operators/inter_regime_mediation.md",
+      "purpose": "Operator-facing engine defining inter-regime mediation — active protocols for managing transitions between manufacturing regimes.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "mediation_patterns.md",
+      "path": "operators/mediation_patterns.md",
+      "purpose": "Operator-facing reference cataloging reusable mediation patterns — structured templates for common regime transition scenarios.",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "lithography_systems.md",
+      "path": "manufacturing_context/lithography_systems.md",
+      "purpose": "Domain example applying MSRM to advanced lithography — regime structure, envelope constraints, and calibration challenges in sub-nanometer manufacturing.",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "yield_and_variability.md",
+      "path": "manufacturing_context/yield_and_variability.md",
+      "purpose": "Diagnostic framework for yield and variability analysis within MSRM — regime-aware metrics for process window characterization.",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "filename": "extreme_regime_constraints.md",
+      "path": "manufacturing_context/extreme_regime_constraints.md",
+      "purpose": "Reference documenting extreme regime constraints — physical, thermal, temporal, and material limits that define the outer boundaries of manufacturing regimes.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "deployment_considerations.md",
+      "path": "discussion/deployment_considerations.md",
+      "purpose": "Forward-looking profile of MSRM deployment — practical considerations for integrating substrate-level regime modeling into existing manufacturing environments.",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "future_extensions.md",
+      "path": "discussion/future_extensions.md",
+      "purpose": "Forward-looking profile of MSRM evolution — planned extensions, research frontiers, and potential domain adaptations.",
+      "role": "profile",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "implications_for_manufacturing.md",
+      "path": "discussion/implications_for_manufacturing.md",
+      "purpose": "Reference analyzing broader implications of MSRM for manufacturing systems engineering — structural clarity, reproducibility, and interpretability benefits.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "relationship_to_bsm.md",
+      "path": "related_works/relationship_to_bsm.md",
+      "purpose": "Reference mapping MSRM's relationship to the Boson Substrate Model — substrate-level inheritance and shared regime grammar.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "relationship_to_qsm.md",
+      "path": "related_works/relationship_to_qsm.md",
+      "purpose": "Reference mapping MSRM's relationship to the Quantum Substrate Model — dimensional organization and multi-regime structuring.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "relationship_to_rsm.md",
+      "path": "related_works/relationship_to_rsm.md",
+      "purpose": "Reference mapping MSRM's relationship to the Resonance Substrate Model — resonance-aware calibration and coherence metrics.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "structural_overview.svg",
+      "path": "figures/structural_overview.svg",
+      "purpose": "Visual map of the MSRM architecture — structural overview diagram showing regime layers, calibration flows, and operator interactions.",
+      "role": "map",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "regime_calibration_flow.svg",
+      "path": "figures/regime_calibration_flow.svg",
+      "purpose": "Visual map of the regime-aware calibration pipeline — flow diagram from regime detection through calibration adjustment to exit semantics.",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "CITATION.cff",
+      "path": "CITATION.cff",
+      "purpose": "Citation metadata file providing standardized bibliographic reference for MSRM in academic and research contexts.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "zenodo.json",
+      "path": "zenodo.json",
+      "purpose": "Zenodo deposit metadata enabling DOI-based archival and citability of the MSRM as a versioned research artifact.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}
 
