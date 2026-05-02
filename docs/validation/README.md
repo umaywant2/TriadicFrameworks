@@ -1,5 +1,7 @@
 # ✔️ Validation — Logs, Protocols & Lineage Integrity 
 
+- [`validation_module.json`](validation_module.json) — Agentic module schema role assignments
+
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🛡️Validation%20Module-📊Structural%20Integrity%20Active-4c8eda?style=for-the-badge" alt="Validation Module | Structural Integrity Active"/>
 
 ## Loop Integrity • Drift Detection • Remix Lineage • Validator Dashboards
 
