@@ -1,6 +1,6 @@
 ## 📜 Resonance Atlas (RTT‑Aligned Minimal Edition) 
 
-- [`resonance-atlas_module.json`](resonance-atlas_module.json) — Agentic module schema role assignments
+- [`resonance_atlas_module.json`](resonance_atlas_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
