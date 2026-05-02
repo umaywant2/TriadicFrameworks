@@ -1,0 +1,128 @@
+{
+  "module": {
+    "name": "Regime Blindness Checklist",
+    "path": "docs/regime_blindness_checklist",
+    "canon_tag": "regime-blindness-checklist",
+    "version": "1.0",
+    "layer": "Research & Validation",
+    "status": "Deprecated",
+    "purpose": "Minimal diagnostic bridge for researchers entering RTT/vST-aware work — identifies Regime Blindness, the structural failure mode that occurs when researchers evaluate a new conceptual substrate using the grammar, metrics, or assumptions of an old one.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/regime_blindness_checklist"
+  },
+  "session_context": {
+    "canon": "historical (diagnostic-legacy)",
+    "modules_linked": [
+      "definition",
+      "symptoms",
+      "diagnostic-checklist",
+      "observer-locked-metrics",
+      "transition-boundaries",
+      "regime-shift-examples",
+      "corrective-actions",
+      "doi-reference"
+    ],
+    "drift": "bounded (legacy grammar)",
+    "coherence": "declared (triadic diagnostic grammar)",
+    "version": "1.0 (legacy-stable)",
+    "format": "html + markdown",
+    "front_door": "exists (legacy diagnostic root)",
+    "every_page": "stands alone + researcher-friendly + AI-parsable",
+    "status_note": "frozen (superseded by Opacity)",
+    "audience": [
+      "scientists",
+      "mathematicians",
+      "engineers",
+      "AI researchers",
+      "educators",
+      "students"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D4",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C3",
+    "drift_sensitivity": "high",
+    "regime_sensitivity": "very_high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary"
+    ],
+    "exports": [
+      "regime-blindness-definition",
+      "regime-blindness-symptoms",
+      "diagnostic-checklist-tool",
+      "observer-locked-metric-patterns",
+      "transition-boundary-identification",
+      "regime-shift-examples",
+      "corrective-re-anchoring-actions"
+    ]
+  },
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation index for the Regime Blindness Checklist — introduces the diagnostic purpose, file sequence, usage instructions, and intended audience.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "definition.md",
+      "path": "definition.md",
+      "purpose": "Formal definition of Regime Blindness — the structural inability to recognize that a system has shifted into a new regime with different invariants, metrics, and coherence rules.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "symptoms.md",
+      "path": "symptoms.md",
+      "purpose": "Diagnostic catalog of common Regime Blindness indicators across disciplines — misapplied observer frames, legacy metric misreads, and contradiction-as-noise patterns.",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "filename": "diagnostic_checklist.md",
+      "path": "diagnostic_checklist.md",
+      "purpose": "Quick triadic diagnostic tool for active researcher self-assessment — structured checklist for detecting regime mismatch in current projects, models, or interpretations.",
+      "role": "diagnostic",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "observer_locked_metrics.md",
+      "path": "observer_locked_metrics.md",
+      "purpose": "Diagnostic reference explaining how outdated metrics distort interpretation when observer frames remain locked to a prior regime.",
+      "role": "diagnostic",
+      "analyzer_layer": "drift"
+    },
+    {
+      "filename": "transition_boundaries.md",
+      "path": "transition_boundaries.md",
+      "purpose": "Reference for identifying topology shifts in conceptual systems — boundary markers where one structural regime ends and another begins.",
+      "role": "reference",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "regime_shift_examples.md",
+      "path": "regime_shift_examples.md",
+      "purpose": "Worked examples of real-world regime mismatch — concrete cases where Regime Blindness produced misinterpretations, contradictions, or stalled progress.",
+      "role": "example",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "corrective_actions.md",
+      "path": "corrective_actions.md",
+      "purpose": "Operator-facing corrective action steps for re-anchoring the observer frame to the correct regime — active re-alignment procedures for researchers.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "doi_reference.md",
+      "path": "doi_reference.md",
+      "purpose": "Citation reference linking to the canonical DOI for the Regime Blindness Checklist as a citable research artifact.",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
+  ]
+}
