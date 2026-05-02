@@ -1,0 +1,104 @@
+{
+  "module": {
+    "name": "LACTOS",
+    "path": "docs/lactos",
+    "canon_tag": "lactos-core",
+    "version": "2026.1",
+    "layer": "Core Frameworks — Structural Spine",
+    "status": "Active, Canonical",
+    "purpose": "Defines the Localized Anisotropic Collision and Triadic Ontology System — collision regime taxonomy (P/Q/N classes), cross-ontology mapping (SO/ISO), event pipeline, triadic alignment wheel, and VCG integration for structured collision-to-computation translation.",
+    "parent": "docs-hub",
+    "url": "https://www.triadicframeworks.org/lactos"
+  },
+  "session_context": {
+    "canon": "active (collision-core)",
+    "modules_linked": [
+      "regime taxonomy",
+      "ontology mapping",
+      "event pipeline",
+      "triadic alignment",
+      "VCG integration"
+    ],
+    "drift": "minimal (taxonomy-locked)",
+    "coherence": "stable (triadic + ontology-aligned)",
+    "version": "1.0 (collision-stable)",
+    "format": "html + markdown + diagrams",
+    "front_door": "exists (collision subsystem root)",
+    "every_page": "stands alone + ontology-aware",
+    "audience": [
+      "researchers",
+      "educators",
+      "developers",
+      "AIs"
+    ]
+  },
+  "structural_grammar": {
+    "dimensional_envelope": "D0-D7",
+    "regime_envelope": "R0-R3",
+    "coherence_envelope": "C0-C4",
+    "drift_sensitivity": "medium",
+    "regime_sensitivity": "high"
+  },
+  "cross_module_propagation": {
+    "imports": [
+      "docs-hub",
+      "docs-glossary",
+      "docs-principles"
+    ],
+    "exports": [
+      "collision-regime-taxonomy",
+      "P-Q-N-classification",
+      "anisotropy-signatures",
+      "cross-ontology-collision-mapping",
+      "SO-ISO-translation-surfaces",
+      "collision-event-pipeline",
+      "triadic-alignment-wheel",
+      "VCG-integration-surface",
+      "collision-aware-resonance-mapping"
+    ]
+  },
+  "files": [
+    {
+      "filename": "README.md",
+      "path": "README.md",
+      "purpose": "Navigation index for the LACTOS subsystem — introduces the collision-aware backbone, describes all five core artifacts, and maps LACTOS into the broader canon architecture.",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "filename": "LACTOS_collision_regime_taxonomy.md",
+      "path": "LACTOS_collision_regime_taxonomy.md",
+      "purpose": "Canonical signature defining the P/Q/N collision regime structure — stability classes, anisotropic signatures (A-Type/L-Type/S-Type), and entropy-based stability indicators.",
+      "role": "signature",
+      "analyzer_layer": "regime"
+    },
+    {
+      "filename": "LACTOS_cross_ontology_collision_mapping.md",
+      "path": "LACTOS_cross_ontology_collision_mapping.md",
+      "purpose": "Engine mapping LACTOS collision regimes into Star Ontology (SO) and Inverted Star Ontology (ISO) interpretations — enabling tri-ontology coherence across translation surfaces.",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "filename": "LACTOS_event_pipeline.md",
+      "path": "LACTOS_event_pipeline.md",
+      "purpose": "Operator-facing engine defining the end-to-end collision event pipeline — raw event ingestion, regime classification, ontology translation, VCG handoff, and downstream analysis.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "filename": "SO_ISO_LACTOS_triadic_alignment_wheel.md",
+      "path": "SO_ISO_LACTOS_triadic_alignment_wheel.md",
+      "purpose": "Structural map and visual alignment wheel showing how LACTOS, SO, and ISO interlock through rotational symmetry and triadic coherence.",
+      "role": "map",
+      "analyzer_layer": "coherence"
+    },
+    {
+      "filename": "VCG_LACTOS_integration_diagram.md",
+      "path": "VCG_LACTOS_integration_diagram.md",
+      "purpose": "Operator-facing engine describing how LACTOS outputs feed into the Virtual Compute Gateway for compute-safe translation and downstream ingestion.",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    }
+  ]
+}
