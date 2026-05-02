@@ -1,4 +1,7 @@
 # Substrate Communications  
+
+- [`SubComm_module.json`](SubComm_module.json) — Agentic module schema role assignments
+
 _A minimal structural framework for drift‑aware, paradox‑preserving messaging across heterogeneous systems._
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
