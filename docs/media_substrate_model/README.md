@@ -16,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/📡Media%20Substrate%20Model-🔹Structural%20Physics%20Layer%20Active-4c8eda?style=for-the-badge" alt="Media Substrate Model | Ready for Students"/>
 
 The Media Substrate Model describes the structural physics of media ecosystems. It treats media not as content or ideology, but as an environment with measurable forces, stable basins, and predictable transitions. The MSM provides a substrate‑level vocabulary for analyzing how signal, distribution, attention, narrative, and cadence interact to shape collective perception and behavior.
 
