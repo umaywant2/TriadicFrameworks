@@ -2,47 +2,81 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/enterprise_structural_awareness/index.html — <head>  -->
+<!-- Module: Enterprise Structural Awareness (organizational)    -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-<title>Enterprise Structural Awareness — TriadicFrameworks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
 <meta name="description"
-      content="Enterprise Structural Awareness: regime declaration, boundary semantics, validity context, and drift visibility for long-lived enterprise systems." />
+      content="Enterprise Structural Awareness (ESA) — regime declaration, boundary semantics, validity context, assumption visibility, drift detection, and calm operations for long‑lived enterprise systems. Non‑intrusive, documentation‑first adoption patterns.">
 <meta name="keywords"
-      content="enterprise structural awareness, regime declaration, boundary semantics, validity context, drift detection, MSRM, RSM" />
-<meta name="author" content="Nawder Loswin" />
+      content="enterprise structural awareness, ESA, regime declaration, boundary semantics, validity context, drift detection, MSRM, RSM, configuration surfaces, policy objects, lifecycle states, triadic frameworks">
 
-<meta name="module" content="Enterprise Structural Awareness" />
-<meta name="canonical-id" content="ESA" />
-<meta name="module-type" content="Organizational Substrate" />
-<meta name="version" content="1.0" />
-<meta name="status" content="canon-stable" />
-<meta name="parent" content="RTT-Applications" />
-<meta name="siblings" content="MSRM, RSM, Governance Substrate Model" />
-<meta name="canonical-path" content="/docs/enterprise_structural_awareness/" />
-<meta name="last-updated" content="2026-05-01" />
-<meta name="license" content="MIT" />
+<link rel="canonical" href="https://www.triadicframeworks.org/enterprise_structural_awareness/">
 
-<meta name="ai-ready" content="true" />
-<meta name="ai-module-id" content="ESA" />
-<meta name="ai-operators"
-      content="ESA-Regime, ESA-Boundary, ESA-Validity, ESA-Assumption, ESA-Lifecycle, ESA-Coherence" />
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
 
-<meta property="og:title" content="Enterprise Structural Awareness — TriadicFrameworks" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Enterprise Structural Awareness — Organizational Substrate">
+<meta property="og:url" content="https://www.triadicframeworks.org/enterprise_structural_awareness/">
 <meta property="og:description"
-      content="Structural awareness for enterprise IT systems." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.triadicframeworks.org/enterprise_structural_awareness" />
+      content="Regime declaration → boundary semantics → validity context → assumption visibility → drift detection → calm operations for enterprise systems.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
 
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="Enterprise Structural Awareness — TriadicFrameworks" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Enterprise Structural Awareness — Organizational Substrate">
 <meta name="twitter:description"
-      content="Organizational substrate module." />
+      content="Non‑intrusive structural awareness for enterprise IT: regime declaration, boundary semantics, validity context, drift detection, and calm operations.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
-<meta name="citation_title" content="Enterprise Structural Awareness — TriadicFrameworks" />
-<meta name="citation_author" content="Nawder Loswin" />
-<meta name="citation_date" content="2026-05-01" />
+<meta name="citation_title" content="Enterprise Structural Awareness — Organizational Substrate">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="enterprise structural awareness, regime declaration, boundary semantics, validity context, drift detection, configuration surfaces, policy objects, lifecycle states">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Enterprise Structural Awareness">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Provide regime declaration, boundary semantics, validity context, assumption visibility, drift detection, and calm operations for long‑lived enterprise systems — with non‑intrusive, documentation‑first adoption patterns.">
+<meta name="ai.keywords"
+      content="ESA, enterprise structural awareness, regime declaration, boundary semantics, validity context, drift detection, configuration surfaces, policy objects, lifecycle states, ESA-Regime, ESA-Boundary, ESA-Validity, ESA-Assumption, ESA-Lifecycle, ESA-Coherence">
+<meta name="ai.audience" content="enterprise architects, engineers, product teams, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="MIT">
+
+<meta name="ai.module.name" content="Enterprise Structural Awareness">
+<meta name="ai.module.summary"
+      content="Organizational substrate: 3 overview (purpose, scope and non‑goals, terminology alignment), 4 entry points (configuration surfaces, policy objects, metadata and annotations, lifecycle states), 3 minimal schema (structural awareness schema JSON, example single file YAML, schema design notes), 4 integration patterns (passive declaration, documentation‑only adoption, observability alignment, automation boundary markers), 4 enterprise examples (configuration management, identity and access, monitoring and alerting, service orchestration), 3 operational implications (change management, incident interpretation, postmortem clarity), 2 relationships (MSRM, RSM), 1 future directions. Siblings: MSRM, RSM, GSM.">
+<meta name="ai.module.category" content="organizational-substrate">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Enterprise Structural Awareness — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -282,11 +316,16 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/enterprise_structural_awareness — Session Context    -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <section id="esa-session-header"
-         data-esa="1"
+         data-rtt="esa"
          data-coherence="stable"
          data-drift="minimal"
-         data-layer="organizational-substrate">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
@@ -325,7 +364,8 @@ code {
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;border-radius:6px;font-size:13px;">
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
   🟣 Enterprise Structural Awareness<br>🏛️ Organizational Substrate Canon
 </div>
 
