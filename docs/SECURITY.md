@@ -1,4 +1,4 @@
-# Security Policy  
+## 🛡️ Security Policy  
 
 - [`SECURITY_module.json`](SECURITY_module.json) — Agentic module schema role assignments
 
