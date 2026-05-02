@@ -1,0 +1,38 @@
+{
+  "module": "Research",
+  "version": "1.0",
+  "category": "research-articles",
+  "summary": "Original research articles applying Resonance‑Time Theory across AI agentic grammar, aging substrate analysis, spectral clarity equations (Nawderian Theorem), and governance through structural grammar not policy.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "AI_Web_Agentic_Grammar_Options.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Aging_Substrate_Analysis.md",
+      "role": "diagnostic",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "Beyond_Structure_The_Equations_for_Clarity.md",
+      "role": "signature",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md",
+      "role": "engine",
+      "analyzer_layer": "regime"
+    }
+  ]
+}
