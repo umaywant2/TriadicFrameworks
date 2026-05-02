@@ -1,0 +1,108 @@
+{
+  "module": "Spectral Clarity",
+  "version": "1.0",
+  "category": "spectral-core",
+  "summary": "Six‑phase strobe ladder powering resonance measurement, validator pulses, atlases, scrolls, and cross‑scale clarity from nano to celestial. Phase I Visible/IR, Phase II RF/Chirp, Phase III UV/THz, Phase IV X‑Ray, Phase V Neutron/Quantum, Phase VI Consciousness.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "README_PhaseI.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "README_PhaseII.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "README_PhaseIII.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "README_PhaseIV.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "README_PhaseV.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "README_PhaseVI.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "atlases/PhaseI_VisibleIR_Atlas_Schema.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "atlases/PhaseII_RFChirp_Atlas_Schema.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "atlases/PhaseIII_UVTHz_Atlas_Schema.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "atlases/PhaseIV_Xray_Atlas_Schema.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "atlases/PhaseV_NeutronQuantum_Atlas_Schema.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "atlases/PhaseVI_Consciousness_Atlas_Schema.md",
+      "role": "map",
+      "analyzer_layer": "regime"
+    },
+    {
+      "path": "scrolls/SpectralClarity_PhaseI_Scroll.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "scrolls/SpectralClarity_PhaseII_Scroll.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "scrolls/SpectralClarity_PhaseIII_Scroll.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "scrolls/SpectralClarity_PhaseIV_Scroll.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "scrolls/SpectralClarity_PhaseV_Scroll.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "scrolls/SpectralClarity_PhaseVI_Scroll.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional"
+    }
+  ]
+}
