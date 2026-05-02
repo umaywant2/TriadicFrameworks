@@ -1,6 +1,6 @@
 # Emerging Tech Law
 
-[🔰 README](../README.md) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md)
+[🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
 
 ## Overview (Triadic Framing)
 
@@ -98,6 +98,6 @@ Traditional law adapts slowly. Emerging tech compresses timescales:
 
 ---
 
-**References**: See [law-references-glossary.md](../law-references-glossary.md) for sources, key treaties, and further reading.
+**References**: See [law-references-glossary.md](law-references-glossary.md) for sources, key treaties, and further reading.
 
 **Contributing**: Case studies on specific tech-regime interactions or RTT diagrams are especially valuable.
