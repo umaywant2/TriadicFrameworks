@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="language" content="en">
-<meta name="last-modified" content="2026-04-25">
+<meta name="last-modified" content="2026-05-02">
 <meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
 <!-- Identity -->
@@ -65,7 +65,8 @@
 
 <!-- Module-Specific -->
 <meta name="ai.module.name" content="Inverted Star Ontology">
-<meta name="ai.module.summary" content="A regime‑continuous, non‑singular ontology of compact objects grounded in RTT and vST.">
+<meta name="ai.module.summary"
+      content="Regime‑continuous, non‑singular ontology of compact objects: 6 core ontology files (overview, regime inversion mechanics, lattice‑phase behavior, light‑mode transitions, vST boundaries, SLRP profiles), 3 comparative and meta‑ontology files (comparative ontology surfaces, star ontology vs ISO mass regime, triadic observer for ontologies), 2 ontology flow and integration files (ontology pie flow, time‑crystal integration), and 2 figures (boundary transition, regime diagram).">
 <meta name="ai.module.category" content="ontology-core">
 
 <!-- Favicon -->
@@ -261,6 +262,10 @@ code {
       <a href="#LINEAGE">📜 Lineage</a>
       <a href="#LICENSE">📎 License</a>
       <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
     <h3>Core Ontology</h3>
       <a href="#ISO_OVERVIEW">🧭 ISO Overview</a>
       <a href="#ISO_REGIME_INVERSION">🔄 Regime Inversion</a>
@@ -295,18 +300,23 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
        <!-- RTT Canonical Signature -->
-<section id="rtt-session-header"
-         data-rtt="1"
-         data-coherence="declared"
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/inverted_star_ontology — Session Context block       -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="iso-session-header"
+         data-rtt="iso"
+         data-coherence="stable"
          data-drift="bounded"
-         data-paradox="structural">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (ontology-core)</span><br>
+    <span class="context-value">active (ontology‑core)</span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
@@ -314,7 +324,7 @@ code {
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">minimal (regime‑locked)</span><br>
+    <span class="context-value">bounded (regime‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
     <span class="context-value">stable (RTT + vST)</span><br>
@@ -338,7 +348,8 @@ code {
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
   ⭐ Regime‑Inversion Core<br>🪐 Non‑Singular Compact Object Model
 </div>
 
@@ -349,30 +360,34 @@ code {
 <script>
 
 const DOC_MAP = {
-  README: 'README.md',
-  ABOUT: '../ABOUT.md',
-  CONTRIBUTING: '../CONTRIBUTING.md',
-  GLOSSARY: '../GLOSSARY.md',
-  LINEAGE: '../LINEAGE.md',
-  LICENSE: '../LICENSE.md',
-  SITEMAP: '../sitemap.md',
-  // Core Ontology Documents
-  ISO_OVERVIEW: 'iso_overview.md',
-  ISO_REGIME_INVERSION: 'iso_regime_inversion.md',
-  ISO_LATTICE_PHASE: 'iso_lattice_phase.md',
-  ISO_LIGHT_MODE_TRANSITION: 'iso_light_mode_transition.md',
-  ISO_VST_BOUNDARY: 'iso_vst_boundary.md',
-  ISO_SLRP_PROFILE: 'iso_slrp_profile.md',
-  // Comparative & Meta‑Ontology
-  INVERTED_STAR_ONTOLOGY_COMPARATIVE: 'Inverted_Star_Ontology_A_TriadicFrameworks_Comparative_Ontology.md',
-  STAR_ONTOLOGY_VS_ISO_MASS_REGIME: 'Star_Ontology_vs_ISO_mass_regime.md',
-  TRIADIC_OBSERVER_FOR_ONTOLOGIES: 'triadic_observer_for_ontologies.md',
-  // Ontology Flow & Integration
-  ONTOLOGY_PIE_FLOW: 'ontology_pie_flow.md',
-  ONTOLOGY_PIE_TIME_CRYSTAL_INTEGRATION: 'ontology_pie_time_crystal_integration.md',
-  // Figures
-  FIGURE_ISO_BOUNDARY_TRANSITION: 'figures/iso_boundary_transition.png',
-  FIGURE_ISO_REGIME_DIAGRAM: 'figures/iso_regime_diagram.png',
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // Core Ontology Documents
+      ISO_OVERVIEW: 'iso_overview.md',
+      ISO_REGIME_INVERSION: 'iso_regime_inversion.md',
+      ISO_LATTICE_PHASE: 'iso_lattice_phase.md',
+      ISO_LIGHT_MODE_TRANSITION: 'iso_light_mode_transition.md',
+      ISO_VST_BOUNDARY: 'iso_vst_boundary.md',
+      ISO_SLRP_PROFILE: 'iso_slrp_profile.md',
+      // Comparative & Meta‑Ontology
+      INVERTED_STAR_ONTOLOGY_COMPARATIVE: 'Inverted_Star_Ontology_A_TriadicFrameworks_Comparative_Ontology.md',
+      STAR_ONTOLOGY_VS_ISO_MASS_REGIME: 'Star_Ontology_vs_ISO_mass_regime.md',
+      TRIADIC_OBSERVER_FOR_ONTOLOGIES: 'triadic_observer_for_ontologies.md',
+      // Ontology Flow & Integration
+      ONTOLOGY_PIE_FLOW: 'ontology_pie_flow.md',
+      ONTOLOGY_PIE_TIME_CRYSTAL_INTEGRATION: 'ontology_pie_time_crystal_integration.md',
+      // Figures
+      FIGURE_ISO_BOUNDARY_TRANSITION: 'figures/iso_boundary_transition.png',
+      FIGURE_ISO_REGIME_DIAGRAM: 'figures/iso_regime_diagram.png',
 };
   
 function loadFromHash() {
