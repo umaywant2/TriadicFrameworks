@@ -1,4 +1,6 @@
-# 🖼️ Gallery — Scroll Trace Collection
+# 🖼️ Gallery — Scroll Trace Collection  
+
+- [`gallery_module.json`](gallery_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
