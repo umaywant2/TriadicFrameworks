@@ -1,6 +1,6 @@
 # International & Global Law
 
-[🔰 README](../README.md) | [📘 ABOUT](../ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](../law-rtt-regime-awareness.md)
+[🔰 README](README.md) | [📘 ABOUT](ABOUT-law.md) | [⚖️ Back to Navigation](https://www.triadicframeworks.org/Law/) | [🔬 RTT Regime Awareness](law-rtt-regime-awareness.md)
 
 ## Overview (Triadic Framing)
 
@@ -93,6 +93,6 @@ In RTT terms, this is a **multi-scale coherence regime** operating across sovere
 
 ---
 
-**References**: See [law-references-glossary.md](../law-references-glossary.md) for key treaties, cases, and further reading.
+**References**: See [law-references-glossary.md](law-references-glossary.md) for key treaties, cases, and further reading.
 
 **Contributing**: Analyses of specific regime transitions or RTT diagrams for global feedback loops are welcome.
