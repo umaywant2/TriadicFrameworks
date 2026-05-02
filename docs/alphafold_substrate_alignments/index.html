@@ -2,50 +2,81 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/alphafold_substrate_alignments/index.html — <head>   -->
+<!-- Module: AlphaFold Substrate Alignments (rsm-analytics)      -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-<title>AlphaFold Substrate Alignments — TriadicFrameworks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
 <meta name="description"
-      content="AlphaFold Substrate Alignments: RSM → AlphaFold substrate mapping engine. Substrate axes, dimensional cores, folding regimes, inference mapping, validation layers, drift detection, and examples." />
+      content="AlphaFold Substrate Alignments — RSM‑to‑AlphaFold mapping engine. Substrate axes, dimensional cores, folding regimes, inference mapping, validation layers (vST), drift detection, worked examples, and appendices.">
 <meta name="keywords"
-      content="AlphaFold, substrate alignment, RSM, folding regimes, inference mapping, validation layers" />
-<meta name="author" content="Nawder Loswin" />
+      content="AlphaFold, substrate alignment, RSM, folding regimes, inference mapping, validation layers, vST, drift detection, dimensional cores, substrate axes, triadic frameworks">
 
-<!-- Canonical Identity -->
-<meta name="module" content="AlphaFold Substrate Alignments" />
-<meta name="canonical-id" content="RSM-AF" />
-<meta name="module-type" content="RTT-Analytics" />
-<meta name="version" content="1.0" />
-<meta name="status" content="canon-stable" />
-<meta name="parent" content="RTT/1" />
-<meta name="siblings" content="HSP, TEL, Substrate_Flow" />
-<meta name="canonical-path" content="/docs/alphafold_substrate_alignments/" />
-<meta name="last-updated" content="2026-05-01" />
-<meta name="license" content="MIT" />
+<link rel="canonical" href="https://www.triadicframeworks.org/alphafold_substrate_alignments/">
 
-<!-- Operators -->
-<meta name="ai-operators"
-      content="RSM-Define, RSM-Map, RSM-Validate, RSM-DetectDrift, RSM-Project" />
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
 
-<!-- Open Graph -->
-<meta property="og:title" content="AlphaFold Substrate Alignments — TriadicFrameworks" />
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="AlphaFold Substrate Alignments — RSM Mapping Engine">
+<meta property="og:url" content="https://www.triadicframeworks.org/alphafold_substrate_alignments/">
 <meta property="og:description"
-      content="RSM → AlphaFold substrate mapping engine." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.triadicframeworks.org/alphafold_substrate_alignments" />
+      content="RSM‑to‑AlphaFold mapping engine: substrate axes → dimensional cores → folding regimes → inference mapping → validation → drift detection.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="AlphaFold Substrate Alignments — TriadicFrameworks" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AlphaFold Substrate Alignments — RSM Mapping Engine">
 <meta name="twitter:description"
-      content="Substrate alignment engine." />
+      content="Substrate axes → dimensional cores → folding regimes → inference mapping → validation (vST) → drift detection.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
-<!-- Citation -->
-<meta name="citation_title" content="AlphaFold Substrate Alignments — TriadicFrameworks" />
-<meta name="citation_author" content="Nawder Loswin" />
-<meta name="citation_date" content="2026-05-01" />
+<meta name="citation_title" content="AlphaFold Substrate Alignments — RSM Mapping Engine">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="AlphaFold, substrate alignment, RSM, folding regimes, inference mapping, validation layers, drift detection, dimensional cores">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="AlphaFold Substrate Alignments">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Map RSM substrate grammar onto AlphaFold protein folding: substrate axes, dimensional cores, folding regimes, inference mapping, validation layers (vST), drift detection, worked examples (alignment walkthrough, dimensional projection), and appendices (terminology, references).">
+<meta name="ai.keywords"
+      content="AlphaFold, substrate alignment, RSM, folding regimes, inference mapping, validation, vST, drift detection, dimensional cores, RSM-Define, RSM-Map, RSM-Validate, RSM-DetectDrift, RSM-Project">
+<meta name="ai.audience" content="researchers, bioinformaticians, developers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="MIT">
+
+<meta name="ai.module.name" content="AlphaFold Substrate Alignments">
+<meta name="ai.module.summary"
+      content="RSM‑to‑AlphaFold mapping engine: scope and assumptions, substrate definition, alignment principles, folding regimes, dimensional cores, inference mapping, validation layers (vST), drift detection, 2 worked examples (alignment walkthrough, dimensional projection), 2 appendices (terminology, references).">
+<meta name="ai.module.category" content="rsm-analytics">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>AlphaFold Substrate Alignments — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -270,11 +301,16 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
-<section id="rsm-af-session-header"
-         data-rsm="1"
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/alphafold_substrate_alignments — Session Context      -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="alphafold-session-header"
+         data-rtt="alphafold"
          data-coherence="stable"
          data-drift="minimal"
-         data-layer="analytics">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
@@ -307,14 +343,15 @@ code {
     <span class="context-value">stands alone + AI‑parsable</span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">researchers + developers + AIs</span>
+    <span class="context-value">researchers + bioinformaticians + developers + AIs</span>
 
   </div>
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
-  🟣 AlphaFold Substrate Alignments<br>📘 RSM → AlphaFold Mapping Engine
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟣 AlphaFold Substrate Alignments<br>📘 RSM → AlphaFold Mapping Engine • AI‑Ready
 </div>
 
 </nav>
