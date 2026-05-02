@@ -1,67 +1,38 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "module": {
-    "name": "Triadic Echo Lattice",
-    "path": "docs/rtt/Triadic_Echo_Lattice",
-    "canon_tag": "rtt-tel",
-    "version": "1.0",
-    "layer": "RTT Analytics Core — Lattice Layer",
-    "status": "Active, Canonical",
-    "purpose": "Lattice-level RTT analytics engine: echo adjacency, lattice geometry, propagation, lineage, invariants, maps.",
-    "parent": "rtt-hsp",
-    "url": "https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice"
-  },
-
-  "session_context": {
-    "canon": "active (rtt-analytics-lattice)",
-    "modules_linked": [
-      "echo adjacency → lattice geometry → propagation → lineage → invariants → examples → maps"
-    ],
-    "drift": "minimal (lattice-locked)",
-    "coherence": "stable (echo-lattice grammar)",
-    "format": "html + markdown + diagrams + maps",
-    "front_door": "exists (TEL root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": ["students", "researchers", "developers", "AI systems"]
-  },
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D7",
-    "regime_envelope": "R0–R3",
-    "coherence_envelope": "C0–C4",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "medium"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "Harmonic Stability Profile",
-      "Echo Classifier",
-      "Substrate Flow",
-      "SARG structural grammar"
-    ],
-    "exports": [
-      "echo adjacency",
-      "lattice geometry",
-      "echo propagation",
-      "echo lineage",
-      "echo invariants",
-      "echo maps"
-    ]
-  },
-
-  "submodules": [
-    { "name": "TEL Capture", "path": "TEL_Capture.md" },
-    { "name": "TEL Geometry", "path": "TEL_Geometry.md" },
-    { "name": "TEL Propagation", "path": "TEL_Propagation.md" },
-    { "name": "TEL Lineage", "path": "TEL_Lineage.md" },
-    { "name": "TEL Examples", "path": "TEL_Examples.md" },
-    { "name": "TEL Map", "path": "TEL_Map.md" }
-  ],
-
+  "module": "Triadic Echo Lattice",
+  "version": "1.0",
+  "category": "rtt-analytics-lattice",
+  "summary": "HSP/07 lattice‑level engine — echo adjacency, lattice geometry, echo propagation rules, echo lineage tracing, lattice invariants, lattice maps, operators (TEL‑Read, TEL‑Trace, TEL‑Propagate, TEL‑Map), worked examples, and integration with Echo Classifier (06c) and Substrate Flow (08).",
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of Triadic Echo Lattice.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for TEL.", "role": "index", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "examples.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "integration.md",
+      "role": "engine",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "TEL_Capture.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting"
+    }
   ]
 }
