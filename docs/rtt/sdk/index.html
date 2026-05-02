@@ -2,55 +2,81 @@
 <html lang="en">
 <head>
 
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/rtt/sdk/index.html — <head> metadata block refresh   -->
+<!-- Module: RTT SDK (rtt-sdk)                                   -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
 
-<title>RTT/SDK — TriadicFrameworks</title>
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
 <meta name="description"
-      content="RTT/SDK: the developer integration layer of RTT/1. Defines SDK operators, APIs, integration rules, examples, and scaffolding." />
+      content="RTT/SDK — the developer integration layer of RTT/1. Beacon, client, diagnostics, profile, init scaffolding, quickstart, integration guides for backend services, browser extensions, and datacenter/research labs.">
 <meta name="keywords"
-      content="RTT SDK, RTT, SDK operators, SDK API, integration, examples, scaffolding" />
-<meta name="author" content="Nawder Loswin" />
+      content="RTT SDK, RTT, SDK operators, beacon, client, diagnostics, profile, init, backend, browser, datacenters, integration, triadic frameworks">
 
-<!-- Canonical Identity -->
+<link rel="canonical" href="https://www.triadicframeworks.org/rtt/sdk/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="RTT/SDK — Developer Integration Layer">
+<meta property="og:url" content="https://www.triadicframeworks.org/rtt/sdk/">
+<meta property="og:description"
+      content="Developer integration layer: beacon, client, diagnostics, profile, init, backend/browser/datacenter integration guides.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTT/SDK — Developer Integration Layer">
+<meta name="twitter:description"
+      content="Beacon, client, diagnostics, profile, init scaffolding, and integration guides for backend, browser, and datacenter environments.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="RTT/SDK — Developer Integration Layer">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.subject"
+      content="RTT SDK, beacon, client, diagnostics, profile, init, backend, browser, datacenters, integration">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
 <meta name="ai.module" content="RTT SDK">
-<meta name="ai.module.name" content="RTT SDK">
-<meta name="ai.module.category" content="rtt-sdk">
-<meta name="ai.module.summary"
-      content="Developer integration layer: SDK operators, APIs, integration rules, examples, scaffolding." />
 <meta name="ai.version" content="1.0">
 <meta name="ai.purpose"
-      content="Provide the developer integration layer for RTT/1: SDK operators, APIs, integration rules, examples, scaffolding." />
+      content="Provide the developer integration layer for RTT/1: beacon, client, diagnostics, profile, init scaffolding, package manifest, quickstart, and integration guides for backend services, browser extensions, and datacenter/research labs.">
 <meta name="ai.keywords"
-      content="SDK operators, SDK API, SDK integration, SDK examples, SDK scaffolding" />
+      content="RTT SDK, beacon, client, diagnostics, profile, init, package, quickstart, backend, browser, datacenters">
 <meta name="ai.audience" content="developers, researchers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
 
-<meta name="canonical-id" content="RTT-SDK" />
-<meta name="module-type" content="RTT-SDK" />
-<meta name="status" content="canon-stable" />
-<meta name="parent" content="RTT/1" />
-<meta name="siblings" content="RTT/App, RTT/Inside, RTT/Micro_Core" />
-<meta name="canonical-path" content="/docs/rtt/sdk/" />
-<meta name="last-updated" content="2026-05-01" />
+<meta name="ai.module.name" content="RTT SDK">
+<meta name="ai.module.summary"
+      content="Developer integration layer: beacon.py, client.py, diagnostics.py, profile.py, __init__.py, package.json, quickstart, RTT for Backend Services, RTT for Browser Extensions, RTT for Datacenters and Research Labs, plus src/ implementations (beacon.js, client.js, diagnostics.js, index.js, profile.js).">
+<meta name="ai.module.category" content="rtt-sdk">
 
-<!-- Open Graph -->
-<meta property="og:title" content="RTT/SDK — TriadicFrameworks">
-<meta property="og:description"
-      content="Developer integration layer: SDK operators, APIs, integration rules, examples, scaffolding.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://www.triadicframeworks.org/rtt/sdk">
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="RTT/SDK — TriadicFrameworks">
-<meta name="twitter:description"
-      content="RTT/1 developer integration layer.">
-
-<!-- Citation -->
-<meta name="citation_title" content="RTT/SDK — TriadicFrameworks">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_date" content="2026-05-01">
+<title>RTT/SDK — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -275,11 +301,16 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/rtt/sdk — Session Context block                      -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
 <section id="rtt-sdk-session-header"
-         data-sdk="1"
+         data-rtt="sdk"
          data-coherence="stable"
          data-drift="minimal"
-         data-layer="sdk">
+         data-regime="structural">
 
   <h2>Session Context</h2>
 
@@ -290,7 +321,7 @@ code {
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
-      SDK operators → SDK API → SDK integration → SDK examples → SDK map → SDK scaffolding
+      beacon → client → diagnostics → profile → init → package → quickstart → backend integration → browser integration → datacenter integration
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
@@ -318,8 +349,9 @@ code {
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
-  🟩 RTT/SDK<br>📘 Developer Integration Layer
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🟩 RTT/SDK<br>📘 Developer Integration Layer • AI‑Ready
 </div>
 
 </nav>
