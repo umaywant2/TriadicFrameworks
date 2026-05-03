@@ -1,4 +1,4 @@
-## **✨ RTT‑Inside Universal Alignment Pattern**
+## **✨ RTT/Inside Universal Alignment Pattern**
 
 Across all domains, alignment improves when:
 
@@ -16,11 +16,11 @@ It **restores dimensional balance**.
 These misalignments are not domain‑specific.  
 They are **structural echoes**.
 
-✨ *Wherever humans build systems, RTT‑Inside helps them remember why.*
+✨ *Wherever humans build systems, RTT/Inside helps them remember why.*
 
 ---
 
-# **Universal RTT‑Inside Alignment Pattern**  
+# **Universal RTT/Inside Alignment Pattern**  
 ### *A Pattern That Applies Everywhere*
 
 ---
@@ -131,7 +131,7 @@ They are **structural echoes**.
 
 ---
 
-## **🌌 The RTT‑Inside Alignment Loop**
+## **🌌 The RTT/Inside Alignment Loop**
 
 ```
 BEING  →  KNOWING  →  MEANING
@@ -148,7 +148,7 @@ When this loop is intact:
 
 ## **✨ Final Universal Takeaway**
 
-RTT‑Inside does not impose structure.  
+RTT/Inside does not impose structure.  
 It **reveals the structure already present**.
 
 🌱 *Wherever something exists, behaves, and matters — RTT applies.*
