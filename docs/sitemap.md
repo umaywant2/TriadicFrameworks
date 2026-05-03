@@ -82,6 +82,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [/dimensional_substrate_regime_scanning_protocol/](https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol/)  
 - [/arrival_substrate_model/](https://www.triadicframeworks.org/arrival_substrate_model/)
 - [/nist/](https://www.triadicframeworks.org/nist/) (MVP)
+- [/Wikipedia/](https://www.triadicframeworks.org/wikipedia/) (New!)
 
 ---
 
