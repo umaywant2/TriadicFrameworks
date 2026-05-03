@@ -1,4 +1,4 @@
-# 🌐✨ **RTT‑Inside — Shared Misalignments Across All Domains**  
+# 🌐✨ **RTT/Inside — Shared Misalignments Across All Domains**  
 ### *Patterns That Appear Everywhere*
 
 Across **Health, Education, Governance, Economy, Infrastructure, Environment, Technology, Culture, Justice, Science, Media, and Knowledge Systems**, the *same structural tensions* quietly repeat.
