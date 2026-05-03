@@ -1,5 +1,5 @@
 # **📐 TriadicFrameworks Diagram Set (One per Chapter)**  
-### *Finance Edition — RTT‑Inside Structural Diagrams*
+### *Finance Edition — RTT/Inside Structural Diagrams*
 
 Each diagram uses the same canonical RTT triad:
 
