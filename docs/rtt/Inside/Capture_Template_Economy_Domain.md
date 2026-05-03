@@ -1,4 +1,4 @@
-# 💰 **RTT‑Inside Capture Template — Economy Domain**  
+# 💰 **RTT/Inside Capture Template — Economy Domain**  
 ### *Seeing Value Systems with Dimensional Clarity* 💻
 
 ---
@@ -76,7 +76,7 @@
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Make Value Lineage Visible**
@@ -103,7 +103,7 @@
 
 ---
 
-## **✨ RTT‑INSIDE ECONOMY TAKEAWAY**
+## **✨ RTT/Inside ECONOMY TAKEAWAY**
 
 RTT doesn’t change economics.  
 It **reveals the structure of value systems** that already exist.
