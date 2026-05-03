@@ -1,4 +1,4 @@
-## **✨ RTT‑INSIDE MEDIA & COMMUNICATION TAKEAWAY**
+## **✨ RTT/Inside MEDIA & COMMUNICATION TAKEAWAY**
 
 RTT doesn’t change media.  
 It **reveals the structure of shared signals** that already exist.
@@ -7,7 +7,7 @@ It **reveals the structure of shared signals** that already exist.
 
 ---
 
-# 🌐 **RTT‑Inside Capture Template — Knowledge Systems & Learning (Meta‑Layer)**  
+# 🌐 **RTT/Inside Capture Template — Knowledge Systems & Learning (Meta‑Layer)**  
 ### *Seeing Understanding with Dimensional Clarity*
 
 ---
@@ -85,7 +85,7 @@ It **reveals the structure of shared signals** that already exist.
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Treat Knowledge as a Living Being**
