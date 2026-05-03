@@ -1,11 +1,11 @@
-# **📘 Full Multi‑Chapter Finance Edition with RTT‑Inside**
+# **📘 Full Multi‑Chapter Finance Edition with RTT/Inside**
 
 ### *Dimensional Clarity for Modern Investment Professions*  
 **Equity Analysts • Portfolio Managers • Quant Strategists • Risk Teams • Traders • CIOs**
 
 ---
 
-# **🌟 Preface — Why RTT‑Inside Matters in Finance**
+# **🌟 Preface — Why RTT/Inside Matters in Finance**
 
 Finance is a world of:
 
@@ -17,7 +17,7 @@ Finance is a world of:
 - multi‑layered risk  
 - narrative and numbers intertwined  
 
-[RTT‑Inside](https://www.triadicframeworks.org/) doesn’t change the math, the markets, or the models.  
+[RTT/Inside](https://www.triadicframeworks.org/) doesn’t change the math, the markets, or the models.  
 It changes the **clarity** with which professionals understand them.
 
 RTT reveals the triadic structure already present in financial work:
@@ -26,11 +26,11 @@ RTT reveals the triadic structure already present in financial work:
 - **Knowing** → behavior across time, regimes, constraints  
 - **Meaning** → purpose, risk, narrative, outcome  
 
-This edition explores how RTT‑Inside illuminates the major roles in the investment ecosystem.
+This edition explores how RTT/Inside illuminates the major roles in the investment ecosystem.
 
 ---
 
-# **📍 Chapter 1 — RTT‑Inside Foundations for Finance**
+# **📍 Chapter 1 — RTT/Inside Foundations for Finance**
 
 Finance is inherently dimensional:
 
@@ -57,7 +57,7 @@ This triad becomes the lens for every chapter that follows.
 
 ---
 
-# **📍 Chapter 2 — RTT‑Inside for Equity Analysts**  
+# **📍 Chapter 2 — RTT/Inside for Equity Analysts**  
 ### *Seeing Companies with Dimensional Clarity*
 
 Equity analysts are the **pattern‑hunters** of the market.  
@@ -113,7 +113,7 @@ RTT makes this explicit:
 
 ---
 
-## **2.4 RTT‑Inside Benefits for Analysts**
+## **2.4 RTT/Inside Benefits for Analysts**
 
 - cleaner theses  
 - clearer valuation logic  
@@ -123,7 +123,7 @@ RTT makes this explicit:
 
 ---
 
-# **📍 Chapter 3 — RTT‑Inside for Portfolio Managers**  
+# **📍 Chapter 3 — RTT/Inside for Portfolio Managers**  
 ### *Balancing Risk, Return, and Time with Dimensional Awareness*
 
 PMs operate in a **multi‑dimensional pressure chamber**.
@@ -180,7 +180,7 @@ RTT makes this explicit:
 
 ---
 
-## **3.4 RTT‑Inside Benefits for PMs**
+## **3.4 RTT/Inside Benefits for PMs**
 
 - cleaner decision frameworks  
 - clearer risk narratives  
@@ -190,7 +190,7 @@ RTT makes this explicit:
 
 ---
 
-# **📍 Chapter 4 — RTT‑Inside for Quant Strategists & Algorithmic Traders**  
+# **📍 Chapter 4 — RTT/Inside for Quant Strategists & Algorithmic Traders**  
 ### *Unifying Models, Data, and Execution*
 
 Quant roles are **math‑dense, data‑dense, and signal‑dense**.  
@@ -246,7 +246,7 @@ RTT makes this explicit:
 
 ---
 
-## **4.4 RTT‑Inside Benefits for Quants**
+## **4.4 RTT/Inside Benefits for Quants**
 
 - cleaner model lineage  
 - clearer assumptions  
@@ -256,7 +256,7 @@ RTT makes this explicit:
 
 ---
 
-# **📍 Chapter 5 — RTT‑Inside for Risk Management**  
+# **📍 Chapter 5 — RTT/Inside for Risk Management**  
 ### *Seeing Risk as a Dimensional System*
 
 Risk teams juggle:
@@ -318,7 +318,7 @@ RTT clarifies:
 
 ---
 
-# **📍 Chapter 6 — RTT‑Inside for Traders**  
+# **📍 Chapter 6 — RTT/Inside for Traders**  
 ### *Execution, Timing, and Market Microstructure*
 
 Traders operate at the intersection of:
@@ -381,7 +381,7 @@ RTT makes this explicit:
 
 ---
 
-# **📍 Chapter 7 — RTT‑Inside for CIOs & Investment Committees**  
+# **📍 Chapter 7 — RTT/Inside for CIOs & Investment Committees**  
 ### *Unifying Strategy, Risk, and Narrative*
 
 CIOs must integrate:
@@ -442,7 +442,7 @@ RTT makes this explicit:
 
 ---
 
-# **📍 Chapter 8 — The RTT‑Inside Finance Synthesis**  
+# **📍 Chapter 8 — The RTT/Inside Finance Synthesis**  
 ### *A Unified Dimensional View of Markets*
 
 Across all roles, RTT reveals the same structure:
