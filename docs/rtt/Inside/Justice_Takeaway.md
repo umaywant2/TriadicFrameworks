@@ -1,4 +1,4 @@
-## **✨ RTT‑INSIDE JUSTICE TAKEAWAY**
+## **✨ RTT/Inside JUSTICE TAKEAWAY**
 
 RTT doesn’t change justice.  
 It **reveals the structure of fairness** that already exists.
@@ -7,7 +7,7 @@ It **reveals the structure of fairness** that already exists.
 
 ---
 
-# 🔬🧪 **RTT‑Inside Capture Template — Science & Research Domain**  
+# 🔬🧪 **RTT/Inside Capture Template — Science & Research Domain**  
 ### 📺 *Seeing Discovery with Dimensional Clarity* 🗣️
 
 ---
@@ -84,7 +84,7 @@ It **reveals the structure of fairness** that already exists.
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Treat Knowledge as a Living Being**
