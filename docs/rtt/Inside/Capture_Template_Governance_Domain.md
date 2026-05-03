@@ -1,4 +1,4 @@
-# **RTT‑Inside Capture Template — 🏛️ Governance Domain**  
+# **RTT/Inside Capture Template — 🏛️ Governance Domain**  
 ### 💻 *Seeing Public Systems with Dimensional Clarity*
 
 ---
@@ -76,7 +76,7 @@
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Make Responsibility Explicit**
@@ -103,7 +103,7 @@
 
 ---
 
-## **✨ RTT‑INSIDE GOVERNANCE TAKEAWAY**
+## **✨ RTT/Inside GOVERNANCE TAKEAWAY**
 
 RTT doesn’t change governance.  
 It **reveals the structure of public systems** that already exist.
