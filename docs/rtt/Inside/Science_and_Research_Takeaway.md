@@ -1,4 +1,4 @@
-## **✨ RTT‑INSIDE SCIENCE & RESEARCH TAKEAWAY**
+## **✨ RTT/Inside SCIENCE & RESEARCH TAKEAWAY**
 
 RTT doesn’t change science.  
 It **reveals the structure of discovery** that already exists.
@@ -7,7 +7,7 @@ It **reveals the structure of discovery** that already exists.
 
 ---
 
-# 📺🗣️ **RTT‑Inside Capture Template — Media & Communication Domain**  
+# 📺🗣️ **RTT/Inside Capture Template — Media & Communication Domain**  
 ### 🌌 *Seeing Shared Signals with Dimensional Clarity*
 
 ---
@@ -82,7 +82,7 @@ It **reveals the structure of discovery** that already exists.
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Make Message Intent Explicit**  
