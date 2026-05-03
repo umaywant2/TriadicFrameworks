@@ -100,3 +100,16 @@ NOTES
 
 ────────────────────────────────────────────────────────────────────────────────
 ```
+
+---
+
+## 🧭 What this mockup demonstrates
+
+- **HF propagation stability** (NVIS, skip zones, solar drift)  
+- **VHF/UHF terrain‑aware coherence**  
+- **Repeater stability scoring**  
+- **Cross‑domain alignment** (ATC ↔ SAR ↔ HAM ↔ satellite)  
+- **Drift vectors** showing where signals will degrade  
+- **RTT/Inside recommendations** for best channels and movement  
+
+It’s exactly the kind of tactical map a HAM operator, SAR team, or ATC liaison could use in the field.
