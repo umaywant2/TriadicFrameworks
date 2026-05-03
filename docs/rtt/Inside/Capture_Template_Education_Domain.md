@@ -1,4 +1,4 @@
-# **RTT‑Inside Capture Template — 🎓 Education Domain**  
+# **RTT/Inside Capture Template — 🎓 Education Domain**  
 ### *Seeing Learning with Dimensional Clarity* 💻
 
 ---
@@ -75,7 +75,7 @@
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Make Learner State Visible**
@@ -102,7 +102,7 @@
 
 ---
 
-## **✨ RTT‑INSIDE EDUCATION TAKEAWAY**
+## **✨ RTT/Inside EDUCATION TAKEAWAY**
 
 RTT doesn’t change education.  
 It **reveals the structure of learning** that already exists.
