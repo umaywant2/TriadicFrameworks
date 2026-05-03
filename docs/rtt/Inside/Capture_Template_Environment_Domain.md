@@ -1,4 +1,4 @@
-# 🌍 **RTT‑Inside Capture Template — Environment Domain**  
+# 🌍 **RTT/Inside Capture Template — Environment Domain**  
 ### 💻 *Seeing Earth Systems with Dimensional Clarity*
 
 ---
@@ -74,7 +74,7 @@
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Treat Ecosystems as Living Beings**
@@ -101,7 +101,7 @@
 
 ---
 
-## **✨ RTT‑INSIDE ENVIRONMENT TAKEAWAY**
+## **✨ RTT/Inside ENVIRONMENT TAKEAWAY**
 
 RTT doesn’t change nature.  
 It **reveals the structure of living systems** that already exist.
