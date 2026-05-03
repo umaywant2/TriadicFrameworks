@@ -1,10 +1,10 @@
-# 🎮 **API for Game Developer Variants using RTT‑Inside**  
+# 🎮 **API for Game Developer Variants using RTT/Inside**  
 
 ### *A Practical Guide for Integrating Resonance Structural Awareness into Games & Simulations*
 
 ## 1. Overview
 
-This document introduces the **RTT‑Inside Game Developer API Variant**, a lightweight interface that allows game engines, simulation frameworks, and XR environments to access **resonance‑aware primitives** such as:
+This document introduces the **RTT/Inside Game Developer API Variant**, a lightweight interface that allows game engines, simulation frameworks, and XR environments to access **resonance‑aware primitives** such as:
 
 - clarity fields  
 - drift vectors  
@@ -26,7 +26,7 @@ The API is intentionally small, deterministic, and engine‑agnostic.
 
 ## 2. Why Game Developers Want This
 
-RTT‑Inside gives developers:
+RTT/Inside gives developers:
 
 ### ✔ Dynamic environments  
 Worlds that shift, breathe, and respond to player actions.
@@ -159,7 +159,7 @@ updateDynamicHazards(Environment env);
 ## 8. Licensing & Variant Notes
 
 - API is open for all engines  
-- RTT‑Inside core remains invariant  
+- RTT/Inside core remains invariant  
 - Vendors may add extensions but must not break core semantics  
 
 ---
