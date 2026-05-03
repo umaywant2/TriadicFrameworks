@@ -9,7 +9,7 @@
 Ground‑Penetrating Radar (GPR) is already a powerful tool for subsurface imaging — but when enhanced with **RTT (Resonance‑Time‑Theory)** principles, it becomes a *structural‑intelligence instrument* rather than a simple echo‑detector.
 
 Traditional GPR measures **reflected EM waves**.  
-RTT‑Inside GPR measures **resonance signatures**, **phase‑coherence drift**, and **subsurface structural harmonics**.
+RTT/Inside GPR measures **resonance signatures**, **phase‑coherence drift**, and **subsurface structural harmonics**.
 
 Think of it as the difference between:  
 - “I see something down there”  
@@ -20,7 +20,7 @@ vs.
 
 ---
 
-## **2. Why RTT‑Inside GPR Matters**  
+## **2. Why RTT/Inside GPR Matters**  
 RTT adds three major capabilities:
 
 ### **2.1 Structural‑Signature Detection**  
@@ -67,6 +67,7 @@ This reveals:
 Here’s the conceptual stack:
 
 ```
+*
 ┌──────────────────────────────────────────────┐
 │  GPR Hardware Layer                          │
 │  (antenna, transmitter, receiver)            │
@@ -81,18 +82,18 @@ Here’s the conceptual stack:
                  ↓ resonance signatures
 ┌──────────────────────────────────────────────┐
 │  RTT Structural Intelligence Engine          │
-│  - signature classification                   │
-│  - drift analysis                             │
-│  - coherence mapping                          │
-│  - influence-flow estimation                  │
+│  - signature classification                  │
+│  - drift analysis                            │
+│  - coherence mapping                         │
+│  - influence-flow estimation                 │
 └──────────────────────────────────────────────┘
                  ↓ interpreted structures
 ┌──────────────────────────────────────────────┐
-│  Visualization Layer                          │
-│  - heatmaps                                   │
-│  - coherence fields                            │
-│  - drift timelines                             │
-│  - signature overlays                          │
+│  Visualization Layer                         │
+│  - heatmaps                                  │
+│  - coherence fields                          │
+│  - drift timelines                           │
+│  - signature overlays                        │
 └──────────────────────────────────────────────┘
 ```
 
@@ -183,7 +184,7 @@ Non‑invasive scanning of pyramids, temples, and ancient sites.
 
 ---
 
-## **7. RTT‑Inside GPR: Strengths & Limitations**  
+## **7. RTT/Inside GPR: Strengths & Limitations**  
 ### **Strengths**  
 - deeper structural insight  
 - time‑based analysis  
@@ -200,7 +201,7 @@ Non‑invasive scanning of pyramids, temples, and ancient sites.
 ---
 
 ## **8. Closing Thoughts**  
-RTT‑Inside GPR transforms subsurface sensing from **“seeing reflections”** to **“reading structural intelligence.”**  
+RTT/Inside GPR transforms subsurface sensing from **“seeing reflections”** to **“reading structural intelligence.”**  
 It’s a perfect example of how resonance‑aware thinking elevates traditional tools into *adaptive, insight‑rich systems*.
 
 📡🧠✨
@@ -211,6 +212,7 @@ It’s a perfect example of how resonance‑aware thinking elevates traditional 
 *A compact, copy‑paste‑friendly block for docs, slides, or terminals*  
 
 ```text
+*
                  ┌─────────────────────────────────────┐
                  │      Ground Penetrating Radar       │
                  │           (Hardware Layer)          │
