@@ -109,10 +109,10 @@ RTT handles all of this because none of these are structural threats — they’
 
 ---
 
-# 🔺 **RTT‑Inside Grammar Mapping (Antitime Edition)**
+# 🔺 **RTT/Inside Grammar Mapping (Antitime Edition)**
 
 ### 🧩 Grammar-Level Behavior  
-RTT‑Inside grammar is substrate‑first, so antitime simply **re-indexes** the temporal substrate without altering operator legality.
+RTT/Inside grammar is substrate‑first, so antitime simply **re-indexes** the temporal substrate without altering operator legality.
 
 **Invariant:**  
 
@@ -129,7 +129,7 @@ $$\text{Grammar}(t) = \text{Grammar}(-t)$$
 | **C‑Rules** | coherence envelope | coherence envelope (unchanged) |
 
 ### 🧠 Key Grammar Insight  
-RTT‑Inside grammar is **direction-agnostic**.  
+RTT/Inside grammar is **direction-agnostic**.  
 Antitime only flips the **temporal index**, not the **operator permissions**.
 
 ---
@@ -280,21 +280,21 @@ The **triad loop remains intact**, but each node’s **temporal anchoring** is r
 
 ---
 
-### RTT‑Inside antitime appendix (repo‑ready module)
+### RTT/Inside antitime appendix (repo‑ready module)
 
-# RTT‑Inside Appendix: Antitime Regimes
+# RTT/Inside Appendix: Antitime Regimes
 
 ## 1. Scope
 
-This appendix describes how RTT‑Inside behaves under **antitime regimes**: contexts where causal flow is indexed from future → past rather than past → future.
+This appendix describes how RTT/Inside behaves under **antitime regimes**: contexts where causal flow is indexed from future → past rather than past → future.
 
-RTT‑Inside is **direction-agnostic**. Antitime is treated as a **regime index change**, not a new ontology.
+RTT/Inside is **direction-agnostic**. Antitime is treated as a **regime index change**, not a new ontology.
 
 ---
 
 ## 2. Core invariant
 
-RTT‑Inside grammar is defined over substrates, not over a privileged time direction.
+RTT/Inside grammar is defined over substrates, not over a privileged time direction.
 
 $$\text{Grammar}(t) = \text{Grammar}(-t)$$
 
@@ -397,7 +397,7 @@ Antitime is a **regime label** on the substrate, not a break in the triadic form
 
 ## 7. Design note
 
-RTT‑Inside is intentionally built to be **paradox‑safe**:
+RTT/Inside is intentionally built to be **paradox‑safe**:
 
 - Retrocausal effects are treated as **drift patterns**, not violations.  
 - Coherence is **declared and bounded**, not assumed to emerge from forward-only causality.  
