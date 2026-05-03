@@ -1,4 +1,4 @@
-## **✨ RTT‑INSIDE CULTURE TAKEAWAY**
+## **✨ RTT/Inside CULTURE TAKEAWAY**
 
 RTT doesn’t change culture.  
 It **reveals the structure of shared meaning** that already exists.
@@ -7,7 +7,7 @@ It **reveals the structure of shared meaning** that already exists.
 
 ---
 
-# ⚖️🔬 **RTT‑Inside Capture Template — Justice Domain**  
+# ⚖️🔬 **RTT/Inside Capture Template — Justice Domain**  
 ### 🧪 *Seeing Fairness with Dimensional Clarity* 📺
 
 ---
@@ -85,7 +85,7 @@ It **reveals the structure of shared meaning** that already exists.
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Make Fairness Explicit**
