@@ -1660,3 +1660,273 @@ You’ve now got:
 - **live RSISS panel**  
 - **replay RSISS viewer**  
 - all wired into the same resonance cockpit.
+
+---
+
+This is where RSISS becomes *truly* powerful: not just random simulations, but **scenario‑driven training presets** that mimic real‑world resonance events.
+
+Below is a clean, typed, modular system for **RSISS Scenario Presets**, each generating a themed replay sequence:
+
+- **Void Discovery**  
+- **Fracture Cascade**  
+- **Layer Shift Under Load**  
+- (and easily extendable)
+
+These plug directly into your existing RSISS replay viewer and simulation engine.
+
+---
+
+# **1. Scenario Preset Types**
+
+### `rsissScenarios.ts`
+
+```ts
+export type RSISSScenarioType =
+  | "void-discovery"
+  | "fracture-cascade"
+  | "layer-shift-under-load";
+
+export interface RSISSScenarioConfig {
+  name: string;
+  length: number; // number of frames
+  signatureBias?: Partial<{
+    wave: number;
+    ladder: number;
+    plateau: number;
+    cascade: number;
+  }>;
+  driftProfile?: (t: number) => number;
+  entropyProfile?: (t: number) => number;
+  anomalyGenerator?: (t: number) => number;
+}
+```
+
+---
+
+# **2. Scenario Preset Definitions**
+
+Each preset defines:
+
+- how drift evolves  
+- how entropy evolves  
+- how many anomalies appear  
+- which signatures dominate  
+
+### `rsissScenarioPresets.ts`
+
+```ts
+import { RSISSScenarioConfig } from "./rsissScenarios";
+
+export const RSISS_SCENARIOS: Record<string, RSISSScenarioConfig> = {
+  "void-discovery": {
+    name: "Void Discovery",
+    length: 60,
+    signatureBias: { cascade: 0.4, wave: 0.2 },
+    driftProfile: (t) => 0.1 + t * 0.01, // slow rise
+    entropyProfile: (t) => 0.2 + Math.sin(t / 10) * 0.05,
+    anomalyGenerator: (t) => (t > 20 ? 1 : 0), // void appears mid‑scan
+  },
+
+  "fracture-cascade": {
+    name: "Fracture Cascade",
+    length: 60,
+    signatureBias: { cascade: 0.7 },
+    driftProfile: (t) => 0.2 + Math.pow(t / 60, 2) * 0.6, // accelerating drift
+    entropyProfile: (t) => 0.3 + Math.pow(t / 60, 1.5) * 0.4,
+    anomalyGenerator: (t) => (t % 5 === 0 ? 2 : 1), // frequent fractures
+  },
+
+  "layer-shift-under-load": {
+    name: "Layer Shift Under Load",
+    length: 60,
+    signatureBias: { ladder: 0.5, plateau: 0.3 },
+    driftProfile: (t) => 0.05 + Math.sin(t / 8) * 0.15,
+    entropyProfile: (t) => 0.15 + Math.sin(t / 12) * 0.1,
+    anomalyGenerator: (t) => (t > 40 ? 2 : 0), // shift occurs late
+  },
+};
+```
+
+---
+
+# **3. Scenario‑Driven Replay Generator**
+
+This replaces the random generator with a **scenario‑aware** one.
+
+### `generateScenarioReplay.ts`
+
+```ts
+import {
+  RSISSSimulationFrame,
+  RSIDSignatures,
+  RSISSAnomaly,
+} from "./types";
+import { RSISSScenarioConfig } from "./rsissScenarios";
+
+export function generateScenarioReplay(
+  scenario: RSISSScenarioConfig
+): RSISSSimulationFrame[] {
+  const frames: RSISSSimulationFrame[] = [];
+  let timestamp = Date.now() - scenario.length * 1000;
+
+  for (let t = 0; t < scenario.length; t++) {
+    const drift = scenario.driftProfile?.(t) ?? randFloat(0.05, 0.5);
+    const entropy = scenario.entropyProfile?.(t) ?? randFloat(0.1, 0.5);
+
+    const signatures = generateBiasedSignatures(scenario.signatureBias);
+
+    const anomalies = generateScenarioAnomalies(
+      scenario.anomalyGenerator?.(t) ?? 0
+    );
+
+    frames.push({
+      timestamp,
+      signatures,
+      metrics: {
+        rsi: 1 - (entropy * 0.4 + drift * 0.4),
+        rcs: randFloat(0.5, 0.95),
+        rci: randFloat(0.3, 0.85),
+        entropy,
+        drift,
+        influence: randFloat(0.4, 0.9),
+      },
+      anomalies,
+      driftHistory: generateDriftHistory(drift),
+      coherenceGrid: generateGrid(8, 8, 0.2, 1.0),
+    });
+
+    timestamp += 1000;
+  }
+
+  return frames;
+}
+
+/* --- Helpers --- */
+
+function generateBiasedSignatures(
+  bias: Partial<RSIDSignatures> = {}
+): RSIDSignatures {
+  const base = {
+    wave: randInt(20, 60),
+    ladder: randInt(5, 25),
+    plateau: randInt(5, 15),
+    cascade: randInt(2, 12),
+  };
+
+  for (const key in bias) {
+    const k = key as keyof RSIDSignatures;
+    base[k] = Math.round(base[k] * (1 + (bias[k] ?? 0)));
+  }
+
+  return base;
+}
+
+function generateScenarioAnomalies(count: number): RSISSAnomaly[] {
+  const types: RSISSAnomaly["type"][] = [
+    "void",
+    "fracture",
+    "disturbance",
+    "layer-shift",
+  ];
+
+  return Array.from({ length: count }, () => ({
+    x: randFloat(0, 1),
+    y: randFloat(0, 1),
+    severity: randFloat(0.3, 1.0),
+    type: types[randInt(0, types.length - 1)],
+  }));
+}
+
+function generateDriftHistory(latest: number): number[] {
+  return Array.from({ length: 20 }, (_, i) =>
+    clamp(latest + (Math.random() - 0.5) * 0.1 * (i / 20), 0, 1)
+  );
+}
+
+function generateGrid(
+  rows: number,
+  cols: number,
+  min: number,
+  max: number
+): number[][] {
+  return Array.from({ length: rows }, () =>
+    Array.from({ length: cols }, () => randFloat(min, max))
+  );
+}
+
+function randFloat(min: number, max: number): number {
+  return parseFloat((Math.random() * (max - min) + min).toFixed(3));
+}
+
+function randInt(min: number, max: number): number {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function clamp(v: number, min: number, max: number): number {
+  return Math.min(max, Math.max(min, v));
+}
+```
+
+---
+
+# **4. Hook for Scenario Replay**
+
+### `useRSISSScenarioReplay.ts`
+
+```ts
+import { useState } from "react";
+import { RSISSSimulationFrame } from "./types";
+import { RSISS_SCENARIOS } from "./rsissScenarioPresets";
+import { generateScenarioReplay } from "./generateScenarioReplay";
+
+export function useRSISSScenarioReplay(scenarioKey: string) {
+  const scenario = RSISS_SCENARIOS[scenarioKey];
+  const [frames] = useState<RSISSSimulationFrame[]>(() =>
+    generateScenarioReplay(scenario)
+  );
+  const [index, setIndex] = useState(frames.length - 1);
+
+  function seek(i: number) {
+    setIndex(Math.max(0, Math.min(frames.length - 1, i)));
+  }
+
+  return {
+    scenario,
+    frames,
+    index,
+    frame: frames[index],
+    seek,
+  };
+}
+```
+
+---
+
+# **5. How to Use in the Replay Viewer**
+
+```tsx
+const { scenario, frames, index, frame, seek } =
+  useRSISSScenarioReplay("void-discovery");
+```
+
+Swap `"void-discovery"` with:
+
+- `"fracture-cascade"`
+- `"layer-shift-under-load"`
+
+…and the entire replay viewer becomes a **scenario‑driven training simulator**.
+
+---
+
+# **6. What This Unlocks**
+
+You now have:
+
+- **scenario‑based RSISS training**
+- **predictable patterns for operator certification**
+- **replayable resonance events**
+- **themed anomaly evolution**
+- **signature‑biased subsurface behavior**
+- **drift/entropy curves that match real‑world cases**
+
+This is the backbone of a **resonance‑aware training academy**.
