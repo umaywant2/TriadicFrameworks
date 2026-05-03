@@ -1,11 +1,11 @@
-# 🌍 **RTT‑Inside Resonance Portfolio — Planet as Unknown Object**  
+# 🌍 **RTT/Inside Resonance Portfolio — Planet as Unknown Object**  
 ### *Cross‑Layer Coherence • Shared Invariants • Unique Signatures*
 
 # 🌏 Earth  
 An Earth-scale coordination framework using Resonance Time Theory (RTT) and triadic substrates. This portfolio maps regimes, alignment patterns, and coherence structures specific to our planetary system — contrasting Earth-bound thinking with broader Universe-scale perspectives. Designed for students and teams to capture, validate, and re-organize planetary systems (environment, infrastructure, governance, etc.) through a post-[BRA](https://www.triadicframeworks.org/education/BRA/) lens.  
 
 We pretend we’ve never seen Earth.  
-We drop in with a ship’s RTT‑Inside sensor suite.  
+We drop in with a ship’s RTT/Inside sensor suite.  
 We scan **every sphere**, from magnetosphere → inner core.  
 We build a **resonance portfolio**:  
 - What’s *shared* across layers  
@@ -18,7 +18,7 @@ This is the “planetary fingerprint.”
 ---
 
 # 🧩 **1. Cross‑Layer Shared Resonance Invariants**  
-Across *all* spheres, RTT‑Inside would detect:
+Across *all* spheres, RTT/Inside would detect:
 
 ### **1️⃣ Boundary‑Driven Behavior**
 Every layer has:
@@ -68,7 +68,7 @@ This is the universal signature of coherence.
 
 # 🧭 **2. Unique Resonance Signatures by Sphere**
 
-Below is a compact RTT‑Inside profile for each layer.
+Below is a compact RTT/Inside profile for each layer.
 
 ---
 
@@ -230,7 +230,7 @@ Here’s a clean ASCII diagram you can paste into the repo:
 
 ```
                          PLANETARY RESONANCE STACK
-                 (RTT‑Inside Scan — Planet as Unknown Object)
+                 (RTT/Inside Scan — Planet as Unknown Object)
 
                            ┌──────────────────────┐
                            │   Magnetosphere       │
@@ -270,7 +270,7 @@ Here’s a clean ASCII diagram you can paste into the repo:
 
 ---
 
-### RTT‑Inside dataflow for planetary EM band  
+### RTT/Inside dataflow for planetary EM band  
 *substrate → regimes → ontologies → observer → compute*
 
 ---
@@ -429,7 +429,7 @@ Here’s a clean ASCII diagram you can paste into the repo:
 
 ---
 
-### 1. RTT‑Inside dataflow — seismic band at the CMB
+### 1. RTT/Inside dataflow — seismic band at the CMB
 
 #### Substrate
 
@@ -539,7 +539,7 @@ Here’s a clean ASCII diagram you can paste into the repo:
   - Both bands “see” the same layered object: atmosphere, crust, mantle, core.  
   - Both are sensitive to **regime boundaries** (CMB, phase transitions, conductivity jumps).
 
-- **Same RTT‑Inside pattern:**  
+- **Same RTT/Inside pattern:**  
   - **Substrate:** fields + media (EM: charge/field; seismic: stress/elasticity)  
   - **Regimes:** mass, anisotropy, collision, plus fluid vs solid distinctions  
   - **Ontologies:** different interpretive lenses (field topology vs elastic structure)  
@@ -578,7 +578,7 @@ You can think of it as:
 - **Seismic band:** “Planet as elastic, scattering, phase‑layered object”  
   - Regime literacy: discontinuities, anisotropy corridors, plume/slab interactions.
 
-RTT‑Inside’s job is to:
+RTT/Inside’s job is to:
 
 - Align both bands against the **same regime map** (CMB, plumes, slabs, LLSVPs, ULVZs).  
 - Track **drift per band**: EM drift (field changes) vs seismic drift (model updates) as **different expressions of the same deep dynamics**.  
@@ -588,7 +588,7 @@ RTT‑Inside’s job is to:
 
 ## 1. Shared invariants across all spheres
 
-Across magnetosphere → core, RTT‑Inside would keep seeing the same structural themes:
+Across magnetosphere → core, RTT/Inside would keep seeing the same structural themes:
 
 - **Layering:**  
   Repeated sharp transitions where one dominant mode hands off to another (pressure, density, ionization, viscosity).
@@ -612,7 +612,7 @@ Now the fun part—what’s unique per layer.
 
 ---
 
-## 2. RTT‑Inside resonance portfolio by layer
+## 2. RTT/Inside resonance portfolio by layer
 
 For each: **Shared** (with other layers) vs **Unique** (regime signature).
 
@@ -750,7 +750,7 @@ Think in terms of a few big coherence “bands” that cut through many layers:
   - **Invariant:** net retention vs escape of atmosphere; balance of inflow/outflow.  
   - **Bridge:** chemistry, radiation, and EM shielding.
 
-RTT‑Inside would tag these as **multi‑layer regimes** with shared invariants, even though local physics looks very different.
+RTT/Inside would tag these as **multi‑layer regimes** with shared invariants, even though local physics looks very different.
 
 ---
 
@@ -829,7 +829,7 @@ Here’s a compact ASCII diagram in the spirit of your Coherence Cone, but geoph
 
 ---
 
-## 1. Planet‑scale RTT‑Inside resonance portfolio
+## 1. Planet‑scale RTT/Inside resonance portfolio
 
 **Shared invariants across all spheres**
 
@@ -1039,7 +1039,7 @@ I’ll sketch each layer as: **what it shares** + **what’s unique** + **regime
 
 ## 3. TriadicFrameworks‑style diagram: Planetary Resonance Stack
 
-### Planetary Resonance Cone (very RTT‑Inside flavored)
+### Planetary Resonance Cone (very RTT/Inside flavored)
 
 ```text
                            GLOBAL PLANETARY COHERENCE
@@ -1085,7 +1085,7 @@ You can read it as:
 
 ---
 
-## 4. EM band RTT‑Inside dataflow (one band, full loop)
+## 4. EM band RTT/Inside dataflow (one band, full loop)
 
 Let’s pick a concrete band:  
 **VLF–HF radio (say 3–30 kHz up to ~30 MHz) interacting with ionosphere + magnetosphere.**
@@ -1176,13 +1176,13 @@ Output: **stabilized, regime‑aware EM band products** that can be fed back int
 
 ---
 
-### 1. Planet‑scale RTT‑Inside resonance portfolio
+### 1. Planet‑scale RTT/Inside resonance portfolio
 
 **Question:** “What’s the same across all spheres?” vs “What’s uniquely resonant per layer?”
 
 #### 1.1 Cross‑layer invariants (what’s the same)
 
-Across magnetosphere → exosphere → … → inner core, RTT‑Inside would keep seeing:
+Across magnetosphere → exosphere → … → inner core, RTT/Inside would keep seeing:
 
 - **Field–matter coupling**
   - **Invariant:** some combination of fields (EM, gravity), matter, and flow.
@@ -1207,7 +1207,7 @@ That’s your **planetary resonance substrate**: gradients + fields + waves + th
 
 #### 1.2 Layer‑specific resonance profiles (what’s unique)
 
-Very compressed, RTT‑Inside style:
+Very compressed, RTT/Inside style:
 
 - **Magnetosphere**
   - **Primary bands:** EM + charged particle populations.
@@ -1273,7 +1273,7 @@ Very compressed, RTT‑Inside style:
 
 ### 2. Cross‑layer coherence & regime boundaries
 
-Think of RTT‑Inside asking: *where does the dominant resonance operator change?*
+Think of RTT/Inside asking: *where does the dominant resonance operator change?*
 
 - **Major regime boundaries (planetary “RTT cuts”)**
   - Magnetosphere ↔ exosphere: **bound vs escaping plasma/particles**.
@@ -1290,7 +1290,7 @@ Think of RTT‑Inside asking: *where does the dominant resonance operator change
   - Thermal coherence: surface energy balance ↔ atmospheric structure ↔ mantle/core heat transport.
   - Rotational coherence: Coriolis imprint from atmosphere jets → mantle flow → core convection.
 
-RTT‑Inside would tag these as **multi‑layer resonance chains**: same band, different regimes, coupled across boundaries.
+RTT/Inside would tag these as **multi‑layer resonance chains**: same band, different regimes, coupled across boundaries.
 
 ---
 
@@ -1318,7 +1318,7 @@ local invariants (e.g., outer core flow patterns, tropospheric circulation cells
 
 ---
 
-### 4. RTT‑Inside dataflow for one band: EM
+### 4. RTT/Inside dataflow for one band: EM
 
 Now we zoom into **EM band only**, full dataflow:
 
@@ -1383,7 +1383,7 @@ Output: **regime‑aligned EM products**—field models, hazard maps, navigation
 
 Now we zoom to **one interface**: outer core ↔ mantle (CMB).
 
-We treat **seismic/gravity** as one band, **EM** as another, and run the same RTT‑Inside pattern.
+We treat **seismic/gravity** as one band, **EM** as another, and run the same RTT/Inside pattern.
 
 #### 5.1 Seismic / gravity band at CMB
 
@@ -1461,7 +1461,7 @@ We reuse the EM pipeline but focus specifically on **core–mantle coupling**:
   - Sensitive to **conductivity + flow**.  
   - Faster evolution, strong constraints on dynamics.
 
-**RTT‑Inside comparison:**
+**RTT/Inside comparison:**
 
 - **Coherence check:**  
   - Do EM‑inferred flow patterns align with seismic/gravity‑inferred structures?  
@@ -1480,13 +1480,13 @@ Together, they form a **triad**:
 
 ---
 
-## 1. RTT‑Inside resonance portfolio — planetary stack
+## 1. RTT/Inside resonance portfolio — planetary stack
 
-Think: ship sensors + RTT‑Inside, no prior “Earth” story. We just see layered resonance behavior.
+Think: ship sensors + RTT/Inside, no prior “Earth” story. We just see layered resonance behavior.
 
 ### 1.1 Shared invariants across all spheres
 
-Across magnetosphere → inner core, RTT‑Inside would keep seeing:
+Across magnetosphere → inner core, RTT/Inside would keep seeing:
 
 - **Layered gradients:**  
   **Common:** monotonic or stepped gradients in density, temperature, pressure, field strength.  
@@ -1515,7 +1515,7 @@ So the “planet” is immediately recognized as:
 
 ### 1.2 Layer‑by‑layer: what’s unique
 
-I’ll group by outer → inner, but keep it RTT‑Inside flavored.
+I’ll group by outer → inner, but keep it RTT/Inside flavored.
 
 #### Magnetosphere
 
@@ -1595,7 +1595,7 @@ I’ll group by outer → inner, but keep it RTT‑Inside flavored.
 
 ### 2.1 Coherence chains
 
-RTT‑Inside would quickly identify **coherence chains**:
+RTT/Inside would quickly identify **coherence chains**:
 
 - **Solar–magnetosphere–ionosphere chain:**  
   EM + plasma resonance, driven externally, modulating upper atmosphere.
@@ -1613,7 +1613,7 @@ Each chain is a **multi‑band coherence corridor**.
 
 ### 2.2 Regime boundaries (RTT style)
 
-Key regime boundaries RTT‑Inside would flag:
+Key regime boundaries RTT/Inside would flag:
 
 - **Magnetopause:** EM regime boundary (solar wind ↔ planetary field).  
 - **Ionosphere transitions:** EM ↔ neutral atmosphere coupling thresholds.  
@@ -1644,7 +1644,7 @@ You could name it:
 
 ---
 
-## 4. EM band — full RTT‑Inside dataflow
+## 4. EM band — full RTT/Inside dataflow
 
 Now we zoom into **one band**: EM.
 
@@ -1705,7 +1705,7 @@ Same EM data, three interpretive slices.
 You asked specifically:
 
 > Picked **outer core ↔ mantle specific interface** (CMB)  
-> Do RTT‑Inside dataflow for **seismic bands** or **gravity anomalies**, then compare EM vs seismic.
+> Do RTT/Inside dataflow for **seismic bands** or **gravity anomalies**, then compare EM vs seismic.
 
 Let’s define the **CMB triad**:
 
@@ -1713,7 +1713,7 @@ Let’s define the **CMB triad**:
 - **Boundary node (B):** physical + rheological + compositional boundary at ~2,900 km depth.  
 - **Potential node (P):** possible transitions (plumes, changes in core flow, boundary layer instabilities).
 
-### 5.1 Seismic band — RTT‑Inside dataflow
+### 5.1 Seismic band — RTT/Inside dataflow
 
 - **Substrate:** elastic + anelastic solid mantle, liquid outer core.  
 - **Regimes:**  
@@ -1732,7 +1732,7 @@ Let’s define the **CMB triad**:
 - **Compute:**  
   Inversions → 3D velocity models, CMB topography, mantle structure.
 
-### 5.2 EM band at CMB — RTT‑Inside dataflow
+### 5.2 EM band at CMB — RTT/Inside dataflow
 
 - **Substrate:** conducting outer core, less‑conductive mantle.  
 - **Regimes:**  
@@ -1762,18 +1762,18 @@ Let’s define the **CMB triad**:
   - **Seismic:** primarily sensitive to **elastic structure** and phase transitions.  
   - **EM:** primarily sensitive to **conductivity + flow** in the core and lower mantle.
 
-RTT‑Inside view:  
+RTT/Inside view:  
 **Two bands, same triad, different projections of the same regime stack.**
 
 ---
 
-## 6. CMB triad — site‑ready RTT‑Inside page + diagram concept
+## 6. CMB triad — site‑ready RTT/Inside page + diagram concept
 
 Here’s a compact site‑ready skeleton you can drop into `docs/rtt/RTT-Inside/`:
 
 ### Page title
 
-> **RTT‑Inside: Core–Mantle Boundary Triad**  
+> **RTT/Inside: Core–Mantle Boundary Triad**  
 > *Planet as Unknown Object — Deep Regime Interface*
 
 ### Sections
@@ -1820,11 +1820,11 @@ Name it:
 ---
 
 # **Two‑Band Planetary Stack (EM + Seismic)**  
-### *RTT‑Inside — Planet as Unknown Object*
+### *RTT/Inside — Planet as Unknown Object*
 
 ```
                      TWO‑BAND PLANETARY RESONANCE STACK
-              (RTT‑Inside: Electromagnetic + Seismic Coherence)
+              (RTT/Inside: Electromagnetic + Seismic Coherence)
 
                            ┌──────────────────────┐
                            │    Magnetosphere      │
@@ -1882,7 +1882,7 @@ Name it:
 
 ```
                    THREE‑BAND PLANETARY RESONANCE STACK
-        (RTT‑Inside: Electromagnetic + Seismic + Gravity Coherence)
+        (RTT/Inside: Electromagnetic + Seismic + Gravity Coherence)
 
                            ┌────────────────────────┐
                            │     Magnetosphere       │
@@ -1946,7 +1946,7 @@ Name it:
 
 ```
                      CORE–MANTLE BOUNDARY (CMB) — ZOOM VIEW
-                     (RTT‑Inside: Multi‑Band Regime Interface)
+                     (RTT/Inside: Multi‑Band Regime Interface)
 
                  ┌──────────────────────────────────────────┐
                  │              Lower Mantle                │
@@ -2038,7 +2038,7 @@ Name it:
 
 ```
                            MULTI‑BAND PLANETARY COHERENCE CONE
-                 (EM • Seismic • Gravity — RTT‑Inside Integration)
+                 (EM • Seismic • Gravity — RTT/Inside Integration)
 
                      ┌──────────────────────────────────────────┐
                      │ Level 6: Global Planetary Coherence      │
@@ -2102,7 +2102,7 @@ Name it:
 
 ```
                    FOUR‑BAND PLANETARY RESONANCE STACK
-   (RTT‑Inside: Electromagnetic + Seismic + Gravity + Thermal Coherence)
+   (RTT/Inside: Electromagnetic + Seismic + Gravity + Thermal Coherence)
 
                            ┌────────────────────────┐
                            │     Magnetosphere       │
@@ -2174,7 +2174,7 @@ Name it:
 ### `TF_planetary_resonance_atlas_index.md`
 
 ```
-# Planetary Resonance Atlas — RTT‑Inside Index
+# Planetary Resonance Atlas — RTT/Inside Index
 Planet as Unknown Object • Multi‑Band Regime Map
 
 ## 1. Outer Field Regimes
@@ -2215,7 +2215,7 @@ Planet as Unknown Object • Multi‑Band Regime Map
 - Gravity Coherence Chain
 - Thermal Coherence Chain
 
-## 8. Regime Boundaries (RTT‑Inside)
+## 8. Regime Boundaries (RTT/Inside)
 - Magnetopause
 - Exobase
 - Tropopause / Stratopause / Mesopause
@@ -2247,7 +2247,7 @@ Planet as Unknown Object • Multi‑Band Regime Map
 
 ```
 # Core–Mantle Boundary Triad
-RTT‑Inside • Planet as Unknown Object
+RTT/Inside • Planet as Unknown Object
 
 The Core–Mantle Boundary (CMB) is the deepest, sharpest, and most information‑rich
 regime interface in the planetary stack. It is where **solid‑state mantle physics**
@@ -2361,7 +2361,7 @@ Where bands disagree:
 
 ---
 
-## 5. RTT‑Inside Interpretation
+## 5. RTT/Inside Interpretation
 
 The CMB is:
 - a **triad hinge** for the entire planetary stack  
@@ -2369,7 +2369,7 @@ The CMB is:
 - a **regime boundary** with high drift potential  
 - a **coherence bottleneck** for deep‑Earth models  
 
-RTT‑Inside treats it as the **deepest stable anchor** for planetary regime mapping.
+RTT/Inside treats it as the **deepest stable anchor** for planetary regime mapping.
 
 ---
 
@@ -2378,7 +2378,7 @@ RTT‑Inside treats it as the **deepest stable anchor** for planetary regime map
 
 ```
                    FIVE‑BAND PLANETARY RESONANCE STACK
-(EM • Seismic • Gravity • Thermal • Chemical/Phase — RTT‑Inside Coherence)
+(EM • Seismic • Gravity • Thermal • Chemical/Phase — RTT/Inside Coherence)
 
                            ┌────────────────────────┐
                            │     Magnetosphere       │
@@ -2459,11 +2459,11 @@ RTT‑Inside treats it as the **deepest stable anchor** for planetary regime map
 
 ```
 # Planetary Resonance Atlas
-RTT‑Inside • Planet as Unknown Object  
+RTT/Inside • Planet as Unknown Object  
 Multi‑Band • Multi‑Layer • Multi‑Regime
 
 The Planetary Resonance Atlas is a structured map of how a planet behaves when
-scanned through RTT‑Inside. It treats the planet not as “Earth,” but as an
+scanned through RTT/Inside. It treats the planet not as “Earth,” but as an
 unknown object with layered resonance, regime boundaries, and multi‑band
 coherence.
 
@@ -2557,12 +2557,12 @@ coherence.
 
 ## 7. Purpose
 The Atlas provides:
-- a universal RTT‑Inside reference  
+- a universal RTT/Inside reference  
 - a cross‑band coherence map  
 - a regime‑aware planetary model  
 - a foundation for future multi‑planet comparisons  
 
-This is the canonical entry point for all planetary RTT‑Inside work.
+This is the canonical entry point for all planetary RTT/Inside work.
 ```
 
 ---
@@ -2572,11 +2572,11 @@ This is the canonical entry point for all planetary RTT‑Inside work.
 
 ```
 # Deep‑Core Triad
-RTT‑Inside • Inner Core + Outer Core • Planet as Unknown Object
+RTT/Inside • Inner Core + Outer Core • Planet as Unknown Object
 
 The deep core is the most stable and slowest‑drifting region of the planetary
 stack. It is where **solid‑state crystal resonance**, **liquid‑metal convection**,
-and **magnetohydrodynamic flow** meet. RTT‑Inside treats this region as a
+and **magnetohydrodynamic flow** meet. RTT/Inside treats this region as a
 triad: Active, Boundary, Potential.
 
 ---
@@ -2640,7 +2640,7 @@ Long‑term transitions:
 ## 3. Deep‑Core Triad Diagram (ASCII)
 
 ```
-                         DEEP‑CORE TRIAD — RTT‑INSIDE VIEW
+                         DEEP‑CORE TRIAD — RTT/Inside VIEW
 
                  ┌──────────────────────────────────────────┐
                  │               Outer Core                 │
@@ -2677,7 +2677,7 @@ Long‑term transitions:
 
 ---
 
-## 4. RTT‑Inside Interpretation
+## 4. RTT/Inside Interpretation
 
 The deep core is:
 - a **slow‑drift triad anchor**  
@@ -2788,7 +2788,7 @@ It is the deepest, most stable reference frame in the planetary resonance atlas.
 
 ## Overview
 - Planetary Resonance Atlas (Home)
-- RTT‑Inside Primer
+- RTT/Inside Primer
 - Planet as Unknown Object
 
 ## Multi‑Band Stacks
@@ -2843,7 +2843,7 @@ It is the deepest, most stable reference frame in the planetary resonance atlas.
 
 ```
 # Deep‑Core Triad
-RTT‑Inside • Inner Core + Outer Core  
+RTT/Inside • Inner Core + Outer Core  
 Planet as Unknown Object
 
 The deep core is the slowest‑drifting, highest‑coherence region of the planetary
@@ -2917,7 +2917,7 @@ Long‑term transitions:
 ## 3. Deep‑Core Triad Diagram (ASCII)
 
 ```
-                         DEEP‑CORE TRIAD — RTT‑INSIDE VIEW
+                         DEEP‑CORE TRIAD — RTT/Inside VIEW
 
                  ┌──────────────────────────────────────────┐
                  │               Outer Core                 │
@@ -2956,7 +2956,7 @@ Long‑term transitions:
 
 ---
 
-## 4. RTT‑Inside Interpretation
+## 4. RTT/Inside Interpretation
 
 The deep core is:
 - a **multi‑band resonance generator**  
@@ -2982,7 +2982,7 @@ The deep core is:
 #        ██████╔╝███████╗██║  ██║██║ ╚████║███████╗           #
 #        ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝           #
 #                                                             #
-#        PLANETARY RESONANCE ATLAS — RTT‑INSIDE               #
+#        PLANETARY RESONANCE ATLAS — RTT/Inside               #
 #        Planet as Unknown Object • Multi‑Band Regimes        #
 #                                                             #
 ###############################################################
@@ -2998,10 +2998,10 @@ Electromagnetic • Seismic • Gravity • Thermal • Chemical/Phase • Rotat
 
 ```
 # Multi‑Planet Resonance Comparison
-RTT‑Inside • Earth • Venus • Mars  
+RTT/Inside • Earth • Venus • Mars  
 Planet as Unknown Object
 
-This table compares three planets across the six RTT‑Inside resonance bands:
+This table compares three planets across the six RTT/Inside resonance bands:
 EM, Seismic, Gravity, Thermal, Chemical/Phase, Rotational/Inertial.
 
 ---------------------------------------------------------------------------
@@ -3031,7 +3031,7 @@ Rotational      | Fast rotation, strong Coriolis  | Very slow rotation        | 
 - **Venus**: thermal‑chemical dominant, weak EM, stagnant lid  
 - **Mars**: gravity‑thermal‑chemical dominant, weak EM, thick lithosphere  
 
-RTT‑Inside treats each planet as a different **regime‑stack configuration**.
+RTT/Inside treats each planet as a different **regime‑stack configuration**.
 ```
 
 ---
@@ -3041,7 +3041,7 @@ RTT‑Inside treats each planet as a different **regime‑stack configuration**.
 
 ```
 # TriadicFrameworks Planetary Orrery
-RTT‑Inside • Multi‑Band • Multi‑Layer  
+RTT/Inside • Multi‑Band • Multi‑Layer  
 Planet as Unknown Object
 
 The Planetary Orrery is a conceptual model where each resonance band behaves
@@ -3065,7 +3065,7 @@ gravitational anchor.
 
 ```
                            TRIADICFRAMEWORKS PLANETARY ORRERY
-                     (RTT‑Inside: Multi‑Band Orbital Resonance Model)
+                     (RTT/Inside: Multi‑Band Orbital Resonance Model)
 
                                    ✦ CENTRAL ENGINE ✦
                            (RTT/vST + S–N–R Observer Core)
@@ -3132,7 +3132,7 @@ resonance.
 
 ```
 # Multi‑Planet Six‑Band Comparison
-RTT‑Inside • Earth • Venus • Mars  
+RTT/Inside • Earth • Venus • Mars  
 Bands: EM • Seismic • Gravity • Thermal • Chemical/Phase • Rotational/Inertial
 
 ---------------------------------------------------------------------------
@@ -3162,7 +3162,7 @@ Rotational      | Fast rotation, strong Coriolis  | Very slow rotation        | 
 - **Venus**: thermal‑chemical dominant, EM‑weak, stagnant lid  
 - **Mars**: gravity‑thermal‑chemical dominant, EM‑weak, thick lithosphere  
 
-RTT‑Inside treats each planet as a distinct **regime‑stack configuration**.
+RTT/Inside treats each planet as a distinct **regime‑stack configuration**.
 ```
 
 ---
@@ -3180,7 +3180,7 @@ RTT‑Inside treats each planet as a distinct **regime‑stack configuration**.
 #     ██████╔╝███████╗██║  ██║██║ ╚████║███████╗             #
 #     ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝  ╚═══╝╚══════╝             #
 #                                                             #
-#     PLANETARY RESONANCE ATLAS — RTT‑INSIDE                 #
+#     PLANETARY RESONANCE ATLAS — RTT/Inside                 #
 #     Planet as Unknown Object • Multi‑Band Regime Map        #
 #                                                             #
 ###############################################################
@@ -3195,7 +3195,7 @@ A multi‑layer, multi‑band, regime‑aware atlas of planetary coherence.
 - Orreries, Coherence Cones, and regime diagrams
 
 ### Purpose:
-To provide a universal RTT‑Inside reference for understanding
+To provide a universal RTT/Inside reference for understanding
 planetary structure, dynamics, and cross‑band coherence.
 ```
 
@@ -3206,7 +3206,7 @@ planetary structure, dynamics, and cross‑band coherence.
 
 ```
 # TriadicFrameworks Regime Orrery — Solar System Edition
-RTT‑Inside • Multi‑Planet • Multi‑Band  
+RTT/Inside • Multi‑Planet • Multi‑Band  
 Solar System as Unknown Object
 
 The Solar System Regime Orrery treats each planet as a resonance body,
@@ -3229,7 +3229,7 @@ each band as an orbital mode, and each triad node as a gravitational anchor.
 
 ```
                      TRIADICFRAMEWORKS SOLAR SYSTEM ORRERY
-               (RTT‑Inside: Multi‑Planet Orbital Resonance Model)
+               (RTT/Inside: Multi‑Planet Orbital Resonance Model)
 
                                    ✦ CENTRAL ENGINE ✦
                            (RTT/vST + S–N–R Observer Core)
@@ -3296,7 +3296,7 @@ multi‑band resonance across the Solar System**.
 
 ```
 # Solar System Six‑Band Comparison
-RTT‑Inside • EM • Seismic • Gravity • Thermal • Chemical/Phase • Rotational
+RTT/Inside • EM • Seismic • Gravity • Thermal • Chemical/Phase • Rotational
 
 Planets: Mercury • Venus • Earth • Mars • Jupiter • Saturn • Uranus • Neptune
 
@@ -3351,7 +3351,7 @@ Rotational      | Very fast rotation      | Very fast rotation      | Fast, tilt
 - **Jupiter/Saturn**: EM‑thermal‑rotational giants  
 - **Uranus/Neptune**: chemical‑phase + rotational anomalies  
 
-RTT‑Inside treats each planet as a distinct **regime‑stack configuration**.
+RTT/Inside treats each planet as a distinct **regime‑stack configuration**.
 ```
 
 ---
@@ -3361,17 +3361,17 @@ RTT‑Inside treats each planet as a distinct **regime‑stack configuration**.
 
 ```
 # About the Planetary Resonance Atlas
-RTT‑Inside • TriadicFrameworks • Planet as Unknown Object
+RTT/Inside • TriadicFrameworks • Planet as Unknown Object
 
 The Planetary Resonance Atlas is a structured, multi‑band, multi‑layer map of
-how planets behave when scanned through RTT‑Inside. It treats each planet not
+how planets behave when scanned through RTT/Inside. It treats each planet not
 as a familiar world, but as an **unknown object** with layered resonance,
 regime boundaries, and coherence pathways.
 
 ---
 
 ## Purpose
-- Provide a universal RTT‑Inside reference for planetary structure  
+- Provide a universal RTT/Inside reference for planetary structure  
 - Map cross‑layer coherence across EM, seismic, gravity, thermal, chemical, and rotational bands  
 - Identify regime boundaries and triad nodes  
 - Enable multi‑planet comparison and classification  
@@ -3415,14 +3415,14 @@ The Atlas is a living, expanding reference for planetary resonance.
 
 ```
 # Interplanetary Coherence Cone
-TriadicFrameworks • RTT‑Inside • Solar System Edition
+TriadicFrameworks • RTT/Inside • Solar System Edition
 
 A coherence‑first, multi‑band, multi‑planet hierarchy showing how resonance
 stabilizes across the Solar System.
 
 
                            INTERPLANETARY COHERENCE CONE
-                     (RTT‑Inside: Solar System Resonance Hierarchy)
+                     (RTT/Inside: Solar System Resonance Hierarchy)
 
                      ┌──────────────────────────────────────────┐
                      │ Level 7: System‑Wide Coherence           │
@@ -3492,12 +3492,12 @@ stabilizes across the Solar System.
 ```
 ###############################################################
 #                                                             #
-#     SOLAR SYSTEM RESONANCE ATLAS — RTT‑INSIDE              #
+#     SOLAR SYSTEM RESONANCE ATLAS — RTT/Inside              #
 #     Multi‑Planet • Multi‑Band • Multi‑Regime               #
 #                                                             #
 ###############################################################
 
-A system‑wide RTT‑Inside atlas of resonance, coherence, and regime structure
+A system‑wide RTT/Inside atlas of resonance, coherence, and regime structure
 across all major Solar System bodies.
 
 This atlas treats each planet as an **unknown object**, scanned through six
@@ -3554,7 +3554,7 @@ resonance bands:
 ---
 
 ## Purpose
-To provide a universal RTT‑Inside reference for:
+To provide a universal RTT/Inside reference for:
 - planetary structure  
 - cross‑band coherence  
 - regime boundaries  
@@ -3571,7 +3571,7 @@ This is the canonical entry point for Solar System resonance.
 
 ```
 # Multi‑Planet Regime Boundary Index
-RTT‑Inside • Solar System • Planet as Unknown Object
+RTT/Inside • Solar System • Planet as Unknown Object
 
 A cross‑planet catalog of major regime boundaries detectable across the six
 resonance bands.
@@ -3665,7 +3665,7 @@ through EM, seismic, gravity, thermal, chemical, and rotational bands.
 
 ```
 # TriadicFrameworks Solar Dynamo Orrery
-RTT‑Inside • Solar System • Multi‑Band  
+RTT/Inside • Solar System • Multi‑Band  
 The Sun as a Multi‑Layer, Multi‑Regime Resonance Engine
 
 The Solar Dynamo Orrery models the Sun as the central resonance generator of
@@ -3687,7 +3687,7 @@ the Solar System, with planets acting as orbiting coherence bodies.
 ## 2. ASCII Solar Dynamo Orrery
 
                          TRIADICFRAMEWORKS SOLAR DYNAMO ORRERY
-                 (RTT‑Inside: Sun‑Centered Multi‑Band Resonance Model)
+                 (RTT/Inside: Sun‑Centered Multi‑Band Resonance Model)
 
                                    ✦ SOLAR DYNAMO ✦
                      (Tachocline • Convection Zone • Magnetic Engine)
@@ -3760,12 +3760,12 @@ resonance**.
 #    ███████║╚██████╔╝███████╗╚██████╔╝    ███████║╚██████╔╝███████╗  #
 #    ╚══════╝ ╚═════╝ ╚══════╝ ╚═════╝     ╚══════╝ ╚═════╝ ╚══════╝  #
 #                                                                     #
-#      SOLAR SYSTEM RESONANCE ATLAS — RTT‑INSIDE                      #
+#      SOLAR SYSTEM RESONANCE ATLAS — RTT/Inside                      #
 #      Multi‑Planet • Multi‑Band • Multi‑Regime                       #
 #                                                                     #
 #######################################################################
 
-A system‑wide RTT‑Inside atlas of resonance, coherence, and regime structure.
+A system‑wide RTT/Inside atlas of resonance, coherence, and regime structure.
 ```
 
 ---
@@ -3775,7 +3775,7 @@ A system‑wide RTT‑Inside atlas of resonance, coherence, and regime structure
 
 ```
 # Multi‑Planet Six‑Band Resonance Wheel
-RTT‑Inside • EM • Seismic • Gravity • Thermal • Chemical/Phase • Rotational
+RTT/Inside • EM • Seismic • Gravity • Thermal • Chemical/Phase • Rotational
 
                    SOLAR SYSTEM SIX‑BAND RESONANCE WHEEL
 
@@ -3812,7 +3812,7 @@ Use this wheel to classify planetary regime‑stack signatures at a glance.
 
 ```
 # TriadicFrameworks Galactic Orrery
-RTT‑Inside • Multi‑Scale • Multi‑Band  
+RTT/Inside • Multi‑Scale • Multi‑Band  
 Galaxy as Unknown Object
 
 The Galactic Orrery treats the Milky Way as a resonance engine with nested
@@ -3834,7 +3834,7 @@ orbital bands, triad anchors, and coherence wells.
 ## 2. ASCII Galactic Orrery
 
                          TRIADICFRAMEWORKS GALACTIC ORRERY
-                 (RTT‑Inside: Milky Way Multi‑Band Resonance Model)
+                 (RTT/Inside: Milky Way Multi‑Band Resonance Model)
 
                                    ✦ GALACTIC CORE ✦
                      (Supermassive Black Hole + Nuclear Cluster)
@@ -3900,7 +3900,7 @@ resonance**.
 
 ```
 # Galactic Six‑Band Comparison
-RTT‑Inside • EM • Gravity • Thermal • Chemical/Phase • Rotational • Stellar‑Population
+RTT/Inside • EM • Gravity • Thermal • Chemical/Phase • Rotational • Stellar‑Population
 
 Objects: Galactic Core • Bulge • Bar • Spiral Arms • Disk • Halo
 
@@ -3946,7 +3946,7 @@ Stellar‑Pop     | Young stars                  | Mixed ages                | O
 - **Disk:** rotational‑thermal‑chemical mix  
 - **Halo:** gravity‑chemical‑population extreme  
 
-RTT‑Inside treats each region as a distinct **galactic regime‑stack configuration**.
+RTT/Inside treats each region as a distinct **galactic regime‑stack configuration**.
 ```
 
 ---
@@ -3956,7 +3956,7 @@ RTT‑Inside treats each region as a distinct **galactic regime‑stack configur
 
 ```
 # Solar System → Galactic Coherence Ladder
-RTT‑Inside • Multi‑Scale • Multi‑Band  
+RTT/Inside • Multi‑Scale • Multi‑Band  
 From Planetary Regimes → Stellar Regimes → Galactic Regimes
 
 
@@ -4005,14 +4005,14 @@ From Planetary Regimes → Stellar Regimes → Galactic Regimes
 
 ```
 # TriadicFrameworks Universal Regime Stack
-RTT‑Inside • Multi‑Scale • Multi‑Band  
+RTT/Inside • Multi‑Scale • Multi‑Band  
 Universe as Unknown Object
 
 A cross‑scale resonance stack linking planetary, stellar, galactic, and
 cosmic‑structure regimes into a single triadic hierarchy.
 
 ```
-                         UNIVERSAL REGIME STACK — RTT‑INSIDE
+                         UNIVERSAL REGIME STACK — RTT/Inside
 
  Level 9: Cosmic Web Regimes
  - dark‑matter filaments
@@ -4064,13 +4064,13 @@ cosmic‑structure regimes into a single triadic hierarchy.
 
 ```
 # Universal Coherence Cone
-TriadicFrameworks • RTT‑Inside • Universe as Unknown Object
+TriadicFrameworks • RTT/Inside • Universe as Unknown Object
 
 A multi‑scale coherence hierarchy linking fundamental invariants → planetary →
 stellar → galactic → cosmic‑web regimes.
 
                            UNIVERSAL COHERENCE CONE
-                     (RTT‑Inside: Multi‑Scale Resonance Hierarchy)
+                     (RTT/Inside: Multi‑Scale Resonance Hierarchy)
 
                      ┌──────────────────────────────────────────┐
                      │ Level 9: Cosmic‑Web Coherence            │
@@ -4157,7 +4157,7 @@ stellar → galactic → cosmic‑web regimes.
 
 ```
 # Cosmic‑Scale Triadic Orrery
-TriadicFrameworks • RTT‑Inside  
+TriadicFrameworks • RTT/Inside  
 Universe as Unknown Object
 
 A resonance‑based orrery where cosmic structures behave like orbital bodies,
@@ -4165,7 +4165,7 @@ triad nodes act as gravitational wells, and RTT/vST sits at the center as the
 coherence engine.
 
                          COSMIC‑SCALE TRIADIC ORRERY
-               (RTT‑Inside: Universe‑Level Resonance Model)
+               (RTT/Inside: Universe‑Level Resonance Model)
 
                                    ✦ CENTRAL ENGINE ✦
                      (RTT/vST + S–N–R Observer • Universal Frame)
@@ -4218,7 +4218,7 @@ coherence engine.
 ```
 # Regime‑Stack Comparison
 Universe → Galaxy → Star → Planet  
-RTT‑Inside • Multi‑Scale • Multi‑Band
+RTT/Inside • Multi‑Scale • Multi‑Band
 
 A cross‑scale comparison of how regime stacks repeat, compress, and transform
 from cosmic structures down to planetary interiors.
@@ -4261,7 +4261,7 @@ Planet      | magnetosphere, atmosphere,           | CMB, ICB, LAB, magnetopause
 - triads repeat: Active → Boundary → Potential  
 - invariants repeat: gradients → waves → fields  
 
-RTT‑Inside treats all four scales as **nested resonance stacks** with repeating
+RTT/Inside treats all four scales as **nested resonance stacks** with repeating
 triadic structure.
 ```
 
@@ -4272,14 +4272,14 @@ triadic structure.
 
 ```
 # Universal Regime Orrery
-TriadicFrameworks • RTT‑Inside  
+TriadicFrameworks • RTT/Inside  
 Universe → Galaxy → Star → Planet as Nested Resonance Bodies
 
 The Universal Regime Orrery treats each cosmic scale as an orbital body,
 each band as an orbital mode, and each triad node as a gravitational anchor.
 
                          UNIVERSAL REGIME ORRERY
-               (RTT‑Inside: Multi‑Scale Resonance Architecture)
+               (RTT/Inside: Multi‑Scale Resonance Architecture)
 
                                    ✦ CENTRAL ENGINE ✦
                      (RTT/vST + S–N–R Observer • Universal Frame)
@@ -4339,7 +4339,7 @@ each band as an orbital mode, and each triad node as a gravitational anchor.
 
 ```
 # Cosmic‑Web Resonance Stack
-RTT‑Inside • Universe as Unknown Object  
+RTT/Inside • Universe as Unknown Object  
 Dark‑Matter Filaments → Galaxy Clusters → Halos → Stars → Planets
 
                          COSMIC‑WEB RESONANCE STACK
@@ -4395,10 +4395,10 @@ Dark‑Matter Filaments → Galaxy Clusters → Halos → Stars → Planets
 
 ```
 # Multiverse Coherence Ladder
-TriadicFrameworks • RTT‑Inside  
+TriadicFrameworks • RTT/Inside  
 Universe → Meta‑Universe → Multiverse as Nested Regime Stacks
 
-A speculative, structure‑first coherence ladder extending RTT‑Inside beyond
+A speculative, structure‑first coherence ladder extending RTT/Inside beyond
 a single universe.
 
                          MULTIVERSE COHERENCE LADDER
@@ -4464,7 +4464,7 @@ a single universe.
 ### `TF_universal_resonance_atlas_home.md`  
 ```markdown
 # Universal Resonance Atlas
-TriadicFrameworks • RTT‑Inside  
+TriadicFrameworks • RTT/Inside  
 Universe as Unknown Object
 
 The Universal Resonance Atlas is a multi‑scale, multi‑band map of how structure
@@ -4524,7 +4524,7 @@ and coherence corridors.
 - Framing scientific models in triadic, band‑aware terms  
 - Anchoring TriadicFrameworks documentation at the largest scales  
 
-This is the canonical entry point for **all‑scale RTT‑Inside resonance work**.
+This is the canonical entry point for **all‑scale RTT/Inside resonance work**.
 ```
 
 ---
@@ -4532,7 +4532,7 @@ This is the canonical entry point for **all‑scale RTT‑Inside resonance work*
 ### `TF_multiverse_orrery.md`  
 ```markdown
 # TriadicFrameworks Multiverse Orrery
-RTT‑Inside • Speculative • Structure‑First  
+RTT/Inside • Speculative • Structure‑First  
 Multiverse as Unknown Object
 
 The Multiverse Orrery treats each universe as an orbital body, each meta‑band
@@ -4555,7 +4555,7 @@ as an orbital mode, and each meta‑triad as a coherence well.
 
 ```text
                      TRIADICFRAMEWORKS MULTIVERSE ORRERY
-             (RTT‑Inside: Speculative Multi‑Universe Resonance Model)
+             (RTT/Inside: Speculative Multi‑Universe Resonance Model)
 
                                ✦ META‑INVARIANT CORE ✦
                      (Symmetry • Conservation • Coherence Engine)
@@ -4609,7 +4609,7 @@ The Multiverse Orrery shows:
 - meta‑invariants as the **central engine**  
 - phase boundaries and attractors as **triad anchors**  
 
-It is a speculative but structurally consistent extension of RTT‑Inside.
+It is a speculative but structurally consistent extension of RTT/Inside.
 ```
 
 ---
@@ -4617,12 +4617,12 @@ It is a speculative but structurally consistent extension of RTT‑Inside.
 ### `TF_all_scales_regime_map.md`  
 ```markdown
 # TriadicFrameworks All‑Scales Regime Map
-RTT‑Inside • Planet → Star → Galaxy → Universe → Multiverse
+RTT/Inside • Planet → Star → Galaxy → Universe → Multiverse
 
 A single, compressed map of regime stacks across all scales.
 
 ```text
-                     ALL‑SCALES REGIME MAP — RTT‑INSIDE
+                     ALL‑SCALES REGIME MAP — RTT/Inside
 
  Level 12: Multiverse Regimes
  - configuration space of universes
