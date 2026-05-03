@@ -1,4 +1,4 @@
-# **RTT‑Inside Capture Template — ▶️ Health Domain**  
+# **RTT/Inside Capture Template — ▶️ Health Domain**  
 ### *Seeing Care with Dimensional Clarity*
 
 ---
@@ -75,7 +75,7 @@
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Make Patient State Explicit**
@@ -102,7 +102,7 @@
 
 ---
 
-## **✨ RTT‑INSIDE HEALTH TAKEAWAY**
+## **✨ RTT/Inside HEALTH TAKEAWAY**
 
 RTT doesn’t change medicine.  
 It **reveals the structure of care** that already exists.
