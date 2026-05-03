@@ -1,4 +1,4 @@
-# 🏗️ **RTT‑Inside Capture Template — Infrastructure Domain**  
+# 🏗️ **RTT/Inside Capture Template — Infrastructure Domain**  
 ### 💻 *Seeing Foundations with Dimensional Clarity*
 
 ---
@@ -76,7 +76,7 @@
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Treat Assets as Living Beings**
@@ -103,7 +103,7 @@
 
 ---
 
-## **✨ RTT‑INSIDE INFRASTRUCTURE TAKEAWAY**
+## **✨ RTT/Inside INFRASTRUCTURE TAKEAWAY**
 
 RTT doesn’t change infrastructure.  
 It **reveals the structure of foundations** that already exist.
