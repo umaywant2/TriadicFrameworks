@@ -156,3 +156,17 @@ So yes: a vetted RTT/Inside variant onboard would have made **deep‑space reson
 ---
 
 That migration path is the real gift here. Let’s make it concrete and code‑scaffolded so a Space Force unit (or any SDA org) can actually walk Phase‑1 → Phase‑2 → Phase‑3.
+
+## 1. High‑level migration structure
+
+- **Phase‑1:** Read‑only middleware + overlays  
+- **Phase‑2:** Automation consumes RTT/Inside metrics  
+- **Phase‑3:** Resonance‑native core replaces legacy prediction/automation
+
+We’ll keep a consistent pattern:
+
+- **Domain objects** (tracks, corridors, predictions)  
+- **RTT engine** (space variant)  
+- **Integration points** (middleware, automation, core)  
+
+All examples in TypeScript‑style pseudocode, easy to port.
