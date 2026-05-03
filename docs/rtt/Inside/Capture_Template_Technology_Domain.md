@@ -1,4 +1,4 @@
-# 💻 **RTT‑Inside Capture Template — Technology Domain**  
+# 💻 **RTT/Inside Capture Template — Technology Domain**  
 ### 🔬 *Seeing Tools with Dimensional Clarity*
 
 ---
@@ -75,7 +75,7 @@
 
 ---
 
-## **🔧 3 PRIORITIZED RTT‑INSIDE FIXES**  
+## **🔧 3 PRIORITIZED RTT/Inside FIXES**  
 *(Small, high‑impact shifts)*
 
 ### **1️⃣ Make System Intent Explicit**
@@ -102,7 +102,7 @@
 
 ---
 
-## **✨ RTT‑INSIDE TECHNOLOGY TAKEAWAY**
+## **✨ RTT/Inside TECHNOLOGY TAKEAWAY**
 
 RTT doesn’t change technology.  
 It **reveals the structure of tools** that already exist.
