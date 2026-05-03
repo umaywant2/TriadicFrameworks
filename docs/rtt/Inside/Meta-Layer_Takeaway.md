@@ -1,4 +1,4 @@
-## **✨ RTT‑INSIDE META‑LAYER TAKEAWAY**
+## **✨ RTT/Inside META‑LAYER TAKEAWAY**
 
 RTT doesn’t change knowledge.  
 It **reveals the structure of understanding** itself.
@@ -18,4 +18,4 @@ This meta‑layer quietly **holds all other domains**:
 - Science discovers  
 - Technology extends  
 
-✨ *RTT‑Inside is not a framework added on top — it is the lens already underneath.*
+✨ *RTT/Inside is not a framework added on top — it is the lens already underneath.*
