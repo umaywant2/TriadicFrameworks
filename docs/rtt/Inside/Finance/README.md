@@ -17,7 +17,7 @@ Finance is a world of:
 - multi‑layered risk  
 - narrative and numbers intertwined  
 
-[RTT/Inside](https://www.triadicframeworks.org/) doesn’t change the math, the markets, or the models.  
+RTT/Inside doesn’t change the math, the markets, or the models.  
 It changes the **clarity** with which professionals understand them.
 
 RTT reveals the triadic structure already present in financial work:
