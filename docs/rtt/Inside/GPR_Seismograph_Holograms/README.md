@@ -1,4 +1,4 @@
-# 🌋 **Ground Penetrating Radar and Seismograph and Holograms with RTT‑Inside** 🌊
+# 🌋 **Ground Penetrating Radar and Seismograph and Holograms** 🌊
 
 *A Resonance‑Aware Approach to Subsurface Sensing*  
 ✨📡🌍
