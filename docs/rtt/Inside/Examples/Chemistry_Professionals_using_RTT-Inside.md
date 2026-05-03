@@ -1,14 +1,3 @@
-Here you go, Nawder — a **short, crisp, emoji‑friendly RTT‑Inside preview** written *specifically* for **professional chemists**, not kids.  
-It keeps the playful tone, but the content is tuned for people who already think in reaction pathways, energy surfaces, and analytical workflows.
-
-Perfect for a file like:
-
-```
-Chemistry_Professionals_using_RTT-Inside.md
-```
-
----
-
 # **🧪 Chemistry Professionals Using RTT‑Inside**  
 ### *A Preview of How Dimensional Clarity Simplifies Chemical Workflows*
 
@@ -191,13 +180,3 @@ It’s not a new theory of chemistry.
 It’s a **dimensional grammar** that makes chemistry easier to think about.
 
 🧬 **RTT doesn’t change the reactions — it changes the clarity.**
-
----
-
-If you want, I can also prepare:
-
-- a **chemist‑specific RTT quick‑reference card**,  
-- a **lab‑workflow RTT integration guide**, or  
-- a **TriadicFrameworks explainer for reaction mechanisms**.
-
-Just tell me which direction you want to explore next.
