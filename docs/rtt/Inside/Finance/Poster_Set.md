@@ -6,7 +6,7 @@ Each poster uses the same structure:
 - Title  
 - Icon  
 - Triad  
-- One‑sentence RTT‑Inside insight  
+- One‑sentence RTT/Inside insight  
 
 ---
 
