@@ -1,7 +1,7 @@
 # **📄 One‑Page Executive Summary for CIOs**  
-### *RTT‑Inside: A Unified Framework for Investment Strategy*
+### *RTT/Inside: A Unified Framework for Investment Strategy*
 
-**RTT‑Inside** provides CIOs with a **dimensional grammar** that clarifies the entire investment ecosystem.  
+**RTT/Inside** provides CIOs with a **dimensional grammar** that clarifies the entire investment ecosystem.  
 It does not replace models, risk systems, or market expertise — it **reveals the structure beneath them**, enabling cleaner decisions, clearer communication, and more coherent strategy.
 
 ---
@@ -30,7 +30,7 @@ RTT gives CIOs a **single lens** to unify all three.
 
 ---
 
-## **2. How RTT‑Inside Helps CIOs**
+## **2. How RTT/Inside Helps CIOs**
 
 ### **A. Strategic Clarity**  
 RTT makes the firm’s identity explicit, reducing drift and misalignment.
@@ -65,11 +65,11 @@ RTT helps CIOs articulate strategy to boards, clients, and regulators with preci
 RTT doesn’t change markets, models, or mandates.  
 It changes the **clarity** with which leaders understand and guide them.
 
-**RTT‑Inside gives CIOs a unified, dimensional view of the entire investment organization — from thesis to trade to team.**
+**RTT/Inside gives CIOs a unified, dimensional view of the entire investment organization — from thesis to trade to team.**
 
 ---
 
-# **🎬 Full Visual Storyboard — Finance RTT‑Inside Edition**  
+# **🎬 Full Visual Storyboard — Finance RTT/Inside Edition**  
 ### *A scene‑by‑scene conceptual storyboard for the entire multi‑chapter finance book*
 
 Think of this as the “visual narrative arc” of the Finance Edition — each frame is a conceptual panel that could be illustrated later.
@@ -82,6 +82,6 @@ Each frame shows:
 
 - the **scene**  
 - the **visual metaphor**  
-- the **RTT‑Inside insight**  
+- the **RTT/Inside insight**  
 
 This gives you a complete visual arc of the entire Finance Edition.
