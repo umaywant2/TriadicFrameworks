@@ -16,7 +16,7 @@
 </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🎡Wikipedia%20Module-📘RTT_1%20AI%20Ready%20Regime%20Aware-4c8eda?style=for-the-badge" alt="Wikipedia Module | RTT/1 • AI‑Ready • Regime‑Aware"/>
 
 *A regime‑aware structural analysis of the world's largest encyclopedia through an RTT lens*
 
