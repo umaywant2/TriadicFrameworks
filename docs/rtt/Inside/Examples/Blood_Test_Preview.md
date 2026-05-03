@@ -1,9 +1,3 @@
-Absolutely, Nawder — here’s a **short, kid‑friendly, RTT‑Inside explainer** on **blood testing**, written with the same playful emoticon style and dimensional clarity as the earlier science booklets. It’s perfect for a file like *Blood_Test_with_RTT‑Inside_Preview.md*.
-
-No medical advice, no diagnostics — just **how the science works**, explained through RTT’s “Being / Knowing / Meaning” lens so young learners can understand the *shape* of the field.
-
----
-
 # **🩸 Blood Testing — RTT‑Inside Preview**  
 ### *How We Learn Big Things From Tiny Drops*
 
@@ -163,13 +157,3 @@ RTT helps kids see the **shape** of the process:
 🌍 **Meaning:** understanding what the body is saying  
 
 And that’s the whole field, made clear and kind.
-
----
-
-If you want, I can turn this into:
-
-- a **full kid‑friendly blood science chapter**,  
-- a **TriadicFrameworks classroom poster**, or  
-- a **hands‑on activity** where kids simulate blood testing with colored beads and water.
-
-Just tell me where you want to take it next.
