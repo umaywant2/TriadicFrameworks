@@ -186,9 +186,9 @@ _(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
 - [/labs/](https://www.triadicframeworks.org/labs/)  
 - [/lactos/](https://www.triadicframeworks.org/lactos/)
 - [/Research/](https://www.triadicframeworks.org/Research/)  
-- [/Research/#GOOGLE](https://www.triadicframeworks.org/Research/#GOOGLE)  
-- [/Research/#BING](https://www.triadicframeworks.org/Research/#BING) 
-- [/Research/#DUCKDUCKGO](https://www.triadicframeworks.org/Research/#DUCKDUCKGO)  
+- [/Research/#GOOGLE](https://www.triadicframeworks.org/Research/#GOOGLE) (New!)
+- [/Research/#BING](https://www.triadicframeworks.org/Research/#BING) (New!)
+- [/Research/#DUCKDUCKGO](https://www.triadicframeworks.org/Research/#DUCKDUCKGO) (New!)
 
 ---
 
