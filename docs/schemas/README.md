@@ -1,5 +1,7 @@
 # 📚 Schema Library  
 
+- [`schemas_module.json`](schemas_module.json) — Agentic module schema role assignments
+
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
     display:inline-block;
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/🧩Infrastructure%20Core-🕸️Schema%20Universe%20Active-4c8eda?style=for-the-badge" alt="🧩Infrastructure Core | 🕸️Schema Universe Active"/>
+<img src="https://img.shields.io/badge/🕸️Schemas-📘Infrastructure%20Core%20AI%20Ready-4c8eda?style=for-the-badge" alt="Schemas | Infrastructure‑Core • AI‑Ready"/>
 
 *A resonance‑native, multi‑domain schema universe*
 
