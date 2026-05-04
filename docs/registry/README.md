@@ -1,4 +1,6 @@
-## 📂 Registry Blueprint
+## 📂 Registry Blueprint  
+
+- [`registry_module.json`](registry_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🗃️Registry%20Module-📘Canonical%20Index%20Active%20AI%20Ready-4c8eda?style=for-the-badge" alt="Registry Module | Canonical Index Active • AI‑Ready"/>
 
 ### 🗂️ Core Subfolders
 - **alerts/** → Strobe triggers. Holds validator signals when clarity shifts phase (nano → celestial).  
