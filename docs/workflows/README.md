@@ -1,4 +1,6 @@
-## 🌀⚙️📜 Workflow Engines  
+# 🌀⚙️📜 Workflow Engines  
+
+- [`workflows_module.json`](workflows_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/⚙️Workflows-📘Execution%20Backbone%20AI%20Ready-4c8eda?style=for-the-badge" alt="Workflows | Execution Backbone • AI‑Ready"/>
 
 ## Operational layer for RTT‑Inside: batches, pipelines, and remix generation
 
