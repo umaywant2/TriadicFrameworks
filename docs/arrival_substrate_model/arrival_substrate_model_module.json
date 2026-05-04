@@ -1,0 +1,71 @@
+{
+  "module": {
+    "name": "Arrival Substrate Model",
+    "id": "substrate.arrival",
+    "category": "Substrate-Arrival",
+    "version": "1.0",
+    "summary": "Life-aligned substrate describing how systems enter, negotiate, and stabilize within new regimes across micro, meso, macro, and cross-scale transitions.",
+    "purpose": "Formalize the universal arrival pattern across biology, cognition, society, and governance: initiation, mediation, and integration.",
+    "keywords": [
+      "arrival substrate",
+      "regime transitions",
+      "micro arrivals",
+      "meso arrivals",
+      "macro arrivals",
+      "cross-scale arrivals",
+      "arrival operator"
+    ],
+    "audience": ["researchers", "developers", "substrate architects", "AIs"],
+    "front_door": "index.html",
+    "format": ["html", "markdown", "diagrams", "maps"],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Arrival Substrate Model",
+    "category": "Substrate-Arrival",
+    "version": "1.0",
+    "coherence": "stable",
+    "drift": "bounded",
+    "format": ["html", "markdown", "diagrams", "maps"],
+    "front_door": "index.html",
+    "audience": ["researchers", "developers", "substrate architects", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "arrival-operator",
+      "arrival-arc",
+      "arrival-literacy",
+      "regime-alignment"
+    ],
+    "dimensional": [
+      "micro",
+      "meso",
+      "macro",
+      "cross-scale"
+    ],
+    "regime": [
+      "substrate-arrival",
+      "life-aligned"
+    ],
+    "cross_cutting": [
+      "energy",
+      "governance",
+      "crosslinks"
+    ]
+  },
+
+  "schema": {
+    "input": {
+      "regime": "string",
+      "scale": "string"
+    },
+    "output": {
+      "arrival_state": "object",
+      "transition_profile": "object"
+    }
+  }
+}
