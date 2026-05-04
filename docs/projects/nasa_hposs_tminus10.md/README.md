@@ -1,6 +1,10 @@
 # NASA HPOSS — T‑Minus‑10 Submission Workspace
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+- [`nasa_hposs_tminus10.md_module.json`](nasa_hposs_tminus10.md_module.json) — Agentic module schema role assignments
+
+<img src="https://img.shields.io/badge/🚀NASA%20HPOSS%20T_minus_10%20Project-📄Proposal%20Assembly%20Workspace%20Active-4c8eda?style=for-the-badge" alt="NASA HPOSS T-minus-10 Project | Proposal Assembly Workspace Active"/>
+
+🚀 NASA HPOSS T-minus-10 Project<br>📄 Proposal Assembly Workspace Active
 
 This directory contains the working materials for preparing a NASA High Priority 
 Open‑Source Science (HPOSS) proposal for the TriadicFrameworks Research Initiative.
