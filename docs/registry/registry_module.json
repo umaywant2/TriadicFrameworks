@@ -1,0 +1,73 @@
+{
+  "module": {
+    "name": "Registry",
+    "id": "registry.core",
+    "category": "Infrastructure-Core",
+    "version": "1.0",
+    "summary": "Canonical index and validator archive: scroll entries, strobe timing, annotations, signatures, tags, glyphs, and archival scaffolding.",
+    "purpose": "Provide the canonical index and validator archive for all resonance scrolls, timing cycles, annotations, signatures, and metadata overlays.",
+    "keywords": [
+      "registry",
+      "canonical index",
+      "validator archive",
+      "scroll entries",
+      "strobe timing",
+      "annotations",
+      "signatures",
+      "glyphs",
+      "tags"
+    ],
+    "audience": ["students", "developers", "researchers", "AIs"],
+    "front_door": "index.html",
+    "format": ["html", "markdown"],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Registry",
+    "category": "Infrastructure-Core",
+    "version": "1.0",
+    "coherence": "stable",
+    "drift": "minimal",
+    "format": ["html", "markdown"],
+    "front_door": "index.html",
+    "audience": ["students", "developers", "researchers", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "scroll-entry",
+      "strobe-timing",
+      "annotation",
+      "signature",
+      "tag",
+      "glyph"
+    ],
+    "dimensional": [
+      "coherence",
+      "index-structure"
+    ],
+    "regime": [
+      "infrastructure-core",
+      "registry"
+    ],
+    "cross_cutting": [
+      "archive",
+      "retrieval",
+      "metadata-overlays"
+    ]
+  },
+
+  "schema": {
+    "input": {
+      "scroll": "string",
+      "phase": "string"
+    },
+    "output": {
+      "registry_entry": "object",
+      "timing_profile": "object"
+    }
+  }
+}
