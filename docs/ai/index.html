@@ -2,52 +2,76 @@
 <html lang="en">
 <head>
 
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/ai/index.html — <head> metadata block refresh         -->
+<!-- Module: AI Instrument Architecture (ai-core)                -->
+<!-- Last updated: 2026-05-04                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
 
-<title>AI Instrument Architecture — TriadicFrameworks</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-04">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
 
 <meta name="description"
-      content="AI Instrument Architecture: minimal, layered AI-core design with declared regimes, constitutional constraints, append-only lineage, and a reproducible minimal AI stack." />
+      content="AI Instrument Architecture — the minimal constitutional AI-core module defining NoS AI, Regime Header, Lineage Ledger, and the Minimal AI Stack for reproducible, regime-declared AI behavior.">
 <meta name="keywords"
-      content="AI instrument, NoS AI, regime header, lineage ledger, minimal AI stack, constitutional AI" />
-<meta name="author" content="Nawder Loswin" />
+      content="AI-core, NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack, constitutional AI, agentic modules">
 
-<!-- Canonical Identity -->
-<meta name="module" content="AI Instrument Architecture" />
-<meta name="canonical-id" content="AI-CORE" />
-<meta name="module-type" content="AI-Core" />
-<meta name="version" content="1.0" />
-<meta name="status" content="canon-stable" />
-<meta name="parent" content="TriadicFrameworks Root" />
-<meta name="siblings" content="AI Drift Calibration, NoS, Regime Header, Lineage Ledger" />
-<meta name="canonical-path" content="/docs/ai/" />
-<meta name="last-updated" content="2026-05-01" />
-<meta name="license" content="MIT" />
+<link rel="canonical" href="https://www.triadicframeworks.org/ai/">
 
-<!-- Open Graph -->
-<meta property="og:title" content="AI Instrument Architecture — TriadicFrameworks" />
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="AI Instrument Architecture — AI‑Core | TriadicFrameworks">
+<meta property="og:url" content="https://www.triadicframeworks.org/ai/">
 <meta property="og:description"
-      content="Minimal AI-core architecture: declared regimes, constitutional constraints, append-only lineage." />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://www.triadicframeworks.org/ai" />
+      content="Minimal constitutional AI-core architecture: NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
 
-<!-- Twitter -->
-<meta name="twitter:card" content="summary" />
-<meta name="twitter:title" content="AI Instrument Architecture — TriadicFrameworks" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Instrument Architecture — AI‑Core | TriadicFrameworks">
 <meta name="twitter:description"
-      content="AI-core constitutional architecture." />
+      content="Constitutional AI-core module defining NoS AI, Regime Header, Lineage Ledger, and Minimal AI Stack.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
 
-<!-- Citation -->
-<meta name="citation_title" content="AI Instrument Architecture — TriadicFrameworks" />
-<meta name="citation_author" content="Nawder Loswin" />
-<meta name="citation_date" content="2026-05-01" />
+<meta name="citation_title" content="AI Instrument Architecture — AI‑Core Constitutional Module">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.subject"
+      content="AI-core, constitutional AI, NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
 
-<!-- AI Metadata -->
-<meta name="ai-ready" content="true" />
-<meta name="ai-module-id" content="AI-CORE" />
-<meta name="ai-operators"
-      content="AI-Declare, AI-Regime, AI-Ledger, AI-Stack" />
+<meta name="ai.module" content="AI Instrument Architecture">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Define a minimal, constitutional AI-core architecture with explicit regimes, lineage, and reproducible behavior.">
+<meta name="ai.keywords"
+      content="AI-core, NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack">
+<meta name="ai.audience" content="researchers, developers, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<meta name="ai.module.name" content="AI Instrument Architecture">
+<meta name="ai.module.summary"
+      content="Minimal constitutional AI-core: NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack.">
+<meta name="ai.module.category" content="AI-Core">
+
+<title>AI Instrument Architecture — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -260,11 +284,15 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../">🔙TFT</a>
    <!-- RTT Canonical Signature -->
-<section id="ai-core-session-header"
-         data-ai-core="1"
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/ai — Session Context block                            -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="ai-session-header"
+         data-rtt="ai-core"
          data-coherence="stable"
          data-drift="bounded"
-         data-layer="ai-core">
+         data-regime="constitutional">
 
   <h2>Session Context</h2>
 
@@ -303,8 +331,9 @@ code {
 
 </section>
 
-<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;border-radius:6px;font-size:13px;">
-  🟦 AI Instrument Architecture<br>📘 AI‑Core Constitutional Module
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  🟦 AI‑Core<br>📘 Constitutional Module • AI‑Ready
 </div>
 
 </nav>
