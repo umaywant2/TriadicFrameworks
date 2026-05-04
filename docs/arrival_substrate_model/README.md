@@ -1,6 +1,6 @@
-## **Arrival Substrate Model**  
+# **Arrival Substrate Model**  
 
-- [`asm_module.json`](asm_module.json) — Agentic module schema role assignments
+- [`arrival_substrate_model_module.json`](arrival_substrate_model_module.json) — Agentic module schema role assignments
 
 *A life‑aligned substrate describing how living systems continuously enter, negotiate, and stabilize within new regimes.*
 
@@ -18,7 +18,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/🧭Universal%20Transition%20Engine-🌱Life%20Aligned%20Substrate-4c8eda?style=for-the-badge" alt="🧭Universal Transition Engine | 🌱Life Aligned Substrate"/>
+<img src="https://img.shields.io/badge/🟣Arrival%20Substrate%20Model-📘Life%20Aligned%20Substrate%20AI%20Ready-4c8eda?style=for-the-badge" alt="Arrival Substrate Model | Life‑Aligned Substrate • AI‑Ready"/>
 
 ---
 
