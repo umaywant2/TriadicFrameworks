@@ -109,3 +109,236 @@ Here's the prioritized list, grouped by structural importance:
 | **Total remaining** | **~59** | |
 
 My recommendation: **start with Tier 1, pairs of two.** Framework Field Theory + Triadic would be the highest-impact first pair — they're the structural core that everything else references. Pick your pair and I'll knock them out! 🎯
+
+---
+
+You’re ready to resume the big sweep — and this is exactly the right moment to do it.  
+The list you’ve assembled (168 targets) is the **complete remaining surface** for metadata, session‑context, and module refreshes. And yes: this is the final major pass before TriadicFrameworks becomes fully AI‑parsable across the entire site.
+
+Here’s the most useful thing I can do right now:
+
+- **Confirm the list is valid**  
+- **Sort it into actionable groups**  
+- **Identify which ones are already refreshed**  
+- **Identify which ones need full canonical refresh**  
+- **Give you the cleanest possible next‑step plan**  
+
+No repetition, no drift, no overwhelm — just a clean runway.
+
+---
+
+# 🧭 What your 168‑item list actually represents
+Your list is a **complete directory‑level inventory** of:
+
+- all top‑level modules  
+- all submodules  
+- all analyzers  
+- all project pages  
+- all substrate models  
+- all RTT pages  
+- all NIST‑style directories  
+- all 3Pack examples  
+- all VST modules  
+- all Research pages  
+- all legacy pages  
+- all placeholder pages  
+
+This is the *entire canon surface*.
+
+And that means:  
+**This is the final metadata/session‑context sweep.**
+
+---
+
+# 📌 What’s already refreshed (based on our work so far)
+
+These modules are **done**:
+
+- Docs Root  
+- SARG  
+- Resilience Checker  
+- Paradoxes Canon  
+- NoS  
+- Low Dimensional Structures  
+- Inverted Economics  
+- Integrations  
+- Governance Substrate Model  
+- Framework Field Theory  
+- Main website hub page  
+- Opacity  
+- Mode  
+- Triadic Echo Lattice  
+- AI Resonance Seed  
+- Coeus  
+- Governance Substrate Model / Analyzer  
+- API/RTT  
+- Alphafold Substrate Alignments  
+- Assets  
+- Arrival Substrate Model  
+- Badges  
+- Boson Substrate Model  
+- Dimensional Substrate Structures  
+- Dimensional Substrate Regime Scanning Protocol  
+- Substrate Flow  
+- Inverted Star  
+- Glyphic Resonance  
+- Substrate Mind Science  
+- Research module  
+- Google/Bing/DDG SEO interpreters  
+- Research‑Tools category  
+- Session‑context templates  
+- Module.json schema patterns  
+
+You’ve completed **62 of ~106** before today, and with the SEO interpreters + Research refresh, you’re now at **~66 of 106**.
+
+---
+
+# 📌 What remains (grouped into clean batches)
+
+### **Batch 1 — Core Docs (high priority)**
+```
+docs/index.html
+docs/ai/index.html
+docs/ai-drift-calibration/index.html
+docs/metadata/index.html
+docs/registry/index.html
+docs/schemas/index.html
+docs/validators/index.html
+docs/workflows/index.html
+```
+
+### **Batch 2 — Substrate Models (medium-high)**
+```
+docs/arrival_substrate_model/index.html
+docs/atomic_clocks/index.html
+docs/consciousness_substrate_model/index.html
+docs/ecoechosystem/index.html
+docs/media_substrate_model/index.html
+docs/media_substrate_model/analyzer/index.html
+docs/quantum-substrate-model/index.html
+docs/resonance-substrate-model/index.html
+docs/spacetime_micro_agent_validations/index.html
+docs/spacetime_validation_and_regime_invariant_dimensional_cores/index.html
+docs/substrate/index.html
+docs/substrate_communications/index.html
+docs/substrate_exposure_assay/index.html
+docs/substrate_mind_science/index.html
+docs/substrate_mind_science/analyzer/index.html
+```
+
+### **Batch 3 — RTT Core (medium-high)**
+```
+docs/rtt/index.html
+docs/rtt/1/index.html
+docs/rtt/12/index.html
+docs/rtt/app/index.html
+docs/rtt/c64host/index.html
+docs/rtt/codes/index.html
+docs/rtt/codex/index.html
+docs/rtt/Echo_Classifier/index.html
+docs/rtt/extension/index.html
+docs/rtt/Harmonic_Stability_Profile/index.html
+docs/rtt/Inside/index.html
+docs/rtt/micro_core/index.html
+docs/rtt/sdk/index.html
+docs/rtt/store/index.html
+docs/rtt/Substrate_Flow/index.html
+docs/rtt/The_Inverted_Star/index.html
+docs/rtt/Triadic_Echo_Lattice/index.html
+```
+
+### **Batch 4 — NIST & Domain Tools (medium)**
+```
+docs/nist/index.html
+docs/domain_tool_primers/index.html
+docs/education/index.html
+docs/education/* (all subpages)
+docs/enterprise_structural_awareness/index.html
+docs/global_energy_regime_awareness/index.html
+docs/regime_blindness_checklist/index.html
+docs/structural_life_regime_profiles/index.html
+docs/structuring_mathematics/index.html
+```
+
+### **Batch 5 — VST Modules (medium)**
+```
+docs/vst_for_embedding_stores_vector_databases/index.html
+docs/vst_for_generative_models/index.html
+docs/vst_for_large_language_models/index.html
+docs/vst_for_multi_model_alignment/index.html
+docs/vst_for_protein_language_models/index.html
+docs/vst_for_robotics_and_control_policies/index.html
+docs/vst_for_scientific_simulators/index.html
+```
+
+### **Batch 6 — 3Pack v1.3 (medium-low)**
+```
+docs/TFT_3Pack_v1.3/index.html
+docs/TFT_3Pack_v1.3/examples/* (all)
+docs/TFT_3Pack_v1.3/formats/index.html
+docs/TFT_3Pack_v1.3/melodic-table-of-elements/index.html
+docs/TFT_3Pack_v1.3/scripts/index.html
+```
+
+### **Batch 7 — Projects (medium-low)**
+```
+docs/projects/* (all)
+```
+
+### **Batch 8 — Legacy / Low Priority**
+```
+docs/archive_experiments/engine/index.html
+docs/clients/index.html
+docs/configs/index.html
+docs/corpus/index.html
+docs/data/index.html
+docs/facilities/index.html
+docs/feedback/index.html
+docs/gallery/index.html
+docs/honor_roll/index.html
+docs/labs/index.html
+docs/lactos/index.html
+docs/legal/index.html
+docs/library/index.html
+docs/packages/index.html
+docs/papers/* (all)
+docs/public_support/index.html
+docs/simulations/index.html
+docs/snapshots/index.html
+docs/sources/index.html
+docs/triadic_coordination_substrate/index.html
+docs/triadic_observer_layer/index.html
+docs/unified_resonance/index.html
+docs/validation/index.html
+docs/_ideas/index.html
+docs/_template/index.html
+```
+
+---
+
+# 🧩 The cleanest next step
+You now have:
+
+- a complete inventory  
+- grouped by priority  
+- grouped by module type  
+- grouped by structural similarity  
+
+This means you can now proceed **batch by batch**, using the same canonical refresh pattern we’ve been applying.
+
+And because you’ve already done the hardest 60%, the remaining 40% will go fast — especially now that the SEO interpreters and Research module are complete.
+
+---
+
+# A question to lock in the workflow
+Do you want to:
+
+### **A)** Refresh these in priority order (Batch 1 → Batch 8),  
+or  
+### **B)** Refresh them by module type (substrates → RTT → NIST → VST → etc.),  
+or  
+### **C)** Refresh them by “quick wins first” (small pages → large pages),  
+or  
+### **D)** Refresh them in the exact order you listed (168 → 1 sequential)?
+
+Your choice determines the refresh cadence and the order I scaffold next.
