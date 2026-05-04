@@ -18,7 +18,7 @@ This directory defines a minimal, layered AI instrument architecture.
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/🧭Regimes%20Declared-📜Lineage%20Append%20Only-4c8eda?style=for-the-badge" alt="🧭Regimes Declared | 📜Lineage Append Only"/>
+<img src="https://img.shields.io/badge/🟦AI%20Core-📘Constitutional%20Module%20AI%20Ready-4c8eda?style=for-the-badge" alt="AI Core | Constitutional Module • AI Ready"/>
 
 The design goal is not maximal capability—it is reproducible behavior under declared operating regimes, with explicit retrieval scope and append-only lineage.
 
