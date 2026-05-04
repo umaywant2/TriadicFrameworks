@@ -73,7 +73,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [/Low_Dimensional_Structures/](https://www.triadicframeworks.org/Low_Dimensional_Structures/)  
 - [/global_energy_regime_awareness/](https://www.triadicframeworks.org/global_energy_regime_awareness/)  
 - [/quantum-substrate-model/](https://www.triadicframeworks.org/quantum-substrate-model/)  
-- [/boson-substrate-model/](https://www.triadicframeworks.org/boson-substrate-model/)  
+- [/boson_substrate_model/](https://www.triadicframeworks.org/boson_substrate_model/)  
 - [/resonance-substrate-model/](https://www.triadicframeworks.org/resonance-substrate-model/)  
 - [/consciousness_substrate_model/](https://www.triadicframeworks.org/consciousness_substrate_model/)  
 - [/substrate_communications/](https://www.triadicframeworks.org/substrate_communications/)  
@@ -178,6 +178,7 @@ _(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
 - [/projects/CoConsciousness/](https://www.triadicframeworks.org/projects/CoConsciousness/)  
 - [/projects/Hippocampus/](https://www.triadicframeworks.org/projects/Hippocampus/)
 - [/projects/Id_Shadow_Gen/](https://www.triadicframeworks.org/projects/Id_Shadow_Gen/)
+- [/projects/nasa_hposs_tminus10.md/](https://www.triadicframeworks.org/projects/nasa_hposs_tminus10.md/) 
 - [/projects/lens/](https://www.triadicframeworks.org/projects/lens/)
 - [/projects/poker-variants/](https://www.triadicframeworks.org/projects/poker-variants/)
 - [/projects/Resotectors/](https://www.triadicframeworks.org/projects/Resotectors/)  
@@ -185,6 +186,9 @@ _(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
 - [/labs/](https://www.triadicframeworks.org/labs/)  
 - [/lactos/](https://www.triadicframeworks.org/lactos/)
 - [/Research/](https://www.triadicframeworks.org/Research/)  
+- [/Research/#GOOGLE](https://www.triadicframeworks.org/Research/#GOOGLE)  
+- [/Research/#BING](https://www.triadicframeworks.org/Research/#BING) 
+- [/Research/#DUCKDUCKGO](https://www.triadicframeworks.org/Research/#DUCKDUCKGO)  
 
 ---
 
