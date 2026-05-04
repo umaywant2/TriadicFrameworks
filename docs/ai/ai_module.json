@@ -1,62 +1,71 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
   "module": {
     "name": "AI Instrument Architecture",
-    "path": "docs/ai",
-    "canon_tag": "ai-core",
+    "id": "ai.core",
+    "category": "AI-Core",
     "version": "1.0",
-    "layer": "AI Core Layer",
-    "status": "Active, Canonical",
-    "purpose": "Minimal, layered AI-core architecture with declared regimes, constitutional constraints, append-only lineage, and a reproducible minimal AI stack.",
-    "parent": "triadicframeworks-root",
-    "url": "https://www.triadicframeworks.org/ai"
+    "summary": "Minimal, constitutional AI instrument architecture defining NoS AI, Regime Header, Lineage Ledger, and the Minimal AI Stack.",
+    "purpose": "Provide a reproducible, regime-declared, append-only constitutional architecture for AI systems within TriadicFrameworks.",
+    "keywords": [
+      "AI-core",
+      "NoS AI",
+      "Regime Header",
+      "Lineage Ledger",
+      "Minimal AI Stack",
+      "constitutional AI",
+      "agentic modules"
+    ],
+    "audience": ["researchers", "developers", "AIs"],
+    "front_door": "index.html",
+    "format": ["html", "markdown", "schema"],
+    "every_page_stands_alone": true
   },
 
   "session_context": {
-    "canon": "active (ai-core)",
-    "modules_linked": [
-      "NoS AI → Regime Header → Lineage Ledger → Minimal AI Stack"
-    ],
-    "drift": "bounded (declared regimes)",
-    "coherence": "stable (constitutional constraints)",
-    "format": "html + markdown + schema",
-    "front_door": "exists (AI-core root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": ["researchers", "developers", "AI systems"]
+    "canon": "TriadicFrameworks",
+    "module": "AI Instrument Architecture",
+    "category": "AI-Core",
+    "version": "1.0",
+    "coherence": "stable",
+    "drift": "bounded",
+    "format": ["html", "markdown", "schema"],
+    "front_door": "index.html",
+    "audience": ["researchers", "developers", "AIs"],
+    "every_page_stands_alone": true
   },
 
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D4",
-    "regime_envelope": "R0–R3",
-    "coherence_envelope": "C0–C4",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "medium"
-  },
-
-  "cross_module_propagation": {
-    "imports": [
-      "NoS AI",
-      "Regime Header",
-      "Lineage Ledger"
+  "analyzer_layers": {
+    "operator": [
+      "constitution",
+      "regime-header",
+      "lineage-ledger",
+      "minimal-ai-stack"
     ],
-    "exports": [
-      "constitutional constraints",
-      "regime declarations",
-      "append-only lineage",
-      "minimal AI stack"
+    "dimensional": [
+      "coherence",
+      "drift",
+      "regime"
+    ],
+    "regime": [
+      "ai-core",
+      "constitutional",
+      "append-only"
+    ],
+    "cross_cutting": [
+      "schema",
+      "lineage",
+      "retrieval-scope"
     ]
   },
 
-  "submodules": [
-    { "name": "NoS AI", "path": "NoS_AI.md" },
-    { "name": "Regime Header", "path": "Regime_Header.md" },
-    { "name": "Lineage Ledger", "path": "Lineage_Ledger.md" },
-    { "name": "Minimal AI Stack", "path": "Minimal_AI_Stack.md" }
-  ],
-
-  "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of AI Instrument Architecture.", "role": "profile", "depends_on": [] },
-    { "filename": "index.html", "path": "index.html", "purpose": "Front door for AI-core.", "role": "index", "depends_on": [] }
-  ]
+  "schema": {
+    "input": {
+      "event": "object (append-only)",
+      "regime": "string"
+    },
+    "output": {
+      "ledger_state": "object",
+      "regime_constraints": "object"
+    }
+  }
 }
