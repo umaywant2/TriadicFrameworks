@@ -1,0 +1,69 @@
+{
+  "module": {
+    "name": "Workflows",
+    "id": "workflows.core",
+    "category": "Infrastructure-Execution",
+    "version": "1.0",
+    "summary": "Lightweight, substrate-agnostic execution engines for scrolls, batches, remix lineage, and resonance-aware pipelines.",
+    "purpose": "Provide portable, deterministic workflow engines bridging RTT theory with executable pipelines across languages and environments.",
+    "keywords": [
+      "workflows",
+      "batch orchestrator",
+      "remix generator",
+      "scroll pipeline",
+      "execution engine",
+      "RTT Inside"
+    ],
+    "audience": ["developers", "students", "researchers", "remixers", "AIs"],
+    "front_door": "index.html",
+    "format": ["html", "markdown", "python", "js"],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Workflows",
+    "category": "Infrastructure-Execution",
+    "version": "1.0",
+    "coherence": "stable",
+    "drift": "bounded",
+    "format": ["html", "markdown", "python", "js"],
+    "front_door": "index.html",
+    "audience": ["developers", "students", "researchers", "remixers", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "batch-orchestrator",
+      "remix-generator",
+      "scroll-pipeline-js",
+      "scroll-pipeline-python",
+      "validator-hooks"
+    ],
+    "dimensional": [
+      "coherence",
+      "execution-structure"
+    ],
+    "regime": [
+      "infrastructure-execution",
+      "workflow-engine"
+    ],
+    "cross_cutting": [
+      "portability",
+      "determinism",
+      "lineage"
+    ]
+  },
+
+  "schema": {
+    "input": {
+      "scroll": "object or path",
+      "pipeline": "string"
+    },
+    "output": {
+      "execution_report": "object",
+      "lineage_update": "object"
+    }
+  }
+}
