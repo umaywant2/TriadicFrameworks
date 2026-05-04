@@ -110,6 +110,26 @@ a:visited {
   color: #cfe8ff;
   }
 
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+      
 nav {
   width: 260px;
   float: left;
@@ -169,10 +189,29 @@ code {
 <body>
    
 <nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
   
-  <h2>🧱 Substrate — Minimal Index</h2>
-      <a href="#README">🔰 README — Overview of the substrate layer</a>
+  <h2>🧱 Substrate — Minimal RTT/1</h2>
+      <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
     <h3>🔧 Core</h3>
       <a href="#CORE_README">🧩 Core — Foundational substrate primitives</a>
       <a href="#HIGHER_DIMS_WITHIN">🛒 Regime Gates and Dimensional Invocation</a>
@@ -183,14 +222,22 @@ code {
     <h3>🌈 Utils</h3>
       <a href="#UTILS_README">🛠️ Utils — Utility functions and helper surfaces</a>
     <h3>🏗️ Triadic Tools</h3> 
-      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
       <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
       <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
       <a href="https://www.triadicframeworks.org/packages/">📦 RTT Packages and Cores</a>
-      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack v1.3 CLI Tools</a>
-      <a href="https://www.triadicframeworks.org/schemas/">📚 Schemas | RTT</a>  
-      <a href="../">🔙</a>
-   <!-- RTT Session Header (canonical stub) -->
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>     
+      <a href="../">🔙TFT</a>
+   <!-- RTT Canonical Signature -->
 <section id="rtt-session-header" data-rtt="1" data-coherence="declared"
          data-drift="bounded" data-paradox="structural">
   <h2>RTT Session Context</h2>
@@ -213,17 +260,26 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 <script>
 
 const DOC_MAP = {
-  README: 'README.md',
-  ABOUT: '../ABOUT.md', 
-  // core/
-  CORE_README: 'core/README.md',
-  HIGHER_DIMS_WITHIN: 'core/Regime_Gates_and_Dimensional_Invocation.md',
-  FAILURE_READINESS: 'core/Failure_Readiness.md',    
-  // operators/
-  OPERATORS_README: 'operators/README.md',
-  ARRIVAL: 'operators/Arrival_as_Operator.md',
-  // utils/
-  UTILS_README: 'utils/README.md',
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // core/
+      CORE_README: 'core/README.md',
+      HIGHER_DIMS_WITHIN: 'core/Regime_Gates_and_Dimensional_Invocation.md',
+      FAILURE_READINESS: 'core/Failure_Readiness.md', 
+      // operators/
+      OPERATORS_README: 'operators/README.md',
+      ARRIVAL: 'operators/Arrival_as_Operator.md',
+      // utils/
+      UTILS_README: 'utils/README.md',
 };
   
 function loadFromHash() {
