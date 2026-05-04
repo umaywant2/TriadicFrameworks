@@ -1,5 +1,7 @@
 # Google SEO Interpreter (TriadicFrameworks)
 
+- [`Google_module.json`](Google_module.json) — Agentic module schema role assignments
+
 A dimensional, regime-aware interpreter for Google search results using TriadicFrameworks operator grammar.  
 Use this page to learn the A/B/C/D modes and copy/paste the examples.
 
