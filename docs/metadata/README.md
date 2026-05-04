@@ -1,4 +1,6 @@
-## 🧾 Metadata
+# 🧾 Metadata  
+
+- [`metadata_module.json`](metadata_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -14,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+<img src="https://img.shields.io/badge/🟦Metadata-📘Catalog%20Layer%20AI%20Ready-4c8eda?style=for-the-badge" alt="Metadata | Catalog Layer • AI‑Ready"/>
 
 This folder contains **descriptive indexes and tables**.  
 Metadata ensures discoverability, clarity, and remix lineage.
