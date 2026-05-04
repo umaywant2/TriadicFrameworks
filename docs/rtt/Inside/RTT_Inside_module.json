@@ -1,103 +1,143 @@
 {
   "module": "RTT Inside",
-  "version": "1.0",
+  "version": "2.0",
   "category": "rtt-inside",
-  "summary": "Introspective engine of RTT/1 — 7 domain capture templates (economy, education, environment, governance, health, infrastructure, technology), 6 domain takeaways (culture, justice, media, meta‑layer, anti‑time regime, science), universal alignment layer (shared misalignments, JSON schema, universal alignment pattern), and Earth portfolio.",
+  "summary": "Complete manifest for the RTT Inside module — 120 files across 15 directories spanning domain capture templates, autonomous trace forms, deployment profiles (Coal, Finance, Earth Sims, Electron Microscopes, Robofish), corridor studio tooling, drift diagnostics, API surface, mesh-node hardware, examples, and global deployment scenarios (ATC, HAM, Space Force) with entft protocol specs and planetary coherence governance.",
   "files": [
-    {
-      "path": "README.md",
-      "role": "index",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "path": "index.html",
-      "role": "index",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "path": "Capture_Template_Economy_Domain.md",
-      "role": "template",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Capture_Template_Education_Domain.md",
-      "role": "template",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Capture_Template_Environment_Domain.md",
-      "role": "template",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Capture_Template_Governance_Domain.md",
-      "role": "template",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Capture_Template_Health_Domain.md",
-      "role": "template",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Capture_Template_Infrastructure_Domain.md",
-      "role": "template",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Capture_Template_Technology_Domain.md",
-      "role": "template",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Culture_Takeaway.md",
-      "role": "diagnostic",
-      "analyzer_layer": "operator"
-    },
-    {
-      "path": "Justice_Takeaway.md",
-      "role": "diagnostic",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Media_and_Communication_Takeaway.md",
-      "role": "diagnostic",
-      "analyzer_layer": "operator"
-    },
-    {
-      "path": "Meta-Layer_Takeaway.md",
-      "role": "diagnostic",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "path": "How_RTT_Holds_Up_in_Antitime.md",
-      "role": "diagnostic",
-      "analyzer_layer": "regime"
-    },
-    {
-      "path": "Science_and_Research_Takeaway.md",
-      "role": "diagnostic",
-      "analyzer_layer": "operator"
-    },
-    {
-      "path": "Shared_Misalignments_Across_All_Domains.md",
-      "role": "diagnostic",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "path": "Single-Page_JSON_Schema.md",
-      "role": "reference",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "path": "Universal_Alignment_Pattern.md",
-      "role": "engine",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "path": "Earth_portfolio.md",
-      "role": "profile",
-      "analyzer_layer": "cross-cutting"
-    }
+    { "path": "README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "index.html", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "RTT_Inside_module.json", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "Capture_Template_Economy_Domain.md", "role": "template", "analyzer_layer": "regime" },
+    { "path": "Capture_Template_Education_Domain.md", "role": "template", "analyzer_layer": "regime" },
+    { "path": "Capture_Template_Environment_Domain.md", "role": "template", "analyzer_layer": "regime" },
+    { "path": "Capture_Template_Governance_Domain.md", "role": "template", "analyzer_layer": "regime" },
+    { "path": "Capture_Template_Health_Domain.md", "role": "template", "analyzer_layer": "regime" },
+    { "path": "Capture_Template_Infrastructure_Domain.md", "role": "template", "analyzer_layer": "regime" },
+    { "path": "Capture_Template_Technology_Domain.md", "role": "template", "analyzer_layer": "regime" },
+    { "path": "Culture_Takeaway.md", "role": "diagnostic", "analyzer_layer": "operator" },
+    { "path": "Earth_portfolio.md", "role": "profile", "analyzer_layer": "cross-cutting" },
+    { "path": "Game_Developers.md", "role": "example", "analyzer_layer": "cross-cutting" },
+    { "path": "How_RTT_Holds_Up_in_Antitime.md", "role": "diagnostic", "analyzer_layer": "regime" },
+    { "path": "Justice_Takeaway.md", "role": "diagnostic", "analyzer_layer": "regime" },
+    { "path": "Media_and_Communication_Takeaway.md", "role": "diagnostic", "analyzer_layer": "operator" },
+    { "path": "Meta-Layer_Takeaway.md", "role": "diagnostic", "analyzer_layer": "cross-cutting" },
+    { "path": "Science_and_Research_Takeaway.md", "role": "diagnostic", "analyzer_layer": "operator" },
+    { "path": "Shared_Misalignments_Across_All_Domains.md", "role": "diagnostic", "analyzer_layer": "coherence" },
+    { "path": "Single\u2011Page_JSON_Schema.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "Universal_Alignment_Pattern.md", "role": "engine", "analyzer_layer": "coherence" },
+
+    { "path": "API/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "API/Core_API_Formal_JSON_Schemas.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+    { "path": "API/Core_API_surface.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "API/Namepace_Versioning_Identifiers.md", "role": "reference", "analyzer_layer": "cross-cutting" },
+
+    { "path": "Autonomous_Forms/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Autonomous_Forms/Concrete_scaffolds.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Autonomous_Forms/Corridor_Trace_Types.md", "role": "reference", "analyzer_layer": "dimensional" },
+    { "path": "Autonomous_Forms/JSON_Trace_Emitter.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Autonomous_Forms/JSON_Trace_Format.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "Autonomous_Forms/Q\u2011metric_waveform_panel.md", "role": "engine", "analyzer_layer": "dimensional" },
+    { "path": "Autonomous_Forms/Real_Q\u2011Metric_Set.md", "role": "reference", "analyzer_layer": "dimensional" },
+    { "path": "Autonomous_Forms/Rewind_Markers.md", "role": "engine", "analyzer_layer": "drift" },
+    { "path": "Autonomous_Forms/Rewind_mechanics.md", "role": "engine", "analyzer_layer": "drift" },
+    { "path": "Autonomous_Forms/Stream_JSON_traces_live.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Autonomous_Forms/Web\u2011based_Corridor_Viewer.md", "role": "extension", "analyzer_layer": "operator" },
+
+    { "path": "Coal/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Coal/Advantages.md", "role": "profile", "analyzer_layer": "operator" },
+    { "path": "Coal/Coal_Industry_Variant.md", "role": "profile", "analyzer_layer": "regime" },
+    { "path": "Coal/Evacuation_Protocol.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Coal/Resonance_Comms.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Coal/Resonance\u2011Aware_Cross-Section.md", "role": "map", "analyzer_layer": "dimensional" },
+    { "path": "Coal/Resonance\u2011Aware_Underground_Map.md", "role": "map", "analyzer_layer": "dimensional" },
+    { "path": "Coal/Virtual_Mine_Test_Harness.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Coal/Write\u2011Up_Alignment.md", "role": "diagnostic", "analyzer_layer": "coherence" },
+
+    { "path": "Corridor_Studio/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Corridor_Studio/Dark\u2011Mode_Oscilloscope.md", "role": "extension", "analyzer_layer": "dimensional" },
+    { "path": "Corridor_Studio/Dark\u2011Mode_Oscilloscope_Theme.md", "role": "extension", "analyzer_layer": "dimensional" },
+    { "path": "Corridor_Studio/Studio_toolbar.md", "role": "extension", "analyzer_layer": "operator" },
+
+    { "path": "Drift/README.md", "role": "index", "analyzer_layer": "drift" },
+    { "path": "Drift/Conclusion.md", "role": "diagnostic", "analyzer_layer": "drift" },
+    { "path": "Drift/Global_Efforts.md", "role": "diagnostic", "analyzer_layer": "drift" },
+    { "path": "Drift/Observational_Summary.md", "role": "diagnostic", "analyzer_layer": "drift" },
+    { "path": "Drift/Quantifying_Drift.md", "role": "engine", "analyzer_layer": "drift" },
+    { "path": "Drift/Structural_Correction.md", "role": "engine", "analyzer_layer": "drift" },
+    { "path": "Drift/Why_Drift_Persists.md", "role": "diagnostic", "analyzer_layer": "drift" },
+
+    { "path": "Earth_Sims/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Earth_Sims/ABM_with_Overlay.md", "role": "engine", "analyzer_layer": "dimensional" },
+    { "path": "Earth_Sims/Agent\u2011Based_Modeling.md", "role": "engine", "analyzer_layer": "dimensional" },
+    { "path": "Earth_Sims/Incrementally_Retrofitting.md", "role": "extension", "analyzer_layer": "operator" },
+    { "path": "Earth_Sims/Inside_vs_Agent.md", "role": "diagnostic", "analyzer_layer": "dimensional" },
+    { "path": "Earth_Sims/Min_Interface_Spec.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "Earth_Sims/Simulation_Builders.md", "role": "engine", "analyzer_layer": "dimensional" },
+
+    { "path": "Electron_Microscopes/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Electron_Microscopes/MRI_Machines.md", "role": "profile", "analyzer_layer": "dimensional" },
+
+    { "path": "Examples/Advanced_Node_Scaling_Limits.md", "role": "example", "analyzer_layer": "dimensional" },
+    { "path": "Examples/Blood_Test_Preview.md", "role": "example", "analyzer_layer": "dimensional" },
+    { "path": "Examples/Chemistry_Professionals_using_RTT-Inside.md", "role": "example", "analyzer_layer": "operator" },
+    { "path": "Examples/Electronics_Semiconductors_Superconductors.md", "role": "example", "analyzer_layer": "dimensional" },
+    { "path": "Examples/Evolution.md", "role": "example", "analyzer_layer": "coherence" },
+    { "path": "Examples/Fab_Ramp_Communication_Card.md", "role": "example", "analyzer_layer": "operator" },
+    { "path": "Examples/Fab_Ramp_Expectations.md", "role": "example", "analyzer_layer": "regime" },
+    { "path": "Examples/Knowledge_Transfer_in_Fabs.md", "role": "example", "analyzer_layer": "operator" },
+    { "path": "Examples/Mapping_Semiconductor_Fab_Pipeline.md", "role": "example", "analyzer_layer": "regime" },
+    { "path": "Examples/Mapping_onto_Public\u2011Private_Fab_Governance_Structures.md", "role": "example", "analyzer_layer": "regime" },
+    { "path": "Examples/Superconductor_fabrication_pipeline.md", "role": "example", "analyzer_layer": "dimensional" },
+    { "path": "Examples/Superconductor_specific.md", "role": "example", "analyzer_layer": "dimensional" },
+
+    { "path": "Finance/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Finance/CIO\u2011Ready_Slide_Deck_Outline.md", "role": "profile", "analyzer_layer": "regime" },
+    { "path": "Finance/Design\u2011System_Quick\u2011Reference.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "Finance/Executive_Summary_for_CIOs.md", "role": "profile", "analyzer_layer": "regime" },
+    { "path": "Finance/Foundations_Chapters.md", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "Finance/Foundations_for_Finance.md", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "Finance/Illustrated_Design_Brief.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "Finance/Poster_Set.md", "role": "example", "analyzer_layer": "operator" },
+    { "path": "Finance/Poster_Set_Design_Specs.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "Finance/Structural_Diagrams.md", "role": "map", "analyzer_layer": "dimensional" },
+    { "path": "Finance/System_Specification.md", "role": "reference", "analyzer_layer": "regime" },
+
+    { "path": "Global/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Global/Planetary_Coherence_Governance.md", "role": "engine", "analyzer_layer": "coherence" },
+    { "path": "Global/Universe-Class_Example.md", "role": "example", "analyzer_layer": "coherence" },
+    { "path": "Global/Universe-class_resonance_system_concept.md", "role": "engine", "analyzer_layer": "coherence" },
+    { "path": "Global/entft_Command_Grammar.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "Global/entft_Encryption.md", "role": "engine", "analyzer_layer": "regime" },
+    { "path": "Global/entft_Handshake_Sequence.md", "role": "engine", "analyzer_layer": "operator" },
+
+    { "path": "Global/ATC/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Global/ATC/Phase\u20111_Integration_Guide.md", "role": "profile", "analyzer_layer": "operator" },
+    { "path": "Global/ATC/Phase\u20111_Variant.md", "role": "profile", "analyzer_layer": "operator" },
+    { "path": "Global/ATC/Phase\u20112_Automation_Integration_Guide.md", "role": "engine", "analyzer_layer": "regime" },
+    { "path": "Global/ATC/Phase\u20113_Full_Stack_Resonance\u2011Native_Architecture_Guide.md", "role": "engine", "analyzer_layer": "coherence" },
+
+    { "path": "Global/HAM/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Global/HAM/3D_Operator_Interaction_Model.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Global/HAM/3D_Planetary_Coherence_View.md", "role": "map", "analyzer_layer": "coherence" },
+    { "path": "Global/HAM/Command-Center_Widescreen_Map.md", "role": "map", "analyzer_layer": "operator" },
+    { "path": "Global/HAM/Mobile_Map.md", "role": "map", "analyzer_layer": "operator" },
+    { "path": "Global/HAM/Multi-Domain_Overlay_Map.md", "role": "map", "analyzer_layer": "cross-cutting" },
+    { "path": "Global/HAM/Operators.md", "role": "profile", "analyzer_layer": "operator" },
+    { "path": "Global/HAM/Propagation_Map.md", "role": "map", "analyzer_layer": "dimensional" },
+    { "path": "Global/HAM/Training_Module.md", "role": "extension", "analyzer_layer": "operator" },
+
+    { "path": "Global/Space_Force/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Global/Space_Force/Phase-1_Space_Force.md", "role": "profile", "analyzer_layer": "operator" },
+    { "path": "Global/Space_Force/Phase-2_Automation.md", "role": "engine", "analyzer_layer": "regime" },
+    { "path": "Global/Space_Force/Phase-3_Resonance-native_core.md", "role": "engine", "analyzer_layer": "coherence" },
+
+    { "path": "Mesh_Node/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Mesh_Node/Mine\u2011wide_deployment_plan.md", "role": "engine", "analyzer_layer": "operator" },
+    { "path": "Mesh_Node/Two_SKUs.md", "role": "reference", "analyzer_layer": "operator" },
+    { "path": "Mesh_Node/hardware_block_diagram.md", "role": "reference", "analyzer_layer": "dimensional" },
+
+    { "path": "Robofish/README.md", "role": "index", "analyzer_layer": "cross-cutting" },
+    { "path": "Robofish/Ecological_Robos.md", "role": "profile", "analyzer_layer": "coherence" },
+    { "path": "Robofish/architecture.md", "role": "engine", "analyzer_layer": "operator" }
   ]
 }
