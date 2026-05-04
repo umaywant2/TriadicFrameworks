@@ -16,7 +16,7 @@
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/🎛️Regimes%20Declared-📐Drift%20Bounded-4c8eda?style=for-the-badge" alt="🎛️Regimes Declared | 📐Drift Bounded"/>
+<img src="https://img.shields.io/badge/🟣AI%20Drift%20Calibration-📘Technical%20Note%20AI_Ready-4c8eda?style=for-the-badge" alt="AI Drift Calibration | Technical Note • AI‑Ready"/>
 
 This document exists to communicate a narrow technical observation:  
 AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign to manage.
