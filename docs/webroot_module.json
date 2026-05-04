@@ -1,218 +1,70 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
   "module": {
-    "name": "TriadicFrameworks Web Root",
-    "path": "docs",
-    "canon_tag": "webroot",
-    "version": "1.0",
-    "layer": "Meta & Governance",
-    "status": "Active, Canonical",
-    "purpose": "Universal root of the TriadicFrameworks ecosystem — the canonical, navigation-first entry point rendered directly as the project website (triadicframeworks.org). Defines the site-wide structural grammar through 13 common scrolls covering identity, principles, ethics, lineage, security, contribution, licensing, and orientation. Parent to all child modules. Designed as an AI-ready substrate — every page stands alone, every module is machine-parsable, and the repo is the single source of truth.",
-    "parent": null,
-    "url": "https://www.triadicframeworks.org/"
+    "name": "TriadicFrameworks Webroot",
+    "id": "webroot",
+    "category": "Root",
+    "version": "RTT/1",
+    "summary": "The root module for the TriadicFrameworks documentation site, providing the canonical entry point for all modules, metadata, and session context.",
+    "purpose": "Serve as the authoritative front door for the TriadicFrameworks canon, defining site-wide identity, metadata standards, and AI-ready navigation surfaces.",
+    "keywords": [
+      "TriadicFrameworks",
+      "RTT",
+      "dimensional computing",
+      "root module",
+      "site identity",
+      "metadata",
+      "session context"
+    ],
+    "audience": ["students", "researchers", "engineers", "educators", "AIs"],
+    "front_door": "index.html",
+    "format": ["html", "json"],
+    "every_page_stands_alone": true
   },
+
   "session_context": {
-    "canon": "active (root-docs)",
-    "modules_linked": [
-      "README.md → all child modules — canonical navigation hub dispatching to RTT, FFT, Frameworks, Diagnostics, Examples",
-      "ABOUT.md ↔ PRINCIPLES.md — identity/intent ↔ structural foundations",
-      "LINEAGE.md → all child modules — 9-element canonical lineage (TFT_3Pack → Universal Translator)",
-      "CONTRIBUTING.md ↔ CODE_OF_CONDUCT.md ↔ SECURITY.md — contribution → behavior → boundaries",
-      "GLOSSARY.md → all child modules — canonical term definitions used across entire ecosystem",
-      "QUICKSTART.md → TFT_3Pack_v1.3/ — onboarding entry into the primary toolkit",
-      "sitemap.md → all child modules — full ecosystem navigation map",
-      "ETHICS_PRIVACY.md ↔ LICENSE.md — ethical posture ↔ legal framework",
-      "Main_README_files.md → all child module READMEs — README authoring standard"
+    "canon": "TriadicFrameworks",
+    "module": "Webroot",
+    "category": "Root",
+    "version": "RTT/1",
+    "coherence": "stable",
+    "drift": "none",
+    "format": ["html", "json"],
+    "front_door": "index.html",
+    "audience": ["students", "researchers", "engineers", "educators", "AIs"],
+    "every_page_stands_alone": true
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "root-navigation",
+      "ai.module",
+      "metadata-surface"
     ],
-    "drift": "minimal (root-locked — structural grammar is invariant by design)",
-    "coherence": "stable (triadic-structural grammar — the grammar that all child modules inherit)",
-    "format": "markdown",
-    "front_door": "exists (docs/README.md → triadicframeworks.org)",
-    "every_page": "stands alone + student-ready + operator-aware + AI-parsable",
-    "audience": [
-      "students",
-      "educators",
-      "developers",
-      "researchers",
-      "AIs",
-      "policymakers"
+    "dimensional": [
+      "coherence",
+      "drift",
+      "triadic-depth"
+    ],
+    "regime": [
+      "root",
+      "site-identity",
+      "navigation"
+    ],
+    "cross_cutting": [
+      "metadata",
+      "session-context",
+      "ai-discovery"
     ]
   },
-  "structural_grammar": {
-    "dimensional_envelope": "D3–D9 (inherited by all child modules)",
-    "regime_envelope": "R1–R3 (full regime range — child modules select within this envelope)",
-    "coherence_envelope": "C1–C3 (root coherence contract inherited ecosystem-wide)",
-    "drift_sensitivity": "minimal (root-locked)",
-    "regime_sensitivity": "high (root defines regime awareness as a structural duty)",
-    "canon_principles": {
-      "P01": "Clarity before complexity",
-      "P02": "Coherence over accumulation",
-      "P03": "Triads as universal teaching units",
-      "P04": "Resonance as a learning primitive",
-      "P05": "Every page stands alone",
-      "P06": "Remix lineage is honored",
-      "P07": "Mythic language is allowed, not required",
-      "P08": "Emotional safety is part of the framework",
-      "P09": "Copilot as collaborative scaffold",
-      "P10": "Love → Legacy → Learning"
+
+  "schema": {
+    "input": {
+      "query": "string (optional)"
     },
-    "site_posture": {
-      "privacy": "Zero ads, zero trackers, zero fingerprinting, zero accounts, minimal cookies",
-      "architecture": "Canonical, modular, AI-parsable — knowledge substrate, not a platform",
-      "ethics": "Clarity, coherence, literacy — founder-driven open science with archival intent",
-      "audience_model": "Dual: humans + AIs as equal first-class readers"
-    },
-    "ai_readiness": {
-      "metadata_standard": "Unified AI-metadata across all modules — purpose, audience, license, navigation",
-      "module_addressability": "Every module is standalone + machine-parsable + callable as a conceptual unit",
-      "session_context_blocks": "Canonical session-context at every level (canon, drift, coherence, format, front_door)",
-      "operator_grammar": "Structural operators (triadic, dimensional, regime, coherence) used as a reasoning API"
-    },
-    "lineage_spine": [
-      "1. Triadic Frameworks (TFT_3Pack) — origin of triadic operator lattice",
-      "2. Mythmatical Model — early emitter/force/field substrate",
-      "3. Nawderian Theorem — dimensional corridor logic",
-      "4. Resonance Protocols (RFCs 019–026) — cleanrooms, partitions, arcs",
-      "5. Manifests & Atlases — registries, idioms, quadrants",
-      "6. Nullaium OS (NoS) — research distribution embedding triadic kernel",
-      "7. Virtual Universe Remix — conceptual universe construction",
-      "8. Collective Consciousness Atlas (RFC-027) — top-100 questions mapped",
-      "9. Universal Translator — resonance-based cross-overlay translation"
-    ],
-    "readme_conventions": {
-      "folder_readme": "Navigation-first — links and structural map, not narrative",
-      "folder_about": "Narrative and context — what the module is and why it exists",
-      "html_menus": "Render markdown — no duplication, no drift",
-      "repo_as_truth": "The repo is the single source of truth for the entire ecosystem"
+    "output": {
+      "triadic_summary": "string",
+      "navigation_map": "array",
+      "module_links": "array"
     }
-  },
-  "cross_module_propagation": {
-    "imports": [
-      "rtt-core (resonance-aware structural grammar — dimensional envelopes, regime modes, coherence levels)",
-      "rtt-inside (wrapped resonance structural aware dimensional cores)",
-      "nawderian-theorem (dimensional corridor logic and resonance constants)"
-    ],
-    "exports": [
-      "Site-wide structural grammar (13 common scrolls defining ecosystem identity and conventions)",
-      "10 canon principles (clarity, coherence, triads, resonance, modularity, lineage, mythic, safety, copilot, love→legacy→learning)",
-      "AI-readiness standard (metadata, module addressability, session-context blocks, operator grammar)",
-      "Privacy/architectural/ethical posture (zero tracking, knowledge substrate, open science)",
-      "9-element canonical lineage spine (TFT_3Pack → Universal Translator)",
-      "README authoring conventions (navigation-first, about-for-narrative, html-renders-markdown)",
-      "Canonical glossary (term definitions used across all child modules)",
-      "Contribution and code-of-conduct framework",
-      "Security and ethics/privacy boundaries",
-      "License framework (ecosystem-wide)",
-      "Sitemap (full ecosystem navigation structure)",
-      "Quickstart onboarding pathway"
-    ]
-  },
-  "submodules": [
-    {
-      "name": "TFT 3Pack",
-      "path": "TFT_3Pack_v1.3/",
-      "file_count": 954,
-      "role": "engine",
-      "manifest": "See tft_3pack_module.json + 13 child module schemas"
-    },
-    {
-      "name": "Governance Substrate Model",
-      "path": "Governance_Substrate_Model/",
-      "file_count": 116,
-      "role": "reference",
-      "manifest": "See gsm_module.json"
-    }
-  ],
-  "files": [
-    {
-      "filename": "README.md",
-      "path": "README.md",
-      "purpose": "Universal entry point — canonical, navigation-first hub for the entire TriadicFrameworks ecosystem. Session context block (canon: active, drift: minimal, coherence: stable). Routes to RTT, FFT, Frameworks & Tools, Domain Primers, Diagnostics, Examples, RFCs. Declares structural canon notes: modular site, minimal markdown, folder READMEs are navigation-first, repo is single source of truth, canon is completed structural substrate.",
-      "role": "index"
-    },
-    {
-      "filename": "ABOUT.md",
-      "path": "ABOUT.md",
-      "purpose": "Origin and intent document — defines TriadicFrameworks as a 'structural learning project for students and AIs'. Authored by Nawder Loswin. Establishes dual-audience model (humans + AIs), AI-metadata standard, privacy posture (zero ads/trackers/accounts), architectural posture (knowledge substrate, not platform), and ethical posture (clarity, coherence, literacy, archival intent). Declares the site a 'universal grammar for change'.",
-      "role": "reference",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "PRINCIPLES.md",
-      "path": "PRINCIPLES.md",
-      "purpose": "The 10 canon principles anchoring the entire ecosystem: (1) clarity before complexity, (2) coherence over accumulation, (3) triads as universal teaching units, (4) resonance as learning primitive, (5) every page stands alone, (6) remix lineage honored, (7) mythic language allowed not required, (8) emotional safety, (9) copilot as collaborative scaffold, (10) love→legacy→learning. Includes the FFF totemic appendix (origin signal: I'm here, I see you, I love you).",
-      "role": "reference",
-      "analyzer_layer": "coherence"
-    },
-    {
-      "filename": "LINEAGE.md",
-      "path": "LINEAGE.md",
-      "purpose": "9-element canonical lineage from TFT_3Pack through Universal Translator — traces the structural evolution of the canon with lineage→modules mapping table. Aligned with 2026 canon: removes deprecated terminology, preserves historical accuracy, matches modern module system.",
-      "role": "reference",
-      "analyzer_layer": "drift"
-    },
-    {
-      "filename": "GLOSSARY.md",
-      "path": "GLOSSARY.md",
-      "purpose": "Canonical term definitions used across the entire ecosystem — short, precise entries for operators, regimes, coherence, resonance, dimensional envelopes, and structural grammar concepts.",
-      "role": "reference",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "QUICKSTART.md",
-      "path": "QUICKSTART.md",
-      "purpose": "Ecosystem-wide onboarding — step-by-step entry into TriadicFrameworks for new students, developers, and AIs. Routes to TFT_3Pack for hands-on practice.",
-      "role": "reference",
-      "analyzer_layer": "operator"
-    },
-    {
-      "filename": "CONTRIBUTING.md",
-      "path": "CONTRIBUTING.md",
-      "purpose": "Contribution framework — how to help safely and canonically. Defines contribution pathways, pull request conventions, and remix lineage preservation requirements.",
-      "role": "reference",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "CODE_OF_CONDUCT.md",
-      "path": "CODE_OF_CONDUCT.md",
-      "purpose": "Behavioral framework for ecosystem participants — defines expectations for respectful collaboration, structural safety, and community integrity.",
-      "role": "reference",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "SECURITY.md",
-      "path": "SECURITY.md",
-      "purpose": "Security boundaries — responsible use guidelines, vulnerability disclosure process, and structural boundary definitions for the ecosystem.",
-      "role": "reference",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "ETHICS_PRIVACY.md",
-      "path": "ETHICS_PRIVACY.md",
-      "purpose": "Ethics and privacy posture — zero-tracking declaration, data handling principles, consent framework, and alignment with the 'public library not platform' architectural stance.",
-      "role": "reference",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "LICENSE.md",
-      "path": "LICENSE.md",
-      "purpose": "Ecosystem-wide license framework — legal terms governing use, remix, and redistribution of TriadicFrameworks content and tools.",
-      "role": "reference",
-      "analyzer_layer": "regime"
-    },
-    {
-      "filename": "sitemap.md",
-      "path": "sitemap.md",
-      "purpose": "Full ecosystem navigation map — structured index of all modules, sections, and entry points across the TriadicFrameworks site.",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
-    },
-    {
-      "filename": "Main_README_files.md",
-      "path": "Main_README_files.md",
-      "purpose": "README authoring standard — defines the convention that folder READMEs are navigation-first, ABOUT files hold narrative, HTML menus render markdown without duplication, and the repo is the single source of truth.",
-      "role": "reference",
-      "analyzer_layer": "coherence"
-    }
-  ]
+  }
 }
