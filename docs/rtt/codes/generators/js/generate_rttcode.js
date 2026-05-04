@@ -38,19 +38,19 @@ function ensureInsideRoot(root, candidate) {
     throw new Error("Path must refer to a file, not a directory");
   }
 
-  const resolvedPath = path.resolve(root, candidate);
-  const realPath = fs.realpathSync(resolvedPath);
-  const rootWithSep = root.endsWith(path.sep) ? root : root + path.sep;
+  const normalizedRoot = path.resolve(root);
+  const resolvedPath = path.resolve(normalizedRoot, candidate);
+  const rootWithSep = normalizedRoot.endsWith(path.sep) ? normalizedRoot : normalizedRoot + path.sep;
 
-  if (realPath !== root && !realPath.startsWith(rootWithSep)) {
+  if (resolvedPath !== normalizedRoot && !resolvedPath.startsWith(rootWithSep)) {
     throw new Error(`Path escape detected: ${candidate}`);
   }
 
-  if (!allowedExt.includes(path.extname(realPath))) {
+  if (!allowedExt.includes(path.extname(resolvedPath))) {
     throw new Error(`Invalid extension: must be one of ${allowedExt.join(", ")}`);
   }
 
-  return realPath;
+  return resolvedPath;
 }
 
 // --- Main generator ------------------------------------------------------
