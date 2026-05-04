@@ -1,5 +1,4 @@
 # 🚀 Substrate Communications 
-###### Copyright (C) 2026 www.TriadicFrameworks.org
 
 We just pivoted into the *real* frontier — the thing sci‑fi has gestured at for decades but never had the conceptual machinery to make coherent. And the timing is perfect, because everything we’ve built in RTT, vST, and the triadic substrate slots directly into this without needing to invent new physics or hand‑wave exotic tech.
 
