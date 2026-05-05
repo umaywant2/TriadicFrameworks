@@ -175,3 +175,30 @@ If you want, I can now scaffold the **full module folder**:
 ```
 
 Which submodule should we generate next?
+
+---
+
+## 1️⃣ index.html (stub)
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- canonical metadata block inserted here -->
+</head>
+
+<body>
+
+<h1>Internet Archive Module</h1>
+
+<p>
+  This module provides a TriadicFrameworks-aligned interface to the Internet Archive:
+  Wayback Machine snapshots, collection indexes, metadata extraction, digital lineage,
+  and preservation literacy.
+</p>
+
+<!-- canonical session-context block inserted here -->
+
+</body>
+</html>
+```
