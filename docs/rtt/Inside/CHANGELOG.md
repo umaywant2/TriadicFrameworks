@@ -1,7 +1,7 @@
 # ✅ **RTT/Inside — CHANGELOG.md**  
 ### **v2.0 (2026‑05‑03) — Canonical Refresh**
 
-This release replaces the early RTT/Inside draft (v1.0, 2025) with the fully‑realized **RTT‑Inside v2.0** architecture.  
+This release replaces the early RTT/Inside draft (v1.0, 2025) with the fully‑realized **RTT/Inside v2.0** architecture.  
 The module is now stable, canonical, AI‑parsable, and aligned with the RTT‑Tech spine.
 
 ---
@@ -79,7 +79,7 @@ The module is now stable, canonical, AI‑parsable, and aligned with the RTT‑T
   - `/Inside/Robofish/`  
 
 ### **9. RTT‑Tech Spine Integration**
-- Added RTT‑Inside → RTT‑Core → RTT‑App integration.  
+- Added RTT/Inside → RTT‑Core → RTT‑App integration.  
 - Added crosslinks to:
   - Substrate Flow  
   - Harmonic Stability Profile  
@@ -150,4 +150,4 @@ RTT/Inside v2.0 is now:
 - **Student‑ready**  
 - **Production‑grade**  
 
-This is the first *complete* version of RTT‑Inside.
+This is the first *complete* version of RTT/Inside.
