@@ -59,7 +59,7 @@ We welcome contributions that expand the substrate, add overlays, or improve doc
 
 ---
 
-## 🌱 Contributing
+## 🌱 Donations
 
 TriadicFrameworks is built as a public‑good ecosystem.  
 If any RTT materials, guides, or tools have helped you, the most meaningful way to support this work is to pass that clarity forward.
@@ -81,3 +81,18 @@ https://archive.org
 Your contribution to any of these organizations helps strengthen the broader field of coherence, alignment, and long‑arc stewardship.
 
 Thank you for supporting clarity in all its forms.
+
+---
+
+### 🔺 Triadic Donation Model
+Support clarity, alignment, and lineage by donating to one of the three aligned organizations.  
+Your contribution strengthens the broader field of coherence and long‑arc stewardship.
+
+---
+
+🔺 **Triadic Support Path**  
+**Clarity • Alignment • Lineage**
+
+---
+
+🔺 *Support the Triad*
