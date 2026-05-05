@@ -7,10 +7,10 @@
 
 Let:
 
-- ** $$E_2$$ :** two‑eye physical observer (sensory)  
-- ** $$E_1$$ :** one‑eye integrator (imagination / inference)  
-- ** $$V$$ :** visible 1/3 regime  
-- ** $$H$$ :** hidden 2/3 regime  
+- $$E_2$$ two‑eye physical observer (sensory)  
+- $$E_1$$ one‑eye integrator (imagination / inference)  
+- $$V$$ visible 1/3 regime  
+- $$H$$ hidden 2/3 regime  
 
 Define the operator:
 
