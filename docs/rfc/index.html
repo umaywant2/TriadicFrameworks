@@ -79,7 +79,35 @@
   --shadow: 0 0 20px rgba(0,0,0,0.4);
   --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
   --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  }
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
 
   /* Base layout */
   html { scroll-behavior: smooth; }
@@ -122,7 +150,7 @@
   color: #cfe8ff;
   }
 
-  /* Context Block */
+ /* Context Block */
   .context-block {
     font-family: monospace;
     font-size: 0.95rem;
@@ -141,7 +169,7 @@
   .context-value {
     color: #ffffff; /* white */
   }
-      
+       
 nav {
   width: 260px;
   float: left;
@@ -210,7 +238,7 @@ code {
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
  </p> 
-      
+  
   <h2>📘 RFC Core Index & Framework Roots</h2>
       <a href="#README">🔰 README</a>
       <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
@@ -497,15 +525,15 @@ const DOC_MAP = {
       'RFC-WF-0008': 'RFC‑WF‑0008_Batch_Orchestration_for_Corridor_Validation.md',
       'RFC-WF-0016': 'RFC‑WF‑0016_Remix_Generation_Workflow.md',
 };
-
-
+  
 function loadFromHash() {
-    const hash = window.location.hash.substring(1);
-    if (hash && DOC_MAP[hash]) {
-        loadDoc(DOC_MAP[hash]);
-    }
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
 }
-
 function loadDoc(file) {
   fetch(file)
     .then(response => {
@@ -524,17 +552,13 @@ function loadDoc(file) {
     })
     .catch(err => {
       document.getElementById('content').innerHTML =
-        "<p style='color:#ff8080;'>Unable to load document: ${file}</p>";
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
       console.error(err);
     });
 }
   
-window.onload = loadFromHash;
-window.onhashchange = loadFromHash;
-
-if (!window.location.hash) {
-    loadDoc("RFC-000-index.md");
-}
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
 
 </script>
 
