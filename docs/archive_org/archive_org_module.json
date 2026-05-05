@@ -1,0 +1,93 @@
+{
+  "module": {
+    "name": "Internet Archive Module",
+    "id": "archive_org.core",
+    "category": "External-Archive",
+    "version": "1.0",
+    "summary": "TriadicFrameworks interface to the Internet Archive: preservation substrate, Wayback Machine access, collection metadata, digital lineage, and archival literacy.",
+    "purpose": "Provide a structured, AI-parsable module that mirrors the Internet Archive’s preservation architecture, enabling students and AIs to navigate collections, metadata, snapshots, and digital lineage with RTT-aligned clarity.",
+    "keywords": [
+      "internet archive",
+      "archive.org",
+      "wayback machine",
+      "digital preservation",
+      "archival literacy",
+      "collections",
+      "metadata",
+      "digital lineage",
+      "open access"
+    ],
+    "audience": [
+      "students",
+      "researchers",
+      "historians",
+      "developers",
+      "archivists",
+      "AIs"
+    ],
+    "front_door": "index.html",
+    "format": ["html", "markdown", "json"],
+    "every_page_stands_alone": true
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Internet Archive Module",
+    "category": "External-Archive",
+    "version": "1.0",
+    "coherence": "stable",
+    "drift": "minimal",
+    "format": ["html", "markdown", "json"],
+    "front_door": "index.html",
+    "audience": [
+      "students",
+      "researchers",
+      "historians",
+      "developers",
+      "archivists",
+      "AIs"
+    ],
+    "every_page_stands_alone": true
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "wayback-snapshot",
+      "collection-index",
+      "metadata-extractor",
+      "digital-lineage",
+      "preservation-scan"
+    ],
+    "dimensional": [
+      "time",
+      "version",
+      "lineage",
+      "collection-depth"
+    ],
+    "regime": [
+      "digital-preservation",
+      "open-access",
+      "archival-literacy"
+    ],
+    "cross_cutting": [
+      "metadata",
+      "retrieval",
+      "provenance",
+      "public-domain-awareness"
+    ]
+  },
+
+  "schema": {
+    "input": {
+      "url": "string (optional)",
+      "collection": "string (optional)",
+      "timestamp": "string (optional)"
+    },
+    "output": {
+      "snapshot": "object (Wayback Machine result)",
+      "collection_index": "array",
+      "metadata_profile": "object",
+      "lineage_trace": "array"
+    }
+  }
+}
