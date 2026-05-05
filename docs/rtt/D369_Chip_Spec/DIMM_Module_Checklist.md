@@ -401,5 +401,3 @@ This checklist exists so memory engineers can say:
 - **DDR generation applicability matrix** makes DDR5 the clear inflection point — the I³C sideband bus, per‑module PMIC, and SPD Hub architecture make structural observability physically feasible for the first time.
 - **Existing infrastructure mapping** shows the gap is *semantic, not electrical* — the wires are already there in DDR5; what's missing is the structural meaning.
 - **RDIMM topology diagram** with the dashed D369 layer visually separates "what exists today" from "what would be reserved."
-
-natural next fills would be **Engineering_Rationale.md** (Page 2 of the three‑page contract) or **Non_Claims.md** (Page 3) to complete the contract package — just let me know which one you'd like next.
