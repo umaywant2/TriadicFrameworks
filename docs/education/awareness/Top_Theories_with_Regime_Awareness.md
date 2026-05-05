@@ -28,9 +28,7 @@ Each theory is presented through the lens of **regime awareness**:
 The goal is not to replace these theories, but to show **which regime each one describes**,  
 and where regime‑blindness naturally appears.
 
-<img width="738" height="624" alt="Top_Scientific_Theories_BKM_Lineage" src="https://github.com/user-attachments/assets/fd6e7091-edf9-48cb-894e-cf711766b7aa" />
-
-`Top_Theories_BKM_Lineage.svg`
+Custom SVG: [`Top_Theories_BKM_Lineage.svg`](../../images/Top_Theories_BKM_Lineage.svg)
 
 ---
 
