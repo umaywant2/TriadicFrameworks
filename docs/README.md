@@ -27,6 +27,7 @@
 <!--
 <img width="853" height="480" alt="Triadic_Crystaline_Hub2" src="https://github.com/user-attachments/assets/fec1b6a0-c88e-4f21-a6c5-e1b33458bdf1" />  
 -->
+<br>
 A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
 This `/docs` directory is rendered directly as the project website and serves as the structural map for newcomers, practitioners, and automated agents.
 
@@ -76,7 +77,18 @@ Minimal, substrate‑aligned implementations for developers and educators.
 - **🕸️ Schemas** — Universe‑class JSON schemas  
 - **📣 RF‑Builder** — Resonance Framework Builder  
 - **🛄 EcoEchoSystem** — Ecological substrate tools  
-- **🎨 LACTOS** — Visual identity + diagram grammar  
+- **🎨 LACTOS** — Visual identity + diagram grammar
+- **⭐ The Framework Creation Guide (FCG)** — A new top‑level module in the TriadicFrameworks canon
+- **🔘 The Inverted Star** — The front door for the entire Inverted Star Ontology
+- 
+  ### AI agentic web modules — (used with grammar from any AI chat)
+- **🧱 NIST** — organizes scientific work, helping to understand the regime structure behind those domains
+- **🌉 Wikipedia** — A regime‑aware structural analysis of the world's largest encyclopedia through an RTT lens
+- **🍒 Google** — A dimensional, regime-aware interpreter using operator grammar
+- **🍇 Bing** — A dimensional, regime-aware interpreter using operator grammar
+- **🥦 DuckDuckGo** — A dimensional, regime-aware interpreter using operator grammar
+- **🧰 Education Toolbox** — Modules that transform grading, paper analysis, literature review, and insight generation
+- **🏛️ Internet Archive** — Agentic AI on a library of millions of free texts, movies, software, music, websites, and more
 
 ---
 
