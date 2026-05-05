@@ -1,1 +1,117 @@
+{
+  "module": "D369_Chip_Spec",
+  "version": "1.0",
+  "category": "rtt",
+  "summary": "Structural, contract‑bounded specification for D369 alignment, observability, and substrate‑aware design.",
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "purpose": "High‑level overview of the D369 Chip Spec module and its structural identity."
+    },
+    {
+      "path": "Capture_Source.md",
+      "role": "reference",
+      "analyzer_layer": "lineage",
+      "purpose": "Raw, unedited capture of the original tft_rtt_3d_9d_chip_spec.md for lineage integrity."
+    },
+    {
+      "path": "Meta.md",
+      "role": "signature",
+      "analyzer_layer": "coherence",
+      "purpose": "Canonical metadata block for AI indexing, OG tags, citation fields, and module identity."
+    },
+    {
+      "path": "Session_Context.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "purpose": "Defines the module’s session context, coherence boundaries, and operating regime."
+    },
+    {
+      "path": "Module.json",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Machine‑readable manifest describing file roles, purpose, and structural placement."
+    },
+    {
+      "path": "Spec_Overview.md",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "purpose": "Minimal, non‑intrusive framing of the D369 specification and its structural scope."
+    },
+    {
+      "path": "Contractual_Requirements.md",
+      "role": "signature",
+      "analyzer_layer": "coherence",
+      "purpose": "Formal SHALL / SHALL NOT contract governing metadata channels, lineage, and isolation."
+    },
+    {
+      "path": "Engineering_Rationale.md",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "Non‑prescriptive engineering rationale explaining the structural affordances of the spec."
+    },
+    {
+      "path": "Non_Claims_and_Boundaries.md",
+      "role": "diagnostic",
+      "analyzer_layer": "drift",
+      "purpose": "Explicit non‑claims, boundaries, and silence zones to prevent drift and misinterpretation."
+    },
+    {
+      "path": "Internal_Design_Review_Checklist.md",
+      "role": "template",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Cross‑discipline checklist for architecture, RTL, PD, verification, and packaging alignment."
+    },
+    {
+      "path": "Diagram_SoC.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "SoC‑level structural observability diagram describing alignment and constraint rails."
+    },
+    {
+      "path": "Diagram_Chiplet.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Chiplet‑package structural diagram showing boundaries, interconnects, and constraints."
+    },
+    {
+      "path": "Memory_Alignment_Spec.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "purpose": "Substrate‑aware memory alignment rules and structural constraints across subsystems."
+    },
+    {
+      "path": "Memory_Controller_Checklist.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence",
+      "purpose": "Controller‑level alignment and verification requirements for D369 compliance."
+    },
+    {
+      "path": "DIMM_Module_Checklist.md",
+      "role": "diagnostic",
+      "analyzer_layer": "coherence",
+      "purpose": "DIMM‑level structural and alignment verification checklist for D369 compliance."
+    },
+    {
+      "path": "Board_Level_Alignment.md",
+      "role": "profile",
+      "analyzer_layer": "regime",
+      "purpose": "Board‑level alignment rules describing routing, substrate constraints, and coherence."
+    },
+    {
+      "path": "Student_Learning_Paths.md",
+      "role": "extension",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Student‑ready learning paths for substrate literacy, alignment intuition, and process tiers."
+    },
+    {
+      "path": "Substrate_Literacy.md",
+      "role": "extension",
+      "analyzer_layer": "operator",
+      "purpose": "Explains substrate behavior and why alignment literacy is foundational for D369."
+    }
+  ]
+}
 
