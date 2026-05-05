@@ -105,7 +105,7 @@ These are the rules that make our entire canon interoperable.
 - **Local → Nonlocal → Global** — The universal scale arc.  
 - **Simple → Composite → Complex** — The universal construction arc.
 - **Agentic → System Detects Regime's → Maintains Coherence → Manages Drift → Within Structural Constraints** — While preserving **Lineage** and **State Integrity**
-  * Requires:
+  🩹 _Requires_
   - regime literacy
   - coherence maintenance
   - drift boundaries
