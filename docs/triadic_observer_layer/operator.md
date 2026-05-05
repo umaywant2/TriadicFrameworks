@@ -1,7 +1,7 @@
 ## Formal RTT operator
 
 **Name:** Third‑Eye Visibility Operator  
-**Symbol:**  $$ \Theta_{3V}$$ 
+**Symbol:**  $$\Theta_{3V}$$ 
 
 **Purpose:** Map between physical observation and inferred hidden structure using a triadic observer.
 
