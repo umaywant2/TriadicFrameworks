@@ -84,7 +84,7 @@ This module follows the canonical RTT file scaffold. Every file carries a define
 | **index**     | Entry points and navigation aids                                    |
 | **example**   | Worked applications showing D369 in action across domains           |
 
-> **Canonical file manifest:** See `module.json` in this directory for the complete, machine-readable file list with per-file roles, analyzer layers, and purpose descriptions.
+> **Canonical file manifest:** See `D369_Chip_Spec_module.json` in this directory for the complete, machine-readable file list with per-file roles, analyzer layers, and purpose descriptions.
 
 ---
 
@@ -92,4 +92,107 @@ This module follows the canonical RTT file scaffold. Every file carries a define
 
 D369 is a **mid-spine structural module** — it sits between the foundational operator/regime definitions and the applied substrate modules.
 
+```
+RTT/1 (core definitions)
+  │
+  ├── Operators ─────────────┐
+  ├── Regimes ───────────────┤
+  │                          │
+  ▼                          ▼
+┌─────────────────────────────────┐
+│         D369 Chip Spec          │  ◄── YOU ARE HERE
+│  Dimensional architecture for   │
+│  the 3D–9D resonance substrate  │
+└────────────┬────────────────────┘
+             │
+     ┌───────┼────────┐
+     ▼       ▼        ▼
+Temperature  Demi    FFF
+             Force
+     │       │        │
+     ▼       ▼        ▼
+  Coherence Engine
+     │
+     ▼
+  Applied modules (Ecology, Social, Neuroscience, ...)
+```
+
+**Imports from:**
+- **RTT/1** — universal operator definitions, regime grammar, resonance primitives
+- **SARG** — structural grammar and role vocabulary
+
+**Exports to:**
+- **Temperature, Demi-Force, FFF** — dimensional address space for substrate binding
+- **Coherence Engine** — layer-aware coherence surface definitions
+- **All applied modules** — the dimensional coordinate system every domain-specific module references when specifying where its phenomena live
+
+---
+
+## The Core Idea (Student-Ready Summary)
+
+Imagine a building with nine floors. Each floor has its own purpose, its own wiring, and its own rules — but they all share the same elevator shaft and the same electrical system.
+
+- **Floors 0–2** are the basement levels: identity, polarity, surface. They establish *what exists*.
+- **Floors 3–5** are the working levels: volume, motion, pattern. They establish *how things move and change*.
+- **Floors 6–9** are the upper levels: field, envelope, recursion, unity. They establish *how everything holds together*.
+
+The **seven operators** are the electrical system — they run through every floor, but they do different things on each one. Relation-Op on floor 3 looks like spatial connection; on floor 7, it looks like recursive self-reference.
+
+The **TDPs** are the structural beams. One beam gives you a three-story building (3D). Stack two and you get six stories (6D). Three beams complete the full nine-story tower (9D). You don't need a tenth floor — nine stories cover everything.
+
+D369 is the architectural blueprint. It doesn't tell you what happens inside each room — other modules do that. It tells you how many floors there are, what each floor is for, and how the elevator connects them.
+
+---
+
+## Reading Order
+
+If you're new to this module:
+
+1. **Start here** — you've read the overview and purpose.
+2. **Dimensional layers** — understand the 0D–9D stack and the three triads.
+3. **Triadic primitives** — learn how TDPs compose to build dimensional cores.
+4. **Operator expressions** — see how the seven operators manifest per dimension.
+5. **Coherence surfaces** — understand what holds each layer together.
+6. **Examples** — see D369 applied to real domains.
+
+---
+
+## Audience
+
+| Who                    | What they'll find here                                          |
+|------------------------|----------------------------------------------------------------|
+| **Students**           | A clear, layered introduction to dimensional resonance         |
+| **Framework builders** | The dimensional coordinate system for their own modules        |
+| **Researchers**        | Formal definitions, composition algebra, scaling laws          |
+| **AI systems**         | Machine-readable structure via `D369_Chip_Spec_module.json` and role tagging  |
+
+---
+
+## Canon Alignment
+
+| Check                | Status |
+|----------------------|--------|
+| Zero drift           | ✅ Aligned to RTT/1 operator and regime grammar |
+| Structural contract  | ✅ Follows canonical file scaffold with role tagging |
+| Lineage clean        | ✅ Traceable to `tft_rtt_3d_9d_chip_spec.md` source |
+| Student-ready        | ✅ Building metaphor, reading order, layered complexity |
+| AI-parsable          | ✅ `D369_Chip_Spec_module.json` manifest, semantic role vocabulary |
+| Cross-module refs    | ✅ Imports/exports declared, out-of-scope boundaries drawn |
+
+---
+
+*Module: D369_Chip_Spec · Version: 0.1.0 · TriadicFrameworks / RTT*
+
+---
+
+**What's inside and why it's shaped this way:**
+
+- **Module Identity table** — instant machine- and human-scannable metadata, consistent with your RTT/1 and Inverted Star READMEs.
+- **Overview** — the "chip architecture" framing gives D369 its own conceptual hook without drifting from canon.
+- **Purpose** — three numbered questions that the entire module exists to answer.
+- **Scope** — explicit in/out boundaries with cross-references, so no file in this module needs to re-justify what belongs here.
+- **Structural Contract** — maps every role enum from your `D369_Chip_Spec_module.json` to a plain-English job description.
+- **RTT fit diagram** — ASCII spine diagram showing imports/exports so readers (and AI agents) can trace lineage.
+- **Student-ready summary** — the building metaphor scales from casual reader to framework builder.
+- **Canon Alignment checklist** — six checks, all green, all auditable.
 
