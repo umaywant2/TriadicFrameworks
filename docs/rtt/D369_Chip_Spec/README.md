@@ -1,5 +1,7 @@
 # D369 Chip Spec
 
+- [`D369_Chip_Spec_module.json`](D369_Chip_Spec_module.json) — Agentic module schema role assignments
+
 > Dimensional architecture of the 3D–9D resonance substrate — the structural blueprint for how triadic systems scale across dimensions.
 
 ---
