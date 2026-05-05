@@ -24,9 +24,9 @@
 </div>
   
 <img src="https://img.shields.io/badge/📘Docs%20Root-🧩Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="📘Docs Root | 🧩Structural Canon Active"/>  
-<br>  
+<!--
 <img width="853" height="480" alt="Triadic_Crystaline_Hub2" src="https://github.com/user-attachments/assets/fec1b6a0-c88e-4f21-a6c5-e1b33458bdf1" />  
-
+-->
 A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
 This `/docs` directory is rendered directly as the project website and serves as the structural map for newcomers, practitioners, and automated agents.
 
