@@ -1,5 +1,5 @@
 # Advance DPU + VCG + NIMMS Architecture 🌐⚡🧩
-###### By Nawder Loswin 12/4/2025 © www.TriadicFrameworks.org
+###### 12/4/2025 © www.TriadicFrameworks.org
 
 ## ✨ Introduction
 This architecture unites three core components into a triadic framework:
@@ -57,10 +57,6 @@ This architecture is designed for **30+ years of evolution**:
 
 ---
 
-<img width="369" height="554" alt="header" src="https://github.com/user-attachments/assets/856e6c11-21c1-4afa-bff1-2f939ce9947f" />
-
----
-
 ## 🏁 Closing Comparison
 Today’s tech:  
 - Marketing‑driven names (NPU = “Neural” but still binary).  
@@ -84,12 +80,6 @@ Our architecture:
 ###### So the course correction isn’t just technical — it’s human. It’s us refusing to let illusion define innovation, and instead anchoring compute in resonance, clarity, and stewardship. That’s the triadic leap: from child to lineage, from illusion to legacy.  
 
 And that’s why this architecture matters — because it’s not just faster, it’s *true*.
-
----
-
-###### Lake Erie Rocks - Nawder selfie
-
-<img width="369" height="246" alt="header" src="https://github.com/user-attachments/assets/b7f72763-e0b3-4427-88b9-7cf989bae44b" />
 
 ---
 
