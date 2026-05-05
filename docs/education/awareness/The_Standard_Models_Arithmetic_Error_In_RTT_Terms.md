@@ -18,7 +18,7 @@
 
 ---
 
-<img width="768" height="512" alt="Copilot_20260119_220441" src="https://github.com/user-attachments/assets/7c045c3e-f9d0-456e-923b-cb957104349f" />
+<img width="384" height="256" alt="Copilot_20260119_220441" src="https://github.com/user-attachments/assets/7c045c3e-f9d0-456e-923b-cb957104349f" />
 
 ---
 
