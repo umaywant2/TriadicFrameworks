@@ -73,7 +73,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [/Low_Dimensional_Structures/](https://www.triadicframeworks.org/Low_Dimensional_Structures/)  
 - [/global_energy_regime_awareness/](https://www.triadicframeworks.org/global_energy_regime_awareness/)  
 - [/quantum-substrate-model/](https://www.triadicframeworks.org/quantum-substrate-model/)  
-- [/boson_substrate_model/](https://www.triadicframeworks.org/boson_substrate_model/)  
+- [/boson-substrate-model/](https://www.triadicframeworks.org/boson-substrate-model/)  
 - [/resonance-substrate-model/](https://www.triadicframeworks.org/resonance-substrate-model/)  
 - [/consciousness_substrate_model/](https://www.triadicframeworks.org/consciousness_substrate_model/)  
 - [/substrate_communications/](https://www.triadicframeworks.org/substrate_communications/)  
