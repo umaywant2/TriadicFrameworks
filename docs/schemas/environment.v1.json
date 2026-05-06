@@ -1,8 +1,45 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://triadicframeworks.org/schemas/environment.v1.json",
-  "title": "RTT Environment Block (v1)",
-  "description": "Minimal environment substrate for RTTcode packets. Defines boundary, drift, and ambient conditions required for coherent micro-regime evaluation.",
+  "$schema":  "https://json-schema.org/draft/2020-12/schema",
+  "$id":      "https://triadicframeworks.org/schemas/environment.v1.json",
+  "$comment": "RTT Environment sub-schema — refreshed 2026-05-06 to add module metadata and session context.",
+
+  "title":       "RTT Environment Block (v1)",
+  "description": "Minimal environment substrate for RTTcode packets. Defines boundary conditions, ambient parameters, and drift thresholds required for coherent micro-regime evaluation. The environment is the observability frame — analogous to D369's structural boundary context.",
+
+  "_meta": {
+    "module":          "RTT/codes",
+    "canonical_id":    "RTT_CODES_ENVIRONMENT",
+    "role":            "engine",
+    "version":         "1.1",
+    "status":          "canon-stable",
+    "author":          "Nawder Loswin",
+    "license":         "MIT",
+    "canonical_path":  "/docs/schemas/environment.v1.json",
+    "module_home":     "/docs/rtt/codes/",
+    "parent_schema":   "rttcode.v1.json",
+    "last_updated":    "2026-05-06"
+  },
+
+  "_session_context": {
+    "canon":       "active (rtt-codes-core)",
+    "drift":       "minimal (metadata-locked)",
+    "coherence":   "stable (environment grammar)",
+    "audience":    "developers + researchers + tool authors + AIs"
+  },
+
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date":    "2025-01-01",
+      "note":    "Initial environment schema release."
+    },
+    {
+      "version": "1.1",
+      "date":    "2026-05-06",
+      "note":    "Metadata refresh — added _meta, _session_context, _version_history. No property changes."
+    }
+  ],
+
   "type": "object",
   "additionalProperties": false,
 
@@ -14,61 +51,63 @@
   ],
 
   "properties": {
+
     "environment_version": {
-      "type": "string",
-      "const": "1.0.0",
+      "type":        "string",
+      "const":       "1.0.0",
       "description": "Version of the environment schema."
     },
 
     "boundary": {
-      "type": "object",
-      "description": "Defines the structural limits within which micro-regimes operate.",
+      "type":        "object",
+      "description": "Structural limits within which micro-regimes operate. Values outside the boundary indicate regime collapse.",
       "additionalProperties": false,
       "required": ["min", "max"],
       "properties": {
         "min": {
-          "type": "number",
-          "description": "Lower bound of the environment’s allowable state space."
+          "type":        "number",
+          "description": "Lower bound of the environment's allowable state space."
         },
         "max": {
-          "type": "number",
-          "description": "Upper bound of the environment’s allowable state space."
+          "type":        "number",
+          "description": "Upper bound of the environment's allowable state space."
         }
       }
     },
 
     "ambient": {
-      "type": "object",
-      "description": "Ambient conditions that influence resonance and timing.",
+      "type":        "object",
+      "description": "Ambient conditions that influence resonance coupling and timing stability.",
       "additionalProperties": false,
       "required": ["temperature", "noise"],
       "properties": {
         "temperature": {
-          "type": "number",
-          "description": "Ambient temperature or analogous scalar affecting micro-state stability."
+          "type":        "number",
+          "description": "Ambient temperature or analogous scalar affecting micro-state stability. Higher values increase drift susceptibility."
         },
         "noise": {
-          "type": "number",
-          "description": "Environmental noise level affecting drift accumulation."
+          "type":        "number",
+          "description": "Environmental noise level affecting drift accumulation. Measured in the same units as the drift threshold."
         }
       }
     },
 
     "drift": {
-      "type": "object",
-      "description": "Drift thresholds and accumulation parameters.",
+      "type":        "object",
+      "description": "Drift thresholds and accumulation parameters. Drift is the silent structural degradation that D369 makes observable.",
       "additionalProperties": false,
       "required": ["max_drift", "accumulation_rate"],
       "properties": {
         "max_drift": {
-          "type": "number",
-          "description": "Maximum allowable drift before coherence collapse."
+          "type":        "number",
+          "description": "Maximum allowable drift before coherence collapse. Exceeding this value signals regime transition."
         },
         "accumulation_rate": {
-          "type": "number",
-          "description": "Rate at which drift accumulates under ambient conditions."
+          "type":        "number",
+          "description": "Rate at which drift accumulates under current ambient conditions. Units per tick."
         }
       }
     }
+
   }
 }
