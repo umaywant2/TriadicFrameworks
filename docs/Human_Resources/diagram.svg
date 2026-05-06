@@ -1,1 +1,23 @@
+# diagram.svg Specification
 
+## Purpose
+Visualize the triadic alignment between:
+- Leadership  
+- Management  
+- Staff  
+with HR and AI as stabilizing observers.
+
+## Elements
+- Three primary nodes (Leadership, Management, Staff)  
+- HR node positioned as structural interface  
+- AI observer node positioned above/between nodes  
+- Alignment lines showing coherence  
+- Drift indicators (dashed lines)  
+- Regime color coding (authority, narrative, structural, emotional)  
+
+## Style
+- Minimal  
+- Indigo–violet gradient  
+- Thin-line geometry  
+- No text outside labels  
+- Mobile-optimized  
