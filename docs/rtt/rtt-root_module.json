@@ -1,29 +1,57 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
 
+  "_meta": {
+    "module": "RTT-Tech Root",
+    "canonical_id": "RTT_ROOT",
+    "module_type": "RTT-Infrastructure",
+    "role": "index",
+    "version": "1.1",
+    "status": "canon-stable",
+    "author": "Nawder Loswin",
+    "license": "MIT",
+    "canonical_path": "/docs/rtt/rtt-root_module.json",
+    "module_home": "/docs/rtt/",
+    "module_url": "https://www.triadicframeworks.org/rtt/",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "last_updated": "2026-05-06"
+  },
+
+  "_session_context": {
+    "canon": "active (rtt-tech)",
+    "modules": "core (10) → diagrams (8 paired) → examples (9 domains) → maps (8 cross-scale) → sort indexes",
+    "drift": "minimal (root-locked)",
+    "coherence": "stable (resonance-time grammar)",
+    "version": "1.1 (rtt-root-refreshed)",
+    "format": "html + markdown + svg diagrams + maps",
+    "front_door": "exists (RTT-Tech root)",
+    "every_page": "stands alone + AI-parsable",
+    "audience": "students + developers + researchers + AIs"
+  },
+
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date": "2026-05-05",
+      "note": "Initial module manifest with 2 file entries (index.html, README.md). Submodules empty."
+    },
+    {
+      "version": "1.1",
+      "date": "2026-05-06",
+      "note": "Metadata refresh. Added _meta, standardized _session_context, _version_history. Expanded file manifest from 2 to 49 entries (10 core, 16 diagrams, 9 examples, 8 maps, 6 root). Added submodule declarations for core/, diagrams/, examples/, maps/, sort/."
+    }
+  ],
+
   "module": {
     "name": "RTT-Tech Root",
     "path": "docs/rtt",
     "canon_tag": "rtt-root",
-    "version": "1.0",
+    "version": "1.1",
     "layer": "RTT Technology Layer",
     "status": "Active, Canonical",
-    "purpose": "Root navigation surface for all RTT technology modules: RTT/1, SDK, App, Store, Micro-Core, diagrams, maps, examples.",
+    "purpose": "Root navigation surface and core specification for all RTT technology modules: 10 core substrates and engines, 8 paired SVG diagrams, 9 domain examples, 8 cross-scale maps, plus child modules (RTT/1, SDK, App, Store, Micro-Core, D369, codes, Echo Classifier, etc.).",
     "parent": "rtt-core",
     "url": "https://www.triadicframeworks.org/rtt/"
-  },
-
-  "session_context": {
-    "canon": "active (rtt-tech)",
-    "modules_linked": [
-      "RTT/1 → RTT-SDK → RTT-App → RTT-Store → Micro-Core → diagrams → maps → examples"
-    ],
-    "drift": "minimal (root-locked)",
-    "coherence": "stable (resonance-time grammar)",
-    "format": "html + markdown + diagrams + maps",
-    "front_door": "exists (RTT-Tech root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": ["students", "developers", "researchers", "AI systems"]
   },
 
   "structural_grammar": {
@@ -44,26 +72,339 @@
       "RTT module tree",
       "navigation surfaces",
       "resonance-time diagrams",
-      "maps and examples"
+      "maps and examples",
+      "core substrates (alignment, coherence, dimensions, equations, inversion, observer, operators, regimes, substrates)"
     ]
   },
 
-  "submodules": [],
+  "submodules": [
+    {
+      "name": "Core Substrates & Engines",
+      "path": "core/",
+      "purpose": "10 foundational RTT specification files — alignment, coherence, coherence engine, dimensions, equations, inversion engine, observer, operators, regimes, substrates.",
+      "files": 10
+    },
+    {
+      "name": "Diagrams & Visual Grammar",
+      "path": "diagrams/",
+      "purpose": "8 paired diagram sets (.md specification + .svg rendering) — coherence, dimensions, inversion, operator, regime, substrate, substrate cycle, triad.",
+      "files": 16
+    },
+    {
+      "name": "Examples Across Domains",
+      "path": "examples/",
+      "purpose": "9 domain-specific RTT application examples — AI, cognition, ecology, information, life, neuroscience, physics, social systems, systems.",
+      "files": 9
+    },
+    {
+      "name": "Maps & Cross-Scale Navigation",
+      "path": "maps/",
+      "purpose": "8 cross-scale navigation maps — arrival, coherence, dimension, inversion, operator, regime, substrate, triadic.",
+      "files": 8
+    },
+    {
+      "name": "Sorting & Indexes",
+      "path": "sort/",
+      "purpose": "9 sorting and index views — 6D phase-space, crosslink diagram, dimension index, operator index, regime index, Mermaid ladder, sortable table, triadic geometry, visual ladder.",
+      "files": 9,
+      "note": "Trimmed from this audit — files referenced in DOC_MAP but not in user's listing."
+    }
+  ],
 
   "files": [
     {
-      "filename": "index.html",
-      "path": "index.html",
-      "purpose": "Front door for RTT-Tech.",
+      "path": "README.md",
       "role": "index",
-      "depends_on": []
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Module front door — high-level overview of RTT-Tech and module navigation."
     },
     {
-      "filename": "README.md",
-      "path": "README.md",
-      "purpose": "High-level overview of RTT-Tech and module navigation.",
-      "role": "profile",
-      "depends_on": []
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Interactive reader — sidebar nav, markdown rendering, DOC_MAP (54 entries), session context, MathJax support."
+    },
+    {
+      "path": "README_Doc_Index.md",
+      "role": "index",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Document index — structured catalog of all RTT root files."
+    },
+    {
+      "path": "files.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "File listing and manifest reference for the RTT root directory."
+    },
+    {
+      "path": "include.js",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Shared JavaScript include — utilities for markdown rendering and navigation."
+    },
+    {
+      "path": "rtt-root_module.json",
+      "role": "index",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Machine-readable module manifest — file roles, session context, imports/exports."
+    },
+    {
+      "path": "core/alignment.md",
+      "role": "engine",
+      "analyzer_layer": "coherence",
+      "purpose": "Core substrate — structural alignment principles and alignment operators."
+    },
+    {
+      "path": "core/coherence.md",
+      "role": "engine",
+      "analyzer_layer": "coherence",
+      "purpose": "Core substrate — coherence definition, coherence metrics, coherence thresholds."
+    },
+    {
+      "path": "core/coherence_engine.md",
+      "role": "engine",
+      "analyzer_layer": "coherence",
+      "purpose": "Core engine — coherence engine specification, evaluation pipeline, scoring."
+    },
+    {
+      "path": "core/dimensions.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional",
+      "purpose": "Core substrate — dimensional ladder (D0–D9), dimensional progression, scale invariance."
+    },
+    {
+      "path": "core/equations.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional",
+      "purpose": "Core substrate — RTT equations, mathematical formalism, spectral clarity."
+    },
+    {
+      "path": "core/inversion_engine.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Core engine — inversion engine specification, structural inversion operators."
+    },
+    {
+      "path": "core/observer.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Core substrate — observer definition, observer coupling, measurement semantics."
+    },
+    {
+      "path": "core/operators.md",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "purpose": "Core substrate — operator catalog, operator composition, operator algebra."
+    },
+    {
+      "path": "core/regimes.md",
+      "role": "engine",
+      "analyzer_layer": "regime",
+      "purpose": "Core substrate — regime definition, regime transitions, regime classification."
+    },
+    {
+      "path": "core/substrates.md",
+      "role": "engine",
+      "analyzer_layer": "dimensional",
+      "purpose": "Core substrate — substrate definition, substrate lifecycle, substrate degradation."
+    },
+    {
+      "path": "diagrams/coherence.md",
+      "role": "map",
+      "analyzer_layer": "coherence",
+      "purpose": "Diagram specification — coherence visual grammar."
+    },
+    {
+      "path": "diagrams/coherence.svg",
+      "role": "map",
+      "analyzer_layer": "coherence",
+      "purpose": "SVG rendering of the coherence diagram."
+    },
+    {
+      "path": "diagrams/dimensions.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Diagram specification — dimensional ladder visual grammar."
+    },
+    {
+      "path": "diagrams/dimensions.svg",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "SVG rendering of the dimensional ladder diagram."
+    },
+    {
+      "path": "diagrams/inversion.md",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "Diagram specification — inversion visual grammar."
+    },
+    {
+      "path": "diagrams/inversion.svg",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "SVG rendering of the inversion diagram."
+    },
+    {
+      "path": "diagrams/operator.md",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "Diagram specification — operator visual grammar."
+    },
+    {
+      "path": "diagrams/operator.svg",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "SVG rendering of the operator diagram."
+    },
+    {
+      "path": "diagrams/regime.md",
+      "role": "map",
+      "analyzer_layer": "regime",
+      "purpose": "Diagram specification — regime visual grammar."
+    },
+    {
+      "path": "diagrams/regime.svg",
+      "role": "map",
+      "analyzer_layer": "regime",
+      "purpose": "SVG rendering of the regime diagram."
+    },
+    {
+      "path": "diagrams/substrate.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Diagram specification — substrate visual grammar."
+    },
+    {
+      "path": "diagrams/substrate.svg",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "SVG rendering of the substrate diagram."
+    },
+    {
+      "path": "diagrams/substrate_cycle.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Diagram specification — substrate lifecycle cycle visual grammar."
+    },
+    {
+      "path": "diagrams/substrate_cycle.svg",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "SVG rendering of the substrate cycle diagram."
+    },
+    {
+      "path": "diagrams/triad.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Diagram specification — triadic core visual grammar."
+    },
+    {
+      "path": "diagrams/triad.svg",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "SVG rendering of the triadic core diagram."
+    },
+    {
+      "path": "examples/ai.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to artificial intelligence."
+    },
+    {
+      "path": "examples/cognition.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to cognition and thought."
+    },
+    {
+      "path": "examples/ecology.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to ecology and ecosystems."
+    },
+    {
+      "path": "examples/information.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to information theory."
+    },
+    {
+      "path": "examples/life.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to biological life."
+    },
+    {
+      "path": "examples/neuroscience.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to neuroscience."
+    },
+    {
+      "path": "examples/physics.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to physics."
+    },
+    {
+      "path": "examples/social.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to social systems."
+    },
+    {
+      "path": "examples/systems.md",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Domain example — RTT applied to general systems theory."
+    },
+    {
+      "path": "maps/arrival_map.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Navigation map — arrival and entry points into RTT."
+    },
+    {
+      "path": "maps/coherence_map.md",
+      "role": "map",
+      "analyzer_layer": "coherence",
+      "purpose": "Navigation map — coherence relationships and pathways."
+    },
+    {
+      "path": "maps/dimension_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Navigation map — dimensional progression and cross-scale pathways."
+    },
+    {
+      "path": "maps/inversion_map.md",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "Navigation map — inversion relationships and structural symmetries."
+    },
+    {
+      "path": "maps/operator_map.md",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "Navigation map — operator catalog and composition pathways."
+    },
+    {
+      "path": "maps/regime_map.md",
+      "role": "map",
+      "analyzer_layer": "regime",
+      "purpose": "Navigation map — regime transitions and classification pathways."
+    },
+    {
+      "path": "maps/substrate_map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional",
+      "purpose": "Navigation map — substrate lifecycle and degradation pathways."
+    },
+    {
+      "path": "maps/triadic_map.md",
+      "role": "map",
+      "analyzer_layer": "cross-cutting",
+      "purpose": "Navigation map — triadic core relationships, the master cross-scale map."
     }
   ]
 }
