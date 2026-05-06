@@ -1,52 +1,88 @@
 {
-  "module": {
-    "name": "Research Module",
-    "id": "research.root",
-    "category": "Research",
-    "version": "RTT/1",
-    "summary": "The central hub for TriadicFrameworks research articles, research-tools, dimensional analysis methods, and agentic-ready modules.",
-    "purpose": "Provide access to original RTT research, dimensional computing articles, research tools, and SEO interpreter modules.",
-    "keywords": [
-      "research",
-      "RTT",
-      "dimensional computing",
-      "triadic frameworks",
-      "research-tools",
-      "SEO interpreters",
-      "agentic modules"
-    ],
-    "audience": ["researchers", "scientists", "engineers", "educators", "students", "AIs"],
-    "front_door": "index.html",
-    "format": ["html", "markdown", "json"],
-    "every_page_stands_alone": true
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "_meta": {
+    "module": "Research",
+    "canonical_id": "RESEARCH",
+    "module_type": "Research-Articles",
+    "role": "reference",
+    "version": "1.1",
+    "status": "canon-stable",
+    "author": "Nawder Loswin",
+    "license": "MIT",
+    "canonical_path": "/docs/Research/research_module.json",
+    "module_home": "/docs/Research/",
+    "module_url": "https://www.triadicframeworks.org/Research/",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "last_updated": "2026-05-06"
   },
 
-  "session_context": {
-    "canon": "TriadicFrameworks",
-    "module": "Research",
-    "category": "Research",
-    "version": "RTT/1",
-    "coherence": "stable",
+  "_session_context": {
+    "canon": "active (research-articles)",
+    "modules": "research articles → research tools → SEO interpreters → dimensional search",
     "drift": "bounded (research-expanding)",
-    "format": ["html", "markdown", "json"],
-    "front_door": "index.html",
-    "audience": ["researchers", "scientists", "engineers", "educators", "students", "AIs"],
-    "every_page_stands_alone": true
+    "coherence": "stable (triadic-structural grammar)",
+    "version": "1.1 (research-refreshed)",
+    "format": "html + markdown + json + pdf",
+    "front_door": "exists (Research root)",
+    "every_page": "stands alone + AI-parsable + citable",
+    "audience": "researchers + scientists + engineers + educators + students + AIs"
+  },
+
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date": "2025-01-01",
+      "note": "Initial module manifest with 5 research articles and 3 SEO tools."
+    },
+    {
+      "version": "1.1",
+      "date": "2026-05-06",
+      "note": "Full metadata refresh. Added _meta, _session_context, _version_history, structural_grammar, cross_module_propagation. Expanded file manifest from 8 to 33 entries — added 17 research articles recently moved from cooker (_ideas), 3 tool manifests, PDF asset, module_work, and infrastructure files. Added purpose and role fields to all entries."
+    }
+  ],
+
+  "module": {
+    "name": "Research",
+    "path": "docs/Research",
+    "canon_tag": "research",
+    "version": "1.1",
+    "layer": "Research-Articles",
+    "status": "Active, Expanding",
+    "purpose": "Central hub for TriadicFrameworks original research articles, SEO interpreter tools, and dimensional analysis methods — applying Resonance-Time Theory across AI, biology, energy, quantum, governance, and infrastructure domains.",
+    "parent": "TriadicFrameworks",
+    "url": "https://www.triadicframeworks.org/Research"
+  },
+
+  "structural_grammar": {
+    "dimensional_envelope": "D0–D9",
+    "regime_envelope": "R0–R3",
+    "coherence_envelope": "C0–C3",
+    "drift_sensitivity": "bounded",
+    "regime_sensitivity": "moderate"
+  },
+
+  "cross_module_propagation": {
+    "imports": [
+      "RTT/1 operators",
+      "FFT field theory",
+      "SARG structural grammar"
+    ],
+    "exports": [
+      "Domain-specific RTT applications",
+      "SEO interpreter tools (Google, Bing, DuckDuckGo)",
+      "Dimensional search modes (A_classifier, B_advisor, C_navigator, D_triple_lens)",
+      "Resonance-aligned research vocabulary"
+    ]
   },
 
   "submodules": {
-    "research_articles": [
-      "AI Web Agentic Grammar Options",
-      "Aging Substrate Analysis",
-      "Beyond Structure - The Equations for Clarity",
-      "Governance Through Grammar",
-      "The Choices We Made and Why"
-    ],
     "research_tools": [
       {
         "name": "Google SEO Interpreter",
         "id": "research.google.seo",
         "path": "Google.md",
+        "manifest": "Google_module.json",
         "category": "Research-Tools",
         "modes": ["A_classifier", "B_advisor", "C_navigator", "D_triple_lens"]
       },
@@ -54,6 +90,7 @@
         "name": "Bing SEO Interpreter",
         "id": "research.bing.seo",
         "path": "Bing.md",
+        "manifest": "Bing_module.json",
         "category": "Research-Tools",
         "modes": ["A_classifier", "B_advisor", "C_navigator", "D_triple_lens"]
       },
@@ -61,50 +98,178 @@
         "name": "DuckDuckGo SEO Interpreter",
         "id": "research.ddg.seo",
         "path": "DuckDuckGo.md",
+        "manifest": "DuckDuckGo_module.json",
         "category": "Research-Tools",
         "modes": ["A_classifier", "B_advisor", "C_navigator", "D_triple_lens"]
       }
     ]
   },
 
-  "analyzer_layers": {
-    "operator": [
-      "triadic-analysis",
-      "regime-awareness",
-      "research-tools",
-      "seo-interpreter"
-    ],
-    "dimensional": [
-      "regime",
-      "coherence",
-      "drift",
-      "triadic-depth"
-    ],
-    "regime": [
-      "research-article",
-      "external-information",
-      "search-engine",
-      "web-scan"
-    ],
-    "cross_cutting": [
-      "research",
-      "interpretation",
-      "triadic-mapping",
-      "agentic-ready"
-    ]
-  },
-
-  "schema": {
-    "input": {
-      "query": "string (optional)",
-      "intent": "string (optional)",
-      "mode": "string (optional)"
+  "files": [
+    {
+      "path": "README.md",
+      "role": "index",
+      "purpose": "Module front door — overview, article listing, navigation."
     },
-    "output": {
-      "triadic_summary": "string",
-      "domain_map": "array",
-      "operator_paths": "array",
-      "research_links": "array"
+    {
+      "path": "index.html",
+      "role": "index",
+      "purpose": "Interactive reader — sidebar nav, markdown rendering, DOC_MAP, session context."
+    },
+    {
+      "path": "module_work.md",
+      "role": "reference",
+      "purpose": "Internal module development notes and task tracking."
+    },
+    {
+      "path": "Google.md",
+      "role": "engine",
+      "purpose": "Google SEO Interpreter — 4-mode triadic search tool."
+    },
+    {
+      "path": "Google_module.json",
+      "role": "index",
+      "purpose": "Machine-readable manifest for Google SEO Interpreter."
+    },
+    {
+      "path": "Bing.md",
+      "role": "engine",
+      "purpose": "Bing SEO Interpreter — 4-mode triadic search tool."
+    },
+    {
+      "path": "Bing_module.json",
+      "role": "index",
+      "purpose": "Machine-readable manifest for Bing SEO Interpreter."
+    },
+    {
+      "path": "DuckDuckGo.md",
+      "role": "engine",
+      "purpose": "DuckDuckGo SEO Interpreter — 4-mode triadic search tool."
+    },
+    {
+      "path": "DuckDuckGo_module.json",
+      "role": "index",
+      "purpose": "Machine-readable manifest for DuckDuckGo SEO Interpreter."
+    },
+    {
+      "path": "Resonance_Triadic_Aligned_Overview.md",
+      "role": "reference",
+      "purpose": "Resonance-Triadic-Aligned overview — foundational orientation for the research collection."
+    },
+    {
+      "path": "AI_Web_Agentic_Grammar_Options.md",
+      "role": "engine",
+      "purpose": "AI agentic grammar options — structural grammar for web-native AI agents."
+    },
+    {
+      "path": "Aging_Substrate_Analysis.md",
+      "role": "engine",
+      "purpose": "Aging substrate analysis — RTT applied to biological aging as substrate degradation."
+    },
+    {
+      "path": "Beyond_Structure_The_Equations_for_Clarity.md",
+      "role": "engine",
+      "purpose": "Spectral clarity equations (Nawderian Theorem) — mathematical formalism for structural clarity."
+    },
+    {
+      "path": "Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md",
+      "role": "engine",
+      "purpose": "Governance through grammar — structural governance via domain forking, not policy."
+    },
+    {
+      "path": "The_Choices_We_Made_and_Why.md",
+      "role": "reference",
+      "purpose": "Design philosophy — the reasoning behind TriadicFrameworks structural decisions."
+    },
+    {
+      "path": "The_Choices_We_Made_and_Why.pdf",
+      "role": "reference",
+      "purpose": "PDF version of The Choices We Made and Why — for distribution and citation."
+    },
+    {
+      "path": "Draft_TriadicFrameworks_Wikipedia_Info.md",
+      "role": "reference",
+      "purpose": "Draft Wikipedia information page for TriadicFrameworks."
+    },
+    {
+      "path": "Substrate_Communications.md",
+      "role": "engine",
+      "purpose": "Substrate communications — RTT-aligned communication substrate analysis."
+    },
+    {
+      "path": "RTT_Facilities_Playbook.md",
+      "role": "engine",
+      "purpose": "RTT Facilities Playbook — structural observability applied to physical facilities and infrastructure."
+    },
+    {
+      "path": "RTT_Above‑Ground_Electrical_Re-design_Initiative.md",
+      "role": "engine",
+      "purpose": "Above-Ground Electrical Re-design Initiative (AGERI) — RTT applied to electrical grid redesign."
+    },
+    {
+      "path": "Advance_DPU_VCG_NIMMS_Architecture.md",
+      "role": "engine",
+      "purpose": "Advanced DPU / VCG / NIMMS architecture — RTT-aligned compute and network infrastructure."
+    },
+    {
+      "path": "A_Resonant_Review_of_The_Universe_in_a_Nutshell.md",
+      "role": "reference",
+      "purpose": "Resonant review of Hawking's Universe in a Nutshell through an RTT lens."
+    },
+    {
+      "path": "How_RTT_Applies_to_a_Standard_Power_Transformer.md",
+      "role": "engine",
+      "purpose": "RTT applied to standard power transformers — triadic analysis of energy conversion."
+    },
+    {
+      "path": "Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md",
+      "role": "engine",
+      "purpose": "Quantum Lens Layer — triadic protocols for resonance-based quantum scanning."
+    },
+    {
+      "path": "qCompute_with_RTT-Inside_Preview.md",
+      "role": "engine",
+      "purpose": "qCompute preview — quantum computing architecture with RTT-Inside structural alignment."
+    },
+    {
+      "path": "Quantum_Energy_Banks_and_Corridor‑Based_Energy_System_Analysis.md",
+      "role": "engine",
+      "purpose": "Quantum energy banks — corridor-based energy system analysis using RTT structural grammar."
+    },
+    {
+      "path": "Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md",
+      "role": "engine",
+      "purpose": "Supercomputers as latent triadic systems — structural analysis of existing HPC architectures."
+    },
+    {
+      "path": "JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md",
+      "role": "engine",
+      "purpose": "JWST RTT QA Layer — triadic core primitive applied as a quality assurance layer for space telescopes."
+    },
+    {
+      "path": "European_Spallation_Source_needs_TriadicFrameworksTech.md",
+      "role": "engine",
+      "purpose": "European Spallation Source — RTT structural alignment for neutron science infrastructure."
+    },
+    {
+      "path": "Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md",
+      "role": "engine",
+      "purpose": "Warp drive architecture — speculative propulsion design scaffolded with RTT-Inside grammar."
+    },
+    {
+      "path": "Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md",
+      "role": "engine",
+      "purpose": "Power supplies, mobile sensors, and enhanced BMS — RTT-Inside applied to energy management."
+    },
+    {
+      "path": "ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md",
+      "role": "engine",
+      "purpose": "ZipNN triadic patterns — hidden two-thirds structural analysis of neural network compression."
+    },
+    {
+      "path": "research_module.json",
+      "role": "index",
+      "purpose": "Machine-readable module manifest — file roles, session context, imports/exports."
     }
-  }
+  ]
 }
