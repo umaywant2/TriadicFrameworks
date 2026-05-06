@@ -2,81 +2,101 @@
 <html lang="en">
 <head>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- /docs/frameworks/creation_guide/index.html — <head>        -->
-<!-- Module: Framework Creation Guide (framework-structural)     -->
-<!-- Last updated: 2026-05-02                                    -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/frameworks/creation_guide/index.html — <head>            -->
+<!-- Module: Framework Creation Guide (framework-structural)        -->
+<!-- Last updated: 2026-05-06                                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-05-02">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
-
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
-
-<meta name="description"
-      content="Framework Creation Guide (FCG) — structural grammar for designing coherent, minimal, regime‑aware frameworks. History, principles, models, structure, operators, regimes, generator, and RF‑Builder submodule.">
-<meta name="keywords"
-      content="framework creation, FCG, structural grammar, operators, regimes, generator, RF-Builder, models, structure, triadic frameworks">
-
-<link rel="canonical" href="https://www.triadicframeworks.org/frameworks/creation_guide/">
-
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0ff">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="Framework Creation Guide — Structural Grammar for Framework Design">
-<meta property="og:url" content="https://www.triadicframeworks.org/frameworks/creation_guide/">
-<meta property="og:description"
-      content="Structural grammar for designing coherent, minimal, regime‑aware frameworks: history → principles → models → structure → operators → regimes → generator.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Framework Creation Guide — Structural Grammar">
-<meta name="twitter:description"
-      content="History → principles → models → structure → operators → regimes → generator → RF‑Builder submodule.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-
-<meta name="citation_title" content="Framework Creation Guide — TriadicFrameworks">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2026">
-<meta name="DC.subject"
-      content="framework creation, structural grammar, operators, regimes, generator, RF-Builder, models, structure">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
-
-<meta name="ai.module" content="Framework Creation Guide">
-<meta name="ai.version" content="1.0">
-<meta name="ai.purpose"
-      content="Provide a structural grammar for designing coherent, minimal, regime‑aware frameworks — with history, principles, models, structure, operators, regimes, generator, and RF‑Builder submodule.">
-<meta name="ai.keywords"
-      content="FCG, framework creation, structural grammar, operators, regimes, generator, RF-Builder, models, structure, FCG-Define, FCG-Structure, FCG-Model, FCG-Regime, FCG-Generate, FCG-Validate">
-<meta name="ai.audience" content="creators, researchers, developers, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="MIT">
-
-<meta name="ai.module.name" content="Framework Creation Guide">
-<meta name="ai.module.summary"
-      content="Structural grammar for framework design: 7 FCG Core Layers (history, principles, models, structure, operators, regimes, generator), 1 capture document, RF‑Builder submodule (capture file, Mermaid diagrams). Siblings: FFT, SARG, Mode.">
-<meta name="ai.module.category" content="framework-structural">
-
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-05-06" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
 
 <title>Framework Creation Guide — TriadicFrameworks</title>
+
+<meta name="description"
+      content="Framework Creation Guide (FCG) — structural grammar for designing coherent, minimal, regime‑aware frameworks. History, principles, models, structure, operators, regimes, generator, and RF‑Builder submodule." />
+<meta name="keywords"
+      content="framework creation, FCG, structural grammar, operators, regimes, generator, RF-Builder, models, structure, triadic frameworks" />
+
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
+
+<meta name="module" content="Framework Creation Guide" />
+<meta name="canonical-id" content="FCG" />
+<meta name="module-type" content="Framework-Structural" />
+<meta name="version" content="1.1" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="frameworks" />
+<meta name="siblings" content="FFT, SARG, Mode" />
+<meta name="canonical-path" content="/docs/frameworks/creation_guide/" />
+<meta name="last-updated" content="2026-05-06" />
+<meta name="license" content="MIT" />
+
+<!-- ═══ AI Discovery (standardized) ═══ -->
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="FCG" />
+<meta name="ai-operators"
+      content="FCG-Define, FCG-Structure, FCG-Model, FCG-Regime, FCG-Generate, FCG-Validate" />
+
+<meta name="ai.module" content="Framework Creation Guide" />
+<meta name="ai.version" content="1.1" />
+<meta name="ai.purpose"
+      content="Provide a structural grammar for designing coherent, minimal, regime‑aware frameworks — with history, principles, models, structure, operators, regimes, generator, and RF‑Builder submodule." />
+<meta name="ai.keywords"
+      content="FCG, framework creation, structural grammar, operators, regimes, generator, RF-Builder, models, structure, FCG-Define, FCG-Structure, FCG-Model, FCG-Regime, FCG-Generate, FCG-Validate" />
+<meta name="ai.audience" content="creators, researchers, developers, AI systems" />
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="MIT" />
+<meta name="ai.module.name" content="Framework Creation Guide" />
+<meta name="ai.module.summary"
+      content="Structural grammar for framework design: 7 FCG Core Layers (history, principles, models, structure, operators, regimes, generator), 1 capture document, RF‑Builder submodule (capture file, Mermaid diagrams). Siblings: FFT, SARG, Mode." />
+<meta name="ai.module.category" content="framework-structural" />
+
+<!-- ═══ Canonical / SEO ═══ -->
+
+<link rel="canonical" href="https://www.triadicframeworks.org/frameworks/creation_guide/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ff" />
+
+<!-- ═══ Open Graph ═══ -->
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="Framework Creation Guide — TriadicFrameworks" />
+<meta property="og:url" content="https://www.triadicframeworks.org/frameworks/creation_guide/" />
+<meta property="og:description"
+      content="Structural grammar for designing coherent, minimal, regime‑aware frameworks: history → principles → models → structure → operators → regimes → generator." />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1080" />
+<meta property="og:image:height" content="1080" />
+
+<!-- ═══ Twitter Card ═══ -->
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Framework Creation Guide — TriadicFrameworks" />
+<meta name="twitter:description"
+      content="History → principles → models → structure → operators → regimes → generator → RF‑Builder submodule." />
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+
+<!-- ═══ Citation / Dublin Core ═══ -->
+
+<meta name="citation_title" content="Framework Creation Guide — TriadicFrameworks" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-06" />
+
+<meta name="DC.subject" content="framework creation, structural grammar, operators, regimes, generator, RF-Builder, models, structure" />
+<meta name="DC.type" content="Text" />
+<meta name="DC.format" content="text/html" />
 
 <style>
 /* ============================================================
@@ -300,10 +320,9 @@ code {
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
       <a href="../../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- /docs/frameworks/creation_guide — Session Context block    -->
-<!-- Replace the existing session context section in index.html  -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/frameworks/creation_guide — Session Context block        -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
 
 <section id="fcg-session-header"
          data-rtt="fcg"
@@ -330,7 +349,7 @@ code {
     <span class="context-value">stable (framework grammar)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (fcg‑stable)</span><br>
+    <span class="context-value">1.1 (fcg‑refreshed)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
     <span class="context-value">html + markdown + diagrams</span><br>
@@ -349,7 +368,7 @@ code {
 </section>
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
-  🟦 Framework Creation Guide<br>📘 Structural Grammar for Framework Design
+  🟦 Framework Creation Guide<br>📐 Structural Grammar · v1.1
 </div>
 
 </nav>
