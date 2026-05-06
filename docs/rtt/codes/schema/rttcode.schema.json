@@ -1,9 +1,49 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.triadicframeworks.org/rtt/codes/schema/rttcode.schema.json",
+  "$comment": "QR-compatible metadata payload schema — TriadicFrameworks RTT/codes module. Refreshed 2026-05-06 to add metadata blocks and align with module migration.",
   "title": "RTTcode Payload Schema",
   "description": "A QR-compatible metadata payload for RTTcodes within the TriadicFrameworks ecosystem.",
+  "_meta": {
+    "module": "RTT/codes",
+    "canonical_id": "RTT_CODES_PAYLOAD_SCHEMA",
+    "module_type": "Infrastructure-Schema",
+    "role": "engine",
+    "version": "1.1",
+    "status": "canon-stable",
+    "author": "Nawder Loswin",
+    "license": "MIT",
+    "canonical_path": "/docs/rtt/codes/schema/rttcode.schema.json",
+    "module_home": "/docs/rtt/codes/",
+    "module_url": "https://www.triadicframeworks.org/rtt/codes/",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "last_updated": "2026-05-06",
+    "relationship_note": "This schema defines the QR-compatible payload format. The canonical packet schema at /docs/schemas/rttcode.v1.json defines the full RTTcode packet structure (tick, entities, environment, intent). Both schemas serve the RTT/codes module but operate at different levels of abstraction."
+  },
+  "_session_context": {
+    "canon": "active (rtt-codes-core)",
+    "modules": "schema → validators → generators → style → examples → domain payloads",
+    "drift": "minimal (metadata-locked)",
+    "coherence": "stable (metadata grammar)",
+    "version": "1.1 (codes-refreshed)",
+    "format": "json-schema + metadata",
+    "front_door": "exists (RTT/codes root)",
+    "every_page": "stands alone + AI-parsable + schema-aware",
+    "audience": "developers + researchers + tool authors + AIs"
+  },
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date": "2025-01-01",
+      "note": "Initial QR payload schema. Module home at /docs/rttcodes/."
+    },
+    {
+      "version": "1.1",
+      "date": "2026-05-06",
+      "note": "Metadata refresh. Added $id, _meta, _session_context, _version_history. Module home migrated to /docs/rtt/codes/. Domain enum includes 'simulation' (not present in canonical _domains — intentional for payload-level classification). All property schemas unchanged."
+    }
+  ],
   "type": "object",
-
   "properties": {
     "domain": {
       "type": "string",
@@ -19,7 +59,6 @@
         "other"
       ]
     },
-
     "artifact_type": {
       "type": "string",
       "description": "The type of artifact this RTTcode identifies.",
@@ -34,13 +73,11 @@
         "other"
       ]
     },
-
     "version": {
       "type": "string",
       "description": "Version identifier for the artifact (semantic or freeform).",
       "pattern": "^[A-Za-z0-9._-]+$"
     },
-
     "triad": {
       "type": "object",
       "description": "Optional Resonance-Time Triad metadata.",
@@ -61,21 +98,22 @@
       "required": [],
       "additionalProperties": false
     },
-
     "url": {
       "type": "string",
       "description": "Canonical URL for this artifact.",
       "format": "uri"
     },
-
     "checksum": {
       "type": "string",
       "description": "Optional integrity checksum for the artifact.",
       "pattern": "^[A-Fa-f0-9]{8,64}$"
     }
   },
-
-  "required": ["domain", "artifact_type", "version", "url"],
+  "required": [
+    "domain",
+    "artifact_type",
+    "version",
+    "url"
+  ],
   "additionalProperties": false
 }
-
