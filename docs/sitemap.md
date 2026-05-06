@@ -158,7 +158,8 @@ _(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
 
 ## 8. Community & Governance (Continuity Layer)
 
-- [/contributors/](https://www.triadicframeworks.org/contributors/)  
+- [/contributors/](https://www.triadicframeworks.org/contributors/)
+- [/Human_Resources/](https://www.triadicframeworks.org/Human_Resources/) 
 - [/governance/](https://www.triadicframeworks.org/governance/)
 - [/Governance_Substrate_Model/](https://www.triadicframeworks.org/Governance_Substrate_Model/)
 - [/Governance_Substrate_Model/Analyzer/](https://www.triadicframeworks.org/Governance_Substrate_Model/Analyzer/)
