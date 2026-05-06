@@ -1,8 +1,45 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://triadicframeworks.org/schemas/intent.v1.json",
-  "title": "RTT Intent Block (v1)",
-  "description": "Defines the minimal intent substrate for RTTcode packets, capturing directional influence and desired micro-state adjustments.",
+  "$schema":  "https://json-schema.org/draft/2020-12/schema",
+  "$id":      "https://triadicframeworks.org/schemas/intent.v1.json",
+  "$comment": "RTT Intent sub-schema — refreshed 2026-05-06 to add module metadata and session context.",
+
+  "title":       "RTT Intent Block (v1)",
+  "description": "Defines the minimal intent substrate for RTTcode packets, capturing directional influence and desired micro-state adjustments. Intent expresses what an agent wants to happen — it does not prescribe behavior, consistent with D369's non-claim NC-5.",
+
+  "_meta": {
+    "module":          "RTT/codes",
+    "canonical_id":    "RTT_CODES_INTENT",
+    "role":            "engine",
+    "version":         "1.1",
+    "status":          "canon-stable",
+    "author":          "Nawder Loswin",
+    "license":         "MIT",
+    "canonical_path":  "/docs/schemas/intent.v1.json",
+    "module_home":     "/docs/rtt/codes/",
+    "parent_schema":   "rttcode.v1.json",
+    "last_updated":    "2026-05-06"
+  },
+
+  "_session_context": {
+    "canon":       "active (rtt-codes-core)",
+    "drift":       "minimal (metadata-locked)",
+    "coherence":   "stable (intent grammar)",
+    "audience":    "developers + researchers + tool authors + AIs"
+  },
+
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date":    "2025-01-01",
+      "note":    "Initial intent schema release."
+    },
+    {
+      "version": "1.1",
+      "date":    "2026-05-06",
+      "note":    "Metadata refresh — added _meta, _session_context, _version_history. No property changes."
+    }
+  ],
+
   "type": "object",
   "additionalProperties": false,
 
@@ -14,27 +51,28 @@
   ],
 
   "properties": {
+
     "intent_version": {
-      "type": "string",
-      "const": "1.0.0",
+      "type":        "string",
+      "const":       "1.0.0",
       "description": "Version of the intent schema."
     },
 
     "target": {
-      "type": "string",
-      "description": "The entity or subsystem the intent is directed toward."
+      "type":        "string",
+      "description": "The entity or subsystem the intent is directed toward. Must match an entity id within the same RTTcode packet."
     },
 
     "direction": {
-      "type": "string",
-      "enum": ["increase", "decrease", "stabilize", "invert"],
-      "description": "Desired directional influence on the target."
+      "type":        "string",
+      "enum":        ["increase", "decrease", "stabilize", "invert"],
+      "description": "Desired directional influence on the target. 'stabilize' resists drift; 'invert' reverses current trajectory."
     },
 
     "magnitude": {
-      "type": "number",
-      "description": "Strength of the intended influence."
+      "type":        "number",
+      "description": "Strength of the intended influence. Scale is relative to the environment's boundary range."
     }
+
   }
 }
-
