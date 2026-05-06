@@ -1,5 +1,7 @@
 # Human Resources (HR)
 
+- [`Human_Resources_module.json`](Human_Resources_module.json) — Agentic module schema role assignments
+
 **Category:** Organizational Systems  
 **Purpose:** Provide a structural, RTT‑aligned framework for understanding, evaluating, and improving Human Resources functions across leadership, management, and staff.
 
