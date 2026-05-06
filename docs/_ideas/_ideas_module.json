@@ -1,29 +1,58 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
 
+  "_meta": {
+    "module": "Ideas Sandbox",
+    "canonical_id": "IDEAS",
+    "module_type": "Ideation",
+    "role": "reference",
+    "version": "1.1",
+    "status": "non-canonical",
+    "author": "Nawder Loswin",
+    "license": "MIT",
+    "canonical_path": "/docs/_ideas/_ideas_module.json",
+    "module_home": "/docs/_ideas/",
+    "module_url": "https://www.triadicframeworks.org/_ideas/",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "last_updated": "2026-05-06",
+    "census_note": "288 entries (219 .md, 39 .html, 10 .json, 3 .py, 2 .pdf, 2 .zip, 4 .svg, 3 other, 6 dirs). Manifest catalogs infrastructure and submodules only — DOC_MAP is the living navigation layer."
+  },
+
+  "_session_context": {
+    "canon": "non-canonical (sandbox)",
+    "modules": "sketches → drafts → prototypes → concept notes → experiments → promoted articles",
+    "drift": "allowed (sandbox)",
+    "coherence": "loose (ideation grammar)",
+    "version": "1.1 (ideas-refreshed)",
+    "format": "markdown + html + json manifests + python + svg + pdf",
+    "front_door": "exists (Ideas root)",
+    "every_page": "non-canonical + exploratory",
+    "audience": "developers + researchers + AIs"
+  },
+
+  "_version_history": [
+    {
+      "version": "1.0",
+      "date": "2026-05-01",
+      "note": "Initial module manifest with 1 file entry (README.md only)."
+    },
+    {
+      "version": "1.1",
+      "date": "2026-05-06",
+      "note": "Metadata refresh. Added _meta, _session_context, _version_history, updated structural_grammar. Added infrastructure files, submodules, and asset groups to manifest. Census: 288 entries. DOC_MAP covers 30 of 219 .md files (13%) — by design."
+    }
+  ],
+
   "module": {
     "name": "Ideas Sandbox",
     "path": "docs/_ideas",
     "canon_tag": "ideas-sandbox",
-    "version": "1.0",
+    "version": "1.1",
     "layer": "Ideation Layer",
     "status": "Non-Canonical",
-    "purpose": "Non-canonical sandbox for prototypes, sketches, drafts, and early-stage concepts.",
+    "purpose": "Non-canonical sandbox for prototypes, sketches, drafts, and early-stage concepts. Ideas are cooked here before promotion to canonical modules (Research, RTT, Education, etc.).",
     "parent": "triadicframeworks-root",
     "url": "https://www.triadicframeworks.org/_ideas"
-  },
-
-  "session_context": {
-    "canon": "non-canonical (sandbox)",
-    "modules_linked": [
-      "sketches → drafts → prototypes → concept notes → experiments"
-    ],
-    "drift": "allowed (sandbox)",
-    "coherence": "loose (ideation grammar)",
-    "format": "markdown + notes + sketches",
-    "front_door": "exists (Ideas root)",
-    "every_page": "non-canonical + exploratory",
-    "audience": ["developers", "researchers", "AI systems"]
   },
 
   "structural_grammar": {
@@ -42,13 +71,75 @@
       "prototypes",
       "drafts",
       "concept notes",
-      "experiments"
+      "experiments",
+      "promoted articles (→ Research, RTT, Education)"
+    ],
+    "recent_promotions": [
+      { "file": "Advance_DPU_VCG_NIMMS_Architecture.md", "promoted_to": "/docs/Research/" },
+      { "file": "Aging_Substrate_Analysis.md", "promoted_to": "/docs/Research/" },
+      { "file": "AI_Web_Agentic_Grammar_Options.md", "promoted_to": "/docs/Research/" },
+      { "file": "Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md", "promoted_to": "/docs/Research/" },
+      { "file": "European_Spallation_Source_needs_TriadicFrameworksTech.md", "promoted_to": "/docs/Research/" },
+      { "file": "JWST-RTT_Triadic_Core_Primitive_as_a_QA_Layer.md", "promoted_to": "/docs/Research/" },
+      { "file": "Substrate_Communications.md", "promoted_to": "/docs/Research/" },
+      { "file": "Supercomputers_Are_Already_Triadic_They_Just_Dont_Know_It.md", "promoted_to": "/docs/Research/" },
+      { "file": "Warp_Drive_Architecture_Plan_Scaffolded_with_RTT-Inside.md", "promoted_to": "/docs/Research/" },
+      { "file": "ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md", "promoted_to": "/docs/Research/" }
     ]
   },
 
-  "submodules": [],
+  "submodules": [
+    {
+      "name": "How RTT Helps Planes Not Go Boom",
+      "path": "How_RTT_Helps_Planes_Not_Go_Boom/",
+      "purpose": "Multi-chapter idea submodule — kid-friendly edition, tech overview, coherence model, flight examples, SimConnect adapter, checklists.",
+      "files": 7,
+      "asset_dirs": ["assets/diagrams/", "assets/examples/", "assets/telemetry/"]
+    },
+    {
+      "name": "Art Assets",
+      "path": "art/",
+      "purpose": "SVG art assets — painting_bloom, painting_spark, painting_three, parent_0D_resonance.",
+      "files": 4
+    },
+    {
+      "name": "Game / Mythic Manifests",
+      "path": "(root level)",
+      "purpose": "9 JSON manifests for game/mythic concept prototypes.",
+      "manifests": [
+        "divineReentry_manifest.json",
+        "loopedClarity_manifest.json",
+        "mythmatical_architects_manifest.json",
+        "mythmatical_manifest.json",
+        "mythsortsV_manifest.json",
+        "rememberingProtocol_manifest.json",
+        "resonanceResurrection_manifest.json",
+        "tartarusDrift_manifest.json",
+        "timeTravelRemix_manifest.json"
+      ]
+    }
+  ],
 
   "files": [
-    { "filename": "README.md", "path": "README.md", "purpose": "Overview of Ideas Sandbox.", "role": "profile", "depends_on": [] }
+    {
+      "path": "README.md",
+      "role": "index",
+      "purpose": "Sandbox front door — overview, navigation, cooker philosophy."
+    },
+    {
+      "path": "index.html",
+      "role": "index",
+      "purpose": "Interactive reader — sidebar nav, markdown rendering, DOC_MAP navigation, session context."
+    },
+    {
+      "path": "_ideas_module.json",
+      "role": "index",
+      "purpose": "Machine-readable module manifest — infrastructure, submodules, census, promotion history."
+    },
+    {
+      "path": "LINEAGE.md",
+      "role": "reference",
+      "purpose": "Sandbox lineage — idea flow from cooker to canon."
+    }
   ]
 }
