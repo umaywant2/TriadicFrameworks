@@ -1,7 +1,7 @@
 # 🔰 TriadicFrameworks — Documentation Hub  
 
 - [`webroot_module.json`](webroot_module.json) — Agentic module schema role assignments
-- [`modules_group.json`](modules_group.json) — 62 module entries — 32 from prior sessions + 30 from 5/2 (44 to go)
+- [`modules_group.json`](modules_group.json) — 71 module entries — as of 05/06/2026
 
 **Canon: active (root‑docs)**  
 **Drift: minimal (root‑locked)**  
