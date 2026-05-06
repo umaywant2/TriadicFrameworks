@@ -168,7 +168,7 @@ Let’s keep sketching — this is the kind of thought experiment that makes lat
 ---
 
 > 
-> I got it. The first thing the QC's work on...is research and ranking of meanings...a full complete 'Resonance Atlas' using existing plus RTT grammar to, find how far we can chase alignment's using dim's within... Then we examine that report and consider sample/example minimal projects. If my hunch is correct, over the course of about a decade of substrate-aligned QC qmroot structually aware primitives researching first the main branches that scale all dim's, that becomes the spine for the atlas, so many invariant branches to chart of each dimension, harmonic, echos, cycles. I saw a world within... 'And you got in?' 'That's right man, I got it.' Tron fav movie :)
+> I got it. The first thing the QC's work on...is research and ranking of meanings...a full complete 'Resonance Atlas' using existing plus RTT grammar to, find how far we can chase alignment's using dim's within... Then we examine that report and consider sample/example minimal projects. If my hunch is correct, over the course of about a decade of substrate-aligned QC qmroot structually aware primitives researching first the main branches that scale all dim's, that becomes the spine for the atlas, so many invariant branches to chart of each dimension, harmonic, echos, cycles. "I saw a world within..." 'And you got in?' "That's right man, I got in..." (Tron, fav movie line)
 > 
 
 ---
