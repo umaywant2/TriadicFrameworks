@@ -1,14 +1,23 @@
-{
-  "_meta": {
-    "title": "TriadicFrameworks — Modules Group Registry",
-    "description": "Canonical registry of all refreshed modules with metadata, session context, and module.json status. Place at /docs/modules_group.json",
-    "last_updated": "2026-05-02",
-    "total_refreshed": 62,
-    "sessions": {
-      "prior_sessions": { "count": 32, "note": "Reconstructed from cross-references — verify against your local records" },
-      "session_2026_05_02": { "count": 30, "note": "All 30 confirmed and fully detailed in this conversation" }
+"_meta": {
+  "title": "TriadicFrameworks — Modules Group Registry",
+  "description": "Canonical registry of all refreshed modules with metadata, session context, and module.json status. Place at /docs/modules_group.json",
+  "last_updated": "2026-05-06",
+  "total_refreshed": 71,
+  "sessions": {
+    "prior_sessions": {
+      "count": 32,
+      "note": "Reconstructed from cross-references — verify against your local records"
+    },
+    "session_2026_05_02": {
+      "count": 30,
+      "note": "All 30 confirmed and fully detailed in that conversation"
+    },
+    "session_2026_05_06": {
+      "count": 9,
+      "note": "Full metadata sweep: _meta, _session_context, _version_history, structural_grammar, cross_module_propagation added to all 9 modules. 560+ files catalogued. 2 bugs fixed (Research DOC_MAP duplicate key, last-modified typo). 10 CHANGELOGs delivered."
     }
-  },
+  }
+}
 
   "refreshed_modules": [
 
@@ -566,7 +575,96 @@
       "artifacts": ["meta", "session", "module.json"],
       "notes": "Already full canon-spec. Added og:image dimensions. 13-file manifest. Case studies, mapping examples, technical files.",
       "file_count": 13
-    }
+    },
+    {
+  "path": "/docs/rtt/D369_Chip_Spec/",
+  "module": "D369 Chip Spec",
+  "category": "rtt-hardware",
+  "session": "2026-05-06",
+  "status": "refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "Full metadata refresh. 20-file manifest. Schema refresh for canonical packet + 4 sub-schemas.",
+  "file_count": 20
+},
+{
+  "path": "/docs/schemas/",
+  "module": "Schemas",
+  "category": "infrastructure",
+  "session": "2026-05-06",
+  "status": "re-refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "Second refresh. Added _meta, _session_context, _version_history to all 5 canonical schemas (rttcode.v1, tick.v1, entity.v1, environment.v1, intent.v1). v1.0→1.1.",
+  "file_count": 5
+},
+{
+  "path": "/docs/rtt/codes/",
+  "module": "RTT/codes",
+  "category": "rtt-infrastructure",
+  "session": "2026-05-06",
+  "status": "refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "14-file audit. Module migrated from /docs/rttcodes/ to /docs/rtt/codes/ — zero path breaks confirmed. RTT_codes_module.json and schema/rttcode.schema.json refreshed. Domain enum discrepancy documented (simulation in local only).",
+  "file_count": 14
+},
+{
+  "path": "/docs/frameworks/creation_guide/",
+  "module": "Framework Creation Guide",
+  "category": "framework-structural",
+  "session": "2026-05-06",
+  "status": "re-refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "Second refresh. FCG_module.json expanded from 12 to 22 file entries. Added all HTML renderers, fft.html, guide.html, RF-Builder.html. index.html got 13 module identity meta tags. v1.0→1.1.",
+  "file_count": 25
+},
+{
+  "path": "/docs/Research/",
+  "module": "Research",
+  "category": "research-articles",
+  "session": "2026-05-06",
+  "status": "refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "33-entry audit. research_module.json expanded from 8 to 33 entries. 2 bugs fixed: DOMAIN_FORKING duplicate DOC_MAP key, last-modified typo '2026-05-5'. 10 articles recently promoted from cooker. v1.0→1.1.",
+  "file_count": 33
+},
+{
+  "path": "/docs/_ideas/",
+  "module": "Ideas Sandbox",
+  "category": "ideation",
+  "session": "2026-05-06",
+  "status": "refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "288-entry census. Non-canonical sandbox. _ideas_module.json expanded from 1 to 4 infrastructure entries. 10 recent cooker promotions documented. DOC_MAP covers 30/219 .md files (13%) by design.",
+  "file_count": 288
+},
+{
+  "path": "/docs/rtt/",
+  "module": "RTT-Tech Root",
+  "category": "rtt-core",
+  "session": "2026-05-06",
+  "status": "re-refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "Second refresh. rtt-root_module.json expanded from 2 to 49 file entries. 5 submodule declarations (core/10, diagrams/16, examples/9, maps/8, sort/9). 18 child module directories noted as trimmed. v1.0→1.1.",
+  "file_count": 53
+},
+{
+  "path": "/docs/rtt/Inside/",
+  "module": "RTT Inside",
+  "category": "rtt-deployment",
+  "session": "2026-05-06",
+  "status": "refreshed",
+  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
+  "notes": "122 files across 15 directories. Already at v2.0 with 120 entries — most mature manifest. Added metadata wrapper + 2 missing files (drift_protection.md, CHANGELOG.md). v2.0→2.1.",
+  "file_count": 122
+},
+{
+  "path": "/docs/rtt/Inside/CHANGELOG.md",
+  "module": "RTT Inside CHANGELOG",
+  "category": "rtt-deployment",
+  "session": "2026-05-06",
+  "status": "updated",
+  "artifacts": ["CHANGELOG"],
+  "notes": "Prepended v2.1 entry to existing CHANGELOG."
+}
   ],
 
   "remaining_directories": {
@@ -645,16 +743,18 @@
   },
 
   "size_ranking": [
-    { "rank": 1, "module": "EcoEchoSystem",        "files": 103, "category": "rtt-vst-simulation" },
-    { "rank": 2, "module": "Resonance Substrate Model", "files": 97, "category": "substrate-core" },
-    { "rank": 3, "module": "Scientific Instrument Review", "files": 74, "category": "rtt-vst-validation" },
-    { "rank": 4, "module": "Corpus",                "files": 61, "category": "library-structural" },
-    { "rank": 5, "module": "RTT Store",             "files": 53, "category": "rtt-storage" },
-    { "rank": 6, "module": "Governance Substrate Model", "files": 51, "category": "governance-substrate" },
-    { "rank": 7, "module": "Substrate Mind Science", "files": 27, "category": "substrate-core" },
-    { "rank": 8, "module": "Enterprise Structural Awareness", "files": 26, "category": "organizational-substrate" },
-    { "rank": 9, "module": "Arrival Substrate Model", "files": 24, "category": "substrate-arrival" },
-    { "rank": 10, "module": "Education-Core",       "files": 22, "category": "education-structural" }
+    { "rank": 1, "module": "Ideas Sandbox", "files": 288, "category": "ideation" },
+    { "rank": 2, "module": "RTT Inside", "files": 122, "category": "rtt-deployment" },
+    { "rank": 3, "module": "EcoEchoSystem",        "files": 103, "category": "rtt-vst-simulation" },
+    { "rank": 4, "module": "Resonance Substrate Model", "files": 97, "category": "substrate-core" },
+    { "rank": 5, "module": "Scientific Instrument Review", "files": 74, "category": "rtt-vst-validation" },
+    { "rank": 6, "module": "Corpus",                "files": 61, "category": "library-structural" },
+    { "rank": 7, "module": "RTT Store",             "files": 53, "category": "rtt-storage" },
+    { "rank": 8, "module": "Governance Substrate Model", "files": 51, "category": "governance-substrate" },
+    { "rank": 9, "module": "Substrate Mind Science", "files": 27, "category": "substrate-core" },
+    { "rank": 10, "module": "Enterprise Structural Awareness", "files": 26, "category": "organizational-substrate" },
+    { "rank": 11, "module": "Arrival Substrate Model", "files": 24, "category": "substrate-arrival" },
+    { "rank": 12, "module": "Education-Core",       "files": 22, "category": "education-structural" }
   ],
 
   "category_index": {
@@ -667,6 +767,11 @@
     "rtt-vst-simulation": ["EcoEchoSystem"],
     "rtt-storage": ["RTT Store"],
     "rtt-runtime": ["Runtime"],
+    "rtt-infrastructure": ["RTT/codes"],
+    "rtt-hardware": ["D369 Chip Spec"],
+    "rtt-deployment": ["RTT Inside"],
+    "research-articles": ["Research"],
+    "ideation": ["Ideas Sandbox"],
     "regime-awareness": ["GERA"],
     "substrate-manufacturing": ["MSRM"],
     "media-substrate-core": ["MSM", "Audio Industry Reviewed", "Diagnosing Media Therapy"],
