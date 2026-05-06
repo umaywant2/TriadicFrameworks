@@ -34,23 +34,14 @@ A vault. A mine. A myth‑lab.
 ## 📚 RTT‑Inside 'Seed' Papers
 
 - 🚀 Good News, Everyone - A cheerful gateway into RTT‑aligned thinking.
-- 🧩 DPU / VCG / NIMMS Architecture - Next‑gen compute fabrics reframed through RTT primitives.
 - 🐟 Autonomous Robotic Fish (Great Lakes) - Ecological robotics and restoration loops using RTT autonomy.
-- 📡 Global ATC + Space Force + HAM Radio - Unified communication networks modeled with RTT‑Inside.
-- ✨ Spark for Autonomous Forms - Emergent autonomy driven by resonance‑time primitives.
 - ⛏️ Coal Industry (RTT Analysis) - Energy transitions and logistics through resonance logic.
 - 💰 Finance Edition (Multi‑Chapter) - Financial systems re‑anchored in RTT risk topology.
 - 🌋 GPR + Seismo Hologram - Unified subsurface sensing with RTT‑Inside.
 - ✈️ How RTT Helps Planes Not Go Boom - Aviation safety stabilized by RTT structural logic.
 - 🌐 Internet2 + Python + Cisco - High‑speed networking mapped into RTT operational models.
 - 🔭 JWST RTT QA Layer - RTT primitives as a cosmic‑scale quality‑assurance layer.
-- 🔋 Power Systems + Sensors + BMS - Energy and battery systems enhanced with RTT‑Inside.
-- 🧮 qCompute (Preview) - Quantum‑adjacent compute reinterpreted through RTT.
-- ⚡ Quantum Energy Banks - Corridor‑based energy routing using RTT structural logic.
-- 🏛️ Supercomputers Are Already Triadic - HPC architectures revealed as naturally triadic.
-- 🕹️ The C64 as an RTT Host - Retro compute mapped elegantly onto RTT primitives.
 - 🪐 Universe‑Class Active Directory - Identity and trust as resonance‑aware structural systems.
-- 🛸 Warp Drive Architecture - Speculative propulsion scaffolded with RTT‑Inside.
 - 🌊 Deep Sea as an RTT Domain - Why oceanic environments naturally align with RTT dynamics.
 
 ---
