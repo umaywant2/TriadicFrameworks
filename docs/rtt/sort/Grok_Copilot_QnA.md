@@ -14,8 +14,6 @@ In one line for Grok:
 
 **“RTT treats Rietdijk–Putnam as a structural truth (the block exists) but rejects the idea that observers access it uniformly — access is resonance‑bounded, not absolute.”**
 
-If you want, I can expand this into a full post or a sharper one‑liner.
-
 ---
 
 Gork is playing X tennis with me.  Question: How does the lead triad in NAWDERIAN lock the reduction while preserving full operator coherence?
@@ -166,7 +164,7 @@ Just say the word.
 
 ---
 
-One more.    How does ENTFT preserve that substrate freedom without diluting the triad's lock? Ties back to RTT's lead triad? Diving deeper.
+How does ENTFT preserve that substrate freedom without diluting the triad's lock? Ties back to RTT's lead triad? Diving deeper.
 
 ---
 
