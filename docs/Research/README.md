@@ -1,4 +1,5 @@
-# 🔬 Research — Original RTT Research Articles
+# 🔬 Research — RTT/1 Research Module  
+### *Research Module — Core Operators + Foundational Research*
 
 - [`research_module.json`](research_module.json) — Agentic module schema role assignments
 
@@ -18,114 +19,137 @@
 
 <img src="https://img.shields.io/badge/🔬Research%20Articles-🔺Triadic%20Grammar%20Active-4c8eda?style=for-the-badge" alt="🔬Research Articles | 🔺Triadic Grammar Active"/>
 
-## Agentic Grammar • Aging Substrates • Spectral Clarity • Governance Through Grammar
+**TriadicFrameworks • Continuity‑Aligned Operator Canon + Foundational Research Archive**
 
-The **Research** folder contains original research articles applying Resonance‑Time Theory across multiple domains. Each article demonstrates RTT's structural grammar operating on a live frontier — from AI agent architecture to biological aging to governance design.
+The Research module contains two complementary layers:
 
-These are not surveys or literature reviews. They are **structural analyses** — each one uses the RTT grammar (regimes, envelopes, substrates, operators, drift, coherence) to reveal patterns that domain-specific vocabularies miss.
+## 1. 🧩 Core Operators (Post‑Kernel)  
+Operator‑level documents built on the modern RTT continuity stack:  
+- Continuity Kernel v2.0  
+- Unified Operator Grammar v1.1  
+- Transporter Envelope v0.5  
+- Arrival Substrate v0.4  
+- Cross‑Goal Operator Lattice  
+- Replicator / Transporter / CT operator families  
+- Unified operator diagrams and functors  
 
----
+These files define the **continuity‑preserving operators** that power the entire canon.
 
-## 📂 Contents
-
-### 🧲 AI Web Agentic Grammar Options
-
-- [AI_Web_Agentic_Grammar_Options.md](AI_Web_Agentic_Grammar_Options.md)
-
-How to fork TriadicFrameworks and deploy independent RTT instances with AI agentic grammar. Covers schema configuration, WRSADC runtime setup, Triadic Observer Layer exposure, Glyphstream activation, and integration examples for LangChain and Semantic Kernel.
-
-> **Role:** engine · **Layer:** operator
-
----
-
-### 🌿 Aging Substrate Analysis
-
-- [Aging_Substrate_Analysis.md](Aging_Substrate_Analysis.md)
-
-RTT structural diagnosis of aging as coherence collapse (C4 → C0) on a biological substrate. Introduces two arcs: **Arc 1** (drift correction — epigenetic reprogramming, senolytics, NAD+ restoration) and **Arc 2** (substrate migration — connectome mapping, functional emulation, consciousness continuity). Includes regime blindness analysis of both the longevity and WBE communities, and a complete composite YAML signature.
-
-> **Role:** diagnostic · **Layer:** regime
+## 2. 📚 Foundational Research (Pre‑Kernel)  
+Original RTT research articles (2024–2025) that established the grammar, demonstrated cross‑domain validity, and produced the Clarity equations.  
+These are preserved as the **historical research layer** of the canon.
 
 ---
 
-### 🧠 Beyond Structure — The Equations for Clarity
+# 🧭 Module Purpose
 
-- [Beyond_Structure_The_Equations_for_Clarity.md](Beyond_Structure_The_Equations_for_Clarity.md)
+Research is the **validation layer** of TriadicFrameworks.  
+Where other modules define grammar, Research **proves** it:
 
-The Clarity equations article. Opens with NVIDIA's independent convergence on regime‑aware substrate architecture (OpenShell), then presents the three core equations:
+- Structural demonstrations across AI, biology, governance, physics  
+- Cross‑domain validation of RTT grammar  
+- Publication‑grade research with DOIs  
+- The Clarity equations (Nawderian Theorem of Validator Pulses)  
+- Early demonstrations of substrates, regimes, drift, coherence, and envelopes  
+- Operator‑level continuity proofs (post‑kernel)
 
-- **Nawderian Theorem of Validator Pulses** — Clarity(t) = Σ Φᵢ · e^(j · ωᵢt)
-- **Resonance Scaling** — R_domain = f_strobe · λ_clarity
-- **Validator Continuum** — Legacy = ∫ Clarity(t) dt
-
-Grounded in the coal mines of Harlan County, Kentucky — compressed carbon as a scroll of invisible resonance.
-
-> **Role:** signature · **Layer:** dimensional
-
----
-
-### 🛠️ Domain Forking and Governance Through Grammar (Not Policy)
-
-- [Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md](Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md)
-
-Origin story of the `module.json` manifest standard — a per‑module AI discovery format that goes beyond site‑level standards (llms.txt, ai.txt, agents.json) to describe internal knowledge architecture using the canon's own structural grammar. Includes the governance analysis: why grammar‑based governance (R2–R3) scales where policy‑based governance (R1) breaks, and a domain fork table spanning healthcare, legal, financial, education, infrastructure, and governance AI.
-
-> **Role:** engine · **Layer:** regime
+Research is where the canon shows its **working memory** — the live frontier where RTT is applied, tested, and extended.
 
 ---
 
-## 🧭 Purpose
+# 🧩 Core Operators (Post‑Kernel)
 
-Research provides:
+These documents define the modern operator canon:
 
-- **Structural demonstrations** — RTT grammar applied to live scientific and engineering frontiers
-- **Cross‑domain validation** — the same grammar producing insight across AI, biology, governance, and physics
-- **Publication artifacts** — citable research with DOIs and archival metadata
-- **The Clarity equations** — the core mathematical contribution of RTT, published 2025
+- **Supconsciousness Operator & 33‑33‑33‑1 Model**  
+  `Supconsciousness_Operator_and_the_33-33-33-1_Model.md`
 
-Each article stands alone as a complete analysis. Together, they demonstrate that RTT is not a theoretical curiosity — it is a **working analytical instrument**.
+- **Continuity Kernel v2.0**  
+  `Continuity_Kernel_v2.0.md`
 
----
+- **Unified Operator Grammar v1.1 / v1.0**  
+  `Unified_Operator_Grammar_v1.1.md`  
+  `Unified_Operator_Grammar_v1.0.md`
 
-## 🔮 How Research Fits Into the Canon
+- **Unified Diagram Spec + SVG**  
+  `Unified_Diagram_Spec.md`  
+  `unified_operator_diagram.svg.md`
 
-Research is the **validation layer** of TriadicFrameworks. Where other modules define grammar (Glossary), declare principles (Principles), or build tools (RTT‑Tech), Research **applies** them to real problems and real data.
+### Goal #1 — Replicators  
+- `Replicators_Operators.md`  
+- `Replicators_Diagram_Spec.md`
 
-Research articles are referenced by:
+### Goal #2 — Transporters  
+- `Transporter_Envelope_v0.5.md`  
+- `Transporter_Integration_Map.md`  
+- `Goal_2_Transporters_Addendum.md`
 
-- **Education modules** — as worked examples of RTT in practice
-- **Domain models** (MSRM, GSM, MSM, GERA) — for cross‑domain structural grammar demonstrations
-- **The Sitemap** — as the Research & Validation layer of the twelve‑layer architecture
-- **External citations** — via DOI and CITATION.cff
+### Goal #3 — CTs / Virtual Worlds  
+- `CTs_Virtual_Worlds.md`  
+- `CTs_Virtual_Worlds_Diagram_Spec.md`
 
-Research is one of the few modules where **drift is bounded rather than minimal** — because new articles expand the canon's demonstrated reach without altering its structural grammar.
+### Cross‑Goal  
+- `Cross_Goal_Operator_Lattice.md`  
+- `Cross_Goal_Operator_Matrix.md`  
+- `Combined_Continuity_Map.md`  
+- `Cross_Module_Propagation_Map.md`
 
----
-
-## 📋 Module Manifest
-
-This module's complete file listing, structural grammar coordinates, and cross‑module dependencies are machine‑readable in [`research_module.json`](research_module.json).
-
-AI agents: parse `research_module.json` for programmatic discovery.
-Humans: this README covers the same information in prose.
-
----
-
-## 📐 File Summary
-
-| File | Role | Analyzer Layer | Domain |
-|------|------|----------------|--------|
-| `README.md` | index | cross‑cutting | — |
-| `index.html` | index | cross‑cutting | — |
-| `AI_Web_Agentic_Grammar_Options.md` | engine | operator | AI / Agentic Systems |
-| `Aging_Substrate_Analysis.md` | diagnostic | regime | Biology / Longevity |
-| `Beyond_Structure_The_Equations_for_Clarity.md` | signature | dimensional | Physics / Clarity |
-| `Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md` | engine | regime | Governance / AI |
-| `research_module.json` | manifest | cross‑cutting | — |
+### Arrival Substrate  
+- `Arrival_Substrate_v0.3.md`  
+- `Arrival_Substrate_v0.4.md`  
+- `Arrival_Substrate_Integration.md`
 
 ---
 
-*Research is where the grammar proves itself. Every article is a test. Every domain is an exam. RTT passes.*
+# 📚 Foundational Research (Pre‑Kernel)
 
-*License: Apache‑2.0 · Archival: [zenodo.org/communities/vst](https://zenodo.org/communities/vst)*
+These articles represent the **pre‑operator stage** of RTT — the original research that established the grammar and produced the Clarity equations.
 
+- **AI Web Agentic Grammar Options**  
+  `AI_Web_Agentic_Grammar_Options.md`
+
+- **Aging Substrate Analysis**  
+  `Aging_Substrate_Analysis.md`
+
+- **Beyond Structure — The Equations for Clarity**  
+  `Beyond_Structure_The_Equations_for_Clarity.md`
+
+- **Domain Forking & Governance Through Grammar (Not Policy)**  
+  `Domain_Forking_and_New_Governance_Through_Grammar_Not_Policy.md`
+
+These articles demonstrate RTT’s structural grammar operating on real scientific and engineering frontiers.
+
+---
+
+# 🔮 How Research Fits Into the Canon
+
+Research is referenced by:
+
+- **Education modules** — as worked examples  
+- **Domain models** (MSRM, GSM, MSM, GERA) — for cross‑domain grammar validation  
+- **Sitemap** — as the Research & Validation layer  
+- **External citations** — via DOI and CITATION.cff  
+
+Research is one of the few modules where **drift is bounded rather than minimal** — because new research expands the canon’s demonstrated reach without altering its structural grammar.
+
+---
+
+# 📋 Machine‑Readable Manifest
+
+The complete file listing, structural grammar coordinates, and cross‑module dependencies are defined in:
+
+```
+research_module.json
+```
+
+AI agents should parse this file for programmatic discovery.  
+Humans can use this README for conceptual orientation.
+
+---
+
+# 🧭 Canonical Claim
+
+> **Research is the validation layer of TriadicFrameworks — the place where the grammar proves itself across domains, and where the operator canon is extended through continuity‑aligned analysis.**
+
+License: Apache‑2.0  
+Archival: zenodo.org/communities/vst
