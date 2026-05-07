@@ -1,4 +1,11 @@
 # Philanthropy & Funding Transparency  
+
+- [`Philanthropy_module.json`](Philanthropy_module.json) — Agentic module schema role assignments
+
+<img src="https://img.shields.io/badge/🌍Philanthropy-📘Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="Philanthropy | Funding Transparency • AI‑Ready"/>
+
+---
+
 ## TriadicFrameworks Module Front Door
 
 This module provides a structural clarity engine for philanthropic systems.  
