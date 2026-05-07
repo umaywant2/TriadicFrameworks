@@ -80,3 +80,22 @@ Both converge to:
 
 # 4. Continuity Map Diagram (textual)
 
+```
+Identity Kernel (T)
+|
++-------+-------+
+|               |
+Replicators        CTs / Virtual Worlds
+(T, M)               (T, E)
+|               |
++-------+-------+
+|
+Arrival Substrate
+|
+Maximal Continuity
+```
+
+---
+
+## Claim
+> Goals #1 and #3 are two branches of a single continuity tree rooted in the 33‑33‑33‑1 operator, converging at the arrival substrate.
