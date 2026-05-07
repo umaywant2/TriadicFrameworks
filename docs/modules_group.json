@@ -17,7 +17,7 @@
       "note": "Full metadata sweep: _meta, _session_context, _version_history, structural_grammar, cross_module_propagation added to all 9 modules. 560+ files catalogued. 2 bugs fixed (Research DOC_MAP duplicate key, last-modified typo). 10 CHANGELOGs delivered."
     }
   }
-}
+},
 
   "refreshed_modules": [
 
@@ -683,7 +683,7 @@
   "status": "updated",
   "artifacts": ["CHANGELOG"],
   "notes": "Prepended v2.1 entry to existing CHANGELOG."
-}
+},
 {
   "id": "philanthropy",
   "name": "Philanthropy & Funding Transparency",
@@ -703,7 +703,7 @@
     "Donor Alignment Score",
     "Fraud Indicator Framework"
   ]
-}
+},
   ],
 
   "remaining_directories": {
