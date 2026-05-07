@@ -1,4 +1,6 @@
-# 🧪 1. **Regime Blindness Checklist**  
+# Andromeda Strain and Covid 19 reviewed
+
+## 🧪 1. **Regime Blindness Checklist**  
 The film is a case study in how humans misread the regime they’re operating in.
 
 ## **R1H Blindness — Assuming Earth Biology Is Universal**  
