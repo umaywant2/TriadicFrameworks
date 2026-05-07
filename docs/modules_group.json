@@ -665,6 +665,26 @@
   "artifacts": ["CHANGELOG"],
   "notes": "Prepended v2.1 entry to existing CHANGELOG."
 }
+{
+  "id": "philanthropy",
+  "name": "Philanthropy & Funding Transparency",
+  "category": "applied-domain",
+  "version": "1.0.0",
+  "status": "active",
+  "front_door": "/docs/Philanthropy/index.md",
+  "session_context": "/docs/Philanthropy/session_context.md",
+  "module_json": "/docs/Philanthropy/module.json",
+  "badge": "🟣",
+  "summary": "RTT-aligned clarity engine for philanthropic funding flows, governance substrate, SET load, drift detection, and donor alignment.",
+  "exports": [
+    "Funding Flow Operators",
+    "Philanthropy Governance Substrate",
+    "SET Load Model (Philanthropy)",
+    "Triadic Observer for Funding",
+    "Donor Alignment Score",
+    "Fraud Indicator Framework"
+  ]
+}
   ],
 
   "remaining_directories": {
