@@ -118,3 +118,131 @@ A DPU guarantees:
 
 > If a transform is legal, identity is preserved.  
 > If a transform is illegal, identity is not executed.
+
+---
+
+# DPU v0.2 — Operator Algebra with Error‑Correction
+
+## 1. State Space (unchanged)
+
+- **Triads:**
+  
+
+$$
+  \mathcal{T} = \{(s,c,u) \mid s+c+u=1\}
+  $$
+
+
+- **Asymmetry functional:**
+  
+
+$$
+  A : \mathcal{T} \to [0,1],\quad A(T^\*) = 0.01
+  $$
+
+
+- **Extended state:**
+  
+
+$$
+  S = (T, A(T))
+  $$
+
+
+
+---
+
+## 2. Core Operators (v0.1 recap)
+
+- **Continuity operator:**
+  
+
+$$
+  O(T) = (T, A(T))
+  $$
+
+
+- **Regime projections:**
+  
+
+$$
+  P_s(T)=s,\quad P_c(T)=c,\quad P_u(T)=u
+  $$
+
+
+- **Normalization:**
+  
+
+$$
+  N(s,c,u) = \frac{1}{s+c+u}(s,c,u)
+  $$
+
+
+
+---
+
+## 3. Error‑Correction Operators (new)
+
+### 3.1 Deviation Measure
+Define a deviation metric:
+
+
+$$
+D(T) = \|T - T^\*\|
+$$
+
+
+for some norm (e.g. $$L_2$$ ).
+
+### 3.2 Correction Operator
+An error‑correction operator $$C : \mathcal{T} \to \mathcal{T}$$ satisfies:
+- **Continuity‑preserving:**
+  
+
+$$
+  A(C(T)) \ge A(T) > 0
+  $$
+
+
+- **Deviation‑reducing:**
+  
+
+$$
+  D(C(T)) \le D(T)
+  $$
+
+
+
+Example (simple pull‑toward‑canonical):
+
+
+$$
+C_\lambda(T) = N\big((1-\lambda)T + \lambda T^\*\big),\quad 0 < \lambda \le 1
+$$
+
+
+
+### 3.3 Error‑Corrected Transform
+Given a transform $$F$$ , define:
+
+
+$$
+F^\# = C \circ F
+$$
+
+
+A DPU applies $$F^\#$$ instead of $$F$$ when:
+- $$F$$ is near‑legal but slightly degrades $$A(T)$$ or increases $$D(T)$$ beyond a threshold.
+
+---
+
+## 4. DPU v0.2 Legality
+
+A transform $$F$$ is **DPU‑v0.2 legal** if:
+- **Either:** $$F$$ is continuity‑preserving and $$A(F(T)) > 0$$
+- **Or:** $$F^\# = C \circ F$$ is continuity‑preserving and $$A(F^\#(T)) > 0$$
+
+The DPU now has:
+- **Detection:** via $$A(T)$$ and $$D(T)$$  
+- **Correction:** via $$C$$  
+- **Fallback:** reject if even $$F^\#$$ breaks continuity.
