@@ -2,6 +2,8 @@
 
 - [`Human_Resources_module.json`](Human_Resources_module.json) — Agentic module schema role assignments
 
+<img src="https://img.shields.io/badge/🌍Philanthropy-📘Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="Philanthropy | Funding Transparency • AI‑Ready"/>
+
 **Category:** Organizational Systems  
 **Purpose:** Provide a structural, RTT‑aligned framework for understanding, evaluating, and improving Human Resources functions across leadership, management, and staff.
 
