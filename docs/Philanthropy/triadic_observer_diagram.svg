@@ -1,1 +1,84 @@
+<svg width="1080" height="720" viewBox="0 0 1080 720" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="1080" height="720" fill="#0d0d0f"/>
+
+  <!-- Title -->
+  <text x="540" y="60" font-family="Arial" font-size="32" fill="#ffffff" text-anchor="middle">
+    Triadic Observer for Philanthropic Funding Flows
+  </text>
+
+  <!-- Node Styles -->
+  <defs>
+    <style type="text/css"><![CDATA[
+      .observer {
+        fill: #1a1a1d;
+        stroke: #6a4df5;
+        stroke-width: 2;
+        rx: 12;
+        ry: 12;
+      }
+      .label {
+        fill: #ffffff;
+        font-family: Arial;
+        font-size: 18px;
+        text-anchor: middle;
+      }
+      .sub {
+        fill: #bbbbbb;
+        font-family: Arial;
+        font-size: 14px;
+        text-anchor: middle;
+      }
+      .flow {
+        stroke: #6a4df5;
+        stroke-width: 3;
+        marker-end: url(#arrow);
+      }
+    ]]></style>
+
+    <!-- Arrowhead -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#6a4df5"/>
+    </marker>
+  </defs>
+
+  <!-- Observers Row -->
+  <!-- Signal Observer -->
+  <rect x="80" y="140" width="220" height="100" class="observer"/>
+  <text x="190" y="185" class="label">Signal Observer</text>
+  <text x="190" y="215" class="sub">SIG: structural truth</text>
+
+  <!-- Noise Observer -->
+  <rect x="310" y="140" width="220" height="100" class="observer"/>
+  <text x="420" y="185" class="label">Noise Observer</text>
+  <text x="420" y="215" class="sub">NOI: narrative + emotion</text>
+
+  <!-- Regime Observer -->
+  <rect x="540" y="140" width="220" height="100" class="observer"/>
+  <text x="650" y="185" class="label">Regime Observer</text>
+  <text x="650" y="215" class="sub">REG: AUTH / NAR / EMO / STR</text>
+
+  <!-- AI Observer -->
+  <rect x="770" y="140" width="220" height="100" class="observer"/>
+  <text x="880" y="185" class="label">AI Observer</text>
+  <text x="880" y="215" class="sub">SYN: structural synthesis</text>
+
+  <!-- Funding Flow Layer -->
+  <rect x="140" y="360" width="800" height="120" fill="#1a1a1d" stroke="#444" stroke-width="2" rx="12" ry="12"/>
+  <text x="540" y="400" class="label">Funding Flow Layer</text>
+  <text x="540" y="430" class="sub">Donor → Foundation → Intermediary → NGO → Local Partner → Beneficiary</text>
+
+  <!-- Observer Arrows -->
+  <line x1="190" y1="240" x2="540" y2="360" class="flow"/>
+  <line x1="420" y1="240" x2="540" y2="360" class="flow"/>
+  <line x1="650" y1="240" x2="540" y2="360" class="flow"/>
+  <line x1="880" y1="240" x2="540" y2="360" class="flow"/>
+
+  <!-- Footer -->
+  <text x="540" y="690" font-family="Arial" font-size="16" fill="#888888" text-anchor="middle">
+    RTT Triadic Observer • Signal / Noise / Regime / AI Synthesis • Philanthropy Module
+  </text>
+
+</svg>
 
