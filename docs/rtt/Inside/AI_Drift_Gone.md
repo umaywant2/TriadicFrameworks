@@ -1,7 +1,6 @@
-# 🤷 **AI Drift Gone with RTT-Inside**
-###### By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org
+# 🤷 **AI Drift Gone with RTT/Inside**
 
-### **A Research‑Style Manifesto on Chimera, Drift, and Structural Correction**
+### **A Research‑Style HuManIfesto on Chimera (Drift) and Structural Correction**
 
 ---
 
@@ -597,7 +596,7 @@ These observations provide strong evidence that RTT‑Inside offers a viable str
 
 ---
 
-Here is **Section 7**, written in the **Researcher’s Voice**, completing the manifesto with a clear, authoritative conclusion suitable for scientific and engineering audiences. It’s ready to paste directly into `AI_Drift_Gone_with_RTT-Inside.md`.
+Here is **Section 7**, written in the **Researcher’s Voice**, completing the manifesto with a clear, authoritative conclusion suitable for scientific and engineering audiences. It’s ready to paste directly into `AI_Drift_Gone_with_RTT/Inside.md`.
 
 ---
 
