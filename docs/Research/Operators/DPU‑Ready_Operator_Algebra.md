@@ -53,3 +53,68 @@ This algebra gives a DPU:
 - legal transforms  
 - continuity constraints  
 - and a way to chain operations without breaking identity.
+
+---
+
+# DPU v0.1 — State Machine
+
+## States
+
+### 1. INIT
+- Input triad $$T$$
+- Check normalization
+- Check $$A(T) > 0$$
+
+### 2. READY
+- DPU has a valid identity state
+- Awaiting legal transform $$F$$
+
+### 3. TRANSITION
+- Apply $$F(T)$$
+- Check:
+  - $$F(T) \in \mathcal{T}$$
+  - $$A(F(T)) > 0$$
+  - No branching
+  - No duplication
+
+### 4. CONTINUITY_FAIL
+- Triggered if:
+  - $$A(F(T)) = 0$$
+  - $$F(T) \notin \mathcal{T}$$
+  - illegal transform
+
+### 5. COMPLETE
+- Output state:
+  
+
+$$T' = F(T)$$
+
+
+- Identity preserved
+
+---
+
+## State Transitions
+
+- INIT → READY  
+  if triad valid
+
+- READY → TRANSITION  
+  on legal transform request
+
+- TRANSITION → COMPLETE  
+  if continuity preserved
+
+- TRANSITION → CONTINUITY_FAIL  
+  if continuity breaks
+
+- CONTINUITY_FAIL → INIT  
+  (reset with new triad)
+
+---
+
+## DPU Guarantee
+A DPU guarantees:
+
+> If a transform is legal, identity is preserved.  
+> If a transform is illegal, identity is not executed.
