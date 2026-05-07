@@ -2,7 +2,7 @@
 
 - [`Philanthropy_module.json`](Philanthropy_module.json) — Agentic module schema role assignments
 
-<img src="https://img.shields.io/badge/🌍Philanthropy-📘Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="Philanthropy | Funding Transparency • AI‑Ready"/>
+<img src="https://img.shields.io/badge/🟣Philanthropy-🌁Funding%20Transparency%20AI%20Ready-4c8eda?style=for-the-badge" alt="🟣 Philanthropy | Funding Transparency Model • AI‑Ready"/>
 
 ---
 
