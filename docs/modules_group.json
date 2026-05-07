@@ -513,6 +513,28 @@
       "notes": "Already full canon-spec. Added og:image dimensions. 14-file manifest. Constitution layer. Sibling: GSM.",
       "file_count": 14
     },
+  {
+  "id": "Human_Resources",
+  "name": "Human Resources",
+  "category": "Organizational Systems",
+  "path": "/docs/Human_Resources/",
+  "front_door": "/Human_Resources",
+  "glyph": "/docs/Human_Resources/hr.glyph.svg",
+  "summary": "RTT‑aligned structural analysis of HR systems, including performance reviews, onboarding, conflict resolution, regime patterns, drift detection, and cross‑module integration.",
+  "version": "1.0.0",
+  "status": "active",
+  "module_json": "/docs/Human_Resources/Human_Resources_module.json",
+  "doc_map": "/docs/Human_Resources/DOC_MAP.md",
+  "session_context": "/docs/Human_Resources/session_context.md",
+  "tags": [
+    "HR",
+    "organizational systems",
+    "regime patterns",
+    "drift detection",
+    "triadic observer",
+    "RTT"
+  ]
+},
     {
       "path": "/docs/Paradoxes_canon/",
       "module": "Paradoxes Canon",
@@ -680,28 +702,6 @@
     "Triadic Observer for Funding",
     "Donor Alignment Score",
     "Fraud Indicator Framework"
-  ]
-}
-{
-  "id": "Human_Resources",
-  "name": "Human Resources",
-  "category": "Organizational Systems",
-  "path": "/docs/Human_Resources/",
-  "front_door": "/Human_Resources",
-  "glyph": "/docs/Human_Resources/hr.glyph.svg",
-  "summary": "RTT‑aligned structural analysis of HR systems, including performance reviews, onboarding, conflict resolution, regime patterns, drift detection, and cross‑module integration.",
-  "version": "1.0.0",
-  "status": "active",
-  "module_json": "/docs/Human_Resources/Human_Resources_module.json",
-  "doc_map": "/docs/Human_Resources/DOC_MAP.md",
-  "session_context": "/docs/Human_Resources/session_context.md",
-  "tags": [
-    "HR",
-    "organizational systems",
-    "regime patterns",
-    "drift detection",
-    "triadic observer",
-    "RTT"
   ]
 }
   ],
