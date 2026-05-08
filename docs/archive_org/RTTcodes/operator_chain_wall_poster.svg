@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
+
+  <!-- Background -->
+  <rect x="0" y="0" width="900" height="520" fill="#020617" />
+
+  <!-- Title -->
+  <text x="450" y="50" fill="#E5E7EB"
+        font-family="system-ui, -apple-system, BlinkMacSystemFont, sans-serif"
+        font-size="26" text-anchor="middle">
+    RTT/1 OPERATOR CHAIN — INTERNET ARCHIVE GATEWAY
+  </text>
+  <text x="450" y="75" fill="#9CA3AF"
+        font-family="system-ui" font-size="14" text-anchor="middle">
+    METADATA → WAYBACK → LINEAGE → COLLECTION → PRESERVATION → DRIFTBOUND
+  </text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="9" refY="3.5"
+            orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L9,3.5 L0,7 z" fill="#9CA3AF" />
+    </marker>
+  </defs>
+
+  <!-- Box template: x=200, width=500, height=60, vertical spacing 70 -->
+
+  <!-- 1. METADATA_OPERATOR -->
+  <rect x="200" y="100" width="500" height="60" rx="10" ry="10"
+        fill="#020617" stroke="#6366F1" stroke-width="2" />
+  <text x="450" y="130" fill="#E5E7EB"
+        font-family="system-ui" font-size="18" text-anchor="middle">
+    1. METADATA_OPERATOR
+  </text>
+  <text x="450" y="148" fill="#9CA3AF"
+        font-family="system-ui" font-size="12" text-anchor="middle">
+    identify substrate, regime, drift_sensitivity, coherence, lineage_ids
+  </text>
+
+  <!-- Arrow 1→2 -->
+  <line x1="450" y1="160" x2="450" y2="185"
+        stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 2. WAYBACK_OPERATOR -->
+  <rect x="200" y="190" width="500" height="60" rx="10" ry="10"
+        fill="#020617" stroke="#F97316" stroke-width="2" />
+  <text x="450" y="220" fill="#E5E7EB"
+        font-family="system-ui" font-size="18" text-anchor="middle">
+    2. WAYBACK_OPERATOR
+  </text>
+  <text x="450" y="238" fill="#9CA3AF"
+        font-family="system-ui" font-size="12" text-anchor="middle">
+    retrieve snapshots, build drift_map, mark continuity_breaks, time_crystal
+  </text>
+
+  <!-- Arrow 2→3 -->
+  <line x1="450" y1="250" x2="450" y2="275"
+        stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 3. LINEAGE_OPERATOR -->
+  <rect x="200" y="280" width="500" height="60" rx="10" ry="10"
+        fill="#020617" stroke="#10B981" stroke-width="2" />
+  <text x="450" y="310" fill="#E5E7EB"
+        font-family="system-ui" font-size="18" text-anchor="middle">
+    3. LINEAGE_OPERATOR
+  </text>
+  <text x="450" y="328" fill="#9CA3AF"
+        font-family="system-ui" font-size="12" text-anchor="middle">
+    construct continuity kernel, lineage_graph, transformations, regime_shifts
+  </text>
+
+  <!-- Arrow 3→4 -->
+  <line x1="450" y1="340" x2="450" y2="365"
+        stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 4. COLLECTION_OPERATOR -->
+  <rect x="200" y="370" width="500" height="60" rx="10" ry="10"
+        fill="#020617" stroke="#EC4899" stroke-width="2" />
+  <text x="450" y="400" fill="#E5E7EB"
+        font-family="system-ui" font-size="18" text-anchor="middle">
+    4. COLLECTION_OPERATOR
+  </text>
+  <text x="450" y="418" fill="#9CA3AF"
+        font-family="system-ui" font-size="12" text-anchor="middle">
+    collection_id, coherence_clusters, related_objects, regime_profile
+  </text>
+
+  <!-- Side arrow 4→5 (substrate branch) -->
+  <line x1="700" y1="400" x2="780" y2="400"
+        stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)" />
+  <text x="790" y="395" fill="#9CA3AF"
+        font-family="system-ui" font-size="11">
+    substrate focus →
+  </text>
+
+  <!-- 5. PRESERVATION_OPERATOR (right side small box) -->
+  <rect x="540" y="430" width="260" height="60" rx="10" ry="10"
+        fill="#020617" stroke="#F59E0B" stroke-width="2" />
+  <text x="670" y="455" fill="#E5E7EB"
+        font-family="system-ui" font-size="14" text-anchor="middle">
+    5. PRESERVATION_OPERATOR
+  </text>
+  <text x="670" y="472" fill="#9CA3AF"
+        font-family="system-ui" font-size="11" text-anchor="middle">
+    format, stability_score, drift_risk, multi_layer_flags
+  </text>
+
+  <!-- Arrow 4→5 (down-right) -->
+  <line x1="450" y1="430" x2="540" y2="460"
+        stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)" />
+
+  <!-- 6. DRIFTBOUND_RETRIEVAL_OPERATOR (bottom center) -->
+  <rect x="200" y="450" width="500" height="60" rx="10" ry="10"
+        fill="#020617" stroke="#8B5CF6" stroke-width="2" />
+  <text x="450" y="480" fill="#E5E7EB"
+        font-family="system-ui" font-size="18" text-anchor="middle">
+    6. DRIFTBOUND_RETRIEVAL_OPERATOR
+  </text>
+  <text x="450" y="498" fill="#9CA3AF"
+        font-family="system-ui" font-size="12" text-anchor="middle">
+    final answer: earliest_stable, most_reliable, key_changes, warnings
+  </text>
+
+  <!-- Arrows into DRIFTBOUND from LINEAGE + PRESERVATION -->
+  <line x1="450" y1="430" x2="450" y2="450"
+        stroke="#9CA3AF" stroke-width="2" marker-end="url(#arrow)" />
+  <line x1="670" y1="490" x2="700" y2="490"
+        stroke="#9CA3AF" stroke-width
