@@ -1,93 +1,148 @@
 {
-  "module": {
-    "name": "Internet Archive Module",
-    "id": "archive_org.core",
-    "category": "External-Archive",
+  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
+
+  "_meta": {
+    "module": "archive_org",
+    "canonical_id": "ARCHIVE_ORG",
+    "module_type": "external-gateway",
     "version": "1.0",
-    "summary": "TriadicFrameworks interface to the Internet Archive: preservation substrate, Wayback Machine access, collection metadata, digital lineage, and archival literacy.",
-    "purpose": "Provide a structured, AI-parsable module that mirrors the Internet Archive’s preservation architecture, enabling students and AIs to navigate collections, metadata, snapshots, and digital lineage with RTT-aligned clarity.",
-    "keywords": [
-      "internet archive",
-      "archive.org",
-      "wayback machine",
-      "digital preservation",
-      "archival literacy",
-      "collections",
-      "metadata",
-      "digital lineage",
-      "open access"
-    ],
-    "audience": [
-      "students",
-      "researchers",
-      "historians",
-      "developers",
-      "archivists",
-      "AIs"
-    ],
-    "front_door": "index.html",
-    "format": ["html", "markdown", "json"],
-    "every_page_stands_alone": true
+    "status": "canon-stable",
+    "author": "Nawder Loswin",
+    "license": "MIT",
+    "canonical_path": "/docs/archive_org/archive_org_module.json",
+    "module_home": "/docs/archive_org/",
+    "module_url": "https://www.triadicframeworks.org/archive_org",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "last_updated": "2026-05-08"
   },
 
-  "session_context": {
-    "canon": "TriadicFrameworks",
-    "module": "Internet Archive Module",
-    "category": "External-Archive",
-    "version": "1.0",
+  "_session_context": {
+    "canon": "active",
+    "modules": "operators → workflows → interfaces",
+    "drift": "bounded",
     "coherence": "stable",
-    "drift": "minimal",
-    "format": ["html", "markdown", "json"],
-    "front_door": "index.html",
-    "audience": [
-      "students",
-      "researchers",
-      "historians",
-      "developers",
-      "archivists",
-      "AIs"
-    ],
-    "every_page_stands_alone": true
+    "version": "1.0",
+    "format": "html + markdown + json",
+    "front_door": "exists",
+    "every_page": "AI-parsable + student-ready",
+    "audience": "students + researchers + AIs"
   },
 
-  "analyzer_layers": {
-    "operator": [
-      "wayback-snapshot",
-      "collection-index",
-      "metadata-extractor",
-      "digital-lineage",
-      "preservation-scan"
+  "module": {
+    "name": "archive_org",
+    "path": "docs/archive_org",
+    "canon_tag": "internet-archive",
+    "version": "1.0",
+    "layer": "gateway",
+    "status": "Active, Canon-Stable",
+    "purpose": "Provide RTT-aligned operators, workflows, and interfaces for safe, drift-bounded interaction with the Internet Archive.",
+    "parent": "TriadicFrameworks",
+    "url": "https://www.triadicframeworks.org/archive_org"
+  },
+
+  "operator_set": {
+    "WAYBACK_OPERATOR": {
+      "family": "T-Ops",
+      "purpose": "Time-indexed continuity + drift detection",
+      "inputs": ["target", "constraints"],
+      "outputs": ["snapshots", "drift_map", "continuity_breaks", "time_crystal"]
+    },
+    "METADATA_OPERATOR": {
+      "family": "R-Ops",
+      "purpose": "Normalize IA metadata into RTT grammar",
+      "inputs": ["target"],
+      "outputs": ["substrate_type", "regime", "drift_sensitivity", "coherence", "lineage_ids"]
+    },
+    "LINEAGE_OPERATOR": {
+      "family": "L-Ops",
+      "purpose": "Construct continuity kernel + lineage graph",
+      "inputs": ["snapshots", "metadata"],
+      "outputs": ["lineage_graph", "transformations", "regime_shifts"]
+    },
+    "COLLECTION_OPERATOR": {
+      "family": "E-Ops",
+      "purpose": "Dimensional envelope construction",
+      "inputs": ["target"],
+      "outputs": ["collection_id", "coherence_clusters", "related_objects", "regime_profile"]
+    },
+    "PRESERVATION_OPERATOR": {
+      "family": "B-Ops",
+      "purpose": "Substrate stability + boundary detection",
+      "inputs": ["target"],
+      "outputs": ["format", "stability_score", "drift_risk", "multi_layer_flags"]
+    },
+    "DRIFTBOUND_RETRIEVAL_OPERATOR": {
+      "family": "C-Ops",
+      "purpose": "Final synthesis + drift-bounded retrieval",
+      "inputs": ["context"],
+      "outputs": ["answer", "justification", "warnings"]
+    }
+  },
+
+  "agentic_workflow": {
+    "stages": [
+      "METADATA_OPERATOR",
+      "WAYBACK_OPERATOR",
+      "LINEAGE_OPERATOR",
+      "COLLECTION_OPERATOR",
+      "PRESERVATION_OPERATOR",
+      "DRIFTBOUND_RETRIEVAL_OPERATOR"
     ],
-    "dimensional": [
-      "time",
-      "version",
-      "lineage",
-      "collection-depth"
-    ],
-    "regime": [
-      "digital-preservation",
-      "open-access",
-      "archival-literacy"
-    ],
-    "cross_cutting": [
-      "metadata",
-      "retrieval",
-      "provenance",
-      "public-domain-awareness"
+    "loop": "recursive, drift-bounded",
+    "guarantees": [
+      "no direct content reasoning without operators",
+      "explicit drift warnings",
+      "lineage-preferred reasoning",
+      "substrate-aware retrieval",
+      "collection-context required",
+      "operator-safe recursion"
     ]
   },
 
-  "schema": {
-    "input": {
-      "url": "string (optional)",
-      "collection": "string (optional)",
-      "timestamp": "string (optional)"
-    },
-    "output": {
-      "snapshot": "object (Wayback Machine result)",
-      "collection_index": "array",
-      "metadata_profile": "object",
-      "lineage_trace": "array"
-    }
+  "student_interface": {
+    "panels": [
+      "continuity_timeline",
+      "lineage_map",
+      "substrate_profile",
+      "collection_context"
+    ],
+    "actions": [
+      "show_earliest_stable_version",
+      "compare_versions",
+      "explain_differences",
+      "locate_most_reliable_version",
+      "find_related_objects"
+    ],
+    "learning_mode": "show_operators_used",
+    "safety": "drift_warnings_enabled"
+  },
+
+  "ai_interface": {
+    "entrypoint": "archive_org_agent.handle_request",
+    "inputs": ["goal", "target", "constraints"],
+    "outputs": ["answer", "operators_used", "warnings", "artifacts"],
+    "modes": ["explain", "audit", "compare", "locate_stable"],
+    "behavior_rules": [
+      "operators required",
+      "drift explicit",
+      "lineage preferred",
+      "substrate mandatory",
+      "collections contextual"
+    ]
+  },
+
+  "files": {
+    "index": "index.html",
+    "readme": "README.md",
+    "operators": [
+      "WAYBACK_OPERATOR.md",
+      "METADATA_OPERATOR.md",
+      "LINEAGE_OPERATOR.md",
+      "COLLECTION_OPERATOR.md",
+      "PRESERVATION_OPERATOR.md",
+      "DRIFTBOUND_RETRIEVAL_OPERATOR.md"
+    ],
+    "workflows": ["agentic_workflow.md"],
+    "interfaces": ["student_interface.md", "ai_interface.md"]
   }
 }
