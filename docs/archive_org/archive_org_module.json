@@ -16,7 +16,7 @@
       "analyzer_layer": "operator"
     },
 
-//    /* Operators */
+    /* Operators */
     { "path": "operators/METADATA_OPERATOR.md", "role": "engine", "analyzer_layer": "operator" },
     { "path": "operators/WAYBACK_OPERATOR.md", "role": "engine", "analyzer_layer": "operator" },
     { "path": "operators/LINEAGE_OPERATOR.md", "role": "engine", "analyzer_layer": "operator" },
@@ -24,7 +24,7 @@
     { "path": "operators/PRESERVATION_OPERATOR.md", "role": "engine", "analyzer_layer": "operator" },
     { "path": "operators/DRIFTBOUND_RETRIEVAL_OPERATOR.md", "role": "engine", "analyzer_layer": "operator" },
 
-//    /* RTTcode packets */
+    /* RTTcode packets */
     { "path": "RTTcode/RTT_METADATA_OPERATOR_v1.json", "role": "signature", "analyzer_layer": "operator" },
     { "path": "RTTcode/RTT_WAYBACK_OPERATOR_v1.json", "role": "signature", "analyzer_layer": "operator" },
     { "path": "RTTcode/RTT_LINEAGE_OPERATOR_v1.json", "role": "signature", "analyzer_layer": "operator" },
@@ -32,20 +32,20 @@
     { "path": "RTTcode/RTT_PRESERVATION_OPERATOR_v1.json", "role": "signature", "analyzer_layer": "operator" },
     { "path": "RTTcode/RTT_DRIFTBOUND_RETRIEVAL_OPERATOR_v1.json", "role": "signature", "analyzer_layer": "operator" },
 
-//    /* Examples */
+    /* Examples */
     { "path": "examples/RTT_EXAMPLE_ARCHIVE_ORG_government_documents_v1.json", "role": "example", "analyzer_layer": "operator" },
     { "path": "examples/RTT_EXAMPLE_ARCHIVE_ORG_journals_v1.json", "role": "example", "analyzer_layer": "operator" },
     { "path": "examples/RTT_EXAMPLE_ARCHIVE_ORG_vintagesoftware_v1.json", "role": "example", "analyzer_layer": "operator" },
 
-//    /* Interfaces */
+    /* Interfaces */
     { "path": "interfaces/student_interface.md", "role": "interface", "analyzer_layer": "operator" },
     { "path": "interfaces/ai_interface.md", "role": "interface", "analyzer_layer": "operator" },
 
-//    /* Labs */
+    /* Labs */
     { "path": "labs/operator_lab.md", "role": "lab", "analyzer_layer": "operator" },
     { "path": "labs/operator_lab_instructor.md", "role": "lab", "analyzer_layer": "operator" },
 
-//    /* Student Materials */
+    /* Student Materials */
     { "path": "student_materials/worksheet.md", "role": "profile", "analyzer_layer": "operator" },
     { "path": "student_materials/worksheet_printable.md", "role": "profile", "analyzer_layer": "operator" },
     { "path": "student_materials/cheat_sheet_student.md", "role": "profile", "analyzer_layer": "operator" },
@@ -55,13 +55,13 @@
     { "path": "student_materials/mastery_exam_25q_with_rubric.md", "role": "diagnostic", "analyzer_layer": "operator" },
     { "path": "student_materials/mastery_scenario_gauntlet.md", "role": "diagnostic", "analyzer_layer": "operator" },
 
-//    /* Instructor Materials */
+    /* Instructor Materials */
     { "path": "instructor_materials/teachers_key.md", "role": "reference", "analyzer_layer": "operator" },
     { "path": "instructor_materials/teacher_rubric_printable.md", "role": "reference", "analyzer_layer": "operator" },
     { "path": "instructor_materials/operator_lab_instructor.md", "role": "reference", "analyzer_layer": "operator" },
     { "path": "instructor_materials/scenario_gauntlet_instructor.md", "role": "reference", "analyzer_layer": "operator" },
 
-//    /* Assets */
+    /* Assets */
     { "path": "assets/posters/operator_chain_wall_poster.svg", "role": "visual", "analyzer_layer": "operator" },
     { "path": "assets/posters/visual_operator_diagram.svg.md", "role": "visual", "analyzer_layer": "operator" }
   ]
