@@ -1,0 +1,65 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/rttcode.schema.json",
+  "operator": "LINEAGE_OPERATOR",
+  "version": "1.0",
+  "module": "archive_org",
+  "family": "L-Ops",
+
+  "purpose": "Construct the continuity kernel and lineage graph from normalized metadata and time-indexed snapshots.",
+
+  "inputs": {
+    "snapshots": {
+      "type": "list",
+      "required": true,
+      "description": "Time-ordered IA captures from WAYBACK_OPERATOR."
+    },
+    "metadata": {
+      "type": "object",
+      "required": true,
+      "description": "Normalized metadata from METADATA_OPERATOR."
+    }
+  },
+
+  "outputs": {
+    "lineage_graph": {
+      "type": "object",
+      "description": "Directed graph showing structural evolution across snapshots."
+    },
+    "transformations": {
+      "type": "list",
+      "description": "List of structural changes (template, layout, substrate, navigation)."
+    },
+    "regime_shifts": {
+      "type": "list",
+      "description": "Points where the object changes operational regime."
+    },
+    "continuity_kernel": {
+      "type": "list",
+      "description": "Stable structural elements preserved across versions."
+    }
+  },
+
+  "lineage_concepts": {
+    "continuity_kernel": "Minimal set of structural elements that persist across snapshots.",
+    "transformations": "Structural changes between snapshots: layout, navigation, template, substrate.",
+    "regime_shifts": "Structural changes indicating a shift in operational regime."
+  },
+
+  "procedure": [
+    "Receive snapshots and metadata.",
+    "Compare each snapshot pair for structural changes.",
+    "Identify transformations and drift patterns.",
+    "Detect regime shifts using substrate and template changes.",
+    "Extract continuity kernel across all snapshots.",
+    "Build lineage graph with nodes as snapshots and edges as transformations.",
+    "Emit outputs for COLLECTION_OPERATOR and PRESERVATION_OPERATOR."
+  ],
+
+  "guarantees": [
+    "No content-based inference.",
+    "Lineage is structural, not semantic.",
+    "Regime shifts are based on structural change.",
+    "Continuity kernel is minimal and non-speculative.",
+    "Missing snapshots produce uncertainty, not assumptions."
+  ]
+}
