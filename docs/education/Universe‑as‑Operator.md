@@ -125,7 +125,9 @@ The 1% operator is the spark that turns the substrate into a universe.
 
 ## ⭐ **The Operator Equation (canonical form)**
 
+```math
 $$\text{Universe} = \big(33\%_A + 33\%_B + 33\%_C\big) + 1\%_{\text{operator}}$$
+```
 
 Where:
 
