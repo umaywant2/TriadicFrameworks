@@ -803,34 +803,42 @@
       },
       "children": []
     },
-    "research": {
-      "canon_tag": "research",
-      "name": "Research",
-      "path": "docs/Research",
-      "version": "1.1",
-      "layer": "Research-Articles",
-      "status": "Active, Expanding",
-      "purpose": "Central hub for original research articles, SEO interpreter tools, and dimensional analysis methods \u2014 applying Resonance-Time Theory across AI, biology, energy, quantum, governance, and infrastructure domains.",
-      "parent": "webroot",
-      "url": "https://www.triadicframeworks.org/Research/",
-      "structural_grammar": {
-        "dimensional_envelope": "D0\u2013D9",
-        "regime_envelope": "R0\u2013R3",
-        "coherence_envelope": "C0\u2013C3",
-        "drift_sensitivity": "bounded",
-        "regime_sensitivity": "moderate"
+    "Research": {
+      "type": "module",
+      "version": "2.0",
+      "status": "canon-stable",
+      "category": "research-canonical",
+      "path": "/docs/Research/",
+      "children": {},
+      "analytics": {
+        "files": 48,
+        "operators": 22,
+        "foundational": 26,
+        "imports": 6,
+        "exports": 5
       },
-      "session_summary": {
-        "drift": "bounded (research-expanding)",
-        "coherence": "stable (triadic-structural grammar)",
-        "format": "html + markdown + json + pdf",
-        "front_door": "exists (Research root)"
-      },
-      "stats": {
-        "file_count": 33,
-        "submodule_count": 3
-      },
-      "children": []
+      "imports": [
+        "Continuity Kernel v2.0",
+        "Unified Operator Grammar v1.1",
+        "Transporter Envelope v0.5",
+        "Arrival Substrate v0.4",
+        "Cross-Goal Operator Lattice",
+        "Replicator / Transporter / CT Operators"
+      ],
+      "exports": [
+        "Operator-level research",
+        "Foundational research",
+        "Continuity proofs",
+        "Cross-domain validation",
+        "Clarity equations"
+      ],
+      "session": {
+        "refreshed": "2026-05-07",
+        "drift": "bounded",
+        "coherence": "stable",
+        "alignment": "RTT/1",
+        "notes": "Operator canon integrated; pre-kernel research archived; metadata and manifest upgraded."
+      }
     },
     "ideas-sandbox": {
       "canon_tag": "ideas-sandbox",
