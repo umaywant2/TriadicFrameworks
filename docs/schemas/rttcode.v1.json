@@ -6,7 +6,7 @@
   "title":       "RTTcode Packet (v1)",
   "description": "Master RTTcode packet schema composed of tick, entities, environment, and intent blocks. Defines the canonical payload structure for QR-compatible metadata identifiers across all TriadicFrameworks domains.",
 
-  "_meta": {
+  "$comment": "meta: {
     "module":          "RTT/codes",
     "canonical_id":    "RTT_CODES",
     "module_type":     "Infrastructure-Schema",
