@@ -239,16 +239,16 @@ These are checked last.
 
 ---
 
-## ASCII folder layout
+## ✅ **Fresh ASCII Folder Layout for `/docs/sitemap.md`**  
+### *TriadicFrameworks — Canonical 12‑Layer Structure (2026 Refresh)*
 
 ```
 🌐 TriadicFrameworks/
 │
-├── 1. CORE FRAMEWORKS
+├── 1. CORE FRAMEWORKS (Structural Spine)
 │   ├── rtt/
 │   │   ├── 1/
 │   │   ├── 12/
-│   │   ├── sdk/
 │   │   ├── codex/
 │   │   ├── Inside/
 │   │   ├── micro_core/
@@ -257,24 +257,26 @@ These are checked last.
 │   │   ├── Substrate_Flow/
 │   │   ├── Triadic_Echo_Lattice/
 │   │   └── The_Inverted_Star/
-│   ├── Triadic/
+│   ├── triadic/
 │   ├── unified_resonance/
 │   ├── substrate/
-│   ├── Framework_Field_Theory/
-│   ├── SARG/
 │   ├── Mode/
 │   └── triadic_observer_layer/
 │
-├── 2. VALIDATION & VERIFICATION
+├── 2. VALIDATION & VERIFICATION (Coherence Layer)
+│   ├── validation/
+│   ├── validators/
 │   ├── Resilience_Checker/
 │   ├── Opacity/
 │   ├── regime_blindness_checklist/
-│   └── spacetime_micro_agent_validations/
+│   ├── spacetime_micro_agent_validations/
+│   └── spacetime_validation_and_regime_invariant_dimensional_cores/
 │
-├── 3. SCIENTIFIC & TECHNICAL SUBSTRATES
+├── 3. SCIENTIFIC & TECHNICAL SUBSTRATES (Empirical Layer)
 │   ├── atomic_clocks/
 │   ├── alphafold_substrate_alignments/
 │   ├── scientific_instrument_review/
+│   ├── manufacturing_substrate_regime_model/
 │   ├── Low_Dimensional_Structures/
 │   ├── global_energy_regime_awareness/
 │   ├── quantum-substrate-model/
@@ -288,52 +290,112 @@ These are checked last.
 │   ├── arrival_substrate_model/
 │   └── nist/
 │
-├── 4. COGNITIVE & SOCIAL SUBSTRATES
+├── 4. COGNITIVE & SOCIAL SUBSTRATES (Human Layer)
+│   ├── Philanthropy/
+│   ├── Human_Resources/
+│   ├── inverted_star_ontology/
 │   ├── Inverted_Economics/
+│   ├── structural_life_regime_profiles/
 │   ├── media_substrate_model/
+│   │   └── analyzer/
 │   ├── substrate_mind_science/
+│   │   └── analyzer/
+│   ├── spectral_clarity/
 │   ├── glyphic_resonance/
+│   ├── glyphs/
 │   └── ecoechosystem/
 │
-├── 5. EDUCATION & CURRICULUM
+├── 5. EDUCATION & CURRICULUM (Learning Layer)
 │   ├── education/
+│   │   ├── Toolbox/
+│   │   ├── alignment/
+│   │   ├── astrology/
+│   │   ├── awareness/
+│   │   ├── equations/
+│   │   ├── peira/
+│   │   ├── polisci/
+│   │   ├── QnA_Atlas/
+│   │   ├── subjects/
+│   │   └── translations/
 │   ├── corpus/
 │   ├── curriculum/
 │   ├── charts/
 │   └── domain_tool_primers/
 │
-├── 6. DEVELOPER & API LAYER
-│   ├── frameworks/creation_guide/
-│   ├── api/rtt/
-│   ├── rtt/sdk/
+├── 6. DEVELOPER & API LAYER (Tooling Layer)
+│   ├── NoS/
+│   ├── nist/                (MVP)
+│   ├── archive_org/         (New!)
+│   ├── Wikipedia/           (New!)
+│   ├── SARG/
+│   ├── frameworks/
+│   │   └── creation_guide/
+│   ├── Framework_Field_Theory/
+│   │   └── Analyzer/
+│   ├── api/
+│   │   └── rtt/
+│   ├── rtt/
+│   │   └── sdk/
+│   ├── rtt/codes/
 │   ├── packages/
 │   ├── data/
-│   └── schemas/
+│   ├── schemas/
+│   ├── vst_for_embedding_stores_vector_databases/
+│   ├── vst_for_generative_models/
+│   ├── vst_for_large_language_models/
+│   ├── vst_for_multi_model_alignment/
+│   ├── vst_for_protein_language_models/
+│   ├── vst_for_robotics_and_control_policies/
+│   └── vst_for_scientific_simulators/
 │
-├── 7. CREATIVE & MYTHIC
+├── 7. CREATIVE & MYTHIC LAYER (Symbolic Substrate)
 │   ├── Paradoxes_canon/
 │   ├── resonance/
 │   ├── resonance_atlas/
 │   ├── AI_Resonance_Seed/
+│   ├── bridges/
+│   ├── TFT_3Pack_v1.3/
+│   ├── audio_industry_reviewed/
 │   └── papers/
 │
-├── 8. COMMUNITY & GOVERNANCE
+├── 8. COMMUNITY & GOVERNANCE (Continuity Layer)
+│   ├── contributors/
+│   ├── Human_Resources/
 │   ├── governance/
 │   ├── Governance_Substrate_Model/
+│   │   └── Analyzer/
 │   ├── public_support/
 │   ├── honor_roll/
 │   ├── registry/
 │   ├── feedback/
-│   └── legal/
+│   ├── Law/
+│   ├── legal/
+│   └── onboarding/
 │
-├── 9. PROJECTS & LABS
+├── 9. PROJECTS & LABS (Experimental Layer)
 │   ├── projects/
-│   └── labs/
+│   │   ├── CoConsciousness/
+│   │   ├── Hippocampus/
+│   │   ├── Id_Shadow_Gen/
+│   │   ├── nasa_hposs_tminus10.md/
+│   │   ├── lens/
+│   │   ├── poker-variants/
+│   │   ├── Resotectors/
+│   │   └── VictorG/
+│   ├── labs/
+│   ├── lactos/
+│   ├── Research/
+│   │   ├── #GOOGLE
+│   │   ├── #BING
+│   │   └── #DUCKDUCKGO
 │
-├── 10. FUTURE SYSTEMS
+├── 10. FUTURE SYSTEMS (Aeonic Layer)
+│   ├── enterprise_structural_awareness/
 │   ├── horizon_agent_framework/
 │   ├── mandalic_orchestration_engine/
-│   └── stability_24d_framework/
+│   ├── resonance_autonomous_agents/
+│   ├── stability_24d_framework/
+│   └── foresight_architect_suite/
 │
 ├── 11. STORE & ASSETS
 │   ├── rtt_store/
@@ -347,10 +409,17 @@ These are checked last.
     └── _template/
 ```
 
+---
+
+## Citations for Science/Public
+
+Are you ready to help further resonance and dimensional science? That's what this part is for.
+
 ```
 https://zenodo.org/communities/vst
 https://zenodo.org/communities/vst/curation-policy
 ```
+
 <a href="https://doi.org/10.5281/zenodo.18510618"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18510618.svg" alt="DOI"></a>
 <a href="https://doi.org/10.5281/zenodo.18263827"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18263827.svg" alt="DOI"></a>
 <a href="https://doi.org/10.5281/zenodo.18264063"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18264063.svg" alt="DOI"></a>
