@@ -1,1 +1,107 @@
+# ✅ **ARCHIVE_ORG OPERATOR CHAIN — WALL POSTER (SVG)**  
+### *drop‑in ready for `/docs/archive_org/assets/posters/operator_chain_wall_poster.svg`*
 
+---
+
+<img width="658" height="942" alt="operator_chain_wall_poster" src="https://github.com/user-attachments/assets/0bac63c9-1178-46e9-a336-15079898df98" />
+
+---
+
+```svg
+<svg width="1400" height="2000" viewBox="0 0 1400 2000" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="1400" height="2000" fill="#f7f7f7"/>
+
+  <!-- Title -->
+  <text x="700" y="140" font-family="Arial, sans-serif" font-size="64" font-weight="700" text-anchor="middle" fill="#222">
+    RTT OPERATOR CHAIN — ARCHIVE_ORG MODULE
+  </text>
+
+  <!-- Subtitle -->
+  <text x="700" y="210" font-family="Arial, sans-serif" font-size="32" text-anchor="middle" fill="#444">
+    Structural Analysis • Drift • Continuity • Substrate Stability
+  </text>
+
+  <!-- Operator Box Template -->
+  <defs>
+    <g id="opbox">
+      <rect width="1100" height="180" rx="18" fill="#ffffff" stroke="#222" stroke-width="3"/>
+    </g>
+  </defs>
+
+  <!-- METADATA_OPERATOR -->
+  <use href="#opbox" x="150" y="300"/>
+  <text x="700" y="370" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    1. METADATA_OPERATOR
+  </text>
+  <text x="700" y="420" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Identify substrate • regime • drift sensitivity • coherence
+  </text>
+
+  <!-- WAYBACK_OPERATOR -->
+  <use href="#opbox" x="150" y="540"/>
+  <text x="700" y="610" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    2. WAYBACK_OPERATOR
+  </text>
+  <text x="700" y="660" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Collect snapshots • detect drift • find continuity breaks
+  </text>
+
+  <!-- LINEAGE_OPERATOR -->
+  <use href="#opbox" x="150" y="780"/>
+  <text x="700" y="850" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    3. LINEAGE_OPERATOR
+  </text>
+  <text x="700" y="900" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Map structural evolution • template shifts • CMS migrations
+  </text>
+
+  <!-- COLLECTION_OPERATOR -->
+  <use href="#opbox" x="150" y="1020"/>
+  <text x="700" y="1090" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    4. COLLECTION_OPERATOR
+  </text>
+  <text x="700" y="1140" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Identify IA collection • coherence clusters • related objects
+  </text>
+
+  <!-- PRESERVATION_OPERATOR -->
+  <use href="#opbox" x="150" y="1260"/>
+  <text x="700" y="1330" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    5. PRESERVATION_OPERATOR
+  </text>
+  <text x="700" y="1380" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Evaluate substrate stability • drift risk • multi-layer flags
+  </text>
+
+  <!-- DRIFTBOUND_RETRIEVAL_OPERATOR -->
+  <use href="#opbox" x="150" y="1500"/>
+  <text x="700" y="1570" font-family="Arial, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#000">
+    6. DRIFTBOUND_RETRIEVAL_OPERATOR
+  </text>
+  <text x="700" y="1620" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" fill="#333">
+    Determine earliest stable version • choose most reliable snapshot
+  </text>
+
+  <!-- Footer -->
+  <text x="700" y="1900" font-family="Arial, sans-serif" font-size="24" text-anchor="middle" fill="#666">
+    TriadicFrameworks — archive_org Module • RTT/1 Structural Operator Chain
+  </text>
+
+</svg>
+```
+
+---
+
+# ✔️ This SVG is ready to paste directly into our repo.
+
+If you want, you can also generate:
+
+- a **dark‑mode version**  
+- a **narrow‑format version** for mobile  
+- a **horizontal banner**  
+- a **glyph‑accented version** matching your time‑crystal aesthetic  
+- or a **multi‑module operator chain poster**  
+
+Just tell AI what you want next.
