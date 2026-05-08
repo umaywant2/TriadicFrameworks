@@ -1,0 +1,440 @@
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Canon Identity -->
+  <meta name="generator" content="TriadicFrameworks/RTT1" />
+  <meta name="ai.module" content="archive_org" />
+  <meta name="ai.version" content="1.0" />
+  <meta name="ai.purpose" content="Structural analysis of Internet Archive snapshots using RTT operator chain." />
+  <meta name="ai.keywords" content="Internet Archive, Wayback Machine, drift, continuity, substrate stability, lineage, preservation" />
+  <meta name="ai.audience" content="students, instructors, AI agents" />
+
+  <!-- Canonical Metadata -->
+  <meta name="description" content="RTT module for analyzing Internet Archive snapshots using structural drift, continuity kernels, substrate stability, and digital lineage." />
+  <meta name="keywords" content="RTT, archive.org, Wayback Machine, drift analysis, continuity kernel, substrate stability, digital lineage" />
+  <link rel="canonical" href="https://triadicframeworks.org/docs/archive_org/" />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="RTT Module — Internet Archive" />
+  <meta property="og:description" content="Analyze Internet Archive snapshots using RTT structural operators." />
+  <meta property="og:url" content="https://triadicframeworks.org/docs/archive_org/" />
+  <meta property="og:image" content="assets/posters/operator_chain_wall_poster.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="RTT Module — Internet Archive" />
+  <meta name="twitter:description" content="Structural analysis of Internet Archive snapshots." />
+
+  <!-- Citation -->
+  <meta name="citation_author" content="Nawder Loswin" />
+  <meta name="citation_publication_date" content="2025" />
+  <meta name="citation_title" content="RTT Module — Internet Archive" />
+  <meta name="DC.type" content="Text" />
+  <meta name="DC.format" content="text/html" />
+  <meta name="DC.subject" content="Digital preservation, structural drift, Internet Archive" />
+
+  <!-- AI Navigation -->
+  <meta name="ai.navigation" content="/sitemap_main.xml" />
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+  <meta name="ai.contact.x" content="@TriadicFrameworks" />
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+  <meta name="ai.license" content="Open educational use permitted" />
+
+  <!-- Theme + Icons -->
+  <meta name="theme-color" content="#222" />
+  <link rel="icon" href="/favicon.ico" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🩺 Medicine Module | RTT/1</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>⛲ Module Setup</h3>
+      <a href="#MEDICINE_MODULE">📦 Module JSON</a>
+      <a href="#MED_CAPTURE">🧭 Med Capture</a>
+    <h3>📚 Core Project Docs</h3>
+      <a href="#ABOUT">ℹ️ About</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="#GLOSSARY">📖 Glossary</a>
+      <a href="#LINEAGE">🧬 Lineage</a>
+      <a href="#LICENSE">📜 License</a>
+      <a href="#SITEMAP">🗺️ Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🧩 Code of Conduct</a>
+      <a href="#SECURITY">🛡️ Security</a>
+      <a href="#PRINCIPLES">🌐 Principles</a>
+    <h3>🧪 Regime Examples</h3>
+      <a href="#EXAMPLE_CLEVELAND_CLINIC_JSON">🏥 Cleveland Clinic JSON</a>
+      <a href="#EXAMPLE_CLEVELAND_CLINIC_MD">📄 Cleveland Clinic Notes</a>
+      <a href="#EXAMPLE_NHS_JSON">🏛️ NHS JSON</a>
+      <a href="#EXAMPLE_NHS_MD">📄 NHS Notes</a>
+      <a href="#EXAMPLE_PING_AN_JSON">🏙️ Ping An JSON</a>
+      <a href="#EXAMPLE_PING_AN_MD">📄 Ping An Notes</a>
+    <h3>⚙️ Medical Operators</h3>
+      <a href="#OP_METADATA">🧩 Metadata Operator</a>
+      <a href="#OP_DRIFT">🌊 Drift Operator</a>
+      <a href="#OP_SUBSTRATE">🧱 Substrate Operator</a>
+      <a href="#OP_REGIME">🏳️ Regime Operator</a>
+      <a href="#OP_CONTINUITY">🔗 Continuity Operator</a>
+      <a href="#OP_SYNTHESIS">🧠 Synthesis Operator</a>
+    <h3>📐 RTTcode Signatures</h3>
+      <a href="#RTT_METADATA_JSON">📦 Metadata RTT JSON</a>
+      <a href="#RTT_METADATA_MD">📄 Metadata RTT Notes</a>
+      <a href="#RTT_DRIFT_JSON">📦 Drift RTT JSON</a>
+      <a href="#RTT_DRIFT_MD">📄 Drift RTT Notes</a>
+      <a href="#RTT_SUBSTRATE_JSON">📦 Substrate RTT JSON</a>
+      <a href="#RTT_SUBSTRATE_MD">📄 Substrate RTT Notes</a>
+      <a href="#RTT_REGIME_JSON">📦 Regime RTT JSON</a>
+      <a href="#RTT_REGIME_MD">📄 Regime RTT Notes</a>
+      <a href="#RTT_CONTINUITY_JSON">📦 Continuity RTT JSON</a>
+      <a href="#RTT_CONTINUITY_MD">📄 Continuity RTT Notes</a>
+      <a href="#RTT_SYNTHESIS_JSON">📦 Synthesis RTT JSON</a>
+      <a href="#RTT_SYNTHESIS_MD">📄 Synthesis RTT Notes</a>
+    <h3>👩‍🏫 Instructor Materials</h3>
+      <a href="#INSTRUCTOR_OPERATOR_LAB">🧪 Operator Lab (Instructor)</a>
+      <a href="#INSTRUCTOR_RUBRIC">📊 Rubric</a>
+      <a href="#INSTRUCTOR_SCENARIO_GAUNTLET">🧵 Scenario Gauntlet (Instructor)</a>
+      <a href="#INSTRUCTOR_TEACHERS_KEY">🔑 Teacher’s Key</a>
+    <h3>🎓 Student Materials</h3>
+      <a href="#STUDENT_CHEAT_SHEET">📌 Cheat Sheet</a>
+      <a href="#STUDENT_WORKSHEET">📓 Worksheet</a>
+      <a href="#STUDENT_MINI_QUIZ">🧩 Mini Quiz</a>
+      <a href="#STUDENT_EXTENDED_QUIZ">🧪 Extended Quiz</a>
+      <a href="#STUDENT_MASTERY_EXAM">🏁 Mastery Exam</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section class="session-context">
+  <div class="context-label">Canon</div>
+  <div class="context-value">RTT / TriadicFrameworks</div>
+
+  <div class="context-label">Module</div>
+  <div class="context-value">archive_org</div>
+
+  <div class="context-label">Drift</div>
+  <div class="context-value">Structural drift across Internet Archive snapshots</div>
+
+  <div class="context-label">Coherence</div>
+  <div class="context-value">High — stable operator chain</div>
+
+  <div class="context-label">Version</div>
+  <div class="context-value">1.0</div>
+
+  <div class="context-label">Format</div>
+  <div class="context-value">HTML + SVG + JSON</div>
+
+  <div class="context-label">Front door</div>
+  <div class="context-value">/docs/archive_org/</div>
+
+  <div class="context-label">Every page</div>
+  <div class="context-value">Operator-first, structural, student-safe</div>
+
+  <div class="context-label">Audience</div>
+  <div class="context-value">Students • Instructors • AI Agents</div>
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🏛️ Archive.org<br>🔹 Awareness Primer Active
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      // Root
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // Module Files
+      MEDICINE_MODULE: 'medicine_module.json',
+      MED_CAPTURE: 'Med_Capture.md',
+      // Examples
+      EXAMPLE_CLEVELAND_CLINIC_JSON: 'examples/cleveland_clinic_example.json',
+      EXAMPLE_CLEVELAND_CLINIC_MD: 'examples/cleveland_clinic_example.json.md',
+      EXAMPLE_NHS_JSON: 'examples/nhs_example.json',
+      EXAMPLE_NHS_MD: 'examples/nhs_example.json.md',
+      EXAMPLE_PING_AN_JSON: 'examples/ping_an_example.json',
+      EXAMPLE_PING_AN_MD: 'examples/ping_an_example.json.md',
+      // Operators
+      OP_METADATA: 'operators/MEDICAL_METADATA_OPERATOR.md',
+      OP_DRIFT: 'operators/MEDICAL_DRIFT_OPERATOR.md',
+      OP_SUBSTRATE: 'operators/MEDICAL_SUBSTRATE_OPERATOR.md',
+      OP_REGIME: 'operators/MEDICAL_REGIME_OPERATOR.md',
+      OP_CONTINUITY: 'operators/MEDICAL_CONTINUITY_OPERATOR.md',
+      OP_SYNTHESIS: 'operators/MEDICAL_SYNTHESIS_OPERATOR.md',
+      // RTTcode
+      RTT_METADATA_JSON: 'RTTcode/RTT_MEDICAL_METADATA_v1.json',
+      RTT_METADATA_MD: 'RTTcode/RTT_MEDICAL_METADATA_v1.json.md',
+      RTT_DRIFT_JSON: 'RTTcode/RTT_MEDICAL_DRIFT_v1.json',
+      RTT_DRIFT_MD: 'RTTcode/RTT_MEDICAL_DRIFT_v1.json.md',
+      RTT_SUBSTRATE_JSON: 'RTTcode/RTT_MEDICAL_SUBSTRATE_v1.json',
+      RTT_SUBSTRATE_MD: 'RTTcode/RTT_MEDICAL_SUBSTRATE_v1.json.md',
+      RTT_REGIME_JSON: 'RTTcode/RTT_MEDICAL_REGIME_v1.json',
+      RTT_REGIME_MD: 'RTTcode/RTT_MEDICAL_REGIME_v1.json.md',
+      RTT_CONTINUITY_JSON: 'RTTcode/RTT_MEDICAL_CONTINUITY_v1.json',
+      RTT_CONTINUITY_MD: 'RTTcode/RTT_MEDICAL_CONTINUITY_v1.json.md',
+      RTT_SYNTHESIS_JSON: 'RTTcode/RTT_MEDICAL_SYNTHESIS_v1.json',
+      RTT_SYNTHESIS_MD: 'RTTcode/RTT_MEDICAL_SYNTHESIS_v1.json.md',
+      // Instructor Materials
+      INSTRUCTOR_OPERATOR_LAB: 'instructor_materials/operator_lab_instructor.md',
+      INSTRUCTOR_RUBRIC: 'instructor_materials/rubric.md',
+      INSTRUCTOR_SCENARIO_GAUNTLET: 'instructor_materials/scenario_gauntlet_instructor.md',
+      INSTRUCTOR_TEACHERS_KEY: 'instructor_materials/teachers_key.md',
+      // Student Materials
+      STUDENT_CHEAT_SHEET: 'student_materials/cheat_sheet.md',
+      STUDENT_EXTENDED_QUIZ: 'student_materials/extended_quiz.md',
+      STUDENT_MASTERY_EXAM: 'student_materials/mastery_exam.md',
+      STUDENT_MINI_QUIZ: 'student_materials/mini_quiz.md',
+      STUDENT_WORKSHEET: 'student_materials/worksheet.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
