@@ -535,6 +535,31 @@
     "RTT"
   ]
 },
+{
+  "path": "/docs/Research/",
+  "module": "Research",
+  "category": "research-canonical",
+  "session": "2026-05-07",
+  "status": "refreshed",
+  "artifacts": [
+    "meta",
+    "session",
+    "module.json",
+    "index.html",
+    "README.md"
+  ],
+  "summary": "Core Operators (post-kernel) + Foundational Research (pre-kernel). Includes continuity kernel v2.0, unified operator grammar v1.1, transporter envelope v0.5, arrival substrate v0.4, cross-goal operator lattice, and archival RTT research.",
+  "version": "2.0",
+  "last_updated": "2026-05-07",
+  "files_indexed": 48,
+  "notes": [
+    "Operator canon fully integrated.",
+    "Pre-kernel research preserved as foundational layer.",
+    "research_module.json upgraded to RTT/1 schema.",
+    "index.html metadata + session context refreshed.",
+    "README.md rewritten for operator alignment."
+  ]
+},
     {
       "path": "/docs/Paradoxes_canon/",
       "module": "Paradoxes Canon",
