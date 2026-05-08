@@ -1,0 +1,75 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/rttcode.schema.json",
+  "operator": "WAYBACK_OPERATOR",
+  "version": "1.0",
+  "module": "archive_org",
+  "family": "T-Ops",
+
+  "purpose": "Retrieve time-indexed snapshots from the Internet Archive and measure structural drift across versions.",
+
+  "inputs": {
+    "target": {
+      "type": "url",
+      "required": true
+    },
+    "constraints": {
+      "type": "object",
+      "required": false,
+      "fields": {
+        "start_year": "number",
+        "end_year": "number",
+        "max_snapshots": "number"
+      }
+    }
+  },
+
+  "outputs": {
+    "snapshots": {
+      "type": "list",
+      "description": "Ordered list of IA captures with timestamps and structural metadata."
+    },
+    "drift_map": {
+      "type": "object",
+      "description": "Structural drift levels between consecutive snapshots."
+    },
+    "continuity_breaks": {
+      "type": "list",
+      "description": "Missing years or gaps in the timeline."
+    },
+    "time_crystal": {
+      "type": "number",
+      "description": "Stability estimate across time (0–1)."
+    }
+  },
+
+  "drift_levels": {
+    "none": "Identical structure.",
+    "minor": "Small layout or CSS changes.",
+    "moderate": "Navigation or template changes.",
+    "high": "CMS migration, redesign, or rebuild."
+  },
+
+  "continuity_rules": {
+    "missing_year": "Continuity uncertainty, not 'no change'.",
+    "missing_sequence": "Continuity break.",
+    "redirect": "Potential lineage fork.",
+    "cms_migration": "High drift + regime shift candidate."
+  },
+
+  "procedure": [
+    "Query IA for all snapshots of target.",
+    "Normalize timestamps and structural metadata.",
+    "Compare each snapshot pair for structural changes.",
+    "Assign drift levels.",
+    "Detect continuity breaks.",
+    "Compute time-crystal stability.",
+    "Emit outputs for LINEAGE_OPERATOR."
+  ],
+
+  "guarantees": [
+    "No content-based reasoning.",
+    "Drift measured structurally, not semantically.",
+    "Missing snapshots treated as uncertainty.",
+    "Output deterministic given same IA data."
+  ]
+}
