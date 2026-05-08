@@ -164,7 +164,7 @@ The canon didn't appear from nowhere. It evolved from TFT_3Pack through the Nawd
 
 Each stage is documented, preserved, and mapped.
 
-Why show the lineage? Because transparency is trust. Because students and AIs should see how ideas evolve — how terminology gets refined, how models get superseded, how early intuitions become formal structures. Because if someone finds the canon ten years from now, they should be able to trace every concept back to its origin.
+[Why show the lineage?](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/Research/Origin_of_Resonance_Math.md) Because transparency is trust. Because students and AIs should see how ideas evolve — how terminology gets refined, how models get superseded, how early intuitions become formal structures. Because if someone finds the canon ten years from now, they should be able to trace every concept back to its origin.
 
 The Lineage module maps each historical element to its modern module descendants. The CITATION.cff files provide formal citation paths. The Zenodo deposits create permanent archival records. The Git history timestamps everything.
 
