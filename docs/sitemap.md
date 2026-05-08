@@ -83,7 +83,8 @@ This is the **deep structure layer** — the “physics” of RTT.
 
 ## 4. Cognitive & Social Substrates (Human Layer)
 
-- [/Philanthropy/](https://www.triadicframeworks.org/Philanthropy/)
+- [/Philanthropy/](https://www.triadicframeworks.org/Philanthropy/) (New!)
+- [/medicine/](https://www.triadicframeworks.org/medicine/) (New!)
 - [/Human_Resources/](https://www.triadicframeworks.org/Human_Resources/)
 - [/inverted_star_ontology/](https://www.triadicframeworks.org/inverted_star_ontology/)  
 - [/Inverted_Economics/](https://www.triadicframeworks.org/Inverted_Economics/) (MVP!) 
