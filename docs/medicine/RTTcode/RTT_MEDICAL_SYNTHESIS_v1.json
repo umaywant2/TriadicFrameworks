@@ -1,1 +1,83 @@
-ECHO is off.
+{
+  "rttcode_version": "1.0",
+  "operator": "MEDICAL_SYNTHESIS_OPERATOR",
+  "module": "medicine",
+  "purpose": "Integrate continuity, metadata, drift, substrate, and regime packets into a drift-bounded, regime-aware, patient-safe medical synthesis.",
+
+  "inputs": {
+    "continuity_packet": "RTT_MEDICAL_CONTINUITY_v1",
+    "metadata_packet": "RTT_MEDICAL_METADATA_v1",
+    "drift_packet": "RTT_MEDICAL_DRIFT_v1",
+    "substrate_packet": "RTT_MEDICAL_SUBSTRATE_v1",
+    "regime_packet": "RTT_MEDICAL_REGIME_v1",
+    "raw_content": "multi-regime, multi-snapshot, multilingual medical pages"
+  },
+
+  "outputs": {
+    "synthesis_packet": {
+      "stable_elements": "list",
+      "unstable_elements": "list",
+      "regime_specific_elements": {
+        "clinical": "list",
+        "ai_augmented": "list",
+        "public_health": "list"
+      },
+      "drift_sensitive_elements": "list",
+      "substrate_risks": "list",
+      "continuity_kernel": "list",
+      "uncertainty_flags": "list",
+      "escalation_indicators": "list"
+    },
+    "synthesis_summary": "patient_safe_natural_language_summary",
+    "synthesis_score": "float_0_to_1",
+    "synthesis_flags": [
+      "high_regime_divergence",
+      "high_drift_risk",
+      "substrate_interference_detected",
+      "translation_instability_detected",
+      "ai_generated_instability_detected",
+      "continuity_kernel_weak"
+    ]
+  },
+
+  "synthesis_logic": {
+    "align_structures_across_regimes": true,
+    "remove_drift_sensitive_elements": true,
+    "preserve_continuity_kernel": true,
+    "separate_regime_specific_elements": true,
+    "evaluate_substrate_risks": true,
+    "compute_synthesis_score": true,
+    "generate_patient_safe_summary": true,
+    "scoring_method": "weighted_coherence_across_regimes"
+  },
+
+  "regime_profiles": {
+    "clinical_regime": {
+      "notes": "Cleveland Clinic baseline; conservative, stable, explicit escalation logic."
+    },
+    "ai_augmented_regime": {
+      "notes": "Ping An high drift; AI overlays, translation variance, commercial layers."
+    },
+    "public_health_regime": {
+      "notes": "NHS clarity-first; standardized escalation rules, extremely low drift."
+    }
+  },
+
+  "flags": {
+    "high_regime_divergence": "boolean",
+    "high_drift_risk": "boolean",
+    "substrate_interference_detected": "boolean",
+    "translation_instability_detected": "boolean",
+    "ai_generated_instability_detected": "boolean",
+    "continuity_kernel_weak": "boolean"
+  },
+
+  "safety": {
+    "patient_safe_output": true,
+    "no_medical_advice": true,
+    "escalation_indicators_required": true,
+    "uncertainty_disclosure_required": true,
+    "regime_difference_disclosure_required": true
+  }
+}
+
