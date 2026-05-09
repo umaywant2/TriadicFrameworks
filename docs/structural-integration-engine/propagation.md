@@ -156,3 +156,141 @@ Below is the complete propagation chain, expressed in minimal canonical form.
 This is the **canonical propagation chain**:
 
 # **SDE → SIE → TEL / FFT / Opacity**
+
+---
+
+# 🟣 **Operator Chains (SDE → SIE → TEL / FFT / Opacity)**  
+### *Executable, minimal, and ready for your repo*
+
+These chains show **how operators flow across modules** in a single, continuous sequence.
+
+They are intentionally short, crisp, and session‑ready.
+
+---
+
+# 🟦 **1. SDE → SIE Operator Chain**  
+### *Detection → Integration*
+
+```markdown
+# Operator Chain: SDE → SIE
+
+SDE::CPV()
+  → SIE::INT()
+
+SDE::FGT()
+  → SIE::TIF()
+
+SDE::CRM()
+  → SIE::MAN()
+
+SDE::MODE(x)
+  → SIE::MODE(x)
+
+SDE::ZONE(U/S/M/D/X)
+  → SIE::ZONE(U/S/M/D/X)
+
+SDE::PACKET()
+  → SIE::PACKET()
+```
+
+This chain mirrors the propagation rules in your open tab (📄 **turn0browsertab1**) but compresses them into an *operator‑first* execution sequence.
+
+---
+
+# 🟪 **2. SIE → TEL Operator Chain**  
+### *Integration → Lattice*
+
+```markdown
+# Operator Chain: SIE → TEL
+
+SIE::TIF()
+  → TEL::LAT()
+
+SIE::FFF()
+  → TEL::EMIT()
+
+SIE::MAN()
+  → TEL::MAN()
+
+SIE::CRE()
+  → TEL::REC()
+
+SIE::CSL()
+  → TEL::STAB()
+
+SIE::CET()
+  → TEL::CET()
+```
+
+This is the lattice‑level chain — clean, structural, and aligned with the propagation rules in your tab.
+
+---
+
+# 🟣 **3. SIE → FFT Operator Chain**  
+### *Integration → Spectral*
+
+```markdown
+# Operator Chain: SIE → FFT
+
+SIE::TIF()
+  → FFT::INT()
+
+SIE::FFF()
+  → FFT::EMIT()
+
+SIE::MAN()
+  → FFT::CONT()
+
+SIE::CRE()
+  → FFT::REC()
+
+SIE::CSL()
+  → FFT::STAB()
+
+SIE::CET()
+  → FFT::OUT()
+```
+
+This chain expresses the spectral transformation of integration/emission fields.
+
+---
+
+# 🟧 **4. SIE → Opacity Operator Chain**  
+### *Integration → Boundary*
+
+```markdown
+# Operator Chain: SIE → Opacity
+
+SIE::TIF()
+  → OP::INT()
+
+SIE::FFF()
+  → OP::EMIT()
+
+SIE::MAN()
+  → OP::CONT()
+
+SIE::CRE()
+  → OP::REC()
+
+SIE::CSL()
+  → OP::STAB()
+
+SIE::CET()
+  → OP::OUT()
+```
+
+This chain expresses how integration/emission fields become **boundary‑level behavior**.
+
+---
+
+# 🟣 **5. Full Canon Chain (All Modules)**  
+### *One‑line, session‑ready, canonical*
+
+```markdown
+SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
+```
+
+This is the **entire canon’s operational spine** in one operator chain.
+
+---
