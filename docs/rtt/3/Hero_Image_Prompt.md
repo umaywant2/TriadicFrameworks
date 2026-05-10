@@ -1,6 +1,6 @@
-A clean, minimal, high‑contrast diagram representing collapse detection:
-three axes labeled A, K, T forming a triad vector (CPV),
-with gradient bands shifting from collapse‑weighted to triad‑weighted,
-and subtle deformation paths (drift, torsion, fracture).
-Color palette: cyan → indigo → violet.
-Style: technical, blueprint‑like, AI‑parsable, no text.
+A triad integration manifold:
+three flowing surfaces (drift, envelope, continuity) merging into a single
+integration node (INT), emitting three emission types (fusion, flow, fracture)
+as colored rays. Include subtle stability contours (CSL) and recovery arcs (CRE).
+Color palette: violet → magenta → blue.
+Style: clean, minimal, technical, AI‑parsable, no text.
