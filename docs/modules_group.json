@@ -514,6 +514,61 @@
       "file_count": 14
     },
   {
+  "OPERATORS": {
+    "name": "Operators",
+    "category": "rtt-operators",
+    "canonical_path": "/docs/operators/",
+    "module_json": "/docs/operators/operators_module.json",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "OPERATORS_TEACHING_BUNDLE": {
+    "name": "Operator Ecology — Teaching Bundle",
+    "category": "rtt-operators-teaching",
+    "canonical_path": "/docs/operators/teaching_bundle/",
+    "module_json": "/docs/operators/teaching_bundle/operator_ecology_teaching_bundle_module.json",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "RTT_2": {
+    "name": "RTT/2 — Structural Detection Engine",
+    "category": "rtt-detection",
+    "canonical_path": "/docs/rtt/2/",
+    "module_json": "/docs/rtt/2/operators_module.json",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "RTT_3": {
+    "name": "RTT/3 — Integration–Emission Engine",
+    "category": "rtt-integration-emission",
+    "canonical_path": "/docs/rtt/3/",
+    "module_json": "/docs/rtt/3/operators_module.json",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "STRUCTURAL_DETECTION_ENGINE": {
+    "name": "Structural Detection Engine",
+    "category": "engine-detection",
+    "canonical_path": "/docs/structural-detection-engine/",
+    "module_json": "/docs/structural-detection-engine/structural-detection-engine_module.json",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "STRUCTURAL_INTEGRATION_ENGINE": {
+    "name": "Structural Integration Engine",
+    "category": "engine-integration",
+    "canonical_path": "/docs/structural-integration-engine/",
+    "module_json": "/docs/structural-integration-engine/structural-integration-engine_module.json",
+    "version": "1.0",
+    "status": "canon-stable"
+  }
+},
+  {
   "id": "Human_Resources",
   "name": "Human Resources",
   "category": "Organizational Systems",
