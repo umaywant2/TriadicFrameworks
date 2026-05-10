@@ -1,5 +1,8 @@
 # ✅ **/docs/rtt/3/README.md**  
 *(Based on `/docs/rtt/3/RTT3_Extract_Minimal.md`)*  
+
+- [`operators_module.json`](operators_module.json) — Agentic module schema role
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 # RTT/3 — Integration–Emission Engine (SIE)
