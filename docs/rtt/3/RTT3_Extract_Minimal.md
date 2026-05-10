@@ -8,7 +8,6 @@ Paste the following into the new file.
 
 ---
 
-```markdown
 # RTT/3 — Minimal Module Extraction  
 ### Integration–Emission Layer  
 ### Canon‑Distilled Form
@@ -159,7 +158,6 @@ RTT/3 provides:
 - canon‑scale emission output  
 
 RTT/3 is the **integration–emission backbone** of the canon.
-```
 
 ---
 
