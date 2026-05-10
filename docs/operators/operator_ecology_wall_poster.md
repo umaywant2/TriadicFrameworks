@@ -62,3 +62,20 @@
                                               ↓
 [ Projection Layers ]
   CET → TEL::CET() / FFT::OUT() / OP::OUT()
+```
+
+---
+
+## 4. Canon‑Wide Operator Chain (One Line)
+
+```text
+SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
+```
+
+---
+
+## 5. Student Reading Guide
+
+- **Start at SDE** when you need to *detect* what the structure is doing.  
+- **Move to SIE** when you need to *integrate, stabilize, and emit* structure.  
+- **Read TEL / FFT / OP** as *different projections* of the same canon‑scale emission.
