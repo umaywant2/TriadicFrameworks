@@ -71,29 +71,24 @@ RTT/3 = **Structural Integration + Emission**.
 # 3. Integration–Emission Equations (Minimal)
 
 ## 3.1 Integration Flow
-\[
-I(t) = \alpha D(t) + \beta E(t) + \gamma C(t)
-\]
+
+$$I(t) = \alpha D(t) + \beta E(t) + \gamma C(t)$$
 
 ## 3.2 Emission Flow
-\[
-E(t) = \alpha F(t) + \beta Fr(t) + \gamma Fl(t)
-\]
+
+$$E(t) = \alpha F(t) + \beta Fr(t) + \gamma Fl(t)$$
 
 ## 3.3 Continuity Flow
-\[
-C_{flow}(t) = \alpha I(t) + \beta E(t)
-\]
+
+$$C_{flow}(t) = \alpha I(t) + \beta E(t)$$
 
 ## 3.4 Collapse‑Recovery Flow
-\[
-CR(t) = \alpha C(t) + \beta R(t) + \gamma S(t)
-\]
+
+$$CR(t) = \alpha C(t) + \beta R(t) + \gamma S(t)$$
 
 ## 3.5 Canon‑Scale Emission Flow
-\[
-E_{canon}(t) = \alpha I(t) + \beta S(t) + \gamma R(t)
-\]
+
+$$E_{canon}(t) = \alpha I(t) + \beta S(t) + \gamma R(t)$$
 
 ---
 
