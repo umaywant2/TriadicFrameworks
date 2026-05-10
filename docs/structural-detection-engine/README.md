@@ -1,4 +1,6 @@
-# Structural Detection Engine (SDE) — RTT/2
+# Structural Detection Engine (SDE) — RTT/2  
+
+- [`structural-detection-engine_module.json`](structural-detection-engine_module.json) — Agentic module schema role
 
 The **Structural Detection Engine (SDE)** is the RTT/2 operator layer responsible
 for identifying collapse behavior, gradient weighting, deformation paths, regime
