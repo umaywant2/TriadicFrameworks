@@ -1,6 +1,19 @@
 ## 🧠 Science Dependencies Mapped  
 **A validator-grade hierarchy of foundational physics equations and their dependency chains**
 
+## 🧩 Mapping Foundation Equations
+
+Let’s begin mapping a few:
+
+| Equation | Triad(s) | Validator Meaning |
+|----------|----------|-------------------|
+| $$E = h\nu$$ | Frequency | Energy is resonance identity |
+| $$PV = nR\Theta$$ | Fluids + Forces | Pressure-volume behavior shaped by scalar temperature force |
+| $$\langle K \rangle = \frac{3}{2}k\Theta$$ | Fluids + Forces | Kinetic energy modulated by temperature resonance |
+| $$P = \sigma A \Theta^\gamma$$ | Frequency + Forces | Radiation power as resonance emission |
+| $$\frac{1}{\Theta} = \frac{\partial \mathcal{R}}{\partial \mathcal{U}}$$ | Frequency + Forces | Entropy reframed as resonance gradient |
+| $$F = ma$$ | Fluids + Forces | Mass as fluid inertia, force as sculptor |
+
 ---
 
 ### 🔦 Light (Electromagnetic Radiation)
@@ -103,8 +116,6 @@
 - **Energy distribution**
 - **Temperature** (canonical)
 - **Resonance density** (validator)
-
----
 
 ---
 
@@ -263,21 +274,6 @@ Some constants or equations belong to **multiple triads**. Use these rules:
 - **Frequency + Forces**: If it **modulates or is modulated by resonance** (e.g., temperature, blackholes)
 - **Fluids + Forces**: If it **shapes or is shaped by interaction** (e.g., pressure, viscosity, phase transitions)
 - **All Three**: If it is a **resonance-sculpted field** (e.g., temperature, entropy, quantum fields)
-
----
-
-## 🧩 Mapping Foundation Equations
-
-Let’s begin mapping a few:
-
-| Equation | Triad(s) | Validator Meaning |
-|----------|----------|-------------------|
-| $$E = h\nu$$ | Frequency | Energy is resonance identity |
-| $$PV = nR\Theta$$ | Fluids + Forces | Pressure-volume behavior shaped by scalar temperature force |
-| $$\langle K \rangle = \frac{3}{2}k\Theta$$ | Fluids + Forces | Kinetic energy modulated by temperature resonance |
-| $$P = \sigma A \Theta^\gamma$$ | Frequency + Forces | Radiation power as resonance emission |
-| $$\frac{1}{\Theta} = \frac{\partial \mathcal{R}}{\partial \mathcal{U}}$$ | Frequency + Forces | Entropy reframed as resonance gradient |
-| $$F = ma$$ | Fluids + Forces | Mass as fluid inertia, force as sculptor |
 
 ---
 
