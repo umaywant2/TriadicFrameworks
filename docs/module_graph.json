@@ -624,7 +624,27 @@
         "research",
         "ideas-sandbox"
       ]
-    },
+     },
+   "OPERATORS": {
+    "parents": [],
+    "children": ["OPERATORS_TEACHING_BUNDLE"],
+    "related": ["RTT_2", "RTT_3", "STRUCTURAL_DETECTION_ENGINE", "STRUCTURAL_INTEGRATION_ENGINE"]
+  },
+  "OPERATORS_TEACHING_BUNDLE": {
+    "parents": ["OPERATORS"],
+    "children": [],
+    "related": ["RTT_2", "RTT_3"]
+  },
+  "STRUCTURAL_DETECTION_ENGINE": {
+    "parents": [],
+    "children": [],
+    "related": ["RTT_2", "STRUCTURAL_INTEGRATION_ENGINE", "OPERATORS"]
+  },
+  "STRUCTURAL_INTEGRATION_ENGINE": {
+    "parents": [],
+    "children": [],
+    "related": ["RTT_3", "STRUCTURAL_DETECTION_ENGINE", "OPERATORS"]
+  },
     "rtt-root": {
       "canon_tag": "rtt-root",
       "name": "RTT-Tech Root",
@@ -658,6 +678,16 @@
         "rtt-inside"
       ]
     },
+  "RTT_2": {
+    "parents": [],
+    "children": [],
+    "related": ["RTT_3", "STRUCTURAL_DETECTION_ENGINE", "OPERATORS"]
+  },
+  "RTT_3": {
+    "parents": [],
+    "children": [],
+    "related": ["RTT_2", "STRUCTURAL_INTEGRATION_ENGINE", "OPERATORS"]
+  },    
     "d369": {
       "canon_tag": "d369",
       "name": "D369 Chip Spec",
