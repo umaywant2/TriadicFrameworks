@@ -1,5 +1,8 @@
 # ✅ **/docs/rtt/2/README.md**  
 *(Based on `/docs/rtt/2/RTT2_Extract_Minimal.md`)*  
+
+- [`operators_module.json`](operators_module.json) — Agentic module schema role
+
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 # RTT/2 — Structural Detection Engine (SDE)
