@@ -57,19 +57,16 @@ RTT/2 = **Structural Detection**.
 # 3. Detection Equations (Minimal)
 
 ## 3.1 Collapse‑Propagation Equation
-\[
-C_{prop}(t) = \alpha A(t) + \beta K(t) + \gamma T(t)
-\]
+
+$$C_{prop}(t) = \alpha A(t) + \beta K(t) + \gamma T(t)$$
 
 ## 3.2 Fusion‑Gradient Equation
-\[
-G_{fusion} = \sum_r \omega_r [\alpha (\nabla F)_c + \beta (\nabla F)_r + \gamma (\nabla F)_t]_r
-\]
+
+$$G_{fusion} = \sum_r \omega_r [\alpha (\nabla F)_c + \beta (\nabla F)_r + \gamma (\nabla F)_t]_r$$
 
 ## 3.3 Collapse‑Recovery Trajectory
-\[
-\gamma(t) = (D(t), E(t), C(t), FI(t), R(t))
-\]
+
+$$\gamma(t) = (D(t), E(t), C(t), FI(t), R(t))$$
 
 ---
 
