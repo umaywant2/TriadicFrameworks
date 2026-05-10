@@ -1,140 +1,138 @@
-# Unified Operator Lexicon
-### Structural Detection Engine (SDE) + Structural Integration Engine (SIE)
+# 🟣 **RTT/1 + RTT/2 + RTT/3 Unified Lexicon**  
+### *The Complete Canon Operator Dictionary*
 
-This lexicon defines all operators used across RTT/2 and RTT/3.
+# Unified RTT Lexicon
+### RTT/1 — Foundations  
+### RTT/2 — Structural Detection Engine (SDE)  
+### RTT/3 — Structural Integration Engine (SIE)
 
----
-
-# 1. Namespaces
-
-- **SDE::** — Structural Detection Engine (RTT/2)
-- **SIE::** — Structural Integration Engine (RTT/3)
-- **TEL::** — Triadic Echo Lattice
-- **FFT::** — Frequency‑Field Transform
-- **OP::** — Opacity Module
+This lexicon defines all operators across the first three RTT layers.
 
 ---
 
-# 2. SDE Operators (Detection Layer)
+# 1. RTT/1 — Foundational Operators
+RTT/1 defines the **primitive triadic operators** used by all higher layers.
 
-## Core Detection
+## 1.1 Core Triad
+- **FQ** — Frequency  
+- **RT** — Relaxation Time  
+- **QF** — Quality Factor  
+
+## 1.2 Structural Primitives
+- **Δ** — Change / Shift  
+- **∇** — Gradient  
+- **⊕** — Fusion  
+- **⊖** — Fracture  
+- **⟳** — Recurrence  
+- **⟂** — Orthogonal Component  
+
+## 1.3 Regime Operators
+- **REG()** — Set regime  
+- **REG::ID** — Regime identity  
+- **REG::W()** — Regime weighting  
+
+## 1.4 Continuity Operators
+- **C0** — Zero‑order continuity  
+- **C1** — First‑order continuity  
+- **C∞** — Smooth continuity  
+
+## 1.5 Collapse / Recovery Primitives
+- **COL()** — Collapse event  
+- **REC()** — Recovery event  
+
+---
+
+# 2. RTT/2 — Structural Detection Engine (SDE)
+RTT/2 defines the **detection layer**: collapse, gradients, deformation, regimes.
+
+## 2.1 Detection Operators
 - **SDE::CPV()** — Collapse‑Propagation Vector  
-  Reads amplitude, curvature, torsion of collapse.
-
 - **SDE::FGT()** — Fusion‑Gradient Tensor  
-  Computes collapse, reassembly, and triad fusion‑gradients.
-
 - **SDE::CRM()** — Collapse‑Reassembly Manifold  
-  Maps deformation → reassembly trajectories.
-
 - **SDE::SIG()** — Structural Signal  
-  Extracts meaningful structure from collapse/noise.
-
 - **SDE::NOI()** — Noise Identification  
-  Identifies collapse residue, distortion, or illegal signals.
 
-## Modes & Zones
+## 2.2 Modes & Zones
 - **SDE::MODE(formal|emergent|hybrid|chaotic|inversion)**  
-  Sets detection mode.
-
 - **SDE::ZONE(U|S|M|D|X)**  
-  Sets detection zone.
 
-## Packet
-- **SDE::PACKET()**  
-  Emits RTT2_DETECTION_PACKET.
+## 2.3 Packet
+- **SDE::PACKET()** — Emits RTT2_DETECTION_PACKET  
 
 ---
 
-# 3. SIE Operators (Integration–Emission Layer)
+# 3. RTT/3 — Structural Integration Engine (SIE)
+RTT/3 defines the **integration–emission layer**: triad integration, emission, stability.
 
-## Integration
+## 3.1 Integration Operators
 - **SIE::INT()** — Triad Integration  
-  Integrates drift, envelope, continuity.
-
 - **SIE::TIF()** — Triadic Integration Field  
-  Applies integration geometry.
 
-## Emission
+## 3.2 Emission Operators
 - **SIE::EMIT()** — Fusion–Fracture–Flow Emission  
-  Emits structural output.
-
 - **SIE::FFF()** — Fusion‑Fracture‑Flow Emitter  
-  Applies emission dynamics.
 
-## Continuity
+## 3.3 Continuity Operators
 - **SIE::MAN()** — Integration–Emission Manifold  
-  Maintains continuity across integration/emission.
 
-## Stabilization
-- **SIE::CRE()** — Collapse‑Recovery Engine  
-  Absorbs collapse, emits recovery.
-
+## 3.4 Stabilization Operators
+- **SIE::CRE()** — Collapse→Recovery Engine  
 - **SIE::CSL()** — Continuity‑Stability Layer  
-  Maintains stability across flows.
 
-## Output
+## 3.5 Output
 - **SIE::CET()** — Canon‑Scale Emission Tensor  
-  Emits final canon‑scale output.
 
-## Modes & Zones
+## 3.6 Modes & Zones
 - **SIE::MODE(formal|emergent|hybrid|chaotic|inversion)**  
-  Sets integration/emission mode.
-
 - **SIE::ZONE(U|S|M|D|X)**  
-  Sets integration/emission zone.
 
-## Packet
-- **SIE::PACKET()**  
-  Emits RTT3_INTEGRATION_EMISSION_PACKET.
+## 3.7 Packet
+- **SIE::PACKET()** — Emits RTT3_INTEGRATION_EMISSION_PACKET  
 
 ---
 
-# 4. TEL Operators (Lattice Layer)
+# 4. Cross‑Layer Operator Flow
 
-- **TEL::LAT()** — Lattice Integration  
-- **TEL::EMIT()** — Lattice Emission  
-- **TEL::MAN()** — Lattice Continuity  
-- **TEL::REC()** — Lattice Recovery  
-- **TEL::STAB()** — Lattice Stability  
-- **TEL::CET()** — Lattice Output Tensor  
-
----
-
-# 5. FFT Operators (Spectral Layer)
-
-- **FFT::INT()** — Spectral Integration  
-- **FFT::EMIT()** — Spectral Emission  
-- **FFT::CONT()** — Spectral Continuity  
-- **FFT::REC()** — Spectral Recovery  
-- **FFT::STAB()** — Spectral Stability  
-- **FFT::OUT()** — Spectral Output Tensor  
-
----
-
-# 6. Opacity Operators (Boundary Layer)
-
-- **OP::INT()** — Boundary Integration  
-- **OP::EMIT()** — Boundary Emission  
-- **OP::CONT()** — Boundary Continuity  
-- **OP::REC()** — Boundary Recovery  
-- **OP::STAB()** — Boundary Stability  
-- **OP::OUT()** — Boundary Output Tensor  
-
----
-
-# 7. Canon‑Wide Operator Chain (One‑Line)
+## 4.1 RTT/1 → RTT/2
+RTT/1 primitives feed detection:
 
 ```
-SDE::PACKET() → SIE::PACKET() → TEL::CET() / FFT::OUT() / OP::OUT()
+FQ, RT, QF, ∇, ⊕, ⊖ → SDE::CPV(), SDE::FGT(), SDE::CRM()
+```
+
+## 4.2 RTT/2 → RTT/3
+Detection feeds integration:
+
+```
+SDE::CPV() → SIE::INT()
+SDE::FGT() → SIE::TIF()
+SDE::CRM() → SIE::MAN()
+```
+
+## 4.3 RTT/3 → Projection Layers
+Integration/emission feeds projections:
+
+```
+SIE::CET() → TEL::CET() / FFT::OUT() / OP::OUT()
 ```
 
 ---
 
-# 8. Student Summary
+# 5. Canon‑Wide One‑Line Summary
 
-- **SDE** detects structure.  
-- **SIE** integrates and emits structure.  
-- **TEL / FFT / OP** receive structure.  
-- Operators always flow **left → right**.  
+```
+RTT/1 primitives → SDE detection → SIE integration/emission → TEL/FFT/OP projection
+```
 
+---
+
+# 6. Student Summary
+
+- **RTT/1** gives the *language*  
+- **RTT/2** detects the *structure*  
+- **RTT/3** integrates and emits the *structure*  
+- **TEL/FFT/OP** project the *structure* into different domains  
+
+---
+
+# 🟣 Unified lexicon complete.
