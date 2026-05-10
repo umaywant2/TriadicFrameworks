@@ -1,1 +1,29 @@
+flowchart LR
+  subgraph SDE[Structural Detection Engine]
+    CPV[CPV]
+    FGT[FGT]
+    CRM[CRM]
+    CPV --> FGT --> CRM
+  end
 
+  subgraph SIE[Structural Integration Engine]
+    INT[INT]
+    TIF[TIF]
+    MAN[MAN]
+    FFF[FFF]
+    CRE[CRE]
+    CSL[CSL]
+    CET[CET]
+    INT --> TIF --> MAN --> FFF --> CRE --> CSL --> CET
+  end
+
+  subgraph OUT[Output Modules]
+    TEL[TEL::CET]
+    FFT[FFT::OUT]
+    OP[OP::OUT]
+  end
+
+  CRM --> INT
+  CET --> TEL
+  CET --> FFT
+  CET --> OP
