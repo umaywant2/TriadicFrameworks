@@ -121,8 +121,8 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [ /curriculum/ ](https://www.triadicframeworks.org/curriculum/)  
 - [ /charts/ ](https://www.triadicframeworks.org/charts/)  
 - [ /domain_tool_primers/ ](https://www.triadicframeworks.org/domain_tool_primers/)
-- [ /operators/ ](https://www.triadicframeworks.org/operators/)
-- [ /operators/teaching_bundle/ ](https://www.triadicframeworks.org/operators/teaching_bundle/) 
+- [ /operators/ ](https://www.triadicframeworks.org/operators/) (New!)
+- [ /operators/teaching_bundle/ ](https://www.triadicframeworks.org/operators/teaching_bundle/) (New!)
 
 ---
 
