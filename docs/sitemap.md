@@ -30,6 +30,8 @@
 
 - [ /rtt/ ](https://www.triadicframeworks.org/rtt/)
 - [ /rtt/1/ ](https://www.triadicframeworks.org/rtt/1/)
+- [ /rtt/2/ ](https://www.triadicframeworks.org/rtt/2/) (New!)
+- [ /rtt/3/ ](https://www.triadicframeworks.org/rtt/3/) (New!)
 - [ /rtt/12/ ](https://www.triadicframeworks.org/rtt/12/)
 - [ /rtt/codex/ ](https://www.triadicframeworks.org/rtt/codex/)  
 - [ /rtt/Inside/ ](https://www.triadicframeworks.org/rtt/Inside/)
@@ -40,7 +42,9 @@
 - [ /rtt/Triadic_Echo_Lattice/ ](https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/) (New!)
 - [ /rtt/The_Inverted_Star/ ](https://www.triadicframeworks.org/rtt/The_Inverted_Star/) (New!)
 - [ /unified_resonance/ ](https://www.triadicframeworks.org/unified_resonance/)  
-- [ /triadic/ ](https://www.triadicframeworks.org/triadic/)  
+- [ /triadic/ ](https://www.triadicframeworks.org/triadic/)
+- [ /structural-detection-engine/ ](https://www.triadicframeworks.org/structural-detection-engine/) (New!)
+- [ /structural-integration-engine/ ](https://www.triadicframeworks.org/structural-integration-engine/) (New!)
 - [ /substrate/ ](https://www.triadicframeworks.org/substrate/)  
 - [ /Mode/ ](https://www.triadicframeworks.org/Mode/) (New!)
 - [ /triadic_observer_layer/ ](https://www.triadicframeworks.org/triadic_observer_layer/)
@@ -117,6 +121,8 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [ /curriculum/ ](https://www.triadicframeworks.org/curriculum/)  
 - [ /charts/ ](https://www.triadicframeworks.org/charts/)  
 - [ /domain_tool_primers/ ](https://www.triadicframeworks.org/domain_tool_primers/)
+- [ /operators/ ](https://www.triadicframeworks.org/operators/)
+- [ /operators/teaching_bundle/ ](https://www.triadicframeworks.org/operators/teaching_bundle/) 
 
 ---
 
