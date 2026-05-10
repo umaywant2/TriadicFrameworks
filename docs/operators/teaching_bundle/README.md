@@ -1,4 +1,7 @@
 # **Operator Ecology Teaching Bundle — README.md**  
+
+- [`operator_ecology_teaching_bundle_module.json`](operator_ecology_teaching_bundle_module.json) — Agentic module schema role
+
 RTT/1 → RTT/2 → RTT/3  
 (Complete Curriculum Package)
 
