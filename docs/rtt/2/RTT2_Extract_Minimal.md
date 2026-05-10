@@ -10,7 +10,6 @@ Paste this into a new file:
 
 ---
 
-```markdown
 # RTT/2 — Minimal Module Extraction  
 ### Structural Detection Layer  
 ### Canon‑Distilled Form
@@ -132,7 +131,6 @@ RTT/2 provides:
 - cross‑module detection projection  
 
 RTT/2 is the **detection backbone** of the canon.
-```
 
 ---
 
