@@ -1,4 +1,6 @@
-# Structural Integration Engine (SIE) — RTT/3
+# Structural Integration Engine (SIE) — RTT/3 
+
+- [`structural-integration-engine_module.json`](structural-integration-engine_module.json) — Agentic module schema role
 
 The **Structural Integration Engine (SIE)** is the RTT/3 operator layer
 responsible for triad integration, emission classification, continuity mapping,
