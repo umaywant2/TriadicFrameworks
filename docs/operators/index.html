@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/rtt/index.html — <head>                                  -->
+<!-- Module: RTT-Tech Root (rtt-infrastructure)                     -->
+<!-- Last updated: 2026-05-06                                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-05-06" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+
+<title>Operators | TriadicFrameworks</title>
+
+<meta name="description"
+      content="RTT‑Tech — the Resonance‑Time Technology root. 10 core substrates and engines, 8 paired SVG diagrams, 9 domain examples, 8 cross‑scale maps, plus child modules (RTT/1, SDK, App, Store, Micro‑Core, D369, codes, Echo Classifier)." />
+<meta name="keywords"
+      content="RTT, RTT-Tech, resonance time, RTT/1, micro-core, SDK, app, store, diagrams, maps, core substrates, coherence engine, inversion engine, triadic frameworks" />
+
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
+
+<meta name="module" content="RTT-Tech Root" />
+<meta name="canonical-id" content="RTT_ROOT" />
+<meta name="module-type" content="RTT-Infrastructure" />
+<meta name="version" content="1.1" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="rtt-core" />
+<meta name="siblings" content="RTT/1, RTT-SDK, RTT-App, RTT-Store, Micro-Core" />
+<meta name="canonical-path" content="/docs/rtt/" />
+<meta name="last-updated" content="2026-05-06" />
+<meta name="license" content="MIT" />
+
+<!-- ═══ AI Discovery (standardized) ═══ -->
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="RTT_ROOT" />
+<meta name="ai-operators"
+      content="RTT-Navigate, RTT-Classify, RTT-Diagram, RTT-Map, RTT-Example" />
+
+<meta name="ai.module" content="RTT-Tech Root" />
+<meta name="ai.version" content="1.1" />
+<meta name="ai.purpose"
+      content="Provide the full module tree and navigation surface for all RTT technology modules — 10 core substrates, 8 paired diagrams, 9 domain examples, 8 cross-scale maps." />
+<meta name="ai.keywords"
+      content="RTT, RTT-Tech, resonance time, RTT/1, micro-core, SDK, app, store, coherence engine, inversion engine, dimensions, operators, regimes, substrates" />
+<meta name="ai.audience" content="students, developers, researchers, AI systems" />
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="MIT" />
+<meta name="ai.module.name" content="RTT-Tech Root" />
+<meta name="ai.module.summary"
+      content="Root navigation surface: 10 core substrates (alignment, coherence, coherence engine, dimensions, equations, inversion engine, observer, operators, regimes, substrates), 8 paired SVG diagrams, 9 domain examples (AI, cognition, ecology, information, life, neuroscience, physics, social, systems), 8 cross-scale maps. Child modules: RTT/1, SDK, App, Store, Micro-Core, D369, codes, Echo Classifier." />
+<meta name="ai.module.category" content="rtt-root" />
+
+<!-- ═══ Canonical / SEO ═══ -->
+
+<link rel="canonical" href="https://www.triadicframeworks.org/rtt/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ff" />
+
+<!-- ═══ Open Graph ═══ -->
+
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="TriadicFrameworks" />
+<meta property="og:title" content="RTT‑Tech — Resonance‑Time Technology Root" />
+<meta property="og:url" content="https://www.triadicframeworks.org/rtt/" />
+<meta property="og:description"
+      content="RTT‑Tech root: 10 core substrates, 8 diagrams, 9 examples, 8 maps — the full Resonance‑Time Technology tree." />
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+
+<!-- ═══ Twitter Card ═══ -->
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="RTT‑Tech — Resonance‑Time Technology Root" />
+<meta name="twitter:description"
+      content="10 core substrates, 8 diagrams, 9 domain examples, 8 maps — the full RTT module tree." />
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png" />
+
+<!-- ═══ Citation / Dublin Core ═══ -->
+
+<meta name="citation_title" content="RTT‑Tech — Resonance‑Time Technology Root" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-06" />
+
+<meta name="DC.subject" content="RTT, resonance time, RTT/1, micro-core, SDK, app, store, diagrams, maps, core substrates" />
+<meta name="DC.type" content="Text" />
+<meta name="DC.format" content="text/html" />
+
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+ /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+       
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🦑 Operators | RTT/1/2/3</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🧩 Core Substrates & Engines</h3>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<section id="rtt-tech-session-header"
+         data-rtt="root"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (rtt‑tech)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      core (10) → diagrams (8 paired) → examples (9 domains) → maps (8 cross‑scale) → sort indexes
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (root‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (resonance‑time grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.1 (rtt‑root‑refreshed)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + svg diagrams + maps</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (RTT‑Tech root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + developers + researchers + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;border-radius:6px;font-size:13px;">
+  🌀 Operators<br>📘 Resonance‑Time Technology
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+  README: 'README.md',
+  ABOUT: '../ABOUT.md',
+  CONTRIBUTING: '../CONTRIBUTING.md',
+  GLOSSARY: '../GLOSSARY.md',
+  LINEAGE: '../LINEAGE.md',
+  LICENSE: '../LICENSE.md',
+  SITEMAP: '../sitemap.md',
+  QUICKSTART: '../QUICKSTART.md',
+  CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+  SECURITY: '../SECURITY.md',
+  PRINCIPLES: '../PRINCIPLES.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
