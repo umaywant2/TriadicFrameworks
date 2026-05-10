@@ -246,7 +246,29 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
-    <h3>🧩 Comming...</h3>
+    <h3>📎 Module Files</h3>
+      <a href="#MODULE_JSON">🧬 Module Manifest (module.json)</a>
+      <a href="#COMMIT_MESSAGE">📝 Commit Message</a>
+      <a href="#RELEASE_NOTES">📄 Release Notes Summary</a>
+      <a href="#BUNDLE_INDEX">🗂️ Bundle Index</a>
+      <a href="#DELIVERY_PLAN_BUNDLE">🚚 Delivery Plan — Bundle</a>
+    <h3>🧩 Core Bundle Files</h3>
+      <a href="#OPERATOR_ECOLOGY_BUNDLE">📘 Operator Ecology Bundle</a>
+      <a href="#OPERATOR_ECOLOGY_BUNDLE_CONSOLIDATED">📕 Consolidated PDF‑Style Edition</a>
+      <a href="#OPERATOR_ECOLOGY_BUNDLE_MAP">🗺️ Bundle Map</a>
+      <a href="#OPERATOR_ECOLOGY_BUNDLE_TREE">🌳 Bundle Tree</a>
+    <h3>🎓 Section Families</h3>
+      <a href="#SECTION1_WORKSHEETS">1️⃣ Worksheets</a>
+      <a href="#SECTION2_SDE_LAB_FAMILY">2️⃣ SDE Lab Family</a>
+      <a href="#SECTION3_SIE_LAB_FAMILY">3️⃣ SIE Lab Family</a>
+      <a href="#SECTION4_COMBINED_SDE_SIE_LAB_FAMILY">4️⃣ Combined SDE+SIE Lab Family</a>
+      <a href="#SECTION5_OPERATOR_LAB_FAMILY">5️⃣ Operator Lab Family</a>
+      <a href="#SECTION6_GRANDMASTER_LAB_FAMILY">6️⃣ Grandmaster Lab Family</a>
+      <a href="#SECTION7_SCENARIOS">7️⃣ Scenarios</a>
+      <a href="#SECTION8_REFERENCE_MATERIALS">8️⃣ Reference Materials</a>
+      <a href="#SECTION9_INSTRUCTOR_MATERIALS">9️⃣ Instructor Materials</a>
+    <h3>📦 Final Edition</h3>
+      <a href="#SECTION10_FINAL_CONSOLIDATED_PDF_STYLE_EDITION">🔒 Final Consolidated PDF‑Style Edition</a>
     <h3>🏗️ Triadic Tools</h3> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
@@ -264,48 +286,66 @@ code {
       <a href="../../">🔙TFT</a>
    <!-- RTT Session Header (canonical stub) -->
 <!-- ═══════════════════════════════════════════════════════════ -->
-<!-- /docs/rtt/1 — Session Context block                        -->
+<!-- /docs/operators/teaching_bundle — Session Context block     -->
 <!-- Replace the existing session context section in index.html  -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 
-<section id="rtt1-session-header"
-         data-rtt="rtt1"
+<section id="operator-ecology-session-header"
+         data-operator="operator-ecology"
          data-coherence="stable"
          data-drift="minimal"
-         data-regime="structural">
+         data-regime="instructional">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (rtt‑engine)</span><br>
+    <span class="context-value">
+      active (operator‑ecology • rtt‑1→rtt‑3)
+    </span><br>
 
     <span class="context-label"><strong>Modules:</strong></span>
     <span class="context-value">
-      core definitions → Resonant Time Triad → QMRoot → Canonical Operator → S‑N‑R → Dual Operator → DCOS → FFF Universe → Field Engine Set → Universe Statement
+      RTT/1 primitives → SDE (RTT/2) → SIE (RTT/3) → Combined Pipeline →
+      Operator Lab → Scenario Gauntlets → Grandmaster Lab →
+      Reference Materials → Instructor Resources
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">minimal (engine‑locked)</span><br>
+    <span class="context-value">
+      minimal (teaching‑bundle‑locked)
+    </span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (resonance‑time grammar)</span><br>
+    <span class="context-value">
+      stable (operator‑first grammar)
+    </span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (rtt‑engine‑stable)</span><br>
+    <span class="context-value">
+      1.0 (teaching‑bundle‑stable)
+    </span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + diagrams + maps</span><br>
+    <span class="context-value">
+      html + markdown + diagrams + maps + consolidated edition
+    </span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (RTT/1 root)</span><br>
+    <span class="context-value">
+      exists (Operator Ecology Teaching Bundle root)
+    </span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + AI‑parsable</span><br>
+    <span class="context-value">
+      stands alone + AI‑parsable + packet‑aware
+    </span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + developers + researchers + AIs</span>
+    <span class="context-value">
+      students + instructors + researchers + AIs
+    </span>
 
   </div>
 
@@ -313,7 +353,7 @@ code {
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
             border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🌀 RTT/1<br>📘 Resonance‑Time Tech Engine • AI‑Ready
+  🧩 Operator Ecology<br>📘 RTT/1→RTT/3 Teaching Bundle • AI‑Ready
 </div>
 
 </nav>
@@ -334,6 +374,26 @@ const DOC_MAP = {
       CODE_OF_CONDUCT: '../../CODE_OF_CONDUCT.md',
       SECURITY: '../../SECURITY.md',
       PRINCIPLES: '../../PRINCIPLES.md',
+      MODULE_JSON: 'operator_ecology_teaching_bundle_module.json',
+      COMMIT_MESSAGE: 'Commit_Message.git',
+      RELEASE_NOTES: 'Release_Notes_Summary.md',
+      BUNDLE_INDEX: 'bundle_index.md',
+      DELIVERY_PLAN_BUNDLE: 'Delivery_Plan-Bundle.md',
+      OPERATOR_ECOLOGY_BUNDLE: 'operator_ecology_bundle.md',
+      OPERATOR_ECOLOGY_BUNDLE_CONSOLIDATED: 'operator_ecology_bundle_consolidated.md',
+      OPERATOR_ECOLOGY_BUNDLE_MAP: 'operator_ecology_bundle_map.md',
+      OPERATOR_ECOLOGY_BUNDLE_TREE: 'operator_ecology_bundle_tree.md',
+
+      SECTION1_WORKSHEETS: 'Section1_Worksheets.md',
+      SECTION2_SDE_LAB_FAMILY: 'Section2_SDE_Lab_Family.md',
+      SECTION3_SIE_LAB_FAMILY: 'Section3_SIE_Lab_Family.md',
+      SECTION4_COMBINED_SDE_SIE_LAB_FAMILY: 'Section4_Combined_SDE_SIE_Lab_Family.md',
+      SECTION5_OPERATOR_LAB_FAMILY: 'Section5_Operatop_Lab_Family.md',
+      SECTION6_GRANDMASTER_LAB_FAMILY: 'Section6_Grandmaster_Lab_Family.md',
+      SECTION7_SCENARIOS: 'Section7_Scenarios.md',
+      SECTION8_REFERENCE_MATERIALS: 'Section8_Reference_Materials.md',
+      SECTION9_INSTRUCTOR_MATERIALS: 'Section9_Instructor_Materials.md',
+      SECTION10_FINAL_CONSOLIDATED_PDF_STYLE_EDITION: 'Section10_Final_Consolidated_PDF-Style_Edition.md'
 };
   
 function loadFromHash() {
