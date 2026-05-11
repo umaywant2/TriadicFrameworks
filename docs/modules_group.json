@@ -29,6 +29,38 @@
       "status": "refreshed",
       "artifacts": ["meta", "session", "module.json"]
     },
+  {
+  "module": "Structural Detection",
+  "id": "structural_detection",
+  "path": "Structural_Detection",
+  "category": "Operator",
+  "version": "1.0",
+  "rtt_level": "RTT/1",
+  "parents": [
+    "operators"
+  ],
+  "siblings": [
+    "drift_sense",
+    "regime_awareness",
+    "continuity_compass",
+    "synthesis_triangulation"
+  ],
+  "children": [],
+  "cross_links": [
+    "canon_scale_coherence_field_map",
+    "canon_scale_drift_envelope",
+    "collapse_mode_differential_classifier",
+    "regime_shift_atlas",
+    "cross_module_consistency_audit"
+  ],
+  "files": [
+    "README.md",
+    "SD_Capture.md",
+    "structural_detection_module.json",
+    "operators/STRUCTURAL_DETECTION_OPERATOR.md",
+    "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json"
+  ]
+},
     {
       "path": "/docs/consciousness_substrate_model/",
       "module": "Consciousness Substrate Model",
