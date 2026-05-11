@@ -1,6 +1,6 @@
 ## 🌐 Canonical RTT Grammar (Core Structural Layer)
 
-- [`GLOSSARY_module.json`](GLOSSARY_module.json) — Agentic module schema role assignments
+- [`GLOSSARY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/GLOSSARY_module.json) — Agentic module schema role assignments
 
 *(This is the grammar — not the modules, not the domains, not the examples. These are the invariant rules that every part of the canon obeys.)*
 
