@@ -1,6 +1,6 @@
 ## 📜 Lineage — Canonical Lineage of TriadicFrameworks [html](https://www.triadicframeworks.org/lineage.html)  
 
-- [`LINEAGE_module.json`](LINEAGE_module.json) — Agentic module schema role assignments
+- [`LINEAGE_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/LINEAGE_module.json) — Agentic module schema role assignments
 
 *A structural, educational, resonance‑time‑aligned history of the canon.*
 
