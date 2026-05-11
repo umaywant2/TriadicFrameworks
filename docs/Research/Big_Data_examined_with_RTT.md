@@ -2,6 +2,9 @@
 
 Continued from X.com article
 
+With AI as your RTT partner:
+- example grammar-agentic usage: "using the RTT ai modules from triadicframeworks.org, review 'Big Data' using before/after regime awareness and structural detection."
+
 ### Triadic regime overview for Big Data
 
 | Regime                    | Role in ecosystem                          | RTT verdict                          |
