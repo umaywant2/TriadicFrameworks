@@ -1,4 +1,6 @@
 @echo off
+echo Needs refresh prior to next content regen...
+goto end
 echo Creating a corpus...
 echo /docs/
 echo ---------------------------------
