@@ -1,249 +1,248 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-  "module_name": "Structural Detection",
-  "module_id": "structural_detection",
+  "module": "Structural Detection",
   "version": "1.0",
-  "category": "analysis",
-  "summary": "Detect motifs, drift, regimes, invariants, anomalies, and coherence using RTT/1 operators.",
-  "purpose": "Provide structural detection capabilities across motifs, drift, regimes, invariants, and continuity using a five-operator pipeline.",
-  "audience": ["students", "instructors", "researchers", "AIs"],
-  "exports": [
+  "category": "Operator",
+  "purpose": "Identify drift signatures, classify structural anomalies, map coherence breaks, detect collapse precursors, and provide cross-module structural diagnostics across the TriadicFrameworks canon.",
+  "operators": [
     "STRUCTURAL_DETECTION_OPERATOR",
     "DRIFT_SENSE_OPERATOR",
     "REGIME_AWARENESS_OPERATOR",
     "CONTINUITY_COMPASS_OPERATOR",
     "SYNTHESIS_TRIANGULATION_OPERATOR"
   ],
-  "imports": [],
 
-  "files": [
-    {
-      "path": "README.md",
-      "role": "index",
-      "analyzer_layer": "operator",
-      "purpose": "Front-door overview of the Structural Detection module."
-    },
-    {
-      "path": "SD_Capture.md",
-      "role": "profile",
-      "analyzer_layer": "operator",
-      "purpose": "Module capture file containing session context and operator framing."
-    },
-    {
-      "path": "DOC_MAP.md",
-      "role": "map",
-      "analyzer_layer": "coherence",
-      "purpose": "Canonical mapping of all module files."
-    },
+  "analyzer_layers": {
+    "operator": [
+      "STRUCTURAL_DETECTION_OPERATOR",
+      "DRIFT_SENSE_OPERATOR",
+      "REGIME_AWARENESS_OPERATOR",
+      "CONTINUITY_COMPASS_OPERATOR",
+      "SYNTHESIS_TRIANGULATION_OPERATOR"
+    ],
+    "dimensional": [
+      "canon-scale_coherence_field_map",
+      "canon-scale_drift_envelope",
+      "canon-scale_integration_field",
+      "canon-scale_synthesis_field"
+    ],
+    "regime": [
+      "regime_shift_atlas",
+      "regime_shift_differential_diagnostics_manual",
+      "regime_shift_volatility_map",
+      "regime-continuity_stability_ledger"
+    ],
+    "drift": [
+      "drift_envelope_pattern_library",
+      "drift_envelope_stability_field_guide",
+      "drift_regime_interaction_matrix",
+      "drift-continuity_interaction_matrix"
+    ],
+    "coherence": [
+      "coherence_break_catalog",
+      "coherence_break_geometry_atlas",
+      "cross_module_coherence_harmonization_protocol",
+      "system-scale_coherence_dashboard"
+    ],
+    "cross-cutting": [
+      "multi-module_coherence_orchestration_engine",
+      "multi-module_integrity_audit_framework",
+      "cross_module_operator_bridge_map",
+      "cross_regime_continuity_ledger"
+    ]
+  },
 
-    /* Operators */
-    {
-      "path": "operators/STRUCTURAL_DETECTION_OPERATOR.md",
-      "role": "engine",
-      "analyzer_layer": "operator",
-      "purpose": "Primary operator for detecting motifs, boundaries, invariants, anomalies, and regime hints."
-    },
-    {
-      "path": "operators/DRIFT_SENSE_OPERATOR.md",
-      "role": "engine",
-      "analyzer_layer": "regime",
-      "purpose": "Operator for detecting drift, deformation, coherence breaks, and transition signals."
-    },
-    {
-      "path": "operators/REGIME_AWARENESS_OPERATOR.md",
-      "role": "engine",
-      "analyzer_layer": "regime",
-      "purpose": "Operator for classifying structural regimes and identifying regime boundaries."
-    },
-    {
-      "path": "operators/CONTINUITY_COMPASS_OPERATOR.md",
-      "role": "engine",
-      "analyzer_layer": "dimensional",
-      "purpose": "Operator for detecting invariants, stable motifs, anchor points, and cross-sample continuity."
-    },
-    {
-      "path": "operators/SYNTHESIS_TRIANGULATION_OPERATOR.md",
-      "role": "engine",
-      "analyzer_layer": "coherence",
-      "purpose": "Operator for triangulating all structural signals into a stable synthesis."
-    },
+  "inputs": {
+    "events": [
+      "drift signatures",
+      "coherence breaks",
+      "regime transitions",
+      "collapse precursors",
+      "cross-module inconsistencies"
+    ],
+    "artifacts": [
+      "module outputs",
+      "cross-module maps",
+      "drift envelopes",
+      "coherence fields",
+      "regime-shift atlases",
+      "integration fields"
+    ]
+  },
 
-    /* RTTcode */
-    {
-      "path": "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json",
-      "role": "signature",
-      "analyzer_layer": "operator",
-      "purpose": "RTTcode contract for the Structural Detection operator."
-    },
-    {
-      "path": "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json.md",
-      "role": "reference",
-      "analyzer_layer": "operator",
-      "purpose": "Explanation of the Structural Detection RTTcode contract."
-    },
+  "outputs": {
+    "maps": [
+      "drift_envelope_map",
+      "coherence_break_catalog",
+      "collapse_precursor_field",
+      "structural_anomaly_classification",
+      "cross_module_drift_envelope_map",
+      "collapse-propagation_map",
+      "collapse-reassembly_integrity_tensor"
+    ],
+    "signals": [
+      "drift_intensity",
+      "coherence_index",
+      "collapse_risk_score",
+      "regime_shift_volatility",
+      "integration_stability_index"
+    ],
+    "dashboards": [
+      "system-scale_coherence_dashboard",
+      "collapse-mode_early-warning_system"
+    ]
+  },
 
-    {
-      "path": "RTTcode/RTT_DRIFT_SENSE_v1.json",
-      "role": "signature",
-      "analyzer_layer": "regime",
-      "purpose": "RTTcode contract for the Drift Sense operator."
-    },
-    {
-      "path": "RTTcode/RTT_DRIFT_SENSE_v1.json.md",
-      "role": "reference",
-      "analyzer_layer": "regime",
-      "purpose": "Explanation of the Drift Sense RTTcode contract."
-    },
+  "lineage": {
+    "upstream": [
+      "Regime Awareness",
+      "Drift Sense",
+      "Continuity Compass",
+      "Synthesis Triangulation",
+      "Collapse Mode (precursor detection)"
+    ],
+    "downstream": [
+      "Collapse Mode",
+      "Cross-Module Coherence",
+      "Regime Shift Diagnostics",
+      "Integration Field",
+      "Synthesis Field",
+      "Instructor Materials",
+      "Student Materials",
+      "Stress Tests"
+    ]
+  },
 
-    {
-      "path": "RTTcode/RTT_REGIME_AWARENESS_v1.json",
-      "role": "signature",
-      "analyzer_layer": "regime",
-      "purpose": "RTTcode contract for the Regime Awareness operator."
-    },
-    {
-      "path": "RTTcode/RTT_REGIME_AWARENESS_v1.json.md",
-      "role": "reference",
-      "analyzer_layer": "regime",
-      "purpose": "Explanation of the Regime Awareness RTTcode contract."
-    },
+  "regime_surfaces": {
+    "canonical": [
+      "canon-scale_coherence_field_map",
+      "canon-scale_drift_envelope",
+      "canon-scale_integration_field",
+      "canon-scale_synthesis_field"
+    ],
+    "collapse_mode": [
+      "collapse-mode_differential_classifier",
+      "collapse-mode_geometry_atlas",
+      "collapse-mode_reconstruction_engine",
+      "collapse-mode_reassembly_atlas"
+    ],
+    "cross_module": [
+      "cross_module_coherence_harmonization_protocol",
+      "cross_module_operator_bridge_map",
+      "cross_module_consistency_audit"
+    ],
+    "drift_envelope": [
+      "drift_envelope_pattern_library",
+      "drift_envelope_stress_tensor",
+      "drift_envelope_inversion_compendium"
+    ],
+    "regime_shift": [
+      "regime_shift_atlas",
+      "regime_shift_hazard_index",
+      "regime_shift_recovery_sequencer"
+    ]
+  },
 
-    {
-      "path": "RTTcode/RTT_CONTINUITY_COMPASS_v1.json",
-      "role": "signature",
-      "analyzer_layer": "dimensional",
-      "purpose": "RTTcode contract for the Continuity Compass operator."
-    },
-    {
-      "path": "RTTcode/RTT_CONTINUITY_COMPASS_v1.json.md",
-      "role": "reference",
-      "analyzer_layer": "dimensional",
-      "purpose": "Explanation of the Continuity Compass RTTcode contract."
-    },
+  "files": {
+    "core": [
+      "README.md",
+      "SD_Capture.md",
+      "structural_detection_module.json"
+    ],
+    "operators": [
+      "operators/STRUCTURAL_DETECTION_OPERATOR.md",
+      "operators/DRIFT_SENSE_OPERATOR.md",
+      "operators/REGIME_AWARENESS_OPERATOR.md",
+      "operators/CONTINUITY_COMPASS_OPERATOR.md",
+      "operators/SYNTHESIS_TRIANGULATION_OPERATOR.md"
+    ],
+    "canon_scale": [
+      "canon-scale_coherence_field_map.md",
+      "canon-scale_drift_envelope.md",
+      "canon-scale_integration_field.md",
+      "canon-scale_synthesis_field.md",
+      "canon-scale_fusion_integration_field.md",
+      "canon-scale_fusion_stability_tensor.md"
+    ],
+    "collapse_mode": [
+      "collapse-mode_differential_classifier.md",
+      "collapse-mode_geometry_atlas.md",
+      "collapse-mode_reassembly_atlas.md",
+      "collapse-mode_reconstruction_engine.md"
+    ],
+    "coherence": [
+      "coherence_break_catalog.md",
+      "coherence_break_geometry_atlas.md",
+      "cross_module_coherence_harmonization_protocol.md"
+    ],
+    "drift": [
+      "drift_envelope_pattern_library.md",
+      "drift_envelope_stability_field_guide.md",
+      "drift_regime_interaction_matrix.md"
+    ],
+    "regime_shift": [
+      "regime_shift_atlas.md",
+      "regime_shift_deep_dive_manual.md",
+      "regime_shift_volatility_map.md"
+    ],
+    "cross_module": [
+      "cross_module_operator_bridge_map.md",
+      "cross_module_consistency_audit.md",
+      "cross_regime_continuity_ledger.md"
+    ],
+    "examples": [
+      "examples/drift_signature_example.json",
+      "examples/pattern_anomaly_example.json",
+      "examples/regime_shift_example.json"
+    ],
+    "diagnostics": [
+      "diagnostics/operator_chain_failure_atlas.md"
+    ],
+    "labs": [
+      "labs/operator_lab.md",
+      "labs/cross_module_integration_practicum.md",
+      "labs/drift_envelope_stability_practicum.md",
+      "labs/multi_module_coherence_stress_gauntlet.md"
+    ],
+    "instructor_materials": [
+      "instructor_materials/full_module_instructor_slides.md",
+      "instructor_materials/instructor_practicum_guide.md",
+      "instructor_materials/instructor_mastery_exam.md",
+      "instructor_materials/visual_style_guide.md"
+    ],
+    "student_materials": [
+      "student_materials/student_primer.md",
+      "student_materials/cheat_sheet.md",
+      "student_materials/drift-envelope_pattern_recognition_workbook.md",
+      "student_materials/scenario_gauntlet.md"
+    ],
+    "metadata": [
+      "metadata/ai.json",
+      "metadata/citation.json",
+      "metadata/search.json"
+    ],
+    "visuals": [
+      "visuals/hero_prompt_pack.md",
+      "visual_identity_notes.md"
+    ]
+  },
 
-    {
-      "path": "RTTcode/RTT_SYNTHESIS_TRIANGULATION_v1.json",
-      "role": "signature",
-      "analyzer_layer": "coherence",
-      "purpose": "RTTcode contract for the Synthesis Triangulation operator."
-    },
-    {
-      "path": "RTTcode/RTT_SYNTHESIS_TRIANGULATION_v1.json.md",
-      "role": "reference",
-      "analyzer_layer": "coherence",
-      "purpose": "Explanation of the Synthesis Triangulation RTTcode contract."
-    },
-
-    /* Examples */
-    {
-      "path": "examples/pattern_anomaly_example.json",
-      "role": "example",
-      "analyzer_layer": "operator",
-      "purpose": "Example demonstrating motif repetition with a localized anomaly."
-    },
-    {
-      "path": "examples/pattern_anomaly_example.json.md",
-      "role": "reference",
-      "analyzer_layer": "operator",
-      "purpose": "Explanation of the pattern anomaly example."
-    },
-
-    {
-      "path": "examples/drift_signature_example.json",
-      "role": "example",
-      "analyzer_layer": "regime",
-      "purpose": "Example demonstrating progressive drift across segments."
-    },
-    {
-      "path": "examples/drift_signature_example.json.md",
-      "role": "reference",
-      "analyzer_layer": "regime",
-      "purpose": "Explanation of the drift signature example."
-    },
-
-    {
-      "path": "examples/regime_shift_example.json",
-      "role": "example",
-      "analyzer_layer": "regime",
-      "purpose": "Example demonstrating a formal-to-chaotic regime shift."
-    },
-    {
-      "path": "examples/regime_shift_example.json.md",
-      "role": "reference",
-      "analyzer_layer": "regime",
-      "purpose": "Explanation of the regime shift example."
-    },
-
-    /* Student Materials */
-    {
-      "path": "student_materials/cheat_sheet.md",
-      "role": "example",
-      "analyzer_layer": "coherence",
-      "purpose": "Quick reference guide for students."
-    },
-    {
-      "path": "student_materials/worksheet.md",
-      "role": "example",
-      "analyzer_layer": "operator",
-      "purpose": "Student worksheet for structural detection practice."
-    },
-    {
-      "path": "student_materials/extended_quiz.md",
-      "role": "example",
-      "analyzer_layer": "operator",
-      "purpose": "Extended quiz for student assessment."
-    },
-    {
-      "path": "student_materials/mastery_exam.md",
-      "role": "example",
-      "analyzer_layer": "coherence",
-      "purpose": "Mastery exam for evaluating structural literacy."
-    },
-    {
-      "path": "student_materials/scenario_gauntlet.md",
-      "role": "example",
-      "analyzer_layer": "dimensional",
-      "purpose": "Scenario gauntlet for multi-scenario structural detection."
-    },
-    {
-      "path": "student_materials/student_primer.md",
-      "role": "profile",
-      "analyzer_layer": "operator",
-      "purpose": "Primer introducing students to structural detection."
-    },
-
-    /* Instructor Materials */
-    {
-      "path": "instructor_materials/operator_lab_instructor.md",
-      "role": "diagnostic",
-      "analyzer_layer": "operator",
-      "purpose": "Instructor edition of the operator lab."
-    },
-    {
-      "path": "instructor_materials/scenario_gauntlet_instructor.md",
-      "role": "diagnostic",
-      "analyzer_layer": "dimensional",
-      "purpose": "Instructor edition of the scenario gauntlet."
-    },
-    {
-      "path": "instructor_materials/rubric.md",
-      "role": "signature",
-      "analyzer_layer": "coherence",
-      "purpose": "Instructor rubric for evaluating structural detection mastery."
-    },
-    {
-      "path": "instructor_materials/teachers_key.md",
-      "role": "reference",
-      "analyzer_layer": "operator",
-      "purpose": "Answer key for the mastery exam."
-    },
-
-    /* Index */
-    {
-      "path": "index.html",
-      "role": "index",
-      "analyzer_layer": "coherence",
-      "purpose": "Module front door for web presentation."
-    }
-  ]
+  "ai": {
+    "parsable": true,
+    "operator_grammar": true,
+    "search_surface": [
+      "drift",
+      "coherence",
+      "collapse",
+      "regime transitions",
+      "integration",
+      "synthesis"
+    ],
+    "agent_capabilities": [
+      "drift detection",
+      "coherence mapping",
+      "collapse precursor identification",
+      "cross-module anomaly detection",
+      "regime-shift diagnostics"
+    ]
+  }
 }
