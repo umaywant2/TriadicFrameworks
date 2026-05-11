@@ -2,81 +2,31 @@
 <html lang="en">
 <head>
 
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- /docs/Mode/index.html — <head> metadata block refresh      -->
-<!-- Module: Mode (mode-layer)                                   -->
-<!-- Last updated: 2026-05-02                                    -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="language" content="en">
-<meta name="last-modified" content="2026-05-02">
-<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+  <!-- Canonical Metadata -->
+  <meta name="generator" content="TriadicFrameworks • RTT/1" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0b0b0b" />
 
-<meta name="creator" content="TriadicFrameworks">
-<meta name="author" content="Nawder Loswin (pen name)">
-<meta name="publisher" content="TriadicFrameworks">
+  <meta name="description"
+        content="Structural Detection Module — detect motifs, drift, regimes, invariants, and coherence without interpreting content." />
 
-<meta name="description"
-      content="Mode Layer — the interaction stance engine of RTT/1. Defines the Mode Operator (M), Mode Constraint Layer (MCL), propagation rules, lineage map, structural diagram, and full test suite.">
-<meta name="keywords"
-      content="Mode Layer, Mode Operator, MCL, interaction stance, propagation rules, session layer, RTT, triadic frameworks">
+  <meta property="og:title" content="Structural Detection Module" />
+  <meta property="og:description"
+        content="Learn to detect structure, drift, regimes, invariants, and coherence using RTT/1 operators." />
+  <meta property="og:type" content="article" />
 
-<link rel="canonical" href="https://www.triadicframeworks.org/Mode/">
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Structural Detection Module" />
+  <meta name="twitter:description"
+        content="RTT/1 operator suite for structural detection and drift‑bounded synthesis." />
 
-<meta name="robots" content="index, follow">
-<meta name="theme-color" content="#0ff">
-
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="TriadicFrameworks">
-<meta property="og:title" content="Mode Layer — Interaction Stance Engine">
-<meta property="og:url" content="https://www.triadicframeworks.org/Mode/">
-<meta property="og:description"
-      content="Defines the Mode Operator (M), Mode Constraint Layer (MCL), propagation rules, lineage map, and structural diagram.">
-<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-<meta property="og:image:type" content="image/png">
-<meta property="og:image:width" content="1080">
-<meta property="og:image:height" content="1080">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Mode Layer — Interaction Stance Engine">
-<meta name="twitter:description"
-      content="Mode Operator, MCL, propagation rules, lineage map, structural diagram, test suite.">
-<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
-
-<meta name="citation_title" content="Mode Layer — Interaction Stance Engine">
-<meta name="citation_author" content="Nawder Loswin">
-<meta name="citation_publication_date" content="2025">
-<meta name="DC.subject"
-      content="Mode Layer, Mode Operator, MCL, interaction stance, propagation rules, session layer, RTT">
-<meta name="DC.type" content="Text">
-<meta name="DC.format" content="text/html">
-
-<meta name="ai.module" content="Mode">
-<meta name="ai.version" content="1.0">
-<meta name="ai.purpose"
-      content="Define the interaction stance engine of RTT/1: Mode Operator (M), Mode Constraint Layer (MCL), propagation rules, lineage, and structural diagram.">
-<meta name="ai.keywords"
-      content="Mode Layer, Mode Operator, MCL, interaction stance, propagation rules, lineage, session layer">
-<meta name="ai.audience" content="students, researchers, developers, designers, AI systems">
-<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
-<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
-<meta name="ai.contact.x" content="@TriadicFrameworks">
-<meta name="ai.contact.youtube" content="@TriadicFrameworks">
-<meta name="ai.license" content="Open educational use permitted.">
-
-<meta name="ai.module.name" content="Mode">
-<meta name="ai.module.summary"
-      content="Interaction stance engine: Mode Operator (M), MCL, propagation rules, lineage, structural diagram, test suite.">
-<meta name="ai.module.category" content="mode-layer">
-
-<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
-
-<title>Structural Detection | TriadicFrameworks</title>
+  <title>Structural Detection Module — TriadicFrameworks</title>
 
 <style>
 /* ============================================================
@@ -268,7 +218,45 @@ code {
       <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
       <a href="#SECURITY">🔐 Security</a>
       <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🧩 Operators</h3>
+      <a href="#STRUCTURAL_DETECTION_OPERATOR">🏗️ Structural Detection Operator</a>
+      <a href="#DRIFT_SENSE_OPERATOR">🌊 Drift Sense Operator</a>
+      <a href="#REGIME_AWARENESS_OPERATOR">🧭 Regime Awareness Operator</a>
+      <a href="#CONTINUITY_COMPASS_OPERATOR">🪜 Continuity Compass Operator</a>
+      <a href="#SYNTHESIS_TRIANGULATION_OPERATOR">📡 Synthesis Triangulation Operator</a>
+    <h3>🧮 RTTcode</h3>
+      <a href="#RTT_STRUCTURAL_DETECTION">🏗️ RTT Structural Detection</a>
+      <a href="#RTT_STRUCTURAL_DETECTION_NOTES">📝 RTT Structural Detection Notes</a>
+      <a href="#RTT_DRIFT_SENSE">🌊 RTT Drift Sense</a>
+      <a href="#RTT_DRIFT_SENSE_NOTES">📝 RTT Drift Sense Notes</a>
+      <a href="#RTT_REGIME_AWARENESS">🧭 RTT Regime Awareness</a>
+      <a href="#RTT_REGIME_AWARENESS_NOTES">📝 RTT Regime Awareness Notes</a>
+      <a href="#RTT_CONTINUITY_COMPASS">🪜 RTT Continuity Compass</a>
+      <a href="#RTT_CONTINUITY_COMPASS_NOTES">📝 RTT Continuity Compass Notes</a>
+      <a href="#RTT_SYNTHESIS_TRIANGULATION">📡 RTT Synthesis Triangulation</a>
+      <a href="#RTT_SYNTHESIS_TRIANGULATION_NOTES">📝 RTT Synthesis Triangulation Notes</a>
+    <h3>🧪 Examples</h3>
+      <a href="#EX_PATTERN_ANOMALY">🧬 Pattern Anomaly Example</a>
+      <a href="#EX_PATTERN_ANOMALY_NOTES">📝 Pattern Anomaly Notes</a>
+      <a href="#EX_DRIFT_SIGNATURE">🌊 Drift Signature Example</a>
+      <a href="#EX_DRIFT_SIGNATURE_NOTES">📝 Drift Signature Notes</a>
+      <a href="#EX_REGIME_SHIFT">🧭 Regime Shift Example</a>
+      <a href="#EX_REGIME_SHIFT_NOTES">📝 Regime Shift Notes</a>
+    <h3>🎓 Student Materials</h3>
+      <a href="#STUDENT_CHEAT_SHEET">📌 Cheat Sheet</a>
+      <a href="#STUDENT_WORKSHEET">📄 Worksheet</a>
+      <a href="#STUDENT_MINI_QUIZ">🧪 Mini Quiz</a>
+      <a href="#STUDENT_EXTENDED_QUIZ">📚 Extended Quiz</a>
+      <a href="#STUDENT_MASTERY_EXAM">🏅 Mastery Exam</a>
+    <h3>🧑‍🏫 Instructor Materials</h3>
+      <a href="#INSTRUCTOR_LAB">🧪 Operator Lab (Instructor)</a>
+      <a href="#INSTRUCTOR_GAUNTLET">⚔️ Scenario Gauntlet (Instructor)</a>
+      <a href="#INSTRUCTOR_RUBRIC">📏 Rubric</a>
+      <a href="#INSTRUCTOR_KEY">🔑 Teacher’s Key</a>
+    <h3>🗂️ Manifest</h3>
+      <a href="#MODULE_MANIFEST">📦 Module Manifest</a>
     <h3>🧩 Module Files</h3>
+      <a href="#CAPTURE">📝 Capture</a>
     <h3>🏗️ Triadic Tools</h3> 
       <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
       <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
@@ -284,51 +272,59 @@ code {
       <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
-  
-   <!-- RTT Session Header (canonical stub) -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- /docs/Mode — Session Context block                         -->
-<!-- Replace the existing session context section in index.html  -->
-<!-- ═══════════════════════════════════════════════════════════ -->
-
-<section id="mode-session-header"
-         data-rtt="mode"
+      <a href="../">🔙TFT</a>
+  <!-- RTT Session Header (canonical stub) -->
+<section id="session-context"
+         data-rtt="1"
          data-coherence="stable"
-         data-drift="bounded"
-         data-regime="structural">
+         data-drift="minimal"
+         data-regime="formal→emergent"
+         data-paradox="structural">
 
   <h2>Session Context</h2>
 
   <div class="context-block">
 
     <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (mode‑layer)</span><br>
+    <span class="context-value">active (structural‑detection‑surface)</span><br>
 
-    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-label"><strong>Operators:</strong></span>
     <span class="context-value">
-      operator stances → constraint layer → propagation rules → lineage → diagram → tests
+      structural‑detection → drift‑sense → regime‑awareness →
+      continuity‑compass → synthesis‑triangulation
     </span><br>
 
     <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">bounded (MCL‑guarded)</span><br>
+    <span class="context-value">minimal (operator‑locked)</span><br>
 
     <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (session‑layer grammar)</span><br>
+    <span class="context-value">stable (structural grammar)</span><br>
+
+    <span class="context-label"><strong>Regime:</strong></span>
+    <span class="context-value">formal → emergent (module posture)</span><br>
 
     <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (mode‑stable)</span><br>
+    <span class="context-value">1.0 (detection‑stable)</span><br>
 
     <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + svg + yaml + tests</span><br>
+    <span class="context-value">
+      markdown + operators + RTTcode + examples
+    </span><br>
 
     <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (Mode root)</span><br>
+    <span class="context-value">
+      README.md (student‑safe entry surface)
+    </span><br>
 
     <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + AI‑parsable</span><br>
+    <span class="context-value">
+      structural + non‑semantic + AI‑parsable
+    </span><br>
 
     <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + researchers + developers + designers + AIs</span>
+    <span class="context-value">
+      students + instructors + researchers + AIs
+    </span>
 
   </div>
 
@@ -337,7 +333,7 @@ code {
 <div style="display:inline-block;padding:4px 8px;background:#000;color:#fff;border-radius:6px;font-size:13px;font-family:system-ui, sans-serif;">
   🔍 Structural Detection Module
 </div>
-
+      
 </nav>
 
 <main id="content"></main>
