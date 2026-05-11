@@ -1,6 +1,6 @@
 ## 😇 Ethiics & Privacy  
 
-- [`ETHIICS_PRIVACY_module.json`](ETHIICS_PRIVACY_module.json) — Agentic module schema role assignments
+- [`ETHIICS_PRIVACY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ETHIICS_PRIVACY_module.json) — Agentic module schema role assignments
 
 *(public‑facing, minimal, canonical)*
 
