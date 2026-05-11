@@ -1,1 +1,116 @@
-fff
+{
+  "module_name": "Structural Detection",
+  "module_id": "structural_detection",
+  "version": "1.0.0",
+  "ai_purpose": "Teach students and AI agents how to detect structure, drift, regimes, invariants, and coherence without interpreting content.",
+  "ai_keywords": [
+    "structure",
+    "detection",
+    "drift",
+    "regime",
+    "continuity",
+    "triangulation",
+    "motifs",
+    "invariants",
+    "boundaries",
+    "coherence"
+  ],
+  "roles": {
+    "engine": [
+      "operators/STRUCTURAL_DETECTION_OPERATOR.md",
+      "operators/DRIFT_SENSE_OPERATOR.md",
+      "operators/REGIME_AWARENESS_OPERATOR.md",
+      "operators/CONTINUITY_COMPASS_OPERATOR.md",
+      "operators/SYNTHESIS_TRIANGULATION_OPERATOR.md"
+    ],
+    "profile": [
+      "README.md",
+      "SD_Capture.md"
+    ],
+    "signature": [
+      "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json",
+      "RTTcode/RTT_DRIFT_SENSE_v1.json",
+      "RTTcode/RTT_REGIME_AWARENESS_v1.json",
+      "RTTcode/RTT_CONTINUITY_COMPASS_v1.json",
+      "RTTcode/RTT_SYNTHESIS_TRIANGULATION_v1.json"
+    ],
+    "example": [
+      "examples/pattern_anomaly_example.json",
+      "examples/pattern_anomaly_example.json.md",
+      "examples/drift_signature_example.json",
+      "examples/drift_signature_example.json.md",
+      "examples/regime_shift_example.json",
+      "examples/regime_shift_example.json.md"
+    ],
+    "map": [
+      "student_materials/cheat_sheet.md",
+      "student_materials/worksheet.md",
+      "student_materials/mini_quiz.md",
+      "student_materials/extended_quiz.md",
+      "student_materials/mastery_exam.md"
+    ],
+    "reference": [
+      "instructor_materials/operator_lab_instructor.md",
+      "instructor_materials/scenario_gauntlet_instructor.md",
+      "instructor_materials/rubric.md",
+      "instructor_materials/teachers_key.md"
+    ]
+  },
+  "analyzer_layers": {
+    "operator": [
+      "operators/STRUCTURAL_DETECTION_OPERATOR.md",
+      "operators/DRIFT_SENSE_OPERATOR.md",
+      "operators/REGIME_AWARENESS_OPERATOR.md",
+      "operators/CONTINUITY_COMPASS_OPERATOR.md",
+      "operators/SYNTHESIS_TRIANGULATION_OPERATOR.md"
+    ],
+    "drift": [
+      "operators/DRIFT_SENSE_OPERATOR.md"
+    ],
+    "regime": [
+      "operators/REGIME_AWARENESS_OPERATOR.md"
+    ],
+    "coherence": [
+      "operators/CONTINUITY_COMPASS_OPERATOR.md",
+      "operators/SYNTHESIS_TRIANGULATION_OPERATOR.md"
+    ],
+    "cross-cutting": [
+      "README.md",
+      "SD_Capture.md"
+    ]
+  },
+  "file_registry": [
+    "README.md",
+    "SD_Capture.md",
+    "operators/STRUCTURAL_DETECTION_OPERATOR.md",
+    "operators/DRIFT_SENSE_OPERATOR.md",
+    "operators/REGIME_AWARENESS_OPERATOR.md",
+    "operators/CONTINUITY_COMPASS_OPERATOR.md",
+    "operators/SYNTHESIS_TRIANGULATION_OPERATOR.md",
+    "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json",
+    "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json.md",
+    "RTTcode/RTT_DRIFT_SENSE_v1.json",
+    "RTTcode/RTT_DRIFT_SENSE_v1.json.md",
+    "RTTcode/RTT_REGIME_AWARENESS_v1.json",
+    "RTTcode/RTT_REGIME_AWARENESS_v1.json.md",
+    "RTTcode/RTT_CONTINUITY_COMPASS_v1.json",
+    "RTTcode/RTT_CONTINUITY_COMPASS_v1.json.md",
+    "RTTcode/RTT_SYNTHESIS_TRIANGULATION_v1.json",
+    "RTTcode/RTT_SYNTHESIS_TRIANGULATION_v1.json.md",
+    "examples/pattern_anomaly_example.json",
+    "examples/pattern_anomaly_example.json.md",
+    "examples/drift_signature_example.json",
+    "examples/drift_signature_example.json.md",
+    "examples/regime_shift_example.json",
+    "examples/regime_shift_example.json.md",
+    "student_materials/cheat_sheet.md",
+    "student_materials/worksheet.md",
+    "student_materials/mini_quiz.md",
+    "student_materials/extended_quiz.md",
+    "student_materials/mastery_exam.md",
+    "instructor_materials/operator_lab_instructor.md",
+    "instructor_materials/scenario_gauntlet_instructor.md",
+    "instructor_materials/rubric.md",
+    "instructor_materials/teachers_key.md"
+  ]
+}
