@@ -1,6 +1,6 @@
 ## 🌿 Triadic Frameworks Code of Conduct  
 
-- [`CODE_OF_CONDUCT_module.json`](CODE_OF_CONDUCT_module.json) — Agentic module schema role assignments
+- [`CODE_OF_CONDUCT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CODE_OF_CONDUCT_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
