@@ -6,58 +6,67 @@
 
 ```js
 const DOC_MAP = {
-  README: "README.md",
-  CAPTURE: "SD_Capture.md",
+  README: 'README.md',
+  CAPTURE: 'SD_Capture.md',
 
-  // Operators
-  STRUCTURAL_DETECTION_OPERATOR: "operators/STRUCTURAL_DETECTION_OPERATOR.md",
-  DRIFT_SENSE_OPERATOR: "operators/DRIFT_SENSE_OPERATOR.md",
-  REGIME_AWARENESS_OPERATOR: "operators/REGIME_AWARENESS_OPERATOR.md",
-  CONTINUITY_COMPASS_OPERATOR: "operators/CONTINUITY_COMPASS_OPERATOR.md",
-  SYNTHESIS_TRIANGULATION_OPERATOR: "operators/SYNTHESIS_TRIANGULATION_OPERATOR.md",
+  CANON_LEDGER_RTT2_ARCHIVAL_SYSTEM: 'canon_ledger_rtt2_archival_system.md',
+  CANON_STEWARDSHIP_ANNUAL_REPORT: 'canon_stewardship_annual_report.md',
+  CANON_STEWARDSHIP_CHARTER: 'canon_stewardship_charter.md',
 
-  // RTTcode
-  RTT_STRUCTURAL_DETECTION: "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json",
-  RTT_STRUCTURAL_DETECTION_NOTES: "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json.md",
+  CANON_SCALE_COHERENCE_FIELD_MAP: 'canon‑scale_coherence_field_map.md',
+  CANON_SCALE_COHERENCE_HARMONIZER: 'canon‑scale_coherence_harmonizer.md',
+  CANON_SCALE_COLLAPSE_PROPAGATION_FIELD: 'canon‑scale_collapse‑propagation_field.md',
+  CANON_SCALE_COLLAPSE_RECOVERY_MANIFOLD: 'canon‑scale_collapse‑recovery_manifold.md',
+  CANON_SCALE_DRIFT_ENVELOPE: 'canon‑scale_drift_envelope.md',
+  CANON_SCALE_DRIFT_ENVELOPE_HARMONIZATION_PROTOCOL: 'canon‑scale_drift‑envelope_harmonization_protocol.md',
+  CANON_SCALE_ENVELOPE_DEFORMATION_LEDGER: 'canon‑scale_envelope_deformation_ledger.md',
+  CANON_SCALE_FUSION_GRADIENT_ATLAS: 'canon‑scale_fusion_gradient_atlas.md',
+  CANON_SCALE_FUSION_STABILITY_TENSOR: 'canon‑scale_fusion_stability_tensor.md',
+  CANON_SCALE_FUSION_INTEGRATION_COLLAPSE_FIELD: 'canon‑scale_fusion‑integration_collapse_field.md',
+  CANON_SCALE_FUSION_INTEGRATION_FIELD: 'canon‑scale_fusion‑integration_field.md',
+  CANON_SCALE_FUSION_INTEGRATION_GRADIENT_ATLAS: 'canon‑scale_fusion‑integration_gradient_atlas.md',
+  CANON_SCALE_FUSION_INTEGRATION_STABILITY_LEDGER: 'canon‑scale_fusion‑integration_stability_ledger.md',
+  CANON_SCALE_FUSION_INTEGRITY_LEDGER: 'canon‑scale_fusion‑integrity_ledger.md',
+  CANON_SCALE_GRADIENT_INTEGRITY_FUSION_FIELD: 'canon‑scale_gradient‑integrity_fusion_field.md',
+  CANON_SCALE_INTEGRATION_FIELD: 'canon‑scale_integration_field.md',
+  CANON_SCALE_INTEGRATION_GRADIENT_ATLAS: 'canon‑scale_integration_gradient_atlas.md',
+  CANON_SCALE_INTEGRATION_HARMONIZER: 'canon‑scale_integration_harmonizer.md',
+  CANON_SCALE_INTEGRATION_STABILITY_LEDGER: 'canon‑scale_integration_stability_ledger.md',
+  CANON_SCALE_SYNTHESIS_FIELD: 'canon‑scale_synthesis_field.md',
+  CANON_SCALE_SYNTHESIS_HARMONIZER: 'canon‑scale_synthesis_harmonizer.md',
+  CANON_SCALE_SYNTHESIS_STABILITY_ENVELOPE: 'canon‑scale_synthesis_stability_envelope.md',
+  CANON_WIDE_STABILITY_INDEX: 'canon‑wide_stability_index.md',
 
-  RTT_DRIFT_SENSE: "RTTcode/RTT_DRIFT_SENSE_v1.json",
-  RTT_DRIFT_SENSE_NOTES: "RTTcode/RTT_DRIFT_SENSE_v1.json.md",
+  COHERENCE_BREAK_CATALOG: 'coherence_break_catalog.md',
+  COHERENCE_BREAK_GEOMETRY_ATLAS: 'coherence_break_geometry_atlas.md',
 
-  RTT_REGIME_AWARENESS: "RTTcode/RTT_REGIME_AWARENESS_v1.json",
-  RTT_REGIME_AWARENESS_NOTES: "RTTcode/RTT_REGIME_AWARENESS_v1.json.md",
+  COLLAPSE_MODE_DIFFERENTIAL_CLASSIFIER: 'collapse‑mode_differential_classifier.md',
+  COLLAPSE_MODE_EARLY_WARNING_SYSTEM: 'collapse‑mode_early‑warning_system.md',
+  COLLAPSE_MODE_GEOMETRY_ATLAS: 'collapse‑mode_geometry_atlas.md',
+  COLLAPSE_MODE_GEOMETRY_REVERSAL_LEDGER: 'collapse‑mode_geometry_reversal_ledger.md',
+  COLLAPSE_MODE_INTEGRITY_FIELD: 'collapse‑mode_integrity_field.md',
+  COLLAPSE_MODE_INTEGRITY_HARMONIZER: 'collapse‑mode_integrity_harmonizer.md',
+  COLLAPSE_MODE_INTEGRITY_LEDGER: 'collapse‑mode_integrity_ledger.md',
+  COLLAPSE_MODE_INTERVENTION_PLAYBOOK: 'collapse‑mode_intervention_playbook.md',
+  COLLAPSE_MODE_REASSEMBLY_ATLAS: 'collapse‑mode_reassembly_atlas.md',
+  COLLAPSE_MODE_REASSEMBLY_STABILITY_INDEX: 'collapse‑mode_reassembly_stability_index.md',
+  COLLAPSE_MODE_RECONSTRUCTION_ENGINE: 'collapse‑mode_reconstruction_engine.md',
 
-  RTT_CONTINUITY_COMPASS: "RTTcode/RTT_CONTINUITY_COMPASS_v1.json",
-  RTT_CONTINUITY_COMPASS_NOTES: "RTTcode/RTT_CONTINUITY_COMPASS_v1.json.md",
+  COLLAPSE_ORIGIN_LOCATOR: 'collapse‑origin_locator.md',
 
-  RTT_SYNTHESIS_TRIANGULATION: "RTTcode/RTT_SYNTHESIS_TRIANGULATION_v1.json",
-  RTT_SYNTHESIS_TRIANGULATION_NOTES: "RTTcode/RTT_SYNTHESIS_TRIANGULATION_v1.json.md",
+  COLLAPSE_PROPAGATION_INTEGRITY_FIELD: 'collapse‑propagation_integrity_field.md',
+  COLLAPSE_PROPAGATION_MAP: 'collapse‑propagation_map.md',
+  COLLAPSE_PROPAGATION_REASSEMBLY_MAP: 'collapse‑propagation_reassembly_map.md',
+  COLLAPSE_PROPAGATION_REVERSAL_MAP: 'collapse‑propagation_reversal_map.md',
+  COLLAPSE_PROPAGATION_STABILITY_TENSOR: 'collapse‑propagation_stability_tensor.md',
 
-  // Examples
-  EX_PATTERN_ANOMALY: "examples/pattern_anomaly_example.json",
-  EX_PATTERN_ANOMALY_NOTES: "examples/pattern_anomaly_example.json.md",
-
-  EX_DRIFT_SIGNATURE: "examples/drift_signature_example.json",
-  EX_DRIFT_SIGNATURE_NOTES: "examples/drift_signature_example.json.md",
-
-  EX_REGIME_SHIFT: "examples/regime_shift_example.json",
-  EX_REGIME_SHIFT_NOTES: "examples/regime_shift_example.json.md",
-
-  // Student Materials
-  STUDENT_CHEAT_SHEET: "student_materials/cheat_sheet.md",
-  STUDENT_WORKSHEET: "student_materials/worksheet.md",
-  STUDENT_MINI_QUIZ: "student_materials/mini_quiz.md",
-  STUDENT_EXTENDED_QUIZ: "student_materials/extended_quiz.md",
-  STUDENT_MASTERY_EXAM: "student_materials/mastery_exam.md",
-
-  // Instructor Materials
-  INSTRUCTOR_LAB: "instructor_materials/operator_lab_instructor.md",
-  INSTRUCTOR_GAUNTLET: "instructor_materials/scenario_gauntlet_instructor.md",
-  INSTRUCTOR_RUBRIC: "instructor_materials/rubric.md",
-  INSTRUCTOR_KEY: "instructor_materials/teachers_key.md",
-
-  // Manifest
-  MODULE_MANIFEST: "structural_detection_module.json"
-};
+  COLLAPSE_REASSEMBLY_DRIFT_ENVELOPE_CONTINUITY_FIELD: 'collapse‑reassembly_drift‑envelope‑continuity_field.md',
+  COLLAPSE_REASSEMBLY_FUSION_FIELD: 'collapse‑reassembly_fusion_field.md',
+  COLLAPSE_REASSEMBLY_FUSION_GRADIENT_TENSOR: 'collapse‑reassembly_fusion‑gradient_tensor.md',
+  COLLAPSE_REASSEMBLY_FUSION_INTEGRITY_FIELD: 'collapse‑reassembly_fusion‑integrity_field.md',
+  COLLAPSE_REASSEMBLY_GRADIENT_ATLAS: 'collapse‑reassembly_gradient_atlas.md',
+  COLLAPSE_REASSEMBLY_INTEGRITY_HARMONIZER: 'collapse‑reassembly_integrity_harmonizer.md',
+  COLLAPSE_REASSEMBLY_INTEGRITY_TENSOR: 'collapse‑reassembly_integrity_tensor
 ```
 
 ---
