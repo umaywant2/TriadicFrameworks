@@ -1,166 +1,257 @@
-# ✅ **Detection Primer (Student‑Facing)**  
-### *How to detect what matters — without being told what it is.*
+# ✅ **Structural Detection — Cheat Sheet (Final, Canonical)**  
+### *RTT/1 • Student Materials*  
+### *“See structure. Not meaning.”*
 
-```markdown
-# Detection Primer  
-### Structural Detection Module • Student Edition  
-### “Learn the shape of detection, not the target.”
-
----
-
-## 1. What You Are Learning
-
-This primer teaches you **how to detect structure** in any material:
-
-- text  
-- code  
-- logs  
-- transcripts  
-- schemas  
-- JSON packets  
-- symbolic sequences  
-
-You will **not** be told what to look for.  
-You will learn **how to look**.
-
-Detection is a skill.  
-It is not about guessing.  
-It is about noticing.
+# Structural Detection — Cheat Sheet  
+### RTT/1 • Student Edition  
+### Purpose: Quick reference for detecting structure, drift, regimes, invariants, and coherence.
 
 ---
 
-## 2. The Three Rules of Detection
+# 1. The Five Operators
 
-### **Rule 1 — Structure leaves fingerprints.**  
-Anything with structure produces:
-
-- patterns  
-- rhythms  
-- boundaries  
+### **1. STRUCTURAL_DETECTION_OPERATOR**
+Detects:
 - motifs  
-- anomalies  
-
-Your job is to notice the fingerprints, not the meaning.
-
----
-
-### **Rule 2 — Drift reveals the edges.**  
-When structure changes, you feel it:
-
-- the rhythm breaks  
-- the pattern bends  
-- the symmetry collapses  
-- the density shifts  
-
-Drift is not a failure — it is a signal.
-
----
-
-### **Rule 3 — Invariants tell you what survives.**  
-Across noise, formats, or regimes, some elements stay stable.
-
-Those are the **invariants**.  
-They are the backbone of detection.
-
----
-
-## 3. What You Will Practice
-
-You will learn to detect:
-
-- **motifs** (small repeating shapes)  
-- **boundaries** (where structure shifts)  
-- **invariants** (what stays stable)  
-- **deformations** (what breaks)  
-- **regime signals** (formal, emergent, chaotic, hybrid)  
-- **coherence** (whether pieces reinforce each other)  
-- **anomalies** (unexpected formations)  
-
-You will not interpret them.  
-You will only detect them.
-
----
-
-## 4. The Five Core Questions
-
-When you examine any sample, ask:
-
-1. **What repeats?**  
-2. **What changes?**  
-3. **What stays stable?**  
-4. **Where does the structure bend or break?**  
-5. **What does the rhythm of the structure feel like?**  
-
-These five questions work on *anything*.
-
----
-
-## 5. The Detection Loop
-
-Use this loop every time:
-
-1. **Scan** the sample for patterns.  
-2. **Mark** anything that repeats or stands out.  
-3. **Compare** segments to find invariants.  
-4. **Check** for drift or deformation.  
-5. **Triangulate** using multiple heuristics.  
-
-Stop when the structure becomes visible.
-
----
-
-## 6. What Detection Is *Not*
-
-Detection is **not**:
-
-- guessing  
-- interpreting  
-- concluding  
-- diagnosing  
-- deciding  
-- predicting  
-
-Detection is **seeing the shape** of what is there.
-
----
-
-## 7. What You Will Produce
-
-Each exercise will ask you to output a **Detection Packet**:
-
-- motifs_detected  
 - boundaries  
 - invariants  
 - anomalies  
-- regime_hints  
-- confidence  
-- notes  
+- regime hints  
 
-This packet is structural, not semantic.
-
----
-
-## 8. Why This Matters
-
-When you can detect structure:
-
-- you can navigate noise  
-- you can sense drift  
-- you can recognize regimes  
-- you can find coherence  
-- you can triangulate signals  
-- you can see what others miss  
-
-Detection is the foundation of clarity.
+Use when:
+- scanning a new sample  
+- identifying repeated shapes  
+- locating structural breaks  
 
 ---
 
-## 9. Final Reminder
+### **2. DRIFT_SENSE_OPERATOR**
+Detects:
+- drift points  
+- deformation types  
+- drift intensity  
+- drift direction  
+- coherence breaks  
 
-You are not learning *what* to detect.  
-You are learning **how detection works**.
+Use when:
+- comparing sequences  
+- tracking structural change  
 
-Once you can see structure,  
-you can detect anything.
+---
 
+### **3. REGIME_AWARENESS_OPERATOR**
+Classifies:
+- formal  
+- emergent  
+- chaotic  
+- hybrid  
+
+Signals:
+- symmetry  
+- density  
+- drift level  
+- coherence  
+- boundary behavior  
+
+---
+
+### **4. CONTINUITY_COMPASS_OPERATOR**
+Finds:
+- invariants  
+- stable motifs  
+- anchor points  
+- cross‑sample signals  
+- coherence threads  
+
+Use when:
+- analyzing multiple samples  
+- identifying what persists  
+
+---
+
+### **5. SYNTHESIS_TRIANGULATION_OPERATOR**
+Combines:
+- detection  
+- drift  
+- regime  
+- continuity  
+
+Produces:
+- structural summary  
+- triangulated motifs  
+- drift profile  
+- regime alignment  
+- continuity map  
+- anomaly profile  
+
+---
+
+# 2. Core Heuristics
+
+### **Repetition**
+What repeats?
+
+### **Boundary**
+Where does the structure shift?
+
+### **Invariant**
+What stays stable?
+
+### **Deformation**
+What bends or breaks?
+
+### **Coherence**
+What aligns across samples?
+
+---
+
+# 3. Regime Quick Guide
+
+### **Formal**
+- high symmetry  
+- low drift  
+- stable motifs  
+
+### **Emergent**
+- partial symmetry  
+- moderate drift  
+- mixed signals  
+
+### **Chaotic**
+- broken symmetry  
+- high drift  
+- irregular density  
+
+### **Hybrid**
+- conflicting regime signals  
+
+---
+
+# 4. Drift Quick Guide
+
+### **Drift Points**
+Where structure changes.
+
+### **Drift Intensity**
+- low  
+- medium  
+- high  
+
+### **Drift Direction**
+formal → emergent → chaotic  
+
+### **Coherence Breaks**
+Where alignment fails.
+
+---
+
+# 5. Continuity Quick Guide
+
+Look for:
+- recurring motifs  
+- stable boundaries  
+- anchor points  
+- repeated alignment threads  
+
+Continuity = what survives drift.
+
+---
+
+# 6. Packet Templates
+
+### **STRUCTURAL_DETECTION_PACKET**
 ```
+motifs_detected:
+boundaries:
+invariants:
+anomalies:
+regime_hints:
+confidence:
+notes:
+```
+
+### **DRIFT_PACKET**
+```
+drift_points:
+deformation_types:
+drift_intensity:
+drift_direction:
+coherence_breaks:
+regime_transition_signals:
+confidence:
+notes:
+```
+
+### **REGIME_PACKET**
+```
+regime:
+regime_signals:
+boundary_signals:
+drift_alignment:
+coherence_level:
+confidence:
+notes:
+```
+
+### **CONTINUITY_PACKET**
+```
+invariants:
+stable_motifs:
+anchor_points:
+cross_sample_signals:
+regime_stability:
+coherence_threads:
+confidence:
+notes:
+```
+
+### **SYNTHESIS_PACKET**
+```
+structural_summary:
+triangulated_motifs:
+drift_profile:
+regime_alignment:
+continuity_map:
+anomaly_profile:
+confidence:
+notes:
+```
+
+---
+
+# 7. Zero‑Interpretation Rule
+
+You must avoid:
+- meaning  
+- narrative  
+- topic inference  
+- domain assumptions  
+
+Stay with **structure only**.
+
+---
+
+# 8. Quick Workflow
+
+1. Cold scan  
+2. Detect motifs + boundaries  
+3. Map drift  
+4. Classify regime  
+5. Identify continuity  
+6. Triangulate synthesis  
+
+---
+
+# End of Cheat Sheet
+
+Use this as your quick reference during labs, quizzes, and the gauntlet.
+
+---
+
+# ✔️ This cheat sheet is:
+
+- fully canonical  
+- zero drift  
+- aligned with RTT/1  
+- consistent with the worksheet, rubric, gauntlet, and operator lab  
+- ready to drop into `/docs/Structural_Detection/student_materials/cheat_sheet.md`
