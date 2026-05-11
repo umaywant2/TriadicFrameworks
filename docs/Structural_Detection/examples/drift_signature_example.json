@@ -1,1 +1,11 @@
-fff
+{
+  "sample_id": "drift_signature_example_v1",
+  "description": "A structural sequence showing progressive drift across segments.",
+  "data": {
+    "sequence": [
+      { "id": 1, "shape": ["L1", "L2", "L3"] },
+      { "id": 2, "shape": ["L1", "L2", "L4"] },
+      { "id": 3, "shape": ["L1", "L5", "L4"] }
+    ]
+  }
+}
