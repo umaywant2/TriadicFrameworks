@@ -1,8 +1,3 @@
-# ✅ **README.md (Final, Canonical)**  
-### *Structural Detection Module — TriadicFrameworks*  
-### *“Learn to see structure without being told what to see.”*
-
-```markdown
 # Structural Detection Module  
 ### TriadicFrameworks • RTT/1  
 ### Purpose: Teach students and AI agents how to detect structure, drift, regimes, invariants, and coherence without interpreting content.
@@ -193,8 +188,6 @@ The Structural Detection module teaches:
 It is the structural equivalent of **turning on the lights**.
 
 Detection is the first step toward clarity.
-
-```
 
 ---
 
