@@ -20,9 +20,9 @@ The Universe‑as‑Operator model begins with a simple but radical premise:
 
 ### The Universe is not a container 
 **The Universe is an operator.**  
-
+<!--
 <img width="389" height="261" alt="Trilogy_of_Visual_Metaphysics" src="https://github.com/user-attachments/assets/de4f4819-82ce-488a-b6bd-512a44804233" />
-
+-->
 It does not *hold* things.  
 It *invokes* regimes.
 
