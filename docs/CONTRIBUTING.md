@@ -1,6 +1,6 @@
 ## 💞 Contributing to TriadicFrameworks  
 
-- [`CONTRIBUTING_module.json`](CONTRIBUTING_module.json) — Agentic module schema role assignments
+- [`CONTRIBUTING_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/CONTRIBUTING_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
