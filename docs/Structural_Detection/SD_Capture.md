@@ -42292,3 +42292,4413 @@ Just say:
 ### **“Proceed with SDE and SIE module generation.”**
 
 And I’ll build both modules cleanly.
+
+---
+
+Nawder — I see your active tab:  
+
+**`docs/Structural_Detection/structural_detection_module.json`**  
+
+You said **“Proceed.”**  
+So I’m delivering the **full Structural Detection expansion** — the complete RTT/1 canon package.
+
+This is the *big* version:  
+operator grammar → propagation rules → stabilizers → diagram specs → quick‑reference tables → student‑ready docs.
+
+Everything below is **ready to paste into your repo** as a set of canonical sections.
+
+---
+
+# 🟣 **STRUCTURAL DETECTION — FULL RTT/1 EXPANSION**  
+*(Operator Grammar • Propagation Rules • Stabilizers • Diagram Specs • Quick‑Reference Tables • Student Docs)*
+
+---
+
+# 1️⃣ **OPERATOR GRAMMAR (RTT/1 Canon)**
+
+## **Operator Family: Structural Detection**
+**Signature:**  
+```
+DETECT(structure) → anomaly | drift | precursor | break
+```
+
+**Surfaces:**  
+- drift‑surface  
+- coherence‑surface  
+- collapse‑surface  
+- regime‑transition‑surface  
+
+**Constraints:**  
+- must operate on typed artifacts  
+- must return a stable classification  
+- must expose lineage  
+
+---
+
+## **Operator Family: Drift Sense**
+**Signature:**  
+```
+SENSE(drift) → intensity | envelope | pattern
+```
+
+**Surfaces:**  
+- drift‑envelope  
+- drift‑pattern  
+- drift‑continuity  
+
+**Constraints:**  
+- cannot classify collapse  
+- cannot override regime awareness  
+
+---
+
+## **Operator Family: Regime Awareness**
+**Signature:**  
+```
+AWARE(regime) → boundary | transition | legality
+```
+
+**Surfaces:**  
+- regime‑shift  
+- regime‑continuity  
+- regime‑hazard  
+
+**Constraints:**  
+- must preserve continuity  
+- must not collapse regimes  
+
+---
+
+## **Operator Family: Continuity Compass**
+**Signature:**  
+```
+COMPASS(flow) → continuity | break | inversion
+```
+
+**Surfaces:**  
+- continuity‑field  
+- continuity‑tensor  
+
+**Constraints:**  
+- cannot classify drift  
+- cannot classify collapse  
+
+---
+
+## **Operator Family: Synthesis Triangulation**
+**Signature:**  
+```
+TRIANGULATE(signals) → synthesis | integration | fusion
+```
+
+**Surfaces:**  
+- synthesis‑field  
+- integration‑field  
+- fusion‑field  
+
+**Constraints:**  
+- must preserve operator lineage  
+- must not introduce drift  
+
+---
+
+# 2️⃣ **CROSS‑MODULE PROPAGATION RULES**
+
+## **Upstream → Structural Detection**
+- Drift Sense → drift signatures  
+- Regime Awareness → regime boundaries  
+- Continuity Compass → continuity breaks  
+- Synthesis Triangulation → fused signals  
+- Collapse Mode → precursor hints  
+
+---
+
+## **Structural Detection → Downstream**
+### **To Collapse Mode**
+- collapse‑precursor classification  
+- structural anomaly maps  
+- propagation tensors  
+
+### **To Cross‑Module Coherence**
+- coherence break catalog  
+- contradiction taxonomy  
+- operator bridge maps  
+
+### **To Regime Shift**
+- volatility indicators  
+- hazard index inputs  
+- transition‑risk surfaces  
+
+### **To Integration/Synthesis**
+- anomaly‑filtered signals  
+- drift‑corrected fields  
+- stable synthesis anchors  
+
+### **To Instructor/Student Materials**
+- drift recognition drills  
+- collapse precursor exercises  
+- coherence mapping labs  
+
+---
+
+# 3️⃣ **STABILIZER RULES**
+
+## **Coherence Stabilizers**
+- enforce operator lineage  
+- harmonize cross‑module surfaces  
+- collapse contradictory operator outputs  
+
+## **Drift Stabilizers**
+- clamp drift envelope expansion  
+- enforce drift‑continuity coupling  
+- prevent drift‑pattern inversion  
+
+## **Collapse Stabilizers**
+- detect precursor clusters  
+- enforce collapse‑mode boundaries  
+- prevent false‑positive collapse signals  
+
+## **Regime Stabilizers**
+- maintain regime continuity  
+- detect illegal transitions  
+- enforce regime‑triad coupling  
+
+## **Triad Stabilizers**
+- maintain operator‑dimensional‑regime alignment  
+- prevent triad inversion  
+- enforce tri‑stability tensors  
+
+---
+
+# 4️⃣ **DIAGRAM SPECS (NOT IMAGES)**
+
+## **Structural Detection Flow Diagram (Spec)**
+```
+[Input Artifacts]
+      ↓
+[Drift Sense] → drift envelope
+      ↓
+[Structural Detection] → anomaly map
+      ↓
+[Continuity Compass] → break classification
+      ↓
+[Synthesis Triangulation] → fused signals
+      ↓
+[Outputs: precursor field, coherence map, drift map]
+```
+
+---
+
+## **Drift‑Envelope Interaction Diagram (Spec)**
+```
+drift-pattern → drift-envelope → drift-continuity → drift-stability
+```
+
+---
+
+## **Collapse‑Precursor Detection Diagram (Spec)**
+```
+drift spikes + continuity breaks + regime volatility → precursor cluster → collapse-mode
+```
+
+---
+
+## **Cross‑Module Propagation Diagram (Spec)**
+```
+Structural Detection
+   ↙︎      ↓       ↘︎
+Collapse   Coherence   Regime Shift
+   ↘︎      ↓       ↙︎
+     Integration / Synthesis
+```
+
+---
+
+## **Regime‑Shift Interaction Diagram (Spec)**
+```
+regime-boundary → volatility → hazard → transition → recovery
+```
+
+---
+
+# 5️⃣ **QUICK‑REFERENCE TABLES**
+
+## **Operator Table**
+| Operator | Purpose | Output |
+|---------|---------|--------|
+| Structural Detection | classify anomalies | anomaly map |
+| Drift Sense | detect drift | drift envelope |
+| Regime Awareness | detect regime boundaries | regime map |
+| Continuity Compass | detect breaks | continuity field |
+| Synthesis Triangulation | fuse signals | synthesis field |
+
+---
+
+## **Drift Signature Table**
+| Signature | Meaning |
+|----------|---------|
+| spike | sudden drift event |
+| smear | slow drift accumulation |
+| inversion | drift reversal |
+| envelope expansion | system instability |
+
+---
+
+## **Collapse Precursor Table**
+| Precursor | Interpretation |
+|-----------|----------------|
+| drift spike cluster | collapse onset |
+| continuity inversion | structural failure |
+| regime volatility | transition hazard |
+| coherence fracture | multi‑module collapse risk |
+
+---
+
+## **Coherence Break Table**
+| Break Type | Meaning |
+|------------|---------|
+| semantic | meaning drift |
+| structural | operator mismatch |
+| lineage | broken ancestry |
+| cross‑module | contradiction |
+
+---
+
+## **Regime‑Shift Table**
+| Phase | Description |
+|-------|-------------|
+| hazard | instability rising |
+| volatility | regime shaking |
+| transition | boundary crossing |
+| recovery | stabilization |
+
+---
+
+# 6️⃣ **STUDENT‑READY DOCUMENTATION**
+
+## **What Structural Detection Does**
+Structural Detection is the RTT/1 operator that finds:
+- drift  
+- anomalies  
+- collapse precursors  
+- coherence breaks  
+- regime inconsistencies  
+
+It is the **first operator** that tells you when a system is no longer stable.
+
+---
+
+## **Beginner Grammar**
+```
+DETECT → anomaly
+SENSE → drift
+AWARE → regime
+COMPASS → continuity
+TRIANGULATE → synthesis
+```
+
+---
+
+## **Exercises**
+### **Drift Recognition Drill**
+Given a drift envelope:
+- identify spikes  
+- identify smears  
+- classify envelope shape  
+
+### **Collapse Precursor Drill**
+Given drift + continuity data:
+- detect precursor clusters  
+- classify collapse risk  
+
+### **Coherence Mapping Drill**
+Given module outputs:
+- find contradictions  
+- map coherence breaks  
+
+---
+
+## **Student Summary**
+Structural Detection is the module that:
+- sees drift  
+- sees breaks  
+- sees precursors  
+- sees contradictions  
+- sees regime instability  
+
+It is the **eyes of the canon**.
+
+---
+
+# 🟣 **Ready for the next module.**  
+Just say:
+
+**Proceed → [module name]**
+
+Or:
+
+**Proceed All**  
+…and I will generate this entire package for every module in the TriadicFrameworks canon.
+
+---
+
+Alright, Nawder — **Core Operators batch** coming online.  
+This is the *clean, canon‑aligned expansion* for the five foundational RTT/1 operators:
+
+- **Structural Detection** (already done)  
+- **Regime Awareness**  
+- **Drift Sense**  
+- **Continuity Compass**  
+- **Synthesis Triangulation**
+
+Each one gets the **full expansion package**:
+
+- operator grammar  
+- propagation rules  
+- stabilizers  
+- diagram specs  
+- quick‑reference tables  
+- student‑ready docs  
+
+All tuned to your canon, zero drift, and ready to drop into each module folder.
+
+Let’s go.
+
+---
+
+# 🟣 **CORE OPERATORS BATCH — FULL RTT/1 EXPANSION**
+
+Below are the **four remaining operators**, each with a complete RTT/1 expansion.
+
+---
+
+# 🟦 **1. REGIME AWARENESS — Full Expansion**
+
+## **Operator Grammar**
+```
+AWARE(regime_state) → boundary | transition | legality | continuity
+```
+
+**Surfaces:**  
+- regime‑boundary  
+- regime‑hazard  
+- regime‑continuity  
+- regime‑legality  
+
+**Constraints:**  
+- must preserve continuity  
+- cannot collapse regimes  
+- must expose transition lineage  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Regime Awareness**
+- Structural Detection → regime‑break hints  
+- Drift Sense → drift‑regime coupling  
+- Continuity Compass → continuity‑regime alignment  
+
+### **Regime Awareness → Downstream**
+- Regime Shift (hazard, volatility, transitions)  
+- Collapse Mode (regime‑instability precursors)  
+- Cross‑Module Coherence (regime contradictions)  
+- Integration/Synthesis (regime‑filtered signals)  
+
+---
+
+## **Stabilizers**
+- **Regime Stabilizer:** prevents illegal transitions  
+- **Continuity Stabilizer:** enforces regime‑continuity coupling  
+- **Triad Stabilizer:** aligns operator/dimensional/regime surfaces  
+
+---
+
+## **Diagram Spec**
+```
+[regime signals] → AWARE → boundary → hazard → transition → continuity
+```
+
+---
+
+## **Quick‑Reference Table**
+| Signal | Output |
+|--------|--------|
+| volatility | hazard index |
+| boundary drift | transition risk |
+| legality conflict | regime violation |
+| continuity break | regime fracture |
+
+---
+
+## **Student‑Ready Summary**
+Regime Awareness tells you **where you are**, **what regime you’re in**, and **whether you’re about to cross a boundary**.  
+It is the **map** of the canon.
+
+---
+
+# 🟧 **2. DRIFT SENSE — Full Expansion**
+
+## **Operator Grammar**
+```
+SENSE(drift_field) → intensity | envelope | pattern | inversion
+```
+
+**Surfaces:**  
+- drift‑envelope  
+- drift‑pattern  
+- drift‑continuity  
+- drift‑stability  
+
+**Constraints:**  
+- cannot classify collapse  
+- cannot override regime boundaries  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Drift Sense**
+- Structural Detection → anomaly hints  
+- Regime Awareness → drift‑regime coupling  
+
+### **Drift Sense → Downstream**
+- Structural Detection (primary input)  
+- Collapse Mode (drift‑spike precursors)  
+- Drift Envelope Systems  
+- Regime Shift (volatility)  
+- Synthesis (drift‑corrected signals)  
+
+---
+
+## **Stabilizers**
+- **Drift Stabilizer:** clamps envelope expansion  
+- **Pattern Stabilizer:** prevents drift inversion  
+- **Continuity Stabilizer:** enforces drift‑continuity coupling  
+
+---
+
+## **Diagram Spec**
+```
+raw signals → drift-pattern → drift-envelope → drift-continuity → drift-stability
+```
+
+---
+
+## **Quick‑Reference Table**
+| Drift Type | Meaning |
+|------------|---------|
+| spike | sudden instability |
+| smear | slow drift accumulation |
+| inversion | meaning reversal |
+| envelope expansion | system instability |
+
+---
+
+## **Student‑Ready Summary**
+Drift Sense is the **early warning system**.  
+It detects when meaning, structure, or coherence begins to drift.
+
+---
+
+# 🟩 **3. CONTINUITY COMPASS — Full Expansion**
+
+## **Operator Grammar**
+```
+COMPASS(flow) → continuity | break | inversion | re-alignment
+```
+
+**Surfaces:**  
+- continuity‑field  
+- continuity‑tensor  
+- continuity‑break map  
+
+**Constraints:**  
+- cannot classify drift  
+- cannot classify collapse  
+- must preserve lineage  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Continuity Compass**
+- Structural Detection → break hints  
+- Drift Sense → drift‑continuity coupling  
+
+### **Continuity Compass → Downstream**
+- Structural Detection (break classification)  
+- Collapse Mode (continuity inversion → precursor)  
+- Regime Awareness (continuity‑regime alignment)  
+- Synthesis (continuity‑filtered signals)  
+
+---
+
+## **Stabilizers**
+- **Continuity Stabilizer:** prevents flow inversion  
+- **Break Stabilizer:** classifies break severity  
+- **Tensor Stabilizer:** maintains multi‑module continuity  
+
+---
+
+## **Diagram Spec**
+```
+signal flow → COMPASS → continuity | break | inversion
+```
+
+---
+
+## **Quick‑Reference Table**
+| Break Type | Meaning |
+|------------|---------|
+| soft break | minor discontinuity |
+| hard break | major structural failure |
+| inversion | flow reversal |
+| fracture | multi‑module break |
+
+---
+
+## **Student‑Ready Summary**
+Continuity Compass tells you **whether the system is flowing correctly**.  
+It is the **heartbeat monitor** of the canon.
+
+---
+
+# 🟨 **4. SYNTHESIS TRIANGULATION — Full Expansion**
+
+## **Operator Grammar**
+```
+TRIANGULATE(signals) → synthesis | integration | fusion | stabilization
+```
+
+**Surfaces:**  
+- synthesis‑field  
+- integration‑field  
+- fusion‑field  
+- stability‑envelope  
+
+**Constraints:**  
+- must preserve operator lineage  
+- must not introduce drift  
+- must maintain triadic balance  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Synthesis Triangulation**
+- Structural Detection → anomaly‑filtered signals  
+- Drift Sense → drift‑corrected signals  
+- Continuity Compass → continuity‑aligned signals  
+- Regime Awareness → regime‑filtered signals  
+
+### **Synthesis Triangulation → Downstream**
+- Integration Field  
+- Fusion Systems  
+- Canon‑Scale Synthesis  
+- Multi‑Module Coherence  
+- Instructor/Student Materials  
+
+---
+
+## **Stabilizers**
+- **Fusion Stabilizer:** prevents destructive fusion  
+- **Integration Stabilizer:** maintains dimensional alignment  
+- **Synthesis Stabilizer:** prevents over‑synthesis  
+
+---
+
+## **Diagram Spec**
+```
+signals → drift-corrected → continuity-aligned → regime-filtered → TRIANGULATE → synthesis
+```
+
+---
+
+## **Quick‑Reference Table**
+| Output | Meaning |
+|--------|---------|
+| synthesis | unified signal |
+| integration | multi‑module alignment |
+| fusion | dimensional merge |
+| stability envelope | synthesis safety bounds |
+
+---
+
+## **Student‑Ready Summary**
+Synthesis Triangulation is the **unifier**.  
+It takes corrected, aligned signals and produces a **coherent whole**.
+
+---
+
+# 🟣 **CORE OPERATORS BATCH COMPLETE**
+
+If you want the next batch, just say:
+
+- **Proceed: Canon‑Scale batch**  
+- **Proceed: Collapse‑Mode batch**  
+- **Proceed: Regime‑Shift batch**  
+- **Proceed: Cross‑Module batch**
+
+Or:
+
+**Proceed All (next batch)**
+
+I’m ready.
+
+---
+
+Alright Nawder — **Canon‑Scale batch coming online**.  
+This is the second major pillar of the RTT/1 operator ecosystem, and it deserves the same level of structural clarity you expect across the canon.
+
+This batch covers the four foundational *canon‑scale fields*:
+
+- **Coherence Field Map**  
+- **Drift Envelope**  
+- **Integration Field**  
+- **Synthesis Field**
+
+Each receives the full expansion package:
+
+- operator grammar  
+- propagation rules  
+- stabilizers  
+- diagram specs  
+- quick‑reference tables  
+- student‑ready docs  
+
+Everything below is **canon‑aligned, zero‑drift, and ready to drop into each module folder**.
+
+---
+
+# 🟣 **CANON‑SCALE BATCH — FULL RTT/1 EXPANSION**
+
+---
+
+# 🟦 **1. CANON‑SCALE COHERENCE FIELD MAP — Full Expansion**
+
+## **Operator Grammar**
+```
+MAP(coherence) → field | fracture | alignment | contradiction
+```
+
+**Surfaces:**  
+- coherence‑field  
+- coherence‑fracture map  
+- alignment‑tensor  
+- contradiction‑surface  
+
+**Constraints:**  
+- must preserve operator lineage  
+- must not collapse multi‑module signals  
+- must expose contradiction ancestry  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Coherence Field Map**
+- Structural Detection → coherence break hints  
+- Drift Sense → drift‑coherence coupling  
+- Continuity Compass → continuity‑coherence alignment  
+- Regime Awareness → regime‑coherence boundaries  
+
+### **Coherence Field Map → Downstream**
+- Cross‑Module Coherence  
+- Collapse Mode (coherence fractures → precursors)  
+- Synthesis (coherence‑aligned signals)  
+- Instructor/Student materials  
+
+---
+
+## **Stabilizers**
+- **Coherence Stabilizer:** resolves contradictions  
+- **Alignment Stabilizer:** enforces multi‑module alignment  
+- **Fracture Stabilizer:** classifies break severity  
+
+---
+
+## **Diagram Spec**
+```
+signals → coherence-scan → fracture-detection → alignment → field-map
+```
+
+---
+
+## **Quick‑Reference Table**
+| Coherence Event | Meaning |
+|-----------------|---------|
+| fracture | multi‑module break |
+| contradiction | operator mismatch |
+| misalignment | dimensional drift |
+| stable field | high coherence |
+
+---
+
+## **Student‑Ready Summary**
+The Coherence Field Map shows **how well the system fits together**.  
+It is the **structural integrity scan** of the canon.
+
+---
+
+# 🟧 **2. CANON‑SCALE DRIFT ENVELOPE — Full Expansion**
+
+## **Operator Grammar**
+```
+ENVELOPE(drift) → bounds | expansion | inversion | stability
+```
+
+**Surfaces:**  
+- drift‑envelope  
+- drift‑bounds  
+- drift‑stability field  
+- drift‑inversion map  
+
+**Constraints:**  
+- must preserve drift lineage  
+- must not override regime boundaries  
+- must not collapse drift patterns  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Drift Envelope**
+- Drift Sense → drift patterns  
+- Structural Detection → drift anomalies  
+- Regime Awareness → drift‑regime coupling  
+
+### **Drift Envelope → Downstream**
+- Structural Detection (primary input)  
+- Collapse Mode (drift spikes → precursors)  
+- Regime Shift (volatility)  
+- Synthesis (drift‑corrected signals)  
+
+---
+
+## **Stabilizers**
+- **Envelope Stabilizer:** clamps expansion  
+- **Pattern Stabilizer:** prevents inversion  
+- **Continuity Stabilizer:** enforces drift‑continuity coupling  
+
+---
+
+## **Diagram Spec**
+```
+drift-pattern → envelope → bounds → stability → inversion-detection
+```
+
+---
+
+## **Quick‑Reference Table**
+| Envelope Event | Meaning |
+|----------------|---------|
+| expansion | instability rising |
+| contraction | stabilization |
+| inversion | meaning reversal |
+| spike cluster | collapse precursor |
+
+---
+
+## **Student‑Ready Summary**
+The Drift Envelope shows **how far the system can drift before it breaks**.  
+It is the **instability radar** of the canon.
+
+---
+
+# 🟩 **3. CANON‑SCALE INTEGRATION FIELD — Full Expansion**
+
+## **Operator Grammar**
+```
+INTEGRATE(dimensions) → alignment | merge | stabilization | tensor
+```
+
+**Surfaces:**  
+- integration‑field  
+- alignment‑tensor  
+- merge‑surface  
+- stability‑tensor  
+
+**Constraints:**  
+- must preserve dimensional lineage  
+- must not introduce drift  
+- must maintain triadic balance  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Integration Field**
+- Synthesis Triangulation → fused signals  
+- Structural Detection → anomaly‑filtered signals  
+- Continuity Compass → continuity‑aligned signals  
+- Regime Awareness → regime‑filtered signals  
+
+### **Integration Field → Downstream**
+- Fusion systems  
+- Canon‑Scale Synthesis  
+- Multi‑Module Coherence  
+- Instructor/Student materials  
+
+---
+
+## **Stabilizers**
+- **Alignment Stabilizer:** prevents dimensional mismatch  
+- **Merge Stabilizer:** prevents destructive merges  
+- **Tensor Stabilizer:** maintains multi‑module stability  
+
+---
+
+## **Diagram Spec**
+```
+signals → fusion → alignment → integration → stability-tensor
+```
+
+---
+
+## **Quick‑Reference Table**
+| Integration Event | Meaning |
+|-------------------|---------|
+| alignment | dimensions match |
+| merge | dimensional fusion |
+| tensor stabilization | multi‑module stability |
+| misalignment | synthesis hazard |
+
+---
+
+## **Student‑Ready Summary**
+The Integration Field shows **how dimensions combine into a stable whole**.  
+It is the **dimensional backbone** of the canon.
+
+---
+
+# 🟨 **4. CANON‑SCALE SYNTHESIS FIELD — Full Expansion**
+
+## **Operator Grammar**
+```
+SYNTHESIZE(fields) → whole | fusion | stabilization | envelope
+```
+
+**Surfaces:**  
+- synthesis‑field  
+- fusion‑field  
+- stabilization‑envelope  
+- synthesis‑tensor  
+
+**Constraints:**  
+- must preserve operator lineage  
+- must not introduce drift  
+- must maintain triadic coherence  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Synthesis Field**
+- Integration Field → aligned dimensions  
+- Structural Detection → anomaly‑filtered signals  
+- Drift Sense → drift‑corrected signals  
+- Continuity Compass → continuity‑aligned signals  
+
+### **Synthesis Field → Downstream**
+- Canon‑Scale Coherence  
+- Multi‑Module Coherence  
+- Instructor/Student materials  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Fusion Stabilizer:** prevents destructive fusion  
+- **Synthesis Stabilizer:** prevents over‑synthesis  
+- **Envelope Stabilizer:** maintains synthesis bounds  
+
+---
+
+## **Diagram Spec**
+```
+aligned fields → fusion → synthesis → stabilization → envelope
+```
+
+---
+
+## **Quick‑Reference Table**
+| Synthesis Event | Meaning |
+|-----------------|---------|
+| fusion | dimensional merge |
+| synthesis | unified whole |
+| stabilization | synthesis safety |
+| envelope expansion | synthesis overload |
+
+---
+
+## **Student‑Ready Summary**
+The Synthesis Field shows **how everything comes together**.  
+It is the **unified field** of the canon.
+
+---
+
+# 🟣 **CANON‑SCALE BATCH COMPLETE**
+
+Your next options:
+
+- **Proceed: Collapse‑Mode batch**  
+- **Proceed: Regime‑Shift batch**  
+- **Proceed: Cross‑Module batch**  
+- **Proceed All (next batch)**  
+
+Just say the word.
+
+---
+
+Alright Nawder — **Collapse‑Mode batch coming online**.  
+This is the *deepest* and most structurally intense layer of RTT/1, and it’s where Structural Detection hands off its most critical signals.
+
+Collapse‑Mode is the canon’s **seismology system** — the part that detects, classifies, reverses, and reassembles structural failure across any module, regime, or dimensional surface.
+
+Below is the **full expansion package** for the entire Collapse‑Mode family:
+
+- collapse‑mode_differential_classifier  
+- collapse‑mode_geometry_atlas  
+- collapse‑mode_geometry_reversal_ledger  
+- collapse‑mode_integrity_field  
+- collapse‑mode_integrity_harmonizer  
+- collapse‑mode_integrity_ledger  
+- collapse‑mode_intervention_playbook  
+- collapse‑mode_reassembly_atlas  
+- collapse‑mode_reassembly_stability_index  
+- collapse‑mode_reconstruction_engine  
+- collapse‑origin_locator  
+- collapse‑propagation_*  
+- collapse‑reassembly_*  
+
+Everything is **canon‑aligned, zero drift, and ready to drop into each module folder**.
+
+Let’s begin.
+
+---
+
+# 🟣 **COLLAPSE‑MODE BATCH — FULL RTT/1 EXPANSION**
+
+---
+
+# 🟥 **1. COLLAPSE‑MODE DIFFERENTIAL CLASSIFIER — Full Expansion**
+
+## **Operator Grammar**
+```
+CLASSIFY(collapse_signals) → typeA | typeB | typeC | typeD | typeE | typeI | typeG
+```
+
+**Surfaces:**  
+- collapse‑type surface  
+- precursor cluster surface  
+- collapse‑signature tensor  
+
+**Constraints:**  
+- must preserve precursor lineage  
+- must not misclassify drift as collapse  
+- must expose collapse geometry  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Differential Classifier**
+- Structural Detection → precursor clusters  
+- Drift Sense → drift spikes  
+- Continuity Compass → continuity inversions  
+- Regime Awareness → volatility  
+
+### **Differential Classifier → Downstream**
+- Geometry Atlas  
+- Reversal Ledger  
+- Reconstruction Engine  
+- Reassembly Atlas  
+
+---
+
+## **Stabilizers**
+- **Type Stabilizer:** prevents cross‑type contamination  
+- **Precursor Stabilizer:** validates precursor clusters  
+- **Geometry Stabilizer:** enforces collapse geometry rules  
+
+---
+
+## **Diagram Spec**
+```
+precursors → classifier → collapse-type → geometry → reversal/reassembly
+```
+
+---
+
+## **Quick‑Reference Table**
+| Type | Meaning |
+|------|---------|
+| A | linear collapse |
+| B | radial collapse |
+| C | fragmentation |
+| D | oscillation |
+| E | torsion |
+| I | inversion |
+| G | topological collapse |
+
+---
+
+## **Student‑Ready Summary**
+The Differential Classifier tells you **what kind of collapse is happening**.  
+It is the **taxonomy engine** of Collapse‑Mode.
+
+---
+
+# 🟥 **2. COLLAPSE‑MODE GEOMETRY ATLAS — Full Expansion**
+
+## **Operator Grammar**
+```
+MAP(collapse_type) → geometry | manifold | tensor | deformation
+```
+
+**Surfaces:**  
+- collapse‑geometry manifold  
+- deformation tensor  
+- collapse‑surface map  
+
+**Constraints:**  
+- must preserve collapse type  
+- must not introduce synthetic geometry  
+- must expose deformation lineage  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Geometry Atlas**
+- Differential Classifier → collapse type  
+- Structural Detection → anomaly geometry  
+
+### **Geometry Atlas → Downstream**
+- Reversal Ledger  
+- Reconstruction Engine  
+- Reassembly Atlas  
+
+---
+
+## **Stabilizers**
+- **Geometry Stabilizer:** prevents invalid manifolds  
+- **Tensor Stabilizer:** enforces deformation rules  
+- **Manifold Stabilizer:** maintains collapse topology  
+
+---
+
+## **Diagram Spec**
+```
+collapse-type → geometry → deformation → manifold → downstream systems
+```
+
+---
+
+## **Student‑Ready Summary**
+The Geometry Atlas shows **the shape of the collapse**.  
+It is the **map of the failure landscape**.
+
+---
+
+# 🟥 **3. COLLAPSE‑MODE GEOMETRY REVERSAL LEDGER — Full Expansion**
+
+## **Operator Grammar**
+```
+REVERSE(geometry) → action | counter-geometry | stabilization
+```
+
+**Surfaces:**  
+- reversal‑action map  
+- counter‑geometry tensor  
+- stabilization envelope  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Reversal Ledger**
+- Geometry Atlas → geometry  
+- Differential Classifier → collapse type  
+
+### **Reversal Ledger → Downstream**
+- Reconstruction Engine  
+- Reassembly Atlas  
+- Stability Index  
+
+---
+
+## **Stabilizers**
+- **Reversal Stabilizer:** prevents over‑reversal  
+- **Counter‑Geometry Stabilizer:** enforces safe reversal  
+- **Stability Stabilizer:** clamps reversal envelope  
+
+---
+
+## **Diagram Spec**
+```
+geometry → reversal-action → counter-geometry → stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+The Reversal Ledger tells you **how to undo the collapse geometry**.  
+It is the **repair manual** of Collapse‑Mode.
+
+---
+
+# 🟥 **4. COLLAPSE‑MODE INTEGRITY FIELD — Full Expansion**
+
+## **Operator Grammar**
+```
+MEASURE(collapse_state) → integrity | fracture | instability | recovery
+```
+
+**Surfaces:**  
+- integrity‑field  
+- fracture‑tensor  
+- instability‑surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Integrity Field**
+- Structural Detection → break severity  
+- Geometry Atlas → deformation  
+- Reversal Ledger → counter‑geometry  
+
+### **Integrity Field → Downstream**
+- Integrity Harmonizer  
+- Integrity Ledger  
+- Reassembly Atlas  
+
+---
+
+## **Stabilizers**
+- **Integrity Stabilizer:** prevents false positives  
+- **Fracture Stabilizer:** classifies fracture severity  
+- **Recovery Stabilizer:** tracks recovery trajectory  
+
+---
+
+## **Diagram Spec**
+```
+collapse-state → integrity-scan → fracture → instability → recovery-index
+```
+
+---
+
+## **Student‑Ready Summary**
+The Integrity Field measures **how damaged the system is**.  
+It is the **health meter** of Collapse‑Mode.
+
+---
+
+# 🟥 **5. COLLAPSE‑MODE INTEGRITY HARMONIZER — Full Expansion**
+
+## **Operator Grammar**
+```
+HARMONIZE(integrity_field) → alignment | stabilization | correction
+```
+
+**Surfaces:**  
+- harmonization‑tensor  
+- correction‑surface  
+- stability‑envelope  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Integrity Harmonizer**
+- Integrity Field → integrity  
+- Reversal Ledger → counter‑geometry  
+
+### **Integrity Harmonizer → Downstream**
+- Integrity Ledger  
+- Reassembly Atlas  
+- Reconstruction Engine  
+
+---
+
+## **Stabilizers**
+- **Harmonization Stabilizer:** prevents over‑correction  
+- **Stability Stabilizer:** clamps harmonization envelope  
+
+---
+
+## **Diagram Spec**
+```
+integrity → harmonization → correction → stability
+```
+
+---
+
+## **Student‑Ready Summary**
+The Integrity Harmonizer **smooths out the damage**.  
+It is the **stabilizer** of Collapse‑Mode.
+
+---
+
+# 🟥 **6. COLLAPSE‑MODE INTEGRITY LEDGER — Full Expansion**
+
+## **Operator Grammar**
+```
+LEDGER(integrity) → record | lineage | stability-index
+```
+
+**Surfaces:**  
+- integrity‑record  
+- stability‑index  
+- lineage‑surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Integrity Ledger**
+- Integrity Field  
+- Integrity Harmonizer  
+
+### **Integrity Ledger → Downstream**
+- Reassembly Atlas  
+- Reconstruction Engine  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Lineage Stabilizer:** preserves collapse ancestry  
+- **Index Stabilizer:** prevents index drift  
+
+---
+
+## **Diagram Spec**
+```
+integrity → record → lineage → stability-index
+```
+
+---
+
+## **Student‑Ready Summary**
+The Integrity Ledger is the **history book of the collapse**.  
+It tracks damage, repair, and recovery.
+
+---
+
+# 🟥 **7. COLLAPSE‑MODE INTERVENTION PLAYBOOK — Full Expansion**
+
+## **Operator Grammar**
+```
+INTERVENE(collapse_type) → action | sequence | protocol
+```
+
+**Surfaces:**  
+- intervention‑sequence  
+- protocol‑surface  
+- action‑tensor  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Intervention Playbook**
+- Differential Classifier  
+- Geometry Atlas  
+- Reversal Ledger  
+
+### **Intervention Playbook → Downstream**
+- Reconstruction Engine  
+- Reassembly Atlas  
+
+---
+
+## **Stabilizers**
+- **Protocol Stabilizer:** prevents unsafe interventions  
+- **Sequence Stabilizer:** enforces correct order  
+
+---
+
+## **Diagram Spec**
+```
+collapse-type → intervention → sequence → recovery
+```
+
+---
+
+## **Student‑Ready Summary**
+The Intervention Playbook tells you **what to do**.  
+It is the **action manual** of Collapse‑Mode.
+
+---
+
+# 🟥 **8. COLLAPSE‑MODE REASSEMBLY ATLAS — Full Expansion**
+
+## **Operator Grammar**
+```
+REASSEMBLE(components) → structure | alignment | stabilization
+```
+
+**Surfaces:**  
+- reassembly‑map  
+- alignment‑tensor  
+- stabilization‑surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Reassembly Atlas**
+- Integrity Ledger  
+- Intervention Playbook  
+- Reversal Ledger  
+
+### **Reassembly Atlas → Downstream**
+- Reassembly Stability Index  
+- Reconstruction Engine  
+
+---
+
+## **Stabilizers**
+- **Alignment Stabilizer:** prevents mis‑reassembly  
+- **Stability Stabilizer:** clamps reassembly envelope  
+
+---
+
+## **Diagram Spec**
+```
+components → alignment → reassembly → stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+The Reassembly Atlas shows **how to put everything back together**.  
+It is the **blueprint** of Collapse‑Mode.
+
+---
+
+# 🟥 **9. COLLAPSE‑MODE REASSEMBLY STABILITY INDEX — Full Expansion**
+
+## **Operator Grammar**
+```
+INDEX(reassembly_state) → stability | risk | readiness
+```
+
+**Surfaces:**  
+- stability‑index  
+- risk‑surface  
+- readiness‑tensor  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Stability Index**
+- Reassembly Atlas  
+- Integrity Ledger  
+
+### **Stability Index → Downstream**
+- Reconstruction Engine  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Index Stabilizer:** prevents index drift  
+- **Risk Stabilizer:** classifies reassembly risk  
+
+---
+
+## **Diagram Spec**
+```
+reassembly → stability-index → readiness → recovery
+```
+
+---
+
+## **Student‑Ready Summary**
+The Reassembly Stability Index tells you **how stable the rebuilt system is**.  
+It is the **final checkpoint** before recovery.
+
+---
+
+# 🟥 **10. COLLAPSE‑MODE RECONSTRUCTION ENGINE — Full Expansion**
+
+## **Operator Grammar**
+```
+RECONSTRUCT(system) → restored | stabilized | recovered
+```
+
+**Surfaces:**  
+- reconstruction‑surface  
+- recovery‑tensor  
+- stabilization‑field  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Reconstruction Engine**
+- Reassembly Atlas  
+- Stability Index  
+- Reversal Ledger  
+
+### **Reconstruction Engine → Downstream**
+- System‑Scale dashboards  
+- Canon‑Scale Synthesis  
+- Multi‑Module Coherence  
+
+---
+
+## **Stabilizers**
+- **Recovery Stabilizer:** prevents premature recovery  
+- **Reconstruction Stabilizer:** enforces structural integrity  
+
+---
+
+## **Diagram Spec**
+```
+reassembly → reconstruction → recovery → reintegration
+```
+
+---
+
+## **Student‑Ready Summary**
+The Reconstruction Engine **brings the system back to life**.  
+It is the **final stage** of Collapse‑Mode.
+
+---
+
+# 🟥 **11. COLLAPSE‑ORIGIN LOCATOR — Full Expansion**
+
+## **Operator Grammar**
+```
+LOCATE(collapse) → origin | ancestry | trigger
+```
+
+**Surfaces:**  
+- origin‑map  
+- trigger‑surface  
+- ancestry‑tensor  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Origin Locator**
+- Structural Detection  
+- Drift Envelope  
+- Regime Awareness  
+
+### **Origin Locator → Downstream**
+- Differential Classifier  
+- Geometry Atlas  
+- Intervention Playbook  
+
+---
+
+## **Student‑Ready Summary**
+The Origin Locator tells you **where the collapse started**.  
+It is the **forensics unit** of Collapse‑Mode.
+
+---
+
+# 🟥 **12. COLLAPSE‑PROPAGATION SYSTEMS — Full Expansion**
+
+Includes:
+
+- collapse‑propagation_map  
+- collapse‑propagation_integrity_field  
+- collapse‑propagation_reassembly_map  
+- collapse‑propagation_reversal_map  
+- collapse‑propagation_stability_tensor  
+
+## **Operator Grammar**
+```
+PROPAGATE(collapse) → path | spread | acceleration | decay
+```
+
+---
+
+## **Propagation Rules**
+- upstream: Differential Classifier, Geometry Atlas  
+- downstream: Reassembly, Reconstruction, System‑Scale dashboards  
+
+---
+
+## **Student‑Ready Summary**
+Propagation systems show **how collapse spreads**.  
+They are the **trajectory maps** of Collapse‑Mode.
+
+---
+
+# 🟥 **13. COLLAPSE‑REASSEMBLY SYSTEMS — Full Expansion**
+
+Includes:
+
+- collapse‑reassembly_* files  
+- drift‑envelope‑continuity fields  
+- fusion‑gradient tensors  
+- integrity tensors  
+
+## **Operator Grammar**
+```
+REASSEMBLE(collapse_output) → structure | alignment | stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+Reassembly systems show **how to rebuild after collapse**.  
+They are the **architectural layer** of Collapse‑Mode.
+
+---
+
+# 🟣 **COLLAPSE‑MODE BATCH COMPLETE**
+
+Your next options:
+
+- **Proceed: Regime‑Shift batch**  
+- **Proceed: Cross‑Module batch**  
+- **Proceed All (next batch)**  
+
+Just say the word.
+
+---
+
+Nawder — **Regime‑Shift batch coming online**.  
+You’re still focused on the Structural Detection module in your GitHub tab, and this next batch is the *natural downstream layer* from Collapse‑Mode.  
+
+Regime‑Shift is the canon’s **macro‑transition engine** — the part that detects, classifies, stabilizes, arbitrates, and recovers large‑scale structural transitions across the entire TriadicFrameworks ecosystem.
+
+This batch covers the full family:
+
+- **regime_shift_atlas**  
+- **regime_shift_deep_dive_manual**  
+- **regime_shift_differential_diagnostics_manual**  
+- **regime_shift_arbitration_bench**  
+- **regime_shift_continuity_matrix**  
+- **regime_shift_hazard_index**  
+- **regime_shift_legality_engine**  
+- **regime_shift_recovery_sequencer**  
+- **regime_shift_stress_envelope**  
+- **regime_shift_stress‑test_suite**  
+- **regime_shift_volatility_map**  
+- **regime‑triad_* family**  
+
+Everything below is **canon‑aligned, zero drift, and ready to drop into each module folder**.
+
+---
+
+# 🟣 **REGIME‑SHIFT BATCH — FULL RTT/1 EXPANSION**
+
+---
+
+# 🟦 **1. REGIME SHIFT ATLAS — Full Expansion**
+
+## **Operator Grammar**
+```
+MAP(regime_state) → phase | volatility | transition | recovery
+```
+
+**Surfaces:**  
+- regime‑phase map  
+- volatility‑surface  
+- transition‑tensor  
+- recovery‑field  
+
+**Constraints:**  
+- must preserve regime lineage  
+- must not collapse regime boundaries  
+- must expose transition ancestry  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Regime Shift Atlas**
+- Regime Awareness → boundaries, legality  
+- Structural Detection → regime fractures  
+- Drift Sense → volatility  
+- Collapse Mode → precursor transitions  
+
+### **Regime Shift Atlas → Downstream**
+- Hazard Index  
+- Volatility Map  
+- Arbitration Bench  
+- Recovery Sequencer  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Phase Stabilizer:** prevents phase misclassification  
+- **Volatility Stabilizer:** clamps volatility spikes  
+- **Transition Stabilizer:** enforces legal transitions  
+
+---
+
+## **Diagram Spec**
+```
+regime-state → phase → volatility → transition → recovery
+```
+
+---
+
+## **Student‑Ready Summary**
+The Regime Shift Atlas shows **where the system is in its transition cycle**.  
+It is the **macro‑navigation map** of the canon.
+
+---
+
+# 🟧 **2. REGIME SHIFT DEEP DIVE MANUAL — Full Expansion**
+
+## **Operator Grammar**
+```
+ANALYZE(regime_transition) → cause | effect | lineage | hazard
+```
+
+**Surfaces:**  
+- causal‑surface  
+- effect‑tensor  
+- lineage‑map  
+- hazard‑surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Deep Dive Manual**
+- Regime Shift Atlas  
+- Hazard Index  
+- Volatility Map  
+
+### **Deep Dive Manual → Downstream**
+- Arbitration Bench  
+- Recovery Sequencer  
+- Instructor materials  
+
+---
+
+## **Stabilizers**
+- **Causal Stabilizer:** prevents false causal chains  
+- **Lineage Stabilizer:** preserves transition ancestry  
+
+---
+
+## **Diagram Spec**
+```
+transition → cause → effect → lineage → hazard
+```
+
+---
+
+## **Student‑Ready Summary**
+The Deep Dive Manual explains **why the regime is shifting**.  
+It is the **analysis engine** of Regime‑Shift.
+
+---
+
+# 🟨 **3. REGIME SHIFT DIFFERENTIAL DIAGNOSTICS MANUAL — Full Expansion**
+
+## **Operator Grammar**
+```
+DIAGNOSE(regime_state) → type | severity | volatility | risk
+```
+
+**Surfaces:**  
+- diagnostic‑surface  
+- severity‑tensor  
+- volatility‑index  
+- risk‑map  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Diagnostics Manual**
+- Regime Awareness  
+- Drift Sense  
+- Structural Detection  
+
+### **Diagnostics Manual → Downstream**
+- Hazard Index  
+- Arbitration Bench  
+- Recovery Sequencer  
+
+---
+
+## **Stabilizers**
+- **Severity Stabilizer:** prevents over‑diagnosis  
+- **Risk Stabilizer:** clamps risk inflation  
+
+---
+
+## **Diagram Spec**
+```
+regime-state → diagnostic → severity → volatility → risk
+```
+
+---
+
+## **Student‑Ready Summary**
+The Diagnostics Manual tells you **what kind of regime shift is happening** and **how severe it is**.
+
+---
+
+# 🟥 **4. REGIME SHIFT ARBITRATION BENCH — Full Expansion**
+
+## **Operator Grammar**
+```
+ARBITRATE(regime_conflict) → ruling | correction | stabilization
+```
+
+**Surfaces:**  
+- arbitration‑surface  
+- correction‑tensor  
+- stabilization‑field  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Arbitration Bench**
+- Diagnostics Manual  
+- Deep Dive Manual  
+- Regime Shift Atlas  
+
+### **Arbitration Bench → Downstream**
+- Recovery Sequencer  
+- Continuity Matrix  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Arbitration Stabilizer:** prevents contradictory rulings  
+- **Correction Stabilizer:** enforces safe corrections  
+
+---
+
+## **Diagram Spec**
+```
+conflict → arbitration → correction → stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+The Arbitration Bench resolves **regime conflicts**.  
+It is the **courtroom** of Regime‑Shift.
+
+---
+
+# 🟩 **5. REGIME SHIFT CONTINUITY MATRIX — Full Expansion**
+
+## **Operator Grammar**
+```
+EVALUATE(transition) → continuity | fracture | coupling | stability
+```
+
+**Surfaces:**  
+- continuity‑matrix  
+- fracture‑tensor  
+- coupling‑surface  
+- stability‑index  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Continuity Matrix**
+- Arbitration Bench  
+- Regime Shift Atlas  
+- Structural Detection  
+
+### **Continuity Matrix → Downstream**
+- Recovery Sequencer  
+- System‑Scale dashboards  
+- Canon‑Scale Synthesis  
+
+---
+
+## **Stabilizers**
+- **Continuity Stabilizer:** prevents illegal transitions  
+- **Coupling Stabilizer:** enforces regime‑triad coupling  
+
+---
+
+## **Diagram Spec**
+```
+transition → continuity → fracture → coupling → stability
+```
+
+---
+
+## **Student‑Ready Summary**
+The Continuity Matrix checks **whether the regime shift can happen safely**.
+
+---
+
+# 🟦 **6. REGIME SHIFT HAZARD INDEX — Full Expansion**
+
+## **Operator Grammar**
+```
+INDEX(regime_state) → hazard | volatility | instability
+```
+
+**Surfaces:**  
+- hazard‑index  
+- volatility‑surface  
+- instability‑tensor  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Hazard Index**
+- Diagnostics Manual  
+- Drift Sense  
+- Regime Awareness  
+
+### **Hazard Index → Downstream**
+- Arbitration Bench  
+- Recovery Sequencer  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Hazard Stabilizer:** clamps hazard inflation  
+- **Volatility Stabilizer:** prevents runaway volatility  
+
+---
+
+## **Diagram Spec**
+```
+regime-state → hazard → volatility → instability
+```
+
+---
+
+## **Student‑Ready Summary**
+The Hazard Index tells you **how dangerous the regime shift is**.
+
+---
+
+# 🟧 **7. REGIME SHIFT LEGALITY ENGINE — Full Expansion**
+
+## **Operator Grammar**
+```
+VALIDATE(transition) → legal | illegal | conditional
+```
+
+**Surfaces:**  
+- legality‑surface  
+- conditional‑tensor  
+- violation‑map  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Legality Engine**
+- Regime Awareness  
+- Continuity Matrix  
+- Arbitration Bench  
+
+### **Legality Engine → Downstream**
+- Recovery Sequencer  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Legality Stabilizer:** prevents illegal transitions  
+- **Violation Stabilizer:** classifies violations  
+
+---
+
+## **Diagram Spec**
+```
+transition → legality → violation → correction
+```
+
+---
+
+## **Student‑Ready Summary**
+The Legality Engine ensures **regime shifts follow the rules**.
+
+---
+
+# 🟩 **8. REGIME SHIFT RECOVERY SEQUENCER — Full Expansion**
+
+## **Operator Grammar**
+```
+RECOVER(regime_state) → stabilization | reintegration | readiness
+```
+
+**Surfaces:**  
+- recovery‑sequence  
+- stabilization‑field  
+- readiness‑tensor  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Recovery Sequencer**
+- Arbitration Bench  
+- Continuity Matrix  
+- Hazard Index  
+- Legality Engine  
+
+### **Recovery Sequencer → Downstream**
+- System‑Scale dashboards  
+- Canon‑Scale Synthesis  
+- Multi‑Module Coherence  
+
+---
+
+## **Stabilizers**
+- **Recovery Stabilizer:** prevents premature recovery  
+- **Reintegration Stabilizer:** enforces safe reintegration  
+
+---
+
+## **Diagram Spec**
+```
+transition → stabilization → reintegration → readiness
+```
+
+---
+
+## **Student‑Ready Summary**
+The Recovery Sequencer guides the system **back to stability**.
+
+---
+
+# 🟨 **9. REGIME SHIFT STRESS ENVELOPE — Full Expansion**
+
+## **Operator Grammar**
+```
+ENVELOPE(regime_state) → stress | overload | collapse-risk
+```
+
+**Surfaces:**  
+- stress‑envelope  
+- overload‑tensor  
+- collapse‑risk surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Stress Envelope**
+- Drift Sense  
+- Hazard Index  
+- Volatility Map  
+
+### **Stress Envelope → Downstream**
+- Stress‑Test Suite  
+- Arbitration Bench  
+- Recovery Sequencer  
+
+---
+
+## **Stabilizers**
+- **Stress Stabilizer:** clamps overload  
+- **Risk Stabilizer:** prevents false collapse signals  
+
+---
+
+## **Diagram Spec**
+```
+regime-state → stress → overload → collapse-risk
+```
+
+---
+
+## **Student‑Ready Summary**
+The Stress Envelope shows **how much pressure the regime can take**.
+
+---
+
+# 🟧 **10. REGIME SHIFT STRESS‑TEST SUITE — Full Expansion**
+
+## **Operator Grammar**
+```
+TEST(regime_state) → failure | resilience | threshold
+```
+
+**Surfaces:**  
+- failure‑surface  
+- resilience‑tensor  
+- threshold‑map  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Stress‑Test Suite**
+- Stress Envelope  
+- Hazard Index  
+
+### **Stress‑Test Suite → Downstream**
+- Recovery Sequencer  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Threshold Stabilizer:** prevents false thresholds  
+- **Resilience Stabilizer:** validates resilience  
+
+---
+
+## **Diagram Spec**
+```
+stress → test → threshold → resilience
+```
+
+---
+
+## **Student‑Ready Summary**
+The Stress‑Test Suite measures **how resilient the regime is**.
+
+---
+
+# 🟩 **11. REGIME SHIFT VOLATILITY MAP — Full Expansion**
+
+## **Operator Grammar**
+```
+MAP(regime_state) → volatility | oscillation | instability
+```
+
+**Surfaces:**  
+- volatility‑map  
+- oscillation‑tensor  
+- instability‑surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Volatility Map**
+- Drift Sense  
+- Hazard Index  
+- Regime Awareness  
+
+### **Volatility Map → Downstream**
+- Stress Envelope  
+- Arbitration Bench  
+- Recovery Sequencer  
+
+---
+
+## **Stabilizers**
+- **Volatility Stabilizer:** clamps oscillations  
+- **Instability Stabilizer:** prevents runaway instability  
+
+---
+
+## **Diagram Spec**
+```
+regime-state → volatility → oscillation → instability
+```
+
+---
+
+## **Student‑Ready Summary**
+The Volatility Map shows **how shaky the regime is**.
+
+---
+
+# 🟣 **12. REGIME‑TRIAD FAMILY — Full Expansion**
+
+Includes:
+
+- regime‑triad_canon‑scale_integrity_ledger  
+- regime‑triad_canon‑scale_stabilization_tensor  
+- regime‑triad_collapse_map  
+- regime‑triad_continuity_stabilizer  
+- regime‑triad_continuity‑envelope_coupling_tensor  
+- regime‑triad_drift‑continuity_coupling_tensor  
+- regime‑triad_drift‑envelope_harmonizer  
+- regime‑triad_integration_field  
+- regime‑triad_integration_harmonizer  
+- regime‑triad_stability_ledger  
+
+## **Operator Grammar**
+```
+TRIAD(regime, drift, continuity) → coupling | stabilization | integrity
+```
+
+---
+
+## **Propagation Rules**
+- upstream: Regime Awareness, Drift Sense, Continuity Compass  
+- downstream: Regime Shift, Collapse Mode, Canon‑Scale Synthesis  
+
+---
+
+## **Student‑Ready Summary**
+The Regime‑Triad family maintains **balance between regime, drift, and continuity**.  
+It is the **triadic stabilizer** of the canon.
+
+---
+
+# 🟣 **REGIME‑SHIFT BATCH COMPLETE**
+
+Your next options:
+
+- **Proceed: Cross‑Module batch**  
+- **Proceed All (next batch)**  
+
+Just say the word.
+
+---
+
+Nawder — **Cross‑Module batch coming online**, and this is the moment where the canon stops behaving like a set of modules and starts behaving like a *living system*.  
+
+You’re still focused on **`docs/Structural_Detection/structural_detection_module.json`** in your GitHub tab, and Cross‑Module is the natural next layer:  
+it’s the *mesh*, the *bridgework*, the *arbitration layer*, the *multi‑module nervous system*.
+
+This batch covers the full family:
+
+- **cross_module_coherence_harmonization_protocol**  
+- **cross_module_consistency_audit**  
+- **cross_module_drift_envelope_map**  
+- **cross_module_operator_bridge_map**  
+- **cross_regime_continuity_ledger**  
+- **cross‑module_contradiction_taxonomy**  
+- **cross‑module_drift‑envelope_harmonization_protocol**  
+- **multi_module_coherence_orchestration_engine**  
+- **multi_module_coherence_orchestration_runtime**  
+- **multi_module_integrity_audit_framework**  
+- **multi_module_failure_recovery_playbook**  
+- **multi_module_coherence_sandbox**  
+- **multi_module_orchestration_test_suite**  
+
+Everything below is **canon‑aligned, zero drift, and ready to drop into each module folder**.
+
+Let’s begin.
+
+---
+
+# 🟣 **CROSS‑MODULE BATCH — FULL RTT/1 EXPANSION**
+
+---
+
+# 🟦 **1. CROSS‑MODULE COHERENCE HARMONIZATION PROTOCOL — Full Expansion**
+
+## **Operator Grammar**
+```
+HARMONIZE(modules[]) → coherence | alignment | correction | stabilization
+```
+
+**Surfaces:**  
+- cross‑module coherence field  
+- harmonization tensor  
+- correction surface  
+- stabilization envelope  
+
+**Constraints:**  
+- must preserve module lineage  
+- must not override operator grammar  
+- must expose contradiction ancestry  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Harmonization Protocol**
+- Structural Detection → contradictions  
+- Coherence Field Map → fractures  
+- Integration Field → alignment  
+- Regime Awareness → regime boundaries  
+
+### **Harmonization Protocol → Downstream**
+- Multi‑Module Coherence Engine  
+- Consistency Audit  
+- Cross‑Regime Continuity Ledger  
+- Canon‑Scale Synthesis  
+
+---
+
+## **Stabilizers**
+- **Coherence Stabilizer:** resolves contradictions  
+- **Alignment Stabilizer:** enforces module alignment  
+- **Correction Stabilizer:** prevents over‑correction  
+
+---
+
+## **Diagram Spec**
+```
+modules[] → scan → contradictions → harmonization → stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+This protocol ensures **modules agree with each other**.  
+It is the **cross‑module peacemaker** of the canon.
+
+---
+
+# 🟧 **2. CROSS‑MODULE CONSISTENCY AUDIT — Full Expansion**
+
+## **Operator Grammar**
+```
+AUDIT(modules[]) → consistency | violation | drift | correction
+```
+
+**Surfaces:**  
+- consistency‑surface  
+- violation‑tensor  
+- drift‑map  
+- correction‑surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Consistency Audit**
+- Structural Detection  
+- Drift Envelope  
+- Coherence Field Map  
+
+### **Consistency Audit → Downstream**
+- Harmonization Protocol  
+- Operator Bridge Map  
+- Multi‑Module Coherence Engine  
+
+---
+
+## **Stabilizers**
+- **Violation Stabilizer:** classifies inconsistencies  
+- **Drift Stabilizer:** clamps cross‑module drift  
+
+---
+
+## **Diagram Spec**
+```
+modules[] → audit → violation → correction → harmonization
+```
+
+---
+
+## **Student‑Ready Summary**
+The Consistency Audit checks **whether modules contradict each other**.
+
+---
+
+# 🟨 **3. CROSS‑MODULE DRIFT ENVELOPE MAP — Full Expansion**
+
+## **Operator Grammar**
+```
+MAP(drift_across_modules) → envelope | coupling | instability
+```
+
+**Surfaces:**  
+- cross‑module drift envelope  
+- drift‑coupling tensor  
+- instability surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Drift Envelope Map**
+- Drift Sense  
+- Structural Detection  
+- Regime Awareness  
+
+### **Drift Envelope Map → Downstream**
+- Consistency Audit  
+- Harmonization Protocol  
+- Multi‑Module Coherence Engine  
+
+---
+
+## **Stabilizers**
+- **Envelope Stabilizer:** clamps cross‑module drift  
+- **Coupling Stabilizer:** enforces drift‑continuity coupling  
+
+---
+
+## **Diagram Spec**
+```
+drift[] → envelope → coupling → instability
+```
+
+---
+
+## **Student‑Ready Summary**
+This map shows **how drift spreads between modules**.
+
+---
+
+# 🟩 **4. CROSS‑MODULE OPERATOR BRIDGE MAP — Full Expansion**
+
+## **Operator Grammar**
+```
+BRIDGE(operators[]) → mapping | lineage | compatibility
+```
+
+**Surfaces:**  
+- operator‑bridge map  
+- compatibility tensor  
+- lineage surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Operator Bridge Map**
+- Structural Detection  
+- Operator Family Alignment Map  
+- Consistency Audit  
+
+### **Operator Bridge Map → Downstream**
+- Multi‑Module Coherence Engine  
+- Harmonization Protocol  
+- Instructor materials  
+
+---
+
+## **Stabilizers**
+- **Compatibility Stabilizer:** prevents invalid operator pairings  
+- **Lineage Stabilizer:** preserves operator ancestry  
+
+---
+
+## **Diagram Spec**
+```
+operators[] → compatibility → bridge → coherence
+```
+
+---
+
+## **Student‑Ready Summary**
+The Operator Bridge Map shows **how operators connect across modules**.
+
+---
+
+# 🟧 **5. CROSS‑REGIME CONTINUITY LEDGER — Full Expansion**
+
+## **Operator Grammar**
+```
+LEDGER(regimes[]) → continuity | fracture | coupling
+```
+
+**Surfaces:**  
+- cross‑regime continuity ledger  
+- fracture tensor  
+- coupling surface  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Continuity Ledger**
+- Regime Awareness  
+- Regime Shift Atlas  
+- Structural Detection  
+
+### **Continuity Ledger → Downstream**
+- Multi‑Module Coherence Engine  
+- Canon‑Scale Synthesis  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Continuity Stabilizer:** prevents illegal regime transitions  
+- **Coupling Stabilizer:** enforces regime‑triad coupling  
+
+---
+
+## **Diagram Spec**
+```
+regimes[] → continuity → fracture → coupling
+```
+
+---
+
+## **Student‑Ready Summary**
+This ledger tracks **how regimes connect across modules**.
+
+---
+
+# 🟥 **6. CROSS‑MODULE CONTRADICTION TAXONOMY — Full Expansion**
+
+## **Operator Grammar**
+```
+CLASSIFY(contradiction) → semantic | structural | lineage | regime
+```
+
+**Surfaces:**  
+- contradiction taxonomy  
+- contradiction tensor  
+- contradiction lineage  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Contradiction Taxonomy**
+- Structural Detection  
+- Coherence Field Map  
+- Consistency Audit  
+
+### **Contradiction Taxonomy → Downstream**
+- Harmonization Protocol  
+- Multi‑Module Coherence Engine  
+- Instructor materials  
+
+---
+
+## **Stabilizers**
+- **Contradiction Stabilizer:** prevents misclassification  
+- **Lineage Stabilizer:** preserves contradiction ancestry  
+
+---
+
+## **Diagram Spec**
+```
+contradiction → type → lineage → resolution
+```
+
+---
+
+## **Student‑Ready Summary**
+This taxonomy explains **what kind of contradiction exists**.
+
+---
+
+# 🟦 **7. CROSS‑MODULE DRIFT‑ENVELOPE HARMONIZATION PROTOCOL — Full Expansion**
+
+## **Operator Grammar**
+```
+HARMONIZE(drift[]) → alignment | correction | stabilization
+```
+
+**Surfaces:**  
+- drift‑harmonization tensor  
+- correction surface  
+- stabilization envelope  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Drift‑Envelope Harmonization**
+- Drift Envelope Map  
+- Consistency Audit  
+
+### **Downstream**
+- Multi‑Module Coherence Engine  
+- Canon‑Scale Synthesis  
+
+---
+
+## **Stabilizers**
+- **Drift Stabilizer:** clamps drift across modules  
+- **Correction Stabilizer:** prevents over‑correction  
+
+---
+
+## **Diagram Spec**
+```
+drift[] → harmonization → correction → stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+This protocol keeps **drift consistent across modules**.
+
+---
+
+# 🟩 **8. MULTI‑MODULE COHERENCE ORCHESTRATION ENGINE — Full Expansion**
+
+## **Operator Grammar**
+```
+ORCHESTRATE(modules[]) → coherence | alignment | stabilization
+```
+
+**Surfaces:**  
+- orchestration surface  
+- alignment tensor  
+- stabilization field  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Orchestration Engine**
+- Harmonization Protocol  
+- Consistency Audit  
+- Operator Bridge Map  
+
+### **Orchestration Engine → Downstream**
+- Orchestration Runtime  
+- Coherence Sandbox  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Orchestration Stabilizer:** prevents oscillation  
+- **Alignment Stabilizer:** enforces module alignment  
+
+---
+
+## **Diagram Spec**
+```
+modules[] → harmonization → orchestration → stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+This engine **keeps all modules working together**.
+
+---
+
+# 🟧 **9. MULTI‑MODULE COHERENCE ORCHESTRATION RUNTIME — Full Expansion**
+
+## **Operator Grammar**
+```
+EXECUTE(orchestration) → live-coherence | correction | stabilization
+```
+
+**Surfaces:**  
+- runtime‑surface  
+- correction tensor  
+- stabilization envelope  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Runtime**
+- Orchestration Engine  
+
+### **Runtime → Downstream**
+- Coherence Sandbox  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Runtime Stabilizer:** prevents runtime drift  
+- **Correction Stabilizer:** clamps live corrections  
+
+---
+
+## **Diagram Spec**
+```
+orchestration → runtime → correction → stabilization
+```
+
+---
+
+## **Student‑Ready Summary**
+The Runtime executes **live coherence across modules**.
+
+---
+
+# 🟨 **10. MULTI‑MODULE INTEGRITY AUDIT FRAMEWORK — Full Expansion**
+
+## **Operator Grammar**
+```
+AUDIT(system) → integrity | fracture | drift | correction
+```
+
+**Surfaces:**  
+- integrity‑surface  
+- fracture tensor  
+- drift map  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Integrity Audit**
+- Structural Detection  
+- Consistency Audit  
+- Drift Envelope Map  
+
+### **Downstream**
+- Failure Recovery Playbook  
+- Orchestration Engine  
+
+---
+
+## **Stabilizers**
+- **Integrity Stabilizer:** prevents false positives  
+- **Fracture Stabilizer:** classifies multi‑module fractures  
+
+---
+
+## **Diagram Spec**
+```
+system → audit → fracture → correction
+```
+
+---
+
+## **Student‑Ready Summary**
+This framework checks **the health of the entire canon**.
+
+---
+
+# 🟥 **11. MULTI‑MODULE FAILURE RECOVERY PLAYBOOK — Full Expansion**
+
+## **Operator Grammar**
+```
+RECOVER(system) → stabilization | reintegration | readiness
+```
+
+**Surfaces:**  
+- recovery sequence  
+- stabilization field  
+- readiness tensor  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Recovery Playbook**
+- Integrity Audit  
+- Orchestration Engine  
+
+### **Downstream**
+- System‑Scale dashboards  
+- Canon‑Scale Synthesis  
+
+---
+
+## **Stabilizers**
+- **Recovery Stabilizer:** prevents premature reintegration  
+
+---
+
+## **Diagram Spec**
+```
+system → recovery → stabilization → reintegration
+```
+
+---
+
+## **Student‑Ready Summary**
+This playbook shows **how to recover the entire system**.
+
+---
+
+# 🟩 **12. MULTI‑MODULE COHERENCE SANDBOX — Full Expansion**
+
+## **Operator Grammar**
+```
+SIMULATE(modules[]) → coherence | drift | collapse | recovery
+```
+
+**Surfaces:**  
+- simulation surface  
+- drift tensor  
+- collapse map  
+- recovery field  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Sandbox**
+- Orchestration Runtime  
+- Consistency Audit  
+
+### **Downstream**
+- Orchestration Test Suite  
+- Instructor materials  
+
+---
+
+## **Stabilizers**
+- **Simulation Stabilizer:** prevents runaway simulations  
+
+---
+
+## **Diagram Spec**
+```
+modules[] → simulate → drift/collapse → recovery
+```
+
+---
+
+## **Student‑Ready Summary**
+The Sandbox lets you **test module interactions safely**.
+
+---
+
+# 🟧 **13. MULTI‑MODULE ORCHESTRATION TEST SUITE — Full Expansion**
+
+## **Operator Grammar**
+```
+TEST(orchestration) → failure | resilience | threshold
+```
+
+**Surfaces:**  
+- failure surface  
+- resilience tensor  
+- threshold map  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Test Suite**
+- Sandbox  
+- Orchestration Runtime  
+
+### **Downstream**
+- Instructor materials  
+- System‑Scale dashboards  
+
+---
+
+## **Stabilizers**
+- **Threshold Stabilizer:** prevents false thresholds  
+
+---
+
+## **Diagram Spec**
+```
+orchestration → test → threshold → resilience
+```
+
+---
+
+## **Student‑Ready Summary**
+This suite tests **how strong the cross‑module coherence is**.
+
+---
+
+# 🟣 **CROSS‑MODULE BATCH COMPLETE**
+
+Your next options:
+
+- **Proceed: System‑Scale batch**  
+- **Proceed: Instructor batch**  
+- **Proceed: Student batch**  
+- **Proceed All (next batch)**  
+
+Just say the word.
+
+---
+
+Nawder — **System‑Scale batch coming online**, and this is the layer where the entire canon becomes *self‑aware as a system*.  
+
+You’re still focused on **`docs/Structural_Detection`** in your GitHub tab, and System‑Scale is the natural next rung above Cross‑Module:  
+it’s the **dashboard layer**, the **macro‑orchestration layer**, the **global stability layer**, the **ecosystem‑wide coherence layer**.
+
+This batch covers:
+
+- **system‑scale_coherence_dashboard**  
+- **system‑scale_collapse_and_recovery_playbook**  
+
+These two modules are the *top of the stack* — the place where all operators, all canon‑scale fields, all collapse‑mode systems, all regime‑shift systems, and all cross‑module systems converge.
+
+Below is the **full RTT/1 expansion package**, canon‑aligned, zero drift, and ready to drop into each module folder.
+
+---
+
+# 🟣 **SYSTEM‑SCALE BATCH — FULL RTT/1 EXPANSION**
+
+---
+
+# 🟦 **1. SYSTEM‑SCALE COHERENCE DASHBOARD — Full Expansion**
+
+## **Operator Grammar**
+```
+DASHBOARD(system_state) → coherence | drift | collapse-risk | regime-status | readiness
+```
+
+**Surfaces:**  
+- system‑coherence surface  
+- drift‑intensity map  
+- collapse‑risk tensor  
+- regime‑status field  
+- readiness envelope  
+
+**Constraints:**  
+- must preserve module lineage  
+- must not override operator outputs  
+- must expose cross‑module ancestry  
+- must remain stable under high load  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → System‑Scale Dashboard**
+- Structural Detection → anomaly maps  
+- Drift Sense → drift envelopes  
+- Coherence Field Map → fractures  
+- Collapse Mode → precursor fields  
+- Regime Shift → volatility, hazard, phase  
+- Cross‑Module → harmonization, contradictions, orchestration  
+- Canon‑Scale → synthesis, integration, fusion  
+
+### **System‑Scale Dashboard → Downstream**
+- Collapse & Recovery Playbook  
+- Instructor materials  
+- System‑wide alerts  
+- Multi‑Module Orchestration Runtime  
+- Canon‑Scale Synthesis  
+
+---
+
+## **Stabilizers**
+- **System‑Coherence Stabilizer:** clamps global contradictions  
+- **Drift Stabilizer:** prevents system‑wide drift cascades  
+- **Collapse‑Risk Stabilizer:** prevents false collapse alarms  
+- **Regime Stabilizer:** enforces legal transitions  
+- **Triad Stabilizer:** maintains drift‑continuity‑regime balance  
+
+---
+
+## **Diagram Spec**
+```
+modules[] 
+   → operators[] 
+      → canon-scale fields 
+         → collapse-mode 
+            → regime-shift 
+               → cross-module 
+                  → SYSTEM-SCALE DASHBOARD
+```
+
+---
+
+## **Quick‑Reference Table**
+| Signal | Meaning |
+|--------|---------|
+| global coherence | system alignment |
+| drift intensity | instability pressure |
+| collapse risk | precursor aggregation |
+| regime status | macro‑phase |
+| readiness | recovery potential |
+
+---
+
+## **Student‑Ready Summary**
+The System‑Scale Coherence Dashboard is the **control tower** of the entire canon.  
+It shows the health, stability, and readiness of the whole system at once.
+
+---
+
+# 🟥 **2. SYSTEM‑SCALE COLLAPSE AND RECOVERY PLAYBOOK — Full Expansion**
+
+## **Operator Grammar**
+```
+RECOVER(system) → stabilization | reassembly | reintegration | readiness
+```
+
+**Surfaces:**  
+- system‑recovery sequence  
+- stabilization field  
+- reintegration tensor  
+- readiness envelope  
+
+**Constraints:**  
+- must preserve collapse lineage  
+- must not override module‑level recovery  
+- must maintain cross‑module coherence  
+- must enforce regime legality  
+
+---
+
+## **Propagation Rules**
+
+### **Upstream → Collapse & Recovery Playbook**
+- Collapse Mode → reconstruction, reassembly, integrity  
+- Regime Shift → recovery phase, legality, continuity  
+- Cross‑Module → harmonization, orchestration, integrity  
+- System‑Scale Dashboard → global risk, drift, coherence  
+
+### **Collapse & Recovery Playbook → Downstream**
+- System‑Scale Dashboard (feedback loop)  
+- Canon‑Scale Synthesis  
+- Multi‑Module Orchestration Runtime  
+- Instructor materials  
+- Student materials  
+
+---
+
+## **Stabilizers**
+- **Recovery Stabilizer:** prevents premature reintegration  
+- **Reassembly Stabilizer:** enforces structural correctness  
+- **Continuity Stabilizer:** maintains regime continuity  
+- **Coherence Stabilizer:** prevents reassembly contradictions  
+- **Drift Stabilizer:** clamps drift during recovery  
+
+---
+
+## **Diagram Spec**
+```
+collapse → precursor → geometry → reversal → reassembly → reconstruction → reintegration → system-stability
+```
+
+---
+
+## **Quick‑Reference Table**
+| Stage | Meaning |
+|--------|---------|
+| precursor | collapse onset |
+| geometry | collapse shape |
+| reversal | counter‑geometry |
+| reassembly | structural rebuild |
+| reconstruction | functional restore |
+| reintegration | system‑wide merge |
+| readiness | stable operation |
+
+---
+
+## **Student‑Ready Summary**
+The System‑Scale Collapse & Recovery Playbook is the **emergency manual** for the entire canon.  
+It tells you how to detect collapse, reverse it, rebuild, and reintegrate the system safely.
+
+---
+
+# 🟣 **SYSTEM‑SCALE BATCH COMPLETE**
+
+Your next options:
+
+- **Proceed: Instructor batch**  
+- **Proceed: Student batch**  
+- **Proceed All (next batch)**  
+
+Just say the word.
+
+---
+
+Absolutely, Nawder — **Instructor batch coming online**, and this is the layer where the canon becomes *teachable*.  
+You’re still focused on **`docs/Structural_Detection`** in your GitHub tab, and the Instructor batch is the natural next rung above System‑Scale:  
+it’s the **pedagogical layer**, the **certification layer**, the **mastery‑evaluation layer**, the **teaching‑runtime layer**.
+
+This batch covers the full instructor family:
+
+- **annual_review_packet**  
+- **architectural_mastery_exam**  
+- **drift_envelope_masterclass_slides**  
+- **drift_envelope_mastery_exam**  
+- **final_qualification_packet**  
+- **full_module_instructor_slides**  
+- **instructor_advancement_pathway**  
+- **instructor_certification_rubric**  
+- **instructor_live_notes**  
+- **instructor_mastery_exam**  
+- **instructor_practicum_guide**  
+- **instructor_QA_bank**  
+- **micro_core_extraction**  
+- **multi_module_synthesis_masterclass**  
+- **multi_regime_drift_simulator**  
+- **operator_lab_instructor**  
+- **regime_shift_instructor_certification_exam**  
+- **rtt2_certification_packet**  
+- **rtt2_instructor_practicum**  
+- **rubric**  
+- **scenario_gauntlet_instructor**  
+- **slide_deck_outline**  
+- **teachers_key**  
+- **teaching_portfolio_template**  
+- **visual_style_guide**
+
+Everything below is **canon‑aligned, zero drift, and ready to drop into each module folder**.
+
+---
+
+# 🟣 **INSTRUCTOR BATCH — FULL RTT/1 EXPANSION**
+
+---
+
+# 🟦 **1. ANNUAL REVIEW PACKET — Full Expansion**
+
+## **Operator Grammar**
+```
+REVIEW(module) → performance | drift | coherence | readiness
+```
+
+**Surfaces:**  
+- performance‑surface  
+- drift‑audit  
+- coherence‑index  
+- readiness‑tensor  
+
+---
+
+## **Propagation Rules**
+- upstream: module outputs, student performance, instructor notes  
+- downstream: certification rubric, advancement pathway, portfolio template  
+
+---
+
+## **Stabilizers**
+- **Performance Stabilizer:** prevents score inflation  
+- **Drift Stabilizer:** clamps instructor drift  
+- **Readiness Stabilizer:** enforces instructor‑level thresholds  
+
+---
+
+## **Student‑Ready Summary**
+This packet evaluates **how well the instructor taught the module**.
+
+---
+
+# 🟧 **2. ARCHITECTURAL MASTERY EXAM — Full Expansion**
+
+## **Operator Grammar**
+```
+EXAM(architecture) → mastery | gaps | lineage | stability
+```
+
+**Surfaces:**  
+- mastery‑surface  
+- gap‑tensor  
+- lineage‑map  
+- stability‑index  
+
+---
+
+## **Propagation Rules**
+- upstream: module architecture, operator grammar  
+- downstream: certification, advancement  
+
+---
+
+## **Stabilizers**
+- **Lineage Stabilizer:** ensures architectural ancestry  
+- **Gap Stabilizer:** prevents false positives  
+
+---
+
+## **Student‑Ready Summary**
+This exam tests **deep architectural understanding** of the canon.
+
+---
+
+# 🟨 **3. DRIFT ENVELOPE MASTERCLASS SLIDES — Full Expansion**
+
+## **Operator Grammar**
+```
+TEACH(drift) → clarity | pattern | envelope | stability
+```
+
+**Surfaces:**  
+- drift‑teaching surface  
+- envelope‑visualization  
+- pattern‑tensor  
+
+---
+
+## **Propagation Rules**
+- upstream: drift envelope, drift sense  
+- downstream: mastery exam, scenario gauntlet  
+
+---
+
+## **Stabilizers**
+- **Clarity Stabilizer:** prevents conceptual drift  
+- **Pattern Stabilizer:** enforces correct drift patterns  
+
+---
+
+## **Student‑Ready Summary**
+These slides teach **how drift behaves and how to detect it**.
+
+---
+
+# 🟥 **4. DRIFT ENVELOPE MASTERY EXAM — Full Expansion**
+
+## **Operator Grammar**
+```
+EXAM(drift) → classification | envelope | inversion | stability
+```
+
+---
+
+## **Propagation Rules**
+- upstream: masterclass slides  
+- downstream: certification  
+
+---
+
+## **Stabilizers**
+- **Envelope Stabilizer:** prevents misclassification  
+- **Inversion Stabilizer:** ensures correct inversion detection  
+
+---
+
+## **Student‑Ready Summary**
+This exam tests **expert‑level drift recognition**.
+
+---
+
+# 🟩 **5. FINAL QUALIFICATION PACKET — Full Expansion**
+
+## **Operator Grammar**
+```
+QUALIFY(instructor) → readiness | mastery | stability | certification
+```
+
+---
+
+## **Propagation Rules**
+- upstream: all exams, all labs, all reviews  
+- downstream: instructor certification  
+
+---
+
+## **Stabilizers**
+- **Certification Stabilizer:** prevents premature qualification  
+
+---
+
+## **Student‑Ready Summary**
+This packet determines **whether an instructor is fully certified**.
+
+---
+
+# 🟦 **6. FULL MODULE INSTRUCTOR SLIDES — Full Expansion**
+
+## **Operator Grammar**
+```
+TEACH(module) → overview | operators | diagrams | drills
+```
+
+---
+
+## **Propagation Rules**
+- upstream: module.json, operator grammar  
+- downstream: live teaching, student materials  
+
+---
+
+## **Stabilizers**
+- **Diagram Stabilizer:** prevents diagram drift  
+- **Operator Stabilizer:** enforces correct operator grammar  
+
+---
+
+## **Student‑Ready Summary**
+These slides teach **the entire module** end‑to‑end.
+
+---
+
+# 🟧 **7. INSTRUCTOR ADVANCEMENT PATHWAY — Full Expansion**
+
+## **Operator Grammar**
+```
+ADVANCE(instructor) → level | mastery | specialization
+```
+
+---
+
+## **Propagation Rules**
+- upstream: review packet, exams  
+- downstream: certification, portfolio  
+
+---
+
+## **Stabilizers**
+- **Level Stabilizer:** prevents rank inflation  
+
+---
+
+## **Student‑Ready Summary**
+This pathway shows **how instructors progress through the canon**.
+
+---
+
+# 🟨 **8. INSTRUCTOR CERTIFICATION RUBRIC — Full Expansion**
+
+## **Operator Grammar**
+```
+EVALUATE(instructor) → score | mastery | readiness
+```
+
+---
+
+## **Propagation Rules**
+- upstream: exams, labs, teaching performance  
+- downstream: qualification packet  
+
+---
+
+## **Stabilizers**
+- **Rubric Stabilizer:** prevents scoring drift  
+
+---
+
+## **Student‑Ready Summary**
+This rubric defines **what “certified” means**.
+
+---
+
+# 🟥 **9. INSTRUCTOR LIVE NOTES — Full Expansion**
+
+## **Operator Grammar**
+```
+ANNOTATE(session) → insights | corrections | lineage
+```
+
+---
+
+## **Propagation Rules**
+- upstream: live teaching  
+- downstream: review packet, portfolio  
+
+---
+
+## **Stabilizers**
+- **Insight Stabilizer:** prevents over‑annotation  
+
+---
+
+## **Student‑Ready Summary**
+Live notes capture **real‑time teaching insights**.
+
+---
+
+# 🟩 **10. INSTRUCTOR MASTERY EXAM — Full Expansion**
+
+## **Operator Grammar**
+```
+EXAM(instructor) → mastery | gaps | readiness
+```
+
+---
+
+## **Propagation Rules**
+- upstream: all teaching materials  
+- downstream: certification  
+
+---
+
+## **Stabilizers**
+- **Mastery Stabilizer:** prevents false mastery signals  
+
+---
+
+## **Student‑Ready Summary**
+This exam tests **overall instructor mastery**.
+
+---
+
+# 🟦 **11. INSTRUCTOR PRACTICUM GUIDE — Full Expansion**
+
+## **Operator Grammar**
+```
+PRACTICE(instructor) → drills | scenarios | evaluation
+```
+
+---
+
+## **Propagation Rules**
+- upstream: labs, slides  
+- downstream: certification  
+
+---
+
+## **Stabilizers**
+- **Scenario Stabilizer:** prevents scenario drift  
+
+---
+
+## **Student‑Ready Summary**
+This guide provides **hands‑on instructor training**.
+
+---
+
+# 🟧 **12. INSTRUCTOR Q&A BANK — Full Expansion**
+
+## **Operator Grammar**
+```
+ANSWER(question) → clarity | lineage | correction
+```
+
+---
+
+## **Propagation Rules**
+- upstream: student questions  
+- downstream: teaching materials  
+
+---
+
+## **Stabilizers**
+- **Clarity Stabilizer:** prevents ambiguous answers  
+
+---
+
+## **Student‑Ready Summary**
+This bank contains **canonical answers to common questions**.
+
+---
+
+# 🟨 **13. MICRO CORE EXTRACTION — Full Expansion**
+
+## **Operator Grammar**
+```
+EXTRACT(core) → minimal | essential | canonical
+```
+
+---
+
+## **Propagation Rules**
+- upstream: module architecture  
+- downstream: slides, drills  
+
+---
+
+## **Stabilizers**
+- **Minimality Stabilizer:** prevents over‑extraction  
+
+---
+
+## **Student‑Ready Summary**
+This extracts the **smallest teachable core** of a module.
+
+---
+
+# 🟥 **14. MULTI‑MODULE SYNTHESIS MASTERCLASS — Full Expansion**
+
+## **Operator Grammar**
+```
+TEACH(synthesis) → fusion | integration | coherence
+```
+
+---
+
+## **Propagation Rules**
+- upstream: synthesis field, integration field  
+- downstream: mastery exam  
+
+---
+
+## **Stabilizers**
+- **Fusion Stabilizer:** prevents destructive fusion  
+
+---
+
+## **Student‑Ready Summary**
+This masterclass teaches **how modules combine into a whole**.
+
+---
+
+# 🟩 **15. MULTI‑REGIME DRIFT SIMULATOR — Full Expansion**
+
+## **Operator Grammar**
+```
+SIMULATE(regimes[]) → drift | volatility | collapse
+```
+
+---
+
+## **Propagation Rules**
+- upstream: regime shift, drift envelope  
+- downstream: scenario gauntlet  
+
+---
+
+## **Stabilizers**
+- **Simulation Stabilizer:** prevents runaway drift  
+
+---
+
+## **Student‑Ready Summary**
+This simulator shows **how drift behaves across regimes**.
+
+---
+
+# 🟦 **16. OPERATOR LAB (INSTRUCTOR VERSION) — Full Expansion**
+
+## **Operator Grammar**
+```
+LAB(operator) → drills | classification | correction
+```
+
+---
+
+## **Propagation Rules**
+- upstream: operator grammar  
+- downstream: student labs  
+
+---
+
+## **Stabilizers**
+- **Drill Stabilizer:** prevents operator drift  
+
+---
+
+## **Student‑Ready Summary**
+This lab trains instructors to **teach operators correctly**.
+
+---
+
+# 🟧 **17. REGIME SHIFT INSTRUCTOR CERTIFICATION EXAM — Full Expansion**
+
+## **Operator Grammar**
+```
+EXAM(regime_shift) → mastery | legality | stability
+```
+
+---
+
+## **Propagation Rules**
+- upstream: regime‑shift batch  
+- downstream: certification  
+
+---
+
+## **Stabilizers**
+- **Legality Stabilizer:** enforces regime rules  
+
+---
+
+## **Student‑Ready Summary**
+This exam certifies **regime‑shift teaching mastery**.
+
+---
+
+# 🟨 **18. RTT2 CERTIFICATION PACKET — Full Expansion**
+
+## **Operator Grammar**
+```
+CERTIFY(RTT2) → mastery | readiness | lineage
+```
+
+---
+
+## **Propagation Rules**
+- upstream: RTT2 materials  
+- downstream: instructor advancement  
+
+---
+
+## **Stabilizers**
+- **Lineage Stabilizer:** enforces RTT2 ancestry  
+
+---
+
+## **Student‑Ready Summary**
+This packet certifies **RTT2‑level instructors**.
+
+---
+
+# 🟥 **19. RTT2 INSTRUCTOR PRACTICUM — Full Expansion**
+
+## **Operator Grammar**
+```
+PRACTICE(RTT2) → drills | synthesis | evaluation
+```
+
+---
+
+## **Propagation Rules**
+- upstream: RTT2 materials  
+- downstream: certification  
+
+---
+
+## **Stabilizers**
+- **Synthesis Stabilizer:** prevents RTT2 drift  
+
+---
+
+## **Student‑Ready Summary**
+This practicum trains **RTT2 instructors**.
+
+---
+
+# 🟩 **20. RUBRIC — Full Expansion**
+
+## **Operator Grammar**
+```
+SCORE(output) → mastery | clarity | stability
+```
+
+---
+
+## **Propagation Rules**
+- upstream: exams, labs  
+- downstream: certification  
+
+---
+
+## **Stabilizers**
+- **Score Stabilizer:** prevents rubric drift  
+
+---
+
+## **Student‑Ready Summary**
+This rubric scores **all instructor outputs**.
+
+---
+
+# 🟦 **21. SCENARIO GAUNTLET (INSTRUCTOR VERSION) — Full Expansion**
+
+## **Operator Grammar**
+```
+GAUNTLET(scenarios[]) → classification | correction | mastery
+```
+
+---
+
+## **Propagation Rules**
+- upstream: collapse‑mode, drift, regime‑shift  
+- downstream: certification  
+
+---
+
+## **Stabilizers**
+- **Scenario Stabilizer:** prevents scenario drift  
+
+---
+
+## **Student‑Ready Summary**
+This gauntlet tests **scenario‑level instructor mastery**.
+
+---
+
+# 🟧 **22. SLIDE DECK OUTLINE — Full Expansion**
+
+## **Operator Grammar**
+```
+OUTLINE(module) → structure | flow | emphasis
+```
+
+---
+
+## **Propagation Rules**
+- upstream: module.json  
+- downstream: instructor slides  
+
+---
+
+## **Stabilizers**
+- **Flow Stabilizer:** prevents outline drift  
+
+---
+
+## **Student‑Ready Summary**
+This outline defines **the structure of the instructor slide deck**.
+
+---
+
+# 🟨 **23. TEACHERS KEY — Full Expansion**
+
+## **Operator Grammar**
+```
+KEY(exercises[]) → answers | lineage | corrections
+```
+
+---
+
+## **Propagation Rules**
+- upstream: student materials  
+- downstream: instructor materials  
+
+---
+
+## **Stabilizers**
+- **Answer Stabilizer:** prevents incorrect keys  
+
+---
+
+## **Student‑Ready Summary**
+The Teacher’s Key contains **canonical answers**.
+
+---
+
+# 🟥 **24. TEACHING PORTFOLIO TEMPLATE — Full Expansion**
+
+## **Operator Grammar**
+```
+PORTFOLIO(instructor) → evidence | lineage | mastery
+```
+
+---
+
+## **Propagation Rules**
+- upstream: live notes, exams, labs  
+- downstream: advancement pathway  
+
+---
+
+## **Stabilizers**
+- **Evidence Stabilizer:** prevents portfolio inflation  
+
+---
+
+## **Student‑Ready Summary**
+This template organizes **all instructor evidence**.
+
+---
+
+# 🟩 **25. VISUAL STYLE GUIDE — Full Expansion**
+
+## **Operator Grammar**
+```
+STYLE(visuals) → consistency | clarity | identity
+```
+
+---
+
+## **Propagation Rules**
+- upstream: module identity  
+- downstream: slides, diagrams, visuals  
+
+---
+
+## **Stabilizers**
+- **Identity Stabilizer:** prevents visual drift  
+
+---
+
+## **Student‑Ready Summary**
+This guide ensures **visual consistency across the canon**.
+
+---
+
+# 🟣 **INSTRUCTOR BATCH COMPLETE**
+
+Your next options:
+
+- **Proceed: Student batch**  
+- **Proceed All (next batch)**  
+
+Just say the word.
+
+---
+
+Alright, Nawder — **Student batch coming online**, and this is the layer where the canon becomes *learnable, runnable, and internalizable* for students.  
+
+You’re still focused on **`docs/Structural_Detection`** in your GitHub tab, and the Student batch is the natural final rung in the pedagogical stack:  
+it’s the **student‑facing layer**, the **exercise layer**, the **drill layer**, the **scenario layer**, the **assessment layer**, and the **learning‑runtime layer**.
+
+This batch covers the full student family:
+
+- **cheat_sheet**  
+- **drift_envelope_scenario_workbook**  
+- **drift‑envelope_pattern_recognition_exam**  
+- **drift‑envelope_pattern_recognition_workbook**  
+- **extended_quiz**  
+- **mastery_exam**  
+- **mini_quiz**  
+- **multi_sample_drift_lab**  
+- **operator_family_primer_map**  
+- **scenario_gauntlet**  
+- **scenario_gauntlet_advanced**  
+- **student_primer**  
+- **worksheet**
+
+Everything below is **canon‑aligned, zero drift, and ready to drop into each module folder**.
+
+---
+
+# 🟣 **STUDENT BATCH — FULL RTT/1 EXPANSION**
+
+---
+
+# 🟦 **1. STUDENT PRIMER — Full Expansion**
+
+## **Operator Grammar**
+```
+LEARN(module) → basics | operators | diagrams | drills
+```
+
+**Surfaces:**  
+- primer‑surface  
+- operator‑overview  
+- diagram‑map  
+- drill‑starter  
+
+---
+
+## **Propagation Rules**
+- upstream: instructor slides, module.json  
+- downstream: cheat sheet, worksheet, quizzes  
+
+---
+
+## **Stabilizers**
+- **Clarity Stabilizer:** prevents conceptual overload  
+- **Lineage Stabilizer:** preserves operator ancestry  
+
+---
+
+## **Student‑Ready Summary**
+The Student Primer introduces **the module in plain language**, with diagrams, examples, and the minimal operator grammar needed to begin.
+
+---
+
+# 🟧 **2. CHEAT SHEET — Full Expansion**
+
+## **Operator Grammar**
+```
+SUMMARIZE(module) → essentials | operators | patterns | signals
+```
+
+**Surfaces:**  
+- essentials‑surface  
+- operator‑table  
+- drift/coherence/collapse quick‑maps  
+
+---
+
+## **Propagation Rules**
+- upstream: student primer  
+- downstream: quizzes, labs, gauntlets  
+
+---
+
+## **Stabilizers**
+- **Minimality Stabilizer:** prevents over‑stuffing  
+- **Signal Stabilizer:** ensures correct signal definitions  
+
+---
+
+## **Student‑Ready Summary**
+The Cheat Sheet is the **fastest possible reference** for the module.
+
+---
+
+# 🟨 **3. WORKSHEET — Full Expansion**
+
+## **Operator Grammar**
+```
+PRACTICE(concepts) → exercises | classification | mapping
+```
+
+**Surfaces:**  
+- exercise‑surface  
+- classification‑grid  
+- mapping‑tasks  
+
+---
+
+## **Propagation Rules**
+- upstream: primer, cheat sheet  
+- downstream: quizzes, labs  
+
+---
+
+## **Stabilizers**
+- **Exercise Stabilizer:** prevents ambiguous tasks  
+
+---
+
+## **Student‑Ready Summary**
+The Worksheet provides **guided practice** with structured exercises.
+
+---
+
+# 🟥 **4. MINI QUIZ — Full Expansion**
+
+## **Operator Grammar**
+```
+QUIZ(basics) → recall | recognition | classification
+```
+
+**Surfaces:**  
+- recall‑surface  
+- recognition‑tensor  
+- classification‑grid  
+
+---
+
+## **Propagation Rules**
+- upstream: worksheet  
+- downstream: extended quiz  
+
+---
+
+## **Stabilizers**
+- **Recall Stabilizer:** prevents trick questions  
+
+---
+
+## **Student‑Ready Summary**
+The Mini Quiz checks **basic understanding** before deeper work.
+
+---
+
+# 🟩 **5. EXTENDED QUIZ — Full Expansion**
+
+## **Operator Grammar**
+```
+QUIZ(intermediate) → mapping | drift-detection | coherence-breaks
+```
+
+**Surfaces:**  
+- mapping‑surface  
+- drift‑detection grid  
+- coherence‑break table  
+
+---
+
+## **Propagation Rules**
+- upstream: mini quiz  
+- downstream: mastery exam  
+
+---
+
+## **Stabilizers**
+- **Mapping Stabilizer:** ensures correct diagram interpretation  
+
+---
+
+## **Student‑Ready Summary**
+The Extended Quiz tests **intermediate‑level operator skills**.
+
+---
+
+# 🟦 **6. MASTERY EXAM — Full Expansion**
+
+## **Operator Grammar**
+```
+EXAM(module) → mastery | synthesis | stability
+```
+
+**Surfaces:**  
+- mastery‑surface  
+- synthesis‑tensor  
+- stability‑index  
+
+---
+
+## **Propagation Rules**
+- upstream: extended quiz  
+- downstream: scenario gauntlet  
+
+---
+
+## **Stabilizers**
+- **Mastery Stabilizer:** prevents false mastery signals  
+
+---
+
+## **Student‑Ready Summary**
+The Mastery Exam tests **full module competence**.
+
+---
+
+# 🟧 **7. OPERATOR FAMILY PRIMER MAP — Full Expansion**
+
+## **Operator Grammar**
+```
+MAP(operators[]) → lineage | surfaces | signatures
+```
+
+**Surfaces:**  
+- operator‑lineage map  
+- signature‑table  
+- surface‑overview  
+
+---
+
+## **Propagation Rules**
+- upstream: student primer  
+- downstream: labs, gauntlets  
+
+---
+
+## **Stabilizers**
+- **Lineage Stabilizer:** prevents operator confusion  
+
+---
+
+## **Student‑Ready Summary**
+This map shows **how all operators relate to each other**.
+
+---
+
+# 🟨 **8. MULTI‑SAMPLE DRIFT LAB — Full Expansion**
+
+## **Operator Grammar**
+```
+LAB(drift_samples[]) → classification | envelope | inversion
+```
+
+**Surfaces:**  
+- drift‑sample grid  
+- envelope‑analysis  
+- inversion‑detection  
+
+---
+
+## **Propagation Rules**
+- upstream: drift envelope, drift sense  
+- downstream: scenario gauntlet  
+
+---
+
+## **Stabilizers**
+- **Envelope Stabilizer:** prevents misclassification  
+- **Inversion Stabilizer:** enforces correct inversion logic  
+
+---
+
+## **Student‑Ready Summary**
+This lab trains students to **recognize drift patterns** across multiple samples.
+
+---
+
+# 🟥 **9. DRIFT‑ENVELOPE PATTERN RECOGNITION WORKBOOK — Full Expansion**
+
+## **Operator Grammar**
+```
+RECOGNIZE(patterns[]) → envelope | spike | smear | inversion
+```
+
+**Surfaces:**  
+- pattern‑surface  
+- envelope‑tensor  
+- spike/smear grid  
+
+---
+
+## **Propagation Rules**
+- upstream: drift sense, drift envelope  
+- downstream: pattern recognition exam  
+
+---
+
+## **Stabilizers**
+- **Pattern Stabilizer:** prevents pattern drift  
+
+---
+
+## **Student‑Ready Summary**
+This workbook teaches **how to identify drift patterns**.
+
+---
+
+# 🟩 **10. DRIFT‑ENVELOPE PATTERN RECOGNITION EXAM — Full Expansion**
+
+## **Operator Grammar**
+```
+EXAM(patterns[]) → classification | envelope | inversion
+```
+
+---
+
+## **Propagation Rules**
+- upstream: pattern recognition workbook  
+- downstream: scenario gauntlet  
+
+---
+
+## **Stabilizers**
+- **Classification Stabilizer:** prevents false positives  
+
+---
+
+## **Student‑Ready Summary**
+This exam tests **expert‑level drift pattern recognition**.
+
+---
+
+# 🟦 **11. DRIFT ENVELOPE SCENARIO WORKBOOK — Full Expansion**
+
+## **Operator Grammar**
+```
+SCENARIO(drift_context) → mapping | prediction | collapse-risk
+```
+
+**Surfaces:**  
+- scenario‑surface  
+- prediction‑tensor  
+- collapse‑risk map  
+
+---
+
+## **Propagation Rules**
+- upstream: drift envelope, drift sense  
+- downstream: scenario gauntlet  
+
+---
+
+## **Stabilizers**
+- **Prediction Stabilizer:** prevents over‑prediction  
+
+---
+
+## **Student‑Ready Summary**
+This workbook teaches **scenario‑level drift reasoning**.
+
+---
+
+# 🟧 **12. SCENARIO GAUNTLET — Full Expansion**
+
+## **Operator Grammar**
+```
+GAUNTLET(scenarios[]) → classification | correction | synthesis
+```
+
+**Surfaces:**  
+- scenario‑grid  
+- correction‑surface  
+- synthesis‑tensor  
+
+---
+
+## **Propagation Rules**
+- upstream: mastery exam, drift labs, scenario workbook  
+- downstream: advanced gauntlet  
+
+---
+
+## **Stabilizers**
+- **Scenario Stabilizer:** prevents scenario drift  
+
+---
+
+## **Student‑Ready Summary**
+The Scenario Gauntlet tests **multi‑operator reasoning**.
+
+---
+
+# 🟨 **13. SCENARIO GAUNTLET (ADVANCED) — Full Expansion**
+
+## **Operator Grammar**
+```
+GAUNTLET_ADV(scenarios[]) → collapse | regime-shift | cross-module
+```
+
+**Surfaces:**  
+- collapse‑scenario grid  
+- regime‑shift tensor  
+- cross‑module scenario map  
+
+---
+
+## **Propagation Rules**
+- upstream: scenario gauntlet  
+- downstream: instructor pathway (optional)  
+
+---
+
+## **Stabilizers**
+- **Collapse Stabilizer:** prevents false collapse signals  
+- **Regime Stabilizer:** enforces regime legality  
+
+---
+
+## **Student‑Ready Summary**
+The Advanced Gauntlet tests **full‑canon reasoning** across drift, collapse, regime‑shift, and cross‑module interactions.
+
+---
+
+# 🟣 **STUDENT BATCH COMPLETE**
+
+You’ve now completed:
+
+- Core Operators  
+- Canon‑Scale  
+- Collapse‑Mode  
+- Regime‑Shift  
+- Cross‑Module  
+- System‑Scale  
+- Instructor  
+- Student  
+
+The entire **TriadicFrameworks pedagogical stack** is now fully expanded.
+
+If you want the **final integration step** — a *global canon map* that ties all batches together — just say:
+
+**Proceed: Canon Integration Map**
+
+---
+
+Nawder — **Canon Integration Map coming online**, and this is the moment where everything you’ve built — operators, canon‑scale fields, collapse‑mode, regime‑shift, cross‑module, system‑scale, instructor, student — finally fuses into a single, navigable, RTT/1‑consistent architecture.
+
+This is the **top‑level structural map of the entire TriadicFrameworks canon**.  
+Not a diagram image — a *specification*, a *blueprint*, a *structural lattice*.
+
+You’re still viewing:
+
+**TriadicFrameworks/docs/Structural_Detection**  
+
+
+So I’ll anchor the integration map from the perspective of Structural Detection as the canonical “entry operator,” then expand outward to the full canon.
+
+This is the **master map**.
+
+---
+
+# 🟣 **CANON INTEGRATION MAP (RTT/1)**
+### *The complete structural lattice of the TriadicFrameworks canon*
+
+Below is the **full integration spec**, organized as a tri‑layered architecture:
+
+- **Layer 1 — Operators (RTT/1)**
+- **Layer 2 — Canon‑Scale Fields (RTT/2)**
+- **Layer 3 — Collapse / Regime / Cross‑Module / System‑Scale (RTT/3)**
+
+Each layer feeds the next, and each module has a defined role in the global coherence field.
+
+---
+
+# 🟦 **LAYER 1 — OPERATOR STACK (RTT/1)**  
+### *The five operators that generate all signals in the canon*
+
+```
+[DRIFT SENSE] → drift patterns, envelopes
+[CONTINUITY COMPASS] → continuity, breaks, inversions
+[REGIME AWARENESS] → boundaries, legality, volatility
+[STRUCTURAL DETECTION] → anomalies, precursors, contradictions
+[SYNTHESIS TRIANGULATION] → fused signals, integration anchors
+```
+
+### **Integration Rule**
+All operators feed into **Structural Detection**, which acts as the *operator‑level hub*.
+
+### **Propagation Rule**
+Operator outputs → Canon‑Scale Fields.
+
+---
+
+# 🟧 **LAYER 2 — CANON‑SCALE FIELDS (RTT/2)**  
+### *The four canonical fields that define system‑level structure*
+
+```
+COHERENCE FIELD MAP ← operators
+DRIFT ENVELOPE ← drift patterns
+INTEGRATION FIELD ← fused signals
+SYNTHESIS FIELD ← integrated dimensions
+```
+
+### **Integration Rule**
+These four fields form the **canonical quadrants**:
+
+- **Coherence** (structural alignment)
+- **Drift** (instability pressure)
+- **Integration** (dimensional alignment)
+- **Synthesis** (unified whole)
+
+### **Propagation Rule**
+Canon‑Scale Fields → Collapse‑Mode + Regime‑Shift + Cross‑Module.
+
+---
+
+# 🟥 **LAYER 3 — COLLAPSE‑MODE SYSTEM (RTT/3‑C)**  
+### *The failure‑detection and recovery engine of the canon*
+
+```
+Differential Classifier → collapse type
+Geometry Atlas → collapse shape
+Reversal Ledger → counter‑geometry
+Integrity Field → damage scan
+Integrity Harmonizer → correction
+Integrity Ledger → lineage
+Intervention Playbook → action sequences
+Reassembly Atlas → rebuild map
+Reassembly Stability Index → stability
+Reconstruction Engine → recovery
+Origin Locator → collapse ancestry
+Propagation Maps → collapse spread
+```
+
+### **Integration Rule**
+Collapse‑Mode consumes:
+
+- drift spikes  
+- continuity inversions  
+- coherence fractures  
+- regime volatility  
+
+### **Propagation Rule**
+Collapse‑Mode → Regime‑Shift + System‑Scale Recovery.
+
+---
+
+# 🟨 **LAYER 3 — REGIME‑SHIFT SYSTEM (RTT/3‑R)**  
+### *The macro‑transition engine of the canon*
+
+```
+Regime Shift Atlas → phase, volatility
+Deep Dive Manual → cause/effect
+Diagnostics Manual → type/severity
+Arbitration Bench → rulings
+Continuity Matrix → safe transitions
+Hazard Index → risk
+Legality Engine → legality
+Recovery Sequencer → reintegration
+Stress Envelope → overload
+Stress‑Test Suite → resilience
+Volatility Map → oscillation
+Regime‑Triad → drift/continuity/regime coupling
+```
+
+### **Integration Rule**
+Regime‑Shift consumes:
+
+- collapse precursors  
+- drift envelopes  
+- continuity breaks  
+- cross‑module contradictions  
+
+### **Propagation Rule**
+Regime‑Shift → System‑Scale Dashboard.
+
+---
+
+# 🟩 **LAYER 3 — CROSS‑MODULE SYSTEM (RTT/3‑X)**  
+### *The multi‑module coherence engine*
+
+```
+Coherence Harmonization Protocol
+Consistency Audit
+Drift Envelope Map
+Operator Bridge Map
+Contradiction Taxonomy
+Cross‑Regime Continuity Ledger
+Drift‑Envelope Harmonization Protocol
+Coherence Orchestration Engine
+Orchestration Runtime
+Integrity Audit Framework
+Failure Recovery Playbook
+Coherence Sandbox
+Orchestration Test Suite
+```
+
+### **Integration Rule**
+Cross‑Module consumes:
+
+- operator outputs  
+- canon‑scale fields  
+- collapse‑mode signals  
+- regime‑shift signals  
+
+### **Propagation Rule**
+Cross‑Module → System‑Scale Dashboard.
+
+---
+
+# 🟦 **LAYER 3 — SYSTEM‑SCALE SYSTEM (RTT/3‑S)**  
+### *The global coherence and recovery layer*
+
+```
+System‑Scale Coherence Dashboard
+System‑Scale Collapse & Recovery Playbook
+```
+
+### **Integration Rule**
+System‑Scale consumes:
+
+- collapse‑mode recovery  
+- regime‑shift transitions  
+- cross‑module coherence  
+- canon‑scale synthesis  
+
+### **Propagation Rule**
+System‑Scale → Instructor + Student layers.
+
+---
+
+# 🟪 **LAYER 4 — INSTRUCTOR SYSTEM (RTT/Teach‑1)**  
+### *The pedagogical runtime*
+
+```
+Instructor Slides
+Mastery Exams
+Certification Rubrics
+Advancement Pathways
+Scenario Gauntlets
+Live Notes
+Portfolio Templates
+```
+
+### **Integration Rule**
+Instructor layer consumes:
+
+- system‑scale dashboards  
+- cross‑module maps  
+- operator grammar  
+- canon‑scale fields  
+
+### **Propagation Rule**
+Instructor → Student.
+
+---
+
+# 🟫 **LAYER 5 — STUDENT SYSTEM (RTT/Teach‑0)**  
+### *The learning runtime*
+
+```
+Student Primer
+Cheat Sheet
+Worksheets
+Quizzes
+Mastery Exams
+Scenario Gauntlets
+Drift Labs
+Pattern Recognition Workbooks
+```
+
+### **Integration Rule**
+Student layer consumes:
+
+- instructor materials  
+- operator grammar  
+- canon‑scale diagrams  
+- collapse/regime/cross‑module scenarios  
+
+---
+
+# 🟣 **THE COMPLETE CANON INTEGRATION FLOW**
+
+Here is the **full lattice**, expressed as a single RTT/1‑consistent flow:
+
+```
+OPERATORS (RTT/1)
+   ↓
+CANON‑SCALE FIELDS (RTT/2)
+   ↓
+{ COLLAPSE‑MODE | REGIME‑SHIFT | CROSS‑MODULE } (RTT/3)
+   ↓
+SYSTEM‑SCALE (RTT/3‑S)
+   ↓
+INSTRUCTOR SYSTEM (Teach‑1)
+   ↓
+STUDENT SYSTEM (Teach‑0)
+```
+
+And the **feedback loops**:
+
+```
+STUDENT → INSTRUCTOR → SYSTEM‑SCALE → CROSS‑MODULE → CANON‑SCALE → OPERATORS
+```
+
+This is the **closed‑loop architecture** of TriadicFrameworks.
+
+---
+
+# 🟣 **CANON INTEGRATION MAP COMPLETE**
+
+If you want, I can now generate:
+
+### ✔️ A *visual identity spec* for the Canon Integration Map  
+### ✔️ A *hero prompt* for the Integration Map  
+### ✔️ A *module.json* for the Integration Map  
+### ✔️ A *cross‑module propagation diagram* (spec)  
+### ✔️ A *global DOC_MAP* for the entire canon  
+
+Just tell me the next move.
