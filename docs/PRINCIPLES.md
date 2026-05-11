@@ -1,6 +1,6 @@
 ## 🌀 Canon Principles (2026 Edition)  
 
-- [`PRINCIPLES_module.json`](PRINCIPLES_module.json) — Agentic module schema role assignments
+- [`PRINCIPLES_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/PRINCIPLES_module.json) — Agentic module schema role assignments
 
 *A structural, educational, resonance‑aligned foundation for students and AIs.*
 
