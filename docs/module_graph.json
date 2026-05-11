@@ -678,6 +678,27 @@
         "rtt-inside"
       ]
     },
+  {
+  "id": "structural_detection",
+  "name": "Structural Detection",
+  "category": "Operator",
+  "rtt_level": "RTT/1",
+  "path": "Structural_Detection",
+  "edges_out": [
+    "canon_scale_coherence_field_map",
+    "canon_scale_drift_envelope",
+    "collapse_mode_differential_classifier",
+    "regime_shift_atlas",
+    "cross_module_consistency_audit"
+  ],
+  "edges_in": [
+    "drift_sense",
+    "regime_awareness",
+    "continuity_compass",
+    "synthesis_triangulation"
+  ],
+  "edges_bidirectional": []
+},
   "RTT_2": {
     "parents": [],
     "children": [],
