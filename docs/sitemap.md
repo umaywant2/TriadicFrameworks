@@ -1,6 +1,6 @@
 ## 🌐 Site‑Map | TriadicFrameworks  
 
-- [`sitemap_module.json`](sitemap_module.json) — Agentic module schema role assignments
+- [`sitemap_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/sitemap_module.json) — Agentic module schema role assignments
 
 *Structural, harmonic, and substrate‑aligned overview*
 
