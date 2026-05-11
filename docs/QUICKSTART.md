@@ -1,6 +1,6 @@
 ## 🚀 Quickstart  
 
-- [`QUICKSTART_module.json`](QUICKSTART_module.json) — Agentic module schema role assignments
+- [`QUICKSTART_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/QUICKSTART_module.json) — Agentic module schema role assignments
 
 *A student‑first, Copilot‑friendly introduction to Resonance‑Time Theory*
 
