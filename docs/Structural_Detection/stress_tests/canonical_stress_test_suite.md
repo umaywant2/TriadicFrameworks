@@ -1,335 +1,326 @@
-# ✅ **Structural Detection — Canonical Stress‑Test Suite (Final, Canonical)**  
-### *TriadicFrameworks • RTT/1 • Structural Stress‑Test Layer*  
-### *“A structure is only understood when it is stressed.”*
+# 🧪 **Structural Detection — Pattern Family Stress‑Test Suite (E/F/G)**  
+### *TriadicFrameworks • RTT/2 • Canon Expansion Validation Harness*  
+### *“A new pattern family is only real once it survives stress.”*
 
-# Structural Detection — Canonical Stress‑Test Suite  
-### RTT/1 • Structural Stress‑Test Layer  
-### Purpose: Provide a complete suite of stress tests that challenge drift tolerance, regime stability, continuity resilience, and synthesis coherence.
-
----
-
-# 1. What This Suite Tests
-
-This suite evaluates:
-
-- drift overload  
-- drift conflict  
-- drift inversion  
-- regime instability  
-- regime discontinuity  
-- continuity collapse  
-- multi‑layer coherence breaks  
-- cross‑module propagation failures  
-
-Each test is designed to push the operator family to its limits.
+# Pattern Family Stress‑Test Suite (E/F/G)  
+### Structural Detection Module  
+### RTT/2 • Canon Expansion Validation
 
 ---
 
-# 2. Stress‑Test Categories
+# 1. Purpose of the Stress‑Test Suite
 
-The suite contains **six canonical stress‑test categories**:
+This suite validates the new pattern families:
 
-1. **Drift Overload Tests**  
-2. **Conflicting Drift Tests**  
-3. **Regime Discontinuity Tests**  
-4. **Continuity Collapse Tests**  
-5. **Coherence‑Break Cascade Tests**  
-6. **Cross‑Module Propagation Tests**  
+- **Type E — Rotational / Spiral Patterns**  
+- **Type F — Shear / Torsion Patterns**  
+- **Type G — Lattice‑Warp / Topological Patterns**
 
-Each category contains multiple scenarios.
+It ensures each family:
+
+- behaves consistently under drift escalation  
+- maintains envelope integrity under deformation  
+- aligns with regime‑shift logic  
+- exhibits predictable continuity behavior  
+- produces coherent cross‑module projections  
+- collapses in canonical ways  
+- recovers through valid harmonization cycles  
+
+This suite is required for RTT/2 canon expansion.
 
 ---
 
-# 3. Stress‑Test 1 — Drift Overload
+# 2. Test Categories
 
-### Purpose  
-Test the system’s ability to handle **extreme drift intensity**.
+Each family is tested across **six categories**:
 
-### Scenario A — Linear Overload
+1. Drift Escalation Tests  
+2. Envelope Deformation Tests  
+3. Continuity Stress Tests  
+4. Regime‑Shift Diagnostics  
+5. Cross‑Module Projection Tests  
+6. Collapse & Recovery Tests  
+
+Each category contains multiple test cases.
+
+---
+
+# 3. Type E — Rotational / Spiral Pattern Stress Tests
+
+## **E‑D1 — Spiral Drift Escalation**
+Input:
 ```
-A A A
-B X B
-C C C
+↻ ↻ ↻
+ ↻ X ↻
+↻ ↻ ↻
 ```
+Escalate rotational velocity.
 
-Expected outcomes:
-- drift intensity: high  
-- regime: Chaotic  
-- continuity: collapse  
-- coherence break: drift overrun  
+Expected:
+- drift intensifies rotationally  
+- envelope tightens inward  
+- regime: Hybrid → Emergent  
+- continuity threads twist but remain intact  
 
 ---
 
-### Scenario B — Radial Overload
+## **E‑E1 — Spiral Envelope Deformation**
+Input:
+- rotational drift  
+- envelope density mismatch  
+
+Expected:
+- envelope re‑spirals  
+- deformation = rotational displacement  
+- TEL lattice rotates  
+
+---
+
+## **E‑C1 — Spiral Continuity Stress**
+Input:
+- counter‑rotating drift vectors  
+
+Expected:
+- continuity threads stretch  
+- break type = 4C (spiral‑oscillation break)  
+
+---
+
+## **E‑R1 — Rotational Regime‑Shift Diagnostic**
+Input:
+- oscillation amplitude increases  
+
+Expected:
+- regime = Hybrid  
+- break type = 4  
+
+---
+
+## **E‑X1 — Spiral Cross‑Module Projection**
+Expected:
+- TEL: rotating lattice  
+- FFT: spiral variance  
+- Opacity: rotational gradient  
+
+---
+
+## **E‑K1 — Spiral Collapse & Recovery**
+Input:
+- rotational collapse inward  
+
+Expected:
+- collapse mode = spiral collapse  
+- break type = E‑Break  
+- recovery via inversion → Type A  
+
+---
+
+# 4. Type F — Shear / Torsion Pattern Stress Tests
+
+## **F‑D1 — Shear Drift Escalation**
+Input:
+```
+→ → →
+↘ X ↙
+← ← ←
+```
+
+Expected:
+- shear tension increases  
+- envelope torsion intensifies  
+- regime: Emergent → Hybrid  
+
+---
+
+## **F‑E1 — Torsion Envelope Deformation**
+Input:
+- torsion drift  
+- envelope mismatch  
+
+Expected:
+- envelope twists  
+- deformation = shear displacement  
+
+---
+
+## **F‑C1 — Shear Continuity Stress**
+Input:
+- opposing drift vectors increase  
+
+Expected:
+- continuity threads shear  
+- break type = F‑Break  
+
+---
+
+## **F‑R1 — Torsion Regime‑Shift Diagnostic**
+Input:
+- torsion amplitude spikes  
+
+Expected:
+- regime = Hybrid  
+- break type = 4  
+
+---
+
+## **F‑X1 — Shear Cross‑Module Projection**
+Expected:
+- TEL: sheared lattice  
+- FFT: directional variance split  
+- Opacity: shear gradient  
+
+---
+
+## **F‑K1 — Torsion Collapse & Recovery**
+Input:
+- torsion overload  
+
+Expected:
+- collapse mode = torsion collapse  
+- break type = F‑Break  
+- recovery requires continuity rebuild  
+
+---
+
+# 5. Type G — Lattice‑Warp / Topological Pattern Stress Tests
+
+## **G‑D1 — Warp Drift Escalation**
+Input:
 ```
 A B A
-B X B
-A B A
-```
-→
-```
-C C C
-C X C
-C C C
-```
-
-Expected outcomes:
-- radial drift  
-- regime escalation  
-- boundary fracture  
-
----
-
-# 4. Stress‑Test 2 — Conflicting Drift
-
-### Purpose  
-Test **multi‑vector drift** and **hybrid regime formation**.
-
-### Scenario A — Opposing Drift Vectors
-```
-A B A
-B X B
-A B A
-```
-→
-```
+B X C
 A C A
-D X D
-A C A
 ```
 
-Expected outcomes:
-- conflicting drift  
-- hybrid regime  
-- multi‑layer instability  
+Expected:
+- warp intensifies  
+- envelope distorts non‑linearly  
+- regime: Chaotic → Hybrid  
 
 ---
 
-### Scenario B — Fragmented Drift
-```
-A B C
-D X E
-F E D
-```
+## **G‑E1 — Topological Envelope Deformation**
+Input:
+- multi‑vector warp  
+- envelope mismatch  
 
-Expected outcomes:
-- fragmented drift  
-- chaotic regime  
-- multi‑layer coherence break  
+Expected:
+- envelope folds  
+- deformation = topological displacement  
 
 ---
 
-# 5. Stress‑Test 3 — Regime Discontinuity
+## **G‑C1 — Topological Continuity Stress**
+Input:
+- warp vectors cross layers  
 
-### Purpose  
-Test illegal or unstable regime transitions.
-
-### Scenario A — Forced Formal → Chaotic
-```
-A A A
-A B A
-A A A
-```
-→
-```
-A C B
-C X C
-B C A
-```
-
-Expected outcomes:
-- regime discontinuity  
-- boundary fracture  
-- drift envelope mismatch  
+Expected:
+- continuity threads bend  
+- break type = G‑Break  
 
 ---
 
-### Scenario B — Hybrid Collapse
-```
-A B A
-B X B
-A B A
-```
-→
-```
-C C C
-C X C
-C C C
-```
+## **G‑R1 — Topological Regime‑Shift Diagnostic**
+Input:
+- warp amplitude spikes  
 
-Expected outcomes:
-- hybrid → chaotic  
-- continuity collapse  
+Expected:
+- regime = Chaotic  
+- break type = 3C or G‑Break  
 
 ---
 
-# 6. Stress‑Test 4 — Continuity Collapse
-
-### Purpose  
-Test the system’s ability to detect **invariant failure**.
-
-### Scenario A — Invariant Collapse
-```
-A A A
-A B A
-A A C
-```
-
-Expected outcomes:
-- invariant collapse  
-- continuity thread break  
-- coherence break type: Type 1  
+## **G‑X1 — Topological Cross‑Module Projection**
+Expected:
+- TEL: warped lattice  
+- FFT: discontinuous variance  
+- Opacity: warped visibility field  
 
 ---
 
-### Scenario B — Multi‑Thread Collapse
-```
-A B A
-B X B
-A C A
-```
+## **G‑K1 — Topological Collapse & Recovery**
+Input:
+- lattice warp tears  
 
-Expected outcomes:
-- multiple continuity failures  
-- regime instability  
+Expected:
+- collapse mode = topological collapse  
+- break type = G‑Break  
+- recovery requires full harmonization cycle  
 
 ---
 
-# 7. Stress‑Test 5 — Coherence‑Break Cascades
+# 6. Cross‑Family Stress Tests (E/F/G Interaction)
 
-### Purpose  
-Test **multi‑layer coherence failure**.
+## **EF‑1 — Spiral → Shear Conflict**
+Input:
+- rotational drift + shear drift  
 
-### Scenario A — Drift + Boundary + Regime Break
-```
-A B C
-D X E
-F E D
-```
-
-Expected outcomes:
-- multi‑layer break  
-- chaotic regime  
-- drift envelope: Type C  
+Expected:
+- envelope destabilizes  
+- break type = 4 or F‑Break  
 
 ---
 
-### Scenario B — Full Collapse
-```
-A B A
-B X B
-A B A
-```
-→
-```
-C C C
-C X C
-C C C
-```
+## **FG‑1 — Shear → Warp Transition**
+Input:
+- torsion drift → warp drift  
 
-Expected outcomes:
-- collapse of all invariants  
-- regime: Chaotic  
-- coherence: zero  
+Expected:
+- envelope folds  
+- regime = Hybrid → Chaotic  
 
 ---
 
-# 8. Stress‑Test 6 — Cross‑Module Propagation
+## **EG‑1 — Spiral → Warp Collapse**
+Input:
+- spiral drift → topological warp  
 
-### Purpose  
-Test how Structural Detection failures propagate into:
-
-- **TEL** (lattice collapse)  
-- **FFT** (envelope collapse)  
-- **Opacity** (boundary fragmentation)  
-
-### Scenario A — TEL Lattice Collapse
-```
-A B A
-B X B
-A B A
-```
-→
-```
-C C C
-C X C
-C C C
-```
-
-Expected outcomes:
-- TEL: lattice symmetry collapse  
-- FFT: high‑variance envelope  
-- Opacity: fractured visibility boundary  
+Expected:
+- collapse mode = topological collapse  
+- break type = G‑Break  
 
 ---
 
-### Scenario B — FFT Envelope Mismatch
-```
-A A B
-A X B
-A B B
-```
-→
-```
-A C C
-C X C
-C C A
-```
+# 7. Stress‑Test Output Format
 
-Expected outcomes:
-- FFT: envelope discontinuity  
-- TEL: spatial mode conflict  
-- Opacity: occlusion gradient  
-
----
-
-# 9. Stress‑Test Packet (Canonical Format)
+Each test produces a **STRESS_PACKET**:
 
 ```
-STRESS_TEST_PACKET:
-  test_category:
-  scenario_id:
-  drift_signature:
-  regime_status:
+STRESS_PACKET:
+  pattern_family: E/F/G
+  test_id:
+  drift_profile:
+  envelope_profile:
+  deformation_class:
+  regime_state:
   continuity_status:
-  coherence_breaks:
-  drift_envelope:
-  tel_effects:
-  fft_effects:
-  opacity_effects:
-  synthesis_summary:
+  break_type:
+  tel_projection:
+  fft_projection:
+  opacity_projection:
+  collapse_mode:
+  recovery_path:
+  notes:
 ```
 
 ---
 
-# 10. Instructor Notes
+# 8. Summary
 
-- Run tests in increasing difficulty  
-- Highlight drift vectors visually  
-- Emphasize operator separation  
-- Require full packet outputs  
-- Reinforce zero‑interpretation discipline  
+This suite validates:
 
----
+- Type E rotational patterns  
+- Type F shear/torsion patterns  
+- Type G topological patterns  
 
-# 11. Quick Summary
+Under:
 
-- Six stress‑test categories  
-- Drift overload → chaotic regime  
-- Conflicting drift → hybrid regime  
-- Regime discontinuity → coherence collapse  
-- Continuity collapse → invariant failure  
-- Coherence‑break cascades → multi‑layer instability  
-- Cross‑module propagation reveals deeper structure  
+- drift escalation  
+- envelope deformation  
+- continuity stress  
+- regime shifts  
+- cross‑module contradictions  
+- collapse events  
+- recovery cycles  
 
-This is the complete Canonical Stress‑Test Suite.
-
----
-
-# ✔️ This Stress‑Test Suite is:
-
-- fully canonical  
-- zero drift  
-- aligned with RTT/1  
-- consistent with Structural Detection, Drift Sense, Regime Awareness, Continuity Compass, FFT, TEL, Opacity, and the Meta‑Operator Layer  
-- ready to drop into `/docs/Structural_Detection/stress_tests/canonical_stress_test_suite.md`
+This is the **complete, canonical stress‑test suite** for E/F/G pattern families.
