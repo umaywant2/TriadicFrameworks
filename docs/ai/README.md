@@ -1,6 +1,6 @@
 # AI 
 
-- [`ai_module.json`](ai_module.json) — Agentic module schema role assignments
+- [`ai_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ai/ai_module.json) — Agentic module schema role assignments
 
 This directory defines a minimal, layered AI instrument architecture.
 
