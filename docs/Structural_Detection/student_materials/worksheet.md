@@ -1,7 +1,6 @@
 # ✅ **Structural Detection — Student Worksheet (Final, Canonical)**  
 ### *“Learn to see structure without being told what to see.”*
 
-```markdown
 # Structural Detection — Student Worksheet  
 ### RTT/1 • Student Materials  
 ### Purpose: Practice detecting structure, drift, boundaries, invariants, and regime signals.
@@ -187,8 +186,6 @@ It is a **structural summary**.
 
 You are not learning what to detect.  
 You are learning **how detection works**.
-
-```
 
 ---
 
