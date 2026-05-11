@@ -1,1 +1,23 @@
-fff
+{
+  "sample_id": "regime_shift_example_v1",
+  "description": "A structural sample containing a transition from formal to chaotic regime.",
+  "data": {
+    "blocks": [
+      {
+        "id": "formal_block",
+        "structure": [
+          ["P", "Q", "P"],
+          ["P", "Q", "P"]
+        ]
+      },
+      {
+        "id": "chaotic_block",
+        "structure": [
+          ["R", "S"],
+          ["T"],
+          ["U", "V", "W", "X"]
+        ]
+      }
+    ]
+  }
+}
