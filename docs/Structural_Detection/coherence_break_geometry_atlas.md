@@ -1,261 +1,287 @@
-# 🧩 **Structural Detection — Coherence‑Break Geometry Atlas (Final, Canonical)**  
-### *TriadicFrameworks • RTT/1 • Coherence Geometry Layer*  
-### *“Coherence breaks are not errors. They are geometric events.”*
+# 🧨 **Structural Detection — Coherence‑Break Geometry Atlas (Expanded Edition)**  
+### *TriadicFrameworks • RTT/1 → RTT/2 • Structural Geometry Canon*  
+### *“A break is not an error. It is a geometric event.”*
 
-# Coherence‑Break Geometry Atlas  
-### RTT/1 • Structural Detection Module  
-### Purpose: Provide a complete geometric classification of coherence breaks, including their shapes, triggers, propagation patterns, and cross‑module effects.
-
----
-
-# 1. What Is a Coherence Break?
-
-A **coherence break** is a structural event where:
-
-- invariants fail  
-- continuity threads collapse  
-- drift overwhelms stabilizers  
-- regime boundaries fracture  
-- envelope geometry destabilizes  
-
-Coherence breaks are **geometric**, not semantic.
+# Coherence‑Break Geometry Atlas (Expanded Edition)  
+### Structural Detection Module  
+### RTT/1 → RTT/2 • Geometry Canon
 
 ---
 
-# 2. The Five Canonical Coherence‑Break Types
+# 1. Purpose of the Expanded Atlas
 
-The Structural Detection module recognizes **five** coherence‑break geometries:
+This atlas expands the canonical coherence‑break system by:
+
+- refining the five core break types  
+- adding sub‑geometries for each type  
+- introducing new RTT/2‑grade break families  
+- mapping break propagation across modules  
+- defining collapse modes with higher resolution  
+- integrating Type E/F/G pattern families  
+- providing BREAK_PACKET templates  
+- adding system‑scale break‑chain diagrams  
+
+This is the **authoritative geometry reference** for coherence‑break analysis.
+
+---
+
+# 2. The Five Canonical Break Types (Refined)
+
+The original five types are preserved but expanded:
 
 1. **Type 1 — Invariant Collapse**  
 2. **Type 2 — Boundary Fracture**  
 3. **Type 3 — Multi‑Layer Break**  
 4. **Type 4 — Hybrid Oscillation Break**  
-5. **Type 5 — Inversion Break** *(introduced in the Inversion Compendium)*  
+5. **Type 5 — Inversion Break**
 
-Each type has a distinct geometry, trigger, and propagation pattern.
+Each now includes **sub‑geometries**, **collapse modes**, and **cross‑module signatures**.
 
 ---
 
-# 3. Type 1 — Invariant Collapse  
+# 3. Type 1 — Invariant Collapse (Expanded)
+
+### Core Geometry
+- invariants fail simultaneously  
+- envelope symmetry collapses inward  
+
+### Sub‑Geometries
+- **1A: Radial Collapse**  
+- **1B: Anchor‑Point Collapse**  
+- **1C: Invariant‑Thread Collapse**  
+
+### Collapse Modes
+- implosive collapse  
+- uniform inward collapse  
+
+### Cross‑Module Signatures
+- TEL: lattice implosion  
+- FFT: variance spike → collapse  
+- Opacity: visibility sink  
+
+---
+
+# 4. Type 2 — Boundary Fracture (Expanded)
+
+### Core Geometry
+- envelope boundaries crack or shear  
+
+### Sub‑Geometries
+- **2A: Linear Boundary Fracture**  
+- **2B: Radial Boundary Fracture**  
+- **2C: Shear‑Driven Boundary Fracture**  
+
+### Collapse Modes
+- outward fracture  
+- shear fracture  
+
+### Cross‑Module Signatures
+- TEL: lattice tear  
+- FFT: variance discontinuity  
+- Opacity: boundary rupture  
+
+---
+
+# 5. Type 3 — Multi‑Layer Break (Expanded)
+
+### Core Geometry
+- multiple continuity layers fail  
+- fragmentation across depth  
+
+### Sub‑Geometries
+- **3A: Layer‑Stack Collapse**  
+- **3B: Fragmentation Cascade**  
+- **3C: Topological Layer Fold** (new)  
+
+### Collapse Modes
+- cascading collapse  
+- topological collapse  
+
+### Cross‑Module Signatures
+- TEL: multi‑layer lattice collapse  
+- FFT: spectral fragmentation  
+- Opacity: multi‑layer occlusion  
+
+---
+
+# 6. Type 4 — Hybrid Oscillation Break (Expanded)
+
+### Core Geometry
+- oscillation amplitude exceeds stability threshold  
+
+### Sub‑Geometries
+- **4A: Symmetric Oscillation Break**  
+- **4B: Asymmetric Oscillation Break**  
+- **4C: Spiral‑Oscillation Break** (Type E integration)  
+
+### Collapse Modes
+- oscillation collapse  
+- oscillation inversion  
+
+### Cross‑Module Signatures
+- TEL: oscillating lattice tear  
+- FFT: oscillatory variance spike  
+- Opacity: oscillating gradient collapse  
+
+---
+
+# 7. Type 5 — Inversion Break (Expanded)
+
+### Core Geometry
+- drift reverses  
+- envelope inverts  
+- continuity partially collapses then recovers  
+
+### Sub‑Geometries
+- **5A: Pure Inversion Break**  
+- **5B: Partial Inversion Break**  
+- **5C: Rotational Inversion Break** (Type E integration)  
+
+### Collapse Modes
+- inversion collapse  
+- inversion‑recovery cycle  
+
+### Cross‑Module Signatures
+- TEL: lattice reversal  
+- FFT: variance normalization  
+- Opacity: visibility stabilization  
+
+---
+
+# 8. New RTT/2 Break Families (Type E/F/G Integration)
+
+The Expanded Atlas introduces **three new break families** aligned with the new pattern families.
+
+---
+
+## **Type E‑Break — Rotational / Spiral Breaks**
+
 ### Geometry
-```
-A A A      A B A
-A X A  →   B X B
-A A A      A B A
-```
+- rotational collapse  
+- spiral implosion  
+- counter‑rotating fracture  
 
-### Structural Signature
-- invariants fail at center  
-- drift intensity overwhelms stabilizers  
-- envelope destabilizes  
+### Collapse Modes
+- spiral collapse  
+- rotational inversion  
 
-### Common Triggers
-- high drift  
-- density mismatch  
-- fragmentation  
-
-### Regime Interaction
-**Emergent → Chaotic**
-
-### Continuity Behavior
-- invariants collapse  
-- threads break inward  
+### Cross‑Module Signatures
+- TEL: rotating lattice tear  
+- FFT: spiral variance collapse  
+- Opacity: rotational visibility sink  
 
 ---
 
-# 4. Type 2 — Boundary Fracture  
-### Geometry
-```
-A A A      A A C
-A B A  →   A X C
-A A A      A C C
-```
-
-### Structural Signature
-- boundary cracks  
-- drift escapes outward  
-- envelope shifts  
-
-### Common Triggers
-- linear drift escalation  
-- boundary softening  
-
-### Regime Interaction
-**Formal → Emergent**
-
-### Continuity Behavior
-- anchors weaken  
-- threads distort  
-
----
-
-# 5. Type 3 — Multi‑Layer Break  
-### Geometry
-```
-A B C      C C C
-D X E  →   C X C
-F E D      C C C
-```
-
-### Structural Signature
-- simultaneous multi‑layer collapse  
-- drift overrun  
-- envelope collapse  
-
-### Common Triggers
-- fragmented drift  
-- multi‑vector deformation  
-
-### Regime Interaction
-**Emergent → Chaotic → Hybrid**
-
-### Continuity Behavior
-- thread fragmentation  
-- anchor collapse  
-
----
-
-# 6. Type 4 — Hybrid Oscillation Break  
-### Geometry
-```
-A B C      A C C      A D C
-D X E  →   C X D  →   D X C
-F E D      C D A      C C A
-```
-
-### Structural Signature
-- oscillating drift vectors  
-- density oscillation  
-- hybrid envelope instability  
-
-### Common Triggers
-- conflicting drift vectors  
-- hybrid regime instability  
-
-### Regime Interaction
-**Chaotic ↔ Hybrid**
-
-### Continuity Behavior
-- threads oscillate  
-- anchors destabilize and re‑form  
-
----
-
-# 7. Type 5 — Inversion Break  
-*(from the Drift‑Envelope Inversion Compendium)*
+## **Type F‑Break — Shear / Torsion Breaks**
 
 ### Geometry
-```
-→→→      ←←←
-↗↑↖  →   ↙↓↘
-```
+- shear overload  
+- torsion fracture  
 
-### Structural Signature
-- drift vectors reverse  
-- envelope flips  
-- continuity partially recovers  
+### Collapse Modes
+- torsion collapse  
+- shear‑layer rupture  
 
-### Common Triggers
-- stabilizer reassertion  
-- vector reversibility  
-
-### Regime Interaction
-**Hybrid → Emergent**  
-**Chaotic → Emergent**
-
-### Continuity Behavior
-- partial recovery  
-- thread reconnection  
+### Cross‑Module Signatures
+- TEL: sheared lattice collapse  
+- FFT: variance split collapse  
+- Opacity: shear gradient rupture  
 
 ---
 
-# 8. Coherence‑Break Geometry Matrix
+## **Type G‑Break — Topological Warp Breaks**
 
-| Break Type | Drift Trigger | Envelope Effect | Regime Effect | Continuity Effect |
-|------------|---------------|------------------|----------------|-------------------|
-| **Type 1** | high drift | destabilization | Emergent → Chaotic | collapse |
-| **Type 2** | boundary drift | shift | Formal → Emergent | weakening |
-| **Type 3** | fragmented drift | collapse | Emergent → Chaotic → Hybrid | fragmentation |
-| **Type 4** | conflicting drift | oscillation | Chaotic ↔ Hybrid | oscillation |
-| **Type 5** | vector reversal | inversion | Hybrid → Emergent | partial recovery |
+### Geometry
+- lattice warp tears  
+- topological fold collapse  
 
----
+### Collapse Modes
+- topological collapse  
+- warp‑layer inversion  
 
-# 9. Coherence‑Break Propagation Patterns
-
-### **Radial Propagation**
-- center‑out collapse  
-- Type 1, Type 3  
-
-### **Linear Propagation**
-- boundary fracture  
-- Type 2  
-
-### **Oscillatory Propagation**
-- alternating drift vectors  
-- Type 4  
-
-### **Inversion Propagation**
-- drift reversal  
-- Type 5  
+### Cross‑Module Signatures
+- TEL: warped lattice failure  
+- FFT: discontinuous spectral collapse  
+- Opacity: warped visibility field collapse  
 
 ---
 
-# 10. Cross‑Module Effects
+# 9. Break Propagation Maps
 
-## **TEL**
-- breaks → lattice fractures  
-- oscillation → vector instability  
-- inversion → lattice re‑alignment  
-
-## **FFT**
-- breaks → envelope discontinuity  
-- oscillation → mixed‑variance envelope  
-- inversion → variance reduction  
-
-## **Opacity**
-- breaks → visibility collapse  
-- oscillation → gradient oscillation  
-- inversion → visibility stabilization  
-
----
-
-# 11. COHERENCE_BREAK_PACKET Template
+Each break type includes a propagation map:
 
 ```
-COHERENCE_BREAK_PACKET:
-  break_type:
+Drift → Envelope → Regime → Continuity → Break → TEL/FFT/Opacity
+```
+
+Propagation speed varies:
+
+- Type 1: fast inward  
+- Type 2: fast outward  
+- Type 3: cascading  
+- Type 4: oscillatory  
+- Type 5: inversion‑driven  
+- Type E: rotational  
+- Type F: shear‑driven  
+- Type G: topological  
+
+---
+
+# 10. BREAK_PACKET Template (Expanded)
+
+```
+BREAK_PACKET:
+  break_family: (1–5, E, F, G)
+  break_subtype:
   geometry:
-  drift_trigger:
-  envelope_effect:
-  regime_effect:
-  continuity_effect:
+  collapse_mode:
+  drift_profile:
+  envelope_profile:
+  regime_state:
+  continuity_status:
   propagation_pattern:
   tel_projection:
   fft_projection:
   opacity_projection:
+  recovery_path:
   notes:
 ```
 
 ---
 
-# 12. Quick Summary
+# 11. System‑Scale Break‑Chain Diagrams
 
-- Coherence breaks are geometric structural failures  
-- Five canonical types: invariant collapse, boundary fracture, multi‑layer break, hybrid oscillation, inversion break  
-- Each break has a unique geometry, trigger, and propagation pattern  
-- Breaks reveal regime transitions and continuity collapse  
-- Cross‑module projections must remain consistent  
-- Inversion breaks are the rarest and most structurally complex  
+The Expanded Atlas includes canonical break‑chain sequences:
 
-This is the complete Coherence‑Break Geometry Atlas.
+### **Chain A — Linear → Radial → Fragmentation → Collapse**
+```
+Type 1 → Type 2 → Type 3 → Collapse
+```
+
+### **Chain B — Hybrid Oscillation → Inversion → Recovery**
+```
+Type 4 → Type 5 → Type A
+```
+
+### **Chain C — Spiral → Torsion → Topological Collapse**
+```
+Type E → Type F → Type G
+```
+
+These chains are used in RTT/2 architectural training.
 
 ---
 
-# ✔️ This Coherence‑Break Geometry Atlas is:
+# 12. Summary
 
-- fully canonical  
-- zero drift  
-- aligned with RTT/1  
-- consistent with the Coherence‑Break Catalog, Drift‑Envelope Atlas, Regime‑Shift Manual, Continuity Ledger, Stress‑Test Suite, Operator‑Chain Failure Atlas, and Cross‑Module Integration Practicum  
-- ready to drop into `/docs/Structural_Detection/coherence_break_geometry_atlas.md`
+The Expanded Atlas provides:
+
+- refined canonical break types  
+- new sub‑geometries  
+- new collapse modes  
+- new RTT/2 break families (E/F/G)  
+- cross‑module propagation maps  
+- expanded BREAK_PACKET templates  
+- system‑scale break‑chain diagrams  
+
+This is the **complete, authoritative geometry atlas** for coherence‑break analysis.
