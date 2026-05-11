@@ -1,4 +1,4 @@
-# STRUCTURAL_DETECTION_OPERATOR  
+# ✅ STRUCTURAL_DETECTION_OPERATOR  
 ### RTT/1 • Structural Detection Module • Engine Operator  
 ### Purpose: Detect structural patterns, motifs, invariants, and operator‑like signatures in any substrate.
 
@@ -151,3 +151,206 @@ It detects **patterns, motifs, invariants, anomalies, and regime hints** without
 
 It is the structural equivalent of “turning on the lights.”
 
+---
+
+# ✅ **Structural Detection — Heuristic Suite (Canonical List)**  
+*(This is the full set of heuristics used by STRUCTURAL_DETECTION_OPERATOR and downstream operators.)*
+
+## **1. Repetition Heuristic**  
+Detects repeated structural forms:
+
+- recurring shapes  
+- repeated operator chains  
+- mirrored segments  
+- template echoes  
+
+Repetition = signal.
+
+---
+
+## **2. Boundary Heuristic**  
+Detects where structures:
+
+- begin  
+- end  
+- fracture  
+- merge  
+- shift regimes  
+
+Boundaries reveal transitions.
+
+---
+
+## **3. Invariant Heuristic**  
+Detects elements that remain stable across:
+
+- samples  
+- formats  
+- noise  
+- drift  
+- regimes  
+
+Invariants = identity.
+
+---
+
+## **4. Deformation Heuristic**  
+Detects distortions in:
+
+- expected patterns  
+- symmetry  
+- operator order  
+- structural rhythm  
+
+Deformation = drift.
+
+---
+
+## **5. Regime Heuristic**  
+Detects the *type* of structure:
+
+- formal  
+- emergent  
+- chaotic  
+- hybrid  
+
+Regime = context.
+
+---
+
+## **6. Coherence Heuristic**  
+Detects whether structural elements:
+
+- reinforce  
+- contradict  
+- align  
+- destabilize  
+
+Coherence = integrity.
+
+---
+
+## **7. Motif Heuristic**  
+Detects small, repeating structural “atoms”:
+
+- triads  
+- loops  
+- ladders  
+- nested pairs  
+- mirrored arcs  
+
+Motifs = building blocks.
+
+---
+
+## **8. Symmetry Heuristic**  
+Detects:
+
+- bilateral symmetry  
+- rotational symmetry  
+- reflective symmetry  
+- broken symmetry  
+
+Symmetry = intentionality.
+
+---
+
+## **9. Gradient Heuristic**  
+Detects directional change:
+
+- increasing complexity  
+- decreasing density  
+- rising drift  
+- collapsing structure  
+
+Gradients = evolution.
+
+---
+
+## **10. Density Heuristic**  
+Detects how tightly structure is packed:
+
+- sparse → emergent  
+- dense → formal  
+- uneven → chaotic  
+
+Density = regime pressure.
+
+---
+
+## **11. Interference Heuristic**  
+Detects when multiple structures overlap:
+
+- cross‑signals  
+- competing motifs  
+- layered operators  
+
+Interference = multi‑regime interaction.
+
+---
+
+## **12. Continuity Heuristic**  
+Detects whether structure maintains:
+
+- flow  
+- rhythm  
+- progression  
+- stable transitions  
+
+Continuity = coherence over time.
+
+---
+
+## **13. Contrast Heuristic**  
+Detects sharp differences in:
+
+- structure  
+- rhythm  
+- motif frequency  
+- operator order  
+
+Contrast = boundary or anomaly.
+
+---
+
+## **14. Anomaly Heuristic**  
+Detects:
+
+- outliers  
+- breaks  
+- unexpected formations  
+- missing elements  
+
+Anomalies = signal, not error.
+
+---
+
+## **15. Triangulation Heuristic**  
+Cross‑checks multiple heuristics to:
+
+- confirm structure  
+- reduce false positives  
+- stabilize detection  
+
+Triangulation = synthesis.
+
+---
+
+# ⭐ **This is the complete heuristic suite**  
+These 15 heuristics form the **Structural Detection Core**.  
+They are:
+
+- universal  
+- domain‑agnostic  
+- content‑neutral  
+- safe  
+- powerful  
+- and fully aligned with RTT/1 operator grammar  
+
+They plug directly into:
+
+- STRUCTURAL_DETECTION_OPERATOR  
+- DRIFT_SENSE_OPERATOR  
+- REGIME_AWARENESS_OPERATOR  
+- CONTINUITY_COMPASS_OPERATOR  
+- SYNTHESIS_TRIANGULATION_OPERATOR  
