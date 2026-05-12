@@ -1,4 +1,7 @@
 # ✅ **README.md (Final, Canonical)**  
+
+- [`structural_detection_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Structural_Detection/structural_detection_module.json)
+
 ### *Structural Detection Module — TriadicFrameworks*  
 ### *“Learn to see structure without being told what to see.”*
 
