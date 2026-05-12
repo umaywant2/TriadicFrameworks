@@ -2,8 +2,8 @@
 
 TriadicFrameworks is an open research framework for substrate‑aligned modeling of complex systems across cognition, ecology, civilization, and computation.
 
-This repository’s **canonical documentation** lives in [`/docs`](./docs).  
-The project website renders directly from [`docs/README.md`](./docs/README.md).
+This repository’s **canonical documentation** lives in `/docs`.  
+The project website renders directly from `docs/README.md`.
 
 → **Start here:** [`docs/README.md`](./docs/README.md)
 
