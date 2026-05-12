@@ -37,62 +37,62 @@ If you’re returning, jump directly to the section you need.
 ---
 
 ## 🧭 Start Here — Orientation
-- **📘 About** — What TriadicFrameworks is and isn’t  
-- **🧘 Principles** — Alignment, minimality, coherence  
-- **🚸 Awareness** — Observer‑layer basics  
-- **🎯 Glossary** — Canon terms, short and precise  
-- **📜 Lineage** — Historical substrate and evolution  
-- **🔐 Security** — Responsible use and boundaries  
-- **🤝 Contributing** — How to help, safely and canonically  
-- **🌐 Sitemap** — Full ecosystem map  
+- **[📘](./ABOUT.md) About** — What TriadicFrameworks is and isn’t  
+- **[🧘](./PRINCIPLES.md) Principles** — Alignment, minimality, coherence  
+- **[🚸](./education/awareness/README.md) Awareness** — Observer‑layer basics  
+- **[🎯](./GLOSSARY.md) Glossary** — Canon terms, short and precise  
+- **[📜](./LINEAGE.md) Lineage** — Historical substrate and evolution  
+- **[🔐](./SECURITY.md) Security** — Responsible use and boundaries  
+- **[🤝](./CONTRIBUTING.md) Contributing** — How to help, safely and canonically  
+- **[🌐](./sitemap.md) Sitemap** — Full ecosystem map  
 
 ---
 
 ## 🌀 RTT — Resonance‑Time Theory
 Short, gentle primers introducing the resonance‑time substrate.
 
-- **🌀 What RTT Is** — Intuitive overview  
-- **🧭 How to Read RTT Diagrams** — Visual grammar  
-- **🧩 Core Concepts** — Regimes, feedback, coherence, paradox  
-- **📄 Papers Index** — Full research canon  
-- **🗄️ Zenodo Community** — Archival spine  
+- **[🌀](./_ideas/000_RTT_Information_Primer.md) What RTT Is** — Intuitive overview  
+- **[🧭](./triadic/README.md) How to Read RTT Diagrams** — Visual grammar  
+- **[🧩](./rtt/README.md) Core Concepts** — Regimes, feedback, coherence, paradox  
+- **[📄](./papers/README.md) Papers Index** — Full research canon  
+- **[🗄️](https://zenodo.org/communities/vst) Zenodo Community** — Archival spine  
 
 ### RTT Modes
-- **🔛 RTT (Frozen)** — Historical scroll (reference‑only)  
-- **🔝 RTT/1** — Active engine (canonical)  
+- **[🔛](./_ideas/Resonance-Time_Theory.html) RTT (Frozen)** — Historical scroll (reference‑only)  
+- **[🔝](./rtt/1/README.md) RTT/1** — Active engine (canonical)  
 
 ---
 
 ## 🔜 FFT — Framework Field Theory
 The meta‑framework for building, validating, and evolving structured systems.  
-(See `/docs/Framework_Field_Theory/`)
+(See [`/docs/Framework_Field_Theory/`](./Framework_Field_Theory/README.md))
 
 ---
 
 ## 🏗️ Frameworks & Tools
 Minimal, substrate‑aligned implementations for developers and educators.
 
-- **📦 RTT Packages & Cores**  
-- **♨️ TFT 3Pack CLI Tools**  
-- **🕸️ Schemas** — Universe‑class JSON schemas  
-- **📣 RF‑Builder** — Resonance Framework Builder  
-- **🛄 EcoEchoSystem** — Ecological substrate tools  
-- **🎨 LACTOS** — Visual identity + diagram grammar
-- **⭐ The Framework Creation Guide (FCG)** — A new top‑level module in the TriadicFrameworks canon
-- **🔘 The Inverted Star** — The front door for the entire Inverted Star Ontology
+- **[📦](./packages/README.md) RTT Packages & Cores**  
+- **[♨️](./TFT_3Pack_v1.3/README.md) TFT 3Pack CLI Tools**  
+- **[🕸️](./schemas/README.md) Schemas** — Universe‑class JSON schemas  
+- **[📣](./frameworks/creation_guide/RF-Builder/RF-Builder.html) RF‑Builder** — Resonance Framework Builder  
+- **[🛄](./ecoechosystem/README.md) EcoEchoSystem** — Ecological substrate tools  
+- **[🎨](./lactos/README.md) LACTOS** — Visual identity + diagram grammar
+- **[⭐](./frameworks/creation_guide/README.md) The Framework Creation Guide (FCG)** — A new top‑level module in the TriadicFrameworks canon
+- **[🔘](./rtt/The_Inverted_Star/README.md) The Inverted Star** — The front door for the entire Inverted Star Ontology
 - 
   ### AI agentic web modules — (used with grammar from any AI chat)
-- **🧱 NIST** — organizes scientific work, helping to understand the regime structure behind those domains
-- **🌉 Wikipedia** — A regime‑aware structural analysis of the world's largest encyclopedia through an RTT lens
-- **🍒 Google** — A dimensional, regime-aware interpreter using operator grammar
-- **🍇 Bing** — A dimensional, regime-aware interpreter using operator grammar
-- **🥦 DuckDuckGo** — A dimensional, regime-aware interpreter using operator grammar
-- **🧰 Education Toolbox** — Modules that transform grading, paper analysis, literature review, and insight generation
-- **🏛️ Internet Archive** — Agentic AI on a library of millions of free texts, movies, software, music, websites, and more
+- **[🧱](./nist/README.md) NIST** — organizes scientific work, helping to understand the regime structure behind those domains
+- **[🌉](./wikipedia/README.md) Wikipedia** — A regime‑aware structural analysis of the world's largest encyclopedia through an RTT lens
+- **[🍒](./Research/Google.md) Google** — A dimensional, regime-aware interpreter using operator grammar
+- **[🍇](./Research/Bing.md) Bing** — A dimensional, regime-aware interpreter using operator grammar
+- **[🥦](./Research/DuckDuckGo.md) DuckDuckGo** — A dimensional, regime-aware interpreter using operator grammar
+- **[🧰](./education/Toolbox/README.md) Education Toolbox** — Modules that transform grading, paper analysis, literature review, and insight generation
+- **[🏛️](./archive_org/README.md) Internet Archive** — Agentic AI on a library of millions of free texts, movies, software, music, websites, and more
 
 ---
 
-## 🧩 Domain Primer Tools
+## [🧩](./domain_tool_primers/README.md) Domain Primer Tools
 Short primers connecting RTT structure to:
 
 - mathematics  
@@ -105,7 +105,7 @@ Exploratory, non‑optimizing substrates for testing structure, paradox, and reg
 
 ---
 
-## 🧪 Diagnostics & Analyzers
+## [🧪](./Structural_Detection/README.md) Diagnostics & Analyzers
 - **Resilience Checker**  
 - **Paradox Testing**  
 - **Regime Drift Tools**  
@@ -113,7 +113,7 @@ Exploratory, non‑optimizing substrates for testing structure, paradox, and reg
 
 ---
 
-## 🧰 Examples & Implementations
+## [🧰](./rtt/Inside/README.md) Examples & Implementations
 Worked examples demonstrating RTT concepts in practice.
 
 - **30 minimal DOI examples** (Zenodo community)  
@@ -122,7 +122,7 @@ Worked examples demonstrating RTT concepts in practice.
 
 ---
 
-## 📜 RFCs & Records
+## [📜](./rfc/README.md) RFCs & Records
 Structural notes, invariants, and historical artifacts.
 
 ---
