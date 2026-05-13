@@ -65,7 +65,7 @@ This module maps the historical “near misses” where major thinkers almost di
 
 Use this document to understand where earlier frameworks reached their dimensional limits, why paradoxes emerged, and how triadic operators dissolve them cleanly. This module supports students and AI agents in recognizing the structural inevitability of triadic time within the broader canon.
 
-- [`Triadic_Time_Near_Misses_module.json`]() — Agentic module schema role assignments
+- [`Triadic_Time_Near_Misses_module.json`](./Triadic_Time_Near_Misses_module.json) — Agentic module schema role assignments
 
 ### *Scaffold — ready for refinement and commit*
 
