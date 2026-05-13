@@ -28,6 +28,8 @@
 
 ## 1. Core Frameworks (Structural Spine)
 
+- [ /Mudpuppy/ ](https://dev.mythmatic.org/Mudpuppy/) (AI-Ready Now!)
+- [ /SoftKitty/ ](https://dev.mythmatical.org/SoftKitty/) (AI-Ready Now!)
 - [ /rtt/ ](https://www.triadicframeworks.org/rtt/)
 - [ /rtt/1/ ](https://www.triadicframeworks.org/rtt/1/)
 - [ /rtt/2/ ](https://www.triadicframeworks.org/rtt/2/) (New!)
