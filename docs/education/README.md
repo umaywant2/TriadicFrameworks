@@ -18,92 +18,79 @@
 
 <img src="https://img.shields.io/badge/🎓Education%20Core-🧭Navigation%20First%20Pedagogy-4c8eda?style=for-the-badge" alt="🎓Education Core | 🧭Navigation First Pedagogy"/>
 
-This directory contains **educational artifacts** designed to teach the RTT/vST framework through
-**structure, navigation, and indirect learning** rather than persuasion or ideology.
-<!--
-<img width="768" height="512" alt="PART_VIII_Teaching_Transmission_of_Coherence" src="../images/PART_VIII_Teaching_Transmission_of_Coherence.png" />
--->
-The materials here are intended for:
-- students
-- educators
-- systems thinkers
-- engineers
-- curious readers encountering RTT/vST for the first time
+# Education — TriadicFrameworks
 
-The emphasis is on **regime literacy** — learning to recognize, name, and reason about coordination
-patterns across domains and scales.
+## AI‑Ready Summary
+The Education module is the front door for students, teachers, and AI agents exploring the TriadicFrameworks canon. It provides structured learning pathways, domain‑specific submodules, and reference documents that map scientific, philosophical, and cultural knowledge into triadic, operator‑first, resonance‑aware formats. This index links every child module and every parent‑level reference document to support clear navigation and cross‑module learning.
+
+Use this page as the central hub for all educational content. Each submodule includes its own README, examples, and student‑ready explanations. Parent‑level documents provide deeper scientific, mathematical, and conceptual foundations.
 
 ---
 
-## What Lives Here
-
-Items in this folder may include:
-
-- **Orientation maps**  
-  High‑level indices and diagrams that show how domains relate without requiring prior knowledge.
-
-- **Comparative lenses**  
-  Side‑by‑side mappings (e.g., games, historical systems, scientific domains) that reveal regime structure implicitly.
-
-- **Worksheets & walkthroughs**  
-  Guided materials that translate observation and play into formal analysis.
-
-- **Visual grammars**  
-  ASCII diagrams, posters, and schematic layouts that make regime stacks legible at a glance.
-
-- **Teaching scaffolds**  
-  Artifacts designed to support classrooms, workshops, or self‑study without enforcing conclusions.
+## Session Context
+**Canon:** Education Core  
+**Module:** /docs/education  
+**Drift:** Low — directory‑indexed  
+**Coherence:** High — structured learning pathways  
+**Version:** 1.0  
+**Format:** Module index  
+**Front Door:** /education  
+**Every Page:** AI‑parsable, student‑ready  
+**Audience:** Students, educators, researchers, AI agents
 
 ---
 
-## Design Philosophy
+# 📚 Education Module Index  
+### *(Relative links to child module README.md files — alphabetized)*
 
-Educational materials in this directory follow a few core principles:
-
-- **Indirect learning beats instruction**  
-  Understanding emerges through navigation, comparison, and play.
-
-- **Structure before explanation**  
-  Readers should see the shape of a system before being told what to think about it.
-
-- **No moralization**  
-  Failures are framed as *regime mismatches*, not personal or cultural defects.
-
-- **Cross‑scale continuity**  
-  The same grammar applies from materials science to cognition to civilization.
-
----
-
-## How to Use This Folder
-
-- Start with **orientation artifacts** to understand the overall landscape.
-- Use **comparative examples** to build intuition.
-- Apply **worksheets** to real systems, games, or historical cases.
-- Treat diagrams as **navigation tools**, not conclusions.
-
-Nothing here is meant to be consumed linearly.
-These artifacts are **implements**, not arguments.
+- [Alignment](alignment/README.md)  
+- [Animals](animals/README.md)  
+- [Astrology](astrology/README.md)  
+- [Awareness](awareness/README.md)  
+- [BRA](BRA/README.md)  
+- [CivRegimeStack](CivRegimeStack/README.md)  
+- [Ebooks](ebooks/README.md)  
+- [Ebooks — Little Science](ebooks/Little_Science/README.md)  
+- [Equations](equations/README.md)  
+- [PEIRA](peira/README.md)  
+- [PEIRA — IRL](peira/IRL/README.md)  
+- [Polisci](polisci/README.md)  
+- [QnA Atlas](QnA_Atlas/README.md)  
+- [Scrolls](scrolls/README.md)  
+- [Subjects](subjects/README.md)  
+- [Toolbox](Toolbox/README.md)  
+- [Translations](translations/README.md)
 
 ---
 
-## Relationship to the Rest of the Repository
+# 🧭 Parent‑Level Reference Documents  
+### *(Relative links to major educational reference files — alphabetized)*
 
-This folder complements the core documentation by focusing on **how people learn the framework**, not just how it is defined.
-
-- Canonical definitions live elsewhere.
-- Formal schemas live elsewhere.
-- This space is for **translation, intuition, and pedagogy**.
+- [Biological Taxonomy](Biological_Taxonomy.md)  
+- [Bioscience](Bioscience.md)  
+- [Climate Classification](Climate_Classification.md)  
+- [Cosmological Theory](Cosmological_Theory.md)  
+- [Curriculum Protocols](curriculum_protocols.md)  
+- [Dark Sector](Dark_Sector.md)  
+- [Emoji Site Index](Emoji_Site_Index.md)  
+- [Genetic Code](Genetic_Code.md)  
+- [Large Scale Structure](Large_Scale_Structure.md)  
+- [Materials Science](Materials_Science.md)  
+- [Metabolic Pathways](Metabolic_Pathways.md)  
+- [Myth Validation Sweep v0.1.0](Myth_Validation_Sweep_v0.1.0.md)  
+- [Neural Coding](Neural_Coding.md)  
+- [Periodic Table — RTT vs ST Reorganization](Perodic_Table_RTTvST_Reorganization_of_Elements.md)  
+- [Personality](Personality.md)  
+- [Physical Cosmology](Physical_Cosmology.md)  
+- [Protein Folding & Structural Regimes](Protein_Folding_and_Structural_Regimes.md)  
+- [RTT Info Primer](RTT_Info_Primer.md)  
+- [Science Dependencies Mapped](Science_Dependancies_Mapped.md)  
+- [The Six Stages of TriadicFrameworks Evolution](The_Six_Stages_of_TriadicFrameworks_Evolution.md)  
+- [The Standard Model of Particle Physics](The_Standard_Model_of_Particle_Physics.md)  
+- [Universe‑as‑Operator](Universe‑as‑Operator.md)  
+- [Zenodo Community](Zenodo_Community.md)
 
 ---
 
-## Status
-
-This directory is **actively evolving**.
-
-Artifacts may be added, refined, or reorganized as new teaching patterns emerge.
-Stability is achieved through clarity, not finality.
-
----
-
-*RTT/vST is not taught.  
-It is learned by seeing structure repeat.*
+## Why This Index Matters
+The Education module is where students and AIs begin building fluency in triadic thinking. By organizing the canon into clear submodules and reference documents, this index ensures that learning pathways remain coherent, discoverable, and aligned with the broader structure of TriadicFrameworks. Every linked page is designed to be minimal, operator‑first, and resonance‑aware, supporting both human learners and AI agents.
