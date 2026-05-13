@@ -519,6 +519,40 @@
       },
       "children": []
     },
+{
+  "name": "Mudpuppy",
+  "category": "spacetime",
+  "path": "/Mudpuppy/",
+  "module_json": "/Mudpuppy/Mudpuppy_module.json",
+  "parent": "Spacetime",
+  "imports": [
+    "Triadic_Time",
+    "Framework_Field_Theory",
+    "Paradoxes_Canon"
+  ],
+  "exports": [
+    "RTT3"
+  ],
+  "depth": 2,
+  "status": "canon-stable"
+},
+{
+  "name": "SoftKitty",
+  "category": "spacetime",
+  "path": "/SoftKitty/",
+  "module_json": "/SoftKitty/SoftKitty_module.json",
+  "parent": "Spacetime",
+  "imports": [
+    "Triadic_Time",
+    "CTs_Virtual_Worlds",
+    "Paradoxes_Canon"
+  ],
+  "exports": [
+    "RTT3"
+  ],
+  "depth": 2,
+  "status": "canon-stable"
+},  
     "gsm": {
       "canon_tag": "gsm",
       "name": "Governance Substrate Model",
