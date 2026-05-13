@@ -1,23 +1,24 @@
 {
   "module": "Triadic_Time_Near_Misses",
-  "version": "1.0",
+  "version": "1.1",
   "category": "research",
-  "summary": "Historical analysis of thinkers who nearly discovered triadic time, mapping their near-miss moments, missing operators, resulting paradoxes, and the triadic operators that resolve them.",
+  "summary": "Historical analysis of thinkers who nearly discovered triadic time, including modern 2020s near-misses, mapping their insights, missing operators, paradoxes, and the triadic operators that resolve them.",
   "files": [
     {
       "path": "docs/Research/Triadic_Time_Near_Misses.md",
       "role": "analysis",
       "analyzer_layer": "regime",
-      "purpose": "Cross-map of historical near misses in triadic time; identifies structural gaps and operator failures."
+      "purpose": "Cross-map of historical and modern near misses in triadic time; identifies structural gaps and operator failures."
     }
   ],
-  "operators": ["FFF", "Triadic Time", "Regime Operators"],
+  "operators": ["FFF", "Integration–Emission", "Regime Operators", "Triadic Time"],
   "cross_links": [
     "Paradoxes_Canon",
     "Framework_Field_Theory",
     "CTs_Virtual_Worlds",
-    "Operators",
-    "Regimes"
+    "SoftKitty",
+    "Mudpuppy",
+    "RTT3"
   ],
   "ai": {
     "audience": "Students, researchers, and AI agents",
