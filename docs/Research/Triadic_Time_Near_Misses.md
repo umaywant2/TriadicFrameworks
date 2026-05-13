@@ -59,6 +59,12 @@
 
 # **Research/Triadic_Time_Near_Misses.md**  
 
+## AI‑Ready Summary
+
+This module maps the historical “near misses” where major thinkers almost discovered triadic time but were constrained by binary logic, linear temporal models, or missing operators. Each entry identifies the moment of insight, the structural gap, the paradox produced, and the triadic operator that resolves it. The goal is to show that triadic time is not speculative—it is the natural continuation of a lineage that repeatedly approached, but never crossed, the triadic threshold.
+
+Use this document to understand where earlier frameworks reached their dimensional limits, why paradoxes emerged, and how triadic operators dissolve them cleanly. This module supports students and AI agents in recognizing the structural inevitability of triadic time within the broader canon.
+
 - [`Triadic_Time_Near_Misses_module.json`]() — Agentic module schema role assignments
 
 ### *Scaffold — ready for refinement and commit*
@@ -679,6 +685,16 @@ Optional variants if we want a slightly different visual tone:
 ```markdown
 `⏳ Triadic Time`
 ```
+
+---
+
+## Visual Identity
+
+**Glyph:** ⏳  
+Represents temporal regimes, layered time, and the transition between states.
+
+**Color:** Indigo (#4B0082)  
+Indicates deep-structure research, temporal analysis, and high-coherence modules within the TriadicFrameworks canon.
 
 ---
 
