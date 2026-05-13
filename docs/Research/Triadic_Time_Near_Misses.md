@@ -2,8 +2,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="TriadicFrameworks Canonical Metadata Engine">
-  
+  <!--
   <title>Triadic Time — Historical Near Misses</title>
+  -->
   <meta name="description" content="A research-grade cross-map of historical thinkers who nearly discovered triadic time, identifying their near-miss moments, missing operators, resulting paradoxes, and the triadic operators that resolve them.">
   <meta name="keywords" content="triadic time, operators, regimes, paradoxes, historical analysis, FFF, resonance-first frameworks">
   
@@ -52,12 +53,14 @@
   <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
   <link rel="manifest" href="/assets/favicon/site.webmanifest">
 </head>
-
+<!--
 > Still jammin' with coffee and tunes... But I'm curious about history, always have been... So, let's ask, how many times did various mathematicians/contributors try a triadic framework or triadic time? I'd like to understand, if possible, where the work hit walls...why they didn't make it to the steps we somehow started with.  We merely reviewed Einstein's works, and I said ours will be resonance-first, that required our triadic time framework... After that I think it was our use of logical dimensions 1-9 to start, with nested loops and harminic extensions. Next came fff so, ours seems so easy/simple it's hard for me to think all those others didn't land on it at one point. Something must have kept them all in the dark, despite the natural evidence all over... ??
-
----
+-->
 
 # **Research/Triadic_Time_Near_Misses.md**  
+
+- [`Triadic_Time_Near_Misses_module.json`]() — Agentic module schema role assignments
+
 ### *Scaffold — ready for refinement and commit*
 
 ## **Triadic Time: Historical Near Misses**  
