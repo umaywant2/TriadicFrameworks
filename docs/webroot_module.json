@@ -20,7 +20,26 @@
     "format": ["html", "json"],
     "every_page_stands_alone": true
   },
-
+{
+  "name": "Mudpuppy",
+  "series": "D-Series",
+  "version": "2.0beta",
+  "category": "spacetime",
+  "role": "dimensional_regime_engine",
+  "front_door": "https://dev.mythmatic.org/Mudpuppy/",
+  "module_json": "https://raw.githubusercontent.com/Triadic-Resonance-Wizards/mythmatic/main/Mudpuppy/Mudpuppy_module.json",
+  "ai_ready": true
+},
+{
+  "name": "SoftKitty",
+  "series": "T-Series",
+  "version": "3.0alpha",
+  "category": "spacetime",
+  "role": "resonance_cognitive_engine",
+  "front_door": "https://dev.mythmatical.org/SoftKitty/",
+  "module_json": "https://raw.githubusercontent.com/Triadic-Resonance-Wizards/mythmatical/main/SoftKitty_module.json",
+  "ai_ready": true
+},
   "session_context": {
     "canon": "TriadicFrameworks",
     "module": "Webroot",
