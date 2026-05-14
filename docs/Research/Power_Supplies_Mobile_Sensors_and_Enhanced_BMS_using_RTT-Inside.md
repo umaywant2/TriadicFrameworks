@@ -362,69 +362,70 @@ If you want, I can next:
 ### Reference block diagram: RTT‑TSB beside PMIC/BMS logic
 
 ```text
-              ┌───────────────────────────────────────────────────────┐
-              │                    Host MCU / SoC                      │
-              │  Power policy, sensor fusion, UX, logging, cloud, etc. │
-              │                                                       │
-I²C / SPI /   │  ┌─────────────────────────────────────────────────┐  │
-MMap bus  ─────┼──┤ RTT-Inside driver / decoder                     ├──┼──► Fleet analytics / service
-              │  │ - Reads RTT_HEALTH/STRESS/READINESS/BALANCE      │  │
-              │  │ - Pulls RTT_EVENT_LOG ring buffer                │  │
-              │  │ - Sets RTT_PURPOSE mode                          │  │
-              │  └─────────────────────────────────────────────────┘  │
-              └───────────────────────────────────────────────────────┘
+*
+               ┌────────────────────────────────────────────────────────┐
+               │                    Host MCU / SoC                      │
+               │ Power policy, sensor fusion, UX, logging, cloud, etc.  │
+               │                                                        │
+I²C / SPI /    │  ┌─────────────────────────────────────────────────┐   │
+MMap bus  ─────┼──┤ RTT-Inside driver / decoder                     ├── ┼──► Fleet analytics / service
+               │  │ - Reads RTT_HEALTH/STRESS/READINESS/BALANCE     │   │
+               │  │ - Pulls RTT_EVENT_LOG ring buffer               │   │
+               │  │ - Sets RTT_PURPOSE mode                         │   │
+               │  └─────────────────────────────────────────────────┘   │
+               └────────────────────────────────────────────────────────┘
                                ▲                 ▲
                                │                 │ optional interrupts
                                │                 │ (event watermark)
                                │                 │
                                │                 ▼
-┌──────────────────────────────────────────────────────────────────────────┐
-│                         PMIC / BMS / Sensor IC                           │
-│                                                                          │
-│  ┌──────────────────────────┐         ┌───────────────────────────────┐ │
-│  │     Power Path Control    │         │     Battery Management        │ │
-│  │  - Buck/boost/LDO loops   │         │  - Charger control loop       │ │
-│  │  - OCP/OVP/UVLO/OTP       │         │  - Protection FETs            │ │
-│  │  - Soft-start, sequencing │         │  - Balancing (cell or pack)   │ │
-│  └──────────────┬───────────┘         └──────────────┬────────────────┘ │
-│                 │                                      │                 │
-│                 │                                      │                 │
-│  ┌──────────────▼──────────────┐       ┌──────────────▼──────────────┐  │
-│  │      ADC / Sensing Frontend  │       │   Safety & Protection FSM    │  │
-│  │  - V/I/T sense, coulomb ctr  │       │ - Hard limits + fault flags  │  │
-│  │  - optional sensor hub data  │       │ - Latch / retry policy       │  │
-│  └──────────────┬──────────────┘       └──────────────┬──────────────┘  │
-│                 │                                      │                 │
-│                 ├───────────────┐      ┌───────────────┤                 │
-│                 │               │      │               │                 │
-│                 ▼               ▼      ▼               ▼                 │
-│     ┌─────────────────────────────────────────────────────────────────┐ │
-│     │          Existing Control Logic (UNCHANGED)                      │ │
-│     │  - regulation loops, charge algorithm, protection decisions      │ │
-│     └─────────────────────────────────────────────────────────────────┘ │
-│                                                                          │
-│     ┌─────────────────────────────────────────────────────────────────┐ │
-│     │ RTT‑TSB: RTT Telemetry & State Block (OBSERVABILITY ONLY)       │ │
-│     │                                                                 │ │
-│     │  Inputs (tap only, no control authority):                       │ │
-│     │   - V/I/T readings, margins, fault flags, throttle states       │ │
-│     │   - loop state (e.g., CC/CV, PFM/PWM), limiter engagement       │ │
-│     │   - optional tool: internal timestamps / counters               │ │
-│     │                                                                 │ │
-│     │  Outputs (register map):                                        │ │
-│     │   - BEING: RTT_HEALTH, RTT_STRESS, RTT_READINESS, RTT_BALANCE   │ │
-│     │   - TIME: RTT_TIME_HI, RTT_RECOVERY, RTT_DRIFT, RTT_RESILIENCE  │ │
-│     │   - KNOWING: RTT_EVENT_LOG ring buffer                          │ │
-│     │   - MEANING: RTT_PURPOSE (host writes)                          │ │
-│     │                                                                 │ │
-│     │  Optional: IRQ on event watermark / critical transition         │ │
-│     └─────────────────────────────────────────────────────────────────┘ │
-│                                                                          │
-│  ┌───────────────────────────────────────────────────────────────────┐  │
-│  │ Nonvolatile (optional)                                            │  │
-│  │ - retain event log + stress counters across power cycles           │  │
-│  └───────────────────────────────────────────────────────────────────┘  │
-└──────────────────────────────────────────────────────────────────────────┘
+┌───────────────────────────────────────────────────────────────────────────┐
+│                         PMIC / BMS / Sensor IC                            │
+│                                                                           │
+│  ┌──────────────────────────┐         ┌───────────────────────────────┐   │
+│  │    Power Path Control    │         │     Battery Management        │   │
+│  │ - Buck/boost/LDO loops   │         │  - Charger control loop       │   │
+│  │ - OCP/OVP/UVLO/OTP       │         │  - Protection FETs            │   │
+│  │ - Soft-start, sequencing │         │  - Balancing (cell or pack)   │   │
+│  └──────────────┬───────────┘         └──────────────┬────────────────┘   │
+│                 │                                    │                    │
+│                 │                                    │                    │
+│  ┌──────────────▼──────────────┐       ┌─────────────▼────────────────┐   │
+│  │     ADC / Sensing Frontend  │       │   Safety & Protection FSM    │   │
+│  │ - V/I/T sense, coulomb ctr  │       │ - Hard limits + fault flags  │   │
+│  │ - optional sensor hub data  │       │ - Latch / retry policy       │   │
+│  └──────────────┬──────────────┘       └─────────────┬────────────────┘   │
+│                 │                                    │                    │
+│                 ├───────────────┐      ┌─────────────┤                    │
+│                 │               │      │             │                    │
+│                 ▼               ▼      ▼             ▼                    │
+│     ┌─────────────────────────────────────────────────────────────────┐   │
+│     │          Existing Control Logic (UNCHANGED)                     │   │
+│     │  - regulation loops, charge algorithm, protection decisions     │   │
+│     └─────────────────────────────────────────────────────────────────┘   │
+│                                                                           │
+│     ┌─────────────────────────────────────────────────────────────────┐   │
+│     │ RTT‑TSB: RTT Telemetry & State Block (OBSERVABILITY ONLY)       │   │
+│     │                                                                 │   │
+│     │  Inputs (tap only, no control authority):                       │   │
+│     │   - V/I/T readings, margins, fault flags, throttle states       │   │
+│     │   - loop state (e.g., CC/CV, PFM/PWM), limiter engagement       │   │
+│     │   - optional tool: internal timestamps / counters               │   │
+│     │                                                                 │   │
+│     │  Outputs (register map):                                        │   │
+│     │   - BEING: RTT_HEALTH, RTT_STRESS, RTT_READINESS, RTT_BALANCE   │   │
+│     │   - TIME: RTT_TIME_HI, RTT_RECOVERY, RTT_DRIFT, RTT_RESILIENCE  │   │
+│     │   - KNOWING: RTT_EVENT_LOG ring buffer                          │   │
+│     │   - MEANING: RTT_PURPOSE (host writes)                          │   │
+│     │                                                                 │   │
+│     │  Optional: IRQ on event watermark / critical transition         │   │
+│     └─────────────────────────────────────────────────────────────────┘   │
+│                                                                           │
+│  ┌────────────────────────────────────────────────────────────────────┐   │
+│  │ Nonvolatile (optional)                                             │   │
+│  │ - retain event log + stress counters across power cycles           │   │
+│  └────────────────────────────────────────────────────────────────────┘   │
+└───────────────────────────────────────────────────────────────────────────┘
 ```
 
 #### Placement notes
