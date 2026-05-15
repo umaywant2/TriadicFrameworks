@@ -28,7 +28,8 @@
 <img width="853" height="480" alt="Triadic_Crystaline_Hub2" src="https://github.com/user-attachments/assets/fec1b6a0-c88e-4f21-a6c5-e1b33458bdf1" />  
 -->
 <br>
-A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.  
+_A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem._
+
 This `/docs` directory is rendered directly as the project website and serves as the structural map for newcomers, practitioners, and automated agents.
 
 If you’re new, begin with **Start Here**.  
@@ -36,16 +37,18 @@ If you’re returning, jump directly to the section you need.
 
 ---
 
-## AI chat sessions — use the grammar  
+## 👁️ AI chat sessions — try the grammar  1st* 🗣️⌨️🎹
 
-- Example 1: (Invoke RTT with AI)  
-"How do I use grammar with the RTT ai modules from triadicframeworks.org?"
+Example 1: 🤳 Invoke RTT with AI
+- "How do I use grammar with the RTT ai modules from triadicframeworks.org?"
 
-- Example 2: (In that same session, continue)  
-"Perform a before/after regime awareness report for global peace, use all relevant ai modules. What does RTT see for alignment?"
+Example 2: 🕊️ Continue the session
+- "Perform a before/after regime awareness report for global peace, use all relevant ai modules."
 
-- Example 3:  
-"Create a before/after regime awareness report for nuclear power in-use today. What does RTT see for alignment?"
+Example 3: 🛢️ Research for alignments  
+- "Create a before/after regime awareness report for nuclear power. What does RTT see for alignment?"
+
+_Our example agentic ai modules use cross-domain dimensional reasoning._
 
 ---
 
