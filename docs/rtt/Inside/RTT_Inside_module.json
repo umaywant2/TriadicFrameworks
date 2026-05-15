@@ -1,119 +1,130 @@
 {
-  "$schema": "https://www.triadicframeworks.org/schemas/module.schema.json",
-
-  "_meta": {
-    "module": "RTT Inside",
-    "canonical_id": "RTT_INSIDE",
-    "module_type": "RTT-Deployment",
-    "role": "engine",
-    "version": "2.1",
-    "status": "canon-stable",
-    "author": "Nawder Loswin",
-    "license": "MIT",
-    "canonical_path": "/docs/rtt/Inside/RTT_Inside_module.json",
-    "module_home": "/docs/rtt/Inside/",
-    "module_url": "https://www.triadicframeworks.org/rtt/Inside/",
-    "repository": "https://github.com/umaywant2/TriadicFrameworks",
-    "last_updated": "2026-05-06"
+  "module": "RTT/Inside",
+  "identity": {
+    "name": "RTT-Inside",
+    "category": "Core RTT Spine",
+    "summary": "The practical, cross-domain application layer of RTT. Provides operator hooks, capture templates, corridor traces, and resonance-aware integration patterns across real-world systems.",
+    "front_door": "index.html"
   },
 
-  "_session_context": {
-    "canon": "active (rtt‑inside)",
-    "modules": "capture templates (7) → domain takeaways (6) → universal alignment → API (4) → autonomous forms (11) → deployment profiles (coal, finance, earth sims, electron microscopes, robofish) → corridor studio → drift diagnostics → mesh node → global scenarios (ATC, HAM, Space Force)",
-    "drift": "minimal (inside‑locked)",
-    "coherence": "stable (introspective grammar)",
-    "version": "2.1 (inside‑refreshed)",
-    "format": "html + markdown + json schemas + diagrams",
-    "front_door": "exists (RTT/Inside root)",
-    "every_page": "stands alone + AI‑parsable",
-    "audience": "students + researchers + developers + engineers + AIs"
+  "purpose": {
+    "overview": "RTT-Inside operationalizes the RTT spine into concrete, domain-ready structures. It provides capture templates, drift protection, operator hooks, corridor mechanics, and cross-module integration patterns for applied RTT work.",
+    "audience": "Students, engineers, researchers, operators, and AI systems requiring a structured, minimal, RTT-native interface."
   },
 
-  "_version_history": [
-    {
-      "version": "1.0",
-      "date": "2026-05-03",
-      "note": "Initial module manifest with session context and basic file listing."
+  "files": {
+    "README": "README.md",
+    "CHANGELOG": "CHANGELOG.md",
+    "DRIFT_PROTECTION": "drift_protection.md",
+    "EARTH_PORTFOLIO": "Earth_portfolio.md",
+    "UNIVERSAL_ALIGNMENT_PATTERN": "Universal_Alignment_Pattern.md",
+    "SHARED_MISALIGNMENTS": "Shared_Misalignments_Across_All_Domains.md",
+    "META_LAYER_TAKEAWAY": "Meta-Layer_Takeaway.md",
+    "CULTURE_TAKEAWAY": "Culture_Takeaway.md",
+    "JUSTICE_TAKEAWAY": "Justice_Takeaway.md",
+    "MEDIA_TAKEAWAY": "Media_and_Communication_Takeaway.md",
+    "SCIENCE_TAKEAWAY": "Science_and_Research_Takeaway.md",
+    "ANTITIME": "How_RTT_Holds_Up_in_Antitime.md",
+
+    "CAPTURE_TEMPLATE_ECONOMY": "Capture_Template_Economy_Domain.md",
+    "CAPTURE_TEMPLATE_EDUCATION": "Capture_Template_Education_Domain.md",
+    "CAPTURE_TEMPLATE_ENVIRONMENT": "Capture_Template_Environment_Domain.md",
+    "CAPTURE_TEMPLATE_GOVERNANCE": "Capture_Template_Governance_Domain.md",
+    "CAPTURE_TEMPLATE_HEALTH": "Capture_Template_Health_Domain.md",
+    "CAPTURE_TEMPLATE_INFRASTRUCTURE": "Capture_Template_Infrastructure_Domain.md",
+    "CAPTURE_TEMPLATE_TECHNOLOGY": "Capture_Template_Technology_Domain.md",
+
+    "SINGLE_PAGE_SCHEMA": "Single-Page_JSON_Schema.md"
+  },
+
+  "submodules": {
+    "API": {
+      "README": "API/README.md",
+      "CORE_API_SURFACE": "API/Core_API_surface.md",
+      "CORE_API_SCHEMAS": "API/Core_API_Formal_JSON_Schemas.md",
+      "VARIANTS_API": "API/API_for_Variants_of_RTT.md",
+      "NAMESPACE_VERSIONING": "API/Namepace_Versioning_Identifiers.md"
     },
-    {
-      "version": "2.0",
-      "date": "2026-05-05",
-      "note": "Expanded to 120 file entries with roles and analyzer_layers across 15 directories."
+
+    "Autonomous_Forms": {
+      "README": "Autonomous_Forms/README.md",
+      "CONCRETE_SCAFFOLDS": "Autonomous_Forms/Concrete_scaffolds.md",
+      "CORRIDOR_TRACE_TYPES": "Autonomous_Forms/Corridor_Trace_Types.md",
+      "JSON_TRACE_FORMAT": "Autonomous_Forms/JSON_Trace_Format.md",
+      "JSON_TRACE_EMITTER": "Autonomous_Forms/JSON_Trace_Emitter.md",
+      "REWIND_MARKERS": "Autonomous_Forms/Rewind_Markers.md",
+      "REWIND_MECHANICS": "Autonomous_Forms/Rewind_mechanics.md",
+      "STREAM_JSON_TRACES": "Autonomous_Forms/Stream_JSON_traces_live.md",
+      "Q_METRIC_PANEL": "Autonomous_Forms/Q‑metric_waveform_panel.md",
+      "REAL_Q_METRIC_SET": "Autonomous_Forms/Real_Q‑Metric_Set.md",
+      "WEB_CORRIDOR_VIEWER": "Autonomous_Forms/Web‑based_Corridor_Viewer.md"
     },
-    {
-      "version": "2.1",
-      "date": "2026-05-06",
-      "note": "Metadata refresh. Added _meta, _session_context, _version_history, structural_grammar, cross_module_propagation, submodules. Added 2 missing files (drift_protection.md, CHANGELOG.md). Bumped to 122 entries."
+
+    "Cisco": {
+      "README": "Cisco/README.md",
+      "OPERATOR_HOOKS": "Cisco/operator_hooks.md",
+      "OPERATOR_HOOKS_GRID": "Cisco/operator_hooks_grid.md",
+      "CAPTURE": "Cisco/C_Capture.md",
+      "EXAMPLE_FLOW_LINEAGE": "Cisco/examples/flow_lineage.md",
+      "SESSION_CONTEXT": "Cisco/session_context.html",
+      "MANIFEST": "Cisco/manifest/Cisco_module.json"
+    },
+
+    "Internet2": {
+      "README": "Internet2/README.md",
+      "OPERATOR_HOOKS": "Internet2/operator_hooks.md",
+      "OPERATOR_HOOKS_DSRS": "Internet2/operator_hooks_dsrs_awareness.md",
+      "OPERATOR_HOOKS_GRID": "Internet2/operator_hooks_grid.md",
+      "CAPTURE": "Internet2/I_Capture.md",
+      "EXAMPLE_INVARIANT_ARC": "Internet2/examples/invariant_arc_example.md",
+      "SESSION_CONTEXT": "Internet2/session_context.html",
+      "MANIFEST": "Internet2/manifest/Inbternet2_module.json"
+    },
+
+    "Python": {
+      "README": "Python/README.md",
+      "OPERATOR_HOOKS": "Python/operator_hooks.md",
+      "OPERATOR_HOOKS_SEMANTIC": "Python/operator_hooks_semantic.md",
+      "CAUSAL_TRACE_EXAMPLE": "Python/causal_trace_example.md",
+      "CROSS_MODULE_EXAMPLES": "Python/Inside-Cisco_Inside-Python_Inside-Internet2_cross_module_examples.md",
+      "FULL_STACK_EXAMPLE": "Python/Inside-Cisco_Inside-Python_Inside-Internet2_triadic_full_stack_example.md",
+      "CAPTURE": "Python/P_Capture.md",
+      "SESSION_CONTEXT": "Python/session_context.html",
+      "MANIFEST": "Python/manifest/Python_module.json"
     }
-  ],
-
-  "module": "RTT Inside",
-  "version": "2.1",
-  "category": "rtt-inside",
-  "summary": "Complete manifest for the RTT Inside module — 122 files across 15 directories spanning domain capture templates, autonomous trace forms, deployment profiles (Coal, Finance, Earth Sims, Electron Microscopes, Robofish), corridor studio tooling, drift diagnostics, API surface, mesh-node hardware, examples, and global deployment scenarios (ATC, HAM, Space Force) with entft protocol specs and planetary coherence governance.",
-
-  "structural_grammar": {
-    "dimensional_envelope": "D0–D7",
-    "regime_envelope": "R0–R3",
-    "coherence_envelope": "C0–C4",
-    "drift_sensitivity": "medium",
-    "regime_sensitivity": "high"
   },
 
-  "cross_module_propagation": {
-    "imports": [
-      "RTT/1 operators",
-      "RTT core substrates",
-      "SARG structural grammar",
-      "FFT field theory",
-      "D369 structural observability"
+  "operators": {
+    "hooks": [
+      "Cisco/operator_hooks.md",
+      "Internet2/operator_hooks.md",
+      "Python/operator_hooks.md"
     ],
-    "exports": [
-      "Domain capture templates (7 sectors)",
-      "Domain takeaways (6 cross-cutting themes)",
-      "Universal alignment layer",
-      "Autonomous Forms trace engine",
-      "Corridor Studio tooling",
-      "Drift diagnostic framework",
-      "Deployment profiles (Coal, Finance, Earth Sims, Electron Microscopes, Robofish)",
-      "Global scenarios (ATC, HAM, Space Force) with entft protocol",
-      "Mesh Node hardware spec",
-      "API surface and JSON schemas"
+    "semantic": [
+      "Python/operator_hooks_semantic.md",
+      "Internet2/operator_hooks_dsrs_awareness.md"
+    ],
+    "grids": [
+      "Cisco/operator_hooks_grid.md",
+      "Internet2/operator_hooks_grid.md"
     ]
   },
 
-  "submodules": [
-    { "name": "API", "path": "API/", "files": 4, "purpose": "Core API surface, formal JSON schemas, namespace versioning." },
-    { "name": "Autonomous Forms", "path": "Autonomous_Forms/", "files": 11, "purpose": "Corridor trace engine — scaffolds, trace types, emitter, format, Q-metrics, rewind, streaming, viewer." },
-    { "name": "Coal Industry", "path": "Coal/", "files": 9, "purpose": "Coal industry deployment — variant, advantages, evacuation, comms, maps, test harness." },
-    { "name": "Corridor Studio", "path": "Corridor_Studio/", "files": 4, "purpose": "Dark-mode oscilloscope tooling and studio toolbar." },
-    { "name": "Drift Analysis", "path": "Drift/", "files": 7, "purpose": "Drift diagnostics — quantifying, correction, persistence, global efforts, observational summary." },
-    { "name": "Earth Sims", "path": "Earth_Sims/", "files": 7, "purpose": "Earth simulation — ABM overlay, agent-based modeling, retrofitting, interface spec, builders." },
-    { "name": "Electron Microscopes", "path": "Electron_Microscopes/", "files": 2, "purpose": "Electron microscopes and MRI machines with RTT-Inside." },
-    { "name": "Examples", "path": "Examples/", "files": 12, "purpose": "Semiconductor fab, superconductor, chemistry, evolution, blood test, node scaling examples." },
-    { "name": "Finance", "path": "Finance/", "files": 11, "purpose": "Finance deployment — CIO deck, executive summary, foundations, design system, posters, diagrams, system spec." },
-    { "name": "Global", "path": "Global/", "files": 7, "purpose": "Global deployment root — entft protocol (command grammar, encryption, handshake), planetary coherence, universe-class concepts." },
-    { "name": "Global/ATC", "path": "Global/ATC/", "files": 5, "purpose": "Air Traffic Control scenario — 3-phase deployment (integration, automation, resonance-native)." },
-    { "name": "Global/HAM", "path": "Global/HAM/", "files": 9, "purpose": "HAM radio scenario — 3D models, maps (command center, mobile, overlay, propagation), operators, training." },
-    { "name": "Global/Space Force", "path": "Global/Space_Force/", "files": 4, "purpose": "Space Force scenario — 3-phase deployment (integration, automation, resonance-native core)." },
-    { "name": "Mesh Node", "path": "Mesh_Node/", "files": 4, "purpose": "Mesh node hardware — block diagram, two SKUs, mine-wide deployment." },
-    { "name": "Robofish", "path": "Robofish/", "files": 3, "purpose": "Autonomous robotic fish — architecture, ecological robos for Great Lakes restoration." }
-  ],
+  "session_context": {
+    "file": "index.html",
+    "label": "RTT-Inside Session Context",
+    "fields": [
+      "Canon",
+      "Modules",
+      "Drift",
+      "Coherence",
+      "Version",
+      "Format",
+      "Front door",
+      "Every page",
+      "Audience"
+    ]
+  },
 
-  "files": [
-    "... (existing 120 entries preserved exactly as-is) ...",
-
-    {
-      "path": "drift_protection.md",
-      "role": "engine",
-      "analyzer_layer": "drift",
-      "purpose": "Drift protection specification — mechanisms for detecting and correcting structural drift in deployed RTT-Inside systems."
-    },
-    {
-      "path": "CHANGELOG.md",
-      "role": "reference",
-      "analyzer_layer": "cross-cutting",
-      "purpose": "Module changelog — version history and audit trail for the RTT/Inside module."
-    }
-  ]
+  "version": "2026.05"
 }
