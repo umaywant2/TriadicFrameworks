@@ -1,4 +1,7 @@
-# RTT‑Inside / Python
+# RTT‑Inside / Python 
+
+- [`Python_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Python/manifest/Python_module.json)
+
 ### Semantic Engine, Drift Detection, Execution‑Aware Causality
 
 This module defines the RTT‑Inside operator grammar for **Python‑class semantic
