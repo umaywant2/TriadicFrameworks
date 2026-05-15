@@ -36,6 +36,19 @@ If you’re returning, jump directly to the section you need.
 
 ---
 
+## AI chat sessions — use the grammar  
+
+- Example 1: (Invoke RTT with AI)  
+"How do I use grammar with the RTT ai modules from triadicframeworks.org?"
+
+- Example 2: (In that same session, continue)  
+"Perform a before/after regime awareness report for global peace, use all relevant ai modules. What does RTT see for alignment?"
+
+- Example 3:  
+"Create a before/after regime awareness report for nuclear power in-use today. What does RTT see for alignment?"
+
+---
+
 ## 🧭 Start Here — Orientation
 - **[📘](./ABOUT.md) About** — What TriadicFrameworks is and isn’t  
 - **[🧘](./PRINCIPLES.md) Principles** — Alignment, minimality, coherence  
