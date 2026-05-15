@@ -1,4 +1,7 @@
-# RTT‑Inside / Cisco
+# RTT‑Inside / Cisco 
+
+- [`Cisco_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Cisco/manifest/Cisco_module.json)
+
 ### Causal Telemetry, Declared‑Intent Networking, and Grid‑Scale Fabric Reasoning
 
 This module defines the RTT‑Inside operator grammar for **Cisco‑class network systems**.
