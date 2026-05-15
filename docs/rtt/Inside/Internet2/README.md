@@ -1,4 +1,7 @@
-# RTT‑Inside / Internet2
+# RTT‑Inside / Internet2 
+
+- [`Inbternet2_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Internet2/manifest/Inbternet2_module.json)
+
 ### Dimensional Substrate, Regime Awareness, and Internet3 Foundations
 
 This module defines the RTT‑Inside operator grammar for **Internet2‑class networks**:
