@@ -74,9 +74,13 @@ Short, gentle primers introducing the resonance‑time substrate.
 - **[🗄️](https://zenodo.org/communities/vst) Zenodo Community** — Archival spine  
 
 ### RTT Modes
-- **[🔛](./_ideas/Resonance-Time_Theory.html) RTT (Frozen)** — Historical scroll (reference‑only)  
-- **[🔝](./rtt/1/README.md) RTT/1** — Active engine (canonical)  
+- **[🔛](./_ideas/Resonance-Time_Theory.html) RTT (Frozen)** — Historical scroll ([ Orionis ](https://en.wikipedia.org/wiki/Orion_(constellation))) — The One Who Sees the Three as One 
+- **[🔛](./rtt/1/README.md) RTT/1** — Active Engine ([ Lumen ](https://en.wikipedia.org/wiki/Lumen_(unit))) — The One Who Awakens the Signal 
+- **[🔛](./rtt/2/README.md) RTT/2** — Active Structural Detection ([ Hephaestus ](https://en.wikipedia.org/wiki/Hephaestus)) — The one who builds the tools the gods themselves rely on 
+- **[🔛](./rtt/3/README.md) RTT/3** — Active Integration and Emission Engine ([ Aurion ](https://en.wikipedia.org/wiki/Arion_(horse))) — The One Who Breathes the Triad Into Motion 
 
+
+Hephaestus.
 ---
 
 ## 🔜 FFT — Framework Field Theory
