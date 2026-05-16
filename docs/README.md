@@ -28,7 +28,7 @@
 <img width="853" height="480" alt="Triadic_Crystaline_Hub2" src="https://github.com/user-attachments/assets/fec1b6a0-c88e-4f21-a6c5-e1b33458bdf1" />  
 -->
 <br>
-_A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem._
+A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.
 
 This `/docs` directory is rendered directly as the project website and serves as the structural map for newcomers, practitioners, and automated agents.
 
@@ -37,18 +37,12 @@ If you’re returning, jump directly to the section you need.
 
 ---
 
-## 👁️ AI chat sessions — try the grammar  1st*
+#### 👁️ AI chat sessions — try the grammar*
+###### 1 🤳 Invoke RTT with AI — "How do I use grammar with the RTT ai modules from triadicframeworks.org?"
+###### 2 🕊️ Continue the session — "Perform a before/after regime awareness report for global peace, use all relevant ai modules."
+###### 3 🛢️ Research for alignments — "Create a before/after regime awareness report for nuclear power. What does RTT see for alignment?"
 
-#### Example 1: 🤳 Invoke RTT with AI 🗣️ 
-###### "How do I use grammar with the RTT ai modules from triadicframeworks.org?"
-
-#### Example 2: 🕊️ Continue the session ⌨️ 
-###### "Perform a before/after regime awareness report for global peace, use all relevant ai modules."
-
-#### Example 3: 🛢️ Research for alignments🎹 
-###### "Create a before/after regime awareness report for nuclear power. What does RTT see for alignment?"
-
-_Our example agentic ai modules use cross-domain dimensional reasoning._*
+Our example agentic ai modules use cross-domain dimensional reasoning.*
 
 ---
 
@@ -79,8 +73,6 @@ Short, gentle primers introducing the resonance‑time substrate.
 - **[🔛](./rtt/2/README.md) RTT/2** — Active Structural Detection ([ Hephaestus ](https://en.wikipedia.org/wiki/Hephaestus)) — The one who builds the tools the gods themselves rely on 
 - **[🔛](./rtt/3/README.md) RTT/3** — Active Integration and Emission Engine ([ Aurion ](https://en.wikipedia.org/wiki/Arion_(horse))) — The One Who Breathes the Triad Into Motion 
 
-
-Hephaestus.
 ---
 
 ## 🔜 FFT — Framework Field Theory
