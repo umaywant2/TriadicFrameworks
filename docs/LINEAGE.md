@@ -24,7 +24,7 @@
 
 ### **Phase 0 — metaCo - Proto‑Substrate (Pre‑Canon)**  
 **What:**  
-Early attempt to unify context across silos. (2024–2025) Conceptual ancestor of RTT, Mode, Opacity, and the entire substrate architecture.
+Early attempt to unify context across silos. (2024–2025) 
 
 **Why it mattered:**  
 First appearance of **drift‑awareness, meta‑routing, and coherence preservation**.
