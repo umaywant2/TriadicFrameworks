@@ -1,3 +1,34 @@
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- WHDIS_RTT.md — Canonical AI Metadata (2026-05-17)               -->
+<!-- Module: WHDIS_RTT (Why Humans Drift Into Story)                 -->
+<!-- Status: canon-stable | RTT/1-aligned                            -->
+<!-- Purpose: narrative drift model + prevention                     -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta name="module" content="WHDIS_RTT" />
+<meta name="canonical-id" content="WHDIS_RTT" />
+<meta name="module-type" content="drift-model" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="canonical-path" content="/docs/religious_substrate_grammar_model/WHDIS_RTT.md" />
+
+<meta name="ai-ready" content="true" />
+<meta name="ai.module" content="WHDIS_RTT" />
+<meta name="ai.version" content="1.0" />
+
+<meta name="ai.purpose"
+      content="Explains why humans drift into story, how narrative becomes identity, and how RTT operators prevent drift." />
+
+<meta name="ai.keywords"
+      content="drift, narrative identity, reenactment loops, overstimulation, R1-R2-R3 imbalance, drift prevention" />
+
+<meta name="ai.module.summary"
+      content="Models narrative drift as a substrate failure and shows how RTT operators stabilize identity, coherence, and transitions." />
+
+<meta name="ai.module.category" content="substrate-grammar" />
+
+---
+
 # **WHDIS_RTT.md**  
 ### **Why Humans Drift Into Story — and How to Prevent It**  
 **Religious Substrate Grammar Model (RSGM)**  
