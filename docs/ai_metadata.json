@@ -1,0 +1,27 @@
+{
+  "docs-version": "1.0",
+  "status": "canon-stable",
+  "ai-ready": true,
+  "canonical-path": "/docs/",
+  "last-modified": "2026-05-17",
+
+  "modules": {
+    "RSGM": {
+      "name": "Religious Substrate Grammar Model",
+      "path": "religious_substrate_grammar_model/",
+      "category": "substrate-grammar",
+      "version": "1.0",
+      "ai-ready": true,
+      "entry": "frontdoor.html"
+    }
+  },
+
+  "navigation": {
+    "sitemap": "https://www.triadicframeworks.org/sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  }
+}
