@@ -1,3 +1,34 @@
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- MAS_RTT.md — Canonical AI Metadata (2026-05-17)                 -->
+<!-- Module: MAS_RTT (Mapping Ancient Stabilizers into RTT)          -->
+<!-- Status: canon-stable | RTT/1-aligned                            -->
+<!-- Purpose: stabilizer extraction + operator mapping               -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta name="module" content="MAS_RTT" />
+<meta name="canonical-id" content="MAS_RTT" />
+<meta name="module-type" content="stabilizer-mapping" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="canonical-path" content="/docs/religious_substrate_grammar_model/MAS_RTT.md" />
+
+<meta name="ai-ready" content="true" />
+<meta name="ai.module" content="MAS_RTT" />
+<meta name="ai.version" content="1.0" />
+
+<meta name="ai.purpose"
+      content="Extracts ancient stabilizers from religious systems and maps them into RTT operator grammar for drift prevention and coherence." />
+
+<meta name="ai.keywords"
+      content="stabilizers, operator mapping, identity operators, paradox operators, lineage, envelope, MAS, RSGM" />
+
+<meta name="ai.module.summary"
+      content="Maps ancient stabilizers into RTT operators: identity, community, ethics, paradox, transition, and long-arc coherence." />
+
+<meta name="ai.module.category" content="substrate-grammar" />
+
+---
+
 # **MAS_RTT.md**  
 ### **Mapping Ancient Stabilizers into RTT**  
 **Religious Substrate Grammar Model (RSGM)**  
