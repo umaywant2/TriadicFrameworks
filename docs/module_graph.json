@@ -553,6 +553,16 @@
   "depth": 2,
   "status": "canon-stable"
 },  
+{
+  "id": "C.O.D.E.",
+  "name": "Compassion Operator Dignity Ethiics",
+  "category": "ethics-care"
+},
+{
+  "id": "RSGM",
+  "name": "Religious Substrate Grammar Model",
+  "category": "substrate-grammar"
+},
     "gsm": {
       "canon_tag": "gsm",
       "name": "Governance Substrate Model",
