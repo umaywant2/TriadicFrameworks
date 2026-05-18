@@ -1,4 +1,6 @@
-# ⭐ **1) USER GUIDE — Grammar + Examples (C.O.D.E. Operators in Action)**
+## ⭐ USER GUIDE
+
+**Grammar + Examples (C.O.D.E. Operators in Action)**
 
 **Purpose:** Teach users how to *use* C.O.D.E. to find safe, ethical, dignity‑first resources.
 
