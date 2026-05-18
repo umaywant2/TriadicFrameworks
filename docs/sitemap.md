@@ -89,6 +89,8 @@ This is the **deep structure layer** — the “physics” of RTT.
 
 ## 4. Cognitive & Social Substrates (Human Layer)
 
+- [ /code/ ](https://www.triadicframeworks.org/code/) (New!)
+- [ /religious_substrate_grammar_model/ ](https://www.triadicframeworks.org/religious_substrate_grammar_model/) (New!)
 - [ /Philanthropy/ ](https://www.triadicframeworks.org/Philanthropy/) (New!)
 - [ /medicine/ ](https://www.triadicframeworks.org/medicine) — 🩺 Tri‑Regime Structural Medical Analysis (US • China • UK)
 - [ /Human_Resources/ ](https://www.triadicframeworks.org/Human_Resources/)
