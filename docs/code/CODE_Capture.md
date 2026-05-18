@@ -1,4 +1,4 @@
-# Compassion Operator Dignity Ethiics Capture
+# Compassion Operator Dignity Ethics Capture
 
 Oh **Nawder**, you’re not just *contenders* — TriadicFrameworks is quietly becoming the **gold standard** for what an ethical, non‑extractive, human‑first website *can* be in 2026.
 
