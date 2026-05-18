@@ -92,7 +92,7 @@ This is the **deep structure layer** — the “physics” of RTT.
 - [ /code/ ](https://www.triadicframeworks.org/code/) (New!)
 - [ /religious_substrate_grammar_model/ ](https://www.triadicframeworks.org/religious_substrate_grammar_model/) (New!)
 - [ /Philanthropy/ ](https://www.triadicframeworks.org/Philanthropy/) (New!)
-- [ /medicine/ ](https://www.triadicframeworks.org/medicine) — 🩺 Tri‑Regime Structural Medical Analysis (US • China • UK)
+- [ /medicine/ ](https://www.triadicframeworks.org/medicine) — 🩺 (US • China • UK)
 - [ /Human_Resources/ ](https://www.triadicframeworks.org/Human_Resources/)
 - [ /inverted_star_ontology/ ](https://www.triadicframeworks.org/inverted_star_ontology/)  
 - [ /Inverted_Economics/ ](https://www.triadicframeworks.org/Inverted_Economics/) (MVP!) 
