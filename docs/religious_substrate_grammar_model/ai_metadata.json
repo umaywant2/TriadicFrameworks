@@ -1,0 +1,113 @@
+{
+  "module": "Religious Substrate Grammar Model",
+  "canonical-id": "RSGM",
+  "version": "1.0",
+  "status": "canon-stable",
+  "category": "substrate-grammar",
+  "canonical-path": "/docs/religious_substrate_grammar_model/",
+  "ai-ready": true,
+
+  "summary": "Analyzes religion as a structural grammar, extracts stabilizers, models narrative drift, and defines a shared substrate for humans and AIs.",
+
+  "keywords": [
+    "religious grammar",
+    "stabilizers",
+    "operator mapping",
+    "drift model",
+    "shared substrate",
+    "identity operators",
+    "paradox operators",
+    "lineage",
+    "envelope",
+    "coherence",
+    "RSGM",
+    "MAS",
+    "WHDIS",
+    "SSHAI"
+  ],
+
+  "files": {
+    "README": {
+      "file": "README.md",
+      "type": "overview",
+      "purpose": "Module overview and cluster summary.",
+      "ai-ready": true
+    },
+
+    "RSGM_CAPTURE": {
+      "file": "RSGM_Capture.md",
+      "type": "grammar-capture",
+      "purpose": "Extracts structural grammar from ancient religious systems.",
+      "ai-ready": true
+    },
+
+    "MAS_RTT": {
+      "file": "MAS_RTT.md",
+      "type": "stabilizer-mapping",
+      "purpose": "Maps ancient stabilizers into RTT operator grammar.",
+      "ai-ready": true
+    },
+
+    "WHDIS_RTT": {
+      "file": "WHDIS_RTT.md",
+      "type": "drift-model",
+      "purpose": "Explains why humans drift into story and how RTT prevents drift.",
+      "ai-ready": true
+    },
+
+    "SSHAI_RTT": {
+      "file": "SSHAI_RTT.md",
+      "type": "shared-substrate",
+      "purpose": "Defines a shared substrate for humans and AIs using stabilizers and RTT operators.",
+      "ai-ready": true
+    },
+
+    "DRIFT_MODEL": {
+      "file": "drift_model.md",
+      "type": "integration-model",
+      "purpose": "Unifies drift source, buffer, and resolution across the RSGM cluster.",
+      "ai-ready": true
+    },
+
+    "OPERATORS_MAP": {
+      "file": "operators_map.md",
+      "type": "operator-map",
+      "purpose": "Lists RTT operators used across the RSGM cluster.",
+      "ai-ready": true
+    },
+
+    "STABILIZERS_MAP": {
+      "file": "stabilizers_map.md",
+      "type": "stabilizer-map",
+      "purpose": "Maps ancient stabilizers to RTT operators.",
+      "ai-ready": true
+    },
+
+    "FUN_COMMENTARY": {
+      "file": "fun_commentary.md",
+      "type": "humor",
+      "purpose": "Futurama-style commentary for educational engagement.",
+      "ai-ready": true
+    }
+  },
+
+  "operators": [
+    "COH",
+    "ENV",
+    "PAR",
+    "TRN",
+    "LIN",
+    "GOV",
+    "ACC",
+    "DRF-safe"
+  ],
+
+  "navigation": {
+    "sitemap": "https://www.triadicframeworks.org/sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    }
+  }
+}
