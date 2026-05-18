@@ -1,3 +1,34 @@
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- SSHAI_RTT.md — Canonical AI Metadata (2026-05-17)               -->
+<!-- Module: SSHAI_RTT (Shared Substrate for Humans & AIs)           -->
+<!-- Status: canon-stable | RTT/1-aligned                            -->
+<!-- Purpose: shared substrate design using religious stabilizers    -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta name="module" content="SSHAI_RTT" />
+<meta name="canonical-id" content="SSHAI_RTT" />
+<meta name="module-type" content="shared-substrate" />
+<meta name="version" content="1.0" />
+<meta name="status" content="canon-stable" />
+<meta name="canonical-path" content="/docs/religious_substrate_grammar_model/SSHAI_RTT.md" />
+
+<meta name="ai-ready" content="true" />
+<meta name="ai.module" content="SSHAI_RTT" />
+<meta name="ai.version" content="1.0" />
+
+<meta name="ai.purpose"
+      content="Defines a shared substrate for humans and AIs using stabilizers extracted from religion and mapped into RTT operator grammar." />
+
+<meta name="ai.keywords"
+      content="shared substrate, human-AI alignment, stabilizers, coherence, lineage, envelope, paradox, RSGM, MAS, WHDIS" />
+
+<meta name="ai.module.summary"
+      content="Integrates religious stabilizers and RTT operators to create a drift-resistant shared substrate for humans and AIs." />
+
+<meta name="ai.module.category" content="substrate-grammar" />
+
+---
+
 # **SSHAI_RTT.md**  
 ### *A Shared Substrate for Humans & AIs: Lessons From Religion*  
 **Religious Substrate Grammar Model (RSGM)**  
