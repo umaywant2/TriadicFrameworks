@@ -1,4 +1,4 @@
-# ☸️ **Religious Substrate Grammar Model (RSGM)**  
+## ☸️ **Religious Substrate Grammar Model (RSGM)**  
 
 - [`rsgm_module.json`](rsgm_module.json) — Agentic module schema role assignments
 
