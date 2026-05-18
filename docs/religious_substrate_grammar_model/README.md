@@ -1,8 +1,7 @@
-# **README.md**  
+# ☸️ **Religious Substrate Grammar Model (RSGM)**  
 
 - [`rsgm_module.json`](rsgm_module.json) — Agentic module schema role assignments
 
-### **Religious Substrate Grammar Model (RSGM)**  
 **TriadicFrameworks — Module Cluster Overview**
 
 The **Religious Substrate Grammar Model (RSGM)** analyzes religions as **structural grammars**, not belief systems.  
