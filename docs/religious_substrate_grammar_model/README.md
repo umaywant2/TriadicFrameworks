@@ -1,4 +1,7 @@
 # **README.md**  
+
+- [`rsgm_module.json`](rsgm_module.json) — Agentic module schema role assignments
+
 ### **Religious Substrate Grammar Model (RSGM)**  
 **TriadicFrameworks — Module Cluster Overview**
 
@@ -10,7 +13,7 @@ This module cluster contains four tightly linked documents:
 ---
 
 ## **1. RSGM_Capture — Religious Grammar Capture**  
-**File:** `RSGM_Capture.md`  
+**File:** [`RSGM_Capture.md`](RSGM_Capture.md)  
 **Role:** Core capture document for religious grammar.
 
 This file identifies the structural components found across major religious systems:
@@ -25,7 +28,7 @@ It establishes religion as a **proto‑substrate**: an early human attempt to en
 ---
 
 ## **2. MAS_RTT — Mapping Ancient Stabilizers into RTT**  
-**File:** `MAS_RTT.md`  
+**File:** [`MAS_RTT.md`](MAS_RTT.md) 
 **Role:** Extraction + operator mapping.
 
 This file shows how ancient stabilizers can be abstracted and mapped into RTT:
@@ -43,7 +46,7 @@ It provides a clean extraction protocol:
 ---
 
 ## **3. WHDIS_RTT — Why Humans Drift Into Story**  
-**File:** `WHDIS_RTT.md`  
+**File:** [`WHDIS_RTT.md`](WHDIS_RTT.md)  
 **Role:** Drift model + prevention.
 
 This file explains why humans drift into story‑as‑identity:
@@ -65,7 +68,7 @@ It then shows how RTT stabilizers prevent drift:
 ---
 
 ## **4. SSHAI_RTT — Shared Substrate for Humans & AIs**  
-**File:** `SSHAI_RTT.md`  
+**File:** [`SSHAI_RTT.md`](SSHAI_RTT.md)  
 **Role:** Integration model.
 
 This file unifies the cluster:
