@@ -1,6 +1,6 @@
 ## RTT Starter Navigation
 
-- **RTT Overview**
+- **Overview**
   - [RTT Starter Index](./index.md)
 
 - **RTT Levels**
@@ -13,7 +13,7 @@
 
 - **Reference**
   - [Cheat Sheet](./cheat-sheet.md)
-  - [Quick Reference Card](./quick-reference.md)
+  - [Quick Reference](./quick-reference.md)
   - [Printable Poster](./poster.txt)
 
 - **Guides**
