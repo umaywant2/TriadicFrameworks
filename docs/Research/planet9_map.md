@@ -9,19 +9,20 @@
 ## Map Summary Block
 
 ```
+-
 ┌──────────────────────────────────────────────────────┐
 │  MAP — PLANET 9 SURVIVING SEARCH SPACE               │
 │  *Where the GCO output is spatially unconstrained*   │
 ├──────────────────────────────────────────────────────┤
 │  CONSTRAINED:   ~50% of plausible parameter space    │
-│  UNCONSTRAINED: ~50% — concentrated in:             │
+│  UNCONSTRAINED: ~50% — concentrated in:              │
 │                 → Southern galactic plane ±15°       │
 │                 → Northern galactic plane ±15°       │
 │                 → Deep‑faint zone V > 21.5 mag       │
 │                 → Ultra‑distant zone d > 700 AU      │
 ├──────────────────────────────────────────────────────┤
 │  BEST CURRENT POSITION WINDOW:                       │
-│  RA ~ 40°–80°, Dec ~ −60° to −75°                   │
+│  RA ~ 40°–80°, Dec ~ −60° to −75°                    │
 │  (2024 ω̃ estimate, southern galactic plane adjacent) │
 ├──────────────────────────────────────────────────────┤
 │  COHERENCE STATUS: partial — ~50% constrained        │
@@ -292,6 +293,7 @@ COHERENCE ROADMAP
 ## 5. Map‑Layer Coherence Assessment
 
 ```
+-
 ┌──────────────────────────────────────────────────────────┐
 │  COHERENCE ASSESSMENT — MAP LAYER — MAY 2026             │
 ├──────────────────────────────────────────────────────────┤
@@ -299,8 +301,8 @@ COHERENCE ROADMAP
 │  Parameter coverage:  ~50% of plausible M×d space        │
 │  Largest gap:         Southern galactic plane            │
 │  Second gap:          Ultra‑distant / ultra‑dark zone    │
-│  Best position est.:  RA~40°–80°, Dec~−55° to −75°      │
-│  Next decisive event: LSST Year 1 ETNO catalog (2027)   │
+│  Best position est.:  RA~40°–80°, Dec~−55° to −75°       │
+│  Next decisive event: LSST Year 1 ETNO catalog (2027)    │
 │  Coherence trend:     Improving — LSST will be decisive  │
 │  RTT assessment:      Partial coherence — open module    │
 └──────────────────────────────────────────────────────────┘
@@ -312,12 +314,12 @@ COHERENCE ROADMAP
 
 | Module | Relation | Path |
 |---|---|---|
-| planet9_engine | GCO that defines what is being mapped | `./planet9_engine.md` |
-| planet9_diagnostic | Survey coverage details driving the map | `./planet9_diagnostic.md` |
-| planet9_signature | Signature zones being mapped | `./planet9_signature.md` |
-| planet9_profile | Parameter estimates constraining the map | `./planet9_profile.md` |
-| RTT Core | Coherence operator grammar | `/docs/RTT/Core.md` |
-| Planet9 (main) | Parent article | `/docs/Research/Planet9.md` |
+| planet9_engine | GCO that produces the drifting signal | `./planet9_engine.md` |
+| planet9_signature | Signatures being diagnosed here | `./planet9_signature.md` |
+| planet9_map | Spatial coverage gaps being diagnosed | `./planet9_map.md` |
+| planet9_profile | Parameters that drift as signal shifts | `./planet9_profile.md` |
+| RTT Core | Drift operator definitions | `../rtt/1/core_definitions.md` |
+| Planet9 (main) | Parent article | `./Planet9.md` |
 
 ---
 
