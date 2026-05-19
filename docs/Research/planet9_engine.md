@@ -9,6 +9,7 @@
 ## S‑N‑R Engine Block
 
 ```
+-
 ┌──────────────────────────────────────────────────┐
 │  ENGINE — GRAVITATIONAL CLUSTERING OPERATOR      │
 │  *How the Planet 9 regime‑expression is driven*  │
@@ -123,8 +124,6 @@ N₁ + N₂ + N₃ + N₄ → Survey‑inference distortion field
                        (sculpts S‑layer into apparent coherent cause)
                        (primary source of Planet 9 "evidence")
 ```
-                       (primary source of Planet 9 "evidence")
-```
 
 ---
 
@@ -171,14 +170,14 @@ R₁ + R₂ + R₃ + R₄ → Deep resonance field
 │  GRAVITATIONAL CLUSTERING OPERATOR — FULL SYNTHESIS   │
 ├───────────────────────────────────────────────────────┤
 │                                                       │
-│  S₁ + S₂ + S₃   →  Orbital pattern geometry          │
+│  S₁ + S₂ + S₃   →  Orbital pattern geometry           │
 │                     (surface of the regime)           │
 │                                                       │
-│  N₁ + N₂ + N₃ + N₄  →  Distortion field              │
+│  N₁ + N₂ + N₃ + N₄  →  Distortion field               │
 │                          (sculpts S into coherent     │
 │                           apparent cause)             │
 │                                                       │
-│  R₁ + R₂ + R₃ + R₄  →  Deep resonance substrate      │
+│  R₁ + R₂ + R₃ + R₄  →  Deep resonance substrate       │
 │                          (sustains and generates      │
 │                           S‑layer patterns)           │
 │                                                       │
@@ -186,7 +185,7 @@ R₁ + R₂ + R₃ + R₄ → Deep resonance field
 │  GCO OUTPUT:                                          │
 │  Planet‑like clustering signature                     │
 │  → Not necessarily a planet                           │
-│  → A regime‑expression of S‑N‑R misalignment         │
+│  → A regime‑expression of S‑N‑R misalignment          │
 └───────────────────────────────────────────────────────┘
 ```
 
@@ -220,11 +219,12 @@ The engine drives:
 
 | Module | Relation | Path |
 |---|---|---|
-| RTT Core | Operator grammar source — S‑N‑R definitions | `/docs/RTT/Core.md` |
-| Planet9 (main) | Parent article — full regime reinterpretation | `/docs/Research/Planet9.md` |
-| planet9_profile | Dimensional output of the GCO | `./planet9_profile.md` |
-| planet9_signature | Observable outputs of the GCO | `./planet9_signature.md` |
-| Framework Field Theory | Dimensional resonance field operators | `/docs/FFT/index.md` |
+| planet9_engine | GCO that produces the drifting signal | `./planet9_engine.md` |
+| planet9_signature | Signatures being diagnosed here | `./planet9_signature.md` |
+| planet9_map | Spatial coverage gaps being diagnosed | `./planet9_map.md` |
+| planet9_profile | Parameters that drift as signal shifts | `./planet9_profile.md` |
+| RTT Core | Drift operator definitions | `../rtt/1/core_definitions.md` |
+| Planet9 (main) | Parent article | `./Planet9.md` |
 
 ---
 
