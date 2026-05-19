@@ -66,6 +66,8 @@
 
 # 🔬 Research Module — Planet 9 (Regime Analysis)
 
+- [`Planet9_module.json`](Planet9_module.json) — Agentic module schema role assignments
+
 ## Abstract
 
 The Planet 9 hypothesis is traditionally framed as a missing object: a distant, massive planet whose gravity explains the apparent clustering of extreme trans‑Neptunian orbits. This research reframes the problem through a regime‑based lens. Instead of treating Planet 9 as an ontological body, we treat it as a **regime‑expression** emerging from the interplay of signal (S), noise (N), and resonance (R) across observational, dynamical, and inferential layers.
