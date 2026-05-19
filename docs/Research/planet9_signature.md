@@ -9,6 +9,7 @@
 ## Signature Summary Block
 
 ```
+-
 ┌──────────────────────────────────────────────────────┐
 │  SIGNATURE — PLANET 9 OBSERVABLE REGIME EXPRESSIONS  │
 │  *What the GCO looks like in each survey regime*     │
@@ -18,7 +19,7 @@
 │  SIG‑3  Detached‑Orbit Cluster   → S₁ + R₃ coupling  │
 │  SIG‑4  High‑Perihelion Cluster  → R₁ + R₂ coupling  │
 │  SIG‑5  Low‑Inclination Neptune‑ → S₂ + R₃ coupling  │
-│         Crossers                                      │
+│         Crossers                                     │
 ├──────────────────────────────────────────────────────┤
 │  REGIME STATUS: survey‑dependent | non‑invariant     │
 │  STRONGEST IN: ZTF northern coverage zone            │
@@ -138,13 +139,14 @@ Property:    Perihelion too high for Neptune to have emplaced them
 ### 4.2 Detached Object Catalog (RTT format)
 
 ```
+-
 ┌──────────────┬────────┬────────┬──────────────────────────┐
 │  Object      │  a(AU) │  q(AU) │  RTT Regime Note         │
 ├──────────────┼────────┼────────┼──────────────────────────┤
 │  Sedna       │  506   │  76    │  R₂‑detachable at a>300  │
-│  2012 VP₁₁₃ │  265   │  80    │  R₁+R₃ competitive       │
-│  2015 BP₅₁₉ │  449   │  36    │  S₁ confinement zone     │
-│  2014 SR₃₄₉ │  300   │  50    │  R₃ secular drift zone   │
+│  2012 VP₁₁₃  │  265   │  80    │  R₁+R₃ competitive       │
+│  2015 BP₅₁₉  │  449   │  36    │  S₁ confinement zone     │
+│  2014 SR₃₄₉  │  300   │  50    │  R₃ secular drift zone   │
 └──────────────┴────────┴────────┴──────────────────────────┘
 ```
 
@@ -229,15 +231,16 @@ SIGNATURE HIERARCHY (current, 2024–2026)
 ## 7. Signature Cross‑Regime Summary
 
 ```
-┌─────────┬──────────────────────┬──────────┬─────────────┬──────────────────┐
-│  SIG    │  Description         │  Signif. │  Regime     │  RTT Status      │
-├─────────┼──────────────────────┼──────────┼─────────────┼──────────────────┤
+-
+┌─────────┬───────────────────────┬──────────┬─────────────┬──────────────────┐
+│  SIG    │  Description          │  Signif. │  Regime     │  RTT Status      │
+├─────────┼───────────────────────┼──────────┼─────────────┼──────────────────┤
 │  SIG‑1  │  Apsidal confinement  │  ~1.9–3σ │  N₁‑heavy   │  Regime artifact │
 │  SIG‑2  │  Inclination excess   │  ~2.5σ   │  R₂‑heavy   │  Regime artifact │
 │  SIG‑3  │  Detached orbits      │  ~2σ     │  R₁+R₃      │  Multiply realiz.│
 │  SIG‑4  │  High‑q cluster       │  ~2σ     │  N₃‑limited │  Requires growth │
 │  SIG‑5  │  Low‑i Neptune‑cross  │  ~5σ     │  Moderate   │  Best candidate  │
-└─────────┴──────────────────────┴──────────┴─────────────┴──────────────────┘
+└─────────┴───────────────────────┴──────────┴─────────────┴──────────────────┘
 ```
 
 **Signature‑layer conclusion:** The Planet 9 signature set is a graded regime‑expression. No single signature is currently regime‑invariant. SIG‑5 is the most planet‑like expression — but until a full R‑layer‑inclusive model is tested against it, the signature layer cannot support an object‑level conclusion.
@@ -248,12 +251,12 @@ SIGNATURE HIERARCHY (current, 2024–2026)
 
 | Module | Relation | Path |
 |---|---|---|
-| planet9_engine | GCO that generates these signatures | `./planet9_engine.md` |
-| planet9_profile | Parameter constraints from SIG‑1–5 | `./planet9_profile.md` |
-| planet9_diagnostic | Survey coverage of each signature zone | `./planet9_diagnostic.md` |
-| planet9_map | Sky‑plane locations of signature zones | `./planet9_map.md` |
-| RTT Core | Regime‑invariance test definitions | `/docs/RTT/Core.md` |
-| Planet9 (main) | Full operator‑mapping of S‑N‑R | `/docs/Research/Planet9.md` |
+| planet9_engine | GCO that produces the drifting signal | `./planet9_engine.md` |
+| planet9_signature | Signatures being diagnosed here | `./planet9_signature.md` |
+| planet9_map | Spatial coverage gaps being diagnosed | `./planet9_map.md` |
+| planet9_profile | Parameters that drift as signal shifts | `./planet9_profile.md` |
+| RTT Core | Drift operator definitions | `../rtt/1/core_definitions.md` |
+| Planet9 (main) | Parent article | `./Planet9.md` |
 
 ---
 
