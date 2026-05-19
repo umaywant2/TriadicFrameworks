@@ -2,6 +2,8 @@
 
 - [`starter_module.json`](starter_module.json) — Agentic module schema role assignments
 
+<img width="902" height="253" alt="starter-hero" src="https://github.com/user-attachments/assets/4186f0e5-8eb6-4483-9831-43322bd2b14b" />
+
 **Time:** 1–3 hours  
 **Audience:** Students, beginners, first‑time module authors  
 **Goal:** Go from zero → a working RTT module with agentic grammar, published on GitHub.
