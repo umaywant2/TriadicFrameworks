@@ -9,6 +9,7 @@
 ## Dimensional Summary Block
 
 ```
+-
 ┌──────────────────────────────────────────────────────┐
 │  PROFILE — PLANET 9 PARAMETER DIMENSIONS             │
 │  *What the GCO output implies about its cause*       │
@@ -17,9 +18,9 @@
 │  SEMI‑MAJOR    ~500 AU  (+170 / −120)                │
 │  APHELION      ~630 AU  (+290 / −170)                │
 │  CURRENT DIST  ~550 AU  (+250 / −180)                │
-│  V‑MAGNITUDE   ~22.0    (+1.1 / −1.4)               │
+│  V‑MAGNITUDE   ~22.0    (+1.1 / −1.4)                │
 │  PERIOD        ~10,000–20,000 yr                     │
-│  INCLINATION   ~15°–25° (to ecliptic)               │
+│  INCLINATION   ~15°–25° (to ecliptic)                │
 │  ECCENTRICITY  ~0.2–0.5                              │
 ├──────────────────────────────────────────────────────┤
 │  REGIME STATUS: inferred | regime‑sensitive          │
@@ -190,6 +191,7 @@ Anti‑clustering direction: ~100°–130°
 ## 6. Dimensional Coherence Map
 
 ```
+-
 ┌────────────────┬─────────────┬────────────────┬─────────────────┐
 │  PARAMETER     │  STABILITY  │  PRIMARY RISK  │  RESOLVES WITH  │
 ├────────────────┼─────────────┼────────────────┼─────────────────┤
@@ -200,7 +202,7 @@ Anti‑clustering direction: ~100°–130°
 │  Magnitude (V) │  Low        │  Albedo unkn.  │  Direct detect. │
 │  Inclination   │  Low        │  N₁ footprint  │  Bias modeling  │
 │  Eccentricity  │  Moderate   │  S₁ degeneracy │  Sample growth  │
-│  Longitude ω̃  │  Very low   │  N₁ dominant   │  Bias modeling  │
+│  Longitude ω̃  │  Very low   │  N₁ dominant   │  Bias modeling   │
 └────────────────┴─────────────┴────────────────┴─────────────────┘
 ```
 
@@ -212,11 +214,12 @@ Anti‑clustering direction: ~100°–130°
 
 | Module | Relation | Path |
 |---|---|---|
-| planet9_engine | GCO definition — source of Σ that D_P9 inverts | `./planet9_engine.md` |
-| planet9_signature | Observable outputs of these parameter ranges | `./planet9_signature.md` |
-| planet9_diagnostic | Survey constraints on d and V | `./planet9_diagnostic.md` |
-| RTT Core | Dimensional operator grammar | `/docs/RTT/Core.md` |
-| Planet9 (main) | Parent article with parameter tables | `/docs/Research/Planet9.md` |
+| planet9_engine | GCO that produces the drifting signal | `./planet9_engine.md` |
+| planet9_signature | Signatures being diagnosed here | `./planet9_signature.md` |
+| planet9_map | Spatial coverage gaps being diagnosed | `./planet9_map.md` |
+| planet9_profile | Parameters that drift as signal shifts | `./planet9_profile.md` |
+| RTT Core | Drift operator definitions | `../rtt/1/core_definitions.md` |
+| Planet9 (main) | Parent article | `./Planet9.md` |
 
 ---
 
