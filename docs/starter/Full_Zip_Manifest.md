@@ -1,3 +1,6 @@
+# **RTT Starter Kit — Full .zip Manifest**
+
+```
 rtt-starter-kit/
 │
 ├── README.md
@@ -36,3 +39,71 @@ rtt-starter-kit/
     ├── index.md
     ├── HOWTO.md
     └── github-setup.md
+```
+
+---
+
+# **Section‑by‑Section Breakdown**
+
+## **Root**
+- `README.md` — overview of the Starter Kit
+
+---
+
+## **/rtt/**
+Student editions of RTT/1, RTT/2, RTT/3.
+
+Each folder contains:
+- `README.md` — short intro  
+- `rttX.md` — the student‑edition content  
+
+---
+
+## **/modules/**
+Where students build their modules.
+
+### **/modules/starter/**
+A fully working example module:
+- `README.md`  
+- `module.json`  
+- `example-operator.md`  
+
+### **/modules/templates/**
+Three canonical templates:
+- `module.blank.json`  
+- `module.example.json`  
+- `module.rtt-ready.json`  
+
+---
+
+## **/schema/**
+- `module.schema.json` — the canonical schema
+
+---
+
+## **/tools/**
+Validator scripts + instructions:
+- `validate.py`  
+- `validate.js`  
+- `README.md`  
+
+---
+
+## **/docs/**
+Student‑facing documentation:
+- `index.md` — landing page  
+- `HOWTO.md` — 1‑page module creation guide  
+- `github-setup.md` — publishing instructions  
+
+---
+
+# **Packaging Notes**
+The `.zip` should contain **exactly** the structure above — no hidden files, no OS metadata, no editor folders.
+
+Ideal packaging command (conceptually):
+
+```
+zip -r rtt-starter-kit.zip rtt-starter-kit/
+```
+
+This ensures deterministic structure for students and agents.
