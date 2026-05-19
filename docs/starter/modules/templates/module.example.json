@@ -1,1 +1,23 @@
-
+{
+  "$schema": "../../schema/module.schema.json",
+  "module": "example-module",
+  "identity": "student.example-module",
+  "purpose": "A simple example module demonstrating the minimal structure.",
+  "files": [
+    {
+      "name": "README.md",
+      "role": "profile"
+    },
+    {
+      "name": "example-operator.md",
+      "role": "example"
+    }
+  ],
+  "operators": [
+    {
+      "name": "shift",
+      "description": "Move the frame of reference forward or backward.",
+      "example": "Shift one step forward to reveal the next state."
+    }
+  ]
+}
