@@ -1,5 +1,70 @@
-# 🔬 Research Module — Planet 9 (Regime Analysis)
+<!-- ============================================================
+     PLANET 9 RESEARCH — AI ARTIFACT METADATA
+     TriadicFrameworks Canon | Module: planet9 | Version: 1.0
+     Author: Nawder Loswin | Date: 2025
+     ============================================================ -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="TriadicFrameworks Canon">
 
+<!-- Identity -->
+<meta name="author" content="Nawder Loswin">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="citation_title" content="Planet 9 Research | TriadicFrameworks">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#1e1b4b">
+
+<!-- Module Description & Keywords -->
+<meta name="description" content="A regime-aware structural analysis of the Planet 9 hypothesis — gravitational clustering, orbital resonance, and observational survey coverage through the RTT lens.">
+<meta name="keywords" content="Planet 9, Planet Nine, TNO clustering, Batygin Brown, trans-Neptunian objects, gravitational resonance, RTT, TriadicFrameworks, orbital mechanics, distant solar system">
+<meta name="DC.subject" content="Planetary Astrophysics; Trans-Neptunian Objects; Gravitational Clustering; Resonance Time Theory; TriadicFrameworks">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://triadicframeworks.github.io/docs/planet9/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="Planet 9 Research | TriadicFrameworks">
+<meta property="og:description" content="A regime-aware structural analysis of the Planet 9 hypothesis — gravitational clustering, orbital resonance, and observational survey coverage through the RTT lens.">
+<meta property="og:url" content="https://triadicframeworks.github.io/docs/planet9/">
+<meta property="og:image" content="https://triadicframeworks.github.io/docs/planet9/assets/planet9_hero.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="600">
+<meta property="og:site_name" content="TriadicFrameworks">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Planet 9 Research | TriadicFrameworks">
+<meta name="twitter:description" content="Gravitational clustering, orbital resonance, and TNO survey coverage through the RTT lens.">
+<meta name="twitter:image" content="https://triadicframeworks.github.io/docs/planet9/assets/planet9_hero.png">
+
+<!-- AI Navigation & Contact -->
+<meta name="ai.navigation" content="https://triadicframeworks.github.io/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/TriadicFrameworks/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- AI Module Identity -->
+<meta name="ai.module" content="planet9">
+<meta name="ai.module.name" content="Planet 9 Research">
+<meta name="ai.module.summary" content="Regime-aware structural analysis of the Planet 9 hypothesis through gravitational clustering, orbital resonance, and trans-Neptunian survey coverage.">
+<meta name="ai.module.category" content="science">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Map the epistemic and observational regime structure of the Planet 9 hypothesis for students, researchers, and AI agents using RTT operator grammar.">
+<meta name="ai.audience" content="students, researchers, AIs">
+<meta name="ai.keywords" content="Planet 9, TNO clustering, gravitational resonance, Batygin-Brown, orbital mechanics, survey coverage, RTT, dimensional operator">
+
+<!-- Favicon Suite -->
+<link rel="icon" type="image/png" href="https://triadicframeworks.github.io/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="https://triadicframeworks.github.io/favicon-16x16.png" sizes="16x16">
+<link rel="apple-touch-icon" href="https://triadicframeworks.github.io/apple-touch-icon.png">
+<link rel="manifest" href="https://triadicframeworks.github.io/site.webmanifest">
+
+# 🔬 Research Module — Planet 9 (Regime Analysis)
 
 ## Abstract
 
@@ -750,3 +815,48 @@ This diagram shows that Sumerian cosmology was not “primitive astronomy,” bu
 RTT simply restores the dimensionality that modern object‑based astronomy collapses.
 
 > `🔬 Research` — *Regime‑Based Astronomy Track*
+
+<!-- SESSION CONTEXT — Planet 9 Research -->
+<section class="session-context" aria-label="Session context for Planet 9 Research module">
+  <div class="context-row">
+    <span class="context-label">Canon:</span>
+    <span class="context-value">active (planet9)</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Modules:</span>
+    <span class="context-value">hub → rtt-core → science → planet9</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Drift:</span>
+    <span class="context-value">bounded (observational-epistemic)</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Coherence:</span>
+    <span class="context-value">stable (gravitational-clustering-regime)</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Version:</span>
+    <span class="context-value">1.0 (planet9-stable)</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Format:</span>
+    <span class="context-value">html + markdown + diagrams</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Front door:</span>
+    <span class="context-value">exists (planet9 index)</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Every page:</span>
+    <span class="context-value">stands alone + AI-parsable</span>
+  </div>
+  <div class="context-row">
+    <span class="context-label">Audience:</span>
+    <span class="context-value">students + researchers + AIs</span>
+  </div>
+</section>
+
+<!-- Badge -->
+<div class="module-badge" aria-label="Planet 9 Research module badge">
+  🪐 Planet 9 Research
+</div>
