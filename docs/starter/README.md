@@ -1,4 +1,7 @@
 # **RTT Starter Kit — How to Create Your First Agentic Module**  
+
+- [`starter_module.json`](starter_module.json) — Agentic module schema role assignments
+
 **Time:** 1–3 hours  
 **Audience:** Students, beginners, first‑time module authors  
 **Goal:** Go from zero → a working RTT module with agentic grammar, published on GitHub.
