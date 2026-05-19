@@ -4,8 +4,15 @@
 rtt-starter-kit/
 │
 ├── README.md
+├── Full_Zip_Manifest.md
 │
 ├── rtt/
+│   ├── cheat-sheet.md
+│   ├── index.md
+│   ├── instructor-overview.md
+│   ├── quick-reference.md
+│   ├── _sidebar.md
+│   │
 │   ├── 1/
 │   │   ├── README.md
 │   │   └── rtt1.md
@@ -38,6 +45,9 @@ rtt-starter-kit/
 └── docs/
     ├── index.md
     ├── HOWTO.md
+    ├── We_Didnt_Start_RTT__remix.md
+    ├── Cold_as_Ice__RTT_parody.md
+    ├── THE_FRAMEBREAKER—RTT_Metal_Parody_Original.md
     └── github-setup.md
 ```
 
