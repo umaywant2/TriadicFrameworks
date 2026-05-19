@@ -80,6 +80,19 @@ The conclusion: **Planet 9 is best understood as a regime artifact—a structura
 
 ---
 
+## Cross‑Module Links
+
+| Module | Relation | Path |
+|---|---|---|
+| planet9_engine | GCO that produces the drifting signal | [`./planet9_engine.md`](./planet9_engine.md) |
+| planet9_signature | Signatures being diagnosed here | [`./planet9_signature.md`](./planet9_signature.md) |
+| planet9_map | Spatial coverage gaps being diagnosed | [`./planet9_map.md`](./planet9_map.md) |
+| planet9_profile | Parameters that drift as signal shifts | [`./planet9_profile.md`](./planet9_profile.md) |
+| RTT Core | Drift operator definitions | [`../rtt/1/core_definitions.md`](../rtt/1/core_definitions.md) |
+| Planet9 (main) | Parent article | `./Planet9.md` |
+
+---
+
 ## S‑N‑R Summary Block
 
 A regime‑aware snapshot of how the Planet 9 signal emerges across the three TriadicFrameworks layers.
