@@ -9,9 +9,10 @@
 ## Diagnostic Summary Block
 
 ```
+-
 ┌──────────────────────────────────────────────────────┐
 │  DIAGNOSTIC — DRIFT & COVERAGE ASSESSMENT            │
-│  *Is the Planet 9 signal converging or drifting?*   │
+│  *Is the Planet 9 signal converging or drifting?*    │
 ├──────────────────────────────────────────────────────┤
 │  ZTF     Coverage: ~30% of P9 parameter space        │
 │          Depth:    V < 20.6 mag (wide‑area limit)    │
@@ -286,6 +287,7 @@ LSST (VERA RUBIN OBSERVATORY) — PROJECTED DIAGNOSTIC IMPACT
 ## 6. Diagnostic Verdict
 
 ```
+-
 ┌──────────────────────────────────────────────────────────┐
 │  DIAGNOSTIC VERDICT — MAY 2026                           │
 ├──────────────────────────────────────────────────────────┤
@@ -310,8 +312,8 @@ LSST (VERA RUBIN OBSERVATORY) — PROJECTED DIAGNOSTIC IMPACT
 | planet9_signature | Signatures being diagnosed here | `./planet9_signature.md` |
 | planet9_map | Spatial coverage gaps being diagnosed | `./planet9_map.md` |
 | planet9_profile | Parameters that drift as signal shifts | `./planet9_profile.md` |
-| RTT Core | Drift operator definitions | `/docs/RTT/Core.md` |
-| Planet9 (main) | Parent article | `/docs/Research/Planet9.md` |
+| RTT Core | Drift operator definitions | `../rtt/1/core_definitions.md` |
+| Planet9 (main) | Parent article | `./Planet9.md` |
 
 ---
 
