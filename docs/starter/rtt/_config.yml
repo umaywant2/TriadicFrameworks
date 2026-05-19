@@ -1,0 +1,38 @@
+title: "RTT Starter Kit"
+description: "Student Edition — RTT/1, RTT/2, RTT/3"
+theme: jekyll-theme-minimal
+
+# Ensures GitHub Pages processes Markdown correctly
+markdown: kramdown
+kramdown:
+  input: GFM
+
+# Enable relative links so sidebar paths work everywhere
+relative_links:
+  enabled: true
+  collections: true
+
+# Auto‑expand navigation for nested folders
+collections:
+  rtt:
+    output: true
+    permalink: /rtt/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+# Sidebar configuration (works with _sidebar.md)
+include:
+  - _sidebar.md
+
+# Prevents Jekyll from stripping folders you need
+keep_files:
+  - rtt
+  - starter
+  - docs
+
+# Clean, readable URLs
+permalink: pretty
