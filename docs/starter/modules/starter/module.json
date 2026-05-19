@@ -1,1 +1,8 @@
-
+{
+  "$schema": "../module.schema.json",
+  "module": "example",
+  "identity": "student.example",
+  "purpose": "Teach the basics of RTT",
+  "files": [],
+  "operators": []
+}
