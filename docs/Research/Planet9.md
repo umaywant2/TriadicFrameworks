@@ -140,20 +140,17 @@ A regime‑aware snapshot of how the Planet 9 signal emerges across the three Tr
 
 - **Cosmology Module**  
   Structural background for ancient sky‑regimes and long‑period influences.  
-  `/docs/Cosmology/index.md`
 
 - **RTT Core Module**  
   Definitions of S‑N‑R, regime‑expressions, and correction‑term operators.  
-  `/docs/RTT/Core.md`
 
 - **Mythic Operators Module**  
   Mapping of symbolic cosmologies to regime‑operators (Sumerian, Vedic, Hellenic).  
-  `/docs/MythicOperators/index.md`
 
 **Related Modules:**  
-[Cosmology](/docs/Cosmology/index.md) •  
-[RTT Core](/docs/RTT/Core.md) •  
-[Mythic Operators](/docs/MythicOperators/index.md)
+[Cosmology](../_ideas/Resonant‑Time_Cosmology-From_Initial_Seed_to_Large‑Scale_Structure.md) •  
+[RTT Core](../rtt/core/operators.md) •  
+[Mythic Operators](../rtt/codex/Resonance‑Time_Theory_RTT_Codex.md)
 
 ---
 
