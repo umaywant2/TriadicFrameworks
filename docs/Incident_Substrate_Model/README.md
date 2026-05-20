@@ -1,4 +1,4 @@
-# **Incident Substrate Model**  
+# ⚠️ Incident Substrate Model  
 
 - [`incident.module.json`](incident.module.json) — Agentic module schema role assignments
 
