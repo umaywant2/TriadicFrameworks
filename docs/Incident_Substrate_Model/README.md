@@ -21,7 +21,64 @@ Just **RECTIFY**.
 
 ---
 
-## **1. Module Identity**
+## **How AI Should Use `incident.module.json` in This Repo**
+
+AI partners must treat [`incident.module.json`](incident.module.json) as the **authoritative substrate** for all incident‑related activity in this repository. The file defines the allowed operators, analyzer layers, checks, fixes, and session rules. Models must follow these principles:
+
+### **1. Read‑Only First Pass**  
+AI must always begin in **read‑only mode**, using the module to:
+
+- ingest public incident intel  
+- classify the incident  
+- map the potential surface area  
+- derive rectification steps  
+- generate a structured, operator‑reviewable plan  
+
+No write actions are permitted until explicit operator approval.
+
+### **2. Grammar‑Bounded Actions Only**  
+All actions must use the operators defined in the module:
+
+- `incident.ingest`  
+- `incident.classify`  
+- `incident.map_surface_area`  
+- `incident.derive_rectification_steps`  
+- `incident.generate_readonly_plan`  
+- `incident.request_operator_approval`  
+- `incident.execute.*` (only after approval)
+
+Models must **never** invent new operators or perform actions outside the grammar.
+
+### **3. Use the Checks and Fixes Exactly as Declared**  
+AI must apply the `checks` array to evaluate the repository and propose rectification steps.  
+AI must only propose or execute fixes listed under `fixes`:
+
+- `remove`  
+- `rotate`  
+- `flag`  
+
+No other fix types are allowed.
+
+### **4. Operator Approval Is Mandatory**  
+Before any write action (file removal, secret rotation, dependency patching), AI must:
+
+- present the plan  
+- request approval  
+- wait for explicit confirmation  
+
+### **5. Maintain Coherence and Avoid Drift**  
+AI must adhere to the analyzer layers:
+
+- **Regime:** incident  
+- **Operator:** rectification  
+- **Drift:** panic, improvisation  
+- **Coherence:** structured, calm, deterministic  
+
+All reasoning must remain within these boundaries.
+
+---
+
+## **6. Module Identity**
 
 | Field | Value |
 |------|--------|
@@ -34,7 +91,7 @@ Just **RECTIFY**.
 
 ---
 
-## **2. Session Context**
+## **7. Session Context**
 
 This module uses the canonical TriadicFrameworks session‑context structure.
 
@@ -71,7 +128,7 @@ This module uses the canonical TriadicFrameworks session‑context structure.
 
 ---
 
-## **3. Concept Overview**
+## **8. Concept Overview**
 
 Incidents follow patterns.  
 Rectification follows grammar.
@@ -97,11 +154,11 @@ Everything is **structured**, **deterministic**, and **operator‑safe**.
 
 ---
 
-## **4. Operator Grammar**
+## **9. Operator Grammar**
 
 These are the verbs and nouns the AI is allowed to use.
 
-### **4.1 Incident Ingestion Operators**
+### **9.1 Incident Ingestion Operators**
 
 | Operator | Description |
 |---------|-------------|
@@ -109,7 +166,7 @@ These are the verbs and nouns the AI is allowed to use.
 | `incident.classify` | Determine incident type (supply‑chain, credential leak, dependency vuln, etc.) |
 | `incident.map_surface_area` | Identify which repo components could be affected |
 
-### **4.2 Rectification Planning Operators**
+### **9.2 Rectification Planning Operators**
 
 | Operator | Description |
 |---------|-------------|
@@ -117,14 +174,14 @@ These are the verbs and nouns the AI is allowed to use.
 | `incident.generate_readonly_plan` | Produce a structured, operator‑reviewable plan |
 | `incident.flag_uncertainty` | Mark areas requiring human judgment |
 
-### **4.3 Operator Approval Operators**
+### **9.3 Operator Approval Operators**
 
 | Operator | Description |
 |---------|-------------|
 | `incident.request_operator_approval` | Present plan for review |
 | `incident.hold_for_review` | Pause until operator input |
 
-### **4.4 Bounded Execution Operators**
+### **9.4 Bounded Execution Operators**
 
 These are **never** executed without explicit operator approval.
 
@@ -137,7 +194,7 @@ These are **never** executed without explicit operator approval.
 
 ---
 
-## **5. Analyzer Layers**
+## **10. Analyzer Layers**
 
 The substrate uses RTT analyzer layers to maintain coherence.
 
@@ -151,7 +208,7 @@ The substrate uses RTT analyzer layers to maintain coherence.
 
 ---
 
-## **6. Example `incident.module.json`**
+## **11. Example `incident.module.json`**
 
 This is the drop‑in file any repo can adopt.
 
@@ -182,7 +239,7 @@ This is the drop‑in file any repo can adopt.
 
 ---
 
-## **7. Example Workflow: How to RECTIFY an Incident**
+## **12. Example Workflow: How to RECTIFY an Incident**
 
 ### **Step 1 — Ingest**
 AI pulls public intel:
@@ -234,7 +291,7 @@ AI performs only the approved actions.
 
 ---
 
-## **8. Philosophy**
+## **13. Philosophy**
 
 Incidents are inevitable.  
 Scramble is optional.
