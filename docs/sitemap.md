@@ -174,6 +174,7 @@ _(Note: Standardized to /rtt/sdk/ — the GitHub file had mixed forms.)_
 
 ## 8. Community & Governance (Continuity Layer)
 
+- [ /Incident_Substrate_Model/ ](https://www.triadicframeworks.org/Incident_Substrate_Model/) (New!)
 - [ /contributors/ ](https://www.triadicframeworks.org/contributors/)
 - [ /Human_Resources/ ](https://www.triadicframeworks.org/Human_Resources/) (New!)
 - [ /governance/ ](https://www.triadicframeworks.org/governance/)
