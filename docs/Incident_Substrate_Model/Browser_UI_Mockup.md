@@ -26,41 +26,42 @@ It ensures **operator control**, **zero drift**, and **read‑only first‑pass 
 ## **2. Layout Overview**
 
 ```
-┌───────────────────────────────────────────────────────────────┐
+*
+┌────────────────────────────────────────────────────────────────┐
 │  ⚠️ Incident Substrate Model — Browser UI                      │
-├───────────────────────────────────────────────────────────────┤
-│  [Incident Source Input]   [Ingest Button]                    │
-│                                                               │
+├────────────────────────────────────────────────────────────────┤
+│  [Incident Source Input]   [Ingest Button]                     │
+│                                                                │
 │  ┌───────────────────────────────────────────────────────────┐ │
 │  │ Incident Intel (Read‑Only)                                │ │
 │  │ - CVE / Advisory / Vendor Post                            │ │
 │  │ - Extracted Signals                                       │ │
 │  │ - Relevant Vectors                                        │ │
 │  └───────────────────────────────────────────────────────────┘ │
-│                                                               │
+│                                                                │
 │  ┌───────────────────────────────────────────────────────────┐ │
-│  │ Classification                                             │ │
+│  │ Classification                                            │ │
 │  │ - Type: Supply‑Chain / Dependency / Credential / CI/CD    │ │
-│  │ - Confidence Score                                         │ │
+│  │ - Confidence Score                                        │ │
 │  └───────────────────────────────────────────────────────────┘ │
-│                                                               │
+│                                                                │
 │  ┌───────────────────────────────────────────────────────────┐ │
-│  │ Surface Area Mapping                                       │ │
-│  │ - Files                                                    │ │
-│  │ - Dependencies                                             │ │
-│  │ - Workflows                                                │ │
-│  │ - Secrets                                                  │ │
+│  │ Surface Area Mapping                                      │ │
+│  │ - Files                                                   │ │
+│  │ - Dependencies                                            │ │
+│  │ - Workflows                                               │ │
+│  │ - Secrets                                                 │ │
 │  └───────────────────────────────────────────────────────────┘ │
-│                                                               │
+│                                                                │
 │  ┌───────────────────────────────────────────────────────────┐ │
-│  │ Rectification Plan (Read‑Only)                             │ │
-│  │ - Proposed Steps                                           │ │
-│  │ - Uncertainties                                            │ │
-│  │ - Required Operator Actions                                │ │
+│  │ Rectification Plan (Read‑Only)                            │ │
+│  │ - Proposed Steps                                          │ │
+│  │ - Uncertainties                                           │ │
+│  │ - Required Operator Actions                               │ │
 │  └───────────────────────────────────────────────────────────┘ │
-│                                                               │
-│  [Approve Plan]   [Reject Plan]   [Flag for Review]           │
-└───────────────────────────────────────────────────────────────┘
+│                                                                │
+│  [Approve Plan]   [Reject Plan]   [Flag for Review]            │
+└────────────────────────────────────────────────────────────────┘
 ```
 
 ---
