@@ -1,4 +1,7 @@
 # **Incident Substrate Model**  
+
+- [`incident.module.json`](incident.module.json) — Agentic module schema role assignments
+
 `/docs/Incident_Substrate_Model/README.md`
 
 A calm, structured, grammar‑driven substrate for **incident ingestion, analysis, rectification planning, and operator‑approved remediation**.  
