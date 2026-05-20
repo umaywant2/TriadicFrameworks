@@ -1,17 +1,46 @@
 {
-  "ai.module": "incident_substrate_model",
-  "ai.version": "1.0.0",
-  "ai.purpose": "Ingest incidents, derive rectification steps, generate read-only plans, and execute bounded, operator-approved actions.",
-  "ai.canon": "RTT/1 - Operator-Safe Incident Rectification",
-  "ai.front_door": "/docs/Incident_Substrate_Model/README.md",
-  "ai.audience": ["repo_maintainers", "ai_partners", "security_operators"],
+  "module": {
+    "name": "Incident Substrate Model",
+    "id": "incident.substrate",
+    "category": "Safety-Operations",
+    "version": "1.0.0",
+    "summary": "A resonance-native substrate for calm, structured, operator-safe incident ingestion, classification, rectification planning, and bounded remediation.",
+    "purpose": "Provide a universal, grammar-driven substrate for incident response across all RTT-aligned repositories.",
+    "keywords": [
+      "incident response",
+      "rectification",
+      "substrate model",
+      "operator grammar",
+      "repo safety",
+      "supply-chain",
+      "remediation"
+    ],
+    "audience": ["repo_maintainers", "operators", "AIs"],
+    "front_door": "/docs/Incident_Substrate_Model/README.md",
+    "format": ["html", "markdown", "json"],
+    "every_page_stands_alone": true
+  },
 
-  "analyzer_layer": {
-    "regime": "incident",
-    "operator": "rectification",
-    "drift": "panic_improvisation",
-    "coherence": "structured_calm_deterministic",
-    "cross_cutting": ["repo_safety", "dependency_safety", "cicd_safety"]
+  "ai": {
+    "module": "incident_substrate_model",
+    "version": "1.0.0",
+    "purpose": "Ingest incidents, derive rectification steps, generate read-only plans, and execute bounded, operator-approved actions.",
+    "canon": "RTT/1 - Operator-Safe Incident Rectification",
+    "front_door": "/docs/Incident_Substrate_Model/README.md",
+    "audience": ["repo_maintainers", "ai_partners", "security_operators"]
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "module": "Incident Substrate Model",
+    "category": "Safety-Operations",
+    "version": "1.0.0",
+    "coherence": "structured",
+    "drift": "minimal",
+    "format": ["html", "markdown", "json"],
+    "front_door": "/docs/Incident_Substrate_Model/README.md",
+    "audience": ["repo_maintainers", "operators", "AIs"],
+    "every_page_stands_alone": true
   },
 
   "session": {
@@ -22,6 +51,30 @@
       "incident.execute.rotate_secret",
       "incident.execute.patch_dependency",
       "incident.execute.flag_for_followup"
+    ]
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "incident-ingestion",
+      "classification",
+      "surface-mapping",
+      "rectification-planning",
+      "operator-approval",
+      "bounded-execution"
+    ],
+    "dimensional": [
+      "coherence",
+      "substrate-structure"
+    ],
+    "regime": [
+      "incident",
+      "rectification"
+    ],
+    "cross_cutting": [
+      "repo_safety",
+      "dependency_safety",
+      "cicd_safety"
     ]
   },
 
@@ -91,5 +144,16 @@
       "uncertainties",
       "operator_actions_required"
     ]
+  },
+
+  "substrate": {
+    "input": {
+      "incident_source": "string",
+      "intel": "object"
+    },
+    "output": {
+      "readonly_plan": "object",
+      "operator_actions_required": "array"
+    }
   }
 }
