@@ -782,6 +782,15 @@
       },
       "children": []
     },
+{
+  "id": "incident_substrate_model",
+  "name": "Incident Substrate Model",
+  "category": "Safety-Operations",
+  "path": "/docs/Incident_Substrate_Model/",
+  "module_json": "/docs/Incident_Substrate_Model/incident.module.json",
+  "version": "1.0.0",
+  "status": "canon-stable"
+},
     "rtt-codes": {
       "canon_tag": "rtt-codes",
       "name": "RTT/codes",
@@ -1008,6 +1017,33 @@
       "type": "import",
       "label": "canonical packet schema (rttcode.v1.json) for structural observability"
     },
+    [
+  {
+    "from": "incident_substrate_model",
+    "to": "governance_substrate_model",
+    "relationship": "informs"
+  },
+  {
+    "from": "incident_substrate_model",
+    "to": "mode",
+    "relationship": "uses"
+  },
+  {
+    "from": "incident_substrate_model",
+    "to": "opacity",
+    "relationship": "requires"
+  },
+  {
+    "from": "incident_substrate_model",
+    "to": "framework_field_theory",
+    "relationship": "derives"
+  },
+  {
+    "from": "incident_substrate_model",
+    "to": "sarg",
+    "relationship": "supports"
+  }
+],
     {
       "from": "rtt-codes",
       "to": "schemas",
