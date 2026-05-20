@@ -559,6 +559,14 @@
       "notes": "Non-standard meta stripped. Fixed citation_date → citation_publication_date. 12-file manifest. RF-Builder submodule.",
       "file_count": 12
     },
+  {
+  "name": "Incident Substrate Model",
+  "category": "Safety-Operations",
+  "path": "/docs/Incident_Substrate_Model/",
+  "module_json": "/docs/Incident_Substrate_Model/incident.module.json",
+  "version": "1.0.0",
+  "status": "canon-stable"
+  },  
     {
       "path": "/docs/Governance_Substrate_Model/",
       "module": "Governance Substrate Model",
