@@ -1,0 +1,95 @@
+{
+  "ai.module": "incident_substrate_model",
+  "ai.version": "1.0.0",
+  "ai.purpose": "Ingest incidents, derive rectification steps, generate read-only plans, and execute bounded, operator-approved actions.",
+  "ai.canon": "RTT/1 - Operator-Safe Incident Rectification",
+  "ai.front_door": "/docs/Incident_Substrate_Model/README.md",
+  "ai.audience": ["repo_maintainers", "ai_partners", "security_operators"],
+
+  "analyzer_layer": {
+    "regime": "incident",
+    "operator": "rectification",
+    "drift": "panic_improvisation",
+    "coherence": "structured_calm_deterministic",
+    "cross_cutting": ["repo_safety", "dependency_safety", "cicd_safety"]
+  },
+
+  "session": {
+    "mode": "read_only_first_pass",
+    "requires_operator_approval": true,
+    "allowed_write_actions": [
+      "incident.execute.remove_file",
+      "incident.execute.rotate_secret",
+      "incident.execute.patch_dependency",
+      "incident.execute.flag_for_followup"
+    ]
+  },
+
+  "operators": {
+    "ingest": [
+      "incident.ingest",
+      "incident.classify",
+      "incident.map_surface_area"
+    ],
+    "plan": [
+      "incident.derive_rectification_steps",
+      "incident.generate_readonly_plan",
+      "incident.flag_uncertainty"
+    ],
+    "approval": [
+      "incident.request_operator_approval",
+      "incident.hold_for_review"
+    ],
+    "execute": [
+      "incident.execute.remove_file",
+      "incident.execute.rotate_secret",
+      "incident.execute.patch_dependency",
+      "incident.execute.flag_for_followup"
+    ]
+  },
+
+  "checks": [
+    {
+      "id": "secret_scan",
+      "description": "Scan for hard-coded secrets or credentials.",
+      "patterns": ["API_KEY", "BEGIN RSA", "BEGIN PRIVATE KEY", ".env", "token", "secret"],
+      "severity": "high"
+    },
+    {
+      "id": "machine_artifacts",
+      "description": "Detect machine-specific or local environment artifacts.",
+      "patterns": [".DS_Store", ".vscode/settings.json", ".idea", "Thumbs.db"],
+      "severity": "low"
+    },
+    {
+      "id": "infra_leak",
+      "description": "Detect infrastructure-revealing content.",
+      "patterns": ["ssh", "server", "ip address", "hostname", "kubeconfig"],
+      "severity": "medium"
+    },
+    {
+      "id": "private_notes",
+      "description": "Detect potentially private or non-publishable notes.",
+      "patterns": ["PRIVATE", "INTERNAL ONLY", "DO NOT PUBLISH", "DRAFT"],
+      "severity": "medium"
+    }
+  ],
+
+  "fixes": {
+    "remove": ["machine_artifacts"],
+    "rotate": ["secret_scan"],
+    "flag": ["private_notes", "infra_leak"]
+  },
+
+  "reporting": {
+    "plan_format": "markdown",
+    "include_sections": [
+      "incident_summary",
+      "classification",
+      "affected_surface_area",
+      "proposed_rectification_steps",
+      "uncertainties",
+      "operator_actions_required"
+    ]
+  }
+}
