@@ -1,6 +1,6 @@
-## 😇 Ethiics & Privacy  
+## 😇 Ethics & Privacy  
 
-- [`ETHIICS_PRIVACY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ETHIICS_PRIVACY_module.json) — Agentic module schema role assignments
+- [`ETHICS_PRIVACY_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/ETHICS_PRIVACY_module.json) — Agentic module schema role assignments
 
 *(public‑facing, minimal, canonical)*
 
@@ -14,14 +14,14 @@
     font-family:Arial, sans-serif;
     font-size:11px;
   ">
-    🛡️ Ethiics & Privacy • TriadicFrameworks
+    🛡️ Ethics & Privacy • TriadicFrameworks
   </span>
 </div>
 
-<img src="https://img.shields.io/badge/🛡️Ethiics%20%26%20Privacy-🌿No%20Ads%20%7C%20No%20Tracking%20%7C%20No%20Accounts-4c8eda?style=for-the-badge" 
-     alt="🛡️ Ethiics & Privacy | 🌿 No Ads • No Tracking • No Accounts"/>
+<img src="https://img.shields.io/badge/🛡️Ethics%20%26%20Privacy-🌿No%20Ads%20%7C%20No%20Tracking%20%7C%20No%20Accounts-4c8eda?style=for-the-badge" 
+     alt="🛡️ Ethics & Privacy | 🌿 No Ads • No Tracking • No Accounts"/>
 
-## **Ethiics & Privacy**  
+## **Ethics & Privacy**  
 TriadicFrameworks is built on a simple principle:  
 **Knowledge should be accessible without extraction.**
 
@@ -142,7 +142,7 @@ Here is a phased strategy that builds credibility naturally.
 **Goal:** Establish public clarity and ethiical posture.
 
 Actions:  
-- Publish the **Ethiics & Privacy** page  
+- Publish the **Ethics & Privacy** page  
 - Publish **Why TriadicFrameworks Is Different**  
 - Ensure all modules have **AI‑ready metadata**  
 - Maintain zero drift and consistent visual identity  
