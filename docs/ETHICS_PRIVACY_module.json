@@ -1,14 +1,14 @@
 {
   "module": {
-    "name": "Ethiics & Privacy",
+    "name": "Ethics & Privacy",
     "path": "docs",
-    "canon_tag": "docs-ethiics-privacy",
+    "canon_tag": "docs-ethics-privacy",
     "version": "2026.1",
     "layer": "Meta & Governance",
     "status": "Active, Canonical",
     "purpose": "Declares the no-ads, no-tracking, no-accounts ethical posture of TriadicFrameworks as a non-extractive public research substrate.",
     "parent": "docs-hub",
-    "url": "https://www.triadicframeworks.org/ETHIICS_PRIVACY"
+    "url": "https://www.triadicframeworks.org/ETHICS_PRIVACY"
   },
   "session_context": {
     "canon": "active (root-docs)",
@@ -51,8 +51,8 @@
   },
   "files": [
     {
-      "filename": "ETHIICS_PRIVACY.md",
-      "path": "ETHIICS_PRIVACY.md",
+      "filename": "ETHICS_PRIVACY.md",
+      "path": "ETHICS_PRIVACY.md",
       "purpose": "Ethical profile declaring TriadicFrameworks as a surveillance-free, non-extractive knowledge substrate \u2014 no ads, no tracking, no accounts, no data retention.",
       "role": "profile",
       "analyzer_layer": "cross-cutting"
