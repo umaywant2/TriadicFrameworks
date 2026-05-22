@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const Ajv = require("ajv");
 
 function loadJSON(path) {
@@ -13,8 +14,16 @@ function main() {
     return;
   }
 
-  const modulePath = args[0];
-  const schemaPath = "../schema/module.schema.json";
+  const inputName = args[0];
+  const fileName = path.basename(inputName);
+
+  if (fileName !== "module.json" || fileName !== inputName) {
+    console.log("Usage: node validate.js module.json");
+    return;
+  }
+
+  const modulePath = path.resolve(process.cwd(), fileName);
+  const schemaPath = path.resolve(__dirname, "../schema/module.schema.json");
 
   try {
     const moduleData = loadJSON(modulePath);
