@@ -1,6 +1,6 @@
 # 🧠 Coeus Protocol  
 
-- [`coeus_module.json`](coeus_module.json) — Agentic module schema role assignments
+- [`coeus_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Coeus/coeus_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
