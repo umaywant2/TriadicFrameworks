@@ -11,7 +11,7 @@
 ```
 
 # **📘 Framework Field Theory — Repo Eval Edition**  
-- [`FFT_module.json`](FFT_module.json) — Agentic module schema role assignments
+- [`FFT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/FFT_module.json) — Agentic module schema role assignments
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
