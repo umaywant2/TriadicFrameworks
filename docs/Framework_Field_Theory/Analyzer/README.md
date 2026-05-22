@@ -1,5 +1,7 @@
 # Analyzer
 
+- [`FFT_analyzer-module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/FFT_analyzer-module.json) — Agentic module schema role assignments
+
 > **Module path:** `Framework_Field_Theory/Analyzer/`
 > **Role:** Diagnostic engine of Framework Field Theory
 
