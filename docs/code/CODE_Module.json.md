@@ -2,7 +2,7 @@
 
 ```
 {
-  "module": "Compassion Operator Dignity Ethiics",
+  "module": "Compassion Operator Dignity Ethics",
   "id": "C.O.D.E.",
   "version": "1.0.0",
   "purpose": "Provide ethical, non-extractive, dignity-first resource discovery for vulnerable populations.",
