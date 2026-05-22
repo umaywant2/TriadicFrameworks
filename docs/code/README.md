@@ -1,6 +1,6 @@
 # Compassion Operator Dignity Ethics (C.O.D.E.)
 
-- [`CODE_Module.json`](CODE_Module.json) — Agentic module schema role assignments
+- [`CODE_Module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/code/CODE_Module.json) — Agentic module schema role assignments
 
 ![🟣 C.O.D.E.](https://img.shields.io/badge/🟣_C.O.D.E.-Compassion%20Operator%20Dignity%20Ethics-6a0dad?style=for-the-badge)
 
