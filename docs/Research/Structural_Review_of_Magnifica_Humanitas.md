@@ -2,7 +2,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Structural Review of Magnifica Humanitas — TriadicFrameworks Research</title>
+  <!-- <title>Structural Review of Magnifica Humanitas — TriadicFrameworks Research</title> -->
 
   <meta name="description" content="A public-facing RTT/2 structural analysis of Magnifica Humanitas, mapping its core human concerns to TriadicFrameworks modules and the triadic substrate.">
   <meta name="keywords" content="TriadicFrameworks, RTT, Magnifica Humanitas, structural analysis, human dignity, AI ethics, governance substrate, triadic substrate, 3C's, coherence clarity continuity">
