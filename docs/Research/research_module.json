@@ -6,7 +6,7 @@
     "canonical_id": "RESEARCH",
     "module_type": "Research-Canonical",
     "role": "reference",
-    "version": "2.0",
+    "version": "2.1",
     "status": "canon-stable",
     "author": "Nawder Loswin",
     "license": "MIT",
@@ -14,7 +14,7 @@
     "module_home": "/docs/Research/",
     "module_url": "https://www.triadicframeworks.org/Research",
     "repository": "https://github.com/umaywant2/TriadicFrameworks",
-    "last_updated": "2026-05-07"
+    "last_updated": "2026-05-23"
   },
 
   "_session_context": {
@@ -22,7 +22,7 @@
     "modules": "core operators → cross-goal operators → arrival substrate → foundational research",
     "drift": "bounded (research-expanding; grammar fixed)",
     "coherence": "stable (RTT/1 structural grammar)",
-    "version": "2.0 (operator-aligned)",
+    "version": "2.1 (operator-aligned)",
     "format": "html + markdown + json + pdf",
     "front_door": "exists (Research root)",
     "every_page": "stands alone + AI-parsable + citable",
@@ -44,6 +44,11 @@
       "version": "2.0",
       "date": "2026-05-07",
       "note": "Full canonical refresh: operator-level alignment, continuity kernel v2.0, unified operator grammar v1.1, transporter envelope v0.5, arrival substrate v0.4, Core Operators + Foundational Research split."
+    },
+    {
+      "version": "2.1",
+      "date": "2026-05-23",
+      "note": "Added Structural Review of Magnifica Humanitas (RTT/2 analysis) to foundational research; updated manifest and metadata."
     }
   ],
 
@@ -51,7 +56,7 @@
     "name": "Research",
     "path": "docs/Research",
     "canon_tag": "research",
-    "version": "2.0",
+    "version": "2.1",
     "layer": "Research-Canonical",
     "status": "Active, Canon-Stable",
     "purpose": "Operator-level research (post-kernel) plus foundational RTT research (pre-kernel). Validates and extends the operator canon across domains.",
@@ -136,7 +141,10 @@
       "Quantum_Lens_Layer_Triadic_Protocols_for_Resonance_Scanning.md",
       "ZipNN_Triadic_Patterns_and_the_Hidden_Two_Thirds.md",
       "RTT_Facilities_Playbook.md",
-      "Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md"
+      "Power_Supplies_Mobile_Sensors_and_Enhanced_BMS_using_RTT-Inside.md",
+
+      "Structural_Review_of_Magnifica_Humanitas_Capture.md",
+      "Structural_Review_of_Magnifica_Humanitas_module.json"
     ]
   }
 }
