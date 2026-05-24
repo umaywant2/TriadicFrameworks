@@ -722,6 +722,14 @@
         "rtt-inside"
       ]
     },
+{
+  "id": "rtt-inside-benchmarks",
+  "name": "RTT / Inside / Benchmarks",
+  "category": "benchmarks",
+  "path": "/docs/rtt/Inside/Benchmarks/",
+  "version": "1.0",
+  "status": "active"
+},
   {
   "id": "structural_detection",
   "name": "Structural Detection",
@@ -1044,6 +1052,36 @@
     "relationship": "supports"
   }
 ],
+{
+  "from": "rtt-inside",
+  "to": "rtt-inside-benchmarks",
+  "type": "contains"
+},
+{
+  "from": "rtt-inside-benchmarks",
+  "to": "rtt-tel",
+  "type": "exports"
+},
+{
+  "from": "rtt-tel",
+  "to": "rtt-inside-benchmarks",
+  "type": "imports"
+},
+{
+  "from": "rtt-inside-benchmarks",
+  "to": "rtt-paradoxes",
+  "type": "shares-regime-grammar"
+},
+{
+  "from": "rtt-inside-benchmarks",
+  "to": "rtt-lowdim",
+  "type": "shares-operator-grammar"
+},
+{
+  "from": "rtt-inside-benchmarks",
+  "to": "rtt-integrations",
+  "type": "provides-standards"
+},
     {
       "from": "rtt-codes",
       "to": "schemas",
