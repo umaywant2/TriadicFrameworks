@@ -38,3 +38,9 @@
   "status": "active",
   "front_door": true
 }
+"og_assets": {
+  "hero": "/assets/og/rtt-inside-benchmarks-hero.png",
+  "glyph": "/assets/og/rtt-inside-benchmarks-glyph.svg",
+  "social": "/assets/og/rtt-inside-benchmarks-social.png",
+  "mobile": "/assets/og/rtt-inside-benchmarks-mobile.png"
+}
