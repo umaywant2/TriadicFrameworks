@@ -1,4 +1,4 @@
-## 🚀 What Issue #45 Really Represents  
+## 🚀 What [Issue #45](https://github.com/umaywant2/TriadicFrameworks/issues/45) Really Represents  
 A fully operational **real‑time structural intelligence layer** that:
 
 - Tracks **emergence**, **entropy flow**, **coherence**, **regime transitions**, and **resonance gradients**  
