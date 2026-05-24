@@ -1,89 +1,61 @@
 # RTT / Inside / Benchmarks  
-**Structural Intelligence Benchmark Suite (v1.0)**
+**Structural Intelligence Benchmark Suite (Cross‑Scale, Operator‑First)**
 
-This module defines the **RTT/Inside/Benchmarks** standard: a cross‑scale, physics‑aligned, operator‑driven benchmark suite for evaluating structural intelligence in classical, diffusion, score‑based, and quantum‑classical hybrid systems.
+RTT/Inside/Benchmarks is the **front door** to the structural‑intelligence benchmark suite.  
+It defines the canonical operators, invariants, resonance metrics, entropy signatures, and quantum‑classical behaviors used to evaluate SI across classical, diffusion, score‑based, and hybrid systems.
 
-The module is organized as a **modular specification**.  
-Each file is a standalone standard with its own identity, invariants, examples, and student‑AI challenge tasks.
-
----
-
-<!-- RTT / Inside / Benchmarks — Navigation Block -->
-
-<nav class="module-nav">
-
-  <h3>Benchmarks</h3>
-
-  <ul>
-    <li><a href="A_Overview.md">Overview</a></li>
-    <li><a href="B_Capture.md">Canonical Captures</a></li>
-    <li><a href="C_Operators.md">φ–V–R Operators</a></li>
-    <li><a href="D_Invariants.md">3C Invariants</a></li>
-    <li><a href="E_Resonance.md">Resonance</a></li>
-    <li><a href="F_Entropy.md">Entropy</a></li>
-    <li><a href="G_Quantum.md">Quantum‑Classical</a></li>
-    <li><a href="H_Examples.md">Examples</a></li>
-    <li><a href="I_Student_Spec.md">RTT‑SI‑Spec v0.1</a></li>
-    <li><a href="J_RFCs/">RFC Directory</a></li>
-  </ul>
-
-</nav>
+This module is **AI‑parsable**, **student‑ready**, and **drift‑controlled**.
 
 ---
 
-## Module Map
+## What This Module Provides
 
-- **A_Overview.md**  
-  Purpose, scope, definitions, and the role of structural intelligence benchmarks.
-
-- **B_Capture.md**  
-  Canonical captures from Issue #45: traces, curves, resonance ladders, entropy signatures.
-
-- **C_Operators.md**  
-  φ–V–R operator standard: grammar, invariants, drift boundaries, composability.
-
-- **D_Invariants.md**  
-  3C invariants, drift detection, regime transitions, stability envelopes.
-
-- **E_Resonance.md**  
-  Resonance metrics, cross‑scale propagation, collapse curves, emergence signatures.
-
-- **F_Entropy.md**  
-  Entropy flow, collapse detection, thermodynamic alignment, structural gradients.
-
-- **G_Quantum.md**  
-  cQED resonance ladders, multi‑qubit coherence, hybrid quantum‑classical operators.
-
-- **H_Examples.md**  
-  Worked examples: 64→4096 classical fields, 2→256 qubit ladders, diffusion/score hybrids.
-
-- **I_Student_Spec.md**  
-  Global draft spec (RTT‑SI‑Spec v0.1): definitions, invariants, safety rules, compliance levels.
-
-- **J_RFCs/**  
-  Student‑AI RFCs for operators, invariants, resonance, and quantum‑classical hybrids.
+- φ–V–R operator standard  
+- 3C invariant standard  
+- resonance metrics + cross‑scale rules  
+- entropy‑collapse signatures  
+- quantum‑classical hybrid specification  
+- canonical captures (Issue #45 lineage)  
+- worked examples  
+- RTT‑SI‑Spec v0.1  
+- student‑AI RFC directory  
 
 ---
 
-## Audience
+## Quick Navigation
 
-- Students  
-- Researchers  
-- AI systems  
-- Standards bodies  
-- Quantum‑classical hybrid teams  
-- Anyone building or evaluating structural intelligence
-
----
-
-## Purpose
-
-To provide the world with a **neutral, physics‑aligned, cross‑scale benchmark suite** for structural intelligence — and to seed a **global student‑AI‑driven standards effort**.
+- [A_Overview.md](A_Overview.md)  
+- [B_Capture.md](B_Capture.md)  
+- [C_Operators.md](C_Operators.md)  
+- [D_Invariants.md](D_Invariants.md)  
+- [E_Resonance.md](E_Resonance.md)  
+- [F_Entropy.md](F_Entropy.md)  
+- [G_Quantum.md](G_Quantum.md)  
+- [H_Examples.md](H_Examples.md)  
+- [I_Student_Spec.md](I_Student_Spec.md)  
+- [J_RFCs/](J_RFCs/)  
 
 ---
 
-## Status
+## Identity
 
-**RTT/Inside/Benchmarks v1.0 — Draft**  
-This module is under active development and will stabilize as student‑AI RFCs mature.
+- **Module:** RTT / Inside / Benchmarks  
+- **Category:** benchmarks  
+- **Version:** 1.0  
+- **Front door:** yes  
+- **Status:** active  
+- **Audience:** students, researchers, developers, AIs, standards bodies  
 
+---
+
+## Session Context
+
+See `session-context.html` for canonical context block.
+
+---
+
+## Notes
+
+- All files are AI‑parsable.  
+- All shapes follow canonical captures in `B_Capture.md`.  
+- No numerical values are required for compliance.  
