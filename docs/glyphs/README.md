@@ -16,17 +16,53 @@
 
 <img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
-This folder contains the **glyph language** of TriadicFrameworks.  
-Glyphs are symbolic units — visual, textual, or harmonic — that encode resonance logic.
+# Glyph‑Assignment Logic (Canonical)
 
-## Contents
-- Core glyph sets
-- Evolution maps
-- Symbolic overlays
+Glyphs are assigned using a triadic rule:
 
-## Purpose
-Glyphs are the **alphabet of resonance**. They allow remixers to inscribe meaning, trigger rituals, and extend protocols through symbolic logic.
+1. **Substrate Class (S)**
+   - classical → ◻  
+   - diffusion/score → ◯  
+   - quantum‑classical → ◆  
 
-## Cross‑Links
-- [../glyphic_resonance](../glyphic_resonance) → glyphs in harmonic overlays
-- [../rituals](../rituals) → ceremonies that use glyphs
+2. **Phase (P)**
+   - emergence → ↑  
+   - stabilization → →  
+   - resonance → ✦  
+   - collapse → ↓  
+
+3. **Drift Flag (D)**
+   - none → (no mark)  
+   - minor → ~  
+   - major → !  
+
+---
+
+## Assignment Formula
+
+```
+glyph = S + P + D
+```
+
+Where:
+
+- concatenate symbols in the order **S P D**
+- omit D when drift = none
+- no whitespace
+
+---
+
+## Examples
+
+- classical + resonance + none → **◻✦**  
+- diffusion + collapse + minor drift → **◯↓~**  
+- quantum‑classical + emergence + major drift → **◆↑!**
+
+---
+
+## Benchmarks Module Defaults
+
+- φ–V–R operators → **◻✦**  
+- 3C invariants → **◻→**  
+- resonance ladders → **◆✦**  
+- entropy collapse → **◯↓**  
