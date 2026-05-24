@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- /docs/rtt/Inside/index.html — <head>                           -->
+<!-- Module: RTT Inside (rtt-deployment)                            -->
+<!-- Last updated: 2026-05-06                                       -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="language" content="en" />
+<meta name="last-modified" content="2026-05-06" />
+<meta name="generator" content="TriadicFrameworks Static Canon Engine" />
+<meta name="creator" content="TriadicFrameworks" />
+<meta name="author" content="Nawder Loswin" />
+<meta name="publisher" content="TriadicFrameworks" />
+
+<title>Benchmarks — TriadicFrameworks</title>
+
+<meta name="description"
+      content="RTT/Inside — the introspective deployment engine of RTT/1. 122 files across 15 directories: domain capture templates, autonomous forms, deployment profiles (Coal, Finance, Earth Sims, Electron Microscopes, Robofish), corridor studio, drift diagnostics, API surface, mesh node, and global scenarios (ATC, HAM, Space Force)." />
+<meta name="keywords"
+      content="RTT Inside, introspective engine, capture templates, domain takeaways, universal alignment, autonomous forms, corridor studio, drift, coal industry, finance, earth sims, ATC, HAM, space force, mesh node, robofish, triadic frameworks" />
+
+<!-- ═══ Module Identity (standardized per D369 template) ═══ -->
+
+<meta name="module" content="RTT Inside" />
+<meta name="canonical-id" content="RTT_INSIDE" />
+<meta name="module-type" content="RTT-Deployment" />
+<meta name="version" content="2.1" />
+<meta name="status" content="canon-stable" />
+<meta name="parent" content="RTT" />
+<meta name="siblings" content="RTT/1, D369_Chip_Spec, RTT-SDK, Echo_Classifier" />
+<meta name="canonical-path" content="/docs/rtt/Inside/" />
+<meta name="last-updated" content="2026-05-06" />
+<meta name="license" content="MIT" />
+
+<!-- ═══ AI Discovery (standardized) ═══ -->
+
+<meta name="ai-ready" content="true" />
+<meta name="ai-module-id" content="RTT_INSIDE" />
+<meta name="ai-operators"
+      content="INSIDE-Capture, INSIDE-Align, INSIDE-Diagnose, INSIDE-Deploy, INSIDE-Trace" />
+
+<meta name="ai.module" content="RTT Inside" />
+<meta name="ai.version" content="2.1" />
+<meta name="ai.purpose"
+      content="Introspective deployment engine: 7 domain capture templates, 6 domain takeaways, universal alignment layer, autonomous trace forms, corridor studio tooling, drift diagnostics, API surface, deployment profiles across 5 sectors, global scenarios with entft protocol." />
+<meta name="ai.keywords"
+      content="RTT Inside, introspective, capture templates, domain takeaways, universal alignment, autonomous forms, corridor studio, drift, coal, finance, earth sims, ATC, HAM, space force, mesh node, robofish, entft" />
+<meta name="ai.audience" content="students, researchers, developers, engineers, AI systems" />
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml" />
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+<meta name="ai.contact.x" content="@TriadicFrameworks" />
+<meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+<meta name="ai.license" content="MIT" />
+<meta name="ai.module.name" content="RTT Inside" />
+<meta name="ai.module.summary"
+      content="122 files across 15 directories: 7 capture templates, 6 takeaways, universal alignment, 11 autonomous forms, 9 coal industry, 4 corridor studio, 7 drift analysis, 7 earth sims, 2 electron microscopes, 12 examples, 11 finance, 18 global (ATC/HAM/Space Force + entft), 4 mesh node, 3 robofish." />
+<meta name="ai.module.category" content="rtt-inside" />
+
+<!-- ═══ Canonical / SEO ═══ -->
+
+<link rel="canonical" href="https://www.triadicframeworks.org/rtt/Inside/" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ff" />
+
+<!-- ═══ Open Graph ═══ -->
+
+<!-- RTT / Inside / Benchmarks — Open Graph Metadata -->
+<meta property="og:title" content="RTT / Inside / Benchmarks — Structural Intelligence Suite">
+<meta property="og:description"
+      content="Cross-scale, physics-aligned benchmarks for structural intelligence across classical, diffusion, score-based, and quantum-classical hybrid systems.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://triadicframeworks.net/docs/rtt/Inside/Benchmarks/">
+<meta property="og:image" content="https://triadicframeworks.net/assets/og/rtt-inside-benchmarks-hero.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="600">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTT / Inside / Benchmarks — Structural Intelligence Suite">
+<meta name="twitter:description"
+      content="Student–AI-driven benchmarks and draft standards for structural intelligence, from φ–V–R to quantum-classical hybrids.">
+<meta name="twitter:image" content="https://triadicframeworks.net/assets/og/rtt-inside-benchmarks-hero.png">
+<!-- ═══ Citation / Dublin Core ═══ -->
+
+<meta name="citation_title" content="RTT/Inside — Introspective Deployment Engine" />
+<meta name="citation_author" content="Nawder Loswin" />
+<meta name="citation_date" content="2026-05-06" />
+
+<meta name="DC.subject" content="RTT Inside, introspective engine, capture templates, domain takeaways, autonomous forms, corridor studio, drift, deployment profiles" />
+<meta name="DC.type" content="Text" />
+<meta name="DC.format" content="text/html" />
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+   
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🧭 Benchmarks | RTT/Inside/1/2/3</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>📚 Core Files</h3>
+      <a href="#INDEX">📂 Index</a>
+      <a href="#A_OVERVIEW">🧱 A — Overview</a>
+      <a href="#B_CAPTURE">🎛 B — Canonical Captures</a>
+      <a href="#C_OPERATORS">⚙️ C — φ–V–R Operators</a>
+      <a href="#D_INVARIANTS">🧩 D — 3C Invariants</a>
+      <a href="#E_RESONANCE">📡 E — Resonance</a>
+      <a href="#F_ENTROPY">🔥 F — Entropy</a>
+      <a href="#G_QUANTUM">🧬 G — Quantum‑Classical</a>
+      <a href="#H_EXAMPLES">📘 H — Examples</a>
+      <a href="#I_STUDENT_SPEC">🎓 I — RTT‑SI‑Spec v0.1</a>
+    <h3>📜 RFC Directory</h3>
+      <a href="#RFC_README">📁 RFC — README</a>
+      <a href="#RFC_000_TEMPLATE">🧷 RFC‑000 — Template</a>
+      <a href="#RFC_001_OPERATORS">⚙️ RFC‑001 — Operators</a>
+      <a href="#RFC_002_3C">🧩 RFC‑002 — 3C Invariants</a>
+      <a href="#RFC_003_RESONANCE">📡 RFC‑003 — Resonance</a>
+      <a href="#RFC_004_QUANTUM">🧬 RFC‑004 — Quantum</a>
+    <h3>🧪 Additional</h3>
+      <a href="#BENCHMARKS_CAPTURE">🎚 Benchmarks Capture</a>
+    <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../../../">🔙TFT</a>
+   <!-- RTT Session Header (canonical stub) -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- RTT / Inside / Benchmarks — Session Context Block           -->
+<!-- Canonical session context for the structural intelligence   -->
+<!-- benchmark suite (cross-scale, operator-first, AI-ready).    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="rtt-inside-benchmarks-session"
+         data-rtt="inside-benchmarks"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (rtt‑inside)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      RTT/Inside → Benchmarks → Operators → Invariants → Resonance → Entropy → Quantum → RFCs
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (benchmark‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (cross‑scale structural grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (benchmarks‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">markdown + html + diagrams + captures</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (Benchmarks root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable + student‑ready</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + AIs + standards bodies</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
+            border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
+  📊 Benchmarks<br>🧩 Structural Intelligence • Cross‑Scale • AI‑Ready
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      // RTT-Inside Overview
+      README: 'README.md',
+      ABOUT: '../../../ABOUT.md',
+      CONTRIBUTING: '../../../CONTRIBUTING.md',
+      GLOSSARY: '../../../GLOSSARY.md',
+      LINEAGE: '../../../LINEAGE.md',
+      LICENSE: '../../../LICENSE.md',
+      SITEMAP: '../../../sitemap.md',
+      QUICKSTART: '../../../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../../../CODE_OF_CONDUCT.md',
+      SECURITY: '../../../SECURITY.md',
+      PRINCIPLES: '../../../PRINCIPLES.md',
+      // Benchmarks Root
+      INDEX: 'index.md',
+      // Core Files
+      A_OVERVIEW: 'A_Overview.md',
+      B_CAPTURE: 'B_Capture.md',
+      C_OPERATORS: 'C_Operators.md',
+      D_INVARIANTS: 'D_Invariants.md',
+      E_RESONANCE: 'E_Resonance.md',
+      F_ENTROPY: 'F_Entropy.md',
+      G_QUANTUM: 'G_Quantum.md',
+      H_EXAMPLES: 'H_Examples.md',
+      I_STUDENT_SPEC: 'I_Student_Spec.md',
+      // RFC Directory
+      RFC_README: 'J_RFCs/README.md',
+      RFC_000_TEMPLATE: 'J_RFCs/RFC-000_TEMPLATE.md',
+      RFC_001_OPERATORS: 'J_RFCs/RFC-001_Operators.md',
+      RFC_002_3C: 'J_RFCs/RFC-002_3C.md',
+      RFC_003_RESONANCE: 'J_RFCs/RFC-003_Resonance.md',
+      RFC_004_QUANTUM: 'J_RFCs/RFC-004_Quantum.md',
+      // Additional
+      BENCHMARKS_CAPTURE: 'Benchmarks_Capture.md'
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>      
