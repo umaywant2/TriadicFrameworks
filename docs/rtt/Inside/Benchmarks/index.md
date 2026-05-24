@@ -8,6 +8,29 @@ Each file is a standalone standard with its own identity, invariants, examples, 
 
 ---
 
+<!-- RTT / Inside / Benchmarks — Navigation Block -->
+
+<nav class="module-nav">
+
+  <h3>Benchmarks</h3>
+
+  <ul>
+    <li><a href="A_Overview.md">Overview</a></li>
+    <li><a href="B_Capture.md">Canonical Captures</a></li>
+    <li><a href="C_Operators.md">φ–V–R Operators</a></li>
+    <li><a href="D_Invariants.md">3C Invariants</a></li>
+    <li><a href="E_Resonance.md">Resonance</a></li>
+    <li><a href="F_Entropy.md">Entropy</a></li>
+    <li><a href="G_Quantum.md">Quantum‑Classical</a></li>
+    <li><a href="H_Examples.md">Examples</a></li>
+    <li><a href="I_Student_Spec.md">RTT‑SI‑Spec v0.1</a></li>
+    <li><a href="J_RFCs/">RFC Directory</a></li>
+  </ul>
+
+</nav>
+
+---
+
 ## Module Map
 
 - **A_Overview.md**  
