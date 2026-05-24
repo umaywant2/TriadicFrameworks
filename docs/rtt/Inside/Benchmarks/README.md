@@ -1,4 +1,7 @@
 # RTT / Inside / Benchmarks  
+
+- [`Benchmarks_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Benchmarks/Benchmarks_module.json) — Agentic module schema role assignments
+
 **Cross‑Scale Structural Intelligence Benchmark Suite**
 
 RTT/Inside/Benchmarks is the **canonical benchmark suite** for evaluating structural intelligence (SI) across classical, diffusion, score‑based, and quantum‑classical hybrid systems.  
