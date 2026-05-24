@@ -127,7 +127,7 @@ TriadicFrameworks is different because it is **principled**, **minimal**, and **
 ## **Award Strategy: Slow, Credible, Inevitable**
 
 TriadicFrameworks is uniquely positioned for recognition because it is:  
-- ethiically clean  
+- ethically clean  
 - architecturally novel  
 - academically relevant  
 - AI‑first  
@@ -139,7 +139,7 @@ Here is a phased strategy that builds credibility naturally.
 ---
 
 ## **Phase 1 — Foundation (0–6 months)**  
-**Goal:** Establish public clarity and ethiical posture.
+**Goal:** Establish public clarity and ethical posture.
 
 Actions:  
 - Publish the **Ethics & Privacy** page  
@@ -169,7 +169,7 @@ External reviewers see a coherent, principled project.
 - Encourage citations in research or student work  
 
 Outcome:  
-TriadicFrameworks becomes recognized as a **model of ethiical, structured, open knowledge**.
+TriadicFrameworks becomes recognized as a **model of ethical, structured, open knowledge**.
 
 ---
 
@@ -201,7 +201,7 @@ Targets:
 
 Approach:  
 - Emphasize archival intent  
-- Highlight the ethiical stance  
+- Highlight the ethical stance  
 - Demonstrate multi‑year stability  
 - Publish a “History of the Canon” timeline  
 
