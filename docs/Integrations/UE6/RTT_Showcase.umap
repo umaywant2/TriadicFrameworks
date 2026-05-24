@@ -1,0 +1,65 @@
+# RTT_Showcase.umap — Scene Manifest  
+**RTT / Integrations / UE6 / Maps**
+
+A curated UE6 map demonstrating RTT operators in real time.
+
+---
+
+## Map Name
+`RTT_Showcase.umap`
+
+## Purpose
+Provide a single scene where students and developers can observe:
+
+- φ emergence fields  
+- variance stabilization  
+- resonance propagation  
+- entropy boundaries  
+- hybrid operator behavior  
+
+---
+
+## Scene Layout
+
+```
+RTT_Showcase
+    ├── Area_PhiField
+    │       └── BP_RTT_Primitives (phi demo)
+    ├── Area_Variance
+    │       └── BP_RTT_Primitives (variance demo)
+    ├── Area_Resonance
+    │       └── BP_RTT_ResonanceDemo
+    ├── Area_Entropy
+    │       └── BP_RTT_EntropyDemo
+    ├── Area_Hybrid
+    │       └── BP_RTT_HybridDemo
+    └── UI
+            └── WBP_RTT_OperatorPanel (runtime)
+```
+
+---
+
+## Actors
+
+| Actor | Purpose |
+|-------|---------|
+| `BP_RTT_Primitives` | φ + variance baseline |
+| `BP_RTT_ResonanceDemo` | resonance visualization |
+| `BP_RTT_EntropyDemo` | entropy field visualization |
+| `BP_RTT_HybridDemo` | hybrid operator showcase |
+| `DirectionalLight` | stable lighting |
+| `SkyAtmosphere` | consistent environment |
+| `PlayerStart` | runtime entry point |
+
+---
+
+## Editor Tools Integration
+- `RTTTools.py` available in toolbar  
+- Resonance + entropy visualizers work in‑editor  
+- Operator timeline can be opened during PIE  
+
+---
+
+## Status
+Ready for implementation.  
+Fully aligned with the 2026 RTT Integrations standard.
