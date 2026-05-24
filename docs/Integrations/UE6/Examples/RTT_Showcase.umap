@@ -1,0 +1,69 @@
+# RTT_Showcase — UE6 Example Scene Script  
+**RTT / Integrations / UE6 / Maps**
+
+## Map: `RTT_Showcase.umap`
+
+### 1. Scene Setup
+
+1. Create new level → save as `RTT_Showcase`.
+2. Add:
+   - `DirectionalLight`
+   - `SkyAtmosphere`
+   - `SkyLight`
+   - `PlayerStart`
+
+### 2. Place RTT Demo Actors
+
+**Area 1: Phi / Variance**
+
+- Place `BP_RTT_Primitives` at Location `(0, 0, 0)`  
+- Add simple geometry around it (columns, floor) to see φ + variance effects.
+
+**Area 2: Resonance**
+
+- Place `BP_RTT_ResonanceDemo` at `(2000, 0, 0)`  
+- Use a large plane or sphere with `M_RTT_ResonanceHeatmap`.
+
+**Area 3: Entropy**
+
+- Place `BP_RTT_EntropyDemo` at `(0, 2000, 0)`  
+- Use a sphere volume with `M_RTT_EntropyField`.
+
+**Area 4: Hybrid**
+
+- Place `BP_RTT_HybridDemo` at `(2000, 2000, 0)`  
+- Add particles/geometry to show hybrid behavior.
+
+### 3. UI Wiring (Runtime)
+
+1. Create a `GameMode` or `Level Blueprint` logic:
+   - On `BeginPlay`:
+     - Create widget `WBP_RTT_OperatorPanel`
+     - Add to viewport
+     - Set `TargetActor` to the closest RTT demo actor or a selected one.
+
+2. Optional:
+   - Use input keys (e.g., `1/2/3/4`) to switch `TargetActor` between:
+     - `BP_RTT_Primitives`
+     - `BP_RTT_ResonanceDemo`
+     - `BP_RTT_EntropyDemo`
+     - `BP_RTT_HybridDemo`
+
+### 4. Editor Tools Integration
+
+- Ensure `RTTTools.py`, `RTT_ResonanceVisualizer.py`, `RTT_EntropyInspector.py`, `RTT_OperatorTimeline.py`, and `RTT_MenuExtension.py` are loaded.
+- In editor:
+  - Use **RTT Tools** menu:
+    - Visualize resonance on selected demo actor.
+    - Inspect entropy in the map.
+    - Open operator timeline while PIE is running.
+
+### 5. Teaching Flow
+
+1. Start at Area 1 → explain φ + variance.  
+2. Move to Area 2 → show resonance heatmap + operator panel.  
+3. Move to Area 3 → show entropy field + collapse zones.  
+4. Move to Area 4 → show hybrid behavior driven by both.  
+
+## Status
+This script defines the canonical RTT UE6 showcase scene for 2026.
