@@ -1,0 +1,28 @@
+{
+  "module": "RTT/Inside/Benchmarks",
+  "identity": "rtt-inside-benchmarks",
+  "category": "benchmarks",
+  "version": "1.0",
+  "status": "active",
+  "front_door": true,
+  "path": "/docs/rtt/Inside/Benchmarks/",
+  "files": [
+    "index.md",
+    "A_Overview.md",
+    "B_Capture.md",
+    "C_Operators.md",
+    "D_Invariants.md",
+    "E_Resonance.md",
+    "F_Entropy.md",
+    "G_Quantum.md",
+    "H_Examples.md",
+    "I_Student_Spec.md",
+    "J_RFCs/"
+  ],
+  "og": {
+    "hero": "/assets/og/rtt-inside-benchmarks-hero.png",
+    "glyph": "/assets/og/rtt-inside-benchmarks-glyph.svg",
+    "social": "/assets/og/rtt-inside-benchmarks-social.png",
+    "mobile": "/assets/og/rtt-inside-benchmarks-mobile.png"
+  }
+}
