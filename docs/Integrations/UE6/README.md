@@ -1,4 +1,7 @@
 # Unreal Engine 6 Integration  
+
+- [`UE6_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Integrations/UE6/UE6_module.json) — Agentic module schema role assignments
+
 **RTT / Integrations / UE6**
 
 Unreal Engine 6 is a next‑generation real‑time substrate that aligns naturally with RTT’s operator grammar.  
