@@ -791,6 +791,14 @@
       "children": []
     },
 {
+  "id": "UE6-INTEGRATIONS",
+  "name": "UE6 Integrations",
+  "category": "integration-engine",
+  "path": "/docs/Integrations/UE6/",
+  "module_json": "/docs/Integrations/UE6/UE6_module.json",
+  "status": "canon-stable"
+},
+{
   "id": "incident_substrate_model",
   "name": "Incident Substrate Model",
   "category": "Safety-Operations",
@@ -1052,6 +1060,31 @@
     "relationship": "supports"
   }
 ],
+{
+  "from": "INTEGRATIONS",
+  "to": "UE6-INTEGRATIONS",
+  "type": "contains"
+},
+{
+  "from": "UE6-INTEGRATIONS",
+  "to": "BENCHMARKS",
+  "type": "propagates-to"
+},
+{
+  "from": "UE6-INTEGRATIONS",
+  "to": "TEL",
+  "type": "propagates-to"
+},
+{
+  "from": "UE6-INTEGRATIONS",
+  "to": "SARG",
+  "type": "cross-support"
+},
+{
+  "from": "UE6-INTEGRATIONS",
+  "to": "MODE",
+  "type": "cross-support"
+},
 {
   "from": "rtt-inside",
   "to": "rtt-inside-benchmarks",
