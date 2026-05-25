@@ -167,6 +167,15 @@
   "status": "canon-stable"
 },
 {
+  "name": "UE6 Integrations",
+  "canonical_id": "UE6-INTEGRATIONS",
+  "category": "integration-engine",
+  "path": "/docs/Integrations/UE6/",
+  "module_json": "/docs/Integrations/UE6/UE6_module.json",
+  "version": "1.0",
+  "status": "canon-stable"
+},
+{
   "name": "Religious Substrate Grammar Model",
   "id": "RSGM",
   "category": "substrate-grammar",
