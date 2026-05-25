@@ -1,0 +1,125 @@
+{
+  "module": "UE6 Integrations",
+  "version": "1.0",
+  "category": "integration-engine",
+  "summary": "RTT × UE6: real‑time operator surfaces, Blueprint manifests, editor tools, materials, cross‑module propagation, and AI‑ready metadata.",
+
+  "files": [
+    {
+      "path": "README.md",
+      "role": "profile",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "index.md",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Operator_Map.md",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "Cross‑Module_Operator_Glossary.md",
+      "role": "reference",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "RTT_TEL‑Side_Index.md",
+      "role": "reference",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "RTT_Showcase_Walkthrough.md",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Blueprint/RTT_Primitives.json",
+      "role": "signature",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Examples/manifests/BP_RTT_ResonanceDemo.json",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Examples/manifests/BP_RTT_EntropyDemo.json",
+      "role": "example",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "Examples/manifests/BP_RTT_HybridDemo.json",
+      "role": "example",
+      "analyzer_layer": "cross-cutting"
+    },
+    {
+      "path": "Examples/manifests/RTT_Showcase.umap.json",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": "ue6_integration_registry.json",
+      "role": "index",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "ue6_project.json",
+      "role": "engine",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "schemas/ue6_blueprint.schema.json",
+      "role": "schema",
+      "analyzer_layer": "operator"
+    },
+    {
+      "path": "schemas/ue6_project.schema.json",
+      "role": "schema",
+      "analyzer_layer": "dimensional"
+    },
+    {
+      "path": ".lineage",
+      "role": "map",
+      "analyzer_layer": "dimensional"
+    }
+  ],
+
+  "engine": "Unreal Engine 6",
+  "identity": "ue6",
+  "status": "active",
+
+  "integration": {
+    "rtt_primitives": [
+      "phi_field",
+      "variance_stabilizer",
+      "resonance_probe",
+      "entropy_trace",
+      "hybrid_operator_bridge"
+    ],
+
+    "ue6_features": [
+      "Nanite 2.0 structural mesh streaming",
+      "Lumen 2.0 resonance-aware GI",
+      "Temporal Super Resolution 3",
+      "World Partition 2 dynamic regime loading",
+      "MetaSounds 2.0 harmonic propagation"
+    ],
+
+    "rtt_alignment": {
+      "phi": "maps to UE6 Nanite structural emergence",
+      "variance": "maps to Lumen temporal stabilization",
+      "resonance": "maps to MetaSounds harmonic propagation",
+      "entropy": "maps to World Partition streaming boundaries",
+      "hybrid": "maps to multi‑operator runtime blending"
+    },
+
+    "hooks": {
+      "blueprint": "Blueprint/RTT_Primitives.uasset",
+      "cpp": "Source/RTTUE6.cpp",
+      "editor": "Editor/RTTTools.py"
+    }
+  }
+}
