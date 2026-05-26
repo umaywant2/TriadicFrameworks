@@ -1,1 +1,187 @@
+{
+  "module": {
+    "name": "Research Toolbox",
+    "category": "Research",
+    "version": "1.0",
+    "summary": "Four-source substrate and RTT/1–3 engine patterns for structured research reasoning.",
+    "purpose": "Provide canonical research operators, substrate construction, and triadic engine integration.",
+    "audience": "Students + AIs",
+    "status": "coherent"
+  },
+
+  "files": [
+    {
+      "file": "RT_Capture.md",
+      "role": "profile",
+      "analyzer_layer": "surface",
+      "purpose": "Defines the surface identity of the Research Toolbox module."
+    },
+    {
+      "file": "RT_module.json",
+      "role": "engine",
+      "analyzer_layer": "structural",
+      "purpose": "Module manifest describing structure, roles, and coherence layers."
+    },
+    {
+      "file": "README.md",
+      "role": "index",
+      "analyzer_layer": "surface",
+      "purpose": "Student-facing overview of the Research Toolbox."
+    },
+    {
+      "file": "index.html",
+      "role": "index",
+      "analyzer_layer": "surface",
+      "purpose": "Full canonical metadata + hero integration + session context."
+    },
+    {
+      "file": "Quickstart.md",
+      "role": "example",
+      "analyzer_layer": "operator",
+      "purpose": "Student quickstart for stack → compare → regime → coherence."
+    },
+    {
+      "file": "Quickstart_Agent.md",
+      "role": "example",
+      "analyzer_layer": "operator",
+      "purpose": "Agent quickstart for safe, triadic research reasoning."
+    },
+
+    /* Exercises */
+    {
+      "file": "exercises/social_security_protofund.md",
+      "role": "example",
+      "analyzer_layer": "structural",
+      "purpose": "Full multi-module proto-fund analysis exercise."
+    },
+    {
+      "file": "exercises/social_security_protofund_worksheet.md",
+      "role": "template",
+      "analyzer_layer": "operator",
+      "purpose": "Student worksheet for the proto-fund exercise."
+    },
+    {
+      "file": "exercises/social_security_protofund_instructor.md",
+      "role": "reference",
+      "analyzer_layer": "coherence",
+      "purpose": "Instructor guide for the proto-fund exercise."
+    },
+    {
+      "file": "exercises/before_after_rtt_visualization.md",
+      "role": "example",
+      "analyzer_layer": "surface",
+      "purpose": "Before/After RTT visualization and interpretation."
+    },
+    {
+      "file": "exercises/operational_health_check_diagram.md",
+      "role": "map",
+      "analyzer_layer": "structural",
+      "purpose": "Triadic diagram of the operational health check."
+    },
+
+    /* Visuals */
+    {
+      "file": "visuals/research_toolbox_hero.png",
+      "role": "signature",
+      "analyzer_layer": "surface",
+      "purpose": "Hero image for the Research Toolbox."
+    },
+    {
+      "file": "visuals/research_toolbox_glyph.svg",
+      "role": "signature",
+      "analyzer_layer": "operator",
+      "purpose": "Canonical Research Toolbox glyph."
+    },
+    {
+      "file": "visuals/research_toolbox_glyph_animated.svg",
+      "role": "signature",
+      "analyzer_layer": "resonance",
+      "purpose": "Animated glyph with pulse + triadic rotation."
+    },
+    {
+      "file": "visuals/research_toolbox_badge.svg",
+      "role": "signature",
+      "analyzer_layer": "surface",
+      "purpose": "Small animated badge for navigation and headers."
+    },
+    {
+      "file": "visuals/research_toolbox_tel_echo.svg",
+      "role": "map",
+      "analyzer_layer": "structural",
+      "purpose": "TEL echo animation: Research → RTT → SARG."
+    },
+    {
+      "file": "visuals/before_after_rtt.svg",
+      "role": "map",
+      "analyzer_layer": "surface",
+      "purpose": "Before/After RTT diagram."
+    },
+    {
+      "file": "visuals/before_after_rtt_animated.svg",
+      "role": "map",
+      "analyzer_layer": "resonance",
+      "purpose": "Animated Before/After RTT visualization."
+    },
+    {
+      "file": "visuals/triadic_operational_health.svg",
+      "role": "map",
+      "analyzer_layer": "structural",
+      "purpose": "Operational health triadic diagram."
+    },
+
+    /* Diagrams */
+    {
+      "file": "diagrams/triadic_super_diagram.md",
+      "role": "map",
+      "analyzer_layer": "structural",
+      "purpose": "Full triadic super-stack diagram."
+    },
+    {
+      "file": "diagrams/four_source_substrate_diagram.md",
+      "role": "map",
+      "analyzer_layer": "surface",
+      "purpose": "Four-source substrate diagram."
+    },
+    {
+      "file": "diagrams/rtt_engine_triad_diagram.md",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "purpose": "RTT/1–3 engine triad diagram."
+    },
+    {
+      "file": "diagrams/tel_echo_map.md",
+      "role": "map",
+      "analyzer_layer": "resonance",
+      "purpose": "TEL echo propagation map."
+    },
+    {
+      "file": "diagrams/mode_opacity_chain.md",
+      "role": "map",
+      "analyzer_layer": "coherence",
+      "purpose": "Research → Mode → Opacity safety-visibility chain."
+    },
+
+    /* Glyphs */
+    {
+      "file": "glyphs/glyph_legend.md",
+      "role": "reference",
+      "analyzer_layer": "surface",
+      "purpose": "Legend for the Research Toolbox glyph."
+    },
+    {
+      "file": "glyphs/glyph_animation_spec.md",
+      "role": "reference",
+      "analyzer_layer": "resonance",
+      "purpose": "Pulse, glow, and triadic rotation animation spec."
+    },
+
+    /* LINEAGE */
+    {
+      "file": "LINEAGE/forecast_vs_actuals.md",
+      "role": "reference",
+      "analyzer_layer": "structural",
+      "purpose": "LINEAGE entry for the Forecast vs Actuals pattern."
+    }
+  ]
+}
 
