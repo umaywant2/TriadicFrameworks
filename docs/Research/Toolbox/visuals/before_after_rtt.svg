@@ -1,5 +1,4 @@
 <svg width="1080" height="720" viewBox="0 0 1080 720" xmlns="http://www.w3.org/2000/svg">
-
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#050509"/>
@@ -23,29 +22,32 @@
   <!-- Background -->
   <rect width="1080" height="720" fill="url(#bg)"/>
 
-  <!-- Titles -->
-  <text x="270" y="60" class="title" text-anchor="middle">BEFORE RTT — Forecast-Driven</text>
-  <text x="810" y="60" class="title" text-anchor="middle">AFTER RTT — Actuals-Driven</text>
+  <!-- Column titles -->
+  <text x="270" y="60" class="title" text-anchor="middle">BEFORE RTT — Forecast‑Driven</text>
+  <text x="810" y="60" class="title" text-anchor="middle">AFTER RTT — Actuals‑Driven</text>
 
   <!-- BEFORE RTT COLUMN -->
-  <g>
+  <g id="before">
+    <!-- Forecast Narratives -->
     <rect x="80" y="100" width="380" height="120" class="box"/>
     <text x="270" y="130" class="box-title" text-anchor="middle">FORECAST NARRATIVES</text>
-    <text x="100" y="160" class="box-text">• long-range projections</text>
-    <text x="100" y="180" class="box-text">• assumption-driven models</text>
+    <text x="100" y="160" class="box-text">• long‑range projections</text>
+    <text x="100" y="180" class="box-text">• assumption‑driven models</text>
     <text x="100" y="200" class="box-text">• fear cycles</text>
     <text x="100" y="220" class="box-text">• political framing</text>
 
     <line x1="270" y1="220" x2="270" y2="250" class="arrow"/>
 
+    <!-- Narrative Regime -->
     <rect x="80" y="250" width="380" height="110" class="box"/>
     <text x="270" y="280" class="box-title" text-anchor="middle">NARRATIVE REGIME</text>
     <text x="100" y="310" class="box-text">• oscillating modes</text>
     <text x="100" y="330" class="box-text">• informational → fear → informational</text>
-    <text x="100" y="350" class="box-text">• regime-blind projections</text>
+    <text x="100" y="350" class="box-text">• regime‑blind projections</text>
 
     <line x1="270" y1="360" x2="270" y2="390" class="arrow"/>
 
+    <!-- Public Perception -->
     <rect x="80" y="390" width="380" height="110" class="box"/>
     <text x="270" y="420" class="box-title" text-anchor="middle">PUBLIC PERCEPTION</text>
     <text x="100" y="450" class="box-text">• uncertainty</text>
@@ -54,24 +56,27 @@
 
     <line x1="270" y1="500" x2="270" y2="530" class="arrow"/>
 
+    <!-- Policy Posturing -->
     <rect x="80" y="530" width="380" height="110" class="box"/>
     <text x="270" y="560" class="box-title" text-anchor="middle">POLICY POSTURING</text>
     <text x="100" y="590" class="box-text">• based on projections</text>
     <text x="100" y="610" class="box-text">• not on actuals</text>
-    <text x="100" y="630" class="box-text">• regime-blind</text>
+    <text x="100" y="630" class="box-text">• regime‑blind</text>
   </g>
 
   <!-- AFTER RTT COLUMN -->
-  <g>
+  <g id="after">
+    <!-- RTT/1 -->
     <rect x="620" y="100" width="380" height="120" class="box"/>
     <text x="810" y="130" class="box-title" text-anchor="middle">RTT/1 — TEMPORAL ACTUALS</text>
     <text x="640" y="160" class="box-text">• real inflows/outflows</text>
     <text x="640" y="180" class="box-text">• real demographic shifts</text>
-    <text x="640" y="200" class="box-text">• real trust-fund behavior</text>
+    <text x="640" y="200" class="box-text">• real trust‑fund behavior</text>
     <text x="640" y="220" class="box-text">• compare(actuals, forecasts)</text>
 
     <line x1="810" y1="220" x2="810" y2="250" class="arrow"/>
 
+    <!-- RTT/2 -->
     <rect x="620" y="250" width="380" height="110" class="box"/>
     <text x="810" y="280" class="box-title" text-anchor="middle">RTT/2 — REGIME CHECK</text>
     <text x="640" y="310" class="box-text">• stable / transitional / divergent</text>
@@ -80,6 +85,7 @@
 
     <line x1="810" y1="360" x2="810" y2="390" class="arrow"/>
 
+    <!-- RTT/3 -->
     <rect x="620" y="390" width="380" height="120" class="box"/>
     <text x="810" y="420" class="box-title" text-anchor="middle">RTT/3 — COHERENCE LAYERS</text>
     <text x="640" y="450" class="box-text">• surface / structural / resonance</text>
@@ -88,11 +94,10 @@
 
     <line x1="810" y1="500" x2="810" y2="530" class="arrow"/>
 
+    <!-- Structural Health & Planning -->
     <rect x="620" y="530" width="380" height="110" class="box"/>
     <text x="810" y="560" class="box-title" text-anchor="middle">STRUCTURAL HEALTH & PLANNING</text>
     <text x="640" y="590" class="box-text">• grounded in actuals</text>
-    <text x="640" y="610" class="box-text">• regime-aware, coherence-based</text>
+    <text x="640" y="610" class="box-text">• regime‑aware, coherence‑based</text>
   </g>
-
 </svg>
-
