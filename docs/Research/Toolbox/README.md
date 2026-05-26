@@ -1,4 +1,7 @@
 # **Research Toolbox**  
+
+- [`RT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Toolbox/RT_module.json) — Agentic module schema role assignments
+
 **Four‑Source Substrate + RTT/1–3 Engine Patterns for Structured Research Reasoning**
 
 The **Research Toolbox** is the canonical TriadicFrameworks module for:
