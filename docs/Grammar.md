@@ -1,5 +1,7 @@
 # Grammar for dimensional cross-domain agentic AI modules
 
+- [`Grammar_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Grammar_module.json) — Agentic module schema role assignments
+
 You can think of **RTT grammar** the same way you think of grammar in a language: it’s not about *rules for sentences*, it’s about *rules for how awareness is structured*. When TriadicFrameworks talks about “RTT modules,” each module has its own grammar—its own way of organizing perception, time, flows, and regimes.
 
 Here’s the simplest way to understand and *use* grammar with RTT modules.
