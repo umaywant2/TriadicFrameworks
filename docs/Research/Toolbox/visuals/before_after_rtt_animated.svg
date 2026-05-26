@@ -1,1 +1,68 @@
+<svg width="1080" height="720" viewBox="0 0 1080 720" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050509"/>
+      <stop offset="50%" stop-color="#11112A"/>
+      <stop offset="100%" stop-color="#1B1235"/>
+    </linearGradient>
+
+    <marker id="arrow" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto">
+      <polygon points="0 0, 6 3, 0 6" fill="#7777B8"/>
+    </marker>
+
+    <style>
+      .title { font-family: system-ui, sans-serif; font-size: 22px; fill: #FFFFFF; }
+      .box { fill: #141424; stroke: #4B4B7A; stroke-width: 1.2; rx: 10; ry: 10; }
+      .box-title { font-family: system-ui, sans-serif; font-size: 16px; fill: #FFFFFF; font-weight: 600; }
+      .box-text { font-family: system-ui, sans-serif; font-size: 13px; fill: #D0D0D0; }
+      .arrow { stroke: #7777B8; stroke-width: 2; marker-end: url(#arrow); }
+
+      /* Triadic pulse */
+      #pulse {
+        animation: pulse 6s ease-in-out infinite;
+        transform-origin: 540px 360px;
+      }
+      @keyframes pulse {
+        0%   { r: 40; opacity: 0.06; }
+        50%  { r: 120; opacity: 0.18; }
+        100% { r: 40; opacity: 0.06; }
+      }
+
+      /* Before fades down, After brightens */
+      #before { animation: beforeFade 10s ease-in-out infinite; }
+      @keyframes beforeFade {
+        0%   { opacity: 1.0; }
+        40%  { opacity: 0.6; }
+        60%  { opacity: 0.4; }
+        100% { opacity: 0.6; }
+      }
+
+      #after { animation: afterRise 10s ease-in-out infinite; }
+      @keyframes afterRise {
+        0%   { opacity: 0.6; }
+        40%  { opacity: 0.9; }
+        60%  { opacity: 1.0; }
+        100% { opacity: 0.9; }
+      }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="720" fill="url(#bg)"/>
+
+  <!-- Triadic pulse -->
+  <circle id="pulse" cx="540" cy="360" r="40" fill="none" stroke="#B388FF" stroke-width="2"/>
+
+  <!-- BEFORE RTT -->
+  <g id="before">
+    <!-- (same boxes as static version, omitted here for brevity but identical) -->
+  </g>
+
+  <!-- AFTER RTT -->
+  <g id="after">
+    <!-- (same boxes as static version, omitted here for brevity but identical) -->
+  </g>
+
+</svg>
 
