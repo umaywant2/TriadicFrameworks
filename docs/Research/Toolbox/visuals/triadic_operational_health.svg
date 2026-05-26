@@ -1,1 +1,69 @@
+<svg width="640" height="640" viewBox="0 0 640 640" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="oh-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050509"/>
+      <stop offset="50%" stop-color="#11112A"/>
+      <stop offset="100%" stop-color="#1B1235"/>
+    </linearGradient>
+
+    <style>
+      .bg { fill: url(#oh-bg); }
+      .ring { fill: none; stroke-width: 2; stroke: #2E2E5E; }
+      .tri-line { stroke: #40C4FF; stroke-width: 2; stroke-linecap: round; }
+      .node { fill: #141424; stroke: #7C4DFF; stroke-width: 1.8; }
+      .label-main { font-family: system-ui, sans-serif; font-size: 14px; fill: #FFFFFF; font-weight: 600; }
+      .label-sub { font-family: system-ui, sans-serif; font-size: 11px; fill: #C8C8E8; }
+      .center-label { font-family: system-ui, sans-serif; font-size: 13px; fill: #C8C8E8; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <rect width="640" height="640" class="bg"/>
+
+  <!-- Concentric rings (health layers) -->
+  <circle cx="320" cy="320" r="220" class="ring"/>
+  <circle cx="320" cy="320" r="160" class="ring"/>
+  <circle cx="320" cy="320" r="100" class="ring"/>
+
+  <!-- Triadic vertices -->
+  <!-- Top: Temporal Health (RTT/1) -->
+  <g transform="translate(320,120)">
+    <circle r="22" class="node"/>
+    <text y="-32" text-anchor="middle" class="label-main">RTT/1</text>
+    <text y="-14" text-anchor="middle" class="label-sub">temporal health</text>
+    <text y="4" text-anchor="middle" class="label-sub">actuals vs forecasts</text>
+  </g>
+
+  <!-- Bottom-left: Regime Health (RTT/2) -->
+  <g transform="translate(170,460)">
+    <circle r="22" class="node"/>
+    <text y="40" text-anchor="middle" class="label-main">RTT/2</text>
+    <text y="58" text-anchor="middle" class="label-sub">regime health</text>
+    <text y="76" text-anchor="middle" class="label-sub">stable / transitional / divergent</text>
+  </g>
+
+  <!-- Bottom-right: Coherence Health (RTT/3) -->
+  <g transform="translate(470,460)">
+    <circle r="22" class="node"/>
+    <text y="40" text-anchor="middle" class="label-main">RTT/3</text>
+    <text y="58" text-anchor="middle" class="label-sub">coherence health</text>
+    <text y="76" text-anchor="middle" class="label-sub">surface / structural / resonance</text>
+  </g>
+
+  <!-- Connecting lines -->
+  <line x1="320" y1="120" x2="170" y2="460" class="tri-line"/>
+  <line x1="320" y1="120" x2="470" y2="460" class="tri-line"/>
+  <line x1="170" y1="460" x2="470" y2="460" class="tri-line"/>
+
+  <!-- Center: Operational Health Check -->
+  <g transform="translate(320,320)">
+    <circle r="32" class="node"/>
+    <text y="-4" class="center-label">operational</text>
+    <text y="14" class="center-label">health check</text>
+  </g>
+
+  <!-- Axis labels -->
+  <text x="320" y="70" text-anchor="middle" class="label-sub">time series</text>
+  <text x="120" y="520" text-anchor="middle" class="label-sub">regime literacy</text>
+  <text x="520" y="520" text-anchor="middle" class="label-sub">coherence layers</text>
+</svg>
 
