@@ -1,0 +1,94 @@
+<svg width="1080" height="420" viewBox="0 0 1080 420" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050509"/>
+      <stop offset="50%" stop-color="#11112A"/>
+      <stop offset="100%" stop-color="#1B1235"/>
+    </linearGradient>
+    <style>
+      .bg { fill: url(#bg); }
+      .title { font-family: system-ui, sans-serif; font-size: 18px; fill: #FFFFFF; font-weight: 600; }
+      .header { font-family: system-ui, sans-serif; font-size: 13px; fill: #C8C8E8; font-weight: 600; }
+      .cell { font-family: system-ui, sans-serif; font-size: 12px; fill: #D0D0D0; }
+      .box { fill: #141424; stroke: #4B4B7A; stroke-width: 1.1; }
+      .col-line, .row-line { stroke: #2A2A4A; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="420" class="bg"/>
+
+  <text x="540" y="40" text-anchor="middle" class="title">
+    LINEAGE Index — Forecast vs Actuals ↔ Proto‑Fund
+  </text>
+
+  <!-- Table box -->
+  <g transform="translate(60,70)">
+    <rect x="0" y="0" width="960" height="300" class="box"/>
+
+    <!-- Column headers -->
+    <text x="80"  y="30" class="header">Entry / Diagram</text>
+    <text x="340" y="30" class="header">File</text>
+    <text x="520" y="30" class="header">Type</text>
+    <text x="690" y="30" class="header">Upstream</text>
+    <text x="870" y="30" class="header">Downstream</text>
+
+    <!-- Header underline -->
+    <line x1="0" y1="40" x2="960" y2="40" class="row-line"/>
+
+    <!-- Row 1 -->
+    <text x="80"  y="70"  class="cell">Forecast vs Actuals</text>
+    <text x="340" y="70"  class="cell">forecast_vs_actuals.md</text>
+    <text x="520" y="70"  class="cell">lineage</text>
+    <text x="690" y="70"  class="cell">—</text>
+    <text x="870" y="70"  class="cell">proto‑fund</text>
+
+    <!-- Row 2 -->
+    <text x="80"  y="100" class="cell">Forecast vs Actuals (SVG)</text>
+    <text x="340" y="100" class="cell">forecast_vs_actuals.svg</text>
+    <text x="520" y="100" class="cell">diagram</text>
+    <text x="690" y="100" class="cell">forecast_vs_actuals</text>
+    <text x="870" y="100" class="cell">proto‑fund</text>
+
+    <!-- Row 3 -->
+    <text x="80"  y="130" class="cell">Forecast vs Actuals (Animated)</text>
+    <text x="340" y="130" class="cell">forecast_vs_actuals_animated.svg</text>
+    <text x="520" y="130" class="cell">diagram</text>
+    <text x="690" y="130" class="cell">forecast_vs_actuals</text>
+    <text x="870" y="130" class="cell">proto‑fund</text>
+
+    <!-- Row 4 -->
+    <text x="80"  y="160" class="cell">Forecast vs Actuals ↔ Proto‑Fund Cross‑Map</text>
+    <text x="340" y="160" class="cell">forecast_vs_actuals_protofund_crossmap.md</text>
+    <text x="520" y="160" class="cell">cross‑map</text>
+    <text x="690" y="160" class="cell">forecast_vs_actuals</text>
+    <text x="870" y="160" class="cell">social_security_protofund</text>
+
+    <!-- Row 5 -->
+    <text x="80"  y="190" class="cell">Social Security Proto‑Fund</text>
+    <text x="340" y="190" class="cell">../exercises/social_security_protofund.md</text>
+    <text x="520" y="190" class="cell">lineage‑exercise</text>
+    <text x="690" y="190" class="cell">forecast_vs_actuals</text>
+    <text x="870" y="190" class="cell">IE • MSM • GSM • Medicine</text>
+
+    <!-- Row 6 -->
+    <text x="80"  y="220" class="cell">Proto‑Fund Worksheet</text>
+    <text x="340" y="220" class="cell">../exercises/social_security_protofund_worksheet.md</text>
+    <text x="520" y="220" class="cell">worksheet</text>
+    <text x="690" y="220" class="cell">forecast_vs_actuals</text>
+    <text x="870" y="220" class="cell">IE • MSM • GSM</text>
+
+    <!-- Row 7 -->
+    <text x="80"  y="250" class="cell">RTT Engine Triad</text>
+    <text x="340" y="250" class="cell">../diagrams/rtt_engine_triad_diagram.md</text>
+    <text x="520" y="250" class="cell">diagram</text>
+    <text x="690" y="250" class="cell">substrate</text>
+    <text x="870" y="250" class="cell">forecast_vs_actuals</text>
+
+    <!-- Row 8 -->
+    <text x="80"  y="280" class="cell">Triadic Super‑Diagram</text>
+    <text x="340" y="280" class="cell">../diagrams/triadic_super_diagram.md</text>
+    <text x="520" y="280" class="cell">diagram</text>
+    <text x="690" y="280" class="cell">substrate → RTT engine</text>
+    <text x="870" y="280" class="cell">TEL • SARG • modules</text>
+  </g>
+</svg>
