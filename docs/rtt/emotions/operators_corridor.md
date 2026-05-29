@@ -17,22 +17,20 @@ They represent **ambiguity**, **potential**, and **directional instability**.
 
 All corridor operators derive from the general form:
 
-\[
-E_{\text{cor}} = k_e \cdot \sigma \cdot \theta \cdot (R - D)
-\]
+$$E_{\text{cor}} = k_e \cdot \sigma \cdot \theta \cdot (R - D)$$
 
 Where:
 
-- \(R\) = resonance alignment  
-- \(D\) = drift  
-- \(\theta\) = context factor  
-- \(\sigma\) = emotional intensity  
-- \(k_e\) = operator constant  
+- $$R$$ = resonance alignment  
+- $$D$$ = drift  
+- $$\theta$$ = context factor  
+- $$\sigma$$ = emotional intensity  
+- $$k_e$$ = operator constant  
 
 Corridor operators are **directional**:
 
-- \(E_{\text{cor}} > 0\) → coherence‑leaning  
-- \(E_{\text{cor}} < 0\) → drift‑leaning  
+- $$E_{\text{cor}} > 0$$ → coherence‑leaning  
+- $$E_{\text{cor}} < 0$$ → drift‑leaning  
 
 ---
 
@@ -43,11 +41,10 @@ These correspond to the 10 emotions in `emotions_part_c.json`.
 ---
 
 ## 1. Curiosity Operator  
-**Symbol:** \( \mathcal{Q} \)  
+**Symbol:** $$\mathcal{Q}$$  
 **Equation:**  
-\[
-Q = k_q \cdot \sigma \cdot \theta \cdot (R - D)
-\]
+
+$$Q = k_q \cdot \sigma \cdot \theta \cdot (R - D)$$
 
 **Effect:**  
 - coherence if aligned  
@@ -58,11 +55,10 @@ Q = k_q \cdot \sigma \cdot \theta \cdot (R - D)
 ---
 
 ## 2. Anticipation Operator  
-**Symbol:** \( \mathcal{A}_{nt} \)  
+**Symbol:** $$\mathcal{A}_{nt}$$  
 **Equation:**  
-\[
-A_{nt} = k_{ant} \cdot \sigma \cdot \theta \cdot (R_{future} - D)
-\]
+
+$$A_{nt} = k_{ant} \cdot \sigma \cdot \theta \cdot (R_{future} - D)$$
 
 **Effect:**  
 - future‑oriented alignment  
@@ -73,11 +69,10 @@ A_{nt} = k_{ant} \cdot \sigma \cdot \theta \cdot (R_{future} - D)
 ---
 
 ## 3. Surprise Operator  
-**Symbol:** \( \mathcal{S}_{pr} \)  
+**Symbol:** $$\mathcal{S}_{pr}$$  
 **Equation:**  
-\[
-S_{pr} = k_{spr} \cdot \sigma \cdot |\Delta O|
-\]
+
+$$S_{pr} = k_{spr} \cdot \sigma \cdot |\Delta O|$$
 
 **Effect:**  
 - neutral baseline  
@@ -88,11 +83,10 @@ S_{pr} = k_{spr} \cdot \sigma \cdot |\Delta O|
 ---
 
 ## 4. Interest Operator  
-**Symbol:** \( \mathcal{I} \)  
+**Symbol:** $$\mathcal{I}$$  
 **Equation:**  
-\[
-I = k_i \cdot \sigma \cdot \theta \cdot (R - D/2)
-\]
+
+$$I = k_i \cdot \sigma \cdot \theta \cdot (R - D/2)$$
 
 **Effect:**  
 - coherence if aligned  
@@ -103,11 +97,10 @@ I = k_i \cdot \sigma \cdot \theta \cdot (R - D/2)
 ---
 
 ## 5. Desire Operator  
-**Symbol:** \( \mathcal{D}_{sr} \)  
+**Symbol:** $$\mathcal{D}_{sr}$$  
 **Equation:**  
-\[
-D_{sr} = k_{dsr} \cdot \sigma \cdot (A_s - A_o)
-\]
+
+$$D_{sr} = k_{dsr} \cdot \sigma \cdot (A_s - A_o)$$
 
 **Effect:**  
 - self‑aligned desire → coherence  
@@ -118,11 +111,10 @@ D_{sr} = k_{dsr} \cdot \sigma \cdot (A_s - A_o)
 ---
 
 ## 6. Vulnerability Operator  
-**Symbol:** \( \mathcal{V}_{ln} \)  
+**Symbol:** $$\mathcal{V}_{ln}$$  
 **Equation:**  
-\[
-V_{ln} = k_{vln} \cdot \sigma \cdot (A_o - A_s)
-\]
+
+$$V_{ln} = k_{vln} \cdot \sigma \cdot (A_o - A_s)$$
 
 **Effect:**  
 - supported → coherence  
@@ -133,11 +125,10 @@ V_{ln} = k_{vln} \cdot \sigma \cdot (A_o - A_s)
 ---
 
 ## 7. Excitement Operator  
-**Symbol:** \( \mathcal{E}_{x} \)  
+**Symbol:** $$\mathcal{E}_{x}$$  
 **Equation:**  
-\[
-E_x = k_{ex} \cdot \sigma \cdot \theta \cdot (R - D/3)
-\]
+
+$$E_x = k_{ex} \cdot \sigma \cdot \theta \cdot (R - D/3)$$
 
 **Effect:**  
 - coherence if regulated  
@@ -148,11 +139,10 @@ E_x = k_{ex} \cdot \sigma \cdot \theta \cdot (R - D/3)
 ---
 
 ## 8. Nostalgia Operator  
-**Symbol:** \( \mathcal{N} \)  
+**Symbol:** $$\mathcal{N}$$  
 **Equation:**  
-\[
-N = k_n \cdot \sigma \cdot (R_{past} - R_{present})
-\]
+
+$$N = k_n \cdot \sigma \cdot (R_{past} - R_{present})$$
 
 **Effect:**  
 - integration → coherence  
@@ -163,11 +153,10 @@ N = k_n \cdot \sigma \cdot (R_{past} - R_{present})
 ---
 
 ## 9. Ambition Operator  
-**Symbol:** \( \mathcal{A}_{mb} \)  
+**Symbol:** $$ \mathcal{A}_{mb} $$  
 **Equation:**  
-\[
-A_{mb} = k_{amb} \cdot \sigma \cdot (A_s - A_o + A_w)
-\]
+
+$$A_{mb} = k_{amb} \cdot \sigma \cdot (A_s - A_o + A_w)$$
 
 **Effect:**  
 - aligned ambition → coherence  
@@ -178,11 +167,10 @@ A_{mb} = k_{amb} \cdot \sigma \cdot (A_s - A_o + A_w)
 ---
 
 ## 10. Confusion Operator  
-**Symbol:** \( \mathcal{C}_{nf} \)  
+**Symbol:** $$\mathcal{C}_{nf}$$  
 **Equation:**  
-\[
-C_{nf} = k_{cnf} \cdot \sigma \cdot (D + |R - C|)
-\]
+
+$$C_{nf} = k_{cnf} \cdot \sigma \cdot (D + |R - C|)$$
 
 **Effect:**  
 - increases drift  
@@ -196,16 +184,16 @@ C_{nf} = k_{cnf} \cdot \sigma \cdot (D + |R - C|)
 
 | Operator | Symbol | Regime | Drift Effect | Triad |
 |---------|--------|--------|--------------|--------|
-| Curiosity | \( \mathcal{Q} \) | corridor | contextual | (+1,0,+1) |
-| Anticipation | \( \mathcal{A}_{nt} \) | corridor | contextual | (+1,0,+1) |
-| Surprise | \( \mathcal{S}_{pr} \) | corridor | contextual | (0,0,0) |
-| Interest | \( \mathcal{I} \) | corridor | contextual | (+1,0,+1) |
-| Desire | \( \mathcal{D}_{sr} \) | corridor | contextual | (+1,–1,0) |
-| Vulnerability | \( \mathcal{V}_{ln} \) | corridor | contextual | (–1,+1,0) |
-| Excitement | \( \mathcal{E}_{x} \) | corridor | contextual | (+1,0,+1) |
-| Nostalgia | \( \mathcal{N} \) | corridor | contextual | (+1,0,–1) |
-| Ambition | \( \mathcal{A}_{mb} \) | corridor | contextual | (+1,–1,+1) |
-| Confusion | \( \mathcal{C}_{nf} \) | corridor | increases | (–1,0,–1) |
+| Curiosity | $$\mathcal{Q}$$ | corridor | contextual | (+1,0,+1) |
+| Anticipation | $$\mathcal{A}_{nt}$$ | corridor | contextual | (+1,0,+1) |
+| Surprise | $$\mathcal{S}_{pr}$$ | corridor | contextual | (0,0,0) |
+| Interest | $$\mathcal{I}$$ | corridor | contextual | (+1,0,+1) |
+| Desire | $$\mathcal{D}_{sr}$$ | corridor | contextual | (+1,–1,0) |
+| Vulnerability | $$\mathcal{V}_{ln}$$ | corridor | contextual | (–1,+1,0) |
+| Excitement | $$\mathcal{E}_{x}$$ | corridor | contextual | (+1,0,+1) |
+| Nostalgia | $$\mathcal{N}$$ | corridor | contextual | (+1,0,–1) |
+| Ambition | $$\mathcal{A}_{mb}$$ | corridor | contextual | (+1,–1,+1) |
+| Confusion | $$\mathcal{C}_{nf}$$ | corridor | increases | (–1,0,–1) |
 
 ---
 
