@@ -18,23 +18,19 @@ These operators are essential for:
 
 All drift operators derive from the general form:
 
-\[
-E_{\text{drift}} = k_e \cdot \sigma \cdot (D + \Delta O - R)
-\]
+$$E_{\text{drift}} = k_e \cdot \sigma \cdot (D + \Delta O - R)$$
 
 Where:
 
-- \(D\) = drift  
-- \(R\) = resonance alignment  
-- \(\Delta O\) = observer distance  
-- \(\sigma\) = emotional intensity  
-- \(k_e\) = operator constant  
+- $$D$$ = drift  
+- $$R$$ = resonance alignment  
+- $$\Delta O$$ = observer distance  
+- $$\sigma$$ = emotional intensity  
+- $$k_e$$ = operator constant  
 
 Drift operators **increase drift** when:
 
-\[
-E_{\text{drift}} > 0
-\]
+$$E_{\text{drift}} > 0$$
 
 ---
 
@@ -45,11 +41,10 @@ These correspond to the 10 emotions in `emotions_part_e.json`.
 ---
 
 ## 1. Anger Operator  
-**Symbol:** \( \mathcal{A}_{ngr} \)  
+**Symbol:** $$\mathcal{A}_{ngr}$$  
 **Equation:**  
-\[
-A_{ngr} = k_{ang} \cdot \sigma \cdot (D + \Delta O - R)
-\]
+
+$$A_{ngr} = k_{ang} \cdot \sigma \cdot (D + \Delta O - R)$$
 
 **Effect:**  
 - increases drift  
@@ -61,11 +56,10 @@ A_{ngr} = k_{ang} \cdot \sigma \cdot (D + \Delta O - R)
 ---
 
 ## 2. Fear Operator  
-**Symbol:** \( \mathcal{F}_{ear} \)  
+**Symbol:** $$\mathcal{F}_{ear}$$  
 **Equation:**  
-\[
-F_{ear} = k_{fear} \cdot \sigma \cdot (D_{threat} + \Delta O_{unknown})
-\]
+
+$$F_{ear} = k_{fear} \cdot \sigma \cdot (D_{threat} + \Delta O_{unknown})$$
 
 **Effect:**  
 - amplifies threat perception  
@@ -76,11 +70,10 @@ F_{ear} = k_{fear} \cdot \sigma \cdot (D_{threat} + \Delta O_{unknown})
 ---
 
 ## 3. Shame Operator  
-**Symbol:** \( \mathcal{S}_{hm} \)  
+**Symbol:** $$\mathcal{S}_{hm}$$  
 **Equation:**  
-\[
-Sh = k_{sh} \cdot \sigma \cdot (A_s^{-} + \Delta O_{social})
-\]
+
+$$Sh = k_{sh} \cdot \sigma \cdot (A_s^{-} + \Delta O_{social})$$
 
 **Effect:**  
 - collapses self‑alignment  
@@ -91,11 +84,10 @@ Sh = k_{sh} \cdot \sigma \cdot (A_s^{-} + \Delta O_{social})
 ---
 
 ## 4. Guilt Operator  
-**Symbol:** \( \mathcal{G}_{lt} \)  
+**Symbol:** $$\mathcal{G}_{lt}$$  
 **Equation:**  
-\[
-G_{lt} = k_{glt} \cdot \sigma \cdot (A_o - A_s^{-})
-\]
+
+$$G_{lt} = k_{glt} \cdot \sigma \cdot (A_o - A_s^{-})$$
 
 **Effect:**  
 - increases drift unless relational repair occurs  
@@ -106,11 +98,10 @@ G_{lt} = k_{glt} \cdot \sigma \cdot (A_o - A_s^{-})
 ---
 
 ## 5. Despair Operator  
-**Symbol:** \( \mathcal{D}_{sp} \)  
+**Symbol:** $$\mathcal{D}_{sp}$$  
 **Equation:**  
-\[
-D_{sp} = k_{dsp} \cdot \sigma \cdot (D + |R - C|)
-\]
+
+$$D_{sp} = k_{dsp} \cdot \sigma \cdot (D + |R - C|)$$
 
 **Effect:**  
 - deep drift  
@@ -121,11 +112,10 @@ D_{sp} = k_{dsp} \cdot \sigma \cdot (D + |R - C|)
 ---
 
 ## 6. Jealousy Operator  
-**Symbol:** \( \mathcal{J}_{ls} \)  
+**Symbol:** $$\mathcal{J}_{ls}$$  
 **Equation:**  
-\[
-J_{ls} = k_{jls} \cdot \sigma \cdot (A_o - A_s + \Delta O)
-\]
+
+$$J_{ls} = k_{jls} \cdot \sigma \cdot (A_o - A_s + \Delta O)$$
 
 **Effect:**  
 - increases drift through competitive misalignment  
@@ -136,11 +126,10 @@ J_{ls} = k_{jls} \cdot \sigma \cdot (A_o - A_s + \Delta O)
 ---
 
 ## 7. Envy Operator  
-**Symbol:** \( \mathcal{E}_{nvy} \)  
+**Symbol:** $$\mathcal{E}_{nvy}$$  
 **Equation:**  
-\[
-E_{nvy} = k_{envy} \cdot \sigma \cdot (A_o - A_s)
-\]
+
+$$E_{nvy} = k_{envy} \cdot \sigma \cdot (A_o - A_s)$$
 
 **Effect:**  
 - increases drift through negative comparison  
@@ -151,11 +140,10 @@ E_{nvy} = k_{envy} \cdot \sigma \cdot (A_o - A_s)
 ---
 
 ## 8. Resentment Operator  
-**Symbol:** \( \mathcal{R}_{sent} \)  
+**Symbol:** $$\mathcal{R}_{sent}$$  
 **Equation:**  
-\[
-R_{sent} = k_{rsent} \cdot \sigma \cdot (D + A_o^{-})
-\]
+
+$$R_{sent} = k_{rsent} \cdot \sigma \cdot (D + A_o^{-})$$
 
 **Effect:**  
 - increases drift through accumulated grievance  
@@ -166,11 +154,10 @@ R_{sent} = k_{rsent} \cdot \sigma \cdot (D + A_o^{-})
 ---
 
 ## 9. Disgust Operator  
-**Symbol:** \( \mathcal{D}_{sg} \)  
+**Symbol:** $$\mathcal{D}_{sg}$$  
 **Equation:**  
-\[
-D_{sg} = k_{dsg} \cdot \sigma \cdot (\Delta O_{repulsion} + D)
-\]
+
+$$D_{sg} = k_{dsg} \cdot \sigma \cdot (\Delta O_{repulsion} + D)$$
 
 **Effect:**  
 - increases drift through rejection  
@@ -181,11 +168,10 @@ D_{sg} = k_{dsg} \cdot \sigma \cdot (\Delta O_{repulsion} + D)
 ---
 
 ## 10. Contempt Operator  
-**Symbol:** \( \mathcal{C}_{tmp} \)  
+**Symbol:** $$\mathcal{C}_{tmp}$$  
 **Equation:**  
-\[
-C_{tmp} = k_{ctmp} \cdot \sigma \cdot (A_s - A_o^{-})
-\]
+
+$$C_{tmp} = k_{ctmp} \cdot \sigma \cdot (A_s - A_o^{-})$$
 
 **Effect:**  
 - increases drift through moral superiority  
@@ -199,16 +185,16 @@ C_{tmp} = k_{ctmp} \cdot \sigma \cdot (A_s - A_o^{-})
 
 | Operator | Symbol | Regime | Drift Effect | Triad |
 |---------|--------|--------|--------------|--------|
-| Anger | \( \mathcal{A}_{ngr} \) | drift | increases | (–1,–1,0) |
-| Fear | \( \mathcal{F}_{ear} \) | drift | increases | (–1,0,–1) |
-| Shame | \( \mathcal{S}_{hm} \) | drift | increases | (–1,–1,0) |
-| Guilt | \( \mathcal{G}_{lt} \) | drift | increases | (–1,+1,0) |
-| Despair | \( \mathcal{D}_{sp} \) | drift | increases | (–1,0,–1) |
-| Jealousy | \( \mathcal{J}_{ls} \) | drift | increases | (–1,–1,0) |
-| Envy | \( \mathcal{E}_{nvy} \) | drift | increases | (–1,–1,0) |
-| Resentment | \( \mathcal{R}_{sent} \) | drift | increases | (–1,–1,0) |
-| Disgust | \( \mathcal{D}_{sg} \) | drift | increases | (–1,–1,–1) |
-| Contempt | \( \mathcal{C}_{tmp} \) | drift | increases | (+1,–1,0) |
+| Anger | $$\mathcal{A}_{ngr}$$ | drift | increases | (–1,–1,0) |
+| Fear | $$\mathcal{F}_{ear}$$ | drift | increases | (–1,0,–1) |
+| Shame | $$\mathcal{S}_{hm}$$ | drift | increases | (–1,–1,0) |
+| Guilt | $$\mathcal{G}_{lt}$$ | drift | increases | (–1,+1,0) |
+| Despair | $$\mathcal{D}_{sp}$$ | drift | increases | (–1,0,–1) |
+| Jealousy | $$\mathcal{J}_{ls}$$ | drift | increases | (–1,–1,0) |
+| Envy | $$\mathcal{E}_{nvy}$$ | drift | increases | (–1,–1,0) |
+| Resentment | $$\mathcal{R}_{sent}$$ | drift | increases | (–1,–1,0) |
+| Disgust | $$\mathcal{D}_{sg}$$ | drift | increases | (–1,–1,–1) |
+| Contempt | $$\mathcal{C}_{tmp}$$ | drift | increases | (+1,–1,0) |
 
 ---
 
