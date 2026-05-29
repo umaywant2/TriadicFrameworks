@@ -18,22 +18,18 @@ These operators are essential for:
 
 All coherence operators derive from the general form:
 
-\[
-E_{\text{coh}} = k_e \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+$$E_{\text{coh}} = k_e \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 Where:
 
-- \(R\) = resonance alignment  
-- \(\Delta O\) = observer distance  
-- \(\sigma\) = emotional intensity  
-- \(k_e\) = operator constant  
+- $$R$$ = resonance alignment  
+- $$\Delta O$$ = observer distance  
+- $$\sigma$$ = emotional intensity  
+- $$k_e$$ = operator constant  
 
 Coherence operators **reduce drift** when:
 
-\[
-E_{\text{coh}} > D
-\]
+$$E_{\text{coh}} > D$$
 
 ---
 
@@ -44,11 +40,10 @@ These correspond to the 10 emotions in `emotions_part_a.json`.
 ---
 
 ## 1. Compassion Operator  
-**Symbol:** \( \mathcal{C}_{comp} \)  
+**Symbol:** $$\mathcal{C}_{comp}$$  
 **Equation:**  
-\[
-C = k_c \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$C = k_c \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 **Effect:**  
 - reduces drift  
@@ -60,11 +55,10 @@ C = k_c \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 2. Virtue Operator  
-**Symbol:** \( \mathcal{V} \)  
+**Symbol:** $$\mathcal{V}$$  
 **Equation:**  
-\[
-V = k_v \cdot \sigma \cdot (A_s + A_o + A_w)
-\]
+
+$$V = k_v \cdot \sigma \cdot (A_s + A_o + A_w)$$
 
 **Effect:**  
 - maximizes triadic alignment  
@@ -75,11 +69,10 @@ V = k_v \cdot \sigma \cdot (A_s + A_o + A_w)
 ---
 
 ## 3. Trust Operator  
-**Symbol:** \( \mathcal{T} \)  
+**Symbol:** $$\mathcal{T}$$  
 **Equation:**  
-\[
-T = k_t \cdot \sigma \cdot \frac{R}{1 + D}
-\]
+
+$$T = k_t \cdot \sigma \cdot \frac{R}{1 + D}$$
 
 **Effect:**  
 - reduces drift by lowering perceived threat  
@@ -90,11 +83,10 @@ T = k_t \cdot \sigma \cdot \frac{R}{1 + D}
 ---
 
 ## 4. Awe Operator  
-**Symbol:** \( \mathcal{A}_{awe} \)  
+**Symbol:** $$\mathcal{A}_{awe}$$  
 **Equation:**  
-\[
-A = k_a \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$A = k_a \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 **Effect:**  
 - expands world alignment  
@@ -105,11 +97,10 @@ A = k_a \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 5. Gratitude Operator  
-**Symbol:** \( \mathcal{G} \)  
+**Symbol:** $$\mathcal{G}$$  
 **Equation:**  
-\[
-G = k_g \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$G = k_g \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 **Effect:**  
 - strengthens relational alignment  
@@ -120,11 +111,10 @@ G = k_g \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 6. Structural Love Operator  
-**Symbol:** \( \mathcal{L}_{struct} \)  
+**Symbol:** $$\mathcal{L}_{struct}$$  
 **Equation:**  
-\[
-L = k_l \cdot \sigma \cdot (A_s + A_o)
-\]
+
+$$L = k_l \cdot \sigma \cdot (A_s + A_o)$$
 
 **Effect:**  
 - increases self‑other alignment  
@@ -135,11 +125,10 @@ L = k_l \cdot \sigma \cdot (A_s + A_o)
 ---
 
 ## 7. Empathy Operator  
-**Symbol:** \( \mathcal{E}_{emp} \)  
+**Symbol:** $$\mathcal{E}_{emp}$$  
 **Equation:**  
-\[
-E_{emp} = k_{emp} \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$E_{emp} = k_{emp} \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 **Effect:**  
 - reduces observer distance  
@@ -150,11 +139,10 @@ E_{emp} = k_{emp} \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 8. Patience Operator  
-**Symbol:** \( \mathcal{P} \)  
+**Symbol:** $$\mathcal{P}$$  
 **Equation:**  
-\[
-P = k_p \cdot \sigma \cdot \frac{R}{1 + D}
-\]
+
+$$P = k_p \cdot \sigma \cdot \frac{R}{1 + D}$$
 
 **Effect:**  
 - slows drift escalation  
@@ -165,11 +153,10 @@ P = k_p \cdot \sigma \cdot \frac{R}{1 + D}
 ---
 
 ## 9. Forgiveness Operator  
-**Symbol:** \( \mathcal{F} \)  
+**Symbol:** $$\mathcal{F}$$  
 **Equation:**  
-\[
-F = k_f \cdot \sigma \cdot \frac{R}{1 + \Delta O + D}
-\]
+
+$$F = k_f \cdot \sigma \cdot \frac{R}{1 + \Delta O + D}$$
 
 **Effect:**  
 - reduces accumulated drift  
@@ -180,11 +167,10 @@ F = k_f \cdot \sigma \cdot \frac{R}{1 + \Delta O + D}
 ---
 
 ## 10. Serenity Operator  
-**Symbol:** \( \mathcal{S} \)  
+**Symbol:** $$\mathcal{S}$$  
 **Equation:**  
-\[
-S = k_s \cdot \sigma \cdot C
-\]
+
+$$S = k_s \cdot \sigma \cdot C$$
 
 **Effect:**  
 - stabilizes internal coherence  
@@ -198,16 +184,16 @@ S = k_s \cdot \sigma \cdot C
 
 | Operator | Symbol | Regime | Drift Effect | Triad |
 |---------|--------|--------|--------------|--------|
-| Compassion | \( \mathcal{C}_{comp} \) | coherence | reduces | (+1,+1,+1) |
-| Virtue | \( \mathcal{V} \) | coherence | reduces | (+1,+1,+1) |
-| Trust | \( \mathcal{T} \) | coherence | reduces | (+1,+1,0) |
-| Awe | \( \mathcal{A}_{awe} \) | coherence | reduces | (+1,0,+1) |
-| Gratitude | \( \mathcal{G} \) | coherence | reduces | (+1,+1,0) |
-| Structural Love | \( \mathcal{L}_{struct} \) | coherence | reduces | (+1,+1,0) |
-| Empathy | \( \mathcal{E}_{emp} \) | coherence | reduces | (+1,+1,0) |
-| Patience | \( \mathcal{P} \) | coherence | reduces | (+1,0,+1) |
-| Forgiveness | \( \mathcal{F} \) | coherence | reduces | (+1,+1,+1) |
-| Serenity | \( \mathcal{S} \) | coherence | reduces | (+1,0,+1) |
+| Compassion | $$\mathcal{C}_{comp}$$ | coherence | reduces | (+1,+1,+1) |
+| Virtue | $$\mathcal{V}$$ | coherence | reduces | (+1,+1,+1) |
+| Trust | $$\mathcal{T}$$ | coherence | reduces | (+1,+1,0) |
+| Awe | $$\mathcal{A}_{awe}$$ | coherence | reduces | (+1,0,+1) |
+| Gratitude | $$\mathcal{G}$$ | coherence | reduces | (+1,+1,0) |
+| Structural Love | $$\mathcal{L}_{struct}$$ | coherence | reduces | (+1,+1,0) |
+| Empathy | $$\mathcal{E}_{emp}$$ | coherence | reduces | (+1,+1,0) |
+| Patience | $$\mathcal{P}$$ | coherence | reduces | (+1,0,+1) |
+| Forgiveness | $$\mathcal{F}$$ | coherence | reduces | (+1,+1,+1) |
+| Serenity | $$\mathcal{S}$$ | coherence | reduces | (+1,0,+1) |
 
 ---
 
