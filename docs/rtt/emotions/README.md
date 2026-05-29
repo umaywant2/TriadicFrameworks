@@ -1,4 +1,13 @@
 # RTT Emotions  
+
+- [`emotions_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_module.json) — Agentic module schema role assignments
+- [`emotions_part_a.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_a.json) — Coherence emotions (set A): 10 stabilizing emotional operators
+- [`emotions_part_b.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_b.json) — Coherence and group-alignment (set B): 10 stabilizing emotional operators
+- [`emotions_part_c.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_c.json) — Corridor emotions (set C): 10 transitional emotional operators
+- [`emotions_part_d.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_d.json) — Corridor/unstable (set D): 10 transitional or destabilizing emotional operators
+- [`emotions_part_e.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_e.json) — Drift emotions (set E): 10 destabilizing emotional operators
+- [`emotions_part_f.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_f.json) — Drift, meta, and structural emotions (set F): 10 high-impact emotional operators
+
 ### Structural Emotional Mathematics for Coherence, Corridor, Drift, Meta, and Structural Regimes
 
 RTT Emotions defines a **structural, regime‑aware emotional mathematics system** built on alignment triads, drift dynamics, coherence operators, and observer‑relative interpretation.  
