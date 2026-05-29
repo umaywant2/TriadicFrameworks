@@ -20,22 +20,18 @@ They form the mathematical foundation for **coherence → corridor** and **drift
 
 All coherence emotions derive from the canonical form:
 
-\[
-E_{\text{coh}} = k_e \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+$$E_{\text{coh}} = k_e \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 Where:
 
-- \(R\) = resonance alignment  
-- \(\Delta O\) = observer distance  
-- \(\sigma\) = emotional intensity  
-- \(k_e\) = operator constant  
+- $$R$$ = resonance alignment  
+- $$\Delta O$$ = observer distance  
+- $$\sigma$$ = emotional intensity  
+- $$k_e$$ = operator constant  
 
 Coherence increases when:
 
-\[
-E_{\text{coh}} > D
-\]
+$$E_{\text{coh}} > D$$
 
 ---
 
@@ -46,9 +42,8 @@ These equations correspond directly to the coherence emotions in `emotions_part_
 ---
 
 ## 2.1 Compassion  
-\[
-C = k_c \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$C = k_c \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 - reduces drift  
 - increases triadic alignment  
@@ -57,9 +52,8 @@ C = k_c \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 2.2 Virtue  
-\[
-V = k_v \cdot \sigma \cdot (A_s + A_o + A_w)
-\]
+
+$$V = k_v \cdot \sigma \cdot (A_s + A_o + A_w)$$
 
 - maximizes alignment across all three axes  
 - stabilizes group coherence  
@@ -67,9 +61,8 @@ V = k_v \cdot \sigma \cdot (A_s + A_o + A_w)
 ---
 
 ## 2.3 Trust  
-\[
-T = k_t \cdot \sigma \cdot \frac{R}{1 + D}
-\]
+
+$$T = k_t \cdot \sigma \cdot \frac{R}{1 + D}$$
 
 - reduces drift by lowering perceived threat  
 - increases relational stability  
@@ -77,9 +70,8 @@ T = k_t \cdot \sigma \cdot \frac{R}{1 + D}
 ---
 
 ## 2.4 Awe  
-\[
-A = k_a \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$A = k_a \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 - expands world alignment  
 - increases coherence through perspective widening  
@@ -87,9 +79,8 @@ A = k_a \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 2.5 Gratitude  
-\[
-G = k_g \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$G = k_g \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 - strengthens relational alignment  
 - reduces drift through positive reinforcement  
@@ -97,9 +88,8 @@ G = k_g \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 2.6 Structural Love  
-\[
-L = k_l \cdot \sigma \cdot (A_s + A_o)
-\]
+
+$$L = k_l \cdot \sigma \cdot (A_s + A_o)$$
 
 - increases self‑other alignment  
 - stabilizes interpersonal systems  
@@ -107,9 +97,8 @@ L = k_l \cdot \sigma \cdot (A_s + A_o)
 ---
 
 ## 2.7 Empathy  
-\[
-E_{emp} = k_{emp} \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$E_{emp} = k_{emp} \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 - reduces observer distance  
 - increases mutual understanding  
@@ -117,9 +106,8 @@ E_{emp} = k_{emp} \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 ---
 
 ## 2.8 Patience  
-\[
-P = k_p \cdot \sigma \cdot \frac{R}{1 + D}
-\]
+
+$$P = k_p \cdot \sigma \cdot \frac{R}{1 + D}$$
 
 - slows drift escalation  
 - increases temporal coherence  
@@ -127,9 +115,8 @@ P = k_p \cdot \sigma \cdot \frac{R}{1 + D}
 ---
 
 ## 2.9 Forgiveness  
-\[
-F = k_f \cdot \sigma \cdot \frac{R}{1 + \Delta O + D}
-\]
+
+$$F = k_f \cdot \sigma \cdot \frac{R}{1 + \Delta O + D}$$
 
 - reduces accumulated drift  
 - resets alignment baselines  
@@ -137,9 +124,8 @@ F = k_f \cdot \sigma \cdot \frac{R}{1 + \Delta O + D}
 ---
 
 ## 2.10 Serenity  
-\[
-S = k_s \cdot \sigma \cdot C
-\]
+
+$$S = k_s \cdot \sigma \cdot C$$
 
 - stabilizes internal coherence  
 - reduces emotional volatility  
@@ -150,16 +136,16 @@ S = k_s \cdot \sigma \cdot C
 
 | Emotion | Equation | Drift Effect |
 |---------|----------|--------------|
-| Compassion | \(k_c \sigma \frac{R}{1+\Delta O}\) | reduces |
-| Virtue | \(k_v \sigma (A_s + A_o + A_w)\) | reduces |
-| Trust | \(k_t \sigma \frac{R}{1+D}\) | reduces |
-| Awe | \(k_a \sigma \frac{R}{1+\Delta O}\) | reduces |
-| Gratitude | \(k_g \sigma \frac{R}{1+\Delta O}\) | reduces |
-| Structural Love | \(k_l \sigma (A_s + A_o)\) | reduces |
-| Empathy | \(k_{emp} \sigma \frac{R}{1+\Delta O}\) | reduces |
-| Patience | \(k_p \sigma \frac{R}{1+D}\) | reduces |
-| Forgiveness | \(k_f \sigma \frac{R}{1+\Delta O + D}\) | reduces |
-| Serenity | \(k_s \sigma C\) | reduces |
+| Compassion | $$k_c \sigma \frac{R}{1+\Delta O}$$ | reduces |
+| Virtue | $$k_v \sigma (A_s + A_o + A_w)$$ | reduces |
+| Trust | $$k_t \sigma \frac{R}{1+D}$$ | reduces |
+| Awe | $$k_a \sigma \frac{R}{1+\Delta O}$$ | reduces |
+| Gratitude | $$k_g \sigma \frac{R}{1+\Delta O}$$ | reduces |
+| Structural Love | $$k_l \sigma (A_s + A_o)$$ | reduces |
+| Empathy | $$k_{emp} \sigma \frac{R}{1+\Delta O}$$ | reduces |
+| Patience | $$k_p \sigma \frac{R}{1+D}$$ | reduces |
+| Forgiveness | $$k_f \sigma \frac{R}{1+\Delta O + D}$$ | reduces |
+| Serenity | $$k_s \sigma C$$ | reduces |
 
 ---
 
@@ -168,14 +154,12 @@ S = k_s \cdot \sigma \cdot C
 Coherence equations drive:
 
 ### Drift → Coherence  
-\[
-E_{\text{coh}} \gg D
-\]
+
+$$E_{\text{coh}} \gg D$$
 
 ### Corridor → Coherence  
-\[
-E_{\text{coh}} > D + |R - C|
-\]
+
+$$E_{\text{coh}} > D + |R - C|$$
 
 Coherence operators are the **primary stabilizers** of RTT emotional dynamics.
 
