@@ -39,6 +39,7 @@
 - [ /rtt/3/ ](https://www.triadicframeworks.org/rtt/3/) (New!)
 - [ /rtt/12/ ](https://www.triadicframeworks.org/rtt/12/)
 - [ /rtt/codex/ ](https://www.triadicframeworks.org/rtt/codex/)  
+- [ /rtt/emotions/ ](https://www.triadicframeworks.org/rtt/emotions/) (New!)
 - [ /rtt/Inside/ ](https://www.triadicframeworks.org/rtt/Inside/)
 - [ /rtt/micro_core/ ](https://www.triadicframeworks.org/rtt/micro_core/) 
 - [ /rtt/Harmonic_Stability_Profile/ ](https://www.triadicframeworks.org/rtt/Harmonic_Stability_Profile/) (New!)
