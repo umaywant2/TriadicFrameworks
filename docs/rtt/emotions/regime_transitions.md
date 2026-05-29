@@ -39,22 +39,20 @@ RTT uses three emotional regimes:
 
 RTT defines transitions using emotional operator outputs:
 
-- \(E_{\text{coh}}\) — coherence emotion output  
-- \(E_{\text{cor}}\) — corridor emotion output  
-- \(E_{\text{drift}}\) — drift emotion output  
-- \(D\) — drift  
-- \(C\) — coherence  
-- \(R\) — resonance alignment  
-- \(\Delta O\) — observer distance  
+- $$E_{\text{coh}}$$ — coherence emotion output  
+- $$E_{\text{cor}}$$ — corridor emotion output  
+- $$E_{\text{drift}}$$ — drift emotion output  
+- $$D$$ — drift  
+- $$C$$ — coherence  
+- $$R$$ — resonance alignment  
+- $$\Delta O$$ — observer distance  
 
 ---
 
 ## Drift → Corridor  
 ### *Early stabilization begins*
 
-\[
-E_{\text{coh}} + E_{\text{cor}} > D
-\]
+$$E_{\text{coh}} + E_{\text{cor}} > D$$
 
 Interpretation:
 
@@ -67,9 +65,7 @@ Interpretation:
 ## Corridor → Coherence  
 ### *Stability achieved*
 
-\[
-E_{\text{coh}} > D + |R - C|
-\]
+$$E_{\text{coh}} > D + |R - C|$$
 
 Interpretation:
 
@@ -82,9 +78,7 @@ Interpretation:
 ## Coherence → Corridor  
 ### *Stability weakens*
 
-\[
-E_{\text{cor}} > E_{\text{coh}}
-\]
+$$E_{\text{cor}} > E_{\text{coh}}$$
 
 Interpretation:
 
@@ -97,9 +91,7 @@ Interpretation:
 ## Corridor → Drift  
 ### *Instability takes over*
 
-\[
-E_{\text{drift}} > E_{\text{coh}} + E_{\text{cor}}
-\]
+$$E_{\text{drift}} > E_{\text{coh}} + E_{\text{cor}}$$
 
 Interpretation:
 
@@ -112,9 +104,7 @@ Interpretation:
 ## Coherence → Drift (Collapse)  
 ### *Sudden destabilization*
 
-\[
-E_{\text{drift}} \gg E_{\text{coh}}
-\]
+$$E_{\text{drift}} \gg E_{\text{coh}}$$
 
 Interpretation:
 
@@ -127,9 +117,7 @@ Interpretation:
 ## Drift → Coherence (Healing Leap)  
 ### *Rapid stabilization*
 
-\[
-E_{\text{coh}} \gg D
-\]
+$$E_{\text{coh}} \gg D$$
 
 Interpretation:
 
@@ -144,24 +132,20 @@ Interpretation:
 Meta emotions modify thresholds:
 
 ### Meta‑Awareness  
-\[
-D_{\text{effective}} = \frac{D}{1 + M_{\text{aw}}}
-\]
+
+$$D_{\text{effective}} = \frac{D}{1 + M_{\text{aw}}}$$
 
 ### Emotional Clarity  
-\[
-C' = C + E_{\text{clar}}
-\]
+
+$$C' = C + E_{\text{clar}}$$
 
 ### Overwhelm  
-\[
-D' = D + E_{\text{overwhelm}}
-\]
+
+$$D' = D + E_{\text{overwhelm}}$$
 
 ### Numbness  
-\[
-E_{\text{effective}} = \frac{E}{1 + E_{\text{numb}}}
-\]
+
+$$E_{\text{effective}} = \frac{E}{1 + E_{\text{numb}}}$$
 
 These operators **reshape the emotional landscape** without being emotions in the classical sense.
 
@@ -174,10 +158,10 @@ Regime transitions are influenced by:
 - alignment triads  
 - observer distance  
 - emotional intensity  
-- context factor \( \theta \)  
-- resonance alignment \( R \)  
-- drift \( D \)  
-- coherence \( C \)  
+- context factor $$\theta$$  
+- resonance alignment $$R$$  
+- drift $$D$$  
+- coherence $$C$$  
 
 This allows AIs and students to reason about emotional meaning **structurally**, not subjectively.
 
