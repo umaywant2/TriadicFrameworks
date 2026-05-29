@@ -70,6 +70,13 @@
       "artifacts": ["meta", "session", "module.json"]
     },
     {
+  "id": "rtt-emotions",
+  "name": "RTT Emotions",
+  "path": "/docs/rtt/emotions/",
+  "summary": "Structural emotional mathematics with 60 emotional operators, regime dynamics, equations, alignment triads, and observer-relative interpretation.",
+  "front_door": "index.md"
+    },
+    {
       "path": "/docs/quantum-substrate-model/",
       "module": "Quantum Substrate Model",
       "category": "substrate-core",
