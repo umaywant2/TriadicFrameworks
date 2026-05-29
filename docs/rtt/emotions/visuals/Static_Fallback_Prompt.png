@@ -1,0 +1,48 @@
+### Canvas
+- **1080 × 600**
+- Background: radial gradient  
+  - center: `#1a1a2e`  
+  - mid: `#1f1b3a`  
+  - edge: `#0d0d14`
+
+### Triadic Nodes
+- Positions:
+  - Self: **(480, 260)**  
+  - Other: **(600, 260)**  
+  - World: **(540, 340)**
+- Radius: **22 px**
+- Fill: radial glow from `#a78bfa` → `#4c1d95`
+
+### Alignment Filaments
+- Lines connecting each pair of nodes  
+- Stroke: `#a78bfa`, opacity **0.35**, width **1.2 px**
+
+### Coherence Well
+- Centered at (540, 300)  
+- Radius: **180 px**  
+- Fill: radial gradient violet → transparent
+
+### Drift Vectors
+- Four outward vectors at:
+  - Top center  
+  - Right center  
+  - Bottom center  
+  - Left center  
+- Stroke: `#4c1d95`, opacity **0.25**
+
+### Meta Grid
+- Very faint lines at:
+  - y = 200, 400  
+  - x = 360, 720  
+- Stroke opacity: **0.08**
+
+### Regime Arcs
+- Three arcs centered at (540, 300)  
+- Radii: 200, 180, 160  
+- Stroke: violet, opacity **0.15**
+
+### Tri‑Dot Glyph
+- Dots at:
+  - (1020, 560), (1040, 560), (1060, 560)  
+- Radius: **6 px**  
+- Fill: `#a78bfa`, opacity **0.35**
