@@ -26,39 +26,27 @@ Structural operators modify **regime‑level variables**:
 
 ### Coherence Restoration (Relief)
 
-\[
-E_{\text{relief}} = k_{rel} \cdot \sigma \cdot (C' - C)
-\]
+$$E_{\text{relief}} = k_{rel} \cdot \sigma \cdot (C' - C)$$
 
 ### Alignment Reinforcement (Joy)
 
-\[
-A_{\text{joy}} = k_{joy} \cdot \sigma \cdot (A_s + A_o + A_w)
-\]
+$$A_{\text{joy}} = k_{joy} \cdot \sigma \cdot (A_s + A_o + A_w)$$
 
 ### Drift Amplification (Anxiety)
 
-\[
-D_{\text{anx}} = k_{danx} \cdot \sigma \cdot D
-\]
+$$D_{\text{anx}} = k_{danx} \cdot \sigma \cdot D$$
 
 ### Collapse Dynamics (Collapse Fear)
 
-\[
-C_{\text{fear}} = k_{cfear} \cdot \sigma \cdot (D + \Delta O + |R - C|)
-\]
+$$C_{\text{fear}} = k_{cfear} \cdot \sigma \cdot (D + \Delta O + |R - C|)$$
 
 ### Isolation Dynamics
 
-\[
-Iso = k_{iso} \cdot \sigma \cdot (\Delta O + A_s^{-})
-\]
+$$Iso = k_{iso} \cdot \sigma \cdot (\Delta O + A_s^{-})$$
 
 ### Distrust Dynamics
 
-\[
-D_{tr} = k_{dtr} \cdot \sigma \cdot (A_o^{-} + \Delta O)
-\]
+$$D_{tr} = k_{dtr} \cdot \sigma \cdot (A_o^{-} + \Delta O)$$
 
 ---
 
@@ -69,11 +57,10 @@ These correspond to the structural emotions in `emotions_part_f.json`.
 ---
 
 ## 1. Coherence Relief Operator  
-**Symbol:** \( \mathcal{R}_{coh} \)  
+**Symbol:** $$\mathcal{R}_{coh}$$  
 **Equation:**  
-\[
-E_{\text{relief}} = k_{rel} \cdot \sigma \cdot (C' - C)
-\]
+
+$$E_{\text{relief}} = k_{rel} \cdot \sigma \cdot (C' - C)$$
 
 **Effect:**  
 - restores coherence  
@@ -85,11 +72,10 @@ E_{\text{relief}} = k_{rel} \cdot \sigma \cdot (C' - C)
 ---
 
 ## 2. Alignment Joy Operator  
-**Symbol:** \( \mathcal{J}_{align} \)  
+**Symbol:** $$\mathcal{J}_{align}$$  
 **Equation:**  
-\[
-A_{\text{joy}} = k_{joy} \cdot \sigma \cdot (A_s + A_o + A_w)
-\]
+
+$$A_{\text{joy}} = k_{joy} \cdot \sigma \cdot (A_s + A_o + A_w)$$
 
 **Effect:**  
 - reinforces triadic alignment  
@@ -101,11 +87,10 @@ A_{\text{joy}} = k_{joy} \cdot \sigma \cdot (A_s + A_o + A_w)
 ---
 
 ## 3. Drift Anxiety Operator  
-**Symbol:** \( \mathcal{A}_{drift} \)  
+**Symbol:** $$\mathcal{A}_{drift}$$  
 **Equation:**  
-\[
-D_{\text{anx}} = k_{danx} \cdot \sigma \cdot D
-\]
+
+$$D_{\text{anx}} = k_{danx} \cdot \sigma \cdot D$$
 
 **Effect:**  
 - amplifies drift  
@@ -117,11 +102,10 @@ D_{\text{anx}} = k_{danx} \cdot \sigma \cdot D
 ---
 
 ## 4. Collapse Fear Operator  
-**Symbol:** \( \mathcal{C}_{collapse} \)  
+**Symbol:** $$\mathcal{C}_{collapse}$$  
 **Equation:**  
-\[
-C_{\text{fear}} = k_{cfear} \cdot \sigma \cdot (D + \Delta O + |R - C|)
-\]
+
+$$C_{\text{fear}} = k_{cfear} \cdot \sigma \cdot (D + \Delta O + |R - C|)$$
 
 **Effect:**  
 - triggers collapse conditions  
@@ -133,11 +117,10 @@ C_{\text{fear}} = k_{cfear} \cdot \sigma \cdot (D + \Delta O + |R - C|)
 ---
 
 ## 5. Isolation Operator  
-**Symbol:** \( \mathcal{I}_{sol} \)  
+**Symbol:** $$\mathcal{I}_{sol}$$  
 **Equation:**  
-\[
-Iso = k_{iso} \cdot \sigma \cdot (\Delta O + A_s^{-})
-\]
+
+$$Iso = k_{iso} \cdot \sigma \cdot (\Delta O + A_s^{-})$$
 
 **Effect:**  
 - increases observer distance  
@@ -149,11 +132,10 @@ Iso = k_{iso} \cdot \sigma \cdot (\Delta O + A_s^{-})
 ---
 
 ## 6. Distrust Operator  
-**Symbol:** \( \mathcal{D}_{tr} \)  
+**Symbol:** $$\mathcal{D}_{tr}$$  
 **Equation:**  
-\[
-D_{tr} = k_{dtr} \cdot \sigma \cdot (A_o^{-} + \Delta O)
-\]
+
+$$D_{tr} = k_{dtr} \cdot \sigma \cdot (A_o^{-} + \Delta O)$$
 
 **Effect:**  
 - destabilizes relational systems  
@@ -168,12 +150,12 @@ D_{tr} = k_{dtr} \cdot \sigma \cdot (A_o^{-} + \Delta O)
 
 | Operator | Symbol | Regime | Drift Effect | Triad |
 |---------|--------|--------|--------------|--------|
-| Coherence Relief | \( \mathcal{R}_{coh} \) | structural | reduces | (+1,+1,+1) |
-| Alignment Joy | \( \mathcal{J}_{align} \) | structural | reduces | (+1,+1,+1) |
-| Drift Anxiety | \( \mathcal{A}_{drift} \) | structural | increases | (–1,0,–1) |
-| Collapse Fear | \( \mathcal{C}_{collapse} \) | structural | increases | (–1,0,–1) |
-| Isolation | \( \mathcal{I}_{sol} \) | structural | increases | (–1,–1,–1) |
-| Distrust | \( \mathcal{D}_{tr} \) | structural | increases | (–1,–1,0) |
+| Coherence Relief | $$\mathcal{R}_{coh}$$ | structural | reduces | (+1,+1,+1) |
+| Alignment Joy | $$\mathcal{J}_{align}$$ | structural | reduces | (+1,+1,+1) |
+| Drift Anxiety | $$\mathcal{A}_{drift}$$ | structural | increases | (–1,0,–1) |
+| Collapse Fear | $$\mathcal{C}_{collapse}$$ | structural | increases | (–1,0,–1) |
+| Isolation | $$\mathcal{I}_{sol}$$ | structural | increases | (–1,–1,–1) |
+| Distrust | $$\mathcal{D}_{tr}$$ | structural | increases | (–1,–1,0) |
 
 ---
 
