@@ -27,27 +27,19 @@ Meta operators modify emotional dynamics rather than producing direct emotional 
 
 ### Drift Reduction (Meta‑Awareness)
 
-\[
-D_{\text{effective}} = \frac{D}{1 + M_{\text{aw}}}
-\]
+$$D_{\text{effective}} = \frac{D}{1 + M_{\text{aw}}}$$
 
 ### Coherence Enhancement (Clarity)
 
-\[
-C' = C + E_{\text{clar}}
-\]
+$$C' = C + E_{\text{clar}}$$
 
 ### Drift Amplification (Overwhelm)
 
-\[
-D' = D + E_{\text{overwhelm}}
-\]
+$$D' = D + E_{\text{overwhelm}}$$
 
 ### Emotional Amplitude Suppression (Numbness)
 
-\[
-E_{\text{effective}} = \frac{E}{1 + E_{\text{numb}}}
-\]
+$$E_{\text{effective}} = \frac{E}{1 + E_{\text{numb}}}$$
 
 ---
 
@@ -58,11 +50,10 @@ These correspond to the meta emotions in `emotions_part_f.json`.
 ---
 
 ## 1. Meta‑Awareness Operator  
-**Symbol:** \( \mathcal{M}_{aw} \)  
+**Symbol:** $$\mathcal{M}_{aw}$$  
 **Equation:**  
-\[
-M_{aw} = k_{maw} \cdot \sigma \cdot \Phi_{awareness}
-\]
+
+$$M_{aw} = k_{maw} \cdot \sigma \cdot \Phi_{awareness}$$
 
 **Effect:**  
 - reduces drift sensitivity  
@@ -72,18 +63,16 @@ M_{aw} = k_{maw} \cdot \sigma \cdot \Phi_{awareness}
 **Triad:** (+1, 0, +1)
 
 **Transition Influence:**  
-\[
-D_{\text{effective}} = \frac{D}{1 + M_{aw}}
-\]
+
+$$D_{\text{effective}} = \frac{D}{1 + M_{aw}}$$
 
 ---
 
 ## 2. Emotional Clarity Operator  
-**Symbol:** \( \mathcal{E}_{clar} \)  
+**Symbol:** $$\mathcal{E}_{clar}$$  
 **Equation:**  
-\[
-E_{clar} = k_{clar} \cdot \sigma \cdot \Phi_{labeling}
-\]
+
+$$E_{clar} = k_{clar} \cdot \sigma \cdot \Phi_{labeling}$$
 
 **Effect:**  
 - increases coherence baseline  
@@ -93,18 +82,16 @@ E_{clar} = k_{clar} \cdot \sigma \cdot \Phi_{labeling}
 **Triad:** (+1, 0, +1)
 
 **Transition Influence:**  
-\[
-C' = C + E_{clar}
-\]
+
+$$C' = C + E_{clar}$$
 
 ---
 
 ## 3. Numbness Operator  
-**Symbol:** \( \mathcal{N}_{mb} \)  
+**Symbol:** $$\mathcal{N}_{mb}$$  
 **Equation:**  
-\[
-N_{mb} = k_{nmb} \cdot \sigma \cdot \frac{1}{1 + E_{numb}}
-\]
+
+$$N_{mb} = k_{nmb} \cdot \sigma \cdot \frac{1}{1 + E_{numb}}$$
 
 **Effect:**  
 - suppresses emotional amplitude  
@@ -114,18 +101,16 @@ N_{mb} = k_{nmb} \cdot \sigma \cdot \frac{1}{1 + E_{numb}}
 **Triad:** (0, 0, –1)
 
 **Transition Influence:**  
-\[
-E_{\text{effective}} = \frac{E}{1 + E_{numb}}
-\]
+
+$$E_{\text{effective}} = \frac{E}{1 + E_{numb}}$$
 
 ---
 
 ## 4. Overwhelm Operator  
-**Symbol:** \( \mathcal{O}_{w} \)  
+**Symbol:** $$\mathcal{O}_{w}$$  
 **Equation:**  
-\[
-O_w = k_{ow} \cdot \sigma \cdot (D + |R - C|)
-\]
+
+$$O_w = k_{ow} \cdot \sigma \cdot (D + |R - C|)$$
 
 **Effect:**  
 - amplifies drift  
@@ -135,9 +120,8 @@ O_w = k_{ow} \cdot \sigma \cdot (D + |R - C|)
 **Triad:** (–1, 0, –1)
 
 **Transition Influence:**  
-\[
-D' = D + E_{overwhelm}
-\]
+
+$$D' = D + E_{overwhelm}$$
 
 ---
 
@@ -145,10 +129,10 @@ D' = D + E_{overwhelm}
 
 | Operator | Symbol | Regime | Drift Effect | Triad |
 |---------|--------|--------|--------------|--------|
-| Meta‑Awareness | \( \mathcal{M}_{aw} \) | meta | reduces | (+1,0,+1) |
-| Emotional Clarity | \( \mathcal{E}_{clar} \) | meta | reduces | (+1,0,+1) |
-| Numbness | \( \mathcal{N}_{mb} \) | meta | suppresses | (0,0,–1) |
-| Overwhelm | \( \mathcal{O}_{w} \) | meta | increases | (–1,0,–1) |
+| Meta‑Awareness | $$\mathcal{M}_{aw}$$ | meta | reduces | (+1,0,+1) |
+| Emotional Clarity | $$\mathcal{E}_{clar}$$ | meta | reduces | (+1,0,+1) |
+| Numbness | $$\mathcal{N}_{mb}$$ | meta | suppresses | (0,0,–1) |
+| Overwhelm | $$\mathcal{O}_{w}$$ | meta | increases | (–1,0,–1) |
 
 ---
 
