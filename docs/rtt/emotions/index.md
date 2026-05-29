@@ -92,9 +92,8 @@ It is designed for **students**, **researchers**, and **agentic AIs** who need a
 Emotions that increase alignment and reduce drift.
 
 General form:  
-\[
-E_{\text{coh}} = k_e \cdot \sigma \cdot \frac{R}{1 + \Delta O}
-\]
+
+$$E_{\text{coh}} = k_e \cdot \sigma \cdot \frac{R}{1 + \Delta O}$$
 
 ---
 
@@ -102,9 +101,8 @@ E_{\text{coh}} = k_e \cdot \sigma \cdot \frac{R}{1 + \Delta O}
 Emotions that can move a system toward coherence *or* drift depending on context.
 
 General form:  
-\[
-E_{\text{cor}} = k_e \cdot \sigma \cdot \theta \cdot (R - D)
-\]
+
+$$E_{\text{cor}} = k_e \cdot \sigma \cdot \theta \cdot (R - D)$$
 
 ---
 
@@ -112,9 +110,8 @@ E_{\text{cor}} = k_e \cdot \sigma \cdot \theta \cdot (R - D)
 Emotions that increase drift and reduce coherence.
 
 General form:  
-\[
-E_{\text{drift}} = k_e \cdot \sigma \cdot (D + \Delta O - R)
-\]
+
+$$E_{\text{drift}} = k_e \cdot \sigma \cdot (D + \Delta O - R)$$
 
 ---
 
@@ -122,9 +119,7 @@ E_{\text{drift}} = k_e \cdot \sigma \cdot (D + \Delta O - R)
 
 Every emotion has a **triadic alignment signature**:
 
-\[
-A(E) = (A_s, A_o, A_w)
-\]
+$$A(E) = (A_s, A_o, A_w)$$
 
 Where:
 
@@ -151,34 +146,28 @@ Examples:
 Emotions cause transitions between regimes.
 
 ### Drift → Corridor  
-\[
-E_{\text{coh}} + E_{\text{cor}} > D
-\]
+
+$$E_{\text{coh}} + E_{\text{cor}} > D$$
 
 ### Corridor → Coherence  
-\[
-E_{\text{coh}} > D + |R - C|
-\]
+
+$$E_{\text{coh}} > D + |R - C|$$
 
 ### Coherence → Corridor  
-\[
-E_{\text{cor}} > E_{\text{coh}}
-\]
+
+$$E_{\text{cor}} > E_{\text{coh}}$$
 
 ### Corridor → Drift  
-\[
-E_{\text{drift}} > E_{\text{coh}} + E_{\text{cor}}
-\]
+
+$$E_{\text{drift}} > E_{\text{coh}} + E_{\text{cor}}$$
 
 ### Coherence → Drift (collapse)  
-\[
-E_{\text{drift}} \gg E_{\text{coh}}
-\]
+
+$$E_{\text{drift}} \gg E_{\text{coh}}$$
 
 ### Drift → Coherence (healing leap)  
-\[
-E_{\text{coh}} \gg D
-\]
+
+$$E_{\text{coh}} \gg D$$
 
 ---
 
