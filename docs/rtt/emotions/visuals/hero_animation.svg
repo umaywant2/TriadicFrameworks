@@ -1,1 +1,51 @@
+### SVG animation spec (minimal, structural)
 
+This is for a **very light, non‑distracting** motion layer you could apply to a hero or inline SVG.
+
+You can treat this as the spec for `/docs/rtt/emotions/visuals/hero_animation.svg`:
+
+**Canvas:**
+
+- **Size:** 1080×600 viewBox  
+- **Background:** handled by CSS or raster; SVG focuses on lattice + vectors + glyph.
+
+**Layers:**
+
+1. **Triadic nodes layer**
+   - Three `<circle>` elements for self, other, world.
+   - Positions: roughly forming a small triangle near center.
+   - Fill: radial gradient from indigo to violet.
+   - Animation: very subtle pulsing of radius (`<animate>` or CSS) with period ~6–8s, amplitude ±3–5%.
+
+2. **Alignment filaments**
+   - Thin `<line>` or `<path>` elements connecting the three nodes.
+   - Stroke: soft indigo, low opacity.
+   - Animation: slight opacity breathing (e.g., 0.3 → 0.5 → 0.3) over ~10s.
+
+3. **Drift vectors**
+   - Short `<line>` elements around the periphery, pointing outward.
+   - Stroke: low‑opacity indigo.
+   - Animation: tiny oscillation in length (e.g., 100% → 115% → 100%) over ~12s, desynchronized via different `begin` offsets.
+
+4. **Coherence well**
+   - Central soft circle or radial gradient mask.
+   - Animation: very slow, subtle scale change (e.g., 100% → 108% → 100%) over ~16–20s.
+
+5. **Meta grid**
+   - Faint hexagonal or square grid built from `<path>` or repeated `<line>` patterns.
+   - No motion, or extremely subtle opacity shift (0.08 → 0.12 → 0.08) over ~20s.
+
+6. **Regime arcs**
+   - Three concentric `<path>` arcs around the triad.
+   - Stroke: thin, low‑opacity violet.
+   - Animation: almost imperceptible stroke‑dashoffset drift to suggest slow rotation without actually rotating the whole scene.
+
+7. **Tri‑dot glyph**
+   - Three small `<circle>` elements in lower‑right.
+   - No animation (anchor element).
+
+**Animation constraints:**
+
+- **No sudden motion**, no easing that feels “bouncy” or playful—use linear or very gentle ease‑in‑out.  
+- **Total motion amplitude** must be small enough that a static screenshot still looks canonical.  
+- **Performance:** keep element count modest; avoid heavy filters; gradients and simple transforms only.
