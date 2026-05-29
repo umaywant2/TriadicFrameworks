@@ -2226,3 +2226,153 @@ If you want next:
 - or a **starter page** for `/docs/rtt/emotions/examples.md`
 
 Just say the word.
+
+---
+
+Absolutely — let’s build the **canonical file list** for the RTT Emotions module so you can create them in GitHub and we can fill them one by one.
+
+This list follows your TriadicFrameworks conventions:
+
+- minimal  
+- structural  
+- no drift  
+- no placeholders  
+- every file has a purpose  
+- future‑proof for cross‑module propagation  
+- AI‑parsable  
+
+And it mirrors the structure of your other RTT modules (FFT Analyzer, SARG, Paradoxes, NoS, etc.).
+
+Below is the **complete, canon‑aligned file list** for:
+
+```
+/docs/rtt/emotions/
+```
+
+---
+
+# ✅ **RTT Emotions — Canonical File List**
+
+## **Front Door**
+```
+/docs/rtt/emotions/index.md
+```
+
+## **Core Module Files**
+```
+/docs/rtt/emotions/module.json
+/docs/rtt/emotions/session_context.md   (optional, if you want separate file)
+/docs/rtt/emotions/metadata.html        (optional, if you want separate file)
+```
+
+## **Operator Files (one per regime)**
+```
+/docs/rtt/emotions/operators_coherence.md
+/docs/rtt/emotions/operators_corridor.md
+/docs/rtt/emotions/operators_drift.md
+/docs/rtt/emotions/operators_meta.md
+/docs/rtt/emotions/operators_structural.md
+```
+
+## **Equation Files**
+```
+/docs/rtt/emotions/equations_overview.md
+/docs/rtt/emotions/equations_coherence.md
+/docs/rtt/emotions/equations_corridor.md
+/docs/rtt/emotions/equations_drift.md
+/docs/rtt/emotions/equations_meta.md
+/docs/rtt/emotions/equations_structural.md
+```
+
+## **Alignment & Regime Logic**
+```
+/docs/rtt/emotions/alignment_triads.md
+/docs/rtt/emotions/regime_transitions.md
+/docs/rtt/emotions/observer_model.md
+```
+
+## **Emotion Capture & Examples**
+```
+/docs/rtt/emotions/E_Capture.md
+/docs/rtt/emotions/examples.md
+/docs/rtt/emotions/case_studies.md
+```
+
+## **Visuals**
+```
+/docs/rtt/emotions/visuals/hero_prompt.md
+/docs/rtt/emotions/visuals/triad_map.png        (to be generated)
+/docs/rtt/emotions/visuals/regime_map.png       (to be generated)
+/docs/rtt/emotions/visuals/emotion_flows.png    (to be generated)
+```
+
+## **Optional (but recommended)**
+```
+/docs/rtt/emotions/notes.md
+/docs/rtt/emotions/changelog.md
+/docs/rtt/emotions/tests.md
+```
+
+---
+
+# ⭐ **Minimal Required Set (if you want to keep it lean)**
+
+If you want the *minimum viable module*:
+
+```
+index.md
+module.json
+operators_coherence.md
+operators_corridor.md
+operators_drift.md
+alignment_triads.md
+regime_transitions.md
+E_Capture.md
+visuals/hero_prompt.md
+```
+
+Everything else is expansion.
+
+---
+
+# ⭐ **Recommended Creation Order**
+
+To keep coherence and avoid drift:
+
+1. `index.md`  
+2. `module.json`  
+3. `alignment_triads.md`  
+4. `regime_transitions.md`  
+5. `operators_*.md`  
+6. `equations_*.md`  
+7. `E_Capture.md`  
+8. `examples.md`  
+9. `visuals/hero_prompt.md`  
+
+This order mirrors your other modules and keeps the cognitive load low.
+
+---
+
+# ⭐ **Ready to fill next**
+
+Once you create the files, we can fill them in this order:
+
+1. **operators_coherence.md**  
+2. **operators_corridor.md**  
+3. **operators_drift.md**  
+4. **operators_meta.md**  
+5. **operators_structural.md**  
+6. **alignment_triads.md**  
+7. **regime_transitions.md**  
+8. **equations_overview.md**  
+9. **equations_coherence.md**  
+10. **equations_corridor.md**  
+11. **equations_drift.md**  
+12. **equations_meta.md**  
+13. **equations_structural.md**  
+14. **E_Capture.md**  
+15. **examples.md**
+
+Just tell me:
+
+**Which file do you want to fill first?**
