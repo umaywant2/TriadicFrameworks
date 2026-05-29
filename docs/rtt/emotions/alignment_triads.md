@@ -4,9 +4,7 @@
 Alignment Triads are the core structural tool RTT uses to interpret emotional meaning.  
 Every emotion in the RTT Emotions Module is assigned a **triadic alignment signature**:
 
-\[
-A(E) = (A_s, A_o, A_w)
-\]
+$$A(E) = (A_s, A_o, A_w)$$
 
 Where:
 
