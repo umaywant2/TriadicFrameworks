@@ -1,51 +1,204 @@
-### SVG animation spec (minimal, structural)
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1080 600"
+     width="1080" height="600">
 
-This is for a **very light, non‑distracting** motion layer you could apply to a hero or inline SVG.
+  <!-- ========================= -->
+  <!--  BACKGROUND GRADIENT      -->
+  <!-- ========================= -->
+  <defs>
+    <radialGradient id="bgGradient" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="60%" stop-color="#1f1b3a"/>
+      <stop offset="100%" stop-color="#0d0d14"/>
+    </radialGradient>
 
-You can treat this as the spec for `/docs/rtt/emotions/visuals/hero_animation.svg`:
+    <!-- Node glow -->
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#4c1d95" stop-opacity="0.2"/>
+    </radialGradient>
 
-**Canvas:**
+    <!-- Coherence well -->
+    <radialGradient id="coherenceWell" cx="50%" cy="50%" r="80%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
 
-- **Size:** 1080×600 viewBox  
-- **Background:** handled by CSS or raster; SVG focuses on lattice + vectors + glyph.
+  <rect width="1080" height="600" fill="url(#bgGradient)" />
 
-**Layers:**
+  <!-- ========================= -->
+  <!--  COHERENCE WELL           -->
+  <!-- ========================= -->
+  <circle id="coherence-well"
+          cx="540" cy="300" r="180"
+          fill="url(#coherenceWell)">
+    <animate attributeName="r"
+             values="180;195;180"
+             dur="18s"
+             repeatCount="indefinite"
+             begin="0s"
+             calcMode="spline"
+             keySplines="0.4 0 0.6 1"/>
+  </circle>
 
-1. **Triadic nodes layer**
-   - Three `<circle>` elements for self, other, world.
-   - Positions: roughly forming a small triangle near center.
-   - Fill: radial gradient from indigo to violet.
-   - Animation: very subtle pulsing of radius (`<animate>` or CSS) with period ~6–8s, amplitude ±3–5%.
+  <!-- ========================= -->
+  <!--  TRIADIC NODES            -->
+  <!-- ========================= -->
+  <!-- Node positions: equilateral-ish triangle -->
+  <circle id="node-self"
+          cx="480" cy="260" r="22"
+          fill="url(#nodeGlow)">
+    <animate attributeName="r"
+             values="22;25;22"
+             dur="7s"
+             repeatCount="indefinite"
+             begin="0s"/>
+  </circle>
 
-2. **Alignment filaments**
-   - Thin `<line>` or `<path>` elements connecting the three nodes.
-   - Stroke: soft indigo, low opacity.
-   - Animation: slight opacity breathing (e.g., 0.3 → 0.5 → 0.3) over ~10s.
+  <circle id="node-other"
+          cx="600" cy="260" r="22"
+          fill="url(#nodeGlow)">
+    <animate attributeName="r"
+             values="22;25;22"
+             dur="7.5s"
+             repeatCount="indefinite"
+             begin="1s"/>
+  </circle>
 
-3. **Drift vectors**
-   - Short `<line>` elements around the periphery, pointing outward.
-   - Stroke: low‑opacity indigo.
-   - Animation: tiny oscillation in length (e.g., 100% → 115% → 100%) over ~12s, desynchronized via different `begin` offsets.
+  <circle id="node-world"
+          cx="540" cy="340" r="22"
+          fill="url(#nodeGlow)">
+    <animate attributeName="r"
+             values="22;25;22"
+             dur="8s"
+             repeatCount="indefinite"
+             begin="0.5s"/>
+  </circle>
 
-4. **Coherence well**
-   - Central soft circle or radial gradient mask.
-   - Animation: very slow, subtle scale change (e.g., 100% → 108% → 100%) over ~16–20s.
+  <!-- ========================= -->
+  <!--  ALIGNMENT FILAMENTS      -->
+  <!-- ========================= -->
+  <g id="alignment-filaments"
+     stroke="#a78bfa" stroke-opacity="0.35" stroke-width="1.2">
 
-5. **Meta grid**
-   - Faint hexagonal or square grid built from `<path>` or repeated `<line>` patterns.
-   - No motion, or extremely subtle opacity shift (0.08 → 0.12 → 0.08) over ~20s.
+    <line x1="480" y1="260" x2="600" y2="260">
+      <animate attributeName="stroke-opacity"
+               values="0.35;0.55;0.35"
+               dur="10s"
+               repeatCount="indefinite"/>
+    </line>
 
-6. **Regime arcs**
-   - Three concentric `<path>` arcs around the triad.
-   - Stroke: thin, low‑opacity violet.
-   - Animation: almost imperceptible stroke‑dashoffset drift to suggest slow rotation without actually rotating the whole scene.
+    <line x1="480" y1="260" x2="540" y2="340">
+      <animate attributeName="stroke-opacity"
+               values="0.35;0.55;0.35"
+               dur="11s"
+               repeatCount="indefinite"
+               begin="1s"/>
+    </line>
 
-7. **Tri‑dot glyph**
-   - Three small `<circle>` elements in lower‑right.
-   - No animation (anchor element).
+    <line x1="600" y1="260" x2="540" y2="340">
+      <animate attributeName="stroke-opacity"
+               values="0.35;0.55;0.35"
+               dur="12s"
+               repeatCount="indefinite"
+               begin="0.5s"/>
+    </line>
 
-**Animation constraints:**
+  </g>
 
-- **No sudden motion**, no easing that feels “bouncy” or playful—use linear or very gentle ease‑in‑out.  
-- **Total motion amplitude** must be small enough that a static screenshot still looks canonical.  
-- **Performance:** keep element count modest; avoid heavy filters; gradients and simple transforms only.
+  <!-- ========================= -->
+  <!--  DRIFT VECTORS            -->
+  <!-- ========================= -->
+  <g id="drift-vectors" stroke="#4c1d95" stroke-opacity="0.25" stroke-width="1">
+    <!-- 8 outward vectors -->
+    <line x1="540" y1="80" x2="540" y2="110">
+      <animate attributeName="y2"
+               values="110;125;110"
+               dur="12s"
+               repeatCount="indefinite"/>
+    </line>
+
+    <line x1="900" y1="300" x2="870" y2="300">
+      <animate attributeName="x2"
+               values="870;855;870"
+               dur="13s"
+               repeatCount="indefinite"
+               begin="1s"/>
+    </line>
+
+    <line x1="540" y1="520" x2="540" y2="490">
+      <animate attributeName="y2"
+               values="490;475;490"
+               dur="14s"
+               repeatCount="indefinite"
+               begin="0.5s"/>
+    </line>
+
+    <line x1="180" y1="300" x2="210" y2="300">
+      <animate attributeName="x2"
+               values="210;225;210"
+               dur="15s"
+               repeatCount="indefinite"
+               begin="2s"/>
+    </line>
+  </g>
+
+  <!-- ========================= -->
+  <!--  META GRID (FAINT)        -->
+  <!-- ========================= -->
+  <g id="meta-grid" stroke="#a78bfa" stroke-opacity="0.08" stroke-width="0.5">
+    <!-- simple hex-like grid lines -->
+    <line x1="0" y1="200" x2="1080" y2="200"/>
+    <line x1="0" y1="400" x2="1080" y2="400"/>
+    <line x1="360" y1="0" x2="360" y2="600"/>
+    <line x1="720" y1="0" x2="720" y2="600"/>
+
+    <animate attributeName="stroke-opacity"
+             values="0.08;0.12;0.08"
+             dur="20s"
+             repeatCount="indefinite"/>
+  </g>
+
+  <!-- ========================= -->
+  <!--  REGIME ARCS              -->
+  <!-- ========================= -->
+  <g id="regime-arcs"
+     fill="none" stroke="#a78bfa" stroke-opacity="0.15" stroke-width="1.2">
+
+    <path id="arc1"
+          d="M340,300 A200,200 0 1 1 740,300">
+      <animate attributeName="stroke-dashoffset"
+               values="0;8;0"
+               dur="22s"
+               repeatCount="indefinite"/>
+    </path>
+
+    <path id="arc2"
+          d="M360,300 A180,180 0 1 1 720,300">
+      <animate attributeName="stroke-dashoffset"
+               values="0;6;0"
+               dur="24s"
+               repeatCount="indefinite"/>
+    </path>
+
+    <path id="arc3"
+          d="M380,300 A160,160 0 1 1 700,300">
+      <animate attributeName="stroke-dashoffset"
+               values="0;4;0"
+               dur="26s"
+               repeatCount="indefinite"/>
+    </path>
+
+  </g>
+
+  <!-- ========================= -->
+  <!--  TRI-DOT GLYPH            -->
+  <!-- ========================= -->
+  <g id="triadic-glyph" fill="#a78bfa" fill-opacity="0.35">
+    <circle cx="1020" cy="560" r="6"/>
+    <circle cx="1040" cy="560" r="6"/>
+    <circle cx="1060" cy="560" r="6"/>
+  </g>
+
+</svg>
