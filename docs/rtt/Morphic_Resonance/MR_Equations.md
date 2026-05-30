@@ -34,20 +34,18 @@ All equations are:
 
 Every activation event contributes a coherence increment:
 
-\[
-\Delta C = k_a
-\]
+$$\Delta C = k_a$$
 
 Where:
 
-- \( \Delta C \) = coherence gained  
-- \( k_a \) = activation constant (pattern‑specific)
+- $$\Delta C$$ = coherence gained  
+- $$k_a$$ = activation constant (pattern‑specific)
 
-Total coherence after \( n \) activations:
+Total coherence after $$n$$ activations:
 
-\[
+$$
 C_n = C_0 + n k_a
-\]
+$$
 
 This is the RTT replacement for “resonance strengthening.”
 
@@ -55,26 +53,26 @@ This is the RTT replacement for “resonance strengthening.”
 
 # 3. Attractor deepening
 
-Attractor depth \( D \) increases with coherence:
+Attractor depth $$D$$ increases with coherence:
 
-\[
+$$
 D = \alpha C
-\]
+$$
 
 Where:
 
-- \( \alpha \) = curvature coefficient  
-- \( C \) = accumulated coherence
+- $$\alpha$$ = curvature coefficient  
+- $$C$$ = accumulated coherence
 
-Attractor curvature \( \kappa \):
+Attractor curvature $$\kappa$$ :
 
-\[
+$$
 \kappa = \beta D
-\]
+$$
 
 Where:
 
-- \( \beta \) = curvature‑to‑depth scaling factor
+- $$\beta$$ = curvature‑to‑depth scaling factor
 
 Deep attractors → lower re‑entry cost.
 
@@ -82,15 +80,15 @@ Deep attractors → lower re‑entry cost.
 
 # 4. Re‑entry cost reduction
 
-Re‑entry cost \( R \) decreases as coherence increases:
+Re‑entry cost $$R$$ decreases as coherence increases:
 
-\[
+$$
 R = \frac{1}{1 + \gamma C}
-\]
+$$
 
 Where:
 
-- \( \gamma \) = re‑entry sensitivity constant
+- $$\gamma$$ = re‑entry sensitivity constant
 
 This models:
 
@@ -104,19 +102,19 @@ This models:
 
 Drift erodes coherence continuously:
 
-\[
+$$
 \frac{dC}{dt} = -\delta C
-\]
+$$
 
 Solution:
 
-\[
+$$
 C(t) = C_0 e^{-\delta t}
-\]
+$$
 
 Where:
 
-- \( \delta \) = drift coefficient
+- $$\delta$$ = drift coefficient
 
 Unused patterns decay exponentially.
 
@@ -126,15 +124,15 @@ Unused patterns decay exponentially.
 
 A pattern persists only if:
 
-\[
+$$
 n k_a > \delta C
-\]
+$$
 
 Or equivalently:
 
-\[
+$$
 \frac{dC}{dt} = n k_a - \delta C
-\]
+$$
 
 This is the **survival condition** for attractors.
 
@@ -142,15 +140,15 @@ This is the **survival condition** for attractors.
 
 # 7. Cross‑temporal propagation
 
-Propagation strength \( P \) decays with temporal distance:
+Propagation strength $$P$$ decays with temporal distance:
 
-\[
+$$
 P(t) = C e^{-\lambda t}
-\]
+$$
 
 Where:
 
-- \( \lambda \) = propagation decay constant
+- $$\lambda$$ = propagation decay constant
 
 Propagation is **forward‑temporal**, not retrocausal.
 
@@ -160,14 +158,14 @@ Propagation is **forward‑temporal**, not retrocausal.
 
 Propagation follows dimensional geodesics:
 
-\[
+$$
 \frac{d\mathbf{x}}{dt} = \nabla C
-\]
+$$
 
 Where:
 
-- \( \mathbf{x} \) = position in dimensional substrate  
-- \( \nabla C \) = coherence gradient
+- $$\mathbf{x}$$ = position in dimensional substrate  
+- $$\nabla C$$ = coherence gradient
 
 This defines the **path** of cross‑temporal influence.
 
@@ -175,16 +173,16 @@ This defines the **path** of cross‑temporal influence.
 
 # 9. Mass‑activation coherence surge
 
-When activation density exceeds threshold \( \rho_c \):
+When activation density exceeds threshold $$\rho_c$$ :
 
-\[
+$$
 \rho > \rho_c \quad \Rightarrow \quad \Delta C = k_s \rho
-\]
+$$
 
 Where:
 
-- \( \rho \) = activation density  
-- \( k_s \) = surge coefficient
+- $$\rho$$ = activation density  
+- $$k_s$$ = surge coefficient
 
 This models:
 
@@ -198,13 +196,13 @@ This models:
 
 Coherence inherited across generations:
 
-\[
+$$
 C_{g+1} = \eta C_g
-\]
+$$
 
 Where:
 
-- \( \eta \) = inheritance retention factor (0 < η < 1)
+- $$\eta$$ = inheritance retention factor (0 < η < 1)
 
 This is the RTT mechanism behind:
 
@@ -216,7 +214,7 @@ This is the RTT mechanism behind:
 
 # 11. Full system summary
 
-\[
+$$
 \begin{aligned}
 C_{n} &= C_0 + n k_a \\
 D &= \alpha C \\
@@ -228,7 +226,7 @@ P(t) &= C e^{-\lambda t} \\
 \Delta C_{\text{surge}} &= k_s \rho \\
 C_{g+1} &= \eta C_g
 \end{aligned}
-\]
+$$
 
 This is the **complete RTT mathematical engine** for Morphic Resonance.
 
