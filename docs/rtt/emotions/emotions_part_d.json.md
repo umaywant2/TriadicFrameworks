@@ -1,1 +1,97 @@
+```json
+{
+  "module": "RTT_Emotions_Part_D",
+  "version": "1.0.0",
+  "parent": "emotions_module.json",
+  "category": "rtt-emotional-dynamics.part-d",
+  "summary": "Corridor/unstable emotions (set D): 10 transitional or destabilizing emotional operators.",
+  "description": "Part D of the RTT Emotions Module. Contains 10 corridor and unstable emotions with RTT equations, alignment triads, drift effects, and transition conditions. These emotions often precede drift or regime instability.",
 
+  "emotions": {
+
+    "uncertainty": {
+      "equation": "U = k_u * σ * (D + |R - C|)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "U > threshold → drift"
+    },
+
+    "longing": {
+      "equation": "L_ng = k_lng * σ * (R_absent - R_present)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "L_ng > 0 → drift unless integrated"
+    },
+
+    "skepticism": {
+      "equation": "Sk = k_sk * σ * (A_s - A_o)",
+      "regime": "corridor",
+      "alignment_triad": { "self": 1, "other": -1, "world": 0 },
+      "drift_effect": "contextual",
+      "transition": "aligned skepticism → coherence; adversarial skepticism → drift"
+    },
+
+    "embarrassment": {
+      "equation": "Emb = k_emb * σ * (ΔO_social + D)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 1, "world": 0 },
+      "drift_effect": "contextual",
+      "transition": "supported → coherence; exposed → drift"
+    },
+
+    "tension": {
+      "equation": "T_ns = k_tns * σ * (D + |R - C|)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "T_ns > threshold → drift"
+    },
+
+    "restlessness": {
+      "equation": "R_st = k_rst * σ * (D - R/2)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "R_st > 0 → drift"
+    },
+
+    "unease": {
+      "equation": "U_ne = k_une * σ * (D + ΔO)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "U_ne > D → drift"
+    },
+
+    "apprehension": {
+      "equation": "A_pp = k_app * σ * (D_threat + |ΔO|)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 0, "world": -1 },
+      "drift_effect": "increases",
+      "transition": "A_pp > threshold → drift"
+    },
+
+    "hesitation": {
+      "equation": "H_st = k_hst * σ * (D - R)",
+      "regime": "corridor",
+      "alignment_triad": { "self": -1, "other": 0, "world": 0 },
+      "drift_effect": "contextual",
+      "transition": "H_st > 0 → drift; H_st < 0 → coherence"
+    },
+
+    "ambivalence": {
+      "equation": "A_mbv = k_ambv * σ * |A_s - A_o|",
+      "regime": "corridor",
+      "alignment_triad": { "self": 0, "other": 0, "world": 0 },
+      "drift_effect": "contextual",
+      "transition": "A_mbv high → drift; A_mbv resolved → coherence"
+    }
+
+  },
+
+  "status": "complete",
+  "license": "Open educational use permitted"
+}
+```
