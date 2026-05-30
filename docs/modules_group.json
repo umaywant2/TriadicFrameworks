@@ -77,6 +77,16 @@
   "front_door": "index.md"
     },
     {
+  "name": "Morphic Resonance",
+  "canonical_id": "RTT_MORPHIC_RESONANCE",
+  "category": "rtt-dimensional",
+  "description": "RTT/1 dimensional reinterpretation of Morphic Resonance: coherence accumulation, attractor deepening, drift mechanics, propagation filaments, mass-activation surges, and dimensional inheritance.",
+  "canonical_path": "/docs/rtt/Morphic_Resonance/",
+  "module_json": "/docs/rtt/Morphic_Resonance/MR_module.json",
+  "version": "1.0",
+  "status": "canon-stable"
+},
+    {
       "path": "/docs/quantum-substrate-model/",
       "module": "Quantum Substrate Model",
       "category": "substrate-core",
