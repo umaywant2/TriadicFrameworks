@@ -519,6 +519,13 @@
       },
       "children": []
     },
+    {
+  "id": "RTT_MORPHIC_RESONANCE",
+  "name": "Morphic Resonance",
+  "category": "rtt-dimensional",
+  "path": "/docs/rtt/Morphic_Resonance/",
+  "version": "1.0"
+    },
 {
   "name": "Mudpuppy",
   "category": "spacetime",
@@ -1125,6 +1132,41 @@
   "from": "rtt-inside-benchmarks",
   "to": "rtt-integrations",
   "type": "provides-standards"
+},
+    {
+  "source": "RTT_MORPHIC_RESONANCE",
+  "target": "RTT_DIMENSIONAL_COMPUTE",
+  "type": "depends-on"
+},
+{
+  "source": "RTT_MORPHIC_RESONANCE",
+  "target": "RTT_DRIFT_REGIME",
+  "type": "interacts-with"
+},
+{
+  "source": "RTT_MORPHIC_RESONANCE",
+  "target": "RTT_COHERENCE_REGIME",
+  "type": "interacts-with"
+},
+{
+  "source": "RTT_MORPHIC_RESONANCE",
+  "target": "RTT_EMOTIONAL_REASONING",
+  "type": "interacts-with"
+},
+{
+  "source": "RTT_MORPHIC_RESONANCE",
+  "target": "RTT_2",
+  "type": "parallel-to"
+},
+{
+  "source": "RTT_MORPHIC_RESONANCE",
+  "target": "RTT_3",
+  "type": "parallel-to"
+},
+    {
+  "source": "RTT_MORPHIC_RESONANCE",
+  "target": "RTT_SPECIES_LEVEL_LEARNING",
+  "type": "feeds"
 },
     {
       "from": "rtt-codes",
