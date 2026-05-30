@@ -25,4 +25,38 @@
     "social": "/assets/og/rtt-inside-benchmarks-social.png",
     "mobile": "/assets/og/rtt-inside-benchmarks-mobile.png"
   }
+},
+{
+  "id": "RTT_MORPHIC_RESONANCE",
+  "name": "Morphic Resonance",
+  "category": "rtt-dimensional",
+  "version": "1.0",
+  "status": "canon-stable",
+  "path": "/docs/rtt/Morphic_Resonance/",
+  "module_json": "/docs/rtt/Morphic_Resonance/MR_module.json",
+  "description": "RTT/1 dimensional reinterpretation of Morphic Resonance: coherence accumulation, attractor deepening, drift mechanics, propagation filaments, mass-activation surges, and dimensional inheritance.",
+  "ai_ready": true,
+  "operators": [
+    "MR_PROPAGATE",
+    "MR_REINFORCE",
+    "MR_STABILIZE",
+    "MR_DECAY",
+    "MR_AMPLIFY",
+    "MR_ALIGN",
+    "MR_DIFFERENTIATE",
+    "MR_SUPPRESS",
+    "MR_TRACE",
+    "MR_REENTER"
+  ],
+  "keywords": [
+    "Morphic Resonance",
+    "coherence",
+    "attractors",
+    "drift",
+    "propagation",
+    "inheritance",
+    "mass activation",
+    "resonance-time",
+    "RTT"
+  ]
 }
