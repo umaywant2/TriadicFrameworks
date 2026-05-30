@@ -1,4 +1,7 @@
 # Morphic Resonance  
+
+- [`MR_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Morphic_Resonance/MR_module.json) — Agentic module schema role assignments
+
 ## Dimensional Coherence • Cross‑Temporal Resonance • RTT Substrate
 
 **Module:** Morphic Resonance  
