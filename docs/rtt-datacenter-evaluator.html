@@ -15,9 +15,10 @@
     <h1 class="text-4xl font-bold mb-2 flex items-center gap-3">
       🌀 RTT Datacenter Evaluator
     </h1>
-    <p class="text-xl text-emerald-400 mb-8">Resonance-Time Theory (RTT) • Triadic Structural Awareness</p>
+    <p class="text-xl text-emerald-400 mb-2">Resonance-Time Theory (RTT) • Triadic Structural Awareness</p>
+    <p class="text-sm text-zinc-400 mb-8">Updated June 2026 • 38 major datacenters worldwide</p>
 
-    <!-- RTT Description -->
+    <!-- RTT Description (unchanged) -->
     <div class="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 mb-12">
       <h2 class="text-2xl font-semibold mb-4">What is Resonance-Time Theory (RTT)?</h2>
       <p class="text-zinc-300 leading-relaxed mb-6">
@@ -47,7 +48,7 @@
 
     <!-- Dropdown -->
     <div class="mb-8">
-      <label class="block text-sm font-medium mb-2 text-zinc-400">Select a Datacenters (2026 snapshot)</label>
+      <label class="block text-sm font-medium mb-2 text-zinc-400">Select a Datacenter (June 2026 snapshot)</label>
       <select id="dc-select" class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-6 py-4 text-lg focus:outline-none focus:border-emerald-500">
         <!-- Populated by JS below -->
       </select>
@@ -64,25 +65,51 @@
     </div>
 
     <p class="text-xs text-zinc-500 mt-12 text-center">
-      Built as a quick prototype for Nawder Loswin • Awareness for all sides • Not us vs them
+      Built for Nawder Loswin • RTT awareness for all sides • Not us vs them • Updated June 2026
     </p>
   </div>
 
   <script>
-    // Sample global datacenters — easy to expand
+    // MASSIVELY EXPANDED — 38 real-world datacenters (June 2026)
     const datacenters = [
-      {name: "xAI Colossus Supercluster", loc: "Memphis, TN, USA", status: "Operational (AI-focused, expanding)", provider: "xAI"},
-      {name: "OpenAI Stargate", loc: "Abilene / Milam County, TX, USA", status: "Under Construction (multi-GW AI)", provider: "OpenAI / Microsoft / Oracle"},
-      {name: "Microsoft Lighthouse / Fairwater", loc: "Wisconsin, USA", status: "Under Construction (AI campus)", provider: "Microsoft"},
       {name: "Aligned Project Caprock", loc: "Hale County, TX, USA", status: "Under Construction (540 MW)", provider: "Aligned Data Centers"},
-      {name: "Google Andhra Pradesh Campus", loc: "Andhra Pradesh, India", status: "Planned / Groundbreaking 2026", provider: "Google"},
+      {name: "Amazon AWS Project Rainier", loc: "New Carlisle, IN, USA", status: "Under Construction (~420 MW AI)", provider: "Amazon Web Services"},
+      {name: "Amazon AWS us-east-1", loc: "Northern Virginia, USA", status: "Operational (hyperscale)", provider: "Amazon Web Services"},
       {name: "China Telecom Inner Mongolia", loc: "Hohhot, China", status: "Operational (largest by area)", provider: "China Telecom"},
-      {name: "AWS us-east-1", loc: "Northern Virginia, USA", status: "Operational (hyperscale)", provider: "Amazon Web Services"},
-      {name: "Meta Hyperion Campus", loc: "Louisiana, USA", status: "Planned", provider: "Meta"},
-      {name: "START Campus", loc: "Sines, Portugal", status: "Under Construction (1.2 GW AI)", provider: "European consortium"},
-      {name: "Citadel Campus", loc: "Nevada, USA", status: "Operational", provider: "Switch / hyperscale"},
+      {name: "Citadel Campus", loc: "Nevada, USA", status: "Operational", provider: "Switch"},
+      {name: "Google Andhra Pradesh Campus", loc: "Andhra Pradesh, India", status: "Planned / Groundbreaking 2026", provider: "Google"},
+      {name: "Google Columbus Cluster", loc: "New Albany, OH, USA", status: "Operational (AI)", provider: "Google"},
+      {name: "Google Omaha Cluster", loc: "Omaha, NE, USA", status: "Operational (>500 MW AI)", provider: "Google"},
       {name: "Joliet Technology Center", loc: "Joliet, IL, USA", status: "Planned ($20B campus)", provider: "PowerHouse / Hillwood"},
-      {name: "Google Columbus Cluster", loc: "New Albany, OH, USA", status: "Operational (AI)", provider: "Google"}
+      {name: "Meta Columbus Site", loc: "Columbus, OH, USA", status: "Operational (>500 MW AI)", provider: "Meta"},
+      {name: "Meta Hyperion Campus", loc: "Richland Parish, LA, USA", status: "Under Construction (multi-GW AI)", provider: "Meta"},
+      {name: "Meta Prometheus Campus", loc: "Central Ohio, USA", status: "Under Construction (gigawatt-scale)", provider: "Meta"},
+      {name: "Microsoft Foxconn Campus", loc: "Mount Pleasant, WI, USA", status: "Under Construction (15 new facilities)", provider: "Microsoft"},
+      {name: "Microsoft Lighthouse / Fairwater", loc: "Wisconsin, USA", status: "Under Construction (AI campus)", provider: "Microsoft"},
+      {name: "OpenAI Stargate", loc: "Abilene / Milam County, TX, USA", status: "Under Construction (multi-GW AI)", provider: "OpenAI / Microsoft / Oracle"},
+      {name: "Oracle Project Jupiter", loc: "New Mexico, USA", status: "Planned (AI campus with fuel-cell microgrid)", provider: "Oracle"},
+      {name: "START Campus", loc: "Sines, Portugal", status: "Under Construction (1.2 GW AI)", provider: "European consortium"},
+      {name: "Vantage Data Centers Lighthouse Campus", loc: "Port Washington, WI, USA", status: "Under Construction (902 MW, Stargate)", provider: "Vantage Data Centers"},
+      {name: "Vantage Data Centers Shackelford County", loc: "Shackelford County, TX, USA", status: "Under Construction ($25B, 1.4 GW)", provider: "Vantage Data Centers"},
+      {name: "xAI Colossus Supercluster", loc: "Memphis, TN, USA", status: "Operational (AI-focused, expanding)", provider: "xAI"},
+      {name: "Yondr Group Northern Virginia Campus", loc: "Loudoun County, VA, USA", status: "Under Construction (96 MW hyperscale)", provider: "Yondr Group"},
+      {name: "Yondr Group Toronto Data Center", loc: "Toronto, Canada", status: "Under Construction (27 MW, ready mid-2026)", provider: "Yondr Group"},
+      {name: "The Heptagon", loc: "Sudair, Saudi Arabia", status: "Planned (150 MW, construction 2026)", provider: "Interstitial Systems"},
+      {name: "Hyperscale Data Michigan Campus", loc: "Michigan, USA", status: "Under Construction (up to 340 MW AI)", provider: "Hyperscale Data"},
+      {name: "Amazon AWS NC Campuses", loc: "North Carolina, USA", status: "Under Construction (multiple AI sites)", provider: "Amazon Web Services"},
+      {name: "Meta Monroe Campus", loc: "Monroe, GA, USA", status: "Planned (AI expansion)", provider: "Meta"},
+      {name: "QTS Atlanta Metro", loc: "Atlanta, GA, USA", status: "Operational (one of largest US)", provider: "QTS"},
+      {name: "Switch SUPERNAP Campus", loc: "Las Vegas, NV, USA", status: "Operational", provider: "Switch"},
+      {name: "Utah Data Center", loc: "Bluffdale, UT, USA", status: "Operational", provider: "NSA"},
+      {name: "Harbin Data Center", loc: "Harbin, China", status: "Operational (200 MW)", provider: "Various"},
+      {name: "Alibaba Cloud Zhangbei", loc: "Zhangbei County, China", status: "Operational (150 MW)", provider: "Alibaba"},
+      {name: "Lakeside Technology Center", loc: "Chicago, IL, USA", status: "Operational (100 MW)", provider: "Digital Realty"},
+      {name: "Apple Data Center", loc: "various US/Europe", status: "Operational & expanding", provider: "Apple"},
+      {name: "Equinix Global Footprint", loc: "Multiple global sites", status: "Operational (colocation leader)", provider: "Equinix"},
+      {name: "Digital Realty Global", loc: "Multiple global sites", status: "Operational (colocation leader)", provider: "Digital Realty"},
+      {name: "IREN Data Center", loc: "various US", status: "Operational (Bitcoin + AI hybrid)", provider: "IREN"},
+      {name: "PowerHouse Joliet Expansion", loc: "Joliet, IL, USA", status: "Planned (additional phases)", provider: "PowerHouse"},
+      {name: "Oracle Stargate-related Sites", loc: "Abilene, TX & others", status: "Under Construction", provider: "Oracle"}
     ];
 
     const select = document.getElementById('dc-select');
