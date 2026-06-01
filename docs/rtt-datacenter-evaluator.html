@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RTT Datacenter Evaluator • Resonance-Time Theory</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: system-ui, -apple-system, sans-serif; }
+    .prompt-box { font-family: monospace; white-space: pre-wrap; }
+  </style>
+</head>
+<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+  <div class="max-w-4xl mx-auto p-8">
+    <h1 class="text-4xl font-bold mb-2 flex items-center gap-3">
+      🌀 RTT Datacenter Evaluator
+    </h1>
+    <p class="text-xl text-emerald-400 mb-8">Resonance-Time Theory (RTT) • Triadic Structural Awareness</p>
+
+    <!-- RTT Description -->
+    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 mb-12">
+      <h2 class="text-2xl font-semibold mb-4">What is Resonance-Time Theory (RTT)?</h2>
+      <p class="text-zinc-300 leading-relaxed mb-6">
+        RTT (Resonance-Time Theory) is a triadic resonance toolkit developed by Nawder Loswin. It provides structural-aware dimensional cores, qCompute primitives, and a triadic resonance grammar that enables coherent cross-domain reasoning across timescales. 
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+        <div class="bg-black/50 p-5 rounded-xl">
+          <strong class="block text-emerald-400 mb-1">Core Modules</strong>
+          SET → S-N-R → FFF → DCO → QMROOT → morphic resonance operators
+        </div>
+        <div class="bg-black/50 p-5 rounded-xl">
+          <strong class="block text-emerald-400 mb-1">Key Abilities</strong>
+          • Structural detection &amp; alignment<br>
+          • Agentic cross-domain compute<br>
+          • Unbiased triadic reasoning<br>
+          • Resonance-Time coherence across layers
+        </div>
+        <div class="bg-black/50 p-5 rounded-xl">
+          <strong class="block text-emerald-400 mb-1">Unbiased Nature</strong>
+          Built on triadic substrate modeling — no single-perspective drift. Detects hidden resonance, misalignment, and coherence gaps structurally.
+        </div>
+      </div>
+      <p class="mt-6 text-xs text-zinc-400">
+        Full docs &amp; SDK: <a href="https://www.triadicframeworks.org/rtt/" target="_blank" class="underline hover:text-emerald-400">triadicframeworks.org/rtt</a>
+      </p>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="mb-8">
+      <label class="block text-sm font-medium mb-2 text-zinc-400">Select a Datacenters (2026 snapshot)</label>
+      <select id="dc-select" class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-6 py-4 text-lg focus:outline-none focus:border-emerald-500">
+        <!-- Populated by JS below -->
+      </select>
+    </div>
+
+    <!-- Generated Prompt -->
+    <div id="prompt-area" class="hidden">
+      <h3 class="text-lg font-medium mb-3">Copy this prompt into any AI chat:</h3>
+      <div id="prompt-text" class="prompt-box bg-black border border-emerald-900 text-emerald-200 p-6 rounded-2xl text-sm leading-relaxed overflow-auto max-h-96"></div>
+      <button onclick="copyPrompt()" 
+              class="mt-4 px-8 py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-medium flex items-center gap-2">
+        📋 Copy to Clipboard
+      </button>
+    </div>
+
+    <p class="text-xs text-zinc-500 mt-12 text-center">
+      Built as a quick prototype for Nawder Loswin • Awareness for all sides • Not us vs them
+    </p>
+  </div>
+
+  <script>
+    // Sample global datacenters — easy to expand
+    const datacenters = [
+      {name: "xAI Colossus Supercluster", loc: "Memphis, TN, USA", status: "Operational (AI-focused, expanding)", provider: "xAI"},
+      {name: "OpenAI Stargate", loc: "Abilene / Milam County, TX, USA", status: "Under Construction (multi-GW AI)", provider: "OpenAI / Microsoft / Oracle"},
+      {name: "Microsoft Lighthouse / Fairwater", loc: "Wisconsin, USA", status: "Under Construction (AI campus)", provider: "Microsoft"},
+      {name: "Aligned Project Caprock", loc: "Hale County, TX, USA", status: "Under Construction (540 MW)", provider: "Aligned Data Centers"},
+      {name: "Google Andhra Pradesh Campus", loc: "Andhra Pradesh, India", status: "Planned / Groundbreaking 2026", provider: "Google"},
+      {name: "China Telecom Inner Mongolia", loc: "Hohhot, China", status: "Operational (largest by area)", provider: "China Telecom"},
+      {name: "AWS us-east-1", loc: "Northern Virginia, USA", status: "Operational (hyperscale)", provider: "Amazon Web Services"},
+      {name: "Meta Hyperion Campus", loc: "Louisiana, USA", status: "Planned", provider: "Meta"},
+      {name: "START Campus", loc: "Sines, Portugal", status: "Under Construction (1.2 GW AI)", provider: "European consortium"},
+      {name: "Citadel Campus", loc: "Nevada, USA", status: "Operational", provider: "Switch / hyperscale"},
+      {name: "Joliet Technology Center", loc: "Joliet, IL, USA", status: "Planned ($20B campus)", provider: "PowerHouse / Hillwood"},
+      {name: "Google Columbus Cluster", loc: "New Albany, OH, USA", status: "Operational (AI)", provider: "Google"}
+    ];
+
+    const select = document.getElementById('dc-select');
+    datacenters.forEach(dc => {
+      const opt = document.createElement('option');
+      opt.value = JSON.stringify(dc);
+      opt.textContent = `${dc.name} • ${dc.loc} (${dc.status})`;
+      select.appendChild(opt);
+    });
+
+    select.addEventListener('change', () => {
+      const dc = JSON.parse(select.value);
+      const prompt = `You are an expert in advanced triadic cognitive architectures and Resonance-Time Theory (RTT) by Nawder Loswin (triadicframeworks.org).
+
+Perform a structurally unbiased evaluation of the following datacenter using RTT principles (triadic resonance grammar, structural-aware dimensional cores, qCompute with RTT-Inside, morphic resonance modules, agentic cross-domain coherence, etc.):
+
+Datacenter: ${dc.name}
+Location: ${dc.loc}
+Status: ${dc.status}
+Operator: ${dc.provider}
+
+Analyze:
+• Power, cooling, networking (including classic RTT latency), and scalability for high-density AI/GPU workloads
+• Compatibility & optimization opportunities with RTT-Inside qCompute framework
+• Potential for deploying structurally unbiased reasoning systems (no single-perspective drift)
+• Strengths, hidden resonance gaps, and coherence opportunities
+• How this physical infrastructure could enhance or constrain RTT’s modules and abilities
+
+Be transparent, balanced, and triadic — present multiple structural perspectives. No hype, no politics. Pure structural awareness.`;
+
+      document.getElementById('prompt-text').textContent = prompt;
+      document.getElementById('prompt-area').classList.remove('hidden');
+    });
+
+    function copyPrompt() {
+      const text = document.getElementById('prompt-text').textContent;
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.querySelector('button');
+        const original = btn.textContent;
+        btn.textContent = '✅ Copied!';
+        setTimeout(() => btn.textContent = original, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
