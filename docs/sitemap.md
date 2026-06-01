@@ -28,6 +28,7 @@
 
 ## 1. Core Frameworks (Structural Spine)
 
+- [ /rtt-datacenter-evaluator/ ](https://www.triadicframeworks.org/rtt-datacenter-evaluator.html) (New!)
 - [ /Mudpuppy/ ](https://dev.mythmatic.org/Mudpuppy/) (🐾 Spacetime v2.0beta | AI-Ready Now!)
 - [ /SoftKitty/ ](https://dev.mythmatical.org/SoftKitty/) (🐱 Spacetime v3.0alpha | AI-Ready Now!)
 - [ /Benchmarks/ ](https://www.triadicframeworks.org/rtt/Inside/Benchmarks/) (New!)
