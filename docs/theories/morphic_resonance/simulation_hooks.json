@@ -1,0 +1,105 @@
+{
+  "module": "morphic_resonance",
+  "version": "1.0",
+  "purpose": "Dimensional-coherence interface for pattern recurrence, activation, and cross-temporal adjacency.",
+  "rtt_regime": "R1",
+
+  "hooks": {
+    "pattern_initialization": {
+      "description": "Initialize patterns as coherence structures, not fields or forces.",
+      "inputs": ["pattern_signature", "dimensional_profile", "coherence_radius"],
+      "outputs": ["pattern_state"],
+      "rules": [
+        "patterns defined by dimensional structure",
+        "no causal transmission",
+        "no field propagation"
+      ]
+    },
+
+    "coherence_surface_generation": {
+      "description": "Construct coherence surfaces that determine where patterns can activate.",
+      "inputs": ["pattern_state", "dimensional_profile"],
+      "outputs": ["coherence_surface"],
+      "rules": [
+        "coherence surfaces define activation regions",
+        "surfaces overlap to enable recurrence",
+        "surfaces must remain dimensionally consistent"
+      ]
+    },
+
+    "dimensional_adjacency_mapping": {
+      "description": "Compute adjacency between patterns across dimensional layers.",
+      "inputs": ["coherence_surface_A", "coherence_surface_B"],
+      "outputs": ["adjacency_score"],
+      "equations": [
+        "adjacency_score = overlap(coherence_surface_A, coherence_surface_B)"
+      ]
+    },
+
+    "cross_temporal_activation": {
+      "description": "Activate patterns across time via dimensional adjacency, not influence.",
+      "inputs": ["pattern_state", "adjacency_score"],
+      "outputs": ["activation_event"],
+      "rules": [
+        "activation requires adjacency above threshold",
+        "activation is structural, not causal",
+        "no transmission across time"
+      ]
+    },
+
+    "resonance_layer_propagation": {
+      "description": "Propagate activation across resonance layers (R1 → R2 → R3).",
+      "inputs": ["activation_event", "resonance_profile"],
+      "outputs": ["propagated_activation"],
+      "rules": [
+        "R1: local coherence only",
+        "R2: resonance geometry extends activation",
+        "R3: dimensional operators modify propagation"
+      ]
+    },
+
+    "coherence_reinforcement": {
+      "description": "Strengthen patterns through repeated activation.",
+      "inputs": ["pattern_state", "activation_history"],
+      "outputs": ["updated_pattern_state"],
+      "equations": [
+        "coherence_strength = f(activation_count, adjacency_integral)"
+      ]
+    },
+
+    "coherence_diagnostics": {
+      "description": "Evaluate coherence integrity across dimensional layers.",
+      "inputs": ["pattern_state", "coherence_surface"],
+      "outputs": ["diagnostic_report"],
+      "checks": [
+        "dimensional consistency",
+        "surface stability",
+        "adjacency continuity",
+        "activation monotonicity"
+      ]
+    },
+
+    "collapse_mode_detection": {
+      "description": "Detect coherence collapse modes (C1–C4).",
+      "inputs": ["pattern_state", "coherence_surface"],
+      "outputs": ["collapse_mode"],
+      "modes": {
+        "C1": "pattern misidentification",
+        "C2": "dimensional discontinuity",
+        "C3": "adjacency failure",
+        "C4": "activation incoherence"
+      }
+    },
+
+    "regime_transition_hooks": {
+      "description": "Handle transitions between RTT regimes.",
+      "inputs": ["pattern_state", "current_regime"],
+      "outputs": ["updated_state"],
+      "rules": {
+        "R1": "local coherence only",
+        "R2": "resonance geometry active",
+        "R3": "dimensional operators modify activation"
+      }
+    }
+  }
+}
