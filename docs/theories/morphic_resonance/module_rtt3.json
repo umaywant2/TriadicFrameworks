@@ -1,0 +1,119 @@
+{
+  "ai.module": "morphic_resonance.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for Morphic Resonance: triadic-substrate integration, multi-regime simulation hooks, cross-temporal resonance mapping, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "morphic resonance",
+    "pattern recurrence",
+    "dimensional coherence",
+    "activation",
+    "cross-temporal resonance",
+    "substrate",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates Morphic Resonance into the triadic substrate, enabling multi-regime reasoning, cross-temporal coherence propagation, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "structure": "Patterns correspond to substrate-level dimensional signatures; recurrence reflects reactivation of similar signatures across time.",
+      "behavior": "Resonance flows between systems when operator structures align sufficiently.",
+      "activation": "Activation occurs when resonance strength exceeds the substrate-defined threshold."
+    },
+    "constraints": [
+      "Recurrence requires stable dimensional anchors.",
+      "Operator similarity determines resonance strength.",
+      "Cross-temporal propagation is limited by coherence decay."
+    ]
+  },
+
+  "multi_regime": {
+    "R1": {
+      "behavior": "Weak recurrence; unstable coherence; primitive resonance.",
+      "notes": "Patterns flicker; activation rare."
+    },
+    "R2": {
+      "behavior": "Stable operator structure; predictable recurrence; strong resonance.",
+      "notes": "Canonical MR behavior emerges here."
+    },
+    "R3": {
+      "behavior": "Cross-temporal resonance; lineage-level stability; high coherence.",
+      "notes": "Patterns propagate across epochs or system instances."
+    },
+    "R0": {
+      "behavior": "No pattern substrate; recurrence undefined.",
+      "notes": "No dimensional anchor available."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "pattern_signature_history",
+      "operator_similarity_flow",
+      "activation_events",
+      "lineage_stability"
+    ],
+    "effects": [
+      "stabilizes long-term pattern behavior",
+      "reveals hidden recurrence structure",
+      "reduces apparent randomness",
+      "enables cross-regime coherence"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "pattern_resonance_sim",
+        "description": "Simulates resonance between pattern operators across time or systems."
+      },
+      {
+        "name": "activation_threshold_sim",
+        "description": "Models activation events based on resonance strength and operator similarity."
+      },
+      {
+        "name": "lineage_resonance_sim",
+        "description": "Simulates cross-temporal coherence flow across lineages."
+      },
+      {
+        "name": "regime_transition_sim",
+        "description": "Simulates breakdown or strengthening of recurrence across R1→R2→R3 transitions."
+      }
+    ],
+    "notes": "Simulations operate on dimensional signatures and resonance patterns, not on physical fields or metaphysical influences."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "information_theory.rtt3",
+      "evolutionary_biology.rtt3",
+      "cognition.rtt3",
+      "complex_systems.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across biological, cognitive, informational, and systemic modules using shared dimensional invariants.",
+    "scaffolding": [
+      "triadic substrate mapping",
+      "multi-regime coherence",
+      "cross-temporal resonance integration",
+      "operator-similarity coupling"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "stable pattern signatures",
+      "operator similarity across instances",
+      "predictable recurrence intervals",
+      "cross-temporal coherence"
+    ],
+    "failure_modes": [
+      "pattern drift",
+      "operator mismatch",
+      "insufficient resonance",
+      "lineage discontinuity"
+    ]
+  }
+}
