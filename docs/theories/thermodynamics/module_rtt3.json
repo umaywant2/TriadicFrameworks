@@ -1,0 +1,127 @@
+{
+  "ai.module": "thermodynamics.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for Thermodynamics: triadic-substrate integration, multi-regime simulation hooks, temperature-force mapping, entropy geometry, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "thermodynamics",
+    "temperature",
+    "entropy",
+    "free energy",
+    "substrate force",
+    "dissipation",
+    "equilibrium",
+    "regime transitions",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates Thermodynamics into the triadic substrate, enabling multi-regime reasoning, temperature-driven force behavior, entropy geometry, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "temperature": "Acts as a substrate force field shaping motion, structure, and regime behavior.",
+      "entropy": "Defines dimensional geometry of accessible configurations and coherence boundaries.",
+      "free_energy": "Determines regime topology and stability basins.",
+      "dissipation": "Appears as resonance decay across substrate gradients."
+    },
+    "constraints": [
+      "Temperature gradients drive resonance flow.",
+      "Entropy geometry limits coherence and defines regime transitions.",
+      "Free energy topology determines equilibrium and stability.",
+      "Dissipation increases entropy and reshapes dimensional geometry."
+    ]
+  },
+
+  "multi_regime": {
+    "R1": {
+      "behavior": "Thermodynamics collapses; temperature undefined; coherence dominated by quantum behavior.",
+      "notes": "No substrate force; entropy geometry undefined."
+    },
+    "R2": {
+      "behavior": "Local equilibrium; stable gradients; predictable resonance flow.",
+      "notes": "Temperature-force behavior emerges cleanly."
+    },
+    "R3": {
+      "behavior": "Large-scale structure; dissipation cycles; stable thermodynamic patterns.",
+      "notes": "Entropy geometry and free energy topology dominate."
+    },
+    "R4": {
+      "behavior": "Cosmological thermodynamics; horizon behavior; expansion-driven gradients.",
+      "notes": "Temperature-force interacts with spacetime expansion."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "temperature_gradient_history",
+      "entropy_geometry_evolution",
+      "free_energy_topology_shift",
+      "dissipation_flow_patterns"
+    ],
+    "effects": [
+      "reveals long-term stability structure",
+      "identifies regime transitions",
+      "predicts dissipation pathways",
+      "supports cross-regime coherence"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "temperature_force_sim",
+        "description": "Simulates temperature as a substrate force field shaping resonance flow."
+      },
+      {
+        "name": "entropy_geometry_sim",
+        "description": "Models entropy as dimensional geometry defining coherence boundaries."
+      },
+      {
+        "name": "free_energy_topology_sim",
+        "description": "Simulates stability basins and regime transitions driven by free energy."
+      },
+      {
+        "name": "dissipation_resonance_decay_sim",
+        "description": "Models irreversible processes as resonance decay across gradients."
+      },
+      {
+        "name": "regime_transition_sim",
+        "description": "Simulates thermodynamic behavior across R1→R2→R3→R4 transitions."
+      }
+    ],
+    "notes": "Simulations operate on substrate invariants, not classical heat metaphors."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "statistical_mechanics.rtt3",
+      "information_theory.rtt3",
+      "quantum_mechanics.rtt3",
+      "cosmology.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across physical, informational, and cosmological modules using shared substrate invariants.",
+    "scaffolding": [
+      "temperature-force mapping",
+      "entropy geometry",
+      "free energy topology",
+      "multi-regime coherence"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "energy conservation",
+      "monotonic entropy behavior",
+      "free energy minimization",
+      "stable equilibrium structure"
+    ],
+    "failure_modes": [
+      "runaway dissipation",
+      "entropy collapse",
+      "gradient amplification",
+      "non-equilibrium instability"
+    ]
+  }
+}
