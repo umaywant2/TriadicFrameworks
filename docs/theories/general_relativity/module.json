@@ -1,0 +1,97 @@
+{
+  "ai.module": "general_relativity",
+  "ai.version": "1.0",
+  "ai.purpose": "Provide a regime-aware, geometric-coherence interface to General Relativity as a macroscopic curvature theory.",
+  "ai.keywords": [
+    "general relativity",
+    "curvature",
+    "spacetime",
+    "geodesics",
+    "gravity",
+    "einstein",
+    "geometry",
+    "triadic frameworks"
+  ],
+
+  "identity": {
+    "name": "General Relativity",
+    "category": "Scientific Theory",
+    "summary": "A geometric coherence theory describing gravity as curvature of spacetime produced by mass-energy.",
+    "regime": ["R3→R4", "R3", "R2"],
+    "status": "canon-ready"
+  },
+
+  "lineage": {
+    "originators": ["Albert Einstein", "David Hilbert", "Karl Schwarzschild"],
+    "historical_period": "20th Century",
+    "source_domain": "Geometric Field Theory",
+    "related_theories": [
+      "special_relativity",
+      "quantum_mechanics",
+      "cosmology",
+      "information_theory"
+    ],
+    "notes": "General Relativity describes macroscopic geometric behavior. Curvature is a coherence-level description, not a substrate-level ontology."
+  },
+
+  "operators": {
+    "primary": [
+      "curvature",
+      "geodesic_motion",
+      "stress_energy",
+      "metric_tensor",
+      "gravitational_redshift"
+    ],
+    "secondary": [
+      "connection_coefficients",
+      "spacetime_symmetries",
+      "boundary_conditions",
+      "weak_field_approximation"
+    ],
+    "description": "Operators describe geometric relationships between mass-energy, curvature, and motion in smooth regimes."
+  },
+
+  "drift": {
+    "risks": [
+      "treating spacetime as a physical substance",
+      "assuming curvature is ontological",
+      "overextending GR into quantum regimes",
+      "interpreting coordinates as physical entities"
+    ],
+    "boundaries": [
+      "GR is geometric, not substrate-level",
+      "curvature emerges from deeper operators",
+      "smooth-regime assumptions break at small scales",
+      "coordinate choices do not define physics"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "geodesic motion in curved spacetime",
+      "equivalence principle",
+      "covariant conservation of stress-energy",
+      "local Lorentz invariance"
+    ],
+    "failure_modes": [
+      "singularities",
+      "quantum-scale breakdown",
+      "loss of smoothness",
+      "strong-field decoherence"
+    ]
+  },
+
+  "cross_module": {
+    "supports": [
+      "cosmology",
+      "astrophysics",
+      "information_theory"
+    ],
+    "supported_by": [
+      "special_relativity",
+      "dimensional_analysis",
+      "regime_awareness"
+    ],
+    "integration_notes": "GR integrates cleanly with RTT engines as a geometric coherence theory operating near the R3→R4 boundary."
+  }
+}
