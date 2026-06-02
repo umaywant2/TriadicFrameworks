@@ -1,0 +1,110 @@
+{
+  "ai.module": "standard_model.simulation",
+  "ai.version": "1.0",
+  "ai.purpose": "Simulation entry points for Standard Model excitation sectors, gauge geometry, Higgs stabilization, and high-energy resonance behavior.",
+  "ai.keywords": [
+    "standard model",
+    "simulation",
+    "gauge symmetry",
+    "higgs mechanism",
+    "resonance topology",
+    "sector transitions",
+    "qft",
+    "rtt"
+  ],
+
+  "simulation_hooks": [
+    {
+      "name": "excitation_resonance_topology_sim",
+      "description": "Simulates excitation modes as resonance patterns across substrate fields.",
+      "inputs": [
+        "field_type",
+        "initial_excitation_state",
+        "energy_scale"
+      ],
+      "outputs": [
+        "resonance_profile",
+        "stability_surface",
+        "sector_identity"
+      ]
+    },
+
+    {
+      "name": "gauge_geometry_sim",
+      "description": "Models gauge symmetries as resonance surfaces shaping interaction channels.",
+      "inputs": [
+        "gauge_group",
+        "coupling_strength",
+        "energy_scale"
+      ],
+      "outputs": [
+        "interaction_channel_map",
+        "symmetry_surface",
+        "running_coupling_profile"
+      ]
+    },
+
+    {
+      "name": "higgs_stability_sim",
+      "description": "Simulates mass generation and stability basins via Higgs coupling.",
+      "inputs": [
+        "yukawa_coupling",
+        "higgs_vev",
+        "excitation_state"
+      ],
+      "outputs": [
+        "mass_profile",
+        "stability_basin",
+        "resonance_shift"
+      ]
+    },
+
+    {
+      "name": "sector_transition_sim",
+      "description": "Simulates transitions across excitation sectors (e.g., flavor mixing).",
+      "inputs": [
+        "mixing_matrix",
+        "initial_sector",
+        "propagation_distance",
+        "energy_scale"
+      ],
+      "outputs": [
+        "transition_probability",
+        "sector_path",
+        "phase_shift"
+      ]
+    },
+
+    {
+      "name": "high_energy_symmetry_restoration_sim",
+      "description": "Simulates electroweak symmetry restoration and sector merging at high energies.",
+      "inputs": [
+        "temperature",
+        "energy_scale",
+        "higgs_potential_parameters"
+      ],
+      "outputs": [
+        "symmetry_state",
+        "merged_excitation_surfaces",
+        "mass_hierarchy_shift"
+      ]
+    },
+
+    {
+      "name": "regime_transition_sim",
+      "description": "Simulates Standard Model behavior across R1 → R2 → R3 → R4 transitions.",
+      "inputs": [
+        "energy_scale",
+        "temperature",
+        "cosmological_parameters"
+      ],
+      "outputs": [
+        "regime_state",
+        "excitation_stability",
+        "symmetry_structure"
+      ]
+    }
+  ],
+
+  "notes": "All simulations operate on resonance topology and gauge geometry, not particle metaphors. Outputs are substrate-aligned and regime-aware."
+}
