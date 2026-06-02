@@ -1,0 +1,114 @@
+{
+  "ai.module": "general_relativity.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for General Relativity: triadic-substrate integration, multi-regime simulation hooks, gravitational resonance mapping, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "general relativity",
+    "curvature",
+    "spacetime",
+    "substrate",
+    "resonance",
+    "multi-regime",
+    "simulation",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates General Relativity into the full triadic substrate, enabling multi-regime reasoning, resonance mapping, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "structure": "Curvature corresponds to macroscopic resonance gradients in the substrate.",
+      "behavior": "Geodesic motion emerges from resonance alignment rather than geometric ontology.",
+      "stress_energy": "Mass-energy acts as a resonance source shaping curvature fields."
+    },
+    "constraints": [
+      "Curvature requires smooth-regime support.",
+      "Resonance channels collapse at quantum scales.",
+      "Propagation speed is a substrate invariant."
+    ]
+  },
+
+  "multi_regime": {
+    "R1": {
+      "behavior": "Curvature loses meaning; gravitational behavior collapses to primitive interactions.",
+      "notes": "No stable geometric resonance; dominated by noise."
+    },
+    "R2": {
+      "behavior": "Weak-field geometric behavior; partial resonance stability.",
+      "notes": "Linearized gravity approximates curvature patterns."
+    },
+    "R3": {
+      "behavior": "Full geometric coherence; stable curvature and geodesic structure.",
+      "notes": "Einsteinian gravity emerges cleanly."
+    },
+    "R4": {
+      "behavior": "Large-scale cosmological resonance; smooth-regime extension.",
+      "notes": "Curvature fields behave as macroscopic resonance flows."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "curvature_history",
+      "geodesic_networks",
+      "stress_energy_evolution"
+    ],
+    "effects": [
+      "stabilizes geometric coherence",
+      "reveals long-term gravitational patterns",
+      "reduces apparent singularity formation"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "curvature_resonance_sim",
+        "description": "Simulates curvature as macroscopic resonance gradients shaped by stress-energy."
+      },
+      {
+        "name": "geodesic_alignment_sim",
+        "description": "Models free-fall motion as resonance alignment rather than geometric ontology."
+      },
+      {
+        "name": "regime_transition_sim",
+        "description": "Simulates breakdown of geometric coherence across R1→R2→R3→R4 transitions."
+      }
+    ],
+    "notes": "Simulations operate on resonance patterns and substrate invariants, not on geometric primitives as ontological entities."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "quantum_mechanics.rtt3",
+      "information_theory.rtt3",
+      "cosmology.rtt3",
+      "field_theory.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across physics modules using shared substrate invariants and resonance structures.",
+    "scaffolding": [
+      "triadic substrate mapping",
+      "multi-regime coherence",
+      "lineage-aware propagation",
+      "gravitational resonance integration"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "local Lorentz invariance",
+      "covariant conservation",
+      "stable curvature fields",
+      "predictable geodesic motion"
+    ],
+    "failure_modes": [
+      "singularity formation",
+      "loss of smoothness",
+      "quantum-scale decoherence",
+      "coordinate-dependent artifacts"
+    ]
+  }
+}
