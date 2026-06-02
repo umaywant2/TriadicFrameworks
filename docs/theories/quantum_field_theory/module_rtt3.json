@@ -1,0 +1,121 @@
+{
+  "ai.module": "quantum_field_theory.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for Quantum Field Theory: triadic-substrate integration, multi-regime simulation hooks, excitation-resonance mapping, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "quantum field theory",
+    "qft",
+    "excitations",
+    "substrate",
+    "resonance",
+    "propagators",
+    "symmetries",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates QFT into the triadic substrate, enabling multi-regime reasoning, excitation propagation, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "structure": "Excitations correspond to resonance modes in the substrate; fields encode coherence grammars.",
+      "behavior": "Propagation emerges from resonance alignment across substrate channels.",
+      "symmetry": "Symmetry generators correspond to substrate invariants shaping excitation stability."
+    },
+    "constraints": [
+      "Excitations require stable resonance channels.",
+      "Strong coupling disrupts resonance coherence.",
+      "Propagation speed and locality are substrate invariants within regime."
+    ]
+  },
+
+  "multi_regime": {
+    "R1": {
+      "behavior": "Excitations lose meaning; resonance collapses to primitive interactions.",
+      "notes": "No stable operator algebra; coherence too weak."
+    },
+    "R2": {
+      "behavior": "Local excitations and propagators behave coherently; symmetry structure emerges.",
+      "notes": "Canonical QFT behavior begins here."
+    },
+    "R3": {
+      "behavior": "Full interaction grammar; stable excitation spectra and renormalized coherence.",
+      "notes": "Standard Model-level coherence."
+    },
+    "R4": {
+      "behavior": "Effective field behavior; large-scale symmetry-driven resonance.",
+      "notes": "Couples into GR and cosmology."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "excitation_history",
+      "symmetry_evolution",
+      "vacuum_structure_drift",
+      "renormalization_flow"
+    ],
+    "effects": [
+      "stabilizes excitation spectra",
+      "reveals long-term interaction patterns",
+      "reduces apparent divergences",
+      "enables cross-regime coherence"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "excitation_resonance_sim",
+        "description": "Simulates excitations as resonance modes shaped by symmetry and interaction structure."
+      },
+      {
+        "name": "propagator_resonance_sim",
+        "description": "Models propagation as resonance alignment across substrate channels."
+      },
+      {
+        "name": "renormalization_flow_sim",
+        "description": "Simulates coherence repair across energy scales."
+      },
+      {
+        "name": "regime_transition_sim",
+        "description": "Simulates breakdown of QFT coherence across R1→R2→R3→R4 transitions."
+      }
+    ],
+    "notes": "Simulations operate on resonance patterns and substrate invariants, not on fields as physical substances."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "quantum_mechanics.rtt3",
+      "special_relativity.rtt3",
+      "information_theory.rtt3",
+      "general_relativity.rtt3",
+      "standard_model.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across quantum, relativistic, and informational modules using shared substrate invariants.",
+    "scaffolding": [
+      "triadic substrate mapping",
+      "multi-regime coherence",
+      "excitation-resonance integration",
+      "symmetry-invariant coupling"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "unitarity",
+      "symmetry conservation",
+      "stable excitation spectra",
+      "predictable propagator behavior"
+    ],
+    "failure_modes": [
+      "strong-coupling decoherence",
+      "vacuum instability",
+      "non-renormalizable divergence",
+      "symmetry breaking"
+    ]
+  }
+}
