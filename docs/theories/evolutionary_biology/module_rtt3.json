@@ -1,0 +1,112 @@
+{
+  "ai.module": "evolutionary_biology.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for Evolutionary Biology: triadic-substrate integration, multi-regime simulation hooks, lineage-aware reasoning, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "evolution",
+    "adaptive resonance",
+    "lineage",
+    "substrate",
+    "multi-regime",
+    "simulation",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates Evolutionary Biology into the full triadic substrate, enabling multi-regime reasoning, lineage tracking, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "structure": "Lineage maps to substrate memory channels that preserve adaptive information across generations.",
+      "variation": "Novelty arises from perturbations in substrate-level encoding and developmental pathways.",
+      "selection": "Environmental resonance patterns filter lineage trajectories based on fit.",
+      "adaptation": "Stable resonance alignment between lineage and environment emerges over repeated cycles."
+    },
+    "constraints": [
+      "Lineage continuity is required for adaptive resonance.",
+      "Environmental stability shapes resonance basins.",
+      "Substrate-level invariants limit mutation and variation pathways."
+    ]
+  },
+
+  "multi_regime": {
+    "R1": {
+      "behavior": "Primitive replicator dynamics; minimal lineage memory; high stochasticity.",
+      "notes": "Adaptive resonance weak; dominated by noise and drift."
+    },
+    "R2": {
+      "behavior": "Genetic and molecular mechanisms partially stabilize adaptive patterns.",
+      "notes": "Lineage memory strengthens; variation becomes structured."
+    },
+    "R3": {
+      "behavior": "Full population-level adaptive resonance; stable selection and lineage propagation.",
+      "notes": "Evolution expresses coherent, multi-generational adaptive cycles."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "genetic_memory",
+      "epigenetic_modulation",
+      "developmental_constraints",
+      "multi-generational_resonance"
+    ],
+    "effects": [
+      "stabilizes adaptive traits",
+      "reduces apparent randomness",
+      "creates long-term evolutionary trajectories",
+      "enables cross-regime coherence"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "adaptive_resonance_sim",
+        "description": "Simulates variation → selection → inheritance cycles as substrate-driven resonance loops."
+      },
+      {
+        "name": "lineage_memory_sim",
+        "description": "Models how genetic and epigenetic memory stabilize adaptive patterns."
+      },
+      {
+        "name": "environmental_resonance_sim",
+        "description": "Simulates how environmental constraints shape selection gradients and adaptive basins."
+      }
+    ],
+    "notes": "Simulations operate on resonance patterns and lineage structures, not on metaphysical or teleological assumptions."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "genetics.rtt3",
+      "ecology.rtt3",
+      "information_theory.rtt3",
+      "chaos_theory.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across biological, ecological, and informational modules using shared substrate invariants.",
+    "scaffolding": [
+      "triadic substrate mapping",
+      "multi-regime coherence",
+      "lineage-aware propagation",
+      "adaptive resonance integration"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "lineage continuity",
+      "structured variation",
+      "environmental resonance alignment",
+      "multi-generational stability"
+    ],
+    "failure_modes": [
+      "lineage collapse",
+      "environmental discontinuity",
+      "runaway drift",
+      "loss of adaptive resonance"
+    ]
+  }
+}
