@@ -1,0 +1,105 @@
+{
+  "ai.module": "chaos_theory.rtt3",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/3 engine layer for Chaos Theory: triadic-substrate integration, multi-regime simulation hooks, lineage-aware reasoning, and hybrid-canon scaffolding.",
+  "ai.keywords": [
+    "chaos",
+    "nonlinear dynamics",
+    "triadic substrate",
+    "multi-regime",
+    "simulation",
+    "lineage",
+    "rtt3"
+  ],
+
+  "engine": {
+    "layer": "RTT/3",
+    "description": "Integrates Chaos Theory into the full triadic substrate, enabling multi-regime reasoning, lineage tracking, and hybrid-canon simulation."
+  },
+
+  "substrate_integration": {
+    "mapping": {
+      "structure": "Attractor basins map to substrate resonance wells.",
+      "behavior": "Divergence corresponds to resonance instability under constrained lineage.",
+      "recurrence": "Recurrence loops correspond to stable resonance cycles."
+    },
+    "constraints": [
+      "Chaos behavior emerges when substrate resolution is insufficient.",
+      "Attractors represent stable resonance configurations, not geometric primitives.",
+      "Divergence is bounded by substrate-level invariants."
+    ]
+  },
+
+  "multi_regime": {
+    "R1": {
+      "behavior": "High instability; lineage memory insufficient to stabilize recurrence.",
+      "notes": "Chaos appears maximal due to minimal dimensional support."
+    },
+    "R2": {
+      "behavior": "Projection-induced chaos; resonance patterns partially obscured.",
+      "notes": "Dimensional compression amplifies divergence signals."
+    },
+    "R3": {
+      "behavior": "Full nonlinear expression; attractors and recurrence structures visible.",
+      "notes": "Chaos becomes a diagnostic rather than an ontology."
+    }
+  },
+
+  "lineage": {
+    "tracking": [
+      "state_history",
+      "resonance_cycles",
+      "constraint_interactions"
+    ],
+    "effects": [
+      "reduces apparent randomness",
+      "reveals hidden recurrence",
+      "stabilizes attractor geometry"
+    ]
+  },
+
+  "simulation": {
+    "hooks": [
+      {
+        "name": "resonance_envelope_sim",
+        "description": "Simulates bounded divergence within substrate constraints."
+      },
+      {
+        "name": "recurrence_cycle_sim",
+        "description": "Generates recurrence loops under varying resolution."
+      },
+      {
+        "name": "projection_loss_sim",
+        "description": "Models chaos emergence under dimensional compression."
+      }
+    ],
+    "notes": "Simulations operate on resonance patterns, not geometric primitives."
+  },
+
+  "hybrid_canon": {
+    "interfaces": [
+      "information_theory.rtt3",
+      "thermodynamics.rtt3",
+      "quantum_mechanics.rtt3"
+    ],
+    "purpose": "Enable agentic AIs to reason across modules using shared substrate invariants.",
+    "scaffolding": [
+      "triadic substrate mapping",
+      "multi-regime coherence",
+      "lineage-aware propagation"
+    ]
+  },
+
+  "coherence": {
+    "invariants": [
+      "resonance envelopes remain bounded",
+      "recurrence persists under increased resolution",
+      "attractor geometry stabilizes with lineage tracking"
+    ],
+    "failure_modes": [
+      "collapse of resonance wells",
+      "loss of recurrence cycles",
+      "unbounded divergence under substrate constraints"
+    ]
+  }
+}
