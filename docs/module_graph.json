@@ -96,6 +96,10 @@
           "ideas-sandbox": {
             "children": {}
           }
+"physics": { "children": {} },
+"biology": { "children": {} },
+"dynamical_systems": { "children": {} },
+"information_systems": { "children": {} },
         }
       }
     },
@@ -135,6 +139,80 @@
         "child": "ideas-sandbox",
         "relationship": "contains"
       },
+{
+  "parent": "webroot",
+  "child": "physics",
+  "relationship": "contains"
+},
+{
+  "parent": "webroot",
+  "child": "biology",
+  "relationship": "contains"
+},
+{
+  "parent": "webroot",
+  "child": "dynamical_systems",
+  "relationship": "contains"
+},
+{
+  "parent": "webroot",
+  "child": "information_systems",
+  "relationship": "contains"
+},
+
+{
+  "parent": "physics",
+  "child": "electromagnetism",
+  "relationship": "contains"
+},
+{
+  "parent": "physics",
+  "child": "general_relativity",
+  "relationship": "contains"
+},
+{
+  "parent": "physics",
+  "child": "quantum_mechanics",
+  "relationship": "contains"
+},
+{
+  "parent": "physics",
+  "child": "quantum_field_theory",
+  "relationship": "contains"
+},
+{
+  "parent": "physics",
+  "child": "standard_model",
+  "relationship": "contains"
+},
+{
+  "parent": "physics",
+  "child": "thermodynamics",
+  "relationship": "contains"
+},
+
+{
+  "parent": "biology",
+  "child": "evolutionary_biology",
+  "relationship": "contains"
+},
+{
+  "parent": "biology",
+  "child": "morphic_resonance",
+  "relationship": "contains"
+},
+
+{
+  "parent": "dynamical_systems",
+  "child": "chaos_theory",
+  "relationship": "contains"
+},
+
+{
+  "parent": "information_systems",
+  "child": "information_theory",
+  "relationship": "contains"
+},
       {
         "parent": "tft-3pack",
         "child": "wrsadc",
@@ -527,6 +605,136 @@
   "version": "1.0"
     },
 {
+  "physics": {
+  "canon_tag": "physics",
+  "name": "Physics Cluster",
+  "layer": "Theories",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for all physics-based theory modules.",
+  "parent": "webroot",
+  "children": [
+    "electromagnetism",
+    "general_relativity",
+    "quantum_mechanics",
+    "quantum_field_theory",
+    "standard_model",
+    "thermodynamics"
+  ]
+},
+"biology": {
+  "canon_tag": "biology",
+  "name": "Biology Cluster",
+  "layer": "Theories",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for biological theory modules.",
+  "parent": "webroot",
+  "children": [
+    "evolutionary_biology",
+    "morphic_resonance"
+  ]
+},
+"dynamical_systems": {
+  "canon_tag": "dynamical_systems",
+  "name": "Dynamical Systems Cluster",
+  "layer": "Theories",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for nonlinear and dynamical theory modules.",
+  "parent": "webroot",
+  "children": [
+    "chaos_theory"
+  ]
+},
+"information_systems": {
+  "canon_tag": "information_systems",
+  "name": "Information Systems Cluster",
+  "layer": "Theories",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for information-based theory modules.",
+  "parent": "webroot",
+  "children": [
+    "information_theory"
+  ]
+},
+"chaos_theory": {
+  "canon_tag": "chaos_theory",
+  "name": "Chaos Theory",
+  "layer": "Theory",
+  "parent": "dynamical_systems",
+  "status": "Active, Canonical",
+  "children": []
+},
+"electromagnetism": {
+  "canon_tag": "electromagnetism",
+  "name": "Electromagnetism",
+  "layer": "Theory",
+  "parent": "physics",
+  "status": "Active, Canonical",
+  "children": []
+},
+"evolutionary_biology": {
+  "canon_tag": "evolutionary_biology",
+  "name": "Evolutionary Biology",
+  "layer": "Theory",
+  "parent": "biology",
+  "status": "Active, Canonical",
+  "children": []
+},
+"general_relativity": {
+  "canon_tag": "general_relativity",
+  "name": "General Relativity",
+  "layer": "Theory",
+  "parent": "physics",
+  "status": "Active, Canonical",
+  "children": []
+},
+"information_theory": {
+  "canon_tag": "information_theory",
+  "name": "Information Theory",
+  "layer": "Theory",
+  "parent": "information_systems",
+  "status": "Active, Canonical",
+  "children": []
+},
+"morphic_resonance": {
+  "canon_tag": "morphic_resonance",
+  "name": "Morphic Resonance",
+  "layer": "Theory",
+  "parent": "biology",
+  "status": "Active, Canonical",
+  "children": []
+},
+"quantum_field_theory": {
+  "canon_tag": "quantum_field_theory",
+  "name": "Quantum Field Theory",
+  "layer": "Theory",
+  "parent": "physics",
+  "status": "Active, Canonical",
+  "children": []
+},
+"quantum_mechanics": {
+  "canon_tag": "quantum_mechanics",
+  "name": "Quantum Mechanics",
+  "layer": "Theory",
+  "parent": "physics",
+  "status": "Active, Canonical",
+  "children": []
+},
+"standard_model": {
+  "canon_tag": "standard_model",
+  "name": "Standard Model",
+  "layer": "Theory",
+  "parent": "physics",
+  "status": "Active, Canonical",
+  "children": []
+},
+"thermodynamics": {
+  "canon_tag": "thermodynamics",
+  "name": "Thermodynamics",
+  "layer": "Theory",
+  "parent": "physics",
+  "status": "Active, Canonical",
+  "children": []
+},
   "name": "Mudpuppy",
   "category": "spacetime",
   "path": "/Mudpuppy/",
