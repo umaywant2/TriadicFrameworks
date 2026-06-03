@@ -40,6 +40,143 @@
   "module_json": "https://raw.githubusercontent.com/Triadic-Resonance-Wizards/mythmatical/main/SoftKitty_module.json",
   "ai_ready": true
 },
+{
+  "name": "Physics Cluster",
+  "id": "physics",
+  "category": "Theory-Domain",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for physics-based theory modules: classical, quantum, and thermodynamic frameworks.",
+  "path": "/docs/theories/",
+  "children": [
+    "electromagnetism",
+    "general_relativity",
+    "quantum_mechanics",
+    "quantum_field_theory",
+    "standard_model",
+    "thermodynamics"
+  ]
+},
+{
+  "name": "Biology Cluster",
+  "id": "biology",
+  "category": "Theory-Domain",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for biological and morphic theory modules.",
+  "path": "/docs/theories/",
+  "children": ["evolutionary_biology", "morphic_resonance"]
+},
+{
+  "name": "Dynamical Systems Cluster",
+  "id": "dynamical_systems",
+  "category": "Theory-Domain",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for nonlinear and sensitivity-based theory modules.",
+  "path": "/docs/theories/",
+  "children": ["chaos_theory"]
+},
+{
+  "name": "Information Systems Cluster",
+  "id": "information_systems",
+  "category": "Theory-Domain",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "purpose": "Parent cluster for information and computation-based theory modules.",
+  "path": "/docs/theories/",
+  "children": ["information_theory"]
+},
+{
+  "name": "Chaos Theory",
+  "id": "chaos_theory",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/chaos_theory/",
+  "parent": "dynamical_systems"
+},
+{
+  "name": "Electromagnetism",
+  "id": "electromagnetism",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/electromagnetism/",
+  "parent": "physics"
+},
+{
+  "name": "Evolutionary Biology",
+  "id": "evolutionary_biology",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/evolutionary_biology/",
+  "parent": "biology"
+},
+{
+  "name": "General Relativity",
+  "id": "general_relativity",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/general_relativity/",
+  "parent": "physics"
+},
+{
+  "name": "Information Theory",
+  "id": "information_theory",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/information_theory/",
+  "parent": "information_systems"
+},
+{
+  "name": "Morphic Resonance",
+  "id": "morphic_resonance",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/morphic_resonance/",
+  "parent": "biology"
+},
+{
+  "name": "Quantum Field Theory",
+  "id": "quantum_field_theory",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/quantum_field_theory/",
+  "parent": "physics"
+},
+{
+  "name": "Quantum Mechanics",
+  "id": "quantum_mechanics",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/quantum_mechanics/",
+  "parent": "physics"
+},
+{
+  "name": "Standard Model",
+  "id": "standard_model",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/standard_model/",
+  "parent": "physics"
+},
+{
+  "name": "Thermodynamics",
+  "id": "thermodynamics",
+  "category": "Theory",
+  "version": "1.0",
+  "status": "Active, Canonical",
+  "path": "/docs/theories/thermodynamics/",
+  "parent": "physics"
+},
   "session_context": {
     "canon": "TriadicFrameworks",
     "module": "Webroot",
