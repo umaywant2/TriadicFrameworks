@@ -12,9 +12,106 @@
         "canonical-path": "/docs/religious_substrate_grammar_model/",
         "entry": "/docs/religious_substrate_grammar_model/frontdoor.html",
         "ai-ready": true
-      }
+      },
+"physics": {
+  "name": "Physics Cluster",
+  "category": "theory-domain",
+  "canonical-path": "/docs/theories/",
+  "entry": "/docs/theories/frontdoor.html",
+  "ai-ready": true
+},
+"biology": {
+  "name": "Biology Cluster",
+  "category": "theory-domain",
+  "canonical-path": "/docs/theories/",
+  "entry": "/docs/theories/frontdoor.html",
+  "ai-ready": true
+},
+"dynamical_systems": {
+  "name": "Dynamical Systems Cluster",
+  "category": "theory-domain",
+  "canonical-path": "/docs/theories/",
+  "entry": "/docs/theories/frontdoor.html",
+  "ai-ready": true
+},
+"information_systems": {
+  "name": "Information Systems Cluster",
+  "category": "theory-domain",
+  "canonical-path": "/docs/theories/",
+  "entry": "/docs/theories/frontdoor.html",
+  "ai-ready": true
+},
+"chaos_theory": {
+  "name": "Chaos Theory",
+  "category": "theory",
+  "canonical-path": "/docs/theories/chaos_theory/",
+  "entry": "/docs/theories/chaos_theory/index.html",
+  "ai-ready": true
+},
+"electromagnetism": {
+  "name": "Electromagnetism",
+  "category": "theory",
+  "canonical-path": "/docs/theories/electromagnetism/",
+  "entry": "/docs/theories/electromagnetism/index.html",
+  "ai-ready": true
+},
+"evolutionary_biology": {
+  "name": "Evolutionary Biology",
+  "category": "theory",
+  "canonical-path": "/docs/theories/evolutionary_biology/",
+  "entry": "/docs/theories/evolutionary_biology/index.html",
+  "ai-ready": true
+},
+"general_relativity": {
+  "name": "General Relativity",
+  "category": "theory",
+  "canonical-path": "/docs/theories/general_relativity/",
+  "entry": "/docs/theories/general_relativity/index.html",
+  "ai-ready": true
+},
+"information_theory": {
+  "name": "Information Theory",
+  "category": "theory",
+  "canonical-path": "/docs/theories/information_theory/",
+  "entry": "/docs/theories/information_theory/index.html",
+  "ai-ready": true
+},
+"morphic_resonance": {
+  "name": "Morphic Resonance",
+  "category": "theory",
+  "canonical-path": "/docs/theories/morphic_resonance/",
+  "entry": "/docs/theories/morphic_resonance/index.html",
+  "ai-ready": true
+},
+"quantum_field_theory": {
+  "name": "Quantum Field Theory",
+  "category": "theory",
+  "canonical-path": "/docs/theories/quantum_field_theory/",
+  "entry": "/docs/theories/quantum_field_theory/index.html",
+  "ai-ready": true
+},
+"quantum_mechanics": {
+  "name": "Quantum Mechanics",
+  "category": "theory",
+  "canonical-path": "/docs/theories/quantum_mechanics/",
+  "entry": "/docs/theories/quantum_mechanics/index.html",
+  "ai-ready": true
+},
+"standard_model": {
+  "name": "Standard Model",
+  "category": "theory",
+  "canonical-path": "/docs/theories/standard_model/",
+  "entry": "/docs/theories/standard_model/index.html",
+  "ai-ready": true
+},
+"thermodynamics": {
+  "name": "Thermodynamics",
+  "category": "theory",
+  "canonical-path": "/docs/theories/thermodynamics/",
+  "entry": "/docs/theories/thermodynamics/index.html",
+  "ai-ready": true
+},
     },
-
     "navigation": {
       "sitemap": "https://www.triadicframeworks.org/sitemap_main.xml",
       "docs-root": "/docs/",
