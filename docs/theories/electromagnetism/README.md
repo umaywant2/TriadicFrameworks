@@ -1,4 +1,7 @@
 # Electromagnetism — A Regime‑Aware Module  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/module.json) — Agentic module schema role assignments
+
 ### TriadicFrameworks /docs/theories/electromagnetism/
 
 Electromagnetism describes the behavior of electric and magnetic fields,  
