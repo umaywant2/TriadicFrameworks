@@ -1,4 +1,7 @@
 # Chaos Theory — A Regime‑Aware Module  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/chaos_theory/module.json) — Agentic module schema role assignments
+
 ### TriadicFrameworks /docs/theories/chaos_theory/
 
 Chaos Theory describes the behavior of nonlinear systems that exhibit  
