@@ -1,6 +1,9 @@
 # Information Theory — A 0D Regime of Distinctions  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module.json) — Agentic module schema role assignments
+- [`module_rtt1.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module_rtt1.json) — Agentic module schema role assignments
+- [`module_rtt2.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module_rtt2.json) — Agentic module schema role assignments
+- [`module_rtt3.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/information_theory/module_rtt3.json) — Agentic module schema role assignments
 
 ### TriadicFrameworks /docs/theories/information_theory/
 
