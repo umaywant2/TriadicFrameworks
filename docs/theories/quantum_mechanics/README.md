@@ -1,4 +1,7 @@
 # Quantum Mechanics — A Coherence Grammar of Amplitudes  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/quantum_mechanics/module.json) — Agentic module schema role assignments
+
 ### TriadicFrameworks /docs/theories/quantum_mechanics/
 
 Quantum Mechanics (QM) describes how systems behave when coherence,  
