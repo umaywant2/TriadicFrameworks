@@ -1,7 +1,7 @@
 # 🔰 TriadicFrameworks — Documentation Hub  
 
 - [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/webroot_module.json) — Agentic module schema role assignments
-- [`modules_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/modules_group.json) — 86 module entries — as of 05/10/2026
+- [`modules_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/modules_group.json) — 100+ ai module examples as of 05/10/2026
 
 **Canon: active (root‑docs)**  
 **Drift: minimal (root‑locked)**  
