@@ -1,6 +1,9 @@
 # The Standard Model — A Sector Grammar of Excitations  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/standard_model/module.json) — Agentic module schema role assignments
+- [`module_rtt1.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/standard_model/module_rtt1.json) — Agentic module schema role assignments
+- [`module_rtt2.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/standard_model/module_rtt2.json) — Agentic module schema role assignments
+- [`module_rtt3.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/standard_model/module_rtt3.json) — Agentic module schema role assignments
 
 ### TriadicFrameworks /docs/theories/standard_model/
 
