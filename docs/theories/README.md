@@ -1,4 +1,9 @@
 # Theories — Canon‑Aligned, Regime‑Aware Modules  
+
+- [`module_rtt1.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/module_rtt1.schema.json) — Agentic module schema role assignments
+- [`module_rtt2.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/module_rtt2.schema.json) — Agentic module schema role assignments
+- [`module_rtt3.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/module_rtt3.schema.json) — Agentic module schema role assignments
+
 ### TriadicFrameworks /docs/theories/
 
 This directory contains the **theory‑level modules** of TriadicFrameworks —  
