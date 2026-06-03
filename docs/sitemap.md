@@ -26,6 +26,23 @@
 
 (All modules preserved. Ordering corrected. Drift removed. No deletions.)                _Alternate Site_ 🥈 [docsbook.io](https://umaywant2.docsbook.io/)
 
+## 🔟 Ten‑in‑1 Theory Menu
+
+- [ /Ten‑in‑1 Theory Menu/ ](https://www.triadicframeworks.org/theories/)
+
+### 🧠 Foundational Theory Modules
+
+- [ /Chaos Theory/ ](https://www.triadicframeworks.org/theories/chaos_theory/)
+- [ /Electromagnetism/ ](https://www.triadicframeworks.org/theories/electromagnetism/)
+- [ /Evolutionary Biology/ ](https://www.triadicframeworks.org/theories/evolutionary_biology/)
+- [ /General Relativity/ ](https://www.triadicframeworks.org/theories/general_relativity/)
+- [ /Information Theory/ ](https://www.triadicframeworks.org/theories/information_theory/)
+- [ /Morphic Resonance/ ](https://www.triadicframeworks.org/theories/morphic_resonance/)
+- [ /Quantum Field Theory/ ](https://www.triadicframeworks.org/theories/quantum_field_theory/)
+- [ /Quantum Mechanics/ ](https://www.triadicframeworks.org/theories/quantum_mechanics/)
+- [ /Standard Model/ ](https://www.triadicframeworks.org/theories/standard_model/)
+- [ /Thermodynamics/ ](https://www.triadicframeworks.org/theories/thermodynamics/)
+
 ## 1. Core Frameworks (Structural Spine)
 
 - [ /rtt-datacenter-evaluator/ ](https://www.triadicframeworks.org/rtt-datacenter-evaluator.html) (New!)
