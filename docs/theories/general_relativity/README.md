@@ -1,4 +1,7 @@
 # General Relativity — A Regime‑Level Geometry of Gravity  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/general_relativity/module.json) — Agentic module schema role assignments
+
 ### TriadicFrameworks /docs/theories/general_relativity/
 
 General Relativity (GR) describes gravity not as a force but as the  
