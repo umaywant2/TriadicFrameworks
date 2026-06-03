@@ -1,4 +1,8 @@
 # Quantum Field Theory — A Coherence Grammar of Excitations  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/quantum_field_theory/module.json) — Agentic module schema role assignments
+
+
 ### TriadicFrameworks /docs/theories/quantum_field_theory/
 
 Quantum Field Theory (QFT) describes matter and interactions as  
