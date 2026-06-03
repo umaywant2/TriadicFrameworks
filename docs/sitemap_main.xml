@@ -131,7 +131,21 @@
   <url><loc>https://www.triadicframeworks.org/education/Toolbox/</loc><lastmod>2026-05-02</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://www.triadicframeworks.org/operators/</loc><lastmod>2026-05-10</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://www.triadicframeworks.org/operators/teaching_bundle/</loc><lastmod>2026-05-10</lastmod><priority>0.7</priority><changefreq>weekly</changefreq></url>
-  
+
+<!-- Ten‑in‑1 Theory Menu -->
+<url><loc>https://www.triadicframeworks.org/theories/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+<!-- Individual Theory Modules -->
+<url><loc>https://www.triadicframeworks.org/theories/chaos_theory/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/electromagnetism/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/evolutionary_biology/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/general_relativity/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/information_theory/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/morphic_resonance/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/quantum_field_theory/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/quantum_mechanics/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/standard_model/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+<url><loc>https://www.triadicframeworks.org/theories/thermodynamics/</loc><lastmod>2026-06-02</lastmod><changefreq>monthly</changefreq><priority>0.80</priority></url>
+
   <!-- Projects -->
   <url><loc>https://www.triadicframeworks.org/projects/</loc><lastmod>2026-03-12</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://www.triadicframeworks.org/projects/CoConsciousness/</loc><lastmod>2026-03-12</lastmod><priority>0.6</priority><changefreq>monthly</changefreq></url>
