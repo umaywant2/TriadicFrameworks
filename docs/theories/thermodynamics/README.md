@@ -1,4 +1,7 @@
 # Thermodynamics — The Grammar of Temperature, Entropy, and Coherence  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/thermodynamics/module.json) — Agentic module schema role assignments
+
 ### TriadicFrameworks /docs/theories/thermodynamics/
 
 Thermodynamics describes how systems behave when energy, temperature,  
