@@ -1,6 +1,9 @@
 # Morphic Resonance — A Dimensional Coherence Model of Pattern Recurrence  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module.json) — Agentic module schema role assignments
+- [`module_rtt1.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module_rtt1.json) — Agentic module schema role assignments
+- [`module_rtt2.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module_rtt2.json) — Agentic module schema role assignments
+- [`module_rtt3.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module_rtt3.json) — Agentic module schema role assignments
 
 ### TriadicFrameworks /docs/theories/morphic_resonance/
 
