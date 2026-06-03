@@ -1,4 +1,7 @@
 # The Standard Model — A Sector Grammar of Excitations  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/standard_model/module.json) — Agentic module schema role assignments
+
 ### TriadicFrameworks /docs/theories/standard_model/
 
 The Standard Model (SM) describes the fundamental excitations of the  
