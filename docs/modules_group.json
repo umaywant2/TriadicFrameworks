@@ -908,6 +908,143 @@
     "Fraud Indicator Framework"
   ]
 },
+{
+  "id": "physics",
+  "name": "Physics Cluster",
+  "category": "theory-domain",
+  "path": "/docs/theories/",
+  "status": "active",
+  "description": "Parent cluster for physics-based theory modules: classical, quantum, and thermodynamic frameworks.",
+  "children": [
+    "electromagnetism",
+    "general_relativity",
+    "quantum_mechanics",
+    "quantum_field_theory",
+    "standard_model",
+    "thermodynamics"
+  ],
+  "related": ["dynamical_systems", "information_systems"]
+},
+{
+  "id": "biology",
+  "name": "Biology Cluster",
+  "category": "theory-domain",
+  "path": "/docs/theories/",
+  "status": "active",
+  "description": "Parent cluster for biological and morphic theory modules.",
+  "children": ["evolutionary_biology", "morphic_resonance"],
+  "related": ["information_systems"]
+},
+{
+  "id": "dynamical_systems",
+  "name": "Dynamical Systems Cluster",
+  "category": "theory-domain",
+  "path": "/docs/theories/",
+  "status": "active",
+  "description": "Parent cluster for nonlinear and sensitivity-based theory modules.",
+  "children": ["chaos_theory"],
+  "related": ["physics", "information_systems"]
+},
+{
+  "id": "information_systems",
+  "name": "Information Systems Cluster",
+  "category": "theory-domain",
+  "path": "/docs/theories/",
+  "status": "active",
+  "description": "Parent cluster for information and computation-based theory modules.",
+  "children": ["information_theory"],
+  "related": ["physics", "biology"]
+},
+{
+  "id": "chaos_theory",
+  "name": "Chaos Theory",
+  "category": "theory",
+  "path": "/docs/theories/chaos_theory/",
+  "status": "active",
+  "parents": ["dynamical_systems"],
+  "related": ["information_theory", "thermodynamics"]
+},
+{
+  "id": "electromagnetism",
+  "name": "Electromagnetism",
+  "category": "theory",
+  "path": "/docs/theories/electromagnetism/",
+  "status": "active",
+  "parents": ["physics"],
+  "related": ["quantum_field_theory", "standard_model"]
+},
+{
+  "id": "evolutionary_biology",
+  "name": "Evolutionary Biology",
+  "category": "theory",
+  "path": "/docs/theories/evolutionary_biology/",
+  "status": "active",
+  "parents": ["biology"],
+  "related": ["morphic_resonance"]
+},
+{
+  "id": "general_relativity",
+  "name": "General Relativity",
+  "category": "theory",
+  "path": "/docs/theories/general_relativity/",
+  "status": "active",
+  "parents": ["physics"],
+  "related": ["quantum_field_theory", "standard_model"]
+},
+{
+  "id": "information_theory",
+  "name": "Information Theory",
+  "category": "theory",
+  "path": "/docs/theories/information_theory/",
+  "status": "active",
+  "parents": ["information_systems"],
+  "related": ["chaos_theory", "thermodynamics"]
+},
+{
+  "id": "morphic_resonance",
+  "name": "Morphic Resonance",
+  "category": "theory",
+  "path": "/docs/theories/morphic_resonance/",
+  "status": "active",
+  "parents": ["biology"],
+  "related": ["evolutionary_biology"]
+},
+{
+  "id": "quantum_field_theory",
+  "name": "Quantum Field Theory",
+  "category": "theory",
+  "path": "/docs/theories/quantum_field_theory/",
+  "status": "active",
+  "parents": ["physics"],
+  "related": ["quantum_mechanics", "standard_model"]
+},
+{
+  "id": "quantum_mechanics",
+  "name": "Quantum Mechanics",
+  "category": "theory",
+  "path": "/docs/theories/quantum_mechanics/",
+  "status": "active",
+  "parents": ["physics"],
+  "related": ["quantum_field_theory", "general_relativity"]
+},
+{
+  "id": "standard_model",
+  "name": "Standard Model",
+  "category": "theory",
+  "path": "/docs/theories/standard_model/",
+  "status": "active",
+  "parents": ["physics"],
+  "related": ["quantum_field_theory", "electromagnetism"]
+},
+{
+  "id": "thermodynamics",
+  "name": "Thermodynamics",
+  "category": "theory",
+  "path": "/docs/theories/thermodynamics/",
+  "status": "active",
+  "parents": ["physics"],
+  "related": ["chaos_theory", "information_theory"]
+},
   ],
 
   "remaining_directories": {
