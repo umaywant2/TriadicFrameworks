@@ -1,40 +1,62 @@
-<url>
-  <loc>/docs/theories/chaos_theory/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/electromagnetism/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/evolutionary_biology/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/general_relativity/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/information_theory/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/morphic_resonance/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/quantum_field_theory/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/quantum_mechanics/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/standard_model/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
-<url>
-  <loc>/docs/theories/thermodynamics/index.html</loc>
-  <lastmod>2026-05-06</lastmod>
-</url>
+[
+  {
+    "loc": "/docs/theories/chaos_theory/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/electromagnetism/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/evolutionary_biology/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/general_relativity/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/information_theory/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/morphic_resonance/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/quantum_field_theory/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/quantum_mechanics/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/standard_model/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  },
+  {
+    "loc": "/docs/theories/thermodynamics/index.html",
+    "lastmod": "2026-05-06",
+    "changefreq": "monthly",
+    "priority": 0.8
+  }
+]
