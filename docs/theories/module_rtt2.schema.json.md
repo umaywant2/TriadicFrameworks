@@ -1,1 +1,72 @@
+```json
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RTT/2 Resonance Geometry Schema",
+  "description": "Schema for RTT/2 resonance-geometry files across all TriadicFrameworks modules.",
+  "type": "object",
 
+  "properties": {
+    "ai.module": {
+      "type": "string",
+      "description": "Module identifier (e.g., standard_model.rtt2)."
+    },
+
+    "ai.version": {
+      "type": "string",
+      "description": "Version of the RTT/2 resonance geometry."
+    },
+
+    "resonance_surfaces": {
+      "type": "array",
+      "description": "List of resonance surfaces defined in RTT/2.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "surface_name": {
+            "type": "string",
+            "description": "Name of the resonance surface (e.g., gauge_geometry_surface)."
+          },
+          "description": {
+            "type": "string",
+            "description": "Explanation of the surface's role in resonance geometry."
+          },
+          "parameters": {
+            "type": "array",
+            "description": "Key parameters defining the surface.",
+            "items": { "type": "string" }
+          },
+          "regime_behavior": {
+            "type": "object",
+            "description": "Behavior of the surface across regimes R1–R4.",
+            "properties": {
+              "R1": { "type": "string" },
+              "R2": { "type": "string" },
+              "R3": { "type": "string" },
+              "R4": { "type": "string" }
+            },
+            "required": ["R1", "R2", "R3", "R4"]
+          },
+          "drift_boundary": {
+            "type": "string",
+            "description": "Description of conceptual drift to avoid."
+          }
+        },
+        "required": [
+          "surface_name",
+          "description",
+          "parameters",
+          "regime_behavior",
+          "drift_boundary"
+        ]
+      }
+    },
+
+    "notes": {
+      "type": "string",
+      "description": "Additional notes for RTT/2 reasoning."
+    }
+  },
+
+  "required": ["ai.module", "ai.version", "resonance_surfaces"]
+}
+```
