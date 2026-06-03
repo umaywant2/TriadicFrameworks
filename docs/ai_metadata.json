@@ -15,7 +15,118 @@
       "entry": "frontdoor.html"
     }
   },
-
+"physics": {
+  "name": "Physics Cluster",
+  "path": "/docs/theories/",
+  "category": "theory-domain",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "frontdoor.html"
+},
+"biology": {
+  "name": "Biology Cluster",
+  "path": "/docs/theories/",
+  "category": "theory-domain",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "frontdoor.html"
+},
+"dynamical_systems": {
+  "name": "Dynamical Systems Cluster",
+  "path": "/docs/theories/",
+  "category": "theory-domain",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "frontdoor.html"
+},
+"information_systems": {
+  "name": "Information Systems Cluster",
+  "path": "/docs/theories/",
+  "category": "theory-domain",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "frontdoor.html"
+},
+"chaos_theory": {
+  "name": "Chaos Theory",
+  "path": "/docs/theories/chaos_theory/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"electromagnetism": {
+  "name": "Electromagnetism",
+  "path": "/docs/theories/electromagnetism/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"evolutionary_biology": {
+  "name": "Evolutionary Biology",
+  "path": "/docs/theories/evolutionary_biology/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"general_relativity": {
+  "name": "General Relativity",
+  "path": "/docs/theories/general_relativity/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"information_theory": {
+  "name": "Information Theory",
+  "path": "/docs/theories/information_theory/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"morphic_resonance": {
+  "name": "Morphic Resonance",
+  "path": "/docs/theories/morphic_resonance/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"quantum_field_theory": {
+  "name": "Quantum Field Theory",
+  "path": "/docs/theories/quantum_field_theory/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"quantum_mechanics": {
+  "name": "Quantum Mechanics",
+  "path": "/docs/theories/quantum_mechanics/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"standard_model": {
+  "name": "Standard Model",
+  "path": "/docs/theories/standard_model/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
+"thermodynamics": {
+  "name": "Thermodynamics",
+  "path": "/docs/theories/thermodynamics/",
+  "category": "theory",
+  "version": "1.0",
+  "ai-ready": true,
+  "entry": "index.html"
+},
   "navigation": {
     "sitemap": "https://www.triadicframeworks.org/sitemap_main.xml",
     "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
