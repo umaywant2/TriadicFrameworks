@@ -1,13 +1,14 @@
 # TriadicFrameworks
 
-TriadicFrameworks is an open research framework for substrate‑aligned modeling of complex systems across cognition, ecology, civilization, and computation.
+**Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools**
 
-This repository’s **canonical documentation** lives in `/docs`.  
-The project website renders directly from `/docs/README.md`.
+Welcome to the root of the TriadicFrameworks canon.  
+This repository contains the full module architecture, operator grammar,  
+and coherence‑driven documentation that powers the Triadic ecosystem.
 
-→ **Start here:** [`docs/README.md`](./docs/README.md)
-
----
+### Start Here — TriadicFrameworks in 30 Seconds
+Below is a rotating micro‑playlist introducing core RTT concepts,  
+dimensional operators, and cross‑module intuition.
 
 <div align="center">
 
