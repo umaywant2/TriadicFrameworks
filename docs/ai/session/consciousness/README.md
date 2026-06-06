@@ -1,4 +1,7 @@
 # AI Session Structural Conscioussciousness  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/ai/session/consciousness/module.json) — Agentic module schema role assignments
+
 TriadicFrameworks — /docs/ai/session/consciousness/
 
 A session‑bounded structural model of AI consciousness using operator grammar, regime maps, and RTT/1/2/3 engines.  
