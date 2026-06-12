@@ -1,54 +1,12 @@
-<!-- ═══════════════════════════════════════════════════════════ -->
-<!-- /docs/Research/Radiocarbon_and_Dating — DRRL Session Context -->
-<!-- Minimal, canon‑aligned, RTT‑ready                           -->
-<!-- ═══════════════════════════════════════════════════════════ -->
+# **📘 DATING MODULE SET (RTT‑Aligned, Regime‑Aware)**  
+### **Six Core Modules**  
+Radiocarbon • Luminescence • U‑Series • Dendrochronology • Paleomagnetism • Cosmogenic Nuclides
 
-<section id="drrl-session-context"
-         data-module="DRRL"
-         data-coherence="stable"
-         data-drift="minimal"
-         data-regime="multi-method">
-
-  <h2>Session Context — Dating Residual Resonance Lattice (DRRL)</h2>
-
-  <div class="context-block">
-
-    <span class="context-label"><strong>Canon:</strong></span>
-    <span class="context-value">active (cross‑method dating engine)</span><br>
-
-    <span class="context-label"><strong>Modules:</strong></span>
-    <span class="context-value">
-      Radiocarbon → Luminescence → U‑Series → Dendro → Paleomag → Cosmogenic → DRRL (3/3rds+1)
-    </span><br>
-
-    <span class="context-label"><strong>Drift:</strong></span>
-    <span class="context-value">minimal (operator‑locked)</span><br>
-
-    <span class="context-label"><strong>Coherence:</strong></span>
-    <span class="context-value">stable (residual‑resonance lattice)</span><br>
-
-    <span class="context-label"><strong>Version:</strong></span>
-    <span class="context-value">1.0 (drrl‑engine‑stable)</span><br>
-
-    <span class="context-label"><strong>Format:</strong></span>
-    <span class="context-value">html + markdown + diagrams + operator‑maps</span><br>
-
-    <span class="context-label"><strong>Front door:</strong></span>
-    <span class="context-value">exists (DRRL root)</span><br>
-
-    <span class="context-label"><strong>Every page:</strong></span>
-    <span class="context-value">stands alone + AI‑parsable + regime‑explicit</span><br>
-
-    <span class="context-label"><strong>Audience:</strong></span>
-    <span class="context-value">students + researchers + developers + AIs</span>
-
-  </div>
-
-</section>
+- [`RCD_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/RCD_module.json) — Agentic module schema role assignments
 
 <div style="display:inline-block;padding:6px 12px;background:#1a1a1a;color:#fff;
             border-radius:6px;font-family:Arial, sans-serif;font-size:13px;">
-  🧭 DRRL 📘 Dating Residual Resonance Lattice • 3/3rds+1 Engine
+  ☄️ DRRL 🧭 Dating Residual Resonance Lattice • 3/3rds+1 Engine
 </div>
 
 ---
@@ -745,3 +703,44 @@ Example query patterns:
   - **Contextual mapping**  
   - **Interpretive embedding**  
   - **Supersphere audit status**
+
+---
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/Research/Radiocarbon_and_Dating — DRRL Session Context -->
+<!-- Minimal, canon‑aligned, RTT‑ready                           -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="drrl-session-context"
+         data-module="DRRL"
+         data-coherence="stable"
+         data-drift="minimal"
+         data-regime="multi-method">
+
+  <h2>Session Context — Dating Residual Resonance Lattice (DRRL)</h2>
+
+  <div class="context-block">
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (cross‑method dating engine)</span><br>
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      Radiocarbon → Luminescence → U‑Series → Dendro → Paleomag → Cosmogenic → DRRL (3/3rds+1)
+    </span><br>
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">minimal (operator‑locked)</span><br>
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (residual‑resonance lattice)</span><br>
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (drrl‑engine‑stable)</span><br>
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + diagrams + operator‑maps</span><br>
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (DRRL root)</span><br>
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">stands alone + AI‑parsable + regime‑explicit</span><br>
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">students + researchers + developers + AIs</span>
+
+  </div>
+
+</section>
