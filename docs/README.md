@@ -25,7 +25,7 @@ A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem
 
 This `/docs` directory is rendered directly as the project website and serves as the structural map for newcomers, practitioners, and automated agents.
 
-If you’re new, begin with **[Start Here](https://docs.triadicframeworks.org/docs/starter)**.  
+If you’re new, begin with **[Start Here](https://umaywant2.docsbook.io/triadicframeworks/docs/starter/)**.  
 If you’re returning, jump directly to the section you need.
 
 ---
