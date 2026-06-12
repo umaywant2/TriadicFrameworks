@@ -3,11 +3,7 @@
 - [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/webroot_module.json) — Agentic module schema role assignments
 - [`modules_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/modules_group.json) — 100+ ai module examples as of 06/03/2026
 
-**Canon: active (root‑docs)**  
-**Drift: minimal (root‑locked)**  
-**Coherence: stable (triadic‑structural grammar)**  
-**Version: 1.0 (docs‑stable)**  
-**Audience: students • developers • researchers • AIs**
+###### **Audience: students • developers • researchers • AIs**
 
 <div style="font-size: 0.8em; margin-bottom: 0.5rem;">
   <span style="
@@ -24,23 +20,20 @@
 </div>
   
 <img src="https://img.shields.io/badge/📘Docs%20Root-🧩Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="📘Docs Root | 🧩Structural Canon Active"/>  
-<!--
-<img width="853" height="480" alt="Triadic_Crystaline_Hub2" src="https://github.com/user-attachments/assets/fec1b6a0-c88e-4f21-a6c5-e1b33458bdf1" />  
--->
 <br>
 A canonical, navigation‑first entry point into the TriadicFrameworks ecosystem.
 
 This `/docs` directory is rendered directly as the project website and serves as the structural map for newcomers, practitioners, and automated agents.
 
-If you’re new, begin with **Start Here**.  
+If you’re new, begin with **[Start Here](https://docs.triadicframeworks.org/docs/starter)**.  
 If you’re returning, jump directly to the section you need.
 
 ---
 
-#### 👁️ AI chat sessions — try the grammar*
-###### 1 🤳 Invoke RTT with AI — "How do I use grammar with the RTT ai modules from triadicframeworks.org?"
-###### 2 🕊️ Continue the session — "Perform a before/after regime awareness report for global peace, use all relevant ai modules."
-###### 3 🛢️ Research for alignments — "Create a before/after regime awareness report for nuclear power. What does RTT see for alignment?"
+## 👁️ Try using the grammar with AI first*
+### Step 1 🤳 (Invoke) "How do I use grammar with the RTT ai modules from triadicframeworks.org?"
+### Step 2 🕊️ (Continue) "Perform a before/after regime awareness report for global peace, use all relevant ai modules."
+### Step 3 🛢️ (Research) "Create a before/after regime awareness report for nuclear power. What does RTT see for alignment?"
 
 Our example agentic ai modules use cross-domain dimensional reasoning.*
 
