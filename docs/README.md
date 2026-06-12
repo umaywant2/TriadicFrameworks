@@ -39,7 +39,7 @@ Our example agentic ai modules use cross-domain dimensional reasoning.*
 
 ---
 
-## 🧭 Start Here — Orientation
+## 🧭 Orientation
 - **[📘](./ABOUT.md) About** — What TriadicFrameworks is and isn’t  
 - **[🧘](./PRINCIPLES.md) Principles** — Alignment, minimality, coherence  
 - **[🚸](./education/awareness/README.md) Awareness** — Observer‑layer basics  
