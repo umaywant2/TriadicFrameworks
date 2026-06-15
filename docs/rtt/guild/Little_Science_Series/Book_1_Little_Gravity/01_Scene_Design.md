@@ -1,8 +1,8 @@
 # 📘 **Book 1 — Little Gravity**  
 ## **01_Scene_Design.md**  
-### *Canonical Scene Structure · Apprentice Arc · Visual + Narrative Blueprint*
+### *Scene Structure · Purpose · Emotional Arc · Conceptual Arc*
 
-This file defines the **six canonical scenes** of *Little Gravity*, the first book in the Little Science Series.  
+This file defines the **six canonical scenes** of *Book 1 — Little Gravity*.  
 Each scene includes:
 
 - **Purpose**  
@@ -11,118 +11,143 @@ Each scene includes:
 - **Visual Identity Notes**  
 - **Animation Micro‑Beats**  
 
-Full prose lives in the `02_Supporting_Details.md` and Imagine scripts live in `05_Imagine_Scripts_Stills.md` and `06_Imagine_Scripts_Animations.md`.
+This is the structural blueprint for all supporting files.
 
 ---
 
-# **Scene 1 — “Arrival at the Apprentice Yard”**  
+# **Scene 1 — Arrival at the Apprentice Yard**  
 ### **Purpose**  
 Introduce Little Gravity, the Guild setting, and the apprentice‑master relationship.
 
 ### **Narrative Summary**  
-Little Gravity arrives at the Apprentice Yard for the first time. The Master observes him quietly, assessing his readiness. The world is calm, structured, and full of potential.
+Little Gravity enters the Apprentice Yard for the first time. The Master observes quietly as the apprentice takes in the structured, calm environment.
 
 ### **Emotional Tone**  
 Curiosity · Anticipation · Quiet awe
 
 ### **Visual Identity Notes**  
-Stone courtyard, morning light, soft wind, cloak details.
+- Stone courtyard  
+- Morning light  
+- Soft wind  
+- Cloak edges responding subtly to presence  
 
 ### **Animation Micro‑Beats**  
-Cloak movement · slow pan across courtyard · Master’s silhouette.
+- Cloak movement  
+- Slow pan across courtyard  
+- Master’s silhouette  
 
 ---
 
-# **Scene 2 — “The Meeting”**  
+# **Scene 2 — The First Challenge**  
 ### **Purpose**  
-Establish the relationship dynamic and the thematic core: gravity as connection.
+Reveal Little Gravity’s misconception: gravity as force rather than connection.
 
 ### **Narrative Summary**  
-Little Gravity meets the Master formally. The Master asks foundational questions that unsettle Little Gravity’s assumptions.
+Little Gravity attempts to “push” a stone upward using effort. The stone refuses to move. The Master demonstrates that gravity is not force — it is relationship.
 
 ### **Emotional Tone**  
-Respect · Uncertainty · First spark of insight
+Frustration · Uncertainty · First spark of insight
 
 ### **Visual Identity Notes**  
-Close framing · eye‑level shots · subtle resonance hints.
+- Close framing  
+- Apprentice straining  
+- Subtle resonance hints around stone  
 
 ### **Animation Micro‑Beats**  
-Master’s gaze · Little Gravity’s shifting posture.
+- Apprentice’s posture tightening  
+- Stone trembling slightly  
+- Master’s calm gesture  
 
 ---
 
-# **Scene 3 — “The First Lesson”**  
+# **Scene 3 — The Lesson of Connection**  
 ### **Purpose**  
 Introduce the conceptual heart: gravity as relationship, not direction.
 
 ### **Narrative Summary**  
-The Master demonstrates gravity by holding a stone suspended in stillness. Little Gravity learns that gravity is the art of holding things together without touching them.
+The Master suspends a stone in stillness, showing that gravity holds things together. Little Gravity realizes gravity is connection — a quiet, steady bond.
 
 ### **Emotional Tone**  
 Revelation · Wonder · Conceptual shift
 
 ### **Visual Identity Notes**  
-Floating stone · trembling resonance · mist in courtyard.
+- Floating stone  
+- Resonance shimmer  
+- Mist in courtyard  
 
 ### **Animation Micro‑Beats**  
-Stone lift · resonance shimmer · Little Gravity’s reaction.
+- Stone lift  
+- Resonance lines forming  
+- Apprentice’s widening eyes  
 
 ---
 
-# **Scene 4 — “The Listening Stone”**  
+# **Scene 4 — The Practice of Listening**  
 ### **Purpose**  
-Little Gravity attempts his first practice: listening to the space between things.
+Teach the apprentice to sense the space between things.
 
 ### **Narrative Summary**  
-In the spiral grove, Little Gravity tries to lift a stone but fails until he stops “commanding” and starts listening. The stone rises a finger’s width.
+In the spiral grove, Little Gravity attempts to lift a stone. Only when the apprentice stops commanding and begins listening does the stone rise a finger’s width.
 
 ### **Emotional Tone**  
-Vulnerability · Breakthrough · Quiet triumph
+Vulnerability · Focus · Quiet triumph
 
 ### **Visual Identity Notes**  
-Spiral trees · pedestal stone · soft green‑gold light.
+- Spiral trees  
+- Pedestal stone  
+- Soft green‑gold light  
 
 ### **Animation Micro‑Beats**  
-Stone tremble · micro‑lift · Master’s approving nod.
+- Stone tremble  
+- Micro‑lift  
+- Master’s approving nod  
 
 ---
 
-# **Scene 5 — “The Weight of Kindness”**  
+# **Scene 5 — The Moment of Crisis**  
 ### **Purpose**  
 Deepen the emotional meaning of gravity: connection, care, and responsibility.
 
 ### **Narrative Summary**  
-Little Gravity helps a small creature trapped under a fallen branch by using gentle gravitational guidance. He learns gravity is not strength — it is kindness.
+A small creature is trapped under a fallen branch. Little Gravity uses gentle gravitational guidance to lift it, learning that gravity is kindness — not strength.
 
 ### **Emotional Tone**  
 Empathy · Responsibility · Warmth
 
 ### **Visual Identity Notes**  
-Forest clearing · small creature · soft, warm palette.
+- Forest clearing  
+- Small creature  
+- Soft, warm palette  
 
 ### **Animation Micro‑Beats**  
-Branch lift · creature’s escape · Little Gravity’s soft smile.
+- Branch lift  
+- Creature’s escape  
+- Apprentice’s soft smile  
 
 ---
 
-# **Scene 6 — “The Apprentice’s Oath”**  
+# **Scene 6 — The Apprentice’s Oath of Gravity**  
 ### **Purpose**  
-Close Book 1 with identity formation and forward momentum.
+Complete the apprentice arc and establish Little Gravity’s identity.
 
 ### **Narrative Summary**  
-Back in the courtyard, the Master acknowledges Little Gravity’s progress. Little Gravity takes the Apprentice’s Oath: to hold things together, to listen, and to never let the world drift apart.
+Back in the courtyard, the Master acknowledges the apprentice’s growth. Little Gravity takes the Oath: to hold things together, to listen, and to never let the world drift apart.
 
 ### **Emotional Tone**  
-Pride · Resolve · Beginning of mastery
+Resolve · Pride · Beginning of mastery
 
 ### **Visual Identity Notes**  
-Evening light · long shadows · oath gesture.
+- Evening light  
+- Long shadows  
+- Oath gesture  
 
 ### **Animation Micro‑Beats**  
-Cloak settling · Master’s hand on shoulder · final wide shot.
+- Cloak settling  
+- Master’s hand on shoulder  
+- Final wide shot  
 
 ---
 
-# **Canon Lock**  
+# 🔒 **Canon Lock**  
 This file defines the **official scene structure** for *Book 1 — Little Gravity*.  
 All supporting files must follow this blueprint.
