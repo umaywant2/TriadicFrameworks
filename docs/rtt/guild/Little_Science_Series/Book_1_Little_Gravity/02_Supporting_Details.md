@@ -1,193 +1,171 @@
 # 📘 **Book 1 — Little Gravity**  
 ## **02_Supporting_Details.md**  
-### *Worldbuilding · Character Notes · Conceptual Scaffolding*
+### *Conceptual Notes · Emotional Beats · Environmental Details · Gravity Resonance Behavior*
 
-This file provides the **supporting details** for all six scenes of *Little Gravity*.  
-These details ensure narrative, visual, emotional, and conceptual consistency across the book.
+This file provides the **supporting details** for all six scenes of *Book 1 — Little Gravity*.  
+These details guide writers, artists, animators, and AIs in maintaining consistency across:
 
----
+- emotional tone  
+- conceptual meaning  
+- visual identity  
+- resonance behavior  
+- environmental response  
 
-# **GLOBAL SUPPORTING DETAILS**
-
-## **1. Character Notes — Little Gravity**
-- Age‑appearance: 13–14  
-- Cloak: soft, wave‑like folds; responds subtly to emotional resonance  
-- Emotional baseline: earnest, curious, slightly unsure  
-- Core arc: from “gravity is pulling down” → “gravity is connection and kindness”  
-- Signature gesture: hands open, palms slightly forward when listening  
-- RTT resonance: faint shimmer in the space between his hands and objects  
+This file contains **no prose** — only structural and conceptual scaffolding.
 
 ---
 
-## **2. Character Notes — The Master**
-- Age‑appearance: timeless, late 40s–60s  
-- Cloak: unmoving even in wind (symbol of internal stillness)  
-- Teaching style: quiet, Socratic, non‑directive  
-- Emotional baseline: calm, observant, deeply patient  
-- Core arc: guiding Little Gravity toward self‑trust  
-- Signature gesture: one hand behind back, one hand open when demonstrating  
+# 🌅 **Scene 1 — Arrival at the Apprentice Yard**
 
----
+### **Emotional Notes**
+- Curiosity  
+- Anticipation  
+- Quiet awe  
 
-## **3. Setting Notes**
-### **Apprentice Yard**
+### **Conceptual Notes**
+- Gravity as presence  
+- First awareness of connection  
+- Stillness as a form of listening  
+
+### **Environmental Details**
 - Stone courtyard  
-- Morning light, long shadows  
-- Mist drifting across tiles  
-- Soundscape: soft wind, distant birds  
+- Morning light  
+- Soft wind  
+- Cloak edges responding subtly  
 
-### **Spiral Grove**
-- Trees grown in slow spirals (gravity‑shaped over centuries)  
-- Light: green‑gold, filtered  
-- Air feels “thicker,” more attentive  
-- Pedestal stone at center  
-
-### **Forest Clearing (Scene 5)**
-- Warm palette  
-- Fallen branch, small creature  
-- Soft ground, scattered leaves  
-
-### **Courtyard at Dusk (Scene 6)**
-- Orange‑violet sky  
-- Long shadows  
-- Cloaks catching last light  
+### **Resonance Behavior**
+- Light gravitational shimmer around stones  
+- Cloak edges settling toward ground  
+- Subtle pull between apprentice and environment  
 
 ---
 
-## **4. Conceptual Notes (RTT‑Aligned)**
-
-### **Gravity as Relationship**
-- Not direction  
-- Not force  
-- A *between*  
-- A quiet agreement not to drift apart  
-
-### **Listening Practice**
-- Focus on the space between  
-- Awareness precedes action  
-- Resonance is subtle, not dramatic  
-
-### **First Resonance**
-- Tremble → micro‑lift → drop  
-- Represents conceptual alignment, not power  
-
-### **Kindness as Weight**
-- Helping the creature shows gravity as care  
-- Emotional resonance mirrors physical resonance  
-
-### **Apprentice’s Oath**
-- Hold things together  
-- Listen before acting  
-- Never let the world drift apart  
-
----
-
-# **SCENE‑BY‑SCENE SUPPORTING DETAILS**
-
----
-
-# **Scene 1 — Arrival at the Apprentice Yard**
-
-### **Environmental Details**
-- Mist curls around boots  
-- Cloak edges catch morning light  
-- Master stands still, silhouette crisp  
+# 🪨 **Scene 2 — The First Challenge**
 
 ### **Emotional Notes**
-- Little Gravity: nervous curiosity  
-- Master: quiet evaluation  
+- Frustration  
+- Uncertainty  
+- First spark of insight  
 
-### **Continuity Hooks**
-- Establish cloak behavior  
-- Establish Yard as “home base”  
+### **Conceptual Notes**
+- Misconception: gravity as force  
+- Correction: gravity as relationship  
+- Effort vs. connection  
+
+### **Environmental Details**
+- Close framing around stone  
+- Apprentice straining  
+- Ground dust shifting slightly  
+- Master’s calm presence  
+
+### **Resonance Behavior**
+- Stone trembling faintly  
+- Apprentice’s cloak tightening  
+- Master’s gesture stabilizing field  
 
 ---
 
-# **Scene 2 — The Meeting**
-
-### **Environmental Details**
-- Close framing  
-- Subtle wind shifts  
-- Master’s eyes reflect sky color  
+# 🌌 **Scene 3 — The Lesson of Connection**
 
 ### **Emotional Notes**
-- Little Gravity: uncertainty  
-- Master: gentle challenge  
+- Revelation  
+- Wonder  
+- Conceptual shift  
 
-### **Continuity Hooks**
-- Introduce “gravity as connection” theme  
-- Set up Scene 3 demonstration  
+### **Conceptual Notes**
+- Gravity as bond  
+- Stillness as strength  
+- Connection as stability  
+
+### **Environmental Details**
+- Floating stone  
+- Resonance shimmer  
+- Mist drifting through courtyard  
+- Soft ambient glow  
+
+### **Resonance Behavior**
+- Lines of connection forming  
+- Stone stabilizing in midair  
+- Apprentice’s cloak softening  
 
 ---
 
-# **Scene 3 — The First Lesson**
-
-### **Environmental Details**
-- Floating stone trembles  
-- Mist parts around resonance  
-- Master’s cloak unmoving  
+# 🌿 **Scene 4 — The Practice of Listening**
 
 ### **Emotional Notes**
-- Little Gravity: awe, conceptual shift  
-- Master: quiet satisfaction  
+- Vulnerability  
+- Focus  
+- Quiet triumph  
 
-### **Continuity Hooks**
-- Introduce “agreement” metaphor  
-- Prepare for Listening Practice in Scene 4  
+### **Conceptual Notes**
+- Listening to the space between things  
+- Gentle guidance  
+- Micro‑adjustments  
+
+### **Environmental Details**
+- Spiral grove  
+- Pedestal stone  
+- Soft green‑gold light  
+- Leaves responding to subtle shifts  
+
+### **Resonance Behavior**
+- Stone tremble smoothing  
+- Micro‑lift forming  
+- Apprentice’s breath syncing with field  
 
 ---
 
-# **Scene 4 — The Listening Stone**
-
-### **Environmental Details**
-- Spiral trees subtly lean inward  
-- Pedestal stone smooth and warm‑toned  
-- Air thickens during resonance  
+# 🐾 **Scene 5 — The Moment of Crisis**
 
 ### **Emotional Notes**
-- Little Gravity: frustration → vulnerability → breakthrough  
-- Master: supportive, guiding  
+- Empathy  
+- Responsibility  
+- Warmth  
 
-### **Continuity Hooks**
-- First micro‑lift  
-- Establish “listening before lifting”  
-
----
-
-# **Scene 5 — The Weight of Kindness**
-
-### **Environmental Details**
-- Warm clearing  
-- Soft light on fallen branch  
-- Small creature: gentle, non‑threatening  
-
-### **Emotional Notes**
-- Little Gravity: empathy, responsibility  
-- Master: observing from distance  
-
-### **Continuity Hooks**
+### **Conceptual Notes**
 - Gravity as care  
-- Emotional resonance strengthens physical resonance  
-
----
-
-# **Scene 6 — The Apprentice’s Oath**
+- Connection as protection  
+- Gentle lifting  
 
 ### **Environmental Details**
-- Dusk light, long shadows  
-- Courtyard feels larger, more open  
-- Cloaks catch last rays  
+- Forest clearing  
+- Fallen branch  
+- Small creature trapped  
+- Warm, soft palette  
 
-### **Emotional Notes**
-- Little Gravity: pride, resolve  
-- Master: recognition, approval  
-
-### **Continuity Hooks**
-- Close Book 1  
-- Set up Book 2 (Little Light)  
+### **Resonance Behavior**
+- Branch lifting smoothly  
+- Creature calming  
+- Apprentice’s cloak glowing softly  
 
 ---
 
-# **Canon Lock**
+# 🌇 **Scene 6 — The Apprentice’s Oath of Gravity**
+
+### **Emotional Notes**
+- Resolve  
+- Pride  
+- Beginning of mastery  
+
+### **Conceptual Notes**
+- Commitment to connection  
+- Holding things together  
+- Listening as practice  
+
+### **Environmental Details**
+- Evening courtyard  
+- Long shadows  
+- Oath gesture  
+- Soft wind settling  
+
+### **Resonance Behavior**
+- Cloak settling into stable form  
+- Ground shimmer aligning  
+- Final resonance pulse  
+
+---
+
+# 🔒 **Canon Lock**
+
 This file defines the **official supporting details** for *Book 1 — Little Gravity*.  
-All narrative, visual, and animation files must follow this scaffolding.
+All visuals, animations, and narrative expansions must follow this blueprint.
