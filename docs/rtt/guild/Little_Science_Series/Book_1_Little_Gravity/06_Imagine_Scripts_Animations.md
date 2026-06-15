@@ -1,151 +1,81 @@
 # 📘 **Book 1 — Little Gravity**  
 ## **06_Imagine_Scripts_Animations.md**  
-### *Short‑Form Animation Prompts · 3–5 Second Sequences · Scene‑Aligned*
+### *Short‑Form Animation Prompts · Scene‑Aligned · Canonical*
 
-This file defines the **canonical Imagine animation prompts** for all six scenes of *Little Gravity*.  
-Each animation is a **single, self‑contained sequence** designed for:
+This file defines the **official Imagine animation prompts** for all six scenes of *Book 1 — Little Gravity*.  
+Each animation is a **3–6 second loop‑safe sequence** designed for:
 
-- short clips  
-- transitions  
 - teaching animations  
-- AR/VR emitter micro‑loops  
+- AR/VR micro‑loops  
+- scene transitions  
+- conceptual demonstrations  
 
-All animations follow the Guild’s resonance, lighting, and motion rules.
-
----
-
-# 🌄 **SCENE 1 — Arrival at the Apprentice Yard**
-
-## **Animation 1A — “Mist and Footsteps”**
-**Shot Type:** Wide, low angle  
-**Motion Sequence:**  
-Mist curls as Little Gravity steps into the courtyard; cloak edges catch morning light.  
-**Resonance:** None  
-**Lighting:** Soft gold, long shadows  
-**Emotion:** Curiosity awakening  
+All animations follow the gravity identity:  
+**stillness, connection, gentle lift, relational motion, quiet resonance.**
 
 ---
 
-## **Animation 1B — “Master in the Distance”**
-**Shot Type:** Slow push‑in  
-**Motion Sequence:**  
-Master stands perfectly still as mist drifts past him.  
-**Resonance:** None  
-**Lighting:** Backlit silhouette  
-**Emotion:** Quiet anticipation  
+# 🌅 **SCENE 1 — Arrival at the Apprentice Yard**
+
+## **Animation 1A — “Cloak Settle”**  
+Cloak edges drifting downward; soft gravitational pull; morning light shifting across stone.
+
+## **Animation 1B — “Courtyard Stillness”**  
+Leaves pausing mid‑air; subtle ground shimmer; slow pan across the yard.
 
 ---
 
-# 🌤️ **SCENE 2 — The Meeting**
+# 🪨 **SCENE 2 — The First Challenge**
 
-## **Animation 2A — “The First Question”**
-**Shot Type:** Medium close  
-**Motion Sequence:**  
-Master tilts his head slightly; Little Gravity shifts weight.  
-**Resonance:** Faint shimmer in air  
-**Lighting:** Morning light, mist thinning  
-**Emotion:** Uncertainty → respect  
+## **Animation 2A — “Strained Lift Attempt”**  
+Apprentice pulling upward; stone trembling slightly; dust shifting around base.
+
+## **Animation 2B — “Master’s Stabilizing Gesture”**  
+Master raising a calm hand; tremble smoothing; field settling into quiet.
 
 ---
 
-## **Animation 2B — “Thinking Hard”**
-**Shot Type:** Close on Little Gravity  
-**Motion Sequence:**  
-He looks down, breathes in, cloak moves subtly.  
-**Resonance:** Barely visible distortion  
-**Lighting:** Cooler tone  
-**Emotion:** Self‑reflection  
+# 🌌 **SCENE 3 — The Lesson of Connection**
+
+## **Animation 3A — “Floating Stone”**  
+Stone rising slowly; resonance lines forming; mist drifting aside.
+
+## **Animation 3B — “Connection Pulse”**  
+Soft pulse between apprentice, stone, and ground; cloak edges softening.
 
 ---
 
-# 🌫️ **SCENE 3 — The First Lesson**
+# 🌿 **SCENE 4 — The Practice of Listening**
 
-## **Animation 3A — “Stone Lift Demonstration”**
-**Shot Type:** Medium wide  
-**Motion Sequence:**  
-Master raises hand; stone trembles, lifts smoothly into air.  
-**Resonance:** Soft shimmer, mist parting  
-**Lighting:** Cool, focused  
-**Emotion:** Awe rising  
+## **Animation 4A — “Micro‑Lift”**  
+Stone lifting a finger’s width; leaves responding; apprentice breathing steadily.
+
+## **Animation 4B — “Resonance Alignment”**  
+Ground shimmer aligning; stone stabilizing; cloak settling into calm arc.
 
 ---
 
-## **Animation 3B — “Stone Drifts to Hand”**
-**Shot Type:** Slow side pan  
-**Motion Sequence:**  
-Stone drifts toward Master’s palm; Little Gravity leans forward.  
-**Resonance:** Air distortion between stone and hand  
-**Lighting:** Mist glow  
-**Emotion:** Conceptual shift  
+# 🐾 **SCENE 5 — The Moment of Crisis**
+
+## **Animation 5A — “Branch Lift”**  
+Fallen branch rising gently; creature scrambling free; warm resonance glow.
+
+## **Animation 5B — “Careful Lowering”**  
+Branch descending softly; ground shimmer cushioning impact; apprentice exhaling.
 
 ---
 
-# 🌿 **SCENE 4 — The Listening Stone**
+# 🌇 **SCENE 6 — The Apprentice’s Oath of Gravity**
 
-## **Animation 4A — “Listening with Eyes Closed”**
-**Shot Type:** Medium close  
-**Motion Sequence:**  
-Little Gravity closes eyes, breath slows; leaves rustle.  
-**Resonance:** Soft shimmer between hands and stone  
-**Lighting:** Green‑gold filtered light  
-**Emotion:** Vulnerability  
+## **Animation 6A — “Oath Gesture”**  
+Apprentice placing hand over heart; cloak settling; evening light deepening.
+
+## **Animation 6B — “Final Resonance Pulse”**  
+Ground shimmer expanding outward; stone courtyard glowing softly; stillness returning.
 
 ---
 
-## **Animation 4B — “The First Lift”**
-**Shot Type:** Tight focus on pedestal  
-**Motion Sequence:**  
-Stone trembles → rises a finger’s width → settles back.  
-**Resonance:** Air thickens, micro‑pulse  
-**Lighting:** Light brightens slightly  
-**Emotion:** Breakthrough  
+# 🔒 **Canon Lock**
 
----
-
-# 🍂 **SCENE 5 — The Weight of Kindness**
-
-## **Animation 5A — “Kneeling Beside the Creature”**
-**Shot Type:** Low, warm angle  
-**Motion Sequence:**  
-Little Gravity kneels; creature trembles under branch.  
-**Resonance:** Warm glow forming  
-**Lighting:** Amber clearing light  
-**Emotion:** Empathy  
-
----
-
-## **Animation 5B — “Gentle Lift and Rescue”**
-**Shot Type:** Medium close  
-**Motion Sequence:**  
-Branch rises gently; creature scurries free; branch settles softly.  
-**Resonance:** Minimal distortion — kindness over power  
-**Lighting:** Warm, hopeful  
-**Emotion:** Relief → warmth  
-
----
-
-# 🌇 **SCENE 6 — The Apprentice’s Oath**
-
-## **Animation 6A — “Oath Gesture”**
-**Shot Type:** Medium wide  
-**Motion Sequence:**  
-Little Gravity raises hands, palms forward; Master mirrors stillness.  
-**Resonance:** Subtle shimmer around both  
-**Lighting:** Violet‑orange dusk  
-**Emotion:** Resolve  
-
----
-
-## **Animation 6B — “Hand on Shoulder”**
-**Shot Type:** Close  
-**Motion Sequence:**  
-Master places hand on Little Gravity’s shoulder; cloaks catch last light.  
-**Resonance:** Air stills  
-**Lighting:** Final rays of dusk  
-**Emotion:** Pride → beginning of mastery  
-
----
-
-# **Canon Lock**
-This file defines the **official Imagine animation prompts** for *Book 1 — Little Gravity*.  
-All animations must follow this blueprint.
+This file defines the **official Imagine animation scripts** for *Book 1 — Little Gravity*.  
+All animations and AR/VR sequences must follow this blueprint.
