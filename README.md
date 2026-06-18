@@ -6,7 +6,7 @@ Welcome to the root of the TriadicFrameworks canon.
 This repository contains the full module architecture, operator grammar,  
 and coherence‑driven documentation that powers the Triadic ecosystem.
 
-### [Start Here — TriadicFrameworks in 30 Seconds](https://umaywant2.docsbook.io/triadicframeworks/)
+### [Start Here — TriadicFrameworks in 30 Seconds](https://docs.triadicframeworks.org/docs/starter/)
 Below is a rotating micro‑playlist introducing core RTT concepts,  
 dimensional operators, and cross‑module intuition.
 
