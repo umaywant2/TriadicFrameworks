@@ -24,7 +24,7 @@
 
 # 🌐 TriadicFrameworks — Canonical Sitemap (2026 Refresh)
 
-(All modules preserved. Ordering corrected. Drift removed. No deletions.)                _Alternate Site_ 🥈 [docsbook.io](https://umaywant2.docsbook.io/triadicframeworks/docs/rtt/)
+(All modules preserved. Ordering corrected. Drift removed. No deletions.)                _Alternate Site_ 🥈 [docsbook.io](https://docs.triadicframeworks.org/docs/rtt/)
 
 ## 🔟 Ten‑in‑1 Theory Menu
 
