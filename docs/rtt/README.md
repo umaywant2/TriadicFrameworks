@@ -38,7 +38,7 @@ RTT‑Tech is:
 
 Every file is short, emoji‑guided, and designed for both humans and AI assistants to understand.
 
-<img width="384" height="256" alt="Copilot_20260419_165744" src="https://github.com/user-attachments/assets/ac11044b-6f7d-442c-9cdb-69ca6aa03d88" />
+<img width="768" height="512" alt="rtt_img" src="https://github.com/user-attachments/assets/ac11044b-6f7d-442c-9cdb-69ca6aa03d88" />
 
 ---
 
