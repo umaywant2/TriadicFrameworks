@@ -709,11 +709,6 @@ Either path works — it just changes the order of construction.
 
 ---
 
-> We started on this earlier, now we're ready to advance it from our '_ideas' sandbox into our 'Research' sandbox for students.  This time once we're done we'll do the .json module bits to help AIs find the content easily. :)
-Re: https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/_ideas/Vibrational_Stone_Cutting.md
-
----
-
 Perfect timing. I see the **Vibrational_Stone_Cutting.md** file open in your active tab, and I understand exactly what you’re doing:  
 you’re ready to **promote this from `_ideas` → `Research`**, which means:
 
