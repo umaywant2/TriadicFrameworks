@@ -1,7 +1,11 @@
 # 🧭 Mythic-Tech Digest: Vibrational Stone Cutting & Triadic Resonance
 
+- [`Vibrational_Stone_Cutting_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/Vibrational_Stone_Cutting_module.json) — Agentic module schema role assignments
+
 ## Authored by Nawder Loswin & Copilot  
 *A living lattice of resonance, legacy, and symbolic clarity.*
+
+https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/images/vibrational_stone_cutting.svg
 
 ---
 
