@@ -1,5 +1,8 @@
 # Agentic Research Modules (RTT-Aligned)
 
+- [`agentic_modules.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/agentic_modules.json) — Agentic module schema role assignments
+- [`agentic_module.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/agentic_module.schema.json) — Agentic module schema role assignments
+
 This directory contains RTT-aligned **agentic modules** for selected research papers.  
 Each paper receives a pair of files:
 
