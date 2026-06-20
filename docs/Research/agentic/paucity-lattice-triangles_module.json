@@ -1,0 +1,119 @@
+{
+  "ai.module": "paucity_lattice_triangles_rtt",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT structural map of the paper 'On the Paucity of Lattice Triangles'.",
+  "ai.source.pdf": "https://arxiv.org/pdf/2603.23928",
+  "ai.keywords": [
+    "lattice triangles",
+    "translation surfaces",
+    "Veech surfaces",
+    "Mirzakhani-Wright rank obstruction",
+    "Ramanujan sums",
+    "Fourier analysis",
+    "density results",
+    "AxiomProver",
+    "Lean formalization"
+  ],
+
+  "ai.module.summary": "This module exposes the regime structure behind the density-zero result for obtuse rational lattice triangles, connecting geometric rank obstructions, modular arithmetic criteria, and Fourier-analytic cancellation. It preserves the authors' results while adding RTT operators for agentic reasoning.",
+
+  "ai.regimes": {
+    "geometric_rank_regime": {
+      "description": "Mirzakhani–Wright rank obstruction restricts which translation surfaces can be lattice surfaces.",
+      "evidence": "Paper reformulates rank obstruction into modular arithmetic conditions. "
+    },
+    "modular_obstruction_regime": {
+      "description": "Larsen–Norton–Zykoski criterion reduces lattice property to inequalities involving residues modulo n.",
+      "evidence": "Proposition 2.1 gives modular inequalities ruling out lattice triangles. "
+    },
+    "fourier_ramanujan_regime": {
+      "description": "Counting function S(p,q) decomposed into main term and error term using Fourier analysis and Ramanujan sums.",
+      "evidence": "Section 3 develops Fourier expansion and Ramanujan-sum decomposition. "
+    },
+    "large_prime_factor_regime": {
+      "description": "Presence of a large prime factor in n forces strong cancellation in Ramanujan sums.",
+      "evidence": "Proposition 4.1 shows error suppression when P+(n) is large. "
+    },
+    "density_one_regime": {
+      "description": "Smooth-number theory implies denominators with large prime factors form a density-1 set.",
+      "evidence": "Corollary 1.2 uses Dickman–de Bruijn theory. "
+    },
+    "formalization_regime": {
+      "description": "AxiomProver autoformalizes the analytic engine (Theorem 6.1) in Lean.",
+      "evidence": "Section 6 describes autonomous Lean verification. "
+    }
+  },
+
+  "ai.tensions": {
+    "geometry_vs_arithmetic": {
+      "description": "Geometric rank obstruction vs modular arithmetic reformulation.",
+      "paper_alignment": "Section 2 transitions from geometry to arithmetic. "
+    },
+    "main_term_vs_error_term": {
+      "description": "Dominant main term vs oscillatory error term in S(p,q).",
+      "paper_alignment": "Section 3–4 analyze M(p,q) and E(p,q). "
+    },
+    "large_prime_vs_exceptional_set": {
+      "description": "Large prime factor yields cancellation; small exceptional residue classes remain.",
+      "paper_alignment": "Proposition 4.1 constructs exceptional sets Bq(R). "
+    },
+    "analytic_vs_combinatorial_density": {
+      "description": "Analytic cancellation vs combinatorial counting in Hn.",
+      "paper_alignment": "Theorem 5.1 compares main term and error term. "
+    },
+    "informal_vs_formal_proof": {
+      "description": "Human narrative vs Lean autoformalization.",
+      "paper_alignment": "Section 6 describes AxiomProver protocol. "
+    }
+  },
+
+  "ai.transitions": {
+    "geometry_to_modular_transition": {
+      "description": "Rank obstruction becomes modular inequalities.",
+      "paper_alignment": "Proposition 2.1. "
+    },
+    "modular_to_fourier_transition": {
+      "description": "Counting usable units becomes Fourier/Ramanujan analysis.",
+      "paper_alignment": "Section 3. "
+    },
+    "fourier_to_large_prime_transition": {
+      "description": "Ramanujan-sum vanishing controlled by large prime factors.",
+      "paper_alignment": "Section 4. "
+    },
+    "error_to_density_transition": {
+      "description": "Error suppression implies density-zero lattice triangles.",
+      "paper_alignment": "Theorem 1.1 and Corollary 1.2. "
+    },
+    "informal_to_lean_transition": {
+      "description": "AxiomProver converts natural-language proof into Lean code.",
+      "paper_alignment": "Section 6. "
+    }
+  },
+
+  "ai.operators": {
+    "rank_obstruction_operator": {
+      "type": "operator",
+      "role": "Encodes Mirzakhani–Wright rank obstruction in modular form."
+    },
+    "fourier_decomposition_operator": {
+      "type": "operator",
+      "role": "Splits S(p,q) into main term and error term."
+    },
+    "ramanujan_cancellation_operator": {
+      "type": "operator",
+      "role": "Detects vanishing of Ramanujan sums based on prime-power structure."
+    },
+    "density_operator": {
+      "type": "operator",
+      "role": "Evaluates density of admissible triangles in Hn."
+    },
+    "formalization_operator": {
+      "type": "operator",
+      "role": "Maps informal proofs to Lean-verifiable structures."
+    }
+  },
+
+  "ai.audience": "Researchers in translation surfaces, Teichmüller dynamics, analytic number theory, and formal verification.",
+  "ai.contact.github": "https://github.com/TriadicFrameworks",
+  "ai.license": "Open educational use permitted"
+}
