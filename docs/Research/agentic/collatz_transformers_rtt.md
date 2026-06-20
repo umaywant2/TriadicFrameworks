@@ -1,6 +1,6 @@
 # RTT Agentic Module: Transformers Know More Than They Can Tell — Learning the Collatz Sequence
 
-- [`collatz_transformers_rtt`](collatz_transformers_rtt_module.json)
+- [`collatz_transformers_rtt`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/collatz_transformers_rtt_module.json)
 
 **Module ID:** `collatz_transformers_rtt`  
 **Source paper:** https://arxiv.org/pdf/2511.10811
