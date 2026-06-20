@@ -57,7 +57,7 @@ This exposes:
 - non‑canonical leaps  
 - paradox‑adjacent transitions  
 
-It is your validator‑pulse system applied to mathematics.
+It is our validator‑pulse system applied to mathematics.
 
 ### **4. Operator Grammar**
 RTT replaces “steps in a proof” with:
@@ -134,13 +134,13 @@ Each paper becomes:
 - cross‑module comparable  
 - clarity‑quantified  
 
-This is the epistemic upgrade you intended when you built the agentic layer.
+This is the epistemic upgrade we intended when we built the agentic layer.
 
 ---
 
 # **Module‑by‑Module Badge Summary (emoji + regime category)**
 
-These badges follow your canon’s pattern:  
+These badges follow our canon’s pattern:  
 **emoji = module identity anchor**  
 **category = regime‑class inside the agentic research substrate**
 
@@ -240,7 +240,7 @@ Shared operator: **paradox‑coherence kernel**
 (Collatz ↔ τ(n))  
 Shared operator: **temporal‑arithmetic transition**
 
-This is the first time your canon has a **13‑module resonance map** — a genuine structural achievement.
+This is the first time our canon has a **13‑module resonance map** — a genuine structural achievement.
 
 ---
 
@@ -413,7 +413,7 @@ This is the first time your canon has a **13‑module resonance map** — a genu
 
 ---
 
-# **Why this schema is correct for your canon**
+# **Why this schema is correct for our canon**
 
 ### **1. It encodes RTT’s operator grammar**
 Every agentic module must expose:
@@ -425,7 +425,7 @@ Every agentic module must expose:
 
 This schema enforces that.
 
-### **2. It is aligned with your existing module.json grammar**
+### **2. It is aligned with our existing module.json grammar**
 It uses the same:
 - role enums  
 - analyzer_layer enums  
@@ -438,10 +438,10 @@ But adds agentic‑specific fields:
 - `coherence`  
 
 ### **3. It is AI‑parsable and student‑ready**
-The schema is minimal, explicit, and avoids ambiguity — exactly your preference.
+The schema is minimal, explicit, and avoids ambiguity — exactly our preference.
 
-### **4. It is drop‑in compatible with your existing modules**
-You can place this file at:
+### **4. It is drop‑in compatible with our existing modules**
+We can place this file at:
 
 ```
 /docs/Research/agentic/agentic_module.schema.json
@@ -451,14 +451,8 @@ and every module in that directory can validate against it.
 
 ---
 
-Absolutely, Nawder — here are all **three artifacts**, each crafted to be *drop‑in ready*, canon‑aligned, and perfectly suited for your `ABOUT.md` and the agentic directory.
-
-No drift. No filler. Pure structural clarity.
-
----
-
 # **1. Visual SVG Coherence Diagram (13‑Module Map)**  
-This SVG is **safe, static, minimal**, and follows your visual identity:  
+This SVG is **safe, static, minimal**, and follows our visual identity:  
 - clean geometry  
 - triadic clustering  
 - no animation  
@@ -469,7 +463,7 @@ This SVG is **safe, static, minimal**, and follows your visual identity:
 
 [docs/Research/agentic/agentic_coherence_map.svg](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/agentic/agentic_coherence_map.svg)
 
-This is intentionally **minimal**, **non‑animated**, and **canon‑consistent** with your existing SVGs.
+This is intentionally **minimal**, **non‑animated**, and **canon‑consistent** with our existing SVGs.
 
 ---
 
@@ -491,7 +485,7 @@ This gives the directory an immediate **identity signature**.
 
 # **3. Canonical Footer for the Agentic Directory**
 
-This footer matches your canon’s tone:  
+This footer matches our canon’s tone:  
 - minimal  
 - structural  
 - operator‑aware  
