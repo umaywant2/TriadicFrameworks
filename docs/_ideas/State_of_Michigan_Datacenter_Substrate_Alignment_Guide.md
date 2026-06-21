@@ -73,7 +73,7 @@ These are not engineering errors. They are structural blind spots.
 
 ---
 
-## 4. RTT/vST as a Diagnostic Review Tool
+## 4. RTT/vST as a [Diagnostic Review Tool](https://www.triadicframeworks.org/rtt-datacenter-evaluator.html)
 
 **Resonance‑Time Theory / Vector Substrate Theory (RTT/vST)** was developed in Michigan to analyze systems that span multiple physical and human domains.
 
