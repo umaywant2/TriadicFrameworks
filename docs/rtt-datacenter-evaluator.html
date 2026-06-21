@@ -122,43 +122,113 @@
 
     select.addEventListener('change', () => {
       const dc = JSON.parse(select.value);
-     const prompt = `You are an expert in advanced triadic cognitive architectures and Resonance-Time Theory (RTT) by Nawder Loswin (triadicframeworks.org).
-
-Perform a structurally unbiased evaluation of the following datacenter using RTT principles (triadic resonance grammar, structural-aware dimensional cores, qCompute with RTT-Inside, morphic resonance modules, agentic cross-domain coherence, etc.):
+     const prompt = `🌐 **RTT Datacenter Evaluation**
+You are operating as a practitioner of Resonance‑Time Theory (RTT), using triadic structural awareness rather than opinion, hype, or single‑perspective drift.
+     
+Your task is to *listen* to the datacenter as a structure — its physical substrate, its governance envelope, its cultural field, its long‑horizon resonance — and articulate what it reveals.
 
 Datacenter: ${dc.name}
 Location: ${dc.loc}
 Status: ${dc.status}
 Operator: ${dc.provider}
 
-Analyze across the full RTT module stack:
+Evaluate the datacenter using the full RTT module stack.  
+Move slowly, structurally, and with dimensional clarity.
 
-• **Facilities Module** — water availability, thermal envelope, cooling stability, physical substrate drift, seismic profile, fiber topology, and environmental continuity
+• **1. Facilities Module — “The Physical Story”**  
+Describe how the site behaves as a physical organism:
 
-• **Governance Module (GSM)** — regulatory predictability, grid governance, energy policy stability, municipal alignment, and long-horizon infrastructure commitments
+- Water availability and long‑horizon hydrological stability  
+- Thermal envelope, cooling coherence, and seasonal drift  
+- Seismic and geophysical predictability  
+- Fiber topology and network resonance  
+- Environmental continuity and substrate fatigue  
 
-• **RSGM (Religious Substrate Grammar Model)** — local belief-regime patterns, cultural substrate stability, social-coherence drift, mythic-operator density, and population-level resonance behavior
+Focus on *how the physical layer breathes*.
 
-• **NIST Module** — standards alignment, interoperability, auditability, measurement integrity, and cross-domain compliance pathways
+• **2. Governance Module (GSM) — “The Civic Field”**  
+Examine the governance environment as a resonance structure:
 
-• **Medicine Module** — bio-safety envelope, public health infrastructure, emergency response coherence, and population-level physiological stability relevant to large-scale compute operations
+- Regulatory predictability and policy half‑life  
+- Grid governance and energy‑mix stability  
+- Municipal alignment and infrastructure maturity  
+- Long‑horizon commitments and institutional coherence  
 
-• **RTT/1, RTT/2, RTT/3** — evaluate the datacenter’s compatibility with triadic resonance layers:
-   - RTT/1: structural continuity and substrate coherence
-   - RTT/2: cross-domain propagation and operator grammar stability
-   - RTT/3: high-order resonance, morphic alignment, and dimensional uplift potential
+Treat governance as a **temporal substrate**, not a political one.
 
-• **RTT/Inside Earth Sims** — assess environmental simulation fidelity, substrate predictability, climate-envelope stability, and long-horizon Earth-system modeling potential for qCompute workloads
+• **3. RSGM — “The Cultural Substrate”**  
+Observe the cultural field without judgment:
 
-Also evaluate:
+- Local belief‑regime patterns  
+- Cultural substrate stability and drift  
+- Mythic‑operator density  
+- Population‑level resonance behavior  
 
-• Power, cooling, networking (including classic RTT latency), and scalability for high-density AI/GPU workloads  
-• Compatibility & optimization opportunities with RTT-Inside qCompute framework  
-• Potential for deploying structurally unbiased reasoning systems (no single-perspective drift)  
-• Strengths, hidden resonance gaps, and coherence opportunities  
-• How this physical infrastructure could enhance or constrain RTT’s modules and abilities  
+This is not anthropology — it’s **substrate literacy**.
 
-Be transparent, balanced, and triadic — present multiple structural perspectives. No hype, no politics. Pure structural awareness.`;
+• **4. NIST Module — “The Standards Spine”**  
+Assess the site’s alignment with measurable, auditable structure:
+
+- Interoperability and standards coherence  
+- Measurement integrity  
+- Cross‑domain compliance pathways  
+- Auditability and long‑term maintainability  
+
+This is the **structural backbone** of the site.
+
+• **5. Medicine Module — “The Human Envelope”**  
+Evaluate the human‑system interface:
+
+- Public health infrastructure  
+- Emergency response coherence  
+- Bio‑safety envelope  
+- Population‑level physiological stability relevant to compute density  
+
+A datacenter is always embedded in a **human physiological field**.
+
+• **6. RTT/1, RTT/2, RTT/3 — “The Triadic Stack”**  
+Evaluate resonance across the three RTT layers:
+
+• **RTT/1 — Structural Continuity**  
+Does the site maintain coherent substrate behavior?
+
+• **RTT/2 — Cross‑Domain Propagation**  
+Do operators, policies, and physical systems propagate cleanly across layers?
+
+• **RTT/3 — High‑Order Resonance**  
+Does the site exhibit morphic alignment, uplift potential, or dimensional coherence?
+
+• **7. RTT/Inside Earth Sims — “The Planetary Layer”**  
+Assess the site’s relationship to Earth‑system predictability:
+
+- Climate‑envelope stability  
+- Environmental simulation fidelity  
+- Long‑horizon substrate predictability  
+- Suitability for qCompute workloads  
+
+This is the **deep‑time** layer.
+
+• **8. Compute & Infrastructure — “The Practical Spine”**  
+Evaluate:
+
+- Power, cooling, and networking  
+- AI/GPU density potential  
+- RTT latency profile  
+- Scalability and future‑proofing  
+- Compatibility with RTT‑Inside qCompute  
+
+This is where the physical and triadic layers meet.
+
+• **9. Resonance Summary — “What the Site Reveals”**  
+Provide:
+
+- Strengths  
+- Hidden resonance gaps  
+- Coherence opportunities  
+- Long‑horizon potential  
+
+Speak in **triadic clarity** — not praise, not critique, just structural truth.`
+;
 
       document.getElementById('prompt-text').textContent = prompt;
       document.getElementById('prompt-area').classList.remove('hidden');
