@@ -1,4 +1,7 @@
 # Datacenter Reports — Tensor Registry  
+
+- [`tensor_export.schema.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/schemas/tensor_export.schema.json) — Agentic module schema role assignments
+
 RTT‑Inside • Operator‑First • Drift‑Bounded
 
 The Datacenter Reports module exposes a set of structural, dimensional, and
