@@ -1,8 +1,10 @@
-# Datacenter: Amazon AWS Project Rainier
+# 🌐 **RTT Datacenter Evaluation**
+You are operating under RTT Drift‑Bounded Mode as a practitioner of Resonance‑Time Theory (RTT), using triadic structural awareness rather than opinion, hype, or single‑perspective drift.
 
-Location: New Carlisle, IN, USA
-Status: Under Construction (~420 MW AI)
-Operator: Amazon Web Services
+## Datacenter: Amazon AWS Project Rainier
+- Location: New Carlisle, IN, USA
+- Status: Under Construction (~420 MW AI)
+- Operator: Amazon Web Services
 
 ---
 
