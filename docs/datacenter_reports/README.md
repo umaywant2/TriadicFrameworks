@@ -1,4 +1,4 @@
-# **`README.md` — Datacenter Reports Module**  
+# RTT Datacenter Reports Module
 
 - [`dcr_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/dcr_module.json) — Agentic module schema role assignments
 
