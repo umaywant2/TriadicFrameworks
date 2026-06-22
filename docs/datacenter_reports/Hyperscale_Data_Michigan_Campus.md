@@ -1,178 +1,243 @@
-🌐 **RTT Datacenter Evaluation**
+# Datacenter: Hyperscale Data Michigan Campus
 
-You are operating as a practitioner of Resonance‑Time Theory (RTT), using triadic structural awareness rather than opinion, hype, or single‑perspective drift.
-
-Your task is to *listen* to the datacenter as a structure—its physical substrate, its governance envelope, its cultural field, its long‑horizon resonance—and articulate what it reveals.
-
-**Datacenter:** Hyperscale Data Michigan Campus  
-**Location:** Michigan, USA  
-**Status:** Under Construction (roadmap to 340 MW AI)   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html)  
-**Operator:** Hyperscale Data
-
-Evaluate the datacenter using the full RTT module stack.  
-Move slowly, structurally, and with dimensional clarity.
+Location: Michigan, USA
+Status: Under Construction (up to 340 MW AI)
+Operator: Hyperscale Data
 
 ---
 
-### • 1. Facilities Module — “The Physical Story”
+### 1. Facilities module — structural diagnostics
 
-The Michigan campus sits on an approximately 34‑acre site with existing digital‑asset and colocation operations and a planned ramp to 340 MW.   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html) The physical story is one of **incremental densification** on a relatively compact footprint.
+**Structural Presence:**  
+- **Location:** Datacenter sited in Michigan, USA.  
+- **Capacity envelope:** Under construction with stated upper bound of 340 MW AI.  
+- **Campus form:** Defined as a “Michigan Campus” operated by Hyperscale Data.
 
-- **Water & hydrological stability:**  
-  Michigan’s Great Lakes region offers strong long‑horizon freshwater availability and relatively low drought risk compared to arid hyperscale hubs. Hydrological stability is a *structural advantage* for high‑density AI cooling, but local watershed impact, discharge permits, and thermal pollution envelopes will determine whether this advantage is realized or eroded.
+**Structural Absence:**  
+- **Water regime:** No information on water sources, withdrawal rights, or hydrological baselines.  
+- **Thermal envelope:** No data on cooling architecture, seasonal design parameters, or heat‑rejection pathways.  
+- **Seismic/geophysical:** No seismic zoning, soil profile, or geophysical risk mapping provided.  
+- **Fiber topology:** No description of fiber routes, peering points, or network redundancy.  
+- **Fatigue envelope:** No data on material lifetimes, maintenance cycles, or environmental stressors.
 
-- **Thermal envelope & seasonal drift:**  
-  A temperate continental climate with cold winters and warm summers supports efficient free‑air or mixed‑mode cooling for a significant portion of the year. Seasonal swings introduce design pressure on cooling controls and envelope tuning; the site’s ability to exploit shoulder seasons without over‑engineering will shape its long‑run efficiency resonance.
-
-- **Seismic & geophysical predictability:**  
-  Michigan is a low‑seismic, low‑catastrophic‑event region relative to coastal or tectonic hubs. This yields a **stable geophysical substrate**, with primary risks skewed toward severe storms, ice, and grid‑level weather events rather than ground motion.
-
-- **Fiber topology & network resonance:**  
-  The campus is positioned as an AI‑centric facility; its value depends on high‑capacity, low‑latency connectivity into national and global backbones. The structural question is not “is there fiber?” but “does the topology support AI‑era east‑west traffic, multi‑cloud interconnects, and RTT‑Inside workloads without becoming a choke point?”
-
-- **Environmental continuity & substrate fatigue:**  
-  The phased buildout (30 MW → 70 MW → 340 MW) implies repeated construction cycles, grid upgrades, and thermal re‑tuning.   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html) The risk is **substrate fatigue**—incremental changes that accumulate into a patchwork rather than a coherent physical organism. The opportunity is to treat each phase as a triadic refinement, not a bolt‑on.
-
-**Physical layer verdict:** strong hydrological and geophysical substrate; success hinges on whether the phased expansion preserves a coherent thermal and network organism rather than a stitched‑together campus.
+**Structural Tension:**  
+- **Capacity vs. unknown cooling:** High AI capacity (up to 340 MW) without any stated cooling or water substrate introduces unresolved physical coherence.  
+- **Campus scale vs. absent network spine:** “Hyperscale” campus designation without fiber topology description creates a gap between scale and stated connectivity.  
+- **Location vs. environmental regime:** Michigan location is specified, but no linkage to climate, hydrology, or geophysical regimes, leaving physical behavior unarticulated.
 
 ---
 
-### • 2. Governance Module (GSM) — “The Civic Field”
+### 2. Governance module (GSM) — structural diagnostics
 
-- **Regulatory predictability & policy half‑life:**  
-  Michigan and U.S. federal regimes provide relatively stable property, contract, and infrastructure law. However, AI‑era regulation (energy use, emissions, water, data, and safety) is in motion. The policy half‑life around AI and large‑scale compute is **shortening**, which introduces temporal uncertainty over the 44‑month expansion horizon.   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html)
+**Structural Presence:**  
+- **Jurisdiction:** Datacenter located within Michigan, USA, implying multi‑layer governance (federal, state, local) as a structural fact.  
+- **Operator identity:** Hyperscale Data as operator implies an organizational governance locus.
 
-- **Grid governance & energy‑mix stability:**  
-  The campus depends on a major power upgrade to 300 MW from the local utility plus an additional 40 MW from natural gas.   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html) This creates a **tight coupling** between datacenter growth and regional grid planning. Governance quality here is measured by clarity of interconnection agreements, transparency of upgrade timelines, and how cleanly AI load is integrated into regional decarbonization pathways.
+**Structural Absence:**  
+- **Regulatory regime:** No explicit regulatory frameworks, permitting structures, or oversight bodies named.  
+- **Policy half‑life:** No information on stability or duration of relevant policies.  
+- **Grid governance:** No description of grid operator, energy mix, or reliability structures.  
+- **Municipal alignment:** No data on municipal infrastructure agreements or planning integration.  
+- **Long‑horizon commitments:** No stated PPA terms, zoning covenants, or institutional pledges.
 
-- **Municipal alignment & infrastructure maturity:**  
-  Local authorities that view the campus as a long‑term anchor for jobs and tax base can become stabilizing partners—or, if expectations diverge (e.g., over noise, water, or land use), friction points. The structural question: is the campus framed as a **shared civic asset** or a **private extraction node**?
-
-- **Long‑horizon commitments & institutional coherence:**  
-  Shelf registration for up to $125M is framed as long‑term financial flexibility rather than immediate capital raise.   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html) This suggests a governance posture oriented toward staged commitments. Coherence will depend on whether financial, regulatory, and infrastructure timelines remain synchronized or drift out of phase.
-
-**Civic field verdict:** governance substrate is potentially stable but tightly coupled to evolving AI, energy, and climate policy; temporal misalignment between expansion promises and regulatory evolution is the main resonance risk.
-
----
-
-### • 3. RSGM — “The Cultural Substrate”
-
-- **Local belief‑regime patterns:**  
-  A large AI‑centric campus in Michigan will intersect narratives about jobs, automation, energy use, and environmental stewardship. Some actors will frame it as *future‑proofing the region*; others may see it as *resource‑intensive and opaque*. Both narratives will coexist.
-
-- **Cultural substrate stability & drift:**  
-  Midwestern industrial regions carry long memory of manufacturing booms and busts. This history shapes expectations: communities may be both hopeful and wary. The cultural substrate is **experienced with cycles**, which can support resilience if communication is honest and long‑term.
-
-- **Mythic‑operator density:**  
-  AI, “hyperscale,” and “340 MW” are mythic operators in public discourse—standing in for power, opacity, and transformation. If the operator leans into spectacle rather than clarity, mythic density will rise and trust will fall.
-
-- **Population‑level resonance behavior:**  
-  The key variable is whether the campus is legible: clear on water use, energy sourcing, jobs, and environmental impact. High legibility tends to dampen rumor‑driven resonance; low legibility amplifies it.
-
-**Cultural verdict:** the substrate is capable of stable partnership but is sensitive to perceived extraction and opacity; mythic operators around AI and energy must be handled with structural clarity, not marketing.
+**Structural Tension:**  
+- **Multi‑layer jurisdiction vs. unspecified rules:** Presence of federal/state/local layers without explicit regulatory mapping creates governance opacity.  
+- **High‑capacity build vs. unknown grid substrate:** 340 MW AI envelope with no grid governance description yields unresolved energy‑field structure.  
+- **Operator vs. civic field:** Named operator without any civic or institutional alignment surfaces a gap between corporate governance and public substrate.
 
 ---
 
-### • 4. NIST Module — “The Standards Spine”
+### 3. RSGM — cultural substrate diagnostics
 
-- **Interoperability & standards coherence:**  
-  An AI‑centric campus targeting 340 MW will be expected to align with established data center standards (e.g., Tier classifications, security frameworks) and emerging AI‑specific best practices. The structural question is whether standards are treated as **minimum compliance** or as a **design spine**.
+**Structural Presence:**  
+- **Regional context:** Michigan, USA implies existence of a local population and cultural field, but only as a geographic fact.  
+- **Industrial framing:** “Hyperscale Data Michigan Campus” suggests a technology‑industrial presence.
 
-- **Measurement integrity:**  
-  For a site of this scale, energy use, PUE, water usage effectiveness, emissions, and reliability metrics must be measured and reported with high integrity. Without this, the campus cannot meaningfully participate in serious AI, ESG, or regulatory conversations.
+**Structural Absence:**  
+- **Belief‑regime patterns:** No description of local values, attitudes, or meaning‑structures.  
+- **Substrate stability:** No data on cultural continuity, volatility, or drift.  
+- **Mythic‑operator density:** No reference to narratives, symbols, or mythic frames around AI or infrastructure.  
+- **Resonance behavior:** No information on population‑level responses or engagement with the campus.
 
-- **Cross‑domain compliance pathways:**  
-  As workloads shift from digital asset mining to AI/HPC, the compliance envelope changes (data protection, model safety, export controls, etc.). The standards spine must be capable of **cross‑domain evolution**, not locked into a single workload regime.
-
-- **Auditability & long‑term maintainability:**  
-  A 44‑month expansion window plus multi‑decade operational horizon demands that documentation, change control, and incident records be auditable across leadership changes and technology generations.
-
-**Standards verdict:** the site’s long‑term resonance depends on whether NIST‑like structure is embedded early as a backbone, not retrofitted once AI workloads arrive at scale.
-
----
-
-### • 5. Medicine Module — “The Human Envelope”
-
-- **Public health infrastructure:**  
-  The campus draws workers, contractors, and support services into the region. Local healthcare capacity, emergency services, and occupational health standards form the human envelope around high‑density compute.
-
-- **Emergency response coherence:**  
-  High‑power facilities require tight integration with fire, EMS, and regional disaster planning. The question is whether emergency protocols are co‑designed with local agencies or simply documented and filed.
-
-- **Bio‑safety envelope:**  
-  While not a bio‑lab, the site’s energy and thermal footprint interacts with air quality, noise, and micro‑climate. These are subtle but real contributors to human physiological experience.
-
-- **Population‑level physiological stability:**  
-  Construction and operation phases can alter traffic, noise, and light patterns. If unmanaged, these can degrade local sleep, stress, and overall physiological stability; if managed well, impacts can be minimized and partially offset by economic stability.
-
-**Human envelope verdict:** structurally manageable, but only if emergency integration and environmental externalities are treated as first‑class design constraints, not afterthoughts.
+**Structural Tension:**  
+- **Industrial scale vs. unarticulated culture:** Large AI campus implied, but cultural substrate is structurally silent, creating a gap between physical build and meaning‑field.  
+- **Local presence vs. absent resonance:** Geographic anchoring without any resonance description leaves the human‑cultural coupling undefined.  
+- **Civic vs. cultural modules:** Governance is implicitly present via jurisdiction, but cultural substrate is unmodeled, producing cross‑field asymmetry.
 
 ---
 
-### • 6. RTT/1, RTT/2, RTT/3 — “The Triadic Stack”
+### 4. NIST module — standards spine diagnostics
 
-**RTT/1 — Structural Continuity**  
-The campus exhibits a clear structural narrative: a 30 MW facility scaling to 340 MW through staged grid and gas upgrades.   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html) Continuity risk arises if each phase is optimized locally (for cost or speed) without preserving a coherent whole. If the same structural grammar governs all phases, RTT/1 can remain strong.
+**Structural Presence:**  
+- **Datacenter category:** Hyperscale AI campus implies existence of technical systems that could be subject to standards and audits.  
+- **Operator locus:** Hyperscale Data provides a single organizational anchor for potential compliance regimes.
 
-**RTT/2 — Cross‑Domain Propagation**  
-Policies around energy, water, safety, and transparency must propagate cleanly from corporate strategy to on‑the‑ground operations and into community experience. Any mismatch—e.g., sustainability claims that don’t match local perception—will show up as RTT/2 friction.
+**Structural Absence:**  
+- **Interoperability:** No mention of specific standards (e.g., security, safety, interoperability) or frameworks.  
+- **Measurement integrity:** No data on metering, monitoring, or verification structures.  
+- **Cross‑domain compliance:** No stated pathways for environmental, safety, or data compliance.  
+- **Auditability:** No description of audit mechanisms, logging regimes, or certification processes.  
+- **Maintainability:** No information on lifecycle management or standards‑based maintenance.
 
-**RTT/3 — High‑Order Resonance**  
-At RTT/3, the question is: does this campus *uplift* its region’s long‑term trajectory? That would look like durable jobs, grid modernization, climate‑aligned energy sourcing, and genuine community partnership. If instead it amplifies extraction narratives and grid stress, high‑order resonance will be weak or negative.
-
----
-
-### • 7. RTT/Inside Earth Sims — “The Planetary Layer”
-
-- **Climate‑envelope stability:**  
-  Michigan’s climate is relatively buffered from some extreme heat trends but not from broader climate volatility (storms, precipitation shifts, grid stress). The campus is not climate‑neutral; its energy draw participates in global emissions dynamics depending on the grid mix.
-
-- **Environmental simulation fidelity:**  
-  High‑density AI workloads can be used to model climate and grid behavior. A planetary‑aligned campus would allocate some capacity to **Earth‑system modeling and resilience work**, not only commercial inference and training.
-
-- **Long‑horizon substrate predictability:**  
-  Over decades, the key variables are grid decarbonization, water policy, and climate adaptation. The campus is structurally exposed to all three; its design should assume **non‑stationarity**, not a frozen climate baseline.
-
-- **Suitability for qCompute workloads:**  
-  If RTT‑Inside or qCompute‑like workloads require stable thermal and energy envelopes with high reliability, this site is promising—provided grid upgrades and redundancy are executed with planetary‑aware design.
-
-**Planetary verdict:** potentially strong alignment if energy sourcing and workload mix are consciously tuned toward climate‑compatible operation; otherwise, the site risks becoming a large, opaque energy sink.
+**Structural Tension:**  
+- **Hyperscale framing vs. absent standards spine:** Large‑scale AI capacity without explicit standards alignment leaves the structural backbone undefined.  
+- **Single operator vs. multi‑domain compliance:** One operator with no cross‑domain compliance mapping creates tension between organizational control and external verification.  
+- **Physical build vs. measurement silence:** Construction status with no measurement or audit structures described yields an incomplete structural spine.
 
 ---
 
-### • 8. Compute & Infrastructure — “The Practical Spine”
+### 5. Medicine module — human envelope diagnostics
 
-- **Power, cooling, and networking:**  
-  The roadmap to 340 MW with 300 MW from the utility and 40 MW from gas is ambitious.   [PR Newswire](https://www.prnewswire.com/news-releases/hyperscale-data-targets-full-buildout-of-340-mw-michigan-ai-data-center-campus-in-2029-302509243.html) The practical spine will be defined by how redundancy, cooling topology, and network fabric scale with this power, not just by nameplate capacity.
+**Structural Presence:**  
+- **Regional population:** Michigan, USA implies a surrounding human population and health systems at a basic structural level.  
+- **Embeddedness:** Datacenter is necessarily embedded in a human physiological field by virtue of location.
 
-- **AI/GPU density potential:**  
-  The campus is explicitly framed as AI‑optimized. This implies high rack densities, advanced cooling (liquid or hybrid), and strong east‑west bandwidth. The risk is designing for today’s GPU patterns while under‑preparing for future accelerator or memory‑centric architectures.
+**Structural Absence:**  
+- **Public health infrastructure:** No description of hospitals, clinics, or health‑system capacity near the campus.  
+- **Emergency response:** No data on fire, medical, or disaster response coherence.  
+- **Bio‑safety envelope:** No mention of safety protocols, exposure controls, or health‑related risk structures.  
+- **Physiological stability:** No information on population health metrics relevant to high compute density.
 
-- **RTT latency profile:**  
-  Latency will depend on interconnects to major AI regions and clouds. For RTT‑Inside use, the question is whether the site can host **low‑latency, high‑coherence** workloads that interact with other RTT‑aligned sites.
-
-- **Scalability & future‑proofing:**  
-  The phased plan suggests scalability is a core design principle. Future‑proofing will be measured by how easily the campus can adopt new cooling, power electronics, and accelerator types without major rework.
-
-- **Compatibility with RTT‑Inside qCompute:**  
-  If governance, measurement, and planetary alignment are strengthened, this site could host RTT‑Inside or qCompute workloads with high structural coherence.
-
-**Practical spine verdict:** strong potential, contingent on not over‑optimizing for a single generation of AI hardware or a single energy scenario.
+**Structural Tension:**  
+- **High compute density vs. unarticulated health field:** Up to 340 MW AI capacity with no human‑health interface description creates a tension between technical intensity and physiological substrate.  
+- **Embeddedness vs. medical opacity:** The site is structurally embedded in a human field, yet medical and emergency structures are unmodeled.  
+- **Governance vs. health:** Jurisdictional presence without explicit public health coupling yields a gap between civic and physiological envelopes.
 
 ---
 
-### • 9. Resonance Summary — “What the Site Reveals”
+### 6. RTT triadic stack — structural diagnostics
 
-- **Strengths:**  
-  Strong hydrological and geophysical substrate; clear phased roadmap; alignment with rising AI/HPC demand; potential to modernize regional grid infrastructure and economic base.
+#### RTT/1 — structural continuity
 
-- **Hidden resonance gaps:**  
-  Tight coupling to evolving AI and energy regulation; risk of substrate fatigue from phased buildout; potential misalignment between sustainability narratives and actual grid/water impacts; cultural sensitivity to perceived extraction.
+**Structural Presence:**  
+- **Single campus identity:** “Hyperscale Data Michigan Campus” provides a coherent site label.  
+- **Operator continuity:** Hyperscale Data as operator offers a continuous organizational substrate.  
+- **Capacity trajectory:** Under‑construction status with defined upper bound (340 MW AI) indicates a continuous build trajectory.
 
-- **Coherence opportunities:**  
-  Treat each expansion phase as a triadic refinement, not a patch; embed NIST‑like standards as a spine from the outset; co‑design emergency and environmental envelopes with local institutions; make energy, water, and emissions legible to the community.
+**Structural Absence:**  
+- **Layered physical continuity:** No explicit mapping of how water, power, cooling, and environment interlock over time.  
+- **Governance continuity:** No description of long‑term regulatory or policy continuity.  
+- **Operational continuity:** No data on redundancy, failover, or lifecycle planning.
 
-- **Long‑horizon potential:**  
-  If executed with structural honesty and planetary alignment, the campus can become a **regional resonance anchor** for AI‑era infrastructure. If not, it risks becoming a high‑power, low‑trust node in both civic and planetary fields.
+**Structural Tension:**  
+- **Named continuity vs. unmodeled layers:** Campus and operator continuity exist as labels, but physical and governance continuities are structurally silent.  
+- **Construction trajectory vs. unknown substrate:** Build path is defined, yet underlying environmental and civic substrates are not, creating continuity gaps.  
+- **RTT/1 vs. higher modules:** Structural continuity at naming level misaligns with absent continuity in facilities, governance, and human envelopes.
 
-Speak in **triadic clarity**—not praise, not critique, just structural truth.  
+#### RTT/2 — cross‑domain propagation
+
+**Structural Presence:**  
+- **Implicit multi‑domain presence:** Physical, governance, cultural, and human domains are implied by location and capacity.  
+- **Operator as cross‑domain node:** Hyperscale Data can act as a propagation node across domains.
+
+**Structural Absence:**  
+- **Propagation pathways:** No explicit mechanisms for how policies, physical systems, and cultural fields interact.  
+- **Feedback structures:** No description of cross‑domain feedback loops or coordination regimes.  
+- **Standards propagation:** No mapping of standards across technical, civic, and human layers.
+
+**Structural Tension:**  
+- **Multi‑domain existence vs. unarticulated coupling:** Domains exist structurally but lack defined propagation pathways, creating cross‑layer opacity.  
+- **High AI capacity vs. absent cross‑domain design:** Large compute envelope without cross‑domain propagation structures yields potential misalignment between technical and non‑technical layers.  
+- **RTT/2 vs. GSM/RSGM:** Governance and cultural modules are implied but not structurally connected, indicating propagation tension.
+
+#### RTT/3 — high‑order resonance
+
+**Structural Presence:**  
+- **Potential for resonance:** Hyperscale AI campus suggests a site capable of high‑order interactions across physical, civic, and cultural fields.  
+- **Triadic framing:** The request itself frames the site within RTT, creating a conceptual resonance scaffold.
+
+**Structural Absence:**  
+- **Morphic alignment:** No explicit description of how the site aligns with broader patterns or uplift potentials.  
+- **Dimensional coherence:** No data on design choices that support multi‑dimensional coherence.  
+- **Resonance metrics:** No metrics or indicators of high‑order resonance behavior.
+
+**Structural Tension:**  
+- **Conceptual RTT framing vs. absent site data:** RTT lens is present, but site‑specific resonance structures are largely unarticulated.  
+- **High‑order potential vs. low‑order description:** Capacity and location are given, yet higher‑order design and alignment are missing, creating a resonance gap.  
+- **RTT/3 vs. RTT/1–2:** High‑order layer is invoked without sufficient lower‑layer detail, producing vertical stack tension.
+
+---
+
+### 7. RTT/Inside Earth sims — planetary layer diagnostics
+
+**Structural Presence:**  
+- **Earth anchoring:** Michigan, USA location anchors the site within a specific Earth‑system context.  
+- **Climate relevance:** AI capacity (up to 340 MW) implies interaction with climate and environmental envelopes at a structural level.
+
+**Structural Absence:**  
+- **Climate envelope:** No explicit climate data, trends, or stability parameters.  
+- **Simulation fidelity:** No information on environmental modeling or Earth‑system simulations tied to the site.  
+- **Substrate predictability:** No long‑horizon environmental predictability structures described.  
+- **qCompute suitability:** No stated relationship to qCompute workloads or planetary modeling.
+
+**Structural Tension:**  
+- **Planetary embedding vs. absent modeling:** The site is embedded in Earth systems, yet those systems are unmodeled in the description.  
+- **High power vs. unknown climate envelope:** Large AI capacity without climate‑envelope articulation creates tension in planetary coupling.  
+- **RTT/Inside vs. site data:** The planetary module is conceptually invoked, but site‑specific Earth‑system structures are missing, yielding a modeling gap.
+
+---
+
+### 8. Compute & infrastructure — practical spine diagnostics
+
+**Structural Presence:**  
+- **Power envelope:** Up to 340 MW AI capacity explicitly stated.  
+- **AI/GPU potential:** “AI” capacity implies suitability for high‑density compute workloads.  
+- **Operator:** Hyperscale Data provides an infrastructure governance locus.
+
+**Structural Absence:**  
+- **Power architecture:** No description of substations, redundancy, or energy sources.  
+- **Cooling systems:** No data on cooling technologies, efficiency, or integration.  
+- **Networking:** No information on bandwidth, topology, or RTT latency characteristics.  
+- **Scalability:** No explicit future expansion pathways beyond the 340 MW upper bound.  
+- **qCompute compatibility:** No stated design features for RTT‑Inside qCompute.
+
+**Structural Tension:**  
+- **Defined capacity vs. undefined spine:** Power envelope is clear, but supporting infrastructure (cooling, networking, redundancy) is structurally absent.  
+- **AI focus vs. missing latency profile:** AI framing without RTT latency description creates a gap between compute intent and temporal behavior.  
+- **Future‑proofing vs. fixed bound:** “Up to 340 MW” suggests a limit, but scalability and adaptability structures are not articulated.
+
+---
+
+### 9. Taxes module — incentive substrate diagnostics
+
+**Structural Presence:**  
+- **Jurisdictional layers:** Federal, state (Michigan), and local levels are structurally implied by location.  
+- **Capital‑intensive build:** Hyperscale AI campus suggests interaction with tax and incentive regimes.
+
+**Structural Absence:**  
+- **Incentive baselines:** No explicit tax credits, abatements, or incentives described.  
+- **Depreciation envelopes:** No information on asset lifetimes or depreciation structures.  
+- **Incentive half‑life (IHL):** No data on duration or stability of any incentives.  
+- **Propagation vectors:** No mapping of how incentives propagate across federal, state, and local layers.  
+- **Alignment surfaces:** No explicit alignment with RRR, IE, or GSM structures.
+
+**Structural Tension:**  
+- **Capital scale vs. incentive opacity:** Large infrastructure investment with no incentive substrate description creates economic‑structural tension.  
+- **Multi‑layer jurisdiction vs. unmodeled propagation:** Presence of multiple tax layers without propagation mapping yields cross‑jurisdictional ambiguity.  
+- **Long‑horizon viability vs. absent IHL:** Datacenter implies long‑term operation, but incentive half‑life is unarticulated, leaving temporal viability structurally incomplete.
+
+---
+
+### 10. Resonance summary — structural triad
+
+**Strengths (structural presence):**  
+- **Location anchor:** Michigan, USA provides a clear geographic and jurisdictional substrate.  
+- **Operator clarity:** Hyperscale Data offers a single organizational locus.  
+- **Capacity envelope:** Up to 340 MW AI defines a strong compute spine at the level of declared intent.  
+
+**Hidden resonance gaps (structural absence):**  
+- **Physical substrate detail:** Water, cooling, seismic, fiber, and environmental fatigue are unmodeled.  
+- **Governance and standards:** Regulatory, grid, compliance, and audit structures are not articulated.  
+- **Human and cultural fields:** Public health, emergency response, and cultural resonance remain structurally silent.  
+- **Planetary and incentive layers:** Climate envelope, Earth‑system modeling, and tax/incentive substrates are absent.
+
+**Coherence opportunities (structural tension):**  
+- **Align capacity with physical envelope:** Articulating water, cooling, and environmental regimes to match the 340 MW AI spine.  
+- **Connect governance, standards, and incentives:** Mapping regulatory, compliance, and tax structures into a coherent temporal substrate.  
+- **Integrate human and cultural fields:** Structurally coupling the campus to health, emergency, and cultural substrates for cross‑domain continuity.  
+- **Clarify planetary and RTT layers:** Defining climate, Earth‑system, and qCompute relationships to stabilize high‑order resonance.
+
+**Long‑horizon potential (triadic view):**  
+- **RTT/1:** Strong naming, operator, and capacity anchors, but lower‑layer continuity needs explicit structural mapping.  
+- **RTT/2:** Multi‑domain presence offers propagation potential once coupling pathways are defined.  
+- **RTT/3:** High‑order resonance is currently latent; morphic alignment and dimensional coherence depend on filling the identified structural absences without violating drift‑bounded constraints.
