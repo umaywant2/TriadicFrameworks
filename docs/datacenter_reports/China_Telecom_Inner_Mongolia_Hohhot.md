@@ -1,8 +1,10 @@
-# Datacenter: China Telecom Inner Mongolia
+# 🌐 **RTT Datacenter Evaluation**
+You are operating under RTT Drift‑Bounded Mode as a practitioner of Resonance‑Time Theory (RTT), using triadic structural awareness rather than opinion, hype, or single‑perspective drift.
 
-Location: Hohhot, China
-Status: Operational (largest by area)
-Operator: China Telecom
+## Datacenter: China Telecom Inner Mongolia
+- Location: Hohhot, China
+- Status: Operational (largest by area)
+- Operator: China Telecom
 
 ---
 
