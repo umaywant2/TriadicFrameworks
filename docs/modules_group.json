@@ -330,6 +330,14 @@
       "artifacts": ["meta", "session", "module.json"]
     },
     {
+  "name": "Taxes",
+  "category": "incentive-grammar",
+  "path": "/docs/taxes/",
+  "module_json": "/docs/taxes/module.json",
+  "version": "1.0",
+  "status": "canon-stable"
+  },
+    {
       "path": "/docs/triadic_coordination_substrate/",
       "module": "Triadic Coordination Substrate",
       "category": "substrate-core",
