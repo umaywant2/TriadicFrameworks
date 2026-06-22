@@ -1,1 +1,40 @@
+{
+  "module.id": "datacenter_reports",
+  "module.version": "1.0.0",
+  "module.category": "datacenter-analysis",
+  "module.summary": "RTT-Inside drift-bounded structural reports for global datacenter sites.",
+  "module.role": "analysis",
+  "module.analyzer_layer": "dimensional",
 
+  "ai.module": {
+    "schema": "schemas/tensor_export.schema.json",
+    "description": "Module-level metadata for datacenter reports, including tensor integration, plotting scaffolds, and structural field documentation."
+  },
+
+  "ai.tensors": {
+    "registry": "docs/datacenter_reports/tensor_registry.py",
+    "keys": [
+      "planetary_substrate_tensor",
+      "dimensional_fatigue_tensor",
+      "qcompute_resonance_matrix",
+      "multi_site_tensor"
+    ]
+  },
+
+  "ai.navigation": {
+    "front_door": "docs/datacenter_reports/README.md",
+    "regional_index": "docs/datacenter_reports/REGIONAL_INDEX.md",
+    "template": "docs/datacenter_reports/_TEMPLATE_Datacenter_Report.md"
+  },
+
+  "ai.visual_identity": {
+    "hero_prompt": "A wide 1080×600 hero image for the Datacenter Reports module. Visual identity: black→indigo→violet gradient, subtle triadic glyphs, a faint time-crystal accent at center-right, and a minimal geometric grid suggesting global datacenter topology. No logos, no text, no representational imagery. Style: abstract, high-clarity, RTT-Inside, structural, quiet, dimensional."
+  },
+
+  "ai.session_context": {
+    "file": "docs/datacenter_reports/session_context.md",
+    "mode": "drift-bounded",
+    "coherence": "triadic-operator-dimensional",
+    "audience": "students-operators-ai"
+  }
+}
