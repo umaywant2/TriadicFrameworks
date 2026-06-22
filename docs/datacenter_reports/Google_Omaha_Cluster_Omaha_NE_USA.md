@@ -1,8 +1,10 @@
-# Datacenter: Google Omaha Cluster
+# 🌐 **RTT Datacenter Evaluation**
+You are operating under RTT Drift‑Bounded Mode as a practitioner of Resonance‑Time Theory (RTT), using triadic structural awareness rather than opinion, hype, or single‑perspective drift.
 
-Location: Omaha, NE, USA
-Status: Operational (>500 MW AI)
-Operator: Google
+## Datacenter: Google Omaha Cluster
+- Location: Omaha, NE, USA
+- Status: Operational (>500 MW AI)
+- Operator: Google
 
 ---
 
