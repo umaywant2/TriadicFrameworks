@@ -1,4 +1,7 @@
 # Taxes Module  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/taxes/module.json) — Agentic module schema role assignments
+
 ### Incentive‑Regime Substrate · Drift · Propagation · Half‑Lives
 
 ---
