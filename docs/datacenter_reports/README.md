@@ -1,10 +1,12 @@
 # **`README.md` — Datacenter Reports Module**  
 
-- [``](
+- [`dcr_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/dcr_module.json) — Agentic module schema role assignments
 
 **Mode:** Drift‑Bounded  
 **Scope:** Global Datacenter Field Reports  
 **Structure:** Triadic • Operator‑First • Canon‑Aligned
+
+<img width="768" height="512" alt="rtt_datacenter_evals_image" src="https://github.com/user-attachments/assets/a01b8304-51b6-4a70-a1c5-115a9575544e" />
 
 ---
 
