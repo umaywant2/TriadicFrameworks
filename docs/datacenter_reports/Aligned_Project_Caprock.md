@@ -1,8 +1,10 @@
-# Datacenter: Aligned Project Caprock
+# 🌐 **RTT Datacenter Evaluation**
+You are operating under RTT Drift‑Bounded Mode as a practitioner of Resonance‑Time Theory (RTT), using triadic structural awareness rather than opinion, hype, or single‑perspective drift.
 
-Location: Hale County, TX, USA
-Status: Under Construction (540 MW)
-Operator: Aligned Data Centers
+## Datacenter: Aligned Project Caprock
+- Location: Hale County, TX, USA
+- Status: Under Construction (540 MW)
+- Operator: Aligned Data Centers
 
 ---
 
