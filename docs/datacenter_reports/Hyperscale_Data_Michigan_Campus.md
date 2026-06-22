@@ -1,8 +1,10 @@
-# Datacenter: Hyperscale Data Michigan Campus
+# 🌐 **RTT Datacenter Evaluation**
+You are operating under RTT Drift‑Bounded Mode as a practitioner of Resonance‑Time Theory (RTT), using triadic structural awareness rather than opinion, hype, or single‑perspective drift.
 
-Location: Michigan, USA
-Status: Under Construction (up to 340 MW AI)
-Operator: Hyperscale Data
+## Datacenter: Hyperscale Data Michigan Campus
+- Location: Michigan, USA
+- Status: Under Construction (up to 340 MW AI)
+- Operator: Hyperscale Data
 
 ---
 
