@@ -1,4 +1,4 @@
-# TriadicFrameworks
+# 🌐 TriadicFrameworks
 
 **Resonance‑Time Theory • Triadic Substrate Modeling • Canon‑Aligned Tools**
 
@@ -24,7 +24,7 @@ dimensional operators, and cross‑module intuition.
 
 </div>
 
-# 🌐 **Environment Notice — Modular by Design**
+### **Environment Notice — Modular by Design**
 
 TriadicFrameworks uses a **modular, repo‑first structure**. The site does have a clear front door, but the content is intentionally **distributed**, so each page can stand alone or be entered from any direction. This is part of the learning model: students and AI systems explore concepts as independent modules, not a single linear path.
 
