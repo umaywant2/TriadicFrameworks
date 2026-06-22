@@ -177,6 +177,14 @@
   "path": "/docs/theories/thermodynamics/",
   "parent": "physics"
 },
+{
+  "module": "Taxes",
+  "path": "taxes/",
+  "module_json": "taxes/module.json",
+  "category": "incentive-grammar",
+  "version": "1.0",
+  "status": "canon-stable"
+},
   "session_context": {
     "canon": "TriadicFrameworks",
     "module": "Webroot",
