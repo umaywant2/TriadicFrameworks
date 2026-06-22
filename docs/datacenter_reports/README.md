@@ -6,7 +6,7 @@
 **Scope:** Global Datacenter Field Reports  
 **Structure:** Triadic • Operator‑First • Canon‑Aligned
 
-<img width="1024" height="768" alt="rtt_datacenter_evals_image" src="https://github.com/user-attachments/assets/a01b8304-51b6-4a70-a1c5-115a9575544e" />
+<img width="1024" height="512" alt="rtt_datacenter_evals_image" src="https://github.com/user-attachments/assets/a01b8304-51b6-4a70-a1c5-115a9575544e" />
 
 ---
 
