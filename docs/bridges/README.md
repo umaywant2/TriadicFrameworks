@@ -30,6 +30,16 @@ These files exist to reduce cognitive load, accelerate onboarding, and ensure
 that every contributor—technical or conceptual—can navigate the system without
 guesswork.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ---
 
 ## Navigation

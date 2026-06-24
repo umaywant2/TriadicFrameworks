@@ -20,6 +20,16 @@
 
 _A structural, RTT‑aligned approach to understanding past economic cycles._
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 Inverted Economics is a new field within the TriadicFrameworks ecosystem.  
 Its purpose is simple and radical:
 

@@ -4,6 +4,16 @@
 
 **Four‑Source Substrate + RTT/1–3 Engine Patterns for Structured Research Reasoning**
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 The **Research Toolbox** is the canonical TriadicFrameworks module for:
 
 - building the **four‑source substrate**  

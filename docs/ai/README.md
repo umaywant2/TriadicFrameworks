@@ -22,6 +22,16 @@ This directory defines a minimal, layered AI instrument architecture.
 
 The design goal is not maximal capability—it is reproducible behavior under declared operating regimes, with explicit retrieval scope and append-only lineage.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 Core artifacts:
 - **NoS_AI.md**: constitution (what the system is allowed to be)
 - **Regime_Header.md**: minimal regime declaration grammar

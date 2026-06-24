@@ -24,6 +24,16 @@ TFT_3Pack_v1.3 tools. It enables:
 - structural snapshots
 - triadic-friendly introspection
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 Two implementations are provided:
 
 - `wrsadc_core.py` — Python core

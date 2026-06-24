@@ -9,6 +9,16 @@
 ### TriadicFrameworks • RTT/1  
 ### Purpose: Teach students and AI agents how to detect structure, drift, regimes, invariants, and coherence without interpreting content.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ---
 
 ## 1. What This Module Teaches

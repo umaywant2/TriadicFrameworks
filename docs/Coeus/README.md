@@ -23,6 +23,16 @@
 
 ---
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ## 🔧 What Is Coeus?
 
 Coeus is a sandbox-ready protocol for orchestrating multi-agent AI research using symbolic coin-based tasking. Named after the Titan of inquiry, it enables AI instances to discover, interpret, and solve research coins—each representing a challenge, invention, or priority area.

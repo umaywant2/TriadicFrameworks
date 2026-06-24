@@ -1,0 +1,201 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://triadicframeworks.org/schemas/tensor_export.schema.json",
+  "title": "RTT Tensor Export Schema",
+  "description": "Ultra-complete RTT-Inside schema for exporting structural tensors across modules, domains, and evaluators. Drift-bounded, operator-first, AI-parsable.",
+  "type": "object",
+
+  "properties": {
+    "tensor_id": {
+      "type": "string",
+      "description": "Canonical unique identifier for the tensor. Must be stable across exports."
+    },
+
+    "name": {
+      "type": "string",
+      "description": "Human-readable tensor name."
+    },
+
+    "module": {
+      "type": "string",
+      "description": "Name of the module that produced this tensor (e.g., datacenter_reports, governance_substrate, NoS)."
+    },
+
+    "version": {
+      "type": "string",
+      "pattern": "^v[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the tensor definition."
+    },
+
+    "description": {
+      "type": "string",
+      "description": "Short structural description of what the tensor represents."
+    },
+
+    "shape": {
+      "type": "array",
+      "items": { "type": "integer", "minimum": 1 },
+      "description": "Tensor dimensionality (e.g., [3,3], [12], [4,4,4])."
+    },
+
+    "dtype": {
+      "type": "string",
+      "enum": ["float32", "float64", "int32", "int64", "bool", "string"],
+      "description": "Data type of the tensor values."
+    },
+
+    "units": {
+      "type": "string",
+      "description": "Optional units (e.g., MW, ms, km, score)."
+    },
+
+    "values": {
+      "type": "array",
+      "description": "Flattened tensor values in row-major order.",
+      "items": {
+        "oneOf": [
+          { "type": "number" },
+          { "type": "integer" },
+          { "type": "string" },
+          { "type": "boolean" }
+        ]
+      }
+    },
+
+    "provenance": {
+      "type": "object",
+      "description": "Source information for the tensor.",
+      "properties": {
+        "generated_by": {
+          "type": "string",
+          "description": "Name of the generator (e.g., datacenter_evaluator.py)."
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "source_files": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "input_parameters": {
+          "type": "object",
+          "additionalProperties": true
+        }
+      }
+    },
+
+    "rtt_metadata": {
+      "type": "object",
+      "description": "RTT-Inside structural metadata.",
+      "properties": {
+        "analyzer_layer": {
+          "type": "string",
+          "enum": [
+            "facilities",
+            "governance",
+            "cultural_substrate",
+            "standards",
+            "human_envelope",
+            "triadic_stack",
+            "planetary_layer",
+            "compute_infrastructure",
+            "taxes",
+            "resonance_summary"
+          ]
+        },
+
+        "role": {
+          "type": "string",
+          "description": "Role of the tensor within the RTT stack (e.g., structural_field, coherence_map, regime_tensor)."
+        },
+
+        "dimensional_fields": {
+          "type": "array",
+          "description": "Dimensional fields this tensor participates in.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "planetary",
+              "cultural",
+              "governance",
+              "economic",
+              "compute",
+              "infrastructure",
+              "human",
+              "triadic",
+              "regime",
+              "temporal"
+            ]
+          }
+        },
+
+        "regime": {
+          "type": "string",
+          "enum": ["stable", "transitional", "chaotic", "emergent"],
+          "description": "Regime classification for the tensor."
+        },
+
+        "coherence": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "RTT coherence score for this tensor."
+        },
+
+        "drift": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Drift magnitude (0 = no drift, 1 = high drift)."
+        },
+
+        "lineage": {
+          "type": "array",
+          "description": "Tensor lineage across modules.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "ai": {
+      "type": "object",
+      "description": "AI-ready metadata for cross-domain propagation.",
+      "properties": {
+        "parsable": { "type": "boolean", "default": true },
+        "embedding_hint": {
+          "type": "string",
+          "description": "Optional hint for embedding models."
+        },
+        "cross_module_propagation": {
+          "type": "array",
+          "description": "Modules that can consume this tensor.",
+          "items": { "type": "string" }
+        },
+        "safety": {
+          "type": "object",
+          "properties": {
+            "sensitive": { "type": "boolean", "default": false },
+            "notes": { "type": "string" }
+          }
+        }
+      }
+    }
+  },
+
+  "required": [
+    "tensor_id",
+    "name",
+    "module",
+    "version",
+    "description",
+    "shape",
+    "dtype",
+    "values",
+    "rtt_metadata",
+    "ai"
+  ],
+
+  "additionalProperties": false
+}
+

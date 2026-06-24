@@ -6,6 +6,16 @@
 
 Welcome to the **Law Module** — an RTT domain primer that brings Resonance-Time Theory to legal systems.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 - **Start here** for regime awareness: [law-rtt-regime-awareness.md](law-rtt-regime-awareness.md)
 - Core structure: Foundational regimes → Domestic → International/Global → Emerging Tech
 - Full module context: [ABOUT-law.md](ABOUT-law.md)

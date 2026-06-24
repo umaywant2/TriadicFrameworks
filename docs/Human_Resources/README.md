@@ -7,6 +7,16 @@
 **Category:** Organizational Systems  
 **Purpose:** Provide a structural, RTT‑aligned framework for understanding, evaluating, and improving Human Resources functions across leadership, management, and staff.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 Human Resources has historically operated within a **binary**, **regime‑blind**, and **narrative‑driven** structure. This module introduces RTT’s triadic observer model, structural grammar, and coherence tools to help HR, managers, and staff operate with clarity, balance, and shared purpose.
 
 This module includes:

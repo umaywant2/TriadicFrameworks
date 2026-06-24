@@ -26,6 +26,16 @@ Inspired by the clarity of scientific modeling and the playfulness of simulation
 
 This is the first simulation environment designed from the ground up to be **substrate‑aligned**, **regime‑aware**, and **canon‑consistent**.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ---
 
 ## **Purpose**

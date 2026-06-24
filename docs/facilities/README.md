@@ -26,6 +26,16 @@ The Facilities domain is grounded in the **RTT Facilities Playbook**, which defi
 
 This README serves as the **navigation anchor** for all Facilities‑related work.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ---
 
 ## 🧭 Facilities Scope
