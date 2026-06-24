@@ -22,7 +22,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ## ❇️ Now you are ready.  Start Here
 Begin with these three short primers:
 
-- **[What RTT Is](https://www.triadicframeworks.org/_ideas/000_RTT_Information_Primer.md)** — the intuitive overview  
+- **[What RTT Is](https://www.triadicframeworks.org/_ideas/#RTT_PRIMER)** — the intuitive overview  
 - **[How to Read RTT Diagrams](https://www.triadicframeworks.org/triadic/)** — the visual grammar  
 - **[Core Concepts](https://www.triadicframeworks.org/rtt/)** — regimes, feedback, coherence, paradox
 
