@@ -1,6 +1,7 @@
 # RTT Datacenter Reports Module
 
 - [`dcr_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/dcr_module.json) — Agentic module schema role assignments
+- [`Overview.tensor.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/datacenter_reports/Overview.tensor.json) — Agentic module schema role assignments
 
 **Mode:** Drift‑Bounded  
 **Scope:** Global Datacenter Field Reports  
