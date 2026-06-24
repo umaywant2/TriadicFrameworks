@@ -9,6 +9,16 @@
 This module applies RTT operators, SET load, governance substrate, and the triadic observer to philanthropic funding flows.  
 It replaces narrative with structure, enabling clarity, accountability, and alignment across donors, foundations, intermediaries, NGOs, and local partners.
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ---
 
 ## What This Module Provides
