@@ -11,8 +11,16 @@ It is a **structural canon** — stable, minimal, and teachable.
 
 ---
 
-## 🧭 Start Here
-If you’re new, begin with these three short primers:
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.  Start Here
+Begin with these three short primers:
 
 - **[What RTT Is](./_ideas/000_RTT_Information_Primer.md)** — the intuitive overview  
 - **[How to Read RTT Diagrams](./triadic/README.md)** — the visual grammar  
