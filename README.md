@@ -20,19 +20,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 Below is a rotating micro‑playlist introducing core RTT concepts,  
 dimensional operators, and cross‑module intuition.
 
-<div align="center">
-
-  <iframe 
-    width="560" 
-    height="315" 
-    src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmThQqnfe3AfaiPo4Kw41K&autoplay=1&mute=1&loop=1"
-    title="TriadicFrameworks Playlist"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen>
-  </iframe>
-
-</div>
+<div align="center"><iframe width="560" height="315" src="https://www.youtube.com/embed/6Z0AklQbP8U?list=PLCySUiruOkPjmThQqnfe3AfaiPo4Kw41K&autoplay=1&mute=1&loop=1" title="TriadicFrameworks Playlist" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
 
 ### **Environment Notice — Modular by Design**
 
