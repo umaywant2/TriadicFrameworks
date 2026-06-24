@@ -69,9 +69,10 @@
       <a href="https://www.triadicframeworks.org/datacenter_reports/" target="_blank">📳 Module</a> ·
       <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/datacenter_reports" target="_blank">🈺 Repo</a>
     </li>
-<br>
+    <br>
     
 <h1>Datacenter Reports — Overview (Sortable)</h1>
+    <br>
 
 <table id="dc-table">
   <thead>
@@ -115,30 +116,7 @@
   </tbody>
 </table>
 
-<script>
-(function () {
-  const table = document.getElementById('dc-table');
-  const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
 
-  const comparer = (idx, asc) => (a, b) => {
-    const v1 = getCellValue(asc ? a : b, idx);
-    const v2 = getCellValue(asc ? b : a, idx);
-    const n1 = parseFloat(v1); const n2 = parseFloat(v2);
-    if (!isNaN(n1) && !isNaN(n2)) return n1 - n2;
-    return v1.localeCompare(v2, undefined, { numeric: true, sensitivity: 'base' });
-  };
-
-  Array.from(table.querySelectorAll('th')).forEach((th, idx) => {
-    let asc = true;
-    th.addEventListener('click', () => {
-      const tbody = table.tBodies[0];
-      Array.from(tbody.querySelectorAll('tr'))
-        .sort(comparer(idx, asc = !asc))
-        .forEach(tr => tbody.appendChild(tr));
-    });
-  });
-})();
-</script>
     
     <p class="text-xs text-zinc-500 mt-12 text-center">
       Built for Nawder Loswin • RTT awareness for all sides • Not us vs them • Updated June 2026
@@ -386,6 +364,29 @@ Speak in **triadic clarity** — not praise, not critique, just structural truth
         setTimeout(() => btn.textContent = original, 2000);
       });
     }
+  
+(function () {
+  const table = document.getElementById('dc-table');
+  const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
+
+  const comparer = (idx, asc) => (a, b) => {
+    const v1 = getCellValue(asc ? a : b, idx);
+    const v2 = getCellValue(asc ? b : a, idx);
+    const n1 = parseFloat(v1); const n2 = parseFloat(v2);
+    if (!isNaN(n1) && !isNaN(n2)) return n1 - n2;
+    return v1.localeCompare(v2, undefined, { numeric: true, sensitivity: 'base' });
+  };
+
+  Array.from(table.querySelectorAll('th')).forEach((th, idx) => {
+    let asc = true;
+    th.addEventListener('click', () => {
+      const tbody = table.tBodies[0];
+      Array.from(tbody.querySelectorAll('tr'))
+        .sort(comparer(idx, asc = !asc))
+        .forEach(tr => tbody.appendChild(tr));
+    });
+  });
+})();
   </script>
 </body>
 </html>
