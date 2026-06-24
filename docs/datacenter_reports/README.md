@@ -8,6 +8,16 @@
 
 <img width="1024" height="512" alt="rtt_datacenter_evals_image" src="https://github.com/user-attachments/assets/a01b8304-51b6-4a70-a1c5-115a9575544e" />
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ---
 
 ## **1. Module Purpose**
