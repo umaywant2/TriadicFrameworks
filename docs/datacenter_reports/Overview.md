@@ -1,3 +1,29 @@
+---
+module: Datacenter Reports
+view: Overview
+mode: Drift-Bounded
+structure: Triadic
+role: Atlas-Layer
+version: 1.0.0
+indices:
+  FAC: Facilities Layer index (0–3)
+  GOV: Governance Layer index (0–3)
+  CUL: Cultural Substrate index (0–3)
+  STD: Standards & Compliance index (0–3)
+  HUM: Human Envelope index (0–3)
+  PLA: Planetary Layer index (0–3)
+  INF: Compute & Infrastructure index (0–3)
+  TAX: Tax/Revenue Regime index (0–3)
+triadic_alignment:
+  glyphs:
+    absent: "❌"
+    partial: "🟨"
+    aligned: "✅"
+  field: TRI
+resonance_field: RES
+interpretation: "Non-interpretive structural map; indices encode presence, not performance."
+---
+
 # 📊 Datacenter Reports — Structural Overview  
 **Mode:** Drift‑Bounded  
 **Structure:** Triadic • Operator‑First • Canon‑Aligned  
