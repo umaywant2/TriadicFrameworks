@@ -1,1 +1,163 @@
+/* -----------------------------------------------------------
+   TriadicFrameworks — Theory Page Layout System
+   Shared across all Ten‑in‑1 theory modules
+----------------------------------------------------------- */
+
+:root {
+  --tf-font-main: 'Inter', system-ui, sans-serif;
+  --tf-font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --tf-fg: #f5f5f7;
+  --tf-muted: #9ca3af;
+  --tf-bg: #040509;
+
+  --tf-radius-lg: 18px;
+  --tf-radius-md: 10px;
+  --tf-radius-pill: 999px;
+
+  --tf-shadow-soft: 0 18px 45px rgba(0,0,0,0.55);
+  --tf-shadow-subtle: 0 0 0 1px rgba(255,255,255,0.02);
+}
+
+body.tf-module--theory {
+  margin: 0;
+  padding: 0;
+  font-family: var(--tf-font-main);
+  color: var(--tf-fg);
+  background: var(--tf-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* -----------------------------------------------------------
+   HERO
+----------------------------------------------------------- */
+
+.tf-hero {
+  padding: 60px 20px 40px;
+  text-align: left;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.tf-hero__content h1 {
+  margin: 0;
+  font-size: 42px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.tf-hero__content h2 {
+  margin: 6px 0 14px;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--tf-muted);
+}
+
+.tf-hero__summary {
+  max-width: 620px;
+  font-size: 16px;
+  line-height: 1.55;
+  margin-bottom: 22px;
+}
+
+/* -----------------------------------------------------------
+   BUTTONS
+----------------------------------------------------------- */
+
+.tf-button {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: var(--tf-radius-pill);
+  font-size: 14px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.tf-button--primary {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--tf-fg);
+}
+
+.tf-button--primary:hover {
+  background: rgba(255,255,255,0.18);
+}
+
+.tf-button--ghost {
+  border: 1px solid rgba(255,255,255,0.25);
+  color: var(--tf-muted);
+}
+
+.tf-button--ghost:hover {
+  color: var(--tf-fg);
+  border-color: rgba(255,255,255,0.4);
+}
+
+/* -----------------------------------------------------------
+   MAIN + SECTIONS
+----------------------------------------------------------- */
+
+.tf-main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tf-section {
+  margin-bottom: 48px;
+}
+
+.tf-section h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  letter-spacing: 0.03em;
+}
+
+/* -----------------------------------------------------------
+   LISTS
+----------------------------------------------------------- */
+
+.tf-list {
+  padding-left: 18px;
+  margin: 0 0 12px;
+  line-height: 1.55;
+}
+
+.tf-list--numbered {
+  list-style: decimal;
+}
+
+.tf-list a {
+  color: #e0f2fe;
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(148,163,184,0.6);
+}
+
+.tf-list a:hover {
+  border-bottom-style: solid;
+}
+
+/* -----------------------------------------------------------
+   CODE
+----------------------------------------------------------- */
+
+code {
+  font-family: var(--tf-font-mono);
+  font-size: 13px;
+  background: rgba(255,255,255,0.08);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* -----------------------------------------------------------
+   FOOTER
+----------------------------------------------------------- */
+
+footer {
+  padding: 20px;
+  font-size: 12px;
+  color: var(--tf-muted);
+  text-align: center;
+  opacity: 0.8;
+}
 
