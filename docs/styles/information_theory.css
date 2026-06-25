@@ -1,0 +1,45 @@
+/* -----------------------------------------------------------
+   Information Theory — Module‑Specific Overrides
+   Layered on top of theory.css
+   Identity: signal‑first, coherence‑driven, operator‑aligned
+----------------------------------------------------------- */
+
+body.tf-module--information-theory {
+  /* signal‑gradient background */
+  background: radial-gradient(
+    circle at top left,
+    #111827 0,
+    #020308 55%,
+    #000000 100%
+  );
+  position: relative;
+}
+
+/* accent: blue‑cyan signal resonance */
+:root {
+  --accent: #4ea3ff;
+  --accent-soft: rgba(78,163,255,0.18);
+}
+
+/* hero title uses module accent */
+.tf-hero__content h1 {
+  color: var(--accent);
+}
+
+/* symmetric operator rings (no rotation) */
+.hero-glyph::after,
+.brand-mark::after {
+  transform: rotate(0deg);
+}
+
+/* section headers use IT accent */
+.tf-section h2 {
+  color: var(--accent);
+}
+
+/* operator lists: subtle signal highlight */
+.tf-list code {
+  background: rgba(78,163,255,0.12);
+  border: 1px solid rgba(78,163,255,0.25);
+  color: #dbeafe;
+}
