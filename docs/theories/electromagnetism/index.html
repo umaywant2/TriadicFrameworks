@@ -12,389 +12,6 @@
   <link rel="stylesheet" href="../../styles/electromagnetism.css" />
 
 </head>
-
-<style>
-  :root {
-    --bg: #040509;
-    --fg: #f5f5f7;
-
-    /* Electromagnetism-specific accent: cooler, geometric, field-line blue */
-    --accent: #3b82f6;
-    --accent-soft: rgba(59,130,246,0.18);
-
-    --muted: #9ca3af;
-    --border: #1f2933;
-    --card: #050814;
-
-    --radius-lg: 18px;
-    --radius-md: 10px;
-    --radius-pill: 999px;
-
-    --shadow-soft: 0 18px 45px rgba(0,0,0,0.55);
-    --shadow-subtle: 0 0 0 1px rgba(255,255,255,0.02);
-
-    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-                 "Segoe UI", sans-serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-                 "Liberation Mono", "Courier New", monospace;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-main);
-
-    /* Electromagnetism: smooth field-gradient curvature */
-    background: radial-gradient(circle at 28% 22%, #020617 0, #030712 48%, #000000 100%);
-
-    color: var(--fg);
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-  }
-
-  /* Electromagnetism: structured interference noise (field coherence) */
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.045;
-    background: repeating-linear-gradient(
-      135deg,
-      rgba(255,255,255,0.03) 0px,
-      rgba(255,255,255,0.03) 1px,
-      transparent 1px,
-      transparent 4px
-    );
-  }
-
-  .page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  header {
-    padding: 18px 20px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .brand-mark {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background:
-      radial-gradient(circle at 30% 20%, #ffffff 0, var(--accent) 18%, #020617 55%, #000000 100%);
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 12px 30px rgba(0,0,0,0.7);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .brand-mark::before {
-    content: "";
-    position: absolute;
-    inset: 18% 18%;
-    border-radius: 999px;
-    border: 1px solid rgba(15,23,42,0.9);
-    box-shadow: 0 0 0 1px rgba(148,163,184,0.4);
-    opacity: 0.9;
-  }
-
-  /* Electromagnetism: precise, symmetric dashed ring (operator symmetry) */
-  .brand-mark::after {
-    content: "";
-    position: absolute;
-    inset: 55% 8% 8% 8%;
-    border-radius: 999px;
-    border: 1px dashed rgba(148,163,184,0.7);
-    opacity: 0.9;
-    transform: rotate(0deg); /* no chaos rotation */
-  }
-
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-  }
-
-  .brand-text span:first-child {
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .brand-text span:last-child {
-    font-size: 14px;
-    font-weight: 500;
-    color: #e5e7eb;
-  }
-
-  .tag {
-    font-size: 11px;
-    padding: 4px 10px;
-    border-radius: var(--radius-pill);
-    border: 1px solid rgba(148,163,184,0.5);
-    color: var(--muted);
-    background: rgba(15,23,42,0.7);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .tag-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 4px var(--accent-soft);
-  }
-
-  main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 10px 16px 28px;
-  }
-
-  .layout {
-    width: 100%;
-    max-width: 1080px;
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-    gap: 18px;
-  }
-
-  @media (max-width: 880px) {
-    .layout {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-
-  .hero-card {
-    background: radial-gradient(circle at top left, var(--accent-soft) 0,
-                rgba(15,23,42,0.9) 32%, #020308 100%);
-    border-radius: var(--radius-lg);
-    padding: 20px 20px 18px;
-    box-shadow: var(--shadow-soft), var(--shadow-subtle);
-    border: 1px solid rgba(148,163,184,0.35);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-
-  .hero-title-block h1 {
-    margin: 0;
-    font-size: 24px;
-    letter-spacing: 0.03em;
-  }
-
-  .hero-title-block p {
-    margin: 4px 0 0;
-    font-size: 13px;
-    color: var(--muted);
-    max-width: 380px;
-  }
-
-  .hero-glyph {
-    width: 88px;
-    height: 88px;
-    border-radius: 28px;
-    background:
-      radial-gradient(circle at 30% 20%, #ffffff 0, var(--accent) 18%, #020617 55%, #000000 100%);
-    position: relative;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.85);
-    overflow: hidden;
-  }
-
-  .hero-glyph::before {
-    content: "";
-    position: absolute;
-    inset: 16% 14%;
-    border-radius: 999px;
-    border: 1px solid rgba(15,23,42,0.9);
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
-  }
-
-  /* Electromagnetism: symmetric operator ring */
-  .hero-glyph::after {
-    content: "";
-    position: absolute;
-    inset: 46% 10% 10% 10%;
-    border-radius: 999px;
-    border: 1px dashed rgba(148,163,184,0.7);
-    opacity: 0.9;
-    transform: rotate(0deg);
-  }
-
-  .hero-body {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    gap: 14px;
-  }
-
-  @media (max-width: 720px) {
-    .hero-body {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-
-  .hero-section-title {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-
-  .hero-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 13px;
-    color: #e5e7eb;
-  }
-
-  .hero-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 4px;
-  }
-
-  .hero-list li span.bullet {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    margin-top: 6px;
-    background: rgba(148,163,184,0.9);
-  }
-
-  .hero-list li strong {
-    font-weight: 500;
-    color: #f9fafb;
-  }
-
-  .hero-pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 4px;
-  }
-
-  .pill {
-    font-size: 11px;
-    padding: 4px 9px;
-    border-radius: var(--radius-pill);
-    border: 1px solid rgba(148,163,184,0.5);
-    color: var(--muted);
-    background: rgba(15,23,42,0.8);
-    white-space: nowrap;
-  }
-
-  .pill.accent {
-    border-color: var(--accent);
-    color: #e0f2fe;
-    background: rgba(15,23,42,0.95);
-  }
-
-  .right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .card {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 12px 13px 11px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-subtle);
-  }
-
-  .card h2 {
-    margin: 0 0 6px;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .card p {
-    margin: 0 0 6px;
-    font-size: 13px;
-    color: #e5e7eb;
-  }
-
-  .link-list {
-    list-style: none;
-    padding: 0;
-    margin: 4px 0 0;
-    font-size: 13px;
-  }
-
-  .link-list li {
-    margin-bottom: 3px;
-  }
-
-  .link-list a {
-    color: #e0f2fe;
-    text-decoration: none;
-    border-bottom: 1px dashed rgba(148,163,184,0.6);
-  }
-
-  .link-list a:hover {
-    border-bottom-style: solid;
-  }
-
-  code {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    background: rgba(15,23,42,0.9);
-    padding: 2px 5px;
-    border-radius: 6px;
-    border: 1px solid rgba(31,41,55,0.9);
-    color: #e5e7eb;
-  }
-
-  footer {
-    padding: 6px 20px 14px;
-    font-size: 11px;
-    color: var(--muted);
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    border-top: 1px solid rgba(15,23,42,0.9);
-    background: radial-gradient(circle at bottom, rgba(15,23,42,0.7) 0, #020308 55%, #000000 100%);
-  }
-
-  footer span { opacity: 0.9; }
-
-  @media (max-width: 640px) {
-    footer {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-</style>
   
 <body class="tf-module tf-module--theory tf-module--electromagnetism">
   <header class="tf-hero tf-hero--theory">
@@ -408,11 +25,11 @@
         propagation. Zero force‑centric drift. Zero particle‑first framing.
       </p>
       <nav class="tf-hero__nav">
-        <a href="/docs/theories/electromagnetism/frontdoor.html"
+        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/frontdoor.md" target="_blank"
            class="tf-button tf-button--primary">
           Start with the front door
         </a>
-        <a href="/docs/theories/electromagnetism/session_context.html"
+        <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/session_context.md" target="_blank"
            class="tf-button tf-button--ghost">
           Session context
         </a>
@@ -445,7 +62,7 @@
       <ol class="tf-list tf-list--numbered">
         <li>
           <strong>Session context</strong><br />
-          <a href="/docs/theories/electromagnetism/session_context.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/session_context.md" target="_blank">
             /docs/theories/electromagnetism/session_context.md
           </a><br />
           Identity, drift boundaries, audience, and scope.
@@ -453,7 +70,7 @@
 
         <li>
           <strong>Regimes</strong><br />
-          <a href="/docs/theories/electromagnetism/regimes.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/regimes.md" target="_blank">
             /docs/theories/electromagnetism/regimes.md
           </a><br />
           R1 → R3: classical field stability, dynamic propagation,
@@ -462,7 +79,7 @@
 
         <li>
           <strong>Operators</strong><br />
-          <a href="/docs/theories/electromagnetism/operators.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/operators.md" target="_blank">
             /docs/theories/electromagnetism/operators.md
           </a><br />
           𝓓ᴱ, 𝓓ᴮ, 𝓒ᴱ, 𝓒ᴮ, 𝓢ᶜʰ, 𝓢ᶜᵘʳ, 𝓦, 𝓕, 𝓒ₒₕ, 𝓡𝓮𝓰, 𝓒𝓁.
@@ -470,7 +87,7 @@
 
         <li>
           <strong>Operator examples</strong><br />
-          <a href="/docs/theories/electromagnetism/operator_examples.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/operator_examples.md" target="_blank">
             /docs/theories/electromagnetism/operator_examples.md
           </a><br />
           Concrete, field‑first examples of divergence, curl, sources,
@@ -479,7 +96,7 @@
 
         <li>
           <strong>Coherence map</strong><br />
-          <a href="/docs/theories/electromagnetism/coherence_map.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/coherence_map.md" target="_blank">
             /docs/theories/electromagnetism/coherence_map.md
           </a><br />
           Divergence consistency, curl consistency, propagation stability,
@@ -488,7 +105,7 @@
 
         <li>
           <strong>Lineage</strong><br />
-          <a href="/docs/theories/electromagnetism/lineage.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/lineage.md" target="_blank">
             /docs/theories/electromagnetism/lineage.md
           </a><br />
           Pre‑Maxwell → Maxwell → wave theory → relativity → QFT →
@@ -497,7 +114,7 @@
 
         <li>
           <strong>Cross‑module integration</strong><br />
-          <a href="/docs/theories/electromagnetism/cross_module.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/cross_module.md" target="_blank">
             /docs/theories/electromagnetism/cross_module.md
           </a><br />
           Links to GR, QFT, Information Theory, Thermodynamics, FFT, Systems
@@ -506,10 +123,10 @@
 
         <li>
           <strong>Engine notes & simulation hooks</strong><br />
-          <a href="/docs/theories/electromagnetism/engine_notes.html">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/engine_notes.md" target="_blank">
             /docs/theories/electromagnetism/engine_notes.md
           </a><br />
-          <a href="/docs/theories/electromagnetism/simulation_hooks.json">
+          <a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/electromagnetism/simulation_hooks.json">
             /docs/theories/electromagnetism/simulation_hooks.json
           </a><br />
           Execution contract and operator‑level hooks for agents and simulators.
