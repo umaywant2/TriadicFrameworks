@@ -6,23 +6,7 @@
   "title":       "RTTcode Packet (v1)",
   "description": "Master RTTcode packet schema composed of tick, entities, environment, and intent blocks. Defines the canonical payload structure for QR-compatible metadata identifiers across all TriadicFrameworks domains.",
 
-  "$comment": "meta: {
-    "module":          "RTT/codes",
-    "canonical_id":    "RTT_CODES",
-    "module_type":     "Infrastructure-Schema",
-    "role":            "engine",
-    "version":         "1.1",
-    "status":          "canon-stable",
-    "author":          "Nawder Loswin",
-    "license":         "MIT",
-    "canonical_path":  "/docs/schemas/rttcode.v1.json",
-    "module_home":     "/docs/rtt/codes/",
-    "module_url":      "https://www.triadicframeworks.org/rtt/codes/",
-    "module_json":     "https://www.triadicframeworks.org/rtt/codes/RTT_codes_module.json",
-    "repository":      "https://github.com/umaywant2/TriadicFrameworks",
-    "last_updated":    "2026-05-06",
-    "migration_note":  "Module content relocated from /docs/rttcodes/ to /docs/rtt/codes/ — schema location at /docs/schemas/ unchanged. All $ref paths remain valid (relative to schemas directory)."
-  },
+  "$comment": "meta: {\"module\": \"RTT/codes\", \"canonical_id\": \"RTT_CODES\", \"module_type\": \"Infrastructure-Schema\", \"role\": \"engine\", \"version\": \"1.1\", \"status\": \"canon-stable\", \"author\": \"Nawder Loswin\", \"license\": \"MIT\", \"canonical_path\": \"/docs/schemas/rttcode.v1.json\", \"module_home\": \"/docs/rtt/codes/\", \"module_url\": \"https://www.triadicframeworks.org/rtt/codes/\", \"module_json\": \"https://www.triadicframeworks.org/rtt/codes/RTT_codes_module.json\", \"repository\": \"https://github.com/umaywant2/TriadicFrameworks\", \"last_updated\": \"2026-05-06\", \"migration_note\": \"Module content relocated from /docs/rttcodes/ to /docs/rtt/codes/ — schema location at /docs/schemas/ unchanged. All $ref paths remain valid.\"}",
 
   "_session_context": {
     "canon":       "active (rtt-codes-core)",
