@@ -22,9 +22,9 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ## ❇️ Now you are ready.  Start Here
 Begin with these three short primers:
 
-- **[What RTT Is](./_ideas/000_RTT_Information_Primer.md)** — the intuitive overview  
-- **[How to Read RTT Diagrams](./triadic/README.md)** — the visual grammar  
-- **[Core Concepts](./rtt/README.md)** — regimes, feedback, coherence, paradox
+- **[What RTT Is](https://www.triadicframeworks.org/_ideas/#RTT_PRIMER)** — the intuitive overview  
+- **[How to Read RTT Diagrams](https://www.triadicframeworks.org/triadic/)** — the visual grammar  
+- **[Core Concepts](https://www.triadicframeworks.org/rtt/)** — regimes, feedback, coherence, paradox
 
 These are written for humans and AIs equally.
 
@@ -34,39 +34,39 @@ These are written for humans and AIs equally.
 The TriadicFrameworks canon is a completed structural substrate.  
 It does not grow by revision — only by **instantiation**, **validation**, and **extension**.
 
-- **[RTT/1 — Lumen](./rtt/1/README.md)** (active engine)  
-- **[RTT/2 — Hephaestus](./rtt/2/README.md)** (structural detection)  
-- **[RTT/3 — Aurion](./rtt/3/README.md)** (integration & emission)  
-- **[RTT (Frozen)](./_ideas/Resonance-Time_Theory.html)** — historical scroll (Orionis)
+- **[RTT/1 — Lumen](https://www.triadicframeworks.org/rtt/1/)** (active engine)  
+- **[RTT/2 — Hephaestus](https://www.triadicframeworks.org/rtt/2/)** (structural detection)  
+- **[RTT/3 — Aurion](https://www.triadicframeworks.org/rtt/3/)** (integration & emission)  
+- **[RTT (Frozen)](https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html)** — historical scroll (Orionis)
 
 ---
 
 ## 🏗️ Framework Field Theory
 The meta‑framework for building, validating, and evolving structured systems.  
-See: [`/docs/Framework_Field_Theory/`](./Framework_Field_Theory/README.md)
+See: [`/docs/Framework_Field_Theory/`](https://www.triadicframeworks.org/Framework_Field_Theory/)
 
 ---
 
 ## 🧰 Developer & Educator Tools
 Minimal, substrate‑aligned implementations:
 
-- **[RTT Packages & Cores](./packages/README.md)**  
-- **[TFT 3Pack CLI Tools](./TFT_3Pack_v1.3/README.md)**  
-- **[Schemas](./schemas/README.md)** — universe‑class JSON schemas  
-- **[RF‑Builder](./frameworks/creation_guide/RF-Builder/RF-Builder.html)** — resonance framework builder  
-- **[EcoEchoSystem](./ecoechosystem/README.md)** — ecological substrate tools  
-- **[LACTOS](./lactos/README.md)** — visual identity + diagram grammar  
+- **[RTT Packages & Cores](https://www.triadicframeworks.org/packages/)**  
+- **[TFT 3Pack CLI Tools](https://www.triadicframeworks.org/TFT_3Pack_v1.3/)**  
+- **[Schemas](https://www.triadicframeworks.org/schemas/)** — universe‑class JSON schemas  
+- **[RF‑Builder](https://www.triadicframeworks.org/frameworks/creation_guide/RF-Builder/RF-Builder.html)** — resonance framework builder  
+- **[EcoEchoSystem](https://www.triadicframeworks.org/ecoechosystem/)** — ecological substrate tools  
+- **[LACTOS](https://www.triadicframeworks.org/lactos/)** — visual identity + diagram grammar  
 
 ---
 
 ## 📚 Knowledge Modules
 Regime‑aware, operator‑driven analyses of major domains:
 
-- **[NIST](./nist/README.md)** — scientific domain structure  
-- **[Wikipedia](./wikipedia/README.md)** — category + revision regime mapping  
-- **[Google](./Research/Google.md) / [Bing](./Research/Bing.md) / [DuckDuckGo](./Research/DuckDuckGo.md)** — dimensional interpreters  
-- **[Education Toolbox](./education/Toolbox/README.md)** — grading, paper analysis, literature review  
-- **[Internet Archive](./archive_org/README.md)** — agentic AI on millions of texts  
+- **[NIST](https://www.triadicframeworks.org/nist/)** — scientific domain structure  
+- **[Wikipedia](https://www.triadicframeworks.org/wikipedia/)** — category + revision regime mapping  
+- **[Google](https://www.triadicframeworks.org/Research/Google.md) / [Bing](https://www.triadicframeworks.org/Research/Bing.md) / [DuckDuckGo](https://www.triadicframeworks.org/Research/DuckDuckGo.md)** — dimensional interpreters  
+- **[Education Toolbox](https://www.triadicframeworks.org/education/Toolbox/)** — grading, paper analysis, literature review  
+- **[Internet Archive](https://www.triadicframeworks.org/archive_org/)** — agentic AI on millions of texts  
 
 ---
 
