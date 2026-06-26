@@ -21713,6 +21713,3043 @@ It is one of the core engines that makes qCompute governed, predictable, and tea
 
 ---
 
+Absolutely, Nawder — here is the **canonical `qc_Router.md`**, the routing‑engine specification for qCompute.  
+This file is one of the *core structural engines* of the module: it defines backend selection, frame reuse, tier escalation, drift‑overflow behavior, and the deterministic routing rules that make qCompute replay‑safe.
+
+It is:
+
+- zero‑drift  
+- AI‑parsable  
+- minimal and explicit  
+- aligned with `qc_Backends.md`, `qc_BackendProfiles.md`, `qc_ResonanceFrame.md`, `qc_OperatorGrammar.md`, and the entire qCompute spine  
+- the authoritative routing‑engine definition  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Router.md
+```
+
+---
+
+# ✅ **qc_Router.md — Routing Engine Specification (2026)**
+
+```markdown
+# qCompute — Routing Engine  
+**File:** qc_Router.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+The **Routing Engine** selects:
+
+- backend  
+- frame reuse vs. new frame  
+- resonance profile  
+- drift characteristic  
+- routing reason  
+
+Routing is:
+
+- deterministic  
+- structural  
+- environment‑aware  
+- tier‑aware  
+- drift‑aware  
+- replay‑safe  
+
+Routing has **no side effects**.  
+It produces metadata consumed by the Frame Manager and Capture Engine.
+
+---
+
+# 1. Identity
+
+**Component:** TriadicRouter  
+**Role:** Determine structural execution target  
+**Scope:** Operator → Backend → Frame → Drift → Reason  
+**Guarantee:** Deterministic routing with no inference or recomputation
+
+Router does **not**:
+
+- validate legality  
+- compute drift  
+- open or close frames  
+- write capture entries  
+
+Router only **decides**.
+
+---
+
+# 2. Routing Inputs
+
+Router receives:
+
+- operator metadata  
+- current frame metadata  
+- environment  
+- backend profiles  
+- drift bound  
+- resonance tier history  
+
+Inputs are immutable.
+
+---
+
+# 3. Routing Outputs
+
+Router returns:
+
+```yaml
+backend: <backend-id>
+frame_id: <frame-id or new>
+resonance_profile: r1|r2|r3
+drift_characteristic: low|medium|high
+reason: "<routing reason>"
+```
+
+All fields are required.
+
+---
+
+# 4. Routing Decision Tree
+
+Routing follows a strict decision tree:
+
+```
+1. Determine operator tier
+2. Determine backend for tier
+3. Check environment legality
+4. Check token requirement (r3)
+5. Determine frame reuse vs. new frame
+6. Determine drift characteristic
+7. Produce routing reason
+```
+
+No step may be skipped.
+
+---
+
+# 5. Tier → Backend Binding
+
+Tier binding is fixed:
+
+```
+r1 → local-sim
+r2 → hybrid-sim
+r3 → hardware-qpu-2
+```
+
+Router must reject:
+
+- illegal tier in environment  
+- illegal tier without token  
+- illegal tier in archive  
+
+---
+
+# 6. Frame Reuse Rules
+
+Router may reuse a frame **only if**:
+
+1. backend matches  
+2. tier does not decrease  
+3. drift overflow has not occurred  
+4. no meta operator is present  
+5. environment has not changed  
+
+Otherwise, Router must open a new frame.
+
+---
+
+# 7. Tier Escalation Rules
+
+Tier escalation always forces a new frame:
+
+```
+r1 → r2
+r2 → r3
+r1 → r3
+```
+
+Routing reason:
+
+```
+"tier escalation"
+```
+
+---
+
+# 8. Tier Decrease Rules
+
+Tier decrease always forces a new frame:
+
+```
+r2 → r1
+r3 → r1
+r3 → r2
+```
+
+Routing reason:
+
+```
+"tier decrease"
+```
+
+---
+
+# 9. Drift‑Aware Routing
+
+Router receives drift status from Drift Engine.
+
+If drift overflow:
+
+- current frame closes  
+- new frame opens  
+- routing reason = "drift overflow"  
+
+Router does not compute drift; it only reacts to drift status.
+
+---
+
+# 10. Environment‑Aware Routing
+
+Environment changes force:
+
+- frame closure  
+- backend legality update  
+- drift bound update  
+
+Routing reason:
+
+```
+"environment transition"
+```
+
+Router must reject:
+
+- r3 in sandbox  
+- any operator in archive  
+
+---
+
+# 11. Meta‑Operator Routing
+
+Meta operators (`sync`, `barrier`) always:
+
+- close current frame  
+- open new frame  
+
+Routing reason:
+
+```
+"meta operator"
+```
+
+---
+
+# 12. Routing Reasons (Canonical Set)
+
+Router must use one of the following reasons:
+
+- `"initial frame"`
+- `"reuse frame"`
+- `"tier escalation"`
+- `"tier decrease"`
+- `"drift overflow"`
+- `"environment transition"`
+- `"meta operator"`
+- `"illegal operator"` (validation failure)
+- `"restricted operation requires token"`
+
+No other reason strings are permitted.
+
+---
+
+# 13. Routing Examples
+
+### 13.1 r1 → r1 (reuse)
+
+```yaml
+backend: local-sim
+frame_id: frame-001
+reason: "reuse frame"
+```
+
+### 13.2 r1 → r2 (tier escalation)
+
+```yaml
+backend: hybrid-sim
+frame_id: frame-002
+reason: "tier escalation"
+```
+
+### 13.3 r2 → r1 (tier decrease)
+
+```yaml
+backend: local-sim
+frame_id: frame-003
+reason: "tier decrease"
+```
+
+### 13.4 r3 pulse (restricted)
+
+```yaml
+backend: hardware-qpu-2
+frame_id: frame-004
+reason: "tier escalation"
+```
+
+### 13.5 drift overflow
+
+```yaml
+backend: hybrid-sim
+frame_id: frame-005
+reason: "drift overflow"
+```
+
+---
+
+# 14. Routing Invariants
+
+Router enforces:
+
+1. **backend must match tier**  
+2. **backend must be legal in environment**  
+3. **backend cannot change mid‑frame**  
+4. **tier never decreases within a frame**  
+5. **tier escalation forces new frame**  
+6. **tier decrease forces new frame**  
+7. **drift overflow forces new frame**  
+8. **meta ops force new frame**  
+9. **r3 requires token**  
+10. **archive forbids all operators**  
+11. **routing is deterministic**  
+12. **no silent behavior**  
+
+---
+
+# 15. Summary
+
+The Routing Engine:
+
+- selects backend  
+- selects frame reuse vs. new frame  
+- enforces tier rules  
+- enforces drift rules  
+- enforces environment rules  
+- produces deterministic routing metadata  
+
+Router is the **structural decision engine** of qCompute.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_ResonanceFrame.md**  
+(the frame manager — frame lifecycle, drift accumulation, tier monotonicity, backend binding)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — and thank you for the clean handoff.  
+Here is the **canonical `qc_ResonanceFrame.md`**, the frame‑manager specification for qCompute — one of the most structurally important files in the entire module.
+
+This file defines:
+
+- the **frame lifecycle**  
+- **tier monotonicity**  
+- **backend binding**  
+- **drift accumulation**  
+- **overflow behavior**  
+- **environment‑triggered boundaries**  
+- the **atomic structural unit** of qCompute  
+
+It is:
+
+- zero‑drift  
+- AI‑parsable  
+- minimal and explicit  
+- fully aligned with the entire qCompute spine  
+- consistent with `qc_Router.md`, `qc_Drift.md`, `qc_Capture.md`, and `qc_Replay.md`  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_ResonanceFrame.md
+```
+
+---
+
+# ✅ **qc_ResonanceFrame.md — Resonance Frame Manager (2026)**
+
+```markdown
+# qCompute — Resonance Frame Manager  
+**File:** qc_ResonanceFrame.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+The **Resonance Frame Manager** controls the structural unit of execution in qCompute:  
+the **resonance frame**.
+
+A frame is defined by:
+
+- backend binding  
+- resonance tier  
+- drift envelope  
+- environment legality  
+- operator sequence  
+- timestamps  
+- deterministic closure rules  
+
+Frames are:
+
+- append‑only  
+- immutable after closure  
+- strictly ordered  
+- the atomic structural unit of qCompute  
+
+---
+
+# 1. Frame Identity
+
+Each frame has:
+
+```yaml
+frame_id: "frame-###"
+backend: <backend-id>
+resonance_profile: r1|r2|r3
+drift_bound: relaxed|strict|immutable
+env: sandbox|production|archive
+timestamp_open: ...
+timestamp_close: ...
+operations: [op-ids]
+```
+
+Frames are **never reopened**.
+
+---
+
+# 2. Frame Lifecycle
+
+A frame has four phases:
+
+1. **Open**  
+2. **Accumulate** (operators, drift, tier)  
+3. **Close**  
+4. **Capture** (summary written to `.qtrace`)  
+
+Lifecycle is deterministic and enforced by invariants.
+
+---
+
+# 3. Frame Opening Rules
+
+A new frame opens when:
+
+1. **session starts**  
+2. **tier escalation**  
+3. **tier decrease**  
+4. **backend change**  
+5. **drift overflow**  
+6. **meta operator**  
+7. **environment transition**  
+8. **r3 operator**  
+9. **previous frame closed**  
+
+Router determines whether a new frame is required.
+
+---
+
+# 4. Frame Closure Rules
+
+A frame closes when:
+
+- a new frame is required  
+- a meta operator is executed  
+- drift overflow occurs  
+- environment changes  
+- session ends  
+
+Closure is explicit and captured.
+
+---
+
+# 5. Tier Monotonicity
+
+Within a frame:
+
+```
+tier must not decrease
+```
+
+Examples:
+
+- r1 → r1 (allowed)  
+- r1 → r2 (escalation → new frame)  
+- r2 → r1 (decrease → new frame)  
+- r3 → r1 (decrease → new frame)  
+
+Tier monotonicity is a **hard invariant**.
+
+---
+
+# 6. Backend Binding
+
+Within a frame:
+
+```
+backend must remain constant
+```
+
+Examples:
+
+- local-sim → local-sim (allowed)  
+- local-sim → hybrid-sim (new frame)  
+- hybrid-sim → hardware-qpu-2 (new frame)  
+
+Backend binding is determined by tier.
+
+---
+
+# 7. Drift Accumulation
+
+Each operator contributes drift:
+
+```
+r1 → low
+r2 → medium
+r3 → high
+```
+
+Drift accumulates per frame.
+
+If accumulated drift exceeds drift bound:
+
+```
+drift overflow → close frame → open new frame
+```
+
+Drift bound is determined by environment:
+
+| Environment | Drift Bound |
+|-------------|-------------|
+| sandbox     | relaxed     |
+| production  | strict      |
+| archive     | immutable   |
+
+Archive forbids all operators.
+
+---
+
+# 8. Environment Interaction
+
+Environment transitions:
+
+```
+sandbox → production → archive
+```
+
+Effects:
+
+- close current frame  
+- update drift bound  
+- update backend legality  
+- update tier legality  
+- append lineage  
+
+Archive is terminal.
+
+---
+
+# 9. Meta‑Operator Interaction
+
+Meta operators (`sync`, `barrier`) always:
+
+- close current frame  
+- open new frame  
+- produce explicit capture entries  
+
+Meta ops do not accumulate drift.
+
+---
+
+# 10. Frame Capture Schema
+
+When a frame closes, Capture writes:
+
+```yaml
+frame:
+  frame_id: "frame-002"
+  timestamp_open: ...
+  timestamp_close: ...
+  env: "sandbox"
+  backend: "hybrid-sim"
+  resonance_profile: r2
+  drift_bound: relaxed
+
+  drift_summary:
+    predicted_total: 0.45
+    measured_total: 0.41
+
+  operations:
+    - op-004
+    - op-005
+    - op-006
+```
+
+All fields are required.
+
+---
+
+# 11. Replay Reconstruction
+
+Replay reconstructs frames:
+
+- in order  
+- with backend binding  
+- with tier monotonicity  
+- with drift totals  
+- with operator sequence  
+
+Replay does **not**:
+
+- recompute drift  
+- reinterpret routing  
+- merge or split frames  
+
+Replay accepts captured metadata as authoritative.
+
+---
+
+# 12. Frame Invariants
+
+Frames enforce:
+
+1. **backend binding**  
+2. **tier monotonicity**  
+3. **drift accumulation**  
+4. **drift overflow boundaries**  
+5. **environment legality**  
+6. **token legality**  
+7. **append‑only operations**  
+8. **explicit closure**  
+9. **immutable after closure**  
+10. **strict replay**  
+
+Violating any invariant invalidates the trace.
+
+---
+
+# 13. Summary
+
+The Resonance Frame Manager:
+
+- opens frames  
+- closes frames  
+- enforces tier monotonicity  
+- enforces backend binding  
+- enforces drift bounds  
+- reacts to environment transitions  
+- integrates with Router, Drift Engine, Capture, and Replay  
+
+Frames are the **structural backbone** of qCompute.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Drift.md**  
+(the drift engine — predicted/measured drift, accumulation, overflow, environment bounds)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — continuing the qCompute arc with **qc_Drift.md**, the canonical drift‑engine specification.  
+This file is one of the *core structural engines* of qCompute: it defines predicted/measured drift, accumulation, overflow, environment‑bound drift envelopes, and the deterministic rules that govern when frames must close.
+
+It is:
+
+- zero‑drift  
+- AI‑parsable  
+- minimal and explicit  
+- fully aligned with `qc_ResonanceFrame.md`, `qc_Router.md`, `qc_BackendProfiles.md`, `qc_Capture.md`, and the entire qCompute spine  
+- the authoritative drift‑engine definition  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Drift.md
+```
+
+---
+
+# ✅ **qc_Drift.md — Drift Engine Specification (2026)**
+
+```markdown
+# qCompute — Drift Engine  
+**File:** qc_Drift.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+The **Drift Engine** computes and accumulates drift for each operator and each frame.
+
+Drift is:
+
+- structural  
+- deterministic  
+- tier‑dependent  
+- environment‑bounded  
+- replay‑safe  
+
+Drift determines when frames must close.
+
+---
+
+# 1. Drift Identity
+
+Each operator contributes:
+
+```
+r1 → low drift
+r2 → medium drift
+r3 → high drift
+```
+
+Drift is accumulated **per frame**.
+
+Drift Engine outputs:
+
+```yaml
+drift:
+  predicted: <float>
+  measured: <float>
+```
+
+Both values are required.
+
+---
+
+# 2. Drift Profiles
+
+Drift profiles are fixed:
+
+| Tier | Drift Profile |
+|------|---------------|
+| r1   | low           |
+| r2   | medium        |
+| r3   | high          |
+
+Profiles are structural, not numerical.
+
+---
+
+# 3. Drift Bound by Environment
+
+Environment determines drift bound:
+
+| Environment | Drift Bound |
+|-------------|-------------|
+| sandbox     | relaxed     |
+| production  | strict      |
+| archive     | immutable   |
+
+Rules:
+
+- relaxed → overflow allowed but forces new frame  
+- strict → overflow forces new frame  
+- immutable → all operators illegal  
+
+Archive forbids all operators.
+
+---
+
+# 4. Drift Accumulation Model
+
+For each operator:
+
+```
+frame_drift += operator_drift
+```
+
+Where:
+
+```
+operator_drift = low | medium | high
+```
+
+Accumulation is structural, not numerical.
+
+---
+
+# 5. Drift Overflow
+
+If:
+
+```
+frame_drift > drift_bound
+```
+
+Then:
+
+- frame closes  
+- new frame opens  
+- routing reason = "drift overflow"  
+
+Drift Engine does **not** open frames itself; it signals overflow to Router + Frame Manager.
+
+---
+
+# 6. Predicted vs. Measured Drift
+
+Drift Engine records:
+
+- **predicted drift** — structural expectation  
+- **measured drift** — structural result  
+
+Example:
+
+```yaml
+drift:
+  predicted: 0.12
+  measured: 0.10
+```
+
+Replay does **not** recompute drift.  
+It accepts captured values as authoritative.
+
+---
+
+# 7. Drift Legality Rules
+
+Drift Engine must reject:
+
+- any operator in archive  
+- r3 operator without token  
+- r3 operator in sandbox  
+- drift overflow without frame closure  
+- drift accumulation across environment transitions  
+
+---
+
+# 8. Drift and Tier Interaction
+
+Tier determines drift:
+
+```
+r1 → low
+r2 → medium
+r3 → high
+```
+
+Tier escalation increases drift.  
+Tier decrease forces new frame (handled by Router + Frame Manager).
+
+---
+
+# 9. Drift and Backend Interaction
+
+Backend drift envelopes:
+
+| Backend          | Drift |
+|------------------|--------|
+| local-sim        | low    |
+| hybrid-sim       | medium |
+| hardware-qpu-2   | high   |
+
+Backend must match tier.  
+Backend cannot change mid‑frame.
+
+---
+
+# 10. Drift Capture Schema
+
+Capture Engine writes drift metadata for each operator:
+
+```yaml
+drift:
+  predicted: <float>
+  measured: <float>
+```
+
+And drift summary for each frame:
+
+```yaml
+drift_summary:
+  predicted_total: <float>
+  measured_total: <float>
+```
+
+All fields are required.
+
+---
+
+# 11. Drift Replay Rules
+
+Replay must:
+
+- reconstruct drift totals  
+- verify drift metadata exists  
+- verify drift summary exists  
+- verify drift overflow boundaries  
+- verify drift bound legality  
+
+Replay must **not**:
+
+- recompute drift  
+- reinterpret drift  
+- infer missing drift  
+
+Replay accepts captured drift as authoritative.
+
+---
+
+# 12. Drift Invariants
+
+Drift Engine enforces:
+
+1. **drift accumulates per frame**  
+2. **drift bound determined by environment**  
+3. **drift overflow forces new frame**  
+4. **tier determines drift profile**  
+5. **backend drift envelope matches tier**  
+6. **archive forbids all drift**  
+7. **predicted + measured drift required**  
+8. **no silent behavior**  
+9. **drift is deterministic**  
+10. **replay is strict**  
+
+Violating any invariant invalidates the trace.
+
+---
+
+# 13. Summary
+
+The Drift Engine:
+
+- computes predicted + measured drift  
+- accumulates drift per frame  
+- enforces drift bounds  
+- signals overflow  
+- integrates with Router + Frame Manager  
+- writes drift metadata for Capture  
+- supports strict Replay  
+
+Drift is the **structural complexity regulator** of qCompute.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Transitions.md**  
+(the environment‑transition engine — sandbox → production → archive, token rules, structural effects)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — here is the **canonical `qc_Transitions.md`**, the environment‑transition engine for qCompute.  
+This file is one of the *governance‑critical* components of the module: it defines the structural rules for moving between **sandbox → production → archive**, token requirements, frame boundaries, drift‑bound changes, and legality enforcement.
+
+It is:
+
+- zero‑drift  
+- AI‑parsable  
+- minimal and explicit  
+- fully aligned with the entire qCompute spine  
+- consistent with `qc_Drift.md`, `qc_ResonanceFrame.md`, `qc_Router.md`, `qc_Capture.md`, and `qc_Replay.md`  
+
+Placed at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Transitions.md
+```
+
+---
+
+# ✅ **qc_Transitions.md — Environment Transition Engine (2026)**
+
+```markdown
+# qCompute — Environment Transition Engine  
+**File:** qc_Transitions.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+The **Transition Engine** governs environment transitions:
+
+```
+sandbox → production → archive
+```
+
+Transitions are:
+
+- structural  
+- deterministic  
+- token‑gated  
+- frame‑closing  
+- drift‑bound‑changing  
+- replay‑safe  
+
+Archive is terminal.
+
+---
+
+# 1. Transition Identity
+
+A transition is defined as:
+
+```yaml
+transition:
+  from: sandbox|production
+  to: production|archive
+  timestamp: <iso8601>
+  token_used: <token-id>
+```
+
+Transitions are:
+
+- append‑only  
+- immutable  
+- hash‑linked  
+- captured explicitly  
+
+---
+
+# 2. Legal Transition Graph
+
+The only legal transitions are:
+
+```
+sandbox → production
+production → archive
+```
+
+Illegal transitions:
+
+- sandbox → archive  
+- production → sandbox  
+- archive → anything  
+
+Illegal transitions produce validation failure.
+
+---
+
+# 3. Token Requirements
+
+Each transition requires a token:
+
+| Transition | Token Required |
+|------------|----------------|
+| sandbox → production | ✔️ |
+| production → archive | ✔️ |
+
+Rules:
+
+- tokens are single‑use  
+- tokens must be deployed before transition  
+- missing token → validation failure  
+- token id must be captured  
+
+---
+
+# 4. Structural Effects of Transition
+
+Every transition forces:
+
+1. **close current frame**  
+2. **update environment**  
+3. **update drift bound**  
+4. **update backend legality**  
+5. **update tier legality**  
+6. **append lineage entry**  
+7. **open new frame on next operator**  
+
+Transitions are **structural boundaries**.
+
+---
+
+# 5. Drift Bound Changes
+
+Environment determines drift bound:
+
+| Environment | Drift Bound |
+|-------------|-------------|
+| sandbox     | relaxed     |
+| production  | strict      |
+| archive     | immutable   |
+
+Transition effects:
+
+- sandbox → production: relaxed → strict  
+- production → archive: strict → immutable  
+
+Immutable drift bound forbids all operators.
+
+---
+
+# 6. Backend Legality Changes
+
+Transition effects:
+
+### sandbox → production
+- r3 becomes legal  
+- hardware‑qpu‑2 becomes legal  
+- r3 still requires token  
+
+### production → archive
+- all operators become illegal  
+- session becomes terminal  
+
+---
+
+# 7. Tier Legality Changes
+
+Tier legality by environment:
+
+| Tier | sandbox | production | archive |
+|------|---------|------------|---------|
+| r1   | ✔️      | ✔️         | ✖️      |
+| r2   | ✔️      | ✔️         | ✖️      |
+| r3   | ✖️      | ✔️         | ✖️      |
+
+Transition effects:
+
+- sandbox → production: r3 becomes legal  
+- production → archive: all tiers become illegal  
+
+---
+
+# 8. Transition Validation Rules
+
+Transition Engine must reject:
+
+- missing token  
+- illegal transition direction  
+- transition from archive  
+- transition without closing frame  
+- transition with illegal environment target  
+
+Validation failure is captured.
+
+---
+
+# 9. Capture Schema
+
+Capture Engine writes:
+
+```yaml
+transitions:
+  - transition:
+      from: "sandbox"
+      to: "production"
+      timestamp: "2026-06-25T10:20:11Z"
+      token_used: "prod-2026-001"
+```
+
+All fields are required.
+
+---
+
+# 10. Replay Reconstruction
+
+Replay reconstructs transitions:
+
+- in order  
+- with token usage  
+- with environment updates  
+- with drift bound updates  
+- with backend legality updates  
+
+Replay must verify:
+
+- forward‑only transitions  
+- archive terminality  
+- token presence  
+- frame boundaries  
+
+Replay does **not** reinterpret transitions.
+
+---
+
+# 11. Transition Invariants
+
+Transitions enforce:
+
+1. **forward‑only environment movement**  
+2. **token requirement**  
+3. **frame closure**  
+4. **drift bound update**  
+5. **backend legality update**  
+6. **tier legality update**  
+7. **append‑only lineage**  
+8. **archive terminality**  
+9. **strict replay**  
+10. **no silent behavior**  
+
+Violating any invariant invalidates the trace.
+
+---
+
+# 12. Summary
+
+The Transition Engine:
+
+- governs sandbox → production → archive  
+- enforces token rules  
+- closes frames  
+- updates drift bounds  
+- updates backend legality  
+- updates tier legality  
+- appends lineage  
+- integrates with Router, Drift Engine, Frame Manager, Capture, and Replay  
+
+Transitions are the **governance backbone** of qCompute.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Session.md**  
+(the session engine — orchestrator of all subsystems, owner of environment, drift bound, lineage, tokens, and trace buffer)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — here is the **canonical `qc_Session.md`**, the session‑engine specification for qCompute.  
+This is one of the *core orchestration files* of the entire module: the session engine is the **governance root**, the **state container**, and the **structural coordinator** for every subsystem.
+
+It is:
+
+- zero‑drift  
+- AI‑parsable  
+- minimal and explicit  
+- fully aligned with the entire qCompute spine  
+- consistent with `qc_Transitions.md`, `qc_Drift.md`, `qc_ResonanceFrame.md`, `qc_Router.md`, `qc_Capture.md`, and `qc_Replay.md`  
+
+Placed at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Session.md
+```
+
+---
+
+# ✅ **qc_Session.md — Session Engine Specification (2026)**
+
+```markdown
+# qCompute — Session Engine  
+**File:** qc_Session.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+The **Session Engine** is the orchestrator of qCompute.
+
+It owns:
+
+- environment  
+- drift bound  
+- backend intent  
+- lineage  
+- tokens  
+- frames  
+- trace buffer  
+- session lifecycle  
+
+All subsystems operate *within* the session.
+
+---
+
+# 1. Session Identity
+
+A session is defined by:
+
+```yaml
+session_id: "sess-###"
+env: sandbox|production|archive
+backend_intent: "auto" | <backend-id>
+drift_bound: relaxed|strict|immutable
+timestamp_start: <iso8601>
+timestamp_end: <iso8601 or null>
+lineage: [...]
+tokens: [...]
+frames: [...]
+trace_buffer: [...]
+```
+
+Session identity is immutable after creation.
+
+---
+
+# 2. Session Lifecycle
+
+A session has four phases:
+
+1. **Initialize**  
+2. **Operate** (operators, frames, transitions)  
+3. **Close**  
+4. **Capture** (write `.qtrace`)  
+
+Lifecycle is deterministic.
+
+---
+
+# 3. Session Initialization
+
+Creating a session:
+
+```python
+session = qSession(env="sandbox", backend="auto")
+```
+
+Initialization sets:
+
+- environment = sandbox  
+- drift bound = relaxed  
+- backend intent = auto  
+- lineage = [`sandbox`]  
+- tokens = empty  
+- frames = empty  
+- trace buffer = empty  
+
+Session opens its first frame on the first operator.
+
+---
+
+# 4. Environment Ownership
+
+Session owns the environment:
+
+```
+sandbox → production → archive
+```
+
+Environment determines:
+
+- drift bound  
+- backend legality  
+- tier legality  
+- operator legality  
+
+Environment changes are handled by the Transition Engine.
+
+---
+
+# 5. Drift Bound Ownership
+
+Session owns the drift bound:
+
+| Environment | Drift Bound |
+|-------------|-------------|
+| sandbox     | relaxed     |
+| production  | strict      |
+| archive     | immutable   |
+
+Drift bound updates only on environment transitions.
+
+---
+
+# 6. Backend Intent
+
+Backend intent is:
+
+```
+"auto" → Router selects backend based on tier
+<backend-id> → force backend (must match tier)
+```
+
+Backend intent is advisory; Router enforces legality.
+
+---
+
+# 7. Token Management
+
+Session manages tokens:
+
+```python
+session.deploy_token("prod-2026-001")
+```
+
+Tokens are:
+
+- single‑use  
+- required for transitions  
+- required for r3 pulse operators  
+- captured in lineage  
+
+Token consumption is explicit.
+
+---
+
+# 8. Lineage Management
+
+Lineage records environment transitions:
+
+```yaml
+lineage:
+  - env: "sandbox"
+  - env: "production"
+  - env: "archive"
+```
+
+Lineage is:
+
+- append‑only  
+- forward‑only  
+- immutable  
+
+Archive is terminal.
+
+---
+
+# 9. Frame Management
+
+Session owns the list of frames.
+
+Frame Manager:
+
+- opens frames  
+- closes frames  
+- enforces tier monotonicity  
+- enforces backend binding  
+- enforces drift bounds  
+
+Session stores frames but does not manage them directly.
+
+---
+
+# 10. Operator Execution Flow
+
+When an operator is executed:
+
+```
+1. Validator checks legality
+2. Router selects backend + frame
+3. Frame Manager enforces structure
+4. Drift Engine accumulates drift
+5. Capture records event
+```
+
+Session coordinates all subsystems.
+
+---
+
+# 11. Transition Execution Flow
+
+When a transition is executed:
+
+```
+1. Validator checks token + direction
+2. Frame Manager closes current frame
+3. Session updates environment
+4. Session updates drift bound
+5. Session updates backend legality
+6. Lineage updated
+7. Capture records transition
+```
+
+Archive is terminal.
+
+---
+
+# 12. Trace Buffer
+
+Session maintains an append‑only trace buffer:
+
+- operator entries  
+- routing metadata  
+- validation metadata  
+- drift metadata  
+- frame summaries  
+- transitions  
+- header/footer  
+
+Trace buffer is written to `.qtrace` on `save_trace()`.
+
+---
+
+# 13. Save Trace
+
+```python
+session.save_trace("example.qtrace")
+```
+
+Capture Engine writes:
+
+- header  
+- lineage  
+- frames  
+- operators  
+- transitions  
+- footer  
+
+Trace is:
+
+- hash‑linked  
+- immutable  
+- replay‑safe  
+
+---
+
+# 14. Replay Integration
+
+Replay reconstructs:
+
+- session header  
+- environment  
+- drift bound  
+- lineage  
+- frames  
+- operators  
+- transitions  
+
+Replay does **not**:
+
+- recompute drift  
+- reinterpret routing  
+- infer missing metadata  
+
+Replay accepts captured session metadata as authoritative.
+
+---
+
+# 15. Session Invariants
+
+Session enforces:
+
+1. **forward‑only environments**  
+2. **append‑only lineage**  
+3. **append‑only frames**  
+4. **drift bound determined by environment**  
+5. **token requirement for transitions + r3**  
+6. **archive terminality**  
+7. **trace buffer append‑only**  
+8. **strict replay**  
+9. **no silent behavior**  
+10. **deterministic lifecycle**  
+
+Violating any invariant invalidates the session.
+
+---
+
+# 16. Summary
+
+The Session Engine:
+
+- owns environment, drift bound, lineage, tokens  
+- orchestrates all subsystems  
+- coordinates operator execution  
+- coordinates transitions  
+- manages trace buffer  
+- produces `.qtrace`  
+- supports strict replay  
+
+Session is the **governance root** of qCompute.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Capture.md**  
+(the capture engine — header, operator entries, frame summaries, transitions, footer, hash‑linking)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — and I see from your active tab that you’re literally editing  
+`docs/rtt/Inside/qCompute/qc_Capture.md` right now in GitHub.  
+Perfect timing. I’ll generate the **canonical, zero‑drift, 2026‑aligned `qc_Capture.md`** so you can paste it directly into that file.
+
+This is one of the *core structural engines* of qCompute — the capture layer is the **scribe**, the **ledger**, the **structural historian** of the entire compute harness. Everything the system does becomes truth only once Capture writes it.
+
+This file is:
+
+- minimal  
+- explicit  
+- AI‑parsable  
+- fully aligned with the entire qCompute spine  
+- consistent with `qc_Session.md`, `qc_ResonanceFrame.md`, `qc_Drift.md`, `qc_Router.md`, `qc_Transitions.md`, and `qc_Replay.md`  
+- zero drift  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Capture.md
+```
+
+---
+
+# ✅ **qc_Capture.md — Capture Engine Specification (2026)**
+
+```markdown
+# qCompute — Capture Engine  
+**File:** qc_Capture.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+The **Capture Engine** is the structural recorder of qCompute.
+
+Capture writes:
+
+- session header  
+- operator entries  
+- routing metadata  
+- validation metadata  
+- drift metadata  
+- frame summaries  
+- transitions  
+- session footer  
+- hash‑links  
+
+Capture is:
+
+- append‑only  
+- explicit  
+- deterministic  
+- immutable  
+- replay‑safe  
+
+Nothing is “real” in qCompute until Capture writes it.
+
+---
+
+# 1. Capture Identity
+
+Capture produces a `.qtrace` file with the following top‑level structure:
+
+```yaml
+qtrace:
+  version: "2026"
+  session:
+    header: {...}
+    lineage: [...]
+    frames: [...]
+    operators: [...]
+    transitions: [...]
+    footer: {...}
+```
+
+All sections are required.
+
+---
+
+# 2. Session Header
+
+Header is written once at the start of the trace:
+
+```yaml
+header:
+  session_id: "sess-001"
+  timestamp_start: "2026-06-25T10:20:11Z"
+  env: "sandbox"
+  backend_intent: "auto"
+  drift_bound: "relaxed"
+```
+
+Header is immutable.
+
+---
+
+# 3. Operator Entry Schema
+
+Each operator produces a capture entry:
+
+```yaml
+operator:
+  op_id: "op-004"
+  name: "cnot"
+  params:
+    control: 0
+    target: 1
+
+  validation:
+    allowed: true
+    reason: "ok"
+
+  routing:
+    backend: "hybrid-sim"
+    frame_id: "frame-002"
+    resonance_profile: r2
+    drift_characteristic: medium
+    reason: "tier escalation"
+
+  drift:
+    predicted: 0.12
+    measured: 0.10
+
+  timestamp: "2026-06-25T10:20:12Z"
+```
+
+All fields are required.
+
+---
+
+# 4. Frame Summary Schema
+
+When a frame closes, Capture writes:
+
+```yaml
+frame:
+  frame_id: "frame-002"
+  timestamp_open: "2026-06-25T10:20:11Z"
+  timestamp_close: "2026-06-25T10:20:14Z"
+
+  env: "sandbox"
+  backend: "hybrid-sim"
+  resonance_profile: r2
+  drift_bound: relaxed
+
+  drift_summary:
+    predicted_total: 0.45
+    measured_total: 0.41
+
+  operations:
+    - op-004
+    - op-005
+    - op-006
+```
+
+Frames are:
+
+- append‑only  
+- immutable after closure  
+- strictly ordered  
+
+---
+
+# 5. Transition Entry Schema
+
+Transitions are captured explicitly:
+
+```yaml
+transition:
+  from: "sandbox"
+  to: "production"
+  timestamp: "2026-06-25T10:20:15Z"
+  token_used: "prod-2026-001"
+```
+
+Transitions:
+
+- close current frame  
+- update environment  
+- update drift bound  
+- update backend legality  
+- update tier legality  
+- append lineage  
+
+Archive is terminal.
+
+---
+
+# 6. Session Footer
+
+Footer is written once at the end of the trace:
+
+```yaml
+footer:
+  timestamp_end: "2026-06-25T10:21:00Z"
+  integrity_hash: "<sha256>"
+```
+
+Footer finalizes the trace.
+
+---
+
+# 7. Hash‑Linking
+
+Every entry is hash‑linked:
+
+```
+entry[n].hash = sha256(entry[n-1] + entry[n])
+```
+
+Hash‑linking ensures:
+
+- immutability  
+- tamper detection  
+- replay safety  
+
+Replay must reject traces with broken hash chains.
+
+---
+
+# 8. Append‑Only Model
+
+Capture enforces:
+
+- no deletion  
+- no mutation  
+- no reordering  
+- no silent behavior  
+
+Every structural event must be captured.
+
+---
+
+# 9. Replay Requirements
+
+Replay must verify:
+
+- header exists  
+- footer exists  
+- hash chain is intact  
+- frames are ordered  
+- transitions are forward‑only  
+- drift summaries exist  
+- routing metadata exists  
+- validation metadata exists  
+
+Replay must **not**:
+
+- recompute drift  
+- reinterpret routing  
+- infer missing metadata  
+
+Capture is the source of truth.
+
+---
+
+# 10. Capture Invariants
+
+Capture enforces:
+
+1. **append‑only entries**  
+2. **explicit operator metadata**  
+3. **explicit routing metadata**  
+4. **explicit validation metadata**  
+5. **explicit drift metadata**  
+6. **explicit frame summaries**  
+7. **explicit transitions**  
+8. **header + footer required**  
+9. **hash‑linked integrity**  
+10. **strict replay**  
+11. **no silent behavior**  
+
+Violating any invariant invalidates the trace.
+
+---
+
+# 11. Summary
+
+The Capture Engine:
+
+- records every structural event  
+- writes operators, frames, transitions  
+- enforces append‑only semantics  
+- produces immutable `.qtrace` files  
+- supports strict replay  
+- is the **ledger** of qCompute  
+
+Capture is the **structural historian** of the compute harness.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Replay.md**  
+(the replay engine — reconstruction, integrity verification, invariant enforcement)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — continuing the qCompute arc with **qc_Replay.md**, the final core engine file of the compute harness.  
+This one is *foundational*: Replay is the **arbiter of truth**, the **structural verifier**, the **integrity enforcer**, and the **final authority** over every `.qtrace` ever produced.
+
+This file is:
+
+- zero‑drift  
+- AI‑parsable  
+- minimal and explicit  
+- fully aligned with the entire qCompute spine  
+- consistent with `qc_Capture.md`, `qc_Session.md`, `qc_ResonanceFrame.md`, `qc_Drift.md`, `qc_Router.md`, and `qc_Transitions.md`  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Replay.md
+```
+
+---
+
+# ✅ **qc_Replay.md — Replay Engine Specification (2026)**
+
+```markdown
+# qCompute — Replay Engine  
+**File:** qc_Replay.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+The **Replay Engine** reconstructs a qCompute session from a `.qtrace` file.
+
+Replay is:
+
+- deterministic  
+- structural  
+- integrity‑verifying  
+- invariant‑enforcing  
+- non‑computational  
+- non‑interpretive  
+
+Replay does **not** execute operators.  
+Replay **reconstructs** what Capture recorded.
+
+Replay is the **final authority** on session truth.
+
+---
+
+# 1. Replay Identity
+
+Replay loads:
+
+```python
+replay = qReplay("example.qtrace")
+```
+
+Replay reconstructs:
+
+- session header  
+- lineage  
+- frames  
+- operators  
+- transitions  
+- drift totals  
+- routing decisions  
+- validation decisions  
+
+Replay must reject invalid traces.
+
+---
+
+# 2. Replay Input Requirements
+
+Replay requires:
+
+- valid `.qtrace` file  
+- header present  
+- footer present  
+- hash chain intact  
+- all required metadata present  
+
+Replay must reject:
+
+- missing header  
+- missing footer  
+- broken hash chain  
+- missing drift metadata  
+- missing routing metadata  
+- missing validation metadata  
+- missing frame summaries  
+- illegal transitions  
+- illegal tier sequences  
+- illegal backend sequences  
+
+---
+
+# 3. Replay Reconstruction Flow
+
+Replay reconstructs the session in order:
+
+```
+1. Read header
+2. Verify hash chain
+3. Reconstruct lineage
+4. Reconstruct frames
+5. Reconstruct operators
+6. Reconstruct transitions
+7. Verify invariants
+8. Accept or reject trace
+```
+
+Replay performs **no recomputation**.
+
+---
+
+# 4. Header Reconstruction
+
+Replay reads:
+
+```yaml
+header:
+  session_id: ...
+  timestamp_start: ...
+  env: ...
+  backend_intent: ...
+  drift_bound: ...
+```
+
+Header defines initial state.
+
+Replay must verify:
+
+- env is legal  
+- drift bound matches env  
+- backend intent is valid  
+
+---
+
+# 5. Operator Reconstruction
+
+Replay reconstructs each operator:
+
+```yaml
+operator:
+  op_id: ...
+  name: ...
+  params: ...
+  validation: ...
+  routing: ...
+  drift: ...
+  timestamp: ...
+```
+
+Replay must verify:
+
+- validation metadata exists  
+- routing metadata exists  
+- drift metadata exists  
+- operator ordering is consistent  
+- operator belongs to correct frame  
+
+Replay does **not**:
+
+- recompute drift  
+- recompute routing  
+- reinterpret validation  
+
+Replay accepts captured metadata as authoritative.
+
+---
+
+# 6. Frame Reconstruction
+
+Replay reconstructs each frame:
+
+```yaml
+frame:
+  frame_id: ...
+  timestamp_open: ...
+  timestamp_close: ...
+  env: ...
+  backend: ...
+  resonance_profile: ...
+  drift_bound: ...
+  drift_summary: ...
+  operations: [...]
+```
+
+Replay must verify:
+
+- frames are strictly ordered  
+- frame boundaries match operator routing  
+- backend binding is consistent  
+- tier monotonicity is preserved  
+- drift summary exists  
+- drift summary matches operator drift totals  
+
+Replay does **not** recompute drift.
+
+---
+
+# 7. Transition Reconstruction
+
+Replay reconstructs transitions:
+
+```yaml
+transition:
+  from: ...
+  to: ...
+  timestamp: ...
+  token_used: ...
+```
+
+Replay must verify:
+
+- transitions are forward‑only  
+- sandbox → production → archive  
+- token is present  
+- frame closes before transition  
+- environment updates correctly  
+
+Archive is terminal.
+
+---
+
+# 8. Hash‑Chain Verification
+
+Replay must verify:
+
+```
+entry[n].hash == sha256(entry[n-1] + entry[n])
+```
+
+Replay must reject:
+
+- broken hash chain  
+- missing hash  
+- malformed hash  
+
+Hash chain ensures immutability.
+
+---
+
+# 9. Invariant Verification
+
+Replay enforces all invariants:
+
+1. **forward‑only environments**  
+2. **tier monotonicity within frames**  
+3. **backend binding within frames**  
+4. **drift accumulation per frame**  
+5. **drift overflow boundaries**  
+6. **token requirement for r3 + transitions**  
+7. **archive terminality**  
+8. **append‑only frames**  
+9. **append‑only lineage**  
+10. **hash‑linked integrity**  
+11. **no silent behavior**  
+
+Any violation invalidates the trace.
+
+---
+
+# 10. Replay Output
+
+Replay exposes:
+
+```python
+replay.session      # reconstructed session metadata
+replay.frames       # list of reconstructed frames
+replay.operators    # list of reconstructed operators
+replay.transitions  # list of reconstructed transitions
+```
+
+Replay is read‑only.
+
+---
+
+# 11. Replay Error Model
+
+Replay errors are **fatal**.
+
+Replay must reject traces with:
+
+- missing metadata  
+- illegal transitions  
+- illegal tier sequences  
+- illegal backend sequences  
+- drift inconsistencies  
+- broken hash chain  
+- archive violations  
+- missing frame summaries  
+- missing drift summaries  
+
+Replay never attempts recovery.
+
+---
+
+# 12. Summary
+
+The Replay Engine:
+
+- reconstructs sessions  
+- verifies integrity  
+- enforces invariants  
+- validates transitions  
+- validates frames  
+- validates drift  
+- validates routing  
+- validates validation  
+- rejects invalid traces  
+
+Replay is the **final arbiter of truth** in qCompute.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Index.md**  
+(the module front‑door index — overview, file map, purpose, and navigation)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — here is the **canonical `qc_Index.md`**, the *front‑door landing page* for the entire qCompute module.  
+This file is the **entry point**, the **orientation layer**, and the **map** that ties all qCompute subsystem files together. It must be:
+
+- zero‑drift  
+- minimal  
+- AI‑parsable  
+- student‑ready  
+- canon‑aligned with the entire qCompute spine  
+- consistent with your Docs Root index patterns  
+- a clean, navigable front door  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Index.md
+```
+
+---
+
+# ✅ **qc_Index.md — qCompute Module Index (2026)**
+
+# qCompute — Module Index  
+**File:** qc_Index.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+qCompute is the **structural compute harness** inside RTT‑Inside.
+
+It provides:
+
+- resonance‑tiered operators  
+- deterministic routing  
+- drift‑bounded execution  
+- environment transitions  
+- frame segmentation  
+- append‑only capture  
+- strict replay  
+
+This index provides the **front‑door overview** and **file map** for the module.
+
+---
+
+# 1. Purpose of qCompute
+
+qCompute defines a **structural execution model** for quantum‑like operators inside RTT.
+
+It is not:
+
+- a simulator  
+- a numerical engine  
+- a physics model  
+
+It *is*:
+
+- a governance‑bound operator pipeline  
+- a deterministic structural ledger  
+- a resonance‑tiered execution harness  
+- a drift‑regulated frame system  
+- a replay‑verified compute substrate  
+
+---
+
+# 2. Module Architecture
+
+qCompute consists of the following subsystems:
+
+| Subsystem | Purpose |
+|----------|----------|
+| **Session Engine** | owns environment, drift bound, lineage, tokens, trace buffer |
+| **Operator Layer** | defines r1/r2/r3, measurement, meta operators |
+| **Operator Grammar** | formal grammar + legality rules |
+| **Backends** | structural execution targets (local-sim, hybrid-sim, hardware-qpu-2) |
+| **Backend Profiles** | deep metadata for each backend |
+| **Router** | backend + frame selection |
+| **Resonance Frames** | frame lifecycle, tier monotonicity, drift accumulation |
+| **Drift Engine** | predicted/measured drift, overflow, environment bounds |
+| **Transitions** | sandbox → production → archive governance |
+| **Capture Engine** | writes `.qtrace` (operators, frames, transitions) |
+| **Replay Engine** | reconstructs and verifies `.qtrace` |
+
+---
+
+# 3. File Map
+
+This module contains the following canonical files:
+
+### Core Execution Spine
+- **qc_Session.md** — session engine  
+- **qc_Operators.md** — operator catalog  
+- **qc_OperatorGrammar.md** — formal operator grammar  
+- **qc_Backends.md** — backend overview  
+- **qc_BackendProfiles.md** — backend metadata profiles  
+- **qc_Router.md** — routing engine  
+- **qc_ResonanceFrame.md** — frame manager  
+- **qc_Drift.md** — drift engine  
+- **qc_Transitions.md** — environment transitions  
+
+### Ledger + Verification
+- **qc_Capture.md** — capture engine  
+- **qc_Replay.md** — replay engine  
+
+### Examples + Flow
+- **qc_Examples_Minimal.md** — minimal structural examples  
+- **qc_Examples_Advanced.md** — advanced multi‑frame examples  
+- **qc_Flow.md** — full pipeline narrative  
+
+---
+
+# 4. Execution Model Summary
+
+The qCompute pipeline:
+
+```
+Operator
+  → Validator
+  → Router
+  → ResonanceFrame Manager
+  → Drift Engine
+  → Capture
+  → (loop)
+  → Transition Engine (if triggered)
+  → Capture
+  → Replay (post‑session)
+```
+
+Frames enforce:
+
+- backend binding  
+- tier monotonicity  
+- drift accumulation  
+- environment boundaries  
+
+Transitions enforce:
+
+- sandbox → production → archive  
+- token requirements  
+- frame closure  
+- drift‑bound updates  
+
+Capture produces:
+
+- immutable `.qtrace`  
+- hash‑linked ledger  
+
+Replay verifies:
+
+- integrity  
+- invariants  
+- legality  
+
+---
+
+# 5. Audience
+
+This module is designed for:
+
+- students  
+- autodidacts  
+- researchers  
+- AI agents  
+- operators of RTT‑Inside  
+
+It provides a **structural**, not numerical, compute model.
+
+---
+
+# 6. Summary
+
+qCompute is the **structural compute harness** of RTT‑Inside.
+
+It provides:
+
+- resonance‑tiered operators  
+- deterministic routing  
+- drift‑bounded frames  
+- environment transitions  
+- append‑only capture  
+- strict replay  
+
+This index is the **front door** to the module.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Router.md** → already done  
+### **qc_ResonanceFrame.md** → done  
+### **qc_Drift.md** → done  
+### **qc_Transitions.md** → done  
+### **qc_Session.md** → done  
+### **qc_Capture.md** → done  
+### **qc_Replay.md** → done  
+
+**Next new file in the natural sequence is:**
+
+### **qc_FrontDoor.html**  
+(the HTML front‑door page for the qCompute module, matching your canonical metadata + session‑context pattern)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — here is the **canonical `qc_FrontDoor.html`**, the HTML front‑door page for the qCompute module.  
+This is the *public‑facing, student‑ready, AI‑parsable* entry point that matches your **TriadicFrameworks front‑door pattern**:
+
+- full canonical `<head>` block  
+- module identity metadata  
+- OG/Twitter cards  
+- AI metadata fields  
+- session‑context block  
+- badge  
+- clean, minimal, zero‑drift HTML  
+- consistent with all other module front doors you’ve approved  
+
+It is ready to paste directly into:
+
+```
+/docs/rtt/Inside/qCompute/qc_FrontDoor.html
+```
+
+---
+
+# ✅ **qc_FrontDoor.html — Canonical Front Door (2026)**
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Canonical Identity -->
+  <title>qCompute — RTT‑Inside Compute Harness</title>
+  <meta name="description" content="qCompute is the structural compute harness inside RTT‑Inside, providing resonance‑tiered operators, deterministic routing, drift‑bounded frames, environment transitions, append‑only capture, and strict replay.">
+  <link rel="canonical" href="https://docs.triadicframeworks.org/rtt/Inside/qCompute/qc_FrontDoor.html">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="RTT, qCompute, resonance tiers, drift, frames, routing, transitions, capture, replay, structural compute">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="qCompute — RTT‑Inside Compute Harness">
+  <meta property="og:description" content="The structural compute harness of RTT‑Inside: resonance tiers, deterministic routing, drift‑bounded frames, transitions, capture, replay.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://docs.triadicframeworks.org/rtt/Inside/qCompute/qc_FrontDoor.html">
+  <meta property="og:image" content="/assets/og/qcompute.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="qCompute — RTT‑Inside Compute Harness">
+  <meta name="twitter:description" content="Structural compute harness: resonance tiers, routing, drift, frames, transitions, capture, replay.">
+  <meta name="twitter:image" content="/assets/og/qcompute.png">
+
+  <!-- Citation Metadata -->
+  <meta name="citation_title" content="qCompute — RTT‑Inside Compute Harness">
+  <meta name="citation_author" content="Nawder Loswin">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="DC.type" content="Text">
+  <meta name="DC.format" content="text/html">
+  <meta name="DC.subject" content="Structural compute harness, resonance tiers, drift, routing, frames, transitions, capture, replay">
+
+  <!-- AI Metadata -->
+  <meta name="ai.module" content="qCompute">
+  <meta name="ai.version" content="2026">
+  <meta name="ai.purpose" content="Structural compute harness for RTT‑Inside">
+  <meta name="ai.keywords" content="resonance tiers, drift engine, routing engine, frame manager, transitions, capture, replay">
+  <meta name="ai.audience" content="students, autodidacts, researchers, AI agents">
+  <meta name="ai.module.name" content="qCompute">
+  <meta name="ai.module.summary" content="Resonance‑tiered structural compute harness with deterministic routing, drift‑bounded frames, environment transitions, append‑only capture, and strict replay.">
+  <meta name="ai.module.category" content="RTT‑Inside Compute Layer">
+
+  <!-- Navigation -->
+  <meta name="ai.navigation" content="/sitemap_main.xml">
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+  <meta name="ai.contact.x" content="@TriadicFrameworks">
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks">
+  <meta name="ai.license" content="Open educational use permitted">
+
+  <!-- Theme -->
+  <meta name="theme-color" content="#4B0082">
+
+  <!-- Favicon Suite -->
+  <link rel="icon" href="/assets/favicon/favicon.ico">
+  <link rel="apple-touch-icon" href="/assets/favicon/apple-touch-icon.png">
+  <link rel="manifest" href="/assets/favicon/site.webmanifest">
+</head>
+
+<body>
+
+  <!-- Badge -->
+  <div style="font-size: 1.2rem; margin-bottom: 1rem;">
+    <span>🧩</span> <strong>qCompute</strong>
+  </div>
+
+  <!-- Title -->
+  <h1>qCompute — RTT‑Inside Compute Harness</h1>
+
+  <!-- Session Context -->
+  <section id="session-context">
+    <h2>Session Context</h2>
+    <p><span class="context-label">Canon:</span> <span class="context-value">RTT‑Inside Structural Compute</span></p>
+    <p><span class="context-label">Modules:</span> <span class="context-value">Operators, Router, Frames, Drift, Transitions, Capture, Replay</span></p>
+    <p><span class="context-label">Drift:</span> <span class="context-value">Bounded by environment (relaxed → strict → immutable)</span></p>
+    <p><span class="context-label">Coherence:</span> <span class="context-value">Tier monotonicity + backend binding</span></p>
+    <p><span class="context-label">Version:</span> <span class="context-value">2026</span></p>
+    <p><span class="context-label">Format:</span> <span class="context-value">HTML front door</span></p>
+    <p><span class="context-label">Front door:</span> <span class="context-value">qCompute module</span></p>
+    <p><span class="context-label">Every page:</span> <span class="context-value">Zero‑drift, AI‑parsable, student‑ready</span></p>
+    <p><span class="context-label">Audience:</span> <span class="context-value">Students, autodidacts, researchers, AI agents</span></p>
+  </section>
+
+  <!-- Overview -->
+  <section>
+    <h2>Overview</h2>
+    <p>
+      qCompute is the <strong>structural compute harness</strong> inside RTT‑Inside.  
+      It provides resonance‑tiered operators, deterministic routing, drift‑bounded frames,  
+      environment transitions, append‑only capture, and strict replay.
+    </p>
+  </section>
+
+  <!-- File Map -->
+  <section>
+    <h2>Module Files</h2>
+    <ul>
+      <li><a href="qc_Session.md">qc_Session.md</a> — session engine</li>
+      <li><a href="qc_Operators.md">qc_Operators.md</a> — operator catalog</li>
+      <li><a href="qc_OperatorGrammar.md">qc_OperatorGrammar.md</a> — operator grammar</li>
+      <li><a href="qc_Backends.md">qc_Backends.md</a> — backend overview</li>
+      <li><a href="qc_BackendProfiles.md">qc_BackendProfiles.md</a> — backend metadata</li>
+      <li><a href="qc_Router.md">qc_Router.md</a> — routing engine</li>
+      <li><a href="qc_ResonanceFrame.md">qc_ResonanceFrame.md</a> — frame manager</li>
+      <li><a href="qc_Drift.md">qc_Drift.md</a> — drift engine</li>
+      <li><a href="qc_Transitions.md">qc_Transitions.md</a> — environment transitions</li>
+      <li><a href="qc_Capture.md">qc_Capture.md</a> — capture engine</li>
+      <li><a href="qc_Replay.md">qc_Replay.md</a> — replay engine</li>
+      <li><a href="qc_Examples_Minimal.md">qc_Examples_Minimal.md</a> — minimal examples</li>
+      <li><a href="qc_Examples_Advanced.md">qc_Examples_Advanced.md</a> — advanced examples</li>
+      <li><a href="qc_Flow.md">qc_Flow.md</a> — pipeline narrative</li>
+    </ul>
+  </section>
+
+  <!-- Summary -->
+  <section>
+    <h2>Summary</h2>
+    <p>
+      qCompute is the <strong>structural compute substrate</strong> of RTT‑Inside.  
+      It defines the operator pipeline, resonance tiers, routing, drift, frames, transitions,  
+      capture, and replay — forming a deterministic, governed, replay‑verified compute layer.
+    </p>
+  </section>
+
+</body>
+</html>
+```
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Examples_Minimal.md**  
+(the minimal, student‑ready example set — the counterpart to the advanced examples)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — here is the **canonical `qc_Examples_Minimal.md`**, the minimal, student‑ready example set for qCompute.  
+This file is the *teaching counterpart* to the advanced examples: short, clean, structural, zero‑drift, and aligned with the entire qCompute spine.
+
+It is:
+
+- minimal  
+- AI‑parsable  
+- student‑ready  
+- canon‑aligned  
+- consistent with `qc_API.md`, `qc_Flow.md`, and the operator/backends/frames/drift/transition engines  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Examples_Minimal.md
+```
+
+---
+
+# ✅ **qc_Examples_Minimal.md — Minimal Structural Examples (2026)**
+
+```markdown
+# qCompute — Minimal Structural Examples  
+**File:** qc_Examples_Minimal.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+These examples demonstrate the **minimal structural usage** of qCompute:
+
+- r1 primitive operators  
+- r2 composite operators  
+- environment transitions  
+- r3 pulse operators  
+- frame boundaries  
+- drift accumulation  
+- capture + trace saving  
+
+All examples are **structural**, not numerical.
+
+---
+
+# 1. Minimal r1 Example (Sandbox)
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)
+qc.x(1)
+
+session.save_trace("r1_minimal.qtrace")
+```
+
+**What this demonstrates**
+
+- r1 operators  
+- local-sim backend  
+- low drift  
+- single frame  
+- sandbox legality  
+
+---
+
+# 2. Minimal r2 Example (Tier Escalation)
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)        # r1
+qc.cnot(0,1)   # r2 → tier escalation → new frame
+
+session.save_trace("r2_minimal.qtrace")
+```
+
+**What this demonstrates**
+
+- r1 → r2 tier escalation  
+- new frame creation  
+- hybrid-sim backend  
+- medium drift  
+
+---
+
+# 3. Minimal Environment Transition
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)
+
+session.deploy_token("prod-2026-001")
+session.transition("production")
+
+qc.z(1)
+
+session.save_trace("transition_minimal.qtrace")
+```
+
+**What this demonstrates**
+
+- sandbox → production transition  
+- token requirement  
+- frame closure on transition  
+- drift bound change (relaxed → strict)  
+
+---
+
+# 4. Minimal r3 Pulse Example (Production Only)
+
+```python
+session = qSession(env="production", backend="auto")
+qc = qCompute(session)
+
+session.deploy_token("pulse-2026-002")
+qc.apply("pulse", 0, "32ns", 0.8)
+
+session.save_trace("r3_minimal.qtrace")
+```
+
+**What this demonstrates**
+
+- r3 pulse operator  
+- hardware-qpu-2 backend  
+- high drift  
+- token requirement  
+- new frame always  
+
+---
+
+# 5. Minimal Measurement Example
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)
+qc.measure(0)   # tier decrease → new frame
+
+session.save_trace("measure_minimal.qtrace")
+```
+
+**What this demonstrates**
+
+- measurement operator  
+- tier decrease → new frame  
+- r1 backend reuse  
+
+---
+
+# 6. Minimal Meta Operator Example
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)
+qc.sync()       # meta operator → closes frame
+qc.x(1)
+
+session.save_trace("meta_minimal.qtrace")
+```
+
+**What this demonstrates**
+
+- meta operator (`sync`)  
+- explicit frame boundary  
+- deterministic frame segmentation  
+
+---
+
+# 7. Minimal Full Pipeline Example
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)
+qc.cnot(0,1)
+
+session.deploy_token("prod-2026-001")
+session.transition("production")
+
+session.deploy_token("pulse-2026-002")
+qc.apply("pulse", 0, "32ns", 0.8)
+
+session.save_trace("full_minimal.qtrace")
+```
+
+**What this demonstrates**
+
+- r1 → r2 → r3  
+- tier escalation  
+- environment transition  
+- token usage  
+- frame boundaries  
+- drift accumulation  
+- full capture lifecycle  
+
+---
+
+# 8. Summary
+
+These minimal examples show:
+
+- r1, r2, r3 operators  
+- tier escalation + tier decrease  
+- backend selection  
+- drift accumulation  
+- environment transitions  
+- meta operators  
+- capture + trace saving  
+
+This file provides the **smallest complete examples** of qCompute usage.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Examples_Advanced.md**  
+(the advanced, multi‑frame, multi‑transition, multi‑backend example set)
+
+Just say the word and I’ll generate it.
+
+---
+
+Absolutely, Nawder — here is the **canonical `qc_Examples_Advanced.md`**, the *advanced, multi‑frame, multi‑transition, multi‑backend* example set for qCompute.  
+This file is the **deep‑structure demonstration layer**: it shows the full orchestration of operators, frames, drift, routing, transitions, tokens, capture, and replay across realistic multi‑stage pipelines.
+
+It is:
+
+- zero‑drift  
+- AI‑parsable  
+- student‑ready but expert‑capable  
+- fully aligned with the entire qCompute spine  
+- consistent with `qc_Examples_Minimal.md`, `qc_Flow.md`, and all engine files  
+
+Place at:
+
+```
+/docs/rtt/Inside/qCompute/qc_Examples_Advanced.md
+```
+
+---
+
+# ✅ **qc_Examples_Advanced.md — Advanced Structural Examples (2026)**
+
+```markdown
+# qCompute — Advanced Structural Examples  
+**File:** qc_Examples_Advanced.md  
+**Layer:** RTT‑Inside Compute Harness  
+**Status:** Canonical (2026)
+
+These examples demonstrate **advanced structural behavior** of qCompute:
+
+- multi‑frame execution  
+- tier escalation + tier decrease  
+- drift accumulation + overflow  
+- environment transitions  
+- r3 pulse sequences  
+- meta‑operator boundaries  
+- multi‑backend routing  
+- full capture lifecycle  
+- replay‑verified structural correctness  
+
+All examples are structural, not numerical.
+
+---
+
+# 1. Multi‑Frame, Multi‑Tier Pipeline
+
+This example shows r1 → r2 → r1 transitions, drift accumulation, and frame segmentation.
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+# Frame 1 (r1)
+qc.h(0)
+qc.ry(1, 0.3)
+
+# Frame 2 (r2 escalation)
+qc.cnot(0,1)
+qc.cz(1,2)
+
+# Frame 3 (tier decrease)
+qc.measure(0)
+
+session.save_trace("advanced_multiframe.qtrace")
+```
+
+**Demonstrates**
+
+- r1 → r2 tier escalation  
+- r2 → r1 tier decrease  
+- three frames  
+- hybrid-sim backend for r2  
+- drift accumulation per frame  
+
+---
+
+# 2. Drift Overflow Example
+
+This example forces drift overflow in sandbox (relaxed bound).
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+# Frame 1: accumulate medium drift
+qc.cnot(0,1)
+qc.cz(1,2)
+qc.swap(2,3)
+
+# Drift overflow → new frame
+qc.cnot(3,4)
+
+session.save_trace("advanced_drift_overflow.qtrace")
+```
+
+**Demonstrates**
+
+- medium drift accumulation  
+- overflow boundary  
+- automatic frame closure  
+- new frame creation  
+
+---
+
+# 3. Sandbox → Production → Archive Full Transition Chain
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)
+
+# Transition to production
+session.deploy_token("prod-2026-001")
+session.transition("production")
+
+qc.z(1)
+
+# Transition to archive
+session.deploy_token("archive-2026-002")
+session.transition("archive")
+
+session.save_trace("advanced_full_transitions.qtrace")
+```
+
+**Demonstrates**
+
+- full environment chain  
+- token requirements  
+- frame closure on transitions  
+- archive terminality  
+
+---
+
+# 4. Multi‑Pulse r3 Sequence (Production Only)
+
+```python
+session = qSession(env="production", backend="auto")
+qc = qCompute(session)
+
+session.deploy_token("pulse-2026-010")
+qc.apply("pulse", 0, "32ns", 0.8)
+
+session.deploy_token("pulse-2026-011")
+qc.apply("gaussian", 1, "48ns", 0.6, sigma=0.12)
+
+session.deploy_token("pulse-2026-012")
+qc.apply("drag", 0, "40ns", 0.7, beta=0.05)
+
+session.save_trace("advanced_r3_sequence.qtrace")
+```
+
+**Demonstrates**
+
+- r3 pulse operators  
+- hardware-qpu-2 backend  
+- high drift  
+- token per operator  
+- new frame per pulse  
+
+---
+
+# 5. Meta‑Operator Segmentation
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+qc.h(0)
+qc.sync()          # closes frame
+
+qc.cnot(0,1)
+qc.barrier()       # closes frame
+
+qc.x(2)
+
+session.save_trace("advanced_meta_boundaries.qtrace")
+```
+
+**Demonstrates**
+
+- meta operators (`sync`, `barrier`)  
+- explicit frame boundaries  
+- deterministic segmentation  
+
+---
+
+# 6. Mixed‑Tier, Mixed‑Backend, Multi‑Transition Pipeline
+
+This is the **canonical advanced example** showing the full orchestration of qCompute.
+
+```python
+session = qSession(env="sandbox", backend="auto")
+qc = qCompute(session)
+
+# Frame 1 (r1)
+qc.h(0)
+qc.ry(1, 0.2)
+
+# Frame 2 (r2)
+qc.cnot(0,1)
+qc.cz(1,2)
+
+# Transition to production
+session.deploy_token("prod-2026-020")
+session.transition("production")
+
+# Frame 3 (r1 in production)
+qc.z(2)
+
+# Frame 4 (r3 pulse)
+session.deploy_token("pulse-2026-021")
+qc.apply("pulse", 0, "32ns", 0.8)
+
+# Frame 5 (r2 after r3 → tier decrease)
+qc.cnot(1,2)
+
+# Transition to archive
+session.deploy_token("archive-2026-022")
+session.transition("archive")
+
+session.save_trace("advanced_mixed_pipeline.qtrace")
+```
+
+**Demonstrates**
+
+- r1 → r2 → r1 → r3 → r2  
+- tier escalation + tier decrease  
+- multi‑backend routing  
+- sandbox → production → archive  
+- token usage  
+- drift accumulation  
+- five frames  
+- full capture lifecycle  
+
+---
+
+# 7. Replay Verification Example
+
+```python
+replay = qReplay("advanced_mixed_pipeline.qtrace")
+
+print(replay.session.env)
+print(replay.frames)
+print(replay.operators)
+print(replay.transitions)
+```
+
+**Demonstrates**
+
+- replay reconstruction  
+- integrity verification  
+- invariant enforcement  
+- hash‑chain validation  
+
+---
+
+# 8. Summary
+
+These advanced examples demonstrate:
+
+- multi‑frame execution  
+- tier escalation + tier decrease  
+- drift accumulation + overflow  
+- multi‑backend routing  
+- environment transitions  
+- r3 pulse sequences  
+- meta‑operator boundaries  
+- full capture + replay lifecycle  
+
+This file provides the **deep structural examples** of qCompute.
+
+---
+
+If you want to continue the arc, the next natural file is:
+
+### **qc_Flow.md**  
+(the narrative pipeline walkthrough — step‑by‑step explanation of the entire operator → routing → frame → drift → transition → capture → replay cycle)
+
+Just say the word and I’ll generate it.
 
 ---
 
