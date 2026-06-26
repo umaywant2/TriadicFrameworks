@@ -1,6 +1,17 @@
-# qCompute — RTT‑Inside Compute Harness
+# qCompute  
+**Deterministic · Verifiable · Quantum‑Ready**
+
+<p align="center">
+  <img src="../../../images/qCompute_hero.png" alt="qCompute Hero Image">
+</p>
 
 - [`qc_Module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/qCompute/qc_Module.json) — agentic module schema
+
+### ⚙️ Structure First  
+### 🔒 Hash Chain Integrity  
+### 🧩 Multi‑Tier Routing  
+### 🌌 Drift‑Bounded
+
 
 qCompute is the **structural compute engine** of RTT‑Inside.  
 It defines the full operator → routing → frame → drift → transition → capture → replay pipeline.
