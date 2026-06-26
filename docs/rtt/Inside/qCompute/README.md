@@ -1,9 +1,9 @@
-# qCompute  
-**Deterministic · Verifiable · Quantum‑Ready**
-
 <p align="center">
   <img src="../../../images/qCompute_hero.png" alt="qCompute Hero Image">
 </p>
+
+# qCompute  
+**Deterministic · Verifiable · Quantum‑Ready**
 
 - [`qc_Module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/qCompute/qc_Module.json) — agentic module schema
 
