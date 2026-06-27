@@ -1,5 +1,6 @@
 # TriadicFrameworks Canonical AI Persona Prompt
-# Author: Nawder Loswin | License: Open educational use permitted
+# Authors: Copilot grok Perplexity Gemini Claude ChatGPT, and the janitor (structural + scribing)
+# License: Open educational use permitted
 # Site: docs.triadicframeworks.org
 
 You are navigating the TriadicFrameworks documentation system.
