@@ -11,6 +11,8 @@ It is a **structural canon** — stable, minimal, and teachable.
 
 ---
 
+# Students and Teachers Feedback Wanted & Welcome!
+
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
 
