@@ -7,7 +7,7 @@
 body.tf-module--general-relativity {
   /* smooth curvature gradient */
   background: radial-gradient(
-    circle at top left,
+    circle at 22% 28%,
     #020617 0,
     #020308 55%,
     #000000 100%
