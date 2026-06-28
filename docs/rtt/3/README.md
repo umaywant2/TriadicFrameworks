@@ -21,6 +21,19 @@ This module is the canonical reference for:
 - CET (Canon Emission Type)
 - The RTT3_INTEGRATION_EMISSION_PACKET format
 
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
 ---
 
 ## 📘 What RTT/3 Provides
