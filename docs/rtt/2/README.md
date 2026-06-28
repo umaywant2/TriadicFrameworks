@@ -1,25 +1,15 @@
-# ✅ **/docs/rtt/2/README.md**  
-*(Based on `/docs/rtt/2/RTT2_Extract_Minimal.md`)*  
+<img width="1024" height="1024" alt="hephaestus_rtt2" src="https://github.com/user-attachments/assets/6ab14583-11f3-448f-abb6-95e5a0e64c9f" />
+
+# RTT/2 — Structural Detection Engine (SDE)
 
 - [`operators_module.json`](operators_module.json) — Agentic module schema role
 
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-# RTT/2 — Structural Detection Engine (SDE)
+*(Based on `/docs/rtt/2/RTT2_Extract_Minimal.md`)*  
 
 RTT/2 introduces the **Structural Detection Engine**, the layer responsible for
 identifying collapse behavior, gradient weighting, deformation paths, regime
 identity, and zone classification. It is the detection half of the RTT operator
 pipeline (RTT/2 → RTT/3).
-
-This module is the canonical reference for:
-- CPV (Collapse Propagation Vector)
-- FGT (Fusion Gradient Type)
-- CRM (Collapse Regime Mapping)
-- MODE (Detection Mode)
-- ZONE (Detection Zone)
-- The RTT2_DETECTION_PACKET format
-
 
 ---
 
@@ -32,6 +22,16 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
 
 ## ❇️ Now you are ready.
+
+---
+
+This module is the canonical reference for:
+- CPV (Collapse Propagation Vector)
+- FGT (Fusion Gradient Type)
+- CRM (Collapse Regime Mapping)
+- MODE (Detection Mode)
+- ZONE (Detection Zone)
+- The RTT2_DETECTION_PACKET format
 
 ---
 
