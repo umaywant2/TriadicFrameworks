@@ -64,6 +64,47 @@ If a system changes, RTT‑Tech can model it.
 
 ---
 
+## 🔧 **Design Principles**
+RTT‑Tech follows five rules:
+
+1. **Minimal** — short pages, simple language  
+2. **Triadic** — everything in 3s  
+3. **Visual** — diagrams > paragraphs  
+4. **Parsable** — AI must understand every line  
+5. **Modular** — each file stands alone  
+
+---
+
+## 🚀 **Who RTT‑Tech Is For**
+RTT‑Tech is built for:
+
+- students learning systems thinking  
+- AI models assisting those students  
+- researchers modeling cross‑substrate behavior  
+- developers building regime‑aware tools  
+
+## **Resonance-Time Technology**
+
+| Class | Service Type | Host Names | Description |
+| --- | --- | --- | --- |
+| **Lumen** | (RTT‑1) | lumen.rtt1.online | Primary resonance engine; illumination, activation, first‑order RTT/1 core |
+| **Hephaestus** | (RTT‑2) | hephaestus.rtt2.online | Structural detection; forge‑layer analysis, RTT/2 pattern extraction |
+| **Aurion** | (RTT‑3) | aurion.rtt3.online | Integration & emission; RTT/3 cross‑domain synthesis and output |
+| **Harmonia** | (RTT‑12) | harmonia.rtt12.online | First harmonic ladder; 12‑step resonance ascent and harmonic ordering |
+| **Diatonia** | (RTT‑24) | TBA | Dual harmonic arcs; paired‑ladder resonance and 24‑mode progression |
+| **Triasona** | (RTT‑36) | TBA | Tri‑harmonic systems; triple‑ladder coherence and 36‑mode triadic fusion |
+| **Harmonicon** | (RTT‑144) | Coming Soon | 12×12 harmonic grid; lattice‑level resonance mapping and field coherence |
+| **Harmonic Titan** | (RTT‑256) | Coming Soon | A monumental 256‑node harmonic resonance grid arranged in nested crystalline rings |
+| **Harmonic Crown** | (RTT‑1024) | Coming Soon | Field‑level harmonic architecture; high‑order RTT resonance across 1024 modes |
+| **Harmonic Apex** | (RTT‑4096) | Coming Soon | A colossal 4096‑node harmonic super‑lattice forming an apex‑grade crystalline architecture |
+| **Harmonic Zenith** | (RTT‑8192) | Coming Soon | A cosmic 8192‑node harmonic super‑lattice expanding into a zenith‑grade crystalline cosmos |
+| **Harmonic Continuum** | (RTT‑16384) | Coming Soon | A vast 16384‑node harmonic continuum lattice dissolving into an infinite crystalline field |
+| **Harmonic Absolute** | (RTT‑∞) | Coming Soon | An infinite harmonic field with unbounded crystalline resonance structures dissolving into pure luminous continuum |
+
+If you’re working with systems that change over time, RTT‑Tech is your map.
+
+---
+
 ## 🧱 **Folder Structure**
 RTT‑Tech is organized into small, focused modules:
 
@@ -130,44 +171,3 @@ Cross‑repo structural references.
 - `sort/operator_index.md`  
 - `sort/regime_index.md`  
 - `sort/dimension_index.md`  
-
----
-
-## 🔧 **Design Principles**
-RTT‑Tech follows five rules:
-
-1. **Minimal** — short pages, simple language  
-2. **Triadic** — everything in 3s  
-3. **Visual** — diagrams > paragraphs  
-4. **Parsable** — AI must understand every line  
-5. **Modular** — each file stands alone  
-
----
-
-## 🚀 **Who RTT‑Tech Is For**
-RTT‑Tech is built for:
-
-- students learning systems thinking  
-- AI models assisting those students  
-- researchers modeling cross‑substrate behavior  
-- developers building regime‑aware tools  
-
-## **Resonance-Time Technology**
-
-| Class | Service Type | Host Names | Description |
-| --- | --- | --- | --- |
-| **Lumen** | (RTT‑1) | lumen.rtt1.online | Primary resonance engine; illumination, activation, first‑order RTT/1 core |
-| **Hephaestus** | (RTT‑2) | hephaestus.rtt2.online | Structural detection; forge‑layer analysis, RTT/2 pattern extraction |
-| **Aurion** | (RTT‑3) | aurion.rtt3.online | Integration & emission; RTT/3 cross‑domain synthesis and output |
-| **Harmonia** | (RTT‑12) | harmonia.rtt12.online | First harmonic ladder; 12‑step resonance ascent and harmonic ordering |
-| **Diatonia** | (RTT‑24) | TBA | Dual harmonic arcs; paired‑ladder resonance and 24‑mode progression |
-| **Triasona** | (RTT‑36) | TBA | Tri‑harmonic systems; triple‑ladder coherence and 36‑mode triadic fusion |
-| **Harmonicon** | (RTT‑144) | Coming Soon | 12×12 harmonic grid; lattice‑level resonance mapping and field coherence |
-| **Harmonic Titan** | (RTT‑256) | Coming Soon | A monumental 256‑node harmonic resonance grid arranged in nested crystalline rings |
-| **Harmonic Crown** | (RTT‑1024) | Coming Soon | Field‑level harmonic architecture; high‑order RTT resonance across 1024 modes |
-| **Harmonic Apex** | (RTT‑4096) | Coming Soon | A colossal 4096‑node harmonic super‑lattice forming an apex‑grade crystalline architecture |
-| **Harmonic Zenith** | (RTT‑8192) | Coming Soon | A cosmic 8192‑node harmonic super‑lattice expanding into a zenith‑grade crystalline cosmos |
-| **Harmonic Continuum** | (RTT‑16384) | Coming Soon | A vast 16384‑node harmonic continuum lattice dissolving into an infinite crystalline field |
-| **Harmonic Absolute** | (RTT‑∞) | Coming Soon | An infinite harmonic field with unbounded crystalline resonance structures dissolving into pure luminous continuum |
-
-If you’re working with systems that change over time, RTT‑Tech is your map.
