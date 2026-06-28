@@ -6,6 +6,18 @@
 
 ---
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ## 1. Module Purpose
 The Taxes module defines the **incentive‑regime substrate** of the fiscal stack.  
 It models how incentives propagate across jurisdictions, how drift accumulates, and how half‑lives determine stability or fragmentation.
