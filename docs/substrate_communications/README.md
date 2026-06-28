@@ -16,6 +16,20 @@ This directory contains the canonical, self‑contained materials for **Substrat
 Substrate Communications does not transmit raw telemetry.  
 It transmits **structural summaries** that preserve invariants, drift, and paradox.
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ## Contents
 
 - `substrate_comms_core.md` — core concepts and framing  
