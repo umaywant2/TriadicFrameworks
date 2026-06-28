@@ -2,23 +2,7 @@
 
 - [`rtt-root_module.json`](rtt-root_module.json) — Agentic module schema role assignments
 
-Clarity Phase • Operational • Chassis
-
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🔺RTT%20Core-🧩Structural%20Grammar%20Active-4c8eda?style=for-the-badge" alt="🔺RTT Core|🧩Structural Grammar Active"/>
+Resonance-Time Technology (RTT-Tech) is the operational evolution of Resonance-Time Theory — a structural grammar for modeling how systems change across time, regimes, and dimensions.
 
 *A minimal front‑door for students, developers, and AI systems*  
 
@@ -171,3 +155,21 @@ Cross‑repo structural references.
 - `sort/operator_index.md`  
 - `sort/regime_index.md`  
 - `sort/dimension_index.md`  
+
+---
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🔺RTT%20Core-🧩Structural%20Grammar%20Active-4c8eda?style=for-the-badge" alt="🔺RTT Core|🧩Structural Grammar Active"/>
