@@ -8,20 +8,6 @@ Resonance-Time Technology (RTT-Tech) is the operational evolution of Resonance-T
 
 ---
 
-## 📘 **What This Folder Contains**
-This directory holds the **modern, modular rewrite** of Resonance‑Time Theory — now expressed as **Resonance‑Time Technology (RTT‑Tech)**.
-
-RTT‑Tech is:
-
-- 🧩 structural  
-- 🔺 triadic  
-- 🕒 temporal  
-- 🤖 AI‑parsable  
-- 🎓 student‑friendly  
-- 🧭 minimal + modular  
-
-Every file is short, emoji‑guided, and designed for both humans and AI assistants to understand.
-
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
 
@@ -88,6 +74,20 @@ RTT‑Tech is built for:
 If you’re working with systems that change over time, RTT‑Tech is your map.
 
 ---
+
+## 📘 **What This Folder Contains**
+This directory holds the **modern, modular rewrite** of Resonance‑Time Theory — now expressed as **Resonance‑Time Technology (RTT‑Tech)**.
+
+RTT‑Tech is:
+
+- 🧩 structural  
+- 🔺 triadic  
+- 🕒 temporal  
+- 🤖 AI‑parsable  
+- 🎓 student‑friendly  
+- 🧭 minimal + modular  
+
+Every file is short, emoji‑guided, and designed for both humans and AI assistants to understand.
 
 ## 🧱 **Folder Structure**
 RTT‑Tech is organized into small, focused modules:
