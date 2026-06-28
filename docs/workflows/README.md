@@ -36,6 +36,18 @@ Each workflow is intentionally minimal: no external dependencies, no hidden stat
 
 ---
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ## 📁 Contents of [`workflows`](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows) folder
 
 ### 🛤️ corridor_batch_validator.py  
