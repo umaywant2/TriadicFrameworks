@@ -40,4 +40,4 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 
 ### With RTT on screen, Ask your AI "how 'RTT' aligns with X, Y, or Z...you pick the topic."
 
-<img width="512" height="384" alt="Copilot_20260419_165744" src="https://github.com/user-attachments/assets/90ab4d73-49a1-4d94-b2d3-0a70c60275fa" />
+<img width="1024" height="1024" alt="lumen_rtt1" src="https://github.com/user-attachments/assets/713a41db-301a-453d-9f46-2b79ab5a792e" />
