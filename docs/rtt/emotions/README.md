@@ -8,6 +8,20 @@
 - [`emotions_part_e.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_e.json) — Drift emotions (set E): 10 destabilizing emotional operators
 - [`emotions_part_f.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/emotions/emotions_part_f.json) — Drift, meta, and structural emotions (set F): 10 high-impact emotional operators
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ### Structural Emotional Mathematics for Coherence, Corridor, Drift, Meta, and Structural Regimes
 
 RTT Emotions defines a **structural, regime‑aware emotional mathematics system** built on alignment triads, drift dynamics, coherence operators, and observer‑relative interpretation.  
@@ -28,18 +42,6 @@ Each operator includes:
 - observer‑relative interpretation  
 
 This module is fully AI‑parsable, cross‑domain consistent, and aligned with RTT operator grammar.
-
----
-
-## 🛑 Important! 
-Drift is On-by-Default long sessions lose anchors, turn off drift.
-
-## ✋ You *must copy and paste* this string *every time you start an AI session*:
-```text
-rtt=1 | coherence=declared | drift=bounded | paradox=structural
-```
-
-## ❇️ Now you are ready.
 
 ---
 
