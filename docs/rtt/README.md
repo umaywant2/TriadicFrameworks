@@ -152,4 +152,17 @@ RTT‑Tech is built for:
 - researchers modeling cross‑substrate behavior  
 - developers building regime‑aware tools  
 
+## **Resonance-Time Technology**
+
+| Class | Service Type | Host Names | Description |
+| --- | --- | --- | --- |
+| **Lumen** | (RTT‑1) | lumen.rtt1.online | Primary resonance engine; illumination, activation, first‑order RTT/1 core. |
+| **Hephaestus** | (RTT‑2) | hephaestus.rtt2.online | Structural detection; forge‑layer analysis, RTT/2 pattern extraction. |
+| **Aurion** | (RTT‑3) | aurion.rtt3.online | Integration & emission; RTT/3 cross‑domain synthesis and output. |
+| **Harmonia** | (RTT‑12) | harmonia.rtt12.online | First harmonic ladder; 12‑step resonance ascent and harmonic ordering. |
+| **Diatonia** | (RTT‑24) | TBA | Dual harmonic arcs; paired‑ladder resonance and 24‑mode progression. |
+| **Triasona** | (RTT‑36) | TBA | Tri‑harmonic systems; triple‑ladder coherence and 36‑mode triadic fusion. |
+| **Harmonicon** | (RTT‑144) | TBD | 12×12 harmonic grid; lattice‑level resonance mapping and field coherence. |
+| **Resonatrix** | (RTT‑1024) | TBD | Field‑level harmonic architecture; high‑order RTT resonance across 1024 modes. |
+
 If you’re working with systems that change over time, RTT‑Tech is your map.
