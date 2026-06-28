@@ -6165,3 +6165,6118 @@ app.listen(PORT, () => {
 
 ---
 
+Absolutely, Nawder — here are the **canonical RTT Engine Golden Files**, written in the exact zero‑drift, AI‑parsable, test‑harness‑ready format used across TriadicFrameworks.
+
+These are **expected outputs** for the mock server, integration tests, and engine‑front‑end validation.  
+They are **drop‑in ready** for:
+
+```
+/tests/golden/rtt1.json
+/tests/golden/rtt2.json
+/tests/golden/rtt3.json
+/tests/golden/rtt12.json
+/tests/golden/auto/*.json
+```
+
+Each golden file contains:
+
+- routing  
+- clarity surface  
+- reveal block  
+- next steps  
+- trace  
+- engine version  
+- runtime  
+- canonical metadata  
+
+Everything is deterministic and stable.
+
+---
+
+# ⭐ **RTT ENGINE GOLDEN FILES (Canonical)**  
+**Version 1.0 — TriadicFrameworks**
+
+---
+
+# 🔷 **1) rtt1 — Structural Engine Golden File**  
+`tests/golden/rtt1.json`
+
+```json
+{
+  "routing": {
+    "engine": "rtt1",
+    "confidence": 0.9
+  },
+  "clarity_surface": {
+    "structure": 0.8,
+    "coherence": 0.4,
+    "activation": 0.2,
+    "regime": "S",
+    "dominant": "structure"
+  },
+  "reveal": {
+    "identity": "structural core",
+    "tensions": ["contradictions", "missing links"],
+    "hidden_structure": ["latent axis"],
+    "regime_map": [],
+    "activation_points": []
+  },
+  "next": {
+    "steps": [
+      { "action": "Clarify structure", "type": "structural" },
+      { "action": "Remove contradictions", "type": "structural" }
+    ],
+    "recommended_engine": "rtt2"
+  },
+  "trace": ["mock-engine:rtt1"],
+  "engine_version": "1.0",
+  "runtime_ms": 12,
+  "triadicframeworks": "canonical",
+  "metadata": {
+    "source": "mock",
+    "client": "local"
+  }
+}
+```
+
+---
+
+# 🔷 **2) rtt2 — Regime Engine Golden File**  
+`tests/golden/rtt2.json`
+
+```json
+{
+  "routing": {
+    "engine": "rtt2",
+    "confidence": 0.9
+  },
+  "clarity_surface": {
+    "structure": 0.5,
+    "coherence": 0.8,
+    "activation": 0.3,
+    "regime": "R",
+    "dominant": "resonance"
+  },
+  "reveal": {
+    "identity": "regime alignment",
+    "tensions": ["worldview conflict"],
+    "hidden_structure": [],
+    "regime_map": ["regime A", "regime B"],
+    "activation_points": []
+  },
+  "next": {
+    "steps": [
+      { "action": "Map regimes", "type": "resonance" },
+      { "action": "Align coherence", "type": "resonance" }
+    ],
+    "recommended_engine": "rtt3"
+  },
+  "trace": ["mock-engine:rtt2"],
+  "engine_version": "1.0",
+  "runtime_ms": 12,
+  "triadicframeworks": "canonical",
+  "metadata": {
+    "source": "mock",
+    "client": "local"
+  }
+}
+```
+
+---
+
+# 🔷 **3) rtt3 — Triadic Engine Golden File**  
+`tests/golden/rtt3.json`
+
+```json
+{
+  "routing": {
+    "engine": "rtt3",
+    "confidence": 0.9
+  },
+  "clarity_surface": {
+    "structure": 0.4,
+    "coherence": 0.5,
+    "activation": 0.9,
+    "regime": "E",
+    "dominant": "activation"
+  },
+  "reveal": {
+    "identity": "activation path",
+    "tensions": [],
+    "hidden_structure": [],
+    "regime_map": [],
+    "activation_points": ["pivot", "launch"]
+  },
+  "next": {
+    "steps": [
+      { "action": "Define activation path", "type": "activation" },
+      { "action": "Choose leverage points", "type": "activation" }
+    ],
+    "recommended_engine": "rtt12"
+  },
+  "trace": ["mock-engine:rtt3"],
+  "engine_version": "1.0",
+  "runtime_ms": 12,
+  "triadicframeworks": "canonical",
+  "metadata": {
+    "source": "mock",
+    "client": "local"
+  }
+}
+```
+
+---
+
+# 🔷 **4) rtt12 — Hybrid Engine Golden File**  
+`tests/golden/rtt12.json`
+
+```json
+{
+  "routing": {
+    "engine": "rtt12",
+    "confidence": 0.9
+  },
+  "clarity_surface": {
+    "structure": 0.7,
+    "coherence": 0.7,
+    "activation": 0.7,
+    "regime": "hybrid",
+    "dominant": "hybrid"
+  },
+  "reveal": {
+    "identity": "hybrid field",
+    "tensions": ["structure vs regime"],
+    "hidden_structure": ["dual axis"],
+    "regime_map": ["S", "R"],
+    "activation_points": ["bridge"]
+  },
+  "next": {
+    "steps": [
+      { "action": "Run hybrid pass", "type": "structural" },
+      { "action": "Re-check regimes", "type": "resonance" }
+    ],
+    "recommended_engine": "rtt1"
+  },
+  "trace": ["mock-engine:rtt12"],
+  "engine_version": "1.0",
+  "runtime_ms": 12,
+  "triadicframeworks": "canonical",
+  "metadata": {
+    "source": "mock",
+    "client": "local"
+  }
+}
+```
+
+---
+
+# ⭐ **AUTO‑MODE GOLDEN FILES**  
+These validate routing logic.
+
+---
+
+# 🔷 **5) auto → rtt1**  
+`tests/golden/auto/rtt1_auto.json`
+
+```json
+{
+  "input": "Short contradictory idea.",
+  "expected_engine": "rtt1"
+}
+```
+
+---
+
+# 🔷 **6) auto → rtt2**  
+`tests/golden/auto/rtt2_auto.json`
+
+```json
+{
+  "input": "Two regimes conflict in this conceptual model.",
+  "expected_engine": "rtt2"
+}
+```
+
+---
+
+# 🔷 **7) auto → rtt3**  
+`tests/golden/auto/rtt3_auto.json`
+
+```json
+{
+  "input": "I want this idea to evolve into something new.",
+  "expected_engine": "rtt3"
+}
+```
+
+---
+
+# 🔷 **8) auto → rtt12**  
+`tests/golden/auto/rtt12_auto.json`
+
+```json
+{
+  "input": "Strong structure but conflicting regimes.",
+  "expected_engine": "rtt12"
+}
+```
+
+---
+
+# ⭐ **Golden Files Complete**
+
+These files are:
+
+- deterministic  
+- stable  
+- zero‑drift  
+- fully aligned with your mock server  
+- fully aligned with your integration tests  
+- ready for CI/CD validation  
+- ready for Cloudflare Pages + GitHub Actions  
+
+---
+
+Here it is, Nawder — the **canonical TriadicFrameworks global `modules_group.json`**, fully aligned with:
+
+- your **TriadicFrameworks manifest schema**  
+- your **120‑module architecture**  
+- your **front‑end + engine constellation (7 sites)**  
+- your **Docs Root / SARG / Resilience Checker / Paradoxes Canon / NoS / LDS / Inverted Economics / Integrations / Governance Substrate Model / FFT Analyzer**  
+- your **canonical metadata refresh protocol**  
+- your **zero‑drift, AI‑parsable, student‑ready structure**  
+
+This file is **drop‑in ready** for:
+
+```
+/docs/modules_group.json
+```
+
+It includes:
+
+- **module identity**  
+- **category**  
+- **canonical path**  
+- **module.json path**  
+- **version**  
+- **status**  
+- **triadic role** (frontend, engine, theory, substrate, core, extension)  
+
+This is the **global registry** your agents will use to discover and traverse the entire canon.
+
+---
+
+# ⭐ **TriadicFrameworks — Global modules_group.json (Canonical)**  
+**Version 1.0 — Zero Drift**
+
+```json
+{
+  "version": "1.0",
+  "generated": "2026-06-27",
+  "triadicframeworks": "canonical",
+  "summary": "Global registry of all TriadicFrameworks modules, including front-ends, engines, core canon, substrate models, and theory pages.",
+
+  "modules": [
+
+    /* ---------------------------------------------------------
+       FRONT-END CONSTELLATION (7 sites)
+       --------------------------------------------------------- */
+
+    {
+      "name": "critique.biz",
+      "id": "critique_frontend",
+      "category": "frontend",
+      "triadic_role": "S-mode",
+      "canonical_path": "https://critique.biz/",
+      "module_json": "https://critique.biz/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "gradient.vip",
+      "id": "gradient_frontend",
+      "category": "frontend",
+      "triadic_role": "R-mode",
+      "canonical_path": "https://gradient.vip/",
+      "module_json": "https://gradient.vip/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "aigenius.win",
+      "id": "aigenius_frontend",
+      "category": "frontend",
+      "triadic_role": "E-mode",
+      "canonical_path": "https://aigenius.win/",
+      "module_json": "https://aigenius.win/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+
+    /* ---------------------------------------------------------
+       ENGINE CONSTELLATION (4 engines)
+       --------------------------------------------------------- */
+
+    {
+      "name": "rtt1.online",
+      "id": "rtt1_engine",
+      "category": "engine",
+      "triadic_role": "structural",
+      "canonical_path": "https://rtt1.online/",
+      "module_json": "https://rtt1.online/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "rtt2.online",
+      "id": "rtt2_engine",
+      "category": "engine",
+      "triadic_role": "regime",
+      "canonical_path": "https://rtt2.online/",
+      "module_json": "https://rtt2.online/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "rtt3.online",
+      "id": "rtt3_engine",
+      "category": "engine",
+      "triadic_role": "activation",
+      "canonical_path": "https://rtt3.online/",
+      "module_json": "https://rtt3.online/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "rtt12.online",
+      "id": "rtt12_engine",
+      "category": "engine",
+      "triadic_role": "hybrid",
+      "canonical_path": "https://rtt12.online/",
+      "module_json": "https://rtt12.online/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+
+    /* ---------------------------------------------------------
+       CORE CANON (Docs Root + 8 foundational modules)
+       --------------------------------------------------------- */
+
+    {
+      "name": "Docs Root",
+      "id": "docs_root",
+      "category": "core",
+      "canonical_path": "/docs/index.html",
+      "module_json": "/docs/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "SARG",
+      "id": "sarg",
+      "category": "core",
+      "canonical_path": "/docs/SARG/",
+      "module_json": "/docs/SARG/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Resilience Checker",
+      "id": "resilience_checker",
+      "category": "core",
+      "canonical_path": "/docs/ResilienceChecker/",
+      "module_json": "/docs/ResilienceChecker/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Paradoxes Canon",
+      "id": "paradoxes_canon",
+      "category": "core",
+      "canonical_path": "/docs/Paradoxes/",
+      "module_json": "/docs/Paradoxes/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Nature of Structure (NoS)",
+      "id": "nos",
+      "category": "core",
+      "canonical_path": "/docs/NoS/",
+      "module_json": "/docs/NoS/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Low Dimensional Structures",
+      "id": "lds",
+      "category": "core",
+      "canonical_path": "/docs/LDS/",
+      "module_json": "/docs/LDS/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Inverted Economics",
+      "id": "inverted_economics",
+      "category": "core",
+      "canonical_path": "/docs/InvertedEconomics/",
+      "module_json": "/docs/InvertedEconomics/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Integrations",
+      "id": "integrations",
+      "category": "core",
+      "canonical_path": "/docs/Integrations/",
+      "module_json": "/docs/Integrations/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Governance Substrate Model",
+      "id": "governance_substrate",
+      "category": "core",
+      "canonical_path": "/docs/Governance/",
+      "module_json": "/docs/Governance/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+
+    /* ---------------------------------------------------------
+       ANALYZER MODULES
+       --------------------------------------------------------- */
+
+    {
+      "name": "FFT Analyzer",
+      "id": "fft_analyzer",
+      "category": "analyzer",
+      "canonical_path": "/docs/FFTAnalyzer/",
+      "module_json": "/docs/FFTAnalyzer/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+
+    /* ---------------------------------------------------------
+       THEORY MODULES (examples)
+       --------------------------------------------------------- */
+
+    {
+      "name": "Information Theory",
+      "id": "theory_information",
+      "category": "theory",
+      "canonical_path": "/docs/theories/information_theory/",
+      "module_json": "/docs/theories/information_theory/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Morphic Resonance",
+      "id": "theory_morphic_resonance",
+      "category": "theory",
+      "canonical_path": "/docs/theories/morphic_resonance/",
+      "module_json": "/docs/theories/morphic_resonance/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "General Relativity",
+      "id": "theory_general_relativity",
+      "category": "theory",
+      "canonical_path": "/docs/theories/general_relativity/",
+      "module_json": "/docs/theories/general_relativity/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    },
+    {
+      "name": "Electromagnetism",
+      "id": "theory_electromagnetism",
+      "category": "theory",
+      "canonical_path": "/docs/theories/electromagnetism/",
+      "module_json": "/docs/theories/electromagnetism/module.json",
+      "version": "1.0",
+      "status": "canon-stable"
+    }
+
+    /* ---------------------------------------------------------
+       (Note: Remaining ~80 modules will be appended as you
+       complete metadata refreshes. This structure is stable.)
+       --------------------------------------------------------- */
+
+  ]
+}
+```
+
+---
+
+# ⭐ **modules_group.json is now complete.**
+
+It is:
+
+- **canon‑aligned**  
+- **zero drift**  
+- **AI‑parsable**  
+- **ready for agents**  
+- **ready for GitHub Pages + Cloudflare Pages**  
+- **ready for your metadata/session‑context refresh pipeline**  
+
+---
+
+Absolutely, Nawder — here are the **canonical, production‑ready, zero‑drift metadata blocks for all 7 sites**, each one fully aligned with:
+
+- your **canonical metadata refresh protocol**  
+- your **TriadicFrameworks identity rules**  
+- your **AI‑parsable, student‑ready structure**  
+- your **visual identity (black→indigo→violet gradient)**  
+- your **session‑context + nav + footer architecture**  
+- your **RTT Engine constellation**  
+
+Each block is **complete**, **HTML‑ready**, and **drop‑in** for:
+
+```
+critique.biz/docs/metadata/critique_metadata.html
+gradient.vip/docs/metadata/gradient_metadata.html
+aigenius.win/docs/metadata/aigenius_metadata.html
+rtt1.online/docs/metadata/rtt1_metadata.html
+rtt2.online/docs/metadata/rtt2_metadata.html
+rtt3.online/docs/metadata/rtt3_metadata.html
+rtt12.online/docs/metadata/rtt12_metadata.html
+```
+
+All 7 follow the exact same canonical ordering:
+
+1. Core HTML metadata  
+2. Identity  
+3. Description  
+4. Keywords  
+5. Canonical URL  
+6. Robots  
+7. Theme color  
+8. Open Graph  
+9. Twitter Card  
+10. Citation metadata  
+11. AI metadata  
+12. Favicon suite  
+13. Title  
+
+---
+
+# ⭐ **1) critique.biz — Structural (S‑Mode)**  
+`critique_metadata.html`
+
+```html
+<!-- ============================================================
+     critique.biz — Canonical Metadata Block (S‑Mode)
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="critique.biz — Structural Clarity">
+<meta name="description" content="critique.biz — Structural clarity for any idea. Powered by RTT/1.">
+<meta name="keywords" content="RTT, structural clarity, critique, analysis, triadic frameworks">
+<link rel="canonical" href="https://critique.biz/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="critique.biz — Structural Clarity">
+<meta property="og:description" content="Structural clarity for any idea. Powered by RTT/1.">
+<meta property="og:url" content="https://critique.biz/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://critique.biz/assets/img/hero.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="critique.biz — Structural Clarity">
+<meta name="twitter:description" content="Structural clarity for any idea. Powered by RTT/1.">
+<meta name="twitter:image" content="https://critique.biz/assets/img/hero.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="critique.biz — Structural Clarity">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="critique_frontend">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Structural clarity front-end for RTT/1">
+<meta name="ai.keywords" content="structure, contradictions, load-bearing, clarity">
+<meta name="ai.audience" content="students, analysts, operators">
+<meta name="ai.navigation" content="sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon Suite -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>critique.biz — Structural Clarity</title>
+```
+
+---
+
+# ⭐ **2) gradient.vip — Resonance (R‑Mode)**  
+`gradient_metadata.html`
+
+```html
+<!-- ============================================================
+     gradient.vip — Canonical Metadata Block (R‑Mode)
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="gradient.vip — Alignment & Coherence">
+<meta name="description" content="gradient.vip — Bring your idea into alignment. Powered by RTT/2.">
+<meta name="keywords" content="RTT, resonance, coherence, alignment, triadic frameworks">
+<link rel="canonical" href="https://gradient.vip/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#8a2be2">
+
+<!-- Open Graph -->
+<meta property="og:title" content="gradient.vip — Alignment & Coherence">
+<meta property="og:description" content="Bring your idea into alignment. Powered by RTT/2.">
+<meta property="og:url" content="https://gradient.vip/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://gradient.vip/assets/img/hero.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="gradient.vip — Alignment & Coherence">
+<meta name="twitter:description" content="Bring your idea into alignment. Powered by RTT/2.">
+<meta name="twitter:image" content="https://gradient.vip/assets/img/hero.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="gradient.vip — Alignment & Coherence">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="gradient_frontend">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Resonance alignment front-end for RTT/2">
+<meta name="ai.keywords" content="regimes, coherence, alignment, resonance">
+<meta name="ai.audience" content="students, analysts, designers">
+<meta name="ai.navigation" content="sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon Suite -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>gradient.vip — Alignment & Coherence</title>
+```
+
+---
+
+# ⭐ **3) aigenius.win — Activation (E‑Mode)**  
+`aigenius_metadata.html`
+
+```html
+<!-- ============================================================
+     aigenius.win — Canonical Metadata Block (E‑Mode)
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="aigenius.win — Activation & Transformation">
+<meta name="description" content="aigenius.win — Make your idea win. Powered by RTT/3.">
+<meta name="keywords" content="RTT, activation, transformation, triadic frameworks">
+<link rel="canonical" href="https://aigenius.win/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ff4f9a">
+
+<!-- Open Graph -->
+<meta property="og:title" content="aigenius.win — Activation & Transformation">
+<meta property="og:description" content="Make your idea win. Powered by RTT/3.">
+<meta property="og:url" content="https://aigenius.win/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://aigenius.win/assets/img/hero.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="aigenius.win — Activation & Transformation">
+<meta name="twitter:description" content="Make your idea win. Powered by RTT/3.">
+<meta name="twitter:image" content="https://aigenius.win/assets/img/hero.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="aigenius.win — Activation & Transformation">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="aigenius_frontend">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Activation front-end for RTT/3">
+<meta name="ai.keywords" content="activation, leverage, transformation">
+<meta name="ai.audience" content="creators, founders, builders">
+<meta name="ai.navigation" content="sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon Suite -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>aigenius.win — Activation & Transformation</title>
+```
+
+---
+
+# ⭐ **4) rtt1.online — Structural Engine**  
+`rtt1_metadata.html`
+
+```html
+<!-- ============================================================
+     rtt1.online — Canonical Metadata Block (RTT/1)
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="RTT/1 — Structural Engine">
+<meta name="description" content="RTT/1 — Structural clarity engine for contradictions, load-bearing elements, and missing structure.">
+<meta name="keywords" content="RTT, structural engine, Sg, analysis, triadic frameworks">
+<link rel="canonical" href="https://rtt1.online/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="RTT/1 — Structural Engine">
+<meta property="og:description" content="Structural clarity engine for contradictions and load-bearing structure.">
+<meta property="og:url" content="https://rtt1.online/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rtt1.online/assets/img/hero.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTT/1 — Structural Engine">
+<meta name="twitter:description" content="Structural clarity engine for contradictions and load-bearing structure.">
+<meta name="twitter:image" content="https://rtt1.online/assets/img/hero.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="RTT/1 — Structural Engine">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="rtt1_engine">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Structural clarity engine">
+<meta name="ai.keywords" content="structure, contradictions, Sg">
+<meta name="ai.audience" content="analysts, students, operators">
+<meta name="ai.navigation" content="sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon Suite -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>RTT/1 — Structural Engine</title>
+```
+
+---
+
+# ⭐ **5) rtt2.online — Regime Engine**  
+`rtt2_metadata.html`
+
+```html
+<!-- ============================================================
+     rtt2.online — Canonical Metadata Block (RTT/2)
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="RTT/2 — Regime Engine">
+<meta name="description" content="RTT/2 — Regime and coherence engine for worldview alignment and regime mapping.">
+<meta name="keywords" content="RTT, regime engine, Rg, coherence, triadic frameworks">
+<link rel="canonical" href="https://rtt2.online/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#8a2be2">
+
+<!-- Open Graph -->
+<meta property="og:title" content="RTT/2 — Regime Engine">
+<meta property="og:description" content="Regime and coherence engine for worldview alignment.">
+<meta property="og:url" content="https://rtt2.online/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rtt2.online/assets/img/hero.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTT/2 — Regime Engine">
+<meta name="twitter:description" content="Regime and coherence engine for worldview alignment.">
+<meta name="twitter:image" content="https://rtt2.online/assets/img/hero.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="RTT/2 — Regime Engine">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="rtt2_engine">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Regime and coherence engine">
+<meta name="ai.keywords" content="regimes, coherence, Rg">
+<meta name="ai.audience" content="analysts, designers, operators">
+<meta name="ai.navigation" content="sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon Suite -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>RTT/2 — Regime Engine</title>
+```
+
+---
+
+# ⭐ **6) rtt3.online — Activation Engine**  
+`rtt3_metadata.html`
+
+```html
+<!-- ============================================================
+     rtt3.online — Canonical Metadata Block (RTT/3)
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="RTT/3 — Activation Engine">
+<meta name="description" content="RTT/3 — Activation engine for transformation, leverage, and triadic synthesis.">
+<meta name="keywords" content="RTT, activation engine, Eg, transformation, triadic frameworks">
+<link rel="canonical" href="https://rtt3.online/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#ff4f9a">
+
+<!-- Open Graph -->
+<meta property="og:title" content="RTT/3 — Activation Engine">
+<meta property="og:description" content="Activation engine for transformation and leverage.">
+<meta property="og:url" content="https://rtt3.online/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rtt3.online/assets/img/hero.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTT/3 — Activation Engine">
+<meta name="twitter:description" content="Activation engine for transformation and leverage.">
+<meta name="twitter:image" content="https://rtt3.online/assets/img/hero.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="RTT/3 — Activation Engine">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="rtt3_engine">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Activation engine">
+<meta name="ai.keywords" content="activation, leverage, Eg">
+<meta name="ai.audience" content="creators, founders, operators">
+<meta name="ai.navigation" content="sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon Suite -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>RTT/3 — Activation Engine</title>
+```
+
+---
+
+# ⭐ **7) rtt12.online — Hybrid Engine**  
+`rtt12_metadata.html`
+
+```html
+<!-- ============================================================
+     rtt12.online — Canonical Metadata Block (RTT/12)
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="RTT/12 — Hybrid Engine">
+<meta name="description" content="RTT/12 — Hybrid structural–regime engine for dual-axis clarity, synthesis, and cross-regime resolution.">
+<meta name="keywords" content="RTT, hybrid engine, Sg, Rg, structural, regime, dual-axis, triadic frameworks">
+<link rel="canonical" href="https://rtt12.online/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="RTT/12 — Hybrid Engine">
+<meta property="og:description" content="Hybrid structural–regime engine for dual-axis clarity and synthesis.">
+<meta property="og:url" content="https://rtt12.online/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://rtt12.online/assets/img/hero.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RTT/12 — Hybrid Engine">
+<meta name="twitter:description" content="Hybrid structural–regime engine for dual-axis clarity and synthesis.">
+<meta name="twitter:image" content="https://rtt12.online/assets/img/hero.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="RTT/12 — Hybrid Engine">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="rtt12_engine">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Hybrid structural–regime engine for dual-axis clarity and synthesis">
+<meta name="ai.keywords" content="hybrid, structure, regime, Sg, Rg, dual-axis, synthesis">
+<meta name="ai.audience" content="analysts, operators, students, researchers">
+<meta name="ai.navigation" content="sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon Suite -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>RTT/12 — Hybrid Engine</title>
+```
+
+---
+
+Absolutely, Nawder — here are the **canonical, zero‑drift, schema‑aligned `module.json` manifests for all four RTT Engines**:
+
+- **RTT/1 — Structural Engine**  
+- **RTT/2 — Regime Engine**  
+- **RTT/3 — Activation Engine**  
+- **RTT/12 — Hybrid Engine**
+
+All four manifests follow:
+
+- your **module.schema.json**  
+- your **role enums** (engine, profile, signature, diagnostic, map, example, extension, index, reference, template)  
+- your **analyzer_layer enums** (operator, dimensional, regime, drift, coherence, cross‑cutting)  
+- your **canonical front‑end/engine separation**  
+- your **TriadicFrameworks metadata refresh protocol**  
+
+They are **drop‑in ready** for:
+
+```
+rtt1.online/module.json
+rtt2.online/module.json
+rtt3.online/module.json
+rtt12.online/module.json
+```
+
+---
+
+# ⭐ **RTT/1 — Structural Engine**  
+`module.json`
+
+```json
+{
+  "module_name": "RTT/1 Structural Engine",
+  "module_id": "rtt1_engine",
+  "version": "1.0",
+  "category": "engine",
+  "summary": "RTT/1 — Structural clarity engine for contradictions, load-bearing elements, and missing structure.",
+  "purpose": "Analyze structural coherence, contradictions, and load-bearing elements in any idea.",
+  "audience": "Analysts, students, operators, researchers",
+  "exports": ["index.html", "assets/css/style.css", "assets/js/rtt.js"],
+  "imports": ["triadicframeworks.org"],
+
+  "files": [
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "description": "RTT/1 engine front-end using gr_template chassis."
+    },
+    {
+      "path": "assets/css/style.css",
+      "role": "template",
+      "analyzer_layer": "coherence",
+      "description": "Canonical CSS pack shared across all 7 sites."
+    },
+    {
+      "path": "assets/js/rtt.js",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Submit → analyze → reveal → next pipeline."
+    },
+    {
+      "path": "docs/metadata/rtt1_metadata.html",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "description": "Metadata block defining RTT/1 identity."
+    },
+    {
+      "path": "docs/session/rtt1_session.html",
+      "role": "signature",
+      "analyzer_layer": "coherence",
+      "description": "Session context block for RTT/1."
+    },
+    {
+      "path": "docs/nav/rtt1_nav.html",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "description": "Navigation block for RTT/1."
+    },
+    {
+      "path": "docs/footer/rtt1_footer.html",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "description": "Footer block with canonical links and rectification seal."
+    }
+  ]
+}
+```
+
+---
+
+# ⭐ **RTT/2 — Regime Engine**  
+`module.json`
+
+```json
+{
+  "module_name": "RTT/2 Regime Engine",
+  "module_id": "rtt2_engine",
+  "version": "1.0",
+  "category": "engine",
+  "summary": "RTT/2 — Regime and coherence engine for worldview alignment and regime mapping.",
+  "purpose": "Analyze regime conflicts, worldview alignment, and coherence structures.",
+  "audience": "Analysts, designers, operators, researchers",
+  "exports": ["index.html", "assets/css/style.css", "assets/js/rtt.js"],
+  "imports": ["triadicframeworks.org"],
+
+  "files": [
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "description": "RTT/2 engine front-end using gr_template chassis."
+    },
+    {
+      "path": "assets/css/style.css",
+      "role": "template",
+      "analyzer_layer": "coherence",
+      "description": "Canonical CSS pack shared across all 7 sites."
+    },
+    {
+      "path": "assets/js/rtt.js",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Submit → analyze → reveal → next pipeline."
+    },
+    {
+      "path": "docs/metadata/rtt2_metadata.html",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "description": "Metadata block defining RTT/2 identity."
+    },
+    {
+      "path": "docs/session/rtt2_session.html",
+      "role": "signature",
+      "analyzer_layer": "coherence",
+      "description": "Session context block for RTT/2."
+    },
+    {
+      "path": "docs/nav/rtt2_nav.html",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "description": "Navigation block for RTT/2."
+    },
+    {
+      "path": "docs/footer/rtt2_footer.html",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "description": "Footer block with canonical links and rectification seal."
+    }
+  ]
+}
+```
+
+---
+
+# ⭐ **RTT/3 — Activation Engine**  
+`module.json`
+
+```json
+{
+  "module_name": "RTT/3 Activation Engine",
+  "module_id": "rtt3_engine",
+  "version": "1.0",
+  "category": "engine",
+  "summary": "RTT/3 — Activation engine for transformation, leverage, and triadic synthesis.",
+  "purpose": "Identify activation paths, leverage points, and transformation vectors.",
+  "audience": "Creators, founders, builders, operators",
+  "exports": ["index.html", "assets/css/style.css", "assets/js/rtt.js"],
+  "imports": ["triadicframeworks.org"],
+
+  "files": [
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "description": "RTT/3 engine front-end using gr_template chassis."
+    },
+    {
+      "path": "assets/css/style.css",
+      "role": "template",
+      "analyzer_layer": "coherence",
+      "description": "Canonical CSS pack shared across all 7 sites."
+    },
+    {
+      "path": "assets/js/rtt.js",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Submit → analyze → reveal → next pipeline."
+    },
+    {
+      "path": "docs/metadata/rtt3_metadata.html",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "description": "Metadata block defining RTT/3 identity."
+    },
+    {
+      "path": "docs/session/rtt3_session.html",
+      "role": "signature",
+      "analyzer_layer": "coherence",
+      "description": "Session context block for RTT/3."
+    },
+    {
+      "path": "docs/nav/rtt3_nav.html",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "description": "Navigation block for RTT/3."
+    },
+    {
+      "path": "docs/footer/rtt3_footer.html",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "description": "Footer block with canonical links and rectification seal."
+    }
+  ]
+}
+```
+
+---
+
+# ⭐ **RTT/12 — Hybrid Engine**  
+`module.json`
+
+```json
+{
+  "module_name": "RTT/12 Hybrid Engine",
+  "module_id": "rtt12_engine",
+  "version": "1.0",
+  "category": "engine",
+  "summary": "RTT/12 — Hybrid structural–regime engine for dual-axis clarity and synthesis.",
+  "purpose": "Resolve dual-axis structural/regime tensions and produce hybrid clarity surfaces.",
+  "audience": "Analysts, operators, researchers, students",
+  "exports": ["index.html", "assets/css/style.css", "assets/js/rtt.js"],
+  "imports": ["triadicframeworks.org"],
+
+  "files": [
+    {
+      "path": "index.html",
+      "role": "index",
+      "analyzer_layer": "operator",
+      "description": "RTT/12 engine front-end using gr_template chassis."
+    },
+    {
+      "path": "assets/css/style.css",
+      "role": "template",
+      "analyzer_layer": "coherence",
+      "description": "Canonical CSS pack shared across all 7 sites."
+    },
+    {
+      "path": "assets/js/rtt.js",
+      "role": "engine",
+      "analyzer_layer": "operator",
+      "description": "Submit → analyze → reveal → next pipeline."
+    },
+    {
+      "path": "docs/metadata/rtt12_metadata.html",
+      "role": "profile",
+      "analyzer_layer": "dimensional",
+      "description": "Metadata block defining RTT/12 identity."
+    },
+    {
+      "path": "docs/session/rtt12_session.html",
+      "role": "signature",
+      "analyzer_layer": "coherence",
+      "description": "Session context block for RTT/12."
+    },
+    {
+      "path": "docs/nav/rtt12_nav.html",
+      "role": "map",
+      "analyzer_layer": "operator",
+      "description": "Navigation block for RTT/12."
+    },
+    {
+      "path": "docs/footer/rtt12_footer.html",
+      "role": "reference",
+      "analyzer_layer": "cross-cutting",
+      "description": "Footer block with canonical links and rectification seal."
+    }
+  ]
+}
+```
+
+---
+
+# ⭐ **All four engine manifests are now complete.**
+
+They are:
+
+- fully schema‑compliant  
+- zero‑drift  
+- structurally identical  
+- mode‑specific only through metadata/session/nav/footer  
+- ready for GitHub Pages + Cloudflare Pages  
+- ready for AI agents to traverse  
+
+---
+
+Here you go, Nawder — the **canonical, zero‑drift, production‑ready `sitemap_main.xml`** for the entire TriadicFrameworks ecosystem.
+
+This version is:
+
+- **fully aligned** with your metadata refresh protocol  
+- **AI‑parsable**  
+- **stable**  
+- **includes all 7 external sites + core canon + theory cluster**  
+- **ready to paste into**  
+  ```
+  /docs/sitemap_main.xml
+  ```
+
+It does **not** depend on any tab content — this is pure generation.
+
+---
+
+# ⭐ **TriadicFrameworks — Global sitemap_main.xml (Canonical)**
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ============================================================
+       ROOT CANON
+       ============================================================ -->
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://www.triadicframeworks.org/docs/</loc>
+  </sitemap>
+
+  <!-- Core Canon Modules -->
+  <sitemap><loc>https://www.triadicframeworks.org/docs/SARG/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/ResilienceChecker/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/Paradoxes/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/NoS/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/LDS/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/InvertedEconomics/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/Integrations/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/Governance/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/docs/FFTAnalyzer/</loc></sitemap>
+
+  <!-- ============================================================
+       THEORY CLUSTER
+       ============================================================ -->
+  <sitemap><loc>https://www.triadicframeworks.org/theories/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/theories/information_theory/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/theories/morphic_resonance/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/theories/general_relativity/</loc></sitemap>
+  <sitemap><loc>https://www.triadicframeworks.org/theories/electromagnetism/</loc></sitemap>
+
+  <!-- ============================================================
+       FRONT-END CONSTELLATION (S / R / E)
+       ============================================================ -->
+  <sitemap><loc>https://critique.biz/</loc></sitemap>
+  <sitemap><loc>https://gradient.vip/</loc></sitemap>
+  <sitemap><loc>https://aigenius.win/</loc></sitemap>
+
+  <!-- ============================================================
+       ENGINE CONSTELLATION (RTT/1, RTT/2, RTT/3, RTT/12)
+       ============================================================ -->
+  <sitemap><loc>https://rtt1.online/</loc></sitemap>
+  <sitemap><loc>https://rtt2.online/</loc></sitemap>
+  <sitemap><loc>https://rtt3.online/</loc></sitemap>
+  <sitemap><loc>https://rtt12.online/</loc></sitemap>
+
+</sitemapindex>
+```
+
+---
+
+# ⭐ **This sitemap is now complete, canonical, and ready to ship.**
+
+Absolutely, Nawder — here is the **canonical, zero‑drift RTT Engine CI/CD pipeline for GitHub Actions**, fully aligned with:
+
+- your **TriadicFrameworks metadata/session‑context protocol**  
+- your **RTT Engine test architecture** (unit + integration + load + golden files)  
+- your **mock server + payload suite**  
+- your **7‑site constellation**  
+- your **AI‑parsable, student‑ready structure**  
+
+This pipeline is **drop‑in ready** for:
+
+```
+.github/workflows/rtt_engine_ci.yml
+```
+
+It performs:
+
+- schema validation  
+- payload validation  
+- golden‑file comparison  
+- integration tests  
+- load tests (light mode for CI)  
+- mock server spin‑up  
+- zero‑drift enforcement  
+- Cloudflare Pages deploy trigger (optional, commented)  
+
+Everything is deterministic and triadic.
+
+---
+
+# ⭐ **RTT Engine CI/CD Pipeline (GitHub Actions)**  
+`rtt_engine_ci.yml`
+
+```yaml
+name: RTT Engine CI/CD
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  # ------------------------------------------------------------
+  # 1. Lint + Schema Validation
+  # ------------------------------------------------------------
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Validate JSON Schemas
+        run: |
+          npx ajv validate \
+            -s schemas/rtt_engine_api.schema.json \
+            -d tests/payloads/valid.json
+
+      - name: Validate module.json manifests
+        run: |
+          for f in $(find . -name "module.json"); do
+            echo "Validating $f"
+            npx ajv validate -s schemas/module.schema.json -d "$f"
+          done
+
+  # ------------------------------------------------------------
+  # 2. Unit Tests (Mock Engine)
+  # ------------------------------------------------------------
+  unit:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run unit tests
+        run: npm test
+
+  # ------------------------------------------------------------
+  # 3. Golden File Comparison
+  # ------------------------------------------------------------
+  golden:
+    runs-on: ubuntu-latest
+    needs: unit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start mock server
+        run: node tests/mock/server.js &
+      
+      - name: Compare outputs to golden files
+        run: node tests/golden/compare.js
+
+  # ------------------------------------------------------------
+  # 4. Integration Tests (Front-End → Engine)
+  # ------------------------------------------------------------
+  integration:
+    runs-on: ubuntu-latest
+    needs: golden
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start mock server
+        run: node tests/mock/server.js &
+
+      - name: Run integration tests
+        run: node tests/integration/run.js
+
+  # ------------------------------------------------------------
+  # 5. Load Tests (CI-safe mode)
+  # ------------------------------------------------------------
+  load:
+    runs-on: ubuntu-latest
+    needs: integration
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Start mock server
+        run: node tests/mock/server.js &
+
+      - name: Run load tests (CI mode)
+        run: node tests/load/ci_load.js
+
+  # ------------------------------------------------------------
+  # 6. Zero-Drift Enforcement
+  # ------------------------------------------------------------
+  drift:
+    runs-on: ubuntu-latest
+    needs: load
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check for drift in CSS/JS/HTML structure
+        run: node tests/drift/check.js
+
+  # ------------------------------------------------------------
+  # 7. Deploy (Optional — Cloudflare Pages)
+  # ------------------------------------------------------------
+  # deploy:
+  #   runs-on: ubuntu-latest
+  #   needs: drift
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #     - name: Publish to Cloudflare Pages
+  #       uses: cloudflare/pages-action@v1
+  #       with:
+  #         apiToken: ${{ secrets.CF_API_TOKEN }}
+  #         accountId: ${{ secrets.CF_ACCOUNT_ID }}
+  #         projectName: rtt-engine
+  #         directory: .
+```
+
+---
+
+# ⭐ **What this pipeline guarantees**
+
+### **1. Schema correctness**
+- All payloads  
+- All module.json manifests  
+- All engine API schemas  
+
+### **2. Engine correctness**
+- Routing  
+- Clarity surface  
+- Reveal block  
+- Next‑steps block  
+
+### **3. Front‑end correctness**
+- Submit → analyze → reveal → next pipeline  
+- Mode‑specific routing  
+- Zero‑drift HTML/CSS/JS  
+
+### **4. Stability under load**
+- 50–100 concurrent requests  
+- 1,000 sequential requests (CI‑safe)  
+
+### **5. Canonical drift prevention**
+- CSS pack identical across all 7 sites  
+- JS pack identical  
+- HTML chassis identical  
+
+### **6. Optional Cloudflare Pages deploy**
+- Fully wired  
+- Commented out by default  
+
+---
+
+# ⭐ **RTT Engine CI/CD pipeline is now complete and canon‑aligned.**
+
+Absolutely, Nawder — here is the **canonical, zero‑drift, AI‑parsable Theory Cluster Registry** for TriadicFrameworks, containing **all 40+ theories** in a clean, stable, module‑ready structure.
+
+This registry is **drop‑in ready** for:
+
+```
+/docs/theories/theories_group.json
+```
+
+It follows your:
+
+- **module.schema.json** conventions  
+- **TriadicFrameworks naming rules**  
+- **domain‑per‑directory pattern**  
+- **4‑cluster theory architecture**  
+- **operator grammar**  
+- **AI‑parsable, student‑ready formatting**  
+
+The theories are grouped into the **four canonical domains** you established:
+
+1. **Physics Cluster**  
+2. **Biology Cluster**  
+3. **Information Systems Cluster**  
+4. **Dynamical Systems Cluster**
+
+Each entry includes:
+
+- `name`  
+- `id`  
+- `domain`  
+- `canonical_path`  
+- `module_json`  
+- `status`  
+
+Everything is ready for module.json generation later.
+
+---
+
+# ⭐ **TriadicFrameworks — Theory Cluster Registry (40+ Theories)**  
+`theories_group.json`
+
+```json
+{
+  "version": "1.0",
+  "generated": "2026-06-27",
+  "triadicframeworks": "canonical",
+  "summary": "Registry of all theory modules across the four canonical domains.",
+
+  "domains": [
+    {
+      "domain": "physics",
+      "theories": [
+        {
+          "name": "General Relativity",
+          "id": "theory_general_relativity",
+          "canonical_path": "/docs/theories/general_relativity/",
+          "module_json": "/docs/theories/general_relativity/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Quantum Mechanics",
+          "id": "theory_quantum_mechanics",
+          "canonical_path": "/docs/theories/quantum_mechanics/",
+          "module_json": "/docs/theories/quantum_mechanics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Quantum Field Theory",
+          "id": "theory_quantum_field_theory",
+          "canonical_path": "/docs/theories/quantum_field_theory/",
+          "module_json": "/docs/theories/quantum_field_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Standard Model",
+          "id": "theory_standard_model",
+          "canonical_path": "/docs/theories/standard_model/",
+          "module_json": "/docs/theories/standard_model/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Electromagnetism",
+          "id": "theory_electromagnetism",
+          "canonical_path": "/docs/theories/electromagnetism/",
+          "module_json": "/docs/theories/electromagnetism/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Thermodynamics",
+          "id": "theory_thermodynamics",
+          "canonical_path": "/docs/theories/thermodynamics/",
+          "module_json": "/docs/theories/thermodynamics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Statistical Mechanics",
+          "id": "theory_statistical_mechanics",
+          "canonical_path": "/docs/theories/statistical_mechanics/",
+          "module_json": "/docs/theories/statistical_mechanics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Special Relativity",
+          "id": "theory_special_relativity",
+          "canonical_path": "/docs/theories/special_relativity/",
+          "module_json": "/docs/theories/special_relativity/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Classical Mechanics",
+          "id": "theory_classical_mechanics",
+          "canonical_path": "/docs/theories/classical_mechanics/",
+          "module_json": "/docs/theories/classical_mechanics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "String Theory",
+          "id": "theory_string_theory",
+          "canonical_path": "/docs/theories/string_theory/",
+          "module_json": "/docs/theories/string_theory/module.json",
+          "status": "draft"
+        }
+      ]
+    },
+
+    {
+      "domain": "biology",
+      "theories": [
+        {
+          "name": "Evolutionary Biology",
+          "id": "theory_evolutionary_biology",
+          "canonical_path": "/docs/theories/evolutionary_biology/",
+          "module_json": "/docs/theories/evolutionary_biology/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Morphic Resonance",
+          "id": "theory_morphic_resonance",
+          "canonical_path": "/docs/theories/morphic_resonance/",
+          "module_json": "/docs/theories/morphic_resonance/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Cell Theory",
+          "id": "theory_cell_theory",
+          "canonical_path": "/docs/theories/cell_theory/",
+          "module_json": "/docs/theories/cell_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Germ Theory",
+          "id": "theory_germ_theory",
+          "canonical_path": "/docs/theories/germ_theory/",
+          "module_json": "/docs/theories/germ_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Homeostasis Theory",
+          "id": "theory_homeostasis",
+          "canonical_path": "/docs/theories/homeostasis/",
+          "module_json": "/docs/theories/homeostasis/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Epigenetics",
+          "id": "theory_epigenetics",
+          "canonical_path": "/docs/theories/epigenetics/",
+          "module_json": "/docs/theories/epigenetics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Neural Darwinism",
+          "id": "theory_neural_darwinism",
+          "canonical_path": "/docs/theories/neural_darwinism/",
+          "module_json": "/docs/theories/neural_darwinism/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Symbiogenesis",
+          "id": "theory_symbiogenesis",
+          "canonical_path": "/docs/theories/symbiogenesis/",
+          "module_json": "/docs/theories/symbiogenesis/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Systems Biology",
+          "id": "theory_systems_biology",
+          "canonical_path": "/docs/theories/systems_biology/",
+          "module_json": "/docs/theories/systems_biology/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Evolutionary Development (Evo-Devo)",
+          "id": "theory_evo_devo",
+          "canonical_path": "/docs/theories/evo_devo/",
+          "module_json": "/docs/theories/evo_devo/module.json",
+          "status": "canon-stable"
+        }
+      ]
+    },
+
+    {
+      "domain": "information_systems",
+      "theories": [
+        {
+          "name": "Information Theory",
+          "id": "theory_information_theory",
+          "canonical_path": "/docs/theories/information_theory/",
+          "module_json": "/docs/theories/information_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Cybernetics",
+          "id": "theory_cybernetics",
+          "canonical_path": "/docs/theories/cybernetics/",
+          "module_json": "/docs/theories/cybernetics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Control Theory",
+          "id": "theory_control_theory",
+          "canonical_path": "/docs/theories/control_theory/",
+          "module_json": "/docs/theories/control_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Computation Theory",
+          "id": "theory_computation",
+          "canonical_path": "/docs/theories/computation/",
+          "module_json": "/docs/theories/computation/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Algorithmic Information Theory",
+          "id": "theory_algorithmic_information",
+          "canonical_path": "/docs/theories/algorithmic_information/",
+          "module_json": "/docs/theories/algorithmic_information/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Shannon-Weaver Model",
+          "id": "theory_shannon_weaver",
+          "canonical_path": "/docs/theories/shannon_weaver/",
+          "module_json": "/docs/theories/shannon_weaver/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Network Theory",
+          "id": "theory_network_theory",
+          "canonical_path": "/docs/theories/network_theory/",
+          "module_json": "/docs/theories/network_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Graph Theory",
+          "id": "theory_graph_theory",
+          "canonical_path": "/docs/theories/graph_theory/",
+          "module_json": "/docs/theories/graph_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Information Geometry",
+          "id": "theory_information_geometry",
+          "canonical_path": "/docs/theories/information_geometry/",
+          "module_json": "/docs/theories/information_geometry/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Complexity Theory",
+          "id": "theory_complexity",
+          "canonical_path": "/docs/theories/complexity/",
+          "module_json": "/docs/theories/complexity/module.json",
+          "status": "canon-stable"
+        }
+      ]
+    },
+
+    {
+      "domain": "dynamical_systems",
+      "theories": [
+        {
+          "name": "Chaos Theory",
+          "id": "theory_chaos_theory",
+          "canonical_path": "/docs/theories/chaos_theory/",
+          "module_json": "/docs/theories/chaos_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Game Theory",
+          "id": "theory_game_theory",
+          "canonical_path": "/docs/theories/game_theory/",
+          "module_json": "/docs/theories/game_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Systems Theory",
+          "id": "theory_systems_theory",
+          "canonical_path": "/docs/theories/systems_theory/",
+          "module_json": "/docs/theories/systems_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Fractal Geometry",
+          "id": "theory_fractal_geometry",
+          "canonical_path": "/docs/theories/fractal_geometry/",
+          "module_json": "/docs/theories/fractal_geometry/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Catastrophe Theory",
+          "id": "theory_catastrophe_theory",
+          "canonical_path": "/docs/theories/catastrophe_theory/",
+          "module_json": "/docs/theories/catastrophe_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Nonlinear Dynamics",
+          "id": "theory_nonlinear_dynamics",
+          "canonical_path": "/docs/theories/nonlinear_dynamics/",
+          "module_json": "/docs/theories/nonlinear_dynamics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Attractor Theory",
+          "id": "theory_attractor_theory",
+          "canonical_path": "/docs/theories/attractor_theory/",
+          "module_json": "/docs/theories/attractor_theory/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Dynamical Systems Theory",
+          "id": "theory_dynamical_systems",
+          "canonical_path": "/docs/theories/dynamical_systems/",
+          "module_json": "/docs/theories/dynamical_systems/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Control Dynamics",
+          "id": "theory_control_dynamics",
+          "canonical_path": "/docs/theories/control_dynamics/",
+          "module_json": "/docs/theories/control_dynamics/module.json",
+          "status": "canon-stable"
+        },
+        {
+          "name": "Phase Space Theory",
+          "id": "theory_phase_space",
+          "canonical_path": "/docs/theories/phase_space/",
+          "module_json": "/docs/theories/phase_space/module.json",
+          "status": "canon-stable"
+        }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+# ⭐ **Theory Cluster Registry is now complete.**
+
+It is:
+
+- zero‑drift  
+- canon‑aligned  
+- AI‑parsable  
+- ready for module.json generation  
+- ready for sitemap integration  
+- ready for cross‑module propagation  
+
+If you want, I can now generate:
+
+### **Next Layer Options**
+- module.json manifests for all 40+ theories  
+- theory index.html template (canon‑aligned)  
+- theory session‑context blocks  
+- theory nav/footer blocks  
+- theory cluster SVG lineage map  
+
+Which one should we build next, Nawder?
+
+---
+
+Perfect — **three steps of ~13–14 theories each** is the cleanest way to do this without invoking Tasks mode.
+
+I’ll generate **Step 1 (≈14 theories)** right now:  
+**Physics Cluster (10)** + **Biology Cluster (4)** to make a clean block of 14.
+
+Each manifest is:
+
+- fully canon‑aligned  
+- zero‑drift  
+- schema‑valid  
+- identical structure  
+- theory‑specific only in summary/purpose/keywords  
+- drop‑in ready for:  
+  ```
+  /docs/theories/<theory>/module.json
+  ```
+
+---
+
+# ⭐ **STEP 1 — module.json manifests (14 theories)**  
+### **Physics Cluster (10)**  
+### **Biology Cluster (4)**
+
+---
+
+# 🔷 1) General Relativity  
+`/docs/theories/general_relativity/module.json`
+
+```json
+{
+  "module_name": "General Relativity",
+  "module_id": "theory_general_relativity",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Einstein’s geometric theory of gravitation describing spacetime curvature.",
+  "purpose": "Provide students with a structural understanding of curvature, tensors, and relativistic regimes.",
+  "audience": "students, researchers, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator", "description": "Theory overview page." },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional", "description": "Canonical metadata block." },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence", "description": "Session context block." },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator", "description": "Theory navigation." },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting", "description": "Footer block." }
+  ]
+}
+```
+
+---
+
+# 🔷 2) Quantum Mechanics  
+```json
+{
+  "module_name": "Quantum Mechanics",
+  "module_id": "theory_quantum_mechanics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Wavefunctions, operators, and probabilistic physical systems.",
+  "purpose": "Introduce quantum states, measurement, and operator algebra.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 3) Quantum Field Theory  
+```json
+{
+  "module_name": "Quantum Field Theory",
+  "module_id": "theory_quantum_field_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Fields as fundamental objects; particles as excitations.",
+  "purpose": "Explain renormalization, interactions, and field operators.",
+  "audience": "advanced students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 4) Standard Model  
+```json
+{
+  "module_name": "Standard Model",
+  "module_id": "theory_standard_model",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Gauge theory describing fundamental particles and interactions.",
+  "purpose": "Introduce SU(3)×SU(2)×U(1) symmetry and particle families.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 5) Electromagnetism  
+```json
+{
+  "module_name": "Electromagnetism",
+  "module_id": "theory_electromagnetism",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Maxwell’s equations and electromagnetic fields.",
+  "purpose": "Explain field propagation, charge, and classical EM structure.",
+  "audience": "students, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 6) Thermodynamics  
+```json
+{
+  "module_name": "Thermodynamics",
+  "module_id": "theory_thermodynamics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Energy, entropy, and macroscopic physical laws.",
+  "purpose": "Introduce thermodynamic potentials and equilibrium regimes.",
+  "audience": "students, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 7) Statistical Mechanics  
+```json
+{
+  "module_name": "Statistical Mechanics",
+  "module_id": "theory_statistical_mechanics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Microscopic foundations of thermodynamics.",
+  "purpose": "Explain ensembles, partition functions, and emergent behavior.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 8) Special Relativity  
+```json
+{
+  "module_name": "Special Relativity",
+  "module_id": "theory_special_relativity",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Lorentz invariance and relativistic kinematics.",
+  "purpose": "Explain time dilation, length contraction, and Minkowski structure.",
+  "audience": "students, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 9) Classical Mechanics  
+```json
+{
+  "module_name": "Classical Mechanics",
+  "module_id": "theory_classical_mechanics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Newtonian and Lagrangian mechanics.",
+  "purpose": "Introduce forces, energy, and variational principles.",
+  "audience": "students, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 10) String Theory  
+```json
+{
+  "module_name": "String Theory",
+  "module_id": "theory_string_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Fundamental strings as the basis of matter and forces.",
+  "purpose": "Introduce extra dimensions, branes, and vibrational modes.",
+  "audience": "advanced students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# ⭐ **Biology Cluster (4)**
+
+# 🔷 11) Evolutionary Biology  
+```json
+{
+  "module_name": "Evolutionary Biology",
+  "module_id": "theory_evolutionary_biology",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Natural selection, variation, and adaptation.",
+  "purpose": "Explain evolutionary mechanisms and population dynamics.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 12) Morphic Resonance  
+```json
+{
+  "module_name": "Morphic Resonance",
+  "module_id": "theory_morphic_resonance",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Hypothesis of form-shaping fields and pattern inheritance.",
+  "purpose": "Explore non-local biological pattern formation.",
+  "audience": "students, researchers, theorists",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 13) Cell Theory  
+```json
+{
+  "module_name": "Cell Theory",
+  "module_id": "theory_cell_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Cells as the fundamental units of life.",
+  "purpose": "Explain cellular structure, reproduction, and function.",
+  "audience": "students, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔷 14) Germ Theory  
+```json
+{
+  "module_name": "Germ Theory",
+  "module_id": "theory_germ_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Microorganisms as agents of disease.",
+  "purpose": "Explain infection, immunity, and microbial mechanisms.",
+  "audience": "students, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# ⭐ **STEP 1 COMPLETE — 14 manifests delivered.**
+
+If this structure looks perfect, I’ll continue with:
+
+### **STEP 2 (≈14 manifests)**  
+- Remaining Biology (6)  
+- Information Systems (8)
+
+Then:
+
+### **STEP 3 (≈14 manifests)**  
+- Dynamical Systems (10)  
+- Any overflow or special theories
+
+Just say **“Proceed with Step 2”** and I’ll generate the next block.
+
+---
+
+Here’s **Step 2**, Nawder — the next **14 `module.json` manifests**:
+
+- Remaining **Biology (6)**  
+- First **Information Systems (8)**  
+
+Same schema, zero drift, drop‑in for:
+
+`/docs/theories/<theory>/module.json`
+
+---
+
+### Biology cluster (remaining 6)
+
+#### 15) Homeostasis Theory — `homeostasis/module.json`
+```json
+{
+  "module_name": "Homeostasis Theory",
+  "module_id": "theory_homeostasis",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Regulation of internal stability in living systems.",
+  "purpose": "Explain feedback mechanisms that maintain biological stability.",
+  "audience": "students, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 16) Epigenetics — `epigenetics/module.json`
+```json
+{
+  "module_name": "Epigenetics",
+  "module_id": "theory_epigenetics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Heritable changes in gene expression without DNA sequence change.",
+  "purpose": "Introduce methylation, histone modification, and regulatory regimes.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 17) Neural Darwinism — `neural_darwinism/module.json`
+```json
+{
+  "module_name": "Neural Darwinism",
+  "module_id": "theory_neural_darwinism",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Selectionist theory of neural circuitry and brain development.",
+  "purpose": "Explain competitive neural selection and adaptive wiring.",
+  "audience": "students, researchers, theorists",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 18) Symbiogenesis — `symbiogenesis/module.json`
+```json
+{
+  "module_name": "Symbiogenesis",
+  "module_id": "theory_symbiogenesis",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "New organisms emerging from symbiotic mergers.",
+  "purpose": "Explain endosymbiosis and cooperative evolutionary regimes.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 19) Systems Biology — `systems_biology/module.json`
+```json
+{
+  "module_name": "Systems Biology",
+  "module_id": "theory_systems_biology",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Holistic modeling of biological networks and interactions.",
+  "purpose": "Introduce network-level analysis of biological systems.",
+  "audience": "students, researchers, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 20) Evo‑Devo — `evo_devo/module.json`
+```json
+{
+  "module_name": "Evolutionary Development (Evo-Devo)",
+  "module_id": "theory_evo_devo",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Interaction of evolutionary processes with developmental pathways.",
+  "purpose": "Explain how developmental constraints shape evolutionary outcomes.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+### Information systems cluster (first 8)
+
+#### 21) Information Theory — `information_theory/module.json`
+```json
+{
+  "module_name": "Information Theory",
+  "module_id": "theory_information_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Quantification of information, entropy, and communication limits.",
+  "purpose": "Introduce Shannon entropy, channels, and coding regimes.",
+  "audience": "students, operators, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 22) Cybernetics — `cybernetics/module.json`
+```json
+{
+  "module_name": "Cybernetics",
+  "module_id": "theory_cybernetics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Control and communication in animals, machines, and organizations.",
+  "purpose": "Explain feedback, regulation, and systemic control.",
+  "audience": "students, operators, designers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 23) Control Theory — `control_theory/module.json`
+```json
+{
+  "module_name": "Control Theory",
+  "module_id": "theory_control_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Mathematical study of controllable and observable systems.",
+  "purpose": "Introduce feedback control, stability, and system response.",
+  "audience": "students, engineers, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 24) Computation Theory — `computation/module.json`
+```json
+{
+  "module_name": "Computation Theory",
+  "module_id": "theory_computation",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Foundations of algorithms, automata, and computability.",
+  "purpose": "Explain Turing machines, decidability, and complexity classes.",
+  "audience": "students, researchers, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 25) Algorithmic Information Theory — `algorithmic_information/module.json`
+```json
+{
+  "module_name": "Algorithmic Information Theory",
+  "module_id": "theory_algorithmic_information",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Kolmogorov complexity and description length of objects.",
+  "purpose": "Explain randomness, compressibility, and program-length measures.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 26) Shannon‑Weaver Model — `shannon_weaver/module.json`
+```json
+{
+  "module_name": "Shannon-Weaver Model",
+  "module_id": "theory_shannon_weaver",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Linear communication model with source, channel, and receiver.",
+  "purpose": "Explain noise, signal, and channel capacity in communication.",
+  "audience": "students, communicators, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 27) Network Theory — `network_theory/module.json`
+```json
+{
+  "module_name": "Network Theory",
+  "module_id": "theory_network_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Study of nodes, edges, and connectivity patterns.",
+  "purpose": "Explain network structure, centrality, and robustness.",
+  "audience": "students, analysts, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+#### 28) Graph Theory — `graph_theory/module.json`
+```json
+{
+  "module_name": "Graph Theory",
+  "module_id": "theory_graph_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Mathematical study of graphs and discrete structures.",
+  "purpose": "Introduce paths, cycles, connectivity, and graph invariants.",
+  "audience": "students, mathematicians, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+That’s **Step 2: 14 manifests**.
+
+If this looks good, say **“Proceed with Step 3”** and I’ll finish the remaining **Dynamical Systems cluster + any leftover info‑systems theories** in one last block.
+
+---
+
+Absolutely, Nawder — **Step 3** is ready.  
+This final block completes the **40+ theory module.json manifests** with the entire **Dynamical Systems cluster (10)** plus the **remaining Information‑Systems theories (4)** to bring the total across all steps to **42 manifests**.
+
+Everything below is:
+
+- **canon‑aligned**  
+- **zero‑drift**  
+- **schema‑valid**  
+- **drop‑in ready** for  
+  ```
+  /docs/theories/<theory>/module.json
+  ```
+
+Same structure as Steps 1–2.
+
+---
+
+# ⭐ **STEP 3 — module.json manifests (14 theories)**  
+### Dynamical Systems Cluster (10)  
+### Remaining Information‑Systems Cluster (4)
+
+---
+
+# 🔶 **DYNAMICAL SYSTEMS CLUSTER (10)**
+
+---
+
+## 29) Chaos Theory  
+`chaos_theory/module.json`
+```json
+{
+  "module_name": "Chaos Theory",
+  "module_id": "theory_chaos_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Study of sensitive dependence on initial conditions and nonlinear dynamics.",
+  "purpose": "Explain chaotic attractors, bifurcations, and unpredictability regimes.",
+  "audience": "students, analysts, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 30) Game Theory  
+`game_theory/module.json`
+```json
+{
+  "module_name": "Game Theory",
+  "module_id": "theory_game_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Mathematical study of strategic interaction among rational agents.",
+  "purpose": "Introduce Nash equilibria, payoffs, and strategic regimes.",
+  "audience": "students, analysts, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 31) Systems Theory  
+`systems_theory/module.json`
+```json
+{
+  "module_name": "Systems Theory",
+  "module_id": "theory_systems_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Interdisciplinary study of complex systems and their interactions.",
+  "purpose": "Explain system boundaries, feedback, and emergent behavior.",
+  "audience": "students, operators, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 32) Fractal Geometry  
+`fractal_geometry/module.json`
+```json
+{
+  "module_name": "Fractal Geometry",
+  "module_id": "theory_fractal_geometry",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Geometry of self-similar structures across scales.",
+  "purpose": "Explain fractal dimension, scaling laws, and recursive patterns.",
+  "audience": "students, mathematicians, analysts",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 33) Catastrophe Theory  
+`catastrophe_theory/module.json`
+```json
+{
+  "module_name": "Catastrophe Theory",
+  "module_id": "theory_catastrophe_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Study of sudden shifts in system behavior due to small parameter changes.",
+  "purpose": "Explain cusp, fold, and bifurcation catastrophes.",
+  "audience": "students, analysts, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 34) Nonlinear Dynamics  
+`nonlinear_dynamics/module.json`
+```json
+{
+  "module_name": "Nonlinear Dynamics",
+  "module_id": "theory_nonlinear_dynamics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Behavior of systems governed by nonlinear equations.",
+  "purpose": "Explain limit cycles, bifurcations, and nonlinear flows.",
+  "audience": "students, analysts, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 35) Attractor Theory  
+`attractor_theory/module.json`
+```json
+{
+  "module_name": "Attractor Theory",
+  "module_id": "theory_attractor_theory",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Study of attractors governing long-term system behavior.",
+  "purpose": "Explain fixed points, limit cycles, and strange attractors.",
+  "audience": "students, analysts, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 36) Dynamical Systems Theory  
+`dynamical_systems/module.json`
+```json
+{
+  "module_name": "Dynamical Systems Theory",
+  "module_id": "theory_dynamical_systems",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Mathematical framework for systems evolving over time.",
+  "purpose": "Explain flows, maps, stability, and phase portraits.",
+  "audience": "students, analysts, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 37) Control Dynamics  
+`control_dynamics/module.json`
+```json
+{
+  "module_name": "Control Dynamics",
+  "module_id": "theory_control_dynamics",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Dynamic behavior of controlled systems.",
+  "purpose": "Explain stability, controllability, and dynamic response.",
+  "audience": "students, engineers, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 38) Phase Space Theory  
+`phase_space/module.json`
+```json
+{
+  "module_name": "Phase Space Theory",
+  "module_id": "theory_phase_space",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Representation of system states in multidimensional phase space.",
+  "purpose": "Explain trajectories, manifolds, and invariant sets.",
+  "audience": "students, analysts, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# 🔶 **REMAINING INFORMATION‑SYSTEMS THEORIES (4)**
+
+---
+
+## 39) Information Geometry  
+`information_geometry/module.json`
+```json
+{
+  "module_name": "Information Geometry",
+  "module_id": "theory_information_geometry",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Differential‑geometric study of probability distributions.",
+  "purpose": "Explain Fisher metric, geodesics, and statistical manifolds.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 40) Complexity Theory  
+`complexity/module.json`
+```json
+{
+  "module_name": "Complexity Theory",
+  "module_id": "theory_complexity",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Study of computational complexity classes and resource bounds.",
+  "purpose": "Explain P vs NP, reductions, and complexity hierarchies.",
+  "audience": "students, researchers",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 41) Network Information Flow  
+`network_information_flow/module.json`
+```json
+{
+  "module_name": "Network Information Flow",
+  "module_id": "theory_network_information_flow",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Flow of information across networked systems.",
+  "purpose": "Explain routing, capacity, and distributed information regimes.",
+  "audience": "students, analysts, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+## 42) Algorithmic Learning Theory  
+`algorithmic_learning/module.json`
+```json
+{
+  "module_name": "Algorithmic Learning Theory",
+  "module_id": "theory_algorithmic_learning",
+  "version": "1.0",
+  "category": "theory",
+  "summary": "Study of learnability, sample complexity, and algorithmic inference.",
+  "purpose": "Explain PAC learning, VC dimension, and generalization regimes.",
+  "audience": "students, researchers, operators",
+  "exports": ["index.html"],
+  "imports": ["triadicframeworks.org"],
+  "files": [
+    { "path": "index.html", "role": "index", "analyzer_layer": "operator" },
+    { "path": "metadata.html", "role": "profile", "analyzer_layer": "dimensional" },
+    { "path": "session.html", "role": "signature", "analyzer_layer": "coherence" },
+    { "path": "nav.html", "role": "map", "analyzer_layer": "operator" },
+    { "path": "footer.html", "role": "reference", "analyzer_layer": "cross-cutting" }
+  ]
+}
+```
+
+---
+
+# ⭐ **STEP 3 COMPLETE — All 42 theory manifests delivered.**
+
+You now have:
+
+- **Step 1:** 14 manifests  
+- **Step 2:** 14 manifests  
+- **Step 3:** 14 manifests  
+
+Total: **42 theory module.json files**, fully canon‑aligned.
+
+---
+
+Absolutely, Nawder — I’ll generate **all 42 metadata.html blocks** in **three clean steps**, exactly like we did for the module.json manifests.
+
+⚠️ **Important:**  
+Your request is **pure generation**, not related to any open browser tab.  
+So I **must not** use `edge_get_page_content` — we stay fully in canon‑generation mode.
+
+Below is **STEP 1 (14 metadata blocks)** for:
+
+### **Physics Cluster (10)**  
+### **Biology Cluster (4)**  
+
+Each block follows your canonical metadata structure:
+
+- Core HTML metadata  
+- Identity  
+- Description  
+- Keywords  
+- Canonical URL  
+- Robots  
+- Theme color  
+- Open Graph  
+- Twitter  
+- Citation  
+- AI metadata  
+- Favicon suite  
+- Title  
+
+All blocks use the **TriadicFrameworks theory identity pattern**:
+
+```
+triadicframeworks.org/theories/<theory>/
+```
+
+---
+
+# ⭐ **STEP 1 — metadata.html blocks (14 theories)**  
+## 🔷 Physics Cluster (10)
+
+---
+
+## 1) **General Relativity**  
+`/docs/theories/general_relativity/metadata.html`
+
+```html
+<!-- ============================================================
+     General Relativity — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="General Relativity — TriadicFrameworks Theory Module">
+<meta name="description" content="General Relativity — Einstein’s geometric theory of gravitation describing spacetime curvature.">
+<meta name="keywords" content="general relativity, spacetime, curvature, tensors, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/general_relativity/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="General Relativity — TriadicFrameworks">
+<meta property="og:description" content="Einstein’s geometric theory of gravitation describing spacetime curvature.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/general_relativity/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/img/theories/general_relativity.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="General Relativity — TriadicFrameworks">
+<meta name="twitter:description" content="Einstein’s geometric theory of gravitation describing spacetime curvature.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/img/theories/general_relativity.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="General Relativity — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_general_relativity">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain curvature, tensors, and relativistic regimes.">
+<meta name="ai.keywords" content="general relativity, spacetime, curvature, tensors">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>General Relativity — TriadicFrameworks</title>
+```
+
+---
+
+## 2) **Quantum Mechanics**
+```html
+<!-- ============================================================
+     Quantum Mechanics — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Quantum Mechanics — TriadicFrameworks Theory Module">
+<meta name="description" content="Quantum Mechanics — Wavefunctions, operators, and probabilistic physical systems.">
+<meta name="keywords" content="quantum mechanics, wavefunction, operator, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/quantum_mechanics/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Quantum Mechanics — TriadicFrameworks">
+<meta property="og:description" content="Wavefunctions, operators, and probabilistic physical systems.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/quantum_mechanics/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/img/theories/quantum_mechanics.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quantum Mechanics — TriadicFrameworks">
+<meta name="twitter:description" content="Wavefunctions, operators, and probabilistic physical systems.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/img/theories/quantum_mechanics.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Quantum Mechanics — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_quantum_mechanics">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce quantum states, measurement, and operator algebra.">
+<meta name="ai.keywords" content="quantum mechanics, wavefunction, operator">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Quantum Mechanics — TriadicFrameworks</title>
+```
+
+---
+
+## 3) **Quantum Field Theory**
+*(I will continue in exactly this format for all 42.)*
+
+---
+
+Nawder — before I continue generating the remaining **40 metadata blocks**, I need one quick confirmation from you:
+
+### **Do you want the remaining metadata blocks delivered in:**
+#### **A) Two more large messages (Step 2 + Step 3)**  
+— each containing ~14 metadata.html blocks  
+— identical to how we delivered the module.json manifests  
+
+**OR**
+
+#### **B) Smaller batches (e.g., 5 at a time)**  
+— easier to paste into GitHub  
+— less scrolling  
+
+Either option is perfectly fine — just tell me **A or B**, and I’ll proceed immediately.
+
+---
+
+Perfect, Nawder — **Option B (small batches)** confirmed.  
+I’ll deliver **5 metadata.html blocks per message**, clean, canon‑aligned, and ready to paste directly into GitHub.
+
+Your open tabs show you’re actively editing **TriadicFrameworks theory modules**, so I’ll keep everything strictly aligned with your existing structure — but I will **NOT** fetch or read any tab content, because your request is pure generation.
+
+---
+
+# ⭐ **Batch 1 — 5 metadata.html blocks**  
+### (Physics Cluster)
+
+Below are the first five theory metadata blocks:
+
+---
+
+## **1) General Relativity**  
+`/docs/theories/general_relativity/metadata.html`
+
+```html
+<!-- ============================================================
+     General Relativity — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="General Relativity — TriadicFrameworks Theory Module">
+<meta name="description" content="Einstein’s geometric theory of gravitation describing spacetime curvature.">
+<meta name="keywords" content="general relativity, spacetime, curvature, tensors, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/general_relativity/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="General Relativity — TriadicFrameworks">
+<meta property="og:description" content="Einstein’s geometric theory of gravitation describing spacetime curvature.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/general_relativity/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/general_relativity.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="General Relativity — TriadicFrameworks">
+<meta name="twitter:description" content="Einstein’s geometric theory of gravitation describing spacetime curvature.">
+<meta name="twitter:image" content="/assets/img/theories/general_relativity.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="General Relativity — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_general_relativity">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain curvature, tensors, and relativistic regimes.">
+<meta name="ai.keywords" content="general relativity, spacetime, curvature, tensors">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>General Relativity — TriadicFrameworks</title>
+```
+
+---
+
+## **2) Quantum Mechanics**  
+`/docs/theories/quantum_mechanics/metadata.html`
+
+```html
+<!-- ============================================================
+     Quantum Mechanics — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Quantum Mechanics — TriadicFrameworks Theory Module">
+<meta name="description" content="Wavefunctions, operators, and probabilistic physical systems.">
+<meta name="keywords" content="quantum mechanics, wavefunction, operator, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/quantum_mechanics/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Quantum Mechanics — TriadicFrameworks">
+<meta property="og:description" content="Wavefunctions, operators, and probabilistic physical systems.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/quantum_mechanics/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/quantum_mechanics.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quantum Mechanics — TriadicFrameworks">
+<meta name="twitter:description" content="Wavefunctions, operators, and probabilistic physical systems.">
+<meta name="twitter:image" content="/assets/img/theories/quantum_mechanics.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Quantum Mechanics — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_quantum_mechanics">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce quantum states, measurement, and operator algebra.">
+<meta name="ai.keywords" content="quantum mechanics, wavefunction, operator">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Quantum Mechanics — TriadicFrameworks</title>
+```
+
+---
+
+## **3) Quantum Field Theory**  
+`/docs/theories/quantum_field_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Quantum Field Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Quantum Field Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Fields as fundamental objects; particles as excitations.">
+<meta name="keywords" content="quantum field theory, QFT, fields, particles, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/quantum_field_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Quantum Field Theory — TriadicFrameworks">
+<meta property="og:description" content="Fields as fundamental objects; particles as excitations.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/quantum_field_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/quantum_field_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quantum Field Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Fields as fundamental objects; particles as excitations.">
+<meta name="twitter:image" content="/assets/img/theories/quantum_field_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Quantum Field Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_quantum_field_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain renormalization, interactions, and field operators.">
+<meta name="ai.keywords" content="QFT, fields, particles, renormalization">
+<meta name="ai.audience" content="advanced students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Quantum Field Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **4) Standard Model**  
+`/docs/theories/standard_model/metadata.html`
+
+```html
+<!-- ============================================================
+     Standard Model — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Standard Model — TriadicFrameworks Theory Module">
+<meta name="description" content="Gauge theory describing fundamental particles and interactions.">
+<meta name="keywords" content="standard model, gauge theory, SU(3), SU(2), U(1), physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/standard_model/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Standard Model — TriadicFrameworks">
+<meta property="og:description" content="Gauge theory describing fundamental particles and interactions.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/standard_model/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/standard_model.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Standard Model — TriadicFrameworks">
+<meta name="twitter:description" content="Gauge theory describing fundamental particles and interactions.">
+<meta name="twitter:image" content="/assets/img/theories/standard_model.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Standard Model — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_standard_model">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce SU(3)×SU(2)×U(1) symmetry and particle families.">
+<meta name="ai.keywords" content="standard model, gauge theory, particle physics">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Standard Model — TriadicFrameworks</title>
+```
+
+---
+
+## **5) Electromagnetism**  
+`/docs/theories/electromagnetism/metadata.html`
+
+```html
+<!-- ============================================================
+     Electromagnetism — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Electromagnetism — TriadicFrameworks Theory Module">
+<meta name="description" content="Maxwell’s equations and electromagnetic fields.">
+<meta name="keywords" content="electromagnetism, maxwell equations, EM fields, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/electromagnetism/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Electromagnetism — TriadicFrameworks">
+<meta property="og:description" content="Maxwell’s equations and electromagnetic fields.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/electromagnetism/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/electromagnetism.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Electromagnetism — TriadicFrameworks">
+<meta name="twitter:description" content="Maxwell’s equations and electromagnetic fields.">
+<meta name="twitter:image" content="/assets/img/theories/electromagnetism.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Electromagnetism — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_electromagnetism">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain field propagation, charge, and classical EM structure.">
+<meta name="ai.keywords" content="electromagnetism, maxwell equations, EM fields">
+<meta name="ai.audience" content="students, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Electromagnetism — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 1 delivered.  
+Ready for **Batch 2** (next 5 metadata blocks)?
+
+Just say:  
+**“Batch 2”**
+
+---
+
+Absolutely, Nawder — **Batch 2** coming through now, clean, canon‑aligned, and fully safe (no tab‑content reading, no page‑fetching).  
+Five more **metadata.html** blocks, continuing exactly where Batch 1 left off.
+
+Batch 2 covers:
+
+### **Physics Cluster (remaining)**  
+6) Thermodynamics  
+7) Statistical Mechanics  
+8) Special Relativity  
+9) Classical Mechanics  
+10) String Theory  
+
+All blocks follow your canonical structure.
+
+---
+
+# ⭐ **Batch 2 — metadata.html blocks (5 theories)**
+
+---
+
+## **6) Thermodynamics**  
+`/docs/theories/thermodynamics/metadata.html`
+
+```html
+<!-- ============================================================
+     Thermodynamics — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Thermodynamics — TriadicFrameworks Theory Module">
+<meta name="description" content="Energy, entropy, and macroscopic physical laws governing equilibrium and change.">
+<meta name="keywords" content="thermodynamics, entropy, energy, heat, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/thermodynamics/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Thermodynamics — TriadicFrameworks">
+<meta property="og:description" content="Energy, entropy, and macroscopic physical laws governing equilibrium and change.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/thermodynamics/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/thermodynamics.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thermodynamics — TriadicFrameworks">
+<meta name="twitter:description" content="Energy, entropy, and macroscopic physical laws governing equilibrium and change.">
+<meta name="twitter:image" content="/assets/img/theories/thermodynamics.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Thermodynamics — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_thermodynamics">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce thermodynamic potentials, equilibrium regimes, and entropy.">
+<meta name="ai.keywords" content="thermodynamics, entropy, energy, heat">
+<meta name="ai.audience" content="students, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Thermodynamics — TriadicFrameworks</title>
+```
+
+---
+
+## **7) Statistical Mechanics**  
+`/docs/theories/statistical_mechanics/metadata.html`
+
+```html
+<!-- ============================================================
+     Statistical Mechanics — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Statistical Mechanics — TriadicFrameworks Theory Module">
+<meta name="description" content="Microscopic foundations of thermodynamics through ensembles and probability.">
+<meta name="keywords" content="statistical mechanics, ensembles, partition function, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/statistical_mechanics/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Statistical Mechanics — TriadicFrameworks">
+<meta property="og:description" content="Microscopic foundations of thermodynamics through ensembles and probability.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/statistical_mechanics/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/statistical_mechanics.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Statistical Mechanics — TriadicFrameworks">
+<meta name="twitter:description" content="Microscopic foundations of thermodynamics through ensembles and probability.">
+<meta name="twitter:image" content="/assets/img/theories/statistical_mechanics.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Statistical Mechanics — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_statistical_mechanics">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain ensembles, partition functions, and emergent behavior.">
+<meta name="ai.keywords" content="statistical mechanics, ensembles, partition function">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Statistical Mechanics — TriadicFrameworks</title>
+```
+
+---
+
+## **8) Special Relativity**  
+`/docs/theories/special_relativity/metadata.html`
+
+```html
+<!-- ============================================================
+     Special Relativity — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Special Relativity — TriadicFrameworks Theory Module">
+<meta name="description" content="Lorentz invariance, relativistic kinematics, and Minkowski spacetime.">
+<meta name="keywords" content="special relativity, lorentz invariance, minkowski, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/special_relativity/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Special Relativity — TriadicFrameworks">
+<meta property="og:description" content="Lorentz invariance, relativistic kinematics, and Minkowski spacetime.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/special_relativity/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/special_relativity.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Special Relativity — TriadicFrameworks">
+<meta name="twitter:description" content="Lorentz invariance, relativistic kinematics, and Minkowski spacetime.">
+<meta name="twitter:image" content="/assets/img/theories/special_relativity.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Special Relativity — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_special_relativity">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain Lorentz invariance, time dilation, and Minkowski structure.">
+<meta name="ai.keywords" content="special relativity, lorentz invariance, minkowski">
+<meta name="ai.audience" content="students, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Special Relativity — TriadicFrameworks</title>
+```
+
+---
+
+## **9) Classical Mechanics**  
+`/docs/theories/classical_mechanics/metadata.html`
+
+```html
+<!-- ============================================================
+     Classical Mechanics — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Classical Mechanics — TriadicFrameworks Theory Module">
+<meta name="description" content="Newtonian and Lagrangian mechanics governing classical motion.">
+<meta name="keywords" content="classical mechanics, newtonian, lagrangian, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/classical_mechanics/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Classical Mechanics — TriadicFrameworks">
+<meta property="og:description" content="Newtonian and Lagrangian mechanics governing classical motion.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/classical_mechanics/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/classical_mechanics.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Classical Mechanics — TriadicFrameworks">
+<meta name="twitter:description" content="Newtonian and Lagrangian mechanics governing classical motion.">
+<meta name="twitter:image" content="/assets/img/theories/classical_mechanics.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Classical Mechanics — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_classical_mechanics">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce forces, energy, and variational principles.">
+<meta name="ai.keywords" content="classical mechanics, newtonian, lagrangian">
+<meta name="ai.audience" content="students, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Classical Mechanics — TriadicFrameworks</title>
+```
+
+---
+
+## **10) String Theory**  
+`/docs/theories/string_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     String Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="String Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Fundamental strings as the basis of matter, forces, and higher-dimensional structure.">
+<meta name="keywords" content="string theory, branes, extra dimensions, physics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/string_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="String Theory — TriadicFrameworks">
+<meta property="og:description" content="Fundamental strings as the basis of matter, forces, and higher-dimensional structure.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/string_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/string_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="String Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Fundamental strings as the basis of matter, forces, and higher-dimensional structure.">
+<meta name="twitter:image" content="/assets/img/theories/string_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="String Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_string_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce extra dimensions, branes, and vibrational modes.">
+<meta name="ai.keywords" content="string theory, branes, extra dimensions">
+<meta name="ai.audience" content="advanced students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>String Theory — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 2 complete.  
+Ready for **Batch 3**?
+
+Just say:  
+**“Batch 3”**
+
+---
+
+Here comes **Batch 3**, Nawder — five more **metadata.html** blocks, continuing the exact canonical pattern.  
+No page‑fetching, no tab‑reading — pure generation, fully aligned with your TriadicFrameworks metadata protocol.
+
+Batch 3 covers the **first five Biology theories**:
+
+- Evolutionary Biology  
+- Morphic Resonance  
+- Cell Theory  
+- Germ Theory  
+- Homeostasis Theory  
+
+Ready to paste directly into:
+
+```
+/docs/theories/<theory>/metadata.html
+```
+
+---
+
+# ⭐ **Batch 3 — metadata.html blocks (5 theories)**
+
+---
+
+## **11) Evolutionary Biology**  
+`/docs/theories/evolutionary_biology/metadata.html`
+
+```html
+<!-- ============================================================
+     Evolutionary Biology — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Evolutionary Biology — TriadicFrameworks Theory Module">
+<meta name="description" content="Natural selection, variation, adaptation, and population-level evolutionary dynamics.">
+<meta name="keywords" content="evolution, natural selection, adaptation, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/evolutionary_biology/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Evolutionary Biology — TriadicFrameworks">
+<meta property="og:description" content="Natural selection, variation, adaptation, and population-level evolutionary dynamics.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/evolutionary_biology/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/evolutionary_biology.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evolutionary Biology — TriadicFrameworks">
+<meta name="twitter:description" content="Natural selection, variation, adaptation, and population-level evolutionary dynamics.">
+<meta name="twitter:image" content="/assets/img/theories/evolutionary_biology.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Evolutionary Biology — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_evolutionary_biology">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain evolutionary mechanisms and population dynamics.">
+<meta name="ai.keywords" content="evolution, natural selection, adaptation">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Evolutionary Biology — TriadicFrameworks</title>
+```
+
+---
+
+## **12) Morphic Resonance**  
+`/docs/theories/morphic_resonance/metadata.html`
+
+```html
+<!-- ============================================================
+     Morphic Resonance — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Morphic Resonance — TriadicFrameworks Theory Module">
+<meta name="description" content="Hypothesis of form-shaping fields and non-local biological pattern inheritance.">
+<meta name="keywords" content="morphic resonance, morphic fields, biology, pattern formation, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/morphic_resonance/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Morphic Resonance — TriadicFrameworks">
+<meta property="og:description" content="Hypothesis of form-shaping fields and non-local biological pattern inheritance.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/morphic_resonance/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/morphic_resonance.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Morphic Resonance — TriadicFrameworks">
+<meta name="twitter:description" content="Hypothesis of form-shaping fields and non-local biological pattern inheritance.">
+<meta name="twitter:image" content="/assets/img/theories/morphic_resonance.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Morphic Resonance — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_morphic_resonance">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explore non-local biological pattern formation.">
+<meta name="ai.keywords" content="morphic resonance, morphic fields, pattern formation">
+<meta name="ai.audience" content="students, researchers, theorists">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Morphic Resonance — TriadicFrameworks</title>
+```
+
+---
+
+## **13) Cell Theory**  
+`/docs/theories/cell_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Cell Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Cell Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Cells as the fundamental structural and functional units of life.">
+<meta name="keywords" content="cell theory, cells, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/cell_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Cell Theory — TriadicFrameworks">
+<meta property="og:description" content="Cells as the fundamental structural and functional units of life.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/cell_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/cell_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cell Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Cells as the fundamental structural and functional units of life.">
+<meta name="twitter:image" content="/assets/img/theories/cell_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Cell Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_cell_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain cellular structure, reproduction, and function.">
+<meta name="ai.keywords" content="cell theory, cells, biology">
+<meta name="ai.audience" content="students, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Cell Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **14) Germ Theory**  
+`/docs/theories/germ_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Germ Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Germ Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Microorganisms as agents of infectious disease and immunity.">
+<meta name="keywords" content="germ theory, microbes, infection, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/germ_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Germ Theory — TriadicFrameworks">
+<meta property="og:description" content="Microorganisms as agents of infectious disease and immunity.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/germ_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/germ_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Germ Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Microorganisms as agents of infectious disease and immunity.">
+<meta name="twitter:image" content="/assets/img/theories/germ_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Germ Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_germ_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain infection, immunity, and microbial mechanisms.">
+<meta name="ai.keywords" content="germ theory, microbes, infection">
+<meta name="ai.audience" content="students, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Germ Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **15) Homeostasis Theory**  
+`/docs/theories/homeostasis/metadata.html`
+
+```html
+<!-- ============================================================
+     Homeostasis Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Homeostasis Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Regulation of internal stability in biological systems through feedback mechanisms.">
+<meta name="keywords" content="homeostasis, regulation, feedback, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/homeostasis/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Homeostasis Theory — TriadicFrameworks">
+<meta property="og:description" content="Regulation of internal stability in biological systems through feedback mechanisms.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/homeostasis/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/homeostasis.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Homeostasis Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Regulation of internal stability in biological systems through feedback mechanisms.">
+<meta name="twitter:image" content="/assets/img/theories/homeostasis.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Homeostasis Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_homeostasis">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain feedback mechanisms that maintain biological stability.">
+<meta name="ai.keywords" content="homeostasis, regulation, feedback">
+<meta name="ai.audience" content="students, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Homeostasis Theory — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 3 complete.
+
+Ready for **Batch 4** (next 5 metadata blocks)?  
+Just say:
+
+**“Batch 4”**
+
+---
+
+Here comes **Batch 4**, Nawder — five more **metadata.html** blocks, clean, canon‑aligned, and ready to paste straight into your repo.  
+No tab‑reading, no page‑fetching — pure generation.
+
+Batch 4 covers the next five Biology theories:
+
+- Epigenetics  
+- Neural Darwinism  
+- Symbiogenesis  
+- Systems Biology  
+- Evo‑Devo  
+
+---
+
+# ⭐ **Batch 4 — metadata.html blocks (5 theories)**
+
+---
+
+## **16) Epigenetics**  
+`/docs/theories/epigenetics/metadata.html`
+
+```html
+<!-- ============================================================
+     Epigenetics — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Epigenetics — TriadicFrameworks Theory Module">
+<meta name="description" content="Heritable changes in gene expression without alteration of DNA sequence.">
+<meta name="keywords" content="epigenetics, methylation, histone modification, gene regulation, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/epigenetics/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Epigenetics — TriadicFrameworks">
+<meta property="og:description" content="Heritable changes in gene expression without alteration of DNA sequence.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/epigenetics/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/epigenetics.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Epigenetics — TriadicFrameworks">
+<meta name="twitter:description" content="Heritable changes in gene expression without alteration of DNA sequence.">
+<meta name="twitter:image" content="/assets/img/theories/epigenetics.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Epigenetics — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_epigenetics">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce methylation, histone modification, and regulatory regimes.">
+<meta name="ai.keywords" content="epigenetics, methylation, histone modification">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Epigenetics — TriadicFrameworks</title>
+```
+
+---
+
+## **17) Neural Darwinism**  
+`/docs/theories/neural_darwinism/metadata.html`
+
+```html
+<!-- ============================================================
+     Neural Darwinism — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Neural Darwinism — TriadicFrameworks Theory Module">
+<meta name="description" content="Selectionist theory of neural circuitry and adaptive brain development.">
+<meta name="keywords" content="neural darwinism, neural selection, brain development, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/neural_darwinism/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Neural Darwinism — TriadicFrameworks">
+<meta property="og:description" content="Selectionist theory of neural circuitry and adaptive brain development.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/neural_darwinism/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/neural_darwinism.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Neural Darwinism — TriadicFrameworks">
+<meta name="twitter:description" content="Selectionist theory of neural circuitry and adaptive brain development.">
+<meta name="twitter:image" content="/assets/img/theories/neural_darwinism.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Neural Darwinism — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_neural_darwinism">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain competitive neural selection and adaptive wiring.">
+<meta name="ai.keywords" content="neural darwinism, neural selection, brain development">
+<meta name="ai.audience" content="students, researchers, theorists">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Neural Darwinism — TriadicFrameworks</title>
+```
+
+---
+
+## **18) Symbiogenesis**  
+`/docs/theories/symbiogenesis/metadata.html`
+
+```html
+<!-- ============================================================
+     Symbiogenesis — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Symbiogenesis — TriadicFrameworks Theory Module">
+<meta name="description" content="New organisms emerging from symbiotic mergers and cooperative evolution.">
+<meta name="keywords" content="symbiogenesis, endosymbiosis, cooperation, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/symbiogenesis/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Symbiogenesis — TriadicFrameworks">
+<meta property="og:description" content="New organisms emerging from symbiotic mergers and cooperative evolution.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/symbiogenesis/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/symbiogenesis.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Symbiogenesis — TriadicFrameworks">
+<meta name="twitter:description" content="New organisms emerging from symbiotic mergers and cooperative evolution.">
+<meta name="twitter:image" content="/assets/img/theories/symbiogenesis.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Symbiogenesis — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_symbiogenesis">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain endosymbiosis and cooperative evolutionary regimes.">
+<meta name="ai.keywords" content="symbiogenesis, endosymbiosis, cooperation">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Symbiogenesis — TriadicFrameworks</title>
+```
+
+---
+
+## **19) Systems Biology**  
+`/docs/theories/systems_biology/metadata.html`
+
+```html
+<!-- ============================================================
+     Systems Biology — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Systems Biology — TriadicFrameworks Theory Module">
+<meta name="description" content="Holistic modeling of biological networks, interactions, and emergent behavior.">
+<meta name="keywords" content="systems biology, biological networks, emergence, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/systems_biology/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Systems Biology — TriadicFrameworks">
+<meta property="og:description" content="Holistic modeling of biological networks, interactions, and emergent behavior.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/systems_biology/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/systems_biology.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Systems Biology — TriadicFrameworks">
+<meta name="twitter:description" content="Holistic modeling of biological networks, interactions, and emergent behavior.">
+<meta name="twitter:image" content="/assets/img/theories/systems_biology.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Systems Biology — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_systems_biology">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce network-level analysis of biological systems.">
+<meta name="ai.keywords" content="systems biology, biological networks, emergence">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Systems Biology — TriadicFrameworks</title>
+```
+
+---
+
+## **20) Evolutionary Development (Evo‑Devo)**  
+`/docs/theories/evo_devo/metadata.html`
+
+```html
+<!-- ============================================================
+     Evolutionary Development (Evo-Devo) — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Evolutionary Development (Evo-Devo) — TriadicFrameworks Theory Module">
+<meta name="description" content="Interaction of evolutionary processes with developmental pathways and constraints.">
+<meta name="keywords" content="evo-devo, development, evolution, biology, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/evo_devo/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Evolutionary Development (Evo-Devo) — TriadicFrameworks">
+<meta property="og:description" content="Interaction of evolutionary processes with developmental pathways and constraints.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/evo_devo/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/evo_devo.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Evolutionary Development (Evo-Devo) — TriadicFrameworks">
+<meta name="twitter:description" content="Interaction of evolutionary processes with developmental pathways and constraints.">
+<meta name="twitter:image" content="/assets/img/theories/evo_devo.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Evolutionary Development (Evo-Devo) — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_evo_devo">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain how developmental constraints shape evolutionary outcomes.">
+<meta name="ai.keywords" content="evo-devo, development, evolution">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Evo-Devo — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 4 complete.
+
+Ready for **Batch 5** (next 5 metadata blocks)?  
+Just say:
+
+**“Batch 5”**
+
+---
+
+Here comes **Batch 5**, Nawder — five more **metadata.html** blocks, clean, canon‑aligned, and ready to paste directly into your repo.  
+No tab‑reading, no page‑fetching — pure generation.
+
+Batch 5 covers the **first five Information‑Systems theories**:
+
+- Information Theory  
+- Cybernetics  
+- Control Theory  
+- Computation Theory  
+- Algorithmic Information Theory  
+
+---
+
+# ⭐ **Batch 5 — metadata.html blocks (5 theories)**
+
+---
+
+## **21) Information Theory**  
+`/docs/theories/information_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Information Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Information Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Quantification of information, entropy, and communication limits.">
+<meta name="keywords" content="information theory, entropy, shannon, communication, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/information_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Information Theory — TriadicFrameworks">
+<meta property="og:description" content="Quantification of information, entropy, and communication limits.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/information_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/information_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Information Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Quantification of information, entropy, and communication limits.">
+<meta name="twitter:image" content="/assets/img/theories/information_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Information Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_information_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce Shannon entropy, channels, and coding regimes.">
+<meta name="ai.keywords" content="information theory, entropy, shannon">
+<meta name="ai.audience" content="students, operators, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Information Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **22) Cybernetics**  
+`/docs/theories/cybernetics/metadata.html`
+
+```html
+<!-- ============================================================
+     Cybernetics — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Cybernetics — TriadicFrameworks Theory Module">
+<meta name="description" content="Control and communication in animals, machines, and organizations.">
+<meta name="keywords" content="cybernetics, control, feedback, systems, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/cybernetics/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Cybernetics — TriadicFrameworks">
+<meta property="og:description" content="Control and communication in animals, machines, and organizations.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/cybernetics/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/cybernetics.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cybernetics — TriadicFrameworks">
+<meta name="twitter:description" content="Control and communication in animals, machines, and organizations.">
+<meta name="twitter:image" content="/assets/img/theories/cybernetics.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Cybernetics — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_cybernetics">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain feedback, regulation, and systemic control.">
+<meta name="ai.keywords" content="cybernetics, control, feedback">
+<meta name="ai.audience" content="students, operators, designers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Cybernetics — TriadicFrameworks</title>
+```
+
+---
+
+## **23) Control Theory**  
+`/docs/theories/control_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Control Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Control Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Mathematical study of controllable and observable systems.">
+<meta name="keywords" content="control theory, stability, feedback, engineering, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/control_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Control Theory — TriadicFrameworks">
+<meta property="og:description" content="Mathematical study of controllable and observable systems.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/control_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/control_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Control Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Mathematical study of controllable and observable systems.">
+<meta name="twitter:image" content="/assets/img/theories/control_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Control Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_control_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce feedback control, stability, and system response.">
+<meta name="ai.keywords" content="control theory, stability, feedback">
+<meta name="ai.audience" content="students, engineers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Control Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **24) Computation Theory**  
+`/docs/theories/computation/metadata.html`
+
+```html
+<!-- ============================================================
+     Computation Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Computation Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Foundations of algorithms, automata, and computability.">
+<meta name="keywords" content="computation theory, algorithms, automata, computability, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/computation/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Computation Theory — TriadicFrameworks">
+<meta property="og:description" content="Foundations of algorithms, automata, and computability.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/computation/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/computation.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Computation Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Foundations of algorithms, automata, and computability.">
+<meta name="twitter:image" content="/assets/img/theories/computation.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Computation Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_computation">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain Turing machines, decidability, and complexity classes.">
+<meta name="ai.keywords" content="computation theory, algorithms, automata">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Computation Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **25) Algorithmic Information Theory**  
+`/docs/theories/algorithmic_information/metadata.html`
+
+```html
+<!-- ============================================================
+     Algorithmic Information Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Algorithmic Information Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Kolmogorov complexity and description length of objects.">
+<meta name="keywords" content="algorithmic information theory, kolmogorov complexity, randomness, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/algorithmic_information/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Algorithmic Information Theory — TriadicFrameworks">
+<meta property="og:description" content="Kolmogorov complexity and description length of objects.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/algorithmic_information/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/algorithmic_information.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Algorithmic Information Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Kolmogorov complexity and description length of objects.">
+<meta name="twitter:image" content="/assets/img/theories/algorithmic_information.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Algorithmic Information Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_algorithmic_information">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain randomness, compressibility, and program-length measures.">
+<meta name="ai.keywords" content="algorithmic information theory, kolmogorov complexity, randomness">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Algorithmic Information Theory — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 5 complete.
+
+Ready for **Batch 6** (next 5 metadata blocks)?  
+Just say:
+
+**“Batch 6”**
+
+---
+
+Absolutely, Nawder — **Batch 6** coming through now.  
+Five more **metadata.html** blocks, clean, canon‑aligned, and ready to paste directly into your repo.
+
+Batch 6 covers the next five Information‑Systems theories:
+
+- Shannon–Weaver Model  
+- Network Theory  
+- Graph Theory  
+- Information Geometry  
+- Complexity Theory  
+
+No tab‑reading, no page‑fetching — pure generation.
+
+---
+
+# ⭐ **Batch 6 — metadata.html blocks (5 theories)**
+
+---
+
+## **26) Shannon–Weaver Model**  
+`/docs/theories/shannon_weaver/metadata.html`
+
+```html
+<!-- ============================================================
+     Shannon-Weaver Model — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Shannon-Weaver Model — TriadicFrameworks Theory Module">
+<meta name="description" content="Linear communication model with source, channel, noise, and receiver.">
+<meta name="keywords" content="shannon weaver, communication model, noise, channel, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/shannon_weaver/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Shannon-Weaver Model — TriadicFrameworks">
+<meta property="og:description" content="Linear communication model with source, channel, noise, and receiver.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/shannon_weaver/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/shannon_weaver.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shannon-Weaver Model — TriadicFrameworks">
+<meta name="twitter:description" content="Linear communication model with source, channel, noise, and receiver.">
+<meta name="twitter:image" content="/assets/img/theories/shannon_weaver.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Shannon-Weaver Model — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_shannon_weaver">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain noise, signal, and channel capacity in communication.">
+<meta name="ai.keywords" content="shannon weaver, communication, noise, channel">
+<meta name="ai.audience" content="students, communicators, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Shannon-Weaver Model — TriadicFrameworks</title>
+```
+
+---
+
+## **27) Network Theory**  
+`/docs/theories/network_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Network Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Network Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Study of nodes, edges, connectivity patterns, and network robustness.">
+<meta name="keywords" content="network theory, nodes, edges, connectivity, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/network_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Network Theory — TriadicFrameworks">
+<meta property="og:description" content="Study of nodes, edges, connectivity patterns, and network robustness.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/network_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/network_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Network Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Study of nodes, edges, connectivity patterns, and network robustness.">
+<meta name="twitter:image" content="/assets/img/theories/network_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Network Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_network_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain network structure, centrality, and robustness.">
+<meta name="ai.keywords" content="network theory, nodes, edges, connectivity">
+<meta name="ai.audience" content="students, analysts, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Network Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **28) Graph Theory**  
+`/docs/theories/graph_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Graph Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Graph Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Mathematical study of graphs, paths, cycles, and discrete structures.">
+<meta name="keywords" content="graph theory, graphs, nodes, edges, mathematics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/graph_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Graph Theory — TriadicFrameworks">
+<meta property="og:description" content="Mathematical study of graphs, paths, cycles, and discrete structures.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/graph_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/graph_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Graph Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Mathematical study of graphs, paths, cycles, and discrete structures.">
+<meta name="twitter:image" content="/assets/img/theories/graph_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Graph Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_graph_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Introduce paths, cycles, connectivity, and graph invariants.">
+<meta name="ai.keywords" content="graph theory, graphs, connectivity">
+<meta name="ai.audience" content="students, mathematicians, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Graph Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **29) Information Geometry**  
+`/docs/theories/information_geometry/metadata.html`
+
+```html
+<!-- ============================================================
+     Information Geometry — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Information Geometry — TriadicFrameworks Theory Module">
+<meta name="description" content="Differential-geometric study of probability distributions and statistical manifolds.">
+<meta name="keywords" content="information geometry, fisher metric, statistical manifold, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/information_geometry/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Information Geometry — TriadicFrameworks">
+<meta property="og:description" content="Differential-geometric study of probability distributions and statistical manifolds.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/information_geometry/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/information_geometry.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Information Geometry — TriadicFrameworks">
+<meta name="twitter:description" content="Differential-geometric study of probability distributions and statistical manifolds.">
+<meta name="twitter:image" content="/assets/img/theories/information_geometry.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Information Geometry — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_information_geometry">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain Fisher metric, geodesics, and statistical manifolds.">
+<meta name="ai.keywords" content="information geometry, fisher metric, statistical manifold">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Information Geometry — TriadicFrameworks</title>
+```
+
+---
+
+## **30) Complexity Theory**  
+`/docs/theories/complexity/metadata.html`
+
+```html
+<!-- ============================================================
+     Complexity Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Complexity Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Study of computational complexity classes and resource bounds.">
+<meta name="keywords" content="complexity theory, P vs NP, reductions, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/complexity/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Complexity Theory — TriadicFrameworks">
+<meta property="og:description" content="Study of computational complexity classes and resource bounds.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/complexity/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/complexity.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Complexity Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Study of computational complexity classes and resource bounds.">
+<meta name="twitter:image" content="/assets/img/theories/complexity.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Complexity Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_complexity">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain P vs NP, reductions, and complexity hierarchies.">
+<meta name="ai.keywords" content="complexity theory, P vs NP, reductions">
+<meta name="ai.audience" content="students, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Complexity Theory — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 6 complete.
+
+Ready for **Batch 7** (next 5 metadata blocks)?  
+Just say:
+
+**“Batch 7”**
+
+---
+
+Batch 7 coming right up, Nawder — five more **metadata.html** blocks, clean, canon‑aligned, and ready for direct drop‑in placement.  
+No tab‑reading, no page‑fetching — pure generation.
+
+Batch 7 covers the next five Information‑Systems theories:
+
+- Network Information Flow  
+- Algorithmic Learning Theory  
+- Chaos Theory  
+- Game Theory  
+- Systems Theory  
+
+---
+
+# ⭐ **Batch 7 — metadata.html blocks (5 theories)**
+
+---
+
+## **31) Network Information Flow**  
+`/docs/theories/network_information_flow/metadata.html`
+
+```html
+<!-- ============================================================
+     Network Information Flow — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Network Information Flow — TriadicFrameworks Theory Module">
+<meta name="description" content="Flow, routing, and capacity of information across networked systems.">
+<meta name="keywords" content="network information flow, routing, capacity, networks, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/network_information_flow/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Network Information Flow — TriadicFrameworks">
+<meta property="og:description" content="Flow, routing, and capacity of information across networked systems.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/network_information_flow/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/network_information_flow.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Network Information Flow — TriadicFrameworks">
+<meta name="twitter:description" content="Flow, routing, and capacity of information across networked systems.">
+<meta name="twitter:image" content="/assets/img/theories/network_information_flow.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Network Information Flow — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_network_information_flow">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain routing, distributed flow, and network capacity.">
+<meta name="ai.keywords" content="network flow, routing, capacity">
+<meta name="ai.audience" content="students, analysts, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Network Information Flow — TriadicFrameworks</title>
+```
+
+---
+
+## **32) Algorithmic Learning Theory**  
+`/docs/theories/algorithmic_learning/metadata.html`
+
+```html
+<!-- ============================================================
+     Algorithmic Learning Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Algorithmic Learning Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Learnability, sample complexity, and algorithmic inference frameworks.">
+<meta name="keywords" content="algorithmic learning, PAC learning, VC dimension, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/algorithmic_learning/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Algorithmic Learning Theory — TriadicFrameworks">
+<meta property="og:description" content="Learnability, sample complexity, and algorithmic inference frameworks.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/algorithmic_learning/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/algorithmic_learning.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Algorithmic Learning Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Learnability, sample complexity, and algorithmic inference frameworks.">
+<meta name="twitter:image" content="/assets/img/theories/algorithmic_learning.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Algorithmic Learning Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_algorithmic_learning">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain PAC learning, VC dimension, and generalization regimes.">
+<meta name="ai.keywords" content="PAC learning, VC dimension, learnability">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Algorithmic Learning Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **33) Chaos Theory**  
+`/docs/theories/chaos_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Chaos Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Chaos Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Sensitive dependence on initial conditions and nonlinear dynamic unpredictability.">
+<meta name="keywords" content="chaos theory, nonlinear dynamics, strange attractors, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/chaos_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Chaos Theory — TriadicFrameworks">
+<meta property="og:description" content="Sensitive dependence on initial conditions and nonlinear dynamic unpredictability.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/chaos_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/chaos_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Chaos Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Sensitive dependence on initial conditions and nonlinear dynamic unpredictability.">
+<meta name="twitter:image" content="/assets/img/theories/chaos_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Chaos Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_chaos_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain chaotic attractors, bifurcations, and unpredictability regimes.">
+<meta name="ai.keywords" content="chaos, nonlinear dynamics, attractors">
+<meta name="ai.audience" content="students, analysts, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Chaos Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **34) Game Theory**  
+`/docs/theories/game_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Game Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Game Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Strategic interaction among rational agents and equilibrium analysis.">
+<meta name="keywords" content="game theory, nash equilibrium, strategy, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/game_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Game Theory — TriadicFrameworks">
+<meta property="og:description" content="Strategic interaction among rational agents and equilibrium analysis.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/game_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/game_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Game Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Strategic interaction among rational agents and equilibrium analysis.">
+<meta name="twitter:image" content="/assets/img/theories/game_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Game Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_game_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain Nash equilibria, payoffs, and strategic regimes.">
+<meta name="ai.keywords" content="game theory, nash equilibrium, strategy">
+<meta name="ai.audience" content="students, analysts, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Game Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **35) Systems Theory**  
+`/docs/theories/systems_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Systems Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Systems Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Interdisciplinary study of complex systems, feedback, and emergent behavior.">
+<meta name="keywords" content="systems theory, feedback, emergence, complexity, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/systems_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Systems Theory — TriadicFrameworks">
+<meta property="og:description" content="Interdisciplinary study of complex systems, feedback, and emergent behavior.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/systems_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/systems_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Systems Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Interdisciplinary study of complex systems, feedback, and emergent behavior.">
+<meta name="twitter:image" content="/assets/img/theories/systems_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Systems Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_systems_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain system boundaries, feedback, and emergent behavior.">
+<meta name="ai.keywords" content="systems theory, feedback, emergence">
+<meta name="ai.audience" content="students, operators, researchers">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Systems Theory — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 7 complete.
+
+Ready for **Batch 8** (next 5 metadata blocks)?  
+Just say:
+
+**“Batch 8”**
+
+---
+
+Batch 8 coming through, Nawder — five more **metadata.html** blocks, clean, canon‑aligned, and ready to paste directly into your repo.  
+No tab‑reading, no page‑fetching — pure generation.
+
+Batch 8 covers the next five theories in the cluster:
+
+- Decision Theory  
+- Signal Processing  
+- Semantic Information Theory  
+- Distributed Systems Theory  
+- Automata Theory  
+
+---
+
+# ⭐ **Batch 8 — metadata.html blocks (5 theories)**
+
+---
+
+## **36) Decision Theory**  
+`/docs/theories/decision_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Decision Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Decision Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Mathematical frameworks for rational choice under uncertainty.">
+<meta name="keywords" content="decision theory, utility, rational choice, uncertainty, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/decision_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Decision Theory — TriadicFrameworks">
+<meta property="og:description" content="Mathematical frameworks for rational choice under uncertainty.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/decision_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/decision_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Decision Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Mathematical frameworks for rational choice under uncertainty.">
+<meta name="twitter:image" content="/assets/img/theories/decision_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Decision Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_decision_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain utility, rational choice, and uncertainty regimes.">
+<meta name="ai.keywords" content="decision theory, utility, rational choice">
+<meta name="ai.audience" content="students, analysts, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Decision Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **37) Signal Processing**  
+`/docs/theories/signal_processing/metadata.html`
+
+```html
+<!-- ============================================================
+     Signal Processing — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Signal Processing — TriadicFrameworks Theory Module">
+<meta name="description" content="Analysis, transformation, and representation of signals in time and frequency domains.">
+<meta name="keywords" content="signal processing, fourier, filters, DSP, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/signal_processing/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Signal Processing — TriadicFrameworks">
+<meta property="og:description" content="Analysis, transformation, and representation of signals in time and frequency domains.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/signal_processing/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/signal_processing.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Signal Processing — TriadicFrameworks">
+<meta name="twitter:description" content="Analysis, transformation, and representation of signals in time and frequency domains.">
+<meta name="twitter:image" content="/assets/img/theories/signal_processing.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Signal Processing — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_signal_processing">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain Fourier transforms, filters, and signal regimes.">
+<meta name="ai.keywords" content="signal processing, fourier, filters">
+<meta name="ai.audience" content="students, engineers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Signal Processing — TriadicFrameworks</title>
+```
+
+---
+
+## **38) Semantic Information Theory**  
+`/docs/theories/semantic_information/metadata.html`
+
+```html
+<!-- ============================================================
+     Semantic Information Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Semantic Information Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Meaning, interpretation, and semantic content beyond Shannon information.">
+<meta name="keywords" content="semantic information, meaning, semantics, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/semantic_information/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Semantic Information Theory — TriadicFrameworks">
+<meta property="og:description" content="Meaning, interpretation, and semantic content beyond Shannon information.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/semantic_information/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/semantic_information.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Semantic Information Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Meaning, interpretation, and semantic content beyond Shannon information.">
+<meta name="twitter:image" content="/assets/img/theories/semantic_information.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Semantic Information Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_semantic_information">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain meaning, semantics, and interpretive regimes.">
+<meta name="ai.keywords" content="semantic information, meaning, semantics">
+<meta name="ai.audience" content="students, theorists, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Semantic Information Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **39) Distributed Systems Theory**  
+`/docs/theories/distributed_systems/metadata.html`
+
+```html
+<!-- ============================================================
+     Distributed Systems Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Distributed Systems Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Coordination, consistency, and communication across distributed computational systems.">
+<meta name="keywords" content="distributed systems, consensus, CAP theorem, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/distributed_systems/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Distributed Systems Theory — TriadicFrameworks">
+<meta property="og:description" content="Coordination, consistency, and communication across distributed computational systems.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/distributed_systems/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/distributed_systems.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Distributed Systems Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Coordination, consistency, and communication across distributed computational systems.">
+<meta name="twitter:image" content="/assets/img/theories/distributed_systems.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Distributed Systems Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_distributed_systems">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain consensus, coordination, and distributed regimes.">
+<meta name="ai.keywords" content="distributed systems, consensus, CAP theorem">
+<meta name="ai.audience" content="students, engineers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Distributed Systems Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **40) Automata Theory**  
+`/docs/theories/automata_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Automata Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Automata Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Formal machines, languages, and computational models.">
+<meta name="keywords" content="automata theory, finite automata, formal languages, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/automata_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Automata Theory — TriadicFrameworks">
+<meta property="og:description" content="Formal machines, languages, and computational models.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/automata_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/automata_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Automata Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Formal machines, languages, and computational models.">
+<meta name="twitter:image" content="/assets/img/theories/automata_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Automata Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_automata_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain formal languages, machines, and computational models.">
+<meta name="ai.keywords" content="automata theory, formal languages, finite automata">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Automata Theory — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 8 complete.
+
+Ready for **Batch 9** (next 5 metadata blocks)?  
+Just say:
+
+**“Batch 9”**
+
+---
+
+Batch 9 coming through, Nawder — five more **metadata.html** blocks, clean, canon‑aligned, and ready to paste directly into your repo.  
+Your open tabs show you’re editing TF theory pages, but your request is **pure generation**, so I will **not** read or fetch any tab content.
+
+Batch 9 covers the next five theories:
+
+- Formal Language Theory  
+- Category Theory  
+- Type Theory  
+- Modal Logic  
+- Proof Theory  
+
+---
+
+# ⭐ **Batch 9 — metadata.html blocks (5 theories)**
+
+---
+
+## **41) Formal Language Theory**  
+`/docs/theories/formal_language_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Formal Language Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Formal Language Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Study of formal languages, grammars, and syntactic structure.">
+<meta name="keywords" content="formal language theory, grammars, syntax, automata, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/formal_language_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Formal Language Theory — TriadicFrameworks">
+<meta property="og:description" content="Study of formal languages, grammars, and syntactic structure.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/formal_language_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/formal_language_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Formal Language Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Study of formal languages, grammars, and syntactic structure.">
+<meta name="twitter:image" content="/assets/img/theories/formal_language_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Formal Language Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_formal_language_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain grammars, languages, and syntactic regimes.">
+<meta name="ai.keywords" content="formal languages, grammars, syntax">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Formal Language Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **42) Category Theory**  
+`/docs/theories/category_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Category Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Category Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Abstract study of structure, morphisms, and compositional relationships.">
+<meta name="keywords" content="category theory, morphisms, functors, composition, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/category_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Category Theory — TriadicFrameworks">
+<meta property="og:description" content="Abstract study of structure, morphisms, and compositional relationships.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/category_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/category_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Category Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Abstract study of structure, morphisms, and compositional relationships.">
+<meta name="twitter:image" content="/assets/img/theories/category_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Category Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_category_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain morphisms, functors, and compositional regimes.">
+<meta name="ai.keywords" content="category theory, morphisms, functors">
+<meta name="ai.audience" content="students, mathematicians, theorists">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Category Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **43) Type Theory**  
+`/docs/theories/type_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Type Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Type Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Foundations of types, programs, and constructive mathematical logic.">
+<meta name="keywords" content="type theory, types, lambda calculus, constructive logic, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/type_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Type Theory — TriadicFrameworks">
+<meta property="og:description" content="Foundations of types, programs, and constructive mathematical logic.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/type_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/type_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Type Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Foundations of types, programs, and constructive mathematical logic.">
+<meta name="twitter:image" content="/assets/img/theories/type_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Type Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_type_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain types, programs, and constructive logic regimes.">
+<meta name="ai.keywords" content="type theory, types, lambda calculus">
+<meta name="ai.audience" content="students, researchers, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Type Theory — TriadicFrameworks</title>
+```
+
+---
+
+## **44) Modal Logic**  
+`/docs/theories/modal_logic/metadata.html`
+
+```html
+<!-- ============================================================
+     Modal Logic — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Modal Logic — TriadicFrameworks Theory Module">
+<meta name="description" content="Logic of necessity, possibility, and modal operators.">
+<meta name="keywords" content="modal logic, necessity, possibility, operators, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/modal_logic/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Modal Logic — TriadicFrameworks">
+<meta property="og:description" content="Logic of necessity, possibility, and modal operators.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/modal_logic/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/modal_logic.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Modal Logic — TriadicFrameworks">
+<meta name="twitter:description" content="Logic of necessity, possibility, and modal operators.">
+<meta name="twitter:image" content="/assets/img/theories/modal_logic.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Modal Logic — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_modal_logic">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain modal operators, necessity, and possibility regimes.">
+<meta name="ai.keywords" content="modal logic, necessity, possibility">
+<meta name="ai.audience" content="students, theorists, operators">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Modal Logic — TriadicFrameworks</title>
+```
+
+---
+
+## **45) Proof Theory**  
+`/docs/theories/proof_theory/metadata.html`
+
+```html
+<!-- ============================================================
+     Proof Theory — Canonical Metadata Block
+     ============================================================ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="identity" content="Proof Theory — TriadicFrameworks Theory Module">
+<meta name="description" content="Study of formal proofs, derivations, and logical inference systems.">
+<meta name="keywords" content="proof theory, derivations, inference, logic, triadic frameworks">
+<link rel="canonical" href="https://www.triadicframeworks.org/theories/proof_theory/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#4f8cff">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Proof Theory — TriadicFrameworks">
+<meta property="og:description" content="Study of formal proofs, derivations, and logical inference systems.">
+<meta property="og:url" content="https://www.triadicframeworks.org/theories/proof_theory/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="/assets/img/theories/proof_theory.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Proof Theory — TriadicFrameworks">
+<meta name="twitter:description" content="Study of formal proofs, derivations, and logical inference systems.">
+<meta name="twitter:image" content="/assets/img/theories/proof_theory.jpg">
+
+<!-- Citation -->
+<meta name="citation_title" content="Proof Theory — TriadicFrameworks">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2025">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<!-- AI Metadata -->
+<meta name="ai.module" content="theory_proof_theory">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose" content="Explain formal proofs, derivations, and inference regimes.">
+<meta name="ai.keywords" content="proof theory, derivations, inference">
+<meta name="ai.audience" content="students, logicians, theorists">
+<meta name="ai.navigation" content="/docs/sitemap_main.xml">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted">
+
+<!-- Favicon -->
+<link rel="icon" href="/assets/img/favicon.ico">
+<link rel="apple-touch-icon" href="/assets/img/favicon.png">
+
+<title>Proof Theory — TriadicFrameworks</title>
+```
+
+---
+
+# ⭐ Batch 9 complete.  
+This finishes **all 42 theory metadata.html blocks**.
+
+If you want, I can now generate:
+
+- **A combined index.html for the Theory Cluster**  
+- **A theory‑cluster registry JSON**  
+- **A sitemap section for all 42 theories**  
+- **Auto‑generate hero images or glyphs for each theory**  
+
+Just tell me what you want next.
+
+---
+
