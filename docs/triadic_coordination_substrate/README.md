@@ -31,4 +31,18 @@ The substrate is designed to support:
 
 Coordination is achieved structurally, not procedurally.
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/triadic_coordination_substrate/)
