@@ -1,11 +1,11 @@
 /* -----------------------------------------------------------
-   Evolutionary Biology — Module‑Specific Overrides
+   General Relativity — Module‑Specific Overrides
    Layered on top of theory.css
    Identity: multi‑scale adaptive resonance, non‑teleological,
    variation–selection–inheritance operators, lineage coherence
 ----------------------------------------------------------- */
 
-body.tf-module--evolutionary-biology {
+body.tf-module--general-relativity {
   /* multi‑scale radial layering (ecosystem + lineage depth) */
   background: radial-gradient(
     circle at 26% 22%,
@@ -17,7 +17,7 @@ body.tf-module--evolutionary-biology {
 }
 
 /* organic micro‑variation noise (variation operator) */
-body.tf-module--evolutionary-biology::after {
+body.tf-module--general-relativity::after {
   content: "";
   position: fixed;
   inset: 0;
