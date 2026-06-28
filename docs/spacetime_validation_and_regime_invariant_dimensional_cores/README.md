@@ -27,6 +27,20 @@ deriving the full machinery. This result positions RTT not as an alternative to
 spacetime, but as its validated extension. Full proofs and extended derivations
 will appear in subsequent work.
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 A Zenodo release will accompany this directory once finalized.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/spacetime_validation_and_regime_invariant_dimensional_cores/)
