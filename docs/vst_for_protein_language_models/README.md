@@ -24,6 +24,18 @@ The goal is to offer a reproducible, model‑agnostic substrate for understandin
 
 ---
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ## **1. Purpose**
 
 Protein Language Models operate in high‑dimensional latent spaces (typically 512D–4096D) and exhibit:
