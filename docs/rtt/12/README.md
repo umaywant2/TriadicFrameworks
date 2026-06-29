@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="harmonia_rtt12" src="https://github.com/user-attachments/assets/c56c6cac-a284-449a-b090-b2e01499977b" />
+<img width="512" height="512" alt="harmonia_rtt12" src="https://github.com/user-attachments/assets/c56c6cac-a284-449a-b090-b2e01499977b" />
 
 ## 🔺 **RTT/12 — Harmonic Resonance Framework**  
 
