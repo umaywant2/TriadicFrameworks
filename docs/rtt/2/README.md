@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="hephaestus_rtt2" src="https://github.com/user-attachments/assets/6ab14583-11f3-448f-abb6-95e5a0e64c9f" />
+<img width="512" height="512" alt="hephaestus_rtt2" src="https://github.com/user-attachments/assets/6ab14583-11f3-448f-abb6-95e5a0e64c9f" />
 
 # RTT/2 — Structural Detection Engine (SDE)
 
