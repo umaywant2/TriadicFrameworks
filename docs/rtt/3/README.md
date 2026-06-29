@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="aurion_rtt3" src="https://github.com/user-attachments/assets/65511a2b-87ba-42df-8dc2-ec30d7d8db62" />
+<img width="512" height="512" alt="aurion_rtt3" src="https://github.com/user-attachments/assets/65511a2b-87ba-42df-8dc2-ec30d7d8db62" />
 
 # RTT/3 — Integration–Emission Engine (SIE)
 
