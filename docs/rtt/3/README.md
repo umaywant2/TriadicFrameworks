@@ -1,26 +1,12 @@
-# ✅ **/docs/rtt/3/README.md**  
-*(Based on `/docs/rtt/3/RTT3_Extract_Minimal.md`)*  
-
-- [`operators_module.json`](operators_module.json) — Agentic module schema role
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+<img width="1024" height="1024" alt="aurion_rtt3" src="https://github.com/user-attachments/assets/65511a2b-87ba-42df-8dc2-ec30d7d8db62" />
 
 # RTT/3 — Integration–Emission Engine (SIE)
+
+- [`operators_module.json`](operators_module.json) — Agentic module schema role
 
 RTT/3 introduces the **Integration–Emission Engine**, the layer responsible for
 triad integration, emission classification, continuity mapping, collapse
 recovery, stability evaluation, and canonical emission scaling.
-
-This module is the canonical reference for:
-- INT (Triad Integration)
-- TIF (Triad Influence Field)
-- MAN (Manifold Axes: FI, EM, R)
-- FFF (Fusion–Flow–Fracture Emission)
-- CRE (Collapse Recovery Engine)
-- CSL (Continuity Stability Level)
-- CET (Canon Emission Type)
-- The RTT3_INTEGRATION_EMISSION_PACKET format
-
 
 ---
 
@@ -33,6 +19,29 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
 
 ## ❇️ Now you are ready.
+
+---
+
+## 🎯 Audience
+
+Students, instructors, researchers, and AIs working with:
+- operator ecology  
+- integration–emission analysis  
+- collapse recovery  
+- projection selection  
+- RTT/2→RTT/3 pipelines  
+
+---
+
+This module is the canonical reference for:
+- INT (Triad Integration)
+- TIF (Triad Influence Field)
+- MAN (Manifold Axes: FI, EM, R)
+- FFF (Fusion–Flow–Fracture Emission)
+- CRE (Collapse Recovery Engine)
+- CSL (Continuity Stability Level)
+- CET (Canon Emission Type)
+- The RTT3_INTEGRATION_EMISSION_PACKET format
 
 ---
 
@@ -103,14 +112,3 @@ This README is derived from:
 
 **RTT3_Extract_Minimal.md**  
 A minimal, distilled capture of the RTT/3 operator layer.
-
----
-
-## 🎯 Audience
-
-Students, instructors, researchers, and AIs working with:
-- operator ecology  
-- integration–emission analysis  
-- collapse recovery  
-- projection selection  
-- RTT/2→RTT/3 pipelines  
