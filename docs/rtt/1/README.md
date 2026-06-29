@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="lumen_rtt1" src="https://github.com/user-attachments/assets/713a41db-301a-453d-9f46-2b79ab5a792e" />
+<img width="768" height="768" alt="lumen_rtt1" src="https://github.com/user-attachments/assets/713a41db-301a-453d-9f46-2b79ab5a792e" />
 
 ## 🦄 Resonance-Time Tech (RTT/1) Engine
 
