@@ -1,4 +1,33 @@
-# Egyptian Pantheon — Triadic Profile README
+# Egyptian Pantheon — Triadic Profile
+
+```yaml
+canon: Triadic Pantheon Canon
+module: egyptian
+version: 0.1.0
+tradition: Solar–Underworld Cycle
+primary_corpus: Cycle‑Dense · Paradox‑Tight · Underworld‑Structured
+layer_i_operator: Ra / Atum / Nut/Geb
+layer_ii_operator:
+   - Horus (continuity of rulership; relational coherence)  
+   - Ma’at (order, balance, truth; structural preservation)  
+   - Osiris (continuance through death‑kingship cycle)
+layer_iii_operator: 
+   - Set (protector → destroyer; inversion engine)  
+   - Apophis (chaos‑flow; nightly dissolution)  
+   - Ammut (judgment → annihilation; terminal dissolution)
+liminal_operators:
+   - Thoth (knowledge corridor)  
+   - Anubis (death corridor)  
+   - Wepwawet (path‑opening)  
+   - Isis (resurrection corridor)  
+   - Seshat (record‑corridor)
+cross_references:
+  - hindu/README.md
+  - greek/README.md
+status: active
+last_updated: 2026-06-29
+```
+
 ## TriadicFrameworks · Pantheon Canon Module
 
 This module provides the full triadic profile for the **Egyptian supersphere**:
