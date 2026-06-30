@@ -53,10 +53,72 @@
 </head>
 
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body { font-family: system-ui, -apple-system, sans-serif; }
-    .prompt-box { font-family: monospace; white-space: pre-wrap; }
-  </style>
+
+<style>
+  /* Base typography */
+  body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                 Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.55;
+    color: #222;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Page container */
+  .page-wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Section headers */
+  h1, h2, h3 {
+    font-weight: 600;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #111;
+  }
+
+  /* Prompt / code-style blocks */
+  .prompt-box {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    background: #f5f5f7;
+    border: 1px solid #e0e0e0;
+    padding: 1rem;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    margin: 1.5rem 0;
+  }
+
+  /* Context blocks */
+  .context-block {
+    background: #fafafa;
+    border-left: 4px solid #4a6cf7;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem 0;
+    border-radius: 4px;
+  }
+
+  .context-label {
+    font-weight: 600;
+    color: #333;
+  }
+
+  .context-value {
+    color: #555;
+  }
+
+  /* RTT manifest */
+  pre.rtt-manifest {
+    background: #f0f0f0;
+    padding: 1rem;
+    border-radius: 6px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+</style>
 
 <body class="bg-zinc-950 text-zinc-100 min-h-screen">
 
