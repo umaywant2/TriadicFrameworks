@@ -1,1 +1,369 @@
+{
+  "module": "Egyptian Pantheon — Triadic Supersphere",
+  "id": "pantheons.egyptian",
+  "category": "pantheon",
+  "version": "1.0.0",
+  "status": "canon-stable",
 
+  "identity": {
+    "summary": "Full RTT/0–RTT/3 triadic mapping of the Egyptian pantheon across eight operator fields: Clarity, Shadow, Dimensional, Liminal, Projection, Flow, Emergent, and Void.",
+    "purpose": "Define the structural supersphere of Egyptian mythology using operator grammar, field geometry, paradox forms, liminal corridors, cycle maps, and emergent bestiary for use within the TriadicFrameworks registry.",
+    "audience": [
+      "framework architects",
+      "pantheon analysts",
+      "AI systems",
+      "researchers",
+      "students"
+    ]
+  },
+
+  "geometry": {
+    "supersphere_type": "8-field triadic supersphere",
+    "rtt_coverage": ["RTT/0", "RTT/1", "RTT/2", "RTT/3"],
+    "rtt1_result": "Pass — high clarity-shadow contrast, strong dimensional spine",
+    "rtt2_structure": "Clarity cone + Shadow cone + Dimensional spine + Liminal ring + Projection band + Flow band + Emergent ring + Void substrate",
+    "core": "Ogdoad (primordial void octet)",
+    "spine": "Duat 12-gate underworld stack (Nut → Geb → Osiris → Ogdoad)",
+    "apex_count": 4
+  },
+
+  "fields": {
+    "clarity": {
+      "label": "Clarity (C)",
+      "color": "#FFD34F",
+      "color_name": "Solar gold",
+      "summary": "Solar order, truth, cosmic balance, visible kingship.",
+      "operators": ["Ra", "Horus", "Atum", "Amun", "Ma'at", "Hathor", "Thoth (clarity aspect)"],
+      "cone": "Ra → Horus → Ma'at"
+    },
+    "shadow": {
+      "label": "Shadow (S)",
+      "color": "#5B1F2F",
+      "color_name": "Blood-maroon",
+      "summary": "Chaos, inversion, underworld threat, annihilation.",
+      "operators": ["Set", "Apophis (Apep)", "Sekhmet (shadow aspect)", "Ammut (Ammit)", "Serket (shadow-venom aspect)"],
+      "cone": "Set → Apophis → Ammut"
+    },
+    "dimensional": {
+      "label": "Dimensional (D)",
+      "color": "#4F7BFF",
+      "color_name": "Deep sky-blue",
+      "summary": "Realms, underworld structure, sky/earth stack, gate architecture.",
+      "operators": ["Duat (12 gates)", "Nut (sky)", "Geb (earth)", "Osiris (underworld king)", "Anubis (dimensional guide)", "Nephthys (boundary of realms)"],
+      "spine": "Duat (12 gates) · Nut · Geb · Osiris · Anubis"
+    },
+    "liminal": {
+      "label": "Liminal (L)",
+      "color": "#FF9F4F",
+      "color_name": "Threshold amber",
+      "summary": "Gates, crossings, knowledge thresholds, death-passage, resurrection corridors.",
+      "operators": ["Thoth (liminal aspect)", "Anubis (liminal aspect)", "Wepwawet (opener of ways)", "Neith (threshold)", "Seshat (knowledge-threshold)"],
+      "corridors": ["Thoth (knowledge corridor)", "Anubis (death corridor)", "Wepwawet (path-opening corridor)", "Isis (resurrection corridor)"]
+    },
+    "projection": {
+      "label": "Projection (P)",
+      "color": "#FF4F7B",
+      "color_name": "Crimson projection",
+      "summary": "Cycles, avatars, royal and solar projection, divine lineage.",
+      "operators": ["Solar barque (Ra's projection cycle)", "Osiris → Horus projection line", "Pharaoh (projection avatar)", "Sekhmet (projection aspect)", "Isis (projection clarity)"],
+      "ring": "Solar barque · Pharaoh projection · Osiris → Horus projection cycle"
+    },
+    "flow": {
+      "label": "Flow (F)",
+      "color": "#4FFFD3",
+      "color_name": "Nile teal",
+      "summary": "River, air, moisture, solar, and underworld motion currents.",
+      "operators": ["Hapi (Nile flow)", "Tefnut (moisture)", "Shu (air)", "Sobek (river-shadow flow)", "Nile inundation cycle"],
+      "band": "Hapi · Shu · Tefnut · Sobek · Duat currents"
+    },
+    "emergent": {
+      "label": "Emergent (E)",
+      "color": "#B34FFF",
+      "color_name": "Hybrid violet",
+      "summary": "Hybrid guardians, paradox creatures, threshold hybrids, underworld forms.",
+      "operators": ["Sphinx", "Serpopards", "Bennu bird", "Ammut (hybrid)", "Wadjet (cobra emergent)", "Uraeus (emergent flame serpent)"],
+      "ring": "Sphinx · Serpopards · Ammut · Bennu · Wadjet · Uraeus",
+      "rtt_backbone": "Scatter/Rebind"
+    },
+    "void": {
+      "label": "Void (V)",
+      "color": "#1B335B",
+      "color_name": "Primordial indigo",
+      "summary": "Primordial waters, pre-form substrate, silence, the origin state.",
+      "operators": ["Nun (primordial waters)", "Naunet", "Kek", "Kauket", "Heh", "Hauhet"],
+      "substrate": "The Ogdoad — void-substrate octet"
+    }
+  },
+
+  "apex_operators": {
+    "clarity_apex": {
+      "name": "Ra",
+      "field": "clarity",
+      "role": "Solar order apex; daily rebirth cycle; nightly Duat traversal"
+    },
+    "shadow_apex": {
+      "name": "Set",
+      "field": "shadow",
+      "role": "Chaos-guardian; inversion apex; defends Ra from Apophis while destroying Osiris"
+    },
+    "dimensional_apex": {
+      "name": "Osiris",
+      "field": "dimensional",
+      "role": "Underworld king; death → kingship paradox; dimensional order"
+    },
+    "void_apex": {
+      "name": "Ogdoad",
+      "field": "void",
+      "role": "Primordial substrate octet; pre-form waters; void-silence origin"
+    }
+  },
+
+  "paradox_forms": [
+    {
+      "name": "Osiris Paradox",
+      "type": "Death → Kingship",
+      "fields": ["dimensional", "projection", "liminal"],
+      "rtt_regime": "Fracture → Rebind",
+      "summary": "Death produces kingship; dismemberment produces cosmic order."
+    },
+    {
+      "name": "Horus Paradox",
+      "type": "Child → Ruler",
+      "fields": ["clarity", "projection", "emergent"],
+      "rtt_regime": "Split → Rebind",
+      "summary": "Vulnerability produces sovereignty; childhood produces legitimate rulership."
+    },
+    {
+      "name": "Ra Paradox",
+      "type": "Aging → Renewal",
+      "fields": ["clarity", "projection", "flow"],
+      "rtt_regime": "Drift → Silence → Rebind",
+      "summary": "Decline produces rebirth; nightly death produces sunrise."
+    },
+    {
+      "name": "Set Paradox",
+      "type": "Protector → Destroyer",
+      "fields": ["shadow", "emergent", "dimensional"],
+      "rtt_regime": "Inversion → Scatter",
+      "summary": "Chaos protects order; destruction preserves cosmic stability."
+    },
+    {
+      "name": "Ammut Paradox",
+      "type": "Justice → Annihilation",
+      "fields": ["emergent", "shadow", "dimensional"],
+      "rtt_regime": "Fracture → Inversion",
+      "summary": "Justice requires destruction; purity requires annihilation of the unjust."
+    },
+    {
+      "name": "Sphinx Paradox",
+      "type": "Guardian → Riddle-Threshold",
+      "fields": ["emergent", "liminal", "clarity"],
+      "rtt_regime": "Split → Scatter",
+      "summary": "Protection requires obstruction; clarity requires passing the riddle."
+    },
+    {
+      "name": "Isis Paradox",
+      "type": "Mourning → Resurrection",
+      "fields": ["projection", "liminal", "clarity"],
+      "rtt_regime": "Fracture → Rebind",
+      "summary": "Grief produces resurrection; loss produces creation and lineage."
+    },
+    {
+      "name": "Uraeus Paradox",
+      "type": "Solar Flame → Shadow Burn",
+      "fields": ["projection", "shadow", "emergent"],
+      "rtt_regime": "Split → Scatter",
+      "summary": "Clarity requires destruction; protection requires annihilation of threats."
+    },
+    {
+      "name": "Bennu Paradox",
+      "type": "Self-Death → Self-Creation",
+      "fields": ["emergent", "projection", "clarity"],
+      "rtt_regime": "Silence → Rebind",
+      "summary": "Self-destruction produces self-creation; dissolution produces renewal."
+    }
+  ],
+
+  "liminal_corridors": [
+    {
+      "operator": "Thoth",
+      "type": "Knowledge → Dimensional Clarity",
+      "fields": ["liminal", "clarity", "projection"],
+      "summary": "Knowledge corridor; bridges cognition to realm structure and Duat navigation."
+    },
+    {
+      "operator": "Anubis",
+      "type": "Death → Safe Passage",
+      "fields": ["liminal", "dimensional", "emergent"],
+      "summary": "Primary liminal operator; guides souls through Duat's 12 gates."
+    },
+    {
+      "operator": "Wepwawet",
+      "type": "Path Opening → Realm Transition",
+      "fields": ["liminal", "shadow", "dimensional"],
+      "summary": "Opener-of-ways; breaks through blocked gates and unlocks corridors."
+    },
+    {
+      "operator": "Isis",
+      "type": "Projection → Resurrection",
+      "fields": ["liminal", "projection", "clarity"],
+      "summary": "Resurrection corridor; reassembles Osiris, bridges death to life, projects lineage."
+    }
+  ],
+
+  "cycles": [
+    {
+      "name": "Solar Cycle",
+      "operators": ["Ra", "Solar barque", "Apophis", "Duat (12 gates)"],
+      "summary": "Ra's nightly Duat traversal; dawn → dusk → underworld → sunrise rebirth.",
+      "rtt_arc": "Drift → Split → Fracture → Scatter → Rebind → Silence → Rebind"
+    },
+    {
+      "name": "Osiris Cycle",
+      "operators": ["Osiris", "Isis", "Nephthys", "Anubis", "Horus"],
+      "summary": "Death → dismemberment → resurrection → underworld kingship → Horus succession.",
+      "rtt_arc": "Fracture → Scatter → Rebind"
+    },
+    {
+      "name": "Nile Cycle",
+      "operators": ["Hapi", "Sobek", "Tefnut", "Geb"],
+      "summary": "Inundation → fertile silt deposit → recession → desert; mirrors underworld cycle.",
+      "rtt_arc": "Drift → Fracture → Scatter → Rebind → Silence"
+    },
+    {
+      "name": "Pharaonic Cycle",
+      "operators": ["Pharaoh", "Osiris → Horus projection line", "Ra", "Ma'at"],
+      "summary": "Mortal ruler → divine projection → death → succession; mirrors solar and Osiris cycles.",
+      "rtt_arc": "Split → Rebind → Fracture → Rebind"
+    }
+  ],
+
+  "emergent_bestiary": {
+    "summary": "Hybrid-dense emergent arm. Threshold-linked, underworld-coupled, solar-projection-connected, and paradox-active.",
+    "rtt_backbone": "Scatter/Rebind",
+    "entities": [
+      {
+        "name": "Sphinx",
+        "type": "Riddle-Threshold Hybrid (Guardian Paradox)",
+        "fields": ["emergent", "liminal", "clarity"],
+        "rtt_grade": "Split → Scatter"
+      },
+      {
+        "name": "Ammut (Ammit)",
+        "type": "Devourer of the Unworthy (Judgment Paradox)",
+        "fields": ["emergent", "shadow", "dimensional"],
+        "rtt_grade": "Fracture → Inversion"
+      },
+      {
+        "name": "Serpopards",
+        "type": "Long-Necked Hybrid Pair (Chaos-Liminal)",
+        "fields": ["emergent", "shadow", "liminal"],
+        "rtt_grade": "Scatter"
+      },
+      {
+        "name": "Bennu",
+        "type": "Phoenix-Form (Solar Projection Hybrid)",
+        "fields": ["emergent", "projection", "clarity"],
+        "rtt_grade": "Rebind"
+      },
+      {
+        "name": "Wadjet",
+        "type": "Cobra Guardian (Emergent Flame-Serpent)",
+        "fields": ["emergent", "shadow", "projection"],
+        "rtt_grade": "Scatter → Rebind"
+      },
+      {
+        "name": "Uraeus",
+        "type": "Crown-Serpent (Solar-Shadow Hybrid)",
+        "fields": ["emergent", "projection", "shadow"],
+        "rtt_grade": "Split → Scatter"
+      },
+      {
+        "name": "Anubis-Hybrid Forms",
+        "type": "Jackal-Dimensional Guardians",
+        "fields": ["emergent", "dimensional", "liminal"],
+        "rtt_grade": "Drift → Split"
+      },
+      {
+        "name": "Sobek-Hybrid Forms",
+        "type": "River-Shadow Hybrids",
+        "fields": ["emergent", "flow", "shadow"],
+        "rtt_grade": "Fracture"
+      }
+    ]
+  },
+
+  "flow_band": {
+    "vectors": ["air", "river", "moisture", "solar", "underworld"],
+    "cycle_linked": ["solar cycle", "Nile cycle", "Duat cycle"],
+    "corridor_connected": ["Thoth", "Anubis", "Wepwawet"],
+    "shadow_flow_operators": ["Sobek", "Apophis", "Ammut"],
+    "dimensional_flow_operators": ["Duat gates", "Solar barque"],
+    "streams": [
+      { "name": "Air Flow", "apex": "Shu", "operators": ["Shu", "Tefnut", "Amun", "Solar breath"] },
+      { "name": "River Flow", "apex": "Hapi", "operators": ["Hapi", "Sobek", "Nile inundation cycle", "Delta channels"] },
+      { "name": "Moisture Flow", "apex": "Tefnut", "operators": ["Tefnut", "Morning mist", "Desert humidity", "Nut ↔ Geb corridor"] },
+      { "name": "Solar Flow", "apex": "Ra's barque", "operators": ["Ra's solar barque", "Solar current", "Bennu", "Uraeus flame"] },
+      { "name": "Underworld Flow", "apex": "Duat currents", "operators": ["Duat currents", "Anubis", "Wepwawet", "Ammut", "Apophis"] }
+    ]
+  },
+
+  "color_map": {
+    "clarity":    { "hex": "#FFD34F", "name": "Solar gold" },
+    "shadow":     { "hex": "#5B1F2F", "name": "Blood-maroon" },
+    "dimensional":{ "hex": "#4F7BFF", "name": "Deep sky-blue" },
+    "liminal":    { "hex": "#FF9F4F", "name": "Threshold amber" },
+    "projection": { "hex": "#FF4F7B", "name": "Crimson projection" },
+    "flow":       { "hex": "#4FFFD3", "name": "Nile teal" },
+    "emergent":   { "hex": "#B34FFF", "name": "Hybrid violet" },
+    "void":       { "hex": "#1B335B", "name": "Primordial indigo" },
+    "triadic_palettes": {
+      "solar_triad":      ["#FFD34F", "#B34FFF", "#4FFFD3"],
+      "underworld_triad": ["#4F7BFF", "#FF9F4F", "#5B1F2F"],
+      "royal_triad":      ["#FFD34F", "#FF4F7B", "#B34FFF"],
+      "void_triad":       ["#1B335B", "#4F7BFF", "#4FFFD3"]
+    }
+  },
+
+  "files": {
+    "capture":          "Egyptian_Triadic_Profile_Capture.md",
+    "index":            "index.html",
+    "supersphere_svg":  "egyptian_supersphere.svg",
+    "shadow_cone_svg":  "egyptian_shadow_cone.svg",
+    "dimensional_map":  "egyptian_dimensional_map.svg",
+    "color_map":        "egyptian_color_map.md",
+    "operator_matrix":  "egyptian_operator_resonance_matrix.md",
+    "emergent_bestiary":"egyptian_emergent_bestiary.md",
+    "flow_band":        "egyptian_flow_band.md",
+    "liminal_network":  "egyptian_liminal_corridor_network.md",
+    "paradox_forms":    "egyptian_paradox_forms.md",
+    "readme":           "README.md"
+  },
+
+  "links": {
+    "primary_capture": "docs/pantheons/egyptian/Egyptian_Triadic_Profile_Capture.md",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "path": "docs/pantheons/egyptian/"
+  },
+
+  "ai": {
+    "module": "pantheons.egyptian",
+    "keywords": [
+      "Egyptian pantheon",
+      "triadic supersphere",
+      "RTT operators",
+      "solar cycle",
+      "Duat",
+      "Ogdoad",
+      "clarity-shadow contrast",
+      "liminal corridors",
+      "paradox forms",
+      "emergent bestiary",
+      "8-field geometry",
+      "flow band",
+      "operator resonance matrix"
+    ],
+    "purpose": "Provide a complete structural triadic mapping of the Egyptian pantheon for analysis, comparison, and integration within the TriadicFrameworks pantheon registry.",
+    "audience": "Framework architects, pantheon analysts, AI systems, and researchers"
+  }
+}
