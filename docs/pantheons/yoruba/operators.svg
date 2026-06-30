@@ -1,1 +1,135 @@
+<svg width="1080" height="720" viewBox="0 0 1080 720" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="50%" r="75%">
+      <stop offset="0%" stop-color="#05060d"/>
+      <stop offset="100%" stop-color="#151a2b"/>
+    </radialGradient>
+
+    <linearGradient id="clarity" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffd34f"/>
+      <stop offset="100%" stop-color="#c79a1f"/>
+    </linearGradient>
+
+    <linearGradient id="shadow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4f7b"/>
+      <stop offset="100%" stop-color="#c71f4f"/>
+    </linearGradient>
+
+    <linearGradient id="dimensional" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4f7bff"/>
+      <stop offset="100%" stop-color="#203b8f"/>
+    </linearGradient>
+
+    <linearGradient id="liminal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff9f4f"/>
+      <stop offset="100%" stop-color="#c76a1f"/>
+    </linearGradient>
+
+    <linearGradient id="projection" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ff4f7b"/>
+      <stop offset="100%" stop-color="#c71f4f"/>
+    </linearGradient>
+
+    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4fffd3"/>
+      <stop offset="100%" stop-color="#1fc79a"/>
+    </linearGradient>
+
+    <linearGradient id="emergent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#b34fff"/>
+      <stop offset="100%" stop-color="#6a1fc7"/>
+    </linearGradient>
+
+    <radialGradient id="void" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0b1b33"/>
+      <stop offset="100%" stop-color="#1b335b"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1080" height="720" fill="url(#bg)" />
+
+  <!-- Title -->
+  <text x="540" y="60" fill="#ffffff" font-size="26" text-anchor="middle">
+    Yoruba Operators Map (RTT/0)
+  </text>
+  <text x="540" y="85" fill="#9fd3ff" font-size="13" text-anchor="middle">
+    Clarity · Shadow · Dimensional · Liminal · Projection · Flow · Emergent · Void
+  </text>
+
+  <!-- Column headers -->
+  <text x="135" y="130" fill="#ffe38f" font-size="16" text-anchor="middle">Clarity</text>
+  <text x="285" y="130" fill="#ffd3e3" font-size="16" text-anchor="middle">Shadow</text>
+  <text x="435" y="130" fill="#9fd3ff" font-size="16" text-anchor="middle">Dimensional</text>
+  <text x="585" y="130" fill="#ffe3c3" font-size="16" text-anchor="middle">Liminal</text>
+  <text x="735" y="130" fill="#ffd3e3" font-size="16" text-anchor="middle">Projection</text>
+  <text x="885" y="130" fill="#d3fff7" font-size="16" text-anchor="middle">Flow</text>
+
+  <!-- Second row headers -->
+  <text x="260" y="360" fill="#f3e3ff" font-size="16" text-anchor="middle">Emergent</text>
+  <text x="820" y="360" fill="#9fd3ff" font-size="16" text-anchor="middle">Void</text>
+
+  <!-- Clarity operators -->
+  <text x="135" y="170" fill="#ffe38f" font-size="12" text-anchor="middle">Ọrunmila</text>
+  <text x="135" y="190" fill="#ffe38f" font-size="12" text-anchor="middle">Obatala</text>
+  <text x="135" y="210" fill="#ffe38f" font-size="12" text-anchor="middle">Orun (upper realm)</text>
+  <text x="135" y="230" fill="#ffe38f" font-size="12" text-anchor="middle">Ọba kingship</text>
+  <text x="135" y="250" fill="#ffe38f" font-size="12" text-anchor="middle">Máriwo rites</text>
+
+  <!-- Shadow operators -->
+  <text x="285" y="170" fill="#ffd3e3" font-size="12" text-anchor="middle">Ogun</text>
+  <text x="285" y="190" fill="#ffd3e3" font-size="12" text-anchor="middle">Ṣango</text>
+  <text x="285" y="210" fill="#ffd3e3" font-size="12" text-anchor="middle">Aje (witchcraft)</text>
+  <text x="285" y="230" fill="#ffd3e3" font-size="12" text-anchor="middle">Forest spirits</text>
+  <text x="285" y="250" fill="#ffd3e3" font-size="12" text-anchor="middle">Collapse cycles</text>
+
+  <!-- Dimensional operators -->
+  <text x="435" y="170" fill="#9fd3ff" font-size="12" text-anchor="middle">Ọrun/Aiye duality</text>
+  <text x="435" y="190" fill="#9fd3ff" font-size="12" text-anchor="middle">Ifẹ (origin node)</text>
+  <text x="435" y="210" fill="#9fd3ff" font-size="12" text-anchor="middle">Oyo‑Ile (empire node)</text>
+  <text x="435" y="230" fill="#9fd3ff" font-size="12" text-anchor="middle">Glassworks (Ile‑Ife)</text>
+  <text x="435" y="250" fill="#9fd3ff" font-size="12" text-anchor="middle">Bead networks</text>
+
+  <!-- Liminal operators -->
+  <text x="585" y="170" fill="#ffe3c3" font-size="12" text-anchor="middle">Esu</text>
+  <text x="585" y="190" fill="#ffe3c3" font-size="12" text-anchor="middle">Ifá diviners</text>
+  <text x="585" y="210" fill="#ffe3c3" font-size="12" text-anchor="middle">Gate complexes</text>
+  <text x="585" y="230" fill="#ffe3c3" font-size="12" text-anchor="middle">Descent rituals</text>
+
+  <!-- Projection operators -->
+  <text x="735" y="170" fill="#ffd3e3" font-size="12" text-anchor="middle">Ṣango kingship</text>
+  <text x="735" y="190" fill="#ffd3e3" font-size="12" text-anchor="middle">Ọba lineages</text>
+  <text x="735" y="210" fill="#ffd3e3" font-size="12" text-anchor="middle">Coastal projection</text>
+  <text x="735" y="230" fill="#ffd3e3" font-size="12" text-anchor="middle">Ifẹ art (hyperrealism)</text>
+
+  <!-- Flow operators -->
+  <text x="885" y="170" fill="#d3fff7" font-size="12" text-anchor="middle">Oshun</text>
+  <text x="885" y="190" fill="#d3fff7" font-size="12" text-anchor="middle">Oya</text>
+  <text x="885" y="210" fill="#d3fff7" font-size="12" text-anchor="middle">Niger–Benue corridor</text>
+  <text x="885" y="230" fill="#d3fff7" font-size="12" text-anchor="middle">Bead networks</text>
+
+  <!-- Emergent operators -->
+  <text x="260" y="390" fill="#f3e3ff" font-size="12" text-anchor="middle">Egungun</text>
+  <text x="260" y="410" fill="#f3e3ff" font-size="12" text-anchor="middle">Gelede</text>
+  <text x="260" y="430" fill="#f3e3ff" font-size="12" text-anchor="middle">Esiẹ corpus</text>
+  <text x="260" y="450" fill="#f3e3ff" font-size="12" text-anchor="middle">Sungbo’s Eredo</text>
+
+  <!-- Void operators -->
+  <circle cx="820" cy="420" r="70" fill="none" stroke="url(#void)" stroke-width="2"/>
+  <text x="820" y="395" fill="#9fd3ff" font-size="12" text-anchor="middle">Void Substrate</text>
+  <text x="820" y="415" fill="#9fd3ff" font-size="11" text-anchor="middle">
+    Olodumare · Odu Ifá
+  </text>
+  <text x="820" y="435" fill="#9fd3ff" font-size="11" text-anchor="middle">
+    Proto‑Yoruboid · Iho Eleru
+  </text>
+
+  <!-- Caption -->
+  <text x="540" y="680" fill="#ffffff" font-size="11" text-anchor="middle">
+    Yoruba operators map: RTT/0 field listing for all eight triadic fields —
+    cycle‑lineage, origin‑multiplicity, ancestral‑emergent structured.
+  </text>
+
+</svg>
 
