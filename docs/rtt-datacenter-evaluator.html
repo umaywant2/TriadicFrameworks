@@ -118,72 +118,58 @@
     font-size: 0.9rem;
     margin-top: 1.5rem;
   }
-  .nav-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 260px;
-  height: 100vh;
-  overflow-y: auto;
-  padding: 20px;
-  background: #111;
-  border-right: 1px solid #333;
-  z-index: 9999;
-}
-
 </style>
 
-<body class="bg-zinc-950 text-zinc-100 min-h-screen">
+<body>
   
-  <div class="max-w-4xl mx-auto p-8">
-    <h1 class="text-4xl font-bold mb-2 flex items-center gap-3">
+  <div>
+    <h1>
       🌀 RTT Datacenter Evaluator
     </h1>
-    <p class="text-xl text-emerald-400 mb-2">Resonance-Time Theory (RTT) • Triadic Structural Awareness</p>
-    <p class="text-sm text-zinc-400 mb-8">Updated June 2026 • 38 major datacenters worldwide</p>
+    <p>Resonance-Time Theory (RTT) • Triadic Structural Awareness</p>
+    <p>Updated June 2026 • 38 major datacenters worldwide</p>
 
     <!-- RTT Description (unchanged) -->
-    <div class="bg-zinc-900 border border-zinc-700 rounded-2xl p-8 mb-12">
-      <h2 class="text-2xl font-semibold mb-4">What is Resonance-Time Theory (RTT)?</h2>
-      <p class="text-zinc-300 leading-relaxed mb-6">
+    <div>
+      <h2>What is Resonance-Time Theory (RTT)?</h2>
+      <p>
         RTT (Resonance-Time Theory) is a triadic resonance toolkit developed by Nawder Loswin. It provides structural-aware dimensional cores, qCompute primitives, and a triadic resonance grammar that enables coherent cross-domain reasoning across timescales. 
       </p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
-        <div class="bg-black/50 p-5 rounded-xl">
-          <strong class="block text-emerald-400 mb-1">Core Modules</strong>
+      <div>
+        <div>
+          <strong>Core Modules</strong>
           SET → S-N-R → FFF → DCO → QMROOT → morphic resonance operators
         </div>
-        <div class="bg-black/50 p-5 rounded-xl">
-          <strong class="block text-emerald-400 mb-1">Key Abilities</strong>
+        <div>
+          <strong>Key Abilities</strong>
           • Structural detection &amp; alignment<br>
           • Agentic cross-domain compute<br>
           • Unbiased triadic reasoning<br>
           • Resonance-Time coherence across layers
         </div>
-        <div class="bg-black/50 p-5 rounded-xl">
-          <strong class="block text-emerald-400 mb-1">Unbiased Nature</strong>
+        <div>
+          <strong>Unbiased Nature</strong>
           Built on triadic substrate modeling — no single-perspective drift. Detects hidden resonance, misalignment, and coherence gaps structurally.
         </div>
       </div>
-      <p class="mt-6 text-xs text-zinc-400">
+      <p>
         Full docs &amp; SDK: <a href="https://www.triadicframeworks.org/rtt/" target="_blank" class="underline hover:text-emerald-400">triadicframeworks.org/rtt</a>
       </p>
     </div>
 
     <!-- Dropdown -->
-    <div class="mb-8">
-      <label class="block text-sm font-medium mb-2 text-zinc-400">Select a Datacenter (June 2026 snapshot)</label>
-      <select id="dc-select" class="w-full bg-zinc-900 border border-zinc-700 text-white rounded-xl px-6 py-4 text-lg focus:outline-none focus:border-emerald-500">
+    <div>
+      <label>Select a Datacenter (June 2026 snapshot)</label>
+      <select>
         <!-- Populated by JS below -->
       </select>
     </div>
 
     <!-- Generated Prompt -->
-    <div id="prompt-area" class="hidden">
-      <h3 class="text-lg font-medium mb-3">Copy this prompt into any AI chat:</h3>
-      <div id="prompt-text" class="prompt-box bg-black border border-emerald-900 text-emerald-200 p-6 rounded-2xl text-sm leading-relaxed overflow-auto max-h-96"></div>
-      <button onclick="copyPrompt()" 
-              class="mt-4 px-8 py-3 bg-emerald-600 hover:bg-emerald-500 rounded-xl font-medium flex items-center gap-2">
+    <div>
+      <h3>Copy this prompt into any AI chat:</h3>
+      <div></div>
+      <button onclick="copyPrompt()">
         📋 Copy to Clipboard
       </button>
     </div>
@@ -284,7 +270,7 @@
       <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
       <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
 </div>
-<div class="dropdown-content">
+<div>
     <p>Session Context</p>
   <!-- RTT Session Header (canonical stub) -->
 <section id="rtt-session-context" data-rtt="1" data-coherence="declared"
@@ -327,7 +313,7 @@
 
   </div>
 
-  <pre class="rtt-manifest">
+  <pre>
 #RTT #TriadicFrameworks #ResonanceTimeTheory
 rtt=1 | coherence=declared | drift=bounded | paradox=structural
   </pre>
@@ -335,7 +321,7 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
  
 </div>
 
-    <p class="text-xs text-zinc-500 mt-12 text-center">
+    <p>
       Built for Nawder Loswin • RTT awareness for all sides • Not us vs them • Updated June 2026
     </p>
   </div>
