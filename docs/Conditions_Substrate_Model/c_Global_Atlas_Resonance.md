@@ -69,7 +69,7 @@ notes: legitimacy amplification
 
 ---
 
-# 2. Composite Resonance Clusters
+# 2. Composite Resonance
 
 ### Identity Resonance Cluster
 ```
@@ -115,11 +115,28 @@ notes: collapse amplifier
 
 # 4. Resonance Signatures
 
+### Amplification Signature
 ```
-sig.res.amplification     — R > Drift
-sig.res.identity_peak     — R(D2,D4)↑↑↑
-sig.res.oscillation_peak  — R(D1,D7,D5)↑↑↑
-sig.res.collapse_peak     — R(D0,D1,D5,D7)↑↑↑
+R > Drift
+notes: amplification ignition
+```
+
+### Identity Peak
+```
+R(D2,D4)↑↑↑
+notes: identity cascade
+```
+
+### Oscillation Peak
+```
+R(D1,D7,D5)↑↑↑
+notes: volatility cascade
+```
+
+### Collapse Peak
+```
+R(D0,D1,D5,D7)↑↑↑
+notes: collapse cascade
 ```
 
 ---
@@ -202,10 +219,19 @@ structural → governance → informational → economic → structural
 
 # 9. Resonance Chains
 
+### Identity Chain
 ```
-identity:     D2 → D4 → D1
-oscillation:  D1 → D7 → D5
-collapse:     D0 → D7 → D1 → D5
+D2 → D4 → D1
+```
+
+### Oscillation Chain
+```
+D1 → D7 → D5
+```
+
+### Collapse Chain
+```
+D0 → D7 → D1 → D5
 ```
 
 ---
@@ -231,12 +257,34 @@ D0→D7→D1→D5→D0
 
 # 11. Resonance Regimes
 
+### Identity Regime
 ```
-identity       — R(D2,D4,D1)↑↑↑
-oscillation    — R(D1,D7,D5)↑↑↑
-collapse       — R(D0,D1,D5,D7)↑↑↑
-stability      — Coh↑, R↓
-regeneration   — Coh↑, Drift↓, R↓
+R(D2,D4,D1)↑↑↑
+notes: identity regime
+```
+
+### Oscillation Regime
+```
+R(D1,D7,D5)↑↑↑
+notes: oscillation regime
+```
+
+### Collapse Regime
+```
+R(D0,D1,D5,D7)↑↑↑
+notes: collapse regime
+```
+
+### Stability Regime
+```
+Coh↑, R↓
+notes: stability regime
+```
+
+### Regeneration Regime
+```
+Coh↑, Drift↓, R↓
+notes: regeneration regime
 ```
 
 ---
@@ -245,33 +293,35 @@ regeneration   — Coh↑, Drift↓, R↓
 
 ### Civilizational Resonance
 ```
-C‑D2,C‑D4,C‑D1 identity resonance → fragmentation
-C‑D1,C‑D7,C‑D5 oscillation resonance → volatility
-C‑D0,C‑D1,C‑D5,C‑D7 collapse resonance → civilizational cascade
+identity:     C‑D2,D4,D1
+oscillation:  C‑D1,D7,D5
+collapse:     C‑D0,D1,D5,D7
 ```
 
 ### Planetary Resonance
 ```
-D2,D4,D1 identity resonance → global fragmentation
-D1,D7,D5 oscillation resonance → global volatility
-D0,D1,D5,D7 collapse resonance → planetary cascade
+identity:     D2,D4,D1
+oscillation:  D1,D7,D5
+collapse:     D0,D1,D5,D7
 ```
 
 ### Epochal Resonance
 ```
-E5 oscillation → E6 narrowing → E7 destabilization → E0 collapse
+E5→E6→E7→E0
+notes: epochal collapse arc
 ```
 
 ### Deep‑Time Resonance
 ```
-M3→M4→M5 oscillation → collapse → reset
+M3→M4→M5 amplification → collapse → reset
+notes: deep‑time resonance arc
 ```
 
 ---
 
 # 13. Resonance Atlas Summary
 
-This atlas unifies:
+This atlas defines:
 
 - Dimensional Resonance  
 - Composite Resonance  
