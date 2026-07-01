@@ -67,7 +67,7 @@ notes: stability precursor
 
 ### Coherence Envelope
 ```
-Coh across D7,D1,D4,D0
+C7,C1,C4,C0 coherence↑↑↑
 notes: stability envelope
 ```
 
@@ -75,10 +75,10 @@ notes: stability envelope
 
 # 3. Resonance Signatures
 
-### Amplification Resonance
+### Amplification Signature
 ```
 R(d_i) > Drift(d_i)
-notes: amplification marker
+notes: amplification ignition
 ```
 
 ### Identity Resonance Peak
@@ -103,15 +103,52 @@ notes: collapse cascade
 
 # 4. Regime Signatures
 
+### Stability Regime
 ```
-stability       — Coh↑, Drift↓
-expansion       — Coh↑↑, Drift↑
-coherence       — Coh↑↑↑, Drift↓
-oscillation     — Drift(D1,D7,D5) >> Coh
-narrowing       — Drift(D0,D5,D1) > Coh
-destabilization — Drift(D0,D7,D1) >> Coh
-collapse        — Drift across ≥4 dims >> Coh≈0
-regeneration    — Coh↑, Drift↓
+Coh↑, Drift↓
+notes: stability state
+```
+
+### Expansion Regime
+```
+Coh↑↑, Drift↑
+notes: growth state
+```
+
+### Coherence Regime
+```
+Coh↑↑↑, Drift↓
+notes: peak stability state
+```
+
+### Oscillation Regime
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility state
+```
+
+### Narrowing Regime
+```
+Drift(D0,D5,D1) > Coh
+notes: scarcity state
+```
+
+### Destabilization Regime
+```
+Drift(D0,D7,D1) >> Coh
+notes: destabilization state
+```
+
+### Collapse Regime
+```
+Drift across ≥4 dims >> Coh≈0
+notes: collapse state
+```
+
+### Regeneration Regime
+```
+Coh↑, Drift↓
+notes: recovery state
 ```
 
 ---
@@ -164,6 +201,12 @@ D1→D7→D5→D4
 notes: volatility topology
 ```
 
+### Identity Propagation
+```
+D2→D4→D1
+notes: identity topology
+```
+
 ---
 
 # 7. Substrate Signatures
@@ -171,21 +214,25 @@ notes: volatility topology
 ### Collapse Substrate
 ```
 D0,D1,D5,D7 drift↑↑↑
+notes: collapse substrate
 ```
 
 ### Coherence Substrate
 ```
 D7,D1,D4,D0 coh↑↑↑
+notes: stability substrate
 ```
 
 ### Oscillation Substrate
 ```
 D1,D7,D5 drift↑↑
+notes: oscillation substrate
 ```
 
 ### Identity Substrate
 ```
 D2,D4,D1 resonance↑↑↑
+notes: identity substrate
 ```
 
 ---
@@ -223,27 +270,47 @@ notes: volatility ignition
 ### Drift Cycle
 ```
 rise → peak → decline → reset
+notes: drift rhythm
 ```
 
 ### Coherence Cycle
 ```
 stabilize → expand → peak → soften → reset
+notes: coherence rhythm
 ```
 
 ### Epochal Cycle
 ```
 E5→E6→E7→E0
+notes: epochal collapse arc
 ```
 
 ---
 
 # 10. Chain Signatures
 
+### Collapse Chain
 ```
-collapse:     D0 → D7 → D1 → D5
-regeneration: D0 → D7 → D1 → D4
-coherence:    D7 → D1 → D4 → D0
-oscillation:  D1 → D7 → D5 → D4
+D0 → D7 → D1 → D5
+notes: collapse chain
+```
+
+### Regeneration Chain
+```
+D0 → D7 → D1 → D4
+notes: recovery chain
+```
+
+### Coherence Chain
+```
+D7 → D1 → D4 → D0
+notes: stability chain
+```
+
+### Oscillation Chain
+```
+D1 → D7 → D5 → D4
+notes: volatility chain
 ```
 
 ---
@@ -253,21 +320,25 @@ oscillation:  D1 → D7 → D5 → D4
 ### Collapse Web
 ```
 D0→D7→D1→D5→D0
+notes: collapse web
 ```
 
 ### Coherence Web
 ```
-D7→D1→D4→D0
+D7→D1→D4→D0→D7
+notes: stability web
 ```
 
 ### Oscillation Web
 ```
 D1→D7→D5→D4→D1
+notes: oscillation web
 ```
 
 ### Identity Web
 ```
 D2→D4→D1→D2
+notes: identity web
 ```
 
 ---
@@ -290,19 +361,21 @@ oscillation: D1,D7,D5↑↑
 
 ### Epochal Signatures
 ```
-E5 oscillation → E6 narrowing → E7 destabilization → E0 collapse
+E5→E6→E7→E0
+notes: epochal collapse arc
 ```
 
 ### Deep‑Time Signatures
 ```
 M3→M4→M5 amplification → collapse → reset
+notes: deep‑time ignition
 ```
 
 ---
 
 # 13. Signature Atlas Summary
 
-This atlas unifies:
+This atlas defines:
 
 - Drift Signatures  
 - Coherence Signatures  
