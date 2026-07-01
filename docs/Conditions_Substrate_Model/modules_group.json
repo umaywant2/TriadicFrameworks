@@ -1,1 +1,48 @@
-. 
+{
+  "registry_version": "2026.07",
+  "modules_root": "/docs/",
+  "groups": [
+    {
+      "group": "Conditions_Substrate_Model",
+      "path": "/docs/Conditions_Substrate_Model/",
+      "status": {
+        "metadata": "complete",
+        "module_json": "present",
+        "atlas_set": "complete",
+        "gradientary_set": "complete",
+        "ai_metadata": "complete",
+        "phantom_files": "none",
+        "missing_files": "none"
+      },
+      "files": [
+        "c_Capture.md",
+        "c_Metadata.html",
+        "c_Session_Context.html",
+        "c_Badge.html",
+        "c_Sidebar_Audit.html",
+        "c_Diff_Table.html",
+        "c_Global_Atlas_Drift.md",
+        "c_Global_Atlas_Coherence.md",
+        "c_Global_Atlas_Resonance.md",
+        "c_Global_Atlas_Hooks.md",
+        "c_Global_Atlas_Signatures.md",
+        "c_Global_Atlas_Thresholds.md",
+        "c_Global_Atlas_Propagation.md",
+        "c_Global_Atlas_Cycles.md",
+        "c_Global_Atlas_Cascades.md",
+        "c_Gradientary_Thresholds.md",
+        "c_Gradientary_Propagation.md",
+        "c_Gradientary_Cycles.md",
+        "c_Gradientary_Cascades.md",
+        "README.md",
+        "module.json",
+        "sitemap_entry.xml"
+      ]
+    }
+  ],
+  "audit": {
+    "last_update": "2026-07-01",
+    "updated_by": "Nawder Loswin",
+    "notes": "All Conditions Substrate Model modules validated and registered."
+  }
+}
