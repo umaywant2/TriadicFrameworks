@@ -88,7 +88,7 @@ notes: collapse loop
 ### Full Regime Cycle
 ```
 stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regeneration → stability
-notes: regime state‑machine
+notes: canonical regime arc
 ```
 
 ### Collapse Regime Cycle
@@ -107,11 +107,28 @@ notes: stability ignition
 
 # 5. Substrate Cycles
 
+### Collapse Substrate Cycle
 ```
-collapse:     D0→D7→D1→D5→D0
-coherence:    D7→D1→D4→D0→D7
-oscillation:  D1→D7→D5→D4→D1
-identity:     D2→D4→D1→D2
+D0→D7→D1→D5→D0
+notes: collapse substrate loop
+```
+
+### Coherence Substrate Cycle
+```
+D7→D1→D4→D0→D7
+notes: stability substrate loop
+```
+
+### Oscillation Substrate Cycle
+```
+D1→D7→D5→D4→D1
+notes: oscillation substrate loop
+```
+
+### Identity Substrate Cycle
+```
+D2→D4→D1→D2
+notes: identity substrate loop
 ```
 
 ---
@@ -121,39 +138,81 @@ identity:     D2→D4→D1→D2
 ### Collapse Hook Cycle
 ```
 ecological_stress → governance_opacity → resource_gate → ecological_stress
+notes: collapse hook loop
 ```
 
 ### Coherence Hook Cycle
 ```
 clarity → cohesion → legitimacy → clarity
+notes: stability hook loop
 ```
 
 ### Oscillation Hook Cycle
 ```
 cognitive_load → identity_resonance → emotional_vulnerability → cognitive_load
+notes: oscillation hook loop
 ```
 
 ---
 
 # 7. Cascade Cycles
 
+### Collapse Cascade Cycle
 ```
-collapse:     D0→D7→D1→D5→D0
-regeneration: D0→D7→D1→D4→D0
-coherence:    D7→D1→D4→D0→D7
-oscillation:  D1→D7→D5→D4→D1
+D0→D7→D1→D5→D0
+notes: collapse cascade loop
+```
+
+### Regeneration Cascade Cycle
+```
+D0→D7→D1→D4→D0
+notes: recovery cascade loop
+```
+
+### Coherence Cascade Cycle
+```
+D7→D1→D4→D0→D7
+notes: stability cascade loop
+```
+
+### Oscillation Cascade Cycle
+```
+D1→D7→D5→D4→D1
+notes: volatility cascade loop
 ```
 
 ---
 
 # 8. Chain Cycles
 
+### Collapse Chain Cycle
 ```
-collapse:     D0→D7→D1→D5→D0
-regeneration: D0→D7→D1→D4→D0
-coherence:    D7→D1→D4→D0→D7
-oscillation:  D1→D7→D5→D4→D1
-narrowing:    D0→D5→D1→D7→D0
+D0→D7→D1→D5→D0
+notes: collapse chain loop
+```
+
+### Regeneration Chain Cycle
+```
+D0→D7→D1→D4→D0
+notes: recovery chain loop
+```
+
+### Coherence Chain Cycle
+```
+D7→D1→D4→D0→D7
+notes: stability chain loop
+```
+
+### Oscillation Chain Cycle
+```
+D1→D7→D5→D4→D1
+notes: volatility chain loop
+```
+
+### Narrowing Chain Cycle
+```
+D0→D5→D1→D7→D0
+notes: narrowing loop
 ```
 
 ---
@@ -163,21 +222,25 @@ narrowing:    D0→D5→D1→D7→D0
 ### Collapse Web Cycle
 ```
 D0→D7→D1→D5→D0
+notes: collapse web loop
 ```
 
 ### Coherence Web Cycle
 ```
 D7→D1→D4→D0→D7
+notes: stability web loop
 ```
 
 ### Oscillation Web Cycle
 ```
 D1→D7→D5→D4→D1
+notes: oscillation web loop
 ```
 
 ### Identity Web Cycle
 ```
 D2→D4→D1→D2
+notes: identity web loop
 ```
 
 ---
@@ -187,19 +250,19 @@ D2→D4→D1→D2
 ### Full Epoch Cycle
 ```
 E0→E1→E2→E3→E4→E5→E6→E7→E0
-notes: epochal recursion
+notes: canonical epoch cycle
 ```
 
-### Collapse Epoch Arc
+### Collapse Epoch Cycle
 ```
 E5→E6→E7→E0
-notes: collapse epoch arc
+notes: collapse ignition
 ```
 
-### Coherence Epoch Arc
+### Coherence Epoch Cycle
 ```
 E2→E3→E4
-notes: stability epoch arc
+notes: stability ignition
 ```
 
 ---
@@ -209,23 +272,26 @@ notes: stability epoch arc
 ### Planetary Drift Cycle
 ```
 drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: planetary drift rhythm
 ```
 
 ### Biospheric Cycle
 ```
 collapse → regenerate → stabilize → expand → coherence → collapse
+notes: biospheric rhythm
 ```
 
 ### Geological Cycle
 ```
 instability → collapse → stabilization → expansion → coherence → instability
+notes: geological rhythm
 ```
 
 ---
 
 # 12. Cycle Atlas Summary
 
-This atlas unifies:
+This atlas defines:
 
 - Drift Cycles  
 - Coherence Cycles  
