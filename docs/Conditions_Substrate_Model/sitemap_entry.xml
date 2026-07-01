@@ -1,1 +1,24 @@
-. 
+<url>
+  <loc>https://umaywant2.github.io/TriadicFrameworks/docs/Conditions_Substrate_Model/</loc>
+
+  <!-- Canonical metadata -->
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+
+  <!-- AI metadata -->
+  <meta name="ai.module" content="Conditions_Substrate_Model" />
+  <meta name="ai.version" content="2026.07" />
+  <meta name="ai.purpose" content="Canonical substrate model for drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades." />
+  <meta name="ai.keywords" content="drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, cascades, substrates, regimes" />
+  <meta name="ai.audience" content="operators, analysts, canon_maintainers, ai_agents" />
+
+  <!-- Navigation anchors -->
+  <meta name="ai.navigation" content="https://umaywant2.github.io/TriadicFrameworks/sitemap_main.xml" />
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+
+  <!-- Contact + license -->
+  <meta name="ai.contact.x" content="@TriadicFrameworks" />
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+  <meta name="ai.license" content="Open educational use permitted" />
+</url>
