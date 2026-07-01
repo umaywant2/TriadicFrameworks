@@ -5,7 +5,7 @@ TriadicFrameworks Canon (2026.07)
 Drift is the **motion field** of the Conditions Substrate Model.  
 It describes how substrates (D0–D7) move away from stability, how coherence is challenged, and how cascades and cycles are ignited.
 
-This atlas defines drift fields, drift signatures, drift chains, drift webs, drift thresholds, drift regimes, and deep‑time drift arcs.
+This atlas defines drift fields, drift signatures, drift vectors, drift envelopes, drift cascades, drift cycles, drift chains, drift webs, drift regimes, and deep‑time drift arcs.
 
 ---
 
@@ -64,174 +64,171 @@ notes: stress cascade
 ### D7 — Governance Drift
 ```
 transparency → torsion → opacity → illegitimacy
-notes: governance collapse precursor
+notes: legitimacy collapse precursor
 ```
 
 ---
 
-# 2. Composite Drift Fields
+# 2. Composite Drift
 
-### Collapse Drift Cluster
+### Structural–Governance Drift
 ```
-D0 → D7 → D1 → D5
-notes: collapse chain
-```
-
-### Oscillation Drift Cluster
-```
-D1 → D7 → D5
-notes: volatility chain
+D0 + D7
+notes: collapse‑critical pair
 ```
 
-### Identity Drift Cluster
+### Information–Economic Drift
 ```
-D2 → D4 → D1
-notes: identity chain
+D1 + D5
+notes: oscillation engine
 ```
 
-### Narrowing Drift Cluster
+### Social–Emotional Drift
 ```
-D0 → D5 → D1 → D7
-notes: narrowing arc
+D4 + D2
+notes: fragmentation amplifier
 ```
 
 ---
 
-# 3. Meta‑Drift Fields
+# 3. Meta‑Drift
 
 ### Meta‑Collapse Drift
 ```
-D0,D7,D1,D5 drift↑↑↑
+{D0↑↑↑, D1↑↑↑, D5↑↑↑, D7↑↑↑}
 notes: global collapse signature
-```
-
-### Meta‑Coherence Drift
-```
-D7,D1,D4,D0 drift↓, coh↑↑↑
-notes: global stability signature
 ```
 
 ### Meta‑Oscillation Drift
 ```
-D1,D7,D5 drift↑↑
-notes: volatility signature
+{D1↑↑, D7↑↑, D5↑}
+notes: volatility engine
+```
+
+### Meta‑Narrowing Drift
+```
+{D0↑, D5↑, D1↑}
+notes: scarcity arc
+```
+
+### Meta‑Destabilization Drift
+```
+{D0↑↑, D7↑↑, D1↑↑}
+notes: pre‑collapse arc
 ```
 
 ---
 
 # 4. Drift Signatures
 
+### Drift Dominance
 ```
-sig.drift.collapse      — D0,D7,D1,D5 drift↑↑↑
-sig.drift.coherence     — D7,D1,D4,D0 drift↓, coh↑↑↑
-sig.drift.oscillation   — D1,D7,D5 drift↑↑
-sig.drift.identity      — D2,D4,D1 drift↑↑
-sig.drift.narrowing     — D0,D5,D1,D7 drift↑
+Drift(d_i) > Coh(d_i)
+notes: instability marker
+```
+
+### Drift Synchronization
+```
+synchronized drift across dims
+notes: cascade precursor
+```
+
+### Oscillation Drift
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility signature
+```
+
+### Collapse Drift
+```
+Drift across ≥4 dims >> Coh≈0
+notes: terminal collapse
 ```
 
 ---
 
-# 5. Drift Chains
+# 5. Drift Vectors
 
-### Collapse Drift Chain
+### Collapse Vector
 ```
 D0 → D7 → D1 → D5
 ```
 
-### Coherence Drift Chain
+### Coherence Counter‑Drift Vector
 ```
 D7 → D1 → D4 → D0
 ```
 
-### Oscillation Drift Chain
+### Oscillation Vector
 ```
 D1 → D7 → D5 → D4
 ```
 
-### Identity Drift Chain
-```
-D2 → D4 → D1
-```
-
-### Narrowing Drift Chain
+### Narrowing Vector
 ```
 D0 → D5 → D1 → D7
 ```
 
 ---
 
-# 6. Drift Webs
+# 6. Drift Envelopes
 
-### Collapse Drift Web
+### Collapse Envelope
 ```
-D0→D7→D1→D5→D0
-```
-
-### Coherence Drift Web
-```
-D7→D1→D4→D0→D7
+Drift↑↑↑ across D0,D1,D5,D7
 ```
 
-### Oscillation Drift Web
+### Coherence Envelope (counter‑drift)
 ```
-D1→D7→D5→D4→D1
-```
-
-### Identity Drift Web
-```
-D2→D4→D1→D2
+Coh↑↑↑ across D7,D1,D4,D0
 ```
 
----
-
-# 7. Drift Thresholds
-
-### Narrowing Threshold
+### Oscillation Envelope
 ```
-D0,D5,D1 drift↑
-notes: scarcity ignition
+Drift↑↑ across D1,D7,D5
 ```
 
-### Oscillation Threshold
+### Narrowing Envelope
 ```
-D1,D7,D5 drift↑↑
-notes: volatility ignition
-```
-
-### Destabilization Threshold
-```
-D0,D7,D1 drift↑↑↑
-notes: collapse precursor
-```
-
-### Collapse Threshold
-```
-D0,D1,D5,D7 drift↑↑↑↑
-notes: terminal collapse
+Drift↑ across D0,D5,D1
 ```
 
 ---
 
-# 8. Drift Regimes
+# 7. Drift Cascades
 
+### Collapse Cascade
 ```
-stability       — Drift↓, Coh↑
-expansion       — Drift↑, Coh↑↑
-coherence       — Drift↓, Coh↑↑↑
-oscillation     — Drift(D1,D7,D5) >> Coh
-narrowing       — Drift(D0,D5,D1) > Coh
-destabilization — Drift(D0,D7,D1) >> Coh
-collapse        — Drift across ≥4 dims >> Coh≈0
-regeneration    — Drift↓, Coh↑
+D0→D7→D1→D5
+```
+
+### Regeneration Cascade
+```
+D0→D7→D1→D4
+```
+
+### Coherence Cascade
+```
+D7→D1→D4→D0
+```
+
+### Oscillation Cascade
+```
+D1→D7→D5→D4
 ```
 
 ---
 
-# 9. Drift Cycles
+# 8. Drift Cycles
 
 ### Local Drift Cycle
 ```
 rise → peak → decline → reset
+```
+
+### Multi‑Substrate Drift Cycle
+```
+D1→D7→D5→D4→D1
 ```
 
 ### Collapse Drift Cycle
@@ -239,73 +236,150 @@ rise → peak → decline → reset
 D0→D7→D1→D5→D0
 ```
 
-### Coherence Drift Cycle
+---
+
+# 9. Drift Chains
+
+### Collapse Chain
+```
+D0 → D7 → D1 → D5
+```
+
+### Regeneration Chain
+```
+D0 → D7 → D1 → D4
+```
+
+### Coherence Chain (counter‑drift)
+```
+D7 → D1 → D4 → D0
+```
+
+### Oscillation Chain
+```
+D1 → D7 → D5 → D4
+```
+
+### Narrowing Chain
+```
+D0 → D5 → D1 → D7
+```
+
+---
+
+# 10. Drift Webs
+
+### Collapse Web
+```
+D0→D7→D1→D5→D0
+```
+
+### Coherence Web
 ```
 D7→D1→D4→D0→D7
 ```
 
-### Oscillation Drift Cycle
+### Oscillation Web
 ```
 D1→D7→D5→D4→D1
 ```
 
----
-
-# 10. Epoch Drift Arcs
-
-### Collapse Epoch Drift Arc
+### Identity Web (drift‑triggered)
 ```
-E5→E6→E7→E0
-notes: collapse epoch arc
-```
-
-### Coherence Epoch Drift Arc
-```
-E2→E3→E4
-notes: stability epoch arc
-```
-
-### Regeneration Epoch Drift Arc
-```
-E0→E1→E2
-notes: recovery epoch arc
+D2→D4→D1→D2
 ```
 
 ---
 
-# 11. Deep‑Time Drift
+# 11. Drift Regimes
+
+### Stability Regime
+```
+Coh↑, Drift↓
+```
+
+### Expansion Regime
+```
+Coh↑↑, Drift↑
+```
+
+### Coherence Regime
+```
+Coh↑↑↑, Drift↓
+```
+
+### Oscillation Regime
+```
+Drift(D1,D7,D5) >> Coh
+```
+
+### Narrowing Regime
+```
+Drift(D0,D5,D1) > Coh
+```
+
+### Destabilization Regime
+```
+Drift(D0,D7,D1) >> Coh
+```
+
+### Collapse Regime
+```
+Drift across ≥4 dims >> Coh≈0
+```
+
+### Regeneration Regime
+```
+Coh↑, Drift↓
+```
+
+---
+
+# 12. Cross‑Scale Drift
+
+### Civilizational Drift
+```
+collapse: C‑D0,D1,D5,D7
+oscillation: C‑D1,D7,D5
+narrowing: C‑D0,D5,D1
+```
 
 ### Planetary Drift
 ```
+collapse: D0,D1,D5,D7↑↑↑
+oscillation: D1,D7,D5↑↑
+narrowing: D0,D5,D1↑
+```
+
+### Epochal Drift
+```
+E5→E6→E7→E0
+notes: epochal collapse arc
+```
+
+### Deep‑Time Drift
+```
 drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
-```
-
-### Biospheric Drift
-```
-collapse → regenerate → stabilize → expand → coherence → collapse
-```
-
-### Geological Drift
-```
-instability → collapse → stabilization → expansion → coherence → instability
+notes: deep‑time drift rhythm
 ```
 
 ---
 
-# 12. Drift Atlas Summary
+# 13. Drift Atlas Summary
 
-This atlas unifies:
+This atlas defines:
 
-- Dimensional Drift Fields  
-- Composite Drift Clusters  
-- Meta‑Drift Fields  
+- Dimensional Drift  
+- Composite Drift  
+- Meta‑Drift  
 - Drift Signatures  
+- Drift Vectors  
+- Drift Envelopes  
+- Drift Cascades  
+- Drift Cycles  
 - Drift Chains  
 - Drift Webs  
-- Drift Thresholds  
 - Drift Regimes  
-- Drift Cycles  
-- Epoch Drift Arcs  
-- Deep‑Time Drift  
+- Cross‑Scale Drift  
 
 This is the **complete drift cartography** of the Conditions Substrate Model.
