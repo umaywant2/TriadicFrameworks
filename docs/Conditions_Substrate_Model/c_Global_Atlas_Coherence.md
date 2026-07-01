@@ -3,7 +3,8 @@
 TriadicFrameworks Canon (2026.07)
 
 Coherence is the **stability field** of the Conditions Substrate Model.  
-It counterbalances drift, dampens resonance, stabilizes propagation, and governs regime transitions.  
+It counterbalances drift, dampens resonance, stabilizes propagation, and governs regime transitions.
+
 This atlas defines coherence envelopes, coherence chains, coherence webs, coherence signatures, coherence thresholds, coherence regimes, and coherence arcs across all substrates (D0–D7).
 
 ---
@@ -57,235 +58,266 @@ notes: scarcity dampening
 ### C6 — Stress Coherence
 ```
 load → buffering → resilience
-notes: stress stabilization
+notes: stress dampening
 ```
 
 ### C7 — Governance Coherence
 ```
 transparency → legitimacy → stability
-notes: governance stability engine
+notes: governance stabilization
 ```
 
 ---
 
-# 2. Composite Coherence Envelopes
+# 2. Composite Coherence
 
-### Stability Cluster
+### Structural–Governance Coherence
 ```
-C7 + C1 + C4 + C0
+D0 + D7
+notes: stability-critical pair
+```
+
+### Information–Social Coherence
+```
+D1 + D4
+notes: clarity + cohesion
+```
+
+### Emotional–Social Coherence
+```
+D2 + D4
+notes: trust + unity
+```
+
+---
+
+# 3. Meta‑Coherence
+
+### Meta‑Stability Coherence
+```
+{D7↑↑↑, D1↑↑↑, D4↑↑↑, D0↑↑↑}
 notes: global stability signature
 ```
 
-### Identity Cluster
+### Meta‑Regeneration Coherence
 ```
-C2 + C4 + C1
-notes: identity stabilization
-```
-
-### Economic Cluster
-```
-C5 + C1 + C7
-notes: scarcity dampening
-```
-
-### Structural Cluster
-```
-C0 + C7 + C4
-notes: structural stability
-```
-
----
-
-# 3. Meta‑Coherence Envelopes
-
-### Meta‑Stability Envelope
-```
-{C7↑↑↑, C1↑↑↑, C4↑↑↑, C0↑↑↑}
-notes: global stability arc
-```
-
-### Meta‑Coherence Envelope
-```
-{C7↑↑, C1↑↑, C4↑}
-notes: stability ignition
-```
-
-### Meta‑Regeneration Envelope
-```
-{C0↑, C7↑, C1↑}
+{D0↑, D7↑, D1↑, D4↑}
 notes: recovery arc
 ```
 
-### Meta‑Expansion Envelope
+### Meta‑Coherence Peak
 ```
-{C7↑↑, C1↑, C4↑}
-notes: growth arc
+Coh↑↑↑ across ≥4 dims
+notes: apex stability
 ```
 
 ---
 
 # 4. Coherence Signatures
 
+### Stability Signature
 ```
-sig.coherence.stability      — C7,C1,C4,C0 coh↑↑↑
-sig.coherence.identity       — C2,C4,C1 coh↑↑
-sig.coherence.regeneration   — C0,C7,C1 coh↑
-sig.coherence.expansion      — C7,C1,C4 coh↑↑
-sig.coherence.peak           — C7,C1,C4,C0 coh↑↑↑↑
+Coh > Drift
+notes: stability ignition
+```
+
+### Peak Coherence Signature
+```
+Coh↑↑↑ across D7,D1,D4,D0
+notes: apex stability
+```
+
+### Synchronization Signature
+```
+coherence synchronized across dims
+notes: stability precursor
+```
+
+### Envelope Signature
+```
+coherence↑↑↑ across D7,D1,D4,D0
+notes: stability envelope
 ```
 
 ---
 
-# 5. Coherence Chains
-
-### Stability Chain
-```
-C7 → C1 → C4 → C0
-```
-
-### Identity Chain
-```
-C2 → C4 → C1
-```
-
-### Regeneration Chain
-```
-C0 → C7 → C1 → C4
-```
-
-### Expansion Chain
-```
-C7 → C1 → C4 → C2
-```
-
-### Peak Coherence Chain
-```
-C7 → C1 → C4 → C0 → C7
-```
-
----
-
-# 6. Coherence Webs
-
-### Stability Web
-```
-C7→C1→C4→C0→C7
-```
-
-### Identity Web
-```
-C2→C4→C1→C2
-```
-
-### Regeneration Web
-```
-C0→C7→C1→C4→C0
-```
-
-### Expansion Web
-```
-C7→C1→C4→C2→C7
-```
-
----
-
-# 7. Coherence Thresholds
+# 5. Coherence Thresholds
 
 ### Stability Threshold
 ```
 Coh(d_i) > Drift(d_i)
-notes: stability ignition
 ```
 
 ### Expansion Threshold
 ```
 Coh↑↑, Drift↑
-notes: growth ignition
 ```
 
-### Peak Coherence Threshold
+### Peak Threshold
 ```
-C7,C1,C4,C0 coh↑↑↑
-notes: apex stability (E4)
+Coh↑↑↑ across D7,D1,D4,D0
 ```
 
 ### Regeneration Threshold
 ```
 Coh↑, Drift↓
+```
+
+---
+
+# 6. Coherence Cascades
+
+### Stability Cascade
+```
+D7→D1→D4→D0
+notes: stability ignition
+```
+
+### Regeneration Cascade
+```
+D0→D7→D1→D4
 notes: recovery ignition
 ```
 
----
-
-# 8. Coherence Regimes
-
+### Coherence Cascade
 ```
-stability       — Coh↑, Drift↓
-expansion       — Coh↑↑, Drift↑
-coherence       — Coh↑↑↑, Drift↓
-oscillation     — Drift(D1,D7,D5) >> Coh
-narrowing       — Drift(D0,D5,D1) > Coh
-destabilization — Drift(D0,D7,D1) >> Coh
-collapse        — Drift across ≥4 dims >> Coh≈0
-regeneration    — Coh↑, Drift↓
+D7→D1→D4→D0
+notes: stability topology
+```
+
+### Anti‑Coherence Cascade (Drift)
+```
+D0→D7→D1→D5
+notes: collapse topology
 ```
 
 ---
 
-# 9. Coherence Arcs (Epochal)
+# 7. Coherence Cycles
 
-### Stability Epoch Arc
+### Local Coherence Cycle
+```
+stabilize → expand → peak → soften → reset
+```
+
+### Multi‑Substrate Coherence Cycle
+```
+D7→D1→D4→D0→D7
+```
+
+### Epochal Coherence Cycle
 ```
 E2→E3→E4
 notes: stability epoch arc
 ```
 
-### Collapse Epoch Arc
+---
+
+# 8. Coherence Chains
+
+### Stability Chain
 ```
-E5→E6→E7→E0
-notes: collapse epoch arc
+D7 → D1 → D4 → D0
 ```
 
-### Regeneration Epoch Arc
+### Regeneration Chain
 ```
-E0→E1→E2
-notes: recovery epoch arc
+D0 → D7 → D1 → D4
+```
+
+### Anti‑Coherence Chain (Collapse)
+```
+D0 → D7 → D1 → D5
 ```
 
 ---
 
-# 10. Deep‑Time Coherence
+# 9. Coherence Webs
+
+### Stability Web
+```
+D7→D1→D4→D0→D7
+```
+
+### Regeneration Web
+```
+D0→D7→D1→D4→D0
+```
+
+### Anti‑Coherence Web (Collapse)
+```
+D0→D7→D1→D5→D0
+```
+
+---
+
+# 10. Coherence Regimes
+
+### Stability Regime
+```
+Coh↑, Drift↓
+```
+
+### Expansion Regime
+```
+Coh↑↑, Drift↑
+```
+
+### Coherence Regime
+```
+Coh↑↑↑, Drift↓
+```
+
+### Regeneration Regime
+```
+Coh↑, Drift↓
+```
+
+### Anti‑Coherence Regime (Collapse)
+```
+Drift across ≥4 dims >> Coh≈0
+```
+
+---
+
+# 11. Cross‑Scale Coherence
+
+### Civilizational Coherence
+```
+C‑D7,C‑D1,C‑D4,C‑D0 coherence synchronization → civilizational stability
+```
 
 ### Planetary Coherence
 ```
-C7,C1,C4,C0↑↑↑ global stability
+D7,D1,D4,D0 coherence synchronization → global stability
 ```
 
-### Biospheric Coherence
+### Epochal Coherence
 ```
-regenerate → stabilize → expand → coherence
+E2→E3→E4 coherence arc → epochal stability
 ```
 
-### Geological Coherence
+### Deep‑Time Coherence
 ```
-stabilization → expansion → coherence
+M2→M6→M7 coherence arc → meta‑epoch stability
 ```
 
 ---
 
-# 11. Coherence Atlas Summary
+# 12. Coherence Atlas Summary
 
-This atlas unifies:
+This atlas defines:
 
-- Dimensional Coherence Envelopes  
-- Composite Envelopes  
+- Dimensional Coherence  
+- Composite Coherence  
 - Meta‑Coherence  
 - Coherence Signatures  
+- Coherence Thresholds  
+- Coherence Cascades  
+- Coherence Cycles  
 - Coherence Chains  
 - Coherence Webs  
-- Coherence Thresholds  
 - Coherence Regimes  
-- Coherence Arcs  
-- Deep‑Time Coherence  
+- Cross‑Scale Coherence  
 
 This is the **complete coherence cartography** of the Conditions Substrate Model.
