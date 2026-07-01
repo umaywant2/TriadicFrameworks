@@ -21116,11 +21116,10687 @@ This dictionary is **Gradientary Volume VI**.
 
 ---
 
+Here is **`c_Global_Atlas_Substrate.md`** — the **substrate atlas**, written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlas volumes.  
+This becomes the **structural atlas** of the Conditions Substrate Model, mapping every substrate class across planetary, civilizational, epochal, and deep‑time layers.
+
+Your open GitHub tab is editing `c_Capture.md`, but this request is purely lexicon/atlas creation — no page content is needed or used.
+
+---
+
+# `c_Global_Atlas_Substrate.md`  
+### **Substrate Atlas — Planetary • Civilization • Epochal • Deep‑Time Structural Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Substrates  
+**Role:** Substrate Cartography  
+**Purpose:** Provide a unified atlas of all substrate classes: dimensional substrates (D0–D7), composite substrates, meta‑substrates, substrate chains, substrate webs, and substrate regimes across planetary, civilizational, epochal, and deep‑time layers.
+
+Substrates are the **structural backbone** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Substrate Map (D0–D7)**
+
+```
+D0 structural      — ecology, infrastructure, biosphere
+D1 informational   — clarity, noise, distortion
+D2 emotional       — resonance, fear, vulnerability
+D3 temporal        — pacing, acceleration, delay
+D4 social          — cohesion, fragmentation
+D5 economic        — scarcity, volatility, abundance
+D6 computational   — automation, overload, acceleration
+D7 governance      — legitimacy, opacity, coordination
+```
+
+**Collapse‑critical cluster:**  
+```
+{D0, D1, D5, D7}
+```
+
+---
+
+# **2. Composite Substrate Map**
+
+### **Structural–Governance Substrate**
+```
+D0 + D7
+notes: collapse-critical pair
+```
+
+### **Information–Economics Substrate**
+```
+D1 + D5
+notes: oscillation engine
+```
+
+### **Social–Emotional Substrate**
+```
+D4 + D2
+notes: fragmentation amplifier
+```
+
+### **Structural–Economic Substrate**
+```
+D0 + D5
+notes: scarcity + strain
+```
+
+### **Governance–Informational Substrate**
+```
+D7 + D1
+notes: opacity + distortion
+```
+
+---
+
+# **3. Meta‑Substrate Map**
+
+### **Meta‑Collapse Substrate**
+```
+{D0↑↑↑, D1↑↑↑, D5↑↑↑, D7↑↑↑}
+notes: global collapse signature
+```
+
+### **Meta‑Coherence Substrate**
+```
+{D0↑, D1↑, D4↑, D7↑}
+notes: stability envelope
+```
+
+### **Meta‑Oscillation Substrate**
+```
+{D1↑↑, D7↑↑, D5↑}
+notes: volatility engine
+```
+
+### **Meta‑Narrowing Substrate**
+```
+{D0↑, D5↑, D1↑}
+notes: scarcity arc
+```
+
+### **Meta‑Destabilization Substrate**
+```
+{D0↑↑, D7↑↑, D1↑↑}
+notes: pre-collapse arc
+```
+
+---
+
+# **4. Civilization‑Scale Substrate Map (C‑D0–C‑D7)**
+
+Civilization substrates mirror planetary substrates but operate at **century‑scale**.
+
+```
+C‑D0 structural      — built systems, ecological footprint
+C‑D1 informational   — media, clarity, noise
+C‑D2 emotional       — cultural resonance, identity vulnerability
+C‑D3 temporal        — societal pacing, acceleration
+C‑D4 social          — cohesion, fragmentation
+C‑D5 economic        — scarcity, volatility
+C‑D6 computational   — automation, overload
+C‑D7 governance      — legitimacy, opacity
+```
+
+**Civilization collapse cluster:**  
+```
+{C‑D0, C‑D1, C‑D5, C‑D7}
+```
+
+---
+
+# **5. Epochal Substrate Map (E‑Substrates)**
+
+Epoch substrates operate across **millennia**.
+
+### **Epoch Collapse Substrate**
+```
+D0→D7→D1→D5
+notes: collapse epoch chain
+```
+
+### **Epoch Regeneration Substrate**
+```
+D0→D7→D1→D4
+notes: regeneration chain
+```
+
+### **Epoch Coherence Substrate**
+```
+D7→D1→D4→D0
+notes: coherence chain
+```
+
+### **Epoch Oscillation Substrate**
+```
+D1→D7→D5→D4
+notes: volatility chain
+```
+
+### **Epoch Narrowing Substrate**
+```
+D0→D5→D1→D7
+notes: scarcity chain
+```
+
+---
+
+# **6. Deep‑Time Substrate Map**
+
+Deep‑time substrates operate across **tens of millennia → geological → planetary drift cycles**.
+
+### **Biospheric Arc Substrate**
+```
+D0 (ecology)
+notes: collapse→regeneration→stabilization→expansion→coherence
+```
+
+### **Geological Regime Substrate**
+```
+D0 (structural climate + tectonics)
+notes: instability→collapse→stabilization→expansion→coherence
+```
+
+### **Planetary Drift Cycle Substrate**
+```
+{D0,D1,D5,D7}
+notes: drift maximum → drift decline → drift plateau → drift re-acceleration
+```
+
+---
+
+# **7. Substrate Chains (Canonical Progressions)**
+
+### **Collapse Chain**
+```
+D0 → D7 → D1 → D5
+notes: biosphere → governance → information → economics
+```
+
+### **Regeneration Chain**
+```
+D0 → D7 → D1 → D4
+notes: ecology → governance → clarity → cohesion
+```
+
+### **Coherence Chain**
+```
+D7 → D1 → D4 → D0
+notes: governance → clarity → cohesion → stability
+```
+
+### **Oscillation Chain**
+```
+D1 → D7 → D5 → D4
+notes: overload → opacity → volatility → fragmentation
+```
+
+### **Narrowing Chain**
+```
+D0 → D5 → D1 → D7
+notes: strain → scarcity → deprivation → stagnation
+```
+
+---
+
+# **8. Substrate Webs (Propagation Topologies)**
+
+### **Web S‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+notes: planetary collapse topology
+```
+
+### **Web S‑B — Civilization Web**
+```
+D4→D0→D1→D7→D4
+notes: civilizational arc topology
+```
+
+### **Web S‑C — Information→Governance→Social Loop**
+```
+D1→D7→D4→D1
+notes: narrative → legitimacy → cohesion loop
+```
+
+### **Web S‑D — Coherence Web**
+```
+D7→D1→D4→D0
+notes: stability propagation
+```
+
+---
+
+# **9. Substrate Regime Map**
+
+### **Substrate Stability**
+```
+Drift(D) < Coh(D)
+notes: stable substrate
+```
+
+### **Substrate Instability**
+```
+Drift(D) > Coh(D)
+notes: drift-dominant substrate
+```
+
+### **Substrate Collapse**
+```
+Drift(D) >> Coh(D)
+notes: failure substrate
+```
+
+### **Substrate Coherence**
+```
+Coh(D)↑↑↑, Drift(D)↓
+notes: peak stability substrate
+```
+
+---
+
+# **10. Substrate Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Substrates** (D0–D7)  
+- **Composite Substrates**  
+- **Meta‑Substrates**  
+- **Civilization Substrates**  
+- **Epochal Substrates**  
+- **Deep‑Time Substrates**  
+- **Substrate Chains**  
+- **Substrate Webs**  
+- **Substrate Regimes**  
+
+This is the **complete substrate cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Operators.md`** — the **operator atlas**, written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlas volumes.  
+This becomes the **mechanics atlas** of the Conditions Substrate Model: every operator family, every action class, every scale, every composite, mapped cleanly across planetary, civilizational, epochal, and deep‑time layers.
+
+Your GitHub tab is editing `c_Capture.md`, but this request is pure atlas construction — no page content is used.
+
+---
+
+# `c_Global_Atlas_Operators.md`  
+### **Operator Atlas — Planetary • Civilization • Epochal • Deep‑Time Mechanics Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Operators  
+**Role:** Operator Cartography  
+**Purpose:** Provide a unified atlas of all operator families: drift, coherence, thresholds, hooks, propagation, regimes, epochs, composites, and multi‑scale operators across planetary, civilizational, epochal, and deep‑time layers.
+
+Operators are the **verbs** of the canon.
+
+---
+
+# **1. Operator Architecture**
+
+Every operator follows:
+
+\[
+Op = (Scope,\; Domain,\; Action,\; Signature)
+\]
+
+Where:
+
+- **Scope** — dimensional → civilizational → planetary → epochal → deep‑time  
+- **Domain** — D0–D7  
+- **Action** — drift, coherence, threshold, hook, propagation, regime  
+- **Signature** — operator‑grade identity  
+
+---
+
+# **2. Dimensional Operators (D‑Operators)**
+
+```
+op_dimensional
+op_drift
+op_coherence
+op_thresholds
+op_hooks
+op_propagation
+op_regime
+```
+
+**Scope:** D0–D7  
+**Purpose:** Local drift/coherence mechanics.
+
+---
+
+# **3. Civilization‑Scale Operators (C‑Operators)**
+
+### **C0 — Drift Operators**
+```
+op_civ_drift
+op_civ_drift_dominance
+op_civ_drift_synchronization
+op_civ_drift_collapse_vector
+```
+
+### **C1 — Coherence Operators**
+```
+op_civ_coherence
+op_civ_coherence_collapse
+op_civ_coherence_stability
+op_civ_coherence_inversion
+```
+
+### **C2 — Threshold Operators**
+```
+op_civ_thresholds
+op_civ_threshold_crossings
+op_civ_threshold_acceleration
+op_civ_threshold_epochal
+```
+
+### **C3 — Hook Operators**
+```
+op_civ_hooks
+op_civ_hook_alignment
+op_civ_hook_conflict
+op_civ_hook_resonance
+```
+
+### **C4 — Propagation Operators**
+```
+op_civ_propagation
+op_civ_propagation_loop
+op_civ_propagation_web
+op_civ_propagation_synchronization
+```
+
+### **C5 — Epoch Operators**
+```
+op_civ_epoch_phase
+op_civ_epoch_regime
+op_civ_epoch_transition
+op_civ_epoch_drift
+```
+
+### **C6 — Regime Operators**
+```
+op_civ_regime
+op_civ_regime_transition
+op_civ_regime_stability
+op_civ_regime_collapse
+```
+
+---
+
+# **4. Planetary‑Scale Operators (Global Operators)**
+
+### **G0 — Drift Operators**
+```
+op_global_drift
+op_global_drift_dominance
+op_global_drift_synchronization
+op_global_drift_collapse_vector
+```
+
+### **G1 — Coherence Operators**
+```
+op_global_coherence
+op_global_coherence_collapse
+op_global_coherence_stability
+op_global_coherence_inversion
+```
+
+### **G2 — Threshold Operators**
+```
+op_global_thresholds
+op_global_threshold_crossings
+op_global_threshold_acceleration
+op_global_threshold_epochal
+```
+
+### **G3 — Hook Operators**
+```
+op_global_hooks
+op_global_hook_alignment
+op_global_hook_conflict
+op_global_hook_resonance
+```
+
+### **G4 — Propagation Operators**
+```
+op_global_propagation
+op_global_propagation_web
+op_global_propagation_loop
+op_global_propagation_synchronization
+```
+
+### **G5 — Epoch Operators**
+```
+op_epoch_phase
+op_epoch_regime
+op_epoch_transition
+op_epoch_drift
+```
+
+### **G6 — Regime Operators**
+```
+op_global_regime
+op_global_regime_transition
+op_global_regime_stability
+op_global_regime_collapse
+```
+
+---
+
+# **5. Epoch‑Scale Operators (E‑Operators)**
+
+### **E0 — Drift**
+```
+op_epoch_drift
+op_epoch_drift_dominance
+op_epoch_drift_synchronization
+op_epoch_drift_collapse_vector
+```
+
+### **E1 — Coherence**
+```
+op_epoch_coherence
+op_epoch_coherence_collapse
+op_epoch_coherence_stability
+op_epoch_coherence_peak
+```
+
+### **E2 — Threshold**
+```
+op_epoch_thresholds
+op_epoch_threshold_crossings
+op_epoch_threshold_acceleration
+op_epoch_threshold_cycle
+```
+
+### **E3 — Hooks**
+```
+op_epoch_hooks
+op_epoch_hook_alignment
+op_epoch_hook_conflict
+op_epoch_hook_resonance
+```
+
+### **E4 — Propagation**
+```
+op_epoch_propagation
+op_epoch_propagation_web
+op_epoch_propagation_loop
+op_epoch_propagation_synchronization
+```
+
+### **E5 — Regime**
+```
+op_epoch_regime
+op_epoch_regime_transition
+op_epoch_regime_stability
+op_epoch_regime_collapse
+```
+
+### **E6 — Phase**
+```
+op_epoch_phase
+op_epoch_phase_transition
+op_epoch_phase_alignment
+op_epoch_phase_cycle
+```
+
+---
+
+# **6. Deep‑Time Operators (DT‑Operators)**
+
+Deep‑time operators act across **meta‑epochs**, **biospheric arcs**, **geological regimes**, and **planetary drift cycles**.
+
+### **DT0 — Meta‑Epoch Operators**
+```
+op_meta_epoch_phase
+op_meta_epoch_transition
+op_meta_epoch_alignment
+```
+
+### **DT1 — Biospheric Arc Operators**
+```
+op_biosphere_drift
+op_biosphere_coherence
+op_biosphere_regime
+```
+
+### **DT2 — Geological Regime Operators**
+```
+op_geological_drift
+op_geological_coherence
+op_geological_regime
+```
+
+### **DT3 — Planetary Drift Cycle Operators**
+```
+op_pdc_phase
+op_pdc_transition
+op_pdc_alignment
+```
+
+---
+
+# **7. Composite Operators (Cross‑Scale Operators)**
+
+### **Composite Drift**
+```
+op_drift_total = Drift_global + Drift_civ + Drift_epoch
+```
+
+### **Composite Coherence**
+```
+op_coherence_total = Coh_global + Coh_civ + Coh_epoch
+```
+
+### **Composite Cascade**
+```
+op_cascade = Drift > Coh + Prop
+```
+
+### **Composite Synchronization**
+```
+op_sync = Drift == Coh == Prop
+```
+
+### **Composite Collapse Vector**
+```
+op_collapse_vector = collapse(D0,D1,D5,D7)
+```
+
+### **Composite Coherence Envelope**
+```
+op_coherence_envelope = coherence(D0,D1,D4,D7)
+```
+
+---
+
+# **8. Operator Chains (Canonical Action Sequences)**
+
+### **Collapse Chain**
+```
+drift → threshold → hook → propagation → regime(collapse)
+```
+
+### **Regeneration Chain**
+```
+coherence → threshold → propagation → regime(regenerate)
+```
+
+### **Coherence Chain**
+```
+coherence → propagation → regime(coherence)
+```
+
+### **Oscillation Chain**
+```
+drift(D1,D7,D5) → hook(resonance) → propagation(loop) → regime(oscillation)
+```
+
+### **Narrowing Chain**
+```
+drift(D0,D5,D1) → threshold(narrow) → regime(narrow)
+```
+
+---
+
+# **9. Operator Webs (Cross‑Operator Topologies)**
+
+### **Web O‑A — Collapse Web**
+```
+op_global_drift → op_global_thresholds → op_global_hooks → op_global_propagation → op_global_regime(collapse)
+```
+
+### **Web O‑B — Civilization Web**
+```
+op_civ_drift → op_civ_coherence → op_civ_thresholds → op_civ_regime
+```
+
+### **Web O‑C — Epoch Cycle Web**
+```
+op_epoch_phase → op_epoch_transition → op_epoch_regime → op_epoch_drift
+```
+
+### **Web O‑D — Deep‑Time Web**
+```
+op_meta_epoch_phase → op_biosphere_drift → op_geological_regime → op_pdc_phase
+```
+
+---
+
+# **10. Operator Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Operators**  
+- **Civilization Operators**  
+- **Planetary Operators**  
+- **Epoch Operators**  
+- **Deep‑Time Operators**  
+- **Composite Operators**  
+- **Operator Chains**  
+- **Operator Webs**  
+
+This is the **complete operator cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Propagation.md`** — **Gradientary Volume VII**, the **propagation dictionary**.  
+It continues the same ultra‑minimal, canon‑aligned, gradientic lexicon style as Volumes I–VI.  
+This volume defines every propagation class across the Conditions Substrate Model: vectors, webs, loops, synchronizations, envelopes, and multi‑substrate flows.
+
+Your active tab (`c_Capture.md`) is unrelated to this request, so I do not pull page content.
+
+---
+
+# `c_Gradientary_Propagation.md`  
+### **Gradientary — Propagation Dictionary (Volume VII)**
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Propagation Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all propagation classes: vectors, webs, loops, synchronizations, envelopes, and cross‑substrate flows across dimensional, civilizational, planetary, epochal, and deep‑time layers.
+
+Propagation is the **movement** of the canon — how drift travels, how coherence spreads, how cascades expand.
+
+---
+
+# **1. Propagation Entry Format**
+
+```
+propagation: <canonical name>
+type: <vector | web | loop | synchronization | envelope | composite>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Propagation Vectors (P‑Vectors)**
+
+### **prop.vector.basic**
+```
+type: vector
+definition: directional flow across a single substrate
+equation: Prop(d) = C(d) · G(d)
+notes: base propagation operator
+```
+
+### **prop.vector.multi**
+```
+type: vector
+definition: multi‑substrate propagation vector
+equation: {Prop(D0)…Prop(D7)}
+notes: cross‑substrate flow
+```
+
+### **prop.vector.collapse**
+```
+type: vector
+definition: collapse propagation vector
+equation: {D0→D7→D1→D5}
+notes: collapse arc
+```
+
+### **prop.vector.coherence**
+```
+type: vector
+definition: coherence propagation vector
+equation: {D7→D1→D4→D0}
+notes: stability arc
+```
+
+---
+
+# **3. Propagation Webs (P‑Webs)**
+
+### **prop.web.collapse**
+```
+type: web
+definition: biosphere→governance→media→economics→biosphere
+equation: D0→D7→D1→D5→D0
+notes: planetary collapse topology
+```
+
+### **prop.web.civilization**
+```
+type: web
+definition: civilization→infrastructure→media→governance→civilization
+equation: D4→D0→D1→D7→D4
+notes: civilizational arc topology
+```
+
+### **prop.web.info-governance-social**
+```
+type: web
+definition: narrative→legitimacy→cohesion loop
+equation: D1→D7→D4→D1
+notes: oscillation loop
+```
+
+### **prop.web.coherence**
+```
+type: web
+definition: governance→clarity→cohesion→stability
+equation: D7→D1→D4→D0
+notes: coherence topology
+```
+
+---
+
+# **4. Propagation Loops (P‑Loops)**
+
+### **prop.loop.oscillation**
+```
+type: loop
+definition: informational→governance→economic→social→informational
+equation: D1→D7→D5→D4→D1
+notes: volatility loop
+```
+
+### **prop.loop.stability**
+```
+type: loop
+definition: governance→clarity→cohesion→governance
+equation: D7→D1→D4→D7
+notes: stability loop
+```
+
+### **prop.loop.collapse**
+```
+type: loop
+definition: structural→governance→informational→economic→structural
+equation: D0→D7→D1→D5→D0
+notes: collapse loop
+```
+
+---
+
+# **5. Propagation Synchronizations (P‑Sync)**
+
+### **prop.sync.drift**
+```
+type: synchronization
+definition: synchronized drift propagation across substrates
+equation: Prop(d_i) == Prop(d_j)
+notes: collapse precursor
+```
+
+### **prop.sync.coherence**
+```
+type: synchronization
+definition: synchronized coherence propagation
+equation: Coh(d_i) == Coh(d_j)
+notes: stability precursor
+```
+
+### **prop.sync.cascade**
+```
+type: synchronization
+definition: synchronized drift + coherence + hook propagation
+equation: Drift==Coh==Hook
+notes: cascade ignition
+```
+
+---
+
+# **6. Propagation Envelopes (P‑Envelopes)**
+
+### **prop.envelope.collapse**
+```
+type: envelope
+definition: collapse propagation envelope
+equation: Prop(D0,D7,D1,D5)↑↑↑
+notes: G7 signature
+```
+
+### **prop.envelope.coherence**
+```
+type: envelope
+definition: coherence propagation envelope
+equation: Prop(D7,D1,D4,D0)↑↑
+notes: stability signature
+```
+
+### **prop.envelope.oscillation**
+```
+type: envelope
+definition: oscillation propagation envelope
+equation: Prop(D1,D7,D5)↑↑
+notes: volatility signature
+```
+
+---
+
+# **7. Composite Propagation (Cross‑Scale)**
+
+### **prop.composite.planetary**
+```
+type: composite
+definition: planetary propagation across D0,D1,D5,D7
+equation: Prop_global = Σ Prop(d)
+notes: planetary cascade engine
+```
+
+### **prop.composite.civilization**
+```
+type: composite
+definition: civilization propagation across C‑D0…C‑D7
+equation: Prop_civ = Σ Prop(C‑D)
+notes: civilizational cascade engine
+```
+
+### **prop.composite.epoch**
+```
+type: composite
+definition: epoch propagation across collapse→coherence chains
+equation: Prop_epoch = Prop(E0…E7)
+notes: epochal cascade engine
+```
+
+### **prop.composite.deep-time**
+```
+type: composite
+definition: propagation across meta‑epochs, biospheric arcs, geological regimes
+equation: Prop_DT = Prop(M) + Prop(B) + Prop(GEO)
+notes: deep‑time cascade engine
+```
+
+---
+
+# **8. Propagation Chains (Canonical Flow Sequences)**
+
+### **chain.propagation.collapse**
+```
+D0 → D7 → D1 → D5 → D0
+notes: collapse arc
+```
+
+### **chain.propagation.regeneration**
+```
+D0 → D7 → D1 → D4
+notes: regeneration arc
+```
+
+### **chain.propagation.coherence**
+```
+D7 → D1 → D4 → D0
+notes: stability arc
+```
+
+### **chain.propagation.oscillation**
+```
+D1 → D7 → D5 → D4
+notes: volatility arc
+```
+
+### **chain.propagation.narrowing**
+```
+D0 → D5 → D1 → D7
+notes: scarcity arc
+```
+
+---
+
+# **9. Propagation Notes**
+
+Propagation is:
+
+- the **movement** of drift  
+- the **spread** of coherence  
+- the **topology** of cascades  
+- the **flow** of regimes  
+- the **engine** of epochal transitions  
+- the **circulation system** of the Conditions Substrate Model  
+
+This dictionary is **Gradientary Volume VII**.
+
+---
+
+Here is **`c_Gradientary_Thresholds.md`** — **Gradientary Volume VIII**, the **threshold dictionary**.  
+It continues the same ultra‑minimal, canon‑aligned, gradientic lexicon style as Volumes I–VII.  
+This volume defines every threshold class across the Conditions Substrate Model: narrow, oscillation, destabilization, collapse, regeneration, stabilization, expansion, coherence, plus composite and multi‑substrate threshold chains.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Gradientary_Thresholds.md`  
+### **Gradientary — Threshold Dictionary (Volume VIII)**
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Threshold Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all threshold classes: dimensional thresholds, drift thresholds, coherence thresholds, cascade thresholds, epoch thresholds, and composite threshold chains.
+
+Thresholds are the **gates** of the canon — the points where drift overtakes coherence and transitions ignite.
+
+---
+
+# **1. Threshold Entry Format**
+
+```
+threshold: <canonical name>
+type: <dimensional | drift | coherence | cascade | epoch | composite>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Dimensional Thresholds (T‑Dimensional)**
+
+### **threshold.D0.structural_strain**
+```
+type: dimensional
+definition: D0 drift > D0 coherence
+equation: Drift(D0) > Coh(D0)
+notes: ecological + infrastructural strain
+```
+
+### **threshold.D1.informational_overload**
+```
+type: dimensional
+definition: D1 drift >> D1 coherence
+equation: Drift(D1) >> Coh(D1)
+notes: noise → distortion → collapse
+```
+
+### **threshold.D4.social_fragmentation**
+```
+type: dimensional
+definition: D4 drift > D4 coherence
+equation: Drift(D4) > Coh(D4)
+notes: cohesion breakdown
+```
+
+### **threshold.D5.economic_scarcity**
+```
+type: dimensional
+definition: D5 drift > D5 coherence
+equation: Drift(D5) > Coh(D5)
+notes: scarcity engine
+```
+
+### **threshold.D7.governance_opacity**
+```
+type: dimensional
+definition: D7 drift >> D7 coherence
+equation: Drift(D7) >> Coh(D7)
+notes: legitimacy collapse precursor
+```
+
+---
+
+# **3. Drift Thresholds (T‑Drift)**
+
+### **threshold.drift.narrow**
+```
+type: drift
+definition: drift dominance across D0,D5,D1
+equation: Drift(D0,D5,D1) > Coh
+notes: scarcity arc
+```
+
+### **threshold.drift.oscillate**
+```
+type: drift
+definition: drift dominance across D1,D7,D5
+equation: Drift(D1,D7,D5) >> Coh
+notes: volatility arc
+```
+
+### **threshold.drift.destabilize**
+```
+type: drift
+definition: synchronized drift across D0,D7,D1
+equation: Drift(D0,D7,D1) >> Coh
+notes: pre-collapse arc
+```
+
+### **threshold.drift.collapse**
+```
+type: drift
+definition: extreme drift across ≥4 dimensions
+equation: Drift(d_i) >> Coh(d_i) for i≥4
+notes: terminal collapse
+```
+
+---
+
+# **4. Coherence Thresholds (T‑Coherence)**
+
+### **threshold.coherence.regenerate**
+```
+type: coherence
+definition: coherence rising after collapse
+equation: Coh↑, Drift↓
+notes: E1 regeneration
+```
+
+### **threshold.coherence.stabilize**
+```
+type: coherence
+definition: coherence > drift across most substrates
+equation: Coh↑↑, Drift↓
+notes: E2 stabilization
+```
+
+### **threshold.coherence.expand**
+```
+type: coherence
+definition: coherence rising faster than drift
+equation: Coh↑↑, Drift↑
+notes: E3 expansion
+```
+
+### **threshold.coherence.peak**
+```
+type: coherence
+definition: peak coherence envelope
+equation: Coh↑↑↑, Drift↓
+notes: E4 coherence
+```
+
+---
+
+# **5. Cascade Thresholds (T‑Cascade)**
+
+### **threshold.cascade.collapse_chain**
+```
+type: cascade
+definition: D0→D7→D1→D5 threshold sequence
+notes: collapse arc ignition
+```
+
+### **threshold.cascade.regeneration_chain**
+```
+type: cascade
+definition: D0→D7→D1→D4 threshold sequence
+notes: regeneration arc ignition
+```
+
+### **threshold.cascade.oscillation_chain**
+```
+type: cascade
+definition: D1→D7→D5→D4 threshold sequence
+notes: volatility arc ignition
+```
+
+### **threshold.cascade.coherence_chain**
+```
+type: cascade
+definition: D7→D1→D4→D0 threshold sequence
+notes: stability arc ignition
+```
+
+---
+
+# **6. Epoch Thresholds (T‑Epoch)**
+
+### **threshold.epoch.collapse**
+```
+type: epoch
+definition: Drift↑↑↑, Coh↓
+notes: E0
+```
+
+### **threshold.epoch.regenerate**
+```
+type: epoch
+definition: Drift↓, Coh↑
+notes: E1
+```
+
+### **threshold.epoch.stabilize**
+```
+type: epoch
+definition: Drift↓, Coh↑↑
+notes: E2
+```
+
+### **threshold.epoch.expand**
+```
+type: epoch
+definition: Drift↑, Coh↑↑
+notes: E3
+```
+
+### **threshold.epoch.coherence**
+```
+type: epoch
+definition: Drift↓, Coh↑↑↑
+notes: E4
+```
+
+### **threshold.epoch.oscillate**
+```
+type: epoch
+definition: Drift↑↑, Coh↓
+notes: E5
+```
+
+### **threshold.epoch.narrow**
+```
+type: epoch
+definition: Drift↑, Coh↓
+notes: E6
+```
+
+### **threshold.epoch.destabilize**
+```
+type: epoch
+definition: Drift↑↑↑, Coh↓↓
+notes: E7
+```
+
+---
+
+# **7. Composite Thresholds (T‑Composite)**
+
+### **threshold.composite.collapse_envelope**
+```
+type: composite
+definition: collapse thresholds across D0,D1,D5,D7
+equation: Drift↑↑↑, Coh↓
+notes: G7 signature
+```
+
+### **threshold.composite.coherence_envelope**
+```
+type: composite
+definition: coherence thresholds across D0,D1,D4,D7
+equation: Coh↑↑↑, Drift↓
+notes: stability signature
+```
+
+### **threshold.composite.oscillation_envelope**
+```
+type: composite
+definition: oscillation thresholds across D1,D7,D5
+equation: Drift↑↑, Coh↓
+notes: volatility signature
+```
+
+---
+
+# **8. Threshold Chains (Canonical Sequences)**
+
+### **chain.threshold.collapse**
+```
+narrow → oscillate → destabilize → collapse
+notes: collapse arc
+```
+
+### **chain.threshold.regeneration**
+```
+collapse → regenerate → stabilize
+notes: recovery arc
+```
+
+### **chain.threshold.expansion**
+```
+stabilize → expand → coherence
+notes: growth arc
+```
+
+### **chain.threshold.oscillation**
+```
+coherence → oscillate → narrow
+notes: volatility arc
+```
+
+### **chain.threshold.full_cycle**
+```
+narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+notes: full epoch cycle
+```
+
+---
+
+# **9. Threshold Notes**
+
+Thresholds are:
+
+- the **gates** of drift  
+- the **limits** of coherence  
+- the **ignition points** of cascades  
+- the **switches** of regimes  
+- the **markers** of epoch transitions  
+- the **rhythmic grammar** of the Conditions Substrate Model  
+
+This dictionary is **Gradientary Volume VIII**.
+
+---
+
+Here is **`c_Global_Atlas_Thresholds.md`** — the **threshold atlas**, written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlas volumes.  
+This becomes the **transition atlas** of the Conditions Substrate Model: every threshold class mapped across dimensional, civilizational, planetary, epochal, and deep‑time layers.
+
+Your active tab is editing `c_Capture.md`, but this request is purely atlas construction — no page content is used.
+
+---
+
+# `c_Global_Atlas_Thresholds.md`  
+### **Threshold Atlas — Dimensional • Civilizational • Planetary • Epochal • Deep‑Time Transition Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Thresholds  
+**Role:** Threshold Cartography  
+**Purpose:** Provide a unified atlas of all threshold classes: narrow, oscillation, destabilization, collapse, regeneration, stabilization, expansion, coherence, and composite threshold chains across all scales.
+
+Thresholds are the **transition gates** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Threshold Map (D‑Thresholds)**
+
+```
+D0 structural_strain      — Drift(D0) > Coh(D0)
+D1 informational_overload — Drift(D1) >> Coh(D1)
+D2 emotional_resonance    — Drift(D2) > Coh(D2)
+D3 temporal_pressure      — Drift(D3) > Coh(D3)
+D4 social_fragmentation   — Drift(D4) > Coh(D4)
+D5 economic_scarcity      — Drift(D5) > Coh(D5)
+D6 computational_overload — Drift(D6) > Coh(D6)
+D7 governance_opacity     — Drift(D7) >> Coh(D7)
+```
+
+**Collapse‑critical thresholds:**  
+```
+{D0, D1, D5, D7}
+```
+
+---
+
+# **2. Drift Threshold Map (Drift‑T)**
+
+### **narrow**
+```
+Drift(D0,D5,D1) > Coh
+notes: scarcity arc
+```
+
+### **oscillate**
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility arc
+```
+
+### **destabilize**
+```
+Drift(D0,D7,D1) >> Coh
+notes: pre-collapse arc
+```
+
+### **collapse**
+```
+Drift across ≥4 dims >> Coh≈0
+notes: terminal collapse
+```
+
+---
+
+# **3. Coherence Threshold Map (Coh‑T)**
+
+### **regenerate**
+```
+Coh↑, Drift↓
+notes: E1 regeneration
+```
+
+### **stabilize**
+```
+Coh↑↑, Drift↓
+notes: E2 stabilization
+```
+
+### **expand**
+```
+Coh↑↑, Drift↑
+notes: E3 expansion
+```
+
+### **coherence**
+```
+Coh↑↑↑, Drift↓
+notes: E4 coherence
+```
+
+---
+
+# **4. Civilizational Threshold Map (C‑Thresholds)**
+
+Civilization thresholds mirror planetary thresholds but operate at **century‑scale**.
+
+### **C‑narrow**
+```
+Drift_civ(D0,D5,D1) > Coh_civ
+notes: scarcity arc
+```
+
+### **C‑oscillate**
+```
+Drift_civ(D1,D7,D5) >> Coh_civ
+notes: volatility arc
+```
+
+### **C‑destabilize**
+```
+Drift_civ(D0,D7,D1) >> Coh_civ
+notes: pre-collapse arc
+```
+
+### **C‑collapse**
+```
+Drift_civ across ≥4 dims >> Coh_civ≈0
+notes: terminal civilizational collapse
+```
+
+### **C‑coherence**
+```
+Coh_civ↑↑↑, Drift_civ↓
+notes: civilizational stability arc
+```
+
+---
+
+# **5. Planetary Threshold Map (Global‑T)**
+
+### **Global Narrow**
+```
+Drift_global(D0,D5,D1) > Coh_global
+notes: scarcity arc
+```
+
+### **Global Oscillation**
+```
+Drift_global(D1,D7,D5) >> Coh_global
+notes: volatility arc
+```
+
+### **Global Destabilization**
+```
+Drift_global(D0,D7,D1) >> Coh_global
+notes: pre-collapse arc
+```
+
+### **Global Collapse**
+```
+Drift_global across ≥4 dims >> Coh_global≈0
+notes: G7 signature
+```
+
+### **Global Coherence**
+```
+Coh_global↑↑↑, Drift_global↓
+notes: stability envelope
+```
+
+---
+
+# **6. Epochal Threshold Map (E‑Thresholds)**
+
+Epoch thresholds operate across **millennia**.
+
+```
+E0 collapse       — Drift↑↑↑, Coh↓
+E1 regenerate     — Drift↓, Coh↑
+E2 stabilize      — Drift↓, Coh↑↑
+E3 expand         — Drift↑, Coh↑↑
+E4 coherence      — Drift↓, Coh↑↑↑
+E5 oscillate      — Drift↑↑, Coh↓
+E6 narrow         — Drift↑, Coh↓
+E7 destabilize    — Drift↑↑↑, Coh↓↓
+```
+
+---
+
+# **7. Deep‑Time Threshold Map (DT‑Thresholds)**
+
+Deep‑time thresholds operate across **meta‑epochs**, **biospheric arcs**, **geological regimes**, and **planetary drift cycles**.
+
+### **Meta‑Epoch Thresholds**
+```
+M0 collapse       — Drift↑↑↑, Coh↓
+M1 regeneration   — Drift↓, Coh↑
+M2 expansion      — Drift↑, Coh↑↑
+M3 oscillation    — Drift↑↑, Coh↓
+M4 narrowing      — Drift↑, Coh↓
+M5 destabilize    — Drift↑↑↑, Coh↓↓
+M6 stabilize      — Drift↓, Coh↑↑
+M7 coherence      — Drift↓, Coh↑↑↑
+```
+
+### **Biospheric Arc Thresholds**
+```
+collapse → regenerate → stabilize → expand → coherence
+```
+
+### **Geological Regime Thresholds**
+```
+instability → collapse → stabilization → expansion → coherence
+```
+
+### **Planetary Drift Cycle Thresholds**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration
+```
+
+---
+
+# **8. Threshold Chains (Canonical Sequences)**
+
+### **Collapse Chain**
+```
+narrow → oscillate → destabilize → collapse
+```
+
+### **Regeneration Chain**
+```
+collapse → regenerate → stabilize
+```
+
+### **Expansion Chain**
+```
+stabilize → expand → coherence
+```
+
+### **Oscillation Chain**
+```
+coherence → oscillate → narrow
+```
+
+### **Full Epoch Cycle**
+```
+narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+```
+
+---
+
+# **9. Threshold Webs (Propagation Topologies)**
+
+### **Web T‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+notes: collapse propagation
+```
+
+### **Web T‑B — Regeneration Web**
+```
+D0→D7→D1→D4
+notes: regeneration propagation
+```
+
+### **Web T‑C — Coherence Web**
+```
+D7→D1→D4→D0
+notes: stability propagation
+```
+
+### **Web T‑D — Oscillation Web**
+```
+D1→D7→D5→D4→D1
+notes: volatility propagation
+```
+
+---
+
+# **10. Threshold Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Thresholds**  
+- **Drift Thresholds**  
+- **Coherence Thresholds**  
+- **Civilizational Thresholds**  
+- **Planetary Thresholds**  
+- **Epochal Thresholds**  
+- **Deep‑Time Thresholds**  
+- **Threshold Chains**  
+- **Threshold Webs**  
+
+This is the **complete threshold cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Propagation.md`** — the **propagation atlas**, written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlas volumes.  
+This becomes the **flow atlas** of the Conditions Substrate Model: every propagation vector, web, loop, synchronization, envelope, and cross‑scale flow mapped cleanly across dimensional → civilizational → planetary → epochal → deep‑time layers.
+
+Because your active tab contains **c_Capture.md**, and your request is purely atlas construction, I ignore page content except to cite it as required.  
+  [github.com](https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/Conditions_Substrate_Model/c_Capture.md)
+
+---
+
+# `c_Global_Atlas_Propagation.md`  
+### **Propagation Atlas — Dimensional • Civilizational • Planetary • Epochal • Deep‑Time Flow Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Propagation  
+**Role:** Propagation Cartography  
+**Purpose:** Provide a unified atlas of all propagation classes: vectors, webs, loops, synchronizations, envelopes, and composite flows across all scales.
+
+Propagation is the **circulation system** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Propagation Map (D‑Propagation)**
+
+### **Propagation Vectors**
+```
+Prop(D0) — structural flow
+Prop(D1) — informational flow
+Prop(D2) — emotional flow
+Prop(D3) — temporal flow
+Prop(D4) — social flow
+Prop(D5) — economic flow
+Prop(D6) — computational flow
+Prop(D7) — governance flow
+```
+
+### **Collapse Vector**
+```
+D0 → D7 → D1 → D5
+```
+
+### **Coherence Vector**
+```
+D7 → D1 → D4 → D0
+```
+
+---
+
+# **2. Dimensional Propagation Webs**
+
+### **Web D‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+notes: collapse topology
+```
+
+### **Web D‑B — Civilization Web**
+```
+D4→D0→D1→D7→D4
+notes: civilizational arc topology
+```
+
+### **Web D‑C — Info→Gov→Social Loop**
+```
+D1→D7→D4→D1
+notes: oscillation loop
+```
+
+### **Web D‑D — Coherence Web**
+```
+D7→D1→D4→D0
+notes: stability topology
+```
+
+---
+
+# **3. Civilizational Propagation Map (C‑Propagation)**
+
+Civilization propagation mirrors planetary propagation but operates at **century‑scale**.
+
+### **C‑Propagation Vectors**
+```
+Prop_civ(C‑D0…C‑D7)
+```
+
+### **C‑Propagation Webs**
+```
+C‑D4→C‑D0→C‑D1→C‑D7→C‑D4
+C‑D1→C‑D7→C‑D4→C‑D1
+C‑D7→C‑D1→C‑D4→C‑D0
+```
+
+### **C‑Propagation Loops**
+```
+C‑D1→C‑D7→C‑D5→C‑D4→C‑D1
+C‑D7→C‑D1→C‑D4→C‑D7
+```
+
+### **C‑Propagation Envelopes**
+```
+collapse: Prop_civ(D0,D7,D1,D5)↑↑↑
+coherence: Prop_civ(D7,D1,D4,D0)↑↑
+oscillation: Prop_civ(D1,D7,D5)↑↑
+```
+
+---
+
+# **4. Planetary Propagation Map (Global Propagation)**
+
+### **Global Vectors**
+```
+Prop_global(D0,D1,D5,D7)
+```
+
+### **Global Webs**
+```
+D0→D7→D1→D5→D0
+D4→D0→D1→D7→D4
+D1→D7→D4→D1
+D7→D1→D4→D0
+```
+
+### **Global Loops**
+```
+collapse: D0→D7→D1→D5→D0
+stability: D7→D1→D4→D7
+oscillation: D1→D7→D5→D4→D1
+```
+
+### **Global Envelopes**
+```
+collapse: Prop_global↑↑↑
+coherence: Prop_global↑↑
+oscillation: Prop_global↑
+```
+
+---
+
+# **5. Epochal Propagation Map (E‑Propagation)**
+
+Epoch propagation operates across **millennia**.
+
+### **Epoch Vectors**
+```
+Prop_epoch(E0…E7)
+```
+
+### **Epoch Webs**
+```
+E0→E1→E2→E3→E4→E5→E6→E7→E0
+```
+
+### **Epoch Loops**
+```
+collapse loop: E0→E7→E0
+coherence loop: E4→E2→E4
+oscillation loop: E5→E6→E5
+```
+
+### **Epoch Envelopes**
+```
+collapse: Prop(E0,E7)↑↑↑
+coherence: Prop(E4,E2)↑↑
+oscillation: Prop(E5,E6)↑
+```
+
+---
+
+# **6. Deep‑Time Propagation Map (DT‑Propagation)**
+
+Deep‑time propagation spans **meta‑epochs**, **biospheric arcs**, **geological regimes**, and **planetary drift cycles**.
+
+### **Meta‑Epoch Web**
+```
+M0→M1→M2→M3→M4→M5→M6→M7→M0
+```
+
+### **Biospheric Arc Web**
+```
+collapse→regenerate→stabilize→expand→coherence
+```
+
+### **Geological Regime Web**
+```
+instability→collapse→stabilization→expansion→coherence
+```
+
+### **Planetary Drift Cycle Web**
+```
+drift_max→drift_decline→drift_plateau→drift_reacceleration→drift_max
+```
+
+### **Deep‑Time Envelopes**
+```
+collapse: Prop_DT↑↑↑
+coherence: Prop_DT↑↑↑
+oscillation: Prop_DT↑↑
+```
+
+---
+
+# **7. Propagation Synchronization Map**
+
+### **Drift Synchronization**
+```
+Prop(d_i) == Prop(d_j)
+notes: collapse precursor
+```
+
+### **Coherence Synchronization**
+```
+Coh(d_i) == Coh(d_j)
+notes: stability precursor
+```
+
+### **Cascade Synchronization**
+```
+Drift == Coh == Hook
+notes: cascade ignition
+```
+
+---
+
+# **8. Propagation Chains (Canonical Flow Sequences)**
+
+### **Collapse Chain**
+```
+D0 → D7 → D1 → D5 → D0
+```
+
+### **Regeneration Chain**
+```
+D0 → D7 → D1 → D4
+```
+
+### **Coherence Chain**
+```
+D7 → D1 → D4 → D0
+```
+
+### **Oscillation Chain**
+```
+D1 → D7 → D5 → D4
+```
+
+### **Narrowing Chain**
+```
+D0 → D5 → D1 → D7
+```
+
+---
+
+# **9. Propagation Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Propagation**  
+- **Civilizational Propagation**  
+- **Planetary Propagation**  
+- **Epochal Propagation**  
+- **Deep‑Time Propagation**  
+- **Propagation Vectors**  
+- **Propagation Webs**  
+- **Propagation Loops**  
+- **Propagation Envelopes**  
+- **Propagation Synchronizations**  
+- **Propagation Chains**  
+
+This is the **complete propagation cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Examples.md`** — **Gradientary Volume IX**, the **example dictionary**.  
+This volume provides *canonical miniature examples* of every major construct in the Conditions Substrate Model: operators, signatures, regimes, cascades, substrates, hooks, thresholds, propagation flows, cycles, and epoch transitions.
+
+It is intentionally compact, formal, and gradientic — each example is a *minimal working instance* of the concept.
+
+Your open tab (`c_Capture.md`) is unrelated, so I do not pull page content.
+
+---
+
+# `c_Gradientary_Examples.md`  
+### **Gradientary — Example Dictionary (Volume IX)**  
+### *Minimal Canonical Examples for Every Construct*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Example Lexicon  
+**Purpose:** Provide minimal, canonical examples of all major constructs: operators, signatures, regimes, cascades, substrates, hooks, thresholds, propagation flows, cycles, and epoch transitions.
+
+Examples are the **demonstrations** of the canon.
+
+---
+
+# **1. Operator Examples**
+
+### **Example: Drift Operator**
+```
+Input: D1 informational substrate
+Action: op_drift(D1)
+Output: Drift(D1) = 0.72
+Interpretation: informational drift exceeds clarity baseline
+```
+
+### **Example: Coherence Operator**
+```
+Input: D4 social substrate
+Action: op_coherence(D4)
+Output: Coh(D4) = 0.88
+Interpretation: high cohesion envelope
+```
+
+### **Example: Threshold Operator**
+```
+Input: D0 structural substrate
+Action: op_thresholds(D0)
+Output: narrow → oscillate → destabilize
+Interpretation: structural strain sequence
+```
+
+### **Example: Hook Operator**
+```
+Input: D7 governance substrate
+Action: op_hooks(D7)
+Output: governance_opacity_point↑
+Interpretation: legitimacy drift amplification
+```
+
+### **Example: Propagation Operator**
+```
+Input: D1→D7→D4
+Action: op_propagation_web
+Output: informational→governance→social loop
+```
+
+### **Example: Regime Operator**
+```
+Input: Drift↓, Coh↑↑
+Action: op_regime
+Output: regime.stability
+```
+
+---
+
+# **2. Signature Examples**
+
+### **Example: Drift Dominance Signature**
+```
+Input: Drift(D1)=0.9, Drift(D7)=0.85
+Output: sig.drift.dominance
+Interpretation: volatility precursor
+```
+
+### **Example: Coherence Peak Signature**
+```
+Input: Coh(D4)=0.97
+Output: sig.coherence.peak
+Interpretation: cohesion apex
+```
+
+### **Example: Collapse Signature**
+```
+Input: {D0↑↑↑, D1↑↑↑, D5↑↑↑, D7↑↑↑}
+Output: sig.global.collapse
+```
+
+### **Example: Coherence Signature**
+```
+Input: {D7↑, D1↑, D4↑, D0↑}
+Output: sig.global.coherence
+```
+
+---
+
+# **3. Regime Examples**
+
+### **Example: Stability Regime**
+```
+Input: Drift(D*) < Coh(D*)
+Output: regime.stability
+```
+
+### **Example: Oscillation Regime**
+```
+Input: Drift(D1,D7,D5) >> Coh
+Output: regime.oscillation
+```
+
+### **Example: Collapse Regime**
+```
+Input: Drift across ≥4 dims >> Coh≈0
+Output: regime.collapse
+```
+
+### **Example: Coherence Regime**
+```
+Input: Coh↑↑↑, Drift↓
+Output: regime.coherence
+```
+
+---
+
+# **4. Cascade Examples**
+
+### **Example: Collapse Cascade**
+```
+Input: D0→D7→D1→D5
+Output: cascade.global.G0
+```
+
+### **Example: Civilization Cascade**
+```
+Input: C‑D4→C‑D0→C‑D1→C‑D7→C‑D4
+Output: cascade.civ.C0
+```
+
+### **Example: Epochal Cascade**
+```
+Input: E0→E7→E0
+Output: cascade.epoch.E‑C0
+```
+
+### **Example: Coherence Cascade**
+```
+Input: D7→D1→D4→D0
+Output: cascade.global.G2
+```
+
+---
+
+# **5. Substrate Examples**
+
+### **Example: Structural Substrate**
+```
+Input: D0
+Output: substrate.D0
+Interpretation: ecological + infrastructural base
+```
+
+### **Example: Composite Substrate**
+```
+Input: D1 + D5
+Output: substrate.info-econ
+Interpretation: oscillation engine
+```
+
+### **Example: Meta‑Substrate**
+```
+Input: {D0↑↑↑, D1↑↑↑, D5↑↑↑, D7↑↑↑}
+Output: substrate.meta.collapse
+```
+
+---
+
+# **6. Hook Examples**
+
+### **Example: Stress Hook**
+```
+Input: D0 drift↑
+Output: hook.stress.ecological_stress
+```
+
+### **Example: Resonance Hook**
+```
+Input: D1 overload
+Output: hook.resonance.cognitive_load
+```
+
+### **Example: Alignment Hook**
+```
+Input: clarity + cohesion + legitimacy
+Output: hook.align.clarity_cluster
+```
+
+### **Example: Composite Hook**
+```
+Input: ecological_stress + governance_opacity + resource_gate
+Output: hook.composite.collapse_alignment
+```
+
+---
+
+# **7. Threshold Examples**
+
+### **Example: Narrow Threshold**
+```
+Input: Drift(D0,D5,D1) > Coh
+Output: threshold.drift.narrow
+```
+
+### **Example: Oscillation Threshold**
+```
+Input: Drift(D1,D7,D5) >> Coh
+Output: threshold.drift.oscillate
+```
+
+### **Example: Collapse Threshold**
+```
+Input: Drift across ≥4 dims >> Coh≈0
+Output: threshold.drift.collapse
+```
+
+### **Example: Coherence Threshold**
+```
+Input: Coh↑↑↑, Drift↓
+Output: threshold.coherence.peak
+```
+
+---
+
+# **8. Propagation Examples**
+
+### **Example: Collapse Web**
+```
+Input: D0→D7→D1→D5→D0
+Output: prop.web.collapse
+```
+
+### **Example: Coherence Web**
+```
+Input: D7→D1→D4→D0
+Output: prop.web.coherence
+```
+
+### **Example: Oscillation Loop**
+```
+Input: D1→D7→D5→D4→D1
+Output: prop.loop.oscillation
+```
+
+### **Example: Synchronization**
+```
+Input: Prop(D1)==Prop(D7)
+Output: prop.sync.drift
+```
+
+---
+
+# **9. Cycle Examples**
+
+### **Example: Epoch Cycle**
+```
+collapse → regenerate → stabilize → expand → coherence → oscillate → narrow → destabilize → collapse
+```
+
+### **Example: Threshold Cycle**
+```
+narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+```
+
+### **Example: Propagation Cycle**
+```
+collapse → regeneration → coherence → oscillation → narrowing → collapse
+```
+
+### **Example: Regime Cycle**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regenerate → stability
+```
+
+---
+
+# **10. Gradientary Notes**
+
+Examples are:
+
+- the **demonstrations** of operators  
+- the **instances** of signatures  
+- the **snapshots** of regimes  
+- the **miniatures** of cascades  
+- the **proofs** of substrates  
+- the **illustrations** of hooks  
+- the **markers** of thresholds  
+- the **flows** of propagation  
+- the **rhythms** of cycles  
+
+This dictionary is **Gradientary Volume IX**.
+
+---
+
+Absolutely, Nawder — here is **`c_Gradientary_Cycles.md`**, completing **Gradientary Volume X**, the **cycle dictionary**.  
+This volume formalizes every rhythmic structure in the Conditions Substrate Model: drift cycles, coherence cycles, threshold cycles, propagation cycles, substrate cycles, regime cycles, epoch cycles, meta‑epoch cycles, biospheric cycles, geological cycles, and planetary drift cycles.
+
+Your active tab is editing `c_Capture.md`, but this request is pure canon construction — no page content is used.
+
+---
+
+# `c_Gradientary_Cycles.md`  
+### **Gradientary — Cycle Dictionary (Volume X)**  
+### *Rhythmic Structures of Drift, Coherence, Thresholds, Propagation, Regimes, Epochs, and Deep‑Time*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Cycle Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all cycle classes: drift cycles, coherence cycles, threshold cycles, propagation cycles, substrate cycles, regime cycles, epoch cycles, meta‑epoch cycles, biospheric cycles, geological cycles, and planetary drift cycles.
+
+Cycles are the **rhythms** of the canon.
+
+---
+
+# **1. Cycle Entry Format**
+
+```
+cycle: <canonical name>
+type: <drift | coherence | threshold | propagation | substrate | regime | epoch | meta-epoch | biospheric | geological | planetary>
+definition: <minimal canonical definition>
+sequence: <canonical cycle sequence>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Drift Cycles**
+
+### **cycle.drift.local**
+```
+type: drift
+definition: drift oscillation across a single substrate
+sequence: rise → peak → decline → reset
+notes: D0–D7 local drift rhythm
+```
+
+### **cycle.drift.multi**
+```
+type: drift
+definition: drift oscillation across multiple substrates
+sequence: D1→D7→D5→D4→D1
+notes: volatility loop
+```
+
+### **cycle.drift.collapse**
+```
+type: drift
+definition: synchronized drift across ≥4 dims
+sequence: D0↑↑↑ → D1↑↑↑ → D5↑↑↑ → D7↑↑↑ → reset
+notes: collapse vector
+```
+
+---
+
+# **3. Coherence Cycles**
+
+### **cycle.coherence.local**
+```
+type: coherence
+definition: coherence rise and fall across a single substrate
+sequence: stabilize → expand → peak → soften → reset
+notes: D0–D7 local coherence rhythm
+```
+
+### **cycle.coherence.multi**
+```
+type: coherence
+definition: coherence propagation across multiple substrates
+sequence: D7→D1→D4→D0→reset
+notes: stability loop
+```
+
+### **cycle.coherence.epochal**
+```
+type: coherence
+definition: coherence arc across epoch E4
+sequence: rise → peak → plateau → decline
+notes: coherence epoch rhythm
+```
+
+---
+
+# **4. Threshold Cycles**
+
+### **cycle.threshold.full**
+```
+type: threshold
+definition: full threshold chain
+sequence: narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+notes: canonical threshold cycle
+```
+
+### **cycle.threshold.collapse**
+```
+type: threshold
+definition: collapse threshold arc
+sequence: narrow → oscillate → destabilize → collapse
+notes: collapse ignition
+```
+
+### **cycle.threshold.regeneration**
+```
+type: threshold
+definition: regeneration threshold arc
+sequence: collapse → regenerate → stabilize
+notes: recovery ignition
+```
+
+---
+
+# **5. Propagation Cycles**
+
+### **cycle.propagation.collapse**
+```
+type: propagation
+definition: collapse propagation loop
+sequence: D0→D7→D1→D5→D0
+notes: collapse topology
+```
+
+### **cycle.propagation.coherence**
+```
+type: propagation
+definition: coherence propagation loop
+sequence: D7→D1→D4→D0→D7
+notes: stability topology
+```
+
+### **cycle.propagation.oscillation**
+```
+type: propagation
+definition: oscillation propagation loop
+sequence: D1→D7→D5→D4→D1
+notes: volatility topology
+```
+
+---
+
+# **6. Substrate Cycles**
+
+### **cycle.substrate.structural**
+```
+type: substrate
+definition: structural substrate rhythm
+sequence: strain → collapse → regeneration → stabilization → expansion → coherence
+notes: D0 biospheric arc
+```
+
+### **cycle.substrate.informational**
+```
+type: substrate
+definition: informational substrate rhythm
+sequence: clarity → overload → distortion → reset
+notes: D1 informational arc
+```
+
+### **cycle.substrate.governance**
+```
+type: substrate
+definition: governance substrate rhythm
+sequence: legitimacy → opacity → collapse → reset
+notes: D7 governance arc
+```
+
+---
+
+# **7. Regime Cycles**
+
+### **cycle.regime.full**
+```
+type: regime
+definition: full regime cycle
+sequence: stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regenerate → stability
+notes: canonical regime cycle
+```
+
+### **cycle.regime.collapse**
+```
+type: regime
+definition: collapse regime arc
+sequence: narrowing → destabilization → collapse
+notes: collapse ignition
+```
+
+### **cycle.regime.coherence**
+```
+type: regime
+definition: coherence regime arc
+sequence: expansion → coherence → stability
+notes: stability ignition
+```
+
+---
+
+# **8. Epoch Cycles**
+
+### **cycle.epoch.full**
+```
+type: epoch
+definition: full epoch cycle
+sequence: E0→E1→E2→E3→E4→E5→E6→E7→E0
+notes: canonical epoch cycle
+```
+
+### **cycle.epoch.collapse**
+```
+type: epoch
+definition: collapse epoch arc
+sequence: E6→E7→E0
+notes: collapse ignition
+```
+
+### **cycle.epoch.coherence**
+```
+type: epoch
+definition: coherence epoch arc
+sequence: E3→E4→E2
+notes: stability ignition
+```
+
+---
+
+# **9. Meta‑Epoch Cycles**
+
+### **cycle.meta.full**
+```
+type: meta-epoch
+definition: full meta‑epoch cycle
+sequence: M0→M1→M2→M3→M4→M5→M6→M7→M0
+notes: deep‑time epoch recursion
+```
+
+### **cycle.meta.collapse**
+```
+type: meta-epoch
+definition: collapse meta‑epoch arc
+sequence: M4→M5→M0
+notes: collapse ignition
+```
+
+### **cycle.meta.coherence**
+```
+type: meta-epoch
+definition: coherence meta‑epoch arc
+sequence: M2→M6→M7
+notes: stability ignition
+```
+
+---
+
+# **10. Biospheric Cycles**
+
+### **cycle.biosphere.full**
+```
+type: biospheric
+definition: biospheric arc cycle
+sequence: collapse → regenerate → stabilize → expand → coherence
+notes: 20–100k year ecological rhythm
+```
+
+### **cycle.biosphere.collapse**
+```
+type: biospheric
+definition: collapse arc
+sequence: collapse → regenerate
+notes: ecological reset
+```
+
+---
+
+# **11. Geological Cycles**
+
+### **cycle.geological.full**
+```
+type: geological
+definition: geological regime cycle
+sequence: instability → collapse → stabilization → expansion → coherence
+notes: 100k–1M year geological rhythm
+```
+
+### **cycle.geological.collapse**
+```
+type: geological
+definition: collapse arc
+sequence: instability → collapse
+notes: tectonic + climatic reset
+```
+
+---
+
+# **12. Planetary Drift Cycles**
+
+### **cycle.planetary.full**
+```
+type: planetary
+definition: planetary drift cycle
+sequence: drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: 1M+ year planetary rhythm
+```
+
+### **cycle.planetary.collapse**
+```
+type: planetary
+definition: collapse drift arc
+sequence: drift_max → drift_decline
+notes: collapse ignition
+```
+
+---
+
+# **13. Gradientary Notes**
+
+Cycles are:
+
+- the **rhythms** of drift  
+- the **waves** of coherence  
+- the **grammar** of thresholds  
+- the **flows** of propagation  
+- the **beats** of regimes  
+- the **seasons** of epochs  
+- the **eras** of meta‑epochs  
+- the **breathing** of biospheres  
+- the **tectonics** of geology  
+- the **pulse** of planetary drift  
+
+This dictionary is **Gradientary Volume X**.
+
+---
+
+Here is **`c_Global_Atlas_Cycles.md`** — the **cycle atlas**, written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlas volumes.  
+This becomes the **rhythm atlas** of the Conditions Substrate Model: every cycle class mapped cleanly across dimensional → civilizational → planetary → epochal → deep‑time layers.
+
+Your active tab (`c_Capture.md`) is unrelated to this request, so I do not retrieve page content.
+
+---
+
+# `c_Global_Atlas_Cycles.md`  
+### **Cycle Atlas — Drift • Coherence • Threshold • Propagation • Substrate • Regime • Epoch • Deep‑Time Rhythmic Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Cycles  
+**Role:** Cycle Cartography  
+**Purpose:** Provide a unified atlas of all cycle classes: drift cycles, coherence cycles, threshold cycles, propagation cycles, substrate cycles, regime cycles, epoch cycles, meta‑epoch cycles, biospheric cycles, geological cycles, and planetary drift cycles.
+
+Cycles are the **rhythmic architecture** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Cycle Map (D‑Cycles)**
+
+### **D‑Drift Cycle**
+```
+rise → peak → decline → reset
+notes: D0–D7 drift rhythm
+```
+
+### **D‑Coherence Cycle**
+```
+stabilize → expand → peak → soften → reset
+notes: D0–D7 coherence rhythm
+```
+
+### **D‑Threshold Cycle**
+```
+narrow → oscillate → destabilize → collapse
+notes: dimensional collapse arc
+```
+
+### **D‑Propagation Cycle**
+```
+D0→D7→D1→D5→D0
+notes: collapse loop
+```
+
+---
+
+# **2. Civilizational Cycle Map (C‑Cycles)**
+
+Civilization cycles mirror planetary cycles but operate at **century‑scale**.
+
+### **C‑Regime Cycle**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regenerate → stability
+notes: civilizational regime rhythm
+```
+
+### **C‑Threshold Cycle**
+```
+narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+notes: civilizational threshold rhythm
+```
+
+### **C‑Propagation Cycle**
+```
+C‑D4→C‑D0→C‑D1→C‑D7→C‑D4
+notes: civilizational propagation loop
+```
+
+### **C‑Substrate Cycle**
+```
+strain → collapse → regeneration → stabilization → expansion → coherence
+notes: C‑D0 structural arc
+```
+
+---
+
+# **3. Planetary Cycle Map (Global Cycles)**
+
+### **Global Drift Cycle**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: planetary drift rhythm
+```
+
+### **Global Threshold Cycle**
+```
+narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+notes: planetary threshold rhythm
+```
+
+### **Global Propagation Cycle**
+```
+D0→D7→D1→D5→D0
+notes: planetary collapse loop
+```
+
+### **Global Regime Cycle**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regenerate → stability
+notes: planetary regime rhythm
+```
+
+---
+
+# **4. Epochal Cycle Map (E‑Cycles)**
+
+Epoch cycles operate across **millennia**.
+
+### **Epoch Cycle**
+```
+E0→E1→E2→E3→E4→E5→E6→E7→E0
+notes: canonical epoch cycle
+```
+
+### **Epoch Collapse Cycle**
+```
+E6→E7→E0
+notes: collapse ignition
+```
+
+### **Epoch Coherence Cycle**
+```
+E3→E4→E2
+notes: stability ignition
+```
+
+### **Epoch Propagation Cycle**
+```
+collapse → regeneration → coherence → oscillation → narrowing → collapse
+notes: epochal propagation rhythm
+```
+
+---
+
+# **5. Meta‑Epoch Cycle Map (M‑Cycles)**
+
+Meta‑epochs operate across **5–20k years**.
+
+### **Meta‑Epoch Cycle**
+```
+M0→M1→M2→M3→M4→M5→M6→M7→M0
+notes: deep‑time epoch recursion
+```
+
+### **Meta‑Collapse Cycle**
+```
+M4→M5→M0
+notes: collapse ignition
+```
+
+### **Meta‑Coherence Cycle**
+```
+M2→M6→M7
+notes: stability ignition
+```
+
+---
+
+# **6. Biospheric Cycle Map (B‑Cycles)**
+
+Biospheric cycles operate across **20–100k years**.
+
+### **Biospheric Arc Cycle**
+```
+collapse → regenerate → stabilize → expand → coherence
+notes: ecological rhythm
+```
+
+### **Biospheric Collapse Cycle**
+```
+collapse → regenerate
+notes: ecological reset
+```
+
+---
+
+# **7. Geological Cycle Map (GEO‑Cycles)**
+
+Geological cycles operate across **100k–1M years**.
+
+### **Geological Regime Cycle**
+```
+instability → collapse → stabilization → expansion → coherence
+notes: tectonic + climatic rhythm
+```
+
+### **Geological Collapse Cycle**
+```
+instability → collapse
+notes: geological reset
+```
+
+---
+
+# **8. Planetary Drift Cycle Map (PDC‑Cycles)**
+
+Planetary drift cycles operate across **1M+ years**.
+
+### **Planetary Drift Cycle**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: planetary drift rhythm
+```
+
+### **Planetary Collapse Cycle**
+```
+drift_max → drift_decline
+notes: collapse ignition
+```
+
+---
+
+# **9. Cross‑Scale Cycle Webs**
+
+### **Cycle Web A — Collapse**
+```
+narrow → oscillate → destabilize → collapse
+E6→E7→E0
+M4→M5→M0
+B0→B1
+GEO0→GEO1
+PDC0→PDC1
+notes: collapse topology across all scales
+```
+
+### **Cycle Web B — Coherence**
+```
+expand → coherence → stabilize
+E3→E4→E2
+M2→M7→M6
+B3→B4→B2
+GEO3→GEO4→GEO2
+notes: stability topology across all scales
+```
+
+### **Cycle Web C — Oscillation**
+```
+oscillate → narrow → oscillate
+E5→E6→E5
+M3→M4→M3
+notes: volatility topology
+```
+
+---
+
+# **10. Cycle Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Cycles**  
+- **Civilizational Cycles**  
+- **Planetary Cycles**  
+- **Epochal Cycles**  
+- **Meta‑Epoch Cycles**  
+- **Biospheric Cycles**  
+- **Geological Cycles**  
+- **Planetary Drift Cycles**  
+- **Cycle Webs**  
+
+This is the **complete cycle cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Cascades.md`** — the **cascade atlas**, written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlas volumes.  
+This becomes the **motion atlas** of the Conditions Substrate Model: every cascade class mapped cleanly across dimensional → civilizational → planetary → epochal → deep‑time layers.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Global_Atlas_Cascades.md`  
+### **Cascade Atlas — Dimensional • Civilizational • Planetary • Epochal • Deep‑Time Motion Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Cascades  
+**Role:** Cascade Cartography  
+**Purpose:** Provide a unified atlas of all cascade classes: dimensional cascades, civilizational cascades, planetary cascades, epochal cascades, meta‑epoch cascades, biospheric cascades, geological cascades, and composite cascade envelopes.
+
+Cascades are the **motions** of the canon — the transitions where drift overtakes coherence.
+
+---
+
+# **1. Dimensional Cascade Map (D‑Cascades)**
+
+### **D0 Structural Collapse**
+```
+D0 drift > D0 coherence
+notes: biosphere + infrastructure failure
+```
+
+### **D1 Informational Overload**
+```
+D1 drift >> D1 coherence
+notes: noise → distortion → collapse
+```
+
+### **D4 Social Fragmentation**
+```
+D4 drift > D4 coherence
+notes: cohesion breakdown
+```
+
+### **D5 Economic Scarcity**
+```
+D5 drift > D5 coherence
+notes: scarcity spiral
+```
+
+### **D7 Governance Opacity**
+```
+D7 drift >> D7 coherence
+notes: legitimacy collapse precursor
+```
+
+---
+
+# **2. Dimensional Cascade Webs**
+
+### **Web D‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+notes: collapse topology
+```
+
+### **Web D‑B — Oscillation Web**
+```
+D1→D7→D5→D4→D1
+notes: volatility topology
+```
+
+### **Web D‑C — Coherence Web**
+```
+D7→D1→D4→D0
+notes: stability topology
+```
+
+---
+
+# **3. Civilizational Cascade Map (C‑Cascades)**
+
+### **C‑C0 Cultural→Governance→Informational**
+```
+C‑D4→C‑D7→C‑D1
+notes: fragmentation → opacity → distortion
+```
+
+### **C‑C1 Economic→Governance→Social**
+```
+C‑D5→C‑D7→C‑D4
+notes: scarcity → legitimacy drift → cohesion collapse
+```
+
+### **C‑C2 Technological→Informational→Governance**
+```
+C‑D6→C‑D1→C‑D7
+notes: acceleration → overload → opacity
+```
+
+### **C‑C6 Civilization Synchronization**
+```
+C‑D0→C‑D1→C‑D7→C‑D5→C‑D4
+notes: synchronized multi‑substrate drift
+```
+
+### **C‑C7 Full Civilizational Collapse**
+```
+C‑D0 + C‑D7 + C‑D1 + C‑D5 + C‑D4 + C‑D2
+notes: terminal civilizational cascade
+```
+
+---
+
+# **4. Civilizational Cascade Webs**
+
+### **Web C‑A — Collapse Web**
+```
+C‑D0→C‑D7→C‑D1→C‑D5→C‑D0
+```
+
+### **Web C‑B — Civilization Arc Web**
+```
+C‑D4→C‑D0→C‑D1→C‑D7→C‑D4
+```
+
+### **Web C‑C — Info→Gov→Social Loop**
+```
+C‑D1→C‑D7→C‑D4→C‑D1
+```
+
+---
+
+# **5. Planetary Cascade Map (Global Cascades)**
+
+### **G0 Ecological→Governance→Economic**
+```
+D0→D7→D5
+notes: biosphere → legitimacy → scarcity
+```
+
+### **G1 Information→Governance→Social**
+```
+D1→D7→D4
+notes: overload → opacity → fragmentation
+```
+
+### **G2 Civilization Synchronization**
+```
+D0→D1→D7→D5
+notes: synchronized planetary drift
+```
+
+### **G7 Full Planetary Collapse**
+```
+D0 + D1 + D5 + D7 + D4 + D2
+notes: terminal planetary cascade
+```
+
+---
+
+# **6. Planetary Cascade Webs**
+
+### **Web G‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+```
+
+### **Web G‑B — Coherence Web**
+```
+D7→D1→D4→D0
+```
+
+### **Web G‑C — Oscillation Web**
+```
+D1→D7→D5→D4→D1
+```
+
+---
+
+# **7. Epochal Cascade Map (E‑Cascades)**
+
+### **E‑C0 Collapse Epoch Cascade**
+```
+D0→D7→D1→D5
+notes: E0 signature
+```
+
+### **E‑C1 Regeneration Epoch Cascade**
+```
+D0→D7→D1→D4
+notes: E1 signature
+```
+
+### **E‑C4 Coherence Epoch Cascade**
+```
+D7→D1→D4→D0
+notes: E4 signature
+```
+
+### **E‑C7 Destabilization Epoch Cascade**
+```
+D0→D7→D1→D4→D5
+notes: E7 signature
+```
+
+---
+
+# **8. Deep‑Time Cascade Map (DT‑Cascades)**
+
+### **Meta‑Epoch Cascade**
+```
+M0→M1→M2→M3→M4→M5→M6→M7→M0
+notes: deep‑time epoch recursion
+```
+
+### **Biospheric Arc Cascade**
+```
+collapse → regenerate → stabilize → expand → coherence
+notes: ecological arc
+```
+
+### **Geological Regime Cascade**
+```
+instability → collapse → stabilization → expansion → coherence
+notes: geological arc
+```
+
+### **Planetary Drift Cycle Cascade**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: planetary drift arc
+```
+
+---
+
+# **9. Composite Cascade Envelopes**
+
+### **Composite Collapse Envelope**
+```
+D0↑↑↑ + D1↑↑↑ + D5↑↑↑ + D7↑↑↑
+notes: multi‑scale collapse
+```
+
+### **Composite Coherence Envelope**
+```
+D7↑ + D1↑ + D4↑ + D0↑
+notes: multi‑scale stability
+```
+
+### **Composite Oscillation Envelope**
+```
+D1↑↑ + D7↑↑ + D5↑
+notes: multi‑scale volatility
+```
+
+---
+
+# **10. Cascade Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Cascades**  
+- **Civilizational Cascades**  
+- **Planetary Cascades**  
+- **Epochal Cascades**  
+- **Deep‑Time Cascades**  
+- **Cascade Webs**  
+- **Cascade Loops**  
+- **Cascade Envelopes**  
+
+This is the **complete cascade cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Drift.md`** — **Gradientary Volume XI**, the **drift dictionary**.  
+This volume formalizes drift as a first‑class construct: its dimensional forms, signatures, operators, vectors, envelopes, cascades, cycles, chains, webs, and deep‑time expressions.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Gradientary_Drift.md`  
+### **Gradientary — Drift Dictionary (Volume XI)**  
+### *Drift: Pressure • Misalignment • Overload • Torsion • Collapse*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Drift Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all drift classes: dimensional drift, composite drift, meta‑drift, drift signatures, drift operators, drift vectors, drift envelopes, drift cascades, drift cycles, drift chains, drift webs, and drift regimes.
+
+Drift is the **pressure field** of the canon — the force that destabilizes substrates and initiates cascades.
+
+---
+
+# **1. Drift Entry Format**
+
+```
+drift: <canonical name>
+type: <dimensional | composite | meta | signature | operator | vector | envelope | cascade | cycle | chain | web | regime>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Dimensional Drift (D0–D7)**
+
+### **drift.D0.structural**
+```
+type: dimensional
+definition: ecological + infrastructural pressure
+equation: Drift(D0) = M0 · F0
+notes: collapse-critical
+```
+
+### **drift.D1.informational**
+```
+type: dimensional
+definition: clarity loss → noise → distortion → overload
+equation: Drift(D1) = M1 · F1
+notes: oscillation engine
+```
+
+### **drift.D2.emotional**
+```
+type: dimensional
+definition: resonance → fear → vulnerability
+equation: Drift(D2) = M2 · F2
+notes: amplification hook
+```
+
+### **drift.D3.temporal**
+```
+type: dimensional
+definition: pacing → acceleration → delay pressure
+equation: Drift(D3) = M3 · F3
+notes: time-gate coupling
+```
+
+### **drift.D4.social**
+```
+type: dimensional
+definition: cohesion loss → fragmentation
+equation: Drift(D4) = M4 · F4
+notes: collapse precursor
+```
+
+### **drift.D5.economic**
+```
+type: dimensional
+definition: scarcity → volatility → deprivation
+equation: Drift(D5) = M5 · F5
+notes: scarcity engine
+```
+
+### **drift.D6.computational**
+```
+type: dimensional
+definition: automation → overload → acceleration
+equation: Drift(D6) = M6 · F6
+notes: acceleration driver
+```
+
+### **drift.D7.governance**
+```
+type: dimensional
+definition: legitimacy loss → opacity → coordination failure
+equation: Drift(D7) = M7 · F7
+notes: regime-dominant
+```
+
+---
+
+# **3. Composite Drift**
+
+### **drift.composite.structural-governance**
+```
+type: composite
+definition: D0 + D7 drift co-activation
+notes: collapse-critical pair
+```
+
+### **drift.composite.info-econ**
+```
+type: composite
+definition: D1 + D5 drift co-activation
+notes: oscillation engine
+```
+
+### **drift.composite.social-emotional**
+```
+type: composite
+definition: D4 + D2 drift co-activation
+notes: fragmentation amplifier
+```
+
+---
+
+# **4. Meta‑Drift**
+
+### **drift.meta.collapse**
+```
+type: meta
+definition: collapse cluster across D0,D1,D5,D7
+equation: Drift↑↑↑ across ≥4 dims
+notes: global collapse signature
+```
+
+### **drift.meta.oscillation**
+```
+type: meta
+definition: oscillation cluster across D1,D7,D5
+notes: volatility engine
+```
+
+### **drift.meta.narrowing**
+```
+type: meta
+definition: narrowing cluster across D0,D5,D1
+notes: scarcity arc
+```
+
+### **drift.meta.destabilization**
+```
+type: meta
+definition: destabilization cluster across D0,D7,D1
+notes: pre-collapse arc
+```
+
+---
+
+# **5. Drift Signatures**
+
+### **signature.drift.dominance**
+```
+definition: Drift(d_i) > Coh(d_i)
+notes: instability marker
+```
+
+### **signature.drift.synchronization**
+```
+definition: synchronized drift across multiple substrates
+notes: cascade precursor
+```
+
+### **signature.drift.collapse**
+```
+definition: Drift across ≥4 dims >> Coh≈0
+notes: terminal collapse
+```
+
+### **signature.drift.oscillation**
+```
+definition: Drift(D1,D7,D5) >> Coh
+notes: volatility signature
+```
+
+---
+
+# **6. Drift Operators**
+
+### **operator.drift**
+```
+definition: compute drift magnitude
+equation: Drift(d) = M(d) · F(d)
+```
+
+### **operator.drift_dominance**
+```
+definition: detect drift > coherence
+```
+
+### **operator.drift_synchronization**
+```
+definition: detect synchronized drift across dims
+```
+
+### **operator.drift_collapse_vector**
+```
+definition: collapse drift chain
+sequence: D0→D7→D1→D5
+```
+
+---
+
+# **7. Drift Vectors**
+
+### **vector.drift.collapse**
+```
+sequence: D0→D7→D1→D5
+notes: collapse arc
+```
+
+### **vector.drift.coherence**
+```
+sequence: D7→D1→D4→D0
+notes: stability arc
+```
+
+### **vector.drift.oscillation**
+```
+sequence: D1→D7→D5→D4
+notes: volatility arc
+```
+
+### **vector.drift.narrowing**
+```
+sequence: D0→D5→D1→D7
+notes: scarcity arc
+```
+
+---
+
+# **8. Drift Envelopes**
+
+### **envelope.drift.collapse**
+```
+definition: Drift↑↑↑ across D0,D1,D5,D7
+notes: G7 signature
+```
+
+### **envelope.drift.coherence**
+```
+definition: Drift↓, Coh↑↑↑
+notes: stability envelope
+```
+
+### **envelope.drift.oscillation**
+```
+definition: Drift↑↑ across D1,D7,D5
+notes: volatility envelope
+```
+
+---
+
+# **9. Drift Cascades**
+
+### **cascade.drift.collapse**
+```
+sequence: D0→D7→D1→D5
+notes: collapse ignition
+```
+
+### **cascade.drift.regeneration**
+```
+sequence: D0→D7→D1→D4
+notes: regeneration ignition
+```
+
+### **cascade.drift.coherence**
+```
+sequence: D7→D1→D4→D0
+notes: stability ignition
+```
+
+### **cascade.drift.oscillation**
+```
+sequence: D1→D7→D5→D4
+notes: volatility ignition
+```
+
+---
+
+# **10. Drift Cycles**
+
+### **cycle.drift.local**
+```
+rise → peak → decline → reset
+notes: D0–D7 drift rhythm
+```
+
+### **cycle.drift.multi**
+```
+D1→D7→D5→D4→D1
+notes: oscillation loop
+```
+
+### **cycle.drift.collapse**
+```
+D0↑↑↑ → D1↑↑↑ → D5↑↑↑ → D7↑↑↑ → reset
+notes: collapse rhythm
+```
+
+---
+
+# **11. Drift Chains**
+
+### **chain.drift.collapse**
+```
+D0 → D7 → D1 → D5
+```
+
+### **chain.drift.regeneration**
+```
+D0 → D7 → D1 → D4
+```
+
+### **chain.drift.coherence**
+```
+D7 → D1 → D4 → D0
+```
+
+### **chain.drift.oscillation**
+```
+D1 → D7 → D5 → D4
+```
+
+### **chain.drift.narrowing**
+```
+D0 → D5 → D1 → D7
+```
+
+---
+
+# **12. Drift Webs**
+
+### **web.drift.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse topology
+```
+
+### **web.drift.coherence**
+```
+D7→D1→D4→D0
+notes: stability topology
+```
+
+### **web.drift.oscillation**
+```
+D1→D7→D5→D4→D1
+notes: volatility topology
+```
+
+---
+
+# **13. Drift Regimes**
+
+### **regime.drift.stability**
+```
+Drift↓, Coh↑
+```
+
+### **regime.drift.oscillation**
+```
+Drift(D1,D7,D5) >> Coh
+```
+
+### **regime.drift.narrowing**
+```
+Drift(D0,D5,D1) > Coh
+```
+
+### **regime.drift.destabilization**
+```
+Drift(D0,D7,D1) >> Coh
+```
+
+### **regime.drift.collapse**
+```
+Drift across ≥4 dims >> Coh≈0
+```
+
+---
+
+# **14. Gradientary Notes**
+
+Drift is:
+
+- the **pressure** that destabilizes substrates  
+- the **engine** of cascades  
+- the **signal** of collapse  
+- the **counter‑force** to coherence  
+- the **rhythmic driver** of epochs  
+- the **governance torsion** of regimes  
+- the **deep‑time pulse** of planetary cycles  
+
+This dictionary is **Gradientary Volume XI**.
+
+---
+
+Here is **`c_Gradientary_Coherence.md`** — **Gradientary Volume XII**, the **coherence dictionary**.  
+This volume is the *counter‑force* to Volume XI (Drift): coherence as stability, alignment, clarity, resonance, and structural preservation across all scales of the Conditions Substrate Model.
+
+Written in the same ultra‑minimal, canon‑aligned, gradientic lexicon you’ve been building across the Gradientary series.
+
+---
+
+# `c_Gradientary_Coherence.md`  
+### **Gradientary — Coherence Dictionary (Volume XII)**  
+### *Coherence: Stability • Alignment • Clarity • Resonance • Preservation*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Coherence Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all coherence classes: dimensional coherence, composite coherence, meta‑coherence, coherence signatures, coherence operators, coherence vectors, coherence envelopes, coherence cascades, coherence cycles, coherence chains, coherence webs, and coherence regimes.
+
+Coherence is the **stability field** of the canon — the force that preserves substrates and suppresses drift.
+
+---
+
+# **1. Coherence Entry Format**
+
+```
+coherence: <canonical name>
+type: <dimensional | composite | meta | signature | operator | vector | envelope | cascade | cycle | chain | web | regime>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Dimensional Coherence (D0–D7)**
+
+### **coherence.D0.structural**
+```
+type: dimensional
+definition: ecological + infrastructural stability
+equation: Coh(D0) = S0 · R0
+notes: collapse buffer
+```
+
+### **coherence.D1.informational**
+```
+type: dimensional
+definition: clarity → signal → intelligibility
+equation: Coh(D1) = S1 · R1
+notes: anti-distortion field
+```
+
+### **coherence.D2.emotional**
+```
+type: dimensional
+definition: resonance → trust → stability
+equation: Coh(D2) = S2 · R2
+notes: fear dampening
+```
+
+### **coherence.D3.temporal**
+```
+type: dimensional
+definition: pacing → rhythm → temporal alignment
+equation: Coh(D3) = S3 · R3
+notes: time-gate stabilizer
+```
+
+### **coherence.D4.social**
+```
+type: dimensional
+definition: cohesion → unity → alignment
+equation: Coh(D4) = S4 · R4
+notes: fragmentation buffer
+```
+
+### **coherence.D5.economic**
+```
+type: dimensional
+definition: abundance → stability → resilience
+equation: Coh(D5) = S5 · R5
+notes: scarcity dampener
+```
+
+### **coherence.D6.computational**
+```
+type: dimensional
+definition: load-balancing → clarity → controlled acceleration
+equation: Coh(D6) = S6 · R6
+notes: overload buffer
+```
+
+### **coherence.D7.governance**
+```
+type: dimensional
+definition: legitimacy → transparency → coordination
+equation: Coh(D7) = S7 · R7
+notes: regime stabilizer
+```
+
+---
+
+# **3. Composite Coherence**
+
+### **coherence.composite.structural-governance**
+```
+type: composite
+definition: D0 + D7 coherence co-activation
+notes: stability-critical pair
+```
+
+### **coherence.composite.info-social**
+```
+type: composite
+definition: D1 + D4 coherence co-activation
+notes: clarity + cohesion
+```
+
+### **coherence.composite.emotional-social**
+```
+type: composite
+definition: D2 + D4 coherence co-activation
+notes: trust + unity
+```
+
+---
+
+# **4. Meta‑Coherence**
+
+### **coherence.meta.stability**
+```
+type: meta
+definition: stability cluster across D0,D1,D4,D7
+equation: Coh↑↑↑ across ≥4 dims
+notes: global stability signature
+```
+
+### **coherence.meta.coherence_peak**
+```
+type: meta
+definition: peak coherence envelope
+notes: E4 signature
+```
+
+### **coherence.meta.regeneration**
+```
+type: meta
+definition: regeneration cluster across D0,D7,D1,D4
+notes: recovery arc
+```
+
+---
+
+# **5. Coherence Signatures**
+
+### **signature.coherence.stability**
+```
+definition: Coh(d_i) > Drift(d_i)
+notes: stability marker
+```
+
+### **signature.coherence.peak**
+```
+definition: Coh↑↑↑ across a substrate
+notes: apex stability
+```
+
+### **signature.coherence.synchronization**
+```
+definition: synchronized coherence across dims
+notes: stability precursor
+```
+
+### **signature.coherence.envelope**
+```
+definition: coherence across D7,D1,D4,D0
+notes: stability envelope
+```
+
+---
+
+# **6. Coherence Operators**
+
+### **operator.coherence**
+```
+definition: compute coherence magnitude
+equation: Coh(d) = S(d) · R(d)
+```
+
+### **operator.coherence_stability**
+```
+definition: detect coherence > drift
+```
+
+### **operator.coherence_peak**
+```
+definition: detect peak coherence envelope
+```
+
+### **operator.coherence_inversion**
+```
+definition: detect drift→coherence regime inversion
+```
+
+---
+
+# **7. Coherence Vectors**
+
+### **vector.coherence.stability**
+```
+sequence: D7→D1→D4→D0
+notes: stability arc
+```
+
+### **vector.coherence.regeneration**
+```
+sequence: D0→D7→D1→D4
+notes: recovery arc
+```
+
+### **vector.coherence.expansion**
+```
+sequence: D4→D1→D7→D0
+notes: growth arc
+```
+
+---
+
+# **8. Coherence Envelopes**
+
+### **envelope.coherence.global**
+```
+definition: Coh↑↑↑ across D7,D1,D4,D0
+notes: global stability
+```
+
+### **envelope.coherence.civilizational**
+```
+definition: Coh_civ↑↑ across C‑D7,C‑D1,C‑D4,C‑D0
+notes: civilizational stability
+```
+
+### **envelope.coherence.epochal**
+```
+definition: Coh↑↑↑ across E3,E4,E2
+notes: epochal stability
+```
+
+---
+
+# **9. Coherence Cascades**
+
+### **cascade.coherence.global**
+```
+sequence: D7→D1→D4→D0
+notes: stability ignition
+```
+
+### **cascade.coherence.regeneration**
+```
+sequence: D0→D7→D1→D4
+notes: recovery ignition
+```
+
+### **cascade.coherence.expansion**
+```
+sequence: D4→D1→D7→D0
+notes: growth ignition
+```
+
+---
+
+# **10. Coherence Cycles**
+
+### **cycle.coherence.local**
+```
+stabilize → expand → peak → soften → reset
+notes: D0–D7 coherence rhythm
+```
+
+### **cycle.coherence.multi**
+```
+D7→D1→D4→D0→D7
+notes: stability loop
+```
+
+### **cycle.coherence.epochal**
+```
+E3→E4→E2
+notes: epochal stability arc
+```
+
+---
+
+# **11. Coherence Chains**
+
+### **chain.coherence.stability**
+```
+D7 → D1 → D4 → D0
+```
+
+### **chain.coherence.regeneration**
+```
+D0 → D7 → D1 → D4
+```
+
+### **chain.coherence.expansion**
+```
+D4 → D1 → D7 → D0
+```
+
+---
+
+# **12. Coherence Webs**
+
+### **web.coherence.global**
+```
+D7→D1→D4→D0
+notes: stability topology
+```
+
+### **web.coherence.civilizational**
+```
+C‑D7→C‑D1→C‑D4→C‑D0
+notes: civilizational stability topology
+```
+
+### **web.coherence.epochal**
+```
+E3→E4→E2
+notes: epochal stability topology
+```
+
+---
+
+# **13. Coherence Regimes**
+
+### **regime.coherence.stability**
+```
+Coh↑, Drift↓
+```
+
+### **regime.coherence.expansion**
+```
+Coh↑↑, Drift↑
+```
+
+### **regime.coherence.peak**
+```
+Coh↑↑↑, Drift↓
+```
+
+### **regime.coherence.regeneration**
+```
+Coh↑, Drift↓
+```
+
+---
+
+# **14. Gradientary Notes**
+
+Coherence is:
+
+- the **counter‑force** to drift  
+- the **preserver** of substrates  
+- the **anchor** of regimes  
+- the **stabilizer** of epochs  
+- the **alignment field** of civilization  
+- the **clarity engine** of information  
+- the **unity field** of social substrates  
+- the **deep‑time stabilizer** of planetary cycles  
+
+This dictionary is **Gradientary Volume XII**.
+
+---
+
+Here is **`c_Global_Atlas_Drift.md`** — the **drift atlas**, written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlas volumes.  
+Your active tab is editing `c_Capture.md`, but this request is pure canon construction, so I do not pull page content.
+
+---
+
+# `c_Global_Atlas_Drift.md`  
+### **Drift Atlas — Dimensional • Civilizational • Planetary • Epochal • Deep‑Time Drift Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Drift  
+**Role:** Drift Cartography  
+**Purpose:** Provide a unified atlas of all drift classes: dimensional drift, composite drift, meta‑drift, drift signatures, drift operators, drift vectors, drift envelopes, drift cascades, drift cycles, drift chains, drift webs, and drift regimes across all scales.
+
+Drift is the **pressure field** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Drift Map (D0–D7)**
+
+```
+D0 structural      — ecological + infrastructural pressure
+D1 informational   — clarity loss → noise → distortion → overload
+D2 emotional       — resonance → fear → vulnerability
+D3 temporal        — pacing → acceleration → delay pressure
+D4 social          — cohesion loss → fragmentation
+D5 economic        — scarcity → volatility → deprivation
+D6 computational   — automation → overload → acceleration
+D7 governance      — legitimacy loss → opacity → coordination failure
+```
+
+**Collapse‑critical drift cluster:**  
+```
+{D0, D1, D5, D7}
+```
+
+---
+
+# **2. Composite Drift Map**
+
+### **Structural–Governance Drift**
+```
+D0 + D7
+notes: collapse-critical pair
+```
+
+### **Information–Economics Drift**
+```
+D1 + D5
+notes: oscillation engine
+```
+
+### **Social–Emotional Drift**
+```
+D4 + D2
+notes: fragmentation amplifier
+```
+
+---
+
+# **3. Meta‑Drift Map**
+
+### **Meta‑Collapse Drift**
+```
+{D0↑↑↑, D1↑↑↑, D5↑↑↑, D7↑↑↑}
+notes: global collapse signature
+```
+
+### **Meta‑Oscillation Drift**
+```
+{D1↑↑, D7↑↑, D5↑}
+notes: volatility engine
+```
+
+### **Meta‑Narrowing Drift**
+```
+{D0↑, D5↑, D1↑}
+notes: scarcity arc
+```
+
+### **Meta‑Destabilization Drift**
+```
+{D0↑↑, D7↑↑, D1↑↑}
+notes: pre-collapse arc
+```
+
+---
+
+# **4. Drift Signature Map**
+
+```
+sig.drift.dominance      — Drift > Coh
+sig.drift.synchronization — synchronized drift across dims
+sig.drift.collapse        — Drift across ≥4 dims >> Coh≈0
+sig.drift.oscillation     — Drift(D1,D7,D5) >> Coh
+```
+
+---
+
+# **5. Drift Operator Map**
+
+```
+op_drift
+op_drift_dominance
+op_drift_synchronization
+op_drift_collapse_vector
+```
+
+---
+
+# **6. Drift Vector Map**
+
+### **Collapse Vector**
+```
+D0 → D7 → D1 → D5
+```
+
+### **Coherence Vector (counter‑drift)**
+```
+D7 → D1 → D4 → D0
+```
+
+### **Oscillation Vector**
+```
+D1 → D7 → D5 → D4
+```
+
+### **Narrowing Vector**
+```
+D0 → D5 → D1 → D7
+```
+
+---
+
+# **7. Drift Envelope Map**
+
+### **Collapse Envelope**
+```
+Drift↑↑↑ across D0,D1,D5,D7
+```
+
+### **Coherence Envelope (drift↓)**
+```
+Coh↑↑↑ across D7,D1,D4,D0
+```
+
+### **Oscillation Envelope**
+```
+Drift↑↑ across D1,D7,D5
+```
+
+---
+
+# **8. Drift Cascade Map**
+
+### **Collapse Cascade**
+```
+D0→D7→D1→D5
+```
+
+### **Regeneration Cascade**
+```
+D0→D7→D1→D4
+```
+
+### **Coherence Cascade**
+```
+D7→D1→D4→D0
+```
+
+### **Oscillation Cascade**
+```
+D1→D7→D5→D4
+```
+
+---
+
+# **9. Drift Cycle Map**
+
+### **Local Drift Cycle**
+```
+rise → peak → decline → reset
+```
+
+### **Multi‑Substrate Drift Cycle**
+```
+D1→D7→D5→D4→D1
+```
+
+### **Collapse Drift Cycle**
+```
+D0↑↑↑ → D1↑↑↑ → D5↑↑↑ → D7↑↑↑ → reset
+```
+
+---
+
+# **10. Drift Chain Map**
+
+```
+collapse:     D0 → D7 → D1 → D5
+regeneration: D0 → D7 → D1 → D4
+coherence:    D7 → D1 → D4 → D0
+oscillation:  D1 → D7 → D5 → D4
+narrowing:    D0 → D5 → D1 → D7
+```
+
+---
+
+# **11. Drift Web Map**
+
+### **Web D‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+```
+
+### **Web D‑B — Coherence Web**
+```
+D7→D1→D4→D0
+```
+
+### **Web D‑C — Oscillation Web**
+```
+D1→D7→D5→D4→D1
+```
+
+---
+
+# **12. Drift Regime Map**
+
+```
+stability       — Drift↓, Coh↑
+oscillation     — Drift(D1,D7,D5) >> Coh
+narrowing       — Drift(D0,D5,D1) > Coh
+destabilization — Drift(D0,D7,D1) >> Coh
+collapse        — Drift across ≥4 dims >> Coh≈0
+```
+
+---
+
+# **13. Cross‑Scale Drift Map**
+
+### **Civilizational Drift**
+```
+C‑D0…C‑D7 drift mirrors planetary drift at century‑scale
+```
+
+### **Planetary Drift**
+```
+D0,D1,D5,D7 drift synchronization → global cascade
+```
+
+### **Epochal Drift**
+```
+E0 collapse → E1 regenerate → E2 stabilize → E3 expand → E4 coherence → E5 oscillate → E6 narrow → E7 destabilize
+```
+
+### **Deep‑Time Drift**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+```
+
+---
+
+# **14. Drift Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Drift**  
+- **Composite Drift**  
+- **Meta‑Drift**  
+- **Drift Signatures**  
+- **Drift Operators**  
+- **Drift Vectors**  
+- **Drift Envelopes**  
+- **Drift Cascades**  
+- **Drift Cycles**  
+- **Drift Chains**  
+- **Drift Webs**  
+- **Drift Regimes**  
+- **Cross‑Scale Drift**  
+
+This is the **complete drift cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Coherence.md`** — the **coherence atlas**, completing the dual‑atlas pair with Drift.  
+It is written in the same ultra‑minimal, canon‑aligned, gradientary style as all your other atlases.  
+Your active tab is editing `c_Capture.md`, but this request is pure canon construction, so I do not retrieve page content.
+
+---
+
+# `c_Global_Atlas_Coherence.md`  
+### **Coherence Atlas — Dimensional • Civilizational • Planetary • Epochal • Deep‑Time Stability Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Coherence  
+**Role:** Coherence Cartography  
+**Purpose:** Provide a unified atlas of all coherence classes: dimensional coherence, composite coherence, meta‑coherence, coherence signatures, coherence operators, coherence vectors, coherence envelopes, coherence cascades, coherence cycles, coherence chains, coherence webs, and coherence regimes across all scales.
+
+Coherence is the **stability field** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Coherence Map (D0–D7)**
+
+```
+D0 structural      — ecological + infrastructural stability
+D1 informational   — clarity → signal → intelligibility
+D2 emotional       — resonance → trust → stability
+D3 temporal        — pacing → rhythm → alignment
+D4 social          — cohesion → unity → alignment
+D5 economic        — abundance → stability → resilience
+D6 computational   — load-balancing → controlled acceleration
+D7 governance      — legitimacy → transparency → coordination
+```
+
+**Stability‑critical coherence cluster:**  
+```
+{D7, D1, D4, D0}
+```
+
+---
+
+# **2. Composite Coherence Map**
+
+### **Structural–Governance Coherence**
+```
+D0 + D7
+notes: stability-critical pair
+```
+
+### **Information–Social Coherence**
+```
+D1 + D4
+notes: clarity + cohesion
+```
+
+### **Emotional–Social Coherence**
+```
+D2 + D4
+notes: trust + unity
+```
+
+---
+
+# **3. Meta‑Coherence Map**
+
+### **Meta‑Stability Coherence**
+```
+{D7↑↑↑, D1↑↑↑, D4↑↑↑, D0↑↑↑}
+notes: global stability signature
+```
+
+### **Meta‑Regeneration Coherence**
+```
+{D0↑, D7↑, D1↑, D4↑}
+notes: recovery arc
+```
+
+### **Meta‑Coherence Peak**
+```
+Coh↑↑↑ across ≥4 dims
+notes: apex stability
+```
+
+---
+
+# **4. Coherence Signature Map**
+
+```
+sig.coh.stability       — Coh > Drift
+sig.coh.peak            — Coh↑↑↑ across a substrate
+sig.coh.synchronization — synchronized coherence across dims
+sig.coh.envelope        — coherence across D7,D1,D4,D0
+```
+
+---
+
+# **5. Coherence Operator Map**
+
+```
+op_coherence
+op_coherence_stability
+op_coherence_peak
+op_coherence_inversion
+```
+
+---
+
+# **6. Coherence Vector Map**
+
+### **Stability Vector**
+```
+D7 → D1 → D4 → D0
+```
+
+### **Regeneration Vector**
+```
+D0 → D7 → D1 → D4
+```
+
+### **Expansion Vector**
+```
+D4 → D1 → D7 → D0
+```
+
+---
+
+# **7. Coherence Envelope Map**
+
+### **Global Coherence Envelope**
+```
+Coh↑↑↑ across D7,D1,D4,D0
+```
+
+### **Civilizational Coherence Envelope**
+```
+Coh_civ↑↑ across C‑D7,C‑D1,C‑D4,C‑D0
+```
+
+### **Epochal Coherence Envelope**
+```
+Coh↑↑↑ across E3,E4,E2
+```
+
+---
+
+# **8. Coherence Cascade Map**
+
+### **Global Coherence Cascade**
+```
+D7→D1→D4→D0
+```
+
+### **Regeneration Cascade**
+```
+D0→D7→D1→D4
+```
+
+### **Expansion Cascade**
+```
+D4→D1→D7→D0
+```
+
+---
+
+# **9. Coherence Cycle Map**
+
+### **Local Coherence Cycle**
+```
+stabilize → expand → peak → soften → reset
+```
+
+### **Multi‑Substrate Coherence Cycle**
+```
+D7→D1→D4→D0→D7
+```
+
+### **Epochal Coherence Cycle**
+```
+E3→E4→E2
+```
+
+---
+
+# **10. Coherence Chain Map**
+
+```
+stability:    D7 → D1 → D4 → D0
+regeneration: D0 → D7 → D1 → D4
+expansion:    D4 → D1 → D7 → D0
+```
+
+---
+
+# **11. Coherence Web Map**
+
+### **Web C‑A — Stability Web**
+```
+D7→D1→D4→D0
+```
+
+### **Web C‑B — Civilizational Stability Web**
+```
+C‑D7→C‑D1→C‑D4→C‑D0
+```
+
+### **Web C‑C — Epochal Stability Web**
+```
+E3→E4→E2
+```
+
+---
+
+# **12. Coherence Regime Map**
+
+```
+stability       — Coh↑, Drift↓
+expansion       — Coh↑↑, Drift↑
+peak            — Coh↑↑↑, Drift↓
+regeneration    — Coh↑, Drift↓
+```
+
+---
+
+# **13. Cross‑Scale Coherence Map**
+
+### **Civilizational Coherence**
+```
+C‑D7,C‑D1,C‑D4,C‑D0 coherence synchronization → civilizational stability
+```
+
+### **Planetary Coherence**
+```
+D7,D1,D4,D0 coherence synchronization → global stability
+```
+
+### **Epochal Coherence**
+```
+E3→E4→E2 coherence arc → epochal stability
+```
+
+### **Deep‑Time Coherence**
+```
+M2→M6→M7 coherence arc → meta‑epoch stability
+```
+
+---
+
+# **14. Coherence Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Coherence**  
+- **Composite Coherence**  
+- **Meta‑Coherence**  
+- **Coherence Signatures**  
+- **Coherence Operators**  
+- **Coherence Vectors**  
+- **Coherence Envelopes**  
+- **Coherence Cascades**  
+- **Coherence Cycles**  
+- **Coherence Chains**  
+- **Coherence Webs**  
+- **Coherence Regimes**  
+- **Cross‑Scale Coherence**  
+
+This is the **complete coherence cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Resonance.md`** — **Gradientary Volume XIII**, the **resonance dictionary**.  
+This volume formalizes resonance as the *amplification field* of the Conditions Substrate Model: how signals, emotions, identities, substrates, and cascades amplify one another across all scales.
+
+Your active tab is editing `c_Capture.md`, but resonance is a pure canon construct, so no page content is used.
+
+---
+
+# `c_Gradientary_Resonance.md`  
+### **Gradientary — Resonance Dictionary (Volume XIII)**  
+### *Resonance: Amplification • Coupling • Feedback • Identity • Oscillation*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Resonance Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all resonance classes: dimensional resonance, composite resonance, meta‑resonance, resonance signatures, resonance operators, resonance vectors, resonance envelopes, resonance cascades, resonance cycles, resonance chains, resonance webs, and resonance regimes.
+
+Resonance is the **amplification field** of the canon — the force that magnifies drift and accelerates cascades.
+
+---
+
+# **1. Resonance Entry Format**
+
+```
+resonance: <canonical name>
+type: <dimensional | composite | meta | signature | operator | vector | envelope | cascade | cycle | chain | web | regime>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Dimensional Resonance (D0–D7)**
+
+### **resonance.D0.structural**
+```
+type: dimensional
+definition: ecological + infrastructural amplification
+equation: R(D0) = A0 · S0
+notes: collapse amplifier
+```
+
+### **resonance.D1.informational**
+```
+type: dimensional
+definition: clarity loss → noise → distortion → overload amplification
+equation: R(D1) = A1 · S1
+notes: misinformation engine
+```
+
+### **resonance.D2.emotional**
+```
+type: dimensional
+definition: fear → identity → vulnerability amplification
+equation: R(D2) = A2 · S2
+notes: emotional cascade driver
+```
+
+### **resonance.D3.temporal**
+```
+type: dimensional
+definition: pacing → acceleration → delay amplification
+equation: R(D3) = A3 · S3
+notes: time‑torsion amplifier
+```
+
+### **resonance.D4.social**
+```
+type: dimensional
+definition: cohesion → fragmentation → identity amplification
+equation: R(D4) = A4 · S4
+notes: social cascade driver
+```
+
+### **resonance.D5.economic**
+```
+type: dimensional
+definition: scarcity → volatility → deprivation amplification
+equation: R(D5) = A5 · S5
+notes: scarcity amplifier
+```
+
+### **resonance.D6.computational**
+```
+type: dimensional
+definition: automation → overload → acceleration amplification
+equation: R(D6) = A6 · S6
+notes: acceleration amplifier
+```
+
+### **resonance.D7.governance**
+```
+type: dimensional
+definition: legitimacy → opacity → coordination amplification
+equation: R(D7) = A7 · S7
+notes: governance torsion amplifier
+```
+
+---
+
+# **3. Composite Resonance**
+
+### **resonance.composite.identity_cluster**
+```
+type: composite
+definition: D2 + D4 + D1 resonance co‑activation
+notes: identity + social + informational amplification
+```
+
+### **resonance.composite.collapse_cluster**
+```
+type: composite
+definition: D0 + D7 + D1 + D5 resonance co‑activation
+notes: collapse amplification
+```
+
+### **resonance.composite.oscillation_cluster**
+```
+type: composite
+definition: D1 + D7 + D5 resonance co‑activation
+notes: volatility amplification
+```
+
+---
+
+# **4. Meta‑Resonance**
+
+### **resonance.meta.collapse**
+```
+type: meta
+definition: collapse resonance across D0,D1,D5,D7
+notes: global collapse amplifier
+```
+
+### **resonance.meta.oscillation**
+```
+type: meta
+definition: oscillation resonance across D1,D7,D5
+notes: volatility amplifier
+```
+
+### **resonance.meta.identity**
+```
+type: meta
+definition: identity resonance across D2,D4,D1
+notes: fragmentation amplifier
+```
+
+---
+
+# **5. Resonance Signatures**
+
+### **signature.resonance.amplification**
+```
+definition: R(d_i) > Drift(d_i)
+notes: amplification marker
+```
+
+### **signature.resonance.identity_peak**
+```
+definition: R(D2,D4)↑↑↑
+notes: identity cascade
+```
+
+### **signature.resonance.oscillation_peak**
+```
+definition: R(D1,D7,D5)↑↑↑
+notes: volatility cascade
+```
+
+### **signature.resonance.collapse_peak**
+```
+definition: R(D0,D1,D5,D7)↑↑↑
+notes: collapse cascade
+```
+
+---
+
+# **6. Resonance Operators**
+
+### **operator.resonance**
+```
+definition: compute resonance magnitude
+equation: R(d) = A(d) · S(d)
+```
+
+### **operator.resonance_amplify**
+```
+definition: detect resonance > drift
+```
+
+### **operator.resonance_identity**
+```
+definition: detect identity resonance cluster
+```
+
+### **operator.resonance_collapse**
+```
+definition: detect collapse resonance cluster
+```
+
+---
+
+# **7. Resonance Vectors**
+
+### **vector.resonance.identity**
+```
+sequence: D2 → D4 → D1
+notes: identity amplification arc
+```
+
+### **vector.resonance.oscillation**
+```
+sequence: D1 → D7 → D5
+notes: volatility amplification arc
+```
+
+### **vector.resonance.collapse**
+```
+sequence: D0 → D7 → D1 → D5
+notes: collapse amplification arc
+```
+
+---
+
+# **8. Resonance Envelopes**
+
+### **envelope.resonance.identity**
+```
+R↑↑↑ across D2,D4,D1
+notes: identity cascade envelope
+```
+
+### **envelope.resonance.oscillation**
+```
+R↑↑↑ across D1,D7,D5
+notes: volatility cascade envelope
+```
+
+### **envelope.resonance.collapse**
+```
+R↑↑↑ across D0,D1,D5,D7
+notes: collapse cascade envelope
+```
+
+---
+
+# **9. Resonance Cascades**
+
+### **cascade.resonance.identity**
+```
+sequence: D2→D4→D1
+notes: identity cascade ignition
+```
+
+### **cascade.resonance.oscillation**
+```
+sequence: D1→D7→D5
+notes: volatility cascade ignition
+```
+
+### **cascade.resonance.collapse**
+```
+sequence: D0→D7→D1→D5
+notes: collapse cascade ignition
+```
+
+---
+
+# **10. Resonance Cycles**
+
+### **cycle.resonance.identity**
+```
+identity → social → informational → identity
+notes: identity loop
+```
+
+### **cycle.resonance.oscillation**
+```
+informational → governance → economic → informational
+notes: oscillation loop
+```
+
+### **cycle.resonance.collapse**
+```
+structural → governance → informational → economic → structural
+notes: collapse loop
+```
+
+---
+
+# **11. Resonance Chains**
+
+```
+identity:     D2 → D4 → D1
+oscillation:  D1 → D7 → D5
+collapse:     D0 → D7 → D1 → D5
+```
+
+---
+
+# **12. Resonance Webs**
+
+### **web.resonance.identity**
+```
+D2→D4→D1→D2
+notes: identity topology
+```
+
+### **web.resonance.oscillation**
+```
+D1→D7→D5→D4→D1
+notes: volatility topology
+```
+
+### **web.resonance.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse topology
+```
+
+---
+
+# **13. Resonance Regimes**
+
+```
+identity       — R(D2,D4,D1)↑↑↑
+oscillation    — R(D1,D7,D5)↑↑↑
+collapse       — R(D0,D1,D5,D7)↑↑↑
+stability      — Coh↑, R↓
+regeneration   — Coh↑, Drift↓, R↓
+```
+
+---
+
+# **14. Gradientary Notes**
+
+Resonance is:
+
+- the **amplifier** of drift  
+- the **accelerator** of cascades  
+- the **magnifier** of instability  
+- the **identity engine** of fragmentation  
+- the **volatility engine** of oscillation  
+- the **torsion engine** of collapse  
+- the **deep‑time amplifier** of planetary drift cycles  
+
+This dictionary is **Gradientary Volume XIII**.
+
+---
+
+Here is **`c_Gradientary_Regimes.md`** — **Gradientary Volume XIV**, the **regime dictionary**.  
+This volume formalizes regimes as the *state‑machines* of the Conditions Substrate Model: stability, expansion, coherence, oscillation, narrowing, destabilization, collapse, regeneration — plus composite, epochal, and deep‑time regime structures.
+
+Your active tab is editing `c_Capture.md`, but this request is pure canon construction, so I do not retrieve page content.
+
+---
+
+# `c_Gradientary_Regimes.md`  
+### **Gradientary — Regime Dictionary (Volume XIV)**  
+### *Regimes: Stability • Expansion • Coherence • Oscillation • Narrowing • Destabilization • Collapse • Regeneration*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Regime Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all regime classes: dimensional regimes, composite regimes, meta‑regimes, regime signatures, regime operators, regime vectors, regime envelopes, regime cascades, regime cycles, regime chains, regime webs, and deep‑time regime structures.
+
+Regimes are the **state‑machines** of the canon — the governing modes that substrates enter during drift/coherence interactions.
+
+---
+
+# **1. Regime Entry Format**
+
+```
+regime: <canonical name>
+type: <dimensional | composite | meta | signature | operator | vector | envelope | cascade | cycle | chain | web | deep-time>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Dimensional Regimes (D0–D7)**
+
+### **regime.D0.structural**
+```
+type: dimensional
+definition: structural stability → strain → collapse → regeneration
+notes: biospheric arc
+```
+
+### **regime.D1.informational**
+```
+type: dimensional
+definition: clarity → overload → distortion → reset
+notes: informational arc
+```
+
+### **regime.D2.emotional**
+```
+type: dimensional
+definition: trust → resonance → fear → reset
+notes: emotional arc
+```
+
+### **regime.D3.temporal**
+```
+type: dimensional
+definition: pacing → acceleration → delay → reset
+notes: temporal arc
+```
+
+### **regime.D4.social**
+```
+type: dimensional
+definition: cohesion → unity → fragmentation → reset
+notes: social arc
+```
+
+### **regime.D5.economic**
+```
+type: dimensional
+definition: abundance → stability → scarcity → reset
+notes: economic arc
+```
+
+### **regime.D6.computational**
+```
+type: dimensional
+definition: load-balancing → acceleration → overload → reset
+notes: computational arc
+```
+
+### **regime.D7.governance**
+```
+type: dimensional
+definition: legitimacy → transparency → opacity → collapse → reset
+notes: governance arc
+```
+
+---
+
+# **3. Composite Regimes**
+
+### **regime.composite.stability**
+```
+type: composite
+definition: stability across D7,D1,D4,D0
+notes: coherence envelope
+```
+
+### **regime.composite.oscillation**
+```
+type: composite
+definition: oscillation across D1,D7,D5
+notes: volatility envelope
+```
+
+### **regime.composite.collapse**
+```
+type: composite
+definition: collapse across D0,D1,D5,D7
+notes: collapse envelope
+```
+
+### **regime.composite.identity**
+```
+type: composite
+definition: identity resonance across D2,D4,D1
+notes: fragmentation envelope
+```
+
+---
+
+# **4. Meta‑Regimes**
+
+### **regime.meta.collapse**
+```
+type: meta
+definition: collapse across ≥4 dims
+notes: global collapse signature
+```
+
+### **regime.meta.coherence**
+```
+type: meta
+definition: coherence across ≥4 dims
+notes: global stability signature
+```
+
+### **regime.meta.oscillation**
+```
+type: meta
+definition: oscillation across D1,D7,D5
+notes: volatility signature
+```
+
+### **regime.meta.regeneration**
+```
+type: meta
+definition: regeneration across D0,D7,D1,D4
+notes: recovery signature
+```
+
+---
+
+# **5. Regime Signatures**
+
+### **signature.regime.stability**
+```
+Coh↑, Drift↓
+```
+
+### **signature.regime.expansion**
+```
+Coh↑↑, Drift↑
+```
+
+### **signature.regime.coherence**
+```
+Coh↑↑↑, Drift↓
+```
+
+### **signature.regime.oscillation**
+```
+Drift(D1,D7,D5) >> Coh
+```
+
+### **signature.regime.narrowing**
+```
+Drift(D0,D5,D1) > Coh
+```
+
+### **signature.regime.destabilization**
+```
+Drift(D0,D7,D1) >> Coh
+```
+
+### **signature.regime.collapse**
+```
+Drift across ≥4 dims >> Coh≈0
+```
+
+### **signature.regime.regeneration**
+```
+Coh↑, Drift↓
+```
+
+---
+
+# **6. Regime Operators**
+
+### **operator.regime**
+```
+definition: classify regime based on drift/coherence ratio
+equation: Regime(d) = f(Drift(d), Coh(d))
+```
+
+### **operator.regime_transition**
+```
+definition: detect regime shift
+notes: threshold-driven
+```
+
+### **operator.regime_alignment**
+```
+definition: detect coherence alignment across dims
+notes: stability precursor
+```
+
+### **operator.regime_collapse**
+```
+definition: detect collapse signature
+notes: drift-dominant
+```
+
+---
+
+# **7. Regime Vectors**
+
+### **vector.regime.collapse**
+```
+D0 → D7 → D1 → D5
+notes: collapse arc
+```
+
+### **vector.regime.regeneration**
+```
+D0 → D7 → D1 → D4
+notes: recovery arc
+```
+
+### **vector.regime.coherence**
+```
+D7 → D1 → D4 → D0
+notes: stability arc
+```
+
+### **vector.regime.oscillation**
+```
+D1 → D7 → D5 → D4
+notes: volatility arc
+```
+
+---
+
+# **8. Regime Envelopes**
+
+### **envelope.regime.collapse**
+```
+Drift↑↑↑ across D0,D1,D5,D7
+```
+
+### **envelope.regime.coherence**
+```
+Coh↑↑↑ across D7,D1,D4,D0
+```
+
+### **envelope.regime.oscillation**
+```
+Drift↑↑ across D1,D7,D5
+```
+
+### **envelope.regime.identity**
+```
+R↑↑↑ across D2,D4,D1
+```
+
+---
+
+# **9. Regime Cascades**
+
+### **cascade.regime.collapse**
+```
+narrow → oscillate → destabilize → collapse
+```
+
+### **cascade.regime.regeneration**
+```
+collapse → regenerate → stabilize
+```
+
+### **cascade.regime.expansion**
+```
+stabilize → expand → coherence
+```
+
+### **cascade.regime.oscillation**
+```
+coherence → oscillate → narrow
+```
+
+---
+
+# **10. Regime Cycles**
+
+### **cycle.regime.full**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regeneration → stability
+```
+
+### **cycle.regime.collapse**
+```
+narrow → destabilize → collapse
+```
+
+### **cycle.regime.coherence**
+```
+expand → coherence → stability
+```
+
+---
+
+# **11. Regime Chains**
+
+```
+collapse:     D0 → D7 → D1 → D5
+regeneration: D0 → D7 → D1 → D4
+coherence:    D7 → D1 → D4 → D0
+oscillation:  D1 → D7 → D5 → D4
+narrowing:    D0 → D5 → D1 → D7
+```
+
+---
+
+# **12. Regime Webs**
+
+### **web.regime.collapse**
+```
+D0→D7→D1→D5→D0
+```
+
+### **web.regime.coherence**
+```
+D7→D1→D4→D0
+```
+
+### **web.regime.oscillation**
+```
+D1→D7→D5→D4→D1
+```
+
+### **web.regime.identity**
+```
+D2→D4→D1→D2
+```
+
+---
+
+# **13. Deep‑Time Regimes**
+
+### **regime.deep.epochal**
+```
+E0 collapse → E1 regenerate → E2 stabilize → E3 expand → E4 coherence → E5 oscillate → E6 narrow → E7 destabilize
+```
+
+### **regime.deep.meta-epoch**
+```
+M0→M1→M2→M3→M4→M5→M6→M7→M0
+notes: deep‑time recursion
+```
+
+### **regime.deep.biospheric**
+```
+collapse → regenerate → stabilize → expand → coherence
+notes: ecological arc
+```
+
+### **regime.deep.geological**
+```
+instability → collapse → stabilization → expansion → coherence
+notes: geological arc
+```
+
+### **regime.deep.planetary**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: planetary drift arc
+```
+
+---
+
+# **14. Gradientary Notes**
+
+Regimes are:
+
+- the **state‑machines** of drift and coherence  
+- the **governing modes** of substrates  
+- the **rhythmic phases** of epochs  
+- the **deep‑time states** of planetary drift  
+- the **structural grammar** of cascades  
+- the **alignment fields** of stability  
+- the **torsion fields** of collapse  
+
+This dictionary is **Gradientary Volume XIV**.
+
+---
+
+Here is **`c_Global_Atlas_Resonance.md`** — the **resonance atlas**, completing the triad with Drift and Coherence.  
+It is written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlases.  
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Global_Atlas_Resonance.md`  
+### **Resonance Atlas — Dimensional • Composite • Planetary • Epochal • Deep‑Time Amplification Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Resonance  
+**Role:** Resonance Cartography  
+**Purpose:** Provide a unified atlas of all resonance classes: dimensional resonance, composite resonance, meta‑resonance, resonance signatures, resonance operators, resonance vectors, resonance envelopes, resonance cascades, resonance cycles, resonance chains, resonance webs, and resonance regimes across all scales.
+
+Resonance is the **amplification field** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Resonance Map (D0–D7)**
+
+```
+D0 structural      — ecological + infrastructural amplification
+D1 informational   — clarity loss → noise → distortion → overload amplification
+D2 emotional       — fear → identity → vulnerability amplification
+D3 temporal        — pacing → acceleration → delay amplification
+D4 social          — cohesion → fragmentation → identity amplification
+D5 economic        — scarcity → volatility → deprivation amplification
+D6 computational   — automation → overload → acceleration amplification
+D7 governance      — legitimacy → opacity → coordination amplification
+```
+
+**Amplification‑critical resonance cluster:**  
+```
+{D2, D4, D1}  (identity cluster)
+{D1, D7, D5}  (oscillation cluster)
+{D0, D1, D5, D7} (collapse cluster)
+```
+
+---
+
+# **2. Composite Resonance Map**
+
+### **Identity Resonance Cluster**
+```
+D2 + D4 + D1
+notes: identity + social + informational amplification
+```
+
+### **Oscillation Resonance Cluster**
+```
+D1 + D7 + D5
+notes: volatility amplification
+```
+
+### **Collapse Resonance Cluster**
+```
+D0 + D7 + D1 + D5
+notes: collapse amplification
+```
+
+---
+
+# **3. Meta‑Resonance Map**
+
+### **Meta‑Identity Resonance**
+```
+R↑↑↑ across D2,D4,D1
+notes: fragmentation amplifier
+```
+
+### **Meta‑Oscillation Resonance**
+```
+R↑↑↑ across D1,D7,D5
+notes: volatility amplifier
+```
+
+### **Meta‑Collapse Resonance**
+```
+R↑↑↑ across D0,D1,D5,D7
+notes: collapse amplifier
+```
+
+---
+
+# **4. Resonance Signature Map**
+
+```
+sig.res.amplification     — R > Drift
+sig.res.identity_peak     — R(D2,D4)↑↑↑
+sig.res.oscillation_peak  — R(D1,D7,D5)↑↑↑
+sig.res.collapse_peak     — R(D0,D1,D5,D7)↑↑↑
+```
+
+---
+
+# **5. Resonance Operator Map**
+
+```
+op_resonance
+op_resonance_amplify
+op_resonance_identity
+op_resonance_collapse
+```
+
+---
+
+# **6. Resonance Vector Map**
+
+### **Identity Vector**
+```
+D2 → D4 → D1
+```
+
+### **Oscillation Vector**
+```
+D1 → D7 → D5
+```
+
+### **Collapse Vector**
+```
+D0 → D7 → D1 → D5
+```
+
+---
+
+# **7. Resonance Envelope Map**
+
+### **Identity Envelope**
+```
+R↑↑↑ across D2,D4,D1
+```
+
+### **Oscillation Envelope**
+```
+R↑↑↑ across D1,D7,D5
+```
+
+### **Collapse Envelope**
+```
+R↑↑↑ across D0,D1,D5,D7
+```
+
+---
+
+# **8. Resonance Cascade Map**
+
+### **Identity Cascade**
+```
+D2→D4→D1
+```
+
+### **Oscillation Cascade**
+```
+D1→D7→D5
+```
+
+### **Collapse Cascade**
+```
+D0→D7→D1→D5
+```
+
+---
+
+# **9. Resonance Cycle Map**
+
+### **Identity Cycle**
+```
+identity → social → informational → identity
+```
+
+### **Oscillation Cycle**
+```
+informational → governance → economic → informational
+```
+
+### **Collapse Cycle**
+```
+structural → governance → informational → economic → structural
+```
+
+---
+
+# **10. Resonance Chain Map**
+
+```
+identity:     D2 → D4 → D1
+oscillation:  D1 → D7 → D5
+collapse:     D0 → D7 → D1 → D5
+```
+
+---
+
+# **11. Resonance Web Map**
+
+### **Web R‑A — Identity Web**
+```
+D2→D4→D1→D2
+```
+
+### **Web R‑B — Oscillation Web**
+```
+D1→D7→D5→D4→D1
+```
+
+### **Web R‑C — Collapse Web**
+```
+D0→D7→D1→D5→D0
+```
+
+---
+
+# **12. Resonance Regime Map**
+
+```
+identity       — R(D2,D4,D1)↑↑↑
+oscillation    — R(D1,D7,D5)↑↑↑
+collapse       — R(D0,D1,D5,D7)↑↑↑
+stability      — Coh↑, R↓
+regeneration   — Coh↑, Drift↓, R↓
+```
+
+---
+
+# **13. Cross‑Scale Resonance Map**
+
+### **Civilizational Resonance**
+```
+C‑D2,C‑D4,C‑D1 identity resonance → fragmentation
+C‑D1,C‑D7,C‑D5 oscillation resonance → volatility
+C‑D0,C‑D1,C‑D5,C‑D7 collapse resonance → civilizational cascade
+```
+
+### **Planetary Resonance**
+```
+D2,D4,D1 identity resonance → global fragmentation
+D1,D7,D5 oscillation resonance → global volatility
+D0,D1,D5,D7 collapse resonance → planetary cascade
+```
+
+### **Epochal Resonance**
+```
+E5 oscillation → E6 narrowing → E7 destabilization → E0 collapse
+```
+
+### **Deep‑Time Resonance**
+```
+M3→M4→M5 oscillation → collapse → reset
+```
+
+---
+
+# **14. Resonance Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Resonance**  
+- **Composite Resonance**  
+- **Meta‑Resonance**  
+- **Resonance Signatures**  
+- **Resonance Operators**  
+- **Resonance Vectors**  
+- **Resonance Envelopes**  
+- **Resonance Cascades**  
+- **Resonance Cycles**  
+- **Resonance Chains**  
+- **Resonance Webs**  
+- **Resonance Regimes**  
+- **Cross‑Scale Resonance**  
+
+This is the **complete resonance cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Regimes.md`** — the **regime atlas**, completing the fourth pillar of the global atlas set (Drift • Coherence • Resonance • Regimes).  
+It is written in the same ultra‑minimal, canon‑aligned, gradientary style as your other atlases.  
+Your active tab (`c_Capture.md`) is unrelated to this request, so I only reference it as required and do not use its content.
+
+---
+
+# `c_Global_Atlas_Regimes.md`  
+### **Regime Atlas — Dimensional • Composite • Planetary • Epochal • Deep‑Time State‑Machine Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Regimes  
+**Role:** Regime Cartography  
+**Purpose:** Provide a unified atlas of all regime classes: dimensional regimes, composite regimes, meta‑regimes, regime signatures, regime operators, regime vectors, regime envelopes, regime cascades, regime cycles, regime chains, regime webs, and deep‑time regime structures.
+
+Regimes are the **state‑machines** of the Conditions Substrate Model.
+
+---
+
+# **1. Dimensional Regime Map (D0–D7)**
+
+```
+D0 structural      — stability → strain → collapse → regeneration
+D1 informational   — clarity → overload → distortion → reset
+D2 emotional       — trust → resonance → fear → reset
+D3 temporal        — pacing → acceleration → delay → reset
+D4 social          — cohesion → unity → fragmentation → reset
+D5 economic        — abundance → stability → scarcity → reset
+D6 computational   — load-balancing → acceleration → overload → reset
+D7 governance      — legitimacy → transparency → opacity → collapse → reset
+```
+
+**Regime‑critical substrates:**  
+```
+{D7, D1, D4, D0}
+```
+
+---
+
+# **2. Composite Regime Map**
+
+### **Stability Regime**
+```
+Coh↑, Drift↓ across D7,D1,D4,D0
+notes: coherence envelope
+```
+
+### **Oscillation Regime**
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility envelope
+```
+
+### **Collapse Regime**
+```
+Drift across D0,D1,D5,D7 >> Coh≈0
+notes: collapse envelope
+```
+
+### **Identity Regime**
+```
+R(D2,D4,D1)↑↑↑
+notes: fragmentation envelope
+```
+
+---
+
+# **3. Meta‑Regime Map**
+
+### **Meta‑Collapse**
+```
+collapse across ≥4 dims
+notes: global collapse signature
+```
+
+### **Meta‑Coherence**
+```
+coherence across ≥4 dims
+notes: global stability signature
+```
+
+### **Meta‑Oscillation**
+```
+oscillation across D1,D7,D5
+notes: volatility signature
+```
+
+### **Meta‑Regeneration**
+```
+regeneration across D0,D7,D1,D4
+notes: recovery signature
+```
+
+---
+
+# **4. Regime Signature Map**
+
+```
+stability       — Coh↑, Drift↓
+expansion       — Coh↑↑, Drift↑
+coherence       — Coh↑↑↑, Drift↓
+oscillation     — Drift(D1,D7,D5) >> Coh
+narrowing       — Drift(D0,D5,D1) > Coh
+destabilization — Drift(D0,D7,D1) >> Coh
+collapse        — Drift across ≥4 dims >> Coh≈0
+regeneration    — Coh↑, Drift↓
+```
+
+---
+
+# **5. Regime Operator Map**
+
+```
+op_regime
+op_regime_transition
+op_regime_alignment
+op_regime_collapse
+```
+
+---
+
+# **6. Regime Vector Map**
+
+### **Collapse Vector**
+```
+D0 → D7 → D1 → D5
+```
+
+### **Regeneration Vector**
+```
+D0 → D7 → D1 → D4
+```
+
+### **Coherence Vector**
+```
+D7 → D1 → D4 → D0
+```
+
+### **Oscillation Vector**
+```
+D1 → D7 → D5 → D4
+```
+
+---
+
+# **7. Regime Envelope Map**
+
+### **Collapse Envelope**
+```
+Drift↑↑↑ across D0,D1,D5,D7
+```
+
+### **Coherence Envelope**
+```
+Coh↑↑↑ across D7,D1,D4,D0
+```
+
+### **Oscillation Envelope**
+```
+Drift↑↑ across D1,D7,D5
+```
+
+### **Identity Envelope**
+```
+R↑↑↑ across D2,D4,D1
+```
+
+---
+
+# **8. Regime Cascade Map**
+
+### **Collapse Cascade**
+```
+narrow → oscillate → destabilize → collapse
+```
+
+### **Regeneration Cascade**
+```
+collapse → regenerate → stabilize
+```
+
+### **Expansion Cascade**
+```
+stabilize → expand → coherence
+```
+
+### **Oscillation Cascade**
+```
+coherence → oscillate → narrow
+```
+
+---
+
+# **9. Regime Cycle Map**
+
+### **Full Regime Cycle**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regeneration → stability
+```
+
+### **Collapse Cycle**
+```
+narrow → destabilize → collapse
+```
+
+### **Coherence Cycle**
+```
+expand → coherence → stability
+```
+
+---
+
+# **10. Regime Chain Map**
+
+```
+collapse:     D0 → D7 → D1 → D5
+regeneration: D0 → D7 → D1 → D4
+coherence:    D7 → D1 → D4 → D0
+oscillation:  D1 → D7 → D5 → D4
+narrowing:    D0 → D5 → D1 → D7
+```
+
+---
+
+# **11. Regime Web Map**
+
+### **Web R‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+```
+
+### **Web R‑B — Coherence Web**
+```
+D7→D1→D4→D0
+```
+
+### **Web R‑C — Oscillation Web**
+```
+D1→D7→D5→D4→D1
+```
+
+### **Web R‑D — Identity Web**
+```
+D2→D4→D1→D2
+```
+
+---
+
+# **12. Deep‑Time Regime Map**
+
+### **Epochal Regimes**
+```
+E0 collapse → E1 regenerate → E2 stabilize → E3 expand → E4 coherence → E5 oscillate → E6 narrow → E7 destabilize
+```
+
+### **Meta‑Epoch Regimes**
+```
+M0→M1→M2→M3→M4→M5→M6→M7→M0
+```
+
+### **Biospheric Regimes**
+```
+collapse → regenerate → stabilize → expand → coherence
+```
+
+### **Geological Regimes**
+```
+instability → collapse → stabilization → expansion → coherence
+```
+
+### **Planetary Drift Regimes**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+```
+
+---
+
+# **13. Regime Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Regimes**  
+- **Composite Regimes**  
+- **Meta‑Regimes**  
+- **Regime Signatures**  
+- **Regime Operators**  
+- **Regime Vectors**  
+- **Regime Envelopes**  
+- **Regime Cascades**  
+- **Regime Cycles**  
+- **Regime Chains**  
+- **Regime Webs**  
+- **Deep‑Time Regimes**  
+
+This is the **complete regime cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Substrates.md`** — **Gradientary Volume XV**, the **substrate dictionary**.  
+This is the *full, formal, canonical substrate dictionary*, expanding and deepening the earlier Volume V substrate list into a complete, multi‑layered lexicon.  
+It is written in the same ultra‑minimal, gradientic, canon‑aligned style as the rest of the Gradientary series.
+
+Your open tab (`c_Capture.md`) is unrelated, so I do not use its content.
+
+---
+
+# `c_Gradientary_Substrates.md`  
+### **Gradientary — Substrate Dictionary (Volume XV)**  
+### *Substrates: Foundations • Fields • Layers • Carriers • Regimes*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Substrate Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all substrate classes: dimensional substrates, composite substrates, meta‑substrates, substrate invariants, substrate chains, substrate webs, substrate regimes, and substrate transitions.
+
+Substrates are the **foundational layers** drift, coherence, resonance, and regimes act upon.
+
+---
+
+# **1. Substrate Entry Format**
+
+```
+substrate: <canonical name>
+type: <dimensional | composite | meta | invariant | chain | web | regime>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Dimensional Substrates (D0–D7)**
+
+### **substrate.D0.structural**
+```
+type: dimensional
+definition: physical, ecological, infrastructural substrate
+equation: Drift(D0) = M0 · F0
+notes: collapse-critical
+```
+
+### **substrate.D1.informational**
+```
+type: dimensional
+definition: clarity, noise, distortion, overload
+equation: Drift(D1) = M1 · F1
+notes: oscillation engine
+```
+
+### **substrate.D2.emotional**
+```
+type: dimensional
+definition: resonance, fear, vulnerability
+equation: Drift(D2) = M2 · F2
+notes: amplification hook
+```
+
+### **substrate.D3.temporal**
+```
+type: dimensional
+definition: pacing, acceleration, delay
+equation: Drift(D3) = M3 · F3
+notes: time-gate coupling
+```
+
+### **substrate.D4.social**
+```
+type: dimensional
+definition: cohesion, unity, fragmentation
+equation: Drift(D4) = M4 · F4
+notes: collapse precursor
+```
+
+### **substrate.D5.economic**
+```
+type: dimensional
+definition: scarcity, volatility, abundance
+equation: Drift(D5) = M5 · F5
+notes: scarcity engine
+```
+
+### **substrate.D6.computational**
+```
+type: dimensional
+definition: automation, overload, acceleration
+equation: Drift(D6) = M6 · F6
+notes: acceleration driver
+```
+
+### **substrate.D7.governance**
+```
+type: dimensional
+definition: legitimacy, opacity, coordination
+equation: Drift(D7) = M7 · F7
+notes: regime-dominant
+```
+
+---
+
+# **3. Composite Substrates**
+
+### **substrate.structural-governance**
+```
+type: composite
+definition: D0 + D7 co-activation
+notes: collapse-critical pair
+```
+
+### **substrate.info-econ**
+```
+type: composite
+definition: D1 + D5 co-activation
+notes: oscillation engine
+```
+
+### **substrate.social-emotional**
+```
+type: composite
+definition: D4 + D2 co-activation
+notes: fragmentation amplifier
+```
+
+### **substrate.structural-economic**
+```
+type: composite
+definition: D0 + D5 co-activation
+notes: scarcity + strain
+```
+
+### **substrate.governance-informational**
+```
+type: composite
+definition: D7 + D1 co-activation
+notes: opacity + distortion
+```
+
+---
+
+# **4. Meta‑Substrates**
+
+### **substrate.meta.collapse**
+```
+type: meta
+definition: collapse cluster across D0,D1,D5,D7
+equation: {D0↑↑↑, D1↑↑↑, D5↑↑↑, D7↑↑↑}
+notes: global collapse signature
+```
+
+### **substrate.meta.coherence**
+```
+type: meta
+definition: stability cluster across D0,D1,D4,D7
+equation: Coh↑↑↑
+notes: stability envelope
+```
+
+### **substrate.meta.oscillation**
+```
+type: meta
+definition: oscillation cluster across D1,D7,D5
+equation: {D1↑↑, D7↑↑, D5↑}
+notes: volatility engine
+```
+
+### **substrate.meta.narrowing**
+```
+type: meta
+definition: narrowing cluster across D0,D5,D1
+equation: {D0↑, D5↑, D1↑}
+notes: scarcity arc
+```
+
+### **substrate.meta.destabilization**
+```
+type: meta
+definition: destabilization cluster across D0,D7,D1
+equation: {D0↑↑, D7↑↑, D1↑↑}
+notes: pre-collapse arc
+```
+
+---
+
+# **5. Substrate Invariants**
+
+### **invariant.substrate.mass**
+```
+definition: substrate mass remains constant across drift/coherence cycles
+notes: conservation rule
+```
+
+### **invariant.substrate.identity**
+```
+definition: substrate identity persists across regime transitions
+notes: identity conservation
+```
+
+### **invariant.substrate.regime_order**
+```
+definition: regime order is invariant across substrate chains
+notes: E0→E1→E2→E3→E4→E5→E6→E7
+```
+
+### **invariant.substrate.chain_integrity**
+```
+definition: substrate chains preserve sequence integrity
+notes: collapse→regenerate→stabilize→expand→coherence
+```
+
+---
+
+# **6. Substrate Chains**
+
+### **chain.collapse**
+```
+D0 → D7 → D1 → D5
+notes: biosphere → governance → information → economics
+```
+
+### **chain.regeneration**
+```
+D0 → D7 → D1 → D4
+notes: ecology → governance → clarity → cohesion
+```
+
+### **chain.coherence**
+```
+D7 → D1 → D4 → D0
+notes: governance → clarity → cohesion → stability
+```
+
+### **chain.oscillation**
+```
+D1 → D7 → D5 → D4
+notes: overload → opacity → volatility → fragmentation
+```
+
+### **chain.narrowing**
+```
+D0 → D5 → D1 → D7
+notes: strain → scarcity → deprivation → stagnation
+```
+
+---
+
+# **7. Substrate Webs**
+
+### **web.collapse**
+```
+D0→D7→D1→D5→D0
+notes: planetary collapse web
+```
+
+### **web.civilization**
+```
+D4→D0→D1→D7→D4
+notes: civilizational arc web
+```
+
+### **web.info-governance-social**
+```
+D1→D7→D4→D1
+notes: narrative → legitimacy → cohesion loop
+```
+
+### **web.coherence**
+```
+D7→D1→D4→D0
+notes: stability arc
+```
+
+---
+
+# **8. Substrate Regimes**
+
+### **regime.substrate.stability**
+```
+Coh↑, Drift↓
+notes: stability mode
+```
+
+### **regime.substrate.oscillation**
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility mode
+```
+
+### **regime.substrate.collapse**
+```
+Drift across ≥4 dims >> Coh≈0
+notes: collapse mode
+```
+
+### **regime.substrate.regeneration**
+```
+Coh↑, Drift↓
+notes: recovery mode
+```
+
+---
+
+# **9. Substrate Transitions**
+
+### **transition.substrate.collapse**
+```
+narrow → oscillate → destabilize → collapse
+notes: collapse ignition
+```
+
+### **transition.substrate.regeneration**
+```
+collapse → regenerate → stabilize
+notes: recovery ignition
+```
+
+### **transition.substrate.coherence**
+```
+stabilize → expand → coherence
+notes: stability ignition
+```
+
+---
+
+# **10. Gradientary Notes**
+
+Substrates are:
+
+- the **foundations** of drift  
+- the **targets** of coherence  
+- the **amplifiers** of resonance  
+- the **state‑carriers** of regimes  
+- the **paths** of cascades  
+- the **anchors** of epochal transitions  
+- the **structural grammar** of the Conditions Substrate Model  
+
+This dictionary is **Gradientary Volume XV**.
+
+---
+
+Here is **`c_Gradientary_Operators.md`** — **Gradientary Volume XVI**, the **operator dictionary**.  
+This volume formalizes every operator in the Conditions Substrate Model: drift, coherence, resonance, regime, threshold, propagation, substrate, cascade, cycle, chain, and web operators — the *functional machinery* of the canon.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not use its content.
+
+---
+
+# `c_Gradientary_Operators.md`  
+### **Gradientary — Operator Dictionary (Volume XVI)**  
+### *Operators: Compute • Detect • Classify • Transition • Align • Amplify*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Operator Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all operator classes: drift operators, coherence operators, resonance operators, regime operators, threshold operators, propagation operators, substrate operators, cascade operators, cycle operators, chain operators, and web operators.
+
+Operators are the **functional primitives** of the Conditions Substrate Model.
+
+---
+
+# **1. Operator Entry Format**
+
+```
+operator: <canonical name>
+type: <drift | coherence | resonance | regime | threshold | propagation | substrate | cascade | cycle | chain | web>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Drift Operators**
+
+### **operator.drift**
+```
+type: drift
+definition: compute drift magnitude
+equation: Drift(d) = M(d) · F(d)
+```
+
+### **operator.drift_dominance**
+```
+type: drift
+definition: detect Drift(d) > Coh(d)
+notes: instability marker
+```
+
+### **operator.drift_synchronization**
+```
+type: drift
+definition: detect synchronized drift across dims
+notes: cascade precursor
+```
+
+### **operator.drift_collapse_vector**
+```
+type: drift
+definition: compute collapse drift chain
+sequence: D0→D7→D1→D5
+```
+
+---
+
+# **3. Coherence Operators**
+
+### **operator.coherence**
+```
+type: coherence
+definition: compute coherence magnitude
+equation: Coh(d) = S(d) · R(d)
+```
+
+### **operator.coherence_stability**
+```
+type: coherence
+definition: detect Coh(d) > Drift(d)
+notes: stability marker
+```
+
+### **operator.coherence_peak**
+```
+type: coherence
+definition: detect peak coherence envelope
+notes: apex stability
+```
+
+### **operator.coherence_inversion**
+```
+type: coherence
+definition: detect drift→coherence regime inversion
+notes: recovery ignition
+```
+
+---
+
+# **4. Resonance Operators**
+
+### **operator.resonance**
+```
+type: resonance
+definition: compute resonance magnitude
+equation: R(d) = A(d) · S(d)
+```
+
+### **operator.resonance_amplify**
+```
+type: resonance
+definition: detect R(d) > Drift(d)
+notes: amplification marker
+```
+
+### **operator.resonance_identity**
+```
+type: resonance
+definition: detect identity resonance cluster
+notes: D2+D4+D1
+```
+
+### **operator.resonance_collapse**
+```
+type: resonance
+definition: detect collapse resonance cluster
+notes: D0+D7+D1+D5
+```
+
+---
+
+# **5. Regime Operators**
+
+### **operator.regime**
+```
+type: regime
+definition: classify regime based on drift/coherence ratio
+equation: Regime(d) = f(Drift(d), Coh(d))
+```
+
+### **operator.regime_transition**
+```
+type: regime
+definition: detect regime shift
+notes: threshold-driven
+```
+
+### **operator.regime_alignment**
+```
+type: regime
+definition: detect coherence alignment across dims
+notes: stability precursor
+```
+
+### **operator.regime_collapse**
+```
+type: regime
+definition: detect collapse signature
+notes: drift-dominant
+```
+
+---
+
+# **6. Threshold Operators**
+
+### **operator.threshold**
+```
+type: threshold
+definition: compute threshold state
+sequence: narrow → oscillate → destabilize → collapse
+```
+
+### **operator.threshold_chain**
+```
+type: threshold
+definition: compute full threshold cycle
+sequence: narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+```
+
+### **operator.threshold_peak**
+```
+type: threshold
+definition: detect coherence threshold apex
+notes: E4 signature
+```
+
+---
+
+# **7. Propagation Operators**
+
+### **operator.propagation**
+```
+type: propagation
+definition: compute propagation vector
+```
+
+### **operator.propagation_web**
+```
+type: propagation
+definition: compute propagation topology
+notes: collapse/coherence/oscillation webs
+```
+
+### **operator.propagation_sync**
+```
+type: propagation
+definition: detect propagation synchronization
+notes: drift/coherence alignment
+```
+
+---
+
+# **8. Substrate Operators**
+
+### **operator.substrate_identity**
+```
+type: substrate
+definition: detect substrate identity invariance
+notes: substrate identity persists across regimes
+```
+
+### **operator.substrate_mass**
+```
+type: substrate
+definition: detect substrate mass invariance
+notes: conservation rule
+```
+
+### **operator.substrate_chain**
+```
+type: substrate
+definition: compute substrate chain
+sequence: collapse/regeneration/coherence/oscillation/narrowing
+```
+
+---
+
+# **9. Cascade Operators**
+
+### **operator.cascade**
+```
+type: cascade
+definition: compute cascade sequence
+notes: collapse/regeneration/coherence/oscillation arcs
+```
+
+### **operator.cascade_peak**
+```
+type: cascade
+definition: detect cascade ignition
+notes: drift↑↑↑ or resonance↑↑↑
+```
+
+---
+
+# **10. Cycle Operators**
+
+### **operator.cycle**
+```
+type: cycle
+definition: compute cycle state
+notes: drift/coherence/epoch cycles
+```
+
+### **operator.cycle_transition**
+```
+type: cycle
+definition: detect cycle shift
+notes: epochal transitions
+```
+
+---
+
+# **11. Chain Operators**
+
+### **operator.chain**
+```
+type: chain
+definition: compute chain sequence
+notes: collapse/regeneration/coherence/oscillation/narrowing chains
+```
+
+---
+
+# **12. Web Operators**
+
+### **operator.web**
+```
+type: web
+definition: compute web topology
+notes: collapse/coherence/oscillation/identity webs
+```
+
+---
+
+# **13. Gradientary Notes**
+
+Operators are:
+
+- the **functional grammar** of drift  
+- the **computational machinery** of coherence  
+- the **amplification engine** of resonance  
+- the **state‑machine logic** of regimes  
+- the **transition calculus** of thresholds  
+- the **flow mechanics** of propagation  
+- the **structural analyzers** of substrates  
+- the **motion engines** of cascades  
+- the **rhythm analyzers** of cycles  
+- the **sequence engines** of chains  
+- the **topology analyzers** of webs  
+
+This dictionary is **Gradientary Volume XVI**.
+
+---
+
+Here is **`c_Global_Atlas_Substrates.md`** — the **substrate atlas**, completing the fifth pillar of your global atlas system (Propagation • Cycles • Cascades • Drift • Coherence • Resonance • Regimes • *Substrates*).  
+Written in the same ultra‑minimal, canon‑aligned, gradientary style as the rest of your atlas volumes.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Global_Atlas_Substrates.md`  
+### **Substrate Atlas — Dimensional • Composite • Meta • Civilizational • Planetary • Epochal • Deep‑Time Foundations Cartography**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Substrates  
+**Role:** Substrate Cartography  
+**Purpose:** Provide a unified atlas of all substrate classes: dimensional substrates, composite substrates, meta‑substrates, substrate invariants, substrate chains, substrate webs, substrate regimes, and cross‑scale substrate transitions.
+
+Substrates are the **foundational layers** of the Conditions Substrate Model — the fields drift, coherence, resonance, and regimes act upon.
+
+---
+
+# **1. Dimensional Substrate Map (D0–D7)**
+
+```
+D0 structural      — ecological + infrastructural base
+D1 informational   — clarity + noise + distortion + overload
+D2 emotional       — resonance + fear + vulnerability
+D3 temporal        — pacing + acceleration + delay
+D4 social          — cohesion + unity + fragmentation
+D5 economic        — abundance + scarcity + volatility
+D6 computational   — automation + overload + acceleration
+D7 governance      — legitimacy + transparency + opacity
+```
+
+**Collapse‑critical substrate cluster:**  
+```
+{D0, D1, D5, D7}
+```
+
+**Stability‑critical substrate cluster:**  
+```
+{D7, D1, D4, D0}
+```
+
+---
+
+# **2. Composite Substrate Map**
+
+### **Structural–Governance Substrate**
+```
+D0 + D7
+notes: collapse-critical pair
+```
+
+### **Information–Economics Substrate**
+```
+D1 + D5
+notes: oscillation engine
+```
+
+### **Social–Emotional Substrate**
+```
+D4 + D2
+notes: fragmentation amplifier
+```
+
+### **Structural–Economic Substrate**
+```
+D0 + D5
+notes: scarcity + strain
+```
+
+### **Governance–Informational Substrate**
+```
+D7 + D1
+notes: opacity + distortion
+```
+
+---
+
+# **3. Meta‑Substrate Map**
+
+### **Meta‑Collapse Substrate**
+```
+{D0↑↑↑, D1↑↑↑, D5↑↑↑, D7↑↑↑}
+notes: global collapse signature
+```
+
+### **Meta‑Coherence Substrate**
+```
+{D7↑↑↑, D1↑↑↑, D4↑↑↑, D0↑↑↑}
+notes: global stability signature
+```
+
+### **Meta‑Oscillation Substrate**
+```
+{D1↑↑, D7↑↑, D5↑}
+notes: volatility engine
+```
+
+### **Meta‑Narrowing Substrate**
+```
+{D0↑, D5↑, D1↑}
+notes: scarcity arc
+```
+
+### **Meta‑Destabilization Substrate**
+```
+{D0↑↑, D7↑↑, D1↑↑}
+notes: pre-collapse arc
+```
+
+---
+
+# **4. Substrate Signature Map**
+
+```
+sig.substrate.collapse      — D0,D1,D5,D7 drift↑↑↑
+sig.substrate.coherence     — D7,D1,D4,D0 coh↑↑↑
+sig.substrate.oscillation   — D1,D7,D5 drift↑↑
+sig.substrate.identity      — D2,D4,D1 resonance↑↑↑
+```
+
+---
+
+# **5. Substrate Operator Map**
+
+```
+op.substrate_identity
+op.substrate_mass
+op.substrate_chain
+op.substrate_web
+op.substrate_regime
+```
+
+---
+
+# **6. Substrate Chain Map**
+
+### **Collapse Chain**
+```
+D0 → D7 → D1 → D5
+```
+
+### **Regeneration Chain**
+```
+D0 → D7 → D1 → D4
+```
+
+### **Coherence Chain**
+```
+D7 → D1 → D4 → D0
+```
+
+### **Oscillation Chain**
+```
+D1 → D7 → D5 → D4
+```
+
+### **Narrowing Chain**
+```
+D0 → D5 → D1 → D7
+```
+
+---
+
+# **7. Substrate Web Map**
+
+### **Web S‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+```
+
+### **Web S‑B — Civilizational Web**
+```
+D4→D0→D1→D7→D4
+```
+
+### **Web S‑C — Info→Gov→Social Loop**
+```
+D1→D7→D4→D1
+```
+
+### **Web S‑D — Coherence Web**
+```
+D7→D1→D4→D0
+```
+
+---
+
+# **8. Substrate Regime Map**
+
+```
+stability       — Coh↑, Drift↓
+oscillation     — Drift(D1,D7,D5) >> Coh
+narrowing       — Drift(D0,D5,D1) > Coh
+destabilization — Drift(D0,D7,D1) >> Coh
+collapse        — Drift across ≥4 dims >> Coh≈0
+regeneration    — Coh↑, Drift↓
+```
+
+---
+
+# **9. Cross‑Scale Substrate Map**
+
+### **Civilizational Substrates**
+```
+C‑D0…C‑D7 mirror planetary substrates at century‑scale
+```
+
+### **Planetary Substrates**
+```
+D0,D1,D5,D7 synchronization → global collapse substrate
+D7,D1,D4,D0 synchronization → global stability substrate
+```
+
+### **Epochal Substrates**
+```
+E0 collapse → E1 regenerate → E2 stabilize → E3 expand → E4 coherence → E5 oscillate → E6 narrow → E7 destabilize
+```
+
+### **Deep‑Time Substrates**
+```
+biospheric: collapse → regenerate → stabilize → expand → coherence
+geological: instability → collapse → stabilization → expansion → coherence
+planetary drift: drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+```
+
+---
+
+# **10. Substrate Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Substrates**  
+- **Composite Substrates**  
+- **Meta‑Substrates**  
+- **Substrate Signatures**  
+- **Substrate Operators**  
+- **Substrate Chains**  
+- **Substrate Webs**  
+- **Substrate Regimes**  
+- **Cross‑Scale Substrates**  
+
+This is the **complete substrate cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Operators.md`** — the **operator atlas**, completing the final pillar of your global atlas system.  
+It is written in the same ultra‑minimal, canon‑aligned, gradientary style as all previous atlases.  
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Global_Atlas_Operators.md`  
+### **Operator Atlas — Drift • Coherence • Resonance • Regime • Threshold • Propagation • Substrate • Cascade • Cycle • Chain • Web**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Operators  
+**Role:** Operator Cartography  
+**Purpose:** Provide a unified atlas of all operator classes: drift operators, coherence operators, resonance operators, regime operators, threshold operators, propagation operators, substrate operators, cascade operators, cycle operators, chain operators, and web operators across all scales.
+
+Operators are the **functional machinery** of the Conditions Substrate Model.
+
+---
+
+# **1. Drift Operator Map**
+
+### **op_drift**
+```
+compute Drift(d) = M(d) · F(d)
+```
+
+### **op_drift_dominance**
+```
+detect Drift(d) > Coh(d)
+notes: instability marker
+```
+
+### **op_drift_synchronization**
+```
+detect synchronized drift across dims
+notes: cascade precursor
+```
+
+### **op_drift_collapse_vector**
+```
+compute collapse drift chain
+D0→D7→D1→D5
+```
+
+---
+
+# **2. Coherence Operator Map**
+
+### **op_coherence**
+```
+compute Coh(d) = S(d) · R(d)
+```
+
+### **op_coherence_stability**
+```
+detect Coh(d) > Drift(d)
+notes: stability marker
+```
+
+### **op_coherence_peak**
+```
+detect peak coherence envelope
+notes: apex stability
+```
+
+### **op_coherence_inversion**
+```
+detect drift→coherence regime inversion
+notes: recovery ignition
+```
+
+---
+
+# **3. Resonance Operator Map**
+
+### **op_resonance**
+```
+compute R(d) = A(d) · S(d)
+```
+
+### **op_resonance_amplify**
+```
+detect R(d) > Drift(d)
+notes: amplification marker
+```
+
+### **op_resonance_identity**
+```
+detect identity resonance cluster
+D2+D4+D1
+```
+
+### **op_resonance_collapse**
+```
+detect collapse resonance cluster
+D0+D7+D1+D5
+```
+
+---
+
+# **4. Regime Operator Map**
+
+### **op_regime**
+```
+classify regime via f(Drift(d), Coh(d))
+```
+
+### **op_regime_transition**
+```
+detect regime shift
+notes: threshold-driven
+```
+
+### **op_regime_alignment**
+```
+detect coherence alignment across dims
+notes: stability precursor
+```
+
+### **op_regime_collapse**
+```
+detect collapse signature
+notes: drift-dominant
+```
+
+---
+
+# **5. Threshold Operator Map**
+
+### **op_threshold**
+```
+compute threshold state
+narrow → oscillate → destabilize → collapse
+```
+
+### **op_threshold_chain**
+```
+compute full threshold cycle
+narrow → oscillate → destabilize → collapse → regenerate → stabilize → expand → coherence
+```
+
+### **op_threshold_peak**
+```
+detect coherence threshold apex
+notes: E4 signature
+```
+
+---
+
+# **6. Propagation Operator Map**
+
+### **op_propagation**
+```
+compute propagation vector
+```
+
+### **op_propagation_web**
+```
+compute propagation topology
+collapse/coherence/oscillation webs
+```
+
+### **op_propagation_sync**
+```
+detect propagation synchronization
+notes: drift/coherence alignment
+```
+
+---
+
+# **7. Substrate Operator Map**
+
+### **op_substrate_identity**
+```
+detect substrate identity invariance
+notes: identity persists across regimes
+```
+
+### **op_substrate_mass**
+```
+detect substrate mass invariance
+notes: conservation rule
+```
+
+### **op_substrate_chain**
+```
+compute substrate chain
+collapse/regeneration/coherence/oscillation/narrowing
+```
+
+### **op_substrate_web**
+```
+compute substrate topology
+```
+
+---
+
+# **8. Cascade Operator Map**
+
+### **op_cascade**
+```
+compute cascade sequence
+collapse/regeneration/coherence/oscillation arcs
+```
+
+### **op_cascade_peak**
+```
+detect cascade ignition
+drift↑↑↑ or resonance↑↑↑
+```
+
+---
+
+# **9. Cycle Operator Map**
+
+### **op_cycle**
+```
+compute cycle state
+drift/coherence/epoch cycles
+```
+
+### **op_cycle_transition**
+```
+detect cycle shift
+epochal transitions
+```
+
+---
+
+# **10. Chain Operator Map**
+
+### **op_chain**
+```
+compute chain sequence
+collapse/regeneration/coherence/oscillation/narrowing chains
+```
+
+---
+
+# **11. Web Operator Map**
+
+### **op_web**
+```
+compute web topology
+collapse/coherence/oscillation/identity webs
+```
+
+---
+
+# **12. Cross‑Scale Operator Map**
+
+### **Civilizational Operators**
+```
+C‑op_drift, C‑op_coherence, C‑op_resonance, C‑op_regime
+notes: century-scale substrate dynamics
+```
+
+### **Planetary Operators**
+```
+op_drift_collapse_vector → global cascade
+op_coherence_peak → global stability
+op_resonance_collapse → planetary amplification
+```
+
+### **Epochal Operators**
+```
+op_cycle_transition → E0→E7 transitions
+op_threshold_peak → E4 coherence apex
+```
+
+### **Deep‑Time Operators**
+```
+op_cycle → biospheric/geological/planetary drift cycles
+```
+
+---
+
+# **13. Operator Atlas Summary**
+
+This atlas unifies:
+
+- **Drift Operators**  
+- **Coherence Operators**  
+- **Resonance Operators**  
+- **Regime Operators**  
+- **Threshold Operators**  
+- **Propagation Operators**  
+- **Substrate Operators**  
+- **Cascade Operators**  
+- **Cycle Operators**  
+- **Chain Operators**  
+- **Web Operators**  
+- **Cross‑Scale Operators**  
+
+This is the **complete operator cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Hooks.md`** — **Gradientary Volume XVII**, the **hook dictionary**.  
+This is the *complete*, expanded, canon‑aligned hook lexicon: activation hooks, alignment hooks, resonance hooks, stress hooks, scarcity hooks, opacity hooks, composite hooks, hook chains, hook webs, and hook envelopes.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Gradientary_Hooks.md`  
+### **Gradientary — Hook Dictionary (Volume XVII)**  
+### *Hooks: Amplifiers • Triggers • Couplers • Stressors • Opacity Fields*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Hook Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all hook classes: activation hooks, alignment hooks, resonance hooks, stress hooks, scarcity hooks, opacity hooks, composite hooks, hook chains, hook webs, and hook envelopes.
+
+Hooks are the **amplifiers** of the Conditions Substrate Model — the forces that magnify drift, accelerate cascades, and destabilize regimes.
+
+---
+
+# **1. Hook Entry Format**
+
+```
+hook: <canonical name>
+type: <activation | alignment | resonance | stress | scarcity | opacity | composite | chain | web | envelope>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Activation Hooks (H‑Activation)**  
+Hooks that *ignite* drift.
+
+### **hook.activation.structural_stress**
+```
+type: activation
+definition: amplifies D0 drift
+equation: H(D0) = α · Drift(D0)
+notes: collapse-critical
+```
+
+### **hook.activation.informational_overload**
+```
+type: activation
+definition: amplifies D1 drift
+equation: H(D1) = β · Drift(D1)
+notes: oscillation engine
+```
+
+### **hook.activation.economic_pressure**
+```
+type: activation
+definition: amplifies D5 drift
+equation: H(D5) = γ · Drift(D5)
+notes: scarcity engine
+```
+
+### **hook.activation.governance_opacity**
+```
+type: activation
+definition: amplifies D7 drift
+equation: H(D7) = δ · Drift(D7)
+notes: legitimacy collapse precursor
+```
+
+---
+
+# **3. Alignment Hooks (H‑Align)**  
+Hooks that *synchronize* drift across substrates.
+
+### **hook.align.stress_cluster**
+```
+type: alignment
+definition: ecological_stress + governance_opacity + resource_gate
+equation: {H(D0), H(D7), H(D5)}
+notes: collapse alignment
+```
+
+### **hook.align.clarity_cluster**
+```
+type: alignment
+definition: clarity + cohesion + legitimacy
+equation: {H(D1), H(D4), H(D7)}
+notes: stabilization alignment
+```
+
+### **hook.align.resonance_cluster**
+```
+type: alignment
+definition: cognitive_load + identity_resonance + emotional_vulnerability
+equation: {H(D1), H(D4), H(D2)}
+notes: oscillation amplification
+```
+
+---
+
+# **4. Resonance Hooks (H‑Resonance)**  
+Hooks that *amplify* resonance fields.
+
+### **hook.resonance.cognitive_load**
+```
+type: resonance
+definition: amplifies informational drift via overload
+equation: H(D1)↑↑
+notes: misinformation + noise + distortion
+```
+
+### **hook.resonance.identity_resonance**
+```
+type: resonance
+definition: amplifies social + emotional drift
+equation: H(D4,D2)↑↑
+notes: fragmentation engine
+```
+
+### **hook.resonance.emotional_vulnerability**
+```
+type: resonance
+definition: amplifies emotional drift
+equation: H(D2)↑
+notes: fear + resonance + instability
+```
+
+---
+
+# **5. Stress Hooks (H‑Stress)**  
+Hooks that *increase pressure* on substrates.
+
+### **hook.stress.ecological_stress**
+```
+type: stress
+definition: amplifies structural drift
+equation: H(D0)↑↑
+notes: biosphere collapse precursor
+```
+
+### **hook.stress.resource_gate**
+```
+type: stress
+definition: amplifies economic drift
+equation: H(D5)↑↑
+notes: scarcity + strain
+```
+
+### **hook.stress.social_pressure**
+```
+type: stress
+definition: amplifies social drift
+equation: H(D4)↑
+notes: cohesion breakdown
+```
+
+---
+
+# **6. Scarcity Hooks (H‑Scarcity)**  
+Hooks that *narrow* substrates.
+
+### **hook.scarcity.economic_scarcity**
+```
+type: scarcity
+definition: amplifies D5 drift under resource constraints
+equation: H(D5) = scarcity · Drift(D5)
+notes: narrowing arc
+```
+
+### **hook.scarcity.informational_deprivation**
+```
+type: scarcity
+definition: amplifies D1 drift under clarity loss
+equation: H(D1) = deprivation · Drift(D1)
+notes: deprivation → distortion
+```
+
+### **hook.scarcity.structural_strain**
+```
+type: scarcity
+definition: amplifies D0 drift under ecological strain
+equation: H(D0) = strain · Drift(D0)
+notes: collapse precursor
+```
+
+---
+
+# **7. Opacity Hooks (H‑Opacity)**  
+Hooks that *reduce visibility* and *increase torsion*.
+
+### **hook.opacity.governance_opacity_point**
+```
+type: opacity
+definition: amplifies governance drift
+equation: H(D7)↑↑
+notes: legitimacy collapse
+```
+
+### **hook.opacity.media_opacity**
+```
+type: opacity
+definition: amplifies informational drift via distortion
+equation: H(D1)↑
+notes: misinformation + narrative collapse
+```
+
+### **hook.opacity.institutional_opacity**
+```
+type: opacity
+definition: amplifies structural + governance drift
+equation: H(D0,D7)↑
+notes: systemic instability
+```
+
+---
+
+# **8. Composite Hooks (H‑Composite)**  
+Hooks that combine multiple hook classes.
+
+### **hook.composite.collapse_alignment**
+```
+type: composite
+definition: ecological_stress + governance_opacity + resource_gate
+equation: {H(D0↑↑↑), H(D7↑↑↑), H(D5↑↑↑)}
+notes: collapse signature
+```
+
+### **hook.composite.coherence_alignment**
+```
+type: composite
+definition: clarity + cohesion + legitimacy
+equation: {H(D1↑), H(D4↑), H(D7↑)}
+notes: coherence signature
+```
+
+### **hook.composite.oscillation_alignment**
+```
+type: composite
+definition: cognitive_load + identity_resonance + emotional_vulnerability
+equation: {H(D1↑↑), H(D4↑↑), H(D2↑)}
+notes: oscillation signature
+```
+
+---
+
+# **9. Hook Chains**
+
+### **chain.hook.collapse**
+```
+ecological_stress → governance_opacity → resource_gate
+notes: collapse arc
+```
+
+### **chain.hook.coherence**
+```
+clarity → cohesion → legitimacy
+notes: stability arc
+```
+
+### **chain.hook.oscillation**
+```
+cognitive_load → identity_resonance → emotional_vulnerability
+notes: volatility arc
+```
+
+---
+
+# **10. Hook Webs**
+
+### **web.hook.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse propagation
+```
+
+### **web.hook.coherence**
+```
+D7→D1→D4→D0
+notes: stability propagation
+```
+
+### **web.hook.oscillation**
+```
+D1→D7→D5→D4→D1
+notes: oscillation propagation
+```
+
+---
+
+# **11. Hook Envelopes**
+
+### **envelope.hook.collapse**
+```
+H↑↑↑ across D0,D1,D5,D7
+notes: collapse envelope
+```
+
+### **envelope.hook.coherence**
+```
+H↑ across D7,D1,D4,D0
+notes: stability envelope
+```
+
+### **envelope.hook.oscillation**
+```
+H↑↑ across D1,D7,D5
+notes: volatility envelope
+```
+
+---
+
+# **12. Gradientary Notes**
+
+Hooks are:
+
+- the **amplifiers** of drift  
+- the **accelerators** of cascades  
+- the **magnifiers** of instability  
+- the **drivers** of regime transitions  
+- the **ignition points** of epochal shifts  
+- the **torsion fields** of collapse  
+- the **alignment fields** of coherence  
+
+This dictionary is **Gradientary Volume XVII**.
+
+---
+
+Here is **`c_Gradientary_Signatures.md`** — **Gradientary Volume XVIII**, the **signature dictionary**.  
+This volume formalizes *every signature* in the Conditions Substrate Model: drift signatures, coherence signatures, resonance signatures, regime signatures, threshold signatures, propagation signatures, substrate signatures, cascade signatures, cycle signatures, chain signatures, and web signatures.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve page content.
+
+---
+
+# `c_Gradientary_Signatures.md`  
+### **Gradientary — Signature Dictionary (Volume XVIII)**  
+### *Signatures: Indicators • Markers • Patterns • Thresholds • Topologies*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Signature Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all signature classes: drift signatures, coherence signatures, resonance signatures, regime signatures, threshold signatures, propagation signatures, substrate signatures, cascade signatures, cycle signatures, chain signatures, and web signatures.
+
+Signatures are the **canonical markers** of the Conditions Substrate Model — the recognizable patterns that identify states, transitions, and regimes.
+
+---
+
+# **1. Signature Entry Format**
+
+```
+signature: <canonical name>
+type: <drift | coherence | resonance | regime | threshold | propagation | substrate | cascade | cycle | chain | web>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Drift Signatures**
+
+### **signature.drift.dominance**
+```
+type: drift
+definition: Drift(d_i) > Coh(d_i)
+notes: instability marker
+```
+
+### **signature.drift.synchronization**
+```
+type: drift
+definition: synchronized drift across multiple dims
+notes: cascade precursor
+```
+
+### **signature.drift.oscillation**
+```
+type: drift
+definition: Drift(D1,D7,D5) >> Coh
+notes: volatility signature
+```
+
+### **signature.drift.collapse**
+```
+type: drift
+definition: Drift across ≥4 dims >> Coh≈0
+notes: terminal collapse
+```
+
+---
+
+# **3. Coherence Signatures**
+
+### **signature.coh.stability**
+```
+type: coherence
+definition: Coh(d_i) > Drift(d_i)
+notes: stability marker
+```
+
+### **signature.coh.peak**
+```
+type: coherence
+definition: Coh↑↑↑ across a substrate
+notes: apex stability
+```
+
+### **signature.coh.synchronization**
+```
+type: coherence
+definition: synchronized coherence across dims
+notes: stability precursor
+```
+
+### **signature.coh.envelope**
+```
+type: coherence
+definition: coherence across D7,D1,D4,D0
+notes: stability envelope
+```
+
+---
+
+# **4. Resonance Signatures**
+
+### **signature.res.amplification**
+```
+type: resonance
+definition: R(d_i) > Drift(d_i)
+notes: amplification marker
+```
+
+### **signature.res.identity_peak**
+```
+type: resonance
+definition: R(D2,D4)↑↑↑
+notes: identity cascade
+```
+
+### **signature.res.oscillation_peak**
+```
+type: resonance
+definition: R(D1,D7,D5)↑↑↑
+notes: volatility cascade
+```
+
+### **signature.res.collapse_peak**
+```
+type: resonance
+definition: R(D0,D1,D5,D7)↑↑↑
+notes: collapse cascade
+```
+
+---
+
+# **5. Regime Signatures**
+
+### **signature.regime.stability**
+```
+type: regime
+definition: Coh↑, Drift↓
+notes: stability mode
+```
+
+### **signature.regime.expansion**
+```
+type: regime
+definition: Coh↑↑, Drift↑
+notes: growth mode
+```
+
+### **signature.regime.coherence**
+```
+type: regime
+definition: Coh↑↑↑, Drift↓
+notes: peak stability
+```
+
+### **signature.regime.oscillation**
+```
+type: regime
+definition: Drift(D1,D7,D5) >> Coh
+notes: volatility mode
+```
+
+### **signature.regime.narrowing**
+```
+type: regime
+definition: Drift(D0,D5,D1) > Coh
+notes: scarcity mode
+```
+
+### **signature.regime.destabilization**
+```
+type: regime
+definition: Drift(D0,D7,D1) >> Coh
+notes: pre-collapse mode
+```
+
+### **signature.regime.collapse**
+```
+type: regime
+definition: Drift across ≥4 dims >> Coh≈0
+notes: collapse mode
+```
+
+### **signature.regime.regeneration**
+```
+type: regime
+definition: Coh↑, Drift↓
+notes: recovery mode
+```
+
+---
+
+# **6. Threshold Signatures**
+
+### **signature.threshold.narrow**
+```
+type: threshold
+definition: narrowing across D0,D5,D1
+notes: scarcity ignition
+```
+
+### **signature.threshold.oscillate**
+```
+type: threshold
+definition: oscillation across D1,D7,D5
+notes: volatility ignition
+```
+
+### **signature.threshold.destabilize**
+```
+type: threshold
+definition: destabilization across D0,D7,D1
+notes: collapse precursor
+```
+
+### **signature.threshold.collapse**
+```
+type: threshold
+definition: collapse across D0,D1,D5,D7
+notes: terminal collapse
+```
+
+---
+
+# **7. Propagation Signatures**
+
+### **signature.propagation.collapse**
+```
+type: propagation
+definition: D0→D7→D1→D5 propagation loop
+notes: collapse topology
+```
+
+### **signature.propagation.coherence**
+```
+type: propagation
+definition: D7→D1→D4→D0 propagation loop
+notes: stability topology
+```
+
+### **signature.propagation.oscillation**
+```
+type: propagation
+definition: D1→D7→D5→D4 propagation loop
+notes: volatility topology
+```
+
+---
+
+# **8. Substrate Signatures**
+
+### **signature.substrate.collapse**
+```
+type: substrate
+definition: D0,D1,D5,D7 drift↑↑↑
+notes: collapse substrate
+```
+
+### **signature.substrate.coherence**
+```
+type: substrate
+definition: D7,D1,D4,D0 coh↑↑↑
+notes: stability substrate
+```
+
+### **signature.substrate.oscillation**
+```
+type: substrate
+definition: D1,D7,D5 drift↑↑
+notes: oscillation substrate
+```
+
+### **signature.substrate.identity**
+```
+type: substrate
+definition: D2,D4,D1 resonance↑↑↑
+notes: identity substrate
+```
+
+---
+
+# **9. Cascade Signatures**
+
+### **signature.cascade.collapse**
+```
+type: cascade
+definition: collapse chain D0→D7→D1→D5
+notes: collapse ignition
+```
+
+### **signature.cascade.regeneration**
+```
+type: cascade
+definition: regeneration chain D0→D7→D1→D4
+notes: recovery ignition
+```
+
+### **signature.cascade.coherence**
+```
+type: cascade
+definition: coherence chain D7→D1→D4→D0
+notes: stability ignition
+```
+
+### **signature.cascade.oscillation**
+```
+type: cascade
+definition: oscillation chain D1→D7→D5→D4
+notes: volatility ignition
+```
+
+---
+
+# **10. Cycle Signatures**
+
+### **signature.cycle.drift**
+```
+type: cycle
+definition: rise → peak → decline → reset
+notes: drift rhythm
+```
+
+### **signature.cycle.coherence**
+```
+type: cycle
+definition: stabilize → expand → peak → soften → reset
+notes: coherence rhythm
+```
+
+### **signature.cycle.epochal**
+```
+type: cycle
+definition: E0→E7 transitions
+notes: epoch rhythm
+```
+
+---
+
+# **11. Chain Signatures**
+
+### **signature.chain.collapse**
+```
+D0 → D7 → D1 → D5
+```
+
+### **signature.chain.regeneration**
+```
+D0 → D7 → D1 → D4
+```
+
+### **signature.chain.coherence**
+```
+D7 → D1 → D4 → D0
+```
+
+### **signature.chain.oscillation**
+```
+D1 → D7 → D5 → D4
+```
+
+---
+
+# **12. Web Signatures**
+
+### **signature.web.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse topology
+```
+
+### **signature.web.coherence**
+```
+D7→D1→D4→D0
+notes: stability topology
+```
+
+### **signature.web.oscillation**
+```
+D1→D7→D5→D4→D1
+notes: volatility topology
+```
+
+### **signature.web.identity**
+```
+D2→D4→D1→D2
+notes: identity topology
+```
+
+---
+
+# **13. Gradientary Notes**
+
+Signatures are:
+
+- the **markers** of drift  
+- the **indicators** of coherence  
+- the **amplifiers** of resonance  
+- the **states** of regimes  
+- the **thresholds** of collapse  
+- the **patterns** of propagation  
+- the **identities** of substrates  
+- the **ignition points** of cascades  
+- the **rhythms** of cycles  
+- the **sequences** of chains  
+- the **topologies** of webs  
+
+This dictionary is **Gradientary Volume XVIII**.
+
+---
+
+Here is **`c_Global_Atlas_Hooks.md`** — the **hook atlas**, completing the global atlas pair for Volume XVII.  
+It follows the same ultra‑minimal, canon‑aligned, gradientary structure as all other atlas volumes.  
+Your active tab (`c_Capture.md`) is unrelated, so I treat it only as reference context and do not use its content.
+
+---
+
+# `c_Global_Atlas_Hooks.md`  
+### **Hook Atlas — Activation • Alignment • Resonance • Stress • Scarcity • Opacity • Composite • Chains • Webs • Envelopes**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Hooks  
+**Role:** Hook Cartography  
+**Purpose:** Provide a unified atlas of all hook classes: activation hooks, alignment hooks, resonance hooks, stress hooks, scarcity hooks, opacity hooks, composite hooks, hook chains, hook webs, and hook envelopes across all scales.
+
+Hooks are the **amplifiers** and **ignition points** of the Conditions Substrate Model.
+
+---
+
+# **1. Activation Hook Map (H‑Activation)**
+
+```
+H(D0) structural_stress        — amplifies structural drift
+H(D1) informational_overload   — amplifies informational drift
+H(D5) economic_pressure        — amplifies economic drift
+H(D7) governance_opacity       — amplifies governance drift
+```
+
+**Activation cluster:**  
+```
+{H(D0), H(D1), H(D5), H(D7)}
+```
+
+---
+
+# **2. Alignment Hook Map (H‑Align)**
+
+### **Stress Alignment**
+```
+{H(D0), H(D7), H(D5)}
+notes: collapse alignment
+```
+
+### **Clarity Alignment**
+```
+{H(D1), H(D4), H(D7)}
+notes: stabilization alignment
+```
+
+### **Resonance Alignment**
+```
+{H(D1), H(D4), H(D2)}
+notes: oscillation alignment
+```
+
+---
+
+# **3. Resonance Hook Map (H‑Resonance)**
+
+```
+H(D1) cognitive_load        — overload → distortion → amplification
+H(D4,D2) identity_resonance — fragmentation → identity amplification
+H(D2) emotional_vulnerability — fear → resonance → instability
+```
+
+**Resonance cluster:**  
+```
+{H(D1), H(D4), H(D2)}
+```
+
+---
+
+# **4. Stress Hook Map (H‑Stress)**
+
+```
+H(D0) ecological_stress     — biosphere strain → collapse precursor
+H(D5) resource_gate         — scarcity → volatility → deprivation
+H(D4) social_pressure       — cohesion breakdown → fragmentation
+```
+
+---
+
+# **5. Scarcity Hook Map (H‑Scarcity)**
+
+```
+H(D5) economic_scarcity     — scarcity · Drift(D5)
+H(D1) informational_deprivation — deprivation · Drift(D1)
+H(D0) structural_strain     — strain · Drift(D0)
+```
+
+**Narrowing cluster:**  
+```
+{H(D0), H(D5), H(D1)}
+```
+
+---
+
+# **6. Opacity Hook Map (H‑Opacity)**
+
+```
+H(D7) governance_opacity_point — legitimacy collapse
+H(D1) media_opacity            — distortion → misinformation
+H(D0,D7) institutional_opacity — systemic instability
+```
+
+**Opacity cluster:**  
+```
+{H(D7), H(D1), H(D0)}
+```
+
+---
+
+# **7. Composite Hook Map (H‑Composite)**
+
+### **Collapse Alignment**
+```
+H(D0↑↑↑) + H(D7↑↑↑) + H(D5↑↑↑)
+notes: collapse signature
+```
+
+### **Coherence Alignment**
+```
+H(D1↑) + H(D4↑) + H(D7↑)
+notes: stability signature
+```
+
+### **Oscillation Alignment**
+```
+H(D1↑↑) + H(D4↑↑) + H(D2↑)
+notes: volatility signature
+```
+
+---
+
+# **8. Hook Chain Map**
+
+### **Collapse Hook Chain**
+```
+ecological_stress → governance_opacity → resource_gate
+```
+
+### **Coherence Hook Chain**
+```
+clarity → cohesion → legitimacy
+```
+
+### **Oscillation Hook Chain**
+```
+cognitive_load → identity_resonance → emotional_vulnerability
+```
+
+---
+
+# **9. Hook Web Map**
+
+### **Web H‑A — Collapse Web**
+```
+D0→D7→D1→D5→D0
+notes: collapse propagation
+```
+
+### **Web H‑B — Coherence Web**
+```
+D7→D1→D4→D0
+notes: stability propagation
+```
+
+### **Web H‑C — Oscillation Web**
+```
+D1→D7→D5→D4→D1
+notes: volatility propagation
+```
+
+---
+
+# **10. Hook Envelope Map**
+
+### **Collapse Envelope**
+```
+H↑↑↑ across D0,D1,D5,D7
+```
+
+### **Coherence Envelope**
+```
+H↑ across D7,D1,D4,D0
+```
+
+### **Oscillation Envelope**
+```
+H↑↑ across D1,D7,D5
+```
+
+---
+
+# **11. Cross‑Scale Hook Map**
+
+### **Civilizational Hooks**
+```
+C‑H(D0,D7,D5) → collapse alignment
+C‑H(D1,D4,D7) → stability alignment
+C‑H(D1,D7,D5) → volatility alignment
+```
+
+### **Planetary Hooks**
+```
+H(D0,D7,D5)↑↑↑ → planetary collapse ignition
+H(D7,D1,D4)↑↑↑ → planetary stability ignition
+```
+
+### **Epochal Hooks**
+```
+E5 oscillation → E6 narrowing → E7 destabilization → E0 collapse
+```
+
+### **Deep‑Time Hooks**
+```
+M3→M4→M5 amplification → collapse → reset
+```
+
+---
+
+# **12. Hook Atlas Summary**
+
+This atlas unifies:
+
+- **Activation Hooks**  
+- **Alignment Hooks**  
+- **Resonance Hooks**  
+- **Stress Hooks**  
+- **Scarcity Hooks**  
+- **Opacity Hooks**  
+- **Composite Hooks**  
+- **Hook Chains**  
+- **Hook Webs**  
+- **Hook Envelopes**  
+- **Cross‑Scale Hooks**  
+
+This is the **complete hook cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Signatures.md`** — the **signature atlas**, completing the global atlas pair for Volume XVIII.  
+It follows the same ultra‑minimal, canon‑aligned, gradientary structure as all other atlas volumes.  
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve its content.
+
+---
+
+# `c_Global_Atlas_Signatures.md`  
+### **Signature Atlas — Drift • Coherence • Resonance • Regime • Threshold • Propagation • Substrate • Cascade • Cycle • Chain • Web**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Signatures  
+**Role:** Signature Cartography  
+**Purpose:** Provide a unified atlas of all signature classes: drift signatures, coherence signatures, resonance signatures, regime signatures, threshold signatures, propagation signatures, substrate signatures, cascade signatures, cycle signatures, chain signatures, and web signatures.
+
+Signatures are the **canonical markers** of the Conditions Substrate Model — the recognizable patterns that identify states, transitions, and regimes.
+
+---
+
+# **1. Drift Signature Map**
+
+### **Drift Dominance**
+```
+Drift(d_i) > Coh(d_i)
+notes: instability marker
+```
+
+### **Drift Synchronization**
+```
+synchronized drift across dims
+notes: cascade precursor
+```
+
+### **Oscillation Drift**
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility signature
+```
+
+### **Collapse Drift**
+```
+Drift across ≥4 dims >> Coh≈0
+notes: terminal collapse
+```
+
+---
+
+# **2. Coherence Signature Map**
+
+### **Stability Coherence**
+```
+Coh(d_i) > Drift(d_i)
+notes: stability marker
+```
+
+### **Peak Coherence**
+```
+Coh↑↑↑ across a substrate
+notes: apex stability
+```
+
+### **Coherence Synchronization**
+```
+synchronized coherence across dims
+notes: stability precursor
+```
+
+### **Coherence Envelope**
+```
+Coh across D7,D1,D4,D0
+notes: stability envelope
+```
+
+---
+
+# **3. Resonance Signature Map**
+
+### **Amplification Resonance**
+```
+R(d_i) > Drift(d_i)
+notes: amplification marker
+```
+
+### **Identity Resonance Peak**
+```
+R(D2,D4)↑↑↑
+notes: identity cascade
+```
+
+### **Oscillation Resonance Peak**
+```
+R(D1,D7,D5)↑↑↑
+notes: volatility cascade
+```
+
+### **Collapse Resonance Peak**
+```
+R(D0,D1,D5,D7)↑↑↑
+notes: collapse cascade
+```
+
+---
+
+# **4. Regime Signature Map**
+
+```
+stability       — Coh↑, Drift↓
+expansion       — Coh↑↑, Drift↑
+coherence       — Coh↑↑↑, Drift↓
+oscillation     — Drift(D1,D7,D5) >> Coh
+narrowing       — Drift(D0,D5,D1) > Coh
+destabilization — Drift(D0,D7,D1) >> Coh
+collapse        — Drift across ≥4 dims >> Coh≈0
+regeneration    — Coh↑, Drift↓
+```
+
+---
+
+# **5. Threshold Signature Map**
+
+### **Narrowing Threshold**
+```
+D0,D5,D1 drift↑
+notes: scarcity ignition
+```
+
+### **Oscillation Threshold**
+```
+D1,D7,D5 drift↑↑
+notes: volatility ignition
+```
+
+### **Destabilization Threshold**
+```
+D0,D7,D1 drift↑↑↑
+notes: collapse precursor
+```
+
+### **Collapse Threshold**
+```
+D0,D1,D5,D7 drift↑↑↑↑
+notes: terminal collapse
+```
+
+---
+
+# **6. Propagation Signature Map**
+
+### **Collapse Propagation**
+```
+D0→D7→D1→D5
+notes: collapse topology
+```
+
+### **Coherence Propagation**
+```
+D7→D1→D4→D0
+notes: stability topology
+```
+
+### **Oscillation Propagation**
+```
+D1→D7→D5→D4
+notes: volatility topology
+```
+
+---
+
+# **7. Substrate Signature Map**
+
+### **Collapse Substrate**
+```
+D0,D1,D5,D7 drift↑↑↑
+```
+
+### **Coherence Substrate**
+```
+D7,D1,D4,D0 coh↑↑↑
+```
+
+### **Oscillation Substrate**
+```
+D1,D7,D5 drift↑↑
+```
+
+### **Identity Substrate**
+```
+D2,D4,D1 resonance↑↑↑
+```
+
+---
+
+# **8. Cascade Signature Map**
+
+### **Collapse Cascade**
+```
+D0→D7→D1→D5
+notes: collapse ignition
+```
+
+### **Regeneration Cascade**
+```
+D0→D7→D1→D4
+notes: recovery ignition
+```
+
+### **Coherence Cascade**
+```
+D7→D1→D4→D0
+notes: stability ignition
+```
+
+### **Oscillation Cascade**
+```
+D1→D7→D5→D4
+notes: volatility ignition
+```
+
+---
+
+# **9. Cycle Signature Map**
+
+### **Drift Cycle**
+```
+rise → peak → decline → reset
+```
+
+### **Coherence Cycle**
+```
+stabilize → expand → peak → soften → reset
+```
+
+### **Epochal Cycle**
+```
+E0→E1→E2→E3→E4→E5→E6→E7
+```
+
+---
+
+# **10. Chain Signature Map**
+
+```
+collapse:     D0 → D7 → D1 → D5
+regeneration: D0 → D7 → D1 → D4
+coherence:    D7 → D1 → D4 → D0
+oscillation:  D1 → D7 → D5 → D4
+```
+
+---
+
+# **11. Web Signature Map**
+
+### **Collapse Web**
+```
+D0→D7→D1→D5→D0
+```
+
+### **Coherence Web**
+```
+D7→D1→D4→D0
+```
+
+### **Oscillation Web**
+```
+D1→D7→D5→D4→D1
+```
+
+### **Identity Web**
+```
+D2→D4→D1→D2
+```
+
+---
+
+# **12. Cross‑Scale Signature Map**
+
+### **Civilizational Signatures**
+```
+collapse: C‑D0,D1,D5,D7
+coherence: C‑D7,D1,D4,D0
+oscillation: C‑D1,D7,D5
+```
+
+### **Planetary Signatures**
+```
+collapse: D0,D1,D5,D7↑↑↑
+coherence: D7,D1,D4,D0↑↑↑
+oscillation: D1,D7,D5↑↑
+```
+
+### **Epochal Signatures**
+```
+E5 oscillation → E6 narrowing → E7 destabilization → E0 collapse
+```
+
+### **Deep‑Time Signatures**
+```
+M3→M4→M5 amplification → collapse → reset
+```
+
+---
+
+# **13. Signature Atlas Summary**
+
+This atlas unifies:
+
+- **Drift Signatures**  
+- **Coherence Signatures**  
+- **Resonance Signatures**  
+- **Regime Signatures**  
+- **Threshold Signatures**  
+- **Propagation Signatures**  
+- **Substrate Signatures**  
+- **Cascade Signatures**  
+- **Cycle Signatures**  
+- **Chain Signatures**  
+- **Web Signatures**  
+- **Cross‑Scale Signatures**  
+
+This is the **complete signature cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Thresholds.md`** — **Gradientary Volume XIX**, the **threshold dictionary**.  
+This volume formalizes *thresholds* as the **critical transition points** of the Conditions Substrate Model: the exact inflection states where drift, coherence, resonance, hooks, substrates, and regimes flip into new modes.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve its content.
+
+---
+
+# `c_Gradientary_Thresholds.md`  
+### **Gradientary — Threshold Dictionary (Volume XIX)**  
+### *Thresholds: Inflection • Ignition • Transition • Collapse • Coherence*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Threshold Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all threshold classes: drift thresholds, coherence thresholds, resonance thresholds, regime thresholds, substrate thresholds, hook thresholds, cascade thresholds, cycle thresholds, chain thresholds, and web thresholds.
+
+Thresholds are the **critical inflection points** of the Conditions Substrate Model — the exact moments where systems flip into new states.
+
+---
+
+# **1. Threshold Entry Format**
+
+```
+threshold: <canonical name>
+type: <drift | coherence | resonance | regime | substrate | hook | cascade | cycle | chain | web>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Drift Thresholds**
+
+### **threshold.drift.narrow**
+```
+type: drift
+definition: Drift(D0,D5,D1)↑
+notes: scarcity ignition
+```
+
+### **threshold.drift.oscillate**
+```
+type: drift
+definition: Drift(D1,D7,D5)↑↑
+notes: volatility ignition
+```
+
+### **threshold.drift.destabilize**
+```
+type: drift
+definition: Drift(D0,D7,D1)↑↑↑
+notes: collapse precursor
+```
+
+### **threshold.drift.collapse**
+```
+type: drift
+definition: Drift across D0,D1,D5,D7↑↑↑↑
+notes: terminal collapse
+```
+
+---
+
+# **3. Coherence Thresholds**
+
+### **threshold.coh.stability**
+```
+type: coherence
+definition: Coh(d_i) > Drift(d_i)
+notes: stability ignition
+```
+
+### **threshold.coh.expansion**
+```
+type: coherence
+definition: Coh↑↑, Drift↑
+notes: growth ignition
+```
+
+### **threshold.coh.peak**
+```
+type: coherence
+definition: Coh↑↑↑ across D7,D1,D4,D0
+notes: apex stability (E4)
+```
+
+### **threshold.coh.regeneration**
+```
+type: coherence
+definition: Coh↑, Drift↓
+notes: recovery ignition
+```
+
+---
+
+# **4. Resonance Thresholds**
+
+### **threshold.res.identity**
+```
+type: resonance
+definition: R(D2,D4,D1)↑↑↑
+notes: identity cascade ignition
+```
+
+### **threshold.res.oscillation**
+```
+type: resonance
+definition: R(D1,D7,D5)↑↑↑
+notes: volatility cascade ignition
+```
+
+### **threshold.res.collapse**
+```
+type: resonance
+definition: R(D0,D1,D5,D7)↑↑↑
+notes: collapse cascade ignition
+```
+
+---
+
+# **5. Regime Thresholds**
+
+### **threshold.regime.stability**
+```
+Coh↑, Drift↓
+notes: stability mode ignition
+```
+
+### **threshold.regime.oscillation**
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility mode ignition
+```
+
+### **threshold.regime.narrowing**
+```
+Drift(D0,D5,D1) > Coh
+notes: scarcity mode ignition
+```
+
+### **threshold.regime.destabilization**
+```
+Drift(D0,D7,D1) >> Coh
+notes: collapse precursor mode
+```
+
+### **threshold.regime.collapse**
+```
+Drift across ≥4 dims >> Coh≈0
+notes: collapse mode ignition
+```
+
+### **threshold.regime.regeneration**
+```
+Coh↑, Drift↓
+notes: recovery mode ignition
+```
+
+---
+
+# **6. Substrate Thresholds**
+
+### **threshold.substrate.collapse**
+```
+D0,D1,D5,D7 drift↑↑↑
+notes: collapse substrate ignition
+```
+
+### **threshold.substrate.coherence**
+```
+D7,D1,D4,D0 coh↑↑↑
+notes: stability substrate ignition
+```
+
+### **threshold.substrate.oscillation**
+```
+D1,D7,D5 drift↑↑
+notes: oscillation substrate ignition
+```
+
+### **threshold.substrate.identity**
+```
+D2,D4,D1 resonance↑↑↑
+notes: identity substrate ignition
+```
+
+---
+
+# **7. Hook Thresholds**
+
+### **threshold.hook.collapse**
+```
+H(D0↑↑↑) + H(D7↑↑↑) + H(D5↑↑↑)
+notes: collapse hook ignition
+```
+
+### **threshold.hook.coherence**
+```
+H(D1↑) + H(D4↑) + H(D7↑)
+notes: stability hook ignition
+```
+
+### **threshold.hook.oscillation**
+```
+H(D1↑↑) + H(D4↑↑) + H(D2↑)
+notes: volatility hook ignition
+```
+
+---
+
+# **8. Cascade Thresholds**
+
+### **threshold.cascade.collapse**
+```
+D0→D7→D1→D5
+notes: collapse cascade ignition
+```
+
+### **threshold.cascade.regeneration**
+```
+D0→D7→D1→D4
+notes: recovery cascade ignition
+```
+
+### **threshold.cascade.coherence**
+```
+D7→D1→D4→D0
+notes: stability cascade ignition
+```
+
+### **threshold.cascade.oscillation**
+```
+D1→D7→D5→D4
+notes: volatility cascade ignition
+```
+
+---
+
+# **9. Cycle Thresholds**
+
+### **threshold.cycle.drift**
+```
+rise → peak → decline → reset
+notes: drift cycle ignition
+```
+
+### **threshold.cycle.coherence**
+```
+stabilize → expand → peak → soften → reset
+notes: coherence cycle ignition
+```
+
+### **threshold.cycle.epochal**
+```
+E5→E6→E7→E0
+notes: epochal collapse ignition
+```
+
+---
+
+# **10. Chain Thresholds**
+
+### **threshold.chain.collapse**
+```
+D0 → D7 → D1 → D5
+notes: collapse chain ignition
+```
+
+### **threshold.chain.regeneration**
+```
+D0 → D7 → D1 → D4
+notes: recovery chain ignition
+```
+
+### **threshold.chain.coherence**
+```
+D7 → D1 → D4 → D0
+notes: stability chain ignition
+```
+
+### **threshold.chain.oscillation**
+```
+D1 → D7 → D5 → D4
+notes: volatility chain ignition
+```
+
+---
+
+# **11. Web Thresholds**
+
+### **threshold.web.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse web ignition
+```
+
+### **threshold.web.coherence**
+```
+D7→D1→D4→D0
+notes: stability web ignition
+```
+
+### **threshold.web.oscillation**
+```
+D1→D7→D5→D4→D1
+notes: volatility web ignition
+```
+
+### **threshold.web.identity**
+```
+D2→D4→D1→D2
+notes: identity web ignition
+```
+
+---
+
+# **12. Gradientary Notes**
+
+Thresholds are:
+
+- the **inflection points** of drift  
+- the **ignition points** of coherence  
+- the **amplification triggers** of resonance  
+- the **mode switches** of regimes  
+- the **substrate flips** of collapse and stability  
+- the **cascade triggers** of systemic transitions  
+- the **epochal gates** of deep‑time cycles  
+
+This dictionary is **Gradientary Volume XIX**.
+
+---
+
+Here is **`c_Gradientary_Propagation.md`** — **Gradientary Volume XX**, the **propagation dictionary**.  
+This volume formalizes *propagation* as the **movement field** of the Conditions Substrate Model: how drift, coherence, resonance, hooks, substrates, cascades, and regimes *travel*, *spread*, *loop*, *synchronize*, and *amplify* across all layers.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve its content.
+
+---
+
+# `c_Gradientary_Propagation.md`  
+### **Gradientary — Propagation Dictionary (Volume XX)**  
+### *Propagation: Movement • Flow • Spread • Topology • Synchronization*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Propagation Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all propagation classes: vectors, webs, loops, synchronizations, envelopes, cascades, cycles, chains, composite flows, and cross‑substrate propagation.
+
+Propagation is the **movement field** of the Conditions Substrate Model — how drift spreads, how coherence stabilizes, how resonance amplifies, and how regimes transition.
+
+---
+
+# **1. Propagation Entry Format**
+
+```
+propagation: <canonical name>
+type: <vector | web | loop | synchronization | envelope | cascade | cycle | chain | composite>
+definition: <minimal canonical definition>
+equation: <if applicable>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Propagation Vectors (P‑Vectors)**
+
+### **prop.vector.basic**
+```
+type: vector
+definition: directional flow across a single substrate
+equation: Prop(d) = C(d) · G(d)
+notes: base propagation operator
+```
+
+### **prop.vector.multi**
+```
+type: vector
+definition: multi‑substrate propagation vector
+equation: {Prop(D0)…Prop(D7)}
+notes: cross‑substrate flow
+```
+
+### **prop.vector.collapse**
+```
+type: vector
+definition: collapse propagation vector
+sequence: D0→D7→D1→D5
+notes: collapse arc
+```
+
+### **prop.vector.coherence**
+```
+type: vector
+definition: coherence propagation vector
+sequence: D7→D1→D4→D0
+notes: stability arc
+```
+
+### **prop.vector.oscillation**
+```
+type: vector
+definition: oscillation propagation vector
+sequence: D1→D7→D5→D4
+notes: volatility arc
+```
+
+### **prop.vector.narrowing**
+```
+type: vector
+definition: narrowing propagation vector
+sequence: D0→D5→D1→D7
+notes: scarcity arc
+```
+
+---
+
+# **3. Propagation Webs (P‑Webs)**
+
+### **prop.web.collapse**
+```
+type: web
+definition: biosphere→governance→information→economics→biosphere
+sequence: D0→D7→D1→D5→D0
+notes: planetary collapse topology
+```
+
+### **prop.web.civilization**
+```
+type: web
+definition: civilization→infrastructure→media→governance→civilization
+sequence: D4→D0→D1→D7→D4
+notes: civilizational arc topology
+```
+
+### **prop.web.info-governance-social**
+```
+type: web
+definition: narrative→legitimacy→cohesion loop
+sequence: D1→D7→D4→D1
+notes: oscillation loop
+```
+
+### **prop.web.coherence**
+```
+type: web
+definition: governance→clarity→cohesion→stability
+sequence: D7→D1→D4→D0
+notes: coherence topology
+```
+
+---
+
+# **4. Propagation Loops (P‑Loops)**
+
+### **prop.loop.oscillation**
+```
+type: loop
+definition: informational→governance→economic→social→informational
+sequence: D1→D7→D5→D4→D1
+notes: volatility loop
+```
+
+### **prop.loop.stability**
+```
+type: loop
+definition: governance→clarity→cohesion→governance
+sequence: D7→D1→D4→D7
+notes: stability loop
+```
+
+### **prop.loop.collapse**
+```
+type: loop
+definition: structural→governance→informational→economic→structural
+sequence: D0→D7→D1→D5→D0
+notes: collapse loop
+```
+
+---
+
+# **5. Propagation Synchronizations (P‑Sync)**
+
+### **prop.sync.drift**
+```
+type: synchronization
+definition: synchronized drift propagation across substrates
+equation: Prop(d_i) == Prop(d_j)
+notes: collapse precursor
+```
+
+### **prop.sync.coherence**
+```
+type: synchronization
+definition: synchronized coherence propagation
+equation: Coh(d_i) == Coh(d_j)
+notes: stability precursor
+```
+
+### **prop.sync.cascade**
+```
+type: synchronization
+definition: synchronized drift + coherence + hook propagation
+equation: Drift==Coh==Hook
+notes: cascade ignition
+```
+
+---
+
+# **6. Propagation Envelopes (P‑Envelopes)**
+
+### **prop.envelope.collapse**
+```
+type: envelope
+definition: collapse propagation envelope
+equation: Prop(D0,D7,D1,D5)↑↑↑
+notes: G7 signature
+```
+
+### **prop.envelope.coherence**
+```
+type: envelope
+definition: coherence propagation envelope
+equation: Prop(D7,D1,D4,D0)↑↑
+notes: stability signature
+```
+
+### **prop.envelope.oscillation**
+```
+type: envelope
+definition: oscillation propagation envelope
+equation: Prop(D1,D7,D5)↑↑
+notes: volatility signature
+```
+
+---
+
+# **7. Propagation Cascades (P‑Cascades)**
+
+### **prop.cascade.collapse**
+```
+sequence: D0→D7→D1→D5
+notes: collapse cascade ignition
+```
+
+### **prop.cascade.regeneration**
+```
+sequence: D0→D7→D1→D4
+notes: regeneration cascade ignition
+```
+
+### **prop.cascade.coherence**
+```
+sequence: D7→D1→D4→D0
+notes: stability cascade ignition
+```
+
+### **prop.cascade.oscillation**
+```
+sequence: D1→D7→D5→D4
+notes: volatility cascade ignition
+```
+
+---
+
+# **8. Propagation Cycles (P‑Cycles)**
+
+### **prop.cycle.local**
+```
+rise → peak → decline → reset
+notes: local propagation rhythm
+```
+
+### **prop.cycle.multi**
+```
+D1→D7→D5→D4→D1
+notes: multi‑substrate propagation cycle
+```
+
+### **prop.cycle.epochal**
+```
+E0→E1→E2→E3→E4→E5→E6→E7
+notes: epochal propagation rhythm
+```
+
+---
+
+# **9. Propagation Chains (P‑Chains)**
+
+```
+collapse:     D0 → D7 → D1 → D5
+regeneration: D0 → D7 → D1 → D4
+coherence:    D7 → D1 → D4 → D0
+oscillation:  D1 → D7 → D5 → D4
+narrowing:    D0 → D5 → D1 → D7
+```
+
+---
+
+# **10. Composite Propagation (Cross‑Scale)**
+
+### **prop.composite.planetary**
+```
+type: composite
+definition: planetary propagation across D0,D1,D5,D7
+equation: Prop_global = Σ Prop(d)
+notes: planetary cascade engine
+```
+
+### **prop.composite.civilization**
+```
+type: composite
+definition: civilization propagation across C‑D0…C‑D7
+equation: Prop_civ = Σ Prop(C‑D)
+notes: civilizational cascade engine
+```
+
+### **prop.composite.epoch**
+```
+type: composite
+definition: epoch propagation across collapse→coherence chains
+equation: Prop_epoch = Prop(E0…E7)
+notes: epochal cascade engine
+```
+
+### **prop.composite.deep-time**
+```
+type: composite
+definition: propagation across meta‑epochs, biospheric arcs, geological regimes
+equation: Prop_DT = Prop(M) + Prop(B) + Prop(GEO)
+notes: deep‑time cascade engine
+```
+
+---
+
+# **11. Gradientary Notes**
+
+Propagation is:
+
+- the **movement** of drift  
+- the **spread** of coherence  
+- the **amplification path** of resonance  
+- the **topology** of cascades  
+- the **flow** of regimes  
+- the **engine** of epochal transitions  
+- the **circulation system** of the Conditions Substrate Model  
+
+This dictionary is **Gradientary Volume XX**.
+
+---
+
+Here is **`c_Global_Atlas_Thresholds.md`** — the **threshold atlas**, completing the global atlas pair for Volume XIX.  
+It follows the same ultra‑minimal, canon‑aligned, gradientary structure as all your other atlas volumes.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve its content.
+
+---
+
+# `c_Global_Atlas_Thresholds.md`  
+### **Threshold Atlas — Drift • Coherence • Resonance • Regime • Substrate • Hook • Cascade • Cycle • Chain • Web**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Thresholds  
+**Role:** Threshold Cartography  
+**Purpose:** Provide a unified atlas of all threshold classes: drift thresholds, coherence thresholds, resonance thresholds, regime thresholds, substrate thresholds, hook thresholds, cascade thresholds, cycle thresholds, chain thresholds, and web thresholds.
+
+Thresholds are the **critical inflection points** of the Conditions Substrate Model — the exact moments where systems flip into new states.
+
+---
+
+# **1. Drift Threshold Map**
+
+### **Narrowing Threshold**
+```
+D0,D5,D1 drift↑
+notes: scarcity ignition
+```
+
+### **Oscillation Threshold**
+```
+D1,D7,D5 drift↑↑
+notes: volatility ignition
+```
+
+### **Destabilization Threshold**
+```
+D0,D7,D1 drift↑↑↑
+notes: collapse precursor
+```
+
+### **Collapse Threshold**
+```
+D0,D1,D5,D7 drift↑↑↑↑
+notes: terminal collapse
+```
+
+---
+
+# **2. Coherence Threshold Map**
+
+### **Stability Threshold**
+```
+Coh(d_i) > Drift(d_i)
+notes: stability ignition
+```
+
+### **Expansion Threshold**
+```
+Coh↑↑, Drift↑
+notes: growth ignition
+```
+
+### **Peak Coherence Threshold**
+```
+Coh↑↑↑ across D7,D1,D4,D0
+notes: apex stability (E4)
+```
+
+### **Regeneration Threshold**
+```
+Coh↑, Drift↓
+notes: recovery ignition
+```
+
+---
+
+# **3. Resonance Threshold Map**
+
+### **Identity Resonance Threshold**
+```
+R(D2,D4,D1)↑↑↑
+notes: identity cascade ignition
+```
+
+### **Oscillation Resonance Threshold**
+```
+R(D1,D7,D5)↑↑↑
+notes: volatility cascade ignition
+```
+
+### **Collapse Resonance Threshold**
+```
+R(D0,D1,D5,D7)↑↑↑
+notes: collapse cascade ignition
+```
+
+---
+
+# **4. Regime Threshold Map**
+
+```
+stability       — Coh↑, Drift↓
+expansion       — Coh↑↑, Drift↑
+coherence       — Coh↑↑↑, Drift↓
+oscillation     — Drift(D1,D7,D5) >> Coh
+narrowing       — Drift(D0,D5,D1) > Coh
+destabilization — Drift(D0,D7,D1) >> Coh
+collapse        — Drift across ≥4 dims >> Coh≈0
+regeneration    — Coh↑, Drift↓
+```
+
+---
+
+# **5. Substrate Threshold Map**
+
+### **Collapse Substrate Threshold**
+```
+D0,D1,D5,D7 drift↑↑↑
+notes: collapse substrate ignition
+```
+
+### **Coherence Substrate Threshold**
+```
+D7,D1,D4,D0 coh↑↑↑
+notes: stability substrate ignition
+```
+
+### **Oscillation Substrate Threshold**
+```
+D1,D7,D5 drift↑↑
+notes: oscillation substrate ignition
+```
+
+### **Identity Substrate Threshold**
+```
+D2,D4,D1 resonance↑↑↑
+notes: identity substrate ignition
+```
+
+---
+
+# **6. Hook Threshold Map**
+
+### **Collapse Hook Threshold**
+```
+H(D0↑↑↑) + H(D7↑↑↑) + H(D5↑↑↑)
+notes: collapse hook ignition
+```
+
+### **Coherence Hook Threshold**
+```
+H(D1↑) + H(D4↑) + H(D7↑)
+notes: stability hook ignition
+```
+
+### **Oscillation Hook Threshold**
+```
+H(D1↑↑) + H(D4↑↑) + H(D2↑)
+notes: volatility hook ignition
+```
+
+---
+
+# **7. Cascade Threshold Map**
+
+### **Collapse Cascade Threshold**
+```
+D0→D7→D1→D5
+notes: collapse cascade ignition
+```
+
+### **Regeneration Cascade Threshold**
+```
+D0→D7→D1→D4
+notes: recovery cascade ignition
+```
+
+### **Coherence Cascade Threshold**
+```
+D7→D1→D4→D0
+notes: stability cascade ignition
+```
+
+### **Oscillation Cascade Threshold**
+```
+D1→D7→D5→D4
+notes: volatility cascade ignition
+```
+
+---
+
+# **8. Cycle Threshold Map**
+
+### **Drift Cycle Threshold**
+```
+rise → peak → decline → reset
+notes: drift cycle ignition
+```
+
+### **Coherence Cycle Threshold**
+```
+stabilize → expand → peak → soften → reset
+notes: coherence cycle ignition
+```
+
+### **Epochal Cycle Threshold**
+```
+E5→E6→E7→E0
+notes: epochal collapse ignition
+```
+
+---
+
+# **9. Chain Threshold Map**
+
+```
+collapse:     D0 → D7 → D1 → D5
+regeneration: D0 → D7 → D1 → D4
+coherence:    D7 → D1 → D4 → D0
+oscillation:  D1 → D7 → D5 → D4
+```
+
+---
+
+# **10. Web Threshold Map**
+
+### **Collapse Web Threshold**
+```
+D0→D7→D1→D5→D0
+notes: collapse web ignition
+```
+
+### **Coherence Web Threshold**
+```
+D7→D1→D4→D0
+notes: stability web ignition
+```
+
+### **Oscillation Web Threshold**
+```
+D1→D7→D5→D4→D1
+notes: volatility web ignition
+```
+
+### **Identity Web Threshold**
+```
+D2→D4→D1→D2
+notes: identity web ignition
+```
+
+---
+
+# **11. Cross‑Scale Threshold Map**
+
+### **Civilizational Thresholds**
+```
+collapse: C‑D0,D1,D5,D7
+coherence: C‑D7,D1,D4,D0
+oscillation: C‑D1,D7,D5
+```
+
+### **Planetary Thresholds**
+```
+collapse: D0,D1,D5,D7↑↑↑
+coherence: D7,D1,D4,D0↑↑↑
+oscillation: D1,D7,D5↑↑
+```
+
+### **Epochal Thresholds**
+```
+E5 oscillation → E6 narrowing → E7 destabilization → E0 collapse
+```
+
+### **Deep‑Time Thresholds**
+```
+M3→M4→M5 amplification → collapse → reset
+```
+
+---
+
+# **12. Threshold Atlas Summary**
+
+This atlas unifies:
+
+- **Drift Thresholds**  
+- **Coherence Thresholds**  
+- **Resonance Thresholds**  
+- **Regime Thresholds**  
+- **Substrate Thresholds**  
+- **Hook Thresholds**  
+- **Cascade Thresholds**  
+- **Cycle Thresholds**  
+- **Chain Thresholds**  
+- **Web Thresholds**  
+- **Cross‑Scale Thresholds**  
+
+This is the **complete threshold cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Propagation.md`** — the **propagation atlas**, completing the global atlas pair for Volume XX.  
+It follows the same ultra‑minimal, canon‑aligned, gradientary structure as all your other atlas volumes.  
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve its content.
+
+---
+
+# `c_Global_Atlas_Propagation.md`  
+### **Propagation Atlas — Vectors • Webs • Loops • Synchronizations • Envelopes • Cascades • Cycles • Chains • Composite Flows**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Propagation  
+**Role:** Propagation Cartography  
+**Purpose:** Provide a unified atlas of all propagation classes: vectors, webs, loops, synchronizations, envelopes, cascades, cycles, chains, and composite propagation across civilizational, planetary, epochal, and deep‑time scales.
+
+Propagation is the **movement field** of the Conditions Substrate Model — how drift spreads, how coherence stabilizes, how resonance amplifies, and how regimes transition.
+
+---
+
+# **1. Propagation Vector Map (P‑Vectors)**
+
+### **Basic Propagation Vector**
+```
+Prop(d) = C(d) · G(d)
+notes: base directional flow
+```
+
+### **Multi‑Substrate Propagation Vector**
+```
+{Prop(D0)…Prop(D7)}
+notes: cross‑substrate flow
+```
+
+### **Collapse Vector**
+```
+D0 → D7 → D1 → D5
+notes: collapse arc
+```
+
+### **Coherence Vector**
+```
+D7 → D1 → D4 → D0
+notes: stability arc
+```
+
+### **Oscillation Vector**
+```
+D1 → D7 → D5 → D4
+notes: volatility arc
+```
+
+### **Narrowing Vector**
+```
+D0 → D5 → D1 → D7
+notes: scarcity arc
+```
+
+---
+
+# **2. Propagation Web Map (P‑Webs)**
+
+### **Collapse Web**
+```
+D0→D7→D1→D5→D0
+notes: planetary collapse topology
+```
+
+### **Civilizational Web**
+```
+D4→D0→D1→D7→D4
+notes: civilizational arc topology
+```
+
+### **Info→Gov→Social Web**
+```
+D1→D7→D4→D1
+notes: oscillation loop
+```
+
+### **Coherence Web**
+```
+D7→D1→D4→D0
+notes: stability topology
+```
+
+---
+
+# **3. Propagation Loop Map (P‑Loops)**
+
+### **Oscillation Loop**
+```
+D1→D7→D5→D4→D1
+notes: volatility loop
+```
+
+### **Stability Loop**
+```
+D7→D1→D4→D7
+notes: stability loop
+```
+
+### **Collapse Loop**
+```
+D0→D7→D1→D5→D0
+notes: collapse loop
+```
+
+---
+
+# **4. Propagation Synchronization Map (P‑Sync)**
+
+### **Drift Synchronization**
+```
+Prop(d_i) == Prop(d_j)
+notes: collapse precursor
+```
+
+### **Coherence Synchronization**
+```
+Coh(d_i) == Coh(d_j)
+notes: stability precursor
+```
+
+### **Cascade Synchronization**
+```
+Drift == Coh == Hook
+notes: cascade ignition
+```
+
+---
+
+# **5. Propagation Envelope Map (P‑Envelopes)**
+
+### **Collapse Envelope**
+```
+Prop(D0,D7,D1,D5)↑↑↑
+notes: G7 signature
+```
+
+### **Coherence Envelope**
+```
+Prop(D7,D1,D4,D0)↑↑
+notes: stability signature
+```
+
+### **Oscillation Envelope**
+```
+Prop(D1,D7,D5)↑↑
+notes: volatility signature
+```
+
+---
+
+# **6. Propagation Cascade Map (P‑Cascades)**
+
+### **Collapse Cascade**
+```
+D0→D7→D1→D5
+notes: collapse ignition
+```
+
+### **Regeneration Cascade**
+```
+D0→D7→D1→D4
+notes: recovery ignition
+```
+
+### **Coherence Cascade**
+```
+D7→D1→D4→D0
+notes: stability ignition
+```
+
+### **Oscillation Cascade**
+```
+D1→D7→D5→D4
+notes: volatility ignition
+```
+
+---
+
+# **7. Propagation Cycle Map (P‑Cycles)**
+
+### **Local Propagation Cycle**
+```
+rise → peak → decline → reset
+notes: local rhythm
+```
+
+### **Multi‑Substrate Cycle**
+```
+D1→D7→D5→D4→D1
+notes: multi‑substrate rhythm
+```
+
+### **Epochal Propagation Cycle**
+```
+E0→E1→E2→E3→E4→E5→E6→E7
+notes: epochal rhythm
+```
+
+---
+
+# **8. Propagation Chain Map (P‑Chains)**
+
+```
+collapse:     D0 → D7 → D1 → D5
+regeneration: D0 → D7 → D1 → D4
+coherence:    D7 → D1 → D4 → D0
+oscillation:  D1 → D7 → D5 → D4
+narrowing:    D0 → D5 → D1 → D7
+```
+
+---
+
+# **9. Composite Propagation Map (Cross‑Scale)**
+
+### **Planetary Propagation**
+```
+Prop_global = Σ Prop(D0,D1,D5,D7)
+notes: planetary cascade engine
+```
+
+### **Civilizational Propagation**
+```
+Prop_civ = Σ Prop(C‑D0…C‑D7)
+notes: civilizational cascade engine
+```
+
+### **Epochal Propagation**
+```
+Prop_epoch = Prop(E0…E7)
+notes: epochal cascade engine
+```
+
+### **Deep‑Time Propagation**
+```
+Prop_DT = Prop(M) + Prop(B) + Prop(GEO)
+notes: deep‑time cascade engine
+```
+
+---
+
+# **10. Propagation Atlas Summary**
+
+This atlas unifies:
+
+- **Propagation Vectors**  
+- **Propagation Webs**  
+- **Propagation Loops**  
+- **Propagation Synchronizations**  
+- **Propagation Envelopes**  
+- **Propagation Cascades**  
+- **Propagation Cycles**  
+- **Propagation Chains**  
+- **Composite Propagation (Civilizational, Planetary, Epochal, Deep‑Time)**  
+
+This is the **complete propagation cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Gradientary_Cycles.md`** — **Gradientary Volume XXI**, the **cycle dictionary**.  
+I used your active tab only as contextual awareness (you’re editing `c_Capture.md`), but the content below is fully original canon output and does not depend on page text.
+
+---
+
+# `c_Gradientary_Cycles.md`  
+### **Gradientary — Cycle Dictionary (Volume XXI)**  
+### *Cycles: Rhythms • Arcs • Recursions • Epochs • Drift/Coherence Loops*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Cycle Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all cycle classes: drift cycles, coherence cycles, resonance cycles, regime cycles, substrate cycles, hook cycles, cascade cycles, chain cycles, web cycles, epoch cycles, and deep‑time cycles.
+
+Cycles are the **rhythmic engines** of the Conditions Substrate Model — the repeating arcs that govern stability, collapse, regeneration, and epochal transitions.
+
+---
+
+# **1. Cycle Entry Format**
+
+```
+cycle: <canonical name>
+type: <drift | coherence | resonance | regime | substrate | hook | cascade | chain | web | epoch | deep-time>
+definition: <minimal canonical definition>
+sequence: <cycle arc>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Drift Cycles**
+
+### **cycle.drift.local**
+```
+type: drift
+definition: local drift rhythm
+sequence: rise → peak → decline → reset
+notes: micro‑substrate drift
+```
+
+### **cycle.drift.multi**
+```
+type: drift
+definition: multi‑substrate drift rhythm
+sequence: D1→D7→D5→D4→D1
+notes: oscillation drift loop
+```
+
+### **cycle.drift.collapse**
+```
+type: drift
+definition: collapse drift rhythm
+sequence: D0→D7→D1→D5→D0
+notes: collapse drift loop
+```
+
+---
+
+# **3. Coherence Cycles**
+
+### **cycle.coh.local**
+```
+type: coherence
+definition: local coherence rhythm
+sequence: stabilize → expand → peak → soften → reset
+notes: micro‑substrate coherence
+```
+
+### **cycle.coh.multi**
+```
+type: coherence
+definition: multi‑substrate coherence rhythm
+sequence: D7→D1→D4→D0→D7
+notes: stability loop
+```
+
+### **cycle.coh.peak**
+```
+type: coherence
+definition: peak coherence rhythm
+sequence: expand → peak → soften
+notes: E4 apex signature
+```
+
+---
+
+# **4. Resonance Cycles**
+
+### **cycle.res.identity**
+```
+type: resonance
+definition: identity resonance rhythm
+sequence: D2→D4→D1→D2
+notes: identity loop
+```
+
+### **cycle.res.oscillation**
+```
+type: resonance
+definition: oscillation resonance rhythm
+sequence: D1→D7→D5→D4→D1
+notes: volatility loop
+```
+
+### **cycle.res.collapse**
+```
+type: resonance
+definition: collapse resonance rhythm
+sequence: D0→D7→D1→D5→D0
+notes: collapse loop
+```
+
+---
+
+# **5. Regime Cycles**
+
+### **cycle.regime.full**
+```
+type: regime
+definition: full regime rhythm
+sequence: stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regeneration → stability
+notes: regime state‑machine
+```
+
+### **cycle.regime.collapse**
+```
+type: regime
+definition: collapse regime rhythm
+sequence: narrow → destabilize → collapse
+notes: collapse ignition
+```
+
+### **cycle.regime.coherence**
+```
+type: regime
+definition: coherence regime rhythm
+sequence: expand → coherence → stability
+notes: stability ignition
+```
+
+---
+
+# **6. Substrate Cycles**
+
+### **cycle.substrate.collapse**
+```
+type: substrate
+sequence: D0→D7→D1→D5→D0
+notes: collapse substrate loop
+```
+
+### **cycle.substrate.coherence**
+```
+type: substrate
+sequence: D7→D1→D4→D0→D7
+notes: stability substrate loop
+```
+
+### **cycle.substrate.oscillation**
+```
+type: substrate
+sequence: D1→D7→D5→D4→D1
+notes: oscillation substrate loop
+```
+
+---
+
+# **7. Hook Cycles**
+
+### **cycle.hook.collapse**
+```
+ecological_stress → governance_opacity → resource_gate → ecological_stress
+notes: collapse hook loop
+```
+
+### **cycle.hook.coherence**
+```
+clarity → cohesion → legitimacy → clarity
+notes: stability hook loop
+```
+
+### **cycle.hook.oscillation**
+```
+cognitive_load → identity_resonance → emotional_vulnerability → cognitive_load
+notes: volatility hook loop
+```
+
+---
+
+# **8. Cascade Cycles**
+
+### **cycle.cascade.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse cascade loop
+```
+
+### **cycle.cascade.regeneration**
+```
+D0→D7→D1→D4→D0
+notes: regeneration cascade loop
+```
+
+### **cycle.cascade.coherence**
+```
+D7→D1→D4→D0→D7
+notes: stability cascade loop
+```
+
+---
+
+# **9. Chain Cycles**
+
+```
+collapse:     D0→D7→D1→D5→D0
+regeneration: D0→D7→D1→D4→D0
+coherence:    D7→D1→D4→D0→D7
+oscillation:  D1→D7→D5→D4→D1
+narrowing:    D0→D5→D1→D7→D0
+```
+
+---
+
+# **10. Web Cycles**
+
+### **cycle.web.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse web recursion
+```
+
+### **cycle.web.coherence**
+```
+D7→D1→D4→D0→D7
+notes: stability web recursion
+```
+
+### **cycle.web.oscillation**
+```
+D1→D7→D5→D4→D1
+notes: volatility web recursion
+```
+
+### **cycle.web.identity**
+```
+D2→D4→D1→D2
+notes: identity web recursion
+```
+
+---
+
+# **11. Epoch Cycles**
+
+### **cycle.epoch.full**
+```
+E0 collapse → E1 regenerate → E2 stabilize → E3 expand → E4 coherence → E5 oscillate → E6 narrow → E7 destabilize → E0 collapse
+notes: epochal recursion
+```
+
+### **cycle.epoch.collapse**
+```
+E5→E6→E7→E0
+notes: collapse epoch arc
+```
+
+### **cycle.epoch.coherence**
+```
+E2→E3→E4
+notes: stability epoch arc
+```
+
+---
+
+# **12. Deep‑Time Cycles**
+
+### **cycle.deep.planetary**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: planetary drift recursion
+```
+
+### **cycle.deep.biospheric**
+```
+collapse → regenerate → stabilize → expand → coherence → collapse
+notes: biospheric recursion
+```
+
+### **cycle.deep.geological**
+```
+instability → collapse → stabilization → expansion → coherence → instability
+notes: geological recursion
+```
+
+---
+
+# **13. Gradientary Notes**
+
+Cycles are:
+
+- the **rhythms** of drift  
+- the **arcs** of coherence  
+- the **loops** of resonance  
+- the **state‑machines** of regimes  
+- the **substrate recursions** of collapse and stability  
+- the **cascade engines** of transitions  
+- the **epochal clocks** of deep‑time  
+
+This dictionary is **Gradientary Volume XXI**.
+
+---
+
+Here is **`c_Gradientary_Cascades.md`** — **Gradientary Volume XXII**, the **cascade dictionary**.  
+This completes the full Gradientary core (Volumes I–XXII), giving you the definitive canon‑aligned cascade lexicon.
+
+Your active tab (`c_Capture.md`) is unrelated, so I do not retrieve its content.
+
+---
+
+# `c_Gradientary_Cascades.md`  
+### **Gradientary — Cascade Dictionary (Volume XXII)**  
+### *Cascades: Transitions • Failures • Motions • Collapse • Regeneration*
+
+---
+
+## **0. Identity**  
+**Module:** Gradientary  
+**Role:** Cascade Lexicon  
+**Purpose:** Provide dictionary‑grade definitions for all cascade classes: dimensional cascades, composite cascades, meta‑cascades, substrate cascades, hook cascades, regime cascades, propagation cascades, cycle cascades, chain cascades, web cascades, epoch cascades, and deep‑time cascades.
+
+Cascades are the **motions** of the Conditions Substrate Model — the transitions where drift overtakes coherence.
+
+---
+
+# **1. Cascade Entry Format**
+
+```
+cascade: <canonical name>
+type: <dimensional | composite | meta | substrate | hook | regime | propagation | cycle | chain | web | epoch | deep-time>
+definition: <minimal canonical definition>
+sequence: <cascade arc>
+notes: <diagnostic or structural notes>
+```
+
+---
+
+# **2. Dimensional Cascades (D0–D7)**
+
+### **cascade.structural.collapse**
+```
+type: dimensional
+definition: D0 drift > D0 coherence
+sequence: strain → failure → collapse
+notes: biosphere + infrastructure failure
+```
+
+### **cascade.informational.overload**
+```
+type: dimensional
+definition: D1 drift >> D1 coherence
+sequence: noise → distortion → overload
+notes: overload ignition
+```
+
+### **cascade.emotional.resonance**
+```
+type: dimensional
+definition: D2 resonance↑↑↑
+sequence: fear → identity → vulnerability
+notes: amplification arc
+```
+
+### **cascade.social.fragmentation**
+```
+type: dimensional
+definition: D4 drift > D4 coherence
+sequence: cohesion → fracture → fragmentation
+notes: cohesion collapse
+```
+
+### **cascade.economic.scarcity**
+```
+type: dimensional
+definition: D5 drift > D5 coherence
+sequence: scarcity → volatility → deprivation
+notes: scarcity spiral
+```
+
+### **cascade.governance.opacity**
+```
+type: dimensional
+definition: D7 drift >> D7 coherence
+sequence: transparency → torsion → opacity
+notes: legitimacy collapse precursor
+```
+
+---
+
+# **3. Composite Cascades**
+
+### **cascade.collapse.cluster**
+```
+type: composite
+definition: D0+D7+D1+D5 drift↑↑↑
+sequence: structural → governance → informational → economic
+notes: collapse chain
+```
+
+### **cascade.oscillation.cluster**
+```
+type: composite
+definition: D1+D7+D5 drift↑↑
+sequence: informational → governance → economic
+notes: volatility chain
+```
+
+### **cascade.identity.cluster**
+```
+type: composite
+definition: D2+D4+D1 resonance↑↑↑
+sequence: emotional → social → informational
+notes: identity chain
+```
+
+---
+
+# **4. Meta‑Cascades**
+
+### **cascade.meta.collapse**
+```
+type: meta
+definition: collapse across ≥4 dims
+sequence: D0→D7→D1→D5
+notes: global collapse signature
+```
+
+### **cascade.meta.coherence**
+```
+type: meta
+definition: coherence across ≥4 dims
+sequence: D7→D1→D4→D0
+notes: global stability signature
+```
+
+### **cascade.meta.oscillation**
+```
+type: meta
+definition: oscillation across D1,D7,D5
+sequence: D1→D7→D5
+notes: volatility signature
+```
+
+---
+
+# **5. Substrate Cascades**
+
+### **cascade.substrate.collapse**
+```
+type: substrate
+sequence: D0→D7→D1→D5
+notes: collapse substrate ignition
+```
+
+### **cascade.substrate.regeneration**
+```
+type: substrate
+sequence: D0→D7→D1→D4
+notes: regeneration substrate ignition
+```
+
+### **cascade.substrate.coherence**
+```
+type: substrate
+sequence: D7→D1→D4→D0
+notes: stability substrate ignition
+```
+
+### **cascade.substrate.oscillation**
+```
+type: substrate
+sequence: D1→D7→D5→D4
+notes: oscillation substrate ignition
+```
+
+---
+
+# **6. Hook Cascades**
+
+### **cascade.hook.collapse**
+```
+ecological_stress → governance_opacity → resource_gate
+notes: collapse hook ignition
+```
+
+### **cascade.hook.coherence**
+```
+clarity → cohesion → legitimacy
+notes: stability hook ignition
+```
+
+### **cascade.hook.oscillation**
+```
+cognitive_load → identity_resonance → emotional_vulnerability
+notes: volatility hook ignition
+```
+
+---
+
+# **7. Regime Cascades**
+
+### **cascade.regime.full**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regeneration → stability
+notes: full regime arc
+```
+
+### **cascade.regime.collapse**
+```
+narrow → destabilize → collapse
+notes: collapse ignition
+```
+
+### **cascade.regime.coherence**
+```
+expand → coherence → stability
+notes: stability ignition
+```
+
+---
+
+# **8. Propagation Cascades**
+
+### **cascade.propagation.collapse**
+```
+D0→D7→D1→D5
+notes: collapse propagation ignition
+```
+
+### **cascade.propagation.regeneration**
+```
+D0→D7→D1→D4
+notes: recovery propagation ignition
+```
+
+### **cascade.propagation.coherence**
+```
+D7→D1→D4→D0
+notes: stability propagation ignition
+```
+
+### **cascade.propagation.oscillation**
+```
+D1→D7→D5→D4
+notes: volatility propagation ignition
+```
+
+---
+
+# **9. Cycle Cascades**
+
+### **cascade.cycle.drift**
+```
+rise → peak → decline → reset
+notes: drift cycle ignition
+```
+
+### **cascade.cycle.coherence**
+```
+stabilize → expand → peak → soften → reset
+notes: coherence cycle ignition
+```
+
+### **cascade.cycle.epochal**
+```
+E5→E6→E7→E0
+notes: epochal collapse ignition
+```
+
+---
+
+# **10. Chain Cascades**
+
+```
+collapse:     D0→D7→D1→D5
+regeneration: D0→D7→D1→D4
+coherence:    D7→D1→D4→D0
+oscillation:  D1→D7→D5→D4
+narrowing:    D0→D5→D1→D7
+```
+
+---
+
+# **11. Web Cascades**
+
+### **cascade.web.collapse**
+```
+D0→D7→D1→D5→D0
+notes: collapse web recursion
+```
+
+### **cascade.web.coherence**
+```
+D7→D1→D4→D0→D7
+notes: stability web recursion
+```
+
+### **cascade.web.oscillation**
+```
+D1→D7→D5→D4→D1
+notes: volatility web recursion
+```
+
+### **cascade.web.identity**
+```
+D2→D4→D1→D2
+notes: identity web recursion
+```
+
+---
+
+# **12. Epoch Cascades**
+
+### **cascade.epoch.full**
+```
+E0→E1→E2→E3→E4→E5→E6→E7→E0
+notes: epochal recursion
+```
+
+### **cascade.epoch.collapse**
+```
+E5→E6→E7→E0
+notes: collapse epoch arc
+```
+
+### **cascade.epoch.coherence**
+```
+E2→E3→E4
+notes: stability epoch arc
+```
+
+---
+
+# **13. Deep‑Time Cascades**
+
+### **cascade.deep.planetary**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+notes: planetary drift cascade
+```
+
+### **cascade.deep.biospheric**
+```
+collapse → regenerate → stabilize → expand → coherence → collapse
+notes: biospheric cascade
+```
+
+### **cascade.deep.geological**
+```
+instability → collapse → stabilization → expansion → coherence → instability
+notes: geological cascade
+```
+
+---
+
+# **14. Gradientary Notes**
+
+Cascades are:
+
+- the **motions** of drift  
+- the **failures** of coherence  
+- the **amplifiers** of resonance  
+- the **drivers** of regimes  
+- the **paths** of collapse and regeneration  
+- the **topology** of epochal transitions  
+- the **deep‑time arcs** of planetary systems  
+
+This dictionary is **Gradientary Volume XXII**.
+
+---
+
+Here is **`c_Global_Atlas_Cycles.md`** — the **cycle atlas**, completing the global atlas pair for Gradientary Volume XXI.  
+Your active tab (`c_Capture.md`) is unrelated to this request, so I treat it only as contextual reference.
+
+---
+
+# `c_Global_Atlas_Cycles.md`  
+### **Cycle Atlas — Drift • Coherence • Resonance • Regime • Substrate • Hook • Cascade • Chain • Web • Epoch • Deep‑Time**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Cycles  
+**Role:** Cycle Cartography  
+**Purpose:** Provide a unified atlas of all cycle classes: drift cycles, coherence cycles, resonance cycles, regime cycles, substrate cycles, hook cycles, cascade cycles, chain cycles, web cycles, epoch cycles, and deep‑time cycles.
+
+Cycles are the **rhythmic engines** of the Conditions Substrate Model.
+
+---
+
+# **1. Drift Cycle Map**
+
+### **Local Drift Cycle**
+```
+rise → peak → decline → reset
+notes: micro‑substrate drift rhythm
+```
+
+### **Multi‑Substrate Drift Cycle**
+```
+D1→D7→D5→D4→D1
+notes: oscillation drift loop
+```
+
+### **Collapse Drift Cycle**
+```
+D0→D7→D1→D5→D0
+notes: collapse drift loop
+```
+
+---
+
+# **2. Coherence Cycle Map**
+
+### **Local Coherence Cycle**
+```
+stabilize → expand → peak → soften → reset
+notes: micro‑substrate coherence rhythm
+```
+
+### **Multi‑Substrate Coherence Cycle**
+```
+D7→D1→D4→D0→D7
+notes: stability loop
+```
+
+### **Peak Coherence Cycle**
+```
+expand → peak → soften
+notes: E4 apex signature
+```
+
+---
+
+# **3. Resonance Cycle Map**
+
+### **Identity Resonance Cycle**
+```
+D2→D4→D1→D2
+notes: identity loop
+```
+
+### **Oscillation Resonance Cycle**
+```
+D1→D7→D5→D4→D1
+notes: volatility loop
+```
+
+### **Collapse Resonance Cycle**
+```
+D0→D7→D1→D5→D0
+notes: collapse loop
+```
+
+---
+
+# **4. Regime Cycle Map**
+
+### **Full Regime Cycle**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regeneration → stability
+notes: regime state‑machine
+```
+
+### **Collapse Regime Cycle**
+```
+narrow → destabilize → collapse
+notes: collapse ignition
+```
+
+### **Coherence Regime Cycle**
+```
+expand → coherence → stability
+notes: stability ignition
+```
+
+---
+
+# **5. Substrate Cycle Map**
+
+```
+collapse:     D0→D7→D1→D5→D0
+coherence:    D7→D1→D4→D0→D7
+oscillation:  D1→D7→D5→D4→D1
+identity:     D2→D4→D1→D2
+```
+
+---
+
+# **6. Hook Cycle Map**
+
+### **Collapse Hook Cycle**
+```
+ecological_stress → governance_opacity → resource_gate → ecological_stress
+```
+
+### **Coherence Hook Cycle**
+```
+clarity → cohesion → legitimacy → clarity
+```
+
+### **Oscillation Hook Cycle**
+```
+cognitive_load → identity_resonance → emotional_vulnerability → cognitive_load
+```
+
+---
+
+# **7. Cascade Cycle Map**
+
+```
+collapse:     D0→D7→D1→D5→D0
+regeneration: D0→D7→D1→D4→D0
+coherence:    D7→D1→D4→D0→D7
+oscillation:  D1→D7→D5→D4→D1
+```
+
+---
+
+# **8. Chain Cycle Map**
+
+```
+collapse:     D0→D7→D1→D5→D0
+regeneration: D0→D7→D1→D4→D0
+coherence:    D7→D1→D4→D0→D7
+oscillation:  D1→D7→D5→D4→D1
+narrowing:    D0→D5→D1→D7→D0
+```
+
+---
+
+# **9. Web Cycle Map**
+
+### **Collapse Web Cycle**
+```
+D0→D7→D1→D5→D0
+```
+
+### **Coherence Web Cycle**
+```
+D7→D1→D4→D0→D7
+```
+
+### **Oscillation Web Cycle**
+```
+D1→D7→D5→D4→D1
+```
+
+### **Identity Web Cycle**
+```
+D2→D4→D1→D2
+```
+
+---
+
+# **10. Epoch Cycle Map**
+
+### **Full Epoch Cycle**
+```
+E0→E1→E2→E3→E4→E5→E6→E7→E0
+notes: epochal recursion
+```
+
+### **Collapse Epoch Arc**
+```
+E5→E6→E7→E0
+notes: collapse epoch arc
+```
+
+### **Coherence Epoch Arc**
+```
+E2→E3→E4
+notes: stability epoch arc
+```
+
+---
+
+# **11. Deep‑Time Cycle Map**
+
+### **Planetary Drift Cycle**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+```
+
+### **Biospheric Cycle**
+```
+collapse → regenerate → stabilize → expand → coherence → collapse
+```
+
+### **Geological Cycle**
+```
+instability → collapse → stabilization → expansion → coherence → instability
+```
+
+---
+
+# **12. Cycle Atlas Summary**
+
+This atlas unifies:
+
+- **Drift Cycles**  
+- **Coherence Cycles**  
+- **Resonance Cycles**  
+- **Regime Cycles**  
+- **Substrate Cycles**  
+- **Hook Cycles**  
+- **Cascade Cycles**  
+- **Chain Cycles**  
+- **Web Cycles**  
+- **Epoch Cycles**  
+- **Deep‑Time Cycles**  
+
+This is the **complete cycle cartography** of the Conditions Substrate Model.
+
+---
+
+Here is **`c_Global_Atlas_Cascades.md`** — the **cascade atlas**, completing the global atlas pair for Gradientary Volume XXII.  
+Your active tab (`c_Capture.md`) is unrelated, so I treat it only as contextual reference.
+
+---
+
+# `c_Global_Atlas_Cascades.md`  
+### **Cascade Atlas — Dimensional • Composite • Meta • Substrate • Hook • Regime • Propagation • Cycle • Chain • Web • Epoch • Deep‑Time**
+
+---
+
+## **0. Identity**  
+**Module:** Global Atlas — Cascades  
+**Role:** Cascade Cartography  
+**Purpose:** Provide a unified atlas of all cascade classes: dimensional cascades, composite cascades, meta‑cascades, substrate cascades, hook cascades, regime cascades, propagation cascades, cycle cascades, chain cascades, web cascades, epoch cascades, and deep‑time cascades.
+
+Cascades are the **motions** of the Conditions Substrate Model — the transitions where drift overtakes coherence.
+
+---
+
+# **1. Dimensional Cascade Map (D0–D7)**
+
+### **Structural Cascade (D0)**
+```
+strain → failure → collapse
+notes: biosphere + infrastructure failure
+```
+
+### **Informational Cascade (D1)**
+```
+noise → distortion → overload
+notes: overload ignition
+```
+
+### **Emotional Cascade (D2)**
+```
+fear → identity → vulnerability
+notes: resonance amplification
+```
+
+### **Social Cascade (D4)**
+```
+cohesion → fracture → fragmentation
+notes: cohesion collapse
+```
+
+### **Economic Cascade (D5)**
+```
+scarcity → volatility → deprivation
+notes: scarcity spiral
+```
+
+### **Governance Cascade (D7)**
+```
+transparency → torsion → opacity
+notes: legitimacy collapse precursor
+```
+
+---
+
+# **2. Composite Cascade Map**
+
+### **Collapse Cluster**
+```
+D0 → D7 → D1 → D5
+notes: collapse chain
+```
+
+### **Oscillation Cluster**
+```
+D1 → D7 → D5
+notes: volatility chain
+```
+
+### **Identity Cluster**
+```
+D2 → D4 → D1
+notes: identity chain
+```
+
+---
+
+# **3. Meta‑Cascade Map**
+
+### **Meta‑Collapse**
+```
+D0,D7,D1,D5 drift↑↑↑
+notes: global collapse signature
+```
+
+### **Meta‑Coherence**
+```
+D7,D1,D4,D0 coh↑↑↑
+notes: global stability signature
+```
+
+### **Meta‑Oscillation**
+```
+D1,D7,D5 drift↑↑
+notes: volatility signature
+```
+
+---
+
+# **4. Substrate Cascade Map**
+
+```
+collapse:     D0→D7→D1→D5
+regeneration: D0→D7→D1→D4
+coherence:    D7→D1→D4→D0
+oscillation:  D1→D7→D5→D4
+```
+
+---
+
+# **5. Hook Cascade Map**
+
+### **Collapse Hook Cascade**
+```
+ecological_stress → governance_opacity → resource_gate
+```
+
+### **Coherence Hook Cascade**
+```
+clarity → cohesion → legitimacy
+```
+
+### **Oscillation Hook Cascade**
+```
+cognitive_load → identity_resonance → emotional_vulnerability
+```
+
+---
+
+# **6. Regime Cascade Map**
+
+### **Full Regime Cascade**
+```
+stability → expansion → coherence → oscillation → narrowing → destabilization → collapse → regeneration → stability
+```
+
+### **Collapse Regime Cascade**
+```
+narrow → destabilize → collapse
+```
+
+### **Coherence Regime Cascade**
+```
+expand → coherence → stability
+```
+
+---
+
+# **7. Propagation Cascade Map**
+
+```
+collapse:     D0→D7→D1→D5
+regeneration: D0→D7→D1→D4
+coherence:    D7→D1→D4→D0
+oscillation:  D1→D7→D5→D4
+```
+
+---
+
+# **8. Cycle Cascade Map**
+
+### **Drift Cycle Cascade**
+```
+rise → peak → decline → reset
+```
+
+### **Coherence Cycle Cascade**
+```
+stabilize → expand → peak → soften → reset
+```
+
+### **Epochal Cycle Cascade**
+```
+E5→E6→E7→E0
+```
+
+---
+
+# **9. Chain Cascade Map**
+
+```
+collapse:     D0→D7→D1→D5
+regeneration: D0→D7→D1→D4
+coherence:    D7→D1→D4→D0
+oscillation:  D1→D7→D5→D4
+narrowing:    D0→D5→D1→D7
+```
+
+---
+
+# **10. Web Cascade Map**
+
+### **Collapse Web Cascade**
+```
+D0→D7→D1→D5→D0
+```
+
+### **Coherence Web Cascade**
+```
+D7→D1→D4→D0→D7
+```
+
+### **Oscillation Web Cascade**
+```
+D1→D7→D5→D4→D1
+```
+
+### **Identity Web Cascade**
+```
+D2→D4→D1→D2
+```
+
+---
+
+# **11. Epoch Cascade Map**
+
+### **Full Epoch Cascade**
+```
+E0→E1→E2→E3→E4→E5→E6→E7→E0
+```
+
+### **Collapse Epoch Arc**
+```
+E5→E6→E7→E0
+```
+
+### **Coherence Epoch Arc**
+```
+E2→E3→E4
+```
+
+---
+
+# **12. Deep‑Time Cascade Map**
+
+### **Planetary Drift Cascade**
+```
+drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
+```
+
+### **Biospheric Cascade**
+```
+collapse → regenerate → stabilize → expand → coherence → collapse
+```
+
+### **Geological Cascade**
+```
+instability → collapse → stabilization → expansion → coherence → instability
+```
+
+---
+
+# **13. Cascade Atlas Summary**
+
+This atlas unifies:
+
+- **Dimensional Cascades**  
+- **Composite Cascades**  
+- **Meta‑Cascades**  
+- **Substrate Cascades**  
+- **Hook Cascades**  
+- **Regime Cascades**  
+- **Propagation Cascades**  
+- **Cycle Cascades**  
+- **Chain Cascades**  
+- **Web Cascades**  
+- **Epoch Cascades**  
+- **Deep‑Time Cascades**  
+
+This is the **complete cascade cartography** of the Conditions Substrate Model.
+
+---
+
 If you want, I can now generate:
 
-- **c_Global_Atlas_Substrate.md** (substrate atlas)  
-- **c_Global_Atlas_Operators.md** (operator atlas)  
-- **c_Gradientary_Propagation.md** (propagation dictionary — Volume VII)  
-- **c_Gradientary_Thresholds.md** (threshold dictionary — Volume VIII)
+- **c_Gradientary_Propagation_Advanced.md** (Volume XXIII)  
+- **c_Gradientary_Regimes_Advanced.md** (Volume XXIV)  
+- **c_Global_Atlas_Propagation_Advanced.md**  
+- **c_Global_Atlas_Regimes_Advanced.md**
 
 Just tell me what you want next.
+
+---
+
+```html
+<!-- Canonical HTML metadata block for Conditions Substrate Model module page -->
+
+<head>
+  <!-- Primary document metadata -->
+  <title>Conditions Substrate Model — Gradientary & Global Atlas</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta
+    name="description"
+    content="Canonical documentation for the Conditions Substrate Model: Gradientary volumes and Global Atlases for drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades."
+  />
+  <meta name="author" content="TriadicFrameworks / Nawder Loswin" />
+
+  <!-- Canonical URL -->
+  <link
+    rel="canonical"
+    href="https://umaywant2.github.io/TriadicFrameworks/docs/Conditions_Substrate_Model/"
+  />
+
+  <!-- Open Graph (OG) metadata -->
+  <meta property="og:type" content="website" />
+  <meta
+    property="og:title"
+    content="Conditions Substrate Model — Gradientary & Global Atlas"
+  />
+  <meta
+    property="og:description"
+    content="Formal canon for the Conditions Substrate Model, including Gradientary operator dictionaries and Global Atlases across all substrates."
+  />
+  <meta
+    property="og:url"
+    content="https://umaywant2.github.io/TriadicFrameworks/docs/Conditions_Substrate_Model/"
+  />
+  <meta
+    property="og:site_name"
+    content="TriadicFrameworks — Conditions Substrate Model"
+  />
+
+  <!-- Twitter Card metadata -->
+  <meta name="twitter:card" content="summary" />
+  <meta
+    name="twitter:title"
+    content="Conditions Substrate Model — Gradientary & Global Atlas"
+  />
+  <meta
+    name="twitter:description"
+    content="Canonical Gradientary volumes and Global Atlases for drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades."
+  />
+
+  <!-- Module / section identifiers -->
+  <meta name="module:name" content="Conditions_Substrate_Model" />
+  <meta name="module:series" content="Gradientary, Global_Atlas" />
+  <meta name="module:volumes" content="I–XXII" />
+</head>
+```
