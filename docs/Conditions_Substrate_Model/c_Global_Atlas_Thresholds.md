@@ -2,7 +2,8 @@
 ### Threshold Atlas — Conditions Substrate Model  
 TriadicFrameworks Canon (2026.07)
 
-Thresholds are the **critical inflection points** of the Conditions Substrate Model — the exact moments where systems flip into new states.  
+Thresholds are the **critical inflection points** of the Conditions Substrate Model — the exact moments where systems flip into new states.
+
 This atlas defines drift thresholds, coherence thresholds, resonance thresholds, regime thresholds, substrate thresholds, hook thresholds, cascade thresholds, cycle thresholds, chain thresholds, web thresholds, epoch thresholds, and deep‑time thresholds.
 
 ---
@@ -95,15 +96,52 @@ notes: collapse cascade ignition
 
 # 4. Regime Thresholds
 
+### Stability Regime Threshold
 ```
-stability       — Coh↑, Drift↓
-expansion       — Coh↑↑, Drift↑
-coherence       — Coh↑↑↑, Drift↓
-oscillation     — Drift(D1,D7,D5) >> Coh
-narrowing       — Drift(D0,D5,D1) > Coh
-destabilization — Drift(D0,D7,D1) >> Coh
-collapse        — Drift across ≥4 dims >> Coh≈0
-regeneration    — Coh↑, Drift↓
+Coh↑, Drift↓
+notes: stability state ignition
+```
+
+### Expansion Regime Threshold
+```
+Coh↑↑, Drift↑
+notes: growth state ignition
+```
+
+### Coherence Regime Threshold
+```
+Coh↑↑↑, Drift↓
+notes: peak stability state ignition
+```
+
+### Oscillation Regime Threshold
+```
+Drift(D1,D7,D5) >> Coh
+notes: volatility state ignition
+```
+
+### Narrowing Regime Threshold
+```
+Drift(D0,D5,D1) > Coh
+notes: scarcity state ignition
+```
+
+### Destabilization Regime Threshold
+```
+Drift(D0,D7,D1) >> Coh
+notes: destabilization state ignition
+```
+
+### Collapse Regime Threshold
+```
+Drift across ≥4 dims >> Coh≈0
+notes: collapse state ignition
+```
+
+### Regeneration Regime Threshold
+```
+Coh↑, Drift↓
+notes: recovery state ignition
 ```
 
 ---
@@ -210,11 +248,28 @@ notes: epochal collapse ignition
 
 # 9. Chain Thresholds
 
+### Collapse Chain Threshold
 ```
-collapse:     D0 → D7 → D1 → D5
-regeneration: D0 → D7 → D1 → D4
-coherence:    D7 → D1 → D4 → D0
-oscillation:  D1 → D7 → D5 → D4
+D0→D7→D1→D5
+notes: collapse chain ignition
+```
+
+### Regeneration Chain Threshold
+```
+D0→D7→D1→D4
+notes: recovery chain ignition
+```
+
+### Coherence Chain Threshold
+```
+D7→D1→D4→D0
+notes: stability chain ignition
+```
+
+### Oscillation Chain Threshold
+```
+D1→D7→D5→D4
+notes: volatility chain ignition
 ```
 
 ---
@@ -255,10 +310,16 @@ E5→E6→E7→E0
 notes: epochal collapse ignition
 ```
 
-### Coherence Epoch Threshold
+### Stability Epoch Threshold
 ```
 E2→E3→E4
 notes: stability epoch ignition
+```
+
+### Regeneration Epoch Threshold
+```
+E0→E1→E2
+notes: recovery epoch ignition
 ```
 
 ---
@@ -267,14 +328,9 @@ notes: stability epoch ignition
 
 ### Planetary Thresholds
 ```
-D0,D1,D5,D7↑↑↑ collapse
-D7,D1,D4,D0↑↑↑ coherence
-D1,D7,D5↑↑ oscillation
-```
-
-### Geological Thresholds
-```
-instability → collapse → stabilization → expansion → coherence → instability
+collapse: D0,D1,D5,D7↑↑↑
+coherence: D7,D1,D4,D0↑↑↑
+oscillation: D1,D7,D5↑↑
 ```
 
 ### Biospheric Thresholds
@@ -282,11 +338,16 @@ instability → collapse → stabilization → expansion → coherence → insta
 collapse → regenerate → stabilize → expand → coherence → collapse
 ```
 
+### Geological Thresholds
+```
+instability → collapse → stabilization → expansion → coherence → instability
+```
+
 ---
 
 # 13. Threshold Atlas Summary
 
-This atlas unifies:
+This atlas defines:
 
 - Drift Thresholds  
 - Coherence Thresholds  
