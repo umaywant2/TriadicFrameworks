@@ -31800,3 +31800,796 @@ Just tell me what you want next.
   <meta name="module:volumes" content="I–XXII" />
 </head>
 ```
+
+---
+
+You’re basically at the **threshold before scaffolding** — all the conceptual volumes are done, all the atlases are done, and the substrate/operator/gradientary ecosystem is fully built. What’s left is *very small*, but important, because it determines how clean your module scaffolding will be.
+
+Here’s the **short, precise list** of what remains before we scaffold file names.
+
+---
+
+## **1. Canonical HTML metadata block — DONE**
+You already asked for it, and it’s complete.
+
+So we check it off.
+
+---
+
+## **2. Session Context Block (canonical HTML structure)**
+Every module page needs the **session context section** you defined in your metadata refresh protocol:
+
+- Canon  
+- Modules  
+- Drift  
+- Coherence  
+- Version  
+- Format  
+- Front door  
+- Every page  
+- Audience  
+
+This is the `<section class="session-context">` block with the `context-label` / `context-value` spans.
+
+If you want, I can generate the **canonical template** for this block next.
+
+---
+
+## **3. Badge div (module‑specific emoji + label)**
+Each module gets a badge like:
+
+```
+<div class="module-badge">📘 Conditions Substrate Model</div>
+```
+
+Or whatever emoji + label you choose.
+
+If you want, I can generate the **badge template** next.
+
+---
+
+## **4. Sidebar audit (phantom entries detection)**
+This is the part of your metadata refresh protocol that flags:
+
+- missing files  
+- phantom files  
+- orphaned modules  
+- mismatched module.json entries  
+
+This is usually a **small checklist** or a **diagnostic block**.
+
+If you want, I can generate the **sidebar audit template** next.
+
+---
+
+## **5. Diff table (old vs new metadata values)**
+Every module refresh ends with a diff table:
+
+| Field | Old | New |
+|-------|------|------|
+| description | … | … |
+| keywords | … | … |
+| canonical URL | … | … |
+| OG fields | … | … |
+| AI metadata | … | … |
+
+If you want, I can generate the **canonical diff table template** next.
+
+---
+
+## **6. module.json manifest (per‑module)**
+You already have the schema, but each module needs:
+
+- role enum  
+- analyzer_layer enum  
+- file list  
+- purpose per file  
+- index + signature + diagnostic + example + extension files  
+
+If you want, I can generate the **module.json starter template** next.
+
+---
+
+## **7. modules_group.json registry update**
+This tracks:
+
+- which modules are complete  
+- which have metadata  
+- which have module.json  
+- which have content  
+- which are pending  
+
+If you want, I can generate the **registry update template** next.
+
+---
+
+## **8. Sitemap metadata entries**
+You mentioned your next priority is completing **AI metadata entries** for all sitemap modules.
+
+If you want, I can generate the **canonical sitemap metadata entry template** next.
+
+---
+
+# **Summary: What’s left before scaffolding file names**
+Only **six small structural pieces**:
+
+1. Session context block  
+2. Badge div  
+3. Sidebar audit block  
+4. Diff table template  
+5. module.json starter template  
+6. modules_group.json registry update template  
+7. Sitemap metadata entry template (optional but recommended)
+
+Once these are in place, **we can scaffold file names cleanly**, because every module will have:
+
+- metadata  
+- context  
+- badge  
+- sidebar  
+- diff  
+- module.json  
+- registry entry  
+
+That’s the full TriadicFrameworks canonical module structure.
+
+---
+
+Here is the **canonical Session Context Block**, exactly in the structure your metadata‑refresh protocol requires — fully modular, HTML‑ready, and drop‑in for any TriadicFrameworks module.
+
+No page content was needed; this is pure canon output.
+
+---
+
+# **Canonical Session Context Block (HTML)**
+
+```html
+<section class="session-context">
+
+  <div class="context-row">
+    <span class="context-label">Canon</span>
+    <span class="context-value">Conditions Substrate Model — Gradientary & Global Atlas</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Modules</span>
+    <span class="context-value">Drift • Coherence • Resonance • Hooks • Signatures • Thresholds • Propagation • Cycles • Cascades</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Drift</span>
+    <span class="context-value">D0–D7 substrate drift fields (structural → governance)</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Coherence</span>
+    <span class="context-value">Stability envelopes across D7→D1→D4→D0</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Version</span>
+    <span class="context-value">2026.07 — Canon Refresh Protocol</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Format</span>
+    <span class="context-value">Gradientary Volumes + Global Atlases + module.json manifests</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Front door</span>
+    <span class="context-value">/docs/Conditions_Substrate_Model/</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Every page</span>
+    <span class="context-value">Canonical metadata • Session context • Badge • Sidebar audit • Diff table</span>
+  </div>
+
+  <div class="context-row">
+    <span class="context-label">Audience</span>
+    <span class="context-value">Operators • Analysts • Canon maintainers • AI agents</span>
+  </div>
+
+</section>
+```
+
+---
+
+## **Ready for the next block**
+You’ve now completed:
+
+✔ Canonical HTML metadata block  
+✔ Session context block  
+
+Next in the metadata‑refresh protocol is:
+
+- **Badge div**  
+- **Sidebar audit block**  
+- **Diff table template**  
+- **module.json starter template**  
+- **modules_group.json registry update template**  
+- **Sitemap metadata entry template**
+
+Tell me which one you want next — or say **“all of them”** and I’ll deliver the full set.
+
+---
+
+Absolutely — here are the **two canonical blocks** you asked for:  
+✔ **Badge div**  
+✔ **Sidebar audit block**
+
+Both follow your TriadicFrameworks metadata‑refresh protocol exactly, with clean HTML, stable class names, and zero page‑dependent content.
+
+---
+
+# **1. Canonical Badge Block (HTML)**  
+Module‑specific emoji + label, consistent across all Gradientary / Atlas pages.
+
+```html
+<div class="module-badge">
+  <span class="badge-emoji">📘</span>
+  <span class="badge-label">Conditions Substrate Model</span>
+</div>
+```
+
+**Notes:**  
+- Emoji is module‑selectable (📘 for documentation modules, 🔷 for operators, 🌀 for resonance modules, etc.).  
+- Label matches the module’s canonical name exactly.  
+- This block always appears directly under the session‑context section.
+
+---
+
+# **2. Canonical Sidebar Audit Block (HTML)**  
+This is the diagnostic block that flags phantom entries, missing files, mismatched manifests, and incomplete metadata.
+
+```html
+<aside class="sidebar-audit">
+
+  <h3 class="audit-title">Sidebar Audit</h3>
+
+  <ul class="audit-list">
+
+    <li class="audit-item">
+      <span class="audit-label">Phantom files</span>
+      <span class="audit-value">none detected</span>
+    </li>
+
+    <li class="audit-item">
+      <span class="audit-label">Missing module files</span>
+      <span class="audit-value">none</span>
+    </li>
+
+    <li class="audit-item">
+      <span class="audit-label">module.json alignment</span>
+      <span class="audit-value">schema‑valid</span>
+    </li>
+
+    <li class="audit-item">
+      <span class="audit-label">Metadata completeness</span>
+      <span class="audit-value">canonical</span>
+    </li>
+
+    <li class="audit-item">
+      <span class="audit-label">Sitemap registration</span>
+      <span class="audit-value">present</span>
+    </li>
+
+    <li class="audit-item">
+      <span class="audit-label">Atlas/Gradientary linkage</span>
+      <span class="audit-value">verified</span>
+    </li>
+
+  </ul>
+
+</aside>
+```
+
+**Notes:**  
+- Values are placeholders — you update them per module.  
+- Structure is stable across all modules.  
+- This block always appears after the badge.
+
+---
+
+Here is the **canonical Diff Table Template** — exactly in the structure your metadata‑refresh protocol requires.  
+It’s clean, stable, HTML‑ready, and designed to drop directly into any TriadicFrameworks module page.
+
+Your active tab (`c_Capture.md`) is unrelated, so I don’t retrieve its content.
+
+---
+
+# **Canonical Diff Table Template (HTML)**
+
+```html
+<section class="metadata-diff">
+
+  <h3 class="diff-title">Metadata Diff</h3>
+
+  <table class="diff-table">
+    <thead>
+      <tr>
+        <th class="diff-col-field">Field</th>
+        <th class="diff-col-old">Old</th>
+        <th class="diff-col-new">New</th>
+      </tr>
+    </thead>
+
+    <tbody>
+
+      <tr>
+        <td class="diff-field">description</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">keywords</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">canonical URL</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">OG:title</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">OG:description</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">twitter:title</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">twitter:description</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">ai.module</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">ai.version</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">2026.07</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">ai.purpose</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">ai.keywords</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">—</td>
+      </tr>
+
+      <tr>
+        <td class="diff-field">ai.audience</td>
+        <td class="diff-old">—</td>
+        <td class="diff-new">Operators • Analysts • Canon maintainers • AI agents</td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</section>
+```
+
+---
+
+## **Ready for the next block**
+You now have:
+
+✔ Canonical HTML metadata block  
+✔ Session context block  
+✔ Badge div  
+✔ Sidebar audit block  
+✔ Diff table template  
+
+Next in the metadata‑refresh protocol:
+
+- **module.json starter template**  
+- **modules_group.json registry update template**  
+- **Sitemap metadata entry template**
+
+Tell me which one you want next.
+
+---
+
+Here is your **canonical `module.json` starter template** — fully aligned with your TriadicFrameworks schema (role enums, analyzer_layer enums, file‑purpose grammar, and per‑module manifest structure).  
+This is the exact scaffold you drop into every module directory before populating file‑specific metadata.
+
+No page content was needed; this is pure canon output.
+
+---
+
+# **Canonical `module.json` Starter Template**
+
+```json
+{
+  "module": {
+    "name": "Conditions_Substrate_Model",
+    "category": "canon",
+    "summary": "Core model describing drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades across all substrates.",
+    "version": "2026.07",
+    "front_door": "/docs/Conditions_Substrate_Model/"
+  },
+
+  "roles": {
+    "primary": "engine",
+    "secondary": [
+      "profile",
+      "signature",
+      "diagnostic",
+      "map",
+      "example",
+      "extension",
+      "index",
+      "reference",
+      "template"
+    ]
+  },
+
+  "analyzer_layers": {
+    "operator": true,
+    "dimensional": true,
+    "regime": true,
+    "drift": true,
+    "coherence": true,
+    "cross_cutting": true
+  },
+
+  "files": [
+    {
+      "path": "c_Capture.md",
+      "purpose": "index",
+      "description": "Module front page capturing the Conditions Substrate Model overview."
+    },
+    {
+      "path": "c_Global_Atlas_Drift.md",
+      "purpose": "map",
+      "description": "Global atlas for drift substrates D0–D7."
+    },
+    {
+      "path": "c_Global_Atlas_Coherence.md",
+      "purpose": "map",
+      "description": "Global atlas for coherence envelopes and stability arcs."
+    },
+    {
+      "path": "c_Global_Atlas_Resonance.md",
+      "purpose": "map",
+      "description": "Global atlas for resonance amplification and identity loops."
+    },
+    {
+      "path": "c_Global_Atlas_Hooks.md",
+      "purpose": "map",
+      "description": "Global atlas for hook activation, alignment, resonance, stress, scarcity, opacity, and composite chains."
+    },
+    {
+      "path": "c_Global_Atlas_Signatures.md",
+      "purpose": "signature",
+      "description": "Signature atlas for drift, coherence, resonance, regime, threshold, propagation, substrate, cascade, cycle, chain, and web signatures."
+    },
+    {
+      "path": "c_Global_Atlas_Thresholds.md",
+      "purpose": "diagnostic",
+      "description": "Threshold atlas defining inflection points across all substrates."
+    },
+    {
+      "path": "c_Global_Atlas_Propagation.md",
+      "purpose": "map",
+      "description": "Propagation atlas for vectors, webs, loops, synchronizations, envelopes, cascades, cycles, chains, and composite flows."
+    },
+    {
+      "path": "c_Global_Atlas_Cycles.md",
+      "purpose": "map",
+      "description": "Cycle atlas for drift, coherence, resonance, regime, substrate, hook, cascade, chain, web, epoch, and deep‑time cycles."
+    },
+    {
+      "path": "c_Global_Atlas_Cascades.md",
+      "purpose": "map",
+      "description": "Cascade atlas for dimensional, composite, meta, substrate, hook, regime, propagation, cycle, chain, web, epoch, and deep‑time cascades."
+    },
+    {
+      "path": "c_Gradientary_Thresholds.md",
+      "purpose": "reference",
+      "description": "Gradientary dictionary for threshold operators."
+    },
+    {
+      "path": "c_Gradientary_Propagation.md",
+      "purpose": "reference",
+      "description": "Gradientary dictionary for propagation operators."
+    },
+    {
+      "path": "c_Gradientary_Cycles.md",
+      "purpose": "reference",
+      "description": "Gradientary dictionary for cycle operators."
+    },
+    {
+      "path": "c_Gradientary_Cascades.md",
+      "purpose": "reference",
+      "description": "Gradientary dictionary for cascade operators."
+    }
+  ],
+
+  "ai": {
+    "module": "Conditions_Substrate_Model",
+    "version": "2026.07",
+    "purpose": "Provide canonical structure and metadata for AI agents navigating the Conditions Substrate Model.",
+    "keywords": [
+      "drift",
+      "coherence",
+      "resonance",
+      "hooks",
+      "signatures",
+      "thresholds",
+      "propagation",
+      "cycles",
+      "cascades",
+      "substrates",
+      "regimes"
+    ],
+    "audience": [
+      "operators",
+      "analysts",
+      "canon_maintainers",
+      "ai_agents"
+    ]
+  }
+}
+```
+
+---
+
+## **Ready for the next block**
+You now have:
+
+✔ Canonical HTML metadata block  
+✔ Session context block  
+✔ Badge div  
+✔ Sidebar audit block  
+✔ Diff table template  
+✔ module.json starter template  
+
+Next in the metadata‑refresh protocol:
+
+- **modules_group.json registry update template**  
+- **Sitemap metadata entry template**
+
+Tell me which one you want next.
+
+---
+
+Here is the **canonical `modules_group.json` registry update template** — the exact structure your metadata‑refresh protocol expects.  
+It is clean, minimal, and ready to drop into your global registry before you scaffold file names.
+
+No page content was needed; this is pure canon output.
+
+---
+
+# **Canonical `modules_group.json` Registry Update Template**
+
+```json
+{
+  "registry_version": "2026.07",
+  "modules_root": "/docs/",
+  "groups": [
+
+    {
+      "group": "Conditions_Substrate_Model",
+      "path": "/docs/Conditions_Substrate_Model/",
+      "status": {
+        "metadata": "complete",
+        "module_json": "present",
+        "atlas_set": "complete",
+        "gradientary_set": "complete",
+        "ai_metadata": "complete",
+        "phantom_files": "none",
+        "missing_files": "none"
+      },
+      "files": [
+        "c_Capture.md",
+        "c_Global_Atlas_Drift.md",
+        "c_Global_Atlas_Coherence.md",
+        "c_Global_Atlas_Resonance.md",
+        "c_Global_Atlas_Hooks.md",
+        "c_Global_Atlas_Signatures.md",
+        "c_Global_Atlas_Thresholds.md",
+        "c_Global_Atlas_Propagation.md",
+        "c_Global_Atlas_Cycles.md",
+        "c_Global_Atlas_Cascades.md",
+        "c_Gradientary_Thresholds.md",
+        "c_Gradientary_Propagation.md",
+        "c_Gradientary_Cycles.md",
+        "c_Gradientary_Cascades.md",
+        "module.json"
+      ]
+    }
+
+  ],
+
+  "audit": {
+    "last_update": "2026-07-01",
+    "updated_by": "Nawder Loswin",
+    "notes": "All Conditions Substrate Model modules validated and registered."
+  }
+}
+```
+
+---
+
+## **What this template gives you**
+- A **single registry entry** for the entire Conditions Substrate Model module.  
+- Canonical fields for:
+  - metadata status  
+  - atlas completeness  
+  - gradientary completeness  
+  - AI metadata status  
+  - phantom/missing file detection  
+- A **file list** that matches your module.json manifest.  
+- A clean audit block for versioning and traceability.
+
+This is the exact structure your metadata‑refresh protocol expects before scaffolding file names.
+
+---
+
+Here is your **canonical Sitemap Metadata Entry Template** — the final structural piece in your metadata‑refresh protocol.  
+It’s clean, minimal, and designed to drop directly into **`sitemap_main.xml`** or any module‑specific sitemap.
+
+No page content was needed; this is pure canon output.
+
+---
+
+# **Canonical Sitemap Metadata Entry Template**
+
+```xml
+<url>
+  <loc>https://www.triadicframeworks.org/docs/Conditions_Substrate_Model/</loc>
+
+  <!-- Canonical metadata -->
+  <lastmod>2026-07-01</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.85</priority>
+
+  <!-- AI metadata (canonical fields) -->
+  <meta name="ai.module" content="Conditions_Substrate_Model" />
+  <meta name="ai.version" content="2026.07" />
+  <meta name="ai.purpose" content="Canonical substrate model for drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, and cascades." />
+  <meta name="ai.keywords" content="drift, coherence, resonance, hooks, signatures, thresholds, propagation, cycles, cascades, substrates, regimes" />
+  <meta name="ai.audience" content="operators, analysts, canon_maintainers, ai_agents" />
+
+  <!-- Navigation anchors -->
+  <meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml" />
+  <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions" />
+
+  <!-- Contact + license -->
+  <meta name="ai.contact.x" content="@TriadicFrameworks" />
+  <meta name="ai.contact.youtube" content="@TriadicFrameworks" />
+  <meta name="ai.license" content="Open educational use permitted" />
+</url>
+```
+
+---
+
+## **You now have every structural block**
+Your module scaffolding toolkit is complete:
+
+✔ Canonical HTML metadata block  
+✔ Session context block  
+✔ Badge div  
+✔ Sidebar audit block  
+✔ Diff table template  
+✔ module.json starter template  
+✔ modules_group.json registry update template  
+✔ Sitemap metadata entry template  
+
+You’re officially ready to **scaffold file names** for the Conditions Substrate Model or any other TriadicFrameworks module.
+
+---
+
+Perfect — with **all metadata blocks complete**, we can finally scaffold **canonical file names** for the *Conditions Substrate Model* module.
+
+Because you’re actively editing:
+
+**`/docs/Conditions_Substrate_Model/c_Capture.md`**  
+
+
+…I’ll generate the **full, canon‑aligned file tree** for this module, using the TriadicFrameworks grammar (index • engine • profile • signature • diagnostic • map • example • extension • reference • template).
+
+This is the **filename scaffold only** — no contents yet.
+
+---
+
+# **📁 Conditions_Substrate_Model — Canonical File Scaffold**
+
+```
+/docs/Conditions_Substrate_Model/
+│
+├── c_Capture.md                         # index (front door)
+│
+├── c_Metadata.html                      # canonical HTML metadata block
+├── c_Session_Context.html               # session context block
+├── c_Badge.html                         # module badge
+├── c_Sidebar_Audit.html                 # sidebar audit block
+├── c_Diff_Table.html                    # metadata diff table
+│
+├── module.json                          # per-module manifest
+├── modules_group.json                   # registry entry
+├── sitemap_entry.xml                    # sitemap metadata entry
+│
+├── c_Global_Atlas_Drift.md              # map
+├── c_Global_Atlas_Coherence.md          # map
+├── c_Global_Atlas_Resonance.md          # map
+├── c_Global_Atlas_Hooks.md              # map
+├── c_Global_Atlas_Signatures.md         # signature
+├── c_Global_Atlas_Thresholds.md         # diagnostic
+├── c_Global_Atlas_Propagation.md        # map
+├── c_Global_Atlas_Cycles.md             # map
+├── c_Global_Atlas_Cascades.md           # map
+│
+├── c_Gradientary_Drift.md               # reference (optional future volume)
+├── c_Gradientary_Coherence.md           # reference (optional future volume)
+├── c_Gradientary_Resonance.md           # reference (optional future volume)
+├── c_Gradientary_Hooks.md               # reference (optional future volume)
+├── c_Gradientary_Signatures.md          # reference (optional future volume)
+├── c_Gradientary_Thresholds.md          # reference
+├── c_Gradientary_Propagation.md         # reference
+├── c_Gradientary_Cycles.md              # reference
+├── c_Gradientary_Cascades.md            # reference
+│
+├── c_Examples.md                        # example (optional)
+├── c_Extensions.md                      # extension (optional)
+├── c_Reference_Index.md                 # reference index (optional)
+├── c_Template.md                        # template (optional)
+│
+└── README.md                            # module-level readme
+```
+
+---
+
+# **Why this scaffold is “canonical”**
+It follows your TriadicFrameworks grammar exactly:
+
+- **index** → `c_Capture.md`  
+- **engine** → (implicit in module.json + atlas set)  
+- **profile** → substrate-specific atlases  
+- **signature** → `c_Global_Atlas_Signatures.md`  
+- **diagnostic** → thresholds, sidebar audit, diff table  
+- **map** → all atlas files  
+- **example** → optional  
+- **extension** → optional  
+- **reference** → all Gradientary volumes  
+- **template** → optional
+
+And it includes the **metadata‑refresh protocol blocks** you just finished:
+
+- metadata block  
+- session context  
+- badge  
+- sidebar audit  
+- diff table  
+- module.json  
+- modules_group.json  
+- sitemap entry  
+
+This is the complete, ready‑to‑populate file tree.
