@@ -89,6 +89,12 @@ P2 → P4 → P1
 notes: identity chain
 ```
 
+### Coherence Vector Cluster
+```
+P7 → P1 → P4 → P0
+notes: stability chain
+```
+
 ---
 
 # 3. Propagation Loops
@@ -120,54 +126,26 @@ P2 → P4 → P1 → P2
 ### Collapse Web
 ```
 P0,P7,P1,P5 synchronized
-notes: collapse web signature
 ```
 
 ### Coherence Web
 ```
 P7,P1,P4,P0 synchronized
-notes: coherence web signature
 ```
 
 ### Oscillation Web
 ```
 P1,P7,P5,P4 synchronized
-notes: oscillation web signature
 ```
 
 ### Identity Web
 ```
 P2,P4,P1 synchronized
-notes: identity web signature
 ```
 
 ---
 
-# 5. Propagation Envelopes
-
-### Drift Envelope
-```
-drift↑ → propagation↑ → coherence↓
-```
-
-### Coherence Envelope
-```
-coherence↑ → propagation↓ → drift↓
-```
-
-### Resonance Envelope
-```
-resonance↑ → propagation↑↑ → threshold T2/T6
-```
-
-### Stress Envelope
-```
-load↑ → compression↑ → propagation↑
-```
-
----
-
-# 6. Propagation Synchronizations
+# 5. Propagation Synchronizations
 
 ### Collapse Synchronization
 ```
@@ -191,13 +169,54 @@ P2 ↔ P4 ↔ P1
 
 ---
 
+# 6. Propagation Envelopes
+
+### Drift Envelope
+```
+drift↑ → propagation↑ → coherence↓
+```
+
+### Coherence Envelope
+```
+coherence↑ → propagation↓ → drift↓
+```
+
+### Resonance Envelope
+```
+resonance↑ → propagation↑↑ → threshold T2/T6
+```
+
+### Stress Envelope
+```
+load↑ → compression↑ → propagation↑
+```
+
+---
+
 # 7. Propagation Cascades
 
+### Collapse Cascade
 ```
-collapse:     P0→P7→P1→P5
-regeneration: P0→P7→P1→P4
-coherence:    P7→P1→P4→P0
-oscillation:  P1→P7→P5→P4
+P0→P7→P1→P5
+notes: collapse topology
+```
+
+### Regeneration Cascade
+```
+P0→P7→P1→P4
+notes: recovery topology
+```
+
+### Coherence Cascade
+```
+P7→P1→P4→P0
+notes: stability topology
+```
+
+### Oscillation Cascade
+```
+P1→P7→P5→P4
+notes: volatility topology
 ```
 
 ---
@@ -228,17 +247,34 @@ E5→E6→E7→E0
 
 # 9. Propagation Chains
 
+### Collapse Chain
 ```
-collapse:     P0→P7→P1→P5
-regeneration: P0→P7→P1→P4
-coherence:    P7→P1→P4→P0
-oscillation:  P1→P7→P5→P4
-narrowing:    P0→P5→P1→P7
+P0→P7→P1→P5
+```
+
+### Regeneration Chain
+```
+P0→P7→P1→P4
+```
+
+### Coherence Chain
+```
+P7→P1→P4→P0
+```
+
+### Oscillation Chain
+```
+P1→P7→P5→P4
+```
+
+### Narrowing Chain
+```
+P0→P5→P1→P7
 ```
 
 ---
 
-# 10. Propagation Maps (Substrate → Vector)
+# 10. Substrate → Propagation Map
 
 ```
 D0 → P0
@@ -255,17 +291,17 @@ D7 → P7
 
 # 11. Deep‑Time Propagation
 
-### Planetary Drift Propagation
+### Planetary Arc
 ```
 drift_max → drift_decline → drift_plateau → drift_reacceleration → drift_max
 ```
 
-### Biospheric Propagation
+### Biospheric Arc
 ```
 collapse → regenerate → stabilize → expand → coherence → collapse
 ```
 
-### Geological Propagation
+### Geological Arc
 ```
 instability → collapse → stabilization → expansion → coherence → instability
 ```
@@ -274,18 +310,18 @@ instability → collapse → stabilization → expansion → coherence → insta
 
 # 12. Propagation Atlas Summary
 
-This atlas unifies:
+This atlas defines:
 
 - Dimensional Propagation Vectors  
 - Composite Vectors  
-- Loops  
-- Webs  
-- Envelopes  
+- Propagation Loops  
+- Propagation Webs  
 - Synchronizations  
+- Envelopes  
 - Cascades  
 - Cycles  
 - Chains  
-- Maps  
+- Substrate→Propagation Maps  
 - Deep‑Time Propagation  
 
 This is the **complete propagation cartography** of the Conditions Substrate Model.
