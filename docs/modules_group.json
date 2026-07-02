@@ -1,147 +1,535 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/modules_group.schema.json",
-  "$generated": "2026-07-02T09:39:00",
-  "$version": "2.1",
-  "$round": "R2",
+  "$generated": "2026-07-02T17:05:00",
+  "$version": "2.2",
+  "$round": "R3",
   "meta": {
-    "title": "TriadicFrameworks Module Groups \u2014 Round 2 Enriched",
-    "total_a3_modules": 55,
+    "title": "TriadicFrameworks Module Groups \u2014 Round 3 Discovery",
+    "total_a3_modules": 112,
     "total_groups": 21,
-    "total_files": 1461,
-    "generated_at": "2026-07-02T09:39:00"
+    "total_files": 1284,
+    "generated_at": "2026-07-02T17:05:00"
   },
   "groups": {
     "Meta & Governance": {
-      "count": 3,
-      "total_files": 177,
+      "count": 8,
+      "total_files": 4,
       "modules": [
         {
           "canon_tag": "webroot",
           "name": "TriadicFrameworks Web Root",
           "depth": 0,
           "url": "https://www.triadicframeworks.org/",
-          "file_count": 13,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "docs-about",
+          "name": "About",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/ABOUT/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "docs-code-of-conduct",
+          "name": "Code of Conduct",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/CODE_OF_CONDUCT/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "docs-contributing",
+          "name": "Contributing",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/CONTRIBUTING/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "docs-ethics-privacy",
+          "name": "Ethics & Privacy",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/ETHICS_PRIVACY/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "docs-lineage",
+          "name": "Lineage",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/LINEAGE/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "gsm",
           "name": "Governance Substrate Model",
           "depth": 1,
           "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model",
-          "file_count": 116,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "docs",
           "name": "Docs",
           "depth": 2,
           "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/docs",
-          "file_count": 48,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Ethics & Care": {
       "count": 1,
-      "total_files": 14,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "C.O.D.E.",
           "name": "Compassion Operator Dignity Ethics",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/rtt/codes/",
-          "file_count": 14,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Operator Layer": {
       "count": 5,
-      "total_files": 36,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "OPERATORS",
           "name": "Operators",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/rtt/1/",
-          "file_count": 16,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "STRUCTURAL_DETECTION_ENGINE",
-          "name": "Echo Classifier",
+          "name": "Structural Detection Engine",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/rtt/Echo_Classifier/",
-          "file_count": 6,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "STRUCTURAL_INTEGRATION_ENGINE",
-          "name": "Triadic Echo Lattice",
+          "name": "Structural Integration Engine",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/",
-          "file_count": 6,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "OPERATORS_TEACHING_BUNDLE",
           "name": "Operators Teaching Bundle",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/rtt/academy/",
-          "file_count": 2,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "structural_detection",
-          "name": "Echo Classifier (Structural Detection)",
+          "name": "Structural Detection",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/rtt/Echo_Classifier/",
-          "file_count": 6,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Substrate Grammar": {
-      "count": 1,
-      "total_files": 49,
+      "count": 3,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "RSGM",
           "name": "Religious Substrate Grammar Model",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/",
-          "file_count": 49,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "asm",
+          "name": "Arrival Substrate Model",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/arrival_substrate_model/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "csm",
+          "name": "Conditions Substrate Model",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Conditions_Substrate_Model/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "RTT Technology Layer": {
-      "count": 3,
-      "total_files": 54,
+      "count": 15,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "RTT_2",
           "name": "RTT/2",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/rtt/2/",
-          "file_count": 2,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "RTT_3",
           "name": "RTT/3",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/rtt/3/",
-          "file_count": 3,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "rtt-root",
           "name": "RTT-Tech Root",
           "depth": 1,
           "url": "https://www.triadicframeworks.org/rtt/",
-          "file_count": 49,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "hsp",
+          "name": "Harmonic Stability Profile",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/Harmonic_Stability_Profile/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-12",
+          "name": "RTT/12",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/12/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-api",
+          "name": "RTT API",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/api/rtt/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-core",
+          "name": "RTT Core",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/core/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-extension",
+          "name": "RTT Extension",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/extension/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-guild",
+          "name": "RTT Guild",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/guild/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-micro-core",
+          "name": "RTT Micro-Core",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/micro_core/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-sdk",
+          "name": "RTT SDK",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/sdk/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-sort",
+          "name": "RTT Sort",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/sort/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "rtt-store",
+          "name": "RTT Store",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/store/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "substrate-flow",
+          "name": "Substrate Flow",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/Substrate_Flow/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "tis",
+          "name": "The Inverted Star",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/The_Inverted_Star/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        }
+      ]
+    },
+    "Applied Domain Models": {
+      "count": 22,
+      "total_files": 11,
+      "modules": [
+        {
+          "canon_tag": "ai-core",
+          "name": "AI Instrument Architecture",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/ai/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "ai-resonance-seed",
+          "name": "AI Resonance Seed",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/AI_Resonance_Seed/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "audio",
+          "name": "Audio Industry Reviewed",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/audio_industry_reviewed/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "culture",
+          "name": "Culture",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/culture/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "dsp",
+          "name": "Digital Signal Processing",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/dsp/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "economics",
+          "name": "Economics",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/economics/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "human-resources",
+          "name": "Human Resources",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/human-resources/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "inverted-economics",
+          "name": "Inverted Economics",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Inverted_Economics/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "justice",
+          "name": "Justice",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/justice/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "language",
+          "name": "Language",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/language/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "law",
+          "name": "Law",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Law/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "medicine",
+          "name": "Medicine",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/medicine/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "music",
+          "name": "Music",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/music/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "philosophy",
+          "name": "Philosophy",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/philosophy/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "psychology",
+          "name": "Psychology",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/psychology/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "sociology",
+          "name": "Sociology",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/sociology/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "taxes",
+          "name": "Taxes",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/taxes/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "technology",
+          "name": "Technology",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/technology/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "ai-consciousness",
+          "name": "AI Session Structural Consciousness",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/ai/session/consciousness/",
+          "file_count": 11,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "ai-drift-calibration",
+          "name": "AI Drift Calibration",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/ai-drift-calibration/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "melodic-table",
+          "name": "Melodic Table of Elements",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/melodic-table-of-elements",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "mve",
+          "name": "Molecular Vibration Explorer",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/molecular-vibration-explorer",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
@@ -155,7 +543,8 @@
           "depth": 1,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "dynamical_systems",
@@ -163,7 +552,8 @@
           "depth": 1,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "information_systems",
@@ -171,7 +561,8 @@
           "depth": 1,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "physics",
@@ -179,153 +570,359 @@
           "depth": 1,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
+        }
+      ]
+    },
+    "Core Frameworks \u2014 Structural Spine": {
+      "count": 11,
+      "total_files": 15,
+      "modules": [
+        {
+          "canon_tag": "coeus",
+          "name": "Coeus",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Coeus/",
+          "file_count": 13,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "docs-glossary",
+          "name": "Glossary",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/GLOSSARY/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "docs-principles",
+          "name": "Principles",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/PRINCIPLES/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "grammar",
+          "name": "Grammar",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Grammar/",
+          "file_count": 1,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
+        {
+          "canon_tag": "mode",
+          "name": "Mode",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Mode/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "opacity",
+          "name": "Opacity",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Opacity/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "tft-core",
+          "name": "TFT Core",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "wrsadc",
+          "name": "WRSADC",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/WRSADC",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "entft",
+          "name": "ENTFT",
+          "depth": 3,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/entft",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "nous",
+          "name": "Nous",
+          "depth": 3,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/nous",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "tops",
+          "name": "TOPS",
+          "depth": 3,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/tops",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        }
+      ]
+    },
+    "Education & Teaching": {
+      "count": 3,
+      "total_files": 0,
+      "modules": [
+        {
+          "canon_tag": "docs-quickstart",
+          "name": "Quickstart",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/QUICKSTART/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "education",
+          "name": "Education",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/education/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "examples",
+          "name": "Examples",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/examples",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Framework-Structural": {
       "count": 1,
-      "total_files": 22,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "fcg",
           "name": "Framework Creation Guide",
           "depth": 1,
           "url": "https://www.triadicframeworks.org/frameworks/creation_guide/",
-          "file_count": 22,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Safety & Operations": {
       "count": 1,
-      "total_files": 6,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "incident_substrate_model",
           "name": "Incident Substrate Model",
           "depth": 1,
-          "url": "https://www.triadicframeworks.org/Incident_Substrate_Model/",
-          "file_count": 6,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Research-Canonical": {
       "count": 1,
-      "total_files": 48,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "research",
           "name": "Research",
           "depth": 1,
           "url": "https://www.triadicframeworks.org/Research/",
-          "file_count": 48,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Tools & Infrastructure": {
-      "count": 3,
-      "total_files": 49,
+      "count": 4,
+      "total_files": 0,
       "modules": [
+        {
+          "canon_tag": "resilience-checker",
+          "name": "Resilience Checker",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/resilience-checker/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
         {
           "canon_tag": "tft-3pack",
           "name": "TFT 3Pack",
           "depth": 1,
           "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/",
-          "file_count": 34,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "formats",
           "name": "Formats",
           "depth": 2,
           "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/formats",
-          "file_count": 6,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "scripts",
           "name": "Scripts",
           "depth": 2,
           "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/scripts",
-          "file_count": 9,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "RTT Dimensional": {
       "count": 4,
-      "total_files": 51,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "RTT_MORPHIC_RESONANCE",
           "name": "RTT Morphic Resonance",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/rtt/Morphic_Resonance/",
-          "file_count": 12,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "rtt-emotions",
           "name": "RTT Emotions",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/rtt/emotions/",
-          "file_count": 30,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "rtt-lowdim",
           "name": "RTT Low-Dimensional",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/Low_Dimensional_Structures/",
-          "file_count": 7,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "rtt-paradoxes",
           "name": "RTT Paradoxes",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/Paradoxes_canon/",
-          "file_count": 2,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Integration & Deployment": {
       "count": 2,
-      "total_files": 25,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "UE6-INTEGRATIONS",
           "name": "UE6 Integrations",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/Integrations/UE6/",
-          "file_count": 16,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "rtt-integrations",
           "name": "RTT Integrations",
           "depth": 2,
-          "url": "https://www.triadicframeworks.org/Integrations/",
-          "file_count": 9,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Theory": {
-      "count": 10,
-      "total_files": 0,
+      "count": 19,
+      "total_files": 12,
       "modules": [
+        {
+          "canon_tag": "alphafold",
+          "name": "AlphaFold Substrate Alignments",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/alphafold_substrate_alignments/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "atomic-clocks",
+          "name": "Atomic Clocks",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/atomic_clocks/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "bsm",
+          "name": "Boson Substrate Model",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/boson-substrate-model/",
+          "file_count": 12,
+          "enriched_r2": false,
+          "enriched_r3": true
+        },
         {
           "canon_tag": "chaos_theory",
           "name": "Chaos Theory",
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "cosmology",
+          "name": "Cosmology",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/cosmology/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "dark-matter",
+          "name": "Dark Matter",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/dark-matter/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "electromagnetism",
@@ -333,7 +930,8 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "evolutionary_biology",
@@ -341,7 +939,17 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "fibonacci-phi",
+          "name": "Fibonacci & PHI",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/Fibonacci_and_PHI/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "general_relativity",
@@ -349,7 +957,8 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "information_theory",
@@ -357,7 +966,8 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "morphic_resonance",
@@ -365,7 +975,26 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "neuroscience",
+          "name": "Neuroscience",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/neuroscience/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "quantum-coherence",
+          "name": "Quantum Coherence",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/quantum-coherence/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "quantum_field_theory",
@@ -373,7 +1002,8 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "quantum_mechanics",
@@ -381,7 +1011,8 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "standard_model",
@@ -389,7 +1020,8 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "thermodynamics",
@@ -397,183 +1029,119 @@
           "depth": 2,
           "url": null,
           "file_count": 0,
-          "enriched_r2": false
+          "enriched_r2": false,
+          "enriched_r3": false
+        },
+        {
+          "canon_tag": "time-crystals",
+          "name": "Time Crystals",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/Time_Crystals/",
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "RTT Hardware Layer": {
       "count": 1,
-      "total_files": 20,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "d369",
           "name": "D369 Chip Spec",
           "depth": 2,
           "url": "https://www.triadicframeworks.org/rtt/D369_Chip_Spec/",
-          "file_count": 20,
-          "enriched_r2": false
-        }
-      ]
-    },
-    "Education & Teaching": {
-      "count": 1,
-      "total_files": 94,
-      "modules": [
-        {
-          "canon_tag": "examples",
-          "name": "Examples",
-          "depth": 2,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/examples",
-          "file_count": 94,
-          "enriched_r2": false
-        }
-      ]
-    },
-    "Applied Domain Models": {
-      "count": 2,
-      "total_files": 151,
-      "modules": [
-        {
-          "canon_tag": "melodic-table",
-          "name": "Melodic Table of Elements",
-          "depth": 2,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/melodic-table-of-elements",
-          "file_count": 130,
-          "enriched_r2": false
-        },
-        {
-          "canon_tag": "mve",
-          "name": "Molecular Vibration Explorer",
-          "depth": 2,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/molecular-vibration-explorer",
-          "file_count": 21,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "RTT Analytics \u2014 Metadata Layer": {
       "count": 1,
-      "total_files": 14,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "rtt-codes",
           "name": "RTT/codes",
           "depth": 2,
           "url": "https://www.triadicframeworks.org/rtt/codes/",
-          "file_count": 14,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "RTT Deployment Layer": {
       "count": 3,
-      "total_files": 139,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "rtt-inside",
           "name": "RTT Inside",
           "depth": 2,
           "url": "https://www.triadicframeworks.org/rtt/Inside/",
-          "file_count": 122,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "rtt-inside-benchmarks",
           "name": "RTT Inside Benchmarks",
           "depth": 3,
-          "url": "https://www.triadicframeworks.org/rtt/Inside/Benchmarks/",
-          "file_count": 11,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "rtt-tel",
-          "name": "Triadic Echo Lattice (TEL)",
+          "name": "RTT TEL",
           "depth": 3,
-          "url": "https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/",
-          "file_count": 6,
-          "enriched_r2": true
-        }
-      ]
-    },
-    "Core Frameworks \u2014 Structural Spine": {
-      "count": 5,
-      "total_files": 476,
-      "modules": [
-        {
-          "canon_tag": "tft-core",
-          "name": "TFT Core",
-          "depth": 2,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft",
-          "file_count": 11,
-          "enriched_r2": false
-        },
-        {
-          "canon_tag": "wrsadc",
-          "name": "WRSADC",
-          "depth": 2,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/WRSADC",
-          "file_count": 10,
-          "enriched_r2": false
-        },
-        {
-          "canon_tag": "entft",
-          "name": "ENTFT",
-          "depth": 3,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/entft",
-          "file_count": 213,
-          "enriched_r2": false
-        },
-        {
-          "canon_tag": "nous",
-          "name": "Nous",
-          "depth": 3,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/nous",
-          "file_count": 157,
-          "enriched_r2": false
-        },
-        {
-          "canon_tag": "tops",
-          "name": "TOPS",
-          "depth": 3,
-          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/tops",
-          "file_count": 85,
-          "enriched_r2": false
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Spacetime": {
       "count": 2,
-      "total_files": 16,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "Mudpuppy",
           "name": "Mudpuppy",
           "depth": 3,
-          "url": "https://github.com/Triadic-Resonance-Wizards/mythmatic/tree/main/Mudpuppy",
-          "file_count": 8,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         },
         {
           "canon_tag": "SoftKitty",
           "name": "SoftKitty",
           "depth": 3,
-          "url": "https://github.com/Triadic-Resonance-Wizards/mythmatical/tree/main/SoftKitty",
-          "file_count": 8,
-          "enriched_r2": true
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     },
     "Research & Validation": {
       "count": 1,
-      "total_files": 20,
+      "total_files": 0,
       "modules": [
         {
           "canon_tag": "resonance-labs",
           "name": "Resonance Labs",
           "depth": 3,
           "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/resonance-labs",
-          "file_count": 20,
-          "enriched_r2": false
+          "file_count": 0,
+          "enriched_r2": false,
+          "enriched_r3": false
         }
       ]
     }
@@ -594,6 +1162,54 @@
       "layer": "Ideation Layer",
       "path": "docs/_ideas",
       "reason": "Non-Canonical status \u2014 ideation sandbox, not yet promoted to functional canon."
+    },
+    {
+      "canon_tag": "docs-license",
+      "name": "LICENSE",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/LICENSE_module.json",
+      "reason": "Legal text \u2014 not functional domain content"
+    },
+    {
+      "canon_tag": "docs-security",
+      "name": "SECURITY",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/SECURITY_module.json",
+      "reason": "Security policy \u2014 infrastructure/governance"
+    },
+    {
+      "canon_tag": "assets",
+      "name": "Assets",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/assets/assets_module.json",
+      "reason": "Static site assets \u2014 build infrastructure"
+    },
+    {
+      "canon_tag": "badges",
+      "name": "Badges",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/badges/badges_module.json",
+      "reason": "Repo status badges \u2014 CI/meta infrastructure"
+    },
+    {
+      "canon_tag": "discussions",
+      "name": "Discussions",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/discussions/discussions_module.json",
+      "reason": "GitHub discussions scaffold \u2014 not functional canon"
+    },
+    {
+      "canon_tag": "archive-org",
+      "name": "Archive.org",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/archive_org/archive_org_module.json",
+      "reason": "External archive mirror \u2014 not functional canon"
     }
   ]
 }

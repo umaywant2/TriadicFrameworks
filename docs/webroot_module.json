@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/webroot_module.schema.json",
-  "$generated": "2026-07-02T11:14:00",
-  "$version": "2.0",
-  "$round": "R2",
+  "$generated": "2026-07-02T17:05:00",
+  "$version": "3.0",
+  "$round": "R3",
   "module": {
     "name": "TriadicFrameworks Webroot",
     "id": "webroot",
@@ -32,8 +32,8 @@
       "json"
     ],
     "every_page_stands_alone": true,
-    "total_a3_modules": 55,
-    "total_files_catalogued": 1461
+    "total_a3_modules": 112,
+    "total_files_catalogued": 1284
   },
   "r2_stats": {
     "round": "R2",
@@ -299,5 +299,17 @@
       "navigation_map": "array",
       "module_links": "array"
     }
+  },
+  "r3_stats": {
+    "round": "R3",
+    "generated": "2026-07-02T17:05:00",
+    "total_a3_modules": 112,
+    "total_i2_excluded": 8,
+    "total_files_catalogued": 1284,
+    "r3_new_a3": 57,
+    "r3_new_i2": 6,
+    "r3_file_delta": 42,
+    "spine": "/docs/spine/module_graph.json",
+    "hub": "/docs/hub.json"
   }
 }

@@ -1,10 +1,10 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://www.triadicframeworks.org/schemas/sitemap_module.schema.json",
-  "$generated": "2026-07-02T09:39:00",
-  "$version": "1.1",
+  "$generated": "2026-07-02T17:05:00",
+  "$version": "1.2",
   "title": "TriadicFrameworks Sitemap Module Entry",
-  "description": "Schema for a single module sitemap entry in the TriadicFrameworks canonical sitemap. R2: added enriched_r2 field.",
+  "description": "Schema for a single module sitemap entry. R3: added enriched_r3 field.",
   "type": "object",
   "required": [
     "canon_tag",
@@ -19,40 +19,32 @@
   ],
   "properties": {
     "canon_tag": {
-      "type": "string",
-      "description": "Unique canonical identifier for the module"
+      "type": "string"
     },
     "name": {
-      "type": "string",
-      "description": "Human-readable module name"
+      "type": "string"
     },
     "url": {
       "type": "string",
-      "format": "uri",
-      "description": "Canonical URL of the module"
+      "format": "uri"
     },
     "path": {
-      "type": "string",
-      "description": "Repository path relative to docs/"
+      "type": "string"
     },
     "layer": {
-      "type": "string",
-      "description": "Architectural layer classification"
+      "type": "string"
     },
     "status": {
-      "type": "string",
-      "description": "Canonical status of the module"
+      "type": "string"
     },
     "depth": {
       "type": "integer",
-      "minimum": 0,
-      "description": "Depth in the hierarchy tree (0 = root)"
+      "minimum": 0
     },
     "priority": {
       "type": "number",
       "minimum": 0.0,
-      "maximum": 1.0,
-      "description": "Sitemap crawl priority (1.0 = highest)"
+      "maximum": 1.0
     },
     "changefreq": {
       "type": "string",
@@ -64,30 +56,29 @@
         "monthly",
         "yearly",
         "never"
-      ],
-      "description": "Expected change frequency for crawlers"
+      ]
     },
     "file_count": {
       "type": "integer",
-      "minimum": 0,
-      "description": "Number of files in module"
+      "minimum": 0
     },
     "last_modified": {
       "type": "string",
-      "format": "date",
-      "description": "ISO 8601 last-modified date"
+      "format": "date"
     },
     "classification": {
       "type": "string",
       "enum": [
         "A3",
         "I2"
-      ],
-      "description": "A3 = functional (included), I2 = infrastructure (excluded)"
+      ]
     },
     "enriched_r2": {
+      "type": "boolean"
+    },
+    "enriched_r3": {
       "type": "boolean",
-      "description": "True if this entry was enriched with real module.json metadata in Round 2"
+      "description": "True if enriched with real module.json metadata in Round 3"
     }
   },
   "additionalProperties": false,
@@ -105,7 +96,8 @@
       "file_count": 13,
       "last_modified": "2026-07-02",
       "classification": "A3",
-      "enriched_r2": false
+      "enriched_r2": false,
+      "enriched_r3": false
     }
   ]
 }
