@@ -54,6 +54,11 @@ RTT‑Tech is built for:
 - developers building regime‑aware tools  
 
 ## **Resonance-Time Technology**
+- www - Operational
+- docs - Operational
+- online - Development 
+
+### Road Map - Online RTT Engines
 
 | Class | Service Type | Host Names | Description |
 | --- | --- | --- | --- |
