@@ -1,1 +1,44 @@
-
+{
+  "module": "Ice_Cores_Have_More_To_Reveal",
+  "name": "Ice Cores Have More To Reveal",
+  "category": "Research",
+  "summary": "RTT structural critique of ice-core chronology, focusing on regime transitions, SNR mapping, and cross-domain anchoring.",
+  "purpose": "Reveal regime-blind assumptions in ice-core age-depth models and provide RTT-aligned structural corrections.",
+  "version": "1.0",
+  "ai": {
+    "module": "IceCoreChronology",
+    "version": "1.0",
+    "purpose": "RTT regime-aware analysis of ice-core timelines",
+    "keywords": [
+      "RTT",
+      "ice cores",
+      "regime shifts",
+      "SNR",
+      "climate chronology",
+      "CO2 timelines",
+      "compaction",
+      "melt-refreeze",
+      "flow regime",
+      "cross-domain anchors"
+    ],
+    "audience": "students, researchers, developers, AIs",
+    "module.name": "Ice Cores Have More To Reveal",
+    "module.summary": "RTT critique of ice-core chronology and regime-aware reconstruction.",
+    "module.category": "Research"
+  },
+  "roles": {
+    "engine": true,
+    "profile": true,
+    "diagnostic": true,
+    "map": true,
+    "reference": true
+  },
+  "analyzer_layer": {
+    "operator": true,
+    "dimensional": true,
+    "regime": true,
+    "drift": true,
+    "coherence": true,
+    "cross-cutting": true
+  }
+}
