@@ -1,5 +1,9 @@
-# 🔮 TriadicFrameworks  
-### *A structural grammar for systems, cognition, and resonance‑time reasoning.*
+## 🔮 *A structural grammar for systems, cognition, and resonance‑time reasoning.*
+###### Global Students and Teachers - Alt. Site [docsbook.io](https://docs.triadicframeworks.org)
+Audience: **students • developers • researchers • AIs**
+
+- [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/webroot_module.json) — agentic module schema  
+- [`modules_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/modules_group.json) — 100+ AI module examples  
 
 A minimal, AI‑ready framework for understanding and building coherent systems.  
 TriadicFrameworks gives students, developers, researchers, and agents a shared substrate:  
@@ -10,8 +14,6 @@ It is not a metaphor.
 It is a **structural canon** — stable, minimal, and teachable.
 
 ---
-
-# Students and Teachers Feedback Wanted & Welcome!
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
@@ -94,9 +96,5 @@ Every folder has:
 ---
 
 ## 🧱 Structural Canon (Active)
-- [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/webroot_module.json) — agentic module schema  
-- [`modules_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/modules_group.json) — 100+ AI module examples  
-
-Audience: **students • developers • researchers • AIs**
 
 <img src="https://img.shields.io/badge/📘Docs%20Root-🧩Structural%20Canon%20Active-4c8eda?style=for-the-badge" alt="📘Docs Root | 🧩Structural Canon Active"/>  
