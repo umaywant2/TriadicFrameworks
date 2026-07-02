@@ -1,1186 +1,599 @@
-"_meta": {
-  "title": "TriadicFrameworks — Modules Group Registry",
-  "description": "Canonical registry of all refreshed modules with metadata, session context, and module.json status. Place at /docs/modules_group.json",
-  "last_updated": "2026-05-06",
-  "total_refreshed": 71,
-  "sessions": {
-    "prior_sessions": {
-      "count": 32,
-      "note": "Reconstructed from cross-references — verify against your local records"
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/modules_group.schema.json",
+  "$generated": "2026-07-02T09:39:00",
+  "$version": "2.1",
+  "$round": "R2",
+  "meta": {
+    "title": "TriadicFrameworks Module Groups \u2014 Round 2 Enriched",
+    "total_a3_modules": 55,
+    "total_groups": 21,
+    "total_files": 1461,
+    "generated_at": "2026-07-02T09:39:00"
+  },
+  "groups": {
+    "Meta & Governance": {
+      "count": 3,
+      "total_files": 177,
+      "modules": [
+        {
+          "canon_tag": "webroot",
+          "name": "TriadicFrameworks Web Root",
+          "depth": 0,
+          "url": "https://www.triadicframeworks.org/",
+          "file_count": 13,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "gsm",
+          "name": "Governance Substrate Model",
+          "depth": 1,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model",
+          "file_count": 116,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "docs",
+          "name": "Docs",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/docs",
+          "file_count": 48,
+          "enriched_r2": false
+        }
+      ]
     },
-    "session_2026_05_02": {
-      "count": 30,
-      "note": "All 30 confirmed and fully detailed in that conversation"
+    "Ethics & Care": {
+      "count": 1,
+      "total_files": 14,
+      "modules": [
+        {
+          "canon_tag": "C.O.D.E.",
+          "name": "Compassion Operator Dignity Ethics",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/rtt/codes/",
+          "file_count": 14,
+          "enriched_r2": true
+        }
+      ]
     },
-    "session_2026_05_06": {
-      "count": 9,
-      "note": "Full metadata sweep: _meta, _session_context, _version_history, structural_grammar, cross_module_propagation added to all 9 modules. 560+ files catalogued. 2 bugs fixed (Research DOC_MAP duplicate key, last-modified typo). 10 CHANGELOGs delivered."
+    "Operator Layer": {
+      "count": 5,
+      "total_files": 36,
+      "modules": [
+        {
+          "canon_tag": "OPERATORS",
+          "name": "Operators",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/rtt/1/",
+          "file_count": 16,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "STRUCTURAL_DETECTION_ENGINE",
+          "name": "Echo Classifier",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/rtt/Echo_Classifier/",
+          "file_count": 6,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "STRUCTURAL_INTEGRATION_ENGINE",
+          "name": "Triadic Echo Lattice",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/",
+          "file_count": 6,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "OPERATORS_TEACHING_BUNDLE",
+          "name": "Operators Teaching Bundle",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/academy/",
+          "file_count": 2,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "structural_detection",
+          "name": "Echo Classifier (Structural Detection)",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/Echo_Classifier/",
+          "file_count": 6,
+          "enriched_r2": true
+        }
+      ]
+    },
+    "Substrate Grammar": {
+      "count": 1,
+      "total_files": 49,
+      "modules": [
+        {
+          "canon_tag": "RSGM",
+          "name": "Religious Substrate Grammar Model",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/",
+          "file_count": 49,
+          "enriched_r2": true
+        }
+      ]
+    },
+    "RTT Technology Layer": {
+      "count": 3,
+      "total_files": 54,
+      "modules": [
+        {
+          "canon_tag": "RTT_2",
+          "name": "RTT/2",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/rtt/2/",
+          "file_count": 2,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "RTT_3",
+          "name": "RTT/3",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/rtt/3/",
+          "file_count": 3,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "rtt-root",
+          "name": "RTT-Tech Root",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/rtt/",
+          "file_count": 49,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "Theories": {
+      "count": 4,
+      "total_files": 0,
+      "modules": [
+        {
+          "canon_tag": "biology",
+          "name": "Biology Cluster",
+          "depth": 1,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "dynamical_systems",
+          "name": "Dynamical Systems Cluster",
+          "depth": 1,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "information_systems",
+          "name": "Information Systems Cluster",
+          "depth": 1,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "physics",
+          "name": "Physics Cluster",
+          "depth": 1,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "Framework-Structural": {
+      "count": 1,
+      "total_files": 22,
+      "modules": [
+        {
+          "canon_tag": "fcg",
+          "name": "Framework Creation Guide",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/frameworks/creation_guide/",
+          "file_count": 22,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "Safety & Operations": {
+      "count": 1,
+      "total_files": 6,
+      "modules": [
+        {
+          "canon_tag": "incident_substrate_model",
+          "name": "Incident Substrate Model",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Incident_Substrate_Model/",
+          "file_count": 6,
+          "enriched_r2": true
+        }
+      ]
+    },
+    "Research-Canonical": {
+      "count": 1,
+      "total_files": 48,
+      "modules": [
+        {
+          "canon_tag": "research",
+          "name": "Research",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/Research/",
+          "file_count": 48,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "Tools & Infrastructure": {
+      "count": 3,
+      "total_files": 49,
+      "modules": [
+        {
+          "canon_tag": "tft-3pack",
+          "name": "TFT 3Pack",
+          "depth": 1,
+          "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/",
+          "file_count": 34,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "formats",
+          "name": "Formats",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/formats",
+          "file_count": 6,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "scripts",
+          "name": "Scripts",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/scripts",
+          "file_count": 9,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "RTT Dimensional": {
+      "count": 4,
+      "total_files": 51,
+      "modules": [
+        {
+          "canon_tag": "RTT_MORPHIC_RESONANCE",
+          "name": "RTT Morphic Resonance",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/Morphic_Resonance/",
+          "file_count": 12,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "rtt-emotions",
+          "name": "RTT Emotions",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/emotions/",
+          "file_count": 30,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "rtt-lowdim",
+          "name": "RTT Low-Dimensional",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/Low_Dimensional_Structures/",
+          "file_count": 7,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "rtt-paradoxes",
+          "name": "RTT Paradoxes",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/Paradoxes_canon/",
+          "file_count": 2,
+          "enriched_r2": true
+        }
+      ]
+    },
+    "Integration & Deployment": {
+      "count": 2,
+      "total_files": 25,
+      "modules": [
+        {
+          "canon_tag": "UE6-INTEGRATIONS",
+          "name": "UE6 Integrations",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/Integrations/UE6/",
+          "file_count": 16,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "rtt-integrations",
+          "name": "RTT Integrations",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/Integrations/",
+          "file_count": 9,
+          "enriched_r2": true
+        }
+      ]
+    },
+    "Theory": {
+      "count": 10,
+      "total_files": 0,
+      "modules": [
+        {
+          "canon_tag": "chaos_theory",
+          "name": "Chaos Theory",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "electromagnetism",
+          "name": "Electromagnetism",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "evolutionary_biology",
+          "name": "Evolutionary Biology",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "general_relativity",
+          "name": "General Relativity",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "information_theory",
+          "name": "Information Theory",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "morphic_resonance",
+          "name": "Morphic Resonance",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "quantum_field_theory",
+          "name": "Quantum Field Theory",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "quantum_mechanics",
+          "name": "Quantum Mechanics",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "standard_model",
+          "name": "Standard Model",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "thermodynamics",
+          "name": "Thermodynamics",
+          "depth": 2,
+          "url": null,
+          "file_count": 0,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "RTT Hardware Layer": {
+      "count": 1,
+      "total_files": 20,
+      "modules": [
+        {
+          "canon_tag": "d369",
+          "name": "D369 Chip Spec",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/D369_Chip_Spec/",
+          "file_count": 20,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "Education & Teaching": {
+      "count": 1,
+      "total_files": 94,
+      "modules": [
+        {
+          "canon_tag": "examples",
+          "name": "Examples",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/examples",
+          "file_count": 94,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "Applied Domain Models": {
+      "count": 2,
+      "total_files": 151,
+      "modules": [
+        {
+          "canon_tag": "melodic-table",
+          "name": "Melodic Table of Elements",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/melodic-table-of-elements",
+          "file_count": 130,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "mve",
+          "name": "Molecular Vibration Explorer",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/molecular-vibration-explorer",
+          "file_count": 21,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "RTT Analytics \u2014 Metadata Layer": {
+      "count": 1,
+      "total_files": 14,
+      "modules": [
+        {
+          "canon_tag": "rtt-codes",
+          "name": "RTT/codes",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/codes/",
+          "file_count": 14,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "RTT Deployment Layer": {
+      "count": 3,
+      "total_files": 139,
+      "modules": [
+        {
+          "canon_tag": "rtt-inside",
+          "name": "RTT Inside",
+          "depth": 2,
+          "url": "https://www.triadicframeworks.org/rtt/Inside/",
+          "file_count": 122,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "rtt-inside-benchmarks",
+          "name": "RTT Inside Benchmarks",
+          "depth": 3,
+          "url": "https://www.triadicframeworks.org/rtt/Inside/Benchmarks/",
+          "file_count": 11,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "rtt-tel",
+          "name": "Triadic Echo Lattice (TEL)",
+          "depth": 3,
+          "url": "https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/",
+          "file_count": 6,
+          "enriched_r2": true
+        }
+      ]
+    },
+    "Core Frameworks \u2014 Structural Spine": {
+      "count": 5,
+      "total_files": 476,
+      "modules": [
+        {
+          "canon_tag": "tft-core",
+          "name": "TFT Core",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft",
+          "file_count": 11,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "wrsadc",
+          "name": "WRSADC",
+          "depth": 2,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/WRSADC",
+          "file_count": 10,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "entft",
+          "name": "ENTFT",
+          "depth": 3,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/entft",
+          "file_count": 213,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "nous",
+          "name": "Nous",
+          "depth": 3,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/nous",
+          "file_count": 157,
+          "enriched_r2": false
+        },
+        {
+          "canon_tag": "tops",
+          "name": "TOPS",
+          "depth": 3,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/tops",
+          "file_count": 85,
+          "enriched_r2": false
+        }
+      ]
+    },
+    "Spacetime": {
+      "count": 2,
+      "total_files": 16,
+      "modules": [
+        {
+          "canon_tag": "Mudpuppy",
+          "name": "Mudpuppy",
+          "depth": 3,
+          "url": "https://github.com/Triadic-Resonance-Wizards/mythmatic/tree/main/Mudpuppy",
+          "file_count": 8,
+          "enriched_r2": true
+        },
+        {
+          "canon_tag": "SoftKitty",
+          "name": "SoftKitty",
+          "depth": 3,
+          "url": "https://github.com/Triadic-Resonance-Wizards/mythmatical/tree/main/SoftKitty",
+          "file_count": 8,
+          "enriched_r2": true
+        }
+      ]
+    },
+    "Research & Validation": {
+      "count": 1,
+      "total_files": 20,
+      "modules": [
+        {
+          "canon_tag": "resonance-labs",
+          "name": "Resonance Labs",
+          "depth": 3,
+          "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/resonance-labs",
+          "file_count": 20,
+          "enriched_r2": false
+        }
+      ]
     }
-  }
-},
-
-  "refreshed_modules": [
-
+  },
+  "excluded": [
     {
-      "path": "/docs/rtt/",
-      "module": "RTT Root (RTT/1)",
-      "category": "rtt-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
+      "canon_tag": "schemas",
+      "name": "Schemas",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/schemas",
+      "reason": "Pure infrastructure \u2014 JSON schema directory only. No functional canonical content."
     },
-  {
-  "module": "Structural Detection",
-  "id": "structural_detection",
-  "path": "Structural_Detection",
-  "category": "Operator",
-  "version": "1.0",
-  "rtt_level": "RTT/1",
-  "parents": [
-    "operators"
-  ],
-  "siblings": [
-    "drift_sense",
-    "regime_awareness",
-    "continuity_compass",
-    "synthesis_triangulation"
-  ],
-  "children": [],
-  "cross_links": [
-    "canon_scale_coherence_field_map",
-    "canon_scale_drift_envelope",
-    "collapse_mode_differential_classifier",
-    "regime_shift_atlas",
-    "cross_module_consistency_audit"
-  ],
-  "files": [
-    "README.md",
-    "SD_Capture.md",
-    "structural_detection_module.json",
-    "operators/STRUCTURAL_DETECTION_OPERATOR.md",
-    "RTTcode/RTT_STRUCTURAL_DETECTION_v1.json"
+    {
+      "canon_tag": "ideas-sandbox",
+      "name": "Ideas Sandbox",
+      "classification": "I2",
+      "layer": "Ideation Layer",
+      "path": "docs/_ideas",
+      "reason": "Non-Canonical status \u2014 ideation sandbox, not yet promoted to functional canon."
+    }
   ]
-},
-    {
-      "path": "/docs/consciousness_substrate_model/",
-      "module": "Consciousness Substrate Model",
-      "category": "substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-  "id": "rtt-emotions",
-  "name": "RTT Emotions",
-  "path": "/docs/rtt/emotions/",
-  "summary": "Structural emotional mathematics with 60 emotional operators, regime dynamics, equations, alignment triads, and observer-relative interpretation.",
-  "front_door": "index.md"
-    },
-    {
-  "name": "Morphic Resonance",
-  "canonical_id": "RTT_MORPHIC_RESONANCE",
-  "category": "rtt-dimensional",
-  "description": "RTT/1 dimensional reinterpretation of Morphic Resonance: coherence accumulation, attractor deepening, drift mechanics, propagation filaments, mass-activation surges, and dimensional inheritance.",
-  "canonical_path": "/docs/rtt/Morphic_Resonance/",
-  "module_json": "/docs/rtt/Morphic_Resonance/MR_module.json",
-  "version": "1.0",
-  "status": "canon-stable"
-},
-    {
-      "path": "/docs/quantum-substrate-model/",
-      "module": "Quantum Substrate Model",
-      "category": "substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/boson-substrate-model/",
-      "module": "Boson Substrate Model",
-      "category": "substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/resonance-substrate-model/",
-      "module": "Resonance Substrate Model",
-      "category": "substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/scientific_instrument_review/",
-      "module": "Scientific Instrument Review",
-      "category": "rtt-vst-validation",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/global_energy_regime_awareness/",
-      "module": "Global Energy Regime Awareness",
-      "category": "regime-awareness",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/manufacturing_substrate_regime_model/",
-      "module": "Manufacturing Substrate Regime Model",
-      "category": "substrate-manufacturing",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/spectral_clarity/",
-      "module": "Spectral Clarity",
-      "category": "rtt-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/facilities/",
-      "module": "Facilities",
-      "category": "infrastructure",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/bridges/",
-      "module": "Bridges",
-      "category": "infrastructure",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
- {
-  "module": "Mudpuppy",
-  "category": "spacetime",
-  "path": "/Mudpuppy/",
-  "module_json": "/Mudpuppy/Mudpuppy_module.json",
-  "version": "2.0beta",
-  "status": "canon-stable"
-},
-{
-  "module": "SoftKitty",
-  "category": "spacetime",
-  "path": "/SoftKitty/",
-  "module_json": "/SoftKitty/SoftKitty_module.json",
-  "version": "3.0alpha",
-  "status": "canon-stable"
-},   
-{
-  "name": "Compassion Operator Dignity Ethics",
-  "id": "C.O.D.E.",
-  "category": "ethics-care",
-  "path": "/docs/code/",
-  "module_json": "/docs/code/CODE_Module.json",
-  "version": "1.0",
-  "status": "canon-stable"
-},
-{
-  "name": "UE6 Integrations",
-  "canonical_id": "UE6-INTEGRATIONS",
-  "category": "integration-engine",
-  "path": "/docs/Integrations/UE6/",
-  "module_json": "/docs/Integrations/UE6/UE6_module.json",
-  "version": "1.0",
-  "status": "canon-stable"
-},
-{
-  "name": "Religious Substrate Grammar Model",
-  "id": "RSGM",
-  "category": "substrate-grammar",
-  "path": "/docs/religious_substrate_grammar_model/",
-  "module_json": "/docs/religious_substrate_grammar_model/rsgm_module.json",
-  "version": "1.0",
-  "status": "canon-stable"
-},
-    {
-      "path": "/docs/alphafold_substrate_alignments/",
-      "module": "AlphaFold Substrate Alignments",
-      "category": "biological-alignment",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/public_support/",
-      "module": "Public Support",
-      "category": "governance-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/packages/",
-      "module": "Packages",
-      "category": "infrastructure",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/schemas/",
-      "module": "Schemas",
-      "category": "infrastructure",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/runtime/",
-      "module": "Runtime",
-      "category": "rtt-runtime",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/spacetime_validation_and_regime_invariant_dimensional_cores/",
-      "module": "Spacetime Validation and Regime-Invariant Dimensional Cores",
-      "category": "rtt-vst-validation",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/spacetime_micro_agent_validations/",
-      "module": "Spacetime Micro-Agent Validations",
-      "category": "rtt-vst-validation",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/atomic_clocks/",
-      "module": "Atomic Clocks",
-      "category": "rtt-vst-validation",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/audio_industry_reviewed/",
-      "module": "Audio Industry Reviewed",
-      "category": "media-substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/diagnosing_media_therapy/",
-      "module": "Diagnosing Media Therapy",
-      "category": "media-substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/Framework_Field_Theory/",
-      "module": "Framework Field Theory",
-      "category": "framework-structural",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/SARG/",
-      "module": "SARG",
-      "category": "framework-structural",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/Mode/",
-      "module": "Mode",
-      "category": "framework-structural",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/unified_resonance/",
-      "module": "Unified Resonance",
-      "category": "rtt-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/triadic/",
-      "module": "Triadic",
-      "category": "rtt-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/triadic_observer_layer/",
-      "module": "Triadic Observer Layer",
-      "category": "rtt-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-  "name": "Taxes",
-  "category": "incentive-grammar",
-  "path": "/docs/taxes/",
-  "module_json": "/docs/taxes/module.json",
-  "version": "1.0",
-  "status": "canon-stable"
-  },
-    {
-      "path": "/docs/triadic_coordination_substrate/",
-      "module": "Triadic Coordination Substrate",
-      "category": "substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/substrate/",
-      "module": "Substrate Primer",
-      "category": "substrate-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/glyphs/",
-      "module": "Glyphs",
-      "category": "glyphic-resonance-core",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/Low_Dimensional_Structures/",
-      "module": "Low Dimensional Structures",
-      "category": "rtt-dimensional",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/spectrum_standards_reviewed/",
-      "module": "Spectrum Standards Reviewed",
-      "category": "rtt-vst-validation",
-      "session": "prior",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"]
-    },
-    {
-      "path": "/docs/substrate_communications/",
-      "module": "Substrate Communications",
-      "category": "substrate-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Full ground-up rewrite. Was bare-bones template with generic description, wrong canonical URL, wrong OG title, no Twitter card, no citation, no ai.* tags. Hidden span instead of proper session block."
-    },
-    {
-      "path": "/docs/substrate_exposure_assay/",
-      "module": "Substrate Exposure Assay",
-      "category": "substrate-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Full ground-up rewrite. Same bare-bones template as SubComm. Hidden span replaced with proper session block."
-    },
-    {
-      "path": "/docs/dimensional_substrate_structures/",
-      "module": "Dimensional Substrate Structures",
-      "category": "rtt-dimensional",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. data-dss='1' → data-rtt='dss'. Sibling: DSRSP."
-    },
-    {
-      "path": "/docs/dimensional_substrate_regime_scanning_protocol/",
-      "module": "Dimensional Substrate Regime Scanning Protocol",
-      "category": "rtt-dimensional-protocol",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. data-dsrsp='1' → data-rtt='dsrsp'. Sibling: DSS."
-    },
-    {
-      "path": "/docs/arrival_substrate_model/",
-      "module": "Arrival Substrate Model",
-      "category": "substrate-arrival",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. 24-file manifest spanning 5 directories. 7 crosslinks to sibling substrates.",
-      "file_count": 24
-    },
-    {
-      "path": "/docs/media_substrate_model/",
-      "module": "Media Substrate Model",
-      "category": "media-substrate-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec with ai.discovery.msm.* tags. Minimal patch: date bump + ai.module.summary expansion. Session attributes fixed.",
-      "file_count": 14
-    },
-    {
-      "path": "/docs/substrate_mind_science/",
-      "module": "Substrate Mind Science",
-      "category": "substrate-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Added language, generator, creator, publisher. 17 audit sections + CT substrate directory. 27-file manifest.",
-      "file_count": 27
-    },
-    {
-      "path": "/docs/Inverted_Economics/",
-      "module": "Inverted Economics",
-      "category": "inverted-economics",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. Minimal patch: date bump + ai.module.summary. Session: data-inverted='1' → data-rtt='inverted-economics'.",
-      "file_count": 10
-    },
-    {
-      "path": "/docs/inverted_star_ontology/",
-      "module": "Inverted Star Ontology",
-      "category": "ontology-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. Minimal patch: date bump + ai.module.summary. 15-file manifest including 2 figures.",
-      "file_count": 15
-    },
-    {
-      "path": "/docs/glyphic_resonance/",
-      "module": "Glyphic Resonance",
-      "category": "glyphic-resonance-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Near-complete canon-spec. Added og:image dimensions. Session: data-gr='1' → data-rtt='glyphic-resonance'. 4-file manifest.",
-      "file_count": 4
-    },
-    {
-      "path": "/docs/structural_life_regime_profiles/",
-      "module": "Structural Life-Regime Profiles",
-      "category": "slrp-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Full ground-up rewrite. Was bare-bones template with hidden span. 18-file manifest with 7 example profiles (human, chimpanzee, chrysina gloriosa, crystalline entity, LLM agent, robotics stack, synthetic lifeform).",
-      "file_count": 18
-    },
-    {
-      "path": "/docs/ecoechosystem/",
-      "module": "EcoEchoSystem",
-      "category": "rtt-vst-simulation",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Broken double-DOCTYPE replaced. LARGEST MODULE IN CANON: ~103 files across 11 directories. 6 domain modules, 4 sim template families, substrate engine, tech tree, UI layer.",
-      "file_count": 103
-    },
-    {
-      "path": "/docs/education/",
-      "module": "Education-Core",
-      "category": "education-structural",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. 22 content files + 12+ sub-modules (BRA, subjects, animals, translations, astrology, CivRegimeStack, populations, PEIRA, eBooks, equations, alignment, awareness).",
-      "file_count": 22
-    },
-    {
-      "path": "/docs/corpus/",
-      "module": "Corpus",
-      "category": "library-structural",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. MASTER INDEX of entire canon: ~120 DOC_MAP entries, 14 navigational categories. 61-file manifest.",
-      "file_count": 61
-    },
-    {
-      "path": "/docs/curriculum/",
-      "module": "Curriculum",
-      "category": "education-structural",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. 14-file manifest. Parent: Education-Core.",
-      "file_count": 14
-    },
-    {
-      "path": "/docs/charts/",
-      "module": "Charts",
-      "category": "visual-structural",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. CRITICAL: Duplicate code block at end of file (double </nav>, <main>, <script>) needs removal. 12-file manifest.",
-      "file_count": 12
-    },
-    {
-      "path": "/docs/domain_tool_primers/",
-      "module": "Domain Tool Primers",
-      "category": "vst-validation",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. 9 domain primers (physics, quantum, engineering, earth science, data science, AI/ML, complex systems, autonomous forms, visualization).",
-      "file_count": 11
-    },
-    {
-      "path": "/docs/validation/",
-      "module": "Validation",
-      "category": "infrastructure-validation",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Near-complete. Added language, generator, creator, publisher. 12-file manifest (4 loop validation, 3 lineage/manifest, 3 dashboards).",
-      "file_count": 12
-    },
-    {
-      "path": "/docs/Resilience_Checker/",
-      "module": "Resilience Checker",
-      "category": "paradox-structural",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. Added og:image dimensions. 108 paradox analyses across 11 structural categories. 14-file manifest.",
-      "file_count": 14
-    },
-    {
-      "path": "/docs/Opacity/",
-      "module": "Opacity",
-      "category": "rtt-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Full canon-spec metadata. Session required FULL REWRITE — was using non-standard fields (Module, Canonical ID, Status, Tier, Replaces). 6-file manifest. Replaces regime_blindness.",
-      "file_count": 6
-    },
-    {
-      "path": "/docs/NoS/",
-      "module": "NawderOS (NoS)",
-      "category": "nos-stack",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. Citation year bump + ai.module.summary expansion. 22-file manifest across 5 nav sections.",
-      "file_count": 22
-    },
-    {
-      "path": "/docs/frameworks/creation_guide/",
-      "module": "Framework Creation Guide",
-      "category": "framework-structural",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. Fixed citation_date → citation_publication_date. 12-file manifest. RF-Builder submodule.",
-      "file_count": 12
-    },
-  {
-  "name": "Incident Substrate Model",
-  "category": "Safety-Operations",
-  "path": "/docs/Incident_Substrate_Model/",
-  "module_json": "/docs/Incident_Substrate_Model/incident.module.json",
-  "version": "1.0.0",
-  "status": "canon-stable"
-  },  
-    {
-      "path": "/docs/Governance_Substrate_Model/",
-      "module": "Governance Substrate Model",
-      "category": "governance-substrate",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. 51-file manifest across 10 numbered directories. 4th largest in canon. GSM Analyzer tool available. Parallel to MSM.",
-      "file_count": 51
-    },
-    {
-      "path": "/docs/governance/",
-      "module": "Governance",
-      "category": "governance-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. Added og:image dimensions. 14-file manifest. Constitution layer. Sibling: GSM.",
-      "file_count": 14
-    },
-  {
-  "OPERATORS": {
-    "name": "Operators",
-    "category": "rtt-operators",
-    "canonical_path": "/docs/operators/",
-    "module_json": "/docs/operators/operators_module.json",
-    "version": "1.0",
-    "status": "canon-stable"
-  },
-
-  "OPERATORS_TEACHING_BUNDLE": {
-    "name": "Operator Ecology — Teaching Bundle",
-    "category": "rtt-operators-teaching",
-    "canonical_path": "/docs/operators/teaching_bundle/",
-    "module_json": "/docs/operators/teaching_bundle/operator_ecology_teaching_bundle_module.json",
-    "version": "1.0",
-    "status": "canon-stable"
-  },
-
-  "RTT_2": {
-    "name": "RTT/2 — Structural Detection Engine",
-    "category": "rtt-detection",
-    "canonical_path": "/docs/rtt/2/",
-    "module_json": "/docs/rtt/2/operators_module.json",
-    "version": "1.0",
-    "status": "canon-stable"
-  },
-
-  "RTT_3": {
-    "name": "RTT/3 — Integration–Emission Engine",
-    "category": "rtt-integration-emission",
-    "canonical_path": "/docs/rtt/3/",
-    "module_json": "/docs/rtt/3/operators_module.json",
-    "version": "1.0",
-    "status": "canon-stable"
-  },
-
-  "STRUCTURAL_DETECTION_ENGINE": {
-    "name": "Structural Detection Engine",
-    "category": "engine-detection",
-    "canonical_path": "/docs/structural-detection-engine/",
-    "module_json": "/docs/structural-detection-engine/structural-detection-engine_module.json",
-    "version": "1.0",
-    "status": "canon-stable"
-  },
-
-  "STRUCTURAL_INTEGRATION_ENGINE": {
-    "name": "Structural Integration Engine",
-    "category": "engine-integration",
-    "canonical_path": "/docs/structural-integration-engine/",
-    "module_json": "/docs/structural-integration-engine/structural-integration-engine_module.json",
-    "version": "1.0",
-    "status": "canon-stable"
-  }
-},
-  {
-  "id": "Human_Resources",
-  "name": "Human Resources",
-  "category": "Organizational Systems",
-  "path": "/docs/Human_Resources/",
-  "front_door": "/Human_Resources",
-  "glyph": "/docs/Human_Resources/hr.glyph.svg",
-  "summary": "RTT‑aligned structural analysis of HR systems, including performance reviews, onboarding, conflict resolution, regime patterns, drift detection, and cross‑module integration.",
-  "version": "1.0.0",
-  "status": "active",
-  "module_json": "/docs/Human_Resources/Human_Resources_module.json",
-  "doc_map": "/docs/Human_Resources/DOC_MAP.md",
-  "session_context": "/docs/Human_Resources/session_context.md",
-  "tags": [
-    "HR",
-    "organizational systems",
-    "regime patterns",
-    "drift detection",
-    "triadic observer",
-    "RTT"
-  ]
-},
-{
-  "path": "/docs/Research/",
-  "module": "Research",
-  "category": "research-canonical",
-  "session": "2026-05-07",
-  "status": "refreshed",
-  "artifacts": [
-    "meta",
-    "session",
-    "module.json",
-    "index.html",
-    "README.md"
-  ],
-  "summary": "Core Operators (post-kernel) + Foundational Research (pre-kernel). Includes continuity kernel v2.0, unified operator grammar v1.1, transporter envelope v0.5, arrival substrate v0.4, cross-goal operator lattice, and archival RTT research.",
-  "version": "2.0",
-  "last_updated": "2026-05-07",
-  "files_indexed": 48,
-  "notes": [
-    "Operator canon fully integrated.",
-    "Pre-kernel research preserved as foundational layer.",
-    "research_module.json upgraded to RTT/1 schema.",
-    "index.html metadata + session context refreshed.",
-    "README.md rewritten for operator alignment."
-  ]
-},
-    {
-      "path": "/docs/Paradoxes_canon/",
-      "module": "Paradoxes Canon",
-      "category": "paradoxes-canon",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. Added og:image dimensions. Lightweight gateway module. Links to Resilience Checker.",
-      "file_count": 2
-    },
-    {
-      "path": "/docs/lactos/",
-      "module": "LACTOS",
-      "category": "collision-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Pristine — full canon-spec with full og:image dimensions already present. Only needed date bump + session attribute fixes. 7-file manifest. Siblings: SO, ISO, VCG.",
-      "file_count": 7
-    },
-    {
-      "path": "/docs/projects/",
-      "module": "Projects",
-      "category": "infrastructure",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Near-complete. Added language, generator, creator, publisher. Gateway module. 1 RTT + 8 pre-RTT projects.",
-      "file_count": 2
-    },
-    {
-      "path": "/docs/enterprise_structural_awareness/",
-      "module": "Enterprise Structural Awareness",
-      "category": "organizational-substrate",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. Fixed og:type, twitter:card, citation_date. 26-file manifest across 6 directories. Siblings: MSRM, RSM, GSM.",
-      "file_count": 26
-    },
-    {
-      "path": "/docs/rtt/store/",
-      "module": "RTT Store",
-      "category": "rtt-storage",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Non-standard meta stripped. 53-file manifest across 8 directories (branding, bundles, canon, community, future, 4 tier levels, training). 5th largest in canon.",
-      "file_count": 53
-    },
-    {
-      "path": "/docs/resonance_atlas/",
-      "module": "Resonance Atlas",
-      "category": "rtt-core",
-      "session": "2026-05-02",
-      "status": "refreshed",
-      "artifacts": ["meta", "session", "module.json"],
-      "notes": "Already full canon-spec. Added og:image dimensions. 13-file manifest. Case studies, mapping examples, technical files.",
-      "file_count": 13
-    },
-    {
-  "path": "/docs/rtt/D369_Chip_Spec/",
-  "module": "D369 Chip Spec",
-  "category": "rtt-hardware",
-  "session": "2026-05-06",
-  "status": "refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "Full metadata refresh. 20-file manifest. Schema refresh for canonical packet + 4 sub-schemas.",
-  "file_count": 20
-},
-{
-  "path": "/docs/schemas/",
-  "module": "Schemas",
-  "category": "infrastructure",
-  "session": "2026-05-06",
-  "status": "re-refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "Second refresh. Added _meta, _session_context, _version_history to all 5 canonical schemas (rttcode.v1, tick.v1, entity.v1, environment.v1, intent.v1). v1.0→1.1.",
-  "file_count": 5
-},
-{
-  "path": "/docs/rtt/codes/",
-  "module": "RTT/codes",
-  "category": "rtt-infrastructure",
-  "session": "2026-05-06",
-  "status": "refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "14-file audit. Module migrated from /docs/rttcodes/ to /docs/rtt/codes/ — zero path breaks confirmed. RTT_codes_module.json and schema/rttcode.schema.json refreshed. Domain enum discrepancy documented (simulation in local only).",
-  "file_count": 14
-},
-{
-  "path": "/docs/frameworks/creation_guide/",
-  "module": "Framework Creation Guide",
-  "category": "framework-structural",
-  "session": "2026-05-06",
-  "status": "re-refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "Second refresh. FCG_module.json expanded from 12 to 22 file entries. Added all HTML renderers, fft.html, guide.html, RF-Builder.html. index.html got 13 module identity meta tags. v1.0→1.1.",
-  "file_count": 25
-},
-{
-  "path": "/docs/Research/",
-  "module": "Research",
-  "category": "research-articles",
-  "session": "2026-05-06",
-  "status": "refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "33-entry audit. research_module.json expanded from 8 to 33 entries. 2 bugs fixed: DOMAIN_FORKING duplicate DOC_MAP key, last-modified typo '2026-05-5'. 10 articles recently promoted from cooker. v1.0→1.1.",
-  "file_count": 33
-},
-{
-  "path": "/docs/_ideas/",
-  "module": "Ideas Sandbox",
-  "category": "ideation",
-  "session": "2026-05-06",
-  "status": "refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "288-entry census. Non-canonical sandbox. _ideas_module.json expanded from 1 to 4 infrastructure entries. 10 recent cooker promotions documented. DOC_MAP covers 30/219 .md files (13%) by design.",
-  "file_count": 288
-},
-{
-  "path": "/docs/rtt/",
-  "module": "RTT-Tech Root",
-  "category": "rtt-core",
-  "session": "2026-05-06",
-  "status": "re-refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "Second refresh. rtt-root_module.json expanded from 2 to 49 file entries. 5 submodule declarations (core/10, diagrams/16, examples/9, maps/8, sort/9). 18 child module directories noted as trimmed. v1.0→1.1.",
-  "file_count": 53
-},
-{
-  "path": "/docs/rtt/Inside/",
-  "module": "RTT Inside",
-  "category": "rtt-deployment",
-  "session": "2026-05-06",
-  "status": "refreshed",
-  "artifacts": ["meta", "session", "module.json", "CHANGELOG"],
-  "notes": "122 files across 15 directories. Already at v2.0 with 120 entries — most mature manifest. Added metadata wrapper + 2 missing files (drift_protection.md, CHANGELOG.md). v2.0→2.1.",
-  "file_count": 122
-},
-{
-  "module": "RTT / Inside / Benchmarks",
-  "identity": "rtt-inside-benchmarks",
-  "category": "benchmarks",
-  "path": "/docs/rtt/Inside/Benchmarks/",
-  "module_json": "/docs/rtt/Inside/Benchmarks/module.json",
-  "version": "1.0",
-  "status": "active",
-  "front_door": true,
-  "files": [
-    "index.md",
-    "README.md",
-    "A_Overview.md",
-    "B_Capture.md",
-    "C_Operators.md",
-    "D_Invariants.md",
-    "E_Resonance.md",
-    "F_Entropy.md",
-    "G_Quantum.md",
-    "H_Examples.md",
-    "I_Student_Spec.md",
-    "J_RFCs/"
-  ]
-},
-{
-  "path": "/docs/rtt/Inside/CHANGELOG.md",
-  "module": "RTT Inside CHANGELOG",
-  "category": "rtt-deployment",
-  "session": "2026-05-06",
-  "status": "updated",
-  "artifacts": ["CHANGELOG"],
-  "notes": "Prepended v2.1 entry to existing CHANGELOG."
-},
-{
-  "id": "philanthropy",
-  "name": "Philanthropy & Funding Transparency",
-  "category": "applied-domain",
-  "version": "1.0.0",
-  "status": "active",
-  "front_door": "/docs/Philanthropy/index.md",
-  "session_context": "/docs/Philanthropy/session_context.md",
-  "module_json": "/docs/Philanthropy/module.json",
-  "badge": "🟣",
-  "summary": "RTT-aligned clarity engine for philanthropic funding flows, governance substrate, SET load, drift detection, and donor alignment.",
-  "exports": [
-    "Funding Flow Operators",
-    "Philanthropy Governance Substrate",
-    "SET Load Model (Philanthropy)",
-    "Triadic Observer for Funding",
-    "Donor Alignment Score",
-    "Fraud Indicator Framework"
-  ]
-},
-{
-  "id": "physics",
-  "name": "Physics Cluster",
-  "category": "theory-domain",
-  "path": "/docs/theories/",
-  "status": "active",
-  "description": "Parent cluster for physics-based theory modules: classical, quantum, and thermodynamic frameworks.",
-  "children": [
-    "electromagnetism",
-    "general_relativity",
-    "quantum_mechanics",
-    "quantum_field_theory",
-    "standard_model",
-    "thermodynamics"
-  ],
-  "related": ["dynamical_systems", "information_systems"]
-},
-{
-  "id": "biology",
-  "name": "Biology Cluster",
-  "category": "theory-domain",
-  "path": "/docs/theories/",
-  "status": "active",
-  "description": "Parent cluster for biological and morphic theory modules.",
-  "children": ["evolutionary_biology", "morphic_resonance"],
-  "related": ["information_systems"]
-},
-{
-  "id": "dynamical_systems",
-  "name": "Dynamical Systems Cluster",
-  "category": "theory-domain",
-  "path": "/docs/theories/",
-  "status": "active",
-  "description": "Parent cluster for nonlinear and sensitivity-based theory modules.",
-  "children": ["chaos_theory"],
-  "related": ["physics", "information_systems"]
-},
-{
-  "id": "information_systems",
-  "name": "Information Systems Cluster",
-  "category": "theory-domain",
-  "path": "/docs/theories/",
-  "status": "active",
-  "description": "Parent cluster for information and computation-based theory modules.",
-  "children": ["information_theory"],
-  "related": ["physics", "biology"]
-},
-{
-  "id": "chaos_theory",
-  "name": "Chaos Theory",
-  "category": "theory",
-  "path": "/docs/theories/chaos_theory/",
-  "status": "active",
-  "parents": ["dynamical_systems"],
-  "related": ["information_theory", "thermodynamics"]
-},
-{
-  "id": "electromagnetism",
-  "name": "Electromagnetism",
-  "category": "theory",
-  "path": "/docs/theories/electromagnetism/",
-  "status": "active",
-  "parents": ["physics"],
-  "related": ["quantum_field_theory", "standard_model"]
-},
-{
-  "id": "evolutionary_biology",
-  "name": "Evolutionary Biology",
-  "category": "theory",
-  "path": "/docs/theories/evolutionary_biology/",
-  "status": "active",
-  "parents": ["biology"],
-  "related": ["morphic_resonance"]
-},
-{
-  "id": "general_relativity",
-  "name": "General Relativity",
-  "category": "theory",
-  "path": "/docs/theories/general_relativity/",
-  "status": "active",
-  "parents": ["physics"],
-  "related": ["quantum_field_theory", "standard_model"]
-},
-{
-  "id": "information_theory",
-  "name": "Information Theory",
-  "category": "theory",
-  "path": "/docs/theories/information_theory/",
-  "status": "active",
-  "parents": ["information_systems"],
-  "related": ["chaos_theory", "thermodynamics"]
-},
-{
-  "id": "morphic_resonance",
-  "name": "Morphic Resonance",
-  "category": "theory",
-  "path": "/docs/theories/morphic_resonance/",
-  "status": "active",
-  "parents": ["biology"],
-  "related": ["evolutionary_biology"]
-},
-{
-  "id": "quantum_field_theory",
-  "name": "Quantum Field Theory",
-  "category": "theory",
-  "path": "/docs/theories/quantum_field_theory/",
-  "status": "active",
-  "parents": ["physics"],
-  "related": ["quantum_mechanics", "standard_model"]
-},
-{
-  "id": "quantum_mechanics",
-  "name": "Quantum Mechanics",
-  "category": "theory",
-  "path": "/docs/theories/quantum_mechanics/",
-  "status": "active",
-  "parents": ["physics"],
-  "related": ["quantum_field_theory", "general_relativity"]
-},
-{
-  "id": "standard_model",
-  "name": "Standard Model",
-  "category": "theory",
-  "path": "/docs/theories/standard_model/",
-  "status": "active",
-  "parents": ["physics"],
-  "related": ["quantum_field_theory", "electromagnetism"]
-},
-{
-  "id": "thermodynamics",
-  "name": "Thermodynamics",
-  "category": "theory",
-  "path": "/docs/theories/thermodynamics/",
-  "status": "active",
-  "parents": ["physics"],
-  "related": ["chaos_theory", "information_theory"]
-},
-  ],
-
-  "remaining_directories": {
-    "_note": "Directories in /docs/ not yet refreshed. Some are content modules needing refresh; others are infrastructure/asset directories that may not need index.html treatment.",
-    "likely_content_modules": [
-      "/docs/AI_Resonance_Seed/",
-      "/docs/Coeus/",
-      "/docs/Integrations/",
-      "/docs/Law/",
-      "/docs/Research/",
-      "/docs/TFT_3Pack_v1.3/",
-      "/docs/ai/",
-      "/docs/ai-drift-calibration/",
-      "/docs/amateur_radio/",
-      "/docs/energy/",
-      "/docs/discovery/",
-      "/docs/gallery/",
-      "/docs/honor_roll/",
-      "/docs/labs/",
-      "/docs/legal/",
-      "/docs/library/",
-      "/docs/metadata/",
-      "/docs/nist/",
-      "/docs/onboarding/",
-      "/docs/overlays/",
-      "/docs/papers/",
-      "/docs/regime_blindness_checklist/",
-      "/docs/registries/",
-      "/docs/registry/",
-      "/docs/reports/",
-      "/docs/resonance/",
-      "/docs/rfc/",
-      "/docs/rituals/",
-      "/docs/simulations/",
-      "/docs/snapshots/",
-      "/docs/sources/",
-      "/docs/structuring_mathematics/",
-      "/docs/tools/",
-      "/docs/validators/",
-      "/docs/vst_for_embedding_stores_vector_databases/",
-      "/docs/vst_for_generative_models/",
-      "/docs/vst_for_large_language_models/",
-      "/docs/vst_for_multi_model_alignment/",
-      "/docs/vst_for_protein_language_models/",
-      "/docs/vst_for_robotics_and_control_policies/",
-      "/docs/vst_for_scientific_simulators/",
-      "/docs/wiki_scrolls/",
-      "/docs/contributors/",
-      "/docs/archive_experiments/"
-    ],
-    "infrastructure_or_assets": [
-      "/docs/_data/",
-      "/docs/_ideas/",
-      "/docs/_snippets/",
-      "/docs/_specs/",
-      "/docs/_template/",
-      "/docs/api/",
-      "/docs/assets/",
-      "/docs/badges/",
-      "/docs/clients/",
-      "/docs/config/",
-      "/docs/configs/",
-      "/docs/data/",
-      "/docs/diagrams/",
-      "/docs/feedback/",
-      "/docs/images/",
-      "/docs/img/",
-      "/docs/jobs/",
-      "/docs/js/",
-      "/docs/scripts/",
-      "/docs/src/",
-      "/docs/styles/",
-      "/docs/tests/",
-      "/docs/workflows/"
-    ]
-  },
-
-  "size_ranking": [
-    { "rank": 1, "module": "Ideas Sandbox", "files": 288, "category": "ideation" },
-    { "rank": 2, "module": "RTT Inside", "files": 122, "category": "rtt-deployment" },
-    { "rank": 3, "module": "EcoEchoSystem",        "files": 103, "category": "rtt-vst-simulation" },
-    { "rank": 4, "module": "Resonance Substrate Model", "files": 97, "category": "substrate-core" },
-    { "rank": 5, "module": "Scientific Instrument Review", "files": 74, "category": "rtt-vst-validation" },
-    { "rank": 6, "module": "Corpus",                "files": 61, "category": "library-structural" },
-    { "rank": 7, "module": "RTT Store",             "files": 53, "category": "rtt-storage" },
-    { "rank": 8, "module": "Governance Substrate Model", "files": 51, "category": "governance-substrate" },
-    { "rank": 9, "module": "Substrate Mind Science", "files": 27, "category": "substrate-core" },
-    { "rank": 10, "module": "Enterprise Structural Awareness", "files": 26, "category": "organizational-substrate" },
-    { "rank": 11, "module": "Arrival Substrate Model", "files": 24, "category": "substrate-arrival" },
-    { "rank": 12, "module": "Education-Core",       "files": 22, "category": "education-structural" }
-  ],
-
-  "category_index": {
-    "rtt-core": ["RTT Root", "Spectral Clarity", "Unified Resonance", "Triadic", "Triadic Observer Layer", "Opacity", "Resonance Atlas"],
-    "substrate-core": ["CSM", "QSM", "BSM", "RSM", "Substrate Primer", "Triadic Coordination Substrate", "Substrate Communications", "Substrate Exposure Assay", "Substrate Mind Science"],
-    "substrate-arrival": ["Arrival Substrate Model"],
-    "rtt-dimensional": ["DSS", "Low Dimensional Structures"],
-    "rtt-dimensional-protocol": ["DSRSP"],
-    "rtt-vst-validation": ["SIR", "Spacetime Validation", "Spacetime Micro-Agent", "Atomic Clocks", "Spectrum Standards Reviewed"],
-    "rtt-vst-simulation": ["EcoEchoSystem"],
-    "rtt-storage": ["RTT Store"],
-    "rtt-runtime": ["Runtime"],
-    "rtt-infrastructure": ["RTT/codes"],
-    "rtt-hardware": ["D369 Chip Spec"],
-    "rtt-deployment": ["RTT Inside"],
-    "research-articles": ["Research"],
-    "ideation": ["Ideas Sandbox"],
-    "regime-awareness": ["GERA"],
-    "substrate-manufacturing": ["MSRM"],
-    "media-substrate-core": ["MSM", "Audio Industry Reviewed", "Diagnosing Media Therapy"],
-    "ontology-core": ["Inverted Star Ontology"],
-    "collision-core": ["LACTOS"],
-    "slrp-core": ["Structural Life-Regime Profiles"],
-    "paradox-structural": ["Resilience Checker"],
-    "paradoxes-canon": ["Paradoxes Canon"],
-    "governance-substrate": ["Governance Substrate Model"],
-    "governance-core": ["Governance", "Public Support"],
-    "organizational-substrate": ["Enterprise Structural Awareness"],
-    "education-structural": ["Education-Core", "Curriculum"],
-    "library-structural": ["Corpus"],
-    "visual-structural": ["Charts"],
-    "vst-validation": ["Domain Tool Primers"],
-    "infrastructure-validation": ["Validation"],
-    "infrastructure": ["Facilities", "Bridges", "Packages", "Schemas", "Projects"],
-    "framework-structural": ["FFT", "SARG", "Mode", "Framework Creation Guide"],
-    "inverted-economics": ["Inverted Economics"],
-    "glyphic-resonance-core": ["Glyphs", "Glyphic Resonance"],
-    "biological-alignment": ["AlphaFold Substrate Alignments"],
-    "nos-stack": ["NawderOS"]
-  }
 }

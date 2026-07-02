@@ -1,0 +1,1049 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/hub.schema.json",
+  "$generated": "2026-07-02T09:39:00",
+  "$version": "1.1",
+  "$round": "R2",
+  "title": "TriadicFrameworks Unified Module Hub \u2014 Round 2 Enriched",
+  "description": "Single-file navigation hub for the full A3 functional canon. Round 2: all 20 stub nodes enriched with real module.json metadata. 3 external-repo modules (Mudpuppy, SoftKitty via mythmatic/mythmatical). +219 total files.",
+  "root": "webroot",
+  "spine": {
+    "type": "S3-hybrid-hierarchical-directed",
+    "description": "Hybrid spine combining a parent-child containment tree (hierarchical) with typed directed import/export/relationship edges (directed graph).",
+    "total_a3_modules": 55,
+    "total_i2_excluded": 2,
+    "max_depth": 3,
+    "depth_layers": 4,
+    "hierarchical_edges": 54,
+    "directed_edges": 41,
+    "circular_dependencies": 2,
+    "generated_at": "2026-07-02T09:39:00",
+    "total_files_catalogued": 1461,
+    "r2_enrichments": 20,
+    "r2_file_delta": 219,
+    "external_repos": [
+      "Triadic-Resonance-Wizards/mythmatic",
+      "Triadic-Resonance-Wizards/mythmatical"
+    ]
+  },
+  "entry_points": [
+    {
+      "label": "Web Root",
+      "canon_tag": "webroot",
+      "url": "https://www.triadicframeworks.org/",
+      "priority": 1
+    },
+    {
+      "label": "RTT Technology",
+      "canon_tag": "rtt-root",
+      "url": "https://www.triadicframeworks.org/rtt/",
+      "priority": 2
+    },
+    {
+      "label": "TFT 3Pack",
+      "canon_tag": "tft-3pack",
+      "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/",
+      "priority": 3
+    },
+    {
+      "label": "Governance Substrate Model",
+      "canon_tag": "gsm",
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model",
+      "priority": 4
+    },
+    {
+      "label": "Framework Creation Guide",
+      "canon_tag": "fcg",
+      "url": "https://www.triadicframeworks.org/frameworks/creation_guide/",
+      "priority": 5
+    },
+    {
+      "label": "RTT Inside",
+      "canon_tag": "rtt-inside",
+      "url": "https://www.triadicframeworks.org/rtt/Inside/",
+      "priority": 6
+    },
+    {
+      "label": "Research",
+      "canon_tag": "research",
+      "url": "https://www.triadicframeworks.org/Research/",
+      "priority": 7
+    }
+  ],
+  "layers": [
+    "Applied Domain Models",
+    "Core Frameworks \u2014 Structural Spine",
+    "Education & Teaching",
+    "Ethics & Care",
+    "Framework-Structural",
+    "Integration & Deployment",
+    "Meta & Governance",
+    "Operator Layer",
+    "RTT Analytics \u2014 Metadata Layer",
+    "RTT Deployment Layer",
+    "RTT Dimensional",
+    "RTT Hardware Layer",
+    "RTT Technology Layer",
+    "Research & Validation",
+    "Research-Canonical",
+    "Safety & Operations",
+    "Spacetime",
+    "Substrate Grammar",
+    "Theories",
+    "Theory",
+    "Tools & Infrastructure"
+  ],
+  "depth_map": {
+    "0": [
+      "webroot"
+    ],
+    "1": [
+      "tft-3pack",
+      "gsm",
+      "rtt-root",
+      "fcg",
+      "research",
+      "physics",
+      "biology",
+      "dynamical_systems",
+      "information_systems",
+      "OPERATORS",
+      "STRUCTURAL_DETECTION_ENGINE",
+      "STRUCTURAL_INTEGRATION_ENGINE",
+      "RTT_2",
+      "RTT_3",
+      "C.O.D.E.",
+      "RSGM",
+      "incident_substrate_model"
+    ],
+    "2": [
+      "wrsadc",
+      "tft-core",
+      "examples",
+      "formats",
+      "melodic-table",
+      "mve",
+      "scripts",
+      "docs",
+      "d369",
+      "rtt-codes",
+      "rtt-inside",
+      "RTT_MORPHIC_RESONANCE",
+      "rtt-emotions",
+      "rtt-paradoxes",
+      "rtt-lowdim",
+      "rtt-integrations",
+      "electromagnetism",
+      "general_relativity",
+      "quantum_mechanics",
+      "quantum_field_theory",
+      "standard_model",
+      "thermodynamics",
+      "evolutionary_biology",
+      "morphic_resonance",
+      "chaos_theory",
+      "information_theory",
+      "OPERATORS_TEACHING_BUNDLE",
+      "structural_detection",
+      "UE6-INTEGRATIONS"
+    ],
+    "3": [
+      "tops",
+      "entft",
+      "nous",
+      "resonance-labs",
+      "rtt-inside-benchmarks",
+      "rtt-tel",
+      "Mudpuppy",
+      "SoftKitty"
+    ]
+  },
+  "module_index": {
+    "webroot": {
+      "name": "TriadicFrameworks Web Root",
+      "layer": "Meta & Governance",
+      "depth": 0,
+      "file_count": 13,
+      "url": "https://www.triadicframeworks.org/",
+      "enriched_r2": false
+    },
+    "C.O.D.E.": {
+      "name": "Compassion Operator Dignity Ethics",
+      "layer": "Ethics & Care",
+      "depth": 1,
+      "file_count": 14,
+      "url": "https://www.triadicframeworks.org/rtt/codes/",
+      "enriched_r2": true
+    },
+    "OPERATORS": {
+      "name": "Operators",
+      "layer": "Operator Layer",
+      "depth": 1,
+      "file_count": 16,
+      "url": "https://www.triadicframeworks.org/rtt/1/",
+      "enriched_r2": true
+    },
+    "RSGM": {
+      "name": "Religious Substrate Grammar Model",
+      "layer": "Substrate Grammar",
+      "depth": 1,
+      "file_count": 49,
+      "url": "https://www.triadicframeworks.org/Governance_Substrate_Model/",
+      "enriched_r2": true
+    },
+    "RTT_2": {
+      "name": "RTT/2",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "file_count": 2,
+      "url": "https://www.triadicframeworks.org/rtt/2/",
+      "enriched_r2": true
+    },
+    "RTT_3": {
+      "name": "RTT/3",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "file_count": 3,
+      "url": "https://www.triadicframeworks.org/rtt/3/",
+      "enriched_r2": true
+    },
+    "STRUCTURAL_DETECTION_ENGINE": {
+      "name": "Echo Classifier",
+      "layer": "Operator Layer",
+      "depth": 1,
+      "file_count": 6,
+      "url": "https://www.triadicframeworks.org/rtt/Echo_Classifier/",
+      "enriched_r2": true
+    },
+    "STRUCTURAL_INTEGRATION_ENGINE": {
+      "name": "Triadic Echo Lattice",
+      "layer": "Operator Layer",
+      "depth": 1,
+      "file_count": 6,
+      "url": "https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/",
+      "enriched_r2": true
+    },
+    "biology": {
+      "name": "Biology Cluster",
+      "layer": "Theories",
+      "depth": 1,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "dynamical_systems": {
+      "name": "Dynamical Systems Cluster",
+      "layer": "Theories",
+      "depth": 1,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "fcg": {
+      "name": "Framework Creation Guide",
+      "layer": "Framework-Structural",
+      "depth": 1,
+      "file_count": 22,
+      "url": "https://www.triadicframeworks.org/frameworks/creation_guide/",
+      "enriched_r2": false
+    },
+    "gsm": {
+      "name": "Governance Substrate Model",
+      "layer": "Meta & Governance",
+      "depth": 1,
+      "file_count": 116,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Governance_Substrate_Model",
+      "enriched_r2": false
+    },
+    "incident_substrate_model": {
+      "name": "Incident Substrate Model",
+      "layer": "Safety & Operations",
+      "depth": 1,
+      "file_count": 6,
+      "url": "https://www.triadicframeworks.org/Incident_Substrate_Model/",
+      "enriched_r2": true
+    },
+    "information_systems": {
+      "name": "Information Systems Cluster",
+      "layer": "Theories",
+      "depth": 1,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "physics": {
+      "name": "Physics Cluster",
+      "layer": "Theories",
+      "depth": 1,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "research": {
+      "name": "Research",
+      "layer": "Research-Canonical",
+      "depth": 1,
+      "file_count": 48,
+      "url": "https://www.triadicframeworks.org/Research/",
+      "enriched_r2": false
+    },
+    "rtt-root": {
+      "name": "RTT-Tech Root",
+      "layer": "RTT Technology Layer",
+      "depth": 1,
+      "file_count": 49,
+      "url": "https://www.triadicframeworks.org/rtt/",
+      "enriched_r2": false
+    },
+    "tft-3pack": {
+      "name": "TFT 3Pack",
+      "layer": "Tools & Infrastructure",
+      "depth": 1,
+      "file_count": 34,
+      "url": "https://www.triadicframeworks.org/TFT_3Pack_v1.3/",
+      "enriched_r2": false
+    },
+    "OPERATORS_TEACHING_BUNDLE": {
+      "name": "Operators Teaching Bundle",
+      "layer": "Operator Layer",
+      "depth": 2,
+      "file_count": 2,
+      "url": "https://www.triadicframeworks.org/rtt/academy/",
+      "enriched_r2": true
+    },
+    "RTT_MORPHIC_RESONANCE": {
+      "name": "RTT Morphic Resonance",
+      "layer": "RTT Dimensional",
+      "depth": 2,
+      "file_count": 12,
+      "url": "https://www.triadicframeworks.org/rtt/Morphic_Resonance/",
+      "enriched_r2": true
+    },
+    "UE6-INTEGRATIONS": {
+      "name": "UE6 Integrations",
+      "layer": "Integration & Deployment",
+      "depth": 2,
+      "file_count": 16,
+      "url": "https://www.triadicframeworks.org/Integrations/UE6/",
+      "enriched_r2": true
+    },
+    "chaos_theory": {
+      "name": "Chaos Theory",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "d369": {
+      "name": "D369 Chip Spec",
+      "layer": "RTT Hardware Layer",
+      "depth": 2,
+      "file_count": 20,
+      "url": "https://www.triadicframeworks.org/rtt/D369_Chip_Spec/",
+      "enriched_r2": false
+    },
+    "docs": {
+      "name": "Docs",
+      "layer": "Meta & Governance",
+      "depth": 2,
+      "file_count": 48,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/docs",
+      "enriched_r2": false
+    },
+    "electromagnetism": {
+      "name": "Electromagnetism",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "evolutionary_biology": {
+      "name": "Evolutionary Biology",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "examples": {
+      "name": "Examples",
+      "layer": "Education & Teaching",
+      "depth": 2,
+      "file_count": 94,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/examples",
+      "enriched_r2": false
+    },
+    "formats": {
+      "name": "Formats",
+      "layer": "Tools & Infrastructure",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/formats",
+      "enriched_r2": false
+    },
+    "general_relativity": {
+      "name": "General Relativity",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "information_theory": {
+      "name": "Information Theory",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "melodic-table": {
+      "name": "Melodic Table of Elements",
+      "layer": "Applied Domain Models",
+      "depth": 2,
+      "file_count": 130,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/melodic-table-of-elements",
+      "enriched_r2": false
+    },
+    "morphic_resonance": {
+      "name": "Morphic Resonance",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "mve": {
+      "name": "Molecular Vibration Explorer",
+      "layer": "Applied Domain Models",
+      "depth": 2,
+      "file_count": 21,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/molecular-vibration-explorer",
+      "enriched_r2": false
+    },
+    "quantum_field_theory": {
+      "name": "Quantum Field Theory",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "quantum_mechanics": {
+      "name": "Quantum Mechanics",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "rtt-codes": {
+      "name": "RTT/codes",
+      "layer": "RTT Analytics \u2014 Metadata Layer",
+      "depth": 2,
+      "file_count": 14,
+      "url": "https://www.triadicframeworks.org/rtt/codes/",
+      "enriched_r2": false
+    },
+    "rtt-emotions": {
+      "name": "RTT Emotions",
+      "layer": "RTT Dimensional",
+      "depth": 2,
+      "file_count": 30,
+      "url": "https://www.triadicframeworks.org/rtt/emotions/",
+      "enriched_r2": true
+    },
+    "rtt-inside": {
+      "name": "RTT Inside",
+      "layer": "RTT Deployment Layer",
+      "depth": 2,
+      "file_count": 122,
+      "url": "https://www.triadicframeworks.org/rtt/Inside/",
+      "enriched_r2": false
+    },
+    "rtt-integrations": {
+      "name": "RTT Integrations",
+      "layer": "Integration & Deployment",
+      "depth": 2,
+      "file_count": 9,
+      "url": "https://www.triadicframeworks.org/Integrations/",
+      "enriched_r2": true
+    },
+    "rtt-lowdim": {
+      "name": "RTT Low-Dimensional",
+      "layer": "RTT Dimensional",
+      "depth": 2,
+      "file_count": 7,
+      "url": "https://www.triadicframeworks.org/Low_Dimensional_Structures/",
+      "enriched_r2": true
+    },
+    "rtt-paradoxes": {
+      "name": "RTT Paradoxes",
+      "layer": "RTT Dimensional",
+      "depth": 2,
+      "file_count": 2,
+      "url": "https://www.triadicframeworks.org/Paradoxes_canon/",
+      "enriched_r2": true
+    },
+    "scripts": {
+      "name": "Scripts",
+      "layer": "Tools & Infrastructure",
+      "depth": 2,
+      "file_count": 9,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/scripts",
+      "enriched_r2": false
+    },
+    "standard_model": {
+      "name": "Standard Model",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "structural_detection": {
+      "name": "Echo Classifier (Structural Detection)",
+      "layer": "Operator Layer",
+      "depth": 2,
+      "file_count": 6,
+      "url": "https://www.triadicframeworks.org/rtt/Echo_Classifier/",
+      "enriched_r2": true
+    },
+    "tft-core": {
+      "name": "TFT Core",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 11,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft",
+      "enriched_r2": false
+    },
+    "thermodynamics": {
+      "name": "Thermodynamics",
+      "layer": "Theory",
+      "depth": 2,
+      "file_count": 0,
+      "url": null,
+      "enriched_r2": false
+    },
+    "wrsadc": {
+      "name": "WRSADC",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 2,
+      "file_count": 10,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/WRSADC",
+      "enriched_r2": false
+    },
+    "Mudpuppy": {
+      "name": "Mudpuppy",
+      "layer": "Spacetime",
+      "depth": 3,
+      "file_count": 8,
+      "url": "https://github.com/Triadic-Resonance-Wizards/mythmatic/tree/main/Mudpuppy",
+      "enriched_r2": true
+    },
+    "SoftKitty": {
+      "name": "SoftKitty",
+      "layer": "Spacetime",
+      "depth": 3,
+      "file_count": 8,
+      "url": "https://github.com/Triadic-Resonance-Wizards/mythmatical/tree/main/SoftKitty",
+      "enriched_r2": true
+    },
+    "entft": {
+      "name": "ENTFT",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 3,
+      "file_count": 213,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/entft",
+      "enriched_r2": false
+    },
+    "nous": {
+      "name": "Nous",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 3,
+      "file_count": 157,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/nous",
+      "enriched_r2": false
+    },
+    "resonance-labs": {
+      "name": "Resonance Labs",
+      "layer": "Research & Validation",
+      "depth": 3,
+      "file_count": 20,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/resonance-labs",
+      "enriched_r2": false
+    },
+    "rtt-inside-benchmarks": {
+      "name": "RTT Inside Benchmarks",
+      "layer": "RTT Deployment Layer",
+      "depth": 3,
+      "file_count": 11,
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Benchmarks/",
+      "enriched_r2": true
+    },
+    "rtt-tel": {
+      "name": "Triadic Echo Lattice (TEL)",
+      "layer": "RTT Deployment Layer",
+      "depth": 3,
+      "file_count": 6,
+      "url": "https://www.triadicframeworks.org/rtt/Triadic_Echo_Lattice/",
+      "enriched_r2": true
+    },
+    "tops": {
+      "name": "TOPS",
+      "layer": "Core Frameworks \u2014 Structural Spine",
+      "depth": 3,
+      "file_count": 85,
+      "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/tops",
+      "enriched_r2": false
+    }
+  },
+  "i2_excluded": [
+    {
+      "canon_tag": "schemas",
+      "name": "Schemas",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/schemas",
+      "reason": "Pure infrastructure \u2014 JSON schema directory only. No functional canonical content."
+    },
+    {
+      "canon_tag": "ideas-sandbox",
+      "name": "Ideas Sandbox",
+      "classification": "I2",
+      "layer": "Ideation Layer",
+      "path": "docs/_ideas",
+      "reason": "Non-Canonical status \u2014 ideation sandbox, not yet promoted to functional canon."
+    }
+  ],
+  "navigation": {
+    "by_layer": {
+      "Applied Domain Models": [
+        "melodic-table",
+        "mve"
+      ],
+      "Core Frameworks \u2014 Structural Spine": [
+        "wrsadc",
+        "tft-core",
+        "tops",
+        "entft",
+        "nous"
+      ],
+      "Education & Teaching": [
+        "examples"
+      ],
+      "Ethics & Care": [
+        "C.O.D.E."
+      ],
+      "Framework-Structural": [
+        "fcg"
+      ],
+      "Integration & Deployment": [
+        "rtt-integrations",
+        "UE6-INTEGRATIONS"
+      ],
+      "Meta & Governance": [
+        "webroot",
+        "gsm",
+        "docs"
+      ],
+      "Operator Layer": [
+        "OPERATORS",
+        "STRUCTURAL_DETECTION_ENGINE",
+        "STRUCTURAL_INTEGRATION_ENGINE",
+        "OPERATORS_TEACHING_BUNDLE",
+        "structural_detection"
+      ],
+      "RTT Analytics \u2014 Metadata Layer": [
+        "rtt-codes"
+      ],
+      "RTT Deployment Layer": [
+        "rtt-inside",
+        "rtt-inside-benchmarks",
+        "rtt-tel"
+      ],
+      "RTT Dimensional": [
+        "RTT_MORPHIC_RESONANCE",
+        "rtt-emotions",
+        "rtt-paradoxes",
+        "rtt-lowdim"
+      ],
+      "RTT Hardware Layer": [
+        "d369"
+      ],
+      "RTT Technology Layer": [
+        "rtt-root",
+        "RTT_2",
+        "RTT_3"
+      ],
+      "Research & Validation": [
+        "resonance-labs"
+      ],
+      "Research-Canonical": [
+        "research"
+      ],
+      "Safety & Operations": [
+        "incident_substrate_model"
+      ],
+      "Spacetime": [
+        "Mudpuppy",
+        "SoftKitty"
+      ],
+      "Substrate Grammar": [
+        "RSGM"
+      ],
+      "Theories": [
+        "physics",
+        "biology",
+        "dynamical_systems",
+        "information_systems"
+      ],
+      "Theory": [
+        "electromagnetism",
+        "general_relativity",
+        "quantum_mechanics",
+        "quantum_field_theory",
+        "standard_model",
+        "thermodynamics",
+        "evolutionary_biology",
+        "morphic_resonance",
+        "chaos_theory",
+        "information_theory"
+      ],
+      "Tools & Infrastructure": [
+        "tft-3pack",
+        "formats",
+        "scripts"
+      ]
+    },
+    "by_depth": {
+      "0": [
+        "webroot"
+      ],
+      "1": [
+        "tft-3pack",
+        "gsm",
+        "rtt-root",
+        "fcg",
+        "research",
+        "physics",
+        "biology",
+        "dynamical_systems",
+        "information_systems",
+        "OPERATORS",
+        "STRUCTURAL_DETECTION_ENGINE",
+        "STRUCTURAL_INTEGRATION_ENGINE",
+        "RTT_2",
+        "RTT_3",
+        "C.O.D.E.",
+        "RSGM",
+        "incident_substrate_model"
+      ],
+      "2": [
+        "wrsadc",
+        "tft-core",
+        "examples",
+        "formats",
+        "melodic-table",
+        "mve",
+        "scripts",
+        "docs",
+        "d369",
+        "rtt-codes",
+        "rtt-inside",
+        "RTT_MORPHIC_RESONANCE",
+        "rtt-emotions",
+        "rtt-paradoxes",
+        "rtt-lowdim",
+        "rtt-integrations",
+        "electromagnetism",
+        "general_relativity",
+        "quantum_mechanics",
+        "quantum_field_theory",
+        "standard_model",
+        "thermodynamics",
+        "evolutionary_biology",
+        "morphic_resonance",
+        "chaos_theory",
+        "information_theory",
+        "OPERATORS_TEACHING_BUNDLE",
+        "structural_detection",
+        "UE6-INTEGRATIONS"
+      ],
+      "3": [
+        "tops",
+        "entft",
+        "nous",
+        "resonance-labs",
+        "rtt-inside-benchmarks",
+        "rtt-tel",
+        "Mudpuppy",
+        "SoftKitty"
+      ]
+    },
+    "roots": [
+      "webroot"
+    ],
+    "leaves": [
+      "gsm",
+      "fcg",
+      "research",
+      "STRUCTURAL_DETECTION_ENGINE",
+      "STRUCTURAL_INTEGRATION_ENGINE",
+      "RTT_2",
+      "RTT_3",
+      "C.O.D.E.",
+      "RSGM",
+      "incident_substrate_model",
+      "wrsadc",
+      "examples",
+      "formats",
+      "melodic-table",
+      "mve",
+      "scripts",
+      "docs",
+      "d369",
+      "rtt-codes",
+      "RTT_MORPHIC_RESONANCE",
+      "rtt-emotions",
+      "rtt-paradoxes",
+      "rtt-lowdim",
+      "electromagnetism",
+      "general_relativity",
+      "quantum_mechanics",
+      "quantum_field_theory",
+      "standard_model",
+      "thermodynamics",
+      "evolutionary_biology",
+      "morphic_resonance",
+      "chaos_theory",
+      "information_theory",
+      "OPERATORS_TEACHING_BUNDLE",
+      "structural_detection",
+      "UE6-INTEGRATIONS",
+      "tops",
+      "entft",
+      "nous",
+      "resonance-labs",
+      "rtt-inside-benchmarks",
+      "rtt-tel",
+      "Mudpuppy",
+      "SoftKitty"
+    ]
+  },
+  "cross_module_lattice": {
+    "import_edges": [
+      {
+        "from": "scripts",
+        "to": "formats",
+        "type": "import",
+        "label": ".fff files consumed as input by all core pipeline scripts"
+      },
+      {
+        "from": "scripts",
+        "to": "entft",
+        "type": "import",
+        "label": "logic_core.sh <-> triadic logic; encryption.sh <-> encryptor.py"
+      },
+      {
+        "from": "scripts",
+        "to": "tops",
+        "type": "import",
+        "label": "grid_ops.sh <-> grid_ops.py"
+      },
+      {
+        "from": "docs",
+        "to": "entft",
+        "type": "import",
+        "label": "glyph lifecycle registries, scroll system, protocol-core engines"
+      },
+      {
+        "from": "docs",
+        "to": "formats",
+        "type": "import",
+        "label": ".fff format spec mirrored in fff_spec.md"
+      },
+      {
+        "from": "rtt-inside",
+        "to": "rtt-root",
+        "type": "import",
+        "label": "RTT core substrates, operators, and diagrams"
+      },
+      {
+        "from": "rtt-codes",
+        "to": "rtt-root",
+        "type": "import",
+        "label": "QR payload schema references canonical sub-schemas"
+      },
+      {
+        "from": "research",
+        "to": "rtt-root",
+        "type": "import",
+        "label": "RTT/1 operators and core substrates for domain research"
+      },
+      {
+        "from": "fcg",
+        "to": "rtt-root",
+        "type": "import",
+        "label": "RTT/1 operators for framework structural grammar"
+      },
+      {
+        "from": "rtt-tel",
+        "to": "rtt-inside-benchmarks",
+        "type": "import",
+        "label": "TEL imports benchmark session records"
+      },
+      {
+        "from": "Mudpuppy",
+        "to": "rtt-paradoxes",
+        "type": "import",
+        "label": "Paradoxes Canon imported"
+      },
+      {
+        "from": "SoftKitty",
+        "to": "rtt-paradoxes",
+        "type": "import",
+        "label": "Paradoxes Canon imported"
+      },
+      {
+        "from": "gsm",
+        "to": "rtt-root",
+        "type": "import",
+        "label": "Resonance-aware structural grammar"
+      },
+      {
+        "from": "webroot",
+        "to": "rtt-root",
+        "type": "import",
+        "label": "RTT core substrates and dimensional grammar"
+      }
+    ],
+    "circular_edges": [
+      {
+        "from": "entft",
+        "to": "tops",
+        "type": "circular",
+        "label": "Mutual: entft encrypts tops grid results; tops simulates entft resonance fields"
+      },
+      {
+        "from": "entft",
+        "to": "nous",
+        "type": "circular",
+        "label": "Mutual: entft corridor traversal uses nous symbolic logic; nous bot fleet uses entft encryption"
+      }
+    ],
+    "propagation_edges": [
+      {
+        "from": "rtt-inside-benchmarks",
+        "to": "rtt-tel",
+        "type": "export",
+        "label": "Benchmark results exported to Temporal Event Log"
+      },
+      {
+        "from": "UE6-INTEGRATIONS",
+        "to": "rtt-inside-benchmarks",
+        "type": "propagates-to",
+        "label": "UE6 sessions propagate to benchmarks"
+      },
+      {
+        "from": "UE6-INTEGRATIONS",
+        "to": "rtt-tel",
+        "type": "propagates-to",
+        "label": "UE6 events logged to TEL"
+      }
+    ],
+    "relationship_edges": [
+      {
+        "from": "incident_substrate_model",
+        "to": "gsm",
+        "type": "informs",
+        "label": "Incident model informs governance substrate alignment"
+      },
+      {
+        "from": "rtt-inside-benchmarks",
+        "to": "rtt-paradoxes",
+        "type": "shares-regime-grammar",
+        "label": "Shared regime grammar"
+      },
+      {
+        "from": "rtt-inside-benchmarks",
+        "to": "rtt-lowdim",
+        "type": "shares-operator-grammar",
+        "label": "Shared operator grammar"
+      },
+      {
+        "from": "rtt-inside-benchmarks",
+        "to": "rtt-integrations",
+        "type": "provides-standards",
+        "label": "Benchmark standards for integrations"
+      },
+      {
+        "from": "RTT_MORPHIC_RESONANCE",
+        "to": "RTT_2",
+        "type": "parallel-to",
+        "label": "Parallel resonance-time layer"
+      },
+      {
+        "from": "RTT_MORPHIC_RESONANCE",
+        "to": "RTT_3",
+        "type": "parallel-to",
+        "label": "Parallel resonance-time layer"
+      },
+      {
+        "from": "OPERATORS",
+        "to": "RTT_2",
+        "type": "related",
+        "label": "Operator grammar feeds RTT/2"
+      },
+      {
+        "from": "OPERATORS",
+        "to": "RTT_3",
+        "type": "related",
+        "label": "Operator grammar feeds RTT/3"
+      },
+      {
+        "from": "STRUCTURAL_DETECTION_ENGINE",
+        "to": "OPERATORS",
+        "type": "related",
+        "label": "Detection engine is an operator"
+      },
+      {
+        "from": "STRUCTURAL_INTEGRATION_ENGINE",
+        "to": "OPERATORS",
+        "type": "related",
+        "label": "Integration engine is an operator"
+      },
+      {
+        "from": "STRUCTURAL_DETECTION_ENGINE",
+        "to": "RTT_2",
+        "type": "related"
+      },
+      {
+        "from": "STRUCTURAL_INTEGRATION_ENGINE",
+        "to": "RTT_3",
+        "type": "related"
+      }
+    ]
+  },
+  "r2_enrichment_summary": {
+    "total_enriched": 20,
+    "file_count_r1": 1242,
+    "file_count_r2": 1461,
+    "file_count_delta": 219,
+    "external_modules": {
+      "Mudpuppy": {
+        "repo": "Triadic-Resonance-Wizards/mythmatic",
+        "version": "2.0beta",
+        "file_count": 8
+      },
+      "SoftKitty": {
+        "repo": "Triadic-Resonance-Wizards/mythmatical",
+        "version": "3.0alpha",
+        "file_count": 8
+      }
+    },
+    "new_edges_added": 10,
+    "generated_at": "2026-07-02T09:39:00"
+  }
+}
