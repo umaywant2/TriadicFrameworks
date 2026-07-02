@@ -1,17 +1,17 @@
 ## 🔮 *A structural grammar for systems, cognition, and resonance‑time reasoning.*
 ###### Global Students and Teachers - Alt. Site [docsbook.io](https://docs.triadicframeworks.org)
-Audience: **students • developers • researchers • AIs**
+###### Audience: **students • developers • researchers • AIs**
 
-- [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/webroot_module.json) — agentic module schema  
-- [`modules_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/modules_group.json) — 100+ AI module examples  
+> [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/webroot_module.json) — agentic module schema  
+> [`spine/modules_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/spine/modules_group.json) — 100+ AI module examples  
 
 A minimal, AI‑ready framework for understanding and building coherent systems.  
 TriadicFrameworks gives students, developers, researchers, and agents a shared substrate:  
 **regimes, operators, diagrams, coherence, paradox, and dimensional reasoning.**
 
-It is not a philosophy.  
-It is not a metaphor.  
-It is a **structural canon** — stable, minimal, and teachable.
+> It is not a philosophy.  
+> It is not a metaphor.  
+> It is a **structural canon** — stable, minimal, and teachable.  
 
 ---
 
