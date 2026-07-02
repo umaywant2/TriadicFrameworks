@@ -1,1 +1,82 @@
-. 
+{
+  "registry": "protocol_header",
+  "version": "1.0",
+  "description": "Canonical registry for protocol header loci, alleles, codes, and deprecations.",
+
+  "loci": [
+    {
+      "id": "RTT",
+      "code": "L1",
+      "name": "Immediate Regime / Atomic Cycle",
+      "invariant": "Immediate cycle; atomic update; no intermediaries.",
+      "alleles": [
+        { "code": "L1-A1", "value": "rtt=1",          "status": "current" },
+        { "code": "L1-A2", "value": "rtt=unit",       "status": "current" },
+        { "code": "L1-A3", "value": "rtt=single-hop", "status": "current" },
+        { "code": "L1-A4", "value": "rtt=atomic",     "status": "current" },
+        { "code": "L1-A5", "value": "cycle=atomic",   "status": "current" }
+      ]
+    },
+
+    {
+      "id": "COHERENCE",
+      "code": "L2",
+      "name": "Explicit Alignment",
+      "invariant": "Alignment explicitly declared; not inferred.",
+      "alleles": [
+        { "code": "L2-A1", "value": "coherence=declared", "status": "current" },
+        { "code": "L2-A2", "value": "coherence=explicit",  "status": "current" },
+        { "code": "L2-A3", "value": "coherence=stated",    "status": "current" }
+      ]
+    },
+
+    {
+      "id": "DRIFT",
+      "code": "L3",
+      "name": "Bounded Deviation",
+      "invariant": "Deviation allowed but strictly bounded.",
+      "alleles": [
+        { "code": "L3-A1", "value": "drift=bounded",     "status": "current" },
+        { "code": "L3-A2", "value": "drift=constrained", "status": "current" },
+        { "code": "L3-A3", "value": "drift=clamped",     "status": "current" }
+      ]
+    },
+
+    {
+      "id": "PARADOX",
+      "code": "L4",
+      "name": "Structural Contradiction",
+      "invariant": "Contradiction is structural, encoded, architected.",
+      "alleles": [
+        { "code": "L4-A1", "value": "paradox=structural",   "status": "current" },
+        { "code": "L4-A2", "value": "paradox=encoded",      "status": "current" },
+        { "code": "L4-A3", "value": "paradox=architected",  "status": "current" }
+      ]
+    }
+  ],
+
+  "matrix": {
+    "english_combinations": 135,
+    "languages": 12,
+    "total_combinations": 1620,
+    "generator": "HEADER(L,i,j,k,m) = RTT_L[i] | COH_L[j] | DRIFT_L[k] | PAR_L[m]"
+  },
+
+  "deprecations": [
+    {
+      "value": "ttl=1",
+      "reason": "TTL semantics incompatible with RTT invariant.",
+      "status": "deprecated"
+    },
+    {
+      "value": "jitter=controlled",
+      "reason": "Network-specific; violates drift invariant.",
+      "status": "deprecated"
+    },
+    {
+      "value": "mode=non-fatal",
+      "reason": "Error-state semantics incompatible with paradox invariant.",
+      "status": "deprecated"
+    }
+  ]
+}
