@@ -50,9 +50,20 @@ def _is_allowed_html_source_url(url):
 
     if parsed.scheme != "https":
         return False
+    if parsed.params or parsed.query or parsed.fragment:
+        return False
+    if parsed.username or parsed.password or parsed.port is not None:
+        return False
 
     host = (parsed.hostname or "").lower()
-    return host == "wikipedia.org" or host.endswith(".wikipedia.org")
+    path = parsed.path.rstrip("/")
+
+    # Strict allowlist of known-good HTML source URLs.
+    allowed = {
+        ("en.wikipedia.org", "/wiki/List_of_particles"),
+        ("wikipedia.org", "/wiki/List_of_particles"),
+    }
+    return (host, path) in allowed
 
 # Extractor: Wikipedia Particle Resonance (HTML)
 def parse_wikipedia_html(url):
