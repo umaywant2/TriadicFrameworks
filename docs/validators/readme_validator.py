@@ -86,10 +86,27 @@ def _canonicalize_allowed_http_url(url):
         if not _is_public_http_url(url):
             return None
 
+        path = parsed.path or "/"
+        if not path.startswith("/"):
+            return None
+        lowered_path = path.lower()
+        if (
+            "/../" in lowered_path
+            or lowered_path.endswith("/..")
+            or "/./" in lowered_path
+            or lowered_path.endswith("/.")
+            or "%2e" in lowered_path
+        ):
+            return None
+        if not re.fullmatch(r"/[A-Za-z0-9._~!$&'()*+,;=:@%/-]*", path):
+            return None
+
+        if parsed.query and not re.fullmatch(r"[A-Za-z0-9._~!$&'()*+,;=:@%/?-]*", parsed.query):
+            return None
+
         netloc = parsed.hostname.lower()
         if parsed.port:
             netloc = f"{netloc}:{parsed.port}"
-        path = parsed.path or "/"
         return f"{parsed.scheme}://{netloc}{path}" + (f"?{parsed.query}" if parsed.query else "")
     except:
         return None
