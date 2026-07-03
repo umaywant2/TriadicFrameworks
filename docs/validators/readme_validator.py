@@ -3,7 +3,7 @@ import re
 import socket
 import ipaddress
 import requests
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin
 from bs4 import BeautifulSoup
 
 README_PATH = "README.md"
@@ -74,13 +74,28 @@ def _is_public_http_url(url):
 
 def check_link(url):
     if url.startswith("http"):
-        if not _is_public_http_url(url):
-            return False
-        if not _is_allowed_host(url):
-            return False
+        current_url = url
+        max_redirects = 5
         try:
-            r = requests.head(url, allow_redirects=True, timeout=5)
-            return r.status_code == 200
+            for _ in range(max_redirects + 1):
+                if not _is_public_http_url(current_url):
+                    return False
+                if not _is_allowed_host(current_url):
+                    return False
+
+                r = requests.head(current_url, allow_redirects=False, timeout=5)
+                if r.status_code == 200:
+                    return True
+
+                if r.status_code in (301, 302, 303, 307, 308):
+                    location = r.headers.get("Location")
+                    if not location:
+                        return False
+                    current_url = urljoin(current_url, location)
+                    continue
+
+                return False
+            return False
         except:
             return False
     else:
