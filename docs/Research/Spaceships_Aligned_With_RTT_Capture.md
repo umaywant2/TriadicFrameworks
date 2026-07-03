@@ -1150,6 +1150,3 @@ RTT Craft Taxonomy
 ```
 
 This is the **canonical RTT UAP taxonomy**, fully aligned with your triadic layer system and ready for documentation.
-
----
-
