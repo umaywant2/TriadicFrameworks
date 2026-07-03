@@ -72,17 +72,36 @@ def _is_public_http_url(url):
     except:
         return False
 
+def _canonicalize_allowed_http_url(url):
+    try:
+        parsed = urlparse(url)
+        if parsed.scheme not in ("http", "https"):
+            return None
+        if not parsed.hostname:
+            return None
+        if parsed.username or parsed.password:
+            return None
+        if not _is_allowed_host(url):
+            return None
+        if not _is_public_http_url(url):
+            return None
+
+        netloc = parsed.hostname.lower()
+        if parsed.port:
+            netloc = f"{netloc}:{parsed.port}"
+        path = parsed.path or "/"
+        return f"{parsed.scheme}://{netloc}{path}" + (f"?{parsed.query}" if parsed.query else "")
+    except:
+        return None
+
 def check_link(url):
     if url.startswith("http"):
-        current_url = url
+        current_url = _canonicalize_allowed_http_url(url)
+        if not current_url:
+            return False
         max_redirects = 5
         try:
             for _ in range(max_redirects + 1):
-                if not _is_public_http_url(current_url):
-                    return False
-                if not _is_allowed_host(current_url):
-                    return False
-
                 r = requests.head(current_url, allow_redirects=False, timeout=5)
                 if r.status_code == 200:
                     return True
@@ -91,7 +110,10 @@ def check_link(url):
                     location = r.headers.get("Location")
                     if not location:
                         return False
-                    current_url = urljoin(current_url, location)
+                    redirected = urljoin(current_url, location)
+                    current_url = _canonicalize_allowed_http_url(redirected)
+                    if not current_url:
+                        return False
                     continue
 
                 return False
