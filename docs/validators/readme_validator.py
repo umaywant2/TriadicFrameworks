@@ -1,6 +1,9 @@
 import os
 import re
+import socket
+import ipaddress
 import requests
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 
 README_PATH = "README.md"
@@ -15,8 +18,47 @@ def extract_links(content):
     img_links = re.findall(r'src="(.*?)"', content)
     return md_links + html_links + img_links
 
+def _is_public_http_url(url):
+    try:
+        parsed = urlparse(url)
+        if parsed.scheme not in ("http", "https"):
+            return False
+        if not parsed.hostname:
+            return False
+
+        host = parsed.hostname
+        try:
+            host_ip = ipaddress.ip_address(host)
+            return not (
+                host_ip.is_private
+                or host_ip.is_loopback
+                or host_ip.is_link_local
+                or host_ip.is_reserved
+                or host_ip.is_multicast
+            )
+        except ValueError:
+            pass
+
+        addrinfos = socket.getaddrinfo(host, None)
+        for info in addrinfos:
+            ip_text = info[4][0]
+            resolved_ip = ipaddress.ip_address(ip_text)
+            if (
+                resolved_ip.is_private
+                or resolved_ip.is_loopback
+                or resolved_ip.is_link_local
+                or resolved_ip.is_reserved
+                or resolved_ip.is_multicast
+            ):
+                return False
+        return True
+    except:
+        return False
+
 def check_link(url):
     if url.startswith("http"):
+        if not _is_public_http_url(url):
+            return False
         try:
             r = requests.head(url, allow_redirects=True, timeout=5)
             return r.status_code == 200
