@@ -79,66 +79,53 @@
 
 <style>
 /* ============================================================
-   NAWDERIAN INDUSTRIAL TRIADIC THEME — DATACENTER EDITION
-   Hyperscale aesthetic: steel, fiber-optic glow, telemetry accents
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
    ============================================================ */
 
-:root {
-  /* Core surfaces */
-  --bg-main: #0b0d10;            /* darker, steel-like */
-  --bg-nav: #111418;             /* cold aisle containment */
-  --bg-panel: #14171c;           /* raised panel look */
-  --border-subtle: #1f242c;      /* steel seam */
-
-  /* Typography */
-  --text-main: #e4ecf7;          /* crisp, high-contrast */
-  --text-muted: #8f9bad;         /* telemetry-muted */
-
-  /* Datacenter-inspired accents */
-  --accent-fiber: #6cb6ff;       /* fiber optic blue */
-  --accent-power: #f39c12;       /* power rail amber */
-  --accent-cooling: #4fd1c5;     /* cooling loop teal */
-  --accent-alert: #ff6b6b;       /* alarm / high-stress */
-
-  /* Triadic gradient (refined for industrial theme) */
-  --triadic: linear-gradient(135deg, #6cb6ff, #c792ea, #f6c177);
-
-  /* Shadows & radius */
-  --radius: 8px;
-  --shadow: 0 0 24px rgba(0,0,0,0.45);
-
-  /* Gridlines */
-  --gridline: rgba(255,255,255,0.04);
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
 }
 
-/* ============================================================
-   LINKS — fiber-optic glow
-   ============================================================ */
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
 
+/* Base link style */
 a {
-  color: var(--accent-fiber);
+  color: var(--rtt-accent-mid);
   text-decoration: none;
-  border-bottom: 1px solid rgba(108,182,255,0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   transition: color 0.2s ease, border-color 0.2s ease;
 }
 
+/* Hover / focus */
 a:hover,
 a:focus {
-  color: var(--accent-alert);
-  border-bottom-color: var(--accent-alert);
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
 }
 
+/* Visited links */
 a:visited {
-  color: var(--accent-cooling);
+  color: var(--rtt-accent-low);
 }
 
-/* ============================================================
-   BASE LAYOUT
-   ============================================================ */
-
-html { scroll-behavior: smooth; }
-
-body {
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
   margin: 0;
   padding: 0;
   background: var(--bg-main);
@@ -148,19 +135,10 @@ body {
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  }
 
-  /* subtle gridlines like raised floor tiles */
-  background-image:
-    linear-gradient(var(--gridline) 1px, transparent 1px),
-    linear-gradient(90deg, var(--gridline) 1px, transparent 1px);
-  background-size: 32px 32px;
-}
-
-/* ============================================================
-   HEADINGS — industrial triadic glow
-   ============================================================ */
-
-h1, h2, h3, h4 {
+  /* Headings */
+  h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
@@ -168,96 +146,73 @@ h1, h2, h3, h4 {
   background: var(--triadic);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
+  }
 
-/* ============================================================
-   TEXT BLOCKS
-   ============================================================ */
-
-p, ul, ol {
+  /* Paragraphs and lists */
+  p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: var(--text-main);
-}
+  color: #dfe7f3;
+  }
 
-/* ============================================================
-   CODE / PRE — telemetry console aesthetic
-   ============================================================ */
-
-pre, code {
+  /* Code/pre */
+  pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: #0a0c0f;
-  padding: 0.5em 0.75em;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
   border-radius: 6px;
   color: #cfe8ff;
-  border-left: 2px solid var(--accent-fiber);
-  box-shadow: inset 0 0 12px rgba(0,0,0,0.4);
-}
+  }
 
-/* ============================================================
-   CONTEXT BLOCK — datacenter telemetry panel
-   ============================================================ */
-
-.context-block {
-  background: var(--bg-panel);
-  padding: 1rem 1.2rem;
-  border-radius: var(--radius);
-  border: 1px solid var(--border-subtle);
-  box-shadow: var(--shadow);
-  margin-bottom: 1.5rem;
-  font-family: monospace;
-  font-size: 0.95rem;
-  line-height: 1.45;
-}
-
-.context-label {
-  color: var(--accent-power);
-  font-weight: bold;
-  margin-right: 0.25rem;
-}
-
-.context-value {
-  color: var(--text-main);
-}
-
-/* ============================================================
-   NAVIGATION — cold aisle containment panel
-   ============================================================ */
-
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+           
 nav {
   width: 260px;
   float: left;
   background: var(--bg-nav);
+  margin-left: 0;
   padding: 1.2rem;
   overflow-y: auto;
   border-right: 1px solid var(--border-subtle);
-  box-shadow: inset -4px 0 12px rgba(0,0,0,0.4);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-fiber);
+  color: var(--accent-rtt);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
-  text-transform: uppercase;
 }
 
 nav a {
   display: block;
   color: var(--text-muted);
+  text-decoration: none;
   padding: 0.35rem 0;
   font-size: 0.9rem;
-  border-bottom: none;
 }
 
 nav a:hover {
   color: var(--text-main);
 }
-
-/* ============================================================
-   MAIN CONTENT
-   ============================================================ */
 
 main {
   flex: 1;
@@ -266,19 +221,15 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-fiber);
-  font-weight: 600;
+  color: var(--accent-rtt);
+  font-weight: 500;
 }
-
-/* ============================================================
-   CODE BLOCKS (override)
-   ============================================================ */
 
 pre {
   background: #0b0d12;
   padding: 1rem;
   overflow-x: auto;
-  border-left: 2px solid var(--accent-fiber);
+  border-left: 2px solid var(--accent-rtt);
 }
 
 code {
@@ -301,8 +252,7 @@ code {
     <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
   </svg>
  </p> 
-      
-    <details open>
+  
       <summary>🌐 Datacenter Reports Module</summary>
      <p>
       <a href="#README">🔰 README</a>  
@@ -541,9 +491,6 @@ code {
        <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>  
        <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>  
        <a href="../">🔙TFT</a>  
-     </p>
-    </details>
-            
    <!-- RTT Session Header (canonical stub) -->
 <!-- ═══════════════════════════════════════════════════════════ -->
 <!-- /docs/datacenter_reports — Session Context block            -->
