@@ -4,6 +4,8 @@ import pdfplumber
 from datetime import datetime
 from urllib.parse import urlparse
 
+ALLOWED_WIKIPEDIA_PARTICLES_URL = "https://en.wikipedia.org/wiki/List_of_particles"
+
 # Load source definitions
 def load_sources():
     with open("Good_Vibrations_sources.json") as f:
@@ -98,7 +100,7 @@ def refresh_resonance_csv():
         elif src["parser"] == "pdf_table" and "bruker" in src["url"]:
             df = parse_bruker_pdf("bruker_nmr.pdf")
         elif src["parser"] == "html_table":
-            df = parse_wikipedia_html(src["url"])
+            df = parse_wikipedia_html(ALLOWED_WIKIPEDIA_PARTICLES_URL)
         else:
             continue
         all_data.append(df)
