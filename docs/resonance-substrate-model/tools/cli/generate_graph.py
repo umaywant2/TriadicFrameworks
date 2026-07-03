@@ -32,6 +32,17 @@ def load_json(path: Path):
         sys.exit(1)
 
 
+def resolve_within_base(user_input: str, base: Path) -> Path:
+    """Resolve a user-supplied path and ensure it stays within `base`."""
+    candidate = (base / user_input).resolve()
+    try:
+        candidate.relative_to(base)
+    except ValueError:
+        print(f"[ERROR] Path escapes allowed root: {user_input}")
+        sys.exit(1)
+    return candidate
+
+
 def safe(name: str) -> str:
     """Make a string safe for DOT node names."""
     return name.replace("-", "_").replace(" ", "_")
@@ -119,7 +130,8 @@ def main():
         sys.exit(1)
 
     mode = sys.argv[1]
-    target = Path(sys.argv[2])
+    base_dir = Path.cwd().resolve()
+    target = resolve_within_base(sys.argv[2], base_dir)
 
     print(dot_header(), end="")
 
