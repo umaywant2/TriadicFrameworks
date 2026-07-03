@@ -18,7 +18,7 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
 
     - name: Set up Python
       uses: actions/setup-python@v5
@@ -28,7 +28,7 @@ jobs:
     - name: Install linters
       run: |
         python -m pip install --upgrade pip
-        pip install ruff yamllint jsonlint
+        pip install ruff yamllint
 
     - name: Lint Python files with ruff
       run: |
@@ -36,11 +36,14 @@ jobs:
 
     - name: Validate YAML files
       run: |
-        yamllint . || true
+        # Only lint YAML files we own to avoid noise from node_modules / third-party files
+        find docs .github -type f \( -name '*.yml' -o -name '*.yaml' \) -print0 | xargs -0 yamllint || true
 
     - name: Validate JSON files
       run: |
-        find . -name "*.json" -print0 | xargs -0 -I {} jsonlint -q {} || true
+        # Use Python's stdlib json module to validate JSON files and skip node_modules
+        find . -type f -name '*.json' -not -path './node_modules/*' -print0 \
+        | xargs -0 -I {} python -c "import sys,json; json.load(open(sys.argv[1]));" {} || true
 
     - name: Python syntax check
       run: |
