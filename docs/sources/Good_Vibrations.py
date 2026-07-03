@@ -2,6 +2,7 @@ import json, pandas as pd, requests
 from bs4 import BeautifulSoup
 import pdfplumber
 from datetime import datetime
+from urllib.parse import urlparse
 
 # Load source definitions
 def load_sources():
@@ -41,9 +42,23 @@ def parse_bruker_pdf(path):
             })
     return pd.DataFrame(rows)
 
+def _is_allowed_html_source_url(url):
+    try:
+        parsed = urlparse(url)
+    except Exception:
+        return False
+
+    if parsed.scheme != "https":
+        return False
+
+    host = (parsed.hostname or "").lower()
+    return host == "wikipedia.org" or host.endswith(".wikipedia.org")
+
 # Extractor: Wikipedia Particle Resonance (HTML)
 def parse_wikipedia_html(url):
-    response = requests.get(url)
+    if not _is_allowed_html_source_url(url):
+        raise ValueError(f"Disallowed HTML source URL: {url}")
+    response = requests.get(url, timeout=10)
     soup = BeautifulSoup(response.text, "html.parser")
     table = soup.find("table", {"class": "wikitable"})
     rows = []
