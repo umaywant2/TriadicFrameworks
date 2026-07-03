@@ -8,6 +8,23 @@ from bs4 import BeautifulSoup
 
 README_PATH = "README.md"
 LOG_PATH = "docs/validation/readme_log.md"
+ALLOWED_LINK_HOSTS = {
+    host.strip().lower()
+    for host in os.getenv(
+        "README_LINK_ALLOWED_HOSTS",
+        "github.com,raw.githubusercontent.com,pypi.org,python.org,readthedocs.io"
+    ).split(",")
+    if host.strip()
+}
+
+def _is_allowed_host(url):
+    try:
+        host = (urlparse(url).hostname or "").lower()
+        if not host:
+            return False
+        return any(host == allowed or host.endswith("." + allowed) for allowed in ALLOWED_LINK_HOSTS)
+    except:
+        return False
 
 def extract_links(content):
     # Match Markdown links: [label](url)
@@ -58,6 +75,8 @@ def _is_public_http_url(url):
 def check_link(url):
     if url.startswith("http"):
         if not _is_public_http_url(url):
+            return False
+        if not _is_allowed_host(url):
             return False
         try:
             r = requests.head(url, allow_redirects=True, timeout=5)
