@@ -37,6 +37,18 @@ It’s safer — but still **brutal**.
 
 ---
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 # 🛠️ Sub‑Sections of the Coal Industry & Their Problems  
 Let’s break it down by domain, because each part has its own hazards.
 

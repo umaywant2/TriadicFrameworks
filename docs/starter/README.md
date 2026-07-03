@@ -10,6 +10,18 @@
 
 ---
 
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ## **1. Download & Explore the Starter Kit (10–20 min)**  
 1. Download the `.zip` provided by your instructor.  
 2. Extract it. You will see:

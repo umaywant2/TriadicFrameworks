@@ -7,7 +7,7 @@
 body.tf-module--information-theory {
   /* signal‑gradient background */
   background: radial-gradient(
-    circle at top left,
+    circle at 26% 20%,
     #111827 0,
     #020308 55%,
     #000000 100%

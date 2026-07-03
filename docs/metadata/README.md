@@ -21,6 +21,20 @@
 This folder contains **descriptive indexes and tables**.  
 Metadata ensures discoverability, clarity, and remix lineage.
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ## Contents
 - [Periodic tables of shapes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/metadata/periodic_table_of_shapes.md)
 - [Equipment Specifications](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/metadata/equipment_specs.md)

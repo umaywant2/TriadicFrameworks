@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "RTT/Inside Substrate Clarity Schema",
+  "description": "Defines clarity score and clarity envelope metadata for RTT/Inside enterprise identity substrates.",
+
+  "type": "object",
+
+  "properties": {
+    "clarity_score": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Spectral clarity score representing how well-defined the identity is within its substrate context."
+    },
+
+    "clarity_envelope": {
+      "type": "string",
+      "enum": [
+        "local",
+        "domain",
+        "forest",
+        "global",
+        "cloud",
+        "zero_trust"
+      ],
+      "description": "The coherence boundary within which the clarity score is evaluated."
+    },
+
+    "clarity_origin": {
+      "type": "string",
+      "enum": [
+        "runtime",
+        "directory",
+        "discovery",
+        "kerberos",
+        "claims",
+        "policy"
+      ],
+      "description": "Indicates which identity substrate layer produced or asserted the clarity metadata."
+    },
+
+    "clarity_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Timestamp indicating when the clarity score was generated or last updated."
+    }
+  },
+
+  "required": [
+    "clarity_score",
+    "clarity_envelope"
+  ]
+}

@@ -2,19 +2,14 @@
 <html lang="en">
 <head>
 
-  <!-- ========================================================= -->
-  <!-- Canonical Metadata Block — Standard Model (TriadicFrameworks) -->
-  <!-- ========================================================= -->
-
+  <!-- Canonical Metadata -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Identity -->
   <title>Standard Model — TriadicFrameworks</title>
   <meta name="description" content="The Standard Model as a sector grammar of excitation modes, gauge geometry, Higgs stabilization, and resonance behavior across R2→R3.">
   <meta name="keywords" content="standard model, sector grammar, excitations, gauge symmetry, higgs mechanism, qft, rtt, triadic frameworks">
 
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://triadicframeworks.org/docs/theories/standard_model/">
 
   <!-- OpenGraph -->
@@ -22,13 +17,13 @@
   <meta property="og:description" content="A sector grammar of excitation modes, gauge geometry, and Higgs-anchored stability.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://triadicframeworks.org/docs/theories/standard_model/">
-  <meta property="og:image" content="/assets/og/standard_model.png">
+  <meta property="og:image" content="../../images/standard_model.png">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Standard Model — TriadicFrameworks">
   <meta name="twitter:description" content="Excitation-based, gauge-geometry-aligned, substrate-aware Standard Model.">
-  <meta name="twitter:image" content="/assets/og/standard_model.png">
+  <meta name="twitter:image" content="../../images/standard_model.png">
 
   <!-- Citation -->
   <meta name="citation_title" content="Standard Model — TriadicFrameworks">
@@ -44,518 +39,116 @@
   <meta name="ai.purpose" content="Provide a sector-based, excitation-first interface to the Standard Model.">
   <meta name="ai.keywords" content="standard model, excitations, gauge symmetry, higgs, resonance, rtt">
   <meta name="ai.audience" content="students, researchers, physicists, AIs">
-  <meta name="ai.navigation" content="/sitemap_main.xml">
+  <meta name="ai.navigation" content="../../sitemap_main.xml">
   <meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
   <meta name="ai.contact.x" content="@TriadicFrameworks">
   <meta name="ai.contact.youtube" content="@TriadicFrameworks">
   <meta name="ai.license" content="Open educational use permitted">
 
-  <!-- Theme + Favicon -->
+  <!-- Favicon -->
+  <link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+  <!-- Canonical RTT‑Inside Styles -->
+  <link rel="stylesheet" href="/styles/theory.css">
+  <link rel="stylesheet" href="/styles/standard_model.css">
+
   <meta name="theme-color" content="#1a1a1a">
-  <link rel="icon" href="/assets/favicon/favicon.ico">
 
 </head>
 
-<style>
-  :root {
-    --bg: #040509;
-    --fg: #f5f5f7;
-
-    /* Standard Model accent: gauge‑violet (sector symmetry) */
-    --accent: #7c3aed;
-    --accent-soft: rgba(124,58,237,0.18);
-
-    --muted: #9ca3af;
-    --border: #1f2933;
-    --card: #050814;
-
-    --radius-lg: 18px;
-    --radius-md: 10px;
-    --radius-pill: 999px;
-
-    --shadow-soft: 0 18px 45px rgba(0,0,0,0.55);
-    --shadow-subtle: 0 0 0 1px rgba(255,255,255,0.02);
-
-    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
-                 "Segoe UI", sans-serif;
-    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
-                 "Liberation Mono", "Courier New", monospace;
-  }
-
-  * { box-sizing: border-box; }
-
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: var(--font-main);
-
-    /* Gauge‑geometry gradient: smooth, symmetry‑aligned */
-    background: radial-gradient(circle at 30% 24%,
-      #0a0617 0,
-      #070513 42%,
-      #000000 100%
-    );
-
-    color: var(--fg);
-    -webkit-font-smoothing: antialiased;
-    position: relative;
-  }
-
-  /* Gauge‑interference texture (sector coherence) */
-  body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    pointer-events: none;
-    opacity: 0.045;
-    background: repeating-linear-gradient(
-      150deg,
-      rgba(255,255,255,0.02) 0px,
-      rgba(255,255,255,0.02) 1px,
-      transparent 1px,
-      transparent 6px
-    );
-  }
-
-  .page {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
-
-  header {
-    padding: 18px 20px 8px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  .brand {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .brand-mark {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background:
-      radial-gradient(circle at 30% 20%, #ffffff 0, var(--accent) 18%, #0a0617 55%, #000000 100%);
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 12px 30px rgba(0,0,0,0.7);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .brand-mark::before {
-    content: "";
-    position: absolute;
-    inset: 18% 18%;
-    border-radius: 999px;
-    border: 1px solid rgba(15,23,42,0.9);
-    box-shadow: 0 0 0 1px rgba(148,163,184,0.4);
-    opacity: 0.9;
-  }
-
-  /* Standard Model: perfect gauge symmetry (no rotation) */
-  .brand-mark::after {
-    content: "";
-    position: absolute;
-    inset: 55% 8% 8% 8%;
-    border-radius: 999px;
-    border: 1px dashed rgba(148,163,184,0.7);
-    opacity: 0.9;
-    transform: rotate(0deg);
-  }
-
-  .brand-text {
-    display: flex;
-    flex-direction: column;
-    gap: 1px;
-  }
-
-  .brand-text span:first-child {
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .brand-text span:last-child {
-    font-size: 14px;
-    font-weight: 500;
-    color: #e5e7eb;
-  }
-
-  .tag {
-    font-size: 11px;
-    padding: 4px 10px;
-    border-radius: var(--radius-pill);
-    border: 1px solid rgba(148,163,184,0.5);
-    color: var(--muted);
-    background: rgba(15,23,42,0.7);
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .tag-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 0 4px var(--accent-soft);
-  }
-
-  main {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    padding: 10px 16px 28px;
-  }
-
-  .layout {
-    width: 100%;
-    max-width: 1080px;
-    display: grid;
-    grid-template-columns: minmax(0, 3fr) minmax(0, 2.4fr);
-    gap: 18px;
-  }
-
-  @media (max-width: 880px) {
-    .layout {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-
-  .hero-card {
-    background: radial-gradient(circle at top left, var(--accent-soft) 0,
-                rgba(15,23,42,0.9) 32%, #020308 100%);
-    border-radius: var(--radius-lg);
-    padding: 20px 20px 18px;
-    box-shadow: var(--shadow-soft), var(--shadow-subtle);
-    border: 1px solid rgba(148,163,184,0.35);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .hero-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
-  }
-
-  .hero-title-block h1 {
-    margin: 0;
-    font-size: 24px;
-    letter-spacing: 0.03em;
-  }
-
-  .hero-title-block p {
-    margin: 4px 0 0;
-    font-size: 13px;
-    color: var(--muted);
-    max-width: 380px;
-  }
-
-  .hero-glyph {
-    width: 88px;
-    height: 88px;
-    border-radius: 28px;
-    background:
-      radial-gradient(circle at 30% 20%, #ffffff 0, var(--accent) 18%, #0a0617 55%, #000000 100%);
-    position: relative;
-    box-shadow: 0 18px 40px rgba(0,0,0,0.85);
-    overflow: hidden;
-  }
-
-  .hero-glyph::before {
-    content: "";
-    position: absolute;
-    inset: 16% 14%;
-    border-radius: 999px;
-    border: 1px solid rgba(15,23,42,0.9);
-    box-shadow: 0 0 0 1px rgba(255,255,255,0.18);
-  }
-
-  /* Standard Model: symmetric gauge ring */
-  .hero-glyph::after {
-    content: "";
-    position: absolute;
-    inset: 46% 10% 10% 10%;
-    border-radius: 999px;
-    border: 1px dashed rgba(148,163,184,0.7);
-    opacity: 0.9;
-    transform: rotate(0deg);
-  }
-
-  .hero-body {
-    display: grid;
-    grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
-    gap: 14px;
-  }
-
-  @media (max-width: 720px) {
-    .hero-body {
-      grid-template-columns: minmax(0, 1fr);
-    }
-  }
-
-  .hero-section-title {
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.16em;
-    color: var(--muted);
-    margin-bottom: 6px;
-  }
-
-  .hero-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 13px;
-    color: #e5e7eb;
-  }
-
-  .hero-list li {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 4px;
-  }
-
-  .hero-list li span.bullet {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    margin-top: 6px;
-    background: rgba(148,163,184,0.9);
-  }
-
-  .hero-list li strong {
-    font-weight: 500;
-    color: #f9fafb;
-  }
-
-  .hero-pill-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin-top: 4px;
-  }
-
-  .pill {
-    font-size: 11px;
-    padding: 4px 9px;
-    border-radius: var(--radius-pill);
-    border: 1px solid rgba(148,163,184,0.5);
-    color: var(--muted);
-    background: rgba(15,23,42,0.8);
-    white-space: nowrap;
-  }
-
-  .pill.accent {
-    border-color: var(--accent);
-    color: #e0f2fe;
-    background: rgba(15,23,42,0.95);
-  }
-
-  .right-column {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .card {
-    background: var(--card);
-    border-radius: var(--radius-md);
-    padding: 12px 13px 11px;
-    border: 1px solid var(--border);
-    box-shadow: var(--shadow-subtle);
-  }
-
-  .card h2 {
-    margin: 0 0 6px;
-    font-size: 13px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--muted);
-  }
-
-  .card p {
-    margin: 0 0 6px;
-    font-size: 13px;
-    color: #e5e7eb;
-  }
-
-  .link-list {
-    list-style: none;
-    padding: 0;
-    margin: 4px 0 0;
-    font-size: 13px;
-  }
-
-  .link-list li {
-    margin-bottom: 3px;
-  }
-
-  .link-list a {
-    color: #e0f2fe;
-    text-decoration: none;
-    border-bottom: 1px dashed rgba(148,163,184,0.6);
-  }
-
-  .link-list a:hover {
-    border-bottom-style: solid;
-  }
-
-  code {
-    font-family: var(--font-mono);
-    font-size: 12px;
-    background: rgba(15,23,42,0.9);
-    padding: 2px 5px;
-    border-radius: 6px;
-    border: 1px solid rgba(31,41,55,0.9);
-    color: #e5e7eb;
-  }
-
-  footer {
-    padding: 6px 20px 14px;
-    font-size: 11px;
-    color: var(--muted);
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-    border-top: 1px solid rgba(15,23,42,0.9);
-    background: radial-gradient(circle at bottom, rgba(15,23,42,0.7) 0, #020308 55%, #000000 100%);
-  }
-
-  footer span { opacity: 0.9; }
-
-  @media (max-width: 640px) {
-    footer {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-</style>
-
 <body>
 
-  <!-- ========================================================= -->
-  <!-- Module Badge -->
-  <!-- ========================================================= -->
-
-  <div style="display:inline-block;padding:8px 14px;background:#1a1a1a;color:#fff;
-              border-radius:6px;font-family:Arial,sans-serif;font-size:14px;">
-    ⚛️ Standard Model<br>📘 Sector Grammar • Excitation‑Based • AI‑Ready
+  <!-- HERO -->
+  <div class="hero hero-qcompute">
+    <img src="../../images/standard_model.png"
+         alt="Standard Model Hero Image"
+         class="hero-img">
+    <div class="hero-overlay">
+      <h1>Standard Model</h1>
+      <p>Sector Grammar • Excitation‑Based • Gauge‑Geometry Aligned</p>
+      <div class="hero-icons">
+        <span>⚛️ Excitation Modes</span>
+        <span>🌀 Gauge Geometry</span>
+        <span>🌟 Higgs Stabilization</span>
+        <span>🔷 R2 → R3 Behavior</span>
+      </div>
+    </div>
   </div>
 
-  <!-- ========================================================= -->
-  <!-- Session Context Block -->
-  <!-- ========================================================= -->
+  <main class="container">
 
-  <section id="standard-model-session-header"
-           data-rtt="rtt-engine"
-           data-coherence="stable"
-           data-drift="minimal"
-           data-regime="R2-R3">
-
-    <h2>Session Context</h2>
-
-    <div class="context-block">
-
-      <span class="context-label"><strong>Canon:</strong></span>
-      <span class="context-value">active (sector‑grammar • excitation‑based)</span><br>
-
-      <span class="context-label"><strong>Modules:</strong></span>
-      <span class="context-value">
-        QFT → Gauge Symmetry → Excitation Sectors → Higgs Mechanism →  
-        Mass Generation → Interaction Channels → Renormalization →  
-        High‑Energy Symmetry Restoration
-      </span><br>
-
-      <span class="context-label"><strong>Drift:</strong></span>
-      <span class="context-value">minimal (excitation‑true • no particle‑object ontology)</span><br>
-
-      <span class="context-label"><strong>Coherence:</strong></span>
-      <span class="context-value">stable (gauge‑geometry • symmetry‑preserving)</span><br>
-
-      <span class="context-label"><strong>Version:</strong></span>
-      <span class="context-value">1.0 (sector‑grammar‑stable)</span><br>
-
-      <span class="context-label"><strong>Format:</strong></span>
-      <span class="context-value">html + markdown + diagrams + resonance‑maps</span><br>
-
-      <span class="context-label"><strong>Front door:</strong></span>
-      <span class="context-value">this page</span><br>
-
-      <span class="context-label"><strong>Every page:</strong></span>
-      <span class="context-value">stands alone + AI‑parsable + excitation‑aligned</span><br>
-
-      <span class="context-label"><strong>Audience:</strong></span>
-      <span class="context-value">students + researchers + physicists + AIs</span>
-
+    <!-- INTRO CARD -->
+    <div class="card">
+      <h2>Gauge Symmetry and Sector Coherence</h2>
+      <p>
+        The Standard Model here is not a patchwork of forces; it is a unified
+        gauge‑symmetric substrate where interaction fields and matter sectors
+        share a coherent operator grammar.
+      </p>
     </div>
-  </section>
 
-  <!-- ========================================================= -->
-  <!-- Front Door Content -->
-  <!-- ========================================================= -->
+    <!-- TWO‑COLUMN LAYOUT -->
+    <div class="layout">
 
-  <h1>Standard Model</h1>
-  <p>
-    The Standard Model is a <strong>sector grammar of excitation modes</strong>.  
-    It describes quarks, leptons, gauge bosons, and the Higgs as  
-    <strong>stable resonance patterns</strong> of deeper substrate fields.  
-    Interactions arise from <strong>gauge geometry</strong>, and mass arises from  
-    <strong>Higgs‑anchored stabilization</strong>.  
-  </p>
+      <!-- LEFT COLUMN -->
+      <section class="card">
+        <h2>Session Context</h2>
 
-  <h2>Module Navigation</h2>
-  <ul>
-    <li><a href="./README.md">README</a></li>
-    <li><a href="./module.json">Module Identity</a></li>
-    <li><a href="./module_rtt1.json">RTT/1 — Operator Grammar</a></li>
-    <li><a href="./module_rtt2.json">RTT/2 — Resonance Geometry</a></li>
-    <li><a href="./module_rtt3.json">RTT/3 — Substrate Integration</a></li>
-    <li><a href="./session_context.md">Session Context</a></li>
-    <li><a href="./operators.md">Operators</a></li>
-    <li><a href="./regimes.md">Regimes</a></li>
-    <li><a href="./coherence_map.md">Coherence Map</a></li>
-    <li><a href="./examples.md">Examples</a></li>
-    <li><a href="./faq.md">FAQ</a></li>
-    <li><a href="./cross_module.md">Cross‑Module Integration</a></li>
-    <li><a href="./lineage.md">Lineage</a></li>
-    <li><a href="./simulation_hooks.json">Simulation Hooks</a></li>
-    <li><a href="./engine_notes.md">Engine Notes</a></li>
-  </ul>
+        <ul class="hero-list">
+          <li><span class="bullet"></span><div><strong>Canon:</strong> active (sector‑grammar • excitation‑based)</div></li>
+          <li><span class="bullet"></span><div><strong>Modules:</strong> QFT → Gauge Symmetry → Excitation Sectors → Higgs → Mass → Interaction Channels → Renormalization → Symmetry Restoration</div></li>
+          <li><span class="bullet"></span><div><strong>Drift:</strong> minimal (excitation‑true • no particle‑object ontology)</div></li>
+          <li><span class="bullet"></span><div><strong>Coherence:</strong> stable (gauge‑geometry • symmetry‑preserving)</div></li>
+          <li><span class="bullet"></span><div><strong>Version:</strong> 1.0 (sector‑grammar‑stable)</div></li>
+          <li><span class="bullet"></span><div><strong>Format:</strong> html + markdown + diagrams + resonance‑maps</div></li>
+          <li><span class="bullet"></span><div><strong>Front door:</strong> this page</div></li>
+          <li><span class="bullet"></span><div><strong>Every page:</strong> stands alone + AI‑parsable + excitation‑aligned</div></li>
+          <li><span class="bullet"></span><div><strong>Audience:</strong> students + researchers + physicists + AIs</div></li>
+        </ul>
 
-  <!-- ========================================================= -->
-  <!-- Sidebar Audit -->
-  <!-- ========================================================= -->
+        <div class="hero-pill-row">
+          <span class="pill accent">Excitation‑first</span>
+          <span class="pill">Gauge‑aligned</span>
+          <span class="pill">Sector‑true</span>
+          <span class="pill">RTT‑aligned</span>
+          <span class="pill">Zero drift</span>
+        </div>
+      </section>
 
-  <aside>
-    <h3>Sidebar Audit</h3>
-    <p>No phantom entries detected. All module files present and canon‑aligned.</p>
-  </aside>
+      <!-- RIGHT COLUMN -->
+      <aside class="right-column">
 
-  <!-- ========================================================= -->
-  <!-- Diff Table (Old vs New Metadata) -->
-  <!-- ========================================================= -->
+        <div class="card">
+          <h2>Module Navigation</h2>
+          <ul class="link-list">
+            <li><a href="README.md" target="_blank">README</a></li>
+            <li><a href="module.json" target="_blank">Module Identity</a></li>
+            <li><a href="module_rtt1.json" target="_blank">RTT/1 — Operator Grammar</a></li>
+            <li><a href="module_rtt2.json" target="_blank">RTT/2 — Resonance Geometry</a></li>
+            <li><a href="module_rtt3.json" target="_blank">RTT/3 — Substrate Integration</a></li>
+            <li><a href="session_context.md" target="_blank">Session Context</a></li>
+            <li><a href="operators.md" target="_blank">Operators</a></li>
+            <li><a href="regimes.md" target="_blank">Regimes</a></li>
+            <li><a href="coherence_map.md" target="_blank">Coherence Map</a></li>
+            <li><a href="examples.md" target="_blank">Examples</a></li>
+            <li><a href="faq.md" target="_blank">FAQ</a></li>
+            <li><a href="cross_module.md" target="_blank">Cross‑Module Integration</a></li>
+            <li><a href="lineage.md" target="_blank">Lineage</a></li>
+            <li><a href="simulation_hooks.json" target="_blank">Simulation Hooks</a></li>
+            <li><a href="engine_notes.md" target="_blank">Engine Notes</a></li>
+          </ul>
+        </div>
 
-  <h3>Metadata Diff</h3>
-  <table>
-    <tr><th>Field</th><th>Old</th><th>New</th></tr>
-    <tr><td>ai.module</td><td>—</td><td>standard_model</td></tr>
-    <tr><td>ai.version</td><td>—</td><td>1.0</td></tr>
-    <tr><td>ai.purpose</td><td>—</td><td>sector‑grammar interface</td></tr>
-    <tr><td>ai.keywords</td><td>—</td><td>excitations, gauge symmetry, higgs, resonance</td></tr>
-    <tr><td>DC.subject</td><td>—</td><td>Standard Model, Gauge Symmetry</td></tr>
-  </table>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="container">
+    <span>Standard Model · Sector‑grammar excitation interface · R2 → R3 compatible</span><br>
+    <span>Student‑ready · AI‑parsable · Canon‑aligned · Zero drift</span>
+  </footer>
 
 </body>
 </html>

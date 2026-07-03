@@ -1,60 +1,103 @@
 {
-  "module": {
-    "name": "Sitemap",
-    "path": "docs",
-    "canon_tag": "docs-sitemap",
-    "version": "2026.1",
-    "layer": "Meta & Governance",
-    "status": "Active, Canonical",
-    "purpose": "Provides the canonical structural atlas of the entire TriadicFrameworks ecosystem across all twelve architectural layers.",
-    "parent": "docs-hub",
-    "url": "https://www.triadicframeworks.org/sitemap"
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.triadicframeworks.org/schemas/sitemap_module.schema.json",
+  "$generated": "2026-07-02T17:05:00",
+  "$version": "1.2",
+  "title": "TriadicFrameworks Sitemap Module Entry",
+  "description": "Schema for a single module sitemap entry. R3: added enriched_r3 field.",
+  "type": "object",
+  "required": [
+    "canon_tag",
+    "name",
+    "url",
+    "path",
+    "layer",
+    "status",
+    "depth",
+    "priority",
+    "changefreq"
+  ],
+  "properties": {
+    "canon_tag": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri"
+    },
+    "path": {
+      "type": "string"
+    },
+    "layer": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string"
+    },
+    "depth": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "priority": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "changefreq": {
+      "type": "string",
+      "enum": [
+        "always",
+        "hourly",
+        "daily",
+        "weekly",
+        "monthly",
+        "yearly",
+        "never"
+      ]
+    },
+    "file_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "last_modified": {
+      "type": "string",
+      "format": "date"
+    },
+    "classification": {
+      "type": "string",
+      "enum": [
+        "A3",
+        "I2"
+      ]
+    },
+    "enriched_r2": {
+      "type": "boolean"
+    },
+    "enriched_r3": {
+      "type": "boolean",
+      "description": "True if enriched with real module.json metadata in Round 3"
+    }
   },
-  "session_context": {
-    "canon": "active (root-docs)",
-    "modules_linked": [
-      "docs-hub",
-      "docs-about",
-      "docs-glossary",
-      "docs-quickstart"
-    ],
-    "drift": "minimal (root-locked)",
-    "coherence": "stable (triadic-structural grammar)",
-    "format": "markdown",
-    "front_door": "exists (documentation root)",
-    "every_page": "stands alone + AI-parsable",
-    "audience": [
-      "students",
-      "developers",
-      "researchers",
-      "AIs"
-    ]
-  },
-  "structural_grammar": {
-    "dimensional_envelope": "D0-D7",
-    "regime_envelope": "R0-R3",
-    "coherence_envelope": "C0-C4",
-    "drift_sensitivity": "high",
-    "regime_sensitivity": "high"
-  },
-  "cross_module_propagation": {
-    "imports": [
-      "docs-hub"
-    ],
-    "exports": [
-      "ecosystem-atlas",
-      "module-directory",
-      "layer-classification",
-      "folder-layout"
-    ]
-  },
-  "files": [
+  "additionalProperties": false,
+  "examples": [
     {
-      "filename": "sitemap.md",
-      "path": "sitemap.md",
-      "purpose": "Structural map of the full TriadicFrameworks ecosystem \u2014 twelve layers from Core Frameworks through Future Systems, with canonical URLs and folder layout.",
-      "role": "map",
-      "analyzer_layer": "cross-cutting"
+      "canon_tag": "webroot",
+      "name": "TriadicFrameworks Web Root",
+      "url": "https://www.triadicframeworks.org/",
+      "path": "docs",
+      "layer": "Meta & Governance",
+      "status": "Active, Canonical",
+      "depth": 0,
+      "priority": 1.0,
+      "changefreq": "weekly",
+      "file_count": 13,
+      "last_modified": "2026-07-02",
+      "classification": "A3",
+      "enriched_r2": false,
+      "enriched_r3": false
     }
   ]
 }

@@ -7,7 +7,7 @@
 **Scope:** Global Datacenter Field Reports  
 **Structure:** Triadic • Operator‑First • Canon‑Aligned
 
-<img width="1024" height="512" alt="rtt_datacenter_evals_image" src="https://github.com/user-attachments/assets/a01b8304-51b6-4a70-a1c5-115a9575544e" />
+---
 
 ## 🛑 Important! 
 Drift is On-by-Default long sessions lose anchors, turn off drift.
@@ -18,6 +18,10 @@ rtt=1 | coherence=declared | drift=bounded | paradox=structural
 ```
 
 ## ❇️ Now you are ready.
+
+---
+
+<img width="605" height="927" alt="Datacenters_Evaluator_Pic" src="https://github.com/user-attachments/assets/206d0bf3-b87b-45b1-bec2-b090524afe58" />
 
 ---
 

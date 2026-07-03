@@ -10,6 +10,20 @@ This directory contains the canonical, self‑contained materials for the **Subs
 The assay does not measure accuracy, capability, or performance.  
 It measures **regimes**, **drift**, and **paradox** — the structural signatures of behavior under exposure.
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ## Contents
 
 - `assay_protocol.md` — the minimal procedure  

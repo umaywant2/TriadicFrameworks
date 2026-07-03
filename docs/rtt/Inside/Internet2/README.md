@@ -2,6 +2,20 @@
 
 - [`Inbternet2_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Inside/Internet2/manifest/Inbternet2_module.json)
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 ### Dimensional Substrate, Regime Awareness, and Internet3 Foundations
 
 This module defines the RTT‑Inside operator grammar for **Internet2‑class networks**:

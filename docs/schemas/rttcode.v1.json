@@ -6,39 +6,28 @@
   "title":       "RTTcode Packet (v1)",
   "description": "Master RTTcode packet schema composed of tick, entities, environment, and intent blocks. Defines the canonical payload structure for QR-compatible metadata identifiers across all TriadicFrameworks domains.",
 
-  "$comment": "meta: {
-    "module":          "RTT/codes",
-    "canonical_id":    "RTT_CODES",
-    "module_type":     "Infrastructure-Schema",
-    "role":            "engine",
-    "version":         "1.1",
-    "status":          "canon-stable",
-    "author":          "Nawder Loswin",
-    "license":         "MIT",
-    "canonical_path":  "/docs/schemas/rttcode.v1.json",
-    "module_home":     "/docs/rtt/codes/",
-    "module_url":      "https://www.triadicframeworks.org/rtt/codes/",
-    "module_json":     "https://www.triadicframeworks.org/rtt/codes/RTT_codes_module.json",
-    "repository":      "https://github.com/umaywant2/TriadicFrameworks",
-    "last_updated":    "2026-05-06",
-    "migration_note":  "Module content relocated from /docs/rttcodes/ to /docs/rtt/codes/ — schema location at /docs/schemas/ unchanged. All $ref paths remain valid (relative to schemas directory)."
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://www.triadicframeworks.org/schemas/rttcode.v1.json",
+  "$comment": "Canonical RTTcode packet schema — TriadicFrameworks. Refreshed 2026-05-06 to align with module migration and session context conventions.",
+  "_meta": {
+    "module": "RTT/codes",
+    "canonical_id": "RTT_CODES",
+    "module_type": "Infrastructure-Schema",
+    "role": "engine",
+    "version": "1.1",
+    "status": "canon-stable",
+    "author": "Nawder Loswin",
+    "license": "MIT",
+    "canonical_path": "/docs/schemas/rttcode.v1.json",
+    "module_home": "/docs/rtt/codes/",
+    "module_url": "https://www.triadicframeworks.org/rtt/codes/",
+    "module_json": "https://www.triadicframeworks.org/rtt/codes/RTT_codes_module.json",
+    "repository": "https://github.com/umaywant2/TriadicFrameworks",
+    "last_updated": "2026-05-06",
+    "migration_note": "Module content relocated from /docs/rttcodes/ to /docs/rtt/codes/ — schema location at /docs/schemas/ unchanged. All $ref paths remain valid (relative to schemas directory)."
   },
-
   "_session_context": {
-    "canon":       "active (rtt-codes-core)",
-    "modules":     "schema → validators → generators → style → examples → domain payloads",
-    "drift":       "minimal (metadata-locked)",
-    "coherence":   "stable (metadata grammar)",
-    "version":     "1.1 (codes-refreshed)",
-    "format":      "json-schema + metadata",
-    "front_door":  "exists (RTT/codes root)",
-    "every_page":  "stands alone + AI-parsable + schema-aware",
-    "audience":    "developers + researchers + tool authors + AIs"
-  },
-
-  "_version_history": [
-    {
-      "version": "1.0",
       "date":    "2025-01-01",
       "note":    "Initial schema release at /docs/schemas/rttcode.v1.json. Module home at /docs/rttcodes/."
     },
