@@ -1,8 +1,8 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/webroot_module.schema.json",
-  "$generated": "2026-07-02T17:05:00",
-  "$version": "3.0",
-  "$round": "R3",
+  "$generated": "2026-07-03T12:12:00",
+  "$version": "4.0",
+  "$round": "R4",
   "module": {
     "name": "TriadicFrameworks Webroot",
     "id": "webroot",
@@ -32,7 +32,7 @@
       "json"
     ],
     "every_page_stands_alone": true,
-    "total_a3_modules": 112,
+    "total_a3_modules": 166,
     "total_files_catalogued": 1284
   },
   "r2_stats": {
@@ -57,7 +57,7 @@
     "type": "S3-hybrid-hierarchical-directed",
     "file": "/docs/spine/module_graph.json",
     "url": "https://www.triadicframeworks.org/spine/module_graph.json",
-    "description": "Full A3 functional canon spine \u2014 55 modules, 95 edges (54 hierarchy + 41 directed), 21 layers"
+    "description": "Full A3 functional canon spine — R4: 166 modules, 11 I2 excluded"
   },
   "hub_reference": {
     "file": "/docs/hub.json",
@@ -244,7 +244,7 @@
       "category": "incentive-grammar",
       "version": "1.0",
       "status": "canon-stable",
-      "note": "Awaiting A3/I2 classification \u2014 not yet in canonical A3 spine. Preserved from prior webroot_module.json version."
+      "note": "Awaiting A3/I2 classification — not yet in canonical A3 spine. Preserved from prior webroot_module.json version."
     }
   },
   "session_context": {
@@ -311,5 +311,14 @@
     "r3_file_delta": 42,
     "spine": "/docs/spine/module_graph.json",
     "hub": "/docs/hub.json"
+  },
+  "r4_stats": {
+    "round": "R4",
+    "generated": "2026-07-03T12:12:00",
+    "total_a3_modules": 166,
+    "total_i2_excluded": 11,
+    "total_files_catalogued": 1284,
+    "r4_new_a3": 54,
+    "r4_file_delta": 0
   }
 }

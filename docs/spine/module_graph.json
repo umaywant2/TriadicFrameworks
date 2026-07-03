@@ -1,22 +1,22 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/module_graph.schema.json",
-  "$generated": "2026-07-02T17:05:00",
-  "$version": "5.2",
-  "$round": "R3",
+  "$generated": "2026-07-03T12:12:00",
+  "$version": "5.3",
+  "$round": "R4",
   "$classification": "A3-Functional-Canon",
   "meta": {
-    "title": "TriadicFrameworks \u2014 Functional Canon Spine (Round 3 Discovery)",
-    "description": "Hybrid S3 spine \u2014 R3: 57 new A3 modules discovered from full module.json audit. Domain modules (culture, economics, education, law, medicine, music, sociology...), AI layer (ai-core, ai-consciousness), RTT extensions (RTT/12, HSP, Substrate Flow, SDK, API, guild, store, sort, extension, micro-core), substrate models (ASM, CSM), and core structural modules (Grammar, Glossary, Mode, Opacity, Coeus, Resilience Checker). +42 files.",
+    "title": "TriadicFrameworks — Functional Canon Spine (Round 4 Discovery)",
+    "description": "R4: 54 new A3 modules. VST family (7), RTT Inside sub-modules (5), Substrate cluster (5), Research sub-modules (5), Domain expansions, RTT extensions (app/c64host/codex/maps), resurrected NoS+FFT. Path fixes: electromagnetism, structural_detection.",
     "root_module": "webroot",
-    "total_a3_modules": 112,
-    "total_i2_excluded": 8,
+    "total_a3_modules": 166,
+    "total_i2_excluded": 11,
     "total_files_catalogued": 1284,
     "total_directed_edges": 46,
-    "total_hierarchy_edges": 111,
+    "total_hierarchy_edges": 165,
     "max_depth": 3,
     "circular_dependency_count": 2,
-    "generated_at": "2026-07-02T17:05:00",
-    "round": "R3 \u2014 Full Domain Discovery",
+    "generated_at": "2026-07-03T12:12:00",
+    "round": "R4 — Full File Listing Discovery",
     "r3_new_a3_modules": 57,
     "r3_new_i2_excluded": 6,
     "r3_file_delta": 42,
@@ -24,6 +24,24 @@
     "r3_dropped_404": [
       "NoS/nos_module.json",
       "Framework_Field_Theory/fft_module.json"
+    ],
+    "r4_new_a3_modules": 54,
+    "r4_new_i2_excluded": 3,
+    "r4_file_delta": 0,
+    "r4_generated_at": "2026-07-03T12:12:00",
+    "r4_resurrected_404": [
+      "docs/NoS/NoS_module.json",
+      "docs/Framework_Field_Theory/fft_module.json"
+    ],
+    "r4_path_fixes": [
+      "electromagnetism -> docs/electromagnetism",
+      "structural_detection -> docs/Structural_Detection"
+    ],
+    "r4_aliases_noted": [
+      "docs/structural-detection-engine -> STRUCTURAL_DETECTION_ENGINE",
+      "docs/structural-integration-engine -> STRUCTURAL_INTEGRATION_ENGINE",
+      "docs/Triadic_Echo_Lattice -> rtt-tel",
+      "docs/WRSADC -> wrsadc"
     ]
   },
   "hierarchy": {
@@ -98,6 +116,21 @@
                   },
                   "UE6-INTEGRATIONS": {
                     "children": {}
+                  },
+                  "rtt-cisco": {
+                    "children": {}
+                  },
+                  "rtt-enterprise": {
+                    "children": {}
+                  },
+                  "rtt-internet2": {
+                    "children": {}
+                  },
+                  "rtt-python": {
+                    "children": {}
+                  },
+                  "rtt-qcompute": {
+                    "children": {}
                   }
                 }
               },
@@ -119,6 +152,18 @@
                     "children": {}
                   }
                 }
+              },
+              "rtt-app": {
+                "children": {}
+              },
+              "rtt-c64host": {
+                "children": {}
+              },
+              "rtt-codex": {
+                "children": {}
+              },
+              "rtt-maps": {
+                "children": {}
               }
             }
           },
@@ -126,7 +171,23 @@
             "children": {}
           },
           "research": {
-            "children": {}
+            "children": {
+              "research-bing": {
+                "children": {}
+              },
+              "research-duckduckgo": {
+                "children": {}
+              },
+              "LACTOS": {
+                "children": {}
+              },
+              "RCD": {
+                "children": {}
+              },
+              "research-wikipedia": {
+                "children": {}
+              }
+            }
           },
           "physics": {
             "children": {
@@ -203,6 +264,126 @@
             "children": {}
           },
           "incident_substrate_model": {
+            "children": {}
+          },
+          "bridges": {
+            "children": {}
+          },
+          "charts": {
+            "children": {}
+          },
+          "clients": {
+            "children": {}
+          },
+          "code": {
+            "children": {}
+          },
+          "corpus": {
+            "children": {}
+          },
+          "consciousness-substrate-model": {
+            "children": {}
+          },
+          "curriculum": {
+            "children": {}
+          },
+          "data": {
+            "children": {}
+          },
+          "datacenter-reports": {
+            "children": {}
+          },
+          "diagnosing-media-therapy": {
+            "children": {}
+          },
+          "DSRSP": {
+            "children": {}
+          },
+          "DSS": {
+            "children": {}
+          },
+          "discovery": {
+            "children": {}
+          },
+          "domain-tool-primers": {
+            "children": {}
+          },
+          "ecoechosystem": {
+            "children": {}
+          },
+          "energy": {
+            "children": {}
+          },
+          "fft": {
+            "children": {}
+          },
+          "NoS": {
+            "children": {}
+          },
+          "NIST": {
+            "children": {}
+          },
+          "pantheon-egyptian": {
+            "children": {}
+          },
+          "pantheon-yoruba": {
+            "children": {}
+          },
+          "philanthropy": {
+            "children": {}
+          },
+          "SLRP": {
+            "children": {}
+          },
+          "substrate": {
+            "children": {}
+          },
+          "SubComm": {
+            "children": {}
+          },
+          "SEA": {
+            "children": {}
+          },
+          "SMS": {
+            "children": {}
+          },
+          "TOL": {
+            "children": {}
+          },
+          "unified-resonance": {
+            "children": {}
+          },
+          "validation": {
+            "children": {}
+          },
+          "voice": {
+            "children": {}
+          },
+          "vst-embedding-stores": {
+            "children": {}
+          },
+          "vst-generative-models": {
+            "children": {}
+          },
+          "vst-llm": {
+            "children": {}
+          },
+          "vst-multi-model": {
+            "children": {}
+          },
+          "vst-protein-lm": {
+            "children": {}
+          },
+          "vst-robotics": {
+            "children": {}
+          },
+          "vst-scientific-sim": {
+            "children": {}
+          },
+          "wiki-scrolls": {
+            "children": {}
+          },
+          "wikipedia": {
             "children": {}
           }
         }
@@ -839,7 +1020,7 @@
       "version": "1.1",
       "layer": "Meta & Governance",
       "status": "Active, Canonical",
-      "purpose": "Universal root of the TriadicFrameworks ecosystem \u2014 canonical navigation-first entry point rendered as triadicframeworks.org. Parent to all child modules. AI-ready substrate.",
+      "purpose": "Universal root of the TriadicFrameworks ecosystem — canonical navigation-first entry point rendered as triadicframeworks.org. Parent to all child modules. AI-ready substrate.",
       "parent": null,
       "url": "https://www.triadicframeworks.org/",
       "classification": "A3",
@@ -947,7 +1128,7 @@
       "version": "1.1",
       "layer": "Framework-Structural",
       "status": "Active, Canonical",
-      "purpose": "Structural grammar for designing coherent, minimal, regime-aware frameworks \u2014 7 core layers (history, principles, models, structure, operators, regimes, generator) + RF-Builder.",
+      "purpose": "Structural grammar for designing coherent, minimal, regime-aware frameworks — 7 core layers (history, principles, models, structure, operators, regimes, generator) + RF-Builder.",
       "parent": "webroot",
       "url": "https://www.triadicframeworks.org/frameworks/creation_guide/",
       "classification": "A3",
@@ -1069,7 +1250,7 @@
       "version": "1.0",
       "layer": "Operator Layer",
       "status": "Active, Canonical",
-      "purpose": "Canonical RTT operator library \u2014 structural detection, integration, and teaching bundles.",
+      "purpose": "Canonical RTT operator library — structural detection, integration, and teaching bundles.",
       "parent": "webroot",
       "url": null,
       "classification": "A3",
@@ -1126,7 +1307,7 @@
       "version": "2.0",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Second-order RTT resonance-time technology layer \u2014 extended operator grammar and mid-range coherence.",
+      "purpose": "Second-order RTT resonance-time technology layer — extended operator grammar and mid-range coherence.",
       "parent": "webroot",
       "url": null,
       "classification": "A3",
@@ -1144,7 +1325,7 @@
       "version": "3.0",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Third-order RTT resonance-time technology layer \u2014 full structural integration and high-coherence regime.",
+      "purpose": "Third-order RTT resonance-time technology layer — full structural integration and high-coherence regime.",
       "parent": "webroot",
       "url": null,
       "classification": "A3",
@@ -1214,7 +1395,7 @@
       "name": "WRSADC",
       "path": "docs/TFT_3Pack_v1.3/WRSADC",
       "version": "1.3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
       "purpose": "Lightweight resonance-aware dimensional engine providing state tracking, entity observation, structural snapshots, and triadic introspection for TFT_3Pack tools.",
       "parent": "tft-3pack",
@@ -1232,9 +1413,9 @@
       "name": "TFT Core",
       "path": "docs/TFT_3Pack_v1.3/tft",
       "version": "1.3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
-      "purpose": "Core lattice of the 3Pack \u2014 CLI entrypoint, output management, and orchestration hub binding four child modules into a unified triadic runtime.",
+      "purpose": "Core lattice of the 3Pack — CLI entrypoint, output management, and orchestration hub binding four child modules into a unified triadic runtime.",
       "parent": "tft-3pack",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft",
       "classification": "A3",
@@ -1257,7 +1438,7 @@
       "version": "1.3",
       "layer": "Education & Teaching",
       "status": "Active, Canonical",
-      "purpose": "20-domain resonance-aware example curriculum \u2014 12 original academic subject suites plus 11 expansion RTT domain documents.",
+      "purpose": "20-domain resonance-aware example curriculum — 12 original academic subject suites plus 11 expansion RTT domain documents.",
       "parent": "tft-3pack",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/examples",
       "classification": "A3",
@@ -1293,7 +1474,7 @@
       "version": "1.3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Interactive sonified periodic table \u2014 maps chemical element properties to musical tones via triadic harmonic synthesis.",
+      "purpose": "Interactive sonified periodic table — maps chemical element properties to musical tones via triadic harmonic synthesis.",
       "parent": "tft-3pack",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/melodic-table-of-elements",
       "classification": "A3",
@@ -1311,7 +1492,7 @@
       "version": "1.3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Interactive DFT-powered molecular vibrational spectra explorer \u2014 tensorial light-vibration coupling, IR/Raman/SFG analysis.",
+      "purpose": "Interactive DFT-powered molecular vibrational spectra explorer — tensorial light-vibration coupling, IR/Raman/SFG analysis.",
       "parent": "tft-3pack",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/molecular-vibration-explorer",
       "classification": "A3",
@@ -1365,7 +1546,7 @@
       "version": "1.1",
       "layer": "RTT Hardware Layer",
       "status": "Active, Canonical",
-      "purpose": "Structural observability silicon module \u2014 canonical chip specification with documentation, schematics, and validation.",
+      "purpose": "Structural observability silicon module — canonical chip specification with documentation, schematics, and validation.",
       "parent": "rtt-root",
       "url": "https://www.triadicframeworks.org/rtt/D369_Chip_Spec/",
       "classification": "A3",
@@ -1381,7 +1562,7 @@
       "name": "RTT/codes",
       "path": "docs/rtt/codes",
       "version": "1.1",
-      "layer": "RTT Analytics \u2014 Metadata Layer",
+      "layer": "RTT Analytics — Metadata Layer",
       "status": "Active, Canonical",
       "purpose": "QR-compatible metadata layer: schema, validators, generators, style system, and domain examples.",
       "parent": "rtt-root",
@@ -1401,7 +1582,7 @@
       "version": "2.1",
       "layer": "RTT Deployment Layer",
       "status": "Active, Canonical",
-      "purpose": "Introspective deployment engine \u2014 capture templates, autonomous forms, deployment profiles (Coal, Finance, Earth Sims, Electron Microscopes, Robofish), corridor studio, drift diagnostics, API surface, and global scenarios (ATC, HAM, Space Force).",
+      "purpose": "Introspective deployment engine — capture templates, autonomous forms, deployment profiles (Coal, Finance, Earth Sims, Electron Microscopes, Robofish), corridor studio, drift diagnostics, API surface, and global scenarios (ATC, HAM, Space Force).",
       "parent": "rtt-root",
       "url": "https://www.triadicframeworks.org/rtt/Inside/",
       "classification": "A3",
@@ -1461,7 +1642,7 @@
       "version": "1.0",
       "layer": "RTT Dimensional",
       "status": "Active, Canonical",
-      "purpose": "Structural paradox catalogue \u2014 regime edge cases, coherence collapse modes, and inversion traps.",
+      "purpose": "Structural paradox catalogue — regime edge cases, coherence collapse modes, and inversion traps.",
       "parent": "rtt-root",
       "url": null,
       "classification": "A3",
@@ -1479,7 +1660,7 @@
       "version": "1.0",
       "layer": "RTT Dimensional",
       "status": "Active, Canonical",
-      "purpose": "Low-dimensional RTT operator grammar and substrate models (D0\u2013D3 regime).",
+      "purpose": "Low-dimensional RTT operator grammar and substrate models (D0–D3 regime).",
       "parent": "rtt-root",
       "url": null,
       "classification": "A3",
@@ -1513,13 +1694,13 @@
     "electromagnetism": {
       "canon_tag": "electromagnetism",
       "name": "Electromagnetism",
-      "path": "docs/theories/physics/electromagnetism",
+      "path": "docs/electromagnetism",
       "version": "1.0",
       "layer": "Theory",
       "status": "Active, Canonical",
       "purpose": "RTT-aligned electromagnetic theory module.",
       "parent": "physics",
-      "url": null,
+      "url": "https://www.triadicframeworks.org/electromagnetism/",
       "classification": "A3",
       "depth": 2,
       "stats": {
@@ -1697,7 +1878,7 @@
       "version": "1.0",
       "layer": "Operator Layer",
       "status": "Active, Canonical",
-      "purpose": "Teaching bundle for RTT operators \u2014 guided examples, worked triads, and instructional scaffolds.",
+      "purpose": "Teaching bundle for RTT operators — guided examples, worked triads, and instructional scaffolds.",
       "parent": "OPERATORS",
       "url": null,
       "classification": "A3",
@@ -1711,13 +1892,13 @@
     "structural_detection": {
       "canon_tag": "structural_detection",
       "name": "Structural Detection",
-      "path": "docs/rtt/Structural_Detection",
+      "path": "docs/Structural_Detection",
       "version": "1.0",
       "layer": "Operator Layer",
       "status": "Active, Canonical",
       "purpose": "RTT/1 operator for detecting structural states, drift envelopes, regime shifts, and coherence fields.",
       "parent": "OPERATORS",
-      "url": null,
+      "url": "https://www.triadicframeworks.org/Structural_Detection/",
       "classification": "A3",
       "depth": 2,
       "stats": {
@@ -1733,7 +1914,7 @@
       "version": "1.0",
       "layer": "Integration & Deployment",
       "status": "Active, Canonical",
-      "purpose": "Unreal Engine 6 integration \u2014 RTT structural observability bridge for real-time 3D environments.",
+      "purpose": "Unreal Engine 6 integration — RTT structural observability bridge for real-time 3D environments.",
       "parent": "rtt-inside",
       "url": null,
       "classification": "A3",
@@ -1749,7 +1930,7 @@
       "name": "TOPS",
       "path": "docs/TFT_3Pack_v1.3/tft/tops",
       "version": "1.3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
       "purpose": "Triconceptual simulation engine exploring perception through direct, reflective, and inversion modes with resonance clarity.",
       "parent": "tft-core",
@@ -1767,9 +1948,9 @@
       "name": "ENTFT",
       "path": "docs/TFT_3Pack_v1.3/tft/entft",
       "version": "1.3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
-      "purpose": "Quantum-hostile encryption and entanglement layer \u2014 divide-by-zero obfuscation, triadic resonance security, ternary-grade modularity.",
+      "purpose": "Quantum-hostile encryption and entanglement layer — divide-by-zero obfuscation, triadic resonance security, ternary-grade modularity.",
       "parent": "tft-core",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/entft",
       "classification": "A3",
@@ -1785,9 +1966,9 @@
       "name": "Nous",
       "path": "docs/TFT_3Pack_v1.3/tft/nous",
       "version": "1.3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
-      "purpose": "Symbolic cognition layer encoding TFT core logic \u2014 triadic, ternary, and symbolic. Provides the conceptual backbone for simulations via 12-domain bot fleet, logic shells, resonance tooling, and runtime modules.",
+      "purpose": "Symbolic cognition layer encoding TFT core logic — triadic, ternary, and symbolic. Provides the conceptual backbone for simulations via 12-domain bot fleet, logic shells, resonance tooling, and runtime modules.",
       "parent": "tft-core",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/nous",
       "classification": "A3",
@@ -1805,7 +1986,7 @@
       "version": "1.3",
       "layer": "Research & Validation",
       "status": "Active, Canonical",
-      "purpose": "Experimental wing of the 3Pack \u2014 harmonic overlays, observer states, mirror geometry, temporal simulation, and symbolic glyph rendering.",
+      "purpose": "Experimental wing of the 3Pack — harmonic overlays, observer states, mirror geometry, temporal simulation, and symbolic glyph rendering.",
       "parent": "tft-core",
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/resonance-labs",
       "classification": "A3",
@@ -1823,7 +2004,7 @@
       "version": "1.0",
       "layer": "RTT Deployment Layer",
       "status": "Active, Canonical",
-      "purpose": "Benchmark suite for RTT Inside deployment profiles \u2014 performance baselines, TEL exports, and regime comparison standards.",
+      "purpose": "Benchmark suite for RTT Inside deployment profiles — performance baselines, TEL exports, and regime comparison standards.",
       "parent": "rtt-inside",
       "url": null,
       "classification": "A3",
@@ -1841,7 +2022,7 @@
       "version": "1.0",
       "layer": "RTT Deployment Layer",
       "status": "Active, Canonical",
-      "purpose": "RTT Temporal Event Log \u2014 structured event capture for deployment session tracking and replay.",
+      "purpose": "RTT Temporal Event Log — structured event capture for deployment session tracking and replay.",
       "parent": "rtt-inside",
       "url": null,
       "classification": "A3",
@@ -1859,7 +2040,7 @@
       "version": "1.0",
       "layer": "Spacetime",
       "status": "Active, Canonical",
-      "purpose": "Spacetime substrate module \u2014 triadic time, framework field theory, and paradox canon integration.",
+      "purpose": "Spacetime substrate module — triadic time, framework field theory, and paradox canon integration.",
       "parent": "rtt-inside",
       "url": null,
       "classification": "A3",
@@ -1877,7 +2058,7 @@
       "version": "1.0",
       "layer": "Spacetime",
       "status": "Active, Canonical",
-      "purpose": "Spacetime substrate module \u2014 triadic time, virtual worlds coherence, and paradox canon integration.",
+      "purpose": "Spacetime substrate module — triadic time, virtual worlds coherence, and paradox canon integration.",
       "parent": "rtt-inside",
       "url": null,
       "classification": "A3",
@@ -1987,7 +2168,7 @@
       "canon_tag": "docs-principles",
       "name": "Principles",
       "classification": "A3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
       "purpose": "Foundational structural principles governing all TriadicFrameworks modules.",
       "path": "docs/PRINCIPLES",
@@ -2008,7 +2189,7 @@
       "classification": "A3",
       "layer": "Education & Teaching",
       "status": "Active, Canonical",
-      "purpose": "Rapid onboarding guide \u2014 structural entry point for new contributors and AIs.",
+      "purpose": "Rapid onboarding guide — structural entry point for new contributors and AIs.",
       "path": "docs/QUICKSTART",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/QUICKSTART/",
@@ -2025,9 +2206,9 @@
       "canon_tag": "docs-glossary",
       "name": "Glossary",
       "classification": "A3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
-      "purpose": "Complete canonical RTT grammar \u2014 dimensional, triadic, operator, substrate, supsphere, and energy terms.",
+      "purpose": "Complete canonical RTT grammar — dimensional, triadic, operator, substrate, supsphere, and energy terms.",
       "path": "docs/GLOSSARY",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/GLOSSARY/",
@@ -2044,9 +2225,9 @@
       "canon_tag": "grammar",
       "name": "Grammar",
       "classification": "A3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
-      "purpose": "Minimal canonical grammar for all modules \u2014 operators, dimensional primitives, regime markers, coherence rules, cross-module propagation.",
+      "purpose": "Minimal canonical grammar for all modules — operators, dimensional primitives, regime markers, coherence rules, cross-module propagation.",
       "path": "docs/Grammar",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/Grammar/",
@@ -2065,7 +2246,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Minimal constitutional AI instrument architecture \u2014 NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack.",
+      "purpose": "Minimal constitutional AI instrument architecture — NoS AI, Regime Header, Lineage Ledger, Minimal AI Stack.",
       "path": "docs/ai",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/ai/",
@@ -2087,7 +2268,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Structural AI session consciousness \u2014 Awareness, Continuity, Reflection, Drift Detection, Drift Repair, and Regime-Shift operators. RTT/1-2-3.",
+      "purpose": "Structural AI session consciousness — Awareness, Continuity, Reflection, Drift Detection, Drift Repair, and Regime-Shift operators. RTT/1-2-3.",
       "path": "docs/ai/session/consciousness",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/ai/session/consciousness/",
@@ -2125,7 +2306,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Seed substrate for AI resonance initialization \u2014 coherence priming for AI agents operating within RTT.",
+      "purpose": "Seed substrate for AI resonance initialization — coherence priming for AI agents operating within RTT.",
       "path": "docs/AI_Resonance_Seed",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/AI_Resonance_Seed/",
@@ -2239,7 +2420,7 @@
       "classification": "A3",
       "layer": "Theory",
       "status": "Active, Canonical",
-      "purpose": "Quantum coherence phenomena as RTT coherence-field substrates \u2014 decoherence, entanglement, and regime transitions.",
+      "purpose": "Quantum coherence phenomena as RTT coherence-field substrates — decoherence, entanglement, and regime transitions.",
       "path": "docs/quantum-coherence",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/quantum-coherence/",
@@ -2296,7 +2477,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Twelfth-order RTT resonance-time technology layer \u2014 advanced operator grammar and high-range coherence substrate.",
+      "purpose": "Twelfth-order RTT resonance-time technology layer — advanced operator grammar and high-range coherence substrate.",
       "path": "docs/rtt/12",
       "version": "12.0",
       "url": "https://www.triadicframeworks.org/rtt/12/",
@@ -2315,7 +2496,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Harmonic stability profiling substrate for RTT operator fields \u2014 regime-resonance calibration and drift detection.",
+      "purpose": "Harmonic stability profiling substrate for RTT operator fields — regime-resonance calibration and drift detection.",
       "path": "docs/rtt/Harmonic_Stability_Profile",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/Harmonic_Stability_Profile/",
@@ -2334,7 +2515,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Directed substrate flow modeling within RTT \u2014 operator propagation paths, regime transitions, and coherence routing.",
+      "purpose": "Directed substrate flow modeling within RTT — operator propagation paths, regime transitions, and coherence routing.",
       "path": "docs/rtt/Substrate_Flow",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/Substrate_Flow/",
@@ -2353,7 +2534,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Inverted-star operator topology \u2014 reverse-resonance substrate mapping for structural inversion detection.",
+      "purpose": "Inverted-star operator topology — reverse-resonance substrate mapping for structural inversion detection.",
       "path": "docs/rtt/The_Inverted_Star",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/The_Inverted_Star/",
@@ -2372,7 +2553,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Core RTT substrate definitions \u2014 canonical operator primitives, regime axioms, and coherence invariants.",
+      "purpose": "Core RTT substrate definitions — canonical operator primitives, regime axioms, and coherence invariants.",
       "path": "docs/rtt/core",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/core/",
@@ -2391,7 +2572,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Minimal RTT micro-core \u2014 the smallest self-consistent set of RTT operator primitives for embedded/constrained contexts.",
+      "purpose": "Minimal RTT micro-core — the smallest self-consistent set of RTT operator primitives for embedded/constrained contexts.",
       "path": "docs/rtt/micro_core",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/micro_core/",
@@ -2410,7 +2591,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "RTT structural sort operators \u2014 regime-aware ordering and classification of substrate elements.",
+      "purpose": "RTT structural sort operators — regime-aware ordering and classification of substrate elements.",
       "path": "docs/rtt/sort",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/sort/",
@@ -2429,7 +2610,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "RTT extension hooks and plugin substrate \u2014 canonical interface for third-party operator extensions.",
+      "purpose": "RTT extension hooks and plugin substrate — canonical interface for third-party operator extensions.",
       "path": "docs/rtt/extension",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/extension/",
@@ -2448,7 +2629,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "RTT guild substrate \u2014 collaborative operator communities, role definitions, and coherence contracts.",
+      "purpose": "RTT guild substrate — collaborative operator communities, role definitions, and coherence contracts.",
       "path": "docs/rtt/guild",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/guild/",
@@ -2467,7 +2648,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "RTT operator and substrate store \u2014 canonical distribution layer for versioned RTT components.",
+      "purpose": "RTT operator and substrate store — canonical distribution layer for versioned RTT components.",
       "path": "docs/rtt/store",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/store/",
@@ -2486,7 +2667,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "Software Development Kit for RTT integration \u2014 API bindings, operator scaffolding, and substrate helpers.",
+      "purpose": "Software Development Kit for RTT integration — API bindings, operator scaffolding, and substrate helpers.",
       "path": "docs/rtt/sdk",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/rtt/sdk/",
@@ -2505,7 +2686,7 @@
       "classification": "A3",
       "layer": "RTT Technology Layer",
       "status": "Active, Canonical",
-      "purpose": "RTT REST/JSON API specification \u2014 canonical machine-readable interface for RTT operator invocation.",
+      "purpose": "RTT REST/JSON API specification — canonical machine-readable interface for RTT operator invocation.",
       "path": "docs/api/rtt",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/api/rtt/",
@@ -2543,7 +2724,7 @@
       "classification": "A3",
       "layer": "Substrate Grammar",
       "status": "Active, Canonical",
-      "purpose": "Structural substrate for condition-state operators \u2014 environmental and contextual regime modeling.",
+      "purpose": "Structural substrate for condition-state operators — environmental and contextual regime modeling.",
       "path": "docs/Conditions_Substrate_Model",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/Conditions_Substrate_Model/",
@@ -2560,9 +2741,9 @@
       "canon_tag": "mode",
       "name": "Mode",
       "classification": "A3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
-      "purpose": "Modal operator substrate \u2014 canonical mode-switching, regime-mode mapping, and coherence-mode interactions.",
+      "purpose": "Modal operator substrate — canonical mode-switching, regime-mode mapping, and coherence-mode interactions.",
       "path": "docs/Mode",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/Mode/",
@@ -2579,9 +2760,9 @@
       "canon_tag": "opacity",
       "name": "Opacity",
       "classification": "A3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
-      "purpose": "Opacity substrate \u2014 structural analysis of visibility, occlusion, and partial-coherence operators within RTT.",
+      "purpose": "Opacity substrate — structural analysis of visibility, occlusion, and partial-coherence operators within RTT.",
       "path": "docs/Opacity",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/Opacity/",
@@ -2598,7 +2779,7 @@
       "canon_tag": "coeus",
       "name": "Coeus",
       "classification": "A3",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "status": "Active, Canonical",
       "purpose": "Mythic-rational operator module: structural intuition, symbolic operators, triadic recursion, multi-agent sandbox, coin protocol, lineage-locked cognition.",
       "path": "docs/Coeus",
@@ -2619,7 +2800,7 @@
       "classification": "A3",
       "layer": "Tools & Infrastructure",
       "status": "Active, Canonical",
-      "purpose": "Structural resilience validation tool \u2014 checks operator coherence, substrate stability, and regime drift across 108 paradox stress tests.",
+      "purpose": "Structural resilience validation tool — checks operator coherence, substrate stability, and regime drift across 108 paradox stress tests.",
       "path": "docs/resilience-checker",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/resilience-checker/",
@@ -2638,7 +2819,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Cultural substrate analysis using RTT operators \u2014 social resonance, symbolic coherence, and regime-cultural mapping.",
+      "purpose": "Cultural substrate analysis using RTT operators — social resonance, symbolic coherence, and regime-cultural mapping.",
       "path": "docs/culture",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/culture/",
@@ -2657,7 +2838,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Economic systems modeled as RTT substrates \u2014 supply/demand operators, market regimes, and resonance-based value flows.",
+      "purpose": "Economic systems modeled as RTT substrates — supply/demand operators, market regimes, and resonance-based value flows.",
       "path": "docs/economics",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/economics/",
@@ -2676,7 +2857,7 @@
       "classification": "A3",
       "layer": "Education & Teaching",
       "status": "Active, Canonical",
-      "purpose": "Educational substrate design using RTT \u2014 learning operators, coherence-progression mapping, and pedagogical regime structures.",
+      "purpose": "Educational substrate design using RTT — learning operators, coherence-progression mapping, and pedagogical regime structures.",
       "path": "docs/education",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/education/",
@@ -2695,7 +2876,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Human capital substrate modeling \u2014 role operators, organizational coherence, and workforce-regime analysis.",
+      "purpose": "Human capital substrate modeling — role operators, organizational coherence, and workforce-regime analysis.",
       "path": "docs/human-resources",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/human-resources/",
@@ -2714,7 +2895,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Inverted economic substrate \u2014 structural analysis of non-standard economic regimes, scarcity inversion, and anti-market operators.",
+      "purpose": "Inverted economic substrate — structural analysis of non-standard economic regimes, scarcity inversion, and anti-market operators.",
       "path": "docs/Inverted_Economics",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/Inverted_Economics/",
@@ -2733,7 +2914,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Justice substrate analysis \u2014 legal coherence, equity operators, and institutional-regime fairness modeling.",
+      "purpose": "Justice substrate analysis — legal coherence, equity operators, and institutional-regime fairness modeling.",
       "path": "docs/justice",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/justice/",
@@ -2752,7 +2933,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Language substrate in RTT \u2014 semantic operators, syntactic-regime mapping, and triadic grammar propagation across linguistic domains.",
+      "purpose": "Language substrate in RTT — semantic operators, syntactic-regime mapping, and triadic grammar propagation across linguistic domains.",
       "path": "docs/language",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/language/",
@@ -2771,7 +2952,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Legal substrate modeling using RTT \u2014 normative operators, jurisdiction-regime mapping, and rule-coherence analysis.",
+      "purpose": "Legal substrate modeling using RTT — normative operators, jurisdiction-regime mapping, and rule-coherence analysis.",
       "path": "docs/Law",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/Law/",
@@ -2790,7 +2971,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Medical substrate in RTT \u2014 clinical operators, diagnosis-regime mapping, and biological-resonance coherence.",
+      "purpose": "Medical substrate in RTT — clinical operators, diagnosis-regime mapping, and biological-resonance coherence.",
       "path": "docs/medicine",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/medicine/",
@@ -2809,7 +2990,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Musical substrate analysis in RTT \u2014 harmonic operators, rhythmic-regime patterns, and acoustic resonance modeling.",
+      "purpose": "Musical substrate analysis in RTT — harmonic operators, rhythmic-regime patterns, and acoustic resonance modeling.",
       "path": "docs/music",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/music/",
@@ -2828,7 +3009,7 @@
       "classification": "A3",
       "layer": "Theory",
       "status": "Active, Canonical",
-      "purpose": "Neuroscientific substrate in RTT \u2014 neural operator mapping, synaptic-regime coherence, and consciousness-field interactions.",
+      "purpose": "Neuroscientific substrate in RTT — neural operator mapping, synaptic-regime coherence, and consciousness-field interactions.",
       "path": "docs/neuroscience",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/neuroscience/",
@@ -2847,7 +3028,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Philosophical substrate in RTT \u2014 ontological operators, epistemic-regime analysis, and metaphysical coherence mapping.",
+      "purpose": "Philosophical substrate in RTT — ontological operators, epistemic-regime analysis, and metaphysical coherence mapping.",
       "path": "docs/philosophy",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/philosophy/",
@@ -2866,7 +3047,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Psychological substrate modeling in RTT \u2014 behavioral operators, cognitive-regime patterns, and mental-resonance coherence.",
+      "purpose": "Psychological substrate modeling in RTT — behavioral operators, cognitive-regime patterns, and mental-resonance coherence.",
       "path": "docs/psychology",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/psychology/",
@@ -2885,7 +3066,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Sociological substrate in RTT \u2014 social-structure operators, collective-regime dynamics, and group-coherence analysis.",
+      "purpose": "Sociological substrate in RTT — social-structure operators, collective-regime dynamics, and group-coherence analysis.",
       "path": "docs/sociology",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/sociology/",
@@ -2904,7 +3085,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Tax-system substrate modeling in RTT \u2014 fiscal operators, policy-regime mapping, and redistribution-coherence analysis.",
+      "purpose": "Tax-system substrate modeling in RTT — fiscal operators, policy-regime mapping, and redistribution-coherence analysis.",
       "path": "docs/taxes",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/taxes/",
@@ -2923,7 +3104,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Technology substrate in RTT \u2014 innovation operators, techno-regime mapping, and digital-resonance coherence.",
+      "purpose": "Technology substrate in RTT — innovation operators, techno-regime mapping, and digital-resonance coherence.",
       "path": "docs/technology",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/technology/",
@@ -2942,7 +3123,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Audio-industry-reviewed substrate \u2014 acoustic operator validation, sound-regime alignment, and professional audio coherence.",
+      "purpose": "Audio-industry-reviewed substrate — acoustic operator validation, sound-regime alignment, and professional audio coherence.",
       "path": "docs/audio_industry_reviewed",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/audio_industry_reviewed/",
@@ -2961,7 +3142,7 @@
       "classification": "A3",
       "layer": "Applied Domain Models",
       "status": "Active, Canonical",
-      "purpose": "Digital signal processing substrate in RTT \u2014 signal operators, frequency-regime mapping, and noise-resonance-signal (NRS) coherence.",
+      "purpose": "Digital signal processing substrate in RTT — signal operators, frequency-regime mapping, and noise-resonance-signal (NRS) coherence.",
       "path": "docs/dsp",
       "version": "1.0",
       "url": "https://www.triadicframeworks.org/dsp/",
@@ -2973,6 +3154,762 @@
       "submodule_count": 0,
       "enriched_r3": false,
       "enrichment_source": null
+    },
+    "bridges": {
+      "id": "bridges",
+      "name": "Bridges",
+      "path": "docs/bridges",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/bridges/",
+      "purpose": "Cross-domain bridging layer for TriadicFrameworks module interoperability and substrate connections.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "charts": {
+      "id": "charts",
+      "name": "Charts",
+      "path": "docs/charts",
+      "layer": "Tools & Infrastructure",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/charts/",
+      "purpose": "Canonical charting and data visualization module for the TFT ecosystem.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "clients": {
+      "id": "clients",
+      "name": "Clients",
+      "path": "docs/clients",
+      "layer": "Tools & Infrastructure",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/clients/",
+      "purpose": "Client-facing substrate interface definitions and deployment clients.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "code": {
+      "id": "code",
+      "name": "Code",
+      "path": "docs/code",
+      "layer": "Tools & Infrastructure",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/code/",
+      "purpose": "RTT code resource library and canonical code schema definitions.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "corpus": {
+      "id": "corpus",
+      "name": "Corpus",
+      "path": "docs/corpus",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/corpus/",
+      "purpose": "Canonical corpus of TriadicFrameworks texts, documents, and reference materials.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "consciousness-substrate-model": {
+      "id": "consciousness-substrate-model",
+      "name": "Consciousness Substrate Model",
+      "path": "docs/consciousness_substrate_model",
+      "layer": "Substrate Grammar",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/consciousness_substrate_model/",
+      "purpose": "Substrate model for mapping consciousness patterns within RTT dimensional frameworks.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "curriculum": {
+      "id": "curriculum",
+      "name": "Curriculum",
+      "path": "docs/curriculum",
+      "layer": "Education & Teaching",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/curriculum/",
+      "purpose": "Structured curriculum and learning pathways for TriadicFrameworks education.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "data": {
+      "id": "data",
+      "name": "Data",
+      "path": "docs/data",
+      "layer": "Tools & Infrastructure",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/data/",
+      "purpose": "Core data substrate layer — schemas, pipelines, and data governance for TFT.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "datacenter-reports": {
+      "id": "datacenter-reports",
+      "name": "Datacenter Reports",
+      "path": "docs/datacenter_reports",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/datacenter_reports/",
+      "purpose": "Datacenter infrastructure reports and substrate analysis in RTT dimensional context.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "diagnosing-media-therapy": {
+      "id": "diagnosing-media-therapy",
+      "name": "Diagnosing Media Therapy",
+      "path": "docs/diagnosing_media_therapy",
+      "layer": "Applied Domain Models",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/diagnosing_media_therapy/",
+      "purpose": "Applied domain module for media diagnosis and therapeutic substrate pattern analysis.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "DSRSP": {
+      "id": "DSRSP",
+      "name": "Dimensional Substrate Regime Scanning Protocol",
+      "path": "docs/dimensional_substrate_regime_scanning_protocol",
+      "layer": "RTT Dimensional",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/dimensional_substrate_regime_scanning_protocol/",
+      "purpose": "Protocol for scanning and classifying dimensional substrate regimes using RTT operators.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "DSS": {
+      "id": "DSS",
+      "name": "Dimensional Substrate Structures",
+      "path": "docs/dimensional_substrate_structures",
+      "layer": "RTT Dimensional",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/dimensional_substrate_structures/",
+      "purpose": "Structural definitions for dimensional substrate configurations in RTT.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "discovery": {
+      "id": "discovery",
+      "name": "Discovery",
+      "path": "docs/discovery",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/discovery/",
+      "purpose": "Module for substrate discovery protocols, pattern detection, and canonical exploration tools.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "domain-tool-primers": {
+      "id": "domain-tool-primers",
+      "name": "Domain Tool Primers",
+      "path": "docs/domain_tool_primers",
+      "layer": "Education & Teaching",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/domain_tool_primers/",
+      "purpose": "Introductory primers for domain-specific tools and RTT substrate applications.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "ecoechosystem": {
+      "id": "ecoechosystem",
+      "name": "Ecoechosystem",
+      "path": "docs/ecoechosystem",
+      "layer": "Applied Domain Models",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/ecoechosystem/",
+      "purpose": "Ecological echo system model — substrate patterns in environmental and biological systems.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "energy": {
+      "id": "energy",
+      "name": "Energy",
+      "path": "docs/energy",
+      "layer": "Theories",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/energy/",
+      "purpose": "Energy substrate model — resonance-time analysis of energy systems and field dynamics.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "fft": {
+      "id": "fft",
+      "name": "Framework Field Theory",
+      "path": "docs/Framework_Field_Theory",
+      "layer": "Core Frameworks — Structural Spine",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/Framework_Field_Theory/",
+      "purpose": "Framework Field Theory — unified field theory of TriadicFrameworks substrate interactions. Resurrected from R3 404.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "NoS": {
+      "id": "NoS",
+      "name": "Nature of Substrate",
+      "path": "docs/NoS",
+      "layer": "Substrate Grammar",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/NoS/",
+      "purpose": "Canonical treatise on the nature of substrate in Resonance-Time Theory. Resurrected from R3 404.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-app": {
+      "id": "rtt-app",
+      "name": "RTT App",
+      "path": "docs/rtt/app",
+      "layer": "RTT Deployment Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "rtt-root",
+      "url": "https://www.triadicframeworks.org/rtt/app/",
+      "purpose": "RTT application layer — canonical app deployment framework for RTT-powered interfaces.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-c64host": {
+      "id": "rtt-c64host",
+      "name": "RTT C64 Host",
+      "path": "docs/rtt/c64host",
+      "layer": "RTT Hardware Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "rtt-root",
+      "url": "https://www.triadicframeworks.org/rtt/c64host/",
+      "purpose": "RTT substrate engine hosted on Commodore 64 architecture — vintage hardware integration.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-codex": {
+      "id": "rtt-codex",
+      "name": "RTT Codex",
+      "path": "docs/rtt/codex",
+      "layer": "RTT Technology Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "rtt-root",
+      "url": "https://www.triadicframeworks.org/rtt/codex/",
+      "purpose": "Canonical RTT codex — master reference index of operators, codes, and substrate definitions.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-maps": {
+      "id": "rtt-maps",
+      "name": "RTT Maps",
+      "path": "docs/rtt/maps",
+      "layer": "RTT Technology Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "rtt-root",
+      "url": "https://www.triadicframeworks.org/rtt/maps/",
+      "purpose": "Dimensional substrate mapping layer — spatial and resonance-time coordinate systems.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-cisco": {
+      "id": "rtt-cisco",
+      "name": "RTT Inside — Cisco",
+      "path": "docs/rtt/Inside/Cisco",
+      "layer": "RTT Deployment Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 3,
+      "parent": "rtt-inside",
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Cisco/",
+      "purpose": "RTT substrate integration for Cisco network infrastructure.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-enterprise": {
+      "id": "rtt-enterprise",
+      "name": "RTT Inside — Enterprise",
+      "path": "docs/rtt/Inside/Enterprise",
+      "layer": "RTT Deployment Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 3,
+      "parent": "rtt-inside",
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Enterprise/",
+      "purpose": "Enterprise substrate extension layer for RTT — clarity, coherence, regime, and triad-role schemas.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-internet2": {
+      "id": "rtt-internet2",
+      "name": "RTT Inside — Internet2",
+      "path": "docs/rtt/Inside/Internet2",
+      "layer": "RTT Deployment Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 3,
+      "parent": "rtt-inside",
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Internet2/",
+      "purpose": "RTT substrate integration for Internet2 high-performance academic network infrastructure.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-python": {
+      "id": "rtt-python",
+      "name": "RTT Inside — Python",
+      "path": "docs/rtt/Inside/Python",
+      "layer": "RTT Deployment Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 3,
+      "parent": "rtt-inside",
+      "url": "https://www.triadicframeworks.org/rtt/Inside/Python/",
+      "purpose": "Python binding layer for RTT substrate operators and dimensional engine.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "rtt-qcompute": {
+      "id": "rtt-qcompute",
+      "name": "RTT Inside — qCompute",
+      "path": "docs/rtt/Inside/qCompute",
+      "layer": "RTT Hardware Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 3,
+      "parent": "rtt-inside",
+      "url": "https://www.triadicframeworks.org/rtt/Inside/qCompute/",
+      "purpose": "Quantum compute substrate integration — RTT operators mapped to quantum circuit models.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "NIST": {
+      "id": "NIST",
+      "name": "NIST",
+      "path": "docs/NIST",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/NIST/",
+      "purpose": "NIST standards integration — canonical reference layer for measurement and protocol alignment.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "pantheon-egyptian": {
+      "id": "pantheon-egyptian",
+      "name": "Egyptian Pantheon",
+      "path": "docs/pantheons/egyptian",
+      "layer": "Applied Domain Models",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/pantheons/egyptian/",
+      "purpose": "RTT substrate mapping of Egyptian mythological structures and resonance archetypes.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "pantheon-yoruba": {
+      "id": "pantheon-yoruba",
+      "name": "Yoruba Pantheon",
+      "path": "docs/pantheons/yoruba",
+      "layer": "Applied Domain Models",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/pantheons/yoruba/",
+      "purpose": "RTT substrate mapping of Yoruba Orisha system and resonance archetypes.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "philanthropy": {
+      "id": "philanthropy",
+      "name": "Philanthropy",
+      "path": "docs/philanthropy",
+      "layer": "Applied Domain Models",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/philanthropy/",
+      "purpose": "Philanthropic substrate model — ethical resource distribution through RTT lens.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "research-bing": {
+      "id": "research-bing",
+      "name": "Research — Bing",
+      "path": "docs/Research/bing",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "research",
+      "url": "https://www.triadicframeworks.org/Research/bing/",
+      "purpose": "Bing search engine substrate integration for RTT research and discovery.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "research-duckduckgo": {
+      "id": "research-duckduckgo",
+      "name": "Research — DuckDuckGo",
+      "path": "docs/Research/duckduckgo",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "research",
+      "url": "https://www.triadicframeworks.org/Research/duckduckgo/",
+      "purpose": "DuckDuckGo search substrate integration for privacy-respecting RTT research.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "LACTOS": {
+      "id": "LACTOS",
+      "name": "LACTOS",
+      "path": "docs/Research/lactos",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "research",
+      "url": "https://www.triadicframeworks.org/Research/lactos/",
+      "purpose": "LACTOS research substrate — canonical research substrate oscillation model (RTT).",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "RCD": {
+      "id": "RCD",
+      "name": "RCD",
+      "path": "docs/Research/nist",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "research",
+      "url": "https://www.triadicframeworks.org/Research/nist/",
+      "purpose": "Resonance Classification Dictionary — NIST-aligned canonical substrate pattern classification.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "research-wikipedia": {
+      "id": "research-wikipedia",
+      "name": "Research — Wikipedia",
+      "path": "docs/Research/wikipedia",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 2,
+      "parent": "research",
+      "url": "https://www.triadicframeworks.org/Research/wikipedia/",
+      "purpose": "Wikipedia substrate integration for RTT canonical research and cross-reference.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "SLRP": {
+      "id": "SLRP",
+      "name": "Structural Life Regime Profiles",
+      "path": "docs/structural_life_regime_profiles",
+      "layer": "Substrate Grammar",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/structural_life_regime_profiles/",
+      "purpose": "Canonical profiles of structural life regimes — substrate classification across biological, social, and technological domains.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "substrate": {
+      "id": "substrate",
+      "name": "Substrate",
+      "path": "docs/substrate",
+      "layer": "Substrate Grammar",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/substrate/",
+      "purpose": "Root substrate module — foundational definitions, schemas, and canonical substrate grammar.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "SubComm": {
+      "id": "SubComm",
+      "name": "Substrate Communications",
+      "path": "docs/substrate_communications",
+      "layer": "Substrate Grammar",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/substrate_communications/",
+      "purpose": "Substrate communications layer — protocols for inter-substrate messaging and signal propagation.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "SEA": {
+      "id": "SEA",
+      "name": "Substrate Exposure Assay",
+      "path": "docs/substrate_exposure_assay",
+      "layer": "Substrate Grammar",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/substrate_exposure_assay/",
+      "purpose": "Substrate exposure assay — measurement and classification of substrate exposure patterns.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "SMS": {
+      "id": "SMS",
+      "name": "Substrate Mind Science",
+      "path": "docs/substrate_mind_science",
+      "layer": "Substrate Grammar",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/substrate_mind_science/",
+      "purpose": "Substrate mind science — RTT-mapped cognitive substrate patterns and consciousness models.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "TOL": {
+      "id": "TOL",
+      "name": "Triadic Observer Layer",
+      "path": "docs/triadic_observer_layer",
+      "layer": "RTT Dimensional",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/triadic_observer_layer/",
+      "purpose": "Triadic observer layer — canonical framework for dimensional observation in RTT.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "unified-resonance": {
+      "id": "unified-resonance",
+      "name": "Unified Resonance",
+      "path": "docs/unified_resonance",
+      "layer": "RTT Technology Layer",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/unified_resonance/",
+      "purpose": "Unified resonance model — convergent substrate field theory for all RTT operators.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "validation": {
+      "id": "validation",
+      "name": "Validation",
+      "path": "docs/validation",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/validation/",
+      "purpose": "Canonical validation protocols and substrate verification tools for TFT modules.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "voice": {
+      "id": "voice",
+      "name": "Voice",
+      "path": "docs/voice",
+      "layer": "Tools & Infrastructure",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/voice/",
+      "purpose": "Voice substrate layer — RTT-enabled voice interface and audio delivery systems.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "vst-embedding-stores": {
+      "id": "vst-embedding-stores",
+      "name": "VST for Embedding Stores & Vector Databases",
+      "path": "docs/vst_for_embedding_stores_vector_databases",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/vst_for_embedding_stores_vector_databases/",
+      "purpose": "Vectorized substrate template for embedding stores and vector database alignment.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "vst-generative-models": {
+      "id": "vst-generative-models",
+      "name": "VST for Generative Models",
+      "path": "docs/vst_for_generative_models",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/vst_for_generative_models/",
+      "purpose": "Vectorized substrate template for generative model integration with RTT.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "vst-llm": {
+      "id": "vst-llm",
+      "name": "VST for Large Language Models",
+      "path": "docs/vst_for_large_language_models",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/vst_for_large_language_models/",
+      "purpose": "Vectorized substrate template for LLM alignment with Resonance-Time Theory.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "vst-multi-model": {
+      "id": "vst-multi-model",
+      "name": "VST for Multi-Model Alignment",
+      "path": "docs/vst_for_multi_model_alignment",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/vst_for_multi_model_alignment/",
+      "purpose": "Vectorized substrate template for multi-model alignment and cross-architecture substrate coherence.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "vst-protein-lm": {
+      "id": "vst-protein-lm",
+      "name": "VST for Protein Language Models",
+      "path": "docs/vst_for_protein_language_models",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/vst_for_protein_language_models/",
+      "purpose": "Vectorized substrate template for protein language model substrate alignment.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "vst-robotics": {
+      "id": "vst-robotics",
+      "name": "VST for Robotics & Control Policies",
+      "path": "docs/vst_for_robotics_and_control_policies",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/vst_for_robotics_and_control_policies/",
+      "purpose": "Vectorized substrate template for robotics substrate integration and control policy alignment.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "vst-scientific-sim": {
+      "id": "vst-scientific-sim",
+      "name": "VST for Scientific Simulators",
+      "path": "docs/vst_for_scientific_simulators",
+      "layer": "Integration & Deployment",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/vst_for_scientific_simulators/",
+      "purpose": "Vectorized substrate template for scientific simulation alignment with RTT dimensional models.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "wiki-scrolls": {
+      "id": "wiki-scrolls",
+      "name": "Wiki Scrolls",
+      "path": "docs/wiki_scrolls",
+      "layer": "Tools & Infrastructure",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/wiki_scrolls/",
+      "purpose": "Canonical wiki scroll library — structured knowledge artifacts in TFT scroll format.",
+      "file_count": 0,
+      "enriched_r4": true
+    },
+    "wikipedia": {
+      "id": "wikipedia",
+      "name": "Wikipedia",
+      "path": "docs/wikipedia",
+      "layer": "Research & Validation",
+      "status": "Active, Canonical",
+      "classification": "A3",
+      "depth": 1,
+      "parent": "webroot",
+      "url": "https://www.triadicframeworks.org/wikipedia/",
+      "purpose": "Wikipedia canonical integration — top-level substrate reference layer for TFT encyclopedia content.",
+      "file_count": 0,
+      "enriched_r4": true
     }
   },
   "edges": [
@@ -3258,7 +4195,7 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/schemas",
-      "reason": "Pure infrastructure \u2014 JSON schema directory only. No functional canonical content."
+      "reason": "Pure infrastructure — JSON schema directory only. No functional canonical content."
     },
     {
       "canon_tag": "ideas-sandbox",
@@ -3266,7 +4203,7 @@
       "classification": "I2",
       "layer": "Ideation Layer",
       "path": "docs/_ideas",
-      "reason": "Non-Canonical status \u2014 ideation sandbox, not yet promoted to functional canon."
+      "reason": "Non-Canonical status — ideation sandbox, not yet promoted to functional canon."
     },
     {
       "canon_tag": "docs-license",
@@ -3274,7 +4211,7 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/LICENSE_module.json",
-      "reason": "Legal text \u2014 not functional domain content"
+      "reason": "Legal text — not functional domain content"
     },
     {
       "canon_tag": "docs-security",
@@ -3282,7 +4219,7 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/SECURITY_module.json",
-      "reason": "Security policy \u2014 infrastructure/governance"
+      "reason": "Security policy — infrastructure/governance"
     },
     {
       "canon_tag": "assets",
@@ -3290,7 +4227,7 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/assets/assets_module.json",
-      "reason": "Static site assets \u2014 build infrastructure"
+      "reason": "Static site assets — build infrastructure"
     },
     {
       "canon_tag": "badges",
@@ -3298,7 +4235,7 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/badges/badges_module.json",
-      "reason": "Repo status badges \u2014 CI/meta infrastructure"
+      "reason": "Repo status badges — CI/meta infrastructure"
     },
     {
       "canon_tag": "discussions",
@@ -3306,7 +4243,7 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/discussions/discussions_module.json",
-      "reason": "GitHub discussions scaffold \u2014 not functional canon"
+      "reason": "GitHub discussions scaffold — not functional canon"
     },
     {
       "canon_tag": "archive-org",
@@ -3314,7 +4251,31 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/archive_org/archive_org_module.json",
-      "reason": "External archive mirror \u2014 not functional canon"
+      "reason": "External archive mirror — not functional canon"
+    },
+    {
+      "canon_tag": "tests",
+      "name": "Tests",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/tests",
+      "reason": "Test infrastructure — glyphs test cases, not functional canon."
+    },
+    {
+      "canon_tag": "tft-3pack-meta",
+      "name": "TFT 3Pack _meta",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/TFT_3Pack_v1.3/docs/_meta",
+      "reason": "Internal badge/glyph metadata registry — infrastructure, not functional canon."
+    },
+    {
+      "canon_tag": "tft-3pack-specs",
+      "name": "TFT 3Pack _specs",
+      "classification": "I2",
+      "layer": "Infrastructure",
+      "path": "docs/TFT_3Pack_v1.3/docs/_specs",
+      "reason": "Internal protocol specs and nawderian constants — infrastructure, not functional canon."
     }
   ],
   "cross_references": [
@@ -3359,11 +4320,11 @@
       "Ethics & Care": 1,
       "Substrate Grammar": 3,
       "Safety & Operations": 1,
-      "Core Frameworks \u2014 Structural Spine": 11,
+      "Core Frameworks — Structural Spine": 11,
       "Education & Teaching": 3,
       "Applied Domain Models": 22,
       "RTT Hardware Layer": 1,
-      "RTT Analytics \u2014 Metadata Layer": 1,
+      "RTT Analytics — Metadata Layer": 1,
       "RTT Deployment Layer": 3,
       "RTT Dimensional": 4,
       "Integration & Deployment": 2,
@@ -3383,14 +4344,14 @@
         "module": "entft",
         "name": "ENTFT",
         "files": 213,
-        "layer": "Core Frameworks \u2014 Structural Spine"
+        "layer": "Core Frameworks — Structural Spine"
       },
       {
         "rank": 2,
         "module": "nous",
         "name": "Nous",
         "files": 157,
-        "layer": "Core Frameworks \u2014 Structural Spine"
+        "layer": "Core Frameworks — Structural Spine"
       },
       {
         "rank": 3,
@@ -3425,7 +4386,7 @@
         "module": "tops",
         "name": "TOPS",
         "files": 85,
-        "layer": "Core Frameworks \u2014 Structural Spine"
+        "layer": "Core Frameworks — Structural Spine"
       },
       {
         "rank": 8,
@@ -3488,7 +4449,7 @@
         "module": "rtt-codes",
         "name": "RTT/codes",
         "files": 14,
-        "layer": "RTT Analytics \u2014 Metadata Layer"
+        "layer": "RTT Analytics — Metadata Layer"
       },
       {
         "rank": 17,
@@ -3502,7 +4463,7 @@
         "module": "coeus",
         "name": "Coeus",
         "files": 13,
-        "layer": "Core Frameworks \u2014 Structural Spine"
+        "layer": "Core Frameworks — Structural Spine"
       },
       {
         "rank": 19,
@@ -3516,7 +4477,7 @@
         "module": "tft-core",
         "name": "TFT Core",
         "files": 11,
-        "layer": "Core Frameworks \u2014 Structural Spine"
+        "layer": "Core Frameworks — Structural Spine"
       }
     ],
     "circular_dependencies": [

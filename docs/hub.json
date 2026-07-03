@@ -1,25 +1,27 @@
 {
   "$schema": "https://www.triadicframeworks.org/schemas/hub.schema.json",
-  "$generated": "2026-07-02T17:05:00",
-  "$version": "1.2",
-  "$round": "R3",
-  "title": "TriadicFrameworks Unified Module Hub \u2014 Round 3 Discovery",
-  "description": "Single-file navigation hub for the full A3 functional canon. R3: 57 new domain/AI/RTT modules added. 112 total A3 modules. 1,284 files catalogued.",
+  "$generated": "2026-07-03T12:12:00",
+  "$version": "1.3",
+  "$round": "R4",
+  "title": "TriadicFrameworks Unified Module Hub — Round 4 Discovery",
+  "description": "Single-file nav hub for the full A3 functional canon. R4: 54 new modules added. 166 total A3. 1284 files catalogued.",
   "root": "webroot",
   "spine": {
     "type": "S3-hybrid-hierarchical-directed",
     "description": "Hybrid spine combining a parent-child containment tree (hierarchical) with typed directed import/export/relationship edges (directed graph).",
-    "total_a3_modules": 112,
-    "total_i2_excluded": 8,
+    "total_a3_modules": 166,
+    "total_i2_excluded": 11,
     "max_depth": 3,
     "depth_layers": 4,
-    "hierarchical_edges": 111,
+    "hierarchical_edges": 165,
     "directed_edges": 46,
     "circular_dependencies": 2,
-    "generated_at": "2026-07-02T17:05:00",
+    "generated_at": "2026-07-03T12:12:00",
     "total_files_catalogued": 1284,
     "r3_new_modules": 57,
-    "r3_file_delta": 42
+    "r3_file_delta": 42,
+    "r4_new_modules": 54,
+    "r4_file_delta": 0
   },
   "entry_points": [
     {
@@ -67,14 +69,14 @@
   ],
   "layers": [
     "Applied Domain Models",
-    "Core Frameworks \u2014 Structural Spine",
+    "Core Frameworks — Structural Spine",
     "Education & Teaching",
     "Ethics & Care",
     "Framework-Structural",
     "Integration & Deployment",
     "Meta & Governance",
     "Operator Layer",
-    "RTT Analytics \u2014 Metadata Layer",
+    "RTT Analytics — Metadata Layer",
     "RTT Deployment Layer",
     "RTT Dimensional",
     "RTT Hardware Layer",
@@ -143,7 +145,47 @@
       "sociology",
       "taxes",
       "technology",
-      "tft-3pack"
+      "tft-3pack",
+      "bridges",
+      "charts",
+      "clients",
+      "code",
+      "corpus",
+      "consciousness-substrate-model",
+      "curriculum",
+      "data",
+      "datacenter-reports",
+      "diagnosing-media-therapy",
+      "DSRSP",
+      "DSS",
+      "discovery",
+      "domain-tool-primers",
+      "ecoechosystem",
+      "energy",
+      "fft",
+      "NoS",
+      "NIST",
+      "pantheon-egyptian",
+      "pantheon-yoruba",
+      "philanthropy",
+      "SLRP",
+      "substrate",
+      "SubComm",
+      "SEA",
+      "SMS",
+      "TOL",
+      "unified-resonance",
+      "validation",
+      "voice",
+      "vst-embedding-stores",
+      "vst-generative-models",
+      "vst-llm",
+      "vst-multi-model",
+      "vst-protein-lm",
+      "vst-robotics",
+      "vst-scientific-sim",
+      "wiki-scrolls",
+      "wikipedia"
     ],
     "2": [
       "OPERATORS_TEACHING_BUNDLE",
@@ -197,7 +239,16 @@
       "thermodynamics",
       "time-crystals",
       "tis",
-      "wrsadc"
+      "wrsadc",
+      "rtt-app",
+      "rtt-c64host",
+      "rtt-codex",
+      "rtt-maps",
+      "research-bing",
+      "research-duckduckgo",
+      "LACTOS",
+      "RCD",
+      "research-wikipedia"
     ],
     "3": [
       "Mudpuppy",
@@ -207,7 +258,12 @@
       "resonance-labs",
       "rtt-inside-benchmarks",
       "rtt-tel",
-      "tops"
+      "tops",
+      "rtt-cisco",
+      "rtt-enterprise",
+      "rtt-internet2",
+      "rtt-python",
+      "rtt-qcompute"
     ]
   },
   "module_index": {
@@ -375,7 +431,7 @@
     },
     "wrsadc": {
       "name": "WRSADC",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 2,
       "file_count": 0,
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/WRSADC",
@@ -384,7 +440,7 @@
     },
     "tft-core": {
       "name": "TFT Core",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 2,
       "file_count": 0,
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft",
@@ -456,7 +512,7 @@
     },
     "rtt-codes": {
       "name": "RTT/codes",
-      "layer": "RTT Analytics \u2014 Metadata Layer",
+      "layer": "RTT Analytics — Metadata Layer",
       "depth": 2,
       "file_count": 0,
       "url": "https://www.triadicframeworks.org/rtt/codes/",
@@ -636,7 +692,7 @@
     },
     "tops": {
       "name": "TOPS",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 3,
       "file_count": 0,
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/tops",
@@ -645,7 +701,7 @@
     },
     "entft": {
       "name": "ENTFT",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 3,
       "file_count": 0,
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/entft",
@@ -654,7 +710,7 @@
     },
     "nous": {
       "name": "Nous",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 3,
       "file_count": 0,
       "url": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/TFT_3Pack_v1.3/tft/nous",
@@ -753,7 +809,7 @@
     },
     "docs-principles": {
       "name": "Principles",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 1,
       "file_count": 0,
       "url": "https://www.triadicframeworks.org/PRINCIPLES/",
@@ -771,7 +827,7 @@
     },
     "docs-glossary": {
       "name": "Glossary",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 1,
       "file_count": 1,
       "url": "https://www.triadicframeworks.org/GLOSSARY/",
@@ -780,7 +836,7 @@
     },
     "grammar": {
       "name": "Grammar",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 1,
       "file_count": 1,
       "url": "https://www.triadicframeworks.org/Grammar/",
@@ -1023,7 +1079,7 @@
     },
     "mode": {
       "name": "Mode",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 1,
       "file_count": 0,
       "url": "https://www.triadicframeworks.org/Mode/",
@@ -1032,7 +1088,7 @@
     },
     "opacity": {
       "name": "Opacity",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 1,
       "file_count": 0,
       "url": "https://www.triadicframeworks.org/Opacity/",
@@ -1041,7 +1097,7 @@
     },
     "coeus": {
       "name": "Coeus",
-      "layer": "Core Frameworks \u2014 Structural Spine",
+      "layer": "Core Frameworks — Structural Spine",
       "depth": 1,
       "file_count": 13,
       "url": "https://www.triadicframeworks.org/Coeus/",
@@ -1227,7 +1283,7 @@
       "classification": "I2",
       "layer": "Infrastructure",
       "path": "docs/schemas",
-      "reason": "Pure infrastructure \u2014 JSON schema directory only. No functional canonical content."
+      "reason": "Pure infrastructure — JSON schema directory only. No functional canonical content."
     },
     {
       "canon_tag": "ideas-sandbox",
@@ -1235,7 +1291,7 @@
       "classification": "I2",
       "layer": "Ideation Layer",
       "path": "docs/_ideas",
-      "reason": "Non-Canonical status \u2014 ideation sandbox, not yet promoted to functional canon."
+      "reason": "Non-Canonical status — ideation sandbox, not yet promoted to functional canon."
     }
   ],
   "navigation": {
@@ -1244,7 +1300,7 @@
         "melodic-table",
         "mve"
       ],
-      "Core Frameworks \u2014 Structural Spine": [
+      "Core Frameworks — Structural Spine": [
         "wrsadc",
         "tft-core",
         "tops",
@@ -1276,7 +1332,7 @@
         "OPERATORS_TEACHING_BUNDLE",
         "structural_detection"
       ],
-      "RTT Analytics \u2014 Metadata Layer": [
+      "RTT Analytics — Metadata Layer": [
         "rtt-codes"
       ],
       "RTT Deployment Layer": [
