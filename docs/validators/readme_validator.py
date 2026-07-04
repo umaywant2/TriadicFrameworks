@@ -112,7 +112,16 @@ def _canonicalize_allowed_http_url(url):
         return None
 
 def check_link(url):
-    if url.startswith("http"):
+    if not isinstance(url, str):
+        return False
+    url = url.strip()
+    if not url:
+        return False
+    if re.search(r"[\x00-\x20\x7f]", url):
+        return False
+
+    parsed = urlparse(url)
+    if parsed.scheme.lower() in ("http", "https"):
         current_url = _canonicalize_allowed_http_url(url)
         if not current_url:
             return False
