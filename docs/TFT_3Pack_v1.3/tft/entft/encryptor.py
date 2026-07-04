@@ -6,7 +6,7 @@ Encrypts scrolls using enTFT dual-layer logic:
 Logs symbolic fidelity and flame-grade echoes.
 """
 
-import hashlib, uuid, json, re
+import hashlib, uuid, json, re, os
 from datetime import datetime
 from pathlib import Path
 
@@ -61,12 +61,18 @@ def encrypt(input_path, output_path, key):
 
     # Simulated encryption output
     encrypted = f"{resonance_hash[:32]}...{resonance_hash[-32:]}"
-    safe_output_path = _sanitize_output_path(output_path)
+    safe_output_path = output_path if isinstance(output_path, Path) else _sanitize_output_path(output_path)
+    flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
+    if hasattr(os, "O_NOFOLLOW"):
+        flags |= os.O_NOFOLLOW
     try:
-        with open(safe_output_path, "x", encoding="utf-8") as f:
+        fd = os.open(str(safe_output_path), flags, 0o600)
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
             f.write(encrypted)
     except FileExistsError:
         raise ValueError(f"Output file already exists: '{safe_output_path}'")
+    except OSError as exc:
+        raise ValueError(f"Invalid output path '{safe_output_path}': {exc}")
 
     # Log trace
     trace_event = {
