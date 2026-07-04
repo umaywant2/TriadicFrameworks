@@ -20,23 +20,23 @@ def _sanitize_output_path(output_path):
     if requested.is_absolute():
         raise ValueError("Output path must be a filename relative to the safe output root")
 
-    filename = requested.name
-    if not filename or filename in {".", ".."}:
-        raise ValueError("Output filename must not be empty")
-
-    if str(requested) != filename:
-        raise ValueError("Output path must be a filename only (no directory components)")
-
-    if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
-        raise ValueError("Output filename contains invalid characters")
-
     root.mkdir(parents=True, exist_ok=True)
-    candidate = (root / filename).resolve()
+    candidate = (root / requested).resolve()
 
     try:
         candidate.relative_to(root)
     except ValueError:
         raise ValueError(f"Output path must stay within '{root}'")
+
+    if requested.parent != Path("."):
+        raise ValueError("Output path must be a filename only (no directory components)")
+
+    filename = requested.name
+    if not filename or filename in {".", ".."}:
+        raise ValueError("Output filename must not be empty")
+
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
+        raise ValueError("Output filename contains invalid characters")
 
     if candidate.is_symlink():
         raise ValueError("Output path must not be a symlink")
