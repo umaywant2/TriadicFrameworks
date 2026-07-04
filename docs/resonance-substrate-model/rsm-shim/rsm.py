@@ -1,12 +1,17 @@
 import json
 import sys
 import os
+import re
 
 def load_config(path):
     if not isinstance(path, str) or not path.strip():
         raise ValueError("Config path must be a non-empty string")
-    if not path.endswith(".json"):
-        raise ValueError("Config path must point to a .json file")
+    if os.path.isabs(path):
+        raise ValueError("Absolute config paths are not allowed")
+    if path != os.path.basename(path):
+        raise ValueError("Config path must be a filename without directories")
+    if not re.fullmatch(r"[A-Za-z0-9._-]+\.json", path):
+        raise ValueError("Config path must be a safe .json filename")
 
     base_dir = os.path.dirname(os.path.realpath(__file__))
     full_path = os.path.realpath(os.path.join(base_dir, path))
