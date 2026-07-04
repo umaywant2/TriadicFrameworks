@@ -124,8 +124,13 @@ def validate_manifest(manifest_path: Path):
     for entry in manifest["schemas"]:
         if "file" not in entry:
             error("Manifest entry missing 'file' field")
+        if not isinstance(entry["file"], str):
+            error("Manifest entry 'file' field must be a string")
 
         raw_schema_path = Path(entry["file"])
+        if raw_schema_path.is_absolute():
+            error(f"Schema path must be relative to manifest directory: {raw_schema_path}")
+
         schema_path = (manifest_dir / raw_schema_path).resolve()
         try:
             schema_path.relative_to(manifest_dir)
