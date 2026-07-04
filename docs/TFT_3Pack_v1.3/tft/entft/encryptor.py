@@ -38,7 +38,7 @@ def _sanitize_output_path(output_path):
     except ValueError:
         raise ValueError(f"Output path must stay within '{root}'")
 
-    if candidate.exists() and candidate.is_symlink():
+    if candidate.is_symlink():
         raise ValueError("Output path must not be a symlink")
 
     if candidate.exists() and candidate.is_dir():
@@ -59,8 +59,11 @@ def encrypt(input_path, output_path, key):
     # Simulated encryption output
     encrypted = f"{resonance_hash[:32]}...{resonance_hash[-32:]}"
     safe_output_path = _sanitize_output_path(output_path)
-    with open(safe_output_path, "w", encoding="utf-8") as f:
-        f.write(encrypted)
+    try:
+        with open(safe_output_path, "x", encoding="utf-8") as f:
+            f.write(encrypted)
+    except FileExistsError:
+        raise ValueError(f"Output file already exists: '{safe_output_path}'")
 
     # Log trace
     trace_event = {
