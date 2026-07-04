@@ -107,6 +107,7 @@ def validate_data(data_path: Path, schema_path: Path):
 
 def validate_manifest(manifest_path: Path):
     manifest = load_json(manifest_path)
+    manifest_dir = manifest_path.resolve().parent
 
     if "schemas" not in manifest:
         error("Manifest missing 'schemas' list")
@@ -115,7 +116,13 @@ def validate_manifest(manifest_path: Path):
         if "file" not in entry:
             error("Manifest entry missing 'file' field")
 
-        schema_path = Path(entry["file"])
+        raw_schema_path = Path(entry["file"])
+        schema_path = (manifest_dir / raw_schema_path).resolve()
+        try:
+            schema_path.relative_to(manifest_dir)
+        except ValueError:
+            error(f"Schema path escapes manifest directory: {raw_schema_path}")
+
         if not schema_path.exists():
             error(f"Schema listed in manifest not found: {schema_path}")
 
