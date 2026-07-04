@@ -6,11 +6,48 @@ Encrypts scrolls using enTFT dual-layer logic:
 Logs symbolic fidelity and flame-grade echoes.
 """
 
-import hashlib, uuid, json
+import hashlib, uuid, json, re
 from datetime import datetime
 from pathlib import Path
 
 TRACE_LOG_PATH = Path("docs/_meta/entft_scroll_event_trace_registry.json")
+SAFE_OUTPUT_ROOT = Path("docs/_meta/entft_output")
+
+def _sanitize_output_path(output_path):
+    root = SAFE_OUTPUT_ROOT.resolve()
+    root.mkdir(parents=True, exist_ok=True)
+
+    raw_value = str(output_path)
+    requested = Path(raw_value)
+
+    if requested.is_absolute():
+        raise ValueError("Output path must be a filename relative to the safe output root")
+
+    filename = requested.name
+    if raw_value != filename:
+        raise ValueError("Output path must be a filename only (no directory components)")
+
+    if not filename or filename in {".", ".."}:
+        raise ValueError("Output filename must not be empty")
+
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
+        raise ValueError("Output filename contains invalid characters")
+
+    root.mkdir(parents=True, exist_ok=True)
+    candidate = (root / filename).resolve()
+
+    try:
+        candidate.relative_to(root)
+    except ValueError:
+        raise ValueError(f"Output path must stay within '{root}'")
+
+    if candidate.is_symlink():
+        raise ValueError("Output path must not be a symlink")
+
+    if candidate.exists() and candidate.is_dir():
+        raise ValueError("Output path points to a directory, expected a file path")
+
+    return candidate
 
 def encrypt(input_path, output_path, key):
     print(f"[entft] 🔐 Encrypting {input_path} → {output_path} with key '{key}'...")
@@ -24,8 +61,12 @@ def encrypt(input_path, output_path, key):
 
     # Simulated encryption output
     encrypted = f"{resonance_hash[:32]}...{resonance_hash[-32:]}"
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(encrypted)
+    safe_output_path = _sanitize_output_path(output_path)
+    try:
+        with open(safe_output_path, "x", encoding="utf-8") as f:
+            f.write(encrypted)
+    except FileExistsError:
+        raise ValueError(f"Output file already exists: '{safe_output_path}'")
 
     # Log trace
     trace_event = {
