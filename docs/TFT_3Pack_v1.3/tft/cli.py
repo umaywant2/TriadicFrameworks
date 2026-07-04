@@ -3,6 +3,13 @@ from .nous import processor
 from .entft import encryptor
 from .tops import grid_ops
 
+def _validated_entft_output(value):
+    try:
+        encryptor._sanitize_output_path(value)
+        return value
+    except ValueError as exc:
+        raise argparse.ArgumentTypeError(str(exc))
+
 def main():
     parser = argparse.ArgumentParser(
         prog="tft",
@@ -19,7 +26,7 @@ def main():
     # 🔐 Encryption: entft
     enc_parser = subparsers.add_parser("entft", help="Encryption and badge trigger logic")
     enc_parser.add_argument("-i", required=True, help="Input file")
-    enc_parser.add_argument("-o", required=True, help="Output file")
+    enc_parser.add_argument("-o", required=True, type=_validated_entft_output, help="Output file")
     enc_parser.add_argument("-k", required=True, help="Key or glyphstream")
     enc_parser.add_argument("--basetype", default="decimal", help="Base lens for encryption overlays")
 
