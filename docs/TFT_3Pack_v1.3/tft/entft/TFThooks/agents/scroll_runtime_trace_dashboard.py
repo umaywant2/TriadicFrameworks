@@ -18,8 +18,9 @@ def dashboard():
     try:
         with open(TRACE_LOG_PATH, "r", encoding="utf-8") as f:
             data = json.load(f)["scroll_event_traces"]
-    except Exception as e:
-        return f"<h1>Error loading trace log: {e}</h1>"
+    except Exception:
+        app.logger.exception("Failed to load trace log for dashboard")
+        return "<h1>An internal error has occurred.</h1>", 500
 
     html = """
     <html>
