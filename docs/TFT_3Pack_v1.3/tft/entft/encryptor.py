@@ -61,7 +61,7 @@ def encrypt(input_path, output_path, key):
 
     # Simulated encryption output
     encrypted = f"{resonance_hash[:32]}...{resonance_hash[-32:]}"
-    safe_output_path = _sanitize_output_path(output_path)
+    safe_output_path = output_path if isinstance(output_path, Path) else _sanitize_output_path(output_path)
     flags = os.O_WRONLY | os.O_CREAT | os.O_EXCL
     if hasattr(os, "O_NOFOLLOW"):
         flags |= os.O_NOFOLLOW
