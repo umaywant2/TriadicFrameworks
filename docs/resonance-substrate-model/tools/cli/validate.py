@@ -44,12 +44,13 @@ def ensure_within_root(path: Path, root: Path, label: str) -> Path:
     return resolved
 
 
-def load_json(path: Path):
+def load_json(path: Path, root: Path):
+    safe_path = ensure_within_root(path, root, "JSON path")
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(safe_path, "r", encoding="utf-8") as f:
             return json.load(f)
     except json.JSONDecodeError as e:
-        print(f"[ERROR] Invalid JSON in {path}: {e}")
+        print(f"[ERROR] Invalid JSON in {safe_path}: {e}")
         sys.exit(1)
 
 
@@ -66,8 +67,8 @@ def ok(msg):
 # Schema Validation
 # ------------------------------------------------------------
 
-def validate_schema(schema_path: Path):
-    schema = load_json(schema_path)
+def validate_schema(schema_path: Path, repo_root: Path):
+    schema = load_json(schema_path, repo_root)
 
     # Basic required fields for a JSON Schema
     if "properties" not in schema:
@@ -123,8 +124,8 @@ def validate_data(data_path: Path, schema_path: Path):
 # Manifest Validation
 # ------------------------------------------------------------
 
-def validate_manifest(manifest_path: Path):
-    manifest = load_json(manifest_path)
+def validate_manifest(manifest_path: Path, repo_root: Path):
+    manifest = load_json(manifest_path, repo_root)
     manifest_dir = manifest_path.resolve().parent
 
     if "schemas" not in manifest:
@@ -169,7 +170,7 @@ def main():
     target = ensure_within_root(Path(sys.argv[2]), repo_root, "Target path")
 
     if mode == "schema":
-        validate_schema(target)
+        validate_schema(target, repo_root)
 
     elif mode == "data":
         if "--schema" not in sys.argv:
@@ -180,7 +181,7 @@ def main():
         validate_data(target, schema_path)
 
     elif mode == "manifest":
-        validate_manifest(target)
+        validate_manifest(target, repo_root)
 
     else:
         error(f"Unknown mode: {mode}")
