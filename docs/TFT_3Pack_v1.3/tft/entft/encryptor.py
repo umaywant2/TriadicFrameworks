@@ -15,6 +15,19 @@ SAFE_OUTPUT_ROOT = Path("docs/_meta/entft_output")
 
 def _sanitize_output_path(output_path):
     root = SAFE_OUTPUT_ROOT.resolve()
+
+    if isinstance(output_path, Path):
+        candidate = output_path.resolve()
+        try:
+            candidate.relative_to(root)
+        except ValueError:
+            raise ValueError(f"Output path must stay within '{root}'")
+        if candidate.is_symlink():
+            raise ValueError("Output path must not be a symlink")
+        if candidate.exists() and candidate.is_dir():
+            raise ValueError("Output path points to a directory, expected a file path")
+        return candidate
+
     raw_value = str(output_path)
     requested = Path(raw_value)
 

@@ -5,8 +5,7 @@ from .tops import grid_ops
 
 def _validated_entft_output(value):
     try:
-        encryptor._sanitize_output_path(value)
-        return value
+        return encryptor._sanitize_output_path(value)
     except ValueError as exc:
         raise argparse.ArgumentTypeError(str(exc))
 
