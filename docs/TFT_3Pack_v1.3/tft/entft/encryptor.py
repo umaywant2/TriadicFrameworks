@@ -16,9 +16,11 @@ SAFE_OUTPUT_ROOT = Path("docs/_meta/entft_output")
 def _sanitize_output_path(output_path):
     root = SAFE_OUTPUT_ROOT.resolve()
     candidate = Path(output_path)
-    if not candidate.is_absolute():
-        candidate = root / candidate
-    candidate = candidate.resolve()
+
+    if candidate.is_absolute():
+        raise ValueError("Output path must be relative to the safe output root")
+
+    candidate = (root / candidate).resolve()
 
     try:
         candidate.relative_to(root)
