@@ -18,6 +18,7 @@ Dependencies:
 """
 
 import json
+import os
 import sys
 from pathlib import Path
 
@@ -28,13 +29,15 @@ from pathlib import Path
 
 def ensure_within_root(path: Path, root: Path, label: str) -> Path:
     # Normalize incoming value defensively before validation.
-    candidate = Path(str(path))
+    raw_value = str(path)
+    normalized_value = os.path.normpath(raw_value)
+    candidate = Path(normalized_value)
 
     # Treat user-provided paths as repository-relative only.
     if candidate.is_absolute():
         error(f"{label} must be a relative path: {candidate}")
 
-    if str(candidate) in ("", "."):
+    if normalized_value in ("", "."):
         error(f"{label} must not be empty: {candidate}")
 
     # Block explicit traversal attempts before touching the filesystem.
