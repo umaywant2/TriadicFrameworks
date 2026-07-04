@@ -6,7 +6,7 @@ Encrypts scrolls using enTFT dual-layer logic:
 Logs symbolic fidelity and flame-grade echoes.
 """
 
-import hashlib, uuid, json
+import hashlib, uuid, json, re
 from datetime import datetime
 from pathlib import Path
 
@@ -18,26 +18,25 @@ def _sanitize_output_path(output_path):
     requested = Path(output_path)
 
     if requested.is_absolute():
-        raise ValueError("Output path must be relative to the safe output root")
+        raise ValueError("Output path must be a filename relative to the safe output root")
 
-    if not requested.parts or requested == Path("."):
-        raise ValueError("Output path must not be empty")
+    filename = requested.name
+    if not filename or filename in {".", ".."}:
+        raise ValueError("Output filename must not be empty")
 
-    if any(part == ".." for part in requested.parts):
-        raise ValueError("Output path must not contain parent directory traversal segments")
+    if str(requested) != filename:
+        raise ValueError("Output path must be a filename only (no directory components)")
 
-    candidate = (root / requested).resolve()
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
+        raise ValueError("Output filename contains invalid characters")
+
+    root.mkdir(parents=True, exist_ok=True)
+    candidate = (root / filename).resolve()
 
     try:
         candidate.relative_to(root)
     except ValueError:
         raise ValueError(f"Output path must stay within '{root}'")
-
-    for parent in reversed(candidate.parents):
-        if parent == root:
-            break
-        if parent.exists() and parent.is_symlink():
-            raise ValueError("Output path must not traverse symlinked directories")
 
     if candidate.exists() and candidate.is_symlink():
         raise ValueError("Output path must not be a symlink")
@@ -45,7 +44,6 @@ def _sanitize_output_path(output_path):
     if candidate.exists() and candidate.is_dir():
         raise ValueError("Output path points to a directory, expected a file path")
 
-    candidate.parent.mkdir(parents=True, exist_ok=True)
     return candidate
 
 def encrypt(input_path, output_path, key):
