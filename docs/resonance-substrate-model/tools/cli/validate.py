@@ -53,10 +53,33 @@ def ensure_within_root(path: Path, root: Path, label: str) -> Path:
     return resolved
 
 
+def ensure_allowed_json_location(path: Path, root: Path, label: str) -> Path:
+    resolved_root = root.resolve()
+    resolved_path = path.resolve(strict=False)
+
+    allowed_dirs = (
+        resolved_root / "schemas",
+        resolved_root / "data",
+        resolved_root / "manifests",
+        resolved_root / "docs",
+    )
+
+    for allowed_dir in allowed_dirs:
+        allowed_dir_resolved = allowed_dir.resolve(strict=False)
+        try:
+            resolved_path.relative_to(allowed_dir_resolved)
+            return resolved_path
+        except ValueError:
+            continue
+
+    error(f"{label} is not in an allowed JSON directory: {resolved_path}")
+
+
 def load_json(path: Path, root: Path):
     safe_path = ensure_within_root(path, root, "JSON path")
     if safe_path.suffix.lower() != ".json":
         error(f"JSON path must point to a .json file: {safe_path}")
+    safe_path = ensure_allowed_json_location(safe_path, root, "JSON path")
     try:
         with safe_path.open("r", encoding="utf-8") as f:
             return json.load(f)
