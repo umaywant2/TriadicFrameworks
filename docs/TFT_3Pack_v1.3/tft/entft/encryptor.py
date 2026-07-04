@@ -11,6 +11,25 @@ from datetime import datetime
 from pathlib import Path
 
 TRACE_LOG_PATH = Path("docs/_meta/entft_scroll_event_trace_registry.json")
+SAFE_OUTPUT_ROOT = Path("docs/_meta/entft_output")
+
+def _sanitize_output_path(output_path):
+    root = SAFE_OUTPUT_ROOT.resolve()
+    candidate = Path(output_path)
+    if not candidate.is_absolute():
+        candidate = root / candidate
+    candidate = candidate.resolve()
+
+    try:
+        candidate.relative_to(root)
+    except ValueError:
+        raise ValueError(f"Output path must stay within '{root}'")
+
+    if candidate.exists() and candidate.is_dir():
+        raise ValueError("Output path points to a directory, expected a file path")
+
+    candidate.parent.mkdir(parents=True, exist_ok=True)
+    return candidate
 
 def encrypt(input_path, output_path, key):
     print(f"[entft] 🔐 Encrypting {input_path} → {output_path} with key '{key}'...")
@@ -24,7 +43,8 @@ def encrypt(input_path, output_path, key):
 
     # Simulated encryption output
     encrypted = f"{resonance_hash[:32]}...{resonance_hash[-32:]}"
-    with open(output_path, "w", encoding="utf-8") as f:
+    safe_output_path = _sanitize_output_path(output_path)
+    with open(safe_output_path, "w", encoding="utf-8") as f:
         f.write(encrypted)
 
     # Log trace
