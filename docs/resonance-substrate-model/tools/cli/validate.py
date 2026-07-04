@@ -27,9 +27,18 @@ from pathlib import Path
 # ------------------------------------------------------------
 
 def ensure_within_root(path: Path, root: Path, label: str) -> Path:
-    resolved = path.resolve()
+    # Treat user-provided paths as repository-relative only.
+    if path.is_absolute():
+        error(f"{label} must be a relative path: {path}")
+
+    # Block explicit traversal attempts before touching the filesystem.
+    if any(part == ".." for part in path.parts):
+        error(f"{label} must not contain parent directory traversal: {path}")
+
+    resolved_root = root.resolve()
+    resolved = (resolved_root / path).resolve()
     try:
-        resolved.relative_to(root)
+        resolved.relative_to(resolved_root)
     except ValueError:
         error(f"{label} escapes repository root: {path}")
     return resolved
