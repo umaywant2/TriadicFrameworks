@@ -117,4 +117,4 @@ def audits():
     return render_template_string(template, audits=audits)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
