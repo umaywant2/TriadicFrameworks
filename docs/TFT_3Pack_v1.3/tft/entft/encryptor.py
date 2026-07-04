@@ -20,12 +20,21 @@ def _sanitize_output_path(output_path):
     if candidate.is_absolute():
         raise ValueError("Output path must be relative to the safe output root")
 
+    if not candidate.parts or candidate == Path("."):
+        raise ValueError("Output path must not be empty")
+
+    if any(part == ".." for part in candidate.parts):
+        raise ValueError("Output path must not contain parent directory traversal segments")
+
     candidate = (root / candidate).resolve()
 
     try:
         candidate.relative_to(root)
     except ValueError:
         raise ValueError(f"Output path must stay within '{root}'")
+
+    if candidate.exists() and candidate.is_symlink():
+        raise ValueError("Output path must not be a symlink")
 
     if candidate.exists() and candidate.is_dir():
         raise ValueError("Output path points to a directory, expected a file path")
