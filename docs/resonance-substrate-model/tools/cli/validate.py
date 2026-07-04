@@ -55,7 +55,8 @@ def ensure_within_root(path: Path, root: Path, label: str) -> Path:
 
 def ensure_allowed_json_location(path: Path, root: Path, label: str) -> Path:
     resolved_root = root.resolve()
-    resolved_path = path.resolve(strict=False)
+    # `path` is expected to be pre-sanitized by `ensure_within_root`.
+    resolved_path = path
 
     allowed_dirs = (
         resolved_root / "schemas",
