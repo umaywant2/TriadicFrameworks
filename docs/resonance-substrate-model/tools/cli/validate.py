@@ -27,27 +27,35 @@ from pathlib import Path
 # ------------------------------------------------------------
 
 def ensure_within_root(path: Path, root: Path, label: str) -> Path:
+    # Normalize incoming value defensively before validation.
+    candidate = Path(str(path))
+
     # Treat user-provided paths as repository-relative only.
-    if path.is_absolute():
-        error(f"{label} must be a relative path: {path}")
+    if candidate.is_absolute():
+        error(f"{label} must be a relative path: {candidate}")
+
+    if str(candidate) in ("", "."):
+        error(f"{label} must not be empty: {candidate}")
 
     # Block explicit traversal attempts before touching the filesystem.
-    if any(part == ".." for part in path.parts):
-        error(f"{label} must not contain parent directory traversal: {path}")
+    if any(part == ".." for part in candidate.parts):
+        error(f"{label} must not contain parent directory traversal: {candidate}")
 
     resolved_root = root.resolve()
-    resolved = (resolved_root / path).resolve()
+    resolved = (resolved_root / candidate).resolve(strict=False)
     try:
         resolved.relative_to(resolved_root)
     except ValueError:
-        error(f"{label} escapes repository root: {path}")
+        error(f"{label} escapes repository root: {candidate}")
     return resolved
 
 
 def load_json(path: Path, root: Path):
     safe_path = ensure_within_root(path, root, "JSON path")
+    if safe_path.suffix.lower() != ".json":
+        error(f"JSON path must point to a .json file: {safe_path}")
     try:
-        with open(safe_path, "r", encoding="utf-8") as f:
+        with safe_path.open("r", encoding="utf-8") as f:
             return json.load(f)
     except json.JSONDecodeError as e:
         print(f"[ERROR] Invalid JSON in {safe_path}: {e}")
