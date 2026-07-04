@@ -8,9 +8,12 @@ def load_json(path):
         return json.load(f)
 
 def safe_resolve_path(base_dir, user_path):
-    candidate = os.path.realpath(os.path.join(base_dir, user_path))
-    if os.path.commonpath([base_dir, candidate]) != base_dir:
+    safe_base = os.path.realpath(base_dir)
+    candidate = os.path.realpath(os.path.join(safe_base, user_path))
+    if os.path.commonpath([safe_base, candidate]) != safe_base:
         raise ValueError(f"Path escapes allowed root: {user_path}")
+    if os.path.splitext(candidate)[1].lower() != ".json":
+        raise ValueError(f"Only .json files are allowed: {user_path}")
     return candidate
 
 def main():
