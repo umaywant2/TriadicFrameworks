@@ -1,6 +1,7 @@
 import json
 import os
 import sys
+from pathlib import Path
 from jsonschema import validate, ValidationError
 
 def load_json(path):
@@ -8,13 +9,20 @@ def load_json(path):
         return json.load(f)
 
 def safe_resolve_path(base_dir, user_path):
-    safe_base = os.path.realpath(base_dir)
-    candidate = os.path.realpath(os.path.join(safe_base, user_path))
-    if os.path.commonpath([safe_base, candidate]) != safe_base:
+    safe_base = Path(base_dir).resolve()
+    user_rel = Path(user_path)
+    if user_rel.is_absolute():
+        raise ValueError(f"Absolute paths are not allowed: {user_path}")
+
+    candidate = (safe_base / user_rel).resolve()
+    try:
+        candidate.relative_to(safe_base)
+    except ValueError:
         raise ValueError(f"Path escapes allowed root: {user_path}")
-    if os.path.splitext(candidate)[1].lower() != ".json":
+
+    if candidate.suffix.lower() != ".json":
         raise ValueError(f"Only .json files are allowed: {user_path}")
-    return candidate
+    return str(candidate)
 
 def main():
     if len(sys.argv) != 2:
