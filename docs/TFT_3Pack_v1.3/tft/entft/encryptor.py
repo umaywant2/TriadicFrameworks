@@ -15,23 +15,29 @@ SAFE_OUTPUT_ROOT = Path("docs/_meta/entft_output")
 
 def _sanitize_output_path(output_path):
     root = SAFE_OUTPUT_ROOT.resolve()
-    candidate = Path(output_path)
+    requested = Path(output_path)
 
-    if candidate.is_absolute():
+    if requested.is_absolute():
         raise ValueError("Output path must be relative to the safe output root")
 
-    if not candidate.parts or candidate == Path("."):
+    if not requested.parts or requested == Path("."):
         raise ValueError("Output path must not be empty")
 
-    if any(part == ".." for part in candidate.parts):
+    if any(part == ".." for part in requested.parts):
         raise ValueError("Output path must not contain parent directory traversal segments")
 
-    candidate = (root / candidate).resolve()
+    candidate = (root / requested).resolve()
 
     try:
         candidate.relative_to(root)
     except ValueError:
         raise ValueError(f"Output path must stay within '{root}'")
+
+    for parent in reversed(candidate.parents):
+        if parent == root:
+            break
+        if parent.exists() and parent.is_symlink():
+            raise ValueError("Output path must not traverse symlinked directories")
 
     if candidate.exists() and candidate.is_symlink():
         raise ValueError("Output path must not be a symlink")
