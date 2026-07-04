@@ -46,9 +46,7 @@ def ensure_within_root(path: Path, root: Path, label: str) -> Path:
 
     resolved_root = root.resolve()
     resolved = (resolved_root / candidate).resolve(strict=False)
-    try:
-        resolved.relative_to(resolved_root)
-    except ValueError:
+    if not resolved.is_relative_to(resolved_root):
         error(f"{label} escapes repository root: {candidate}")
     return resolved
 
@@ -212,6 +210,8 @@ def main():
             error("Missing --schema argument for data validation")
 
         schema_index = sys.argv.index("--schema") + 1
+        if schema_index >= len(sys.argv):
+            error("Missing schema path after --schema")
         schema_path = ensure_within_root(Path(sys.argv[schema_index]), repo_root, "Schema path")
         validate_data(target, schema_path)
 
