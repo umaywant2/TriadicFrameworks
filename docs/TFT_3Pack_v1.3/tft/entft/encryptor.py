@@ -15,9 +15,11 @@ SAFE_OUTPUT_ROOT = Path("docs/_meta/entft_output")
 
 def _sanitize_output_path(output_path):
     root = SAFE_OUTPUT_ROOT.resolve()
+    root.mkdir(parents=True, exist_ok=True)
 
     if isinstance(output_path, Path):
-        candidate = output_path.resolve()
+        requested = output_path
+        candidate = requested.resolve() if requested.is_absolute() else (root / requested).resolve()
         try:
             candidate.relative_to(root)
         except ValueError:
