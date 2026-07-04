@@ -73,4 +73,4 @@ def index():
     return render_template_string(template, filtered=filtered, request=request)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
