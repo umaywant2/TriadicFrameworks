@@ -26,6 +26,15 @@ from pathlib import Path
 # Utility Functions
 # ------------------------------------------------------------
 
+def ensure_within_root(path: Path, root: Path, label: str) -> Path:
+    resolved = path.resolve()
+    try:
+        resolved.relative_to(root)
+    except ValueError:
+        error(f"{label} escapes repository root: {path}")
+    return resolved
+
+
 def load_json(path: Path):
     try:
         with open(path, "r", encoding="utf-8") as f:
@@ -142,7 +151,8 @@ def main():
         sys.exit(1)
 
     mode = sys.argv[1]
-    target = Path(sys.argv[2])
+    repo_root = Path(__file__).resolve().parents[2]
+    target = ensure_within_root(Path(sys.argv[2]), repo_root, "Target path")
 
     if mode == "schema":
         validate_schema(target)
@@ -152,7 +162,7 @@ def main():
             error("Missing --schema argument for data validation")
 
         schema_index = sys.argv.index("--schema") + 1
-        schema_path = Path(sys.argv[schema_index])
+        schema_path = ensure_within_root(Path(sys.argv[schema_index]), repo_root, "Schema path")
         validate_data(target, schema_path)
 
     elif mode == "manifest":
