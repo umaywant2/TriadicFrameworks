@@ -39,6 +39,21 @@ def error(msg):
     sys.exit(1)
 
 
+def validate_schema_path(user_input: str) -> Path:
+    # Restrict schema inspection to files under docs/resonance-substrate-model
+    safe_root = Path(__file__).resolve().parents[2]
+    candidate = Path(user_input).expanduser()
+    candidate = candidate if candidate.is_absolute() else (Path.cwd() / candidate)
+    resolved = candidate.resolve(strict=False)
+
+    try:
+        resolved.relative_to(safe_root)
+    except ValueError:
+        error(f"Path is outside allowed directory: {safe_root}")
+
+    return resolved
+
+
 # ------------------------------------------------------------
 # Inspection Logic
 # ------------------------------------------------------------
@@ -85,7 +100,7 @@ def main():
         print("Usage: python inspect_schema.py path/to/schema.json")
         sys.exit(1)
 
-    path = Path(sys.argv[1])
+    path = validate_schema_path(sys.argv[1])
     if not path.exists():
         error(f"Schema file not found: {path}")
 
