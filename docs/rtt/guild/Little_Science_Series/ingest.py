@@ -79,6 +79,19 @@ DONE_FILE        = "queue_done.jsonl"
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+def resolve_within_base(user_value: str, base_dir: pathlib.Path, label: str) -> pathlib.Path:
+    """Resolve a user-provided path and ensure it stays within base_dir."""
+    candidate = pathlib.Path(user_value)
+    resolved = candidate.resolve() if candidate.is_absolute() else (base_dir / candidate).resolve()
+    try:
+        resolved.relative_to(base_dir)
+    except ValueError:
+        print(f"\n  ❌  Unsafe {label} path: {user_value}")
+        print(f"      {label} must stay within: {base_dir}\n")
+        sys.exit(1)
+    return resolved
+
+
 def load_json(path: pathlib.Path) -> object:
     """Open a JSON file; exit with a clear message on failure."""
     if not path.exists():
@@ -189,7 +202,8 @@ def main() -> None:
     parser.add_argument("--type",     choices=["STILL", "ANIM"])
     args = parser.parse_args()
 
-    output_root = pathlib.Path(args.output)
+    base_dir = pathlib.Path(__file__).resolve().parent
+    output_root = resolve_within_base(args.output, base_dir, "output")
     dry_run     = args.dry_run
 
     print("\n" + "═" * 60)
@@ -198,8 +212,10 @@ def main() -> None:
     if dry_run:
         print("  ⚠  DRY-RUN — no files will be written\n")
 
-    manifest = load_json(pathlib.Path(args.manifest))
-    schema   = load_json(pathlib.Path(args.schema))
+    manifest_path = resolve_within_base(args.manifest, base_dir, "manifest")
+    schema_path   = resolve_within_base(args.schema, base_dir, "schema")
+    manifest = load_json(manifest_path)
+    schema   = load_json(schema_path)
 
     print("  🔍 Validating …")
     errors = validate_manifest(manifest, schema)
