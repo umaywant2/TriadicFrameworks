@@ -73,17 +73,20 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
         if ext.lower() not in {e.lower() for e in allowed_exts}:
             raise ValueError(f"Disallowed file extension for path: {user_path}")
 
+    # Use a post-validation canonical path for filesystem operations.
+    safe_path = os.path.realpath(target_real)
+
     if must_exist:
-        if not os.path.exists(target_real):
+        if not os.path.exists(safe_path):
             raise ValueError(f"Path does not exist: {user_path}")
-        if file_kind == "file" and not os.path.isfile(target_real):
+        if file_kind == "file" and not os.path.isfile(safe_path):
             raise ValueError(f"Path is not a regular file: {user_path}")
-        if file_kind == "dir" and not os.path.isdir(target_real):
+        if file_kind == "dir" and not os.path.isdir(safe_path):
             raise ValueError(f"Path is not a directory: {user_path}")
-    elif file_kind == "file" and os.path.exists(target_real) and not os.path.isfile(target_real):
+    elif file_kind == "file" and os.path.exists(safe_path) and not os.path.isfile(safe_path):
         raise ValueError(f"Path is not a regular file: {user_path}")
 
-    return target_real
+    return safe_path
 
 def main():
     if len(sys.argv) != 3:
