@@ -81,9 +81,9 @@ DONE_FILE        = "queue_done.jsonl"
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
 def _assert_within_base(path_value: pathlib.Path, base_dir: pathlib.Path, label: str) -> pathlib.Path:
-    """Validate that a resolved path stays within base_dir and return canonical path."""
+    """Validate that a canonical path stays within base_dir and return it."""
     base_resolved = base_dir.resolve()
-    resolved = path_value.resolve(strict=False)
+    resolved = path_value
     try:
         resolved.relative_to(base_resolved)
     except ValueError:
