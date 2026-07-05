@@ -8,6 +8,7 @@ import os
 import re
 import sys
 import qrcode
+from pathlib import Path
 from urllib.parse import urlencode
 
 def validate_payload(payload):
@@ -61,15 +62,11 @@ def _sanitize_filename(user_path):
         raise ValueError("Path must be a non-empty string")
 
     candidate = user_path.strip()
-    if os.path.isabs(candidate):
-        raise ValueError(f"Absolute paths are not allowed: {user_path}")
-
-    normalized = os.path.normpath(candidate)
-    filename = os.path.basename(normalized)
+    filename = Path(candidate).name
 
     if filename in ("", ".", ".."):
         raise ValueError(f"Invalid file name: {user_path}")
-    if filename != normalized:
+    if any(sep in filename for sep in (os.sep, os.altsep) if sep):
         raise ValueError(f"Directory components are not allowed: {user_path}")
     if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
         raise ValueError(f"Invalid characters in file name: {user_path}")
@@ -77,30 +74,38 @@ def _sanitize_filename(user_path):
     return filename
 
 def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
-    safe_name = _sanitize_filename(user_path)
+    if not isinstance(user_path, str) or not user_path.strip():
+        raise ValueError("Path must be a non-empty string")
 
-    base_real = os.path.realpath(base_dir)
-    target_real = os.path.realpath(os.path.join(base_real, safe_name))
-    if os.path.commonpath([base_real, target_real]) != base_real:
+    if file_kind not in (None, "file", "dir"):
+        raise ValueError(f"Invalid file_kind: {file_kind}")
+
+    base_real = Path(base_dir).resolve()
+    raw_user_path = Path(user_path.strip())
+    if raw_user_path.is_absolute():
+        raise ValueError(f"Absolute paths are not allowed: {user_path}")
+
+    safe_path = (base_real / raw_user_path).resolve()
+    try:
+        safe_path.relative_to(base_real)
+    except ValueError:
         raise ValueError(f"Path escapes the allowed base directory: {user_path}")
 
-    # Use validated canonical path for filesystem operations.
-    safe_path = target_real
-
     if allowed_exts is not None:
-        _, ext = os.path.splitext(safe_path)
-        if ext.lower() not in {e.lower() for e in allowed_exts}:
+        if safe_path.suffix.lower() not in {e.lower() for e in allowed_exts}:
             raise ValueError(f"Disallowed file extension for path: {user_path}")
 
     if must_exist:
-        if not os.path.exists(safe_path):
+        if not safe_path.exists():
             raise ValueError(f"Path does not exist: {user_path}")
-        if file_kind == "file" and not os.path.isfile(safe_path):
-            raise ValueError(f"Path is not a regular file: {user_path}")
-        if file_kind == "dir" and not os.path.isdir(safe_path):
-            raise ValueError(f"Path is not a directory: {user_path}")
+        if file_kind == "file":
+            if not safe_path.is_file():
+                raise ValueError(f"Path is not a regular file: {user_path}")
+        elif file_kind == "dir":
+            if not safe_path.is_dir():
+                raise ValueError(f"Path is not a directory: {user_path}")
 
-    return safe_path
+    return str(safe_path)
 
 def main():
     if len(sys.argv) != 3:
@@ -109,13 +114,13 @@ def main():
 
     payload_path = sys.argv[1]
     output_path = sys.argv[2]
-    base_dir = os.getcwd()
+    base_dir = Path(__file__).resolve().parent
 
     safe_payload_path = resolve_safe_path(
-        payload_path, base_dir, allowed_exts={".json"}, must_exist=True, file_kind="file"
+        payload_path, str(base_dir), allowed_exts={".json"}, must_exist=True, file_kind="file"
     )
     safe_output_path = resolve_safe_path(
-        output_path, base_dir, allowed_exts={".png"}, must_exist=False
+        output_path, str(base_dir), allowed_exts={".png"}, must_exist=False
     )
 
     with open(safe_payload_path, "r", encoding="utf-8") as f:
