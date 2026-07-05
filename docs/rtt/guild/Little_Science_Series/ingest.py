@@ -83,10 +83,22 @@ def resolve_within_base(user_value: str, base_dir: pathlib.Path, label: str) -> 
     """Resolve a user-provided path and ensure it stays within base_dir."""
     base_resolved = base_dir.resolve()
     candidate = pathlib.Path(user_value)
+
+    if not user_value or user_value.strip() == "":
+        print(f"\n  ❌  Unsafe {label} path: {user_value!r}")
+        print(f"      {label} cannot be empty and must be within: {base_resolved}\n")
+        sys.exit(1)
+
+    if user_value.startswith("~") or ".." in candidate.parts:
+        print(f"\n  ❌  Unsafe {label} path: {user_value}")
+        print(f"      {label} must not use '~' or '..' segments.\n")
+        sys.exit(1)
+
     if candidate.is_absolute():
         print(f"\n  ❌  Unsafe {label} path: {user_value}")
         print(f"      {label} must be a relative path within: {base_resolved}\n")
         sys.exit(1)
+
     resolved = (base_resolved / candidate).resolve()
     try:
         resolved.relative_to(base_resolved)
