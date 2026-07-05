@@ -29,25 +29,32 @@ from pathlib import Path
 
 def ensure_within_root(path: Path, root: Path, label: str) -> Path:
     # Normalize incoming value defensively before validation.
-    raw_value = str(path)
-    normalized_value = os.path.normpath(raw_value)
-    candidate = Path(normalized_value)
-
-    # Treat user-provided paths as repository-relative only.
-    if candidate.is_absolute():
-        error(f"{label} must be a relative path: {candidate}")
+    raw_value = str(path).strip()
+    normalized_value = os.path.normpath(raw_value.replace("\\", "/"))
 
     if normalized_value in ("", "."):
-        error(f"{label} must not be empty: {candidate}")
+        error(f"{label} must not be empty: {normalized_value}")
+
+    # Treat user-provided paths as repository-relative only.
+    if normalized_value.startswith("/") or os.path.isabs(normalized_value):
+        error(f"{label} must be a relative path: {normalized_value}")
+
+    # Block Windows drive-qualified paths (e.g. C:/...).
+    drive, _ = os.path.splitdrive(normalized_value)
+    if drive:
+        error(f"{label} must not include a drive prefix: {normalized_value}")
 
     # Block explicit traversal attempts before touching the filesystem.
-    if any(part == ".." for part in candidate.parts):
-        error(f"{label} must not contain parent directory traversal: {candidate}")
+    parts = [part for part in normalized_value.split("/") if part not in ("", ".")]
+    if any(part == ".." for part in parts):
+        error(f"{label} must not contain parent directory traversal: {normalized_value}")
+
+    safe_candidate = Path(*parts)
 
     resolved_root = root.resolve()
-    resolved = (resolved_root / candidate).resolve(strict=False)
+    resolved = (resolved_root / safe_candidate).resolve(strict=False)
     if not resolved.is_relative_to(resolved_root):
-        error(f"{label} escapes repository root: {candidate}")
+        error(f"{label} escapes repository root: {normalized_value}")
     return resolved
 
 
@@ -171,14 +178,7 @@ def validate_manifest(manifest_path: Path, repo_root: Path):
             error("Manifest entry 'file' field must be a string")
 
         raw_schema_path = Path(entry["file"])
-        if raw_schema_path.is_absolute():
-            error(f"Schema path must be relative to manifest directory: {raw_schema_path}")
-
-        schema_path = (manifest_dir / raw_schema_path).resolve()
-        try:
-            schema_path.relative_to(manifest_dir)
-        except ValueError:
-            error(f"Schema path escapes manifest directory: {raw_schema_path}")
+        schema_path = ensure_within_root(raw_schema_path, manifest_dir, "Schema path")
 
         if not schema_path.exists():
             error(f"Schema listed in manifest not found: {schema_path}")
