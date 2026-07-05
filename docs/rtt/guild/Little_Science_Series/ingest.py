@@ -148,12 +148,19 @@ def scene_folder_name(scene_number: int, scene_name: str) -> str:
 
 def build_output_path(entry: dict, output_root: pathlib.Path) -> pathlib.Path:
     """output/<book_name>/S##_<scene_name>/<filename>"""
-    return (
-        output_root
-        / entry["book_name"]
-        / scene_folder_name(entry["scene_number"], entry["scene_name"])
-        / entry["filename"]
-    )
+    safe_book = pathlib.PurePath(str(entry["book_name"])).name
+    safe_scene = pathlib.PurePath(
+        scene_folder_name(entry["scene_number"], entry["scene_name"])
+    ).name
+    safe_filename = pathlib.PurePath(str(entry["filename"])).name
+
+    root = output_root.resolve()
+    candidate = (root / safe_book / safe_scene / safe_filename).resolve()
+    try:
+        candidate.relative_to(root)
+    except ValueError:
+        raise ValueError(f"Unsafe output path derived from manifest entry: {entry!r}")
+    return candidate
 
 
 def ensure_folder(file_path: pathlib.Path, dry_run: bool) -> None:
