@@ -62,15 +62,11 @@ def _sanitize_filename(user_path):
         raise ValueError("Path must be a non-empty string")
 
     candidate = user_path.strip()
-    if os.path.isabs(candidate):
-        raise ValueError(f"Absolute paths are not allowed: {user_path}")
-
-    normalized = os.path.normpath(candidate)
-    filename = os.path.basename(normalized)
+    filename = Path(candidate).name
 
     if filename in ("", ".", ".."):
         raise ValueError(f"Invalid file name: {user_path}")
-    if filename != normalized:
+    if any(sep in filename for sep in (os.sep, os.altsep) if sep):
         raise ValueError(f"Directory components are not allowed: {user_path}")
     if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
         raise ValueError(f"Invalid characters in file name: {user_path}")
