@@ -99,8 +99,6 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
             raise ValueError(f"Path is not a regular file: {user_path}")
         if file_kind == "dir" and not os.path.isdir(safe_path):
             raise ValueError(f"Path is not a directory: {user_path}")
-    elif file_kind == "file" and os.path.exists(safe_path) and not os.path.isfile(safe_path):
-        raise ValueError(f"Path is not a regular file: {user_path}")
 
     return safe_path
 
