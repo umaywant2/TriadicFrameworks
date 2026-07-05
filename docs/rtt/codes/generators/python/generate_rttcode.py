@@ -4,6 +4,8 @@
 #   python generate_rttcode.py rttcode-payload.json output.png
 
 import json
+import os
+import re
 import sys
 import qrcode
 from urllib.parse import urlencode
@@ -54,6 +56,52 @@ def generate_qr_code(data, output_path):
     img = qr.make_image(fill_color="black", back_color="white")
     img.save(output_path)
 
+def _sanitize_filename(user_path):
+    if not isinstance(user_path, str) or not user_path.strip():
+        raise ValueError("Path must be a non-empty string")
+
+    candidate = user_path.strip()
+    if os.path.isabs(candidate):
+        raise ValueError(f"Absolute paths are not allowed: {user_path}")
+
+    normalized = os.path.normpath(candidate)
+    filename = os.path.basename(normalized)
+
+    if filename in ("", ".", ".."):
+        raise ValueError(f"Invalid file name: {user_path}")
+    if filename != normalized:
+        raise ValueError(f"Directory components are not allowed: {user_path}")
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
+        raise ValueError(f"Invalid characters in file name: {user_path}")
+
+    return filename
+
+def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
+    safe_name = _sanitize_filename(user_path)
+
+    base_real = os.path.realpath(base_dir)
+    target_real = os.path.realpath(os.path.join(base_real, safe_name))
+    if os.path.commonpath([base_real, target_real]) != base_real:
+        raise ValueError(f"Path escapes the allowed base directory: {user_path}")
+
+    # Use validated canonical path for filesystem operations.
+    safe_path = target_real
+
+    if allowed_exts is not None:
+        _, ext = os.path.splitext(safe_path)
+        if ext.lower() not in {e.lower() for e in allowed_exts}:
+            raise ValueError(f"Disallowed file extension for path: {user_path}")
+
+    if must_exist:
+        if not os.path.exists(safe_path):
+            raise ValueError(f"Path does not exist: {user_path}")
+        if file_kind == "file" and not os.path.isfile(safe_path):
+            raise ValueError(f"Path is not a regular file: {user_path}")
+        if file_kind == "dir" and not os.path.isdir(safe_path):
+            raise ValueError(f"Path is not a directory: {user_path}")
+
+    return safe_path
+
 def main():
     if len(sys.argv) != 3:
         print("Usage: python generate_rttcode.py <payload.json> <output.png>")
@@ -61,16 +109,24 @@ def main():
 
     payload_path = sys.argv[1]
     output_path = sys.argv[2]
+    base_dir = os.getcwd()
 
-    with open(payload_path, "r", encoding="utf-8") as f:
+    safe_payload_path = resolve_safe_path(
+        payload_path, base_dir, allowed_exts={".json"}, must_exist=True, file_kind="file"
+    )
+    safe_output_path = resolve_safe_path(
+        output_path, base_dir, allowed_exts={".png"}, must_exist=False
+    )
+
+    with open(safe_payload_path, "r", encoding="utf-8") as f:
         payload = json.load(f)
 
     validate_payload(payload)
     rtt_url = build_rttcode_url(payload)
     print("RTTcode URL:", rtt_url)
 
-    generate_qr_code(rtt_url, output_path)
-    print("QR code saved to:", output_path)
+    generate_qr_code(rtt_url, safe_output_path)
+    print("QR code saved to:", safe_output_path)
 
 if __name__ == "__main__":
     main()
