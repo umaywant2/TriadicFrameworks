@@ -4,6 +4,7 @@
 #   python generate_rttcode.py rttcode-payload.json output.png
 
 import json
+import os
 import sys
 import qrcode
 from urllib.parse import urlencode
@@ -54,6 +55,13 @@ def generate_qr_code(data, output_path):
     img = qr.make_image(fill_color="black", back_color="white")
     img.save(output_path)
 
+def resolve_safe_path(user_path, base_dir):
+    base_real = os.path.realpath(base_dir)
+    target_real = os.path.realpath(os.path.join(base_real, user_path))
+    if os.path.commonpath([base_real, target_real]) != base_real:
+        raise ValueError(f"Path escapes allowed directory: {user_path}")
+    return target_real
+
 def main():
     if len(sys.argv) != 3:
         print("Usage: python generate_rttcode.py <payload.json> <output.png>")
@@ -61,16 +69,20 @@ def main():
 
     payload_path = sys.argv[1]
     output_path = sys.argv[2]
+    base_dir = os.getcwd()
 
-    with open(payload_path, "r", encoding="utf-8") as f:
+    safe_payload_path = resolve_safe_path(payload_path, base_dir)
+    safe_output_path = resolve_safe_path(output_path, base_dir)
+
+    with open(safe_payload_path, "r", encoding="utf-8") as f:
         payload = json.load(f)
 
     validate_payload(payload)
     rtt_url = build_rttcode_url(payload)
     print("RTTcode URL:", rtt_url)
 
-    generate_qr_code(rtt_url, output_path)
-    print("QR code saved to:", output_path)
+    generate_qr_code(rtt_url, safe_output_path)
+    print("QR code saved to:", safe_output_path)
 
 if __name__ == "__main__":
     main()
