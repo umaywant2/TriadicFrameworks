@@ -55,18 +55,29 @@ def generate_qr_code(data, output_path):
     img = qr.make_image(fill_color="black", back_color="white")
     img.save(output_path)
 
-def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
+def _sanitize_filename(user_path):
     if not isinstance(user_path, str) or not user_path.strip():
         raise ValueError("Path must be a non-empty string")
 
-    if os.path.isabs(user_path):
+    candidate = user_path.strip()
+    if os.path.isabs(candidate):
         raise ValueError(f"Absolute paths are not allowed: {user_path}")
 
+    normalized = os.path.normpath(candidate)
+    filename = os.path.basename(normalized)
+
+    if filename in ("", ".", ".."):
+        raise ValueError(f"Invalid file name: {user_path}")
+    if filename != normalized:
+        raise ValueError(f"Directory components are not allowed: {user_path}")
+
+    return filename
+
+def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
+    safe_name = _sanitize_filename(user_path)
+
     base_real = os.path.realpath(base_dir)
-    normalized_user_path = os.path.normpath(user_path)
-    target_real = os.path.realpath(os.path.join(base_real, normalized_user_path))
-    if os.path.commonpath([base_real, target_real]) != base_real:
-        raise ValueError(f"Path escapes allowed directory: {user_path}")
+    target_real = os.path.realpath(os.path.join(base_real, safe_name))
 
     if allowed_exts is not None:
         _, ext = os.path.splitext(target_real)
