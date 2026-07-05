@@ -1,4 +1,4 @@
-# **TriadicFrameworks LLC — Full Compliance Calendar (.ics)**  
+# ✅**TriadicFrameworks LLC — Full Compliance Calendar (.ics)**  
 **Timezone:** America/New_York  
 **Event Time:** 9:00 AM  
 **Includes:** Annual, quarterly, long‑term, conditional placeholders

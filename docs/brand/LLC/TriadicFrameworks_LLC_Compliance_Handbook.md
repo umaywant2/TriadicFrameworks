@@ -1,4 +1,4 @@
-# TriadicFrameworks LLC — Compliance Handbook
+# ✅TriadicFrameworks LLC — Compliance Handbook
 **Version:** 2026.07  
 **Entity ID:** 900238506  
 **EIN:** 42-3542585  
