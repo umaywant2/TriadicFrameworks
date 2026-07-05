@@ -55,6 +55,7 @@ AI pipeline contract (for automated agents)
 import argparse
 import json
 import pathlib
+import re
 import sys
 import textwrap
 
@@ -146,13 +147,24 @@ def scene_folder_name(scene_number: int, scene_name: str) -> str:
     return f"S{scene_number:02d}_{scene_name.replace(' ', '_').replace('/', '-')}"
 
 
+_SAFE_COMPONENT_RE = re.compile(r"^[A-Za-z0-9._-]+$")
+
+
+def _safe_path_component(value: object, field_name: str) -> str:
+    component = pathlib.PurePath(str(value)).name
+    if component in {"", ".", ".."} or not _SAFE_COMPONENT_RE.fullmatch(component):
+        raise ValueError(f"Unsafe {field_name} in manifest entry: {value!r}")
+    return component
+
+
 def build_output_path(entry: dict, output_root: pathlib.Path) -> pathlib.Path:
     """output/<book_name>/S##_<scene_name>/<filename>"""
-    safe_book = pathlib.PurePath(str(entry["book_name"])).name
-    safe_scene = pathlib.PurePath(
-        scene_folder_name(entry["scene_number"], entry["scene_name"])
-    ).name
-    safe_filename = pathlib.PurePath(str(entry["filename"])).name
+    safe_book = _safe_path_component(entry["book_name"], "book_name")
+    safe_scene = _safe_path_component(
+        scene_folder_name(entry["scene_number"], entry["scene_name"]),
+        "scene_name",
+    )
+    safe_filename = _safe_path_component(entry["filename"], "filename")
 
     base_dir = pathlib.Path(__file__).resolve().parent
     root = output_root.resolve()
