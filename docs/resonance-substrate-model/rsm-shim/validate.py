@@ -36,7 +36,8 @@ def load_schema(name):
 
 def validate_config(config_path):
     safe_config_name = sanitize_config_filename(config_path)
-    with open(safe_config_name, "r") as config_file:
+    safe_config_path = resolve_safe_path(CONFIG_DIR, safe_config_name)
+    with open(safe_config_path, "r") as config_file:
         config = json.load(config_file)
     schema = load_schema("simulation.schema.json")
     jsonschema.validate(config, schema)
