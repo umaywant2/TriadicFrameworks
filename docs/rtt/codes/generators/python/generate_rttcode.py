@@ -79,18 +79,15 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
     base_real = os.path.realpath(base_dir)
     target_real = os.path.realpath(os.path.join(base_real, safe_name))
     if os.path.commonpath([base_real, target_real]) != base_real:
-    if os.path.commonpath([base_real, target_real]) != base_real:
         raise ValueError(f"Path escapes the allowed base directory: {user_path}")
 
-        raise ValueError(f"Resolved path escapes base directory: {user_path}")
+    # Use validated canonical path for filesystem operations.
+    safe_path = target_real
 
     if allowed_exts is not None:
-        _, ext = os.path.splitext(target_real)
+        _, ext = os.path.splitext(safe_path)
         if ext.lower() not in {e.lower() for e in allowed_exts}:
             raise ValueError(f"Disallowed file extension for path: {user_path}")
-
-    # Use a post-validation canonical path for filesystem operations.
-    safe_path = os.path.realpath(target_real)
 
     if must_exist:
         if not os.path.exists(safe_path):
