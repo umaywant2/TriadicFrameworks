@@ -74,16 +74,18 @@ def _sanitize_filename(user_path):
     return filename
 
 def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
-    safe_name = _sanitize_filename(user_path)
-    if not re.fullmatch(r"[A-Za-z0-9._-]+", safe_name):
-        raise ValueError(f"Invalid sanitized file name: {user_path}")
-    validated_name = safe_name
+    if not isinstance(user_path, str) or not user_path.strip():
+        raise ValueError("Path must be a non-empty string")
 
     if file_kind not in (None, "file", "dir"):
         raise ValueError(f"Invalid file_kind: {file_kind}")
 
     base_real = Path(base_dir).resolve()
-    safe_path = (base_real / validated_name).resolve()
+    raw_user_path = Path(user_path.strip())
+    if raw_user_path.is_absolute():
+        raise ValueError(f"Absolute paths are not allowed: {user_path}")
+
+    safe_path = (base_real / raw_user_path).resolve()
     try:
         safe_path.relative_to(base_real)
     except ValueError:
