@@ -8,13 +8,17 @@ CONFIG_DIR = Path(".")
 
 def resolve_safe_path(base_dir, user_path):
     base = Path(base_dir).resolve()
-    candidate = (base / user_path).resolve()
+    user_path_obj = Path(user_path)
+    if user_path_obj.is_absolute() or ".." in user_path_obj.parts:
+        raise ValueError(f"Config path escapes allowed directory: {user_path}")
+    candidate = (base / user_path_obj).resolve()
     if base != candidate and base not in candidate.parents:
         raise ValueError(f"Config path escapes allowed directory: {user_path}")
     return candidate
 
 def load_schema(name):
-    with open(SCHEMA_DIR / name, "r") as f:
+    safe_schema_path = resolve_safe_path(SCHEMA_DIR, name)
+    with open(safe_schema_path, "r") as f:
         return json.load(f)
 
 def validate_config(config_path):
