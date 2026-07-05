@@ -150,4 +150,4 @@ def audit_detail(audit_id):
     return render_template_string(template, audit=audit)
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
