@@ -1,0 +1,1575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="dark" />
+  <title>TriadicFrameworks Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            tf: {
+              bg: '#0d1117',
+              sidebar: '#161b22',
+              card: '#1c2128',
+              border: '#30363d',
+              surface: '#21262d',
+              hover: '#292e36',
+            },
+            accent: {
+              blue: '#2563eb',
+              cyan: '#06b6d4',
+              green: '#22c55e',
+              amber: '#f59e0b',
+              red: '#ef4444',
+            },
+          },
+          fontFamily: {
+            mono: ['JetBrains Mono', 'Courier New', 'monospace'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0d1117;
+      --sidebar: #161b22;
+      --card: #1c2128;
+      --border: #30363d;
+      --surface: #21262d;
+      --hover: #292e36;
+      --blue: #2563eb;
+      --cyan: #06b6d4;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --red: #ef4444;
+      --text-primary: #e6edf3;
+      --text-secondary: #8b949e;
+      --text-muted: #6e7681;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .font-mono { font-family: 'JetBrains Mono', 'Courier New', monospace; }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; height: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--text-muted); }
+
+    /* Sidebar */
+    .sidebar-link {
+      display: flex; align-items: center; gap: 0.75rem;
+      padding: 0.625rem 1rem; border-radius: 0.5rem;
+      color: var(--text-secondary); transition: all 0.2s;
+      cursor: pointer; font-size: 0.875rem; font-weight: 500;
+      border: none; background: none; width: 100%; text-align: left;
+    }
+    .sidebar-link:hover { background: var(--hover); color: var(--text-primary); }
+    .sidebar-link.active {
+      background: rgba(37, 99, 235, 0.15); color: #58a6ff;
+      border-left: 3px solid var(--blue);
+    }
+    .sidebar-link .link-icon { font-size: 1.125rem; width: 1.5rem; text-align: center; }
+
+    /* Stat Card */
+    .stat-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .stat-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+
+    /* Status Pills */
+    .pill {
+      display: inline-flex; align-items: center; gap: 0.25rem;
+      padding: 0.175rem 0.625rem; border-radius: 9999px;
+      font-size: 0.7rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+    .pill-green { background: rgba(34,197,94,0.15); color: #4ade80; }
+    .pill-amber { background: rgba(245,158,11,0.15); color: #fbbf24; }
+    .pill-gray { background: rgba(110,118,129,0.15); color: #8b949e; }
+    .pill-blue { background: rgba(37,99,235,0.15); color: #60a5fa; }
+    .pill-red { background: rgba(239,68,68,0.15); color: #f87171; }
+
+    /* JSON Syntax Highlighting */
+    .json-key { color: #79c0ff; }
+    .json-string { color: #a5d6ff; }
+    .json-value-string { color: #7ee787; }
+    .json-bool, .json-number { color: #ffa657; }
+    .json-bracket { color: #8b949e; }
+    .json-null { color: #f47067; }
+
+    /* Table */
+    .data-table { width: 100%; border-collapse: collapse; }
+    .data-table th {
+      text-align: left; padding: 0.75rem 1rem;
+      font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+      letter-spacing: 0.05em; color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .data-table td {
+      padding: 0.75rem 1rem; border-bottom: 1px solid var(--border);
+      font-size: 0.875rem;
+    }
+    .data-table tr:hover td { background: var(--hover); }
+
+    /* Modal */
+    .modal-overlay {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.7);
+      z-index: 100; display: none; align-items: center; justify-content: center;
+      padding: 1rem; backdrop-filter: blur(4px);
+    }
+    .modal-overlay.open { display: flex; }
+    .modal-content {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 0.75rem; max-width: 640px; width: 100%;
+      max-height: 85vh; overflow-y: auto; padding: 1.5rem;
+    }
+
+    /* Timeline */
+    .timeline-item {
+      position: relative; padding-left: 2rem;
+      padding-bottom: 1.5rem; border-left: 2px solid var(--border);
+      margin-left: 0.5rem;
+    }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -6px; top: 4px;
+      width: 10px; height: 10px; border-radius: 50%;
+      background: var(--border); border: 2px solid var(--bg);
+    }
+    .timeline-item.completed::before { background: var(--green); }
+    .timeline-item.due::before { background: var(--amber); }
+    .timeline-item.upcoming::before { background: var(--cyan); }
+
+    /* Cycle card */
+    .cycle-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 0.75rem; overflow: hidden; transition: border-color 0.2s;
+    }
+    .cycle-card:hover { border-color: var(--blue); }
+    .cycle-header {
+      padding: 1rem 1.25rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .cycle-body { padding: 0 1.25rem 1.25rem; display: none; }
+    .cycle-body.open { display: block; }
+
+    /* Checkbox list */
+    .check-item { display: flex; align-items: center; gap: 0.5rem; padding: 0.25rem 0; font-size: 0.875rem; }
+    .check-done { color: var(--green); }
+    .check-pending { color: var(--text-muted); }
+
+    /* Doc card */
+    .doc-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 1.25rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .doc-card:hover { border-color: var(--cyan); transform: translateY(-2px); }
+
+    /* Module card */
+    .module-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 1.25rem;
+      font-family: 'JetBrains Mono', monospace;
+      transition: border-color 0.2s;
+    }
+    .module-card:hover { border-color: var(--cyan); }
+
+    /* Gov Block */
+    .gov-block {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 0.75rem; padding: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .gov-block:hover { border-color: var(--blue); }
+
+    /* Section transitions */
+    .section-panel { display: none; animation: fadeIn 0.3s ease; }
+    .section-panel.active { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* Filter pill buttons */
+    .filter-pill {
+      padding: 0.375rem 0.875rem; border-radius: 9999px;
+      font-size: 0.8rem; font-weight: 500; cursor: pointer;
+      transition: all 0.2s; border: 1px solid var(--border);
+      background: transparent; color: var(--text-secondary);
+    }
+    .filter-pill:hover { border-color: var(--blue); color: var(--text-primary); }
+    .filter-pill.active { background: var(--blue); border-color: var(--blue); color: white; }
+
+    /* Search input */
+    .search-input {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 0.5rem; padding: 0.5rem 0.75rem 0.5rem 2.25rem;
+      color: var(--text-primary); font-size: 0.875rem; outline: none;
+      transition: border-color 0.2s; width: 100%;
+    }
+    .search-input:focus { border-color: var(--blue); }
+    .search-input::placeholder { color: var(--text-muted); }
+
+    /* Copy button */
+    .copy-btn {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      padding: 0.375rem 0.75rem; border-radius: 0.375rem;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text-secondary); font-size: 0.75rem; cursor: pointer;
+      transition: all 0.2s;
+    }
+    .copy-btn:hover { border-color: var(--blue); color: var(--text-primary); }
+
+    /* Mobile sidebar overlay */
+    @media (max-width: 767px) {
+      .sidebar-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 40; }
+      .sidebar-overlay.open { display: block; }
+    }
+  </style>
+</head>
+<body data-id="0" class="flex min-h-screen">
+  <app-icon data-id="1" hidden data-icon="shield" data-palette="Dark"></app-icon>
+
+  <!-- Mobile Top Bar -->
+  <div data-id="2" id="mobile-topbar-a1b2" class="md:hidden fixed top-0 left-0 right-0 z-30 bg-tf-sidebar border-b border-tf-border flex items-center justify-between px-4 py-3">
+    <div data-id="3" class="flex items-center gap-2">
+      <div data-id="4" class="w-8 h-8 rounded-lg bg-accent-blue flex items-center justify-center font-bold text-white text-sm">TF</div>
+      <span data-id="5" class="text-sm font-semibold text-gray-200">TriadicFrameworks</span>
+    </div>
+    <button data-id="6" id="mobile-menu-btn-c3d4" class="p-2 text-gray-400 hover:text-white">
+      <i data-id="7" data-lucide="menu" class="w-6 h-6"></i>
+    </button>
+  </div>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div data-id="8" id="sidebar-overlay-e5f6" class="sidebar-overlay md:hidden"></div>
+
+  <!-- Sidebar -->
+  <aside data-id="9" id="sidebar-g7h8" class="fixed top-0 left-0 h-full w-64 bg-tf-sidebar border-r border-tf-border z-50 flex flex-col -translate-x-full md:translate-x-0 transition-transform duration-300">
+    <!-- Logo -->
+    <div data-id="10" class="p-5 border-b border-tf-border">
+      <div data-id="11" class="flex items-center gap-3">
+        <div data-id="12" class="w-10 h-10 rounded-xl bg-accent-blue flex items-center justify-center font-bold text-white text-lg tracking-tight">TF</div>
+        <div data-id="13">
+          <div data-id="14" class="text-sm font-bold text-gray-100 leading-tight">TriadicFrameworks</div>
+          <div data-id="15" class="text-[0.65rem] text-gray-500 font-mono tracking-wide">GOVERNANCE HUB</div>
+        </div>
+      </div>
+      <!-- Mobile close -->
+      <button data-id="16" id="sidebar-close-i9j0" class="md:hidden absolute top-4 right-4 p-1 text-gray-500 hover:text-white">
+        <i data-id="17" data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Nav Links -->
+    <nav data-id="18" class="flex-1 p-3 space-y-1 overflow-y-auto">
+      <button data-id="19" class="sidebar-link active" data-nav="overview">
+        <span data-id="20" class="link-icon">🏛️</span>
+        <span data-id="21">Overview</span>
+      </button>
+      <button data-id="22" class="sidebar-link" data-nav="compliance">
+        <span data-id="23" class="link-icon">📅</span>
+        <span data-id="24">Compliance Calendar</span>
+      </button>
+      <button data-id="25" class="sidebar-link" data-nav="canon">
+        <span data-id="26" class="link-icon">🔄</span>
+        <span data-id="27">Canon Operations</span>
+      </button>
+      <button data-id="28" class="sidebar-link" data-nav="metadata">
+        <span data-id="29" class="link-icon">🗂️</span>
+        <span data-id="30">Metadata Registry</span>
+      </button>
+      <button data-id="31" class="sidebar-link" data-nav="founding">
+        <span data-id="32" class="link-icon">📄</span>
+        <span data-id="33">Founding Documents</span>
+      </button>
+      <button data-id="34" class="sidebar-link" data-nav="modules">
+        <span data-id="35" class="link-icon">🔗</span>
+        <span data-id="36">Module Manifests</span>
+      </button>
+      <button data-id="37" class="sidebar-link" data-nav="aigovernance">
+        <span data-id="38" class="link-icon">🤖</span>
+        <span data-id="39">AI Governance Blocks</span>
+      </button>
+    </nav>
+
+    <!-- System Status -->
+    <div data-id="40" class="p-4 border-t border-tf-border">
+      <div data-id="41" class="flex items-center gap-2 text-xs text-gray-500">
+        <span data-id="42" class="w-2 h-2 rounded-full bg-accent-green animate-pulse"></span>
+        <span data-id="43">Systems Nominal</span>
+      </div>
+      <div data-id="44" class="mt-2 text-[0.65rem] text-gray-600 font-mono">v2.1.0 · Belleville, MI</div>
+    </div>
+  </aside>
+
+  <!-- Main Content -->
+  <main data-id="45" class="flex-1 md:ml-64 mt-14 md:mt-0 min-h-screen">
+
+    <!-- ==================== OVERVIEW ==================== -->
+    <section data-id="46" id="section-overview" class="section-panel active p-4 md:p-8 lg:p-10">
+      <!-- Hero -->
+      <div data-id="47" class="relative rounded-xl overflow-hidden mb-8 border border-tf-border bg-gradient-to-br from-tf-card via-tf-bg to-tf-card">
+        <div data-id="48" class="absolute inset-0 opacity-10" style="background: radial-gradient(ellipse at 30% 50%, #2563eb 0%, transparent 60%), radial-gradient(ellipse at 70% 50%, #06b6d4 0%, transparent 60%);"></div>
+        <div data-id="49" class="relative p-6 md:p-10 lg:p-12">
+          <div data-id="50" class="flex items-center gap-2 mb-3">
+            <div data-id="51" class="w-8 h-8 rounded-lg bg-accent-blue flex items-center justify-center font-bold text-white text-sm">TF</div>
+            <span data-id="52" class="text-xs font-mono text-accent-cyan tracking-widest uppercase">Governance Command Center</span>
+          </div>
+          <h1 data-id="53" class="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white leading-tight mb-2">TriadicFrameworks LLC</h1>
+          <p data-id="54" class="text-sm md:text-base text-gray-400 max-w-xl">AI-Ready Operations · Canon Compliance · Metadata Authority</p>
+          <div data-id="55" class="flex flex-wrap gap-3 mt-5">
+            <span data-id="56" class="pill pill-green">● Active</span>
+            <span data-id="57" class="pill pill-blue">Michigan LLC</span>
+            <span data-id="58" class="text-xs text-gray-500 font-mono self-center">triadicframeworks.org</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stat Cards -->
+      <div data-id="59" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div data-id="60" class="stat-card">
+          <div data-id="61" class="flex items-center justify-between mb-2">
+            <span data-id="62" class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Compliance Items</span>
+            <i data-id="63" data-lucide="shield-check" class="w-5 h-5 text-accent-green"></i>
+          </div>
+          <div data-id="64" class="text-3xl font-bold text-white tabular-nums">12</div>
+          <div data-id="65" class="text-xs text-accent-green mt-1">Active</div>
+        </div>
+        <div data-id="66" class="stat-card">
+          <div data-id="67" class="flex items-center justify-between mb-2">
+            <span data-id="68" class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Canon Cycles</span>
+            <i data-id="69" data-lucide="refresh-cw" class="w-5 h-5 text-accent-amber"></i>
+          </div>
+          <div data-id="70" class="text-3xl font-bold text-white tabular-nums">3</div>
+          <div data-id="71" class="text-xs text-accent-amber mt-1">Running</div>
+        </div>
+        <div data-id="72" class="stat-card">
+          <div data-id="73" class="flex items-center justify-between mb-2">
+            <span data-id="74" class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Metadata Records</span>
+            <i data-id="75" data-lucide="database" class="w-5 h-5 text-accent-cyan"></i>
+          </div>
+          <div data-id="76" class="text-3xl font-bold text-white tabular-nums">48</div>
+          <div data-id="77" class="text-xs text-accent-cyan mt-1">Registered</div>
+        </div>
+        <div data-id="78" class="stat-card">
+          <div data-id="79" class="flex items-center justify-between mb-2">
+            <span data-id="80" class="text-xs text-gray-500 uppercase tracking-wider font-semibold">Modules Registered</span>
+            <i data-id="81" data-lucide="boxes" class="w-5 h-5 text-accent-blue"></i>
+          </div>
+          <div data-id="82" class="text-3xl font-bold text-white tabular-nums">7</div>
+          <div data-id="83" class="text-xs text-accent-blue mt-1">Active</div>
+        </div>
+      </div>
+
+      <!-- Quick Status Table -->
+      <div data-id="84" class="bg-tf-card border border-tf-border rounded-xl overflow-hidden">
+        <div data-id="85" class="p-4 md:p-5 border-b border-tf-border flex items-center justify-between">
+          <div data-id="86">
+            <h2 data-id="87" class="text-base font-bold text-white">Quick Status</h2>
+            <p data-id="88" class="text-xs text-gray-500 mt-0.5">Real-time module status overview</p>
+          </div>
+          <i data-id="89" data-lucide="activity" class="w-5 h-5 text-accent-cyan"></i>
+        </div>
+        <div data-id="90" class="overflow-x-auto">
+          <table data-id="91" class="data-table">
+            <thead data-id="92">
+              <tr data-id="93">
+                <th data-id="94">Module</th>
+                <th data-id="95">Status</th>
+                <th data-id="96" class="hidden sm:table-cell">Last Updated</th>
+                <th data-id="97">Next Action</th>
+              </tr>
+            </thead>
+            <tbody data-id="98">
+              <tr data-id="99">
+                <td data-id="100" class="font-medium text-gray-200">LLC Formation</td>
+                <td data-id="101"><span data-id="102" class="pill pill-green">✅ Active</span></td>
+                <td data-id="103" class="hidden sm:table-cell font-mono text-xs text-gray-400">2024-01-15</td>
+                <td data-id="104" class="text-sm text-gray-400">Annual Report Due Jul 2025</td>
+              </tr>
+              <tr data-id="105">
+                <td data-id="106" class="font-medium text-gray-200">Canon Ops Cycle 1</td>
+                <td data-id="107"><span data-id="108" class="pill pill-amber">🔄 In Progress</span></td>
+                <td data-id="109" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-06-01</td>
+                <td data-id="110" class="text-sm text-gray-400">Review Phase</td>
+              </tr>
+              <tr data-id="111">
+                <td data-id="112" class="font-medium text-gray-200">Canon Ops Cycle 2</td>
+                <td data-id="113"><span data-id="114" class="pill pill-gray">⏳ Pending</span></td>
+                <td data-id="115" class="hidden sm:table-cell font-mono text-xs text-gray-400">—</td>
+                <td data-id="116" class="text-sm text-gray-400">Awaiting Trigger</td>
+              </tr>
+              <tr data-id="117">
+                <td data-id="118" class="font-medium text-gray-200">Canon Ops Cycle 3</td>
+                <td data-id="119"><span data-id="120" class="pill pill-gray">⏳ Pending</span></td>
+                <td data-id="121" class="hidden sm:table-cell font-mono text-xs text-gray-400">—</td>
+                <td data-id="122" class="text-sm text-gray-400">Awaiting Trigger</td>
+              </tr>
+              <tr data-id="123">
+                <td data-id="124" class="font-medium text-gray-200">Metadata Registry</td>
+                <td data-id="125"><span data-id="126" class="pill pill-green">✅ Current</span></td>
+                <td data-id="127" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-07-04</td>
+                <td data-id="128" class="text-sm text-gray-400">Next Audit Q3</td>
+              </tr>
+              <tr data-id="129">
+                <td data-id="130" class="font-medium text-gray-200">AI Governance Block</td>
+                <td data-id="131"><span data-id="132" class="pill pill-amber">🔄 Active</span></td>
+                <td data-id="133" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-07-01</td>
+                <td data-id="134" class="text-sm text-gray-400">Schema Review</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== COMPLIANCE CALENDAR ==================== -->
+    <section data-id="135" id="section-compliance" class="section-panel p-4 md:p-8 lg:p-10">
+      <div data-id="136" class="mb-8">
+        <div data-id="137" class="flex items-center gap-2 mb-1">
+          <i data-id="138" data-lucide="calendar-days" class="w-6 h-6 text-accent-blue"></i>
+          <h1 data-id="139" class="text-xl md:text-2xl font-bold text-white">LLC Compliance Calendar</h1>
+        </div>
+        <p data-id="140" class="text-sm text-gray-400 ml-8">Michigan LLC — Annual &amp; Ongoing Obligations</p>
+      </div>
+
+      <!-- Q1 -->
+      <div data-id="141" class="mb-8">
+        <div data-id="142" class="flex items-center gap-2 mb-4">
+          <span data-id="143" class="text-xs font-bold font-mono uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full">Q1 · Jan–Mar</span>
+        </div>
+        <div data-id="144" class="ml-2">
+          <div data-id="145" class="timeline-item completed">
+            <div data-id="146" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="147" class="font-mono text-xs text-accent-green bg-accent-green/10 px-2 py-0.5 rounded font-semibold w-fit">Jan 1</span>
+              <span data-id="148" class="font-semibold text-sm text-gray-200">New Year Compliance Review</span>
+              <span data-id="149" class="pill pill-green w-fit">Completed</span>
+            </div>
+            <p data-id="150" class="text-xs text-gray-500">Annual review of all operating agreements and member records</p>
+          </div>
+          <div data-id="151" class="timeline-item completed">
+            <div data-id="152" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="153" class="font-mono text-xs text-accent-green bg-accent-green/10 px-2 py-0.5 rounded font-semibold w-fit">Jan 15</span>
+              <span data-id="154" class="font-semibold text-sm text-gray-200">BOI Report Filing</span>
+              <span data-id="155" class="pill pill-green w-fit">Completed</span>
+            </div>
+            <p data-id="156" class="text-xs text-gray-500">Beneficial Ownership Information filed with FinCEN</p>
+          </div>
+          <div data-id="157" class="timeline-item due">
+            <div data-id="158" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="159" class="font-mono text-xs text-accent-amber bg-accent-amber/10 px-2 py-0.5 rounded font-semibold w-fit">Mar 31</span>
+              <span data-id="160" class="font-semibold text-sm text-gray-200">Federal Tax Deadline (Extension Option)</span>
+              <span data-id="161" class="pill pill-amber w-fit">Due</span>
+            </div>
+            <p data-id="162" class="text-xs text-gray-500">Form 1065 or Schedule C depending on election</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q2 -->
+      <div data-id="163" class="mb-8">
+        <div data-id="164" class="flex items-center gap-2 mb-4">
+          <span data-id="165" class="text-xs font-bold font-mono uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full">Q2 · Apr–Jun</span>
+        </div>
+        <div data-id="166" class="ml-2">
+          <div data-id="167" class="timeline-item completed">
+            <div data-id="168" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="169" class="font-mono text-xs text-accent-green bg-accent-green/10 px-2 py-0.5 rounded font-semibold w-fit">Apr 1</span>
+              <span data-id="170" class="font-semibold text-sm text-gray-200">Registered Agent Confirmation</span>
+              <span data-id="171" class="pill pill-green w-fit">Completed</span>
+            </div>
+            <p data-id="172" class="text-xs text-gray-500">Verify registered agent on file with Michigan SOS</p>
+          </div>
+          <div data-id="173" class="timeline-item completed">
+            <div data-id="174" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="175" class="font-mono text-xs text-accent-green bg-accent-green/10 px-2 py-0.5 rounded font-semibold w-fit">Apr 15</span>
+              <span data-id="176" class="font-semibold text-sm text-gray-200">Federal Tax Filing</span>
+              <span data-id="177" class="pill pill-green w-fit">Completed</span>
+            </div>
+            <p data-id="178" class="text-xs text-gray-500">Submit or extend federal returns</p>
+          </div>
+          <div data-id="179" class="timeline-item due">
+            <div data-id="180" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="181" class="font-mono text-xs text-accent-amber bg-accent-amber/10 px-2 py-0.5 rounded font-semibold w-fit">Jun 30</span>
+              <span data-id="182" class="font-semibold text-sm text-gray-200">Mid-Year Operations Audit</span>
+              <span data-id="183" class="pill pill-amber w-fit">Due</span>
+            </div>
+            <p data-id="184" class="text-xs text-gray-500">Internal review of canon operations and governance logs</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q3 -->
+      <div data-id="185" class="mb-8">
+        <div data-id="186" class="flex items-center gap-2 mb-4">
+          <span data-id="187" class="text-xs font-bold font-mono uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full">Q3 · Jul–Sep</span>
+        </div>
+        <div data-id="188" class="ml-2">
+          <div data-id="189" class="timeline-item upcoming">
+            <div data-id="190" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="191" class="font-mono text-xs text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-semibold w-fit">Jul 4</span>
+              <span data-id="192" class="font-semibold text-sm text-gray-200">Metadata Registry Audit</span>
+              <span data-id="193" class="pill pill-gray w-fit">Upcoming</span>
+            </div>
+            <p data-id="194" class="text-xs text-gray-500">Annual AI-ready metadata audit cycle</p>
+          </div>
+          <div data-id="195" class="timeline-item upcoming">
+            <div data-id="196" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="197" class="font-mono text-xs text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-semibold w-fit">Aug 1</span>
+              <span data-id="198" class="font-semibold text-sm text-gray-200">Canon Operations Review</span>
+              <span data-id="199" class="pill pill-gray w-fit">Upcoming</span>
+            </div>
+            <p data-id="200" class="text-xs text-gray-500">Cycle closure and next-cycle trigger</p>
+          </div>
+          <div data-id="201" class="timeline-item upcoming">
+            <div data-id="202" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="203" class="font-mono text-xs text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-semibold w-fit">Sep 30</span>
+              <span data-id="204" class="font-semibold text-sm text-gray-200">Michigan Annual Report</span>
+              <span data-id="205" class="pill pill-gray w-fit">Upcoming</span>
+            </div>
+            <p data-id="206" class="text-xs text-gray-500">Filed with Michigan Secretary of State (due annually)</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Q4 -->
+      <div data-id="207" class="mb-4">
+        <div data-id="208" class="flex items-center gap-2 mb-4">
+          <span data-id="209" class="text-xs font-bold font-mono uppercase tracking-widest text-accent-cyan bg-accent-cyan/10 px-3 py-1 rounded-full">Q4 · Oct–Dec</span>
+        </div>
+        <div data-id="210" class="ml-2">
+          <div data-id="211" class="timeline-item upcoming">
+            <div data-id="212" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="213" class="font-mono text-xs text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-semibold w-fit">Oct 1</span>
+              <span data-id="214" class="font-semibold text-sm text-gray-200">Module Manifest Update</span>
+              <span data-id="215" class="pill pill-gray w-fit">Upcoming</span>
+            </div>
+            <p data-id="216" class="text-xs text-gray-500">Refresh all module.json files with current versions</p>
+          </div>
+          <div data-id="217" class="timeline-item upcoming">
+            <div data-id="218" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="219" class="font-mono text-xs text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-semibold w-fit">Nov 15</span>
+              <span data-id="220" class="font-semibold text-sm text-gray-200">Year-End Governance Review</span>
+              <span data-id="221" class="pill pill-gray w-fit">Upcoming</span>
+            </div>
+            <p data-id="222" class="text-xs text-gray-500">Full stack compliance, operating agreement refresh</p>
+          </div>
+          <div data-id="223" class="timeline-item upcoming" style="border-left-color: transparent;">
+            <div data-id="224" class="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-1">
+              <span data-id="225" class="font-mono text-xs text-accent-cyan bg-accent-cyan/10 px-2 py-0.5 rounded font-semibold w-fit">Dec 31</span>
+              <span data-id="226" class="font-semibold text-sm text-gray-200">Annual Records Close</span>
+              <span data-id="227" class="pill pill-gray w-fit">Upcoming</span>
+            </div>
+            <p data-id="228" class="text-xs text-gray-500">Archive all year-end governance and compliance records</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CANON OPERATIONS ==================== -->
+    <section data-id="229" id="section-canon" class="section-panel p-4 md:p-8 lg:p-10">
+      <div data-id="230" class="mb-8">
+        <div data-id="231" class="flex items-center gap-2 mb-1">
+          <i data-id="232" data-lucide="rotate-cw" class="w-6 h-6 text-accent-blue"></i>
+          <h1 data-id="233" class="text-xl md:text-2xl font-bold text-white">Canon Operations Cycles</h1>
+        </div>
+        <p data-id="234" class="text-sm text-gray-400 ml-8">Structured execution cycles governing TriadicFrameworks operational canon</p>
+      </div>
+
+      <div data-id="235" class="space-y-4">
+        <!-- Cycle 1 -->
+        <div data-id="236" class="cycle-card" data-cycle="1">
+          <div data-id="237" class="cycle-header">
+            <div data-id="238" class="flex items-center gap-3">
+              <div data-id="239" class="w-8 h-8 rounded-lg bg-accent-amber/15 flex items-center justify-center text-accent-amber font-bold font-mono text-sm">C1</div>
+              <div data-id="240">
+                <h3 data-id="241" class="font-semibold text-gray-200 text-sm">Cycle 1 — Foundation Canon</h3>
+                <p data-id="242" class="text-xs text-gray-500">Phase: Review · Trigger: Formation Complete</p>
+              </div>
+            </div>
+            <div data-id="243" class="flex items-center gap-3">
+              <span data-id="244" class="pill pill-amber">In Progress</span>
+              <i data-id="245" data-lucide="chevron-down" class="w-4 h-4 text-gray-500 cycle-chevron transition-transform"></i>
+            </div>
+          </div>
+          <div data-id="246" class="cycle-body open">
+            <div data-id="247" class="border-t border-tf-border pt-4 space-y-4">
+              <div data-id="248">
+                <h4 data-id="249" class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Objectives</h4>
+                <p data-id="250" class="text-sm text-gray-300">Establish founding canon, define triadic operational model, register core metadata</p>
+              </div>
+              <div data-id="251">
+                <h4 data-id="252" class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Milestones</h4>
+                <div data-id="253" class="space-y-1">
+                  <div data-id="254" class="check-item check-done"><i data-id="255" data-lucide="check-square" class="w-4 h-4"></i> Formation documents executed</div>
+                  <div data-id="256" class="check-item check-done"><i data-id="257" data-lucide="check-square" class="w-4 h-4"></i> Initial metadata schema defined</div>
+                  <div data-id="258" class="check-item check-done"><i data-id="259" data-lucide="check-square" class="w-4 h-4"></i> Canon registry initialized</div>
+                  <div data-id="260" class="check-item check-pending"><i data-id="261" data-lucide="square" class="w-4 h-4"></i> First cycle closure review</div>
+                  <div data-id="262" class="check-item check-pending"><i data-id="263" data-lucide="square" class="w-4 h-4"></i> Handoff to Cycle 2</div>
+                </div>
+              </div>
+              <div data-id="264" class="bg-tf-surface rounded-lg p-3 border border-tf-border">
+                <div data-id="265" class="flex items-center gap-2">
+                  <i data-id="266" data-lucide="alert-circle" class="w-4 h-4 text-accent-amber"></i>
+                  <span data-id="267" class="text-xs font-semibold text-accent-amber">Current Action:</span>
+                  <span data-id="268" class="text-xs text-gray-400">First cycle closure review pending</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cycle 2 -->
+        <div data-id="269" class="cycle-card" data-cycle="2">
+          <div data-id="270" class="cycle-header">
+            <div data-id="271" class="flex items-center gap-3">
+              <div data-id="272" class="w-8 h-8 rounded-lg bg-gray-500/15 flex items-center justify-center text-gray-500 font-bold font-mono text-sm">C2</div>
+              <div data-id="273">
+                <h3 data-id="274" class="font-semibold text-gray-200 text-sm">Cycle 2 — Expansion Canon</h3>
+                <p data-id="275" class="text-xs text-gray-500">Phase: Awaiting Trigger · Trigger: Cycle 1 Closure</p>
+              </div>
+            </div>
+            <div data-id="276" class="flex items-center gap-3">
+              <span data-id="277" class="pill pill-gray">Pending</span>
+              <i data-id="278" data-lucide="chevron-down" class="w-4 h-4 text-gray-500 cycle-chevron transition-transform"></i>
+            </div>
+          </div>
+          <div data-id="279" class="cycle-body">
+            <div data-id="280" class="border-t border-tf-border pt-4 space-y-4">
+              <div data-id="281">
+                <h4 data-id="282" class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Objectives</h4>
+                <p data-id="283" class="text-sm text-gray-300">Expand module registry, onboard AI governance schema, publish public manifests</p>
+              </div>
+              <div data-id="284">
+                <h4 data-id="285" class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Milestones</h4>
+                <div data-id="286" class="space-y-1">
+                  <div data-id="287" class="check-item check-pending"><i data-id="288" data-lucide="square" class="w-4 h-4"></i> Cycle 2 trigger confirmed</div>
+                  <div data-id="289" class="check-item check-pending"><i data-id="290" data-lucide="square" class="w-4 h-4"></i> Module expansion plan</div>
+                  <div data-id="291" class="check-item check-pending"><i data-id="292" data-lucide="square" class="w-4 h-4"></i> AI schema v2 deployment</div>
+                  <div data-id="293" class="check-item check-pending"><i data-id="294" data-lucide="square" class="w-4 h-4"></i> Public manifest publication</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cycle 3 -->
+        <div data-id="295" class="cycle-card" data-cycle="3">
+          <div data-id="296" class="cycle-header">
+            <div data-id="297" class="flex items-center gap-3">
+              <div data-id="298" class="w-8 h-8 rounded-lg bg-gray-500/15 flex items-center justify-center text-gray-500 font-bold font-mono text-sm">C3</div>
+              <div data-id="299">
+                <h3 data-id="300" class="font-semibold text-gray-200 text-sm">Cycle 3 — Integration Canon</h3>
+                <p data-id="301" class="text-xs text-gray-500">Phase: Awaiting Trigger · Trigger: Cycle 2 Closure</p>
+              </div>
+            </div>
+            <div data-id="302" class="flex items-center gap-3">
+              <span data-id="303" class="pill pill-gray">Pending</span>
+              <i data-id="304" data-lucide="chevron-down" class="w-4 h-4 text-gray-500 cycle-chevron transition-transform"></i>
+            </div>
+          </div>
+          <div data-id="305" class="cycle-body">
+            <div data-id="306" class="border-t border-tf-border pt-4 space-y-4">
+              <div data-id="307">
+                <h4 data-id="308" class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Objectives</h4>
+                <p data-id="309" class="text-sm text-gray-300">Full integration of triadic model with external API governance, cross-module schema sync</p>
+              </div>
+              <div data-id="310">
+                <h4 data-id="311" class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Milestones</h4>
+                <div data-id="312" class="space-y-1">
+                  <div data-id="313" class="check-item check-pending"><i data-id="314" data-lucide="square" class="w-4 h-4"></i> Cycle 3 trigger confirmed</div>
+                  <div data-id="315" class="check-item check-pending"><i data-id="316" data-lucide="square" class="w-4 h-4"></i> External API governance protocol</div>
+                  <div data-id="317" class="check-item check-pending"><i data-id="318" data-lucide="square" class="w-4 h-4"></i> Cross-module schema sync</div>
+                  <div data-id="319" class="check-item check-pending"><i data-id="320" data-lucide="square" class="w-4 h-4"></i> Integration audit complete</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== METADATA REGISTRY ==================== -->
+    <section data-id="321" id="section-metadata" class="section-panel p-4 md:p-8 lg:p-10">
+      <div data-id="322" class="mb-6">
+        <div data-id="323" class="flex items-center gap-2 mb-1">
+          <i data-id="324" data-lucide="database" class="w-6 h-6 text-accent-cyan"></i>
+          <h1 data-id="325" class="text-xl md:text-2xl font-bold text-white">Metadata JSON Registry</h1>
+        </div>
+        <p data-id="326" class="text-sm text-gray-400 ml-8">AI-ready structured metadata for all TriadicFrameworks modules and governance entities</p>
+      </div>
+
+      <!-- Search & Filter -->
+      <div data-id="327" class="flex flex-col sm:flex-row gap-3 mb-6">
+        <div data-id="328" class="relative flex-1">
+          <i data-id="329" data-lucide="search" class="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-gray-500"></i>
+          <input data-id="330" id="metadata-search-k1l2" type="text" class="search-input" placeholder="Search metadata records..." />
+        </div>
+        <div data-id="331" class="flex gap-2 flex-wrap">
+          <button data-id="332" class="filter-pill active" data-filter="all">All</button>
+          <button data-id="333" class="filter-pill" data-filter="active">Active</button>
+          <button data-id="334" class="filter-pill" data-filter="archived">Archived</button>
+        </div>
+      </div>
+
+      <!-- Table -->
+      <div data-id="335" class="bg-tf-card border border-tf-border rounded-xl overflow-hidden">
+        <div data-id="336" class="overflow-x-auto">
+          <table data-id="337" class="data-table" id="metadata-table-m3n4">
+            <thead data-id="338">
+              <tr data-id="339">
+                <th data-id="340">ID</th>
+                <th data-id="341">Entity</th>
+                <th data-id="342" class="hidden md:table-cell">Type</th>
+                <th data-id="343" class="hidden lg:table-cell">Schema Version</th>
+                <th data-id="344" class="hidden sm:table-cell">Last Modified</th>
+                <th data-id="345">Status</th>
+                <th data-id="346">Actions</th>
+              </tr>
+            </thead>
+            <tbody data-id="347">
+              <tr data-status="active" data-entity="triadicframeworks llc" data-id="348">
+                <td data-id="349" class="font-mono text-xs text-accent-cyan">TF-META-001</td>
+                <td data-id="350" class="font-medium text-gray-200 text-sm">TriadicFrameworks LLC</td>
+                <td data-id="351" class="hidden md:table-cell"><span data-id="352" class="pill pill-blue">organization</span></td>
+                <td data-id="353" class="hidden lg:table-cell font-mono text-xs text-gray-400">v1.2.0</td>
+                <td data-id="354" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-07-04</td>
+                <td data-id="355"><span data-id="356" class="pill pill-green">Active</span></td>
+                <td data-id="357"><button data-id="358" class="copy-btn view-json-btn" data-json="tf001"><i data-id="359" data-lucide="code" class="w-3 h-3"></i> View JSON</button></td>
+              </tr>
+              <tr data-status="active" data-entity="canon operations" data-id="360">
+                <td data-id="361" class="font-mono text-xs text-accent-cyan">TF-META-002</td>
+                <td data-id="362" class="font-medium text-gray-200 text-sm">Canon Operations</td>
+                <td data-id="363" class="hidden md:table-cell"><span data-id="364" class="pill pill-blue">governance</span></td>
+                <td data-id="365" class="hidden lg:table-cell font-mono text-xs text-gray-400">v1.1.0</td>
+                <td data-id="366" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-06-01</td>
+                <td data-id="367"><span data-id="368" class="pill pill-green">Active</span></td>
+                <td data-id="369"><button data-id="370" class="copy-btn view-json-btn" data-json="tf002"><i data-id="371" data-lucide="code" class="w-3 h-3"></i> View JSON</button></td>
+              </tr>
+              <tr data-status="archived" data-entity="founding documents" data-id="372">
+                <td data-id="373" class="font-mono text-xs text-accent-cyan">TF-META-003</td>
+                <td data-id="374" class="font-medium text-gray-200 text-sm">Founding Documents</td>
+                <td data-id="375" class="hidden md:table-cell"><span data-id="376" class="pill pill-blue">legal</span></td>
+                <td data-id="377" class="hidden lg:table-cell font-mono text-xs text-gray-400">v1.0.0</td>
+                <td data-id="378" class="hidden sm:table-cell font-mono text-xs text-gray-400">2024-01-15</td>
+                <td data-id="379"><span data-id="380" class="pill pill-gray">Archived</span></td>
+                <td data-id="381"><button data-id="382" class="copy-btn view-json-btn" data-json="tf003"><i data-id="383" data-lucide="code" class="w-3 h-3"></i> View JSON</button></td>
+              </tr>
+              <tr data-status="active" data-entity="module registry" data-id="384">
+                <td data-id="385" class="font-mono text-xs text-accent-cyan">TF-META-004</td>
+                <td data-id="386" class="font-medium text-gray-200 text-sm">Module Registry</td>
+                <td data-id="387" class="hidden md:table-cell"><span data-id="388" class="pill pill-blue">system</span></td>
+                <td data-id="389" class="hidden lg:table-cell font-mono text-xs text-gray-400">v2.0.0</td>
+                <td data-id="390" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-07-01</td>
+                <td data-id="391"><span data-id="392" class="pill pill-green">Active</span></td>
+                <td data-id="393"><button data-id="394" class="copy-btn view-json-btn" data-json="tf004"><i data-id="395" data-lucide="code" class="w-3 h-3"></i> View JSON</button></td>
+              </tr>
+              <tr data-status="active" data-entity="ai governance block" data-id="396">
+                <td data-id="397" class="font-mono text-xs text-accent-cyan">TF-META-005</td>
+                <td data-id="398" class="font-medium text-gray-200 text-sm">AI Governance Block</td>
+                <td data-id="399" class="hidden md:table-cell"><span data-id="400" class="pill pill-blue">ai-schema</span></td>
+                <td data-id="401" class="hidden lg:table-cell font-mono text-xs text-gray-400">v1.3.0</td>
+                <td data-id="402" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-07-04</td>
+                <td data-id="403"><span data-id="404" class="pill pill-green">Active</span></td>
+                <td data-id="405"><button data-id="406" class="copy-btn view-json-btn" data-json="tf005"><i data-id="407" data-lucide="code" class="w-3 h-3"></i> View JSON</button></td>
+              </tr>
+              <tr data-status="active" data-entity="compliance calendar" data-id="408">
+                <td data-id="409" class="font-mono text-xs text-accent-cyan">TF-META-006</td>
+                <td data-id="410" class="font-medium text-gray-200 text-sm">Compliance Calendar</td>
+                <td data-id="411" class="hidden md:table-cell"><span data-id="412" class="pill pill-blue">compliance</span></td>
+                <td data-id="413" class="hidden lg:table-cell font-mono text-xs text-gray-400">v1.0.1</td>
+                <td data-id="414" class="hidden sm:table-cell font-mono text-xs text-gray-400">2025-06-30</td>
+                <td data-id="415"><span data-id="416" class="pill pill-green">Active</span></td>
+                <td data-id="417"><button data-id="418" class="copy-btn view-json-btn" data-json="tf006"><i data-id="419" data-lucide="code" class="w-3 h-3"></i> View JSON</button></td>
+              </tr>
+              <tr data-status="active" data-entity="member registry" data-id="420">
+                <td data-id="421" class="font-mono text-xs text-accent-cyan">TF-META-007</td>
+                <td data-id="422" class="font-medium text-gray-200 text-sm">Member Registry</td>
+                <td data-id="423" class="hidden md:table-cell"><span data-id="424" class="pill pill-blue">legal</span></td>
+                <td data-id="425" class="hidden lg:table-cell font-mono text-xs text-gray-400">v1.0.0</td>
+                <td data-id="426" class="hidden sm:table-cell font-mono text-xs text-gray-400">2024-01-15</td>
+                <td data-id="427"><span data-id="428" class="pill pill-green">Active</span></td>
+                <td data-id="429"><button data-id="430" class="copy-btn view-json-btn" data-json="tf007"><i data-id="431" data-lucide="code" class="w-3 h-3"></i> View JSON</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOUNDING DOCUMENTS ==================== -->
+    <section data-id="432" id="section-founding" class="section-panel p-4 md:p-8 lg:p-10">
+      <div data-id="433" class="mb-8">
+        <div data-id="434" class="flex items-center gap-2 mb-1">
+          <i data-id="435" data-lucide="file-text" class="w-6 h-6 text-accent-blue"></i>
+          <h1 data-id="436" class="text-xl md:text-2xl font-bold text-white">Founding Documents</h1>
+        </div>
+        <p data-id="437" class="text-sm text-gray-400 ml-8">Core legal and governance instruments of TriadicFrameworks LLC</p>
+      </div>
+
+      <div data-id="438" class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div data-id="439" class="doc-card">
+          <div data-id="440" class="flex items-start gap-3">
+            <div data-id="441" class="w-10 h-10 rounded-lg bg-accent-blue/15 flex items-center justify-center text-lg flex-shrink-0">📋</div>
+            <div data-id="442" class="flex-1 min-w-0">
+              <h3 data-id="443" class="font-semibold text-gray-200 text-sm">Articles of Organization</h3>
+              <p data-id="444" class="text-xs text-gray-500 mt-1">Michigan LLC formation document filed with Secretary of State</p>
+              <div data-id="445" class="flex flex-wrap items-center gap-2 mt-3">
+                <span data-id="446" class="font-mono text-[0.65rem] text-gray-500">Filed: Jan 15, 2024</span>
+                <span data-id="447" class="pill pill-green">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-id="448" class="doc-card">
+          <div data-id="449" class="flex items-start gap-3">
+            <div data-id="450" class="w-10 h-10 rounded-lg bg-accent-blue/15 flex items-center justify-center text-lg flex-shrink-0">📝</div>
+            <div data-id="451" class="flex-1 min-w-0">
+              <h3 data-id="452" class="font-semibold text-gray-200 text-sm">Operating Agreement</h3>
+              <p data-id="453" class="text-xs text-gray-500 mt-1">Member-managed LLC operating agreement defining governance structure</p>
+              <div data-id="454" class="flex flex-wrap items-center gap-2 mt-3">
+                <span data-id="455" class="font-mono text-[0.65rem] text-gray-500">Executed: Jan 15, 2024</span>
+                <span data-id="456" class="pill pill-green">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-id="457" class="doc-card">
+          <div data-id="458" class="flex items-start gap-3">
+            <div data-id="459" class="w-10 h-10 rounded-lg bg-accent-cyan/15 flex items-center justify-center text-lg flex-shrink-0">🤝</div>
+            <div data-id="460" class="flex-1 min-w-0">
+              <h3 data-id="461" class="font-semibold text-gray-200 text-sm">Member Agreement</h3>
+              <p data-id="462" class="text-xs text-gray-500 mt-1">Founding member roles, responsibilities, and equity structure</p>
+              <div data-id="463" class="flex flex-wrap items-center gap-2 mt-3">
+                <span data-id="464" class="font-mono text-[0.65rem] text-gray-500">Executed: Jan 15, 2024</span>
+                <span data-id="465" class="pill pill-green">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-id="466" class="doc-card">
+          <div data-id="467" class="flex items-start gap-3">
+            <div data-id="468" class="w-10 h-10 rounded-lg bg-accent-cyan/15 flex items-center justify-center text-lg flex-shrink-0">🤖</div>
+            <div data-id="469" class="flex-1 min-w-0">
+              <h3 data-id="470" class="font-semibold text-gray-200 text-sm">AI Operations Addendum</h3>
+              <p data-id="471" class="text-xs text-gray-500 mt-1">Governance addendum for AI-assisted operations and canon compliance</p>
+              <div data-id="472" class="flex flex-wrap items-center gap-2 mt-3">
+                <span data-id="473" class="font-mono text-[0.65rem] text-gray-500">Executed: Mar 1, 2024</span>
+                <span data-id="474" class="pill pill-green">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-id="475" class="doc-card">
+          <div data-id="476" class="flex items-start gap-3">
+            <div data-id="477" class="w-10 h-10 rounded-lg bg-accent-amber/15 flex items-center justify-center text-lg flex-shrink-0">📊</div>
+            <div data-id="478" class="flex-1 min-w-0">
+              <h3 data-id="479" class="font-semibold text-gray-200 text-sm">Canon Registry Charter</h3>
+              <p data-id="480" class="text-xs text-gray-500 mt-1">Foundational document defining triadic canon operations framework</p>
+              <div data-id="481" class="flex flex-wrap items-center gap-2 mt-3">
+                <span data-id="482" class="font-mono text-[0.65rem] text-gray-500">Executed: Mar 15, 2024</span>
+                <span data-id="483" class="pill pill-green">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div data-id="484" class="doc-card">
+          <div data-id="485" class="flex items-start gap-3">
+            <div data-id="486" class="w-10 h-10 rounded-lg bg-accent-amber/15 flex items-center justify-center text-lg flex-shrink-0">🔐</div>
+            <div data-id="487" class="flex-1 min-w-0">
+              <h3 data-id="488" class="font-semibold text-gray-200 text-sm">Data Governance Policy</h3>
+              <p data-id="489" class="text-xs text-gray-500 mt-1">Data handling, metadata authority, and AI schema governance</p>
+              <div data-id="490" class="flex flex-wrap items-center gap-2 mt-3">
+                <span data-id="491" class="font-mono text-[0.65rem] text-gray-500">Executed: Apr 1, 2024</span>
+                <span data-id="492" class="pill pill-green">Active</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== MODULE MANIFESTS ==================== -->
+    <section data-id="493" id="section-modules" class="section-panel p-4 md:p-8 lg:p-10">
+      <div data-id="494" class="mb-8">
+        <div data-id="495" class="flex items-center gap-2 mb-1">
+          <i data-id="496" data-lucide="package" class="w-6 h-6 text-accent-cyan"></i>
+          <h1 data-id="497" class="text-xl md:text-2xl font-bold text-white">Module.json Manifests</h1>
+        </div>
+        <p data-id="498" class="text-sm text-gray-400 ml-8">Live registry of all TriadicFrameworks module manifests</p>
+      </div>
+
+      <div data-id="499" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div data-id="500" class="module-card">
+          <div data-id="501" class="flex items-center justify-between mb-2">
+            <span data-id="502" class="text-accent-cyan text-sm font-semibold">core-governance</span>
+            <span data-id="503" class="pill pill-green">v2.1.0</span>
+          </div>
+          <p data-id="504" class="text-xs text-gray-500 mb-3 font-sans">Core governance schema and triadic model definitions</p>
+          <button data-id="505" class="copy-btn view-manifest-btn w-full justify-center" data-module="core-governance"><i data-id="506" data-lucide="file-json" class="w-3 h-3"></i> View Manifest</button>
+        </div>
+        <div data-id="507" class="module-card">
+          <div data-id="508" class="flex items-center justify-between mb-2">
+            <span data-id="509" class="text-accent-cyan text-sm font-semibold">canon-operations</span>
+            <span data-id="510" class="pill pill-green">v1.4.0</span>
+          </div>
+          <p data-id="511" class="text-xs text-gray-500 mb-3 font-sans">Canon cycle management and trigger system</p>
+          <button data-id="512" class="copy-btn view-manifest-btn w-full justify-center" data-module="canon-operations"><i data-id="513" data-lucide="file-json" class="w-3 h-3"></i> View Manifest</button>
+        </div>
+        <div data-id="514" class="module-card">
+          <div data-id="515" class="flex items-center justify-between mb-2">
+            <span data-id="516" class="text-accent-cyan text-sm font-semibold">metadata-registry</span>
+            <span data-id="517" class="pill pill-green">v2.0.0</span>
+          </div>
+          <p data-id="518" class="text-xs text-gray-500 mb-3 font-sans">AI-ready metadata registration and validation</p>
+          <button data-id="519" class="copy-btn view-manifest-btn w-full justify-center" data-module="metadata-registry"><i data-id="520" data-lucide="file-json" class="w-3 h-3"></i> View Manifest</button>
+        </div>
+        <div data-id="521" class="module-card">
+          <div data-id="522" class="flex items-center justify-between mb-2">
+            <span data-id="523" class="text-accent-cyan text-sm font-semibold">compliance-calendar</span>
+            <span data-id="524" class="pill pill-green">v1.2.0</span>
+          </div>
+          <p data-id="525" class="text-xs text-gray-500 mb-3 font-sans">LLC compliance tracking and deadline management</p>
+          <button data-id="526" class="copy-btn view-manifest-btn w-full justify-center" data-module="compliance-calendar"><i data-id="527" data-lucide="file-json" class="w-3 h-3"></i> View Manifest</button>
+        </div>
+        <div data-id="528" class="module-card">
+          <div data-id="529" class="flex items-center justify-between mb-2">
+            <span data-id="530" class="text-accent-cyan text-sm font-semibold">founding-docs</span>
+            <span data-id="531" class="pill pill-green">v1.0.1</span>
+          </div>
+          <p data-id="532" class="text-xs text-gray-500 mb-3 font-sans">Founding document registry and version control</p>
+          <button data-id="533" class="copy-btn view-manifest-btn w-full justify-center" data-module="founding-docs"><i data-id="534" data-lucide="file-json" class="w-3 h-3"></i> View Manifest</button>
+        </div>
+        <div data-id="535" class="module-card">
+          <div data-id="536" class="flex items-center justify-between mb-2">
+            <span data-id="537" class="text-accent-cyan text-sm font-semibold">ai-governance</span>
+            <span data-id="538" class="pill pill-green">v1.3.0</span>
+          </div>
+          <p data-id="539" class="text-xs text-gray-500 mb-3 font-sans">AI schema governance and inference policy management</p>
+          <button data-id="540" class="copy-btn view-manifest-btn w-full justify-center" data-module="ai-governance"><i data-id="541" data-lucide="file-json" class="w-3 h-3"></i> View Manifest</button>
+        </div>
+        <div data-id="542" class="module-card">
+          <div data-id="543" class="flex items-center justify-between mb-2">
+            <span data-id="544" class="text-accent-cyan text-sm font-semibold">member-registry</span>
+            <span data-id="545" class="pill pill-green">v1.1.0</span>
+          </div>
+          <p data-id="546" class="text-xs text-gray-500 mb-3 font-sans">Member roles, permissions, and identity management</p>
+          <button data-id="547" class="copy-btn view-manifest-btn w-full justify-center" data-module="member-registry"><i data-id="548" data-lucide="file-json" class="w-3 h-3"></i> View Manifest</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AI GOVERNANCE BLOCKS ==================== -->
+    <section data-id="549" id="section-aigovernance" class="section-panel p-4 md:p-8 lg:p-10">
+      <div data-id="550" class="mb-8">
+        <div data-id="551" class="flex items-center gap-2 mb-1">
+          <i data-id="552" data-lucide="brain" class="w-6 h-6 text-accent-blue"></i>
+          <h1 data-id="553" class="text-xl md:text-2xl font-bold text-white">AI Governance Blocks</h1>
+        </div>
+        <p data-id="554" class="text-sm text-gray-400 ml-8">Structured governance primitives for AI-ready operations</p>
+      </div>
+
+      <div data-id="555" class="grid grid-cols-1 lg:grid-cols-3 gap-4 mb-8">
+        <!-- Block 1 -->
+        <div data-id="556" class="gov-block">
+          <div data-id="557" class="flex items-center gap-2 mb-4">
+            <div data-id="558" class="w-8 h-8 rounded-lg bg-accent-blue/15 flex items-center justify-center">
+              <i data-id="559" data-lucide="shield-check" class="w-4 h-4 text-accent-blue"></i>
+            </div>
+            <div data-id="560">
+              <h3 data-id="561" class="text-sm font-bold text-gray-200">Inference Policy Block</h3>
+              <span data-id="562" class="font-mono text-[0.6rem] text-gray-500">TF-AI-GOV-001</span>
+            </div>
+          </div>
+          <div data-id="563" class="space-y-2 text-xs">
+            <div data-id="564" class="flex justify-between"><span data-id="565" class="text-gray-500">Policy:</span><span data-id="566" class="text-gray-300">Strict inference with audit trail</span></div>
+            <div data-id="567" class="flex justify-between"><span data-id="568" class="text-gray-500">Allowed:</span><span data-id="569" class="text-accent-green font-mono">read, validate, audit</span></div>
+            <div data-id="570" class="flex justify-between"><span data-id="571" class="text-gray-500">Restricted:</span><span data-id="572" class="text-accent-red font-mono">modify, delete, train</span></div>
+            <div data-id="573" class="flex justify-between"><span data-id="574" class="text-gray-500">LLM Optimized:</span><span data-id="575" class="text-accent-green">Yes</span></div>
+            <div data-id="576" class="flex justify-between"><span data-id="577" class="text-gray-500">Status:</span><span data-id="578" class="pill pill-green">Active</span></div>
+          </div>
+        </div>
+
+        <!-- Block 2 -->
+        <div data-id="579" class="gov-block">
+          <div data-id="580" class="flex items-center gap-2 mb-4">
+            <div data-id="581" class="w-8 h-8 rounded-lg bg-accent-cyan/15 flex items-center justify-center">
+              <i data-id="582" data-lucide="check-circle-2" class="w-4 h-4 text-accent-cyan"></i>
+            </div>
+            <div data-id="583">
+              <h3 data-id="584" class="text-sm font-bold text-gray-200">Canon Compliance Block</h3>
+              <span data-id="585" class="font-mono text-[0.6rem] text-gray-500">TF-AI-GOV-002</span>
+            </div>
+          </div>
+          <div data-id="586" class="space-y-2 text-xs">
+            <div data-id="587" class="flex justify-between"><span data-id="588" class="text-gray-500">Policy:</span><span data-id="589" class="text-gray-300">Canon-first operation compliance</span></div>
+            <div data-id="590" class="flex justify-between"><span data-id="591" class="text-gray-500">Validates against:</span><span data-id="592" class="text-gray-300 font-mono">Canon v1.0</span></div>
+            <div data-id="593" class="flex justify-between"><span data-id="594" class="text-gray-500">Auto-validates:</span><span data-id="595" class="text-accent-green">Yes</span></div>
+            <div data-id="596" class="flex justify-between"><span data-id="597" class="text-gray-500">Human Review:</span><span data-id="598" class="text-accent-amber">Yes (cycle closure)</span></div>
+            <div data-id="599" class="flex justify-between"><span data-id="600" class="text-gray-500">Status:</span><span data-id="601" class="pill pill-green">Active</span></div>
+          </div>
+        </div>
+
+        <!-- Block 3 -->
+        <div data-id="602" class="gov-block">
+          <div data-id="603" class="flex items-center gap-2 mb-4">
+            <div data-id="604" class="w-8 h-8 rounded-lg bg-accent-amber/15 flex items-center justify-center">
+              <i data-id="605" data-lucide="key-round" class="w-4 h-4 text-accent-amber"></i>
+            </div>
+            <div data-id="606">
+              <h3 data-id="607" class="text-sm font-bold text-gray-200">Metadata Authority Block</h3>
+              <span data-id="608" class="font-mono text-[0.6rem] text-gray-500">TF-AI-GOV-003</span>
+            </div>
+          </div>
+          <div data-id="609" class="space-y-2 text-xs">
+            <div data-id="610" class="flex justify-between"><span data-id="611" class="text-gray-500">Policy:</span><span data-id="612" class="text-gray-300">Metadata write authority</span></div>
+            <div data-id="613" class="flex justify-between"><span data-id="614" class="text-gray-500">Write Authority:</span><span data-id="615" class="text-gray-300 text-[0.65rem]">Canon Registry only</span></div>
+            <div data-id="616" class="flex justify-between"><span data-id="617" class="text-gray-500">Read Authority:</span><span data-id="618" class="text-gray-300">Any authorized entity</span></div>
+            <div data-id="619" class="flex justify-between"><span data-id="620" class="text-gray-500">Schema Validation:</span><span data-id="621" class="text-accent-cyan font-mono">Strict JSON-LD</span></div>
+            <div data-id="622" class="flex justify-between"><span data-id="623" class="text-gray-500">Status:</span><span data-id="624" class="pill pill-green">Active</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Governance Schema Preview -->
+      <div data-id="625" class="bg-tf-card border border-tf-border rounded-xl overflow-hidden">
+        <div data-id="626" class="p-4 md:p-5 border-b border-tf-border flex items-center justify-between">
+          <div data-id="627">
+            <h2 data-id="628" class="text-base font-bold text-white">Governance Schema Preview</h2>
+            <p data-id="629" class="text-xs text-gray-500 mt-0.5">Combined AI governance schema — read-only</p>
+          </div>
+          <button data-id="630" class="copy-btn" id="copy-gov-schema-o5p6"><i data-id="631" data-lucide="copy" class="w-3 h-3"></i> Copy JSON</button>
+        </div>
+        <div data-id="632" class="p-4 md:p-5 overflow-x-auto">
+          <pre data-id="633" class="font-mono text-xs leading-relaxed" id="gov-schema-preview-q7r8"></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer data-id="634" id="footer-s9t0" class="border-t border-tf-border p-4 md:p-6 md:ml-0">
+      <div data-id="635" class="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-gray-600">
+        <div data-id="636" class="flex items-center gap-2">
+          <div data-id="637" class="w-5 h-5 rounded bg-accent-blue/20 flex items-center justify-center text-[0.5rem] font-bold text-accent-blue">TF</div>
+          <span data-id="638">TriadicFrameworks LLC · triadicframeworks.org</span>
+        </div>
+        <div data-id="639" class="text-center">Last Updated: July 4, 2025 — Independence Day Edition</div>
+        <div data-id="640">Made by Copilot</div>
+      </div>
+    </footer>
+  </main>
+
+  <!-- JSON Modal -->
+  <div data-id="641" id="json-modal-u1v2" class="modal-overlay">
+    <div data-id="642" class="modal-content">
+      <div data-id="643" class="flex items-center justify-between mb-4">
+        <h3 data-id="644" id="json-modal-title-w3x4" class="text-sm font-bold text-white">JSON Viewer</h3>
+        <div data-id="645" class="flex items-center gap-2">
+          <button data-id="646" class="copy-btn" id="modal-copy-btn-y5z6"><i data-id="647" data-lucide="copy" class="w-3 h-3"></i> Copy JSON</button>
+          <button data-id="648" id="json-modal-close-a7b8" class="p-1 text-gray-500 hover:text-white transition-colors">
+            <i data-id="649" data-lucide="x" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+      <div data-id="650" class="bg-tf-bg rounded-lg p-4 border border-tf-border overflow-x-auto">
+        <pre data-id="651" id="json-modal-content-c9d0" class="font-mono text-xs leading-relaxed"></pre>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // === Initialize Lucide icons safely ===
+    if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+      lucide.createIcons();
+    }
+
+    // === JSON Data Store ===
+    const jsonData = {
+      tf001: {
+        title: "TF-META-001 — TriadicFrameworks LLC",
+        data: {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "id": "TF-META-001",
+          "name": "TriadicFrameworks LLC",
+          "url": "https://triadicframeworks.org",
+          "legalName": "TriadicFrameworks LLC",
+          "jurisdiction": "Michigan, United States",
+          "formed": "2024-01-15",
+          "governanceModel": "Triadic",
+          "canonVersion": "1.0",
+          "aiReady": true,
+          "metadataAuthority": "TriadicFrameworks Canon Registry",
+          "schemaVersion": "v1.2.0",
+          "lastModified": "2025-07-04"
+        }
+      },
+      tf002: {
+        title: "TF-META-002 — Canon Operations",
+        data: {
+          "@context": "https://schema.org",
+          "@type": "GovernanceProcess",
+          "id": "TF-META-002",
+          "entity": "Canon Operations",
+          "processType": "governance",
+          "totalCycles": 3,
+          "activeCycle": 1,
+          "schemaVersion": "v1.1.0",
+          "canonCompliant": true,
+          "aiReady": true,
+          "lastModified": "2025-06-01"
+        }
+      },
+      tf003: {
+        title: "TF-META-003 — Founding Documents",
+        data: {
+          "@context": "https://schema.org",
+          "@type": "LegalDocument",
+          "id": "TF-META-003",
+          "entity": "Founding Documents",
+          "documentType": "legal",
+          "totalDocuments": 6,
+          "jurisdiction": "Michigan, United States",
+          "schemaVersion": "v1.0.0",
+          "status": "archived",
+          "lastModified": "2024-01-15"
+        }
+      },
+      tf004: {
+        title: "TF-META-004 — Module Registry",
+        data: {
+          "@context": "https://schema.org",
+          "@type": "SoftwareRegistry",
+          "id": "TF-META-004",
+          "entity": "Module Registry",
+          "registryType": "system",
+          "totalModules": 7,
+          "schemaVersion": "v2.0.0",
+          "aiReady": true,
+          "canonCompliant": true,
+          "lastModified": "2025-07-01"
+        }
+      },
+      tf005: {
+        title: "TF-META-005 — AI Governance Block",
+        data: {
+          "@context": "https://schema.org",
+          "@type": "GovernanceSchema",
+          "id": "TF-META-005",
+          "entity": "AI Governance Block",
+          "aiReady": true,
+          "llmOptimized": true,
+          "canonCompliant": true,
+          "schemaVersion": "v1.3.0",
+          "inferencePolicy": "strict",
+          "dataClassification": "governance",
+          "allowedOperations": ["read", "validate", "audit"],
+          "restrictedOperations": ["modify", "delete"],
+          "auditTrail": true,
+          "lastModified": "2025-07-04"
+        }
+      },
+      tf006: {
+        title: "TF-META-006 — Compliance Calendar",
+        data: {
+          "@context": "https://schema.org",
+          "@type": "ComplianceSchedule",
+          "id": "TF-META-006",
+          "entity": "Compliance Calendar",
+          "complianceType": "llc-annual",
+          "jurisdiction": "Michigan, United States",
+          "totalItems": 12,
+          "schemaVersion": "v1.0.1",
+          "aiReady": true,
+          "lastModified": "2025-06-30"
+        }
+      },
+      tf007: {
+        title: "TF-META-007 — Member Registry",
+        data: {
+          "@context": "https://schema.org",
+          "@type": "MemberRegistry",
+          "id": "TF-META-007",
+          "entity": "Member Registry",
+          "registryType": "legal",
+          "memberManaged": true,
+          "schemaVersion": "v1.0.0",
+          "aiReady": true,
+          "lastModified": "2024-01-15"
+        }
+      }
+    };
+
+    const moduleManifests = {
+      "core-governance": {
+        "module": "core-governance",
+        "version": "2.1.0",
+        "description": "Core governance schema and triadic model definitions",
+        "author": "TriadicFrameworks LLC",
+        "license": "Proprietary",
+        "canonCompliant": true,
+        "aiReady": true,
+        "dependencies": {
+          "metadata-registry": "^2.0.0",
+          "canon-operations": "^1.4.0"
+        },
+        "exports": {
+          "schema": "./schema/governance.json",
+          "types": "./types/index.ts",
+          "canon": "./canon/core.json"
+        },
+        "metadataAuthority": "TF-META-004",
+        "lastModified": "2025-07-01"
+      },
+      "canon-operations": {
+        "module": "canon-operations",
+        "version": "1.4.0",
+        "description": "Canon cycle management and trigger system",
+        "author": "TriadicFrameworks LLC",
+        "license": "Proprietary",
+        "canonCompliant": true,
+        "aiReady": true,
+        "dependencies": { "core-governance": "^2.0.0" },
+        "exports": { "cycles": "./cycles/index.json", "triggers": "./triggers/config.json" },
+        "metadataAuthority": "TF-META-002",
+        "lastModified": "2025-06-01"
+      },
+      "metadata-registry": {
+        "module": "metadata-registry",
+        "version": "2.0.0",
+        "description": "AI-ready metadata registration and validation",
+        "author": "TriadicFrameworks LLC",
+        "license": "Proprietary",
+        "canonCompliant": true,
+        "aiReady": true,
+        "dependencies": { "core-governance": "^2.0.0" },
+        "exports": { "registry": "./registry/index.json", "validator": "./validator/schema.json" },
+        "metadataAuthority": "TF-META-004",
+        "lastModified": "2025-07-01"
+      },
+      "compliance-calendar": {
+        "module": "compliance-calendar",
+        "version": "1.2.0",
+        "description": "LLC compliance tracking and deadline management",
+        "author": "TriadicFrameworks LLC",
+        "license": "Proprietary",
+        "canonCompliant": true,
+        "aiReady": true,
+        "dependencies": { "core-governance": "^2.0.0" },
+        "exports": { "calendar": "./calendar/events.json" },
+        "metadataAuthority": "TF-META-006",
+        "lastModified": "2025-06-30"
+      },
+      "founding-docs": {
+        "module": "founding-docs",
+        "version": "1.0.1",
+        "description": "Founding document registry and version control",
+        "author": "TriadicFrameworks LLC",
+        "license": "Proprietary",
+        "canonCompliant": true,
+        "aiReady": true,
+        "dependencies": { "core-governance": "^2.0.0" },
+        "exports": { "documents": "./documents/index.json" },
+        "metadataAuthority": "TF-META-003",
+        "lastModified": "2024-01-15"
+      },
+      "ai-governance": {
+        "module": "ai-governance",
+        "version": "1.3.0",
+        "description": "AI schema governance and inference policy management",
+        "author": "TriadicFrameworks LLC",
+        "license": "Proprietary",
+        "canonCompliant": true,
+        "aiReady": true,
+        "llmOptimized": true,
+        "dependencies": { "core-governance": "^2.0.0", "metadata-registry": "^2.0.0" },
+        "exports": { "schema": "./schema/ai-gov.json", "policies": "./policies/inference.json" },
+        "metadataAuthority": "TF-META-005",
+        "lastModified": "2025-07-04"
+      },
+      "member-registry": {
+        "module": "member-registry",
+        "version": "1.1.0",
+        "description": "Member roles, permissions, and identity management",
+        "author": "TriadicFrameworks LLC",
+        "license": "Proprietary",
+        "canonCompliant": true,
+        "aiReady": true,
+        "dependencies": { "core-governance": "^2.0.0" },
+        "exports": { "members": "./members/index.json", "roles": "./roles/config.json" },
+        "metadataAuthority": "TF-META-007",
+        "lastModified": "2024-01-15"
+      }
+    };
+
+    const govSchemaData = {
+      "$schema": "https://triadicframeworks.org/schemas/ai-governance/v1.3.0",
+      "title": "TriadicFrameworks AI Governance Schema",
+      "version": "1.3.0",
+      "blocks": [
+        {
+          "id": "TF-AI-GOV-001",
+          "name": "Inference Policy Block",
+          "policy": "strict",
+          "allowedOperations": ["read", "validate", "audit"],
+          "restrictedOperations": ["modify", "delete", "train"],
+          "llmOptimized": true,
+          "auditTrail": true
+        },
+        {
+          "id": "TF-AI-GOV-002",
+          "name": "Canon Compliance Block",
+          "policy": "canon-first",
+          "validatesAgainst": "Canon v1.0",
+          "autoValidates": true,
+          "humanReviewRequired": true
+        },
+        {
+          "id": "TF-AI-GOV-003",
+          "name": "Metadata Authority Block",
+          "policy": "write-authority",
+          "writeAuthority": "TriadicFrameworks Canon Registry",
+          "readAuthority": "any-authorized",
+          "schemaValidation": "strict-json-ld"
+        }
+      ],
+      "canonCompliant": true,
+      "lastModified": "2025-07-04"
+    };
+
+    // === JSON Syntax Highlighting ===
+    function syntaxHighlight(json) {
+      if (typeof json !== 'string') json = JSON.stringify(json, null, 2);
+      json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return json.replace(
+        /("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g,
+        function (match) {
+          let cls = 'json-number';
+          if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+              cls = 'json-key';
+            } else {
+              cls = 'json-value-string';
+            }
+          } else if (/true|false/.test(match)) {
+            cls = 'json-bool';
+          } else if (/null/.test(match)) {
+            cls = 'json-null';
+          }
+          return '<span class="' + cls + '">' + match + '</span>';
+        }
+      );
+    }
+
+    // === Render Governance Schema Preview ===
+    const govPreview = document.getElementById('gov-schema-preview-q7r8');
+    if (govPreview) {
+      govPreview.innerHTML = syntaxHighlight(govSchemaData);
+    }
+
+    // === Sidebar Navigation ===
+    const navMap = {
+      overview: 'section-overview',
+      compliance: 'section-compliance',
+      canon: 'section-canon',
+      metadata: 'section-metadata',
+      founding: 'section-founding',
+      modules: 'section-modules',
+      aigovernance: 'section-aigovernance'
+    };
+
+    document.querySelectorAll('.sidebar-link[data-nav]').forEach(function(link) {
+      link.addEventListener('click', function() {
+        const target = this.dataset.nav;
+
+        // Update active link
+        document.querySelectorAll('.sidebar-link').forEach(function(l) { l.classList.remove('active'); });
+        this.classList.add('active');
+
+        // Show target section
+        document.querySelectorAll('.section-panel').forEach(function(s) { s.classList.remove('active'); });
+        const section = document.getElementById(navMap[target]);
+        if (section) section.classList.add('active');
+
+        // Close mobile sidebar
+        closeMobileSidebar();
+      });
+    });
+
+    // === Mobile Sidebar ===
+    const sidebar = document.getElementById('sidebar-g7h8');
+    const sidebarOverlay = document.getElementById('sidebar-overlay-e5f6');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn-c3d4');
+    const sidebarCloseBtn = document.getElementById('sidebar-close-i9j0');
+
+    function openMobileSidebar() {
+      sidebar.classList.remove('-translate-x-full');
+      sidebarOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeMobileSidebar() {
+      if (window.innerWidth < 768) {
+        sidebar.classList.add('-translate-x-full');
+        sidebarOverlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', openMobileSidebar);
+    sidebarCloseBtn.addEventListener('click', closeMobileSidebar);
+    sidebarOverlay.addEventListener('click', closeMobileSidebar);
+
+    // === Cycle Cards Toggle ===
+    document.querySelectorAll('.cycle-header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        const body = this.nextElementSibling;
+        const chevron = this.querySelector('.cycle-chevron');
+        const isOpen = body.classList.contains('open');
+
+        body.classList.toggle('open');
+        if (chevron) {
+          chevron.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+        }
+      });
+    });
+
+    // Initialize cycle 1 chevron
+    const firstChevron = document.querySelector('[data-cycle="1"] .cycle-chevron');
+    if (firstChevron) firstChevron.style.transform = 'rotate(180deg)';
+
+    // === JSON Modal ===
+    const modal = document.getElementById('json-modal-u1v2');
+    const modalTitle = document.getElementById('json-modal-title-w3x4');
+    const modalContent = document.getElementById('json-modal-content-c9d0');
+    const modalCloseBtn = document.getElementById('json-modal-close-a7b8');
+    const modalCopyBtn = document.getElementById('modal-copy-btn-y5z6');
+    let currentModalJson = '';
+
+    function openJsonModal(title, data) {
+      currentModalJson = JSON.stringify(data, null, 2);
+      modalTitle.textContent = title;
+      modalContent.innerHTML = syntaxHighlight(data);
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeJsonModal() {
+      modal.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    modalCloseBtn.addEventListener('click', closeJsonModal);
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) closeJsonModal();
+    });
+
+    // View JSON buttons (Metadata Registry)
+    document.querySelectorAll('.view-json-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const key = this.dataset.json;
+        const entry = jsonData[key];
+        if (entry) openJsonModal(entry.title, entry.data);
+      });
+    });
+
+    // View Manifest buttons
+    document.querySelectorAll('.view-manifest-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        const mod = this.dataset.module;
+        const manifest = moduleManifests[mod];
+        if (manifest) openJsonModal('module.json — ' + mod, manifest);
+      });
+    });
+
+    // Copy JSON in modal
+    modalCopyBtn.addEventListener('click', function() {
+      navigator.clipboard.writeText(currentModalJson).then(function() {
+        modalCopyBtn.innerHTML = '<i data-lucide="check" class="w-3 h-3"></i> Copied!';
+        if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+          lucide.createIcons();
+        }
+        setTimeout(function() {
+          modalCopyBtn.innerHTML = '<i data-lucide="copy" class="w-3 h-3"></i> Copy JSON';
+          if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+            lucide.createIcons();
+          }
+        }, 2000);
+      });
+    });
+
+    // Copy Governance Schema
+    document.getElementById('copy-gov-schema-o5p6').addEventListener('click', function() {
+      const schemaText = JSON.stringify(govSchemaData, null, 2);
+      const btn = this;
+      navigator.clipboard.writeText(schemaText).then(function() {
+        btn.innerHTML = '<i data-lucide="check" class="w-3 h-3"></i> Copied!';
+        if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+          lucide.createIcons();
+        }
+        setTimeout(function() {
+          btn.innerHTML = '<i data-lucide="copy" class="w-3 h-3"></i> Copy JSON';
+          if (typeof lucide !== "undefined" && typeof lucide.createIcons === "function") {
+            lucide.createIcons();
+          }
+        }, 2000);
+      });
+    });
+
+    // === Metadata Search & Filter ===
+    const searchInput = document.getElementById('metadata-search-k1l2');
+    const metadataRows = document.querySelectorAll('#metadata-table-m3n4 tbody tr');
+    let activeFilter = 'all';
+
+    function filterMetadata() {
+      const query = searchInput.value.toLowerCase();
+      metadataRows.forEach(function(row) {
+        const entity = (row.dataset.entity || '').toLowerCase();
+        const id = (row.dataset.id || '').toLowerCase();
+        const status = (row.dataset.status || '').toLowerCase();
+        const matchesSearch = entity.includes(query) || id.includes(query);
+        const matchesFilter = activeFilter === 'all' || status === activeFilter;
+        row.style.display = (matchesSearch && matchesFilter) ? '' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filterMetadata);
+
+    document.querySelectorAll('.filter-pill[data-filter]').forEach(function(pill) {
+      pill.addEventListener('click', function() {
+        document.querySelectorAll('.filter-pill[data-filter]').forEach(function(p) { p.classList.remove('active'); });
+        this.classList.add('active');
+        activeFilter = this.dataset.filter;
+        filterMetadata();
+      });
+    });
+
+    // === Keyboard shortcut: Escape to close modals ===
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') {
+        closeJsonModal();
+        closeMobileSidebar();
+      }
+    });
+  </script>
+</body>
+</html>
