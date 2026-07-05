@@ -80,6 +80,19 @@ DONE_FILE        = "queue_done.jsonl"
 
 # ── Helpers ───────────────────────────────────────────────────────────────────
 
+def _assert_within_base(path_value: pathlib.Path, base_dir: pathlib.Path, label: str) -> pathlib.Path:
+    """Validate that a canonical path stays within base_dir and return it."""
+    base_resolved = base_dir.resolve()
+    resolved = path_value
+    try:
+        resolved.relative_to(base_resolved)
+    except ValueError:
+        print(f"\n  ❌  Unsafe {label} path: {path_value}")
+        print(f"      {label} must stay within: {base_resolved}\n")
+        sys.exit(1)
+    return resolved
+
+
 def resolve_within_base(user_value: str, base_dir: pathlib.Path, label: str) -> pathlib.Path:
     """Resolve a user-provided path and ensure it stays within base_dir."""
     base_resolved = base_dir.resolve()
@@ -166,14 +179,8 @@ def build_output_path(entry: dict, output_root: pathlib.Path) -> pathlib.Path:
     )
     safe_filename = _safe_path_component(entry["filename"], "filename")
 
-    base_dir = pathlib.Path(__file__).resolve().parent
-    root = output_root.resolve()
-    try:
-        root.relative_to(base_dir)
-    except ValueError:
-        raise ValueError(f"Unsafe output root outside base directory: {output_root!r}")
-
-    candidate = (root / safe_book / safe_scene / safe_filename).resolve()
+    root = output_root.resolve(strict=False)
+    candidate = (root / safe_book / safe_scene / safe_filename).resolve(strict=False)
     try:
         candidate.relative_to(root)
     except ValueError:
@@ -246,6 +253,7 @@ def main() -> None:
 
     base_dir = pathlib.Path(__file__).resolve().parent
     output_root = resolve_within_base(args.output, base_dir, "output")
+    output_root = _assert_within_base(output_root, base_dir, "output")
     dry_run     = args.dry_run
 
     print("\n" + "═" * 60)
