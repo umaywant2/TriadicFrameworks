@@ -33,8 +33,10 @@ from pathlib import Path
 # ------------------------------------------------------------
 
 def constrain_to_base(path: Path, base: Path) -> Path:
-    candidate = path.expanduser().resolve()
     base_resolved = base.expanduser().resolve()
+    user_path = path.expanduser()
+    candidate = user_path if user_path.is_absolute() else (base_resolved / user_path)
+    candidate = candidate.resolve(strict=False)
     try:
         candidate.relative_to(base_resolved)
     except ValueError:
