@@ -79,6 +79,9 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
     base_real = os.path.realpath(base_dir)
     target_real = os.path.realpath(os.path.join(base_real, safe_name))
     if os.path.commonpath([base_real, target_real]) != base_real:
+    if os.path.commonpath([base_real, target_real]) != base_real:
+        raise ValueError(f"Path escapes the allowed base directory: {user_path}")
+
         raise ValueError(f"Resolved path escapes base directory: {user_path}")
 
     if allowed_exts is not None:
