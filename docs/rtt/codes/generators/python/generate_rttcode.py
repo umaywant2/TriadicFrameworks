@@ -8,6 +8,7 @@ import os
 import re
 import sys
 import qrcode
+from pathlib import Path
 from urllib.parse import urlencode
 
 def validate_payload(payload):
@@ -82,30 +83,28 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
     if file_kind not in (None, "file", "dir"):
         raise ValueError(f"Invalid file_kind: {file_kind}")
 
-    base_real = os.path.realpath(base_dir)
-    target_real = os.path.realpath(os.path.join(base_real, safe_name))
-    if os.path.commonpath([base_real, target_real]) != base_real:
+    base_real = Path(base_dir).resolve()
+    safe_path = (base_real / safe_name).resolve()
+    try:
+        safe_path.relative_to(base_real)
+    except ValueError:
         raise ValueError(f"Path escapes the allowed base directory: {user_path}")
 
-    # Use validated canonical path for filesystem operations.
-    safe_path = target_real
-
     if allowed_exts is not None:
-        _, ext = os.path.splitext(safe_path)
-        if ext.lower() not in {e.lower() for e in allowed_exts}:
+        if safe_path.suffix.lower() not in {e.lower() for e in allowed_exts}:
             raise ValueError(f"Disallowed file extension for path: {user_path}")
 
     if must_exist:
-        if not os.path.exists(safe_path):
+        if not safe_path.exists():
             raise ValueError(f"Path does not exist: {user_path}")
         if file_kind == "file":
-            if not os.path.isfile(safe_path):
+            if not safe_path.is_file():
                 raise ValueError(f"Path is not a regular file: {user_path}")
         elif file_kind == "dir":
-            if not os.path.isdir(safe_path):
+            if not safe_path.is_dir():
                 raise ValueError(f"Path is not a directory: {user_path}")
 
-    return safe_path
+    return str(safe_path)
 
 def main():
     if len(sys.argv) != 3:
