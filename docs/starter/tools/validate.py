@@ -10,9 +10,15 @@ def load_json(path):
 
 def safe_resolve_path(base_dir, user_path):
     safe_base = Path(base_dir).resolve()
+    user_path = str(user_path).strip()
     user_rel = Path(user_path)
+
+    if not user_path:
+        raise ValueError("Path must not be empty")
     if user_rel.is_absolute():
         raise ValueError(f"Absolute paths are not allowed: {user_path}")
+    if ".." in user_rel.parts:
+        raise ValueError(f"Path traversal is not allowed: {user_path}")
 
     candidate = (safe_base / user_rel).resolve()
     try:
