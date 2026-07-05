@@ -44,12 +44,13 @@ def constrain_to_base(path: Path, base: Path) -> Path:
     return candidate
 
 
-def load_json(path: Path):
+def load_json(path: Path, base: Path):
+    safe_path = constrain_to_base(path, base)
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        with open(safe_path, "r", encoding="utf-8") as f:
             return json.load(f)
     except json.JSONDecodeError as e:
-        print(f"[ERROR] Invalid JSON in {path}: {e}")
+        print(f"[ERROR] Invalid JSON in {safe_path}: {e}")
         sys.exit(1)
 
 
@@ -67,7 +68,7 @@ def ok(msg):
 # ------------------------------------------------------------
 
 def inspect_schema(path: Path):
-    schema = load_json(path)
+    schema = load_json(path, Path.cwd())
 
     print("Schema Metadata")
     print("---------------")
