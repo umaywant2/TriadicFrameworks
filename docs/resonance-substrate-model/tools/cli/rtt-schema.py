@@ -34,7 +34,7 @@ from pathlib import Path
 
 def constrain_to_base(path: Path, base: Path) -> Path:
     base_resolved = base.expanduser().resolve()
-    user_path = path.expanduser()
+    user_path = path
     candidate = user_path if user_path.is_absolute() else (base_resolved / user_path)
     candidate = candidate.resolve(strict=False)
     try:
