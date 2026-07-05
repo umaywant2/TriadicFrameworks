@@ -112,13 +112,13 @@ def main():
 
     payload_path = sys.argv[1]
     output_path = sys.argv[2]
-    base_dir = os.path.dirname(os.path.realpath(__file__))
+    base_dir = Path(__file__).resolve().parent
 
     safe_payload_path = resolve_safe_path(
-        payload_path, base_dir, allowed_exts={".json"}, must_exist=True, file_kind="file"
+        payload_path, str(base_dir), allowed_exts={".json"}, must_exist=True, file_kind="file"
     )
     safe_output_path = resolve_safe_path(
-        output_path, base_dir, allowed_exts={".png"}, must_exist=False
+        output_path, str(base_dir), allowed_exts={".png"}, must_exist=False
     )
 
     with open(safe_payload_path, "r", encoding="utf-8") as f:
