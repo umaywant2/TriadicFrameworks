@@ -55,11 +55,23 @@ def generate_qr_code(data, output_path):
     img = qr.make_image(fill_color="black", back_color="white")
     img.save(output_path)
 
-def resolve_safe_path(user_path, base_dir):
+def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
     base_real = os.path.realpath(base_dir)
     target_real = os.path.realpath(os.path.join(base_real, user_path))
     if os.path.commonpath([base_real, target_real]) != base_real:
         raise ValueError(f"Path escapes allowed directory: {user_path}")
+
+    if allowed_exts is not None:
+        _, ext = os.path.splitext(target_real)
+        if ext.lower() not in {e.lower() for e in allowed_exts}:
+            raise ValueError(f"Disallowed file extension for path: {user_path}")
+
+    if must_exist and not os.path.exists(target_real):
+        raise ValueError(f"Path does not exist: {user_path}")
+
+    if file_kind == "file" and os.path.exists(target_real) and not os.path.isfile(target_real):
+        raise ValueError(f"Path is not a regular file: {user_path}")
+
     return target_real
 
 def main():
@@ -71,8 +83,12 @@ def main():
     output_path = sys.argv[2]
     base_dir = os.getcwd()
 
-    safe_payload_path = resolve_safe_path(payload_path, base_dir)
-    safe_output_path = resolve_safe_path(output_path, base_dir)
+    safe_payload_path = resolve_safe_path(
+        payload_path, base_dir, allowed_exts={".json"}, must_exist=True, file_kind="file"
+    )
+    safe_output_path = resolve_safe_path(
+        output_path, base_dir, allowed_exts={".png"}, must_exist=False
+    )
 
     with open(safe_payload_path, "r", encoding="utf-8") as f:
         payload = json.load(f)
