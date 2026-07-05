@@ -41,7 +41,7 @@ def error(msg):
 
 def validate_schema_path(user_input: str) -> Path:
     # Restrict schema inspection to files under docs/resonance-substrate-model
-    safe_root = Path(__file__).resolve().parents[2]
+    safe_root = Path(__file__).resolve().parents[1]
     candidate = Path(user_input).expanduser()
     candidate = candidate if candidate.is_absolute() else (Path.cwd() / candidate)
     resolved = candidate.resolve(strict=False)
@@ -50,6 +50,9 @@ def validate_schema_path(user_input: str) -> Path:
         resolved.relative_to(safe_root)
     except ValueError:
         error(f"Path is outside allowed directory: {safe_root}")
+
+    if resolved.suffix.lower() != ".json":
+        error("Schema path must point to a .json file")
 
     return resolved
 
