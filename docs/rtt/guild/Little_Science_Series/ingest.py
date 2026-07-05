@@ -81,13 +81,18 @@ DONE_FILE        = "queue_done.jsonl"
 
 def resolve_within_base(user_value: str, base_dir: pathlib.Path, label: str) -> pathlib.Path:
     """Resolve a user-provided path and ensure it stays within base_dir."""
+    base_resolved = base_dir.resolve()
     candidate = pathlib.Path(user_value)
-    resolved = candidate.resolve() if candidate.is_absolute() else (base_dir / candidate).resolve()
+    if candidate.is_absolute():
+        print(f"\n  ❌  Unsafe {label} path: {user_value}")
+        print(f"      {label} must be a relative path within: {base_resolved}\n")
+        sys.exit(1)
+    resolved = (base_resolved / candidate).resolve()
     try:
-        resolved.relative_to(base_dir)
+        resolved.relative_to(base_resolved)
     except ValueError:
         print(f"\n  ❌  Unsafe {label} path: {user_value}")
-        print(f"      {label} must stay within: {base_dir}\n")
+        print(f"      {label} must stay within: {base_resolved}\n")
         sys.exit(1)
     return resolved
 
