@@ -171,14 +171,7 @@ def validate_manifest(manifest_path: Path, repo_root: Path):
             error("Manifest entry 'file' field must be a string")
 
         raw_schema_path = Path(entry["file"])
-        if raw_schema_path.is_absolute():
-            error(f"Schema path must be relative to manifest directory: {raw_schema_path}")
-
-        schema_path = (manifest_dir / raw_schema_path).resolve()
-        try:
-            schema_path.relative_to(manifest_dir)
-        except ValueError:
-            error(f"Schema path escapes manifest directory: {raw_schema_path}")
+        schema_path = ensure_within_root(raw_schema_path, manifest_dir, "Schema path")
 
         if not schema_path.exists():
             error(f"Schema listed in manifest not found: {schema_path}")
