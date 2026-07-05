@@ -113,6 +113,11 @@ def resolve_json_filename(user_value: str, base_dir: pathlib.Path, label: str) -
         print(f"      {label} must end with .json.\n")
         sys.exit(1)
 
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+\.json", candidate.name):
+        print(f"\n  ❌  Unsafe {label} path: {user_value}")
+        print(f"      {label} may contain only letters, numbers, '.', '_' or '-', and must end with .json.\n")
+        sys.exit(1)
+
     resolved = (base_resolved / candidate.name).resolve()
     return _assert_within_base(resolved, base_resolved, label)
 
