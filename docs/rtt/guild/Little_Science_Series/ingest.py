@@ -154,7 +154,13 @@ def build_output_path(entry: dict, output_root: pathlib.Path) -> pathlib.Path:
     ).name
     safe_filename = pathlib.PurePath(str(entry["filename"])).name
 
+    base_dir = pathlib.Path(__file__).resolve().parent
     root = output_root.resolve()
+    try:
+        root.relative_to(base_dir)
+    except ValueError:
+        raise ValueError(f"Unsafe output root outside base directory: {output_root!r}")
+
     candidate = (root / safe_book / safe_scene / safe_filename).resolve()
     try:
         candidate.relative_to(root)
