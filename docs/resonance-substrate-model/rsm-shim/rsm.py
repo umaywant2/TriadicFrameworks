@@ -13,8 +13,15 @@ def load_config(path):
     if not re.fullmatch(r"[A-Za-z0-9._-]+\.json", path):
         raise ValueError("Config path must be a safe .json filename")
 
+    allowed_configs = {
+        "config.json": "config.json"
+    }
+    if path not in allowed_configs:
+        raise ValueError("Config path is not in the allowed config list")
+
     base_dir = os.path.dirname(os.path.realpath(__file__))
-    full_path = os.path.realpath(os.path.join(base_dir, path))
+    safe_name = allowed_configs[path]
+    full_path = os.path.realpath(os.path.join(base_dir, safe_name))
     if os.path.commonpath([base_dir, full_path]) != base_dir:
         raise ValueError("Config path is outside allowed directory")
     if not os.path.isfile(full_path):
