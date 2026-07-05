@@ -1,4 +1,5 @@
 import os
+import re
 from datetime import datetime
 
 HONOR_ROLL_PATH = "docs/honor_roll/contributor_honor_roll.md"
@@ -10,6 +11,20 @@ BADGE_AURAS = {
     ("Ghost Mapper", "Signal Resonator"): "Echo Lantern"
 }
 
+def build_profile_path(contributor):
+    safe_slug = contributor.lower().strip().replace(" ", "_").replace("-", "_")
+    safe_slug = re.sub(r"[^a-z0-9_]", "", safe_slug)
+    safe_slug = safe_slug.strip("_")
+    if not safe_slug:
+        raise ValueError("Invalid contributor name for profile filename.")
+
+    profile_root = os.path.abspath(PROFILE_DIR)
+    filename = os.path.abspath(os.path.normpath(os.path.join(profile_root, f"{safe_slug}.md")))
+    if not filename.startswith(profile_root + os.sep):
+        raise ValueError("Resolved profile path escapes profile directory.")
+
+    return filename
+
 def classify_aura(badges):
     for combo, aura in BADGE_AURAS.items():
         if all(b in badges for b in combo):
@@ -17,8 +32,7 @@ def classify_aura(badges):
     return "—"
 
 def generate_profile(contributor, badges, score, last):
-    name_slug = contributor.lower().replace(" ", "_")
-    filename = os.path.join(PROFILE_DIR, f"{name_slug}.md")
+    filename = build_profile_path(contributor)
     aura = classify_aura(badges)
 
     with open(filename, "w", encoding="utf-8") as f:
