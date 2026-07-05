@@ -75,12 +75,15 @@ def _sanitize_filename(user_path):
 
 def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
     safe_name = _sanitize_filename(user_path)
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", safe_name):
+        raise ValueError(f"Invalid sanitized file name: {user_path}")
+    validated_name = safe_name
 
     if file_kind not in (None, "file", "dir"):
         raise ValueError(f"Invalid file_kind: {file_kind}")
 
     base_real = Path(base_dir).resolve()
-    safe_path = (base_real / safe_name).resolve()
+    safe_path = (base_real / validated_name).resolve()
     try:
         safe_path.relative_to(base_real)
     except ValueError:
