@@ -79,6 +79,9 @@ def _sanitize_filename(user_path):
 def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, file_kind=None):
     safe_name = _sanitize_filename(user_path)
 
+    if file_kind not in (None, "file", "dir"):
+        raise ValueError(f"Invalid file_kind: {file_kind}")
+
     base_real = os.path.realpath(base_dir)
     target_real = os.path.realpath(os.path.join(base_real, safe_name))
     if os.path.commonpath([base_real, target_real]) != base_real:
@@ -95,10 +98,12 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
     if must_exist:
         if not os.path.exists(safe_path):
             raise ValueError(f"Path does not exist: {user_path}")
-        if file_kind == "file" and not os.path.isfile(safe_path):
-            raise ValueError(f"Path is not a regular file: {user_path}")
-        if file_kind == "dir" and not os.path.isdir(safe_path):
-            raise ValueError(f"Path is not a directory: {user_path}")
+        if file_kind == "file":
+            if not os.path.isfile(safe_path):
+                raise ValueError(f"Path is not a regular file: {user_path}")
+        elif file_kind == "dir":
+            if not os.path.isdir(safe_path):
+                raise ValueError(f"Path is not a directory: {user_path}")
 
     return safe_path
 
@@ -109,7 +114,7 @@ def main():
 
     payload_path = sys.argv[1]
     output_path = sys.argv[2]
-    base_dir = os.getcwd()
+    base_dir = os.path.dirname(os.path.realpath(__file__))
 
     safe_payload_path = resolve_safe_path(
         payload_path, base_dir, allowed_exts={".json"}, must_exist=True, file_kind="file"
