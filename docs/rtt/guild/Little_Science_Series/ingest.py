@@ -93,6 +93,35 @@ def _assert_within_base(path_value: pathlib.Path, base_dir: pathlib.Path, label:
     return resolved
 
 
+def resolve_json_filename(user_value: str, base_dir: pathlib.Path, label: str) -> pathlib.Path:
+    """Resolve a filename-only JSON argument within base_dir."""
+    base_resolved = base_dir.resolve()
+    candidate = pathlib.Path(user_value)
+
+    if not user_value or user_value.strip() == "":
+        print(f"\n  ❌  Unsafe {label} path: {user_value!r}")
+        print(f"      {label} cannot be empty and must be a .json filename in: {base_resolved}\n")
+        sys.exit(1)
+
+    if candidate.name != user_value or candidate.parent != pathlib.Path("."):
+        print(f"\n  ❌  Unsafe {label} path: {user_value}")
+        print(f"      {label} must be a filename only (no folders).\n")
+        sys.exit(1)
+
+    if candidate.suffix.lower() != ".json":
+        print(f"\n  ❌  Unsafe {label} path: {user_value}")
+        print(f"      {label} must end with .json.\n")
+        sys.exit(1)
+
+    if not re.fullmatch(r"[A-Za-z0-9_.-]+\.json", candidate.name):
+        print(f"\n  ❌  Unsafe {label} path: {user_value}")
+        print(f"      {label} may contain only letters, numbers, '.', '_' or '-', and must end with .json.\n")
+        sys.exit(1)
+
+    resolved = (base_resolved / candidate.name).resolve()
+    return _assert_within_base(resolved, base_resolved, label)
+
+
 def resolve_within_base(user_value: str, base_dir: pathlib.Path, label: str) -> pathlib.Path:
     """Resolve a user-provided path and ensure it stays within base_dir."""
     base_resolved = base_dir.resolve()
@@ -269,8 +298,8 @@ def main() -> None:
     if dry_run:
         print("  ⚠  DRY-RUN — no files will be written\n")
 
-    manifest_path = resolve_within_base(args.manifest, base_dir, "manifest")
-    schema_path   = resolve_within_base(args.schema, base_dir, "schema")
+    manifest_path = resolve_json_filename(args.manifest, base_dir, "manifest")
+    schema_path   = resolve_json_filename(args.schema, base_dir, "schema")
     manifest = load_json(manifest_path)
     schema   = load_json(schema_path)
 
