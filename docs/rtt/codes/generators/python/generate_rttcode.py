@@ -5,6 +5,7 @@
 
 import json
 import os
+import re
 import sys
 import qrcode
 from urllib.parse import urlencode
@@ -70,6 +71,8 @@ def _sanitize_filename(user_path):
         raise ValueError(f"Invalid file name: {user_path}")
     if filename != normalized:
         raise ValueError(f"Directory components are not allowed: {user_path}")
+    if not re.fullmatch(r"[A-Za-z0-9._-]+", filename):
+        raise ValueError(f"Invalid characters in file name: {user_path}")
 
     return filename
 
