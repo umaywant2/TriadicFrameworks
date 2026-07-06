@@ -81,11 +81,8 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
         raise ValueError(f"Invalid file_kind: {file_kind}")
 
     base_real = Path(base_dir).resolve()
-    raw_user_path = Path(user_path.strip())
-    if raw_user_path.is_absolute():
-        raise ValueError(f"Absolute paths are not allowed: {user_path}")
-
-    safe_path = (base_real / raw_user_path).resolve()
+    safe_name = _sanitize_filename(user_path)
+    safe_path = (base_real / safe_name).resolve()
     try:
         safe_path.relative_to(base_real)
     except ValueError:
@@ -116,11 +113,26 @@ def main():
     output_path = sys.argv[2]
     base_dir = Path(__file__).resolve().parent
 
+    allowed_payload_files = {
+        "rttcode-payload.json": "rttcode-payload.json",
+    }
+    allowed_output_files = {
+        "output.png": "output.png",
+    }
+
+    if payload_path not in allowed_payload_files:
+        raise ValueError("Unsupported payload file name")
+    if output_path not in allowed_output_files:
+        raise ValueError("Unsupported output file name")
+
+    trusted_payload_name = allowed_payload_files[payload_path]
+    trusted_output_name = allowed_output_files[output_path]
+
     safe_payload_path = resolve_safe_path(
-        payload_path, str(base_dir), allowed_exts={".json"}, must_exist=True, file_kind="file"
+        trusted_payload_name, str(base_dir), allowed_exts={".json"}, must_exist=True, file_kind="file"
     )
     safe_output_path = resolve_safe_path(
-        output_path, str(base_dir), allowed_exts={".png"}, must_exist=False
+        trusted_output_name, str(base_dir), allowed_exts={".png"}, must_exist=False
     )
 
     with open(safe_payload_path, "r", encoding="utf-8") as f:
