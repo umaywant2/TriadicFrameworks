@@ -44,6 +44,21 @@ def load_schema(path):
         return json.load(f)
 
 
+def resolve_valid_schema_path(user_input_path, safe_root):
+    root = Path(safe_root).resolve()
+    candidate = (root / user_input_path).resolve()
+
+    try:
+        candidate.relative_to(root)
+    except ValueError as exc:
+        raise ValueError(f"path is outside allowed directory: {user_input_path}") from exc
+
+    if candidate.suffix.lower() != ".json":
+        raise ValueError(f"only .json schema files are allowed: {candidate}")
+
+    return candidate
+
+
 def extract_properties(schema):
     return schema.get("properties", {})
 
@@ -124,16 +139,11 @@ def main():
         sys.exit(1)
 
     safe_root = Path.cwd().resolve()
-    schema_path = (safe_root / user_input_path).resolve()
 
     try:
-        schema_path.relative_to(safe_root)
-    except ValueError:
-        print(f"Error: path is outside allowed directory: {user_input_path}")
-        sys.exit(1)
-
-    if schema_path.suffix.lower() != ".json":
-        print(f"Error: only .json schema files are allowed: {schema_path}")
+        schema_path = resolve_valid_schema_path(user_input_path, safe_root)
+    except ValueError as err:
+        print(f"Error: {err}")
         sys.exit(1)
 
     if not schema_path.exists() or not schema_path.is_file():
