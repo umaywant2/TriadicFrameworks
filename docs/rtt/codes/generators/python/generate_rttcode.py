@@ -113,11 +113,26 @@ def main():
     output_path = sys.argv[2]
     base_dir = Path(__file__).resolve().parent
 
+    allowed_payload_files = {
+        "rttcode-payload.json": "rttcode-payload.json",
+    }
+    allowed_output_files = {
+        "output.png": "output.png",
+    }
+
+    if payload_path not in allowed_payload_files:
+        raise ValueError("Unsupported payload file name")
+    if output_path not in allowed_output_files:
+        raise ValueError("Unsupported output file name")
+
+    trusted_payload_name = allowed_payload_files[payload_path]
+    trusted_output_name = allowed_output_files[output_path]
+
     safe_payload_path = resolve_safe_path(
-        payload_path, str(base_dir), allowed_exts={".json"}, must_exist=True, file_kind="file"
+        trusted_payload_name, str(base_dir), allowed_exts={".json"}, must_exist=True, file_kind="file"
     )
     safe_output_path = resolve_safe_path(
-        output_path, str(base_dir), allowed_exts={".png"}, must_exist=False
+        trusted_output_name, str(base_dir), allowed_exts={".png"}, must_exist=False
     )
 
     with open(safe_payload_path, "r", encoding="utf-8") as f:
