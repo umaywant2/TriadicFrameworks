@@ -32,12 +32,35 @@ from pathlib import Path
 # Utility
 # ------------------------------------------------------------
 
-def load_json(path: Path):
+def constrain_to_base(path: Path, base: Path) -> Path:
+    base_resolved = base.expanduser().resolve()
+    user_path = Path(str(path))
+
+    if not str(user_path):
+        error("Empty path is not allowed")
+
+    if user_path.is_absolute():
+        error(f"Absolute paths are not allowed: {path}")
+
+    parts = user_path.parts
+    if any(part in ("..", "") for part in parts):
+        error(f"Path traversal is not allowed: {path}")
+
+    candidate = base_resolved.joinpath(*parts).resolve(strict=False)
     try:
-        with open(path, "r", encoding="utf-8") as f:
+        candidate.relative_to(base_resolved)
+    except ValueError:
+        error(f"Path escapes allowed root: {path}")
+    return candidate
+
+
+def load_json(path: Path, base: Path):
+    safe_path = constrain_to_base(path, base)
+    try:
+        with open(safe_path, "r", encoding="utf-8") as f:
             return json.load(f)
     except json.JSONDecodeError as e:
-        print(f"[ERROR] Invalid JSON in {path}: {e}")
+        print(f"[ERROR] Invalid JSON in {safe_path}: {e}")
         sys.exit(1)
 
 
@@ -55,7 +78,7 @@ def ok(msg):
 # ------------------------------------------------------------
 
 def inspect_schema(path: Path):
-    schema = load_json(path)
+    schema = load_json(path, Path.cwd())
 
     print("Schema Metadata")
     print("---------------")
@@ -218,7 +241,8 @@ def main():
         sys.exit(1)
 
     cmd = sys.argv[1]
-    target = Path(sys.argv[2])
+    base_dir = Path.cwd()
+    target = constrain_to_base(Path(sys.argv[2]), base_dir)
 
     if cmd == "inspect":
         inspect_schema(target)
@@ -227,7 +251,7 @@ def main():
     elif cmd == "validate-data":
         if "--schema" not in sys.argv:
             error("Missing --schema argument")
-        schema_path = Path(sys.argv[sys.argv.index("--schema") + 1])
+        schema_path = constrain_to_base(Path(sys.argv[sys.argv.index("--schema") + 1]), base_dir)
         validate_data(target, schema_path)
     elif cmd == "to-markdown":
         to_markdown(target)
