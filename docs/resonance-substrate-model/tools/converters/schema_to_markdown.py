@@ -115,6 +115,14 @@ def main():
         sys.exit(1)
 
     user_input_path = Path(sys.argv[1])
+    if user_input_path.is_absolute():
+        print(f"Error: absolute paths are not allowed: {user_input_path}")
+        sys.exit(1)
+
+    if ".." in user_input_path.parts:
+        print(f"Error: parent directory traversal is not allowed: {user_input_path}")
+        sys.exit(1)
+
     safe_root = Path.cwd().resolve()
     schema_path = (safe_root / user_input_path).resolve()
 
