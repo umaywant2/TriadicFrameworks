@@ -81,11 +81,8 @@ def resolve_safe_path(user_path, base_dir, allowed_exts=None, must_exist=False, 
         raise ValueError(f"Invalid file_kind: {file_kind}")
 
     base_real = Path(base_dir).resolve()
-    raw_user_path = Path(user_path.strip())
-    if raw_user_path.is_absolute():
-        raise ValueError(f"Absolute paths are not allowed: {user_path}")
-
-    safe_path = (base_real / raw_user_path).resolve()
+    safe_name = _sanitize_filename(user_path)
+    safe_path = (base_real / safe_name).resolve()
     try:
         safe_path.relative_to(base_real)
     except ValueError:
