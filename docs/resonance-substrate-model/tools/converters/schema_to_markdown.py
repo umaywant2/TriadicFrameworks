@@ -44,6 +44,26 @@ def load_schema(path):
         return json.load(f)
 
 
+def resolve_valid_schema_path(user_input_path, safe_root):
+    root = Path(safe_root).resolve()
+    requested = Path(user_input_path)
+
+    if requested.is_absolute():
+        raise ValueError(f"absolute paths are not allowed: {requested}")
+
+    candidate = (root / requested).resolve()
+
+    try:
+        candidate.relative_to(root)
+    except ValueError as exc:
+        raise ValueError(f"path is outside allowed directory: {user_input_path}") from exc
+
+    if candidate.suffix.lower() != ".json":
+        raise ValueError(f"only .json schema files are allowed: {candidate}")
+
+    return candidate
+
+
 def extract_properties(schema):
     return schema.get("properties", {})
 
@@ -114,8 +134,17 @@ def main():
         print("Usage: python schema_to_markdown.py path/to/schema.json")
         sys.exit(1)
 
-    schema_path = Path(sys.argv[1])
-    if not schema_path.exists():
+    user_input_path = sys.argv[1]
+
+    safe_root = Path.cwd().resolve()
+
+    try:
+        schema_path = resolve_valid_schema_path(user_input_path, safe_root)
+    except ValueError as err:
+        print(f"Error: {err}")
+        sys.exit(1)
+
+    if not schema_path.exists() or not schema_path.is_file():
         print(f"Error: file not found: {schema_path}")
         sys.exit(1)
 
