@@ -124,7 +124,11 @@ def main():
         print(f"Error: path is outside allowed directory: {user_input_path}")
         sys.exit(1)
 
-    if not schema_path.exists():
+    if schema_path.suffix.lower() != ".json":
+        print(f"Error: only .json schema files are allowed: {schema_path}")
+        sys.exit(1)
+
+    if not schema_path.exists() or not schema_path.is_file():
         print(f"Error: file not found: {schema_path}")
         sys.exit(1)
 
