@@ -34,15 +34,19 @@ from pathlib import Path
 
 def constrain_to_base(path: Path, base: Path) -> Path:
     base_resolved = base.expanduser().resolve()
-    user_path = path
+    user_path = Path(str(path))
+
+    if not str(user_path):
+        error("Empty path is not allowed")
 
     if user_path.is_absolute():
         error(f"Absolute paths are not allowed: {path}")
 
-    if any(part == ".." for part in user_path.parts):
+    parts = user_path.parts
+    if any(part in ("..", "") for part in parts):
         error(f"Path traversal is not allowed: {path}")
 
-    candidate = (base_resolved / user_path).resolve(strict=False)
+    candidate = base_resolved.joinpath(*parts).resolve(strict=False)
     try:
         candidate.relative_to(base_resolved)
     except ValueError:
