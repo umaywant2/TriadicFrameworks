@@ -114,7 +114,16 @@ def main():
         print("Usage: python schema_to_markdown.py path/to/schema.json")
         sys.exit(1)
 
-    schema_path = Path(sys.argv[1])
+    user_input_path = Path(sys.argv[1])
+    safe_root = Path.cwd().resolve()
+    schema_path = (safe_root / user_input_path).resolve()
+
+    try:
+        schema_path.relative_to(safe_root)
+    except ValueError:
+        print(f"Error: path is outside allowed directory: {user_input_path}")
+        sys.exit(1)
+
     if not schema_path.exists():
         print(f"Error: file not found: {schema_path}")
         sys.exit(1)
