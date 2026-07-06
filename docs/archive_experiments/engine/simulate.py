@@ -15,7 +15,13 @@ def run_simulation(manifest_path):
 
     signals = generate_triphasic_signals(forces, fluids, frequency, cycles=3500)
 
-    output_path = Path(f"docs/reports/{label}_cycles.csv")
+    reports_root = Path("docs/reports").resolve()
+    output_path = (reports_root / f"{label}_cycles.csv").resolve()
+    try:
+        output_path.relative_to(reports_root)
+    except ValueError:
+        raise ValueError("Invalid manifest label: output path escapes docs/reports")
+
     output_path.parent.mkdir(parents=True, exist_ok=True)
 
     with open(output_path, 'w', newline='') as f:
