@@ -12,7 +12,11 @@ def resolve_safe_path(base_dir, user_path):
     if user_path_obj.is_absolute():
         raise ValueError(f"Config path escapes allowed directory: {user_path}")
 
-    candidate = (base / user_path_obj).resolve()
+    normalized_user_path = Path(*user_path_obj.parts)
+    if any(part == ".." for part in normalized_user_path.parts):
+        raise ValueError(f"Config path escapes allowed directory: {user_path}")
+
+    candidate = (base / normalized_user_path).resolve()
     try:
         candidate.relative_to(base)
     except ValueError:
