@@ -46,7 +46,12 @@ def load_schema(path):
 
 def resolve_valid_schema_path(user_input_path, safe_root):
     root = Path(safe_root).resolve()
-    candidate = (root / user_input_path).resolve()
+    requested = Path(user_input_path)
+
+    if requested.is_absolute():
+        raise ValueError(f"absolute paths are not allowed: {requested}")
+
+    candidate = (root / requested).resolve()
 
     try:
         candidate.relative_to(root)
@@ -129,14 +134,7 @@ def main():
         print("Usage: python schema_to_markdown.py path/to/schema.json")
         sys.exit(1)
 
-    user_input_path = Path(sys.argv[1])
-    if user_input_path.is_absolute():
-        print(f"Error: absolute paths are not allowed: {user_input_path}")
-        sys.exit(1)
-
-    if ".." in user_input_path.parts:
-        print(f"Error: parent directory traversal is not allowed: {user_input_path}")
-        sys.exit(1)
+    user_input_path = sys.argv[1]
 
     safe_root = Path.cwd().resolve()
 
