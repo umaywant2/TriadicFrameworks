@@ -52,6 +52,35 @@ def load_schema(path):
         return json.load(f)
 
 
+def validate_schema_path(raw_path):
+    base_dir = Path(__file__).resolve().parent
+
+    raw = str(raw_path).strip()
+    if not raw:
+        raise ValueError("path must not be empty")
+
+    user_path = Path(raw).expanduser()
+    if user_path.is_absolute():
+        raise ValueError(f"absolute paths are not allowed: {user_path}")
+    if ".." in user_path.parts:
+        raise ValueError(f"path traversal is not allowed: {user_path}")
+
+    candidate = base_dir / user_path
+    try:
+        schema_path = candidate.resolve(strict=True)
+    except FileNotFoundError:
+        raise ValueError(f"file not found: {candidate}")
+    try:
+        schema_path.relative_to(base_dir)
+    except ValueError:
+        raise ValueError(f"path escapes allowed directory: {schema_path}")
+    if not schema_path.is_file():
+        raise ValueError(f"not a file: {schema_path}")
+    if schema_path.suffix.lower() != ".json":
+        raise ValueError(f"expected a .json file: {schema_path}")
+    return schema_path
+
+
 def extract_properties(schema):
     return schema.get("properties", {})
 
@@ -107,9 +136,10 @@ def main():
         print("Usage: python schema_to_graphviz.py path/to/schema.json")
         sys.exit(1)
 
-    schema_path = Path(sys.argv[1])
-    if not schema_path.exists():
-        print(f"Error: file not found: {schema_path}")
+    try:
+        schema_path = validate_schema_path(sys.argv[1])
+    except ValueError as exc:
+        print(f"Error: {exc}")
         sys.exit(1)
 
     schema = load_schema(schema_path)
