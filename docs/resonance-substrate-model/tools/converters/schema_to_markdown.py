@@ -51,7 +51,11 @@ def resolve_valid_schema_path(user_input_path, safe_root):
     if requested.is_absolute():
         raise ValueError(f"absolute paths are not allowed: {requested}")
 
-    candidate = (root / requested).resolve()
+    if ".." in requested.parts:
+        raise ValueError(f"parent directory segments are not allowed: {user_input_path}")
+
+    sanitized_relative = Path(*[part for part in requested.parts if part not in ("", ".")])
+    candidate = (root / sanitized_relative).resolve()
 
     try:
         candidate.relative_to(root)
