@@ -24,7 +24,9 @@ def safe_resolve_path(base_dir, user_path):
         raise ValueError(f"Path traversal is not allowed: {user_path}")
 
     candidate = (safe_base / user_rel).resolve()
-    if candidate != safe_base and safe_base not in candidate.parents:
+    try:
+        candidate.relative_to(safe_base)
+    except ValueError:
         raise ValueError(f"Path escapes allowed root: {user_path}")
 
     if candidate.suffix.lower() != ".json":
