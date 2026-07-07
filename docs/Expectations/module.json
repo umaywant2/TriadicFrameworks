@@ -1,1 +1,88 @@
+{
+  "identity": {
+    "module": "Expectations",
+    "canonical_name": "TriadicFrameworks Expectations Module",
+    "version": "2026-1.0",
+    "status": "stable",
+    "category": "orientation",
+    "summary": "Root-level expectations framework for students, researchers, and AI agents entering TriadicFrameworks."
+  },
+
+  "purpose": {
+    "role": "canon-root",
+    "description": "Provides a unified expectations framework, requirements stack, and cross-domain orientation for TriadicFrameworks. Serves as a booster for FFT, FCG, RF-Builder, IPD-12, and all research engines.",
+    "audience": [
+      "students",
+      "researchers",
+      "ai_agents",
+      "contributors"
+    ]
+  },
+
+  "structure": {
+    "module_type": "orientation",
+    "triadic_lens": {
+      "structure": "Root-level onboarding and expectations",
+      "regime": "Cross-domain alignment and contributor guidance",
+      "operator": "Expectation-setting, validation, and module propagation"
+    },
+    "analyzer_layer": [
+      "operator",
+      "regime",
+      "coherence",
+      "cross-cutting"
+    ]
+  },
+
+  "files": {
+    "capture": "e_Capture.md",
+    "overview": "Expectations.md",
+    "samples": [
+      "samples/intake_manifolds/",
+      "samples/header_manifolds/",
+      "samples/engine_block/",
+      "samples/prime_states/",
+      "samples/hpc_qc_substrate/",
+      "samples/observer_overhead/"
+    ],
+    "metadata": "module.json"
+  },
+
+  "session_context": {
+    "canon": "TriadicFrameworks",
+    "modules": "Expectations",
+    "drift": "None",
+    "coherence": "High",
+    "version": "2026",
+    "format": "Markdown",
+    "front_door": "Yes",
+    "audience": "Students, Researchers, AI Agents"
+  },
+
+  "ai_metadata": {
+    "navigation": "sitemap_main.xml",
+    "discussions": "https://github.com/umaywant2/TriadicFrameworks/discussions",
+    "contact": {
+      "x": "@TriadicFrameworks",
+      "youtube": "@TriadicFrameworks"
+    },
+    "license": "Open educational use permitted",
+    "module": {
+      "name": "Expectations",
+      "summary": "Defines what newcomers should expect from TriadicFrameworks and how to evaluate or contribute to the canon.",
+      "category": "orientation",
+      "keywords": [
+        "expectations",
+        "orientation",
+        "requirements",
+        "triadicframeworks",
+        "canon",
+        "observer",
+        "substrate",
+        "cross-domain"
+      ],
+      "audience": "students, researchers, ai_agents"
+    }
+  }
+}
 
