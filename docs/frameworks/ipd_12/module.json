@@ -1,1 +1,89 @@
+{
+  "module_name": "IPD-12",
+  "module_category": "framework",
+  "module_purpose": "Define the IPD-12 (Intransitive Prime-Numbered 12-Sided Dice) as a first-class framework artifact within TriadicFrameworks, providing a physicalizable operator object that encodes intransitive, prime-indexed cycles compatible with RTT, GU, and Pantheon structures.",
+
+  "module_summary": "IPD-12 is a 12-faced, prime-indexed, intransitive dice framework that serves as a combinatorial operator artifact. Each face corresponds to a prime-labeled operator state, and the directed relations between faces form non-transitive cycles. This module formalizes IPD-12 as a framework object, enabling RTT resonance-first interpretations, GU geometric embeddings, and Pantheon-tier mappings.",
+
+  "apex_operators": {
+    "ipd_face_prime": "Represents a prime-indexed operator state on one of the 12 faces.",
+    "ipd_intransitive_edge": "Directed relation between two faces forming non-transitive cycles.",
+    "ipd_cycle": "Closed intransitive loop over a subset of faces.",
+    "ipd_regime_transition": "Mapping of IPD cycles to RTT regime transitions.",
+    "ipd_coherence_stabilizer": "Use of prime gaps and cycle structure as coherence stabilizers."
+  },
+
+  "structure_descriptors": {
+    "faces": 12,
+    "indexing_scheme": "Prime-numbered labels assigned to operator states (e.g., 2, 3, 5, 7, 11, 13, ... mapped to 12 canonical positions).",
+    "relation_type": "Directed, intransitive comparisons between faces.",
+    "cycle_behavior": "Non-transitive cycles that model paradox and regime transitions.",
+    "physicalizable": "Intended for physical dice or virtual dice implementations as operator-bearing artifacts."
+  },
+
+  "resonance_descriptors": {
+    "rtt_mapping": "IPD cycles interpreted as RTT paradox and regime operators over resonance fields.",
+    "coherence_use": "Prime gaps and cycle stability used as coherence indicators.",
+    "drift_interpretation": "Slow changes in cycle structure treated as drift.",
+    "dimensional_hooks": "12-fold structure compatible with TriadicFrameworks’ canonical twelve-layer architectures."
+  },
+
+  "observer_model": {
+    "triadic_view": "Observer interacts with IPD-12 via choice (field), cycle recognition (regime), and stability assessment (coherence).",
+    "pantheon_view": "Faces and cycles can be mapped to Celestial, Civilizational, and Chthonic tiers in pantheon profiles.",
+    "gu_view": "IPD cycles can be embedded as geometric states or curvature/anomaly patterns in GU-compatible interpretations."
+  },
+
+  "paradox_and_cycles": {
+    "paradox_summary": "Intransitive relations between faces generate paradox loops analogous to RTT paradox operators.",
+    "cycle_summary": "Directed cycles over prime-indexed faces provide a combinatorial model of regime transitions and paradox resolution."
+  },
+
+  "capture_files": {
+    "primary_capture": "./g_Capture.md",
+    "operator_registry": "./operators.json",
+    "regime_map": "./regime_map.md",
+    "examples": "./examples.md"
+  },
+
+  "roles": {
+    "engine": ["operators.json"],
+    "profile": ["g_Capture.md"],
+    "signature": ["module.json"],
+    "diagnostic": ["compatibility_tests.md"],
+    "map": ["regime_map.md"],
+    "example": ["examples.md"],
+    "extension": ["compatibility_notes.md"],
+    "index": ["README.md"],
+    "template": ["module_template.md"]
+  },
+
+  "analyzer_layers": {
+    "operator": ["apex_operators", "structure_descriptors"],
+    "regime": ["regime_map.md"],
+    "coherence": ["resonance_descriptors"],
+    "paradox": ["paradox_and_cycles"],
+    "cross-cutting": ["compatibility_notes.md"]
+  },
+
+  "ai_metadata": {
+    "ai.module": "IPD-12",
+    "ai.version": "2026-1.0",
+    "ai.purpose": "Intransitive prime-numbered 12-sided dice framework artifact.",
+    "ai.keywords": [
+      "IPD-12",
+      "intransitive dice",
+      "prime-indexed operators",
+      "RTT",
+      "Geometric Unity",
+      "pantheon",
+      "framework artifact",
+      "resonance fields",
+      "paradox cycles"
+    ],
+    "ai.audience": "Framework architects, RTT practitioners, combinatorial theorists, game and tool designers.",
+    "ai.module.summary": "A physicalizable, prime-indexed, intransitive 12-sided operator framework.",
+    "ai.module.category": "framework"
+  }
+}
 
