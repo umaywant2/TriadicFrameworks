@@ -52,6 +52,17 @@ def load_schema(path):
         return json.load(f)
 
 
+def validate_schema_path(raw_path):
+    schema_path = Path(raw_path).expanduser().resolve()
+    if not schema_path.exists():
+        raise ValueError(f"file not found: {schema_path}")
+    if not schema_path.is_file():
+        raise ValueError(f"not a file: {schema_path}")
+    if schema_path.suffix.lower() != ".json":
+        raise ValueError(f"expected a .json file: {schema_path}")
+    return schema_path
+
+
 def extract_properties(schema):
     return schema.get("properties", {})
 
@@ -107,9 +118,10 @@ def main():
         print("Usage: python schema_to_graphviz.py path/to/schema.json")
         sys.exit(1)
 
-    schema_path = Path(sys.argv[1])
-    if not schema_path.exists():
-        print(f"Error: file not found: {schema_path}")
+    try:
+        schema_path = validate_schema_path(sys.argv[1])
+    except ValueError as exc:
+        print(f"Error: {exc}")
         sys.exit(1)
 
     schema = load_schema(schema_path)
