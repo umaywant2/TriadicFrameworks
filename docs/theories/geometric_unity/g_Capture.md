@@ -705,6 +705,44 @@ The `g_Capture.md` is fully built out below — copy this into `/docs/theories/g
 
 ---
 
+Scaffolding `g_RTT_Bridge.md` now — built to receive promoted §6 entries and serve as the canonical GU ↔ RTT bridge document.
+
+`g_RTT_Bridge.md` is fully scaffolded at `docs/theories/geometric_unity/g_RTT_Bridge.md`. Here's what's inside across its 11 sections:
+
+---
+
+### Document Architecture
+
+| Section | Purpose | Status |
+|---|---|---|
+| **§1 Bridge Identity & Scope** | Defines the GU vs RTT comparison table, scope boundaries (classical only, vacuum-first), and authoritative reference chain | ✅ Complete |
+| **§2 Intake Gate** | Single source of truth for triadic review status of all 7 promotable capture entries — the gatekeeper before anything lands here | ✅ Complete |
+| **§3 Functor Architecture `𝔉`** | Stubs for `GU-Cat`, `RTT-Cat`, the formal functor definition (`𝔉_obj` + `𝔉_mor`), and the naturality diagram | `[PENDING]` — blocked on G-01 |
+| **§4 Object-Level Correspondence** | Pre-promotion scaffold of the full 12-row dictionary (R-01 through R-12) with confidence ratings, version history, and named promotion slots for each row | `[PENDING — PARTIAL]` |
+| **§5 Morphism-Level Correspondence** | Explicit obstruction statement, 4-step resolution path for `𝒩 ◁ 𝒢`, and slots for morphism map, compatibility lemma, and naturality diagram | `[PENDING — BLOCKED on G-01]` |
+| **§6 Coherence Registry** | Full formal statements, verification strategies, and evidence records for all six coherence conditions — COH-04 and COH-06 already `🟡 Partial` | `[PENDING — PARTIAL]` |
+| **§7 Reduction & Lift Pathways** | 5-step GU→RTT recipe, speculative RTT→GU lift recipe, and live tables for lift-verified and RTT-exclusive states | `[PENDING]` |
+| **§8 Observer Stratum** | Slots for C-1 through C-4, stratum geometry, multi-observer interference, and observer equivalence principle | `[PENDING]` |
+| **§9 Gap Registry** | Full records for G-01 through G-05 with severity, approach, and a dependency graph showing the critical path | ✅ Complete |
+| **§10 Dependency Map** | Bidirectional module dependency tracking — what this bridge needs and what four downstream modules are waiting on it | ✅ Complete |
+| **§11 Changelog + Appendices** | Promotion quick-reference card, notation table, and reverse-chronological change log | ✅ Complete |
+
+---
+
+### Critical Path to First Milestone
+
+The two fastest wins with no current blockers are **R-02** (section `σ` ↔ arena reduction `ρ` — high confidence, no gaps) and **R-10** (spectral eigenvalue `λ_n` ↔ resonance frequency `ω_n` — the backbone of Strategy B). Promoting those two rows plus verifying the curved-section extension of **COH-04** and the excited-state kernel for **COH-06** would flip the overall bridge status from `🔴 Pre-verification` to `🟡 Partial` and unlock the flat-vacuum worked example in §7.
+
+The natural next document to scaffold from here would be `g_Operators.md` — the canonical GU operator definitions for `ð`, `ð̃`, and `𝒦` that both this bridge and `g_Capture.md §2` currently reference but don't yet have a home for.
+
+---
+
+
+
+
+
+---
+
 # g_Capture.md — Geometric Unity Working Capture
 **Module:** `theories/geometric_unity`
 **Status:** 🟡 Active Development
