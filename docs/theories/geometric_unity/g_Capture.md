@@ -696,3 +696,620 @@ The loader is live and fully operational. Here's the complete run summary:
 ---
 
 The `build_manifest.json` is attached. A natural next step would be a **`rf_builder_runner.py`** — the execution-time counterpart that consumes `build_manifest.json` to actually instantiate operator objects, fire the wired build hooks in pipeline order, and stream per-layer diagnostics back to FFT.
+
+---
+
+I'll build out the enhanced `g_Capture.md` file now with all the requested sections following TriadicFrameworks capture conventions.
+
+The `g_Capture.md` is fully built out below — copy this into `/docs/theories/geometric_unity/g_Capture.md` in your project:
+
+---
+
+# g_Capture.md — Geometric Unity Working Capture
+**Module:** `theories/geometric_unity`
+**Status:** 🟡 Active Development
+**Capture Type:** TriadicFrameworks Working Scratchpad
+**Primary Bridge:** GU ↔ RTT
+**Last Updated:** 2026-07-07
+**Maintainer:** TriadicFrameworks Core
+
+---
+
+> **Capture Convention:** This document follows TriadicFrameworks Capture Protocol v2.
+> All sections marked `[RAW]` are unvetted working notes — promote entries to their canonical
+> theory files only after triadic review (Structural ✓, Relational ✓, Generative ✓).
+> Entries marked `[SCAFFOLD]` are provisional bridges pending cross-framework validation.
+> Never treat this file as a source-of-truth for downstream modules.
+
+---
+
+## Table of Contents
+
+1. [Raw Conceptual Notes](#1-raw-conceptual-notes)
+2. [Operator Sketches](#2-operator-sketches)
+3. [Resonance-Field Interpretations](#3-resonance-field-interpretations)
+4. [Dimensional Reconciliation Drafts](#4-dimensional-reconciliation-drafts)
+5. [Observer Embeddings](#5-observer-embeddings)
+6. [Compatibility Scaffolding — GU ↔ RTT Bridge](#6-compatibility-scaffolding--gu--rtt-bridge)
+7. [Capture Log](#7-capture-log)
+
+---
+
+## 1. Raw Conceptual Notes
+
+> `[RAW]` — Unfiltered working entries. Use inline `[?]` for open questions and `[!]` for
+> high-priority flagged ideas requiring follow-up.
+
+---
+
+### 1.1 Foundational GU Premises (Working Restatement)
+
+- The central GU claim: spacetime and the standard model gauge fields can be *sourced* from a
+  single geometric object — an **observerse** — rather than postulated separately.
+- The 14-dimensional observerse `Y^14` is the arena. The base 4D spacetime `X^4` is a choice
+  of section, not a fixed substrate. [!] This has immediate consequences for how RTT defines
+  its resonance arena — RTT assumes a fixed-background metric arena; GU dissolves it.
+- The Dirac operator `ð` on `Y^14` is not merely a kinetic operator — it is the geometric
+  generator of the matter content. [?] Does RTT's resonance propagator have an analogous
+  geometric origin, or is it purely algebraic?
+
+### 1.2 Spinor Bundle Consideration
+
+- GU requires a **spinor bundle** over `Y^14` that restricts correctly to known fermion
+  representations on `X^4`.
+- The **Shiab operator** (Ship-in-a-Bottle) maps ad-valued forms back into spinor-valued
+  forms — this is the key nonstandard operator that needs a counterpart in RTT.
+- [?] Can the Shiab operator be recast as a resonance-coupling tensor in RTT notation?
+  Preliminary conjecture: Shiab ≅ RTT contraction operator `Γ^{μν}_{res}` under metric
+  identification — but dimensional mismatch at index level needs resolution. See §4.
+
+### 1.3 Gauge Group Architecture
+
+- GU's gauge group `𝒢` is constructed from the space of sections of the bundle of metrics
+  on `Y^14` — dramatically larger than the Standard Model gauge group.
+- The Standard Model gauge group `U(1) × SU(2) × SU(3)` is recovered as a *residual*
+  symmetry after a section choice + symmetry breaking.
+- [!] RTT uses a fixed gauge lattice derived from spectral decomposition. The mismatch
+  between GU's dynamic gauge emergence and RTT's static gauge lattice is the primary
+  compatibility tension. Flag for §6.
+
+### 1.4 Curvature as Matter — Working Notes
+
+- In GU, curvature is not just background geometry — it *is* the matter source via the
+  augmented torsion tensor. The Einstein field equations are replaced by a single unified
+  curvature equation.
+- Notation draft: `ℱ = Ω + Ω_⊥` where `Ω` is the curvature 2-form and `Ω_⊥` is its
+  complement under the GU metric pairing.
+- [?] Does `Ω_⊥` have a natural home in RTT's tensor hierarchy? Working hypothesis: it
+  maps to the RTT *off-shell resonance tensor* `R̃^{αβ}` — needs operator-level check.
+
+### 1.5 Open Raw Questions
+
+| # | Question | Priority | Assigned To |
+|---|----------|----------|-------------|
+| Q-01 | Is the Shiab operator a special case of RTT's coupling tensor? | HIGH | GU-RTT Bridge |
+| Q-02 | How does GU's gauge emergence interact with RTT's spectral lattice? | HIGH | GU-RTT Bridge |
+| Q-03 | What is the RTT analog of the GU observerse constraint? | MED | RTT Module |
+| Q-04 | Does the 14D Dirac operator descend cleanly to 4D under RTT truncation? | MED | GU Module |
+| Q-05 | Is there a natural resonance-field grading on the bundle of metrics? | LOW | Open |
+| Q-06 | Can observer embeddings (§5) be unified with GU's section-choice formalism? | LOW | Open |
+
+---
+
+## 2. Operator Sketches
+
+> `[RAW]` — Informal operator definitions. These are working sketches, not rigorous
+> definitions. Promote to `g_Operators.md` after peer validation.
+
+---
+
+### 2.1 The Shiab Operator — Extended Sketch
+
+**Informal definition:**
+The Shiab operator `ð̃ : Ω^k(Y, ad P) → Ω^{14-k}(Y, S ⊗ ad P)` is a
+contraction-and-dualization map that takes ad-valued differential forms and produces
+spinor-coupled forms of complementary degree. It acts as the "recycler" — taking geometric
+curvature data and returning it as matter-like spinor content.
+
+**Schematic action:**
+```
+ð̃(α) = g^{AB} ⟨e_A ∧ α, Γ_B⟩_spinor
+```
+where `e_A` are the local frame fields on `Y^14`, `Γ_B` are the gamma matrices in 14D,
+and the inner product is taken in the spinor fiber.
+
+**Working RTT Correspondence (Provisional):**
+```
+Shiab: Ω^k(Y, ad P)  →  Ω^{14-k}(Y, S ⊗ ad P)
+         ↕ (conjectured)
+RTT Γ:  T^{k}_{res}  →  T^{n-k}_{coupled}
+```
+Status: Index-degree mismatch unresolved. The RTT tensor hierarchy uses `n=dim(arena)` as
+defined by the spectral cutoff, not the full geometric dimension. Resolution in §4.3.
+
+---
+
+### 2.2 The Unified Curvature Operator `𝒦`
+
+**Sketch:**
+```
+𝒦 := d_∇ + ð̃ ∘ d_∇^*
+```
+This is the proposed GU replacement for the Einstein operator. `d_∇` is the gauge-covariant
+exterior derivative; `d_∇^*` its formal adjoint; `ð̃` the Shiab operator above.
+
+**Action on the unified field `Ψ ∈ Ω^*(Y, E)`:**
+```
+𝒦 Ψ = 0   ←→   Einstein + Yang-Mills + Dirac (on X^4)
+```
+The claim is that this single equation packages all three classical field equations when
+restricted to the chosen section `X^4 ↪ Y^14`.
+
+**[!] RTT Hook:** RTT's master resonance equation `ℛ_μν = λ·Φ_μν` is superficially
+analogous. The correspondence map:
+```
+𝒦 Ψ = 0   ↔   ℛ_μν - λ·Φ_μν = 0
+```
+needs a dictionary between `Ψ` (a graded bundle section) and `(ℛ_μν, Φ_μν)` (tensor
+fields on the RTT arena). Drafted in §6.2.
+
+---
+
+### 2.3 The Section-Choice Operator `σ`
+
+**Sketch:**
+```
+σ : X^4 ↪ Y^14
+```
+A Riemannian embedding that selects the physical 4D spacetime inside the observerse.
+The choice of `σ` induces:
+- A metric `g_μν` on `X^4` (via pullback)
+- A gauge connection `A` (via the normal bundle connection)
+- A fermion representation (via the spinor restriction map)
+
+**Key property:** No physical observable in GU can depend on the *choice* of `σ` — only
+on its *equivalence class* under the GU gauge group `𝒢`. This is the GU analog of
+diffeomorphism invariance.
+
+**[?] Observer Embedding Link:** The section `σ` is structurally related to the observer
+embedding formalism in §5. Working hypothesis: an observer embedding is a *pointed* section
+choice — a section `σ` together with a marked worldline `γ ⊂ X^4`. See §5.2.
+
+---
+
+### 2.4 Operator Dependency Map
+
+```
+                    Y^14 (Observerse)
+                         │
+                    Section σ
+                         │
+                    X^4 ↪ Y^14
+                   /     |     \
+            Metric g   Conn A   Spinor S
+                |         |         |
+          Einstein    Yang-Mills   Dirac
+                   \     |     /
+                    𝒦 Ψ = 0
+                         │
+                   (RTT Bridge)
+                         │
+                   ℛ_μν = λ Φ_μν
+```
+
+---
+
+## 3. Resonance-Field Interpretations
+
+> `[RAW]` — Interpretive notes mapping GU geometric objects to RTT resonance-field
+> language. All entries are working translations pending rigorous functor construction.
+
+---
+
+### 3.1 What Is a Resonance Field in the GU Context?
+
+In RTT, a **resonance field** `Φ` is a section of a bundle over the resonance arena whose
+dynamics are governed by a spectral coupling equation. In the GU context, we propose the
+following interpretation:
+
+> **GU Resonance Interpretation:** A resonance field `Φ` on `Y^14` is a section of the
+> spinor-curvature bundle `S ⊗ ∧^* T^*Y` whose spectral content (eigenvalues of `𝒦`) is
+> discretized by the choice of observer embedding. The resonance frequencies are the
+> eigenvalues `{λ_n}` of the Dirac-Shiab operator `ð + ð̃`.
+
+This gives a natural spectral grading:
+```
+Φ = Σ_n  c_n · φ_n        (φ_n: eigensection, c_n: resonance amplitude)
+```
+The RTT coupling constant `λ` is then the *fundamental* (ground-state) eigenvalue `λ_0`.
+
+---
+
+### 3.2 Curvature-Resonance Correspondence Table
+
+| GU Object | Geometric Role | RTT Resonance Analog | Confidence |
+|-----------|---------------|----------------------|------------|
+| Riemann tensor `R^{AB}_{CD}` on `Y^14` | Background curvature | Resonance carrier `Φ^{(0)}_μν` | Medium |
+| Augmented torsion `𝒯` | Matter source | Resonance source term `J_μ` | Medium |
+| Shiab output `ð̃(Ω)` | Spinor-curvature coupling | Coupled resonance mode `Φ^{(1)}_μν` | Low |
+| Section pullback `σ^*(g)` | Induced 4D metric | Arena metric `η_μν` of RTT | High |
+| GU gauge orbit `[σ]` | Physical equivalence class | RTT gauge-invariant resonance sector | Medium |
+| Unified field `Ψ` | Master section | RTT state vector `Ψ_RTT` | Low |
+| Eigenvalues `{λ_n}` of `ð + ð̃` | Spectral content | RTT resonance spectrum `{ω_n}` | Medium |
+
+---
+
+### 3.3 Resonance Grading on the Observerse
+
+Proposed grading of the resonance field by form-degree on `Y^14`:
+```
+Φ^{(0)}  ← 0-forms (scalar resonance: Higgs analog)
+Φ^{(1)}  ← 1-forms (vector resonance: gauge boson analog)
+Φ^{(2)}  ← 2-forms (tensor resonance: graviton analog)
+Φ^{(7)}  ← 7-forms (Hodge-dual to 7-forms: exotic resonance sector)
+Φ^{(14)} ← top form (volume resonance: cosmological constant analog)
+```
+
+**[!] Key Observation:** The RTT resonance hierarchy (scalar → vector → tensor) maps
+naturally onto the form-degree filtration on `Y^14`. This is a non-trivial structural
+agreement that may provide the cleanest entry point for the GU ↔ RTT functor.
+
+---
+
+### 3.4 Resonance Field Propagation in GU Language
+
+In flat-space RTT, the resonance propagator is:
+```
+G_RTT(x, y) = ∫ d^4k  e^{ik(x-y)} / (k² - ω²_n + iε)
+```
+In GU curved-space language, the analogous propagator must be the **heat kernel** of
+the Dirac-Shiab operator on `Y^14`:
+```
+G_GU(x, y; t) = Σ_n  φ_n(x) ⊗ φ_n†(y) · e^{-λ_n t}
+```
+The RTT propagator is recovered in the flat-section limit `σ → flat embedding` and
+`t → spectral cutoff`. This is the **GU → RTT reduction map** at the propagator level.
+
+---
+
+## 4. Dimensional Reconciliation Drafts
+
+> `[RAW]` — Working drafts for resolving the dimensional mismatch between GU's
+> 14-dimensional observerse and RTT's variable-but-bounded arena dimension.
+
+---
+
+### 4.1 The Core Dimensional Tension
+
+| Framework | Arena Dimension | Gauge Group Origin | Field Content |
+|-----------|-----------------|--------------------|---------------|
+| GU | 14 (fixed, geometric) | Sections of Met(Y^14) | Graded bundle over Y^14 |
+| RTT | n (spectral, variable) | Spectral decomposition | Tensor fields on arena |
+| Standard Model | 4 (fixed, base) | U(1)×SU(2)×SU(3) (postulated) | Matter + gauge fields |
+
+The reconciliation problem: RTT's spectral cutoff dimension `n` must be relatable to GU's
+geometric dimension `14`. Three candidate strategies:
+
+---
+
+### 4.2 Strategy A — Kaluza-Klein–Style Compactification
+
+Reduce `Y^14 → X^4 × K^10` where `K^10` is a compact internal manifold.
+RTT then operates on `X^4` with the internal `K^10` modes integrated out.
+The RTT spectral dimension `n` = 4 (the base).
+
+**Assessment:**
+- Pro: Clean reduction; well-understood mathematical mechanism.
+- Con: Requires specifying `K^10` — breaks GU's gauge covariance unless `K^10`
+  is determined geometrically. Potentially reintroduces moduli problem.
+- Status: Viable fallback. Pursue only if §4.3 fails.
+
+---
+
+### 4.3 Strategy B — Spectral Truncation (Preferred)
+
+Retain `Y^14` as the full arena. RTT's `n`-dimensional spectral lattice is interpreted
+as the *first n eigenvalues* of the Dirac-Shiab operator on `Y^14`. The spectral cutoff
+is not dimensional reduction — it is an *observational resolution limit*.
+
+```
+RTT arena (n modes) ←→ GU spectral truncation: Spec_n(ð + ð̃) on Y^14
+```
+
+The advantage: no geometric compactification is needed. The observer's resonance
+resolution (§5) determines `n` dynamically. This makes dimensional reconciliation
+*observer-relative*, consistent with both GU's section-choice formalism and RTT's
+observer-dependent framing.
+
+**[!] Index-degree fix:** Under this strategy, the Shiab operator mismatch from §2.1
+resolves as follows. RTT's tensor rank `k` corresponds to the *form-degree filtration*
+in `Spec_n`, not to the full 14D exterior algebra. The degree-k RTT tensor `T^k_{res}`
+maps to the projection of `Ω^k(Y, ad P)` onto the first `n` spectral modes.
+
+---
+
+### 4.4 Strategy C — Emergent Dimension
+
+Treat the dimension of the RTT arena as an emergent quantity derived from the GU gauge
+orbit structure. The dimension `n` is the *rank of the isotropy representation* of `𝒢`
+at a generic section `[σ]`.
+
+**Assessment:**
+- Most geometrically natural from a GU perspective.
+- Computationally intractable without a concrete model of `𝒢`. Deferred.
+- Status: Long-term research direction. Note in Roadmap.
+
+---
+
+### 4.5 Preferred Reconciliation Diagram (Strategy B)
+
+```
+        Y^14  (GU Observerse)
+           │
+      Operator (ð + ð̃)
+           │
+     Spectral sequence:
+     {φ_0, φ_1, ..., φ_n, ...}
+           │
+    Truncate at cutoff N
+           │
+     Spec_N ≅ RTT arena (N-dim effective theory)
+           │
+     Section σ choice
+           │
+     X^4 physics (Standard Model recovered)
+```
+
+---
+
+## 5. Observer Embeddings
+
+> `[RAW]` — Formalizing the role of observers in GU and their correspondence with
+> RTT's observer-relative resonance framing.
+
+---
+
+### 5.1 Observers in GU — Preliminary Framework
+
+In classical GR, an observer is a timelike worldline with a choice of frame (tetrad).
+In GU, the observer structure is richer:
+
+A **GU observer** is a triple `𝒪 = (σ, γ, F)` where:
+- `σ : X^4 ↪ Y^14` — the section embedding (chooses the observer's physical spacetime)
+- `γ ⊂ X^4` — a timelike worldline in the section
+- `F` — a frame (section of the frame bundle) along `γ`
+
+The observer `𝒪` determines:
+1. A **local resonance spectrum** `Spec_𝒪 = Spec(ð + ð̃)|_{tubular nbhd of γ}`
+2. A **local gauge vacuum** — the GU gauge orbit representative closest to `𝒪`
+3. A **measurement map** `m_𝒪 : Ω^*(Y, E) → Observable(γ)` — the restriction and
+   evaluation of global fields to observable quantities along `γ`
+
+---
+
+### 5.2 Observer Embeddings and Section Choice
+
+The connection between observer embeddings and section choice (§2.3):
+
+```
+GU Section σ              =   Background spacetime choice
+GU Observer 𝒪 = (σ,γ,F)  =   Pointed section (section + worldline + frame)
+```
+
+**Gauge freedom:** Two observers `𝒪` and `𝒪'` are physically equivalent if there
+exists a gauge transformation `g ∈ 𝒢` such that `g · 𝒪 = 𝒪'`. This is the
+**GU principle of observer equivalence**.
+
+**[?] RTT Question:** Does RTT's observer-relative resonance framing implement an
+analogous equivalence principle? If RTT resonance measurements are observer-relative,
+the equivalence classes should match. This needs explicit checking against RTT's
+measurement postulates.
+
+---
+
+### 5.3 Observer Embedding Compatibility Conditions
+
+For an observer `𝒪 = (σ, γ, F)` to be **RTT-compatible**, the following conditions
+are proposed:
+
+| Condition | GU Statement | RTT Requirement |
+|-----------|-------------|-----------------|
+| C-1: Spectral completeness | `Spec_𝒪` spans the RTT resonance basis | RTT: basis {ω_n} ⊂ Spec_𝒪 |
+| C-2: Metric compatibility | σ^*(g_Y) = η (Minkowski) along γ | RTT: flat arena metric near observer |
+| C-3: Gauge normalization | F is a GU-canonical frame | RTT: resonance amplitudes c_n are real |
+| C-4: Causality | γ is a GU-geodesic (extremal of 𝒦-action) | RTT: observer worldline is on-shell |
+
+Conditions C-1 through C-4 define the **GU ↔ RTT observer compatibility stratum** —
+the locus in the space of observers where both frameworks agree on physical predictions.
+
+---
+
+### 5.4 Multi-Observer Configurations
+
+Working notes on overlapping observer charts:
+
+- Two observers `𝒪_1, 𝒪_2` with overlapping worldtubes define a **resonance
+  interference region** — the region where their local spectra overlap.
+- The overlap `Spec_{𝒪_1} ∩ Spec_{𝒪_2}` defines the **shared resonance sector** —
+  physically measurable by both.
+- [?] In RTT, this is handled by the tensor product of observer Hilbert spaces. In GU,
+  it corresponds to the intersection of two tubular neighborhoods in `Y^14`. Are these
+  constructions equivalent? Suspected yes via spectral theory, but not proven.
+
+---
+
+## 6. Compatibility Scaffolding — GU ↔ RTT Bridge
+
+> `[SCAFFOLD]` — Provisional cross-framework bridge constructions. These entries define
+> the working correspondence dictionary between GU and RTT. Promote to
+> `g_RTT_Bridge.md` after triadic review.
+
+---
+
+### 6.1 Bridge Architecture Overview
+
+The GU ↔ RTT bridge is a **functor** `𝔉 : GU-Cat → RTT-Cat` between the
+mathematical categories of each framework. It must satisfy:
+
+1. **Object map:** GU geometric objects → RTT tensor objects
+2. **Morphism map:** GU gauge transformations → RTT gauge symmetries
+3. **Coherence:** Physical observables are preserved by `𝔉`
+
+Current status: Object map partially defined (§6.2). Morphism map open. Coherence
+unverified.
+
+---
+
+### 6.2 Object-Level Bridge Dictionary (Working Draft v0.3)
+
+```
+╔══════════════════════════════════════════════════════════════════════════╗
+║                    GU ↔ RTT BRIDGE DICTIONARY v0.3                      ║
+║                    [SCAFFOLD — PROVISIONAL]                              ║
+╠═══════════════════════════╦══════════════════════════════════════════════╣
+║ GU Object                 ║ RTT Correspondent                            ║
+╠═══════════════════════════╬══════════════════════════════════════════════╣
+║ Observerse Y^14           ║ Extended resonance arena Ã                   ║
+║ Section σ : X^4 ↪ Y^14   ║ Arena reduction map ρ : Ã → A_4             ║
+║ Metric g on Y^14          ║ Resonance metric G on Ã                      ║
+║ GU gauge group 𝒢          ║ RTT symmetry group ℋ_RTT                    ║
+║ Unified field Ψ           ║ RTT master state Ψ_RTT                       ║
+║ Shiab operator ð̃          ║ RTT coupling operator Γ^{μν}_{res}          ║
+║ Curvature 2-form Ω        ║ Resonance field strength F^{μν}_{res}        ║
+║ Augmented torsion 𝒯       ║ Resonance source tensor J_μ                 ║
+║ Dirac operator ð          ║ RTT propagator kernel K_RTT                  ║
+║ Spectral eigenvalue λ_n   ║ Resonance frequency ω_n                     ║
+║ Observer triple 𝒪         ║ RTT observer O_RTT = (worldline, frame)      ║
+║ Section equivalence [σ]   ║ RTT gauge-invariant sector [Ψ]_RTT           ║
+╚═══════════════════════════╩══════════════════════════════════════════════╝
+```
+
+Confidence: High (section/arena reduction) · Medium (curvature, torsion, gauge orbit) ·
+Low (Shiab/coupling operator, unified field/master state).
+
+---
+
+### 6.3 Morphism-Level Scaffolding (Open)
+
+The morphism map must satisfy:
+```
+𝔉(g · Ψ) = ℋ(g) · 𝔉(Ψ)     for all g ∈ 𝒢, Ψ ∈ GU fields
+```
+
+**Obstruction:** `𝒢` is infinite-dimensional; `ℋ_RTT` is not. A naive morphism requires
+quotienting by a normal subgroup `𝒩 ◁ 𝒢` such that `𝒢 / 𝒩 ≅ ℋ_RTT`.
+
+**[!] Candidate for 𝒩:** The kernel of the evaluation-at-section map:
+```
+ev_σ : 𝒢 → Diff(X^4) × 𝒢_SM
+𝒩 := ker(ev_σ)
+```
+Under this quotient, `𝒢/𝒩 ≅ Diff(X^4) × 𝒢_SM`. If `ℋ_RTT` contains this as a
+subgroup, the morphism map is constructible. Requires explicit computation — priority task.
+
+---
+
+### 6.4 Coherence Conditions (Checklist)
+
+| Condition | Description | Status |
+|-----------|-------------|--------|
+| COH-01 | `𝔉` preserves field equations: `𝒦Ψ=0 ↦ ℛ=λΦ` | 🔴 Open |
+| COH-02 | `𝔉` preserves observer observables (C-1 through C-4) | 🔴 Open |
+| COH-03 | `𝔉` commutes with dimensional reduction: `𝔉 ∘ σ^* = ρ ∘ 𝔉` | 🔴 Open |
+| COH-04 | `𝔉` sends GU vacuum to RTT vacuum | 🟡 Partial (spectral argument) |
+| COH-05 | `𝔉` is invertible on the compatibility stratum | 🔴 Open |
+| COH-06 | `𝔉(𝒦)` and `ℛ - λΦ` share kernel under flat-section limit | 🟡 Partial (§3.4) |
+
+---
+
+### 6.5 Cross-Framework Scaffolding Notes
+
+**GU → RTT reduction (working recipe):**
+1. Choose section `σ : X^4 ↪ Y^14`
+2. Compute spectral decomposition of `ð + ð̃` on tubular neighborhood of `σ(X^4)`
+3. Truncate at spectral cutoff `N` → obtain RTT effective arena
+4. Map truncated spectral data to RTT tensor fields via §6.2 dictionary
+5. Verify RTT field equations hold for mapped fields (COH-01)
+
+**RTT → GU lift (speculative):**
+1. Given RTT state `(Ψ_RTT, A_4, G)`, identify spectral basis `{ω_n}`
+2. Construct GU spinor section `Ψ` with matching eigenvalues under `ð + ð̃`
+3. Find section `σ` consistent with arena metric `G` via inverse pullback
+4. Check `𝒦Ψ = 0`
+5. If satisfied → valid GU lift; if not → RTT-exclusive state requiring separate treatment
+
+---
+
+### 6.6 Known Scaffolding Gaps
+
+- **G-01:** No explicit formula for `𝒩 ◁ 𝒢` — blocks morphism construction
+- **G-02:** RTT measurement postulates not yet translated into GU observer language
+- **G-03:** Bridge behavior under GU symmetry breaking unknown
+- **G-04:** RTT→GU lift existence unproven in general; verified only in flat vacuum case
+- **G-05:** No quantum regime treatment — all scaffolding is classical
+
+---
+
+## 7. Capture Log
+
+> Reverse-chronological. Newest entries first.
+
+| Date | Entry | Section | Author | Status |
+|------|-------|---------|--------|--------|
+| 2026-07-07 | Initial structured capture; all six sections populated; bridge dictionary v0.3 | All | TriadicFrameworks Core | 🟡 Active |
+| — | Pre-capture: raw GU notes in unstructured scratch files | — | — | 🗄 Archived |
+
+---
+
+## Appendix A — Notation Reference
+
+| Symbol | Meaning | Defined In |
+|--------|---------|------------|
+| `Y^14` | GU observerse (14D Riemannian manifold) | §1.1 |
+| `X^4` | Physical 4D spacetime (section of Y^14) | §1.1 |
+| `ð` | Dirac operator on Y^14 | §1.1 |
+| `ð̃` | Shiab operator | §2.1 |
+| `𝒦` | Unified curvature operator | §2.2 |
+| `σ` | Section embedding X^4 ↪ Y^14 | §2.3 |
+| `𝒢` | GU gauge group | §1.3 |
+| `Φ` | Resonance field (RTT) | §3.1 |
+| `ℛ_μν` | RTT resonance tensor | §2.2 |
+| `𝒪 = (σ,γ,F)` | GU observer triple | §5.1 |
+| `𝔉` | GU ↔ RTT bridge functor | §6.1 |
+| `𝒩` | Kernel of ev_σ (candidate normal subgroup) | §6.3 |
+| `Spec_N` | Spectral truncation at cutoff N | §4.3 |
+
+---
+
+## Appendix B — TriadicFrameworks Review Checklist
+
+Before promoting any `[RAW]` entry to its canonical theory file, confirm:
+
+- [ ] **Structural check:** Entry is internally consistent and well-defined
+- [ ] **Relational check:** Entry is compatible with existing GU and RTT axioms
+- [ ] **Generative check:** Entry opens productive directions or closes open questions
+- [ ] **Bridge check:** Impact on the GU ↔ RTT bridge has been assessed
+- [ ] **Log entry added:** Promotion recorded in §7
+
+---
+
+*End of g_Capture.md — TriadicFrameworks Working Capture*
+*Promote with care. Capture fast. Think slow.*
+
+---
+
+Here's a summary of what's in each section:
+
+| Section | Contents |
+|---|---|
+| **§1 Raw Conceptual Notes** | GU premises, spinor bundle concerns, gauge group architecture, curvature-as-matter notes, and a tracked open-questions table (Q-01 through Q-06) |
+| **§2 Operator Sketches** | Schematic definitions of the Shiab operator `ð̃`, the unified curvature operator `𝒦`, and the section-choice operator `σ`, plus a dependency flow diagram |
+| **§3 Resonance-Field Interpretations** | GU resonance definition, curvature-resonance correspondence table with confidence ratings, form-degree grading on `Y^14`, and the GU→RTT propagator reduction map |
+| **§4 Dimensional Reconciliation Drafts** | Three strategies (KK compactification, spectral truncation [preferred], emergent dimension) with a resolution diagram for the 14D↔RTT mismatch |
+| **§5 Observer Embeddings** | GU observer triple `𝒪 = (σ, γ, F)`, pointed-section connection to §2.3, four RTT-compatibility conditions (C-1 through C-4), and multi-observer interference treatment |
+| **§6 Compatibility Scaffolding** | Bridge functor `𝔉` architecture, 12-row object dictionary (v0.3), morphism-level obstruction + candidate `𝒩`, coherence checklist (COH-01 through COH-06), and both reduction and lift recipes |
+
+The biggest unresolved leverage point right now is **Gap G-01** — getting an explicit formula for `𝒩 ◁ 𝒢` unlocks the morphism map, which is the single blocker for moving the bridge from object-level correspondence to a true functor. A natural next step would be scaffolding out `g_RTT_Bridge.md` to receive the entries from §6 once triadic review passes.
+
+---
+
