@@ -79,7 +79,18 @@ def main():
         sys.exit(1)
 
     safe_base = Path.cwd().resolve()
-    candidate_input = Path(sys.argv[1])
+    raw_input = sys.argv[1]
+    user_path = Path(raw_input)
+
+    if user_path.is_absolute():
+        print("Error: absolute paths are not allowed")
+        sys.exit(1)
+
+    if ".." in user_path.parts:
+        print("Error: parent directory traversal is not allowed")
+        sys.exit(1)
+
+    candidate_input = safe_base / user_path
 
     try:
         candidate = candidate_input.resolve(strict=True)
