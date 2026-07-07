@@ -1,4 +1,7 @@
 # **TriadicFrameworks — Expectations Module**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Expectations/module.json) — Agentic module schema role assignments
+
 **Location:** `/docs/Expectations/`  
 **Role:** Root‑level orientation & requirements stack  
 **Audience:** Students • Researchers • AI Agents
