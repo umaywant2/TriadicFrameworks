@@ -143,7 +143,7 @@ def main():
     print("RTTcode URL:", rtt_url)
 
     generate_qr_code(rtt_url, safe_output_path)
-    print("QR code saved to:", safe_output_path)
+    print("QR code generated successfully.")
 
 if __name__ == "__main__":
     main()
