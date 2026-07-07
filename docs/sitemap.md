@@ -43,6 +43,7 @@ _Alternate Site_ 🥈 [docsbook.io](https://docs.triadicframeworks.org/docs/rtt/
 
 ## 1. Core Frameworks (Structural Spine)
 
+- [ /protocol_header/ ](https://www.triadicframeworks.org/Research/protocol_header/) (New!)
 - [ /spine/ ](https://www.triadicframeworks.org/spine/) (New!)
 - [ /rtt-datacenter-evaluator/ ](https://www.triadicframeworks.org/rtt-datacenter-evaluator.html) (New!)
 - [ /Mudpuppy/ ](https://dev.mythmatic.org/Mudpuppy/) (🐾 Spacetime v2.0beta | AI-Ready Now!)
