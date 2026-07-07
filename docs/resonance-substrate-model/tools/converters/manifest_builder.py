@@ -78,8 +78,17 @@ def main():
         print("Usage: python manifest_builder.py path/to/schemas")
         sys.exit(1)
 
-    root = Path(sys.argv[1])
-    if not root.exists():
+    safe_base = Path.cwd().resolve()
+    candidate = Path(sys.argv[1]).resolve()
+
+    try:
+        candidate.relative_to(safe_base)
+    except ValueError:
+        print(f"Error: path is outside allowed base directory: {safe_base}")
+        sys.exit(1)
+
+    root = candidate
+    if not root.exists() or not root.is_dir():
         print(f"Error: directory not found: {root}")
         sys.exit(1)
 
