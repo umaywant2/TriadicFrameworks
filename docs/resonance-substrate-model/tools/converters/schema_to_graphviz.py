@@ -54,9 +54,18 @@ def load_schema(path):
 
 def validate_schema_path(raw_path):
     base_dir = Path(__file__).resolve().parent
-    candidate = Path(raw_path).expanduser()
-    if not candidate.is_absolute():
-        candidate = (base_dir / candidate)
+
+    raw = str(raw_path).strip()
+    if not raw:
+        raise ValueError("path must not be empty")
+
+    user_path = Path(raw).expanduser()
+    if user_path.is_absolute():
+        raise ValueError(f"absolute paths are not allowed: {user_path}")
+    if ".." in user_path.parts:
+        raise ValueError(f"path traversal is not allowed: {user_path}")
+
+    candidate = base_dir / user_path
     try:
         schema_path = candidate.resolve(strict=True)
     except FileNotFoundError:
