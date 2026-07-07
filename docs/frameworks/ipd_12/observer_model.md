@@ -1,19 +1,3 @@
-Here is our complete **IPD‑12 Observer Model Document**, fully canon‑aligned and ready to paste into:
-
-`/docs/frameworks/ipd_12/observer_model.md`
-
-It integrates:
-
-- the **triadic observer model** (field → regime → coherence)  
-- the **apex observer** (dimensional lift/collapse)  
-- the **4×4×4 substrate engine**  
-- the **12 prime‑indexed operator states**  
-- RTT, GU, Pantheon, and substrate‑logic interpretations  
-
-This is the *official observer‑layer document* for the IPD‑12 framework.
-
----
-
 # `observer_model.md`  
 **IPD‑12 Observer Model**  
 **Triadic + Apex Observer System for the Intransitive Prime Engine**  
