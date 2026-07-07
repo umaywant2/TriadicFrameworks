@@ -1,4 +1,7 @@
 # `README.md`  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/frameworks/ipd_12/module.json) — Agentic module schema role assignments
+
 **IPD‑12 — Intransitive Prime‑Numbered 12‑Sided Engine**  
 **Module Category:** Framework  
 **Version:** 2026‑1.0  
