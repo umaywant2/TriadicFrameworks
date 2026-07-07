@@ -11,19 +11,20 @@ def load_json(path):
 def safe_resolve_path(base_dir, user_path):
     safe_base = Path(base_dir).resolve()
     user_path = str(user_path).strip()
-    user_rel = Path(user_path)
 
     if not user_path:
         raise ValueError("Path must not be empty")
+
+    normalized = os.path.normpath(user_path)
+    user_rel = Path(normalized)
+
     if user_rel.is_absolute():
         raise ValueError(f"Absolute paths are not allowed: {user_path}")
-    if ".." in user_rel.parts:
+    if normalized == ".." or normalized.startswith(f"..{os.sep}"):
         raise ValueError(f"Path traversal is not allowed: {user_path}")
 
     candidate = (safe_base / user_rel).resolve()
-    try:
-        candidate.relative_to(safe_base)
-    except ValueError:
+    if candidate != safe_base and safe_base not in candidate.parents:
         raise ValueError(f"Path escapes allowed root: {user_path}")
 
     if candidate.suffix.lower() != ".json":
