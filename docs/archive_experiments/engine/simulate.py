@@ -33,12 +33,23 @@ def _safe_join_under_root(root, filename):
     return candidate
 
 def _safe_manifest_path(manifest_path):
+    if not manifest_path:
+        raise ValueError("Invalid manifest path: empty path is not allowed")
+
+    user_path = Path(str(manifest_path))
+    if user_path.is_absolute():
+        raise ValueError("Invalid manifest path: absolute paths are not allowed")
+    if ".." in user_path.parts:
+        raise ValueError("Invalid manifest path: parent directory traversal is not allowed")
+
     manifests_root = Path("docs/manifests").resolve()
-    candidate = (manifests_root / manifest_path).resolve()
+    candidate = (manifests_root / user_path).resolve()
     try:
         candidate.relative_to(manifests_root)
     except ValueError:
         raise ValueError("Invalid manifest path: path escapes docs/manifests")
+    if candidate.suffix.lower() not in {".yaml", ".yml"}:
+        raise ValueError("Invalid manifest path: expected a .yaml or .yml file")
     if not candidate.is_file():
         raise ValueError("Invalid manifest path: file does not exist")
     return candidate
