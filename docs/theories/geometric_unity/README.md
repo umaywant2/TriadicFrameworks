@@ -1,6 +1,7 @@
 # `README.md`  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/geometric_unity/module.json) — Agentic module schema role assignments
+- [`build_manifest.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/geometric_unity/build_manifest.json) — Agentic module schema role assignments
 
 **Geometric Unity — TriadicFrameworks Module Front Door**  
 **Version:** 2026‑bridge‑1.0  
