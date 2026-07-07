@@ -32,8 +32,20 @@ def _safe_join_under_root(root, filename):
         raise ValueError("Invalid output filename: output path escapes docs/reports")
     return candidate
 
+def _safe_manifest_path(manifest_path):
+    manifests_root = Path("docs/manifests").resolve()
+    candidate = (manifests_root / manifest_path).resolve()
+    try:
+        candidate.relative_to(manifests_root)
+    except ValueError:
+        raise ValueError("Invalid manifest path: path escapes docs/manifests")
+    if not candidate.is_file():
+        raise ValueError("Invalid manifest path: file does not exist")
+    return candidate
+
 def run_simulation(manifest_path):
-    with open(manifest_path, 'r') as f:
+    safe_manifest_path = _safe_manifest_path(manifest_path)
+    with open(safe_manifest_path, 'r') as f:
         manifest = yaml.safe_load(f)
 
     label = manifest['label']
