@@ -53,7 +53,12 @@ def load_schema(path):
 
 
 def validate_schema_path(raw_path):
+    base_dir = Path.cwd().resolve()
     schema_path = Path(raw_path).expanduser().resolve()
+    try:
+        schema_path.relative_to(base_dir)
+    except ValueError:
+        raise ValueError(f"path escapes allowed directory: {schema_path}")
     if not schema_path.exists():
         raise ValueError(f"file not found: {schema_path}")
     if not schema_path.is_file():
