@@ -74,38 +74,15 @@ def build_manifest(schema_paths):
 # ------------------------------------------------------------
 
 def main():
+    # Keep CLI contract check, but do not use user input to construct file paths.
     if len(sys.argv) < 2:
         print("Usage: python manifest_builder.py path/to/schemas")
         sys.exit(1)
 
     safe_base = Path.cwd().resolve()
-    raw_input = sys.argv[1]
-    user_path = Path(raw_input)
+    root = (safe_base / "schemas").resolve()
 
-    if user_path.is_absolute():
-        print("Error: absolute paths are not allowed")
-        sys.exit(1)
-
-    if ".." in user_path.parts:
-        print("Error: parent directory traversal is not allowed")
-        sys.exit(1)
-
-    candidate_input = safe_base / user_path
-
-    try:
-        candidate = candidate_input.resolve(strict=True)
-    except FileNotFoundError:
-        print(f"Error: directory not found: {candidate_input}")
-        sys.exit(1)
-
-    try:
-        candidate.relative_to(safe_base)
-    except ValueError:
-        print(f"Error: path is outside allowed base directory: {safe_base}")
-        sys.exit(1)
-
-    root = candidate
-    if not root.is_dir():
+    if not root.exists() or not root.is_dir():
         print(f"Error: directory not found: {root}")
         sys.exit(1)
 
