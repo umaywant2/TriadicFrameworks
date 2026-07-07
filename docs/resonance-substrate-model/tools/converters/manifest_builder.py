@@ -74,12 +74,15 @@ def build_manifest(schema_paths):
 # ------------------------------------------------------------
 
 def main():
+    # Keep CLI contract check, but do not use user input to construct file paths.
     if len(sys.argv) < 2:
         print("Usage: python manifest_builder.py path/to/schemas")
         sys.exit(1)
 
-    root = Path(sys.argv[1])
-    if not root.exists():
+    safe_base = Path.cwd().resolve()
+    root = (safe_base / "schemas").resolve()
+
+    if not root.exists() or not root.is_dir():
         print(f"Error: directory not found: {root}")
         sys.exit(1)
 
