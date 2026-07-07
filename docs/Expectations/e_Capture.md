@@ -207,3 +207,6 @@ or
 ### **D. `expectations.md` + validation pathways**  
 
 Just tell me which version you want — A, B, C, or D — and I’ll draft it in full canon style.
+
+---
+
