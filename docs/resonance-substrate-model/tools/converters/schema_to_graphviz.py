@@ -53,14 +53,18 @@ def load_schema(path):
 
 
 def validate_schema_path(raw_path):
-    base_dir = Path.cwd().resolve()
-    schema_path = Path(raw_path).expanduser().resolve()
+    base_dir = Path(__file__).resolve().parent
+    candidate = Path(raw_path).expanduser()
+    if not candidate.is_absolute():
+        candidate = (base_dir / candidate)
+    try:
+        schema_path = candidate.resolve(strict=True)
+    except FileNotFoundError:
+        raise ValueError(f"file not found: {candidate}")
     try:
         schema_path.relative_to(base_dir)
     except ValueError:
         raise ValueError(f"path escapes allowed directory: {schema_path}")
-    if not schema_path.exists():
-        raise ValueError(f"file not found: {schema_path}")
     if not schema_path.is_file():
         raise ValueError(f"not a file: {schema_path}")
     if schema_path.suffix.lower() != ".json":
