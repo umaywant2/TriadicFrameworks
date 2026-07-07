@@ -149,7 +149,8 @@ def resolve_within_base(user_value: str, base_dir: pathlib.Path, label: str) -> 
         print(f"      {label} contains unsupported characters.\n")
         sys.exit(1)
 
-    resolved = (base_resolved / candidate).resolve()
+    safe_relative = pathlib.Path(normalized_input.lstrip("/\\"))
+    resolved = base_resolved.joinpath(safe_relative).resolve()
     try:
         resolved.relative_to(base_resolved)
     except ValueError:
