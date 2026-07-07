@@ -1,4 +1,7 @@
 # **Protocol Header Module**  
+
+- [`protocol_header_registry.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/Research/protocol_header/protocol_header_registry.json) — Agentic module schema role assignments
+
 ### *TriadicFrameworks — Research Substrate*  
 ### *Canonical README*
 
