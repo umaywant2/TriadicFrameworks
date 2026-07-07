@@ -1,78 +1,91 @@
-<!-- P2 — Seed (Neutral) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <circle cx="12" cy="12" r="7" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P2</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="360" viewBox="0 0 480 360">
 
-<!-- P3 — Transition Lift (+1D) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <polygon points="12,4 4,20 20,20" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P3</text>
-</svg>
+  <!-- Row 1 -->
+  <g transform="translate(0,0)">
+    <!-- P2 -->
+    <g transform="translate(0,0)">
+      <circle cx="40" cy="40" r="30" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P2</text>
+    </g>
 
-<!-- P5 — Drift Collapse (−1D) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <polygon points="4,4 20,4 12,20" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P5</text>
-</svg>
+    <!-- P3 -->
+    <g transform="translate(120,0)">
+      <polygon points="40,10 10,70 70,70" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P3</text>
+    </g>
 
-<!-- P7 — Regime Lift (+1D) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <polygon points="12,4 4,20 20,20" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P7</text>
-</svg>
+    <!-- P5 -->
+    <g transform="translate(240,0)">
+      <polygon points="10,10 70,10 40,70" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P5</text>
+    </g>
 
-<!-- P11 — Coherence (Neutral) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <circle cx="12" cy="12" r="7" fill="none" stroke="black" stroke-width="2"/>
-  <circle cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P11</text>
-</svg>
+    <!-- P7 -->
+    <g transform="translate(360,0)">
+      <polygon points="40,5 5,75 75,75" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P7</text>
+    </g>
+  </g>
 
-<!-- P13 — Paradox Collapse (−1D) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <polygon points="4,4 20,4 12,20" fill="none" stroke="black" stroke-width="2"/>
-  <line x1="4" y1="4" x2="20" y2="4" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P13</text>
-</svg>
+  <!-- Row 2 -->
+  <g transform="translate(0,120)">
+    <!-- P11 -->
+    <g transform="translate(0,0)">
+      <circle cx="40" cy="40" r="30" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="40" r="15" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P11</text>
+    </g>
 
-<!-- P17 — Gate (Neutral) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <rect x="6" y="6" width="12" height="12" fill="none" stroke="black" stroke-width="2"/>
-  <line x1="10" y1="6" x2="10" y2="18" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P17</text>
-</svg>
+    <!-- P13 -->
+    <g transform="translate(120,0)">
+      <polygon points="10,10 70,10 40,70" fill="none" stroke="black" stroke-width="3"/>
+      <line x1="10" y1="10" x2="70" y2="10" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P13</text>
+    </g>
 
-<!-- P19 — Boundary (Neutral) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <rect x="5" y="5" width="14" height="14" fill="none" stroke="black" stroke-width="2"/>
-  <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P19</text>
-</svg>
+    <!-- P17 -->
+    <g transform="translate(240,0)">
+      <rect x="10" y="10" width="60" height="60" fill="none" stroke="black" stroke-width="3"/>
+      <line x1="30" y1="10" x2="30" y2="70" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P17</text>
+    </g>
 
-<!-- P23 — Dimensional Lift (+1D) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <polygon points="12,4 4,20 20,20" fill="none" stroke="black" stroke-width="2"/>
-  <circle cx="12" cy="9" r="2" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P23</text>
-</svg>
+    <!-- P19 -->
+    <g transform="translate(360,0)">
+      <rect x="10" y="10" width="60" height="60" fill="none" stroke="black" stroke-width="3"/>
+      <line x1="10" y1="40" x2="70" y2="40" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P19</text>
+    </g>
+  </g>
 
-<!-- P29 — Collapse Anchor (−1D) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <polygon points="4,4 20,4 12,20" fill="none" stroke="black" stroke-width="2"/>
-  <circle cx="12" cy="15" r="2" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P29</text>
-</svg>
+  <!-- Row 3 -->
+  <g transform="translate(0,240)">
+    <!-- P23 -->
+    <g transform="translate(0,0)">
+      <polygon points="40,5 5,75 75,75" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="25" r="10" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P23</text>
+    </g>
 
-<!-- P31 — Stability Collapse (−1D) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <rect x="6" y="6" width="12" height="12" fill="none" stroke="black" stroke-width="2"/>
-  <circle cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P31</text>
-</svg>
+    <!-- P29 -->
+    <g transform="translate(120,0)">
+      <polygon points="10,10 70,10 40,70" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="55" r="10" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P29</text>
+    </g>
 
-<!-- P37 — Apex Lift (+1D, Apex) -->
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-  <polygon points="12,2 3,12 12,22 21,12" fill="none" stroke="black" stroke-width="2"/>
-  <text x="12" y="13" font-size="6" text-anchor="middle">P37</text>
+    <!-- P31 -->
+    <g transform="translate(240,0)">
+      <rect x="10" y="10" width="60" height="60" fill="none" stroke="black" stroke-width="3"/>
+      <circle cx="40" cy="40" r="15" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P31</text>
+    </g>
+
+    <!-- P37 -->
+    <g transform="translate(360,0)">
+      <polygon points="40,5 5,40 40,75 75,40" fill="none" stroke="black" stroke-width="3"/>
+      <text x="40" y="45" font-size="20" text-anchor="middle">P37</text>
+    </g>
+  </g>
+
 </svg>
