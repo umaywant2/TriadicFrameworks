@@ -1,97 +1,78 @@
-<svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<!-- P2 — Seed (Neutral) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="7" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P2</text>
+</svg>
 
-  <!-- Neutral Circle (P2, P11, P17, P19) -->
-  <symbol id="ipd12-circle" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="7" fill="none" stroke="black" stroke-width="2"/>
-  </symbol>
+<!-- P3 — Transition Lift (+1D) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="12,4 4,20 20,20" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P3</text>
+</svg>
 
-  <!-- Up Triangle (Lift: P3, P7, P23, P37) -->
-  <symbol id="ipd12-lift" viewBox="0 0 24 24">
-    <polygon points="12,4 4,20 20,20" fill="none" stroke="black" stroke-width="2"/>
-  </symbol>
+<!-- P5 — Drift Collapse (−1D) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="4,4 20,4 12,20" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P5</text>
+</svg>
 
-  <!-- Down Triangle (Collapse: P5, P13, P29, P31) -->
-  <symbol id="ipd12-collapse" viewBox="0 0 24 24">
-    <polygon points="4,4 20,4 12,20" fill="none" stroke="black" stroke-width="2"/>
-  </symbol>
+<!-- P7 — Regime Lift (+1D) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="12,4 4,20 20,20" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P7</text>
+</svg>
 
-  <!-- Diamond (Apex Lift: P37 special case) -->
-  <symbol id="ipd12-diamond" viewBox="0 0 24 24">
-    <polygon points="12,2 3,12 12,22 21,12" fill="none" stroke="black" stroke-width="2"/>
-  </symbol>
+<!-- P11 — Coherence (Neutral) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <circle cx="12" cy="12" r="7" fill="none" stroke="black" stroke-width="2"/>
+  <circle cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P11</text>
+</svg>
 
-  <!-- PRIME‑STATE WRAPPERS -->
+<!-- P13 — Paradox Collapse (−1D) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="4,4 20,4 12,20" fill="none" stroke="black" stroke-width="2"/>
+  <line x1="4" y1="4" x2="20" y2="4" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P13</text>
+</svg>
 
-  <!-- P2 — Seed (Neutral) -->
-  <symbol id="ipd12-P2" viewBox="0 0 24 24">
-    <use href="#ipd12-circle"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P2</text>
-  </symbol>
+<!-- P17 — Gate (Neutral) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <rect x="6" y="6" width="12" height="12" fill="none" stroke="black" stroke-width="2"/>
+  <line x1="10" y1="6" x2="10" y2="18" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P17</text>
+</svg>
 
-  <!-- P3 — Transition Lift -->
-  <symbol id="ipd12-P3" viewBox="0 0 24 24">
-    <use href="#ipd12-lift"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P3</text>
-  </symbol>
+<!-- P19 — Boundary (Neutral) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <rect x="5" y="5" width="14" height="14" fill="none" stroke="black" stroke-width="2"/>
+  <line x1="5" y1="12" x2="19" y2="12" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P19</text>
+</svg>
 
-  <!-- P5 — Drift Collapse -->
-  <symbol id="ipd12-P5" viewBox="0 0 24 24">
-    <use href="#ipd12-collapse"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P5</text>
-  </symbol>
+<!-- P23 — Dimensional Lift (+1D) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="12,4 4,20 20,20" fill="none" stroke="black" stroke-width="2"/>
+  <circle cx="12" cy="9" r="2" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P23</text>
+</svg>
 
-  <!-- P7 — Regime Lift -->
-  <symbol id="ipd12-P7" viewBox="0 0 24 24">
-    <use href="#ipd12-lift"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P7</text>
-  </symbol>
+<!-- P29 — Collapse Anchor (−1D) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="4,4 20,4 12,20" fill="none" stroke="black" stroke-width="2"/>
+  <circle cx="12" cy="15" r="2" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P29</text>
+</svg>
 
-  <!-- P11 — Coherence -->
-  <symbol id="ipd12-P11" viewBox="0 0 24 24">
-    <use href="#ipd12-circle"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P11</text>
-  </symbol>
+<!-- P31 — Stability Collapse (−1D) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <rect x="6" y="6" width="12" height="12" fill="none" stroke="black" stroke-width="2"/>
+  <circle cx="12" cy="12" r="3" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P31</text>
+</svg>
 
-  <!-- P13 — Paradox Collapse -->
-  <symbol id="ipd12-P13" viewBox="0 0 24 24">
-    <use href="#ipd12-collapse"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P13</text>
-  </symbol>
-
-  <!-- P17 — Gate -->
-  <symbol id="ipd12-P17" viewBox="0 0 24 24">
-    <use href="#ipd12-circle"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P17</text>
-  </symbol>
-
-  <!-- P19 — Boundary -->
-  <symbol id="ipd12-P19" viewBox="0 0 24 24">
-    <use href="#ipd12-circle"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P19</text>
-  </symbol>
-
-  <!-- P23 — Dimensional Lift -->
-  <symbol id="ipd12-P23" viewBox="0 0 24 24">
-    <use href="#ipd12-lift"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P23</text>
-  </symbol>
-
-  <!-- P29 — Collapse Anchor -->
-  <symbol id="ipd12-P29" viewBox="0 0 24 24">
-    <use href="#ipd12-collapse"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P29</text>
-  </symbol>
-
-  <!-- P31 — Stability Collapse -->
-  <symbol id="ipd12-P31" viewBox="0 0 24 24">
-    <use href="#ipd12-collapse"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P31</text>
-  </symbol>
-
-  <!-- P37 — Apex Lift (Diamond) -->
-  <symbol id="ipd12-P37" viewBox="0 0 24 24">
-    <use href="#ipd12-diamond"/>
-    <text x="12" y="12" font-size="6" text-anchor="middle" dy="2">P37</text>
-  </symbol>
-
+<!-- P37 — Apex Lift (+1D, Apex) -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <polygon points="12,2 3,12 12,22 21,12" fill="none" stroke="black" stroke-width="2"/>
+  <text x="12" y="13" font-size="6" text-anchor="middle">P37</text>
 </svg>
