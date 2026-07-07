@@ -45,7 +45,7 @@ def run_simulation(manifest_path):
     signals = generate_triphasic_signals(forces, fluids, frequency, cycles=3500)
 
     reports_root = Path("docs/reports").resolve()
-    output_filename = f"{safe_label}_cycles.csv"
+    output_filename = "simulation_cycles.csv"
     output_path = _safe_join_under_root(reports_root, output_filename)
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
