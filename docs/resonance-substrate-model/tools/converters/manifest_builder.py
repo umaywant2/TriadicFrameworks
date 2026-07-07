@@ -79,7 +79,13 @@ def main():
         sys.exit(1)
 
     safe_base = Path.cwd().resolve()
-    candidate = Path(sys.argv[1]).resolve()
+    candidate_input = Path(sys.argv[1])
+
+    try:
+        candidate = candidate_input.resolve(strict=True)
+    except FileNotFoundError:
+        print(f"Error: directory not found: {candidate_input}")
+        sys.exit(1)
 
     try:
         candidate.relative_to(safe_base)
@@ -88,7 +94,7 @@ def main():
         sys.exit(1)
 
     root = candidate
-    if not root.exists() or not root.is_dir():
+    if not root.is_dir():
         print(f"Error: directory not found: {root}")
         sys.exit(1)
 
