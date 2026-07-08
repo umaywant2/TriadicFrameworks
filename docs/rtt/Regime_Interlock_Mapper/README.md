@@ -1,6 +1,7 @@
 # **Regime Interlock Mapper — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Regime_Interlock_Mapper/module.json) — Agentic module schema role assignments
+- [`regime_interlock_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Regime_Interlock_Mapper/regime_interlock_matrix.json) — Agentic module schema role assignments
 
 ### *Regime‑Level Intelligence Engine for TriadicFrameworks*
 
