@@ -1,6 +1,7 @@
 # **Cross‑Domain Causality Weaver — RTT/1**  
 
-- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Cross_Domain_Causality_Weaver/module.json) — Agentic module schema role assignments
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Cross_Domain_Causality_Weaver/module.json) — Agentic module schema role assignments 
+- [`causal_field_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Cross_Domain_Causality_Weaver/causal_field_matrix.json) — Agentic module schema role assignments 
 
 ### *Causality‑Intelligence Engine for TriadicFrameworks*
 
