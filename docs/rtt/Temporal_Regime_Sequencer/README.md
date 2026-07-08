@@ -1,6 +1,7 @@
 # **Temporal Regime Sequencer — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Temporal_Regime_Sequencer/module.json) — Agentic module schema role assignments
+- [`temporal_field_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Temporal_Regime_Sequencer/temporal_field_matrix.json) — Agentic module schema role assignments
 
 ### *Temporal‑Intelligence Engine for TriadicFrameworks*
 
