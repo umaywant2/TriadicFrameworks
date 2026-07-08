@@ -1,1 +1,133 @@
+{
+  "identity": {
+    "name": "Resonance Field Matrix",
+    "canonical_id": "RTT_RESONANCE_FIELD_MATRIX",
+    "module_path": "/docs/rtt/Dimensional_Resonance_Scanner/",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "schema": {
+    "fields": [
+      "resonance_type",
+      "regime",
+      "resonance_magnitude",
+      "resonance_direction",
+      "resonance_curvature",
+      "amplification_zone",
+      "resonance_field",
+      "envelope_boundary"
+    ]
+  },
+
+  "entries": [
+    {
+      "resonance_type": "signature",
+      "regime": "R1",
+      "resonance_magnitude": 0.41,
+      "resonance_direction": "conceptual",
+      "resonance_curvature": 0.22,
+      "amplification_zone": 0.11,
+      "resonance_field": 0.63,
+      "envelope_boundary": 0.44
+    },
+    {
+      "resonance_type": "signature",
+      "regime": "R4",
+      "resonance_magnitude": 0.72,
+      "resonance_direction": "dimensional",
+      "resonance_curvature": 0.44,
+      "amplification_zone": 0.22,
+      "resonance_field": 0.57,
+      "envelope_boundary": 0.41
+    },
+    {
+      "resonance_type": "frequency",
+      "regime": "R2",
+      "resonance_magnitude": 0.52,
+      "resonance_direction": "computational",
+      "resonance_curvature": 0.33,
+      "amplification_zone": 0.27,
+      "resonance_field": 0.57,
+      "envelope_boundary": 0.41
+    },
+    {
+      "resonance_type": "frequency",
+      "regime": "R2-R3",
+      "resonance_magnitude": 0.79,
+      "resonance_direction": "R3→R2",
+      "resonance_curvature": 0.58,
+      "amplification_zone": 0.31,
+      "resonance_field": 0.72,
+      "envelope_boundary": 0.41
+    },
+    {
+      "resonance_type": "field",
+      "regime": "R1-R2-R3",
+      "resonance_magnitude": 0.94,
+      "resonance_direction": "tensor",
+      "resonance_curvature": 0.63,
+      "amplification_zone": 0.37,
+      "resonance_field": 0.78,
+      "envelope_boundary": 0.57
+    },
+    {
+      "resonance_type": "field",
+      "regime": "R2-R4",
+      "resonance_magnitude": 0.88,
+      "resonance_direction": "R4→R2",
+      "resonance_curvature": 0.55,
+      "amplification_zone": 0.33,
+      "resonance_field": 0.73,
+      "envelope_boundary": 0.63
+    },
+    {
+      "resonance_type": "amplification",
+      "regime": "R1-R3",
+      "resonance_magnitude": 0.67,
+      "resonance_direction": "R1→R3",
+      "resonance_curvature": 0.33,
+      "amplification_zone": 0.22,
+      "resonance_field": 0.55,
+      "envelope_boundary": 0.38
+    },
+    {
+      "resonance_type": "amplification",
+      "regime": "R2-R4",
+      "resonance_magnitude": 0.88,
+      "resonance_direction": "R2↔R4",
+      "resonance_curvature": 0.47,
+      "amplification_zone": 0.29,
+      "resonance_field": 0.66,
+      "envelope_boundary": 0.58
+    },
+    {
+      "resonance_type": "vector",
+      "regime": "R1-R4",
+      "resonance_magnitude": 0.83,
+      "resonance_direction": "R1↔R4",
+      "resonance_curvature": 0.52,
+      "amplification_zone": 0.22,
+      "resonance_field": 0.69,
+      "envelope_boundary": 0.46
+    },
+    {
+      "resonance_type": "vector",
+      "regime": "R3-R4",
+      "resonance_magnitude": 0.91,
+      "resonance_direction": "R3→R4",
+      "resonance_curvature": 0.71,
+      "amplification_zone": 0.52,
+      "resonance_field": 0.82,
+      "envelope_boundary": 0.44
+    }
+  ]
+}
 
