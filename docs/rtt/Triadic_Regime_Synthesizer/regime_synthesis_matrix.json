@@ -1,1 +1,133 @@
+{
+  "identity": {
+    "name": "Regime Synthesis Matrix",
+    "canonical_id": "RTT_REGIME_SYNTHESIS_MATRIX",
+    "module_path": "/docs/rtt/Triadic_Regime_Synthesizer/",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "schema": {
+    "fields": [
+      "regime_type",
+      "regime",
+      "synthesis_magnitude",
+      "synthesis_direction",
+      "synthesis_curvature",
+      "fusion_depth",
+      "coherence_field",
+      "boundary_stability"
+    ]
+  },
+
+  "entries": [
+    {
+      "regime_type": "signature",
+      "regime": "R1",
+      "synthesis_magnitude": 0.41,
+      "synthesis_direction": "conceptual",
+      "synthesis_curvature": 0.22,
+      "fusion_depth": 0.11,
+      "coherence_field": 0.63,
+      "boundary_stability": 0.44
+    },
+    {
+      "regime_type": "signature",
+      "regime": "R4",
+      "synthesis_magnitude": 0.72,
+      "synthesis_direction": "dimensional",
+      "synthesis_curvature": 0.44,
+      "fusion_depth": 0.22,
+      "coherence_field": 0.57,
+      "boundary_stability": 0.41
+    },
+    {
+      "regime_type": "boundary",
+      "regime": "R2",
+      "synthesis_magnitude": 0.52,
+      "synthesis_direction": "computational",
+      "synthesis_curvature": 0.33,
+      "fusion_depth": 0.27,
+      "coherence_field": 0.57,
+      "boundary_stability": 0.41
+    },
+    {
+      "regime_type": "boundary",
+      "regime": "R2-R3",
+      "synthesis_magnitude": 0.79,
+      "synthesis_direction": "R3→R2",
+      "synthesis_curvature": 0.58,
+      "fusion_depth": 0.31,
+      "coherence_field": 0.72,
+      "boundary_stability": 0.41
+    },
+    {
+      "regime_type": "interlock",
+      "regime": "R1-R2-R3",
+      "synthesis_magnitude": 0.94,
+      "synthesis_direction": "tensor",
+      "synthesis_curvature": 0.63,
+      "fusion_depth": 0.37,
+      "coherence_field": 0.78,
+      "boundary_stability": 0.57
+    },
+    {
+      "regime_type": "interlock",
+      "regime": "R2-R4",
+      "synthesis_magnitude": 0.88,
+      "synthesis_direction": "R4→R2",
+      "synthesis_curvature": 0.55,
+      "fusion_depth": 0.33,
+      "coherence_field": 0.73,
+      "boundary_stability": 0.63
+    },
+    {
+      "regime_type": "synthesis",
+      "regime": "R1-R3",
+      "synthesis_magnitude": 0.67,
+      "synthesis_direction": "R1→R3",
+      "synthesis_curvature": 0.33,
+      "fusion_depth": 0.22,
+      "coherence_field": 0.55,
+      "boundary_stability": 0.38
+    },
+    {
+      "regime_type": "synthesis",
+      "regime": "R2-R4",
+      "synthesis_magnitude": 0.88,
+      "synthesis_direction": "R2↔R4",
+      "synthesis_curvature": 0.47,
+      "fusion_depth": 0.29,
+      "coherence_field": 0.66,
+      "boundary_stability": 0.58
+    },
+    {
+      "regime_type": "coherence",
+      "regime": "R1-R4",
+      "synthesis_magnitude": 0.83,
+      "synthesis_direction": "R1↔R4",
+      "synthesis_curvature": 0.52,
+      "fusion_depth": 0.22,
+      "coherence_field": 0.69,
+      "boundary_stability": 0.46
+    },
+    {
+      "regime_type": "coherence",
+      "regime": "R3-R4",
+      "synthesis_magnitude": 0.91,
+      "synthesis_direction": "R3→R4",
+      "synthesis_curvature": 0.71,
+      "fusion_depth": 0.52,
+      "coherence_field": 0.82,
+      "boundary_stability": 0.44
+    }
+  ]
+}
 
