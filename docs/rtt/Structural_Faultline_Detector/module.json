@@ -1,1 +1,78 @@
+{
+  "identity": {
+    "name": "Structural Faultline Detector",
+    "canonical_id": "RTT_STRUCTURAL_FAULTLINE_DETECTOR",
+    "module_path": "/docs/rtt/Structural_Faultline_Detector/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 structural-intelligence engine for detecting, mapping, and analyzing structural faultlines across conceptual, computational, and physical regimes.",
+    "detail": "The Structural Faultline Detector identifies structural fractures, discontinuities, instability seams, and faultline propagation across RTT regimes (R1–R4). It provides structural diagnostics for higher-level RTT engines such as Stability Basin Cartographer, Temporal Regime Sequencer, Causality Weaver, and Dimensional Resonance Scanner."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "SFD-Detect",
+      "SFD-Fracture",
+      "SFD-Seam",
+      "SFD-Field",
+      "SFD-Propagate",
+      "SFD-Stabilize"
+    ],
+    "secondary": [
+      "RTT-Structural",
+      "RTT-Faultline",
+      "RTT-Fracture",
+      "RTT-Field"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "structural",
+    "sub_layers": [
+      "faultline-detection",
+      "fracture-analysis",
+      "instability-seam-mapping",
+      "faultline-propagation",
+      "structural-stability-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Structural_Faultline_Detector.md",
+      "sfd_examples.md",
+      "sfd_diagrams.svg"
+    ],
+    "support": [
+      "faultline_profiles.md",
+      "fracture_cases.md",
+      "faultline_matrix.json"
+    ],
+    "ai": [
+      "sfd_prompts.md",
+      "sfd_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_STRUCTURAL_FAULTLINE_DETECTOR",
+    "ai_keywords": "RTT, structural faultline, fracture detection, instability seam, faultline propagation, structural analysis",
+    "ai_purpose": "Provide structural-level intelligence for RTT/1 by detecting faultlines, mapping fractures, analyzing instability seams, and evaluating structural stability across conceptual, computational, and physical regimes.",
+    "ai_operators": "SFD-Detect, SFD-Fracture, SFD-Seam, SFD-Field, SFD-Propagate, SFD-Stabilize",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
 
