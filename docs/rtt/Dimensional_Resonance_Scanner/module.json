@@ -1,1 +1,78 @@
+{
+  "identity": {
+    "name": "Dimensional Resonance Scanner",
+    "canonical_id": "RTT_DIMENSIONAL_RESONANCE_SCANNER",
+    "module_path": "/docs/rtt/Dimensional_Resonance_Scanner/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 resonance-level intelligence engine for detecting, measuring, and mapping dimensional resonance across conceptual, computational, and physical regimes.",
+    "detail": "The Dimensional Resonance Scanner identifies resonance signatures, computes resonance frequencies, maps resonance fields across RTT regimes (R1–R4), detects resonance amplification, and provides resonance diagnostics for higher-level RTT engines such as Temporal Regime Sequencer and Causality Weaver."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "DRS-Scan",
+      "DRS-Frequency",
+      "DRS-Field",
+      "DRS-Vector",
+      "DRS-Amplify",
+      "DRS-Stabilize"
+    ],
+    "secondary": [
+      "RTT-Resonance",
+      "RTT-Frequency",
+      "RTT-Field",
+      "RTT-Structural"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "resonance",
+    "sub_layers": [
+      "resonance-scan",
+      "frequency-analysis",
+      "resonance-field-mapping",
+      "amplification-detection",
+      "structural-resonance-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Dimensional_Resonance_Scanner.md",
+      "drs_examples.md",
+      "drs_diagrams.svg"
+    ],
+    "support": [
+      "resonance_profiles.md",
+      "resonance_amplification_cases.md",
+      "resonance_field_matrix.json"
+    ],
+    "ai": [
+      "drs_prompts.md",
+      "drs_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_DIMENSIONAL_RESONANCE_SCANNER",
+    "ai_keywords": "RTT, dimensional resonance, resonance frequency, resonance field, resonance amplification, structural resonance analysis",
+    "ai_purpose": "Provide resonance-level intelligence for RTT/1 by scanning dimensional resonance, computing resonance frequencies, mapping resonance fields, and detecting resonance amplification across conceptual, computational, and physical regimes.",
+    "ai_operators": "DRS-Scan, DRS-Frequency, DRS-Field, DRS-Vector, DRS-Amplify, DRS-Stabilize",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
 
