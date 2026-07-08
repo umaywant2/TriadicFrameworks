@@ -1,6 +1,7 @@
 # **Structural Faultline Detector — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Structural_Faultline_Detector/module.json) — Agentic module schema role assignments
+- [`faultline_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Structural_Faultline_Detector/faultline_matrix.json) — Agentic module schema role assignments
 
 ### *Structural‑Intelligence Engine for TriadicFrameworks*
 
