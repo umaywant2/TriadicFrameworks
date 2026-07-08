@@ -1,1 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900">
+
+  <!-- Background -->
+  <rect width="1280" height="900" fill="#0d0d0d"/>
+
+  <!-- Title -->
+  <text x="640" y="70" font-size="42" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">
+    Cross-Domain Causality Weaver — RTT/1
+  </text>
+
+  <!-- Regime Blocks -->
+  <rect x="120" y="180" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="250" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R1 — Conceptual</text>
+
+  <rect x="500" y="180" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="630" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R2 — Computational</text>
+
+  <rect x="880" y="180" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="1010" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R3 — Physical</text>
+
+  <rect x="500" y="360" width="260" height="120" rx="12" fill="#2b2b2b"/>
+  <text x="630" y="430" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R4 — Dimensional</text>
+
+  <!-- Causal Nodes -->
+  <circle cx="250" cy="350" r="40" fill="#ffcc66"/>
+  <text x="250" y="355" font-size="20" fill="#000000" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Cause</text>
+
+  <circle cx="1010" cy="350" r="40" fill="#ffcc66"/>
+  <text x="1010" y="355" font-size="20" fill="#000000" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Effect</text>
+
+  <!-- Causal Vector -->
+  <line x1="250" y1="350" x2="1010" y2="350" stroke="#ffaa33" stroke-width="5"/>
+  <polygon points="1010,350 990,340 990,360" fill="#ffaa33"/>
+  <text x="630" y="330" font-size="24" fill="#ffaa33" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Causal Vector</text>
+
+  <!-- Causal Field -->
+  <ellipse cx="630" cy="600" rx="260" ry="120" fill="none" stroke="#ffdd99" stroke-width="4"/>
+  <text x="630" y="610" font-size="26" fill="#ffdd99" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Causal Field</text>
+
+  <!-- Discontinuity Zone -->
+  <ellipse cx="630" cy="600" rx="140" ry="60" fill="#1a1a1a" stroke="#ff6666" stroke-width="3"/>
+  <text x="630" y="605" font-size="22" fill="#ff6666" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Discontinuity Zone</text>
+
+  <!-- Discontinuity Node -->
+  <circle cx="630" cy="600" r="20" fill="#ff3333"/>
+  <text x="630" y="640" font-size="20" fill="#ff3333" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Break</text>
+
+  <!-- Legend -->
+  <rect x="120" y="680" width="1040" height="180" rx="12" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+
+  <text x="640" y="720" font-size="30" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">CW Diagram Legend</text>
+
+  <text x="200" y="760" font-size="22" fill="#ffcc66" font-family="Segoe UI, sans-serif">■ Causal Node</text>
+  <text x="200" y="800" font-size="22" fill="#ffaa33" font-family="Segoe UI, sans-serif">■ Causal Vector</text>
+
+  <text x="600" y="760" font-size="22" fill="#ffdd99" font-family="Segoe UI, sans-serif">■ Causal Field</text>
+  <text x="600" y="800" font-size="22" fill="#ff6666" font-family="Segoe UI, sans-serif">■ Discontinuity Zone</text>
+
+  <text x="950" y="760" font-size="22" fill="#ff3333" font-family="Segoe UI, sans-serif">■ Discontinuity Node</text>
+
+</svg>
 
