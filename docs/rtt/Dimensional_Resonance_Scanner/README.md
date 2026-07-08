@@ -1,4 +1,7 @@
 # **Dimensional Resonance Scanner — RTT/1**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Dimensional_Resonance_Scanner/module.json) — Agentic module schema role assignments
+
 ### *Resonance‑Level Intelligence Engine for TriadicFrameworks*
 
 The **Dimensional Resonance Scanner (DRS)** is an RTT/1 analytical engine designed to detect, measure, and map **dimensional resonance** across conceptual, computational, and physical regimes.  
