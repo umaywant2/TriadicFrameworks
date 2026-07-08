@@ -1,4 +1,7 @@
 # **Paradox Gradient Analyzer — RTT/1**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Paradox_Gradient_Analyzer/module.json) — Agentic module schema role assignments
+
 ### *Paradox‑Level Intelligence Engine for TriadicFrameworks*
 
 The **Paradox Gradient Analyzer (PGA)** is an RTT/1 analytical engine designed to detect, measure, and map **paradox gradients** across conceptual, computational, and physical regimes.  
