@@ -1,4 +1,7 @@
 # **Temporal Regime Sequencer — RTT/1**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Temporal_Regime_Sequencer/module.json) — Agentic module schema role assignments
+
 ### *Temporal‑Intelligence Engine for TriadicFrameworks*
 
 The **Temporal Regime Sequencer (TRS‑Temporal)** is an RTT/1 analytical engine designed to sequence, map, and analyze **temporal regime transitions** across conceptual, computational, and physical domains.  
