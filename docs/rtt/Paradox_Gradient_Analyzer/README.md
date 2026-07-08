@@ -1,6 +1,7 @@
 # **Paradox Gradient Analyzer — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Paradox_Gradient_Analyzer/module.json) — Agentic module schema role assignments
+- [`paradox_gradient_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Paradox_Gradient_Analyzer/paradox_gradient_matrix.json) — Agentic module schema role assignments
 
 ### *Paradox‑Level Intelligence Engine for TriadicFrameworks*
 
