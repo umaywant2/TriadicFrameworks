@@ -1,4 +1,7 @@
 # **Drift Sentinel — RTT/1**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Drift_Sentinel/module.json) — Agentic module schema role assignments
+
 ### *Drift‑Level Intelligence Engine for TriadicFrameworks*
 
 The **Drift Sentinel (DS)** is an RTT/1 analytical engine designed to detect, measure, and stabilize **drift** across conceptual, computational, and physical regimes.  
