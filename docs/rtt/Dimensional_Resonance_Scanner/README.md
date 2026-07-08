@@ -1,6 +1,7 @@
 # **Dimensional Resonance Scanner — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Dimensional_Resonance_Scanner/module.json) — Agentic module schema role assignments
+- [`resonance_field_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Dimensional_Resonance_Scanner/resonance_field_matrix.json) — Agentic module schema role assignments
 
 ### *Resonance‑Level Intelligence Engine for TriadicFrameworks*
 
