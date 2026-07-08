@@ -1,6 +1,7 @@
 # **Stability Basin Cartographer — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Stability_Basin_Cartographer/module.json) — Agentic module schema role assignments
+- [`stability_field_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Stability_Basin_Cartographer/stability_field_matrix.json) — Agentic module schema role assignments
 
 ### *Stability‑Intelligence Engine for TriadicFrameworks*
 
