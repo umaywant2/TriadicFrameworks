@@ -1,4 +1,7 @@
 # **Cross‑Domain Causality Weaver — RTT/1**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Cross_Domain_Causality_Weaver/module.json) — Agentic module schema role assignments
+
 ### *Causality‑Intelligence Engine for TriadicFrameworks*
 
 The **Cross‑Domain Causality Weaver (CW)** is an RTT/1 analytical engine designed to detect, map, and weave **causal pathways** across conceptual, computational, physical, and dimensional regimes.  
