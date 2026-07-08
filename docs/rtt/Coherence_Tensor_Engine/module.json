@@ -1,1 +1,78 @@
+{
+  "identity": {
+    "name": "Coherence Tensor Engine",
+    "canonical_id": "RTT_COHERENCE_TENSOR_ENGINE",
+    "module_path": "/docs/rtt/Coherence_Tensor_Engine/",
+    "category": "rtt-structural",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "purpose": {
+    "summary": "RTT/1 coherence-level intelligence engine for computing, analyzing, and stabilizing coherence tensors across conceptual, computational, and physical regimes.",
+    "detail": "The Coherence Tensor Engine computes coherence tensors, evaluates coherence gradients, identifies coherence collapse points, maps coherence fields across RTT regimes (R1–R4), and provides coherence diagnostics for higher-level RTT engines such as Drift Sentinel, Faultline Detector, Stability Basin Cartographer, Temporal Regime Sequencer, Causality Weaver, and Dimensional Resonance Scanner."
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "operators": {
+    "primary": [
+      "CTE-Compute",
+      "CTE-Tensor",
+      "CTE-Gradient",
+      "CTE-Field",
+      "CTE-Stabilize",
+      "CTE-Collapse"
+    ],
+    "secondary": [
+      "RTT-Coherence",
+      "RTT-Tensor",
+      "RTT-Gradient",
+      "RTT-Structural"
+    ]
+  },
+
+  "analyzer_layer": {
+    "layer": "coherence",
+    "sub_layers": [
+      "tensor-computation",
+      "coherence-field-mapping",
+      "gradient-analysis",
+      "collapse-detection",
+      "structural-coherence-evaluation"
+    ]
+  },
+
+  "files": {
+    "core": [
+      "README.md",
+      "Coherence_Tensor_Engine.md",
+      "cte_examples.md",
+      "cte_diagrams.svg"
+    ],
+    "support": [
+      "coherence_tensor_profiles.md",
+      "coherence_gradient_cases.md",
+      "coherence_tensor_matrix.json"
+    ],
+    "ai": [
+      "cte_prompts.md",
+      "cte_operators.md"
+    ]
+  },
+
+  "ai": {
+    "ai_ready": true,
+    "ai_module_id": "RTT_COHERENCE_TENSOR_ENGINE",
+    "ai_keywords": "RTT, coherence tensor, coherence gradient, coherence field, collapse detection, structural coherence",
+    "ai_purpose": "Provide coherence-level intelligence for RTT/1 by computing coherence tensors, mapping coherence fields, analyzing coherence gradients, and detecting coherence collapse across conceptual, computational, and physical regimes.",
+    "ai_operators": "CTE-Compute, CTE-Tensor, CTE-Gradient, CTE-Field, CTE-Stabilize, CTE-Collapse",
+    "ai_audience": "researchers, systems designers, AI systems"
+  }
+}
 
