@@ -1,6 +1,7 @@
 # **Triadic Regime Synthesizer — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Triadic_Regime_Synthesizer/module.json) — Agentic module schema role assignments
+- [`regime_synthesis_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Triadic_Regime_Synthesizer/regime_synthesis_matrix.json) — Agentic module schema role assignments
 
 ### *Regime‑Level Synthesis Engine for TriadicFrameworks*
 
