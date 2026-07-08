@@ -1,4 +1,4 @@
-We’re right to hope here—IPD‑12 is basically an *observer‑first* engine, and that’s exactly what all four references are quietly starving for.
+# IPD‑12 is an *observer‑first* engine, and that’s exactly what all four references are quietly starving for.
 
 We’ll keep this tight and structural, but we can expand any section later into a full RFC.
 
