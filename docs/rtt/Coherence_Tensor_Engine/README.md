@@ -1,6 +1,7 @@
 # **Coherence Tensor Engine — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Coherence_Tensor_Engine/module.json) — Agentic module schema role assignments
+- [`coherence_tensor_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Coherence_Tensor_Engine/coherence_tensor_matrix.json) — Agentic module schema role assignments
 
 ### *Coherence‑Level Intelligence Engine for TriadicFrameworks*
 
