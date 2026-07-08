@@ -1,1 +1,133 @@
+{
+  "identity": {
+    "name": "Structural Faultline Matrix",
+    "canonical_id": "RTT_STRUCTURAL_FAULTLINE_MATRIX",
+    "module_path": "/docs/rtt/Structural_Faultline_Detector/",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "schema": {
+    "fields": [
+      "faultline_type",
+      "regime",
+      "fracture_magnitude",
+      "fracture_direction",
+      "faultline_curvature",
+      "propagation_rate",
+      "instability_seam",
+      "stability_envelope"
+    ]
+  },
+
+  "entries": [
+    {
+      "faultline_type": "structural-fracture",
+      "regime": "R1-R2",
+      "fracture_magnitude": 0.72,
+      "fracture_direction": "R1→R2",
+      "faultline_curvature": 0.33,
+      "propagation_rate": 0.22,
+      "instability_seam": 0.41,
+      "stability_envelope": 0.63
+    },
+    {
+      "faultline_type": "structural-fracture",
+      "regime": "R2-R3",
+      "fracture_magnitude": 0.68,
+      "fracture_direction": "R3→R2",
+      "faultline_curvature": 0.39,
+      "propagation_rate": 0.27,
+      "instability_seam": 0.38,
+      "stability_envelope": 0.57
+    },
+    {
+      "faultline_type": "gradient",
+      "regime": "R1-R4",
+      "fracture_magnitude": 0.83,
+      "fracture_direction": "R1↔R4",
+      "faultline_curvature": 0.52,
+      "propagation_rate": 0.33,
+      "instability_seam": 0.47,
+      "stability_envelope": 0.69
+    },
+    {
+      "faultline_type": "gradient",
+      "regime": "R2-R3",
+      "fracture_magnitude": 0.79,
+      "fracture_direction": "R3→R2",
+      "faultline_curvature": 0.58,
+      "propagation_rate": 0.31,
+      "instability_seam": 0.44,
+      "stability_envelope": 0.72
+    },
+    {
+      "faultline_type": "boundary",
+      "regime": "R1-R3",
+      "fracture_magnitude": 0.67,
+      "fracture_direction": "R1→R3",
+      "faultline_curvature": 0.33,
+      "propagation_rate": 0.22,
+      "instability_seam": 0.38,
+      "stability_envelope": 0.55
+    },
+    {
+      "faultline_type": "boundary",
+      "regime": "R2-R4",
+      "fracture_magnitude": 0.88,
+      "fracture_direction": "R2↔R4",
+      "faultline_curvature": 0.47,
+      "propagation_rate": 0.29,
+      "instability_seam": 0.58,
+      "stability_envelope": 0.66
+    },
+    {
+      "faultline_type": "field",
+      "regime": "R1-R2-R3",
+      "fracture_magnitude": 0.94,
+      "fracture_direction": "tensor",
+      "faultline_curvature": 0.63,
+      "propagation_rate": 0.37,
+      "instability_seam": 0.57,
+      "stability_envelope": 0.78
+    },
+    {
+      "faultline_type": "field",
+      "regime": "R2-R4",
+      "fracture_magnitude": 0.88,
+      "fracture_direction": "R4→R2",
+      "faultline_curvature": 0.55,
+      "propagation_rate": 0.33,
+      "instability_seam": 0.63,
+      "stability_envelope": 0.73
+    },
+    {
+      "faultline_type": "drift-sensitive",
+      "regime": "R3-R4",
+      "fracture_magnitude": 0.91,
+      "fracture_direction": "R3→R4",
+      "faultline_curvature": 0.71,
+      "propagation_rate": 0.52,
+      "instability_seam": 0.44,
+      "stability_envelope": 0.82
+    },
+    {
+      "faultline_type": "drift-sensitive",
+      "regime": "R2-R3",
+      "fracture_magnitude": 0.86,
+      "fracture_direction": "R2↔R3",
+      "faultline_curvature": 0.62,
+      "propagation_rate": 0.49,
+      "instability_seam": 0.48,
+      "stability_envelope": 0.77
+    }
+  ]
+}
 
