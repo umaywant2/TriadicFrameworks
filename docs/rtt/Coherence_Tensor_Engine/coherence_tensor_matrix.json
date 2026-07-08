@@ -1,1 +1,133 @@
+{
+  "identity": {
+    "name": "Coherence Tensor Matrix",
+    "canonical_id": "RTT_COHERENCE_TENSOR_MATRIX",
+    "module_path": "/docs/rtt/Coherence_Tensor_Engine/",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "schema": {
+    "fields": [
+      "tensor_type",
+      "regime",
+      "tensor_magnitude",
+      "tensor_direction",
+      "coherence_curvature",
+      "collapse_point",
+      "stability_envelope",
+      "gradient_alignment"
+    ]
+  },
+
+  "entries": [
+    {
+      "tensor_type": "structural",
+      "regime": "R1-R2",
+      "tensor_magnitude": 0.78,
+      "tensor_direction": "R1→R2",
+      "coherence_curvature": 0.33,
+      "collapse_point": null,
+      "stability_envelope": 0.82,
+      "gradient_alignment": 0.71
+    },
+    {
+      "tensor_type": "structural",
+      "regime": "R2-R3",
+      "tensor_magnitude": 0.74,
+      "tensor_direction": "R2→R3",
+      "coherence_curvature": 0.41,
+      "collapse_point": null,
+      "stability_envelope": 0.77,
+      "gradient_alignment": 0.66
+    },
+    {
+      "tensor_type": "gradient",
+      "regime": "R1-R4",
+      "tensor_magnitude": 0.83,
+      "tensor_direction": "R1↔R4",
+      "coherence_curvature": 0.52,
+      "collapse_point": null,
+      "stability_envelope": 0.79,
+      "gradient_alignment": 0.88
+    },
+    {
+      "tensor_type": "gradient",
+      "regime": "R2-R3",
+      "tensor_magnitude": 0.81,
+      "tensor_direction": "R3→R2",
+      "coherence_curvature": 0.57,
+      "collapse_point": null,
+      "stability_envelope": 0.63,
+      "gradient_alignment": 0.72
+    },
+    {
+      "tensor_type": "boundary",
+      "regime": "R1-R3",
+      "tensor_magnitude": 0.69,
+      "tensor_direction": "R1→R3",
+      "coherence_curvature": 0.38,
+      "collapse_point": null,
+      "stability_envelope": 0.71,
+      "gradient_alignment": 0.55
+    },
+    {
+      "tensor_type": "boundary",
+      "regime": "R2-R4",
+      "tensor_magnitude": 0.88,
+      "tensor_direction": "R2↔R4",
+      "coherence_curvature": 0.47,
+      "collapse_point": null,
+      "stability_envelope": 0.68,
+      "gradient_alignment": 0.81
+    },
+    {
+      "tensor_type": "tensor-field",
+      "regime": "R1-R2-R3",
+      "tensor_magnitude": 0.94,
+      "tensor_direction": "tensor",
+      "coherence_curvature": 0.63,
+      "collapse_point": null,
+      "stability_envelope": 0.84,
+      "gradient_alignment": 0.92
+    },
+    {
+      "tensor_type": "tensor-field",
+      "regime": "R2-R4",
+      "tensor_magnitude": 0.88,
+      "tensor_direction": "R4→R2",
+      "coherence_curvature": 0.55,
+      "collapse_point": null,
+      "stability_envelope": 0.73,
+      "gradient_alignment": 0.79
+    },
+    {
+      "tensor_type": "collapse",
+      "regime": "R3-R4",
+      "tensor_magnitude": 0.91,
+      "tensor_direction": "R3→R4",
+      "coherence_curvature": 0.71,
+      "collapse_point": "R4:0.82",
+      "stability_envelope": 0.44,
+      "gradient_alignment": 0.63
+    },
+    {
+      "tensor_type": "collapse",
+      "regime": "R2-R3",
+      "tensor_magnitude": 0.86,
+      "tensor_direction": "R2↔R3",
+      "coherence_curvature": 0.62,
+      "collapse_point": "R3:0.77",
+      "stability_envelope": 0.48,
+      "gradient_alignment": 0.71
+    }
+  ]
+}
 
