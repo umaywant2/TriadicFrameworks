@@ -1,1 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="900" viewBox="0 0 1280 900">
+
+  <!-- Background -->
+  <rect width="1280" height="900" fill="#0d0d0d"/>
+
+  <!-- Title -->
+  <text x="640" y="70" font-size="42" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">
+    Coherence Tensor Engine — RTT/1
+  </text>
+
+  <!-- Regime Blocks -->
+  <rect x="120" y="180" width="260" height="120" rx="12" fill="#1f3b4d"/>
+  <text x="250" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R1 — Conceptual</text>
+
+  <rect x="500" y="180" width="260" height="120" rx="12" fill="#1f3b4d"/>
+  <text x="630" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R2 — Computational</text>
+
+  <rect x="880" y="180" width="260" height="120" rx="12" fill="#1f3b4d"/>
+  <text x="1010" y="250" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R3 — Physical</text>
+
+  <rect x="500" y="360" width="260" height="120" rx="12" fill="#1f3b4d"/>
+  <text x="630" y="430" font-size="32" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">R4 — Dimensional</text>
+
+  <!-- Coherence Tensor Nodes -->
+  <circle cx="250" cy="350" r="40" fill="#66ccff"/>
+  <text x="250" y="355" font-size="20" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Tensor</text>
+
+  <circle cx="1010" cy="350" r="40" fill="#66ccff"/>
+  <text x="1010" y="355" font-size="20" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Tensor</text>
+
+  <!-- Tensor Vectors -->
+  <line x1="250" y1="350" x2="500" y2="240" stroke="#00ccff" stroke-width="4"/>
+  <polygon points="500,240 485,255 495,255" fill="#00ccff"/>
+  <text x="360" y="280" font-size="22" fill="#00ccff"
+        font-family="Segoe UI, sans-serif">Tensor Vector</text>
+
+  <line x1="1010" y1="350" x2="630" y2="430" stroke="#00ccff" stroke-width="4"/>
+  <polygon points="630,430 645,415 635,415" fill="#00ccff"/>
+  <text x="820" y="390" font-size="22" fill="#00ccff"
+        font-family="Segoe UI, sans-serif">Tensor Vector</text>
+
+  <!-- Coherence Field -->
+  <ellipse cx="630" cy="600" rx="260" ry="120" fill="none" stroke="#99ffcc" stroke-width="4"/>
+  <text x="630" y="610" font-size="26" fill="#99ffcc" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Coherence Field</text>
+
+  <!-- Coherence Basin -->
+  <ellipse cx="630" cy="600" rx="140" ry="60" fill="#1a1a1a" stroke="#66cc99" stroke-width="3"/>
+  <text x="630" y="605" font-size="22" fill="#66cc99" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Coherence Basin</text>
+
+  <!-- Tensor Overlay -->
+  <polygon points="250,180 630,180 1010,180 630,120"
+           fill="none" stroke="#cc99ff" stroke-width="3"/>
+  <text x="630" y="150" font-size="22" fill="#cc99ff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">Tensor Overlay</text>
+
+  <!-- Legend -->
+  <rect x="120" y="680" width="1040" height="180" rx="12" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+
+  <text x="640" y="720" font-size="30" fill="#ffffff" text-anchor="middle"
+        font-family="Segoe UI, sans-serif">CTE Diagram Legend</text>
+
+  <text x="200" y="760" font-size="22" fill="#66ccff" font-family="Segoe UI, sans-serif">■ Coherence Tensor Node</text>
+  <text x="200" y="800" font-size="22" fill="#00ccff" font-family="Segoe UI, sans-serif">■ Tensor Vector</text>
+
+  <text x="600" y="760" font-size="22" fill="#99ffcc" font-family="Segoe UI, sans-serif">■ Coherence Field</text>
+  <text x="600" y="800" font-size="22" fill="#66cc99" font-family="Segoe UI, sans-serif">■ Coherence Basin</text>
+
+  <text x="950" y="760" font-size="22" fill="#cc99ff" font-family="Segoe UI, sans-serif">■ Tensor Overlay</text>
+
+</svg>
 
