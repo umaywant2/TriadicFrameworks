@@ -1,1 +1,130 @@
+{
+  "identity": {
+    "name": "Regime Interlock Matrix",
+    "canonical_id": "RTT_REGIME_INTERLOCK_MATRIX",
+    "module_path": "/docs/rtt/Regime_Interlock_Mapper/",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "schema": {
+    "fields": [
+      "regime_a",
+      "regime_b",
+      "regime_c",
+      "interlock_type",
+      "boundary_condition",
+      "interlock_strength",
+      "entanglement_score",
+      "stability_rating"
+    ],
+    "regime_codes": {
+      "R1": "Conceptual",
+      "R2": "Computational",
+      "R3": "Physical",
+      "R4": "Dimensional"
+    }
+  },
+
+  "entries": [
+    {
+      "regime_a": "R1",
+      "regime_b": "R2",
+      "interlock_type": "structural",
+      "boundary_condition": "symmetry-preservation",
+      "interlock_strength": 0.82,
+      "entanglement_score": 0.41,
+      "stability_rating": 0.78
+    },
+    {
+      "regime_a": "R2",
+      "regime_b": "R3",
+      "interlock_type": "structural",
+      "boundary_condition": "calibration-dependency",
+      "interlock_strength": 0.74,
+      "entanglement_score": 0.33,
+      "stability_rating": 0.72
+    },
+    {
+      "regime_a": "R1",
+      "regime_b": "R3",
+      "interlock_type": "boundary",
+      "boundary_condition": "abstraction-to-measurement",
+      "interlock_strength": 0.67,
+      "entanglement_score": 0.22,
+      "stability_rating": 0.69
+    },
+    {
+      "regime_a": "R2",
+      "regime_b": "R4",
+      "interlock_type": "boundary",
+      "boundary_condition": "gradient-alignment",
+      "interlock_strength": 0.83,
+      "entanglement_score": 0.32,
+      "stability_rating": 0.71
+    },
+    {
+      "regime_a": "R1",
+      "regime_b": "R2",
+      "interlock_type": "entanglement",
+      "boundary_condition": "mutual-feedback",
+      "interlock_strength": 0.91,
+      "entanglement_score": 0.88,
+      "stability_rating": 0.52
+    },
+    {
+      "regime_a": "R3",
+      "regime_b": "R4",
+      "interlock_type": "entanglement",
+      "boundary_condition": "resonance-coherence",
+      "interlock_strength": 0.93,
+      "entanglement_score": 0.91,
+      "stability_rating": 0.49
+    },
+    {
+      "regime_a": "R2",
+      "regime_b": "R3",
+      "interlock_type": "entanglement",
+      "boundary_condition": "drift-amplification",
+      "interlock_strength": 0.87,
+      "entanglement_score": 0.72,
+      "stability_rating": 0.41
+    },
+    {
+      "regime_a": "R1",
+      "regime_b": "R4",
+      "interlock_type": "entanglement",
+      "boundary_condition": "coherence-gradient",
+      "interlock_strength": 0.76,
+      "entanglement_score": 0.35,
+      "stability_rating": 0.68
+    },
+    {
+      "regime_a": "R1",
+      "regime_b": "R2",
+      "regime_c": "R3",
+      "interlock_type": "entanglement",
+      "boundary_condition": "coherence-tensor",
+      "interlock_strength": 0.94,
+      "entanglement_score": 0.89,
+      "stability_rating": 0.57
+    },
+    {
+      "regime_a": "R2",
+      "regime_b": "R4",
+      "interlock_type": "entanglement",
+      "boundary_condition": "dimensional-tensor",
+      "interlock_strength": 0.88,
+      "entanglement_score": 0.72,
+      "stability_rating": 0.63
+    }
+  ]
+}
 
