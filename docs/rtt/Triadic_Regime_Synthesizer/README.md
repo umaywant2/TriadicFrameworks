@@ -1,4 +1,7 @@
 # **Triadic Regime Synthesizer — RTT/1**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Triadic_Regime_Synthesizer/module.json) — Agentic module schema role assignments
+
 ### *Regime‑Level Synthesis Engine for TriadicFrameworks*
 
 The **Triadic Regime Synthesizer (TRS)** is an RTT/1 analytical engine designed to synthesize, merge, and harmonize **regime structures** across conceptual, computational, and physical domains.  
