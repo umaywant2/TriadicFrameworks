@@ -1,1 +1,133 @@
+{
+  "identity": {
+    "name": "Temporal Field Matrix",
+    "canonical_id": "RTT_TEMPORAL_FIELD_MATRIX",
+    "module_path": "/docs/rtt/Temporal_Regime_Sequencer/",
+    "version": "1.0",
+    "status": "canon-stable"
+  },
+
+  "rtt": {
+    "rtt_level": 1,
+    "coherence": "declared",
+    "drift": "bounded",
+    "paradox": "structural"
+  },
+
+  "schema": {
+    "fields": [
+      "temporal_type",
+      "regime",
+      "temporal_magnitude",
+      "temporal_direction",
+      "temporal_curvature",
+      "instability_depth",
+      "temporal_field",
+      "transition_boundary"
+    ]
+  },
+
+  "entries": [
+    {
+      "temporal_type": "signature",
+      "regime": "R1",
+      "temporal_magnitude": 0.41,
+      "temporal_direction": "conceptual",
+      "temporal_curvature": 0.22,
+      "instability_depth": 0.11,
+      "temporal_field": 0.63,
+      "transition_boundary": 0.44
+    },
+    {
+      "temporal_type": "signature",
+      "regime": "R4",
+      "temporal_magnitude": 0.72,
+      "temporal_direction": "dimensional",
+      "temporal_curvature": 0.44,
+      "instability_depth": 0.22,
+      "temporal_field": 0.57,
+      "transition_boundary": 0.41
+    },
+    {
+      "temporal_type": "gradient",
+      "regime": "R2",
+      "temporal_magnitude": 0.52,
+      "temporal_direction": "computational",
+      "temporal_curvature": 0.33,
+      "instability_depth": 0.27,
+      "temporal_field": 0.57,
+      "transition_boundary": 0.41
+    },
+    {
+      "temporal_type": "gradient",
+      "regime": "R2-R3",
+      "temporal_magnitude": 0.79,
+      "temporal_direction": "R3→R2",
+      "temporal_curvature": 0.58,
+      "instability_depth": 0.31,
+      "temporal_field": 0.72,
+      "transition_boundary": 0.41
+    },
+    {
+      "temporal_type": "field",
+      "regime": "R1-R2-R3",
+      "temporal_magnitude": 0.94,
+      "temporal_direction": "tensor",
+      "temporal_curvature": 0.63,
+      "instability_depth": 0.37,
+      "temporal_field": 0.78,
+      "transition_boundary": 0.57
+    },
+    {
+      "temporal_type": "field",
+      "regime": "R2-R4",
+      "temporal_magnitude": 0.88,
+      "temporal_direction": "R4→R2",
+      "temporal_curvature": 0.55,
+      "instability_depth": 0.33,
+      "temporal_field": 0.73,
+      "transition_boundary": 0.63
+    },
+    {
+      "temporal_type": "instability",
+      "regime": "R1-R3",
+      "temporal_magnitude": 0.67,
+      "temporal_direction": "R1→R3",
+      "temporal_curvature": 0.33,
+      "instability_depth": 0.22,
+      "temporal_field": 0.55,
+      "transition_boundary": 0.38
+    },
+    {
+      "temporal_type": "instability",
+      "regime": "R2-R4",
+      "temporal_magnitude": 0.88,
+      "temporal_direction": "R2↔R4",
+      "temporal_curvature": 0.47,
+      "instability_depth": 0.29,
+      "temporal_field": 0.66,
+      "transition_boundary": 0.58
+    },
+    {
+      "temporal_type": "transition",
+      "regime": "R1-R4",
+      "temporal_magnitude": 0.83,
+      "temporal_direction": "R1↔R4",
+      "temporal_curvature": 0.52,
+      "instability_depth": 0.22,
+      "temporal_field": 0.69,
+      "transition_boundary": 0.46
+    },
+    {
+      "temporal_type": "transition",
+      "regime": "R3-R4",
+      "temporal_magnitude": 0.91,
+      "temporal_direction": "R3→R4",
+      "temporal_curvature": 0.71,
+      "instability_depth": 0.52,
+      "temporal_field": 0.82,
+      "transition_boundary": 0.44
+    }
+  ]
+}
 
