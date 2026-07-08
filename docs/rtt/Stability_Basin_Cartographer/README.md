@@ -1,4 +1,7 @@
 # **Stability Basin Cartographer — RTT/1**  
+
+- [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Stability_Basin_Cartographer/module.json) — Agentic module schema role assignments
+
 ### *Stability‑Intelligence Engine for TriadicFrameworks*
 
 The **Stability Basin Cartographer (SBC)** is an RTT/1 analytical engine designed to map, analyze, and evaluate **stability basins** across conceptual, computational, and physical regimes.  
