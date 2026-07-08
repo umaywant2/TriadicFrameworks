@@ -1,6 +1,7 @@
 # **Drift Sentinel — RTT/1**  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Drift_Sentinel/module.json) — Agentic module schema role assignments
+- [`drift_field_matrix.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/rtt/Drift_Sentinel/drift_field_matrix.json) — Agentic module schema role assignments
 
 ### *Drift‑Level Intelligence Engine for TriadicFrameworks*
 
