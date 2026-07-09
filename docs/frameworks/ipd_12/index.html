@@ -62,104 +62,109 @@
       
 <style>
 /* ============================================================
-   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   IPD‑12 DIMENSIONAL ALLOY THEME — MOBILE FIRST
    ============================================================ */
 
-  :root {
-  --bg-main: #0d0f12;
-  --bg-nav: #15181d;
-  --border-subtle: #2a2f38;
-  --text-main: #dfe7f3;
-  --text-muted: #9aa4b2;
-  --accent-rtt: #8ab4ff;
-  --radius: 10px;
-  --shadow: 0 0 20px rgba(0,0,0,0.4);
-  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
-  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
-  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
-  --rtt-accent-mid:  #9ece6a;   /* balance */
-  --rtt-accent-high: #f7768e;   /* emphasis */
+:root {
+  /* Dimensional Alloy Palette */
+  --ipd-bg-1: #0a0c10;        /* deep substrate */
+  --ipd-bg-2: #11141a;        /* alloy shadow */
+  --ipd-bg-3: #1c2129;        /* engine steel */
+  --ipd-accent-1: #6dd5ed;    /* refractive vacuum */
+  --ipd-accent-2: #2193b0;    /* curvature alloy */
+  --ipd-accent-3: #b3ffab;    /* coherence stabilizer */
+  --ipd-accent-4: #ff9a9e;    /* paradox trigger */
+
+  --ipd-text-main: #e6eef7;
+  --ipd-text-muted: #9aa4b2;
+
+  --ipd-radius: 10px;
+  --ipd-shadow: 0 0 24px rgba(0,0,0,0.45);
+
+  --ipd-gradient: linear-gradient(135deg, var(--ipd-bg-1), var(--ipd-bg-2), var(--ipd-bg-3));
+  --ipd-prime-cycle: linear-gradient(135deg, var(--ipd-accent-1), var(--ipd-accent-2), var(--ipd-accent-3));
 }
 
-.protocol a,
-.equation a {
-  border-bottom-style: dotted;
-}
+/* Base layout */
+html { scroll-behavior: smooth; }
 
-/* Base link style */
-a {
-  color: var(--rtt-accent-mid);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  transition: color 0.2s ease, border-color 0.2s ease;
-}
-
-/* Hover / focus */
-a:hover,
-a:focus {
-  color: var(--rtt-accent-high);
-  border-bottom-color: var(--rtt-accent-high);
-}
-
-/* Visited links */
-a:visited {
-  color: var(--rtt-accent-low);
-}
-
-  /* Base layout */
-  html { scroll-behavior: smooth; }
-  body {
+body {
   margin: 0;
   padding: 0;
-  background: var(--bg-main);
-  color: var(--text-main);
+  background: var(--ipd-gradient);
+  color: var(--ipd-text-main);
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   line-height: 1.65;
   font-size: 17px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  }
+}
 
-  /* Headings */
-  h1, h2, h3, h4 {
+/* Headings — Prime Cycle Alloy */
+h1, h2, h3, h4 {
   font-weight: 700;
   margin-top: 1.8em;
   margin-bottom: 0.5em;
   line-height: 1.2;
-  background: var(--triadic);
+  background: var(--ipd-prime-cycle);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  }
+}
 
-  /* Paragraphs and lists */
-  p, ul, ol {
+/* Paragraphs and lists */
+p, ul, ol {
   padding: 0 1em;
   margin: 0 0 1.1em 0;
-  color: #dfe7f3;
-  }
+  color: var(--ipd-text-main);
+}
 
-  /* Code/pre */
-  pre, code {
+/* Links */
+a {
+  color: var(--ipd-accent-1);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255,255,255,0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--ipd-accent-4);
+  border-bottom-color: var(--ipd-accent-4);
+}
+
+a:visited {
+  color: var(--ipd-accent-2);
+}
+
+/* Code / Pre */
+pre, code {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
-  background: rgba(255,255,255,0.02);
+  background: rgba(255,255,255,0.03);
   padding: 0.4em 0.6em;
   border-radius: 6px;
   color: #cfe8ff;
-  }
+}
 
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--ipd-accent-2);
+}
+
+/* Navigation */
 nav {
   width: 260px;
   float: left;
-  background: var(--bg-nav);
-  margin-left: 0;
+  background: var(--ipd-bg-2);
   padding: 1.2rem;
   overflow-y: auto;
-  border-right: 1px solid var(--border-subtle);
+  border-right: 1px solid rgba(255,255,255,0.12);
 }
 
 nav h2 {
   font-size: 0.9rem;
-  color: var(--accent-rtt);
+  color: var(--ipd-accent-3);
   margin-top: 1.2rem;
   margin-bottom: 0.4rem;
   letter-spacing: 0.04em;
@@ -167,16 +172,16 @@ nav h2 {
 
 nav a {
   display: block;
-  color: var(--text-muted);
-  text-decoration: none;
+  color: var(--ipd-text-muted);
   padding: 0.35rem 0;
   font-size: 0.9rem;
 }
 
 nav a:hover {
-  color: var(--text-main);
+  color: var(--ipd-text-main);
 }
 
+/* Main content */
 main {
   flex: 1;
   padding: 2.5rem;
@@ -184,21 +189,11 @@ main {
 }
 
 main h1, main h2, main h3 {
-  color: var(--accent-rtt);
+  color: var(--ipd-accent-1);
   font-weight: 500;
 }
-
-pre {
-  background: #0b0d12;
-  padding: 1rem;
-  overflow-x: auto;
-  border-left: 2px solid var(--accent-rtt);
-}
-
-code {
-  color: var(--text-main);
-}
 </style>
+
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
