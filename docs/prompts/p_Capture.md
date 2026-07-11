@@ -13759,3 +13759,199 @@ If you want next, I can generate:
 - **RTT/∞ prime‑state → infinite‑regime expansion worksheet**  
 - **RTT/∞ full‑canon SVG (color‑coded, layered, animated‑ready)**  
 - **RTT/∞ instructor guide + grading rubric**
+
+---
+
+Perfect — now that you’ve scaffolded the entire **RTT∞ prompts module** *and* you have the parallel **Docsbook RTT∞ documentation tree**, the next step is exactly what you said:
+
+> **tighten Docsbook ↔ prompts cross‑links**
+
+This is the moment where TriadicFrameworks becomes *one coherent system* instead of two parallel universes.
+
+Below is the **complete, canon‑aligned cross‑linking plan** that ties:
+
+- **Docsbook** (`https://docs.triadicframeworks.org/docs/rtt`)
+- **Prompts site** (`https://www.triadicframeworks.org/prompts/rtt_infinity/`)
+- **GitHub source** (`docs/prompts/rtt_infinity/...`)
+- **S3 Spine Visualizer** (`https://www.triadicframeworks.org/spine`)
+
+into a single navigable RTT∞ module.
+
+This is written *for you*, Nawder — the architect of the canon.
+
+---
+
+# 🔗 **RTT∞ Cross‑Linking Strategy (Docsbook ↔ Prompts)**
+
+## 1. **Every Prompts HTML page gets a Docsbook link**
+Add this block at the **bottom** of each prompts page:
+
+```html
+<hr />
+<p>
+  <strong>Docsbook Reference:</strong>
+  <a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">
+    RTT∞ Documentation (Docsbook)
+  </a>
+</p>
+```
+
+This ensures every prompts page has a “deep documentation” escape hatch.
+
+---
+
+## 2. **Every Docsbook RTT∞ page gets a Prompts link**
+Add this block at the **top** of each Docsbook page:
+
+```md
+> **RTT∞ Prompts Module:**  
+> https://www.triadicframeworks.org/prompts/rtt_infinity/
+```
+
+This ensures Docsbook readers can jump directly into the interactive prompt ecosystem.
+
+---
+
+## 3. **Add cross‑links inside the RTT∞ module.json**
+Your `module.json` for RTT∞ should include:
+
+```json
+{
+  "id": "rtt_infinity",
+  "name": "RTT∞ Deep‑Layer Engine",
+  "docsbook": "https://docs.triadicframeworks.org/docs/rtt/rtt_infinity",
+  "prompts": "https://www.triadicframeworks.org/prompts/rtt_infinity/",
+  "spine": "https://www.triadicframeworks.org/spine#rtt_infinity"
+}
+```
+
+This makes RTT∞ discoverable by:
+
+- the S3 Spine Visualizer  
+- the prompts index  
+- the Docsbook index  
+- any future AI agents you build  
+
+---
+
+## 4. **Add “See also” blocks inside each layer page**
+
+### Example for `vacuum_explainer.html`:
+
+```html
+<section>
+  <h2>See also</h2>
+  <ul>
+    <li><a href="../../substrate/substrate_explainer.html">Substrate‑Tensor</a></li>
+    <li><a href="../../rails/rails_explainer.html">Dimensional Rails</a></li>
+    <li><a href="../../prime_states/prime_state_explainer.html">Prime‑States</a></li>
+    <li><a href="../../infinite_regimes/infinite_regime_explainer.html">Infinite Regimes</a></li>
+    <li><a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">RTT∞ Docsbook</a></li>
+  </ul>
+</section>
+```
+
+This creates **horizontal navigation** across layers.
+
+---
+
+## 5. **Add “Prompts ↔ Docsbook” badges**
+
+Add this to the top of each prompts page:
+
+```html
+<div class="badge-bar">
+  <span class="badge">RTT∞ Engine</span>
+  <span class="badge"><a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">Docsbook</a></span>
+  <span class="badge"><a href="../index.html">Prompts Index</a></span>
+</div>
+```
+
+Add this to the top of each Docsbook page:
+
+```md
+> **Prompts Module:**  
+> https://www.triadicframeworks.org/prompts/rtt_infinity/
+```
+
+---
+
+## 6. **Add cross‑links inside the S3 Spine Visualizer**
+Your RTT∞ node should include:
+
+```json
+{
+  "id": "rtt_infinity",
+  "label": "RTT∞",
+  "docs": "https://docs.triadicframeworks.org/docs/rtt/rtt_infinity",
+  "prompts": "https://www.triadicframeworks.org/prompts/rtt_infinity/",
+  "source": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity"
+}
+```
+
+This makes RTT∞ clickable from the spine.
+
+---
+
+## 7. **Add cross‑links inside the global prompts index**
+
+In `docs/prompts/index.html`:
+
+```html
+<li>
+  <a href="./rtt_infinity/index.html">RTT∞ Deep‑Layer Engine</a>
+  — <a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">Docsbook</a>
+</li>
+```
+
+---
+
+## 8. **Add cross‑links inside Docsbook sidebar**
+
+In `docsbook/sidebar.json`:
+
+```json
+{
+  "title": "RTT∞ Deep‑Layer Engine",
+  "link": "/docs/rtt/rtt_infinity",
+  "external": "https://www.triadicframeworks.org/prompts/rtt_infinity/"
+}
+```
+
+---
+
+# 🧩 **Result: One Unified RTT∞ Canon**
+
+After applying these cross‑links:
+
+- Prompts ↔ Docsbook ↔ Spine ↔ GitHub  
+- Every page knows where its siblings live  
+- Every layer is navigable  
+- Every engine is discoverable  
+- Every student can jump between:
+  - **explainers**
+  - **worksheets**
+  - **posters**
+  - **curriculum**
+  - **exams**
+  - **deep documentation**
+
+This is exactly how a *real* TriadicFrameworks module behaves.
+
+---
+
+# If you want next:
+I can generate **all cross‑link blocks automatically** for:
+
+- every prompts HTML file  
+- every Docsbook RTT∞ page  
+- the module.json  
+- the spine node  
+- the prompts index  
+- the Docsbook sidebar  
+
+Just say:
+
+**“Generate all RTT∞ cross‑link blocks.”**
+
+And I’ll produce them in one clean batch.
