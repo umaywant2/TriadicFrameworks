@@ -13955,3 +13955,1158 @@ Just say:
 **“Generate all RTT∞ cross‑link blocks.”**
 
 And I’ll produce them in one clean batch.
+
+---
+
+Here you go, Nawder — **every RTT∞ cross‑link block**, fully generated, clean, canonical, and ready to paste directly into your prompts HTML files, Docsbook pages, module.json, spine node, and global indexes.
+
+This is the *complete* cross‑linking layer that binds:
+
+- **Prompts → Docsbook**  
+- **Docsbook → Prompts**  
+- **Prompts → Spine**  
+- **Spine → Prompts**  
+- **Prompts → GitHub Source**  
+- **Docsbook → GitHub Source**  
+
+into one coherent RTT∞ module.
+
+Everything below is **copy‑paste ready**.
+
+---
+
+# ⭐ 1. **Prompts → Docsbook block**  
+Add this to the **bottom** of every prompts HTML file:
+
+```html
+<hr />
+<p>
+  <strong>Docsbook Reference:</strong>
+  <a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">
+    RTT∞ Documentation (Docsbook)
+  </a>
+</p>
+```
+
+---
+
+# ⭐ 2. **Docsbook → Prompts block**  
+Add this to the **top** of every Docsbook RTT∞ page:
+
+```md
+> **RTT∞ Prompts Module:**  
+> https://www.triadicframeworks.org/prompts/rtt_infinity/
+```
+
+---
+
+# ⭐ 3. **Prompts → GitHub Source block**  
+Add this to the **bottom** of prompts pages (optional but recommended):
+
+```html
+<p>
+  <strong>Source:</strong>
+  <a href="https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity">
+    GitHub — RTT∞ Prompts Module
+  </a>
+</p>
+```
+
+---
+
+# ⭐ 4. **Docsbook → GitHub Source block**  
+Add this to the **bottom** of Docsbook RTT∞ pages:
+
+```md
+**Source:**  
+https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity
+```
+
+---
+
+# ⭐ 5. **Prompts → Spine block**  
+Add this to the **bottom** of prompts pages:
+
+```html
+<p>
+  <strong>S3 Spine Node:</strong>
+  <a href="https://www.triadicframeworks.org/spine#rtt_infinity">
+    RTT∞ in the S3 Spine Visualizer
+  </a>
+</p>
+```
+
+---
+
+# ⭐ 6. **Spine → Prompts block**  
+Add this to the RTT∞ node in the spine JSON:
+
+```json
+{
+  "id": "rtt_infinity",
+  "label": "RTT∞",
+  "docs": "https://docs.triadicframeworks.org/docs/rtt/rtt_infinity",
+  "prompts": "https://www.triadicframeworks.org/prompts/rtt_infinity/",
+  "source": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity"
+}
+```
+
+---
+
+# ⭐ 7. **Prompts index → RTT∞ block**  
+Add this to `docs/prompts/index.html`:
+
+```html
+<li>
+  <a href="./rtt_infinity/index.html">RTT∞ Deep‑Layer Engine</a>
+  — <a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">Docsbook</a>
+</li>
+```
+
+---
+
+# ⭐ 8. **Docsbook sidebar → RTT∞ block**  
+Add this to `docsbook/sidebar.json`:
+
+```json
+{
+  "title": "RTT∞ Deep‑Layer Engine",
+  "link": "/docs/rtt/rtt_infinity",
+  "external": "https://www.triadicframeworks.org/prompts/rtt_infinity/"
+}
+```
+
+---
+
+# ⭐ 9. **Layer‑to‑layer cross‑links inside prompts pages**  
+Add this to the **bottom** of each layer explainer (vacuum, substrate, rails, prime‑states, infinite regimes):
+
+```html
+<section>
+  <h2>See also</h2>
+  <ul>
+    <li><a href="../vacuum/vacuum_explainer.html">Vacuum Layer</a></li>
+    <li><a href="../substrate/substrate_explainer.html">Substrate‑Tensor</a></li>
+    <li><a href="../rails/rails_explainer.html">Dimensional Rails</a></li>
+    <li><a href="../prime_states/prime_state_explainer.html">Prime‑States</a></li>
+    <li><a href="../infinite_regimes/infinite_regime_explainer.html">Infinite Regimes</a></li>
+    <li><a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">RTT∞ Docsbook</a></li>
+  </ul>
+</section>
+```
+
+---
+
+# ⭐ 10. **Prompts badge bar**  
+Add this to the **top** of every prompts HTML file:
+
+```html
+<div class="badge-bar">
+  <span class="badge">RTT∞ Engine</span>
+  <span class="badge"><a href="https://docs.triadicframeworks.org/docs/rtt/rtt_infinity">Docsbook</a></span>
+  <span class="badge"><a href="../index.html">Prompts Index</a></span>
+</div>
+```
+
+---
+
+# ⭐ 11. **Docsbook badge bar**  
+Add this to the **top** of every Docsbook RTT∞ page:
+
+```md
+> **Prompts Module:**  
+> https://www.triadicframeworks.org/prompts/rtt_infinity/
+```
+
+---
+
+# ⭐ 12. **module.json cross‑links**  
+Add this to `docs/prompts/rtt_infinity/module.json`:
+
+```json
+{
+  "id": "rtt_infinity",
+  "name": "RTT∞ Deep‑Layer Engine",
+  "docsbook": "https://docs.triadicframeworks.org/docs/rtt/rtt_infinity",
+  "prompts": "https://www.triadicframeworks.org/prompts/rtt_infinity/",
+  "spine": "https://www.triadicframeworks.org/spine#rtt_infinity",
+  "source": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity"
+}
+```
+
+---
+
+# ⭐ 13. **Cross‑links inside posters & curriculum pages**  
+Add this block to the bottom of:
+
+- deep_layer_triad_poster.html  
+- full_canon_flowchart.html  
+- full_canon_operator_registry.html  
+- deep_layer_curriculum.html  
+- teaching_bundle.html  
+- instructor_guide.html  
+- deep_layer_exam.html  
+
+```html
+<p>
+  <strong>Related RTT∞ Resources:</strong>
+</p>
+<ul>
+  <li><a href="../index.html">RTT∞ Module Front Door</a></li>
+  <li><a href="../posters/deep_layer_triad_poster.html">Deep‑Layer Triad Poster</a></li>
+  <li><a href="../posters/full_canon_flowchart.html">Full‑Canon Flowchart</a></li>
+  <li><a href="../posters/full_canon_operator_registry.html">Operator Registry</a></li>
+  <li><a href="../curriculum/deep_layer_curriculum.html">Deep‑Layer Curriculum</a></li>
+  <li><a href="../exams/deep_layer_exam.html">Deep‑Layer Exam</a></li>
+</ul>
+```
+
+---
+
+# ⭐ 14. **Cross‑links inside integration pages**  
+Add this to:
+
+- infinite_regime_integration_map.html  
+- bidirectional_map.html  
+- substrate_tensor_rebuild.html  
+
+```html
+<p>
+  <strong>Upward Path:</strong>
+  <a href="../vacuum/vacuum_explainer.html">Vacuum</a> →
+  <a href="../substrate/substrate_explainer.html">Substrate</a> →
+  <a href="../rails/rails_explainer.html">Rails</a> →
+  <a href="../prime_states/prime_state_explainer.html">Prime‑States</a> →
+  <a href="../infinite_regimes/infinite_regime_explainer.html">Infinite Regimes</a>
+</p>
+
+<p>
+  <strong>Downward Path:</strong>
+  <a href="../infinite_regimes/infinite_regime_explainer.html">Infinite Regimes</a> →
+  <a href="../prime_states/prime_state_explainer.html">Prime‑States</a> →
+  <a href="../rails/rails_explainer.html">Rails</a> →
+  <a href="../substrate/substrate_explainer.html">Substrate</a>
+</p>
+```
+
+---
+
+# ⭐ 15. **Cross‑links inside assets pages**  
+Add this to:
+
+- flowchart.svg  
+- flowchart_dark.svg  
+- triad.svg  
+- full_canon.svg  
+- prime_state_alignment.svg  
+
+```html
+<p>
+  <strong>RTT∞ Visual Resources:</strong>
+  <a href="../posters/full_canon_flowchart.html">Flowchart</a> ·
+  <a href="../posters/deep_layer_triad_poster.html">Triad Poster</a> ·
+  <a href="../posters/full_canon_operator_registry.html">Operator Registry</a>
+</p>
+```
+
+---
+
+# ⭐ 16. **Cross‑links inside p_Capture.md**  
+Add this block to the bottom of `docs/prompts/p_Capture.md`:
+
+```md
+### RTT∞ Module Cross‑Links
+
+- Prompts Module: https://www.triadicframeworks.org/prompts/rtt_infinity/
+- Docsbook: https://docs.triadicframeworks.org/docs/rtt/rtt_infinity
+- Spine Node: https://www.triadicframeworks.org/spine#rtt_infinity
+- GitHub Source: https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity
+```
+
+---
+
+# 🎉 **RTT∞ is now fully cross‑linked across the entire TriadicFrameworks ecosystem**
+
+You now have:
+
+- **Prompts ↔ Docsbook**  
+- **Prompts ↔ Spine**  
+- **Docsbook ↔ Spine**  
+- **Prompts ↔ GitHub**  
+- **Docsbook ↔ GitHub**  
+- **Layer‑to‑layer navigation**  
+- **Module‑to‑module navigation**  
+- **Curriculum ↔ Posters ↔ Exams ↔ Explainers**  
+
+This is exactly how a *real* TriadicFrameworks module behaves.
+
+If you want next:
+
+### ✔ Generate the **RTT∞ module.json** automatically  
+### ✔ Generate the **Spine node JSON** automatically  
+### ✔ Generate the **Docsbook sidebar JSON** automatically  
+### ✔ Generate the **global prompts index** entry automatically  
+
+Just tell me:  
+**“Generate RTT∞ module.json”** or  
+**“Generate RTT∞ spine node”** or  
+**“Generate RTT∞ sidebar entry”**
+
+---
+
+Here are your **RTT/∞ sitemap entries**, fully canonical, ready to paste into the **global TriadicFrameworks.org sitemap** (the same style as your existing `sitemap_main.xml` and module‑level sitemaps).
+
+I’m giving you **three layers**:
+
+1. **Global sitemap entries** (for `sitemap_main.xml`)  
+2. **Prompts‑site sitemap** (for `/prompts/sitemap.xml`)  
+3. **RTT∞ module‑local sitemap** (for `/prompts/rtt_infinity/sitemap.xml`)
+
+Everything is structured exactly like your existing canon.
+
+---
+
+# ⭐ **1. Global TriadicFrameworks.org Sitemap Entries**  
+Add these to your **global sitemap_main.xml**, under the *Prompts* section.
+
+```xml
+<!-- ============================================================
+     PROMPTS — RTT∞ DEEP‑LAYER ENGINE
+     ============================================================ -->
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_explainer.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_prompts.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_diagnostics.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/substrate_explainer.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/substrate_prompts.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/substrate_diagnostics.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/rails/rails_explainer.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/rails/rails_prompts.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/rails/rails_diagnostics.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_explainer.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_prompts.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_alignment_worksheet.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_diagnostics.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_explainer.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_prompts.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_teaching_worksheet.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_classroom_pack.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_diagnostics.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/integration/infinite_regime_integration_map.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/integration/bidirectional_map.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/integration/substrate_tensor_rebuild.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/posters/deep_layer_triad_poster.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/posters/full_canon_flowchart.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/posters/full_canon_operator_registry.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/curriculum/deep_layer_curriculum.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/curriculum/teaching_bundle.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/curriculum/instructor_guide.html</loc>
+</sitemap>
+
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/exams/deep_layer_exam.html</loc>
+</sitemap>
+<sitemap>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/exams/answer_key.html</loc>
+</sitemap>
+```
+
+This is the **complete RTT∞ footprint** for the global sitemap.
+
+---
+
+# ⭐ **2. Prompts‑Site Sitemap (`/prompts/sitemap.xml`)**
+
+Add this block under the **engines** section:
+
+```xml
+<!-- RTT∞ Deep‑Layer Engine -->
+<url>
+  <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/</loc>
+</url>
+```
+
+Optionally include all subpages (recommended for SEO):
+
+```xml
+<url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_explainer.html</loc></url>
+<url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/substrate_explainer.html</loc></url>
+<url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/rails/rails_explainer.html</loc></url>
+<url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_explainer.html</loc></url>
+<url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_explainer.html</loc></url>
+```
+
+(You can include all 40+ pages, but the top‑level is sufficient.)
+
+---
+
+# ⭐ **3. RTT∞ Module‑Local Sitemap (`/prompts/rtt_infinity/sitemap.xml`)**
+
+This is the sitemap *inside* the RTT∞ module.
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- RTT∞ Module Front Door -->
+  <url>
+    <loc>https://www.triadicframeworks.org/prompts/rtt_infinity/</loc>
+  </url>
+
+  <!-- Vacuum -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_explainer.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_prompts.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/vacuum_diagnostics.html</loc></url>
+
+  <!-- Substrate -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/substrate_explainer.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/substrate_prompts.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/substrate_diagnostics.html</loc></url>
+
+  <!-- Rails -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/rails/rails_explainer.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/rails/rails_prompts.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/rails/rails_diagnostics.html</loc></url>
+
+  <!-- Prime‑States -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_explainer.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_prompts.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_alignment_worksheet.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/prime_state_diagnostics.html</loc></url>
+
+  <!-- Infinite Regimes -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_explainer.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_prompts.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_teaching_worksheet.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_classroom_pack.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/infinite_regime_diagnostics.html</loc></url>
+
+  <!-- Integration -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/integration/infinite_regime_integration_map.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/integration/bidirectional_map.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/integration/substrate_tensor_rebuild.html</loc></url>
+
+  <!-- Posters -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/posters/deep_layer_triad_poster.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/posters/full_canon_flowchart.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/posters/full_canon_operator_registry.html</loc></url>
+
+  <!-- Curriculum -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/curriculum/deep_layer_curriculum.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/curriculum/teaching_bundle.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/curriculum/instructor_guide.html</loc></url>
+
+  <!-- Exams -->
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/exams/deep_layer_exam.html</loc></url>
+  <url><loc>https://www.triadicframeworks.org/prompts/rtt_infinity/exams/answer_key.html</loc></url>
+
+</urlset>
+```
+
+---
+
+# 🎉 **RTT∞ is now fully represented in the global TriadicFrameworks sitemap**
+
+This means:
+
+- Search engines can index the entire RTT∞ canon  
+- The prompts site becomes navigable by crawlers  
+- The Docsbook ↔ Prompts ↔ Spine ecosystem is fully discoverable  
+- RTT∞ now behaves like a first‑class engine module  
+
+---
+
+If you want next:
+
+### ✔ Generate the **RTT∞ module.json**  
+### ✔ Generate the **RTT∞ spine node JSON**  
+### ✔ Generate the **RTT∞ Docsbook sidebar entry**  
+### ✔ Generate the **RTT∞ robots.txt + llms.txt** (canonical triad)
+
+Just tell me which one.
+
+---
+
+Here is your **RTT/∞ `module.json` manifest**, generated in the **exact TriadicFrameworks canon style** you established with the FFT Analyzer module schema, the module registry conventions, and the prompts‑site cross‑linking layer we just completed.
+
+This is **drop‑in ready** for:
+
+```
+docs/prompts/rtt_infinity/module.json
+```
+
+It includes:
+
+- full metadata  
+- canonical structural grammar  
+- analyzer layers  
+- roles  
+- sitemap links  
+- prompts ↔ docsbook ↔ spine cross‑links  
+- asset references  
+- module‑level navigation map  
+
+Everything is aligned with your existing scaffolding.
+
+---
+
+# ✅ **RTT/∞ module.json (canonical TriadicFrameworks manifest)**
+
+```json
+{
+  "id": "rtt_infinity",
+  "name": "RTT∞ Deep‑Layer Engine",
+  "version": "1.0.0",
+  "category": "engine",
+  "summary": "RTT∞ is the deep‑layer engine spanning vacuum, substrate, dimensional rails, prime‑states, infinite regimes, and full bidirectional integration.",
+  "description": "The RTT∞ engine exposes the deepest structural stack in TriadicFrameworks: vacuum collapse, substrate‑tensor reconstruction, dimensional rail transport, prime‑state anchoring, infinite‑regime expansion, and full bidirectional flow back into substrate‑tensor form.",
+  
+  "links": {
+    "prompts": "https://www.triadicframeworks.org/prompts/rtt_infinity/",
+    "docsbook": "https://docs.triadicframeworks.org/docs/rtt/rtt_infinity",
+    "spine": "https://www.triadicframeworks.org/spine#rtt_infinity",
+    "source": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity",
+    "sitemap": "https://www.triadicframeworks.org/prompts/rtt_infinity/sitemap.xml"
+  },
+
+  "structure": {
+    "layers": [
+      "vacuum",
+      "substrate",
+      "dimensional_rails",
+      "prime_states",
+      "infinite_regimes",
+      "integration"
+    ],
+    "flow": {
+      "upward": [
+        "vacuum",
+        "substrate",
+        "dimensional_rails",
+        "prime_states",
+        "infinite_regimes"
+      ],
+      "downward": [
+        "infinite_regimes",
+        "prime_states",
+        "dimensional_rails",
+        "substrate"
+      ]
+    }
+  },
+
+  "roles": {
+    "engine": true,
+    "teaching": true,
+    "diagnostic": true,
+    "structural": true,
+    "research": true
+  },
+
+  "analyzer_layers": [
+    "operator",
+    "dimensional",
+    "regime",
+    "drift",
+    "coherence",
+    "cross-cutting"
+  ],
+
+  "files": {
+    "index": "index.html",
+
+    "vacuum": {
+      "explainer": "vacuum/vacuum_explainer.html",
+      "prompts": "vacuum/vacuum_prompts.html",
+      "diagnostics": "vacuum/vacuum_diagnostics.html"
+    },
+
+    "substrate": {
+      "explainer": "substrate/substrate_explainer.html",
+      "prompts": "substrate/substrate_prompts.html",
+      "diagnostics": "substrate/substrate_diagnostics.html"
+    },
+
+    "rails": {
+      "explainer": "rails/rails_explainer.html",
+      "prompts": "rails/rails_prompts.html",
+      "diagnostics": "rails/rails_diagnostics.html"
+    },
+
+    "prime_states": {
+      "explainer": "prime_states/prime_state_explainer.html",
+      "prompts": "prime_states/prime_state_prompts.html",
+      "worksheet": "prime_states/prime_state_alignment_worksheet.html",
+      "diagnostics": "prime_states/prime_state_diagnostics.html"
+    },
+
+    "infinite_regimes": {
+      "explainer": "infinite_regimes/infinite_regime_explainer.html",
+      "prompts": "infinite_regimes/infinite_regime_prompts.html",
+      "worksheet": "infinite_regimes/infinite_regime_teaching_worksheet.html",
+      "classroom_pack": "infinite_regimes/infinite_regime_classroom_pack.html",
+      "diagnostics": "infinite_regimes/infinite_regime_diagnostics.html"
+    },
+
+    "integration": {
+      "infinite_regime_map": "integration/infinite_regime_integration_map.html",
+      "bidirectional_map": "integration/bidirectional_map.html",
+      "substrate_rebuild": "integration/substrate_tensor_rebuild.html"
+    },
+
+    "posters": {
+      "triad": "posters/deep_layer_triad_poster.html",
+      "flowchart": "posters/full_canon_flowchart.html",
+      "operator_registry": "posters/full_canon_operator_registry.html"
+    },
+
+    "curriculum": {
+      "curriculum": "curriculum/deep_layer_curriculum.html",
+      "teaching_bundle": "curriculum/teaching_bundle.html",
+      "instructor_guide": "curriculum/instructor_guide.html"
+    },
+
+    "exams": {
+      "exam": "exams/deep_layer_exam.html",
+      "answer_key": "exams/answer_key.html"
+    },
+
+    "assets": {
+      "flowchart": "assets/flowchart.svg",
+      "flowchart_dark": "assets/flowchart_dark.svg",
+      "triad": "assets/triad.svg",
+      "full_canon": "assets/full_canon.svg",
+      "prime_state_alignment": "assets/prime_state_alignment.svg"
+    }
+  },
+
+  "navigation": {
+    "front_door": "index.html",
+    "sections": [
+      "vacuum",
+      "substrate",
+      "dimensional_rails",
+      "prime_states",
+      "infinite_regimes",
+      "integration",
+      "posters",
+      "curriculum",
+      "exams"
+    ]
+  }
+}
+```
+
+---
+
+# 🎉 RTT∞ is now a fully‑registered engine module  
+This manifest:
+
+- matches your **FFT Analyzer module.json** grammar  
+- integrates with the **S3 Spine Visualizer**  
+- integrates with **Docsbook**  
+- integrates with the **Prompts site**  
+- integrates with the **global sitemap**  
+- integrates with **GitHub source**  
+- exposes all RTT∞ layers, posters, worksheets, curriculum, exams, and assets  
+
+This is the **canonical RTT∞ module.json**.
+
+---
+
+If you want next:
+
+### ✔ Generate the **RTT∞ spine node JSON**  
+### ✔ Generate the **RTT∞ Docsbook sidebar entry**  
+### ✔ Generate the **RTT∞ robots.txt + llms.txt**  
+### ✔ Generate the **RTT∞ module badge set** (SVG + HTML)
+
+Just tell me which one.
+
+---
+
+Here’s a clean, S3‑ready RTT/∞ spine node you can drop into your Spine Visualizer config:
+
+```json
+{
+  "id": "rtt_infinity",
+  "label": "RTT∞ Deep‑Layer Engine",
+  "type": "engine",
+  "group": "RTT",
+  "layer_stack": [
+    "vacuum",
+    "substrate",
+    "dimensional_rails",
+    "prime_states",
+    "infinite_regimes",
+    "integration"
+  ],
+  "flow": {
+    "upward": [
+      "vacuum",
+      "substrate",
+      "dimensional_rails",
+      "prime_states",
+      "infinite_regimes"
+    ],
+    "downward": [
+      "infinite_regimes",
+      "prime_states",
+      "dimensional_rails",
+      "substrate"
+    ]
+  },
+  "links": {
+    "prompts": "https://www.triadicframeworks.org/prompts/rtt_infinity/",
+    "docs": "https://docs.triadicframeworks.org/docs/rtt/rtt_infinity",
+    "source": "https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/prompts/rtt_infinity"
+  },
+  "visual": {
+    "icon": "engine",
+    "accent": "#7f9dff"
+  },
+  "relations": {
+    "siblings": [
+      "rtt1",
+      "rtt2",
+      "rtt3",
+      "rtt_ipd_12"
+    ],
+    "depends_on": [
+      "substrate_stack",
+      "structural_stack"
+    ]
+  }
+}
+```
+
+---
+
+Here is your **RTT∞ Docsbook sidebar entry**, generated in the exact structure used by the TriadicFrameworks Docsbook navigation system — fully aligned with your existing sidebar patterns, module grouping, and cross‑link conventions.
+
+Because your active tab is the **GitHub RTT∞ prompts module**, and you also have the **Docsbook RTT section** open in another tab, this entry is designed to drop directly into:
+
+```
+docsbook/sidebar.json
+```
+
+or the equivalent navigation manifest used by your Docsbook renderer.
+
+---
+
+# ✅ **RTT∞ Sidebar Entry (Docsbook Navigation)**
+
+```json
+{
+  "title": "RTT∞ Deep‑Layer Engine",
+  "link": "/docs/rtt/rtt_infinity",
+  "icon": "engine",
+  "children": [
+    {
+      "title": "Vacuum Layer",
+      "link": "/docs/rtt/rtt_infinity/vacuum"
+    },
+    {
+      "title": "Substrate‑Tensor",
+      "link": "/docs/rtt/rtt_infinity/substrate"
+    },
+    {
+      "title": "Dimensional Rails",
+      "link": "/docs/rtt/rtt_infinity/rails"
+    },
+    {
+      "title": "Prime‑States",
+      "link": "/docs/rtt/rtt_infinity/prime_states"
+    },
+    {
+      "title": "Infinite Regimes",
+      "link": "/docs/rtt/rtt_infinity/infinite_regimes"
+    },
+    {
+      "title": "Integration Maps",
+      "link": "/docs/rtt/rtt_infinity/integration"
+    },
+    {
+      "title": "Posters & Flowcharts",
+      "link": "/docs/rtt/rtt_infinity/posters"
+    },
+    {
+      "title": "Curriculum",
+      "link": "/docs/rtt/rtt_infinity/curriculum"
+    },
+    {
+      "title": "Exams",
+      "link": "/docs/rtt/rtt_infinity/exams"
+    }
+  ],
+  "external": "https://www.triadicframeworks.org/prompts/rtt_infinity/"
+}
+```
+
+---
+
+# 🔍 **Why this is correct**
+
+### ✔ Matches your existing Docsbook sidebar schema  
+Your sidebar entries for:
+
+- IPD‑12  
+- RTT‑1 / RTT‑2 / RTT‑3  
+- Datacenter Evaluator  
+- Domain / Structural / Substrate stacks  
+
+all follow this exact structure.
+
+### ✔ Uses canonical RTT∞ layer ordering  
+Vacuum → Substrate → Rails → Prime‑States → Infinite Regimes → Integration.
+
+### ✔ Includes the Prompts module as an external link  
+This is required for cross‑framework navigation.
+
+### ✔ Uses the correct Docsbook URL pattern  
+`/docs/rtt/rtt_infinity/...`
+
+### ✔ Uses the correct icon type  
+`"icon": "engine"`  
+matching your RTT engine family.
+
+---
+
+# ⭐ If you want next:
+
+I can generate **all RTT∞ Docsbook section index pages**:
+
+- `/docs/rtt/rtt_infinity/vacuum/index.md`  
+- `/docs/rtt/rtt_infinity/substrate/index.md`  
+- `/docs/rtt/rtt_infinity/rails/index.md`  
+- `/docs/rtt/rtt_infinity/prime_states/index.md`  
+- `/docs/rtt/rtt_infinity/infinite_regimes/index.md`  
+- `/docs/rtt/rtt_infinity/integration/index.md`  
+- `/docs/rtt/rtt_infinity/posters/index.md`  
+- `/docs/rtt/rtt_infinity/curriculum/index.md`  
+- `/docs/rtt/rtt_infinity/exams/index.md`  
+
+Just say:
+
+**“Generate RTT∞ Docsbook section indexes.”**
+
+---
+
+Absolutely, Nawder — here are **all RTT∞ Docsbook section index pages**, fully generated, clean, canonical, and ready to drop directly into:
+
+```
+docs/rtt/rtt_infinity/<section>/index.md
+```
+
+Each index page follows your **TriadicFrameworks Docsbook canon**:
+
+- neutral tone  
+- structural overview  
+- cross‑links  
+- prompts ↔ docsbook integration  
+- S3 spine alignment  
+- module‑level navigation  
+
+No filler. No drift. Pure canon.
+
+---
+
+# 📘 **RTT∞ Docsbook Section Indexes**
+
+Below are **all nine** section indexes.
+
+---
+
+# 1. `docs/rtt/rtt_infinity/vacuum/index.md`
+
+```md
+# RTT∞ — Vacuum Layer
+
+The vacuum layer is the zero‑state of RTT∞. All structure collapses, commitments are nullified, and the system resets before substrate‑tensor reconstruction.
+
+## Contents
+- Vacuum explainer
+- Vacuum prompts
+- Vacuum diagnostics
+
+## Layer Role
+Vacuum → Substrate → Rails → Prime‑States → Infinite Regimes
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/vacuum/
+
+## Spine Node
+RTT∞ → Vacuum
+```
+
+---
+
+# 2. `docs/rtt/rtt_infinity/substrate/index.md`
+
+```md
+# RTT∞ — Substrate‑Tensor
+
+The substrate‑tensor is the minimal bounded structure rebuilt after vacuum collapse. It contains geometry, flow, time, meaning, and field.
+
+## Contents
+- Substrate explainer
+- Substrate prompts
+- Substrate diagnostics
+
+## Layer Role
+Vacuum → **Substrate** → Rails → Prime‑States → Infinite Regimes
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/substrate/
+
+## Spine Node
+RTT∞ → Substrate
+```
+
+---
+
+# 3. `docs/rtt/rtt_infinity/rails/index.md`
+
+```md
+# RTT∞ — Dimensional Rails
+
+Dimensional rails provide transport between substrate, dimensions, prime‑states, and infinite regimes. They maintain coherence across layers.
+
+## Contents
+- Rails explainer
+- Rails prompts
+- Rails diagnostics
+
+## Layer Role
+Vacuum → Substrate → **Rails** → Prime‑States → Infinite Regimes
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/rails/
+
+## Spine Node
+RTT∞ → Rails
+```
+
+---
+
+# 4. `docs/rtt/rtt_infinity/prime_states/index.md`
+
+```md
+# RTT∞ — Prime‑States
+
+Prime‑states are irreducible attractors where drift stops and stability begins. They anchor infinite‑regime expansion.
+
+## Contents
+- Prime‑state explainer
+- Prime‑state prompts
+- Alignment worksheet
+- Prime‑state diagnostics
+
+## Layer Role
+Vacuum → Substrate → Rails → **Prime‑States** → Infinite Regimes
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/prime_states/
+
+## Spine Node
+RTT∞ → Prime‑States
+```
+
+---
+
+# 5. `docs/rtt/rtt_infinity/infinite_regimes/index.md`
+
+```md
+# RTT∞ — Infinite Regimes
+
+Infinite regimes are unbounded structural states anchored to prime‑states. They include infinite‑form, infinite‑flow, and infinite‑meaning.
+
+## Contents
+- Infinite‑regime explainer
+- Infinite‑regime prompts
+- Teaching worksheet
+- Classroom pack
+- Infinite‑regime diagnostics
+
+## Layer Role
+Vacuum → Substrate → Rails → Prime‑States → **Infinite Regimes**
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/infinite_regimes/
+
+## Spine Node
+RTT∞ → Infinite Regimes
+```
+
+---
+
+# 6. `docs/rtt/rtt_infinity/integration/index.md`
+
+```md
+# RTT∞ — Integration Maps
+
+Integration covers the downward path from infinite regimes back to substrate‑tensor, including collapse, reduction, rail descent, and rebuild.
+
+## Contents
+- Infinite‑regime integration map
+- Bidirectional flow map
+- Substrate‑tensor rebuild
+
+## Layer Role
+Infinite Regimes → Prime‑States → Rails → Substrate
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/integration/
+
+## Spine Node
+RTT∞ → Integration
+```
+
+---
+
+# 7. `docs/rtt/rtt_infinity/posters/index.md`
+
+```md
+# RTT∞ — Posters & Flowcharts
+
+Visual canon for RTT∞: deep‑layer triad, full‑canon flowchart, and operator registry.
+
+## Contents
+- Deep‑layer triad poster
+- Full‑canon flowchart
+- Full‑canon operator registry
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/posters/
+
+## Spine Node
+RTT∞ → Posters
+```
+
+---
+
+# 8. `docs/rtt/rtt_infinity/curriculum/index.md`
+
+```md
+# RTT∞ — Curriculum
+
+Teaching‑ready curriculum for RTT∞ deep‑layers, including lesson sequencing, bundles, and instructor guidance.
+
+## Contents
+- Deep‑layer curriculum
+- Teaching bundle
+- Instructor guide
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/curriculum/
+
+## Spine Node
+RTT∞ → Curriculum
+```
+
+---
+
+# 9. `docs/rtt/rtt_infinity/exams/index.md`
+
+```md
+# RTT∞ — Exams
+
+Mastery assessments for RTT∞, including the deep‑layer exam and answer key.
+
+## Contents
+- Deep‑layer exam
+- Answer key
+
+## Prompts Module
+https://www.triadicframeworks.org/prompts/rtt_infinity/exams/
+
+## Spine Node
+RTT∞ → Exams
+```
+
+---
+
+# 🎉 **All RTT∞ Docsbook section indexes are now complete**
+
+You now have:
+
+- full Docsbook section navigation  
+- cross‑links to prompts  
+- spine alignment  
+- canonical layer ordering  
+- consistent metadata  
+
+RTT∞ is now a **fully navigable Docsbook module**.
+
+If you want next:
+
+### ✔ Generate RTT∞ Docsbook *front‑door* (`docs/rtt/rtt_infinity/index.md`)  
+### ✔ Generate RTT∞ *breadcrumbs* for every page  
+### ✔ Generate RTT∞ *Docsbook → Prompts* auto‑linking script  
+### ✔ Generate RTT∞ *module badges* (SVG + HTML)
+
+Just tell me.
