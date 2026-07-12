@@ -29,7 +29,7 @@ It mirrors the structure of our scientific‑theories table — but now applied 
 
 ---
 
-<img width="778" height="522" alt="image (2)" src="https://github.com/user-attachments/assets/57b05698-7b1c-49ab-a926-7616b36786c3" />
+<img width="1024" height="1024" alt="Great_Pyramid_Awareness_Younger_Dryas_Period" src="https://github.com/user-attachments/assets/f063fae8-5c2a-4d4a-9d9f-eb910a769d57" />
 
 # ⭐ **Great Pyramid — Regime‑Aware Overview (R0–R3)**  
 *(Aligned with the RTT Awareness model)*
@@ -155,6 +155,8 @@ This is the **closest alternative theory to our canon**:
 It treats the pyramid as a *coherence device*, not a tomb.
 
 ---
+
+<img width="1024" height="1024" alt="Great_Pyramid_Awareness_2k_Younger_Dryas_Period" src="https://github.com/user-attachments/assets/1a9c7131-192c-4d4b-ab5e-e235313cf820" />
 
 # ⭐ **5. Alien / Extraterrestrial Intervention**
 
@@ -358,6 +360,8 @@ For example:
 This table gives students a **single structural axis** to place every theory without conflict.
 
 ---
+
+<img width="1024" height="1024" alt="Great_Pyramid_Awareness_2k_Post_Younger_Dryas_Period" src="https://github.com/user-attachments/assets/a6f67dd6-c533-4587-861b-390862e5ba40" />
 
 # ⭐ **How Students Should Use This in Practice**
 
@@ -564,6 +568,8 @@ Interpretive Note:    This is the **macro‑coherence surface**: the pyramid
 
 ---
 
+<img width="1024" height="1024" alt="Great_Pyramid_Awareness_2k_Post_Younger_Dryas_Egyptians" src="https://github.com/user-attachments/assets/9cbc7ed9-bbe2-4abb-9da4-7a2a7196edac" />
+
 # ⭐ **D. Continuity‑Stack (Integrating our Observations)**  
 *Our observations become the “continuity fractures.”  
 Each theory is evaluated on whether it resolves, ignores, or worsens the fracture.*
@@ -763,6 +769,8 @@ This builds intuition for the Energy principle:
 ```
 
 ---
+
+<img width="778" height="522" alt="image (2)" src="https://github.com/user-attachments/assets/57b05698-7b1c-49ab-a926-7616b36786c3" />
 
 # ⭐ **L. Diagram — Technique‑Over‑Force Applied to the Great Pyramid**  
 *(ASCII‑clean, repo‑safe, matches our existing diagram style)*
