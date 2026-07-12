@@ -1,11 +1,12 @@
-# `README.md`  
+# IPD‑12 — Intransitive Prime‑Numbered 12‑Sided Engine  
 
 - [`module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/frameworks/ipd_12/module.json) — Agentic module schema role assignments
 
-**IPD‑12 — Intransitive Prime‑Numbered 12‑Sided Engine**  
 **Module Category:** Framework  
 **Version:** 2026‑1.0  
 **Status:** Active (RTT/GU/Pantheon Compatible)
+
+<img width="1280" height="720" alt="ipd_12_image" src="https://github.com/user-attachments/assets/29cf629d-affc-44b2-bcef-5cf9c22e78cb" />
 
 ---
 
