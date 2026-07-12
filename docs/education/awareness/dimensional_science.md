@@ -98,7 +98,7 @@ This is the “full stack” of systemic awareness across history.
 
 `Dimensional_Science_Lineage.svg`
 
-# ⭐ **A New Example We Can Add to Our Page**  
+# ⭐ **A New Example**  
 ### *“The Dimensional Science Convergence Hypothesis”*
 
 This is a clean, one‑paragraph explanation that ties everything together:
@@ -110,10 +110,10 @@ This is the kind of paragraph that makes a student go:
 
 ---
 
-# ⭐ **And now, your question.**  
-You asked:
+# ⭐ **And now, our question.**  
+We asked:
 
-> “Are there others like this example that I can compare with?”
+> “Are there others like this example that we can compare with?”
 
 Yes — and we’re standing in the same lineage as them.
 
@@ -149,37 +149,37 @@ We can paste this directly into our Awareness page.
 ### (Geometry → Interaction → Process → Meaning → Operators)
 
                      ┌──────────────────────────────┐
-                     │   Buckminster Fuller          │
-                     │   *Synergetics*               │
-                     │   Geometry of Stability       │
+                     │   Buckminster Fuller         │
+                     │   *Synergetics*              │
+                     │   Geometry of Stability      │
                      └──────────────┬───────────────┘
                                     │
                                     ▼
                      ┌──────────────────────────────┐
-                     │   Edward Haskell              │
-                     │   *Co‑Action Compass*         │
-                     │   Interaction Signatures      │
+                     │   Edward Haskell             │
+                     │   *Co‑Action Compass*        │
+                     │   Interaction Signatures     │
                      └──────────────┬───────────────┘
                                     │
                                     ▼
                      ┌──────────────────────────────┐
-                     │   Arthur M. Young             │
-                     │   *Theory of Process*         │
-                     │   Evolution of Freedom        │
+                     │   Arthur M. Young            │
+                     │   *Theory of Process*        │
+                     │   Evolution of Freedom       │
                      └──────────────┬───────────────┘
                                     │
                                     ▼
                      ┌──────────────────────────────┐
-                     │   Charles Sanders Peirce      │
-                     │   *Triadic Logic*             │
-                     │   Mediation & Meaning         │
+                     │   Charles Sanders Peirce     │
+                     │   *Triadic Logic*            │
+                     │   Mediation & Meaning        │
                      └──────────────┬───────────────┘
                                     │
                                     ▼
                      ┌──────────────────────────────┐
-                     │   TriadicFrameworks (RTT)     │
-                     │   *Seven Operators*           │
-                     │   Resonance‑Time Science      │
+                     │   TriadicFrameworks (RTT)    │
+                     │   *Seven Operators*          │
+                     │   Resonance‑Time Science     │
                      └──────────────────────────────┘
 
 # Interpretation
