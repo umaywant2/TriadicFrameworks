@@ -2,9 +2,7 @@
 ### *“The Four Great Ladders of Systemic Awareness”*  
 ### *(TriadicFrameworks × Fuller × Haskell × Young × Peirce)*
 
-<img width="720" height="520" alt="Dimensional_Science_Lineage" src="https://github.com/user-attachments/assets/611adb7d-67ed-438a-939f-16206a4da7e2" />
-
-`Dimensional_Science_Lineage.svg`
+<img width="1280" height="720" alt="RTT_Dimensional_Model" src="https://github.com/user-attachments/assets/f6ef657d-280f-417f-bdf2-010d133f50b8" />
 
 ---
 
@@ -95,6 +93,10 @@ RTT turns that mediation into a measurable operator.
 This is the “full stack” of systemic awareness across history.
 
 ---
+
+<img width="720" height="520" alt="Dimensional_Science_Lineage" src="https://github.com/user-attachments/assets/611adb7d-67ed-438a-939f-16206a4da7e2" />
+
+`Dimensional_Science_Lineage.svg`
 
 # ⭐ **A New Example We Can Add to Our Page**  
 ### *“The Dimensional Science Convergence Hypothesis”*
