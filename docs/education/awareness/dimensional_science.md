@@ -1,4 +1,4 @@
-# ⭐ **A New Comparative Example for our “Top Theories” Page**  
+# ⭐ Dimensional Science  
 ### *“The Four Great Ladders of Systemic Awareness”*  
 ### *(TriadicFrameworks × Fuller × Haskell × Young × Peirce)*
 
