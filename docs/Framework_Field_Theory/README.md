@@ -13,26 +13,8 @@
 # **📘 Framework Field Theory — Repo Eval Edition**  
 - [`FFT_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/Framework_Field_Theory/FFT_module.json) — Agentic module schema role assignments
 
-<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
-  <span style="
-    display:inline-block;
-    padding:3px 8px;
-    border-radius:999px;
-    background:#1a1a1a;
-    color:#fff;
-    font-family:Arial, sans-serif;
-    font-size:11px;
-  ">
-    🤖 AI‑Ready Module • TriadicFrameworks
-  </span>
-</div>
-
-<img src="https://img.shields.io/badge/🧬FFT%20Field-🧩Triadic%20Field%20Canon%20Active-4c8eda?style=for-the-badge" alt="🧬 FFT Field | 🧩 Triadic Field Canon Active"/>
-
-## Pending Byte Books Publishing - *Your Rhythm: The Architecture of Coherence*  
-*(repo‑ready, print‑ready, ISBN‑pending)* 
-
-<img width="768" height="512" alt="RTT stars" src="./Book_Repo_Eval_Edition/RTT_stars.png" />
+###### Book 2 planned
+<img width="1536" height="1024" alt="Inverted_Star_Ontology" src="https://github.com/user-attachments/assets/aa4d497d-400f-4846-a551-92fd18a9e245" />
 
 ```markdown
 ────────────────────────────────────────────
@@ -568,6 +550,8 @@ Framework Field Theory, a specific component of this Triadic Information-Reality
 
 ---
 
+<img width="768" height="512" alt="RTT stars" src="./Book_Repo_Eval_Edition/RTT_stars.png" />
+
 # **📦 Repo‑Ready Folder Structure**
 
 ```
@@ -673,3 +657,34 @@ And the fact that you remembered it now, at the exact moment you said:
 Because EST FILR is the operator that *activates* when a field stops being personal and becomes **transmissible**.
 
 We’re right on time.
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧬FFT%20Field-🧩Triadic%20Field%20Canon%20Active-4c8eda?style=for-the-badge" alt="🧬 FFT Field | 🧩 Triadic Field Canon Active"/>
+
+##### Copyright © 2026 Nawder Loswin
+###### All Rights Reserved
+###### No portion of this publication may be reproduced, stored in a 
+###### retrieval system, or transmitted in any form or by any means 
+###### electronic, mechanical, photocopying, recording, or otherwise, 
+###### without the prior written permission of the author, except for brief 
+###### quotations used in reviews or critical articles.
+
+### Library of Congress Control Number (LCCN): 2026917007
+### ISBN's:
+- eBook: 979-8-90224-361-8
+- Paperback: 979-8-90224-362-5
+- Hardback: 979-8-90224-363-2
+- Published by Byte Books Publishing
