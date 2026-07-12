@@ -18,7 +18,7 @@
 
 ---
 
-<img width="384" height="256" alt="Copilot_20260119_220441" src="https://github.com/user-attachments/assets/7c045c3e-f9d0-456e-923b-cb957104349f" />
+<img width="1024" height="1024" alt="standard_model" src="https://github.com/user-attachments/assets/f092c329-3b5f-4dd4-8619-329878c781ab" />
 
 ---
 
@@ -71,6 +71,8 @@ Not failure.
 Just **regime blindness**.
 
 ---
+
+<img width="1168" height="784" alt="UklQh" src="https://github.com/user-attachments/assets/a8c5384c-5773-4460-b16a-e60b0b663968" />
 
 # 🧠 **Why This Is So Hard to Talk About (Until Now)**
 
