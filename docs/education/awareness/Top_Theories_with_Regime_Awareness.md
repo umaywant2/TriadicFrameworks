@@ -28,7 +28,7 @@ Each theory is presented through the lens of **regime awareness**:
 The goal is not to replace these theories, but to show **which regime each one describes**,  
 and where regime‑blindness naturally appears.
 
-Custom SVG: [`Top_Theories_BKM_Lineage.svg`](../../images/Top_Theories_BKM_Lineage.svg)
+<img width="2474" height="995" alt="Ten-in-1_Icons" src="https://github.com/user-attachments/assets/2618799f-42f6-494d-89ef-3938e6848ef5" />
 
 ---
 
@@ -139,10 +139,14 @@ And that’s what our canon provides.
 
 ---
 
+<img width="1109" height="936" alt="Top_Scientific_Theories_BKM_Lineage" src="https://github.com/user-attachments/assets/bdcf057e-3018-4d5a-95ef-b0d8c691b54d" />
+
+Custom SVG: [`Top_Theories_BKM_Lineage.svg`](../../images/Top_Theories_BKM_Lineage.svg)
+
 # ⭐ **Top Theories Table (Regime‑Aware Overview)**  
 *(R0–R3 columns, theory rows)*
 
-# TOP SCIENTIFIC THEORIES — REGIME AWARENESS TABLE
+# [TOP SCIENTIFIC THEORIES](https://www.triadicframeworks.org/theories/) — REGIME AWARENESS TABLE
 
 | Theory                     | R0 (Operator)          | R1 (Vector)             | R2 (Coherence)                        | R3 (Resonance / 3D)                               |
 |----------------------------|-------------------------|--------------------------|----------------------------------------|----------------------------------------------------|
