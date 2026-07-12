@@ -5,6 +5,8 @@
 > [`webroot_module.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/webroot_module.json) — agentic module schema  
 > [`spine/module_group.json`](https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/spine/module_graph.json) — 100+ AI module examples  
 
+<img width="1168" height="784" alt="RTT_Grammar_Core" src="https://github.com/user-attachments/assets/82f6cb36-bf9f-48a1-8eb1-d4cc32a18525" />
+
 A minimal, AI‑ready framework for understanding and building coherent systems.  
 TriadicFrameworks gives students, developers, researchers, and agents a shared substrate:  
 **regimes, operators, diagrams, coherence, paradox, and dimensional reasoning.**
