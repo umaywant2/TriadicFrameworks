@@ -1,1 +1,101 @@
+{
+  "module": {
+    "name": "quantum-lattice",
+    "version": "2026.1",
+    "category": "lattice-phenomenology",
+    "summary": "Topological and tight-binding phenomenology engine with mean-field and KPM solvers.",
+    "purpose": "Provide a multi-regime lattice exploration environment for band structure, topology, and mean-field physics.",
+    "keywords": [
+      "tight-binding",
+      "topology",
+      "Berry curvature",
+      "Chern number",
+      "Z2 invariant",
+      "KPM",
+      "mean-field",
+      "superconductivity",
+      "graphene",
+      "kagome"
+    ],
+    "audience": ["students", "researchers", "AI systems", "phenomenology explorers"]
+  },
+
+  "identity": {
+    "status": "canonical",
+    "layer": "Phenomenology",
+    "front_door": "README.md",
+    "badge": "🟦"
+  },
+
+  "operators": {
+    "primary": [
+      "TBOperator",
+      "MeanFieldOperator",
+      "BerryOperator",
+      "ChernOperator",
+      "Z2Operator"
+    ],
+    "environment": ["gui", "python", "kpm"],
+    "modes": ["explore", "visualize", "diagnose"]
+  },
+
+  "analyzer_layers": {
+    "operator": [
+      "tight-binding-expansion",
+      "mean-field-wick",
+      "topological-charge"
+    ],
+    "dimensional": [
+      "0D",
+      "1D",
+      "2D",
+      "3D"
+    ],
+    "regime": [
+      "band-structure",
+      "topological",
+      "superconducting"
+    ],
+    "coherence": [
+      "spectral-integrity",
+      "topological-consistency"
+    ],
+    "cross_cutting": [
+      "visualization",
+      "large-scale-kpm"
+    ]
+  },
+
+  "lineage": {
+    "upstream": ["TightBindingTheory", "TopologicalFieldTheory"],
+    "downstream": ["LatticeExamples", "TopologicalDiagnostics"]
+  },
+
+  "files": {
+    "capture": "README.md",
+    "examples": "examples/",
+    "governance": "governance.md",
+    "index": "index.md"
+  },
+
+  "governance": {
+    "policy_files": ["governance.md"],
+    "restricted_operations": ["large-kpm-run"],
+    "trusted_contexts": ["research", "education"]
+  },
+
+  "extensions": {
+    "gui": true,
+    "kpm": true,
+    "topology": true
+  },
+
+  "examples": [
+    "graphene",
+    "kagome",
+    "lieb",
+    "twisted-bilayer",
+    "chern-insulator"
+  ]
+}
 
