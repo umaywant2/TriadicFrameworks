@@ -1,0 +1,294 @@
+{
+  "_meta": {
+    "source": "github.com/topics/theories",
+    "source_url": "https://github.com/topics/theories",
+    "scraped": "2026-07-13",
+    "scrape_sort": "most_stars",
+    "repo_count": 14,
+    "generated_by": "TriadicFrameworks · docs/repos/",
+    "schema_version": "1.0",
+    "notes": "Full page capture via live DOM traversal. LUFT_Recordings topic list was truncated in all scrape passes — topics array marked partial. Fill-Theory github_id was not resolvable from topic-page DOM attributes."
+  },
+  "topic": {
+    "name": "theories",
+    "github_topic_id": 219044,
+    "url": "https://github.com/topics/theories"
+  },
+  "repos": [
+    {
+      "rank": 1,
+      "github_id": 144287420,
+      "owner": "yogurt-cultures",
+      "name": "kefir",
+      "full_name": "yogurt-cultures/kefir",
+      "url": "https://github.com/yogurt-cultures/kefir",
+      "description": "🥛 turkic morphology project",
+      "language": "Python",
+      "stars": 453,
+      "topics": [
+        "language",
+        "grammar",
+        "kefir",
+        "phonology",
+        "computational-linguistics",
+        "theories"
+      ],
+      "last_updated": "2021-04-27"
+    },
+    {
+      "rank": 2,
+      "github_id": 379638949,
+      "owner": "acorrenson",
+      "name": "modulus",
+      "full_name": "acorrenson/modulus",
+      "url": "https://github.com/acorrenson/modulus",
+      "description": "A constraint solver built from scratch in OCaml",
+      "language": "OCaml",
+      "stars": 12,
+      "topics": [
+        "solver",
+        "logic",
+        "logic-programming",
+        "sat-solver",
+        "smt",
+        "smt-solver",
+        "hacktoberfest",
+        "solvers",
+        "theories",
+        "smt-lib",
+        "sat"
+      ],
+      "last_updated": "2021-12-10"
+    },
+    {
+      "rank": 3,
+      "github_id": 1193676089,
+      "owner": "theiskaa",
+      "name": "apeirron",
+      "full_name": "theiskaa/apeirron",
+      "url": "https://github.com/theiskaa/apeirron",
+      "description": "Knowledge graph of biggest questions humanity asks",
+      "language": "TypeScript",
+      "stars": 10,
+      "topics": [
+        "knowledge-graph",
+        "theories",
+        "apeiron",
+        "conspiracies"
+      ],
+      "last_updated": "2026-07-06"
+    },
+    {
+      "rank": 4,
+      "github_id": 187627949,
+      "owner": "Paul2708",
+      "name": "linear-algebra-questions",
+      "full_name": "Paul2708/linear-algebra-questions",
+      "url": "https://github.com/Paul2708/linear-algebra-questions",
+      "description": "A list of questions about the basic methods and theories in linear algebra",
+      "language": "TeX",
+      "stars": 3,
+      "topics": [
+        "math",
+        "linear-algebra",
+        "questions",
+        "theories",
+        "german-language",
+        "la1"
+      ],
+      "last_updated": "2019-05-20"
+    },
+    {
+      "rank": 5,
+      "github_id": 275310694,
+      "owner": "yushanwebdev",
+      "name": "react-rock-bottom",
+      "full_name": "yushanwebdev/react-rock-bottom",
+      "url": "https://github.com/yushanwebdev/react-rock-bottom",
+      "description": "This repo contains theories I have learned related to React",
+      "language": "HTML",
+      "stars": 1,
+      "topics": [
+        "react",
+        "npm",
+        "babel",
+        "facebook",
+        "jsx",
+        "reactjs",
+        "es6-javascript",
+        "npm-module",
+        "theories",
+        "es6-classes"
+      ],
+      "last_updated": "2022-12-06"
+    },
+    {
+      "rank": 6,
+      "github_id": 1003761763,
+      "owner": "CarlDeanClineSr",
+      "name": "LUFT_Recordings",
+      "full_name": "CarlDeanClineSr/LUFT_Recordings",
+      "url": "https://github.com/CarlDeanClineSr/LUFT_Recordings",
+      "description": "Recordings For LUFT of Radio Spectrums (New Instrument) Dr. Cline invention",
+      "language": null,
+      "stars": 1,
+      "topics": [
+        "math",
+        "unified",
+        "theories",
+        "luft",
+        "physics"
+      ],
+      "topics_partial": true,
+      "last_updated": null
+    },
+    {
+      "rank": 7,
+      "github_id": null,
+      "owner": "UUON-Foundation",
+      "name": "Fill-Theory",
+      "full_name": "UUON-Foundation/Fill-Theory",
+      "url": "https://github.com/UUON-Foundation/Fill-Theory",
+      "description": "This is an interactive 3D visualization application for exploring the Fractional Fill Theory — a mathematical concept dealing with angular systems and the critical 359.999...° to 0° transition in circular geometry. The application provides a real-time 3D environment where users can manipulate angular values and observe behavior.",
+      "language": "TypeScript",
+      "stars": 0,
+      "topics": [
+        "geometry",
+        "degrees",
+        "circular",
+        "theories",
+        "radial",
+        "tio-ruiz"
+      ],
+      "last_updated": "2026-06-29"
+    },
+    {
+      "rank": 8,
+      "github_id": 28515194,
+      "owner": "matlus",
+      "name": "LayeredArchitecture",
+      "full_name": "matlus/LayeredArchitecture",
+      "url": "https://github.com/matlus/LayeredArchitecture",
+      "description": "This is sample code for the Layered Architecture pattern. You can find videos on my YouTube Channel that provide the concepts and theories that talk to the code you see here.",
+      "language": "C#",
+      "stars": 0,
+      "topics": [
+        "csharp",
+        "concept",
+        "theories",
+        "youtube-channel",
+        "layered-architecture"
+      ],
+      "last_updated": "2017-09-30"
+    },
+    {
+      "rank": 9,
+      "github_id": 181263568,
+      "owner": "mselias",
+      "name": "A-Challenge-of-Titanic-Proportions",
+      "full_name": "mselias/A-Challenge-of-Titanic-Proportions",
+      "url": "https://github.com/mselias/A-Challenge-of-Titanic-Proportions",
+      "description": "This project goes over data science theories and data preprocessing, leveraging the Titanic data set provided by Kaggle. The goal is to determine which passengers will likely survive or perish the monumental tragedy. The binary classification problem is addressed using two methods, each with three machine learning algorithms.",
+      "language": "R",
+      "stars": 0,
+      "topics": [
+        "data-science",
+        "random-forest",
+        "gradient-descent",
+        "methods",
+        "support-vector-machines",
+        "theories",
+        "logit"
+      ],
+      "last_updated": "2019-05-23"
+    },
+    {
+      "rank": 10,
+      "github_id": 251323813,
+      "owner": "iut-cse",
+      "name": "OOP-course-content",
+      "full_name": "iut-cse/OOP-course-content",
+      "url": "https://github.com/iut-cse/OOP-course-content",
+      "description": "OOP Course Content Developed by CSE, IUT",
+      "language": "Ruby",
+      "stars": 0,
+      "topics": [
+        "theories",
+        "oop-courses"
+      ],
+      "last_updated": "2023-04-12"
+    },
+    {
+      "rank": 11,
+      "github_id": 475352898,
+      "owner": "fnaftheory",
+      "name": "fnaftheory",
+      "full_name": "fnaftheory/fnaftheory",
+      "url": "https://github.com/fnaftheory/fnaftheory",
+      "description": "FNAF Theory DataBase",
+      "language": "HTML",
+      "stars": 0,
+      "topics": [
+        "theory",
+        "theories",
+        "fnaf",
+        "fnaftheory"
+      ],
+      "last_updated": "2023-11-11"
+    },
+    {
+      "rank": 12,
+      "github_id": 1234501469,
+      "owner": "kot-on",
+      "name": "Titanic_anylisis",
+      "full_name": "kot-on/Titanic_anylisis",
+      "url": "https://github.com/kot-on/Titanic_anylisis",
+      "description": "An educational project about titanic dataset with filling blanks based by theories",
+      "language": "Python",
+      "stars": 0,
+      "topics": [
+        "python",
+        "terminal",
+        "analysis",
+        "pandas",
+        "titanic-kaggle",
+        "dataset",
+        "theories",
+        "survival-prediction"
+      ],
+      "last_updated": "2026-05-10"
+    },
+    {
+      "rank": 13,
+      "github_id": 281580539,
+      "owner": "yushanwebdev",
+      "name": "amp-websites",
+      "full_name": "yushanwebdev/amp-websites",
+      "url": "https://github.com/yushanwebdev/amp-websites",
+      "description": "This repo contains all the theories related to the Accelerated Mobile Pages. This is an open source HTML framework developed by the AMP Open Source Project.",
+      "language": "HTML",
+      "stars": 0,
+      "topics": [
+        "amp-html",
+        "theories"
+      ],
+      "last_updated": "2020-07-23"
+    },
+    {
+      "rank": 14,
+      "github_id": 430819128,
+      "owner": "hash-5-7-3-2",
+      "name": "My-Blog",
+      "full_name": "hash-5-7-3-2/My-Blog",
+      "url": "https://github.com/hash-5-7-3-2/My-Blog",
+      "description": "Modern Blog Website for Theories",
+      "language": "JavaScript",
+      "stars": 0,
+      "topics": [
+        "blog",
+        "theories"
+      ],
+      "last_updated": "2022-11-24"
+    }
+  ]
+}
