@@ -1,1 +1,338 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>{% block title %}{{ page_title }} | {{ site_name }}{% endblock %}</title>
+  <meta name="description" content="{{ description }}" />
+  <meta name="author"      content="{{ author }}" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="{{ lang }}" />
+  <meta name="robots"      content="index, follow" />
+  {% if keywords %}<meta name="keywords" content="{{ keywords }}" />{% endif %}
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="{{ canonical_url }}" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="{{ page_title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:url"         content="{{ canonical_url }}" />
+  <meta property="og:site_name"   content="{{ site_name }}" />
+  <meta property="og:image"       content="{{ og_image }}" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="{{ lang | replace('-', '_') }}" />
+  {% if date %}<meta property="article:published_time" content="{{ date }}" />{% endif %}
+  {% if modified %}<meta property="article:modified_time" content="{{ modified }}" />{% endif %}
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  {% if twitter_handle %}<meta name="twitter:site" content="{{ twitter_handle }}" />{% endif %}
+  <meta name="twitter:title"       content="{{ page_title }}" />
+  <meta name="twitter:description" content="{{ description }}" />
+  <meta name="twitter:image"       content="{{ og_image }}" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  {# rtt_fields is a dict of {meta-name: content} merged from RTT_DEFAULTS    #}
+  {# and per-page front matter overrides via RTT_FRONTMATTER_MAP in config.py #}
+  {% for name, content in rtt_fields.items() %}
+  <meta name="{{ name }}" content="{{ content }}" />
+  {% endfor %}
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="{{ source_file }}" />
+  <meta name="source:repo"      content="{{ source_repo }}" />
+  <meta name="build:timestamp"  content="{{ build_timestamp }}" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": {{ page_title | tojson }},
+    "headline": {{ page_title | tojson }},
+    "description": {{ description | tojson }},
+    "url": {{ canonical_url | tojson }},
+    "inLanguage": {{ lang | tojson }},
+    "author": {
+      "@type": "Person",
+      "name": {{ author | tojson }}
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": {{ site_name | tojson }},
+      "url": {{ base_url | tojson }}
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": {{ site_name | tojson }},
+      "url": {{ base_url | tojson }}
+    }{% if date %},
+    "datePublished": {{ date | tojson }}{% endif %}{% if modified %},
+    "dateModified": {{ modified | tojson }}{% endif %}
+  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="{{ base_url }}/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="{{ base_url }}/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="{{ base_url }}/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="{{ base_url }}/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="{{ base_url }}/static/style.css" />
+
+  {% block head_extra %}{% endblock %}
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="{{ base_url }}/" aria-label="{{ site_name }} home">
+        <span class="logo-wordmark">{{ site_name }}</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="{{ base_url }}/"
+           {% if canonical_url == base_url + '/' %}aria-current="page"{% endif %}>
+          Home
+        </a>
+        <a href="{{ base_url }}/introduction/"
+           {% if '/introduction/' in canonical_url %}aria-current="page"{% endif %}>
+          Introduction
+        </a>
+        <a href="{{ base_url }}/concepts/triadic-model/"
+           {% if '/concepts/' in canonical_url %}aria-current="page"{% endif %}>
+          Concepts
+        </a>
+        <a href="{{ base_url }}/reference/api/"
+           {% if '/reference/' in canonical_url %}aria-current="page"{% endif %}>
+          Reference
+        </a>
+        <a href="https://github.com/umaywant2/TriadicFrameworks"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    {# Sidebar: only rendered when the Markdown toc extension produced output. #}
+    {# build.py strips the empty <div class="toc"></div> wrapper so this      #}
+    {# block is reliably absent on pages that have no headings.               #}
+    {% if toc %}
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        {{ toc | safe }}
+      </nav>
+    </aside>
+    {% endif %}
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+          {% if not toc %}data-no-sidebar{% endif %}>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      {% block breadcrumb %}
+      {% if breadcrumbs and breadcrumbs | length > 1 %}
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          {% for crumb in breadcrumbs %}
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+              {% if loop.last %}aria-current="page"{% endif %}>
+            {% if not loop.last and crumb.url %}
+              <a href="{{ crumb.url }}" itemprop="item">
+                <span itemprop="name">{{ crumb.label }}</span>
+              </a>
+            {% else %}
+              <span itemprop="name">{{ crumb.label }}</span>
+            {% endif %}
+            <meta itemprop="position" content="{{ loop.index }}" />
+          </li>
+          {% endfor %}
+        </ol>
+      </nav>
+      {% endif %}
+      {% endblock %}
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">{{ page_title }}</h1>
+
+          {% if description %}
+          <p class="article-description" itemprop="description">
+            {{ description }}
+          </p>
+          {% endif %}
+
+          <div class="article-meta">
+            {% if date %}
+            <span class="meta-date">
+              Published:
+              <time datetime="{{ date }}" itemprop="datePublished">{{ date }}</time>
+            </span>
+            {% endif %}
+
+            {% if modified %}
+            <span class="meta-modified">
+              Updated:
+              <time datetime="{{ modified }}" itemprop="dateModified">{{ modified }}</time>
+            </span>
+            {% endif %}
+
+            {# Stability badge — read from rtt_fields dict.                    #}
+            {# Uses 'rtt:stability' in rtt_fields (correct Jinja2 dict syntax) #}
+            {# not rtt_fields['rtt:stability'] is defined (invalid).           #}
+            {% if 'rtt:stability' in rtt_fields %}
+            {% set stability = rtt_fields['rtt:stability'] %}
+            <span class="meta-badge stability-{{ stability }}"
+                  title="RTT stability: {{ stability }}">
+              {{ stability | capitalize }}
+            </span>
+            {% endif %}
+
+            {% if 'rtt:doc-id' in rtt_fields %}
+            <span class="meta-doc-id" title="Document ID">
+              {{ rtt_fields['rtt:doc-id'] }}
+            </span>
+            {% endif %}
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+          {% block content %}{% endblock %}
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="{{ source_edit_url }}"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            {% if 'rtt:owner' in rtt_fields %}
+            <span class="meta-owner">
+              Owner: {{ rtt_fields['rtt:owner'] }}
+            </span>
+            {% endif %}
+            {% if 'rtt:last-reviewed' in rtt_fields %}
+            <span class="meta-reviewed">
+              Last reviewed:
+              <time datetime="{{ rtt_fields['rtt:last-reviewed'] }}">
+                {{ rtt_fields['rtt:last-reviewed'] }}
+              </time>
+            </span>
+            {% endif %}
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">{{ site_name }}</p>
+          <p class="footer-copy">
+            &copy; {{ build_year }} Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="{{ base_url }}/">Home</a>
+            <a href="{{ base_url }}/introduction/">Introduction</a>
+            <a href="{{ base_url }}/concepts/triadic-model/">Triadic Model</a>
+            <a href="{{ base_url }}/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://github.com/umaywant2/TriadicFrameworks"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="{{ base_url }}/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>{{ source_file }}</code></span>
+        <span>Built: <time datetime="{{ build_timestamp }}">{{ build_timestamp }}</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+  {% block scripts %}{% endblock %}
+</body>
+</html>
 
