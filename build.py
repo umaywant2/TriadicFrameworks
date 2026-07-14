@@ -752,7 +752,13 @@ def main() -> None:
 
     single_file: Path | None = None
     if args.file:
-        single_file = Path(args.file)
+        docs_root = docs_dir.resolve()
+        single_file = Path(args.file).resolve()
+        try:
+            single_file.relative_to(docs_root)
+        except ValueError:
+            log.error("--file must be inside %s, got: %s", docs_root, single_file)
+            sys.exit(1)
         if not single_file.exists():
             log.error("File not found: %s", single_file)
             sys.exit(1)
