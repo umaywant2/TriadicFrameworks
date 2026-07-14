@@ -5815,3 +5815,294 @@ Before the first push triggers a successful deploy, do these in Settings:
 3. **Actions permissions** → `Settings → Actions → General → Workflow permissions → Read and write permissions` (needed for the OIDC Pages deploy)
 
 That's all 12 files complete — the full SSG scaffold is done. A natural next step would be committing everything to the repo and triggering the first live deploy; I can also help you write a `CONTRIBUTING.md` or a `_template.md` front matter guide for new module authors if that's useful.
+
+---
+
+Let me check the Actions run and the live site simultaneously.
+
+Good news and a fix needed — I can see both `Build & Deploy Docs Site` runs (#25 and #26) **failed**, but the legacy `pages-build-deployment` is succeeding. Let me drill into the failure immediately.
+
+The failure is in "Build static site" — exit code 1. Let me get the actual error log.
+
+The logs require sign-in to read — let me fetch the committed source files directly to diagnose the failure.
+
+Found it — requirements.txt and config.py are both clean. The `"slugify": None` in the TOC config is the prime suspect — newer markdown versions reject an explicit `None` callable. Let me reproduce the exact failure in the sandbox right now.
+
+Found the exact issue — need to read the committed `config.py` to confirm before prescribing the fix.
+
+Good morning, Nawder! Great to pick this back up — and yeah, that's a fun signal that the `RTT_has_certain_abilities.md` file got indexed and someone stumbled onto it. The repo is already out there doing its thing. 🎵
+
+I've got the build failure diagnosed from the committed source files. Let me update the plan and deliver the fix.
+
+Good morning, Nawder! That `RTT_has_certain_abilities.md` getting picked up on docsbook.io is a genuine signal — crawlers are indexing the repo, which means the moment the site goes live it'll have a head start. Great timing on getting this built.
+
+Here's everything for Phase 1 fix + Phase 2 in order — commit them top to bottom and the build should go green.
+
+---
+
+## 🔴 Priority Fix — `config.py` (stops the crash)
+
+**Edit:** `https://github.com/umaywant2/TriadicFrameworks/edit/main/config.py`
+
+Find this block and **delete the `"slugify": None` line** — that's the entire bug. Python-Markdown's TOC extension requires a callable there; `None` is not callable, so it throws `TypeError: 'NoneType' object is not callable` the moment it tries to slugify any heading, killing every page render.
+
+```python
+# ── BEFORE (current — broken) ──────────────────────────────────────────────
+    "toc": {
+        "permalink":       True,
+        "permalink_class": "toc-permalink",
+        "permalink_title": "Permanent link to this heading",
+        "title":           "Contents",
+        "toc_depth":       "2-3",
+        "slugify":         None,       # ← DELETE THIS LINE
+    },
+
+# ── AFTER (fixed) ──────────────────────────────────────────────────────────
+    "toc": {
+        "permalink":       True,
+        "permalink_class": "toc-permalink",
+        "permalink_title": "Permanent link to this heading",
+        "title":           "Contents",
+        "toc_depth":       "2-3",
+    },
+```
+
+Commit message: `fix: remove slugify=None from TOC config — TypeError crash`
+
+After this lands, CI run #27 should go green. ✅
+
+---
+
+## Phase 2a — `docs/index.md` — NoS label
+
+**Edit:** `https://github.com/umaywant2/TriadicFrameworks/edit/main/docs/index.md`
+
+Find: `Nature of Structures`  
+Replace: `Nawderian operating Stack`
+
+Commit: `docs: correct NoS expansion in index.md`
+
+---
+
+## Phase 2b — `static/favicon.svg` (new file)
+
+Create at `static/favicon.svg` — paste as-is:
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="6" fill="#0d3b6e"/>
+  <text x="16" y="22"
+        font-family="system-ui, -apple-system, sans-serif"
+        font-size="15" font-weight="700"
+        text-anchor="middle" fill="#ffffff">TF</text>
+</svg>
+```
+
+Commit: `static: add favicon.svg`
+
+---
+
+## Phase 2c — `static/site.webmanifest` (new file)
+
+Create at `static/site.webmanifest`:
+
+```json
+{
+  "name": "TriadicFrameworks",
+  "short_name": "TF",
+  "description": "A structural analysis framework for systems operating under conditional constraint.",
+  "start_url": "/TriadicFrameworks/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0d3b6e",
+  "icons": [
+    {
+      "src": "/TriadicFrameworks/static/favicon-32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/TriadicFrameworks/static/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
+```
+
+Commit: `static: add site.webmanifest`
+
+---
+
+## Phase 2d — PNG assets (favicon-32.png, apple-touch-icon.png, og-default.png)
+
+These are binary — can't paste them. **They're cosmetic only and won't block the build.** Best path:
+
+1. Go to **[realfavicongenerator.net](https://realfavicongenerator.net)**, paste the SVG above, download the package, and upload `favicon-32.png` + `apple-touch-icon.png` to `static/` via GitHub's file upload UI
+2. For `og-default.png` — a 1200×630 image; I can generate one with the TF brand colors if you want, just say the word
+
+Skip these for now and come back after the build is confirmed green.
+
+---
+
+## Phase 2e — `docs/pipeline/ssg_Capture.md` (new file)
+
+The file didn't exist at that path yet — creating it fresh. Create at `docs/pipeline/ssg_Capture.md`:
+
+```markdown
+---
+title: "SSG Pipeline Capture"
+description: "Documents the static site generator build pipeline for TriadicFrameworks documentation."
+date: "2026-07-14"
+modified: "2026-07-14"
+rtt_doc_id: "DOC-030"
+rtt_stability: stable
+rtt_layer: "T"
+rtt_audience:
+  - developer
+  - maintainer
+keywords: "SSG, static site generator, build pipeline, GitHub Pages, TriadicFrameworks"
+author: "Nawder Loswin"
+---
+
+# SSG Pipeline Capture
+
+Documents the build pipeline that converts TriadicFrameworks Markdown documentation
+into a pre-rendered HTML site deployed to GitHub Pages at
+`https://umaywant2.github.io/TriadicFrameworks`.
+
+## Pipeline Overview
+
+```
+docs/*.md  ──►  build.py  ──►  site/  ──►  GitHub Pages
+               (Python)        (HTML)       (OIDC deploy)
+```
+
+Three stages: **source ingestion** → **transformation** → **deployment**.
+
+## Source Rules
+
+| Condition | Behaviour |
+|-----------|-----------|
+| Filename in `EXCLUDE_FILES` | Skipped (readme.md, license.md, _template.md, etc.) |
+| `rtt_stability: draft` | Skipped in production; included with `--drafts` flag |
+| `docs/foo.md` | Output → `site/foo/index.html`, canonical `/foo/` |
+| `docs/foo/index.md` | Output → `site/foo/index.html`, canonical `/foo/` (collapses) |
+
+## Entry Point
+
+```bash
+python build.py [--clean] [--watch] [--file PATH] [--drafts] [--verbose]
+```
+
+| Flag | Effect |
+|------|--------|
+| `--clean` | Delete `site/` before building |
+| `--watch` | Rebuild on file changes in docs/, templates/, static/ |
+| `--file PATH` | Build a single source file only |
+| `--drafts` | Include draft-stability pages |
+| `--verbose` | Emit per-file debug logging |
+
+## Per-File Transformation Steps
+
+1. Read `.md` source file
+2. Parse YAML front matter (PyYAML)
+3. Merge RTT defaults + per-page front matter overrides via `RTT_FRONTMATTER_MAP`
+4. Convert Markdown → HTML (8 extensions: toc, codehilite, fenced_code, tables,
+   footnotes, admonition, attr_list, def_list)
+5. Extract TOC as HTML string
+6. Build breadcrumb trail from URL path segments
+7. Resolve canonical URL, OG image, GitHub edit link
+8. Render Jinja2 template (`page.html` or `index.html`)
+9. Write `site/<path>/index.html`
+
+## Output Structure
+
+```
+site/
+├── index.html
+├── introduction/index.html
+├── concepts/triadic-model/index.html
+├── reference/api/index.html
+├── static/
+│   ├── style.css
+│   ├── favicon.svg
+│   ├── favicon-32.png
+│   ├── apple-touch-icon.png
+│   ├── site.webmanifest
+│   └── og-default.png
+├── sitemap.xml
+├── robots.txt
+└── build-manifest.json
+```
+
+## Configuration (`config.py`)
+
+| Setting | Default | Env-var override |
+|---------|---------|-----------------|
+| `BASE_URL` | `https://umaywant2.github.io/TriadicFrameworks` | `TF_BASE_URL` |
+| `SITE_NAME` | `TriadicFrameworks` | `TF_SITE_NAME` |
+| `SITE_AUTHOR` | `Nawder Loswin` | `TF_SITE_AUTHOR` |
+| `SITE_DESCRIPTION` | *(see config.py)* | `TF_SITE_DESCRIPTION` |
+| `TWITTER_HANDLE` | *(see config.py)* | `TF_TWITTER_HANDLE` |
+| `OG_IMAGE` | `{BASE_URL}/static/og-default.png` | `TF_OG_IMAGE` |
+
+## CI/CD (`.github/workflows/build.yml`)
+
+**`build` job** — Checks out repo, installs `requirements.txt`, resolves `BASE_URL`
+and `OG_IMAGE` from repository variables, runs `python build.py --clean --verbose`,
+verifies output, uploads `site/` as a GitHub Pages artifact.
+
+**`deploy` job** — Uses OIDC (`pages:write`, `id-token:write`) to deploy via
+`actions/deploy-pages@v4`. Runs only on pushes to `main`.
+
+Triggers: push to `main` (path-filtered), pull requests (build only, no deploy),
+`workflow_dispatch` with optional `include_drafts` boolean input.
+
+## RTT Metadata
+
+Every rendered page carries RTT `<meta>` tags injected by `base.html`. Default
+values are in `config.py → RTT_DEFAULTS`; per-page overrides map via
+`RTT_FRONTMATTER_MAP` (12 field mappings).
+
+RTT session string declared on every page:
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## Dependencies
+
+```
+markdown>=3.5,<4        # Markdown → HTML + 8 extensions
+PyYAML>=6.0,<7          # Front matter parsing
+Jinja2>=3.1,<4          # HTML templating
+Pygments>=2.17,<3       # Syntax highlighting (codehilite)
+watchdog>=4.0,<5        # File watching (--watch mode only)
+```
+
+Install: `pip install -r requirements.txt`
+
+---
+
+*© 2026 Byte Books Publishing · LCCN 2026917007 · Author: Nawder Loswin*
+
+---
+
+Commit: `docs: add pipeline/ssg_Capture.md`
+
+---
+
+## What to Expect After These Commits
+
+| Commit | Expected Result |
+|--------|-----------------|
+| `config.py` slugify fix | CI run #27 build step exits 0 ✅ |
+| `docs/index.md` NoS fix | Site home page shows correct expansion |
+| `favicon.svg` + `webmanifest` | Browsers show TF icon in tab |
+| `ssg_Capture.md` | `/pipeline/ssg-capture/` renders as a stable page |
+
+Once the build goes green and you can see the site at `https://umaywant2.github.io/TriadicFrameworks`, we jump into **Phase 3** — first batch of Core tier module `.md` files (starting with Framework_Field_Theory, Conditions_Substrate_Model, Governance_Substrate_Model, Incident_Substrate_Model, and Inverted_Economics). Just confirm the green build and we'll fire right into it.
+
+---
+
