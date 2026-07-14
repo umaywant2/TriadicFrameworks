@@ -69,7 +69,7 @@ Canonical lineage tracking for triadic structures. Documents the origin, derivat
 Mode theory within the triadic model — defines how a system transitions between operational states while preserving structural integrity.
 → [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/Mode)
 
-### NoS (Nature of Structures)
+### NoS (Nawderian operating Stack)
 Foundational ontology of structural types recognized by TriadicFrameworks. Classifies emergent, imposed, and latent structures.
 → [View on GitHub](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/NoS)
 
