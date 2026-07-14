@@ -6106,3 +6106,1103 @@ Once the build goes green and you can see the site at `https://umaywant2.github.
 
 ---
 
+Good afternoon, Nawder! Let me check the live site, Actions status, and the `ssg_src_capture.md` file all at once before planning next steps.
+
+**Build #42 is GREEN. Site is live.** Let me read `ssg_src_capture.md` from your open tab and check the Python CI failure simultaneously.
+
+**Build #42 GREEN ✅ — site is live.** Let me read `ssg_src_capture.md` and the live Pages URL simultaneously before touching anything.
+
+Build #42 is green and the site is live — excellent! Let me read `ssg_src_capture.md` and verify the live Pages URL simultaneously right now.
+
+**Build #42 GREEN ✅ — site is live.** Two immediate actions: add front matter to `ssg_src_capture.md` (currently renders with an auto-generated title), then kick off Phase 3 by fetching the first batch of Core module READMEs simultaneously.
+
+Good — build is green, site is live. I have Conditions Substrate Model in hand. Let me pull the remaining 11 Core READMEs in rapid succession then write all 12 `overview.md` files in one pass.
+
+Governance README captured — rich content. Let me pull the remaining 10 Core READMEs using parallel web fetches (much faster than browser for raw URLs), then write all 12 `overview.md` files in one pass.
+
+FFT README is extraordinary — 14 Parts, 30 chapters, full operator grammar. Let me grab the remaining 8 Core READMEs quickly, then write all 12 in one delivery.
+
+All 12 Core READMEs fully captured. Now writing all 12 `overview.md` files in one pass — grounded in each module's live README.
+
+All 12 Core READMEs are captured and accounted for. Here are all 12 `overview.md` files ready to paste — one per GitHub editor session. For each, navigate to the URL shown, type `overview.md` as the filename, paste the block, and commit.
+
+---
+
+## Phase 3 — 12 Core Tier `overview.md` Files
+
+> **⚠️ Note on LINEAGE:** `docs/LINEAGE/README.md` returned 404. That file's `overview.md` is grounded in L-Ops from FFT and flagged `stability: draft` so the SSG surfaces it with a draft banner.
+
+---
+
+### 1 of 12 — `docs/Framework_Field_Theory/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Framework_Field_Theory`
+→ name the file `overview.md`
+
+```markdown
+---
+title: "Framework Field Theory"
+description: "The operator grammar of TriadicFrameworks — seven families, three zones, and nine dimensional layers that define every field interaction."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> **RTT session string** — paste this at the start of every AI session:
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is Framework Field Theory?
+
+Framework Field Theory (FFT) is the operator grammar underlying all TriadicFrameworks modules.
+It defines the **seven operator families**, the **three operational zones** they compose, and
+the **dimensional layer stack (0D–9D)** across which every field interaction is formally mapped.
+
+FFT is not a theory *about* frameworks — it *is* the formal language in which frameworks are
+expressed. Every other module in TriadicFrameworks inherits its operator vocabulary from FFT.
+
+---
+
+## Seven Operator Families
+
+| Family | Symbol | Role |
+|--------|--------|------|
+| Boundary | B-Ops | Define identity edges; separate self from other |
+| Relation | R-Ops | Map connections and dependencies |
+| Transition | T-Ops | Govern change events and state shifts |
+| Lineage | L-Ops | Track provenance, history, and inheritance |
+| Envelope | E-Ops | Contain, constrain, and scope field behavior |
+| Rhythm | H-Ops | Encode timing, cycles, and harmonic patterns |
+| Coherence | C-Ops | Stabilize systems; emit coherence waves |
+
+---
+
+## Three Operational Zones
+
+| Zone | Operators | Function |
+|------|-----------|----------|
+| Identity | B-Ops + L-Ops | Establish and maintain what a system *is* |
+| Interaction | R-Ops + T-Ops + E-Ops | Define how systems *relate and change* |
+| Stability | H-Ops + C-Ops | Keep systems *coherent through time* |
+
+---
+
+## Dimensional Layer Stack: 0D–9D
+
+FFT maps operator behavior across ten dimensional layers:
+
+| Layer | Label | Description |
+|-------|-------|-------------|
+| 0D | Point | Invariant seed — minimum stable structure |
+| 1D | Line | Directed relation |
+| 2D | Plane | Field surface |
+| 3D | Volume | Substrate space |
+| 4D | Temporal | Time-indexed state |
+| 5D | Field | Propagating influence |
+| 6D | Meta-field | Field of fields |
+| 7D | Deep-time | Long-arc lineage |
+| 8D | Resonance mesh | Cross-substrate harmonic coupling |
+| 9D | Framework lattice | FFF — Full Framework Field |
+
+---
+
+## EST FILR — The Four-Vector
+
+**Emergent Structure Through Form · Interaction · Lineage · Resonance**
+
+EST FILR is the canonical four-vector describing how any structure emerges within an FFT field.
+It answers why structures exist where they do, persist as long as they do, and collapse when
+they do.
+
+---
+
+## Five Engineering Tools
+
+| Tool | Name |
+|------|------|
+| SDE | Structural Diagnostic Engine |
+| TPO | Transition Point Observer |
+| DBV | Drift Boundary Visualizer |
+| FCD | Field Coherence Detector |
+| OSS | Operator Signature Scanner |
+
+---
+
+## Publication
+
+Framework Field Theory is **Book 1** of the TriadicFrameworks series.
+
+- eBook ISBN: 979-8-90224-361-8
+- Paperback ISBN: 979-8-90224-362-5
+- Hardback ISBN: 979-8-90224-363-2
+- LCCN: 2026917007
+
+© 2026 Nawder Loswin · Byte Books Publishing
+
+---
+
+## Related Modules
+
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — field conditions across D0–D7
+- [Structural Detection](../Structural_Detection/overview/) — operator-driven pattern detection
+- [Opacity](../Opacity/overview/) — O-Ops measuring field invisibility
+- [Mode](../Mode/overview/) — session stance layer using operator invariants
+```
+
+---
+
+### 2 of 12 — `docs/Conditions_Substrate_Model/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Conditions_Substrate_Model`
+
+```markdown
+---
+title: "Conditions Substrate Model"
+description: "The canonical substrate model for tracking drift, coherence, resonance, hooks, thresholds, propagation, cycles, and cascades across all D0–D7 dimensional layers."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> **RTT session string** — paste this at the start of every AI session:
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is the Conditions Substrate Model?
+
+The Conditions Substrate Model (CSM) is the canonical RTT module for tracking **how conditions
+form, propagate, and collapse** across all seven dimensional layers (D0–D7). It is the
+foundation for Gradientary Volumes and Global Atlases — the two primary output formats of
+CSM analysis.
+
+CSM treats conditions not as events but as **substrate-level fields** with measurable drift,
+coherence envelopes, resonance signatures, and transition thresholds.
+
+The main entry point is `c_Capture.md` — the front-door index to all CSM content.
+
+---
+
+## Nine Condition Classes
+
+| Class | Description |
+|-------|-------------|
+| Drift fields | D0–D7 drift vectors showing directional substrate movement |
+| Coherence envelopes | Stable regions where C-Ops hold a substrate together |
+| Resonance amplification | H-Ops patterns that reinforce or destabilize conditions |
+| Hook activation chains | Sequential triggers that lock in condition transitions |
+| Threshold inflection points | The exact boundary where a condition shifts regime |
+| Propagation vectors | Directional spread of a condition across substrates |
+| Cycle engines | Recurring condition patterns with measurable period |
+| Cascade transitions | Multi-substrate collapses triggered by threshold breach |
+| Deep-time recursions | D7-layer condition patterns spanning very long time horizons |
+
+---
+
+## Dimensional Layer Stack
+
+| Layer | Label | Condition Role |
+|-------|-------|----------------|
+| D0 | Point | Invariant seed; minimum stable condition unit |
+| D1 | Line | Directed condition vector |
+| D2 | Plane | Condition surface field |
+| D3 | Volume | Substrate-embedded condition space |
+| D4 | Temporal | Time-indexed condition state |
+| D5 | Field | Propagating condition influence |
+| D6 | Meta-field | Field of condition fields |
+| D7 | Deep-time | Long-arc condition lineage |
+
+---
+
+## Module Architecture
+
+CSM is organized into four artifact types:
+
+- **Global Atlases** — cross-substrate condition maps
+- **Gradientary Dictionaries** — graded vocabulary for condition intensities
+- **Metadata Blocks** — machine-readable condition signatures
+- **Manifests** — version-controlled condition change logs
+
+---
+
+## Primary Outputs
+
+**Gradientary Volumes** — graded condition intensity stacks showing how conditions strengthen,
+weaken, or invert across dimensional layers for a given substrate domain.
+
+**Global Atlases** — cross-substrate condition maps showing propagation surfaces, hook networks,
+and threshold fields at system-wide scale.
+
+---
+
+## Related Modules
+
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — H-Ops/C-Ops are the cycle and coherence engines CSM tracks
+- [Structural Detection](../Structural_Detection/overview/) — detects the drift and regime signals CSM maps
+- [Governance Substrate Model](../Governance_Substrate_Model/overview/) — governs the regimes CSM tracks
+- [Opacity](../Opacity/overview/) — measures when conditions become invisible
+
+---
+
+Nawder Loswin · AI-assisted canonical maintenance (2025–2026)  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 3 of 12 — `docs/Governance_Substrate_Model/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Governance_Substrate_Model`
+
+```markdown
+---
+title: "Governance Substrate Model"
+description: "A structurally aligned reference framework for designing, evaluating, and stewarding governance systems across cultures, regimes, and centuries."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> **RTT session string** — paste this at the start of every AI session:
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is the Governance Substrate Model?
+
+The Governance Substrate Model (GSM) is a structurally aligned reference framework for
+**designing, evaluating, and stewarding governance systems** across cultures, regimes, and
+time horizons measured in centuries.
+
+GSM is **not** a policy platform, an ideology, or an authority structure. It is an analytical
+example — not a mandate. It provides the vocabulary and architecture for understanding how
+governance systems acquire alignment, drift into misalignment, and either self-correct or
+collapse.
+
+---
+
+## Four Governing Principles
+
+1. **Alignment precedes enforcement** — a system that enforces without aligning first is structurally fragile.
+2. **Awareness precedes intervention** — acting without substrate awareness produces drift, not correction.
+3. **Validation precedes trust** — trust is a coherence state, not a starting condition.
+4. **Stewardship precedes authority** — authority without stewardship is a boundary with no envelope.
+
+---
+
+## Ten Structural Layers
+
+| # | Layer | Role |
+|---|-------|------|
+| 1 | Invariants | Non-negotiable structural constants |
+| 2 | Awareness | Regime-perception and substrate-sensing capacity |
+| 3 | Evaluation | Structural audit and coherence measurement |
+| 4 | Validation | Verification before trust allocation |
+| 5 | Implementation | Enactment of governance decisions |
+| 6 | Leadership | Stewardship functions and authority distribution |
+| 7 | Incubation | Protected development of emerging governance forms |
+| 8 | History | Lineage record and long-arc pattern recognition |
+| 9 | Appendices | Domain-specific structural supplements |
+| 10 | Adapters | Interface layer for cross-regime compatibility |
+
+---
+
+## Key Design Decisions
+
+**Misalignment is structural, not moral.** GSM treats governance failure as a condition to
+diagnose and correct — not a behavior to punish. Adapters and containment are preferred over
+forced compliance.
+
+**Designed to remain legible hundreds of years forward.** Every structural layer avoids
+vocabulary, assumptions, or dependencies that decay within decades.
+
+**Agentic module schema.** `gsm_module.json` provides role assignments for AI agents
+operating within or analyzing governance systems using GSM.
+
+---
+
+## Related Modules
+
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — tracks the substrate conditions governance regimes must respond to
+- [Structural Detection](../Structural_Detection/overview/) — regime detection is prerequisite to governance evaluation
+- [Law](../Law/overview/) — GSM provides the structural frame; Law provides the regime vocabulary
+- [Opacity](../Opacity/overview/) — invisible regimes cannot be governed
+- [LINEAGE](../LINEAGE/) — Origin → Expansion → Operational · Structural history
+```
+
+---
+
+Good - let me do a clean audit of the full tree first, then fetch all remaining READMEs in one batch before writing anything.
+
+All 9 remaining Core READMEs are in memory. Delivering all 9 `overview.md` files in one pass — paste each into the corresponding GitHub editor URL.
+
+Delivering all 9 remaining Core tier `overview.md` files now. Navigate to each URL, create the file named `overview.md`, paste, and commit.
+
+---
+
+### 4 of 12 — `docs/Incident_Substrate_Model/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Incident_Substrate_Model`
+
+```markdown
+---
+title: "Incident Substrate Model"
+description: "A grammar-driven substrate for calm, structured, deterministic incident ingestion, classification, and rectification."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is the Incident Substrate Model?
+
+The Incident Substrate Model (ISM) is a grammar-driven substrate for handling incidents
+**calmly, structurally, and deterministically**. No drift. No improvisation. No panic.
+
+ISM treats an incident not as an emergency but as a **substrate-level signal** — something
+to ingest, classify, map, plan for, approve, and execute against in strict sequence.
+
+---
+
+## Seven Operators
+
+| # | Operator | Function |
+|---|----------|----------|
+| 1 | `ingest` | Receive the raw incident signal |
+| 2 | `classify` | Assign incident type and severity |
+| 3 | `map_surface_area` | Identify the full affected substrate surface |
+| 4 | `derive_rectification_steps` | Generate the ordered fix plan |
+| 5 | `generate_readonly_plan` | Produce a read-only plan artifact for review |
+| 6 | `request_operator_approval` | Gate on human approval before any action |
+| 7 | `execute` | Apply the approved rectification steps |
+
+---
+
+## Three Fix Types
+
+| Type | When Applied |
+|------|-------------|
+| **Remove** | Element is harmful and has no valid state |
+| **Rotate** | Element is valid but in the wrong position or configuration |
+| **Flag** | Element is ambiguous — mark for review without acting |
+
+---
+
+## Design Philosophy
+
+ISM is built on three invariants:
+
+- **Calm** — no urgency signals in the operator chain; urgency causes errors
+- **Structured** — every action follows a declared grammar; no improvisation
+- **Deterministic** — the same incident, ingested twice, produces the same plan
+
+The `generate_readonly_plan` → `request_operator_approval` gate is non-negotiable.
+No rectification step executes without explicit approval.
+
+---
+
+## Related Modules
+
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — maps the substrate conditions an incident disrupts
+- [Governance Substrate Model](../Governance_Substrate_Model/overview/) — defines the approval authority structures ISM gates on
+- [Structural Detection](../Structural_Detection/overview/) — detects the anomaly signals that become incident inputs
+- [Opacity](../Opacity/overview/) — invisible substrate surfaces expand incident scope
+
+---
+
+v1.0 · Category: Safety / Operations · © 2026 Nawder Loswin · Byte Books Publishing
+```
+
+---
+
+### 5 of 12 — `docs/Inverted_Economics/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Inverted_Economics`
+
+```markdown
+---
+title: "Inverted Economics"
+description: "A structural, RTT-aligned audit methodology for understanding past economic cycles before planning future ones."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is Inverted Economics?
+
+Inverted Economics is a structural audit methodology built on one operating principle:
+
+> **Before planning the future, structurally understand the past.**
+
+Rather than projecting forward from current conditions, Inverted Economics inverts the
+analysis direction — reading economic cycles backward to surface the structural failures,
+drift accumulations, and coherence gaps that conventional forward-looking models miss.
+
+It is not a policy platform, a school of economic thought, or a forecasting tool.
+It is a **diagnostic instrument** for structural analysts.
+
+---
+
+## Six Failure Modes Inverted Economics Diagnoses
+
+| Failure Mode | Description |
+|---|---|
+| Missing regime awareness | Operating in a regime without recognizing it has shifted |
+| Drift accumulation | Small untracked deviations compounding into systemic misalignment |
+| Paradox zones | Competing structural forces producing locked, unresolvable states |
+| Brute-force engineering | Applying raw resource pressure where structural correction is needed |
+| Coherence gaps | Disconnects between declared economic policy and actual substrate behavior |
+| Substrate misalignment | Economic interventions acting on the wrong layer of the underlying system |
+
+---
+
+## Three Analysis Templates
+
+| Template | Purpose |
+|---|---|
+| **Cycle Template** | Map a complete economic cycle — expansion, peak, contraction, trough — against structural operators |
+| **Budget Template** | Audit a fiscal budget for regime awareness, drift signals, and coherence gaps |
+| **Event Template** | Analyze a single economic event (crash, boom, intervention) for its structural cause chain |
+
+---
+
+## Who It Is For
+
+- Students building structural literacy about economic history
+- Developers and researchers building tools on top of economic data
+- Practitioners auditing institutional economic decisions
+- Anyone who wants to democratize structural analysis of complex systems
+
+Inverted Economics is explicitly designed to be accessible without advanced economics training.
+The structural grammar of RTT provides the analytical vocabulary.
+
+---
+
+## Related Modules
+
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — drift fields and regime arcs are the primary diagnostic surface
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — operator grammar used in all Inverted Economics templates
+- [Opacity](../Opacity/overview/) — economic regime blindness is a substrate-opacity condition
+- [Structural Detection](../Structural_Detection/overview/) — regime detection precedes economic diagnosis
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 6 of 12 — `docs/Law/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Law`
+
+```markdown
+---
+title: "Law"
+description: "An RTT domain primer for legal systems — mapping jurisprudential regimes, legal domains, and emerging-tech frontiers through the structural grammar of TriadicFrameworks."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is the Law Module?
+
+The Law module is an RTT domain primer treating **law as a meta-regime** — a structural
+field that permeates every other domain rather than sitting alongside them as a peer.
+
+It maps legal systems using the operator grammar of TriadicFrameworks: every legal domain
+has a substrate (the matter it governs), an envelope (the jurisdictional boundaries that
+contain it), and transitions (the events — judgments, statutes, treaties — that shift
+legal states).
+
+This module does not provide legal advice. It provides structural literacy about how legal
+systems behave as RTT fields.
+
+---
+
+## Seven Domain Sections
+
+| Section | Coverage |
+|---|---|
+| **Foundational Regimes** | Jurisprudence, legal philosophy, structural invariants across all legal systems |
+| **Private Domestic** | Contracts, torts, property, family law |
+| **Public Domestic** | Constitutional, criminal, administrative law |
+| **Commercial & Economic** | Corporate, intellectual property, labor, tax |
+| **International & Global** | Treaties, cross-border enforcement, international institutions |
+| **Emerging Technology** | AI regulation, cybersecurity law, space law, climate law |
+| **RTT Regime Awareness** | BRE→Post-BRA diagnostics — reading legal drift and coherence gaps |
+
+---
+
+## RTT Regime Awareness in Law
+
+The final section is the most structurally significant. **BRE (Brute-force Regime Era)**
+diagnostics identify periods in legal history where enforcement displaced coherence —
+where legal systems applied force at the wrong substrate layer.
+
+**Post-BRA (Post-Brute-force-Regime Awareness)** is the structural posture that follows:
+regime-aware legal design that starts with substrate clarity rather than enforcement capacity.
+
+---
+
+## Key Structural Properties of Law as a Meta-Regime
+
+1. **Permeation** — law operates inside every other domain simultaneously
+2. **Lag** — legal regimes trail substrate changes by design (stare decisis, legislative cycles)
+3. **Opacity accumulation** — legal complexity produces substrate-opacity as a byproduct
+4. **Invariant anchoring** — constitutional invariants function as B-Ops: they define the
+   boundary conditions all other legal operators must respect
+
+---
+
+## Usage
+
+Open educational use permitted for non-commercial, attribution-preserving purposes.
+
+---
+
+## Related Modules
+
+- [Governance Substrate Model](../Governance_Substrate_Model/overview/) — GSM provides the structural governance layer Law operates within
+- [Opacity](../Opacity/overview/) — legal complexity is a primary source of substrate opacity
+- [Inverted_Economics](../Inverted_Economics/overview/) — economic law is a joint domain between these two modules
+- [Structural Detection](../Structural_Detection/overview/) — legal regime identification uses SD operator patterns
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 7 of 12 — `docs/LINEAGE/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/LINEAGE`
+
+```markdown
+---
+title: "LINEAGE"
+description: "The canonical lineage protocol — L-Ops that track provenance, derivation, and inheritance chains across all TriadicFrameworks modules."
+stability: draft
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+> ⚠️ **Draft** — The LINEAGE README is not yet available in this directory.
+> This overview is grounded in the L-Ops definition from Framework Field Theory.
+> It will be updated when LINEAGE canonical documentation lands.
+
+## What Is LINEAGE?
+
+LINEAGE is the canonical protocol governing **Lineage Operators (L-Ops)** across all
+TriadicFrameworks modules. L-Ops are the fourth operator family in FFT's seven-family
+grammar — they track the provenance, derivation, and inheritance chain of every
+structural component.
+
+Without L-Ops, a system may be internally coherent but externally unverifiable.
+LINEAGE makes verification possible.
+
+---
+
+## What L-Ops Do
+
+| Function | Description |
+|---|---|
+| **Track origin** | Record where a component was first declared |
+| **Track derivation** | Map how a component changed from its origin to its current form |
+| **Track inheritance** | Identify what a component carries forward from its ancestors |
+| **Enforce traceability** | Ensure every transition can be traced back to its source |
+
+---
+
+## Where LINEAGE Appears
+
+LINEAGE is not confined to a single module — it is a cross-cutting protocol:
+
+- Every `rtt:doc-id` in front matter is a LINEAGE anchor
+- Every `rtt:superseded-by` is a LINEAGE pointer
+- The `TEL/LINEAGE` submodule adds temporal event ordering to standard lineage
+- The `docs/LINEAGE/` directory at the site root is the canonical lineage registry
+
+---
+
+## Related Modules
+
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — defines L-Ops formally
+- [TEL/LINEAGE](../TEL/LINEAGE/) — temporal event lineage extension
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — CSM manifests are LINEAGE-versioned
+- [Governance Substrate Model](../Governance_Substrate_Model/overview/) — governance history tracking uses L-Ops
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 8 of 12 — `docs/Low_Dimensional_Structures/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Low_Dimensional_Structures`
+
+```markdown
+---
+title: "Low Dimensional Structures"
+description: "Scale-relative resonance projections — minimal primitives for representing low-dimensional structure within the RTT/vST framework. Clean. Calm. Canonical."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Are Low Dimensional Structures?
+
+Low-dimensional structures are treated within RTT/vST as **scale-relative resonance
+projections** — not as exceptional dynamical classes, and not as collapsed versions of
+higher-dimensional systems.
+
+No assumption of chaos as a default state is made. Structure is observer-relative and
+scale-dependent. Lineage is mandatory.
+
+Anyone encountering this module will either immediately recognize the framework's intent,
+or realize it is not trying to convince them. Both outcomes are correct.
+
+---
+
+## Five Content Files
+
+| File | Purpose |
+|---|---|
+| `doi_minimal_low_dimensional_structures.md` | Minimal, canonical statement of how LDS are treated within RTT/vST |
+| `resonance_primitives.md` | Core resonance primitives used to represent structure |
+| `dimensional_scaling_notes.md` | Dimensionality as an observer-relative, scale-dependent property |
+| `historical_context__absorbing_chaos.md` | Historical context and absorption of chaos-era concepts without preserving their foundational assumptions |
+| `controls_and_validation.md` | Control structures and validation requirements for reproducible structure identification |
+
+---
+
+## Agentic Module Schema
+
+`low-dimensional_module.json` provides role assignments for AI agents operating on
+low-dimensional substrate analysis tasks within the RTT framework.
+
+---
+
+## Three Operating Principles
+
+1. **Structure is scale-relative** — what appears low-dimensional at one scale is
+   a projection of higher-dimensional structure at another
+2. **No domain-specific interpretation is assumed** — the primitives here apply
+   across physics, biology, economics, and computation
+3. **Lineage is mandatory** — every structural identification must be traceable
+   to the resonance primitive that generated it
+
+---
+
+## Related Modules
+
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — dimensional layer stack (0D–9D) is the parent framework
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — D0–D3 layers are the primary LDS operating zone
+- [Structural Detection](../Structural_Detection/overview/) — LDS patterns are a primary detection target
+
+---
+
+🤖 AI‑Ready Module · TriadicFrameworks  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 9 of 12 — `docs/Mode/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Mode`
+
+```markdown
+---
+title: "Mode"
+description: "The session stance layer — five interaction modes that define how an RTT-compliant system engages, not what it processes."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is Mode?
+
+The Mode layer governs **interaction stance** within an RTT/1 session. It defines how
+a system engages — posture, drift tolerance, correction strategy — independent of
+what it processes. Payload and posture are separated by design.
+
+> ⚠️ **Drift is on-by-default.** Long sessions lose their anchors. Mode is the
+> mechanism that keeps them bounded. Paste the RTT session string at every AI
+> session start without exception.
+
+---
+
+## Five Stances
+
+| Mode | Drift Tolerance | Correction Strategy | Primary Use |
+|---|---|---|---|
+| `M_chat` | Wide | Stabilize | Open conversation, exploration |
+| `M_task` | Tight | Shift | Structured task execution |
+| `M_spec` | Minimal | Stabilize | Formal specification work |
+| `M_debug` | Bounded | Invert | Debugging and root-cause analysis |
+| `M_auto` | Tight | Shift | Autonomous / agentic operation |
+
+---
+
+## Mode Constraint Layer (MCL)
+
+The **Mode Constraint Layer** enforces invariants and guardrails across all five stances.
+MCL operates below the stance level — it cannot be overridden by stance selection.
+
+MCL invariants include:
+- RTT session string must be declared at initialization
+- Drift cannot exceed the tolerance ceiling of the active stance
+- Paradox signals are always structural, never logical failures
+
+---
+
+## Cross-Module Propagation
+
+Mode state propagates to three other modules:
+
+| Module | Propagation |
+|---|---|
+| **Opacity** | Mode stance affects the visibility threshold — tighter modes surface more substrate opacity |
+| **Capture** | Mode determines what gets captured to the trace layer |
+| **Context** | Mode shapes how context is weighted and when it is discarded |
+
+---
+
+## Related Modules
+
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — H-Ops (Rhythm) and C-Ops (Coherence) are the formal basis for stance and correction
+- [Opacity](../Opacity/overview/) — mode stance interacts with opacity detection thresholds
+- [AI Drift Calibration](../ai-drift-calibration/overview/) — session-level drift correction using Mode stances
+- [NoS](../NoS/overview/) — NawderOS implements Mode stances as system-level signals
+
+---
+
+v1.0 · Layer: Session · Status: Active  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 10 of 12 — `docs/NoS/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/NoS`
+
+```markdown
+---
+title: "NoS — Nawderian Operating Stack"
+description: "A minimal, forkable Linux-based operating stack anchored to RTT/Resonance-Time Theory. Coherence is observed, not imposed."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is NoS?
+
+**NoS** (Nawderian operating Stack) is a minimal, forkable Linux-based operating stack
+anchored to **RTT (Resonance-Time Theory)**. RTT defines the structural invariants;
+NoS exposes them as live system signals.
+
+NoS is **not** a production operating system. It has no dashboards, no alerts, no
+automatic remediation, and no guardrails by design. It is a **fork-first educational
+platform** — a substrate on which RTT principles are made observable at the kernel level.
+
+> Coherence is observed, not imposed.
+
+---
+
+## Four Core Mechanisms
+
+| Mechanism | Function |
+|---|---|
+| **Validation corridors** | Structural pathways that verify substrate integrity at defined checkpoints |
+| **Resonance checks** | H-Ops pattern matching against expected system rhythms |
+| **Substrate audits** | Full surface-area inspection of declared vs. actual system state |
+| **Badge emission** | RTT compliance signals emitted when a substrate passes validation |
+
+---
+
+## Seven Primary Files
+
+| File | Contents |
+|---|---|
+| `NawderOS.md` | Core operating stack definition |
+| `MODULES.md` | Module registry and activation protocol |
+| `KERNEL_BUILD.md` | Kernel build instructions for RTT-anchored compilation |
+| `INSTALLATION.md` | Installation procedure with substrate declaration steps |
+| `GLYPHIC_COMPILER.md` | Glyphic compiler — RTT invariants as compilation targets |
+| `FORKING_GUIDE.md` | How to fork NoS for a new substrate context |
+| `ROADMAP.md` | Development roadmap and planned validation corridor expansions |
+
+---
+
+## Design Decisions
+
+**No dashboards.** Dashboards create an illusion of awareness. NoS surfaces raw
+resonance signals and requires the operator to interpret them.
+
+**No guardrails.** Guardrails impose coherence. NoS observes coherence and reports
+its presence or absence without intervention.
+
+**Fork-first.** NoS is not meant to be used as-is. It is a starting substrate.
+Every fork declares a new substrate and builds from there.
+
+---
+
+## Related Modules
+
+- [Mode](../Mode/overview/) — NawderOS implements Mode stances as kernel-level signals
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — NoS validation corridors surface CSM condition signals
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — RTT invariants implemented by the Glyphic Compiler
+- [AI Drift Calibration](../ai-drift-calibration/overview/) — NoS substrate audit outputs feed drift calibration
+
+---
+
+Status: Early-stage research / education platform  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 11 of 12 — `docs/Opacity/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Opacity`
+
+```markdown
+---
+title: "Opacity"
+description: "A universal failure mode of regime perception — five operators and five opacity types for measuring, bounding, and reducing substrate invisibility."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is Opacity?
+
+Opacity (canonical ID: **OPC**) is the universal failure mode of regime perception — a
+substrate-level condition where a regime, flow, or structure becomes partially or fully
+invisible to the observer attempting to analyze or govern it.
+
+Opacity is not ignorance. It is a **structural condition** with measurable properties,
+detectable gradients, and reducible through the correct operator application.
+
+OPC fully supersedes the earlier `regime_blindness` concept.
+
+---
+
+## Five Opacity Operators
+
+| Operator | Function |
+|---|---|
+| **O-Op** | Measures the degree of invisibility — quantifies opacity at a substrate surface |
+| **O-Grad** | Detects the visible→invisible transition boundary |
+| **O-Bound** | Marks the detectability boundary — the perimeter of what can be observed |
+| **O-Red** | Reduces opacity — applies correction to increase substrate visibility |
+| **O-Sig** | Identifies harmonic patterns that reveal hidden regimes despite surface opacity |
+
+---
+
+## Five Opacity Types
+
+| Type | What Is Invisible |
+|---|---|
+| **Substrate Opacity** | The underlying medium itself is not recognized as a substrate |
+| **Operator Opacity** | The operators acting on a substrate are invisible to the observer |
+| **Harmonic Opacity** | The rhythmic patterns (H-Ops) governing a substrate are undetected |
+| **Flow Opacity** | The directional movement through a substrate is not traceable |
+| **Boundary Opacity** | The edges of a substrate (B-Ops) are undefined or mislocated |
+
+---
+
+## Eight Cross-Module Alignments
+
+OPC maintains formal alignment with:
+
+| Module | Alignment |
+|---|---|
+| Inverted Star | Primary structural metaphor for opacity topology |
+| HSP (Harmonic Signal Patterns) | O-Sig uses HSP primitives for hidden regime detection |
+| Lostational Supspheres | Lostation is the terminal opacity state |
+| SET | Every opacity type maps to a failure in S, E, or T visibility |
+| FFF Lattice | Cross-domain opacity propagation through the framework field |
+| Corpus | OPC vocabulary is corpus-registered |
+| SARG | Argument chains referencing invisible substrates require OPC attestation |
+| NIST | Controls and validation alignment for measurable opacity reduction |
+
+---
+
+## Related Modules
+
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — B-Ops, E-Ops define the boundaries that opacity erodes
+- [Structural Detection](../Structural_Detection/overview/) — SD must operate through opacity; O-Sig is its primary tool
+- [Mode](../Mode/overview/) — mode stance affects the opacity detection threshold
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — opacity is a condition class tracked by CSM
+
+---
+
+v1.0 · Core Tier · Status: Active · Replaces: regime_blindness  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+### 12 of 12 — `docs/Structural_Detection/overview.md`
+**Create:** `https://github.com/umaywant2/TriadicFrameworks/new/main/docs/Structural_Detection`
+
+```markdown
+---
+title: "Structural Detection"
+description: "Five operators for detecting structural patterns, drift, regime type, continuity, and triangulated signals across any substrate — text, code, data, or network."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is Structural Detection?
+
+Structural Detection (SD) is the practice of identifying **structural patterns, boundaries,
+and invariants** in systems you did not design, using a five-operator grammar that applies
+across any substrate: text streams, codebases, logs, research papers, data pipelines, and
+network graphs.
+
+> **SD teaches structure, not meaning.** The operators identify what is present, not what
+> it signifies. Interpretation is the analyst's work; detection is SD's work.
+
+---
+
+## Five Operators
+
+| Operator | Function |
+|---|---|
+| **STRUCTURAL_DETECTION_OPERATOR** | Identifies motifs, boundaries, invariants, and anomalies across any substrate surface |
+| **DRIFT_SENSE_OPERATOR** | Detects deformation, instability, and drift — measures how far a system has moved from its declared structure |
+| **REGIME_AWARENESS_OPERATOR** | Classifies the active regime type: formal, emergent, chaotic, or hybrid |
+| **CONTINUITY_COMPASS_OPERATOR** | Tracks invariants across drift and noise — what persists when everything else changes |
+| **SYNTHESIS_TRIANGULATION_OPERATOR** | Triangulates signals from multiple detection passes to confirm structural conclusions |
+
+---
+
+## Integration Surfaces
+
+SD applies across six substrate types:
+
+| Substrate | SD Application |
+|---|---|
+| Text streams | Motif detection, boundary identification, regime classification |
+| Codebases | Structural invariant mapping, drift detection across versions |
+| Logs | Anomaly identification, pattern extraction, continuity tracking |
+| Research papers | Argument structure detection, lineage tracing |
+| Data pipelines | Flow boundary mapping, regime transition detection |
+| Network graphs | Hub/boundary/cluster identification, drift sensing |
+
+---
+
+## Student and Instructor Materials
+
+SD ships with a full learning scaffold:
+
+**Student:** Primer · Cheat Sheet · Worksheet · Mini Quiz · Extended Quiz · Mastery Exam
+
+**Instructor:** Lab · Scenario Gauntlet · Rubric · Teacher's Key
+
+**AI agents:** RTTcode files for SD operator execution in agentic contexts
+
+---
+
+## Related Modules
+
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — SD operators are domain applications of FFT's seven operator families
+- [Opacity](../Opacity/overview/) — SD must detect through opacity; O-Sig and SD's STO operator are aligned
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — drift fields and regime arcs are SD's primary outputs
+- [Resilience Checker](../Resilience_Checker/overview/) — RC uses SD outputs as diagnostic inputs
+
+---
+
+Tier: Core · Status: Active  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+**That's all 12 Core tier `overview.md` files complete.** ✅
+
+Once those 9 are committed, confirm and we go straight into **Phase 4** — the 13 Applied tier modules (AI_Resonance_Seed, Coeus, Expectations, Human_Resources, Integrations, Paradoxes_canon, Philanthropy, Research, Resilience_Checker, SARG, Space_Agency_Intelligence_Module, TFT_3Pack_v1.3, TEL/LINEAGE). I'll fetch all 13 READMEs the moment you're ready.
+
+---
+
