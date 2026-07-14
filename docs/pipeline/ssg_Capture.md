@@ -5569,3 +5569,249 @@ That's **11 of 12 files complete.** The only one left is `.github/workflows/buil
 
 ---
 
+Three fixes needed in the scaffold before writing: wrong `BASE_URL` default (`triadicframeworks.github.io/docs` → `umaywant2.github.io/TriadicFrameworks`), deploy job missing its own `permissions` block, and no PR build path. Writing now.
+
+Here's the final file — three bugs from the scaffold are corrected, and several CI quality-of-life additions are included.
+
+---
+
+### What changed from the scaffold (and why)
+
+| Issue | Scaffold | Fixed |
+|---|---|---|
+| **BASE_URL default** | `triadicframeworks.github.io/docs` | `umaywant2.github.io/TriadicFrameworks` |
+| **deploy job permissions** | Missing — OIDC silently fails | `pages: write` + `id-token: write` scoped to deploy job |
+| **PR builds** | No trigger — broken PRs could merge | `pull_request` trigger added (build only, no deploy) |
+| **requirements.txt in path filter** | Missing — dep changes skipped CI | Added to both `push` and `pull_request` paths |
+| **OG_IMAGE fallback** | Empty string | Derives from `BASE_URL/static/og-default.png` |
+| **Output validation** | None — silent failures | Checks for `site/`, `index.html`, `sitemap.xml`, `robots.txt` |
+| **Job summary** | None | Page count, size, commit SHA, trigger, draft mode |
+| **`--verbose` flag** | Missing | Added to build step |
+| **`--drafts` toggle** | Not wirable | `workflow_dispatch` boolean input wires it in |
+
+---
+
+```yaml
+# ──────────────────────────────────────────────────────────────────────────────
+# TriadicFrameworks — Build & Deploy Docs Site
+#
+# Trigger:        push to main touching source files  → build + deploy
+#                 pull_request against main           → build only (no deploy)
+#                 workflow_dispatch                   → manual build + deploy
+#
+# Pages URL:      https://umaywant2.github.io/TriadicFrameworks
+# Source:         https://github.com/umaywant2/TriadicFrameworks
+#
+# Setup (one time):
+#   Settings → Pages → Source → GitHub Actions
+#   Settings → Secrets and variables → Actions → Variables:
+#     BASE_URL  = https://umaywant2.github.io/TriadicFrameworks  (optional override)
+#     SITE_NAME = TriadicFrameworks                              (optional override)
+#     OG_IMAGE  = https://...                                    (optional override)
+# ──────────────────────────────────────────────────────────────────────────────
+
+name: Build & Deploy Docs Site
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "templates/**"
+      - "static/**"
+      - "build.py"
+      - "config.py"
+      - "requirements.txt"          # rebuild when deps change
+
+  pull_request:
+    branches: [main]
+    paths:
+      - "docs/**"
+      - "templates/**"
+      - "static/**"
+      - "build.py"
+      - "config.py"
+      - "requirements.txt"
+
+  workflow_dispatch:                # allow manual runs from the Actions tab
+    inputs:
+      include_drafts:
+        description: "Include draft pages (--drafts flag)"
+        type: boolean
+        default: false
+        required: false
+
+# One deployment at a time — cancel any in-progress run for the same ref.
+concurrency:
+  group: "pages-${{ github.ref }}"
+  cancel-in-progress: true
+
+# ── Job 1: Build ───────────────────────────────────────────────────────────────
+jobs:
+  build:
+    name: Build static site
+    runs-on: ubuntu-latest
+
+    # Minimal permissions — this job only reads source and uploads an artifact.
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0            # full history so git log dates are accurate
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"              # cache pip downloads between runs
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      # ── Resolve BASE_URL ────────────────────────────────────────────────────
+      # Priority: repository variable → hard-coded canonical default.
+      # OG_IMAGE derives from BASE_URL when not explicitly overridden.
+      - name: Resolve BASE_URL and OG_IMAGE
+        id: urls
+        run: |
+          BASE="${{ vars.BASE_URL }}"
+          if [ -z "$BASE" ]; then
+            BASE="https://umaywant2.github.io/TriadicFrameworks"
+          fi
+          BASE="${BASE%/}"          # strip any accidental trailing slash
+
+          OG="${{ vars.OG_IMAGE }}"
+          if [ -z "$OG" ]; then
+            OG="${BASE}/static/og-default.png"
+          fi
+
+          echo "base_url=${BASE}" >> "$GITHUB_OUTPUT"
+          echo "og_image=${OG}"   >> "$GITHUB_OUTPUT"
+          echo "BASE_URL  = ${BASE}"
+          echo "OG_IMAGE  = ${OG}"
+
+      # ── Run SSG build ───────────────────────────────────────────────────────
+      - name: Build site
+        env:
+          BASE_URL:  ${{ steps.urls.outputs.base_url }}
+          SITE_NAME: ${{ vars.SITE_NAME || 'TriadicFrameworks' }}
+          OG_IMAGE:  ${{ steps.urls.outputs.og_image }}
+        run: |
+          BUILD_FLAGS="--clean --verbose"
+          if [ "${{ github.event.inputs.include_drafts }}" = "true" ]; then
+            BUILD_FLAGS="${BUILD_FLAGS} --drafts"
+            echo "Draft mode enabled via workflow_dispatch input."
+          fi
+          python build.py ${BUILD_FLAGS}
+
+      # ── Verify outputs ──────────────────────────────────────────────────────
+      - name: Verify build outputs
+        run: |
+          # Abort if site/ is missing or empty — catches silent build failures.
+          if [ ! -d "site" ] || [ -z "$(ls -A site)" ]; then
+            echo "::error ::site/ directory is empty or missing — build failed."
+            exit 1
+          fi
+
+          # Must have at least an index.html, sitemap, and robots.txt.
+          for required in site/index.html site/sitemap.xml site/robots.txt; do
+            if [ ! -f "$required" ]; then
+              echo "::error ::Required output missing: ${required}"
+              exit 1
+            fi
+          done
+
+          echo "── site/ contents ───────────────────────────────"
+          find site/ -type f | sort
+          echo ""
+          echo "── sitemap.xml ──────────────────────────────────"
+          cat site/sitemap.xml
+          echo ""
+          echo "── robots.txt ───────────────────────────────────"
+          cat site/robots.txt
+          echo ""
+          echo "── build-manifest.json ──────────────────────────"
+          if [ -f site/build-manifest.json ]; then
+            cat site/build-manifest.json
+          fi
+
+      # ── Job summary ─────────────────────────────────────────────────────────
+      - name: Write job summary
+        if: always()
+        run: |
+          PAGE_COUNT=$(find site/ -name "index.html" | wc -l | tr -d ' ')
+          STATIC_COUNT=$(find site/static/ -type f 2>/dev/null | wc -l | tr -d ' ')
+          SITE_SIZE=$(du -sh site/ 2>/dev/null | cut -f1)
+
+          cat >> "$GITHUB_STEP_SUMMARY" << EOF
+          ## 🏗️ TriadicFrameworks SSG Build
+
+          | | |
+          |---|---|
+          | **BASE_URL** | \`${{ steps.urls.outputs.base_url }}\` |
+          | **Pages built** | ${PAGE_COUNT} |
+          | **Static files** | ${STATIC_COUNT} |
+          | **Output size** | ${SITE_SIZE} |
+          | **Commit** | \`${{ github.sha }}\` |
+          | **Triggered by** | \`${{ github.event_name }}\` |
+          | **Draft mode** | \`${{ github.event.inputs.include_drafts || 'false' }}\` |
+
+          EOF
+
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            echo "> ⚠️ **Pull request** — build verified but not deployed." \
+              >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "> ✅ **Deploying** to ${{ steps.urls.outputs.base_url }}" \
+              >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      # ── Upload Pages artifact ───────────────────────────────────────────────
+      # Only upload when we will actually deploy (push to main or workflow_dispatch).
+      # PR builds verify the build succeeds without uploading.
+      - name: Upload Pages artifact
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site/
+
+# ── Job 2: Deploy ──────────────────────────────────────────────────────────────
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: build
+    runs-on: ubuntu-latest
+
+    # Skip deployment on pull requests — only deploy on push to main or manual dispatch.
+    if: github.event_name != 'pull_request'
+
+    # OIDC permissions scoped to this job only.
+    # The build job above intentionally has only contents:read.
+    permissions:
+      pages:    write
+      id-token: write
+
+    environment:
+      name: github-pages
+      url:  ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+---
+
+### One-time repo setup checklist
+
+Before the first push triggers a successful deploy, do these in Settings:
+
+1. **Pages source** → `Settings → Pages → Build and deployment → Source → GitHub Actions`
+2. **Repository variable** (optional but recommended) → `Settings → Secrets and variables → Actions → Variables → New repository variable`:
+   - `BASE_URL` = `https://umaywant2.github.io/TriadicFrameworks`
+3. **Actions permissions** → `Settings → Actions → General → Workflow permissions → Read and write permissions` (needed for the OIDC Pages deploy)
+
+That's all 12 files complete — the full SSG scaffold is done. A natural next step would be committing everything to the repo and triggering the first live deploy; I can also help you write a `CONTRIBUTING.md` or a `_template.md` front matter guide for new module authors if that's useful.
