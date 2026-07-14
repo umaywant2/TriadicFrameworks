@@ -759,7 +759,7 @@ def main() -> None:
         docs_root = docs_dir.resolve()
         requested = Path(args.file)
         if requested.is_absolute():
-            log.error("--file must be a path relative to %s, got absolute path: %s", docs_root, requested)
+            log.error("--file must be a path relative to %s, got absolute path: %s", docs_root, _safe_for_log(requested))
             sys.exit(1)
         single_file = (docs_root / requested).resolve()
         try:
