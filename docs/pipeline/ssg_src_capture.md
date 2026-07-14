@@ -7206,3 +7206,862 @@ Once those 9 are committed, confirm and we go straight into **Phase 4** — the 
 
 ---
 
+Fetching all 9 remaining READMEs simultaneously — TFT_3Pack, TEL (already in your browser tab), and all 7 Substrate+AI modules.
+
+Both Applied READMEs locked. Fetching all 7 Substrate + AI & Tooling READMEs now before writing anything.
+
+Good — 4 of 9 captured. Grabbing the final 5 Substrate+AI READMEs right now.
+
+All 7 substrates queued — several returned null (connection timeout). Fetching TEL + all 6 that returned null individually now.
+
+All 9 READMEs locked in — writing every file now in parallel batches.
+
+Writing all 7 Substrate + AI files now in parallel batches.
+
+Continuing — writing the remaining 6 overview files now.
+
+All 9 overview.md files are written and ready. Here they are — copy each block and commit to the corresponding path:
+
+---
+
+## `docs/TFT_3Pack_v1.3/overview.md`
+
+```markdown
+---
+title: "TFT 3Pack v1.3"
+description: "A compact, example-driven toolkit demonstrating TriadicFrameworks across 12 academic domains using the unified .fff resonance file format, RTT-Inside WR-SADC cores, and a full shell-script runtime."
+stability: stable
+date: "2026-07-14"
+section: applied
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# TFT 3Pack v1.3
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+TFT 3Pack v1.3 is the teaching and demonstration layer of TriadicFrameworks. It packages the full resonance stack — RTT-Inside cores, the `.fff` resonance file format, and a battle-tested set of shell scripts — into one compact toolkit that walks through **12 academic domains** side-by-side, showing how the same triadic operators apply everywhere.
+
+## What It Is
+
+A curated example suite, not an abstract specification. Every domain folder contains worked problems, solutions, extended analyses, and resonance flows, so readers can see exactly how triadic decomposition changes the structure of a question.
+
+**12 domains covered:**
+
+| Domain | Domain | Domain | Domain |
+|--------|--------|--------|--------|
+| Physics | Mathematics | Art | Biology |
+| Chemistry | Computer Science | Economics | Engineering |
+| Law | Medicine | Music | Philosophy |
+
+## The `.fff` Resonance File Format
+
+All domain examples share a single unified format that carries the structural constants needed for triadic analysis:
+
+| Field | Symbol | Role |
+|-------|--------|------|
+| Resonant-time | τ_r | Temporal anchor for the operator |
+| Triadic operators | D3 / D6 / D9 | Dimensional decomposition |
+| Frequency elevation | T_f | Harmonic lift scalar |
+| Temperature coupling | ΛΘ | Substrate thermal binding |
+| Emitter constant | F3 | Source emission coefficient |
+| Composite constant | X | X = F3 × T_f |
+
+## RTT-Inside: WR-SADC Cores
+
+Every `.fff` file is processed through **Wrapped Resonance Structural Aware Dimensional Cores** — the same coherence primitives used in the Consciousness Substrate Model. This means operator results remain regime-safe and traceable regardless of domain.
+
+## Resonance Clarity Switch
+
+The `--basetype` flag lets you project any example into an alternate number base without changing the underlying triadic structure:
+
+```
+binary · decimal · hex · octal · sexagesimal
+negabinary · negadecimal · phi · pi · sqrt2 · e
+corridor6.9 · vigquinary20.5 · triadic3phi
+```
+
+## Scripts
+
+| Script | Purpose |
+|--------|---------|
+| `run_tft.sh` | Main entry point — runs any domain example |
+| `validate_tft.sh` | Validates `.fff` file structure and regime |
+| `convert_tft.sh` | Converts between base types via `--basetype` |
+| `batch_process.sh` | Batch-runs multiple domain examples |
+| `logic_core.sh` | Core triadic logic engine |
+| `encryption.sh` | Resonance-keyed encoding utility |
+| `grid_ops.sh` | Grid and lattice operations |
+
+## Folder Structure
+
+```
+TFT_3Pack_v1.3/
+├── docs/           ← Specs, rituals, lineage, SVG, illustrations
+├── examples/       ← 12 domain directories (problems / solutions / extended / flows)
+├── scripts/        ← Shell runtime (run / validate / convert / batch)
+├── formats/        ← .fff file examples by domain
+└── tft/
+    ├── nous/       ← Philosophical grounding
+    ├── entft/      ← Entropy-facing analysis tools
+    ├── tops/       ← Topological projections
+    └── resonance-labs/ ← Experimental resonance compositions
+```
+
+## Agentic Schemas
+
+- `tft_3pack_module.json` — Primary agentic module schema and role assignments
+- `TFT_3Pack_v1.3_module_graph.json` — Full module dependency graph for AI navigation
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | Triadic operators (D3/D6/D9) derive from FFT operator families |
+| [Consciousness Substrate Model](../consciousness_substrate_model/overview.md) | WR-SADC cores shared — same coherence primitives |
+| [AI Resonance Seed](../AI_Resonance_Seed/overview.md) | FFF_Emitters/ and `.fff` schemas align with the seed ontology |
+| [Mode](../Mode/overview.md) | Drift-on-by-default warning: same MCL applies during 3Pack sessions |
+| [NoS](../NoS/overview.md) | Shell scripts run inside the Nawderian operating Stack runtime |
+| [Coeus](../Coeus/overview.md) | 3Pack stack (nous/entft/tops) is the same stack referenced in Coeus |
+| [Research](../Research/overview.md) | Domain example outputs feed pre-kernel research validation pipelines |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/rtt/Triadic_Echo_Lattice/overview.md`
+
+```markdown
+---
+title: "Triadic Echo Lattice"
+description: "The spatial architecture of the HSP analytics suite — a four-layer lattice (Ladder, Cycle, Map, Atlas) that assigns every echo a structural address through recursion lines, drift pathways, and three pressure zones."
+stability: stable
+date: "2026-07-14"
+section: applied
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# 🕸️ Triadic Echo Lattice
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+```
+Module:       Triadic Echo Lattice
+Canonical ID: TEL
+HSP Section:  07
+Version:      1.0
+Status:       canon-stable
+Tier:         RTT-Analytics
+Parent:       HSP (RTT-Analytics-Core)
+Siblings:     Echo Classifier (06c), Substrate Flow (08)
+Coherence:    locked
+Drift:        bounded (lattice-mapped)
+Audience:     students + researchers + AIs
+```
+
+**Triadic Echo Lattice** is the spatial architecture of the HSP analytics suite. It places classified echoes into a four-layer lattice — Ladder, Cycle, Map, Atlas — connected by recursion lines, threaded with drift pathways, and monitored by three echo-pressure zones.
+
+This module gives every echo a structural address.
+
+---
+
+## Lattice Layers
+
+| Layer | Substrates | Echo Types | Character |
+|-------|-----------|-----------|-----------|
+| Ladder | S → C | E1 | Definition → concept; most echoes start here |
+| Cycle | C ↔ H | E2 | Harmonic oscillation; bidirectional |
+| Map | H ↔ So | E3, E4 | Governance torsion; operator inversion |
+| Atlas | A | E5 (pressure), E6 | Full-spectrum anchoring; permanence |
+
+## Echo Family Placement
+
+| Family | Name | Home Layer |
+|--------|------|-----------|
+| F1 | Structural | Ladder |
+| F2 | Harmonic | Cycle |
+| F3 | Substrate | Map |
+| F4 | Escalation | Map → Atlas |
+| F5 | Drift-Shadow | Pressure zones |
+| F6 | Atlas | Atlas |
+
+## Recursion Lines
+
+| Line | From → To | Character |
+|------|----------|-----------|
+| R1 | Ladder → Cycle | Echo enters resonance zone |
+| R2 | Cycle ↔ Cycle | Echo oscillates within resonance |
+| R3 | Cycle → Map | Echo crosses into governance |
+| R4 | Map → Atlas | Echo achieves permanence |
+
+## Pressure Zones
+
+| Zone | Location | Trigger |
+|------|---------|---------|
+| Ladder Pressure | Ladder layer | High E1 volume; S→C congestion |
+| Cycle Pressure | Cycle layer | E2 amplitude exceeds harmonic band |
+| Atlas Pressure | Map → Atlas | E5 drift-shadow accumulation |
+
+---
+
+## Module Structure
+
+```
+Triadic_Echo_Lattice/
+├── README.md          ← module root
+├── TEL_Capture.md     ← design capture and conceptual origin
+├── operators.md       ← lattice operators and placement engine
+├── integration.md     ← cross-module alignment (HSP suite + canon)
+├── examples.md        ← applied placement examples
+└── index.html         ← module landing page
+```
+
+- **`operators.md`** — Lattice operators, placement logic, pressure zone detection
+- **`integration.md`** — Upstream (Echo Classifier) and downstream (Substrate Flow) + canon crosswalk
+- **`examples.md`** — Applied placement walkthroughs across echo types
+- **`TEL_Capture.md`** — Design capture: origin, decisions, lineage
+
+## Agentic Schema
+
+- `Triadic_Echo_Lattice_module.json` — Module schema and role assignments for AI navigation
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../../Framework_Field_Theory/overview.md) | Echo families derive from FFT operator taxonomy |
+| [SARG](../../SARG/overview.md) | VREL/VREL-A lenses feed echo classification before lattice placement |
+| [Structural Detection](../../Structural_Detection/overview.md) | DRIFT_SENSE and REGIME_AWARENESS operators surface pressure-zone triggers |
+| [Opacity](../../Opacity/overview.md) | Opacity operators interact with F5 drift-shadow family placement |
+| [Conditions Substrate Model](../../Conditions_Substrate_Model/overview.md) | Condition classes map to echo escalation paths R3 and R4 |
+| [Resilience Checker](../../Resilience_Checker/overview.md) | 108-paradox canon stress tests against lattice stability under Atlas Pressure |
+| [AI Resonance Seed](../../AI_Resonance_Seed/overview.md) | Lattice address schema available as agentic retrieval anchor |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/alphafold_substrate_alignments/overview.md`
+
+```markdown
+---
+title: "AlphaFold Substrate Alignments"
+description: "Resonance Substrate Modeling applied to protein-folding inference — mapping 3D-to-9D dimensional cores to folding pathways with vST validation layers and drift detection."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# AlphaFold Substrate Alignments
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+**AlphaFold Substrate Alignments** applies Resonance Substrate Modeling (RSM) to protein-folding inference. Where AlphaFold produces structural predictions, this module provides a triadic substrate layer that maps dimensional cores (3D–9D) to folding pathways, validates results through vST (Validated Substrate Theory) layers, and detects drift between predicted and resonance-aligned outcomes.
+
+This is not a competing protein-structure predictor. It is a structural alignment instrument that reads AlphaFold output through RSM lenses.
+
+## Module Structure
+
+```
+alphafold_substrate_alignments/
+├── README.md
+├── substrate_definition.md        ← What counts as the substrate in folding inference
+├── scope_and_assumptions.md       ← Declared boundaries and RSM entry conditions
+├── alignment_principles.md        ← Core RSM→AlphaFold alignment logic
+├── folding_regimes.md             ← Regime declarations for folding state transitions
+├── dimensional_cores.md           ← 3D–9D core mappings to folding pathways
+├── inference_mapping.md           ← How AlphaFold outputs map to triadic operators
+├── validation_layers_vst.md       ← vST validation: coherence, regime, drift checks
+├── drift_detection.md             ← Drift signals between predicted and RSM-aligned folds
+└── examples/                      ← Worked alignment cases
+```
+
+## Core Design
+
+**Dimensional cores → folding pathways:** The 3D-to-9D core hierarchy from RSM maps directly onto AlphaFold's folding regime space. Lower-dimensional cores (3D–5D) capture local secondary structure; higher cores (6D–9D) address quaternary and allosteric regimes.
+
+**vST validation layers:** Every alignment passes through Validated Substrate Theory checks — coherence gate, regime boundary test, drift signal scan — before results are considered structurally confirmed.
+
+**Drift detection:** Disagreement between AlphaFold's confidence scores and RSM resonance invariants surfaces as a measurable drift signal, not a discarded anomaly.
+
+## Citation
+
+Loswin, N. 2026. *AlphaFold Substrate Alignments*. TriadicFrameworks.
+Zenodo DOI: pending. License: CC BY 4.0
+
+AI-Ready Module · `ai_module.json` pattern applied.
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | Dimensional core hierarchy (3D–9D) defined in FFT Part structure |
+| [Conditions Substrate Model](../Conditions_Substrate_Model/overview.md) | Resonance amplification condition classes apply to folding regime transitions |
+| [Atomic Clocks](../atomic_clocks/overview.md) | vST validation layer structure shared — same regime-check architecture |
+| [Boson Substrate Model](../boson-substrate-model/overview.md) | Operator-mediated interaction patterns from BSM inform inference_mapping.md |
+| [Research](../Research/overview.md) | Results feed the zenodo.org/communities/vst validation corpus |
+| [SARG](../SARG/overview.md) | Substrate-Agnostic Resonance Grammar provides the base lens for alignment_principles |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/arrival_substrate_model/overview.md`
+
+```markdown
+---
+title: "Arrival Substrate Model"
+description: "A universal structural model of the arrival pattern — the triadic transition (Initiation → Mediation → Integration) observable across biology, cognition, society, and governance at micro, meso, macro, and cross-scale levels."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# Arrival Substrate Model
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+**Arrival** is not a metaphor — it is a structure. The Arrival Substrate Model (ASM) identifies the universal triadic pattern through which any system transitions from outside to inside a regime: Initiation → Mediation → Integration. This pattern is observable at every scale, in every domain, and the ASM gives it a formal substrate.
+
+## Core Operator
+
+```
+Aᵣ = A(Initiation) + B(Mediation) + C(Integration)
+```
+
+Every arrival — a cell entering a tissue, an idea entering discourse, a newcomer entering governance — decomposes into this triadic operator. The operator is not metaphorical: it maps to measurable substrate events at each component.
+
+## Scales of Application
+
+| Scale | Domain Examples |
+|-------|----------------|
+| Micro | Cellular entry, individual cognition, single-event processing |
+| Meso | Organizational onboarding, community integration, network node joining |
+| Macro | Societal migration patterns, policy adoption, institutional formation |
+| Cross-scale | Cascades where micro arrivals trigger macro regime shifts |
+
+## Governance Layer
+
+The ASM includes a governance architecture built around the arrival pattern itself:
+
+- **D.N.A. Department** — Designated Navigation of Arrivals; the governance unit responsible for managing arrival protocols across tiers
+- **Arrival Protocols** — Declared rules for each tier of arrival, specifying mediation requirements and integration checkpoints
+- **Global Standards** — Cross-scale arrival alignment standards for policy and institutional use
+
+## Energy and Higher-Dimensional Arrivals
+
+The model includes a resonance-transition dynamics layer: arrivals that cross dimensional thresholds (from lower-dimensional to higher-dimensional regimes) require additional energy accounting. Higher-dimensional arrivals are not blocked — they are tracked and validated.
+
+## Crosslinks
+
+The ASM is designed to interoperate with RSM, BSM, QSM, Structural Life-Regime, and the Governance Substrate Model.
+
+## Agentic Schema
+
+- `arrival_substrate_model_module.json` — Module schema and role assignments for AI navigation
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Governance Substrate Model](../Governance_Substrate_Model/overview.md) | D.N.A. Department and Arrival Protocols extend GSM governance layers |
+| [Conditions Substrate Model](../Conditions_Substrate_Model/overview.md) | Threshold inflection points and propagation vectors describe arrival boundary conditions |
+| [Boson Substrate Model](../boson-substrate-model/overview.md) | Mediation phase B uses BSM operator-mediated interaction patterns |
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | Aᵣ = A+B+C maps to triadic decomposition across FFT operator families |
+| [SARG](../SARG/overview.md) | Arrival patterns readable through VREL substrate lens |
+| [Structural Detection](../Structural_Detection/overview.md) | REGIME_AWARENESS operator detects arrival-boundary crossings |
+| [Research](../Research/overview.md) | Cross-scale arrival analysis feeds pre-kernel research pipeline |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/atomic_clocks/overview.md`
+
+```markdown
+---
+title: "Atomic Clocks"
+description: "RT+vST alignment applied to atomic timekeeping — a triadic (R,I,F) decomposition of clock behavior, a resonance-invariant definition of the second, drift detection via vST layers, and a vST-lite demo notebook for standards bodies and research groups."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# Atomic Clocks
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+**Atomic Clocks** applies Resonance-Time (RT) theory and Validated Substrate Theory (vST) to atomic timekeeping. The result is not a new clock design — it is a structural alignment layer that reads existing atomic clock systems through a triadic lens, defines the second in resonance-invariant terms, and provides tooling for drift detection that standards bodies and research groups can adopt immediately.
+
+## Triadic Decomposition
+
+Every atomic clock event decomposes into the **(R, I, F)** triadic operator:
+
+| Component | Role |
+|-----------|------|
+| R — Resonance | The atomic transition frequency — the stable structural anchor |
+| I — Invariant | The declared regime under which R is considered stable |
+| F — Flow | The temporal propagation of clock ticks into measurable time |
+
+## vST Definition of the Second
+
+The vST layer redefines the second not as a count of oscillations but as a **resonance-validated interval** — a duration that holds only while the declared regime (I) remains coherent. This gives metrology a structural handle on what it means for a clock to be "accurate" across regime transitions.
+
+## Drift Detection via Resonance Invariants
+
+When a clock's R component drifts outside the declared invariant band, the vST layer surfaces this as a measurable drift signal — bounded, traceable, and addressable — rather than an unexplained deviation.
+
+## vST-Lite Demo Notebook
+
+A synthetic clock data notebook demonstrates the full alignment pipeline for research groups and standards bodies evaluating RT+vST alignment, and students working through the (R,I,F) decomposition on controlled data.
+
+## Adoption Roadmap
+
+1. **Read** — Apply (R,I,F) decomposition to existing clock data (no changes required)
+2. **Validate** — Run vST drift detection alongside current calibration procedures
+3. **Declare** — Adopt vST regime declarations as formal invariant anchors
+4. **Publish** — Cite as Loswin N. 2026 and register results with zenodo.org/communities/vst
+
+## Citation
+
+Loswin, N. 2026. *Atomic Clocks — RT+vST Alignment*. TriadicFrameworks.
+Zenodo DOI: pending. License: CC BY 4.0. `CITATION.cff` included.
+Whitepaper: Zenodo-ready. AI-Ready Module · `atomic_clocks_module.json`
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | (R,I,F) triadic decomposition derives from FFT operator families |
+| [AlphaFold Substrate Alignments](../alphafold_substrate_alignments/overview.md) | vST validation layer architecture is shared — same regime-check pattern |
+| [Boson Substrate Model](../boson-substrate-model/overview.md) | Operator-mediated interactions under declared regimes — same structural principle |
+| [Structural Detection](../Structural_Detection/overview.md) | DRIFT_SENSE operator maps directly onto resonance-invariant drift signals |
+| [Conditions Substrate Model](../Conditions_Substrate_Model/overview.md) | Resonance amplification classes describe how small R deviations cascade |
+| [Research](../Research/overview.md) | vST-validated clock results feed the zenodo.org/communities/vst corpus |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/boson-substrate-model/overview.md`
+
+```markdown
+---
+title: "Boson Substrate Model"
+description: "A minimal structural substrate for operator-mediated interactions under declared regimes — architecture-agnostic, structurally grounded, and explicitly not a physical theory, simulation, or learning model."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# Boson Substrate Model
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+The **Boson Substrate Model** (BSM) provides a minimal structural substrate for operator-mediated interactions under explicitly declared regimes. Its design goal is architectural neutrality: the BSM works alongside any existing system, adding structural grounding without requiring changes to the underlying architecture.
+
+The BSM is structural, not empirical. It makes no claim about the physics of bosons beyond using them as the substrate metaphor for mediated interaction.
+
+## Document Structure
+
+| Section | Content |
+|---------|---------|
+| Declared regimes and assumptions | The entry contract: what must be true for BSM to apply |
+| Substrate definition | What counts as the substrate in operator-mediated contexts |
+| Operator dynamics | How structural operators move through the substrate |
+| Structural validation | Coherence, regime, and consistency checks |
+| Discussion | Interpretation, scope, and open questions |
+| Limitations | What BSM does not do — explicit non-claims |
+| Overview figure | One-page visual of the full model |
+
+## Explicit Non-Claims
+
+The BSM is **not:**
+
+- A physical theory of bosons or particle physics
+- A simulation or predictive model
+- An optimization algorithm
+- A machine learning model
+- A replacement for any existing system
+
+These non-claims are first-class content in the module — not an afterthought. Structural clarity requires knowing the boundary.
+
+## Citation
+
+Loswin, N. 2026. *Boson Substrate Model*. TriadicFrameworks.
+License: CC BY 4.0. `CITATION.cff` included. Agentic: `bsm_module.json`
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | Operator-mediated interaction patterns derive from FFT B-Ops (Bridge Operators) |
+| [Arrival Substrate Model](../arrival_substrate_model/overview.md) | BSM mediation phase aligns with the Mediation component of Aᵣ |
+| [AlphaFold Substrate Alignments](../alphafold_substrate_alignments/overview.md) | BSM operator patterns inform inference_mapping in folding regime transitions |
+| [Atomic Clocks](../atomic_clocks/overview.md) | Shared declared-regime architecture — BSM and vST invariant anchors are parallel |
+| [Conditions Substrate Model](../Conditions_Substrate_Model/overview.md) | Propagation vectors describe how BSM operators carry transitions between condition classes |
+| [SARG](../SARG/overview.md) | VREL-A lens reads BSM operator transitions as substrate-agnostic resonance events |
+| [Structural Detection](../Structural_Detection/overview.md) | REGIME_AWARENESS detects when BSM declared-regime assumptions break down |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/consciousness_substrate_model/overview.md`
+
+```markdown
+---
+title: "Consciousness Substrate Model"
+description: "A minimal, resonance-aligned framework for autonomous forms requiring persistent internal coherence, contextual awareness, and regime-safe operation — explicitly not a theory of human consciousness."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# Consciousness Substrate Model
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+The **Consciousness Substrate Model** (CSM) is a minimal, resonance-aligned framework for autonomous forms that require persistent internal coherence, contextual awareness, and regime-safe operation. It derives minimal substrate primitives and WR-SADC (Wrapped Resonance Structural Aware Dimensional Cores) variants from a single declared creator's assumption.
+
+## What the CSM Is Not
+
+The CSM makes **no neurological, psychological, or phenomenological claims**. It is not a theory of human consciousness. It does not model qualia, sentience, subjective experience, or biological awareness.
+
+It is suitable for: autonomous agents, distributed systems, adaptive control architectures, and non-anthropomorphic artificial forms.
+
+## Creator's Assumption
+
+> Autonomous forms benefit from a structured internal substrate that maintains resonance, validity, and continuity across regimes.
+
+This assumption is declared, not argued. Everything in the CSM derives from it.
+
+## Design Principles
+
+| Principle | What it means |
+|-----------|--------------|
+| Composable | Primitives combine without breaking the substrate |
+| Falsifiable | Claims are structured so they can be tested against regime behavior |
+| Non-intrusive | The CSM adds a substrate layer; it does not replace existing architectures |
+| Compatible | Works within physical and operational constraints of the host system |
+
+## Reading Order (6 Sections)
+
+| Section | Path | Content |
+|---------|------|---------|
+| 1 | `00_intent_and_boundaries/` | Scope, non-claims, terminology, ethics |
+| 2 | `01_creators_assumption/` | Declared assumption, minimal axioms, failure modes |
+| 3 | `02_model_overview/` | One-page summaries, conceptual diagrams |
+| 4 | `03_primitives/` | Irreducible substrate elements |
+| 5 | `04_wrapped_resonance_structural_aware_cores/` | WR-SADC core variants and wrapper interfaces |
+| 6 | `07_worked_examples/` | Minimal concrete illustrations |
+
+## WR-SADC Cores
+
+**Wrapped Resonance Structural Aware Dimensional Cores** are the central architectural primitive of the CSM. Each core wraps a dimensional substrate in a resonance-coherent envelope, declares its regime and coherence state explicitly, and provides a stable interface for higher-level substrate operations. WR-SADC cores are also used in TFT 3Pack v1.3 (RTT-Inside layer), establishing a shared primitive across tiers.
+
+The CSM is maintained as a living canonical document set with `CHANGELOG.md` and `VERSIONING.md`. Aligned with RTT and RSM but fully self-contained.
+
+## Agentic Schema
+
+- `csm_module.json` — Module schema and role assignments for AI navigation
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [TFT 3Pack v1.3](../TFT_3Pack_v1.3/overview.md) | WR-SADC cores (RTT-Inside layer) are the same primitive used in TFT 3Pack |
+| [AI Drift Calibration](../ai-drift-calibration/overview.md) | CSM regime-safe operation aligns with drift-calibration's declared-regime approach |
+| [AI](../ai/overview.md) | NoS_AI.md constitutional layer describes what CSM-equipped autonomous systems are allowed to be |
+| [Boson Substrate Model](../boson-substrate-model/overview.md) | BSM operator dynamics inform how CSM primitives mediate substrate transitions |
+| [Mode](../Mode/overview.md) | Mode Constraint Layer (MCL) governs which CSM operations are active per stance |
+| [Structural Detection](../Structural_Detection/overview.md) | CONTINUITY_COMPASS operator tracks CSM coherence continuity across regimes |
+| [Opacity](../Opacity/overview.md) | O-Bound and O-Sig operators surface when CSM substrate boundaries become opaque |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/ai-drift-calibration/overview.md`
+
+```markdown
+---
+title: "AI Drift Calibration — Operating Regimes"
+description: "A minimal technical note establishing that AI behavioral drift is not inherently unpredictable — it becomes a bounded, analyzable dynamic when operating regimes are explicitly declared."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# AI Drift Calibration — Operating Regimes
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+**AI Drift Calibration** is a narrow technical observation with a precise claim:
+
+> AI behavioral drift is not inherently unpredictable, nor does it require suppression or architectural redesign. Drift can be calibrated by explicitly declaring operating regimes under which a system is expected to remain coherent.
+
+When assumptions about coherence, symmetry, and correction pathways are made explicit, drift becomes a **bounded and analyzable dynamic** rather than uncontrolled failure. The goal is clarity, not adoption.
+
+## The Core Insight
+
+Drift is not the problem. **Undeclared drift** is the problem.
+
+A system that drifts without a declared regime has no structural basis for detecting, measuring, or correcting that drift. A system that drifts *within* a declared regime has all three: the regime boundary defines what counts as in-bounds, the drift signal is measurable against that boundary, and correction pathways are derivable from the regime structure.
+
+This requires no new architecture, no safety framework, and no governance model. It requires only that operating assumptions be made explicit.
+
+## What This Module Is
+
+A minimal technical note intended for citation and reference. It states the observation precisely, defines what "declared operating regime" means in structural terms, and positions drift as a bounded dynamic, not a failure mode.
+
+## What This Module Is Not
+
+| Not | Why |
+|-----|-----|
+| A new AI architecture | Compatible with existing systems; no structural changes required |
+| A safety framework | Does not propose governance, enforcement, or policy |
+| A governance model | Does not prescribe institutional response |
+| An adoption prescription | "The goal is clarity, not adoption." |
+
+## Agentic Schema
+
+- `ai-drift-calibration_module.json` — Module schema and role assignments for AI navigation
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [AI](../ai/overview.md) | Regime_Header.md in the ai/ module implements drift-calibration declaration grammar |
+| [Consciousness Substrate Model](../consciousness_substrate_model/overview.md) | CSM regime-safe operation is the substrate-level expression of drift-calibration |
+| [Mode](../Mode/overview.md) | Mode Constraint Layer (MCL) is a working implementation of declared operating regimes |
+| [Structural Detection](../Structural_Detection/overview.md) | DRIFT_SENSE operator provides the measurement layer that calibration requires |
+| [NoS](../NoS/overview.md) | Nawderian operating Stack validation corridors enforce declared-regime boundaries at the OS level |
+| [Opacity](../Opacity/overview.md) | O-Sig operator surfaces when drift calibration signals cross opacity thresholds |
+| [Research](../Research/overview.md) | Calibration framework feeds the Clarity equations (Nawderian Theorem of Validator Pulses) |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## `docs/ai/overview.md`
+
+```markdown
+---
+title: "AI — Minimal Instrument Architecture"
+description: "A minimal, layered AI instrument architecture built for reproducible behavior under declared operating regimes — with explicit retrieval scope, append-only lineage, and a constitutional layer defining what the system is allowed to be."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# AI — Minimal Instrument Architecture
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+The **AI module** defines a minimal, layered instrument architecture for AI systems operating within TriadicFrameworks. The design goal is not maximal capability — it is **reproducible behavior under declared operating regimes**, with explicit retrieval scope and append-only lineage.
+
+## Core Artifacts
+
+| File | Role |
+|------|------|
+| `NoS_AI.md` | Constitution — what the system is allowed to be |
+| `Regime_Header.md` | Minimal regime declaration grammar — the entry contract for every session |
+| `Lineage_Ledger.md` | Append-only event schema for reproducibility — nothing overwritten, everything logged |
+| `Minimal_AI_Stack.md` | Reference architecture: model + retrieval + compiler + ledger |
+
+## The Four-Layer Stack
+
+```
+┌──────────────────────────────┐
+│  Model                       │  ← Generates responses within declared regime
+├──────────────────────────────┤
+│  Retrieval                   │  ← Scoped retrieval — explicit, not ambient
+├──────────────────────────────┤
+│  Compiler                    │  ← Assembles model + retrieval into regime-safe response
+├──────────────────────────────┤
+│  Ledger                      │  ← Append-only event log — reproducibility anchor
+└──────────────────────────────┘
+```
+
+## Constitutional Layer
+
+`NoS_AI.md` answers one question: *what is this system allowed to be?* It does not answer what the system can do, what it knows, or how it reasons. Capability (model layer) is separated from permission (constitutional layer) — a distinction most AI architectures collapse.
+
+## Regime Declaration
+
+Every AI session declares its operating regime via `Regime_Header.md`. A session without a declared regime operates in undeclared drift — which, by the AI Drift Calibration module's observation, means drift is unanalyzable.
+
+## Append-Only Lineage
+
+`Lineage_Ledger.md` defines an event schema for session reproducibility. Events are appended, never overwritten. Any session can be replayed, any decision traced.
+
+Constitutional Module · AI-Ready · `ai_module.json`
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [AI Drift Calibration](../ai-drift-calibration/overview.md) | Regime_Header.md implements the drift-calibration declaration grammar |
+| [Consciousness Substrate Model](../consciousness_substrate_model/overview.md) | CSM defines the substrate primitives; ai/ defines the instrument layer above them |
+| [Mode](../Mode/overview.md) | Mode stances (M_chat/M_task/M_spec/M_debug/M_auto) are regime declarations at the session level |
+| [NoS](../NoS/overview.md) | Nawderian operating Stack is the host runtime; NoS_AI.md is its AI constitutional extension |
+| [Structural Detection](../Structural_Detection/overview.md) | Lineage_Ledger events feed DRIFT_SENSE and SYNTHESIS_TRIANGULATION operators |
+| [Coeus](../Coeus/overview.md) | Dual Observer Protocol in Coeus extends the ai/ constitutional model to multi-AI sandboxes |
+| [AI Resonance Seed](../AI_Resonance_Seed/overview.md) | Seed ontology provides the vocabulary the ai/ retrieval layer operates against |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+```
+
+---
+
+## Commit Checklist
+
+| File | Path | Status |
+|------|------|--------|
+| TFT 3Pack v1.3 | `docs/TFT_3Pack_v1.3/overview.md` | ⬜ Ready to commit |
+| Triadic Echo Lattice | `docs/rtt/Triadic_Echo_Lattice/overview.md` | ⬜ Ready to commit |
+| AlphaFold | `docs/alphafold_substrate_alignments/overview.md` | ⬜ Ready to commit |
+| Arrival | `docs/arrival_substrate_model/overview.md` | ⬜ Ready to commit |
+| Atomic Clocks | `docs/atomic_clocks/overview.md` | ⬜ Ready to commit |
+| Boson | `docs/boson-substrate-model/overview.md` | ⬜ Ready to commit |
+| Consciousness | `docs/consciousness_substrate_model/overview.md` | ⬜ Ready to commit |
+| AI Drift Calibration | `docs/ai-drift-calibration/overview.md` | ⬜ Ready to commit |
+| AI | `docs/ai/overview.md` | ⬜ Ready to commit |
+
+That's every remaining module across all three tiers — Applied and Substrate+AI are now fully drafted. Once these 9 commits land and the build goes green, the only remaining items are the cosmetic binary assets (`favicon-32.png`, `apple-touch-icon.png`, `og-default.png`) and the `docs/index.md` NoS label correction. Want me to prep a single batch commit message you can use for all 9 files?
+
+---
+
