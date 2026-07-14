@@ -1,6 +1,6 @@
 # Static Site Pipeline 
 
-> Hold that good will a moment... I don't think we've identified the why yet, the root cause, the reason all of our html and meta data and session contexts are falling flat... because we cfhose to render markdown within html, they claim to see it...but I know because you cannot find ANY text from our main source markdown files in SEO's... that was a mistake.
+> Hold that good will a moment... I don't think we've identified the why yet, the root cause, the reason all of our html and meta data and session contexts are falling flat... because we chose to render markdown within html, they claim to see it...but I know because you cannot find ANY text from our main source markdown files in SEO's... that was a mistake.
 
 ---
 
@@ -3751,6 +3751,295 @@ Good — full scaffolded source in hand. Three issues to fix before writing: the
 ---
 
 Ready to move straight into `page.html` next — it's a thin wrapper that just fills `{% block content %}` with `{{ body | safe }}`, but there are a few things worth locking in (article schema propagation, a prev/next nav block for sequential docs, and the `data-no-sidebar` fallback). Say the word and we'll knock it out.
+
+---
+
+`templates/index.html` is done — 259 lines, exported above. Here's what went in beyond the 30-line scaffold:
+
+```
+{% extends "base.html" %}
+
+{# ── Title ──────────────────────────────────────────────────────────────────── #}
+{% block title %}{{ site_name }} — Documentation{% endblock %}
+
+{# ── Breadcrumb suppressed on home page ─────────────────────────────────────── #}
+{% block breadcrumb %}{% endblock %}
+
+{# ── Content ─────────────────────────────────────────────────────────────────── #}
+{% block content %}
+
+{# Split pages into stability tiers once — used in stats and in section loops.   #}
+{# build.py already sorts: stable → draft → deprecated, date desc, title asc.    #}
+{% set stable_pages     = pages | selectattr('rtt_stability', 'equalto', 'stable')     | list %}
+{% set draft_pages      = pages | selectattr('rtt_stability', 'equalto', 'draft')      | list %}
+{% set deprecated_pages = pages | selectattr('rtt_stability', 'equalto', 'deprecated') | list %}
+
+<!-- ── Hero ──────────────────────────────────────────────────────────────────── -->
+<section class="index-hero" aria-labelledby="hero-heading">
+  <h1 id="hero-heading">{{ site_name }}</h1>
+  <p class="lead">{{ site_description }}</p>
+
+  <div class="hero-rtt" aria-label="RTT session string">
+    <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+  </div>
+
+  <nav class="hero-quicklinks" aria-label="Quick links">
+    <a class="hero-link hero-link--primary"
+       href="{{ base_url }}/introduction/">
+      Introduction →
+    </a>
+    <a class="hero-link"
+       href="{{ base_url }}/concepts/triadic-model/">
+      Triadic Model
+    </a>
+    <a class="hero-link"
+       href="{{ base_url }}/reference/api/">
+      API Reference
+    </a>
+    <a class="hero-link hero-link--external"
+       href="https://github.com/umaywant2/TriadicFrameworks"
+       target="_blank" rel="noopener noreferrer">
+      GitHub ↗
+    </a>
+  </nav>
+</section>
+
+<!-- ── Stats bar ─────────────────────────────────────────────────────────────── -->
+<div class="index-stats" aria-label="Documentation statistics">
+  <span class="stat">
+    <strong>{{ pages | length }}</strong> page{{ 's' if pages | length != 1 else '' }}
+  </span>
+  {% if stable_pages %}
+  <span class="stat stat--stable">
+    <strong>{{ stable_pages | length }}</strong> stable
+  </span>
+  {% endif %}
+  {% if draft_pages %}
+  <span class="stat stat--draft">
+    <strong>{{ draft_pages | length }}</strong> draft
+  </span>
+  {% endif %}
+  {% if deprecated_pages %}
+  <span class="stat stat--deprecated">
+    <strong>{{ deprecated_pages | length }}</strong> deprecated
+  </span>
+  {% endif %}
+</div>
+
+<!-- ── Filter ─────────────────────────────────────────────────────────────────── -->
+{% if pages | length > 4 %}
+<div class="index-filter" role="search">
+  <label for="page-filter" class="filter-label">Filter pages</label>
+  <input
+    id="page-filter"
+    class="filter-input"
+    type="search"
+    placeholder="Type to filter by title or description…"
+    aria-controls="page-directory"
+    autocomplete="off"
+    spellcheck="false"
+  />
+  <span class="filter-count" aria-live="polite" aria-atomic="true"></span>
+</div>
+{% endif %}
+
+<!-- ── Page directory ────────────────────────────────────────────────────────── -->
+<div id="page-directory" aria-label="Page directory">
+
+  <!-- Empty state (shown by JS when filter matches nothing) -->
+  <p class="index-empty" hidden aria-live="polite">
+    No pages match <strong class="filter-term"></strong>.
+  </p>
+
+  {# ── Macro: render one page card ──────────────────────────────────────────── #}
+  {# Declared here so it can be called identically for each stability group.     #}
+  {% macro page_card(page) %}
+  <li class="page-card"
+      data-title="{{ page.title | lower }}"
+      data-desc="{{ (page.description or '') | lower }}">
+    <div class="page-card-header">
+      <a class="page-card-title" href="{{ page.url }}">{{ page.title }}</a>
+      <span class="meta-badge stability-{{ page.rtt_stability }}"
+            aria-label="Stability: {{ page.rtt_stability }}">
+        {{ page.rtt_stability | capitalize }}
+      </span>
+    </div>
+    {% if page.description %}
+    <p class="page-card-desc">{{ page.description }}</p>
+    {% endif %}
+    <div class="page-card-meta">
+      {% if page.date %}
+      <time class="meta-date" datetime="{{ page.date }}">{{ page.date }}</time>
+      {% endif %}
+      {% if page.modified and page.modified != page.date %}
+      <span class="meta-modified">Updated {{ page.modified }}</span>
+      {% endif %}
+    </div>
+  </li>
+  {% endmacro %}
+
+  {# ── Stable ─────────────────────────────────────────────────────────────────── #}
+  {% if stable_pages %}
+  <section class="index-section" data-stability="stable"
+           aria-labelledby="section-stable">
+    <h2 id="section-stable" class="index-section-heading">
+      Stable
+      <span class="section-count" aria-label="{{ stable_pages | length }} pages">
+        {{ stable_pages | length }}
+      </span>
+    </h2>
+    <ul class="page-list" role="list">
+      {% for page in stable_pages %}
+      {{ page_card(page) }}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {# ── Draft ──────────────────────────────────────────────────────────────────── #}
+  {% if draft_pages %}
+  <section class="index-section" data-stability="draft"
+           aria-labelledby="section-draft">
+    <h2 id="section-draft" class="index-section-heading">
+      Draft
+      <span class="section-count" aria-label="{{ draft_pages | length }} pages">
+        {{ draft_pages | length }}
+      </span>
+    </h2>
+    <p class="section-note">
+      Draft pages are works-in-progress. Content may change without notice.
+      Run <code>python build.py --drafts</code> to include them in local builds.
+    </p>
+    <ul class="page-list" role="list">
+      {% for page in draft_pages %}
+      {{ page_card(page) }}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {# ── Deprecated ─────────────────────────────────────────────────────────────── #}
+  {% if deprecated_pages %}
+  <section class="index-section" data-stability="deprecated"
+           aria-labelledby="section-deprecated">
+    <h2 id="section-deprecated" class="index-section-heading">
+      Deprecated
+      <span class="section-count" aria-label="{{ deprecated_pages | length }} pages">
+        {{ deprecated_pages | length }}
+      </span>
+    </h2>
+    <p class="section-note">
+      Deprecated pages are kept for reference. Check
+      <code>rtt:superseded-by</code> metadata for the replacement page.
+    </p>
+    <ul class="page-list" role="list">
+      {% for page in deprecated_pages %}
+      {{ page_card(page) }}
+      {% endfor %}
+    </ul>
+  </section>
+  {% endif %}
+
+  {# ── No pages at all ─────────────────────────────────────────────────────────── #}
+  {% if not pages %}
+  <div class="index-empty-build" role="status">
+    <p>No pages have been built yet.</p>
+    <p>Add Markdown files to <code>docs/</code> and run
+       <code>python build.py</code> to generate them.</p>
+  </div>
+  {% endif %}
+
+</div>{# /page-directory #}
+
+{% endblock %}
+
+{# ── Filter script ────────────────────────────────────────────────────────────── #}
+{% block scripts %}
+<script>
+(function () {
+  'use strict';
+
+  var input   = document.getElementById('page-filter');
+  if (!input) return;                       // filter not rendered for small sites
+
+  var cards   = document.querySelectorAll('.page-card');
+  var sections= document.querySelectorAll('.index-section');
+  var empty   = document.querySelector('.index-empty');
+  var counter = document.querySelector('.filter-count');
+  var term    = empty ? empty.querySelector('.filter-term') : null;
+
+  function filter(query) {
+    var q   = query.trim().toLowerCase();
+    var vis = 0;
+
+    cards.forEach(function (card) {
+      var title = card.dataset.title || '';
+      var desc  = card.dataset.desc  || '';
+      var match = !q || title.indexOf(q) !== -1 || desc.indexOf(q) !== -1;
+      card.hidden = !match;
+      if (match) vis++;
+    });
+
+    // Hide section headings when every card inside is hidden
+    sections.forEach(function (section) {
+      var anyVisible = false;
+      section.querySelectorAll('.page-card').forEach(function (c) {
+        if (!c.hidden) anyVisible = true;
+      });
+      section.hidden = !anyVisible;
+    });
+
+    // Empty state
+    if (empty) {
+      empty.hidden = vis > 0 || !q;
+      if (term) term.textContent = '\u201c' + query.trim() + '\u201d';
+    }
+
+    // Live counter
+    if (counter) {
+      counter.textContent = q
+        ? vis + ' of {{ pages | length }} page{{ 's' if pages | length != 1 else '' }}'
+        : '';
+    }
+  }
+
+  input.addEventListener('input', function () { filter(this.value); });
+
+  // Clear on Escape
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') {
+      this.value = '';
+      filter('');
+      this.blur();
+    }
+  });
+})();
+</script>
+{% endblock %}
+```
+
+---
+
+### What's new vs. the scaffold
+
+| Area | Scaffold | Production |
+|---|---|---|
+| **Page grouping** | Flat `{% for page in pages %}` loop | Three `<section>` blocks — Stable → Draft → Deprecated, each hidden when empty |
+| **Macro** | Inline HTML repeated | `{% macro page_card(page) %}` — single definition, called in all three loops |
+| **Stats bar** | None | Total / stable / draft / deprecated counts with per-tier CSS classes |
+| **Hero quick-links** | None | Introduction, Triadic Model, API Reference, GitHub ↗ |
+| **RTT session string** | None | `<code>rtt=1 \| coherence=declared \| drift=bounded \| paradox=structural</code>` in hero |
+| **Filter** | None | Live `<input type="search">` — hides cards and section headings on no-match; suppressed for ≤ 4 pages |
+| **Empty state** | None | `aria-live` paragraph shown by JS when filter matches nothing; separate build-empty state for zero pages |
+| **Accessibility** | None | `aria-labelledby` on every section, `aria-controls` on filter, `aria-live="polite"` on counter + empty state, `role="list"` on `<ul>`, `role="search"` on filter wrapper, `<time datetime>` on dates |
+| **Breadcrumb** | `{% block breadcrumb %}{% endblock %}` | Retained — suppresses breadcrumb on home page |
+| **`{% block scripts %}`** | Not used | Filter JS isolated here so `base.html` can place it before `</body>` |
+
+**Validation:** 19 Jinja2 open/close tags balanced; `ternary` (non-standard filter) replaced with inline `if/else`; all `base.html` variable contract vars accounted for.
+
+---
+
+Three files remain. Natural next step is **`static/style.css`** — it needs to define every class introduced across `base.html` and `index.html` (`.index-hero`, `.hero-quicklinks`, `.index-stats`, `.stat--stable/draft/deprecated`, `.page-card`, `.meta-badge.stability-*`, `.filter-input`, `.index-empty`, etc.). Ready when you are.
 
 ---
 
