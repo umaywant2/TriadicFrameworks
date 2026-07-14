@@ -753,7 +753,11 @@ def main() -> None:
     single_file: Path | None = None
     if args.file:
         docs_root = docs_dir.resolve()
-        single_file = Path(args.file).resolve()
+        requested = Path(args.file)
+        if requested.is_absolute():
+            log.error("--file must be a path relative to %s, got absolute path: %s", docs_root, requested)
+            sys.exit(1)
+        single_file = (docs_root / requested).resolve()
         try:
             single_file.relative_to(docs_root)
         except ValueError:
