@@ -74,4 +74,9 @@ operating within or analyzing governance systems using GSM.
 - [Structural Detection](../Structural_Detection/overview/) — regime detection is prerequisite to governance evaluation
 - [Law](../Law/overview/) — GSM provides the structural frame; Law provides the regime vocabulary
 - [Opacity](../Opacity/overview/) — invisible regimes cannot be governed
-- [LINEAGE](../LINE
+- [LINEAGE](../LINEAGE/) — Origin → Expansion → Operational · Structural history 
+
+---
+
+Nawder Loswin · AI-assisted canonical maintenance (2025–2026)  
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
