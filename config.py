@@ -226,7 +226,6 @@ MARKDOWN_EXT_CONFIGS: dict[str, dict] = {
         "permalink_title": "Permanent link to this heading",
         "title":           "Contents",
         "toc_depth":       "2-3",
-        "slugify":         None,       # None → use the extension default
     },
     "smarty": {
         "smart_dashes":        True,
