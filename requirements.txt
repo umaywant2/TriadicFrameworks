@@ -1,1 +1,25 @@
-pytest
+# TriadicFrameworks SSG — Python dependencies
+# Install:  pip install -r requirements.txt
+# Upgrade:  pip install -r requirements.txt --upgrade
+# Verified against: Python 3.11+
+
+# ── Core (required for every build) ──────────────────────────────────────────
+
+# Markdown → HTML rendering, TOC, front-matter parsing, syntax highlighting
+markdown>=3.5,<4.0
+
+# YAML front-matter block parsing
+PyYAML>=6.0,<7.0
+
+# Jinja2 HTML templating (base.html / page.html / index.html)
+Jinja2>=3.1,<4.0
+
+# Syntax highlighting for codehilite extension (transitive dep of markdown[codehilite])
+Pygments>=2.17,<3.0
+
+# ── Optional (--watch mode only) ──────────────────────────────────────────────
+
+# Cross-platform filesystem event monitoring for incremental rebuilds
+# Only imported when `python build.py --watch` is invoked; safe to omit
+# in CI/CD environments where watch mode is never used.
+watchdog>=4.0,<5.0
