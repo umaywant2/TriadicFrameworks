@@ -725,6 +725,10 @@ examples:
     return p.parse_args()
 
 
+def _safe_for_log(value: object) -> str:
+    return str(value).replace("\r", "").replace("\n", "")
+
+
 def main() -> None:
     args = _parse_args()
 
@@ -752,7 +756,17 @@ def main() -> None:
 
     single_file: Path | None = None
     if args.file:
-        single_file = Path(args.file)
+        docs_root = docs_dir.resolve()
+        requested = Path(args.file)
+        if requested.is_absolute():
+            log.error("--file must be a path relative to %s, got absolute path: %s", docs_root, _safe_for_log(requested))
+            sys.exit(1)
+        single_file = (docs_root / requested).resolve()
+        try:
+            single_file.relative_to(docs_root)
+        except ValueError:
+            log.error("--file must be inside %s, got: %s", docs_root, _safe_for_log(single_file))
+            sys.exit(1)
         if not single_file.exists():
             log.error("File not found: %s", single_file)
             sys.exit(1)
