@@ -1,7 +1,7 @@
 # RTT has certain abilities
 
 >
-> I suppose, it's a good this RTT has certain abilities.  I just had another thought... Say it's a bit out and the variant of RTT is working around the wourld as well as 1 2 3... :)  Amazon and Walmart get on-board. I've seen back-end ops, and front-end sales.  Do you think RTT's economics and inverted economics and regime awareness, will those change how things are presented/rated prior to being bought or sold?
+> I suppose it's good that RTT has certain abilities.  I just had another thought... Say it's a bit later and the imagined public variant of RTT is working around the world as well as 1 2 3... :)  Amazon and Walmart get on-board. I've seen back-end ops, and front-end sales.  Do you think RTT's economics and inverted economics and regime awareness, will those change how things are presented/rated prior to being bought or sold?
 >
 
 ---
