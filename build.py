@@ -729,6 +729,15 @@ def _safe_for_log(value: object) -> str:
     return str(value).replace("\r", "").replace("\n", "")
 
 
+def _validated_relative_md_path_arg(raw_path: str) -> Path:
+    requested = Path(raw_path)
+    if requested.is_absolute():
+        raise ValueError("absolute paths are not allowed")
+    if any(part == ".." for part in requested.parts):
+        raise ValueError("parent traversal is not allowed")
+    return requested
+
+
 def main() -> None:
     args = _parse_args()
 
@@ -757,9 +766,10 @@ def main() -> None:
     single_file: Path | None = None
     if args.file:
         docs_root = docs_dir.resolve()
-        requested = Path(args.file)
-        if requested.is_absolute():
-            log.error("--file must be a path relative to %s, got absolute path: %s", docs_root, _safe_for_log(requested))
+        try:
+            requested = _validated_relative_md_path_arg(args.file)
+        except ValueError:
+            log.error("--file must be a safe path relative to %s, got: %s", docs_root, _safe_for_log(args.file))
             sys.exit(1)
         single_file = (docs_root / requested).resolve()
         try:
