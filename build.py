@@ -725,6 +725,10 @@ examples:
     return p.parse_args()
 
 
+def _safe_for_log(value: object) -> str:
+    return str(value).replace("\r", "").replace("\n", "")
+
+
 def main() -> None:
     args = _parse_args()
 
@@ -761,7 +765,7 @@ def main() -> None:
         try:
             single_file.relative_to(docs_root)
         except ValueError:
-            log.error("--file must be inside %s, got: %s", docs_root, single_file)
+            log.error("--file must be inside %s, got: %s", docs_root, _safe_for_log(single_file))
             sys.exit(1)
         if not single_file.exists():
             log.error("File not found: %s", single_file)
