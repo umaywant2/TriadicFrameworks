@@ -1,3 +1,13 @@
+---
+title: "SSG Pipeline Capture"
+description: "Documents the origin and rationale for the TriadicFrameworks static site generator build pipeline."
+date: "2026-07-14"
+stability: stable
+rtt_doc_id: "DOC-030"
+rtt_stability: stable
+rtt_owner: "core-team"
+---
+
 # Static Site Pipeline 
 
 > Hold that good will a moment... I don't think we've identified the why yet, the root cause, the reason all of our html and meta data and session contexts are falling flat... because we chose to render markdown within html, they claim to see it...but I know because you cannot find ANY text from our main source markdown files in SEO's... that was a mistake.
