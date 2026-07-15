@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>SSG Pipeline Capture | TriadicFrameworks</title>
+  <meta name="description" content="Documents the static site generator build pipeline for TriadicFrameworks documentation." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+<meta name="keywords" content="SSG, static site generator, build pipeline, GitHub Pages, TriadicFrameworks" />
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://umaywant2.github.io/TriadicFrameworks/pipeline/ssg_Capture/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="SSG Pipeline Capture" />
+  <meta property="og:description" content="Documents the static site generator build pipeline for TriadicFrameworks documentation." />
+  <meta property="og:url"         content="https://umaywant2.github.io/TriadicFrameworks/pipeline/ssg_Capture/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://umaywant2.github.io/TriadicFrameworks/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+<meta property="article:published_time" content="2026-07-14" /><meta property="article:modified_time" content="2026-07-14" />
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@TriadicFrameworks" />  <meta name="twitter:title"       content="SSG Pipeline Capture" />
+  <meta name="twitter:description" content="Documents the static site generator build pipeline for TriadicFrameworks documentation." />
+  <meta name="twitter:image"       content="https://umaywant2.github.io/TriadicFrameworks/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="stable" />
+  <meta name="rtt:audience" content="developer, maintainer" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+  <meta name="rtt:doc-id" content="DOC-030" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/pipeline/ssg_Capture.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-15T16:21:06Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "SSG Pipeline Capture",
+    "headline": "SSG Pipeline Capture",
+    "description": "Documents the static site generator build pipeline for TriadicFrameworks documentation.",
+    "url": "https://umaywant2.github.io/TriadicFrameworks/pipeline/ssg_Capture/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://umaywant2.github.io/TriadicFrameworks"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://umaywant2.github.io/TriadicFrameworks"
+    },
+    "datePublished": "2026-07-14",
+    "dateModified": "2026-07-14"  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://umaywant2.github.io/TriadicFrameworks/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://umaywant2.github.io/TriadicFrameworks/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://umaywant2.github.io/TriadicFrameworks/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://umaywant2.github.io/TriadicFrameworks/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://umaywant2.github.io/TriadicFrameworks/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://umaywant2.github.io/TriadicFrameworks/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://umaywant2.github.io/TriadicFrameworks/"
+>
+          Home
+        </a>
+        <a href="https://umaywant2.github.io/TriadicFrameworks/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://umaywant2.github.io/TriadicFrameworks/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://umaywant2.github.io/TriadicFrameworks/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://github.com/umaywant2/TriadicFrameworks"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#pipeline-overview">Pipeline Overview</a></li>
+<li><a href="#source-rules">Source Rules</a></li>
+<li><a href="#entry-point">Entry Point</a></li>
+<li><a href="#per-file-transformation-steps">Per-File Transformation Steps</a></li>
+<li><a href="#output-structure">Output Structure</a></li>
+<li><a href="#configuration-configpy">Configuration (config.py)</a></li>
+<li><a href="#cicd-githubworkflowsbuildyml">CI/CD (.github/workflows/build.yml)</a></li>
+<li><a href="#rtt-metadata">RTT Metadata</a></li>
+<li><a href="#dependencies">Dependencies</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://umaywant2.github.io/TriadicFrameworks/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://umaywant2.github.io/TriadicFrameworks/pipeline/" itemprop="item">
+                <span itemprop="name">Pipeline</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Ssg Capture</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">SSG Pipeline Capture</h1>
+
+          <p class="article-description" itemprop="description">
+            Documents the static site generator build pipeline for TriadicFrameworks documentation.
+          </p>
+
+          <div class="article-meta">
+            <span class="meta-date">
+              Published:
+              <time datetime="2026-07-14" itemprop="datePublished">2026-07-14</time>
+            </span>
+
+            <span class="meta-modified">
+              Updated:
+              <time datetime="2026-07-14" itemprop="dateModified">2026-07-14</time>
+            </span>
+
+            <span class="meta-badge stability-stable"
+                  title="RTT stability: stable">
+              Stable
+            </span>
+
+            <span class="meta-doc-id" title="Document ID">
+              DOC-030
+            </span>
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+
+
+<div class="page-rtt-session" aria-label="RTT AI session declaration">
+  <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+</div>
+
+<h1 id="ssg-pipeline-capture">SSG Pipeline Capture<a class="toc-permalink" href="#ssg-pipeline-capture" title="Permanent link to this heading">&para;</a></h1>
+<p>Documents the build pipeline that converts TriadicFrameworks Markdown documentation<br />
+into a pre-rendered HTML site deployed to GitHub Pages at<br />
+<code>https://umaywant2.github.io/TriadicFrameworks</code>.</p>
+<h2 id="pipeline-overview">Pipeline Overview<a class="toc-permalink" href="#pipeline-overview" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>docs/*.md  ──►  build.py  ──►  site/  ──►  GitHub Pages
+               (Python)        (HTML)       (OIDC deploy)
+</code></pre></div>
+
+<p>Three stages: <strong>source ingestion</strong> → <strong>transformation</strong> → <strong>deployment</strong>.</p>
+<h2 id="source-rules">Source Rules<a class="toc-permalink" href="#source-rules" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Behaviour</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Filename in <code>EXCLUDE_FILES</code></td>
+<td>Skipped (readme.md, license.md, _template.md, etc.)</td>
+</tr>
+<tr>
+<td><code>rtt_stability: draft</code></td>
+<td>Skipped in production; included with <code>--drafts</code> flag</td>
+</tr>
+<tr>
+<td><code>docs/foo.md</code></td>
+<td>Output → <code>site/foo/index.html</code>, canonical <code>/foo/</code></td>
+</tr>
+<tr>
+<td><code>docs/foo/index.md</code></td>
+<td>Output → <code>site/foo/index.html</code>, canonical <code>/foo/</code> (collapses)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="entry-point">Entry Point<a class="toc-permalink" href="#entry-point" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>python<span class="w"> </span>build.py<span class="w"> </span><span class="o">[</span>--clean<span class="o">]</span><span class="w"> </span><span class="o">[</span>--watch<span class="o">]</span><span class="w"> </span><span class="o">[</span>--file<span class="w"> </span>PATH<span class="o">]</span><span class="w"> </span><span class="o">[</span>--drafts<span class="o">]</span><span class="w"> </span><span class="o">[</span>--verbose<span class="o">]</span>
+</code></pre></div>
+
+<table>
+<thead>
+<tr>
+<th>Flag</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--clean</code></td>
+<td>Delete <code>site/</code> before building</td>
+</tr>
+<tr>
+<td><code>--watch</code></td>
+<td>Rebuild on file changes in docs/, templates/, static/</td>
+</tr>
+<tr>
+<td><code>--file PATH</code></td>
+<td>Build a single source file only</td>
+</tr>
+<tr>
+<td><code>--drafts</code></td>
+<td>Include draft-stability pages</td>
+</tr>
+<tr>
+<td><code>--verbose</code></td>
+<td>Emit per-file debug logging</td>
+</tr>
+</tbody>
+</table>
+<h2 id="per-file-transformation-steps">Per-File Transformation Steps<a class="toc-permalink" href="#per-file-transformation-steps" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>Read <code>.md</code> source file</li>
+<li>Parse YAML front matter (PyYAML)</li>
+<li>Merge RTT defaults + per-page front matter overrides via <code>RTT_FRONTMATTER_MAP</code></li>
+<li>Convert Markdown → HTML (8 extensions: toc, codehilite, fenced_code, tables,<br />
+   footnotes, admonition, attr_list, def_list)</li>
+<li>Extract TOC as HTML string</li>
+<li>Build breadcrumb trail from URL path segments</li>
+<li>Resolve canonical URL, OG image, GitHub edit link</li>
+<li>Render Jinja2 template (<code>page.html</code> or <code>index.html</code>)</li>
+<li>Write <code>site/&lt;path&gt;/index.html</code></li>
+</ol>
+<h2 id="output-structure">Output Structure<a class="toc-permalink" href="#output-structure" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>site/
+├── index.html
+├── introduction/index.html
+├── concepts/triadic-model/index.html
+├── reference/api/index.html
+├── static/
+│   ├── style.css
+│   ├── favicon.svg
+│   ├── favicon-32.png
+│   ├── apple-touch-icon.png
+│   ├── site.webmanifest
+│   └── og-default.png
+├── sitemap.xml
+├── robots.txt
+└── build-manifest.json
+</code></pre></div>
+
+<h2 id="configuration-configpy">Configuration (<code>config.py</code>)<a class="toc-permalink" href="#configuration-configpy" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+<th>Env-var override</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BASE_URL</code></td>
+<td><code>https://umaywant2.github.io/TriadicFrameworks</code></td>
+<td><code>TF_BASE_URL</code></td>
+</tr>
+<tr>
+<td><code>SITE_NAME</code></td>
+<td><code>TriadicFrameworks</code></td>
+<td><code>TF_SITE_NAME</code></td>
+</tr>
+<tr>
+<td><code>SITE_AUTHOR</code></td>
+<td><code>Nawder Loswin</code></td>
+<td><code>TF_SITE_AUTHOR</code></td>
+</tr>
+<tr>
+<td><code>SITE_DESCRIPTION</code></td>
+<td><em>(see config.py)</em></td>
+<td><code>TF_SITE_DESCRIPTION</code></td>
+</tr>
+<tr>
+<td><code>TWITTER_HANDLE</code></td>
+<td><em>(see config.py)</em></td>
+<td><code>TF_TWITTER_HANDLE</code></td>
+</tr>
+<tr>
+<td><code>OG_IMAGE</code></td>
+<td><code>{BASE_URL}/static/og-default.png</code></td>
+<td><code>TF_OG_IMAGE</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="cicd-githubworkflowsbuildyml">CI/CD (<code>.github/workflows/build.yml</code>)<a class="toc-permalink" href="#cicd-githubworkflowsbuildyml" title="Permanent link to this heading">&para;</a></h2>
+<p><strong><code>build</code> job</strong> — Checks out repo, installs <code>requirements.txt</code>, resolves <code>BASE_URL</code><br />
+and <code>OG_IMAGE</code> from repository variables, runs <code>python build.py --clean --verbose</code>,<br />
+verifies output, uploads <code>site/</code> as a GitHub Pages artifact.</p>
+<p><strong><code>deploy</code> job</strong> — Uses OIDC (<code>pages:write</code>, <code>id-token:write</code>) to deploy via<br />
+<code>actions/deploy-pages@v4</code>. Runs only on pushes to <code>main</code>.</p>
+<p>Triggers: push to <code>main</code> (path-filtered), pull requests (build only, no deploy),<br />
+<code>workflow_dispatch</code> with optional <code>include_drafts</code> boolean input.</p>
+<h2 id="rtt-metadata">RTT Metadata<a class="toc-permalink" href="#rtt-metadata" title="Permanent link to this heading">&para;</a></h2>
+<p>Every rendered page carries RTT <code>&lt;meta&gt;</code> tags injected by <code>base.html</code>. Default<br />
+values are in <code>config.py → RTT_DEFAULTS</code>; per-page overrides map via<br />
+<code>RTT_FRONTMATTER_MAP</code> (12 field mappings).</p>
+<p>RTT session string declared on every page:</p>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="dependencies">Dependencies<a class="toc-permalink" href="#dependencies" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>markdown&gt;=3.5,&lt;4        # Markdown → HTML + 8 extensions
+PyYAML&gt;=6.0,&lt;7          # Front matter parsing
+Jinja2&gt;=3.1,&lt;4          # HTML templating
+Pygments&gt;=2.17,&lt;3       # Syntax highlighting (codehilite)
+watchdog&gt;=4.0,&lt;5        # File watching (--watch mode only)
+</code></pre></div>
+
+<p>Install: <code>pip install -r requirements.txt</code></p>
+<hr />
+<p><em>© 2026 Byte Books Publishing · LCCN 2026917007 · Author: Nawder Loswin</em></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://umaywant2.github.io/TriadicFrameworks/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/pipeline/ssg_Capture.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://umaywant2.github.io/TriadicFrameworks/">Home</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/introduction/">Introduction</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://github.com/umaywant2/TriadicFrameworks"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/pipeline/ssg_Capture.md</code></span>
+        <span>Built: <time datetime="2026-07-15T16:21:06Z">2026-07-15T16:21:06Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

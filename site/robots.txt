@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://umaywant2.github.io/TriadicFrameworks/sitemap.xml
