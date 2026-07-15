@@ -181,6 +181,8 @@ Each specialization inherits the hats relevant to its domain.
 
 ## **4. The Teslatic Technologist (Personal Identity)**
 
+> “This identity also echoes an earlier chapter: serving as Technologist at the University of Michigan, where the instinct to build substrates and navigate cross-domain systems was first forged — before the shift into IT management and the later, deeper dive into triadic structural work.”
+
 Some practitioners — especially those who combine:
 
 - visionary engineering  
@@ -201,7 +203,7 @@ This term honors:
 - the modern need for cross‑domain synthesis  
 - the triadic resonance that underlies TriadicFrameworks  
 
-It is a personal identity, not a required role.
+One such personal identity that has emerged from walking this path. It is a personal identity, not a required role.
 
 ---
 
