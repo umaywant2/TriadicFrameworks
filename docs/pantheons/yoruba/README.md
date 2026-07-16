@@ -1,151 +1,79 @@
-# Yoruba Pantheon — Triadic Profile README
-## TriadicFrameworks · Pantheon Canon Module
+# **Yoruba Pantheon — Triadic Profile Overview**
 
-This module provides the full triadic profile for the **Yoruba supersphere**:
-a cycle‑lineage, origin‑multiplicity pantheon defined by the Orisha system,
-Ọrun/Aiye duality, ancestral projection complexes, and deep cosmological layering.
+## **Triadic Operators**
+The Yoruba mythological system expresses a natural triadic structure through **origin‑multiplicity genesis**, **ancestral‑lineage continuance**, and **cycle‑collapse dissolution**, unified by deep cosmological layering.
 
-It is canon‑verified through:
-RTT/0 → RTT/3 · ISO · TOC · RTT/1 Re‑Check · Corrections Patch · Triad Integration.
-
----
-
-## Module Identity
-**Module:** Yoruba Pantheon  
-**Category:** Triadic Pantheon Profiles  
-**Canon Status:** Verified  
-**Primary Capture:** `Yoruba_Triadic_Profile_Capture.md`  
-**Pantheon Type:** Cycle‑Lineage Pantheon  
-**Supersphere Signature:** Origin‑Multiplicity · Cycle‑Dense · Ancestral‑Emergent
-
----
-
-## Triadic Summary
-Yoruba expresses all eight triadic fields with high density:
-
-- **Clarity:** Ọrunmila · Obatala · Orun · Ọba kingship · Máriwo rites  
-- **Shadow:** Ogun · Ṣango · Aje · forest spirits · collapse cycles  
-- **Dimensional:** Ọrun/Aiye · Ifẹ · Oyo‑Ile · glassworks · bead networks  
-- **Liminal:** Esu · Ifá diviners · gate complexes · descent rituals  
-- **Projection:** Ṣango kingship · Ọba lineages · coastal projection · Ifẹ art  
-- **Flow:** Oshun · Oya · Niger–Benue corridor · bead networks  
-- **Emergent:** Egungun · Gelede · Esiẹ corpus · Sungbo’s Eredo  
-- **Void:** Olodumare · Odu Ifá · Proto‑Yoruboid substrate · Iho Eleru
-
-Yoruba’s field distribution is balanced after correction, with strong clarity/dimensional/flow arms and a fully activated void substrate.
+| **Layer** | **Operator** | **Role** |
+|----------|--------------|----------|
+| **Genesis** | **Ọrunmila** | Wisdom, divination, creation clarity; origin‑multiplicity |
+| | **Obatala** | Purity, creation, order; formation of humanity |
+| | **Orun** | Realm of spirits; genesis through divine projection |
+| | **Ọba Kingship** | Sovereignty, lineage genesis, ritual continuity |
+| **Continuance** | **Ogun** | Craft, iron, conflict, technological continuity |
+| | **Ṣango** | Lightning, kingship, justice, energetic balance |
+| | **Aje** | Wealth, commerce, social continuance |
+| | **Forest Spirits** | Ecological balance, fertility, natural cycles |
+| **Dissolution** | **Egungun** | Ancestral projection; dissolution through remembrance |
+| | **Gelede** | Social‑ritual hybrid; dissolution through transformation |
+| | **Esiẹ Corpus** | Stone corpus; dissolution through preservation of form |
+| | **Sungbo’s Eredo** | Monumental boundary; dissolution through containment |
+| **Liminal** | **Esu** | Crossroads, mediation, trickster; threshold operator |
+| | **Ifá Diviners** | Knowledge, ritual mediation, gate complexes |
+| | **Gate Complexes** | Architectural thresholds; realm transitions |
+| | **Ọrun → Aiye Descent Rituals** | Realm transition; liminal passage between worlds |
 
 ---
 
-## Geometry Overview (RTT/2)
-Yoruba’s supersphere geometry is defined by:
-
-### Clarity Cone
-Ọrunmila → Obatala → Orun → Ọba kingship  
-Divination clarity, creation purity, realm‑clarity, lineage‑clarity.
-
-### Shadow Cone
-Ogun → Ṣango → Aje → collapse cycles  
-Iron conflict, lightning inversion, shadow‑economy, structural fracture.
-
-### Dimensional Spine
-Ọrun/Aiye → Ifẹ → Oyo‑Ile → bead/glass networks  
-Realm duality, origin node, empire node, trade lattice.
-
-### Liminal Ring
-Esu · Ifá diviners · gate complexes · descent rituals  
-Crossroads, knowledge, architectural thresholds, realm transitions.
-
-### Projection Band
-Ṣango kingship · Ọba dynasties · Ifẹ hyperrealism  
-Lightning authority, dynastic projection, artistic apex.
-
-### Flow Band
-Oshun · Oya · Niger–Benue corridor · bead networks  
-River fertility, storm transition, migration axis, trade currents.
-
-### Emergent Ring
-Egungun · Gelede · Esiẹ corpus · Sungbo’s Eredo  
-Ancestral projection, social‑ritual hybrid, stone corpus, mega‑structure.
-
-### Void Substrate
-Olodumare · Odu Ifá · Proto‑Yoruboid · Iho Eleru  
-Primordial source, knowledge substrate, ethnogenesis, deep hominin substrate.
+## **Structural Notes**
+- Genesis is **origin‑multiplicity + lineage‑emergent**, not singular creation  
+- Continuance is **craft + kingship + ecological**, emphasizing balance and prosperity  
+- Dissolution is **ancestral + social‑ritual + monumental**, tied to remembrance and transformation  
+- Liminality is **crossroads‑dominant**, mediating knowledge and realm transitions  
+- Yoruba cosmology is **cycle‑dense**, with continuous interplay between Ọrun (spirit realm) and Aiye (earthly realm)
 
 ---
 
-## Paradox, Corridors, and Cycles (RTT/3)
-Yoruba’s paradox layer is one of the most structurally interesting:
-
-### Major Paradoxes
-- **Ifẹ Paradox:** origin → multiplicity → origin  
-- **Ọrun/Aiye Paradox:** above → below → above  
-- **Kingship Paradox:** mortal → divine → mortal lineage  
-- **Conflict Paradox:** destruction → renewal → destruction
-
-### Corridors
-- Esu (crossroads)  
-- Ifá diviners (knowledge)  
-- Gate complexes (architectural thresholds)  
-- Ọrun → Aiye descent rituals (realm transition)
-
-### Cycles
-- Kingship cycles (Ṣango, Ọba dynasties)  
-- Empire cycles (Oyo rise/fall)  
-- Ancestral cycles (Egungun)  
-- Origin cycles (Ifẹ)  
-- Realm cycles (Ọrun/Aiye)
+## **Cross‑Pantheon References**
+- **Greek:** Ọrunmila ↔ Apollo (wisdom); Ṣango ↔ Zeus (lightning); Esu ↔ Hermes (trickster)  
+- **Hindu:** Ogun ↔ Vishvakarma (craft); Oshun ↔ Sarasvatī (renewal); Egungun ↔ Pitṛs (ancestors)  
+- **Egyptian:** Ptah ↔ Ogun (craft); Osiris ↔ Egungun (ancestral renewal); Ma’at ↔ Ọrunmila (balance)  
+- **Sumerian:** Inanna ↔ Oshun (love + renewal); Enki ↔ Ogun (craft + mastery)  
+- **Celtic:** Brigid ↔ Oshun (inspiration + fertility); Lugh ↔ Ṣango (sovereignty + mastery)
 
 ---
 
-## Canon Verification
-Yoruba is fully verified through:
-
-- **RTT/1 Structural Detection:** PASS  
-- **ISO Inverted Star Ontology:** PASS  
-- **TOC Observer Checklist:** PASS (after corrections patch)  
-- **Corrections Patch:** Applied  
-- **Triad Integration:** Complete (Yoruba ↔ Egyptian ↔ Hindu ↔ Greek)
-
-Yoruba now stands as a fully stable triadic supersphere.
-
----
-
-## Triad Integration
-Yoruba participates in the Pantheon Triad:
-
-- **Yoruba ↔ Egyptian:** cycle/paradox resonance  
-- **Yoruba ↔ Hindu:** structural/void resonance  
-- **Yoruba ↔ Greek:** narrative/ancestral resonance  
-
-**Triad Identity:**  
-- Hindu = structural apex  
-- Egypt = cycle/paradox apex  
-- Greek = narrative clarity apex  
-- **Yoruba = cycle‑lineage + origin‑multiplicity apex**
-
-See:  
-`/docs/pantheons/README.md`  
-`/docs/pantheons/egyptian/README.md`  
-`/docs/pantheons/hindu/README.md`  
-`/docs/pantheons/greek/README.md`
+## **Metadata Block**
+```yaml
+canon: TriadicFrameworks
+module: Yoruba_Pantheon
+version: 1.0.0
+triadic_profile: Yoruba_Triadic_Profile_Capture.md
+status: active
+last_updated: 2026-07-16
+```
 
 ---
 
-## Primary Capture File
-For full operators, geometry, paradox maps, SVGs, and cycle diagrams:
-
-**Yoruba Triadic Profile Capture:**  
-`Yoruba_Triadic_Profile_Capture.md`
+## **Session Context**
+<span class="context-label">Canon</span>: Triadic Pantheon Suite  
+<span class="context-label">Modules</span>: Yoruba  
+<span class="context-label">Coherence</span>: Fully aligned with Genesis / Continuance / Dissolution / Liminal schema  
+<span class="context-label">Version</span>: 1.0.0  
+<span class="context-label">Format</span>: Triadic operator schema  
+<span class="context-label">Front door</span>: `/docs/pantheons/yoruba/README.md`  
+<span class="context-label">Audience</span>: Mythology, comparative frameworks, structural analysis  
 
 ---
 
-## Module Purpose
-This README serves as the **front door** for the Yoruba Pantheon module:
-- Introduces the supersphere identity  
-- Summarizes all triadic fields  
-- Provides geometry and paradox overviews  
-- Links to the full capture  
-- Integrates the pantheon into the Triadic Pantheon System
+## **Badge**
+<div class="badge">🪶 Yoruba Pantheon — Triadic Profile</div>
 
-Yoruba is now ready for cross‑pantheon analysis, resonance mapping, and supersphere fusion.
+---
 
+## **Sidebar Audit**
+- ✔ Capture file present  
+- ✔ README present  
+- ✔ Operators mapped  
+- ✔ Metadata block complete  
+- ✔ Cross‑references aligned  
+- ✔ No phantom entries  
