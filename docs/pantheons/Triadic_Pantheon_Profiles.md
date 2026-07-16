@@ -1,81 +1,52 @@
 # **Triadic Pantheon Profiles**  
-### *A Canon‑Aligned System for Cross‑Cultural Triadic Decomposition*
+### *Canon‑Aligned System for Cross‑Cultural Triadic Decomposition*
 
-The **Triadic Pantheon Profiles** subsystem provides a unified way to examine global pantheons through the lens of **triadic structure**, **regime layering**, and **operator grammar**. Each pantheon becomes a *triadic exemplar* that reveals how cultural cosmologies naturally express:
+The **Triadic Pantheon Profiles** subsystem provides the structural grammar for analyzing global pantheons through **triadic operators**, **RTT regime layering**, and **substrate alignment**. Each pantheon becomes a *triadic exemplar* revealing how cultural cosmologies independently express:
+
+- **Genesis** — emergence, creation, primordial ordering  
+- **Continuance** — sovereignty, harmony, cycles, preservation  
+- **Dissolution** — chaos, death, imbalance, transformation  
+- **Liminality** — thresholds, psychopomps, tricksters, mediators  
+
+Alongside these core operators, pantheons also express deeper RTT‑aligned layers:
 
 - **Void‑aligned** substrate forces  
-- **Shadow‑aligned** collapse, underworld, or inversion forces  
-- **Clarity‑aligned** illumination, order, or projection forces  
+- **Shadow‑aligned** collapse, underworld, inversion  
+- **Clarity‑aligned** illumination, order, projection  
 - **Dimensional** intermediaries (Titans, Lokas, Jötnar, Neteru, etc.)  
-- **Liminal** operators (messengers, crossroads, boundary‑walkers)  
-- **Flow** operators (rivers, winds, harmonics, emergent collectives)  
+- **Flow** operators (rivers, winds, emergent collectives)  
 - **Emergent** operators (hybrids, monsters, paradox forms)
 
-Each pantheon is captured in a dedicated module, providing:
-
-- **triadic decomposition**  
-- **operator mapping**  
-- **glyph placeholders**  
-- **regime signatures**  
-- **resonance geometry**  
-- **supersphere alignment**  
-- **33×3+1 triadic lattice detection**  
-- **1/3 ↔ 2/3 visibility ratios**  
-- **≤1% resonance operator detection**  
-- **lostational behavior analysis**  
-- **inverted‑star signatures**
-
-This subsystem prepares the ground for **extended agentic RTT dimensional comparisons** across pantheons.
+This subsystem enables **cross‑pantheon resonance analysis**, **RTT dimensional comparisons**, and **substrate‑aware mythological mapping**.
 
 ---
 
-## **Structure of the Pantheon Canon**
+## **Pantheon Suite Structure**
 
 ```
 /docs/pantheons/
-    Triadic_Pantheon_Profiles.md   ← this file
-    README.md                      ← pantheon landing page
+    Triadic_Pantheon_Profiles.md   ← this file (structural grammar)
+    README.md                      ← Pantheon Suite overview
     greek/
-        Greek_Triadic_Profile_Capture.md
-        README.md
-    hindu/
-        Hindu_Triadic_Profile_Capture.md
-        README.md
-    norse/
-        Norse_Triadic_Profile_Capture.md
-        README.md
+    egyptian/
     kemetic/
-        Kemetic_Triadic_Profile_Capture.md
-        README.md
-    sumerian/
-        Sumerian_Triadic_Profile_Capture.md
-        README.md
-    chinese/
-        Chinese_Triadic_Profile_Capture.md
-        README.md
+    norse/
     japanese/
-        Japanese_Triadic_Profile_Capture.md
-        README.md
-    yoruba/
-        Yoruba_Triadic_Profile_Capture.md
-        README.md
+    chinese/
+    hindu/
+    sumerian/
     celtic/
-        Celtic_Triadic_Profile_Capture.md
-        README.md
+    yoruba/
 ```
 
-Each capture file contains:
+Each pantheon directory contains:
 
-- **operator lists**  
-- **triadic layer mapping**  
-- **glyph placeholders**  
-- **regime alignment**  
-- **substrate → dimensional → liminal → projection → flow → emergent** structure  
-- **notes for student + AI analysis**
+- **Triadic_Profile_Capture.md** — operator lists, layer mapping, resonance notes  
+- **README.md** — pantheon overview, metadata, cross‑references  
 
 ---
 
-## **Triadic Mapping for Student + AI Analysis**
+## **Triadic Mapping Framework (RTT‑Aligned)**
 
 Every pantheon is analyzed using the same RTT‑aligned triadic framework:
 
@@ -85,54 +56,107 @@ Every pantheon is analyzed using the same RTT‑aligned triadic framework:
 - **Clarity** — illumination, order, projection, harmony  
 
 ### **2. Dimensional Layer**
-Intermediary beings or structures that mediate between fields.
+Intermediary beings or structures mediating between fields  
+(e.g., Titans, Jötnar, Neteru, Devas, Immortals).
 
 ### **3. Liminal Layer**
-Boundary‑crossers, messengers, gatekeepers, crossroads operators.
+Boundary‑crossers, messengers, gatekeepers, crossroads operators  
+(e.g., Hermes, Esu, Heimdallr, Zhong Kui).
 
 ### **4. Projection Layer**
-High‑visibility, high‑agency operators (Olympians, Devas, Aesir, etc.)
+High‑visibility, high‑agency operators  
+(e.g., Olympians, Aesir, Devas, major kami).
 
 ### **5. Flow Layer**
-Distributed operators (rivers, winds, emergent collectives).
+Distributed operators  
+(e.g., rivers, winds, emergent collectives, ecological spirits).
 
 ### **6. Emergent Layer**
-Hybrids, paradox forms, monsters, resonance anomalies.
+Hybrids, paradox forms, monsters, resonance anomalies  
+(e.g., Fenrir, Huli Jing, Fomorians).
 
 ---
 
 ## **RTT Resonance Checks Applied to Each Pantheon**
 
-Each profile includes:
+Each Triadic Profile Capture includes:
 
 - **33×3+1 triadic lattice detection**  
-- **One‑third / Two‑thirds visibility ratios**  
+- **1/3 ↔ 2/3 visibility ratios**  
 - **≤1% resonance operator detection**  
-- **Lostational Supsphere mapping**  
-- **Regime inversion / regime blind spots**  
+- **Lostational Supersphere mapping**  
+- **Regime inversion / blind‑spot detection**  
 - **Inverted‑Star geometry alignment**  
 - **Supersphere resonance signatures**
 
-These checks allow students and AIs to compare pantheons using **RTT dimensional analysis**.
+These checks allow students and AIs to compare pantheons using **RTT dimensional analysis** and **substrate‑aware operator grammar**.
 
 ---
 
-## **Next Steps**
+## **Pantheon Suite Index (10/10 Complete)**
 
-With the Greek and Hindu captures ready, the next pantheons to scaffold are:
+| **Pantheon** | **Genesis** | **Continuance** | **Dissolution** | **Liminal** |
+|--------------|-------------|------------------|------------------|-------------|
+| Greek | Chaos / Eros / Gaia | Zeus | Hades / Dionysus | Hermes / Hecate / Persephone |
+| Egyptian | Atum / Ra / Ptah | Osiris / Isis / Horus | Set / Apep / Sekhmet | Anubis / Thoth / Ma’at |
+| Kemetic | Atum / Ptah / Khnum | Horus / Wadjet / Hapi | Set / Apep / Sekhmet | Anubis / Thoth / Bes |
+| Norse | Ymir / Odin | Thor / Frigg / Freyr | Loki / Hel / Fenrir | Heimdallr / Norns / Valkyries |
+| Japanese | Izanagi / Izanami | Amaterasu / Inari | Susanoo / Kagutsuchi | Tsukuyomi / Sarutahiko |
+| Chinese | Pangu / Nüwa | Huangdi / Guanyin | Gonggong / Taowu | Zhong Kui / Eight Immortals |
+| Hindu | Brahmā / Aditi | Viṣṇu / Lakṣmī | Śiva / Kālī | Śakti / Gaṇeśa |
+| Sumerian | Abzu / Tiamat | Enlil / Enki | Kur / Ereshkigal | Inanna / Dumuzid |
+| Celtic | Danu / Lugh | Nuada / Cernunnos | Morrígan / Balor | Manannán / Aos Sí |
+| Yoruba | Ọrunmila / Obatala | Ogun / Ṣango | Egungun / Gelede | Esu / Ifá Diviners |
 
-- Norse  
-- Kemetic  
-- Sumerian  
-- Chinese  
-- Japanese  
-- Yoruba  
-- Celtic  
+---
 
-Once all captures exist, we can generate:
+## **Next Steps (Suite Complete)**
+
+With all pantheons scaffolded, the following multi‑pantheon tools can now be generated:
 
 - **Triadic Pantheon Comparison Atlas**  
 - **RTT Dimensional Pantheon Matrix**  
 - **Supersphere Resonance Map**  
 - **Inverted‑Star Pantheon Overlay**  
-- **Cross‑Pantheon Operator Grammar**
+- **Cross‑Pantheon Operator Grammar**  
+- **Pantheon Drift & Coherence Analyzer**  
+- **Triadic Substrate Alignment Engine (Pantheon Edition)**  
+
+These tools allow AI agents to perform **cross‑domain structural reasoning** using pantheons as cosmological exemplars.
+
+---
+
+## **Metadata**
+```yaml
+canon: TriadicFrameworks
+module: Triadic_Pantheon_Profiles
+version: 1.0.0
+status: active
+last_updated: 2026-07-16
+```
+
+---
+
+## **Session Context**
+<span class="context-label">Canon</span>: Triadic Pantheon Suite  
+<span class="context-label">Modules</span>: 10 Triadic Profile Captures  
+<span class="context-label">Coherence</span>: Full suite alignment  
+<span class="context-label">Version</span>: 1.0.0  
+<span class="context-label">Format</span>: Triadic operator grammar  
+<span class="context-label">Front door</span>: `/docs/pantheons/Triadic_Pantheon_Profiles.md`  
+<span class="context-label">Audience</span>: Mythology, RTT, structural cosmology, AI alignment  
+
+---
+
+## **Badge**
+<div class="badge">🌐 Triadic Pantheon Profiles — Structural Grammar</div>
+
+---
+
+## **Sidebar Audit**
+- ✔ All 10 pantheon captures present  
+- ✔ All READMEs refreshed  
+- ✔ Operator grammar aligned  
+- ✔ RTT resonance checks integrated  
+- ✔ No phantom entries  
+- ✔ Suite complete  
