@@ -1,121 +1,139 @@
-# Triadic Pantheon Canon
+# **Triadic Pantheon Canon — Suite Overview**
 
-> **Canon Layer:** Structural Cosmology  
-> **Scope:** Cross-tradition pantheon alignment  
-> **Status:** Active Scaffold — v0.1.0  
-> **Maintainer:** Nawder / Triadic Pantheon Canon Project
-
----
-
-## Overview
-
-The **Triadic Pantheon Canon (TPC)** is a comparative mythological framework that maps the divine figures and cosmological structures of distinct world pantheons onto a shared three-layer architecture. Rather than collapsing traditions into a single synthetic mythology, the TPC preserves each tradition's internal logic while surfacing structural homologies across them.
-
-The canon operates on the premise that sovereign mythological systems independently articulate three irreducible ontological operators — **Genesis**, **Continuance**, and **Dissolution** — and that divine personas, cosmological hierarchies, and ritual mechanics can be read as expressions of these operators at varying scales and resolutions.
+## **Canon Layer:** Structural Cosmology  
+## **Scope:** Cross‑tradition pantheon alignment  
+## **Status:** Active — v1.0.0  
+## **Maintainer:** Nawder Loswin / TriadicFrameworks
 
 ---
 
-## Triadic Architecture
+## **Overview**
+The **Triadic Pantheon Canon (TPC)** is the structural backbone for cross‑tradition cosmological analysis within TriadicFrameworks. It maps global pantheons onto a shared **Genesis → Continuance → Dissolution → Liminal** architecture while preserving each tradition’s internal logic, cultural integrity, and mythic identity.
 
-Every pantheon module within this canon is organized around three canonical layers:
+The canon does **not** collapse traditions into a synthetic mythology.  
+Instead, it reveals **structural homologies** — the deep triadic patterns that recur across civilizations, eras, and cosmological regimes.
 
-| Layer | Operator | Function | Sanskrit Cognate | Greek Cognate |
-|-------|----------|----------|------------------|---------------|
-| **Layer I** | Genesis | Origination; the emergence of form from undifferentiated potential | *Srishti* | *Arkhē* |
-| **Layer II** | Continuance | Sustaining order; the preservation of relational coherence across time | *Sthiti* | *Kosmos* |
-| **Layer III** | Dissolution | Transformative undoing; return to potential; the liminal threshold | *Samhara* | *Khaos* / *Lethe* |
+With all **10 pantheons** now complete, the Pantheon Suite forms a **multi‑domain substrate** that allows AI agents and students to explore:
 
-These layers are **not sequential phases** but co-present aspects of any cosmological moment. A deity, myth, or ritual event may embody a single operator dominantly while participating in the others implicitly.
+- cosmology  
+- anthropology  
+- comparative mythology  
+- RTT regimes  
+- GU operators  
+- OSI‑layer analogies  
+- substrate alignment  
 
----
-
-## Canonical Operators
-
-Each pantheon entry defines its triadic operators — the specific divine figures, forces, or principles that carry the Layer I–III functions within that tradition. Operators are tagged with:
-
-- **Primary Operator (`op:primary`)** — the deity or force most fully expressing the layer's function
-- **Secondary Operator (`op:secondary`)** — a deity whose role partially or contextually overlaps the layer
-- **Liminal Operator (`op:liminal`)** — figures that traverse or mediate between layers (psychopomps, tricksters, threshold deities)
+using a single coherent grammar.
 
 ---
 
-## Repository Structure
+## **Triadic Architecture**
+Every pantheon module is organized around four canonical layers:
 
+| **Layer** | **Operator** | **Function** | **Examples** |
+|----------|--------------|--------------|--------------|
+| **Genesis** | Origination | Emergence of form from undifferentiated potential | Chaos, Pangu, Atum, Izanagi |
+| **Continuance** | Preservation | Sustaining order, harmony, cycles, sovereignty | Zeus, Amaterasu, Horus, Vishnu |
+| **Dissolution** | Transformation | Undoing, chaos, death, imbalance, return to potential | Hades, Susanoo, Set, Shiva |
+| **Liminal** | Mediation | Thresholds, psychopomps, tricksters, realm‑crossers | Hermes, Esu, Heimdallr, Zhong Kui |
+
+These layers are **co‑present**, not sequential.  
+A deity may express multiple operators depending on mythic context, ritual function, or cosmological regime.
+
+---
+
+## **Canonical Operators**
+Each pantheon defines:
+
+- **Primary Operators** — dominant expressions of Genesis, Continuance, Dissolution  
+- **Secondary Operators** — contextual or partial expressions  
+- **Liminal Operators** — mediators between layers (psychopomps, tricksters, gatekeepers)
+
+This operator grammar allows cross‑pantheon comparison without flattening cultural nuance.
+
+---
+
+## **Pantheon Suite Index (10/10 Complete)**
+
+| **Pantheon** | **Status** | **Genesis** | **Continuance** | **Dissolution** | **Liminal** |
+|--------------|------------|-------------|------------------|------------------|-------------|
+| **Greek** | ✅ Active | Chaos / Eros / Gaia | Zeus | Hades / Dionysus | Hermes / Hecate / Persephone |
+| **Egyptian** | ✅ Active | Atum / Ra / Ptah | Osiris / Isis / Horus | Set / Apep / Sekhmet | Anubis / Thoth / Ma’at |
+| **Kemetic** | ✅ Active | Atum / Ptah / Khnum | Horus / Wadjet / Hapi | Set / Apep / Sekhmet | Anubis / Thoth / Bes |
+| **Norse** | ✅ Active | Ymir / Odin | Thor / Frigg / Freyr | Loki / Hel / Fenrir | Heimdallr / Norns / Valkyries |
+| **Japanese (Shinto)** | ✅ Active | Izanagi / Izanami | Amaterasu / Inari | Susanoo / Kagutsuchi | Tsukuyomi / Sarutahiko |
+| **Chinese** | ✅ Active | Pangu / Nüwa | Huangdi / Guanyin | Gonggong / Taowu | Zhong Kui / Eight Immortals |
+| **Hindu** | ✅ Active | Brahmā / Aditi | Viṣṇu / Lakṣmī | Śiva / Kālī | Śakti / Gaṇeśa |
+| **Sumerian** | ✅ Active | Abzu / Tiamat | Enlil / Enki | Kur / Ereshkigal | Inanna / Dumuzid |
+| **Celtic** | ✅ Active | Danu / Lugh | Nuada / Cernunnos | Morrígan / Balor | Manannán / Aos Sí |
+| **Yoruba** | ✅ Active | Ọrunmila / Obatala | Ogun / Ṣango | Egungun / Gelede | Esu / Ifá Diviners |
+
+This table is now the **canonical Pantheon Index** for TriadicFrameworks.
+
+---
+
+## **Alignment Principles**
+1. **Emic Priority** — Each tradition is interpreted internally before cross‑mapping.  
+2. **Structural Homology** — The canon reveals resonance, not synthesis.  
+3. **Operator Fluidity** — Deities shift roles across epochs, texts, and rituals.  
+4. **Metadata Integrity** — All modules carry versioned metadata and sourcing lineage.  
+5. **Liminal Fidelity** — Threshold figures are never forced into a single layer.
+
+---
+
+## **Repository Structure**
 ```
 docs/
 └── pantheons/
-    ├── README.md                  ← This file (Canon overview)
-    ├── OPERATORS.md               ← Operator tag definitions and usage guide
-    ├── METADATA_SCHEMA.md         ← Canonical metadata schema for all modules
+    ├── README.md                  ← Pantheon Suite overview (this file)
+    ├── OPERATORS.md               ← Operator tag definitions
+    ├── METADATA_SCHEMA.md         ← Canon metadata schema
     │
     ├── greek/
-    │   ├── README.md              ← Greek Triadic Profile
-    │   └── capture.md             ← Greek deity capture file
-    │
-    └── hindu/
-        ├── README.md              ← Hindu Triadic Profile (forthcoming)
-        └── capture.md             ← Hindu deity capture file
+    ├── egyptian/
+    ├── kemetic/
+    ├── norse/
+    ├── japanese/
+    ├── chinese/
+    ├── hindu/
+    ├── sumerian/
+    ├── celtic/
+    └── yoruba/
 ```
 
 ---
 
-## Pantheon Index
-
-| Pantheon | Status | Primary Tradition | Layer I Op. | Layer II Op. | Layer III Op. |
-|----------|--------|-------------------|-------------|--------------|---------------|
-| [Greek](./greek/README.md) | ✅ Active | Hellenic Polytheism | Chaos / Eros | Zeus | Hades / Dionysus |
-| Hindu | 🔄 In Progress | Vedic / Puranic | Brahma | Vishnu | Shiva |
-| Norse | 🕐 Planned | Norse Polytheism | Ymir / Odin | Thor | Loki / Ragnarök |
-| Egyptian | 🕐 Planned | Kemetic Religion | Atum | Ra / Ma'at | Osiris / Set |
-| Mesopotamian | 🕐 Planned | Sumerian-Akkadian | Apsu / Tiamat | Enlil | Ereshkigal |
-
----
-
-## Alignment Principles
-
-The TPC adheres to the following interpretive principles:
-
-1. **Emic Priority** — Each tradition is first understood on its own terms before cross-mapping is applied.
-2. **Structural Homology, Not Synthesis** — Mapping reveals resonances; it does not create a super-tradition or flatten differences.
-3. **Layered Operator Fluidity** — Deities may shift dominant operator across mythological epochs, texts, or ritual contexts. Assignments are contextual, not fixed.
-4. **Metadata Integrity** — All canon entries carry versioned metadata to track interpretive decisions and sourcing lineage.
-5. **Liminal Fidelity** — Threshold figures (tricksters, psychopomps, shapeshifters) are given their own operator tag and are never forcibly assigned to a single layer.
-
----
-
-## Metadata Schema
-
-All pantheon README modules conform to the following front-matter schema:
-
+## **Metadata Schema**
 ```yaml
-canon: Triadic Pantheon Canon
+canon: TriadicFrameworks
 module: <pantheon-name>
 version: <semver>
-layer_i_operator: <deity or force>
-layer_ii_operator: <deity or force>
-layer_iii_operator: <deity or force>
-liminal_operators:
-  - <deity>
-primary_sources:
-  - <text or tradition>
-cross_references:
-  - <related pantheon module>
-status: draft | active | archived
+triadic_profile: <capture-file>
+status: active
 last_updated: <ISO 8601 date>
 ```
 
 ---
 
-## Contributing
+## **Contributing**
+To add a new pantheon:
 
-When adding a new pantheon module:
-
-1. Create a folder under `docs/pantheons/<tradition-name>/`
-2. Add a `capture.md` with raw deity profiles and sourcing notes
-3. Draft `README.md` using the Greek module as the canonical template
-4. Register the pantheon in the **Pantheon Index** above
-5. Ensure all metadata fields are populated before marking status `active`
+1. Create `docs/pantheons/<tradition>/`  
+2. Add `<tradition>_Triadic_Profile_Capture.md`  
+3. Add `README.md` using the Suite standard  
+4. Register the pantheon in the Pantheon Index  
+5. Ensure metadata completeness before marking `active`
 
 ---
 
-*Triadic Pantheon Canon — structured for depth, built for alignment.*
+## **Pantheon Suite — Multi‑Domain Substrate**
+The Pantheon Suite is now part of the TriadicFrameworks **multi‑tool** set:
+
+- **Multi‑Theory**  
+- **Multi‑Domain**  
+- **Multi‑Framework**  
+- **Multi‑Language (docsbook)**  
+- **Multi‑Regime (RTT)**  
+- **Multi‑Pantheon**
+
+It enables AI agents to traverse mythic, cultural, cosmological, and computational substrates using a single triadic grammar — a structural Rosetta Stone for alignment.
