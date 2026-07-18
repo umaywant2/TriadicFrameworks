@@ -67,7 +67,7 @@ BCP-47 language tag written to <html lang="…">.  Used by screen readers and
 search-engine language clustering.  Examples: "en", "en-US", "fr", "de".
 """
 
-TWITTER_HANDLE: str = os.getenv("TWITTER_HANDLE", "@TriadicFrameworks")
+TWITTER_HANDLE: str = os.getenv("TWITTER_HANDLE", "@NawderLoswin")
 """
 Value of <meta name="twitter:site">.  Must include the leading @ symbol.
 Leave the env var blank ("") to suppress the tag without modifying this file.
