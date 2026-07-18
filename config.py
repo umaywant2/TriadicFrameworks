@@ -19,7 +19,7 @@ resolved relative to this file — never override them with env vars, because
 absolute paths break portability across machines and containers.
 
 Quick-start override examples (shell / GitHub Actions env:):
-    BASE_URL=https://umaywant2.github.io/TriadicFrameworks python build.py
+    BASE_URL=https://www.triadicframeworks.org python build.py
     SITE_NAME="TF Docs"  python build.py --clean
 """
 
@@ -80,7 +80,7 @@ Leave the env var blank ("") to suppress the tag without modifying this file.
 
 BASE_URL: str = os.getenv(
     "BASE_URL",
-    "https://umaywant2.github.io/TriadicFrameworks",
+    "https://www.triadicframeworks.org",
 ).rstrip("/")
 """
 Root URL of the deployed site — no trailing slash.

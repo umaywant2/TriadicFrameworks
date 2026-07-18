@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>The Triadic Model | TriadicFrameworks</title>
+  <meta name="description" content="The canonical three-layer architecture of TriadicFrameworks — SET decomposition, dimensional substrate stack, operator families, and the Observer layer." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+<meta name="keywords" content="triadic model, SET decomposition, substrate, envelope, transition, operator families, dimensional layers, D0-D7, coherence, drift, RTT, FFF" />
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://umaywant2.github.io/TriadicFrameworks/concepts/triadic-model/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="The Triadic Model" />
+  <meta property="og:description" content="The canonical three-layer architecture of TriadicFrameworks — SET decomposition, dimensional substrate stack, operator families, and the Observer layer." />
+  <meta property="og:url"         content="https://umaywant2.github.io/TriadicFrameworks/concepts/triadic-model/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://umaywant2.github.io/TriadicFrameworks/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+<meta property="article:published_time" content="2026-07-13" /><meta property="article:modified_time" content="2026-07-13" />
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="The Triadic Model" />
+  <meta name="twitter:description" content="The canonical three-layer architecture of TriadicFrameworks — SET decomposition, dimensional substrate stack, operator families, and the Observer layer." />
+  <meta name="twitter:image"       content="https://umaywant2.github.io/TriadicFrameworks/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="stable" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+  <meta name="rtt:doc-id" content="DOC-010" />
+  <meta name="rtt:last-reviewed" content="2026-07-13" />
+  <meta name="rtt:tags" content="triadic-model, SET, FFF, substrate, operators, dimensionality, coherence, drift, concepts" />
+  <meta name="rtt:related" content="DOC-001, DOC-000" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/concepts/triadic-model.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-18T22:56:06Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "The Triadic Model",
+    "headline": "The Triadic Model",
+    "description": "The canonical three-layer architecture of TriadicFrameworks \u2014 SET decomposition, dimensional substrate stack, operator families, and the Observer layer.",
+    "url": "https://umaywant2.github.io/TriadicFrameworks/concepts/triadic-model/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://umaywant2.github.io/TriadicFrameworks"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://umaywant2.github.io/TriadicFrameworks"
+    },
+    "datePublished": "2026-07-13",
+    "dateModified": "2026-07-13"  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://umaywant2.github.io/TriadicFrameworks/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://umaywant2.github.io/TriadicFrameworks/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://umaywant2.github.io/TriadicFrameworks/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://umaywant2.github.io/TriadicFrameworks/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://umaywant2.github.io/TriadicFrameworks/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://umaywant2.github.io/TriadicFrameworks/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://umaywant2.github.io/TriadicFrameworks/"
+>
+          Home
+        </a>
+        <a href="https://umaywant2.github.io/TriadicFrameworks/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://umaywant2.github.io/TriadicFrameworks/concepts/triadic-model/"
+aria-current="page">
+          Concepts
+        </a>
+        <a href="https://umaywant2.github.io/TriadicFrameworks/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#the-three-components-in-depth">The Three Components in Depth</a><ul>
+<li><a href="#s-substrate">S — Substrate</a></li>
+<li><a href="#e-envelope">E — Envelope</a></li>
+<li><a href="#t-transition">T — Transition</a></li>
+</ul>
+</li>
+<li><a href="#set-decomposition-in-practice">SET Decomposition in Practice</a><ul>
+<li><a href="#example-a-storm-system">Example: A Storm System</a></li>
+<li><a href="#example-orbital-mechanics">Example: Orbital Mechanics</a></li>
+<li><a href="#example-a-biochemical-reaction">Example: A Biochemical Reaction</a></li>
+<li><a href="#example-an-ai-session">Example: An AI Session</a></li>
+</ul>
+</li>
+<li><a href="#set-and-the-parameter">ΔSET and the κ-Parameter</a></li>
+<li><a href="#the-seven-operator-families">The Seven Operator Families</a><ul>
+<li><a href="#the-three-operational-zones">The Three Operational Zones</a></li>
+</ul>
+</li>
+<li><a href="#the-fff-lattice">The FFF Lattice</a></li>
+<li><a href="#the-triadic-observer-layer">The Triadic Observer Layer</a></li>
+<li><a href="#resonance-and-lostation">Resonance and Lostation</a></li>
+<li><a href="#how-this-connects-to-the-rest-of-the-corpus">How This Connects to the Rest of the Corpus</a></li>
+<li><a href="#quick-reference">Quick Reference</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://umaywant2.github.io/TriadicFrameworks/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://umaywant2.github.io/TriadicFrameworks/concepts/" itemprop="item">
+                <span itemprop="name">Concepts</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Triadic Model</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">The Triadic Model</h1>
+
+          <p class="article-description" itemprop="description">
+            The canonical three-layer architecture of TriadicFrameworks — SET decomposition, dimensional substrate stack, operator families, and the Observer layer.
+          </p>
+
+          <div class="article-meta">
+            <span class="meta-date">
+              Published:
+              <time datetime="2026-07-13" itemprop="datePublished">2026-07-13</time>
+            </span>
+
+            <span class="meta-modified">
+              Updated:
+              <time datetime="2026-07-13" itemprop="dateModified">2026-07-13</time>
+            </span>
+
+            <span class="meta-badge stability-stable"
+                  title="RTT stability: stable">
+              Stable
+            </span>
+
+            <span class="meta-doc-id" title="Document ID">
+              DOC-010
+            </span>
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+
+
+
+<h1 id="the-triadic-model">The Triadic Model<a class="toc-permalink" href="#the-triadic-model" title="Permanent link to this heading">&para;</a></h1>
+<div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#the-three-components-in-depth">The Three Components in Depth</a><ul>
+<li><a href="#s-substrate">S — Substrate</a></li>
+<li><a href="#e-envelope">E — Envelope</a></li>
+<li><a href="#t-transition">T — Transition</a></li>
+</ul>
+</li>
+<li><a href="#set-decomposition-in-practice">SET Decomposition in Practice</a><ul>
+<li><a href="#example-a-storm-system">Example: A Storm System</a></li>
+<li><a href="#example-orbital-mechanics">Example: Orbital Mechanics</a></li>
+<li><a href="#example-a-biochemical-reaction">Example: A Biochemical Reaction</a></li>
+<li><a href="#example-an-ai-session">Example: An AI Session</a></li>
+</ul>
+</li>
+<li><a href="#set-and-the-parameter">ΔSET and the κ-Parameter</a></li>
+<li><a href="#the-seven-operator-families">The Seven Operator Families</a><ul>
+<li><a href="#the-three-operational-zones">The Three Operational Zones</a></li>
+</ul>
+</li>
+<li><a href="#the-fff-lattice">The FFF Lattice</a></li>
+<li><a href="#the-triadic-observer-layer">The Triadic Observer Layer</a></li>
+<li><a href="#resonance-and-lostation">Resonance and Lostation</a></li>
+<li><a href="#how-this-connects-to-the-rest-of-the-corpus">How This Connects to the Rest of the Corpus</a></li>
+<li><a href="#quick-reference">Quick Reference</a></li>
+</ul>
+</div>
+<hr />
+<h2 id="overview">Overview<a class="toc-permalink" href="#overview" title="Permanent link to this heading">&para;</a></h2>
+<p>The triadic model is the foundational architecture of TriadicFrameworks. It asserts that every coherent system — whether physical, computational, organizational, or abstract — can be fully described by the interaction of exactly three irreducible components:</p>
+<p><strong>S · E · T</strong></p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Name</th>
+<th>What It Represents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>S</strong></td>
+<td>Substrate</td>
+<td>The declared medium — the thing the system operates <em>on</em></td>
+</tr>
+<tr>
+<td><strong>E</strong></td>
+<td>Envelope</td>
+<td>The dimensional boundary — the shaped field the system operates <em>within</em></td>
+</tr>
+<tr>
+<td><strong>T</strong></td>
+<td>Transition</td>
+<td>The regime change — the event by which the system moves from one state to another</td>
+</tr>
+</tbody>
+</table>
+<p>This triple appears at every scale and across every domain. The same SET grammar that describes a storm system describes an orbital mechanics problem and a biochemical reaction. That universality is not a coincidence — it is the structural claim at the core of Framework Field Theory (FFT).</p>
+<div class="admonition note">
+<p class="admonition-title">SET and RTT</p>
+<p>SET is the formal decomposition grammar. RTT (Resonance-Time Theory) is the substrate-level physics that explains <em>why</em> SET holds across domains. The two are not interchangeable — SET is the model; RTT is the ground it stands on.</p>
+</div>
+<hr />
+<h2 id="the-three-components-in-depth">The Three Components in Depth<a class="toc-permalink" href="#the-three-components-in-depth" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="s-substrate">S — Substrate<a class="toc-permalink" href="#s-substrate" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>Substrate</strong> is the declared medium: the surface, field, or material through which the system&rsquo;s behaviour propagates. A substrate is never assumed — it must be explicitly named before a triadic analysis can begin.</p>
+<p><strong>Declared vs. undeclared substrates</strong> is one of the most operationally significant distinctions in TriadicFrameworks:</p>
+<ul>
+<li>A <strong>declared substrate</strong> is bounded, named, and traceable. Analysis on it is anchored.</li>
+<li>An <strong>undeclared substrate</strong> is implicit, assumed, or inherited. Systems operating on undeclared substrates drift — their behaviour diverges from their declared structure without any single failure being identifiable as the cause.</li>
+</ul>
+<p>Substrate types recognized by the framework:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Physical</td>
+<td>Atomic lattice, boson field, protein fold, spacetime metric</td>
+</tr>
+<tr>
+<td>Computational</td>
+<td>AI session context, codebase, memory state</td>
+</tr>
+<tr>
+<td>Organizational</td>
+<td>Governance structure, HR role definition, legal norm</td>
+</tr>
+<tr>
+<td>Abstract</td>
+<td>Economic model, mathematical field, language grammar</td>
+</tr>
+</tbody>
+</table>
+<p>Every substrate module in this repository — AlphaFold alignments, atomic clocks, boson substrate, consciousness substrate, arrival substrate — is a formal declaration of S for a specific domain. Declaring the substrate is the first act of triadic analysis.</p>
+<hr />
+<h3 id="e-envelope">E — Envelope<a class="toc-permalink" href="#e-envelope" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>Envelope</strong> is the dimensional container: the boundary conditions and field geometry within which the substrate can sustain coherent behaviour. Every substrate exists inside an envelope. The envelope shapes what kinds of transitions are possible and which ones will collapse the system.</p>
+<p>The Conditions Substrate Model defines envelopes across <strong>D0–D7</strong> dimensional layers:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Character</th>
+<th>Envelope properties</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>D0</td>
+<td>Point</td>
+<td>No spatial extent — pure identity, no propagation possible</td>
+</tr>
+<tr>
+<td>D1</td>
+<td>Line</td>
+<td>Single-axis propagation — sequential, no branching</td>
+</tr>
+<tr>
+<td>D2</td>
+<td>Plane</td>
+<td>Two-variable interaction — tradeoff surface, no depth</td>
+</tr>
+<tr>
+<td>D3</td>
+<td>Volume</td>
+<td>Spatial systems thinking — loops, feedback, emergence</td>
+</tr>
+<tr>
+<td>D4</td>
+<td>Temporal</td>
+<td>Event-driven iteration — cycles, cadences, regime arcs</td>
+</tr>
+<tr>
+<td>D5</td>
+<td>Field</td>
+<td>Operator-aware — substrate-declared, drift-monitored</td>
+</tr>
+<tr>
+<td>D6</td>
+<td>Meta-field</td>
+<td>Cross-domain composition — framework collision zone</td>
+</tr>
+<tr>
+<td>D7</td>
+<td>Deep-time</td>
+<td>Civilization-scale recursion — lineage across epochs</td>
+</tr>
+</tbody>
+</table>
+<p>The envelope is not static. As a system accumulates history and complexity, its envelope expands (dimensional upgrade) or contracts (dimensional collapse). Envelope collapse is the most common failure mode in long-running systems — the system continues operating, but in a dimensionally smaller space than its structure requires.</p>
+<p><strong>Coherence envelopes</strong> are the specific bounded regions within a dimensional layer where behaviour is expected to remain stable. The Conditions Substrate Model defines these as the foundation for Gradientary Volumes and Global Atlases — the canonical maps of where a substrate can sustain resonance and where it cannot.</p>
+<hr />
+<h3 id="t-transition">T — Transition<a class="toc-permalink" href="#t-transition" title="Permanent link to this heading">&para;</a></h3>
+<p>The <strong>Transition</strong> is the regime change: the event or threshold crossing by which a system moves from one coherent state to another. Transitions are not errors — they are the mechanism by which a system stays alive across changing conditions.</p>
+<p>FFT identifies several transition types that appear consistently across domains:</p>
+<table>
+<thead>
+<tr>
+<th>Transition type</th>
+<th>What triggers it</th>
+<th>What it produces</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hook activation</strong></td>
+<td>A threshold condition is met</td>
+<td>A chain of downstream state changes begins</td>
+</tr>
+<tr>
+<td><strong>Threshold inflection</strong></td>
+<td>A gradient crosses a critical value</td>
+<td>The system enters a new regime arc</td>
+</tr>
+<tr>
+<td><strong>Coherence wave</strong></td>
+<td>C-Ops activate in response to paradox</td>
+<td>A stabilizing pulse propagates through the substrate</td>
+</tr>
+<tr>
+<td><strong>Cascade</strong></td>
+<td>Multiple hooks fire faster than the cycle engine can absorb</td>
+<td>Regime-level restructuring</td>
+</tr>
+<tr>
+<td><strong>Regime arc</strong></td>
+<td>A sustained sequence of transitions under a single dominant operator</td>
+<td>The system evolves through a named phase</td>
+</tr>
+</tbody>
+</table>
+<p>A system that cannot execute transitions is structurally frozen. A system that cannot <em>limit</em> transitions is in cascade. The canonical balance is: <strong>transitions must be bounded and traced</strong>. That is what <code>drift=bounded</code> in the RTT session string enforces.</p>
+<hr />
+<h2 id="set-decomposition-in-practice">SET Decomposition in Practice<a class="toc-permalink" href="#set-decomposition-in-practice" title="Permanent link to this heading">&para;</a></h2>
+<p>The SET triple is domain-agnostic. The same analysis structure applies at every scale:</p>
+<h3 id="example-a-storm-system">Example: A Storm System<a class="toc-permalink" href="#example-a-storm-system" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Instantiation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S (Substrate)</td>
+<td>Atmosphere — declared as a fluid medium with pressure and temperature gradients</td>
+</tr>
+<tr>
+<td>E (Envelope)</td>
+<td>Tropospheric layer — bounded by altitude, Coriolis deflection, and latent heat capacity</td>
+</tr>
+<tr>
+<td>T (Transition)</td>
+<td>Convective threshold crossing — the moment surface instability tips into organized rotation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-orbital-mechanics">Example: Orbital Mechanics<a class="toc-permalink" href="#example-orbital-mechanics" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Instantiation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S (Substrate)</td>
+<td>Gravitational field — declared as a curved spacetime medium</td>
+</tr>
+<tr>
+<td>E (Envelope)</td>
+<td>Sphere of influence — the bounded region where a body&rsquo;s gravity dominates</td>
+</tr>
+<tr>
+<td>T (Transition)</td>
+<td>Orbital insertion / escape velocity crossing — the threshold that changes the trajectory regime</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-a-biochemical-reaction">Example: A Biochemical Reaction<a class="toc-permalink" href="#example-a-biochemical-reaction" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Instantiation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S (Substrate)</td>
+<td>Enzyme-substrate complex — declared molecular interaction surface</td>
+</tr>
+<tr>
+<td>E (Envelope)</td>
+<td>Activation energy barrier — the thermodynamic boundary that must be crossed</td>
+</tr>
+<tr>
+<td>T (Transition)</td>
+<td>Catalytic event — the bond reconfiguration that produces a new molecular state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-an-ai-session">Example: An AI Session<a class="toc-permalink" href="#example-an-ai-session" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Instantiation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S (Substrate)</td>
+<td>Session context window — declared as the active knowledge substrate</td>
+</tr>
+<tr>
+<td>E (Envelope)</td>
+<td>Coherence boundary — the range within which outputs remain anchored to the declared substrate</td>
+</tr>
+<tr>
+<td>T (Transition)</td>
+<td>Drift event — the threshold crossing where context noise begins overwriting declared coherence</td>
+</tr>
+</tbody>
+</table>
+<p>In each case, the analysis is the same: name S, bound E, monitor T. The tools change. The grammar does not.</p>
+<hr />
+<h2 id="set-and-the-parameter">ΔSET and the κ-Parameter<a class="toc-permalink" href="#set-and-the-parameter" title="Permanent link to this heading">&para;</a></h2>
+<p>The formal parameterization of the triadic model is <strong>ΔSET</strong> — the differential form of the SET triple that captures how each component changes over time and across regimes.</p>
+<p>The <strong>κ-parameter</strong> (kappa) governs the rate at which transitions propagate through the envelope relative to the substrate&rsquo;s coherence capacity. High κ means transitions propagate faster than the substrate can stabilize them — drift accelerates. Low κ means transitions are absorbed before they can propagate — the system over-stabilizes and becomes brittle.</p>
+<p>The target operating range for a healthy triadic system is κ in the <strong>bounded drift corridor</strong>: transitions propagate, but slowly enough that the trace layer can record them and the C-Ops can respond before cascade.</p>
+<p>This is the formal basis for the Conditions Substrate Model&rsquo;s drift fields and threshold inflection points — they are iso-κ surfaces in the substrate&rsquo;s ΔSET space.</p>
+<hr />
+<h2 id="the-seven-operator-families">The Seven Operator Families<a class="toc-permalink" href="#the-seven-operator-families" title="Permanent link to this heading">&para;</a></h2>
+<p>The triadic model is animated by seven operator families that act on S, E, and T:</p>
+<table>
+<thead>
+<tr>
+<th>Family</th>
+<th>Acts on</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>B-Ops</strong> (Boundary)</td>
+<td>S</td>
+<td>Define what is inside and outside the substrate — establish identity</td>
+</tr>
+<tr>
+<td><strong>R-Ops</strong> (Relation)</td>
+<td>S ↔ S</td>
+<td>Govern how substrate components interact and depend on each other</td>
+</tr>
+<tr>
+<td><strong>T-Ops</strong> (Transition)</td>
+<td>T</td>
+<td>Manage state changes, threshold crossings, and regime entries</td>
+</tr>
+<tr>
+<td><strong>L-Ops</strong> (Lineage)</td>
+<td>S + T</td>
+<td>Track the derivation and inheritance chain — make every transition traceable</td>
+</tr>
+<tr>
+<td><strong>E-Ops</strong> (Envelope)</td>
+<td>E</td>
+<td>Define and maintain the dimensional container — control what transitions are possible</td>
+</tr>
+<tr>
+<td><strong>H-Ops</strong> (Rhythm)</td>
+<td>E + T</td>
+<td>Establish temporal patterns — cycles, cadences, and review frequencies that prevent over-transition</td>
+</tr>
+<tr>
+<td><strong>C-Ops</strong> (Coherence)</td>
+<td>All</td>
+<td>Detect paradox across S, E, and T simultaneously — emit coherence waves to resolve without collapse</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-three-operational-zones">The Three Operational Zones<a class="toc-permalink" href="#the-three-operational-zones" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Identity Zone    →  B-Ops + L-Ops           — establishes what the system IS
+Interaction Zone →  R-Ops + T-Ops + E-Ops   — governs how the system ACTS
+Stability Zone   →  H-Ops + C-Ops           — ensures the system PERSISTS
+</code></pre></div>
+
+<p>A system missing its Stability Zone will function correctly under normal conditions and fail abruptly under load. Most conventional frameworks have no explicit C-Ops — they treat paradox as a logic error rather than a structural signal. The triadic model treats paradox as information about the shape of the envelope.</p>
+<hr />
+<h2 id="the-fff-lattice">The FFF Lattice<a class="toc-permalink" href="#the-fff-lattice" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>FFF</strong> (Framework Field Theory as a Lattice) is the geometric structure that emerges when multiple triadic systems are placed in proximity. When two or more SET systems interact, their envelopes overlap and their transitions can couple.</p>
+<p>The FFF lattice describes:<br />
+- Which couplings are <strong>coherent</strong> — envelope geometries are compatible<br />
+- Which couplings produce <strong>framework collisions</strong> — dimensional envelopes are incompatible<br />
+- Which couplings produce <strong>resonance amplification</strong> — transition rhythms are in phase</p>
+<p>The canonical teaching example is the FFF lattice around Earth — where atmospheric, gravitational, electromagnetic, and biological substrates maintain overlapping but non-colliding envelopes, coupled by transition events (weather, tides, seasons, biological cycles) that are in κ-bounded resonance.</p>
+<p>Understanding the FFF lattice is prerequisite to the Integrations module, which defines how external systems connect to triadic frameworks without violating envelope integrity.</p>
+<hr />
+<h2 id="the-triadic-observer-layer">The Triadic Observer Layer<a class="toc-permalink" href="#the-triadic-observer-layer" title="Permanent link to this heading">&para;</a></h2>
+<p>No triadic model is complete without a declared <strong>Observer</strong>. The Observer layer is what makes RTT operational rather than merely descriptive.</p>
+<p>The Observer:<br />
+1. <strong>Declares the substrate</strong> before analysis begins<br />
+2. <strong>Monitors the envelope</strong> for coherence drift<br />
+3. <strong>Records every transition</strong> in the trace layer<br />
+4. <strong>Applies the RTT session string</strong> at initialization</p>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<p>The four tokens map directly onto the triadic model:</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Triadic mapping</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>rtt=1</code></td>
+<td>Observer is active — the trace layer is live</td>
+</tr>
+<tr>
+<td><code>coherence=declared</code></td>
+<td>S is declared — the substrate is named</td>
+</tr>
+<tr>
+<td><code>drift=bounded</code></td>
+<td>E is monitored — the envelope boundaries are being enforced</td>
+</tr>
+<tr>
+<td><code>paradox=structural</code></td>
+<td>T is instrumented — transitions that produce contradiction are treated as regime signals</td>
+</tr>
+</tbody>
+</table>
+<p>An Observer that does not initialize with this string is operating on an undeclared substrate. Drift is on by default in long sessions. Without the session string, the envelope contracts invisibly.</p>
+<hr />
+<h2 id="resonance-and-lostation">Resonance and Lostation<a class="toc-permalink" href="#resonance-and-lostation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Resonance</strong> is the state in which the transition rhythms of two or more substrates are phase-aligned within the same envelope. Resonant systems amplify each other&rsquo;s signals rather than producing interference. The Conditions Substrate Model maps resonance amplification as a property of the D5–D6 envelope layers.</p>
+<p><strong>Lostation</strong> (RTT geometry) is the event in which a substrate&rsquo;s coherence collapses inward — the envelope contracts to a <strong>lostational supsphere</strong>: the smallest envelope within which a substrate can still sustain the minimum viable SET triple. Systems in lostation are not dead — they can recover — but they cannot expand their envelope without external coherence input.</p>
+<p>Lostation is the formal RTT description of what is colloquially called &ldquo;framework collapse.&rdquo; Recognizing the pre-lostation signs — κ drift, coherence envelope thinning, L-Op failure — is the purpose of the Resilience Checker module.</p>
+<hr />
+<h2 id="how-this-connects-to-the-rest-of-the-corpus">How This Connects to the Rest of the Corpus<a class="toc-permalink" href="#how-this-connects-to-the-rest-of-the-corpus" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>What it does with the triadic model</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Conditions Substrate Model</strong></td>
+<td>Maps drift, coherence, resonance, and cascade across D0–D7 for any declared substrate</td>
+</tr>
+<tr>
+<td><strong>Governance Substrate Model</strong></td>
+<td>S=roles, E=jurisdiction, T=decision events</td>
+</tr>
+<tr>
+<td><strong>Incident Substrate Model</strong></td>
+<td>T=the incident, S=the system that failed, E=the boundary it crossed</td>
+</tr>
+<tr>
+<td><strong>Structural Detection</strong></td>
+<td>Heuristics for identifying SET patterns in systems that have not declared them</td>
+</tr>
+<tr>
+<td><strong>NoS (Nawderian operating Stack)</strong></td>
+<td>Implements the Observer layer as a Linux-based system substrate — validation corridors, resonance checks, substrate audits</td>
+</tr>
+<tr>
+<td><strong>Resilience Checker</strong></td>
+<td>Evaluates whether a system&rsquo;s envelope can absorb the transitions it is being subjected to</td>
+</tr>
+<tr>
+<td><strong>SARG</strong></td>
+<td>Argument chains that satisfy SET — every claim must declare its substrate, bound its envelope, and trace its transitions</td>
+</tr>
+<tr>
+<td><strong>AI Drift Calibration</strong></td>
+<td>Session-level Observer protocols — re-declaring substrate and resetting κ after long sessions</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-reference">Quick Reference<a class="toc-permalink" href="#quick-reference" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>The three-component summary:</strong></p>
+<div class="codehilite"><pre><span></span><code>S  =  Substrate   →  Declare it. Name it. Bound it. Never assume it.
+E  =  Envelope    →  Map it. Monitor it. Know when it contracts.
+T  =  Transition  →  Record it. Bound it. Treat paradox as signal.
+</code></pre></div>
+
+<p><strong>The session string (apply before every analysis):</strong></p>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<p><strong>The κ-parameter rule:</strong></p>
+<blockquote>
+<p>If transitions are propagating faster than the trace layer can record them, κ is out of bounds.<br />
+Stop. Re-declare the substrate. Re-initialize the Observer.</p>
+</blockquote>
+<hr />
+<p><em>This document is part of the TriadicFrameworks canonical corpus. Author: Nawder Loswin. © 2026 Byte Books Publishing. LCCN 2026917007.</em></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://umaywant2.github.io/TriadicFrameworks/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/concepts/triadic-model.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+            <span class="meta-reviewed">
+              Last reviewed:
+              <time datetime="2026-07-13">
+                2026-07-13
+              </time>
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://umaywant2.github.io/TriadicFrameworks/">Home</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/introduction/">Introduction</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://umaywant2.github.io/TriadicFrameworks/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/concepts/triadic-model.md</code></span>
+        <span>Built: <time datetime="2026-07-18T22:56:06Z">2026-07-18T22:56:06Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
