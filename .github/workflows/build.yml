@@ -113,6 +113,9 @@ jobs:
           fi
           python build.py ${BUILD_FLAGS}
 
+      - name: Install custom 404 page
+        run: cp docs/404.html site/404.html
+
       # ── Verify outputs ──────────────────────────────────────────────────────
       - name: Verify build outputs
         run: |
