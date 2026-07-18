@@ -203,7 +203,7 @@ environment variables — useful in CI/CD without modifying the file.
 | `SITE_DESCRIPTION` | `SITE_DESCRIPTION` | *(see config.py)* |
 | `SITE_AUTHOR` | `SITE_AUTHOR` | `TriadicFrameworks Contributors` |
 | `SITE_LANG` | `LANG` | `en` |
-| `TWITTER_HANDLE` | `TWITTER_HANDLE` | `@TriadicFrameworks` |
+| `TWITTER_HANDLE` | `TWITTER_HANDLE` | `@NawderLoswin` |
 | `OG_IMAGE` | `OG_IMAGE` | `{BASE_URL}/static/og-default.png` |
 
 Path settings (`DOCS_DIR`, `SITE_DIR`, `TEMPLATE_DIR`, `STATIC_DIR`) are
