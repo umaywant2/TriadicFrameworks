@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-build.py — TriadicFrameworks Static Site Generator
+build.py — TriadicFrameworks Static Site Generator 
 ====================================================
 Converts every Markdown file under docs/ into a pre-rendered HTML page in
 site/, injecting the exact variable set required by:
