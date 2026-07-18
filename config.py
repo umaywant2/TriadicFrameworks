@@ -1,5 +1,5 @@
 """
-config.py — TriadicFrameworks SSG Configuration
+config.py — TriadicFrameworks SSG Configuration 
 ================================================
 Single source of truth for every build-time setting.
 
