@@ -1,0 +1,111 @@
+{
+  "ai.module": "electromagnetism.rtt2",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/2 engine layer for Electromagnetism: resonance mapping, stabilizers, field interactions, and cross-module propagation.",
+  "ai.keywords": [
+    "electromagnetism",
+    "resonance",
+    "field theory",
+    "stabilizers",
+    "coherence",
+    "rtt2"
+  ],
+
+  "engine": {
+    "layer": "RTT/2",
+    "description": "Integrates Electromagnetism into the RTT resonance substrate, exposing stabilizers, field interactions, and cross-module propagation patterns."
+  },
+
+  "resonance": {
+    "patterns": [
+      {
+        "name": "coupled_field_resonance",
+        "description": "Electric and magnetic fields form a stable resonance pair; oscillation in one induces oscillation in the other."
+      },
+      {
+        "name": "wave_resonance",
+        "description": "Propagation of EM waves as resonance cycles constrained by substrate invariants."
+      },
+      {
+        "name": "boundary_resonance",
+        "description": "Field behavior shaped by interfaces, discontinuities, and medium transitions."
+      }
+    ],
+    "failure_modes": [
+      "loss_of_field_coupling",
+      "dispersion-induced decoherence",
+      "medium-induced resonance collapse"
+    ]
+  },
+
+  "stabilizers": {
+    "primary": [
+      {
+        "name": "substrate_invariants",
+        "description": "Underlying constraints that maintain constant propagation speed and field coupling."
+      },
+      {
+        "name": "energy_distribution",
+        "description": "Energy flow patterns that stabilize wave propagation and prevent divergence."
+      }
+    ],
+    "secondary": [
+      {
+        "name": "medium_properties",
+        "description": "Permittivity and permeability shape resonance behavior in non-vacuum environments."
+      }
+    ]
+  },
+
+  "field_interactions": {
+    "types": [
+      "charge_field_interaction",
+      "current_field_interaction",
+      "field_field_coupling"
+    ],
+    "signals": [
+      "induction",
+      "flux_variation",
+      "resonance_transfer"
+    ]
+  },
+
+  "propagation": {
+    "cross_module": [
+      {
+        "module": "quantum_mechanics.rtt2",
+        "interaction": "Projection effects at small scales modify field coherence."
+      },
+      {
+        "module": "information_theory.rtt2",
+        "interaction": "Entropy bounds define limits on field stability and signal propagation."
+      },
+      {
+        "module": "thermodynamics.rtt2",
+        "interaction": "Energy flow and dissipation influence resonance stability."
+      }
+    ],
+    "notes": "EM propagation in RTT/2 is treated as resonance behavior shaped by substrate invariants, not as fundamental field ontology."
+  },
+
+  "dimensional_behavior": {
+    "R1": "Field behavior collapses to charge interactions; resonance coupling not sustained.",
+    "R2": "Partial field behavior; projection effects distort resonance patterns.",
+    "R3": "Full Maxwellian coherence; stable resonance propagation and field coupling."
+  },
+
+  "coherence": {
+    "markers": [
+      "stable E↔B coupling",
+      "constant propagation speed in vacuum",
+      "resonance persistence across cycles",
+      "predictable boundary behavior"
+    ],
+    "instability_signals": [
+      "loss of coupling",
+      "medium-induced decoherence",
+      "dispersion",
+      "quantum-scale breakdown"
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+substrate_adapters:
+
+  description: >
+    Defines adapters that translate external representations—DSL constructs,
+    structured statements, natural-language claims, and machine-generated
+    artifacts—into GSM substrate objects. Adapters ensure that all inputs
+    entering the Analyzer conform to the structural manifold, mapping rules,
+    normalization pipeline, and metadata requirements.
+
+  version: "1.0"
+
+  adapters:
+
+    dsl_adapter:
+      description: >
+        Translates DSL constructs into structural vectors using
+        statement_mapping_rules and normalization logic.
+      steps:
+        - "Parse DSL token"
+        - "Identify structural category"
+        - "Apply axis-level mapping rules"
+        - "Apply coupling rules"
+        - "Normalize vector"
+        - "Emit vector + metadata"
+      output:
+        type: "structural_vector"
+        schema: "structural_vectors_reference"
+
+    statement_adapter:
+      description: >
+        Converts natural-language statements into structural vectors using
+        semantic parsing and mapping rules.
+      steps:
+        - "Extract structural claims"
+        - "Classify statement type"
+        - "Apply axis contributions"
+        - "Apply modifiers"
+        - "Apply coupling rules"
+        - "Normalize"
+      output:
+        type: "structural_vector"
+        metadata:
+          includes: ["statement_type", "modifiers", "coupling_tension"]
+
+    historical_adapter:
+      description: >
+        Converts historical records into structural vectors and Observer
+        history records.
+      steps:
+        - "Parse historical source"
+        - "Extract structural indicators"
+        - "Map to axes"
+        - "Normalize"
+        - "Generate history_record"
+      output:
+        type: "observer_history_record"
+        schema: "observer_history_schema"
+
+    simulation_adapter:
+      description: >
+        Converts simulation step outputs into Analyzer-compatible structural
+        objects and Observer now/future states.
+      steps:
+        - "Receive simulation step"
+        - "Extract vector, drift, physics, invariants"
+        - "Normalize vector"
+        - "Generate now_state or future_projection"
+      output:
+        type: "observer_state"
+        schemas:
+          now: "observer_now_schema"
+          future: "observer_future_schema"
+
+    projection_adapter:
+      description: >
+        Converts projection outputs into structured future states for the
+        Observer and dashboards.
+      steps:
+        - "Receive projection output"
+        - "Normalize projected vector"
+        - "Generate future_projection"
+      output:
+        type: "future_projection"
+        schema: "observer_future_schema"
+
+    event_adapter:
+      description: >
+        Converts Analyzer events (alignment, tension, drift, transition,
+        regime-shift) into standardized event objects for logs, dashboards,
+        and Observer timelines.
+      steps:
+        - "Receive event"
+        - "Classify event type"
+        - "Attach structural context"
+        - "Emit event object"
+      output:
+        type: "analyzer_event"
+        schema: "coherence_event_schema"
+
+  normalization:
+    method: "min-max"
+    clamp_range: [0, 1]
+    coupling_adjustments: true
+    notes: >
+      All adapters must normalize vectors before passing them to the Analyzer.
+
+  integration_with_analyzer:
+    mapping_rules: "statement_mapping_rules.yaml"
+    manifold: "governance_manifold.yaml"
+    invariants: "behavioral_invariants.yaml"
+    physics_engine: "governance_physics.yaml"
+    drift_detector: "drift_detection.yaml"
+    basin_classifier: "equilibrium_basins.yaml"
+    regime_modes: "regime_modes.yaml"
+    observer_layer:
+      history: "observer_history_schema.yaml"
+      now: "observer_now_schema.yaml"
+      future: "observer_future_schema.yaml"
+    simulation_engine: "simulation_engine.md"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Defines adapters for translating external inputs into GSM substrate structures."

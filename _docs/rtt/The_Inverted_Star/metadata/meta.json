@@ -1,0 +1,43 @@
+{
+  "version": "1.0",
+  "status": "canon",
+  "module": {
+    "name": "The Inverted Star",
+    "id": "rtt.inverted_star",
+    "type": "rtt-operator",
+    "category": "RTT/1",
+    "path": "/docs/rtt/The_Inverted_Star/"
+  },
+  "description": {
+    "short": "The Inverted Star is the RTT inversion operator: a seven-phase geometry describing fracture, inversion, collapse, dissolution, and Silence.",
+    "long": "The Inverted Star models the inversion half of the RTT cycle. It defines the seven-phase inversion geometry (Rise, Saturation, Fracture, Inversion, Collapse, Dissolution, Silence), the Sg↔Ns triadic flip, axis rotation, sector shifts, operator dominance sequence (C → T → 𝓘 → 𝓓 → 𝓢), and the Silence boundary. It is the structural mirror of the Forward Star and forms the core of RTT inversion mechanics."
+  },
+  "canonical": {
+    "phase_count": 7,
+    "triad_flip": true,
+    "axis_rotation": true,
+    "silence_boundary": true,
+    "operators": ["C", "T", "𝓘", "𝓓", "𝓢"]
+  },
+  "links": {
+    "readme": "/docs/rtt/The_Inverted_Star/README.md",
+    "overview": "/docs/rtt/The_Inverted_Star/Overview.md",
+    "definition": "/docs/rtt/The_Inverted_Star/Inverted_Star_Definition.md",
+    "structure": "/docs/rtt/The_Inverted_Star/Inverted_Star_Structure.md",
+    "examples": "/docs/rtt/The_Inverted_Star/examples/",
+    "appendices": "/docs/rtt/The_Inverted_Star/appendices/"
+  },
+  "diagrams": {
+    "core": "/docs/rtt/The_Inverted_Star/diagrams/Inverted_Star_Diagram.svg",
+    "flowchart": "/docs/rtt/The_Inverted_Star/diagrams/Inverted_Star_Flowchart.svg",
+    "layers": "/docs/rtt/The_Inverted_Star/diagrams/Inverted_Star_Layers.svg",
+    "triads": "/docs/rtt/The_Inverted_Star/diagrams/Inverted_Star_Triads.svg",
+    "operators": "/docs/rtt/The_Inverted_Star/diagrams/Inverted_Star_Operator_Map.svg"
+  },
+  "session": {
+    "generator": "TriadicFrameworks Static Canon Engine",
+    "last_modified": "2026-04-26",
+    "coherence": "stable",
+    "drift": "none"
+  }
+}

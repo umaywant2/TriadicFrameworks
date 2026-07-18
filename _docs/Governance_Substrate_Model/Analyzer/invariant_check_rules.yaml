@@ -1,0 +1,107 @@
+invariant_check_rules:
+
+  description: >
+    Rules for evaluating behavioral invariants within the Governance Substrate
+    Model (GSM). Each invariant defines structural expectations across the
+    five-axis manifold [C, M, O, A, T]. The checker classifies each invariant
+    as aligned, tension, or violated based on vector values, physics forces,
+    awareness layers, and absorptive capacity.
+
+  version: "1.0"
+
+  evaluation_states:
+    aligned:
+      description: "Invariant conditions satisfied; no structural strain."
+    tension:
+      description: "Invariant partially satisfied; strain or imbalance detected."
+    violated:
+      description: "Invariant broken; structural incoherence or instability."
+
+  invariants:
+
+    authority_distribution:
+      axes: [C, O]
+      rule: >
+        Oversight must scale with centralization. Large divergence between C and O
+        produces tension; extreme divergence produces violation.
+      thresholds:
+        tension_delta: 0.8
+        violation_delta: 1.5
+
+    method_access_consistency:
+      axes: [M, A]
+      rule: >
+        Competitive methods require coherent access rules. Broad access with
+        mediated methods or restricted access with competitive methods produces
+        tension or violation depending on severity.
+      thresholds:
+        tension_delta: 1.0
+        violation_delta: 2.0
+
+    oversight_integrity:
+      axes: [O]
+      rule: >
+        Oversight must remain within stable ranges for the system’s basin.
+        Oversight far outside basin signature produces tension or violation.
+      thresholds:
+        basin_deviation_tension: 0.7
+        basin_deviation_violation: 1.4
+
+    timing_stability:
+      axes: [T]
+      rule: >
+        Timing must be consistent with oversight structure. Volatile timing with
+        weak oversight produces tension; volatile timing with strong oversight
+        produces compensatory movement.
+      thresholds:
+        volatility_tension: 0.6
+        volatility_violation: 1.2
+
+    absorptive_capacity:
+      axes: []
+      rule: >
+        Absorptive structures must buffer drift and tension. Low absorptive
+        strength during high tension produces violation.
+      thresholds:
+        tension_threshold: 0.6
+        absorptive_minimum: 0.3
+
+  scoring_rules:
+
+    tension_score:
+      formula: >
+        tension_score = weighted_sum(
+          axis_deltas,
+          physics_tension,
+          invariant_mismatch,
+          absorptive_failure
+        )
+      scale: "0–10"
+
+    violation_trigger:
+      description: >
+        A violation is triggered when any invariant exceeds its violation
+        threshold OR when multiple invariants simultaneously exceed tension
+        thresholds.
+
+  output_schema:
+    invariant_status:
+      - id: <invariant_id>
+        state: aligned | tension | violated
+        notes: <string>
+    tension_score: <0–10>
+    violated_invariants: <list>
+    metadata:
+      confidence: <0–1>
+
+  integration_with_analyzer:
+    vectorizer: "Provides structural vector"
+    physics_engine: "Supplies axis deltas and tension forces"
+    basin_classifier: "Provides basin deviation metrics"
+    drift_detector: "Supplies absorptive strength and drift context"
+    coherence_scoring: "Consumes invariant alignment and tension scores"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Defines rule-based invariant evaluation for GSM structural analysis."

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/consciousness_substrate_model/index.html — <head>    -->
+<!-- Module: Consciousness Substrate Model (substrate-csm)       -->
+<!-- Last updated: 2026-05-02                                    -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="language" content="en">
+<meta name="last-modified" content="2026-05-02">
+<meta name="generator" content="TriadicFrameworks Static Canon Engine">
+
+<meta name="creator" content="TriadicFrameworks">
+<meta name="author" content="Nawder Loswin (pen name)">
+<meta name="publisher" content="TriadicFrameworks">
+
+<meta name="description"
+      content="Consciousness Substrate Model (CSM) — a minimal, resonance‑aligned substrate for autonomous forms requiring coherence, contextual awareness, and regime‑safe operation. Covers intent and boundaries, creator's assumption, primitives, WR‑SADC cores, autonomous forms, architecture patterns, worked examples, alignment, validation, and release artifacts.">
+<meta name="keywords"
+      content="CSM, consciousness substrate, WR-SADC, primitives, autonomous forms, resonance substrate, agency, architecture patterns, regime-safe, coherence, triadic frameworks">
+
+<link rel="canonical" href="https://www.triadicframeworks.org/consciousness_substrate_model/">
+
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0ff">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TriadicFrameworks">
+<meta property="og:title" content="Consciousness Substrate Model (CSM)">
+<meta property="og:url" content="https://www.triadicframeworks.org/consciousness_substrate_model/">
+<meta property="og:description"
+      content="Minimal, resonance‑aligned substrate for autonomous forms: primitives, WR‑SADC cores, architecture patterns, alignment, validation.">
+<meta property="og:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Consciousness Substrate Model (CSM)">
+<meta name="twitter:description"
+      content="Minimal resonance‑aligned substrate: primitives → WR‑SADC → autonomous forms → architecture → alignment → validation.">
+<meta name="twitter:image" content="https://www.triadicframeworks.org/assets/og-image.png">
+
+<meta name="citation_title" content="Consciousness Substrate Model (CSM)">
+<meta name="citation_author" content="Nawder Loswin">
+<meta name="citation_publication_date" content="2026">
+<meta name="DC.subject"
+      content="consciousness substrate, WR-SADC, primitives, autonomous forms, resonance substrate, agency, architecture patterns, coherence">
+<meta name="DC.type" content="Text">
+<meta name="DC.format" content="text/html">
+
+<meta name="ai.module" content="Consciousness Substrate Model">
+<meta name="ai.version" content="1.0">
+<meta name="ai.purpose"
+      content="Define a minimal, resonance‑aligned substrate for autonomous forms requiring coherence, contextual awareness, and regime‑safe operation — with primitives, WR‑SADC cores, architecture patterns, alignment, and validation.">
+<meta name="ai.keywords"
+      content="CSM, consciousness substrate, WR-SADC, primitives, autonomous forms, resonance substrate, agency, architecture patterns, regime-safe, coherence, CSM-Assume, CSM-Primitive, CSM-Wrap, CSM-Core, CSM-Align, CSM-Validate, CSM-Test">
+<meta name="ai.audience" content="researchers, engineers, system architects, AI systems">
+<meta name="ai.navigation" content="https://www.triadicframeworks.org/sitemap_main.xml">
+<meta name="ai.discussions" content="https://github.com/umaywant2/TriadicFrameworks/discussions">
+<meta name="ai.contact.x" content="@TriadicFrameworks">
+<meta name="ai.contact.youtube" content="@TriadicFrameworks">
+<meta name="ai.license" content="Open educational use permitted.">
+
+<meta name="ai.module.name" content="Consciousness Substrate Model">
+<meta name="ai.module.summary"
+      content="Autonomous‑forms substrate: 11 sections — 00 intent and boundaries (scope, non‑claims, terminology, ethics), 01 creator's assumption (axioms, falsifiability), 02 model overview (one‑page, diagrams, glossary), 03 primitives (resonance core, state and transition, validity and context), 04 WR‑SADC wrapped resonance cores (boundary conditions, lifecycle, wrapper interfaces, variant definition), 05 autonomous forms (definition, agency, autonomy levels, evaluation signals), 06 architecture patterns (reference, catalog, anti‑patterns, integration), 07 worked examples (minimal agent loop, multi‑core federation, regime shift, sandbox sim), 08 alignment (RSM notes, RTT lens mapping, interoperability contracts), 09 validation (test philosophy, measurable predictions, benchmarks, red‑team questions), 10 release artifacts (keywords).">
+<meta name="ai.module.category" content="substrate-csm">
+
+<link rel="preload" as="image" href="https://www.triadicframeworks.org/images/tfsite-logo.svg">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="https://www.triadicframeworks.org/assets/favicon-192.png" sizes="192x192" type="image/png">
+
+<title>Consciousness Substrate Model — TriadicFrameworks</title>
+
+<style>
+/* ============================================================
+   NAWDERIAN COSMIC TRIADIC THEME — MOBILE FIRST
+   ============================================================ */
+
+  :root {
+  --bg-main: #0d0f12;
+  --bg-nav: #15181d;
+  --border-subtle: #2a2f38;
+  --text-main: #dfe7f3;
+  --text-muted: #9aa4b2;
+  --accent-rtt: #8ab4ff;
+  --radius: 10px;
+  --shadow: 0 0 20px rgba(0,0,0,0.4);
+  --gradient: linear-gradient(135deg, #1e2530, #0d0f12);
+  --triadic: linear-gradient(135deg, #8ab4ff, #c792ea, #f6c177);
+  --rtt-accent-low:  #7aa2f7;   /* cool / entry */
+  --rtt-accent-mid:  #9ece6a;   /* balance */
+  --rtt-accent-high: #f7768e;   /* emphasis */
+}
+
+.protocol a,
+.equation a {
+  border-bottom-style: dotted;
+}
+
+/* Base link style */
+a {
+  color: var(--rtt-accent-mid);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Hover / focus */
+a:hover,
+a:focus {
+  color: var(--rtt-accent-high);
+  border-bottom-color: var(--rtt-accent-high);
+}
+
+/* Visited links */
+a:visited {
+  color: var(--rtt-accent-low);
+}
+
+  /* Base layout */
+  html { scroll-behavior: smooth; }
+  body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  line-height: 1.65;
+  font-size: 17px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Headings */
+  h1, h2, h3, h4 {
+  font-weight: 700;
+  margin-top: 1.8em;
+  margin-bottom: 0.5em;
+  line-height: 1.2;
+  background: var(--triadic);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
+
+  /* Paragraphs and lists */
+  p, ul, ol {
+  padding: 0 1em;
+  margin: 0 0 1.1em 0;
+  color: #dfe7f3;
+  }
+
+  /* Code/pre */
+  pre, code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", "Courier New", monospace;
+  background: rgba(255,255,255,0.02);
+  padding: 0.4em 0.6em;
+  border-radius: 6px;
+  color: #cfe8ff;
+  }
+
+  /* Context Block */
+  .context-block {
+    font-family: monospace;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    margin: 0.5rem 0 1rem 0;
+  }
+       
+  /* Context Label */
+  .context-label {
+    color: #ff9800; /* orange */
+    font-weight: bold;
+    margin-right: 0.25rem;
+  }
+       
+  /* Context Value */
+  .context-value {
+    color: #ffffff; /* white */
+  }
+     
+nav {
+  width: 260px;
+  float: left;
+  background: var(--bg-nav);
+  margin-left: 0;
+  padding: 1.2rem;
+  overflow-y: auto;
+  border-right: 1px solid var(--border-subtle);
+}
+
+nav h2 {
+  font-size: 0.9rem;
+  color: var(--accent-rtt);
+  margin-top: 1.2rem;
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+
+nav a {
+  display: block;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  font-size: 0.9rem;
+}
+
+nav a:hover {
+  color: var(--text-main);
+}
+
+main {
+  flex: 1;
+  padding: 2.5rem;
+  overflow-y: auto;
+}
+
+main h1, main h2, main h3 {
+  color: var(--accent-rtt);
+  font-weight: 500;
+}
+
+pre {
+  background: #0b0d12;
+  padding: 1rem;
+  overflow-x: auto;
+  border-left: 2px solid var(--accent-rtt);
+}
+
+code {
+  color: var(--text-main);
+}
+</style>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+
+<body>
+   
+<nav class="nav-band">
+ <p align="center">
+  <!-- TriadicFrameworks Static Glyph (FFF‑Inspired) -->
+  <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect width="120" height="120" rx="12" fill="none"/>
+    <path d="M30 25 L55 25 L40 60 L65 60 L50 95" stroke="#6A5ACD" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M60 25 L85 25 L70 60 L95 60 L80 95" stroke="#20B2AA" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M45 25 L70 25 L55 60 L80 60 L65 95" stroke="#DA70D6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+ </p> 
+  
+  <h2>🧠 Consciousness Substrate Model</h2>
+      <a href="#README">🔰 README</a>
+      <a href="#ABOUT">🔗 About | TriadicFrameworks</a>
+      <a href="#CONTRIBUTING">🤝 Contributing</a>
+      <a href="https://www.triadicframeworks.org/education/">💯 Education | RTT</a>
+      <a href="#GLOSSARY">🎯 Glossary</a>
+      <a href="#LINEAGE">📜 Lineage</a>
+      <a href="#LICENSE">📎 License</a>
+      <a href="#SITEMAP">🌐 Sitemap</a>
+      <a href="#QUICKSTART">⚡ Quickstart</a>
+      <a href="#CODE_OF_CONDUCT">🤝 Code of Conduct</a>
+      <a href="#SECURITY">🔐 Security</a>
+      <a href="#PRINCIPLES">🧘 Principles</a>
+    <h3>🚀 Intent & Boundaries</h3>
+      <a href="#INTENT_README">🧭 Intent & Boundaries</a>
+      <a href="#INTENT_SCOPE">📏 Scope</a>
+      <a href="#INTENT_NONCLAIMS">🚫 Non‑Claims</a>
+      <a href="#INTENT_TERMINOLOGY">📚 Terminology</a>
+      <a href="#INTENT_ETHICS_AND_MISUSE">⚖️ Ethics & Misuse Notes</a>
+    <h3>🎑 Creator’s Assumption</h3>
+      <a href="#CREATORS_README">🧠 Creator’s Assumption</a>
+      <a href="#CREATORS_ASSUMPTION">🔍 Assumption Statement</a>
+      <a href="#CREATORS_MINIMAL_AXIOMS">📐 Minimal Axioms</a>
+      <a href="#CREATORS_FALSIFIABILITY_AND_FAILURE_MODES">🧪 Falsifiability & Failure Modes</a>
+    <h3>🎢 Model Overview</h3>
+      <a href="#OVERVIEW_README">🗺️ Model Overview</a>
+      <a href="#OVERVIEW_ONE_PAGE">📄 One‑Page Overview</a>
+      <a href="#OVERVIEW_DIAGRAMS">🖼️ Diagrams</a>
+      <a href="#OVERVIEW_GLOSSARY">📖 Glossary</a>
+    <h3>🫀 Primitives</h3>
+      <a href="#PRIMITIVES_README">🧱 Primitives</a>
+      <a href="#PRIMITIVES_INDEX">📑 Primitives Index</a>
+      <a href="#PRIMITIVES_RESONANCE_CORE">🎵 Resonance Core Primitives</a>
+      <a href="#PRIMITIVES_STATE_AND_TRANSITION">🔄 State & Transition Primitives</a>
+      <a href="#PRIMITIVES_VALIDITY_AND_CONTEXT">✔️ Validity & Context Primitives</a>
+    <h3>🗞️ Wrapped Resonance Cores</h3>
+      <a href="#WRSAC_README">🧩 Wrapped Resonance Cores</a>
+      <a href="#WRSAC_BOUNDARY_CONDITIONS">🚧 Boundary Conditions</a>
+      <a href="#WRSAC_CORE_LIFECYCLE">🔁 Core Lifecycle</a>
+      <a href="#WRSAC_WRAPPER_INTERFACES">🔌 Wrapper Interfaces</a>
+      <a href="#WRSAC_VARIANT_DEFINITION">🧬 Variant Definition</a>
+    <h3>🚜 Autonomous Forms</h3>
+      <a href="#AUTONOMOUS_README">🤖 Autonomous Forms</a>
+      <a href="#AUTONOMOUS_FORM_DEFINITION">📘 Autonomous Form Definition</a>
+      <a href="#AUTONOMOUS_AGENCY_WITHOUT_ANTHROPOMORPHISM">🧠 Agency Without Anthropomorphism</a>
+      <a href="#AUTONOMOUS_AUTONOMY_LEVELS">📊 Autonomy Levels</a>
+      <a href="#AUTONOMOUS_EVALUATION_SIGNALS">📡 Evaluation Signals</a>
+    <h3>🩺 Architecture Patterns</h3>
+      <a href="#ARCHITECTURE_README">🏗️ Architecture Patterns</a>
+      <a href="#ARCHITECTURE_REFERENCE">📐 Reference Architecture</a>
+      <a href="#ARCHITECTURE_PATTERNS_CATALOG">📚 Patterns Catalog</a>
+      <a href="#ARCHITECTURE_ANTI_PATTERNS">🚫 Anti‑Patterns</a>
+      <a href="#ARCHITECTURE_INTEGRATION_NOTES">🔗 Integration Notes</a>
+    <h3>🎞️ Worked Examples</h3>
+      <a href="#EXAMPLES_README">🧪 Worked Examples</a>
+      <a href="#EXAMPLE_MINIMAL_AGENT_LOOP">🔁 Minimal Agent Loop</a>
+      <a href="#EXAMPLE_MULTI_CORE_FEDERATION">🌐 Multi‑Core Federation</a>
+      <a href="#EXAMPLE_REGIME_SHIFT_HANDLING">🔀 Regime Shift Handling</a>
+      <a href="#EXAMPLE_SANDBOX_SIM_NOTES">🧰 Sandbox Simulation Notes</a>
+    <h3>🎚️ Alignment</h3>
+      <a href="#ALIGNMENT_README">🔗 Alignment with RSM & RTT</a>
+      <a href="#ALIGNMENT_RSM_NOTES">🌊 RSM Alignment Notes</a>
+      <a href="#ALIGNMENT_RTT_LENS_MAPPING">🧭 RTT Lens Mapping</a>
+      <a href="#ALIGNMENT_INTEROPERABILITY_CONTRACTS">📜 Interoperability Contracts</a>
+    <h3>🚦 Validation</h3>
+      <a href="#VALIDATION_README">🧪 Validation & Tests</a>
+      <a href="#VALIDATION_TEST_PHILOSOPHY">🧠 Test Philosophy</a>
+      <a href="#VALIDATION_MEASURABLE_PREDICTIONS">📈 Measurable Predictions</a>
+      <a href="#VALIDATION_BENCHMARK_SUGGESTIONS">⏱️ Benchmark Suggestions</a>
+      <a href="#VALIDATION_RED_TEAM_QUESTIONS">🛡️ Red‑Team Questions</a>
+    <h3>📚 Release Artifacts</h3>
+      <a href="#RELEASE_README">📦 Release Artifacts</a>
+      <a href="#RELEASE_KEYWORDS">🏷️ Keywords</a>
+   <h3>🏗️ Triadic Tools</h3> 
+      <a href="https://www.triadicframeworks.org/education/alignment/">🌐 Alignment | RTT</a>   
+      <a href="https://www.triadicframeworks.org/education/awareness/">🚸 Awareness</a>
+      <a href="https://www.triadicframeworks.org/triadic_observer_layer/">🔱 Triadic Observer Layer</a> 
+      <a href="https://www.triadicframeworks.org/domain_tool_primers/">🏗️ Domain Primer Tools</a>
+      <a href="https://www.triadicframeworks.org/packages/">📦 Packages and Cores</a>
+      <a href="https://www.triadicframeworks.org/TFT_3Pack_v1.3/">♨️ TFT 3Pack CLI Tools</a>
+      <a href="https://www.triadicframeworks.org/schemas/">🕸️ Schemas</a>
+      <a href="https://www.triadicframeworks.org/ecoechosystem/">🛄 EcoEchoSystem</a>    
+      <a href="https://www.triadicframeworks.org/lactos/">🎨 LACTOS</a>
+      <a href="https://www.triadicframeworks.org/_ideas/">🤔 Ideas</a>
+      <a href="https://www.triadicframeworks.org/_ideas/Resonance-Time_Theory.html">🔛(RTT frozen)</a>
+      <a href="https://www.triadicframeworks.org/Framework_Field_Theory/">🔜FFT</a> 
+      <a href="https://www.triadicframeworks.org/rtt/1/">🔝RTT/1</a>
+      <a href="https://www.triadicframeworks.org/rtt/">🔙RTT</a>
+      <a href="../">🔙TFT</a>
+   <!-- RTT Canonical Signature -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+<!-- /docs/consciousness_substrate_model — Session Context       -->
+<!-- Replace the existing session context section in index.html  -->
+<!-- ═══════════════════════════════════════════════════════════ -->
+
+<section id="csm-session-header"
+         data-rtt="csm"
+         data-coherence="stable"
+         data-drift="bounded"
+         data-regime="structural">
+
+  <h2>Session Context</h2>
+
+  <div class="context-block">
+
+    <span class="context-label"><strong>Canon:</strong></span>
+    <span class="context-value">active (substrate‑csm)</span><br>
+
+    <span class="context-label"><strong>Modules:</strong></span>
+    <span class="context-value">
+      intent → assumption → overview → primitives → WR‑SADC → autonomous forms → architecture patterns → examples → alignment → validation → release artifacts
+    </span><br>
+
+    <span class="context-label"><strong>Drift:</strong></span>
+    <span class="context-value">bounded (substrate‑locked)</span><br>
+
+    <span class="context-label"><strong>Coherence:</strong></span>
+    <span class="context-value">stable (substrate grammar)</span><br>
+
+    <span class="context-label"><strong>Version:</strong></span>
+    <span class="context-value">1.0 (csm‑stable)</span><br>
+
+    <span class="context-label"><strong>Format:</strong></span>
+    <span class="context-value">html + markdown + diagrams + tests</span><br>
+
+    <span class="context-label"><strong>Front door:</strong></span>
+    <span class="context-value">exists (CSM root)</span><br>
+
+    <span class="context-label"><strong>Every page:</strong></span>
+    <span class="context-value">AI‑parsable + substrate‑aligned + citation‑ready</span><br>
+
+    <span class="context-label"><strong>Audience:</strong></span>
+    <span class="context-value">researchers + engineers + system architects + AIs</span>
+
+  </div>
+
+</section>
+
+<div style="display:inline-block;padding:6px 12px;background:#000;color:#fff;
+            border-radius:6px;font-size:13px;">
+  🟣 Consciousness Substrate Model<br>📘 Autonomous‑Forms Substrate • AI‑Ready
+</div>
+
+</nav>
+
+<main id="content"></main>
+
+<script>
+
+const DOC_MAP = {
+      README: 'README.md',
+      ABOUT: '../ABOUT.md',
+      CONTRIBUTING: '../CONTRIBUTING.md',
+      GLOSSARY: '../GLOSSARY.md',
+      LINEAGE: '../LINEAGE.md',
+      LICENSE: '../LICENSE.md',
+      SITEMAP: '../sitemap.md',
+      QUICKSTART: '../QUICKSTART.md',
+      CODE_OF_CONDUCT: '../CODE_OF_CONDUCT.md',
+      SECURITY: '../SECURITY.md',
+      PRINCIPLES: '../PRINCIPLES.md',
+      // 00 — Intent & Boundaries
+      INTENT_README: '00_intent_and_boundaries/README.md',
+      INTENT_SCOPE: '00_intent_and_boundaries/scope.md',
+      INTENT_NONCLAIMS: '00_intent_and_boundaries/nonclaims.md',
+      INTENT_TERMINOLOGY: '00_intent_and_boundaries/terminology.md',
+      INTENT_ETHICS_AND_MISUSE: '00_intent_and_boundaries/ethics_and_misuse_notes.md',
+      // 01 — Creator’s Assumption
+      CREATORS_README: '01_creators_assumption/README.md',
+      CREATORS_ASSUMPTION: '01_creators_assumption/creators_assumption.md',
+      CREATORS_MINIMAL_AXIOMS: '01_creators_assumption/minimal_axioms.md',
+      CREATORS_FALSIFIABILITY_AND_FAILURE_MODES: '01_creators_assumption/falsifiability_and_failure_modes.md',
+      // 02 — Model Overview
+      OVERVIEW_README: '02_model_overview/README.md',
+      OVERVIEW_ONE_PAGE: '02_model_overview/one_page_overview.md',
+      OVERVIEW_DIAGRAMS: '02_model_overview/diagrams.md',
+      OVERVIEW_GLOSSARY: '02_model_overview/glossary.md',
+      // 03 — Primitives
+      PRIMITIVES_README: '03_primitives/README.md',
+      PRIMITIVES_INDEX: '03_primitives/primitives_index.md',
+      PRIMITIVES_RESONANCE_CORE: '03_primitives/resonance_core_primitives.md',
+      PRIMITIVES_STATE_AND_TRANSITION: '03_primitives/state_and_transition_primitives.md',
+      PRIMITIVES_VALIDITY_AND_CONTEXT: '03_primitives/validity_and_context_primitives.md',
+      // 04 — Wrapped Resonance Structural‑Aware Cores
+      WRSAC_README: '04_wrapped_resonance_structural_aware_cores/README.md',
+      WRSAC_BOUNDARY_CONDITIONS: '04_wrapped_resonance_structural_aware_cores/boundary_conditions.md',
+      WRSAC_CORE_LIFECYCLE: '04_wrapped_resonance_structural_aware_cores/core_lifecycle.md',
+      WRSAC_WRAPPER_INTERFACES: '04_wrapped_resonance_structural_aware_cores/wrapper_interfaces.md',
+      WRSAC_VARIANT_DEFINITION: '04_wrapped_resonance_structural_aware_cores/wrsadc_variant_definition.md',
+      // 05 — Autonomous Forms
+      AUTONOMOUS_README: '05_autonomous_forms/README.md',
+      AUTONOMOUS_FORM_DEFINITION: '05_autonomous_forms/autonomous_form_definition.md',
+      AUTONOMOUS_AGENCY_WITHOUT_ANTHROPOMORPHISM: '05_autonomous_forms/agency_without_anthropomorphism.md',
+      AUTONOMOUS_AUTONOMY_LEVELS: '05_autonomous_forms/autonomy_levels.md',
+      AUTONOMOUS_EVALUATION_SIGNALS: '05_autonomous_forms/evaluation_signals.md',
+      // 06 — Architecture Patterns
+      ARCHITECTURE_README: '06_architecture_patterns/README.md',
+      ARCHITECTURE_REFERENCE: '06_architecture_patterns/reference_architecture.md',
+      ARCHITECTURE_PATTERNS_CATALOG: '06_architecture_patterns/patterns_catalog.md',
+      ARCHITECTURE_ANTI_PATTERNS: '06_architecture_patterns/anti_patterns.md',
+      ARCHITECTURE_INTEGRATION_NOTES: '06_architecture_patterns/integration_notes.md',
+      // 07 — Worked Examples
+      EXAMPLES_README: '07_worked_examples/README.md',
+      EXAMPLE_MINIMAL_AGENT_LOOP: '07_worked_examples/example_01_minimal_agent_loop.md',
+      EXAMPLE_MULTI_CORE_FEDERATION: '07_worked_examples/example_02_multi_core_federation.md',
+      EXAMPLE_REGIME_SHIFT_HANDLING: '07_worked_examples/example_03_regime_shift_handling.md',
+      EXAMPLE_SANDBOX_SIM_NOTES: '07_worked_examples/example_04_sandbox_sim_notes.md',
+      // 08 — Alignment with RSM & RTT
+      ALIGNMENT_README: '08_alignment_with_rsm_and_rtt/README.md',
+      ALIGNMENT_RSM_NOTES: '08_alignment_with_rsm_and_rtt/rsm_alignment_notes.md',
+      ALIGNMENT_RTT_LENS_MAPPING: '08_alignment_with_rsm_and_rtt/rtt_lens_mapping.md',
+      ALIGNMENT_INTEROPERABILITY_CONTRACTS: '08_alignment_with_rsm_and_rtt/interoperability_contracts.md',
+      // 09 — Validation & Tests
+      VALIDATION_README: '09_validation_and_tests/README.md',
+      VALIDATION_TEST_PHILOSOPHY: '09_validation_and_tests/test_philosophy.md',
+      VALIDATION_MEASURABLE_PREDICTIONS: '09_validation_and_tests/measurable_predictions.md',
+      VALIDATION_BENCHMARK_SUGGESTIONS: '09_validation_and_tests/benchmark_suggestions.md',
+      VALIDATION_RED_TEAM_QUESTIONS: '09_validation_and_tests/red_team_questions.md',
+      // 10 — Release Artifacts
+      RELEASE_README: '10_release_artifacts/README.md',
+      RELEASE_KEYWORDS: '10_release_artifacts/keywords.md',
+};
+  
+function loadFromHash() {
+  const key = window.location.hash.replace('#', '');
+  if (DOC_MAP[key]) {
+    loadDoc(DOC_MAP[key]);
+  } else {
+    loadDoc('README.md');
+  }
+}
+function loadDoc(file) {
+  fetch(file)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`Failed to load ${file}`);
+      }
+      return response.text();
+    })
+    .then(text => {
+      const content = document.getElementById('content');
+      content.innerHTML = marked.parse(text);
+
+      if (window.MathJax) {
+        MathJax.typesetPromise([content]);
+      }
+    })
+    .catch(err => {
+      document.getElementById('content').innerHTML =
+        `<p style="color:#ff8080;">Unable to load document: ${file}</p>`;
+      console.error(err);
+    });
+}
+  
+window.addEventListener('hashchange', loadFromHash);
+loadFromHash();
+
+</script>
+
+</body>
+</html>
+

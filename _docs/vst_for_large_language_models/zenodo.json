@@ -1,0 +1,34 @@
+{
+  "title": "vST for Large Language Models",
+  "upload_type": "software",
+  "publication_type": "article",
+  "description": "This artifact defines the Validation-Space-Time (vST) framework for Large Language Models, including substrate definitions, regime structures, scaling behavior, projection and alignment methods, validation layers, drift detection, examples, and appendices. It is part of the seven-artifact vST canon.",
+  "doi": "10.5281/zenodo.18322485",
+  "creators": [
+    {
+      "name": "Loswin, Nawder",
+      "affiliation": "TriadicFrameworks",
+      "orcid": "0009-0002-2282-5460"
+    }
+  ],
+  "version": "1.0.0",
+  "keywords": [
+    "vST",
+    "Validation-Space-Time",
+    "TriadicFrameworks",
+    "Dimensional Substrate",
+    "High-Dimensional Regimes",
+    "Alignment",
+    "Drift Detection"
+  ],
+  "license": "MIT",
+  "related_identifiers": [
+    {
+      "relation": "isPartOf",
+      "identifier": "https://github.com/umaywant2/TriadicFrameworks",
+      "resource_type": "software"
+    }
+  ],
+  "language": "en"
+}
+

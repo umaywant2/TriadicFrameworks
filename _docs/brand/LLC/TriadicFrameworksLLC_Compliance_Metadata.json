@@ -1,0 +1,156 @@
+{
+  "triadicframeworks_llc_compliance": {
+    "version": "2026.07",
+    "entity": {
+      "name": "TRIADICFRAMEWORKS LLC",
+      "ein": "42-3542585",
+      "dba": "Nawder Loswin",
+      "fiscal_year_start": "2026-07-01",
+      "jurisdiction": "Michigan",
+      "entity_id": "900238506"
+    },
+
+    "metadata": {
+      "ai_ready": true,
+      "grammar": "triadicframeworks-canon",
+      "purpose": "Maintain legal, operational, and canonical compliance for TriadicFrameworks LLC.",
+      "module_category": "compliance",
+      "coherence": "zero-drift",
+      "dimensional_layer": "administrative"
+    },
+
+    "compliance_items": [
+      {
+        "id": "annual_statement",
+        "title": "Michigan Annual Statement Filing",
+        "deadline": "February 15",
+        "reminder": "January 15",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": true,
+        "description": "Annual filing with Michigan LARA to maintain good standing.",
+        "agent_notes": "Verify registered agent and office; confirm no structural changes."
+      },
+      {
+        "id": "registered_agent_review",
+        "title": "Registered Agent Review",
+        "deadline": "June 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": true,
+        "description": "Confirm ZenBusiness Inc. remains active and correct.",
+        "agent_notes": "Update LARA filing if agent changes."
+      },
+      {
+        "id": "ein_record_check",
+        "title": "EIN & IRS Record Check",
+        "deadline": "June 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": true,
+        "description": "Verify EIN status and responsible party information.",
+        "agent_notes": "Ensure EIN matches LLC data; update IRS if address or ownership changes."
+      },
+      {
+        "id": "operating_agreement_review",
+        "title": "Operating Agreement Review",
+        "deadline": "June 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": false,
+        "description": "Review governance document for accuracy and canon alignment.",
+        "agent_notes": "Ensure IP ownership clauses reflect canon and module lineage."
+      },
+      {
+        "id": "tax_classification_review",
+        "title": "Tax Classification Review",
+        "deadline": "December 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": false,
+        "description": "Evaluate whether to remain a disregarded entity or elect S-Corp.",
+        "agent_notes": "Consider payroll tax optimization if hiring or revenue increases."
+      },
+      {
+        "id": "ip_portfolio_review",
+        "title": "Intellectual Property Review",
+        "deadline": "June 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": false,
+        "description": "Review trademarks, copyrights, and domain assets.",
+        "agent_notes": "Include canon modules, metadata schemas, RTT equations, and branding."
+      },
+      {
+        "id": "financial_review_q1",
+        "title": "Q1 Financial Review",
+        "deadline": "March 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": true,
+        "description": "Quarterly bookkeeping and reconciliation.",
+        "agent_notes": "Ensure clean separation of personal and business finances."
+      },
+      {
+        "id": "financial_review_q2",
+        "title": "Q2 Financial Review",
+        "deadline": "June 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": true,
+        "description": "Quarterly bookkeeping and reconciliation.",
+        "agent_notes": "Track module development costs for potential R&D credits."
+      },
+      {
+        "id": "financial_review_q3",
+        "title": "Q3 Financial Review",
+        "deadline": "September 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": true,
+        "description": "Quarterly bookkeeping and reconciliation.",
+        "agent_notes": "Ensure compliance with fiscal year cycle starting July 1."
+      },
+      {
+        "id": "financial_review_q4",
+        "title": "Q4 Financial Review",
+        "deadline": "December 1",
+        "time": "09:00",
+        "recurrence": "yearly",
+        "required": true,
+        "description": "Quarterly bookkeeping and reconciliation.",
+        "agent_notes": "Prepare for tax season and annual filings."
+      },
+      {
+        "id": "dba_renewal",
+        "title": "DBA Renewal — Nawder Loswin",
+        "deadline": "2031-06-01",
+        "time": "09:00",
+        "recurrence": "none",
+        "required": true,
+        "description": "Renew DBA filed July 1, 2026.",
+        "agent_notes": "Wayne County; filed through ZenBusiness PBC."
+      },
+      {
+        "id": "payroll_compliance",
+        "title": "Payroll Compliance Setup",
+        "deadline": "conditional",
+        "time": "09:00",
+        "recurrence": "none",
+        "required": false,
+        "description": "Triggered when hiring employees or contractors.",
+        "agent_notes": "Register for Michigan UIA and Treasury withholding; federal forms 941, 940, W-2, W-3."
+      },
+      {
+        "id": "entity_election_review",
+        "title": "IRS Entity Election Review",
+        "deadline": "conditional",
+        "time": "09:00",
+        "recurrence": "none",
+        "required": false,
+        "description": "Evaluate need for S-Corp or C-Corp election.",
+        "agent_notes": "Use Form 2553 or Form 8832 if electing."
+      }
+    ]
+  }
+}

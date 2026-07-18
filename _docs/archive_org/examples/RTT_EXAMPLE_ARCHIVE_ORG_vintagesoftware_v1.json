@@ -1,0 +1,158 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/rttcode.example.schema.json",
+  "example": "ARCHIVE_ORG_vintagesoftware",
+  "version": "1.0",
+  "module": "archive_org",
+
+  "target": "https://archive.org/details/vintagesoftware",
+  "collection": "vintagesoftware",
+
+  "operators": [
+    "METADATA_OPERATOR",
+    "WAYBACK_OPERATOR",
+    "LINEAGE_OPERATOR",
+    "COLLECTION_OPERATOR",
+    "PRESERVATION_OPERATOR",
+    "DRIFTBOUND_RETRIEVAL_OPERATOR"
+  ],
+
+  "METADATA_OPERATOR": {
+    "input": {
+      "target": "https://archive.org/details/vintagesoftware"
+    },
+    "output": {
+      "substrate_type": "html",
+      "regime": "technical",
+      "drift_sensitivity": "low",
+      "coherence": "high",
+      "lineage_ids": ["vintagesoftware-root", "software-index"]
+    }
+  },
+
+  "WAYBACK_OPERATOR": {
+    "input": {
+      "target": "https://archive.org/details/vintagesoftware",
+      "constraints": null
+    },
+    "output": {
+      "snapshots": ["2011", "2014", "2018", "2022"],
+      "drift_map": {
+        "2011→2014": "none",
+        "2014→2018": "minor",
+        "2018→2022": "none"
+      },
+      "continuity_breaks": [],
+      "time_crystal": 0.92
+    }
+  },
+
+  "LINEAGE_OPERATOR": {
+    "input": {
+      "snapshots": ["2011", "2014", "2018", "2022"],
+      "metadata": {
+        "regime": "technical",
+        "substrate_type": "html"
+      }
+    },
+    "output": {
+      "lineage_graph": {
+        "2011→2014": "no structural change",
+        "2014→2018": "minor layout update",
+        "2018→2022": "no structural change"
+      },
+      "transformations": [
+        "layout update (2014→2018)"
+      ],
+      "regime_shifts": [],
+      "continuity_kernel": [
+        "header",
+        "footer",
+        "software-index",
+        "version-listing"
+      ]
+    }
+  },
+
+  "COLLECTION_OPERATOR": {
+    "input": {
+      "target": "https://archive.org/details/vintagesoftware",
+      "lineage_graph": {
+        "2011→2014": "no structural change",
+        "2014→2018": "minor layout update",
+        "2018→2022": "no structural change"
+      },
+      "regime_shifts": []
+    },
+    "output": {
+      "collection_id": "vintagesoftware",
+      "coherence_clusters": ["software-index", "versioned-archives"],
+      "related_objects": [
+        "vintagesoftware/dos-games",
+        "vintagesoftware/early-mac",
+        "vintagesoftware/pc-booters"
+      ],
+      "regime_profile": "technical"
+    }
+  },
+
+  "PRESERVATION_OPERATOR": {
+    "input": {
+      "target": "https://archive.org/details/vintagesoftware",
+      "collection_id": "vintagesoftware",
+      "regime_profile": "technical",
+      "continuity_kernel": [
+        "header",
+        "footer",
+        "software-index",
+        "version-listing"
+      ],
+      "transformations": [
+        "layout update (2014→2018)"
+      ]
+    },
+    "output": {
+      "format": "html",
+      "stability_score": 0.93,
+      "drift_risk": "low",
+      "multi_layer_flags": ["html"]
+    }
+  },
+
+  "DRIFTBOUND_RETRIEVAL_OPERATOR": {
+    "input": {
+      "snapshots": ["2011", "2014", "2018", "2022"],
+      "drift_map": {
+        "2011→2014": "none",
+        "2014→2018": "minor",
+        "2018→2022": "none"
+      },
+      "continuity_breaks": [],
+      "lineage_graph": {
+        "2011→2014": "no structural change",
+        "2014→2018": "minor layout update",
+        "2018→2022": "no structural change"
+      },
+      "regime_shifts": [],
+      "collection_id": "vintagesoftware",
+      "coherence_clusters": ["software-index", "versioned-archives"],
+      "related_objects": [
+        "vintagesoftware/dos-games",
+        "vintagesoftware/early-mac",
+        "vintagesoftware/pc-booters"
+      ],
+      "format": "html",
+      "stability_score": 0.93,
+      "drift_risk": "low",
+      "multi_layer_flags": ["html"]
+    },
+    "output": {
+      "earliest_stable_version": "2011",
+      "most_reliable_version": "2022",
+      "key_changes": [
+        "minor layout update (2014→2018)"
+      ],
+      "warnings": [],
+      "answer": "The most reliable version is the 2022 snapshot, with extremely high stability and no continuity breaks."
+    }
+  }
+}

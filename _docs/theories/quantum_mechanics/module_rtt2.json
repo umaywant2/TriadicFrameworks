@@ -1,0 +1,128 @@
+{
+  "ai.module": "quantum_mechanics.rtt2",
+  "ai.version": "1.0",
+  "ai.purpose": "RTT/2 engine layer for Quantum Mechanics: resonance mapping, stabilizers, decoherence structure, and cross-module propagation.",
+  "ai.keywords": [
+    "quantum mechanics",
+    "superposition",
+    "amplitudes",
+    "resonance",
+    "decoherence",
+    "measurement",
+    "operators",
+    "rtt2"
+  ],
+
+  "engine": {
+    "layer": "RTT/2",
+    "description": "Integrates Quantum Mechanics into the RTT resonance substrate, exposing coherence patterns, stabilizers, and cross-module propagation."
+  },
+
+  "resonance": {
+    "patterns": [
+      {
+        "name": "coherence_resonance",
+        "description": "Superposition arises as a resonance pattern across amplitude components."
+      },
+      {
+        "name": "phase_resonance",
+        "description": "Relative phase determines interference behavior and resonance alignment."
+      },
+      {
+        "name": "measurement_resonance_break",
+        "description": "Measurement corresponds to resonance collapse into stable distinctions."
+      }
+    ],
+    "failure_modes": [
+      "decoherence",
+      "phase_randomization",
+      "basis_instability",
+      "environmental_noise"
+    ]
+  },
+
+  "stabilizers": {
+    "primary": [
+      {
+        "name": "unitary_evolution",
+        "description": "Preserves coherence and probability structure across resonance flows."
+      },
+      {
+        "name": "eigenbasis_structure",
+        "description": "Provides stable distinction channels for measurement."
+      },
+      {
+        "name": "environmental_coupling",
+        "description": "Drives decoherence and stabilizes classical distinctions."
+      }
+    ],
+    "secondary": [
+      {
+        "name": "uncertainty_constraints",
+        "description": "Limit simultaneous distinctions and shape resonance geometry."
+      },
+      {
+        "name": "density_matrix_structure",
+        "description": "Represents partial coherence and mixed-state resonance."
+      }
+    ]
+  },
+
+  "coherence_propagation": {
+    "mechanisms": [
+      "unitary_evolution",
+      "interference",
+      "phase_alignment"
+    ],
+    "signals": [
+      "interference_pattern",
+      "phase_structure",
+      "coherence_length"
+    ],
+    "notes": "Coherence propagation is treated as resonance flow shaped by amplitude structure and environmental coupling."
+  },
+
+  "cross_module": {
+    "interactions": [
+      {
+        "module": "information_theory.rtt2",
+        "interaction": "Measurement creates distinctions; coherence encodes uncertainty and mutual information."
+      },
+      {
+        "module": "quantum_field_theory.rtt2",
+        "interaction": "QFT excitations inherit QM coherence constraints."
+      },
+      {
+        "module": "thermodynamics.rtt2",
+        "interaction": "Decoherence and entropy production share constraint structures."
+      },
+      {
+        "module": "special_relativity.rtt2",
+        "interaction": "Lorentz symmetry shapes amplitude propagation and phase structure."
+      }
+    ],
+    "notes": "QM resonance propagates across informational, relativistic, and excitation-level modules."
+  },
+
+  "dimensional_behavior": {
+    "R1": "Primitive amplitude behavior; unstable distinctions; coherence dominates.",
+    "R2": "Stable operator algebra; measurement structure; predictable evolution.",
+    "R3": "QM becomes a limiting case of QFT; excitation grammar takes over.",
+    "R4": "QM loses meaning; macroscopic regimes dominate."
+  },
+
+  "coherence": {
+    "markers": [
+      "unitary evolution",
+      "stable eigenvalue spectra",
+      "predictable interference patterns",
+      "probability conservation"
+    ],
+    "instability_signals": [
+      "decoherence",
+      "measurement-induced distinction",
+      "loss of amplitude coherence",
+      "basis instability"
+    ]
+  }
+}

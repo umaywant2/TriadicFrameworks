@@ -1,0 +1,97 @@
+governance_physics:
+
+  description: >
+    Cross‑axis physics defines how structural forces interact across the
+    five‑axis governance manifold [C, M, O, A, T]. These forces shape drift,
+    compensatory movement, basin attraction, and structural tension. Physics
+    is substrate‑level and non‑ideological: it describes how systems behave,
+    not how they should behave.
+
+  version: "1.0"
+
+  axis_pairs:
+
+    centralization_oversight:
+      axes: [C, O]
+      relationship: >
+        Higher centralization increases the need for integrated oversight.
+        Weak oversight at high centralization produces structural tension.
+      effects:
+        - "Compensatory movement on O when C increases"
+        - "Tension when C >> O or O >> C"
+      force_strength: 1.0
+
+    method_access:
+      axes: [M, A]
+      relationship: >
+        Competitive methods require coherent access rules. Broad access with
+        mediated methods or restricted access with competitive methods creates
+        instability.
+      effects:
+        - "Compensatory movement on A when M shifts"
+        - "Tension when method and access diverge"
+      force_strength: 0.8
+
+    oversight_timing:
+      axes: [O, T]
+      relationship: >
+        Oversight stability depends on timing stability. Volatile timing weakens
+        oversight; strong oversight stabilizes timing.
+      effects:
+        - "Compensatory movement on T when O changes"
+        - "Tension when timing cycles contradict oversight structure"
+      force_strength: 0.7
+
+  physics_rules:
+
+    compensatory_movement:
+      description: >
+        When one axis shifts, linked axes adjust to maintain structural balance.
+      formula: "Δlinked = k * Δprimary"
+      notes: "k is derived from force_strength of the axis pair."
+
+    tension_accumulation:
+      description: >
+        Structural tension accumulates when axes diverge beyond stable ranges.
+      indicators:
+        - "High delta between paired axes"
+        - "Invariant violations"
+        - "Weak absorptive structures"
+      output: "tension_score"
+
+    drift_amplification:
+      description: >
+        Drift magnitude increases when tension is high or absorptive capacity is
+        low. Physics amplifies or dampens drift depending on structural context.
+      factors:
+        - "invariant_tension"
+        - "awareness_strength"
+        - "absorptive_capacity"
+      output: "adjusted_drift_magnitude"
+
+    basin_attraction:
+      description: >
+        Systems experience gravitational pull toward the nearest equilibrium
+        basin. Attraction strength increases with coherence and decreases with
+        tension.
+      formula: "force = 1 / (1 + basin_distance)"
+      output: "basin_pull_vector"
+
+  output_schema:
+    active_forces: "List of axis-pair forces active at evaluation time"
+    compensatory_movements: "Axis adjustments induced by physics"
+    tension_score: "0–10 measure of structural strain"
+    basin_pull_vector: "Directional pull toward nearest basin"
+    adjusted_vector: "Vector after physics adjustments"
+
+  integration_with_analyzer:
+    vectorizer: "Provides initial structural vector"
+    invariant_checker: "Supplies invariant tension signals"
+    drift_detector: "Uses physics to compute drift forces"
+    basin_classifier: "Uses adjusted vector for basin evaluation"
+    coherence_scoring: "Uses tension and compensatory movement metrics"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Defines cross-axis physics for GSM structural analysis."

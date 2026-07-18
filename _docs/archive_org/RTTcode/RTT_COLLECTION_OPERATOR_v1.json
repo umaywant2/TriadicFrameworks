@@ -1,0 +1,79 @@
+{
+  "$schema": "https://www.triadicframeworks.org/schemas/rttcode.schema.json",
+  "operator": "COLLECTION_OPERATOR",
+  "version": "1.0",
+  "module": "archive_org",
+  "family": "E-Ops",
+
+  "purpose": "Determine the object's dimensional envelope by identifying its collection membership, coherence clusters, related objects, and regime profile.",
+
+  "inputs": {
+    "target": {
+      "type": "url",
+      "required": true,
+      "description": "The webpage or object being analyzed."
+    },
+    "lineage_graph": {
+      "type": "object",
+      "required": true,
+      "description": "Structural evolution graph from LINEAGE_OPERATOR."
+    },
+    "regime_shifts": {
+      "type": "list",
+      "required": true,
+      "description": "Regime shift markers from LINEAGE_OPERATOR."
+    }
+  },
+
+  "outputs": {
+    "collection_id": {
+      "type": "string",
+      "description": "The Internet Archive collection or sub-collection the object belongs to."
+    },
+    "coherence_clusters": {
+      "type": "list",
+      "description": "Structural clusters grouping related objects."
+    },
+    "related_objects": {
+      "type": "list",
+      "description": "Other IA objects structurally or contextually linked."
+    },
+    "regime_profile": {
+      "type": "string",
+      "description": "Combined regime identity across lineage and collection context."
+    }
+  },
+
+  "collection_types": {
+    "govdocs": "High stability, institutional.",
+    "news": "High drift, frequent redesigns.",
+    "journals": "Medium drift, periodic updates.",
+    "vintagesoftware": "Stable, versioned.",
+    "cultural": "Mixed substrates, medium drift."
+  },
+
+  "cluster_rules": {
+    "template_similarity": "Shared templates or layout structures.",
+    "navigation_skeleton": "Shared navigation or menu structure.",
+    "metadata_patterns": "Shared metadata fields or patterns.",
+    "lineage_ids": "Shared lineage identifiers."
+  },
+
+  "procedure": [
+    "Retrieve IA collection metadata for target.",
+    "Identify collection membership (collection_id).",
+    "Analyze structural similarity across related objects to form coherence_clusters.",
+    "Identify related objects using lineage identifiers, collection metadata, and structural similarity.",
+    "Combine collection regime and lineage regime to produce regime_profile.",
+    "Emit outputs for PRESERVATION_OPERATOR and DRIFTBOUND_RETRIEVAL_OPERATOR."
+  ],
+
+  "guarantees": [
+    "No content-based inference.",
+    "Collection membership is structural, not semantic.",
+    "Related objects determined by structural similarity.",
+    "Regime profile is derived, not assumed.",
+    "Output deterministic given IA metadata and lineage."
+  ]
+}
+

@@ -1,0 +1,123 @@
+simulation_outputs_schema:
+
+  description: >
+    Defines the output structure for the GSM Simulation Engine. Each simulation
+    run produces stepwise structural states, drift sequences, basin trajectories,
+    regime-mode transitions, phase sequences, and narrative interpretations.
+    Outputs are designed for replay, comparison, dashboards, and Observer lenses.
+
+  version: "1.0"
+
+  simulation_metadata:
+    simulation_id: "<unique_id>"
+    created: "<YYYY-MM-DD>"
+    initial_state_id: "<state_id>"
+    mode: "deterministic | stochastic | scenario | counterfactual"
+    notes: "<optional>"
+
+  initial_conditions:
+    vector:
+      C: <number>
+      M: <number>
+      O: <number>
+      A: <number>
+      T: <number>
+    basin:
+      nearest_basin: <CPL | CPF | CTR | PCL | HCL>
+      basin_distance: <number>
+      stability_score: <0–1>
+    invariants:
+      aligned: [<list>]
+      tension: [<list>]
+      violated: [<list>]
+      tension_score: <0–10>
+    drift:
+      vector: [<dC>, <dM>, <dO>, <dA>, <dT>]
+      magnitude: <number>
+      category: "micro | meso | macro | regime_shift"
+    regime_mode: "<mode>"
+    phase_state: "<phase>"
+    absorptive_strength: <0–1>
+
+  steps:
+    - step_id: <number>
+      timestamp: "<YYYY-MM-DD>"
+      vector:
+        C: <number>
+        M: <number>
+        O: <number>
+        A: <number>
+        T: <number>
+      drift:
+        vector: [<dC>, <dM>, <dO>, <dA>, <dT>]
+        magnitude: <number>
+        category: "micro | meso | macro | regime_shift"
+      physics_forces:
+        - axis_pair: "<C↔O | M↔A | O↔T>"
+          magnitude: <number>
+          direction: "positive | negative"
+      invariants:
+        aligned: [<list>]
+        tension: [<list>]
+        violated: [<list>]
+        tension_score: <0–10>
+      basin:
+        nearest_basin: <CPL | CPF | CTR | PCL | HCL>
+        basin_distance: <number>
+        boundary_proximity: <0–1>
+        stability_score: <0–1>
+      regime_mode: "<mode>"
+      phase_state: "<phase>"
+      absorptive_strength: <0–1>
+      events:
+        - event_id: "<unique_id>"
+          type: "alignment | tension | drift | transition | regime_shift | reconstruction"
+          summary: "<short description>"
+          metadata: "<optional>"
+      narrative:
+        summary: "<short structural interpretation>"
+        highlights:
+          - "<highlight_1>"
+          - "<highlight_2>"
+        drift_explanation:
+          - "<why drift occurred>"
+        basin_context:
+          - "<basin interpretation>"
+        mode_context:
+          - "<why the system is in this regime mode>"
+
+  cumulative_metrics:
+    total_steps: <number>
+    total_drift_magnitude: <number>
+    invariant_violations: <number>
+    transitions_detected: <number>
+    regime_shifts_detected: <number>
+    average_coherence: <number>
+    average_absorptive_strength: <number>
+
+  final_state:
+    vector:
+      C: <number>
+      M: <number>
+      O: <number>
+      A: <number>
+      T: <number>
+    basin:
+      nearest_basin: <CPL | CPF | CTR | PCL | HCL>
+      basin_distance: <number>
+      stability_score: <0–1>
+    regime_mode: "<mode>"
+    phase_state: "<phase>"
+    absorptive_strength: <0–1>
+    coherence_score: <0–100>
+    notes: "<optional>"
+
+  integration:
+    observer_layer: "Consumes stepwise states for history/now/future lenses"
+    dashboards: "Visualize drift, basins, modes, phases, and narratives"
+    scenario_tools: "Use outputs for counterfactual and intervention analysis"
+
+  metadata:
+    maintainer: "TriadicFrameworks"
+    last_updated: "2026-03-04"
+    notes: "Defines output structure for GSM simulation runs."

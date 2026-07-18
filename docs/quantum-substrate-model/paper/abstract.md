@@ -1,3 +1,0 @@
-## Abstract
-
-The Quantum Substrate Model (QSM) defines a structural framework for organizing multiple substrate regimes under explicitly declared boundaries, dimensional descriptors, and operator‑mediated interactions. Extending the principles of minimal substrate modeling, the QSM formalizes how regimes may coexist, transition, or exit without embedding empirical claims, physical interpretation, or domain‑specific semantics. By treating regime structure and dimensional organization as first‑class, declarative elements, the model supports clarity, interpretability, and reproducibility in layered systems. The QSM is architecture‑agnostic and intended to serve as a stable substrate beneath higher‑level models while preserving their semantic independence.
