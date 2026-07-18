@@ -1,5 +1,158 @@
 atomic_clocks 
-# Changelog
+# Atomic Clocks — Structural Alignment  
+
+- [`atomic_clocks_module.json`](atomic_clocks_module.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/⏱️RTT%20+%20vST%20Aligned-📉Drift%20Invariant%20Ready-4c8eda?style=for-the-badge" alt="⏱️RTT n vST Aligned | 📉Drift Invariant Ready"/>
+
+This directory contains the complete scaffolding for the Resonance‑Time
+(RT) and Validated Spacetime (vST) alignment work applied to modern
+atomic timekeeping. It includes the full whitepaper, standalone
+structural artifacts, and an educational vST‑lite demonstration
+notebook.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+## Contents
+
+- **whitepaper.md**  
+  Combined Zenodo‑ready paper integrating all sections.
+
+- **whitepaper/**  
+  Individual section files used to assemble the full paper.
+
+- **triadic_decomposition/**  
+  Structural definition of the (R, I, F) triad.
+
+- **vst_definition/**  
+  Structural definition of the second.
+
+- **drift_detection/**  
+  Resonance invariants for drift detection.
+
+- **roadmap/**  
+  Adoption pathway for research groups and standards bodies.
+
+- **notebooks/**  
+  vST‑lite demonstration using synthetic clock data.
+
+## Purpose
+
+This directory provides a minimal, architecture‑agnostic framework for
+interpreting atomic timekeeping through the lens of Resonance‑Time. The
+goal is to supply a validation layer that clarifies structure, reduces
+conceptual drift, and supports future standards without altering current
+practice.
+
+## License
+
+This project is released under the Creative Commons Attribution 4.0
+International (CC BY 4.0) license. See `LICENSE_NOTES.md` for details.
+
+## Citation
+
+If you use this work, please cite it using the metadata in
+`CITATION.cff`.
+
+- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/atomic_clocks)
+---
+title: "Atomic Clocks"
+description: "RT+vST alignment applied to atomic timekeeping — a triadic (R,I,F) decomposition of clock behavior, a resonance-invariant definition of the second, drift detection via vST layers, and a vST-lite demo notebook for standards bodies and research groups."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# Atomic Clocks
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+**Atomic Clocks** applies Resonance-Time (RT) theory and Validated Substrate Theory (vST) to atomic timekeeping. The result is not a new clock design — it is a structural alignment layer that reads existing atomic clock systems through a triadic lens, defines the second in resonance-invariant terms, and provides tooling for drift detection that standards bodies and research groups can adopt immediately.
+
+## Triadic Decomposition
+
+Every atomic clock event decomposes into the **(R, I, F)** triadic operator:
+
+| Component | Role |
+|-----------|------|
+| R — Resonance | The atomic transition frequency — the stable structural anchor |
+| I — Invariant | The declared regime under which R is considered stable |
+| F — Flow | The temporal propagation of clock ticks into measurable time |
+
+## vST Definition of the Second
+
+The vST layer redefines the second not as a count of oscillations but as a **resonance-validated interval** — a duration that holds only while the declared regime (I) remains coherent. This gives metrology a structural handle on what it means for a clock to be "accurate" across regime transitions.
+
+## Drift Detection via Resonance Invariants
+
+When a clock's R component drifts outside the declared invariant band, the vST layer surfaces this as a measurable drift signal — bounded, traceable, and addressable — rather than an unexplained deviation.
+
+## vST-Lite Demo Notebook
+
+A synthetic clock data notebook demonstrates the full alignment pipeline for research groups and standards bodies evaluating RT+vST alignment, and students working through the (R,I,F) decomposition on controlled data.
+
+## Adoption Roadmap
+
+1. **Read** — Apply (R,I,F) decomposition to existing clock data (no changes required)
+2. **Validate** — Run vST drift detection alongside current calibration procedures
+3. **Declare** — Adopt vST regime declarations as formal invariant anchors
+4. **Publish** — Cite as Loswin N. 2026 and register results with zenodo.org/communities/vst
+
+## Citation
+
+Loswin, N. 2026. *Atomic Clocks — RT+vST Alignment*. TriadicFrameworks.
+Zenodo DOI: pending. License: CC BY 4.0. `CITATION.cff` included.
+Whitepaper: Zenodo-ready. AI-Ready Module · `atomic_clocks_module.json`
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | (R,I,F) triadic decomposition derives from FFT operator families |
+| [AlphaFold Substrate Alignments](../alphafold_substrate_alignments/overview.md) | vST validation layer architecture is shared — same regime-check pattern |
+| [Boson Substrate Model](../boson-substrate-model/overview.md) | Operator-mediated interactions under declared regimes — same structural principle |
+| [Structural Detection](../Structural_Detection/overview.md) | DRIFT_SENSE operator maps directly onto resonance-invariant drift signals |
+| [Conditions Substrate Model](../Conditions_Substrate_Model/overview.md) | Resonance amplification classes describe how small R deviations cascade |
+| [Research](../Research/overview.md) | vST-validated clock results feed the zenodo.org/communities/vst corpus |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+# Changelog
 
 All notable changes to the *Atomic Clocks — Structural Alignment* project
 are documented in this file. This changelog follows a minimal,
@@ -50,56 +203,6 @@ No additional restrictions:
 
 These notes summarize the license for convenience. The full legal text
 is available at: https://creativecommons.org/licenses/by/4.0/
-# Atomic Clocks — Structural Alignment
-
-This directory contains the complete scaffolding for the Resonance‑Time
-(RT) and Validated Spacetime (vST) alignment work applied to modern
-atomic timekeeping. It includes the full whitepaper, standalone
-structural artifacts, and an educational vST‑lite demonstration
-notebook.
-
-## Contents
-
-- **whitepaper.md**  
-  Combined Zenodo‑ready paper integrating all sections.
-
-- **whitepaper/**  
-  Individual section files used to assemble the full paper.
-
-- **triadic_decomposition/**  
-  Structural definition of the (R, I, F) triad.
-
-- **vst_definition/**  
-  Structural definition of the second.
-
-- **drift_detection/**  
-  Resonance invariants for drift detection.
-
-- **roadmap/**  
-  Adoption pathway for research groups and standards bodies.
-
-- **notebooks/**  
-  vST‑lite demonstration using synthetic clock data.
-
-## Purpose
-
-This directory provides a minimal, architecture‑agnostic framework for
-interpreting atomic timekeeping through the lens of Resonance‑Time. The
-goal is to supply a validation layer that clarifies structure, reduces
-conceptual drift, and supports future standards without altering current
-practice.
-
-## License
-
-This project is released under the Creative Commons Attribution 4.0
-International (CC BY 4.0) license. See `LICENSE_NOTES.md` for details.
-
-## Citation
-
-If you use this work, please cite it using the metadata in
-`CITATION.cff`.
-
-- [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/atomic_clocks)
 # Atomic Clocks and Resonance‑Time: A Structural Alignment
 
 ## Abstract

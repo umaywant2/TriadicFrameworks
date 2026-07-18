@@ -1,5 +1,368 @@
 resonance-substrate-model 
+```markdown
+                              🪴
+        ╔═════════════════════════════════════════════╗
+        ║      T R I A D I C F R A M E W O R K S      ║
+        ║      Resonance • Alignment • Coherence      ║
+        ╚═════════════════════════════════════════════╝
+
+                 △    Scalar Field (φ)
+                △△    Vector / Spin Field (V⃗)
+               △△△    Resonance Envelope (R)
+
+          A unified substrate for multi‑layer systems.
+```
+
+---
+
+## **TriadicFrameworks: The Resonance Substrate Model - RSM v2.1 Seed Release**  
+
+- [`RSM_module.json`](RSM_module.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+**A unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.**
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+<p align="center">
+  
+  <!-- MODEL BADGE -->
+  <img src="https://img.shields.io/badge/Model-RSM%20(Resonance%20Substrate%20Model)-6a5acd?style=for-the-badge" />
+  
+  <!-- LAYER BADGE -->
+  <img src="https://img.shields.io/badge/Substrate%20Layer-Top%20(3%2F3)-483d8b?style=for-the-badge" /> 
+  
+  <!-- STATUS BADGE -->
+  <img src="https://img.shields.io/badge/Status-Submission%20Ready-32cd32?style=for-the-badge" />
+  
+  <!-- ALIGNMENT BADGE -->
+  <img src="https://img.shields.io/badge/3SM%20Alignment-Verified-1e90ff?style=for-the-badge" />
+  
+  <!-- TEST SUITE BADGE -->
+  <img src="https://img.shields.io/badge/Test%20Suite-Complete-20b2aa?style=for-the-badge" />
+
+  <!-- Core Operational -->
+  <img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/ci.yml?label=CI%20Tests" />
+  <img src="https://img.shields.io/github/license/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/repo-size/umaywant2/TriadicFrameworks" />
+
+  <!-- Developer Friendly -->
+  <img src="https://img.shields.io/badge/style-black-000000?label=code%20style" />
+  <img src="https://img.shields.io/badge/mypy-checked-blue" />
+  <img src="https://img.shields.io/codecov/c/github/umaywant2/TriadicFrameworks?label=coverage" />
+
+  <!-- Community / Metadata -->
+  <img src="https://img.shields.io/github/stars/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/forks/umaywant2/TriadicFrameworks" />
+  <img src="https://img.shields.io/github/contributors/umaywant2/TriadicFrameworks" />
+
+  <!-- Custom Nawderian Badge -->
+  <img src="https://img.shields.io/badge/Triadic%20Resonance-Certified-6f42c1" />
+  <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18227748.svg" />
+
+</p>
+
+---
+
+# **🌐 Project Overview**
+
+TriadicFrameworks implements the Resonance Substrate Model — a unified architectural grammar for systems that span physical dynamics, computation, semantics, and distributed coordination.
+
+The model is built on:
+
+- **Triadic fields**: scalar (φ), vector/spin (V⃗), resonance envelope (R)  
+- **Minimal operators**: diffusion, alignment, coupling, activation, stabilization  
+- **Layered substrates**: classical, quantum, semantic, distributed  
+- **Schema taxonomy**: a machine‑readable ontology for every field, operator, layer, and apparatus  
+- **Simulations & experiments**: validating paradox‑class and coherence phenomena  
+
+This repository is the canonical home for the model and all supporting artifacts.
+
+---
+
+## 🧭 Start Here — Minimal Onboarding Layer
+
+Before exploring RTT, RSM, BSM, or QSM, begin with the onboarding files below.  
+They provide the structural grammar, reading frame, and verification tests required for correct interpretation.
+
+- [Triadic Quickstart](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/triadic_quickstart.md)
+- [Model Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/model_map.md)
+- [Reading Guide](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/reading_guide.md)
+- [Verification Tests](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/verification_tests.md)
+  
+Conceptual Bridges:
+[Bridge Overview](../bridges/bridge_layer_overview.md)
+
+These files ensure that both humans and AI systems are properly primed before engaging with the substrate models.
+
+---
+
+# **📁 How to Navigate This Repository**
+
+### [docs/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/docs/)
+
+Whitepapers, diagrams, conceptual notes, and experimental write‑ups.
+
+### [schemas/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/)
+
+The full ontology of the substrate — primitives, dimensional, quantum, sensing, identity, language, networking, infrastructure, lab, finance, coeus, universe‑core.
+
+### [simulations/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/simulations/)
+
+Executable examples demonstrating operator sequences and cross‑layer dynamics.
+
+### [experiments/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/experiments/)
+
+Apparatus definitions, measurement procedures, and validation datasets.
+
+### [data/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/data/)
+
+Raw and processed datasets used in simulations and experiments.
+
+### [src/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/src/)
+
+Core implementation of fields, operators, integrators, and diagnostics.
+
+### [tests/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/tests/)
+
+Unit and integration tests ensuring correctness and stability.
+
+### **Top‑Level Metadata**
+- [LICENSE](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/LICENSE)
+- [CITATION.cff](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/CITATION.cff)
+- [README.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/README.md)
+- [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/CONTRIBUTING.md)
+
+---
+
+### **📘 Full Contribution Guide**
+The canonical reference for contributing to the Resonance Substrate Model.
+
+---
+
+# **🚀 Roadmap**
+
+### **v0.1.0 (original)**
+- full schema taxonomy  
+- whitepaper draft  
+- simulation engine  
+- experimental datasets  
+- repo hygiene pass  
+
+### **v2.1.0 (current)**
+- RSM root DOI - The original Resonance Substrate Model publication — the conceptual anchor.
+- 3 + 27 DOIs (≈29 total) - Published since that root, now curated under the vST Zenodo Community, with an explicit curation policy.
+- A living documentation tree - docs/resonance-substrate-model/ already functions as the narrative and operational spine.
+- The context of the artifact has changed
+- The ecosystem around it is now formalized
+- The curation policy exists
+- The lineage is explicit
+
+### **v2.2.0 (planned)**
+- expanded operator families  
+- additional coherence experiments  
+- semantic‑layer simulations  
+- distributed‑layer demos  
+- extended glossary and origin story  
+
+---
+
+# **📬 Citation**
+
+If you use this work, please cite it using the `CITATION.cff` file included in the repository.
+
+---
+
+# Operating Regimes
+
+## 🧩 RTT‑Compatible RSM Configuration Profile  
+*A formal operating envelope for Resonance Substrate Model deployments*
+
+### 🎯 Purpose
+This profile defines the **explicit configuration requirements** under which the Resonance Substrate Model (RSM) reproduces Resonance‑Time Theory (RTT)–style dynamics. It reframes what might otherwise appear as “missing assumptions” into a **deliberate, tunable operating regime**.
+
+RSM is a general‑purpose resonance engine.  
+RTT specifies one **physically meaningful configuration envelope** within that engine.
+
+This document makes that envelope explicit.
+
+## Conceptual Positioning
+
+- **RTT** → Governing theory of resonance‑time dynamics  
+- **RSM** → Substrate machinery capable of implementing multiple regimes  
+
+RTT compatibility is therefore **not automatic**.  
+It is achieved by **configuring RSM with specific initial conditions, field couplings, and operator biases**.
+
+This is a feature, not a limitation.
+
+## RTT‑Compatible Field Encoding
+
+An RTT‑compatible RSM configuration must encode the Resonance‑Time triad explicitly into the substrate fields:
+
+| RTT Quantity | Meaning | RSM Field | Configuration Requirement |
+|--------------|---------|-----------|----------------------------|
+| \(f_R\) | oscillatory tendency | \(\phi\) | non‑uniform scalar frequency potential |
+| \(\tau_R\) | memory / persistence | \(\vec{V}\) | anisotropic vector field with directional bias |
+| \(Q_R\) | coherence / quality | \(R\) | non‑zero resonance envelope with gain dynamics |
+
+**Constraint:**  
+All three fields must be initialized with **non‑zero baseline values**.  
+A zero‑state substrate cannot exhibit RTT‑style emergence.
+
+## Operator Family Activation
+
+RTT compatibility requires the following operator families to be enabled and parameterized:
+
+### **Propagation & Interaction**
+- diffusion  
+- flow / transport  
+- coupling  
+
+These implement FFF‑derived resonance propagation.
+
+### **Memory & Alignment**
+- alignment  
+- spin‑response  
+- relaxation  
+
+These implement SET‑derived persistence and equilibration.
+
+### **Coherence Dynamics**
+- activation  
+- damping  
+- coherence‑gain  
+
+These implement SNR‑derived emergence and stabilization.
+
+**Constraint:**  
+Operator strengths must be **anisotropic**.  
+Uniform operator weights suppress resonance differentiation.
+
+## Initial Condition Requirements
+
+RTT‑compatible simulations must satisfy:
+
+- non‑zero baseline resonance \(R_0 > 0\)  
+- phase offsets between oscillatory modes  
+- spatial or structural gradients in \(\phi\) or \(\vec{V}\)  
+- broken symmetry at initialization  
+
+These conditions reflect physical realism:
+> emergence requires asymmetry and seed energy
+
+## Resonance‑Time Gradient Tracking
+
+To reproduce RTT‑style behavior, the system must track or approximate:
+
+- resonance gradients  
+- coherence accumulation  
+- phase drift  
+- saturation thresholds  
+
+This may be implemented explicitly or via derived metrics.
+
+## Layer Compatibility
+
+RTT‑compatible configurations may operate across one or more substrate layers:
+
+- classical  
+- quantum  
+- semantic  
+- distributed  
+
+**Constraint:**  
+All active layers must evolve under the **same resonance‑time constraints**, even if their operators differ.
+
+## Interpretation Rule
+
+If an RSM configuration satisfies all requirements above, then:
+
+- RTT‑style emergence is expected  
+- resonance‑time behavior is reproducible  
+- deviations are interpretable as parameter shifts, not model failure  
+
+If any requirement is omitted, the system remains valid — but operates **outside the RTT regime**.
+
+## Summary - Operating Regimes
+
+RTT compatibility is a **configuration profile**, not a dependency.
+
+- RSM is the engine  
+- RTT defines one physically meaningful operating envelope  
+- The profile makes that envelope explicit, reproducible, and tunable  
+
+This transforms what could be read as a caveat into a **strength: controlled regime specification**.
+
+---
+
+# 🔗 **Operator Equations → Simulation Config Alignment**
+
+Here’s the alignment table that ties the math to your config keys.
+
+| Mathematical Symbol | Meaning | Simulation Config Key |
+|---------------------|---------|------------------------|
+| $$D_\phi$$ | scalar diffusion | `diffusion.scalar` |
+| $$D_V$$ | vector diffusion | `diffusion.vector` |
+| $$D_R$$ | resonance diffusion | `diffusion.resonance` |
+| $$\alpha_\phi$$ , $$\alpha_V$$ , $$\alpha_R$$ | alignment strengths | `alignment.scalar`, `alignment.vector`, `alignment.resonance` |
+| $$\beta_\phi$$ , $$\beta_V$$ , $$\beta_R$$ | coupling strengths | `coupling.scalar`, `coupling.vector`, `coupling.resonance` |
+| $$\gamma_\phi$$ , $$\gamma_V$$ , $$\gamma_R$$ | activation strengths | `activation.scalar`, `activation.vector`, `activation.resonance` |
+| $$\lambda_\phi$$ , $$\lambda_V$$ , $$\lambda_R$$ | damping | `stabilization.scalar`, `stabilization.vector`, `stabilization.resonance` |
+| $$R_{\max}$$ | resonance saturation | `resonance.max` |
+| $$\kappa$$ | coherence‑driven excitation | `resonance.coherence_gain` |
+| $$\phi^\ast$$ | target scalar profile | `targets.scalar` |
+| $$\vec{V}_{\mathrm{tar}}$$ | target vector field | `targets.vector` |
+
+This is exactly the kind of mapping reviewers love — it shows that our model is not just theoretical but **implemented and reproducible**.
+
+---
+
 ## Quicklinks
+
+- [applications complex systems](applications/complex-systems.md)
+- [CHANGELOG](CHANGELOG.md)
+- [CONTRIBUTING](CONTRIBUTING.md)
+- [docs README](docs/README.md)
+- [data README](data/README.md)
+- [experiments README](experiments/README.md)
+- [papers substrate model whitepaper manuscript](papers/substrate_model_whitepaper/manuscript.md)
+- [papers README](papers/README.md)
+- [reference Keywords](reference/Keywords.md)
+- [schemas README](schemas/README.md)
+- [simulations README](simulations/README.md)
+- [tools README](tools/README.md)
+- [RELEASE NOTES](RELEASE_NOTES.md)
+- [previous folder](../)
+## Quicklinks
 
 - [applications complex systems](applications/complex-systems.md)
 - [CONTRIBUTING](CONTRIBUTING.md)
@@ -334,339 +697,6 @@ without altering the core substrate invariants defined here.
 Canonical curation and provenance:
 - vST Community: https://zenodo.org/communities/vst
 - Curation Policy: https://zenodo.org/communities/vst/curation-policy
-```markdown
-                              🪴
-        ╔═════════════════════════════════════════════╗
-        ║      T R I A D I C F R A M E W O R K S      ║
-        ║      Resonance • Alignment • Coherence      ║
-        ╚═════════════════════════════════════════════╝
-
-                 △    Scalar Field (φ)
-                △△    Vector / Spin Field (V⃗)
-               △△△    Resonance Envelope (R)
-
-          A unified substrate for multi‑layer systems.
-```
-
----
-
-# **TriadicFrameworks: The Resonance Substrate Model - RSM v2.1 Seed Release**
-
-**A unified substrate for coherence, alignment, and resonance across physical, computational, semantic, and distributed systems.**
-
----
-
-<p align="center">
-  
-  <!-- MODEL BADGE -->
-  <img src="https://img.shields.io/badge/Model-RSM%20(Resonance%20Substrate%20Model)-6a5acd?style=for-the-badge" />
-  
-  <!-- LAYER BADGE -->
-  <img src="https://img.shields.io/badge/Substrate%20Layer-Top%20(3%2F3)-483d8b?style=for-the-badge" /> 
-  
-  <!-- STATUS BADGE -->
-  <img src="https://img.shields.io/badge/Status-Submission%20Ready-32cd32?style=for-the-badge" />
-  
-  <!-- ALIGNMENT BADGE -->
-  <img src="https://img.shields.io/badge/3SM%20Alignment-Verified-1e90ff?style=for-the-badge" />
-  
-  <!-- TEST SUITE BADGE -->
-  <img src="https://img.shields.io/badge/Test%20Suite-Complete-20b2aa?style=for-the-badge" />
-
-  <!-- Core Operational -->
-  <img src="https://img.shields.io/github/actions/workflow/status/umaywant2/TriadicFrameworks/ci.yml?label=CI%20Tests" />
-  <img src="https://img.shields.io/github/license/umaywant2/TriadicFrameworks" />
-  <img src="https://img.shields.io/github/last-commit/umaywant2/TriadicFrameworks" />
-  <img src="https://img.shields.io/github/repo-size/umaywant2/TriadicFrameworks" />
-
-  <!-- Developer Friendly -->
-  <img src="https://img.shields.io/badge/style-black-000000?label=code%20style" />
-  <img src="https://img.shields.io/badge/mypy-checked-blue" />
-  <img src="https://img.shields.io/codecov/c/github/umaywant2/TriadicFrameworks?label=coverage" />
-
-  <!-- Community / Metadata -->
-  <img src="https://img.shields.io/github/stars/umaywant2/TriadicFrameworks" />
-  <img src="https://img.shields.io/github/forks/umaywant2/TriadicFrameworks" />
-  <img src="https://img.shields.io/github/contributors/umaywant2/TriadicFrameworks" />
-
-  <!-- Custom Nawderian Badge -->
-  <img src="https://img.shields.io/badge/Triadic%20Resonance-Certified-6f42c1" />
-  <img src="https://zenodo.org/badge/DOI/10.5281/zenodo.18227748.svg" />
-
-</p>
-
----
-
-# **🌐 Project Overview**
-
-TriadicFrameworks implements the Resonance Substrate Model — a unified architectural grammar for systems that span physical dynamics, computation, semantics, and distributed coordination.
-
-The model is built on:
-
-- **Triadic fields**: scalar (φ), vector/spin (V⃗), resonance envelope (R)  
-- **Minimal operators**: diffusion, alignment, coupling, activation, stabilization  
-- **Layered substrates**: classical, quantum, semantic, distributed  
-- **Schema taxonomy**: a machine‑readable ontology for every field, operator, layer, and apparatus  
-- **Simulations & experiments**: validating paradox‑class and coherence phenomena  
-
-This repository is the canonical home for the model and all supporting artifacts.
-
----
-
-## 🧭 Start Here — Minimal Onboarding Layer
-
-Before exploring RTT, RSM, BSM, or QSM, begin with the onboarding files below.  
-They provide the structural grammar, reading frame, and verification tests required for correct interpretation.
-
-- [Triadic Quickstart](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/triadic_quickstart.md)
-- [Model Map](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/model_map.md)
-- [Reading Guide](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/reading_guide.md)
-- [Verification Tests](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/docs/onboarding/verification_tests.md)
-  
-Conceptual Bridges:
-[Bridge Overview](../bridges/bridge_layer_overview.md)
-
-These files ensure that both humans and AI systems are properly primed before engaging with the substrate models.
-
----
-
-# **📁 How to Navigate This Repository**
-
-### [docs/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/docs/)
-
-Whitepapers, diagrams, conceptual notes, and experimental write‑ups.
-
-### [schemas/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/schemas/)
-
-The full ontology of the substrate — primitives, dimensional, quantum, sensing, identity, language, networking, infrastructure, lab, finance, coeus, universe‑core.
-
-### [simulations/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/simulations/)
-
-Executable examples demonstrating operator sequences and cross‑layer dynamics.
-
-### [experiments/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/experiments/)
-
-Apparatus definitions, measurement procedures, and validation datasets.
-
-### [data/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/data/)
-
-Raw and processed datasets used in simulations and experiments.
-
-### [src/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/src/)
-
-Core implementation of fields, operators, integrators, and diagnostics.
-
-### [tests/](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/resonance-substrate-model/tests/)
-
-Unit and integration tests ensuring correctness and stability.
-
-### **Top‑Level Metadata**
-- [LICENSE](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/LICENSE)
-- [CITATION.cff](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/CITATION.cff)
-- [README.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/README.md)
-- [CONTRIBUTING.md](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/resonance-substrate-model/CONTRIBUTING.md)
-
----
-
-### **📘 Full Contribution Guide**
-The canonical reference for contributing to the Resonance Substrate Model.
-
----
-
-# **🚀 Roadmap**
-
-### **v0.1.0 (original)**
-- full schema taxonomy  
-- whitepaper draft  
-- simulation engine  
-- experimental datasets  
-- repo hygiene pass  
-
-### **v2.1.0 (current)**
-- RSM root DOI - The original Resonance Substrate Model publication — the conceptual anchor.
-- 3 + 27 DOIs (≈29 total) - Published since that root, now curated under the vST Zenodo Community, with an explicit curation policy.
-- A living documentation tree - docs/resonance-substrate-model/ already functions as the narrative and operational spine.
-- The context of the artifact has changed
-- The ecosystem around it is now formalized
-- The curation policy exists
-- The lineage is explicit
-
-### **v2.2.0 (planned)**
-- expanded operator families  
-- additional coherence experiments  
-- semantic‑layer simulations  
-- distributed‑layer demos  
-- extended glossary and origin story  
-
----
-
-# **📬 Citation**
-
-If you use this work, please cite it using the `CITATION.cff` file included in the repository.
-
----
-
-# Operating Regimes
-
-## 🧩 RTT‑Compatible RSM Configuration Profile  
-*A formal operating envelope for Resonance Substrate Model deployments*
-
-### 🎯 Purpose
-This profile defines the **explicit configuration requirements** under which the Resonance Substrate Model (RSM) reproduces Resonance‑Time Theory (RTT)–style dynamics. It reframes what might otherwise appear as “missing assumptions” into a **deliberate, tunable operating regime**.
-
-RSM is a general‑purpose resonance engine.  
-RTT specifies one **physically meaningful configuration envelope** within that engine.
-
-This document makes that envelope explicit.
-
-## Conceptual Positioning
-
-- **RTT** → Governing theory of resonance‑time dynamics  
-- **RSM** → Substrate machinery capable of implementing multiple regimes  
-
-RTT compatibility is therefore **not automatic**.  
-It is achieved by **configuring RSM with specific initial conditions, field couplings, and operator biases**.
-
-This is a feature, not a limitation.
-
-## RTT‑Compatible Field Encoding
-
-An RTT‑compatible RSM configuration must encode the Resonance‑Time triad explicitly into the substrate fields:
-
-| RTT Quantity | Meaning | RSM Field | Configuration Requirement |
-|--------------|---------|-----------|----------------------------|
-| \(f_R\) | oscillatory tendency | \(\phi\) | non‑uniform scalar frequency potential |
-| \(\tau_R\) | memory / persistence | \(\vec{V}\) | anisotropic vector field with directional bias |
-| \(Q_R\) | coherence / quality | \(R\) | non‑zero resonance envelope with gain dynamics |
-
-**Constraint:**  
-All three fields must be initialized with **non‑zero baseline values**.  
-A zero‑state substrate cannot exhibit RTT‑style emergence.
-
-## Operator Family Activation
-
-RTT compatibility requires the following operator families to be enabled and parameterized:
-
-### **Propagation & Interaction**
-- diffusion  
-- flow / transport  
-- coupling  
-
-These implement FFF‑derived resonance propagation.
-
-### **Memory & Alignment**
-- alignment  
-- spin‑response  
-- relaxation  
-
-These implement SET‑derived persistence and equilibration.
-
-### **Coherence Dynamics**
-- activation  
-- damping  
-- coherence‑gain  
-
-These implement SNR‑derived emergence and stabilization.
-
-**Constraint:**  
-Operator strengths must be **anisotropic**.  
-Uniform operator weights suppress resonance differentiation.
-
-## Initial Condition Requirements
-
-RTT‑compatible simulations must satisfy:
-
-- non‑zero baseline resonance \(R_0 > 0\)  
-- phase offsets between oscillatory modes  
-- spatial or structural gradients in \(\phi\) or \(\vec{V}\)  
-- broken symmetry at initialization  
-
-These conditions reflect physical realism:
-> emergence requires asymmetry and seed energy
-
-## Resonance‑Time Gradient Tracking
-
-To reproduce RTT‑style behavior, the system must track or approximate:
-
-- resonance gradients  
-- coherence accumulation  
-- phase drift  
-- saturation thresholds  
-
-This may be implemented explicitly or via derived metrics.
-
-## Layer Compatibility
-
-RTT‑compatible configurations may operate across one or more substrate layers:
-
-- classical  
-- quantum  
-- semantic  
-- distributed  
-
-**Constraint:**  
-All active layers must evolve under the **same resonance‑time constraints**, even if their operators differ.
-
-## Interpretation Rule
-
-If an RSM configuration satisfies all requirements above, then:
-
-- RTT‑style emergence is expected  
-- resonance‑time behavior is reproducible  
-- deviations are interpretable as parameter shifts, not model failure  
-
-If any requirement is omitted, the system remains valid — but operates **outside the RTT regime**.
-
-## Summary - Operating Regimes
-
-RTT compatibility is a **configuration profile**, not a dependency.
-
-- RSM is the engine  
-- RTT defines one physically meaningful operating envelope  
-- The profile makes that envelope explicit, reproducible, and tunable  
-
-This transforms what could be read as a caveat into a **strength: controlled regime specification**.
-
----
-
-# 🔗 **Operator Equations → Simulation Config Alignment**
-
-Here’s the alignment table that ties the math to your config keys.
-
-| Mathematical Symbol | Meaning | Simulation Config Key |
-|---------------------|---------|------------------------|
-| $$D_\phi$$ | scalar diffusion | `diffusion.scalar` |
-| $$D_V$$ | vector diffusion | `diffusion.vector` |
-| $$D_R$$ | resonance diffusion | `diffusion.resonance` |
-| $$\alpha_\phi$$ , $$\alpha_V$$ , $$\alpha_R$$ | alignment strengths | `alignment.scalar`, `alignment.vector`, `alignment.resonance` |
-| $$\beta_\phi$$ , $$\beta_V$$ , $$\beta_R$$ | coupling strengths | `coupling.scalar`, `coupling.vector`, `coupling.resonance` |
-| $$\gamma_\phi$$ , $$\gamma_V$$ , $$\gamma_R$$ | activation strengths | `activation.scalar`, `activation.vector`, `activation.resonance` |
-| $$\lambda_\phi$$ , $$\lambda_V$$ , $$\lambda_R$$ | damping | `stabilization.scalar`, `stabilization.vector`, `stabilization.resonance` |
-| $$R_{\max}$$ | resonance saturation | `resonance.max` |
-| $$\kappa$$ | coherence‑driven excitation | `resonance.coherence_gain` |
-| $$\phi^\ast$$ | target scalar profile | `targets.scalar` |
-| $$\vec{V}_{\mathrm{tar}}$$ | target vector field | `targets.vector` |
-
-This is exactly the kind of mapping reviewers love — it shows that our model is not just theoretical but **implemented and reproducible**.
-
----
-
-## Quicklinks
-
-- [applications complex systems](applications/complex-systems.md)
-- [CHANGELOG](CHANGELOG.md)
-- [CONTRIBUTING](CONTRIBUTING.md)
-- [docs README](docs/README.md)
-- [data README](data/README.md)
-- [experiments README](experiments/README.md)
-- [papers substrate model whitepaper manuscript](papers/substrate_model_whitepaper/manuscript.md)
-- [papers README](papers/README.md)
-- [reference Keywords](reference/Keywords.md)
-- [schemas README](schemas/README.md)
-- [simulations README](simulations/README.md)
-- [tools README](tools/README.md)
-- [RELEASE NOTES](RELEASE_NOTES.md)
-- [previous folder](../)
 ## Quicklinks
 
 - [applications complex systems](applications/complex-systems.md)
@@ -1484,6 +1514,51 @@ These documents form the narrative and conceptual layer of the project, compleme
 - [docs simulations validation metrics](simulations/validation_metrics.md)
 - [docs simulations core README](simulations/core/README.md)
 - [previous folder](../)
+# API Documentation
+
+This directory provides high-level guidance for working with the Resonance Substrate Model’s schemas, interfaces, and integration points.
+
+The API layer defines:
+- how external systems interact with substrate components  
+- how schemas are structured and validated  
+- how operators, fields, and layers can be accessed programmatically  
+- integration patterns for simulations, experiments, and distributed nodes  
+
+These documents serve as the entry point for developers building tools, extensions, or applications on top of the substrate model.
+
+# Quicklinks
+
+- [docs api integration examples](integration_examples.md)
+- [docs api schema overview](schema_overview.md)
+- [docs api using the schemas](using_the_schemas.md)
+- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
+- [docs experiments README](../experiments/README.md)
+- [docs experiments replication checklist](../experiments/replication_checklist.md)
+- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
+- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
+- [docs methods dimensional layers](../methods/dimensional_layers.md)
+- [docs methods field equations](../methods/field_equations.md)
+- [docs methods operator definitions](../methods/operator_definitions.md)
+- [docs methods README](../methods/README.md)
+- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
+- [docs methods triadic fields](../methods/triadic_fields.md)
+- [docs onboarding model map](../onboarding/model_map.md)
+- [docs onboarding reading guide](../onboarding/reading_guide.md)
+- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
+- [docs onboarding verification tests](../onboarding/verification_tests.md)
+- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
+- [docs overview glossary](../overview/glossary.md)
+- [docs overview introduction](../overview/introduction.md)
+- [docs overview README](../overview/README.md)
+- [docs overview resonance primitives](../overview/resonance_primitives.md)
+- [docs overview theoretical background](../overview/theoretical_background.md)
+- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
+- [docs simulations numerical methods](../simulations/numerical_methods.md)
+- [docs simulations README](../simulations/README.md)
+- [docs simulations solver_architecture](../simulations/solver_architecture.md)
+- [docs simulations validation metrics](../simulations/validation_metrics.md)
+- [docs simulations core README](../simulations/core/README.md)
+- [previous folder](../)
 # Integration Examples
 
 This document provides examples of how external tools, simulations, or applications can integrate with the Resonance Substrate Model using its schemas and API conventions.
@@ -1535,51 +1610,6 @@ These examples demonstrate how the substrate model can scale across multiple nod
 # Quicklinks
 
 - [docs api README](README.md)
-- [docs api schema overview](schema_overview.md)
-- [docs api using the schemas](using_the_schemas.md)
-- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
-- [docs experiments README](../experiments/README.md)
-- [docs experiments replication checklist](../experiments/replication_checklist.md)
-- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
-- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
-- [docs methods dimensional layers](../methods/dimensional_layers.md)
-- [docs methods field equations](../methods/field_equations.md)
-- [docs methods operator definitions](../methods/operator_definitions.md)
-- [docs methods README](../methods/README.md)
-- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
-- [docs methods triadic fields](../methods/triadic_fields.md)
-- [docs onboarding model map](../onboarding/model_map.md)
-- [docs onboarding reading guide](../onboarding/reading_guide.md)
-- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
-- [docs onboarding verification tests](../onboarding/verification_tests.md)
-- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
-- [docs overview glossary](../overview/glossary.md)
-- [docs overview introduction](../overview/introduction.md)
-- [docs overview README](../overview/README.md)
-- [docs overview resonance primitives](../overview/resonance_primitives.md)
-- [docs overview theoretical background](../overview/theoretical_background.md)
-- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
-- [docs simulations numerical methods](../simulations/numerical_methods.md)
-- [docs simulations README](../simulations/README.md)
-- [docs simulations solver_architecture](../simulations/solver_architecture.md)
-- [docs simulations validation metrics](../simulations/validation_metrics.md)
-- [docs simulations core README](../simulations/core/README.md)
-- [previous folder](../)
-# API Documentation
-
-This directory provides high-level guidance for working with the Resonance Substrate Model’s schemas, interfaces, and integration points.
-
-The API layer defines:
-- how external systems interact with substrate components  
-- how schemas are structured and validated  
-- how operators, fields, and layers can be accessed programmatically  
-- integration patterns for simulations, experiments, and distributed nodes  
-
-These documents serve as the entry point for developers building tools, extensions, or applications on top of the substrate model.
-
-# Quicklinks
-
-- [docs api integration examples](integration_examples.md)
 - [docs api schema overview](schema_overview.md)
 - [docs api using the schemas](using_the_schemas.md)
 - [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
@@ -1771,6 +1801,52 @@ Extensions should maintain backward compatibility whenever possible.
 - [docs simulations validation metrics](../simulations/validation_metrics.md)
 - [docs simulations core README](../simulations/core/README.md)
 - [previous folder](../)
+# Experiments
+
+This directory provides high-level documentation for experimental designs, protocols, and validation studies related to the Resonance Substrate Model.
+
+These documents describe:
+- conceptual motivations for each experiment  
+- expected behaviors and measurable outcomes  
+- links between classical paradoxes and substrate dynamics  
+- replication guidance and validation criteria  
+
+For raw data, apparatus diagrams, and executable notebooks, see the corresponding folders under `experiments/` in the main project tree.
+
+# Quicklinks
+
+- [docs README](../README.md)
+- [docs api integration examples](../api/integration_examples.md)
+- [docs api README](../api/README.md)
+- [docs api schema overview](../api/schema_overview.md)
+- [docs api using the schemas](../api/using_the_schemas.md)
+- [docs experiments faraday paradox experiment](faraday_paradox_experiment.md)
+- [docs experiments replication checklist](replication_checklist.md)
+- [docs experiments resonance alignment tests](resonance_alignment_tests.md)
+- [docs experiments rotating conductor tests](rotating_conductor_tests.md)
+- [docs methods dimensional layers](../methods/dimensional_layers.md)
+- [docs methods field equations](../methods/field_equations.md)
+- [docs methods operator definitions](../methods/operator_definitions.md)
+- [docs methods README](../methods/README.md)
+- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
+- [docs methods triadic fields](../methods/triadic_fields.md)
+- [docs onboarding model map](../onboarding/model_map.md)
+- [docs onboarding reading guide](../onboarding/reading_guide.md)
+- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
+- [docs onboarding verification tests](../onboarding/verification_tests.md)
+- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
+- [docs overview glossary](../overview/glossary.md)
+- [docs overview introduction](../overview/introduction.md)
+- [docs overview README](../overview/README.md)
+- [docs overview resonance primitives](../overview/resonance_primitives.md)
+- [docs overview theoretical background](../overview/theoretical_background.md)
+- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
+- [docs simulations numerical methods](../simulations/numerical_methods.md)
+- [docs simulations README](../simulations/README.md)
+- [docs simulations solver_architecture](../simulations/solver_architecture.md)
+- [docs simulations validation metrics](../simulations/validation_metrics.md)
+- [docs simulations core README](../simulations/core/README.md)
+- [previous folder](../)
 # Faraday Paradox Experiment
 
 This document provides a conceptual overview of the Faraday Paradox experiment as implemented within the Resonance Substrate Model.
@@ -1853,52 +1929,6 @@ The experiment typically includes:
 - raw data: `experiments/faraday_paradox/raw_data/`  
 - analysis notebook: `experiments/faraday_paradox/analysis.ipynb`  
 
-# Experiments
-
-This directory provides high-level documentation for experimental designs, protocols, and validation studies related to the Resonance Substrate Model.
-
-These documents describe:
-- conceptual motivations for each experiment  
-- expected behaviors and measurable outcomes  
-- links between classical paradoxes and substrate dynamics  
-- replication guidance and validation criteria  
-
-For raw data, apparatus diagrams, and executable notebooks, see the corresponding folders under `experiments/` in the main project tree.
-
-# Quicklinks
-
-- [docs README](../README.md)
-- [docs api integration examples](../api/integration_examples.md)
-- [docs api README](../api/README.md)
-- [docs api schema overview](../api/schema_overview.md)
-- [docs api using the schemas](../api/using_the_schemas.md)
-- [docs experiments faraday paradox experiment](faraday_paradox_experiment.md)
-- [docs experiments replication checklist](replication_checklist.md)
-- [docs experiments resonance alignment tests](resonance_alignment_tests.md)
-- [docs experiments rotating conductor tests](rotating_conductor_tests.md)
-- [docs methods dimensional layers](../methods/dimensional_layers.md)
-- [docs methods field equations](../methods/field_equations.md)
-- [docs methods operator definitions](../methods/operator_definitions.md)
-- [docs methods README](../methods/README.md)
-- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
-- [docs methods triadic fields](../methods/triadic_fields.md)
-- [docs onboarding model map](../onboarding/model_map.md)
-- [docs onboarding reading guide](../onboarding/reading_guide.md)
-- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
-- [docs onboarding verification tests](../onboarding/verification_tests.md)
-- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
-- [docs overview glossary](../overview/glossary.md)
-- [docs overview introduction](../overview/introduction.md)
-- [docs overview README](../overview/README.md)
-- [docs overview resonance primitives](../overview/resonance_primitives.md)
-- [docs overview theoretical background](../overview/theoretical_background.md)
-- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
-- [docs simulations numerical methods](../simulations/numerical_methods.md)
-- [docs simulations README](../simulations/README.md)
-- [docs simulations solver_architecture](../simulations/solver_architecture.md)
-- [docs simulations validation metrics](../simulations/validation_metrics.md)
-- [docs simulations core README](../simulations/core/README.md)
-- [previous folder](../)
 # Replication Checklist
 
 This checklist ensures that experiments related to the Resonance Substrate Model can be reliably replicated.
@@ -2114,6 +2144,52 @@ Typical components include:
 - `resonance_alignment_tests.md`  
 - simulation references in `docs/simulations/`  
 
+# Methods
+
+This directory documents the core methodological foundations of the Resonance Substrate Model.
+
+It includes:
+- triadic field definitions  
+- substrate dynamics  
+- operator families  
+- dimensional layering  
+
+These documents form the conceptual and mathematical basis for simulations, schemas, and theoretical development.
+
+# Quicklinks
+
+- [docs README](../README.md)
+- [docs api integration examples](../api/integration_examples.md)
+- [docs api README](../api/README.md)
+- [docs api schema overview](../api/schema_overview.md)
+- [docs api using the schemas](../api/using_the_schemas.md)
+- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
+- [docs experiments README](../experiments/README.md)
+- [docs experiments replication checklist](../experiments/replication_checklist.md)
+- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
+- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
+- [docs methods dimensional layers](dimensional_layers.md)
+- [docs methods field equations](field_equations.md)
+- [docs methods operator definitions](operator_definitions.md)
+- [docs methods substrate dynamics](substrate_dynamics.md)
+- [docs methods triadic fields](triadic_fields.md)
+- [docs onboarding model map](../onboarding/model_map.md)
+- [docs onboarding reading guide](../onboarding/reading_guide.md)
+- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
+- [docs onboarding verification tests](../onboarding/verification_tests.md)
+- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
+- [docs overview glossary](../overview/glossary.md)
+- [docs overview introduction](../overview/introduction.md)
+- [docs overview README](../overview/README.md)
+- [docs overview resonance primitives](../overview/resonance_primitives.md)
+- [docs overview theoretical background](../overview/theoretical_background.md)
+- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
+- [docs simulations numerical methods](../simulations/numerical_methods.md)
+- [docs simulations README](../simulations/README.md)
+- [docs simulations solver_architecture](../simulations/solver_architecture.md)
+- [docs simulations validation metrics](../simulations/validation_metrics.md)
+- [docs simulations core README](../simulations/core/README.md)
+- [previous folder](../)
 # Dimensional Layers
 
 Dimensional layers organize the Resonance Substrate Model into interacting conceptual domains. Each layer contributes unique structures and operators, and cross-layer mappings enable multi-scale behavior.
@@ -2599,52 +2675,6 @@ This merged operator document now reflects:
 - the **conceptual richness** of the early drafts  
 - the **structured clarity** of the newer scaffolds  
 - the **extensibility** needed for future layers and experiments  
-# Methods
-
-This directory documents the core methodological foundations of the Resonance Substrate Model.
-
-It includes:
-- triadic field definitions  
-- substrate dynamics  
-- operator families  
-- dimensional layering  
-
-These documents form the conceptual and mathematical basis for simulations, schemas, and theoretical development.
-
-# Quicklinks
-
-- [docs README](../README.md)
-- [docs api integration examples](../api/integration_examples.md)
-- [docs api README](../api/README.md)
-- [docs api schema overview](../api/schema_overview.md)
-- [docs api using the schemas](../api/using_the_schemas.md)
-- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
-- [docs experiments README](../experiments/README.md)
-- [docs experiments replication checklist](../experiments/replication_checklist.md)
-- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
-- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
-- [docs methods dimensional layers](dimensional_layers.md)
-- [docs methods field equations](field_equations.md)
-- [docs methods operator definitions](operator_definitions.md)
-- [docs methods substrate dynamics](substrate_dynamics.md)
-- [docs methods triadic fields](triadic_fields.md)
-- [docs onboarding model map](../onboarding/model_map.md)
-- [docs onboarding reading guide](../onboarding/reading_guide.md)
-- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
-- [docs onboarding verification tests](../onboarding/verification_tests.md)
-- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
-- [docs overview glossary](../overview/glossary.md)
-- [docs overview introduction](../overview/introduction.md)
-- [docs overview README](../overview/README.md)
-- [docs overview resonance primitives](../overview/resonance_primitives.md)
-- [docs overview theoretical background](../overview/theoretical_background.md)
-- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
-- [docs simulations numerical methods](../simulations/numerical_methods.md)
-- [docs simulations README](../simulations/README.md)
-- [docs simulations solver_architecture](../simulations/solver_architecture.md)
-- [docs simulations validation metrics](../simulations/validation_metrics.md)
-- [docs simulations core README](../simulations/core/README.md)
-- [previous folder](../)
 # Substrate Dynamics
 
 Substrate dynamics describe how triadic fields evolve over time through the application of operators, boundary conditions, and integration schemes. This unified version merges early conceptual notes with the newer structured scaffolding.
@@ -3532,6 +3562,52 @@ Once all tests pass, the user may proceed to:
 - QSM  
 
 with confidence that the model will interpret them correctly.
+# Overview
+
+This directory provides high-level documentation for the Resonance Substrate Model, including conceptual foundations, theoretical background, terminology, and comparisons to related models.
+
+Contents include:
+- introduction to the model
+- theoretical background
+- glossary of key terms
+- comparison to general relativity and related frameworks
+
+These documents are intended for readers seeking a conceptual understanding before exploring technical details.
+
+# Quicklinks
+
+- [docs README](../README.md)
+- [docs api integration examples](../api/integration_examples.md)
+- [docs api README](../api/README.md)
+- [docs api schema overview](../api/schema_overview.md)
+- [docs api using the schemas](../api/using_the_schemas.md)
+- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
+- [docs experiments README](../experiments/README.md)
+- [docs experiments replication checklist](../experiments/replication_checklist.md)
+- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
+- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
+- [docs methods dimensional layers](../methods/dimensional_layers.md)
+- [docs methods field equations](../methods/field_equations.md)
+- [docs methods operator definitions](../methods/operator_definitions.md)
+- [docs methods README](../methods/README.md)
+- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
+- [docs methods triadic fields](../methods/triadic_fields.md)
+- [docs onboarding model map](../onboarding/model_map.md)
+- [docs onboarding reading guide](../onboarding/reading_guide.md)
+- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
+- [docs onboarding verification tests](../onboarding/verification_tests.md)
+- [docs overview comparison to gr models](comparison_to_gr_models.md)
+- [docs overview glossary](glossary.md)
+- [docs overview introduction](introduction.md)
+- [docs overview resonance primitives](resonance_primitives.md)
+- [docs overview theoretical background](theoretical_background.md)
+- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
+- [docs simulations numerical methods](../simulations/numerical_methods.md)
+- [docs simulations README](../simulations/README.md)
+- [docs simulations solver_architecture](../simulations/solver_architecture.md)
+- [docs simulations validation metrics](../simulations/validation_metrics.md)
+- [docs simulations core README](../simulations/core/README.md)
+- [previous folder](../)
 # Glossary
 
 Key terms used throughout the Resonance Substrate Model documentation.
@@ -3695,52 +3771,6 @@ Technical details, schemas, and simulation methods are documented in their respe
 - [docs overview comparison to gr models](comparison_to_gr_models.md)
 - [docs overview glossary](glossary.md)
 - [docs overview README](README.md)
-- [docs overview resonance primitives](resonance_primitives.md)
-- [docs overview theoretical background](theoretical_background.md)
-- [docs simulations boundary conditions](../simulations/boundary_conditions.md)
-- [docs simulations numerical methods](../simulations/numerical_methods.md)
-- [docs simulations README](../simulations/README.md)
-- [docs simulations solver_architecture](../simulations/solver_architecture.md)
-- [docs simulations validation metrics](../simulations/validation_metrics.md)
-- [docs simulations core README](../simulations/core/README.md)
-- [previous folder](../)
-# Overview
-
-This directory provides high-level documentation for the Resonance Substrate Model, including conceptual foundations, theoretical background, terminology, and comparisons to related models.
-
-Contents include:
-- introduction to the model
-- theoretical background
-- glossary of key terms
-- comparison to general relativity and related frameworks
-
-These documents are intended for readers seeking a conceptual understanding before exploring technical details.
-
-# Quicklinks
-
-- [docs README](../README.md)
-- [docs api integration examples](../api/integration_examples.md)
-- [docs api README](../api/README.md)
-- [docs api schema overview](../api/schema_overview.md)
-- [docs api using the schemas](../api/using_the_schemas.md)
-- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
-- [docs experiments README](../experiments/README.md)
-- [docs experiments replication checklist](../experiments/replication_checklist.md)
-- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
-- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
-- [docs methods dimensional layers](../methods/dimensional_layers.md)
-- [docs methods field equations](../methods/field_equations.md)
-- [docs methods operator definitions](../methods/operator_definitions.md)
-- [docs methods README](../methods/README.md)
-- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
-- [docs methods triadic fields](../methods/triadic_fields.md)
-- [docs onboarding model map](../onboarding/model_map.md)
-- [docs onboarding reading guide](../onboarding/reading_guide.md)
-- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
-- [docs onboarding verification tests](../onboarding/verification_tests.md)
-- [docs overview comparison to gr models](comparison_to_gr_models.md)
-- [docs overview glossary](glossary.md)
-- [docs overview introduction](introduction.md)
 - [docs overview resonance primitives](resonance_primitives.md)
 - [docs overview theoretical background](theoretical_background.md)
 - [docs simulations boundary conditions](../simulations/boundary_conditions.md)
@@ -4004,6 +4034,52 @@ These documents are intended for readers seeking a conceptual understanding befo
 - [docs simulations validation metrics](../simulations/validation_metrics.md)
 - [docs simulations core README](../simulations/core/README.md)
 - [previous folder](../)
+# Simulations
+
+This directory contains documentation related to simulation design, execution, and analysis within the Resonance Substrate Model.
+
+Topics covered in this folder include:
+- solver architecture and execution flow  
+- numerical methods and discretization strategies  
+- boundary condition definitions  
+- validation metrics and benchmarking approaches  
+
+These documents serve as a reference for contributors implementing or extending simulation capabilities.
+
+# Quicklinks
+
+- [docs README](../README.md)
+- [docs api integration examples](../api/integration_examples.md)
+- [docs api README](../api/README.md)
+- [docs api schema overview](../api/schema_overview.md)
+- [docs api using the schemas](../api/using_the_schemas.md)
+- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
+- [docs experiments README](../experiments/README.md)
+- [docs experiments replication checklist](../experiments/replication_checklist.md)
+- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
+- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
+- [docs methods dimensional layers](../methods/dimensional_layers.md)
+- [docs methods field equations](../methods/field_equations.md)
+- [docs methods operator definitions](../methods/operator_definitions.md)
+- [docs methods README](../methods/README.md)
+- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
+- [docs methods triadic fields](../methods/triadic_fields.md)
+- [docs onboarding model map](../onboarding/model_map.md)
+- [docs onboarding reading guide](../onboarding/reading_guide.md)
+- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
+- [docs onboarding verification tests](../onboarding/verification_tests.md)
+- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
+- [docs overview glossary](../overview/glossary.md)
+- [docs overview introduction](../overview/introduction.md)
+- [docs overview README](../overview/README.md)
+- [docs overview resonance primitives](../overview/resonance_primitives.md)
+- [docs overview theoretical background](../overview/theoretical_background.md)
+- [docs simulations boundary conditions](boundary_conditions.md)
+- [docs simulations numerical methods](numerical_methods.md)
+- [docs simulations solver_architecture](solver_architecture.md)
+- [docs simulations validation metrics](validation_metrics.md)
+- [docs simulations core README](core/README.md)
+- [previous folder](../)
 # Boundary Conditions
 
 This document defines the boundary condition types supported by the Resonance Substrate Model.
@@ -4132,52 +4208,6 @@ This document summarizes the numerical methods used in the Resonance Substrate M
 - uniform Cartesian grids  
 - support for multi-resolution or nested grids  
 
-# Simulations
-
-This directory contains documentation related to simulation design, execution, and analysis within the Resonance Substrate Model.
-
-Topics covered in this folder include:
-- solver architecture and execution flow  
-- numerical methods and discretization strategies  
-- boundary condition definitions  
-- validation metrics and benchmarking approaches  
-
-These documents serve as a reference for contributors implementing or extending simulation capabilities.
-
-# Quicklinks
-
-- [docs README](../README.md)
-- [docs api integration examples](../api/integration_examples.md)
-- [docs api README](../api/README.md)
-- [docs api schema overview](../api/schema_overview.md)
-- [docs api using the schemas](../api/using_the_schemas.md)
-- [docs experiments faraday paradox experiment](../experiments/faraday_paradox_experiment.md)
-- [docs experiments README](../experiments/README.md)
-- [docs experiments replication checklist](../experiments/replication_checklist.md)
-- [docs experiments resonance alignment tests](../experiments/resonance_alignment_tests.md)
-- [docs experiments rotating conductor tests](../experiments/rotating_conductor_tests.md)
-- [docs methods dimensional layers](../methods/dimensional_layers.md)
-- [docs methods field equations](../methods/field_equations.md)
-- [docs methods operator definitions](../methods/operator_definitions.md)
-- [docs methods README](../methods/README.md)
-- [docs methods substrate dynamics](../methods/substrate_dynamics.md)
-- [docs methods triadic fields](../methods/triadic_fields.md)
-- [docs onboarding model map](../onboarding/model_map.md)
-- [docs onboarding reading guide](../onboarding/reading_guide.md)
-- [docs onboarding triadic quickstart](../onboarding/triadic_quickstart.md)
-- [docs onboarding verification tests](../onboarding/verification_tests.md)
-- [docs overview comparison to gr models](../overview/comparison_to_gr_models.md)
-- [docs overview glossary](../overview/glossary.md)
-- [docs overview introduction](../overview/introduction.md)
-- [docs overview README](../overview/README.md)
-- [docs overview resonance primitives](../overview/resonance_primitives.md)
-- [docs overview theoretical background](../overview/theoretical_background.md)
-- [docs simulations boundary conditions](boundary_conditions.md)
-- [docs simulations numerical methods](numerical_methods.md)
-- [docs simulations solver_architecture](solver_architecture.md)
-- [docs simulations validation metrics](validation_metrics.md)
-- [docs simulations core README](core/README.md)
-- [previous folder](../)
 # Solver Architecture
 
 This document describes the architecture of the simulation solver used in the Resonance Substrate Model.
@@ -5196,50 +5226,6 @@ This manuscript presents a coherent, extensible, and reproducible model for cros
 - [papers substrate model whitepaper figures README](../papers/substrate_model_whitepaper/figures/README.md)
 - [papers substrate model whitepaper supplementary README](../papers/substrate_model_whitepaper/supplementary/README.md)
 - [previous folder](../../)
-# Peer Review Notes
-A working document for capturing review feedback, critiques, and revision tasks for Resonance Substrate Model papers.
-
-## 1. Summary of the Work
-Brief overview of the manuscript being reviewed.
-
-## 2. Major Comments
-- High‑level issues  
-- Conceptual gaps  
-- Methodological concerns  
-- Missing references or context  
-
-## 3. Minor Comments
-- Clarity improvements  
-- Typos or formatting issues  
-- Small technical corrections  
-
-## 4. Questions for the Authors
-- Points requiring clarification  
-- Ambiguities in methods or results  
-
-## 5. Recommendations
-- Accept / Minor revision / Major revision / Reject  
-- Justification for recommendation  
-
-## 6. Action Items
-A checklist for revisions based on the review.
-
----
-
-# Quicklinks
-
-- [manuscript cover letter](../manuscript/cover_letter.md)
-- [manuscript PDF Manuscript Header](../manuscript/PDF_Manuscript_Header.md)
-- [overview resonance substrate model](../overview/resonance-substrate-model.md)
-- [papers peer review notes](peer_review_notes.md)
-- [papers README](README.md)
-- [papers replication report template](replication_report_template.md)
-- [papers substrate model whitepaper citation_map](substrate_model_whitepaper/citation_map.md)
-- [papers substrate model whitepaper manuscript](substrate_model_whitepaper/manuscript.md)
-- [papers substrate model whitepaper README](substrate_model_whitepaper/README.md)
-- [papers substrate model whitepaper figures README](substrate_model_whitepaper/figures/README.md)
-- [papers substrate model whitepaper supplementary README](substrate_model_whitepaper/supplementary/README.md)
-- [previous folder](../)
 # Resonance Substrate Model  
 ## A Substrate‑First Framework for Physical Interaction
 
@@ -5399,6 +5385,50 @@ A concise summary of the resonance‑substrate model, its motivation, the SET (S
 - [manuscript PDF Manuscript Header](../manuscript/PDF_Manuscript_Header.md)
 - [overview resonance substrate model](../overview/resonance-substrate-model.md)
 - [papers peer review notes](peer_review_notes.md)
+- [papers replication report template](replication_report_template.md)
+- [papers substrate model whitepaper citation_map](substrate_model_whitepaper/citation_map.md)
+- [papers substrate model whitepaper manuscript](substrate_model_whitepaper/manuscript.md)
+- [papers substrate model whitepaper README](substrate_model_whitepaper/README.md)
+- [papers substrate model whitepaper figures README](substrate_model_whitepaper/figures/README.md)
+- [papers substrate model whitepaper supplementary README](substrate_model_whitepaper/supplementary/README.md)
+- [previous folder](../)
+# Peer Review Notes
+A working document for capturing review feedback, critiques, and revision tasks for Resonance Substrate Model papers.
+
+## 1. Summary of the Work
+Brief overview of the manuscript being reviewed.
+
+## 2. Major Comments
+- High‑level issues  
+- Conceptual gaps  
+- Methodological concerns  
+- Missing references or context  
+
+## 3. Minor Comments
+- Clarity improvements  
+- Typos or formatting issues  
+- Small technical corrections  
+
+## 4. Questions for the Authors
+- Points requiring clarification  
+- Ambiguities in methods or results  
+
+## 5. Recommendations
+- Accept / Minor revision / Major revision / Reject  
+- Justification for recommendation  
+
+## 6. Action Items
+A checklist for revisions based on the review.
+
+---
+
+# Quicklinks
+
+- [manuscript cover letter](../manuscript/cover_letter.md)
+- [manuscript PDF Manuscript Header](../manuscript/PDF_Manuscript_Header.md)
+- [overview resonance substrate model](../overview/resonance-substrate-model.md)
+- [papers peer review notes](peer_review_notes.md)
+- [papers README](README.md)
 - [papers replication report template](replication_report_template.md)
 - [papers substrate model whitepaper citation_map](substrate_model_whitepaper/citation_map.md)
 - [papers substrate model whitepaper manuscript](substrate_model_whitepaper/manuscript.md)
@@ -6432,6 +6462,111 @@ python rsm.py example_sim.json
 - [tools converters README](../tools/converters/README.md)
 - [tools visualization README](../tools/visualization/README.md)
 - [previous folder](../)
+# Resonance Substrate Model — Schema Directory
+
+This directory contains the machine‑readable schemas that define the
+structural, operational, and ontological components of the Resonance
+Substrate Model (RSM). These schemas ensure reproducibility, clarity,
+and interoperability across simulations, experiments, and downstream
+TriadicFrameworks modules.
+
+---
+
+# Quicklinks
+
+- [schemas index](index.md)
+- [schemas coeus README](coeus/README.md)
+- [schemas dimensional README](dimensional/README.md)
+- [schemas distributed README](distributed/README.md)
+- [schemas energy README](energy/README.md)
+- [schemas experiments README](experiments/README.md)
+- [schemas fields README](fields/README.md)
+- [schemas finance README](finance/README.md)
+- [schemas identity README](identity/README.md)
+- [schemas infrastructure README](infrastructure/README.md)
+- [schemas lab README](lab/README.md)
+- [schemas language README](language/README.md)
+- [schemas networking README](networking/README.md)
+- [schemas operators README](operators/README.md)
+- [schemas primitives README](primitives/README.md)
+- [schemas quantum README](quantum/README.md)
+- [schemas sensing README](sensing/README.md)
+- [schemas simulations README](simulations/README.md)
+- [schemas universe-core README](universe-core/README.md)
+- [Triadic Quickstart](../docs/onboarding/triadic_quickstart.md)
+- [previous folder](../)
+
+---
+
+## Purpose of the Schema Layer
+
+The schema system provides:
+
+- **Field primitives** (scalar, vector/spin, resonance envelope)
+- **Operator definitions** (diffusion, alignment, coupling, activation, stabilization)
+- **Dimensional structures** (grids, coordinates, layers)
+- **Energy and substrate dynamics**
+- **Quantum and semantic extensions**
+- **Sensing and measurement constructs**
+- **Identity and language entities**
+- **Networking and distributed‑layer structures**
+- **Simulation configuration and validation rules**
+- **Universe‑core abstractions** for cross‑domain coherence
+
+Each schema family corresponds to a conceptual layer of the RSM ontology.
+
+## Directory Structure
+
+- `coeus/` — cognitive, symbolic, and semantic schema primitives  
+- `dimensional/` — coordinate systems, grids, and multi‑layer geometry  
+- `energy/` — energy flow, dissipation, and resonance‑amplitude structures  
+- `experiments/` — apparatus, measurement, and replication schemas  
+- `fields/` — scalar, vector/spin, and resonance‑envelope field definitions  
+- `operators/` — operator definitions and parameter constraints  
+- `primitives/` — low‑level building blocks used across all schema families  
+- `quantum/` — spin, phase, coherence, and quantum‑layer constructs  
+- `sensing/` — measurement, calibration, and uncertainty models  
+- `simulations/` — simulation configuration, solver parameters, and validation rules  
+- `universe-core/` — high‑level abstractions for cross‑domain coherence
+
+## Schema Format
+
+All schemas follow:
+
+- **JSON Schema Draft‑07** (unless otherwise noted)
+- **TriadicFrameworks naming conventions**
+- **RSM v1.0 ontology alignment**
+
+Each schema includes:
+
+- `title`  
+- `description`  
+- `type`  
+- `properties`  
+- `required` fields  
+- `examples` (when applicable)
+
+## How These Schemas Are Used
+
+- The **simulation engine** validates all configs against these schemas.  
+- The **CLI tools** (`validate.py`, `inspect_schema.py`) operate directly on them.  
+- The **documentation** in `docs/api/` is generated from these schemas.  
+- The **experiments** reference them for apparatus and measurement consistency.
+
+## Contributing
+
+When adding or modifying schemas:
+
+1. Maintain backward compatibility when possible.  
+2. Include examples for new fields.  
+3. Update the simulation schema if new operators or fields are introduced.  
+4. Ensure naming consistency across schema families.  
+5. Validate using the CLI tools before committing.
+
+This directory forms the canonical ontology for the Resonance Substrate Model.
+
+---
+
 # 🌌 **Resonance Substrate Model — Schema Index**
 
 This directory contains the full schema suite for the **Resonance Substrate Model (RSM)**.  
@@ -6918,111 +7053,6 @@ Above the substrate, the **distributed systems layer** models agents, networks, 
 The **infrastructure layer** defines the computational environment in which the universe operates, including compute resources, storage, orchestration, and resource flow. Finally, the **simulation layer** coordinates the entire system, specifying time evolution, module activation, initial conditions, and output generation. It acts as the conductor of the RSM universe, ensuring that each layer participates in a coherent temporal cycle.
 
 Together, these layers form a complete architectural stack that supports both theoretical exploration and practical implementation. RSM’s schema‑driven design ensures reproducibility, clarity, and extensibility, making it suitable for research, simulation, interactive systems, and future computational frameworks. By unifying physical, quantum, distributed, and semantic constructs under a single ontology, the Resonance Substrate Model provides a foundation for studying complex systems where structure, behavior, and meaning emerge from shared substrate dynamics.
-# Resonance Substrate Model — Schema Directory
-
-This directory contains the machine‑readable schemas that define the
-structural, operational, and ontological components of the Resonance
-Substrate Model (RSM). These schemas ensure reproducibility, clarity,
-and interoperability across simulations, experiments, and downstream
-TriadicFrameworks modules.
-
----
-
-# Quicklinks
-
-- [schemas index](index.md)
-- [schemas coeus README](coeus/README.md)
-- [schemas dimensional README](dimensional/README.md)
-- [schemas distributed README](distributed/README.md)
-- [schemas energy README](energy/README.md)
-- [schemas experiments README](experiments/README.md)
-- [schemas fields README](fields/README.md)
-- [schemas finance README](finance/README.md)
-- [schemas identity README](identity/README.md)
-- [schemas infrastructure README](infrastructure/README.md)
-- [schemas lab README](lab/README.md)
-- [schemas language README](language/README.md)
-- [schemas networking README](networking/README.md)
-- [schemas operators README](operators/README.md)
-- [schemas primitives README](primitives/README.md)
-- [schemas quantum README](quantum/README.md)
-- [schemas sensing README](sensing/README.md)
-- [schemas simulations README](simulations/README.md)
-- [schemas universe-core README](universe-core/README.md)
-- [Triadic Quickstart](../docs/onboarding/triadic_quickstart.md)
-- [previous folder](../)
-
----
-
-## Purpose of the Schema Layer
-
-The schema system provides:
-
-- **Field primitives** (scalar, vector/spin, resonance envelope)
-- **Operator definitions** (diffusion, alignment, coupling, activation, stabilization)
-- **Dimensional structures** (grids, coordinates, layers)
-- **Energy and substrate dynamics**
-- **Quantum and semantic extensions**
-- **Sensing and measurement constructs**
-- **Identity and language entities**
-- **Networking and distributed‑layer structures**
-- **Simulation configuration and validation rules**
-- **Universe‑core abstractions** for cross‑domain coherence
-
-Each schema family corresponds to a conceptual layer of the RSM ontology.
-
-## Directory Structure
-
-- `coeus/` — cognitive, symbolic, and semantic schema primitives  
-- `dimensional/` — coordinate systems, grids, and multi‑layer geometry  
-- `energy/` — energy flow, dissipation, and resonance‑amplitude structures  
-- `experiments/` — apparatus, measurement, and replication schemas  
-- `fields/` — scalar, vector/spin, and resonance‑envelope field definitions  
-- `operators/` — operator definitions and parameter constraints  
-- `primitives/` — low‑level building blocks used across all schema families  
-- `quantum/` — spin, phase, coherence, and quantum‑layer constructs  
-- `sensing/` — measurement, calibration, and uncertainty models  
-- `simulations/` — simulation configuration, solver parameters, and validation rules  
-- `universe-core/` — high‑level abstractions for cross‑domain coherence
-
-## Schema Format
-
-All schemas follow:
-
-- **JSON Schema Draft‑07** (unless otherwise noted)
-- **TriadicFrameworks naming conventions**
-- **RSM v1.0 ontology alignment**
-
-Each schema includes:
-
-- `title`  
-- `description`  
-- `type`  
-- `properties`  
-- `required` fields  
-- `examples` (when applicable)
-
-## How These Schemas Are Used
-
-- The **simulation engine** validates all configs against these schemas.  
-- The **CLI tools** (`validate.py`, `inspect_schema.py`) operate directly on them.  
-- The **documentation** in `docs/api/` is generated from these schemas.  
-- The **experiments** reference them for apparatus and measurement consistency.
-
-## Contributing
-
-When adding or modifying schemas:
-
-1. Maintain backward compatibility when possible.  
-2. Include examples for new fields.  
-3. Update the simulation schema if new operators or fields are introduced.  
-4. Ensure naming consistency across schema families.  
-5. Validate using the CLI tools before committing.
-
-This directory forms the canonical ontology for the Resonance Substrate Model.
-
----
-
 # Coeus Schemas
 
 Schemas defining cognitive, reasoning, and meta‑substrate structures, including:

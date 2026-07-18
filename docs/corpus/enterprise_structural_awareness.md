@@ -1,18 +1,35 @@
 enterprise_structural_awareness 
-## Future Directions
+## Enterprise Structural Awareness  
 
-Enterprise Structural Awareness is intentionally minimal and non‑prescriptive. Future exploration may extend these concepts to additional enterprise domains without altering the core posture of structural clarity and non‑intrusion.
+- [`esa_module.json`](esa_module.json) — Agentic module schema role assignments
 
-Potential directions include:
-- Deeper alignment with enterprise documentation and standards practices
-- Exploration of structural awareness in distributed and hybrid environments
-- Application to long‑term system lifecycle and decommissioning processes
-- Integration with observability and reporting frameworks as interpretive context
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-Any future work should preserve the principle that structural awareness augments understanding without enforcing behavior. The value of this approach lies in its ability to coexist with existing enterprise systems while improving interpretability and coherence over time.
-# Enterprise Structural Awareness
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 Enterprise systems are composed of layered products, policies, configurations, and operational practices that evolve over long lifecycles. While these systems are highly capable, they often lack explicit mechanisms for declaring when assumptions hold, when they drift, and when operating contexts change.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
 
 This documentation explores how structural awareness concepts—such as regime declaration, boundary semantics, and validity context—can be introduced into existing enterprise IT systems using standards‑based, non‑disruptive approaches.
 
@@ -42,6 +59,17 @@ Enterprise Structural Awareness is intentionally quiet. Its value lies in making
 It is offered as a reference surface rather than a prescription, enabling enterprise teams to recognize and articulate structural context that already exists within their systems.
 
 - [repo folder](../)
+## Future Directions
+
+Enterprise Structural Awareness is intentionally minimal and non‑prescriptive. Future exploration may extend these concepts to additional enterprise domains without altering the core posture of structural clarity and non‑intrusion.
+
+Potential directions include:
+- Deeper alignment with enterprise documentation and standards practices
+- Exploration of structural awareness in distributed and hybrid environments
+- Application to long‑term system lifecycle and decommissioning processes
+- Integration with observability and reporting frameworks as interpretive context
+
+Any future work should preserve the principle that structural awareness augments understanding without enforcing behavior. The value of this approach lies in its ability to coexist with existing enterprise systems while improving interpretability and coherence over time.
 ## Relationship to the Manufacturing Substrate Regime Model (MSRM)
 
 Enterprise Structural Awareness is conceptually aligned with the Manufacturing Substrate Regime Model (MSRM) in its treatment of regimes, calibration validity, and boundary semantics as structural concerns rather than operational controls.

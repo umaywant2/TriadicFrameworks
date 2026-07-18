@@ -1,26 +1,23 @@
 manufacturing_substrate_regime_model 
-# Changelog
+## Manufacturing Substrate Regime Model (MSRM) 
 
-All notable changes to this project will be documented in this file.
+- [`msrm_module.json`](msrm_module.json) — Agentic module schema role assignments
 
-The format follows a minimal, archival‑oriented convention aligned with Zenodo versioning.
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-## [1.0.0] — 2026-01-16
-
-### Added
-- Initial release of the Manufacturing Substrate Regime Model (MSRM)
-- Complete structural framework covering:
-  - Substrate definition and regime declaration
-  - Boundary semantics and operating envelopes
-  - Calibration as a structural layer
-  - Drift detection and non‑catastrophic regime exit
-  - Operator mediation patterns
-  - Manufacturing context and implications
-- Canonical figures specifying structural relationships
-- Related works positioning relative to BSM, QSM, and RSM
-
-This release establishes MSRM as a stable, descriptive reference framework.
-# Manufacturing Substrate Regime Model (MSRM)
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 The Manufacturing Substrate Regime Model (MSRM) is a structural framework for describing, calibrating, and managing extreme manufacturing systems through explicitly declared operating regimes, boundary semantics, and operator‑mediated interactions.
 
@@ -28,9 +25,23 @@ MSRM does not propose new fabrication techniques, physical models, or process op
 
 The model is motivated by modern high‑precision manufacturing environments—such as advanced lithography—where increasing system complexity, shrinking process windows, and long‑term drift challenge traditional calibration and control assumptions.
 
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
 MSRM is architecture‑agnostic and domain‑neutral. It is intended to support clarity, interpretability, and reproducibility in manufacturing systems operating near physical, thermal, temporal, or material limits.
 
-### Key Concepts
+## Key Concepts
 - Explicit regime declaration
 - Structural calibration layers
 - Boundary semantics and operating envelopes
@@ -50,215 +61,6 @@ MSRM extends substrate‑based modeling principles developed in related works, i
 MSRM is descriptive and structural in nature. It makes no empirical claims and does not prescribe implementation details.
 
 - [repo folder](../)
-## Calibration as Structure
-
-Within the Manufacturing Substrate Regime Model (MSRM), calibration is treated as a structural concern rather than a procedural or corrective action.
-
-Traditional manufacturing systems often approach calibration as a localized tuning process applied to individual tools or subsystems. In extreme manufacturing environments, this approach becomes increasingly fragile as assumptions degrade across time, scale, and interacting regimes.
-
-MSRM reframes calibration as a substrate‑level construct that defines the validity of assumptions within a declared regime. Calibration does not enforce behavior, optimize performance, or correct outcomes. Instead, it establishes the structural conditions under which interpretation remains coherent.
-
-Under this model:
-
-- Calibration is regime‑dependent
-- Calibration assumptions are bounded by operating envelopes
-- Loss of calibration validity is distinct from system failure
-- Calibration may degrade gradually through drift
-
-By elevating calibration to a structural layer, MSRM enables manufacturing systems to reason explicitly about when assumptions hold, when they are weakening, and when regime re‑declaration or mediation is required.
-
-This approach supports clarity and stability in environments where traditional calibration methods are insufficient to manage long‑term drift and regime interaction.
-## Drift Detection
-
-Within the Manufacturing Substrate Regime Model (MSRM), drift refers to the gradual degradation of calibration assumptions within a declared regime.
-
-Drift does not imply malfunction, error, or failure. It indicates increasing misalignment between a regime’s declared operating envelope and the system’s evolving conditions.
-
-MSRM treats drift detection as a structural concern rather than a metric‑driven or corrective process. The model does not prescribe thresholds, sensors, or algorithms for detecting drift. Instead, it provides a framework for reasoning about drift as a loss of regime validity.
-
-Drift detection serves the following purposes:
-
-- Distinguish gradual assumption degradation from abrupt failure
-- Enable early recognition of regime boundary approach
-- Support mediated response without enforcing control
-- Prevent silent collapse of calibration assumptions
-
-Drift may be continuous or discontinuous, observable or inferred, and may occur across multiple dimensions simultaneously. MSRM does not require drift to be quantified to be structurally meaningful.
-
-By formalizing drift detection at the substrate level, MSRM enables manufacturing systems to recognize when recalibration, mediation, or regime re‑declaration may be warranted without conflating drift with error.
-## Non‑Catastrophic Exit
-
-A non‑catastrophic exit occurs when a manufacturing system leaves the operating envelope of a declared regime without experiencing failure, damage, or loss of function.
-
-In MSRM, regime exit represents a loss of validity, not a breakdown of behavior. Non‑catastrophic exit preserves system integrity while acknowledging that calibration assumptions no longer apply.
-
-Non‑catastrophic exit enables:
-
-- Safe transition between regimes
-- Re‑declaration of operating context
-- Mediated recalibration
-- Continued operation under revised assumptions
-
-MSRM does not prescribe how exits are handled operationally. It provides a structural distinction between invalid assumptions and system failure, allowing manufacturing systems to respond proportionally rather than reactively.
-
-By explicitly supporting non‑catastrophic exit, MSRM reduces the risk of over‑correction, unnecessary shutdowns, or misinterpretation of drift as fault in extreme manufacturing environments.
-## Regime‑Aware Calibration
-
-Regime‑aware calibration is the application of calibration assumptions within the context of a declared operating regime.
-
-In MSRM, calibration is not globally valid. It is explicitly bounded by regime declaration and operating envelopes. Calibration assumptions are considered coherent only within the regime under which they are declared.
-
-Regime‑aware calibration enables manufacturing systems to:
-
-- Associate calibration validity with declared context
-- Detect when calibration assumptions no longer apply
-- Transition calibration structures across regimes
-- Avoid implicit reuse of invalid assumptions
-
-This approach contrasts with traditional calibration models that assume continuity across time, scale, or operating conditions.
-
-MSRM does not define calibration procedures or adjustment mechanisms. It provides a structural framework for associating calibration with regime validity, enabling clearer reasoning about when recalibration, mediation, or regime re‑declaration is appropriate.
-
-Regime‑aware calibration constrains interpretation, not behavior.
-## Deployment Considerations
-
-MSRM is designed to coexist with existing manufacturing practices, control systems, and calibration methodologies. It does not require changes to tooling, instrumentation, or operational workflows.
-
-Deployment of MSRM concepts may occur incrementally, beginning with explicit regime declaration and structural documentation of calibration assumptions. The model does not mandate real‑time enforcement or automated mediation.
-
-Because MSRM is implementation‑agnostic, deployment considerations are context‑dependent. Organizations may choose to apply the model at varying levels of formality, from conceptual documentation to integrated system interpretation layers.
-
-MSRM does not prescribe deployment strategies. Its role is to provide a structural framework that can be adopted, adapted, or referenced without disrupting established manufacturing operations.
-## Future Extensions
-
-The Manufacturing Substrate Regime Model (MSRM) is intentionally minimal and descriptive. Future extensions may explore additional structural layers or domain applications without altering the core substrate principles.
-
-Potential extensions include:
-- Application to other extreme manufacturing domains beyond lithography
-- Integration with formal documentation or standards frameworks
-- Exploration of regime‑aware interpretation in distributed manufacturing systems
-- Alignment with long‑term system lifecycle management practices
-
-Any future extensions should preserve MSRM’s non‑physical, non‑optimizing, and non‑prescriptive posture. The model’s value lies in structural clarity rather than expansion of scope.
-
-MSRM is intended to remain stable as a reference framework, supporting adaptation without requiring revision.
-## Implications for Manufacturing
-
-The Manufacturing Substrate Regime Model (MSRM) introduces a structural perspective on manufacturing systems that emphasizes regime validity, calibration coherence, and mediated transition rather than control or optimization.
-
-For manufacturing environments operating near extreme regime boundaries, MSRM provides a framework for distinguishing between loss of validity and system failure. This distinction supports more proportional responses to drift, variability, and regime transition.
-
-By treating calibration as a substrate‑level concern, MSRM enables clearer reasoning about when assumptions hold and when they no longer apply. This clarity may reduce unnecessary intervention, over‑correction, or misinterpretation of system behavior.
-
-MSRM does not alter manufacturing processes or tooling. Its implications are organizational and interpretive, supporting stability and interpretability in complex, long‑lived systems without imposing new operational requirements.
-## Extreme Regime Constraints
-
-Extreme manufacturing regimes are characterized by operating conditions in which small deviations can invalidate calibration assumptions or interpretation without causing immediate system failure.
-
-Such regimes commonly exhibit:
-
-- Narrow operating envelopes
-- High sensitivity to environmental variation
-- Long‑term accumulation of drift
-- Strong coupling between subsystems
-- Limited tolerance for assumption collapse
-
-Within MSRM, extreme regime constraints are treated structurally rather than physically. The model does not quantify limits or define thresholds. Instead, it provides a framework for declaring where assumptions hold and where they no longer apply.
-
-Extreme regimes increase the risk of silent validity loss, where systems continue to operate while calibration assumptions degrade unnoticed. MSRM addresses this risk by formalizing regime declaration, boundary semantics, and non‑catastrophic exit.
-
-The model is applicable to any manufacturing environment where regime constraints challenge traditional calibration and interpretation practices.
-## Lithography Systems
-
-Advanced lithography systems represent a class of manufacturing environments characterized by extreme precision, tightly constrained operating margins, and long‑lived calibration dependencies.
-
-Within the Manufacturing Substrate Regime Model (MSRM), lithography systems are treated as motivating examples rather than primary subjects. The model does not describe optical processes, patterning techniques, or fabrication workflows.
-
-Lithography systems are relevant to MSRM because they:
-
-- Operate across multiple interacting regimes
-- Depend on long‑term calibration stability
-- Exhibit sensitivity to drift across temporal and environmental dimensions
-- Require coordinated interpretation across subsystems
-
-MSRM abstracts lithography systems as complex, regime‑dependent manufacturing environments in which calibration validity must be explicitly managed. The model does not assume specific tooling, wavelengths, materials, or vendors.
-
-By using lithography systems as contextual examples, MSRM illustrates how regime‑aware calibration and boundary semantics can support interpretability and stability without altering physical processes or control architectures.
-## Yield and Variability
-
-Yield and variability are central concerns in advanced manufacturing environments, particularly in systems operating near extreme regime boundaries.
-
-Within the Manufacturing Substrate Regime Model (MSRM), yield and variability are treated as contextual factors rather than optimization targets. The model does not attempt to improve yield, reduce variability, or prescribe corrective actions.
-
-Instead, MSRM addresses the structural conditions under which yield and variability are interpreted. Variability may arise from drift, regime interaction, or boundary proximity without indicating fault or failure.
-
-By separating validity from performance, MSRM enables manufacturing systems to distinguish between:
-
-- Variability within a valid regime
-- Variability associated with regime drift
-- Variability resulting from regime exit
-
-This distinction supports clearer reasoning about when recalibration, mediation, or regime re‑declaration may be appropriate, without conflating variability with error or loss of control.
-
-MSRM provides a descriptive framework for understanding how yield and variability relate to regime structure, not a mechanism for managing them directly.
-## Inter‑Regime Mediation
-
-Inter‑regime mediation refers to the management of interactions between distinct operating regimes within the Manufacturing Substrate Regime Model (MSRM).
-
-Manufacturing systems may operate across multiple regimes simultaneously or transition between regimes over time. Inter‑regime mediation preserves structural coherence when calibration assumptions differ or overlap.
-
-Inter‑regime mediation enables:
-
-- Coordination of calibration validity across regimes
-- Safe transition without catastrophic failure
-- Preservation of interpretability during regime overlap
-- Explicit handling of regime incompatibility
-
-MSRM does not assume regimes are hierarchical or mutually exclusive. Inter‑regime mediation allows regimes to coexist, interact, or transition without enforcing unification.
-
-By formalizing inter‑regime mediation, MSRM supports complex manufacturing environments where multiple operating contexts must be managed concurrently without collapsing assumptions or triggering unnecessary intervention.
-## Mediation Patterns
-
-Mediation patterns describe recurring structural approaches by which operators manage interactions between regimes within the Manufacturing Substrate Regime Model (MSRM).
-
-These patterns are descriptive rather than prescriptive. MSRM does not mandate specific mediation strategies or responses.
-
-Common mediation patterns include:
-
-### Boundary‑Aware Mediation
-Operators recognize proximity to regime boundaries and manage interactions to preserve interpretability without enforcing corrective action.
-
-### Transitional Mediation
-Operators facilitate orderly transition between regimes by coordinating calibration assumptions and validity contexts.
-
-### Parallel Regime Mediation
-Operators manage coexistence of multiple regimes, allowing overlapping validity without forcing convergence.
-
-### Deferred Mediation
-Operators acknowledge loss of regime validity while deferring immediate response, enabling observation or analysis before re‑declaration.
-
-### Escalated Mediation
-Operators signal the need for higher‑level intervention or re‑declaration without asserting control.
-
-These patterns enable manufacturing systems to respond proportionally to drift and boundary crossings, reducing the risk of over‑reaction or misinterpretation in extreme operating environments.
-## Regime‑Aware Calibration
-
-Regime‑aware calibration is the application of calibration assumptions within the context of a declared operating regime.
-
-In MSRM, calibration is not globally valid. It is explicitly bounded by regime declaration and operating envelopes. Calibration assumptions are considered coherent only within the regime under which they are declared.
-
-Regime‑aware calibration enables manufacturing systems to:
-
-- Associate calibration validity with declared context
-- Detect when calibration assumptions no longer apply
-- Transition calibration structures across regimes
-- Avoid implicit reuse of invalid assumptions
-
-This approach contrasts with traditional calibration models that assume continuity across time, scale, or operating conditions.
-
-MSRM does not define calibration procedures or adjustment mechanisms. It provides a structural framework for associating calibration with regime validity, enabling clearer reasoning about when recalibration, mediation, or regime re‑declaration is appropriate.
-
-Regime‑aware calibration constrains interpretation, not behavior.
 The Manufacturing Substrate Regime Model (MSRM) presents a structural framework for organizing and calibrating complex manufacturing systems through explicitly declared operating regimes, boundary semantics, and operator‑mediated interactions. The model addresses environments in which traditional calibration approaches become fragile due to extreme precision requirements, long‑term drift, and tightly constrained process windows.
 
 Rather than introducing new fabrication methods or physical interpretations, MSRM formalizes calibration as a substrate‑level concern, enabling regime‑aware reasoning about system validity, stability, and transition. Regimes are treated as declared structural contexts with defined operating envelopes, within which calibration assumptions remain valid.
@@ -355,33 +157,134 @@ A non‑catastrophic exit occurs when a system leaves a regime’s operating env
 
 ### Structural Model
 A structural model describes relationships, boundaries, and organizational principles without asserting physical causality or empirical prediction.
-## Relationship to the Boson Substrate Model (BSM)
+## Inter‑Regime Mediation
 
-The Manufacturing Substrate Regime Model (MSRM) is conceptually aligned with the Boson Substrate Model (BSM) in its use of substrate‑level abstraction to organize complex systems without embedding physical interpretation or empirical claims.
+Inter‑regime mediation refers to the management of interactions between distinct operating regimes within the Manufacturing Substrate Regime Model (MSRM).
 
-BSM introduces the notion of a substrate as a neutral structural layer for describing regime behavior and validity constraints. MSRM adopts this abstraction and applies it to manufacturing environments, where calibration and regime validity are central concerns.
+Manufacturing systems may operate across multiple regimes simultaneously or transition between regimes over time. Inter‑regime mediation preserves structural coherence when calibration assumptions differ or overlap.
 
-MSRM does not extend or modify the physical interpretations discussed in BSM. Instead, it adapts substrate‑based reasoning to a different domain, emphasizing calibration structure, boundary semantics, and non‑catastrophic regime transition.
+Inter‑regime mediation enables:
 
-The relationship between MSRM and BSM is one of conceptual inheritance rather than dependency. MSRM remains domain‑specific to manufacturing systems and does not rely on BSM for implementation or validation.
-## Relationship to the Quantum Substrate Model (QSM)
+- Coordination of calibration validity across regimes
+- Safe transition without catastrophic failure
+- Preservation of interpretability during regime overlap
+- Explicit handling of regime incompatibility
 
-The Manufacturing Substrate Regime Model (MSRM) shares structural principles with the Quantum Substrate Model (QSM), particularly in the treatment of regimes as declared contexts with bounded validity.
+MSRM does not assume regimes are hierarchical or mutually exclusive. Inter‑regime mediation allows regimes to coexist, interact, or transition without enforcing unification.
 
-QSM formalizes regime structure and operator mediation in abstract systems without asserting physical semantics. MSRM applies similar regime‑aware reasoning to manufacturing environments, where calibration assumptions and operating envelopes must be explicitly managed.
+By formalizing inter‑regime mediation, MSRM supports complex manufacturing environments where multiple operating contexts must be managed concurrently without collapsing assumptions or triggering unnecessary intervention.
+## Mediation Patterns
 
-While QSM addresses abstract regime organization, MSRM focuses on calibration as a structural concern and on the management of drift and regime transition in long‑lived industrial systems.
+Mediation patterns describe recurring structural approaches by which operators manage interactions between regimes within the Manufacturing Substrate Regime Model (MSRM).
 
-MSRM does not interpret or extend quantum concepts. The relationship between MSRM and QSM is structural and methodological, not physical or theoretical.
-## Relationship to the Resonance Substrate Model (RSM)
+These patterns are descriptive rather than prescriptive. MSRM does not mandate specific mediation strategies or responses.
 
-The Manufacturing Substrate Regime Model (MSRM) is complementary to the Resonance Substrate Model (RSM) in its emphasis on regime coherence and mediated interaction across complex systems.
+Common mediation patterns include:
 
-RSM introduces resonance as a structural concept for understanding alignment and interaction across regimes. MSRM does not model resonance phenomena but adopts a similar focus on maintaining coherence through explicit regime declaration, boundary semantics, and operator mediation.
+### Boundary‑Aware Mediation
+Operators recognize proximity to regime boundaries and manage interactions to preserve interpretability without enforcing corrective action.
 
-In manufacturing contexts, MSRM applies these principles to calibration stability, drift detection, and non‑catastrophic regime exit, without invoking resonance dynamics or temporal coupling.
+### Transitional Mediation
+Operators facilitate orderly transition between regimes by coordinating calibration assumptions and validity contexts.
 
-The relationship between MSRM and RSM is one of conceptual alignment rather than extension. Each model addresses distinct domains while sharing a common substrate‑based approach to regime organization.
+### Parallel Regime Mediation
+Operators manage coexistence of multiple regimes, allowing overlapping validity without forcing convergence.
+
+### Deferred Mediation
+Operators acknowledge loss of regime validity while deferring immediate response, enabling observation or analysis before re‑declaration.
+
+### Escalated Mediation
+Operators signal the need for higher‑level intervention or re‑declaration without asserting control.
+
+These patterns enable manufacturing systems to respond proportionally to drift and boundary crossings, reducing the risk of over‑reaction or misinterpretation in extreme operating environments.
+## Regime‑Aware Calibration
+
+Regime‑aware calibration is the application of calibration assumptions within the context of a declared operating regime.
+
+In MSRM, calibration is not globally valid. It is explicitly bounded by regime declaration and operating envelopes. Calibration assumptions are considered coherent only within the regime under which they are declared.
+
+Regime‑aware calibration enables manufacturing systems to:
+
+- Associate calibration validity with declared context
+- Detect when calibration assumptions no longer apply
+- Transition calibration structures across regimes
+- Avoid implicit reuse of invalid assumptions
+
+This approach contrasts with traditional calibration models that assume continuity across time, scale, or operating conditions.
+
+MSRM does not define calibration procedures or adjustment mechanisms. It provides a structural framework for associating calibration with regime validity, enabling clearer reasoning about when recalibration, mediation, or regime re‑declaration is appropriate.
+
+Regime‑aware calibration constrains interpretation, not behavior.
+## Calibration as Structure
+
+Within the Manufacturing Substrate Regime Model (MSRM), calibration is treated as a structural concern rather than a procedural or corrective action.
+
+Traditional manufacturing systems often approach calibration as a localized tuning process applied to individual tools or subsystems. In extreme manufacturing environments, this approach becomes increasingly fragile as assumptions degrade across time, scale, and interacting regimes.
+
+MSRM reframes calibration as a substrate‑level construct that defines the validity of assumptions within a declared regime. Calibration does not enforce behavior, optimize performance, or correct outcomes. Instead, it establishes the structural conditions under which interpretation remains coherent.
+
+Under this model:
+
+- Calibration is regime‑dependent
+- Calibration assumptions are bounded by operating envelopes
+- Loss of calibration validity is distinct from system failure
+- Calibration may degrade gradually through drift
+
+By elevating calibration to a structural layer, MSRM enables manufacturing systems to reason explicitly about when assumptions hold, when they are weakening, and when regime re‑declaration or mediation is required.
+
+This approach supports clarity and stability in environments where traditional calibration methods are insufficient to manage long‑term drift and regime interaction.
+## Drift Detection
+
+Within the Manufacturing Substrate Regime Model (MSRM), drift refers to the gradual degradation of calibration assumptions within a declared regime.
+
+Drift does not imply malfunction, error, or failure. It indicates increasing misalignment between a regime’s declared operating envelope and the system’s evolving conditions.
+
+MSRM treats drift detection as a structural concern rather than a metric‑driven or corrective process. The model does not prescribe thresholds, sensors, or algorithms for detecting drift. Instead, it provides a framework for reasoning about drift as a loss of regime validity.
+
+Drift detection serves the following purposes:
+
+- Distinguish gradual assumption degradation from abrupt failure
+- Enable early recognition of regime boundary approach
+- Support mediated response without enforcing control
+- Prevent silent collapse of calibration assumptions
+
+Drift may be continuous or discontinuous, observable or inferred, and may occur across multiple dimensions simultaneously. MSRM does not require drift to be quantified to be structurally meaningful.
+
+By formalizing drift detection at the substrate level, MSRM enables manufacturing systems to recognize when recalibration, mediation, or regime re‑declaration may be warranted without conflating drift with error.
+## Non‑Catastrophic Exit
+
+A non‑catastrophic exit occurs when a manufacturing system leaves the operating envelope of a declared regime without experiencing failure, damage, or loss of function.
+
+In MSRM, regime exit represents a loss of validity, not a breakdown of behavior. Non‑catastrophic exit preserves system integrity while acknowledging that calibration assumptions no longer apply.
+
+Non‑catastrophic exit enables:
+
+- Safe transition between regimes
+- Re‑declaration of operating context
+- Mediated recalibration
+- Continued operation under revised assumptions
+
+MSRM does not prescribe how exits are handled operationally. It provides a structural distinction between invalid assumptions and system failure, allowing manufacturing systems to respond proportionally rather than reactively.
+
+By explicitly supporting non‑catastrophic exit, MSRM reduces the risk of over‑correction, unnecessary shutdowns, or misinterpretation of drift as fault in extreme manufacturing environments.
+## Regime‑Aware Calibration
+
+Regime‑aware calibration is the application of calibration assumptions within the context of a declared operating regime.
+
+In MSRM, calibration is not globally valid. It is explicitly bounded by regime declaration and operating envelopes. Calibration assumptions are considered coherent only within the regime under which they are declared.
+
+Regime‑aware calibration enables manufacturing systems to:
+
+- Associate calibration validity with declared context
+- Detect when calibration assumptions no longer apply
+- Transition calibration structures across regimes
+- Avoid implicit reuse of invalid assumptions
+
+This approach contrasts with traditional calibration models that assume continuity across time, scale, or operating conditions.
+
+MSRM does not define calibration procedures or adjustment mechanisms. It provides a structural framework for associating calibration with regime validity, enabling clearer reasoning about when recalibration, mediation, or regime re‑declaration is appropriate.
+
+Regime‑aware calibration constrains interpretation, not behavior.
 ## Boundary Semantics
 
 Boundary semantics define how the limits of a declared regime are interpreted within the Manufacturing Substrate Regime Model (MSRM). Boundaries constrain the validity of assumptions and calibration, not system behavior.
@@ -460,4 +363,133 @@ Within MSRM, the substrate serves the following roles:
 The substrate is intentionally non‑semantic with respect to domain physics, tooling, or optimization objectives. It does not encode causality, performance metrics, or control logic.
 
 By operating at the substrate level, MSRM allows manufacturing systems to be described in terms of structural coherence rather than procedural tuning, enabling clearer reasoning about stability, drift, and regime transition in extreme operating environments.
+## Deployment Considerations
+
+MSRM is designed to coexist with existing manufacturing practices, control systems, and calibration methodologies. It does not require changes to tooling, instrumentation, or operational workflows.
+
+Deployment of MSRM concepts may occur incrementally, beginning with explicit regime declaration and structural documentation of calibration assumptions. The model does not mandate real‑time enforcement or automated mediation.
+
+Because MSRM is implementation‑agnostic, deployment considerations are context‑dependent. Organizations may choose to apply the model at varying levels of formality, from conceptual documentation to integrated system interpretation layers.
+
+MSRM does not prescribe deployment strategies. Its role is to provide a structural framework that can be adopted, adapted, or referenced without disrupting established manufacturing operations.
+## Future Extensions
+
+The Manufacturing Substrate Regime Model (MSRM) is intentionally minimal and descriptive. Future extensions may explore additional structural layers or domain applications without altering the core substrate principles.
+
+Potential extensions include:
+- Application to other extreme manufacturing domains beyond lithography
+- Integration with formal documentation or standards frameworks
+- Exploration of regime‑aware interpretation in distributed manufacturing systems
+- Alignment with long‑term system lifecycle management practices
+
+Any future extensions should preserve MSRM’s non‑physical, non‑optimizing, and non‑prescriptive posture. The model’s value lies in structural clarity rather than expansion of scope.
+
+MSRM is intended to remain stable as a reference framework, supporting adaptation without requiring revision.
+## Implications for Manufacturing
+
+The Manufacturing Substrate Regime Model (MSRM) introduces a structural perspective on manufacturing systems that emphasizes regime validity, calibration coherence, and mediated transition rather than control or optimization.
+
+For manufacturing environments operating near extreme regime boundaries, MSRM provides a framework for distinguishing between loss of validity and system failure. This distinction supports more proportional responses to drift, variability, and regime transition.
+
+By treating calibration as a substrate‑level concern, MSRM enables clearer reasoning about when assumptions hold and when they no longer apply. This clarity may reduce unnecessary intervention, over‑correction, or misinterpretation of system behavior.
+
+MSRM does not alter manufacturing processes or tooling. Its implications are organizational and interpretive, supporting stability and interpretability in complex, long‑lived systems without imposing new operational requirements.
+## Extreme Regime Constraints
+
+Extreme manufacturing regimes are characterized by operating conditions in which small deviations can invalidate calibration assumptions or interpretation without causing immediate system failure.
+
+Such regimes commonly exhibit:
+
+- Narrow operating envelopes
+- High sensitivity to environmental variation
+- Long‑term accumulation of drift
+- Strong coupling between subsystems
+- Limited tolerance for assumption collapse
+
+Within MSRM, extreme regime constraints are treated structurally rather than physically. The model does not quantify limits or define thresholds. Instead, it provides a framework for declaring where assumptions hold and where they no longer apply.
+
+Extreme regimes increase the risk of silent validity loss, where systems continue to operate while calibration assumptions degrade unnoticed. MSRM addresses this risk by formalizing regime declaration, boundary semantics, and non‑catastrophic exit.
+
+The model is applicable to any manufacturing environment where regime constraints challenge traditional calibration and interpretation practices.
+## Lithography Systems
+
+Advanced lithography systems represent a class of manufacturing environments characterized by extreme precision, tightly constrained operating margins, and long‑lived calibration dependencies.
+
+Within the Manufacturing Substrate Regime Model (MSRM), lithography systems are treated as motivating examples rather than primary subjects. The model does not describe optical processes, patterning techniques, or fabrication workflows.
+
+Lithography systems are relevant to MSRM because they:
+
+- Operate across multiple interacting regimes
+- Depend on long‑term calibration stability
+- Exhibit sensitivity to drift across temporal and environmental dimensions
+- Require coordinated interpretation across subsystems
+
+MSRM abstracts lithography systems as complex, regime‑dependent manufacturing environments in which calibration validity must be explicitly managed. The model does not assume specific tooling, wavelengths, materials, or vendors.
+
+By using lithography systems as contextual examples, MSRM illustrates how regime‑aware calibration and boundary semantics can support interpretability and stability without altering physical processes or control architectures.
+## Yield and Variability
+
+Yield and variability are central concerns in advanced manufacturing environments, particularly in systems operating near extreme regime boundaries.
+
+Within the Manufacturing Substrate Regime Model (MSRM), yield and variability are treated as contextual factors rather than optimization targets. The model does not attempt to improve yield, reduce variability, or prescribe corrective actions.
+
+Instead, MSRM addresses the structural conditions under which yield and variability are interpreted. Variability may arise from drift, regime interaction, or boundary proximity without indicating fault or failure.
+
+By separating validity from performance, MSRM enables manufacturing systems to distinguish between:
+
+- Variability within a valid regime
+- Variability associated with regime drift
+- Variability resulting from regime exit
+
+This distinction supports clearer reasoning about when recalibration, mediation, or regime re‑declaration may be appropriate, without conflating variability with error or loss of control.
+
+MSRM provides a descriptive framework for understanding how yield and variability relate to regime structure, not a mechanism for managing them directly.
+## Relationship to the Boson Substrate Model (BSM)
+
+The Manufacturing Substrate Regime Model (MSRM) is conceptually aligned with the Boson Substrate Model (BSM) in its use of substrate‑level abstraction to organize complex systems without embedding physical interpretation or empirical claims.
+
+BSM introduces the notion of a substrate as a neutral structural layer for describing regime behavior and validity constraints. MSRM adopts this abstraction and applies it to manufacturing environments, where calibration and regime validity are central concerns.
+
+MSRM does not extend or modify the physical interpretations discussed in BSM. Instead, it adapts substrate‑based reasoning to a different domain, emphasizing calibration structure, boundary semantics, and non‑catastrophic regime transition.
+
+The relationship between MSRM and BSM is one of conceptual inheritance rather than dependency. MSRM remains domain‑specific to manufacturing systems and does not rely on BSM for implementation or validation.
+## Relationship to the Quantum Substrate Model (QSM)
+
+The Manufacturing Substrate Regime Model (MSRM) shares structural principles with the Quantum Substrate Model (QSM), particularly in the treatment of regimes as declared contexts with bounded validity.
+
+QSM formalizes regime structure and operator mediation in abstract systems without asserting physical semantics. MSRM applies similar regime‑aware reasoning to manufacturing environments, where calibration assumptions and operating envelopes must be explicitly managed.
+
+While QSM addresses abstract regime organization, MSRM focuses on calibration as a structural concern and on the management of drift and regime transition in long‑lived industrial systems.
+
+MSRM does not interpret or extend quantum concepts. The relationship between MSRM and QSM is structural and methodological, not physical or theoretical.
+## Relationship to the Resonance Substrate Model (RSM)
+
+The Manufacturing Substrate Regime Model (MSRM) is complementary to the Resonance Substrate Model (RSM) in its emphasis on regime coherence and mediated interaction across complex systems.
+
+RSM introduces resonance as a structural concept for understanding alignment and interaction across regimes. MSRM does not model resonance phenomena but adopts a similar focus on maintaining coherence through explicit regime declaration, boundary semantics, and operator mediation.
+
+In manufacturing contexts, MSRM applies these principles to calibration stability, drift detection, and non‑catastrophic regime exit, without invoking resonance dynamics or temporal coupling.
+
+The relationship between MSRM and RSM is one of conceptual alignment rather than extension. Each model addresses distinct domains while sharing a common substrate‑based approach to regime organization.
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format follows a minimal, archival‑oriented convention aligned with Zenodo versioning.
+
+## [1.0.0] — 2026-01-16
+
+### Added
+- Initial release of the Manufacturing Substrate Regime Model (MSRM)
+- Complete structural framework covering:
+  - Substrate definition and regime declaration
+  - Boundary semantics and operating envelopes
+  - Calibration as a structural layer
+  - Drift detection and non‑catastrophic regime exit
+  - Operator mediation patterns
+  - Manufacturing context and implications
+- Canonical figures specifying structural relationships
+- Related works positioning relative to BSM, QSM, and RSM
+
+This release establishes MSRM as a stable, descriptive reference framework.
 

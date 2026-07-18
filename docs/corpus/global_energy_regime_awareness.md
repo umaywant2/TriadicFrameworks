@@ -1,18 +1,37 @@
 global_energy_regime_awareness 
-## Relationship to the Resonance Substrate Model (RSM)
+# Global Energy Regime Awareness (GERA) 
 
-Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
+- [`gera_module.json`](gera_module.json) — Agentic module schema role assignments
 
-RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
-
-The relationship to RSM is conceptual and interpretive rather than functional.
-# Global Energy Regime Awareness (GERA)
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 Global energy systems operate across multiple regimes defined by generation capacity, transmission constraints, demand variability, and environmental conditions. These regimes are often implicit, evolving over time without explicit declaration.
 
 Global Energy Regime Awareness (GERA) provides a descriptive framework for expressing operating context, validity assumptions, and boundary semantics within energy systems using existing standards and operational surfaces.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
 
 GERA does not introduce new control mechanisms, optimization strategies, or enforcement logic. Instead, it supports clearer interpretation of grid behavior, calmer operational decision‑making, and improved coherence across generation, transmission, distribution, and storage domains.
 
@@ -23,6 +42,73 @@ This work is intended for:
 - Policy and regulatory stakeholders
 
 GERA is implementation‑agnostic and non‑prescriptive. Its purpose is to make structural context visible without altering how energy systems are operated or governed.
+## Purpose
+
+The purpose of Global Energy Regime Awareness (GERA) is to provide a clear, descriptive framework for expressing operating context, validity assumptions, and boundary semantics within energy systems.
+
+Global energy infrastructure operates across multiple regimes shaped by generation capacity, transmission constraints, demand variability, environmental conditions, and regulatory context. These regimes are often implicit, making it difficult to interpret system behavior during transitions, stress, or unexpected events.
+
+GERA introduces a way to make these regimes visible using existing operational constructs and standards. The framework does not seek to control or optimize energy systems, but to improve interpretability, coherence, and shared understanding across stakeholders.
+
+By making structural context explicit, GERA supports calmer operations, clearer communication, and more proportional responses to change within complex energy environments.
+## Scope and Non‑Goals
+
+### Scope
+
+Global Energy Regime Awareness applies to large‑scale energy systems, including generation, transmission, distribution, and storage infrastructure.
+
+Within this scope, the framework focuses on:
+- Declaring operating regimes and assumptions
+- Identifying operating envelopes and boundary conditions
+- Supporting interpretation of variability, stress, and transition
+- Leveraging existing standards and operational surfaces
+
+GERA is designed to be adaptable across regional grids, energy mixes, and governance models without requiring uniform implementation.
+
+### Non‑Goals
+
+Global Energy Regime Awareness does not:
+- Introduce new control or dispatch mechanisms
+- Optimize grid performance or efficiency
+- Replace existing grid management or market systems
+- Prescribe policy or regulatory outcomes
+- Enforce operational behavior or decision logic
+
+The framework is interpretive rather than prescriptive. Its role is to support understanding, not to direct action.
+## Terminology Alignment
+
+Global Energy Regime Awareness aligns its terminology with substrate‑based regime models while adapting language to energy system contexts.
+
+Key terms are used consistently and intentionally:
+
+- **Regime**  
+  A declared operating context defined by assumptions about generation, demand, transmission capacity, and environmental conditions.
+
+- **Operating Envelope**  
+  The bounds within which a regime’s assumptions are considered valid.
+
+- **Boundary Semantics**  
+  The structural meaning of approaching or crossing an operating envelope boundary, distinct from system failure.
+
+- **Validity**  
+  The applicability of assumptions and interpretations within a given regime.
+
+- **Variability**  
+  Expected fluctuation within an operating envelope, including renewable generation and demand changes.
+
+- **Non‑Catastrophic Exit**  
+  A transition out of a regime that preserves system operation while acknowledging loss of validity.
+
+These terms are descriptive and non‑prescriptive. They are intended to support shared understanding across technical, operational, and policy domains without introducing new control requirements.
+## Relationship to the Resonance Substrate Model (RSM)
+
+Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
+
+RSM introduces resonance as a structural concept for understanding alignment across regimes. GERA does not model resonance dynamics directly, but applies similar principles of explicit context declaration and boundary recognition within energy systems.
+
+By making regime assumptions visible, GERA supports clearer interpretation of system behavior during transitions, variability, and stress without introducing new control layers.
+
+The relationship to RSM is conceptual and interpretive rather than functional.
 ## Relationship to the Resonance Substrate Model (RSM)
 
 Global Energy Regime Awareness is complementary to the Resonance Substrate Model (RSM) in its emphasis on coherence across interacting systems and scales.
@@ -263,62 +349,4 @@ Global Energy Regime Awareness improves post‑event analysis by providing a str
 - A deliberate or forced regime transition
 
 This leads to clearer conclusions, better documentation, and improved long‑term resilience without increasing procedural complexity or operational burden.
-## Purpose
-
-The purpose of Global Energy Regime Awareness (GERA) is to provide a clear, descriptive framework for expressing operating context, validity assumptions, and boundary semantics within energy systems.
-
-Global energy infrastructure operates across multiple regimes shaped by generation capacity, transmission constraints, demand variability, environmental conditions, and regulatory context. These regimes are often implicit, making it difficult to interpret system behavior during transitions, stress, or unexpected events.
-
-GERA introduces a way to make these regimes visible using existing operational constructs and standards. The framework does not seek to control or optimize energy systems, but to improve interpretability, coherence, and shared understanding across stakeholders.
-
-By making structural context explicit, GERA supports calmer operations, clearer communication, and more proportional responses to change within complex energy environments.
-## Scope and Non‑Goals
-
-### Scope
-
-Global Energy Regime Awareness applies to large‑scale energy systems, including generation, transmission, distribution, and storage infrastructure.
-
-Within this scope, the framework focuses on:
-- Declaring operating regimes and assumptions
-- Identifying operating envelopes and boundary conditions
-- Supporting interpretation of variability, stress, and transition
-- Leveraging existing standards and operational surfaces
-
-GERA is designed to be adaptable across regional grids, energy mixes, and governance models without requiring uniform implementation.
-
-### Non‑Goals
-
-Global Energy Regime Awareness does not:
-- Introduce new control or dispatch mechanisms
-- Optimize grid performance or efficiency
-- Replace existing grid management or market systems
-- Prescribe policy or regulatory outcomes
-- Enforce operational behavior or decision logic
-
-The framework is interpretive rather than prescriptive. Its role is to support understanding, not to direct action.
-## Terminology Alignment
-
-Global Energy Regime Awareness aligns its terminology with substrate‑based regime models while adapting language to energy system contexts.
-
-Key terms are used consistently and intentionally:
-
-- **Regime**  
-  A declared operating context defined by assumptions about generation, demand, transmission capacity, and environmental conditions.
-
-- **Operating Envelope**  
-  The bounds within which a regime’s assumptions are considered valid.
-
-- **Boundary Semantics**  
-  The structural meaning of approaching or crossing an operating envelope boundary, distinct from system failure.
-
-- **Validity**  
-  The applicability of assumptions and interpretations within a given regime.
-
-- **Variability**  
-  Expected fluctuation within an operating envelope, including renewable generation and demand changes.
-
-- **Non‑Catastrophic Exit**  
-  A transition out of a regime that preserves system operation while acknowledging loss of validity.
-
-These terms are descriptive and non‑prescriptive. They are intended to support shared understanding across technical, operational, and policy domains without introducing new control requirements.
 

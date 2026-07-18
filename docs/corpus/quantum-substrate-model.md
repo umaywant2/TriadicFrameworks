@@ -1,39 +1,39 @@
 quantum-substrate-model 
-# Changelog
+## Quantum Substrate Model (QSM) 
 
-All notable changes to the Quantum Substrate Model (QSM) publication are documented in this file.
+- [`qsm_model.json`](qsm_model.json) — Agentic module schema role assignments
 
-This changelog follows a conservative, publication‑oriented format. Structural clarity and archival stability take precedence over feature enumeration.
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
----
-
-## [1.0.0] — 2026‑01‑15
-Initial publication of the Quantum Substrate Model.
-
-## [0.1.0] — 2026‑01‑15
-
-### Added
-- Initial scaffolding for the Quantum Substrate Model
-- Canonical README defining scope and relationship to BSM
-- Publication‑grade folder structure
-- Placeholder files for paper sections, figures, and metadata
-
-### Notes
-This version establishes the structural and organizational foundation for the Quantum Substrate Model. Conceptual content is intentionally minimal at this stage. No empirical claims, regime definitions, or operator semantics are asserted.
-
----
-
-## Versioning Policy
-
-- Patch versions address typographical or formatting corrections only.
-- Minor versions introduce clarifications without altering declared assumptions.
-- Major versions reflect substantive changes to substrate definition, regime structure, or operating assumptions.
-
-# Quantum Substrate Model (QSM)
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 The Quantum Substrate Model (QSM) defines a structured extension of substrate‑level modeling in which regime structure, dimensional constraints, and interaction domains are explicitly declared.
 
 Building on the principles established by the Boson Substrate Model (BSM), the QSM formalizes how multiple substrate regimes may coexist, transition, or interact without embedding empirical claims, physical interpretation, or domain‑specific semantics.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
 
 ---
 
@@ -95,6 +95,36 @@ This work is prepared as a standalone technical note with citation and archival 
 This work is released under the Creative Commons Attribution 4.0 International (CC‑BY‑4.0) license.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/quantum-substrate-model)
+# Changelog
+
+All notable changes to the Quantum Substrate Model (QSM) publication are documented in this file.
+
+This changelog follows a conservative, publication‑oriented format. Structural clarity and archival stability take precedence over feature enumeration.
+
+---
+
+## [1.0.0] — 2026‑01‑15
+Initial publication of the Quantum Substrate Model.
+
+## [0.1.0] — 2026‑01‑15
+
+### Added
+- Initial scaffolding for the Quantum Substrate Model
+- Canonical README defining scope and relationship to BSM
+- Publication‑grade folder structure
+- Placeholder files for paper sections, figures, and metadata
+
+### Notes
+This version establishes the structural and organizational foundation for the Quantum Substrate Model. Conceptual content is intentionally minimal at this stage. No empirical claims, regime definitions, or operator semantics are asserted.
+
+---
+
+## Versioning Policy
+
+- Patch versions address typographical or formatting corrections only.
+- Minor versions introduce clarifications without altering declared assumptions.
+- Major versions reflect substantive changes to substrate definition, regime structure, or operating assumptions.
+
 # Metadata
 
 This directory contains citation and publication metadata for the Quantum Substrate Model (QSM). These files support archival, citation, and versioning workflows and are not part of the conceptual content of the model.

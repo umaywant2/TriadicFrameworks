@@ -1,204 +1,25 @@
 workflows 
-## 📘 API reference blocks (scroll‑centric module layout)
+# 🌀⚙️📜 Workflow Engines  
 
-These blocks follow the structure of the Workflows README and the style of your site’s documentation.   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows)
+- [`workflows_module.json`](workflows_module.json) — Agentic module schema role assignments
 
-### **batch_orchestrator.py**
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-```
-batch_run(items, output_dir=None) → dict
+<img src="https://img.shields.io/badge/⚙️Workflows-📘Execution%20Backbone%20AI%20Ready-4c8eda?style=for-the-badge" alt="Workflows | Execution Backbone • AI‑Ready"/>
 
-items:
-    list of .fff file paths, in‑memory scroll objects, or mixed lists
-
-output:
-    {
-      "timestamp": "...",
-      "count": N,
-      "results": [
-        { "input": ..., "output": ... },
-        ...
-      ]
-    }
-```
-
-### **remix_generation.py**
-
-```
-remix_scroll(scroll_obj, rules=None) → dict
-
-Produces a remix variant of a scroll object.
-Preserves canonical anchors and adds remix metadata.
-```
-
-### **scroll_pipeline.py (Python)**
-
-```
-run_scroll(scroll_text) → dict
-
-Parses and executes a scroll.
-Returns:
-    { "output": ..., "warnings": [...], "metadata": {...} }
-```
-
-### **scrollPipeline.js (JavaScript)**
-
-```
-runScroll(scrollText) → object
-
-Browser‑native scroll execution.
-Mirrors the Python pipeline API.
-```
-# 🔷 Workflow Diagram (Refreshed, Scroll‑Centric)
-
-This diagram shows how the four workflow engines relate to each other using the updated scroll‑centric topology:
-
-- **Scrolls** remain the canonical center  
-- **Pipelines** are execution paths (Python + JS symmetry)  
-- **Remix** generates lineage variants  
-- **Batch** coordinates multi‑scroll execution  
-- **Engines orbit the scroll artifact, not each other**
-
----
-
-## 🔷 Text‑Based Diagram (Single‑Glance)
-
-```
-                               🔷
-                 ┌──────────────────────────┐
-                 │   remix_generation.py    │
-                 │   (Remix Lineage Engine) │
-                 └──────────────▲───────────┘
-                                │
-                        produces variants
-                                │
-        ┌───────────────────────┴────────────────────────┐
-        │                                                │
-        │                Scrolls (.fff)                  │
-        │        (canonical RTT artifacts)               │
-        │                                                │
-        └───────────────────────┬────────────────────────┘
-                                │
-                         executed by
-                                │
- ┌──────────────────────────────┼──────────────────────────────┐
- │                              │                              │
- │     ┌────────────────────┐   │     ┌───────────────────┐    │
- │     │ scroll_pipeline.py │   │     │ scrollPipeline.js │    │
- │     │   (Python Engine)  │   │     │    (JS Engine)    │    │
- │     └────────────────────┘   │     └───────────────────┘    │
- │                              │                              │
- └──────────────────────────────┴───────────────┬──────────────┘
-                                                │
-                                        executes many
-                                                │
-                                   ┌──────────────────────────┐
-                                   │  batch_orchestrator.py   │
-                                   │     (Batch Runner)       │
-                                   └──────────────────────────┘
-```
-
-### Interpretation  
-- **Remix Generation** creates new scroll variants.  
-- **Scroll Pipelines** (Python + JS) execute scrolls in different runtime environments.  
-- **Batch Orchestrator** runs many scrolls or variants in sequence.  
-- **Scrolls** remain the invariant center; engines are operators around them.  
-
-This matches the modernized architecture shown in your Workflows page and the scroll‑centric Quickstart.
-
----
-
-## 🔷 Updated Triadic Glyph (Scroll‑Centric)
-
-A glyph for this subsystem should reflect the updated relationships:
-
-```
-                 🌀 Scroll Artifact
-        ┌───────────────┼────────────────┬────────────────┐
-        │               │                │                │
-        │         🌐 JS Pipeline   🐍 Python Pipeline   🎨 Remix Engine
-        │               │                │                │
-        └───────────────┴────────────────┴────────────────┘
-                                ▼
-                         📦 Batch Orchestrator
-```
-
-### Interpretation  
-- The scroll artifact is the invariant center.  
-- Pipelines and Remix orbit horizontally as sibling engines.  
-- Batch anchors the system by coordinating multi‑scroll execution.  
-- The glyph mirrors the structural relationships in the diagram above.  
-
----
-
-## 🔷 Notes for maintainers  
-- `/docs/engine/` has been archived; no engine‑era modules appear in this diagram.  
-- All workflows now use the scroll‑centric module layout (`tft.scrolls.*`).  
-- Pipelines maintain Python/JS symmetry.  
-- Remix and Batch remain orthogonal operators.  
-## ⚡ Quickstart snippets (drop‑in for README or website)
-
-These follow the QUICKSTART style from your site and GitHub docs.   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows)
-
-### **Run a single scroll (Python)**
-
-```python
-from scroll_pipeline import run_scroll
-
-scroll = """
-emitter: demo
-frequency: 144
-"""
-
-result = run_scroll(scroll)
-print(result["output"])
-```
-
-### **Run multiple scrolls (batch orchestrator)**
-
-```python
-from batch_orchestrator import batch_run
-
-paths = ["scrolls/a.fff", "scrolls/b.fff"]
-report = batch_run(paths, output_dir="reports")
-
-print(report["count"], "scrolls executed")
-```
-
-### **Generate a remix variant**
-
-```python
-from remix_generation import remix_scroll
-
-scroll = """
-emitter: demo
-frequency: 144
-"""
-
-variant = remix_scroll(scroll)
-print(variant["metadata"]["remix_id"])
-```
-
-### **Run a scroll in the browser (JS)**
-
-```javascript
-import { runScroll } from "./scrollPipeline.js";
-
-const scroll = `
-emitter: demo
-frequency: 144
-`;
-
-const result = runScroll(scroll);
-console.log(result.output);
-```
-
-These snippets mirror the API shapes of the refreshed engines and match the tone of your existing QUICKSTART docs.
-
-        🌀⚙️📜
-   Scroll • Engine • Artifact
-# 🌀⚙️📜 Workflow Engines  
-### Operational layer for RTT‑Inside: batches, pipelines, and remix generation
+## Operational layer for RTT‑Inside: batches, pipelines, and remix generation
 
 This directory contains **lightweight, substrate‑agnostic workflow modules** used across TriadicFrameworks for scroll generation, batch execution, remix lineage creation, and resonance‑aware pipeline orchestration.
 
@@ -213,6 +34,18 @@ Each workflow is intentionally minimal: no external dependencies, no hidden stat
 > - **🐍 Scroll Pipeline (Python)** — programmatic scroll engine  
 >
 > These engines form the operational layer of RTT‑Inside, bridging scroll artifacts with executable pipelines across languages and environments.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
 
 ---
 
@@ -318,4 +151,202 @@ Planned additions include:
 - Cross‑ontology translators
 
 These will follow the same principles: minimal, portable, remix‑friendly.
+## ⚡ Quickstart snippets (drop‑in for README or website)
+
+These follow the QUICKSTART style from your site and GitHub docs.   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows)
+
+### **Run a single scroll (Python)**
+
+```python
+from scroll_pipeline import run_scroll
+
+scroll = """
+emitter: demo
+frequency: 144
+"""
+
+result = run_scroll(scroll)
+print(result["output"])
+```
+
+### **Run multiple scrolls (batch orchestrator)**
+
+```python
+from batch_orchestrator import batch_run
+
+paths = ["scrolls/a.fff", "scrolls/b.fff"]
+report = batch_run(paths, output_dir="reports")
+
+print(report["count"], "scrolls executed")
+```
+
+### **Generate a remix variant**
+
+```python
+from remix_generation import remix_scroll
+
+scroll = """
+emitter: demo
+frequency: 144
+"""
+
+variant = remix_scroll(scroll)
+print(variant["metadata"]["remix_id"])
+```
+
+### **Run a scroll in the browser (JS)**
+
+```javascript
+import { runScroll } from "./scrollPipeline.js";
+
+const scroll = `
+emitter: demo
+frequency: 144
+`;
+
+const result = runScroll(scroll);
+console.log(result.output);
+```
+
+These snippets mirror the API shapes of the refreshed engines and match the tone of your existing QUICKSTART docs.
+
+        🌀⚙️📜
+   Scroll • Engine • Artifact
+## 📘 API reference blocks (scroll‑centric module layout)
+
+These blocks follow the structure of the Workflows README and the style of your site’s documentation.   [github.com](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/workflows)
+
+### **batch_orchestrator.py**
+
+```
+batch_run(items, output_dir=None) → dict
+
+items:
+    list of .fff file paths, in‑memory scroll objects, or mixed lists
+
+output:
+    {
+      "timestamp": "...",
+      "count": N,
+      "results": [
+        { "input": ..., "output": ... },
+        ...
+      ]
+    }
+```
+
+### **remix_generation.py**
+
+```
+remix_scroll(scroll_obj, rules=None) → dict
+
+Produces a remix variant of a scroll object.
+Preserves canonical anchors and adds remix metadata.
+```
+
+### **scroll_pipeline.py (Python)**
+
+```
+run_scroll(scroll_text) → dict
+
+Parses and executes a scroll.
+Returns:
+    { "output": ..., "warnings": [...], "metadata": {...} }
+```
+
+### **scrollPipeline.js (JavaScript)**
+
+```
+runScroll(scrollText) → object
+
+Browser‑native scroll execution.
+Mirrors the Python pipeline API.
+```
+# 🔷 Workflow Diagram (Refreshed, Scroll‑Centric)
+
+This diagram shows how the four workflow engines relate to each other using the updated scroll‑centric topology:
+
+- **Scrolls** remain the canonical center  
+- **Pipelines** are execution paths (Python + JS symmetry)  
+- **Remix** generates lineage variants  
+- **Batch** coordinates multi‑scroll execution  
+- **Engines orbit the scroll artifact, not each other**
+
+---
+
+## 🔷 Text‑Based Diagram (Single‑Glance)
+
+```
+                               🔷
+                 ┌──────────────────────────┐
+                 │   remix_generation.py    │
+                 │   (Remix Lineage Engine) │
+                 └──────────────▲───────────┘
+                                │
+                        produces variants
+                                │
+        ┌───────────────────────┴────────────────────────┐
+        │                                                │
+        │                Scrolls (.fff)                  │
+        │        (canonical RTT artifacts)               │
+        │                                                │
+        └───────────────────────┬────────────────────────┘
+                                │
+                         executed by
+                                │
+ ┌──────────────────────────────┼──────────────────────────────┐
+ │                              │                              │
+ │     ┌────────────────────┐   │     ┌───────────────────┐    │
+ │     │ scroll_pipeline.py │   │     │ scrollPipeline.js │    │
+ │     │   (Python Engine)  │   │     │    (JS Engine)    │    │
+ │     └────────────────────┘   │     └───────────────────┘    │
+ │                              │                              │
+ └──────────────────────────────┴───────────────┬──────────────┘
+                                                │
+                                        executes many
+                                                │
+                                   ┌──────────────────────────┐
+                                   │  batch_orchestrator.py   │
+                                   │     (Batch Runner)       │
+                                   └──────────────────────────┘
+```
+
+### Interpretation  
+- **Remix Generation** creates new scroll variants.  
+- **Scroll Pipelines** (Python + JS) execute scrolls in different runtime environments.  
+- **Batch Orchestrator** runs many scrolls or variants in sequence.  
+- **Scrolls** remain the invariant center; engines are operators around them.  
+
+This matches the modernized architecture shown in your Workflows page and the scroll‑centric Quickstart.
+
+---
+
+## 🔷 Updated Triadic Glyph (Scroll‑Centric)
+
+A glyph for this subsystem should reflect the updated relationships:
+
+```
+                 🌀 Scroll Artifact
+        ┌───────────────┼────────────────┬────────────────┐
+        │               │                │                │
+        │         🌐 JS Pipeline   🐍 Python Pipeline   🎨 Remix Engine
+        │               │                │                │
+        └───────────────┴────────────────┴────────────────┘
+                                ▼
+                         📦 Batch Orchestrator
+```
+
+### Interpretation  
+- The scroll artifact is the invariant center.  
+- Pipelines and Remix orbit horizontally as sibling engines.  
+- Batch anchors the system by coordinating multi‑scroll execution.  
+- The glyph mirrors the structural relationships in the diagram above.  
+
+---
+
+## 🔷 Notes for maintainers  
+- `/docs/engine/` has been archived; no engine‑era modules appear in this diagram.  
+- All workflows now use the scroll‑centric module layout (`tft.scrolls.*`).  
+- Pipelines maintain Python/JS symmetry.  
+- Remix and Batch remain orthogonal operators.  
 

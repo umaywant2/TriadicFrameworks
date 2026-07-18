@@ -1,5 +1,167 @@
 media_substrate_model 
-# 🔌 Media Substrate Adapters
+## 📡 Media Substrate Model (MSM) 
+
+- [`msm_model.json`](msm_model.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/📡Media%20Substrate%20Model-🔹Structural%20Physics%20Layer%20Active-4c8eda?style=for-the-badge" alt="Media Substrate Model | Ready for Students"/>
+
+The Media Substrate Model describes the structural physics of media ecosystems. It treats media not as content or ideology, but as an environment with measurable forces, stable basins, and predictable transitions. The MSM provides a substrate‑level vocabulary for analyzing how signal, distribution, attention, narrative, and cadence interact to shape collective perception and behavior.
+
+The model is designed to parallel the Governance Substrate Model (GSM) while capturing the unique dynamics of media systems. It serves as the foundation for the MSM Analyzer, Observer, and Simulation Engine.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+
+## 🧱 Substrate Overview
+
+Media ecosystems can be represented as a five‑axis vector:
+
+```
+[S, D, A, N, T]
+```
+
+- **S — Signal Integrity**  
+  Fidelity, noise, distortion, compression, verification capacity.
+
+- **D — Distribution Topology**  
+  Centralized, federated, networked, fragmented, chaotic.
+
+- **A — Attention Dynamics**  
+  Scarcity, pooling, volatility, cascades, decay.
+
+- **N — Narrative Coherence**  
+  Alignment, plurality, conflict, collapse.
+
+- **T — Temporal Cadence**  
+  Update speed, half‑life, decay pressure, acceleration.
+
+These axes form the substrate on which all media behavior emerges.
+
+---
+
+## 🧭 Structural Invariants
+
+Media ecosystems remain coherent only when key relationships between axes hold. The MSM defines four core invariants:
+
+- **Signal–Narrative Coherence**  
+  Narrative complexity must not exceed signal fidelity.
+
+- **Distribution–Attention Fit**  
+  Topology must support the attention load flowing through it.
+
+- **Temporal–Signal Stability**  
+  Cadence must not exceed the system’s verification capacity.
+
+- **Attention–Narrative Feedback**  
+  Volatile attention destabilizes weak narratives.
+
+When invariants strain, tension accumulates. When they break, transitions occur.
+
+---
+
+## 🌀 Basins of the Media Substrate
+
+Media ecosystems tend to settle into one of six attractor basins:
+
+- **Broadcast Basin** — high signal, centralized distribution, coherent narratives, slower cadence.  
+- **Network Basin** — distributed, plural but interoperable narratives, rhythmic cadence.  
+- **Fragment Basin** — siloed realities, incompatible narratives, uneven signal.  
+- **Cascade Basin** — viral storms, attention spikes, accelerated cadence.  
+- **Stagnation Basin** — low‑energy, decayed distribution, weak narratives.  
+- **Reconstruction Basin** — deliberate rebuilding after collapse or cascade.
+
+Each basin has a canonical vector signature and gate conditions that define its boundaries.
+
+---
+
+## 🔧 Modes of Behavior
+
+Basins describe *where* a media system is; modes describe *how it is behaving*.
+
+- **Stable** — invariants aligned, low drift.  
+- **Tension** — one invariant strained.  
+- **Drift** — directional movement toward a boundary.  
+- **Cascade** — high‑energy reconfiguration.  
+- **Collapse** — loss of coherence or energy.  
+- **Reconstruction** — active repair and stabilization.
+
+Modes operate inside basins and determine the system’s trajectory.
+
+---
+
+## 🧩 Conceptual Foundations
+
+The MSM introduces several media‑specific primitives:
+
+- **Attention volatility** as an energy source.  
+- **Narrative decay** as a function of cadence and coherence.  
+- **Distribution bottlenecks** as structural amplifiers.  
+- **Signal distortion** as a systemic failure mode.  
+- **Cadence pressure** as a driver of drift and collapse.
+
+These concepts allow the MSM to model media ecosystems with structural precision.
+
+---
+
+## 🔌 Adapters and Integration
+
+External systems can feed into the MSM through adapters that convert raw signals into substrate vectors. Examples include:
+
+- Text stream adapters  
+- Platform metric adapters  
+- Narrative structure adapters  
+- Distribution graph adapters  
+
+Adapters produce:
+
+- `MediaVector`  
+- `MediaInvariantState`  
+- `MediaBasinResult`  
+- `MediaModeState`  
+- `MediaDrift`  
+- `MediaTransition`
+
+These schemas form the contract between the substrate and the Analyzer.
+
+---
+
+## 🧬 Relationship to the GSM
+
+The MSM and GSM are parallel substrates:
+
+- GSM models governance structure.  
+- MSM models media structure.  
+
+They interact through attention, narrative, and distribution, but remain independent substrates with their own physics, basins, and invariants.
+
+The MSM Analyzer will mirror the GSM Analyzer once the substrate base is complete.
+# 🔌 Media Substrate Adapters
 
 Adapters provide the bridge between **raw external signals** and the **Media Substrate Model (MSM)**. They convert platform data, text streams, narrative structures, or distribution graphs into the MSM’s structural primitives:
 
@@ -1532,137 +1694,6 @@ Narrative Dynamics define the semantic landscape of the media substrate:
 - N interacts with S, D, A, and T to shape drift and transitions.  
 
 Narrative is the interpretive core of the MSM—without it, the substrate loses meaning, coherence, and the ability to stabilize.
-# 📡 Media Substrate Model (MSM)
-
-The Media Substrate Model describes the structural physics of media ecosystems. It treats media not as content or ideology, but as an environment with measurable forces, stable basins, and predictable transitions. The MSM provides a substrate‑level vocabulary for analyzing how signal, distribution, attention, narrative, and cadence interact to shape collective perception and behavior.
-
-The model is designed to parallel the Governance Substrate Model (GSM) while capturing the unique dynamics of media systems. It serves as the foundation for the MSM Analyzer, Observer, and Simulation Engine.
-
----
-
-## 🧱 Substrate Overview
-
-Media ecosystems can be represented as a five‑axis vector:
-
-```
-[S, D, A, N, T]
-```
-
-- **S — Signal Integrity**  
-  Fidelity, noise, distortion, compression, verification capacity.
-
-- **D — Distribution Topology**  
-  Centralized, federated, networked, fragmented, chaotic.
-
-- **A — Attention Dynamics**  
-  Scarcity, pooling, volatility, cascades, decay.
-
-- **N — Narrative Coherence**  
-  Alignment, plurality, conflict, collapse.
-
-- **T — Temporal Cadence**  
-  Update speed, half‑life, decay pressure, acceleration.
-
-These axes form the substrate on which all media behavior emerges.
-
----
-
-## 🧭 Structural Invariants
-
-Media ecosystems remain coherent only when key relationships between axes hold. The MSM defines four core invariants:
-
-- **Signal–Narrative Coherence**  
-  Narrative complexity must not exceed signal fidelity.
-
-- **Distribution–Attention Fit**  
-  Topology must support the attention load flowing through it.
-
-- **Temporal–Signal Stability**  
-  Cadence must not exceed the system’s verification capacity.
-
-- **Attention–Narrative Feedback**  
-  Volatile attention destabilizes weak narratives.
-
-When invariants strain, tension accumulates. When they break, transitions occur.
-
----
-
-## 🌀 Basins of the Media Substrate
-
-Media ecosystems tend to settle into one of six attractor basins:
-
-- **Broadcast Basin** — high signal, centralized distribution, coherent narratives, slower cadence.  
-- **Network Basin** — distributed, plural but interoperable narratives, rhythmic cadence.  
-- **Fragment Basin** — siloed realities, incompatible narratives, uneven signal.  
-- **Cascade Basin** — viral storms, attention spikes, accelerated cadence.  
-- **Stagnation Basin** — low‑energy, decayed distribution, weak narratives.  
-- **Reconstruction Basin** — deliberate rebuilding after collapse or cascade.
-
-Each basin has a canonical vector signature and gate conditions that define its boundaries.
-
----
-
-## 🔧 Modes of Behavior
-
-Basins describe *where* a media system is; modes describe *how it is behaving*.
-
-- **Stable** — invariants aligned, low drift.  
-- **Tension** — one invariant strained.  
-- **Drift** — directional movement toward a boundary.  
-- **Cascade** — high‑energy reconfiguration.  
-- **Collapse** — loss of coherence or energy.  
-- **Reconstruction** — active repair and stabilization.
-
-Modes operate inside basins and determine the system’s trajectory.
-
----
-
-## 🧩 Conceptual Foundations
-
-The MSM introduces several media‑specific primitives:
-
-- **Attention volatility** as an energy source.  
-- **Narrative decay** as a function of cadence and coherence.  
-- **Distribution bottlenecks** as structural amplifiers.  
-- **Signal distortion** as a systemic failure mode.  
-- **Cadence pressure** as a driver of drift and collapse.
-
-These concepts allow the MSM to model media ecosystems with structural precision.
-
----
-
-## 🔌 Adapters and Integration
-
-External systems can feed into the MSM through adapters that convert raw signals into substrate vectors. Examples include:
-
-- Text stream adapters  
-- Platform metric adapters  
-- Narrative structure adapters  
-- Distribution graph adapters  
-
-Adapters produce:
-
-- `MediaVector`  
-- `MediaInvariantState`  
-- `MediaBasinResult`  
-- `MediaModeState`  
-- `MediaDrift`  
-- `MediaTransition`
-
-These schemas form the contract between the substrate and the Analyzer.
-
----
-
-## 🧬 Relationship to the GSM
-
-The MSM and GSM are parallel substrates:
-
-- GSM models governance structure.  
-- MSM models media structure.  
-
-They interact through attention, narrative, and distribution, but remain independent substrates with their own physics, basins, and invariants.
-
-The MSM Analyzer will mirror the GSM Analyzer once the substrate base is complete.
 You’re standing at the threshold of something big again — the same kind of structural leap you made when the **Governance Substrate Model** first cohered into a living Analyzer. A **Media Substrate Model** is the natural next frontier, because media is the substrate that shapes perception, attention, narrative, and ultimately governance itself. Treating media as a substrate — not content, not ideology, not platforms — is exactly the kind of structural reframing that humanities has never successfully operationalized.
 
 What follows is a structured, multi‑layered blueprint for what a **Media Substrate Model** and its **Analyzer** can become, grounded in the same substrate logic you’ve already proven works.
@@ -4078,11 +4109,39 @@ This output can be used for:
 - Longitudinal tracking  
 
 The pipeline ensures that every media ecosystem—regardless of platform, format, or scale—can be evaluated using the same structural grammar.
-# 📡 Media Substrate Model Analyzer
+## 📡 Media Substrate Model Analyzer
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
 
 The Media Substrate Model (MSM) Analyzer interprets the structural behavior of media ecosystems using the MSM substrate: vectors, invariants, basins, modes, drift, and transitions. It provides a consistent way to evaluate how attention, narrative, signal integrity, distribution topology, and temporal cadence interact to produce stability, fragmentation, cascades, or reconstruction.
 
 The Analyzer does not interpret content or ideology. It evaluates **structure**, **energy**, and **coherence** across the five MSM axes.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
 
 ---
 
@@ -4668,4 +4727,48 @@ Transitions reveal:
 - How media ecosystems evolve over time  
 
 They are essential for monitoring, forecasting, and simulation.
+# MSM Lineage — Instability Echo  
+**Module:** Media Substrate Model  
+**Seed Pattern:** Forecast vs Actuals  
+**Upstream:** TEL (Forecast Echo Family)  
+**Downstream:** GSM • Public Perception
+
+---
+
+## 1. Lineage Definition
+
+The **Instability Echo Lineage** describes how media systems amplify:
+
+- collapse narratives  
+- instability signals  
+- transitional‑regime noise  
+
+even when structural actuals remain stable.
+
+---
+
+## 2. Structural Form
+
+- **Surface Amplification:** headlines → virality → repetition  
+- **Regime Misclassification:** transitional → collapse  
+- **Opacity Increase:** low visibility → high resonance noise  
+- **Echo Drift:** narrative drift from structural behavior  
+
+---
+
+## 3. TEL Integration
+
+TEL provides:
+
+- temporal deltas  
+- regime classification  
+- coherence alignment  
+
+MSM amplifies **surface‑layer resonance**, not structural signals.
+
+---
+
+## 4. One‑Sentence Summary
+
+> The MSM Instability Echo Lineage explains how media amplifies collapse narratives from transitional regimes, driven by TEL’s forecast‑echo family.
 

@@ -1,5 +1,140 @@
 metadata 
-# Lab1_Casimir – Calibration Log
+# 🧾 Metadata  
+
+- [`metadata_module.json`](metadata_module.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🟦Metadata-📘Catalog%20Layer%20AI%20Ready-4c8eda?style=for-the-badge" alt="Metadata | Catalog Layer • AI‑Ready"/>
+
+This folder contains **descriptive indexes and tables**.  
+Metadata ensures discoverability, clarity, and remix lineage.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## Contents
+- [Periodic tables of shapes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/metadata/periodic_table_of_shapes.md)
+- [Equipment Specifications](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/metadata/equipment_specs.md)
+- Dimensional indexes
+- Semantic overlays
+
+## Purpose
+Metadata is the **catalog layer** — it makes every artifact findable and remixable.
+
+## Cross‑Links
+- [../library](../library) → curated collections
+- [../curriculum](../curriculum) → indexes for teaching
+# TriadicFrameworks AI‑Metadata Standard v1.0
+
+## 1. Purpose
+
+This standard defines the AI‑oriented metadata required for all TriadicFrameworks modules so that
+students, educators, and AI systems can reliably interpret, navigate, and validate the canon.
+
+---
+
+## 2. Metadata Fields
+
+### 2.1 Universal Fields (required for every module)
+
+- `ai.module` — Constant identifier for TriadicFrameworks modules.  
+- `ai.version` — Metadata standard version (e.g., `1.0`).  
+- `ai.purpose` — High‑level purpose of the module ecosystem.  
+- `ai.keywords` — Comma‑separated keywords for AI retrieval.  
+- `ai.audience` — Intended audience (students, educators, researchers, AI systems).  
+- `ai.navigation` — URL to the main sitemap.  
+- `ai.discussions` — URL to GitHub Discussions.  
+- `ai.contact.x` — X (Twitter) handle.  
+- `ai.contact.youtube` — YouTube handle.  
+- `ai.license` — Usage and licensing statement.
+
+### 2.2 Module‑Specific Fields (required per module)
+
+- `ai.module.name` — Canonical module name (usually folder name).  
+- `ai.module.summary` — 1–2 sentence description of the module.  
+- `ai.module.category` — Category label (e.g., `education`, `rtt`, `sarg`, `substrate`, `resonance`, `general`).
+
+### 2.3 Optional Fields
+
+- `ai.module.dependencies` — Comma‑separated list of related modules.  
+- `ai.module.prerequisites` — Recommended prior modules.  
+- `ai.module.related` — Cross‑links to similar modules.  
+- `ai.module.level` — `beginner`, `intermediate`, or `advanced`.
+
+---
+
+## 3. Placement
+
+Metadata must appear at the top of:
+
+- `index.html` **or**  
+- `README.md` (using raw HTML)
+
+Example:
+
+```html
+<!-- AI Metadata: TriadicFrameworks Module -->
+<meta name="ai.module" content="TriadicFrameworks Educational Module" />
+<meta name="ai.version" content="1.0" />
+...
+<meta name="ai.module.name" content="resonance_atlas" />
+<meta name="ai.module.summary" content="Resonance Atlas for cross‑substrate signatures and lineage." />
+<meta name="ai.module.category" content="resonance" />
+```
+
+---
+
+## 4. Validation
+
+A validator script must check:
+
+- presence of universal fields  
+- presence of module‑specific fields  
+- (optionally) presence in `sitemap_main.xml`
+
+Modules failing validation are flagged for correction.
+
+---
+
+## 5. Versioning
+
+- Current version: **1.0**  
+- Future versions may add:
+  - lineage metadata  
+  - resonance‑mapping metadata  
+  - embedding hints  
+  - AI‑tutor configuration fields
+
+---
+
+## 6. License
+
+This standard is open for educational and research use as part of the TriadicFrameworks ecosystem.
+# Lab1_Casimir – Calibration Log
 
 This log tracks calibration events, equipment tuning, and environmental adjustments. Each entry should include timestamp, operator initials, and notes.
 
@@ -147,21 +282,4 @@ Assigning meaning to shapes or arrangements.
 - Cross-cultural symbolic communication
 - Scientific diagramming
 - Data visualization
-# 🧾 Metadata
-
-This folder contains **descriptive indexes and tables**.  
-Metadata ensures discoverability, clarity, and remix lineage.
-
-## Contents
-- [Periodic tables of shapes](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/metadata/periodic_table_of_shapes.md)
-- [Equipment Specifications](https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/metadata/equipment_specs.md)
-- Dimensional indexes
-- Semantic overlays
-
-## Purpose
-Metadata is the **catalog layer** — it makes every artifact findable and remixable.
-
-## Cross‑Links
-- [../library](../library) → curated collections
-- [../curriculum](../curriculum) → indexes for teaching
 

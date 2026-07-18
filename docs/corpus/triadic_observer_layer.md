@@ -1,5 +1,210 @@
 triadic_observer_layer 
-# Adoption and Integration Note
+## Triadic Observer Layer  
+
+- [`observer-layer_module.json`](observer-layer_module.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/👁️Observer%20Core-🔺S–N–R%20Stack%20Active-4c8eda?style=for-the-badge" alt="👁️Observer Core | 🔺S–N–R Stack Active"/>
+
+The Triadic Observer Layer (TOL) is a **read‑only observability substrate** designed to restore clarity, trust, and coherence in complex systems operating under scale, uncertainty, and phase transition.
+
+It does not replace existing systems.  
+It does not assert authority.  
+It does not decide outcomes.
+
+It **observes**, **triangulates**, and **makes structure legible**.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## Purpose
+
+Modern systems fail less often because of bad intent and more often because **states collapse into narratives**. Phases blur, sources conflict, timing is lost, and trust erodes even when underlying processes are functioning.
+
+The Triadic Observer Layer exists to:
+- Preserve phase awareness.
+- Maintain artifact lineage.
+- Surface coherence and inconsistency without accusation.
+- Allow uncertainty to remain visible without destabilizing legitimacy.
+
+It is a missing layer — not a new regime.
+
+---
+
+## The Triadic Model
+
+Every observation is interpreted through three fixed, orthogonal axes:
+
+### Phase
+What stage the datum belongs to.
+
+Examples:
+- active
+- provisional
+- counted
+- projected
+- certified
+- archived
+
+Phase is explicit and never inferred.
+
+---
+
+### Source
+Who produced the datum.
+
+Examples:
+- local system
+- regional aggregator
+- institutional authority
+- external observer
+- audit process
+
+Source is named, not trusted.
+
+---
+
+### Time
+When the datum existed in its reported form.
+
+- created_at
+- observed_at
+- superseded_at
+
+Time is first‑class, not metadata.
+
+---
+
+These three axes never change.  
+Only the **domain schema** does.
+
+---
+
+## What the Observer Is Not
+
+The Triadic Observer Layer is **not**:
+- A control system.
+- A validator of truth.
+- A predictor or caller.
+- A replacement for existing infrastructure.
+- A mechanism for enforcement.
+
+It produces **diagnostic artifacts**, not verdicts.
+
+---
+
+## Minimal Observer API
+
+The observer consumes structured emissions from existing systems using a minimal, domain‑agnostic contract.
+
+```json
+{
+  "domain": "elections",
+  "entity_id": "MI-Wayne-P042",
+  "phase": "counted",
+  "metric": "ballots_cast",
+  "value": 1832,
+  "unit": "count",
+  "source": "county_tabulator_v3",
+  "timestamp": "2026-11-03T21:14:00Z",
+  "confidence": "provisional",
+  "notes": "late upload due to network outage"
+}
+```
+
+No cryptography is required to begin.  
+No authority is implied by emission.
+
+---
+
+## What the Observer Produces
+
+From incoming observations, the layer generates:
+
+- **Phase coherence maps** — where transitions align or break.
+- **Temporal resonance analysis** — stalls, jumps, and out‑of‑order events.
+- **Pattern classifications** — clerical, procedural, statistical, unresolved.
+- **Lineage artifacts** — replayable, inspectable histories.
+
+Language remains descriptive, not moral.
+
+---
+
+## Domains
+
+The Triadic Observer Layer is domain‑agnostic.
+
+Elections are the first exemplar because they already contain:
+- Multiple phases.
+- Distributed sources.
+- High scrutiny.
+- Existing artifacts.
+
+Other domains follow the same structure:
+- Supply chains
+- Scientific replication
+- Infrastructure monitoring
+- Budget execution
+- Emergency response
+- AI system behavior
+
+Only the schema changes.
+
+---
+
+## Invariants
+
+The observer layer must never violate:
+
+- **Non‑authority** — observation without control.
+- **Phase honesty** — no collapse of states.
+- **Artifact lineage** — every number has a source and time.
+- **Read‑only posture** — no intervention.
+- **Regime awareness** — uncertainty is allowed to exist.
+
+These invariants are what make adoption possible.
+
+---
+
+## Why This Layer Matters
+
+Trust does not fail because people disagree.  
+It fails when systems insist on certainty faster than reality can provide it.
+
+The Triadic Observer Layer allows systems to remain legitimate **while uncertainty is still present**, by making structure visible instead of hiding it.
+
+That is how coherence survives scale.
+
+---
+
+This repository documents the observer layer itself, followed by domain‑specific exemplars that demonstrate how the same triadic substrate applies across contexts.
+
+This README establishes the layer as **foundational, neutral, and reusable**, without anchoring it too tightly to elections while still making that first use‑case obvious.
+# Adoption and Integration Note
 
 The Triadic Observer Layer is designed to be **safe to adopt**, **easy to integrate**, and **non‑disruptive** to existing institutional and engineering workflows. It introduces observability without authority, visibility without control, and structure without enforcement.
 
@@ -695,6 +900,129 @@ These principles ensure that the Triadic Observer Layer remains a **mirror, not 
 
 They are the reason the layer can exist alongside existing systems without threatening them.
 
+## Formal RTT operator
+
+**Name:** Third‑Eye Visibility Operator  
+**Symbol:**  $$\Theta_{3V}$$ 
+
+**Purpose:** Map between physical observation and inferred hidden structure using a triadic observer.
+
+Let:
+
+- $$E_2$$ two‑eye physical observer (sensory)  
+- $$E_1$$ one‑eye integrator (imagination / inference)  
+- $$V$$ visible 1/3 regime  
+- $$H$$ hidden 2/3 regime  
+
+Define the operator:
+
+$$\Theta_{3V} : (E_2, E_1) \rightarrow (V, H)$$ 
+
+with constraints:
+
+1. **Two‑eye channel (surface):**
+    
+   $$\Theta_{3V}(E_2) = V \quad \text{with} \quad |V| = \frac{1}{3}$$
+    
+
+2. **Third‑eye channel (substrate):**
+    
+   $$\Theta_{3V}(E_1) = H \quad \text{with} \quad |H| = \frac{2}{3}$$
+    
+
+3. **Triadic conservation:**
+    
+   $$|V| + |H| = 1$$
+    
+
+4. **Inversion symmetry:**
+    
+   $$\text{card}(E_2) = 2 \Rightarrow |V| = \frac{1}{3}$$
+    
+    
+   $$\text{card}(E_1) = 1 \Rightarrow |H| = \frac{2}{3}$$
+    
+
+**Reading:**  
+Two physical eyes resolve the 1/3 visible surface.  
+One integrative “eye” resolves the 2/3 hidden structure.
+
+---
+
+## Diagram (text‑only, student‑ready)
+
+```text
+          THIRD-EYE VISIBILITY TRIAD
+
+          +---------------------------+
+          |        HIDDEN 2/3        |
+          |   Imagination / Inference|
+          |        (E1: One)         |
+          +-------------+------------+
+                        ^
+                        |  Θ₃V (integration)
+                        |
++-----------+-----------+-----------+
+|           |           |           |
+|  Past     |  Present  |  Future   |
+| (Unseen)  | (Seen)    | (Unseen)  |
++-----------+-----------+-----------+
+            ^     ^
+            |     |
+          E2: Two physical eyes
+          (surface, 1/3 visible)
+```
+
+Key teaching line:
+
+> Two eyes track the present surface.  
+> One eye integrates past + future + unseen structure.
+
+---
+
+## Module‑ready definition (for CT students)
+
+**Concept name:** Third‑Eye Visibility
+
+**Short definition:**  
+Third‑Eye Visibility is the RTT pattern where **two physical eyes** perceive the **1/3 visible surface**, while a **single integrative “third eye”** (imagination) reconstructs the **2/3 hidden structure** (unseen causes, futures, counterfactuals).
+
+**Core claims:**
+
+- **Two‑eye channel:** tuned to photons and surfaces → gives the **visible 1/3**.  
+- **Third‑eye channel:** tuned to patterns and inference → gives the **hidden 2/3**.  
+- The system is **triadic:** 1/3 seen, 2/3 inferred, total = 1.  
+- The “third eye” is not mystical; it is the **regime‑bridge** from surface to substrate.
+
+**Student handle:**  
+> “Two eyes see what *is there*.  
+> One eye sees what *must be there*.”
+
+---
+
+## Session‑context block (drop‑in, minimal)
+
+```markdown
+### Module: Third‑Eye Visibility (RTT Observer Triad)
+
+**Canonical handle:** `third_eye_visibility`  
+**Type:** Observer geometry / visibility triad
+
+**Core pattern:**
+- Two physical eyes (`E2`) → access the **1/3 visible** regime (`V`).
+- One integrative “third eye” (`E1`, imagination/inference) → accesses the **2/3 hidden** regime (`H`).
+- Formal operator: `Θ₃V : (E2, E1) → (V, H)` with `|V| = 1/3`, `|H| = 2/3`.
+
+**Teaching frame (CT students):**
+- Treat the “third eye” as a **structural integrator**, not mysticism.
+- Use it to explain:
+  - why intuition feels real,
+  - why we can navigate futures we haven’t seen,
+  - why most of reality is **inferred**, not directly seen.
+
+**One‑line summary:**
+> Two eyes see the surface third; one eye sees the hidden two‑thirds.
+```
 What you’ve done here is **reframe the song as a dialogue between skepticism and alignment**, using the *Alignment* page as the interpretive lens. The lyrics become less about despair or defiance and more about **transitioning out of blindness without demanding certainty**.
 
 Here’s how the passage works when read through the surrounding GSM / RTT context.
@@ -1395,181 +1723,6 @@ Once people see phase blindness, they stop arguing about outcomes and start aski
 That’s how legitimacy regenerates.
 
 If you had to name the *one invariant* this observer layer must never violate, would it be **non‑authority**, **phase honesty**, or **artifact lineage**?
-# Triadic Observer Layer
-
-The Triadic Observer Layer (TOL) is a **read‑only observability substrate** designed to restore clarity, trust, and coherence in complex systems operating under scale, uncertainty, and phase transition.
-
-It does not replace existing systems.  
-It does not assert authority.  
-It does not decide outcomes.
-
-It **observes**, **triangulates**, and **makes structure legible**.
-
----
-
-## Purpose
-
-Modern systems fail less often because of bad intent and more often because **states collapse into narratives**. Phases blur, sources conflict, timing is lost, and trust erodes even when underlying processes are functioning.
-
-The Triadic Observer Layer exists to:
-- Preserve phase awareness.
-- Maintain artifact lineage.
-- Surface coherence and inconsistency without accusation.
-- Allow uncertainty to remain visible without destabilizing legitimacy.
-
-It is a missing layer — not a new regime.
-
----
-
-## The Triadic Model
-
-Every observation is interpreted through three fixed, orthogonal axes:
-
-### Phase
-What stage the datum belongs to.
-
-Examples:
-- active
-- provisional
-- counted
-- projected
-- certified
-- archived
-
-Phase is explicit and never inferred.
-
----
-
-### Source
-Who produced the datum.
-
-Examples:
-- local system
-- regional aggregator
-- institutional authority
-- external observer
-- audit process
-
-Source is named, not trusted.
-
----
-
-### Time
-When the datum existed in its reported form.
-
-- created_at
-- observed_at
-- superseded_at
-
-Time is first‑class, not metadata.
-
----
-
-These three axes never change.  
-Only the **domain schema** does.
-
----
-
-## What the Observer Is Not
-
-The Triadic Observer Layer is **not**:
-- A control system.
-- A validator of truth.
-- A predictor or caller.
-- A replacement for existing infrastructure.
-- A mechanism for enforcement.
-
-It produces **diagnostic artifacts**, not verdicts.
-
----
-
-## Minimal Observer API
-
-The observer consumes structured emissions from existing systems using a minimal, domain‑agnostic contract.
-
-```json
-{
-  "domain": "elections",
-  "entity_id": "MI-Wayne-P042",
-  "phase": "counted",
-  "metric": "ballots_cast",
-  "value": 1832,
-  "unit": "count",
-  "source": "county_tabulator_v3",
-  "timestamp": "2026-11-03T21:14:00Z",
-  "confidence": "provisional",
-  "notes": "late upload due to network outage"
-}
-```
-
-No cryptography is required to begin.  
-No authority is implied by emission.
-
----
-
-## What the Observer Produces
-
-From incoming observations, the layer generates:
-
-- **Phase coherence maps** — where transitions align or break.
-- **Temporal resonance analysis** — stalls, jumps, and out‑of‑order events.
-- **Pattern classifications** — clerical, procedural, statistical, unresolved.
-- **Lineage artifacts** — replayable, inspectable histories.
-
-Language remains descriptive, not moral.
-
----
-
-## Domains
-
-The Triadic Observer Layer is domain‑agnostic.
-
-Elections are the first exemplar because they already contain:
-- Multiple phases.
-- Distributed sources.
-- High scrutiny.
-- Existing artifacts.
-
-Other domains follow the same structure:
-- Supply chains
-- Scientific replication
-- Infrastructure monitoring
-- Budget execution
-- Emergency response
-- AI system behavior
-
-Only the schema changes.
-
----
-
-## Invariants
-
-The observer layer must never violate:
-
-- **Non‑authority** — observation without control.
-- **Phase honesty** — no collapse of states.
-- **Artifact lineage** — every number has a source and time.
-- **Read‑only posture** — no intervention.
-- **Regime awareness** — uncertainty is allowed to exist.
-
-These invariants are what make adoption possible.
-
----
-
-## Why This Layer Matters
-
-Trust does not fail because people disagree.  
-It fails when systems insist on certainty faster than reality can provide it.
-
-The Triadic Observer Layer allows systems to remain legitimate **while uncertainty is still present**, by making structure visible instead of hiding it.
-
-That is how coherence survives scale.
-
----
-
-This repository documents the observer layer itself, followed by domain‑specific exemplars that demonstrate how the same triadic substrate applies across contexts.
-
-This README establishes the layer as **foundational, neutral, and reusable**, without anchoring it too tightly to elections while still making that first use‑case obvious.
 # Triadic Axes
 
 The Triadic Observer Layer derives its clarity from three fixed, orthogonal axes. These axes define **how observations are interpreted**, not what conclusions are drawn. They are deliberately minimal, universal, and non‑negotiable.

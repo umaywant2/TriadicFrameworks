@@ -1,38 +1,37 @@
 boson-substrate-model 
-# Changelog
+# Boson Substrate Model (BSM) 
 
-All notable changes to the Boson Substrate Model (BSM) publication are documented in this file.
+- [`bsm_module.json`](bsm_module.json) — Agentic module schema role assignments
 
-The format follows a conservative, publication‑oriented changelog style. Structural clarity and archival stability take precedence over feature enumeration.
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
----
-
-## [1.0.0] — 2026‑01‑15
-
-### Added
-- Initial publication of the Boson Substrate Model
-- Declared operating regimes and assumptions
-- Formal substrate definition
-- Operator dynamics specification
-- Structural validation checks
-- Structural overview figure (`bsm_structural_overview.svg`)
-- Citation and Zenodo metadata
-
-### Notes
-This release establishes the canonical structural definition of the Boson Substrate Model. No empirical claims are asserted. All assumptions, boundaries, and validation conditions are explicitly declared.
-
----
-
-## Versioning Policy
-
-- Patch versions address typographical or formatting corrections only.
-- Minor versions introduce clarifications without altering declared assumptions.
-- Major versions reflect substantive changes to substrate definition or operating regimes.
-# Boson Substrate Model (BSM)
+<img src="https://img.shields.io/badge/🧩Minimal%20Substrate-📐Structural%20Only-4c8eda?style=for-the-badge" alt="🧩Minimal Substrate | 📐Structural Only"/>
 
 The Boson Substrate Model (BSM) defines a minimal structural substrate intended to support higher‑order operator dynamics without encoding domain‑specific semantics or empirical claims.
 
 The model formalizes a coherent substrate layer in which operator‑mediated interactions occur under explicitly declared operating regimes. Its purpose is to make substrate assumptions, boundaries, and validation conditions inspectable and reproducible.
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
 
 ---
 
@@ -83,6 +82,107 @@ This work is published as a standalone technical note with citation and archival
 This work is released under the Creative Commons Attribution 4.0 International (CC‑BY‑4.0) license.
 
 - [repo folder](https://github.com/umaywant2/TriadicFrameworks/tree/main/docs/boson-substrate-model)
+---
+title: "Boson Substrate Model"
+description: "A minimal structural substrate for operator-mediated interactions under declared regimes — architecture-agnostic, structurally grounded, and explicitly not a physical theory, simulation, or learning model."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+# Boson Substrate Model
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+The **Boson Substrate Model** (BSM) provides a minimal structural substrate for operator-mediated interactions under explicitly declared regimes. Its design goal is architectural neutrality: the BSM works alongside any existing system, adding structural grounding without requiring changes to the underlying architecture.
+
+The BSM is structural, not empirical. It makes no claim about the physics of bosons beyond using them as the substrate metaphor for mediated interaction.
+
+## Document Structure
+
+| Section | Content |
+|---------|---------|
+| Declared regimes and assumptions | The entry contract: what must be true for BSM to apply |
+| Substrate definition | What counts as the substrate in operator-mediated contexts |
+| Operator dynamics | How structural operators move through the substrate |
+| Structural validation | Coherence, regime, and consistency checks |
+| Discussion | Interpretation, scope, and open questions |
+| Limitations | What BSM does not do — explicit non-claims |
+| Overview figure | One-page visual of the full model |
+
+## Explicit Non-Claims
+
+The BSM is **not:**
+
+- A physical theory of bosons or particle physics
+- A simulation or predictive model
+- An optimization algorithm
+- A machine learning model
+- A replacement for any existing system
+
+These non-claims are first-class content in the module — not an afterthought. Structural clarity requires knowing the boundary.
+
+## Citation
+
+Loswin, N. 2026. *Boson Substrate Model*. TriadicFrameworks.
+License: CC BY 4.0. `CITATION.cff` included. Agentic: `bsm_module.json`
+
+---
+
+## Integration Points
+
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | Operator-mediated interaction patterns derive from FFT B-Ops (Bridge Operators) |
+| [Arrival Substrate Model](../arrival_substrate_model/overview.md) | BSM mediation phase aligns with the Mediation component of Aᵣ |
+| [AlphaFold Substrate Alignments](../alphafold_substrate_alignments/overview.md) | BSM operator patterns inform inference_mapping in folding regime transitions |
+| [Atomic Clocks](../atomic_clocks/overview.md) | Shared declared-regime architecture — BSM and vST invariant anchors are parallel |
+| [Conditions Substrate Model](../Conditions_Substrate_Model/overview.md) | Propagation vectors describe how BSM operators carry transitions between condition classes |
+| [SARG](../SARG/overview.md) | VREL-A lens reads BSM operator transitions as substrate-agnostic resonance events |
+| [Structural Detection](../Structural_Detection/overview.md) | REGIME_AWARENESS detects when BSM declared-regime assumptions break down |
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
+# Changelog
+
+All notable changes to the Boson Substrate Model (BSM) publication are documented in this file.
+
+The format follows a conservative, publication‑oriented changelog style. Structural clarity and archival stability take precedence over feature enumeration.
+
+---
+
+## [1.0.0] — 2026‑01‑15
+
+### Added
+- Initial publication of the Boson Substrate Model
+- Declared operating regimes and assumptions
+- Formal substrate definition
+- Operator dynamics specification
+- Structural validation checks
+- Structural overview figure (`bsm_structural_overview.svg`)
+- Citation and Zenodo metadata
+
+### Notes
+This release establishes the canonical structural definition of the Boson Substrate Model. No empirical claims are asserted. All assumptions, boundaries, and validation conditions are explicitly declared.
+
+---
+
+## Versioning Policy
+
+- Patch versions address typographical or formatting corrections only.
+- Minor versions introduce clarifications without altering declared assumptions.
+- Major versions reflect substantive changes to substrate definition or operating regimes.
 # Metadata
 
 This directory contains citation and publication metadata for the Boson Substrate Model (BSM) technical note. These files support archival, citation, and versioning workflows and are not part of the conceptual content of the model.

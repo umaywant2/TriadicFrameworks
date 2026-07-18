@@ -1,77 +1,35 @@
 Inverted_Economics 
-# ⭐ Contributing to Inverted Economics
+## ⭐ Inverted Economics 
 
-Thank you for your interest in contributing.  
-This project is designed to be open, accessible, and welcoming to all skill levels.
+- [`inverted-economics_module.json`](inverted-economics_module.json) — Agentic module schema role assignments
 
----
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
 
-## How to Contribute
+<img src="https://img.shields.io/badge/📉Inverted%20Economics-🧩Structural%20Audit%20Canon%20Active-4c8eda?style=for-the-badge" alt="📉Inverted Economics | 🧩Structural Audit Canon Active"/>
 
-### 1. Choose a Template
-Start with one of the RTT Eval templates in `templates/`:
-
-- Cycle Analysis  
-- Budget Analysis  
-- Event Analysis  
-
-These provide a consistent structure for all contributions.
-
----
-
-### 2. Keep It Structural
-Inverted Economics is **not** political commentary.  
-Please focus on:
-
-- regimes (R1/R2/R3)  
-- drift  
-- paradox  
-- coherence  
-- substrate alignment  
-- brute‑force engineering  
-
-Use public, historical data where needed.
-
----
-
-### 3. Add Your Analysis
-Fill in the template sections with:
-
-- observations  
-- structural notes  
-- RTT operators  
-- diagrams (optional)  
-- references to public data  
-
----
-
-### 4. Submit a Pull Request
-When your file is ready:
-
-1. Add it to `examples/` or a new folder.  
-2. Use a clear filename (e.g., `FY2012_Cycle_Analysis.md`).  
-3. Submit a PR with a short description.
-
-We review for clarity, structure, and alignment with RTT principles.
-
----
-
-## Code of Conduct
-
-- Be respectful  
-- Be constructive  
-- Keep discussions structural  
-- Avoid political advocacy  
-- Focus on clarity and learning  
-
----
-
-## Questions?
-
-Open an issue in the repo.  
-We’re building this field together — one clear example at a time.
-# ⭐ Inverted Economics
 _A structural, RTT‑aligned approach to understanding past economic cycles._
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
 
 Inverted Economics is a new field within the TriadicFrameworks ecosystem.  
 Its purpose is simple and radical:
@@ -151,6 +109,82 @@ Inverted Economics democratizes a capability once limited to large consultancies
 
 By making these tools open and accessible, we give the next generation  
 a way to see the world’s systems clearly — and build better ones.
+---
+title: "Inverted Economics"
+description: "A structural, RTT-aligned audit methodology for understanding past economic cycles before planning future ones."
+stability: stable
+date: 2026-07-14
+section: core
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
+
+> ```
+> rtt=1 | coherence=declared | drift=bounded | paradox=structural
+> ```
+
+## What Is Inverted Economics?
+
+Inverted Economics is a structural audit methodology built on one operating principle:
+
+> **Before planning the future, structurally understand the past.**
+
+Rather than projecting forward from current conditions, Inverted Economics inverts the
+analysis direction — reading economic cycles backward to surface the structural failures,
+drift accumulations, and coherence gaps that conventional forward-looking models miss.
+
+It is not a policy platform, a school of economic thought, or a forecasting tool.
+It is a **diagnostic instrument** for structural analysts.
+
+---
+
+## Six Failure Modes Inverted Economics Diagnoses
+
+| Failure Mode | Description |
+|---|---|
+| Missing regime awareness | Operating in a regime without recognizing it has shifted |
+| Drift accumulation | Small untracked deviations compounding into systemic misalignment |
+| Paradox zones | Competing structural forces producing locked, unresolvable states |
+| Brute-force engineering | Applying raw resource pressure where structural correction is needed |
+| Coherence gaps | Disconnects between declared economic policy and actual substrate behavior |
+| Substrate misalignment | Economic interventions acting on the wrong layer of the underlying system |
+
+---
+
+## Three Analysis Templates
+
+| Template | Purpose |
+|---|---|
+| **Cycle Template** | Map a complete economic cycle — expansion, peak, contraction, trough — against structural operators |
+| **Budget Template** | Audit a fiscal budget for regime awareness, drift signals, and coherence gaps |
+| **Event Template** | Analyze a single economic event (crash, boom, intervention) for its structural cause chain |
+
+---
+
+## Who It Is For
+
+- Students building structural literacy about economic history
+- Developers and researchers building tools on top of economic data
+- Practitioners auditing institutional economic decisions
+- Anyone who wants to democratize structural analysis of complex systems
+
+Inverted Economics is explicitly designed to be accessible without advanced economics training.
+The structural grammar of RTT provides the analytical vocabulary.
+
+---
+
+## Related Modules
+
+- [Conditions Substrate Model](../Conditions_Substrate_Model/overview/) — drift fields and regime arcs are the primary diagnostic surface
+- [Framework Field Theory](../Framework_Field_Theory/overview/) — operator grammar used in all Inverted Economics templates
+- [Opacity](../Opacity/overview/) — economic regime blindness is a substrate-opacity condition
+- [Structural Detection](../Structural_Detection/overview/) — regime detection precedes economic diagnosis
+
+---
+
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
 # RTT Eval — Inverted Economics (Budget Analysis)
 _A structural reading of a budget to reveal what the system truly values._
 
@@ -451,6 +485,41 @@ a structural RTT Eval on a well‑known historical period.
 
 This example is intentionally simple.  
 Contributors can expand it with charts, references, or deeper RTT operators.
+# IE Lineage — Proto‑Fund Structure  
+**Module:** Inverted Economics  
+**Seed Pattern:** Forecast vs Actuals  
+**Upstream:** Research Toolbox • TEL • SARG  
+**Downstream:** GSM • Philanthropy
+
+---
+
+## 1. Lineage Definition
+
+The **Proto‑Fund Lineage (IE)** explains why systems that behave like **transfer systems** are often described as **funds**, creating structural mismatch.
+
+This lineage inherits the **Forecast vs Actuals** pattern.
+
+---
+
+## 2. Structural Form
+
+- **Transfer Mechanics:** inflow → outflow, no compounding  
+- **Fund Language:** “trust fund,” “solvency,” “collapse”  
+- **Mismatch:** surface language ≠ structural behavior  
+- **RTT/1–3:** temporal grounding, regime clarification, coherence reset  
+
+---
+
+## 3. TEL & SARG Integration
+
+- TEL: identifies proto‑fund echo family  
+- SARG: cleans collapse‑argument chains  
+
+---
+
+## 4. One‑Sentence Summary
+
+> The IE Proto‑Fund Lineage explains how transfer systems are misframed as funds, using Forecast vs Actuals as its structural base.
 # ⭐ Triadic Audio Observer — Starter Notebook
 _A structural approach to understanding sound using RTT._
 

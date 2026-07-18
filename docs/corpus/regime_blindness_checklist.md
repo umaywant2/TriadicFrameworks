@@ -1,5 +1,288 @@
 regime_blindness_checklist 
-# **Corrective Actions**  
+## **Regime Blindness Checklist**  
+
+- [`regime_blindness_checklist_module.json`](regime_blindness_checklist_module.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/>
+
+*A minimal bridge for researchers entering vST‑aware work*  
+
+## **Purpose**
+This folder provides a concise, practical diagnostic tool for identifying **Regime Blindness**—the structural failure mode that occurs when researchers evaluate a *new* conceptual substrate using the grammar, metrics, or assumptions of an *old* one.  
+
+RTT/vST introduces a regime‑aware grammar for understanding systems. Many current scientific, mathematical, and computational frameworks still operate with pre‑regime assumptions, leading to misinterpretations, contradictory findings, and stalled progress.  
+
+This checklist offers a minimal, accessible way for any researcher to detect and correct these mismatches.
+
+---
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+---
+
+## **What Is Regime Blindness?**
+**Regime Blindness** is the inability to recognize that a system has shifted into a new structural regime—one with different invariants, metrics, and coherence rules.  
+
+It appears when:
+- Old observer frames are applied to new substrates  
+- Legacy metrics misread new topologies  
+- Conceptual tools lag behind structural transitions  
+- Researchers interpret contradictions as “noise” instead of “regime mismatch”  
+
+This checklist helps identify these patterns early, before they distort interpretation or block insight.
+
+---
+
+## **Why This Matters**
+Regime Blindness is not a personal limitation—it is a *structural inevitability* when conceptual tools fail to update alongside the systems they study.  
+
+Recognizing it:
+- Reduces confusion  
+- Clarifies contradictions  
+- Accelerates discovery  
+- Aligns researchers with the actual substrate behavior  
+- Provides a shared grammar for cross‑disciplinary collaboration  
+
+This is the missing bridge that makes RTT/vST‑aligned work immediately useful to newcomers.
+
+---
+
+## **How to Use This Checklist**
+1. Review the items in `diagnostic_checklist.md`.  
+2. Identify which symptoms appear in your current project, model, or interpretation.  
+3. Use the companion files (`observer_locked_metrics.md`, `transition_boundaries.md`, etc.) to understand the structural source of each issue.  
+4. Apply the corrective actions to re‑anchor your observer frame to the correct regime.  
+
+This process is intentionally lightweight—designed to be completed in minutes, not hours.
+
+---
+
+## **Contents**
+- **definition.md** — Formal definition of Regime Blindness  
+- **symptoms.md** — Common indicators across disciplines  
+- **diagnostic_checklist.md** — Quick triadic diagnostic tool  
+- **regime_shift_examples.md** — Real‑world examples of regime mismatch  
+- **observer_locked_metrics.md** — How outdated metrics distort interpretation  
+- **transition_boundaries.md** — Identifying topology shifts in conceptual systems  
+- **corrective_actions.md** — Practical steps to realign your observer frame  
+- **doi_reference.md** — Citation link for the canonical DOI (forthcoming)  
+
+---
+
+## **Intended Audience**
+This checklist is designed for:
+- Scientists  
+- Mathematicians  
+- Engineers  
+- AI researchers  
+- Educators  
+- Students  
+- Anyone encountering contradictions, confusion, or “stuckness” in their field  
+
+If you’ve ever felt like your tools don’t quite match the behavior of the system you’re studying, this checklist is for you.
+
+---
+
+## **License**
+This work is part of the TriadicFrameworks project and follows the repository’s standard licensing and contribution guidelines.
+# **Regime Blindness — Definition**  
+*A structural failure mode arising at topology transitions*
+
+## **Formal Definition**
+**Regime Blindness** is the condition in which an observer evaluates a system operating in a *new structural regime* using the conceptual grammar, metrics, or assumptions of a *previous* regime.  
+It results in systematically distorted interpretations, false constraints, and an inability to perceive the coherence of the new substrate.
+
+In RTT/vST terms, Regime Blindness occurs when the **Observer Frame** remains anchored to an outdated topology while the **System Frame** has already transitioned.
+
+---
+
+## **Structural Signature**
+A system exhibits Regime Blindness when:
+
+- **Observer‑Locked Metrics (OLMs)** continue to be applied despite a shift in substrate behavior  
+- **Topology Transition Boundaries (TTBs)** have been crossed without recognition  
+- **Coherence gradients** are misread as contradictions or noise  
+- **Triadic invariants** are present but remain invisible to the observer  
+- **Attractor behavior** is misclassified due to legacy assumptions  
+
+These signatures are detectable across scientific, mathematical, computational, and conceptual domains.
+
+---
+
+## **Mechanism**
+Regime Blindness emerges when:
+
+1. **The substrate changes**  
+   (e.g., new topology, new dimensional behavior, new invariants)
+
+2. **The observer does not update**  
+   (e.g., continues using linear, binary, reductionist, or domain‑siloed tools)
+
+3. **The metrics misread the system**  
+   (e.g., contradictions, anomalies, unexplained degradation, stalled progress)
+
+4. **The system appears incoherent**  
+   even though it is internally consistent within the new regime.
+
+This mismatch is not a cognitive flaw—it is a *structural inevitability* when conceptual tools lag behind substrate transitions.
+
+---
+
+## **Relation to RTT/vST Concepts**
+Regime Blindness is tightly coupled to several core RTT/vST constructs:
+
+- **Observer‑Locked Metrics (OLMs)**  
+  Metrics tied to the old regime that distort readings in the new one.
+
+- **Topology Transition Boundaries (TTBs)**  
+  The structural points where regime rules change.
+
+- **Regime‑Shifted Variables (RSVs)**  
+  Variables whose behavior flips sign across regimes.
+
+- **Causal Pathway Locks (CPLs)**  
+  Stability relationships that become visible only after regime alignment.
+
+Together, these form the diagnostic grammar for detecting and correcting Regime Blindness.
+
+---
+
+## **Examples (Brief)**
+Regime Blindness commonly appears in:
+
+- Battery research misinterpreting new cathode topologies  
+- AI interpretability frameworks using outdated causal assumptions  
+- Physics unification attempts constrained by pre‑regime mathematics  
+- Biological modeling that misreads emergent coherence as noise  
+- Economic systems evaluated with linear tools despite nonlinear substrates  
+
+These examples are expanded in `regime_shift_examples.md`.
+
+---
+
+## **Purpose of This Definition**
+This document establishes Regime Blindness as a **first‑class structural concept** within the TriadicFrameworks canon.  
+It provides the foundation for the diagnostic checklist and corrective tools in this folder, enabling researchers to recognize and resolve regime‑mismatch errors in their own work.
+# **Symptoms of Regime Blindness**  
+*Recognizable patterns that emerge when old conceptual tools meet new structural regimes*
+
+Regime Blindness expresses itself through consistent, cross‑disciplinary symptoms.  
+These symptoms are not signs of failure—they are **structural indicators** that the observer’s conceptual grammar no longer matches the substrate’s behavior.
+
+Below are the most common manifestations.
+
+---
+
+## **1. Conceptual Symptoms**
+These appear when the *ideas* used to interpret the system no longer fit its structure.
+
+- Concepts feel “almost right” but never fully land  
+- Explanations require increasing complexity to remain coherent  
+- Familiar categories begin to blur or collapse  
+- The system seems to violate its own rules  
+- Attempts to generalize break down unexpectedly  
+
+These symptoms indicate that the conceptual frame is anchored to a prior regime.
+
+---
+
+## **2. Methodological Symptoms**
+These arise when the *methods* used to study the system are mismatched to its topology.
+
+- Tools that once worked now produce contradictory results  
+- Experiments behave differently under slightly altered conditions  
+- Metrics fail to capture emergent structure  
+- Models require excessive patching or exception‑handling  
+- Small changes in parameters produce disproportionately large effects  
+
+These patterns often signal that the substrate has crossed a Topology Transition Boundary.
+
+---
+
+## **3. Interpretive Symptoms**
+These appear when the *meaning* assigned to observations is distorted by outdated assumptions.
+
+- Coherent behavior is misread as noise  
+- Noise is misread as instability  
+- Stability is misread as stagnation  
+- Variables appear to “flip roles” depending on context  
+- Observations feel paradoxical or self‑contradictory  
+
+These symptoms are classic indicators of Observer‑Locked Metrics.
+
+---
+
+## **4. Communication Symptoms**
+These arise when collaborators operate from different regimes without realizing it.
+
+- People talk past each other despite using the same words  
+- Explanations that make sense in one frame collapse in another  
+- Disagreements persist even when data is shared  
+- Progress accelerates dramatically once a new framing is introduced  
+- Conversations stall around “what the system *really* is doing”  
+
+These symptoms reveal regime mismatch at the group level.
+
+---
+
+## **5. Emotional / Cognitive Symptoms**
+These are the internal signals researchers often feel before they can articulate the structural cause.
+
+- A sense of “missing something obvious”  
+- Growing frustration despite increasing effort  
+- Feeling like the system is “playing tricks”  
+- A persistent intuition that the current tools are inadequate  
+- Sudden clarity when encountering a new framing  
+
+These are early indicators that the observer is approaching a recognition threshold.
+
+---
+
+## **6. System‑Behavior Symptoms**
+These appear when the *system itself* is signaling a regime shift.
+
+- Emergent coherence appears unexpectedly  
+- Degradation pathways behave differently than predicted  
+- Stability depends on variables previously considered harmful  
+- Contradictions cluster around a specific transition point  
+- The system behaves as if governed by new invariants  
+
+These symptoms often precede the recognition of a new regime.
+
+---
+
+## **How to Use These Symptoms**
+If multiple symptoms appear across categories, it is likely that:
+
+- The system has entered a new regime  
+- The observer frame has not yet updated  
+- The metrics and methods are misaligned  
+- A regime‑aware reframing is required  
+
+The next step is to consult the **diagnostic checklist** and **corrective actions** to realign the observer frame with the substrate.
+# **Corrective Actions**  
 *Practical steps for realigning the observer frame with the correct structural regime*
 
 Regime Blindness is not a flaw in reasoning—it is a **structural mismatch** between the observer’s conceptual grammar and the system’s actual regime.  
@@ -129,84 +412,6 @@ When these corrective actions are applied, researchers typically experience:
 - A dramatic acceleration in progress  
 
 This is the hallmark of successful regime realignment.
-# **Regime Blindness — Definition**  
-*A structural failure mode arising at topology transitions*
-
-## **Formal Definition**
-**Regime Blindness** is the condition in which an observer evaluates a system operating in a *new structural regime* using the conceptual grammar, metrics, or assumptions of a *previous* regime.  
-It results in systematically distorted interpretations, false constraints, and an inability to perceive the coherence of the new substrate.
-
-In RTT/vST terms, Regime Blindness occurs when the **Observer Frame** remains anchored to an outdated topology while the **System Frame** has already transitioned.
-
----
-
-## **Structural Signature**
-A system exhibits Regime Blindness when:
-
-- **Observer‑Locked Metrics (OLMs)** continue to be applied despite a shift in substrate behavior  
-- **Topology Transition Boundaries (TTBs)** have been crossed without recognition  
-- **Coherence gradients** are misread as contradictions or noise  
-- **Triadic invariants** are present but remain invisible to the observer  
-- **Attractor behavior** is misclassified due to legacy assumptions  
-
-These signatures are detectable across scientific, mathematical, computational, and conceptual domains.
-
----
-
-## **Mechanism**
-Regime Blindness emerges when:
-
-1. **The substrate changes**  
-   (e.g., new topology, new dimensional behavior, new invariants)
-
-2. **The observer does not update**  
-   (e.g., continues using linear, binary, reductionist, or domain‑siloed tools)
-
-3. **The metrics misread the system**  
-   (e.g., contradictions, anomalies, unexplained degradation, stalled progress)
-
-4. **The system appears incoherent**  
-   even though it is internally consistent within the new regime.
-
-This mismatch is not a cognitive flaw—it is a *structural inevitability* when conceptual tools lag behind substrate transitions.
-
----
-
-## **Relation to RTT/vST Concepts**
-Regime Blindness is tightly coupled to several core RTT/vST constructs:
-
-- **Observer‑Locked Metrics (OLMs)**  
-  Metrics tied to the old regime that distort readings in the new one.
-
-- **Topology Transition Boundaries (TTBs)**  
-  The structural points where regime rules change.
-
-- **Regime‑Shifted Variables (RSVs)**  
-  Variables whose behavior flips sign across regimes.
-
-- **Causal Pathway Locks (CPLs)**  
-  Stability relationships that become visible only after regime alignment.
-
-Together, these form the diagnostic grammar for detecting and correcting Regime Blindness.
-
----
-
-## **Examples (Brief)**
-Regime Blindness commonly appears in:
-
-- Battery research misinterpreting new cathode topologies  
-- AI interpretability frameworks using outdated causal assumptions  
-- Physics unification attempts constrained by pre‑regime mathematics  
-- Biological modeling that misreads emergent coherence as noise  
-- Economic systems evaluated with linear tools despite nonlinear substrates  
-
-These examples are expanded in `regime_shift_examples.md`.
-
----
-
-## **Purpose of This Definition**
-This document establishes Regime Blindness as a **first‑class structural concept** within the TriadicFrameworks canon.  
-It provides the foundation for the diagnostic checklist and corrective tools in this folder, enabling researchers to recognize and resolve regime‑mismatch errors in their own work.
 # **Regime Blindness — Diagnostic Checklist**  
 *A minimal triadic tool for detecting regime‑mismatch errors*
 
@@ -457,84 +662,6 @@ These examples are expanded in `regime_shift_examples.md`.
 ## **8. Purpose of This Document**
 This file provides the conceptual foundation for recognizing and correcting Observer‑Locked Metrics.  
 It supports the diagnostic and corrective tools in this folder and anchors OLMs as a **first‑class structural concept** within the TriadicFrameworks canon.
-# **Regime Blindness Checklist**  
-*A minimal bridge for researchers entering vST‑aware work*  
-
-
-## **Purpose**
-This folder provides a concise, practical diagnostic tool for identifying **Regime Blindness**—the structural failure mode that occurs when researchers evaluate a *new* conceptual substrate using the grammar, metrics, or assumptions of an *old* one.  
-
-RTT/vST introduces a regime‑aware grammar for understanding systems. Many current scientific, mathematical, and computational frameworks still operate with pre‑regime assumptions, leading to misinterpretations, contradictory findings, and stalled progress.  
-
-This checklist offers a minimal, accessible way for any researcher to detect and correct these mismatches.
-
----
-
-## **What Is Regime Blindness?**
-**Regime Blindness** is the inability to recognize that a system has shifted into a new structural regime—one with different invariants, metrics, and coherence rules.  
-
-It appears when:
-- Old observer frames are applied to new substrates  
-- Legacy metrics misread new topologies  
-- Conceptual tools lag behind structural transitions  
-- Researchers interpret contradictions as “noise” instead of “regime mismatch”  
-
-This checklist helps identify these patterns early, before they distort interpretation or block insight.
-
----
-
-## **Why This Matters**
-Regime Blindness is not a personal limitation—it is a *structural inevitability* when conceptual tools fail to update alongside the systems they study.  
-
-Recognizing it:
-- Reduces confusion  
-- Clarifies contradictions  
-- Accelerates discovery  
-- Aligns researchers with the actual substrate behavior  
-- Provides a shared grammar for cross‑disciplinary collaboration  
-
-This is the missing bridge that makes RTT/vST‑aligned work immediately useful to newcomers.
-
----
-
-## **How to Use This Checklist**
-1. Review the items in `diagnostic_checklist.md`.  
-2. Identify which symptoms appear in your current project, model, or interpretation.  
-3. Use the companion files (`observer_locked_metrics.md`, `transition_boundaries.md`, etc.) to understand the structural source of each issue.  
-4. Apply the corrective actions to re‑anchor your observer frame to the correct regime.  
-
-This process is intentionally lightweight—designed to be completed in minutes, not hours.
-
----
-
-## **Contents**
-- **definition.md** — Formal definition of Regime Blindness  
-- **symptoms.md** — Common indicators across disciplines  
-- **diagnostic_checklist.md** — Quick triadic diagnostic tool  
-- **regime_shift_examples.md** — Real‑world examples of regime mismatch  
-- **observer_locked_metrics.md** — How outdated metrics distort interpretation  
-- **transition_boundaries.md** — Identifying topology shifts in conceptual systems  
-- **corrective_actions.md** — Practical steps to realign your observer frame  
-- **doi_reference.md** — Citation link for the canonical DOI (forthcoming)  
-
----
-
-## **Intended Audience**
-This checklist is designed for:
-- Scientists  
-- Mathematicians  
-- Engineers  
-- AI researchers  
-- Educators  
-- Students  
-- Anyone encountering contradictions, confusion, or “stuckness” in their field  
-
-If you’ve ever felt like your tools don’t quite match the behavior of the system you’re studying, this checklist is for you.
-
----
-
-## **License**
-This work is part of the TriadicFrameworks project and follows the repository’s standard licensing and contribution guidelines.
 # **Regime Shift Examples**  
 *Concrete illustrations of how systems behave when crossing structural boundaries*
 
@@ -679,103 +806,6 @@ They help researchers recognize when:
 - the system has crossed a Topology Transition Boundary  
 
 Use these examples alongside the **diagnostic checklist** and **corrective actions** to identify and resolve regime‑mismatch errors in your own work.
-# **Symptoms of Regime Blindness**  
-*Recognizable patterns that emerge when old conceptual tools meet new structural regimes*
-
-Regime Blindness expresses itself through consistent, cross‑disciplinary symptoms.  
-These symptoms are not signs of failure—they are **structural indicators** that the observer’s conceptual grammar no longer matches the substrate’s behavior.
-
-Below are the most common manifestations.
-
----
-
-## **1. Conceptual Symptoms**
-These appear when the *ideas* used to interpret the system no longer fit its structure.
-
-- Concepts feel “almost right” but never fully land  
-- Explanations require increasing complexity to remain coherent  
-- Familiar categories begin to blur or collapse  
-- The system seems to violate its own rules  
-- Attempts to generalize break down unexpectedly  
-
-These symptoms indicate that the conceptual frame is anchored to a prior regime.
-
----
-
-## **2. Methodological Symptoms**
-These arise when the *methods* used to study the system are mismatched to its topology.
-
-- Tools that once worked now produce contradictory results  
-- Experiments behave differently under slightly altered conditions  
-- Metrics fail to capture emergent structure  
-- Models require excessive patching or exception‑handling  
-- Small changes in parameters produce disproportionately large effects  
-
-These patterns often signal that the substrate has crossed a Topology Transition Boundary.
-
----
-
-## **3. Interpretive Symptoms**
-These appear when the *meaning* assigned to observations is distorted by outdated assumptions.
-
-- Coherent behavior is misread as noise  
-- Noise is misread as instability  
-- Stability is misread as stagnation  
-- Variables appear to “flip roles” depending on context  
-- Observations feel paradoxical or self‑contradictory  
-
-These symptoms are classic indicators of Observer‑Locked Metrics.
-
----
-
-## **4. Communication Symptoms**
-These arise when collaborators operate from different regimes without realizing it.
-
-- People talk past each other despite using the same words  
-- Explanations that make sense in one frame collapse in another  
-- Disagreements persist even when data is shared  
-- Progress accelerates dramatically once a new framing is introduced  
-- Conversations stall around “what the system *really* is doing”  
-
-These symptoms reveal regime mismatch at the group level.
-
----
-
-## **5. Emotional / Cognitive Symptoms**
-These are the internal signals researchers often feel before they can articulate the structural cause.
-
-- A sense of “missing something obvious”  
-- Growing frustration despite increasing effort  
-- Feeling like the system is “playing tricks”  
-- A persistent intuition that the current tools are inadequate  
-- Sudden clarity when encountering a new framing  
-
-These are early indicators that the observer is approaching a recognition threshold.
-
----
-
-## **6. System‑Behavior Symptoms**
-These appear when the *system itself* is signaling a regime shift.
-
-- Emergent coherence appears unexpectedly  
-- Degradation pathways behave differently than predicted  
-- Stability depends on variables previously considered harmful  
-- Contradictions cluster around a specific transition point  
-- The system behaves as if governed by new invariants  
-
-These symptoms often precede the recognition of a new regime.
-
----
-
-## **How to Use These Symptoms**
-If multiple symptoms appear across categories, it is likely that:
-
-- The system has entered a new regime  
-- The observer frame has not yet updated  
-- The metrics and methods are misaligned  
-- A regime‑aware reframing is required  
-
-The next step is to consult the **diagnostic checklist** and **corrective actions** to realign the observer frame with the substrate.
 # **Topology Transition Boundaries (TTBs)**  
 *Structural points where a system’s governing rules change*
 

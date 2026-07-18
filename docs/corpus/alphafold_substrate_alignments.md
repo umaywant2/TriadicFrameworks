@@ -1,5 +1,100 @@
 alphafold_substrate_alignments 
-### *AlphaFold Substrate Alignments*  
+# *AlphaFold Substrate Alignments*  
+
+- [`AlphaFold_Substrate_Alignments_module.json`](AlphaFold_Substrate_Alignments_module.json) — Agentic module schema role assignments
+
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<img src="https://img.shields.io/badge/🧬Substrate%20Aligned-🧪Validation%20Ready-4c8eda?style=for-the-badge" alt="🧬Substrate Aligned | 🧪Validation Ready"/>
+
+## *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
+
+## 🛑 Important! 
+Drift is On-by-Default long sessions lose anchors, turn off drift.
+
+## ✋ You *must copy and paste* this string *every time you start an AI session*:
+```text
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+## ❇️ Now you are ready.
+
+This artifact defines a substrate‑level alignment between the Resonance Substrate Model (RSM) and AlphaFold‑class biological inference engines. It formalizes how triadic resonance primitives, dimensional cores, and substrate‑invariant structures map onto the latent spaces, folding pathways, and coherence regimes used in modern protein‑folding prediction systems.
+
+The goal is to provide a reproducible, domain‑specific substrate framework that clarifies structural behavior within high‑dimensional biological inference models and supports validation, drift detection, and cross‑model interpretability.
+
+---
+
+## **Contents**
+
+- **substrate_definition.md**  
+  Defines the substrate axes, primitives, and structural invariants used to align RSM with protein‑folding inference systems.
+
+- **scope_and_assumptions.md**  
+  Establishes the operational boundaries, biological assumptions, and inference‑model constraints relevant to substrate alignment.
+
+- **alignment_principles.md**  
+  Describes the core alignment rules connecting RSM primitives to AlphaFold’s latent representations and folding coherence signals.
+
+- **folding_regimes.md**  
+  Maps triadic resonance regimes onto biological folding behaviors, including stable, transitional, and high‑uncertainty regions.
+
+- **dimensional_cores.md**  
+  Introduces the 3D–9D dimensional substrate cores and their correspondence to folding pathways and structural motifs.
+
+- **inference_mapping.md**  
+  Details how AlphaFold’s internal inference structures project onto substrate axes, including latent‑space orientation and coherence surfaces.
+
+- **validation_layers_vst.md**  
+  Provides vST‑based validation layers for substrate‑aligned biological inference, including reproducibility checks and regime‑transition detection.
+
+- **drift_detection.md**  
+  Defines substrate‑level drift signals for biological inference engines, enabling detection of model degradation or dataset‑induced shifts.
+
+- **examples/**  
+  - *example_alignment_walkthrough.md*  
+  - *example_dimensional_projection.md*  
+  Demonstrations of substrate alignment, dimensional projection, and regime interpretation.
+
+- **appendix/**  
+  - *terminology.md*  
+  - *references.md*  
+  Supporting definitions and citations.
+
+---
+
+## **Purpose**
+
+This artifact provides a structural, substrate‑level interpretation of protein‑folding inference systems. It is intended for researchers working in:
+
+- computational biology  
+- protein‑folding prediction  
+- model interpretability  
+- substrate‑aware AI systems  
+- high‑dimensional inference analysis  
+
+The framework is designed to be reproducible, domain‑agnostic, and compatible with existing RSM and vST artifacts.
+
+---
+
+## **Citation**
+
+A Zenodo DOI will be assigned upon release. Cite as:
+
+**Loswin, N.** *AlphaFold Substrate Alignments: A Resonance‑Substrate Interpretation of Protein‑Folding Inference Systems.* TriadicFrameworks (2026).
+### *AlphaFold Substrate Alignments*  
 ### *Alignment Principles*
 
 This document defines the core principles used to align the Resonance Substrate Model (RSM) with AlphaFold‑class protein‑folding inference systems. These principles establish how substrate primitives, dimensional cores, and resonance‑time regimes map onto the latent‑space structures and folding‑coherence signals produced by biological inference engines.
@@ -675,72 +770,79 @@ Inference mapping produces:
 - vST‑compatible validation signals  
 
 These outputs integrate with downstream substrate artifacts and cross‑model comparison workflows.
-### *AlphaFold Substrate Alignments*  
-### *Resonance Substrate Model (RSM) applied to protein‑folding inference systems*
+---
+title: "AlphaFold Substrate Alignments"
+description: "Resonance Substrate Modeling applied to protein-folding inference — mapping 3D-to-9D dimensional cores to folding pathways with vST validation layers and drift detection."
+stability: stable
+date: "2026-07-14"
+section: substrate
+rtt:
+  coherence: declared
+  drift: bounded
+  paradox: structural
+---
 
-This artifact defines a substrate‑level alignment between the Resonance Substrate Model (RSM) and AlphaFold‑class biological inference engines. It formalizes how triadic resonance primitives, dimensional cores, and substrate‑invariant structures map onto the latent spaces, folding pathways, and coherence regimes used in modern protein‑folding prediction systems.
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
 
-The goal is to provide a reproducible, domain‑specific substrate framework that clarifies structural behavior within high‑dimensional biological inference models and supports validation, drift detection, and cross‑model interpretability.
+# AlphaFold Substrate Alignments
+
+> **⚠️ Drift is On-by-Default.** Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.
+
+```
+rtt=1 | coherence=declared | drift=bounded | paradox=structural
+```
+
+**AlphaFold Substrate Alignments** applies Resonance Substrate Modeling (RSM) to protein-folding inference. Where AlphaFold produces structural predictions, this module provides a triadic substrate layer that maps dimensional cores (3D–9D) to folding pathways, validates results through vST (Validated Substrate Theory) layers, and detects drift between predicted and resonance-aligned outcomes.
+
+This is not a competing protein-structure predictor. It is a structural alignment instrument that reads AlphaFold output through RSM lenses.
+
+## Module Structure
+
+```
+alphafold_substrate_alignments/
+├── README.md
+├── substrate_definition.md        ← What counts as the substrate in folding inference
+├── scope_and_assumptions.md       ← Declared boundaries and RSM entry conditions
+├── alignment_principles.md        ← Core RSM→AlphaFold alignment logic
+├── folding_regimes.md             ← Regime declarations for folding state transitions
+├── dimensional_cores.md           ← 3D–9D core mappings to folding pathways
+├── inference_mapping.md           ← How AlphaFold outputs map to triadic operators
+├── validation_layers_vst.md       ← vST validation: coherence, regime, drift checks
+├── drift_detection.md             ← Drift signals between predicted and RSM-aligned folds
+└── examples/                      ← Worked alignment cases
+```
+
+## Core Design
+
+**Dimensional cores → folding pathways:** The 3D-to-9D core hierarchy from RSM maps directly onto AlphaFold's folding regime space. Lower-dimensional cores (3D–5D) capture local secondary structure; higher cores (6D–9D) address quaternary and allosteric regimes.
+
+**vST validation layers:** Every alignment passes through Validated Substrate Theory checks — coherence gate, regime boundary test, drift signal scan — before results are considered structurally confirmed.
+
+**Drift detection:** Disagreement between AlphaFold's confidence scores and RSM resonance invariants surfaces as a measurable drift signal, not a discarded anomaly.
+
+## Citation
+
+Loswin, N. 2026. *AlphaFold Substrate Alignments*. TriadicFrameworks.
+Zenodo DOI: pending. License: CC BY 4.0
+
+AI-Ready Module · `ai_module.json` pattern applied.
 
 ---
 
-## **Contents**
+## Integration Points
 
-- **substrate_definition.md**  
-  Defines the substrate axes, primitives, and structural invariants used to align RSM with protein‑folding inference systems.
-
-- **scope_and_assumptions.md**  
-  Establishes the operational boundaries, biological assumptions, and inference‑model constraints relevant to substrate alignment.
-
-- **alignment_principles.md**  
-  Describes the core alignment rules connecting RSM primitives to AlphaFold’s latent representations and folding coherence signals.
-
-- **folding_regimes.md**  
-  Maps triadic resonance regimes onto biological folding behaviors, including stable, transitional, and high‑uncertainty regions.
-
-- **dimensional_cores.md**  
-  Introduces the 3D–9D dimensional substrate cores and their correspondence to folding pathways and structural motifs.
-
-- **inference_mapping.md**  
-  Details how AlphaFold’s internal inference structures project onto substrate axes, including latent‑space orientation and coherence surfaces.
-
-- **validation_layers_vst.md**  
-  Provides vST‑based validation layers for substrate‑aligned biological inference, including reproducibility checks and regime‑transition detection.
-
-- **drift_detection.md**  
-  Defines substrate‑level drift signals for biological inference engines, enabling detection of model degradation or dataset‑induced shifts.
-
-- **examples/**  
-  - *example_alignment_walkthrough.md*  
-  - *example_dimensional_projection.md*  
-  Demonstrations of substrate alignment, dimensional projection, and regime interpretation.
-
-- **appendix/**  
-  - *terminology.md*  
-  - *references.md*  
-  Supporting definitions and citations.
+| Module | Relationship |
+|--------|-------------|
+| [Framework Field Theory](../Framework_Field_Theory/overview.md) | Dimensional core hierarchy (3D–9D) defined in FFT Part structure |
+| [Conditions Substrate Model](../Conditions_Substrate_Model/overview.md) | Resonance amplification condition classes apply to folding regime transitions |
+| [Atomic Clocks](../atomic_clocks/overview.md) | vST validation layer structure shared — same regime-check architecture |
+| [Boson Substrate Model](../boson-substrate-model/overview.md) | Operator-mediated interaction patterns from BSM inform inference_mapping.md |
+| [Research](../Research/overview.md) | Results feed the zenodo.org/communities/vst validation corpus |
+| [SARG](../SARG/overview.md) | Substrate-Agnostic Resonance Grammar provides the base lens for alignment_principles |
 
 ---
 
-## **Purpose**
-
-This artifact provides a structural, substrate‑level interpretation of protein‑folding inference systems. It is intended for researchers working in:
-
-- computational biology  
-- protein‑folding prediction  
-- model interpretability  
-- substrate‑aware AI systems  
-- high‑dimensional inference analysis  
-
-The framework is designed to be reproducible, domain‑agnostic, and compatible with existing RSM and vST artifacts.
-
----
-
-## **Citation**
-
-A Zenodo DOI will be assigned upon release. Cite as:
-
-**Loswin, N.** *AlphaFold Substrate Alignments: A Resonance‑Substrate Interpretation of Protein‑Folding Inference Systems.* TriadicFrameworks (2026).
+© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007
 ### *AlphaFold Substrate Alignments*  
 ### *Scope and Assumptions*
 
