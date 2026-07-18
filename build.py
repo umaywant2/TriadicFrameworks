@@ -469,10 +469,6 @@ def build_index(
         "pages":         sorted(pages, key=_sort_key),
     }
 
-print("DEBUG: Writing homepage to:", site_dir / "index.html")
-print("DEBUG: HTML length:", len(html_out))
-print("DEBUG: HTML preview:", html_out[:200])
-    
     try:
         template = jinja_env.get_template("index.html")
     except TemplateNotFound:
