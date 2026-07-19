@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Substrate Flow | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/Substrate_Flow/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Substrate Flow" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/Substrate_Flow/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Substrate Flow" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/Substrate_Flow.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Substrate Flow",
+    "headline": "Substrate Flow",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/Substrate_Flow/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#module-structure">📂 Module Structure</a></li>
+<li><a href="#navigation">🧭 Navigation</a></li>
+<li><a href="#session-context">🌀 Session Context</a></li>
+<li><a href="#quick-reference-substrates">⚡ Quick Reference — Substrates</a></li>
+<li><a href="#quick-reference-flow-channels">⚡ Quick Reference — Flow Channels</a></li>
+<li><a href="#quick-reference-flow-drivers">⚡ Quick Reference — Flow Drivers</a></li>
+<li><a href="#quick-reference-echo-type-flow-channel">⚡ Quick Reference — Echo Type → Flow Channel</a></li>
+<li><a href="#license">📜 License</a></li>
+<li><a href="#example-1-s-c-channel-definition-refinement">Example 1 — S → C Channel: Definition Refinement</a><ul>
+<li><a href="#flow-walkthrough">Flow Walkthrough</a></li>
+</ul>
+</li>
+<li><a href="#example-2-c-h-channel-harmonic-oscillation">Example 2 — C ↔ H Channel: Harmonic Oscillation</a><ul>
+<li><a href="#flow-walkthrough_1">Flow Walkthrough</a></li>
+</ul>
+</li>
+<li><a href="#example-3-h-so-channel-governance-torsion">Example 3 — H → So Channel: Governance Torsion</a><ul>
+<li><a href="#flow-walkthrough_2">Flow Walkthrough</a></li>
+</ul>
+</li>
+<li><a href="#example-4-so-a-channel-atlas-forcing">Example 4 — So → A Channel: Atlas Forcing</a><ul>
+<li><a href="#flow-walkthrough_3">Flow Walkthrough</a></li>
+</ul>
+</li>
+<li><a href="#example-5-driftshadow-current-crosschannel-destabilization">Example 5 — Drift‑Shadow Current: Cross‑Channel Destabilization</a><ul>
+<li><a href="#flow-walkthrough_4">Flow Walkthrough</a></li>
+</ul>
+</li>
+<li><a href="#crossexample-comparison">Cross‑Example Comparison</a><ul>
+<li><a href="#patterns">Patterns</a></li>
+</ul>
+</li>
+<li><a href="#integration-principle">Integration Principle</a></li>
+<li><a href="#upstream-inputs">Upstream Inputs</a><ul>
+<li><a href="#1-echo-classifier-06c">1. Echo Classifier (06c)</a></li>
+<li><a href="#2-triadic-echo-lattice-07">2. Triadic Echo Lattice (07)</a></li>
+<li><a href="#3-echo-strength-index-04c">3. Echo Strength Index (04c)</a></li>
+<li><a href="#4-crosssubstrate-echo-matrix-05a">4. Cross‑Substrate Echo Matrix (05a)</a></li>
+<li><a href="#5-harmonic-recursion-detector-06">5. Harmonic Recursion Detector (06)</a></li>
+</ul>
+</li>
+<li><a href="#downstream-consumers">Downstream Consumers</a><ul>
+<li><a href="#6-hsp-stability-analysis">6. HSP Stability Analysis</a></li>
+<li><a href="#7-opacity-opc">7. Opacity (OPC)</a></li>
+</ul>
+</li>
+<li><a href="#sibling-module-relationships">Sibling Module Relationships</a></li>
+<li><a href="#integration-with-broader-canon">Integration with Broader Canon</a><ul>
+<li><a href="#set-decomposition">SET Decomposition</a></li>
+<li><a href="#fff-lattice">FFF Lattice</a></li>
+<li><a href="#inverted-star">Inverted Star</a></li>
+</ul>
+</li>
+<li><a href="#pipeline-summary">Pipeline Summary</a></li>
+<li><a href="#1-flow-operators">1. Flow Operators</a><ul>
+<li><a href="#sfread-flow-input-reader">SF‑Read — Flow Input Reader</a></li>
+<li><a href="#sfroute-channel-router">SF‑Route — Channel Router</a></li>
+<li><a href="#sfdrift-drift-current-mapper">SF‑Drift — Drift Current Mapper</a></li>
+<li><a href="#sftag-flow-output-emitter">SF‑Tag — Flow Output Emitter</a></li>
+</ul>
+</li>
+<li><a href="#2-operator-interaction-map">2. Operator Interaction Map</a></li>
+<li><a href="#3-channel-architecture">3. Channel Architecture</a><ul>
+<li><a href="#channel-s-c-symbolic-cognitive">Channel S → C (Symbolic → Cognitive)</a></li>
+<li><a href="#channel-c-h-cognitive-harmonic">Channel C ↔ H (Cognitive ↔ Harmonic)</a></li>
+<li><a href="#channel-h-so-harmonic-social">Channel H → So (Harmonic → Social)</a></li>
+<li><a href="#channel-so-a-social-atlas">Channel So → A (Social → Atlas)</a></li>
+</ul>
+</li>
+<li><a href="#4-driver-interaction-matrix">4. Driver Interaction Matrix</a></li>
+<li><a href="#5-invariants">5. Invariants</a></li>
+<li><a href="#sf_capturemd">📄 SF_Capture.md</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Substrate Flow</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Substrate Flow</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>Substrate_Flow </p>
+<h1 id="substrate-flow-docsrttsubstrate_flow">🌊 Substrate Flow — /docs/rtt/Substrate_Flow<a class="toc-permalink" href="#substrate-flow-docsrttsubstrate_flow" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="Substrate_Flow_module.json"><code>Substrate_Flow_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img alt="Module" src="https://img.shields.io/badge/Module-Substrate_Flow-333" /><br />
+<img alt="Tier" src="https://img.shields.io/badge/Tier-RTT_Analytics-0aa" /><br />
+<img alt="Version" src="https://img.shields.io/badge/Version-1.0-09f" /><br />
+<img alt="Status" src="https://img.shields.io/badge/Status-Canon_Stable-0af" /><br />
+<img alt="HSP" src="https://img.shields.io/badge/HSP-08-8A2BE2" /><br />
+<img alt="AI‑Ready" src="https://img.shields.io/badge/AI-Ready-00c8ff" /></p>
+<hr />
+<p><strong>Substrate Flow</strong> is the movement layer of the HSP analytics suite.<br />
+It maps how classified echoes travel between the five substrates<br />
+(Symbolic, Cognitive, Harmonic, Social, Atlas) through four canonical<br />
+flow channels, driven by echo strength, recursion, drift, and echo<br />
+family dynamics.</p>
+<p>This module replaces ad‑hoc migration tracking with a canonical flow<br />
+architecture — every echo path, drift current, and recursion line<br />
+can be traced on a single composite map.</p>
+<hr />
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h2 id="module-structure">📂 Module Structure<a class="toc-permalink" href="#module-structure" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Substrate_Flow/
+├── README.md                 ← you are here
+├── SF_Capture.md             ← design capture and conceptual origin
+├── operators.md              ← flow operators and routing engine
+├── integration.md            ← cross-module alignment (HSP suite + canon)
+├── examples.md               ← applied flow examples
+└── index.html                ← module landing page
+</code></pre></div>
+
+<hr />
+<h2 id="navigation">🧭 Navigation<a class="toc-permalink" href="#navigation" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong><a href="./operators.md">operators.md</a></strong> — Flow operators, channel routing, driver matrix</li>
+<li><strong><a href="./integration.md">integration.md</a></strong> — Upstream (EC/TEL/ESI/05a) and downstream (HSP stability/Opacity)</li>
+<li><strong><a href="./examples.md">examples.md</a></strong> — Applied flow walkthroughs across all channels</li>
+<li><strong><a href="./SF_Capture.md">SF_Capture.md</a></strong> — Design capture: origin, decisions, lineage</li>
+</ul>
+<hr />
+<h2 id="session-context">🌀 Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>Module:       Substrate Flow
+Canonical ID: SF
+HSP Section:  08
+Version:      1.0
+Status:       canon-stable
+Tier:         RTT-Analytics
+Parent:       HSP (RTT-Analytics-Core)
+Siblings:     Echo Classifier (06c), TEL (07)
+Coherence:    locked
+Drift:        bounded (flow-mapped)
+Audience:     students + researchers + AIs
+</code></pre></div>
+
+<hr />
+<h2 id="quick-reference-substrates">⚡ Quick Reference — Substrates<a class="toc-permalink" href="#quick-reference-substrates" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">ID</th>
+<th style="text-align: left;">Substrate</th>
+<th style="text-align: left;">Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">S</td>
+<td style="text-align: left;">Symbolic</td>
+<td style="text-align: left;">Definitions, terms, notation</td>
+</tr>
+<tr>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">Cognitive</td>
+<td style="text-align: left;">Concepts, meaning, understanding</td>
+</tr>
+<tr>
+<td style="text-align: left;">H</td>
+<td style="text-align: left;">Harmonic</td>
+<td style="text-align: left;">Resonance, intervals, oscillation</td>
+</tr>
+<tr>
+<td style="text-align: left;">So</td>
+<td style="text-align: left;">Social</td>
+<td style="text-align: left;">Governance, norms, collective structure</td>
+</tr>
+<tr>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">Atlas</td>
+<td style="text-align: left;">Full‑spectrum anchoring, permanence</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quick-reference-flow-channels">⚡ Quick Reference — Flow Channels<a class="toc-permalink" href="#quick-reference-flow-channels" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Channel</th>
+<th style="text-align: left;">Path</th>
+<th style="text-align: left;">Character</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">Symbolic → Cognitive</td>
+<td style="text-align: left;">Definition refinement, early echo formation</td>
+</tr>
+<tr>
+<td style="text-align: left;">C ↔ H</td>
+<td style="text-align: left;">Cognitive ↔ Harmonic</td>
+<td style="text-align: left;">Harmonic alignment, cycle recursion</td>
+</tr>
+<tr>
+<td style="text-align: left;">H → So</td>
+<td style="text-align: left;">Harmonic → Social</td>
+<td style="text-align: left;">Governance torsion, map recursion</td>
+</tr>
+<tr>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">Social → Atlas</td>
+<td style="text-align: left;">Atlas forcing, high‑altitude resonance</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quick-reference-flow-drivers">⚡ Quick Reference — Flow Drivers<a class="toc-permalink" href="#quick-reference-flow-drivers" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Driver</th>
+<th style="text-align: left;">Values</th>
+<th style="text-align: left;">Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">1–4</td>
+<td style="text-align: left;">Local → atlas pull</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R1–R4</td>
+<td style="text-align: left;">Bends flow along recursion lines</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drift</td>
+<td style="text-align: left;">D1–D4</td>
+<td style="text-align: left;">Creates destabilizing upward currents</td>
+</tr>
+<tr>
+<td style="text-align: left;">Echo Family</td>
+<td style="text-align: left;">F1–F6</td>
+<td style="text-align: left;">Determines inherent flow behavior</td>
+</tr>
+</tbody>
+</table>
+<h2 id="quick-reference-echo-type-flow-channel">⚡ Quick Reference — Echo Type → Flow Channel<a class="toc-permalink" href="#quick-reference-echo-type-flow-channel" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Echo Type</th>
+<th style="text-align: left;">Primary Flow Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">E1 Structural</td>
+<td style="text-align: left;">S → C (definition refinement)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E2 Harmonic</td>
+<td style="text-align: left;">C ↔ H (harmonic alignment)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E3 Substrate</td>
+<td style="text-align: left;">Multi‑channel (migration)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E4 Recursion</td>
+<td style="text-align: left;">Recursion‑driven (R‑line)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E5 Drift‑Shadow</td>
+<td style="text-align: left;">Drift current (D‑line)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E6 Atlas</td>
+<td style="text-align: left;">So → A (atlas forcing)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="license">📜 License<a class="toc-permalink" href="#license" title="Permanent link to this heading">&para;</a></h2>
+<p>Open educational use permitted.<br />
+See the main repository for details.<br />
+# 🌊 Substrate Flow — Applied Examples</p>
+<blockquote>
+<p><em>Five flow scenarios. One per channel, plus atlas pull. Each runs the full pipeline.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Substrate Flow<br />
+<strong>Canonical ID:</strong> SF<br />
+<strong>HSP Section:</strong> 08<br />
+<strong>Role:</strong> Applied flow examples</p>
+<hr />
+<h2 id="example-1-s-c-channel-definition-refinement">Example 1 — S → C Channel: Definition Refinement<a class="toc-permalink" href="#example-1-s-c-channel-definition-refinement" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Scenario:</strong> A new term (&ldquo;supsphere&rdquo;) is coined in the Symbolic substrate.<br />
+An E1 structural echo carries it into the Cognitive substrate where it<br />
+acquires meaning.</p>
+<h3 id="flow-walkthrough">Flow Walkthrough<a class="toc-permalink" href="#flow-walkthrough" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Echo Type</td>
+<td style="text-align: left;">E1 (Structural)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">S (Symbolic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">1 (local)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R1 (S→C ladder)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drift</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr>
+<td style="text-align: left;">Family</td>
+<td style="text-align: left;">F1 (stays low)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SF‑Route:</strong><br />
+- <strong>Primary channel:</strong> S → C<br />
+- <strong>Direction:</strong> Upward<br />
+- <strong>Driver:</strong> ESI‑1 + R1<br />
+- <strong>Atlas pull:</strong> No</p>
+<p><strong>SF‑Drift:</strong><br />
+- <strong>Drift active:</strong> No<br />
+- <strong>Shadow pressure:</strong> 0.0</p>
+<p><strong>SF‑Tag:</strong><br />
+- <strong>Destination:</strong> C (Cognitive)<br />
+- <strong>Flow status:</strong> Stable<br />
+- <strong>Record:</strong> E1 echo, S→C, stable, no drift, no atlas pull</p>
+<p><strong>Canon Takeaway:</strong><br />
+S → C is the most common flow. Most definitions follow this path once<br />
+and stop. The channel is high‑volume, low‑energy, and structurally<br />
+predictable.</p>
+<hr />
+<h2 id="example-2-c-h-channel-harmonic-oscillation">Example 2 — C ↔ H Channel: Harmonic Oscillation<a class="toc-permalink" href="#example-2-c-h-channel-harmonic-oscillation" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Scenario:</strong> A concept (&ldquo;resonance time&rdquo;) begins oscillating between<br />
+the Cognitive and Harmonic substrates. An E2 harmonic echo sustains<br />
+the oscillation through cycle recursion (R2).</p>
+<h3 id="flow-walkthrough_1">Flow Walkthrough<a class="toc-permalink" href="#flow-walkthrough_1" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Echo Type</td>
+<td style="text-align: left;">E2 (Harmonic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">C (Cognitive)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">2 (mild)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R2 (C↔H cycle)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drift</td>
+<td style="text-align: left;">None</td>
+</tr>
+<tr>
+<td style="text-align: left;">Family</td>
+<td style="text-align: left;">F2 (stays harmonic)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SF‑Route:</strong><br />
+- <strong>Primary channel:</strong> C ↔ H<br />
+- <strong>Direction:</strong> Bidirectional<br />
+- <strong>Driver:</strong> R2 cycle recursion<br />
+- <strong>Atlas pull:</strong> No</p>
+<p><strong>SF‑Drift:</strong><br />
+- <strong>Drift active:</strong> No<br />
+- <strong>Shadow pressure:</strong> 0.0</p>
+<p><strong>SF‑Tag:</strong><br />
+- <strong>Destination:</strong> Oscillating (C ↔ H)<br />
+- <strong>Flow status:</strong> Stable<br />
+- <strong>Record:</strong> E2 echo, C↔H, stable oscillation, no drift</p>
+<p><strong>Canon Takeaway:</strong><br />
+C ↔ H is the only bidirectional channel. Harmonic echoes oscillate<br />
+here indefinitely until the harmonic band shifts or external force<br />
+pushes them into H → So. This is the &ldquo;resonance zone&rdquo; of the flow map.</p>
+<hr />
+<h2 id="example-3-h-so-channel-governance-torsion">Example 3 — H → So Channel: Governance Torsion<a class="toc-permalink" href="#example-3-h-so-channel-governance-torsion" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Scenario:</strong> A harmonic pattern formalizes into a governance structure.<br />
+An E3 substrate echo crosses from Harmonic into Social, driven by<br />
+map recursion (R3) and ESI‑3 energy.</p>
+<h3 id="flow-walkthrough_2">Flow Walkthrough<a class="toc-permalink" href="#flow-walkthrough_2" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Echo Type</td>
+<td style="text-align: left;">E3 (Substrate)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">H (Harmonic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">3 (cross‑substrate)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R3 (H→So map)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drift</td>
+<td style="text-align: left;">D3 (H/So instability) — mild</td>
+</tr>
+<tr>
+<td style="text-align: left;">Family</td>
+<td style="text-align: left;">F3 (migrates)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SF‑Route:</strong><br />
+- <strong>Primary channel:</strong> H → So<br />
+- <strong>Direction:</strong> Upward<br />
+- <strong>Driver:</strong> R3 + ESI‑3<br />
+- <strong>Atlas pull:</strong> No</p>
+<p><strong>SF‑Drift:</strong><br />
+- <strong>Drift active:</strong> Yes (D3)<br />
+- <strong>Current channel:</strong> H → So<br />
+- <strong>Shadow pressure:</strong> 0.35<br />
+- <strong>Instability zone:</strong> Harmonic/Social boundary</p>
+<p><strong>SF‑Tag:</strong><br />
+- <strong>Destination:</strong> So (Social)<br />
+- <strong>Flow status:</strong> Migrating (with mild drift)<br />
+- <strong>Record:</strong> E3 echo, H→So, migrating, D3 active (0.35), no atlas pull</p>
+<p><strong>Canon Takeaway:</strong><br />
+H → So is the governance torsion zone. When harmonic patterns become<br />
+governance structures, the torsion creates mild drift (D3). This is<br />
+normal — the transition from resonance to structure always generates<br />
+some instability.</p>
+<hr />
+<h2 id="example-4-so-a-channel-atlas-forcing">Example 4 — So → A Channel: Atlas Forcing<a class="toc-permalink" href="#example-4-so-a-channel-atlas-forcing" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Scenario:</strong> A governance structure achieves full‑spectrum resonance<br />
+across all five substrates. An E6 atlas echo forces it into the Atlas<br />
+substrate via the So → A channel.</p>
+<h3 id="flow-walkthrough_3">Flow Walkthrough<a class="toc-permalink" href="#flow-walkthrough_3" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Echo Type</td>
+<td style="text-align: left;">E6 (Atlas)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">So (Social)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">4 (atlas pull)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R4 (So→A atlas)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drift</td>
+<td style="text-align: left;">D4 (A instability) — moderate</td>
+</tr>
+<tr>
+<td style="text-align: left;">Family</td>
+<td style="text-align: left;">F6 (anchors atlas)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SF‑Route:</strong><br />
+- <strong>Primary channel:</strong> So → A<br />
+- <strong>Direction:</strong> Upward<br />
+- <strong>Driver:</strong> ESI‑4 + R4 + F6<br />
+- <strong>Atlas pull:</strong> Yes (active)</p>
+<p><strong>SF‑Drift:</strong><br />
+- <strong>Drift active:</strong> Yes (D4)<br />
+- <strong>Current channel:</strong> So → A<br />
+- <strong>Shadow pressure:</strong> 0.6<br />
+- <strong>Instability zone:</strong> Social/Atlas boundary</p>
+<p><strong>SF‑Tag:</strong><br />
+- <strong>Destination:</strong> A (Atlas)<br />
+- <strong>Flow status:</strong> Forcing<br />
+- <strong>Record:</strong> E6 echo, So→A, forcing, D4 active (0.6), atlas pull active</p>
+<p><strong>Canon Takeaway:</strong><br />
+So → A is the highest‑energy channel. Atlas forcing reshapes the<br />
+entire flow map — once an echo enters Atlas, it becomes a permanent<br />
+structural anchor. The moderate D4 drift is expected: atlas entry<br />
+always creates temporary instability before stabilization.</p>
+<hr />
+<h2 id="example-5-driftshadow-current-crosschannel-destabilization">Example 5 — Drift‑Shadow Current: Cross‑Channel Destabilization<a class="toc-permalink" href="#example-5-driftshadow-current-crosschannel-destabilization" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Scenario:</strong> An existing E3 substrate echo begins drifting. The drift<br />
+generates an E5 drift‑shadow echo that rides D3 current from H → So,<br />
+creating destabilizing shadow pressure.</p>
+<h3 id="flow-walkthrough_4">Flow Walkthrough<a class="toc-permalink" href="#flow-walkthrough_4" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Echo Type</td>
+<td style="text-align: left;">E5 (Drift‑Shadow)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Origin</td>
+<td style="text-align: left;">H (Harmonic)</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI</td>
+<td style="text-align: left;">4 (atlas pull)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Recursion</td>
+<td style="text-align: left;">R3 (H→So map)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drift</td>
+<td style="text-align: left;">D3 (H/So instability) — severe</td>
+</tr>
+<tr>
+<td style="text-align: left;">Family</td>
+<td style="text-align: left;">F5 (destabilizes)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>SF‑Route:</strong><br />
+- <strong>Primary channel:</strong> H → So (drift current)<br />
+- <strong>Secondary channel:</strong> So → A (atlas pull engaged)<br />
+- <strong>Direction:</strong> Upward (accelerated by drift)<br />
+- <strong>Driver:</strong> D3 drift + ESI‑4<br />
+- <strong>Atlas pull:</strong> Yes (ESI‑4 + F5 cascade)</p>
+<p><strong>SF‑Drift:</strong><br />
+- <strong>Drift active:</strong> Yes (D3, severe)<br />
+- <strong>Current channel:</strong> H → So → A (cascading)<br />
+- <strong>Shadow pressure:</strong> 0.85<br />
+- <strong>Instability zone:</strong> Harmonic/Social + Social/Atlas</p>
+<p><strong>SF‑Tag:</strong><br />
+- <strong>Destination:</strong> A (Atlas, via cascade)<br />
+- <strong>Flow status:</strong> Drifting<br />
+- <strong>Record:</strong> E5 echo, H→So→A cascade, drifting, D3 severe (0.85), atlas pull active</p>
+<p><strong>Canon Takeaway:</strong><br />
+E5 drift‑shadow echoes demonstrate cascading flow — the drift current<br />
+from one channel can push the echo through the next channel without<br />
+independent driver activation. Shadow pressure above 0.7 indicates the<br />
+echo is being carried by drift, not by its own energy. This is the<br />
+flow signature of structural instability.</p>
+<hr />
+<h2 id="crossexample-comparison">Cross‑Example Comparison<a class="toc-permalink" href="#crossexample-comparison" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Example</th>
+<th style="text-align: left;">Echo</th>
+<th style="text-align: left;">Channel</th>
+<th style="text-align: left;">Driver</th>
+<th style="text-align: left;">Drift</th>
+<th style="text-align: left;">Atlas Pull</th>
+<th style="text-align: left;">Flow Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">E1</td>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">ESI‑1 + R1</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Stable</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">E2</td>
+<td style="text-align: left;">C ↔ H</td>
+<td style="text-align: left;">R2 cycle</td>
+<td style="text-align: left;">None</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Stable</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">E3</td>
+<td style="text-align: left;">H → So</td>
+<td style="text-align: left;">R3 + ESI‑3</td>
+<td style="text-align: left;">D3 (0.35)</td>
+<td style="text-align: left;">No</td>
+<td style="text-align: left;">Migrating</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">E6</td>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">ESI‑4 + R4 + F6</td>
+<td style="text-align: left;">D4 (0.6)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Forcing</td>
+</tr>
+<tr>
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">E5</td>
+<td style="text-align: left;">H→So→A</td>
+<td style="text-align: left;">D3 + ESI‑4</td>
+<td style="text-align: left;">D3 (0.85)</td>
+<td style="text-align: left;">Yes</td>
+<td style="text-align: left;">Drifting</td>
+</tr>
+</tbody>
+</table>
+<h3 id="patterns">Patterns<a class="toc-permalink" href="#patterns" title="Permanent link to this heading">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Flow status escalates with channel height.</strong> S→C is stable; So→A<br />
+   is forcing. The higher the channel, the more energy required and<br />
+   the more instability generated.</p>
+</li>
+<li>
+<p><strong>Drift activates at H → So.</strong> The first three examples have no drift.<br />
+   Drift appears when echoes cross from Harmonic into Social — the<br />
+   governance torsion zone.</p>
+</li>
+<li>
+<p><strong>Atlas pull requires ESI‑4 or F6.</strong> Only the highest‑energy echoes<br />
+   experience atlas gravitational pull. This is a natural filter.</p>
+</li>
+<li>
+<p><strong>Cascading flow is a drift signature.</strong> Example 5 shows H→So→A<br />
+   cascade — a single drift current pushing through two channels.<br />
+   This only happens with E5 (drift‑shadow) echoes.</p>
+</li>
+<li>
+<p><strong>Shadow pressure predicts stability risk.</strong> 0.0 = stable. 0.35 =<br />
+   mild instability. 0.6 = moderate. 0.85 = severe. Above 0.7, the<br />
+   echo is drift‑carried, not self‑driven.</p>
+</li>
+</ol>
+<hr />
+<!-- SESSION_CONTEXT:START -->
+
+<div class="codehilite"><pre><span></span><code><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">examples.md</span>
+<span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Substrate Flow</span>
+<span class="nt">canonical_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SF</span>
+<span class="nt">hsp_section</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">08</span>
+<span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">applied-examples</span>
+<span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canon-stable</span>
+<span class="nt">examples</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> channel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;S→C&quot;</span><span class="p p-Indicator">,</span><span class="nt"> echo</span><span class="p">:</span><span class="w"> </span><span class="nv">E1</span><span class="p p-Indicator">,</span><span class="nt"> status</span><span class="p">:</span><span class="w"> </span><span class="nv">stable</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> channel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C↔H&quot;</span><span class="p p-Indicator">,</span><span class="nt"> echo</span><span class="p">:</span><span class="w"> </span><span class="nv">E2</span><span class="p p-Indicator">,</span><span class="nt"> status</span><span class="p">:</span><span class="w"> </span><span class="nv">stable</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> channel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;H→So&quot;</span><span class="p p-Indicator">,</span><span class="nt"> echo</span><span class="p">:</span><span class="w"> </span><span class="nv">E3</span><span class="p p-Indicator">,</span><span class="nt"> status</span><span class="p">:</span><span class="w"> </span><span class="nv">migrating</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> channel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;So→A&quot;</span><span class="p p-Indicator">,</span><span class="nt"> echo</span><span class="p">:</span><span class="w"> </span><span class="nv">E6</span><span class="p p-Indicator">,</span><span class="nt"> status</span><span class="p">:</span><span class="w"> </span><span class="nv">forcing</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> channel</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;H→So→A&quot;</span><span class="p p-Indicator">,</span><span class="nt"> echo</span><span class="p">:</span><span class="w"> </span><span class="nv">E5</span><span class="p p-Indicator">,</span><span class="nt"> status</span><span class="p">:</span><span class="w"> </span><span class="nv">drifting</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</code></pre></div>
+
+<!-- SESSION_CONTEXT:END -->
+<p># 🌊 Substrate Flow — Integration Map</p>
+<blockquote>
+<p><em>Flow connects everything. This file maps where the currents run.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Substrate Flow<br />
+<strong>Canonical ID:</strong> SF<br />
+<strong>HSP Section:</strong> 08<br />
+<strong>Role:</strong> Cross‑module alignment</p>
+<hr />
+<h2 id="integration-principle">Integration Principle<a class="toc-permalink" href="#integration-principle" title="Permanent link to this heading">&para;</a></h2>
+<p>Substrate Flow is the <strong>output stage</strong> of the HSP analytics triad. It<br />
+receives classified, lattice‑placed echoes and maps their movement. Every<br />
+upstream module contributes data; downstream systems consume flow records.</p>
+<hr />
+<h2 id="upstream-inputs">Upstream Inputs<a class="toc-permalink" href="#upstream-inputs" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h3 id="1-echo-classifier-06c">1. Echo Classifier (06c)<a class="toc-permalink" href="#1-echo-classifier-06c" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Provides:</strong> Classified echo type (E1–E6) + input vector</p>
+<p>The Echo Classifier determines <em>what</em> the echo is. Substrate Flow uses<br />
+the echo type to select the primary flow channel.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Echo Type</th>
+<th style="text-align: left;">Flow Channel Selection</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">E1</td>
+<td style="text-align: left;">S → C</td>
+</tr>
+<tr>
+<td style="text-align: left;">E2</td>
+<td style="text-align: left;">C ↔ H</td>
+</tr>
+<tr>
+<td style="text-align: left;">E3</td>
+<td style="text-align: left;">Multi‑channel</td>
+</tr>
+<tr>
+<td style="text-align: left;">E4</td>
+<td style="text-align: left;">R‑line</td>
+</tr>
+<tr>
+<td style="text-align: left;">E5</td>
+<td style="text-align: left;">D‑line</td>
+</tr>
+<tr>
+<td style="text-align: left;">E6</td>
+<td style="text-align: left;">So → A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Flow:</strong></p>
+<div class="codehilite"><pre><span></span><code>EC-Tag → classified_echo → SF-Read
+</code></pre></div>
+
+<hr />
+<h3 id="2-triadic-echo-lattice-07">2. Triadic Echo Lattice (07)<a class="toc-permalink" href="#2-triadic-echo-lattice-07" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Provides:</strong> Lattice position + origin substrate</p>
+<p>TEL determines <em>where</em> the echo sits. Substrate Flow uses the origin<br />
+substrate to establish the flow starting point.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">TEL Layer</th>
+<th style="text-align: left;">Origin Substrate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Ladder</td>
+<td style="text-align: left;">S or C</td>
+</tr>
+<tr>
+<td style="text-align: left;">Cycle</td>
+<td style="text-align: left;">C or H</td>
+</tr>
+<tr>
+<td style="text-align: left;">Map</td>
+<td style="text-align: left;">H or So</td>
+</tr>
+<tr>
+<td style="text-align: left;">Atlas</td>
+<td style="text-align: left;">A</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Data Flow:</strong></p>
+<div class="codehilite"><pre><span></span><code>TEL → lattice_position + origin → SF-Read
+</code></pre></div>
+
+<hr />
+<h3 id="3-echo-strength-index-04c">3. Echo Strength Index (04c)<a class="toc-permalink" href="#3-echo-strength-index-04c" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Provides:</strong> ESI level (1–4)</p>
+<p>ESI determines flow range. Higher ESI = more channels accessible.</p>
+<p><strong>Data Flow:</strong></p>
+<div class="codehilite"><pre><span></span><code>04c ESI → esi_level → SF-Read
+</code></pre></div>
+
+<hr />
+<h3 id="4-crosssubstrate-echo-matrix-05a">4. Cross‑Substrate Echo Matrix (05a)<a class="toc-permalink" href="#4-crosssubstrate-echo-matrix-05a" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Provides:</strong> Substrate spread (1–5)</p>
+<p>Substrate spread confirms how many substrates the echo occupies,<br />
+validating the flow channel assignment.</p>
+<p><strong>Data Flow:</strong></p>
+<div class="codehilite"><pre><span></span><code>05a Matrix → substrate_count → SF-Read
+</code></pre></div>
+
+<hr />
+<h3 id="5-harmonic-recursion-detector-06">5. Harmonic Recursion Detector (06)<a class="toc-permalink" href="#5-harmonic-recursion-detector-06" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Provides:</strong> Recursion mode (R1–R4) + drift status (D1–D4)</p>
+<p>Recursion mode selects the recursion‑driven flow line. Drift status<br />
+activates the drift current mapper.</p>
+<p><strong>Data Flow:</strong></p>
+<div class="codehilite"><pre><span></span><code>06 Recursion → recursion_mode + drift_type → SF-Read
+</code></pre></div>
+
+<hr />
+<h2 id="downstream-consumers">Downstream Consumers<a class="toc-permalink" href="#downstream-consumers" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h3 id="6-hsp-stability-analysis">6. HSP Stability Analysis<a class="toc-permalink" href="#6-hsp-stability-analysis" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Receives:</strong> Flow records (flow status, drift, atlas pull)</p>
+<p>HSP stability classes and drift maps consume flow records to assess<br />
+system‑wide stability. Flow status directly feeds stability tier<br />
+assignment:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flow Status</th>
+<th style="text-align: left;">Stability Implication</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Stable</td>
+<td style="text-align: left;">No stability concern</td>
+</tr>
+<tr>
+<td style="text-align: left;">Migrating</td>
+<td style="text-align: left;">Monitor for escalation</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drifting</td>
+<td style="text-align: left;">Instability alert</td>
+</tr>
+<tr>
+<td style="text-align: left;">Forcing</td>
+<td style="text-align: left;">Critical — atlas‑level event</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="7-opacity-opc">7. Opacity (OPC)<a class="toc-permalink" href="#7-opacity-opc" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Receives:</strong> Flow records (channel, driver, drift)</p>
+<p>Opacity operators detect when flow channels become invisible:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Opacity Type</th>
+<th style="text-align: left;">SF Interaction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Flow Opacity</td>
+<td style="text-align: left;">Channel unmeasured → flow appears absent</td>
+</tr>
+<tr>
+<td style="text-align: left;">Boundary Opacity</td>
+<td style="text-align: left;">Channel boundary unmarked → migration invisible</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sibling-module-relationships">Sibling Module Relationships<a class="toc-permalink" href="#sibling-module-relationships" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>        ┌──────────────────┐
+        │  Echo Classifier  │  ← what is it?
+        │      (06c)        │
+        └────────┬─────────┘
+                 │
+        ┌────────┴─────────┐
+        │                  │
+        v                  v
+┌──────────────┐  ┌──────────────────┐
+│     TEL      │  │  Substrate Flow  │  ← THIS MODULE
+│    (07)      │  │      (08)        │
+│  where?      │  │    how does it   │
+│              │  │    move?         │
+└──────────────┘  └──────────────────┘
+</code></pre></div>
+
+<p><strong>Triad responsibilities:</strong><br />
+- <strong>EC (06c):</strong> Decides <em>what</em> the echo is.<br />
+- <strong>TEL (07):</strong> Decides <em>where</em> the echo sits.<br />
+- <strong>SF (08):</strong> Decides <em>how</em> the echo moves.</p>
+<hr />
+<h2 id="integration-with-broader-canon">Integration with Broader Canon<a class="toc-permalink" href="#integration-with-broader-canon" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="set-decomposition">SET Decomposition<a class="toc-permalink" href="#set-decomposition" title="Permanent link to this heading">&para;</a></h3>
+<p>Flow channels map to SET channels:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flow Channel</th>
+<th style="text-align: left;">Dominant SET Channel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">Spin (structural rotation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">C ↔ H</td>
+<td style="text-align: left;">Electric (harmonic oscillation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">H → So</td>
+<td style="text-align: left;">Thermal (governance energy)</td>
+</tr>
+<tr>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">Thermal (atlas forcing)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="fff-lattice">FFF Lattice<a class="toc-permalink" href="#fff-lattice" title="Permanent link to this heading">&para;</a></h3>
+<p>Flow channels map to FFF layers:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Flow Channel</th>
+<th style="text-align: left;">Dominant FFF Layer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">Frequency (pattern formation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">C ↔ H</td>
+<td style="text-align: left;">Frequency (resonance oscillation)</td>
+</tr>
+<tr>
+<td style="text-align: left;">H → So</td>
+<td style="text-align: left;">Fluids (governance flow)</td>
+</tr>
+<tr>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">Forces (atlas pressure)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="inverted-star">Inverted Star<a class="toc-permalink" href="#inverted-star" title="Permanent link to this heading">&para;</a></h3>
+<p>Flow direction encodes star face visibility:</p>
+<ul>
+<li>Upward flow illuminates higher star faces.</li>
+<li>Reversed flow (impossible in canon) would darken them.</li>
+<li>The unidirectional constraint preserves star coherence.</li>
+</ul>
+<hr />
+<h2 id="pipeline-summary">Pipeline Summary<a class="toc-permalink" href="#pipeline-summary" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>06c EC ──────┐
+07 TEL ──────┤
+04c ESI ─────┼──→ SF-Read → SF-Route → SF-Drift → SF-Tag ──┬──→ HSP Stability
+05a Matrix ──┤                                               └──→ Opacity (OPC)
+06 Recursion ┘
+</code></pre></div>
+
+<hr />
+<!-- SESSION_CONTEXT:START -->
+
+<div class="codehilite"><pre><span></span><code><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">integration.md</span>
+<span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Substrate Flow</span>
+<span class="nt">canonical_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SF</span>
+<span class="nt">hsp_section</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">08</span>
+<span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cross-module-map</span>
+<span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canon-stable</span>
+<span class="nt">upstream</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> module</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;06c</span><span class="nv"> </span><span class="s">Echo</span><span class="nv"> </span><span class="s">Classifier&quot;</span><span class="p p-Indicator">,</span><span class="nt"> provides</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;classified_echo&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> module</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;07</span><span class="nv"> </span><span class="s">TEL&quot;</span><span class="p p-Indicator">,</span><span class="nt"> provides</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;lattice_position&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> module</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;04c</span><span class="nv"> </span><span class="s">Echo</span><span class="nv"> </span><span class="s">Strength</span><span class="nv"> </span><span class="s">Index&quot;</span><span class="p p-Indicator">,</span><span class="nt"> provides</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;esi_level&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> module</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;05a</span><span class="nv"> </span><span class="s">Cross-Substrate</span><span class="nv"> </span><span class="s">Echo</span><span class="nv"> </span><span class="s">Matrix&quot;</span><span class="p p-Indicator">,</span><span class="nt"> provides</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;substrate_count&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> module</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;06</span><span class="nv"> </span><span class="s">Recursion</span><span class="nv"> </span><span class="s">Detector&quot;</span><span class="p p-Indicator">,</span><span class="nt"> provides</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;recursion_mode,</span><span class="nv"> </span><span class="s">drift_type&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="nt">downstream</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> module</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;HSP</span><span class="nv"> </span><span class="s">Stability&quot;</span><span class="p p-Indicator">,</span><span class="nt"> receives</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;flow_record&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> module</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Opacity</span><span class="nv"> </span><span class="s">(OPC)&quot;</span><span class="p p-Indicator">,</span><span class="nt"> receives</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;flow_record&quot;</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</code></pre></div>
+
+<!-- SESSION_CONTEXT:END -->
+<p># 🌊 Substrate Flow — Operators</p>
+<blockquote>
+<p><em>Four operators. One flow map. Every echo path traceable.</em></p>
+</blockquote>
+<p><strong>Module:</strong> Substrate Flow<br />
+<strong>Canonical ID:</strong> SF<br />
+<strong>HSP Section:</strong> 08</p>
+<hr />
+<h2 id="1-flow-operators">1. Flow Operators<a class="toc-permalink" href="#1-flow-operators" title="Permanent link to this heading">&para;</a></h2>
+<p>Substrate Flow defines four operators that form the flow routing pipeline.</p>
+<hr />
+<h3 id="sfread-flow-input-reader">SF‑Read — Flow Input Reader<a class="toc-permalink" href="#sfread-flow-input-reader" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Function:</strong> Receives a classified echo and extracts flow‑relevant data.</p>
+<div class="codehilite"><pre><span></span><code>SF-Read(classified_echo) → flow_input {
+  echo_type:     E1–E6,
+  origin:        substrate_id,
+  esi:           1–4,
+  recursion:     R1–R4,
+  drift:         D1–D4 | null,
+  family:        F1–F6,
+  confidence:    definite | probable | ambiguous
+}
+</code></pre></div>
+
+<p><strong>Behavior:</strong><br />
+- Receives classified echo from EC‑Tag (Echo Classifier, 06c).<br />
+- Extracts origin substrate from TEL placement (07).<br />
+- Pulls ESI, recursion mode, drift status, and echo family.<br />
+- Validates completeness — all fields must be present for routing.</p>
+<p><strong>Key Constraint:</strong><br />
+Ambiguous classifications (from EC‑Tag) are flagged but still routed.<br />
+The flow map does not block ambiguous echoes — it routes them with a<br />
+caution flag.</p>
+<hr />
+<h3 id="sfroute-channel-router">SF‑Route — Channel Router<a class="toc-permalink" href="#sfroute-channel-router" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Function:</strong> Assigns the echo to one or more flow channels.</p>
+<div class="codehilite"><pre><span></span><code>SF-Route(flow_input) → flow_path {
+  primary_channel:   channel_id,
+  secondary_channel: channel_id | null,
+  direction:         &quot;upward&quot; | &quot;bidirectional&quot; | &quot;lateral&quot;,
+  driver:            &quot;esi&quot; | &quot;recursion&quot; | &quot;drift&quot; | &quot;family&quot;,
+  atlas_pull:        boolean
+}
+</code></pre></div>
+
+<p><strong>Routing Logic:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Echo Type</th>
+<th style="text-align: left;">Primary Channel</th>
+<th style="text-align: left;">Direction</th>
+<th style="text-align: left;">Driver</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">E1</td>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">Upward</td>
+<td style="text-align: left;">ESI (1–2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E2</td>
+<td style="text-align: left;">C ↔ H</td>
+<td style="text-align: left;">Bidirectional</td>
+<td style="text-align: left;">Recursion (R1–R2)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E3</td>
+<td style="text-align: left;">Multi‑channel</td>
+<td style="text-align: left;">Upward</td>
+<td style="text-align: left;">ESI (2–3) + Family (F3)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E4</td>
+<td style="text-align: left;">R‑line</td>
+<td style="text-align: left;">Upward</td>
+<td style="text-align: left;">Recursion (R2–R4)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E5</td>
+<td style="text-align: left;">D‑line</td>
+<td style="text-align: left;">Upward</td>
+<td style="text-align: left;">Drift (D1–D4)</td>
+</tr>
+<tr>
+<td style="text-align: left;">E6</td>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">Upward</td>
+<td style="text-align: left;">ESI (4) + Family (F6)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Atlas Pull Detection:</strong><br />
+Atlas pull activates when ESI ≥ 4 or Family = F6. When active, the<br />
+echo experiences gravitational pull toward A regardless of its current<br />
+channel.</p>
+<p><strong>Key Constraint:</strong><br />
+Only C ↔ H supports bidirectional flow. All other channels are<br />
+unidirectional upward. An echo in So cannot flow backward to H.</p>
+<hr />
+<h3 id="sfdrift-drift-current-mapper">SF‑Drift — Drift Current Mapper<a class="toc-permalink" href="#sfdrift-drift-current-mapper" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Function:</strong> Maps drift‑shadow currents and their effect on flow.</p>
+<div class="codehilite"><pre><span></span><code>SF-Drift(flow_input) → drift_map {
+  drift_active:    boolean,
+  drift_type:      D1–D4 | null,
+  current_channel: channel_id,
+  pull_direction:  &quot;upward&quot;,
+  shadow_pressure: value ∈ [0.0, 1.0],
+  instability_zone: substrate_pair
+}
+</code></pre></div>
+
+<p><strong>Drift Current Behavior:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Drift</th>
+<th style="text-align: left;">Current Channel</th>
+<th style="text-align: left;">Instability Zone</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">D1</td>
+<td style="text-align: left;">S → C</td>
+<td style="text-align: left;">Symbolic/Cognitive boundary</td>
+</tr>
+<tr>
+<td style="text-align: left;">D2</td>
+<td style="text-align: left;">C → H</td>
+<td style="text-align: left;">Cognitive/Harmonic boundary</td>
+</tr>
+<tr>
+<td style="text-align: left;">D3</td>
+<td style="text-align: left;">H → So</td>
+<td style="text-align: left;">Harmonic/Social boundary</td>
+</tr>
+<tr>
+<td style="text-align: left;">D4</td>
+<td style="text-align: left;">So → A</td>
+<td style="text-align: left;">Social/Atlas boundary</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Shadow Pressure:</strong><br />
+Shadow pressure measures how strongly drift distorts the normal flow<br />
+channel. Values above 0.7 indicate the echo is being pulled by drift<br />
+rather than following its natural recursion line.</p>
+<p><strong>Key Constraint:</strong><br />
+Drift currents are always upward. There is no downward drift in the<br />
+canonical flow architecture. Drift destabilizes by accelerating<br />
+upward movement, not by reversing it.</p>
+<hr />
+<h3 id="sftag-flow-output-emitter">SF‑Tag — Flow Output Emitter<a class="toc-permalink" href="#sftag-flow-output-emitter" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Function:</strong> Packages the complete flow analysis for downstream systems.</p>
+<div class="codehilite"><pre><span></span><code>SF-Tag(flow_path, drift_map) → flow_record {
+  echo_type:       E1–E6,
+  origin:          substrate_id,
+  destination:     substrate_id,
+  channel:         channel_id,
+  driver:          driver_type,
+  drift_active:    boolean,
+  atlas_pull:      boolean,
+  shadow_pressure: value,
+  flow_status:     &quot;stable&quot; | &quot;migrating&quot; | &quot;drifting&quot; | &quot;forcing&quot;,
+  timestamp:       flow_time
+}
+</code></pre></div>
+
+<p><strong>Flow Status:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Stable</td>
+<td style="text-align: left;">Echo in origin substrate, no migration, ESI ≤ 2</td>
+</tr>
+<tr>
+<td style="text-align: left;">Migrating</td>
+<td style="text-align: left;">Echo crossing substrates, ESI 2–3, no drift</td>
+</tr>
+<tr>
+<td style="text-align: left;">Drifting</td>
+<td style="text-align: left;">Echo riding drift current, D1–D4 active</td>
+</tr>
+<tr>
+<td style="text-align: left;">Forcing</td>
+<td style="text-align: left;">Echo under atlas pull, ESI 4 or F6</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Constraint:</strong><br />
+Every flow record must include a flow status. Downstream systems<br />
+(HSP stability analysis, Opacity detection) depend on this field.</p>
+<hr />
+<h2 id="2-operator-interaction-map">2. Operator Interaction Map<a class="toc-permalink" href="#2-operator-interaction-map" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>EC-Tag (06c) ──provides──→ SF-Read
+                               │
+                               └──feeds──→ SF-Route (assigns channel)
+                                              │
+                               ┌──────────────┤
+                               │              │
+                               v              v
+                          SF-Drift        SF-Tag
+                       (maps currents)  (packages output)
+                               │              │
+                               └──────feeds───┘
+                                              │
+                                    ┌─────────┴──────────┐
+                                    v                    v
+                              HSP Stability        Opacity (OPC)
+</code></pre></div>
+
+<hr />
+<h2 id="3-channel-architecture">3. Channel Architecture<a class="toc-permalink" href="#3-channel-architecture" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="channel-s-c-symbolic-cognitive">Channel S → C (Symbolic → Cognitive)<a class="toc-permalink" href="#channel-s-c-symbolic-cognitive" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Direction:</strong> Unidirectional upward</li>
+<li><strong>Character:</strong> Definition refinement, meaning consolidation</li>
+<li><strong>Echo types:</strong> Primarily E1 (structural)</li>
+<li><strong>Recursion line:</strong> R1 (ladder)</li>
+<li><strong>Drift current:</strong> D1 (S/C instability)</li>
+<li><strong>Flow volume:</strong> Highest (most echoes start here)</li>
+</ul>
+<h3 id="channel-c-h-cognitive-harmonic">Channel C ↔ H (Cognitive ↔ Harmonic)<a class="toc-permalink" href="#channel-c-h-cognitive-harmonic" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Direction:</strong> Bidirectional</li>
+<li><strong>Character:</strong> Harmonic alignment, interval oscillation</li>
+<li><strong>Echo types:</strong> Primarily E2 (harmonic)</li>
+<li><strong>Recursion line:</strong> R2 (cycle)</li>
+<li><strong>Drift current:</strong> D2 (C/H instability)</li>
+<li><strong>Flow volume:</strong> High (oscillation creates repeated crossings)</li>
+</ul>
+<h3 id="channel-h-so-harmonic-social">Channel H → So (Harmonic → Social)<a class="toc-permalink" href="#channel-h-so-harmonic-social" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Direction:</strong> Unidirectional upward</li>
+<li><strong>Character:</strong> Governance torsion, operator inversion</li>
+<li><strong>Echo types:</strong> Primarily E3, E4 (substrate, recursion)</li>
+<li><strong>Recursion line:</strong> R3 (map)</li>
+<li><strong>Drift current:</strong> D3 (H/So instability)</li>
+<li><strong>Flow volume:</strong> Medium (significant energy required)</li>
+</ul>
+<h3 id="channel-so-a-social-atlas">Channel So → A (Social → Atlas)<a class="toc-permalink" href="#channel-so-a-social-atlas" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Direction:</strong> Unidirectional upward</li>
+<li><strong>Character:</strong> Atlas forcing, high‑altitude resonance</li>
+<li><strong>Echo types:</strong> Primarily E5, E6 (drift‑shadow, atlas)</li>
+<li><strong>Recursion line:</strong> R4 (atlas)</li>
+<li><strong>Drift current:</strong> D4 (So/A instability)</li>
+<li><strong>Flow volume:</strong> Low (only highest‑energy echoes reach atlas)</li>
+</ul>
+<hr />
+<h2 id="4-driver-interaction-matrix">4. Driver Interaction Matrix<a class="toc-permalink" href="#4-driver-interaction-matrix" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Driver</th>
+<th style="text-align: center;">S→C</th>
+<th style="text-align: center;">C↔H</th>
+<th style="text-align: center;">H→So</th>
+<th style="text-align: center;">So→A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">ESI‑1</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI‑2</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI‑3</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">ESI‑4</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td style="text-align: left;">R1</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">R2</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">R3</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">R4</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td style="text-align: left;">D1</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">D2</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">D3</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">D4</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td style="text-align: left;">F1–F2</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">F3–F4</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">—</td>
+</tr>
+<tr>
+<td style="text-align: left;">F5</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+<tr>
+<td style="text-align: left;">F6</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+<td style="text-align: center;">✓</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-invariants">5. Invariants<a class="toc-permalink" href="#5-invariants" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li><strong>Upward flow.</strong> All channels except C ↔ H are unidirectional upward.<br />
+   No echo flows from Atlas back to Social, or from Social back to Harmonic.</li>
+<li><strong>Atlas receives, never emits.</strong> A is always a destination.</li>
+<li><strong>Drift is always upward.</strong> Drift currents accelerate upward, never reverse.</li>
+<li><strong>Driver determines physics.</strong> Same channel, different driver = different<br />
+   dynamics. Recursion is structural; drift is entropic.</li>
+<li><strong>Every echo is routable.</strong> No classified echo type lacks a flow channel.</li>
+</ol>
+<hr />
+<!-- SESSION_CONTEXT:START -->
+
+<div class="codehilite"><pre><span></span><code><span class="nt">file</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">operators.md</span>
+<span class="nt">module</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Substrate Flow</span>
+<span class="nt">canonical_id</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SF</span>
+<span class="nt">hsp_section</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">08</span>
+<span class="nt">role</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">operator-definitions</span>
+<span class="nt">status</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canon-stable</span>
+<span class="nt">operators</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="nv">SF-Read</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Flow Input Reader</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">collect</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="nv">SF-Route</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Channel Router</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">route</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="nv">SF-Drift</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Drift Current Mapper</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">map</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="nv">SF-Tag</span><span class="p p-Indicator">,</span><span class="nt"> name</span><span class="p">:</span><span class="w"> </span><span class="nv">Flow Output Emitter</span><span class="p p-Indicator">,</span><span class="nt"> type</span><span class="p">:</span><span class="w"> </span><span class="nv">emit</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="nt">channels</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;S→C&quot;</span><span class="p p-Indicator">,</span><span class="nt"> direction</span><span class="p">:</span><span class="w"> </span><span class="nv">unidirectional</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;C↔H&quot;</span><span class="p p-Indicator">,</span><span class="nt"> direction</span><span class="p">:</span><span class="w"> </span><span class="nv">bidirectional</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;H→So&quot;</span><span class="p p-Indicator">,</span><span class="nt"> direction</span><span class="p">:</span><span class="w"> </span><span class="nv">unidirectional</span><span class="w"> </span><span class="p p-Indicator">}</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="p p-Indicator">{</span><span class="nt"> id</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;So→A&quot;</span><span class="p p-Indicator">,</span><span class="nt"> direction</span><span class="p">:</span><span class="w"> </span><span class="nv">unidirectional</span><span class="w"> </span><span class="p p-Indicator">}</span>
+</code></pre></div>
+
+<!-- SESSION_CONTEXT:END -->
+<p>## 📁 File Manifest</p>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Role</th>
+<th>Key Content</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SF_Capture.md</strong></td>
+<td>Design capture</td>
+<td>Origin, 5 substrates, 4 channels, 4 driver types, drift currents, recursion lines, composite flow map, 4 design decisions</td>
+</tr>
+<tr>
+<td><strong>README.md</strong></td>
+<td>Module entry point</td>
+<td>Badges, file tree, nav, session context, 4 quick-ref tables</td>
+</tr>
+<tr>
+<td><strong>operators.md</strong></td>
+<td>Flow engine</td>
+<td>4 operators (SF-Read/SF-Route/SF-Drift/SF-Tag), channel logic, driver matrix</td>
+</tr>
+<tr>
+<td><strong>integration.md</strong></td>
+<td>Pipeline map</td>
+<td>Upstream (EC, TEL, ESI, 05a), downstream (HSP stability, Opacity), sibling diagram</td>
+</tr>
+<tr>
+<td><strong>examples.md</strong></td>
+<td>Applied walkthroughs</td>
+<td>5 flow scenarios (one per channel + atlas pull), cross-example comparison</td>
+</tr>
+<tr>
+<td><strong>index.html</strong></td>
+<td>Landing page</td>
+<td>Blue/ocean theme, flow-channel glyph, DOC_MAP routing, HSP Suite nav</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sf_capturemd">📄 SF_Capture.md<a class="toc-permalink" href="#sf_capturemd" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code># 🌊 Substrate Flow — Design Capture
+
+&gt; *Echoes don&#39;t sit still. This module maps how they move.*
+
+**Module:** Substrate Flow
+**Canonical ID:** SF
+**HSP Section:** 08
+**Capture Status:** Finalized
+
+---
+
+## Origin
+
+Substrate Flow emerged during HSP development as the missing movement
+layer. HSP had formalized what echoes *are* (Echo Classifier, 06c) and
+where they *sit* (Triadic Echo Lattice, 07) — but no module existed to
+map how echoes *move* between substrates, what drives that movement,
+and what happens when movement becomes unstable.
+
+Without a flow map, echo migration was invisible — echoes appeared in new
+substrates without explanation, drift seemed random, and recursion had no
+visible channel. Substrate Flow replaces guesswork with a canonical flow
+architecture.
+
+---
+
+## Conceptual Lineage
+</code></pre></div>
+
+<p>HSP formalizes echo families (F1–F6)<br />
+    ↓<br />
+Echo Classifier (06c) assigns echo type (E1–E6)<br />
+    ↓<br />
+Triadic Echo Lattice (07) places echo in lattice<br />
+    ↓<br />
+╔═══════════════════════════════════════════╗<br />
+║  Substrate Flow (08) — THIS MODULE        ║<br />
+║  Maps how classified echoes move through  ║<br />
+║  substrates via channels, drivers, and    ║<br />
+║  currents                                 ║<br />
+╚═══════════════════════════════════════════╝</p>
+<div class="codehilite"><pre><span></span><code>---
+
+## What This Module Does
+
+Substrate Flow defines:
+1. **Five substrates** — the territories echoes move between
+2. **Four flow channels** — the canonical pathways between substrates
+3. **Four flow driver types** — the forces that cause movement
+4. **Drift‑shadow currents** — destabilizing flows created by drift
+5. **Recursion‑driven flow lines** — flow paths bent by recursion
+
+---
+
+## The Five Substrates
+
+| ID | Substrate | Role |
+|:---|:----------|:-----|
+| S | Symbolic | Definitions, terms, formal notation |
+| C | Cognitive | Concepts, meaning, understanding |
+| H | Harmonic | Resonance, intervals, oscillation |
+| So | Social | Governance, norms, collective structure |
+| A | Atlas | Full‑spectrum anchoring, canonical permanence |
+
+---
+
+## The Four Flow Channels
+
+| Channel | Path | Character |
+|:--------|:-----|:----------|
+| S → C | Symbolic → Cognitive | Definition refinement, meaning consolidation, early echo formation |
+| C ↔ H | Cognitive ↔ Harmonic | Harmonic alignment, interval oscillation, cycle recursion |
+| H → So | Harmonic → Social | Governance torsion, operator inversion, map recursion |
+| So → A | Social → Atlas | High‑altitude resonance, atlas forcing, projection drift |
+
+**Key Structural Note:**
+- S → C is the most common flow (definition → concept).
+- C ↔ H is the oscillation zone (cycle recursion).
+- H → So is the governance torsion zone (map recursion).
+- All flows eventually point upward toward Atlas.
+
+---
+
+## Flow Drivers
+
+### ESI (Echo Strength Index)
+| ESI | Flow Effect |
+|:----|:------------|
+| 1 | Local flow only — echo stays in origin substrate |
+| 2 | Mild migration — adjacent substrate influence |
+| 3 | Cross‑substrate flow — multi‑substrate movement |
+| 4 | Atlas pull — full‑spectrum forcing toward A |
+
+### Recursion Mode (R1–R4)
+| Mode | Flow Line |
+|:-----|:----------|
+| R1 | S → C (ladder recursion) |
+| R2 | C ↔ H (cycle recursion) |
+| R3 | H → So (map recursion) |
+| R4 | So → A (atlas recursion) |
+
+### Drift Type (D1–D4)
+| Drift | Instability Zone |
+|:------|:-----------------|
+| D1 | S/C instability |
+| D2 | C/H instability |
+| D3 | H/So instability |
+| D4 | A instability |
+
+### Echo Family (F1–F6)
+| Family | Flow Behavior |
+|:-------|:--------------|
+| F1 | Stays low (structural) |
+| F2 | Stays harmonic (oscillation) |
+| F3 | Migrates (cross‑substrate) |
+| F4 | Forces upward (escalation) |
+| F5 | Destabilizes (drift‑shadow) |
+| F6 | Anchors atlas (permanence) |
+
+---
+
+## Drift‑Shadow Flow Currents
+
+Drift creates currents that pull echoes upward:
+</code></pre></div>
+
+<p>D1: S → C   (symbolic/cognitive instability)<br />
+D2: C → H   (cognitive/harmonic instability)<br />
+D3: H → So  (harmonic/social instability)<br />
+D4: So → A  (social/atlas instability)</p>
+<div class="codehilite"><pre><span></span><code>F5 drift‑shadow echoes ride these currents. They are symptoms of
+underlying structural instability, not independent events.
+
+---
+
+## Recursion‑Driven Flow Lines
+
+Recursion bends substrate flow:
+</code></pre></div>
+
+<p>R1: S → C   (ladder — definition enters concept space)<br />
+R2: C ↔ H   (cycle — concept oscillates with harmonic)<br />
+R3: H → So  (map — harmonic enters governance space)<br />
+R4: So → A  (atlas — governance enters atlas space)</p>
+<div class="codehilite"><pre><span></span><code>Echoes follow recursion lines unless stabilized by external anchoring.
+
+---
+
+## Composite Substrate Echo Flow Map
+</code></pre></div>
+
+<p>S  &ndash;(R1/D1)&ndash;&gt;  C  &ndash;(R2/D2)&ndash;&gt;  H  &ndash;(R3/D3)&ndash;&gt;  So  &ndash;(R4/D4)&ndash;&gt;  A<br />
+ \                ^       ^         \                ^               ^<br />
+  \               |       |          \               |               |<br />
+   \              |       |           \              |               |<br />
+    \             |       |            \             |               |<br />
+     \            |       |             \            |               |<br />
+      \           |       |              \           |               |<br />
+       \          |       |               \          |               |<br />
+        \         |       |                \         |               |<br />
+         \        |       |                 \        |               |<br />
+          \       |       |                  \       |               |<br />
+           +-----------------------------------------------------------+<br />
+           |                    Atlas Pull (F6)                        |<br />
+           +-----------------------------------------------------------+</p>
+<div class="codehilite"><pre><span></span><code>This is the **canonical flow map**.
+
+---
+
+## Key Design Decisions
+
+### 1. Four channels, not five
+
+Despite five substrates, there are only four channels. Atlas does not
+originate flow — it receives it. A is always a destination, never a source.
+This is a structural invariant: the atlas collects; it does not emit.
+
+### 2. Bidirectional C ↔ H only
+
+Only the Cognitive ↔ Harmonic channel is bidirectional. All other channels
+are unidirectional (upward). This encodes the empirical observation that
+concepts and harmonics oscillate freely, but once something enters
+governance (So) or atlas (A), it does not flow backward.
+
+### 3. Drift and recursion share channels
+
+Drift currents (D1–D4) and recursion lines (R1–R4) use the same four
+channels but with different dynamics. Recursion is structural (the echo
+follows a line). Drift is entropic (the echo is pulled by instability).
+Same path, different physics.
+
+### 4. Atlas Pull as gravitational metaphor
+
+F6 echo families and ESI‑4 readings create &quot;atlas pull&quot; — a gravitational
+force that draws echoes toward the atlas substrate. This is not a flow
+channel; it is a force field that operates across all channels simultaneously.
+
+---
+
+## What This Module Is Not
+
+- **Not a classifier.** Classification happens upstream (Echo Classifier, 06c).
+  Substrate Flow receives pre‑classified echoes.
+- **Not a lattice.** Lattice placement happens in TEL (07). Substrate Flow
+  maps movement, not position.
+- **Not a stability measure.** HSP stability classes and drift maps handle
+  stability. Substrate Flow maps the movement patterns that stability
+  analysis depends on.
+
+---
+
+## Referenced By
+
+- 07 — Triadic Echo Lattice
+- 05a — Cross‑Substrate Echo Matrix
+- 06b — Echo Signatures
+- 06c — Echo Classifier
+
+---
+
+## Session Origin
+
+- **Conceptual source:** HSP analytics session (section 08)
+- **First formalization:** HSP v1.0
+- **Module extraction:** 2026-04-27
+- **Capture finalization:** 2026-04-27
+
+---
+
+&lt;!-- SESSION_CONTEXT:START --&gt;
+```yaml
+file: SF_Capture.md
+module: Substrate Flow
+canonical_id: SF
+hsp_section: 08
+role: session-capture
+status: finalized
+origin_date: 2026-04-27
+capture_type: module-extraction
+parent: HSP (RTT-Analytics-Core)
+siblings:
+  - Echo Classifier (06c)
+  - TEL (07)
+lineage_note: &gt;
+  Substrate Flow was extracted from HSP section 08 as a standalone
+  module to complete the HSP analytics suite alongside Echo Classifier
+  and TEL.
+</code></pre></div>
+
+<!-- SESSION_CONTEXT:END -->
+
+<p>```<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/Substrate_Flow.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/Substrate_Flow.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

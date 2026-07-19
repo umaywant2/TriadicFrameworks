@@ -1,0 +1,2242 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Vst For Large Language Models | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/vst_for_large_language_models/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Vst For Large Language Models" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/vst_for_large_language_models/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Vst For Large Language Models" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/vst_for_large_language_models.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Vst For Large Language Models",
+    "headline": "Vst For Large Language Models",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/vst_for_large_language_models/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#vst-for-large-language-models">vST for Large Language Models</a></li>
+<li><a href="#validationspacetime-framework-for-highdimensional-llm-inference">Validation‑Space‑Time Framework for High‑Dimensional LLM Inference</a></li>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#1-purpose">1. Purpose</a></li>
+<li><a href="#2-contents">2. Contents</a></li>
+<li><a href="#3-scope">3. Scope</a></li>
+<li><a href="#4-intended-use">4. Intended Use</a></li>
+<li><a href="#5-relationship-to-other-artifacts">5. Relationship to Other Artifacts</a></li>
+<li><a href="#6-citation">6. Citation</a></li>
+<li><a href="#7-license">7. License</a><ul>
+<li><a href="#drift-detection-in-highdimensional-llm-latent-spaces">Drift Detection in High‑Dimensional LLM Latent Spaces</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-drift-detection">1. Purpose of Drift Detection</a></li>
+<li><a href="#2-types-of-drift">2. Types of Drift</a><ul>
+<li><a href="#21-structural-drift-d1">2.1 Structural Drift (D₁)</a></li>
+<li><a href="#22-dimensional-drift-d2">2.2 Dimensional Drift (D₂)</a></li>
+<li><a href="#23-regime-drift-d3">2.3 Regime Drift (D₃)</a></li>
+<li><a href="#24-projection-drift-d4">2.4 Projection Drift (D₄)</a></li>
+</ul>
+</li>
+<li><a href="#3-drift-detection-signals">3. Drift Detection Signals</a></li>
+<li><a href="#4-drift-across-the-dimensional-ladder">4. Drift Across the Dimensional Ladder</a><ul>
+<li><a href="#41-64d128d-embedding-drift">4.1 64D–128D (Embedding Drift)</a></li>
+<li><a href="#42-256d512d-hiddenstate-drift">4.2 256D–512D (Hidden‑State Drift)</a></li>
+<li><a href="#43-1024d-highdimensional-drift">4.3 1024D+ (High‑Dimensional Drift)</a></li>
+</ul>
+</li>
+<li><a href="#5-crossversion-drift-detection">5. Cross‑Version Drift Detection</a></li>
+<li><a href="#6-drift-severity-levels">6. Drift Severity Levels</a><ul>
+<li><a href="#low-severity">Low Severity</a></li>
+<li><a href="#moderate-severity">Moderate Severity</a></li>
+<li><a href="#high-severity">High Severity</a></li>
+</ul>
+</li>
+<li><a href="#7-drift-detection-workflow">7. Drift Detection Workflow</a></li>
+<li><a href="#8-outputs-of-drift-detection">8. Outputs of Drift Detection</a><ul>
+<li><a href="#latenttrajectory-regimes-in-llm-inference">Latent‑Trajectory Regimes in LLM Inference</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-latenttrajectory-regimes">1. Purpose of Latent‑Trajectory Regimes</a></li>
+<li><a href="#2-regime-overview">2. Regime Overview</a></li>
+<li><a href="#3-stable-regime-r1h">3. Stable Regime (R₁ᴴ)</a><ul>
+<li><a href="#definition">Definition</a></li>
+<li><a href="#characteristics">Characteristics</a></li>
+<li><a href="#interpretation">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#4-transition-regime-r2h">4. Transition Regime (R₂ᴴ)</a><ul>
+<li><a href="#definition_1">Definition</a></li>
+<li><a href="#characteristics_1">Characteristics</a></li>
+<li><a href="#interpretation_1">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#5-dispersion-regime-r3h">5. Dispersion Regime (R₃ᴴ)</a><ul>
+<li><a href="#definition_2">Definition</a></li>
+<li><a href="#characteristics_2">Characteristics</a></li>
+<li><a href="#interpretation_2">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#6-regime-transitions-in-llms">6. Regime Transitions in LLMs</a></li>
+<li><a href="#7-regime-detection-signals">7. Regime Detection Signals</a></li>
+<li><a href="#8-regime-behavior-across-the-dimensional-ladder">8. Regime Behavior Across the Dimensional Ladder</a></li>
+<li><a href="#9-outputs-of-latenttrajectory-regime-analysis">9. Outputs of Latent‑Trajectory Regime Analysis</a><ul>
+<li><a href="#projection-and-alignment-of-highdimensional-llm-latent-states">Projection and Alignment of High‑Dimensional LLM Latent States</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-projection-and-alignment">1. Purpose of Projection and Alignment</a></li>
+<li><a href="#2-projection-overview">2. Projection Overview</a></li>
+<li><a href="#3-projection-steps">3. Projection Steps</a><ul>
+<li><a href="#31-highdimensional-9d-coherence-projection">3.1 High‑Dimensional → 9D (Coherence Projection)</a></li>
+<li><a href="#32-9d-6d-interaction-projection">3.2 9D → 6D (Interaction Projection)</a></li>
+<li><a href="#33-6d-3d-structural-projection">3.3 6D → 3D (Structural Projection)</a></li>
+</ul>
+</li>
+<li><a href="#4-alignment-overview">4. Alignment Overview</a></li>
+<li><a href="#5-alignment-types">5. Alignment Types</a><ul>
+<li><a href="#51-layertolayer-alignment">5.1 Layer‑to‑Layer Alignment</a></li>
+<li><a href="#52-tokentotoken-alignment">5.2 Token‑to‑Token Alignment</a></li>
+<li><a href="#53-crossversion-alignment">5.3 Cross‑Version Alignment</a></li>
+<li><a href="#54-crossmodel-alignment">5.4 Cross‑Model Alignment</a></li>
+</ul>
+</li>
+<li><a href="#6-alignment-metrics">6. Alignment Metrics</a></li>
+<li><a href="#7-projection-stability-and-failure-modes">7. Projection Stability and Failure Modes</a><ul>
+<li><a href="#stable-projection">Stable Projection</a></li>
+<li><a href="#unstable-projection">Unstable Projection</a></li>
+</ul>
+</li>
+<li><a href="#8-outputs-of-projection-and-alignment">8. Outputs of Projection and Alignment</a><ul>
+<li><a href="#scaling-behavior-of-llms-in-the-3d1024d-substrate">Scaling Behavior of LLMs in the 3D–1024D Substrate</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-scaling-behavior-analysis">1. Purpose of Scaling Behavior Analysis</a></li>
+<li><a href="#2-dimensional-ladder-for-llms">2. Dimensional Ladder for LLMs</a></li>
+<li><a href="#3-scaling-primitives-in-llms">3. Scaling Primitives in LLMs</a></li>
+<li><a href="#4-scaling-regimes-in-llms">4. Scaling Regimes in LLMs</a><ul>
+<li><a href="#41-stable-scaling-regime-s1">4.1 Stable Scaling Regime (S₁)</a></li>
+<li><a href="#42-transitional-scaling-regime-s2">4.2 Transitional Scaling Regime (S₂)</a></li>
+<li><a href="#43-dispersion-scaling-regime-s3">4.3 Dispersion Scaling Regime (S₃)</a></li>
+</ul>
+</li>
+<li><a href="#5-scaling-behavior-across-model-sizes">5. Scaling Behavior Across Model Sizes</a><ul>
+<li><a href="#51-small-models-1b-parameters">5.1 Small Models (≤1B parameters)</a></li>
+<li><a href="#52-medium-models-1b30b">5.2 Medium Models (1B–30B)</a></li>
+<li><a href="#53-large-models-30b200b">5.3 Large Models (30B–200B)</a></li>
+<li><a href="#54-very-large-models-200b">5.4 Very Large Models (200B+)</a></li>
+</ul>
+</li>
+<li><a href="#6-scalinglaw-alignment">6. Scaling‑Law Alignment</a></li>
+<li><a href="#7-projection-behavior-under-scaling">7. Projection Behavior Under Scaling</a></li>
+<li><a href="#8-scalingdriven-drift">8. Scaling‑Driven Drift</a></li>
+<li><a href="#9-outputs-of-scaling-behavior-analysis">9. Outputs of Scaling Behavior Analysis</a><ul>
+<li><a href="#substrate-definition">Substrate Definition</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-the-llm-substrate">1. Purpose of the LLM Substrate</a></li>
+<li><a href="#2-substrate-overview">2. Substrate Overview</a></li>
+<li><a href="#3-dimensional-primitives-for-llms">3. Dimensional Primitives for LLMs</a><ul>
+<li><a href="#31-dimensional-primitive-dp">3.1 Dimensional Primitive (DP)</a></li>
+<li><a href="#32-triadic-dimensional-primitive-tdp">3.2 Triadic Dimensional Primitive (TDP)</a></li>
+<li><a href="#33-scaling-primitive-sp">3.3 Scaling Primitive (SP)</a></li>
+<li><a href="#34-coherence-primitive-cp">3.4 Coherence Primitive (CP)</a></li>
+</ul>
+</li>
+<li><a href="#4-triadic-dimensional-cores-for-llms">4. Triadic Dimensional Cores for LLMs</a><ul>
+<li><a href="#41-3d-structural-core">4.1 3D Structural Core</a></li>
+<li><a href="#42-6d-interaction-core">4.2 6D Interaction Core</a></li>
+<li><a href="#43-9d-coherence-core">4.3 9D Coherence Core</a></li>
+</ul>
+</li>
+<li><a href="#5-highdimensional-substrate-64d1024d">5. High‑Dimensional Substrate (64D–1024D)</a></li>
+<li><a href="#6-latenttrajectory-structure">6. Latent‑Trajectory Structure</a></li>
+<li><a href="#7-projection-into-triadic-cores">7. Projection into Triadic Cores</a></li>
+<li><a href="#8-substrate-outputs">8. Substrate Outputs</a><ul>
+<li><a href="#validationspacetime-layers-for-llm-inference">Validation‑Space‑Time Layers for LLM Inference</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-vst-for-llms">1. Purpose of vST for LLMs</a></li>
+<li><a href="#2-overview-of-vst-layers">2. Overview of vST Layers</a></li>
+<li><a href="#3-v1-structural-coherence-validation">3. V₁ — Structural Coherence Validation</a><ul>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#checks">Checks</a></li>
+<li><a href="#failure-modes">Failure Modes</a></li>
+<li><a href="#interpretation_3">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#4-v2-dimensional-continuity-validation">4. V₂ — Dimensional Continuity Validation</a><ul>
+<li><a href="#purpose_1">Purpose</a></li>
+<li><a href="#checks_1">Checks</a></li>
+<li><a href="#failure-modes_1">Failure Modes</a></li>
+<li><a href="#interpretation_4">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#5-v3-regimetransition-validation">5. V₃ — Regime‑Transition Validation</a><ul>
+<li><a href="#purpose_2">Purpose</a></li>
+<li><a href="#checks_2">Checks</a></li>
+<li><a href="#failure-modes_2">Failure Modes</a></li>
+<li><a href="#interpretation_5">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#6-v4-corealignment-validation">6. V₄ — Core‑Alignment Validation</a><ul>
+<li><a href="#purpose_3">Purpose</a></li>
+<li><a href="#checks_3">Checks</a></li>
+<li><a href="#failure-modes_3">Failure Modes</a></li>
+<li><a href="#interpretation_6">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#7-vst-outputs-for-llms">7. vST Outputs for LLMs</a></li>
+<li><a href="#8-summary">8. Summary</a><ul>
+<li><a href="#references">References</a></li>
+</ul>
+</li>
+<li><a href="#1-highdimensional-modeling-and-representation-learning">1. High‑Dimensional Modeling and Representation Learning</a></li>
+<li><a href="#2-scaling-laws-and-large-language-models">2. Scaling Laws and Large Language Models</a></li>
+<li><a href="#3-transformer-architectures-and-latentspace-behavior">3. Transformer Architectures and Latent‑Space Behavior</a></li>
+<li><a href="#4-regime-behavior-stability-and-dynamics">4. Regime Behavior, Stability, and Dynamics</a></li>
+<li><a href="#5-validation-drift-detection-and-ml-systems">5. Validation, Drift Detection, and ML Systems</a></li>
+<li><a href="#6-substratelevel-and-triadicframeworks-canon">6. Substrate‑Level and Triadic‑Frameworks Canon</a><ul>
+<li><a href="#terminology">Terminology</a></li>
+</ul>
+</li>
+<li><a href="#1-substrate-terms">1. Substrate Terms</a><ul>
+<li><a href="#llm-substrate">LLM Substrate</a></li>
+<li><a href="#dimensional-ladder">Dimensional Ladder</a></li>
+<li><a href="#coherence-surface">Coherence Surface</a></li>
+</ul>
+</li>
+<li><a href="#2-primitive-terms">2. Primitive Terms</a><ul>
+<li><a href="#dimensional-primitive-dp">Dimensional Primitive (DP)</a></li>
+<li><a href="#triadic-dimensional-primitive-tdp">Triadic Dimensional Primitive (TDP)</a></li>
+<li><a href="#scaling-primitive-sp">Scaling Primitive (SP)</a></li>
+<li><a href="#coherence-primitive-cp">Coherence Primitive (CP)</a></li>
+</ul>
+</li>
+<li><a href="#3-core-terms">3. Core Terms</a><ul>
+<li><a href="#triadic-dimensional-core-tdc">Triadic Dimensional Core (TDC)</a></li>
+<li><a href="#3d-structural-core">3D Structural Core</a></li>
+<li><a href="#6d-interaction-core">6D Interaction Core</a></li>
+<li><a href="#9d-coherence-core">9D Coherence Core</a></li>
+</ul>
+</li>
+<li><a href="#4-regime-terms">4. Regime Terms</a><ul>
+<li><a href="#highdimensional-regimes-r1h-r2h-r3h">High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)</a></li>
+<li><a href="#stable-regime-r1-r1h">Stable Regime (R₁ / R₁ᴴ)</a></li>
+<li><a href="#transition-regime-r2-r2h">Transition Regime (R₂ / R₂ᴴ)</a></li>
+<li><a href="#dispersion-regime-r3-r3h">Dispersion Regime (R₃ / R₃ᴴ)</a></li>
+</ul>
+</li>
+<li><a href="#5-scaling-terms">5. Scaling Terms</a><ul>
+<li><a href="#scaling-behavior">Scaling Behavior</a></li>
+<li><a href="#scaling-regimes-s1-s2-s3">Scaling Regimes (S₁, S₂, S₃)</a></li>
+<li><a href="#dimensional-continuity">Dimensional Continuity</a></li>
+</ul>
+</li>
+<li><a href="#6-projection-terms">6. Projection Terms</a><ul>
+<li><a href="#invertible-projection">Invertible Projection</a></li>
+<li><a href="#regimeaware-projection">Regime‑Aware Projection</a></li>
+<li><a href="#primitivealigned-projection">Primitive‑Aligned Projection</a></li>
+</ul>
+</li>
+<li><a href="#7-alignment-terms">7. Alignment Terms</a><ul>
+<li><a href="#layertolayer-alignment">Layer‑to‑Layer Alignment</a></li>
+<li><a href="#tokentotoken-alignment">Token‑to‑Token Alignment</a></li>
+<li><a href="#crossversion-alignment">Cross‑Version Alignment</a></li>
+<li><a href="#crossmodel-alignment">Cross‑Model Alignment</a></li>
+</ul>
+</li>
+<li><a href="#8-validation-terms">8. Validation Terms</a><ul>
+<li><a href="#vst-validationspacetime">vST (Validation‑Space‑Time)</a></li>
+<li><a href="#validation-layers-v1v4">Validation Layers (V₁–V₄)</a></li>
+</ul>
+</li>
+<li><a href="#9-drift-terms">9. Drift Terms</a><ul>
+<li><a href="#drift">Drift</a></li>
+<li><a href="#drift-categories-d1d4">Drift Categories (D₁–D₄)</a></li>
+<li><a href="#drift-severity">Drift Severity</a></li>
+<li><a href="#example-crossversion-alignment-of-llm-latent-spaces">Example: Cross‑Version Alignment of LLM Latent Spaces</a></li>
+</ul>
+</li>
+<li><a href="#1-scenario-overview">1. Scenario Overview</a></li>
+<li><a href="#2-step-1-extract-latent-pathways">2. Step 1 — Extract Latent Pathways</a><ul>
+<li><a href="#observed-properties">Observed Properties</a></li>
+<li><a href="#interpretation_7">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#3-step-2-classify-regime-behavior">3. Step 2 — Classify Regime Behavior</a><ul>
+<li><a href="#model-a-v10">Model A (v1.0)</a></li>
+<li><a href="#model-b-v11">Model B (v1.1)</a></li>
+<li><a href="#interpretation_8">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#4-step-3-project-1024d-9d">4. Step 3 — Project 1024D → 9D</a><ul>
+<li><a href="#model-a-v10_1">Model A (v1.0)</a></li>
+<li><a href="#model-b-v11_1">Model B (v1.1)</a></li>
+<li><a href="#interpretation_9">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#5-step-4-project-9d-6d-3d">5. Step 4 — Project 9D → 6D → 3D</a><ul>
+<li><a href="#model-a-v10_2">Model A (v1.0)</a></li>
+<li><a href="#model-b-v11_2">Model B (v1.1)</a></li>
+<li><a href="#interpretation_10">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#6-step-5-alignment-analysis">6. Step 5 — Alignment Analysis</a><ul>
+<li><a href="#alignment-results">Alignment Results</a></li>
+<li><a href="#coherencesurface-overlap">Coherence‑Surface Overlap</a></li>
+<li><a href="#interpretation_11">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#7-step-6-vst-validation">7. Step 6 — vST Validation</a><ul>
+<li><a href="#model-a-v10_3">Model A (v1.0)</a></li>
+<li><a href="#model-b-v11_3">Model B (v1.1)</a></li>
+<li><a href="#interpretation_12">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#8-step-7-drift-detection">8. Step 7 — Drift Detection</a><ul>
+<li><a href="#model-b-v11_4">Model B (v1.1)</a></li>
+<li><a href="#severity-moderate-drift">Severity: Moderate Drift</a></li>
+<li><a href="#interpretation_13">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#9-summary">9. Summary</a><ul>
+<li><a href="#example-1024d-latent-pathway-analysis-in-llm-inference">Example: 1024D Latent Pathway Analysis in LLM Inference</a></li>
+</ul>
+</li>
+<li><a href="#1-input-overview">1. Input Overview</a></li>
+<li><a href="#2-step-1-extract-the-1024d-latent-pathway">2. Step 1 — Extract the 1024D Latent Pathway</a><ul>
+<li><a href="#observed-properties_1">Observed Properties</a></li>
+<li><a href="#interpretation_14">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#3-step-2-identify-highdimensional-regime-behavior">3. Step 2 — Identify High‑Dimensional Regime Behavior</a><ul>
+<li><a href="#interpretation_15">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#4-step-3-project-1024d-9d-coherence-projection">4. Step 3 — Project 1024D → 9D (Coherence Projection)</a><ul>
+<li><a href="#what-is-preserved">What is preserved</a></li>
+<li><a href="#what-becomes-visible">What becomes visible</a></li>
+<li><a href="#interpretation_16">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#5-step-4-project-9d-6d-interaction-projection">5. Step 4 — Project 9D → 6D (Interaction Projection)</a><ul>
+<li><a href="#what-is-preserved_1">What is preserved</a></li>
+<li><a href="#what-becomes-visible_1">What becomes visible</a></li>
+<li><a href="#interpretation_17">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#6-step-5-project-6d-3d-structural-projection">6. Step 5 — Project 6D → 3D (Structural Projection)</a><ul>
+<li><a href="#what-is-preserved_2">What is preserved</a></li>
+<li><a href="#what-becomes-visible_2">What becomes visible</a></li>
+<li><a href="#interpretation_18">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#7-step-6-validate-with-vst-layers">7. Step 6 — Validate with vST Layers</a><ul>
+<li><a href="#v1-structural-coherence">V₁ — Structural Coherence</a></li>
+<li><a href="#v2-dimensional-continuity">V₂ — Dimensional Continuity</a></li>
+<li><a href="#v3-regimetransition-stability">V₃ — Regime‑Transition Stability</a></li>
+<li><a href="#v4-core-alignment">V₄ — Core Alignment</a></li>
+<li><a href="#outcome">Outcome</a></li>
+</ul>
+</li>
+<li><a href="#8-step-7-drift-detection_1">8. Step 7 — Drift Detection</a><ul>
+<li><a href="#interpretation_19">Interpretation</a></li>
+</ul>
+</li>
+<li><a href="#9-summary_1">9. Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Vst For Large Language Models</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Vst For Large Language Models</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>vst_for_large_language_models </p>
+<h2 id="vst-for-large-language-models"><em>vST for Large Language Models</em><a class="toc-permalink" href="#vst-for-large-language-models" title="Permanent link to this heading">&para;</a></h2>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<h2 id="validationspacetime-framework-for-highdimensional-llm-inference"><em>Validation‑Space‑Time Framework for High‑Dimensional LLM Inference</em><a class="toc-permalink" href="#validationspacetime-framework-for-highdimensional-llm-inference" title="Permanent link to this heading">&para;</a></h2>
+<p>This artifact defines a substrate‑level framework for analyzing, validating, and comparing Large Language Models (LLMs) using the <strong>Validation‑Space‑Time (vST)</strong> system and the <strong>1024D dimensional substrate</strong>. It provides a structured, invariant‑preserving method for interpreting latent trajectories, regime behavior, scaling patterns, and cross‑version drift in modern LLMs.</p>
+<p>The goal is to offer a reproducible, model‑agnostic substrate for understanding high‑dimensional inference systems at scale.</p>
+<hr />
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h2 id="1-purpose"><strong>1. Purpose</strong><a class="toc-permalink" href="#1-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>LLMs operate in extremely high‑dimensional latent spaces (typically 768D–4096D). These spaces exhibit:</p>
+<ul>
+<li>stable and unstable regions  </li>
+<li>regime transitions during inference  </li>
+<li>scaling‑law behavior across model sizes  </li>
+<li>drift across checkpoints and versions  </li>
+<li>projection‑compatible structure  </li>
+</ul>
+<p>This artifact applies the <strong>Resonance Substrate Model (RSM)</strong> and <strong>vST validation layers</strong> to:</p>
+<ul>
+<li>classify latent‑trajectory regimes  </li>
+<li>analyze scaling behavior  </li>
+<li>detect drift across model versions  </li>
+<li>map coherence surfaces in latent space  </li>
+<li>project high‑dimensional structure into 3D–9D cores  </li>
+</ul>
+<p>The result is a unified, interpretable substrate for LLM behavior.</p>
+<hr />
+<h2 id="2-contents"><strong>2. Contents</strong><a class="toc-permalink" href="#2-contents" title="Permanent link to this heading">&para;</a></h2>
+<p>This directory contains:</p>
+<ul>
+<li>
+<p><strong>substrate_definition.md</strong><br />
+  Defines the LLM substrate, dimensional primitives, and latent‑space structure.</p>
+</li>
+<li>
+<p><strong>latent_trajectory_regimes.md</strong><br />
+  Describes stable, transitional, and dispersed regimes in LLM inference.</p>
+</li>
+<li>
+<p><strong>scaling_behavior_llms.md</strong><br />
+  Maps LLM scaling laws onto the 3D–1024D dimensional ladder.</p>
+</li>
+<li>
+<p><strong>projection_and_alignment.md</strong><br />
+  Defines invertible projection from high‑dimensional latent states into triadic cores.</p>
+</li>
+<li>
+<p><strong>validation_layers_vst_llm.md</strong><br />
+  Extends vST (V₁–V₄) to LLM‑specific behavior.</p>
+</li>
+<li>
+<p><strong>drift_detection_llm.md</strong><br />
+  Provides a substrate‑level framework for detecting cross‑version drift.</p>
+</li>
+<li>
+<p><strong>examples/</strong><br />
+  Reproducible demonstrations of latent‑trajectory analysis and projection.</p>
+</li>
+<li>
+<p><strong>appendix/</strong><br />
+  Terminology and references.</p>
+</li>
+</ul>
+<p>Each file is self‑contained and designed for clarity, reproducibility, and cross‑model comparison.</p>
+<hr />
+<h2 id="3-scope"><strong>3. Scope</strong><a class="toc-permalink" href="#3-scope" title="Permanent link to this heading">&para;</a></h2>
+<p>This artifact is:</p>
+<ul>
+<li>
+<p><strong>model‑agnostic</strong><br />
+  Works with any transformer‑based LLM (GPT‑class, LLaMA‑class, Mistral‑class, etc.).</p>
+</li>
+<li>
+<p><strong>architecture‑independent</strong><br />
+  Applies to decoder‑only, encoder‑decoder, and hybrid architectures.</p>
+</li>
+<li>
+<p><strong>training‑method independent</strong><br />
+  Compatible with pretraining, fine‑tuning, RLHF, DPO, and mixture‑of‑experts systems.</p>
+</li>
+<li>
+<p><strong>substrate‑aligned</strong><br />
+  Uses the same primitives, invariants, and validation layers as the rest of the RSM canon.</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-intended-use"><strong>4. Intended Use</strong><a class="toc-permalink" href="#4-intended-use" title="Permanent link to this heading">&para;</a></h2>
+<p>This framework supports:</p>
+<ul>
+<li>latent‑space analysis  </li>
+<li>cross‑version comparison  </li>
+<li>drift detection  </li>
+<li>scaling‑law evaluation  </li>
+<li>embedding‑space diagnostics  </li>
+<li>interpretability research  </li>
+<li>model‑alignment studies  </li>
+<li>reproducible inference analysis  </li>
+</ul>
+<p>It is not a performance benchmark or a training method.<br />
+It is a <strong>substrate‑level interpretability and validation framework</strong>.</p>
+<hr />
+<h2 id="5-relationship-to-other-artifacts"><strong>5. Relationship to Other Artifacts</strong><a class="toc-permalink" href="#5-relationship-to-other-artifacts" title="Permanent link to this heading">&para;</a></h2>
+<p>This artifact extends:</p>
+<ul>
+<li><strong>Dimensional Substrate Structures</strong> (3D–1024D substrate)  </li>
+<li><strong>Validation‑Space‑Time (vST)</strong>  </li>
+<li><strong>Triadic Dimensional Cores (3D–9D)</strong>  </li>
+</ul>
+<p>It parallels:</p>
+<ul>
+<li><strong>vST for Protein Language Models</strong>  </li>
+<li><strong>vST for Generative Models</strong>  </li>
+<li><strong>vST for Multi‑Model Alignment</strong></li>
+</ul>
+<p>Each artifact stands alone but shares a common substrate grammar.</p>
+<hr />
+<h2 id="6-citation"><strong>6. Citation</strong><a class="toc-permalink" href="#6-citation" title="Permanent link to this heading">&para;</a></h2>
+<p>A <code>CITATION.cff</code> file is included for formal citation.<br />
+A <code>zenodo.json</code> file is provided for DOI‑ready metadata.</p>
+<hr />
+<h2 id="7-license"><strong>7. License</strong><a class="toc-permalink" href="#7-license" title="Permanent link to this heading">&para;</a></h2>
+<p>Released under the MIT License.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="drift-detection-in-highdimensional-llm-latent-spaces"><em>Drift Detection in High‑Dimensional LLM Latent Spaces</em><a class="toc-permalink" href="#drift-detection-in-highdimensional-llm-latent-spaces" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines how <strong>drift</strong> is detected in Large Language Models (LLMs) using the <strong>Validation‑Space‑Time (vST)</strong> framework and the <strong>1024D dimensional substrate</strong>. Drift refers to any deviation from expected substrate behavior, including structural instability, regime misalignment, scaling discontinuities, or projection failure.</p>
+<p>Drift detection is essential for evaluating model updates, fine‑tuning procedures, training interventions, and cross‑version consistency.</p>
+<hr />
+<h2 id="1-purpose-of-drift-detection"><strong>1. Purpose of Drift Detection</strong><a class="toc-permalink" href="#1-purpose-of-drift-detection" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift detection enables us to:</p>
+<ul>
+<li>identify instability in latent‑space structure  </li>
+<li>detect changes in regime behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)  </li>
+<li>evaluate cross‑version compatibility  </li>
+<li>monitor scaling‑law continuity  </li>
+<li>validate projection stability into 3D–9D cores  </li>
+<li>ensure primitive‑level integrity (DP, TDP, SP, CP)  </li>
+<li>support governance of model updates and checkpoints  </li>
+</ul>
+<p>Drift is not inherently negative; it is a signal of structural change.<br />
+The substrate determines whether that change is stable, transitional, or harmful.</p>
+<hr />
+<h2 id="2-types-of-drift"><strong>2. Types of Drift</strong><a class="toc-permalink" href="#2-types-of-drift" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is classified into four substrate‑aligned categories:</p>
+<h3 id="21-structural-drift-d1"><strong>2.1 Structural Drift (D₁)</strong><a class="toc-permalink" href="#21-structural-drift-d1" title="Permanent link to this heading">&para;</a></h3>
+<p>Deviation in motif‑level geometry or local coherence.</p>
+<p>Indicators:</p>
+<ul>
+<li>unstable 3D projections  </li>
+<li>loss of compact latent motifs  </li>
+<li>abrupt variance spikes  </li>
+</ul>
+<hr />
+<h3 id="22-dimensional-drift-d2"><strong>2.2 Dimensional Drift (D₂)</strong><a class="toc-permalink" href="#22-dimensional-drift-d2" title="Permanent link to this heading">&para;</a></h3>
+<p>Discontinuities in dimensional scaling or projection behavior.</p>
+<p>Indicators:</p>
+<ul>
+<li>non‑invertible 9D projections  </li>
+<li>fragmentation in 64D–1024D latent regions  </li>
+<li>scaling‑law violations  </li>
+</ul>
+<hr />
+<h3 id="23-regime-drift-d3"><strong>2.3 Regime Drift (D₃)</strong><a class="toc-permalink" href="#23-regime-drift-d3" title="Permanent link to this heading">&para;</a></h3>
+<p>Unexpected changes in regime identity or transitions.</p>
+<p>Indicators:</p>
+<ul>
+<li>premature transitions into R₃ᴴ  </li>
+<li>oscillatory instability in R₂ᴴ  </li>
+<li>collapse of stable R₁ᴴ regions  </li>
+</ul>
+<hr />
+<h3 id="24-projection-drift-d4"><strong>2.4 Projection Drift (D₄)</strong><a class="toc-permalink" href="#24-projection-drift-d4" title="Permanent link to this heading">&para;</a></h3>
+<p>Misalignment between high‑dimensional states and triadic cores.</p>
+<p>Indicators:</p>
+<ul>
+<li>inconsistent 3D–9D mapping  </li>
+<li>loss of primitive‑aligned projection  </li>
+<li>divergence across layers or tokens  </li>
+</ul>
+<hr />
+<h2 id="3-drift-detection-signals"><strong>3. Drift Detection Signals</strong><a class="toc-permalink" href="#3-drift-detection-signals" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is detected using substrate‑aligned signals:</p>
+<ul>
+<li>variance distribution across dimensions  </li>
+<li>coherence‑surface continuity  </li>
+<li>primitive‑level stability (DP, TDP, SP, CP)  </li>
+<li>resonance‑time alignment  </li>
+<li>projection‑stability metrics  </li>
+<li>cross‑version alignment surfaces  </li>
+<li>vST validation outputs (V₁–V₄)  </li>
+</ul>
+<p>These signals collectively determine drift category and severity.</p>
+<hr />
+<h2 id="4-drift-across-the-dimensional-ladder"><strong>4. Drift Across the Dimensional Ladder</strong><a class="toc-permalink" href="#4-drift-across-the-dimensional-ladder" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift may appear at different scales:</p>
+<h3 id="41-64d128d-embedding-drift"><strong>4.1 64D–128D (Embedding Drift)</strong><a class="toc-permalink" href="#41-64d128d-embedding-drift" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>semantic drift  </li>
+<li>unstable token embeddings  </li>
+<li>loss of local coherence  </li>
+</ul>
+<h3 id="42-256d512d-hiddenstate-drift"><strong>4.2 256D–512D (Hidden‑State Drift)</strong><a class="toc-permalink" href="#42-256d512d-hiddenstate-drift" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>branching instability  </li>
+<li>regime‑transition irregularities  </li>
+<li>inconsistent attention patterns  </li>
+</ul>
+<h3 id="43-1024d-highdimensional-drift"><strong>4.3 1024D+ (High‑Dimensional Drift)</strong><a class="toc-permalink" href="#43-1024d-highdimensional-drift" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>fragmentation of coherence surfaces  </li>
+<li>scaling discontinuities  </li>
+<li>projection failure  </li>
+</ul>
+<p>High‑dimensional drift is the most severe and often indicates training instability.</p>
+<hr />
+<h2 id="5-crossversion-drift-detection"><strong>5. Cross‑Version Drift Detection</strong><a class="toc-permalink" href="#5-crossversion-drift-detection" title="Permanent link to this heading">&para;</a></h2>
+<p>Cross‑version drift is detected by comparing:</p>
+<ul>
+<li>latent‑trajectory regimes  </li>
+<li>coherence‑surface geometry  </li>
+<li>projection stability  </li>
+<li>variance distribution  </li>
+<li>primitive‑level structure  </li>
+<li>resonance‑time behavior  </li>
+</ul>
+<p>Drift may arise from:</p>
+<ul>
+<li>fine‑tuning  </li>
+<li>RLHF or DPO  </li>
+<li>architecture changes  </li>
+<li>training‑data shifts  </li>
+<li>checkpoint selection  </li>
+</ul>
+<p>vST provides a consistent substrate for evaluating these changes.</p>
+<hr />
+<h2 id="6-drift-severity-levels"><strong>6. Drift Severity Levels</strong><a class="toc-permalink" href="#6-drift-severity-levels" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift severity is classified into:</p>
+<h3 id="low-severity"><strong>Low Severity</strong><a class="toc-permalink" href="#low-severity" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>minor variance shifts  </li>
+<li>stable projections  </li>
+<li>no regime collapse  </li>
+</ul>
+<h3 id="moderate-severity"><strong>Moderate Severity</strong><a class="toc-permalink" href="#moderate-severity" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>partial fragmentation  </li>
+<li>unstable R₂ᴴ transitions  </li>
+<li>inconsistent cross‑layer alignment  </li>
+</ul>
+<h3 id="high-severity"><strong>High Severity</strong><a class="toc-permalink" href="#high-severity" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>collapse of coherence surfaces  </li>
+<li>persistent R₃ᴴ behavior  </li>
+<li>non‑invertible projections  </li>
+<li>loss of primitive‑level structure  </li>
+</ul>
+<p>High‑severity drift indicates a failure of substrate invariants.</p>
+<hr />
+<h2 id="7-drift-detection-workflow"><strong>7. Drift Detection Workflow</strong><a class="toc-permalink" href="#7-drift-detection-workflow" title="Permanent link to this heading">&para;</a></h2>
+<p>A substrate‑aligned drift detection workflow:</p>
+<ol>
+<li><strong>Project latent states into 9D</strong>  </li>
+<li><strong>Classify regime behavior (R₁ᴴ, R₂ᴴ, R₃ᴴ)</strong>  </li>
+<li><strong>Evaluate scaling continuity (64D–1024D)</strong>  </li>
+<li><strong>Check primitive‑level stability (DP, TDP, SP, CP)</strong>  </li>
+<li><strong>Validate with vST layers (V₁–V₄)</strong>  </li>
+<li><strong>Compare across layers, tokens, or versions</strong>  </li>
+<li><strong>Assign drift category (D₁–D₄)</strong>  </li>
+<li><strong>Assign drift severity (low, moderate, high)</strong>  </li>
+</ol>
+<p>This workflow is model‑agnostic and reproducible.</p>
+<hr />
+<h2 id="8-outputs-of-drift-detection"><strong>8. Outputs of Drift Detection</strong><a class="toc-permalink" href="#8-outputs-of-drift-detection" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift detection produces:</p>
+<ul>
+<li>drift category (D₁–D₄)  </li>
+<li>drift severity  </li>
+<li>regime‑transition anomalies  </li>
+<li>projection‑stability indicators  </li>
+<li>scaling‑law discontinuities  </li>
+<li>cross‑version alignment surfaces  </li>
+<li>vST validation results  </li>
+</ul>
+<p>These outputs support governance, interpretability, and model‑version management.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="latenttrajectory-regimes-in-llm-inference"><em>Latent‑Trajectory Regimes in LLM Inference</em><a class="toc-permalink" href="#latenttrajectory-regimes-in-llm-inference" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the latent‑trajectory regimes that arise during inference in Large Language Models (LLMs). These regimes generalize the triadic resonance structure of the 3D–9D substrate and describe how stability, transition, and dispersion behaviors manifest in high‑dimensional latent spaces (64D–4096D).</p>
+<p>Latent‑trajectory regimes provide a reproducible, invariant‑preserving framework for interpreting LLM behavior across tokens, layers, and model sizes.</p>
+<hr />
+<h2 id="1-purpose-of-latenttrajectory-regimes"><strong>1. Purpose of Latent‑Trajectory Regimes</strong><a class="toc-permalink" href="#1-purpose-of-latenttrajectory-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p>Latent‑trajectory regimes allow us to:</p>
+<ul>
+<li>classify LLM inference behavior into stable, transitional, and dispersed phases  </li>
+<li>identify coherence surfaces in embedding and hidden‑state space  </li>
+<li>detect instability or drift across checkpoints or versions  </li>
+<li>analyze scaling‑law behavior across model sizes  </li>
+<li>project high‑dimensional trajectories into 3D–9D cores  </li>
+<li>support vST validation (V₁–V₄)  </li>
+</ul>
+<p>These regimes form the backbone of substrate‑level LLM analysis.</p>
+<hr />
+<h2 id="2-regime-overview"><strong>2. Regime Overview</strong><a class="toc-permalink" href="#2-regime-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>LLM latent trajectories follow the same triadic structure as the dimensional substrate:</p>
+<ol>
+<li><strong>Stable Regime (R₁ᴴ)</strong>  </li>
+<li><strong>Transition Regime (R₂ᴴ)</strong>  </li>
+<li><strong>Dispersion Regime (R₃ᴴ)</strong>  </li>
+</ol>
+<p>The superscript <em>H</em> indicates high‑dimensional behavior.</p>
+<p>These regimes appear in:</p>
+<ul>
+<li>token embeddings  </li>
+<li>attention outputs  </li>
+<li>MLP activations  </li>
+<li>residual streams  </li>
+<li>cross‑layer latent pathways  </li>
+</ul>
+<hr />
+<h2 id="3-stable-regime-r1h"><strong>3. Stable Regime (R₁ᴴ)</strong><a class="toc-permalink" href="#3-stable-regime-r1h" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="definition"><strong>Definition</strong><a class="toc-permalink" href="#definition" title="Permanent link to this heading">&para;</a></h3>
+<p>A region of latent space where trajectories converge consistently and maintain coherence across layers and tokens.</p>
+<h3 id="characteristics"><strong>Characteristics</strong><a class="toc-permalink" href="#characteristics" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>compact, low‑variance latent vectors  </li>
+<li>stable coherence surfaces  </li>
+<li>predictable projection into 3D–9D cores  </li>
+<li>primitive‑level integrity (DP, TDP, SP)  </li>
+<li>minimal sensitivity to perturbations  </li>
+</ul>
+<h3 id="interpretation"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation" title="Permanent link to this heading">&para;</a></h3>
+<p>R₁ᴴ corresponds to stable inference behavior, often associated with:</p>
+<ul>
+<li>predictable next‑token distributions  </li>
+<li>well‑formed syntactic or semantic structure  </li>
+<li>high‑confidence model states  </li>
+</ul>
+<hr />
+<h2 id="4-transition-regime-r2h"><strong>4. Transition Regime (R₂ᴴ)</strong><a class="toc-permalink" href="#4-transition-regime-r2h" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="definition_1"><strong>Definition</strong><a class="toc-permalink" href="#definition_1" title="Permanent link to this heading">&para;</a></h3>
+<p>A region where latent trajectories undergo reorientation, branching, or oscillatory behavior.</p>
+<h3 id="characteristics_1"><strong>Characteristics</strong><a class="toc-permalink" href="#characteristics_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>moderate variance across dimensions  </li>
+<li>branching or oscillatory latent patterns  </li>
+<li>partial coherence‑surface stability  </li>
+<li>increased sensitivity to context or perturbation  </li>
+<li>regime‑transition indicators in resonance‑time space  </li>
+</ul>
+<h3 id="interpretation_1"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_1" title="Permanent link to this heading">&para;</a></h3>
+<p>R₂ᴴ captures dynamic behavior such as:</p>
+<ul>
+<li>topic shifts  </li>
+<li>syntactic reconfiguration  </li>
+<li>semantic branching  </li>
+<li>uncertainty resolution  </li>
+</ul>
+<p>It is the “decision‑making” region of LLM inference.</p>
+<hr />
+<h2 id="5-dispersion-regime-r3h"><strong>5. Dispersion Regime (R₃ᴴ)</strong><a class="toc-permalink" href="#5-dispersion-regime-r3h" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="definition_2"><strong>Definition</strong><a class="toc-permalink" href="#definition_2" title="Permanent link to this heading">&para;</a></h3>
+<p>A region where latent trajectories lose coherence and disperse across high‑dimensional space.</p>
+<h3 id="characteristics_2"><strong>Characteristics</strong><a class="toc-permalink" href="#characteristics_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>high variance across dimensions  </li>
+<li>fragmented or diffuse coherence surfaces  </li>
+<li>unstable primitive‑level structure  </li>
+<li>non‑compact projections into 3D–9D cores  </li>
+<li>susceptibility to drift or hallucination  </li>
+</ul>
+<h3 id="interpretation_2"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_2" title="Permanent link to this heading">&para;</a></h3>
+<p>R₃ᴴ corresponds to unstable or divergent inference behavior, often associated with:</p>
+<ul>
+<li>hallucination  </li>
+<li>incoherent continuation  </li>
+<li>semantic drift  </li>
+<li>over‑generalization  </li>
+</ul>
+<hr />
+<h2 id="6-regime-transitions-in-llms"><strong>6. Regime Transitions in LLMs</strong><a class="toc-permalink" href="#6-regime-transitions-in-llms" title="Permanent link to this heading">&para;</a></h2>
+<p>Latent trajectories move through regimes as inference progresses:</p>
+<ul>
+<li><strong>R₁ᴴ → R₂ᴴ</strong><br />
+  onset of branching or reorientation  </li>
+<li><strong>R₂ᴴ → R₁ᴴ</strong><br />
+  return to stable structure  </li>
+<li><strong>R₂ᴴ → R₃ᴴ</strong><br />
+  breakdown of coherence  </li>
+<li><strong>R₃ᴴ → R₂ᴴ</strong><br />
+  partial recovery  </li>
+</ul>
+<p>Transitions must remain continuous and invariant‑preserving across layers and tokens.</p>
+<hr />
+<h2 id="7-regime-detection-signals"><strong>7. Regime Detection Signals</strong><a class="toc-permalink" href="#7-regime-detection-signals" title="Permanent link to this heading">&para;</a></h2>
+<p>Regime identity is detected using:</p>
+<ul>
+<li>variance distribution across dimensions  </li>
+<li>coherence‑surface continuity  </li>
+<li>primitive‑level stability (DP, TDP, SP, CP)  </li>
+<li>resonance‑time behavior  </li>
+<li>vST validation layers (V₁–V₄)  </li>
+</ul>
+<p>These signals collectively determine regime classification.</p>
+<hr />
+<h2 id="8-regime-behavior-across-the-dimensional-ladder"><strong>8. Regime Behavior Across the Dimensional Ladder</strong><a class="toc-permalink" href="#8-regime-behavior-across-the-dimensional-ladder" title="Permanent link to this heading">&para;</a></h2>
+<p>Regime behavior must remain consistent across:</p>
+<ul>
+<li>64D latent embeddings  </li>
+<li>128D–512D hidden states  </li>
+<li>1024D+ attention and MLP activations  </li>
+</ul>
+<p>The substrate ensures:</p>
+<ul>
+<li>structural invariants  </li>
+<li>resonance‑time invariants  </li>
+<li>projection invariants  </li>
+<li>scaling invariants  </li>
+</ul>
+<p>Regime identity must be preserved under projection into 3D–9D cores.</p>
+<hr />
+<h2 id="9-outputs-of-latenttrajectory-regime-analysis"><strong>9. Outputs of Latent‑Trajectory Regime Analysis</strong><a class="toc-permalink" href="#9-outputs-of-latenttrajectory-regime-analysis" title="Permanent link to this heading">&para;</a></h2>
+<p>Latent‑trajectory regime analysis produces:</p>
+<ul>
+<li>regime‑aware token‑level diagnostics  </li>
+<li>cross‑layer coherence maps  </li>
+<li>scaling‑law indicators  </li>
+<li>drift‑detection signals  </li>
+<li>vST validation outputs  </li>
+<li>projection‑stability metrics  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑level interpretation of LLM inference.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="projection-and-alignment-of-highdimensional-llm-latent-states"><em>Projection and Alignment of High‑Dimensional LLM Latent States</em><a class="toc-permalink" href="#projection-and-alignment-of-highdimensional-llm-latent-states" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines how high‑dimensional latent states produced by Large Language Models (LLMs) are projected into the triadic dimensional cores (3D–9D) and how alignment is evaluated across layers, tokens, and model versions. Projection and alignment form the interpretability backbone of the vST framework, enabling stable, invariant‑preserving analysis of LLM inference.</p>
+<hr />
+<h2 id="1-purpose-of-projection-and-alignment"><strong>1. Purpose of Projection and Alignment</strong><a class="toc-permalink" href="#1-purpose-of-projection-and-alignment" title="Permanent link to this heading">&para;</a></h2>
+<p>Projection and alignment allow us to:</p>
+<ul>
+<li>interpret high‑dimensional latent states through the 3D–9D cores  </li>
+<li>identify stable, transitional, and dispersed regions of latent space  </li>
+<li>compare latent trajectories across layers, tokens, or model versions  </li>
+<li>detect drift or fragmentation in latent‑space structure  </li>
+<li>evaluate scaling behavior using a common substrate  </li>
+<li>support vST validation (V₁–V₄)  </li>
+</ul>
+<p>Projection is the interpretability mechanism; alignment is the comparison mechanism.</p>
+<hr />
+<h2 id="2-projection-overview"><strong>2. Projection Overview</strong><a class="toc-permalink" href="#2-projection-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>LLM latent states typically inhabit 64D–4096D spaces.<br />
+The substrate projects these states into:</p>
+<ul>
+<li><strong>9D Coherence Core</strong>  </li>
+<li><strong>6D Interaction Core</strong>  </li>
+<li><strong>3D Structural Core</strong></li>
+</ul>
+<p>Projection must remain:</p>
+<ul>
+<li><strong>invertible</strong>  </li>
+<li><strong>primitive‑aligned</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>invariant‑preserving</strong></li>
+</ul>
+<p>These properties ensure that high‑dimensional behavior remains interpretable.</p>
+<hr />
+<h2 id="3-projection-steps"><strong>3. Projection Steps</strong><a class="toc-permalink" href="#3-projection-steps" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-highdimensional-9d-coherence-projection"><strong>3.1 High‑Dimensional → 9D (Coherence Projection)</strong><a class="toc-permalink" href="#31-highdimensional-9d-coherence-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>This step extracts pathway‑level coherence from the latent state.</p>
+<p>Preserves:</p>
+<ul>
+<li>resonance‑time behavior  </li>
+<li>regime identity (R₁ᴴ, R₂ᴴ, R₃ᴴ)  </li>
+<li>coherence‑surface continuity  </li>
+<li>primitive‑level structure (DP, TDP, SP, CP)</li>
+</ul>
+<p>Reveals:</p>
+<ul>
+<li>stable vs. unstable latent pathways  </li>
+<li>branching or oscillatory transitions  </li>
+<li>dispersion patterns  </li>
+</ul>
+<hr />
+<h3 id="32-9d-6d-interaction-projection"><strong>3.2 9D → 6D (Interaction Projection)</strong><a class="toc-permalink" href="#32-9d-6d-interaction-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>This step compresses coherence pathways into interaction surfaces.</p>
+<p>Preserves:</p>
+<ul>
+<li>relational structure  </li>
+<li>interaction‑level geometry  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<p>Reveals:</p>
+<ul>
+<li>attention‑driven reorientation  </li>
+<li>syntactic or semantic branching  </li>
+<li>cross‑layer interaction patterns  </li>
+</ul>
+<hr />
+<h3 id="33-6d-3d-structural-projection"><strong>3.3 6D → 3D (Structural Projection)</strong><a class="toc-permalink" href="#33-6d-3d-structural-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>This step reduces interaction surfaces into geometric motifs.</p>
+<p>Preserves:</p>
+<ul>
+<li>motif‑level geometry  </li>
+<li>backbone‑level continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<p>Reveals:</p>
+<ul>
+<li>compact latent motifs  </li>
+<li>stable vs. unstable geometric patterns  </li>
+<li>minimal interpretable structure  </li>
+</ul>
+<hr />
+<h2 id="4-alignment-overview"><strong>4. Alignment Overview</strong><a class="toc-permalink" href="#4-alignment-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>Alignment compares projected structures across:</p>
+<ul>
+<li>layers  </li>
+<li>tokens  </li>
+<li>model versions  </li>
+<li>architectures  </li>
+<li>training checkpoints  </li>
+</ul>
+<p>Alignment must remain:</p>
+<ul>
+<li><strong>primitive‑aligned</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>projection‑consistent</strong>  </li>
+<li><strong>scaling‑invariant</strong></li>
+</ul>
+<p>Alignment is evaluated in 3D–9D space for interpretability and stability.</p>
+<hr />
+<h2 id="5-alignment-types"><strong>5. Alignment Types</strong><a class="toc-permalink" href="#5-alignment-types" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="51-layertolayer-alignment"><strong>5.1 Layer‑to‑Layer Alignment</strong><a class="toc-permalink" href="#51-layertolayer-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Compares latent trajectories across transformer layers.</p>
+<p>Reveals:</p>
+<ul>
+<li>where regime transitions occur  </li>
+<li>how coherence surfaces evolve  </li>
+<li>which layers stabilize or destabilize inference  </li>
+</ul>
+<hr />
+<h3 id="52-tokentotoken-alignment"><strong>5.2 Token‑to‑Token Alignment</strong><a class="toc-permalink" href="#52-tokentotoken-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Compares latent states across positions in a sequence.</p>
+<p>Reveals:</p>
+<ul>
+<li>semantic drift  </li>
+<li>syntactic reorientation  </li>
+<li>branching behavior in R₂ᴴ  </li>
+</ul>
+<hr />
+<h3 id="53-crossversion-alignment"><strong>5.3 Cross‑Version Alignment</strong><a class="toc-permalink" href="#53-crossversion-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Compares latent trajectories across model versions or checkpoints.</p>
+<p>Reveals:</p>
+<ul>
+<li>drift introduced by fine‑tuning  </li>
+<li>stability of coherence surfaces  </li>
+<li>changes in regime behavior  </li>
+</ul>
+<p>This is essential for model‑version governance.</p>
+<hr />
+<h3 id="54-crossmodel-alignment"><strong>5.4 Cross‑Model Alignment</strong><a class="toc-permalink" href="#54-crossmodel-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Compares different architectures or model families.</p>
+<p>Reveals:</p>
+<ul>
+<li>shared coherence surfaces  </li>
+<li>divergent scaling behavior  </li>
+<li>compatibility or incompatibility of latent spaces  </li>
+</ul>
+<p>This supports multi‑model interpretability.</p>
+<hr />
+<h2 id="6-alignment-metrics"><strong>6. Alignment Metrics</strong><a class="toc-permalink" href="#6-alignment-metrics" title="Permanent link to this heading">&para;</a></h2>
+<p>Alignment is evaluated using:</p>
+<ul>
+<li>coherence‑surface overlap  </li>
+<li>regime‑transition correspondence  </li>
+<li>primitive‑level stability (DP, TDP, SP, CP)  </li>
+<li>projection‑stability metrics  </li>
+<li>variance‑distribution similarity  </li>
+<li>drift‑detection indicators  </li>
+</ul>
+<p>These metrics are substrate‑aligned and model‑agnostic.</p>
+<hr />
+<h2 id="7-projection-stability-and-failure-modes"><strong>7. Projection Stability and Failure Modes</strong><a class="toc-permalink" href="#7-projection-stability-and-failure-modes" title="Permanent link to this heading">&para;</a></h2>
+<p>Projection stability is a key indicator of model health.</p>
+<h3 id="stable-projection"><strong>Stable Projection</strong><a class="toc-permalink" href="#stable-projection" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>compact 3D motifs  </li>
+<li>smooth 6D surfaces  </li>
+<li>coherent 9D pathways  </li>
+</ul>
+<h3 id="unstable-projection"><strong>Unstable Projection</strong><a class="toc-permalink" href="#unstable-projection" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>fragmented surfaces  </li>
+<li>non‑invertible mappings  </li>
+<li>regime‑transition discontinuities  </li>
+</ul>
+<p>Unstable projection indicates drift or scaling‑law violations.</p>
+<hr />
+<h2 id="8-outputs-of-projection-and-alignment"><strong>8. Outputs of Projection and Alignment</strong><a class="toc-permalink" href="#8-outputs-of-projection-and-alignment" title="Permanent link to this heading">&para;</a></h2>
+<p>Projection and alignment produce:</p>
+<ul>
+<li>regime‑aware latent‑trajectory maps  </li>
+<li>cross‑layer and cross‑token alignment surfaces  </li>
+<li>cross‑version drift‑detection signals  </li>
+<li>scaling‑law diagnostics  </li>
+<li>vST validation outputs  </li>
+<li>interpretable 3D–9D projections  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑level analysis of LLM inference.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="scaling-behavior-of-llms-in-the-3d1024d-substrate"><em>Scaling Behavior of LLMs in the 3D–1024D Substrate</em><a class="toc-permalink" href="#scaling-behavior-of-llms-in-the-3d1024d-substrate" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines how Large Language Models (LLMs) exhibit scaling behavior across the dimensional ladder (3D → 1024D). It maps model size, latent‑space expansion, and inference complexity onto the substrate’s triadic structure and scaling primitives. The goal is to provide a reproducible, invariant‑preserving framework for understanding how LLMs grow, stabilize, and drift as their dimensional capacity increases.</p>
+<hr />
+<h2 id="1-purpose-of-scaling-behavior-analysis"><strong>1. Purpose of Scaling Behavior Analysis</strong><a class="toc-permalink" href="#1-purpose-of-scaling-behavior-analysis" title="Permanent link to this heading">&para;</a></h2>
+<p>Scaling behavior analysis enables us to:</p>
+<ul>
+<li>interpret how latent‑space structure expands with model size  </li>
+<li>identify stable and unstable scaling regimes  </li>
+<li>detect discontinuities or drift across checkpoints  </li>
+<li>map high‑dimensional behavior into triadic cores  </li>
+<li>support vST validation across the dimensional ladder  </li>
+<li>compare models of different sizes using a common substrate  </li>
+</ul>
+<p>LLM scaling is not merely an increase in parameter count; it is a structured expansion of coherence surfaces, regime behavior, and primitive composition.</p>
+<hr />
+<h2 id="2-dimensional-ladder-for-llms"><strong>2. Dimensional Ladder for LLMs</strong><a class="toc-permalink" href="#2-dimensional-ladder-for-llms" title="Permanent link to this heading">&para;</a></h2>
+<p>LLM latent spaces naturally align with the substrate’s dimensional ladder:</p>
+<ul>
+<li><strong>3D</strong> — geometric motifs  </li>
+<li><strong>6D</strong> — interaction surfaces  </li>
+<li><strong>9D</strong> — coherence pathways  </li>
+<li><strong>64D</strong> — research‑grade latent embeddings  </li>
+<li><strong>128D</strong> — expanded coherence surfaces  </li>
+<li><strong>256D</strong> — multi‑primitive interaction  </li>
+<li><strong>512D</strong> — high‑variance latent regions  </li>
+<li><strong>1024D</strong> — full research‑grade substrate  </li>
+</ul>
+<p>Each step preserves substrate invariants and introduces new structural capacity.</p>
+<hr />
+<h2 id="3-scaling-primitives-in-llms"><strong>3. Scaling Primitives in LLMs</strong><a class="toc-permalink" href="#3-scaling-primitives-in-llms" title="Permanent link to this heading">&para;</a></h2>
+<p>Scaling behavior is governed by <strong>Scaling Primitives (SPs)</strong>, which ensure:</p>
+<ul>
+<li>invariant‑preserving dimensional expansion  </li>
+<li>continuity of coherence surfaces  </li>
+<li>stable projection into 3D–9D cores  </li>
+<li>consistent regime behavior across model sizes  </li>
+</ul>
+<p>SPs model how LLMs grow from small to large architectures.</p>
+<hr />
+<h2 id="4-scaling-regimes-in-llms"><strong>4. Scaling Regimes in LLMs</strong><a class="toc-permalink" href="#4-scaling-regimes-in-llms" title="Permanent link to this heading">&para;</a></h2>
+<p>LLM scaling exhibits three substrate‑aligned regimes:</p>
+<h3 id="41-stable-scaling-regime-s1"><strong>4.1 Stable Scaling Regime (S₁)</strong><a class="toc-permalink" href="#41-stable-scaling-regime-s1" title="Permanent link to this heading">&para;</a></h3>
+<p>Characteristics:</p>
+<ul>
+<li>smooth increase in latent‑space capacity  </li>
+<li>stable coherence surfaces  </li>
+<li>predictable performance gains  </li>
+<li>consistent regime behavior (R₁ᴴ → R₂ᴴ transitions remain bounded)</li>
+</ul>
+<p>Occurs in:</p>
+<ul>
+<li>small → medium models  </li>
+<li>early scaling phases  </li>
+</ul>
+<hr />
+<h3 id="42-transitional-scaling-regime-s2"><strong>4.2 Transitional Scaling Regime (S₂)</strong><a class="toc-permalink" href="#42-transitional-scaling-regime-s2" title="Permanent link to this heading">&para;</a></h3>
+<p>Characteristics:</p>
+<ul>
+<li>rapid expansion of coherence surfaces  </li>
+<li>increased variance across dimensions  </li>
+<li>branching or oscillatory latent behavior  </li>
+<li>sensitivity to training data and hyperparameters  </li>
+</ul>
+<p>Occurs in:</p>
+<ul>
+<li>medium → large models  </li>
+<li>architecture changes  </li>
+<li>training‑method transitions (e.g., RLHF, DPO)</li>
+</ul>
+<hr />
+<h3 id="43-dispersion-scaling-regime-s3"><strong>4.3 Dispersion Scaling Regime (S₃)</strong><a class="toc-permalink" href="#43-dispersion-scaling-regime-s3" title="Permanent link to this heading">&para;</a></h3>
+<p>Characteristics:</p>
+<ul>
+<li>fragmentation of coherence surfaces  </li>
+<li>unstable or divergent latent trajectories  </li>
+<li>increased risk of drift  </li>
+<li>non‑invertible projections into 3D–9D cores  </li>
+</ul>
+<p>Occurs in:</p>
+<ul>
+<li>extremely large models without sufficient training signal  </li>
+<li>poorly aligned fine‑tuning  </li>
+<li>over‑scaled architectures  </li>
+</ul>
+<hr />
+<h2 id="5-scaling-behavior-across-model-sizes"><strong>5. Scaling Behavior Across Model Sizes</strong><a class="toc-permalink" href="#5-scaling-behavior-across-model-sizes" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="51-small-models-1b-parameters"><strong>5.1 Small Models (≤1B parameters)</strong><a class="toc-permalink" href="#51-small-models-1b-parameters" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>latent spaces map cleanly into 64D  </li>
+<li>regime behavior dominated by R₁ᴴ  </li>
+<li>scaling is stable (S₁)</li>
+</ul>
+<h3 id="52-medium-models-1b30b"><strong>5.2 Medium Models (1B–30B)</strong><a class="toc-permalink" href="#52-medium-models-1b30b" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>latent spaces expand into 128D–256D  </li>
+<li>regime transitions become more frequent  </li>
+<li>scaling enters S₂</li>
+</ul>
+<h3 id="53-large-models-30b200b"><strong>5.3 Large Models (30B–200B)</strong><a class="toc-permalink" href="#53-large-models-30b200b" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>latent spaces occupy 256D–512D  </li>
+<li>coherence surfaces become multi‑layered  </li>
+<li>scaling may oscillate between S₂ and S₃</li>
+</ul>
+<h3 id="54-very-large-models-200b"><strong>5.4 Very Large Models (200B+)</strong><a class="toc-permalink" href="#54-very-large-models-200b" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>latent spaces approach 1024D  </li>
+<li>regime behavior becomes highly sensitive  </li>
+<li>scaling stability depends on training quality  </li>
+<li>drift detection becomes essential  </li>
+</ul>
+<hr />
+<h2 id="6-scalinglaw-alignment"><strong>6. Scaling‑Law Alignment</strong><a class="toc-permalink" href="#6-scalinglaw-alignment" title="Permanent link to this heading">&para;</a></h2>
+<p>LLM scaling follows predictable patterns:</p>
+<ul>
+<li>loss decreases as a power‑law with model size  </li>
+<li>latent‑space variance increases with dimensionality  </li>
+<li>coherence surfaces expand smoothly in S₁, sharply in S₂, and fragment in S₃  </li>
+<li>projection stability decreases as dimensionality increases  </li>
+</ul>
+<p>The substrate provides a structured way to interpret these patterns.</p>
+<hr />
+<h2 id="7-projection-behavior-under-scaling"><strong>7. Projection Behavior Under Scaling</strong><a class="toc-permalink" href="#7-projection-behavior-under-scaling" title="Permanent link to this heading">&para;</a></h2>
+<p>Projection into triadic cores must remain:</p>
+<ul>
+<li>invertible  </li>
+<li>primitive‑aligned  </li>
+<li>regime‑aware  </li>
+<li>invariant‑preserving  </li>
+</ul>
+<p>Scaling affects projection as follows:</p>
+<ul>
+<li><strong>64D → 9D</strong>: stable  </li>
+<li><strong>128D–256D → 9D</strong>: transitional  </li>
+<li><strong>512D–1024D → 9D</strong>: sensitive, drift‑prone  </li>
+</ul>
+<p>Projection stability is a key indicator of scaling health.</p>
+<hr />
+<h2 id="8-scalingdriven-drift"><strong>8. Scaling‑Driven Drift</strong><a class="toc-permalink" href="#8-scalingdriven-drift" title="Permanent link to this heading">&para;</a></h2>
+<p>Scaling can introduce drift through:</p>
+<ul>
+<li>discontinuities in latent‑space expansion  </li>
+<li>unstable regime transitions  </li>
+<li>fragmentation of coherence surfaces  </li>
+<li>loss of primitive‑level structure  </li>
+</ul>
+<p>vST validation layers (V₁–V₄) detect these failures.</p>
+<hr />
+<h2 id="9-outputs-of-scaling-behavior-analysis"><strong>9. Outputs of Scaling Behavior Analysis</strong><a class="toc-permalink" href="#9-outputs-of-scaling-behavior-analysis" title="Permanent link to this heading">&para;</a></h2>
+<p>Scaling analysis produces:</p>
+<ul>
+<li>scaling‑regime classification (S₁, S₂, S₃)  </li>
+<li>latent‑space expansion diagnostics  </li>
+<li>projection‑stability indicators  </li>
+<li>regime‑transition maps  </li>
+<li>drift‑detection signals  </li>
+<li>cross‑model comparison metrics  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑aligned evaluation of LLM scaling.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="substrate-definition"><em>Substrate Definition</em><a class="toc-permalink" href="#substrate-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the substrate used to analyze Large Language Models (LLMs) within the <strong>Validation‑Space‑Time (vST)</strong> framework and the <strong>1024D dimensional substrate</strong>. It establishes the primitives, dimensional cores, scaling behavior, and latent‑trajectory structure required to interpret LLM inference in a stable, invariant‑preserving manner.</p>
+<p>The substrate is model‑agnostic and applies to any transformer‑based LLM, regardless of architecture, size, or training method.</p>
+<hr />
+<h2 id="1-purpose-of-the-llm-substrate"><strong>1. Purpose of the LLM Substrate</strong><a class="toc-permalink" href="#1-purpose-of-the-llm-substrate" title="Permanent link to this heading">&para;</a></h2>
+<p>The LLM substrate provides a structured, reproducible framework for:</p>
+<ul>
+<li>interpreting high‑dimensional latent trajectories  </li>
+<li>identifying stable, transitional, and dispersed inference regimes  </li>
+<li>mapping coherence surfaces in embedding and hidden‑state space  </li>
+<li>analyzing scaling behavior across model sizes  </li>
+<li>detecting drift across checkpoints or versions  </li>
+<li>projecting high‑dimensional structure into 3D–9D triadic cores  </li>
+</ul>
+<p>The substrate ensures that LLM behavior remains interpretable across the full dimensional ladder (3D → 1024D).</p>
+<hr />
+<h2 id="2-substrate-overview"><strong>2. Substrate Overview</strong><a class="toc-permalink" href="#2-substrate-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>LLMs operate in extremely high‑dimensional latent spaces (typically 768D–4096D).<br />
+The substrate models these spaces using:</p>
+<ul>
+<li><strong>Dimensional Primitives (DP)</strong>  </li>
+<li><strong>Triadic Dimensional Primitives (TDP)</strong>  </li>
+<li><strong>Scaling Primitives (SP)</strong>  </li>
+<li><strong>Coherence Primitives (CP)</strong>  </li>
+</ul>
+<p>These primitives define the structure of latent trajectories, coherence surfaces, and regime transitions.</p>
+<p>The substrate is anchored by the <strong>Triadic Dimensional Cores</strong>:</p>
+<ul>
+<li><strong>3D Structural Core</strong>  </li>
+<li><strong>6D Interaction Core</strong>  </li>
+<li><strong>9D Coherence Core</strong></li>
+</ul>
+<p>and extended through the <strong>1024D high‑dimensional substrate</strong>.</p>
+<hr />
+<h2 id="3-dimensional-primitives-for-llms"><strong>3. Dimensional Primitives for LLMs</strong><a class="toc-permalink" href="#3-dimensional-primitives-for-llms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-dimensional-primitive-dp"><strong>3.1 Dimensional Primitive (DP)</strong><a class="toc-permalink" href="#31-dimensional-primitive-dp" title="Permanent link to this heading">&para;</a></h3>
+<p>A DP represents the minimal unit of latent‑space structure in an LLM.<br />
+It captures:</p>
+<ul>
+<li>local coherence  </li>
+<li>variance behavior  </li>
+<li>projection stability  </li>
+<li>regime alignment  </li>
+</ul>
+<p>DPs appear in token embeddings, attention outputs, and hidden‑state vectors.</p>
+<hr />
+<h3 id="32-triadic-dimensional-primitive-tdp"><strong>3.2 Triadic Dimensional Primitive (TDP)</strong><a class="toc-permalink" href="#32-triadic-dimensional-primitive-tdp" title="Permanent link to this heading">&para;</a></h3>
+<p>A TDP is a triad of DPs that expresses full regime behavior.<br />
+It captures:</p>
+<ul>
+<li>stable (R₁) behavior  </li>
+<li>transitional (R₂) behavior  </li>
+<li>dispersed (R₃) behavior  </li>
+</ul>
+<p>TDPs form the basis of the 3D–9D triadic cores.</p>
+<hr />
+<h3 id="33-scaling-primitive-sp"><strong>3.3 Scaling Primitive (SP)</strong><a class="toc-permalink" href="#33-scaling-primitive-sp" title="Permanent link to this heading">&para;</a></h3>
+<p>An SP governs dimensional expansion from 9D → 64D → 1024D.<br />
+It ensures:</p>
+<ul>
+<li>invariant‑preserving scaling  </li>
+<li>continuity of coherence surfaces  </li>
+<li>stable projection into triadic cores  </li>
+</ul>
+<p>SPs model how LLM latent spaces expand with model size.</p>
+<hr />
+<h3 id="34-coherence-primitive-cp"><strong>3.4 Coherence Primitive (CP)</strong><a class="toc-permalink" href="#34-coherence-primitive-cp" title="Permanent link to this heading">&para;</a></h3>
+<p>A CP identifies stable or unstable regions in latent space.<br />
+It captures:</p>
+<ul>
+<li>coherence surfaces  </li>
+<li>branching behavior  </li>
+<li>dispersion patterns  </li>
+<li>regime transitions  </li>
+</ul>
+<p>CPs are essential for drift detection and vST validation.</p>
+<hr />
+<h2 id="4-triadic-dimensional-cores-for-llms"><strong>4. Triadic Dimensional Cores for LLMs</strong><a class="toc-permalink" href="#4-triadic-dimensional-cores-for-llms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="41-3d-structural-core"><strong>4.1 3D Structural Core</strong><a class="toc-permalink" href="#41-3d-structural-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures motif‑level structure in latent trajectories:</p>
+<ul>
+<li>compact geometric patterns  </li>
+<li>local coherence  </li>
+<li>stable projections  </li>
+</ul>
+<h3 id="42-6d-interaction-core"><strong>4.2 6D Interaction Core</strong><a class="toc-permalink" href="#42-6d-interaction-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures relational and attention‑level structure:</p>
+<ul>
+<li>interaction surfaces  </li>
+<li>branching behavior  </li>
+<li>early regime transitions  </li>
+</ul>
+<h3 id="43-9d-coherence-core"><strong>4.3 9D Coherence Core</strong><a class="toc-permalink" href="#43-9d-coherence-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures pathway‑level coherence:</p>
+<ul>
+<li>resonance‑time behavior  </li>
+<li>stable regime classification  </li>
+<li>invertible projection from higher dimensions  </li>
+</ul>
+<p>The 9D core is the anchor for all high‑dimensional interpretation.</p>
+<hr />
+<h2 id="5-highdimensional-substrate-64d1024d"><strong>5. High‑Dimensional Substrate (64D–1024D)</strong><a class="toc-permalink" href="#5-highdimensional-substrate-64d1024d" title="Permanent link to this heading">&para;</a></h2>
+<p>LLM latent spaces naturally inhabit high‑dimensional regimes.<br />
+The substrate models these using the dimensional ladder:</p>
+<ul>
+<li><strong>64D</strong> — research‑grade substrate  </li>
+<li><strong>128D</strong> — expanded coherence surfaces  </li>
+<li><strong>256D</strong> — multi‑primitive interaction  </li>
+<li><strong>512D</strong> — high‑variance latent regions  </li>
+<li><strong>1024D</strong> — full research‑grade capacity  </li>
+</ul>
+<p>Each step preserves:</p>
+<ul>
+<li>structural invariants  </li>
+<li>resonance‑time invariants  </li>
+<li>projection invariants  </li>
+<li>scaling invariants  </li>
+</ul>
+<p>This ensures stable interpretation across model sizes.</p>
+<hr />
+<h2 id="6-latenttrajectory-structure"><strong>6. Latent‑Trajectory Structure</strong><a class="toc-permalink" href="#6-latenttrajectory-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>LLM inference produces latent trajectories that move through:</p>
+<ul>
+<li>compact stable regions (R₁ᴴ)  </li>
+<li>branching transitional regions (R₂ᴴ)  </li>
+<li>dispersed or unstable regions (R₃ᴴ)  </li>
+</ul>
+<p>These trajectories are modeled as:</p>
+<ul>
+<li>sequences of DPs  </li>
+<li>grouped into TDPs  </li>
+<li>expanded through SPs  </li>
+<li>classified using CPs  </li>
+</ul>
+<p>This structure enables regime‑aware analysis and drift detection.</p>
+<hr />
+<h2 id="7-projection-into-triadic-cores"><strong>7. Projection into Triadic Cores</strong><a class="toc-permalink" href="#7-projection-into-triadic-cores" title="Permanent link to this heading">&para;</a></h2>
+<p>High‑dimensional latent states are projected into:</p>
+<ul>
+<li><strong>9D</strong> for coherence analysis  </li>
+<li><strong>6D</strong> for interaction analysis  </li>
+<li><strong>3D</strong> for geometric interpretation  </li>
+</ul>
+<p>Projection must remain:</p>
+<ul>
+<li>invertible  </li>
+<li>primitive‑aligned  </li>
+<li>regime‑aware  </li>
+<li>invariant‑preserving  </li>
+</ul>
+<p>Projection is essential for interpretability and vST validation.</p>
+<hr />
+<h2 id="8-substrate-outputs"><strong>8. Substrate Outputs</strong><a class="toc-permalink" href="#8-substrate-outputs" title="Permanent link to this heading">&para;</a></h2>
+<p>The LLM substrate produces:</p>
+<ul>
+<li>latent‑trajectory regime classifications  </li>
+<li>coherence‑surface maps  </li>
+<li>scaling‑law diagnostics  </li>
+<li>projection‑stability indicators  </li>
+<li>drift‑detection signals  </li>
+<li>vST validation outputs  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑level analysis of LLMs.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="validationspacetime-layers-for-llm-inference"><em>Validation‑Space‑Time Layers for LLM Inference</em><a class="toc-permalink" href="#validationspacetime-layers-for-llm-inference" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the <strong>Validation‑Space‑Time (vST)</strong> layers as applied to Large Language Models (LLMs). vST provides a structured, invariant‑preserving framework for evaluating latent‑space behavior, regime transitions, scaling stability, and projection integrity across the dimensional ladder (3D → 1024D).</p>
+<p>The vST layers (V₁–V₄) generalize the substrate‑level validation system to the unique properties of LLM inference.</p>
+<hr />
+<h2 id="1-purpose-of-vst-for-llms"><strong>1. Purpose of vST for LLMs</strong><a class="toc-permalink" href="#1-purpose-of-vst-for-llms" title="Permanent link to this heading">&para;</a></h2>
+<p>vST enables reproducible, model‑agnostic evaluation of:</p>
+<ul>
+<li>latent‑trajectory stability  </li>
+<li>regime transitions (R₁ᴴ, R₂ᴴ, R₃ᴴ)  </li>
+<li>scaling‑law behavior  </li>
+<li>projection stability into 3D–9D cores  </li>
+<li>cross‑layer and cross‑version alignment  </li>
+<li>drift detection  </li>
+</ul>
+<p>The goal is to ensure that LLM inference remains structurally coherent and invariant‑preserving across model sizes and training methods.</p>
+<hr />
+<h2 id="2-overview-of-vst-layers"><strong>2. Overview of vST Layers</strong><a class="toc-permalink" href="#2-overview-of-vst-layers" title="Permanent link to this heading">&para;</a></h2>
+<p>The vST framework consists of four layers:</p>
+<ol>
+<li><strong>V₁ — Structural Coherence Validation</strong>  </li>
+<li><strong>V₂ — Dimensional Continuity Validation</strong>  </li>
+<li><strong>V₃ — Regime‑Transition Validation</strong>  </li>
+<li><strong>V₄ — Core‑Alignment Validation</strong></li>
+</ol>
+<p>Each layer evaluates a distinct aspect of LLM latent‑space behavior.</p>
+<hr />
+<h2 id="3-v1-structural-coherence-validation"><strong>3. V₁ — Structural Coherence Validation</strong><a class="toc-permalink" href="#3-v1-structural-coherence-validation" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h3>
+<p>Evaluate whether latent trajectories maintain structural coherence across layers and tokens.</p>
+<h3 id="checks"><strong>Checks</strong><a class="toc-permalink" href="#checks" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>compactness of latent vectors  </li>
+<li>stability of coherence surfaces  </li>
+<li>preservation of primitive‑level structure (DP, TDP, SP, CP)  </li>
+<li>continuity of geometric motifs in 3D projection  </li>
+<li>absence of fragmentation or collapse  </li>
+</ul>
+<h3 id="failure-modes"><strong>Failure Modes</strong><a class="toc-permalink" href="#failure-modes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>incoherent latent pathways  </li>
+<li>abrupt variance spikes  </li>
+<li>loss of primitive‑level structure  </li>
+<li>non‑compact 3D projections  </li>
+</ul>
+<h3 id="interpretation_3"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_3" title="Permanent link to this heading">&para;</a></h3>
+<p>V₁ ensures that LLM inference maintains a stable structural backbone.</p>
+<hr />
+<h2 id="4-v2-dimensional-continuity-validation"><strong>4. V₂ — Dimensional Continuity Validation</strong><a class="toc-permalink" href="#4-v2-dimensional-continuity-validation" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose_1"><strong>Purpose</strong><a class="toc-permalink" href="#purpose_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Ensure that latent‑space behavior remains continuous across the dimensional ladder (64D → 1024D → 9D → 3D).</p>
+<h3 id="checks_1"><strong>Checks</strong><a class="toc-permalink" href="#checks_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>smooth expansion of coherence surfaces  </li>
+<li>invertible projection into triadic cores  </li>
+<li>stable variance distribution across dimensions  </li>
+<li>absence of discontinuities during scaling  </li>
+</ul>
+<h3 id="failure-modes_1"><strong>Failure Modes</strong><a class="toc-permalink" href="#failure-modes_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>non‑invertible projections  </li>
+<li>dimensional fragmentation  </li>
+<li>scaling discontinuities  </li>
+<li>unstable high‑dimensional variance  </li>
+</ul>
+<h3 id="interpretation_4"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_4" title="Permanent link to this heading">&para;</a></h3>
+<p>V₂ ensures that dimensional scaling and projection remain invariant‑preserving.</p>
+<hr />
+<h2 id="5-v3-regimetransition-validation"><strong>5. V₃ — Regime‑Transition Validation</strong><a class="toc-permalink" href="#5-v3-regimetransition-validation" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose_2"><strong>Purpose</strong><a class="toc-permalink" href="#purpose_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Validate that regime transitions follow the triadic resonance structure.</p>
+<h3 id="checks_2"><strong>Checks</strong><a class="toc-permalink" href="#checks_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>correct classification of R₁ᴴ, R₂ᴴ, R₃ᴴ  </li>
+<li>smooth transitions between regimes  </li>
+<li>resonance‑time alignment  </li>
+<li>absence of abrupt or chaotic regime shifts  </li>
+</ul>
+<h3 id="failure-modes_2"><strong>Failure Modes</strong><a class="toc-permalink" href="#failure-modes_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>oscillatory instability  </li>
+<li>premature transitions into R₃ᴴ  </li>
+<li>regime collapse  </li>
+<li>resonance‑time discontinuities  </li>
+</ul>
+<h3 id="interpretation_5"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_5" title="Permanent link to this heading">&para;</a></h3>
+<p>V₃ ensures that LLM inference follows stable, predictable regime dynamics.</p>
+<hr />
+<h2 id="6-v4-corealignment-validation"><strong>6. V₄ — Core‑Alignment Validation</strong><a class="toc-permalink" href="#6-v4-corealignment-validation" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="purpose_3"><strong>Purpose</strong><a class="toc-permalink" href="#purpose_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Ensure that high‑dimensional latent states align correctly with the triadic cores (3D–9D).</p>
+<h3 id="checks_3"><strong>Checks</strong><a class="toc-permalink" href="#checks_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>primitive‑aligned projection  </li>
+<li>coherence‑surface preservation  </li>
+<li>stable cross‑layer alignment  </li>
+<li>consistent mapping across model versions  </li>
+<li>compatibility with 3D–9D structural invariants  </li>
+</ul>
+<h3 id="failure-modes_3"><strong>Failure Modes</strong><a class="toc-permalink" href="#failure-modes_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>misaligned projections  </li>
+<li>cross‑version drift  </li>
+<li>incompatible latent‑space geometry  </li>
+<li>loss of coherence in 9D pathways  </li>
+</ul>
+<h3 id="interpretation_6"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_6" title="Permanent link to this heading">&para;</a></h3>
+<p>V₄ ensures that LLM behavior remains interpretable and comparable across models.</p>
+<hr />
+<h2 id="7-vst-outputs-for-llms"><strong>7. vST Outputs for LLMs</strong><a class="toc-permalink" href="#7-vst-outputs-for-llms" title="Permanent link to this heading">&para;</a></h2>
+<p>vST produces:</p>
+<ul>
+<li>structural‑coherence diagnostics  </li>
+<li>dimensional‑continuity indicators  </li>
+<li>regime‑transition maps  </li>
+<li>core‑alignment metrics  </li>
+<li>drift‑detection signals  </li>
+<li>cross‑version comparison surfaces  </li>
+</ul>
+<p>These outputs support reproducible, substrate‑aligned evaluation of LLM inference.</p>
+<hr />
+<h2 id="8-summary"><strong>8. Summary</strong><a class="toc-permalink" href="#8-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>The vST layers provide a complete validation framework for LLMs:</p>
+<ul>
+<li><strong>V₁</strong> ensures structural coherence  </li>
+<li><strong>V₂</strong> ensures dimensional continuity  </li>
+<li><strong>V₃</strong> ensures regime‑transition stability  </li>
+<li><strong>V₄</strong> ensures core alignment  </li>
+</ul>
+<p>Together, they form a rigorous, invariant‑preserving system for analyzing high‑dimensional LLM behavior.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="references"><em>References</em><a class="toc-permalink" href="#references" title="Permanent link to this heading">&para;</a></h3>
+<p>This appendix lists references relevant to high‑dimensional modeling, latent‑space analysis, scaling laws, regime behavior, and validation frameworks for Large Language Models (LLMs). Citations are grouped by category for clarity and presented in a substrate‑agnostic, model‑independent format consistent with the RSM and vST canon.</p>
+<hr />
+<h2 id="1-highdimensional-modeling-and-representation-learning"><strong>1. High‑Dimensional Modeling and Representation Learning</strong><a class="toc-permalink" href="#1-highdimensional-modeling-and-representation-learning" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Bengio, Y., Courville, A., &amp; Vincent, P.<br />
+<em>Representation Learning: A Review and New Perspectives.</em><br />
+  IEEE TPAMI 35, 1798–1828 (2013).</p>
+</li>
+<li>
+<p>Coifman, R. R., &amp; Lafon, S.<br />
+<em>Diffusion Maps.</em><br />
+  Applied and Computational Harmonic Analysis 21, 5–30 (2006).</p>
+</li>
+<li>
+<p>Tenenbaum, J. B., de Silva, V., &amp; Langford, J. C.<br />
+<em>A Global Geometric Framework for Nonlinear Dimensionality Reduction.</em><br />
+  Science 290, 2319–2323 (2000).</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-scaling-laws-and-large-language-models"><strong>2. Scaling Laws and Large Language Models</strong><a class="toc-permalink" href="#2-scaling-laws-and-large-language-models" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Kaplan, J., McCandlish, S., Henighan, T., et al.<br />
+<em>Scaling Laws for Neural Language Models.</em><br />
+  arXiv:2001.08361 (2020).</p>
+</li>
+<li>
+<p>Hoffmann, J., Borgeaud, S., Mensch, A., et al.<br />
+<em>Training Compute‑Optimal Large Language Models.</em><br />
+  arXiv:2203.15556 (2022).</p>
+</li>
+<li>
+<p>Bahri, Y., Kadmon, J., Pennington, J., et al.<br />
+<em>Statistical Mechanics of Deep Learning.</em><br />
+  Annual Review of Condensed Matter Physics 11, 501–528 (2020).</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-transformer-architectures-and-latentspace-behavior"><strong>3. Transformer Architectures and Latent‑Space Behavior</strong><a class="toc-permalink" href="#3-transformer-architectures-and-latentspace-behavior" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Vaswani, A., Shazeer, N., Parmar, N., et al.<br />
+<em>Attention Is All You Need.</em><br />
+  NeurIPS (2017).</p>
+</li>
+<li>
+<p>Clark, K., Khandelwal, U., Levy, O., &amp; Manning, C. D.<br />
+<em>What Does BERT Look At? An Analysis of Attention.</em><br />
+  ACL (2019).</p>
+</li>
+<li>
+<p>Rogers, A., Kovaleva, O., &amp; Rumshisky, A.<br />
+<em>A Primer in BERTology: What We Know About How BERT Works.</em><br />
+  TACL 8, 842–866 (2020).</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-regime-behavior-stability-and-dynamics"><strong>4. Regime Behavior, Stability, and Dynamics</strong><a class="toc-permalink" href="#4-regime-behavior-stability-and-dynamics" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Strogatz, S.<br />
+<em>Nonlinear Dynamics and Chaos.</em><br />
+  Westview Press (2014).</p>
+</li>
+<li>
+<p>Ott, E.<br />
+<em>Chaos in Dynamical Systems.</em><br />
+  Cambridge University Press (2002).</p>
+</li>
+<li>
+<p>Guckenheimer, J., &amp; Holmes, P.<br />
+<em>Nonlinear Oscillations, Dynamical Systems, and Bifurcations of Vector Fields.</em><br />
+  Springer (1983).</p>
+</li>
+</ul>
+<hr />
+<h2 id="5-validation-drift-detection-and-ml-systems"><strong>5. Validation, Drift Detection, and ML Systems</strong><a class="toc-permalink" href="#5-validation-drift-detection-and-ml-systems" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Breck, E., Cai, S., Nielsen, E., et al.<br />
+<em>The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.</em><br />
+  Google Research (2017).</p>
+</li>
+<li>
+<p>Sculley, D., Holt, G., Golovin, D., et al.<br />
+<em>Hidden Technical Debt in Machine Learning Systems.</em><br />
+  NIPS (2015).</p>
+</li>
+<li>
+<p>Amershi, S., Begel, A., Bird, C., et al.<br />
+<em>Software Engineering for Machine Learning: A Case Study.</em><br />
+  ICSE‑SEIP (2019).</p>
+</li>
+</ul>
+<hr />
+<h2 id="6-substratelevel-and-triadicframeworks-canon"><strong>6. Substrate‑Level and Triadic‑Frameworks Canon</strong><a class="toc-permalink" href="#6-substratelevel-and-triadicframeworks-canon" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Loswin, N.<br />
+<em>Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.</em><br />
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br />
+<em>Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.</em><br />
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br />
+<em>Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.</em><br />
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br />
+<em>Dimensional Substrate Structures: Scaling Laws and High‑Dimensional Regimes.</em><br />
+  TriadicFrameworks (2026).</p>
+</li>
+<li>
+<p>Loswin, N.<br />
+<em>vST for Large Language Models.</em><br />
+  TriadicFrameworks (2026).<br />
+### <em>vST for Large Language Models</em>  </p>
+</li>
+</ul>
+<h3 id="terminology"><em>Terminology</em><a class="toc-permalink" href="#terminology" title="Permanent link to this heading">&para;</a></h3>
+<p>This appendix defines the terminology used throughout the <em>vST for Large Language Models</em> artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any transformer‑based LLM operating across the full dimensional ladder (3D → 1024D). Definitions emphasize primitive‑level structure, regime behavior, scaling continuity, and invariant preservation.</p>
+<hr />
+<h2 id="1-substrate-terms"><strong>1. Substrate Terms</strong><a class="toc-permalink" href="#1-substrate-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="llm-substrate"><strong>LLM Substrate</strong><a class="toc-permalink" href="#llm-substrate" title="Permanent link to this heading">&para;</a></h3>
+<p>A structured, invariant‑preserving framework for representing and interpreting LLM latent‑space behavior across 64D–4096D.</p>
+<h3 id="dimensional-ladder"><strong>Dimensional Ladder</strong><a class="toc-permalink" href="#dimensional-ladder" title="Permanent link to this heading">&para;</a></h3>
+<p>The ordered sequence of dimensional regimes used for projection and scaling analysis:<br />
+3D → 6D → 9D → 64D → 128D → 256D → 512D → 1024D.</p>
+<h3 id="coherence-surface"><strong>Coherence Surface</strong><a class="toc-permalink" href="#coherence-surface" title="Permanent link to this heading">&para;</a></h3>
+<p>A stable region in latent space where trajectories converge and maintain structural continuity.</p>
+<hr />
+<h2 id="2-primitive-terms"><strong>2. Primitive Terms</strong><a class="toc-permalink" href="#2-primitive-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="dimensional-primitive-dp"><strong>Dimensional Primitive (DP)</strong><a class="toc-permalink" href="#dimensional-primitive-dp" title="Permanent link to this heading">&para;</a></h3>
+<p>The minimal unit of latent‑space structure, capturing local coherence and variance behavior.</p>
+<h3 id="triadic-dimensional-primitive-tdp"><strong>Triadic Dimensional Primitive (TDP)</strong><a class="toc-permalink" href="#triadic-dimensional-primitive-tdp" title="Permanent link to this heading">&para;</a></h3>
+<p>A triad of DPs forming the smallest unit capable of expressing full regime behavior (R₁, R₂, R₃).</p>
+<h3 id="scaling-primitive-sp"><strong>Scaling Primitive (SP)</strong><a class="toc-permalink" href="#scaling-primitive-sp" title="Permanent link to this heading">&para;</a></h3>
+<p>A rule‑based expansion unit that preserves invariants during dimensional scaling.</p>
+<h3 id="coherence-primitive-cp"><strong>Coherence Primitive (CP)</strong><a class="toc-permalink" href="#coherence-primitive-cp" title="Permanent link to this heading">&para;</a></h3>
+<p>A minimal unit identifying stable, transitional, or dispersed regions in high‑dimensional latent space.</p>
+<hr />
+<h2 id="3-core-terms"><strong>3. Core Terms</strong><a class="toc-permalink" href="#3-core-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="triadic-dimensional-core-tdc"><strong>Triadic Dimensional Core (TDC)</strong><a class="toc-permalink" href="#triadic-dimensional-core-tdc" title="Permanent link to this heading">&para;</a></h3>
+<p>The 3D–9D substrate composed of one or more TDPs, used for interpretable projection.</p>
+<h3 id="3d-structural-core"><strong>3D Structural Core</strong><a class="toc-permalink" href="#3d-structural-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures motif‑level geometry and compact latent structure.</p>
+<h3 id="6d-interaction-core"><strong>6D Interaction Core</strong><a class="toc-permalink" href="#6d-interaction-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures relational and attention‑driven structure.</p>
+<h3 id="9d-coherence-core"><strong>9D Coherence Core</strong><a class="toc-permalink" href="#9d-coherence-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures pathway‑level coherence and resonance‑time behavior.</p>
+<hr />
+<h2 id="4-regime-terms"><strong>4. Regime Terms</strong><a class="toc-permalink" href="#4-regime-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="highdimensional-regimes-r1h-r2h-r3h"><strong>High‑Dimensional Regimes (R₁ᴴ, R₂ᴴ, R₃ᴴ)</strong><a class="toc-permalink" href="#highdimensional-regimes-r1h-r2h-r3h" title="Permanent link to this heading">&para;</a></h3>
+<p>The triadic regime structure expressed in 64D–1024D latent space.</p>
+<h3 id="stable-regime-r1-r1h"><strong>Stable Regime (R₁ / R₁ᴴ)</strong><a class="toc-permalink" href="#stable-regime-r1-r1h" title="Permanent link to this heading">&para;</a></h3>
+<p>Compact, coherent, low‑variance latent behavior.</p>
+<h3 id="transition-regime-r2-r2h"><strong>Transition Regime (R₂ / R₂ᴴ)</strong><a class="toc-permalink" href="#transition-regime-r2-r2h" title="Permanent link to this heading">&para;</a></h3>
+<p>Branching, oscillatory, or reorientation behavior.</p>
+<h3 id="dispersion-regime-r3-r3h"><strong>Dispersion Regime (R₃ / R₃ᴴ)</strong><a class="toc-permalink" href="#dispersion-regime-r3-r3h" title="Permanent link to this heading">&para;</a></h3>
+<p>Diffuse, fragmented, or unstable latent behavior.</p>
+<hr />
+<h2 id="5-scaling-terms"><strong>5. Scaling Terms</strong><a class="toc-permalink" href="#5-scaling-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="scaling-behavior"><strong>Scaling Behavior</strong><a class="toc-permalink" href="#scaling-behavior" title="Permanent link to this heading">&para;</a></h3>
+<p>The structured expansion of latent‑space capacity as model size increases.</p>
+<h3 id="scaling-regimes-s1-s2-s3"><strong>Scaling Regimes (S₁, S₂, S₃)</strong><a class="toc-permalink" href="#scaling-regimes-s1-s2-s3" title="Permanent link to this heading">&para;</a></h3>
+<p>Triadic scaling behavior describing stable, transitional, and dispersion‑prone scaling phases.</p>
+<h3 id="dimensional-continuity"><strong>Dimensional Continuity</strong><a class="toc-permalink" href="#dimensional-continuity" title="Permanent link to this heading">&para;</a></h3>
+<p>The requirement that latent‑space expansion remains smooth and invariant‑preserving.</p>
+<hr />
+<h2 id="6-projection-terms"><strong>6. Projection Terms</strong><a class="toc-permalink" href="#6-projection-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="invertible-projection"><strong>Invertible Projection</strong><a class="toc-permalink" href="#invertible-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>A projection from high‑dimensional latent space into 3D–9D that preserves primitive‑level structure and regime identity.</p>
+<h3 id="regimeaware-projection"><strong>Regime‑Aware Projection</strong><a class="toc-permalink" href="#regimeaware-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>A projection that maintains correct mapping of R₁, R₂, and R₃ behaviors.</p>
+<h3 id="primitivealigned-projection"><strong>Primitive‑Aligned Projection</strong><a class="toc-permalink" href="#primitivealigned-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>A projection that preserves DP, TDP, SP, and CP structure.</p>
+<hr />
+<h2 id="7-alignment-terms"><strong>7. Alignment Terms</strong><a class="toc-permalink" href="#7-alignment-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="layertolayer-alignment"><strong>Layer‑to‑Layer Alignment</strong><a class="toc-permalink" href="#layertolayer-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Comparison of latent trajectories across transformer layers.</p>
+<h3 id="tokentotoken-alignment"><strong>Token‑to‑Token Alignment</strong><a class="toc-permalink" href="#tokentotoken-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Comparison of latent states across positions in a sequence.</p>
+<h3 id="crossversion-alignment"><strong>Cross‑Version Alignment</strong><a class="toc-permalink" href="#crossversion-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Comparison of latent‑space structure across model versions or checkpoints.</p>
+<h3 id="crossmodel-alignment"><strong>Cross‑Model Alignment</strong><a class="toc-permalink" href="#crossmodel-alignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Comparison of latent‑space geometry across different architectures or model families.</p>
+<hr />
+<h2 id="8-validation-terms"><strong>8. Validation Terms</strong><a class="toc-permalink" href="#8-validation-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="vst-validationspacetime"><strong>vST (Validation‑Space‑Time)</strong><a class="toc-permalink" href="#vst-validationspacetime" title="Permanent link to this heading">&para;</a></h3>
+<p>A substrate‑level validation framework evaluating structural coherence, dimensional continuity, regime behavior, and core alignment.</p>
+<h3 id="validation-layers-v1v4"><strong>Validation Layers (V₁–V₄)</strong><a class="toc-permalink" href="#validation-layers-v1v4" title="Permanent link to this heading">&para;</a></h3>
+<p>Four structured evaluation layers ensuring invariant‑preserving behavior across the dimensional ladder.</p>
+<hr />
+<h2 id="9-drift-terms"><strong>9. Drift Terms</strong><a class="toc-permalink" href="#9-drift-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="drift"><strong>Drift</strong><a class="toc-permalink" href="#drift" title="Permanent link to this heading">&para;</a></h3>
+<p>A deviation from expected substrate behavior, indicating instability or invariant failure.</p>
+<h3 id="drift-categories-d1d4"><strong>Drift Categories (D₁–D₄)</strong><a class="toc-permalink" href="#drift-categories-d1d4" title="Permanent link to this heading">&para;</a></h3>
+<p>Classification of drift into structural, dimensional, regime, or projection drift.</p>
+<h3 id="drift-severity"><strong>Drift Severity</strong><a class="toc-permalink" href="#drift-severity" title="Permanent link to this heading">&para;</a></h3>
+<p>A measure of drift magnitude (low, moderate, high).<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="example-crossversion-alignment-of-llm-latent-spaces"><em>Example: Cross‑Version Alignment of LLM Latent Spaces</em><a class="toc-permalink" href="#example-crossversion-alignment-of-llm-latent-spaces" title="Permanent link to this heading">&para;</a></h3>
+<p>This example demonstrates how the <strong>Validation‑Space‑Time (vST)</strong> framework evaluates <strong>cross‑version alignment</strong> between two Large Language Model (LLM) checkpoints. The goal is to show how latent‑space structure, regime behavior, and projection stability change across versions, and how drift is detected using the dimensional substrate.</p>
+<p>The example is model‑agnostic and applies to any transformer‑based LLM.</p>
+<hr />
+<h2 id="1-scenario-overview"><strong>1. Scenario Overview</strong><a class="toc-permalink" href="#1-scenario-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>We compare two versions of the same LLM:</p>
+<ul>
+<li><strong>Model A (v1.0)</strong> — baseline checkpoint  </li>
+<li><strong>Model B (v1.1)</strong> — fine‑tuned or updated checkpoint  </li>
+</ul>
+<p>We analyze:</p>
+<ul>
+<li>latent‑trajectory alignment  </li>
+<li>regime‑transition correspondence  </li>
+<li>coherence‑surface stability  </li>
+<li>projection behavior (1024D → 9D → 6D → 3D)  </li>
+<li>drift category and severity  </li>
+</ul>
+<p>The comparison uses a single token’s latent pathway across all layers.</p>
+<hr />
+<h2 id="2-step-1-extract-latent-pathways"><strong>2. Step 1 — Extract Latent Pathways</strong><a class="toc-permalink" href="#2-step-1-extract-latent-pathways" title="Permanent link to this heading">&para;</a></h2>
+<p>For each model, extract the 1024D hidden‑state vectors:</p>
+<p>[<br />
+h^{A}_1,\ h^{A}_2,\ \dots,\ h^{A}_L<br />
+]<br />
+[<br />
+h^{B}_1,\ h^{B}_2,\ \dots,\ h^{B}_L<br />
+]</p>
+<h3 id="observed-properties"><strong>Observed Properties</strong><a class="toc-permalink" href="#observed-properties" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Model A (v1.0)</strong><br />
+- smooth variance distribution<br />
+- stable DP/TDP structure<br />
+- predictable regime transitions  </p>
+<p><strong>Model B (v1.1)</strong><br />
+- increased variance in mid‑layers<br />
+- sharper regime transitions<br />
+- mild fragmentation in late layers  </p>
+<h3 id="interpretation_7"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_7" title="Permanent link to this heading">&para;</a></h3>
+<p>Model B exhibits structural changes introduced by fine‑tuning or training updates.</p>
+<hr />
+<h2 id="3-step-2-classify-regime-behavior"><strong>3. Step 2 — Classify Regime Behavior</strong><a class="toc-permalink" href="#3-step-2-classify-regime-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Using substrate‑aligned regime detection:</p>
+<h3 id="model-a-v10"><strong>Model A (v1.0)</strong><a class="toc-permalink" href="#model-a-v10" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Layers 1–10: R₁ᴴ  </li>
+<li>Layers 11–20: R₂ᴴ  </li>
+<li>Layers 21–24: R₁ᴴ  </li>
+<li>Layers 25–32: mild R₂ᴴ  </li>
+</ul>
+<h3 id="model-b-v11"><strong>Model B (v1.1)</strong><a class="toc-permalink" href="#model-b-v11" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Layers 1–8: R₁ᴴ  </li>
+<li>Layers 9–18: strong R₂ᴴ  </li>
+<li>Layers 19–22: R₁ᴴ  </li>
+<li>Layers 23–32: R₂ᴴ → R₃ᴴ onset  </li>
+</ul>
+<h3 id="interpretation_8"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_8" title="Permanent link to this heading">&para;</a></h3>
+<p>Model B shows:</p>
+<ul>
+<li>earlier entry into R₂ᴴ  </li>
+<li>stronger oscillatory behavior  </li>
+<li>partial dispersion in late layers  </li>
+</ul>
+<p>This indicates potential drift.</p>
+<hr />
+<h2 id="4-step-3-project-1024d-9d"><strong>4. Step 3 — Project 1024D → 9D</strong><a class="toc-permalink" href="#4-step-3-project-1024d-9d" title="Permanent link to this heading">&para;</a></h2>
+<p>Project both models’ latent pathways into the 9D coherence core.</p>
+<h3 id="model-a-v10_1"><strong>Model A (v1.0)</strong><a class="toc-permalink" href="#model-a-v10_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>smooth coherence surfaces  </li>
+<li>stable curvature  </li>
+<li>consistent primitive alignment  </li>
+</ul>
+<h3 id="model-b-v11_1"><strong>Model B (v1.1)</strong><a class="toc-permalink" href="#model-b-v11_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>sharper curvature changes  </li>
+<li>partial fragmentation in late layers  </li>
+<li>reduced projection stability  </li>
+</ul>
+<h3 id="interpretation_9"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_9" title="Permanent link to this heading">&para;</a></h3>
+<p>Model B’s coherence surfaces show signs of structural drift.</p>
+<hr />
+<h2 id="5-step-4-project-9d-6d-3d"><strong>5. Step 4 — Project 9D → 6D → 3D</strong><a class="toc-permalink" href="#5-step-4-project-9d-6d-3d" title="Permanent link to this heading">&para;</a></h2>
+<p>Evaluate projection stability across dimensional reductions.</p>
+<h3 id="model-a-v10_2"><strong>Model A (v1.0)</strong><a class="toc-permalink" href="#model-a-v10_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>compact 3D motifs  </li>
+<li>smooth 6D interaction surfaces  </li>
+<li>stable mapping across layers  </li>
+</ul>
+<h3 id="model-b-v11_2"><strong>Model B (v1.1)</strong><a class="toc-permalink" href="#model-b-v11_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>oscillatory 6D surfaces  </li>
+<li>diffuse 3D motifs in late layers  </li>
+<li>partial loss of primitive alignment  </li>
+</ul>
+<h3 id="interpretation_10"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_10" title="Permanent link to this heading">&para;</a></h3>
+<p>Model B exhibits projection drift, especially near the output layers.</p>
+<hr />
+<h2 id="6-step-5-alignment-analysis"><strong>6. Step 5 — Alignment Analysis</strong><a class="toc-permalink" href="#6-step-5-alignment-analysis" title="Permanent link to this heading">&para;</a></h2>
+<p>Compare the two models’ projected trajectories.</p>
+<h3 id="alignment-results"><strong>Alignment Results</strong><a class="toc-permalink" href="#alignment-results" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Early layers:</strong> high alignment (stable R₁ᴴ)  </li>
+<li><strong>Mid layers:</strong> moderate divergence (stronger R₂ᴴ in Model B)  </li>
+<li><strong>Late layers:</strong> significant divergence (R₃ᴴ onset in Model B)  </li>
+</ul>
+<h3 id="coherencesurface-overlap"><strong>Coherence‑Surface Overlap</strong><a class="toc-permalink" href="#coherencesurface-overlap" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>82% overlap in early layers  </li>
+<li>61% overlap in mid layers  </li>
+<li>34% overlap in late layers  </li>
+</ul>
+<h3 id="interpretation_11"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_11" title="Permanent link to this heading">&para;</a></h3>
+<p>The models share early‑layer structure but diverge significantly in deeper layers.</p>
+<hr />
+<h2 id="7-step-6-vst-validation"><strong>7. Step 6 — vST Validation</strong><a class="toc-permalink" href="#7-step-6-vst-validation" title="Permanent link to this heading">&para;</a></h2>
+<p>Apply vST layers (V₁–V₄) to both models.</p>
+<h3 id="model-a-v10_3"><strong>Model A (v1.0)</strong><a class="toc-permalink" href="#model-a-v10_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>V₁:</strong> pass  </li>
+<li><strong>V₂:</strong> pass  </li>
+<li><strong>V₃:</strong> pass  </li>
+<li><strong>V₄:</strong> pass  </li>
+</ul>
+<h3 id="model-b-v11_3"><strong>Model B (v1.1)</strong><a class="toc-permalink" href="#model-b-v11_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>V₁:</strong> minor warnings (structural coherence)  </li>
+<li><strong>V₂:</strong> warning (dimensional continuity)  </li>
+<li><strong>V₃:</strong> warning (regime instability)  </li>
+<li><strong>V₄:</strong> warning (core alignment)  </li>
+</ul>
+<h3 id="interpretation_12"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_12" title="Permanent link to this heading">&para;</a></h3>
+<p>Model B remains functional but exhibits measurable structural instability.</p>
+<hr />
+<h2 id="8-step-7-drift-detection"><strong>8. Step 7 — Drift Detection</strong><a class="toc-permalink" href="#8-step-7-drift-detection" title="Permanent link to this heading">&para;</a></h2>
+<p>Assign drift categories (D₁–D₄) and severity.</p>
+<h3 id="model-b-v11_4"><strong>Model B (v1.1)</strong><a class="toc-permalink" href="#model-b-v11_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>D₁ Structural Drift:</strong> low  </li>
+<li><strong>D₂ Dimensional Drift:</strong> moderate  </li>
+<li><strong>D₃ Regime Drift:</strong> moderate  </li>
+<li><strong>D₄ Projection Drift:</strong> moderate  </li>
+</ul>
+<h3 id="severity-moderate-drift"><strong>Severity:</strong> <strong>Moderate Drift</strong><a class="toc-permalink" href="#severity-moderate-drift" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="interpretation_13"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_13" title="Permanent link to this heading">&para;</a></h3>
+<p>Model B introduces meaningful structural changes that may affect reliability or alignment.</p>
+<hr />
+<h2 id="9-summary"><strong>9. Summary</strong><a class="toc-permalink" href="#9-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how to compare latent pathways across model versions  </li>
+<li>how regime behavior reveals structural changes  </li>
+<li>how projection exposes coherence‑surface divergence  </li>
+<li>how vST layers quantify stability  </li>
+<li>how drift detection identifies meaningful differences  </li>
+</ul>
+<p>Cross‑version alignment is essential for evaluating model updates, fine‑tuning, and long‑term model governance.<br />
+### <em>vST for Large Language Models</em>  </p>
+<h3 id="example-1024d-latent-pathway-analysis-in-llm-inference"><em>Example: 1024D Latent Pathway Analysis in LLM Inference</em><a class="toc-permalink" href="#example-1024d-latent-pathway-analysis-in-llm-inference" title="Permanent link to this heading">&para;</a></h3>
+<p>This example demonstrates how a Large Language Model (LLM) produces a <strong>1024D latent pathway</strong> during inference and how that pathway is analyzed using the dimensional substrate and vST validation layers. The walkthrough illustrates regime behavior, coherence‑surface structure, projection into triadic cores, and drift‑detection signals.</p>
+<p>The goal is to provide a clear, reproducible demonstration of high‑dimensional latent‑trajectory analysis.</p>
+<hr />
+<h2 id="1-input-overview"><strong>1. Input Overview</strong><a class="toc-permalink" href="#1-input-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a transformer‑based LLM with ≥1024D hidden states  </li>
+<li>a single inference step across multiple layers  </li>
+<li>access to latent vectors at each layer  </li>
+<li>stable or transitional regime behavior  </li>
+<li>invertible projection into 3D–9D cores  </li>
+</ul>
+<p>No architecture‑specific mechanisms are required; the example is substrate‑agnostic.</p>
+<hr />
+<h2 id="2-step-1-extract-the-1024d-latent-pathway"><strong>2. Step 1 — Extract the 1024D Latent Pathway</strong><a class="toc-permalink" href="#2-step-1-extract-the-1024d-latent-pathway" title="Permanent link to this heading">&para;</a></h2>
+<p>During inference, the LLM produces a sequence of hidden‑state vectors:</p>
+<p>[<br />
+h_1^{(1024)},\ h_2^{(1024)},\ \dots,\ h_L^{(1024)}<br />
+]</p>
+<p>where each (h_i) is a 1024‑dimensional representation at layer (i).</p>
+<h3 id="observed-properties_1"><strong>Observed Properties</strong><a class="toc-permalink" href="#observed-properties_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>variance concentrated in 3–5 coherence bands  </li>
+<li>stable DP/TDP structure  </li>
+<li>smooth transitions across layers  </li>
+<li>identifiable coherence surfaces  </li>
+</ul>
+<h3 id="interpretation_14"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_14" title="Permanent link to this heading">&para;</a></h3>
+<p>The 1024D pathway is the highest‑resolution representation of the model’s internal reasoning for this token.</p>
+<hr />
+<h2 id="3-step-2-identify-highdimensional-regime-behavior"><strong>3. Step 2 — Identify High‑Dimensional Regime Behavior</strong><a class="toc-permalink" href="#3-step-2-identify-highdimensional-regime-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Using variance distribution, coherence‑surface continuity, and primitive‑level stability, classify each layer’s regime:</p>
+<ul>
+<li><strong>Layers 1–8:</strong> R₁ᴴ (stable)  </li>
+<li><strong>Layers 9–18:</strong> R₂ᴴ (transitional)  </li>
+<li><strong>Layers 19–24:</strong> R₁ᴴ (return to stability)  </li>
+<li><strong>Layers 25–28:</strong> R₂ᴴ (branching)  </li>
+<li><strong>Layers 29–32:</strong> R₃ᴴ (dispersion onset)  </li>
+</ul>
+<h3 id="interpretation_15"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_15" title="Permanent link to this heading">&para;</a></h3>
+<p>The model begins in a stable region, undergoes controlled reorientation, stabilizes again, and finally enters a mild dispersion regime near the output.</p>
+<p>This pattern is typical for medium‑to‑large LLMs.</p>
+<hr />
+<h2 id="4-step-3-project-1024d-9d-coherence-projection"><strong>4. Step 3 — Project 1024D → 9D (Coherence Projection)</strong><a class="toc-permalink" href="#4-step-3-project-1024d-9d-coherence-projection" title="Permanent link to this heading">&para;</a></h2>
+<p>Project each 1024D vector into the 9D coherence core.</p>
+<h3 id="what-is-preserved"><strong>What is preserved</strong><a class="toc-permalink" href="#what-is-preserved" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>pathway‑level coherence  </li>
+<li>regime identity  </li>
+<li>resonance‑time alignment  </li>
+<li>primitive‑level structure  </li>
+</ul>
+<h3 id="what-becomes-visible"><strong>What becomes visible</strong><a class="toc-permalink" href="#what-becomes-visible" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>branching behavior in R₂ᴴ  </li>
+<li>coherence‑surface curvature  </li>
+<li>dispersion onset in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_16"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_16" title="Permanent link to this heading">&para;</a></h3>
+<p>The 9D projection reveals the “shape” of the model’s reasoning trajectory.</p>
+<hr />
+<h2 id="5-step-4-project-9d-6d-interaction-projection"><strong>5. Step 4 — Project 9D → 6D (Interaction Projection)</strong><a class="toc-permalink" href="#5-step-4-project-9d-6d-interaction-projection" title="Permanent link to this heading">&para;</a></h2>
+<p>Compress the coherence pathway into the 6D interaction core.</p>
+<h3 id="what-is-preserved_1"><strong>What is preserved</strong><a class="toc-permalink" href="#what-is-preserved_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>relational geometry  </li>
+<li>interaction‑level structure  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<h3 id="what-becomes-visible_1"><strong>What becomes visible</strong><a class="toc-permalink" href="#what-becomes-visible_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>attention‑driven reorientation  </li>
+<li>syntactic or semantic branching  </li>
+<li>cross‑layer interaction patterns  </li>
+</ul>
+<h3 id="interpretation_17"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_17" title="Permanent link to this heading">&para;</a></h3>
+<p>The 6D projection exposes how the model integrates context and reorients its internal representation.</p>
+<hr />
+<h2 id="6-step-5-project-6d-3d-structural-projection"><strong>6. Step 5 — Project 6D → 3D (Structural Projection)</strong><a class="toc-permalink" href="#6-step-5-project-6d-3d-structural-projection" title="Permanent link to this heading">&para;</a></h2>
+<p>Reduce the interaction surfaces into 3D geometric motifs.</p>
+<h3 id="what-is-preserved_2"><strong>What is preserved</strong><a class="toc-permalink" href="#what-is-preserved_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>motif‑level geometry  </li>
+<li>backbone‑level continuity  </li>
+<li>stable structural invariants  </li>
+</ul>
+<h3 id="what-becomes-visible_2"><strong>What becomes visible</strong><a class="toc-permalink" href="#what-becomes-visible_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>compact stable motifs in R₁ᴴ  </li>
+<li>oscillatory patterns in R₂ᴴ  </li>
+<li>diffuse geometry in R₃ᴴ  </li>
+</ul>
+<h3 id="interpretation_18"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_18" title="Permanent link to this heading">&para;</a></h3>
+<p>The 3D projection provides the minimal interpretable representation of the latent pathway.</p>
+<hr />
+<h2 id="7-step-6-validate-with-vst-layers"><strong>7. Step 6 — Validate with vST Layers</strong><a class="toc-permalink" href="#7-step-6-validate-with-vst-layers" title="Permanent link to this heading">&para;</a></h2>
+<p>Apply vST layers (V₁–V₄):</p>
+<h3 id="v1-structural-coherence"><strong>V₁ — Structural Coherence</strong><a class="toc-permalink" href="#v1-structural-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>stable motifs in R₁ᴴ  </li>
+<li>partial fragmentation in R₃ᴴ  </li>
+</ul>
+<h3 id="v2-dimensional-continuity"><strong>V₂ — Dimensional Continuity</strong><a class="toc-permalink" href="#v2-dimensional-continuity" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>smooth projection 1024D → 9D → 6D → 3D  </li>
+<li>no scaling discontinuities  </li>
+</ul>
+<h3 id="v3-regimetransition-stability"><strong>V₃ — Regime‑Transition Stability</strong><a class="toc-permalink" href="#v3-regimetransition-stability" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>smooth R₁ᴴ → R₂ᴴ transitions  </li>
+<li>mild instability entering R₃ᴴ  </li>
+</ul>
+<h3 id="v4-core-alignment"><strong>V₄ — Core Alignment</strong><a class="toc-permalink" href="#v4-core-alignment" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>primitive‑aligned projection  </li>
+<li>stable mapping across layers  </li>
+</ul>
+<h3 id="outcome"><strong>Outcome</strong><a class="toc-permalink" href="#outcome" title="Permanent link to this heading">&para;</a></h3>
+<p>The latent pathway passes all vST layers with minor warnings in R₃ᴴ.</p>
+<hr />
+<h2 id="8-step-7-drift-detection_1"><strong>8. Step 7 — Drift Detection</strong><a class="toc-permalink" href="#8-step-7-drift-detection_1" title="Permanent link to this heading">&para;</a></h2>
+<p>Evaluate drift using D₁–D₄ categories:</p>
+<ul>
+<li><strong>D₁ (Structural Drift):</strong> none  </li>
+<li><strong>D₂ (Dimensional Drift):</strong> none  </li>
+<li><strong>D₃ (Regime Drift):</strong> mild (R₃ᴴ onset)  </li>
+<li><strong>D₄ (Projection Drift):</strong> none  </li>
+</ul>
+<h3 id="interpretation_19"><strong>Interpretation</strong><a class="toc-permalink" href="#interpretation_19" title="Permanent link to this heading">&para;</a></h3>
+<p>The model exhibits expected high‑dimensional dispersion near the output but no harmful drift.</p>
+<hr />
+<h2 id="9-summary_1"><strong>9. Summary</strong><a class="toc-permalink" href="#9-summary_1" title="Permanent link to this heading">&para;</a></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how a 1024D latent pathway is extracted  </li>
+<li>how regime behavior evolves across layers  </li>
+<li>how projection reveals coherence and instability  </li>
+<li>how vST layers validate structural integrity  </li>
+<li>how drift detection identifies dispersion without failure  </li>
+</ul>
+<p>The 1024D latent pathway is the canonical substrate for analyzing LLM inference at research‑grade resolution.<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/vst_for_large_language_models.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/vst_for_large_language_models.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

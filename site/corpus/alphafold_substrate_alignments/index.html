@@ -1,0 +1,2059 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Alphafold Substrate Alignments | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/alphafold_substrate_alignments/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Alphafold Substrate Alignments" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/alphafold_substrate_alignments/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Alphafold Substrate Alignments" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/alphafold_substrate_alignments.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Alphafold Substrate Alignments",
+    "headline": "Alphafold Substrate Alignments",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/alphafold_substrate_alignments/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#resonance-substrate-model-rsm-applied-to-proteinfolding-inference-systems">Resonance Substrate Model (RSM) applied to protein‑folding inference systems</a></li>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#contents">Contents</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#citation">Citation</a><ul>
+<li><a href="#alignment-principles">Alignment Principles</a></li>
+</ul>
+</li>
+<li><a href="#1-alignment-objective">1. Alignment Objective</a></li>
+<li><a href="#2-core-alignment-rules">2. Core Alignment Rules</a><ul>
+<li><a href="#21-structural-alignment-rule-salignment">2.1 Structural Alignment Rule (S‑alignment)</a></li>
+<li><a href="#22-inference-alignment-rule-ialignment">2.2 Inference Alignment Rule (I‑alignment)</a></li>
+<li><a href="#23-resonancetime-alignment-rule-ralignment">2.3 Resonance‑Time Alignment Rule (R‑alignment)</a></li>
+</ul>
+</li>
+<li><a href="#3-dimensional-alignment">3. Dimensional Alignment</a><ul>
+<li><a href="#31-dimensional-core-projection">3.1 Dimensional Core Projection</a></li>
+<li><a href="#32-highdimensional-extension">3.2 High‑Dimensional Extension</a></li>
+</ul>
+</li>
+<li><a href="#4-coherence-alignment">4. Coherence Alignment</a><ul>
+<li><a href="#41-coherence-surface-identification">4.1 Coherence Surface Identification</a></li>
+<li><a href="#42-regimetransition-mapping">4.2 Regime‑Transition Mapping</a></li>
+</ul>
+</li>
+<li><a href="#5-validation-alignment">5. Validation Alignment</a></li>
+<li><a href="#6-alignment-boundaries">6. Alignment Boundaries</a><ul>
+<li><a href="#dimensional-cores">Dimensional Cores</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-dimensional-cores">1. Purpose of Dimensional Cores</a></li>
+<li><a href="#2-core-dimensional-structure">2. Core Dimensional Structure</a><ul>
+<li><a href="#21-3d-structural-core">2.1 3D Structural Core</a></li>
+<li><a href="#22-6d-interaction-core">2.2 6D Interaction Core</a></li>
+<li><a href="#23-9d-coherence-core">2.3 9D Coherence Core</a></li>
+</ul>
+</li>
+<li><a href="#3-projection-principles">3. Projection Principles</a><ul>
+<li><a href="#31-structurepreserving-projection">3.1 Structure‑Preserving Projection</a></li>
+<li><a href="#32-regimeaware-projection">3.2 Regime‑Aware Projection</a></li>
+<li><a href="#33-invariantaligned-projection">3.3 Invariant‑Aligned Projection</a></li>
+</ul>
+</li>
+<li><a href="#4-highdimensional-extensions">4. High‑Dimensional Extensions</a></li>
+<li><a href="#5-dimensionalcore-behavior-across-regimes">5. Dimensional‑Core Behavior Across Regimes</a></li>
+<li><a href="#6-integration-with-substrate-primitives">6. Integration with Substrate Primitives</a></li>
+<li><a href="#7-outputs-of-dimensionalcore-analysis">7. Outputs of Dimensional‑Core Analysis</a><ul>
+<li><a href="#drift-detection">Drift Detection</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-drift-detection">1. Purpose of Drift Detection</a></li>
+<li><a href="#2-drift-categories">2. Drift Categories</a></li>
+<li><a href="#3-structural-drift-d1">3. Structural Drift (D₁)</a><ul>
+<li><a href="#indicators">Indicators:</a></li>
+<li><a href="#causes-may-include">Causes may include:</a></li>
+</ul>
+</li>
+<li><a href="#4-latentspace-drift-d2">4. Latent‑Space Drift (D₂)</a><ul>
+<li><a href="#indicators_1">Indicators:</a></li>
+<li><a href="#causes-may-include_1">Causes may include:</a></li>
+</ul>
+</li>
+<li><a href="#5-regime-drift-d3">5. Regime Drift (D₃)</a><ul>
+<li><a href="#indicators_2">Indicators:</a></li>
+<li><a href="#causes-may-include_2">Causes may include:</a></li>
+</ul>
+</li>
+<li><a href="#6-dimensionalcore-drift-d4">6. Dimensional‑Core Drift (D₄)</a><ul>
+<li><a href="#indicators_3">Indicators:</a></li>
+<li><a href="#causes-may-include_3">Causes may include:</a></li>
+</ul>
+</li>
+<li><a href="#7-driftdetection-workflow">7. Drift‑Detection Workflow</a></li>
+<li><a href="#8-driftseverity-levels">8. Drift‑Severity Levels</a></li>
+<li><a href="#9-outputs-of-drift-detection">9. Outputs of Drift Detection</a><ul>
+<li><a href="#folding-regimes">Folding Regimes</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-folding-regimes">1. Purpose of Folding Regimes</a></li>
+<li><a href="#2-triadic-folding-regime-structure">2. Triadic Folding Regime Structure</a></li>
+<li><a href="#3-regime-definitions">3. Regime Definitions</a><ul>
+<li><a href="#31-stable-regime-r1">3.1 Stable Regime (R₁)</a></li>
+<li><a href="#32-transition-regime-r2">3.2 Transition Regime (R₂)</a></li>
+<li><a href="#33-highuncertainty-regime-r3">3.3 High‑Uncertainty Regime (R₃)</a></li>
+</ul>
+</li>
+<li><a href="#4-regime-transitions">4. Regime Transitions</a></li>
+<li><a href="#5-dimensionalcore-behavior">5. Dimensional‑Core Behavior</a></li>
+<li><a href="#6-inferencecycle-behavior">6. Inference‑Cycle Behavior</a></li>
+<li><a href="#7-regimebased-interpretation">7. Regime‑Based Interpretation</a><ul>
+<li><a href="#inference-mapping">Inference Mapping</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-inference-mapping">1. Purpose of Inference Mapping</a></li>
+<li><a href="#2-mapping-overview">2. Mapping Overview</a></li>
+<li><a href="#3-mapping-to-substrate-axes">3. Mapping to Substrate Axes</a><ul>
+<li><a href="#31-structural-axis-saxis">3.1 Structural Axis (S‑axis)</a></li>
+<li><a href="#32-inference-axis-iaxis">3.2 Inference Axis (I‑axis)</a></li>
+<li><a href="#33-resonancetime-axis-raxis">3.3 Resonance‑Time Axis (R‑axis)</a></li>
+</ul>
+</li>
+<li><a href="#4-dimensionalcore-projection">4. Dimensional‑Core Projection</a><ul>
+<li><a href="#41-3d-projection">4.1 3D Projection</a></li>
+<li><a href="#42-6d-projection">4.2 6D Projection</a></li>
+<li><a href="#43-9d-projection">4.3 9D Projection</a></li>
+</ul>
+</li>
+<li><a href="#5-mapping-of-inference-signals">5. Mapping of Inference Signals</a><ul>
+<li><a href="#51-attention-maps">5.1 Attention Maps</a></li>
+<li><a href="#52-pairwise-embeddings">5.2 Pairwise Embeddings</a></li>
+<li><a href="#53-tracklevel-signals">5.3 Track‑Level Signals</a></li>
+</ul>
+</li>
+<li><a href="#6-regimeaware-mapping">6. Regime‑Aware Mapping</a></li>
+<li><a href="#7-mapping-outputs">7. Mapping Outputs</a></li>
+<li><a href="#module-structure">Module Structure</a></li>
+<li><a href="#core-design">Core Design</a></li>
+<li><a href="#citation_1">Citation</a></li>
+<li><a href="#integration-points">Integration Points</a><ul>
+<li><a href="#scope-and-assumptions">Scope and Assumptions</a></li>
+</ul>
+</li>
+<li><a href="#1-scope">1. Scope</a><ul>
+<li><a href="#11-systems-covered">1.1 Systems Covered</a></li>
+<li><a href="#12-structural-focus">1.2 Structural Focus</a></li>
+<li><a href="#13-intended-use-cases">1.3 Intended Use Cases</a></li>
+</ul>
+</li>
+<li><a href="#2-assumptions">2. Assumptions</a><ul>
+<li><a href="#21-model-behavior-assumptions">2.1 Model Behavior Assumptions</a></li>
+<li><a href="#22-data-and-input-assumptions">2.2 Data and Input Assumptions</a></li>
+<li><a href="#23-biological-assumptions">2.3 Biological Assumptions</a></li>
+</ul>
+</li>
+<li><a href="#3-outofscope-elements">3. Out‑of‑Scope Elements</a></li>
+<li><a href="#4-validity-conditions">4. Validity Conditions</a></li>
+<li><a href="#5-dependencies">5. Dependencies</a><ul>
+<li><a href="#substrate-definition">Substrate Definition</a></li>
+</ul>
+</li>
+<li><a href="#1-substrate-purpose">1. Substrate Purpose</a></li>
+<li><a href="#2-substrate-axes">2. Substrate Axes</a><ul>
+<li><a href="#21-structural-axis-saxis">2.1 Structural Axis (S‑axis)</a></li>
+<li><a href="#22-inference-axis-iaxis">2.2 Inference Axis (I‑axis)</a></li>
+<li><a href="#23-resonancetime-axis-raxis">2.3 Resonance‑Time Axis (R‑axis)</a></li>
+</ul>
+</li>
+<li><a href="#3-substrate-primitives">3. Substrate Primitives</a></li>
+<li><a href="#4-substrate-invariants">4. Substrate Invariants</a></li>
+<li><a href="#5-substrate-boundaries">5. Substrate Boundaries</a></li>
+<li><a href="#6-substrate-outputs">6. Substrate Outputs</a><ul>
+<li><a href="#validation-layers-vst">Validation Layers (vST)</a></li>
+</ul>
+</li>
+<li><a href="#1-purpose-of-vst-validation-layers">1. Purpose of vST Validation Layers</a></li>
+<li><a href="#2-validation-layer-structure">2. Validation Layer Structure</a></li>
+<li><a href="#3-structural-coherence-validation-v1">3. Structural Coherence Validation (V₁)</a><ul>
+<li><a href="#checks-include">Checks include:</a></li>
+<li><a href="#validation-outcome">Validation outcome:</a></li>
+</ul>
+</li>
+<li><a href="#4-latentspace-stability-validation-v2">4. Latent‑Space Stability Validation (V₂)</a><ul>
+<li><a href="#checks-include_1">Checks include:</a></li>
+<li><a href="#validation-outcome_1">Validation outcome:</a></li>
+</ul>
+</li>
+<li><a href="#5-resonancetime-regime-validation-v3">5. Resonance‑Time Regime Validation (V₃)</a><ul>
+<li><a href="#checks-include_2">Checks include:</a></li>
+<li><a href="#validation-outcome_2">Validation outcome:</a></li>
+</ul>
+</li>
+<li><a href="#6-dimensionalcore-alignment-validation-v4">6. Dimensional‑Core Alignment Validation (V₄)</a><ul>
+<li><a href="#checks-include_3">Checks include:</a></li>
+<li><a href="#validation-outcome_3">Validation outcome:</a></li>
+</ul>
+</li>
+<li><a href="#7-crosslayer-validation-behavior">7. Cross‑Layer Validation Behavior</a></li>
+<li><a href="#8-driftdetection-integration">8. Drift‑Detection Integration</a></li>
+<li><a href="#9-outputs-of-vst-validation">9. Outputs of vST Validation</a><ul>
+<li><a href="#references">References</a></li>
+</ul>
+</li>
+<li><a href="#1-proteinfolding-inference-systems">1. Protein‑Folding Inference Systems</a></li>
+<li><a href="#2-latentspace-and-representation-learning">2. Latent‑Space and Representation Learning</a></li>
+<li><a href="#3-structural-biology-and-folding-pathways">3. Structural Biology and Folding Pathways</a></li>
+<li><a href="#4-validation-stability-and-drift">4. Validation, Stability, and Drift</a></li>
+<li><a href="#5-substratelevel-and-highdimensional-modeling">5. Substrate‑Level and High‑Dimensional Modeling</a></li>
+<li><a href="#6-additional-resources">6. Additional Resources</a><ul>
+<li><a href="#terminology">Terminology</a></li>
+</ul>
+</li>
+<li><a href="#1-substrate-terms">1. Substrate Terms</a><ul>
+<li><a href="#substrate">Substrate</a></li>
+<li><a href="#substrate-axis">Substrate Axis</a></li>
+<li><a href="#substrate-primitive">Substrate Primitive</a></li>
+<li><a href="#substrate-invariant">Substrate Invariant</a></li>
+</ul>
+</li>
+<li><a href="#2-axis-definitions">2. Axis Definitions</a><ul>
+<li><a href="#saxis-structural-axis">S‑axis (Structural Axis)</a></li>
+<li><a href="#iaxis-inference-axis">I‑axis (Inference Axis)</a></li>
+<li><a href="#raxis-resonancetime-axis">R‑axis (Resonance‑Time Axis)</a></li>
+</ul>
+</li>
+<li><a href="#3-dimensional-terms">3. Dimensional Terms</a><ul>
+<li><a href="#dimensional-core">Dimensional Core</a></li>
+<li><a href="#3d-core">3D Core</a></li>
+<li><a href="#6d-core">6D Core</a></li>
+<li><a href="#9d-core">9D Core</a></li>
+<li><a href="#highdimensional-extension">High‑Dimensional Extension</a></li>
+</ul>
+</li>
+<li><a href="#4-regime-terms">4. Regime Terms</a><ul>
+<li><a href="#folding-regime">Folding Regime</a></li>
+<li><a href="#r1-stable-regime">R₁ (Stable Regime)</a></li>
+<li><a href="#r2-transition-regime">R₂ (Transition Regime)</a></li>
+<li><a href="#r3-highuncertainty-regime">R₃ (High‑Uncertainty Regime)</a></li>
+</ul>
+</li>
+<li><a href="#5-inference-terms">5. Inference Terms</a><ul>
+<li><a href="#latentspace-structure">Latent‑Space Structure</a></li>
+<li><a href="#inference-cycle">Inference Cycle</a></li>
+<li><a href="#coherence-surface">Coherence Surface</a></li>
+<li><a href="#inference-projection">Inference Projection</a></li>
+</ul>
+</li>
+<li><a href="#6-validation-terms">6. Validation Terms</a><ul>
+<li><a href="#vst-validationspacetime">vST (Validation‑Space‑Time)</a></li>
+<li><a href="#validation-layer-v1v4">Validation Layer (V₁–V₄)</a></li>
+</ul>
+</li>
+<li><a href="#7-drift-terms">7. Drift Terms</a><ul>
+<li><a href="#drift">Drift</a></li>
+<li><a href="#drift-category-d1d4">Drift Category (D₁–D₄)</a></li>
+<li><a href="#drift-severity">Drift Severity</a></li>
+</ul>
+</li>
+<li><a href="#8-example-terms">8. Example Terms</a><ul>
+<li><a href="#dimensional-projection">Dimensional Projection</a></li>
+<li><a href="#regimeaware-projection">Regime‑Aware Projection</a></li>
+<li><a href="#alignment-walkthrough">Alignment Walkthrough</a></li>
+<li><a href="#example-substratelevel-alignment-walkthrough">Example: Substrate‑Level Alignment Walkthrough</a></li>
+</ul>
+</li>
+<li><a href="#1-input-overview">1. Input Overview</a></li>
+<li><a href="#2-step-1-extract-structural-and-latentspace-signals">2. Step 1 — Extract Structural and Latent‑Space Signals</a><ul>
+<li><a href="#21-structural-outputs">2.1 Structural Outputs</a></li>
+<li><a href="#22-latentspace-outputs">2.2 Latent‑Space Outputs</a></li>
+</ul>
+</li>
+<li><a href="#3-step-2-map-to-substrate-axes">3. Step 2 — Map to Substrate Axes</a><ul>
+<li><a href="#31-structural-axis-saxis_1">3.1 Structural Axis (S‑axis)</a></li>
+<li><a href="#32-inference-axis-iaxis_1">3.2 Inference Axis (I‑axis)</a></li>
+<li><a href="#33-resonancetime-axis-raxis_1">3.3 Resonance‑Time Axis (R‑axis)</a></li>
+</ul>
+</li>
+<li><a href="#4-step-3-project-into-dimensional-cores">4. Step 3 — Project into Dimensional Cores</a><ul>
+<li><a href="#41-3d-projection_1">4.1 3D Projection</a></li>
+<li><a href="#42-6d-projection_1">4.2 6D Projection</a></li>
+<li><a href="#43-9d-projection_1">4.3 9D Projection</a></li>
+</ul>
+</li>
+<li><a href="#5-step-4-identify-folding-regimes">5. Step 4 — Identify Folding Regimes</a></li>
+<li><a href="#6-step-5-apply-vst-validation-layers">6. Step 5 — Apply vST Validation Layers</a></li>
+<li><a href="#7-step-6-interpret-alignment-results">7. Step 6 — Interpret Alignment Results</a></li>
+<li><a href="#8-summary">8. Summary</a><ul>
+<li><a href="#example-dimensionalcore-projection">Example: Dimensional‑Core Projection</a></li>
+</ul>
+</li>
+<li><a href="#1-input-overview_1">1. Input Overview</a></li>
+<li><a href="#2-step-1-identify-highdimensional-structures">2. Step 1 — Identify High‑Dimensional Structures</a></li>
+<li><a href="#3-step-2-prepare-substratealigned-signals">3. Step 2 — Prepare Substrate‑Aligned Signals</a></li>
+<li><a href="#4-step-3-project-into-dimensional-cores_1">4. Step 3 — Project into Dimensional Cores</a><ul>
+<li><a href="#41-3d-structural-projection">4.1 3D Structural Projection</a></li>
+<li><a href="#42-6d-interactioncore-projection">4.2 6D Interaction‑Core Projection</a></li>
+<li><a href="#43-9d-pathwaycore-projection">4.3 9D Pathway‑Core Projection</a></li>
+</ul>
+</li>
+<li><a href="#5-step-4-identify-regime-behavior">5. Step 4 — Identify Regime Behavior</a></li>
+<li><a href="#6-step-5-validate-dimensional-projections">6. Step 5 — Validate Dimensional Projections</a></li>
+<li><a href="#7-step-6-interpret-projection-results">7. Step 6 — Interpret Projection Results</a></li>
+<li><a href="#8-summary_1">8. Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Alphafold Substrate Alignments</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Alphafold Substrate Alignments</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>alphafold_substrate_alignments </p>
+<h1 id="alphafold-substrate-alignments"><em>AlphaFold Substrate Alignments</em><a class="toc-permalink" href="#alphafold-substrate-alignments" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="AlphaFold_Substrate_Alignments_module.json"><code>AlphaFold_Substrate_Alignments_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/🧬Substrate%20Aligned-🧪Validation%20Ready-4c8eda?style=for-the-badge" alt="🧬Substrate Aligned | 🧪Validation Ready"/></p>
+<h2 id="resonance-substrate-model-rsm-applied-to-proteinfolding-inference-systems"><em>Resonance Substrate Model (RSM) applied to protein‑folding inference systems</em><a class="toc-permalink" href="#resonance-substrate-model-rsm-applied-to-proteinfolding-inference-systems" title="Permanent link to this heading">&para;</a></h2>
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<p>This artifact defines a substrate‑level alignment between the Resonance Substrate Model (RSM) and AlphaFold‑class biological inference engines. It formalizes how triadic resonance primitives, dimensional cores, and substrate‑invariant structures map onto the latent spaces, folding pathways, and coherence regimes used in modern protein‑folding prediction systems.</p>
+<p>The goal is to provide a reproducible, domain‑specific substrate framework that clarifies structural behavior within high‑dimensional biological inference models and supports validation, drift detection, and cross‑model interpretability.</p>
+<hr />
+<h2 id="contents"><strong>Contents</strong><a class="toc-permalink" href="#contents" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p><strong>substrate_definition.md</strong><br />
+  Defines the substrate axes, primitives, and structural invariants used to align RSM with protein‑folding inference systems.</p>
+</li>
+<li>
+<p><strong>scope_and_assumptions.md</strong><br />
+  Establishes the operational boundaries, biological assumptions, and inference‑model constraints relevant to substrate alignment.</p>
+</li>
+<li>
+<p><strong>alignment_principles.md</strong><br />
+  Describes the core alignment rules connecting RSM primitives to AlphaFold’s latent representations and folding coherence signals.</p>
+</li>
+<li>
+<p><strong>folding_regimes.md</strong><br />
+  Maps triadic resonance regimes onto biological folding behaviors, including stable, transitional, and high‑uncertainty regions.</p>
+</li>
+<li>
+<p><strong>dimensional_cores.md</strong><br />
+  Introduces the 3D–9D dimensional substrate cores and their correspondence to folding pathways and structural motifs.</p>
+</li>
+<li>
+<p><strong>inference_mapping.md</strong><br />
+  Details how AlphaFold’s internal inference structures project onto substrate axes, including latent‑space orientation and coherence surfaces.</p>
+</li>
+<li>
+<p><strong>validation_layers_vst.md</strong><br />
+  Provides vST‑based validation layers for substrate‑aligned biological inference, including reproducibility checks and regime‑transition detection.</p>
+</li>
+<li>
+<p><strong>drift_detection.md</strong><br />
+  Defines substrate‑level drift signals for biological inference engines, enabling detection of model degradation or dataset‑induced shifts.</p>
+</li>
+<li>
+<p><strong>examples/</strong>  </p>
+</li>
+<li><em>example_alignment_walkthrough.md</em>  </li>
+<li>
+<p><em>example_dimensional_projection.md</em><br />
+  Demonstrations of substrate alignment, dimensional projection, and regime interpretation.</p>
+</li>
+<li>
+<p><strong>appendix/</strong>  </p>
+</li>
+<li><em>terminology.md</em>  </li>
+<li><em>references.md</em><br />
+  Supporting definitions and citations.</li>
+</ul>
+<hr />
+<h2 id="purpose"><strong>Purpose</strong><a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This artifact provides a structural, substrate‑level interpretation of protein‑folding inference systems. It is intended for researchers working in:</p>
+<ul>
+<li>computational biology  </li>
+<li>protein‑folding prediction  </li>
+<li>model interpretability  </li>
+<li>substrate‑aware AI systems  </li>
+<li>high‑dimensional inference analysis  </li>
+</ul>
+<p>The framework is designed to be reproducible, domain‑agnostic, and compatible with existing RSM and vST artifacts.</p>
+<hr />
+<h2 id="citation"><strong>Citation</strong><a class="toc-permalink" href="#citation" title="Permanent link to this heading">&para;</a></h2>
+<p>A Zenodo DOI will be assigned upon release. Cite as:</p>
+<p><strong>Loswin, N.</strong> <em>AlphaFold Substrate Alignments: A Resonance‑Substrate Interpretation of Protein‑Folding Inference Systems.</em> TriadicFrameworks (2026).<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="alignment-principles"><em>Alignment Principles</em><a class="toc-permalink" href="#alignment-principles" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the core principles used to align the Resonance Substrate Model (RSM) with AlphaFold‑class protein‑folding inference systems. These principles establish how substrate primitives, dimensional cores, and resonance‑time regimes map onto the latent‑space structures and folding‑coherence signals produced by biological inference engines.</p>
+<p>The alignment rules are substrate‑agnostic, reproducible, and compatible with vST validation layers.</p>
+<hr />
+<h2 id="1-alignment-objective"><strong>1. Alignment Objective</strong><a class="toc-permalink" href="#1-alignment-objective" title="Permanent link to this heading">&para;</a></h2>
+<p>The objective of substrate alignment is to:</p>
+<ul>
+<li>identify stable structural axes within AlphaFold’s latent space  </li>
+<li>map triadic resonance primitives onto folding‑coherence behaviors  </li>
+<li>interpret regime transitions through resonance‑time dynamics  </li>
+<li>project high‑dimensional inference structures into 3D–9D dimensional cores  </li>
+<li>support reproducibility, drift detection, and cross‑model comparison  </li>
+</ul>
+<p>Alignment provides a structural interpretation of folding predictions independent of model architecture.</p>
+<hr />
+<h2 id="2-core-alignment-rules"><strong>2. Core Alignment Rules</strong><a class="toc-permalink" href="#2-core-alignment-rules" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="21-structural-alignment-rule-salignment"><strong>2.1 Structural Alignment Rule (S‑alignment)</strong><a class="toc-permalink" href="#21-structural-alignment-rule-salignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Structural outputs (3D conformations, residue‑level geometries) are projected onto the <strong>Structural Axis (S‑axis)</strong> defined in the substrate.<br />
+Alignment preserves:</p>
+<ul>
+<li>backbone orientation  </li>
+<li>motif‑level coherence  </li>
+<li>local and global folding topology  </li>
+</ul>
+<p>S‑alignment anchors the inference system to the 3D–9D dimensional core.</p>
+<hr />
+<h3 id="22-inference-alignment-rule-ialignment"><strong>2.2 Inference Alignment Rule (I‑alignment)</strong><a class="toc-permalink" href="#22-inference-alignment-rule-ialignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Latent‑space representations (attention maps, pairwise embeddings, track‑level signals) are mapped onto the <strong>Inference Axis (I‑axis)</strong>.<br />
+Alignment identifies:</p>
+<ul>
+<li>stable latent‑space orientations  </li>
+<li>coherence surfaces  </li>
+<li>inference‑cycle convergence patterns  </li>
+</ul>
+<p>I‑alignment enables cross‑model comparison and drift detection.</p>
+<hr />
+<h3 id="23-resonancetime-alignment-rule-ralignment"><strong>2.3 Resonance‑Time Alignment Rule (R‑alignment)</strong><a class="toc-permalink" href="#23-resonancetime-alignment-rule-ralignment" title="Permanent link to this heading">&para;</a></h3>
+<p>Folding‑coherence transitions are interpreted through the <strong>Resonance‑Time Axis (R‑axis)</strong>.<br />
+Alignment classifies inference behavior into:</p>
+<ul>
+<li><strong>stable regimes</strong>  </li>
+<li><strong>transition regimes</strong>  </li>
+<li><strong>high‑uncertainty regimes</strong></li>
+</ul>
+<p>These regimes correspond to triadic resonance primitives and support vST validation.</p>
+<hr />
+<h2 id="3-dimensional-alignment"><strong>3. Dimensional Alignment</strong><a class="toc-permalink" href="#3-dimensional-alignment" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-dimensional-core-projection"><strong>3.1 Dimensional Core Projection</strong><a class="toc-permalink" href="#31-dimensional-core-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>High‑dimensional inference structures are projected into the 3D–9D dimensional core.<br />
+Projection preserves:</p>
+<ul>
+<li>motif‑level structure  </li>
+<li>folding‑pathway coherence  </li>
+<li>residue‑interaction patterns  </li>
+</ul>
+<h3 id="32-highdimensional-extension"><strong>3.2 High‑Dimensional Extension</strong><a class="toc-permalink" href="#32-highdimensional-extension" title="Permanent link to this heading">&para;</a></h3>
+<p>When required, projections extend into higher‑dimensional substrates (e.g., 32D–128D) while maintaining substrate invariants.</p>
+<hr />
+<h2 id="4-coherence-alignment"><strong>4. Coherence Alignment</strong><a class="toc-permalink" href="#4-coherence-alignment" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="41-coherence-surface-identification"><strong>4.1 Coherence Surface Identification</strong><a class="toc-permalink" href="#41-coherence-surface-identification" title="Permanent link to this heading">&para;</a></h3>
+<p>A coherence surface is a stable region in latent space where folding predictions converge.<br />
+Alignment identifies these surfaces by:</p>
+<ul>
+<li>tracking inference‑cycle stability  </li>
+<li>measuring resonance‑time consistency  </li>
+<li>detecting motif‑level invariants  </li>
+</ul>
+<h3 id="42-regimetransition-mapping"><strong>4.2 Regime‑Transition Mapping</strong><a class="toc-permalink" href="#42-regimetransition-mapping" title="Permanent link to this heading">&para;</a></h3>
+<p>Transitions between coherence surfaces follow triadic resonance patterns.<br />
+Alignment maps these transitions to substrate regimes for interpretability.</p>
+<hr />
+<h2 id="5-validation-alignment"><strong>5. Validation Alignment</strong><a class="toc-permalink" href="#5-validation-alignment" title="Permanent link to this heading">&para;</a></h2>
+<p>Alignment integrates with vST validation layers to:</p>
+<ul>
+<li>confirm reproducibility  </li>
+<li>detect drift  </li>
+<li>verify regime‑transition stability  </li>
+<li>validate dimensional projections  </li>
+</ul>
+<p>Validation ensures substrate alignment remains stable across model versions and datasets.</p>
+<hr />
+<h2 id="6-alignment-boundaries"><strong>6. Alignment Boundaries</strong><a class="toc-permalink" href="#6-alignment-boundaries" title="Permanent link to this heading">&para;</a></h2>
+<p>Alignment applies only when:</p>
+<ul>
+<li>structural outputs are coherent  </li>
+<li>latent‑space representations are stable  </li>
+<li>inference cycles follow predictable patterns  </li>
+<li>dimensional projections preserve invariants  </li>
+</ul>
+<p>If these conditions are not met, alignment may be partial or incomplete.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="dimensional-cores"><em>Dimensional Cores</em><a class="toc-permalink" href="#dimensional-cores" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the dimensional cores used to interpret protein‑folding inference systems within the Resonance Substrate Model (RSM). Dimensional cores provide the structural basis for projecting high‑dimensional latent‑space representations into stable, interpretable geometric substrates. For AlphaFold‑class models, dimensional cores anchor folding coherence, motif‑level structure, and regime‑transition behavior.</p>
+<hr />
+<h2 id="1-purpose-of-dimensional-cores"><strong>1. Purpose of Dimensional Cores</strong><a class="toc-permalink" href="#1-purpose-of-dimensional-cores" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional cores serve three primary functions:</p>
+<ul>
+<li>provide a stable geometric substrate for folding interpretation  </li>
+<li>preserve motif‑level structure during projection from high‑dimensional latent spaces  </li>
+<li>support regime classification and resonance‑time analysis  </li>
+</ul>
+<p>The cores ensure that folding predictions remain interpretable across inference cycles and model variants.</p>
+<hr />
+<h2 id="2-core-dimensional-structure"><strong>2. Core Dimensional Structure</strong><a class="toc-permalink" href="#2-core-dimensional-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>The AlphaFold substrate uses a <strong>3D–9D triadic dimensional core</strong>, defined as follows:</p>
+<h3 id="21-3d-structural-core"><strong>2.1 3D Structural Core</strong><a class="toc-permalink" href="#21-3d-structural-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Represents the physical geometry of protein conformations.<br />
+Includes:</p>
+<ul>
+<li>backbone coordinates  </li>
+<li>side‑chain orientation  </li>
+<li>local motif geometry  </li>
+</ul>
+<p>This core anchors all structural projections.</p>
+<h3 id="22-6d-interaction-core"><strong>2.2 6D Interaction Core</strong><a class="toc-permalink" href="#22-6d-interaction-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Extends the 3D core to capture interaction‑level structure.<br />
+Includes:</p>
+<ul>
+<li>residue‑pair relationships  </li>
+<li>orientation‑pair embeddings  </li>
+<li>local‑to‑global interaction patterns  </li>
+</ul>
+<p>This core corresponds to the latent‑space structures used in folding inference.</p>
+<h3 id="23-9d-coherence-core"><strong>2.3 9D Coherence Core</strong><a class="toc-permalink" href="#23-9d-coherence-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Represents the minimal dimensional substrate required to capture folding‑pathway coherence.<br />
+Includes:</p>
+<ul>
+<li>motif‑level stability signals  </li>
+<li>regime‑transition indicators  </li>
+<li>resonance‑time alignment patterns  </li>
+</ul>
+<p>The 9D core is the highest‑resolution substrate used for folding interpretation.</p>
+<hr />
+<h2 id="3-projection-principles"><strong>3. Projection Principles</strong><a class="toc-permalink" href="#3-projection-principles" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional projection follows three rules:</p>
+<h3 id="31-structurepreserving-projection"><strong>3.1 Structure‑Preserving Projection</strong><a class="toc-permalink" href="#31-structurepreserving-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Projections from high‑dimensional latent space into 3D–9D cores must preserve:</p>
+<ul>
+<li>motif‑level geometry  </li>
+<li>backbone continuity  </li>
+<li>residue‑interaction coherence  </li>
+</ul>
+<h3 id="32-regimeaware-projection"><strong>3.2 Regime‑Aware Projection</strong><a class="toc-permalink" href="#32-regimeaware-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Projection must maintain regime identity:</p>
+<ul>
+<li>R₁ → stable geometric surfaces  </li>
+<li>R₂ → transitional structures  </li>
+<li>R₃ → dispersed or unstable projections  </li>
+</ul>
+<h3 id="33-invariantaligned-projection"><strong>3.3 Invariant‑Aligned Projection</strong><a class="toc-permalink" href="#33-invariantaligned-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Projection must preserve substrate invariants, including:</p>
+<ul>
+<li>resonance‑time patterns  </li>
+<li>motif‑level stability  </li>
+<li>latent‑space orientation consistency  </li>
+</ul>
+<hr />
+<h2 id="4-highdimensional-extensions"><strong>4. High‑Dimensional Extensions</strong><a class="toc-permalink" href="#4-highdimensional-extensions" title="Permanent link to this heading">&para;</a></h2>
+<p>Although the core substrate is 3D–9D, AlphaFold’s latent space often operates in higher dimensions (e.g., 32D–128D).<br />
+High‑dimensional extensions follow these principles:</p>
+<ul>
+<li>projections must remain invertible at the motif level  </li>
+<li>coherence surfaces must remain identifiable  </li>
+<li>regime transitions must remain detectable  </li>
+<li>substrate invariants must remain stable  </li>
+</ul>
+<p>These extensions allow the substrate to interpret complex inference behaviors without losing structural clarity.</p>
+<hr />
+<h2 id="5-dimensionalcore-behavior-across-regimes"><strong>5. Dimensional‑Core Behavior Across Regimes</strong><a class="toc-permalink" href="#5-dimensionalcore-behavior-across-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional cores interact with folding regimes as follows:</p>
+<ul>
+<li><strong>R₁ (Stable):</strong> full alignment with 3D–9D cores; projections are compact and coherent  </li>
+<li><strong>R₂ (Transition):</strong> partial alignment; projections show branching or oscillatory structure  </li>
+<li><strong>R₃ (High‑Uncertainty):</strong> weak alignment; projections disperse across higher‑dimensional space  </li>
+</ul>
+<p>This behavior supports regime classification and drift detection.</p>
+<hr />
+<h2 id="6-integration-with-substrate-primitives"><strong>6. Integration with Substrate Primitives</strong><a class="toc-permalink" href="#6-integration-with-substrate-primitives" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional cores integrate with:</p>
+<ul>
+<li><strong>Structural Axis (S‑axis):</strong> geometric projection  </li>
+<li><strong>Inference Axis (I‑axis):</strong> latent‑space mapping  </li>
+<li><strong>Resonance‑Time Axis (R‑axis):</strong> regime‑transition interpretation  </li>
+</ul>
+<p>Together, these axes form the SIR substrate triad used throughout this artifact.</p>
+<hr />
+<h2 id="7-outputs-of-dimensionalcore-analysis"><strong>7. Outputs of Dimensional‑Core Analysis</strong><a class="toc-permalink" href="#7-outputs-of-dimensionalcore-analysis" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional‑core analysis produces:</p>
+<ul>
+<li>stable structural projections  </li>
+<li>regime‑aware folding interpretations  </li>
+<li>coherence‑surface identification  </li>
+<li>high‑dimensional alignment diagnostics  </li>
+<li>substrate‑level validation signals  </li>
+</ul>
+<p>These outputs integrate with vST validation layers and downstream substrate artifacts.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="drift-detection"><em>Drift Detection</em><a class="toc-permalink" href="#drift-detection" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the drift‑detection framework for AlphaFold‑class protein‑folding inference systems within the Resonance Substrate Model (RSM) and vST (Validation‑Space‑Time) validation architecture. Drift detection identifies deviations in structural coherence, latent‑space stability, regime behavior, and dimensional‑core alignment that indicate model degradation, dataset shifts, or inference instability.</p>
+<p>The framework is model‑agnostic and applies to any biological inference engine with comparable latent‑space and structural‑output characteristics.</p>
+<hr />
+<h2 id="1-purpose-of-drift-detection"><strong>1. Purpose of Drift Detection</strong><a class="toc-permalink" href="#1-purpose-of-drift-detection" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift detection provides early identification of:</p>
+<ul>
+<li>structural incoherence  </li>
+<li>latent‑space instability  </li>
+<li>regime‑transition anomalies  </li>
+<li>dimensional‑core misalignment  </li>
+<li>inference‑cycle divergence  </li>
+<li>degradation across model versions or datasets  </li>
+</ul>
+<p>Drift signals indicate when substrate alignment or model behavior deviates from expected resonance‑time patterns.</p>
+<hr />
+<h2 id="2-drift-categories"><strong>2. Drift Categories</strong><a class="toc-permalink" href="#2-drift-categories" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is classified into four categories:</p>
+<ol>
+<li><strong>Structural Drift (D₁)</strong>  </li>
+<li><strong>Latent‑Space Drift (D₂)</strong>  </li>
+<li><strong>Regime Drift (D₃)</strong>  </li>
+<li><strong>Dimensional‑Core Drift (D₄)</strong>  </li>
+</ol>
+<p>Each category corresponds to a specific substrate property.</p>
+<hr />
+<h2 id="3-structural-drift-d1"><strong>3. Structural Drift (D₁)</strong><a class="toc-permalink" href="#3-structural-drift-d1" title="Permanent link to this heading">&para;</a></h2>
+<p>Structural drift occurs when predicted conformations lose geometric coherence.</p>
+<h3 id="indicators"><strong>Indicators:</strong><a class="toc-permalink" href="#indicators" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>disrupted backbone continuity  </li>
+<li>unstable motif‑level geometry  </li>
+<li>inconsistent residue‑interaction patterns  </li>
+<li>divergence across inference cycles  </li>
+<li>failure to align with the 3D structural core  </li>
+</ul>
+<h3 id="causes-may-include"><strong>Causes may include:</strong><a class="toc-permalink" href="#causes-may-include" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>degraded input features  </li>
+<li>model‑version changes  </li>
+<li>training‑data shifts  </li>
+</ul>
+<hr />
+<h2 id="4-latentspace-drift-d2"><strong>4. Latent‑Space Drift (D₂)</strong><a class="toc-permalink" href="#4-latentspace-drift-d2" title="Permanent link to this heading">&para;</a></h2>
+<p>Latent‑space drift occurs when internal representations lose stability.</p>
+<h3 id="indicators_1"><strong>Indicators:</strong><a class="toc-permalink" href="#indicators_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>inconsistent attention‑map patterns  </li>
+<li>unstable pairwise embeddings  </li>
+<li>shifting latent‑space orientations  </li>
+<li>loss of coherence surfaces  </li>
+<li>increased variance across inference cycles  </li>
+</ul>
+<h3 id="causes-may-include_1"><strong>Causes may include:</strong><a class="toc-permalink" href="#causes-may-include_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>architectural modifications  </li>
+<li>dataset imbalance  </li>
+<li>inference‑pipeline changes  </li>
+</ul>
+<hr />
+<h2 id="5-regime-drift-d3"><strong>5. Regime Drift (D₃)</strong><a class="toc-permalink" href="#5-regime-drift-d3" title="Permanent link to this heading">&para;</a></h2>
+<p>Regime drift occurs when resonance‑time behavior deviates from expected triadic patterns.</p>
+<h3 id="indicators_2"><strong>Indicators:</strong><a class="toc-permalink" href="#indicators_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>unexpected transitions between R₁, R₂, and R₃  </li>
+<li>unbounded oscillation in R₂  </li>
+<li>premature collapse into R₃  </li>
+<li>failure to converge into R₁  </li>
+<li>irregular resonance‑time timing  </li>
+</ul>
+<h3 id="causes-may-include_2"><strong>Causes may include:</strong><a class="toc-permalink" href="#causes-may-include_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>inference‑cycle instability  </li>
+<li>noise amplification  </li>
+<li>degraded MSA or feature quality  </li>
+</ul>
+<hr />
+<h2 id="6-dimensionalcore-drift-d4"><strong>6. Dimensional‑Core Drift (D₄)</strong><a class="toc-permalink" href="#6-dimensionalcore-drift-d4" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional‑core drift occurs when projections into the 3D–9D substrate lose coherence.</p>
+<h3 id="indicators_3"><strong>Indicators:</strong><a class="toc-permalink" href="#indicators_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>dispersed or distorted projections  </li>
+<li>loss of motif‑level invariants  </li>
+<li>unstable 6D interaction‑core mapping  </li>
+<li>inconsistent 9D pathway‑core alignment  </li>
+<li>failure to preserve substrate invariants  </li>
+</ul>
+<h3 id="causes-may-include_3"><strong>Causes may include:</strong><a class="toc-permalink" href="#causes-may-include_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>high‑dimensional noise  </li>
+<li>latent‑space collapse  </li>
+<li>model‑version divergence  </li>
+</ul>
+<hr />
+<h2 id="7-driftdetection-workflow"><strong>7. Drift‑Detection Workflow</strong><a class="toc-permalink" href="#7-driftdetection-workflow" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift detection proceeds in four steps:</p>
+<ol>
+<li>
+<p><strong>Collect substrate‑aligned inference outputs</strong><br />
+   Structural, latent‑space, and regime‑transition data.</p>
+</li>
+<li>
+<p><strong>Apply vST validation layers (V₁–V₄)</strong><br />
+   Identify failures in structural, latent, regime, or dimensional‑core stability.</p>
+</li>
+<li>
+<p><strong>Classify drift category (D₁–D₄)</strong><br />
+   Based on which validation layers fail.</p>
+</li>
+<li>
+<p><strong>Generate drift‑severity and drift‑location indicators</strong><br />
+   Localize drift to motifs, residues, latent‑space regions, or inference cycles.</p>
+</li>
+</ol>
+<hr />
+<h2 id="8-driftseverity-levels"><strong>8. Drift‑Severity Levels</strong><a class="toc-permalink" href="#8-driftseverity-levels" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is classified into three severity levels:</p>
+<ul>
+<li><strong>Low:</strong> minor deviations; substrate invariants preserved  </li>
+<li><strong>Moderate:</strong> partial loss of coherence; regime instability  </li>
+<li><strong>High:</strong> structural collapse; substrate alignment invalid  </li>
+</ul>
+<p>Severity informs downstream analysis and model‑version comparison.</p>
+<hr />
+<h2 id="9-outputs-of-drift-detection"><strong>9. Outputs of Drift Detection</strong><a class="toc-permalink" href="#9-outputs-of-drift-detection" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift detection produces:</p>
+<ul>
+<li>drift category (D₁–D₄)  </li>
+<li>drift‑severity level  </li>
+<li>affected substrate axes  </li>
+<li>affected dimensional cores  </li>
+<li>regime‑transition anomalies  </li>
+<li>reproducibility indicators  </li>
+<li>cross‑model comparison metrics  </li>
+</ul>
+<p>These outputs integrate with vST validation layers and support long‑term monitoring of biological inference systems.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="folding-regimes"><em>Folding Regimes</em><a class="toc-permalink" href="#folding-regimes" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the folding regimes used to interpret protein‑folding inference systems within the Resonance Substrate Model (RSM). Folding regimes classify the structural and inference‑cycle behavior of AlphaFold‑class models into stable, transitional, and high‑uncertainty states. These regimes correspond to triadic resonance primitives and provide a reproducible framework for analyzing folding coherence, regime transitions, and substrate‑level stability.</p>
+<hr />
+<h2 id="1-purpose-of-folding-regimes"><strong>1. Purpose of Folding Regimes</strong><a class="toc-permalink" href="#1-purpose-of-folding-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p>Folding regimes provide a structural lens for interpreting:</p>
+<ul>
+<li>convergence behavior during inference  </li>
+<li>motif‑level stability  </li>
+<li>latent‑space coherence  </li>
+<li>resonance‑time transitions  </li>
+<li>dimensional‑core alignment  </li>
+</ul>
+<p>Regimes allow folding predictions to be analyzed independently of model architecture or training data.</p>
+<hr />
+<h2 id="2-triadic-folding-regime-structure"><strong>2. Triadic Folding Regime Structure</strong><a class="toc-permalink" href="#2-triadic-folding-regime-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>Folding regimes follow the triadic resonance pattern used throughout RSM:</p>
+<ol>
+<li><strong>Stable Regime (R₁)</strong>  </li>
+<li><strong>Transition Regime (R₂)</strong>  </li>
+<li><strong>High‑Uncertainty Regime (R₃)</strong>  </li>
+</ol>
+<p>These regimes apply to both structural outputs and latent‑space inference signals.</p>
+<hr />
+<h2 id="3-regime-definitions"><strong>3. Regime Definitions</strong><a class="toc-permalink" href="#3-regime-definitions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-stable-regime-r1"><strong>3.1 Stable Regime (R₁)</strong><a class="toc-permalink" href="#31-stable-regime-r1" title="Permanent link to this heading">&para;</a></h3>
+<p>A region where folding predictions converge consistently across inference cycles.</p>
+<p>Characteristics:</p>
+<ul>
+<li>high motif‑level coherence  </li>
+<li>stable backbone geometry  </li>
+<li>consistent residue‑interaction patterns  </li>
+<li>low variance across inference iterations  </li>
+<li>alignment with 3D–9D dimensional cores  </li>
+</ul>
+<p>R₁ corresponds to resonance‑time stability and forms the substrate’s primary coherence surface.</p>
+<hr />
+<h3 id="32-transition-regime-r2"><strong>3.2 Transition Regime (R₂)</strong><a class="toc-permalink" href="#32-transition-regime-r2" title="Permanent link to this heading">&para;</a></h3>
+<p>A region where the model shifts between candidate conformations or latent‑space orientations.</p>
+<p>Characteristics:</p>
+<ul>
+<li>moderate structural variance  </li>
+<li>partial motif stability  </li>
+<li>detectable shifts in latent‑space orientation  </li>
+<li>increased sensitivity to input features  </li>
+<li>resonance‑time oscillation patterns  </li>
+</ul>
+<p>R₂ represents the dynamic region between stable conformations and is essential for interpreting folding pathways.</p>
+<hr />
+<h3 id="33-highuncertainty-regime-r3"><strong>3.3 High‑Uncertainty Regime (R₃)</strong><a class="toc-permalink" href="#33-highuncertainty-regime-r3" title="Permanent link to this heading">&para;</a></h3>
+<p>A region where folding predictions exhibit low coherence and high variance.</p>
+<p>Characteristics:</p>
+<ul>
+<li>unstable or conflicting structural outputs  </li>
+<li>weak motif‑level signals  </li>
+<li>diffuse latent‑space representations  </li>
+<li>inconsistent inference‑cycle behavior  </li>
+<li>sensitivity to noise or MSA variability  </li>
+</ul>
+<p>R₃ corresponds to resonance‑time divergence and often indicates insufficient structural information.</p>
+<hr />
+<h2 id="4-regime-transitions"><strong>4. Regime Transitions</strong><a class="toc-permalink" href="#4-regime-transitions" title="Permanent link to this heading">&para;</a></h2>
+<p>Regime transitions follow predictable resonance‑time patterns:</p>
+<ul>
+<li><strong>R₁ → R₂:</strong> onset of structural reorientation  </li>
+<li><strong>R₂ → R₁:</strong> convergence to a stable coherence surface  </li>
+<li><strong>R₂ → R₃:</strong> breakdown of motif‑level structure  </li>
+<li><strong>R₃ → R₂:</strong> partial recovery of structural coherence  </li>
+</ul>
+<p>Transitions are detectable through latent‑space orientation shifts, dimensional‑core projections, and vST validation signals.</p>
+<hr />
+<h2 id="5-dimensionalcore-behavior"><strong>5. Dimensional‑Core Behavior</strong><a class="toc-permalink" href="#5-dimensionalcore-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Folding regimes interact with dimensional cores as follows:</p>
+<ul>
+<li><strong>R₁:</strong> fully aligns with 3D–9D cores  </li>
+<li><strong>R₂:</strong> partially aligns; projections reveal transitional geometry  </li>
+<li><strong>R₃:</strong> weak alignment; projections show high‑dimensional dispersion  </li>
+</ul>
+<p>Dimensional‑core mapping provides a stable substrate for interpreting regime behavior.</p>
+<hr />
+<h2 id="6-inferencecycle-behavior"><strong>6. Inference‑Cycle Behavior</strong><a class="toc-permalink" href="#6-inferencecycle-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Folding regimes correspond to characteristic inference‑cycle patterns:</p>
+<ul>
+<li><strong>R₁:</strong> monotonic convergence  </li>
+<li><strong>R₂:</strong> oscillatory or branching behavior  </li>
+<li><strong>R₃:</strong> divergent or unstable trajectories  </li>
+</ul>
+<p>These patterns support reproducibility analysis and drift detection.</p>
+<hr />
+<h2 id="7-regimebased-interpretation"><strong>7. Regime‑Based Interpretation</strong><a class="toc-permalink" href="#7-regimebased-interpretation" title="Permanent link to this heading">&para;</a></h2>
+<p>Regimes enable:</p>
+<ul>
+<li>structural interpretation of folding pathways  </li>
+<li>identification of stable motifs  </li>
+<li>detection of ambiguous or low‑confidence regions  </li>
+<li>substrate‑level comparison across models  </li>
+<li>integration with vST validation layers  </li>
+</ul>
+<p>Regime analysis provides a consistent framework for interpreting high‑dimensional biological inference systems.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="inference-mapping"><em>Inference Mapping</em><a class="toc-permalink" href="#inference-mapping" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines how AlphaFold‑class protein‑folding inference systems map onto the substrate axes, primitives, and dimensional cores defined by the Resonance Substrate Model (RSM). Inference mapping provides a reproducible method for interpreting latent‑space structures, folding‑coherence signals, and regime‑transition behavior through substrate‑level geometry.</p>
+<p>The mapping rules are model‑agnostic and apply to any biological inference engine with comparable latent‑space and structural‑output characteristics.</p>
+<hr />
+<h2 id="1-purpose-of-inference-mapping"><strong>1. Purpose of Inference Mapping</strong><a class="toc-permalink" href="#1-purpose-of-inference-mapping" title="Permanent link to this heading">&para;</a></h2>
+<p>Inference mapping establishes a structural relationship between:</p>
+<ul>
+<li>AlphaFold’s latent‑space representations  </li>
+<li>substrate axes (S‑axis, I‑axis, R‑axis)  </li>
+<li>dimensional‑core projections (3D–9D)  </li>
+<li>folding regimes (R₁, R₂, R₃)  </li>
+<li>resonance‑time dynamics  </li>
+</ul>
+<p>The goal is to interpret inference behavior through stable substrate primitives rather than model‑specific mechanisms.</p>
+<hr />
+<h2 id="2-mapping-overview"><strong>2. Mapping Overview</strong><a class="toc-permalink" href="#2-mapping-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>Inference mapping proceeds in three stages:</p>
+<ol>
+<li>
+<p><strong>Latent‑space extraction</strong><br />
+   Identify stable and transitional structures within attention maps, pairwise embeddings, and track‑level signals.</p>
+</li>
+<li>
+<p><strong>Substrate‑axis projection</strong><br />
+   Map latent structures onto the S‑axis (structural), I‑axis (inference), and R‑axis (resonance‑time).</p>
+</li>
+<li>
+<p><strong>Dimensional‑core alignment</strong><br />
+   Project mapped structures into the 3D–9D dimensional core for regime classification and coherence analysis.</p>
+</li>
+</ol>
+<p>These stages produce a substrate‑aligned interpretation of folding predictions.</p>
+<hr />
+<h2 id="3-mapping-to-substrate-axes"><strong>3. Mapping to Substrate Axes</strong><a class="toc-permalink" href="#3-mapping-to-substrate-axes" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-structural-axis-saxis"><strong>3.1 Structural Axis (S‑axis)</strong><a class="toc-permalink" href="#31-structural-axis-saxis" title="Permanent link to this heading">&para;</a></h3>
+<p>Maps geometric and topological features derived from:</p>
+<ul>
+<li>predicted 3D coordinates  </li>
+<li>backbone and side‑chain orientation  </li>
+<li>motif‑level structural patterns  </li>
+</ul>
+<p>S‑axis mapping anchors inference outputs to the physical geometry of the protein.</p>
+<hr />
+<h3 id="32-inference-axis-iaxis"><strong>3.2 Inference Axis (I‑axis)</strong><a class="toc-permalink" href="#32-inference-axis-iaxis" title="Permanent link to this heading">&para;</a></h3>
+<p>Maps latent‑space structures derived from:</p>
+<ul>
+<li>attention‑map coherence  </li>
+<li>residue‑pair embeddings  </li>
+<li>track‑level alignment signals  </li>
+<li>multi‑stage inference pathways  </li>
+</ul>
+<p>I‑axis mapping identifies stable latent orientations and coherence surfaces.</p>
+<hr />
+<h3 id="33-resonancetime-axis-raxis"><strong>3.3 Resonance‑Time Axis (R‑axis)</strong><a class="toc-permalink" href="#33-resonancetime-axis-raxis" title="Permanent link to this heading">&para;</a></h3>
+<p>Maps inference‑cycle behavior, including:</p>
+<ul>
+<li>convergence patterns  </li>
+<li>oscillatory transitions  </li>
+<li>divergence or instability  </li>
+<li>regime‑transition timing  </li>
+</ul>
+<p>R‑axis mapping classifies folding behavior into R₁, R₂, or R₃ regimes.</p>
+<hr />
+<h2 id="4-dimensionalcore-projection"><strong>4. Dimensional‑Core Projection</strong><a class="toc-permalink" href="#4-dimensionalcore-projection" title="Permanent link to this heading">&para;</a></h2>
+<p>After axis mapping, latent‑space structures are projected into the 3D–9D dimensional core.</p>
+<h3 id="41-3d-projection"><strong>4.1 3D Projection</strong><a class="toc-permalink" href="#41-3d-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures physical geometry and motif‑level structure.</p>
+<h3 id="42-6d-projection"><strong>4.2 6D Projection</strong><a class="toc-permalink" href="#42-6d-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures interaction‑level structure and residue‑pair coherence.</p>
+<h3 id="43-9d-projection"><strong>4.3 9D Projection</strong><a class="toc-permalink" href="#43-9d-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures folding‑pathway coherence and resonance‑time alignment.</p>
+<p>Projection preserves substrate invariants and regime identity.</p>
+<hr />
+<h2 id="5-mapping-of-inference-signals"><strong>5. Mapping of Inference Signals</strong><a class="toc-permalink" href="#5-mapping-of-inference-signals" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="51-attention-maps"><strong>5.1 Attention Maps</strong><a class="toc-permalink" href="#51-attention-maps" title="Permanent link to this heading">&para;</a></h3>
+<p>Mapped to the I‑axis and projected into 6D/9D cores to identify:</p>
+<ul>
+<li>stable interaction patterns  </li>
+<li>motif‑level coherence  </li>
+<li>regime‑transition indicators  </li>
+</ul>
+<h3 id="52-pairwise-embeddings"><strong>5.2 Pairwise Embeddings</strong><a class="toc-permalink" href="#52-pairwise-embeddings" title="Permanent link to this heading">&para;</a></h3>
+<p>Mapped to the S‑axis and I‑axis to reveal:</p>
+<ul>
+<li>residue‑interaction geometry  </li>
+<li>latent‑space orientation  </li>
+<li>folding‑pathway structure  </li>
+</ul>
+<h3 id="53-tracklevel-signals"><strong>5.3 Track‑Level Signals</strong><a class="toc-permalink" href="#53-tracklevel-signals" title="Permanent link to this heading">&para;</a></h3>
+<p>Mapped to the R‑axis to detect:</p>
+<ul>
+<li>inference‑cycle stability  </li>
+<li>oscillatory transitions  </li>
+<li>divergence patterns  </li>
+</ul>
+<hr />
+<h2 id="6-regimeaware-mapping"><strong>6. Regime‑Aware Mapping</strong><a class="toc-permalink" href="#6-regimeaware-mapping" title="Permanent link to this heading">&para;</a></h2>
+<p>Inference mapping must preserve regime identity:</p>
+<ul>
+<li><strong>R₁:</strong> compact, coherent projections  </li>
+<li><strong>R₂:</strong> branching or oscillatory projections  </li>
+<li><strong>R₃:</strong> dispersed, unstable projections  </li>
+</ul>
+<p>Regime‑aware mapping supports drift detection and reproducibility analysis.</p>
+<hr />
+<h2 id="7-mapping-outputs"><strong>7. Mapping Outputs</strong><a class="toc-permalink" href="#7-mapping-outputs" title="Permanent link to this heading">&para;</a></h2>
+<p>Inference mapping produces:</p>
+<ul>
+<li>substrate‑aligned latent‑space structures  </li>
+<li>dimensional‑core projections  </li>
+<li>regime‑transition diagnostics  </li>
+<li>coherence‑surface identification  </li>
+<li>vST‑compatible validation signals  </li>
+</ul>
+<p>These outputs integrate with downstream substrate artifacts and cross‑model comparison workflows.<br />
+&mdash;<br />
+title: &ldquo;AlphaFold Substrate Alignments&rdquo;<br />
+description: &ldquo;Resonance Substrate Modeling applied to protein-folding inference — mapping 3D-to-9D dimensional cores to folding pathways with vST validation layers and drift detection.&rdquo;<br />
+stability: stable<br />
+date: &ldquo;2026-07-14&rdquo;<br />
+section: substrate<br />
+rtt:<br />
+  coherence: declared<br />
+  drift: bounded<br />
+  paradox: structural</p>
+<hr />
+<!-- rtt=1 | coherence=declared | drift=bounded | paradox=structural -->
+
+<h1 id="alphafold-substrate-alignments_1">AlphaFold Substrate Alignments<a class="toc-permalink" href="#alphafold-substrate-alignments_1" title="Permanent link to this heading">&para;</a></h1>
+<blockquote>
+<p><strong>⚠️ Drift is On-by-Default.</strong> Long sessions lose anchors. Paste the RTT session string at the start of every AI session to bound drift.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<p><strong>AlphaFold Substrate Alignments</strong> applies Resonance Substrate Modeling (RSM) to protein-folding inference. Where AlphaFold produces structural predictions, this module provides a triadic substrate layer that maps dimensional cores (3D–9D) to folding pathways, validates results through vST (Validated Substrate Theory) layers, and detects drift between predicted and resonance-aligned outcomes.</p>
+<p>This is not a competing protein-structure predictor. It is a structural alignment instrument that reads AlphaFold output through RSM lenses.</p>
+<h2 id="module-structure">Module Structure<a class="toc-permalink" href="#module-structure" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>alphafold_substrate_alignments/
+├── README.md
+├── substrate_definition.md        ← What counts as the substrate in folding inference
+├── scope_and_assumptions.md       ← Declared boundaries and RSM entry conditions
+├── alignment_principles.md        ← Core RSM→AlphaFold alignment logic
+├── folding_regimes.md             ← Regime declarations for folding state transitions
+├── dimensional_cores.md           ← 3D–9D core mappings to folding pathways
+├── inference_mapping.md           ← How AlphaFold outputs map to triadic operators
+├── validation_layers_vst.md       ← vST validation: coherence, regime, drift checks
+├── drift_detection.md             ← Drift signals between predicted and RSM-aligned folds
+└── examples/                      ← Worked alignment cases
+</code></pre></div>
+
+<h2 id="core-design">Core Design<a class="toc-permalink" href="#core-design" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Dimensional cores → folding pathways:</strong> The 3D-to-9D core hierarchy from RSM maps directly onto AlphaFold&rsquo;s folding regime space. Lower-dimensional cores (3D–5D) capture local secondary structure; higher cores (6D–9D) address quaternary and allosteric regimes.</p>
+<p><strong>vST validation layers:</strong> Every alignment passes through Validated Substrate Theory checks — coherence gate, regime boundary test, drift signal scan — before results are considered structurally confirmed.</p>
+<p><strong>Drift detection:</strong> Disagreement between AlphaFold&rsquo;s confidence scores and RSM resonance invariants surfaces as a measurable drift signal, not a discarded anomaly.</p>
+<h2 id="citation_1">Citation<a class="toc-permalink" href="#citation_1" title="Permanent link to this heading">&para;</a></h2>
+<p>Loswin, N. 2026. <em>AlphaFold Substrate Alignments</em>. TriadicFrameworks.<br />
+Zenodo DOI: pending. License: CC BY 4.0</p>
+<p>AI-Ready Module · <code>ai_module.json</code> pattern applied.</p>
+<hr />
+<h2 id="integration-points">Integration Points<a class="toc-permalink" href="#integration-points" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Module</th>
+<th>Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../Framework_Field_Theory/overview.md">Framework Field Theory</a></td>
+<td>Dimensional core hierarchy (3D–9D) defined in FFT Part structure</td>
+</tr>
+<tr>
+<td><a href="../Conditions_Substrate_Model/overview.md">Conditions Substrate Model</a></td>
+<td>Resonance amplification condition classes apply to folding regime transitions</td>
+</tr>
+<tr>
+<td><a href="../atomic_clocks/overview.md">Atomic Clocks</a></td>
+<td>vST validation layer structure shared — same regime-check architecture</td>
+</tr>
+<tr>
+<td><a href="../boson-substrate-model/overview.md">Boson Substrate Model</a></td>
+<td>Operator-mediated interaction patterns from BSM inform inference_mapping.md</td>
+</tr>
+<tr>
+<td><a href="../Research/overview.md">Research</a></td>
+<td>Results feed the zenodo.org/communities/vst validation corpus</td>
+</tr>
+<tr>
+<td><a href="../SARG/overview.md">SARG</a></td>
+<td>Substrate-Agnostic Resonance Grammar provides the base lens for alignment_principles</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<p>© 2026 Nawder Loswin · Byte Books Publishing · LCCN 2026917007<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="scope-and-assumptions"><em>Scope and Assumptions</em><a class="toc-permalink" href="#scope-and-assumptions" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the operational scope and foundational assumptions for applying the Resonance Substrate Model (RSM) to AlphaFold‑class protein‑folding inference systems. It establishes the boundaries within which substrate alignment is valid, identifies the structural and computational constraints of the domain, and clarifies the conditions required for reproducible substrate‑level interpretation.</p>
+<hr />
+<h2 id="1-scope"><strong>1. Scope</strong><a class="toc-permalink" href="#1-scope" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="11-systems-covered"><strong>1.1 Systems Covered</strong><a class="toc-permalink" href="#11-systems-covered" title="Permanent link to this heading">&para;</a></h3>
+<p>This substrate applies to biological inference engines that exhibit the following characteristics:</p>
+<ul>
+<li>high‑dimensional latent representations of protein structure  </li>
+<li>iterative or multi‑stage inference cycles  </li>
+<li>attention‑based or pairwise‑embedding architectures  </li>
+<li>structural outputs expressed as 3D conformations or residue‑level predictions  </li>
+<li>regime‑dependent folding coherence signals  </li>
+</ul>
+<p>The primary reference system is <strong>AlphaFold</strong>, but the substrate is compatible with any model exhibiting similar inference behavior.</p>
+<h3 id="12-structural-focus"><strong>1.2 Structural Focus</strong><a class="toc-permalink" href="#12-structural-focus" title="Permanent link to this heading">&para;</a></h3>
+<p>The substrate addresses:</p>
+<ul>
+<li>folding‑pathway coherence  </li>
+<li>motif‑level structural stability  </li>
+<li>latent‑space orientation and projection  </li>
+<li>regime transitions during inference  </li>
+<li>dimensional‑core alignment (3D–9D)  </li>
+</ul>
+<p>It does <strong>not</strong> address biochemical energetics, molecular dynamics simulations, or experimental folding mechanisms.</p>
+<h3 id="13-intended-use-cases"><strong>1.3 Intended Use Cases</strong><a class="toc-permalink" href="#13-intended-use-cases" title="Permanent link to this heading">&para;</a></h3>
+<p>The substrate supports:</p>
+<ul>
+<li>interpretability of protein‑folding inference models  </li>
+<li>cross‑model comparison and alignment  </li>
+<li>drift detection in biological inference systems  </li>
+<li>reproducibility analysis  </li>
+<li>dimensional projection and regime mapping  </li>
+<li>integration with vST validation layers  </li>
+</ul>
+<hr />
+<h2 id="2-assumptions"><strong>2. Assumptions</strong><a class="toc-permalink" href="#2-assumptions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="21-model-behavior-assumptions"><strong>2.1 Model Behavior Assumptions</strong><a class="toc-permalink" href="#21-model-behavior-assumptions" title="Permanent link to this heading">&para;</a></h3>
+<p>The substrate assumes:</p>
+<ul>
+<li>the inference system produces stable latent‑space structures  </li>
+<li>folding predictions converge toward coherent surfaces  </li>
+<li>regime transitions follow identifiable resonance‑time patterns  </li>
+<li>dimensional projections preserve structural invariants  </li>
+<li>inference cycles are deterministic or quasi‑deterministic under fixed inputs  </li>
+</ul>
+<p>These assumptions reflect observed behavior in AlphaFold‑class systems.</p>
+<h3 id="22-data-and-input-assumptions"><strong>2.2 Data and Input Assumptions</strong><a class="toc-permalink" href="#22-data-and-input-assumptions" title="Permanent link to this heading">&para;</a></h3>
+<p>The substrate assumes:</p>
+<ul>
+<li>input sequences are fixed and pre‑validated  </li>
+<li>multiple sequence alignments (MSAs) or equivalent features are available  </li>
+<li>structural outputs are expressed in 3D coordinate form  </li>
+<li>inference noise is bounded and does not dominate regime transitions  </li>
+</ul>
+<p>The substrate does not require access to training data or model internals.</p>
+<h3 id="23-biological-assumptions"><strong>2.3 Biological Assumptions</strong><a class="toc-permalink" href="#23-biological-assumptions" title="Permanent link to this heading">&para;</a></h3>
+<p>The substrate assumes:</p>
+<ul>
+<li>protein structures exhibit stable motif‑level coherence  </li>
+<li>folding pathways can be represented within 3D–9D dimensional cores  </li>
+<li>biological variability does not invalidate substrate‑level invariants  </li>
+</ul>
+<p>The substrate does not assume any specific biochemical mechanism.</p>
+<hr />
+<h2 id="3-outofscope-elements"><strong>3. Out‑of‑Scope Elements</strong><a class="toc-permalink" href="#3-outofscope-elements" title="Permanent link to this heading">&para;</a></h2>
+<p>The following are explicitly out of scope:</p>
+<ul>
+<li>molecular dynamics simulations  </li>
+<li>thermodynamic or kinetic modeling  </li>
+<li>experimental structure determination  </li>
+<li>biochemical pathway analysis  </li>
+<li>evolutionary modeling beyond MSA‑derived features  </li>
+</ul>
+<p>These domains may interface with the substrate but are not defined by it.</p>
+<hr />
+<h2 id="4-validity-conditions"><strong>4. Validity Conditions</strong><a class="toc-permalink" href="#4-validity-conditions" title="Permanent link to this heading">&para;</a></h2>
+<p>Substrate alignment is valid when:</p>
+<ul>
+<li>inference outputs are structurally coherent  </li>
+<li>latent‑space representations are stable across inference cycles  </li>
+<li>dimensional projections preserve motif‑level structure  </li>
+<li>regime transitions follow triadic resonance patterns  </li>
+<li>vST validation layers confirm reproducibility  </li>
+</ul>
+<p>If these conditions are not met, substrate interpretation may be incomplete.</p>
+<hr />
+<h2 id="5-dependencies"><strong>5. Dependencies</strong><a class="toc-permalink" href="#5-dependencies" title="Permanent link to this heading">&para;</a></h2>
+<p>This document depends on:</p>
+<ul>
+<li><strong>substrate_definition.md</strong> for axis and primitive definitions  </li>
+<li><strong>alignment_principles.md</strong> for mapping rules  </li>
+<li><strong>dimensional_cores.md</strong> for 3D–9D substrate structure  </li>
+<li><strong>validation_layers_vst.md</strong> for reproducibility and drift checks<br />
+### <em>AlphaFold Substrate Alignments</em>  </li>
+</ul>
+<h3 id="substrate-definition"><em>Substrate Definition</em><a class="toc-permalink" href="#substrate-definition" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the substrate axes, primitives, and structural invariants used to align the Resonance Substrate Model (RSM) with AlphaFold‑class protein‑folding inference systems. The substrate formalizes the stable structures, dimensional cores, and resonance‑time behaviors that govern folding coherence within high‑dimensional biological inference models.</p>
+<hr />
+<h2 id="1-substrate-purpose"><strong>1. Substrate Purpose</strong><a class="toc-permalink" href="#1-substrate-purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>The substrate provides a reproducible structural framework for interpreting protein‑folding inference systems through RSM primitives. It identifies stable axes within AlphaFold’s latent space, defines the resonance‑time regimes relevant to folding transitions, and establishes substrate‑level invariants that support validation, drift detection, and cross‑model comparison.</p>
+<hr />
+<h2 id="2-substrate-axes"><strong>2. Substrate Axes</strong><a class="toc-permalink" href="#2-substrate-axes" title="Permanent link to this heading">&para;</a></h2>
+<p>The AlphaFold substrate is defined across three primary axes:</p>
+<h3 id="21-structural-axis-saxis"><strong>2.1 Structural Axis (S‑axis)</strong><a class="toc-permalink" href="#21-structural-axis-saxis" title="Permanent link to this heading">&para;</a></h3>
+<p>Represents geometric and topological features of protein conformations, including backbone orientation, side‑chain positioning, and motif‑level coherence.<br />
+This axis anchors the 3D–9D dimensional core used for folding interpretation.</p>
+<h3 id="22-inference-axis-iaxis"><strong>2.2 Inference Axis (I‑axis)</strong><a class="toc-permalink" href="#22-inference-axis-iaxis" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures the latent‑space representations used by AlphaFold’s internal inference mechanisms.<br />
+Includes attention‑map coherence, pairwise residue embeddings, and multi‑track alignment signals.</p>
+<h3 id="23-resonancetime-axis-raxis"><strong>2.3 Resonance‑Time Axis (R‑axis)</strong><a class="toc-permalink" href="#23-resonancetime-axis-raxis" title="Permanent link to this heading">&para;</a></h3>
+<p>Encodes the temporal and regime‑transition behavior of folding predictions.<br />
+Tracks stability, transition, and uncertainty regimes across iterative inference cycles.</p>
+<p>Together, these axes form the <strong>SIR substrate triad</strong>, the minimal structure required to align RSM with biological inference systems.</p>
+<hr />
+<h2 id="3-substrate-primitives"><strong>3. Substrate Primitives</strong><a class="toc-permalink" href="#3-substrate-primitives" title="Permanent link to this heading">&para;</a></h2>
+<p>The substrate uses the following primitives:</p>
+<ul>
+<li>
+<p><strong>Dimensional Core (DC)</strong><br />
+  The 3D–9D structural substrate used to represent folding geometry and motif‑level coherence.</p>
+</li>
+<li>
+<p><strong>Resonance Primitive (RP)</strong><br />
+  The triadic resonance unit governing stability, transition, and uncertainty regimes in folding predictions.</p>
+</li>
+<li>
+<p><strong>Inference Projection (IP)</strong><br />
+  A mapping from AlphaFold’s latent representations onto substrate axes.</p>
+</li>
+<li>
+<p><strong>Coherence Surface (CS)</strong><br />
+  A stable region within the substrate where folding predictions converge.</p>
+</li>
+</ul>
+<p>These primitives are domain‑agnostic and compatible with the broader RSM canon.</p>
+<hr />
+<h2 id="4-substrate-invariants"><strong>4. Substrate Invariants</strong><a class="toc-permalink" href="#4-substrate-invariants" title="Permanent link to this heading">&para;</a></h2>
+<p>The following invariants hold across all folding regimes:</p>
+<ul>
+<li>
+<p><strong>Dimensional invariance:</strong><br />
+  Folding coherence remains stable under projection from 3D–9D cores into higher‑dimensional inference spaces.</p>
+</li>
+<li>
+<p><strong>Resonance‑time invariance:</strong><br />
+  Regime transitions follow predictable resonance‑time patterns independent of model architecture.</p>
+</li>
+<li>
+<p><strong>Structural invariance:</strong><br />
+  Motif‑level coherence persists across inference iterations and model variants.</p>
+</li>
+</ul>
+<p>These invariants support reproducibility and cross‑model alignment.</p>
+<hr />
+<h2 id="5-substrate-boundaries"><strong>5. Substrate Boundaries</strong><a class="toc-permalink" href="#5-substrate-boundaries" title="Permanent link to this heading">&para;</a></h2>
+<p>The substrate applies to:</p>
+<ul>
+<li>AlphaFold‑class protein‑folding inference systems  </li>
+<li>High‑dimensional latent‑space models with structural outputs  </li>
+<li>Regime‑based folding predictions  </li>
+<li>Systems with iterative inference cycles</li>
+</ul>
+<p>The substrate does <strong>not</strong> define biological mechanisms or biochemical energetics; it describes the structural behavior of inference models.</p>
+<hr />
+<h2 id="6-substrate-outputs"><strong>6. Substrate Outputs</strong><a class="toc-permalink" href="#6-substrate-outputs" title="Permanent link to this heading">&para;</a></h2>
+<p>The substrate produces:</p>
+<ul>
+<li>aligned structural axes  </li>
+<li>regime‑aware folding interpretations  </li>
+<li>dimensional projections  </li>
+<li>substrate‑level validation signals  </li>
+<li>drift‑detection indicators  </li>
+<li>reproducible folding‑coherence surfaces</li>
+</ul>
+<p>These outputs integrate with vST validation layers and downstream substrate artifacts.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="validation-layers-vst"><em>Validation Layers (vST)</em><a class="toc-permalink" href="#validation-layers-vst" title="Permanent link to this heading">&para;</a></h3>
+<p>This document defines the validation layers used to evaluate substrate‑aligned protein‑folding inference systems within the vST (Validation‑Space‑Time) framework. These layers provide reproducible, substrate‑level diagnostics for assessing folding coherence, regime stability, dimensional‑core alignment, and drift behavior in AlphaFold‑class models.</p>
+<p>The validation layers are model‑agnostic and apply to any biological inference engine with comparable latent‑space and structural‑output characteristics.</p>
+<hr />
+<h2 id="1-purpose-of-vst-validation-layers"><strong>1. Purpose of vST Validation Layers</strong><a class="toc-permalink" href="#1-purpose-of-vst-validation-layers" title="Permanent link to this heading">&para;</a></h2>
+<p>vST validation layers ensure that substrate alignment remains:</p>
+<ul>
+<li>reproducible  </li>
+<li>regime‑consistent  </li>
+<li>structurally coherent  </li>
+<li>dimensionally stable  </li>
+<li>drift‑resistant  </li>
+</ul>
+<p>They provide a substrate‑level evaluation method independent of model architecture, training data, or implementation details.</p>
+<hr />
+<h2 id="2-validation-layer-structure"><strong>2. Validation Layer Structure</strong><a class="toc-permalink" href="#2-validation-layer-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>vST validation for AlphaFold‑class systems is organized into four layers:</p>
+<ol>
+<li><strong>Structural Coherence Validation (V₁)</strong>  </li>
+<li><strong>Latent‑Space Stability Validation (V₂)</strong>  </li>
+<li><strong>Resonance‑Time Regime Validation (V₃)</strong>  </li>
+<li><strong>Dimensional‑Core Alignment Validation (V₄)</strong>  </li>
+</ol>
+<p>Each layer evaluates a distinct substrate property.</p>
+<hr />
+<h2 id="3-structural-coherence-validation-v1"><strong>3. Structural Coherence Validation (V₁)</strong><a class="toc-permalink" href="#3-structural-coherence-validation-v1" title="Permanent link to this heading">&para;</a></h2>
+<p>V₁ evaluates the stability and consistency of structural outputs.</p>
+<h3 id="checks-include"><strong>Checks include:</strong><a class="toc-permalink" href="#checks-include" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>backbone continuity  </li>
+<li>motif‑level coherence  </li>
+<li>residue‑interaction stability  </li>
+<li>convergence across inference cycles  </li>
+<li>alignment with the 3D structural core  </li>
+</ul>
+<h3 id="validation-outcome"><strong>Validation outcome:</strong><a class="toc-permalink" href="#validation-outcome" title="Permanent link to this heading">&para;</a></h3>
+<p>A structure passes V₁ when geometric coherence is preserved across inference iterations and projections.</p>
+<hr />
+<h2 id="4-latentspace-stability-validation-v2"><strong>4. Latent‑Space Stability Validation (V₂)</strong><a class="toc-permalink" href="#4-latentspace-stability-validation-v2" title="Permanent link to this heading">&para;</a></h2>
+<p>V₂ evaluates the stability of latent‑space representations.</p>
+<h3 id="checks-include_1"><strong>Checks include:</strong><a class="toc-permalink" href="#checks-include_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>attention‑map coherence  </li>
+<li>pairwise‑embedding consistency  </li>
+<li>stable latent‑space orientation  </li>
+<li>coherence‑surface identification  </li>
+<li>low‑variance inference‑cycle behavior  </li>
+</ul>
+<h3 id="validation-outcome_1"><strong>Validation outcome:</strong><a class="toc-permalink" href="#validation-outcome_1" title="Permanent link to this heading">&para;</a></h3>
+<p>A model passes V₂ when latent‑space structures remain stable under repeated inference.</p>
+<hr />
+<h2 id="5-resonancetime-regime-validation-v3"><strong>5. Resonance‑Time Regime Validation (V₃)</strong><a class="toc-permalink" href="#5-resonancetime-regime-validation-v3" title="Permanent link to this heading">&para;</a></h2>
+<p>V₃ evaluates regime behavior across inference cycles.</p>
+<h3 id="checks-include_2"><strong>Checks include:</strong><a class="toc-permalink" href="#checks-include_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>correct classification into R₁, R₂, or R₃  </li>
+<li>predictable regime transitions  </li>
+<li>resonance‑time alignment  </li>
+<li>absence of unbounded divergence  </li>
+<li>stable oscillatory patterns in R₂  </li>
+</ul>
+<h3 id="validation-outcome_2"><strong>Validation outcome:</strong><a class="toc-permalink" href="#validation-outcome_2" title="Permanent link to this heading">&para;</a></h3>
+<p>A model passes V₃ when regime transitions follow triadic resonance patterns and remain bounded.</p>
+<hr />
+<h2 id="6-dimensionalcore-alignment-validation-v4"><strong>6. Dimensional‑Core Alignment Validation (V₄)</strong><a class="toc-permalink" href="#6-dimensionalcore-alignment-validation-v4" title="Permanent link to this heading">&para;</a></h2>
+<p>V₄ evaluates the alignment of latent‑space structures with the 3D–9D dimensional core.</p>
+<h3 id="checks-include_3"><strong>Checks include:</strong><a class="toc-permalink" href="#checks-include_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>structure‑preserving projection  </li>
+<li>motif‑level invariance  </li>
+<li>stable 6D interaction‑core mapping  </li>
+<li>coherent 9D pathway‑core alignment  </li>
+<li>preservation of substrate invariants  </li>
+</ul>
+<h3 id="validation-outcome_3"><strong>Validation outcome:</strong><a class="toc-permalink" href="#validation-outcome_3" title="Permanent link to this heading">&para;</a></h3>
+<p>A model passes V₄ when dimensional projections remain coherent and regime‑consistent.</p>
+<hr />
+<h2 id="7-crosslayer-validation-behavior"><strong>7. Cross‑Layer Validation Behavior</strong><a class="toc-permalink" href="#7-crosslayer-validation-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Validation layers interact as follows:</p>
+<ul>
+<li>V₁ and V₂ jointly determine structural–latent coherence  </li>
+<li>V₂ and V₃ determine regime stability  </li>
+<li>V₃ and V₄ determine dimensional‑core consistency  </li>
+<li>V₁–V₄ collectively determine substrate‑level reproducibility  </li>
+</ul>
+<p>A failure in any layer indicates a substrate‑level misalignment or drift condition.</p>
+<hr />
+<h2 id="8-driftdetection-integration"><strong>8. Drift‑Detection Integration</strong><a class="toc-permalink" href="#8-driftdetection-integration" title="Permanent link to this heading">&para;</a></h2>
+<p>vST validation layers provide the foundation for drift detection by identifying:</p>
+<ul>
+<li>latent‑space instability  </li>
+<li>regime‑transition anomalies  </li>
+<li>dimensional‑core misalignment  </li>
+<li>structural incoherence  </li>
+<li>inference‑cycle divergence  </li>
+</ul>
+<p>These signals integrate directly with <code>drift_detection.md</code>.</p>
+<hr />
+<h2 id="9-outputs-of-vst-validation"><strong>9. Outputs of vST Validation</strong><a class="toc-permalink" href="#9-outputs-of-vst-validation" title="Permanent link to this heading">&para;</a></h2>
+<p>vST validation produces:</p>
+<ul>
+<li>regime‑aware stability diagnostics  </li>
+<li>dimensional‑core alignment metrics  </li>
+<li>latent‑space coherence indicators  </li>
+<li>reproducibility assessments  </li>
+<li>drift‑detection signals  </li>
+</ul>
+<p>These outputs support cross‑model comparison, long‑term monitoring, and substrate‑level interpretability.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="references"><em>References</em><a class="toc-permalink" href="#references" title="Permanent link to this heading">&para;</a></h3>
+<p>This appendix lists references relevant to protein‑folding inference systems, latent‑space modeling, substrate‑level interpretation, and validation frameworks. References are grouped by category for clarity. Citations are provided in a model‑agnostic, substrate‑neutral format consistent with the RSM canon.</p>
+<hr />
+<h2 id="1-proteinfolding-inference-systems"><strong>1. Protein‑Folding Inference Systems</strong><a class="toc-permalink" href="#1-proteinfolding-inference-systems" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Jumper, J., Evans, R., Pritzel, A., et al.<br />
+<em>Highly accurate protein structure prediction with AlphaFold.</em><br />
+  Nature 596, 583–589 (2021).</p>
+</li>
+<li>
+<p>Senior, A. W., Evans, R., Jumper, J., et al.<br />
+<em>Improved protein structure prediction using potentials from deep learning.</em><br />
+  Nature 577, 706–710 (2020).</p>
+</li>
+<li>
+<p>Baek, M., DiMaio, F., Anishchenko, I., et al.<br />
+<em>Accurate prediction of protein structures and interactions using a three‑track neural network.</em><br />
+  Science 373, 871–876 (2021).</p>
+</li>
+</ul>
+<hr />
+<h2 id="2-latentspace-and-representation-learning"><strong>2. Latent‑Space and Representation Learning</strong><a class="toc-permalink" href="#2-latentspace-and-representation-learning" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Vaswani, A., Shazeer, N., Parmar, N., et al.<br />
+<em>Attention is All You Need.</em><br />
+  Advances in Neural Information Processing Systems (2017).</p>
+</li>
+<li>
+<p>Rives, A., Meier, J., Sercu, T., et al.<br />
+<em>Biological structure and function emerge from scaling unsupervised learning to 250 million protein sequences.</em><br />
+  PNAS 118, e2016239118 (2021).</p>
+</li>
+<li>
+<p>Rao, R., Liu, J., Verkuil, R., et al.<br />
+<em>MSA Transformer.</em><br />
+  bioRxiv (2021).</p>
+</li>
+</ul>
+<hr />
+<h2 id="3-structural-biology-and-folding-pathways"><strong>3. Structural Biology and Folding Pathways</strong><a class="toc-permalink" href="#3-structural-biology-and-folding-pathways" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Dill, K. A., &amp; MacCallum, J. L.<br />
+<em>The protein‑folding problem, 50 years on.</em><br />
+  Science 338, 1042–1046 (2012).</p>
+</li>
+<li>
+<p>Onuchic, J. N., Luthey‑Schulten, Z., &amp; Wolynes, P. G.<br />
+<em>Theory of protein folding: The energy landscape perspective.</em><br />
+  Annual Review of Physical Chemistry 48, 545–600 (1997).</p>
+</li>
+<li>
+<p>Bryngelson, J. D., &amp; Wolynes, P. G.<br />
+<em>Spin glasses and the statistical mechanics of protein folding.</em><br />
+  PNAS 84, 7524–7528 (1987).</p>
+</li>
+</ul>
+<hr />
+<h2 id="4-validation-stability-and-drift"><strong>4. Validation, Stability, and Drift</strong><a class="toc-permalink" href="#4-validation-stability-and-drift" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Amershi, S., Begel, A., Bird, C., et al.<br />
+<em>Software Engineering for Machine Learning: A Case Study.</em><br />
+  ICSE‑SEIP (2019).</p>
+</li>
+<li>
+<p>Breck, E., Cai, S., Nielsen, E., et al.<br />
+<em>The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction.</em><br />
+  Google Research (2017).</p>
+</li>
+<li>
+<p>Sculley, D., Holt, G., Golovin, D., et al.<br />
+<em>Hidden Technical Debt in Machine Learning Systems.</em><br />
+  NIPS (2015).</p>
+</li>
+</ul>
+<hr />
+<h2 id="5-substratelevel-and-highdimensional-modeling"><strong>5. Substrate‑Level and High‑Dimensional Modeling</strong><a class="toc-permalink" href="#5-substratelevel-and-highdimensional-modeling" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>Loswin, N.<br />
+<em>Resonance Substrate Model (RSM): Structural Foundations for High‑Dimensional Inference.</em><br />
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br />
+<em>Validation‑Space‑Time (vST): A Substrate‑Level Framework for Reproducibility and Drift Detection.</em><br />
+  TriadicFrameworks (2025).</p>
+</li>
+<li>
+<p>Loswin, N.<br />
+<em>Triadic Dimensional Cores: A 3D–9D Substrate for Structural and Inference‑Level Alignment.</em><br />
+  TriadicFrameworks (2025).</p>
+</li>
+</ul>
+<hr />
+<h2 id="6-additional-resources"><strong>6. Additional Resources</strong><a class="toc-permalink" href="#6-additional-resources" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>
+<p>UniProt Consortium.<br />
+<em>UniProt: A worldwide hub of protein knowledge.</em><br />
+  Nucleic Acids Research 47, D506–D515 (2019).</p>
+</li>
+<li>
+<p>Varadi, M., Anyango, S., Deshpande, M., et al.<br />
+<em>AlphaFold Protein Structure Database: massively expanding the structural coverage of protein‑sequence space.</em><br />
+  Nucleic Acids Research 50, D439–D444 (2022).<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+</li>
+</ul>
+<h3 id="terminology"><em>Terminology</em><a class="toc-permalink" href="#terminology" title="Permanent link to this heading">&para;</a></h3>
+<p>This appendix defines the terminology used throughout the <em>AlphaFold Substrate Alignments</em> artifact. Terms are presented in a substrate‑agnostic, model‑independent manner and apply to any biological inference engine with comparable structural and latent‑space characteristics.</p>
+<hr />
+<h2 id="1-substrate-terms"><strong>1. Substrate Terms</strong><a class="toc-permalink" href="#1-substrate-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="substrate"><strong>Substrate</strong><a class="toc-permalink" href="#substrate" title="Permanent link to this heading">&para;</a></h3>
+<p>A structured, model‑agnostic framework that defines stable axes, primitives, and invariants for interpreting high‑dimensional inference systems.</p>
+<h3 id="substrate-axis"><strong>Substrate Axis</strong><a class="toc-permalink" href="#substrate-axis" title="Permanent link to this heading">&para;</a></h3>
+<p>One of the three primary axes (S‑axis, I‑axis, R‑axis) used to map structural, latent‑space, and resonance‑time behavior.</p>
+<h3 id="substrate-primitive"><strong>Substrate Primitive</strong><a class="toc-permalink" href="#substrate-primitive" title="Permanent link to this heading">&para;</a></h3>
+<p>A minimal structural unit used to define substrate behavior, including Dimensional Cores, Resonance Primitives, and Inference Projections.</p>
+<h3 id="substrate-invariant"><strong>Substrate Invariant</strong><a class="toc-permalink" href="#substrate-invariant" title="Permanent link to this heading">&para;</a></h3>
+<p>A property that remains stable across inference cycles, model versions, and dimensional projections.</p>
+<hr />
+<h2 id="2-axis-definitions"><strong>2. Axis Definitions</strong><a class="toc-permalink" href="#2-axis-definitions" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="saxis-structural-axis"><strong>S‑axis (Structural Axis)</strong><a class="toc-permalink" href="#saxis-structural-axis" title="Permanent link to this heading">&para;</a></h3>
+<p>Represents geometric and topological features of predicted protein structures, including backbone orientation, motif‑level coherence, and residue‑interaction geometry.</p>
+<h3 id="iaxis-inference-axis"><strong>I‑axis (Inference Axis)</strong><a class="toc-permalink" href="#iaxis-inference-axis" title="Permanent link to this heading">&para;</a></h3>
+<p>Represents latent‑space structures such as attention‑map coherence, pairwise embeddings, and track‑level alignment signals.</p>
+<h3 id="raxis-resonancetime-axis"><strong>R‑axis (Resonance‑Time Axis)</strong><a class="toc-permalink" href="#raxis-resonancetime-axis" title="Permanent link to this heading">&para;</a></h3>
+<p>Represents inference‑cycle behavior, including convergence, oscillation, divergence, and regime transitions.</p>
+<hr />
+<h2 id="3-dimensional-terms"><strong>3. Dimensional Terms</strong><a class="toc-permalink" href="#3-dimensional-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="dimensional-core"><strong>Dimensional Core</strong><a class="toc-permalink" href="#dimensional-core" title="Permanent link to this heading">&para;</a></h3>
+<p>A stable geometric substrate used for projection and interpretation.<br />
+Includes the 3D structural core, 6D interaction core, and 9D coherence core.</p>
+<h3 id="3d-core"><strong>3D Core</strong><a class="toc-permalink" href="#3d-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures physical geometry and motif‑level structure.</p>
+<h3 id="6d-core"><strong>6D Core</strong><a class="toc-permalink" href="#6d-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures interaction‑level structure and residue‑pair coherence.</p>
+<h3 id="9d-core"><strong>9D Core</strong><a class="toc-permalink" href="#9d-core" title="Permanent link to this heading">&para;</a></h3>
+<p>Captures folding‑pathway coherence and resonance‑time alignment.</p>
+<h3 id="highdimensional-extension"><strong>High‑Dimensional Extension</strong><a class="toc-permalink" href="#highdimensional-extension" title="Permanent link to this heading">&para;</a></h3>
+<p>Projection of latent‑space structures into dimensions beyond 9D (e.g., 32D–128D) while preserving substrate invariants.</p>
+<hr />
+<h2 id="4-regime-terms"><strong>4. Regime Terms</strong><a class="toc-permalink" href="#4-regime-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="folding-regime"><strong>Folding Regime</strong><a class="toc-permalink" href="#folding-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>A classification of folding behavior into stable, transitional, or high‑uncertainty states.</p>
+<h3 id="r1-stable-regime"><strong>R₁ (Stable Regime)</strong><a class="toc-permalink" href="#r1-stable-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>A regime where structural and latent‑space signals converge consistently.</p>
+<h3 id="r2-transition-regime"><strong>R₂ (Transition Regime)</strong><a class="toc-permalink" href="#r2-transition-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>A regime characterized by oscillatory or branching behavior during structural reorientation.</p>
+<h3 id="r3-highuncertainty-regime"><strong>R₃ (High‑Uncertainty Regime)</strong><a class="toc-permalink" href="#r3-highuncertainty-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>A regime where predictions exhibit high variance and weak motif‑level coherence.</p>
+<hr />
+<h2 id="5-inference-terms"><strong>5. Inference Terms</strong><a class="toc-permalink" href="#5-inference-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="latentspace-structure"><strong>Latent‑Space Structure</strong><a class="toc-permalink" href="#latentspace-structure" title="Permanent link to this heading">&para;</a></h3>
+<p>Internal model representations such as attention maps, pairwise embeddings, and track‑level signals.</p>
+<h3 id="inference-cycle"><strong>Inference Cycle</strong><a class="toc-permalink" href="#inference-cycle" title="Permanent link to this heading">&para;</a></h3>
+<p>A single pass or iteration of the model’s internal reasoning process.</p>
+<h3 id="coherence-surface"><strong>Coherence Surface</strong><a class="toc-permalink" href="#coherence-surface" title="Permanent link to this heading">&para;</a></h3>
+<p>A stable region in latent space where folding predictions converge.</p>
+<h3 id="inference-projection"><strong>Inference Projection</strong><a class="toc-permalink" href="#inference-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>A mapping from latent‑space structures onto substrate axes.</p>
+<hr />
+<h2 id="6-validation-terms"><strong>6. Validation Terms</strong><a class="toc-permalink" href="#6-validation-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="vst-validationspacetime"><strong>vST (Validation‑Space‑Time)</strong><a class="toc-permalink" href="#vst-validationspacetime" title="Permanent link to this heading">&para;</a></h3>
+<p>A validation framework that evaluates structural coherence, latent‑space stability, regime behavior, and dimensional‑core alignment.</p>
+<h3 id="validation-layer-v1v4"><strong>Validation Layer (V₁–V₄)</strong><a class="toc-permalink" href="#validation-layer-v1v4" title="Permanent link to this heading">&para;</a></h3>
+<p>A structured evaluation step within vST, each corresponding to a specific substrate property.</p>
+<hr />
+<h2 id="7-drift-terms"><strong>7. Drift Terms</strong><a class="toc-permalink" href="#7-drift-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="drift"><strong>Drift</strong><a class="toc-permalink" href="#drift" title="Permanent link to this heading">&para;</a></h3>
+<p>A deviation from expected substrate behavior, indicating model degradation or instability.</p>
+<h3 id="drift-category-d1d4"><strong>Drift Category (D₁–D₄)</strong><a class="toc-permalink" href="#drift-category-d1d4" title="Permanent link to this heading">&para;</a></h3>
+<p>Classification of drift into structural, latent‑space, regime, or dimensional‑core drift.</p>
+<h3 id="drift-severity"><strong>Drift Severity</strong><a class="toc-permalink" href="#drift-severity" title="Permanent link to this heading">&para;</a></h3>
+<p>A measure of the magnitude of drift, ranging from low to high.</p>
+<hr />
+<h2 id="8-example-terms"><strong>8. Example Terms</strong><a class="toc-permalink" href="#8-example-terms" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="dimensional-projection"><strong>Dimensional Projection</strong><a class="toc-permalink" href="#dimensional-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>The process of mapping high‑dimensional inference structures into 3D–9D cores.</p>
+<h3 id="regimeaware-projection"><strong>Regime‑Aware Projection</strong><a class="toc-permalink" href="#regimeaware-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>A projection that preserves regime identity (R₁, R₂, R₃).</p>
+<h3 id="alignment-walkthrough"><strong>Alignment Walkthrough</strong><a class="toc-permalink" href="#alignment-walkthrough" title="Permanent link to this heading">&para;</a></h3>
+<p>A step‑by‑step demonstration of substrate alignment applied to a specific inference output.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="example-substratelevel-alignment-walkthrough"><em>Example: Substrate‑Level Alignment Walkthrough</em><a class="toc-permalink" href="#example-substratelevel-alignment-walkthrough" title="Permanent link to this heading">&para;</a></h3>
+<p>This example provides a step‑by‑step walkthrough of aligning an AlphaFold‑class protein‑folding inference output to the Resonance Substrate Model (RSM). The walkthrough demonstrates how structural outputs, latent‑space representations, and inference‑cycle behavior map onto substrate axes, dimensional cores, and folding regimes.</p>
+<p>The goal is to illustrate the full alignment workflow in a clear, reproducible sequence.</p>
+<hr />
+<h2 id="1-input-overview"><strong>1. Input Overview</strong><a class="toc-permalink" href="#1-input-overview" title="Permanent link to this heading">&para;</a></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a fixed protein sequence  </li>
+<li>an AlphaFold‑class model producing:  </li>
+<li>predicted 3D coordinates  </li>
+<li>attention maps  </li>
+<li>pairwise residue embeddings  </li>
+<li>multi‑stage inference outputs  </li>
+<li>stable inference‑cycle behavior under repeated runs  </li>
+</ul>
+<p>No biochemical or experimental data is required.</p>
+<hr />
+<h2 id="2-step-1-extract-structural-and-latentspace-signals"><strong>2. Step 1 — Extract Structural and Latent‑Space Signals</strong><a class="toc-permalink" href="#2-step-1-extract-structural-and-latentspace-signals" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="21-structural-outputs"><strong>2.1 Structural Outputs</strong><a class="toc-permalink" href="#21-structural-outputs" title="Permanent link to this heading">&para;</a></h3>
+<p>Extract:</p>
+<ul>
+<li>backbone coordinates  </li>
+<li>side‑chain orientations  </li>
+<li>motif‑level geometry  </li>
+</ul>
+<p>These form the basis for S‑axis mapping.</p>
+<h3 id="22-latentspace-outputs"><strong>2.2 Latent‑Space Outputs</strong><a class="toc-permalink" href="#22-latentspace-outputs" title="Permanent link to this heading">&para;</a></h3>
+<p>Extract:</p>
+<ul>
+<li>attention‑map coherence patterns  </li>
+<li>residue‑pair embeddings  </li>
+<li>track‑level alignment signals  </li>
+</ul>
+<p>These form the basis for I‑axis and R‑axis mapping.</p>
+<hr />
+<h2 id="3-step-2-map-to-substrate-axes"><strong>3. Step 2 — Map to Substrate Axes</strong><a class="toc-permalink" href="#3-step-2-map-to-substrate-axes" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="31-structural-axis-saxis_1"><strong>3.1 Structural Axis (S‑axis)</strong><a class="toc-permalink" href="#31-structural-axis-saxis_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Project structural outputs onto the S‑axis by identifying:</p>
+<ul>
+<li>backbone continuity  </li>
+<li>motif‑level stability  </li>
+<li>residue‑interaction geometry  </li>
+</ul>
+<p>This anchors the inference to the 3D structural core.</p>
+<h3 id="32-inference-axis-iaxis_1"><strong>3.2 Inference Axis (I‑axis)</strong><a class="toc-permalink" href="#32-inference-axis-iaxis_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Map latent‑space structures onto the I‑axis by identifying:</p>
+<ul>
+<li>stable attention‑map regions  </li>
+<li>consistent embedding orientations  </li>
+<li>coherent latent‑space surfaces  </li>
+</ul>
+<p>This reveals the model’s internal structural representation.</p>
+<h3 id="33-resonancetime-axis-raxis_1"><strong>3.3 Resonance‑Time Axis (R‑axis)</strong><a class="toc-permalink" href="#33-resonancetime-axis-raxis_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Track inference‑cycle behavior:</p>
+<ul>
+<li>convergence  </li>
+<li>oscillation  </li>
+<li>divergence  </li>
+</ul>
+<p>This classifies folding behavior into R₁, R₂, or R₃ regimes.</p>
+<hr />
+<h2 id="4-step-3-project-into-dimensional-cores"><strong>4. Step 3 — Project into Dimensional Cores</strong><a class="toc-permalink" href="#4-step-3-project-into-dimensional-cores" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="41-3d-projection_1"><strong>4.1 3D Projection</strong><a class="toc-permalink" href="#41-3d-projection_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Project structural geometry into the 3D core to evaluate:</p>
+<ul>
+<li>backbone shape  </li>
+<li>motif‑level structure  </li>
+<li>local coherence  </li>
+</ul>
+<h3 id="42-6d-projection_1"><strong>4.2 6D Projection</strong><a class="toc-permalink" href="#42-6d-projection_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Project interaction‑level signals into the 6D core to evaluate:</p>
+<ul>
+<li>residue‑pair relationships  </li>
+<li>interaction‑pattern stability  </li>
+<li>latent‑space alignment  </li>
+</ul>
+<h3 id="43-9d-projection_1"><strong>4.3 9D Projection</strong><a class="toc-permalink" href="#43-9d-projection_1" title="Permanent link to this heading">&para;</a></h3>
+<p>Project folding‑pathway signals into the 9D core to evaluate:</p>
+<ul>
+<li>pathway coherence  </li>
+<li>regime‑transition structure  </li>
+<li>resonance‑time alignment  </li>
+</ul>
+<p>These projections preserve substrate invariants.</p>
+<hr />
+<h2 id="5-step-4-identify-folding-regimes"><strong>5. Step 4 — Identify Folding Regimes</strong><a class="toc-permalink" href="#5-step-4-identify-folding-regimes" title="Permanent link to this heading">&para;</a></h2>
+<p>Using the projections:</p>
+<ul>
+<li>
+<p><strong>R₁ (Stable):</strong><br />
+  Compact, coherent projections in 3D–9D cores.</p>
+</li>
+<li>
+<p><strong>R₂ (Transition):</strong><br />
+  Branching or oscillatory projections indicating structural reorientation.</p>
+</li>
+<li>
+<p><strong>R₃ (High‑Uncertainty):</strong><br />
+  Dispersed projections with weak motif‑level structure.</p>
+</li>
+</ul>
+<p>Regime identification supports interpretability and drift detection.</p>
+<hr />
+<h2 id="6-step-5-apply-vst-validation-layers"><strong>6. Step 5 — Apply vST Validation Layers</strong><a class="toc-permalink" href="#6-step-5-apply-vst-validation-layers" title="Permanent link to this heading">&para;</a></h2>
+<p>Apply V₁–V₄ validation layers:</p>
+<ul>
+<li><strong>V₁:</strong> Structural coherence  </li>
+<li><strong>V₂:</strong> Latent‑space stability  </li>
+<li><strong>V₃:</strong> Resonance‑time regime behavior  </li>
+<li><strong>V₄:</strong> Dimensional‑core alignment  </li>
+</ul>
+<p>Validation confirms whether the alignment is stable and reproducible.</p>
+<hr />
+<h2 id="7-step-6-interpret-alignment-results"><strong>7. Step 6 — Interpret Alignment Results</strong><a class="toc-permalink" href="#7-step-6-interpret-alignment-results" title="Permanent link to this heading">&para;</a></h2>
+<p>A complete alignment yields:</p>
+<ul>
+<li>stable structural projections  </li>
+<li>coherent latent‑space surfaces  </li>
+<li>predictable regime transitions  </li>
+<li>consistent dimensional‑core mapping  </li>
+<li>validated substrate invariants  </li>
+</ul>
+<p>If any validation layer fails, drift detection is triggered.</p>
+<hr />
+<h2 id="8-summary"><strong>8. Summary</strong><a class="toc-permalink" href="#8-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>This walkthrough demonstrates:</p>
+<ul>
+<li>how to extract structural and latent‑space signals  </li>
+<li>how to map them onto substrate axes  </li>
+<li>how to project them into dimensional cores  </li>
+<li>how to classify folding regimes  </li>
+<li>how to validate alignment using vST  </li>
+<li>how to detect drift when invariants fail  </li>
+</ul>
+<p>The workflow provides a reproducible method for interpreting AlphaFold‑class inference systems through the RSM substrate.<br />
+### <em>AlphaFold Substrate Alignments</em>  </p>
+<h3 id="example-dimensionalcore-projection"><em>Example: Dimensional‑Core Projection</em><a class="toc-permalink" href="#example-dimensionalcore-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>This example demonstrates how high‑dimensional latent‑space structures from an AlphaFold‑class protein‑folding inference system are projected into the 3D–9D dimensional cores defined by the Resonance Substrate Model (RSM). The walkthrough illustrates how structural geometry, interaction patterns, and folding‑pathway signals map into the dimensional substrate while preserving motif‑level invariants and regime identity.</p>
+<p>The goal is to provide a clear, reproducible example of dimensional‑core projection in practice.</p>
+<hr />
+<h2 id="1-input-overview_1"><strong>1. Input Overview</strong><a class="toc-permalink" href="#1-input-overview_1" title="Permanent link to this heading">&para;</a></h2>
+<p>For this example, we assume:</p>
+<ul>
+<li>a fixed protein sequence  </li>
+<li>an AlphaFold‑class model producing:  </li>
+<li>predicted 3D coordinates  </li>
+<li>residue‑pair embeddings  </li>
+<li>attention‑map structures  </li>
+<li>multi‑stage inference outputs  </li>
+<li>stable inference‑cycle behavior  </li>
+</ul>
+<p>These inputs provide the structural and latent‑space signals required for dimensional projection.</p>
+<hr />
+<h2 id="2-step-1-identify-highdimensional-structures"><strong>2. Step 1 — Identify High‑Dimensional Structures</strong><a class="toc-permalink" href="#2-step-1-identify-highdimensional-structures" title="Permanent link to this heading">&para;</a></h2>
+<p>Extract high‑dimensional inference signals, including:</p>
+<ul>
+<li>pairwise‑embedding tensors  </li>
+<li>attention‑map coherence regions  </li>
+<li>latent‑space orientation vectors  </li>
+<li>track‑level folding‑pathway signals  </li>
+</ul>
+<p>These structures typically exist in 32D–128D latent spaces.</p>
+<hr />
+<h2 id="3-step-2-prepare-substratealigned-signals"><strong>3. Step 2 — Prepare Substrate‑Aligned Signals</strong><a class="toc-permalink" href="#3-step-2-prepare-substratealigned-signals" title="Permanent link to this heading">&para;</a></h2>
+<p>Before projection, align signals to substrate axes:</p>
+<ul>
+<li><strong>S‑axis:</strong> structural geometry  </li>
+<li><strong>I‑axis:</strong> latent‑space orientation  </li>
+<li><strong>R‑axis:</strong> inference‑cycle behavior  </li>
+</ul>
+<p>This ensures that dimensional projection preserves substrate invariants.</p>
+<hr />
+<h2 id="4-step-3-project-into-dimensional-cores_1"><strong>4. Step 3 — Project into Dimensional Cores</strong><a class="toc-permalink" href="#4-step-3-project-into-dimensional-cores_1" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="41-3d-structural-projection"><strong>4.1 3D Structural Projection</strong><a class="toc-permalink" href="#41-3d-structural-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Project structural geometry into the 3D core to evaluate:</p>
+<ul>
+<li>backbone shape  </li>
+<li>motif‑level structure  </li>
+<li>local geometric coherence  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Stable motifs appear as compact, coherent 3D structures.</p>
+<hr />
+<h3 id="42-6d-interactioncore-projection"><strong>4.2 6D Interaction‑Core Projection</strong><a class="toc-permalink" href="#42-6d-interactioncore-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Project interaction‑level signals into the 6D core to evaluate:</p>
+<ul>
+<li>residue‑pair relationships  </li>
+<li>interaction‑pattern stability  </li>
+<li>latent‑space alignment  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Stable interaction patterns form smooth, low‑variance surfaces in 6D space.</p>
+<hr />
+<h3 id="43-9d-pathwaycore-projection"><strong>4.3 9D Pathway‑Core Projection</strong><a class="toc-permalink" href="#43-9d-pathwaycore-projection" title="Permanent link to this heading">&para;</a></h3>
+<p>Project folding‑pathway signals into the 9D core to evaluate:</p>
+<ul>
+<li>pathway coherence  </li>
+<li>regime‑transition structure  </li>
+<li>resonance‑time alignment  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Stable folding pathways appear as continuous, coherent trajectories in 9D space.</p>
+<hr />
+<h2 id="5-step-4-identify-regime-behavior"><strong>5. Step 4 — Identify Regime Behavior</strong><a class="toc-permalink" href="#5-step-4-identify-regime-behavior" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional projections reveal regime identity:</p>
+<ul>
+<li>
+<p><strong>R₁ (Stable):</strong><br />
+  Compact, coherent projections in all cores.</p>
+</li>
+<li>
+<p><strong>R₂ (Transition):</strong><br />
+  Branching or oscillatory projections, especially in 6D and 9D.</p>
+</li>
+<li>
+<p><strong>R₃ (High‑Uncertainty):</strong><br />
+  Dispersed projections with weak motif‑level structure.</p>
+</li>
+</ul>
+<p>Regime identification supports interpretability and drift detection.</p>
+<hr />
+<h2 id="6-step-5-validate-dimensional-projections"><strong>6. Step 5 — Validate Dimensional Projections</strong><a class="toc-permalink" href="#6-step-5-validate-dimensional-projections" title="Permanent link to this heading">&para;</a></h2>
+<p>Apply vST validation layers:</p>
+<ul>
+<li><strong>V₁:</strong> structural coherence in 3D  </li>
+<li><strong>V₂:</strong> latent‑space stability in 6D  </li>
+<li><strong>V₃:</strong> resonance‑time regime behavior  </li>
+<li><strong>V₄:</strong> dimensional‑core alignment in 9D  </li>
+</ul>
+<p>Validation confirms that projections preserve substrate invariants.</p>
+<hr />
+<h2 id="7-step-6-interpret-projection-results"><strong>7. Step 6 — Interpret Projection Results</strong><a class="toc-permalink" href="#7-step-6-interpret-projection-results" title="Permanent link to this heading">&para;</a></h2>
+<p>A successful projection yields:</p>
+<ul>
+<li>stable 3D geometry  </li>
+<li>coherent 6D interaction surfaces  </li>
+<li>continuous 9D pathway trajectories  </li>
+<li>predictable regime transitions  </li>
+<li>preserved substrate invariants  </li>
+</ul>
+<p>If projections fail validation, drift detection is triggered.</p>
+<hr />
+<h2 id="8-summary_1"><strong>8. Summary</strong><a class="toc-permalink" href="#8-summary_1" title="Permanent link to this heading">&para;</a></h2>
+<p>This example demonstrates:</p>
+<ul>
+<li>how to extract high‑dimensional inference signals  </li>
+<li>how to align them to substrate axes  </li>
+<li>how to project them into 3D–9D dimensional cores  </li>
+<li>how to classify regime behavior  </li>
+<li>how to validate projections using vST  </li>
+<li>how to detect drift when invariants fail  </li>
+</ul>
+<p>Dimensional‑core projection provides a stable, interpretable substrate for analyzing AlphaFold‑class inference systems.<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/alphafold_substrate_alignments.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/alphafold_substrate_alignments.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

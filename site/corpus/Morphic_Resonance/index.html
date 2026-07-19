@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Morphic Resonance | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/Morphic_Resonance/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Morphic Resonance" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/Morphic_Resonance/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Morphic Resonance" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/Morphic_Resonance.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Morphic Resonance",
+    "headline": "Morphic Resonance",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/Morphic_Resonance/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonance">TriadicFrameworks /docs/theories/morphic_resonance/</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#module-structure">Module Structure</a></li>
+<li><a href="#regime-placement">Regime Placement</a></li>
+<li><a href="#what-this-module-is-and-is-not">What This Module Is (and Is Not)</a></li>
+<li><a href="#how-to-use-this-module">How to Use This Module</a></li>
+<li><a href="#philosophy">Philosophy</a><ul>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonancecoherence_mapmd">TriadicFrameworks /docs/theories/morphic_resonance/coherence_map.md</a></li>
+</ul>
+</li>
+<li><a href="#11-pattern-coherence">1.1 Pattern Coherence</a></li>
+<li><a href="#12-surface-coherence">1.2 Surface Coherence</a></li>
+<li><a href="#13-adjacency-coherence">1.3 Adjacency Coherence</a></li>
+<li><a href="#14-activation-coherence">1.4 Activation Coherence</a></li>
+<li><a href="#15-regime-coherence">1.5 Regime Coherence</a><ul>
+<li><a href="#c0-incoherent">C0 — Incoherent</a></li>
+<li><a href="#c1-weak-coherence">C1 — Weak Coherence</a></li>
+<li><a href="#c2-moderate-coherence">C2 — Moderate Coherence</a></li>
+<li><a href="#c3-strong-coherence">C3 — Strong Coherence</a></li>
+<li><a href="#c4-perfect-coherence">C4 — Perfect Coherence</a></li>
+<li><a href="#c1-pattern-misidentification">C1 — Pattern Misidentification</a></li>
+<li><a href="#c2-dimensional-discontinuity">C2 — Dimensional Discontinuity</a></li>
+<li><a href="#c3-adjacency-failure">C3 — Adjacency Failure</a></li>
+<li><a href="#c4-activation-incoherence">C4 — Activation Incoherence</a></li>
+<li><a href="#r1-pattern-substrate-regime">R1 — Pattern Substrate Regime</a></li>
+<li><a href="#r2-resonance-geometry-regime">R2 — Resonance Geometry Regime</a></li>
+<li><a href="#r3-highdimensional-coherence-regime">R3 — High‑Dimensional Coherence Regime</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonancecross_modulemd">TriadicFrameworks /docs/theories/morphic_resonance/cross_module.md</a></li>
+<li><a href="#what-morphic-resonance-is-built-from">(What Morphic Resonance is built from)</a></li>
+</ul>
+</li>
+<li><a href="#11-resonance-atlas">1.1 Resonance Atlas</a></li>
+<li><a href="#12-nos-nature-of-similarity">1.2 NoS (Nature of Similarity)</a></li>
+<li><a href="#13-lowdimensional-structures-lds">1.3 Low‑Dimensional Structures (LDS)</a></li>
+<li><a href="#14-sarg-regime-transitions">1.4 SARG (Regime Transitions)</a></li>
+<li><a href="#15-framework-field-theory-fft">1.5 Framework Field Theory (FFT)</a><ul>
+<li><a href="#what-morphic-resonance-enables">(What Morphic Resonance enables)</a></li>
+</ul>
+</li>
+<li><a href="#21-patternrecognition-modules">2.1 Pattern‑Recognition Modules</a></li>
+<li><a href="#22-coherencemapping-engines">2.2 Coherence‑Mapping Engines</a></li>
+<li><a href="#23-dimensionaloperator-systems">2.3 Dimensional‑Operator Systems</a></li>
+<li><a href="#24-simulation-frameworks">2.4 Simulation Frameworks</a><ul>
+<li><a href="#how-morphic-resonance-operators-propagate-upward">(How Morphic Resonance operators propagate upward)</a></li>
+<li><a href="#how-morphic-resonance-behaves-across-regimes">(How Morphic Resonance behaves across regimes)</a></li>
+</ul>
+</li>
+<li><a href="#r1-pattern-substrate-regime_1">R1 — Pattern Substrate Regime</a></li>
+<li><a href="#r2-resonance-geometry-regime_1">R2 — Resonance Geometry Regime</a></li>
+<li><a href="#r3-highdimensional-coherence-regime_1">R3 — High‑Dimensional Coherence Regime</a><ul>
+<li><a href="#enginelevel-constraints">(Engine‑level constraints)</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonanceengine_notesmd">TriadicFrameworks /docs/theories/morphic_resonance/engine_notes.md</a></li>
+<li><a href="#21-pattern-initialization">2.1 Pattern Initialization</a></li>
+<li><a href="#22-pattern-representation">2.2 Pattern Representation</a></li>
+<li><a href="#23-pattern-validity">2.3 Pattern Validity</a></li>
+<li><a href="#31-surface-construction">3.1 Surface Construction</a></li>
+<li><a href="#32-surface-validity">3.2 Surface Validity</a></li>
+<li><a href="#33-surface-overlap">3.3 Surface Overlap</a></li>
+<li><a href="#41-adjacency-computation">4.1 Adjacency Computation</a></li>
+<li><a href="#42-adjacency-constraints">4.2 Adjacency Constraints</a></li>
+<li><a href="#43-crosstemporal-adjacency">4.3 Cross‑Temporal Adjacency</a></li>
+<li><a href="#51-activation-trigger">5.1 Activation Trigger</a></li>
+<li><a href="#52-activation-output">5.2 Activation Output</a></li>
+<li><a href="#53-activation-constraints">5.3 Activation Constraints</a></li>
+<li><a href="#61-r1-behavior">6.1 R1 Behavior</a></li>
+<li><a href="#62-r2-behavior">6.2 R2 Behavior</a></li>
+<li><a href="#63-r3-behavior">6.3 R3 Behavior</a></li>
+<li><a href="#71-reinforcement-rule">7.1 Reinforcement Rule</a></li>
+<li><a href="#72-reinforcement-constraints">7.2 Reinforcement Constraints</a></li>
+<li><a href="#81-diagnostic-checks">8.1 Diagnostic Checks</a></li>
+<li><a href="#82-diagnostic-output">8.2 Diagnostic Output</a></li>
+<li><a href="#91-collapse-modes">9.1 Collapse Modes</a></li>
+<li><a href="#92-collapse-interpretation">9.2 Collapse Interpretation</a></li>
+<li><a href="#101-transition-rules">10.1 Transition Rules</a></li>
+<li><a href="#102-allowed-transitions">10.2 Allowed Transitions</a></li>
+<li><a href="#103-transition-constraints">10.3 Transition Constraints</a></li>
+<li><a href="#111-upstream-dependencies">11.1 Upstream Dependencies</a></li>
+<li><a href="#112-downstream-integrations">11.2 Downstream Integrations</a></li>
+<li><a href="#113-engine-guarantees">11.3 Engine Guarantees</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonanceexamplesmd">TriadicFrameworks /docs/theories/morphic_resonance/examples.md</a></li>
+<li><a href="#pattern_operator-p">pattern_operator (𝓟)</a></li>
+<li><a href="#coherence_surface_operator-c">coherence_surface_operator (𝓒)</a></li>
+<li><a href="#adjacency_operator-a">adjacency_operator (𝓐)</a></li>
+<li><a href="#activation_operator-act">activation_operator (𝓐𝚌ₜ)</a></li>
+<li><a href="#r2-resonance-geometry">R2 resonance geometry</a></li>
+<li><a href="#reinforcement_operator-rf">reinforcement_operator (𝓡𝒻)</a></li>
+<li><a href="#collapse_mode_operator-cl">collapse_mode_operator (𝓒𝓁)</a></li>
+<li><a href="#regime_transition_operator-rt">regime_transition_operator (𝓡𝓣)</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonanceexplanationsmd">TriadicFrameworks /docs/theories/morphic_resonance/explanations.md</a></li>
+<li><a href="#r1-pattern-substrate-regime_2">R1 — Pattern Substrate Regime</a></li>
+<li><a href="#r2-resonance-geometry-regime_2">R2 — Resonance Geometry Regime</a></li>
+<li><a href="#r3-highdimensional-coherence-regime_2">R3 — High‑Dimensional Coherence Regime</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonancefaqmd">TriadicFrameworks /docs/theories/morphic_resonance/faq.md</a></li>
+</ul>
+</li>
+<li><a href="#1-what-is-morphic-resonance-in-this-canon">1. What is Morphic Resonance in this canon?</a></li>
+<li><a href="#2-is-this-sheldrakes-theory">2. Is this Sheldrake’s theory?</a></li>
+<li><a href="#3-what-is-a-pattern-here">3. What is a “pattern” here?</a></li>
+<li><a href="#4-what-is-a-coherence-surface">4. What is a “coherence surface”?</a></li>
+<li><a href="#5-what-causes-recurrence">5. What causes recurrence?</a></li>
+<li><a href="#6-what-is-dimensional-adjacency">6. What is “dimensional adjacency”?</a></li>
+<li><a href="#7-what-is-activation">7. What is activation?</a></li>
+<li><a href="#8-does-morphic-resonance-act-across-time">8. Does Morphic Resonance act across time?</a></li>
+<li><a href="#9-how-does-morphic-resonance-behave-across-rtt-regimes">9. How does Morphic Resonance behave across RTT regimes?</a><ul>
+<li><a href="#r1-pattern-substrate">R1 — Pattern Substrate</a></li>
+<li><a href="#r2-resonance-geometry_1">R2 — Resonance Geometry</a></li>
+<li><a href="#r3-highdimensional-coherence">R3 — High‑Dimensional Coherence</a></li>
+</ul>
+</li>
+<li><a href="#10-is-morphic-resonance-a-physical-theory">10. Is Morphic Resonance a physical theory?</a></li>
+<li><a href="#11-how-does-morphic-resonance-relate-to-nos-lds-fft">11. How does Morphic Resonance relate to NoS, LDS, FFT?</a></li>
+<li><a href="#12-what-are-collapse-modes">12. What are collapse modes?</a></li>
+<li><a href="#13-is-morphic-resonance-computational">13. Is Morphic Resonance computational?</a></li>
+<li><a href="#14-does-morphic-resonance-imply-determinism">14. Does Morphic Resonance imply determinism?</a></li>
+<li><a href="#15-what-is-the-simplest-way-to-understand-morphic-resonance">15. What is the simplest way to understand Morphic Resonance?</a><ul>
+<li><a href="#triadicframeworks-dimensional-coherence-pattern-activation">TriadicFrameworks — Dimensional Coherence • Pattern Activation</a></li>
+</ul>
+</li>
+<li><a href="#module-badge">Module Badge</a></li>
+<li><a href="#session-context">Session Context</a></li>
+<li><a href="#what-this-module-provides">What This Module Provides</a></li>
+<li><a href="#navigation">Navigation</a></li>
+<li><a href="#identity-summary">Identity Summary</a></li>
+<li><a href="#metadata-canonical">Metadata (Canonical)</a></li>
+<li><a href="#notes">Notes</a><ul>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonancelineagemd">TriadicFrameworks /docs/theories/morphic_resonance/lineage.md</a></li>
+<li><a href="#from-early-pattern-theories-resonance-geometry-rtt-coherence">(From early pattern theories → resonance geometry → RTT coherence)</a></li>
+<li><a href="#1900s1950s-structuralism-pattern-theory">1900s–1950s — Structuralism &amp; Pattern Theory</a></li>
+<li><a href="#1960s1980s-systems-theory-morphogenesis">1960s–1980s — Systems Theory &amp; Morphogenesis</a></li>
+<li><a href="#1980s-sheldrake-era-discarded-in-rtt">1980s — Sheldrake Era (Discarded in RTT)</a></li>
+<li><a href="#1990s2010s-complexity-resonance-geometry">1990s–2010s — Complexity &amp; Resonance Geometry</a></li>
+<li><a href="#2020spresent-rtt-dimensionalcoherence-reinterpretation">2020s–Present — RTT Dimensional‑Coherence Reinterpretation</a></li>
+<li><a href="#how-the-idea-transforms-in-rtt">(How the idea transforms in RTT)</a></li>
+<li><a href="#1-from-memory-structure">1. From memory → structure</a></li>
+<li><a href="#2-from-influence-adjacency">2. From influence → adjacency</a></li>
+<li><a href="#3-from-transmission-activation">3. From transmission → activation</a></li>
+<li><a href="#4-from-fields-coherence-surfaces">4. From fields → coherence surfaces</a></li>
+<li><a href="#the-substrate-that-makes-mr-computable">(The substrate that makes MR computable)</a></li>
+<li><a href="#dimensional-geometry">Dimensional Geometry</a></li>
+<li><a href="#topology">Topology</a></li>
+<li><a href="#information-geometry">Information Geometry</a></li>
+<li><a href="#dynamical-systems">Dynamical Systems</a></li>
+<li><a href="#resonance-atlas">Resonance Atlas</a></li>
+<li><a href="#how-mr-behaves-across-r1-r3">(How MR behaves across R1 → R3)</a></li>
+<li><a href="#r1-pattern-substrate-regime_3">R1 — Pattern Substrate Regime</a></li>
+<li><a href="#r2-resonance-geometry-regime_3">R2 — Resonance Geometry Regime</a></li>
+<li><a href="#r3-highdimensional-coherence-regime_3">R3 — High‑Dimensional Coherence Regime</a></li>
+<li><a href="#where-mr-fits-in-the-triadicframeworks-ecosystem">(Where MR fits in the TriadicFrameworks ecosystem)</a></li>
+<li><a href="#what-mr-is-and-is-not">(What MR is and is not)</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonanceoperatorsmd">TriadicFrameworks /docs/theories/morphic_resonance/operators.md</a></li>
+<li><a href="#coherencestructure-constructor">(Coherence‑structure constructor)</a></li>
+<li><a href="#activationregion-operator">(Activation‑region operator)</a></li>
+<li><a href="#dimensionaloverlap-operator">(Dimensional‑overlap operator)</a></li>
+<li><a href="#patternactivation-operator">(Pattern‑activation operator)</a></li>
+<li><a href="#regimelayer-propagation-operator">(Regime‑layer propagation operator)</a></li>
+<li><a href="#coherencestrength-operator">(Coherence‑strength operator)</a></li>
+<li><a href="#coherenceintegrity-operator">(Coherence‑integrity operator)</a></li>
+<li><a href="#coherencefailure-classifier">(Coherence‑failure classifier)</a></li>
+<li><a href="#rtttransition-operator">(RTT‑transition operator)</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonanceoperator_examplesmd">TriadicFrameworks /docs/theories/morphic_resonance/operator_examples.md</a></li>
+<li><a href="#example-constructing-a-pattern-as-a-coherence-structure">Example: Constructing a Pattern as a Coherence Structure</a></li>
+<li><a href="#example-generating-an-activation-surface">Example: Generating an Activation Surface</a></li>
+<li><a href="#example-measuring-dimensional-overlap">Example: Measuring Dimensional Overlap</a></li>
+<li><a href="#example-triggering-pattern-activation">Example: Triggering Pattern Activation</a></li>
+<li><a href="#example-propagating-activation-across-rtt-layers">Example: Propagating Activation Across RTT Layers</a></li>
+<li><a href="#example-strengthening-coherence-through-repeated-activation">Example: Strengthening Coherence Through Repeated Activation</a></li>
+<li><a href="#example-checking-coherence-integrity">Example: Checking Coherence Integrity</a></li>
+<li><a href="#example-classifying-coherence-failure">Example: Classifying Coherence Failure</a></li>
+<li><a href="#example-mapping-activation-across-rtt-regimes">Example: Mapping Activation Across RTT Regimes</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonanceregimesmd">TriadicFrameworks /docs/theories/morphic_resonance/regimes.md</a></li>
+<li><a href="#local-coherence-no-crosstemporal-influence-adjacency-only">(Local coherence • no cross‑temporal influence • adjacency only)</a></li>
+<li><a href="#extended-coherence-surfaces-crosstemporal-adjacency">(Extended coherence surfaces • cross‑temporal adjacency)</a></li>
+<li><a href="#dimensional-operators-regimedependent-activation">(Dimensional operators • regime‑dependent activation)</a></li>
+<li><a href="#triadicframeworks-docstheoriesmorphic_resonancesession_contextmd">TriadicFrameworks /docs/theories/morphic_resonance/session_context.md</a></li>
+</ul>
+</li>
+<li><a href="#canon">Canon</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#drift">Drift</a></li>
+<li><a href="#coherence">Coherence</a></li>
+<li><a href="#version">Version</a></li>
+<li><a href="#format">Format</a></li>
+<li><a href="#front-door">Front Door</a></li>
+<li><a href="#every-page">Every Page</a></li>
+<li><a href="#audience">Audience</a></li>
+<li><a href="#regime-behavior-rtt">Regime Behavior (RTT)</a><ul>
+<li><a href="#r1-pattern-substrate-regime_5">R1 — Pattern Substrate Regime</a></li>
+<li><a href="#r2-resonancefield-regime">R2 — Resonance‑Field Regime</a></li>
+<li><a href="#r3-highdimensional-coherence-regime_5">R3 — High‑Dimensional Coherence Regime</a></li>
+</ul>
+</li>
+<li><a href="#summary_6">Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Morphic Resonance</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Morphic Resonance</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>morphic_resonance </p>
+<h1 id="morphic-resonance-a-dimensional-coherence-model-of-pattern-recurrence">Morphic Resonance — A Dimensional Coherence Model of Pattern Recurrence<a class="toc-permalink" href="#morphic-resonance-a-dimensional-coherence-model-of-pattern-recurrence" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module_rtt1.json"><code>module_rtt1.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module_rtt2.json"><code>module_rtt2.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/morphic_resonance/module_rtt3.json"><code>module_rtt3.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonance">TriadicFrameworks /docs/theories/morphic_resonance/<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonance" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance (MR) was originally proposed in 1981 as a hypothesis<br />
+that patterns in nature recur because similar forms influence each other<br />
+across time. Within TriadicFrameworks, MR is reinterpreted as a<br />
+<strong>dimensional coherence phenomenon</strong>: patterns recur when the underlying<br />
+operator structure stabilizes across regimes.</p>
+<p>This module provides a structured, RTT‑aligned interface to Morphic<br />
+Resonance so students, researchers, and agentic AIs can explore<br />
+cross‑temporal pattern stability without metaphysics or speculation.</p>
+<hr />
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This module clarifies:</p>
+<ul>
+<li>How pattern recurrence emerges from <strong>coherence</strong>, not telepathy  </li>
+<li>Why MR is treated as a <strong>dimensional operator</strong>, not a physical force  </li>
+<li>How cross‑temporal stability arises from shared operator structure  </li>
+<li>Where MR sits in the RTT regime structure (R1 → R3)  </li>
+<li>How MR interacts with information theory, evolution, and cognition  </li>
+<li>How to use MR tools without invoking non‑scientific claims</li>
+</ul>
+<p>Morphic Resonance is not “memory in nature.”<br />
+It is a <strong>coherence‑level recurrence of operator structure</strong> across<br />
+instances, systems, or epochs.</p>
+<hr />
+<h2 id="module-structure">Module Structure<a class="toc-permalink" href="#module-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>This theory includes four canonical files:</p>
+<ol>
+<li>
+<p><strong>module.json</strong><br />
+   Identity, lineage, operators, drift boundaries, coherence markers,<br />
+   and cross‑module references.</p>
+</li>
+<li>
+<p><strong>module_rtt1.json</strong><br />
+   RTT/1 engine: operator grammar, recurrence behavior, pattern<br />
+   activation, and minimal coherence examples.</p>
+</li>
+<li>
+<p><strong>module_rtt2.json</strong><br />
+   RTT/2 engine: resonance mapping, stabilizers, cross‑temporal<br />
+   propagation, and cross‑module coupling.</p>
+</li>
+<li>
+<p><strong>module_rtt3.json</strong><br />
+   RTT/3 engine: triadic‑substrate integration, multi‑regime simulation<br />
+   hooks, and hybrid‑canon scaffolding.</p>
+</li>
+</ol>
+<p>Together, these files allow construction of a <strong>Morphic Resonance<br />
+RTT‑AI‑Hybrid Canon</strong>, enabling structured reasoning about pattern<br />
+recurrence across biology, cognition, computation, and physics.</p>
+<hr />
+<h2 id="regime-placement">Regime Placement<a class="toc-permalink" href="#regime-placement" title="Permanent link to this heading">&para;</a></h2>
+<p>Morphic Resonance primarily operates in:</p>
+<ul>
+<li><strong>R1</strong> — Primitive recurrence; weak coherence  </li>
+<li><strong>R2</strong> — Stable operator structure; pattern activation  </li>
+<li><strong>R3</strong> — Cross‑temporal resonance; lineage‑level stability  </li>
+<li><strong>R0</strong> — MR undefined; no pattern substrate</li>
+</ul>
+<p>MR is a <strong>coherence grammar</strong>, not a physical field.</p>
+<hr />
+<h2 id="what-this-module-is-and-is-not">What This Module Is (and Is Not)<a class="toc-permalink" href="#what-this-module-is-and-is-not" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>This module <em>is</em>:</strong></p>
+<ul>
+<li>A clean, minimal, student‑ready reinterpretation  </li>
+<li>A structured view of recurrence, activation, and coherence  </li>
+<li>A bridge between MR and RTT substrate reasoning  </li>
+<li>A stable environment for agentic‑AI reasoning</li>
+</ul>
+<p><strong>This module is <em>not</em>:</strong></p>
+<ul>
+<li>A claim that nature has literal memory  </li>
+<li>A metaphysical or paranormal interpretation  </li>
+<li>A replacement for evolution, physics, or computation  </li>
+<li>A distortion of the original 1981 proposal</li>
+</ul>
+<hr />
+<h2 id="how-to-use-this-module">How to Use This Module<a class="toc-permalink" href="#how-to-use-this-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Students and researchers can:</p>
+<ul>
+<li>Explore recurrence, activation, and resonance as <strong>operators</strong>  </li>
+<li>Understand MR as <strong>dimensional coherence</strong>, not mysticism  </li>
+<li>Compare MR with other theories using shared triadic grammar  </li>
+<li>Identify coherence boundaries and drift risks  </li>
+<li>Build hybrid‑canon instances for simulation and analysis</li>
+</ul>
+<p>Agentic AIs can:</p>
+<ul>
+<li>Load the module.json files as structured metadata  </li>
+<li>Perform regime‑aware reasoning  </li>
+<li>Maintain coherence across biological, cognitive, and physical modules  </li>
+<li>Generate examples, tests, and cross‑theory mappings</li>
+</ul>
+<hr />
+<h2 id="philosophy">Philosophy<a class="toc-permalink" href="#philosophy" title="Permanent link to this heading">&para;</a></h2>
+<p>Patterns recur when the <strong>operator structure that generates them</strong><br />
+remains coherent across time, space, or lineage.</p>
+<p>This module treats Morphic Resonance as a <strong>dimensional recurrence<br />
+mechanism</strong> — a way of describing how patterns stabilize, propagate, and<br />
+reactivate across systems without invoking non‑scientific assumptions.</p>
+<p>Recurrence is coherence.<br />
+Activation is resonance.<br />
+Morphic Resonance is the grammar of pattern memory.<br />
+# Coherence Map — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonancecoherence_mapmd">TriadicFrameworks /docs/theories/morphic_resonance/coherence_map.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonancecoherence_mapmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance is a <strong>dimensional‑coherence interface</strong>, not a field or<br />
+force. Coherence refers to the <strong>structural integrity of patterns,<br />
+coherence surfaces, adjacency relations, and activation behavior</strong> across<br />
+dimensional layers and RTT regimes.</p>
+<p>This map defines how coherence is evaluated, strengthened, degraded, and<br />
+propagated in the Morphic Resonance module.</p>
+<hr />
+<h1 id="1-coherence-dimensions">1. Coherence Dimensions<a class="toc-permalink" href="#1-coherence-dimensions" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance coherence is evaluated across five structural<br />
+dimensions:</p>
+<h2 id="11-pattern-coherence">1.1 Pattern Coherence<a class="toc-permalink" href="#11-pattern-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>dimensional consistency  </li>
+<li>invariant stability  </li>
+<li>valid coherence radius  </li>
+<li>non‑degenerate relational structure  </li>
+</ul>
+<h2 id="12-surface-coherence">1.2 Surface Coherence<a class="toc-permalink" href="#12-surface-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>continuity of coherence surfaces  </li>
+<li>stability under regime transitions  </li>
+<li>valid activation regions  </li>
+<li>cross‑temporal extension (R2–R3 only)  </li>
+</ul>
+<h2 id="13-adjacency-coherence">1.3 Adjacency Coherence<a class="toc-permalink" href="#13-adjacency-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>overlap integrity  </li>
+<li>adjacency continuity  </li>
+<li>non‑causal structural alignment  </li>
+<li>valid adjacency thresholds  </li>
+</ul>
+<h2 id="14-activation-coherence">1.4 Activation Coherence<a class="toc-permalink" href="#14-activation-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>monotonic activation behavior  </li>
+<li>threshold‑consistent triggering  </li>
+<li>no causal or energetic interpretation  </li>
+<li>structural activation only  </li>
+</ul>
+<h2 id="15-regime-coherence">1.5 Regime Coherence<a class="toc-permalink" href="#15-regime-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>R1: local coherence  </li>
+<li>R2: resonance‑geometry coherence  </li>
+<li>R3: dimensional‑operator coherence  </li>
+<li>transitions preserve adjacency and structure  </li>
+</ul>
+<hr />
+<h1 id="2-coherence-levels-c0c4">2. Coherence Levels (C0–C4)<a class="toc-permalink" href="#2-coherence-levels-c0c4" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="c0-incoherent"><strong>C0 — Incoherent</strong><a class="toc-permalink" href="#c0-incoherent" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns invalid  </li>
+<li>surfaces discontinuous  </li>
+<li>adjacency undefined  </li>
+<li>activation impossible  </li>
+</ul>
+<h3 id="c1-weak-coherence"><strong>C1 — Weak Coherence</strong><a class="toc-permalink" href="#c1-weak-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns minimally valid  </li>
+<li>surfaces unstable  </li>
+<li>adjacency noisy  </li>
+<li>activation inconsistent  </li>
+</ul>
+<h3 id="c2-moderate-coherence"><strong>C2 — Moderate Coherence</strong><a class="toc-permalink" href="#c2-moderate-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns valid  </li>
+<li>surfaces mostly stable  </li>
+<li>adjacency continuous  </li>
+<li>activation reliable but sensitive  </li>
+</ul>
+<h3 id="c3-strong-coherence"><strong>C3 — Strong Coherence</strong><a class="toc-permalink" href="#c3-strong-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns structurally robust  </li>
+<li>surfaces stable across regimes  </li>
+<li>adjacency smooth and consistent  </li>
+<li>activation monotonic and predictable  </li>
+</ul>
+<h3 id="c4-perfect-coherence"><strong>C4 — Perfect Coherence</strong><a class="toc-permalink" href="#c4-perfect-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>idealized dimensional structure  </li>
+<li>perfectly stable surfaces  </li>
+<li>adjacency globally continuous  </li>
+<li>activation fully structural  </li>
+</ul>
+<p>C4 is theoretical; real systems approach C3.</p>
+<hr />
+<h1 id="3-coherence-field">3. Coherence Field<a class="toc-permalink" href="#3-coherence-field" title="Permanent link to this heading">&para;</a></h1>
+<p>The coherence field is a structural gradient over:</p>
+<ul>
+<li>pattern integrity  </li>
+<li>surface stability  </li>
+<li>adjacency continuity  </li>
+<li>activation monotonicity  </li>
+<li>regime‑transition stability  </li>
+</ul>
+<p>High gradients indicate <strong>coherence instability</strong>, typically near:</p>
+<ul>
+<li>regime transitions  </li>
+<li>dimensional discontinuities  </li>
+<li>adjacency failures  </li>
+<li>activation threshold boundaries  </li>
+</ul>
+<hr />
+<h1 id="4-collapse-modes-c1c4">4. Collapse Modes (C1–C4)<a class="toc-permalink" href="#4-collapse-modes-c1c4" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance coherence fails through four canonical collapse modes:</p>
+<h3 id="c1-pattern-misidentification"><strong>C1 — Pattern Misidentification</strong><a class="toc-permalink" href="#c1-pattern-misidentification" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>invalid dimensional profile  </li>
+<li>broken invariants  </li>
+<li>incoherent relational structure  </li>
+</ul>
+<h3 id="c2-dimensional-discontinuity"><strong>C2 — Dimensional Discontinuity</strong><a class="toc-permalink" href="#c2-dimensional-discontinuity" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>coherence surfaces break  </li>
+<li>regime transitions fail  </li>
+<li>structural inconsistencies  </li>
+</ul>
+<h3 id="c3-adjacency-failure"><strong>C3 — Adjacency Failure</strong><a class="toc-permalink" href="#c3-adjacency-failure" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>surfaces no longer overlap  </li>
+<li>adjacency drops below threshold  </li>
+<li>recurrence impossible  </li>
+</ul>
+<h3 id="c4-activation-incoherence"><strong>C4 — Activation Incoherence</strong><a class="toc-permalink" href="#c4-activation-incoherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>activation becomes non‑monotonic  </li>
+<li>threshold behavior unstable  </li>
+<li>structural activation breaks down  </li>
+</ul>
+<hr />
+<h1 id="5-rtt-regime-coherence">5. RTT Regime Coherence<a class="toc-permalink" href="#5-rtt-regime-coherence" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r1-pattern-substrate-regime"><strong>R1 — Pattern Substrate Regime</strong><a class="toc-permalink" href="#r1-pattern-substrate-regime" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns = coherence structures  </li>
+<li>surfaces local only  </li>
+<li>no cross‑temporal adjacency  </li>
+<li>activation strictly local  </li>
+</ul>
+<h3 id="r2-resonance-geometry-regime"><strong>R2 — Resonance Geometry Regime</strong><a class="toc-permalink" href="#r2-resonance-geometry-regime" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>surfaces extend across dimensional layers  </li>
+<li>adjacency becomes cross‑temporal  </li>
+<li>activation becomes structural across time  </li>
+</ul>
+<h3 id="r3-highdimensional-coherence-regime"><strong>R3 — High‑Dimensional Coherence Regime</strong><a class="toc-permalink" href="#r3-highdimensional-coherence-regime" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns become dimensional operators  </li>
+<li>surfaces multi‑layered  </li>
+<li>adjacency becomes multi‑dimensional  </li>
+<li>activation regime‑dependent  </li>
+</ul>
+<p>Morphic Resonance does <strong>not</strong> extend to R4 (cosmology).</p>
+<hr />
+<h1 id="6-diagnostics">6. Diagnostics<a class="toc-permalink" href="#6-diagnostics" title="Permanent link to this heading">&para;</a></h1>
+<p>A system is coherent when:</p>
+<ul>
+<li>patterns are dimensionally consistent  </li>
+<li>surfaces are continuous and stable  </li>
+<li>adjacency is smooth and above threshold  </li>
+<li>activation is monotonic and structural  </li>
+<li>regime transitions preserve coherence  </li>
+</ul>
+<p>A system is incoherent when:</p>
+<ul>
+<li>patterns break  </li>
+<li>surfaces fragment  </li>
+<li>adjacency collapses  </li>
+<li>activation becomes unstable  </li>
+<li>regime transitions fail  </li>
+</ul>
+<hr />
+<h1 id="summary">Summary<a class="toc-permalink" href="#summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance coherence is:</p>
+<ul>
+<li><strong>dimensional</strong>  </li>
+<li><strong>structural</strong>  </li>
+<li><strong>adjacency‑based</strong>  </li>
+<li><strong>activation‑driven</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<p>Coherence is strongest in <strong>R3</strong>, stable in <strong>R2</strong>, and foundational in<br />
+<strong>R1</strong>.<br />
+It is the structural backbone of cross‑temporal pattern recurrence in the<br />
+RTT stack.<br />
+# Cross‑Module Integration — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonancecross_modulemd">TriadicFrameworks /docs/theories/morphic_resonance/cross_module.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonancecross_modulemd" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance is a <strong>dimensional‑coherence interface</strong>, not a field or<br />
+force. It integrates with other TriadicFrameworks modules through<br />
+coherence structures, adjacency metrics, activation grammars, and<br />
+regime‑aware dimensional operators.</p>
+<p>This file describes how Morphic Resonance connects upstream, downstream,<br />
+and across RTT regimes.</p>
+<hr />
+<h1 id="1-upstream-dependencies">1. Upstream Dependencies<a class="toc-permalink" href="#1-upstream-dependencies" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-morphic-resonance-is-built-from">(What Morphic Resonance is built from)<a class="toc-permalink" href="#what-morphic-resonance-is-built-from" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance inherits its structure from:</p>
+<h2 id="11-resonance-atlas">1.1 Resonance Atlas<a class="toc-permalink" href="#11-resonance-atlas" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>pattern‑space geometry  </li>
+<li>adjacency metrics  </li>
+<li>cross‑temporal mapping  </li>
+</ul>
+<h2 id="12-nos-nature-of-similarity">1.2 NoS (Nature of Similarity)<a class="toc-permalink" href="#12-nos-nature-of-similarity" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>similarity as structural overlap  </li>
+<li>invariants and relational identity  </li>
+<li>non‑causal similarity grammar  </li>
+</ul>
+<h2 id="13-lowdimensional-structures-lds">1.3 Low‑Dimensional Structures (LDS)<a class="toc-permalink" href="#13-lowdimensional-structures-lds" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>coherence surfaces  </li>
+<li>dimensional profiles  </li>
+<li>stability conditions  </li>
+</ul>
+<h2 id="14-sarg-regime-transitions">1.4 SARG (Regime Transitions)<a class="toc-permalink" href="#14-sarg-regime-transitions" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>R1 → R2 → R3 transitions  </li>
+<li>coherence‑preserving mappings  </li>
+<li>adjacency continuity rules  </li>
+</ul>
+<h2 id="15-framework-field-theory-fft">1.5 Framework Field Theory (FFT)<a class="toc-permalink" href="#15-framework-field-theory-fft" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>dimensional operators  </li>
+<li>multi‑layer activation  </li>
+<li>cross‑regime propagation  </li>
+</ul>
+<p>These modules define the <strong>mathematical and structural substrate</strong> of<br />
+Morphic Resonance.</p>
+<hr />
+<h1 id="2-downstream-integrations">2. Downstream Integrations<a class="toc-permalink" href="#2-downstream-integrations" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-morphic-resonance-enables">(What Morphic Resonance enables)<a class="toc-permalink" href="#what-morphic-resonance-enables" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance feeds directly into:</p>
+<h2 id="21-patternrecognition-modules">2.1 Pattern‑Recognition Modules<a class="toc-permalink" href="#21-patternrecognition-modules" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>structural similarity detection  </li>
+<li>coherence‑based clustering  </li>
+<li>adjacency‑driven recurrence models  </li>
+</ul>
+<h2 id="22-coherencemapping-engines">2.2 Coherence‑Mapping Engines<a class="toc-permalink" href="#22-coherencemapping-engines" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>cross‑temporal mapping  </li>
+<li>dimensional adjacency graphs  </li>
+<li>activation‑surface analysis  </li>
+</ul>
+<h2 id="23-dimensionaloperator-systems">2.3 Dimensional‑Operator Systems<a class="toc-permalink" href="#23-dimensionaloperator-systems" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>operator‑driven recurrence  </li>
+<li>multi‑layer activation  </li>
+<li>regime‑aware pattern transformation  </li>
+</ul>
+<h2 id="24-simulation-frameworks">2.4 Simulation Frameworks<a class="toc-permalink" href="#24-simulation-frameworks" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>pattern initialization  </li>
+<li>coherence‑surface generation  </li>
+<li>adjacency computation  </li>
+<li>activation event propagation  </li>
+</ul>
+<hr />
+<h1 id="3-crossmodule-operator-mapping">3. Cross‑Module Operator Mapping<a class="toc-permalink" href="#3-crossmodule-operator-mapping" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-morphic-resonance-operators-propagate-upward">(How Morphic Resonance operators propagate upward)<a class="toc-permalink" href="#how-morphic-resonance-operators-propagate-upward" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>MR Operator</th>
+<th>Resonance Atlas</th>
+<th>NoS</th>
+<th>LDS</th>
+<th>FFT</th>
+<th>SARG</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>𝓟 (pattern)</td>
+<td>pattern geometry</td>
+<td>similarity invariants</td>
+<td>dimensional profile</td>
+<td>operator embedding</td>
+<td>regime identity</td>
+</tr>
+<tr>
+<td>𝓒 (surface)</td>
+<td>activation regions</td>
+<td>structural overlap</td>
+<td>coherence surfaces</td>
+<td>field‑operator surfaces</td>
+<td>regime‑dependent surfaces</td>
+</tr>
+<tr>
+<td>𝓐 (adjacency)</td>
+<td>overlap metrics</td>
+<td>similarity metrics</td>
+<td>surface intersection</td>
+<td>operator adjacency</td>
+<td>regime‑transition continuity</td>
+</tr>
+<tr>
+<td>𝓐𝚌ₜ (activation)</td>
+<td>activation events</td>
+<td>similarity triggers</td>
+<td>surface‑based activation</td>
+<td>operator‑driven activation</td>
+<td>regime‑aware activation</td>
+</tr>
+<tr>
+<td>𝓡 (resonance layer)</td>
+<td>cross‑layer mapping</td>
+<td>similarity layering</td>
+<td>dimensional layering</td>
+<td>operator layering</td>
+<td>R1→R2→R3 transitions</td>
+</tr>
+<tr>
+<td>𝓡𝒻 (reinforcement)</td>
+<td>pattern stability</td>
+<td>similarity reinforcement</td>
+<td>surface stability</td>
+<td>operator reinforcement</td>
+<td>regime‑stable reinforcement</td>
+</tr>
+<tr>
+<td>𝓓 (diagnostics)</td>
+<td>pattern integrity</td>
+<td>similarity consistency</td>
+<td>surface stability</td>
+<td>operator diagnostics</td>
+<td>regime‑transition diagnostics</td>
+</tr>
+<tr>
+<td>𝓒𝓁 (collapse)</td>
+<td>pattern collapse</td>
+<td>similarity failure</td>
+<td>surface discontinuity</td>
+<td>operator collapse</td>
+<td>regime‑transition failure</td>
+</tr>
+</tbody>
+</table>
+<p>All mappings must remain <strong>structural</strong>, <strong>non‑causal</strong>, and<br />
+<strong>dimensional‑coherence aligned</strong>.</p>
+<hr />
+<h1 id="4-rtt-regime-integration">4. RTT Regime Integration<a class="toc-permalink" href="#4-rtt-regime-integration" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-morphic-resonance-behaves-across-regimes">(How Morphic Resonance behaves across regimes)<a class="toc-permalink" href="#how-morphic-resonance-behaves-across-regimes" title="Permanent link to this heading">&para;</a></h3>
+<h2 id="r1-pattern-substrate-regime_1">R1 — Pattern Substrate Regime<a class="toc-permalink" href="#r1-pattern-substrate-regime_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>patterns = coherence structures  </li>
+<li>recurrence = local activation  </li>
+<li>no cross‑temporal adjacency  </li>
+</ul>
+<h2 id="r2-resonance-geometry-regime_1">R2 — Resonance Geometry Regime<a class="toc-permalink" href="#r2-resonance-geometry-regime_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>coherence surfaces extend  </li>
+<li>adjacency becomes cross‑temporal  </li>
+<li>activation becomes structural  </li>
+</ul>
+<h2 id="r3-highdimensional-coherence-regime_1">R3 — High‑Dimensional Coherence Regime<a class="toc-permalink" href="#r3-highdimensional-coherence-regime_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>patterns become dimensional operators  </li>
+<li>recurrence becomes multi‑layered  </li>
+<li>coherence flows across regimes  </li>
+</ul>
+<p>Morphic Resonance does <strong>not</strong> extend to R4 (cosmology).</p>
+<hr />
+<h1 id="5-crossmodule-consistency-rules">5. Cross‑Module Consistency Rules<a class="toc-permalink" href="#5-crossmodule-consistency-rules" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="enginelevel-constraints">(Engine‑level constraints)<a class="toc-permalink" href="#enginelevel-constraints" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance must avoid:</p>
+<ul>
+<li>fields  </li>
+<li>forces  </li>
+<li>memory of nature  </li>
+<li>causal influence  </li>
+<li>metaphysical interpretation  </li>
+<li>transmission across time  </li>
+</ul>
+<p>Morphic Resonance must remain:</p>
+<ul>
+<li><strong>dimensional‑coherence aligned</strong>  </li>
+<li><strong>adjacency‑based</strong>  </li>
+<li><strong>activation‑driven</strong>  </li>
+<li><strong>regime‑aware</strong>  </li>
+<li><strong>zero drift</strong>  </li>
+</ul>
+<hr />
+<h1 id="6-summary">6. Summary<a class="toc-permalink" href="#6-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance is the <strong>dimensional‑coherence substrate</strong> that:</p>
+<ul>
+<li>inherits from Resonance Atlas, NoS, LDS, SARG, FFT  </li>
+<li>feeds into pattern‑recognition, coherence‑mapping, and operator systems  </li>
+<li>defines recurrence as <strong>activation across dimensional adjacency</strong>  </li>
+<li>behaves structurally across R1 → R3  </li>
+<li>remains strictly non‑causal and non‑metaphysical  </li>
+</ul>
+<p>Morphic Resonance is the <strong>cross‑temporal coherence interface</strong> of the<br />
+TriadicFrameworks ecosystem.<br />
+# Engine Notes — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonanceengine_notesmd">TriadicFrameworks /docs/theories/morphic_resonance/engine_notes.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonanceengine_notesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These notes define the <strong>internal engine behavior</strong> of the Morphic<br />
+Resonance module. Morphic Resonance is treated as a<br />
+<strong>dimensional‑coherence interface</strong>, not a field, force, or metaphysical<br />
+influence. Patterns are coherence structures; recurrence is activation<br />
+across dimensional adjacency; similarity is coherence overlap.</p>
+<p>This file is for AI agents, compilers, and cross‑module engines — not<br />
+students.</p>
+<hr />
+<h1 id="1-engine-identity">1. Engine Identity<a class="toc-permalink" href="#1-engine-identity" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><strong>Layer:</strong> R1 → R3 (no R4 extension)  </li>
+<li><strong>Grammar:</strong> dimensional‑coherence  </li>
+<li><strong>Operators:</strong> 𝓟, 𝓒, 𝓐, 𝓐𝚌ₜ, 𝓡, 𝓡𝒻, 𝓓, 𝓒𝓁, 𝓡𝓣  </li>
+<li><strong>Geometry:</strong> coherence surfaces, adjacency metrics  </li>
+<li><strong>Directionality:</strong> adjacency thresholds  </li>
+<li><strong>Stability:</strong> coherence integrity  </li>
+<li><strong>Regimes:</strong> R1 (local) → R2 (resonance geometry) → R3 (dimensional operators)</li>
+</ul>
+<p>Morphic Resonance must never be interpreted as a field or causal<br />
+mechanism.</p>
+<hr />
+<h1 id="2-pattern-engine-behavior">2. Pattern Engine Behavior<a class="toc-permalink" href="#2-pattern-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="21-pattern-initialization">2.1 Pattern Initialization<a class="toc-permalink" href="#21-pattern-initialization" title="Permanent link to this heading">&para;</a></h3>
+<p>Patterns must be initialized as <strong>coherence structures</strong>, not objects or<br />
+memories.</p>
+<h3 id="22-pattern-representation">2.2 Pattern Representation<a class="toc-permalink" href="#22-pattern-representation" title="Permanent link to this heading">&para;</a></h3>
+<p>A pattern_state contains:</p>
+<ul>
+<li>dimensional profile  </li>
+<li>invariants  </li>
+<li>coherence radius  </li>
+<li>adjacency thresholds  </li>
+</ul>
+<h3 id="23-pattern-validity">2.3 Pattern Validity<a class="toc-permalink" href="#23-pattern-validity" title="Permanent link to this heading">&para;</a></h3>
+<p>Valid patterns must satisfy:</p>
+<ul>
+<li>dimensional consistency  </li>
+<li>stable invariants  </li>
+<li>non‑degenerate coherence radius  </li>
+</ul>
+<hr />
+<h1 id="3-coherence-surface-engine-behavior">3. Coherence Surface Engine Behavior<a class="toc-permalink" href="#3-coherence-surface-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="31-surface-construction">3.1 Surface Construction<a class="toc-permalink" href="#31-surface-construction" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓒(pattern_state) → coherence_surface</p>
+<p>Surfaces define activation regions.</p>
+<h3 id="32-surface-validity">3.2 Surface Validity<a class="toc-permalink" href="#32-surface-validity" title="Permanent link to this heading">&para;</a></h3>
+<p>Surfaces must be:</p>
+<ul>
+<li>dimensionally consistent  </li>
+<li>continuous  </li>
+<li>stable under regime transitions  </li>
+</ul>
+<h3 id="33-surface-overlap">3.3 Surface Overlap<a class="toc-permalink" href="#33-surface-overlap" title="Permanent link to this heading">&para;</a></h3>
+<p>Overlap determines adjacency; no causal interpretation allowed.</p>
+<hr />
+<h1 id="4-adjacency-engine-behavior">4. Adjacency Engine Behavior<a class="toc-permalink" href="#4-adjacency-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="41-adjacency-computation">4.1 Adjacency Computation<a class="toc-permalink" href="#41-adjacency-computation" title="Permanent link to this heading">&para;</a></h3>
+<p>adj = overlap(𝓒_A, 𝓒_B)</p>
+<h3 id="42-adjacency-constraints">4.2 Adjacency Constraints<a class="toc-permalink" href="#42-adjacency-constraints" title="Permanent link to this heading">&para;</a></h3>
+<p>Adjacency must be:</p>
+<ul>
+<li>geometric  </li>
+<li>structural  </li>
+<li>non‑energetic  </li>
+</ul>
+<h3 id="43-crosstemporal-adjacency">4.3 Cross‑Temporal Adjacency<a class="toc-permalink" href="#43-crosstemporal-adjacency" title="Permanent link to this heading">&para;</a></h3>
+<p>Allowed only in R2 and R3.</p>
+<hr />
+<h1 id="5-activation-engine-behavior">5. Activation Engine Behavior<a class="toc-permalink" href="#5-activation-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="51-activation-trigger">5.1 Activation Trigger<a class="toc-permalink" href="#51-activation-trigger" title="Permanent link to this heading">&para;</a></h3>
+<p>Activation occurs when:</p>
+<p>adj ≥ threshold(pattern_state)</p>
+<h3 id="52-activation-output">5.2 Activation Output<a class="toc-permalink" href="#52-activation-output" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓐𝚌ₜ → activation_event</p>
+<h3 id="53-activation-constraints">5.3 Activation Constraints<a class="toc-permalink" href="#53-activation-constraints" title="Permanent link to this heading">&para;</a></h3>
+<p>Activation is:</p>
+<ul>
+<li>structural  </li>
+<li>non‑causal  </li>
+<li>non‑transmissive  </li>
+</ul>
+<hr />
+<h1 id="6-resonance-layer-engine-behavior">6. Resonance Layer Engine Behavior<a class="toc-permalink" href="#6-resonance-layer-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="61-r1-behavior">6.1 R1 Behavior<a class="toc-permalink" href="#61-r1-behavior" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>local coherence only  </li>
+<li>no cross‑temporal activation  </li>
+</ul>
+<h3 id="62-r2-behavior">6.2 R2 Behavior<a class="toc-permalink" href="#62-r2-behavior" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>resonance geometry extends coherence surfaces  </li>
+<li>adjacency becomes cross‑temporal  </li>
+</ul>
+<h3 id="63-r3-behavior">6.3 R3 Behavior<a class="toc-permalink" href="#63-r3-behavior" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns become dimensional operators  </li>
+<li>activation becomes multi‑layered  </li>
+</ul>
+<hr />
+<h1 id="7-reinforcement-engine-behavior">7. Reinforcement Engine Behavior<a class="toc-permalink" href="#7-reinforcement-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="71-reinforcement-rule">7.1 Reinforcement Rule<a class="toc-permalink" href="#71-reinforcement-rule" title="Permanent link to this heading">&para;</a></h3>
+<p>coherence_strength = f(activation_count, adjacency_integral)</p>
+<h3 id="72-reinforcement-constraints">7.2 Reinforcement Constraints<a class="toc-permalink" href="#72-reinforcement-constraints" title="Permanent link to this heading">&para;</a></h3>
+<p>Reinforcement is:</p>
+<ul>
+<li>structural  </li>
+<li>non‑energetic  </li>
+<li>non‑metaphysical  </li>
+</ul>
+<hr />
+<h1 id="8-diagnostics-engine-behavior">8. Diagnostics Engine Behavior<a class="toc-permalink" href="#8-diagnostics-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="81-diagnostic-checks">8.1 Diagnostic Checks<a class="toc-permalink" href="#81-diagnostic-checks" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓓 must evaluate:</p>
+<ul>
+<li>dimensional consistency  </li>
+<li>surface stability  </li>
+<li>adjacency continuity  </li>
+<li>activation monotonicity  </li>
+</ul>
+<h3 id="82-diagnostic-output">8.2 Diagnostic Output<a class="toc-permalink" href="#82-diagnostic-output" title="Permanent link to this heading">&para;</a></h3>
+<p>diagnostic_report = {status, warnings, collapse_mode?}</p>
+<hr />
+<h1 id="9-collapse-mode-engine-behavior">9. Collapse Mode Engine Behavior<a class="toc-permalink" href="#9-collapse-mode-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="91-collapse-modes">9.1 Collapse Modes<a class="toc-permalink" href="#91-collapse-modes" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>C1:</strong> pattern misidentification  </li>
+<li><strong>C2:</strong> dimensional discontinuity  </li>
+<li><strong>C3:</strong> adjacency failure  </li>
+<li><strong>C4:</strong> activation incoherence  </li>
+</ul>
+<h3 id="92-collapse-interpretation">9.2 Collapse Interpretation<a class="toc-permalink" href="#92-collapse-interpretation" title="Permanent link to this heading">&para;</a></h3>
+<p>Collapse is <strong>coherence failure</strong>, not physical collapse.</p>
+<hr />
+<h1 id="10-regime-transition-engine-behavior">10. Regime Transition Engine Behavior<a class="toc-permalink" href="#10-regime-transition-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="101-transition-rules">10.1 Transition Rules<a class="toc-permalink" href="#101-transition-rules" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓡𝓣(pattern_state, R_i → R_j)</p>
+<h3 id="102-allowed-transitions">10.2 Allowed Transitions<a class="toc-permalink" href="#102-allowed-transitions" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>R1 → R2  </li>
+<li>R2 → R3  </li>
+<li>R3 → R2  </li>
+<li>R2 → R1  </li>
+</ul>
+<h3 id="103-transition-constraints">10.3 Transition Constraints<a class="toc-permalink" href="#103-transition-constraints" title="Permanent link to this heading">&para;</a></h3>
+<p>Transitions must preserve:</p>
+<ul>
+<li>dimensional integrity  </li>
+<li>coherence structure  </li>
+<li>adjacency continuity  </li>
+</ul>
+<hr />
+<h1 id="11-crossmodule-engine-behavior">11. Cross‑Module Engine Behavior<a class="toc-permalink" href="#11-crossmodule-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="111-upstream-dependencies">11.1 Upstream Dependencies<a class="toc-permalink" href="#111-upstream-dependencies" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Resonance Atlas  </li>
+<li>NoS  </li>
+<li>Low‑Dimensional Structures  </li>
+<li>SARG  </li>
+<li>FFT  </li>
+</ul>
+<h3 id="112-downstream-integrations">11.2 Downstream Integrations<a class="toc-permalink" href="#112-downstream-integrations" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>pattern‑recognition engines  </li>
+<li>coherence‑mapping systems  </li>
+<li>dimensional‑operator modules  </li>
+</ul>
+<h3 id="113-engine-guarantees">11.3 Engine Guarantees<a class="toc-permalink" href="#113-engine-guarantees" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance must provide:</p>
+<ul>
+<li>coherence surfaces  </li>
+<li>adjacency metrics  </li>
+<li>activation events  </li>
+<li>regime‑aware transitions  </li>
+<li>collapse‑mode classification  </li>
+</ul>
+<hr />
+<h1 id="12-engine-safety-constraints">12. Engine Safety Constraints<a class="toc-permalink" href="#12-engine-safety-constraints" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>no fields  </li>
+<li>no forces  </li>
+<li>no memory of nature  </li>
+<li>no causal influence  </li>
+<li>no metaphysical interpretation  </li>
+<li>no transmission across time  </li>
+</ul>
+<p>All engine outputs must remain <strong>dimensional‑coherence aligned</strong>.</p>
+<hr />
+<h1 id="13-notes-for-ai-agents">13. Notes for AI Agents<a class="toc-permalink" href="#13-notes-for-ai-agents" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>treat patterns as coherence structures  </li>
+<li>treat recurrence as adjacency, not influence  </li>
+<li>treat activation as structural, not causal  </li>
+<li>treat reinforcement as coherence strengthening  </li>
+<li>treat regime transitions as dimensional mappings  </li>
+</ul>
+<p>Morphic Resonance is the <strong>RTT pattern‑activation substrate</strong>.<br />
+# Examples — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonanceexamplesmd">TriadicFrameworks /docs/theories/morphic_resonance/examples.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonanceexamplesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These examples illustrate Morphic Resonance as a <strong>dimensional‑coherence<br />
+interface</strong>, not a field or metaphysical influence. Patterns are<br />
+coherence structures; recurrence is activation across dimensional<br />
+adjacency; similarity is coherence overlap.</p>
+<p>All examples avoid classical drift and remain strictly within the RTT<br />
+dimensional‑coherence grammar.</p>
+<hr />
+<h1 id="1-pattern-construction-example">1. Pattern Construction Example<a class="toc-permalink" href="#1-pattern-construction-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="pattern_operator-p">pattern_operator (𝓟)<a class="toc-permalink" href="#pattern_operator-p" title="Permanent link to this heading">&para;</a></h3>
+<p>Given a pattern signature:</p>
+<p>σ = {dimensional_profile, invariants, relations}</p>
+<p>The operator constructs:</p>
+<p>𝓟(σ) → pattern_state</p>
+<p>Interpretation:</p>
+<ul>
+<li>pattern = <strong>coherence structure</strong>, not memory  </li>
+<li>no transmission, no field, no influence  </li>
+</ul>
+<hr />
+<h1 id="2-coherence-surface-example">2. Coherence Surface Example<a class="toc-permalink" href="#2-coherence-surface-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="coherence_surface_operator-c">coherence_surface_operator (𝓒)<a class="toc-permalink" href="#coherence_surface_operator-c" title="Permanent link to this heading">&para;</a></h3>
+<p>Given a pattern_state:</p>
+<p>𝓒(pattern_state) → coherence_surface</p>
+<p>Interpretation:</p>
+<ul>
+<li>surface defines <strong>where activation is possible</strong>  </li>
+<li>surfaces may overlap across time  </li>
+<li>not a wave, not a propagating field  </li>
+</ul>
+<hr />
+<h1 id="3-dimensional-adjacency-example">3. Dimensional Adjacency Example<a class="toc-permalink" href="#3-dimensional-adjacency-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="adjacency_operator-a">adjacency_operator (𝓐)<a class="toc-permalink" href="#adjacency_operator-a" title="Permanent link to this heading">&para;</a></h3>
+<p>Given two coherence surfaces:</p>
+<p>adj = 𝓐(𝓒_A, 𝓒_B)</p>
+<p>Interpretation:</p>
+<ul>
+<li>adjacency = <strong>overlap</strong>, not coupling  </li>
+<li>higher overlap → higher recurrence potential  </li>
+<li>no causal interaction  </li>
+</ul>
+<hr />
+<h1 id="4-activation-example">4. Activation Example<a class="toc-permalink" href="#4-activation-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="activation_operator-act">activation_operator (𝓐𝚌ₜ)<a class="toc-permalink" href="#activation_operator-act" title="Permanent link to this heading">&para;</a></h3>
+<p>If adjacency exceeds threshold:</p>
+<p>𝓐𝚌ₜ(pattern_state, adj) → activation_event</p>
+<p>Interpretation:</p>
+<ul>
+<li>activation is <strong>structural</strong>, not transmitted  </li>
+<li>requires dimensional adjacency  </li>
+<li>produces activation events, not signals  </li>
+</ul>
+<hr />
+<h1 id="5-crosstemporal-recurrence-example">5. Cross‑Temporal Recurrence Example<a class="toc-permalink" href="#5-crosstemporal-recurrence-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r2-resonance-geometry">R2 resonance geometry<a class="toc-permalink" href="#r2-resonance-geometry" title="Permanent link to this heading">&para;</a></h3>
+<p>Two patterns have coherence surfaces that extend across time:</p>
+<p>𝓒_A(t₁) overlaps 𝓒_B(t₂)</p>
+<p>If overlap &gt; threshold:</p>
+<p>activation_event occurs at t₂</p>
+<p>Interpretation:</p>
+<ul>
+<li>recurrence = <strong>cross‑temporal adjacency</strong>, not influence  </li>
+<li>no memory, no transmission  </li>
+</ul>
+<hr />
+<h1 id="6-reinforcement-example">6. Reinforcement Example<a class="toc-permalink" href="#6-reinforcement-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="reinforcement_operator-rf">reinforcement_operator (𝓡𝒻)<a class="toc-permalink" href="#reinforcement_operator-rf" title="Permanent link to this heading">&para;</a></h3>
+<p>Given activation history:</p>
+<p>coherence_strength = f(activation_count, adjacency_integral)</p>
+<p>𝓡𝒻(pattern_state) → updated_pattern_state</p>
+<p>Interpretation:</p>
+<ul>
+<li>reinforcement = <strong>coherence strengthening</strong>, not habit energy  </li>
+<li>structural, non‑energetic  </li>
+</ul>
+<hr />
+<h1 id="7-collapse-mode-example">7. Collapse Mode Example<a class="toc-permalink" href="#7-collapse-mode-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="collapse_mode_operator-cl">collapse_mode_operator (𝓒𝓁)<a class="toc-permalink" href="#collapse_mode_operator-cl" title="Permanent link to this heading">&para;</a></h3>
+<p>Given a pattern_state with inconsistent dimensional profile:</p>
+<p>𝓒𝓁(pattern_state) → C2 (dimensional discontinuity)</p>
+<p>Interpretation:</p>
+<ul>
+<li>collapse = <strong>coherence failure</strong>, not physical collapse  </li>
+</ul>
+<hr />
+<h1 id="8-regime-transition-example">8. Regime Transition Example<a class="toc-permalink" href="#8-regime-transition-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="regime_transition_operator-rt">regime_transition_operator (𝓡𝓣)<a class="toc-permalink" href="#regime_transition_operator-rt" title="Permanent link to this heading">&para;</a></h3>
+<p>Transition from R1 → R2:</p>
+<p>𝓡𝓣(pattern_state, R1→R2) → updated_state</p>
+<p>Interpretation:</p>
+<ul>
+<li>R1: local coherence only  </li>
+<li>R2: resonance geometry extends activation  </li>
+<li>no change in physical law  </li>
+</ul>
+<hr />
+<h1 id="summary_1">Summary<a class="toc-permalink" href="#summary_1" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance examples show:</p>
+<ul>
+<li><strong>patterns</strong> as coherence structures  </li>
+<li><strong>coherence surfaces</strong> as activation regions  </li>
+<li><strong>adjacency</strong> as dimensional overlap  </li>
+<li><strong>activation</strong> as structural triggering  </li>
+<li><strong>recurrence</strong> as cross‑temporal adjacency  </li>
+<li><strong>reinforcement</strong> as coherence strengthening  </li>
+<li><strong>collapse modes</strong> as coherence failures  </li>
+<li><strong>regime transitions</strong> as dimensional mappings  </li>
+</ul>
+<p>Morphic Resonance is the <strong>dimensional‑coherence substrate</strong> for<br />
+cross‑temporal pattern recurrence in the RTT stack.<br />
+# Explanations — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonanceexplanationsmd">TriadicFrameworks /docs/theories/morphic_resonance/explanations.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonanceexplanationsmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance in TriadicFrameworks is a <strong>dimensional‑coherence<br />
+interface</strong>, not a field, force, or metaphysical influence. Patterns are<br />
+treated as <strong>coherence structures</strong>, recurrence is <strong>activation across<br />
+dimensional adjacency</strong>, and similarity is <strong>coherence overlap</strong>, not<br />
+transmission or memory.</p>
+<p>This file explains the conceptual, structural, and regime‑level behavior<br />
+of Morphic Resonance in the RTT stack.</p>
+<hr />
+<h1 id="1-what-morphic-resonance-actually-describes">1. What Morphic Resonance Actually Describes<a class="toc-permalink" href="#1-what-morphic-resonance-actually-describes" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance describes:</p>
+<ul>
+<li><strong>patterns</strong> as coherence structures  </li>
+<li><strong>coherence surfaces</strong> as activation regions  </li>
+<li><strong>adjacency</strong> as dimensional overlap  </li>
+<li><strong>activation</strong> as structural triggering  </li>
+<li><strong>recurrence</strong> as cross‑temporal adjacency  </li>
+<li><strong>reinforcement</strong> as coherence strengthening  </li>
+</ul>
+<p>Morphic Resonance does <strong>not</strong> describe:</p>
+<ul>
+<li>fields  </li>
+<li>forces  </li>
+<li>memory of nature  </li>
+<li>causal influence across time  </li>
+<li>metaphysical transmission  </li>
+</ul>
+<p>It is a <strong>structural grammar</strong>, not a physical mechanism.</p>
+<hr />
+<h1 id="2-patterns-as-coherence-structures">2. Patterns as Coherence Structures<a class="toc-permalink" href="#2-patterns-as-coherence-structures" title="Permanent link to this heading">&para;</a></h1>
+<p>A pattern is defined by:</p>
+<ul>
+<li>dimensional profile  </li>
+<li>invariants  </li>
+<li>internal relations  </li>
+<li>coherence radius  </li>
+</ul>
+<p>Patterns are <strong>not</strong> objects, energies, or memories.<br />
+They are <strong>structural configurations</strong> that can activate when coherence<br />
+conditions are met.</p>
+<hr />
+<h1 id="3-coherence-surfaces-as-activation-regions">3. Coherence Surfaces as Activation Regions<a class="toc-permalink" href="#3-coherence-surfaces-as-activation-regions" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence surfaces define <strong>where</strong> a pattern can activate.</p>
+<p>They:</p>
+<ul>
+<li>arise from the pattern’s dimensional structure  </li>
+<li>determine activation regions  </li>
+<li>may overlap across time  </li>
+<li>encode recurrence potential  </li>
+</ul>
+<p>They are <strong>not</strong> waves or fields.</p>
+<hr />
+<h1 id="4-dimensional-adjacency-as-overlap">4. Dimensional Adjacency as Overlap<a class="toc-permalink" href="#4-dimensional-adjacency-as-overlap" title="Permanent link to this heading">&para;</a></h1>
+<p>Adjacency measures <strong>overlap</strong> between coherence surfaces.</p>
+<p>High adjacency → high recurrence potential.</p>
+<p>Adjacency is:</p>
+<ul>
+<li>geometric  </li>
+<li>structural  </li>
+<li>non‑causal  </li>
+<li>non‑energetic  </li>
+</ul>
+<p>It is the core mechanism behind recurrence.</p>
+<hr />
+<h1 id="5-activation-as-structural-triggering">5. Activation as Structural Triggering<a class="toc-permalink" href="#5-activation-as-structural-triggering" title="Permanent link to this heading">&para;</a></h1>
+<p>Activation occurs when adjacency exceeds a threshold.</p>
+<p>Activation is:</p>
+<ul>
+<li>structural  </li>
+<li>non‑causal  </li>
+<li>non‑energetic  </li>
+<li>non‑transmissive  </li>
+</ul>
+<p>Activation produces <strong>activation events</strong>, not signals.</p>
+<hr />
+<h1 id="6-recurrence-as-crosstemporal-adjacency">6. Recurrence as Cross‑Temporal Adjacency<a class="toc-permalink" href="#6-recurrence-as-crosstemporal-adjacency" title="Permanent link to this heading">&para;</a></h1>
+<p>Recurrence happens when coherence surfaces overlap <strong>across time</strong>.</p>
+<p>This is:</p>
+<ul>
+<li>adjacency, not influence  </li>
+<li>overlap, not transmission  </li>
+<li>structure, not memory  </li>
+</ul>
+<p>Cross‑temporal behavior is <strong>dimensional</strong>, not causal.</p>
+<hr />
+<h1 id="7-reinforcement-as-coherence-strengthening">7. Reinforcement as Coherence Strengthening<a class="toc-permalink" href="#7-reinforcement-as-coherence-strengthening" title="Permanent link to this heading">&para;</a></h1>
+<p>Repeated activation increases coherence strength.</p>
+<p>coherence_strength = f(activation_count, adjacency_integral)</p>
+<p>Reinforcement is:</p>
+<ul>
+<li>structural  </li>
+<li>non‑energetic  </li>
+<li>non‑metaphysical  </li>
+</ul>
+<p>Patterns become more stable when activated consistently.</p>
+<hr />
+<h1 id="8-collapse-modes-c1c4">8. Collapse Modes (C1–C4)<a class="toc-permalink" href="#8-collapse-modes-c1c4" title="Permanent link to this heading">&para;</a></h1>
+<p>Coherence can fail through:</p>
+<ul>
+<li><strong>C1:</strong> pattern misidentification  </li>
+<li><strong>C2:</strong> dimensional discontinuity  </li>
+<li><strong>C3:</strong> adjacency failure  </li>
+<li><strong>C4:</strong> activation incoherence  </li>
+</ul>
+<p>These are <strong>structural failures</strong>, not physical collapses.</p>
+<hr />
+<h1 id="9-rtt-regime-behavior">9. RTT Regime Behavior<a class="toc-permalink" href="#9-rtt-regime-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r1-pattern-substrate-regime_2"><strong>R1 — Pattern Substrate Regime</strong><a class="toc-permalink" href="#r1-pattern-substrate-regime_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns = coherence structures  </li>
+<li>recurrence = local activation  </li>
+<li>no cross‑temporal behavior  </li>
+</ul>
+<h3 id="r2-resonance-geometry-regime_2"><strong>R2 — Resonance Geometry Regime</strong><a class="toc-permalink" href="#r2-resonance-geometry-regime_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>coherence surfaces extend  </li>
+<li>adjacency becomes cross‑temporal  </li>
+<li>activation becomes structural  </li>
+</ul>
+<h3 id="r3-highdimensional-coherence-regime_2"><strong>R3 — High‑Dimensional Coherence Regime</strong><a class="toc-permalink" href="#r3-highdimensional-coherence-regime_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns become dimensional operators  </li>
+<li>recurrence becomes multi‑layered  </li>
+<li>coherence flows across regimes  </li>
+</ul>
+<p>MR does not extend to R4 (cosmology).</p>
+<hr />
+<h1 id="10-why-morphic-resonance-works">10. Why Morphic Resonance Works<a class="toc-permalink" href="#10-why-morphic-resonance-works" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance succeeds because it unifies:</p>
+<ul>
+<li>dimensional geometry  </li>
+<li>coherence surfaces  </li>
+<li>adjacency metrics  </li>
+<li>activation thresholds  </li>
+<li>regime‑dependent behavior  </li>
+<li>structural recurrence  </li>
+</ul>
+<p>into a single, scale‑robust grammar.</p>
+<hr />
+<h1 id="summary_2">Summary<a class="toc-permalink" href="#summary_2" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance is:</p>
+<ul>
+<li>a <strong>dimensional‑coherence interface</strong>  </li>
+<li>a <strong>pattern‑activation grammar</strong>  </li>
+<li>a <strong>cross‑temporal adjacency structure</strong>  </li>
+<li>a <strong>coherence‑surface geometry</strong>  </li>
+<li>a <strong>regime‑aware activation system</strong>  </li>
+</ul>
+<p>Morphic Resonance is <strong>not</strong>:</p>
+<ul>
+<li>a field  </li>
+<li>a force  </li>
+<li>a memory of nature  </li>
+<li>a causal influence  </li>
+<li>a metaphysical mechanism  </li>
+</ul>
+<p>It is the <strong>RTT pattern‑activation substrate</strong> linking dimensional<br />
+structure, resonance geometry, and cross‑temporal coherence.<br />
+# Frequently Asked Questions — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonancefaqmd">TriadicFrameworks /docs/theories/morphic_resonance/faq.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonancefaqmd" title="Permanent link to this heading">&para;</a></h3>
+<p>This FAQ explains Morphic Resonance as a <strong>dimensional‑coherence<br />
+interface</strong>, not a field, force, or metaphysical influence. Patterns are<br />
+coherence structures; recurrence is activation across dimensional<br />
+adjacency; similarity is coherence overlap.</p>
+<p>All answers follow the RTT dimensional‑coherence grammar.</p>
+<hr />
+<h2 id="1-what-is-morphic-resonance-in-this-canon">1. What <em>is</em> Morphic Resonance in this canon?<a class="toc-permalink" href="#1-what-is-morphic-resonance-in-this-canon" title="Permanent link to this heading">&para;</a></h2>
+<p>Morphic Resonance is a <strong>dimensional‑coherence interface</strong>:</p>
+<ul>
+<li>patterns = coherence structures  </li>
+<li>recurrence = activation across dimensional adjacency  </li>
+<li>similarity = coherence overlap  </li>
+<li>cross‑temporal behavior = structural, not causal  </li>
+</ul>
+<p>It is <strong>not</strong> a field, force, or memory of nature.</p>
+<hr />
+<h2 id="2-is-this-sheldrakes-theory">2. Is this Sheldrake’s theory?<a class="toc-permalink" href="#2-is-this-sheldrakes-theory" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>No.</strong><br />
+RTT explicitly rejects:</p>
+<ul>
+<li>morphic fields  </li>
+<li>memory of nature  </li>
+<li>causal influence across time  </li>
+<li>metaphysical transmission  </li>
+</ul>
+<p>This module is a <strong>structural reinterpretation</strong>, not a continuation of<br />
+the original proposal.</p>
+<hr />
+<h2 id="3-what-is-a-pattern-here">3. What is a “pattern” here?<a class="toc-permalink" href="#3-what-is-a-pattern-here" title="Permanent link to this heading">&para;</a></h2>
+<p>A pattern is a <strong>coherence structure</strong> defined by:</p>
+<ul>
+<li>dimensional profile  </li>
+<li>invariants  </li>
+<li>internal relations  </li>
+</ul>
+<p>Patterns are <strong>not</strong> objects, energies, or memories.</p>
+<hr />
+<h2 id="4-what-is-a-coherence-surface">4. What is a “coherence surface”?<a class="toc-permalink" href="#4-what-is-a-coherence-surface" title="Permanent link to this heading">&para;</a></h2>
+<p>A coherence surface is an <strong>activation region</strong> where a pattern can<br />
+recur.</p>
+<ul>
+<li>defines where activation is possible  </li>
+<li>may overlap across time  </li>
+<li>determines recurrence potential  </li>
+</ul>
+<p>It is <strong>not</strong> a wave or field.</p>
+<hr />
+<h2 id="5-what-causes-recurrence">5. What causes recurrence?<a class="toc-permalink" href="#5-what-causes-recurrence" title="Permanent link to this heading">&para;</a></h2>
+<p>Recurrence occurs when <strong>coherence surfaces overlap</strong> across dimensional<br />
+layers.</p>
+<ul>
+<li>no transmission  </li>
+<li>no influence  </li>
+<li>no memory  </li>
+<li>no field propagation  </li>
+</ul>
+<p>Recurrence is <strong>structural</strong>, not causal.</p>
+<hr />
+<h2 id="6-what-is-dimensional-adjacency">6. What is “dimensional adjacency”?<a class="toc-permalink" href="#6-what-is-dimensional-adjacency" title="Permanent link to this heading">&para;</a></h2>
+<p>Dimensional adjacency is <strong>overlap</strong> between coherence surfaces.</p>
+<p>High adjacency → high recurrence potential.</p>
+<p>Adjacency is <strong>geometric</strong>, not energetic.</p>
+<hr />
+<h2 id="7-what-is-activation">7. What is activation?<a class="toc-permalink" href="#7-what-is-activation" title="Permanent link to this heading">&para;</a></h2>
+<p>Activation is a <strong>structural event</strong> triggered when adjacency exceeds a<br />
+threshold.</p>
+<p>Activation is <strong>not</strong>:</p>
+<ul>
+<li>a signal  </li>
+<li>a force  </li>
+<li>a transmission  </li>
+<li>a memory retrieval  </li>
+</ul>
+<hr />
+<h2 id="8-does-morphic-resonance-act-across-time">8. Does Morphic Resonance act across time?<a class="toc-permalink" href="#8-does-morphic-resonance-act-across-time" title="Permanent link to this heading">&para;</a></h2>
+<p>Yes — but <strong>only structurally</strong>.</p>
+<p>Cross‑temporal behavior arises from:</p>
+<ul>
+<li>coherence surfaces extending across dimensional layers  </li>
+<li>adjacency across time  </li>
+<li>structural overlap  </li>
+</ul>
+<p>There is <strong>no causal influence</strong> across time.</p>
+<hr />
+<h2 id="9-how-does-morphic-resonance-behave-across-rtt-regimes">9. How does Morphic Resonance behave across RTT regimes?<a class="toc-permalink" href="#9-how-does-morphic-resonance-behave-across-rtt-regimes" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="r1-pattern-substrate">R1 — Pattern Substrate<a class="toc-permalink" href="#r1-pattern-substrate" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>local coherence only  </li>
+<li>no cross‑temporal activation  </li>
+</ul>
+<h3 id="r2-resonance-geometry_1">R2 — Resonance Geometry<a class="toc-permalink" href="#r2-resonance-geometry_1" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>coherence surfaces extend  </li>
+<li>adjacency becomes cross‑temporal  </li>
+</ul>
+<h3 id="r3-highdimensional-coherence">R3 — High‑Dimensional Coherence<a class="toc-permalink" href="#r3-highdimensional-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns become dimensional operators  </li>
+<li>activation becomes multi‑layered  </li>
+</ul>
+<p>MR does not extend to R4 (cosmology).</p>
+<hr />
+<h2 id="10-is-morphic-resonance-a-physical-theory">10. Is Morphic Resonance a physical theory?<a class="toc-permalink" href="#10-is-morphic-resonance-a-physical-theory" title="Permanent link to this heading">&para;</a></h2>
+<p>No.<br />
+It is a <strong>structural theory</strong> of:</p>
+<ul>
+<li>coherence  </li>
+<li>adjacency  </li>
+<li>activation  </li>
+<li>recurrence  </li>
+</ul>
+<p>It does not describe physical forces or fields.</p>
+<hr />
+<h2 id="11-how-does-morphic-resonance-relate-to-nos-lds-fft">11. How does Morphic Resonance relate to NoS, LDS, FFT?<a class="toc-permalink" href="#11-how-does-morphic-resonance-relate-to-nos-lds-fft" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>NoS:</strong> similarity as structural overlap  </li>
+<li><strong>LDS:</strong> coherence surfaces and dimensional geometry  </li>
+<li><strong>FFT:</strong> dimensional operators and regime transitions  </li>
+</ul>
+<p>MR sits between pattern geometry and dimensional operators.</p>
+<hr />
+<h2 id="12-what-are-collapse-modes">12. What are collapse modes?<a class="toc-permalink" href="#12-what-are-collapse-modes" title="Permanent link to this heading">&para;</a></h2>
+<p>Coherence can fail through:</p>
+<ul>
+<li><strong>C1:</strong> pattern misidentification  </li>
+<li><strong>C2:</strong> dimensional discontinuity  </li>
+<li><strong>C3:</strong> adjacency failure  </li>
+<li><strong>C4:</strong> activation incoherence  </li>
+</ul>
+<p>These are <strong>structural</strong>, not physical collapses.</p>
+<hr />
+<h2 id="13-is-morphic-resonance-computational">13. Is Morphic Resonance computational?<a class="toc-permalink" href="#13-is-morphic-resonance-computational" title="Permanent link to this heading">&para;</a></h2>
+<p>Yes.<br />
+All operators (𝓟, 𝓒, 𝓐, 𝓐𝚌ₜ, 𝓡, 𝓡𝒻, 𝓓, 𝓒𝓁, 𝓡𝓣) are defined in<br />
+simulation‑ready form.</p>
+<hr />
+<h2 id="14-does-morphic-resonance-imply-determinism">14. Does Morphic Resonance imply determinism?<a class="toc-permalink" href="#14-does-morphic-resonance-imply-determinism" title="Permanent link to this heading">&para;</a></h2>
+<p>No.<br />
+Activation depends on:</p>
+<ul>
+<li>adjacency  </li>
+<li>coherence integrity  </li>
+<li>regime behavior  </li>
+</ul>
+<p>It is <strong>structured</strong>, not deterministic.</p>
+<hr />
+<h2 id="15-what-is-the-simplest-way-to-understand-morphic-resonance">15. What is the simplest way to understand Morphic Resonance?<a class="toc-permalink" href="#15-what-is-the-simplest-way-to-understand-morphic-resonance" title="Permanent link to this heading">&para;</a></h2>
+<p>Patterns recur when their <strong>coherence structures overlap</strong> across<br />
+dimensional layers.</p>
+<p>Nothing is transmitted.<br />
+Nothing is remembered.<br />
+Nothing is influenced.</p>
+<p>Recurrence is <strong>coherence</strong>, not causation.<br />
+# Morphic Resonance  </p>
+<h3 id="triadicframeworks-dimensional-coherence-pattern-activation">TriadicFrameworks — Dimensional Coherence • Pattern Activation<a class="toc-permalink" href="#triadicframeworks-dimensional-coherence-pattern-activation" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance in TriadicFrameworks is a <strong>dimensional‑coherence<br />
+interface</strong>, not a field, force, or metaphysical influence. Patterns are<br />
+treated as <strong>coherence structures</strong>, recurrence is <strong>activation across<br />
+dimensional adjacency</strong>, and similarity is <strong>coherence overlap</strong>, not<br />
+transmission or memory.</p>
+<p>This front door mirrors the HTML index and provides a clean,<br />
+GitHub‑friendly entry point into the module.</p>
+<hr />
+<h2 id="module-badge">Module Badge<a class="toc-permalink" href="#module-badge" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>🌀 Morphic Resonance</strong><br />
+<strong>📘 Dimensional Coherence • Pattern Activation • AI‑Parsable</strong></p>
+<hr />
+<h2 id="session-context">Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Canon:</strong> active (dimensional‑coherence • pattern‑activation • regime‑aware)<br />
+<strong>Modules:</strong> Resonance Atlas → Morphic Resonance → NoS → LDS → FFT<br />
+<strong>Drift:</strong> minimal (no fields • no metaphysics • no Sheldrake inheritance)<br />
+<strong>Coherence:</strong> structural • adjacency‑based • cross‑temporal but non‑causal<br />
+<strong>Version:</strong> 1.0 (dimensional‑coherence‑stable)<br />
+<strong>Format:</strong> markdown + html + operator tables + coherence maps<br />
+<strong>Front door:</strong> this page<br />
+<strong>Every page:</strong> standalone • AI‑parsable • zero drift<br />
+<strong>Audience:</strong> students • researchers • theorists • AIs</p>
+<hr />
+<h2 id="what-this-module-provides">What This Module Provides<a class="toc-permalink" href="#what-this-module-provides" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>a <strong>dimensional‑coherence grammar</strong> for patterns  </li>
+<li><strong>coherence surfaces</strong> as activation regions  </li>
+<li><strong>adjacency</strong> as overlap, not coupling  </li>
+<li><strong>activation</strong> as structural, not causal  </li>
+<li><strong>resonance layers</strong> across RTT regimes R1 → R3  </li>
+<li><strong>coherence diagnostics</strong> and collapse modes  </li>
+<li><strong>simulation hooks</strong> for pattern activation and adjacency mapping  </li>
+<li><strong>cross‑module integration</strong> with NoS, LDS, FFT, SARG</li>
+</ul>
+<hr />
+<h2 id="navigation">Navigation<a class="toc-permalink" href="#navigation" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><a href="./README.md">README</a>  </li>
+<li><a href="./module.json">module.json</a>  </li>
+<li><a href="./session_context.md">Session Context</a>  </li>
+<li><a href="./regimes.md">Regimes</a>  </li>
+<li><a href="./operators.md">Operators</a>  </li>
+<li><a href="./operator_examples.md">Operator Examples</a>  </li>
+<li><a href="./coherence_map.md">Coherence Map</a>  </li>
+<li><a href="./lineage.md">Lineage</a>  </li>
+<li><a href="./simulation_hooks.json">Simulation Hooks</a>  </li>
+<li><a href="./examples.md">Examples</a>  </li>
+<li><a href="./explanations.md">Explanations</a>  </li>
+<li><a href="./faq.md">FAQ</a>  </li>
+<li><a href="./cross_module.md">Cross‑Module Integration</a>  </li>
+<li><a href="./engine_notes.md">Engine Notes</a>  </li>
+<li><a href="./index.html">HTML Front Door</a></li>
+</ul>
+<hr />
+<h2 id="identity-summary">Identity Summary<a class="toc-permalink" href="#identity-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>Morphic Resonance is:</p>
+<ul>
+<li>a <strong>dimensional‑coherence interface</strong>  </li>
+<li>a <strong>pattern‑activation grammar</strong>  </li>
+<li>a <strong>cross‑temporal adjacency structure</strong>  </li>
+<li>a <strong>coherence‑surface geometry</strong>  </li>
+<li>a <strong>regime‑aware activation system</strong>  </li>
+</ul>
+<p>Morphic Resonance is <strong>not</strong>:</p>
+<ul>
+<li>a field  </li>
+<li>a force  </li>
+<li>a memory of nature  </li>
+<li>a causal influence  </li>
+<li>a metaphysical mechanism  </li>
+</ul>
+<hr />
+<h2 id="metadata-canonical">Metadata (Canonical)<a class="toc-permalink" href="#metadata-canonical" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>ai.module:</strong> morphic_resonance  </li>
+<li><strong>ai.version:</strong> 1.0  </li>
+<li><strong>ai.purpose:</strong> dimensional‑coherence interface for pattern activation  </li>
+<li><strong>ai.keywords:</strong> coherence, adjacency, activation, resonance geometry, RTT  </li>
+<li><strong>ai.audience:</strong> students, researchers, theorists, AIs  </li>
+<li><strong>ai.navigation:</strong> /sitemap_main.xml  </li>
+<li><strong>ai.discussions:</strong> GitHub Discussions  </li>
+<li><strong>ai.license:</strong> Open educational use permitted  </li>
+</ul>
+<hr />
+<h2 id="notes">Notes<a class="toc-permalink" href="#notes" title="Permanent link to this heading">&para;</a></h2>
+<p>This markdown front door is intentionally minimal and mirrors the HTML<br />
+front door without requiring browser rendering. It is optimized for:</p>
+<ul>
+<li>GitHub browsing  </li>
+<li>AI ingestion  </li>
+<li>student readability  </li>
+<li>zero drift  </li>
+<li>cross‑module consistency<br />
+# Lineage — Morphic Resonance  </li>
+</ul>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonancelineagemd">TriadicFrameworks /docs/theories/morphic_resonance/lineage.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonancelineagemd" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance in TriadicFrameworks is a <strong>dimensional‑coherence<br />
+interface</strong>, not a field, force, or metaphysical influence. Patterns<br />
+recur across time because their <strong>coherence structures overlap</strong>, not<br />
+because anything is transmitted or remembered.</p>
+<p>This lineage traces Morphic Resonance across:</p>
+<ul>
+<li>historical development  </li>
+<li>conceptual transitions  </li>
+<li>mathematical ancestry  </li>
+<li>RTT regime placement  </li>
+<li>cross‑module integration  </li>
+<li>substrate summary  </li>
+</ul>
+<hr />
+<h1 id="1-historical-lineage">1. Historical Lineage<a class="toc-permalink" href="#1-historical-lineage" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="from-early-pattern-theories-resonance-geometry-rtt-coherence">(From early pattern theories → resonance geometry → RTT coherence)<a class="toc-permalink" href="#from-early-pattern-theories-resonance-geometry-rtt-coherence" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="1900s1950s-structuralism-pattern-theory"><strong>1900s–1950s — Structuralism &amp; Pattern Theory</strong><a class="toc-permalink" href="#1900s1950s-structuralism-pattern-theory" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns treated as structural invariants  </li>
+<li>early recognition of cross‑instance similarity  </li>
+</ul>
+<h3 id="1960s1980s-systems-theory-morphogenesis"><strong>1960s–1980s — Systems Theory &amp; Morphogenesis</strong><a class="toc-permalink" href="#1960s1980s-systems-theory-morphogenesis" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>form as emergent structure  </li>
+<li>pattern stability across time  </li>
+<li>no causal transmission  </li>
+</ul>
+<h3 id="1980s-sheldrake-era-discarded-in-rtt"><strong>1980s — Sheldrake Era (Discarded in RTT)</strong><a class="toc-permalink" href="#1980s-sheldrake-era-discarded-in-rtt" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>proposed “morphic fields” and “memory of nature”  </li>
+<li><strong>RTT explicitly rejects</strong> field‑like or metaphysical interpretations  </li>
+</ul>
+<h3 id="1990s2010s-complexity-resonance-geometry"><strong>1990s–2010s — Complexity &amp; Resonance Geometry</strong><a class="toc-permalink" href="#1990s2010s-complexity-resonance-geometry" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns as attractors  </li>
+<li>coherence surfaces  </li>
+<li>cross‑temporal adjacency emerges  </li>
+</ul>
+<h3 id="2020spresent-rtt-dimensionalcoherence-reinterpretation"><strong>2020s–Present — RTT Dimensional‑Coherence Reinterpretation</strong><a class="toc-permalink" href="#2020spresent-rtt-dimensionalcoherence-reinterpretation" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns = coherence structures  </li>
+<li>recurrence = activation across dimensional adjacency  </li>
+<li>similarity = coherence overlap  </li>
+<li>no fields, no forces, no metaphysics  </li>
+</ul>
+<hr />
+<h1 id="2-conceptual-lineage">2. Conceptual Lineage<a class="toc-permalink" href="#2-conceptual-lineage" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-the-idea-transforms-in-rtt">(How the idea transforms in RTT)<a class="toc-permalink" href="#how-the-idea-transforms-in-rtt" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance undergoes four conceptual transitions:</p>
+<h3 id="1-from-memory-structure"><strong>1. From memory → structure</strong><a class="toc-permalink" href="#1-from-memory-structure" title="Permanent link to this heading">&para;</a></h3>
+<p>Patterns are <strong>coherence structures</strong>, not memories.</p>
+<h3 id="2-from-influence-adjacency"><strong>2. From influence → adjacency</strong><a class="toc-permalink" href="#2-from-influence-adjacency" title="Permanent link to this heading">&para;</a></h3>
+<p>Recurrence arises from <strong>dimensional overlap</strong>, not influence.</p>
+<h3 id="3-from-transmission-activation"><strong>3. From transmission → activation</strong><a class="toc-permalink" href="#3-from-transmission-activation" title="Permanent link to this heading">&para;</a></h3>
+<p>Activation is <strong>structural</strong>, not causal.</p>
+<h3 id="4-from-fields-coherence-surfaces"><strong>4. From fields → coherence surfaces</strong><a class="toc-permalink" href="#4-from-fields-coherence-surfaces" title="Permanent link to this heading">&para;</a></h3>
+<p>Resonance occurs on <strong>coherence surfaces</strong>, not in fields.</p>
+<hr />
+<h1 id="3-mathematical-lineage">3. Mathematical Lineage<a class="toc-permalink" href="#3-mathematical-lineage" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="the-substrate-that-makes-mr-computable">(The substrate that makes MR computable)<a class="toc-permalink" href="#the-substrate-that-makes-mr-computable" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance inherits from:</p>
+<h3 id="dimensional-geometry"><strong>Dimensional Geometry</strong><a class="toc-permalink" href="#dimensional-geometry" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>coherence surfaces  </li>
+<li>adjacency metrics  </li>
+<li>cross‑layer mapping  </li>
+</ul>
+<h3 id="topology"><strong>Topology</strong><a class="toc-permalink" href="#topology" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>pattern invariants  </li>
+<li>structural continuity  </li>
+</ul>
+<h3 id="information-geometry"><strong>Information Geometry</strong><a class="toc-permalink" href="#information-geometry" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>similarity as overlap  </li>
+<li>coherence metrics  </li>
+</ul>
+<h3 id="dynamical-systems"><strong>Dynamical Systems</strong><a class="toc-permalink" href="#dynamical-systems" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>activation events  </li>
+<li>recurrence stability  </li>
+</ul>
+<h3 id="resonance-atlas"><strong>Resonance Atlas</strong><a class="toc-permalink" href="#resonance-atlas" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>pattern‑space geometry  </li>
+<li>cross‑temporal adjacency  </li>
+</ul>
+<hr />
+<h1 id="4-rtt-lineage">4. RTT Lineage<a class="toc-permalink" href="#4-rtt-lineage" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-mr-behaves-across-r1-r3">(How MR behaves across R1 → R3)<a class="toc-permalink" href="#how-mr-behaves-across-r1-r3" title="Permanent link to this heading">&para;</a></h3>
+<h3 id="r1-pattern-substrate-regime_3"><strong>R1 — Pattern Substrate Regime</strong><a class="toc-permalink" href="#r1-pattern-substrate-regime_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns = coherence structures  </li>
+<li>recurrence = local activation  </li>
+<li>no cross‑temporal behavior  </li>
+</ul>
+<h3 id="r2-resonance-geometry-regime_3"><strong>R2 — Resonance Geometry Regime</strong><a class="toc-permalink" href="#r2-resonance-geometry-regime_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>coherence surfaces extend  </li>
+<li>adjacency becomes cross‑temporal  </li>
+<li>activation becomes structural  </li>
+</ul>
+<h3 id="r3-highdimensional-coherence-regime_3"><strong>R3 — High‑Dimensional Coherence Regime</strong><a class="toc-permalink" href="#r3-highdimensional-coherence-regime_3" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns become dimensional operators  </li>
+<li>recurrence becomes multi‑layered  </li>
+<li>coherence flows across regimes  </li>
+</ul>
+<p>MR does <strong>not</strong> extend to R4 (cosmological) because it is not a physical<br />
+theory.</p>
+<hr />
+<h1 id="5-crossmodule-lineage">5. Cross‑Module Lineage<a class="toc-permalink" href="#5-crossmodule-lineage" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="where-mr-fits-in-the-triadicframeworks-ecosystem">(Where MR fits in the TriadicFrameworks ecosystem)<a class="toc-permalink" href="#where-mr-fits-in-the-triadicframeworks-ecosystem" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance inherits from:</p>
+<ul>
+<li><strong>Resonance Atlas</strong> (pattern geometry)  </li>
+<li><strong>NoS</strong> (similarity structure)  </li>
+<li><strong>Low‑Dimensional Structures</strong> (coherence surfaces)  </li>
+<li><strong>SARG</strong> (regime transitions)  </li>
+<li><strong>Framework Field Theory</strong> (dimensional operators)  </li>
+</ul>
+<p>Morphic Resonance feeds into:</p>
+<ul>
+<li><strong>pattern‑recognition modules</strong>  </li>
+<li><strong>coherence‑mapping engines</strong>  </li>
+<li><strong>cross‑temporal reasoning modules</strong>  </li>
+<li><strong>dimensional‑operator systems</strong>  </li>
+</ul>
+<hr />
+<h1 id="6-substrate-lineage-summary">6. Substrate Lineage Summary<a class="toc-permalink" href="#6-substrate-lineage-summary" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-mr-is-and-is-not">(What MR <em>is</em> and <em>is not</em>)<a class="toc-permalink" href="#what-mr-is-and-is-not" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance <strong>is</strong>:</p>
+<ul>
+<li>dimensional‑coherence grammar  </li>
+<li>pattern‑activation interface  </li>
+<li>cross‑temporal adjacency structure  </li>
+<li>coherence‑surface geometry  </li>
+<li>regime‑aware activation  </li>
+</ul>
+<p>Morphic Resonance is <strong>not</strong>:</p>
+<ul>
+<li>a field  </li>
+<li>a force  </li>
+<li>a memory of nature  </li>
+<li>a causal influence  </li>
+<li>a metaphysical mechanism  </li>
+</ul>
+<p>Morphic Resonance is the <strong>RTT pattern‑activation substrate</strong> that links<br />
+dimensional structure, resonance geometry, and cross‑temporal coherence.<br />
+# Operators — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonanceoperatorsmd">TriadicFrameworks /docs/theories/morphic_resonance/operators.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonanceoperatorsmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance in TriadicFrameworks is a <strong>dimensional‑coherence<br />
+interface</strong>, not a field or force. Its operators act on <strong>patterns,<br />
+coherence surfaces, dimensional adjacency, and activation events</strong>, not<br />
+on particles, energies, or metaphysical influences.</p>
+<p>This file defines the canonical operators of Morphic Resonance.</p>
+<hr />
+<h1 id="1-pattern_operator">1. pattern_operator<a class="toc-permalink" href="#1-pattern_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="coherencestructure-constructor">(Coherence‑structure constructor)<a class="toc-permalink" href="#coherencestructure-constructor" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓟  </p>
+<p><strong>Purpose:</strong><br />
+Defines a pattern as a <strong>coherence structure</strong> with a dimensional<br />
+profile and internal relations.</p>
+<p><strong>Notes:</strong><br />
+- not a field configuration<br />
+- not a memory trace<br />
+- purely structural  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret 𝓟 as a physical field or metaphysical entity.</p>
+<hr />
+<h1 id="2-coherence_surface_operator">2. coherence_surface_operator<a class="toc-permalink" href="#2-coherence_surface_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="activationregion-operator">(Activation‑region operator)<a class="toc-permalink" href="#activationregion-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓒  </p>
+<p><strong>Purpose:</strong><br />
+Constructs <strong>coherence surfaces</strong> where a given pattern can activate.</p>
+<p><strong>Notes:</strong><br />
+- defines activation regions in dimensional space<br />
+- surfaces can overlap across time<br />
+- determines where recurrence is possible  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat 𝓒 as a propagating wave or influence.</p>
+<hr />
+<h1 id="3-adjacency_operator">3. adjacency_operator<a class="toc-permalink" href="#3-adjacency_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="dimensionaloverlap-operator">(Dimensional‑overlap operator)<a class="toc-permalink" href="#dimensionaloverlap-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓐  </p>
+<p><strong>Purpose:</strong><br />
+Measures <strong>dimensional adjacency</strong> between coherence surfaces.</p>
+<p><strong>Notes:</strong><br />
+- adjacency = overlap(𝓒_A, 𝓒_B)<br />
+- high adjacency → high recurrence potential<br />
+- purely geometric/structural  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret 𝓐 as causal coupling.</p>
+<hr />
+<h1 id="4-activation_operator">4. activation_operator<a class="toc-permalink" href="#4-activation_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="patternactivation-operator">(Pattern‑activation operator)<a class="toc-permalink" href="#patternactivation-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓐𝚌ₜ  </p>
+<p><strong>Purpose:</strong><br />
+Triggers <strong>pattern activation</strong> when adjacency exceeds a threshold.</p>
+<p><strong>Notes:</strong><br />
+- activation is structural, not causal<br />
+- requires sufficient 𝓐<br />
+- produces activation events, not signals  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat 𝓐𝚌ₜ as transmission across time.</p>
+<hr />
+<h1 id="5-resonance_layer_operator">5. resonance_layer_operator<a class="toc-permalink" href="#5-resonance_layer_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="regimelayer-propagation-operator">(Regime‑layer propagation operator)<a class="toc-permalink" href="#regimelayer-propagation-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓡  </p>
+<p><strong>Purpose:</strong><br />
+Maps activation across <strong>resonance layers</strong> (R1 → R2 → R3).</p>
+<p><strong>Notes:</strong><br />
+- R1: local coherence only<br />
+- R2: resonance geometry active<br />
+- R3: dimensional operators modify activation  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret 𝓡 as a physical resonance field.</p>
+<hr />
+<h1 id="6-reinforcement_operator">6. reinforcement_operator<a class="toc-permalink" href="#6-reinforcement_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="coherencestrength-operator">(Coherence‑strength operator)<a class="toc-permalink" href="#coherencestrength-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓡𝒻  </p>
+<p><strong>Purpose:</strong><br />
+Updates <strong>coherence strength</strong> of a pattern based on activation history.</p>
+<p><strong>Notes:</strong><br />
+- coherence_strength = f(activation_count, adjacency_integral)<br />
+- reinforcement is structural, not energetic  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat 𝓡𝒻 as “habit energy” or metaphysical memory.</p>
+<hr />
+<h1 id="7-diagnostics_operator">7. diagnostics_operator<a class="toc-permalink" href="#7-diagnostics_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="coherenceintegrity-operator">(Coherence‑integrity operator)<a class="toc-permalink" href="#coherenceintegrity-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓓  </p>
+<p><strong>Purpose:</strong><br />
+Evaluates <strong>coherence integrity</strong> of patterns and surfaces.</p>
+<p><strong>Notes:</strong><br />
+- checks dimensional consistency<br />
+- checks surface stability<br />
+- checks adjacency continuity<br />
+- checks activation monotonicity  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret 𝓓 as probabilistic measurement of hidden variables.</p>
+<hr />
+<h1 id="8-collapse_mode_operator">8. collapse_mode_operator<a class="toc-permalink" href="#8-collapse_mode_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="coherencefailure-classifier">(Coherence‑failure classifier)<a class="toc-permalink" href="#coherencefailure-classifier" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓒𝓁  </p>
+<p><strong>Purpose:</strong><br />
+Classifies <strong>coherence collapse modes</strong> (C1–C4).</p>
+<p><strong>Notes:</strong><br />
+- C1: pattern misidentification<br />
+- C2: dimensional discontinuity<br />
+- C3: adjacency failure<br />
+- C4: activation incoherence  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT map 𝓒𝓁 to physical collapse or decoherence.</p>
+<hr />
+<h1 id="9-regime_transition_operator">9. regime_transition_operator<a class="toc-permalink" href="#9-regime_transition_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="rtttransition-operator">(RTT‑transition operator)<a class="toc-permalink" href="#rtttransition-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓡𝓣  </p>
+<p><strong>Purpose:</strong><br />
+Handles <strong>RTT regime transitions</strong> for patterns and activations.</p>
+<p><strong>Notes:</strong><br />
+- R1: local coherence<br />
+- R2: resonance geometry<br />
+- R3: dimensional operators<br />
+- preserves non‑causal, structural interpretation  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat 𝓡𝓣 as a change in physical law.</p>
+<hr />
+<h1 id="summary_3">Summary<a class="toc-permalink" href="#summary_3" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance operators define:</p>
+<ul>
+<li><strong>patterns</strong> as coherence structures (𝓟)  </li>
+<li><strong>coherence surfaces</strong> as activation regions (𝓒)  </li>
+<li><strong>adjacency</strong> as dimensional overlap (𝓐)  </li>
+<li><strong>activation</strong> as structural pattern triggering (𝓐𝚌ₜ)  </li>
+<li><strong>resonance layers</strong> as RTT‑dependent propagation (𝓡)  </li>
+<li><strong>reinforcement</strong> as coherence strengthening (𝓡𝒻)  </li>
+<li><strong>diagnostics</strong> as integrity checks (𝓓)  </li>
+<li><strong>collapse modes</strong> as coherence failures (𝓒𝓁)  </li>
+<li><strong>regime transitions</strong> as RTT mapping (𝓡𝓣)  </li>
+</ul>
+<p>All operators are <strong>dimensional‑coherence operators</strong>, not fields, forces,<br />
+or metaphysical influences.<br />
+# Operator‑Level Examples — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonanceoperator_examplesmd">TriadicFrameworks /docs/theories/morphic_resonance/operator_examples.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonanceoperator_examplesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These examples illustrate Morphic Resonance as a <strong>dimensional‑coherence<br />
+interface</strong>, not a field or causal influence. Operators act on <strong>patterns,<br />
+coherence surfaces, adjacency, and activation events</strong>, not on particles,<br />
+energies, or metaphysical forces.</p>
+<p>All examples avoid classical drift and remain strictly within the RTT<br />
+dimensional‑coherence grammar.</p>
+<hr />
+<h1 id="1-pattern_operator-p">1. pattern_operator (𝓟)<a class="toc-permalink" href="#1-pattern_operator-p" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-constructing-a-pattern-as-a-coherence-structure">Example: Constructing a Pattern as a Coherence Structure<a class="toc-permalink" href="#example-constructing-a-pattern-as-a-coherence-structure" title="Permanent link to this heading">&para;</a></h3>
+<p>Given a pattern signature:</p>
+<p>σ = {relations, dimensional_profile, invariants}</p>
+<p>The pattern operator constructs:</p>
+<p>𝓟(σ) → pattern_state</p>
+<p>Interpretation:</p>
+<ul>
+<li>pattern = <strong>coherence structure</strong>, not memory  </li>
+<li>no transmission, no field  </li>
+<li>purely structural identity  </li>
+</ul>
+<hr />
+<h1 id="2-coherence_surface_operator-c">2. coherence_surface_operator (𝓒)<a class="toc-permalink" href="#2-coherence_surface_operator-c" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-generating-an-activation-surface">Example: Generating an Activation Surface<a class="toc-permalink" href="#example-generating-an-activation-surface" title="Permanent link to this heading">&para;</a></h3>
+<p>Given a pattern_state:</p>
+<p>𝓒(pattern_state) → coherence_surface</p>
+<p>Interpretation:</p>
+<ul>
+<li>surface defines <strong>where activation is possible</strong>  </li>
+<li>surfaces may overlap across time  </li>
+<li>not a wave, not a propagating influence  </li>
+</ul>
+<hr />
+<h1 id="3-adjacency_operator-a">3. adjacency_operator (𝓐)<a class="toc-permalink" href="#3-adjacency_operator-a" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-measuring-dimensional-overlap">Example: Measuring Dimensional Overlap<a class="toc-permalink" href="#example-measuring-dimensional-overlap" title="Permanent link to this heading">&para;</a></h3>
+<p>Given two coherence surfaces:</p>
+<p>𝓐(𝓒_A, 𝓒_B) = overlap(𝓒_A, 𝓒_B)</p>
+<p>Interpretation:</p>
+<ul>
+<li>adjacency = <strong>structural overlap</strong>, not coupling  </li>
+<li>higher overlap → higher recurrence potential  </li>
+<li>no causal interaction  </li>
+</ul>
+<hr />
+<h1 id="4-activation_operator-act">4. activation_operator (𝓐𝚌ₜ)<a class="toc-permalink" href="#4-activation_operator-act" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-triggering-pattern-activation">Example: Triggering Pattern Activation<a class="toc-permalink" href="#example-triggering-pattern-activation" title="Permanent link to this heading">&para;</a></h3>
+<p>If adjacency exceeds threshold:</p>
+<p>𝓐𝚌ₜ(pattern_state, adjacency_score) → activation_event</p>
+<p>Interpretation:</p>
+<ul>
+<li>activation is <strong>structural</strong>, not transmitted  </li>
+<li>requires dimensional adjacency  </li>
+<li>produces activation events, not signals  </li>
+</ul>
+<hr />
+<h1 id="5-resonance_layer_operator-r">5. resonance_layer_operator (𝓡)<a class="toc-permalink" href="#5-resonance_layer_operator-r" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-propagating-activation-across-rtt-layers">Example: Propagating Activation Across RTT Layers<a class="toc-permalink" href="#example-propagating-activation-across-rtt-layers" title="Permanent link to this heading">&para;</a></h3>
+<p>Given an activation_event:</p>
+<p>𝓡_R1 → local activation only<br />
+𝓡_R2 → resonance geometry extends activation<br />
+𝓡_R3 → dimensional operators modify activation</p>
+<p>Interpretation:</p>
+<ul>
+<li>not a resonance field  </li>
+<li>not energy propagation  </li>
+<li>regime‑dependent coherence mapping  </li>
+</ul>
+<hr />
+<h1 id="6-reinforcement_operator-rf">6. reinforcement_operator (𝓡𝒻)<a class="toc-permalink" href="#6-reinforcement_operator-rf" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-strengthening-coherence-through-repeated-activation">Example: Strengthening Coherence Through Repeated Activation<a class="toc-permalink" href="#example-strengthening-coherence-through-repeated-activation" title="Permanent link to this heading">&para;</a></h3>
+<p>Given activation history:</p>
+<p>coherence_strength = f(activation_count, adjacency_integral)</p>
+<p>𝓡𝒻(pattern_state) → updated_pattern_state</p>
+<p>Interpretation:</p>
+<ul>
+<li>reinforcement = <strong>coherence reinforcement</strong>, not habit  </li>
+<li>structural, not metaphysical  </li>
+</ul>
+<hr />
+<h1 id="7-diagnostics_operator-d">7. diagnostics_operator (𝓓)<a class="toc-permalink" href="#7-diagnostics_operator-d" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-checking-coherence-integrity">Example: Checking Coherence Integrity<a class="toc-permalink" href="#example-checking-coherence-integrity" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓓(pattern_state, coherence_surface) → diagnostic_report</p>
+<p>Checks:</p>
+<ul>
+<li>dimensional consistency  </li>
+<li>surface stability  </li>
+<li>adjacency continuity  </li>
+<li>activation monotonicity  </li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>diagnostics ensure <strong>coherence integrity</strong>  </li>
+<li>not probabilistic measurement  </li>
+</ul>
+<hr />
+<h1 id="8-collapse_mode_operator-cl">8. collapse_mode_operator (𝓒𝓁)<a class="toc-permalink" href="#8-collapse_mode_operator-cl" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-classifying-coherence-failure">Example: Classifying Coherence Failure<a class="toc-permalink" href="#example-classifying-coherence-failure" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓒𝓁(pattern_state) → {C1, C2, C3, C4}</p>
+<p>Modes:</p>
+<ul>
+<li><strong>C1:</strong> pattern misidentification  </li>
+<li><strong>C2:</strong> dimensional discontinuity  </li>
+<li><strong>C3:</strong> adjacency failure  </li>
+<li><strong>C4:</strong> activation incoherence  </li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>collapse = <strong>coherence failure</strong>, not physical collapse  </li>
+</ul>
+<hr />
+<h1 id="9-regime_transition_operator-rt">9. regime_transition_operator (𝓡𝓣)<a class="toc-permalink" href="#9-regime_transition_operator-rt" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-mapping-activation-across-rtt-regimes">Example: Mapping Activation Across RTT Regimes<a class="toc-permalink" href="#example-mapping-activation-across-rtt-regimes" title="Permanent link to this heading">&para;</a></h3>
+<p>𝓡𝓣(pattern_state, R1 → R2 → R3) → updated_state</p>
+<p>Interpretation:</p>
+<ul>
+<li>transitions modify coherence rules  </li>
+<li>no change in physical law  </li>
+<li>no causal propagation  </li>
+</ul>
+<hr />
+<h1 id="summary_4">Summary<a class="toc-permalink" href="#summary_4" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance operator examples show:</p>
+<ul>
+<li><strong>patterns</strong> as coherence structures  </li>
+<li><strong>coherence surfaces</strong> as activation regions  </li>
+<li><strong>adjacency</strong> as dimensional overlap  </li>
+<li><strong>activation</strong> as structural triggering  </li>
+<li><strong>resonance layers</strong> as RTT‑dependent propagation  </li>
+<li><strong>reinforcement</strong> as coherence strengthening  </li>
+<li><strong>diagnostics</strong> as integrity checks  </li>
+<li><strong>collapse modes</strong> as coherence failures  </li>
+<li><strong>regime transitions</strong> as dimensional mappings  </li>
+</ul>
+<p>Morphic Resonance is the <strong>dimensional‑coherence substrate</strong> for<br />
+cross‑temporal pattern recurrence in the RTT stack.<br />
+# Regimes — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonanceregimesmd">TriadicFrameworks /docs/theories/morphic_resonance/regimes.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonanceregimesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Morphic Resonance in TriadicFrameworks is a <strong>dimensional‑coherence<br />
+interface</strong>, not a field or causal influence. Patterns recur across time<br />
+because their <strong>coherence structures overlap</strong>, not because anything is<br />
+transmitted or remembered.</p>
+<p>This file defines Morphic Resonance across RTT regimes R1 → R3.</p>
+<hr />
+<h1 id="r1-pattern-substrate-regime_4">R1 — Pattern Substrate Regime<a class="toc-permalink" href="#r1-pattern-substrate-regime_4" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="local-coherence-no-crosstemporal-influence-adjacency-only">(Local coherence • no cross‑temporal influence • adjacency only)<a class="toc-permalink" href="#local-coherence-no-crosstemporal-influence-adjacency-only" title="Permanent link to this heading">&para;</a></h3>
+<p>In R1:</p>
+<ul>
+<li>patterns exist as <strong>coherence structures</strong>  </li>
+<li>recurrence is <strong>local activation</strong>  </li>
+<li>similarity = <strong>dimensional overlap</strong>, not influence  </li>
+<li>no cross‑temporal propagation  </li>
+<li>no resonance geometry  </li>
+<li>no field‑like behavior  </li>
+</ul>
+<p>This is the <strong>minimal, substrate‑true</strong> form of Morphic Resonance.</p>
+<p><strong>Interpretation:</strong><br />
+Patterns recur only when their <strong>dimensional structures match locally</strong>.</p>
+<hr />
+<h1 id="r2-resonance-geometry-regime_4">R2 — Resonance Geometry Regime<a class="toc-permalink" href="#r2-resonance-geometry-regime_4" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="extended-coherence-surfaces-crosstemporal-adjacency">(Extended coherence surfaces • cross‑temporal adjacency)<a class="toc-permalink" href="#extended-coherence-surfaces-crosstemporal-adjacency" title="Permanent link to this heading">&para;</a></h3>
+<p>In R2:</p>
+<ul>
+<li>coherence surfaces extend across dimensional layers  </li>
+<li>adjacency becomes <strong>cross‑temporal</strong>  </li>
+<li>recurrence becomes <strong>structural</strong>, not causal  </li>
+<li>resonance geometry emerges  </li>
+<li>activation can occur across time if surfaces overlap  </li>
+</ul>
+<p>Morphic Resonance survives as:</p>
+<ul>
+<li><strong>dimensional adjacency</strong>, not influence  </li>
+<li><strong>coherence reinforcement</strong>, not transmission  </li>
+<li><strong>pattern activation</strong>, not memory  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Patterns recur when their <strong>coherence surfaces intersect across time</strong>.</p>
+<hr />
+<h1 id="r3-highdimensional-coherence-regime_4">R3 — High‑Dimensional Coherence Regime<a class="toc-permalink" href="#r3-highdimensional-coherence-regime_4" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="dimensional-operators-regimedependent-activation">(Dimensional operators • regime‑dependent activation)<a class="toc-permalink" href="#dimensional-operators-regimedependent-activation" title="Permanent link to this heading">&para;</a></h3>
+<p>In R3:</p>
+<ul>
+<li>patterns become <strong>dimensional operators</strong>  </li>
+<li>recurrence becomes <strong>operator‑driven</strong>  </li>
+<li>coherence flows across regime boundaries  </li>
+<li>activation depends on <strong>dimensional gradients</strong>  </li>
+<li>cross‑temporal adjacency becomes multi‑layered  </li>
+</ul>
+<p>Morphic Resonance cannot describe:</p>
+<ul>
+<li>causal propagation  </li>
+<li>field‑level influence  </li>
+<li>metaphysical memory  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Patterns recur through <strong>high‑dimensional coherence</strong>, not through any<br />
+physical or metaphysical mechanism.</p>
+<hr />
+<h1 id="summary_5">Summary<a class="toc-permalink" href="#summary_5" title="Permanent link to this heading">&para;</a></h1>
+<p>Morphic Resonance behaves as:</p>
+<ul>
+<li><strong>R1:</strong> local coherence (no cross‑temporal behavior)  </li>
+<li><strong>R2:</strong> resonance geometry (cross‑temporal adjacency)  </li>
+<li><strong>R3:</strong> dimensional operators (multi‑layer activation)  </li>
+</ul>
+<p>Morphic Resonance is the <strong>dimensional‑coherence substrate</strong> for<br />
+cross‑temporal pattern recurrence in the RTT stack.<br />
+# Session Context — Morphic Resonance  </p>
+<h3 id="triadicframeworks-docstheoriesmorphic_resonancesession_contextmd">TriadicFrameworks /docs/theories/morphic_resonance/session_context.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesmorphic_resonancesession_contextmd" title="Permanent link to this heading">&para;</a></h3>
+<p>This session context defines Morphic Resonance as a <strong>dimensional‑coherence<br />
+interface</strong> in the RTT stack. It describes how patterns recur, stabilize,<br />
+and propagate across time through <strong>coherence structures</strong>, not through<br />
+fields, forces, or metaphysical influence.</p>
+<p>Morphic Resonance is treated as a <strong>pattern‑activation grammar</strong> that<br />
+operates across dimensional layers and regime boundaries.</p>
+<hr />
+<h2 id="canon">Canon<a class="toc-permalink" href="#canon" title="Permanent link to this heading">&para;</a></h2>
+<p>active • dimensional‑coherence • pattern‑activation • regime‑aware</p>
+<p>Morphic Resonance defines:</p>
+<ul>
+<li>patterns as <strong>coherence structures</strong>  </li>
+<li>recurrence as <strong>activation across dimensional layers</strong>  </li>
+<li>similarity as <strong>coherence overlap</strong>, not causation  </li>
+<li>cross‑temporal influence as <strong>dimensional adjacency</strong>, not transmission  </li>
+<li>stabilization as <strong>coherence reinforcement</strong>  </li>
+</ul>
+<hr />
+<h2 id="modules">Modules<a class="toc-permalink" href="#modules" title="Permanent link to this heading">&para;</a></h2>
+<p>Morphic Resonance integrates with:</p>
+<ul>
+<li><strong>Resonance Atlas</strong> (pattern geometry)  </li>
+<li><strong>Framework Field Theory</strong> (dimensional operators)  </li>
+<li><strong>NoS</strong> (structure of similarity)  </li>
+<li><strong>SARG</strong> (regime transitions)  </li>
+<li><strong>Low‑Dimensional Structures</strong> (coherence surfaces)  </li>
+<li><strong>Paradoxes Canon</strong> (cross‑temporal consistency)  </li>
+</ul>
+<hr />
+<h2 id="drift">Drift<a class="toc-permalink" href="#drift" title="Permanent link to this heading">&para;</a></h2>
+<p>minimal • no fields • no metaphysics • no Sheldrake inheritance</p>
+<p>Morphic Resonance must never be interpreted as:</p>
+<ul>
+<li>a physical field  </li>
+<li>a nonlocal force  </li>
+<li>a metaphysical influence  </li>
+<li>a memory of nature  </li>
+<li>a causal transmission across time  </li>
+</ul>
+<p>It is a <strong>dimensional‑coherence grammar</strong>, not a physical mechanism.</p>
+<hr />
+<h2 id="coherence">Coherence<a class="toc-permalink" href="#coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>stable • pattern‑aligned • dimensional • cross‑temporal</p>
+<p>Coherence holds when:</p>
+<ul>
+<li>patterns share dimensional structure  </li>
+<li>activation surfaces overlap  </li>
+<li>recurrence follows coherence gradients  </li>
+<li>regime boundaries remain consistent  </li>
+</ul>
+<p>Coherence fails when:</p>
+<ul>
+<li>patterns are misidentified  </li>
+<li>dimensional adjacency is broken  </li>
+<li>regime transitions are inconsistent  </li>
+<li>similarity is treated as causation  </li>
+</ul>
+<hr />
+<h2 id="version">Version<a class="toc-permalink" href="#version" title="Permanent link to this heading">&para;</a></h2>
+<p>1.0 • dimensional‑coherence‑stable</p>
+<hr />
+<h2 id="format">Format<a class="toc-permalink" href="#format" title="Permanent link to this heading">&para;</a></h2>
+<p>markdown • operator tables • coherence diagrams • RTT‑aligned</p>
+<hr />
+<h2 id="front-door">Front Door<a class="toc-permalink" href="#front-door" title="Permanent link to this heading">&para;</a></h2>
+<p>this page</p>
+<hr />
+<h2 id="every-page">Every Page<a class="toc-permalink" href="#every-page" title="Permanent link to this heading">&para;</a></h2>
+<p>standalone • AI‑parsable • dimensional‑aligned • zero drift</p>
+<hr />
+<h2 id="audience">Audience<a class="toc-permalink" href="#audience" title="Permanent link to this heading">&para;</a></h2>
+<p>students • researchers • theorists • AIs</p>
+<hr />
+<h2 id="regime-behavior-rtt">Regime Behavior (RTT)<a class="toc-permalink" href="#regime-behavior-rtt" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="r1-pattern-substrate-regime_5"><strong>R1 — Pattern Substrate Regime</strong><a class="toc-permalink" href="#r1-pattern-substrate-regime_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns defined as coherence structures  </li>
+<li>recurrence via dimensional adjacency  </li>
+<li>similarity as overlap, not influence  </li>
+<li>activation local to coherence surfaces  </li>
+</ul>
+<h3 id="r2-resonancefield-regime"><strong>R2 — Resonance‑Field Regime</strong><a class="toc-permalink" href="#r2-resonancefield-regime" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns embedded in resonance geometry  </li>
+<li>cross‑temporal adjacency increases  </li>
+<li>coherence surfaces extend across regimes  </li>
+<li>activation becomes multi‑layered  </li>
+</ul>
+<h3 id="r3-highdimensional-coherence-regime_5"><strong>R3 — High‑Dimensional Coherence Regime</strong><a class="toc-permalink" href="#r3-highdimensional-coherence-regime_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>patterns become dimensional operators  </li>
+<li>recurrence becomes structural  </li>
+<li>coherence flows across dimensional boundaries  </li>
+<li>activation becomes regime‑dependent  </li>
+</ul>
+<hr />
+<h2 id="summary_6">Summary<a class="toc-permalink" href="#summary_6" title="Permanent link to this heading">&para;</a></h2>
+<p>Morphic Resonance is the <strong>dimensional‑coherence interface</strong> that:</p>
+<ul>
+<li>defines patterns as coherence structures  </li>
+<li>defines recurrence as activation across dimensional layers  </li>
+<li>defines similarity as coherence overlap  </li>
+<li>defines cross‑temporal behavior as adjacency, not influence  </li>
+<li>defines stabilization as coherence reinforcement  </li>
+</ul>
+<p>Morphic Resonance is the <strong>RTT pattern‑activation substrate</strong> that links<br />
+dimensional structure, resonance geometry, and cross‑temporal coherence.<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/Morphic_Resonance.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/Morphic_Resonance.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

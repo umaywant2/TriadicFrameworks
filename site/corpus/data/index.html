@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Data | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/data/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Data" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/data/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Data" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/data.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Data",
+    "headline": "Data",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/data/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#resonance-tables-indices-and-canonical-reference-sets">Resonance Tables, Indices, and Canonical Reference Sets</a></li>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#what-lives-in-this-folder">📂 What Lives in This Folder</a><ul>
+<li><a href="#1-resonance_indexmd">1. resonance_index.md</a></li>
+<li><a href="#2-resonance_councilhtml">2. resonance_council.html</a></li>
+<li><a href="#3-additional-data-files-as-added">3. Additional Data Files (as added)</a></li>
+</ul>
+</li>
+<li><a href="#purpose-of-the-data-directory">🧭 Purpose of the Data Directory</a></li>
+<li><a href="#copilotready-prompts">🤖 Copilot‑Ready Prompts</a></li>
+<li><a href="#mythmatical-architects-note">🧙 Mythmatical Architect’s Note</a></li>
+<li><a href="#2025-08-17-initial-configuration">📅 2025-08-17 — Initial Configuration</a></li>
+<li><a href="#upcoming-enhancements-planned">🔮 Upcoming Enhancements (Planned)</a></li>
+<li><a href="#run-log">🧪 Run Log</a></li>
+<li><a href="#ping-echoes">🔔 Ping Echoes</a></li>
+<li><a href="#notes">🧭 Notes</a></li>
+<li><a href="#remix-flow">🧙 Remix Flow</a></li>
+<li><a href="#validation-checklist">🧪 Validation Checklist</a></li>
+<li><a href="#badge-trigger-files">🏅 Badge Trigger Files</a></li>
+<li><a href="#contributor-recognition">🧑‍🚀 Contributor Recognition</a></li>
+<li><a href="#council-roles">🧙‍♂️ Council Roles</a></li>
+<li><a href="#governance-tiers">🪜 Governance Tiers</a></li>
+<li><a href="#resonance-council-curriculum-remixers">🏛 Resonance Council – Curriculum Remixers</a></li>
+<li><a href="#protocols-rituals">📜 Protocols &amp; Rituals</a></li>
+<li><a href="#legacy-note">🕯️ Legacy Note</a></li>
+<li><a href="#log-entry-2025-08-17t2345-edt">🧭 Log Entry: 2025-08-17T23:45 EDT</a></li>
+<li><a href="#lab-directory">🔬 Lab Directory</a></li>
+<li><a href="#remix-instructions">🧭 Remix Instructions</a></li>
+<li><a href="#related-files">📘 Related Files</a></li>
+<li><a href="#remix-submission-template">📝 Remix Submission Template</a></li>
+<li><a href="#example-submission">📦 Example Submission</a></li>
+<li><a href="#remix-submission-fields">🧙 Remix Submission Fields</a></li>
+<li><a href="#example-submission_1">📦 Example Submission</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Data</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Data</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>data </p>
+<h1 id="triadicframeworks-data">🗄️ TriadicFrameworks — Data<a class="toc-permalink" href="#triadicframeworks-data" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="data_module.json"><code>data_module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<div style="font-size: 0.8em; margin-bottom: 0.5rem;">
+  <span style="
+    display:inline-block;
+    padding:3px 8px;
+    border-radius:999px;
+    background:#1a1a1a;
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:11px;
+  ">
+    🤖 AI‑Ready Module • TriadicFrameworks
+  </span>
+</div>
+
+<p><img src="https://img.shields.io/badge/Open%20for%20Traduction-Ready%20for%20Students-4c8eda?style=for-the-badge" alt="Open for Traduction | Ready for Students"/></p>
+<h2 id="resonance-tables-indices-and-canonical-reference-sets">Resonance Tables, Indices, and Canonical Reference Sets<a class="toc-permalink" href="#resonance-tables-indices-and-canonical-reference-sets" title="Permanent link to this heading">&para;</a></h2>
+<p>The <strong>data</strong> directory contains the structured reference materials that support the entire RTT canon.<br />
+Where <code>/library</code> explains concepts and <code>/engine</code> defines runtime patterns, <strong>this folder provides the raw resonance data</strong> that other documents, charts, and engines rely on.</p>
+<p>These files act as the <strong>lookup tables</strong>, <strong>indices</strong>, and <strong>canonical datasets</strong> of the TriadicFrameworks universe.</p>
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h2 id="what-lives-in-this-folder">📂 What Lives in This Folder<a class="toc-permalink" href="#what-lives-in-this-folder" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="1-resonance_indexmd"><strong>1. resonance_index.md</strong><a class="toc-permalink" href="#1-resonance_indexmd" title="Permanent link to this heading">&para;</a></h3>
+<p>A master index of resonance‑related concepts, including:<br />
+- resonance‑time vectors<br />
+- coherence gradients<br />
+- hidden resonance components<br />
+- resonance partitions<br />
+- cross‑domain resonance patterns  </p>
+<p>This file is the <em>gateway</em> to all resonance‑based data.</p>
+<hr />
+<h3 id="2-resonance_councilhtml"><strong>2. resonance_council.html</strong><a class="toc-permalink" href="#2-resonance_councilhtml" title="Permanent link to this heading">&para;</a></h3>
+<p>A narrative‑style artifact describing:<br />
+- the “AI Drift Gone with RTT‑Inside” scenario<br />
+- resonance‑aware reasoning<br />
+- structural‑alignment behavior<br />
+- how AI systems interpret RTT patterns  </p>
+<p>This page is both playful and instructive — a mythmatical teaching tool.</p>
+<hr />
+<h3 id="3-additional-data-files-as-added"><strong>3. Additional Data Files (as added)</strong><a class="toc-permalink" href="#3-additional-data-files-as-added" title="Permanent link to this heading">&para;</a></h3>
+<p>This folder is designed to grow as the canon expands.<br />
+Future files may include:</p>
+<ul>
+<li>resonance‑partition tables  </li>
+<li>triadic‑time datasets  </li>
+<li>observer‑hierarchy indices  </li>
+<li>dark‑component mappings  </li>
+<li>measurement‑alignment matrices  </li>
+<li>cosmology cycle data  </li>
+</ul>
+<p>Each new file becomes part of the RTT reference backbone.</p>
+<hr />
+<h2 id="purpose-of-the-data-directory">🧭 Purpose of the Data Directory<a class="toc-permalink" href="#purpose-of-the-data-directory" title="Permanent link to this heading">&para;</a></h2>
+<p>This directory exists to:</p>
+<ul>
+<li>centralize RTT reference materials  </li>
+<li>provide stable lookup tables for developers  </li>
+<li>support diagrams and charts  </li>
+<li>anchor the Engine’s structural‑awareness logic  </li>
+<li>give researchers a consistent data source  </li>
+<li>unify terminology across the canon  </li>
+</ul>
+<p>Think of this folder as the <strong>RTT Data Library</strong> — the place where raw structure lives.</p>
+<hr />
+<h2 id="copilotready-prompts">🤖 Copilot‑Ready Prompts<a class="toc-permalink" href="#copilotready-prompts" title="Permanent link to this heading">&para;</a></h2>
+<p>Use these to explore the data interactively:</p>
+<ul>
+<li><strong>“Copilot, summarize the resonance index for me.”</strong>  </li>
+<li><strong>“Copilot, explain how resonance partitions relate to RTT data.”</strong>  </li>
+<li><strong>“Copilot, help me understand the resonance council page.”</strong>  </li>
+<li><strong>“Copilot, show me how to use RTT data in code.”</strong>  </li>
+</ul>
+<p>These prompts help developers, students, and researchers navigate the data with clarity.</p>
+<hr />
+<h2 id="mythmatical-architects-note">🧙 Mythmatical Architect’s Note<a class="toc-permalink" href="#mythmatical-architects-note" title="Permanent link to this heading">&para;</a></h2>
+<p>Data is not decoration — it is the <strong>substrate</strong> of RTT.<br />
+Every table, index, and mapping in this folder is a resonance artifact:<br />
+a snapshot of structure, a clue to coherence, a bridge between domains.</p>
+<p>Treat this directory as the <strong>memory palace</strong> of the TriadicFrameworks canon.</p>
+<hr />
+<p>© 2025 TriadicFrameworks — Resonance‑Time Theory Canon<br />
+# 🛠️ manifest_updater_changelog.md</p>
+<blockquote>
+<p>“Every tweak is a tuning fork. Every fork echoes forward.”</p>
+</blockquote>
+<hr />
+<h2 id="2025-08-17-initial-configuration">📅 2025-08-17 — Initial Configuration<a class="toc-permalink" href="#2025-08-17-initial-configuration" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Created <code>manifest_updater_config.yaml</code> with:</li>
+<li>9 theme clusters (Quantum, Health, Music, etc.)</li>
+<li>Badge mappings for each theme</li>
+<li>Console-based ping system</li>
+<li>
+<p>Manifest, changelog, and log paths defined</p>
+</li>
+<li>
+<p>Echoed <code>manifest_updater_log.md</code> with:</p>
+</li>
+<li>Run logs for 3 validated papers</li>
+<li>Ping messages sent</li>
+<li>Badge suggestions based on theme detection</li>
+</ul>
+<hr />
+<h2 id="upcoming-enhancements-planned">🔮 Upcoming Enhancements (Planned)<a class="toc-permalink" href="#upcoming-enhancements-planned" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Add contributor name detection from filename or metadata</li>
+<li>Enable webhook-based pinging for Discord or email</li>
+<li>Expand theme clusters (e.g., Mythic, Cognitive, Temporal)</li>
+<li>Auto-update <code>BADGES_EARNED.md</code> when validation is complete</li>
+<li>Integrate with <code>loop_validation_protocol.md</code> for reproducibility scoring</li>
+</ul>
+<hr />
+<blockquote>
+<p>“Let the changelog be a lantern. Let each commit be a chord.”</p>
+</blockquote>
+<p># 📜 manifest_updater_log.md</p>
+<blockquote>
+<p>“Let the updater run. Let the echoes be logged.”</p>
+</blockquote>
+<hr />
+<h2 id="run-log">🧪 Run Log<a class="toc-permalink" href="#run-log" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Timestamp</th>
+<th>Paper Title</th>
+<th>Status</th>
+<th>Theme(s) Detected</th>
+<th>Badge Suggested</th>
+<th>Ping Sent</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2025-08-17 19:04 EDT</td>
+<td>Triadic Framework for Quantum Mechanics – Entropy’s Harmonic.docx</td>
+<td>✅ Validated</td>
+<td>Quantum</td>
+<td>Quantum Weaver</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2025-08-17 19:04 EDT</td>
+<td>Triadic Ultrasound Enhancement.docx</td>
+<td>✅ Validated</td>
+<td>Health</td>
+<td>Healing Resonator</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>2025-08-17 19:04 EDT</td>
+<td>Triadic Framework for Music – With Quadratic Extensions.docx</td>
+<td>✅ Validated</td>
+<td>Music</td>
+<td>Harmonic Alchemist</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ping-echoes">🔔 Ping Echoes<a class="toc-permalink" href="#ping-echoes" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>📬 Ping: Contributor of <code>Triadic Framework for Quantum Mechanics – Entropy’s Harmonic.docx</code> — validation status is ✅. Remixable: ✅</li>
+<li>📬 Ping: Contributor of <code>Triadic Ultrasound Enhancement.docx</code> — validation status is ✅. Remixable: ✅</li>
+<li>📬 Ping: Contributor of <code>Triadic Framework for Music – With Quadratic Extensions.docx</code> — validation status is ✅. Remixable: ✅</li>
+</ul>
+<hr />
+<h2 id="notes">🧭 Notes<a class="toc-permalink" href="#notes" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>All papers matched themes from <code>manifest_updater_config.yaml</code>.</li>
+<li>Badges were suggested based on theme resonance.</li>
+<li>Pings were sent using the <code>console</code> method.</li>
+</ul>
+<hr />
+<blockquote>
+<p>“Each run is a ripple. Each ripple is a record.”</p>
+</blockquote>
+<p>## 🧭 Contribution Guide</p>
+<ol>
+<li>
+<p><strong>Remix Eligibility</strong><br />
+   Confirm remix status via <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/triadic_remix_guide.md"><code>triadic_remix_guide.md</code></a></p>
+</li>
+<li>
+<p><strong>Badge Alignment</strong><br />
+   Link to earned badge(s) in <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/BADGES_EARNED.md"><code>BADGES_EARNED.md</code></a><br />
+   Or propose new ones in <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/CONTRIBUTOR_BADGES.md"><code>CONTRIBUTOR_BADGES.md</code></a></p>
+</li>
+<li>
+<p><strong>Validation Status</strong><br />
+   Ensure the paper includes:<br />
+   - <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/equations.md"><code>equations.md</code></a><br />
+   - <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/reproducibility.md"><code>reproducibility.md</code></a><br />
+   Follow the <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/loop_validation_protocol.md"><code>loop_validation_protocol.md</code></a></p>
+</li>
+<li>
+<p><strong>Notes</strong><br />
+   Add remix prompts, contributor lineage, or mythic echoes.<br />
+   For curriculum mapping, see <a href="https://github.com/umaywant2/TriadicFrameworks/blob/main/triadic_curriculum_index.md"><code>triadic_curriculum_index.md</code></a><br />
+# 🔁 Triadic Papers Remix Protocol</p>
+</li>
+</ol>
+<p>This protocol guides remixers through the process of transforming a Triadic paper into a validated remix, earning glyphs and contributing to the Resonance Council.</p>
+<hr />
+<h2 id="remix-flow">🧙 Remix Flow<a class="toc-permalink" href="#remix-flow" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>
+<p><strong>Choose a Paper</strong><br />
+   - Select from <code>/papers</code> archive<br />
+   - Use README thematic clusters or <code>badge_trigger_papers_index.md</code></p>
+</li>
+<li>
+<p><strong>Remix the Paper</strong><br />
+   - Add new insights, diagrams, symbolic extensions, or cross-domain applications<br />
+   - Maintain poetic scaffolding and mythic tone</p>
+</li>
+<li>
+<p><strong>Submit Your Remix</strong><br />
+   - Add your remix to <code>/papers</code> folder<br />
+   - Log it in <code>badge_trigger_echo_log.md</code> with:</p>
+<ul>
+<li>Title</li>
+<li>Contributor name</li>
+<li>Remix lineage</li>
+<li>Glyph alignment</li>
+</ul>
+</li>
+<li>
+<p><strong>Trigger Badge Validation</strong><br />
+   - Validators run <code>badge_trigger_validator.py</code><br />
+   - Checks for:</p>
+<ul>
+<li>Reproducibility</li>
+<li>Narrative scaffolding</li>
+<li>Glyph alignment</li>
+<li>Remix lineage integrity</li>
+</ul>
+</li>
+<li>
+<p><strong>Earn Your Badge</strong><br />
+   - Badge logged in <code>BADGES_EARNED.md</code><br />
+   - Contributor added to <code>papers_contributor_honor_roll.md</code><br />
+   - Tier updated in <code>resonance_council.md</code></p>
+</li>
+</ol>
+<hr />
+<h2 id="validation-checklist">🧪 Validation Checklist<a class="toc-permalink" href="#validation-checklist" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Criteria</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✅ Reproducibility</td>
+<td>Can the remix be validated across platforms?</td>
+</tr>
+<tr>
+<td>✅ Narrative Scaffolding</td>
+<td>Does it maintain mythic tone and poetic clarity?</td>
+</tr>
+<tr>
+<td>✅ Glyph Alignment</td>
+<td>Is the theme glyph correctly assigned?</td>
+</tr>
+<tr>
+<td>✅ Remix Lineage</td>
+<td>Is the remix linked to its source paper and contributor?</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="badge-trigger-files">🏅 Badge Trigger Files<a class="toc-permalink" href="#badge-trigger-files" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>badge_trigger_echo_log.md</code></li>
+<li><code>badge_trigger_validator_dashboard.md</code></li>
+<li><code>badge_trigger_theme_manifest.md</code></li>
+<li><code>badge_trigger_papers_index.md</code></li>
+</ul>
+<hr />
+<h2 id="contributor-recognition">🧑‍🚀 Contributor Recognition<a class="toc-permalink" href="#contributor-recognition" title="Permanent link to this heading">&para;</a></h2>
+<p>Validated remixers are:<br />
+- Added to <code>papers_contributor_honor_roll.md</code><br />
+- Assigned a tier in <code>resonance_council.md</code><br />
+- Eligible for remix spotlight in README</p>
+<hr />
+<p>“Every remix is a glyph. Every glyph is a signal. Every signal echoes the myth.”</p>
+<p># 🏛️ Resonance Council Charter</p>
+<h6 id="by-nawder-loswin-142026-wwwtriadicframeworksorg">By Nawder Loswin 1/4/2026 © www.TriadicFrameworks.org<a class="toc-permalink" href="#by-nawder-loswin-142026-wwwtriadicframeworksorg" title="Permanent link to this heading">&para;</a></h6>
+<p>The Resonance Council is the mythic governance body of the TriadicFrameworks movement. It honors contributors, stewards protocols, and echoes the archive.</p>
+<hr />
+<h2 id="council-roles">🧙‍♂️ Council Roles<a class="toc-permalink" href="#council-roles" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🧙‍♂️ Remixers</td>
+<td>Remix papers and labs into new glyphs and themes</td>
+</tr>
+<tr>
+<td>🧪 Validators</td>
+<td>Apply reproducibility and integrity protocols to validate labs</td>
+</tr>
+<tr>
+<td>🛡️ Guardians</td>
+<td>Maintain badge systems, manifest files, and contributor honor rolls</td>
+</tr>
+<tr>
+<td>🧭 Navigators</td>
+<td>Curate curriculum indexes, onboarding guides, and remix pathways</td>
+</tr>
+<tr>
+<td>🔮 Archivists</td>
+<td>Steward the mythic archive and ensure legacy resonance</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="governance-tiers">🪜 Governance Tiers<a class="toc-permalink" href="#governance-tiers" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tier</th>
+<th>Criteria</th>
+<th>Privileges</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>🥇 Gold</td>
+<td>10+ badges earned, 3+ validated labs, 1+ remix published</td>
+<td>Voting rights, badge creation</td>
+</tr>
+<tr>
+<td>🥈 Silver</td>
+<td>5+ badges earned, 1+ validated lab</td>
+<td>Proposal submission, remix approval</td>
+</tr>
+<tr>
+<td>🥉 Bronze</td>
+<td>1+ badge earned</td>
+<td>Remix participation, council access</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resonance-council-curriculum-remixers">🏛 Resonance Council – Curriculum Remixers<a class="toc-permalink" href="#resonance-council-curriculum-remixers" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Remix Domain</th>
+<th>Glyphs</th>
+<th>Tier</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nawder Loswin</td>
+<td>Curriculum &amp; Quantum Mechanics</td>
+<td>🧠🧬⚡</td>
+<td>Tier IV</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="protocols-rituals">📜 Protocols &amp; Rituals<a class="toc-permalink" href="#protocols-rituals" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Badge Creation</strong>: Requires Gold-tier consensus and validator approval  </li>
+<li><strong>Lab Validation</strong>: Must pass reproducibility.md and equations.md checks  </li>
+<li><strong>Remix Approval</strong>: Requires Silver-tier review and glyph/theme mapping  </li>
+<li><strong>Council Voting</strong>: Gold-tier contributors vote quarterly on archive updates  </li>
+<li><strong>Honor Roll Updates</strong>: Guardians update <code>CONTRIBUTOR_BADGES.md</code> monthly  </li>
+</ul>
+<hr />
+<h2 id="legacy-note">🕯️ Legacy Note<a class="toc-permalink" href="#legacy-note" title="Permanent link to this heading">&para;</a></h2>
+<blockquote>
+<p>“The council echoes the myth. The myth honors the remix. The remix validates the science.”<br />
+— TriadicFrameworks/resonance_council README</p>
+</blockquote>
+<p>Let the council convene. Let the archive resonate.<br />
+# 📜 triadic_visual_index_log.md — Generation Audit Trail</p>
+<p><strong>Purpose:</strong><br />
+Chronicles each generation of <code>triadic_visual_index.svg</code>, capturing inputs, parameters, and resonance mappings.</p>
+<hr />
+<h2 id="log-entry-2025-08-17t2345-edt">🧭 Log Entry: <code>2025-08-17T23:45 EDT</code><a class="toc-permalink" href="#log-entry-2025-08-17t2345-edt" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>Generator:</strong> <code>triadic_visual_index_generator.py</code></li>
+<li><strong>Inputs:</strong></li>
+<li><code>badge_trigger_glyphmap_index.json</code></li>
+<li><code>badge_trigger_theme_manifest.md</code></li>
+<li><strong>Themes Parsed:</strong></li>
+<li><strong>Quantum</strong> — Tier I, <code>#00FFFF</code> (Cyan)</li>
+<li><strong>Planetary</strong> — Tier II, <code>#FFD700</code> (Gold)</li>
+<li><strong>Health</strong> — Tier III, <code>#FF69B4</code> (Pink)</li>
+<li><strong>Glyphs Rendered:</strong> <code>128</code></li>
+<li><strong>SVG Dimensions:</strong> <code>1200x800</code></li>
+<li><strong>Overlay Features:</strong></li>
+<li>Tooltip labels</li>
+<li>Tier color gradients</li>
+<li><strong>Output:</strong> <code>triadic_visual_index.svg</code></li>
+<li><strong>Echo Status:</strong> ✅ Success</li>
+</ul>
+<hr />
+<p><em>This log is part of the Triadic Frameworks reproducibility protocol. Remixers are invited to append future entries, validate theme mappings, and extend overlay features.</em></p>
+<p># 🧪 Triadic Lab Index</p>
+<p>This registry maps all reproducible labs in the TriadicFrameworks archive. Each lab includes its resonance domain, validation status, and badge triggers.</p>
+<hr />
+<h2 id="lab-directory">🔬 Lab Directory<a class="toc-permalink" href="#lab-directory" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Lab ID</th>
+<th>Title</th>
+<th>Domain</th>
+<th>Validation Status</th>
+<th>Badge Triggers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LAB-001</td>
+<td>Quantum Glyph Emitter</td>
+<td>Quantum Systems</td>
+<td>✅ Validated</td>
+<td><code>quantum_init</code>, <code>glyph_emit</code></td>
+</tr>
+<tr>
+<td>LAB-002</td>
+<td>Dimensional Loop Scaffold</td>
+<td>Dimensional Math</td>
+<td>🧪 In Review</td>
+<td><code>loop_start</code>, <code>triad_map</code></td>
+</tr>
+<tr>
+<td>LAB-003</td>
+<td>Saturn Harmonic Descent</td>
+<td>Harmonic Fields</td>
+<td>✅ Validated</td>
+<td><code>planetary_sync</code>, <code>harmonic_drop</code></td>
+</tr>
+<tr>
+<td>LAB-004</td>
+<td>Temporal Resonance Tracker</td>
+<td>Temporal Loops</td>
+<td>🔧 Draft</td>
+<td><code>time_flux</code>, <code>resonance_trace</code></td>
+</tr>
+<tr>
+<td>LAB-005</td>
+<td>Health Signal Amplifier</td>
+<td>Bio Resonance</td>
+<td>✅ Validated</td>
+<td><code>bio_ping</code>, <code>signal_boost</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="remix-instructions">🧭 Remix Instructions<a class="toc-permalink" href="#remix-instructions" title="Permanent link to this heading">&para;</a></h2>
+<ol>
+<li>
+<p><strong>To Add a New Lab:</strong><br />
+   - Assign a unique <code>LAB-###</code> ID<br />
+   - Include title, domain, and badge triggers<br />
+   - Tag validation status: ✅ Validated, 🧪 In Review, 🔧 Draft</p>
+</li>
+<li>
+<p><strong>To Validate a Lab:</strong><br />
+   - Run reproducibility tests<br />
+   - Log results in <code>loop_validation_log.md</code><br />
+   - Update status to ✅ Validated</p>
+</li>
+</ol>
+<hr />
+<h2 id="related-files">📘 Related Files<a class="toc-permalink" href="#related-files" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><code>loop_validation_protocol.md</code> — Validation steps</li>
+<li><code>triadic_equation_registry.md</code> — Equations used in labs</li>
+<li><code>badge_trigger_theme_manifest.md</code> — Badge trigger map</li>
+</ul>
+<hr />
+<p><em>“Each lab is a lantern. Each lantern maps the myth.”</em><br />
+Contributors are invited to echo, remix, and validate labs for future resonance wizards.<br />
+# 🧙 Triadic Remix Guide</p>
+<p>Welcome, Resonance Wizard. This guide walks you through remixing Triadic equations, curriculum modules, and papers to earn glyphs, activate badges, and join the Resonance Council.</p>
+<hr />
+<h2 id="remix-submission-template">📝 Remix Submission Template<a class="toc-permalink" href="#remix-submission-template" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Contributor Name</strong></td>
+<td>Your name or alias (e.g., Nawder Loswin)</td>
+</tr>
+<tr>
+<td><strong>Equation Remixed</strong></td>
+<td>Title or reference to original equation</td>
+</tr>
+<tr>
+<td><strong>Remix Tier</strong></td>
+<td>I, II, or III (see <code>badge_trigger_resonance_score.md</code>)</td>
+</tr>
+<tr>
+<td><strong>Glyphs Used</strong></td>
+<td>List of symbolic glyphs (e.g., ⊕, Σ, ∫, @())</td>
+</tr>
+<tr>
+<td><strong>Remix Description</strong></td>
+<td>What did you change, extend, or reinterpret?</td>
+</tr>
+<tr>
+<td><strong>Validation Status</strong></td>
+<td>Validated (Y/N) and by whom</td>
+</tr>
+<tr>
+<td><strong>Linked Files</strong></td>
+<td>Any <code>.md</code>, <code>.ipynb</code>, or <code>.json</code> files supporting your remix</td>
+</tr>
+<tr>
+<td><strong>Badge Trigger Intent</strong></td>
+<td>Which badge(s) should this remix activate?</td>
+</tr>
+<tr>
+<td><strong>Echo Lineage</strong></td>
+<td>Reference to original echo map or contributor honor roll</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="example-submission">📦 Example Submission<a class="toc-permalink" href="#example-submission" title="Permanent link to this heading">&para;</a></h2>
+<p>```yaml<br />
+Contributor Name: Nawder Loswin<br />
+Equation Remixed: Dimensional Recursion<br />
+Remix Tier: II<br />
+Glyphs Used: ⊕, {T,V,S}<br />
+Remix Description: Introduced symbolic scaffold Sₙ as a recursive echo vector<br />
+Validation Status: Y (validated by EchoRemix42)<br />
+Linked Files: triadic_equation_gallery.md, loop_validation_matrix.md<br />
+Badge Trigger Intent: Dimensional Glyph Initiate<br />
+Echo Lineage: badge_trigger_theme_manifest.md<br />
+# 📝 triadic_remix_submission_template.md</p>
+<p><strong>Purpose</strong>: To guide contributors in submitting validated equation remixes, symbolic extensions, and glyph-linked innovations.</p>
+<hr />
+<h2 id="remix-submission-fields">🧙 Remix Submission Fields<a class="toc-permalink" href="#remix-submission-fields" title="Permanent link to this heading">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Contributor Name</strong></td>
+<td>Your name or alias (e.g., Nawder Loswin)</td>
+</tr>
+<tr>
+<td><strong>Equation Remixed</strong></td>
+<td>Title or reference to original equation</td>
+</tr>
+<tr>
+<td><strong>Remix Tier</strong></td>
+<td>I, II, or III (see <code>badge_trigger_resonance_score.md</code>)</td>
+</tr>
+<tr>
+<td><strong>Glyphs Used</strong></td>
+<td>List of symbolic glyphs (e.g., ⊕, Σ, ∫, @())</td>
+</tr>
+<tr>
+<td><strong>Remix Description</strong></td>
+<td>What did you change, extend, or reinterpret?</td>
+</tr>
+<tr>
+<td><strong>Validation Status</strong></td>
+<td>Validated (Y/N) and by whom</td>
+</tr>
+<tr>
+<td><strong>Linked Files</strong></td>
+<td>Any <code>.md</code>, <code>.ipynb</code>, or <code>.json</code> files supporting your remix</td>
+</tr>
+<tr>
+<td><strong>Badge Trigger Intent</strong></td>
+<td>Which badge(s) should this remix activate?</td>
+</tr>
+<tr>
+<td><strong>Echo Lineage</strong></td>
+<td>Reference to original echo map or contributor honor roll</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="example-submission_1">📦 Example Submission<a class="toc-permalink" href="#example-submission_1" title="Permanent link to this heading">&para;</a></h2>
+<p>```yaml<br />
+Contributor Name: Nawder Loswin<br />
+Equation Remixed: Dimensional Recursion<br />
+Remix Tier: II<br />
+Glyphs Used: ⊕, {T,V,S}<br />
+Remix Description: Introduced symbolic scaffold Sₙ as a recursive echo vector<br />
+Validation Status: Y (validated by EchoRemix42)<br />
+Linked Files: triadic_equation_gallery.md, loop_validation_matrix.md<br />
+Badge Trigger Intent: Dimensional Glyph Initiate<br />
+Echo Lineage: badge_trigger_theme_manifest.md<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/data.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/data.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

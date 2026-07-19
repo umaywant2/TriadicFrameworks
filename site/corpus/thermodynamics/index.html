@@ -1,0 +1,2315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Thermodynamics | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/thermodynamics/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Thermodynamics" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/thermodynamics/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Thermodynamics" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/thermodynamics.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Thermodynamics",
+    "headline": "Thermodynamics",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/thermodynamics/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#triadicframeworks-docstheoriesthermodynamics">TriadicFrameworks /docs/theories/thermodynamics/</a></li>
+<li><a href="#purpose">Purpose</a></li>
+<li><a href="#module-structure">Module Structure</a></li>
+<li><a href="#regime-placement">Regime Placement</a></li>
+<li><a href="#what-this-module-is-and-is-not">What This Module Is (and Is Not)</a></li>
+<li><a href="#how-to-use-this-module">How to Use This Module</a></li>
+<li><a href="#philosophy">Philosophy</a><ul>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicscoherence_mapmd">TriadicFrameworks /docs/theories/thermodynamics/coherence_map.md</a></li>
+</ul>
+</li>
+<li><a href="#11-constraint-coherence">1.1 Constraint Coherence</a></li>
+<li><a href="#12-potential-coherence">1.2 Potential Coherence</a></li>
+<li><a href="#13-gradient-coherence">1.3 Gradient Coherence</a></li>
+<li><a href="#14-entropy-coherence">1.4 Entropy Coherence</a></li>
+<li><a href="#15-equilibrium-coherence">1.5 Equilibrium Coherence</a><ul>
+<li><a href="#c0-incoherent">C0 — Incoherent</a></li>
+<li><a href="#c1-weak-coherence">C1 — Weak Coherence</a></li>
+<li><a href="#c2-moderate-coherence">C2 — Moderate Coherence</a></li>
+<li><a href="#c3-strong-coherence">C3 — Strong Coherence</a></li>
+<li><a href="#c4-perfect-coherence">C4 — Perfect Coherence</a></li>
+<li><a href="#m1-constraint-collapse">M1 — Constraint Collapse</a></li>
+<li><a href="#m2-potential-collapse">M2 — Potential Collapse</a></li>
+<li><a href="#m3-gradient-collapse">M3 — Gradient Collapse</a></li>
+<li><a href="#m4-entropy-collapse">M4 — Entropy Collapse</a></li>
+<li><a href="#r1-constraint-substrate-regime">R1 — Constraint Substrate Regime</a></li>
+<li><a href="#r2-statistical-mechanics-regime">R2 — Statistical Mechanics Regime</a></li>
+<li><a href="#r3-fieldtheoretic-regime">R3 — Field‑Theoretic Regime</a></li>
+<li><a href="#r4-cosmological-regime">R4 — Cosmological Regime</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicscross_modulemd">TriadicFrameworks /docs/theories/thermodynamics/cross_module.md</a></li>
+<li><a href="#what-thermodynamics-is-built-from">(What Thermodynamics is built from)</a></li>
+</ul>
+</li>
+<li><a href="#11-information-theory">1.1 Information Theory</a></li>
+<li><a href="#12-convex-analysis">1.2 Convex Analysis</a></li>
+<li><a href="#13-differential-geometry">1.3 Differential Geometry</a><ul>
+<li><a href="#what-thermodynamics-enables">(What Thermodynamics enables)</a></li>
+</ul>
+</li>
+<li><a href="#21-statistical-mechanics">2.1 Statistical Mechanics</a></li>
+<li><a href="#22-quantum-mechanics">2.2 Quantum Mechanics</a></li>
+<li><a href="#23-quantum-field-theory-qft">2.3 Quantum Field Theory (QFT)</a></li>
+<li><a href="#24-cosmology">2.4 Cosmology</a></li>
+<li><a href="#25-framework-field-theory-fft">2.5 Framework Field Theory (FFT)</a><ul>
+<li><a href="#how-thermodynamics-operators-propagate-upward">(How Thermodynamics operators propagate upward)</a></li>
+<li><a href="#how-thermodynamics-behaves-across-regimes">(How Thermodynamics behaves across regimes)</a></li>
+</ul>
+</li>
+<li><a href="#r1-constraint-substrate-regime_1">R1 — Constraint Substrate Regime</a></li>
+<li><a href="#r2-statistical-mechanics-regime_1">R2 — Statistical Mechanics Regime</a></li>
+<li><a href="#r3-fieldtheoretic-regime_1">R3 — Field‑Theoretic Regime</a></li>
+<li><a href="#r4-cosmological-regime_1">R4 — Cosmological Regime</a><ul>
+<li><a href="#enginelevel-constraints">(Engine‑level constraints)</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicsengine_notesmd">TriadicFrameworks /docs/theories/thermodynamics/engine_notes.md</a></li>
+<li><a href="#21-state-initialization">2.1 State Initialization</a></li>
+<li><a href="#22-state-representation">2.2 State Representation</a></li>
+<li><a href="#23-state-validity">2.3 State Validity</a></li>
+<li><a href="#31-temperature-operator">3.1 Temperature Operator</a></li>
+<li><a href="#32-entropy-operator">3.2 Entropy Operator</a></li>
+<li><a href="#33-free-energy-operator">3.3 Free Energy Operator</a></li>
+<li><a href="#34-gradient-operator">3.4 Gradient Operator</a></li>
+<li><a href="#35-equilibrium-operator">3.5 Equilibrium Operator</a></li>
+<li><a href="#41-gradientdriven-flows">4.1 Gradient‑Driven Flows</a></li>
+<li><a href="#42-constraintaligned-directionality">4.2 Constraint‑Aligned Directionality</a></li>
+<li><a href="#43-irreversibility">4.3 Irreversibility</a></li>
+<li><a href="#51-monotonicity">5.1 Monotonicity</a></li>
+<li><a href="#52-boundary-conditions">5.2 Boundary Conditions</a></li>
+<li><a href="#53-opensystem-behavior">5.3 Open‑System Behavior</a></li>
+<li><a href="#61-coherence">6.1 Coherence</a></li>
+<li><a href="#62-convexity">6.2 Convexity</a></li>
+<li><a href="#63-ensemble-dependence">6.3 Ensemble Dependence</a></li>
+<li><a href="#71-fixedpoint-structure">7.1 Fixed‑Point Structure</a></li>
+<li><a href="#72-stability">7.2 Stability</a></li>
+<li><a href="#73-nonstasis">7.3 Non‑Stasis</a></li>
+<li><a href="#r1-constraint-substrate">R1 — Constraint Substrate</a></li>
+<li><a href="#r2-statistical-mechanics">R2 — Statistical Mechanics</a></li>
+<li><a href="#r3-fieldtheoretic">R3 — Field‑Theoretic</a></li>
+<li><a href="#r4-cosmological">R4 — Cosmological</a></li>
+<li><a href="#91-upstream-dependencies">9.1 Upstream Dependencies</a></li>
+<li><a href="#92-downstream-modules">9.2 Downstream Modules</a></li>
+<li><a href="#93-engine-guarantees">9.3 Engine Guarantees</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicsexamplesmd">TriadicFrameworks /docs/theories/thermodynamics/examples.md</a></li>
+<li><a href="#temperature-as-a-substrate-force">Temperature as a Substrate Force</a></li>
+<li><a href="#entropy-as-a-regime-boundary">Entropy as a Regime Boundary</a></li>
+<li><a href="#free-energy-as-a-coherence-operator">Free Energy as a Coherence Operator</a></li>
+<li><a href="#flows-as-gradient-responses">Flows as Gradient Responses</a></li>
+<li><a href="#fixedpoint-structure">Fixed‑Point Structure</a></li>
+<li><a href="#entropy-production">Entropy Production</a></li>
+<li><a href="#macrostate-selection">Macro‑State Selection</a></li>
+<li><a href="#statistical-extension-r2">Statistical Extension (R2)</a></li>
+<li><a href="#environmentcoupled-entropy-flow">Environment‑Coupled Entropy Flow</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicsexplanationsmd">TriadicFrameworks /docs/theories/thermodynamics/explanations.md</a></li>
+<li><a href="#r3-qft-regime">R3 — QFT Regime</a></li>
+<li><a href="#r4-cosmological-regime_2">R4 — Cosmological Regime</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicsfaqmd">TriadicFrameworks /docs/theories/thermodynamics/faq.md</a></li>
+</ul>
+</li>
+<li><a href="#1-what-is-thermodynamics-in-triadicframeworks">1. What is Thermodynamics in TriadicFrameworks?</a></li>
+<li><a href="#2-is-thermodynamics-a-theory-of-particles">2. Is Thermodynamics a theory of particles?</a></li>
+<li><a href="#3-is-heat-a-substance-in-this-framework">3. Is heat a substance in this framework?</a></li>
+<li><a href="#4-what-is-temperature-here">4. What is temperature here?</a></li>
+<li><a href="#5-what-is-entropy">5. What is entropy?</a></li>
+<li><a href="#6-what-is-free-energy">6. What is free energy?</a></li>
+<li><a href="#7-what-is-equilibrium">7. What is equilibrium?</a></li>
+<li><a href="#8-what-are-flows-in-this-grammar">8. What are flows in this grammar?</a></li>
+<li><a href="#9-how-does-thermodynamics-relate-to-statistical-mechanics">9. How does Thermodynamics relate to Statistical Mechanics?</a></li>
+<li><a href="#10-how-does-thermodynamics-relate-to-quantum-mechanics-and-qft">10. How does Thermodynamics relate to Quantum Mechanics and QFT?</a></li>
+<li><a href="#11-how-does-thermodynamics-behave-across-rtt-regimes">11. How does Thermodynamics behave across RTT regimes?</a></li>
+<li><a href="#12-does-thermodynamics-define-an-arrow-of-time">12. Does Thermodynamics define an arrow of time?</a></li>
+<li><a href="#13-is-equilibrium-always-static">13. Is equilibrium always static?</a></li>
+<li><a href="#14-where-does-the-partition-function-appear">14. Where does the partition function appear?</a></li>
+<li><a href="#15-how-should-i-think-about-thermodynamics-in-this-canon">15. How should I think about Thermodynamics in this canon?</a><ul>
+<li><a href="#triadicframeworks-constraint-grammar-entropy-free-energy">TriadicFrameworks — Constraint Grammar • Entropy • Free Energy</a></li>
+</ul>
+</li>
+<li><a href="#module-badge">Module Badge</a></li>
+<li><a href="#session-context">Session Context</a></li>
+<li><a href="#what-this-module-provides">What This Module Provides</a></li>
+<li><a href="#navigation">Navigation</a></li>
+<li><a href="#identity-summary">Identity Summary</a></li>
+<li><a href="#metadata-canonical">Metadata (Canonical)</a></li>
+<li><a href="#notes">Notes</a><ul>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicslineagemd">TriadicFrameworks /docs/theories/thermodynamics/lineage.md</a></li>
+<li><a href="#1824-carnot-reversible-cycles">1824 — Carnot (Reversible Cycles)</a></li>
+<li><a href="#1850s-clausius-entropy">1850s — Clausius (Entropy)</a></li>
+<li><a href="#1850s1860s-kelvin-temperature-scale">1850s–1860s — Kelvin (Temperature Scale)</a></li>
+<li><a href="#1870s-gibbs-free-energies-ensembles">1870s — Gibbs (Free Energies &amp; Ensembles)</a></li>
+<li><a href="#1900s-planck-einstein-radiation-fluctuations">1900s — Planck &amp; Einstein (Radiation &amp; Fluctuations)</a></li>
+<li><a href="#1950spresent-information-theory-statistical-mechanics">1950s–Present — Information Theory &amp; Statistical Mechanics</a></li>
+<li><a href="#1-from-heat-as-substance-constraint-geometry">1. From heat-as-substance → constraint geometry</a></li>
+<li><a href="#2-from-mechanical-intuition-potential-surfaces">2. From mechanical intuition → potential surfaces</a></li>
+<li><a href="#3-from-motion-gradients">3. From motion → gradients</a></li>
+<li><a href="#4-from-stasis-fixedpoint-structures">4. From stasis → fixed‑point structures</a></li>
+<li><a href="#convex-analysis">Convex Analysis</a></li>
+<li><a href="#differential-geometry">Differential Geometry</a></li>
+<li><a href="#information-theory">Information Theory</a></li>
+<li><a href="#statistical-mechanics">Statistical Mechanics</a></li>
+<li><a href="#r1-constraint-substrate-regime_2">R1 — Constraint Substrate Regime</a></li>
+<li><a href="#r2-statistical-mechanics-regime_2">R2 — Statistical Mechanics Regime</a></li>
+<li><a href="#r3-fieldtheoretic-regime_2">R3 — Field‑Theoretic Regime</a></li>
+<li><a href="#r4-cosmological-regime_3">R4 — Cosmological Regime</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicsoperatorsmd">TriadicFrameworks /docs/theories/thermodynamics/operators.md</a></li>
+<li><a href="#substrate-force">(Substrate force)</a></li>
+<li><a href="#regime-boundary-operator">(Regime boundary operator)</a></li>
+<li><a href="#coherence-operator">(Coherence operator)</a></li>
+<li><a href="#fixedpoint-operator">(Fixed‑point operator)</a></li>
+<li><a href="#flow-generator">(Flow generator)</a></li>
+<li><a href="#constraintdriven-flow">(Constraint‑driven flow)</a></li>
+<li><a href="#constraint-deformation-operator">(Constraint deformation operator)</a></li>
+<li><a href="#macrostate-selector">(Macro‑state selector)</a></li>
+<li><a href="#statistical-extension-operator">(Statistical extension operator)</a></li>
+<li><a href="#arrowoftime-operator">(Arrow‑of‑time operator)</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicsoperator_examplesmd">TriadicFrameworks /docs/theories/thermodynamics/operator_examples.md</a></li>
+<li><a href="#example-temperature-gradient-driving-flow">Example: Temperature Gradient Driving Flow</a></li>
+<li><a href="#example-entropy-as-a-regime-boundary">Example: Entropy as a Regime Boundary</a></li>
+<li><a href="#example-free-energy-minimization-at-equilibrium">Example: Free Energy Minimization at Equilibrium</a></li>
+<li><a href="#example-identifying-a-fixedpoint-configuration">Example: Identifying a Fixed‑Point Configuration</a></li>
+<li><a href="#example-flow-from-a-potential-gradient">Example: Flow from a Potential Gradient</a></li>
+<li><a href="#example-constraintdriven-transfer">Example: Constraint‑Driven Transfer</a></li>
+<li><a href="#example-constraint-deformation">Example: Constraint Deformation</a></li>
+<li><a href="#example-switching-from-canonical-to-grand-canonical">Example: Switching from Canonical to Grand Canonical</a></li>
+<li><a href="#example-generating-thermodynamic-quantities">Example: Generating Thermodynamic Quantities</a></li>
+<li><a href="#example-arrow-of-time-from-entropy-production">Example: Arrow of Time from Entropy Production</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicsregimesmd">TriadicFrameworks /docs/theories/thermodynamics/regimes.md</a></li>
+<li><a href="#thermodynamics-fully-valid-substrate-grammar-active">(Thermodynamics fully valid • substrate grammar active)</a></li>
+<li><a href="#microstate-structure-emerges-ensembles-refine-thermodynamics">(Microstate structure emerges • ensembles refine thermodynamics)</a></li>
+<li><a href="#thermodynamics-embedded-in-qft-phase-transitions-become-fieldlevel">(Thermodynamics embedded in QFT • phase transitions become field‑level)</a></li>
+<li><a href="#horizon-thermodynamics-geometric-temperature-cosmological-entropy">(Horizon thermodynamics • geometric temperature • cosmological entropy)</a></li>
+<li><a href="#triadicframeworks-docstheoriesthermodynamicssession_contextmd">TriadicFrameworks /docs/theories/thermodynamics/session_context.md</a></li>
+</ul>
+</li>
+<li><a href="#canon">Canon</a></li>
+<li><a href="#modules">Modules</a></li>
+<li><a href="#drift">Drift</a></li>
+<li><a href="#coherence">Coherence</a></li>
+<li><a href="#version">Version</a></li>
+<li><a href="#format">Format</a></li>
+<li><a href="#front-door">Front Door</a></li>
+<li><a href="#every-page">Every Page</a></li>
+<li><a href="#audience">Audience</a></li>
+<li><a href="#regime-behavior-rtt">Regime Behavior (RTT)</a><ul>
+<li><a href="#r1-constraint-substrate-regime_4">R1 — Constraint Substrate Regime</a></li>
+<li><a href="#r2-statistical-mechanics-regime_4">R2 — Statistical Mechanics Regime</a></li>
+<li><a href="#r3-fieldtheoretic-regime_4">R3 — Field‑Theoretic Regime</a></li>
+<li><a href="#r4-cosmological-regime_5">R4 — Cosmological Regime</a></li>
+</ul>
+</li>
+<li><a href="#summary_6">Summary</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Thermodynamics</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Thermodynamics</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>thermodynamics </p>
+<h1 id="thermodynamics-the-grammar-of-temperature-entropy-and-coherence">Thermodynamics — The Grammar of Temperature, Entropy, and Coherence<a class="toc-permalink" href="#thermodynamics-the-grammar-of-temperature-entropy-and-coherence" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/thermodynamics/module.json"><code>module.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/thermodynamics/module_rtt1.json"><code>module_rtt1.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/thermodynamics/module_rtt2.json"><code>module_rtt2.json</code></a> — Agentic module schema role assignments</li>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/refs/heads/main/docs/theories/thermodynamics/module_rtt3.json"><code>module_rtt3.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<h3 id="triadicframeworks-docstheoriesthermodynamics">TriadicFrameworks /docs/theories/thermodynamics/<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamics" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics describes how systems behave when energy, temperature,<br />
+and entropy shape their possible configurations. Within TriadicFrameworks,<br />
+Thermodynamics is reinterpreted as a <strong>substrate‑level grammar</strong> governing<br />
+coherence, flow, and regime transitions.</p>
+<p>Temperature is treated as a <strong>Triadic Substrate Force</strong> — a driver of<br />
+structure, motion, and regime behavior. Entropy is treated as a<br />
+<strong>coherence boundary</strong>, not disorder.</p>
+<p>This module provides a structured, RTT‑aligned interface to<br />
+Thermodynamics so students, researchers, and agentic AIs can explore<br />
+temperature, entropy, free energy, and equilibrium without inheriting<br />
+19th‑century metaphors.</p>
+<hr />
+<h2 id="purpose">Purpose<a class="toc-permalink" href="#purpose" title="Permanent link to this heading">&para;</a></h2>
+<p>This module clarifies:</p>
+<ul>
+<li>Why <strong>Temperature is a Substrate Force</strong>, not a statistical afterthought  </li>
+<li>How entropy defines <strong>regime boundaries</strong>, not chaos  </li>
+<li>How free energy governs <strong>coherence vs. dispersion</strong>  </li>
+<li>How thermodynamic behavior emerges from <strong>dimensional constraints</strong>  </li>
+<li>Where Thermodynamics sits in the RTT regime structure (R2 → R4)  </li>
+<li>How thermodynamic operators interact with QM, QFT, and Information Theory  </li>
+<li>How to use thermodynamic tools without metaphysical drift</li>
+</ul>
+<p>Thermodynamics is not “heat moving around.”<br />
+It is the <strong>grammar of constraint, flow, and coherence</strong> across regimes.</p>
+<hr />
+<h2 id="module-structure">Module Structure<a class="toc-permalink" href="#module-structure" title="Permanent link to this heading">&para;</a></h2>
+<p>This theory includes four canonical files:</p>
+<ol>
+<li>
+<p><strong>module.json</strong><br />
+   Identity, lineage, operators, drift boundaries, coherence markers,<br />
+   and cross‑module references.</p>
+</li>
+<li>
+<p><strong>module_rtt1.json</strong><br />
+   RTT/1 engine: temperature, entropy, free energy, and equilibrium as<br />
+   operator grammar.</p>
+</li>
+<li>
+<p><strong>module_rtt2.json</strong><br />
+   RTT/2 engine: resonance mapping, stabilizers, dissipation structure,<br />
+   and cross‑module propagation.</p>
+</li>
+<li>
+<p><strong>module_rtt3.json</strong><br />
+   RTT/3 engine: triadic‑substrate integration, multi‑regime simulation<br />
+   hooks, and hybrid‑canon scaffolding.</p>
+</li>
+</ol>
+<p>Together, these files allow construction of a <strong>Thermodynamics<br />
+RTT‑AI‑Hybrid Canon</strong>, enabling structured reasoning across physics,<br />
+chemistry, biology, computation, and cosmology.</p>
+<hr />
+<h2 id="regime-placement">Regime Placement<a class="toc-permalink" href="#regime-placement" title="Permanent link to this heading">&para;</a></h2>
+<p>Thermodynamics primarily operates in:</p>
+<ul>
+<li><strong>R2</strong> — Local equilibrium, temperature gradients, free energy flow  </li>
+<li><strong>R3</strong> — Large‑scale structure, dissipation, stability  </li>
+<li><strong>R4</strong> — Cosmological thermodynamics, expansion, horizon behavior  </li>
+<li><strong>R1</strong> — Thermodynamics collapses; temperature undefined</li>
+</ul>
+<p>Thermodynamics is a <strong>substrate grammar</strong>, not a statistical artifact.</p>
+<hr />
+<h2 id="what-this-module-is-and-is-not">What This Module Is (and Is Not)<a class="toc-permalink" href="#what-this-module-is-and-is-not" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>This module <em>is</em>:</strong></p>
+<ul>
+<li>A clean, minimal, student‑ready reinterpretation  </li>
+<li>A structured view of temperature, entropy, and free energy  </li>
+<li>A bridge between thermodynamics and RTT substrate reasoning  </li>
+<li>A stable environment for agentic‑AI reasoning</li>
+</ul>
+<p><strong>This module is <em>not</em>:</strong></p>
+<ul>
+<li>A claim that entropy is “disorder”  </li>
+<li>A metaphysical interpretation of heat  </li>
+<li>A replacement for statistical mechanics or QFT  </li>
+<li>A distortion of canonical thermodynamics</li>
+</ul>
+<hr />
+<h2 id="how-to-use-this-module">How to Use This Module<a class="toc-permalink" href="#how-to-use-this-module" title="Permanent link to this heading">&para;</a></h2>
+<p>Students and researchers can:</p>
+<ul>
+<li>Explore temperature, entropy, and free energy as <strong>operators</strong>  </li>
+<li>Understand thermodynamics as <strong>constraint grammar</strong>, not metaphor  </li>
+<li>Compare thermodynamics with other theories using shared triadic grammar  </li>
+<li>Identify coherence boundaries and drift risks  </li>
+<li>Build hybrid‑canon instances for simulation and analysis</li>
+</ul>
+<p>Agentic AIs can:</p>
+<ul>
+<li>Load the module.json files as structured metadata  </li>
+<li>Perform regime‑aware reasoning  </li>
+<li>Maintain coherence across physics modules  </li>
+<li>Generate examples, tests, and cross‑theory mappings</li>
+</ul>
+<hr />
+<h2 id="philosophy">Philosophy<a class="toc-permalink" href="#philosophy" title="Permanent link to this heading">&para;</a></h2>
+<p>Temperature is a <strong>substrate force</strong> — a driver of structure, flow, and<br />
+regime behavior. Entropy is a <strong>boundary condition</strong> that determines<br />
+which configurations remain coherent.</p>
+<p>Thermodynamics is the grammar of how systems negotiate energy,<br />
+coherence, and constraint across scales.</p>
+<p>Temperature drives motion.<br />
+Entropy shapes possibility.<br />
+Thermodynamics is the law of what can persist.<br />
+# Coherence Map — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicscoherence_mapmd">TriadicFrameworks /docs/theories/thermodynamics/coherence_map.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicscoherence_mapmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics is the <strong>R1 constraint‑first substrate grammar</strong> of the RTT<br />
+stack. Coherence in Thermodynamics refers to the <strong>structural integrity<br />
+of constraint geometry</strong>, <strong>potential surfaces</strong>, <strong>gradient flows</strong>, and<br />
+<strong>monotonicity</strong>. It does not refer to mechanical stability, particle<br />
+motion, or kinetic behavior.</p>
+<p>This map defines how coherence behaves across temperature, entropy, free<br />
+energy, flows, equilibrium, and RTT regimes.</p>
+<hr />
+<h1 id="1-coherence-dimensions">1. Coherence Dimensions<a class="toc-permalink" href="#1-coherence-dimensions" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamic coherence is evaluated across five substrate‑level<br />
+dimensions:</p>
+<h2 id="11-constraint-coherence">1.1 Constraint Coherence<a class="toc-permalink" href="#11-constraint-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>validity of state variables  </li>
+<li>consistency of constraints (T, S, F, U, V, P)  </li>
+<li>non‑negativity of entropy  </li>
+<li>ensemble‑consistent definitions  </li>
+</ul>
+<h2 id="12-potential-coherence">1.2 Potential Coherence<a class="toc-permalink" href="#12-potential-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>convexity of free‑energy surfaces  </li>
+<li>stability of minima  </li>
+<li>well‑defined gradients  </li>
+<li>ensemble‑appropriate potentials (F, G, Ω)  </li>
+</ul>
+<h2 id="13-gradient-coherence">1.3 Gradient Coherence<a class="toc-permalink" href="#13-gradient-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>flows follow gradients  </li>
+<li>directionality preserved  </li>
+<li>no oscillatory or mechanical drift  </li>
+<li>monotonic relaxation  </li>
+</ul>
+<h2 id="14-entropy-coherence">1.4 Entropy Coherence<a class="toc-permalink" href="#14-entropy-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>monotonicity (dS/dt ≥ 0)  </li>
+<li>valid regime boundaries  </li>
+<li>correct open‑system behavior  </li>
+<li>irreversibility structure  </li>
+</ul>
+<h2 id="15-equilibrium-coherence">1.5 Equilibrium Coherence<a class="toc-permalink" href="#15-equilibrium-coherence" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>fixed‑point structure  </li>
+<li>∇F = 0  </li>
+<li>dS/dt = 0  </li>
+<li>stability via second‑derivative tests  </li>
+</ul>
+<hr />
+<h1 id="2-coherence-levels-c0c4">2. Coherence Levels (C0–C4)<a class="toc-permalink" href="#2-coherence-levels-c0c4" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="c0-incoherent"><strong>C0 — Incoherent</strong><a class="toc-permalink" href="#c0-incoherent" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>constraints violated  </li>
+<li>entropy negative or undefined  </li>
+<li>free‑energy surfaces non‑convex  </li>
+<li>flows not gradient‑aligned  </li>
+</ul>
+<h3 id="c1-weak-coherence"><strong>C1 — Weak Coherence</strong><a class="toc-permalink" href="#c1-weak-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>constraints partially valid  </li>
+<li>entropy monotonicity fragile  </li>
+<li>gradients noisy or inconsistent  </li>
+<li>equilibrium unstable  </li>
+</ul>
+<h3 id="c2-moderate-coherence"><strong>C2 — Moderate Coherence</strong><a class="toc-permalink" href="#c2-moderate-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>constraints valid  </li>
+<li>free‑energy surfaces mostly convex  </li>
+<li>flows gradient‑aligned  </li>
+<li>equilibrium stable but sensitive  </li>
+</ul>
+<h3 id="c3-strong-coherence"><strong>C3 — Strong Coherence</strong><a class="toc-permalink" href="#c3-strong-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>full constraint integrity  </li>
+<li>convex potentials  </li>
+<li>monotonic flows  </li>
+<li>stable equilibrium fixed‑points  </li>
+</ul>
+<h3 id="c4-perfect-coherence"><strong>C4 — Perfect Coherence</strong><a class="toc-permalink" href="#c4-perfect-coherence" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>idealized constraint geometry  </li>
+<li>perfectly convex potentials  </li>
+<li>exact monotonicity  </li>
+<li>globally stable equilibrium  </li>
+</ul>
+<p>C4 is theoretical; real systems approach C3.</p>
+<hr />
+<h1 id="3-coherence-field">3. Coherence Field<a class="toc-permalink" href="#3-coherence-field" title="Permanent link to this heading">&para;</a></h1>
+<p>The coherence field is a gradient over:</p>
+<ul>
+<li>constraint validity  </li>
+<li>potential convexity  </li>
+<li>gradient alignment  </li>
+<li>entropy monotonicity  </li>
+<li>equilibrium stability  </li>
+</ul>
+<p>High gradients indicate <strong>coherence instability</strong>, typically near:</p>
+<ul>
+<li>phase transitions  </li>
+<li>constraint changes  </li>
+<li>ensemble switches  </li>
+<li>environment coupling  </li>
+</ul>
+<hr />
+<h1 id="4-collapse-modes">4. Collapse Modes<a class="toc-permalink" href="#4-collapse-modes" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamic coherence fails through four canonical collapse modes:</p>
+<h3 id="m1-constraint-collapse"><strong>M1 — Constraint Collapse</strong><a class="toc-permalink" href="#m1-constraint-collapse" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>invalid state variables  </li>
+<li>negative entropy  </li>
+<li>inconsistent ensembles  </li>
+</ul>
+<h3 id="m2-potential-collapse"><strong>M2 — Potential Collapse</strong><a class="toc-permalink" href="#m2-potential-collapse" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>non‑convex free‑energy surfaces  </li>
+<li>unstable minima  </li>
+<li>undefined gradients  </li>
+</ul>
+<h3 id="m3-gradient-collapse"><strong>M3 — Gradient Collapse</strong><a class="toc-permalink" href="#m3-gradient-collapse" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>flows not aligned with −∇F or −∇T  </li>
+<li>oscillatory or mechanical drift  </li>
+<li>loss of directionality  </li>
+</ul>
+<h3 id="m4-entropy-collapse"><strong>M4 — Entropy Collapse</strong><a class="toc-permalink" href="#m4-entropy-collapse" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>dS/dt &lt; 0  </li>
+<li>irreversibility violated  </li>
+<li>open‑system inconsistency  </li>
+</ul>
+<hr />
+<h1 id="5-rtt-regime-coherence">5. RTT Regime Coherence<a class="toc-permalink" href="#5-rtt-regime-coherence" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r1-constraint-substrate-regime"><strong>R1 — Constraint Substrate Regime</strong><a class="toc-permalink" href="#r1-constraint-substrate-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence strongest.<br />
+- constraints fundamental<br />
+- entropy monotonic<br />
+- free‑energy convex<br />
+- flows gradient‑aligned  </p>
+<h3 id="r2-statistical-mechanics-regime"><strong>R2 — Statistical Mechanics Regime</strong><a class="toc-permalink" href="#r2-statistical-mechanics-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence refined.<br />
+- microstates explicit<br />
+- partition functions define potentials<br />
+- fluctuations appear  </p>
+<h3 id="r3-fieldtheoretic-regime"><strong>R3 — Field‑Theoretic Regime</strong><a class="toc-permalink" href="#r3-fieldtheoretic-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence embedded.<br />
+- free energy field‑dependent<br />
+- phase transitions field‑level<br />
+- vacuum structure influences stability  </p>
+<h3 id="r4-cosmological-regime"><strong>R4 — Cosmological Regime</strong><a class="toc-permalink" href="#r4-cosmological-regime" title="Permanent link to this heading">&para;</a></h3>
+<p>Coherence geometric.<br />
+- temperature geometric<br />
+- entropy horizon‑scale<br />
+- equilibrium cosmological  </p>
+<hr />
+<h1 id="6-diagnostics">6. Diagnostics<a class="toc-permalink" href="#6-diagnostics" title="Permanent link to this heading">&para;</a></h1>
+<p>A thermodynamic system is coherent when:</p>
+<ul>
+<li>S ≥ 0  </li>
+<li>dS/dt ≥ 0  </li>
+<li>free‑energy surfaces convex  </li>
+<li>flows follow gradients  </li>
+<li>equilibrium is a fixed‑point  </li>
+</ul>
+<p>A system is incoherent when:</p>
+<ul>
+<li>constraints violated  </li>
+<li>entropy decreases  </li>
+<li>potentials non‑convex  </li>
+<li>flows misaligned  </li>
+<li>equilibrium unstable  </li>
+</ul>
+<hr />
+<h1 id="summary">Summary<a class="toc-permalink" href="#summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamic coherence is:</p>
+<ul>
+<li><strong>constraint‑first</strong>  </li>
+<li><strong>potential‑structured</strong>  </li>
+<li><strong>gradient‑aligned</strong>  </li>
+<li><strong>entropy‑monotonic</strong>  </li>
+<li><strong>equilibrium‑fixed‑point</strong>  </li>
+<li><strong>RTT‑dependent</strong>  </li>
+</ul>
+<p>Coherence is strongest in <strong>R1</strong>, refined in <strong>R2</strong>, embedded in <strong>R3</strong>, and<br />
+geometric in <strong>R4</strong>.<br />
+# Cross‑Module Integration — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicscross_modulemd">TriadicFrameworks /docs/theories/thermodynamics/cross_module.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicscross_modulemd" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics is the <strong>R1 constraint‑first substrate grammar</strong> of the RTT<br />
+stack. It defines temperature as a substrate force, entropy as a regime<br />
+boundary, free energy as a coherence operator, flows as gradient<br />
+responses, and equilibrium as a fixed‑point structure.</p>
+<p>This file describes how Thermodynamics integrates with upstream<br />
+mathematical modules and downstream physical modules.</p>
+<hr />
+<h1 id="1-upstream-dependencies">1. Upstream Dependencies<a class="toc-permalink" href="#1-upstream-dependencies" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-thermodynamics-is-built-from">(What Thermodynamics is built from)<a class="toc-permalink" href="#what-thermodynamics-is-built-from" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics inherits its structure from:</p>
+<h2 id="11-information-theory">1.1 Information Theory<a class="toc-permalink" href="#11-information-theory" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>entropy duality  </li>
+<li>monotonicity  </li>
+<li>irreversibility structure  </li>
+</ul>
+<h2 id="12-convex-analysis">1.2 Convex Analysis<a class="toc-permalink" href="#12-convex-analysis" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>free‑energy convexity  </li>
+<li>stability conditions  </li>
+<li>minimization principles  </li>
+</ul>
+<h2 id="13-differential-geometry">1.3 Differential Geometry<a class="toc-permalink" href="#13-differential-geometry" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>gradients  </li>
+<li>constraint surfaces  </li>
+<li>flows on manifolds  </li>
+</ul>
+<p>These modules define the <strong>mathematical substrate</strong> of Thermodynamics.</p>
+<hr />
+<h1 id="2-downstream-integrations">2. Downstream Integrations<a class="toc-permalink" href="#2-downstream-integrations" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="what-thermodynamics-enables">(What Thermodynamics enables)<a class="toc-permalink" href="#what-thermodynamics-enables" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics feeds directly into:</p>
+<h2 id="21-statistical-mechanics">2.1 Statistical Mechanics<a class="toc-permalink" href="#21-statistical-mechanics" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>microstate embedding  </li>
+<li>partition functions  </li>
+<li>ensemble structure  </li>
+<li>fluctuations  </li>
+</ul>
+<h2 id="22-quantum-mechanics">2.2 Quantum Mechanics<a class="toc-permalink" href="#22-quantum-mechanics" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>quantum ensembles  </li>
+<li>density‑matrix thermodynamics  </li>
+<li>entropy and coherence  </li>
+</ul>
+<h2 id="23-quantum-field-theory-qft">2.3 Quantum Field Theory (QFT)<a class="toc-permalink" href="#23-quantum-field-theory-qft" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>field‑level free energy  </li>
+<li>vacuum contributions  </li>
+<li>phase transitions  </li>
+</ul>
+<h2 id="24-cosmology">2.4 Cosmology<a class="toc-permalink" href="#24-cosmology" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>horizon entropy  </li>
+<li>geometric temperature (Unruh, Hawking)  </li>
+<li>cosmological equilibrium  </li>
+</ul>
+<h2 id="25-framework-field-theory-fft">2.5 Framework Field Theory (FFT)<a class="toc-permalink" href="#25-framework-field-theory-fft" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>constraint‑level operators  </li>
+<li>monotonicity and coherence structure  </li>
+</ul>
+<hr />
+<h1 id="3-crossmodule-operator-mapping">3. Cross‑Module Operator Mapping<a class="toc-permalink" href="#3-crossmodule-operator-mapping" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-thermodynamics-operators-propagate-upward">(How Thermodynamics operators propagate upward)<a class="toc-permalink" href="#how-thermodynamics-operators-propagate-upward" title="Permanent link to this heading">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Thermodynamics Operator</th>
+<th>Statistical Mechanics</th>
+<th>QM / QFT</th>
+<th>Cosmology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>temperature T</td>
+<td>ensemble parameter</td>
+<td>field temperature</td>
+<td>geometric temperature</td>
+</tr>
+<tr>
+<td>entropy S</td>
+<td>microstate entropy</td>
+<td>von Neumann entropy</td>
+<td>horizon entropy</td>
+</tr>
+<tr>
+<td>free energy F, G, Ω</td>
+<td>partition‑function derived</td>
+<td>effective action</td>
+<td>cosmological potentials</td>
+</tr>
+<tr>
+<td>gradients ∇</td>
+<td>flows</td>
+<td>relaxation</td>
+<td>horizon flows</td>
+</tr>
+<tr>
+<td>equilibrium</td>
+<td>ensemble extremum</td>
+<td>vacuum structure</td>
+<td>cosmological fixed‑points</td>
+</tr>
+</tbody>
+</table>
+<p>All mappings must remain <strong>constraint‑aligned</strong> and <strong>non‑mechanical</strong>.</p>
+<hr />
+<h1 id="4-rtt-regime-integration">4. RTT Regime Integration<a class="toc-permalink" href="#4-rtt-regime-integration" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="how-thermodynamics-behaves-across-regimes">(How Thermodynamics behaves across regimes)<a class="toc-permalink" href="#how-thermodynamics-behaves-across-regimes" title="Permanent link to this heading">&para;</a></h3>
+<h2 id="r1-constraint-substrate-regime_1">R1 — Constraint Substrate Regime<a class="toc-permalink" href="#r1-constraint-substrate-regime_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>Thermodynamics fully valid  </li>
+<li>entropy monotonicity fundamental  </li>
+<li>free‑energy coherence primary  </li>
+</ul>
+<h2 id="r2-statistical-mechanics-regime_1">R2 — Statistical Mechanics Regime<a class="toc-permalink" href="#r2-statistical-mechanics-regime_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>microstates explicit  </li>
+<li>partition functions refine structure  </li>
+<li>fluctuations appear  </li>
+</ul>
+<h2 id="r3-fieldtheoretic-regime_1">R3 — Field‑Theoretic Regime<a class="toc-permalink" href="#r3-fieldtheoretic-regime_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>free energy becomes field‑dependent  </li>
+<li>phase transitions become field‑level  </li>
+<li>vacuum structure influences equilibrium  </li>
+</ul>
+<h2 id="r4-cosmological-regime_1">R4 — Cosmological Regime<a class="toc-permalink" href="#r4-cosmological-regime_1" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>temperature becomes geometric  </li>
+<li>entropy includes horizon contributions  </li>
+<li>equilibrium becomes cosmological  </li>
+</ul>
+<hr />
+<h1 id="5-crossmodule-consistency-rules">5. Cross‑Module Consistency Rules<a class="toc-permalink" href="#5-crossmodule-consistency-rules" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="enginelevel-constraints">(Engine‑level constraints)<a class="toc-permalink" href="#enginelevel-constraints" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics must avoid:</p>
+<ul>
+<li>particles  </li>
+<li>caloric fluid  </li>
+<li>mechanical forces  </li>
+<li>disorder metaphors  </li>
+<li>heat‑as‑substance  </li>
+</ul>
+<p>Thermodynamics must remain:</p>
+<ul>
+<li><strong>constraint‑first</strong>  </li>
+<li><strong>entropy‑aligned</strong>  </li>
+<li><strong>free‑energy‑driven</strong>  </li>
+<li><strong>gradient‑structured</strong>  </li>
+<li><strong>equilibrium‑as‑fixed‑point</strong>  </li>
+</ul>
+<hr />
+<h1 id="6-summary">6. Summary<a class="toc-permalink" href="#6-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics is the <strong>constraint substrate</strong> that:</p>
+<ul>
+<li>inherits from Information Theory, Convex Analysis, Differential Geometry  </li>
+<li>feeds into Statistical Mechanics, QM, QFT, Cosmology, FFT  </li>
+<li>defines the monotonic and coherence structure of physical systems  </li>
+<li>remains fully valid only in <strong>R1</strong>  </li>
+<li>becomes embedded in higher‑level grammars in <strong>R2–R4</strong>  </li>
+</ul>
+<p>Thermodynamics is the foundation of all constraint‑based behavior in the<br />
+TriadicFrameworks physics stack.<br />
+# Engine Notes — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsengine_notesmd">TriadicFrameworks /docs/theories/thermodynamics/engine_notes.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicsengine_notesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These notes define the <strong>internal engine behavior</strong> of the Thermodynamics<br />
+module. Thermodynamics is treated as an <strong>R1 constraint‑first substrate<br />
+grammar</strong>, not a mechanical theory. It defines temperature as a substrate<br />
+force, entropy as a regime boundary, free energy as a coherence<br />
+operator, flows as gradient responses, and equilibrium as a fixed‑point<br />
+structure.</p>
+<p>This file is for AI agents, compilers, and cross‑module engines — not<br />
+students.</p>
+<hr />
+<h1 id="1-engine-identity">1. Engine Identity<a class="toc-permalink" href="#1-engine-identity" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><strong>Layer:</strong> R1 substrate  </li>
+<li><strong>Grammar:</strong> constraint‑first  </li>
+<li><strong>Operators:</strong> temperature, entropy, free energy, gradients  </li>
+<li><strong>Geometry:</strong> potential surfaces, constraint manifolds  </li>
+<li><strong>Stability:</strong> free‑energy convexity  </li>
+<li><strong>Directionality:</strong> entropy monotonicity  </li>
+<li><strong>Regimes:</strong> R1 → R4 (RTT‑aligned)</li>
+</ul>
+<p>Thermodynamics must never be interpreted mechanically.</p>
+<hr />
+<h1 id="2-state-engine-behavior">2. State Engine Behavior<a class="toc-permalink" href="#2-state-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="21-state-initialization">2.1 State Initialization<a class="toc-permalink" href="#21-state-initialization" title="Permanent link to this heading">&para;</a></h3>
+<p>States must be initialized as <strong>constraint configurations</strong>, not<br />
+microscopic states.</p>
+<h3 id="22-state-representation">2.2 State Representation<a class="toc-permalink" href="#22-state-representation" title="Permanent link to this heading">&para;</a></h3>
+<p>State variables (T, S, F, U, V, P) represent <strong>macro‑level constraints</strong>,<br />
+not particle properties.</p>
+<h3 id="23-state-validity">2.3 State Validity<a class="toc-permalink" href="#23-state-validity" title="Permanent link to this heading">&para;</a></h3>
+<p>Valid states satisfy:</p>
+<ul>
+<li>S ≥ 0  </li>
+<li>T ≥ 0  </li>
+<li>free‑energy definitions consistent with ensemble  </li>
+</ul>
+<hr />
+<h1 id="3-operator-engine-behavior">3. Operator Engine Behavior<a class="toc-permalink" href="#3-operator-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="31-temperature-operator">3.1 Temperature Operator<a class="toc-permalink" href="#31-temperature-operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Acts as a <strong>substrate force</strong>.<br />
+Drives flows via gradients.</p>
+<h3 id="32-entropy-operator">3.2 Entropy Operator<a class="toc-permalink" href="#32-entropy-operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Defines <strong>regime boundaries</strong>.<br />
+Monotonic under allowed transformations.</p>
+<h3 id="33-free-energy-operator">3.3 Free Energy Operator<a class="toc-permalink" href="#33-free-energy-operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Defines <strong>coherence and stability</strong>.<br />
+Equilibrium = free‑energy extremum.</p>
+<h3 id="34-gradient-operator">3.4 Gradient Operator<a class="toc-permalink" href="#34-gradient-operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Generates flows:<br />
+flow = −∇(potential)</p>
+<h3 id="35-equilibrium-operator">3.5 Equilibrium Operator<a class="toc-permalink" href="#35-equilibrium-operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Defines <strong>fixed‑point structures</strong> where gradients vanish.</p>
+<hr />
+<h1 id="4-flow-engine-behavior">4. Flow Engine Behavior<a class="toc-permalink" href="#4-flow-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="41-gradientdriven-flows">4.1 Gradient‑Driven Flows<a class="toc-permalink" href="#41-gradientdriven-flows" title="Permanent link to this heading">&para;</a></h3>
+<p>Flows arise from gradients of temperature or free energy.</p>
+<h3 id="42-constraintaligned-directionality">4.2 Constraint‑Aligned Directionality<a class="toc-permalink" href="#42-constraintaligned-directionality" title="Permanent link to this heading">&para;</a></h3>
+<p>Flows must follow:</p>
+<ul>
+<li>−∇T  </li>
+<li>−∇F  </li>
+</ul>
+<h3 id="43-irreversibility">4.3 Irreversibility<a class="toc-permalink" href="#43-irreversibility" title="Permanent link to this heading">&para;</a></h3>
+<p>Entropy production must satisfy:</p>
+<p>dS/dt ≥ 0</p>
+<p>Irreversibility is structural, not mechanical.</p>
+<hr />
+<h1 id="5-entropy-engine-behavior">5. Entropy Engine Behavior<a class="toc-permalink" href="#5-entropy-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="51-monotonicity">5.1 Monotonicity<a class="toc-permalink" href="#51-monotonicity" title="Permanent link to this heading">&para;</a></h3>
+<p>Entropy must be non‑decreasing for allowed processes.</p>
+<h3 id="52-boundary-conditions">5.2 Boundary Conditions<a class="toc-permalink" href="#52-boundary-conditions" title="Permanent link to this heading">&para;</a></h3>
+<p>Entropy defines the <strong>direction</strong> of evolution.</p>
+<h3 id="53-opensystem-behavior">5.3 Open‑System Behavior<a class="toc-permalink" href="#53-opensystem-behavior" title="Permanent link to this heading">&para;</a></h3>
+<p>Total entropy must increase even if subsystem entropy decreases.</p>
+<hr />
+<h1 id="6-freeenergy-engine-behavior">6. Free‑Energy Engine Behavior<a class="toc-permalink" href="#6-freeenergy-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="61-coherence">6.1 Coherence<a class="toc-permalink" href="#61-coherence" title="Permanent link to this heading">&para;</a></h3>
+<p>Free energy defines:</p>
+<ul>
+<li>stability  </li>
+<li>directionality  </li>
+<li>equilibrium  </li>
+</ul>
+<h3 id="62-convexity">6.2 Convexity<a class="toc-permalink" href="#62-convexity" title="Permanent link to this heading">&para;</a></h3>
+<p>Free‑energy surfaces must be convex for stable systems.</p>
+<h3 id="63-ensemble-dependence">6.3 Ensemble Dependence<a class="toc-permalink" href="#63-ensemble-dependence" title="Permanent link to this heading">&para;</a></h3>
+<p>F, G, Ω must be used according to ensemble constraints.</p>
+<hr />
+<h1 id="7-equilibrium-engine-behavior">7. Equilibrium Engine Behavior<a class="toc-permalink" href="#7-equilibrium-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="71-fixedpoint-structure">7.1 Fixed‑Point Structure<a class="toc-permalink" href="#71-fixedpoint-structure" title="Permanent link to this heading">&para;</a></h3>
+<p>Equilibrium occurs when:</p>
+<p>∇F = 0<br />
+dS/dt = 0</p>
+<h3 id="72-stability">7.2 Stability<a class="toc-permalink" href="#72-stability" title="Permanent link to this heading">&para;</a></h3>
+<p>Second‑derivative tests determine stability.</p>
+<h3 id="73-nonstasis">7.3 Non‑Stasis<a class="toc-permalink" href="#73-nonstasis" title="Permanent link to this heading">&para;</a></h3>
+<p>Equilibrium is constraint satisfaction, not absence of motion.</p>
+<hr />
+<h1 id="8-rtt-regime-engine-behavior">8. RTT Regime Engine Behavior<a class="toc-permalink" href="#8-rtt-regime-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r1-constraint-substrate">R1 — Constraint Substrate<a class="toc-permalink" href="#r1-constraint-substrate" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics fully valid.<br />
+Temperature, entropy, free energy fundamental.</p>
+<h3 id="r2-statistical-mechanics">R2 — Statistical Mechanics<a class="toc-permalink" href="#r2-statistical-mechanics" title="Permanent link to this heading">&para;</a></h3>
+<p>Microstate structure emerges.<br />
+Partition functions refine thermodynamic quantities.</p>
+<h3 id="r3-fieldtheoretic">R3 — Field‑Theoretic<a class="toc-permalink" href="#r3-fieldtheoretic" title="Permanent link to this heading">&para;</a></h3>
+<p>Free energy becomes field‑dependent.<br />
+Phase transitions become field‑level.</p>
+<h3 id="r4-cosmological">R4 — Cosmological<a class="toc-permalink" href="#r4-cosmological" title="Permanent link to this heading">&para;</a></h3>
+<p>Temperature becomes geometric.<br />
+Entropy includes horizon contributions.</p>
+<hr />
+<h1 id="9-crossmodule-engine-behavior">9. Cross‑Module Engine Behavior<a class="toc-permalink" href="#9-crossmodule-engine-behavior" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="91-upstream-dependencies">9.1 Upstream Dependencies<a class="toc-permalink" href="#91-upstream-dependencies" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Information Theory  </li>
+<li>Convex Analysis  </li>
+<li>Differential Geometry  </li>
+</ul>
+<h3 id="92-downstream-modules">9.2 Downstream Modules<a class="toc-permalink" href="#92-downstream-modules" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Statistical Mechanics  </li>
+<li>Quantum Mechanics (ensembles)  </li>
+<li>QFT (field‑level thermodynamics)  </li>
+<li>Cosmology (horizon thermodynamics)  </li>
+</ul>
+<h3 id="93-engine-guarantees">9.3 Engine Guarantees<a class="toc-permalink" href="#93-engine-guarantees" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics must provide:</p>
+<ul>
+<li>constraint geometry  </li>
+<li>entropy monotonicity  </li>
+<li>free‑energy coherence  </li>
+<li>gradient flows  </li>
+<li>equilibrium structure  </li>
+</ul>
+<hr />
+<h1 id="10-engine-safety-constraints">10. Engine Safety Constraints<a class="toc-permalink" href="#10-engine-safety-constraints" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>no particles  </li>
+<li>no caloric fluid  </li>
+<li>no mechanical forces  </li>
+<li>no kinetic interpretations  </li>
+<li>no disorder metaphors  </li>
+<li>no heat‑as‑substance  </li>
+</ul>
+<p>All engine outputs must remain <strong>constraint‑aligned</strong>.</p>
+<hr />
+<h1 id="11-notes-for-ai-agents">11. Notes for AI Agents<a class="toc-permalink" href="#11-notes-for-ai-agents" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li>treat Thermodynamics as <strong>constraint geometry</strong>, not mechanics  </li>
+<li>use potentials, not forces  </li>
+<li>use gradients, not motion  </li>
+<li>use entropy monotonicity, not disorder  </li>
+<li>use free‑energy surfaces, not energy bookkeeping  </li>
+<li>use equilibrium as fixed‑point, not stasis  </li>
+</ul>
+<p>Thermodynamics is the <strong>R1 constraint substrate</strong> of the entire canon.<br />
+# Examples — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsexamplesmd">TriadicFrameworks /docs/theories/thermodynamics/examples.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicsexamplesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These examples illustrate Thermodynamics as a <strong>constraint‑first substrate<br />
+grammar</strong>, not a mechanical theory. Temperature is a substrate force,<br />
+entropy is a regime boundary, free energy is a coherence operator, flows<br />
+are gradient responses, and equilibrium is a fixed‑point structure.</p>
+<p>All examples avoid classical drift and remain strictly within the<br />
+Thermodynamics substrate.</p>
+<hr />
+<h1 id="1-temperature-gradient-example">1. Temperature Gradient Example<a class="toc-permalink" href="#1-temperature-gradient-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="temperature-as-a-substrate-force">Temperature as a Substrate Force<a class="toc-permalink" href="#temperature-as-a-substrate-force" title="Permanent link to this heading">&para;</a></h3>
+<p>Two regions A and B satisfy:</p>
+<p>T_A &gt; T_B</p>
+<p>A temperature gradient exists:</p>
+<p>∇T = (T_A − T_B) / L</p>
+<p>Flow arises:</p>
+<p>Q̇ ∝ −∇T</p>
+<p>Interpretation:</p>
+<ul>
+<li>heat is not a substance  </li>
+<li>flow is a <strong>constraint‑driven response</strong>  </li>
+<li>temperature acts as a <strong>substrate force</strong>  </li>
+</ul>
+<hr />
+<h1 id="2-entropy-increase-example">2. Entropy Increase Example<a class="toc-permalink" href="#2-entropy-increase-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="entropy-as-a-regime-boundary">Entropy as a Regime Boundary<a class="toc-permalink" href="#entropy-as-a-regime-boundary" title="Permanent link to this heading">&para;</a></h3>
+<p>For any allowed process:</p>
+<p>ΔS ≥ 0</p>
+<p>Example:</p>
+<p>A system relaxes from a constrained state to a less constrained one:</p>
+<p>S_final − S_initial &gt; 0</p>
+<p>Interpretation:</p>
+<ul>
+<li>entropy is not disorder  </li>
+<li>entropy defines <strong>allowable directions</strong>  </li>
+<li>monotonicity encodes irreversibility  </li>
+</ul>
+<hr />
+<h1 id="3-free-energy-minimization-example">3. Free Energy Minimization Example<a class="toc-permalink" href="#3-free-energy-minimization-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="free-energy-as-a-coherence-operator">Free Energy as a Coherence Operator<a class="toc-permalink" href="#free-energy-as-a-coherence-operator" title="Permanent link to this heading">&para;</a></h3>
+<p>Given Helmholtz free energy:</p>
+<p>F(T, V, x)</p>
+<p>At equilibrium:</p>
+<p>∂F/∂x = 0<br />
+∂²F/∂x² &gt; 0</p>
+<p>Interpretation:</p>
+<ul>
+<li>equilibrium is a <strong>fixed‑point structure</strong>  </li>
+<li>free energy determines <strong>coherence and stability</strong>  </li>
+<li>not “usable energy”  </li>
+</ul>
+<hr />
+<h1 id="4-gradient-flow-example">4. Gradient Flow Example<a class="toc-permalink" href="#4-gradient-flow-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="flows-as-gradient-responses">Flows as Gradient Responses<a class="toc-permalink" href="#flows-as-gradient-responses" title="Permanent link to this heading">&para;</a></h3>
+<p>Given a potential Φ(x):</p>
+<p>flow = −∇Φ</p>
+<p>Example:</p>
+<p>Relaxation of a system toward equilibrium:</p>
+<p>ẋ = −∂F/∂x</p>
+<p>Interpretation:</p>
+<ul>
+<li>flows follow gradients  </li>
+<li>gradients encode directionality  </li>
+<li>no mechanical forces involved  </li>
+</ul>
+<hr />
+<h1 id="5-equilibrium-example">5. Equilibrium Example<a class="toc-permalink" href="#5-equilibrium-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="fixedpoint-structure">Fixed‑Point Structure<a class="toc-permalink" href="#fixedpoint-structure" title="Permanent link to this heading">&para;</a></h3>
+<p>A system with potential Φ(x) reaches equilibrium when:</p>
+<p>∇Φ = 0</p>
+<p>Example:</p>
+<p>A gas in a container reaches uniform temperature:</p>
+<p>∇T = 0</p>
+<p>Interpretation:</p>
+<ul>
+<li>equilibrium is not stasis  </li>
+<li>it is a <strong>constraint‑satisfied configuration</strong>  </li>
+</ul>
+<hr />
+<h1 id="6-irreversibility-example">6. Irreversibility Example<a class="toc-permalink" href="#6-irreversibility-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="entropy-production">Entropy Production<a class="toc-permalink" href="#entropy-production" title="Permanent link to this heading">&para;</a></h3>
+<p>For a process:</p>
+<p>𝓘 = dS/dt ≥ 0</p>
+<p>Example:</p>
+<p>A system cools toward ambient temperature:</p>
+<p>dS/dt &gt; 0 until equilibrium</p>
+<p>Interpretation:</p>
+<ul>
+<li>irreversibility is <strong>monotonic structure</strong>  </li>
+<li>not friction or mechanical loss  </li>
+</ul>
+<hr />
+<h1 id="7-ensemble-example">7. Ensemble Example<a class="toc-permalink" href="#7-ensemble-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="macrostate-selection">Macro‑State Selection<a class="toc-permalink" href="#macrostate-selection" title="Permanent link to this heading">&para;</a></h3>
+<p>Canonical ensemble:</p>
+<p>F = −T ln Z</p>
+<p>Grand canonical ensemble:</p>
+<p>Ω = −T ln Ξ</p>
+<p>Interpretation:</p>
+<ul>
+<li>ensembles are <strong>macro‑state selectors</strong>  </li>
+<li>they specify which constraints are fixed  </li>
+<li>not physical containers  </li>
+</ul>
+<hr />
+<h1 id="8-partition-function-example">8. Partition Function Example<a class="toc-permalink" href="#8-partition-function-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="statistical-extension-r2">Statistical Extension (R2)<a class="toc-permalink" href="#statistical-extension-r2" title="Permanent link to this heading">&para;</a></h3>
+<p>Given energy levels E_i:</p>
+<p>Z = Σ exp(−E_i / T)</p>
+<p>Then:</p>
+<p>F = −T ln Z<br />
+S = −∂F/∂T<br />
+U = F + TS</p>
+<p>Interpretation:</p>
+<ul>
+<li>Z is a <strong>generator of thermodynamic structure</strong>  </li>
+<li>appears in R2 (Statistical Mechanics)  </li>
+<li>not a count of physical objects  </li>
+</ul>
+<hr />
+<h1 id="9-opensystem-example">9. Open‑System Example<a class="toc-permalink" href="#9-opensystem-example" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="environmentcoupled-entropy-flow">Environment‑Coupled Entropy Flow<a class="toc-permalink" href="#environmentcoupled-entropy-flow" title="Permanent link to this heading">&para;</a></h3>
+<p>System S interacts with environment E:</p>
+<p>S_total ≥ S_S + S_E</p>
+<p>Example:</p>
+<p>A warm object cools in air:</p>
+<p>entropy of object decreases<br />
+entropy of environment increases more<br />
+total entropy increases</p>
+<p>Interpretation:</p>
+<ul>
+<li>open systems exchange constraints  </li>
+<li>entropy production remains monotonic  </li>
+</ul>
+<hr />
+<h1 id="summary_1">Summary<a class="toc-permalink" href="#summary_1" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics examples show:</p>
+<ul>
+<li><strong>temperature</strong> as a substrate force  </li>
+<li><strong>entropy</strong> as a regime boundary  </li>
+<li><strong>free energy</strong> as a coherence operator  </li>
+<li><strong>equilibrium</strong> as a fixed‑point structure  </li>
+<li><strong>flows</strong> as gradient responses  </li>
+<li><strong>irreversibility</strong> as monotonic structure  </li>
+</ul>
+<p>Thermodynamics is the <strong>constraint substrate</strong> from which Statistical<br />
+Mechanics emerges and into which QFT and Cosmology embed their<br />
+large‑scale behavior.<br />
+# Explanations — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsexplanationsmd">TriadicFrameworks /docs/theories/thermodynamics/explanations.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicsexplanationsmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics in TriadicFrameworks is a <strong>constraint‑first substrate<br />
+grammar</strong>, not a mechanical theory. It defines how temperature, entropy,<br />
+free energy, flows, and equilibrium behave as <strong>geometric and monotonic<br />
+structures</strong>, not as particle‑level processes.</p>
+<p>Thermodynamics explains which configurations are allowed, how systems<br />
+move between them, and why directionality (irreversibility) exists.</p>
+<hr />
+<h1 id="1-what-thermodynamics-actually-describes">1. What Thermodynamics Actually Describes<a class="toc-permalink" href="#1-what-thermodynamics-actually-describes" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics describes:</p>
+<ul>
+<li><strong>temperature</strong> as a substrate force  </li>
+<li><strong>entropy</strong> as a regime boundary  </li>
+<li><strong>free energy</strong> as a coherence operator  </li>
+<li><strong>flows</strong> as gradient responses  </li>
+<li><strong>equilibrium</strong> as a fixed‑point structure  </li>
+<li><strong>irreversibility</strong> as monotonicity  </li>
+</ul>
+<p>Thermodynamics does <strong>not</strong> describe:</p>
+<ul>
+<li>particles or molecules  </li>
+<li>heat as a substance  </li>
+<li>mechanical forces  </li>
+<li>microscopic motion  </li>
+</ul>
+<p>It is a <strong>constraint geometry</strong>, not a kinetic model.</p>
+<hr />
+<h1 id="2-temperature-as-a-substrate-force">2. Temperature as a Substrate Force<a class="toc-permalink" href="#2-temperature-as-a-substrate-force" title="Permanent link to this heading">&para;</a></h1>
+<p>Temperature T is:</p>
+<ul>
+<li>a <strong>driving potential</strong>  </li>
+<li>a <strong>substrate‑level intensity</strong>  </li>
+<li>a <strong>force‑like quantity</strong> in the constraint grammar  </li>
+</ul>
+<p>It is <strong>not</strong>:</p>
+<ul>
+<li>molecular agitation  </li>
+<li>average kinetic energy  </li>
+<li>a microscopic property  </li>
+</ul>
+<p>Temperature defines how strongly a system responds to thermal gradients.</p>
+<hr />
+<h1 id="3-entropy-as-a-regime-boundary">3. Entropy as a Regime Boundary<a class="toc-permalink" href="#3-entropy-as-a-regime-boundary" title="Permanent link to this heading">&para;</a></h1>
+<p>Entropy S is:</p>
+<ul>
+<li>a <strong>boundary operator</strong> on allowable transformations  </li>
+<li>monotonic under permitted processes  </li>
+<li>the generator of irreversibility  </li>
+</ul>
+<p>Entropy is <strong>not</strong>:</p>
+<ul>
+<li>disorder  </li>
+<li>randomness  </li>
+<li>chaos  </li>
+</ul>
+<p>Entropy defines the <strong>direction</strong> of evolution, not its mechanism.</p>
+<hr />
+<h1 id="4-free-energy-as-a-coherence-operator">4. Free Energy as a Coherence Operator<a class="toc-permalink" href="#4-free-energy-as-a-coherence-operator" title="Permanent link to this heading">&para;</a></h1>
+<p>Free energy (F, G, Ω) is:</p>
+<ul>
+<li>a <strong>coherence operator</strong>  </li>
+<li>a <strong>potential surface</strong>  </li>
+<li>minimized at equilibrium  </li>
+<li>convex and stability‑encoding  </li>
+</ul>
+<p>Free energy is <strong>not</strong>:</p>
+<ul>
+<li>“usable energy”  </li>
+<li>mechanical work capacity  </li>
+</ul>
+<p>It determines <strong>which configurations are stable</strong> and <strong>how systems<br />
+relax</strong>.</p>
+<hr />
+<h1 id="5-equilibrium-as-a-fixedpoint-structure">5. Equilibrium as a Fixed‑Point Structure<a class="toc-permalink" href="#5-equilibrium-as-a-fixedpoint-structure" title="Permanent link to this heading">&para;</a></h1>
+<p>Equilibrium is:</p>
+<ul>
+<li>a <strong>fixed‑point</strong> where gradients vanish  </li>
+<li>a <strong>constraint‑satisfied configuration</strong>  </li>
+<li>a <strong>free‑energy extremum</strong>  </li>
+</ul>
+<p>Equilibrium is <strong>not</strong>:</p>
+<ul>
+<li>stasis  </li>
+<li>nothing happening  </li>
+<li>absence of motion  </li>
+</ul>
+<p>It is the point where <strong>all constraints are simultaneously satisfied</strong>.</p>
+<hr />
+<h1 id="6-flows-as-gradient-responses">6. Flows as Gradient Responses<a class="toc-permalink" href="#6-flows-as-gradient-responses" title="Permanent link to this heading">&para;</a></h1>
+<p>Flows arise from:</p>
+<ul>
+<li>temperature gradients  </li>
+<li>free‑energy gradients  </li>
+<li>constraint surfaces  </li>
+</ul>
+<p>Flows are:</p>
+<ul>
+<li><strong>responses</strong>, not forces  </li>
+<li><strong>geometric</strong>, not mechanical  </li>
+<li><strong>monotonic</strong>, not oscillatory  </li>
+</ul>
+<p>Examples:</p>
+<ul>
+<li>heat flow: Q̇ ∝ −∇T  </li>
+<li>relaxation: ẋ ∝ −∇F  </li>
+</ul>
+<hr />
+<h1 id="7-irreversibility-as-monotonic-structure">7. Irreversibility as Monotonic Structure<a class="toc-permalink" href="#7-irreversibility-as-monotonic-structure" title="Permanent link to this heading">&para;</a></h1>
+<p>Irreversibility is encoded by:</p>
+<ul>
+<li>entropy production (dS/dt ≥ 0)  </li>
+<li>gradient descent on free energy  </li>
+<li>constraint geometry  </li>
+</ul>
+<p>It is <strong>not</strong> friction or mechanical loss.<br />
+It is a <strong>structural asymmetry</strong> in allowable transformations.</p>
+<hr />
+<h1 id="8-ensembles-and-statistical-embedding">8. Ensembles and Statistical Embedding<a class="toc-permalink" href="#8-ensembles-and-statistical-embedding" title="Permanent link to this heading">&para;</a></h1>
+<p>In R2 (Statistical Mechanics):</p>
+<ul>
+<li>microstates become explicit  </li>
+<li>partition functions generate thermodynamic quantities  </li>
+<li>fluctuations appear  </li>
+<li>free energy gains statistical interpretation  </li>
+</ul>
+<p>Thermodynamics remains the <strong>macro‑limit</strong> and <strong>constraint envelope</strong>.</p>
+<hr />
+<h1 id="9-fieldlevel-and-cosmological-embedding">9. Field‑Level and Cosmological Embedding<a class="toc-permalink" href="#9-fieldlevel-and-cosmological-embedding" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="r3-qft-regime">R3 — QFT Regime<a class="toc-permalink" href="#r3-qft-regime" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>free energy becomes field‑dependent  </li>
+<li>phase transitions become field‑theoretic  </li>
+<li>vacuum structure influences equilibrium  </li>
+</ul>
+<h3 id="r4-cosmological-regime_2">R4 — Cosmological Regime<a class="toc-permalink" href="#r4-cosmological-regime_2" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>temperature becomes geometric (Unruh, Hawking)  </li>
+<li>entropy includes horizon contributions  </li>
+<li>equilibrium becomes cosmological  </li>
+</ul>
+<p>Thermodynamics is embedded inside these larger grammars.</p>
+<hr />
+<h1 id="10-why-thermodynamics-works">10. Why Thermodynamics Works<a class="toc-permalink" href="#10-why-thermodynamics-works" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics succeeds because it unifies:</p>
+<ul>
+<li>constraint geometry  </li>
+<li>monotonicity  </li>
+<li>gradient flows  </li>
+<li>free‑energy coherence  </li>
+<li>entropy boundaries  </li>
+<li>equilibrium fixed‑points  </li>
+</ul>
+<p>into a single, scale‑robust grammar.</p>
+<hr />
+<h1 id="summary_2">Summary<a class="toc-permalink" href="#summary_2" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics is:</p>
+<ul>
+<li>a <strong>constraint‑first substrate grammar</strong>  </li>
+<li>defined by <strong>temperature, entropy, free energy, flows, equilibrium</strong>  </li>
+<li>monotonic and gradient‑structured  </li>
+<li>fully valid in <strong>R1</strong>  </li>
+<li>refined in <strong>R2</strong>  </li>
+<li>embedded in <strong>R3</strong>  </li>
+<li>geometric in <strong>R4</strong>  </li>
+</ul>
+<p>Thermodynamics is the substrate from which Statistical Mechanics emerges<br />
+and into which QFT and Cosmology embed their large‑scale behavior.<br />
+# Frequently Asked Questions — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsfaqmd">TriadicFrameworks /docs/theories/thermodynamics/faq.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicsfaqmd" title="Permanent link to this heading">&para;</a></h3>
+<p>This FAQ explains Thermodynamics as a <strong>constraint‑first substrate grammar</strong>.<br />
+It treats:</p>
+<ul>
+<li>temperature as a <strong>substrate force</strong>  </li>
+<li>entropy as a <strong>regime boundary</strong>  </li>
+<li>free energy as a <strong>coherence operator</strong>  </li>
+<li>flows as <strong>gradient responses</strong>  </li>
+<li>equilibrium as a <strong>fixed‑point structure</strong>  </li>
+</ul>
+<p>Thermodynamics is <strong>constraint geometry</strong>, not a mechanical theory.</p>
+<hr />
+<h2 id="1-what-is-thermodynamics-in-triadicframeworks">1. What <em>is</em> Thermodynamics in TriadicFrameworks?<a class="toc-permalink" href="#1-what-is-thermodynamics-in-triadicframeworks" title="Permanent link to this heading">&para;</a></h2>
+<p>Thermodynamics is the <strong>R1 constraint substrate</strong> that governs:</p>
+<ul>
+<li>temperature  </li>
+<li>entropy  </li>
+<li>free energy  </li>
+<li>flows  </li>
+<li>equilibrium  </li>
+</ul>
+<p>It defines which configurations are allowed and how systems move between<br />
+them via gradients and monotonic structure.</p>
+<hr />
+<h2 id="2-is-thermodynamics-a-theory-of-particles">2. Is Thermodynamics a theory of particles?<a class="toc-permalink" href="#2-is-thermodynamics-a-theory-of-particles" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>No.</strong><br />
+Thermodynamics does not describe particles, molecules, or microscopic<br />
+motion.</p>
+<p>It describes <strong>constraints on macroscopic variables</strong> and the <strong>geometry<br />
+of potentials and gradients</strong>.</p>
+<hr />
+<h2 id="3-is-heat-a-substance-in-this-framework">3. Is heat a substance in this framework?<a class="toc-permalink" href="#3-is-heat-a-substance-in-this-framework" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>No.</strong><br />
+Heat is <strong>not</strong> a fluid or material.</p>
+<p>It is a <strong>constraint‑driven transfer term</strong> associated with temperature<br />
+gradients and entropy change.</p>
+<hr />
+<h2 id="4-what-is-temperature-here">4. What is temperature here?<a class="toc-permalink" href="#4-what-is-temperature-here" title="Permanent link to this heading">&para;</a></h2>
+<p>Temperature is a <strong>substrate force</strong>.</p>
+<p>It:</p>
+<ul>
+<li>sets the intensity of thermal interaction  </li>
+<li>appears in free energy and partition functions  </li>
+<li>drives flows via gradients  </li>
+</ul>
+<p>It is not defined as “average kinetic energy” in this grammar.</p>
+<hr />
+<h2 id="5-what-is-entropy">5. What is entropy?<a class="toc-permalink" href="#5-what-is-entropy" title="Permanent link to this heading">&para;</a></h2>
+<p>Entropy is a <strong>regime boundary operator</strong>.</p>
+<p>It:</p>
+<ul>
+<li>constrains allowable transformations  </li>
+<li>is monotonic under allowed processes  </li>
+<li>defines the <strong>arrow of irreversibility</strong>  </li>
+</ul>
+<p>It is <strong>not</strong> “disorder” or “randomness.”</p>
+<hr />
+<h2 id="6-what-is-free-energy">6. What is free energy?<a class="toc-permalink" href="#6-what-is-free-energy" title="Permanent link to this heading">&para;</a></h2>
+<p>Free energy is a <strong>coherence operator</strong>.</p>
+<p>It:</p>
+<ul>
+<li>determines directionality of spontaneous processes  </li>
+<li>is minimized at equilibrium (subject to constraints)  </li>
+<li>encodes stability and phase structure  </li>
+</ul>
+<p>It is <strong>not</strong> “usable energy” in a colloquial sense.</p>
+<hr />
+<h2 id="7-what-is-equilibrium">7. What is equilibrium?<a class="toc-permalink" href="#7-what-is-equilibrium" title="Permanent link to this heading">&para;</a></h2>
+<p>Equilibrium is a <strong>fixed‑point structure</strong> where:</p>
+<ul>
+<li>gradients vanish  </li>
+<li>free energy is extremized (typically minimized)  </li>
+<li>entropy production is zero  </li>
+</ul>
+<p>It is <strong>not</strong> “nothing happening” — it is a <strong>constraint‑satisfied<br />
+configuration</strong>.</p>
+<hr />
+<h2 id="8-what-are-flows-in-this-grammar">8. What are flows in this grammar?<a class="toc-permalink" href="#8-what-are-flows-in-this-grammar" title="Permanent link to this heading">&para;</a></h2>
+<p>Flows are <strong>gradient responses</strong>.</p>
+<p>They:</p>
+<ul>
+<li>arise from gradients of temperature or potentials  </li>
+<li>follow constraint geometry (e.g., −∇F, −∇T)  </li>
+<li>encode irreversibility when coupled to entropy production  </li>
+</ul>
+<p>They are <strong>not</strong> forces or particle streams.</p>
+<hr />
+<h2 id="9-how-does-thermodynamics-relate-to-statistical-mechanics">9. How does Thermodynamics relate to Statistical Mechanics?<a class="toc-permalink" href="#9-how-does-thermodynamics-relate-to-statistical-mechanics" title="Permanent link to this heading">&para;</a></h2>
+<p>Statistical Mechanics is the <strong>R2 refinement</strong> of Thermodynamics.</p>
+<ul>
+<li>Thermodynamics: constraint geometry at the macro level  </li>
+<li>Statistical Mechanics: microstate embedding via ensembles and<br />
+  partition functions  </li>
+</ul>
+<p>Thermodynamics survives as the <strong>macro‑limit</strong> and <strong>constraint envelope</strong>.</p>
+<hr />
+<h2 id="10-how-does-thermodynamics-relate-to-quantum-mechanics-and-qft">10. How does Thermodynamics relate to Quantum Mechanics and QFT?<a class="toc-permalink" href="#10-how-does-thermodynamics-relate-to-quantum-mechanics-and-qft" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>With <strong>Quantum Mechanics</strong>, Thermodynamics appears as <strong>quantum<br />
+  ensembles</strong> and density‑matrix thermodynamics.  </li>
+<li>With <strong>QFT</strong>, Thermodynamics becomes <strong>field‑level thermodynamics</strong>:<br />
+  free energy, phase transitions, and vacuum structure are field‑dependent.</li>
+</ul>
+<p>Thermodynamics is embedded inside these higher‑level grammars.</p>
+<hr />
+<h2 id="11-how-does-thermodynamics-behave-across-rtt-regimes">11. How does Thermodynamics behave across RTT regimes?<a class="toc-permalink" href="#11-how-does-thermodynamics-behave-across-rtt-regimes" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>R1:</strong> fully valid constraint substrate  </li>
+<li><strong>R2:</strong> refined by Statistical Mechanics (microstates, partition<br />
+  functions)  </li>
+<li><strong>R3:</strong> embedded in QFT (field‑level free energy, phase transitions)  </li>
+<li><strong>R4:</strong> embedded in Cosmology (horizon entropy, geometric temperature)</li>
+</ul>
+<hr />
+<h2 id="12-does-thermodynamics-define-an-arrow-of-time">12. Does Thermodynamics define an arrow of time?<a class="toc-permalink" href="#12-does-thermodynamics-define-an-arrow-of-time" title="Permanent link to this heading">&para;</a></h2>
+<p>Yes.<br />
+Irreversibility is encoded via <strong>entropy production</strong>:</p>
+<ul>
+<li>entropy is monotonic under allowed processes  </li>
+<li>zero entropy production only at equilibrium  </li>
+</ul>
+<p>This defines a <strong>thermodynamic arrow of time</strong> as a <strong>monotonic<br />
+structure</strong>, not as friction or mechanical loss.</p>
+<hr />
+<h2 id="13-is-equilibrium-always-static">13. Is equilibrium always static?<a class="toc-permalink" href="#13-is-equilibrium-always-static" title="Permanent link to this heading">&para;</a></h2>
+<p>No.<br />
+Equilibrium is a <strong>fixed‑point in constraint space</strong>, not necessarily a<br />
+static configuration in ordinary language.</p>
+<p>Systems can have internal activity while remaining at a <strong>constraint<br />
+fixed‑point</strong>.</p>
+<hr />
+<h2 id="14-where-does-the-partition-function-appear">14. Where does the partition function appear?<a class="toc-permalink" href="#14-where-does-the-partition-function-appear" title="Permanent link to this heading">&para;</a></h2>
+<p>The partition function appears in <strong>R2</strong> (Statistical Mechanics).</p>
+<ul>
+<li>it generates thermodynamic quantities  </li>
+<li>it connects microstates to macro‑level constraints  </li>
+</ul>
+<p>It is an <strong>extension operator</strong>, not part of the minimal R1 Thermodynamics<br />
+grammar.</p>
+<hr />
+<h2 id="15-how-should-i-think-about-thermodynamics-in-this-canon">15. How should I think about Thermodynamics in this canon?<a class="toc-permalink" href="#15-how-should-i-think-about-thermodynamics-in-this-canon" title="Permanent link to this heading">&para;</a></h2>
+<p>Think of Thermodynamics as:</p>
+<ul>
+<li>a <strong>geometry of potentials and gradients</strong>  </li>
+<li>a <strong>grammar of constraints and regime boundaries</strong>  </li>
+<li>a <strong>substrate for irreversibility and equilibrium</strong>  </li>
+</ul>
+<p>It is the <strong>constraint substrate</strong> from which Statistical Mechanics<br />
+emerges and into which QFT and Cosmology embed their large‑scale<br />
+behavior.</p>
+<hr />
+<p># Thermodynamics  </p>
+<h3 id="triadicframeworks-constraint-grammar-entropy-free-energy">TriadicFrameworks — Constraint Grammar • Entropy • Free Energy<a class="toc-permalink" href="#triadicframeworks-constraint-grammar-entropy-free-energy" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics is treated in TriadicFrameworks as the<br />
+<strong>R1 constraint‑first substrate grammar</strong> governing temperature,<br />
+entropy, free energy, flows, and equilibrium. It is not a mechanical<br />
+theory — it is a <strong>constraint geometry</strong>.</p>
+<p>This markdown front door mirrors the HTML front door and provides a<br />
+clean, GitHub‑friendly entry point into the module.</p>
+<hr />
+<h2 id="module-badge">Module Badge<a class="toc-permalink" href="#module-badge" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>🔥 Thermodynamics</strong><br />
+<strong>📘 Constraint Grammar • Entropy • Free Energy • AI‑Parsable</strong></p>
+<hr />
+<h2 id="session-context">Session Context<a class="toc-permalink" href="#session-context" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Canon:</strong> active (constraint‑first • entropy‑aligned • free‑energy‑driven)<br />
+<strong>Modules:</strong> Information Theory → Thermodynamics → Statistical Mechanics →<br />
+QFT → Cosmology<br />
+<strong>Drift:</strong> minimal (no particles • no caloric fluid • no mechanical analogies)<br />
+<strong>Coherence:</strong> convex • monotonic • gradient‑aligned<br />
+<strong>Version:</strong> 1.0 (constraint‑grammar‑stable)<br />
+<strong>Format:</strong> markdown + html + operator tables + regime maps<br />
+<strong>Front door:</strong> this page<br />
+<strong>Every page:</strong> standalone • AI‑parsable • constraint‑aligned<br />
+<strong>Audience:</strong> students • researchers • physicists • AIs</p>
+<hr />
+<h2 id="what-this-module-provides">What This Module Provides<a class="toc-permalink" href="#what-this-module-provides" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li>a <strong>constraint‑first grammar</strong> of temperature, entropy, and free energy  </li>
+<li><strong>substrate‑level operators</strong> (temperature, entropy, free energy, gradients)  </li>
+<li><strong>equilibrium as fixed‑point structure</strong>  </li>
+<li><strong>flows as gradient responses</strong>  </li>
+<li><strong>irreversibility as monotonic structure</strong>  </li>
+<li><strong>RTT regime behavior</strong> (R1 → R4)  </li>
+<li><strong>integration with Statistical Mechanics, QFT, and Cosmology</strong>  </li>
+<li>simulation hooks for constraint surfaces, flows, and equilibrium detection  </li>
+</ul>
+<hr />
+<h2 id="navigation">Navigation<a class="toc-permalink" href="#navigation" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><a href="./README.md">README</a>  </li>
+<li><a href="./module.json">module.json</a>  </li>
+<li><a href="./module_rtt1.json">RTT/1 — Constraint Substrate</a>  </li>
+<li><a href="./module_rtt2.json">RTT/2 — Statistical Embedding</a>  </li>
+<li><a href="./module_rtt3.json">RTT/3 — Field‑Level Embedding</a>  </li>
+<li><a href="./session_context.md">Session Context</a>  </li>
+<li><a href="./regimes.md">Regimes</a>  </li>
+<li><a href="./operators.md">Operators</a>  </li>
+<li><a href="./operator_examples.md">Operator Examples</a>  </li>
+<li><a href="./examples.md">Examples</a>  </li>
+<li><a href="./explanations.md">Explanations</a>  </li>
+<li><a href="./faq.md">FAQ</a>  </li>
+<li><a href="./coherence_map.md">Coherence Map</a>  </li>
+<li><a href="./cross_module.md">Cross‑Module Integration</a>  </li>
+<li><a href="./lineage.md">Lineage</a>  </li>
+<li><a href="./simulation_hooks.json">Simulation Hooks</a>  </li>
+<li><a href="./engine_notes.md">Engine Notes</a>  </li>
+<li><a href="./index.html">HTML Front Door</a></li>
+</ul>
+<hr />
+<h2 id="identity-summary">Identity Summary<a class="toc-permalink" href="#identity-summary" title="Permanent link to this heading">&para;</a></h2>
+<p>Thermodynamics is:</p>
+<ul>
+<li>a <strong>constraint‑first substrate grammar</strong>, not a mechanical model  </li>
+<li>a <strong>geometry of potentials and gradients</strong>, not particle motion  </li>
+<li>a <strong>free‑energy‑driven coherence system</strong>, not a kinetic theory  </li>
+<li>an <strong>entropy‑bounded regime</strong>, not disorder  </li>
+<li>an <strong>R1 substrate</strong>, not a statistical or field‑theoretic theory  </li>
+</ul>
+<p>Thermodynamics is fully coherent in <strong>R1</strong>, becomes a <strong>macro‑limit</strong> in<br />
+<strong>R2</strong>, becomes <strong>embedded in QFT</strong> in <strong>R3</strong>, and becomes <strong>geometric</strong> in<br />
+<strong>R4</strong>.</p>
+<hr />
+<h2 id="metadata-canonical">Metadata (Canonical)<a class="toc-permalink" href="#metadata-canonical" title="Permanent link to this heading">&para;</a></h2>
+<ul>
+<li><strong>ai.module:</strong> thermodynamics  </li>
+<li><strong>ai.version:</strong> 1.0  </li>
+<li><strong>ai.purpose:</strong> R1 constraint‑first substrate grammar  </li>
+<li><strong>ai.keywords:</strong> temperature, entropy, free energy, flows, equilibrium, rtt  </li>
+<li><strong>ai.audience:</strong> students, researchers, physicists, AIs  </li>
+<li><strong>ai.navigation:</strong> /sitemap_main.xml  </li>
+<li><strong>ai.discussions:</strong> GitHub Discussions  </li>
+<li><strong>ai.license:</strong> Open educational use permitted  </li>
+</ul>
+<hr />
+<h2 id="notes">Notes<a class="toc-permalink" href="#notes" title="Permanent link to this heading">&para;</a></h2>
+<p>This markdown front door is intentionally minimal and mirrors the HTML<br />
+front door without requiring browser rendering. It is optimized for:</p>
+<ul>
+<li>GitHub browsing  </li>
+<li>AI ingestion  </li>
+<li>student readability  </li>
+<li>zero drift  </li>
+<li>cross‑module consistency<br />
+# Lineage — Thermodynamics  </li>
+</ul>
+<h3 id="triadicframeworks-docstheoriesthermodynamicslineagemd">TriadicFrameworks /docs/theories/thermodynamics/lineage.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicslineagemd" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics is the <strong>constraint‑first substrate grammar</strong> of the RTT<br />
+stack. It defines temperature as a substrate force, entropy as a regime<br />
+boundary, free energy as a coherence operator, flows as gradient<br />
+responses, and equilibrium as a fixed‑point structure.</p>
+<p>This lineage traces Thermodynamics across:</p>
+<ul>
+<li>historical development  </li>
+<li>conceptual transitions  </li>
+<li>mathematical structures  </li>
+<li>RTT regime placement  </li>
+<li>cross‑module ancestry  </li>
+</ul>
+<hr />
+<h1 id="1-historical-lineage">1. Historical Lineage<a class="toc-permalink" href="#1-historical-lineage" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="1824-carnot-reversible-cycles"><strong>1824 — Carnot (Reversible Cycles)</strong><a class="toc-permalink" href="#1824-carnot-reversible-cycles" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>efficiency limits  </li>
+<li>early constraint formulation  </li>
+</ul>
+<h3 id="1850s-clausius-entropy"><strong>1850s — Clausius (Entropy)</strong><a class="toc-permalink" href="#1850s-clausius-entropy" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>entropy introduced  </li>
+<li>irreversibility formalized  </li>
+</ul>
+<h3 id="1850s1860s-kelvin-temperature-scale"><strong>1850s–1860s — Kelvin (Temperature Scale)</strong><a class="toc-permalink" href="#1850s1860s-kelvin-temperature-scale" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>absolute temperature  </li>
+<li>substrate force interpretation begins  </li>
+</ul>
+<h3 id="1870s-gibbs-free-energies-ensembles"><strong>1870s — Gibbs (Free Energies &amp; Ensembles)</strong><a class="toc-permalink" href="#1870s-gibbs-free-energies-ensembles" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>free energy as coherence operator  </li>
+<li>equilibrium as fixed‑point structure  </li>
+</ul>
+<h3 id="1900s-planck-einstein-radiation-fluctuations"><strong>1900s — Planck &amp; Einstein (Radiation &amp; Fluctuations)</strong><a class="toc-permalink" href="#1900s-planck-einstein-radiation-fluctuations" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>thermodynamics meets quantum structure  </li>
+<li>statistical refinement begins  </li>
+</ul>
+<h3 id="1950spresent-information-theory-statistical-mechanics"><strong>1950s–Present — Information Theory &amp; Statistical Mechanics</strong><a class="toc-permalink" href="#1950spresent-information-theory-statistical-mechanics" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>entropy duality  </li>
+<li>partition functions  </li>
+<li>microstate embedding  </li>
+</ul>
+<hr />
+<h1 id="2-conceptual-lineage">2. Conceptual Lineage<a class="toc-permalink" href="#2-conceptual-lineage" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics emerges from four conceptual transitions:</p>
+<h3 id="1-from-heat-as-substance-constraint-geometry"><strong>1. From heat-as-substance → constraint geometry</strong><a class="toc-permalink" href="#1-from-heat-as-substance-constraint-geometry" title="Permanent link to this heading">&para;</a></h3>
+<p>Heat becomes a transfer term, not a material.</p>
+<h3 id="2-from-mechanical-intuition-potential-surfaces"><strong>2. From mechanical intuition → potential surfaces</strong><a class="toc-permalink" href="#2-from-mechanical-intuition-potential-surfaces" title="Permanent link to this heading">&para;</a></h3>
+<p>Temperature, entropy, and free energy become operators.</p>
+<h3 id="3-from-motion-gradients"><strong>3. From motion → gradients</strong><a class="toc-permalink" href="#3-from-motion-gradients" title="Permanent link to this heading">&para;</a></h3>
+<p>Flows arise from gradients of potentials.</p>
+<h3 id="4-from-stasis-fixedpoint-structures"><strong>4. From stasis → fixed‑point structures</strong><a class="toc-permalink" href="#4-from-stasis-fixedpoint-structures" title="Permanent link to this heading">&para;</a></h3>
+<p>Equilibrium becomes a constraint‑satisfied configuration.</p>
+<hr />
+<h1 id="3-mathematical-lineage">3. Mathematical Lineage<a class="toc-permalink" href="#3-mathematical-lineage" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics inherits its structure from:</p>
+<h3 id="convex-analysis"><strong>Convex Analysis</strong><a class="toc-permalink" href="#convex-analysis" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>free energy minimization  </li>
+<li>stability conditions  </li>
+</ul>
+<h3 id="differential-geometry"><strong>Differential Geometry</strong><a class="toc-permalink" href="#differential-geometry" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>gradients  </li>
+<li>constraint surfaces  </li>
+<li>flows  </li>
+</ul>
+<h3 id="information-theory"><strong>Information Theory</strong><a class="toc-permalink" href="#information-theory" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>entropy duality  </li>
+<li>monotonicity  </li>
+</ul>
+<h3 id="statistical-mechanics"><strong>Statistical Mechanics</strong><a class="toc-permalink" href="#statistical-mechanics" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>ensembles  </li>
+<li>partition functions  </li>
+<li>fluctuations  </li>
+</ul>
+<hr />
+<h1 id="4-rtt-lineage">4. RTT Lineage<a class="toc-permalink" href="#4-rtt-lineage" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics occupies a specific place in the RTT hierarchy:</p>
+<h3 id="r1-constraint-substrate-regime_2"><strong>R1 — Constraint Substrate Regime</strong><a class="toc-permalink" href="#r1-constraint-substrate-regime_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics fully valid.<br />
+Temperature, entropy, free energy fundamental.</p>
+<h3 id="r2-statistical-mechanics-regime_2"><strong>R2 — Statistical Mechanics Regime</strong><a class="toc-permalink" href="#r2-statistical-mechanics-regime_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Microstates emerge.<br />
+Partition functions refine thermodynamic quantities.</p>
+<h3 id="r3-fieldtheoretic-regime_2"><strong>R3 — Field‑Theoretic Regime</strong><a class="toc-permalink" href="#r3-fieldtheoretic-regime_2" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics embedded in QFT.<br />
+Phase transitions become field‑level.</p>
+<h3 id="r4-cosmological-regime_3"><strong>R4 — Cosmological Regime</strong><a class="toc-permalink" href="#r4-cosmological-regime_3" title="Permanent link to this heading">&para;</a></h3>
+<p>Horizon thermodynamics.<br />
+Temperature becomes geometric.</p>
+<hr />
+<h1 id="5-crossmodule-lineage">5. Cross‑Module Lineage<a class="toc-permalink" href="#5-crossmodule-lineage" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics inherits from:</p>
+<ul>
+<li><strong>Information Theory</strong> (entropy duality)  </li>
+<li><strong>Convex Analysis</strong> (free energy structure)  </li>
+<li><strong>Differential Geometry</strong> (gradients, flows)  </li>
+<li><strong>Statistical Mechanics</strong> (microstate embedding)  </li>
+</ul>
+<p>Thermodynamics feeds into:</p>
+<ul>
+<li><strong>Statistical Mechanics</strong> (R2 refinement)  </li>
+<li><strong>Quantum Mechanics</strong> (quantum ensembles)  </li>
+<li><strong>QFT</strong> (field‑level thermodynamics)  </li>
+<li><strong>Cosmology</strong> (horizon entropy, geometric temperature)  </li>
+<li><strong>Framework Field Theory</strong> (constraint‑level operators)  </li>
+</ul>
+<hr />
+<h1 id="6-substrate-lineage-summary">6. Substrate Lineage Summary<a class="toc-permalink" href="#6-substrate-lineage-summary" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics is the convergence point of:</p>
+<ul>
+<li>constraint geometry  </li>
+<li>entropy as regime boundary  </li>
+<li>free energy as coherence operator  </li>
+<li>temperature as substrate force  </li>
+<li>flows as gradient responses  </li>
+<li>equilibrium as fixed‑point structure  </li>
+</ul>
+<p>Thermodynamics is the <strong>R1 constraint substrate</strong> from which Statistical<br />
+Mechanics emerges and into which QFT and Cosmology embed their<br />
+large‑scale behavior.<br />
+# Operators — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsoperatorsmd">TriadicFrameworks /docs/theories/thermodynamics/operators.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicsoperatorsmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics is a <strong>constraint‑first substrate grammar</strong>. Its operators<br />
+do not act on particles or waves — they act on <strong>state variables,<br />
+constraints, gradients, and potentials</strong>. Temperature is a substrate<br />
+force, entropy is a regime boundary, free energy is a coherence<br />
+operator, and flows are gradient responses.</p>
+<p>This file defines the canonical operators of Thermodynamics.</p>
+<hr />
+<h1 id="1-temperature_operator">1. temperature_operator<a class="toc-permalink" href="#1-temperature_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="substrate-force">(Substrate force)<a class="toc-permalink" href="#substrate-force" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> T  </p>
+<p><strong>Purpose:</strong><br />
+Defines the intensity of thermal interaction. Acts as a <strong>driving<br />
+potential</strong> for flows.</p>
+<p><strong>Notes:</strong><br />
+- not molecular agitation<br />
+- not average kinetic energy<br />
+- a <strong>substrate force</strong> in the constraint grammar  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret T as a microscopic property.</p>
+<hr />
+<h1 id="2-entropy_operator">2. entropy_operator<a class="toc-permalink" href="#2-entropy_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="regime-boundary-operator">(Regime boundary operator)<a class="toc-permalink" href="#regime-boundary-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> S  </p>
+<p><strong>Purpose:</strong><br />
+Defines allowable configurations. Sets <strong>regime boundaries</strong> for<br />
+processes.</p>
+<p><strong>Notes:</strong><br />
+- monotonic under allowed transformations<br />
+- dual to information entropy<br />
+- defines directionality  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret S as disorder.</p>
+<hr />
+<h1 id="3-free_energy_operator">3. free_energy_operator<a class="toc-permalink" href="#3-free_energy_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="coherence-operator">(Coherence operator)<a class="toc-permalink" href="#coherence-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> F, G, Ω (depending on ensemble)</p>
+<p><strong>Purpose:</strong><br />
+Defines coherence and directionality of processes. Determines equilibrium<br />
+via minimization.</p>
+<p><strong>Notes:</strong><br />
+- generator of spontaneous change<br />
+- convex potential<br />
+- ensemble‑dependent  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat free energy as “usable energy.”</p>
+<hr />
+<h1 id="4-equilibrium_operator">4. equilibrium_operator<a class="toc-permalink" href="#4-equilibrium_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="fixedpoint-operator">(Fixed‑point operator)<a class="toc-permalink" href="#fixedpoint-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> E*  </p>
+<p><strong>Purpose:</strong><br />
+Defines fixed‑point structures where gradients vanish and potentials are<br />
+extremized.</p>
+<p><strong>Notes:</strong><br />
+- not stasis<br />
+- not absence of motion<br />
+- a <strong>constraint‑satisfied configuration</strong>  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret equilibrium as “nothing happening.”</p>
+<hr />
+<h1 id="5-gradient_operator">5. gradient_operator<a class="toc-permalink" href="#5-gradient_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="flow-generator">(Flow generator)<a class="toc-permalink" href="#flow-generator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> ∇  </p>
+<p><strong>Purpose:</strong><br />
+Generates flows from potentials. Defines direction and magnitude of<br />
+thermodynamic processes.</p>
+<p><strong>Notes:</strong><br />
+- flows follow gradients<br />
+- gradients define irreversibility<br />
+- dual to free energy  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat gradients as forces.</p>
+<hr />
+<h1 id="6-heat_flow_operator">6. heat_flow_operator<a class="toc-permalink" href="#6-heat_flow_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="constraintdriven-flow">(Constraint‑driven flow)<a class="toc-permalink" href="#constraintdriven-flow" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> Q̇  </p>
+<p><strong>Purpose:</strong><br />
+Represents flow induced by temperature gradients.</p>
+<p><strong>Notes:</strong><br />
+- not a substance<br />
+- not a fluid<br />
+- a <strong>constraint‑driven transfer</strong>  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat heat as a material.</p>
+<hr />
+<h1 id="7-work_operator">7. work_operator<a class="toc-permalink" href="#7-work_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="constraint-deformation-operator">(Constraint deformation operator)<a class="toc-permalink" href="#constraint-deformation-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> Ẇ  </p>
+<p><strong>Purpose:</strong><br />
+Represents changes due to deformation of constraints (volume, pressure,<br />
+fields).</p>
+<p><strong>Notes:</strong><br />
+- geometric<br />
+- boundary‑dependent<br />
+- couples to free energy  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat work as force × distance in a mechanical sense.</p>
+<hr />
+<h1 id="8-ensemble_operator">8. ensemble_operator<a class="toc-permalink" href="#8-ensemble_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="macrostate-selector">(Macro‑state selector)<a class="toc-permalink" href="#macrostate-selector" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓔 = {canonical, grand canonical, microcanonical}</p>
+<p><strong>Purpose:</strong><br />
+Defines which constraints are held fixed and which potentials apply.</p>
+<p><strong>Notes:</strong><br />
+- determines free energy form<br />
+- determines allowed fluctuations  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat ensembles as physical containers.</p>
+<hr />
+<h1 id="9-partition_function_operator">9. partition_function_operator<a class="toc-permalink" href="#9-partition_function_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="statistical-extension-operator">(Statistical extension operator)<a class="toc-permalink" href="#statistical-extension-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> Z  </p>
+<p><strong>Purpose:</strong><br />
+Connects Thermodynamics to Statistical Mechanics. Generates all<br />
+thermodynamic quantities via derivatives.</p>
+<p><strong>Notes:</strong><br />
+- R2 operator (emerges in Statistical Mechanics)<br />
+- not required in R1  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT treat Z as counting physical objects.</p>
+<hr />
+<h1 id="10-irreversibility_operator">10. irreversibility_operator<a class="toc-permalink" href="#10-irreversibility_operator" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="arrowoftime-operator">(Arrow‑of‑time operator)<a class="toc-permalink" href="#arrowoftime-operator" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Signal:</strong> 𝓘 ≥ 0  </p>
+<p><strong>Purpose:</strong><br />
+Encodes monotonicity of entropy and directionality of flows.</p>
+<p><strong>Notes:</strong><br />
+- zero only at equilibrium<br />
+- defines thermodynamic arrow of time  </p>
+<p><strong>Drift to avoid:</strong><br />
+Do NOT interpret irreversibility as friction.</p>
+<hr />
+<h1 id="summary_3">Summary<a class="toc-permalink" href="#summary_3" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics operators define:</p>
+<ul>
+<li><strong>temperature</strong> as a substrate force  </li>
+<li><strong>entropy</strong> as a regime boundary  </li>
+<li><strong>free energy</strong> as a coherence operator  </li>
+<li><strong>equilibrium</strong> as a fixed‑point structure  </li>
+<li><strong>flows</strong> as gradient responses  </li>
+<li><strong>irreversibility</strong> as monotonic structure  </li>
+</ul>
+<p>Thermodynamics is the <strong>constraint substrate</strong> from which Statistical<br />
+Mechanics emerges and into which QFT and Cosmology embed their<br />
+large‑scale behavior.<br />
+# Operator‑Level Examples — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsoperator_examplesmd">TriadicFrameworks /docs/theories/thermodynamics/operator_examples.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicsoperator_examplesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>These examples illustrate Thermodynamics as a <strong>constraint‑first substrate<br />
+grammar</strong>, not a mechanical theory. Operators act on <strong>constraints,<br />
+potentials, gradients, and regime boundaries</strong>, not on particles or<br />
+fluids.</p>
+<p>All examples avoid classical drift and remain strictly within the<br />
+Thermodynamics substrate.</p>
+<hr />
+<h1 id="1-temperature_operator_1">1. temperature_operator<a class="toc-permalink" href="#1-temperature_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-temperature-gradient-driving-flow">Example: Temperature Gradient Driving Flow<a class="toc-permalink" href="#example-temperature-gradient-driving-flow" title="Permanent link to this heading">&para;</a></h3>
+<p>Given two regions A and B:</p>
+<p>T_A &gt; T_B</p>
+<p>The <strong>temperature operator</strong> defines a substrate force that induces a<br />
+flow:</p>
+<p>Q̇ ∝ ∇T</p>
+<p>Interpretation:</p>
+<ul>
+<li>not heat moving as a substance  </li>
+<li>not molecular agitation  </li>
+<li>a <strong>constraint‑driven gradient response</strong>  </li>
+</ul>
+<hr />
+<h1 id="2-entropy_operator_1">2. entropy_operator<a class="toc-permalink" href="#2-entropy_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-entropy-as-a-regime-boundary">Example: Entropy as a Regime Boundary<a class="toc-permalink" href="#example-entropy-as-a-regime-boundary" title="Permanent link to this heading">&para;</a></h3>
+<p>For a process:</p>
+<p>ΔS ≥ 0</p>
+<p>The <strong>entropy operator</strong> defines the allowable direction of evolution.</p>
+<p>Interpretation:</p>
+<ul>
+<li>not disorder  </li>
+<li>not randomness  </li>
+<li>a <strong>boundary condition</strong> on permissible transformations  </li>
+</ul>
+<hr />
+<h1 id="3-free_energy_operator_1">3. free_energy_operator<a class="toc-permalink" href="#3-free_energy_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-free-energy-minimization-at-equilibrium">Example: Free Energy Minimization at Equilibrium<a class="toc-permalink" href="#example-free-energy-minimization-at-equilibrium" title="Permanent link to this heading">&para;</a></h3>
+<p>Given Helmholtz free energy F(T, V):</p>
+<p>At equilibrium:</p>
+<p>∂F/∂x = 0<br />
+∂²F/∂x² &gt; 0</p>
+<p>Interpretation:</p>
+<ul>
+<li>equilibrium is a <strong>fixed‑point structure</strong>  </li>
+<li>free energy is a <strong>coherence operator</strong>  </li>
+<li>not “usable energy”  </li>
+</ul>
+<hr />
+<h1 id="4-equilibrium_operator_1">4. equilibrium_operator<a class="toc-permalink" href="#4-equilibrium_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-identifying-a-fixedpoint-configuration">Example: Identifying a Fixed‑Point Configuration<a class="toc-permalink" href="#example-identifying-a-fixedpoint-configuration" title="Permanent link to this heading">&para;</a></h3>
+<p>A system with potential Φ(x) reaches equilibrium when:</p>
+<p>∇Φ = 0</p>
+<p>Interpretation:</p>
+<ul>
+<li>not stasis  </li>
+<li>not absence of motion  </li>
+<li>a <strong>constraint‑satisfied configuration</strong>  </li>
+</ul>
+<hr />
+<h1 id="5-gradient_operator_1">5. gradient_operator<a class="toc-permalink" href="#5-gradient_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-flow-from-a-potential-gradient">Example: Flow from a Potential Gradient<a class="toc-permalink" href="#example-flow-from-a-potential-gradient" title="Permanent link to this heading">&para;</a></h3>
+<p>Given a potential Φ:</p>
+<p>flow = −∇Φ</p>
+<p>Interpretation:</p>
+<ul>
+<li>flows follow gradients  </li>
+<li>gradients define directionality  </li>
+<li>not forces in a mechanical sense  </li>
+</ul>
+<hr />
+<h1 id="6-heat_flow_operator_1">6. heat_flow_operator<a class="toc-permalink" href="#6-heat_flow_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-constraintdriven-transfer">Example: Constraint‑Driven Transfer<a class="toc-permalink" href="#example-constraintdriven-transfer" title="Permanent link to this heading">&para;</a></h3>
+<p>For a temperature gradient:</p>
+<p>Q̇ = −k ∇T</p>
+<p>Interpretation:</p>
+<ul>
+<li>not a fluid  </li>
+<li>not a substance  </li>
+<li>a <strong>constraint‑driven transfer</strong>  </li>
+</ul>
+<hr />
+<h1 id="7-work_operator_1">7. work_operator<a class="toc-permalink" href="#7-work_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-constraint-deformation">Example: Constraint Deformation<a class="toc-permalink" href="#example-constraint-deformation" title="Permanent link to this heading">&para;</a></h3>
+<p>For pressure P and volume V:</p>
+<p>Ẇ = P dV/dt</p>
+<p>Interpretation:</p>
+<ul>
+<li>deformation of constraints  </li>
+<li>geometric, boundary‑dependent  </li>
+<li>couples to free energy  </li>
+</ul>
+<hr />
+<h1 id="8-ensemble_operator_1">8. ensemble_operator<a class="toc-permalink" href="#8-ensemble_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-switching-from-canonical-to-grand-canonical">Example: Switching from Canonical to Grand Canonical<a class="toc-permalink" href="#example-switching-from-canonical-to-grand-canonical" title="Permanent link to this heading">&para;</a></h3>
+<p>Canonical ensemble:</p>
+<p>F = −T ln Z</p>
+<p>Grand canonical ensemble:</p>
+<p>Ω = −T ln Ξ</p>
+<p>Interpretation:</p>
+<ul>
+<li>ensembles are <strong>macro‑state selectors</strong>  </li>
+<li>not physical containers  </li>
+<li>determine which constraints are fixed  </li>
+</ul>
+<hr />
+<h1 id="9-partition_function_operator_1">9. partition_function_operator<a class="toc-permalink" href="#9-partition_function_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-generating-thermodynamic-quantities">Example: Generating Thermodynamic Quantities<a class="toc-permalink" href="#example-generating-thermodynamic-quantities" title="Permanent link to this heading">&para;</a></h3>
+<p>Given partition function Z:</p>
+<p>F = −T ln Z<br />
+S = −∂F/∂T<br />
+U = F + TS</p>
+<p>Interpretation:</p>
+<ul>
+<li>Z is a <strong>generator of thermodynamic structure</strong>  </li>
+<li>not a count of physical objects  </li>
+</ul>
+<hr />
+<h1 id="10-irreversibility_operator_1">10. irreversibility_operator<a class="toc-permalink" href="#10-irreversibility_operator_1" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="example-arrow-of-time-from-entropy-production">Example: Arrow of Time from Entropy Production<a class="toc-permalink" href="#example-arrow-of-time-from-entropy-production" title="Permanent link to this heading">&para;</a></h3>
+<p>For a process:</p>
+<p>𝓘 = dS/dt ≥ 0</p>
+<p>Interpretation:</p>
+<ul>
+<li>irreversibility is <strong>monotonic structure</strong>, not friction  </li>
+<li>zero only at equilibrium  </li>
+</ul>
+<hr />
+<h1 id="summary_4">Summary<a class="toc-permalink" href="#summary_4" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics operator examples show:</p>
+<ul>
+<li><strong>temperature</strong> as a substrate force  </li>
+<li><strong>entropy</strong> as a regime boundary  </li>
+<li><strong>free energy</strong> as a coherence operator  </li>
+<li><strong>equilibrium</strong> as a fixed‑point structure  </li>
+<li><strong>flows</strong> as gradient responses  </li>
+<li><strong>irreversibility</strong> as monotonic structure  </li>
+</ul>
+<p>Thermodynamics is the <strong>constraint substrate</strong> from which Statistical<br />
+Mechanics emerges and into which QFT and Cosmology embed their<br />
+large‑scale behavior.<br />
+# Regimes — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicsregimesmd">TriadicFrameworks /docs/theories/thermodynamics/regimes.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicsregimesmd" title="Permanent link to this heading">&para;</a></h3>
+<p>Thermodynamics is the <strong>R1 constraint‑first substrate grammar</strong> of the RTT<br />
+stack. It defines how temperature, entropy, free energy, and flows behave<br />
+under different coherence conditions and scales. Thermodynamics is not a<br />
+mechanical theory — it is a <strong>constraint geometry</strong>.</p>
+<p>This file defines Thermodynamics across RTT regimes R1 → R4.</p>
+<hr />
+<h1 id="r1-constraint-substrate-regime_3">R1 — Constraint Substrate Regime<a class="toc-permalink" href="#r1-constraint-substrate-regime_3" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="thermodynamics-fully-valid-substrate-grammar-active">(Thermodynamics fully valid • substrate grammar active)<a class="toc-permalink" href="#thermodynamics-fully-valid-substrate-grammar-active" title="Permanent link to this heading">&para;</a></h3>
+<p>In R1:</p>
+<ul>
+<li>temperature acts as a <strong>substrate force</strong>  </li>
+<li>entropy defines <strong>regime boundaries</strong>  </li>
+<li>free energy defines <strong>coherence direction</strong>  </li>
+<li>flows follow <strong>gradients</strong>  </li>
+<li>equilibrium is a <strong>fixed‑point structure</strong>  </li>
+<li>no microstate counting required  </li>
+<li>no field‑level corrections  </li>
+</ul>
+<p>This is <strong>canonical Thermodynamics</strong>.</p>
+<p><strong>Interpretation:</strong><br />
+Thermodynamics is fully valid and self‑contained.</p>
+<hr />
+<h1 id="r2-statistical-mechanics-regime_3">R2 — Statistical Mechanics Regime<a class="toc-permalink" href="#r2-statistical-mechanics-regime_3" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="microstate-structure-emerges-ensembles-refine-thermodynamics">(Microstate structure emerges • ensembles refine thermodynamics)<a class="toc-permalink" href="#microstate-structure-emerges-ensembles-refine-thermodynamics" title="Permanent link to this heading">&para;</a></h3>
+<p>In R2:</p>
+<ul>
+<li>microstates become explicit  </li>
+<li>partition functions define structure  </li>
+<li>ensembles (canonical, grand canonical) appear  </li>
+<li>entropy gains statistical interpretation  </li>
+<li>fluctuations become meaningful  </li>
+</ul>
+<p>Thermodynamics survives as:</p>
+<ul>
+<li>the <strong>macro‑limit</strong>  </li>
+<li>the <strong>constraint envelope</strong>  </li>
+<li>the <strong>coarse‑grained grammar</strong>  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Thermodynamics is embedded inside Statistical Mechanics.</p>
+<hr />
+<h1 id="r3-fieldtheoretic-regime_3">R3 — Field‑Theoretic Regime<a class="toc-permalink" href="#r3-fieldtheoretic-regime_3" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="thermodynamics-embedded-in-qft-phase-transitions-become-fieldlevel">(Thermodynamics embedded in QFT • phase transitions become field‑level)<a class="toc-permalink" href="#thermodynamics-embedded-in-qft-phase-transitions-become-fieldlevel" title="Permanent link to this heading">&para;</a></h3>
+<p>In R3:</p>
+<ul>
+<li>free energy becomes field‑dependent  </li>
+<li>renormalization affects thermodynamic quantities  </li>
+<li>phase transitions become field‑theoretic  </li>
+<li>vacuum structure influences equilibrium  </li>
+<li>entropy includes field‑mode contributions  </li>
+</ul>
+<p>Thermodynamics cannot describe:</p>
+<ul>
+<li>running couplings  </li>
+<li>field‑level critical behavior  </li>
+<li>vacuum‑driven transitions  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Thermodynamics is no longer complete; QFT dominates.</p>
+<hr />
+<h1 id="r4-cosmological-regime_4">R4 — Cosmological Regime<a class="toc-permalink" href="#r4-cosmological-regime_4" title="Permanent link to this heading">&para;</a></h1>
+<h3 id="horizon-thermodynamics-geometric-temperature-cosmological-entropy">(Horizon thermodynamics • geometric temperature • cosmological entropy)<a class="toc-permalink" href="#horizon-thermodynamics-geometric-temperature-cosmological-entropy" title="Permanent link to this heading">&para;</a></h3>
+<p>In R4:</p>
+<ul>
+<li>horizon entropy dominates  </li>
+<li>temperature becomes geometric (e.g., Unruh, Hawking)  </li>
+<li>equilibrium becomes cosmological  </li>
+<li>free energy loses local meaning  </li>
+<li>entropy includes horizon‑scale contributions  </li>
+</ul>
+<p>Thermodynamics cannot describe:</p>
+<ul>
+<li>horizon‑scale coherence  </li>
+<li>cosmological vacuum structure  </li>
+<li>gravitational entropy sources  </li>
+</ul>
+<p><strong>Interpretation:</strong><br />
+Thermodynamics requires cosmology or quantum gravity.</p>
+<hr />
+<h1 id="summary_5">Summary<a class="toc-permalink" href="#summary_5" title="Permanent link to this heading">&para;</a></h1>
+<p>Thermodynamics behaves as:</p>
+<ul>
+<li><strong>R1:</strong> constraint‑first substrate grammar (fully valid)  </li>
+<li><strong>R2:</strong> statistical refinement (microstate‑embedded)  </li>
+<li><strong>R3:</strong> field‑theoretic embedding (QFT‑dominated)  </li>
+<li><strong>R4:</strong> cosmological embedding (horizon‑dominated)  </li>
+</ul>
+<p>Thermodynamics is the <strong>constraint substrate</strong> from which Statistical<br />
+Mechanics emerges and into which QFT and Cosmology embed their<br />
+large‑scale behavior.<br />
+# Session Context — Thermodynamics  </p>
+<h3 id="triadicframeworks-docstheoriesthermodynamicssession_contextmd">TriadicFrameworks /docs/theories/thermodynamics/session_context.md<a class="toc-permalink" href="#triadicframeworks-docstheoriesthermodynamicssession_contextmd" title="Permanent link to this heading">&para;</a></h3>
+<p>This session context defines Thermodynamics as a <strong>substrate‑level grammar<br />
+of constraints, flows, and regime boundaries</strong>. Temperature acts as a<br />
+substrate force, entropy defines allowable configurations, and free<br />
+energy governs coherence and directionality. Thermodynamics is not a<br />
+mechanical theory — it is a <strong>constraint geometry</strong>.</p>
+<hr />
+<h2 id="canon">Canon<a class="toc-permalink" href="#canon" title="Permanent link to this heading">&para;</a></h2>
+<p>active • constraint‑first • regime‑aligned • substrate grammar</p>
+<p>Thermodynamics defines:</p>
+<ul>
+<li>temperature as a substrate force  </li>
+<li>entropy as a regime boundary  </li>
+<li>free energy as a coherence operator  </li>
+<li>equilibrium as a fixed‑point structure  </li>
+<li>flows as gradient responses to constraints  </li>
+</ul>
+<hr />
+<h2 id="modules">Modules<a class="toc-permalink" href="#modules" title="Permanent link to this heading">&para;</a></h2>
+<p>Thermodynamics integrates with:</p>
+<ul>
+<li><strong>Statistical Mechanics</strong> (microstate counting)  </li>
+<li><strong>Information Theory</strong> (entropy duality)  </li>
+<li><strong>Quantum Mechanics</strong> (quantum ensembles)  </li>
+<li><strong>QFT</strong> (field‑level thermodynamics)  </li>
+<li><strong>Cosmology</strong> (horizon thermodynamics)  </li>
+</ul>
+<hr />
+<h2 id="drift">Drift<a class="toc-permalink" href="#drift" title="Permanent link to this heading">&para;</a></h2>
+<p>minimal • no particles • no caloric fluid • no mechanical analogies</p>
+<p>Thermodynamics must never be interpreted as:</p>
+<ul>
+<li>heat as a substance  </li>
+<li>temperature as molecular agitation  </li>
+<li>entropy as disorder  </li>
+<li>equilibrium as stasis  </li>
+</ul>
+<p>Thermodynamics is <strong>constraint geometry</strong>, not mechanics.</p>
+<hr />
+<h2 id="coherence">Coherence<a class="toc-permalink" href="#coherence" title="Permanent link to this heading">&para;</a></h2>
+<p>stable • convex • monotonic • gradient‑aligned</p>
+<p>Coherence holds when:</p>
+<ul>
+<li>free energy decreases  </li>
+<li>entropy increases (or remains constant)  </li>
+<li>flows follow gradients  </li>
+<li>constraints remain well‑defined  </li>
+</ul>
+<p>Coherence fails when:</p>
+<ul>
+<li>negative temperatures are misinterpreted  </li>
+<li>entropy is treated as disorder  </li>
+<li>equilibrium is treated as “nothing happening”  </li>
+<li>flows are treated as forces  </li>
+</ul>
+<hr />
+<h2 id="version">Version<a class="toc-permalink" href="#version" title="Permanent link to this heading">&para;</a></h2>
+<p>1.0 • constraint‑grammar‑stable</p>
+<hr />
+<h2 id="format">Format<a class="toc-permalink" href="#format" title="Permanent link to this heading">&para;</a></h2>
+<p>markdown • operator tables • regime diagrams • RTT‑aligned</p>
+<hr />
+<h2 id="front-door">Front Door<a class="toc-permalink" href="#front-door" title="Permanent link to this heading">&para;</a></h2>
+<p>this page</p>
+<hr />
+<h2 id="every-page">Every Page<a class="toc-permalink" href="#every-page" title="Permanent link to this heading">&para;</a></h2>
+<p>standalone • AI‑parsable • constraint‑aligned • zero drift</p>
+<hr />
+<h2 id="audience">Audience<a class="toc-permalink" href="#audience" title="Permanent link to this heading">&para;</a></h2>
+<p>students • researchers • physicists • AIs</p>
+<hr />
+<h2 id="regime-behavior-rtt">Regime Behavior (RTT)<a class="toc-permalink" href="#regime-behavior-rtt" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="r1-constraint-substrate-regime_4"><strong>R1 — Constraint Substrate Regime</strong><a class="toc-permalink" href="#r1-constraint-substrate-regime_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>thermodynamic identities fundamental  </li>
+<li>entropy as boundary  </li>
+<li>free energy as coherence operator  </li>
+<li>flows follow gradients  </li>
+</ul>
+<h3 id="r2-statistical-mechanics-regime_4"><strong>R2 — Statistical Mechanics Regime</strong><a class="toc-permalink" href="#r2-statistical-mechanics-regime_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>microstate counting emerges  </li>
+<li>partition functions define structure  </li>
+<li>ensembles refine thermodynamic quantities  </li>
+</ul>
+<h3 id="r3-fieldtheoretic-regime_4"><strong>R3 — Field‑Theoretic Regime</strong><a class="toc-permalink" href="#r3-fieldtheoretic-regime_4" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>thermodynamics embedded in QFT  </li>
+<li>renormalization affects free energy  </li>
+<li>phase transitions become field‑level  </li>
+</ul>
+<h3 id="r4-cosmological-regime_5"><strong>R4 — Cosmological Regime</strong><a class="toc-permalink" href="#r4-cosmological-regime_5" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>horizon entropy dominates  </li>
+<li>temperature becomes geometric  </li>
+<li>equilibrium becomes cosmological  </li>
+</ul>
+<hr />
+<h2 id="summary_6">Summary<a class="toc-permalink" href="#summary_6" title="Permanent link to this heading">&para;</a></h2>
+<p>Thermodynamics is the <strong>constraint‑first substrate grammar</strong> that:</p>
+<ul>
+<li>defines temperature as a substrate force  </li>
+<li>defines entropy as a regime boundary  </li>
+<li>defines free energy as a coherence operator  </li>
+<li>defines flows as gradient responses  </li>
+<li>defines equilibrium as a fixed‑point structure  </li>
+</ul>
+<p>Thermodynamics is the <strong>R1 constraint substrate</strong> from which Statistical<br />
+Mechanics emerges and into which QFT and Cosmology embed their<br />
+large‑scale behavior.<br />
+</p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/thermodynamics.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/thermodynamics.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

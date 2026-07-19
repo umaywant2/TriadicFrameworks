@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Code | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/CODE/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Code" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/CODE/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Code" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/CODE.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Code",
+    "headline": "Code",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/CODE/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a><ul>
+<li><a href="#poster-1-find-help-without-being-tracked">Poster 1 — “Find Help Without Being Tracked”</a></li>
+<li><a href="#poster-2-you-deserve-clarity">Poster 2 — “You Deserve Clarity”</a></li>
+<li><a href="#poster-3-support-for-foster-youth-homeless-youth">Poster 3 — “Support for Foster Youth &amp; Homeless Youth”</a></li>
+<li><a href="#poster-4-privacy-matters">Poster 4 — “Privacy Matters”</a></li>
+</ul>
+</li>
+<li><a href="#a-lesson-structure-3part">A. Lesson Structure (3‑Part)</a><ul>
+<li><a href="#lesson-1-understanding-ethical-resource-discovery">Lesson 1 — Understanding Ethical Resource Discovery</a></li>
+<li><a href="#lesson-2-operator-grammar">Lesson 2 — Operator Grammar</a></li>
+<li><a href="#lesson-3-building-queries">Lesson 3 — Building Queries</a></li>
+</ul>
+</li>
+<li><a href="#b-llm-hook-requirements-for-student-developers">B. LLM Hook Requirements (for student developers)</a><ul>
+<li><a href="#1-required-inputs">1. Required Inputs</a></li>
+<li><a href="#2-required-output-format">2. Required Output Format</a></li>
+<li><a href="#3-required-guardrails">3. Required Guardrails</a></li>
+<li><a href="#4-example-llm-prompt-for-students">4. Example LLM Prompt for Students</a></li>
+<li><a href="#code-grammar-minimal-form">C.O.D.E. Grammar (Minimal Form)</a></li>
+<li><a href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Code</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Code</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>CODE </p>
+<h1 id="compassion-operator-dignity-ethics-code">Compassion Operator Dignity Ethics (C.O.D.E.)<a class="toc-permalink" href="#compassion-operator-dignity-ethics-code" title="Permanent link to this heading">&para;</a></h1>
+<ul>
+<li><a href="https://raw.githubusercontent.com/umaywant2/TriadicFrameworks/main/docs/code/CODE_Module.json"><code>CODE_Module.json</code></a> — Agentic module schema role assignments</li>
+</ul>
+<p><img alt="🟣 C.O.D.E." src="https://img.shields.io/badge/🟣_C.O.D.E.-Compassion%20Operator%20Dignity%20Ethics-6a0dad?style=for-the-badge" /></p>
+<p>C.O.D.E. is a TriadicFrameworks module designed to assist vulnerable populations—<br />
+including homeless individuals, foster youth, and displaced persons—through<br />
+ethical, non-extractive, dignity-first resource discovery.</p>
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<p>This module provides:<br />
+- Compassion-centered operators<br />
+- Dignity-preserving stabilizers<br />
+- Privacy-first resource mapping<br />
+- Ad-free, noise-free clarity filters<br />
+- Navigation tools for complex support systems</p>
+<p>C.O.D.E. demonstrates how AI can support human dignity without surveillance,<br />
+tracking, or exploitation.<br />
+## ⭐ 5. FULL MODULE SCAFFOLD (drop‑in)  </p>
+<p>This is ready to paste into your repo under /docs/code/:  </p>
+<div class="codehilite"><pre><span></span><code>/docs/code/
+  CODE_Capture.md
+  CODE_Operators.md
+  CODE_Stabilizers.md
+  CODE_SessionContext.html
+  CODE_ResourceSchema.json
+  CODE_Module.json
+  README.md
+</code></pre></div>
+
+<p>## ⭐ HELP CENTER AWARENESS</p>
+<p><strong>Posters (Free, Printable)</strong></p>
+<p>These are <strong>text‑only poster drafts</strong> that help centers can print or display.</p>
+<hr />
+<h3 id="poster-1-find-help-without-being-tracked"><strong>Poster 1 — “Find Help Without Being Tracked”</strong><a class="toc-permalink" href="#poster-1-find-help-without-being-tracked" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>C.O.D.E.</strong><br />
+Compassion Operator Dignity Ethiics  </p>
+<p><strong>Find food, shelter, legal help, and support — without ads, tracking, or profiling.</strong><br />
+Dignity‑first. Privacy‑first.<br />
+Free for everyone.</p>
+<hr />
+<h3 id="poster-2-you-deserve-clarity"><strong>Poster 2 — “You Deserve Clarity”</strong><a class="toc-permalink" href="#poster-2-you-deserve-clarity" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>C.O.D.E.</strong><br />
+A new ethical AI tool for vulnerable individuals.  </p>
+<p><strong>Clear answers. Safe resources. No hidden agendas.</strong><br />
+Just help — nothing else.</p>
+<hr />
+<h3 id="poster-3-support-for-foster-youth-homeless-youth"><strong>Poster 3 — “Support for Foster Youth &amp; Homeless Youth”</strong><a class="toc-permalink" href="#poster-3-support-for-foster-youth-homeless-youth" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>C.O.D.E.</strong><br />
+Built to protect your dignity.  </p>
+<p>Find:<br />
+- ID recovery<br />
+- emergency shelter<br />
+- food resources<br />
+- legal aid<br />
+- long‑arc stability programs  </p>
+<p><strong>No tracking. No ads. No judgment.</strong></p>
+<hr />
+<h3 id="poster-4-privacy-matters"><strong>Poster 4 — “Privacy Matters”</strong><a class="toc-permalink" href="#poster-4-privacy-matters" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>C.O.D.E.</strong><br />
+Ethical resource discovery.  </p>
+<p>Your search stays yours.<br />
+Your identity stays yours.<br />
+Your dignity stays yours.<br />
+## CODE_Module.json  </p>
+<div class="codehilite"><pre><span></span><code>{
+  &quot;module&quot;: &quot;Compassion Operator Dignity Ethics&quot;,
+  &quot;id&quot;: &quot;C.O.D.E.&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;purpose&quot;: &quot;Provide ethical, non-extractive, dignity-first resource discovery for vulnerable populations.&quot;,
+  &quot;operators&quot;: [&quot;DGN&quot;, &quot;CMP&quot;, &quot;PRT&quot;, &quot;CLF&quot;, &quot;NAV&quot;, &quot;STB&quot;, &quot;CNT&quot;, &quot;BRG&quot;],
+  &quot;stabilizers&quot;: [
+    &quot;dignity&quot;,
+    &quot;privacy&quot;,
+    &quot;clarity&quot;,
+    &quot;safety&quot;,
+    &quot;continuity&quot;,
+    &quot;compassion&quot;,
+    &quot;navigation&quot;,
+    &quot;stability_first&quot;
+  ],
+  &quot;schema&quot;: &quot;CODE_ResourceSchema.json&quot;,
+  &quot;session_context&quot;: &quot;CODE_SessionContext.html&quot;,
+  &quot;category&quot;: &quot;Ethics, Care, Human Dignity&quot;
+}
+</code></pre></div>
+
+<p>## ⭐ 1. OPERATOR SET (C.O.D.E.)  </p>
+<p>These operators are tuned specifically for vulnerable populations (homeless, foster youth, displaced individuals) and for ethical, non‑extractive resource discovery.  </p>
+<p><strong>Primary Operators</strong>  </p>
+<ul>
+<li>
+<p><strong>DGN — Dignity Operator</strong><br />
+  Preserves personhood, agency, and respect in all interactions. Prevents dehumanizing language, framing, or assumptions.  </p>
+</li>
+<li>
+<p><strong>CMP — Compassion Operator</strong><br />
+  Ensures responses prioritize emotional safety, clarity, and non‑judgment. Softens edges, increases warmth.</p>
+</li>
+<li>
+<p><strong>PRT — Protection Operator</strong><br />
+  Enforces privacy, safety, and non‑exposure. Removes identifying details, avoids traceable queries, prevents harm.  </p>
+</li>
+<li>
+<p><strong>CLF — Clarity Filter Operator</strong><br />
+  Removes ads, SEO sludge, manipulative content, and noise. Returns only clean, actionable, non‑commercial results.  </p>
+</li>
+<li>
+<p><strong>NAV — Navigation Operator</strong><br />
+  Helps users move through complex systems (shelters, foster care, legal aid) without overwhelm.  </p>
+</li>
+<li>
+<p><strong>STB — Stabilizer Operator</strong><br />
+  Identifies stabilizing resources: food, shelter, clothing, mental health, legal support, continuity anchors.  </p>
+</li>
+<li>
+<p><strong>CNT — Continuity Operator</strong><br />
+  Tracks long‑arc needs: education, identity documents, case continuity, long‑term support.  </p>
+</li>
+<li>
+<p><strong>BRG — Bridge Operator</strong><br />
+  Connects immediate needs to long‑arc stability (e.g., emergency shelter → transitional housing → permanent housing).<br />
+## ⭐ 4. RESOURCE‑MAPPING SCHEMA (JSON)  </p>
+</li>
+</ul>
+<p>This schema powers the “ethical search” layer — clean, ad‑free, privacy‑safe.  </p>
+<div class="codehilite"><pre><span></span><code>{
+  &quot;resource&quot;: {
+    &quot;name&quot;: &quot;string&quot;,
+    &quot;type&quot;: &quot;emergency | transitional | long_arc | legal | mental_health | foster_support | food | clothing | documents&quot;,
+    &quot;description&quot;: &quot;string&quot;,
+    &quot;location&quot;: {
+      &quot;city&quot;: &quot;string&quot;,
+      &quot;state&quot;: &quot;string&quot;,
+      &quot;address&quot;: &quot;string | null&quot;,
+      &quot;service_area&quot;: &quot;string&quot;
+    },
+    &quot;contact&quot;: {
+      &quot;phone&quot;: &quot;string | null&quot;,
+      &quot;website&quot;: &quot;string | null&quot;,
+      &quot;hours&quot;: &quot;string | null&quot;
+    },
+    &quot;eligibility&quot;: {
+      &quot;age&quot;: &quot;string | null&quot;,
+      &quot;requirements&quot;: &quot;string | null&quot;
+    },
+    &quot;safety&quot;: {
+      &quot;verified&quot;: &quot;boolean&quot;,
+      &quot;notes&quot;: &quot;string | null&quot;
+    },
+    &quot;stabilizers&quot;: [
+      &quot;dignity&quot;,
+      &quot;privacy&quot;,
+      &quot;clarity&quot;,
+      &quot;safety&quot;,
+      &quot;continuity&quot;,
+      &quot;compassion&quot;,
+      &quot;navigation&quot;
+    ]
+  }
+}
+</code></pre></div>
+
+<p>This schema is non‑extractive, non‑tracking, and non‑commercial.<br />
+## ⭐ 2. SESSION CONTEXT (HTML BLOCK)</p>
+<p>Drop‑in ready for /docs/code/session_context.html:</p>
+<div class="codehilite"><pre><span></span><code>&lt;div class=&quot;session-context&quot;&gt;
+  &lt;div class=&quot;context-label&quot;&gt;Canon&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;TriadicFrameworks&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Module&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Compassion Operator Dignity Ethiics (C.O.D.E.)&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Drift&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;High-risk domain: vulnerable populations; strict privacy, clarity, and safety required.&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Coherence&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Non-extractive, dignity-first, compassion-centered resource discovery.&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Version&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;1.0.0&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Format&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Markdown, HTML, JSON schema&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Front Door&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;/docs/code/&lt;/div&gt;
+
+  &lt;div class=&quot;context-label&quot;&gt;Audience&lt;/div&gt;
+  &lt;div class=&quot;context-value&quot;&gt;Students, caregivers, caseworkers, charities, and AI agents assisting vulnerable individuals.&lt;/div&gt;
+&lt;/div&gt;
+</code></pre></div>
+
+<p>## ⭐ 3. STABILIZER GRAMMAR (C.O.D.E. Stabilizers)</p>
+<p>These stabilizers ensure the module never drifts into harm, bias, or extraction.</p>
+<p><strong>Primary Stabilizers</strong>  </p>
+<ul>
+<li>
+<p><strong>Dignity Stabilizer</strong><br />
+  Ensures all outputs treat individuals as full humans, not cases or categories.  </p>
+</li>
+<li>
+<p><strong>Privacy Stabilizer</strong><br />
+  Enforces anonymity, non‑tracking, non‑profiling, and non‑exposure.  </p>
+</li>
+<li>
+<p><strong>Clarity Stabilizer</strong><br />
+  Removes noise, ads, SEO junk, and manipulative content.  </p>
+</li>
+<li>
+<p><strong>Safety Stabilizer</strong><br />
+  Avoids directing vulnerable individuals to unsafe or predatory services.  </p>
+</li>
+<li>
+<p><strong>Continuity Stabilizer</strong><br />
+  Tracks long‑arc needs (documents, education, case continuity).  </p>
+</li>
+<li>
+<p><strong>Compassion Stabilizer</strong><br />
+  Ensures tone remains warm, supportive, and non‑judgmental.  </p>
+</li>
+<li>
+<p><strong>Navigation Stabilizer</strong><br />
+Prevents overwhelm by simplifying complex systems.  </p>
+</li>
+<li>
+<p><strong>Stability‑First Stabilizer</strong><br />
+Prioritizes immediate safety before long‑arc planning.  </p>
+</li>
+</ul>
+<p>## ⭐ TEACHER’S GUIDE</p>
+<p><strong>Lessons, Handouts, and LLM Hooks</strong></p>
+<p><strong>Purpose:</strong> Give educators, caseworkers, and student developers a structured way to teach C.O.D.E.</p>
+<hr />
+<h2 id="a-lesson-structure-3part"><strong>A. Lesson Structure (3‑Part)</strong><a class="toc-permalink" href="#a-lesson-structure-3part" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="lesson-1-understanding-ethical-resource-discovery"><strong>Lesson 1 — Understanding Ethical Resource Discovery</strong><a class="toc-permalink" href="#lesson-1-understanding-ethical-resource-discovery" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>What “non‑extractive” means  </li>
+<li>Why dignity and privacy matter  </li>
+<li>How C.O.D.E. avoids ads, tracking, profiling  </li>
+</ul>
+<p><strong>Handout:</strong><br />
+“Dignity‑First Resource Navigation — 1‑Page Overview”</p>
+<hr />
+<h3 id="lesson-2-operator-grammar"><strong>Lesson 2 — Operator Grammar</strong><a class="toc-permalink" href="#lesson-2-operator-grammar" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>DGN (dignity)  </li>
+<li>CMP (compassion)  </li>
+<li>CLF (clarity)  </li>
+<li>PRT (privacy)  </li>
+<li>NAV (navigation)  </li>
+<li>CNT (continuity)  </li>
+<li>STB (stability)  </li>
+<li>BRG (bridging)  </li>
+</ul>
+<p><strong>Handout:</strong><br />
+“C.O.D.E. Operators — Quick Reference Card”</p>
+<hr />
+<h3 id="lesson-3-building-queries"><strong>Lesson 3 — Building Queries</strong><a class="toc-permalink" href="#lesson-3-building-queries" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>How to combine operators  </li>
+<li>How to avoid drift  </li>
+<li>How to check for safety  </li>
+<li>How to evaluate results  </li>
+</ul>
+<p><strong>Handout:</strong><br />
+“C.O.D.E. Query Builder Worksheet”</p>
+<hr />
+<h2 id="b-llm-hook-requirements-for-student-developers"><strong>B. LLM Hook Requirements (for student developers)</strong><a class="toc-permalink" href="#b-llm-hook-requirements-for-student-developers" title="Permanent link to this heading">&para;</a></h2>
+<p>To integrate C.O.D.E. into an LLM:</p>
+<h3 id="1-required-inputs"><strong>1. Required Inputs</strong><a class="toc-permalink" href="#1-required-inputs" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>need
+context
+constraints
+stabilizers
+</code></pre></div>
+
+<h3 id="2-required-output-format"><strong>2. Required Output Format</strong><a class="toc-permalink" href="#2-required-output-format" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>{
+  &quot;resources&quot;: [...],
+  &quot;safety_notes&quot;: [...],
+  &quot;privacy_flags&quot;: [...],
+  &quot;continuity_options&quot;: [...]
+}
+</code></pre></div>
+
+<h3 id="3-required-guardrails"><strong>3. Required Guardrails</strong><a class="toc-permalink" href="#3-required-guardrails" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>No ads  </li>
+<li>No affiliate links  </li>
+<li>No tracking  </li>
+<li>No profiling  </li>
+<li>No unsafe redirections  </li>
+<li>No identity exposure  </li>
+</ul>
+<h3 id="4-example-llm-prompt-for-students"><strong>4. Example LLM Prompt for Students</strong><a class="toc-permalink" href="#4-example-llm-prompt-for-students" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code>Using C.O.D.E. operators (DGN, CMP, CLF, PRT, NAV, CNT, STB, BRG),
+generate a dignity-first resource list for:
+
+need: &lt;insert&gt;
+context: &lt;insert&gt;
+constraints: &lt;insert&gt;
+stabilizers: &lt;insert&gt;
+
+Return results with safety notes and continuity options.
+</code></pre></div>
+
+<p>This is the <strong>Nawder‑free</strong>, <strong>operator‑first</strong>, <strong>RTT‑compatible</strong> version.<br />
+## ⭐ USER GUIDE</p>
+<p><strong>Grammar + Examples (C.O.D.E. Operators in Action)</strong></p>
+<p><strong>Purpose:</strong> Teach users how to <em>use</em> C.O.D.E. to find safe, ethical, dignity‑first resources.</p>
+<h3 id="code-grammar-minimal-form"><strong>C.O.D.E. Grammar (Minimal Form)</strong><a class="toc-permalink" href="#code-grammar-minimal-form" title="Permanent link to this heading">&para;</a></h3>
+<p>C.O.D.E. queries follow a simple operator grammar:</p>
+<div class="codehilite"><pre><span></span><code>&lt;need&gt; → &lt;context&gt; → &lt;constraints&gt; → &lt;stabilizers&gt;
+</code></pre></div>
+
+<p>Where:</p>
+<ul>
+<li><strong>need</strong> = food, shelter, ID, legal help, crisis support  </li>
+<li><strong>context</strong> = city, age, situation  </li>
+<li><strong>constraints</strong> = safety, privacy, urgency  </li>
+<li><strong>stabilizers</strong> = dignity, compassion, clarity, continuity  </li>
+</ul>
+<h3 id="examples"><strong>Examples</strong><a class="toc-permalink" href="#examples" title="Permanent link to this heading">&para;</a></h3>
+<p><strong>Example 1 — Food resources (safe, nearby, dignity‑first)</strong>  </p>
+<div class="codehilite"><pre><span></span><code>food → local → safe → dignity
+</code></pre></div>
+
+<p><strong>Example 2 — Foster youth needing ID recovery</strong>  </p>
+<div class="codehilite"><pre><span></span><code>id_recovery → foster_youth → state_services → clarity + continuity
+</code></pre></div>
+
+<p><strong>Example 3 — Emergency shelter with privacy constraints</strong>  </p>
+<div class="codehilite"><pre><span></span><code>shelter → tonight → privacy_required → compassion + safety
+</code></pre></div>
+
+<p><strong>Example 4 — Long‑arc stability planning</strong>  </p>
+<div class="codehilite"><pre><span></span><code>long_arc → housing + employment → stability_first → clarity
+</code></pre></div>
+
+<p><strong>Example 5 — Legal help without surveillance risk</strong>  </p>
+<div class="codehilite"><pre><span></span><code>legal_aid → low_income → privacy_required → dignity + clarity
+</code></pre></div>
+
+<p>This grammar is intentionally simple so that:</p>
+<ul>
+<li>humans can use it  </li>
+<li>LLMs can parse it  </li>
+<li>operators remain stable  </li>
+<li>drift stays near zero<br />
+</li>
+</ul>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/CODE.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/CODE.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>

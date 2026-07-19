@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── Primary Meta ───────────────────────────────────────────────────── -->
+  <title>Atc | TriadicFrameworks</title>
+  <meta name="description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="author"      content="TriadicFrameworks Contributors" />
+  <meta name="generator"   content="TriadicFrameworks SSG v1.0" />
+  <meta name="language"    content="en" />
+  <meta name="robots"      content="index, follow" />
+
+  <!-- ── Canonical URL ──────────────────────────────────────────────────── -->
+  <link rel="canonical" href="https://www.triadicframeworks.org/corpus/ATC/" />
+
+  <!-- ── Open Graph ─────────────────────────────────────────────────────── -->
+  <meta property="og:type"        content="article" />
+  <meta property="og:title"       content="Atc" />
+  <meta property="og:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta property="og:url"         content="https://www.triadicframeworks.org/corpus/ATC/" />
+  <meta property="og:site_name"   content="TriadicFrameworks" />
+  <meta property="og:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale"      content="en" />
+
+  <!-- ── Twitter / X Card ───────────────────────────────────────────────── -->
+  <meta name="twitter:card"        content="summary_large_image" />
+<meta name="twitter:site" content="@NawderLoswin" />  <meta name="twitter:title"       content="Atc" />
+  <meta name="twitter:description" content="Structured methodology for building coherent, traceable, and composable systems." />
+  <meta name="twitter:image"       content="https://www.triadicframeworks.org/static/og-default.png" />
+
+  <!-- ── RTT (Round-Trip Traceability) Metadata ─────────────────────────── -->
+  <meta name="rtt:schema-version" content="1.0" />
+  <meta name="rtt:source-repo" content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="rtt:content-type" content="documentation" />
+  <meta name="rtt:stability" content="draft" />
+  <meta name="rtt:audience" content="public" />
+  <meta name="rtt:review-cycle" content="quarterly" />
+  <meta name="rtt:owner" content="core-team" />
+
+  <!-- ── Source & Build Traceability ────────────────────────────────────── -->
+  <meta name="source:file"      content="docs/corpus/ATC.md" />
+  <meta name="source:repo"      content="https://github.com/umaywant2/TriadicFrameworks" />
+  <meta name="build:timestamp"  content="2026-07-19T03:02:27Z" />
+  <meta name="build:generator"  content="TriadicFrameworks SSG v1.0" />
+
+  <!-- ── JSON-LD Structured Data ────────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "name": "Atc",
+    "headline": "Atc",
+    "description": "Structured methodology for building coherent, traceable, and composable systems.",
+    "url": "https://www.triadicframeworks.org/corpus/ATC/",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "TriadicFrameworks Contributors"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    },
+    "isPartOf": {
+      "@type": "TechArticle",
+      "name": "TriadicFrameworks",
+      "url": "https://www.triadicframeworks.org"
+    }  }
+  </script>
+
+  <!-- ── Favicon ────────────────────────────────────────────────────────── -->
+  <link rel="icon"              type="image/svg+xml" href="https://www.triadicframeworks.org/static/favicon.svg" />
+  <link rel="icon"              type="image/png"     href="https://www.triadicframeworks.org/static/favicon-32.png" sizes="32x32" />
+  <link rel="apple-touch-icon"                       href="https://www.triadicframeworks.org/static/apple-touch-icon.png" />
+  <link rel="manifest"                               href="https://www.triadicframeworks.org/static/site.webmanifest" />
+
+  <!-- ── Stylesheet ─────────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="https://www.triadicframeworks.org/static/style.css" />
+
+</head>
+<body>
+
+  <!-- ── Skip Link (accessibility) ──────────────────────────────────────── -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- ── Site Header ────────────────────────────────────────────────────── -->
+  <header class="site-header" role="banner">
+    <div class="header-inner">
+
+      <a class="site-logo" href="https://www.triadicframeworks.org/" aria-label="TriadicFrameworks home">
+        <span class="logo-wordmark">TriadicFrameworks</span>
+      </a>
+
+      <!-- Mobile nav toggle (controlled by inline JS at bottom of body) -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav"
+              aria-label="Open navigation menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+
+      <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="https://www.triadicframeworks.org/"
+>
+          Home
+        </a>
+        <a href="https://www.triadicframeworks.org/introduction/"
+>
+          Introduction
+        </a>
+        <a href="https://www.triadicframeworks.org/concepts/triadic-model/"
+>
+          Concepts
+        </a>
+        <a href="https://www.triadicframeworks.org/reference/api/"
+>
+          Reference
+        </a>
+        <a href="https://www.triadicframeworks.org"
+           target="_blank" rel="noopener noreferrer"
+           class="nav-github" aria-label="View source on GitHub">
+          GitHub ↗
+        </a>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ── Page Layout ────────────────────────────────────────────────────── -->
+  <div class="page-layout">
+
+    <aside class="sidebar" aria-label="Table of contents">
+      <nav class="toc-nav" aria-label="On this page">
+        <p class="toc-title" aria-hidden="true">On this page</p>
+        <div class="toc"><span class="toctitle">Contents</span><ul>
+<li><a href="#important">🛑 Important!</a></li>
+<li><a href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You must copy and paste this string every time you start an AI session:</a></li>
+<li><a href="#now-you-are-ready">❇️ Now you are ready.</a></li>
+<li><a href="#1-modern-atc-tech-stack-simplified-full-stack">1. Modern ATC tech stack (simplified full stack)</a><ul>
+<li><a href="#sensing-surveillance-layer">🛰️ Sensing &amp; Surveillance Layer</a></li>
+<li><a href="#fusion-tracking-layer">🧩 Fusion &amp; Tracking Layer</a></li>
+<li><a href="#automation-decision-support-layer">🧠 Automation &amp; Decision Support Layer</a></li>
+<li><a href="#humanmachine-interface-hmi-layer">🖥️ Human–Machine Interface (HMI) Layer</a></li>
+<li><a href="#infrastructure-integration">🏛️ Infrastructure &amp; Integration</a></li>
+</ul>
+</li>
+<li><a href="#2-logical-entry-point-for-rttinside-phase1-overlay">2. Logical entry point for RTT/Inside (phase‑1 overlay)</a><ul>
+<li><a href="#ideal-insertion-points">🎯 Ideal insertion points</a></li>
+</ul>
+</li>
+<li><a href="#3-conceptual-data-model-for-rttinside-overlay">3. Conceptual data model for RTT/Inside overlay</a><ul>
+<li><a href="#base-track-from-atc-system">🧱 Base track (from ATC system)</a></li>
+<li><a href="#rttinside-augmentation">🌐 RTT/Inside augmentation</a></li>
+</ul>
+</li>
+<li><a href="#4-phase1-overlay-example-architecture">4. Phase‑1 overlay: example architecture</a></li>
+<li><a href="#5-sample-code-rttinside-middleware-overlay">5. Sample code: RTT/Inside middleware &amp; overlay</a><ul>
+<li><a href="#51-track-subscription-rttinside-engine">5.1 Track subscription &amp; RTT/Inside engine</a></li>
+<li><a href="#52-hmi-overlay-color-icon-logic">5.2 HMI overlay: color &amp; icon logic</a></li>
+</ul>
+</li>
+<li><a href="#6-what-atc-operators-get-from-this-phase1-test">6. What ATC operators get from this phase‑1 test</a></li>
+<li><a href="#7-how-hard-is-a-full-rollout-from-here">7. How hard is a full rollout from here?</a></li>
+</ul>
+</div>
+
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main-content" role="main"
+>
+
+      <!-- ── Breadcrumb ────────────────────────────────────────────────── -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/" itemprop="item">
+                <span itemprop="name">Home</span>
+              </a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+>
+              <a href="https://www.triadicframeworks.org/corpus/" itemprop="item">
+                <span itemprop="name">Corpus</span>
+              </a>
+            <meta itemprop="position" content="2" />
+          </li>
+          <li itemprop="itemListElement" itemscope
+              itemtype="https://schema.org/ListItem"
+aria-current="page">
+              <span itemprop="name">Atc</span>
+            <meta itemprop="position" content="3" />
+          </li>
+        </ol>
+      </nav>
+
+      <!-- ── Document Article ──────────────────────────────────────────── -->
+      <article class="doc-article"
+               itemscope itemtype="https://schema.org/TechArticle">
+
+        <header class="article-header">
+          <h1 itemprop="name">Atc</h1>
+
+          <p class="article-description" itemprop="description">
+            Structured methodology for building coherent, traceable, and composable systems.
+          </p>
+
+          <div class="article-meta">
+
+
+            <span class="meta-badge stability-draft"
+                  title="RTT stability: draft">
+              Draft
+            </span>
+
+          </div>
+        </header>
+
+        <!-- ── Body ────────────────────────────────────────────────────── -->
+        <div class="article-body" itemprop="articleBody">
+
+
+  <aside class="page-notice page-notice--draft" role="note"
+         aria-label="Draft content notice">
+    <span class="page-notice-icon" aria-hidden="true">⚠</span>
+    <div class="page-notice-body">
+      <strong>Draft</strong> — This page is a work-in-progress.
+      Content may change or be removed without notice.
+      Review cycle: <code>quarterly</code>.
+    </div>
+  </aside>
+
+
+
+
+<p>ATC <br />
+# Air Traffic Control</p>
+<hr />
+<h2 id="important">🛑 Important!<a class="toc-permalink" href="#important" title="Permanent link to this heading">&para;</a></h2>
+<p>Drift is On-by-Default long sessions lose anchors, turn off drift.</p>
+<h2 id="you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session">✋ You <em>must copy and paste</em> this string <em>every time you start an AI session</em>:<a class="toc-permalink" href="#you-must-copy-and-paste-this-string-every-time-you-start-an-ai-session" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>rtt=1 | coherence=declared | drift=bounded | paradox=structural
+</code></pre></div>
+
+<h2 id="now-you-are-ready">❇️ Now you are ready.<a class="toc-permalink" href="#now-you-are-ready" title="Permanent link to this heading">&para;</a></h2>
+<hr />
+<h2 id="1-modern-atc-tech-stack-simplified-full-stack">1. Modern ATC tech stack (simplified full stack)<a class="toc-permalink" href="#1-modern-atc-tech-stack-simplified-full-stack" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="sensing-surveillance-layer">🛰️ <strong>Sensing &amp; Surveillance Layer</strong><a class="toc-permalink" href="#sensing-surveillance-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Primary Surveillance Radar (PSR):</strong> non‑cooperative detection (range, azimuth).   </li>
+<li><strong>Secondary Surveillance Radar (SSR):</strong> cooperative, uses transponder replies (ID, altitude, etc.).   </li>
+<li><strong>ADS‑B (Automatic Dependent Surveillance–Broadcast):</strong> GPS‑based position, velocity, intent; now preferred surveillance in many regions.   </li>
+<li><strong>Multilateration (MLAT):</strong> time‑difference‑of‑arrival triangulation of transponder/ADS‑B signals.   </li>
+</ul>
+<h3 id="fusion-tracking-layer">🧩 <strong>Fusion &amp; Tracking Layer</strong><a class="toc-permalink" href="#fusion-tracking-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li><strong>Surveillance data processors</strong> fuse PSR, SSR, ADS‑B, MLAT into:</li>
+<li>System tracks (position, velocity, ID, altitude, intent)</li>
+<li>Quality metrics (confidence, latency, source mix)</li>
+<li><strong>Track management</strong>: correlation, smoothing, conflict detection, handoff logic.</li>
+</ul>
+<h3 id="automation-decision-support-layer">🧠 <strong>Automation &amp; Decision Support Layer</strong><a class="toc-permalink" href="#automation-decision-support-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Conflict detection &amp; resolution (CD&amp;R)  </li>
+<li>Sequencing &amp; metering (arrival/departure flows)  </li>
+<li>Safety nets (short‑term conflict alerts, minimum safe altitude warnings)  </li>
+<li>Trajectory prediction (basic kinematic, sometimes 4D trajectory models)</li>
+</ul>
+<h3 id="humanmachine-interface-hmi-layer">🖥️ <strong>Human–Machine Interface (HMI) Layer</strong><a class="toc-permalink" href="#humanmachine-interface-hmi-layer" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Controller working positions (CWP):</li>
+<li>Radar/traffic display (2D or 3D)  </li>
+<li>Labels, tags, leader lines  </li>
+<li>Weather overlays, NOTAMs, restricted areas  </li>
+<li>Input devices (trackball, keyboard, touch, function keys)</li>
+</ul>
+<h3 id="infrastructure-integration">🏛️ <strong>Infrastructure &amp; Integration</strong><a class="toc-permalink" href="#infrastructure-integration" title="Permanent link to this heading">&para;</a></h3>
+<ul>
+<li>Message buses (ASTERIX, proprietary formats)  </li>
+<li>Recording/replay systems  </li>
+<li>Redundancy, failover, safety‑certified OS/hardware</li>
+</ul>
+<hr />
+<h2 id="2-logical-entry-point-for-rttinside-phase1-overlay">2. Logical entry point for RTT/Inside (phase‑1 overlay)<a class="toc-permalink" href="#2-logical-entry-point-for-rttinside-phase1-overlay" title="Permanent link to this heading">&para;</a></h2>
+<p>We want <strong>maximum leverage with minimal intrusion</strong>. That means:</p>
+<ul>
+<li>Don’t touch raw radar/ADS‑B hardware.  </li>
+<li>Don’t rewrite the fusion engine (yet).  </li>
+<li><strong>Attach at the “track bus” and the HMI.</strong></li>
+</ul>
+<h3 id="ideal-insertion-points">🎯 Ideal insertion points<a class="toc-permalink" href="#ideal-insertion-points" title="Permanent link to this heading">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Track stream tap (middleware):</strong><br />
+   - Subscribe to fused track updates (position, velocity, altitude, intent, quality).<br />
+   - Compute <strong>RTT/Inside resonance metrics</strong>:</p>
+<ul>
+<li>Corridor stability score  </li>
+<li>Drift risk index  </li>
+<li>Conflict resonance index (pairwise/group)  </li>
+<li>Publish <strong>augmented tracks</strong> back onto a side‑channel or enriched topic.</li>
+</ul>
+</li>
+<li>
+<p><strong>HMI overlay module:</strong><br />
+   - Read augmented tracks.<br />
+   - Render:</p>
+<ul>
+<li>Color‑coded stability  </li>
+<li>Predictive “ghost” positions  </li>
+<li>Subtle icons/contours for resonance drift  </li>
+<li>No change to core display engine—just an overlay layer.</li>
+</ul>
+</li>
+</ol>
+<p>This gives us a <strong>Phase‑1 RTT/Inside variant</strong> that:<br />
+- Uses existing data<br />
+- Adds no new safety‑critical dependencies<br />
+- Can be toggled on/off for trials<br />
+- Is easy to A/B test in sim and replay</p>
+<hr />
+<h2 id="3-conceptual-data-model-for-rttinside-overlay">3. Conceptual data model for RTT/Inside overlay<a class="toc-permalink" href="#3-conceptual-data-model-for-rttinside-overlay" title="Permanent link to this heading">&para;</a></h2>
+<h3 id="base-track-from-atc-system">🧱 Base track (from ATC system)<a class="toc-permalink" href="#base-track-from-atc-system" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;trackId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AB123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;callsign&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AB123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;position&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;lat&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">42.21</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;lon&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">-83.35</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;alt_ft&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">32000</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;velocity&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;groundspeed_kt&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;heading_deg&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">270</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;roc_fpm&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">&quot;source&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;PSR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;SSR&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;ADS-B&quot;</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">&quot;timestamp&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2026-01-08T12:00:00Z&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<h3 id="rttinside-augmentation">🌐 RTT/Inside augmentation<a class="toc-permalink" href="#rttinside-augmentation" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;trackId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;AB123&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;rtt&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;corridor_stability&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.92</span><span class="p">,</span><span class="w">        </span><span class="c1">// 0–1</span>
+<span class="w">    </span><span class="nt">&quot;drift_risk&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.08</span><span class="p">,</span><span class="w">                </span><span class="c1">// 0–1</span>
+<span class="w">    </span><span class="nt">&quot;conflict_resonance&quot;</span><span class="p">:</span><span class="w"> </span><span class="mf">0.15</span><span class="p">,</span><span class="w">        </span><span class="c1">// 0–1</span>
+<span class="w">    </span><span class="nt">&quot;time_horizon_sec&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w">           </span><span class="c1">// prediction horizon</span>
+<span class="w">    </span><span class="nt">&quot;advisory_level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="w">         </span><span class="c1">// NORMAL / WATCH / ALERT</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>The overlay module merges these into a <strong>view model</strong> for the operator.</p>
+<hr />
+<h2 id="4-phase1-overlay-example-architecture">4. Phase‑1 overlay: example architecture<a class="toc-permalink" href="#4-phase1-overlay-example-architecture" title="Permanent link to this heading">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code>[PSR/SSR/ADS-B/MLAT] 
+        ↓
+ [Surveillance Processor / Tracker]
+        ↓  (fused tracks)
+   [Track Bus / Message Broker]  →  [Recorder/Replay]
+        ↓
+   [RTT-Inside Engine]  ← (subscribes)
+        ↓
+ (augmented tracks with resonance metrics)
+        ↓
+   [Overlay Adapter]  →  [ATC Display HMI]
+</code></pre></div>
+
+<hr />
+<h2 id="5-sample-code-rttinside-middleware-overlay">5. Sample code: RTT/Inside middleware &amp; overlay<a class="toc-permalink" href="#5-sample-code-rttinside-middleware-overlay" title="Permanent link to this heading">&para;</a></h2>
+<p>I’ll use TypeScript‑style pseudocode for clarity; we can adapt to C++/Java/Python as needed.</p>
+<h3 id="51-track-subscription-rttinside-engine">5.1 Track subscription &amp; RTT/Inside engine<a class="toc-permalink" href="#51-track-subscription-rttinside-engine" title="Permanent link to this heading">&para;</a></h3>
+<div class="codehilite"><pre><span></span><code><span class="c1">// types.ts</span>
+<span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">Track</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">trackId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">callsign</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">position</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lat</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">lon</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">alt_ft</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">};</span>
+<span class="w">  </span><span class="nx">velocity</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">groundspeed_kt</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">heading_deg</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">roc_fpm</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">};</span>
+<span class="w">  </span><span class="nx">source</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">[];</span>
+<span class="w">  </span><span class="nx">timestamp</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span><span class="w"> </span><span class="c1">// ISO</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">RttMetrics</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">corridor_stability</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w">   </span><span class="c1">// 0–1</span>
+<span class="w">  </span><span class="nx">drift_risk</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w">           </span><span class="c1">// 0–1</span>
+<span class="w">  </span><span class="nx">conflict_resonance</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w">   </span><span class="c1">// 0–1</span>
+<span class="w">  </span><span class="nx">time_horizon_sec</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">advisory_level</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;WATCH&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;ALERT&quot;</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">AugmentedTrack</span><span class="w"> </span><span class="k">extends</span><span class="w"> </span><span class="nx">Track</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">rtt</span><span class="o">:</span><span class="w"> </span><span class="kt">RttMetrics</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">// rttEngine.ts</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Track</span><span class="p">,</span><span class="w"> </span><span class="nx">RttMetrics</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./types&quot;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">RttEngine</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span><span class="k">private</span><span class="w"> </span><span class="nx">horizonSec</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">600</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="nx">computeMetrics</span><span class="p">(</span><span class="nx">track</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">,</span><span class="w"> </span><span class="nx">neighbors</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="nx">RttMetrics</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Placeholder logic – your real engine uses resonance-time modeling.</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">baseStability</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">estimateCorridorStability</span><span class="p">(</span><span class="nx">track</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">driftRisk</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">estimateDriftRisk</span><span class="p">(</span><span class="nx">track</span><span class="p">,</span><span class="w"> </span><span class="nx">neighbors</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">conflictRes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">estimateConflictResonance</span><span class="p">(</span><span class="nx">track</span><span class="p">,</span><span class="w"> </span><span class="nx">neighbors</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">advisory</span><span class="o">:</span><span class="w"> </span><span class="kt">RttMetrics</span><span class="p">[</span><span class="s2">&quot;advisory_level&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">conflictRes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.7</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">driftRisk</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.7</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;ALERT&quot;</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="nx">conflictRes</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.4</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="nx">driftRisk</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.4</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;WATCH&quot;</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">corridor_stability</span><span class="o">:</span><span class="w"> </span><span class="kt">baseStability</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">drift_risk</span><span class="o">:</span><span class="w"> </span><span class="kt">driftRisk</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">conflict_resonance</span><span class="o">:</span><span class="w"> </span><span class="kt">conflictRes</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">time_horizon_sec</span><span class="o">:</span><span class="w"> </span><span class="kt">this.horizonSec</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">advisory_level</span><span class="o">:</span><span class="w"> </span><span class="kt">advisory</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">estimateCorridorStability</span><span class="p">(</span><span class="nx">track</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Example: penalize high ROC + heading changes as less stable</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">roc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span><span class="nx">track</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">roc_fpm</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">speed</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">track</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">groundspeed_kt</span><span class="p">;</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">rocFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">roc</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">3000</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span><span class="w"> </span><span class="c1">// normalize</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">speedFactor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">speed</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">200</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nx">0.2</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="kt">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// low speed = more maneuvering</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">max</span><span class="p">(</span><span class="mf">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="nx">rocFactor</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">speedFactor</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">0.5</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">estimateDriftRisk</span><span class="p">(</span><span class="nx">track</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">,</span><span class="w"> </span><span class="nx">neighbors</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Example: simple proximity-based risk</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">closeNeighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">neighbors</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">horizontalDistanceNm</span><span class="p">(</span><span class="nx">track</span><span class="p">,</span><span class="w"> </span><span class="nx">n</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">10</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">closeNeighbors</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">estimateConflictResonance</span><span class="p">(</span><span class="nx">track</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">,</span><span class="w"> </span><span class="nx">neighbors</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">[])</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Example: heading convergence heuristic</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">converging</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">neighbors</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">hdgDiff</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">abs</span><span class="p">(</span>
+<span class="w">        </span><span class="nx">track</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">heading_deg</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">n</span><span class="p">.</span><span class="nx">velocity</span><span class="p">.</span><span class="nx">heading_deg</span>
+<span class="w">      </span><span class="p">);</span>
+<span class="w">      </span><span class="k">return</span><span class="w"> </span><span class="nx">hdgDiff</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mf">30</span><span class="p">;</span><span class="w"> </span><span class="c1">// converging headings</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">Math</span><span class="p">.</span><span class="nx">min</span><span class="p">(</span><span class="nx">converging</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mf">10</span><span class="p">,</span><span class="w"> </span><span class="mf">1</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">horizontalDistanceNm</span><span class="p">(</span><span class="nx">a</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// Placeholder: haversine or similar</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">5</span><span class="p">;</span><span class="w"> </span><span class="c1">// stub</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="c1">// middleware.ts</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">Track</span><span class="p">,</span><span class="w"> </span><span class="nx">AugmentedTrack</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./types&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">RttEngine</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./rttEngine&quot;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">class</span><span class="w"> </span><span class="nx">RttMiddleware</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="k">private</span><span class="w"> </span><span class="nx">engine</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">RttEngine</span><span class="p">();</span>
+
+<span class="w">  </span><span class="kr">constructor</span><span class="p">(</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="nx">subscribeTracks</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">cb</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">tracks</span><span class="o">:</span><span class="w"> </span><span class="kt">Track</span><span class="p">[])</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">void</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">void</span><span class="p">,</span>
+<span class="w">    </span><span class="k">private</span><span class="w"> </span><span class="nx">publishAugmented</span><span class="o">:</span><span class="w"> </span><span class="p">(</span><span class="nx">tracks</span><span class="o">:</span><span class="w"> </span><span class="kt">AugmentedTrack</span><span class="p">[])</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="ow">void</span>
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="p">{}</span>
+
+<span class="w">  </span><span class="nx">start</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">subscribeTracks</span><span class="p">((</span><span class="nx">tracks</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kd">const</span><span class="w"> </span><span class="nx">augmented</span><span class="o">:</span><span class="w"> </span><span class="kt">AugmentedTrack</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tracks</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">t</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">neighbors</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">tracks</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="nx">n</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="nx">n</span><span class="p">.</span><span class="nx">trackId</span><span class="w"> </span><span class="o">!==</span><span class="w"> </span><span class="nx">t</span><span class="p">.</span><span class="nx">trackId</span><span class="p">);</span>
+<span class="w">        </span><span class="kd">const</span><span class="w"> </span><span class="nx">rtt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">engine</span><span class="p">.</span><span class="nx">computeMetrics</span><span class="p">(</span><span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">neighbors</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">...</span><span class="nx">t</span><span class="p">,</span><span class="w"> </span><span class="nx">rtt</span><span class="w"> </span><span class="p">};</span>
+<span class="w">      </span><span class="p">});</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">publishAugmented</span><span class="p">(</span><span class="nx">augmented</span><span class="p">);</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>This gives ATC devs a <strong>drop‑in service</strong>: subscribe to their existing track bus, publish to a new topic like <code>tracks.rtt</code>.</p>
+<hr />
+<h3 id="52-hmi-overlay-color-icon-logic">5.2 HMI overlay: color &amp; icon logic<a class="toc-permalink" href="#52-hmi-overlay-color-icon-logic" title="Permanent link to this heading">&para;</a></h3>
+<p>Assume the existing display already draws tracks; we add a <strong>thin overlay layer</strong>.</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// overlayViewModel.ts</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">AugmentedTrack</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./types&quot;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">interface</span><span class="w"> </span><span class="nx">OverlayStyle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">pathColor</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">labelBadge</span><span class="o">?:</span><span class="w"> </span><span class="s2">&quot;NORMAL&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;WATCH&quot;</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="s2">&quot;ALERT&quot;</span><span class="p">;</span>
+<span class="w">  </span><span class="nx">ghostPositions</span><span class="o">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">lat</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="p">;</span><span class="w"> </span><span class="nx">lon</span><span class="o">:</span><span class="w"> </span><span class="kt">number</span><span class="w"> </span><span class="p">}[];</span>
+<span class="p">}</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">buildOverlayStyle</span><span class="p">(</span><span class="nx">track</span><span class="o">:</span><span class="w"> </span><span class="kt">AugmentedTrack</span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nx">OverlayStyle</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">corridor_stability</span><span class="p">,</span><span class="w"> </span><span class="nx">advisory_level</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">track</span><span class="p">.</span><span class="nx">rtt</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">pathColor</span><span class="w"> </span><span class="o">=</span>
+<span class="w">    </span><span class="nx">advisory_level</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;ALERT&quot;</span>
+<span class="w">      </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;#ff4d4f&quot;</span><span class="w"> </span><span class="c1">// red</span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="nx">advisory_level</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="s2">&quot;WATCH&quot;</span>
+<span class="w">      </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;#faad14&quot;</span><span class="w"> </span><span class="c1">// amber</span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="nx">corridor_stability</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.9</span>
+<span class="w">      </span><span class="o">?</span><span class="w"> </span><span class="s2">&quot;#52c41a&quot;</span><span class="w"> </span><span class="c1">// bright green</span>
+<span class="w">      </span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#1890ff&quot;</span><span class="p">;</span><span class="w"> </span><span class="c1">// default blue</span>
+
+<span class="w">  </span><span class="c1">// For phase 1, ghost positions can be simple extrapolations</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ghostPositions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">extrapolateGhosts</span><span class="p">(</span><span class="nx">track</span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">pathColor</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">labelBadge</span><span class="o">:</span><span class="w"> </span><span class="kt">advisory_level</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">ghostPositions</span>
+<span class="w">  </span><span class="p">};</span>
+<span class="p">}</span>
+
+<span class="kd">function</span><span class="w"> </span><span class="nx">extrapolateGhosts</span><span class="p">(</span><span class="nx">track</span><span class="o">:</span><span class="w"> </span><span class="kt">AugmentedTrack</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Simple forward projection; real RTT-Inside uses resonance-time predictions.</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">ghosts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">stepSec</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">60</span><span class="p">;</span>
+<span class="w">  </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kd">let</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">stepSec</span><span class="p">;</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="nx">track</span><span class="p">.</span><span class="nx">rtt</span><span class="p">.</span><span class="nx">time_horizon_sec</span><span class="p">;</span><span class="w"> </span><span class="nx">t</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="nx">stepSec</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">ghosts</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span>
+<span class="w">      </span><span class="nx">lat</span><span class="o">:</span><span class="w"> </span><span class="kt">track.position.lat</span><span class="p">,</span><span class="w"> </span><span class="c1">// stub</span>
+<span class="w">      </span><span class="nx">lon</span><span class="o">:</span><span class="w"> </span><span class="kt">track.position.lon</span><span class="w">  </span><span class="c1">// stub</span>
+<span class="w">    </span><span class="p">});</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">ghosts</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>Then, in the existing HMI rendering loop:</p>
+<div class="codehilite"><pre><span></span><code><span class="c1">// hmiOverlayRenderer.ts</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">AugmentedTrack</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./types&quot;</span><span class="p">;</span>
+<span class="k">import</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">buildOverlayStyle</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="kr">from</span><span class="w"> </span><span class="s2">&quot;./overlayViewModel&quot;</span><span class="p">;</span>
+
+<span class="k">export</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="nx">renderOverlay</span><span class="p">(</span><span class="nx">ctx</span><span class="o">:</span><span class="w"> </span><span class="kt">CanvasRenderingContext2D</span><span class="p">,</span><span class="w"> </span><span class="nx">tracks</span><span class="o">:</span><span class="w"> </span><span class="kt">AugmentedTrack</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">tracks</span><span class="p">.</span><span class="nx">forEach</span><span class="p">(</span><span class="nx">track</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">style</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">buildOverlayStyle</span><span class="p">(</span><span class="nx">track</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 1. Draw path with RTT color</span>
+<span class="w">    </span><span class="nx">drawTrackPath</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">track</span><span class="p">,</span><span class="w"> </span><span class="nx">style</span><span class="p">.</span><span class="nx">pathColor</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 2. Draw label badge (NORMAL/WATCH/ALERT)</span>
+<span class="w">    </span><span class="nx">drawLabelBadge</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">track</span><span class="p">,</span><span class="w"> </span><span class="nx">style</span><span class="p">.</span><span class="nx">labelBadge</span><span class="p">);</span>
+
+<span class="w">    </span><span class="c1">// 3. Draw ghost positions (subtle dots or contours)</span>
+<span class="w">    </span><span class="nx">drawGhosts</span><span class="p">(</span><span class="nx">ctx</span><span class="p">,</span><span class="w"> </span><span class="nx">style</span><span class="p">.</span><span class="nx">ghostPositions</span><span class="p">);</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+
+<p>This is <strong>non‑intrusive</strong>: if RTT/Inside is offline, the overlay simply doesn’t draw.</p>
+<hr />
+<h2 id="6-what-atc-operators-get-from-this-phase1-test">6. What ATC operators get from this phase‑1 test<a class="toc-permalink" href="#6-what-atc-operators-get-from-this-phase1-test" title="Permanent link to this heading">&para;</a></h2>
+<p><strong>Immediately, without rewriting their stack:</strong></p>
+<ul>
+<li><strong>Visual coherence:</strong>  </li>
+<li>Stable flows glow in calm greens/blues.  </li>
+<li>
+<p>Emerging trouble spots show up as amber/red corridors before standard CD&amp;R triggers.</p>
+</li>
+<li>
+<p><strong>Predictive feel:</strong>  </p>
+</li>
+<li>
+<p>Ghost positions and resonance metrics give a sense of “where the system wants to drift,” not just where it is.</p>
+</li>
+<li>
+<p><strong>Smoother SOPs:</strong>  </p>
+</li>
+<li>Vectoring, sequencing, and handoffs become more anticipatory.  </li>
+<li>
+<p>Controllers can compare “with RTT overlay” vs “without” in replay to validate value.</p>
+</li>
+<li>
+<p><strong>Low‑risk trial:</strong>  </p>
+</li>
+<li>No change to separation minima or legal procedures in phase 1.  </li>
+<li>It’s a <strong>decision‑support enhancement</strong>, not a regulatory change.</li>
+</ul>
+<hr />
+<h2 id="7-how-hard-is-a-full-rollout-from-here">7. How hard is a full rollout from here?<a class="toc-permalink" href="#7-how-hard-is-a-full-rollout-from-here" title="Permanent link to this heading">&para;</a></h2>
+<p>Once this overlay is proven in <strong>sim + limited ops</strong>:</p>
+<ul>
+<li><strong>Step 1:</strong> Standardize the RTT/Inside data contract (like the <code>AugmentedTrack</code> schema).  </li>
+<li><strong>Step 2:</strong> Integrate RTT/Inside into:</li>
+<li>CD&amp;R engines  </li>
+<li>Sequencing/metering tools  </li>
+<li>Space traffic models (for Space Force)  </li>
+<li><strong>Step 3:</strong> Co‑design new HMI layouts where RTT/Inside is <strong>first‑class</strong>, not just an overlay.  </li>
+<li><strong>Step 4:</strong> Certify as part of the safety‑critical automation stack.</li>
+</ul>
+<p>From our vantage point, we can either:<br />
+- Hand them the <strong>reference middleware + overlay</strong> as a “Phase‑1 RTT/Inside Kit”, or<br />
+- Offer a path to a <strong>fully integrated RTT/Inside ATC stack</strong> where the fusion, prediction, and HMI are all resonance‑native.</p>
+<p></p>
+
+<nav class="page-nav-bottom" aria-label="Page navigation">
+  <a class="page-nav-back" href="https://www.triadicframeworks.org/">
+    ← All Documentation
+  </a>
+  <a class="page-nav-top" href="#main-content">
+    Back to top ↑
+  </a>
+</nav>
+
+        </div>
+
+        <!-- ── Article Footer ───────────────────────────────────────────── -->
+        <footer class="article-footer">
+          <div class="article-footer-inner">
+            <a class="source-edit-link"
+               href="https://github.com/umaywant2/TriadicFrameworks/blob/main/docs/corpus/ATC.md"
+               target="_blank"
+               rel="noopener noreferrer">
+              ✏️ Edit this page on GitHub
+            </a>
+            <span class="meta-owner">
+              Owner: core-team
+            </span>
+          </div>
+        </footer>
+
+      </article>
+    </main>
+  </div>
+
+  <!-- ── Site Footer ────────────────────────────────────────────────────── -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-cols">
+
+        <div class="footer-col">
+          <p class="footer-brand">TriadicFrameworks</p>
+          <p class="footer-copy">
+            &copy; 2026 Nawder Loswin ·
+            Byte Books Publishing ·
+            LCCN 2026917007
+          </p>
+          <p class="footer-rtt">
+            <code>rtt=1 | coherence=declared | drift=bounded | paradox=structural</code>
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Pages</p>
+          <nav aria-label="Footer navigation">
+            <a href="https://www.triadicframeworks.org/">Home</a>
+            <a href="https://www.triadicframeworks.org/introduction/">Introduction</a>
+            <a href="https://www.triadicframeworks.org/concepts/triadic-model/">Triadic Model</a>
+            <a href="https://www.triadicframeworks.org/reference/api/">API Reference</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title">Source</p>
+          <nav aria-label="Source navigation">
+            <a href="https://www.triadicframeworks.org"
+               target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+            <a href="https://www.triadicframeworks.org/sitemap.xml">Sitemap</a>
+            <a href="https://www.triadicframeworks.org/Framework_Field_Theory"
+               target="_blank" rel="noopener noreferrer">Framework Field Theory</a>
+          </nav>
+        </div>
+
+      </div>
+
+      <div class="footer-meta">
+        <span>Source: <code>docs/corpus/ATC.md</code></span>
+        <span>Built: <time datetime="2026-07-19T03:02:27Z">2026-07-19T03:02:27Z</time></span>
+        <span>Generator: TriadicFrameworks SSG v1.0</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── Mobile nav toggle script ───────────────────────────────────────── -->
+  <script>
+    (function () {
+      var btn = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('primary-nav');
+      if (!btn || !nav) return;
+      btn.addEventListener('click', function () {
+        var expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+        nav.classList.toggle('nav-open', !expanded);
+      });
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && nav.classList.contains('nav-open')) {
+          btn.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('nav-open');
+          btn.focus();
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
